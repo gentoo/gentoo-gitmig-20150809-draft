@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.2 2003/12/22 23:15:46 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.3 2004/03/02 23:57:39 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -23,15 +23,16 @@
 
 ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
-#DEPEND="${DEPEND} net-www/apache"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
 
 if [ -f /etc/conf.d/webapp-config ] ; then
 	. /etc/conf.d/webapp-config
+else
+	die "Unable to open /etc/conf.d/webapp-config files"
 fi
 
-EXPORT_FUNCTIONS pkg_setup src_install
+EXPORT_FUNCTIONS pkg_config pkg_setup src_install
 
 # ------------------------------------------------------------------------
 # INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
@@ -40,13 +41,14 @@ EXPORT_FUNCTIONS pkg_setup src_install
 # or not.
 #
 # @param 	$1 - file to look for
+# @param	$2 - prefix directory to use
 # @return	0 on success, never returns on an error
 # ------------------------------------------------------------------------
 
 function webapp_checkfileexists ()
 {
-	if [ ! -e ${D}/$1 ]; then
-		msg="ebuild fault: file $1 not found in ${D}"
+	if [ ! -e $1 ]; then
+		msg="ebuild fault: file $1 not found"
 		eerror "$msg"
 		eerror "Please report this as a bug at http://bugs.gentoo.org/"
 		die "$msg"
@@ -54,22 +56,38 @@ function webapp_checkfileexists ()
 }
 
 # ------------------------------------------------------------------------
-# EXPORTED FUNCTION - FOR USE IN EBUILDS
-#
-# Identify a file which must be owned by the webserver's user:group
-# settings.
-#
-# The ownership of the file is NOT set until the application is installed
-# using the webapp-config tool.
-# 
-# @param	$1 - file to be owned by the webserver user:group combo
+# INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
+# ------------------------------------------------------------------------
+
+function webapp_import_config ()
+{
+	if [ -z "${MY_HTDOCSDIR}" ]; then
+		. /etc/conf.d/webapp-config
+	fi
+
+	if [ -z "${MY_HTDOCSDIR}" ]; then
+		libsh_edie "/etc/conf.d/webapp-config not imported"
+	fi
+}
+
+# ------------------------------------------------------------------------
+# INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
 #
 # ------------------------------------------------------------------------
 
-function webapp_serverowned ()
+function webapp_strip_appdir ()
 {
-	webapp_checkfileexists $1
-	echo "$1" >> $WA_SOLIST
+	echo "$1" | sed -e "s|${MY_APPDIR}/||g;"
+}
+
+function webapp_strip_d ()
+{
+	echo "$1" | sed -e "s|${D}||g;"
+}
+
+function webapp_strip_cwd ()
+{
+	echo "$1" | sed -e 's|/./|/|g;'
 }
 
 # ------------------------------------------------------------------------
@@ -82,8 +100,11 @@ function webapp_serverowned ()
 
 function webapp_configfile ()
 {
-	webapp_checkfileexists $1
-	echo "$1" >> $WA_CONFIGLIST
+	webapp_checkfileexists "$1" "$D"
+	local MY_FILE="`webapp_strip_appdir $1`"
+
+	einfo "(config) $MY_FILE"
+	echo "$MY_FILE" >> $WA_CONFIGLIST
 }
 
 # ------------------------------------------------------------------------
@@ -101,8 +122,77 @@ function webapp_configfile ()
 
 function webapp_runbycgibin ()
 {
-	webapp_checkfileexists $2
-	echo "$1 $2" >> $WA_RUNBYCGIBINLIST
+	webapp_checkfileexists "$2" "$D"
+	local MY_FILE="`webapp_strip_appdir $2`"
+	MY_FILE="`webapp_strip_cwd $MY_FILE`"
+
+	einfo "(cgi-bin) $1 - $MY_FILE"
+	echo "$1 $MY_FILE" >> $WA_RUNBYCGIBINLIST
+}
+
+# ------------------------------------------------------------------------
+# EXPORTED FUNCTION - FOR USE IN EBUILDS
+#
+# Identify a file which must be owned by the webserver's user:group
+# settings.
+#
+# The ownership of the file is NOT set until the application is installed
+# using the webapp-config tool.
+# 
+# @param	$1 - file to be owned by the webserver user:group combo
+#
+# ------------------------------------------------------------------------
+
+function webapp_serverowned ()
+{
+	webapp_checkfileexists "$1" "$D"
+	local MY_FILE="`webapp_strip_appdir $1`" 
+	
+	einfo "(server owned) $MY_FILE"
+	echo "$MY_FILE" >> $WA_SOLIST
+}
+
+# ------------------------------------------------------------------------
+# EXPORTED FUNCTION - FOR USE IN EBUILDS
+#
+#
+# @param	$1 - the db engine that the script is for
+#				 (one of: mysql|postgres)
+# @param	$2 - the sql script to be installed
+# @param	$3 - the older version of the app that this db script
+#				 will upgrade from
+#				 (do not pass this option if your SQL script only creates
+#				  a new db from scratch)
+# ------------------------------------------------------------------------
+
+function webapp_sqlscript ()
+{
+	webapp_checkfileexists "$2"
+
+	# create the directory where this script will go
+	#
+	# scripts for specific database engines go into their own subdirectory
+	# just to keep things readable on the filesystem
+
+	if [ ! -d "${MY_SQLSCRIPTSDIR}/$1" ]; then
+		mkdir -p "${MY_SQLSCRIPTSDIR}/$1" || libsh_die "unable to create directory ${MY_SQLSCRIPTSDIR}/$1"
+	fi
+
+	# warning:
+	#
+	# do NOT change the naming convention used here without changing all
+	# the other scripts that also rely upon these names
+ 
+	# are we dealing with an 'upgrade'-type script?
+	if [ -n "$3" ]; then
+		# yes we are
+		einfo "($1) upgrade script from ${PN}-${PVR} to $3"
+		cp $2 ${MY_SQLSCRIPTSDIR}/$1/${3}_to_${PVR}.sql
+	else
+		# no, we are not
+		einfo "($1) create script for ${PN}-${PVR}"
+		cp $2 ${MY_SQLSCRIPTSDIR}/$1/${PVR}_create.sql
+	fi
 }
 
 # ------------------------------------------------------------------------
@@ -122,7 +212,7 @@ function webapp_src_install ()
 }
 
 # ------------------------------------------------------------------------
-# EXPORTED FUNCTION - call from inside your ebuild's pkg_setup AFTER
+# EXPORTED FUNCTION - call from inside your ebuild's pkg_config AFTER
 # everything else has run
 #
 # If 'vhosts' USE flag is not set, auto-install this app
@@ -130,6 +220,26 @@ function webapp_src_install ()
 # ------------------------------------------------------------------------
 
 function webapp_pkg_setup ()
+{
+	# are we emerging something that is already installed?
+
+	if [ -d "${MY_APPROOT}/${MY_APPSUFFIX}" ]; then
+		# yes we are
+		ewarn "Removing existing copy of ${PN}-${PVR}"
+		rm -rf "${MY_APPROOT}/${MY_APPSUFFIX}"
+	fi
+
+	# create the directories that we need
+
+	mkdir -p ${MY_HTDOCSDIR}
+	mkdir -p ${MY_HOSTROOTDIR}
+	mkdir -p ${MY_CGIBINDIR}
+	mkdir -p ${MY_ICONSDIR}
+	mkdir -p ${MY_ERRORSDIR}
+	mkdir -p ${MY_SQLSCRIPTSDIR}
+}
+
+function webapp_pkg_config ()
 {
 	use vhosts || webapp-config -u root -d /var/www/localhost/htdocs/${PN}/ ${PN}
 }
