@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre2.ebuild,v 1.1 2004/09/28 17:40:49 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0.ebuild,v 1.1 2004/10/01 14:47:37 voxus Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_pre/-PRE}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~sparc ~alpha ~ia64 ~amd64"
+KEYWORDS="~x86"
 IUSE="ssl socks5 qt kde ncurses crypt"
 
 # we can't have conditional dependencies so "use kde && inherit kde"
@@ -23,10 +23,10 @@ RDEPEND="kde? ( >=kde-base/kdelibs-3.0 )"
 DEPEND="kde? ( >=kde-base/kdelibs-3.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	qt? ( >=x11-libs/qt-3.0.0 )
-	ncurses? ( sys-libs/ncurses )
-	crypt? ( =app-crypt/gpgme-0.3.16 )"
+	ncurses? ( sys-libs/ncurses dev-libs/cdk )
+	crypt? ( =app-crypt/gpgme-0.3.14-r1 )"
 
-S=${WORKDIR}/${PN}-${PV/_pre/-PRE}
+S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
@@ -52,7 +52,7 @@ src_unpack() {
 	fi
 
 	cd ${S}/plugins/qt-gui && \
-		epatch ${FILESDIR}/${PV/_pre2/}-no_stupid_koloboks.patch || \
+		epatch ${FILESDIR}/${PV}-no_stupid_koloboks.patch || \
 		ewarn "Fail to kill koloboks, forget it"
 }
 
@@ -152,8 +152,8 @@ src_install() {
 	docinto plugins/rms
 	dodoc README licq_rms.conf
 
-	insinto /usr/share/${PN}/upgrade
-	doins ${S}/upgrade/*
+	exeinto /usr/share/${PN}/upgrade
+	doexe ${S}/upgrade/*
 
 	# fixes bug #22136
 	rm -fR ${D}/var
@@ -164,7 +164,7 @@ pkg_postinst() {
 	ewarn
 	ewarn "If you're upgrading from <=licq-1.3.0 - you have to manually "
 	ewarn "upgrade your existing licq installation. Please backup your "
-	ewarn "settings and run: /usr/share/licq/upgrade/upgrade-1.3.0.sh"
+	ewarn "settings and look into: /usr/share/licq/upgrade for scripts."
 	ewarn
 	echo
 }
