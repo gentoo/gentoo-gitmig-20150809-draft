@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.99.3/xfs.conf.d,v 1.1 2002/11/14 04:23:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.99.3/xfs.conf.d,v 1.2 2002/12/07 08:45:10 seemant Exp $
 
 # Config file for /etc/init.d/xfs
 
@@ -11,4 +11,13 @@
 # "nolisten = tcp" in /etc/X11/fs/config.
 
 XFS_PORT="-1"
+
+
+# If this is set to "yes", then the xfs rc-script will
+# scan all the font directories in /etc/X11/fs/config for
+# changes, and if any, will add the required files.  This
+# may take a while on very old boxes, so set it to "no"
+# if it takes too long for you.
+
+SETUP_FONTDIRS="yes"
 

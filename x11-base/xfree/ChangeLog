@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.65 2002/12/05 22:35:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.66 2002/12/07 08:45:10 seemant Exp $
 
 *xfree-4.2.1-r2 (05 Dec 2002)
 
@@ -23,6 +23,10 @@
   Tweak to compile libs (for x86) and glx with -fPIC.
 
 *xfree-4.2.99.3 (13 Nov 2002)
+
+  -7 Dec 2002; Seemant Kulleen <seemant@gentoo.org> :
+
+  Updated snapshot and newer ft2
 
   15 Nov 2002; Seemant Kulleen <seemant@gentoo.org>
   files/4.2.99.3-patches/XFree86-4.2.99.3-no-optimize.patch.bz2 :

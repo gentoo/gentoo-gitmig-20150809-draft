@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.4 2002/12/07 08:25:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.5 2002/12/07 08:45:10 seemant Exp $
 
 IUSE="3dfx"
 
@@ -87,24 +87,24 @@ src_unpack () {
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
 	echo "#define GccWarningOptions -pipe" >> config/cf/host.def
 
-	if [ "${ARCH}" = "x86" ]
+	if use x86
 	then
 		# optimize Mesa for architecture
-		if [ -n "`use mmx`" ]
+		if use mmx
 		then
 			echo "#define HasMMXSupport	YES" >> config/cf/host.def
 		fi
-		if [ -n "`use 3dnow`" ]
+		if use 3dnow
 		then
 			echo "#define MesaUse3DNow YES" >> config/cf/host.def
-		elif [ -n "`use sse`" ]
+		elif use sse
 		then
 			echo "#define MesaUseKatmai YES" >> config/cf/host.def
 		fi
 	fi
 
 	# build with glide3 support? (build the tdfx_dri.o module)
-	if [ -n "`use 3dfx`" ]
+	if use 3dfx
 	then
 		echo "#define HasGlide3 YES" >> config/cf/host.def
 	fi
@@ -116,10 +116,6 @@ src_unpack () {
 	sed -e '2i CCLINK = $(CC) -L../../lib/Xau -lXau' \
 		${S}/programs/Xserver/Imakefile.orig \
 		> ${S}/programs/Xserver/Imakefile
-
-	# Apply Xft quality patch from http://www.cs.mcgill.ca/~dchest/xfthack/
-	cd ${S}/lib/Xft
-	cat ${FILESDIR}/${PVR}/xft-quality.diff | patch -p1 || die
 
 	# LibPNG fixes
 	cd ${S}
@@ -139,7 +135,7 @@ src_unpack () {
 src_compile() {
 
 	# fix build build problems for tdfx driver
-	if [ -n "`use 3dfx`" ]
+	if use 3dfx
 	then
 		cd ${S}/lib/GL/mesa/src/drv/tdfx
 		ln -s /usr/include/glide3/glide.h glide.h
@@ -151,7 +147,7 @@ src_compile() {
 	
 	emake World || die
 
-	if [ "`use nls`" ]
+	if use nls
 	then
 		cd ${S}/nls
 		make || die
@@ -180,7 +176,7 @@ src_install() {
 		cd ${S}
 	fi
 
-	# we zap the our CFLAGS in the host.def file, as hardcoded CFLAGS can
+	# we zap our CFLAGS in the host.def file, as hardcoded CFLAGS can
 	# mess up other things that use xmkmf
 	cp ${D}/usr/X11R6/lib/X11/config/host.def \
 		${D}/usr/X11R6/lib/X11/config/host.def.orig

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.99.3/xdm.start,v 1.1 2002/11/14 04:23:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.99.3/xdm.start,v 1.2 2002/12/07 08:45:10 seemant Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -39,7 +39,7 @@
 
 # Start X Font Server before X
 depend() {
-	use xfs
+	use xfs hotplug
 }
 
 setup_dm() {
@@ -65,6 +65,7 @@ setup_dm() {
 
 start() {
 	setup_dm
+	
 	ebegin "Setting up ${SERVICE}"
 	#save the prefered DM
 	save_options "service" "${EXE}"
@@ -80,19 +81,24 @@ stop() {
 	local curvt="$(fgconsole)"
 	local myexe="$(get_options "service")"
 	local myservice="${myexe##*/}"
+	
 	ebegin "Stopping ${myservice}"
 	rm -f ${svcdir}/options/xdm/service
+	
 	if [ "$(ps -A | grep -e "${myservice}")" ]
 	then
 		start-stop-daemon --stop --quiet \
 			--exe ${myexe} &>/dev/null
+		
 		retval=$?
 	else
 		retval=1
 	fi
+	
 	#switch back to original vt
 	chvt "${curvt}" &>/dev/null
 	eend ${retval} "Error stopping ${myservice}."
+	
 	return ${retval}
 }
 
