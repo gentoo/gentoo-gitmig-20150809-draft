@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.20.ebuild,v 1.4 2003/09/20 16:01:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.20.ebuild,v 1.5 2003/09/23 00:17:03 msterret Exp $
 
 IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X"
 
@@ -100,7 +100,7 @@ src_install() {
 		for x in libgimp libgimpwidgets libgimpbase libgimpcolor; do
 			dosym /usr/lib/${x}-1.3.so.20 /usr/lib/${x}-1.3.so.${OLD_V}
 		done
-	fi		
+	fi
 }
 
 pkg_postinst() {
