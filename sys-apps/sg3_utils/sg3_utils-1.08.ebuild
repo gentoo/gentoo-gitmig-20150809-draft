@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.07.ebuild,v 1.1 2004/08/13 14:34:01 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.08.ebuild,v 1.1 2004/08/14 22:48:41 plasmaroo Exp $
 
 inherit eutils
 
