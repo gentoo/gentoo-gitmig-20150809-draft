@@ -35,7 +35,7 @@ src_install () {
 
 	# init.d & conf.d installation
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/lcdproc
+	doexe ${FILESDIR}/lcdproc
 	insinto /etc/conf.d
 	newins ${FILESDIR}/lcdproc.confd lcdproc
 }
