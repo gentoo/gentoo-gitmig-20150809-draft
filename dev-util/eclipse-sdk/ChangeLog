@@ -1,10 +1,19 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.48 2004/07/06 23:24:45 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.49 2004/07/09 16:32:10 karltk Exp $
+
+*eclipse-sdk-2.1.3-r4 (09 Jul 2004)
+
+  09 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  eclipse-sdk-2.1.3-r4.ebuild: Reworked use flags so that only
+  one frontend is actually compiled when multiple are selected,
+  fixes #55162.
 
   07 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-3.0.0.ebuild: Added patch to allow compiling the
   Motif frontend with Tiger, sorry, Java 1.5, sorry, 5.0.
+
+*eclipse-sdk-3.0.0 (04 Jul 2004) 
 
   04 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-3.0.0.ebuild: New upstream version. Added block
