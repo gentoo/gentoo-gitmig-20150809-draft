@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aa008b163dfcfd9775d96479d404729e ChangeLog 4924
 MD5 50e66a474417cd0ae217963c82d8ae56 gmp-4.1-r1.ebuild 1043
-MD5 a32fc343b820fbd1643569595cc1a22f gmp-4.1.2.ebuild 1445
-MD5 421c312149c5af560dff99fb479f4284 gmp-4.1.3.ebuild 1845
+MD5 d22540aebff95404322039a0d529dab1 gmp-4.1.2.ebuild 1440
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 421c312149c5af560dff99fb479f4284 gmp-4.1.3.ebuild 1845
+MD5 5e16de635136241e3ca3d414a8e1d181 files/digest-gmp-4.1.3 62
 MD5 6fe67063d13e286170b681d7220f6bb7 files/digest-gmp-4.1-r1 60
 MD5 265f53218c05ee4ac1192b1fee5d5038 files/digest-gmp-4.1.2 62
-MD5 5e16de635136241e3ca3d414a8e1d181 files/digest-gmp-4.1.3 62
 MD5 d646f32e97b41529d4ab5066c69bc856 files/longlong.patch 473
 MD5 8458ecf3c3c6b27f949d1b1c1e6a9cc7 files/randraw.c.41.diff 585
 MD5 d70b080c2f0efd82a800ba8a1af7b305 files/ppc64-gmp-acinclude.patch 474
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBUlUWHTu7gpaalycRApVpAJsGTmhQeIkgi7J6TtsU/H1nmDoQngCbBPhT
+/cXrHJ/fqzaO9xAA0zjcIXQ=
+=eTqV
+-----END PGP SIGNATURE-----
