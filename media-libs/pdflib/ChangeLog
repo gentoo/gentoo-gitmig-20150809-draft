@@ -1,12 +1,15 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.28 2004/01/23 04:19:20 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.29 2004/01/23 22:04:06 seemant Exp $
 
   23 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> pdflib-5.0.2.ebuild:
   set ppc in keywords
 
   22 Jan 2004; Jon Portnoy <avenj@gentoo.org> pdflib-5.0.2.ebuild :
   Stable on AMD64.
+
+  23 Jan 2004; Seemant Kulleen <seemant@gentoo.org> pdflib-5.0.2.ebuild:
+  sandbox fix0rs, properly this time
 
   22 Jan 2004; Seemant Kulleen <seemant@gentoo.org> pdflib-5.0.2.ebuild:
   Stable on x86 as well

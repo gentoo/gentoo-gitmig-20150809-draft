@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.6 2004/01/23 04:19:20 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.7 2004/01/23 22:04:06 seemant Exp $
 
 IUSE="tcltk perl python java"
 MY_PN=${PN/pdf/PDF}-Lite
@@ -62,16 +62,16 @@ src_install() {
 	# all we basically do here is modify the install path for Makefiles that
 	# need it.
 	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
-		${S}/bind/java/Makefile
+		${S}/bind/pdflib/java/Makefile
 
 	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
-		${S}/bind/perl/Makefile
+		${S}/bind/pdflib/perl/Makefile
 
 	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
-		${S}/bind/python/Makefile
+		${S}/bind/pdflib/python/Makefile
 
 	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
-		${S}/bind/tcl/Makefile
+		${S}/bind/pdflib/tcl/Makefile
 
 	# ok, this should create the correct lib dirs for perl and python.
 	# yes, i know it is messy, but as i see it, a ebuild should be generic
