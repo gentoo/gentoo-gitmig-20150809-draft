@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/mtavc-0.2.0.ebuild,v 1.2 2003/09/21 04:36:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/mtavc-0.2.0.ebuild,v 1.3 2003/09/21 04:45:48 vapier Exp $
 
 inherit games eutils
 
@@ -37,11 +37,12 @@ src_install() {
 
 	exeinto ${dir}
 	doexe MTAServer
-	insinto ${dir}
-	doins banned.lst mtaserver.conf motd.txt
-	insinto ${GAMES_SYSCONFDIR}
-	doins mtaserver.conf
-	dosym ${GAMES_SYSCONFDIR}/mtaserver.conf ${dir}/mtaserver.conf
+	insinto ${GAMES_SYSCONFDIR}/${PN}
+	local files="banned.lst mtaserver.conf motd.txt"
+	doins ${files}
+	for f in ${files} ; do
+		dosym ${GAMES_SYSCONFDIR}/${PN}/${f} ${dir}/${f}
+	done
 
 	dodoc readme.txt
 	prepgamesdirs
