@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.7 2004/07/06 09:53:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.8 2004/07/21 09:13:17 eradicator Exp $
 
 inherit gnuconfig
 
@@ -110,7 +110,7 @@ pkg_postinst() {
 	einfo "A timidity config file has been installed in /etc/timidity.cfg."
 	einfo ""
 	einfo "You need to edit this config file to reference your sound fonts."
-	einfo "If you don't know what this means, try emerging timidity-eawpatches."
+	einfo "If you don't know what this means, try emerging timidity-eawpatches or timidity-shompatches."
 	einfo ""
 	einfo "An init script for the alsa timidity sequencer has been installed."
 	einfo "If you wish to use the timidity virtual sequencer, edit /etc/conf.d/timidity"
