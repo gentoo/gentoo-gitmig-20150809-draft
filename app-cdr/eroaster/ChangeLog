@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/eroaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.8 2002/11/02 15:12:17 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.9 2002/11/04 02:46:23 gerk Exp $
 
 *eroaster-2.1.0 (11 July 2002) 
 
@@ -32,6 +32,9 @@
   should fix about everything in this package.
 
 *eroaster-2.0.12 (5 July 2002) Bart Verwilst <verwilst@gentoo.org>
+
+  03 Nov 2002; Mark Guertin <gerk@gentoo.org> eroaster-2.0.12.ebuild:
+  Added ppc and x86 to keywords
 
   initial ebuild
   ebuild written by Mark Dillavou <line72@postmark.net>
