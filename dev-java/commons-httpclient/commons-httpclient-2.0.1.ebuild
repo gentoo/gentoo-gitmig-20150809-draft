@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.1.ebuild,v 1.3 2004/10/12 19:22:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.1.ebuild,v 1.4 2004/10/12 19:26:27 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.3
+	sys-apps/sed
 	>=dev-java/log4j-1.2.5
 	>=dev-java/ant-1.4
 	dev-java/commons-logging"
