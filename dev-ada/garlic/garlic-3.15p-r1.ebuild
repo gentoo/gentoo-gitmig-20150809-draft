@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.2 2003/10/06 00:23:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.3 2003/10/28 14:00:09 dholm Exp $
 
 inherit gnat
 
@@ -10,7 +10,7 @@ SRC_URI="http://gd.tuwien.ac.at/languages/ada/gnat/3.15p/glade/glade-${PV}-src.t
 
 HOMEPAGE="http://www.gnat.com/"
 LICENSE="GMGPL"
-DEPEND="dev-lang/gnat"
+DEPEND="<dev-lang/gnat-5.*"
 RDEPEND=""
 SLOT="0"
 IUSE=""
@@ -57,4 +57,19 @@ src_install () {
 
 	#install examples
 	cp -r Examples ${D}/usr/share/doc/${PF}/
+
+	#set up environment
+	dodir /etc/env.d
+	echo "ADA_OBJECTS_PATH=/usr/lib/ada/adalib/${PN}" \
+		> ${D}/etc/env.d/55garlic
+	echo "ADA_INCLUDE_PATH=/usr/lib/ada/adainclude/${PN}" \
+		>> ${D}/etc/env.d/55garlic
+}
+
+pkg_postinst() {
+	einfo "The envaironment has been set up to make gnat automatically find files for"
+	einfo "Garlic. In order to immediately activate these settings please do:"
+	einfo "env-update"
+	einfo "source /etc/profile"
+	einfo "Otherwise the settings will become active next time you login"
 }
