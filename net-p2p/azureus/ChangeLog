@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.1 2004/11/15 10:29:24 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.2 2004/12/20 16:41:26 karltk Exp $
+
+*azureus-2.2.0.0-r1 (20 Dec 2004)
+
+  20 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  files/azureus-gentoo.sh, files/build.xml, +azureus-2.2.0.0-r1.ebuild,
+  -azureus-2.2.0.0.ebuild:
+  Rewrote startup script. Reindented ebuild. Requires properly SLOTed version
+  of dev-java/swt. Modified build.xml script. Should fix #71378.
+
+*azureus-2.2.0.0-r1 (20 Dec 2004)
 
   15 Nov 2004; <SeJo@gentoo.org> :
   initial add of ebuild

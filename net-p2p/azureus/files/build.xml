@@ -5,7 +5,7 @@
 			<classpath>
 				<pathelement location="."/>
 				<pathelement location="/usr/share/commons-cli-1/lib/commons-cli.jar"/>
-				<pathelement location="/usr/share/swt/lib/swt.jar"/>
+				<pathelement location="/usr/share/swt-3/lib/swt.jar"/>
 				<pathelement location="seda.jar"/>
 			</classpath>
 		</javac>
