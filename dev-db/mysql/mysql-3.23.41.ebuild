@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.41.ebuild,v 1.3 2001/10/29 08:14:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.41.ebuild,v 1.4 2001/11/10 11:21:56 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,20 +11,17 @@ SRC_URI="ftp://mysql.valueclick.com/mysql/Downloads/MySQL-3.23/${A}
 
 HOMEPAGE="http://www.mysql.com/"
 
-DEPEND="virtual/glibc
-        sys-devel/automake
-        sys-devel/libtool
-        sys-devel/autoconf
-        sys-apps/procps
-        tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-        readline? ( >=sys-libs/readline-4.1 )
-        >=sys-libs/ncurses-5.1
-        >=sys-libs/zlib-1.1.3"
-
 RDEPEND="virtual/glibc
         readline? ( >=sys-libs/readline-4.1 )
         >=sys-libs/ncurses-5.1
         >=sys-libs/zlib-1.1.3"
+
+DEPEND="${RDEPEND}
+        sys-devel/automake
+        sys-devel/libtool
+        sys-devel/autoconf
+        sys-apps/procps
+        tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
 src_unpack() {
 	unpack ${A}
@@ -40,65 +37,64 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
 
-    local myconf
+	# MySQL doesn't like optimizations
+	export CFLAGS="${CFLAGS/-O?/}"
+	export CXXFLAGS="${CXXFLAGS/-O?/}"
 
-    # MySQL doesn't like optimizations
-    export CFLAGS="${CFLAGS/-O?/}"
-    export CXXFLAGS="${CXXFLAGS/-O?/}"
+	if [ "`use tcpd`" ]
+	then
+		myconf="--with-libwrap"
+	fi
 
-    if [ "`use tcpd`" ]
-    then
-      myconf="--with-libwrap"
-    fi
+	if [ "`use readline`" ]
+	then
+		# Means use system readline
+		myconf="$myconf --without-readline"
+	fi
 
-    if [ "`use readline`" ]
-    then
-      # Means use system readline
-      myconf="$myconf --without-readline"
-    fi
-
-    if [ "$DEBUG" == "true" ]
-    then
-      myconf="$myconf --with-debug"
-    else
-      myconf="$myconf --without-debug"
-    fi
+	if [ "$DEBUG" == "true" ]
+	then
+		myconf="$myconf --with-debug"
+	else
+		myconf="$myconf --without-debug"
+	fi
     
-	try CXX=gcc ./configure --prefix=/usr	\
-	--enable-shared 					\
-	--enable-static 					\	
-	--enable-assembler 					\
-	--enable-thread-safe-client 				\
-	--with-low-memory 					\
-	--libdir=/usr/lib 					\
-	--libexecdir=/usr/sbin 					\
-	--sysconfdir=/etc/mysql 				\
-	--localstatedir=/var/mysql 				\
-	--infodir=/usr/share/info 				\
-	--mandir=/usr/share/man 				\
-	--with-mysql-user=mysql 				\
-	--with-berkeley-db=${S}/bdb				\
-	--with-innodb						\
-        $myconf
+	CXX=gcc ./configure --prefix=/usr				\
+			    --enable-shared 				\
+			    --enable-static 				\
+			    --enable-assembler 				\
+			    --enable-thread-safe-client 		\
+			    --with-low-memory 				\
+			    --libdir=/usr/lib 				\
+			    --libexecdir=/usr/sbin 			\
+			    --sysconfdir=/etc/mysql 			\
+			    --localstatedir=/var/mysql 			\
+			    --infodir=/usr/share/info 			\
+			    --mandir=/usr/share/man 			\
+			    --with-mysql-user=mysql 			\
+			    --with-berkeley-db=${S}/bdb			\
+			    --with-innodb				\
+			    $myconf || die
 
-	try make testdir=/usr/share/mysql/test benchdir=/usr/share/mysql/bench
+	make testdir=/usr/share/mysql/test benchdir=/usr/share/mysql/bench
+	assert
 }
 
 src_install() {
-
-	
 	# Install MySQL
 
-	try make install prefix=${D}/usr \
-		libdir=${D}/usr/lib \
-		libexecdir=${D}/usr/sbin \
-		sysconfdir=${D}/etc/mysql \
-		localstatedir=${D}/var/mysql \
-		infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-	 	testdir=${D}/usr/share/mysql/test \
-		benchdir=${D}/usr/share/mysql/bench
+	make prefix=${D}/usr 						\
+	     libdir=${D}/usr/lib 					\
+	     libexecdir=${D}/usr/sbin 					\
+	     sysconfdir=${D}/etc/mysql 					\
+	     localstatedir=${D}/var/mysql 				\
+	     infodir=${D}/usr/share/info 				\
+	     mandir=${D}/usr/share/man 					\
+	     testdir=${D}/usr/share/mysql/test 				\
+	     benchdir=${D}/usr/share/mysql/bench			\
+	     install || die
 
 
 	# Move Client Libs
@@ -115,7 +111,6 @@ src_install() {
 	
 	# MySQL Docs
 	
-
 	dodoc README MIRRORS
 	cd ${S}/Docs 
 	docinto ps
@@ -124,12 +119,9 @@ src_install() {
 	dodoc manual.txt
 	docinto html
 	dodoc manual.html manual_toc.html
-		
 }
 
 pkg_config () {
-
-  echo "Setting up symlinks..."
-  ${ROOT}/usr/sbin/rc-update add mysql
-
+	echo "Setting up symlinks..."
+	${ROOT}/usr/sbin/rc-update add mysql
 }
