@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r2.ebuild,v 1.2 2005/01/10 04:19:23 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r2.ebuild,v 1.3 2005/01/10 20:40:48 fafhrd Exp $
 
 inherit eutils gnustep-funcs
 
@@ -15,7 +15,7 @@ IUSE="gif gnustep jpeg nls png tiff modelock vdesktop xinerama"
 DEPEND="x11-base/xorg-x11
 	media-libs/fontconfig
 	gif? ( || ( >=media-libs/libungif-4.1.0
-			>=media-libs/giflib-4.1.0-r3))
+			>=media-libs/giflib-4.1.0-r3 ) )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.6.1-r2 )"
@@ -168,7 +168,7 @@ pkg_postinst() {
 		ewarn ""
 	else
 		einfo "Even though you are not using the GNUstep environment, wmaker.inst will"
-		einfo "  create a 'GNUstep' directory in your home -- it uses this dirctory"
+		einfo "  create a 'GNUstep' directory in your home -- it uses this directory"
 		einfo "  to store your WindowMaker configuration files."
 		einfo "WPrefs.app can be launched at /usr/lib/GNUstep/Applications/WPrefs.app/WPrefs"
 		einfo "  or by simply **clicking on it in the WindowMaker default dock.**"
