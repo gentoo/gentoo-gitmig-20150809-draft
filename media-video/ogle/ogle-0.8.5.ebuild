@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.8.5.ebuild,v 1.5 2002/12/31 15:40:57 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.8.5.ebuild,v 1.6 2003/02/02 03:51:22 nall Exp $
 
 IUSE="oss mmx alsa"
 
@@ -45,6 +45,20 @@ src_compile() {
 	use alsa \
 		&& myconf="${myconf} --enable-alsa" \
 		|| myconf="${myconf} --disable-alsa"
+
+    if [ "${ARCH}" = "ppc" ]
+	then
+		# if this user doesn't want altivec, don't compile it in
+		# fixes #14939
+		if [ `echo ${CFLAGS} | grep -e "-maltivec" | wc -l` = "0" ]
+		then
+			einfo "Disabling alitvec support"
+			myconf="${myconf} --disable-altivec"
+		else
+			einfo "Enabling altivec support"
+			myconf="${myconf} --enable-altivec"
+		fi
+	fi
 
 	elibtoolize
 

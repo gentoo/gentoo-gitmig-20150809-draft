@@ -1,11 +1,16 @@
 # ChangeLog for media-video/ogle
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.9 2002/12/31 15:40:57 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.10 2003/02/02 03:51:22 nall Exp $
+
+
+*ogle-0.8.5 (21 Sep 2002)
+
+  01 Feb 2003; Jon Nall <nall@gentoo.org> ogle-0.8.5.ebuild :
+  don't compile in alitvec support for those who don't want it
+  (!G4s). Fixes gentoo bug #14939
 
   31 Dec 2002; Olivier Reisch <doctomoe@gentoo.org> ogle-0.8.5.ebuild :
   Added ppc keyword
-
-*ogle-0.8.5 (21 Sep 2002)
 
   21 Sep 2002; Arcady Genkin <agenkin@gentoo.org> ogle-0.8.5.ebuild :
 
