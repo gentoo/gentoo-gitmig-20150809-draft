@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.24 2005/03/09 03:33:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.25 2005/03/10 00:46:16 stkn Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -54,6 +54,8 @@ x86-obsd
 x86-fbsd
 
 # Asterisk use flag masking
+bri
+florz
 resperl
 softfax
 zaptel
