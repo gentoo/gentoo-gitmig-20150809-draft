@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.20 2005/01/02 07:27:54 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.21 2005/01/07 07:18:29 eradicator Exp $
+
+  06 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  courier-authlib-0.52.ebuild:
+  multilib and cross-compilation fixes.
 
   01 Jan 2005; Tuan Van <langthang@gentoo.org> courier-authlib-0.52.ebuild:
   add "libtoolize --copy --force"

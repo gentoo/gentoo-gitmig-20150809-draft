@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.52.ebuild,v 1.2 2005/01/02 07:27:54 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.52.ebuild,v 1.3 2005/01/07 07:18:29 eradicator Exp $
 
 inherit eutils gnuconfig
 
@@ -79,9 +79,7 @@ src_compile() {
 
 	ewarn "${myconf}"
 
-	./configure \
-	    --prefix=/usr \
-		--mandir=/usr/share/man \
+	econf \
 		--sysconfdir=/etc/courier \
 		--datadir=/usr/share/courier \
 		--libexecdir=/usr/lib/courier \
@@ -92,8 +90,7 @@ src_compile() {
 		--with-mailuser=mail \
 		--with-mailgroup=mail \
 		--cache-file=${S}/configuring.cache \
-		--build=${CHOST} \
-		--host=${CHOST} ${myconf} || die "bad ./configure"
+		${myconf} || die "bad ./configure"
 	emake || die "Compile problem"
 }
 
@@ -142,4 +139,3 @@ pkg_postinst() {
 		einfo " rm `echo \"${list}\" | xargs echo`"
 	fi
 }
-

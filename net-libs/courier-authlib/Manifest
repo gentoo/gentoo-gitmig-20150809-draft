@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 76ad08c3f6a12d825df705f31ef554c6 courier-authlib-0.52.ebuild 5144
+MD5 9bb476d7c1b83f421761cbc4c675896d ChangeLog 3198
 MD5 088c1350a14be1b1e72bf88c884abce1 courier-authlib-0.50.20041203.ebuild 5042
-MD5 bf6904c108455097f2f3de26ac0c046b ChangeLog 3068
 MD5 1639b87658242c2406f7f7f8deda7388 metadata.xml 334
-MD5 a01734679d1906a8886eccdcf66a20f5 files/digest-courier-authlib-0.52 74
+MD5 57d450126c904e2546ec0639cd668c66 courier-authlib-0.52.ebuild 5052
+MD5 6930587c358320ecb1043761d7ff97f1 files/configure-db4.patch 2544
 MD5 4c7dedb4c21da2d9e4dbc586459de426 files/courier-authlib-initd 1038
 MD5 55e872f718ada612e49cc176cb627db8 files/digest-courier-authlib-0.50.20041203 83
-MD5 6930587c358320ecb1043761d7ff97f1 files/configure-db4.patch 2544
+MD5 a01734679d1906a8886eccdcf66a20f5 files/digest-courier-authlib-0.52 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB16KH5FrxP71izLARArerAJ4gorac2pQ2aDasUQ2w5jnGUwNJBQCgtluM
-G8Q9Ns3QI2cCaZRTLgCmiXE=
-=KBWg
+iD8DBQFB3jfTArHZZzCEUG0RAiJhAJ970jKj3b+RzC4y7F1X3opbsYaimgCfdVGw
+QYCTMPlr9MSZHlJbXLCJ0pY=
+=IWYl
 -----END PGP SIGNATURE-----
