@@ -1,0 +1,8 @@
+# ChangeLog for x11-wm/ctwm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.1 2003/10/02 23:32:12 usata Exp $
+
+  03 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> files/ctwm-3.6-gentoo.diff:
+  Initial import. Ebuild submitted by Tobias Anderberg <tba@softhome.net>
+  This closes Bug #20628
+
