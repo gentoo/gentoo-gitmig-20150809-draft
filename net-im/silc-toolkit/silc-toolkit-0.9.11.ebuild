@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11.ebuild,v 1.8 2004/07/01 22:19:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11.ebuild,v 1.9 2004/07/15 00:26:05 agriffis Exp $
 
-IUSE="client server debug ipv6"
+IUSE="client ipv6 server"
 
 DESCRIPTION="Software development toolkit which provides full SILC protocol implementation for application developers."
 HOMEPAGE="http://silcnet.org"
