@@ -1,0 +1,18 @@
+--- configure.orig	Tue Feb 27 20:01:42 2001
++++ configure	Tue Feb 27 20:01:53 2001
+@@ -3287,6 +3287,7 @@
+ 
+ echo $ac_n "checking for libgd""... $ac_c" 1>&6
+ echo "configure:3290: checking for libgd" >&5
++if test "$with_gd" != "no"; then
+ old_CFLAGS="$CFLAGS"
+ CFLAGS="$CFLAGS $libgd_include"
+ old_LDFLAGS="$LDFLAGS"
+@@ -3314,4 +3315,7 @@
+ CFLAGS="$old_CFLAGS"
+ LDFLAGS="$old_LDFLAGS"
+ LIBS="$old_LIBS"
++else
++LIBGD="no"
++fi
+ echo "$ac_t""$LIBGD" 1>&6

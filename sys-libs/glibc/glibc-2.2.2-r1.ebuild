@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.2-r1.ebuild,v 1.3 2001/02/22 12:08:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.2-r1.ebuild,v 1.4 2001/02/27 19:07:22 achim Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -14,24 +14,22 @@ SRC_URI="ftp://sourceware.cygnus.com/pub/glibc/releases/glibc-${PV}.tar.gz
 	 ftp://ftp.gnu.org/pub/gnu/glibc/glibc-linuxthreads-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-DEPEND="sys-devel/gettext
-	gd? ( media-libs/libgd )"
+DEPEND="sys-devel/gettext gd? ( media-libs/libgd )"
 
 RDEPEND="gd? ( sys-libs/zlib media-libs/libpng )"
 
-PROVIDE="virtual/glibc sys-devel/autoconf"
+PROVIDE="virtual/glibc"
 
 src_unpack() {
 
     unpack glibc-${PV}.tar.gz
     cd ${S}
     unpack glibc-linuxthreads-${PV}.tar.gz
-    for i in mtrace-perl mtrace-tst-loading-perl configure.in
+    for i in mtrace-perl mtrace-tst-loading-perl configure.in configure
     do
       echo "Applying $i patch..."
       patch -p0 < ${FILESDIR}/glibc-2.2.2-${i}.diff
     done
-    autoconf
     cd io
     patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
     
@@ -44,7 +42,7 @@ src_compile() {
 	if [ "`use build`" ]
 	then
 	  # If we build for the build system we use the kernel headers from the target
-	  myconf="--with-header=$ROOT}usr/include"
+	  myconf="--with-header=${ROOT}usr/include"
 	fi
 	if [ "`use gd`" ]
 	then
@@ -74,26 +72,33 @@ src_install() {
     export LC_ALL=C
     try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} install -C buildhere
     try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} info -C buildhere
-    try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} localedata/install-locales -C buildhere
-# I commented out linuxthreads man pages because I don't want 
-# glibc to build depend on perl
-#    dodir /usr/share/man/man3
-#    try make MANDIR=${D}/usr/share/man/man3 install -C linuxthreads/man
-#    cd ${D}/usr/share/man/man3
-#    for i in *.3thr 
-#    do
-#      mv ${i} ${i%.3thr}.3
-#    done
-   
-    cd ${S}
-    chmod 755 ${D}/usr/lib/misc/pt_chown
-    install -m 644 nscd/nscd.conf ${D}/etc
-    install -m 755 ${FILESDIR}/nscd ${D}/etc/rc.d/init.d/nscd
+    if [ -z "`use build`" ]
+    then
+      try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} localedata/install-locales -C buildhere
+
+	# I commented out linuxthreads man pages because I don't want
+	# glibc to build depend on perl
+	#    dodir /usr/share/man/man3
+	#    try make MANDIR=${D}/usr/share/man/man3 install -C linuxthreads/man
+	#    cd ${D}/usr/share/man/man3
+	#    for i in *.3thr
+	#    do
+	#      mv ${i} ${i%.3thr}.3
+	#    done
+
+      install -m 644 nscd/nscd.conf ${D}/etc
+      install -m 755 ${FILESDIR}/nscd ${D}/etc/rc.d/init.d/nscd
+      dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE NEWS NOTES \
+	  PROJECTS README*
+    else
+      rm -rf ${D}/usr/share/{man,info}
+    fi
+
     rm ${D}/lib/ld-linux.so.2
     rm ${D}/lib/libc.so.6
 
-    dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE NEWS NOTES \
-	  PROJECTS README*
+    chmod 755 ${D}/usr/lib/misc/pt_chown
+ 
 }
 
 pkg_preinst()
@@ -125,5 +130,6 @@ pkg_postinst()
   /sbin/ldconfig -r ${ROOT}
 
 }
+
 
 
