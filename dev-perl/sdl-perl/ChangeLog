@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/sdl-perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.13 2004/06/25 00:58:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.14 2004/07/16 03:59:21 vapier Exp $
+
+*sdl-perl-1.20.3 (15 Jul 2004)
+
+  15 Jul 2004; Mike Frysinger <vapier@gentoo.org> +sdl-perl-1.20.3.ebuild:
+  Version bump to fix #55918 by Alexander Jenisch.
 
 *sdl-perl-1.20.0 (05 Mar 2003)
 

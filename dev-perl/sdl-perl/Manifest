@@ -1,4 +1,16 @@
-MD5 be32c5913ab9360982e454723f3db4ec sdl-perl-1.20.0.ebuild 682
-MD5 3b53c54334485afc0cb5b98a45ad4a1d ChangeLog 4278
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 846aae158081c797c149cc1eb40dccba ChangeLog 4435
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 be32c5913ab9360982e454723f3db4ec sdl-perl-1.20.0.ebuild 682
+MD5 710e2aaf70e2585eda56fdeb5672c2b0 sdl-perl-1.20.3.ebuild 669
 MD5 56ad886055f7781143f9f8c63fefa8de files/digest-sdl-perl-1.20.0 67
+MD5 000eb623a9e2ce37c9e3efd665f6e5c2 files/digest-sdl-perl-1.20.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA91KlHTu7gpaalycRAuDPAJ0QBP9vd5sBuQmbPXLuw0CFnsi8SQCg2//Y
+1XYgkFKKNRwfqBGP5SE3tdQ=
+=pyVO
+-----END PGP SIGNATURE-----
