@@ -1,0 +1,77 @@
+--- configure.in.orig	2005-03-26 12:05:55.211539816 +0100
++++ configure.in	2005-03-26 12:21:38.932072488 +0100
+@@ -112,56 +112,56 @@
+ 
+ MODULES="m_inmail m_passwd m_muttalias m_pine m_gnomecard m_bbdb m_wanderlust"
+ 
+-AC_PATH_PROG(FINGER, finger, "no")
+-if test "x$FINGER" != xno ; then
++AC_ARG_ENABLE(finger,[AC_HELP_STRING([--enable-finger],[enable finger support])])
++if test x$enableval = xyes ; then
+ 	MODULES="$MODULES m_finger"
+ 	AC_SUBST(FINGER)
+ fi
+ 
+-AC_PATH_PROG(ABOOK, abook, "no")
+-if test "x$ABOOK" != xno ; then
++AC_ARG_ENABLE(abook,[AC_HELP_STRING([--enable-abook],[enable abook support])])
++if test x$enableval = xyes ; then
+ 	MODULES="$MODULES m_abook"
+ 	AC_SUBST(ABOOK)
+ fi
+ 
+-AC_PATH_PROG(ADDR_EMAIL, addr-email, "no")
+-if test "x$ADDR_EMAIL" != xno ; then
++AC_ARG_ENABLE(addremail,[AC_HELP_STRING([--enable-addremail],[enable addressbook Tk database])])
++if test x$enableval = xyes ; then
+ 	MODULES="$MODULES m_addr_email"
+ 	AC_SUBST(ADDR_EMAIL)
+ fi
+ 
+-AC_PATH_PROG(YPCAT, ypcat, "no")
+-if test "x$YPCAT" != xno ; then
++AC_ARG_ENABLE(ypcat,[AC_HELP_STRING([--enable-ypcat],[enable ypcat support])])
++if test x$enableval = xyes ; then
+ 	MODULES="$MODULES m_yppasswd"
+ 	AC_SUBST(YPCAT)
+ fi
+ 
+-AC_PATH_PROG(NISCAT, niscat, "no")
+-if test "x$NISCAT" != xno ; then
++AC_ARG_ENABLE(niscat,[AC_HELP_STRING([--enable-niscat],[enable niscat support])])
++if test x$enableval = xyes ; then
+ 	MODULES="$MODULES m_nispasswd"
+ 	AC_SUBST(NISCAT)
+ fi
+ 
+-AC_PATH_PROG(GETENT, getent, "no")
+-if test "x$GETENT" != xno ; then
++AC_ARG_ENABLE(getent,[AC_HELP_STRING([--enable-getent],[enable getent support])])
++if test x$enableval = xyes ; then
+ 	MODULES="$MODULES m_getent"
+ 	AC_SUBST(GETENT)
+ fi
+ 
+-AC_PATH_PROG(GPG, gpg, "no")
+-if test "x$GPG" != xno ; then
++AC_ARG_ENABLE(gpg,[AC_HELP_STRING([--enable-gpg],[enable GnuPG support])])
++if test x$enableval = xyes ; then
+ 	MODULES="$MODULES m_gpg"
+ 	AC_SUBST(GPG)
+ fi
+ 
+-AC_PATH_PROG(PGPK, pgpk, "no")
+-if test "x$PGPK" != xno ; then
++AC_ARG_ENABLE(pgp5,[AC_HELP_STRING([--enable-pgp5],[enable PGP5 (pgpk) support])])
++if test x$enableval = xyes ; then
+ 	MODULES="$MODULES m_pgp5"
+ 	AC_SUBST(PGPK)
+ fi
+ 
+-AC_PATH_PROG(PGP, pgp, "no")
+-if test "x$PGP" != xno ; then
++AC_ARG_ENABLE(pgp,[AC_HELP_STRING([--enable-pgp],[enable PGP (pgp2) support])])
++if test x$enableval = xyes ; then
+ 	MODULES="$MODULES m_pgp2"
+ 	AC_SUBST(PGP)
+ fi
