@@ -1,9 +1,12 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.48 2003/10/24 16:21:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.49 2003/10/29 10:41:57 foser Exp $
 
 *gst-plugins-0.6.4 (23 Oct 2003)
+
+  29 Oct 2003; foser <foser@gentoo.org> gst-plugins-0.6.4.ebuild, gst-plugins-0.6.4-gcc2_fix.patch :
+  Add gcc2 fix as provided by Mark Chappell <gentoo-bugs@nslm.fsnet.co.uk> in #32192
 
   24 Oct 2003; foser <foser@gentoo.org> gst-plugins-0.6.4.ebuild :
   Readd job number restrictions for ffmpeg

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.4.ebuild,v 1.2 2003/10/24 16:21:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.4.ebuild,v 1.3 2003/10/29 10:41:57 foser Exp $
 
 # IMPORTANT
 #
@@ -41,6 +41,8 @@ src_unpack() {
 	# ppc asm included in the resample plugin seems to be broken,
 	# using a slower but working version for now
 	epatch ${FILESDIR}/noppcasm.patch
+	# Fix for building with gcc2 (#32192)
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 
 	# fix the scripts
 	cd ${S}/tools
