@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ed2k_hash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.6 2004/06/25 00:30:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.7 2004/07/01 09:15:46 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> ed2k_hash-0.4.0.ebuild:
+  virtual/glibc needs changed to virtual/libc; stable on ppc
 
   02 Jun 2004; Jon Hood <squinky86@gentoo.org> -ed2k_hash-0.3.3.ebuild,
   ed2k_hash-0.4.0.ebuild:
