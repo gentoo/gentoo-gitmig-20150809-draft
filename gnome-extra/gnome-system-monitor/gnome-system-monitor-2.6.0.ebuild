@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.6.0.ebuild,v 1.8 2004/07/04 12:37:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.6.0.ebuild,v 1.9 2004/08/05 23:23:15 gustavoz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ppc alpha ~sparc hppa amd64 ~ia64 mips"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 mips"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.3
