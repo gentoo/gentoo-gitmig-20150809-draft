@@ -1,6 +1,12 @@
 # ChangeLog for app-office/ical
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.6 2004/03/15 04:11:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.7 2004/06/06 20:07:59 seemant Exp $
+
+  06 Jun 2004; Seemant Kulleen <seemant@gentoo.org> ical-2.2.1.ebuild:
+  Fix compile error reported by Daniel Webert <daniel_webert@web.de> in bug
+  #52883, which was caused by the sed statement not actually acting on any
+  files. The fix was found by stan <stan@saticed.me.uk>. Additionally, man pages
+  were going into /usr/man not /usr/share/man, so fixed that too.
 
   14 Mar 2004; Seemant Kulleen <seemant@gentoo.org> ical-2.2.1.ebuild:
   clean ups for bug #44712 by Michael Sterret <mr_bones_@gentoo.org>

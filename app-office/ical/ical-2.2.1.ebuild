@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.7 2004/04/07 18:50:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.8 2004/06/06 20:07:59 seemant Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 	sed -i \
 		-e "s: \@TCL_LIBS\@::" \
 		-e "s:mkdir:mkdir -p:" \
-		Makefile.in
+		${S}/Makefile.in
 
 	has_version '=dev-lang/tcl-8.4*' && epatch ${MY_P}-tcl8.4.patch
 }
@@ -46,5 +46,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "install failed"
+	einstall \
+		MANDIR=${D}/usr/share/man || die "install failed"
 }
