@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.19.40.ebuild,v 1.6 2004/06/25 00:26:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.19.40.ebuild,v 1.7 2005/01/07 22:30:05 luckyduck Exp $
 
 inherit eutils
 
 IUSE=""
 
 DESCRIPTION="The Teamspeak Voice Communication Server"
-HOMEPAGE="http://www.teamspeak.org/"
+HOMEPAGE="http://www.goteamspeak.com/"
 SRC_URI="ftp://webpost.teamspeak.org/releases/ts2_server_rc2_${PV//./}.tar.bz2"
 
 LICENSE="as-is"

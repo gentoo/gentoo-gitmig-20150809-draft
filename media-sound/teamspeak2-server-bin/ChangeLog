@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/teamspeak2-server-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.14 2004/10/07 20:29:40 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.15 2005/01/07 22:30:05 luckyduck Exp $
+
+  07 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  teamspeak2-server-bin-2.0.19.40.ebuild,
+  teamspeak2-server-bin-2.0.20.1.ebuild:
+  updated homepage. fixes #76964.
 
   07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> :
   Added sqlite_sql symlink to fix bug #66639.
