@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.53 2004/03/09 13:12:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.54 2004/04/21 02:25:42 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  proftpd-1.2.9-r1.ebuild, proftpd-1.2.9.ebuild:
+  is-flag -fPIC -> has_pic to work with new gcc builds and USE=hardened.
 
   09 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> proftpd-1.2.9-r1.ebuild:
   Adding amd64 keyword. Closing #44105.

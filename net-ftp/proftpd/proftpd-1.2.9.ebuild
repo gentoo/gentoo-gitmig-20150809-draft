@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9.ebuild,v 1.10 2004/02/12 19:47:21 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9.ebuild,v 1.11 2004/04/21 02:25:43 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -71,7 +71,7 @@ src_compile() {
 
 	# bug #30359
 	has_version sys-devel/hardened-gcc && echo > lib/libcap/cap_sys.c
-	is-flag -fPIC && echo > lib/libcap/cap_sys.c
+	has_pic && echo > lib/libcap/cap_sys.c
 
 	econf \
 		--sbindir=/usr/sbin \
