@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.4 2003/09/16 13:14:35 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.5 2003/12/04 16:38:42 vapier Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -37,10 +37,10 @@ aconnect=/usr/bin/aconnect
 alsascrdir=/etc/alsa.d
 
 depend() {
-  need bootmisc localmount
-  before modules
-  after isapnp
-  provide alsa-modules
+	need bootmisc localmount
+	before modules
+	after isapnp
+	provide alsa-modules
 }
 
 start() {
@@ -113,7 +113,7 @@ start() {
 
 stop() {
 	if [ ! -d /proc/asound ] ; then
-		error "ALSA is not loaded"
+		eerror "ALSA is not loaded"
 		return 0
 	fi
 	
@@ -154,5 +154,3 @@ terminate() {
 	#
 	[ -f /proc/asound/seq/clients -a -x $aconnect ] && $aconnect --removeall
 }
-
-
