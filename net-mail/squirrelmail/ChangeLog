@@ -1,13 +1,19 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.9 2002/11/12 14:02:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.10 2002/11/15 01:15:48 vapier Exp $
 
 *squirrelmail-1.2.9 (12 Nov 2002)
+
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
 
   12 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.
 
 *squirrelmail-1.2.8 (20 Sep 2002)
+
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
 
   20 Sep 2002; Nick Hadaway <raker@gentoo.org>
   squirrelmail-1.2.8.ebuild, files/digest-squirrelmail-1.2.8 :
@@ -15,6 +21,9 @@
   See the ChangeLog at http://www.squirrelmail.org for more...
 
 *squirrelmail-1.2.7 (08 Jul 2002)
+
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
 
   15 Jul 2002; Ryan Phillips <rphillips@gentoo.org> :
   Updated for new dev-php/ tree
