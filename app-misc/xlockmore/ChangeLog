@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/xlockmore
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.6 2002/04/14 08:40:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.7 2002/04/24 19:54:57 tod Exp $
+
+*xlockmore-5.03-r5 (24 Apr 2002)
+
+  24 Apr 2002; Tod Neidt <tod@gentoo.org> xlockmore-5.03-r5.ebuild :
+
+  Fix for Bug# 1810.  Install tarball supplied etc/xlock.pamd
+  as /etc/pam.d/xlock if 'pam' is in USE.  Also unset setuid root if
+  'pam' is in USE as one of the benefits of using pam is not running 
+  apps such as this setuid root.  Also rolled back emake to make as the
+  xlock build resets to -j1 anyway and this eleminates the error msgs.
 
 *xlockmore-5.03-r4 (14 Apr 2002)
 
