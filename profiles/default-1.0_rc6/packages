@@ -40,7 +40,6 @@
 
 >=x11-base/xfree-4.1.0-r2
 *sys-devel/perl
-*app-editors/e3
 *app-editors/nano
 #no real cost for nano, since we already have ncurses
 *dev-libs/glib
