@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/vmailmgr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.4 2002/09/28 10:03:32 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.5 2002/09/30 12:50:18 raker Exp $
 
 *vmailmgr-0.96.9-r1 (16 Apr 2002)
+
+  30 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  vmailmgr-0.96.9-r1.ebuild :
+  Reverted back to make DESTDIR=${D} install instead of einstall.
 
   28 Sep 2002; Nick Hadaway <raker@gentoo.org>
   vmailmgr-0.96.9-r1.ebuild, files/vmailmgr-0.96.9-gentoo-r1.diff :

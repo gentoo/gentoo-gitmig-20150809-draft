@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.7 2002/09/28 10:03:32 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.8 2002/09/30 12:50:18 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -37,7 +37,7 @@ src_compile() {
 
 src_install () {
 
-	einstall || die "make install failed"
+	make DESTDIR=${D} install || die "make install failed"
 
 	dodoc AUTHORS INSTALL README TODO NEWS
 
