@@ -1,25 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.20050115.ebuild,v 1.3 2005/02/10 07:24:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.17.ebuild,v 1.1 2005/02/11 06:57:29 cardoe Exp $
 
 inherit myth flag-o-matic eutils
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://dev.gentoo.org/~cardoe/mythtv-0.16.20050115.tar.bz2"
+SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X xv mmx"
-
-S=${WORKDIR}/mythtv
+IUSE="alsa arts dvb lcd lirc nvidia cle266 opengl xv mmx ieee1394"
 
 DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
-	X? ( >=x11-libs/qt-3.1 )
-	directfb? ( dev-libs/DirectFB >=x11-libs/qt-embedded-3.1 )
+	>=x11-libs/qt-3.1
 	dev-db/mysql
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	>=sys-apps/sed-4
@@ -28,22 +24,15 @@ DEPEND=">=media-libs/freetype-2.0
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
 	nvidia? ( media-video/nvidia-glx )
+	ieee1394? ( sys-libs/libraw1394 )
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )"
 
 RDEPEND="${DEPEND}
 	!media-tv/mythfrontend"
 
 pkg_setup() {
-	if use X; then
-		QTP=x11-libs/qt
-	elif use directfb; then
-		QTP=x11-libs/qt-embedded
-	else
-		eerror "You must have either X or directfb in USE"
-		die "No QT library selected"
-	fi
 
-	local qt_use="$(</var/db/pkg/`best_version ${QTP}`/USE)"
+	local qt_use="$(</var/db/pkg/`best_version qt`/USE)"
 	if ! has mysql ${qt_use} ; then
 		eerror "Qt is missing MySQL support. Please add"
 		eerror "'mysql' to your USE flags, and re-emerge Qt."
@@ -54,21 +43,9 @@ pkg_setup() {
 }
 
 setup_pro() {
-	sed -e 's:EXTRA_LIBS += -L/usr/X11R6/lib -lXinerama -lXv -lX11 -lXext -lXxf86vm:EXTRA_LIBS += -lXinerama -lXv -lX11 -lXext -lXxf86vm:' \
-		-i 'settings.pro' || die "failed to remove extra library path"
-
-	sed -e 's:LIBVERSION = 0.16:LIBVERSION = 0.16.20050115:' \
-		-i 'settings.pro' || die "failed to correct library version"
-
-
 	if [ "${ARCH}" == "amd64" ] || ! use mmx; then
 		sed -i settings.pro \
 			-e "s:DEFINES += MMX:DEFINES -= MMX:"
-	fi
-
-	if ! use X ; then
-		sed -e 's:CONFIG += using_x11:#CONFIG += using_x11:' \
-			-i 'settings.pro' || die "disable x11 failed"
 	fi
 
 	if ! use xv ; then
@@ -118,6 +95,10 @@ setup_pro() {
 			-i 'settings.pro' || die "enable nvidia xvmc sed failed"
 	fi
 
+	if use nvidia && use cle266; then
+		die "You can not have USE="cle266" and USE="nvidia" at the same time. Must disable one or the other."
+	fi
+
 	if use cle266 ; then
 		sed -e 's:#CONFIG += using_xvmc using_xvmc_vld:CONFIG += using_xvmc using_xvmc_vld:' \
 			-e 's:#DEFINES += USING_XVMC USING_XVMC_VLD:DEFINES += USING_XVMC USING_XVMC_VLD:' \
@@ -126,16 +107,19 @@ setup_pro() {
 	fi
 
 	if ! use cle266 ; then # needed because nvidia and cle266 are not compatible
-		sed -e 's:EXTRA_LIBS += -lviaXvMC -lXvMC:#EXTRA_LIBS += -lviaXvMC -lXvMC:' \
+		sed -e 's:CONFIG += using_xvmc using_xvmc_vld:#CONFIG += using_xvmc using_xvmc_vld:' \
+			-e 's:DEFINES += USING_XVMC USING_XVMC_VLD:#DEFINES += USING_XVMC USING_XVMC_VLD:' \
+			-e 's:EXTRA_LIBS += -lviaXvMC -lXvMC:#EXTRA_LIBS += -lviaXvMC -lXvMC:' \
 			-i 'settings.pro' || die "disable VLD XvMC sed failed"
 	fi
 
-	if use directfb ; then
-		sed -e 's:#CONFIG += using_directfb:CONFIG += using_directfb:' \
-			-e 's:#EXTRA_LIBS += `directfb:EXTRA_LIBS += `directfb:' \
-			-e 's:#QMAKE_CXXFLAGS += `directfb:QMAKE_CXXFLAGS += `directfb:' \
-			-i 'settings.pro' || die "enable directfb sed failed"
+	if use ieee1394 ; then
+		sed -e 's:#CONFIG += using_firewire:CONFIG += using_firewire:' \
+			-e 's:#DEFINES += USING_FIREWIRE:DEFINES += USING_FIREWIRE:' \
+			-e 's:#EXTRA_LIBS += -lraw1394 -liec61883:EXTRA_LIBS += -lraw1394 -liec61883:' \
+			-i 'settings.pro' || die "failed to enable firewire support"
 	fi
+
 	if use opengl ; then
 		sed -e 's:#DEFINES += USING_OPENGL_VSYNC:DEFINES += USING_OPENGL_VSYNC:' \
 			-e 's:#EXTRA_LIBS += -lGL:EXTRA_LIBS += -lGL:' \
@@ -171,6 +155,7 @@ src_compile() {
 	emake -C libs/libavformat || die
 	emake -C libs/libmythsamplerate || die
 	emake -C libs/libmythsoundtouch || die
+	emake -C libs/libmythmpeg2 || die
 	emake -C libs/libmyth || die
 	emake -C libs/libmythtv || die
 	emake -C libs
