@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.173 2004/07/27 02:41:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.174 2004/07/27 02:42:52 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -183,6 +183,7 @@ oci8 - Adds Oracle 8 Support
 odbc - Adds ODBC Support (Open DataBase Connectivity)
 offensive - Enables potentially offensive items in packages
 oggvorbis - Adds support for the OggVorbis audio encoding
+openal - Adds support for the Open Audio Library
 opengl - Adds support for OpenGL
 oracle7 - Adds support for Oracle 7
 oscar - Enable Oscar (AIM/ICQ) IM protocol support
