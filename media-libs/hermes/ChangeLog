@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/hermes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.19 2004/11/19 09:11:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.20 2004/11/24 09:03:59 eradicator Exp $
+
+*hermes-1.3.3 (24 Nov 2004)
+
+  24 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +files/hermes-1.3.3-amd64.patch, +files/hermes-1.3.3-destdir.patch,
+  +hermes-1.3.3.ebuild:
+  Version bump closes bug #48156.
 
   19 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   hermes-1.3.2-r2.ebuild:
