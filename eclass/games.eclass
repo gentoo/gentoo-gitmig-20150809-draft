@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.85 2004/12/30 11:54:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.86 2005/02/04 00:07:15 vapier Exp $
 #
-# devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
+# devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
 # This is the games eclass for standardizing the install of games ...
 # you better have a *good* reason why you're *not* using games.eclass
@@ -17,25 +17,25 @@ EXPORT_FUNCTIONS pkg_postinst src_compile pkg_setup
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
-export GAMES_PREFIX="${GAMES_PREFIX:-/usr/games}"
-export GAMES_PREFIX_OPT="${GAMES_PREFIX_OPT:-/opt}"
-export GAMES_DATADIR="${GAMES_DATADIR:-/usr/share/games}"
-export GAMES_DATADIR_BASE="${GAMES_DATADIR_BASE:-/usr/share}" # some packages auto append 'games'
-export GAMES_SYSCONFDIR="${GAMES_SYSCONFDIR:-/etc/games}"
-export GAMES_STATEDIR="${GAMES_STATEDIR:-/var/games}"
-export GAMES_LOGDIR="${GAMES_LOGDIR:-/var/log/games}"
-export GAMES_LIBDIR="${GAMES_LIBDIR:-/usr/games/lib}"
-export GAMES_BINDIR="${GAMES_BINDIR:-/usr/games/bin}"
+export GAMES_PREFIX=${GAMES_PREFIX:-/usr/games}
+export GAMES_PREFIX_OPT=${GAMES_PREFIX_OPT:-/opt}
+export GAMES_DATADIR=${GAMES_DATADIR:-/usr/share/games}
+export GAMES_DATADIR_BASE=${GAMES_DATADIR_BASE:-/usr/share} # some packages auto append 'games'
+export GAMES_SYSCONFDIR=${GAMES_SYSCONFDIR:-/etc/games}
+export GAMES_STATEDIR=${GAMES_STATEDIR:-/var/games}
+export GAMES_LOGDIR=${GAMES_LOGDIR:-/var/log/games}
+export GAMES_LIBDIR=${GAMES_LIBDIR:-/usr/games/lib}
+export GAMES_BINDIR=${GAMES_BINDIR:-/usr/games/bin}
 export GAMES_ENVD="90games"
 # if you want to use a different user/group than games.games,
 # just add these two variables to your environment (aka /etc/profile)
-export GAMES_USER="${GAMES_USER:-root}"
-export GAMES_USER_DED="${GAMES_USER_DED:-games}"
-export GAMES_GROUP="${GAMES_GROUP:-games}"
+export GAMES_USER=${GAMES_USER:-root}
+export GAMES_USER_DED=${GAMES_USER_DED:-games}
+export GAMES_GROUP=${GAMES_GROUP:-games}
 
 egamesconf() {
-	gnuconfig_update
-	if [ -x ./configure ] ; then
+	if [[ -x ./configure ]] ; then
+		gnuconfig_update
 		echo \
 		./configure \
 			--prefix="${GAMES_PREFIX}" \
@@ -78,7 +78,7 @@ egamesinstall() {
 }
 
 gameswrapper() {
-	local oldtree="${DESTTREE}"
+	local oldtree=${DESTTREE}
 	into "${GAMES_PREFIX}"
 	local cmd=$1; shift
 	${cmd} "$@"
@@ -99,9 +99,10 @@ gamesowners() { chown ${GAMES_USER}:${GAMES_GROUP} "$@"; }
 gamesperms() { chmod u+rw,g+r-w,o-rwx "$@"; }
 prepgamesdirs() {
 	local dir f
-	for dir in "${GAMES_PREFIX}" "${GAMES_PREFIX_OPT}" "${GAMES_DATADIR}" \
-			"${GAMES_SYSCONFDIR}" "${GAMES_STATEDIR}" "${GAMES_LIBDIR}" \
-			"${GAMES_BINDIR}" "$@"
+	for dir in \
+		"${GAMES_PREFIX}" "${GAMES_PREFIX_OPT}" "${GAMES_DATADIR}" \
+		"${GAMES_SYSCONFDIR}" "${GAMES_STATEDIR}" "${GAMES_LIBDIR}" \
+		"${GAMES_BINDIR}" "$@"
 	do
 		(
 			gamesowners -R "${D}/${dir}"
@@ -116,12 +117,12 @@ prepgamesdirs() {
 		fi
 	done
 	for f in $(find "${D}/${GAMES_STATEDIR}" -type f -printf '%P ' 2>/dev/null) ; do
-		if [ -e "${ROOT}/${GAMES_STATEDIR}/${f}" ] ; then
+		if [[ -e ${ROOT}/${GAMES_STATEDIR}/${f} ]] ; then
 			cp -p "${ROOT}/${GAMES_STATEDIR}/${f}" "${D}/${GAMES_STATEDIR}/${f}"
 			touch "${D}/${GAMES_STATEDIR}/${f}"
 		fi
 	done
-	chmod 750 ${D}/${GAMES_BINDIR}/* &> /dev/null
+	chmod 750 "${D}/${GAMES_BINDIR}"/* &> /dev/null
 }
 
 gamesenv() {
@@ -133,20 +134,20 @@ EOF
 
 games_pkg_setup() {
 	enewgroup "${GAMES_GROUP}" 35
-	[ "${GAMES_USER}" != "root" ] \
+	[[ ${GAMES_USER} != "root" ]] \
 		&& enewuser "${GAMES_USER}" 35 /bin/false /usr/games "${GAMES_GROUP}"
-	[ "${GAMES_USER_DED}" != "root" ] \
+	[[ ${GAMES_USER_DED} != "root" ]] \
 		&& enewuser "${GAMES_USER_DED}" 36 /bin/bash /usr/games "${GAMES_GROUP}"
 
 	# Dear carpaski and portage-dev team, we are so sorry.  Lots of love, games team
 	# See Bug #61680
-	[ "$(getent passwd ${GAMES_USER_DED} | cut -f7 -d:)" == "/bin/false" ] \
+	[[ $(getent passwd "${GAMES_USER_DED}" | cut -f7 -d:) == "/bin/false" ]] \
 		&& usermod -s /bin/bash "${GAMES_USER_DED}" 
 }
 
 games_src_compile() {
-	[ -x ./configure ] && { egamesconf || die "egamesconf failed"; }
-	[ -e [Mm]akefile ] && { emake || die "emake failed"; }
+	[[ -x ./configure ]] && { egamesconf || die "egamesconf failed"; }
+	[[ -e [Mm]akefile ]] && { emake || die "emake failed"; }
 }
 
 # pkg_postinst function ... create env.d entry and warn about games group
@@ -165,14 +166,14 @@ games_ut_unpack() {
 	local ut_unpack="$1"
 	local f=
 
-	if [ -z "${ut_unpack}" ]; then
+	if [[ -z ${ut_unpack} ]] ; then
 		die "You must provide an argument to games_ut_unpack"
 	fi
-	if [ -f "${ut_unpack}" ]; then
+	if [[ -f ${ut_unpack} ]] ; then
 		uz2unpack "${ut_unpack}" "${ut_unpack/.uz2/}" &>/dev/null \
 			|| die "uncompressing file ${ut_unpack}"
 	fi
-	if [ -d "${ut_unpack}" ]; then
+	if [[ -d ${ut_unpack} ]] ; then
 		for f in $(find "${ut_unpack}" -name '*.uz*' -printf '%f ') ; do
 			uz2unpack "${ut_unpack}/${f}" "${ut_unpack}/${f/.uz2}" &>/dev/null \
 				|| die "uncompressing file ${f}"
@@ -184,14 +185,14 @@ games_ut_unpack() {
 # Unpacks .umod/.ut2mod/.ut4mod files for UT/UT2003/UT2004
 # Usage: games_umod_unpack $1
 games_umod_unpack() {
-	local umod="$1"
+	local umod=$1
 	mkdir -p "${Ddir}/System"
-	cp ${dir}/System/{ucc-bin,{Manifest,Def{ault,User}}.ini,{Engine,Core,zlib,ogg,vorbis}.so,{Engine,Core}.int} ${Ddir}/System
+	cp "${dir}"/System/{ucc-bin,{Manifest,Def{ault,User}}.ini,{Engine,Core,zlib,ogg,vorbis}.so,{Engine,Core}.int} ${Ddir}/System
 	export UT_DATA_PATH="${Ddir}/System"
 	cd "${UT_DATA_PATH}"
 	./ucc-bin umodunpack -x "${S}/${umod}" -nohomedir &> /dev/null \
 		|| die "uncompressing file ${umod}"
-	rm -f ${Ddir}/System/{ucc-bin,{Manifest,Def{ault,User},User,UT2003}.ini,{Engine,Core,zlib,ogg,vorbis}.so,{Engine,Core}.int,ucc.log} &>/dev/null \
+	rm -f "${Ddir}"/System/{ucc-bin,{Manifest,Def{ault,User},User,UT2003}.ini,{Engine,Core,zlib,ogg,vorbis}.so,{Engine,Core}.int,ucc.log} &>/dev/null \
 		|| die "Removing temporary files"
 }
 
@@ -201,11 +202,8 @@ games_umod_unpack() {
 # $3 == directory to chdir before running binary
 # $4 == extra LD_LIBRARY_PATH's (make it : delimited)
 games_make_wrapper() {
-	local wrapper="$1" ; shift
-	local bin="$1" ; shift
-	local chdir="$1" ; shift
-	local libdir="$1" ; shift
-	local tmpwrapper="$(emktemp)"
+	local wrapper=$1 bin=$2 chdir=$3 libdir=$4
+	local tmpwrapper=$(emktemp)
 	cat << EOF > "${tmpwrapper}"
 #!/bin/sh
 cd "${chdir}"
