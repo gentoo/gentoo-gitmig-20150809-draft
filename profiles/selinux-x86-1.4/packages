@@ -59,7 +59,7 @@
 *net-misc/wget
 *app-arch/bzip2
 *sys-apps/kbd
-*sys-apps/cpio
+*app-arch/cpio
 *sys-apps/debianutils
 *sys-apps/diffutils
 *sys-apps/ed

@@ -8,7 +8,7 @@ app-shells/bash
 app-arch/bzip2
 sys-apps/console-data
 sys-apps/kbd
-sys-apps/cpio
+app-arch/cpio
 sys-apps/debianutils
 sys-fs/devfsd
 sys-apps/diffutils

@@ -77,7 +77,7 @@ net-misc/rsync
 *app-shells/bash
 *app-arch/bzip2
 *sys-apps/kbd
-*sys-apps/cpio
+*app-arch/cpio
 *sys-apps/debianutils
 *sys-apps/diffutils
 *sys-fs/e2fsprogs

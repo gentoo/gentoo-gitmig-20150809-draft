@@ -53,7 +53,7 @@ virtual/os-headers
 *app-arch/bzip2
 *sys-apps/kbd
 *sys-apps/coreutils
-*sys-apps/cpio
+*app-arch/cpio
 *sys-apps/debianutils
 *sys-apps/diffutils
 *sys-fs/e2fsprogs

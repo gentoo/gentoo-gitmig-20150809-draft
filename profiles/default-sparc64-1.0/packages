@@ -28,7 +28,7 @@
 *app-shells/bash
 *app-arch/bzip2
 *sys-apps/kbd
-*sys-apps/cpio
+*app-arch/cpio
 *sys-apps/debianutils
 *sys-apps/diffutils
 *sys-fs/e2fsprogs
@@ -140,7 +140,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.44 2003/11/14 23:13:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.45 2003/11/15 03:24:19 seemant Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
