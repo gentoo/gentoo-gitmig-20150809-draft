@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/makeme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/ChangeLog,v 1.3 2003/02/12 05:54:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/ChangeLog,v 1.4 2003/05/24 04:21:00 absinthe Exp $
+
+*makeme-0.02-r2 (24 May 2003)
+
+  24 May 2003; Dylan Carlson <absinthe@gentoo.org> makeme-0.02-r2.ebuild,
+  files/makeme-0.02-r2-gentoo.diff, files/makeme.sh:
+
+  Many fixes... Should close #13652, but have no real-world test 
+  scenarios for this. Please reopen that bug should there be 
+  continued problems.
 
 *makeme-0.02-r1 (1 Feb 2002)
 
