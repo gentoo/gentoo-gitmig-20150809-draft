@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-2.3.2.ebuild,v 1.1 2005/01/29 20:46:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-2.3.2.ebuild,v 1.2 2005/01/29 22:17:54 dragonheart Exp $
 
 DESCRIPTION="replay saved tcpdump or snoop files at arbitrary speeds"
 HOMEPAGE="http://tcpreplay.sourceforge.net/"
@@ -24,22 +24,15 @@ src_compile() {
 }
 
 src_test() {
-	# This would work if src_test was run as root when FEATURES didn't
-	# have user priv.
-
-	#if hasq userpriv "${FEATURES}"; then
+	whoami
+	if hasq userpriv "${FEATURES}"; then
 		ewarn "Some tested disabled due to FEATURES=userpriv"
 		ewarn "For a full test as root - make -C ${S}/test"
-		if ! make -C test tcpprep; then
-			cat test/test.log
-			die "self test failed"
-		fi
-	#else
-	#	if ! make test; then
-	#		cat test/test.log
-	#		die "self test failed"
-	#	fi
-	#fi
+		make -C test tcpprep || die "self test failed - see ${S}/test/test.log"
+	else
+		make test || \
+			die "self test failed - see ${S}/test/test.log"
+	fi
 
 }
 
