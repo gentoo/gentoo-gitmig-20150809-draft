@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/primegen/primegen-0.97.ebuild,v 1.2 2003/03/13 19:57:02 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/primegen/primegen-0.97.ebuild,v 1.3 2003/04/06 07:42:01 george Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://cr.yp.to/primegen/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 
