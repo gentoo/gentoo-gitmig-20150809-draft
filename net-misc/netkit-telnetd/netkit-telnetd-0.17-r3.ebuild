@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.13 2002/12/15 10:44:21 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.14 2003/01/20 04:27:31 livewire Exp $
 
 P2=netkit-telnet-${PV}
 S=${WORKDIR}/${P2}
@@ -41,13 +41,16 @@ src_install() {
 	doman telnet/telnet.1
 	doman telnetd/*.8
 	doman telnetd/issue.net.5
-
 	dosym telnetd.8.gz /usr/share/man/man8/in.telnetd.8.gz
 	doman telnetlogin/telnetlogin.8
 	dodoc BUGS ChangeLog README
 	dodoc ${FILESDIR}/net.issue.sample
 	newdoc telnet/README README.telnet
 	newdoc telnet/TODO TODO.telnet
+        insinto /etc/xinetd.d
+        newins ${FILESDIR}/telnetd.xinetd telnetd
+
+
 }
 
 
