@@ -1,14 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.10 2004/03/09 23:43:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.1 2004/03/09 23:43:15 vapier Exp $
+
+ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
+ECVS_MODULE="e16/e"
+inherit eutils cvs
 
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
-SRC_URI="mirror://sourceforge/enlightenment/${P/_/-}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64"
 IUSE="nls esd gnome kde"
 
 DEPEND=">=media-libs/fnlib-0.5
@@ -18,13 +21,15 @@ DEPEND=">=media-libs/fnlib-0.5
 	>=media-libs/imlib-1.9.8"
 RDEPEND="nls? ( sys-devel/gettext )"
 
-S=${WORKDIR}/${PN}-${PV/_pre?/}
+S=${WORKDIR}/e16/e
 
 src_unpack() {
-	unpack ${A}
+	cvs_src_unpack
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-kde-menu.patch
 	epatch ${FILESDIR}/${PV}-edox.patch
+	sed -i 's:$srcdir/configure.*::' autogen.sh
+	./autogen.sh
 }
 
 src_compile() {
@@ -37,6 +42,7 @@ src_compile() {
 		--enable-hints-ewmh \
 		--enable-fsstd \
 		--enable-zoom \
+		--with-imlib2 \
 		|| die
 	#enlightenment's makefile uses the $USER env var (bad), which may not be
 	#set correctly if you did a "su" to get root before emerging. Normally,
