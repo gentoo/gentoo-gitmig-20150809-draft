@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.2/make.defaults,v 1.2 2004/10/02 00:16:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.2/make.defaults,v 1.3 2004/10/02 00:17:45 kumba Exp $
 
 ARCH="sparc"
 
@@ -22,4 +22,4 @@ ACCEPT_KEYWORDS="sparc"
 # USE settings
 USE="arts avi berkdb bitmap-fonts crypt cups encode esd fbcon foomaticdb gdbm gif gtk gnome imlib jpeg kde libwww mad mikmod motif mpeg
      ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline slang sdl spell ssl tcpd truetype X xv xml2 xmms xprint zlib gtk2"
-GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses gtk2"
+GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses gtk2"
