@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3340ae92e7e36aff5eb01779ff4b9196 tcl-sql-20000114.ebuild 1137
+MD5 4b563a5245a8dfeb4c6c03900801860b metadata.xml 262
+MD5 bed55e01a381c79e5767cbd3bc00562a ChangeLog 354
+MD5 3bb2a5d642e863bde43aaba76a3601de files/fix-const.patch 2428
+MD5 3c7fbfa72e44fb805bd735e62cc67a7a files/digest-tcl-sql-20000114 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBFkJQFhz/XBeRBtARAgXaAJ4/BYVU4JW/b4YlPqVgXemm3VEfmwCfY6Xb
+2keRKFkmkoH9cvugT770ez4=
+=TGvu
+-----END PGP SIGNATURE-----

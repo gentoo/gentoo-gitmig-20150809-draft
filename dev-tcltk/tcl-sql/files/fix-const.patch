@@ -1,0 +1,55 @@
+--- sql.cc.bak	2004-08-08 14:46:45.967588496 +0800
++++ sql.cc	2004-08-08 14:51:06.629961792 +0800
+@@ -122,7 +122,7 @@ int fetchrowCmd(Tcl_Interp *interp, Sql_
+ 
+ // -------------------------------------------------------------
+ //
+-int SqlCmd(ClientData clientData, Tcl_Interp *interp, int argc, char **argv) 
++int SqlCmd(ClientData clientData, Tcl_Interp *interp, int argc, const char **argv) 
+ {
+ 	if (argc == 1) {
+ 		Tcl_SetResult(interp, "Usage: sql command ?handle?", TCL_STATIC);
+@@ -137,7 +137,7 @@ int SqlCmd(ClientData clientData, Tcl_In
+ 
+ 	// -----------------------------------
+ 	if (strcmp(argv[1], "connect")==0) {
+-		c = mgr->connect(argc-2, argv+2);
++		c = mgr->connect(argc-2, (char **)(argv+2));
+ 		if (c < 0) {
+ 			char *basemsg = "Unable to Connect: ";
+ 			char *errmsg = mgr->getErrorMsg();
+@@ -160,7 +160,7 @@ int SqlCmd(ClientData clientData, Tcl_In
+ 		if (argc <= 2) {
+ 			Tcl_SetResult(interp, "Usage:\nsql command handle", TCL_STATIC);
+ 			return TCL_ERROR;
+-		} else if ((connid = stripPrefix(argv[2], HANDLE_PREFIX)) < 0) {
++		} else if ((connid = stripPrefix((char *)argv[2], HANDLE_PREFIX)) < 0) {
+ 			Tcl_AppendResult(interp, "sql: Invalid handle: ", argv[2], NULL);
+ 			return TCL_ERROR;
+ 		} else if (!mgr->inUse(connid)) {
+@@ -172,19 +172,19 @@ int SqlCmd(ClientData clientData, Tcl_In
+ 
+ 		// take care of the command:
+ 		if (strcmp(argv[1], "exec") == 0) {
+-			res = execCmd(interp, conn, argv[3]);
++			res = execCmd(interp, conn, (char *)argv[3]);
+ 		} else if (strcmp(argv[1], "query") == 0) {
+-			res = queryCmd(interp, conn, argv[3]);
++			res = queryCmd(interp, conn, (char *)argv[3]);
+ 		} else if (strcmp(argv[1], "endquery") == 0) {
+-			res = endqueryCmd(interp, conn, argv[3]);
++			res = endqueryCmd(interp, conn, (char *)argv[3]);
+ 		} else if (strcmp(argv[1], "fetchrow") == 0) {
+-			res = fetchrowCmd(interp, conn, argv[3]);
++			res = fetchrowCmd(interp, conn, (char *)argv[3]);
+ 		} else if (strcmp(argv[1], "numrows") == 0) {
+-			res = numrowsCmd(interp, conn, argv[3]);
++			res = numrowsCmd(interp, conn, (char *)argv[3]);
+ 		} else if (strcmp(argv[1], "disconnect") == 0) {
+ 			res = disconnectCmd(interp, mgr, connid);
+ 		} else if (strcmp(argv[1], "selectdb")==0) {
+-			res = selectdbCmd(interp, conn, argv[3]);
++			res = selectdbCmd(interp, conn, (char *)argv[3]);
+ 		} else {
+ 			Tcl_AppendResult(interp, "sql: unknown sql command: ", argv[1], NULL);
+ 			return TCL_ERROR;
