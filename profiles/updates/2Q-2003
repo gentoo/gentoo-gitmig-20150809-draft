@@ -1,2 +1,2 @@
 move net-misc/guarddog net-firewall/guarddog
-move net-p2p/qt-dcgui net/p2p/dcgui-qt
+move net-p2p/qt-dcgui net-p2p/dcgui-qt
