@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.10.ebuild,v 1.8 2004/06/25 00:51:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.10.ebuild,v 1.9 2004/07/14 22:15:55 agriffis Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.zebra.fh-weingarten.de/~transcode/pre/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
-IUSE="sdl mmx mpeg sse encode X quicktime avi altivec"
+IUSE="X altivec avi encode mpeg quicktime sdl"
 
 DEPEND=">=media-libs/a52dec-0.7.4
 	>=media-libs/libdv-0.99
