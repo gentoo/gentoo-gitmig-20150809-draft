@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r2.ebuild,v 1.3 2003/08/05 15:04:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r2.ebuild,v 1.4 2003/11/06 13:20:52 aliz Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cdrdao/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha hppa"
+KEYWORDS="~x86 ~ppc ~sparc alpha hppa ~amd64"
 IUSE="gnome oggvorbis"
 
 RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
