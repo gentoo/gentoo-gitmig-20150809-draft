@@ -1,12 +1,12 @@
 diff --exclude=*CVS* -urN ocaml/asmcomp/linearize.ml ocaml+powerpcfix/asmcomp/linearize.ml
---- ocaml/asmcomp/linearize.ml  Mon Feb  5 09:49:10 2001
-+++ ocaml+powerpcfix/asmcomp/linearize.ml       Tue Feb 19 18:06:40 2002
+--- ocaml/asmcomp/linearize.ml	Mon Feb  5 09:49:10 2001
++++ ocaml+powerpcfix/asmcomp/linearize.ml	Tue Feb 19 18:06:40 2002
 @@ -10,7 +10,7 @@
  (*                                                                     *)
  (***********************************************************************)
  
--(* $Id: ocaml-3.04-ppc.diff,v 1.1 2002/06/09 02:17:18 daybird Exp $ *)
-+(* $Id: ocaml-3.04-ppc.diff,v 1.1 2002/06/09 02:17:18 daybird Exp $ *)
+-(* $Id: ocaml-3.04-ppc.diff,v 1.2 2002/06/09 15:24:37 daybird Exp $ *)
++(* $Id: ocaml-3.04-ppc.diff,v 1.2 2002/06/09 15:24:37 daybird Exp $ *)
  
  (* Transformation of Mach code into a list of pseudo-instructions. *)
  
@@ -20,14 +20,14 @@ diff --exclude=*CVS* -urN ocaml/asmcomp/linearize.ml ocaml+powerpcfix/asmcomp/li
      res: Reg.t array;
      live: Reg.Set.t }
 diff --exclude=*CVS* -urN ocaml/asmcomp/linearize.mli ocaml+powerpcfix/asmcomp/linearize.mli
---- ocaml/asmcomp/linearize.mli Mon Feb  5 09:49:10 2001
-+++ ocaml+powerpcfix/asmcomp/linearize.mli      Tue Feb 19 18:06:40 2002
+--- ocaml/asmcomp/linearize.mli	Mon Feb  5 09:49:10 2001
++++ ocaml+powerpcfix/asmcomp/linearize.mli	Tue Feb 19 18:06:40 2002
 @@ -10,7 +10,7 @@
  (*                                                                     *)
  (***********************************************************************)
  
--(* $Id: ocaml-3.04-ppc.diff,v 1.1 2002/06/09 02:17:18 daybird Exp $ *)
-+(* $Id: ocaml-3.04-ppc.diff,v 1.1 2002/06/09 02:17:18 daybird Exp $ *)
+-(* $Id: ocaml-3.04-ppc.diff,v 1.2 2002/06/09 15:24:37 daybird Exp $ *)
++(* $Id: ocaml-3.04-ppc.diff,v 1.2 2002/06/09 15:24:37 daybird Exp $ *)
  
  (* Transformation of Mach code into a list of pseudo-instructions. *)
  
@@ -49,14 +49,14 @@ diff --exclude=*CVS* -urN ocaml/asmcomp/linearize.mli ocaml+powerpcfix/asmcomp/l
  type fundecl =
    { fun_name: string;
 diff --exclude=*CVS* -urN ocaml/asmcomp/power/arch.ml ocaml+powerpcfix/asmcomp/power/arch.ml
---- ocaml/asmcomp/power/arch.ml Fri Apr 21 10:11:10 2000
-+++ ocaml+powerpcfix/asmcomp/power/arch.ml      Tue Feb 19 18:06:42 2002
+--- ocaml/asmcomp/power/arch.ml	Fri Apr 21 10:11:10 2000
++++ ocaml+powerpcfix/asmcomp/power/arch.ml	Tue Feb 19 18:06:42 2002
 @@ -10,7 +10,7 @@
  (*                                                                     *)
  (***********************************************************************)
  
--(* $Id: ocaml-3.04-ppc.diff,v 1.1 2002/06/09 02:17:18 daybird Exp $ *)
-+(* $Id: ocaml-3.04-ppc.diff,v 1.1 2002/06/09 02:17:18 daybird Exp $ *)
+-(* $Id: ocaml-3.04-ppc.diff,v 1.2 2002/06/09 15:24:37 daybird Exp $ *)
++(* $Id: ocaml-3.04-ppc.diff,v 1.2 2002/06/09 15:24:37 daybird Exp $ *)
  
  (* Specific operations for the PowerPC processor *)
  
@@ -76,31 +76,31 @@ diff --exclude=*CVS* -urN ocaml/asmcomp/power/arch.ml ocaml+powerpcfix/asmcomp/p
 +      fprintf ppf "alloc_far %d" n
  
  (* Distinguish between the PowerPC and the Power/RS6000 submodels *)
-
+ 
 diff --exclude=*CVS* -urN ocaml/asmcomp/power/emit.mlp ocaml+powerpcfix/asmcomp/power/emit.mlp
---- ocaml/asmcomp/power/emit.mlp        Fri Mar 10 15:31:06 2000
-+++ ocaml+powerpcfix/asmcomp/power/emit.mlp     Tue Feb 19 18:06:42 2002
+--- ocaml/asmcomp/power/emit.mlp	Fri Mar 10 15:31:06 2000
++++ ocaml+powerpcfix/asmcomp/power/emit.mlp	Tue Feb 19 18:06:42 2002
 @@ -10,7 +10,7 @@
  (*                                                                     *)
  (***********************************************************************)
-
--(* $Id: ocaml-3.04-ppc.diff,v 1.1 2002/06/09 02:17:18 daybird Exp $ *)
-+(* $Id: ocaml-3.04-ppc.diff,v 1.1 2002/06/09 02:17:18 daybird Exp $ *)
-
+ 
+-(* $Id: ocaml-3.04-ppc.diff,v 1.2 2002/06/09 15:24:37 daybird Exp $ *)
++(* $Id: ocaml-3.04-ppc.diff,v 1.2 2002/06/09 15:24:37 daybird Exp $ *)
+ 
  (* Emission of PowerPC assembly code *)
-
+ 
 @@ -349,6 +349,7 @@
  let name_for_specific = function
      Imultaddf -> "fmadd"
    | Imultsubf -> "fmsub"
 +  | _ -> Misc.fatal_error "Emit.Ispecific"
-
+ 
  (* Name of current function *)
  let function_name = ref ""
 @@ -365,6 +366,132 @@
  (* Number of jumptable entries *)
  let num_jumptbl_entries = ref 0
-
+ 
 +(* Fixup conditional branches that exceed hardware allowed range *)
 +
 +let load_store_size = function
@@ -231,32 +231,32 @@ diff --exclude=*CVS* -urN ocaml/asmcomp/power/emit.mlp ocaml+powerpcfix/asmcomp/
  
  let rec emit_instr i dslot =
 @@ -551,6 +678,15 @@
-         `	addi    {emit_reg i.res.(0)}, {emit_gpr 31}, 4\n`;
+         `	addi	{emit_reg i.res.(0)}, {emit_gpr 31}, 4\n`;
          record_frame i.live;
-         `	bltl    {emit_label !call_gc_label}\n`
+         `	bltl	{emit_label !call_gc_label}\n`
 +    | Lop(Ispecific(Ialloc_far n)) ->
 +        if !call_gc_label = 0 then call_gc_label := new_label();
 +        let lbl = new_label() in
-+        `      addi    {emit_gpr 31}, {emit_gpr 31}, {emit_int(-n)}\n`;
-+        `      cmplw   {emit_gpr 31}, {emit_gpr 30}\n`;
-+        `      bge     {emit_label lbl}\n`;
++        `	addi    {emit_gpr 31}, {emit_gpr 31}, {emit_int(-n)}\n`;
++        `	cmplw	{emit_gpr 31}, {emit_gpr 30}\n`;
++        `	bge	{emit_label lbl}\n`;
 +        record_frame i.live;
-+        `      bl      {emit_label !call_gc_label}\n`;
-+        `{emit_label lbl}:     addi    {emit_reg i.res.(0)}, {emit_gpr 31}, 4\n`
++        `	bl	{emit_label !call_gc_label}\n`;
++        `{emit_label lbl}:	addi	{emit_reg i.res.(0)}, {emit_gpr 31}, 4\n`
      | Lop(Iintop Isub) ->               (* subf has swapped arguments *)
          (* Use subfc instead of subf for RS6000 compatibility. *)
-         `	subfc   {emit_reg i.res.(0)}, {emit_reg i.arg.(1)}, {emit_reg i.arg.(0)}\n`
+         `	subfc	{emit_reg i.res.(0)}, {emit_reg i.arg.(1)}, {emit_reg i.arg.(0)}\n`
 @@ -749,7 +885,7 @@
-         `	lwz     {emit_gpr 29}, 4({emit_gpr 1})\n`;
+         `	lwz	{emit_gpr 29}, 4({emit_gpr 1})\n`;
          if toc then
-           `	lwz     {emit_gpr 2}, 20({emit_gpr 1})\n`;
--        `	addi    {emit_gpr 1}, {emit_gpr 1}, {emit_int trap_frame_size}\n\n`;
-+        `	addi    {emit_gpr 1}, {emit_gpr 1}, {emit_int trap_frame_size}\n`;
+           `	lwz	{emit_gpr 2}, 20({emit_gpr 1})\n`;
+-        `	addi	{emit_gpr 1}, {emit_gpr 1}, {emit_int trap_frame_size}\n\n`;
++        `	addi	{emit_gpr 1}, {emit_gpr 1}, {emit_int trap_frame_size}\n`;
          `	blr\n`
-
+ 
  and emit_delay = function
 @@ -831,6 +967,7 @@
-       `        addi    {emit_gpr 1}, {emit_gpr 1}, {emit_int(-n)}\n`
+       `	addi	{emit_gpr 1}, {emit_gpr 1}, {emit_int(-n)}\n`
    end;
    `{emit_label !tailrec_entry_point}:\n`;
 +  branch_normalization fundecl.fun_body;
