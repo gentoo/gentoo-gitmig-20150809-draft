@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.26 2004/07/10 06:05:17 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.27 2004/08/06 00:47:53 latexer Exp $
+
+*mono-1.0.1 (05 Aug 2004)
+
+  05 Aug 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.1.ebuild:
+  Bump. New bugfix release. Only minimal changes.
 
   10 Jul 2004; Peter Johanson <latexer@gentoo.org> +files/mono-1.0-segv.diff,
   mono-1.0.ebuild:
