@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.26 2004/11/11 15:31:54 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.27 2004/11/11 16:00:30 st_lim Exp $
+
+  11 Nov 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.2.0.ebuild,
+  dspam-3.2.1.ebuild:
+  Fixed bug #70388, #70647, #70755. Also rearranged some of the wording.
+
+  11 Nov 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.2.0.ebuild,
+  dspam-3.2.1.ebuild:
+  Fixed bug #70755
 
   11 Nov 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.2.0.ebuild,
   dspam-3.2.1.ebuild:

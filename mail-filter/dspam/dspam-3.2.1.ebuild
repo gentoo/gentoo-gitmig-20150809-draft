@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.1.ebuild,v 1.4 2004/11/11 15:31:54 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.1.ebuild,v 1.5 2004/11/11 16:00:30 st_lim Exp $
 
 inherit eutils
 
@@ -19,7 +19,6 @@ DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		procmail? ( >=mail-filter/procmail-3.22 )
 		x86? ( cyrus? ( >=net-mail/cyrus-imapd-2.1.15 ) )
 		"
-		#mysql41? ( >=dev-db/mysql-4.1 ) # There is no mysql-4.1 in gentoo!!!  Ouch
 RDEPEND="virtual/cron
 		app-admin/logrotate"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64"
@@ -73,7 +72,6 @@ src_compile() {
 	myconf="${myconf} --enable-large-scale"
 	#myconf="${myconf} --enable-domain-scale"
 
-	# ${HOMEDIR}/data is a symlink to ${DATADIR}
 	myconf="${myconf} --with-dspam-mode=4755"
 	myconf="${myconf} --with-dspam-owner=dspam"
 	myconf="${myconf} --with-dspam-group=dspam"
@@ -85,7 +83,7 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug --enable-verbose-debug"
 
 	# select storage driver
-	if use mysql || use mysql41; then
+	if use mysql; then
 		myconf="${myconf} --with-storage-driver=mysql_drv"
 		myconf="${myconf} --with-mysql-includes=/usr/include/mysql"
 		myconf="${myconf} --with-mysql-libraries=/usr/lib/mysql"
@@ -149,6 +147,8 @@ src_install () {
 	diropts -m0775 -o dspam -g dspam
 	dodir ${LOGDIR}
 	keepdir ${LOGDIR}
+	# ${HOMEDIR}/data is a symlink to ${DATADIR}
+	dosym ${DATADIR} ${HOMEDIR}/data
 
 	# make install
 	sed -e 's/rm -f ..mandir.\(.*\)/rm -f ${D}${mandir}\1/g' \
@@ -160,7 +160,7 @@ src_install () {
 	# documentation
 	dodoc CHANGELOG LICENSE README RELEASE.NOTES
 	dodoc ${FILESDIR}/README.postfix ${FILESDIR}/README.qmail
-	if use mysql || mysql41; then
+	if use mysql; then
 		newdoc tools.mysql_drv/README
 	elif use postgres ; then
 		newdoc tools.pgsql_drv/README
@@ -193,11 +193,13 @@ src_install () {
 				-i ${D}${HOMEDIR}/dspam.conf
 		fi
 	fi
+	chown dspam.dspam ${D}${HOMEDIR}/dspam.conf
+	chmod 644 ${D}${HOMEDIR}/dspam.conf
 
 	local PASSWORD="${RANDOM}${RANDOM}${RANDOM}${RANDOM}"
 
 	# database related configuration and scripts
-	if use mysql || use mysql41; then
+	if use mysql; then
 		insinto ${HOMEDIR}
 		insopts -m644 -o dspam -g dspam
 
@@ -212,8 +214,9 @@ src_install () {
 			echo "MySQLPass      ${PASSWORD}"                 >> ${T}/mysql.data
 			echo "MySQLDb        dspam"                       >> ${T}/mysql.data
 			echo "MySQLCompress  true"                        >> ${T}/mysql.data
-			doins ${T}/mysql.data
 			[ -z "`grep '^MySQL' ${D}/${HOMEDIR}/dspam.conf`" ] && cat ${T}/mysql.data >> ${D}/${HOMEDIR}/dspam.conf
+			sed -e 's/^MySQL[A-Za-z]* *//g' -i ${T}/mysql.data
+			doins ${T}/mysql.data
 		fi
 
 		newins tools.mysql_drv/mysql_objects-space.sql mysql_objects-space.sql
@@ -228,18 +231,19 @@ src_install () {
 		insinto ${HOMEDIR}
 		insopts -m644 -o dspam -g dspam
 
-		if [ -f ${HOMEDIR}/mysql.data ]; then
+		if [ -f ${HOMEDIR}/pgsql.data ]; then
 			# Use an existing password
 			PASSWORD="$(tail -n 2 ${HOMEDIR}/pgsql.data | head -n 1 )"
 		else
 			# Create the pgsql.data file
-			echo "PgSQLServer    127.0.0.1"    >> ${T}/mysql.data
-			echo "PgSQLPort      5432"         >> ${T}/mysql.data
-			echo "PgSQLUser      dspam"        >> ${T}/mysql.data
-			echo "PgSQLPass      ${PASSWORD}"  >> ${T}/mysql.data
-			echo "PgSQLDb        dspam"        >> ${T}/mysql.data
-			doins ${T}/pgsql.data
+			echo "PgSQLServer    127.0.0.1"    >> ${T}/pgsql.data
+			echo "PgSQLPort      5432"         >> ${T}/pgsql.data
+			echo "PgSQLUser      dspam"        >> ${T}/pgsql.data
+			echo "PgSQLPass      ${PASSWORD}"  >> ${T}/pgsql.data
+			echo "PgSQLDb        dspam"        >> ${T}/pgsql.data
 			[ -z "`grep '^PgSQL' ${D}/${HOMEDIR}/dspam.conf`" ] && cat ${T}/pgsql.data >> ${D}/${HOMEDIR}/dspam.conf
+			sed -e 's/^PgSQL[A-Za-z]* *//g' -i ${T}/pgsql.data
+			doins ${T}/pgsql.data
 		fi
 
 		newins tools.pgsql_drv/pgsql_objects.sql pgsql_objects.sql
@@ -259,8 +263,9 @@ src_install () {
 			echo "OraUser        dspam" >>${T}/oracle.data
 			echo "OraPass        ${PASSWORD}" >>${T}/oracle.data
 			echo "OraSchema      dspam" >>${T}/oracle.data
-			doins ${T}/oracle.data
 			[ -z "`grep '^Ora' ${D}/${HOMEDIR}/dspam.conf`" ] && cat ${T}/oracle.data >> ${D}/${HOMEDIR}/dspam.conf
+			sed -e 's/^Ora[A-Za-z]* *//g' -i ${T}/oracle.data
+			doins ${T}/oracle.data
 		fi
 
 		newins tools.ora_drv/oral_objects.sql ora_objects.sql
@@ -292,7 +297,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	if use mysql || use mysql41 || use postgres; then
+	if use mysql || use postgres; then
 		einfo "To setup dspam to run out-of-the-box on your system with a mysql or pgsql database, run:"
 		einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	fi
@@ -305,9 +310,9 @@ pkg_postinst() {
 pkg_config () {
 	if use mysql ; then
 		[[ -f ${HOMEDIR}/mysql.data ]] && mv -f ${HOMEDIR}/mysql.data ${HOMEDIR}
-		DSPAM_MySQL_USER="$(cat ${HOMEDIR}/mysql.data|head -n 3|tail -n 1)"
-		DSPAM_MySQL_PWD="$(cat ${HOMEDIR}/mysql.data|head -n 4|tail -n 1)"
-		DSPAM_MySQL_DB="$(cat ${HOMEDIR}/mysql.data|head -n 5|tail -n 1)"
+		DSPAM_MySQL_USER="$(head -n 3 ${HOMEDIR}/mysql.data|tail -n 1)"
+		DSPAM_MySQL_PWD="$(head -n 4 ${HOMEDIR}/mysql.data|tail -n 1)"
+		DSPAM_MySQL_DB="$(head -n 5 ${HOMEDIR}/mysql.data|tail -n 1)"
 
 		ewarn "When prompted for a password, please enter your MySQL root password"
 		ewarn ""
@@ -315,26 +320,22 @@ pkg_config () {
 		einfo "Creating DSPAM MySQL database \"${DSPAM_MySQL_DB}\""
 		/usr/bin/mysqladmin -u root -p create ${DSPAM_MySQL_DB}
 
-		if use mysql41 ; then
-			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_objects-4.1.sql
-		else
-			einfo "Creating DSPAM MySQL tables for data objects"
-			einfo "  Please select what kind of object database you like to use."
-			einfo "    [1] Space optimized database"
-			einfo "    [2] Speed optimized database"
-			einfo
-			while true
-			do
-				read -n 1 -s -p "  Press 1 or 2 on the keyboard to select database" DSPAM_MySQL_DB_Type
-				[[ "${DSPAM_MySQL_DB_Type}" == "1" || "${DSPAM_MySQL_DB_Type}" == "2" ]] && break
-			done
+		einfo "Creating DSPAM MySQL tables for data objects"
+		einfo "  Please select what kind of object database you like to use."
+		einfo "    [1] Space optimized database"
+		einfo "    [2] Speed optimized database"
+		einfo
+		while true
+		do
+			read -n 1 -s -p "  Press 1 or 2 on the keyboard to select database" DSPAM_MySQL_DB_Type
+			[[ "${DSPAM_MySQL_DB_Type}" == "1" || "${DSPAM_MySQL_DB_Type}" == "2" ]] && break
+		done
 
-			if [ "${DSPAM_MySQL_DB_Type}" == "1" ]
-			then
-				/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_objects-space.sql
-			else
-				/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_objects-speed.sql
-			fi
+		if [ "${DSPAM_MySQL_DB_Type}" == "1" ]
+		then
+			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_objects-space.sql
+		else
+			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_objects-speed.sql
 		fi
 
 		einfo "Creating DSPAM MySQL database for virtual users"
@@ -348,9 +349,9 @@ pkg_config () {
 		/usr/bin/mysql -u root -p -e "GRANT SELECT,INSERT,UPDATE,DELETE ON ${DSPAM_MySQL_DB}.* TO ${DSPAM_MySQL_USER}@localhost IDENTIFIED BY '${DSPAM_MySQL_PWD}';FLUSH PRIVILEGES;" -D mysql
 	elif use postgres ; then
 		[[ -f ${HOMEDIR}/pgsql.data ]] && mv -f ${HOMEDIR}/pgsql.data ${HOMEDIR}
-		DSPAM_PgSQL_USER="$(cat ${HOMEDIR}/pgsql.data|head -n 3|tail -n 1)"
-		DSPAM_PgSQL_PWD="$(cat ${HOMEDIR}/pgsql.data|head -n 4|tail -n 1)"
-		DSPAM_PgSQL_DB="$(cat ${HOMEDIR}/pgsql.data|head -n 5|tail -n 1)"
+		DSPAM_PgSQL_USER="$(head -n 3 ${HOMEDIR}/pgsql.data|tail -n 1)"
+		DSPAM_PgSQL_PWD="$(head -n 4 ${HOMEDIR}/pgsql.data|tail -n 1)"
+		DSPAM_PgSQL_DB="$(head -n 5 ${HOMEDIR}/pgsql.data|tail -n 1)"
 
 		ewarn "When prompted for a password, please enter your PgSQL postgres password"
 		ewarn ""
