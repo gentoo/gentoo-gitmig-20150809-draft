@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.1.ebuild,v 1.2 2005/01/14 02:25:26 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.1-r1.ebuild,v 1.1 2005/01/17 12:49:30 foser Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	sys-devel/autoconf
 	>=sys-devel/automake-1.7.9
-	doc? ( >=dev-util/gtk-doc-1 )"
+	doc? ( >=dev-util/gtk-doc-1 )
+	!x11-themes/gtk-engines-pixmap"
 
 src_unpack() {
 
@@ -43,7 +44,11 @@ src_unpack() {
 	# add smoothscroll support for usability reasons
 	# http://bugzilla.gnome.org/show_bug.cgi?id=103811
 	epatch ${DISTDIR}/${PN}-2.6-smoothscroll-r2.patch
+	# fix empty filechooser combo (http://bugzilla.gnome.org/show_bug.cgi?id=164290)
+	cd ${S}/gtk
+	epatch ${FILESDIR}/${P}-empty_default_combo.patch
 
+	cd ${S}
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
 	use amd64 && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
@@ -62,8 +67,6 @@ src_compile() {
 
 	# bug 8762
 	replace-flags "-O3" "-O2"
-
-	elibtoolize
 
 	econf \
 		`use_enable doc gtk-doc` \
