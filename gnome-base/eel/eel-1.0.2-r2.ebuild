@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-1.0.2-r2.ebuild,v 1.1 2002/04/15 06:52:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-1.0.2-r2.ebuild,v 1.2 2002/06/04 09:16:28 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="EEL libraries for GNOME"
@@ -15,6 +15,8 @@ RDEPEND=">=media-libs/freetype-2.0.1
 
 DEPEND="${RDEPEND}
         nls? ( >=dev-util/intltool-0.11 )"
+
+SLOT="1"
 
 src_compile() { 
 
