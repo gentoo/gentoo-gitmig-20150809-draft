@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.9 2004/05/30 21:34:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.10 2004/06/02 04:58:31 lv Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -23,7 +23,7 @@ IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X"
 LICENSE="PSF-2.2"
 SLOT="2.3"
 
-KEYWORDS="x86 ~ppc ~sparc arm hppa ~amd64 s390 ~alpha ~ia64 mips"
+KEYWORDS="x86 ~ppc ~sparc arm hppa amd64 s390 ~alpha ~ia64 mips"
 # ~mips ~arm"
 
 DEPEND="virtual/glibc
