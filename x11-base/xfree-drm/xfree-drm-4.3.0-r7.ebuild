@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.6 2004/02/09 20:32:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.7 2004/02/10 02:25:54 spyderous Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -149,6 +149,14 @@ pkg_postinst() {
 	then
 		einfo "SiS direct rendering only works on 300 series chipsets."
 		einfo "SiS framebuffer also needs to be enabled in the kernel."
+	fi
+
+	if use video_cards_mach64
+	then
+		ewarn "The Mach64 DRI driver is insecure."
+		ewarn "Malicious clients can write to system memory."
+		ewarn "For more information, see:"
+		ewarn "http://dri.sourceforge.net/cgi-bin/moin.cgi/ATIMach64?value=CategoryHardwareChipset."
 	fi
 }
 
