@@ -10,7 +10,6 @@ DEPEND="virtual/x11
 	virtual/glibc
 	>=media-sound/xmms-1.2.6-r1
 	>=x11-libs/xosd-1.0.2"
-RDEPEND="${DEPEND}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
