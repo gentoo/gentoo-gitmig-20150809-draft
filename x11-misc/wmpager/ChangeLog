@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/wmpager
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmpager/ChangeLog,v 1.1 2002/10/28 06:49:06 rphillips Exp $
+
+*wmpager-1.2 (27 Oct 2002)
+
+  27 Oct 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog wmpager-1.2.ebuild :
+
+  First release of wmpager
