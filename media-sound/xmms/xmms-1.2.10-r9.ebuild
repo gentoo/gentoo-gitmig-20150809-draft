@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r9.ebuild,v 1.2 2004/10/31 09:37:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r9.ebuild,v 1.3 2004/10/31 09:52:09 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac mad"
 
@@ -78,10 +78,13 @@ src_compile() {
 
 	use xml || myconf="${myconf} --disable-cdindex"
 
-	econf \
-		--with-dev-dsp=/dev/sound/dsp \
-		--with-dev-mixer=/dev/sound/mixer \
-		`use_enable oggvorbis vorbis` \
+	if [ -e /dev/sound ]; then
+		myconf="${myconf} \
+			--with-dev-dsp=/dev/sound/dsp \
+			--with-dev-mixer=/dev/sound/mixer"
+	fi
+
+	econf	`use_enable oggvorbis vorbis` \
 		`use_enable esd` \
 		`use_enable mikmod` \
 		`use_with mikmod libmikmod` \
