@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r1.ebuild,v 1.3 2002/12/09 04:26:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r1.ebuild,v 1.4 2002/12/24 15:05:57 vapier Exp $
 
 MY_P="${P/-/-v}"
 DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy)"
@@ -63,4 +63,16 @@ src_install() {
 	dosed 's:AC3PASSTHROUGH=no:AC3PASSTHROUGH=yes:' /etc/emu10k1.conf
 	dosed 's:ANALOG_FRONT_BOOST=no:ANALOG_FRONT_BOOST=yes:' /etc/emu10k1.conf
 	dosed 's:SURROUND=no:SURROUND=yes:' /etc/emu10k1.conf
+}
+
+pkg_postinst() {
+	einfo "In order for the module to work correctly you must"
+	einfo "Enable the following options in your kernel:"
+	echo
+	einfo "Sound card support          (module or builtin)"
+	einfo " Creative SBLive! (EMU10K1) (*must be* module)"
+	einfo " Creative SBLive! MIDI      (*must be* module)"
+	echo
+	einfo "If you have not yet done this, rebuild+install"
+	einfo "your kernel modules and re-emerge this package"
 }
