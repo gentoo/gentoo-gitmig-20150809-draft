@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.18 2003/07/12 10:49:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.19 2003/07/20 14:20:11 mcummings Exp $
+
+*libwww-perl-5.69-r1 (20 Jul 2003)
+
+  20 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  libwww-perl-5.69-r1.ebuild:
+  Added ssl support to build. Good catch by eric sammer <eric@ineoconcepts.com>
+  in bug 24798
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> libwww-perl-5.69.ebuild:
   Mark stable on alpha
