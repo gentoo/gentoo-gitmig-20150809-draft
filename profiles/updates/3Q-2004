@@ -201,3 +201,4 @@ move app-admin/aide app-forensics/aide
 move app-admin/autopsy app-forensics/autopsy
 move dev-ruby/mod-ruby dev-ruby/mod_ruby
 move dev-libs/bio2jack media-libs/bio2jack
+move sys-fs/linux-ntfs sys-fs/ntfsprogs
