@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/patchutils-0.2.23.ebuild,v 1.10 2004/07/14 23:55:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/patchutils-0.2.23.ebuild,v 1.11 2005/02/07 00:27:08 kumba Exp $
 
 DESCRIPTION="A collection of tools that operate on patch files"
 HOMEPAGE="http://cyberelk.net/tim/patchutils/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.31.3.ebuild,v 1.1 2004/10/14 18:28:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.31.3.ebuild,v 1.2 2005/02/07 00:25:50 kumba Exp $
 
 inherit gnome.org
 
