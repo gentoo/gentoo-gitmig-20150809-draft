@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.1.0.ebuild,v 1.6 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.1.0.ebuild,v 1.7 2004/03/14 10:59:04 mr_bones_ Exp $
 
 DESCRIPTION="Secure file wiping utility based on Peter Gutman's patterns"
 SRC_URI="mirror://sourceforge/wipe/${P}.tar.bz2"

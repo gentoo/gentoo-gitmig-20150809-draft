@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.3.0.ebuild,v 1.5 2004/02/29 17:19:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.3.0.ebuild,v 1.6 2004/03/14 10:59:03 mr_bones_ Exp $
 
 IUSE=""
 

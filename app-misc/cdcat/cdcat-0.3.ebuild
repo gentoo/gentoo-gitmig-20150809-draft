@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.3.ebuild,v 1.4 2003/11/21 15:18:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.3.ebuild,v 1.5 2004/03/14 10:59:02 mr_bones_ Exp $
 
 DESCRIPTION="simple yet effective CD indexing program"
 SRC_URI="http://littledragon.home.ro/unix/${P}.tar.gz"

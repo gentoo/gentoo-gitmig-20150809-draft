@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/scmxx/scmxx-0.6.4.ebuild,v 1.2 2003/10/27 15:42:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/scmxx/scmxx-0.6.4.ebuild,v 1.3 2004/03/14 10:59:03 mr_bones_ Exp $
 
 DESCRIPTION="Exchange data with Siemens phones."
 HOMEPAGE="http://www.hendrik-sattler.de/scmxx/"

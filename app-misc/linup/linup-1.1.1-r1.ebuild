@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/linup-1.1.1-r1.ebuild,v 1.1 2003/12/22 04:03:44 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/linup-1.1.1-r1.ebuild,v 1.2 2004/03/14 10:59:03 mr_bones_ Exp $
 
 DESCRIPTION="Linux Uptime Client"
 HOMEPAGE="ftp://ftp.smux.net/people/sena/linup/"

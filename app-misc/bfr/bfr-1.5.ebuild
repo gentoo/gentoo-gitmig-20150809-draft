@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/bfr-1.5.ebuild,v 1.3 2003/11/12 14:16:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/bfr-1.5.ebuild,v 1.4 2004/03/14 10:59:02 mr_bones_ Exp $
 
 DESCRIPTION="Buffer (bfr) is a general-purpose command-line pipe buffer"
 HOMEPAGE="http://www.glines.org:8000/software/buffer.html"
