@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.27-r2.ebuild,v 1.1 2004/09/14 16:26:28 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.27-r3.ebuild,v 1.1 2004/11/10 09:29:52 voxus Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -21,7 +21,9 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo openMosix Linux kernel, including shared memory migration patch (migshm)"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-		http://dev.gentoo.org/~voxus/om/patch-${OKV}-om-migshm-${TIMESTAMP}.bz2"
+		http://dev.gentoo.org/~voxus/om/patch-${OKV}-om-migshm-${TIMESTAMP}.bz2
+		http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-2.4.27-CAN-2004-0814.patch
+		mirror://gentoo/linux-2.4.27-nfs3-xdr.patch.bz2"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/
 		http://www.openmosix.org/
@@ -36,5 +38,7 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 	cd linux-${KV}
 	epatch ${DISTDIR}/patch-${OKV}-om-migshm-${TIMESTAMP}.bz2 || die "openMosix patch failed."
+	epatch ${DISTDIR}/linux-${PV}-CAN-2004-0814.patch || die "security patch for CAN-2004-0814 failed."
+	epatch ${DISTDIR}/linux-${PV}-nfs3-xdr.patch.bz2 || die "security patch for nfs3-xdk failed."
 	kernel_universal_unpack
 }
