@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.6-r2.ebuild,v 1.8 2004/10/11 23:07:15 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.6-r2.ebuild,v 1.9 2004/10/18 04:55:11 hardave Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ RDEPEND="virtual/libc
 	selinux? ( sec-policy/selinux-squid )"
 DEPEND="${RDEPEND} dev-lang/perl"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 alpha ppc sparc hppa ppc64"
+KEYWORDS="x86 amd64 alpha ppc sparc hppa ppc64 mips"
 SLOT="0"
 
 src_unpack() {
