@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.5 2001/12/23 21:35:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.6 2002/01/04 16:02:03 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -42,11 +42,9 @@ src_compile() {
 	use slang	&& myinterface="$myinterface,slang"
 # tcl tk does not work: use tcltk	&& myinterface="$myinterface,tcltk"
 
-	./configure --host=${CHOST} \
-		--with-xinerama \
-		$myconf $myaudio $myinterface || die
+	myconf="$myconf $myaudio $myinterface"
 
-	kde_src_compile make
+	kde_src_compile configure make
 
 }
 
