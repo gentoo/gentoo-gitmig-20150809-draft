@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.193 2005/03/30 17:32:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.194 2005/04/06 05:13:56 vapier Exp $
+
+*binutils-2.15.92.0.2-r8 (06 Apr 2005)
+
+  06 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +binutils-2.15.92.0.2-r8.ebuild:
+  Add ld speedup / readelf buffer fix patches from redhat and a better
+  unlink() patch from solar/upstream.
 
   30 Mar 2005; Joshua Kinard <kumba@gentoo.org>
   binutils-2.14.90.0.8-r2.ebuild, binutils-2.15.91.0.2-r1.ebuild,
