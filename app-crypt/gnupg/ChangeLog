@@ -1,6 +1,18 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.102 2005/03/15 18:11:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.103 2005/03/16 22:31:34 robbat2 Exp $
+
+*gnupg-1.4.1 (16 Mar 2005)
+
+  16 Mar 2005; Robin H. Johnson <robbat2@gentoo.org> +gnupg-1.4.1.ebuild:
+  virtual/mta re-added for mailto support. new network code using CURL
+  provides FTPS support. Removed the use ppc-macos && use caps hackery, since
+  ppc-macos has caps in use.mask and this case will never happen. Re-enabled
+  photo-viewers as xli is available again, everywhere except arm. Spelling
+  errors fixed. The ECC patch for 1.4.0 applies perfectly still, only the
+  version number in configure needs tweaking. Add a proper src_test that
+  works, fixing bug #80044. This release also fixes mail signatures as per bug
+  #76440. This release solves security bug #85547.
 
   15 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> gnupg-1.4.0-r2.ebuild:
   Added to ~hppa.
