@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5l-r2.ebuild,v 1.4 2003/04/03 19:14:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5l-r2.ebuild,v 1.5 2003/04/28 20:35:04 taviso Exp $
 
 IUSE=""
 
@@ -12,7 +12,8 @@ DESCRIPTION="Standard commands to read man pages"
 SRC_URI="http://www.kernel.org/pub/linux/utils/man/man-${NV}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/man/"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	sys-apps/util-linux"
 
 RDEPEND="sys-apps/cronbase
 	>=sys-apps/groff-1.18"
