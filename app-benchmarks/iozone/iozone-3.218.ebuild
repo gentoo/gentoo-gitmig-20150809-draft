@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.218.ebuild,v 1.1 2004/06/13 02:13:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.218.ebuild,v 1.2 2004/06/22 15:56:02 gustavoz Exp $
 
 IUSE=""
 
@@ -17,7 +17,6 @@ SLOT="0"
 #        ->   linux-AMD64          (64bit)   <-
 #        ->   linux-ia64           (64bit)   <-
 #        ->   linux-powerpc        (32bit)   <-
-#        ->   linux-sparc          (32bit)   <-
 #        ->   linux-S390           (32bit)   <-
 #        ->   linux-S390X          (64bit)   <-
 #
@@ -27,9 +26,9 @@ SLOT="0"
 #        ->   openbsd-threads      (32bit)   <-
 #
 #
-# ~arm ~amd64 ~ia64 ~sparc ~s390 alpha(?)
+# ~arm ~amd64 ~ia64 ~s390 alpha(?)
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 
 DEPEND="sys-devel/gcc
