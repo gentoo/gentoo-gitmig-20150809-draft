@@ -4,17 +4,17 @@ Hash: SHA1
 MD5 c2f4d54b5e00765874ba216692db12c6 ChangeLog 4772
 MD5 d24403622d172658c4e564baec674de9 metadata.xml 281
 MD5 e20aa44d520325e2e208a5c6483ca5ea slang-1.4.9-r1.ebuild 1641
+MD5 11daf6d137e1d6ec0e3475e55522cd06 files/slang-1.4.9-autoconf.patch 4143
+MD5 5617c722a455c1aa405c699ff361bd58 files/slang-1.4.9.patch 1808
 MD5 074ddbf39cb8b9708ca9de2b1fb24366 files/digest-slang-1.4.9-r1 64
-MD5 5617c722a455c1aa405c699ff361bd58 files/slang-1.4.9.dif 1808
-MD5 11daf6d137e1d6ec0e3475e55522cd06 files/slang-1.4.9-autoconf.dif 4143
-MD5 007cb225c11034b59197bdb5d507aa84 files/slang-1.4.9-fsuid.dif 808
+MD5 007cb225c11034b59197bdb5d507aa84 files/slang-1.4.9-fsuid.patch 808
 MD5 e2ddc20bfbb1ac10becb53e1707b067c files/slang-debian-utf8.patch 21377
 MD5 3531d8ba2b07b43cf6d758815200bfa9 files/slang-utf8-acs.patch 14366
 MD5 4be647282e8c01060db9d1707098bd1d files/slang-utf8-fix.patch 855
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBits/HTu7gpaalycRAoZCAJ4jUPaMpUc6Mg5V5oAHpXiHol/DVgCeJaFs
-xcIT+PSP9+oq1gmJg4sNtx4=
-=zRXn
+iD8DBQFBity1HTu7gpaalycRAgSrAKC4Ltnywa04pTbKsJQLslGC/KM1iACgn0BS
+Rjivp9XDsniXKFoWfmqSLDk=
+=+7HH
 -----END PGP SIGNATURE-----
