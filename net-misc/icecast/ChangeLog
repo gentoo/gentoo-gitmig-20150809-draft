@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.21 2004/04/07 04:09:54 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.22 2004/04/23 03:56:56 absinthe Exp $
+
+  22 Apr 2004; Dylan Carlson <absinthe@gentoo.org> icecast-2.0.0.ebuild:
+  Marked stable on amd64.
 
   06 Apr 2004; Nick Hadaway <raker@gentoo.org> icecast-2.0.0.ebuild:
   oggvorbis is a requirement, not an optional dependancy.  See
