@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-1.6.ebuild,v 1.4 2004/05/07 22:21:05 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-1.6.ebuild,v 1.5 2004/06/02 15:22:05 agriffis Exp $
 
 DESCRIPTION="Txt2tags is a tool for generating marked up documents (HTML, SGML, ...) from a plain text file with markup."
 SRC_URI="http://txt2tags.sourceforge.net/src/${P}.tgz"
@@ -18,7 +18,7 @@ DOCS="COPYING ChangeLog.txt README.txt RULES TODO"
 pkg_setup() {
 
 	# need to test if the tcltk support in python is working
-	if [ `use tcltk` ]; then
+	if use tcltk; then
 		if ! python -c "import _tkinter" 2>&1 > /dev/null ; then
 			echo ""
 			eerror "You have requested tcltk, but your build of Python"
