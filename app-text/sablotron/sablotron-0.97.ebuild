@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.13 2004/01/02 22:02:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.14 2004/01/18 18:21:44 tuxus Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="x86 sparc ppc hppa alpha amd64"
+KEYWORDS="x86 sparc ppc hppa alpha amd64 ~mips"
 
 DEPEND=">=dev-libs/expat-1.95.6-r1
 	dev-perl/XML-Parser"
