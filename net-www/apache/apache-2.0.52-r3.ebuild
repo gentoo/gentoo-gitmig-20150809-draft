@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.10 2005/02/18 03:27:29 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.11 2005/02/18 04:10:19 beu Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,6 @@ GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 DESCRIPTION="The Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://httpd.apache.org/"
 SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
-	http://dev.gentoo.org/~beu/${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2
 	mirror://gentoo/${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2"
 
 LICENSE="Apache-2.0"

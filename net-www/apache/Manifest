@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 039b3ce87c24e835eace635753e27abb ChangeLog 54071
+MD5 295d6fe1880cca289580a535916b4a7d ChangeLog 54229
 MD5 784b3e3150529826ac47e99ec3514f90 apache-1.3.29-r2.ebuild 7178
 MD5 f35b6a00cbfa7ddd39face3420cd4fc6 apache-1.3.31-r1.ebuild 6739
 MD5 9a5242011f95057c3afabf1cc3973f11 apache-1.3.31-r2.ebuild 6864
@@ -9,14 +9,14 @@ MD5 85c356965e12f6c785c887ddf6844714 apache-1.3.31-r3.ebuild 6872
 MD5 d039a8316ffde50c2331f0d446623147 apache-1.3.31.ebuild 6693
 MD5 eb0434ac86c30471d86c92872015e42d apache-1.3.32-r1.ebuild 6607
 MD5 cd6aff6c1515610209f5e62e56ea47f8 apache-1.3.32.ebuild 6616
-MD5 9d86817814cf5b4a4a3624d7603ef16a apache-1.3.33-r1.ebuild 8704
+MD5 7160ac34e063b1ed70f5f262d3e29135 apache-1.3.33-r1.ebuild 8626
 MD5 a6568a1f276ed27458ab61fb5897bca2 apache-1.3.33.ebuild 6851
 MD5 511fffcacde823eaf727f0984568106b apache-2.0.50.ebuild 12905
 MD5 6f88208cb336bbe5da0a50b08b1e6390 apache-2.0.51-r1.ebuild 12840
 MD5 451d45c9613e9ed7ee770085a8e28ef8 apache-2.0.51.ebuild 12831
 MD5 625b80716912a469762650ef8480fde5 apache-2.0.52-r1.ebuild 12893
 MD5 0bc87f432d6353df99d4ca1192dbb607 apache-2.0.52-r2.ebuild 12298
-MD5 44ca3ddc33aa951ebdbe602b7ae48131 apache-2.0.52-r3.ebuild 11643
+MD5 ce378cc4d39c6d53126faf9c92854b07 apache-2.0.52-r3.ebuild 11566
 MD5 b1af5f9fb89636fb427805dfe9a3621c apache-2.0.52.ebuild 12834
 MD5 a419841198cd6a94b9dcf2e07f3c15b7 metadata.xml 617
 MD5 8b12871dd74fcd3f4fdf451c9d8c259e files/00_apache_manual.conf 781
@@ -98,7 +98,7 @@ MD5 5d45e2b46965e7c6866b259df4efe4b2 files/patches/2.0.50-r1/Readme.PATCHES 357
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCFWC7jUHll2nfF60RAiQSAJ0T4XDqsyiV6cVS8NmHw/1tSCk4iQCcD1KF
-5rcIqrqaUgCKH/KwJDaUaaU=
-=HSSw
+iD8DBQFCFWrkjUHll2nfF60RAvkNAKDBPctYf6b8LNhuhSEc0Lo3dTI3QACfUiO8
+Wa7E2692ZkhOEyte1HARvcc=
+=TIPS
 -----END PGP SIGNATURE-----
