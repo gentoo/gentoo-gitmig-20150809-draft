@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.ebuild,v 1.5 2004/12/21 10:54:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.ebuild,v 1.6 2004/12/29 12:17:00 josejx Exp $
 
 IUSE="crypt"
 
@@ -16,7 +16,7 @@ SRC_URI="http://ftp24moz.newaol.com/pub/mozilla.org/thunderbird/releases/${PV}/s
 	 crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 	   		  http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
 
-KEYWORDS="x86 ~ppc sparc alpha amd64 ~ia64"
+KEYWORDS="x86 ppc sparc alpha amd64 ~ia64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
