@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/xdoclet-bin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdoclet-bin/ChangeLog,v 1.1 2004/02/15 19:23:46 zx Exp $
+
+*xdoclet-bin-1.2 (15 Feb 2004)
+
+  15 Feb 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml,
+  xdoclet-bin-1.2.ebuild:
+  Initial Import.
+  Thanks to cheeser <gentoo@cheeseronline.org> for the initial ebuild. Bug #29837
+
