@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.35 2004/06/01 14:55:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.36 2004/06/08 22:03:27 mholzer Exp $
+
+  09 Jun 2004; Martin Holzer <mholzer@gentoo.org> mailman-2.1.5.ebuild:
+  marking x86 stable.
 
   01 Jun 2004; Jason Wever <weeve@gentoo.org> mailman-2.1.5.ebuild:
   Marked stable on sparc wrt bug #51671.
