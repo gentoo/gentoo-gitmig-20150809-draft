@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.2 2003/08/03 19:26:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.3 2003/08/04 00:35:30 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -10,6 +10,9 @@
 
 ECLASS=webapp-apache
 INHERITED="$INHERITED $ECLASS"
+DEPEND="${DEPEND} net-www/apache"
+
+EXPORT_FUNCTIONS pkg_preinst
 
 # NOTE:
 #
@@ -39,7 +42,17 @@ function webapp-apache-detect ()
 }
 
 # run the function, so we know which version of apache we are using
-webapp-apache-detect
+
+function webapp-apache_pkg_preinst () {
+	webapp-apache-detect
+	webapp-determine-installowner
+	webapp-determine-htdocsdir
+}
+
+function webapp_pkg_preinst ()
+{
+	webapp-apache_pkg_preinst
+}
 
 function webapp-determine-htdocsdir ()
 {
