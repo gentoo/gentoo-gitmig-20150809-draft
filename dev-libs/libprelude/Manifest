@@ -4,7 +4,9 @@ MD5 ef8197d1b8d1fb4227cc659dd7ac03c4 libprelude-0.8.5.ebuild 1389
 MD5 0dbd522347cf2f3554ed78b4621337d2 libprelude-0.8.7.ebuild 921
 MD5 f9eb2fa3b268c82a25ee9eb2fdfaccc9 metadata.xml 311
 MD5 c605ad9280e06b82dbf9573581d64edc libprelude-0.8.8.ebuild 969
+MD5 c605ad9280e06b82dbf9573581d64edc libprelude-0.8.10.ebuild 969
 MD5 b7db6df788e20e6f9a36b39ee7e47480 files/digest-libprelude-0.8.5 68
 MD5 b7db6df788e20e6f9a36b39ee7e47480 files/digest-libprelude-0.8.5-r1 68
 MD5 1f34f8ae4a3cd20f1c427f991417cfb6 files/digest-libprelude-0.8.7 68
 MD5 e64325b70c5f0648da3cb5954b705f55 files/digest-libprelude-0.8.8 68
+MD5 4df78be1fea7023bd39fa475deb50465 files/digest-libprelude-0.8.10 69
