@@ -1,19 +1,19 @@
 # ChangeLog for sys-kernel/ppc-sources-crypto
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.5 2003/12/02 08:21:49 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.6 2003/12/05 17:24:12 plasmaroo Exp $
 
 *ppc-sources-crypto-2.4.20-r1 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org>
   ppc-sources-crypto-2.4.20-r1.ebuild:
-  version bump for do_brk vuln
+  Version bump for the 'do_brk' vulnerability.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org>
   ppc-sources-crypto-2.4.20.ebuild, files/do_brk_fix.patch:
-  fix do_brk vuln
+  Fix for the 'do_brk' vulnerability.
 
   10 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> ppc-sources-crypto-2.4.20.ebuild:
-  Marked ppc stable
+  Marked 'ppc' stable.
 
 *ppc-sources-crypto-2.4.20 (03 Feb 2003)
 

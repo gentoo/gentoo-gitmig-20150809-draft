@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/ppc-sources-benh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ChangeLog,v 1.12 2003/12/02 08:08:13 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ChangeLog,v 1.13 2003/12/05 17:22:46 plasmaroo Exp $
 
 *ppc-sources-benh-2.4.22-r3 (02 Dec 2003)
 
@@ -8,7 +8,7 @@
   ppc-sources-benh-2.4.20-r9.ebuild, ppc-sources-benh-2.4.21-r2.ebuild,
   ppc-sources-benh-2.4.22-r1.ebuild, ppc-sources-benh-2.4.22-r2.ebuild,
   ppc-sources-benh-2.4.22-r3.ebuild, files/do_brk_fix.patch:
-  version bump for do_brk vuln
+  Version bump for 'do_brk' vulnerability.
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   ppc-sources-benh-2.4.20-r10.ebuild, ppc-sources-benh-2.4.20-r5.ebuild,
@@ -17,55 +17,55 @@
   ppc-sources-benh-2.4.21-r2.ebuild, ppc-sources-benh-2.4.22-r1.ebuild,
   ppc-sources-benh-2.4.22-r2.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
 *ppc-sources-benh-2.4.22-r2 (01 Sep 2003)
 
   01 Sep 2003; Luca Barbato <lu_zero@gentoo.org>
   ppc-sources-benh-2.4.22-r2.ebuild:
-  version bump
+  Version bump.
 
 *ppc-sources-benh-2.4.22-r1 (30 Aug 2003)
 
   30 Aug 2003; Luca Barbato <lu_zero@gentoo.org>
   ppc-sources-benh-2.4.22-r1.ebuild:
-  version bump
+  Version bump.
 
 *ppc-sources-benh-2.4.21-r2 (01 Jul 2003)
 
   01 Jul 2003; Luca Barbato <lu_zero@gentoo.org>
   ppc-sources-benh-2.4.21-r2.ebuild:
-  version bump
+  Version bump.
 
 *ppc-sources-benh-2.4.20-r10 (08 Apr 2003)
 
   08 Apr 2003; Lars Weiler <pylon@gentoo.org>
   ppc-sources-benh-2.4.20-r10.ebuild:
-  version bump
+  Version bump.
 
 *ppc-sources-benh-2.4.20-r9 (23 Mar 2003)
 
   23 Mar 2003; Lars Weiler <pylon@gentoo.org>
   ppc-sources-benh-2.4.20-r9.ebuild:
-  version bump
+  Version bump.
 
 *ppc-sources-benh-2.4.20-r8 (07 Mar 2003)
 
   07 Mar 2003; Mark Guertin <gerk@gentoo.org> ppc-sources-benh-2.4.20-r8.ebuild :
-  new upstream version
+  New upstream version.
 
 *ppc-sources-benh-2.4.20-r7 (01 Mar 2003)
 
   01 Mar 2003; Mark Guertin <gerk@gentoo.org> ppc-sources-benh-2.4.20-r7.ebuild files/digest-ppc-sources-benh-2.4.20-r7 :
-  new upstream version, revision bump
+  New upstream version, revision bump.
 
 *ppc-sources-benh-2.4.20-r6 (26 Feb 2003)
 
   26 Feb 2003; Mark Guertin <gerk@gentoo.org> ppc-sources-benh-2.4.20-r6.ebuild files/digest-ppc-sources-benh-2.4.20-r6 :
-  new upstream patches, version bumped
+  New upstream patches, version bumped.
 
   08 Jan 2003; Olivier Reisch <doctomoe@gentoo.org> ppc-sources-benh-2.4.20-r5.ebuild:
-  Set to ~ppc
+  Set to '~ppc'.
 
 *ppc-sources-benh-2.4.20-r5 (04 Jan 2003)
 
@@ -73,5 +73,5 @@
   Initial benh tree build.  This is built with the diff's benh is providing
   on kernel.org (see HOMEPAGE for details).  It is a diff against the kernel.org
   trees, and the -r5 is set to line up with benh's release, this one being
-  2.4.20-ben5
+  2.4.20-ben5.
 

@@ -1,34 +1,34 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.98 2003/11/26 10:36:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.99 2003/12/05 17:15:48 plasmaroo Exp $
 
 *mm-sources-2.6.0_beta10-r1 (26 Nov 2003)
 
   26 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   mm-sources-2.6.0_beta10-r1.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.6.0_beta9-r5 (21 Nov 2003)
 
   21 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   mm-sources-2.6.0_beta9-r5.ebuild:
-  Bump
+  Bump.
 
   21 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   mm-sources-2.6.0_beta9-r4.ebuild, files/2.6.0-test9-mm4-alsa-crash.patch:
-  Add a patch for ALSA crashes (bug #34039)
+  Add a patch for ALSA crashes (bug #34039).
 
 *mm-sources-2.6.0_beta9-r4 (20 Nov 2003)
 
   20 Nov 2003; Brandon Hale <tseng@gentoo.org>
   mm-sources-2.6.0_beta7-r1.ebuild, mm-sources-2.6.0_beta9-r4.ebuild:
-  version bump
+  Version bump.
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   mm-sources-2.6.0_beta7-r1.ebuild, mm-sources-2.6.0_beta8-r1.ebuild,
   mm-sources-2.6.0_beta9-r1.ebuild, mm-sources-2.6.0_beta9-r2.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
 *mm-sources-2.6.0_beta9-r2 (06 Nov 2003)
 
@@ -40,33 +40,33 @@
 
   30 Oct 2003; Brandon Low <lostlogic@gentoo.org>
   mm-sources-2.6.0_beta9-r1.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.6.0_beta8-r1 (20 Oct 2003)
 
   20 Oct 2003; Brandon Low <lostlogic@gentoo.org>
   mm-sources-2.6.0_beta6-r1.ebuild, mm-sources-2.6.0_beta6-r2.ebuild,
   mm-sources-2.6.0_beta6-r4.ebuild, mm-sources-2.6.0_beta8-r1.ebuild:
-  Bump and cleanup
+  Bump and cleanup.
 
 *mm-sources-2.6.0_beta7-r1 (16 Oct 2003)
 
   16 Oct 2003; Brandon Low <lostlogic@gentoo.org>
   mm-sources-2.6.0_beta7-r1.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.6.0_beta6-r4 (06 Oct 2003)
 
   06 Oct 2003; Brandon Low <lostlogic@gentoo.org>
   mm-sources-2.6.0_beta3-r3.ebuild, mm-sources-2.6.0_beta4-r6.ebuild,
   mm-sources-2.6.0_beta5-r4.ebuild, mm-sources-2.6.0_beta6-r4.ebuild:
-  Clean up and bump
+  Clean up and bump.
 
 *mm-sources-2.6.0_beta6-r2 (02 Oct 2003)
 
   02 Oct 2003; Brandon Low <lostlogic@gentoo.org>
   mm-sources-2.6.0_beta6-r2.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.6.0_beta6-r1 (29 Sep 2003)
 
@@ -74,13 +74,13 @@
   Whoops, I made a boo boo, removed the mm patch by mistake, fixing.
 
   29 Sep 2003; Joshua Kinard <kumba@gentoo.org> mm-sources-2.6.0_beta6-r1.ebuild:
-  Revision Bump, test6-mm1
+  Revision Bump, test6-mm1.
 
 *mm-sources-2.6.0_beta5-r4 (22 Sep 2003)
 
   27 Sep 2003; Luca Barbato <lu_zero@gentoo.org>
   mm-sources-2.6.0_beta5-r4.ebuild:
-  Removed a stray epatch line
+  Removed a stray 'epatch' line.
 
   26 Sep 2003; Brandon Hale <tseng@gentoo.org>
   mm-sources-2.6.0_beta3-r3.ebuild, mm-sources-2.6.0_beta4-r6.ebuild,
@@ -105,18 +105,18 @@
 
   22 Sep 2003; Brandon Hale <tseng@gentoo.org>
   mm-sources-2.6.0_beta5-r4.ebuild, files/2.6.0-test5-mm4-devfsd-fix:
-  Version bump + a patch to fix devfs issues
+  Version bump + a patch to fix devfs issues.
 
 *mm-sources-2.6.0_beta5-r3 (19 Sep 2003)
 
   19 Sep 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta5-r3.ebuild:
-  Bumpity bump
+  Bumpity bump.
 
 *mm-sources-2.6.0_beta5-r2 (17 Sep 2003)
 
   17 Sep 2003; Joshua Kinard <kumba@gentoo.org> mm-sources-2.6.0_beta5-r2.ebuild:
-  Version Bump
+  Version bump.
 
 *mm-sources-2.6.0_beta5-r1 (10 Sep 2003)
 
@@ -138,18 +138,18 @@
 
   03 Sep 2003; Brandon Low <lostlogic@gentoo.org>
   mm-sources-2.6.0_beta4-r5.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.6.0_beta4-r4 (31 Aug 2003)
 
   31 Aug 2003; <plasmaroo@gentoo.org> mm-sources-2.6.0_beta4-r4.ebuild:
-  Fixed broken bzcat line [bug #27667]
+  Fixed broken bzcat line [bug #27667].
 
 *mm-sources-2.6.0_beta4-r4 (31 Aug 2003)
 
   31 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta4-r4.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.6.0_beta4-r3 (29/30 Aug 2003)
 
@@ -163,63 +163,63 @@
   mm-sources-2.6.0_beta2-r1.ebuild, mm-sources-2.6.0_beta2-r2.ebuild,
   mm-sources-2.6.0_beta2-r3.ebuild, mm-sources-2.6.0_beta2-r4.ebuild,
   mm-sources-2.6.0_beta2-r5.ebuild, mm-sources-2.6.0_beta4-r3.ebuild:
-  Bump and clean house
+  Bump and clean.
 
 *mm-sources-2.6.0_beta4-r2 (27 Aug 2003)
 
   27 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta4-r2.ebuild:
-  bumpage
+  Bumped.
 
 *mm-sources-2.6.0_beta4-r1 (24 Aug 2003)
 
   24 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta4-r1.ebuild:
   Bump. Had to do most of kernel_universal_unpack in src_unpack due to changes
-  in some kernel config stuff... TODO: fix kernel.eclass to suit
+  in some kernel config stuff... TODO: fix kernel.eclass to suit.
 
   20 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta3-r3.ebuild:
-  Added module-init-tools as an RDEPEND
+  Added module-init-tools as an "RDEPEND"
 
 *mm-sources-2.6.0_beta3-r3 (19 Aug 2003)
 
   19 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta3-r3.ebuild:
-  Bump now that CVS is backup
+  Bump.
 
 *mm-sources-2.6.0_beta3-r2 (16 Aug 2003)
 
   16 Aug 2003; Jay Pfeifer <pfeifer@gentoo.org>
   mm-sources-2.6.0_beta3-r2.ebuild:
-  fix mm/filemap.c issue.
+  Fix the 'mm/filemap.c' issue.
 
   13 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta3-r2.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.6.0_beta3-r1 (10 Aug 2003)
 
   10 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.5.75-r1.ebuild, mm-sources-2.6.0_beta3-r1.ebuild:
-  Bump and mild cleanup
+  Bump and mild cleanup.
 
 *mm-sources-2.6.0_beta2-r5 (07 Aug 2003)
 
   07 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta2-r5.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.6.0_beta2-r4 (04 Aug 2003)
 
   04 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta2-r4.ebuild:
-  Bump
+  Bump.
 
   03 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta2-r3.ebuild:
   Added the pkg_postinst from development-sources to aid basic configuration.
-  thanks spyderous.
+  Thanks spyderous.
 
   02 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta2-r3.ebuild:
@@ -232,25 +232,25 @@
 
   02 Aug 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta2-r3.ebuild:
-  Bumparoo
+  Bumparoo.
 
 *mm-sources-2.6.0_beta2-r2 (31 Jul 2003)
 
   31 Jul 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.5.74-r1.ebuild, mm-sources-2.5.74-r2.ebuild,
   mm-sources-2.5.74-r3.ebuild, mm-sources-2.6.0_beta2-r2.ebuild:
-  Bump and cleanup
+  Bump and cleanup.
 
 *mm-sources-2.6.0_beta2-r1 (28 Jul 2003)
 
   28 Jul 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.6.0_beta2-r1.ebuild:
-  Bumpity bump
+  Bumpity bump.
 
 *mm-sources-2.6.0_beta1-r2 (20 Jul 2003)
 
   20 Jul 2003; <sindian@gentoo.org> mm-sources-2.6.0_beta1-r2.ebuild:
-  bumped to -mm2. includes con's scheduling tweaks.
+  Bumped to -mm2 which includes con's scheduling tweaks.
 
   17 Jul 2003; <sindian@gentoo.org> mm-sources-2.6.0_beta1-r1.ebuild,
   files/wpadded.patch:
@@ -264,66 +264,66 @@
   mm-sources-2.5.73-r1.ebuild, mm-sources-2.5.73-r2.ebuild,
   mm-sources-2.5.73-r3.ebuild, mm-sources-2.6.0_beta1-r1.ebuild:
   Bump to 2.6.0-test1-mm1 (using _beta1 internally to make portage happy), and
-  some cleanup of older stuff
+  some cleanup of older stuff.
 
 *mm-sources-2.5.75-r1 (11 Jul 2003)
 
   11 Jul 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.75-r1.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.74-r3 (09 Jul 2003)
 
   09 Jul 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.5.74-r3.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.74-r2 (05 Jul 2003)
 
   05 Jul 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.74-r2.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.74-r1 (03 Jul 2003)
 
   03 Jul 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.5.74-r1.ebuild:
-  Bump and cleanup
+  Bump and cleanup.
 
 *mm-sources-2.5.73-r3 (02 Jul 2003)
 
   02 Jul 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.73-r3.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.73-r2 (28 Jun 2003)
 
   28 Jun 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.73-r2.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.73-r1 (24 Jun 2003)
 
   24 Jun 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.5.71-r1.ebuild, mm-sources-2.5.73-r1.ebuild:
-  Bump and cleanup
+  Bump and cleanup.
 
 *mm-sources-2.5.72-r3 (22 Jun 2003)
 
   22 Jun 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.5.72-r3.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.72-r2 (19 Jun 2003)
 
   19 Jun 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.5.70-r8.ebuild, mm-sources-2.5.70-r9.ebuild,
   mm-sources-2.5.72-r2.ebuild:
-  Bump and cleanup
+  Bump and cleanup.
 
   17 Jun 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.72-r1.ebuild:
-  Using mirror://kernel for SRC_URI now
+  Using mirror://kernel for SRC_URI now.
 
 *mm-sources-2.5.72-r1 (17 Jun 2003)
 
   17 Jun 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.72-r1.ebuild:
-  bump! coming out quicker than hotcakes!
+  Bump!
 
 *mm-sources-2.5.71-r1 (15 Jun 2003)
 
@@ -333,101 +333,101 @@
 *mm-sources-2.5.70-r9 (13 Jun 2003)
 
   13 Jun 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.70-r9.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.70-r8 (11 Jun 2003)
 
   11 Jun 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.70-r8.ebuild:
-  Bump
+  Bump.
 
   10 Jun 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.70-r6.ebuild,
   mm-sources-2.5.70-r7.ebuild:
-  Added sed-4 dep
+  Added a "sed-4" dependency.
 
 *mm-sources-2.5.70-r7 (10 Jun 2003)
 
   10 Jun 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.70-r7.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.70-r6 (08 Jun 2003)
 
   08 Jun 2003; Peter Johanson <latexer@gentoo.org>
   mm-sources-2.5.70-r6.ebuild:
-  Bump
+  Bump.
 
   05 Jun 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.70-r5.ebuild:
-  unset ARCH so make mrproper works
+  Unset "ARCH" so "make mrproper" works.
 
 *mm-sources-2.5.70-r5 (05 Jun 2003)
 
   05 Jun 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.70-r5.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.70-r4 (04 Jun 2003)
 
   04 Jun 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.70-r4.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.70-r3 (31 May 2003)
 
   31 May 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.70-r3.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.70-r2 (29 May 2003)
 
   29 May 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.70-r2.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.70-r1 (27 May 2003)
 
   27 May 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.70-r1.ebuild:
-  Bump. .70-mm1 is out.
+  Bump. 2.5.70-mm1 is out.
 
 *mm-sources-2.5.69-r9 (25 May 2003)
 
   25 May 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.69-r9.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.69-r8 (22 May 2003)
 
   22 May 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.69-r8.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.69-r5 (19 May 2003)
 
   19 May 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.69-r4.ebuild,
   mm-sources-2.5.69-r5.ebuild, mm-sources-2.5.69-r6.ebuild,
   mm-sources-2.5.69-r7.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.67-r2 (08 May 2003)
 
   08 May 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.67-r1.ebuild,
   mm-sources-2.5.67-r2.ebuild, mm-sources-2.5.67-r3.ebuild,
   mm-sources-2.5.67-r4.ebuild, mm-sources-2.5.69-r3.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.69-r2 (07 May 2003)
 
   07 May 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.69-r2.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.69-r1 (05 May 2003)
 
   05 May 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.68-r1.ebuild,
   mm-sources-2.5.68-r2.ebuild, mm-sources-2.5.68-r4.ebuild,
   mm-sources-2.5.69-r1.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.68-r4 (02 May 2003)
 
   02 May 2003; root <root@gentoo.org> mm-sources-2.5.68-r4.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.68-r2 (24 Apr 2003)
 
   24 Apr 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.68-r2.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.68-r1 (20 Apr 2003)
 
@@ -449,35 +449,35 @@
 *mm-sources-2.5.67-r1 (09 Apr 2003)
 
   12 Apr 2003; Brandon Low <lostlogic@gentoo.org> Manifest:
-  bump
+  Bump.
 
   09 Apr 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.67-r1.ebuild:
-  bump. (and uses epatch now)
+  Bump - and uses "epatch" now.
 
 *mm-sources-2.5.66-r3 (03 Apr 2003)
 
   03 Apr 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.66-r3.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.66-r2 (01 Apr 2003)
 
   01 Apr 2003; Seth Chandler <sethbc@gentoo.org> mm-sources-2.5.66-r2.ebuild:
-  bumpage
+  Bumped.
 
 *mm-sources-2.5.65-r4 (23 Mar 2003)
 
   23 Mar 2003; Seth Chandler <sethbc@gentoo.org>; mm-sources-2.5.65-r4.ebuild:
-  bumpz0r
+  Bumped.
 
 *mm-sources-2.5.65-r3 (21 Mar 2003)
 
   21 Mar 2003; Seth Chandler <sethbc@gentoo.org>; mm-sources-2.5.65-r3.ebuild:
-  bumpage courtesy of good old akpm =)
+  Bumped.
 
 *mm-sources-2.5.65-r2 (19 Mar 2003)
 
   19 Mar 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.65-r2.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.65-r1 (19 Mar 2003)
 
@@ -489,53 +489,52 @@
   mm-sources-2.5.64-r6.ebuild, mm-sources-2.5.64-r7.ebuild,
   mm-sources-2.5.64-r7.ebuild, mm-sources-2.5.64-r8.ebuild,
   mm-sources-2.5.64-r8.ebuild, mm-sources-2.5.65-r1.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.64-r8 (17 Mar 2003)
 
   17 Mar 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.64-r8.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.64-r7 (15 Mar 2003)
 
   15 Mar 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.64-r7.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.64-r6 (13 Mar 2003)
 
   13 Mar 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.64-r6.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.64-r5 (12 Mar 2003)
 
   12 Mar 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.64-r5.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.64-r4 (09 Mar 2003)
 
   09 Mar 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.64-r4.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.64-r2 (07 Mar 2003)
 
   07 Mar 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.64-r2.ebuild:
-  Bump
+  Bump.
 
 *mm-sources-2.5.64-r1 (06 Mar 2003)
 
   06 Mar 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.64-r1.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.63-r2 (02 Mar 2003)
 
   02 Mar 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.63-r2.ebuild:
-  bump
+  Bump.
 
 *mm-sources-2.5.62-r3 (25 Feb 2003)
 
   25 Feb 2003; Brandon Low <lostlogic@gentoo.org> mm-sources-2.5.60-r1.ebuild mm-sources-2.5.60-r2.ebuild mm-sources-2.5.61-r1.ebuild mm-sources-2.5.62-r1.ebuild mm-sources-2.5.62-r2.ebuild mm-sources-2.5.62-r3.ebuild :
-  Update ebuild description and such
+  Update the ebuild description and such...
 
   25 Feb 2003; Brandon Low <lostlogic@gentoo.org> *-r[0-9].ebuild,
-  digest-*-r[0-9]:
-  Move all of the mm patchsets here from development-sources.
+  digest-*-r[0-9]: Move all of the mm patchsets here from development-sources.

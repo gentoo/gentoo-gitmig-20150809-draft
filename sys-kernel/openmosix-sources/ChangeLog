@@ -1,9 +1,9 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.29 2003/12/02 18:18:53 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.30 2003/12/05 17:18:39 plasmaroo Exp $
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org> files/do_brk_fix.patch:
-  fixup the do_brk patch, it wasn't applying correctly
+  Fix the 'do_brk' patch as it wasn't applying correctly.
 
 *openmosix-sources-2.4.22-r2 (02 Dec 2003)
 
@@ -15,42 +15,42 @@
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org>
   openmosix-sources-2.4.22-r1.ebuild:
-  version bump for do_brk vuln
+  Version bump for the 'do_brk' vulnerability.
 
 *openmosix-sources-2.4.20-r6 (01 Dec 2003)
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org>
   openmosix-sources-2.4.20-r6.ebuild, openmosix-sources-2.4.21.ebuild,
   openmosix-sources-2.4.22.ebuild, files/do_brk_fix.patch:
-  fix do_brk vuln
+  Fix 'do_brk' vulnerability.
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   openmosix-sources-2.4.22.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
   27 Sep 2003; Michael Imhof <tantive@gentoo.org> openmosix-sources-2.4.21.ebuild:
-  Unmasked
+  Unmasked.
 
 *openmosix-sources-2.6.0_beta3 (09 Sep 2003)
 
   09 Sep 2003; Michael Imhof <tantive@gentoo.org> openmosix-sources-2.6.0_beta3.ebuild:
-  Deleted, should close #28107
+  Deleted, should close #28107.
 
 *openmosix-sources-2.4.22 (07 Sep 2003)
 
   07 Sep 2003; Michael Imhof <tantive@gentoo.org>
-  Version bumped, including vanilla sources and openmosix-2.4.22-1
+  Version bumped, including vanilla sources and openmosix-2.4.22-1.
 
 *openmosix-sources-2.4.21 (22 Jun 2003)
 
   22 Jun 2003; Michael Imhof <tantive@gentoo.org>
-  Version bumped, including vanilla sources and openmosix-2.4.21-1
+  Version bumped, including vanilla sources and openmosix-2.4.21-1.
 
 *openmosix-sources-2.4.20-r5 (09 Jun 2003)
 
   09 Jun 2003; Michael Imhof <tantive@gentoo.org>
-  Version bumped, including vanilla sources and openmosix-2.4.20-3
+  Version bumped, including vanilla sources and openmosix-2.4.20-3.
 
 *openmosix-sources-2.4.20-r4 (27 Apr 2003)
 
@@ -60,20 +60,19 @@
 *openmosix-sources-2.4.20-r3 (18 Apr 2003)
 
   18 Apr 2003; Michael Imhof <tantive@gentoo.org>
-  Version bumped, including vanilla sources and openmosix-2.4.20-2
+  Version bumped, including vanilla sources and openmosix-2.4.20-2.
 
 *openmosix-sources-2.4.20-r2 (26 Jan 2003)
 
   26 Jan 2003; Michael Imhof <tantive@gentoo.org>
-  Fixed bug #14286
+  Fixed bug #14286.
 
 *openmosix-sources-2.4.20-r1 (20 Dec 2002)
 
   20 Dec 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped: Including openmosix-2.4.20-1 and evms 1.2.1
+  Version bumped: Including openmosix-2.4.20-1 and EVMS 1.2.1.
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : Changed sparc ~sparc keywords.
