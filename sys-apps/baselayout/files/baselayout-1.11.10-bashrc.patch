@@ -1,0 +1,16 @@
+--- etc/profile.orig	2005-03-29 23:45:09.000000000 -0500
++++ etc/profile	2005-03-29 23:45:18.000000000 -0500
+@@ -38 +38 @@
+-	# Newer bash ebuilds include /etc/bash/bashrc which will setup PS1
++	# Newer bash ebuilds include /etc/bashrc which will setup PS1
+@@ -41 +41 @@
+-	if [ -f /etc/bash/bashrc ]; then
++	if [ -f /etc/bashrc ]; then
+@@ -43,2 +43,2 @@
+-		# Bash non-login shells run only /etc/bash/bashrc
+-		# Since we want to run /etc/bash/bashrc always we source it
++		# Bash non-login shells run only /etc/bashrc
++		# Since we want to run /etc/bashrc always we source it
+@@ -49 +49 @@
+-		. /etc/bash/bashrc
++		. /etc/bashrc

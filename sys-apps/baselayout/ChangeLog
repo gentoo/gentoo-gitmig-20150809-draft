@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.223 2005/03/23 17:46:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.224 2005/03/30 05:45:37 vapier Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.10-r5 (30 Mar 2005)
+
+  30 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/baselayout-1.11.10-bashrc.patch, +baselayout-1.11.10-r5.ebuild:
+  Move /etc/bash/bashrc to /etc/bashrc.
 
 *baselayout-1.12.0_alpha1-r4 (23 Mar 2005)
 *baselayout-1.11.10-r4 (24 Mar 2005)
