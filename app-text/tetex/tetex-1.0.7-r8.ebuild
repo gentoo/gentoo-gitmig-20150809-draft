@@ -1,74 +1,71 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r6.ebuild,v 1.2 2002/01/09 23:04:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r8.ebuild,v 1.1 2002/04/12 23:21:57 seemant Exp $
+
+TEXMFSRC="teTeX-texmf-gg-1.0.3.tar.bz2"
 
 S=${WORKDIR}/teTeX-1.0
 DESCRIPTION="teTeX is a complete TeX distribution"
 SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-src-1.0.7.tar.gz
-	 ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-texmf-1.0.2.tar.gz
-	 ec-ready-mf-tfm.tar.gz
-	 teTeX-french.tar.gz"
+	 ftp://ftp.dante.de/pub/tex/systems/unix/teTeX/1.0/contrib/ghibo/${TEXMFSRC}
+	 http://www.ibiblio.org/gentoo/distfiles/ec-ready-mf-tfm.tar.gz
+	 http://www.ibiblio.org/gentoo/distfiles/teTeX-french.tar.gz"
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
 
-DEPEND="virtual/glibc
+DEPEND="media-libs/libpng
 	sys-apps/ed
-	>=media-libs/libpng-1.0.9
 	libwww? ( >=net-libs/libwww-5.3.2-r1 )
 	X? ( virtual/x11 )"
 
-RDEPEND="virtual/glibc
+RDEPEND="X? ( virtual/x11 )
 	>=sys-devel/perl-5.2
-	>=media-libs/libpng-1.0.9
-	X? ( virtual/x11 )"
+	media-libs/libpng
+	dev-util/dialog"
+	
 
 
 src_unpack() {
 
 	unpack teTeX-src-1.0.7.tar.gz
 	
+	mkdir ${S}/texmf
+	cd ${S}/texmf
+	echo ">>> Unpacking ${TEXMFSRC}"
+	tar xjf ${DISTDIR}/${TEXMFSRC}
+	echo ">>> Unpacking ec-ready-mf-tfm.tar.gz"
+	tar xzf ${DISTDIR}/ec-ready-mf-tfm.tar.gz -C ..
+	echo ">>> Unpacking teTeX-french.tar.gz"
+	tar xzf ${DISTDIR}/teTeX-french.tar.gz
+
 	cd ${WORKDIR}
 	patch -p0 < ${FILESDIR}/teTeX-1.0-gentoo.diff || die
 
 	cd ${S}
 	patch -p0 < ${FILESDIR}/teTeX-1.0.dif || die
 
-	mkdir texmf
-	cd texmf
-	echo ">>> Unpacking teTeX-texmf-1.0.2.tar.gz"
-	tar xzf ${DISTDIR}/teTeX-texmf-1.0.2.tar.gz
-	echo ">>> Unpacking ec-ready-mf-tfm.tar.gz"
-	tar xzf ${DISTDIR}/ec-ready-mf-tfm.tar.gz -C ..
-	echo ">>> Unpacking teTeX-french.tar.gz"
-	tar xzf ${DISTDIR}/teTeX-french.tar.gz
-	patch -p0 < ${FILESDIR}/texmf.dif
-
 	# Fix problem where the *.fmt files are not generated due to the LaTeX
 	# source being older than a year.
-        local x
-        for x in `find ${S}/texmf/ -type f -name '*.ini'`
-        do
-                cp ${x} ${x}.orig
-                sed -e '1i \\scrollmode' ${x}.orig > ${x}
-                rm -f ${x}.orig
-        done
+#        local x
+#        for x in `find ${S}/texmf/ -type f -name '*.ini'`
+#        do
+#                cp ${x} ${x}.orig
+#                sed -e '1i \\scrollmode' ${x}.orig > ${x}
+#                rm -f ${x}.orig
+#        done
 
 }
 
 src_compile() {
 
 	local myconf
-	if [ "`use X`" ]
-	then
-		myconf="--with-x"
-	else
-		myconf="--without-x"
-	fi
+	use X	\
+		&& myconf="--with-x"	\
+		|| myconf="--without-x"
 
-	if [ "`use libwww`" ]
-	then
-		myconf="${myconf} --with-system-wwwlib"
-	fi
+	use libwww	\
+		&& myconf="${myconf} --with-system-wwwlib"
+	
 	# Does it make sense to compile the included libwww with mysql ?
 
 	./configure --host=${CHOST} \
