@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.45.ebuild,v 1.11 2004/07/02 05:00:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.45.ebuild,v 1.12 2004/07/14 17:09:34 agriffis Exp $
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Crypt::SSLeay module for perl"
 SRC_URI="http://www.cpan.org/authors/id/C/CH/CHAMAS/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/author/CHAMAS/Crypt-SSLeay-${PV}/"
@@ -20,4 +19,3 @@ DEPEND="virtual/libc
 
 export OPTIMIZE="${CFLAGS}"
 myconf="${myconf} /usr"
-
