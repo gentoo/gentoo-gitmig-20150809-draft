@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.4.2.ebuild,v 1.6 2004/03/17 00:56:40 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.4.2.ebuild,v 1.7 2004/03/23 19:15:24 leonardop Exp $
 
 inherit gnome2 eutils
 
@@ -25,16 +25,18 @@ DEPEND="${RDEPEND}
 # gnome-core overwrite /usr/bin/gnome-terminal
 
 src_unpack() {
-
 	unpack ${A}
-
 	cd ${S}
+
 	# Use login shell by default (#12900) 
 	epatch ${FILESDIR}/${PN}-2-default_shell.patch
+
 	# terminal enhancement, inserts a space after a DND URL
 	# patch by Zach Bagnall <yem@y3m.net> in #13801
 	epatch ${FILESDIR}/${PN}-2-dnd_url_add_space.patch
 
+	# Enable keyboard shortcuts when the menubar is not visible.
+	epatch ${FILESDIR}/${P}-shortcuts_fix.patch
 }
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"

@@ -1,0 +1,31 @@
+diff -NurB gnome-terminal-2.4.2-orig/src/terminal-window.c gnome-terminal-2.4.2/src/terminal-window.c
+--- gnome-terminal-2.4.2-orig/src/terminal-window.c	2004-03-23 12:40:29.000000000 -0500
++++ gnome-terminal-2.4.2/src/terminal-window.c	2004-03-23 12:52:32.000000000 -0500
+@@ -239,6 +239,15 @@
+   return object_type;
+ }
+ 
++static gboolean
++can_activate_accel_callback (GtkWidget *widget,
++                guint      signal_id,
++                gpointer   user_data)
++{
++   /* Always allow accels to be activated. */
++   return TRUE;
++}
++
+ static GtkWidget*
+ append_menuitem (GtkWidget  *menu,
+                  const char *text,
+@@ -726,6 +735,11 @@
+   window->priv->use_mnemonics = TRUE;
+   window->priv->using_mnemonics = FALSE;
+   
++  g_signal_connect (window->priv->menubar,
++           "can_activate_accel",
++           G_CALLBACK (can_activate_accel_callback),
++           window);
++
+   accel_group = terminal_accels_get_group_for_widget (GTK_WIDGET (window));
+   gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
+   

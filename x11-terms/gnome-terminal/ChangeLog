@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.54 2004/03/23 15:06:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.55 2004/03/23 19:15:24 leonardop Exp $
+
+  23 Mar 2004; L. Boshell <leonardop@gentoo.org>
+  gnome-terminal-2.4.2.ebuild,
+  files/gnome-terminal-2.4.2-shortcuts_fix.patch:
+  Patch from gnome's CVS to avoid non-functioning keyboard shortcuts when
+  the menubar is hidden. Closes bug #45460.
 
 *gnome-terminal-2.6.0 (22 Mar 2004)
 
