@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1-r2.ebuild,v 1.1 2003/02/02 17:46:40 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1-r2.ebuild,v 1.2 2003/02/04 16:01:37 hannes Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="virtual/x11
 	media-libs/jpeg
 	>=media-libs/libmng-1.0.0
 	>=media-libs/freetype-2
-	x11-libs/xft
+	virtual/xft
 	nas? ( >=media-libs/nas-1.4.1 )
 	odbc? ( >=dev-db/unixODBC-2.0 )
 	mysql? ( >=dev-db/mysql-3.2.10 )

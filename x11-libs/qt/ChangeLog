@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.50 2003/02/04 00:16:24 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.51 2003/02/04 16:01:37 hannes Exp $
+
+  04 Feb 2003; Hannes Mehnert <hannes@gentoo.org> qt-3.1.0-r3.ebuild,
+  qt-3.1.1-r2.ebuild: changed dependency from x11-libs/xft to virtual/xft
 
   03 Feb 2003; Will Woods <wwoods@gentoo.org> qt-3.1.0-r3.ebuild:
   Small hack to build libeditor.a with -fPIC on alpha
