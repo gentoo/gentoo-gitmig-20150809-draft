@@ -1,3 +1,6 @@
+move dev-java/ibm-jre dev-java/ibm-jre-bin
+move dev-java/ibm-jdk dev-java/ibm-jdk-bin
+move dev-java/sun-jre dev-java/sun-jre-bin
 move dev-java/jrockit dev-java/jrockit-jdk-bin
 move dev-java/jaf dev-java/sun-jaf-bin
 move dev-java/javamail dev-java/sun-javamail-bin
