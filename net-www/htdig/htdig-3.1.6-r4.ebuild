@@ -1,15 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r4.ebuild,v 1.16 2004/06/25 00:55:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r4.ebuild,v 1.17 2004/07/14 06:17:47 mr_bones_ Exp $
 
 inherit webapp-apache
 
 DESCRIPTION="HTTP/HTML indexing and searching system"
-SRC_URI="http://www.htdig.org/files/${P}.tar.gz"
 HOMEPAGE="http://www.htdig.org"
-KEYWORDS="x86 sparc ppc ~mips amd64"
-SLOT="0"
+SRC_URI="http://www.htdig.org/files/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 sparc ppc ~mips amd64"
+IUSE=""
 
 DEPEND=">=sys-libs/zlib-1.1.3
 	app-arch/unzip"
