@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.3 2003/09/02 09:41:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.4 2003/09/09 15:46:24 agriffis Exp $
+
+  09 Sep 2003; Aron Griffis <agriffis@gentoo.org> pilot-link-0.11.8.ebuild:
+  Stable on alpha
 
 *pilot-link-0.11.8 (02 Sep 2003)
 
