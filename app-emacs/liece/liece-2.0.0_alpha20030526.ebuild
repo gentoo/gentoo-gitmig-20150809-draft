@@ -1,18 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/liece-2.0.0_alpha20030526.ebuild,v 1.1 2003/08/17 19:12:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/liece-2.0.0_alpha20030526.ebuild,v 1.2 2004/03/04 19:04:12 usata Exp $
 
-inherit elisp eutils
+inherit elisp
 
 IUSE=""
 
 DESCRIPTION="Liece is a client implementation of IRC (Internet Relay Chat, RFC 1459)."
 HOMEPAGE="http://www.unixuser.org/~ueno/liece/"
-SRC_URI="mirror://gentoo/${P}.tar.gz
-	http://dev.gentoo.org/~usata/distfiles/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+# This is unstable branch taken from CVS snapshot, so please not to
+# mark it stable at any point. btw, I recommend you to use app-emacs/riece ;)
 KEYWORDS="~x86 ~alpha ~sparc ~ppc"
 
 DEPEND="virtual/emacs
