@@ -1,0 +1,8 @@
+# ChangeLog for net-zope/fle3
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/fle3/ChangeLog,v 1.1 2003/04/22 09:15:57 kutsuya Exp $
+
+*fle3-1.4.2 (22 Apr 2003)
+
+  22 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> fle3-1.4.2.ebuild: Initial import.
+
