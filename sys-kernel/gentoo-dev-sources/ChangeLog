@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.14 2003/12/29 02:50:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.15 2004/01/03 00:43:55 brad_mssw Exp $
+
+*gentoo-dev-sources-2.6.1_rc1 (02 Jan 2004)
+
+  02 Jan 2004; Brad House <brad_mssw@gentoo.org>
+  gentoo-dev-sources-2.6.1_rc1.ebuild:
+  initial import of ebuild that can support -bk and -rc kernels, as well as
+  applying genpatches to them. Do not use yet as a compatible genpatches is not
+  yet available for the current release
 
 *gentoo-dev-sources-2.6.0-r1 (28 Dec 2003)
 
