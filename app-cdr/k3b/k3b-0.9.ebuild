@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.9.ebuild,v 1.4 2003/08/12 19:14:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.9.ebuild,v 1.5 2003/09/05 22:57:44 msterret Exp $
 
 inherit kde-base
 need-kde 3.1
@@ -21,7 +21,7 @@ newdepend ">=media-sound/mpg123-0.59
 	>=media-libs/id3lib-3.8.0_pre2
 	>=media-sound/mad-0.14.2b
 	media-libs/libvorbis"
-	
+
 RDEPEND="$RDEPEND sys-apps/eject
 	>=app-cdr/cdrtools-1.11
 	>=app-cdr/cdrdao-1.1.5

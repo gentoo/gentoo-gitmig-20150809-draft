@@ -1,6 +1,6 @@
-# Copyright 2003-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.9.4.4.4.ebuild,v 1.1 2003/06/30 04:39:51 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.9.4.4.4.ebuild,v 1.2 2003/09/05 22:57:44 msterret Exp $
 
 DESCRIPTION="A set of tools for DVD+RW/-RW drives."
 HOMEPAGE="http://fy.chalmers.se/~appro/linux/DVD+RW/"
@@ -22,7 +22,7 @@ src_compile() {
 	sed -e "s:^CFLAGS=\$(WARN).*:CFLAGS=${CFLAGS}:" \
 		-e "s:^CXXFLAGS=\$(WARN).*:CXXFLAGS=${CXXFLAGS} -fno-exceptions:" \
 	Makefile.m4.orig > Makefile.m4 || die
-	
+
 	emake || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.1.ebuild,v 1.2 2003/06/29 16:01:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.1.ebuild,v 1.3 2003/09/05 22:57:43 msterret Exp $
 
 DESCRIPTION="A Perl module and a collection of easy-to-use text based interfaces to the UNIX CD burning tools"
 HOMEPAGE="http://alx14.free.fr/burncenter/"
@@ -10,7 +10,7 @@ DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
 	>=app-cdr/cdrtools-1.11
 	>=media-sound/mpg123-0.59
-	oggvorbis? ( 
+	oggvorbis? (
 		>=media-sound/vorbis-tools-1.0_rc2
 		>=media-sound/oggtst-0.0 )"
 
@@ -36,6 +36,6 @@ src_install() {
 
 	insinto ${modulePath}
 	doins Burncenter.pm
-	
+
 	dodoc COPYING doc/DEVELOP-FRONTENDS doc/README doc/TODO
 }

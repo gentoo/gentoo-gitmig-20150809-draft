@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r1.ebuild,v 1.6 2003/03/28 11:14:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r1.ebuild,v 1.7 2003/09/05 22:57:43 msterret Exp $
 inherit kde-base
 
 DESCRIPTION="A KDE frontend to CD burning and CD ripping tools."
@@ -15,7 +15,7 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	   >=media-sound/lame-3.92
 	   >=app-cdr/cdrdao-1.1.5"
 need-kde 3
-	   
+
 IUSE="oggvorbis"
 KEYWORDS="x86 ppc ~sparc "
 S=${WORKDIR}/${P}-kde3

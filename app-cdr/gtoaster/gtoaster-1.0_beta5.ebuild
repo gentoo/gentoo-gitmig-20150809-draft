@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta5.ebuild,v 1.17 2003/02/13 06:12:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta5.ebuild,v 1.18 2003/09/05 22:57:44 msterret Exp $
 
 IUSE="nls esd gnome oss oggvorbis"
 
@@ -37,7 +37,7 @@ src_compile() {
 	use gnome \
 		&& myconf="$myconf --with-gnome --with-orbit" \
 		|| myconf="$myconf --without-gnome --without-orbit"
-	
+
 	use esd \
 		&& myconf="$myconf --with-esd" \
 		|| myconf="$myconf --without-esd"
@@ -46,7 +46,7 @@ src_compile() {
 		&& myconf="$myconf --with-oss" \
 		|| myconf="$myconf --without-oss"
 
-	
+
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--sysconfdir=/etc \
@@ -77,5 +77,3 @@ src_install() {
 		doins ${FILESDIR}/gtoaster.desktop
 	fi
 }
-
-

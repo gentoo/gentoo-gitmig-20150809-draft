@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7.ebuild,v 1.4 2003/02/13 05:58:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7.ebuild,v 1.5 2003/09/05 22:57:43 msterret Exp $
 
 IUSE="oggvorbis"
 
@@ -22,6 +22,6 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	   oggvorbis? ( media-libs/libvorbis )
 	   >=media-sound/lame-3.92
 	   >=app-cdr/cdrdao-1.1.5"
-	   
+
 use oggvorbis && myconf="$myconf --with-vorbis" || myconf="$myconf --without-vorbis"
 

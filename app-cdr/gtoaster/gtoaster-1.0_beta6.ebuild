@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.9 2003/02/13 06:12:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.10 2003/09/05 22:57:44 msterret Exp $
 
 # Fix so that updating can only be done by 'cp old.ebuild new.ebuild'
 MY_P="`echo ${P} |sed -e 's:-::' -e 's:_b:B:'`"
@@ -41,7 +41,7 @@ src_compile() {
 	use gnome \
 		&& myconf="$myconf --with-gnome --with-orbit" \
 		|| myconf="$myconf --without-gnome --without-orbit"
-	
+
 	use esd \
 		&& myconf="$myconf --with-esd" \
 		|| myconf="$myconf --without-esd"

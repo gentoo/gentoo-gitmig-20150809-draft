@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.53.ebuild,v 1.3 2003/02/13 06:12:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.53.ebuild,v 1.4 2003/09/05 22:57:44 msterret Exp $
 
 IUSE="nls"
 
@@ -21,7 +21,7 @@ RDEPEND="app-cdr/cdrtools"
 src_compile() {
 	local myconf
 
-	if [ -z "`use nls`" ] 
+	if [ -z "`use nls`" ]
 	then
 		myconf="${myconf} --disable-nls"
 		touch intl/libintl.h
