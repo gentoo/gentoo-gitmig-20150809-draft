@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.039.ebuild,v 1.2 2003/08/07 00:10:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.039.ebuild,v 1.3 2003/10/01 23:37:29 mr_bones_ Exp $
 
 DESCRIPTION="Open Dynamics Engine SDK"
 HOMEPAGE="http://opende.sourceforge.net/"
@@ -18,10 +18,11 @@ src_unpack() {
 }
 
 src_compile() {
-	make \
+	emake \
+		-j1 \
 		CFLAGS="${CFLAGS} -O" \
 		PLATFORM=unix-gcc \
-		|| die
+		|| die "emake failed"
 }
 
 src_install() {
