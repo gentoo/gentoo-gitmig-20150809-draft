@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.2 2002/11/14 02:54:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.3 2002/11/14 09:43:44 seemant Exp $
 
 IUSE="3dfx"
 
@@ -22,6 +22,7 @@ SRC_URI="http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-1.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-2.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-3.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-4.tar.bz2
+	mirror://sourceforge/freetype/freetype-${FT2_VER}.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz
 	${X_PATCHES}
 	${X_DRIVERS}"
@@ -32,8 +33,8 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~sparc64"
 
 DEPEND=">=sys-libs/ncurses-5.1
-	>=sys-libs/pam-0.75
-	>=sys-libs/zlib-1.1.3-r2
+	pam? ( >=sys-libs/pam-0.75 )
+	>=sys-libs/zlib-1.1.4
 	sys-devel/flex
 	sys-devel/perl
 	3dfx? ( >=media-libs/glide-v3-3.10 )"
@@ -52,11 +53,11 @@ src_unpack () {
 	# Deploy our custom freetype2.  We want it static for stability,
 	# and because some things in Gentoo depends the freetype2 that
 	# is distributed with XFree86.
-	#	unpack freetype-${FT2_VER}.tar.bz2
-	#	cd ${S}/extras/freetype2
-	#	rm -rf *
-	#	mv ${WORKDIR}/freetype-${FT2_VER}/* .
-	#	# Enable hinting for truetype fonts
+#	unpack freetype-${FT2_VER}.tar.bz2
+#	cd ${S}/extras/freetype2
+#	rm -rf *
+#	mv ${WORKDIR}/freetype-${FT2_VER}/* .
+	# Enable hinting for truetype fonts
 	cd ${S}/extras/freetype2/include/freetype/config
 	cp ftoption.h ftoption.h.orig
 	sed -e 's:#undef \(TT_CONFIG_OPTION_BYTECODE_INTERPRETER\):#define \1:' \
@@ -212,8 +213,13 @@ src_install() {
 	doexe ${FILESDIR}/${PVR}/Xsession ${FILESDIR}/${PVR}/Xsetup_0
 	insinto /etc/X11/fs
 	newins ${FILESDIR}/${PVR}/xfs.config config
-	insinto /etc/pam.d
-	doins ${FILESDIR}/${PVR}/xdm
+	
+	if use pam
+	then
+		insinto /etc/pam.d
+		doins ${FILESDIR}/${PVR}/xdm
+	fi
+
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/${PVR}/xdm.start xdm
 	newexe ${FILESDIR}/${PVR}/xfs.start xfs

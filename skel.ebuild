@@ -43,14 +43,17 @@ SLOT="0"
 # instead of relying on an external package.mask file. Right now, you
 # should set the KEYWORDS variable for every ebuild so that it contains
 # the names of all the architectures with which the ebuild works. We have
-# 4 official architecture names right now: "x86", "ppc", "sparc" and
-# "sparc64". So, if you've confirmed that your ebuild works on x86 and ppc,
-# you'd specify: KEYWORDS="x86 ppc"
+# 5 official architecture names right now: "~x86", "~ppc", "~sparc", "~sparc64"
+# and "~alpha".  The ~ in front of the architecture indicates that the
+# package is new and should be considered unstable until testing proves its
+# stability.  Once packages go stable the ~ prefix is removed.
+# So, if you've confirmed that your ebuild works on x86 and ppc,
+# you'd specify: KEYWORDS="~x86 ~ppc"
 # For packages that are platform-independant (like Java, PHP or Perl
 # applications) specify all keywords.
 # DO NOT USE KEYWORDS="*". This is deprecated and only for backward
 # compatibility reasons.
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 # Comprehensive list of any and all USE flags leveraged in the ebuild,
 # with the exception of any ARCH specific flags, i.e. "ppc", "sparc",
@@ -73,7 +76,7 @@ DEPEND=""
 # Source directory; the dir where the sources can be found (automatically
 # unpacked) inside ${WORKDIR}.  S will get a default setting of ${WORKDIR}/${P}
 # if you omit this line.
-S="${WORKDIR}/${P}"
+S=${WORKDIR}/${P}
 
 src_compile() {
 	# Most open-source packages use GNU autoconf for configuration.
@@ -126,5 +129,5 @@ src_install() {
 
 	# The portage shortcut to the above command is simply:
 	#
-	#einstall || die
+	#einstall
 }

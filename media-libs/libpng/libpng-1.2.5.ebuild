@@ -1,25 +1,26 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5.ebuild,v 1.2 2002/10/28 23:56:15 seemant Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5.ebuild,v 1.3 2002/11/14 09:43:44 seemant Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="libpng"
+DESCRIPTION="Portable Network Graphics library"
 SRC_URI="ftp://swrinde.nde.swri.edu/pub/png/src/${P}.tar.gz"
 HOMEPAGE="http://www.libpng.org/"
+
 SLOT="1.2"
 LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
-DEPEND=">=sys-libs/zlib-1.1.4"
+DEPEND="sys-libs/zlib"
 
 src_compile() {
-	sed -e "s:ZLIBLIB=../zlib:ZLIBLIB=/usr/lib:" \
-		-e "s:ZLIBINC=../zlib:ZLIBINC=/usr/include:" \
+	sed -e "s:ZLIBLIB=.*:ZLIBLIB=/usr/lib:" \
+		-e "s:ZLIBINC=.*:ZLIBINC=/usr/include:" \
 		-e "s/-O3/${CFLAGS}/" \
 		-e "s:prefix=/usr/local:prefix=/usr:" \
 			scripts/makefile.linux > Makefile
 
+	einfo "${LDFLAGS}"
 	emake || die
 }
 

@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/mc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/ChangeLog,v 1.13 2002/11/10 08:33:09 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/ChangeLog,v 1.14 2002/11/14 09:43:44 seemant Exp $
+
+*mc-4.6.0_pre1-r4 (13 Nov 2002)
+
+  13 Nov 2002; Brad Cowan <bcowan@gentoo.org> mc-4.6.0_pre1-r4.ebuild,    
+  files/digest-mc-4.6.0_pre1-r4, files/man2hlp.c :
+
+  Replaced man2hlp.c with a cvs version recommended by upstream dev's,
+  still trying to fix problem with /var/tmp filling up.
 
 *mc-4.6.0_pre1-r3 (10 Nov 2002)
 

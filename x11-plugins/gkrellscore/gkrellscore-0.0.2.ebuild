@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellscore/gkrellscore-0.0.2.ebuild,v 1.4 2002/10/04 06:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellscore/gkrellscore-0.0.2.ebuild,v 1.5 2002/11/14 09:43:44 seemant Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${P}
@@ -13,14 +13,32 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="=app-admin/gkrellm-1.2*
+	sys-apps/supersed
 	>=media-libs/imlib-1.9.10-r1"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	ssed -i "s:excite:yahoo:g" ${PN}.excite
+	mv ${PN}.excite ${PN}.yahoo
+	ssed -i \
+		-e "s:excite:yahoo:g" \
+		-e "s:Excite:Yahoo:g" \
+		-e 's#\(g_strdup_printf ("http://%s/%s/\)#\1teams#' \
+		-e "s:netscape:mozilla:g" \
+		-e "s:\(gkrellscore.yahoo\):/usr/share/gkrellm/\1:" \
+		${PN}.c
+}
+
 src_compile() {
+
 	emake || die
 }
 
 src_install () {
 	exeinto /usr/lib/gkrellm/plugins
 	doexe gkrellscore.so
+	exeinto /usr/share/gkrellm
+	doexe ${PN}.yahoo
 	dodoc README COPYING Changelog
 }
