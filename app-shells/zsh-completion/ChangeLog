@@ -1,0 +1,10 @@
+# ChangeLog for app-shells/zsh-completion
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.1 2004/11/06 15:39:08 usata Exp $
+
+*zsh-completion-20040730 (07 Nov 2004)
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +zsh-completion-20040730.ebuild:
+  Initial import. Derived from zsh package.
+
