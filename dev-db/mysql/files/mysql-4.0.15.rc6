@@ -1,0 +1,37 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-4.0.15.rc6,v 1.1 2003/09/17 07:10:37 robbat2 Exp $
+
+depend() {
+	need net
+	use dns
+}
+
+checkconfig() {
+	if [ ! -f /etc/mysql/my.cnf ] ; then
+		eerror "No /etc/mysql/my.cnf file exists!"
+	fi
+
+    dir=`my_print_defaults mysqld | grep -- --datadir | sed -e "s|^.*=\(.*\)|\1|"`
+
+	if [ ! -d $dir/mysql ] ; then
+		eerror "You dont appear to have the mysql database installed yet."
+		eerror "Please run /usr/bin/mysql_install_db to have this done..."
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting mysqld"
+	start-stop-daemon --start --quiet --exec /usr/bin/mysqld_safe \
+		--background -- >/dev/null 2>&1
+	eend $?
+}
+
+stop () {
+	ebegin "Stopping mysqld"
+	start-stop-daemon --stop --retry 5 --quiet --pidfile=/var/run/mysqld/mysqld.pid
+	eend $?
+}

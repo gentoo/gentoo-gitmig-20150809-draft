@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r2.ebuild,v 1.3 2003/09/17 07:10:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.15.ebuild,v 1.1 2003/09/17 07:10:37 robbat2 Exp $
 
 inherit eutils
 #to accomodate -laadeedah releases
@@ -179,7 +179,7 @@ src_install() {
 	newins ${FILESDIR}/my.cnf-4.0.14-r1 my.cnf
 	doins scripts/mysqlaccess.conf
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/mysql-4.0.rc6 mysql
+	newexe ${FILESDIR}/mysql-4.0.15.rc6 mysql
 }
 
 pkg_config() {
