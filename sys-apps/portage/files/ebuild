@@ -111,8 +111,13 @@ dyn_digest() {
     if [ ! -d ${FILESDIR} ]
     then
 	install -d ${FILESDIR}
+	if [ -n ${MAINTAINER} ]
+	then
+		echo ">>> adding ${FILESDIR} to CVS (just in case it isn't there)"
+		( cd `/usr/bin/dirname ${FILESDIR}`; cvs add `/usr/bin/basename ${FILESDIR}` )
+	fi
     fi
-    rm -f ${FILESDIR}/digest
+    rm -f ${FILESDIR}/digest-${PF}
     for x in ${A}
     do
 	if [ ! -e ${DISTDIR}/${x} ]
@@ -122,14 +127,19 @@ dyn_digest() {
 	    exit 1
 	else
 	    mymd5=`md5sum ${DISTDIR}/${x} | cut -f1 -d" "`
-	    echo "MD5 $mymd5 $x" >> ${FILESDIR}/digest
+	    echo "MD5 $mymd5 $x" >> ${FILESDIR}/digest-${PF}
 	fi
     done
+    if [ -n "${MAINTAINER}" ]
+    then
+	echo ">>> adding digest-${PF} to CVS (just in case it isn't there)"
+	( cd ${FILESDIR}; cvs add digest-${PF} )
+    fi
     echo ">>> Computed message digests."
 }
 
 digest_check() {
-    if [ ! -e ${FILESDIR}/digest ]
+    if [ ! -e ${FILESDIR}/digest-${PF} ]
     then
 	echo '!!!'" No message digest file found."
 	if [ -n "$MAINTAINER" ]
@@ -148,7 +158,7 @@ digest_check() {
 	echo '!!!'" Ebuild fetch to retrieve files."
 	return 1
     fi	
-    local mycdigest=`grep " ${1}" ${FILESDIR}/digest | cut -f2 -d" "`
+    local mycdigest=`grep " ${1}" ${FILESDIR}/digest-${PF} | cut -f2 -d" "`
     if [ -z "$mycdigest" ]
     then
 	echo
@@ -157,7 +167,7 @@ digest_check() {
 	then
 		echo '>>> Maintainer mode: auto-computing digests.'
 		dyn_digest
-		echo
+		echo 
 		return 0
 	else
 		echo '!!!'" Maintainer: ebuild digest to update message digests."
@@ -1203,7 +1213,7 @@ export EBUILD=${1}
 export PEBUILD=${O}/files/${PLATFORM}.ebuild
 export FILESDIR=${O}/files
 
-export P=${1%.*}
+export P=`/usr/bin/basename ${1%.*}`
 setp `/usr/sbin/pkgname ${P}`
 
 source ${1}
