@@ -1,6 +1,14 @@
 # ChangeLog for app-text/latex2html
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/ChangeLog,v 1.5 2002/08/02 17:42:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/ChangeLog,v 1.6 2002/11/09 07:50:48 seemant Exp $
+
+*latex2html-2002.2 (08 Nov 2002)
+
+  08 Nov 2002; Seemant Kulleen <seemant@gentoo.org> latex2html-2002.2.ebuild
+  files/digest-latex2html-2002.2.ebuild :
+
+  Version bump, and fixed the problem in bug #10446 reported by:
+  twanger@bluetwanger.de (Markus Bertheau)
 
 *latex2html-2002.1 (18 Jun 2002)
 
