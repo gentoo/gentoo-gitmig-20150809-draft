@@ -1,48 +1,39 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.0-r3.ebuild,v 1.3 2003/02/13 13:22:37 vapier Exp $ 
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.0-r3.ebuild,v 1.4 2003/08/07 04:13:00 vapier Exp $ 
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="Teletext viewer for X11"
-SRC_URI="http://www.ibiblio.org/pub/Linux/apps/video/${P}.tar.gz"
 HOMEPAGE="http://www.goron.de/~froese/"
+SRC_URI="http://www.ibiblio.org/pub/Linux/apps/video/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
+LICENSE="GPL-2"
 
 DEPEND="virtual/x11
 	>=media-libs/libpng-1.0.12"
-	
-
-LICENSE="GPL-2"
 
 src_unpack() {
-
 	unpack ${P}.tar.gz
-	cd ${WORKDIR}
-
-	# Parallel make patch
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
-
+	epatch ${FILESDIR}/${P}-gentoo.diff # Parallel make patch
 }
 
 src_compile() {
-	
 	emake || die
-
 }
 
-src_install () {
-
+src_install() {
 	dobin alevt alevt-cap alevt-date
 	doman alevt.1x alevt-date.1 alevt-cap.1
 	dodoc CHANGELOG COPYRIGHT README
 
-	use gnome && ( \
+	if [ `use gnome` ] ; then
 		insinto /usr/share/pixmaps
 		newins contrib/mini-alevt.xpm alevt.xpm
 		insinto /usr/share/applications
 		doins ${FILESDIR}/alevt.desktop
-	)
+	fi
 }

@@ -1,31 +1,26 @@
 # Copyright 2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/yanc/yanc-0.2.0.ebuild,v 1.1 2003/06/15 05:58:25 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/yanc/yanc-0.2.0.ebuild,v 1.2 2003/08/07 04:22:12 vapier Exp $
 
-
-S=${WORKDIR}/${P}
 DESCRIPTION="YanC is a GUI configuration tool for the NVIDIA Accelerated Linux Driver Set."
 HOMEPAGE="http://yanc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/yanc/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="-* ~x86"
 
-#
 # As the downloaded package seems to be pre-compiled,
 # the dependances are not clear.
 # TODO: Emerge the real compilable yanc's code
-#
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="x11-base/xfree"
-
 
 src_compile() {
 	einfo "nothing to compile"
 }
 
-src_install () {
+src_install() {
 	dodir /usr/share/yanc
 	dodir /usr/lib
 	dodir /usr/bin
@@ -52,12 +47,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo ''
-	einfo 'WARNING:'
-	einfo '========'
 	einfo '-> Please create a copy of your XF86Config before you use YanC for the'
 	einfo 'first time, because it is possible that your XF86Config is damaged because of'
 	einfo 'the use of YanC. Then a restart of XFree would be impossible.'
-	einfo ''
-	echo  ''
 }

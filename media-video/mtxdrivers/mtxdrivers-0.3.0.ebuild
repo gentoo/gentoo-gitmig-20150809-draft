@@ -1,38 +1,37 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.                                                                                         
-# Distributed under the terms of the GNU General Public License v2                                                                      
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.4 2003/06/06 17:42:34 prez Exp $                     
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.5 2003/08/07 04:20:18 vapier Exp $
 
 At="mtxdrivers-rh9.0-0.3.0.run"
-SRC_URI=""
 DESCRIPTION="Drviers for the Matrox Parhelia and Millenium P650/P750 cards."
 HOMEPAGE="http://www.matrox.com/mga/products/parhelia/home.cfm"
+SRC_URI="${At}"
+
+LICENSE="Matrox"
+SLOT="0"
+KEYWORDS="x86"
+RESTRICT="fetch"
 
 DEPEND=">=x11-base/xfree-4.2.0
 	virtual/kernel
-    !mtxdrivers-pro"
-
-SLOT="0"
-LICENSE="Matrox"
-KEYWORDS="x86"
+	!mtxdrivers-pro"
 
 Xversion=`X -version 2>&1 | grep -s "XFree86 Version" | cut -d" " -f3 | sed -e "s/\([^\.]*\.[^\.]*\.[^\.]*\)\.[^\.]*/\1/"`
 
+pkg_nofetch() {
+	einfo "You must go to: http://www.matrox.com/mga/registration/home.cfm?refid=7667"
+	einfo "(for the RH9.0 drivers) and log in (or create an account) to download the"
+	einfo "Matrox Parhelia drivers. Remember to right-click and use Save Link As when"
+	einfo "downloading the driver."
+}
+
 src_unpack() {
-    if [ ! -f "${DISTDIR}/${At}" ]; then
-		einfo "You must go to: http://www.matrox.com/mga/registration/home.cfm?refid=7667"
-		einfo "(for the RH9.0 drivers) and log in (or create an account) to download the"
-		einfo "Matrox Parhelia drivers. Remember to right-click and use Save Link As when"
-		einfo "downloading the driver."
-		die
-    fi
 	mkdir ${S}
 	cd ${S}
 	tail -4434 "${DISTDIR}/${At}" | tar -xvzf -
 }
 
 src_compile() {
-	cd ${S}
-
 	if [ ! -e ${S}/xfree86/${Xversion} ]; then
 		eerror "Matrox does not support XFree v${Xversion}"
 		exit 1
@@ -48,13 +47,11 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
-
 	Xpath="`which X | sed -e "s:/bin/X$::"`"
 	Kversion=`uname -r`
 
 	dodir /lib/modules/${Kversion}/kernel/drivers/video
-    dodir ${Xpath}/lib/modules/drivers
+	dodir ${Xpath}/lib/modules/drivers
 
 	dodoc README* samples/*
 

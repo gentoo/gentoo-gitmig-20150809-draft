@@ -1,14 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.2.2.ebuild,v 1.3 2003/02/13 13:36:13 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.2.2.ebuild,v 1.4 2003/08/07 04:15:32 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Optional closed source drivers for phillips webcams to allow for higher resoltions and framerates "
-SRC_URI="http://www.smcc.demon.nl/webcam/usb-pwcx-8.2.2.tar.gz"
 HOMEPAGE="http://www.smcc.demon.nl/webcam/"
-SLOT="0"
+SRC_URI="http://www.smcc.demon.nl/webcam/usb-pwcx-8.2.2.tar.gz"
+
 LICENSE="freedist"
+SLOT="0"
 KEYWORDS="~x86 -ppc -sparc  -alpha"
+
 DEPEND=""
 
 src_install() {
@@ -28,4 +29,3 @@ pkg_postinst() {
 		[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
 	fi
 }
-
