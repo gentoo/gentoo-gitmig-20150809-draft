@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tw_cli/tw_cli-7.7.1.ebuild,v 1.1 2005/02/09 10:55:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tw_cli/tw_cli-2.00.00.032b.ebuild,v 1.1 2005/02/21 02:05:51 robbat2 Exp $
 
 DESCRIPTION="3ware Command Line Interface"
 HOMEPAGE="http://www.3ware.com"
@@ -9,16 +9,18 @@ SLOT="0"
 IUSE="doc"
 RESTRICT="fetch"
 
+APPPV="7.7.1"
+
 # binary for x86 only
 KEYWORDS="-* ~x86"
 
 # upstream does NOT version releases in the filename :-(
-SRC_URI_DOC="doc? ( ${PV}_Release_Notes_Web.pdf )"
+SRC_URI_DOC="doc? ( ${APPPV}_Release_Notes_Web.pdf )"
 SRC_URI_BIN="cli_linux.tgz"
 SRC_URI="${SRC_URI_BIN} ${SRC_URI_DOC}"
 
-DOWNLOAD_URL_APP="http://www.3ware.com/support/download.asp?code=8&id=${PV}&softtype=CLI&os=Linux"
-DOWNLOAD_URL_DOC="http://www.3ware.com/download/Escalade7000Series/${PV}/${PV}_Release_Notes_Web.pdf"
+DOWNLOAD_URL_APP="http://www.3ware.com/support/download.asp?code=8&id=${APPPV}&softtype=CLI&os=Linux"
+DOWNLOAD_URL_DOC="http://www.3ware.com/download/Escalade7000Series/${APPPV}/${APPPV}_Release_Notes_Web.pdf"
 
 # these are correct!
 S="${WORKDIR}"
@@ -42,7 +44,7 @@ pkg_nofetch() {
 	einfo "${DOWNLOAD_URL_APP}"
 	einfo "Select the following options:"
 	einfo "Product: 3ware 7006-2 / 8006-2"
-	einfo "Version: ${PV}"
+	einfo "Version: ${APPPV}"
 	einfo "Operating System: Linux"
 	echo
 	if use doc; then
@@ -60,7 +62,7 @@ src_unpack() {
 src_install() {
 	if use doc; then
 		into /usr
-		dodoc ${PV}_Release_Notes_Web.pdf
+		dodoc ${APPPV}_Release_Notes_Web.pdf
 	fi
 
 	into /
