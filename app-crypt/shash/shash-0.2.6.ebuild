@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/shash-0.2.6.ebuild,v 1.5 2004/06/27 21:36:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/shash-0.2.6.ebuild,v 1.6 2004/09/24 18:18:22 swegener Exp $
+
+inherit eutils
 
 DESCRIPTION="Generate or check digests or MACs of files"
 HOMEPAGE="http://mcrypt.hellug.gr/shash/"
@@ -19,8 +21,15 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-apps/gawk"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/0.2.6-manpage-fixes.patch
+}
+
 src_compile() {
-	econf `use_enable static static-link` || die "econf failed"
+	econf $(use_enable static static-link) || die "econf failed"
 	emake || die "emake failed"
 }
 
