@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/fceultra
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.12 2004/07/01 11:13:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.13 2004/11/24 09:14:53 mr_bones_ Exp $
+
+*fceultra-0.98.12 (24 Nov 2004)
+
+  24 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +fceultra-0.98.12.ebuild:
+  version bump
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   fceultra-0.98.10.ebuild:
