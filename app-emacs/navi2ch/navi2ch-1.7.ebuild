@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.ebuild,v 1.3 2003/09/30 13:23:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.ebuild,v 1.4 2003/12/14 16:49:36 usata Exp $
 
 inherit elisp
 
@@ -14,8 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 alpha ppc sparc"
 
-DEPEND="virtual/emacs
-	dev-lisp/mule-ucs"
+DEPEND="virtual/emacs"
 
 S=${WORKDIR}/${P}
 SITEFILE=50navi2ch-gentoo.el
@@ -42,7 +41,6 @@ pkg_postinst() {
 	einfo "If you use mona-font,"
 	einfo "\t(setq navi2ch-mona-enable t)"
 	einfo "If you use izonmoji-mode,"
-	einfo "\t(require 'un-define)"
 	einfo "\t(require 'izonmoji-mode)"
 	einfo "\t(add-hook 'navi2ch-bm-mode-hook      'izonmoji-mode-on)"
 	einfo "\t(add-hook 'navi2ch-article-mode-hook 'izonmoji-mode-on)"
