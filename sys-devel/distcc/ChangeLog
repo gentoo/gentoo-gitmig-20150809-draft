@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.58 2003/07/21 18:58:27 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.59 2003/07/27 23:09:44 lisa Exp $
 
 *distcc-2.9 (21 Jul 2003)
   21 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
@@ -25,6 +25,8 @@
   change the running port.
   (distcc-2.8-r2.ebuild) Added a note to the backup distcc website
 
+  27 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  Bumped distcc-2.8-r2 to x86
 
 *distcc-2.7.1 (01 Jul 2003)
   21 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
