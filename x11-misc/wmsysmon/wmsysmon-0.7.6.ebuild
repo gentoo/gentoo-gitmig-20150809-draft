@@ -1,7 +1,7 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
 # Maintainer: Vitaly Kushneriuk<vitaly@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmsysmon/wmsysmon-0.7.6.ebuild,v 1.2 2002/07/08 21:31:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmsysmon/wmsysmon-0.7.6.ebuild,v 1.3 2002/07/08 21:44:10 aliz Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc x11-base/xfree"
 #RDEPEND=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86
+KEYWORDS="x86"
 
 src_compile() {
 	make -C src
