@@ -2,9 +2,9 @@ MD5 065218d3912f2995ec58f157df8f17a3 kdebase-3.2.3.ebuild 3281
 MD5 80eba62d580ddc461142d6134b76b812 kdebase-3.2.3-r1.ebuild 3372
 MD5 212bf2c2a704a5229147c98aa5fa49eb kdebase-3.2.0.ebuild 3344
 MD5 1346582446d8d61097aaed2115b05adf kdebase-3.2.2.ebuild 3346
-MD5 c44314da3c82d4f3938785328b571479 kdebase-3.3.0_rc1.ebuild 3144
+MD5 75378baf1781c0662baa471c9baef26e kdebase-3.3.0_rc1.ebuild 3340
 MD5 3a42711432882f7dfe32aeec2f454ed7 kdebase-3.2.1.ebuild 3653
-MD5 8a35ece703b0251ecf440dbc5bc852c9 ChangeLog 25045
+MD5 b9799799600d13abe3d94e03acf44cd6 ChangeLog 25216
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 b3184422a2ab9890a87e73e4e0d7cc91 kdebase-3.3.0_beta2.ebuild 3201
 MD5 b48e5f8d54a613ad906d06a21e8349a2 kdebase-3.1.5.ebuild 3623
@@ -14,10 +14,12 @@ MD5 b048371a651391ef2bb4166e40e6adff files/kde.pam 405
 MD5 160f44a51f4308c9c21052fd21c7d04d files/kdebase-3.2.0-kcontrol.patch 699
 MD5 6eb40b28a36f889d0f1919cdbf160ef7 files/kscreensaver.pam 79
 MD5 daa284d6a1f62c5c73deb8aeda9df57d files/digest-kdebase-3.2.3-r1 68
+MD5 ca0fc4bf60b72dd1b8d42cb7e2be5a75 files/agent-shutdown.sh 204
 MD5 7688a76a855ccc4b726fee9726de1e40 files/digest-kdebase-3.3.0_rc1 72
 MD5 17b088965016d9c796e570741837a2b3 files/detectwidget.cpp.diff 422
 MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379
 MD5 93966c9ed1c9c8d61604f5cffb8bf9b8 files/digest-kdebase-3.3.0_beta2 69
+MD5 510d05672fcad238e92db44fbfa65f89 files/agent-startup.sh 209
 MD5 78ebd13a55a30a97f9a65da56b015a34 files/digest-kdebase-3.1.5 68
 MD5 c0cb6e59bf4bbd19caa7b9435f253ff3 files/digest-kdebase-3.2.0 68
 MD5 7b4a3c4a318e02c24c0ebacb4264bcdd files/digest-kdebase-3.2.1 68

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0_rc1.ebuild,v 1.1 2004/08/06 15:11:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0_rc1.ebuild,v 1.2 2004/08/06 19:59:49 caleb Exp $
 
 inherit kde-dist eutils
 
@@ -65,6 +65,12 @@ src_install() {
 	sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
 	rm startkde.orig
 	chmod a+x startkde
+
+	# startup and shutdown scripts
+	dodir ${KDEDIR}/env
+	dodir ${KDEDIR}/shutdown
+	cp -a ${FILESDIR}/agent-startup.sh ${D}/${KDEDIR}/env
+	cp -a ${FILESDIR}/agent-shutdown.sh ${D}/${KDEDIR}/shutdown
 
 	# kcontrol modules
 	cd ${D}/${KDEDIR}/etc/xdg/menus

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.139 2004/08/06 15:23:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.140 2004/08/06 19:59:49 caleb Exp $
+
+  06 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdebase-3.3.0_rc1.ebuild,
+  files/agent-shutdown.sh, files/agent-startup.sh:
+  Add agents.sh files to startup and shutdown
 
 *kdebase-3.2.3-r1 (06 Aug 2004)
 
