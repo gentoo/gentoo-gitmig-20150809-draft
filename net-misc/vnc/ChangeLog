@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.32 2005/01/08 15:37:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.33 2005/01/22 16:01:50 aliz Exp $
+
+  22 Jan 2005; Daniel Ahlberg <aliz@gentoo.org> vnc-4.0-r1.ebuild:
+  Removed subshells, closing #78638.
 
   08 Jan 2005; Daniel Ahlberg <aliz@gentoo.org> vnc-4.0-r1.ebuild:
   Fixed optional building of server.
