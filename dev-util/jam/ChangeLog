@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.9 2004/07/18 17:14:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.10 2004/10/16 21:23:27 gongloo Exp $
+
+  16 Oct 2004; <gongloo@gentoo.org> jam-2.5.ebuild:
+  Keyworded ~ppc-macos.
 
   18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> jam-2.5.ebuild:
   Added amd64 keyword, closing #57341.
