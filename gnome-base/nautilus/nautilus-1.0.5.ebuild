@@ -3,7 +3,7 @@
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
 # /home/cvsroot/gentoo-x86/gnome-apps/nautilus/nautilus-1.0.ebuild,v 1.3 2001/04/29 18:42:54 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.5.ebuild,v 1.1 2001/10/20 00:36:05 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.5.ebuild,v 1.2 2001/10/22 09:58:39 hallski Exp $
 
 
 S=${WORKDIR}/${P}
@@ -25,7 +25,7 @@ RDEPEND="mozilla? ( >=net-www/mozilla-0.9.5 )
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
         >=app-text/scrollkeeper-0.2
-        >=dev-util/xml-i18n-tools-0.8.4"
+        >=dev-util/intltool-0.11"
 
 src_compile() {                           
 	local myconf
