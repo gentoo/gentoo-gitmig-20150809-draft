@@ -1,6 +1,13 @@
 # ChangeLog for media-video/alevt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.3 2002/07/03 17:00:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.4 2002/07/09 09:21:00 seemant Exp $
+
+*alevt-1.6.0-r3 (09 Jul 2002)
+
+  09 Jul 2002; Seemant Kulleen <seemant@gentoo.org> alevt-1.6.0-r3.ebuild
+  files/alevt.desktop files/digest-alevt-1.6.0-r3 :
+
+  This now adds icons and a menu entry for Gnome2 users.
 
 *alevt-1.6.0-r2 (03 Jul 2002)
 
