@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ri
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ChangeLog,v 1.5 2003/03/25 20:58:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ChangeLog,v 1.6 2003/08/09 12:20:09 twp Exp $
+
+*ri-1.8b (09 Aug 2003)
+
+  09 Aug 2003; Tom Payne <twp@gentoo.org> ri-1.8b.ebuild :
+  Version bump. Bug # 26188.
 
 *ri-0.8a (07 Jul 2002)
 
