@@ -1,11 +1,16 @@
 # ChangeLog for app-emulation/freesci
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/freesci/ChangeLog,v 1.5 2003/05/12 20:22:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/freesci/ChangeLog,v 1.6 2003/06/29 20:06:54 aliz Exp $
 
 *freescsi-0.4.3a (12 May 2003)
 
   12 May 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.
+
+*freesci-0.3.4a (12 May 2003)
+
+  29 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *freesci-0.3.3 (18 Jul 2002)
 

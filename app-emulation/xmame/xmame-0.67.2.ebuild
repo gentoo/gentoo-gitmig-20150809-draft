@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Based on the 0.59.1 ebuild by Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.67.2.ebuild,v 1.1 2003/04/28 02:38:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.67.2.ebuild,v 1.2 2003/06/29 20:06:54 aliz Exp $
 
 DESCRIPTION="Multiple Arcade Machine Emulator for X11"
 SRC_URI="http://x.mame.net/download/${P}.tar.bz2"
@@ -9,7 +9,7 @@ HOMEPAGE="http://x.mame.net/"
 
 SLOT="0"
 LICENSE="xmame"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts"
 
 DEPEND="sdl? ( >=media-libs/libsdl-1.2.0 )

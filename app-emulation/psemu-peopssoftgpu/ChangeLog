@@ -1,8 +1,8 @@
 # ChangeLog for app-emulation/psemu-peopssoftgpu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopssoftgpu/ChangeLog,v 1.5 2003/02/12 04:02:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopssoftgpu/ChangeLog,v 1.6 2003/06/29 20:06:54 aliz Exp $
 
-*psemu-peopssoftgpu (27 Jul 2002)
+*psemu-peopssoftgpu-1.6 (27 Jul 2002)
 
   19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> psemu-peopssoftgpu-1.0.6.ebuild :
   Updated to mirror://sourceforge in SRC_URI.

@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-2.17.1.ebuild,v 1.1 2003/03/09 00:00:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-2.17.1.ebuild,v 1.2 2003/06/29 20:06:54 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hercules System/370, ESA/390 and zArchitecture Mainframe Emulator"
 SRC_URI="http://www.conmicro.cx/hercules/${P}.tar.gz"
 HOMEPAGE="http://www.conmicro.cx/hercules/"
 LICENSE="QPL-1.0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.4 2003/02/28 23:25:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.5 2003/06/29 20:06:54 aliz Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://tuxnes.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="X ggi"
 
 DEPEND=">=media-libs/netpbm-9.12

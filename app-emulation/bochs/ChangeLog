@@ -1,11 +1,11 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.9 2003/06/07 00:54:47 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.10 2003/06/29 20:06:54 aliz Exp $
 
   06 Jun 2003; <msterret@gentoo.org> bochs-2.0.2.ebuild:
   use sed -i and use_with
 
-*bochs-2.0 (07 Feb 2003)
+*bochs-2.0.2 (07 Feb 2003)
   07 Feb 2003; Luca Barbato <lu_zero@gentoo.org> ChangeLog  : bochs-2.0.2.ebuild
   
   Version bump again, added the gtk useflag

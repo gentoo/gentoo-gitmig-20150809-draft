@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-4.0.20.ebuild,v 1.1 2003/04/13 12:46:05 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-4.0.20.ebuild,v 1.2 2003/06/29 20:06:54 aliz Exp $
 
 IUSE="doc"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${MY_P}.rpm
 
 SLOT="0"
 LICENSE="NeTraverse"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="app-arch/rpm2targz
 		sys-kernel/win4lin-sources"

@@ -1,8 +1,8 @@
 # ChangeLog for app-emulation/spectemu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.4 2003/02/12 04:03:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.5 2003/06/29 20:06:54 aliz Exp $
 
-*specemu-0.9.4 (27 Jul 2002)
+*spectemu-0.9.4 (27 Jul 2002)
 
   27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> specemu-0.9.4.ebuild :
 
