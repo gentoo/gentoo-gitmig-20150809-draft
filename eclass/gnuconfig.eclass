@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.16 2004/04/24 02:22:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.17 2004/05/28 20:56:10 rac Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -19,8 +19,7 @@
 ECLASS=gnuconfig
 INHERITED="$INHERITED $ECLASS"
 
-DEPEND="sys-devel/gnuconfig
-	!bootstrap? ( sys-devel/libtool )"
+DEPEND="sys-devel/gnuconfig"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
