@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05.ebuild,v 1.2 2004/05/05 21:49:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05.ebuild,v 1.3 2004/05/05 22:32:38 vapier Exp $
 
 DESCRIPTION="Programs Crypto/Network/Multipurpose Library"
 HOMEPAGE="http://mixter.void.ru/"
@@ -18,7 +18,7 @@ S=${WORKDIR}/${PN}-v${PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i "s:-O3 -funroll-loops:${CFLAGS}:" configure
+	sed -i "s:-O3 -funroll-loops:${CFLAGS} -fPIC:" configure
 }
 
 src_compile() {
