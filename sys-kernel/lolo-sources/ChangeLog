@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.10 2002/09/22 16:29:21 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.11 2002/09/24 06:41:49 lostlogic Exp $
+
+*lolo-sources-2.4.19.10_pre4 (24 Sep 2002)
+
+  24 Sep 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.19.10_pre4.ebuild:
+
+  While testing this kerenl I ran into very bad crashing behavior with 
+  the USE="acpi4linux" option enabled... just a warning.  But for you
+  laptopers it is still there.
+
+  Well I dug up about 3-4 hours of time and merged xfs into this kernel
+  so everyone who has been asking for it finally gets their way because
+  I hate being unpopular.  I hope you all enjoy XFS, it is enabled by a
+  hidden useflag so set USE="xfs" to turn it on for this kernel.  Please
+  let me know your results.
 
 *lolo-sources-2.4.19.10_pre3 (21 Sep 2002)
 
