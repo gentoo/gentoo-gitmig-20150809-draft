@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.75 2004/12/15 01:39:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.76 2004/12/15 06:49:15 sejo Exp $
+
+  15 Dec 2004; <SeJo@gentoo.org> phpmyadmin-2.6.1_rc1.ebuild:
+  stable on ppc gsla: 74303
 
   14 Dec 2004; Jason Wever <weeve@gentoo.org> phpmyadmin-2.6.1_rc1.ebuild:
   Stable on sparc wrt security bug #74303.
