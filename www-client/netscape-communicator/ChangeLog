@@ -1,0 +1,57 @@
+# ChangeLog for net-www/netscape-communicator
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/netscape-communicator/ChangeLog,v 1.1 2005/03/15 20:05:39 seemant Exp $
+
+*netscape-communicator-4.80 (15 Mar 2005)
+*netscape-communicator-4.79-r1 (15 Mar 2005)
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> +files/netscape,
+  +metadata.xml, +netscape-communicator-4.79-r1.ebuild,
+  +netscape-communicator-4.80.ebuild:
+  Moved from net-www/netscape-communicator to www-client/netscape-communicator.
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml,
+  netscape-communicator-4.79-r1.ebuild:
+  Corrected metadata.xml to match DTD and added IUSE="".
+
+*netscape-communicator-4.80 (04 Jul 2004)
+
+  04 Jul 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +netscape-communicator-4.80.ebuild:
+  Version bumped. Closing bug #16605
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  netscape-communicator-4.79-r1.ebuild:
+  virtual/glibc -> virtual/libc
+
+  17 Oct 2003; Jason Wever <weeve@gentoo.org>
+  netscape-communicator-4.79-r1.ebuild:
+  Masked for sparc as it's an x86 binary pacakge.
+
+*netscape-communicator-4.79-r1 (19 Aug 2002)
+
+  01 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Removed libflash plugin and depended on newer netscape-flash package to fix #15751.
+
+  19 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, netscape-communicator-4.79-r1.ebuild :
+  Added -ppc to the keywords.
+
+*netscape-communicator-4.79-r1 (28 Apr 2002)
+
+  28 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog, netscape-communicator-4.79-r1.ebuild  :
+  When unpacking .nif files, make sure to use --no-same-owner
+  so they are unpacked as root.
+  
+*netscape-communicator-4.79 (9 Apr 2002)
+
+  9 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog, netscape-communicator-4.79.ebuild  :
+  The grand re-naming of netscape to netscape-communicator
+  
+*netscape-4.78 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
