@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.277 2004/06/28 22:04:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.278 2004/06/29 14:05:26 solar Exp $
+
+  29 Jun 2004; <solar@gentoo.org> gcc-3.3.3-r6.ebuild, gcc-3.3.4.ebuild,
+  gcc-3.4.0-r6.ebuild, files/3.3.3/gcc-3.3.3-norelro.patch:
+  add norelro patch for uclibc
 
   28 Jun 2004; <solar@gentoo.org> gcc-3.4.0-r6.ebuild:
   fwdport uclibc updates from 3.3.4
