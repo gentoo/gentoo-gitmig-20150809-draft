@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.5 2003/08/27 15:03:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.6 2003/09/14 17:19:56 dholm Exp $
+
+  14 Sep 2003; David Holm <dholm@gentoo.org> gnat-3.15p-r2.ebuild:
+  Do not attempt any kind of optimizations. This will hopefully clear bug #27683.
 
 *gnat-5.0_pre20030822 (27 Aug 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r2.ebuild,v 1.1 2003/08/13 22:17:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r2.ebuild,v 1.2 2003/09/14 17:19:56 dholm Exp $
 
 DESCRIPTION="GNAT Ada Compiler"
 DEPEND="app-shells/tcsh"
@@ -43,7 +43,7 @@ src_unpack() {
 
 src_compile() {
 	# GCC 2.8.1 doesn't like fancy flags
-	local CFLAGS="-O2"
+	local CFLAGS="-O0"
 
 	# Set some paths to our bootstrap compiler.
 	local GCC_EXEC_PREFIX="${GNATBOOT}/lib/gcc-lib/i686-pc-linux-gnu/2.8.1"
@@ -68,7 +68,7 @@ src_compile() {
 	# our own version. Finally compile the libraries and tools.
 	make CC="gcc" LANGUAGES="c ada gcov"
 	make CC="gcc" LANGUAGES="c ada gcov" bootstrap
-	make CC="gcc" GNATLIBCFLAGS="-O2 -fPIC" gnatlib-shared
+	make CC="gcc" GNATLIBCFLAGS="-O0 -fPIC" gnatlib-shared
 	make CC="gcc" gnattools
 }
 
@@ -93,7 +93,7 @@ src_install() {
 
 	# Compile and install the FSU threads library
 	rm stamp-gnatlib1
-	make CC="gcc" CFLAGS="-O2" GNATLIBCFLAGS="-O2 -fPIC" \
+	make CC="gcc" CFLAGS="-O0" GNATLIBCFLAGS="-O0 -fPIC" \
 		THREAD_KIND="fsu" gnatlib-shared
 	make prefix="${D}/usr" libdir="${D}/usr/lib/ada" install-gnatlib
 	cd "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
