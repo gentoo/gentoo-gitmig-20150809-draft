@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.6 2004/02/19 20:29:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.7 2004/02/26 06:08:52 kumba Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.w3.org/Library/Distribution/${MY_P}.tgz
 
 LICENSE="W3C"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ia64 ~mips"
 IUSE="ssl mysql"
 
 RDEPEND="dev-lang/perl
