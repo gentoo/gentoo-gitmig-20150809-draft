@@ -1,6 +1,8 @@
 # ChangeLog for x11-themes/wm-icons
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.6 2004/05/06 19:27:27 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.7 2004/05/12 08:11:46 aliz Exp $
+
+*wm-icons-0.4.0_pre1-r1 (06 May 2004)
 
   06 May 2004; Tavis Ormandy <taviso@gentoo.org> :
   fixing erroneous installation into $PORTAGE_TMPDIR. Thanks to Antonio in
