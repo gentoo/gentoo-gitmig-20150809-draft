@@ -44,20 +44,9 @@ sys-devel/spython
 # masking for testing
 >=x11-themes/gnome-themes-2.2.2-r1
 >=x11-themes/gtk-engines-2.2.0
->=x11-themes/gtk-engines-begtk-1.0.1-r1
->=x11-themes/gtk-engines-cleanice-1.2.5
->=x11-themes/gtk-engines-crux-1.9.5-r1
->=x11-themes/gtk-engines-eazel-0.3-r1
->=x11-themes/gtk-engines-flat-2.0-r1
->=x11-themes/gtk-engines-geramik-0.24-r3
->=x11-themes/gtk-engines-gtkstep-2.2-r1
->=x11-themes/gtk-engines-icegradient-0.0.5-r1
->=x11-themes/gtk-engines-lighthouseblue-0.7.0
->=x11-themes/gtk-engines-mac2-1.0.3-r1
 >=x11-themes/gtk-engines-mist-0.10
->=x11-themes/gtk-engines-thinice-2.0.2-r1
->=x11-themes/gtk-engines-xenophilia-0.8-r1
->=x11-themes/gtk-engines-xfce-2.1.1-r1
+>=x11-themes/gtk-engines-crux-1.9.5-r1
+>=x11-themes/gtk-engines-lighthouseblue-0.7.0
 
 # <liquidx@gentoo.org> (19 Jun 2003)
 # double protection for alpha quality gpdf
