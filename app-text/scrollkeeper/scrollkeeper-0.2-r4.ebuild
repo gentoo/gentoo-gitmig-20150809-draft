@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.2-r4.ebuild,v 1.5 2002/07/11 06:30:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.2-r4.ebuild,v 1.6 2002/07/16 04:03:02 owen Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A cataloging system for documentation on open systems"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
+KEYWORDS="x86 ppc"
 
 RDEPEND=">=dev-libs/libxml-1.8.11
 	>=sys-libs/zlib-1.1.3"
