@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1.ebuild,v 1.1 2004/09/15 01:46:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r1.ebuild,v 1.1 2004/09/15 19:09:27 ribosome Exp $
 
 inherit eutils
 
-DESCRIPTION="The Staden Package: biological sequence handling and analysis"
+DESCRIPTION="The Staden Package - Biological sequence handling and analysis"
 HOMEPAGE="http://${PN}.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-rel-${PV//./-}.tar.gz
 	mirror://gentoo/${P}-missing-doc.tar.bz2"
@@ -28,7 +28,6 @@ RDEPEND="app-shells/ksh
 	=dev-tcltk/itcl-3.2*
 	dev-tcltk/iwidgets
 	media-libs/libpng
-	virtual/textbrowser
 	virtual/x11"
 
 S=${WORKDIR}/${PN}-src-rel-${PV//./-}
@@ -194,8 +193,8 @@ src_compile() {
 	# Netscape is not a good default browser (security masked in Portage).
 	# Use documentation.html rather than staden_home.html as the top-level
 	# hypertext documentation file.
-	cd ${S}/linux-bin
-	sed -i -e 's%${BROWSER:-netscape} $STADENROOT/doc/staden_home.html%${BROWSER:-lynx} $STADENROOT/doc/documentation.html%' staden_help
+	cp ${FILESDIR}/${P}-staden_help.new ${S}/linux-bin/staden_help
+	chmod +x ${S}/linux-bin/staden_help
 
 	# Patch hypertext documentation.
 	cd ${S}/doc/manual
