@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/noteedit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.5 2004/04/17 18:19:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.6 2004/05/22 21:55:15 squinky86 Exp $
+
+*noteedit-2.5.3 (22 May 2004)
+
+  22 May 2004; Jon Hood <squinky86@gentoo.org> -noteedit-2.3.2.ebuild,
+  +noteedit-2.5.3.ebuild:
+  version bump, closes #50491, ebuild cleanups
 
   17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   noteedit-2.5.0.ebuild:
