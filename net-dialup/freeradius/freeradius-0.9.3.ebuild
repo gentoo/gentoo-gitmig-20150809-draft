@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3.ebuild,v 1.10 2004/07/14 22:53:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3.ebuild,v 1.11 2004/09/20 12:08:38 lanius Exp $
 
-IUSE="frascend frlargefiles frnothreds frxp kerberos ldap mysql pam postgres snmp ssl"
+IUSE="frascend frlargefiles frnothreads frxp kerberos ldap mysql pam postgres snmp ssl"
 
 MY_PN=${PN}-0.9.3
 S=${WORKDIR}/${MY_PN}
@@ -47,7 +47,7 @@ src_compile() {
 	if use frlargefiles; then
 		myconf="${myconf} --with-large-files"
 	fi
-	if use frnothreds; then
+	if use frnothreads; then
 		myconf="${myconf} --without-threads"
 	fi
 	if use frxp; then
