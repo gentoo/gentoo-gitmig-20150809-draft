@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.7.0.ebuild,v 1.2 2002/11/20 13:41:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.8.0.ebuild,v 1.1 2002/11/20 13:41:52 aliz Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="User-mode filesystem implementation"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/lufs/${P}.tar.gz"
 HOMEPAGE="http://lufs.sourceforge.net/lufs/"
 LICENSE="GPL-2"
 DEPEND="virtual/linux-sources"
-#RDEPEND=""
+#RDEPEND
 KEYWORDS="~x86"
 SLOT="0"
 IUSE=""
@@ -18,15 +18,15 @@ src_unpack() {
 
 	cd ${S}/lufsd
 	mv Makefile.in Makefile.in.orig
-	sed -e '416s/install-exec-hook//' Makefile.in.orig > Makefile.in
+	sed -e '497s/install-exec-hook//' Makefile.in.orig > Makefile.in || die
 
 	cd ${S}/util
 	mv Makefile.in Makefile.in.orig
-	sed -e '332s/install-exec-hook//' Makefile.in.orig > Makefile.in
+	sed -e '429s/install-exec-hook//' Makefile.in.orig > Makefile.in || die
 
 	cd ${S}/kernel2.4
 	mv Makefile.in Makefile.in.orig
-	sed -e '291s/install-data-hook//' Makefile.in.orig > Makefile.in
+	sed -e '366s/install-data-hook//' Makefile.in.orig > Makefile.in || die
 }
 
 src_install () {
