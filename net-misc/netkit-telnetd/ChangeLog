@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.17 2004/09/30 04:44:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.18 2004/10/01 21:50:12 solar Exp $
+
+  01 Oct 2004; <solar@gentoo.org>
+  files/netkit-telnetd-0.17-cflags-gnu_source.patch:
+  corrected netkit-telnetd-0.17-cflags-gnu_source.patch so that it behaves with
+  our initscripts etc.
 
 *netkit-telnetd-0.17-r4 (30 Sep 2004)
 

@@ -5,7 +5,7 @@
  CFLAGS += '-DISSUE_FILE="/etc/issue.net"' -DPARANOID_TTYS \
  	   -DNO_REVOKE -DKLUDGELINEMODE -DDIAGNOSTICS \
 -	   -DLOGIN_WRAPPER=\"/usr/lib/telnetlogin\"
-+	   -DLOGIN_WRAPPER=\"/usr/lib/telnetlogin\" -D_GNU_SOURCE
++	   -DLOGIN_WRAPPER=\"/usr/sbin/telnetlogin\" -D_GNU_SOURCE
  # LIBS += $(LIBTERMCAP)
  
  OBJS = telnetd.o state.o termstat.o slc.o sys_term.o utility.o \
