@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.18.ebuild,v 1.1 2002/08/16 12:14:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.18.ebuild,v 1.2 2002/08/17 04:30:44 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Logfile Analyzer"
@@ -57,13 +57,11 @@ src_install() {
 	cd ${S}/../gd-1.8.1
 	into /usr
 	dolib libgd.so.0.0.0
+
 	cd ${S}
-	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
+	einstall \
 		sysconfdir=${D}/etc/modlogan \
-		libdir=${D}/usr/lib/modlogan \
-		install || die
+		libdir=${D}/usr/lib/modlogan || die
 
 	insinto /etc/modlogan
 	newins ${FILESDIR}/sample.conf modlogan.conf.sample
