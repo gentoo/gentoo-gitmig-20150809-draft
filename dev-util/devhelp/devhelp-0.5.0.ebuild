@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.5.0.ebuild,v 1.2 2003/04/25 14:08:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.5.0.ebuild,v 1.3 2003/06/10 12:55:55 liquidx Exp $
 
 inherit gnome2
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2.2
 	>=gnome-base/libgnomeui-2.2
 	>=gnome-base/gnome-vfs-2.2
-	>=gnome-extra/libgtkhtml-2.1.2"
+	=gnome-extra/libgtkhtml-2*"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
