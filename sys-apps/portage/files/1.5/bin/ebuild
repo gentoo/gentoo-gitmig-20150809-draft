@@ -2,7 +2,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/files/1.5/bin/ebuild,v 1.4 2001/02/19 16:15:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/files/1.5/bin/ebuild,v 1.5 2001/02/20 02:14:55 drobbins Exp $
 
 if [ "`whoami`" != "root" ]
 then
@@ -544,6 +544,12 @@ dyn_install() {
     echo ">>> Install ${PF} into ${D} category ${CATEGORY}"
     src_install
     prepall
+	cd ${D}
+	echo ">>> Updating mtimes in ${D}..."
+	for x in `find`
+	do
+		touch $x
+	done
 	echo ">>> Completed installing into ${D}"
     echo
     cd ${BUILDDIR}
