@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.114 2004/06/08 11:23:47 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.115 2004/06/13 07:24:31 absinthe Exp $
+
+  13 Jun 2004; Dylan Carlson <absinthe@gentoo.org>
+  development-sources-2.6.5.ebuild, development-sources-2.6.6.ebuild,
+  development-sources-2.6.6_rc1.ebuild, development-sources-2.6.6_rc2.ebuild,
+  development-sources-2.6.6_rc3.ebuild, development-sources-2.6.7_rc1.ebuild,
+  development-sources-2.6.7_rc2.ebuild, development-sources-2.6.7_rc3.ebuild:
+  Keywords ~amd64.
 
   08 Jun 2004; Konstantin Arkhipov <voxus@gentoo.org>
   +development-sources-2.6.7_rc3.ebuild
