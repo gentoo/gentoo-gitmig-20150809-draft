@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r2.ebuild,v 1.8 2002/11/04 17:52:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r2.ebuild,v 1.9 2002/11/08 22:03:45 seemant Exp $
 
 IUSE="nls spell gnome"
 
@@ -13,7 +13,7 @@ DEPEND="sys-devel/perl
 	=x11-libs/gtk+-1.2*
 	>=net-im/licq-1.0.2 
 	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
-	spell? ( >=app-text/pspell-0.11.2 )"
+	spell? ( app-text/aspell )"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
@@ -27,7 +27,7 @@ src_compile() {
 	local myprefix
 
 	use gnome || myconf="--disable-gnome"
-	use spell || myconf="$myconf --disable-pspell"
+	use spell || myconf="${myconf} --disable-pspell"
 	use nls || myconf="${myconf} --disable-nls"
 
 	CXXFLAGS="${CXXFLAGS} `orbit-config --cflags client`"

@@ -92,6 +92,11 @@ src_compile() {
 	# this package FHS 2.2-compliant.  For more information, see
 	#   http://www.pathname.com/fhs/
 
+	# Also note that it is cleaner and easier to use econf, which is the
+	# portage shortcut to the above ./configure statement:
+	#
+	# econf
+
 	# emake (previously known as pmake) is a script that calls the
 	# standard GNU make with parallel building options for speedier
 	# builds (especially on SMP systems).  Try emake first.  It might
@@ -118,4 +123,8 @@ src_install() {
 	#	install || die
 	# Again, verify the Makefiles!  We don't want anything falling
 	# outside of ${D}.
+
+	# The portage shortcut to the above command is simply:
+	#
+	#einstall || die
 }

@@ -1,14 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.3.ebuild,v 1.10 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.3.ebuild,v 1.11 2002/11/08 22:03:45 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
 SRC_URI="http://www.busybox.net/downloads/${P}.tar.gz"
 HOMEPAGE="http://busybox.lineo.com/"
-KEYWORDS="x86 ppc sparc sparc64"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="virtual/glibc"
 
@@ -20,8 +21,9 @@ src_unpack() {
 }
 
 src_compile() {
-	use static && myconf="$myconf DOSTATIC=true"
-	emake $myconf || die
+	local myconf
+	use static && myconf="${myconf} DOSTATIC=true"
+	emake ${myconf} || die
 }
 
 src_install() {
@@ -34,12 +36,10 @@ src_install() {
 	doman *.1
 	docinto txt
 	dodoc *.txt
-	docinto sgml
-	dodoc *.sgml
 	docinto pod
 	dodoc *.pod
-	docinto html
-	dodoc *.html
+	dohtml *.html
+	dohtml *.sgml
 
 	cd ../scripts
 	docinto scripts

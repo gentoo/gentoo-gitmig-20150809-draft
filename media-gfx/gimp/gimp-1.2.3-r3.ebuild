@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.2 2002/11/06 09:29:38 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.3 2002/11/08 22:03:45 seemant Exp $
 
 IUSE="python nls gnome aalib perl"
 
@@ -101,15 +101,11 @@ src_compile() {
 		mymake="${mymake} HELPBROWSER="
 	fi
 
-	./configure --host=${CHOST} \
-			--prefix=/usr \
-			--mandir=/usr/share/man \
-			--infodir=/usr/share/info \
-			--sysconfdir=/etc \
-			--with-mp \
-			--with-threads \
-			--disable-debug \
-			${myconf} || die
+	econf \
+		--with-mp \
+		--with-threads \
+		--disable-debug \
+		${myconf} || die
 
 	if [ -z "`use aalib`" ] ; then 
 		# Horrible automake brokenness
@@ -136,19 +132,20 @@ src_install() {
   
 	dodir /usr/lib/gimp/1.2/plug-ins
 	
-	make prefix=${D}/usr \
-		 gimpsysconfdir=${D}/etc/gimp/1.2 \
-		 mandir=${D}/usr/share/man \
-		 infodir=${D}/usr/share/info \
-		 PREFIX=${D}/usr \
-		 INSTALLPRIVLIB=${D}/usr/lib/perl5 \
-		 INSTALLSCRIPT=${D}/usr/bin \
-		 INSTALLSITELIB=${D}/usr/lib/perl5/site_perl \
-		 INSTALLBIN=${D}/usr/bin \
-		 INSTALLMAN1DIR=${D}/usr/share/man/man1 \
-		 INSTALLMAN3DIR=${D}/usr/share/man/man3 \
-		 ${mymake} \
-		 install || die
+	make \
+		prefix=${D}/usr \
+		gimpsysconfdir=${D}/etc/gimp/1.2 \
+		mandir=${D}/usr/share/man \
+		infodir=${D}/usr/share/info \
+		PREFIX=${D}/usr \
+		INSTALLPRIVLIB=${D}/usr/lib/perl5 \
+		INSTALLSCRIPT=${D}/usr/bin \
+		INSTALLSITELIB=${D}/usr/lib/perl5/site_perl \
+		INSTALLBIN=${D}/usr/bin \
+		INSTALLMAN1DIR=${D}/usr/share/man/man1 \
+		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
+		${mymake} \
+		install || die
 
 	dosym gimp-1.2 /usr/bin/gimp
 	#this next line closes bug #810
@@ -168,4 +165,3 @@ src_install() {
 	docinto devel
 	dodoc devel-docs/*.txt
 }
-
