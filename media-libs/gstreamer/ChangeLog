@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.18 2003/01/31 20:32:48 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.19 2003/02/04 10:49:25 raker Exp $
+
+*gstreamer-0.6.0 (04 Feb 2003)
+
+  04 Feb 2003; Nick Hadaway <raker@gentoo.org> gstreamer-0.6.0.ebuild,
+  files/digest-gstreamer-0.6.0 :
+  Version bump.  Some problems with USE="doc" which should be worked out
+  soon.
 
 *gstreamer-0.5.2 (30 jan 2003)
 
