@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1-r1.ebuild,v 1.3 2004/10/03 07:10:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1-r1.ebuild,v 1.4 2004/10/04 12:02:05 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -34,10 +34,6 @@ src_unpack() {
 	# can search for it. Fixes #17580 and #16108
 	# Thanks to James Cloos <cloos@jhcloos.com>
 	epatch ${FILESDIR}/${PN}-man-UTF-8.diff
-
-	# Fix syntax error in pic2graph. Closes #32300.
-	sed -i -e "s:groffpic_opts=\"-U\":groffpic_opts=\"-U\";shift:" \
-		contrib/pic2graph/pic2graph.sh || die
 
 	# Fix stack limit (inifite loop) #64117
 	epatch ${FILESDIR}/${P}-stack.patch
