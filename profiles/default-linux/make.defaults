@@ -1,9 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# System-wide defaults for a basic linux system
-
-# Please avoid enabling things by default in here if possible. Understand any 
-# implications with core packages. For example, if "java" is in USE and db 
-# has a conditional dependency on java (which it does,) then a JDK will be 
-# pulled in during *emerge system*!
-
-USE="bitmap-fonts xprint"
