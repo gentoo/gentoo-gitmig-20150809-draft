@@ -2,14 +2,12 @@ MD5 23859f3d7606a8ef65b494c2e6839bc1 gnustep-base-1.6.0-r1.ebuild 1454
 MD5 006312207a15b6c758b9d4fd46e911d8 gnustep-base-1.10.0.ebuild 2182
 MD5 618fa6ee84194d52655fcb356f143a37 gnustep-base-1.7.1.ebuild 1454
 MD5 44d2d858d061c56b3e03979648cf00e8 gnustep-base-1.6.0.ebuild 1811
-MD5 9d4c070759e7d5943af17b228704a79b gnustep-base-1.10.1_pre20040928.ebuild 2419
+MD5 a183e7fc56fc3e250c4ff937b7a26b9e gnustep-base-1.10.1_pre20040928.ebuild 2431
 MD5 b49b166f4e94fe7eb3ac66a6bb072a3e gnustep-base-1.5.1.ebuild 912
-MD5 352cac2ddec2f033e7424077d7054069 ChangeLog 4539
-MD5 9d4c070759e7d5943af17b228704a79b gnustep-base-1.10.1_pre20040927.ebuild 2419
+MD5 7f28a5d61b83f800b16fc3805576a14d ChangeLog 4537
 MD5 6054f8e4a94313852ff8e1294c8abd88 metadata.xml 670
 MD5 bfeed6219e25f7a18273da8952e28d7a gnustep-base-1.7.2.ebuild 1460
 MD5 efda24cf74398ac3ddce6cba6071561a files/config-gnustep-base.sh 559
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-base-1.10.1_pre20040927 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-base-1.10.1_pre20040928 0
 MD5 da38d67a86d0553b73378aea856093f5 files/digest-gnustep-base-1.10.0 72
 MD5 dc4ae26d71ff0a479187c6a818eff837 files/gnustep 1043
