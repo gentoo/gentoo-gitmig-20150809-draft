@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.1-r2.ebuild,v 1.8 2003/02/13 14:23:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.1-r2.ebuild,v 1.9 2003/04/23 00:28:54 vladimir Exp $
 
 IUSE="gtkhtml ssl nls perl"
 
@@ -19,7 +19,7 @@ KEYWORDS="x86 sparc  ppc"
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=x11-libs/gtk+-2.0.5
 	>=net-libs/libesmtp-0.8.11
-	>=app-text/aspell-0.50
+	virtual/aspell-dict
 	app-text/scrollkeeper
 	>=gnome-base/libgnome-2.0.1
 	>=gnome-base/libgnomeui-2.0.1
