@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.18.ebuild,v 1.1 2003/08/28 06:59:38 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.18.ebuild,v 1.2 2003/10/18 22:54:00 brad_mssw Exp $
 
 # since its a development version
 inherit debug gnome.org
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.daa.com.au/~james/pygtk/"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64"
 IUSE="gnome opengl"
 
 RDEPEND=">=dev-lang/python-2.2

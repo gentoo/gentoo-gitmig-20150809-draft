@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.4.0.ebuild,v 1.5 2003/10/17 14:37:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.4.0.ebuild,v 1.6 2003/10/18 22:54:00 brad_mssw Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE="doc apm ipv6"
 SLOT="2"
 LICENSE="GPL-2 FDL-1.1"
-KEYWORDS="x86 ~ppc alpha ~sparc ~hppa ~amd64"
+KEYWORDS="x86 ~ppc alpha ~sparc ~hppa amd64"
 
 RDEPEND=">=x11-libs/gtk+-2.1
 	>=gnome-base/gail-1.3

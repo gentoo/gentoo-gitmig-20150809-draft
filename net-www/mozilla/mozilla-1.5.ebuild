@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5.ebuild,v 1.5 2003/10/18 16:55:26 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5.ebuild,v 1.6 2003/10/18 22:54:00 brad_mssw Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -76,7 +76,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV2}/
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 

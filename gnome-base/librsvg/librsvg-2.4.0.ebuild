@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.4.0.ebuild,v 1.5 2003/10/17 13:21:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.4.0.ebuild,v 1.6 2003/10/18 22:54:00 brad_mssw Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 IUSE="doc zlib"
 SLOT="2"
-KEYWORDS="ia64 x86 ~ppc alpha ~sparc ~hppa ~amd64"
+KEYWORDS="ia64 x86 ~ppc alpha ~sparc ~hppa amd64"
 LICENSE="GPL-2 LGPL-2"
 
 RDEPEND=">=dev-libs/glib-2

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/acme-2.4.0.ebuild,v 1.2 2003/10/05 13:15:23 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/acme-2.4.0.ebuild,v 1.3 2003/10/18 22:54:00 brad_mssw Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
+KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa amd64"
 
 RDEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2

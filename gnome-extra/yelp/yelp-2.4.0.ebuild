@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.4.0.ebuild,v 1.3 2003/10/17 13:33:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.4.0.ebuild,v 1.4 2003/10/18 22:54:00 brad_mssw Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ~amd64"
+KEYWORDS="x86 ~ppc ~sparc alpha ~hppa amd64"
 
 RDEPEND=">=dev-libs/glib-2.0.6
 	>=gnome-base/gconf-1.2
