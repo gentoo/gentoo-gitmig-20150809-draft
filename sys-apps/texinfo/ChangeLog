@@ -1,11 +1,14 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.27 2003/06/24 14:30:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.28 2003/07/06 15:05:11 gmsoft Exp $
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> texinfo-4.5.ebuild:
   Mark stable on alpha
 
 *texinfo-4.5 (19 Feb 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> texinfo-4.5.ebuild :
+  Marked stable on hppa.
 
   22 Jun 2003; Joshua Kinard <kumba@gentoo.org> texinfo-4.5.ebuild:
   Changed ~sparc to sparc in KEYWORDS
