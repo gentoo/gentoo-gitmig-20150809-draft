@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/gltt-2.5.2-r1.ebuild,v 1.6 2002/10/04 05:47:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/gltt-2.5.2-r1.ebuild,v 1.7 2002/10/15 23:57:22 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GL truetype library"
@@ -18,6 +18,11 @@ DEPEND="virtual/opengl
 RDEPEND="$DEPEND"
 
 src_compile() {
+
+	#small gcc3.x fix for #9173
+	cp FTGlyphVectorizer.h FTGlyphVectorizer.h.old
+	sed -e 's:friend FTGlyphVectorizer:friend struct FTGlyphVectorizer:' \
+		FTGlyphVectorizer.h.old > FTGlyphVectorizer.h
 
 	./configure \
 		--with-x \
