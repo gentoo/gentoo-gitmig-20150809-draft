@@ -1,0 +1,15 @@
+Index: utils/selinuxconfig.c
+===================================================================
+RCS file: /cvsroot/selinux/nsa/selinux-usr/libselinux/utils/selinuxconfig.c,v
+retrieving revision 1.2
+diff -u -r1.2 selinuxconfig.c
+--- utils/selinuxconfig.c	15 Jun 2004 13:16:30 -0000	1.2
++++ utils/selinuxconfig.c	10 Nov 2004 01:04:41 -0000
+@@ -28,6 +28,7 @@
+ 	printf("binary_policy_path=\"%s\"\n", selinux_binary_policy_path());
+ 	printf("user_contexts_path=\"%s\"\n", selinux_user_contexts_path());
+ 	printf("contexts_path=\"%s\"\n", selinux_contexts_path());
++	printf("file_contexts_path=\"%s\"\n", selinux_file_context_path());
+ 	exit(0);
+ 
+ }
