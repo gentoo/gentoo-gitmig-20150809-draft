@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.318 2005/02/05 00:34:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.319 2005/02/05 00:36:36 spyderous Exp $
+
+  04 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.904.ebuild:
+  Symlink '../share/man /usr/X11R6/man' doesn't really make sense anymore --
+  results in a /usr/man symlink, which is just weird.
 
   04 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.904.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.904.ebuild,v 1.6 2005/02/05 00:34:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.904.ebuild,v 1.7 2005/02/05 00:36:36 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -985,7 +985,7 @@ backward_compat_install() {
 	dosym ../../share/fonts /usr/$(get_libdir)/X11/fonts
 
 #	dodir /usr/X11R6
-	dosym ../share/man /usr/X11R6/man
+#	dosym ../share/man /usr/X11R6/man
 
 	# Have the top-level libdir symlink made first, so real dirs don't get created
 	local DIR DIRS
