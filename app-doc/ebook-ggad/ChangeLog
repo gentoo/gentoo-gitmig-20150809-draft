@@ -4,7 +4,8 @@
 
 *ebook-ggad-1.0 (09 May 2002)
 
+  06 May 2003; Martin Holzer <mholzer@gentoo.org> ebook-ggad-1.0.ebuild:
+  digest update
+
   09 May 2002; Francisco Gimeno <kikov@fco-gimeno.com> ebook-ggad-1.0.ebuild: 
-  
   Initial Release of the ebook to the devhelp tool.
-  
