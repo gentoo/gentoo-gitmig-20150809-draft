@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>net-im</herd>
+<maintainer>
+  <email>rizzo@gentoo.org</email>
+  <description>I am the author of gaim-snpp</description>
+</maintainer>
+<longdescription>gaim-snpp is a protocol plug-in for Gaim that allows sending messages to pager servers (like qpage) via the Simple Network Paging Protocol ("SNPP" - RFC 1861).</longdescription>
+</pkgmetadata>
