@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmemload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.10 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.11 2004/09/03 03:02:53 tgall Exp $
+
+  02 Sep 2004; Tom Gall <tgall@gentoo.org> wmmemload-0.1.6.ebuild:
+  stable on ppc64, bug #62257
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   wmmemload-0.1.5.ebuild, wmmemload-0.1.6.ebuild:
