@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.27 2003/07/17 05:54:42 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.28 2003/07/18 19:17:08 rac Exp $
+
+  18 Jul 2003; <rac@gentoo.org> perl-5.8.0-r12.ebuild, perl-5.8.1_rc1.ebuild:
+  Portage depends to >=2.0.48-r4.  This is important for blocking depends
 
   16 Jul 2003; <rac@gentoo.org> perl-5.8.0-r12.ebuild, perl-5.8.1_rc1.ebuild:
   Add portage depend on version that fixes bug 23546, so the blocking depends
