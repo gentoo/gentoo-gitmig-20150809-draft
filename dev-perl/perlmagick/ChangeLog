@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/perlmagick
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.1 2003/03/17 08:42:59 vladimir Exp $
+
+*perlmagick-5.5.5.3 (17 Mar 2003)
+
+  17 Mar 2003; Graham Forest <vladimir@gentoo.org> perlmagick-5.5.5.3.ebuild,
+  files/perlpatch.diff:
+  Initial import, this has been seperated from the imagemagick build so now it
+  actually works
+
