@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gst-player/gst-player-0.5.1.ebuild,v 1.5 2003/06/12 21:12:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gst-player/gst-player-0.5.1.ebuild,v 1.6 2003/07/09 16:47:00 liquidx Exp $
 
 # debug since its still in devel
 inherit gnome2 debug
@@ -24,7 +24,8 @@ RDEPEND=">=media-libs/gstreamer-0.6.1
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	>=dev-util/intltool-0.21"
+	>=dev-util/intltool-0.21
+	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README RELEASE TODO"
 
