@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r1.ebuild,v 1.2 2004/02/20 06:26:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r1.ebuild,v 1.3 2004/06/07 03:45:54 agriffis Exp $
 
 DESCRIPTION="A multi-system emulator"
 SRC_URI="http://www.dridus.com/~nyef/darcnes/download/dn9b${PV}.tgz"
@@ -23,9 +23,9 @@ src_compile() {
 	cat cd_unix.c.orig | sed "s:CDROM_DEVICE \"/dev/cdrom\"$:CDROM_DEVICE \"/dev/cdroms/cdrom0\":"\
 	> cd_unix.c
 	cp Makefile Makefile.orig
-	if [ "`use X`" ]
+	if use X
 	then
-		if [ "`use gtk`" ]
+		if use gtk
 		then
 			cat Makefile.orig | sed "s:^TARGET?=Linux_X$:TARGET?=Linux_GTK:" \
 			> Makefile
@@ -41,7 +41,7 @@ src_compile() {
 src_install() {
 	exeinto /usr/bin
 	doexe sdarcnes
-	if [ "`use X`" ]
+	if use X
 	then
 		exeinto /usr/bin
 		doexe darcnes

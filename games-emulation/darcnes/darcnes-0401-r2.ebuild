@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r2.ebuild,v 1.3 2004/05/11 00:57:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r2.ebuild,v 1.4 2004/06/07 03:45:54 agriffis Exp $
 
 inherit games
 
@@ -22,6 +22,13 @@ DEPEND="svga? ( >=media-libs/svgalib-1.4.2 )
 
 S="${WORKDIR}/${PN}"
 
+pkg_setup() {
+	export build_X=true
+	use svga && build_X=false
+	use gtk && build_X=false
+	use X && build_X=true
+}
+
 src_compile() {
 	if use svga ; then
 		emake TARGET=Linux_svgalib OPTFLAGS="${CFLAGS}" || \
@@ -31,7 +38,7 @@ src_compile() {
 		emake BINFILE=gdarcnes TARGET=Linux_GTK OPTFLAGS="${CFLAGS}" || \
 			die "compile target Linux_GTK failed"
 	fi
-	if use X || use !svga && use !gtk ; then
+	if $build_X ; then
 		emake TARGET=Linux_X OPTFLAGS="${CFLAGS}" || \
 			die "compile target Linux_X failed"
 	fi
@@ -44,7 +51,7 @@ src_install() {
 	if use gtk ; then
 		dogamesbin gdarcnes || die "dogamesbin failed (gtk)"
 	fi
-	if use X || use !svga && use !gtk ; then
+	if $build_X ; then
 		dogamesbin darcnes || die "dogamesbin failed"
 	fi
 	dodoc readme
