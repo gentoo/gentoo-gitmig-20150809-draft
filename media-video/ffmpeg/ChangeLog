@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.21 2003/09/07 22:40:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.22 2003/10/18 19:30:27 iggy Exp $
+
+*ffmpeg-0.4.8 (18 Oct 2003)
+
+  18 Oct 2003; <iggy@gentoo.org> ffmpeg-0.4.8.ebuild:
+  version bump, fix a bug where it was trying to include X11/Xlib.h for no
+  apparent reason
 
 *ffmpeg-0.4.7 (09 Sep 2003)
 
