@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.6 2003/11/22 21:49:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.7 2003/12/03 20:31:37 gmsoft Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc hppa"
 IUSE="ssl esd gnome xmms ncurses ipv6 gtk cjk"
 
 DEPEND=">=sys-libs/ncurses-5.1
