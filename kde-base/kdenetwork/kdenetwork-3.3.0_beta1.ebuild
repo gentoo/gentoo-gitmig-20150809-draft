@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.0_alpha1.ebuild,v 1.4 2004/06/24 22:13:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.0_beta1.ebuild,v 1.1 2004/07/08 22:29:01 caleb Exp $
 
 inherit kde-dist
 

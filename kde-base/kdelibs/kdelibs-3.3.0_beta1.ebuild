@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0_alpha1.ebuild,v 1.3 2004/06/25 03:05:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0_beta1.ebuild,v 1.1 2004/07/08 22:23:30 caleb Exp $
 
 inherit kde eutils
 set-kdedir 3.3
 
-MY_PV=3.2.90
+MY_PV=3.2.91
 S=${WORKDIR}/${PN}-${MY_PV}
 
 DESCRIPTION="KDE libraries needed by all kde programs"
@@ -34,7 +34,7 @@ DEPEND=">=sys-devel/autoconf-2.58
 	virtual/ghostscript
 	media-libs/libart_lgpl
 	sys-devel/gettext
-	~kde-base/arts-1.3.0_alpha1
+	~kde-base/arts-1.3.0_beta1
 	>=x11-libs/qt-3.3.2"
 RDEPEND="${DEPEND}
 	app-text/sgml-common

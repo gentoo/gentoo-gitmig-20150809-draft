@@ -1,0 +1,11 @@
+--- kwin/utils.h	2004/06/25 17:36:34	2.16
++++ kwin/utils.h	2004/06/26 10:55:04	2.17
+@@ -161,7 +161,7 @@ class KWinSelectionOwner
+     };
+ 
+ 
+-static QCString getStringProperty(WId w, Atom prop, char separator=0);
++QCString getStringProperty(WId w, Atom prop, char separator=0);
+ void updateXTime();
+ void grabXServer();
+ void ungrabXServer();

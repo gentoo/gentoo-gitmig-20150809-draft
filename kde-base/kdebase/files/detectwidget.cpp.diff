@@ -1,0 +1,11 @@
+--- kwin/kcmkwin/kwinrules/detectwidget.cpp	2004/06/25 17:36:35	1.3
++++ kwin/kcmkwin/kwinrules/detectwidget.cpp	2004/06/26 10:56:36	1.4
+@@ -55,7 +55,7 @@ void DetectDialog::detect( WId window )
+         readWindow( window );
+     }
+ 
+-static QCString getStringProperty(WId w, Atom prop, char separator)
++static QCString getStringProperty(WId w, Atom prop, char separator=0)
+     {
+     Atom type;
+     int format, status;

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0_alpha1.ebuild,v 1.3 2004/06/25 03:04:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0_beta1.ebuild,v 1.1 2004/07/08 22:25:12 caleb Exp $
 
 inherit kde-dist eutils
 
@@ -25,6 +25,8 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/utils.h.diff
+	epatch ${FILESDIR}/detectwidget.cpp.diff
 }
 
 src_compile() {
