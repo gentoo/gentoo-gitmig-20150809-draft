@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-3.29.ebuild,v 1.1 2001/03/02 02:13:14 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-3.29.ebuild,v 1.2 2001/03/02 03:32:14 pete Exp $
 
 #P=
 A=${P}.tar.gz
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.jwz.org/xscreensaver/"
 DEPEND=">=x11-base/xfree-4.0
 	>=media-libs/gle-3.0.1
 	>=x11-libs/gtk+-1.2.8
-	>=gnome-base/gnome-core-1.2.0"
+	gnome? ( >=gnome-base/gnome-core-1.2.0 )"
 
 src_compile() {
     if [ "$( use gnome )" ]
@@ -28,7 +28,7 @@ src_compile() {
 	try ./configure --prefix=/usr/X11R6 --host=${CHOST} \
 	    --enable-subdir=/usr/X11R6/lib/xscreensaver \
 	    --with-mit-ext --with-dpms-ext --with-xf86vmode-ext \
-	    --with-proc-interrupts --with-gtk --with-gl \
+	    --with-proc-interrupts --with-gtk --with-gl=/usr/lib \
 	    --with-gle --with-xpm --with-xshm-ext --with-xdbe-ext \
 	    --enable-locking
     fi
@@ -37,5 +37,7 @@ src_compile() {
 
 src_install () {
     try make install_prefix=${D} install
+    dodir /opt/gnome/bin
+    mv ${D}/usr/X11R6/bin/screensaver-properties-capplet ${D}/opt/gnome/bin
 }
 
