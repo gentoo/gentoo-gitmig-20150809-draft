@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.7 2004/03/31 00:19:30 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.8 2004/05/03 19:19:57 karltk Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -31,7 +31,7 @@ java-pkg_dojar()
 		jardest="${shareroot}/${JARDESTTREE}"
 		package_env="${D}${shareroot}/package.env"
 	else
-		shareroot="${sharepath}/${PN}-${PV}"
+		shareroot="${sharepath}/${PN}-${SLOT}"
 		jardest="${shareroot}/${JARDESTTREE}"
 		package_env="${D}${shareroot}/package.env"
 	fi
