@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.10.ebuild,v 1.8 2004/10/07 07:04:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.10.ebuild,v 1.9 2004/11/23 04:54:20 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://devel.demudi.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 ~sparc x86"
 
 DEPEND="media-sound/jack-audio-connection-kit
 	media-libs/libsamplerate"
@@ -33,6 +33,6 @@ src_install() {
 	dodir /usr/$(get_libdir)
 	dodir /usr/include
 
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" libdir="/usr/$(get_libdir)" install || die
 	dodoc AUTHORS CHANGELOG WORKING TODO
 }

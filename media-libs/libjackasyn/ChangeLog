@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libjackasyn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/ChangeLog,v 1.9 2004/10/07 07:04:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/ChangeLog,v 1.10 2004/11/23 04:54:20 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libjackasyn-0.10.ebuild:
+  Fix bug #71506 and added to ~sparc.
 
   07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/libjackasyn-0.10-destdir.patch:
