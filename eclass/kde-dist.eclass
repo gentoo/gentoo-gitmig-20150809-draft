@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.48 2004/01/19 05:31:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.49 2004/02/03 13:15:32 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -17,9 +17,7 @@ case "$PV" in
 	1*)			SRC_PATH="stable/3.0.2/src/${P}.tar.bz2";; # backward compatibility for unmerging ebuilds
 	2.2.2a)			SRC_PATH="2.2.2/src/${PN}-${PV/a/}.tar.bz2" ;;
 	2.2.2*)			SRC_PATH="2.2.2/src/${P}.tar.bz2" ;;
-	3.2.0_beta1)		SRC_PATH="unstable/3.1.93/src/${P//3.2.0_beta1/3.1.93}.tar.bz2" ;;
-	3.2.0_beta2)		SRC_PATH="unstable/3.1.94/src/${P//3.2.0_beta2/3.1.94}.tar.bz2" ;;
-	3.2.0_rc1)		SRC_PATH="unstable/3.1.95/src/${P//3.2.0_rc1/3.1.95}.tar.bz2" ;;
+	3.2.0)			SRC_PATH="stable/3.2/src/${P}.tar.bz2" ;;
 	3*)			SRC_PATH="stable/$PV/src/${P}.tar.bz2" ;;
 	5)			SRC_URI="" # cvs ebuilds, no SRC_URI needed
 				debug-print "$ECLASS: cvs detected" ;;
