@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.14 2004/12/07 10:33:36 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.15 2004/12/14 13:57:36 dragonheart Exp $
+
+  14 Dec 2004; Daniel Black <dragonheart@gentoo.org> rkhunter-1.1.8.ebuild:
+  ppc keyword
 
 *rkhunter-1.1.8-r1 (07 Dec 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.1.8.ebuild,v 1.7 2004/12/07 10:33:36 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.1.8.ebuild,v 1.8 2004/12/14 13:57:36 dragonheart Exp $
 
 inherit eutils bash-completion
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.rootkit.org/"
 SRC_URI="http://downloads.rootkit.nl/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha ~amd64 sparc"
+KEYWORDS="x86 ppc alpha ~amd64 sparc"
 IUSE=""
 S=${WORKDIR}/${PN}
 DEPEND="app-arch/tar
