@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.9.ebuild,v 1.1 2003/06/01 03:41:27 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.9.ebuild,v 1.2 2003/06/08 17:24:16 tberman Exp $
 
 IUSE="selinux"
 
@@ -9,6 +9,10 @@ DESCRIPTION="Standard informational utilities and process-handling tools -ps top
 SRC_URI="http://${PN}.sf.net/${P}.tar.gz
     selinux? mirror://gentoo/${PN}-3.1.8-selinux.patch.bz2"
 HOMEPAGE="http://procps.sourceforge.net/"
+
+inherit flag-o-matic
+
+replace-flags "-O3" "-O2"
 
 SLOT="0"
 LICENSE="GPL-2"
