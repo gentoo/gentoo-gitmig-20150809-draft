@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r2.ebuild,v 1.3 2004/06/16 06:50:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r2.ebuild,v 1.4 2004/06/20 13:33:01 dragonheart Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -38,7 +38,8 @@ src_unpack() {
 	# 39 is more current, but not fully backported
 	mv ${WORKDIR}/patch/39_* ${WORKDIR}/patch/skip/
 
-	use uclibc && mv ${WORKDIR}/patch/{38,63,64,92}* ${WORKDIR}/patch/skip/
+	use uclibc && mv ${WORKDIR}/patch/{38,63,64,92}_* ${WORKDIR}/patch/skip/ \
+		||  mv ${WORKDIR}/patch/90_* ${WORKDIR}/patch/skip/
 
 	epatch ${WORKDIR}/patch
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.91.0.1-r2.ebuild,v 1.1 2004/06/16 03:02:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.91.0.1-r2.ebuild,v 1.2 2004/06/20 13:33:01 dragonheart Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
 
 inherit eutils libtool flag-o-matic gnuconfig
 
-PATCHVER="1.2"
+PATCHVER="1.3"
 
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
@@ -36,7 +36,7 @@ src_unpack() {
 	# uclibc uses non-relro version
 	use uclibc \
 		&& mv ${WORKDIR}/patch/*relro* ${WORKDIR}/patch/skip/ \
-		|| mv ${WORKDIR}/patch/{20,53,90}_* ${WORKDIR}/patch/skip/
+		|| mv ${WORKDIR}/patch/{20,63,90}_* ${WORKDIR}/patch/skip/
 
 	epatch ${WORKDIR}/patch
 
@@ -48,7 +48,6 @@ src_unpack() {
 			{
 				if ($0 ~ /LIBADD/)
 					gsub("../bfd/libbfd.la", "-L../bfd/.libs ../bfd/libbfd.la")
-
 					print
 			}' ${x}.orig > ${x}
 		rm -rf ${x}.orig
@@ -101,11 +100,12 @@ src_compile() {
 	fi
 }
 
+src_test() {
+	emake check
+}
+
 src_install() {
-	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
+	make DESTDIR=${D} \
 		install || die
 
 	insinto /usr/include
@@ -155,10 +155,7 @@ src_install() {
 	cd ${S}
 	if ! use build
 	then
-		make prefix=${D}/usr \
-			mandir=${D}/usr/share/man \
-			infodir=${D}/usr/share/info \
-			install-info || die
+		make DESTDIR=${D} install-info || die
 
 		dodoc COPYING* README
 		docinto bfd
