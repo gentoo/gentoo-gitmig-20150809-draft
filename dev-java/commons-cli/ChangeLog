@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-cli
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.16 2005/01/01 18:14:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.17 2005/01/03 23:09:04 luckyduck Exp $
+
+  04 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> commons-cli-1.0-r4.ebuild:
+  junit dependency is now optional, controlled by the junit useflag. fixes
+  #75661.
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> commons-cli-1.0-r4.ebuild:
   added ~ppc64 to KEYWORDS
