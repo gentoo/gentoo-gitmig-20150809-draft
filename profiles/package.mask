@@ -315,11 +315,12 @@ sys-apps/utempter
 # <azarah@gentoo.org> (09 Nov 2002)
 # new evo and gtkhtml.  gtkhtml breaks compat a bit with
 # 1.0
->=net-mail/evolution-1.1.90
->=gnome-extra/gtkhtml-1.1.4
+# Mark stable/unmask
+#>=net-mail/evolution-1.1.90
+#>=gnome-extra/gtkhtml-1.1.4
 # <azarah@gentoo.org> (27 Sep 2002)
 # latest gnome-spell (needed by evo-1.2 for spellcheck).
-=app-text/gnome-spell-0.5
+#=app-text/gnome-spell-0.5
 # not compadible with 1.0, or at least not out of the box
 =gnome-extra/gtkhtml-1.1.2
 
