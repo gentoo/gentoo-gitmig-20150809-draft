@@ -1,11 +1,18 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.11 2003/02/09 01:40:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.12 2003/02/09 13:32:48 seemant Exp $
+
+*man-pages-1.55 (09 Feb 2003)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> man-pages-1.55.ebuild
+  files/digest-man-pages-1.55 :
+
+  Version bump.
+
+*man-pages-1.54 (30 Dec 2002)
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> man-pages-1.54.ebuild :
   Added hppa to keywords.
-
-*man-pages-1.54 (30 Dec 2002)
 
   19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
