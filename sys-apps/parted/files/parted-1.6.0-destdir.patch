@@ -1,0 +1,12 @@
+diff -ur parted-1.6.0.orig/doc/Makefile.in parted-1.6.0/doc/Makefile.in
+--- parted-1.6.0.orig/doc/Makefile.in	Tue Apr 30 07:29:36 2002
++++ parted-1.6.0/doc/Makefile.in	Sat May 11 12:16:44 2002
+@@ -414,7 +414,7 @@
+ 
+ 
+ install-data-local:
+-	$(INSTALL) -D $(srcdir)/pt_BR-parted.8 $(mandir)/pt_BR/man8/parted.8
++	$(INSTALL) -D $(srcdir)/pt_BR-parted.8 $(DESTDIR)$(mandir)/pt_BR/man8/parted.8
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
