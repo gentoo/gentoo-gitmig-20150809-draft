@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.8_rc4.ebuild,v 1.1 2004/08/10 08:38:41 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.8.ebuild,v 1.1 2004/08/14 13:53:49 spock Exp $
 
 K_NOUSENAME="yes"
 ETYPE="sources"
