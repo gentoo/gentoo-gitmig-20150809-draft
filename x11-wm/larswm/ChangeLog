@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/larswm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/ChangeLog,v 1.4 2004/03/07 09:27:30 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/ChangeLog,v 1.5 2004/06/19 16:30:18 usata Exp $
+
+*larswm-7.5.0 (20 Jun 2004)
+
+  20 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> larswm-7.5.0.ebuild,
+  files/larswm.desktop:
+  Version bumped. Ebuild contributed by Lars Bernhardsson <lab@fnurt.net>,
+  closing bug #54247
 
   07 Mar 2004; Markus Nigbur <pyrania@gentoo.org> larswm-7.2.10.ebuild:
   SRC_URI fixup.
