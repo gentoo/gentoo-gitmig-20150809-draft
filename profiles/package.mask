@@ -145,7 +145,7 @@ sys-apps/fakeroot
 
 # <mcummings@gentoo.org> (08 Aug 2002)
 # please test - simple address book (bug #6004)
-=net-mail/abook-0.4.17
+#=net-mail/abook-0.4.17
 
 # <danarmak@gentoo.org> (09 Aug 2002)
 # please test - should make kxine work (bug #5412)
