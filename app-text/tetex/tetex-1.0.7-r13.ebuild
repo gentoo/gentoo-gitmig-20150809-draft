@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.6 2003/10/24 18:34:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.7 2003/12/10 07:33:57 seemant Exp $
 
 inherit flag-o-matic eutils
 filter-flags "-fstack-protector"
@@ -63,6 +63,9 @@ src_unpack() {
 
 	# Fix picins.sty 
 	epatch ${FILESDIR}/${P}-picins.diff
+
+	# Prevent the silly readlink manpage from installing
+	epatch ${FILESDIR}/${PN}-no-readlink-manpage.diff
 
 	# Fix problem where the *.fmt files are not generated due to the LaTeX
 	# source being older than a year.

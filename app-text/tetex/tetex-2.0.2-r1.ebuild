@@ -1,9 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r1.ebuild,v 1.8 2003/11/12 21:49:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r1.ebuild,v 1.9 2003/12/10 07:33:57 seemant Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
+
+IUSE="X"
 
 S=${WORKDIR}/tetex-src-${PV}
 TETEXSRC="tetex-src-${PV}.tar.gz"
@@ -11,27 +13,28 @@ TEXMFSRC="tetex-texmfsrc-${PV}.tar.gz"
 TEXMF="tetex-texmf-${PV}.tar.gz"
 
 DESCRIPTION="a complete TeX distribution"
+HOMEPAGE="http://tug.org/teTeX/"
 SRC_URI="ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TETEXSRC}
 	ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TEXMFSRC}
 	ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TEXMF}"
-HOMEPAGE="http://tug.org/teTeX/"
 
-KEYWORDS="ia64 x86 ppc sparc alpha amd64"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="X"
+KEYWORDS="x86 ppc sparc alpha ~hppa ~mips ~arm amd64 ia64"
 
 DEPEND="!app-text/ptex
 	!app-text/cstetex
 	sys-apps/ed
 	sys-libs/zlib
-	X? ( virtual/x11 )
 	>=media-libs/libpng-1.2.1
 	sys-libs/ncurses
-	>=net-libs/libwww-5.3.2-r1"
+	>=net-libs/libwww-5.3.2-r1
+	X? ( virtual/x11 )"
+
 RDEPEND="${DEPEND}
 	>=dev-lang/perl-5.2
 	dev-util/dialog"
+
 PROVIDE="virtual/tetex"
 
 src_unpack() {
@@ -42,11 +45,13 @@ src_unpack() {
 	cd ${S}/texmf
 	umask 022
 	pwd
-	einfo "Unpacking ${TEXMFSRC}"
-	tar --no-same-owner -xzf ${DISTDIR}/${TEXMFSRC} || die
+	ebegin "Unpacking ${TEXMFSRC}"
+	tar --no-same-owner -xzf ${DISTDIR}/${TEXMFSRC}
+	eend $?
 
-	einfo "Unpacking ${TEXMF}"
-	tar --no-same-owner -xzf ${DISTDIR}/${TEXMF} || die
+	ebegin "Unpacking ${TEXMF}"
+	tar --no-same-owner -xzf ${DISTDIR}/${TEXMF}
+	eend $?
 
 	# Do not run config.  Also fix local texmf tree.
 	cd ${WORKDIR}
@@ -58,21 +63,12 @@ src_unpack() {
 	# this should be fixed in the next release <obz@gentoo.org>
 	mv texmf/source/latex/listings/listings.sty texmf/tex/latex/listings/
 
+	epatch ${FILESDIR}/${PN}-no-readlink-manpage.diff
 }
 
 src_compile() {
 
-	local myconf=""
-	use X \
-		&& myconf="--with-x" \
-		|| myconf="--without-x"
-
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--bindir=/usr/bin \
-		--datadir=/usr/share \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
+	econf \
 		--datadir=${S} \
 		--with-system-wwwlib \
 		--with-libwww-include=/usr/include/w3c-libwww \
@@ -90,6 +86,7 @@ src_compile() {
 		--with-ps=gs \
 		--enable-ipc \
 		--with-etex \
+		`use_with X x` \
 		${myconf} || die
 
 	make texmf=/usr/share/texmf || die
