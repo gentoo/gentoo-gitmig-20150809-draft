@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/cherokee-0.4.0.ebuild,v 1.3 2003/09/06 02:05:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/cherokee-0.4.0.ebuild,v 1.4 2004/04/17 22:22:39 weeve Exp $
 
 S="${WORKDIR}/cherokee-0.4.0"
 DESCRIPTION="An extremely fast and tiny web server."
