@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gtktalog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/ChangeLog,v 1.14 2005/01/01 15:06:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/ChangeLog,v 1.15 2005/03/25 17:18:08 blubb Exp $
+
+  25 Mar 2005; <blubb@gentoo.org> gtktalog-1.0.3.ebuild:
+  added ~amd64
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> gtktalog-1.0.1.ebuild,
   gtktalog-1.0.2.ebuild, gtktalog-1.0.3.ebuild:
