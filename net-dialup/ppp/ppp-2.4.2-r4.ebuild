@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r4.ebuild,v 1.1 2004/09/27 11:08:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r4.ebuild,v 1.2 2004/09/27 11:28:11 lanius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -41,9 +41,9 @@ src_unpack() {
 		sed -i -e "s/^LIBS =/LIBS = -latm/" pppd/Makefile.linux || die
 	fi
 
-	use activefilter && {
+	use activefilter || {
 		einfo "Enabling active-filter"
-		sed -i -e "s/^#FILTER=y/FILTER=y/" pppd/Makefile.linux || die
+		sed -i -e "s/^FILTER=y/#FILTER=y/" pppd/Makefile.linux || die
 	}
 
 	use pam && {
