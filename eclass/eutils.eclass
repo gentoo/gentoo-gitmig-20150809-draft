@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.99 2004/09/07 11:41:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.100 2004/09/12 07:16:45 mr_bones_ Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -405,9 +405,7 @@ epatch() {
 #
 # <azarah@gentoo.org> (06 March 2003)
 #
-
 have_NPTL() {
-
 	cat > ${T}/test-nptl.c <<-"END"
 		#define _XOPEN_SOURCE
 		#include <unistd.h>
@@ -535,7 +533,7 @@ get_number_of_jobs() {
 # Takes just 1 parameter (the directory to create tmpfile in)
 mymktemp() {
 	local topdir="$1"
-	
+
 	[ -z "${topdir}" ] && topdir=/tmp
 	if [ "`which mktemp 2>/dev/null`" ]
 	then
@@ -553,7 +551,7 @@ mymktemp() {
 #
 # egetent(database, key)
 egetent() {
-	if [ "${ARCH}" == "macos" ] ; then	
+	if [ "${ARCH}" == "macos" ] ; then
 		case "$2" in
 		  *[!0-9]*) # Non numeric
 			nidump $1 . | awk -F":" "{ if (\$1 ~ /^$2$/) {print \$0;exit;} }"
@@ -680,7 +678,7 @@ enewuser() {
 	local eextra="$@"
 	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	if [ "${ARCH}" == "macos" ];	
+	if [ "${ARCH}" == "macos" ];
 	then
 		### Make the user
 		if [ -z "${eextra}" ]
@@ -783,7 +781,7 @@ enewgroup() {
 	# add the group
 	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	if [ "${ARCH}" == "macos" ];	
+	if [ "${ARCH}" == "macos" ];
 	then
 		if [ ! -z "${eextra}" ];
 		then
@@ -792,7 +790,7 @@ enewgroup() {
 			einfo "eextra: ${eextra}"
 			die "Required function missing"
 		fi
-		
+
 		# If we need the next available
 		case ${egid} in
 		  *[!0-9]*) # Non numeric
@@ -801,7 +799,7 @@ enewgroup() {
 			done
 		esac
 		dscl . create /groups/${egroup} gid ${egid}
-		dscl . create /groups/${egroup} passwd '*'	
+		dscl . create /groups/${egroup} passwd '*'
 	else
 		groupadd ${opts} ${egroup} || die "enewgroup failed"
 	fi
@@ -845,7 +843,7 @@ make_desktop_entry() {
 	local icon="${3:-${PN}.png}"
 	local type="${4}"
 	local subdir="${6}"
-	local path="${5:-${GAMES_PREFIX}}"
+	local path="${5:-${GAMES_BINDIR}}"
 	if [ -z "${type}" ]
 	then
 		case ${CATEGORY} in
@@ -1320,7 +1318,7 @@ cdrom_locate_file_on_cd() {
 	done
 }
 
-# Make sure that LINGUAS only contains languages that 
+# Make sure that LINGUAS only contains languages that
 # a package can support
 #
 # usage: strip-linguas <allow LINGUAS>
@@ -1328,9 +1326,9 @@ cdrom_locate_file_on_cd() {
 #        strip-linguas -u <directories of .po files>
 #
 # The first form allows you to specify a list of LINGUAS.
-# The -i builds a list of po files found in all the 
+# The -i builds a list of po files found in all the
 #   directories and uses the intersection of the lists.
-# The -u builds a list of po files found in all the 
+# The -u builds a list of po files found in all the
 #   directories and uses the union of the lists.
 strip-linguas() {
 	local ls newls
