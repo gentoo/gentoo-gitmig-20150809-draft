@@ -30,6 +30,7 @@
 =kde-base/kdelibs-3.2.0_beta1
 =kde-base/kdebase-3.2.0_beta1
 =kde-base/arts-1.2.0_alpha1
+=app-doc/kdelibs-apidocs-3.1.4
 =kde-base/kdelibs-3.1.4
 =kde-base/kdebase-3.1.4
 =kde-base/arts-1.1.4
