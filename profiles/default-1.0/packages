@@ -35,7 +35,7 @@
 *>=sys-apps/portage-1.8.9_pre25
 *~sys-devel/binutils-2.11.92.0.12.3
 *=sys-devel/gcc-2.95.3-r7
-*=sys-libs/glibc-2.2.5-r6
+*=sys-libs/glibc-2.2.5-r7
 =sys-kernel/linux-headers-2.4.18
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python

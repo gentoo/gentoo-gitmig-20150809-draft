@@ -91,7 +91,7 @@
 *sys-apps/portage
 *=sys-devel/binutils-2.12.90.0.7
 *=sys-devel/gcc-2.95.3-r7
-*=sys-libs/glibc-2.2.5-r6
+*=sys-libs/glibc-2.2.5-r7
 *sys-apps/texinfo
 
 sys-kernel/ppc-sources
