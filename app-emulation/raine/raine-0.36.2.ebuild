@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/raine/raine-0.36.2.ebuild,v 1.1 2002/11/25 16:18:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/raine/raine-0.36.2.ebuild,v 1.2 2002/12/02 18:42:23 drobbins Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.rainemu.com/html/archive/raines-${PV}.tar.bz2
 	http://www.rainemu.com/html/archive/icons.zip"
 #	http://www.rainemu.com/html/archive/big-snapshot.zip"
 
-LICENSE=""
+LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="static nls"
