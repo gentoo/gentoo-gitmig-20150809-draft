@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmail/wmmail-0.64-r1.ebuild,v 1.1 2002/09/15 13:54:49 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmail/wmmail-0.64-r1.ebuild,v 1.2 2002/10/04 21:34:41 vapier Exp $
 
 MY_PN=WMMail.app
 MY_P=${MY_PN}-${PV}
