@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ncompress-4.2.4-r1.ebuild,v 1.9 2004/10/10 02:28:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ncompress-4.2.4-r1.ebuild,v 1.10 2004/10/26 13:13:11 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Another uncompressor for compatibility"
 HOMEPAGE="ftp://ftp.leo.org/pub/comp/os/unix/linux/sunsite/utils/compress/"
@@ -23,8 +23,10 @@ src_unpack() {
 }
 
 src_compile() {
-	sed -e "s:options= :options= ${CFLAGS} :" \
-		-e "s:CC=cc:CC=${CC:-gcc}:" Makefile.def > Makefile
+	sed \
+		-e "s:options= :options= ${CFLAGS} :" \
+		-e "s:CC=cc:CC=$(tc-getCC):" \
+		Makefile.def > Makefile
 	make || die
 }
 

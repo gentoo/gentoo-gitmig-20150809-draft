@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50-r2.ebuild,v 1.15 2004/06/26 09:17:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50-r2.ebuild,v 1.16 2004/10/26 13:14:43 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Unzipper for pkzip-compressed files"
 HOMEPAGE="ftp://ftp.info-zip.org/pub/infozip/UnZip.html"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.info-zip.org/pub/infozip/src/${PN}${PV/.}.tar.gz"
 
 LICENSE="Info-ZIP"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
@@ -24,11 +24,10 @@ src_unpack() {
 
 	sed -i \
 		-e "s:-O3:${CFLAGS}:" \
-		-e "s:CC=gcc LD=gcc:CC=${CC:-gcc} LD=${CC:-gcc}:" \
+		-e "s:CC=gcc LD=gcc:CC=$(tc-getCC) LD=$(tc-getLD):" \
 		-e "s:-O :${CFLAGS} :" \
 		unix/Makefile \
 		|| die "sed unix/Makefile failed"
-
 }
 
 src_compile() {
