@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-3000.ebuild,v 1.1 2003/07/29 06:49:33 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-3000.ebuild,v 1.2 2003/08/02 13:25:41 sergey Exp $
 
 DESCRIPTION="Winex - fake ebuild!"
 HOMEPAGE="http://www.transgaming.com/"
@@ -13,7 +13,7 @@ IUSE=""
 DEPEND=""
 
 pkg_postinst() {
-einfo This package was removed from portage tree due to the request from Transgaming. Here is an extract from there email:
+einfo This package was removed from portage tree due to the request from Transgaming. Here is an extract from their email:
 einfo The primary reason for the WineX CVS tree being publicly available
 einfo "under the Aladdin Free Public License (AFPL) is to give outside"
 einfo developers who have an interest in the project the ability to track
