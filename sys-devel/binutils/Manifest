@@ -1,5 +1,5 @@
 MD5 2ef7e3d390908e443bbdbfce0ad8c116 binutils-2.11.92.0.12.3-r2.ebuild 2989
-MD5 e8632aa36285420a6ccbc9d7c5a234e2 binutils-2.15.91.0.1-r1.ebuild 4811
+MD5 615f11a4d73641978c8f910f4eeb08c8 binutils-2.15.91.0.1-r1.ebuild 4798
 MD5 3627e0c354b06f1d2cebc9f7e9feb0a4 binutils-2.13.90.0.16-r1.ebuild 4568
 MD5 2c13fb05fd8da8612891e7d7251213af binutils-2.14.90.0.7.ebuild 5674
 MD5 92180e9b731428c02bee5aeeef8a6a68 binutils-2.14.90.0.2.ebuild 5585
@@ -19,7 +19,7 @@ MD5 9fc91cb0633215c05bdd3c94520e73c4 binutils-2.14.90.0.8.ebuild 4612
 MD5 9a1fea97cdadf64f4307b01d63946e6d binutils-2.12.90.0.15.ebuild 3410
 MD5 83133b0470fd695dfaf1455788a20bc5 binutils-2.14.90.0.6-r7.ebuild 6655
 MD5 8425977c4ce764e0beaaf891bad18d09 binutils-2.14.90.0.6-r2.ebuild 5518
-MD5 45254e65513823187bdaf06d824c2f27 ChangeLog 32670
+MD5 efccf366cc8fadc0517dbf812173c31e ChangeLog 32771
 MD5 e76c1afdc3ad143d07a31e6df37ddd73 binutils-2.15.90.0.1.1-r3.ebuild 4816
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 305e654b497aa477f07787db56d81e2c binutils-2.15.91.0.1.ebuild 4820
