@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.0.ebuild,v 1.5 2003/02/22 00:07:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.0.ebuild,v 1.6 2003/03/04 19:12:44 foser Exp $
 
 IUSE="doc"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="LGPL-2"
 
 SLOT="2"
-KEYWORDS="~x86 ~ppc alpha"
+KEYWORDS="x86 ~ppc alpha"
 
 RDEPEND=">=dev-libs/glib-2.0.1
 	>=gnome-base/ORBit2-2.4
@@ -28,8 +28,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( dev-util/gtk-doc )"
 
-# alpha compile fix
-use alpha && MAKEOPTS="-j1"
+MAKEOPTS="-j1"
 
 kill_gconf () {
 	# this function will kill all running gconfd that could be causing troubles
