@@ -1,0 +1,21 @@
+diff -uNr tora-1.3.14.1-vanilla/toresultcontent.cpp tora-1.3.14.1-neu/toresultcontent.cpp
+--- tora-1.3.14.1-vanilla/toresultcontent.cpp	2004-07-02 07:27:57.000000000 +0200
++++ tora-1.3.14.1-neu/toresultcontent.cpp	2004-11-11 14:01:19.572515375 +0100
+@@ -338,7 +338,7 @@
+ {
+   saveUnsaved();
+   delete Query;
+-  delete BinaryColumns;
++  delete [] BinaryColumns;
+ }
+ 
+ void toResultContentEditor::wrongUsage(void)
+@@ -441,7 +441,7 @@
+       if (numRows()==0) {
+ 	Description=Query->describe();
+ 
+-	delete BinaryColumns;
++	delete [] BinaryColumns;
+ 	BinaryColumns=new bool[Description.size()];
+ 	for(unsigned int j=0;j<Description.size();j++)
+ 	  BinaryColumns[j]=false;

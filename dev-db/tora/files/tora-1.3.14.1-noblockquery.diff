@@ -1,0 +1,11 @@
+--- tora-1.3.14.1/tonoblockquery.cpp	2004-07-02 07:27:57.000000000 +0200
++++ tora-1.3.14.1-r2/tonoblockquery.cpp	2004-11-11 13:25:27.919801410 +0100
+@@ -141,7 +141,7 @@
+   TO_DEBUGOUT("Locking EOQ\n");
+   toLocker lock(Parent.Lock);
+   TO_DEBUGOUT("Deleting query\n");
+-  if (!Parent.Query->eof())
++  if (!Parent.Error&&!Parent.Query->eof())
+     try {
+       Parent.Query->cancel();
+     } catch(...) {

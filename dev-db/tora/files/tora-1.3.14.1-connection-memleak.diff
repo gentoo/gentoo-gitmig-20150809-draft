@@ -1,0 +1,19 @@
+--- tora-1.3.14.1-vanilla/toconnection.cpp	2004-07-02 07:27:57.000000000 +0200
++++ tora-1.3.14.1/toconnection.cpp	2004-11-11 13:48:44.030865878 +0100
+@@ -1588,7 +1588,7 @@
+    if (toTool::globalConfig(CONF_CACHE_DISK,DEFAULT_CACHE_DISK).isEmpty())
+    	return false;
+ 
+-   toConnection::objectName *cur;
++   toConnection::objectName *cur = 0;
+    int objCounter = 0;
+    int synCounter = 0;
+ 
+@@ -1636,6 +1636,7 @@
+        synCounter++;
+      }
+      ObjectNames.insert(ObjectNames.end(),(*cur));
++     delete cur; cur = 0;
+    }
+    return true;
+ }
