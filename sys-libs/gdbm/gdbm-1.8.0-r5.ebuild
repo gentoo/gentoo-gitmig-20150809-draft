@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.29 2004/02/19 23:11:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.30 2004/03/01 01:32:18 tgall Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -28,6 +28,7 @@ src_unpack() {
 	use hppa && gnuconfig_update
 	use amd64 && gnuconfig_update
 	use ia64 && gnuconfig_update
+	use ppc64 && gnuconfig_update
 }
 
 src_compile() {
