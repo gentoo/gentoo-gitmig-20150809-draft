@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fonttools
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.1 2004/07/10 08:55:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.2 2004/07/16 09:41:22 dholm Exp $
+
+  16 Jul 2004; David Holm <dholm@gentoo.org> fonttools-2.0_beta1.ebuild:
+  Added to ~ppc.
 
 *fonttools-2.0_beta1 (10 Jul 2004)
 
