@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/acid
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.1 2004/07/24 13:20:24 eldad Exp $
+
+*acid-0.9.6_beta23 (24 Jul 2004)
+
+  24 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  +acid-0.9.6_beta23.ebuild:
+  Initial ebuild. Adapted from an ebuild submitted by Ryu
+  <jasmine.chua@internationalsos.com>. Closes #46575.
+
