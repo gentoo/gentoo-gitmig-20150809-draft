@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.2 2002/08/14 12:05:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.3 2002/08/23 00:26:51 raker Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -48,7 +48,7 @@ src_unpack() {
 
 	if [ "`use sasl`" ]
 	then
-		if [ ! -e /usr/include/sasl.h ]
+		if [ ! -e /usr/include/sasl/sasl.h ]
 		then
 			# saslv2
 			cd ${S}
@@ -73,7 +73,7 @@ src_unpack() {
 
 	use ssl \
 		&& CCARGS="${CCARGS} -DHAS_SSL" \
-		&& AUXLIBS="${AUXLIBS} -lssl"
+		&& AUXLIBS="${AUXLIBS} -lssl -lcrypto"
 
 	# note: if sasl is built w/ pam, then postfix _MUST_ be built w/ pam
 	use pam && AUXLIBS="${AUXLIBS} -lpam"
@@ -160,13 +160,13 @@ src_install () {
 		if [ -e /usr/include/sasl/sasl.h ]
 		then
 			# saslv2 seems to be installed.
-			insinto /usr/lib/sasl2 ; newins ${FILESDIR}/smtpd2.conf smtpd.conf
+			insinto /etc/sasl2 ; doins ${FILESDIR}/smtpd.conf
 		fi
 	fi		
 }
 
 pkg_postinst() {
-	install -d 0755 ${ROOT}/var/spool/postfix
+	install -d -m 0755 ${ROOT}/var/spool/postfix
 
 	if [ "${postfix_installed}" = "yes" ] ; then
 		ewarn "If you've upgraded from <postfix-1.1.8, you must update"
