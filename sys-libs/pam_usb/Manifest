@@ -1,4 +1,6 @@
+MD5 0a8e6408b2fee15c119c9a6b02abbc2c pam_usb-0.3.1.ebuild 906
 MD5 0a1a78da2111e230de36be02a3ced7ec pam_usb-0.3.0.ebuild 905
-MD5 78740bdefb54ff24bf7e7f8af7f41029 ChangeLog 1229
+MD5 6fad0a71e7b0a31b82af482ae4bf1262 ChangeLog 1349
 MD5 a40465c4eaab0ab75d9bea883b413c2f metadata.xml 414
 MD5 beb923bd5fd1b6c1b18cb2eed91d0015 files/digest-pam_usb-0.3.0 64
+MD5 ffdbf6f86aace60aeab938e75bd10c0a files/digest-pam_usb-0.3.1 64
