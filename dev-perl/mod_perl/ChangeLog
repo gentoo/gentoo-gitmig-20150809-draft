@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.21 2003/06/22 17:44:00 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.22 2003/06/25 00:54:25 rac Exp $
+
+*mod_perl-1.27-r3 (24 Jun 2003)
+
+  24 Jun 2003; <rac@gentoo.org> mod_perl-1.27-r3.ebuild:
+  Move to vendor directory, change how prefixes are defined in an attempt to
+  avoid problems mholzer and others were reporting with inability to find
+  Apache.pm
 
   22 Jun 2003; <rac@gentoo.org> mod_perl-1.99.08.ebuild,
   mod_perl-1.99.09.ebuild:
