@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyrex
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.23 2004/12/30 23:57:10 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.24 2005/01/07 20:53:12 pythonhead Exp $
+
+*pyrex-0.9.3-r1 (07 Jan 2005)
+
+  07 Jan 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +files/pyrex-0.9.3-python24_distutils.patch, +pyrex-0.9.3-r1.ebuild:
+  Added distutils patch for Python2.4. Thanks Jacob Smullyan
+  <smulloni@smullyan.org> bug# 77042
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
