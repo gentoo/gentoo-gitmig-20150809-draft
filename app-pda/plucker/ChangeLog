@@ -1,0 +1,9 @@
+# ChangeLog for app-pda/plucker
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/ChangeLog,v 1.1 2004/06/21 01:14:21 agriffis Exp $
+
+*plucker-1.8 (20 Jun 2004)
+
+  20 Jun 2004; Aron Griffis <agriffis@gentoo.org> +plucker-1.8.ebuild:
+  Fix bug 36822: Add plucker to portage.  Thanks to Till Maas for the ebuild
+
