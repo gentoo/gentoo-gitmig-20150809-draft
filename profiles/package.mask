@@ -217,10 +217,6 @@ sys-devel/spython
 # It is a beta version
 >=app-office/openoffice-bin-1.1_beta2
 
-# <games@gentoo.org> (19 Jun 2003)
-# 4.1.x is incompat with 4.0.x
-=media-libs/allegro-4.1*
-
 # <robh@gentoo.org> (18 Jun 2003)
 # due to ardour approaching a release and sourceforge breaking
 # this ebuild is not going to work for quite a while
