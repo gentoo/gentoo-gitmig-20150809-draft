@@ -1,18 +1,17 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.43-r1.ebuild,v 1.4 2000/09/15 20:08:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.44.ebuild,v 1.1 2000/09/20 17:15:17 achim Exp $
 
-P=sablotron-0.43
-A="Sablot-0.43.tar.gz Sablot-Expat-1.1.2.tar.gz"
-S=${WORKDIR}/Sablot-0.43
+A="Sablot-${PV}.tar.gz Sablot-Expat-1.1.2.tar.gz"
+S=${WORKDIR}/Sablot-${PV}
 DESCRIPTION="An XSLT Parser in C++"
-SRC_URI="http://www.gingerall.com/download/Sablot-0.43.tar.gz
-	http://www.gingerall.com/download/Sablot-Expat-1.1.2.tar.gz"
+SRC_URI="http://www.gingerall.com/perl/rd?url=sablot/Sablot-${PV}.tar.gz
+	http://www.gingerall.com/perl/rd?url=sablot/Sablot-Expat-1.1.2.tar.gz"
 HOMEPAGE="http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act"
 
 src_unpack() {
-  unpack Sablot-0.43.tar.gz
+  unpack Sablot-${PV}.tar.gz
   cd ${S}
   unpack Sablot-Expat-1.1.2.tar.gz
 }
