@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.36 2003/04/19 11:52:50 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.37 2003/04/22 09:17:17 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -81,8 +81,8 @@ cvs_fetch() {
 
 	debug-print-function $FUNCNAME $*
 
-	# parameters modifying other parameters that should be effective every time cvs_prep is called, and not
-	# just every time cvs.eclas is inherited
+	# parameters modifying other parameters that should be effective every time cvs_fetch is called,
+	# and not just every time cvs.eclas is inherited
 	# 1. parameter for local (non-recursive) fetching
 	if [ -n "$ECVS_LOCAL" ]; then
 		ECVS_UP_OPTS="$ECVS_UP_OPTS -l"
@@ -137,7 +137,7 @@ cvs_fetch() {
 		$run chown -R "$ECVS_RUNAS" "/$ECVS_TOP_DIR"
 	fi
 
-	# our server string (aka CVSHOST), without the password so it can be put in Root
+	# our server string (aka CVSROOT), without the password so it can be put in Root
 	server=":${ECVS_AUTH}:${ECVS_USER}@${ECVS_SERVER}"
 
 	# switch servers automagically if needed
