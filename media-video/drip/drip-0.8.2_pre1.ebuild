@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.2_pre1.ebuild,v 1.3 2003/02/13 13:24:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.2_pre1.ebuild,v 1.4 2003/02/25 22:17:48 mholzer Exp $
 
 inherit libtool
 
@@ -11,13 +11,14 @@ SRC_URI="http://drip.sourceforge.net/files/${MY_P}.tar.gz"
 HOMEPAGE="http://drip.sourceforge.net/"
 
 RDEPEND="gnome-base/gnome-libs
+	<media-video/avifile-0.7.22
 	>=media-video/avifile-0.7.4.20020426-r2
 	>=media-libs/a52dec-0.7.3
 	>=media-libs/divx4linux-20020418
 	>=media-libs/libdvdcss-1.1.1
 	>=media-libs/libdvdread-0.9.2
 	>=media-libs/libao-0.8.3
-	media-libs/libmpeg2
+	=media-libs/libmpeg2-0.2.1*
 	media-libs/gdk-pixbuf"
 	
 DEPEND="${RDEPEND}
