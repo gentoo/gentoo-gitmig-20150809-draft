@@ -3,15 +3,15 @@ Hash: SHA1
 
 MD5 a408b91274c255e8d9b7fdf9afe6cf84 ChangeLog 2143
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 66a9034c8da7295d505dad8315a77a4f evolution-data-server-1.0.1.ebuild 875
-MD5 8954834b53a8ba66a833496e0d968d44 evolution-data-server-1.0.2.ebuild 1055
+MD5 16ccbfc96b4b9e8597235c7e52af931e evolution-data-server-1.0.1.ebuild 882
+MD5 30d93cb84b85bad9233f130c3721fcee evolution-data-server-1.0.2.ebuild 1062
 MD5 9d35355b61cdb08f0f918e3f106ce953 files/digest-evolution-data-server-1.0.1 81
 MD5 e72d151eb141e23240770c222c39e317 files/digest-evolution-data-server-1.0.2 81
 MD5 c93bb2769f43f6e88e5fcb385a0ab498 files/evolution-data-server-1.0.2-amd64_mutex.patch 1114
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBdV//HTu7gpaalycRAoxBAKDfpVBfNPtjhJQEDFI0Q2kZtq/paQCeP2O2
-BnzO4+O74l1kldJQC31onSQ=
-=e342
+iD8DBQFBdq+ZHTu7gpaalycRAmWFAKC1Lq5k4Y1tNOPQATo6kp0UlimIvgCfcQrl
+1py89svAcFJ/fgMceV1oqNc=
+=N1CC
 -----END PGP SIGNATURE-----
