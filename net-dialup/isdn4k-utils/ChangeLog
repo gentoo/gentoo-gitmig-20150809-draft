@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.37 2005/02/14 19:19:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.38 2005/02/17 22:27:58 kloeri Exp $
+
+  17 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
+  isdn4k-utils-3.6_pre20041219.ebuild:
+  Stable on alpha, bug 80962.
 
   14 Feb 2005; Simon Stelling <blubb@gentoo.org>
   isdn4k-utils-3.6_pre20041219.ebuild:
