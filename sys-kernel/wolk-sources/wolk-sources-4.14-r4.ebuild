@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r3.ebuild,v 1.1 2004/06/25 21:58:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r4.ebuild,v 1.1 2004/07/09 18:05:47 plasmaroo Exp $
 
 OKV="2.4.20"
 OKB="2.4"
@@ -29,6 +29,7 @@ UNIPATCH_LIST="${FILESDIR}/${PN}.CAN-2004-0133.patch
 	${FILESDIR}/${PN}.CAN-2004-0181.patch
 	${FILESDIR}/${PN}.CAN-2004-0394.patch
 	${FILESDIR}/${PN}.CAN-2004-0495.patch
+	${FILESDIR}/${PN}.CAN-2004-0497.patch
 	${FILESDIR}/${PN}.CAN-2004-0535.patch
 	${FILESDIR}/${PN}.FPULockup-53804.patch"
 
