@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r1.ebuild,v 1.7 2004/05/10 17:01:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r1.ebuild,v 1.8 2004/05/15 18:14:02 gustavoz Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
 IUSE="sse xmms X"
 
 RDEPEND=">=media-libs/libogg-1.0_rc2
