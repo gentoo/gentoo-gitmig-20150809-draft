@@ -1,8 +1,12 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.24 2003/03/20 14:12:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.25 2003/03/27 11:58:07 seemant Exp $
 
 *aspell-0.50.3 (03 Dec 2002)
+
+  27 Mar 2003; Seemant Kulleen <seemant@gentoo.org> aspell-0.50.3.ebuild:
+  postinst message typo fix, thanks to: Jeremy Collins <jeremy@happycorp.net> in
+  bug #18278
 
   20 Mar 2003; Guy Martin <gmsoft@gentoo.org> aspell-0.50.3.ebuild :
   Changed ~hppa to hppa in KEYWORDS.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.6 2003/03/20 14:12:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.7 2003/03/27 11:58:07 seemant Exp $
 
 inherit libtool
 
@@ -69,7 +69,7 @@ src_install () {
 pkg_postinst() {
 
 	einfo "You will need to install a dictionary now.  Please choose an"
-	einfo "aspell-<LANG> dictionary from the app-i18n category"
+	einfo "aspell-<LANG> dictionary from the app-dicts category"
 	einfo "After installing an aspell dictionary for your language(s),"
 	einfo "You may use the aspell-import utility to import your personal"
 	einfo "dictionaries from ispell, pspell and the older aspell"
