@@ -1,0 +1,109 @@
+diff -Naurp xmms-wma-1.0.4.orig/Makefile xmms-wma-1.0.4/Makefile
+--- xmms-wma-1.0.4.orig/Makefile	2004-03-03 06:47:58.000000000 -0800
++++ xmms-wma-1.0.4/Makefile	2005-03-20 18:46:48.000000000 -0800
+@@ -11,7 +11,7 @@ export OBJECTS := $(SOURCES:%.c=$(OBJDIR
+ export DEPS := $(SOURCES:%.c=$(DEPDIR)/%.d)
+ 
+ all:
+-	@cd ffmpeg-strip-wma; make; cd ..
++#	@cd ffmpeg-strip-wma; make; cd ..
+ 	@$(MAKE) --no-print-directory -f Makefile.inc
+ 	@strip $(PLUGIN_FILE)
+ 	@echo "The plug-in has been compiled. Run one of the following:"
+@@ -40,5 +40,5 @@ uninstall-home:
+ 	@echo "The plug-in has been uninstalled."
+ 
+ clean:
+-	cd ffmpeg-strip-wma; make clean; cd ..
++#	cd ffmpeg-strip-wma; make clean; cd ..
+ 	rm -f $(OBJECTS) $(DEPS)
+diff -Naurp xmms-wma-1.0.4.orig/Makefile.inc xmms-wma-1.0.4/Makefile.inc
+--- xmms-wma-1.0.4.orig/Makefile.inc	2004-03-03 12:02:39.000000000 -0800
++++ xmms-wma-1.0.4/Makefile.inc	2005-03-20 18:46:30.000000000 -0800
+@@ -1,18 +1,20 @@
+ CC := gcc
+-CFLAGS := -O2 -ffast-math -fomit-frame-pointer
+-#CFLAGS := -Wall -g -O3
+-CFLAGS += -DHAVE_AV_CONFIG_H -I.. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DX86
+-CFLAGS += -I ffmpeg-strip-wma
+-CFLAGS += `xmms-config --cflags`
+-LIBS := `xmms-config --libs` -L ffmpeg-strip-wma -lffwma
++MYCFLAGS := $(CFLAGS) -fPIC
++#MYCFLAGS := -Wall -g -O3
++MYCFLAGS += -DHAVE_AV_CONFIG_H -I.. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -fPIC
++#MYCFLAGS += -I ffmpeg-strip-wma
++MYCFLAGS += `xmms-config --cflags`
++MYCFLAGS += -I/usr/include/ffmpeg
++#LIBS := `xmms-config --libs` -L ffmpeg-strip-wma -lffwma
++LIBS := `xmms-config --libs` -lavcodec -lavformat
+ 
+ $(PLUGIN_FILE): $(OBJECTS)
+ 	$(CC) -o $@ $^ $(LIBS) -shared
+ 
+ $(OBJDIR)/%.o: %.c
+-	$(CC) -c -o $@ $(CFLAGS) $<
++	$(CC) -c -o $@ $(MYCFLAGS) $<
+ 
+ $(DEPDIR)/%.d: %.c
+-	$(CC) -MM $(CFLAGS) $< | sed "s/^$*\.o:/$(OBJDIR)\/$*\.o $(DEPDIR)\/$*\.d:/" > $@
++	$(CC) -MM $(MYCFLAGS) $< | sed "s/^$*\.o:/$(OBJDIR)\/$*\.o $(DEPDIR)\/$*\.d:/" > $@
+ 
+ -include $(DEPS)
+diff -Naurp xmms-wma-1.0.4.orig/wma123_examples/Makefile xmms-wma-1.0.4/wma123_examples/Makefile
+--- xmms-wma-1.0.4.orig/wma123_examples/Makefile	2004-03-26 09:01:39.000000000 -0800
++++ xmms-wma-1.0.4/wma123_examples/Makefile	2005-03-20 18:42:00.000000000 -0800
+@@ -1,7 +1,7 @@
+-include ../ffmpeg-strip-wma/config.mak
++#include ../ffmpeg-strip-wma/config.mak
+ 
+-INC=-I../ffmpeg-strip-wma
+-LIB=-L../ffmpeg-strip-wma
++#INC=-I../ffmpeg-strip-wma
++#LIB=-L../ffmpeg-strip-wma
+ CFLAGS=$(OPTFLAGS) -DHAVE_AV_CONFIG_H -I.. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE
+ 
+ all: artswma alsawma osswma
+diff -Naurp xmms-wma-1.0.4.orig/xmms-wma.c xmms-wma-1.0.4/xmms-wma.c
+--- xmms-wma-1.0.4.orig/xmms-wma.c	2004-11-23 15:12:22.000000000 -0800
++++ xmms-wma-1.0.4/xmms-wma.c	2005-03-20 18:45:58.000000000 -0800
+@@ -35,8 +35,9 @@
+ #undef HAVE_AV_CONFIG_H
+ #endif
+ 
+-#include "avcodec.h"
+-#include "avformat.h"
++#include <ffmpeg/avcodec.h>
++#include <ffmpeg/avformat.h>
++
+ #include "iir.h"
+ 
+ #define ABOUT_TXT "Copyright (C) 2004, Mokrushin I.V. aka McMCC (mcmcc@mail.ru).\n \
+@@ -331,7 +333,7 @@ static void *wma_play_loop(void *arg)
+ 
+ 	if(wma_seekpos != -1)
+ 	{
+-	    av_seek_frame(ic, wma_idx, wma_seekpos * 1000000LL);
++	    av_seek_frame(ic, wma_idx, wma_seekpos * 1000000LL, 0);
+ 	    wma_ip.output->flush(wma_seekpos * 1000);
+ 	    wma_seekpos = -1;
+ 	}
+@@ -379,6 +381,9 @@ static void wma_play_file(char *filename
+         if(c->codec_type == CODEC_TYPE_AUDIO) break;
+     }
+ 
++    if(!c || c->codec_type != CODEC_TYPE_AUDIO)
++        return;
++
+     av_find_stream_info(ic);
+ 
+     codec = avcodec_find_decoder(c->codec_id);
+@@ -407,7 +412,8 @@ static void wma_stop(void) 
+ {
+     wma_decode = 0;
+     if(wma_pause) wma_do_pause(0);
+-    pthread_join(wma_decode_thread, NULL);
++    if(wma_decode_thread)
++      pthread_join(wma_decode_thread, NULL);
+     wma_ip.output->close_audio();
+ }	
+ 

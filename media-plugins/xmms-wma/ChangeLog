@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/xmms-wma
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wma/ChangeLog,v 1.4 2005/03/15 22:50:33 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wma/ChangeLog,v 1.5 2005/03/21 02:57:38 eradicator Exp $
+
+*xmms-wma-1.0.4 (21 Mar 2005)
+
+  21 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/xmms-wma-1.0.3-ffmpeg.patch, +files/xmms-wma-1.0.4-ffmpeg.patch,
+  -xmms-wma-1.0.3.ebuild, +xmms-wma-1.0.4.ebuild:
+  Version bump and more fixes to use proper (system) ffmpeg headers. Also
+  fixes possible segfaults. Closes bug #85426.
 
   16 Mar 2005; Chris White <chriswhite@gentoo.org>
   files/xmms-wma-1.0.3-ffmpeg.patch, xmms-wma-1.0.3.ebuild:

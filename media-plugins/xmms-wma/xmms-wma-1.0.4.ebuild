@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wma/xmms-wma-1.0.3.ebuild,v 1.6 2005/03/15 22:50:33 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wma/xmms-wma-1.0.4.ebuild,v 1.1 2005/03/21 02:57:38 eradicator Exp $
 
 IUSE=""
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="XMMS plugin to play wma"
 HOMEPAGE="http://mcmcc.bat.ru/xmms-wma/"
@@ -13,10 +13,9 @@ SRC_URI="http://mcmcc.bat.ru/xmms-wma/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 
-#~amd64: 1.0.3: Plays a little staticy, x86 is clear... both with 
-#               media-video/ffmpeg-0.4.8.20040322-r1
+#~sparc: 1.0.4: Plays a little staticy, x86/adm64 is clear...
 
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="media-sound/xmms
 	>=media-video/ffmpeg-0.4.9_p20050226-r1"
@@ -28,7 +27,7 @@ src_unpack() {
 }
 
 src_compile () {
-	emake || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install () {
