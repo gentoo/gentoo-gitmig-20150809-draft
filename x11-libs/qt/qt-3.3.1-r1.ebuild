@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.1-r1.ebuild,v 1.4 2004/04/01 14:01:40 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.1-r1.ebuild,v 1.5 2004/04/05 02:31:28 vapier Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
-KEYWORDS="~x86 ~alpha ~ppc ~amd64 ~sparc ~hppa"
+KEYWORDS="~x86 ~alpha ~ppc ~amd64 ~sparc hppa"
 IUSE="cups nas postgres opengl mysql odbc gif doc firebird zlib icc sqlite ipv6 xinerama"
 
 DEPEND="virtual/x11 virtual/xft
