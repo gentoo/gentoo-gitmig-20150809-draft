@@ -1,6 +1,16 @@
 # ChangeLog for dev-ml/ulex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.5 2004/06/25 00:04:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.6 2004/08/08 07:11:03 mattam Exp $
+
+*ulex-0.5 (08 Aug 2004)
+
+  08 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> -ulex-0.2-r1.ebuild,
+  -ulex-0.2.ebuild, +ulex-0.4.ebuild, +ulex-0.5.ebuild:
+  New revisions for ocaml-3.07 and 3.08.
+
+  08 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> -ulex-0.2-r1.ebuild,
+  -ulex-0.2.ebuild:
+  Prepare for ocaml-3.08.
 
 *ulex-0.2-r1 (10 May 2004)
 
