@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/catdoc-0.93.3.ebuild,v 1.3 2004/06/24 22:29:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/catdoc-0.93.3.ebuild,v 1.4 2004/09/05 11:57:22 malc Exp $
 
 DESCRIPTION="A convertor for Microsoft Word, Excel and RTF Files to text"
 HOMEPAGE="http://www.45.free.net/~vitus/ice/catdoc/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 
 IUSE="tcltk"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 DEPEND="tcltk? ( >=dev-lang/tk-8.1 )"
 
