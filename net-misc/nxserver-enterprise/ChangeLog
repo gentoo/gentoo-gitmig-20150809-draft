@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/nxserver-enterprise
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-enterprise/ChangeLog,v 1.1 2003/09/02 14:04:52 stuart Exp $
+
+*nxserver-enterprise-1.2.2 (02 Sep 2003)
+
+  02 Sep 2003; stuart nxserver-enterprise-1.2.2.ebuild,
+  files/1.2.2/50nxserver:
+  Initial import
+
