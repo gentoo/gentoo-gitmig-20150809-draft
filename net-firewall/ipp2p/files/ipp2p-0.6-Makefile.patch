@@ -1,0 +1,34 @@
+--- Makefile.orig	2004-10-26 01:21:56.916739945 -0700
++++ Makefile	2004-10-26 01:22:16.672041397 -0700
+@@ -20,16 +20,12 @@
+ SED = sed
+ IPTABLES = /sbin/iptables
+ IPTABLES_VERSION = \
+-	$(shell iptables --version | sed -e 's/^iptables v//')
++	$(shell $(IPTABLES) --version | sed -e 's/^iptables v//')
+ IPTABLES_OPTION = -DNETFILTER_VERSION=\"$(IPTABLES_VERSION)\"
+ 
+ 
+ KERNEL_SRC = /lib/modules/$(shell uname -r)/build
+-IUSER = -I/usr/src/iptables-1.2.9/include
+ CC = gcc
+-CFLAGS = -O2 -Wall
+-
+-
+ 
+ all: modules libipt_ipp2p.so
+ 
+@@ -39,11 +35,10 @@
+ 	$(CC) $(CFLAGS) -I$(KERNEL_SRC)/include -c ipt_ipp2p.c -D__KERNEL__ -DMODULE $(MODVERSIONS)
+ 
+ ipt_ipp2p.ko:
+-	$(MAKE) -C $(KERNEL_SRC) SUBDIRS=$(PWD) modules
+-
++	$(MAKE) -C $(KERNEL_SRC) M=$(PWD) modules
+ 
+ libipt_ipp2p.so:   libipt_ipp2p.c ipt_ipp2p.h
+-		$(CC) $(CFLAGS) $(IPTABLES_OPTION) $(IUSER) -fPIC -c libipt_ipp2p.c
++		$(CC) $(CFLAGS) $(IPTABLES_OPTION) -fPIC -c libipt_ipp2p.c
+ 		ld -shared -o libipt_ipp2p.so libipt_ipp2p.o
+ 
+ clean:
