@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-realrandom
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-realrandom/ChangeLog,v 1.4 2003/08/12 11:03:55 joker Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-realrandom/ChangeLog,v 1.5 2004/02/14 16:25:15 absinthe Exp $
+
+  14 Feb 2004; Dylan Carlson <absinthe@gentoo.org> xmms-realrandom-0.2.ebuild:
+  added amd64 keyword.
 
   12 Aug 2003; Christian Birchinger <joker@gentoo.org>
   xmms-realrandom-0.2.ebuild:
