@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 50bb4aed981030ed063b1ab0e69c4141 ChangeLog 1259
-MD5 8b44caf5559c75cf053de72d82c69a43 geekcode-1.7.3.ebuild 586
+MD5 a181ca707ba86aa88406f9317195247f ChangeLog 1354
+MD5 9dd79c2cb3dde9dc97a623d1856de568 geekcode-1.7.3.ebuild 591
 MD5 6a08277e11107ece9e703ead1ff59f11 geekcode-1.7.ebuild 559
 MD5 829c836a60ac5118bcade531e08258f0 files/digest-geekcode-1.7 63
 MD5 e6b57b2557aa04a713d8011395e79289 files/digest-geekcode-1.7.3 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35JNHTu7gpaalycRAm64AJ98WmpSRmgUmzsTfzVRndeX8+PP8ACfYBYf
-pWJ84YoROTtWU1FnUK+AakA=
-=RwP8
------END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdupes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.4 2004/06/28 01:20:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.5 2004/09/20 03:02:24 tgall Exp $
+
+  19 Sep 2004; Tom Gall <tgall@gentoo.org> fdupes-1.40.ebuild:
+  stable on ppc64, bug #63667
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> fdupes-1.40.ebuild:
   Added ~sparc, ~mips
