@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf65bbb7e864cfc059a1155e5cd947d0 ChangeLog 1262
-MD5 9c69ff3ce8108c99baa12b2b38780494 metadata.xml 175
+MD5 10b74a951bfad9f3154ae262f3e13a32 ChangeLog 1357
 MD5 9e6c15847c80401f429d38b6adaccce1 libotf-0.9-r1.ebuild 757
-MD5 6430ccea15f55a711401e9d223fdc116 libotf-0.9.2.ebuild 757
-MD5 fad5e18e05f4ed9a5da65149bf4f57fc files/digest-libotf-0.9.2 64
+MD5 9c69ff3ce8108c99baa12b2b38780494 metadata.xml 175
+MD5 b11523620639370604acb706ed15ebed libotf-0.9.2.ebuild 759
 MD5 217cc51840278a313dad72cf54a9df30 files/digest-libotf-0.9-r1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBYAVpVWNWqTUmv+0RAsUVAJ4pa1XCNYfAa0euwHcv7+zYUCBKPACeOFwJ
-w6WifmeSlEopGcdblpIin4s=
-=v4zo
------END PGP SIGNATURE-----
+MD5 fad5e18e05f4ed9a5da65149bf4f57fc files/digest-libotf-0.9.2 64
