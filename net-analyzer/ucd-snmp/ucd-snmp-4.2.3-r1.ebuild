@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.3-r1.ebuild,v 1.1 2002/05/04 03:16:38 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.3-r1.ebuild,v 1.2 2002/05/26 10:14:02 prez Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Software for generating and retrieving SNMP data"
@@ -16,7 +16,6 @@ SLOT="0"
 
 src_compile() {
 	local myconf
-	use ssl && myconf="${myconf} --with-openssl=/usr"
 	use ssl || myconf="${myconf} --enable-internal-md5 --with-openssl=no"
 	use tcpd && myconf="${myconf} --with-libwrap"
 	use ipv6 && myconf="${myconf} --with-ipv6"
