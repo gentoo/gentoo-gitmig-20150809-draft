@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.30.ebuild,v 1.4 2004/06/05 17:21:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.30.ebuild,v 1.5 2004/06/19 04:33:43 kloeri Exp $
 
 inherit games
 
@@ -11,6 +11,7 @@ SRC_URI="http://nwdownloads.bioware.com/neverwinternights/standaloneserver/NWNDe
 LICENSE="NWN-EULA"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE=""
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}
