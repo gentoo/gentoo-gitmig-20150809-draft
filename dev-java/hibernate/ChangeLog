@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/hibernate
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.13 2004/10/22 10:59:48 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.14 2004/11/25 14:35:13 st_lim Exp $
+
+*hibernate-2.1.7 (25 Nov 2004)
+
+  25 Nov 2004; Lim Swee Tat <st_lim@gentoo.org> +hibernate-2.1.7.ebuild:
+  Version bump for hibernate. Still not moving the binary packages out. Coz do
+  not have enough time to do it.
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> hibernate-2.1.4.ebuild,
   hibernate-2.1.6.ebuild:
