@@ -1,0 +1,11 @@
+--- misc/bootsplash.conf.old	2004-10-11 17:48:48.570519424 +0200
++++ misc/bootsplash.conf	2004-10-11 17:49:07.892582024 +0200
+@@ -9,7 +9,7 @@
+ # parameter overrides BOOTSPLASH_THEME. If both
+ # variables are empty, 'default' is assumed.
+ 
+-BOOTSPLASH_THEME="gentoo"
++BOOTSPLASH_THEME="default"
+ 
+ # The numbers of ttys (seperated by space) which should 
+ # get the splash (e.g. for tty 1-5: "0 1 2 3 4 5")

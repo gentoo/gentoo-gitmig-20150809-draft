@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/bootsplash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.54 2004/09/05 07:56:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.55 2004/10/11 16:30:14 dams Exp $
+
+*bootsplash-0.6.1-r7 (11 Oct 2004)
+
+  11 Oct 2004; <dams@gentoo.org> +files/0.6.1-r7-default_theme.patch,
+  bootsplash-0.6-r16.ebuild, +bootsplash-0.6.1-r7.ebuild:
+  added patch to set the DEFAULT_THEME to default
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
