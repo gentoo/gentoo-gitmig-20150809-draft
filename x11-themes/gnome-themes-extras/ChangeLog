@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gnome-themes-extras
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.5 2003/10/22 19:56:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.6 2003/12/08 01:03:59 liquidx Exp $
+
+*gnome-themes-extras-0.5 (08 Dec 2003)
+
+  08 Dec 2003; Alastair Tse <liquidx@gentoo.org>
+  gnome-themes-extras-0.4.ebuild, gnome-themes-extras-0.5.ebuild,
+  files/gnome-themes-extras-0.5-industrial_uncorrupt.patch:
+  version bumped, added patch for industrial theme corruption with sodipodi
+  (http://bugzilla.ximian.com/show_bug.cgi?id=45579)
 
   22 Oct 2003; Alastair Tse <liquidx@gentoo.org>
   gnome-themes-extras-0.4.ebuild:
