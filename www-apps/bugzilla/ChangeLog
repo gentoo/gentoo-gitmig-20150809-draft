@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.6 2004/09/05 08:31:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.7 2004/10/28 01:36:03 rl03 Exp $
+
+*bugzilla-2.18.0_rc3 (27 Oct 2004)
+
+  27 Oct 2004; Renat Lumpau <rl03@gentoo.org> +bugzilla-2.18.0_rc3.ebuild:
+  Version bump. Security bug #68851.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
