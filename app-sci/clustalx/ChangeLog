@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/clustalx
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalx/ChangeLog,v 1.4 2004/11/18 09:13:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalx/ChangeLog,v 1.5 2004/11/22 22:17:53 sekretarz Exp $
+
+  22 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> clustalx-1.83.ebuild:
+  Added to ~amd64, bug #72084
 
   18 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> clustalx-1.83.ebuild:
   needs stable app-sci/ncbi-tools first
