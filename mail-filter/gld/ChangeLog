@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/gld
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.8 2004/09/25 20:25:49 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.9 2004/10/19 10:05:07 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> gld-1.4.ebuild:
+  Stable on amd64.
 
   25 Sep 2004; Tom Martin <slarti@gentoo.org> gld-1.3.ebuild:
   Stable on amd64.
