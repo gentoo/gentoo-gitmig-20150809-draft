@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rnaview/rnaview-1.ebuild,v 1.2 2005/01/19 00:26:09 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rnaview/rnaview-1.ebuild,v 1.3 2005/01/30 17:14:13 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -16,8 +16,9 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e "s/CC        = cc/CC        = $(tc-getCC)/" Makefile
-	sed -i -e "s/CFLAGS  =/CFLAGS  = ${CFLAGS}/" Makefile
+	sed -e "s/CC        = cc/CC        = $(tc-getCC)/" \
+		-e "s/CFLAGS  =/CFLAGS  = ${CFLAGS}/" \
+		-i Makefile || die
 }
 
 src_compile() {

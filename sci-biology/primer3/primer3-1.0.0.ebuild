@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-1.0.0.ebuild,v 1.3 2005/01/14 22:28:35 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-1.0.0.ebuild,v 1.4 2005/01/30 17:12:23 ribosome Exp $
 
 DESCRIPTION="Design primers for PCR reactions."
 HOMEPAGE="http://frodo.wi.mit.edu/primer3/primer3_code.html"
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 	if use ppc-macos; then
 		cd ${S}
-		sed -e "s:LIBOPTS ='-static':LIBOPTS =:" -i Makefile
+		sed -e "s:LIBOPTS ='-static':LIBOPTS =:" -i Makefile || die
 	fi
 }
 

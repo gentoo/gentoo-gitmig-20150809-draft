@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.63.ebuild,v 1.4 2005/01/19 00:24:33 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.63.ebuild,v 1.5 2005/01/30 17:10:12 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -19,9 +19,10 @@ DEPEND="virtual/libc
 S=${WORKDIR}/${P}/src
 
 src_compile() {
-	sed -i -e "s/CFLAGS =/CFLAGS = ${CFLAGS}/" Makefile
-	sed -i -e "s/CC        = cc/CC        = $(tc-getCC)/" Makefile
-	sed -i -e "s/DC        = cc/DC        = $(tc-getCC)/" Makefile
+	sed -e "s/CFLAGS =/CFLAGS = ${CFLAGS}/" \
+		-e "s/CC        = cc/CC        = $(tc-getCC)/" \
+		-e "s/DC        = cc/DC        = $(tc-getCC)/" \
+		-i Makefile || die
 	mkdir ../fonts
 	emake -j1 all put || die
 	mv ../exe/font* ../fonts
