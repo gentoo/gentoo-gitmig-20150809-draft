@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.2_rc1-r2.ebuild,v 1.1 2004/01/23 17:45:44 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.2_rc1-r2.ebuild,v 1.2 2004/01/23 18:45:04 lostlogic Exp $
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -8,7 +8,7 @@ inherit kernel
 
 OKV=2.6.1
 
-EXTRAVERSION="`echo ${PKV}-${PR/r/mm} | \
+EXTRAVERSION="`echo ${PV/_/-}-${PR/r/mm} | \
 	sed -e 's/[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\)/\1/'`"
 
 KV=${PV/_/-}-${PR/r/mm}
