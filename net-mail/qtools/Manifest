@@ -1,5 +1,5 @@
 MD5 7e5562a0fd0f911f7c077f476e8d77b2 ChangeLog 700
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
-MD5 e11020f93a70f2736eba8936f9291bf4 qtools-0.56.ebuild 1133
+MD5 57b1e61108bc9862e829dd3714e32113 qtools-0.56.ebuild 1128
 MD5 d397de4ad57b3e6d89294df49fa4f3b1 files/digest-qtools-0.56 62
 MD5 04a4c35d8c9cdf362be4a58d25a9aa4d files/qtools-0.56-errno.patch 291
