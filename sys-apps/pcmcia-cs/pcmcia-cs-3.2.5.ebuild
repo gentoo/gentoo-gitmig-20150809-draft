@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5.ebuild,v 1.7 2004/02/02 20:19:53 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5.ebuild,v 1.8 2004/02/03 15:54:11 latexer Exp $
 
 inherit eutils
 
@@ -104,7 +104,7 @@ src_compile() {
 
 	sed -i -e '/^HAS_FORMS/d ; s/^FLIBS=".*"/FLIBS=""/' config.out config.mk
 
-	emake all || die "failed compiling"
+	emake DO_ORINOCO=1 all || die "failed compiling"
 }
 
 src_install () {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5-r1.ebuild,v 1.3 2004/02/02 20:19:53 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5-r1.ebuild,v 1.4 2004/02/03 15:54:11 latexer Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_unpack() {
 	epatch ${DISTDIR}/${P}-module-init-tools.diff.gz
 
 	# If we're on 2.5.x or 2.6.x, modversions.h has *moved*
-	if [ "${okvminor}" -ge 5 ]; then
+	if [ "${okvminor}" -ge "5" ]; then
 		sed -i -e "s:include/linux/modvers:include/config/modvers:" Configure \
 			|| die "sed Configure failed (1)"
 	fi
@@ -109,7 +109,7 @@ src_compile() {
 
 	sed -i -e '/^HAS_FORMS/d ; s/^FLIBS=".*"/FLIBS=""/' config.out config.mk
 
-	emake all || die "failed compiling"
+	emake DO_ORINOCO=1 all || die "failed compiling"
 }
 
 src_install () {
