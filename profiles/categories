@@ -68,10 +68,10 @@ gnustep-base
 gnustep-libs
 kde-base
 kde-misc
+mail-client
 mail-filter
 mail-mta
 mail-server
-mail-client
 media-fonts
 media-gfx
 media-libs

@@ -13,6 +13,6 @@ s390
 sh
 sparc
 x86
-x86-obsd
 x86-fbsd
+x86-obsd
 x86-od
