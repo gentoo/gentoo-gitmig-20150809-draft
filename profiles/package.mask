@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <azarah@gentoo.org> (03 Sep 2002)
+# new version. PLEASE test!
+=sys-apps/lilo-22.3.3
+
 # <raker@gentoo.org> (02 Sep 2002)
 # new ucspi-tcp with ssl support
 =sys-apps/ucspi-tcp-0.88-r3
