@@ -1,9 +1,9 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.17 2003/02/11 19:33:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.18 2003/02/12 02:12:49 gmsoft Exp $
 
   11 Feb 2003; Guy Martin <gmsoft@gentoo.org> sh-utils-2.0.15.ebuild :
-  Not applying Stallman's patch cause it breaks uname -a and some others.
+  Not applying patch for hppa because it breaks uname.
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> sh-utils-2.0.15.ebuild :
   Added hppa to keywords.
