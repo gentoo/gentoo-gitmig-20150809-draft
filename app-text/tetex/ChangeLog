@@ -1,6 +1,12 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.69 2004/11/07 10:22:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.70 2004/11/18 15:31:24 usata Exp $
+
+*tetex-2.99.3.20041109 (19 Nov 2004)
+
+  19 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +tetex-2.99.3.20041109.ebuild:
+  Added new beta version.
 
   07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +files/iso-8859-7.def,
   tetex-2.0.2-r4.ebuild:
