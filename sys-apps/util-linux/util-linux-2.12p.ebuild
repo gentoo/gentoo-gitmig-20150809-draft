@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12p.ebuild,v 1.1 2005/01/10 04:34:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12p.ebuild,v 1.2 2005/01/12 00:24:37 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -71,9 +71,6 @@ src_unpack() {
 
 	# Allow util-linux to be built with -fPIC
 	epatch ${FILESDIR}/${PN}-2.12i-pic.patch
-
-	# Add support to read fat/fat32 labels, bug #36722
-	epatch ${FILESDIR}/${PN}-2.12p-fat-LABEL-support.patch
 
 	# Install rdev on amd64 platform
 	epatch ${FILESDIR}/${PN}-2.12-amd64_rdev_installation.patch
