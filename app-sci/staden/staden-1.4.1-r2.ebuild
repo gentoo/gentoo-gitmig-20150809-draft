@@ -1,24 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r1.ebuild,v 1.1 2004/09/15 19:09:27 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r2.ebuild,v 1.1 2004/09/16 04:12:35 ribosome Exp $
 
 inherit eutils
 
 DESCRIPTION="The Staden Package - Biological sequence handling and analysis"
 HOMEPAGE="http://${PN}.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-rel-${PV//./-}.tar.gz
-	mirror://gentoo/${P}-missing-doc.tar.bz2"
+	mirror://gentoo/${P}-doc.tar.bz2
+	doc? mirror://gentoo/${P}-course.tar.bz2"
 LICENSE="${PN}"
 
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="emboss ifc"
+IUSE="doc emboss ifc"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
-	media-gfx/imagemagick
-	virtual/emacs
-	virtual/tetex
 	emboss? ( app-sci/emboss )
 	ifc? ( dev-lang/ifc )"
 
@@ -74,13 +72,16 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	# Abandon hope, all ye who enter here.
-
 	# The following Makefiles are more or less broken. Libraries are missing,
 	# or their directories are not included, or the variables are not set
-	# correctly and must be replaced by hardcoded library names.
+	# correctly and must be replaced by hardcoded library names. The
+	# top-level Makefile is also changed to avoid compiling documentation
+	# (which is provided prebuilt because of numerous compilation/dead links
+	# problems).
+
 	cd ${S}
 	einfo "Patching Staden Package Makefiles:"
+	epatch ${FILESDIR}/${P}-top.patch
 	epatch ${FILESDIR}/${P}-gap4.patch
 	epatch ${FILESDIR}/${P}-mutscan.patch
 	epatch ${FILESDIR}/${P}-prefinish.patch
@@ -91,38 +92,6 @@ src_unpack() {
 	# "getopt" is incorrectly included as an extern (for Win32 compatibility).
 	einfo "Patching Staden Package code:"
 	epatch ${FILESDIR}/${P}-getopt.patch
-	echo
-
-	# The documentation building process is broken on Gentoo, mainly because
-	# incorrect program locations are assumed.
-	einfo "Patching Staden Package documentation build system:"
-
-	# Documentation build process cannot find "update-nodes.el".
-	cd ${S}/doc/manual/tools
-	sed -i -e 's%emacs -batch $1 -l ${DOCDIR:-.}/tools/update-nodes.el%emacs -batch $1 -l ${DOCDIR:-..}/manual/tools/update-nodes.el%' update-nodes \
-		&& einfo "Successfully applied sed script to patch update-nodes." \
-		|| eerror "Failed to apply sed script to patch update-nodes."
-
-	# Perl scripts search for "pearl" in "/usr/local".
-	for SCRIPT in *.pl texi2html; do
-		sed -i -e 's%/usr/local/bin/perl%/usr/bin/perl%' ${SCRIPT} \
-			&& einfo "Successfully applied sed script to patch ${SCRIPT}." \
-			|| eerror "Failed to apply sed script to patch ${SCRIPT}."
-	done
-
-	# The "convert" tool from Imagemagick is searched for in "/usr/X11R6".
-	sed -i -e 's%/usr/X11R6/bin/convert%/usr/bin/convert%' make_ps \
-		&& einfo "Successfully applied sed script to patch make.ps." \
-		|| eerror "Failed to apply sed script to patch make.ps."
-
-	# Solves issues with images in the exercise* texi files.
-	cd ${S}/course/texi
-	for FILE in exercise*.texi; do
-		sed -i -e 's/,,8in}/,,8in,,eps}/' ${FILE} && \
-			sed -i -e 's/,6in}/,6in,,,eps}/' ${FILE} \
-			&& einfo "Successfully applied sed scripts to patch ${FILE}." \
-			|| eerror "Failed to apply sed scripts to patch ${FILE}."
-	done
 	echo
 
 	# "CFLAGS" and "FFLAGS" need to be set to the user's values in the build
@@ -147,7 +116,7 @@ src_compile() {
 	# Compiler program names also need to be specified to override the
 	# incorrect hardcoded ones.
 
-	# Compiles executables and libraries, builds documentation.
+	# Compiles executables and libraries.
 	make \
 		STADENROOT="${S}" \
 		SRCROOT="${S}/src" \
@@ -196,15 +165,6 @@ src_compile() {
 	cp ${FILESDIR}/${P}-staden_help.new ${S}/linux-bin/staden_help
 	chmod +x ${S}/linux-bin/staden_help
 
-	# Patch hypertext documentation.
-	cd ${S}/doc/manual
-	for FILE in *.html; do
-		sed -i -e 's%<a href="../staden_home.html"><img src="i/nav_home.gif" alt="home"></a>%%' ${FILE}
-	done
-	cd ${S}/doc/scripting_manual
-	for FILE in *.html; do
-		sed -i -e 's%<a href="../staden_home.html"><img src="i/nav_home.gif" alt="home"></a>%%' ${FILE}
-	done
 }
 
 src_install() {
@@ -223,49 +183,15 @@ src_install() {
 	insinto /etc/env.d
 	newins ${FILESDIR}/${P}-env 27${PN}
 
-	# Basic documentation
-	insinto /opt/${PN}/doc
-	doins ${S}/{ChangeLog,doc/Acknowledgements}
-	newins ${S}/doc/emboss.txt README.emboss
-
 	# Man pages
 	doman ${S}/doc/manual/man/man*/*
 
-	# Hypertext documentation
-	insinto /opt/${PN}/doc/manual
-	doins ${S}/doc/manual/*unix*.{gif,html,index}
-	insinto /opt/${PN}/doc/scripting_manual
-	doins ${S}/doc/scripting_manual/*.html
-	insinto /opt/${PN}/doc/manual/i
-	doins ${S}/doc/manual/i/*
-	insinto /opt/${PN}/doc/scripting_manual/i
-	doins ${S}/doc/scripting_manual/i/*
+	# Documentation
+	mv ${WORKDIR}/doc ${D}/opt/${PN}/doc
 
-	# Missing hypertext documentation
-	insinto /opt/${PN}/doc
-	doins ${WORKDIR}/${P}-missing-doc/documentation.html
-	insinto /opt/${PN}/doc/misc
-	doins ${WORKDIR}/${P}-missing-doc/misc/*
-	insinto /opt/${PN}/doc/misc/i
-	doins ${S}/doc/manual/i/*
+	# A short course in printable format along with some data
+	use doc && mv ${WORKDIR}/course ${D}/opt/${PN}/course
 
-	# Printable manuals and articles
-	insinto /opt/${PN}/doc
-	newins ${S}/doc/gkb547_gml.pdf Staden1998.pdf
-	newins ${S}/doc/manual/manual_unix.dvi manual.dvi
-	newins ${S}/doc/manual/manual_unix.ps manual.ps
-	newins ${S}/doc/manual/mini_unix.ps mini_manual.ps
-	newins ${S}/doc/scripting_manual/scripting.dvi scripting_manual.dvi
-	newins ${S}/doc/scripting_manual/scripting.ps scripting_manual.ps
-
-	# A short course in printable format, along with example data
-	mkdir -p ${D}/opt/${PN}/course
-	mv ${S}/course/data ${D}/opt/${PN}/course
-	insinto /opt/${PN}/course
-	doins ${S}/course/README
-	newins ${S}/course/unix_docs/course_unix.pdf course_project_management.pdf
-	newins ${S}/course/unix_docs/course_unix.ps course_project_management.ps
-	newins ${S}/course/mutation_texi/notes.ps course_mutation_detection.ps
 }
 
 pkg_postinst() {
