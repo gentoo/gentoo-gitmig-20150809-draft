@@ -1,8 +1,8 @@
 # ChangeLog for dev-lang/squeak-fullimage
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-fullimage/ChangeLog,v 1.1 2004/04/28 16:19:19 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-fullimage/ChangeLog,v 1.2 2004/05/12 08:42:23 aliz Exp $
 
-*squeak-fullimage-3.6_p5429 (15 Apr 2004)
+*squeak-fullimage-3.6.5429 (15 Apr 2004)
 
   15 Apr 2004; Jared Hudson <jhhudso@gentoo.org> : Version bump. I also have
   renamed squeak-vm to squeak-fullimage.
