@@ -1,6 +1,12 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.91 2004/10/19 09:50:27 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.92 2004/12/19 21:28:31 foser Exp $
+
+*abiword-2.2.2 (19 Dec 2004)
+
+  19 Dec 2004; foser <foser@gentoo.org> abiword-2.2.2.ebuild :
+  Finally add this one, add mime eclass for the desktop file
+  Remove docs installation for now until someone figures what exactly to install
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> abiword-2.0.10.ebuild:
   Stable on amd64.
