@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.2 2003/10/17 22:00:04 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.3 2003/10/24 11:04:54 leonardop Exp $
 
 IUSE="debug gnome nls xml2"
 # Internal USE flags
@@ -19,19 +19,22 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 
-DEPEND=">=dev-libs/glib-2
+RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
 	>=dev-cpp/gtkmm-2
 	>=dev-libs/libsigc++-1.2
 	dev-util/pkgconfig
 	distribution? ( >=net-libs/gnet-2 )
 	gnome? ( >=gnome-base/libgnomeui-2
-		>=dev-cpp/libgnomeuimm-1.3
-		>=gnome-base/gnome-panel-2.0.1
+		>=dev-cpp/libgnomeuimm-2
+		>=gnome-base/gnome-panel-2.0.10
 		>=gnome-base/libbonobo-2
 		>=gnome-base/gconf-2 )
 	nls? ( sys-devel/gettext )
 	xml2? ( dev-libs/gdome2 )"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 
 src_unpack() {
@@ -52,7 +55,8 @@ src_compile() {
 
 	use debug           && myconf="${myconf} --enable-debug"
 	use distribution    || myconf="${myconf} --disable-distribution"
-	use gnome           && myconf="${myconf} --enable-gnome --enable-gconf"
+	use gnome           && myconf="${myconf} --enable-gconf" || \
+		myconf="${myconf} --disable-gnome"
 	use nls             || myconf="${myconf} --disable-nls"
 	use no-exercises    || myconf="${myconf} --enable-exercises"
 	use no-experimental && myconf="${myconf} --disable-experimental"
