@@ -1,6 +1,9 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.30 2004/10/13 14:35:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.31 2004/12/29 21:03:27 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   13 Oct 2004; Guy Martin <gmsoft@gentoo.org> lprng-3.8.27.ebuild:
   Stable on hppa.
@@ -8,13 +11,13 @@
   21 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> lprng-3.8.27.ebuild:
   Stable on sparc
 
-  04 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> lprng-3.8.27.ebuild:
+  04 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> lprng-3.8.27.ebuild:
   Stable on alpha.
 
   24 Aug 2004; Heinrich Wendel <lanius@gentoo.org> lprng-3.8.27.ebuild:
   mark stable on x86
 
-  18 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> lprng-3.8.26.ebuild:
+  18 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> lprng-3.8.26.ebuild:
   Stable on alpha.
 
   06 Jul 2004; Hardave Riar <hardave@gentoo.org> lprng-3.8.27.ebuild:
