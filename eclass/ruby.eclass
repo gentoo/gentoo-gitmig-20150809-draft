@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.6 2003/10/12 17:35:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.7 2003/10/12 19:07:31 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -92,7 +92,7 @@ ruby_src_compile() {
 }
 
 erubyinstall() {
-	local RUBY
+	local RUBY siteruby
 	if [ "$1" = ruby16 ] ; then
 		RUBY=ruby16
 	elif [ "$1" = ruby18 ] ; then
@@ -119,27 +119,10 @@ erubyinstall() {
 	fi
 }
 
-ruby_src_install() {
-	local siteruby rdbase=/usr/share/doc/${PF}/rd
-
-	if [ "${USE_RUBY_1_6}" -a "${USE_RUBY_1_8}" ] && \
-		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] ; then
-		einfo "src_installing for ruby 1.6 ;)"
-		cd ${S}/1.6/${S#${WORKDIR}}
-		erubyinstall ruby16
-		cd -
-		einfo "src_installing for ruby 1.8 ;)"
-		cd ${S}/1.8/${S#${WORKDIR}}
-		erubyinstall ruby18
-		#cd -
-	else
-		einfo "src_installing ;)"
-		erubyinstall
-	fi
-
-	einfo "dodoc'ing ;)"
+erubydoc() {
+	local rdbase=/usr/share/doc/${PF}/rd rdfiles=$(find . -name '*.rd*')
 	insinto ${rdbase}
-	find . -name '*.rd*' | xargs doins
+	[ -n "${rdfiles}" ] && doins ${rdfiles}
 	rmdir --ignore-fail-on-non-empty ${D}${rdbase}
 	if [ -d doc -o -d docs -o examples ] ; then
 		dohtml -r doc/* docs/* examples/*
@@ -150,5 +133,29 @@ ruby_src_install() {
 		dodir /usr/share/doc/${PF}
 		cp -a sample ${D}/usr/share/doc/${PF} || "cp failed"
 	fi
-	dodoc ChangeLog* [A-Z][A-Z]*
+	for i in ChangeLog* [A-Z][A-Z]* ; do
+		[ -e $i ] && dodoc $i
+	done
+}
+
+ruby_src_install() {
+
+	if [ "${USE_RUBY_1_6}" -a "${USE_RUBY_1_8}" ] && \
+		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] ; then
+		einfo "src_installing for ruby 1.6 ;)"
+		cd ${S}/1.6/${S#${WORKDIR}}
+		erubyinstall ruby16
+		cd -
+		einfo "src_installing for ruby 1.8 ;)"
+		cd ${S}/1.8/${S#${WORKDIR}}
+		erubyinstall ruby18
+		S=${S}/1.8/${S#${WORKDIR}}
+		#cd -
+	else
+		einfo "src_installing ;)"
+		erubyinstall
+	fi
+
+	einfo "dodoc'ing ;)"
+	erubydoc
 }
