@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmpeg3
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.29 2004/10/08 09:36:14 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.30 2005/03/26 04:56:59 eradicator Exp $
+
+*libmpeg3-1.5.2-r1 (26 Mar 2005)
+
+  26 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +libmpeg3-1.5.2-r1.ebuild:
+  Use correct toolchain compiler.  Use -fPIC correctly.
 
   08 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/1.5.2-gentoo-multilib.patch, libmpeg3-1.5.2.ebuild:
