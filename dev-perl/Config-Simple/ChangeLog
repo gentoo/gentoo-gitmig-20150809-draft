@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Config-Simple
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Simple/ChangeLog,v 1.4 2004/07/30 09:40:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Simple/ChangeLog,v 1.5 2004/09/02 16:37:26 pvdabeel Exp $
+
+  02 Sep 2004; <pvdabeel@gentoo.org> Config-Simple-4.55.ebuild,
+  Config-Simple-4.56.ebuild:
+  PPC stable profile update
 
 *Config-Simple-4.56 (30 Jul 2004)
 
