@@ -84,7 +84,7 @@ HOMEPAGE="http://www.kernel.org/
 
 if [ ! $PN = "linux-extras" ] ; then
     RDEPEND=">=sys-apps/reiserfs-utils-3.6.25-r1"
-    DEPEND=">=sys-apps/modutils-2.4.2"
+    DEPEND=">=sys-apps/modutils-2.4.2 sys-devel/perl"
 #else
 #    DEPEND=">=sys-kernel/linux-sources-${PV}_${PR}"
 fi
@@ -367,7 +367,7 @@ src_install() {
 	then
 	    #install PCMCIA modules and utilities
 	    cd ${KS}/extras/pcmcia-cs-${PCV}
-	    try make PREFIX=${D} install  
+	    try make PREFIX=${D} MANDIR=${D}/usr/share/man install  
 	    rm -rf ${D}/etc/rc.d
 	    exeinto /etc/rc.d/init.d
 	    doexe ${FILESDIR}/${KV}/pcmcia

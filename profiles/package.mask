@@ -24,3 +24,5 @@ app-text/sgml2x
 >=berlin-base/berlin-0.2.2
 app-emulation/wine
 >=media-gfx/autotrace-0.26
+>=x11-base/xfree-4.1.0
+>=sys-devel/autoconf-2.50

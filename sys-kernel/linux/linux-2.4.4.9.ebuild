@@ -367,7 +367,7 @@ src_install() {
 	then
 	    #install PCMCIA modules and utilities
 	    cd ${KS}/extras/pcmcia-cs-${PCV}
-	    try make PREFIX=${D} install  
+	    try make PREFIX=${D} MANDIR=${D}/usr/share/man install  
 	    rm -rf ${D}/etc/rc.d
 	    exeinto /etc/rc.d/init.d
 	    doexe ${FILESDIR}/${KV}/pcmcia

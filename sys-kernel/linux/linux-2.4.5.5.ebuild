@@ -112,7 +112,8 @@ then
     RDEPEND=">=sys-apps/reiserfs-utils-3.6.25-r1"
     DEPEND=">=sys-apps/modutils-2.4.2
 	    >=sys-devel/flex-2.5.4a-r3
-	    >=dev-util/yacc-1.9.1-r1"
+	    >=dev-util/yacc-1.9.1-r1
+            sys-devel/perl"
 #### XFS
 #    if [ "`use xfs`" ]
 #    then
