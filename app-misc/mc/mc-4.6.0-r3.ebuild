@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r3.ebuild,v 1.2 2003/09/27 15:14:10 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r3.ebuild,v 1.3 2003/09/27 21:43:54 lanius Exp $
 
 IUSE="gpm nls samba ncurses X slang"
 
@@ -28,7 +28,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	has_version '>=net-fs/samba-3.0.0' &&
 		epatch ${DISTDIR}/mc-4.6.0-samba.patch.bz2
-	has_version '>=net-fs/samba-2.0.0' &&
+	has_version '<net-fs/samba-3.0.0' &&
 		epatch ${DISTDIR}/mc-4.6.0-sambalib.patch.bz2
 	epatch ${FILESDIR}/mc-4.6.0-find.patch
 }
