@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r2.ebuild,v 1.1 2001/08/20 14:30:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r2.ebuild,v 1.2 2001/08/21 02:55:51 drobbins Exp $
 
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
@@ -18,12 +18,11 @@ DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 if [ -z "`use build`" ] ; then
   if [ "`use bootstrap`" ] ; then
-	DEPEND="nls? ( sys-devel/gettext )"
+	DEPEND="nls? ( sys-devel/gettext ) ~sys-devel/autoconf-2.13"
   else
-	DEPEND="nls? ( sys-devel/gettext ) sys-apps/texinfo"
+	DEPEND="nls? ( sys-devel/gettext ) sys-apps/texinfo ~sys-devel/autoconf-2.13"
   fi
 fi
-
 
 src_unpack() {
 

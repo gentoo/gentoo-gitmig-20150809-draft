@@ -17,9 +17,9 @@ echo "Using GLIBC $myGLIBC"
 export USE="build"
 cd /usr/portage
 emerge $myPORTAGE || exit
+emerge $myGETTEXT || exit
 emerge $myBINUTILS || exit
 emerge $myGCC || exit
-emerge $myGETTEXT || exit
 unset USE
 export USE="`spython -c 'import portage; print portage.settings["USE"];'` bootstrap"
 emerge $myGLIBC || exit
