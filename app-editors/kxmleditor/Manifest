@@ -1,0 +1,6 @@
+MD5 c7a970ae4f627e9593123669843cfe85 ChangeLog 811
+MD5 5f489955b0743d511aa8661987af11dc kxmleditor-0.8.1.ebuild 430
+MD5 fee53b9715ba0859bf5f44a29f7199e5 kxmleditor-0.8.ebuild 611
+MD5 6f65721e85241e0aaedd74470657c12d files/digest-kxmleditor-0.8 66
+MD5 2c44cde00203160f021f8f2645e8cfb7 files/digest-kxmleditor-0.8.1 69
+MD5 848bbac8ddef072cb80cb5707f5fbf15 files/kxmleditor-0.8-gcc3.diff 532
