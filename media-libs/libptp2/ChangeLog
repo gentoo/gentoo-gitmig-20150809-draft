@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libptp2
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.4 2004/12/18 08:31:27 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.5 2005/01/26 20:11:27 corsair Exp $
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> libptp2-1.0.1.ebuild:
+  Stable on ppc64
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> libptp2-1.0.1.ebuild:
   added ~ppc64 to KEYWORDS
