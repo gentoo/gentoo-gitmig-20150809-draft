@@ -127,7 +127,7 @@ net-www/zope
 =gnome-base/gdm-2.2.5.4-r3
 
 # Causes slow DVD auth, and do not work with MPlayer
->=media-libs/libdvdcss-1.0.0
+=media-libs/libdvdcss-1.0.0
 
 #we no longer use sysvinit (rolled into baselayout)
 sys-apps/sysvinit
