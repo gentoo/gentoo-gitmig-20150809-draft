@@ -1,6 +1,6 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r2.ebuild,v 1.3 2002/07/16 03:59:46 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r2.ebuild,v 1.4 2002/08/01 11:40:14 seemant Exp $
 
 S=${WORKDIR}/src
 #SRC_URI="ftp://ftp.dante.de/tex-archive/web/noweb/src.tar.gz"
