@@ -1,0 +1,31 @@
+--- src/gm-interface.c.orig	2004-11-22 06:12:04.557354936 +0930
++++ src/gm-interface.c	2004-11-22 06:13:30.945830832 +0930
+@@ -838,8 +838,6 @@
+                 stop_emit =  TRUE;
+                 break;
+             }
+-
+-        default:
+         }
+     }
+     if (connection->key_mode == APP_COMMAND_MODE && !stop_emit && npage_data && npage_data->type == GM_NPAGE_BROWSER) {
+@@ -857,7 +855,6 @@
+                 stop_emit =  TRUE;
+                 break;
+             }
+-        default:
+         }
+     }
+ 
+--- src/gm-print.h.orig	2004-11-22 06:12:20.314568416 +0930
++++ src/gm-print.h	2004-11-22 06:12:50.265015256 +0930
+@@ -149,7 +149,8 @@
+ 
+ 
+ 
+-#endif # gnome-print-support
++#endif
++/* gnome-print-support */
+ void gm_print (void * ignore, GmConnection * connection);
+ void gm_print_preview (void * ignore, GmConnection * connection);
+ 
