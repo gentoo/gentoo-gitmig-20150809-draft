@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.1 2002/12/27 21:50:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.2 2003/02/09 22:19:11 mholzer Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://mjpeg.sourceforge.net/"
 
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND="media-libs/jpeg
 	media-libs/libpng

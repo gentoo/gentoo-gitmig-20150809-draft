@@ -1,8 +1,11 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.13 2002/12/27 21:50:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.14 2003/02/09 22:19:11 mholzer Exp $
 
 *mjpegtools-1.6.0-r7 (27 Dec 2002)
+
+  09 Feb 2003; Martin Holzer <mholzer@gentoo.org> mjpegtools-1.6.0-r7.ebuild :
+  Marked as stable for x86. 
 
   27 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mjpegtools-1.6.0-r7.ebuild :
   Moved elibtoolize to src_compile.  Remove the unneeded 'if then fi' 's for
