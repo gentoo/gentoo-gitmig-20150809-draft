@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-ven/kde-i18n-ven-3.0.ebuild,v 1.1 2002/05/03 14:21:32 danarmak Exp $
-. /usr/portage/eclass/inherit.eclass || die
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-ven/kde-i18n-ven-3.0.ebuild,v 1.2 2002/05/21 18:14:06 danarmak Exp $
+
 inherit kde-i18n
