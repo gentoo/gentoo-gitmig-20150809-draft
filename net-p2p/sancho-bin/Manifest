@@ -1,11 +1,17 @@
-MD5 99bb047655b36fad2f0a65a6517cb008 sancho-bin-0.9.4.11.ebuild 1460
-MD5 cbb033de586890f56a1405f1514d7aee sancho-bin-0.9.4.10.ebuild 1459
-MD5 e4ae6a246522d1871a90bcb9b3b538de sancho-bin-0.9.4.9.ebuild 1458
-MD5 07183358784174f3d0f290a21c73a4ec sancho-bin-0.9.4.14.ebuild 1460
-MD5 5efd682098021b98b3712651733d9a64 ChangeLog 2704
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ab1f5207e9b467a706472c84e293cc18 sancho-bin-0.9.4.11.ebuild 1483
+MD5 74a1eeba942992914ce8ea6d3b8fb534 sancho-bin-0.9.4.14-r1.ebuild 1487
+MD5 64ac5948f566492f6c84361787b28160 ChangeLog 3035
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 9c8935033c3fe62be83d6ad6e80d5f4e files/sancho.sh 260
-MD5 c99f4fa91b58b629111ed97d48d53dc0 files/digest-sancho-bin-0.9.4.10 158
+MD5 735c747877cd42821c7db531e9bc3f6b files/digest-sancho-bin-0.9.4.14-r1 158
 MD5 af6526c79837318f013013109469c41a files/digest-sancho-bin-0.9.4.11 158
-MD5 735c747877cd42821c7db531e9bc3f6b files/digest-sancho-bin-0.9.4.14 158
-MD5 a2ae84d56946ee97066eaa975014c4c3 files/digest-sancho-bin-0.9.4.9 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBSigNcAgAdbxYsnERAkgxAJwMwMzfgd3lp1oMG+stpB4zN9xBvQCdHbV7
+kIVgjCt0jTz4wi5yfFQkhgo=
+=ahT7
+-----END PGP SIGNATURE-----
