@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/desklet-ltvariations
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/ChangeLog,v 1.2 2003/11/01 03:38:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/ChangeLog,v 1.3 2003/11/12 10:17:09 obz Exp $
+
+*desklet-ltvariations-0.21-r1 (12 Nov 2003)
+
+  12 Nov 2003; Mike Gardiner <obz@gentoo.org>
+  desklet-ltvariations-0.21-r1.ebuild:
+  Fixed Sensors permissions, with regards to bug #32907
 
   01 Nov 2003; Luca Barbato <lu_zero@gentoo.org>
   desklet-ltvariations-0.21.ebuild:
