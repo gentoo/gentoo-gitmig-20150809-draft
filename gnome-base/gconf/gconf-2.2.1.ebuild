@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.1.ebuild,v 1.4 2003/08/24 17:29:06 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.1.ebuild,v 1.5 2003/08/25 10:50:28 obz Exp $
 
 IUSE="doc"
 
@@ -74,7 +74,6 @@ pkg_preinst () {
 
 pkg_postinst () {
 	kill_gconf
-	gnome2_pkg_postinst
 
 	#change the permissions to avoid some gconf bugs
 	einfo "changing permissions for gconf dirs"
