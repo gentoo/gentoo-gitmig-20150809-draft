@@ -1,9 +1,13 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.13 2002/07/06 18:28:03 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.14 2002/07/16 02:05:38 owen Exp $
 
 vim-6.1-r8.ebuild (06 Jul 2002)
-	
+		
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS.
+
 	06 Jul 2002; Michael Nazaroff <naz@gentoo.org> vim-6.1-r8.ebuild :
 
 	Added back gpm support, since gpm should now be fixed. I also added a

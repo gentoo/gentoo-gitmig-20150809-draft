@@ -1,6 +1,6 @@
 # Copyright 2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r2.ebuild,v 1.4 2002/07/11 06:30:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r2.ebuild,v 1.5 2002/07/16 02:05:39 owen Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -76,6 +76,8 @@ DEPEND="virtual/glibc
 #
 # Please don't re-enable the tclinterp flag without verifying first
 # that the above works.  Thanks.  (08 Sep 2001 agriffis)
+
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack $A
