@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.0-r1.ebuild,v 1.1 2004/04/20 15:53:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.0-r1.ebuild,v 1.2 2004/04/20 16:24:53 eradicator Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -53,10 +53,8 @@ G2CONF="${G2CONF} \
 	$(use_enable pda ipod) \
 	--enable-mmkeys \
 	--enable-audiocd \
+	--disable-dashboard \
 	--disable-schemas-install"
-
-#	Disabled per foser's request
-#	--enable-dashboard \
 
 DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
 	  MAINTAINERS NEWS README README.iPod THANKS TODO"
@@ -69,10 +67,4 @@ src_unpack( ) {
 	cd ${S}
 	# sandbox errors work around
 	gnome2_omf_fix ${S}/help/C/Makefile.in
-}
-
-src_compile() {
-	# Removed by default per foser's request.  If you have problems, try removing -ffast-math
-	# filter-flags "-ffast-math"
-	gnome2_src_compile
 }
