@@ -1,15 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.18 2002/12/18 15:00:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.19 2002/12/18 19:16:44 vapier Exp $
 
+*wxGTK-2.3.4 (18 Dec 2002)
 
-*wxGTK-2.2.9-r1 (18 Dec 2002)
-
-  18 Dec 2002; Seemant Kulleen <seemant@gentoo.org> wxGTK-2.2.9-r1.ebuild
-  files/digest-wxGTK-2.2.9-r1 :
-
-  This version is REQUIRED for audacity. If you are NOT the audacity or
-  wxGTK maintainer, please do NOT touch these files.
+  18 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage #12380 + re-enabling support for gtk2.
 
 *wxGTK-2.3.3 (26 Oct 2002)
 
@@ -39,6 +35,11 @@
   OpenGL 
 
 *wxGTK-2.2.9-r1 (09 Aug 2002)
+
+  18 Dec 2002; Seemant Kulleen <seemant@gentoo.org> wxGTK-2.2.9-r1.ebuild
+  files/digest-wxGTK-2.2.9-r1 :
+  This version is REQUIRED for audacity. If you are NOT the audacity or
+  wxGTK maintainer, please do NOT touch these files.
 
   22 Aug 2002; Nick Hadaway <raker@gentoo.org> wxGTK-2.2.9-r1.ebuild :
   Changed to "e" tools for compiling.
