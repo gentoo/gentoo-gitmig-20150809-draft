@@ -1,13 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f3f3145a464ab7b3dcc257e84b15d0bd ChangeLog 3180
 MD5 801be5aec7305ceca721a9e8b20ef594 prozilla-1.3.6-r1.ebuild 839
-MD5 619d83f9b109dde4b8b0e9e1b584d026 ChangeLog 2931
+MD5 3ed36e521701d79dc520e6cf714d4b9c prozilla-1.3.6-r2.ebuild 903
 MD5 c8bbedfd3f66bb40148bd98b012db53f files/digest-prozilla-1.3.6-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYHZMI1lqEGTUzyQRAl6pAJkBUWw8saKCLrOh8cf88E4VNjXtuQCfXi+6
-k8gUsHNAUYluqMJUYRYe7ag=
-=9qf/
------END PGP SIGNATURE-----
+MD5 d3e26b830bd7e6798eaf56ca8bee35a2 files/prozilla-1.3.6-typofix-gentoo.diff 697
+MD5 c8bbedfd3f66bb40148bd98b012db53f files/digest-prozilla-1.3.6-r2 66
