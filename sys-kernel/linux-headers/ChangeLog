@@ -1,7 +1,15 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.27 2003/10/30 23:17:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.28 2003/11/16 18:26:58 kumba Exp $
 
+
+*linux-headers-2.4.21-r1 (16 Nov 2003)
+
+  16 Nov 2003; Joshua Kinard <kumba@gentoo.org>
+  linux-headers-2.4.21-r1.ebuild, linux-headers-2.4.21.ebuild,
+  linux-headers-2.4.22.ebuild, files/linux-headers-strict-ansi-fix.patch:
+  Changed the ordering of some variables to adjust to new kernel.eclass behavior.
+  Added a patch that fixes an issue regarding the use of gcc's -ansi flag.  Closes Bug #32246
 
 *linux-headers-2.4.22 (21 Sep 2003)
 
