@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.9 2004/04/27 08:28:28 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.10 2004/05/18 02:24:57 weeve Exp $
+
+  17 May 2004; Jason Wever <weeve@gentoo.org> rapidsvn-0.5.0.ebuild:
+  Added ~sparc keyword.
 
   27 Apr 2004; Paul de Vrieze <pauldv@gentoo.org> -rapidsvn-0.3.0.ebuild:
   Remove old version as the needed subversion build has been removed
