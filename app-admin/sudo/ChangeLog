@@ -1,11 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.16 2003/07/02 18:16:05 gmsoft Exp $
-
-  23 May 2003; Seemant Kulleen <seemant@gentoo.org> sudo-1.6.6.ebuild:
-  download location fixed
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.17 2003/09/30 17:45:57 kumba Exp $
 
 *sudo-1.6.7_p5 (19 May 2003)
+
+  30 Sep 2003; Joshua Kinard <kumba@gentoo.org> sudo-1.6.7_p5.ebuild:
+  Added ~mips to KEYWORDS
 
   02 Jul 2003; Guy Martin <gmsoft@gentoo.org> sudo-1.6.7_p5.ebuild :
   Marked stable on hppa.
@@ -26,6 +26,9 @@
   added --with-env-editor so that EDITOR is respected when using visudo
 
 *sudo-1.6.6 (26 Apr 2002)
+
+  23 May 2003; Seemant Kulleen <seemant@gentoo.org> sudo-1.6.6.ebuild:
+  download location fixed
 
   21 Mar 2003; Guy Martin <gmsoft@gentoo.org> sudo-1.6.6.ebuild :
   Added hppa to KEYWORDS.
