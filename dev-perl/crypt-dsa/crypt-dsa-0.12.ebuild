@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/crypt-dsa-0.12.ebuild,v 1.6 2004/10/16 23:57:25 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/crypt-dsa-0.12.ebuild,v 1.7 2005/03/23 00:39:20 mcummings Exp $
 
 inherit perl-module
 
@@ -16,4 +16,7 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~mips"
 IUSE=""
 
 DEPEND="dev-perl/data-buffer
+	dev-perl/math-pari
+	dev-perl/crypt-random
+	dev-perl/Digest-SHA1
 	dev-perl/convert-pem"

@@ -1,4 +1,14 @@
-MD5 41258616de5371919b9f04a9436c864d ChangeLog 469
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a1ffec1a958cdf638cf627c28613923e ChangeLog 577
+MD5 40171aac9f323da2edc6b7b81d3c16d6 crypt-dsa-0.12.ebuild 703
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 04e1ef5eff8ff5a62d89a8070fdab1cf crypt-dsa-0.12.ebuild 632
 MD5 885db8dae7302b1e7f9be9059d7dca58 files/digest-crypt-dsa-0.12 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCQLmWtG5z4I8BtQoRAt47AJ42h/uojc88ZOCrRJqh0BvHB/atvACffUsa
+TMWpKs6aSTf1FQO7t6F3Ssg=
+=vdEv
+-----END PGP SIGNATURE-----
