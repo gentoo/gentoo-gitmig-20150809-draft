@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9912d972ea457f9447b4d7ce9607c5d0 scim-prime-0.1.0.ebuild 929
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 bf90499be5fe166402587c04bec19aee ChangeLog 354
+MD5 037d5264daf559a64d5ac0bd853ad72f files/digest-scim-prime-0.1.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCSkZgVWNWqTUmv+0RAp7MAKCgw9JA+8eRRhl/M4QVi3ah2MK8WwCfeSbA
+GNhNlUbEbgbVEaQNRPyZmV8=
+=oxMI
+-----END PGP SIGNATURE-----
