@@ -1,0 +1,14 @@
+diff -urN htmldoc-1.8.20/fonts/Makefile htmldoc-1.8.20-modified/fonts/Makefile
+--- htmldoc-1.8.20/fonts/Makefile	Thu Jun  6 07:10:24 2002
++++ htmldoc-1.8.20-modified/fonts/Makefile	Mon Aug  5 16:11:52 2002
+@@ -46,9 +46,7 @@
+ 		Times-Bold \
+ 		Times-BoldItalic \
+ 		Times-Italic \
+-		Times-Roman \
+-		ZapfChancery \
+-		ZapfDingbats
++		Times-Roman
+ 
+ 
+ #
