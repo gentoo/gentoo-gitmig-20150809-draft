@@ -5,7 +5,7 @@
  
  # If you need to change this line please let us know
 -JAVA_INCLUDES =
-+JAVA_INCLUDES = -I@JDK_HOME@/include -I@JDK_HOME@/include/linux/
++JAVA_INCLUDES = -I${JDK_HOME}/include -I${JDK_HOME}/include/linux/
  
  # Set C related stuff
  CC = @CC@
