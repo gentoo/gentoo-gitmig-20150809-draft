@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.62 2003/12/16 07:10:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.63 2004/01/03 22:17:18 aliz Exp $
+
+  03 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7c-r1.ebuild:
+  Better filtering of existing cflags to be replaced by our own. Closing #35283.
 
   16 Dec 2003; Joshua Kinard <kumba@gentoo.org> openssl-0.9.7c-r1.ebuild:
   Made a change to the mips detection so we can differentiate betweem mips and
