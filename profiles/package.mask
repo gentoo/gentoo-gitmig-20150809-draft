@@ -27,7 +27,7 @@
 
 # <danarmak@gentoo.org> (31 Oct 2002)
 # kde 3.1 rc1: masked permanently
-~x11-libs/qt-3.1_pre20021024
+~x11-libs/qt-3.1.0_pre20021024
 ~kde-base/arts-1.1.0.1
 ~kde-base/kde-3.1_rc1
 ~kde-base/kdeaddons-3.1_rc1
