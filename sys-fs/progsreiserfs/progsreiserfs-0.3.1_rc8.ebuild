@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.1_rc8.ebuild,v 1.4 2005/01/11 18:44:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.1_rc8.ebuild,v 1.5 2005/03/09 22:45:02 robbat2 Exp $
 
 inherit libtool flag-o-matic
 
-MY_P=${PN}-${PV/_/-}
-DESCRIPTION="library for accessing and manipulating reiserfs partitions"
+MY_P="${PN}-${PV/_/-}"
+DESCRIPTION="Library for accessing and manipulating reiserfs partitions"
 HOMEPAGE="http://reiserfs.linux.kiev.ua/"
 SRC_URI="http://reiserfs.linux.kiev.ua/snapshots/${MY_P}.tar.gz"
 
@@ -15,13 +15,16 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls debug"
 
 RDEPEND=""
-DEPEND="nls? ( sys-devel/gettext )"
+DEPEND="sys-fs/e2fsprogs
+		nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${MY_P}"
 
 progsreiserfs_warning() {
 	ewarn "progsreiserfs has been proven dangerous in the past, generating bad"
 	ewarn "partitions and destroying data on resize/cpfs operations."
+	ewarn "Because of this, we do NOT provide their binaries, but only their"
+	ewarn "libraries instead, as these are needed for other applications."
 }
 
 src_compile() {
