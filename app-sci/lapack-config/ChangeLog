@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/lapack-config
 # Copyright 2004-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-config/ChangeLog,v 1.6 2004/07/04 22:12:11 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-config/ChangeLog,v 1.7 2004/08/24 19:46:23 kugelfang Exp $
+
+*lapack-config-1.0.1 (24 Aug 2004)
+
+  24 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/lapack-config-1.0.1.gz, +lapack-config-1.0.1.ebuild:
+  Version bump to 1.0.1 to make lapack-conf CONF_LIBDIR aware. This means
+  compatibility with upcoming multilib support in portage.
 
   05 Jul 2004; Danny van Dyk <kugelfang@gentoo.org>
   lapack-config-1.0.0.ebuild:
