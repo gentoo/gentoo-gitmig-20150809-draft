@@ -1,6 +1,14 @@
-MD5 a9996a09adf1054831788793ee69afae xmms-themes-0.0.3.ebuild 3996
-MD5 030067da8b49e26b695f3d4df9ecd070 xmms-themes-0.0.2.ebuild 3551
-MD5 b3ceeee02647cc231046849e0dd3c7d2 ChangeLog 1753
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 12af09f88cc6b76faf565823dc3af188 ChangeLog 1910
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 0cdcecb3deee7fa5ef679ea4b78777a0 files/digest-xmms-themes-0.0.2 5056
+MD5 9c3d0a5f4ec625db1e6b4fd73b2c0bdb xmms-themes-0.0.3.ebuild 4036
 MD5 9e1d3bc38c463160515fdbb214b3a670 files/digest-xmms-themes-0.0.3 5499
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdyjWArHZZzCEUG0RAvu0AJ0TJMht8QK2wbD/pr0umtwb1LDqOQCfQPKm
+5ce8Fym48jgtPYh23VJSP74=
+=u7xn
+-----END PGP SIGNATURE-----

@@ -1,9 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.3.ebuild,v 1.9 2004/07/19 00:00:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.3.ebuild,v 1.10 2004/10/21 03:10:53 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="Collection of XMMS themes"
-HOMEPAGE="http://www.xmms.org"
+HOMEPAGE="http://www.xmms.org/skins.php"
 THEME_URI="http://www.xmms.org/files/Skins"
 SRC_URI="${THEME_URI}/AbsoluteE_Xmms.zip
 	${THEME_URI}/Absolute_Blue-XMMS.zip
@@ -103,11 +105,9 @@ SLOT="0"
 LICENSE="freedist"
 KEYWORDS="x86 ppc sparc alpha amd64"
 
-IUSE=""
-
-DEPEND="net-misc/wget"
-RDEPEND="media-sound/xmms
-	app-arch/unzip"
+DEPEND=""
+RDEPEND="|| ( media-sound/xmms media-sound/beep-media-player )
+	 app-arch/unzip"
 
 src_unpack() {
 	local bn
