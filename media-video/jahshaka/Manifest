@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8b2250db8257c6aeed7baeee9b525593 ChangeLog 660
+MD5 e424b4613234ca351ca770787923e532 ChangeLog 847
 MD5 809abae1ca35640ceb66f0f4a7c1533d jahshaka-1.9_alpha5.ebuild 1963
-MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 abe46b34cd96505bb27ff96a5a3dbfb9 jahshaka-1.9_alpha85.ebuild 1930
-MD5 5e76200b1a1f5a51c08a49655b89880f files/digest-jahshaka-1.9_alpha85 69
+MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
+MD5 ced990506e463561aa528ccd683acdd2 jahshaka-1.9_alpha90.ebuild 2003
 MD5 eccbf141ba80b57f8127d38e4fcda2ec files/FT_Open_Flags.patch 489
-MD5 313d2b2cfddddf54563e829bb1ffc688 files/digest-jahshaka-1.9_alpha5 67
 MD5 c3cb7840c08ef0ced53f6b8d58442449 files/ftgl.h.patch 793
+MD5 313d2b2cfddddf54563e829bb1ffc688 files/digest-jahshaka-1.9_alpha5 67
+MD5 c1b72cb4c50690ed1ae6373191492c87 files/digest-jahshaka-1.9_alpha85 69
+MD5 d976b3529c773978dadcb54605be5f3c files/digest-jahshaka-1.9_alpha90 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBkhjNRPjscZbntocRAltaAJ0Q4ULTQkNBhg0TdJrYV9PUIpN0MQCfQyz8
-j2ZfiRtT7F5fw8PuDOm7d0Q=
-=Btjs
+iD8DBQFBqKjXFdQwWVoAgN4RAizgAKDMKJp7g9W64aUqdJoYkLxzF3Jl7ACbBfLi
+Z656ECTAj/EAwanGJEOLQpI=
+=sQuY
 -----END PGP SIGNATURE-----

@@ -1,6 +1,12 @@
 # ChangeLog for media-video/jahshaka
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.3 2004/11/10 13:29:02 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.4 2004/11/27 16:18:08 chriswhite Exp $
+
+*jahshaka-1.9_alpha90 (28 Nov 2004)
+
+  28 Nov 2004; Chris White <chriswhite@gentoo.org>
+  +jahshaka-1.9_alpha90.ebuild:
+  Fixed some Manifest issues.  Bumped to version 1.9_alpha 9.
 
 * jahshaka-1.9_alpha8.5 (08 Nov 2004)
   10 Nov 2004; Marc Hildebrand <zypher@gentoo.org> jahshaka-1.9_alpha85.ebuild:
