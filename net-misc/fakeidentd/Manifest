@@ -1,16 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 34601ae98c6cd2db94b9e04e66e51086 ChangeLog 2411
-MD5 202367959eaa66d8dc7c067b94cc75ac fakeidentd-2.2.ebuild 914
+MD5 27ce108a07eb8c67d97cca71be120e73 ChangeLog 2636
+MD5 727d0c5985da0066a60f21b3bbcdd1ae fakeidentd-2.2-r1.ebuild 931
 MD5 d679afc0c9c81b7e99c93482626fc7f6 files/2.0-memset.patch 327
+MD5 1f4869ca57a631819594bf1304d10c43 files/digest-fakeidentd-2.2-r1 65
 MD5 4c55675bab1ae95b2d6a8b521eba3983 files/fakeidentd.confd 399
 MD5 b1186abff99f7c0f7b48a5ab11f5b71c files/fakeidentd.rc 505
-MD5 1f4869ca57a631819594bf1304d10c43 files/digest-fakeidentd-2.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBfd1SHTu7gpaalycRArAkAKCMzsCEgiuGBUFPLKJjNf+KOZzQAgCeJ7jj
-jecph70Y94WkQqylQDsVahI=
-=J8Ic
------END PGP SIGNATURE-----
+MD5 79c3aa65f6d45c7238024526379e5820 files/fakeidentd-2.2-ident-unix.patch 129
