@@ -1,16 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gri/gri-2.12.4.ebuild,v 1.2 2003/07/02 12:33:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gri/gri-2.12.7.ebuild,v 1.1 2004/04/22 11:25:09 phosphan Exp $
+
+inherit eutils
 
 IUSE=""
 
 DESCRIPTION="language for scientific graphics programming"
 HOMEPAGE="http://gri.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+SRC_URI="mirror://sourceforge/gri/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND=">=app-sci/netcdf-3.5.0"
 
@@ -21,8 +23,7 @@ src_compile() {
 
 src_install() {
 	# Replace PREFIX now and correct paths in the startup message.
-	mv ${S}/startup.msg ${S}/startup.msg.orig
-	sed -e s,PREFIX/share/doc/gri/,/usr/share/doc/${P}/, ${S}/startup.msg.orig > ${S}/startup.msg
+	sed -e s,PREFIX/share/doc/gri/,/usr/share/doc/${P}/, -i ${S}/startup.msg
 
 	einstall || die
 
