@@ -1,18 +1,17 @@
 # Copyright 2002 moto kawasaki <kawasaki@kawasaki3.org>
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/mule-ucs-0.84.ebuild,v 1.1 2002/06/26 03:57:47 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/mule-ucs-0.84.ebuild,v 1.2 2002/08/01 19:42:43 karltk Exp $
 
 P="Mule-UCS-${PV}"
 S=${WORKDIR}/${P}
 DESCRIPTION="A character code translator."
 SRC_URI="ftp://ftp.m17n.org/pub/mule/Mule-UCS/${P}.tar.gz"
 HOMEPAGE="http://www.m17n.org/Mule-UCS/"
-
 DEPEND=">=app-editors/emacs-20.4"
 RDEPEND="${DEPEND}"
-
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 #	cd ${S};
