@@ -1,6 +1,6 @@
 MD5 5264d9b1f903df54e30285fcbf4ab699 ChangeLog 753
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 c46988920a91b396c62abb24653383eb vimspell-1.68.ebuild 2283
-MD5 4089f3c3028af42c33d47a06e309c674 vimspell-1.70.ebuild 2295
+MD5 5603cc99f3e3662f1c0fc36cab5e5ee6 vimspell-1.70.ebuild 2299
 MD5 584de3c97924b0422303af4e46df9a0d files/digest-vimspell-1.68 65
 MD5 6a4ee637c8498ba26e82c61844aa5e55 files/digest-vimspell-1.70 65
