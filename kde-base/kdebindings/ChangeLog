@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebindings
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.68 2004/08/12 11:19:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.69 2004/08/25 18:14:27 caleb Exp $
+
+*kdebindings-3.3.0 (25 Aug 2004)
+
+  25 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdebindings-3.3.0.ebuild:
+  3.3.0 final
 
   12 Aug 2004; Carsten Lohrke <carlo@gentoo.org> kdebindings-3.2.3.ebuild:
   fixed kdebase dependency, #59775
