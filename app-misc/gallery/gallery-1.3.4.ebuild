@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.3.4.ebuild,v 1.2 2003/07/21 20:00:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.3.4.ebuild,v 1.3 2003/08/11 19:16:17 mholzer Exp $
 
 DESCRIPTION="Web based (PHP Script) photo album viewer/creator."
 HOMEPAGE="http://gallery.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
 DEPEND=">=net-www/apache-1.3.24-r1
 	>=dev-php/mod_php-4.1.2-r5
 	>=media-gfx/jhead-1.6
@@ -39,6 +39,9 @@ src_install() {
 
 	insinto ${DST_PATH}/classes/postnuke0.7.1
 	doins classes/postnuke0.7.1/*.php
+
+	insinto ${DST_PATH}/classes/remote
+	doins classes/remote/*.php
 
 	insinto ${DST_PATH}/css
 	doins css/*.default
@@ -79,10 +82,11 @@ pkg_postinst() {
 	chmod 700 ${DST_PATH}/secure.sh ${DST_PATH}/configure.sh
 
 	einfo
-	einfo "For new installations  point your browser to http://www.yourhost.com/gallery/setup/"
+	einfo "For new installations point your browser to "
+	einfo "http://www.yourhost.com/gallery/setup/"
 	einfo "and follow the instructions."
-        einfo "-----------------------------------------------------------------------------------"
-        einfo "For upgrades, just run  	# cd ${DST_PATH}"
-		einfo "							# sh ./secure.sh" 
+	einfo "--------------------------------------------"
+	einfo "For upgrades, just run  	# cd ${DST_PATH}"
+	einfo "							# sh ./secure.sh" 
 	einfo
 }
