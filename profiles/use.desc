@@ -56,7 +56,6 @@ innodb - Adds innodb support for mySQL (transaction support)
 ipv6 - Adds support for IP version 6
 java - Adds support for Java
 jpeg - Adds JPEG image support
-jpilot - Adds JPilot support (Software for the Palm Pilot)
 kde - Adds support for kde-base/kde (K Desktop Enviroment)
 lcms - Adds lcms support to media-gfx/imagemagick (Color management)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
@@ -65,7 +64,6 @@ libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric
 mpeg - Adds libmpeg3 support to various packages.
 libwww - Adds libwww support (General purpose WEB API)
 matrox - Adds Matrox MGA support to mplayer
-mhash - Adds mhash library support to php (library of hash algorithms)
 mikmod - 
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
 motif - Adds motif support (Open Motif)
