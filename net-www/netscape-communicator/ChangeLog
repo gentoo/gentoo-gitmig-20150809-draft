@@ -1,6 +1,6 @@
-# ChangeLog for net-www/netscape
+# ChangeLog for net-www/netscape-communicator
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.5 2002/12/13 11:00:27 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.6 2002/12/17 19:46:34 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
