@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/jjtraveler
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.1 2004/07/20 00:23:11 karltk Exp $
+
+*jjtraveler-0.4.3 (20 Jul 2004)
+
+  20 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org> jjtraveler-0.4.3.ebuild:
+  Initial import. Ebuild submitted by myself.
