@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nikto
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.10 2004/11/20 04:39:31 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.11 2005/03/13 20:51:10 mcummings Exp $
+
+*nikto-1.34-r1 (13 Mar 2005)
+
+  13 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  +nikto-1.34-r1.ebuild:
+  Bug 70465: Andreas Kobara <abusch@gmx.net> points out that nikto no longer
+  as an external dependancy on libwhisker, and in fact provides its own
+  variation now. -r1 ebuild drops this dependancy. Thanks Andreas!
 
   19 Nov 2004; Jason Wever <weeve@gentoo.org> nikto-1.32.ebuild:
   Stable on sparc.
