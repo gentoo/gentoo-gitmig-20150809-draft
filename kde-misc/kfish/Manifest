@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d441c8e19fcab1c23205db91817da056 kfish-2.01.ebuild 468
+MD5 a869bd60940946a1a5658b88af63e14b ChangeLog 1252
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 8f0e1d6f3f3eb7230e9cb971d5c5456d ChangeLog 1165
+MD5 ec5ffcfefd74f0bddaae25e1a300df8d kfish-2.01.ebuild 475
 MD5 59ce5a126e5b91005cedde258006e725 files/digest-kfish-2.01 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBhCsuI1lqEGTUzyQRApkzAKCAvrCHByshXPGAVLUzxn2qGEoCdQCgs7/S
-aYTgyFjRl0TDa8+VHCA0ncE=
-=7cD4
------END PGP SIGNATURE-----
