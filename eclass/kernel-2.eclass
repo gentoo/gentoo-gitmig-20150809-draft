@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.49 2004/11/25 23:05:30 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.50 2004/11/25 23:39:34 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -32,7 +32,8 @@
 #						  postinst and can be used to carry additional postinst
 #						  messages
 # K_EXTRAEWARN			- same as K_EXTRAEINFO except ewarn's instead of einfo's
-# K_NODETECTVER			- Dont try to detect_version in pkg_setup. we will specify KV, OKV and EXTRAVERSION ourselves.
+# K_NODETECTVER			- Dont try to detect_version in pkg_setup. we will
+#						  specify KV, OKV and EXTRAVERSION ourselves.
 # H_SUPPORTEDARCH		- this should be a space separated list of ARCH's which
 #						  can be supported by the headers ebuild
 # UNIPATCH_LIST			- space delimetered list of patches to be applied to the
