@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.13 2004/06/28 01:15:52 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.14 2004/07/21 02:56:47 robbat2 Exp $
+
+*devtodo-0.1.17-r1 (20 Jul 2004)
+
+  20 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> devtodo-0.1.17-r1.ebuild,
+  files/devtodo-0.1.11.colourplain.patch, files/devtodo-1.1.17-notdl.patch:
+  bug #55371, cleanup ebuild, remove old unused patch from tree.
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> devtodo-0.1.17.ebuild:
   Stable on mips
