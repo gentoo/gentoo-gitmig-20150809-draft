@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b4beca122c7f601aa073549625e3edca gml-0.5.ebuild 596
-MD5 271bd8424f02f2f06dab40654510372f ChangeLog 395
+MD5 b4ae416da0d41b38e63a3a37d1f28bd7 ChangeLog 501
 MD5 1cd961bae3b05b54fd235096cdc603f5 metadata.xml 270
+MD5 f870b3ed8d90591d1634e28dca43baf2 gml-0.5.ebuild 545
 MD5 f8db8c342425951bc7eaba6157dd5653 files/digest-gml-0.5 53
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBgrTt5FrxP71izLARAsC4AKDWusZMpdjwvAa4Q3AF4dzAf56BkgCgzdGR
-kPUbxBdKbC8quJR3CbpjuSk=
-=QzUd
+iD8DBQFB2drlQlM6RnzZP+IRAjQnAJ9ZsPzd25fqzEoIJmtHALPcxWu4NgCfWjUr
+oQ2pCijlfkq5URivH2YG0H8=
+=CS9U
 -----END PGP SIGNATURE-----
