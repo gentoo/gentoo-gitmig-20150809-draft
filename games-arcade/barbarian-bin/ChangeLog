@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/barbarian-bin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/ChangeLog,v 1.1 2004/12/13 08:39:22 mr_bones_ Exp $
+
+*barbarian-bin-1.01 (13 Dec 2004)
+
+  13 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +barbarian-bin-1.01.ebuild:
+  initial commit - ebuild by Alexandru Toma via bug #60524
+
