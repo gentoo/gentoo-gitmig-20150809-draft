@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/webgraph-1.2.2.ebuild,v 1.2 2004/06/24 22:45:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/webgraph-1.2.2.ebuild,v 1.3 2004/07/30 21:21:15 axxo Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE="doc"
 
 RDEPEND=">=virtual/jdk-1.4
-		>=dev-java/mg4j-0.8.2"
+		>=dev-java/mg4j-bin-0.8.2"
 
 src_compile() { :; }
 
