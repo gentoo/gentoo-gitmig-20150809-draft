@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.98 2003/11/08 22:09:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.99 2003/11/20 02:45:11 lu_zero Exp $
+
+  20 Nov 2003; Luca Barbato <lu_zero@gentoo.org> kdelibs-3.1.4.ebuild:
+  Marked ppc
 
   08 Nov 2003; Caleb Tennis <caleb@gentoo.org> kdelibs-3.2.0_beta1.ebuild:
   Add back in kdelibs apidocs compilation is the user has the doc flag set.
