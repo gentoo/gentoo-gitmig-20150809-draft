@@ -137,9 +137,9 @@ diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/kernel26compat.h svgalib-1.9.17
 +# endif
 +
 +#define my_remap_page_range(vma, start, ofs, len, prot) remap_page_range(start,ofs,len,prot)
-+
++# if LINUX_VERSION_CODE < KERNEL_VERSION(2,4,23)
 +typedef void irqreturn_t;
-+
++# endif
 +#else
 +
 +# ifndef KERNEL_2_6
