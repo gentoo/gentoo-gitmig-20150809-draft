@@ -1,3 +1,6 @@
-MD5 2c5d48933d32fcabdc59b97b9126c4c4 ChangeLog 915
 MD5 d98edc5340575e3e876cc17162cf05e0 check-0.8.4.ebuild 583
+MD5 d51f408190dda026fa9e9f8ff35ad22e check-0.9.2.ebuild 517
+MD5 42748c180a9aa2db09d5af9054d3e1ee ChangeLog 1038
+MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
 MD5 fdd436cebe214ab0c7604930defd4439 files/digest-check-0.8.4 63
+MD5 830319e8fc207800511d5c70b75a7f21 files/digest-check-0.9.2 63
