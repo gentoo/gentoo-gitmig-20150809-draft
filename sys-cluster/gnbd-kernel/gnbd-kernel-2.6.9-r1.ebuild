@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-2.6.9-r1.ebuild,v 1.1 2005/03/19 16:33:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-2.6.9-r1.ebuild,v 1.2 2005/03/19 16:50:54 xmerlin Exp $
 
 inherit linux-mod
 
-MY_PV="${PV}-0"
+MY_PV="${PV}-8"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="GFS Network Block Devices module"

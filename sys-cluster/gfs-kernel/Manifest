@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0ae910441b65b828961033922edacb75 ChangeLog 598
+MD5 1bcf66bef8bfcf721bf4405ed692d9db ChangeLog 770
 MD5 b7bc682cd01c8769991781ac4a1b8d66 gfs-kernel-2.6.9.ebuild 1022
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
+MD5 f4088cbc0929d57de7ccbd0e1b6d5101 gfs-kernel-2.6.9-r1.ebuild 1201
 MD5 9787a1d26d66d08a9384e0cea116ca2b files/digest-gfs-kernel-2.6.9 70
+MD5 f2284038137161ec3dd4edb2d5f1d78e files/digest-gfs-kernel-2.6.9-r1 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCMFhJgMUyd/cdjWsRAlfGAKCAcaGyQFmhqDqzkaPMUhnGldOHNwCfVALO
-Hmdlmtnfj3XQffVF30DHuVk=
-=3EwX
+iD8DBQFCPFnqgMUyd/cdjWsRAryQAJ9Uxi15Z3MMf2PetY3nPpAa5z+MKwCdFKuN
+JxU+y11gn0yfOEJbk6vLZFI=
+=Fajk
 -----END PGP SIGNATURE-----
