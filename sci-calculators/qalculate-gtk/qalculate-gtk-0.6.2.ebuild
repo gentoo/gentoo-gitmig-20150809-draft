@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.6.2.ebuild,v 1.1 2004/12/24 15:04:49 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.6.2.ebuild,v 1.2 2004/12/28 20:07:25 ribosome Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -15,7 +15,7 @@ IUSE="nls gnome"
 
 RDEPEND=">=x11-libs/gtk+-2.3
 	>=gnome-base/libglade-2
-	>=dev-libs/cln-1.1
+	>=sci-libs/cln-1.1
 	>=media-gfx/gnuplot-3.7
 	dev-libs/libxml2
 	net-misc/wget
