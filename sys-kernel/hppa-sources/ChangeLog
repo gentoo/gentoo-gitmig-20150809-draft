@@ -1,0 +1,19 @@
+# ChangeLog for sys-kernel/linux-headers
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.1 2003/02/10 23:43:27 gmsoft Exp $
+
+  10 Feb 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.20_p26.ebuild :
+  Incremented patch level.
+
+*hppa-sources-2.4.20_p24 (09 Feb 2003)
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.20_p24.ebuild :
+  Incremented patch level.
+
+*hppa-sources-2.4.20_p24 (09 Feb 2003)
+
+  08 Feb 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.20_p23.ebuild :
+  Initial import.
+
+*hppa-sources-2.4.20_p23 (08 Feb 2003)
+
