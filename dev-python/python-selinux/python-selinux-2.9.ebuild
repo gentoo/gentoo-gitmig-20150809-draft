@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.8.ebuild,v 1.1 2003/11/09 19:07:29 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.9.ebuild,v 1.1 2003/11/13 06:08:20 method Exp $
 
 DESCRIPTION="Python bindings for SELinux functions"
 HOMEPAGE="http://selinux.dev.gentoo.org/python"
