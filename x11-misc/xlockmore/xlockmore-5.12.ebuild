@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.12.ebuild,v 1.9 2004/10/19 09:06:21 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.12.ebuild,v 1.10 2004/12/05 15:41:00 pyrania Exp $
 
 inherit gnuconfig
 
@@ -25,7 +25,7 @@ DEPEND="virtual/x11
 
 src_compile() {
 	gnuconfig_update
-
+	
 	local myconf
 	myconf="--enable-vtlock"
 	use pam && myconf="${myconf} --enable-pam" \
@@ -37,6 +37,8 @@ src_compile() {
 
 	use motif || myconf="${myconf} --without-motif"
 	use gtk || myconf="${myconf} --without-gtk"
+
+	epatch ${FILESDIR}/XLock.ad.patch || die "epatch failed"
 
 	./configure \
 		--prefix=/usr \

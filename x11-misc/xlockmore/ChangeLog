@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.16 2004/10/19 09:06:21 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.17 2004/12/05 15:41:00 pyrania Exp $
+
+  05 Dec 2004; Markus Nigbur <pyrania@gentoo.org> +files/XLock.ad.patch,
+  xlockmore-5.12.ebuild:
+  Fixed bug #48457.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xlockmore-5.12.ebuild:
   Stable on amd64.

@@ -1,0 +1,17 @@
+--- xlock/XLock.ad	2004-04-12 10:33:03.000000000 -0400
++++ xlock/XLock.ad.new	2004-05-26 13:33:39.553577432 -0400
+@@ -43,10 +43,10 @@
+ !XLock.icongeometry: 256x256
+ 
+ ! For sound
+-XLock.locksound: /usr/lib/X11/xlock/sounds/complete.au
+-XLock.infosound: /usr/lib/X11/xlock/sounds/identify-please.au
+-XLock.validsound: /usr/lib/X11/xlock/sounds/thank-you.au
+-XLock.invalidsound: /usr/lib/X11/xlock/sounds/not-programmed.au
++XLock.locksound: /usr/share/xlockmore/sounds/thank-you.au
++XLock.infosound: /usr/share/xlockmore/sounds/identify-please.au
++XLock.validsound: /usr/share/xlockmore/sounds/complete.au
++XLock.invalidsound: /usr/share/xlockmore/sounds/not-programmed.au
+ !XLock.locksound: complete.au
+ !XLock.infosound: identify-please.au
+ !XLock.validsound: thank-you.au
