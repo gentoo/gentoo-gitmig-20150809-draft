@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.17 2005/01/15 21:19:02 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.18 2005/01/15 21:46:00 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -429,7 +429,7 @@ check_extra_config() {
 				for i in ${MODULE_NAMES}
 				do
 					n="${i//${temp_config}}"
-					[ -z "${n//(*}" ] && MODULE_IGNORE="${MODULE_IGNORE} ${i}"
+					[ -z "${n//(*}" ] && MODULE_IGNORE="${MODULE_IGNORE} ${temp_config}"
 				done
 				error=0
 			fi

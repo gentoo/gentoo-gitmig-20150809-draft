@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.19 2005/01/15 21:19:02 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.20 2005/01/15 21:46:00 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -229,19 +229,22 @@ display_postinst() {
 	file=${ROOT}/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}
 	file=${file/\/\///}
 
+	for i in ${MODULE_IGNORE}
+	do
+		MODULE_NAMES=${MODULE_NAMES//${i}(*}
+	done
+
 	einfo "If you would like to load this module automatically upon boot"
 	einfo "please type the following as root:"
 	for i in ${MODULE_NAMES}
 	do
-		moduletemp="$(echo ${i} | sed -e "s:\(.*\)(\(.*\)):\1 \2:")"
-		modulename="${moduletemp/ */}"
-		moduletemp="${moduletemp/* /}"
-		# if we specify two args, then we can set moduledir
-		[ -z "${moduletemp/*:*/}" ] && moduledir="${moduletemp/:*/}"
-		# if we didnt pass the brackets, then we shouldnt accept anything
-		[ -n "${moduletemp/${modulename}/}" ] && sourcedir="${moduletemp/*:/}"
-		moduledir="${moduledir:-misc}"
-		sourcedir="${sourcedir:-${S}}"
+		for n in $(find_module_params ${i})
+		do
+			eval ${n/:*}=${n/*:/}
+		done
+		libdir=${libdir:-misc}
+		srcdir=${srcdir:-${S}}
+		objdir=${objdir:-${srcdir}}
 		
 		einfo "    # echo \"${modulename}\" >> ${file}"
 	done
@@ -302,7 +305,11 @@ linux-mod_src_compile() {
 	local modulename libdir srcdir objdir i n
 	
 	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
-	MODULE_NAMES=${MODULE_NAMES//${MODULE_IGNORE}}
+	
+	for i in ${MODULE_IGNORE}
+	do
+		MODULE_NAMES=${MODULE_NAMES//${i}(*}
+	done
 
 	for i in ${MODULE_NAMES}
 	do
@@ -329,6 +336,11 @@ linux-mod_src_compile() {
 
 linux-mod_src_install() {
 	local modulename libdir srcdir objdir i n
+	
+	for i in ${MODULE_IGNORE}
+	do
+		MODULE_NAMES=${MODULE_NAMES//${i}(*}
+	done
 
 	for i in ${MODULE_NAMES}
 	do
