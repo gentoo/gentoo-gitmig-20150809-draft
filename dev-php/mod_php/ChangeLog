@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.187 2004/10/27 03:30:55 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.188 2004/11/03 06:45:05 psi29a Exp $
+
+  03 Nov 2004; Bret Curtis <psi29a@gentoo.org> mod_php-4.3.9.ebuild:
+  marked as ~mips for testing
 
   26 Oct 2004; Tom Gall <tgall@gentoo.org> mod_php-4.3.9.ebuild:
   stable on ppc64, bug #66968
