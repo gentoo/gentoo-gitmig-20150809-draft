@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.186 2004/06/11 07:55:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.187 2004/06/11 09:46:03 kumba Exp $
+
+  11 Jun 2004; Joshua Kinard <kumba@gentoo.org>
+  glibc-2.3.4.20040605-r1.ebuild:
+  More cleanups: move strip-flags and friends into setup_flags where they belong.
 
   11 Jun 2004; Joshua Kinard <kumba@gentoo.org>
   glibc-2.3.4.20040605-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.2 2004/06/11 07:55:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.3 2004/06/11 09:46:03 kumba Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -8,35 +8,6 @@ inherit eutils flag-o-matic gcc
 
 # make check will fail if sandbox is enabled
 export SANDBOX_DISABLED="1"
-
-# Recently there has been a lot of stability problem in Gentoo-land.  Many
-# things can be the cause to this, but I believe that it is due to gcc3
-# still having issues with optimizations, or with it not filtering bad
-# combinations (protecting the user maybe from himeself) yet.
-#
-# This can clearly be seen in large builds like glibc, where too aggressive
-# CFLAGS cause the tests to fail miserbly.
-#
-# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
-# knows what he is talking about:
-#
-#   People really shouldn't force code-specific options on... It's a
-#   bad idea. The -march options aren't just to look pretty. They enable
-#   options that are sensible (and include sse,mmx,3dnow when apropriate).
-#
-# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
-# you do not like it, comment it, but do not bugreport if you run into
-# problems.
-#
-# <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
-strip-unsupported-flags
-
-
-# Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
-export CFLAGS="${CFLAGS//-O?} -O2"
-export CXXFLAGS="${CFLAGS}"
-export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 
 
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -70,12 +41,18 @@ PROVIDE="virtual/glibc"
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform
-# Will also come useful for testing kernel-headers without screwing up
+# Will also become useful for testing kernel-headers without screwing up
 # whole system
 [ -z "${ALT_HEADERS}" ] && ALT_HEADERS="/usr/include"
 
 
 setup_flags() {
+	# Over-zealous CFLAGS can often cause problems.  What may work for one person may not
+	# work for another.  To avoid a large influx of bugs relating to failed builds, we 
+	# strip most CFLAGS out to ensure as few problems as possible.
+	strip-flags
+	strip-unsupported-flags
+
 	# -freorder-blocks for all but ppc
 	use ppc || append-flags "-freorder-blocks"
 
@@ -114,6 +91,11 @@ setup_flags() {
 	# We don't want these flags for glibc
 	filter-flags "-fomit-frame-pointer -malign-double"
 	filter-ldflags "-pie"
+
+	# Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
+	export CFLAGS="${CFLAGS//-O?} -O2"
+	export CXXFLAGS="${CFLAGS}"
+	export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 }
 
 
