@@ -1,8 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.35 2004/03/04 19:13:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.36 2004/03/06 23:44:11 vapier Exp $
 
 *udev-021 (04 Mar 2004)
+
+  06 Mar 2004; Mike Frysinger <vapier@gentoo.org>
+  Add gcc-2.x compat patch.
 
   04 Mar 2004; Martin Schlemmer <azarah@gentoo.org> udev-021.ebuild:
   Update version.  Add udevstart and manpage to be installed.

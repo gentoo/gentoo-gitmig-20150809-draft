@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-021.ebuild,v 1.1 2004/03/04 19:13:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-021.ebuild,v 1.2 2004/03/06 23:44:12 vapier Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -34,6 +34,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	epatch ${FILESDIR}/${P}-udev_add_c-gcc295-compat.patch
+
 	# No need to clutter the logs ...
 	sed -ie '/^DEBUG/ c\DEBUG = false' Makefile
 	# Do not use optimization flags from the package
