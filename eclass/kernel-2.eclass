@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.101 2005/02/12 22:32:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.102 2005/02/14 11:33:11 eradicator Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -262,7 +262,7 @@ install_headers() {
 			dodir ${ddir}/asm-sparc64
 			cp -ax ${S}/include/asm-sparc64/* ${D}/${ddir}/asm-sparc64
 
-			create_ml_includes ${ddir}/asm __sparc__:${ddir}/asm-sparc __sparc64__:${ddir}/asm-sparc64
+			create_ml_includes ${ddir}/asm !__arch64__:${ddir}/asm-sparc __arch64__:${ddir}/asm-sparc64
 			;;
 		x86_64)
 			dodir ${ddir}/asm-i386
