@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.5 2004/04/27 17:18:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.6 2004/05/15 00:39:10 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lua.org/ftp/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha -hppa ~mips ppc sparc x86 ~amd64"
+KEYWORDS="alpha -hppa ~mips ppc sparc x86 ~amd64"
 IUSE="readline"
 
 DEPEND=">=sys-apps/sed-4
