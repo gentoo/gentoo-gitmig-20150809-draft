@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.4-r2.ebuild,v 1.2 2002/04/03 00:24:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.5-r1.ebuild,v 1.1 2002/04/28 00:55:36 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Core Libraries"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=media-libs/imlib-1.9.10
@@ -13,7 +13,9 @@ DEPEND=">=media-libs/imlib-1.9.10
 		>=gnome-base/ORBit-0.5.12
 		>=x11-libs/gtk+-1.2.10-r4
 		<sys-libs/db-2
-		nls? ( >=sys-devel/gettext-0.10.40 >=dev-util/intltool-0.11 )"
+		app-text/docbook-sgml"
+
+RDEPEND="nls? ( >=sys-devel/gettext-0.10.40 >=dev-util/intltool-0.11 )"
 
 
 src_compile() {                           
