@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r8.ebuild,v 1.1 2004/02/07 09:25:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r9.ebuild,v 1.1 2004/02/17 13:40:58 usata Exp $
 
 W3M_CVS_PV="1.890"
 W3M_CVS_P="${PN}-cvs-${W3M_CVS_PV}"
@@ -67,7 +67,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-libwc-gentoo.diff
 	epatch ${DISTDIR}/${W3M_CVS_P}-nls-4.diff
 	#epatch ${DISTDIR}/${W3M_CVS_P}-ja.po.diff
-	use async && epatch ${DISTDIR}/${W3M_CVS_P}-async-5.diff.gz
+	if [ -n "`use async`" ] ; then
+		epatch ${DISTDIR}/${W3M_CVS_P}-async-5.diff.gz
+		epatch ${FILESDIR}/${P}-async-m17n-gentoo.diff
+	fi
 	#epatch ${DISTDIR}/${P}-cvs-1.895_256-001.patch.gz
 	#use canna && epatch ${DISTDIR}/${W3M_CVS_P}-canna.patch
 }
