@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r4.ebuild,v 1.3 2004/08/06 16:12:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r4.ebuild,v 1.4 2004/08/08 06:10:40 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -105,11 +105,11 @@ src_unpack() {
 
 	make defconfig >/dev/null || die "could not config"
 
-	# this could be a debug flag
-	if ! use debug ; then
-		for def in UCLIBC_PROFILING DO{DEBUG,ASSERTS} SUPPORT_LD_DEBUG{,_EARLY} ; do
-			sed -i -e "s:${def}=y:# ${def} is not set:" .config
-		done
+	for def in UCLIBC_PROFILING DO{DEBUG,ASSERTS} SUPPORT_LD_DEBUG{,_EARLY} ; do
+		sed -i -e "s:${def}=y:# ${def} is not set:" .config
+	done
+	if use debug ; then
+		echo "DODEBUG=y" >> .config
 	fi
 
 	for def in DO_C99_MATH UCLIBC_HAS_{RPC,CTYPE_CHECKED,WCHAR,HEXADECIMAL_FLOATS,GLIBC_CUSTOM_PRINTF,FOPEN_EXCLUSIVE_MODE,GLIBC_CUSTOM_STREAMS,PRINTF_M_SPEC,FTW} ; do
@@ -170,6 +170,7 @@ src_unpack() {
 	emake clean >/dev/null || die "could not clean"
 
 	sed -i 's:\$(R_PREFIX):\\"$(RUNTIME_PREFIX)\\" $(LIBRARY_CACHE):' utils/Makefile
+	sed -i 's: I\.: -I.:' ldso/libdl/Makefile
 }
 
 src_compile() {
