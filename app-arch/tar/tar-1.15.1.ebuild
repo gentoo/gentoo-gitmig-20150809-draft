@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.4 2005/03/22 13:15:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.5 2005/03/26 19:37:38 kloeri Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.gnu.org/gnu/tar/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86"
 IUSE="nls static build"
 
 DEPEND="app-arch/gzip
