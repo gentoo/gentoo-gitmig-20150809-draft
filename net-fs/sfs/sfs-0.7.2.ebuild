@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.10 2004/07/01 22:15:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.11 2004/07/14 23:54:29 agriffis Exp $
 
 inherit eutils
 
@@ -20,8 +20,6 @@ DEPEND="virtual/libc
 
 RDEPEND="$DEPEND
 		>=net-nds/portmap-5b-r6"
-
-S="${WORKDIR}/${P}"
 
 pkg_setup() {
 	# checking for NFS support *seems* like a good idea, but since
