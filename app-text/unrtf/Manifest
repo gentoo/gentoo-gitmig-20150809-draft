@@ -1,3 +1,3 @@
-MD5 b5fe3aaf6fc458ab7c52127ff2de3694 files/digest-unrtf-0.18.1 63
-MD5 5ead02412744336afa6990336da65727 unrtf-0.18.1.ebuild 725
-MD5 36eb36ce23d6362b09b702bfe4b674a7 ChangeLog 413
+MD5 625da764fdc8d86412e7e0484491ceba ChangeLog 566
+MD5 307d6a11fe1c2fcdbb17a90d94f8a45d unrtf-0.18.1.ebuild 714
+MD5 748102f0227b9757f2fd6e6c8b956c54 files/digest-unrtf-0.18.1 133
