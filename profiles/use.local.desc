@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.951 2005/02/16 16:59:13 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.952 2005/02/17 01:57:20 trapni Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -708,6 +708,7 @@ sys-libs/libsepol:mls - Add experimental multi level security policy support
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 sys-libs/uclibc:xattr - enables extended attributes
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
+www-apps/mediawiki:math - Adds math rendering support
 www-apps/nut:cgi - Add CGI script support
 www-client/netscape:aim - AOL Instant Messenger support
 www-client/netscape:moznomail - Do not install Netscape Mail
