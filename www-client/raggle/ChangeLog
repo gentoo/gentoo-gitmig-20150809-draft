@@ -1,6 +1,9 @@
 # ChangeLog for www-client/raggle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/raggle/ChangeLog,v 1.7 2004/12/01 21:02:17 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/raggle/ChangeLog,v 1.8 2004/12/02 20:03:54 citizen428 Exp $
+
+  02 Dec 2004; Michael Kohl <citizen428@gentoo.org> raggle-0.3.2.ebuild:
+  raggle 0.3.2 now should also work with Ruby 1.6, thanks to ruby-shim18.
 
 *raggle-0.3.2 (01 Dec 2004)
 
