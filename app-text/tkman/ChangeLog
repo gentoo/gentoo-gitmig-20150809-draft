@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tkman
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.8 2003/04/23 17:15:56 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.9 2003/07/17 00:14:40 pylon Exp $
+
+  17 Jul 2003; Lars Weiler <pylon@gentoo.org> tkman-2.1-r1.ebuild:
+  Set ppc into KEYWORDS
 
 *tkman-2.1-r1 (23 Apr 2003)
 
