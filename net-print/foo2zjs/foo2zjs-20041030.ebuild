@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20041030.ebuild,v 1.2 2005/01/09 15:01:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20041030.ebuild,v 1.3 2005/02/02 20:25:12 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -56,6 +56,7 @@ src_install() {
 	make DESTDIR=${D} install \
 		|| die "make install failed"
 
-	use usb && make DESTDIR=${D} install-hotplug \
-		|| die "make install-hotplug failed"
+	use usb && \
+		( make DESTDIR=${D} install-hotplug \
+		|| die "make install-hotplug failed" )
 }
