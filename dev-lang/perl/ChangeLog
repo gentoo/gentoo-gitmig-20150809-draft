@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.55 2004/02/21 11:15:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.56 2004/02/27 20:35:59 mcummings Exp $
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org> perl-5.6.1-r10.ebuild,
+  perl-5.6.1-r11.ebuild, perl-5.6.1-r12.ebuild:
+  5.6.1 is no longer a requirement/needed in the tree
 
   21 Feb 2004; Michael Cummings <mcummings@gentoo.org> perl-5.8.0-r11.ebuild,
   perl-5.8.0-r12.ebuild, perl-5.8.0-r9.ebuild, perl-5.8.2.ebuild,
