@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.2.21_pre3.ebuild,v 1.5 2002/10/04 06:36:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.2.21_pre3.ebuild,v 1.6 2002/12/09 04:37:29 manson Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -33,14 +33,14 @@ HOMEPAGE="http://www.kernel.org/
 		  http://www.namesys.com" 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="sparc sparc64 -ppc -x86"
+KEYWORDS="sparc  -ppc -x86"
 
 KERNEL_ARCH=`echo $ARCH |\
-  sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+  sed -e s/[i]*.86/i386/ -e s/sun4u// -e s/arm.*/arm/ -e s/sa110/arm/`
 if [ -z "$KERNEL_ARCH" ]
 then
 	KERNEL_ARCH=`uname -m |\
-	sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+	sed -e s/[i]*.86/i386/ -e s/sun4u// -e s/arm.*/arm/ -e s/sa110/arm/`
 fi
 
 if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
@@ -52,7 +52,7 @@ then
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31 sys-apps/console-tools >=sys-apps/modutils-2.4.2 sys-devel/perl"
 	
 	RDEPEND =">=sys-libs/ncurses-5.2 >=sys-apps/baselayout-1.7.4"
-	if [ "$KERNEL_ARCH" = "sparc64" ]
+	if [ "$KERNEL_ARCH" = "" ]
 	then
 		# Need special compiler for this platform
 		RDEPEND="$RDEPEND sys-devel/egcs64-sparc"
@@ -117,13 +117,13 @@ src_install() {
 		dodir /usr/include/asm
 		if [ `expr $KERNEL_ARCH ":" "sparc"` -eq 5 ]
 		then
-			if [ "$KERNEL_ARCH" = "sparc64" ]
+			if [ "$KERNEL_ARCH" = "" ]
 			then
-				cp -ax ${S}/include/asm-sparc64 ${D}/usr/include/asm-sparc64
-				if [ ! -r ${D}/usr/include/asm-sparc64/asm_offsets.h ]
+				cp -ax ${S}/include/asm- ${D}/usr/include/asm-
+				if [ ! -r ${D}/usr/include/asm-/asm_offsets.h ]
 				then
-					cp -ax ${GFILESDIR}/sparc64-asm_offsets.h \
-						${D}/usr/include/asm-sparc64/asm_offsets.h
+					cp -ax ${GFILESDIR}/-asm_offsets.h \
+						${D}/usr/include/asm-/asm_offsets.h
 				fi
 			fi
 

@@ -1,6 +1,6 @@
 # Copyright 2002 damien krotkine <dams@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ldetect-0.4.7.ebuild,v 1.2 2002/12/07 15:39:44 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ldetect-0.4.7.ebuild,v 1.3 2002/12/09 04:37:29 manson Exp $
 
 ECVS_ANON="no"
 ECVS_USER="anoncvs"
@@ -19,7 +19,7 @@ SRC_URI=""
 
 SLOT="0"
 LICENSE="GPL"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
 
 src_compile() {
 	cd ../../ldetect;

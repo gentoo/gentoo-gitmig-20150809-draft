@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.19-r7.ebuild,v 1.2 2002/10/20 09:40:20 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.19-r7.ebuild,v 1.3 2002/12/09 04:37:28 manson Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -25,7 +25,7 @@ PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://www.openmosix.org/" 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
+KEYWORDS="x86 -ppc -sparc  -alpha"
 
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]

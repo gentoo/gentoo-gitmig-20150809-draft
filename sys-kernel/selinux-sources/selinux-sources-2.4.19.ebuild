@@ -26,7 +26,7 @@ DESCRIPTION="LSM patched kernel with SELinux archive"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 
 	http://gentoo.org/~styx/patches-${KV}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/ http://www.nsa.gov/selinux"
-KEYWORDS="~x86 -ppc -sparc -sparc64"
+KEYWORDS="~x86 -ppc -sparc "
 
 src_unpack() {
 	unpack ${A}

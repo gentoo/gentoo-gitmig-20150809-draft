@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r1.ebuild,v 1.6 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r1.ebuild,v 1.7 2002/12/09 04:37:29 manson Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE="build"
@@ -26,7 +26,7 @@ PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://oss.sgi.com/projects/xfs http://evms.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 
 if [ $ETYPE = "sources" ]
 then

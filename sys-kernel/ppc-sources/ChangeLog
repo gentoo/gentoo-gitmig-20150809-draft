@@ -1,7 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: ChangeLog,v 1.7 2002/10/10 11:04:22 kain Exp $
+# $Id: ChangeLog,v 1.8 2002/12/09 04:37:28 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *ppc-sources-2.4.20-r1 (10 Oct 2002)
 
   10 Oct 2002; Kain <kain@kain.org> ppc-sources-2.4.20-r1 :

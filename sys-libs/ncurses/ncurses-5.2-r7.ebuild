@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r7.ebuild,v 1.1 2002/10/26 09:45:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r7.ebuild,v 1.2 2002/12/09 04:37:29 manson Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ DESCRIPTION="Linux console display libarary"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
 
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="MIT"
 SLOT="5"
 

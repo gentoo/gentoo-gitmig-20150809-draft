@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.0-r2.ebuild,v 1.11 2002/10/05 18:18:31 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.0-r2.ebuild,v 1.12 2002/12/09 04:37:29 manson Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="x86? ( mirror://gentoo/${PN}.tar.gz )"
 HOMEPAGE="http://www.gentoo.org/"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 LICENSE="GPL"
 
 DEPEND="virtual/glibc"

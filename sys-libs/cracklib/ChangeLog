@@ -1,7 +1,10 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.6 2002/10/25 23:22:05 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.7 2002/12/09 04:37:29 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *cracklib-2.7-r6 (25 Oct 2002)
 
   25 Oct 2002; Nick Hadaway <raker@gentoo.org> cracklib-2.7-r6.ebuild,

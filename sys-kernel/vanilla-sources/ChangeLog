@@ -1,7 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.7 2002/11/29 18:41:27 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.8 2002/12/09 04:37:29 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *vanilla-sources-2.4.20 (29 Nov 2002)
 
   29 Nov 2002; Brandon Low <lostlogic@gentoo.org>

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19.ebuild,v 1.7 2002/11/30 21:57:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19.ebuild,v 1.8 2002/12/09 04:37:28 manson Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -18,21 +18,21 @@ PROVIDE="virtual/kernel"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc  alpha"
 
 KERNEL_ARCH=`echo $ARCH |\
-  sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+  sed -e s/[i]*.86/i386/ -e s/sun4u// -e s/arm.*/arm/ -e s/sa110/arm/`
 if [ -z "$KERNEL_ARCH" ]
 then
 	KERNEL_ARCH=`uname -m |\
-     sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+     sed -e s/[i]*.86/i386/ -e s/sun4u// -e s/arm.*/arm/ -e s/sa110/arm/`
 fi 
 
 if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
-	RDEPEND =">=sys-libs/ncurses-5.2 sys-devel/perl >=sys-apps/modutils-2.4.2 sys-devel/make sparc64? sys-devel/egcs64-sparc"
+	RDEPEND =">=sys-libs/ncurses-5.2 sys-devel/perl >=sys-apps/modutils-2.4.2 sys-devel/make ? sys-devel/egcs64-sparc"
 fi
 
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include"
@@ -87,14 +87,14 @@ src_install() {
 		dodir /usr/include/asm
 		if [ `expr $KERNEL_ARCH ":" "sparc"` -eq 5 ]
 		then
-			dodir /usr/include/asm-{sparc,sparc64}
-			if [ "$KERNEL_ARCH" = "sparc64" ]
+			dodir /usr/include/asm-{sparc,}
+			if [ "$KERNEL_ARCH" = "" ]
 			then
-				cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
-				if [ ! -r ${D}/usr/include/asm-sparc64/asm_offsets.h ]
+				cp -ax ${S}/include/asm-/* ${D}/usr/include/asm-
+				if [ ! -r ${D}/usr/include/asm-/asm_offsets.h ]
 				then
-					cp ${SPARCFILEDIR}/${OKV}/sparc64-asm_offsets.h \
-						${D}/usr/include/asm-sparc64/asm_offsets.h
+					cp ${SPARCFILEDIR}/${OKV}/-asm_offsets.h \
+						${D}/usr/include/asm-/asm_offsets.h
 				fi
 			fi
 
@@ -118,7 +118,7 @@ pkg_preinst() {
 		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
 		[  -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
 		[ -L ${ROOT}usr/include/asm-sparc ] && rm ${ROOT}usr/include/asm-sparc
-		[ -L ${ROOT}usr/include/asm-sparc64 ] && rm ${ROOT}usr/include/asm-sparc64
+		[ -L ${ROOT}usr/include/asm- ] && rm ${ROOT}usr/include/asm-
 		[ -L ${ROOT}usr/include/asm-${KERNEL_ARCH} ] && rm ${ROOT}usr/include/asm-${KERNEL_ARCH}
 		true
 	fi
