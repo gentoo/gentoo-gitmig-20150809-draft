@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ec8e8ec69892b73a8b6f569e296daab javacup-0.10k.ebuild 862
-MD5 95c6b1967e759bb803c5f4c7c2fb6b4a ChangeLog 369
+MD5 c423df9a116b74defd3da35522142e0f ChangeLog 455
+MD5 8fb5dab96b4551860c7c666b5d33161b javacup-0.10k.ebuild 868
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 908c09cfed6120fc09504305319af259 files/digest-javacup-0.10k 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBTf7U/rLF9B432nYRArhQAJwN+KslhcWujR0iix+dsQyYkVhWXwCfcplO
-vByh/8QGqsIL4IXwQviYVkE=
-=PpwG
------END PGP SIGNATURE-----

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b3057abeebbbc1267a790d57a539db7 jclasslib-2.0.ebuild 1104
-MD5 4c5defa56a4e7dfbd1ac67b2d2b12e16 ChangeLog 575
+MD5 a55d05427c475716bb8bbf69f7ce7900 ChangeLog 661
+MD5 0b5e3bed2da72fd8bba1b6b7f044223c jclasslib-2.0.ebuild 1110
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 be1d000b16835290b454e72c2ba1eacf files/build.xml.patch 857
 MD5 3cfd3f6d617f048986d0291ea854bcac files/digest-jclasslib-2.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVhe/rLF9B432nYRAlvCAJ4gEMHVJ6pJWPBC2VybehZwE3dkLQCaA9q6
-Qq06pcCT8y4vZbpijWu9Fpw=
-=u62C
------END PGP SIGNATURE-----

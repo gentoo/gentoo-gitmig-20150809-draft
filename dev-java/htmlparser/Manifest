@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 dfa453ad15d0f9049730777938945dc1 ChangeLog 842
 MD5 2129bba5bd11f6cddf25a11c776ea6dc htmlparser-1.3.ebuild 943
 MD5 d95f8fda3c772462ff2051f703ab1190 htmlparser-1.4.20040104.ebuild 955
-MD5 2fde47d227717ec4e5f4631f363b3b55 htmlparser-1.4.20040727.ebuild 955
+MD5 b572429085802a0003c3ad99f61d8bf2 htmlparser-1.4.20040727.ebuild 961
 MD5 0c438f25511b6851e1c77398bb222a0f htmlparser-1.4.ebuild 943
-MD5 b123fe6e9c8eab6750b3a3123f37897d ChangeLog 746
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 9e1f017fee57a0496693a5b5ddef3258 files/digest-htmlparser-1.3 63
 MD5 bc8837d3120b338ecc33342cea12de8c files/digest-htmlparser-1.4 63
 MD5 a78c4f2f9f228959778e3d2f632b82b6 files/digest-htmlparser-1.4.20040104 72
 MD5 a6965ef96fd835bee0919c90ab551f7b files/digest-htmlparser-1.4.20040727 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVdo/rLF9B432nYRAudqAJ9A3WqZxGgPgYPbvVVWAivWpOkKEwCfdbGx
-HZXtf5kO2Ag7rMB/hvZ0VcQ=
-=uRVL
------END PGP SIGNATURE-----
