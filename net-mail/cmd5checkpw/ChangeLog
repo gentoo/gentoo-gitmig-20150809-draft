@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cmd5checkpw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.22 2005/02/19 15:59:48 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.23 2005/02/21 16:39:03 agriffis Exp $
+
+  21 Feb 2005; Aron Griffis <agriffis@gentoo.org>
+  cmd5checkpw-0.22-r2.ebuild:
+  stable on ia64 #78256
 
   19 Feb 2005; Mike Doty <kingtaco@gentoo.org> cmd5checkpw-0.22-r2.ebuild:
   stable on amd64. bug 78256
