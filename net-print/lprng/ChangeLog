@@ -1,6 +1,9 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.26 2004/07/17 22:46:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.27 2004/08/24 11:10:13 lanius Exp $
+
+  24 Aug 2004; Heinrich Wendel <lanius@gentoo.org> lprng-3.8.27.ebuild:
+  mark stable on x86
 
   18 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> lprng-3.8.26.ebuild:
   Stable on alpha.
