@@ -104,10 +104,6 @@ media-libs/gst-plugins-cdparanoia
 # Masked for testing
 =net-p2p/lmule-1.3.1
 
-# <robbat2@gentoo.org> 07 Jun 2003
-# Masked waiting for virtual
-net-libs/c-client
-
 # <malverian@gentoo.org> 07 Jun 2003
 # Development version of Anjuta for Gnome2
 # Masked for testing
@@ -199,7 +195,7 @@ net-im/kxicq2
 
 # <robbat2@gentoo.org> (23 Apr 2003)
 # This is just for experimentation
->=dev-php/php-cvs-5.0
+dev-php/php-cvs
 
 # seemant@gentoo.org (22 Apr 2003)
 # the package is unmainteained and dead upstream. it will die in portage
