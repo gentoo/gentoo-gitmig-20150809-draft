@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.2.ebuild,v 1.6 2004/05/02 05:04:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.2.ebuild,v 1.7 2004/05/02 05:09:09 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -9,7 +9,6 @@ HOMEPAGE="http://rsync.samba.org/"
 SRC_URI="http://rsync.samba.org/ftp/rsync/${P}.tar.gz"
 # ACL patches need to be forward ported again.
 #	acl? ( http://www.saout.de/misc/${PN}-2.6.0-acl.diff.bz2 )"
-#  http://www.imada.sdu.dk/~bardur/personal/patches/${PN}-proxy-auth/${PN}-2.5.6-proxy-auth-1.patch
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,27 +25,29 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack "${P}.tar.gz"
 	cd ${S}
-	# proxy patch seems to be merged in now 2.6.2
-	# epatch "${DISTDIR}/${PN}-2.5.6-proxy-auth-1.patch"
 	#use acl && epatch ${DISTDIR}/${PN}-2.6.0-acl.diff.bz2
 
 	# change confdir to /etc/rsync rather than just /etc (the --sysconfdir
 	# configure option doesn't work
 	sed	-i \
-		-e 's|/etc/rsyncd.conf|/etc/rsync/rsyncd.conf|g' rsync.h \
-			|| die "sed rsync.h failed"
+		-e 's|/etc/rsyncd.conf|/etc/rsync/rsyncd.conf|g' \
+		rsync.h \
+		|| die "sed rsync.h failed"
 	# yes, updating the man page is very important.
 	sed -i \
-		-e 's|/etc/rsyncd|/etc/rsync/rsyncd|g' rsyncd.conf.5 \
-			|| die "sed rsyncd.conf.5 failed"
+		-e 's|/etc/rsyncd|/etc/rsync/rsyncd|g' \
+		rsyncd.conf.5 \
+		|| die "sed rsyncd.conf.5 failed"
 }
 
 src_compile() {
 	[ "`gcc-version`" == "2.95" ] && append-ldflags -lpthread
 	use static && append-ldflags -static
 	export LDFLAGS
-	econf $(use_with build included-popt) \
-		$(use_with acl acl-support) || die
+	econf \
+		$(use_with build included-popt) \
+		$(use_with acl acl-support) \
+		|| die
 	emake || die "emake failed"
 }
 
