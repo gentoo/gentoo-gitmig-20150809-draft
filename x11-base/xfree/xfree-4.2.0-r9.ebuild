@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r9.ebuild,v 1.4 2002/04/16 00:28:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r9.ebuild,v 1.5 2002/04/16 19:58:20 mkennedy Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -119,6 +119,8 @@ src_install() {
 	tar -xz --no-same-owner -f ${DISTDIR}/truetype.tar.gz
 	dodir /usr/bin
 	dosym /usr/X11R6/bin /usr/bin/X11
+
+	dosym /usr/X11R6/lib/X11 /usr/lib/X11
 
 	dosym libGL.so.1.2 /usr/X11R6/lib/libGL.so
 	dosym libGL.so.1.2 /usr/X11R6/lib/libGL.so.1

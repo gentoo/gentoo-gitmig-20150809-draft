@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.14 2002/04/16 01:02:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.15 2002/04/16 19:58:20 mkennedy Exp $
+
+  16 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  xfree-4.2.0-r9.ebuild, ChangeLog :
+
+  Resolves bug 1833 for LFH2.2 (section 4.4) compliant
+  symlinks. Thanks goes to pst@ican.at
 
   15 Apr 2002; Seemant Kulleen <seeamnt@gentoo.org> xfree-4.2.0-r9.ebuild :
 
