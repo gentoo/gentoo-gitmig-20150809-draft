@@ -1,0 +1,667 @@
+--- snavigator/db/Makefile.in.orig	2003-06-26 13:01:12.000000000 -0700
++++ snavigator/db/Makefile.in	2003-07-10 23:07:40.000000000 -0700
+@@ -582,8 +582,8 @@
+ 
+ 
+ install-data-local:
+-	$(INSTALL_DATA) $(top_builddir)/../db/PORT/libdb.a $(sdkdir)/libpafdb.a
+-	$(RANLIB) $(sdkdir)/libpafdb.a
++	$(INSTALL_DATA) $(top_builddir)/../db/PORT/libdb.a $(DESTDIR)$(sdkdir)/libpafdb.a
++	$(RANLIB) $(DESTDIR)$(sdkdir)/libpafdb.a
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+--- snavigator/sdk/Makefile.in.orig	2003-06-26 13:01:41.000000000 -0700
++++ snavigator/sdk/Makefile.in	2003-07-10 23:59:48.000000000 -0700
+@@ -412,7 +412,7 @@
+ 
+ 
+ install-exec-local:
+-	$(INSTALL_DATA) @TCL_LIB_FULL_PATH@ @SN_SDK_EXEC_PREFIX@/lib
++	$(INSTALL_DATA) @TCL_LIB_FULL_PATH@ $(DESTDIR)@SN_SDK_EXEC_PREFIX@/lib
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+--- snavigator/snavigator/unix/Makefile.in.orig	2003-07-11 00:19:01.000000000 -0700
++++ snavigator/snavigator/unix/Makefile.in	2003-07-11 00:16:23.000000000 -0700
+@@ -339,7 +339,7 @@
+ install-exec-local: $(bindir)/@SN_LAUNCH_SHELL@
+ 
+ $(bindir)/@SN_LAUNCH_SHELL@: snavigator
+-	$(INSTALL_SCRIPT) snavigator $(bindir)/@SN_LAUNCH_SHELL@
++	$(INSTALL_SCRIPT) snavigator $(DESTDIR)$(bindir)/@SN_LAUNCH_SHELL@
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+--- snavigator/Makefile.in.orig	2003-06-26 13:01:11.000000000 -0700
++++ snavigator/Makefile.in	2003-07-11 00:28:54.000000000 -0700
+@@ -518,7 +518,7 @@
+ 
+ 
+ install-exec-local:
+-	$(INSTALL) $(top_srcdir)/../COPYING $(prefix)
++	$(INSTALL) $(top_srcdir)/../COPYING $(DESTDIR)$(prefix)
+ 	(cd ../tcl; $(MAKE) install-libraries)
+ 	(cd ../tk; $(MAKE) install-libraries)
+ 	(cd ../tix; $(MAKE) install-libraries)
+--- tix/unix/Makefile.in.orig	2002-01-07 01:52:42.000000000 -0800
++++ tix/unix/Makefile.in	2003-07-11 13:35:58.000000000 -0700
+@@ -129,7 +131,7 @@
+ 	install-man install-tools 
+ 
+ install-tools:
+-	@for i in $(BIN_DIR) ; \
++	@for i in $(DESTDIR)$(BIN_DIR) ; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+ 		echo "Making directory $$i"; \
+@@ -139,10 +141,10 @@
+ 		fi; \
+ 	    done;
+ 	@echo "installing the tixindex program for building tclIndex for Tix scripts"
+-	@cd $(TOOLS_DIR); $(INSTALL_PROGRAM) tixindex $(BIN_DIR)/tixindex
++	@cd $(TOOLS_DIR); $(INSTALL_PROGRAM) tixindex $(DESTDIR)$(BIN_DIR)/tixindex
+ 
+ install-headers:
+-	@for i in $(INCLUDE_DIR); \
++	@for i in $(DESTDIR)$(INCLUDE_DIR); \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+ 		echo "Making directory $$i"; \
+@@ -154,11 +156,11 @@
+ 	@for i in $(INC_DIR)/tix.h; \
+ 	    do \
+ 	    echo "Installing $$i"; \
+-	    $(INSTALL_DATA) $$i $(INCLUDE_DIR); \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(INCLUDE_DIR); \
+ 	    done;
+ 
+ install-libraries:
+-	@for i in $(TIX_LIBRARY) $(TIX_LIBRARY)/bitmaps $(TIX_LIBRARY)/pref; \
++	@for i in $(DESTDIR)$(TIX_LIBRARY) $(DESTDIR)$(TIX_LIBRARY)/bitmaps $(DESTDIR)$(TIX_LIBRARY)/pref; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+ 		echo "Making directory $$i"; \
+@@ -170,29 +172,29 @@
+ 	@for i in $(LIBRARY_DIR)/*.tcl $(LIBRARY_DIR)/tclIndex; \
+ 	    do \
+ 	    echo "Installing $$i"; \
+-	    $(INSTALL_DATA) $$i $(TIX_LIBRARY); \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(TIX_LIBRARY); \
+ 	    done;
+ 	@for i in $(LIBRARY_DIR)/bitmaps/* .gif $(LIBRARY_DIR)/bitmaps/*.x*m; \
+ 	    do \
+ 	    if [ -f $$i ] ; then \
+ 		echo "Installing $$i"; \
+-		$(INSTALL_DATA) $$i $(TIX_LIBRARY)/bitmaps; \
++		$(INSTALL_DATA) $$i $(DESTDIR)$(TIX_LIBRARY)/bitmaps; \
+ 		fi; \
+ 	    done;
+ 	@for i in $(LIBRARY_DIR)/pref/*.f* $(LIBRARY_DIR)/pref/*.c* $(LIBRARY_DIR)/pref/tixmkpref; \
+ 	    do \
+ 	    if [ -f $$i ] ; then \
+ 		echo "Installing $$i"; \
+-		$(INSTALL_DATA) $$i $(TIX_LIBRARY)/pref; \
++		$(INSTALL_DATA) $$i $(DESTDIR)$(TIX_LIBRARY)/pref; \
+ 		fi; \
+ 	    done;
+ 	@echo "Installing pkgIndex.tcl"
+ 	@cat */pkgIndex.tcl > pkgIndex.tcl
+-	@$(INSTALL_DATA) pkgIndex.tcl $(TIX_LIBRARY)
++	@$(INSTALL_DATA) pkgIndex.tcl $(DESTDIR)$(TIX_LIBRARY)
+ 
+ install-demos:
+-	@for i in $(prefix)/lib $(TIX_LIBRARY) $(TIX_LIBRARY)/demos \
+-		$(TIX_LIBRARY)/demos/bitmaps $(TIX_LIBRARY)/demos/samples ; \
++	@for i in $(DESTDIR)$(prefix)/lib $(DESTDIR)$(TIX_LIBRARY) $(DESTDIR)$(TIX_LIBRARY)/demos \
++		$(DESTDIR)$(TIX_LIBRARY)/demos/bitmaps $(DESTDIR)$(TIX_LIBRARY)/demos/samples ; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+ 		echo "Making directory $$i"; \
+@@ -206,30 +208,30 @@
+ 	    if [ -f $$i ] ; then \
+ 		echo "Installing demos/$$i"; \
+ 		sed -e '1 s|/usr/local/bin/tixwish|$(BIN_DIR)/tixwish|' \
+-			$$i > $(TIX_LIBRARY)/demos/$$i; \
++			$$i > $(DESTDIR)$(TIX_LIBRARY)/demos/$$i; \
+ 	    fi; \
+ 	    done;
+ 	@for i in $(DEMO_PROGS); \
+ 	    do \
+-	    chmod 755 $(TIX_LIBRARY)/demos/$$i; \
++	    chmod 755 $(DESTDIR)$(TIX_LIBRARY)/demos/$$i; \
+ 	    done;
+ 	@for i in $(DEMOS_DIR)/bitmaps/*; \
+ 	    do \
+ 	    if [ -f $$i ] ; then \
+ 		echo "Installing $$i"; \
+-		$(INSTALL_DATA) $$i $(TIX_LIBRARY)/demos/bitmaps; \
++		$(INSTALL_DATA) $$i $(DESTDIR)$(TIX_LIBRARY)/demos/bitmaps; \
+ 		fi; \
+ 	    done;
+ 	@for i in $(DEMOS_DIR)/samples/*; \
+ 	    do \
+ 	    if [ -f $$i ] ; then \
+ 		echo "Installing $$i"; \
+-		$(INSTALL_DATA) $$i $(TIX_LIBRARY)/demos/samples; \
++		$(INSTALL_DATA) $$i $(DESTDIR)$(TIX_LIBRARY)/demos/samples; \
+ 		fi; \
+ 	    done;
+ 
+ install-man:
+-	@for i in $(MAN_DIR) $(MAN1_DIR) $(MAN3_DIR) $(MANN_DIR) ; \
++	@for i in $(DESTDIR)$(MAN_DIR) $(DESTDIR)$(MAN1_DIR) $(DESTDIR)$(MAN3_DIR) $(DESTDIR)$(MANN_DIR) ; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+ 		echo "Making directory $$i"; \
+@@ -241,10 +243,10 @@
+ 	@cd $(MANUAL_DIR); for i in *.n *.1; \
+ 	    do \
+ 	    echo "Installing doc/$$i"; \
+-	    rm -f $(MANN_DIR)/$$i; \
++	    rm -f $(DESTDIR)$(MANN_DIR)/$$i; \
+ 	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
+-		    $$i > $(MANN_DIR)/$$i; \
+-	    chmod 444 $(MANN_DIR)/$$i; \
++		    $$i > $(DESTDIR)$(MANN_DIR)/$$i; \
++	    chmod 444 $(DESTDIR)$(MANN_DIR)/$$i; \
+ 	    done;
+ 
+ # CYGNUS LOCAL: install-minimal target.
+--- tk/unix/Makefile.in.orig	2002-01-10 12:21:26.000000000 -0800
++++ tk/unix/Makefile.in	2003-07-11 13:49:53.000000000 -0700
+@@ -39,6 +39,8 @@
+ # when installing files.
+ INSTALL_ROOT		=
+ 
++DESTDIR			=
++
+ # Directory from which applications will reference the library of Tcl
+ # scripts (note: you can set the TK_LIBRARY environment variable at
+ # run-time to override the compiled-in location):
+@@ -51,25 +53,25 @@
+ # END CYGNUS LOCAL
+ 
+ # Path name to use when installing library scripts:
+-SCRIPT_INSTALL_DIR =	$(INSTALL_ROOT)/$(TK_LIBRARY)
++SCRIPT_INSTALL_DIR =	$(DESTDIR)$(INSTALL_ROOT)/$(TK_LIBRARY)
+ 
+ # Directory in which to install the .a or .so binary for the Tk library:
+-LIB_INSTALL_DIR =	$(INSTALL_ROOT)@libdir@
++LIB_INSTALL_DIR =	$(DESTDIR)$(INSTALL_ROOT)@libdir@
+ 
+ # Path to use at runtime to refer to LIB_INSTALL_DIR:
+ LIB_RUNTIME_DIR =	@libdir@
+ 
+ # Directory in which to install the program wish:
+-BIN_INSTALL_DIR =	$(INSTALL_ROOT)@bindir@
++BIN_INSTALL_DIR =	$(DESTDIR)$(INSTALL_ROOT)@bindir@
+ 
+ # Directory from which the program wish should be referenced by scripts:
+ BIN_DIR =		@bindir@
+ 
+ # Directory in which to install the include file tk.h:
+-INCLUDE_INSTALL_DIR =	$(INSTALL_ROOT)@includedir@
++INCLUDE_INSTALL_DIR =	$(DESTDIR)$(INSTALL_ROOT)@includedir@
+ 
+ # Top-level directory for manual entries:
+-MAN_INSTALL_DIR =	$(INSTALL_ROOT)@mandir@
++MAN_INSTALL_DIR =	$(DESTDIR)$(INSTALL_ROOT)@mandir@
+ 
+ # Directory in which to install manual entry for wish:
+ MAN1_INSTALL_DIR	= $(MAN_INSTALL_DIR)/man1
+@@ -504,7 +506,7 @@
+ 	    fi
+ 
+ install-libraries:
+-	@for i in $(INSTALL_ROOT)@datadir@ $(INCLUDE_INSTALL_DIR) \
++	@for i in $(DESTDIR)$(INSTALL_ROOT)@datadir@ $(INCLUDE_INSTALL_DIR) \
+ 		$(SCRIPT_INSTALL_DIR) $(SCRIPT_INSTALL_DIR)/images; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+@@ -538,7 +540,7 @@
+ 
+ # CYGNUS LOCAL: install-minimal target.
+ install-minimal:
+-	@for i in $(INSTALL_ROOT)@datadir@ $(INCLUDE_INSTALL_DIR) \
++	@for i in $(DESTDIR)$(INSTALL_ROOT)@datadir@ $(INCLUDE_INSTALL_DIR) \
+ 		$(SCRIPT_INSTALL_DIR) $(SCRIPT_INSTALL_DIR)/images; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+@@ -555,7 +557,7 @@
+ 	    done;
+ 
+ install-demos:
+-	@for i in $(INSTALL_ROOT)@datadir@ $(SCRIPT_INSTALL_DIR) \
++	@for i in $(DESTDIR)$(INSTALL_ROOT)@datadir@ $(SCRIPT_INSTALL_DIR) \
+ 		$(SCRIPT_INSTALL_DIR)/demos \
+ 		$(SCRIPT_INSTALL_DIR)/demos/images ; \
+ 	    do \
+--- tcl/unix/Makefile.in.orig	2002-01-10 12:17:57.000000000 -0800
++++ tcl/unix/Makefile.in	2003-07-11 14:36:23.000000000 -0700
+@@ -36,6 +36,7 @@
+ # run-time.  INSTALL_ROOT is prepended to $prefix and $exec_prefix
+ # when installing files.
+ INSTALL_ROOT		=
++DESTDIR			=
+ 
+ TCL_LIBRARY =	@datadir@/tcl$(VERSION)
+ 
+@@ -43,22 +44,22 @@
+ LIB_RUNTIME_DIR		= $(libdir)
+ 
+ # Directory in which to install the program tclsh:
+-BIN_INSTALL_DIR		= $(INSTALL_ROOT)$(bindir)
++BIN_INSTALL_DIR		= $(DESTDIR)$(INSTALL_ROOT)$(bindir)
+ 
+ # Directory in which to install libtcl.so or libtcl.a:
+-LIB_INSTALL_DIR =	$(INSTALL_ROOT)@libdir@
++LIB_INSTALL_DIR =	$(DESTDIR)$(INSTALL_ROOT)@libdir@
+ 
+ # Path name to use when installing library scripts.
+-SCRIPT_INSTALL_DIR	= $(INSTALL_ROOT)$(TCL_LIBRARY)
++SCRIPT_INSTALL_DIR	= $(DESTDIR)$(INSTALL_ROOT)$(TCL_LIBRARY)
+ 
+ # Directory in which to install the program tclsh:
+-BIN_INSTALL_DIR =	$(INSTALL_ROOT)@bindir@
++BIN_INSTALL_DIR =	$(DESTDIR)$(INSTALL_ROOT)@bindir@
+ 
+ # Directory in which to install the include file tcl.h:
+-INCLUDE_INSTALL_DIR =	$(INSTALL_ROOT)@includedir@
++INCLUDE_INSTALL_DIR =	$(DESTDIR)$(INSTALL_ROOT)@includedir@
+ 
+ # Top-level directory in which to install manual entries:
+-MAN_INSTALL_DIR =	$(INSTALL_ROOT)@mandir@
++MAN_INSTALL_DIR =	$(DESTDIR)$(INSTALL_ROOT)@mandir@
+ 
+ # Directory in which to install manual entry for tclsh:
+ MAN1_INSTALL_DIR	= $(MAN_INSTALL_DIR)/man1
+@@ -572,7 +573,7 @@
+ 	    fi
+ 
+ install-libraries:
+-	@for i in $(INSTALL_ROOT)@datadir@ $(INCLUDE_INSTALL_DIR) \
++	@for i in $(DESTDIR)$(INSTALL_ROOT)@datadir@ $(INCLUDE_INSTALL_DIR) \
+ 		$(SCRIPT_INSTALL_DIR) ; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+
+--- Makefile.in.orig	2002-06-25 11:05:44.000000000 -0700
++++ Makefile.in	2003-07-11 19:08:45.000000000 -0700
+@@ -371,6 +371,7 @@
+ 	"CXXFLAGS=$(CXXFLAGS)" \
+ 	"CXXFLAGS_FOR_TARGET=$(CXXFLAGS_FOR_TARGET)" \
+ 	"CXX_FOR_TARGET=$(CXX_FOR_TARGET)" \
++	"DESTDIR=$(DESTDIR)" \
+ 	"DLLTOOL_FOR_TARGET=$(DLLTOOL_FOR_TARGET)" \
+ 	"INSTALL=$(INSTALL)" \
+ 	"INSTALL_DATA=$(INSTALL_DATA)" \
+--- itcl/itcl/Makefile.in.orig	2001-09-09 12:49:04.000000000 -0700
++++ itcl/itcl/Makefile.in	2003-07-11 19:32:22.000000000 -0700
+@@ -215,6 +215,8 @@
+ TCLSH_PROG = @TCLSH_PROG@
+ ITCL_INCLUDES = @ITCL_INCLUDES@
+ 
++MANN_INSTALL_DIR = @MANN_INSTALL_DIR@
++
+ AUTOCONF = autoconf
+ 
+ LDFLAGS = $(LDFLAGS_DEFAULT)
+@@ -272,16 +274,16 @@
+ #========================================================================
+ 
+ install-libraries: libraries
+-	$(mkinstalldirs) $(includedir)
+-	@echo "Installing header files in $(includedir)"
++	$(mkinstalldirs) $(DESTDIR)$(includedir)
++	@echo "Installing header files in $(DESTDIR)$(includedir)"
+ 	@for i in $(GENERIC_HDRS) ; do \
+ 	    echo "Installing $$i" ; \
+-	    $(INSTALL_DATA) $$i $(includedir) ; \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(includedir) ; \
+ 	done;
+-	@echo "Installing library files in $(ITCL_LIBRARY)"
++	@echo "Installing library files in $(DESTDIR)$(ITCL_LIBRARY)"
+ 	@for i in $(srcdir)/library/*.tcl ; do \
+ 	    echo "Installing $$i" ; \
+-	    $(INSTALL_DATA) $$i $(ITCL_LIBRARY) ; \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(ITCL_LIBRARY) ; \
+ 	done;
+ 
+ #========================================================================
+@@ -290,12 +292,12 @@
+ #========================================================================
+ 
+ install-doc: doc
+-	$(mkinstalldirs) $(mandir)/mann
+-	@echo "Installing man pages in $(mandir)"
++	$(mkinstalldirs) $(MANN_INSTALL_DIR)
++	@echo "Installing man pages in $(MANN_INSTALL_DIR)"
+ 	@for i in $(srcdir)/doc/*.n; \
+ 	    do \
+ 	    echo "Installing $$i"; \
+-	    $(INSTALL_DATA) $$i $(mandir)/mann ; \
++	    $(INSTALL_DATA) $$i $(MANN_INSTALL_DIR) ; \
+ 	    done
+ 
+ test: $(TCLSH_PROG)
+@@ -445,7 +447,7 @@
+ 	    $(RANLIB) $(DESTDIR)$(libdir)/$$p; \
+ 	  else :; fi; \
+ 	done
+-	$(INSTALL_DATA) pkgIndex.tcl $(pkglibdir)
++	$(INSTALL_DATA) pkgIndex.tcl $(DESTDIR)$(pkglibdir)
+ 
+ #========================================================================
+ # Install binary executables (e.g. .exe files)
+@@ -483,7 +485,7 @@
+ 	$(mkinstalldirs)  $(DESTDIR)$(libdir)
+ 	$(mkinstalldirs)  $(DESTDIR)$(bindir)
+ 	$(mkinstalldirs)  $(DESTDIR)$(pkglibdir)
+-	$(mkinstalldirs)  $(ITCL_LIBRARY)
++	$(mkinstalldirs)  $(DESTDIR)$(ITCL_LIBRARY)
+ 
+ .PHONY: all binaries clean depend distclean doc install installdirs \
+ libraries test
+
+--- itcl/itk/Makefile.in.orig	2001-09-09 12:49:05.000000000 -0700
++++ itcl/itk/Makefile.in	2003-07-11 20:15:03.000000000 -0700
+@@ -210,6 +210,8 @@
+ ITCL_INCLUDES = @ITCL_INCLUDES@
+ ITK_INCLUDES = @ITCL_INCLUDES@ @ITK_INCLUDES@ @TK_XINCLUDES@
+ 
++MANN_INSTALL_DIR = @MANN_INSTALL_DIR@
++
+ AUTOCONF = autoconf
+ 
+ LDFLAGS = $(LDFLAGS_DEFAULT)
+@@ -267,16 +269,16 @@
+ #========================================================================
+ 
+ install-libraries: libraries
+-	$(mkinstalldirs) $(includedir)
+-	@echo "Installing header files in $(includedir)"
++	$(mkinstalldirs) $(DESTDIR)$(includedir)
++	@echo "Installing header files in $(DESTDIR)$(includedir)"
+ 	@for i in $(GENERIC_HDRS) ; do \
+ 	    echo "Installing $$i" ; \
+-	    $(INSTALL_DATA) $$i $(includedir) ; \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(includedir) ; \
+ 	done;
+-	@echo "Installing library files in $(ITK_LIBRARY)"
++	@echo "Installing library files in $(DESTDIR)$(ITK_LIBRARY)"
+ 	@for i in $(srcdir)/library/*.* $(srcdir)/library/tclIndex ; do \
+ 	    echo "Installing $$i" ; \
+-	    $(INSTALL_DATA) $$i $(ITK_LIBRARY) ; \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(ITK_LIBRARY) ; \
+ 	done;
+ 
+ #========================================================================
+@@ -285,12 +287,12 @@
+ #========================================================================
+ 
+ install-doc: doc
+-	$(mkinstalldirs) $(mandir)/mann
+-	@echo "Installing man pages in $(mandir)"
++	$(mkinstalldirs) $(MANN_INSTALL_DIR)
++	@echo "Installing man pages in $(MANN_INSTALL_DIR)"
+ 	@for i in $(srcdir)/doc/*.n; \
+ 	    do \
+ 	    echo "Installing $$i info $(mandir)/mann"; \
+-	    $(INSTALL_DATA) $$i $(mandir)/mann ; \
++	    $(INSTALL_DATA) $$i $(MANN_INSTALL_DIR) ; \
+ 	    done
+ 
+ test: $(TCLSH_PROG)
+@@ -419,7 +421,7 @@
+ 	    $(RANLIB) $(DESTDIR)$(libdir)/$$p; \
+ 	  else :; fi; \
+ 	done
+-	$(INSTALL_DATA) pkgIndex.tcl $(pkglibdir)
++	$(INSTALL_DATA) pkgIndex.tcl $(DESTDIR)$(pkglibdir)
+ 
+ #========================================================================
+ # Install binary executables (e.g. .exe files)
+@@ -457,7 +459,7 @@
+ 	$(mkinstalldirs)  $(DESTDIR)$(libdir)
+ 	$(mkinstalldirs)  $(DESTDIR)$(bindir)
+ 	$(mkinstalldirs)  $(DESTDIR)$(pkglibdir)
+-	$(mkinstalldirs)  $(ITK_LIBRARY)
++	$(mkinstalldirs)  $(DESTDIR)$(ITK_LIBRARY)
+ 
+ .PHONY: all binaries clean depend distclean doc install installdirs \
+ libraries test
+--- itcl/iwidgets3.0.0/Makefile.in.orig	2002-01-11 12:18:03.000000000 -0800
++++ itcl/iwidgets3.0.0/Makefile.in	2003-07-11 20:25:30.000000000 -0700
+@@ -46,16 +48,16 @@
+ # END CYGNUS LOCAL
+ 
+ # Directory in which to install the archive libtcl.a:
+-LIB_INSTALL_DIR = $(INSTALL_ROOT)$(exec_prefix)/lib
++LIB_INSTALL_DIR = $(DESTDIR)$(INSTALL_ROOT)$(exec_prefix)/lib
+ 
+ # Directory in which to install the program tclsh:
+-BIN_INSTALL_DIR = $(INSTALL_ROOT)$(exec_prefix)/bin
++BIN_INSTALL_DIR = $(DESTDIR)$(INSTALL_ROOT)$(exec_prefix)/bin
+ 
+ # Directory in which to install the include file itcl.h:
+-INCLUDE_INSTALL_DIR = $(INSTALL_ROOT)$(prefix)/include
++INCLUDE_INSTALL_DIR = $(DESTDIR)$(INSTALL_ROOT)$(prefix)/include
+ 
+ # Top-level directory in which to install manual entries:
+-MAN_INSTALL_DIR = $(INSTALL_ROOT)$(prefix)/man
++MAN_INSTALL_DIR = $(DESTDIR)$(INSTALL_ROOT)$(prefix)/man
+ 
+ # Directory in which to install manual entry for itclsh:
+ MAN1_INSTALL_DIR = $(MAN_INSTALL_DIR)/man1
+@@ -69,7 +71,7 @@
+ MANN_INSTALL_DIR = $(MAN_INSTALL_DIR)/mann
+ 
+ # Directory in which to install html version of manual entries:
+-HTML_INSTALL_DIR = $(INSTALL_ROOT)$(prefix)/doc
++HTML_INSTALL_DIR = $(DESTDIR)$(INSTALL_ROOT)$(prefix)/doc
+ 
+ # Tcl libraries can be found here:
+ TCL_LIB_DIR = @TCL_LIB_DIR@
+@@ -166,43 +168,43 @@
+ install-binaries:
+ 
+ install-libraries:
+-	@$(MKINSTALLDIRS) $(SCRIPT_INSTALL_DIR) $(LIB_INSTALL_DIR)
++	@$(MKINSTALLDIRS) $(DESTDIR)$(SCRIPT_INSTALL_DIR) $(LIB_INSTALL_DIR)
+ 	@rm -f $(LIB_INSTALL_DIR)/iwidgets
+ 	$(LN_S) $(SCRIPT_INSTALL_DIR) $(LIB_INSTALL_DIR)/iwidgets
+-	@$(MKINSTALLDIRS) $(SCRIPT_INSTALL_DIR)/scripts
+-	@echo "Installing files from $(GENERIC_DIR) into $(SCRIPT_INSTALL_DIR)"
++	@$(MKINSTALLDIRS) $(DESTDIR)$(SCRIPT_INSTALL_DIR)/scripts
++	@echo "Installing files from $(GENERIC_DIR) into $(DESTDIR)$(SCRIPT_INSTALL_DIR)"
+ 	@for i in $(GENERIC_DIR)/*.itk $(GENERIC_DIR)/*.itcl $(GENERIC_DIR)/tclIndex $(GENERIC_DIR)/*.gif ; \
+ 	    do \
+-	    $(INSTALL_DATA) $$i $(SCRIPT_INSTALL_DIR)/scripts; \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(SCRIPT_INSTALL_DIR)/scripts; \
+ 	    done;
+-	@echo "Installing iwidgets.tcl pkgIndex.tcl into $(SCRIPT_INSTALL_DIR)"
++	@echo "Installing iwidgets.tcl pkgIndex.tcl into $(DESTDIR)$(SCRIPT_INSTALL_DIR)"
+ 	@for i in iwidgets.tcl pkgIndex.tcl ; \
+ 	    do \
+-	    $(INSTALL_DATA) $$i $(SCRIPT_INSTALL_DIR); \
++	    $(INSTALL_DATA) $$i $(DESTDIR)$(SCRIPT_INSTALL_DIR); \
+ 	    done;
+ 	$(MAKE) install-demos
+ 
+ install-demos:
+-	@$(MKINSTALLDIRS) $(SCRIPT_INSTALL_DIR)/demos/images $(SCRIPT_INSTALL_DIR)/demos/html
+-	@echo "Installing demos from $(srcdir)/demos into $(SCRIPT_INSTALL_DIR)/demos"
++	@$(MKINSTALLDIRS) $(DESTDIR)$(SCRIPT_INSTALL_DIR)/demos/images $(DESTDIR)$(SCRIPT_INSTALL_DIR)/demos/html
++	@echo "Installing demos from $(srcdir)/demos into $(DESTDIR)$(SCRIPT_INSTALL_DIR)/demos"
+ 	@for i in $(srcdir)/demos/*; \
+ 	    do \
+ 	    if [ -f $$i ] ; then \
+-	        $(INSTALL_SCRIPT) $$i $(SCRIPT_INSTALL_DIR)/demos; \
++	        $(INSTALL_SCRIPT) $$i $(DESTDIR)$(SCRIPT_INSTALL_DIR)/demos; \
+ 	    fi; \
+ 	    done;
+-	@echo "Installing images from $(srcdir)/demos/images into $(SCRIPT_INSTALL_DIR)/demos/images"
++	@echo "Installing images from $(srcdir)/demos/images into $(DESTDIR)$(SCRIPT_INSTALL_DIR)/demos/images"
+ 	for i in $(srcdir)/demos/images/*; \
+ 	    do \
+ 	    if [ -f $$i ] ; then \
+-	        $(INSTALL_DATA) $$i $(SCRIPT_INSTALL_DIR)/demos/images; \
++	        $(INSTALL_DATA) $$i $(DESTDIR)$(SCRIPT_INSTALL_DIR)/demos/images; \
+ 	    fi; \
+ 	    done;
+-	@echo "Installing html from $(srcdir)/demos/html into $(SCRIPT_INSTALL_DIR)/demos/html"
++	@echo "Installing html from $(srcdir)/demos/html into $(DESTDIR)$(SCRIPT_INSTALL_DIR)/demos/html"
+ 	for i in $(srcdir)/demos/html/*; \
+ 	    do \
+ 	    if [ -f $$i ] ; then \
+-	        $(INSTALL_DATA) $$i $(SCRIPT_INSTALL_DIR)/demos/html; \
++	        $(INSTALL_DATA) $$i $(DESTDIR)$(SCRIPT_INSTALL_DIR)/demos/html; \
+ 	    fi; \
+ 	    done;
+ 
+@@ -214,7 +216,7 @@
+ 	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
+ 	        $$i > $(MANN_INSTALL_DIR)/$$i; \
+ 	    done;
+-	$(INSTALL_DATA) $(srcdir)/license.terms $(SCRIPT_INSTALL_DIR)
++	$(INSTALL_DATA) $(srcdir)/license.terms $(DESTDIR)$(SCRIPT_INSTALL_DIR)
+ 
+ install-html:
+ 	@$(MKINSTALLDIRS) $(HTML_INSTALL_DIR)
+--- snavigator/sdk/api/c/Makefile.in.orig	2003-06-26 13:01:40.000000000 -0700
++++ snavigator/sdk/api/c/Makefile.in	2003-07-11 20:40:02.000000000 -0700
+@@ -415,9 +415,9 @@
+ 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(sdkincludedir)
++	$(mkinstalldirs) $(DESTDIR)$(sdkincludedir)
+ 	for h in $(sdkinclude_h) ; do \
+-	    cp $(top_srcdir)/../db/include/$$h $(sdkincludedir) ;\
++	    cp $(top_srcdir)/../db/include/$$h $(DESTDIR)$(sdkincludedir) ;\
+ 	done
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+--- snavigator/packages/Makefile.in.orig	2003-06-26 13:01:31.000000000 -0700
++++ snavigator/packages/Makefile.in	2003-07-11 20:53:43.000000000 -0700
+@@ -312,8 +312,8 @@
+ install-data-local:
+ 	for i in $(packages); \
+ 	    do \
+-		mkdir -p $(progdir)/$$i ;\
+-		cp -p $(srcdir)/$$i/*.tcl $(progdir)/$$i; \
++		mkdir -p $(DESTDIR)$(progdir)/$$i ;\
++		cp -p $(srcdir)/$$i/*.tcl $(DESTDIR)$(progdir)/$$i; \
+ 	    done;
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+--- snavigator/demo/Makefile.in.orig	2003-06-26 13:01:12.000000000 -0700
++++ snavigator/demo/Makefile.in	2003-07-11 21:07:25.000000000 -0700
+@@ -288,16 +288,16 @@
+ 
+ 
+ install-data-local:
+-	@$(mkinstalldirs) $(demosdir)
++	@$(mkinstalldirs) $(DESTDIR)$(demosdir)
+ 	echo CVS > /tmp/sn-install-$$$$ ; \
+ 	for p in @C_DEMO@ @ASM_DEMO@ @FOR_DEMO@ @COB_DEMO@ @MONOP_DEMO@ @JAV_DEMO@ ; do \
+-	  echo "copying $$p to $(demosdir)" ; \
++	  echo "copying $$p to $(DESTDIR)$(demosdir)" ; \
+ 	  ( \
+ 	  cd $(srcdir) ; \
+ 	  $(TAR) -ch$(OLDTARFLAG) -f /tmp/$$p.tar-$$$$ -X /tmp/sn-install-$$$$ $$p ; \
+-	  cp /tmp/$$p.tar-$$$$ $(demosdir)/$$p.tar-$$$$ ; \
++	  cp /tmp/$$p.tar-$$$$ $(DESTDIR)$(demosdir)/$$p.tar-$$$$ ; \
+ 	  rm /tmp/$$p.tar-$$$$ ; \
+-	  cd $(demosdir) ; \
++	  cd $(DESTDIR)$(demosdir) ; \
+ 	  $(TAR) -xf $$p.tar-$$$$ ; \
+ 	  rm $$p.tar-$$$$ ; \
+           ) \
+--- snavigator/bitmaps/Makefile.in.orig	2003-06-26 13:01:11.000000000 -0700
++++ snavigator/bitmaps/Makefile.in	2003-07-11 21:16:35.000000000 -0700
+@@ -333,8 +333,8 @@
+ 
+ 
+ install-data-local:
+-	$(INSTALL_DATA) $(srcdir)/@SPLASHFILE@ $(imagedir)/splash.gif
+-	$(INSTALL_DATA) $(srcdir)/@X11ICON@ $(imagedir)/paf.xbm
++	$(INSTALL_DATA) $(srcdir)/@SPLASHFILE@ $(DESTDIR)$(imagedir)/splash.gif
++	$(INSTALL_DATA) $(srcdir)/@X11ICON@ $(DESTDIR)$(imagedir)/paf.xbm
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+--- tix/unix/tk8.3/Makefile.in.orig	2002-01-11 15:43:38.000000000 -0800
++++ tix/unix/tk8.3/Makefile.in	2003-07-11 21:32:30.000000000 -0700
+@@ -472,7 +474,7 @@
+ #
+ #----------------------------------------------------------------------
+ _install_: $(TIX_LIB_FILE) $(TIX_EXE_FILE) $(SAM_INSTALL)
+-	@for i in $(LIB_DIR) $(BIN_DIR) ; \
++	@for i in $(DESTDIR)$(LIB_DIR) $(DESTDIR)$(BIN_DIR) ; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+ 		echo "Making directory $$i"; \
+@@ -481,13 +483,13 @@
+ 		else true; \
+ 		fi; \
+ 	    done;
+-	@echo "Installing $(TIX_LIB_FILE) as $(LIB_DIR)/$(TIX_LIB_FILE)"
+-	@$(INSTALL_DATA) $(TIX_LIB_FILE) $(LIB_DIR)/$(TIX_LIB_FILE)
+-	@echo "Installing $(TIX_EXE_FILE) as $(BIN_DIR)/$(INST_EXE)"
+-	@$(INSTALL_PROGRAM) $(TIX_EXE_FILE) $(BIN_DIR)/$(INST_EXE)
++	@echo "Installing $(TIX_LIB_FILE) as $(DESTDIR)$(LIB_DIR)/$(TIX_LIB_FILE)"
++	@$(INSTALL_DATA) $(TIX_LIB_FILE) $(DESTDIR)$(LIB_DIR)/$(TIX_LIB_FILE)
++	@echo "Installing $(TIX_EXE_FILE) as $(DESTDIR)$(BIN_DIR)/$(INST_EXE)"
++	@$(INSTALL_PROGRAM) $(TIX_EXE_FILE) $(DESTDIR)$(BIN_DIR)/$(INST_EXE)
+ 
+ _install_sam_exe_: $(SAM_TARGETS)
+-	@for i in $(LIB_DIR) $(BIN_DIR) ; \
++	@for i in $(DESTDIR)$(LIB_DIR) $(DESTDIR)$(BIN_DIR) ; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+ 		echo "Making directory $$i"; \
+@@ -496,20 +498,20 @@
+ 		else true; \
+ 		fi; \
+ 	    done;
+-	@echo "Installing $(TK_SAM_FILE) as $(LIB_DIR)/$(TK_SAM_FILE)"
+-	@$(INSTALL_DATA) $(TK_SAM_FILE) $(LIB_DIR)/$(TK_SAM_FILE)
+-	@echo "Installing $(TCL_SAM_FILE) as $(LIB_DIR)/$(TCL_SAM_FILE)"
+-	@$(INSTALL_DATA) $(TCL_SAM_FILE) $(LIB_DIR)/$(TCL_SAM_FILE)
++	@echo "Installing $(TK_SAM_FILE) as $(DESTDIR)$(LIB_DIR)/$(TK_SAM_FILE)"
++	@$(INSTALL_DATA) $(TK_SAM_FILE) $(DESTDIR)$(LIB_DIR)/$(TK_SAM_FILE)
++	@echo "Installing $(TCL_SAM_FILE) as $(DESTDIR)$(LIB_DIR)/$(TCL_SAM_FILE)"
++	@$(INSTALL_DATA) $(TCL_SAM_FILE) $(DESTDIR)$(LIB_DIR)/$(TCL_SAM_FILE)
+ 	@echo ""
+-	@echo "Installing $(TIX_SAMEXE_FILE) as $(BIN_DIR)/$(INST_TIX_SAMEXE)"
+-	@$(INSTALL_PROGRAM) $(TIX_SAMEXE_FILE) $(BIN_DIR)/$(INST_TIX_SAMEXE)
+-	@echo "Installing $(TK_SAMEXE_FILE) as $(BIN_DIR)/$(INST_TK_SAMEXE)"
+-	@$(INSTALL_PROGRAM) $(TK_SAMEXE_FILE) $(BIN_DIR)/$(INST_TK_SAMEXE)
+-	@echo "Installing $(TCL_SAMEXE_FILE) as $(BIN_DIR)/$(INST_TCL_SAMEXE)"
+-	@$(INSTALL_PROGRAM) $(TCL_SAMEXE_FILE) $(BIN_DIR)/$(INST_TCL_SAMEXE)
++	@echo "Installing $(TIX_SAMEXE_FILE) as $(DESTDIR)$(BIN_DIR)/$(INST_TIX_SAMEXE)"
++	@$(INSTALL_PROGRAM) $(TIX_SAMEXE_FILE) $(DESTDIR)$(BIN_DIR)/$(INST_TIX_SAMEXE)
++	@echo "Installing $(TK_SAMEXE_FILE) as $(DESTDIR)$(BIN_DIR)/$(INST_TK_SAMEXE)"
++	@$(INSTALL_PROGRAM) $(TK_SAMEXE_FILE) $(DESTDIR)$(BIN_DIR)/$(INST_TK_SAMEXE)
++	@echo "Installing $(TCL_SAMEXE_FILE) as $(DESTDIR)$(BIN_DIR)/$(INST_TCL_SAMEXE)"
++	@$(INSTALL_PROGRAM) $(TCL_SAMEXE_FILE) $(DESTDIR)$(BIN_DIR)/$(INST_TCL_SAMEXE)
+ 
+ _install_sam_lib_: $(SAM_TARGETS)
+-	@for i in $(LIB_DIR) $(BIN_DIR) ; \
++	@for i in $(DESTDIR)$(LIB_DIR) $(DESTDIR)$(BIN_DIR) ; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+ 		echo "Making directory $$i"; \
+@@ -518,8 +520,8 @@
+ 		else true; \
+ 		fi; \
+ 	    done;
+-	@echo "Installing $(TIX_SAM_FILE) as $(LIB_DIR)/$(TIX_SAM_FILE)"
+-	@$(INSTALL_DATA) $(TIX_SAM_FILE) $(LIB_DIR)/$(TIX_SAM_FILE)
++	@echo "Installing $(TIX_SAM_FILE) as $(DESTDIR)$(LIB_DIR)/$(TIX_SAM_FILE)"
++	@$(INSTALL_DATA) $(TIX_SAM_FILE) $(DESTDIR)$(LIB_DIR)/$(TIX_SAM_FILE)
+ 
+ 
+ install: _install_

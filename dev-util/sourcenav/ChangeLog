@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/sourcenav
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.6 2003/02/15 07:32:14 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.7 2003/07/12 18:13:41 rac Exp $
+
+*sourcenav-5.1.4 (12 Jul 2003)
+
+  12 Jul 2003; <rac@gentoo.org> sourcenav-5.1.4.ebuild,
+  files/sourcenav-5.1.4-gentoo.diff:
+  On behalf of sarnold@gentoo.org, who writes: updated ebuild for 5.1.4 and
+  fixed more sandbox violations. I changed the ebuild to more closely follow the
+  standard build procedures (but I guess I don't get a cookie, since my patch
+  file is bigger than the previous one).
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
