@@ -1,6 +1,9 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.55 2004/07/18 02:51:18 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.56 2004/07/18 19:18:54 lv Exp $
+
+  18 Jul 2004; Travis Tilley <lv@gentoo.org> nvidia-glx-1.0.6106-r3.ebuild:
+  marking stable since our last stable nvidia-glx was just deleted
 
 *nvidia-glx-1.0.6106-r3 (18 Jul 2004)
 
