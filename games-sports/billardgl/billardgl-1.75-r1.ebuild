@@ -1,36 +1,43 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc. and Jordan Armstrong
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.2 2003/11/28 23:56:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.3 2004/03/20 12:57:59 mr_bones_ Exp $
 
 inherit games
 
 DESCRIPTION="A OpenGL billards game"
-SRC_URI="mirror://sourceforge/billardgl/BillardGL-${PV}.tar.gz"
 HOMEPAGE="http://www.billardgl.de/"
+SRC_URI="mirror://sourceforge/billardgl/BillardGL-${PV}.tar.gz"
 
-KEYWORDS="amd64 x86 ppc"
 LICENSE="GPL-2"
+KEYWORDS="amd64 x86 ppc"
 SLOT="0"
+IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	virtual/opengl
 	virtual/glu
-	virtual/glut
+	virtual/glut"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}/BillardGL-${PV}/src
+S="${WORKDIR}/BillardGL-${PV}/src"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	sed -i \
 		-e "s:/usr/share/BillardGL/:${GAMES_DATADIR}/BillardGL/:" Namen.h || \
 			die "sed Namen.h failed"
-	emake || die "emake failed"
+	sed -i \
+		-e "/^CFLAGS/ s:-pipe -Wall -W:${CFLAGS}:" \
+		-e "/^CXXFLAGS/ s:-pipe -Wall -W:${CXXFLAGS}:" Makefile \
+			|| die "sed Makefile failed"
 }
 
 src_install() {
-	dogamesbin BillardGL
+	dogamesbin BillardGL || die "dogamesbin failed"
 	dodir ${GAMES_DATADIR}/BillardGL
-	mv lang Texturen ${D}/${GAMES_DATADIR}/BillardGL
+	cp -r lang/ Texturen/ "${D}/${GAMES_DATADIR}/BillardGL" || die "cp failed"
 	dodoc README
 	prepgamesdirs
 }
