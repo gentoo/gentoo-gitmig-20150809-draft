@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.63 2003/07/12 20:21:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.64 2003/07/13 22:51:27 coredumb Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -23,7 +23,7 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst pkg_preinst
 function runningunstable() { has ~${ARCH} ${ACCEPT_KEYWORDS} > /dev/null ; }
 
 MY_PN=php
-MY_P=${MY_PN}-${PV}
+[ -z "$MY_P" ] && MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 [ -z "$HOMEPAGE" ]	&& HOMEPAGE="http://www.php.net/"
 [ -z "$LICENSE" ]	&& LICENSE="PHP"
