@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.13 2004/01/03 13:58:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.14 2004/01/04 02:20:24 caleb Exp $
 inherit kde flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
@@ -17,8 +17,8 @@ DEPEND="alsa? ( media-libs/alsa-lib )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
 	mad? ( media-libs/libmad media-libs/libid3tag )
 	media-libs/audiofile
-	>=dev-libs/glib-2"
-need-qt 3.1.0
+	>=dev-libs/glib-2
+	>=x11-libs/qt-3.1.0"
 
 if [ "${COMPILER}" == "gcc3" ]; then
 	# GCC 3.1 kinda makes arts buggy and prone to crashes when compiled with
