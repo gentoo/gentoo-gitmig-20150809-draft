@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logsentry
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.17 2004/12/14 00:04:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.18 2004/12/18 17:27:16 blubb Exp $
+
+  18 Dec 2004; Simon Stelling <blubb@gentoo.org> logsentry-1.1.1.ebuild:
+  was testing for over 2 years without bug reports, marking stable on amd64
 
   14 Dec 2004; Andrej Kacian <ticho@gentoo.org> logsentry-1.1.1.ebuild:
   Fix an einfo typo mentioned by Leonid Kabanov <lkabanov@mail.ru> in bug #73971.

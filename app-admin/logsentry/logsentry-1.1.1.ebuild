@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.19 2004/12/14 00:04:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.20 2004/12/18 17:27:16 blubb Exp $
 
 DESCRIPTION="automatically monitor system logs and mail security violations on a periodic basis"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="virtual/mailx"
