@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3.ebuild,v 1.4 2004/02/26 12:24:16 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3.ebuild,v 1.5 2004/04/16 01:15:25 caleb Exp $
 inherit kde
 
 # TODO : mysql support
@@ -26,7 +26,4 @@ DEPEND="$DEPEND
 
 export LIBPYTHON="`python-config --libs`"
 #export LIBPYTHON="${LIBPYTHON//-L \/usr\/lib\/python2.2\/config}"
-
-need-automake 1.5
-need-autoconf 2.5
 
