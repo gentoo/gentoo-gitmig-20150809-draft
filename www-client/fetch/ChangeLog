@@ -1,0 +1,21 @@
+# ChangeLog for net-www/fetch
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/fetch/ChangeLog,v 1.1 2005/03/17 18:21:18 seemant Exp $
+
+*fetch-1.0 (17 Mar 2005)
+
+  17 Mar 2005; Seemant Kulleen <seemant@gentoo.org> +fetch-1.0.ebuild:
+  Moved from net-www/fetch to www-client/fetch.
+
+  02 Oct 2004; Markus Nigbur <pyrania@gentoo.org> fetch-1.0.ebuild:
+  S= unneeded.
+
+  24 Jun 2003; Martin Holzer <mholzer@gentoo.org> fetch-1.0.ebuild:
+  Changed DEPEND. Closes #23378.
+
+*fetch-1.0 (01 Jan 2003)
+
+  01 Jan 2003; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  fetch-1.0.ebuild, files/digest-fetch-1.0 :
+
+  Initial import.
