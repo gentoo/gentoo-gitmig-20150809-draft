@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/esvn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.3 2005/02/13 21:38:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.4 2005/03/11 15:03:27 mrness Exp $
+
+*esvn-0.6.9 (11 Mar 2005)
+
+  11 Mar 2005; Alin Nastac <mrness@gentoo.org> esvn-0.6.8-r1.ebuild,
+  -esvn-0.6.8.ebuild, +esvn-0.6.9.ebuild:
+  Stable on x86. Remove old testing version. Version bump.
 
   13 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> esvn-0.6.8-r1.ebuild:
   added ~amd64 to keywords. fixes #81846
