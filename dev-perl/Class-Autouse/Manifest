@@ -1,8 +1,18 @@
-MD5 12d5bad4d2900fbd86f2b70c6a8f0242 Class-Autouse-0.7.ebuild 572
-MD5 d35ef17e917c963600277b8f9ca28c72 ChangeLog 948
-MD5 4a92d5160d77597dfa525372957f1c78 Class-Autouse-1.03.ebuild 569
-MD5 774544d9c22fd8de3e2520d23ef373c8 Class-Autouse-1.12.ebuild 641
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6ab039ec1a1654e4dd6c4cec33593320 ChangeLog 1050
+MD5 4648281b57007e947ff4faef231975bc Class-Autouse-0.7.ebuild 576
+MD5 4527360238d6ff858e41f2ac8f9f3833 Class-Autouse-1.03.ebuild 574
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 9dc670611810300b6533a904bb57c265 files/digest-Class-Autouse-1.03 69
+MD5 a8d938a39b6540f132cb9b2c07270d29 Class-Autouse-1.12.ebuild 640
 MD5 c93b2af861068caba46dc5cfcbeb815b files/digest-Class-Autouse-0.7 68
+MD5 9dc670611810300b6533a904bb57c265 files/digest-Class-Autouse-1.03 69
 MD5 c71169c7dcd7e74a58b7412569fe4dd2 files/digest-Class-Autouse-1.12 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5d70KRy60XGEcJIRAi1/AJ9p6iZvhfB0cG2bAzzN/Ej/PaPsAwCeLWF6
+HnlJ5l+wFCTEiypU0EV+hss=
+=uqGY
+-----END PGP SIGNATURE-----

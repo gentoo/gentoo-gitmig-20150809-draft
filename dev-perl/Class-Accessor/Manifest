@@ -1,4 +1,14 @@
-MD5 65581aa66a1a08d79f1bc3270e839e2d ChangeLog 574
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 75a751919de67fd411045161abc35800 ChangeLog 677
+MD5 c432843b542b0747441e3f2b0f467b3f Class-Accessor-0.19.ebuild 509
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 8096fb0f873a4a3f88087abca9567f83 Class-Accessor-0.19.ebuild 505
 MD5 b874a1b2ed882cdf3d5a098c741659ec files/digest-Class-Accessor-0.19 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5d36KRy60XGEcJIRAmdhAJ98lchFN+sisWdxX96TQVhMJgAtNQCeODbF
+1/4QoEUKkfdhFKhpK3D6uZA=
+=vmn4
+-----END PGP SIGNATURE-----
