@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netio
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.8 2004/11/20 04:02:37 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.9 2005/01/28 10:39:51 ka0ttic Exp $
+
+  28 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> netio-1.23.ebuild:
+  Minor ebuild cleansing; respect CFLAGS. Also added pkg_postinst for messages
+  regarding the license.
 
   19 Nov 2004; Jason Wever <weeve@gentoo.org> netio-1.23.ebuild:
   Stable on sparc.

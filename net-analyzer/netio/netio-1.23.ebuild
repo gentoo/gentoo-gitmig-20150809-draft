@@ -1,33 +1,55 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.23.ebuild,v 1.11 2004/11/20 04:02:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.23.ebuild,v 1.12 2005/01/28 10:39:51 ka0ttic Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="a network benchmark for DOS, OS/2, Windows NT and Unix that measures net througput with NetBIOS and TCP/IP protocols."
 HOMEPAGE="http://freshmeat.net/projects/netio/"
 SRC_URI="http://ftp.leo.org/pub/comp/os/os2/leo/systools/netio123.zip"
+
 LICENSE="free-noncomm"
 SLOT="0"
 KEYWORDS="x86 ppc sparc ppc-macos"
 IUSE=""
+
 DEPEND="virtual/libc
-	app-arch/unzip"
+	app-arch/unzip
+	>=sys-apps/sed-4"
 RDEPEND="virtual/libc"
-S=${WORKDIR}/
+
+S="${WORKDIR}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e 's|\(CFLAGS\)=|\1?=|g' \
+		-e 's|\(CC\)=|\1?=|g' Makefile || die "sed Makefile failed"
+}
 
 src_compile() {
-	emake linux || die
+	emake linux	\
+		CC="$(tc-getCC)" \
+		CFLAGS="-DUNIX ${CFLAGS}" \
+		|| die "emake failed"
 }
 
 src_install() {
-	into /usr
-	dobin netio
+	dobin netio || die "dobin failed"
 
 	# to be sure to comply with the license statement in netio.doc,
 	# just install everything included in the package to doc
-	dodoc netio.doc FILE_ID.DIZ getopt.h netb_1_c.h netbios.h netio.c\
-		getopt.o netb_2_c.h netbios.o netio.doc getopt.c Makefile netbios.c\
-		netio netio.o
+	dodoc netio.doc FILE_ID.DIZ getopt.h netb_1_c.h netbios.h netio.c \
+		netb_2_c.h netio.doc getopt.c Makefile netbios.c
 
-	# also install binaries for other platforms than linux 
-	dodoc bin/os2-i386.exe bin/win32-i386.exe
+	# also install binaries
+	dodoc bin/os2-i386.exe bin/win32-i386.exe bin/linux-i386
+}
+
+pkg_postinst() {
+	echo
+	einfo "NOTE: all files included in the upstream zip file have"
+	einfo "been installed to /usr/share/doc/${PF}, as required by"
+	einfo "the license."
+	echo
 }
