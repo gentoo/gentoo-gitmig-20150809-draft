@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.0.ebuild,v 1.3 2002/08/29 11:53:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.1.ebuild,v 1.1 2002/08/29 11:53:08 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library to query devices using IEEE1284"
