@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> (02 Sep 2002)
+# new ucspi-tcp with ssl support
+=sys-apps/ucspi-tcp-0.88-r3
+
 # <phoenix@gentoo.org> (02 Sep 2002)
 # This needs a lot of testing
 =net-dialup/minicom-2.00.0
