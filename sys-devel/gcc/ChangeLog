@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.241 2004/05/08 23:09:05 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.242 2004/05/12 18:14:21 lv Exp $
+
+*gcc-3.4.0-r2 (12 May 2004)
+
+  12 May 2004; Travis Tilley <lv@gentoo.org> +gcc-3.4.0-r2.ebuild,
+  -gcc-3.4.0.ebuild:
+  added SSP support and updated the piessp patches (mostly) to 8.7.4. note that
+  the piessp patches arent yet as complete as the 3.3.3 version on archs other
+  than x86 and amd64.
 
   08 May 2004; <solar@gentoo.org> gcc-3.3.3-r4.ebuild:
   patch updates

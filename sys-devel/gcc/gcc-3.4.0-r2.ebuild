@@ -1,33 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.15 2004/05/05 04:24:53 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r2.ebuild,v 1.1 2004/05/12 18:14:22 lv Exp $
 
-IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
-
-DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers, as well as support for pax PIE"
-HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
-
-LICENSE="GPL-2 LGPL-2.1"
-
-# Install this and I cannot be held responsible for system failure, random
-# bugs, or sudden onset of insanity. YOU HAVE BEEN WARNED!! (though, really,
-# 3.4 appears to be safe in general unless you're compiling binutils)
-KEYWORDS="-*"
-#KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
-
-# PIE support
-PIE_VER="8.5.3"
-# forward port of the gcc 3.3 version, only with SSP disabled until
-# a port of propolice to 3.4 is completed.
-PIE_BASE_URI="mirror://gentoo/"
-PIE_SSP_PATCH="gcc-3.4.0-v${PIE_VER}-nodefault-pie-ssp.patch"
-PIE_EXCLUSION_PATCH="gcc-3.3.3-v${PIE_VER}-gcc-exclusion.patch"
-SRC_URI="${PIE_BASE_URI}${PIE_SSP_PATCH}
-	${PIE_BASE_URI}${PIE_EXCLUSION_PATCH}"
+IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
 inherit eutils flag-o-matic libtool
 
-# Recently there has been a lot of stability problems in Gentoo-land.  Many
+# Compile problems with these (bug #6641 among others)...
+#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
+
+# Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
 # still having issues with optimizations, or with it not filtering bad
 # combinations (protecting the user maybe from himeself) yet.
@@ -77,28 +59,31 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 # We will handle /usr/include/g++-v3/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
-# GCC 3.4 introduces a new version of libstdc++
-if [ "${CHOST}" == "${CCHOST}" ]
-then
-	SLOT="${MY_PV}"
-else
-	SLOT="${CCHOST}-${MY_PV}"
-fi
+# PIE support
+PIE_VER="8.7.4"
+
+# ProPolice version
+PP_VER="3_4"
+PP_FVER="${PP_VER//_/.}-1"
 
 # Patch tarball support ...
+#PATCH_VER="1.0"
 PATCH_VER=
+
 # Snapshot support ...
+#SNAPSHOT="2002-08-12"
 SNAPSHOT=
+
 # Branch update support ...
 MAIN_BRANCH="${PV}"  # Tarball, etc used ...
+
+#BRANCH_UPDATE="20021208"
 BRANCH_UPDATE=
 
-# poof! like magic!
 if [ -z "${SNAPSHOT}" ]
 then
 	S="${WORKDIR}/${PN}-${MAIN_BRANCH}"
-	SRC_URI="${SRC_URI}
-		ftp://gcc.gnu.org/pub/gcc/releases/${P}/${PN}-${MAIN_BRANCH}.tar.bz2"
+	SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${PN}-${MAIN_BRANCH}.tar.bz2"
 
 	if [ -n "${PATCH_VER}" ]
 	then
@@ -113,32 +98,73 @@ then
 	fi
 else
 	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
+	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
+fi
+if [ -n "${PP_VER}" ]
+then
 	SRC_URI="${SRC_URI}
-		ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
+		http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz"
 fi
 
 # PERL cannot be present at bootstrap, and is used to build the man pages. So..
 # lets include some pre-generated ones, shall we?
-SRC_URI="${SRC_URI} mirror://gentoo/${P}-manpages.tar.bz2"
+SRC_URI="${SRC_URI}
+	mirror://gentoo/${P}-manpages.tar.bz2"
+
+# bug #6148 - the bounds checking patch interferes with gcc.c
+# PaX Team, Peter S. Mazinger, pappy, solar, swtaylor, tseng.
+
+# just till the mirrors update...
+#PIE_BASE_URI="mirror://gentoo/"
+PIE_BASE_URI="http://dev.gentoo.org/~lv/"
+PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
+SSP_EXCLUSION_PATCH="gcc-3.3.3-v8.7.0-gcc-ssp-exclusion.patch.bz2"
+SRC_URI="${SRC_URI} ${PIE_BASE_URI}${PIE_CORE} ${PIE_BASE_URI}${SSP_EXCLUSION_PATCH}"
+
+DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extentions"
+HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+
+LICENSE="GPL-2 LGPL-2.1"
+
+KEYWORDS="-*"
+#KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
+
+# Ok, this is a hairy one again, but lets assume that we
+# are not cross compiling, than we want SLOT to only contain
+# $PV, as people upgrading to new gcc layout will not have
+# their old gcc unmerged ...
+# GCC 3.4 introduces a new version of libstdc++
+if [ "${CHOST}" == "${CCHOST}" ]
+then
+	SLOT="${MY_PV}"
+else
+	SLOT="${CCHOST}-${MY_PV}"
+fi
 
 # We need the later binutils for support of the new cleanup attribute.
 # 'make check' fails for about 10 tests (if I remember correctly) less
 # if we use later bison.
+# This one depends on glibc-2.3.2-r3 containing the __guard in glibc
+# we scan for Guard@@libgcc and then apply the function moving patch.
+# If using NPTL, we currently cannot however depend on glibc-2.3.2-r3,
+# else bootstap will break.
+
+# we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 DEPEND="virtual/glibc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	!amd64? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040207 ) )
+	>=sys-libs/glibc-2.3.3_pre20040207
 	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.8-r1
+	hardened? ( >=sys-devel/binutils-2.15.90.0.1.1-r2 )
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
-	mips? ( >=sys-libs/glibc-2.3.3_pre20040420 )
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/glibc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	hardened? ( !amd64? ( >=sys-libs/glibc-2.3.3_pre20040207 ) )
+	>=sys-libs/glibc-2.3.3_pre20040207
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -146,6 +172,20 @@ RDEPEND="virtual/glibc
 
 PDEPEND="sys-devel/gcc-config"
 
+gcc_compat() {
+	einfo "GCC 3.4 provides a new (incompatible) version of libstdc++, so"
+	einfo "binaries linked to an older libstdc++ will break if that older"
+	einfo "version is uninstalled. To make sure nothing breaks, the libs"
+	einfo "from your previous gcc $@ installation will be backed up and"
+	einfo "included in this install."
+
+	cd ${ROOT} || die "Failed to chdir to root: ${ROOT}"
+	tar cvf ${WORKDIR}/gcc-libs.tar $(find ${ROOT}/${LOC}/lib/gcc-lib/${CCHOST}/$@ -type f -name '*.so*') || die "failed to create tarball"
+	cd ${D} || die "failed to enter \$D: $D"
+	tar -mxvf ${WORKDIR}/gcc-libs.tar || die "failed to extract tarball"
+
+	export BULIB=$@
+}
 
 chk_gcc_version() {
 	# This next bit is for updating libtool linker scripts ...
@@ -260,20 +300,26 @@ src_unpack() {
 	# it fail right near the end, so lets die right away when parts that are
 	# known to be broken are going to be compiled.
 	# Travis Tilley <lv@gentoo.org>
-	use amd64 && use java && use gcj && die "gcj will not compile yet with gcc 3.4.0 on amd64. re-emerge with USE=-gcj"
 	use amd64 && use multilib && die "multilib support will not compile yet with gcc 3.4.0. re-emerge with USE=-multilib"
-
 
 	local release_version="Gentoo Linux ${PVR}"
 
-	ewarn "Do not hold me accountable if GCC 3.4 makes things unstable, wont"
-	ewarn "compile your favorite piece of software, breaks anything C++"
-	ewarn "that you compiled with it after uninstalling gcc 3.4, eats your cat,"
-	ewarn "humps your leg, or pees on your rug. YOU HAVE BEEN WARNED!!!"
-	ewarn "ALSO DO NOT BOTHER TSENG, SOLAR, OR GENTOO-HARDENED ABOUT GCC 3.4!"
-	ewarn "SSP has yet to be ported, and if you are using -fstack-protector,"
-	ewarn "you should cancel this install before you end up breaking something!"
-	ewarn "While this may be a final release, numerous problems still exist.."
+	ewarn "GCC 3.4 support in Gentoo is still in an early experimental stage."
+	ewarn "While the compiler itself appears to be pretty solid at this point,"
+	ewarn "there is still a lot of software that will not compile with it. It"
+	ewarn "might be a good idea to keep your older compiler installed. Do not"
+	ewarn "hold gentoo accountable if GCC 3.4 wont compile your favorite piece"
+	ewarn "of software, emits strange and confusing error messages, frustrates"
+	ewarn "you and your porting efforts, eats your cat, humps your leg, or pees"
+	ewarn "on your rug. You have been warned!"
+	ewarn "NOTE: the piessp patch isnt as complete as the 3.3.3 version on archs"
+	ewarn "other than x86 and amd64!"
+
+	if [ -n "${PP_VER}" ] && [ "${ARCH}" != "hppa" ]
+	then
+		# the guard check should be very early in the unpack process
+		check_glibc_ssp
+	fi
 
 	if [ -z "${SNAPSHOT}" ]
 	then
@@ -285,6 +331,16 @@ src_unpack() {
 		fi
 	else
 		unpack gcc-${SNAPSHOT//-}.tar.bz2
+	fi
+
+	if [ -n "${PP_VER}" ]
+	then
+		unpack protector-${PP_FVER}.tar.gz
+	fi
+
+	if [ -n "${PIE_VER}" ]
+	then
+		unpack ${PIE_CORE}
 	fi
 
 	cd ${S}
@@ -303,26 +359,69 @@ src_unpack() {
 		mkdir -p ${WORKDIR}/patch/exclude
 #		mv -f ${WORKDIR}/patch/{40,41}* ${WORKDIR}/patch/exclude/
 		mv -f ${WORKDIR}/patch/41* ${WORKDIR}/patch/exclude/
+
+		# do not enable it, the pie patches won't apply
+		#use uclibc || mv -f ${WORKDIR}/patch/8?_* ${WORKDIR}/patch/exclude/
+
+		if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+		then
+			mv -f ${WORKDIR}/patch/06* ${WORKDIR}/patch/exclude/
+			bzip2 -c ${FILESDIR}/gcc331_use_multilib.amd64.patch > \
+				${WORKDIR}/patch/06_amd64_gcc331-use-multilib.patch.bz2
+		fi
+
 		epatch ${WORKDIR}/patch
-	fi
-
-	echo
-
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-uclibc-3.3-loop.patch
+	elif [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
 	then
+		# We need this even if there isnt a patchset
 		epatch ${FILESDIR}/gcc331_use_multilib.amd64.patch
 	fi
 
-	# This patch enables improved PIE and SSP behaviour but does not
-	# enable it by default ...
-	cd ${S} && epatch "${DISTDIR}/${PIE_SSP_PATCH}"
-	use uclibc || epatch ${DISTDIR}/${PIE_EXCLUSION_PATCH}
-	release_version="${release_version}, pie-${PIE_VER}"
+	#if [ -n "${PIE_VER}" ]
+	#then
+		# corrects startfile/endfile selection and shared/static/pie flag usage
+		epatch ${WORKDIR}/piepatch/upstream
+		# adds non-default pie support (for now only rs6000)
+		epatch ${WORKDIR}/piepatch/nondef
+		# adds default pie support for all archs less rs6000 if DEFAULT_PIE[_SSP] is defined
+		epatch ${WORKDIR}/piepatch/def
+	#fi
 
-	if [ -n "`use hardened`" ]
+	# non-default SSP support.
+	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a -n "${PP_VER}" ]
 	then
+		# ProPolice Stack Smashing protection
+		epatch ${WORKDIR}/protector.dif
+
+		cp ${WORKDIR}/gcc/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
+		cp ${WORKDIR}/gcc/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
+		cp -R ${WORKDIR}/gcc/testsuite/* ${WORKDIR}/${P}/gcc/testsuite/ || die "testsuite not found"
+
+		#use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
+
+		release_version="${release_version}, ssp-${PP_FVER}"
+
+		update_gcc_for_libc_ssp
+	fi
+
+	cd ${WORKDIR}/${P}
+
+	# ARM was having issues with static linking as the spec file
+	# calls for crtbeginT.o vs crtbeginS.o. SpanKY looked through
+	# the gcc/config/arm/t-* files, it's appears that it's not meant
+	# to build crtbeginT.o (May 2 2004)
+	# Testing arm again (May 3 2004)
+	# solved hopefully as of pie/ssp v8.7.1
+
+	epatch ${DISTDIR}/${SSP_EXCLUSION_PATCH}
+
+	release_version="${release_version}, pie-${PIE_VER}"
+	if  ( use x86 || use amd64 && use hardened )
+	then
+		# [ "${ARCH}" != "sparc" && "${ARCH}" != "ppc64" && "${ARCH}" != "s390" ]
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
-		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP -fPIC|' \
+		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 
 		# rebrand to make bug reports easier
@@ -337,6 +436,8 @@ src_unpack() {
 
 	# apps like openoffice break without this
 	cd ${S} ; epatch ${FILESDIR}/3.4.0/gcc-3.4.0-fno-for-scope.patch
+	# needed on ppc/ppc64
+	cd ${S} ; epatch ${FILESDIR}/3.3.3/gcc333_pre20040408-stack-size.patch
 
 	# Install our pre generated manpages if we do not have perl ...
 	if [ ! -x /usr/bin/perl ]
@@ -346,6 +447,13 @@ src_unpack() {
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
+
+	# disable --as-needed from being compiled into gcc specs
+	# natively when using >=sys-devel/binutils-2.15.90.0.3 this is
+	# done to keep our gcc backwards compatible with binutils. 
+	# gcc 3.4.1 cvs has patches that need back porting.. 
+	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
+	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
 
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }
@@ -362,7 +470,7 @@ src_compile() {
 		use f77 && gcc_lang="${gcc_lang},f77"
 		use objc && gcc_lang="${gcc_lang},objc"
 		use java && use gcj && gcc_lang="${gcc_lang},java"
-		# ADA is supported elsewhere, do not enable it here
+		# We do NOT want 'ADA support' in here!
 		# use ada  && gcc_lang="${gcc_lang},ada"
 	else
 		gcc_lang="c"
@@ -400,11 +508,23 @@ src_compile() {
 		myconf="${myconf} --disable-multilib"
 	fi
 
-	# Fix linking problem with c++ apps which where linkedi
-	# agains a 3.2.2 libgcc
+	# Fix linking problem with c++ apps which where linked
+	# against a 3.2.2 libgcc
 	[ "${ARCH}" = "hppa" ] && myconf="${myconf} --enable-sjlj-exceptions"
 
-	use hardened && append-flags -fPIC
+	# --with-gnu-ld needed for cross-compiling
+	# --enable-sjlj-exceptions : currently the unwind stuff seems to work 
+	# for statically linked apps but not dynamic
+	# so use setjmp/longjmp exceptions by default
+	# --disable-libunwind-exceptions needed till unwind sections get fixed. see ps.m for details
+
+	if ! use uclibc
+	then
+		# it's getting close to a time where we are going to need USE=glibc, uclibc, bsdlibc -solar
+		myconf="${myconf} --enable-__cxa_atexit --enable-clocale=generic"
+	else
+		myconf="${myconf} --disable-__cxa_atexit --enable-target-optspace --with-gnu-ld --enable-sjlj-exceptions"
+	fi
 
 	# Default arch support
 	use amd64 && myconf="${myconf} --with-arch=k8"
@@ -413,6 +533,7 @@ src_compile() {
 	#use mips && myconf="${myconf} --with-arch=mips3"
 
 	do_filter_flags
+	use hardened && append-flags -fPIC
 	einfo "CFLAGS=\"${CFLAGS}\""
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
 	einfo "GCJFLAGS=\"${GCJFLAGS}\""
@@ -437,9 +558,8 @@ src_compile() {
 		--enable-threads=posix \
 		--enable-long-long \
 		--disable-checking \
+		--disable-libunwind-exceptions \
 		--enable-cstdio=stdio \
-		--enable-clocale=generic \
-		--enable-__cxa_atexit \
 		--enable-version-specific-runtime-libs \
 		--with-gxx-include-dir=${STDCXX_INCDIR} \
 		--with-local-prefix=${LOC}/local \
@@ -482,7 +602,7 @@ src_compile() {
 src_install() {
 	local x=
 
-	# Dont allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
+	# Do allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
 	# this can break the build.
 	for x in ${WORKDIR}/build/gcc/include/*
 	do
@@ -526,23 +646,59 @@ src_install() {
 	ln -s gcc-lib ${D}/${LOC}/lib/gcc
 	LIBPATH=${LIBPATH/lib\/gcc/lib\/gcc-lib}
 
+	# Due to the fact that GCC 3.4 provides an incompatible version of
+	# libstdc++, we need to provide compatibility for binary-only apps
+	# which are linked against the old version. Every arch should have
+	# one of these marked stable, so lets look for the newest version
+	# first. We need to check for the .so instead of just the directory
+	# because there may or may not be any shared objects to back up...
+	# The PPC-specific gcc 3.3.3 ebuilds for some reason install directly
+	# to /usr/lib/ on PPC64, so we'll have to add logic for this later. :/
+	# Travis Tilley <lv@gentoo.org>
+	if [ -f ${LOC}/lib/gcc-lib/${CCHOST}/3.3.3/libstdc++.so ]
+	then
+		gcc_compat 3.3.3
+	elif [ -f ${LOC}/lib/gcc-lib/${CCHOST}/3.3.2/libstdc++.so ]
+	then
+		gcc_compat 3.3.2
+	elif [ -f ${LOC}/lib/gcc-lib/${CCHOST}/3.2.3/libstdc++.so ]
+	then
+		gcc_compat 3.2.3
+	fi
+
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+
+	# The LDPATH stuff is kinda iffy now that we need to provide compatibility
+	# with older versions of GCC for binary apps.
 	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
 	then
 		# amd64 is a bit unique because of multilib.  Add some other paths
-		echo "LDPATH=\"${LIBPATH}:${LIBPATH}/32:${LIBPATH}/../lib64:${LIBPATH}/../lib32\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+		LDPATH="${LIBPATH}:${LIBPATH}/32:${LIBPATH}/../lib64:${LIBPATH}/../lib32"
 	else
-		echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+		LDPATH="${LIBPATH}"
 	fi
+	if [ "${BULIB}" != "" ]
+	then
+		LDPATH="${LDPATH}:${LOC}/lib/gcc-lib/${CCHOST}/${BULIB}"
+	fi
+	echo "LDPATH=\"${LDPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	# Also set CC and CXX
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+
+	# Make sure we do not check glibc for SSP again, as we did already
+	if glibc_have_ssp || \
+	   [ -f "${ROOT}/etc/env.d/99glibc_ssp" ]
+	then
+		echo "GLIBC_SSP_CHECKED=1" > ${D}/etc/env.d/99glibc_ssp
+	fi
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
