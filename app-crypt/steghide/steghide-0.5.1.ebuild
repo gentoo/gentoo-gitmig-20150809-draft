@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.5 2005/01/01 12:39:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.6 2005/03/30 01:46:43 vanquirius Exp $
 
 inherit eutils
 
@@ -16,6 +16,11 @@ DEPEND=">=app-crypt/mhash-0.8.18-r1
 		>=dev-libs/libmcrypt-2.5.7
 		>=media-libs/jpeg-6b-r3
 		>=sys-libs/zlib-1.1.4-r2"
+
+src_unpack(){
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-gcc34.patch
+}
 
 src_compile() {
 	econf || die "configure failed"

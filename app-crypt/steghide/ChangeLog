@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/steghide
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.6 2005/01/01 12:39:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.7 2005/03/30 01:46:43 vanquirius Exp $
+
+  29 Mar 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/steghide-0.5.1-gcc34.patch, steghide-0.5.1.ebuild:
+  Adding patch so that steghide can be compiled with gcc-3.4. The patch is taken
+  from Debian and can be found in bug 274184 in their bug tracking system. This
+  fixes our bug 83840. Thanks to Thomas Beinicke <Merlin-TC@web.de> for
+  reporting the bug.
 
   30 Jul 2004; Tony Vroon <chainsaw@gentoo.org>
   +files/fix-libtool-invocation.patch, steghide-0.5.1.ebuild:
