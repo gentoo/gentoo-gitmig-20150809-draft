@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wavelan-applet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavelan-applet/ChangeLog,v 1.8 2004/06/25 00:47:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavelan-applet/ChangeLog,v 1.9 2004/10/09 07:39:23 cardoe Exp $
+
+  09 Oct 2004; Doug Goldstein <cardoe@gentoo.org> wavelan-applet-0.5.ebuild:
+  repoman: added missing IUSE
 
   04 Jul 2003; Alastair Tse <liquidx@gentoo.org> wavelan-applet-0.5.ebuild:
   fix gnome1 deps

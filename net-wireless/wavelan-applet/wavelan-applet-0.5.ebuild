@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavelan-applet/wavelan-applet-0.5.ebuild,v 1.9 2004/10/03 21:53:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavelan-applet/wavelan-applet-0.5.ebuild,v 1.10 2004/10/09 07:39:23 cardoe Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Panel applet that shows the strength of a wavelan connection"
@@ -8,6 +8,7 @@ SRC_URI="http://www.eskil.org/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.eskil.org/wavelan-applet/"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86 sparc "
 
 RDEPEND=">=gnome-base/gnome-core-1.2.12
