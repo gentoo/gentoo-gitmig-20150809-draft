@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.75.ebuild,v 1.2 2003/09/13 21:07:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.75.ebuild,v 1.3 2003/11/03 23:14:00 vapier Exp $
 
 MY_P=${PN/-/_}2-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="GUI for dctc (GTK2 version)"
-SRC_URI="http://ac2i.tzo.com/dctc/${MY_P}.tar.gz"
 HOMEPAGE="http://ac2i.tzo.com/dctc/"
+SRC_URI="http://ac2i.tzo.com/dctc/${MY_P}.tar.gz"
 
-SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+SLOT="2"
+KEYWORDS="x86 ppc"
 IUSE="nls"
 
 DEPEND="=dev-libs/glib-2*
