@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/ac-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.27 2003/08/16 23:17:46 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.28 2003/09/02 09:08:55 aliz Exp $
+
+*ac-sources-2.4.22-r1 (02 Sep 2003)
+
+  02 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> ac-sources-2.4.22-r1.ebuild :
+  Version bump and ebuild cleanups.
 
 *ac-sources-2.4.22_rc2-r3 (16 Aug 2003)
 
