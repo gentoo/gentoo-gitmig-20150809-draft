@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-2.0_pre2-r1.ebuild,v 1.1 2001/10/13 22:28:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-2.0_pre2-r1.ebuild,v 1.2 2001/11/05 13:54:04 achim Exp $
 . /usr/portage/eclass/inherit.eclass
 inherit kde || die
 
@@ -32,7 +32,7 @@ src_install() {
     
     dodir ${KDEDIR}/share/apps/quanta/doc/
     for x in css html javascript php; do
-	cp -a ${WORKDIR}/${x}/${x} ${D}/${KDEDIR}/share/apps/quanta/doc/
+	cp -a ${WORKDIR}/${x}/*.docrc ${WORKDIR}/${x}/${x} ${D}/${KDEDIR}/share/apps/quanta/doc/
     done
     
 }
