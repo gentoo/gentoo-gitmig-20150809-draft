@@ -16,6 +16,6 @@ MD5 f3aa6906e6a340e3b38536b1fd0571f5 /files/grub-0.92/grub-0.90-installcopyonly.
 MD5 59c9235025c9048d6165d68562dbc0ec /files/grub-0.92/grub-0.90-append.patch 2893
 MD5 93c92f5020925b376742d2ad8022160b /files/grub-0.92/grub-0.92-nodeprecatedflags.patch 375
 MD5 d4ac36a6a292a66b276ebc8a4ce2a41d /files/grub-0.92/grub-0.90-addsyncs.patch 2071
-MD5 528c9de1a71c53a835db682911658b95 /grub-0.93.20030118.ebuild 1981
+MD5 4e26a27cce3a7a48266c9f10108c002c /grub-0.93.20030118.ebuild 1981
 MD5 289ed7946dec7ac4eac146b3a5c0c608 grub-0.93.tar.gz 891032
 MD5 a1d905b0ec3450c44e7142ef1671aa76 grub-0.93.20030118-gentoo.diff.bz2 29995

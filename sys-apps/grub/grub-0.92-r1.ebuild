@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.92-r1.ebuild,v 1.10 2003/03/11 05:39:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.92-r1.ebuild,v 1.11 2003/04/11 18:12:13 method Exp $
 
-inherit mount-boot eutils
+inherit mount-boot eutils flag-o-matic
+
+filter-flags "-fstack-protector"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU GRUB boot loader"

@@ -16,5 +16,5 @@ MD5 f3aa6906e6a340e3b38536b1fd0571f5 /files/grub-0.92/grub-0.90-installcopyonly.
 MD5 59c9235025c9048d6165d68562dbc0ec /files/grub-0.92/grub-0.90-append.patch 2893
 MD5 93c92f5020925b376742d2ad8022160b /files/grub-0.92/grub-0.92-nodeprecatedflags.patch 375
 MD5 d4ac36a6a292a66b276ebc8a4ce2a41d /files/grub-0.92/grub-0.90-addsyncs.patch 2071
-MD5 d10c3d793d9c0d4196ccad667ae972a7 /grub-0.92-r1.ebuild 3201
+MD5 67c5dc359348e825f53accd3716ea685 /grub-0.92-r1.ebuild 3200
 MD5 50f2786e7bf96b1115ee82b9c101a816 grub-0.92.tar.gz 877112
