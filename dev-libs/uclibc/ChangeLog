@@ -1,7 +1,9 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.7 2003/09/30 19:24:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.8 2003/10/05 01:52:02 solar Exp $
 
+  04 Oct 2003; <solar@gentoo.org> uclibc-0.9.21.ebuild:
+  marking stable on x86, and added a metadata.xml
 
 *uclibc-0.9.21 (10 Sep 2003)
 
