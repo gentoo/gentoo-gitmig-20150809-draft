@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3.ebuild,v 1.4 2003/11/17 07:44:16 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3.ebuild,v 1.5 2003/11/18 21:59:20 blkdeath Exp $
 
 MY_P=${P//-tools}
 MY_P=${MY_P/_}
@@ -16,6 +16,13 @@ SLOT="0"
 DEPEND="virtual/glibc"
 
 src_compile() {
+
+	# Set -fPIC compiler option to enable compilation on 64-bit archs
+	# (Bug #33336)
+	if use alpha || use amd64 || use ia64; then
+		append-flags -fPIC
+	fi
+
 	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --enable-ipv6=no"
 
 	econf ${myconf} || die "Configure failed"
