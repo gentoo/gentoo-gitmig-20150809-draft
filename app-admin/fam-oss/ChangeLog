@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/fam-oss
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.30 2003/11/15 02:37:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.31 2003/11/15 23:25:36 gmsoft Exp $
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> fam-oss-2.6.10-r1.ebuild:
   Stable on ia64
@@ -13,6 +13,9 @@
   Stable on alpha
 
 *fam-oss-2.6.10-r1 (30 Jul 2003)
+
+  15 Nov 2003; Guy Martin <gmsoft@gentoo.org> fam-oss-2.6.10-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   30 Jul 2003; Nick Hadaway <raker@gentoo.org> fam-oss-2.6.10-r1.ebuild,
   files/fam-oss-2.6.10-nostatvfs.patch:
