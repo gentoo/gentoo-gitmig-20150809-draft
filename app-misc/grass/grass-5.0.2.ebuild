@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.2.ebuild,v 1.10 2004/06/24 22:14:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.2.ebuild,v 1.11 2004/06/30 17:11:23 vapier Exp $
 
-DESCRIPTION="An open-source GIS with raster and vector functionality."
+DESCRIPTION="An open-source GIS with raster and vector functionality"
 HOMEPAGE="http://grass.itc.it/"
 SRC_URI="http://grass.ibiblio.org/${PN}5/source/${P}_src.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-
 IUSE="tcltk png jpeg tiff postgres odbc gd motif truetype"
 # Removed cause mesa never goes stable.
 # IUSE="${IUSE} nviz"
@@ -33,7 +33,7 @@ DEPEND=">=sys-devel/make-3.80
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	postgres? ( >=dev-db/postgresql-7.3.2 )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
-	gd? ( >=media-libs/libgd-1.8.3 )
+	gd? ( >=media-libs/gd-1.8.3 )
 	motif? ( x11-libs/openmotif )
 	truetype? ( >=media-libs/freetype-2.1.3 )"
 	#nviz? ( >=media-libs/mesa-3.5 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.10.ebuild,v 1.5 2004/06/28 03:52:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.10.ebuild,v 1.6 2004/06/30 17:12:35 vapier Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="kde pda png X usb"
 
 DEPEND="png? ( media-libs/libpng
 	sys-libs/zlib
-	media-libs/libgd )"
+	media-libs/gd )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
