@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.3 2003/06/24 15:21:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.4 2003/06/24 15:32:51 solar Exp $
 
 *chpax-0.4 (16 May 2003)
+
+  24 Jun 2003; Ned Ludd <solar@gentoo.org> chpax-0.4.ebuild:
+  added ~ppc to keywords
 
   24 Jun 2003; Guy Martin <gmsoft@gentoo.org> chpax-0.4.ebuild :
   Added hppa to KEYWORDS.

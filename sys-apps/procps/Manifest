@@ -6,4 +6,4 @@ MD5 0453db937f8bd4b18fd8055bb52b384b procps-3.1.9.ebuild 1480
 MD5 fe8c47a48243025d5ec650370012c15b files/digest-procps-2.0.10-r1 66
 MD5 b4d64145eb394bd49421f63d182313d0 files/digest-procps-2.0.11 66
 MD5 0fd90d51ff8a0ebb2611d5a978931397 files/digest-procps-3.1.8 136
-MD5 9a240e887d0ca5948c23825937bcf53c files/digest-procps-3.1.9 64
+MD5 9b6e44ab96ca5da78ac7dcbb43c5d87c files/digest-procps-3.1.9 136
