@@ -1,0 +1,12 @@
+# ChangeLog for app-misc/livetools
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header
+
+*livetools-1.1 (11 Dec 2002)
+  
+  11 Dec 2002; Matt Keadle <mkeadle@gentoo.org> livetools-1.1.ebuild
+  files/digest-livetools-1.1 :
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. Thanks to Caleb Shay for submitting this ebuild
+  in bug #11744.
