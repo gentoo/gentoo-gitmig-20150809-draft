@@ -1,4 +1,5 @@
-MD5 dedff419843b05c7840601c25c349c27 pxes-0.6.ebuild 1600
-MD5 6b2dccca06359d913eaa2caa9215505c files/pxes-0.6-gentoo.patch 418
+MD5 14573e1063977b448104e9ae501945d7 pxes-0.6.ebuild 1706
+MD5 2c809ffa8688cac2df368aa37df789c6 ChangeLog 351
+MD5 17631579c17eec2824433cdbc8028c07 files/pxes-0.6-gentoo.patch 1068
 MD5 f3afb0ef2357d69147125eeb6cda6c43 files/makedevices.sh 1626
 MD5 ad26896c5d4dcf2cfd959cd80e7c8417 files/digest-pxes-0.6 256

@@ -1,0 +1,24 @@
+diff -urN pxesconfig-0.6/Makefile.PL pxesconfig-0.6-gentoo/Makefile.PL
+--- pxesconfig-0.6/Makefile.PL	2003-07-19 00:49:43.000000000 -0400
++++ pxesconfig-0.6-gentoo/Makefile.PL	2003-08-01 10:59:30.000000000 -0400
+@@ -130,7 +130,7 @@
+ 
+ install ::
+ 	\$(PERL) -MExtUtils::Install \\
+-		-e "install({'Pxesconfig' => '\$(LIB)/Pxesconfig'},'\$(VERBINST)',0);"
++		-e "install({'Pxesconfig' => '\$(INSTALLARCHLIB)/Pxesconfig'},'\$(VERBINST)',0);"
+ 
+ checkpxesconfig:
+ 	\@if grep '^[ 	]*use lib "\."' pxesconfig >/dev/null ; \\
+diff -urN pxesconfig-0.6/Pxesconfig/PxesconfigGUI.pm pxesconfig-0.6-gentoo/Pxesconfig/PxesconfigGUI.pm
+--- pxesconfig-0.6/Pxesconfig/PxesconfigGUI.pm	2003-07-19 00:49:44.000000000 -0400
++++ pxesconfig-0.6-gentoo/Pxesconfig/PxesconfigGUI.pm	2003-08-01 11:00:03.000000000 -0400
+@@ -55,7 +55,7 @@
+ 
+ 	# FIXME
+ 	# /opt prefix
+-   $Glade::PerlRun::pixmaps_directory = "/opt/share/pixmaps/pxesconfig";
++   $Glade::PerlRun::pixmaps_directory = "/usr/share/pixmaps/pxesconfig";
+ 	#warn "pixmaps: $Glade::PerlRun::pixmaps_directory";
+ } # End of sub BEGIN
+ 
