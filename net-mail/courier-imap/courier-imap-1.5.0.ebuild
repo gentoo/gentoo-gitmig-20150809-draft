@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.5.0.ebuild,v 1.3 2002/07/17 15:54:03 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.5.0.ebuild,v 1.4 2002/07/26 13:23:31 carpaski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
@@ -38,6 +38,10 @@ src_compile() {
 	use mysql || myconf="${myconf} --without-authmysql"
 	use berkdb && myconf="${myconf} --with-db=db"
 	use berkdb || myconf="${myconf} --with-db=gdbm"
+
+	# Courier Assumes that if the account exists, then we need
+	# to build with support. This is a bad assumption.
+	[ -x /usr/bin/vchkpw ] || myconf="${myconf} --without-authvchkpw"
 
 	./configure \
 		--prefix=/usr \
