@@ -1,0 +1,11 @@
+# ChangeLog for net-mail/pflogsumm
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pflogsumm/ChangeLog,v 1.1 2004/11/03 09:50:57 ticho Exp $
+
+*pflogsumm-1.0.11 (03 Nov 2004)
+
+  03 Nov 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +pflogsumm-1.0.11.ebuild:
+  Initial import. Closes bug #32445, ebuild submitted by eric sammer
+  <eric@ineoconcepts.com>.
+
