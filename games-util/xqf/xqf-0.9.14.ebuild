@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.14.ebuild,v 1.2 2004/04/12 01:43:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.14.ebuild,v 1.3 2004/06/01 23:23:31 mr_bones_ Exp $
 
 DESCRIPTION="A server browser for many FPS games (frontend for qstat)"
 HOMEPAGE="http://www.linuxgames.com/xqf/"
@@ -30,9 +30,9 @@ RDEPEND="${RDEPEND}
 src_compile() {
 	econf \
 		--disable-dependency-tracking \
-		`use_enable gtk2` \
-		`use_enable nls` \
-		`use_enable geoip` \
+		$(use_enable gtk2) \
+		$(use_enable nls) \
+		$(use_enable geoip) \
 		--enable-bzip2 \
 		|| die
 	emake || die "emake failed"

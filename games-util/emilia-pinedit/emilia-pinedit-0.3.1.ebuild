@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.6 2004/05/11 12:56:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.7 2004/06/01 23:23:31 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -31,7 +31,7 @@ src_unpack() {
 		configure \
 		|| die "sed configure failed"
 	sed -i \
-		-e "/^LDFLAGS/s:$:`pinball-config --libs` @LIBS@ -lSDL -lSDL_image -lSDL_mixer:" \
+		-e "/^LDFLAGS/s:$:$(pinball-config --libs) @LIBS@ -lSDL -lSDL_image -lSDL_mixer:" \
 		pinedit/Makefile.in \
 		|| die "sed pinedit/Makefile.in failed"
 	epatch ${FILESDIR}/${PV}-assert.patch
