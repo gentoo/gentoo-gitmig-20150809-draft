@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.12 2003/10/16 17:00:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.13 2003/10/20 07:05:46 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -89,7 +89,7 @@ src_unpack() {
 
 	# Is this necessary with the fixed Makefile?
 	if [ ! -f /usr/src/linux/include/config/MARKER ] ; then
-		die "Please compile kernel sources."
+		die "Please compile kernel sources with \"make bzImage.\""
 	fi
 
 	# Require at least one video card.
