@@ -1,0 +1,10 @@
+--- identd.c.orig	2003-09-05 12:25:39.922527448 -0400
++++ identd.c	2003-09-05 12:26:02.019168248 -0400
+@@ -431,6 +431,7 @@
+     return;
+ 
+   /* we don't use snprintf() here since it is not so portable...*/
++  memset(buf, '\0', 24);
+   sprintf(buf, "%d\n", getpid());
+   assert(buf[23] == '\0');
+   write(fd, buf, strlen(buf));

@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-2.0.ebuild,v 1.1 2003/06/17 13:37:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-2.0-r1.ebuild,v 1.1 2003/09/05 16:32:08 vapier Exp $
+
+inherit gcc
 
 DESCRIPTION="A static, secure identd.  One source file only!"
 HOMEPAGE="http://www.guru-group.fi/~too/sw/"
@@ -14,11 +16,14 @@ DEPEND="virtual/glibc"
 
 S=${WORKDIR}
 
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PV}-memset.patch
+	sed -i "s:identd.pid:${PN}.pid:" identd.c
+}
+
 src_compile() {
-	cp identd.c{,.old}
-	sed -e "s:identd.pid:${PN}.pid:" \
-		identd.c.old > identd.c
-	gcc identd.c -o ${PN} ${CFLAGS} || die
+	$(gcc-getCC) identd.c -o ${PN} ${CFLAGS} || die
 }
 
 src_install() {

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/fakeidentd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.13 2003/06/17 13:37:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.14 2003/09/05 16:32:08 vapier Exp $
+
+*fakeidentd-2.0-r1 (05 Sep 2003)
+
+  05 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add patch to make sure memory is zeroed out.
 
 *fakeidentd-2.0 (17 Jun 2003)
 
