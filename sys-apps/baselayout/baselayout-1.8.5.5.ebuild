@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.5.ebuild,v 1.4 2002/12/18 10:54:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.5.ebuild,v 1.5 2003/01/18 23:19:45 tuxus Exp $
 
 IUSE="bootstrap build"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 
 DEPEND="sys-kernel/linux-headers
 	>=sys-apps/portage-2.0.23"
@@ -91,6 +91,16 @@ src_unpack() {
 			inittab.orig > inittab || die
 		rm -f inittab.orig
 	fi
+
+	# Fix mips specific stuff
+        if [ "${ARCH}" = "mips" ]
+        then
+                cd ${S}/etc
+                cp inittab inittab.orig
+                sed -e 's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100\n\n# TERMINALS"' \
+                        inittab.orig > inittab || die
+                rm -f inittab.orig
+        fi
 }
 
 src_compile() {

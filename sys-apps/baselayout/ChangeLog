@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.58 2003/01/16 03:49:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.59 2003/01/18 23:19:45 tuxus Exp $
 
   15 Jan 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.2.ebuild :
 
@@ -24,6 +24,9 @@
   things might break ....  See ChangeLog in /usr/share/doc/$PF for more info.
 
 *baselayout-1.8.5.8 (07 Jan 2003)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  serial console for mips
 
   15 Jan 2003; Jason Wever <weeve@gentoo.org> baselayout-1.8.5.8.ebuild :
 
@@ -55,6 +58,10 @@
   /usr/include/awk/awk.h exists.
 
 *baselayout-1.8.5.5 (09 Dec 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Fix mips specific stuff
+  Added mips to keywords
 
   10 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
   baselayout-1.8.5.5.ebuild :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.2.ebuild,v 1.1 2003/01/15 01:19:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.2.ebuild,v 1.2 2003/01/18 23:19:45 tuxus Exp $
 
 IUSE="bootstrap build"
 
@@ -91,6 +91,16 @@ src_unpack() {
 			inittab.orig > inittab || die
 		rm -f inittab.orig
 	fi
+
+	# Fix mips specific stuff
+        if [ "${ARCH}" = "mips" ]
+        then
+                cd ${S}/etc
+                cp inittab inittab.orig
+                sed -e 's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100\n\n# TERMINALS"' \
+                        inittab.orig > inittab || die
+                rm -f inittab.orig
+        fi
 }
 
 src_compile() {
