@@ -2,7 +2,7 @@ MD5 ce42b6569e16535ce94bb714428f7e1c ChangeLog 6981
 MD5 cf8d826617e257f7eaffbdbe00d055cb eog-0.6-r4.ebuild 1204
 MD5 e5ec4019a3430c62226e7a3fecbb8008 eog-2.4.0.ebuild 999
 MD5 ac3c94e1e43e7e0bed81440038ffab83 eog-2.4.1.ebuild 1002
-MD5 eedd86bffe519169c7970524ad79f44e eog-2.6.0.ebuild 1072
+MD5 1cb90e8e3299bd03b98082f2fbb701ca eog-2.6.0.ebuild 1073
 MD5 17e3df1237e0d3b55ba66adf6287782e eog-2.6.1.ebuild 1055
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 5f786f0751774fc1e127d27e4f0c31e9 files/digest-eog-0.6-r4 59
