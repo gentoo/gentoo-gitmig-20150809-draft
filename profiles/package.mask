@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (06 Oct 2002)
+# Masked for a quick test period. GLSA on local DoS. Version bump.
+=net-www/apache-1.3.27
+
 # <danarmak@gentoo.org> (5 Oct 2002)
 # kde 3.0.4: NOT YET RELEASED, so don't unmask locally because there's no way for you
 # to get the sources. This is in portage for easier collaboration between me and Verwilst.
