@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 0e0750a6a020b4230799bd9d6d144945 ChangeLog 3924
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 5a4335f568701915253e5c52c59d4a41 xfsdump-2.2.24.ebuild 1228
+MD5 bb51680de9b0086ef999df241226afa9 xfsdump-2.2.24.ebuild 1226
 MD5 2429f1475c073efad5637729bebd5c4a xfsdump-2.2.21.ebuild 1506
 MD5 25733daf03da99c1ad0003aff792ae09 files/digest-xfsdump-2.2.24 70
 MD5 40ad6b6e0a2b464bc7838b4364deed7f files/digest-xfsdump-2.2.21 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBadx9HTu7gpaalycRAt2XAKDgjgpRPioIy73t6Jmwb6dp3gZErwCeLYWZ
-DI8SiYdg/QglIps3gyObq7M=
-=lv0Q
+iD8DBQFBsQ0droRuSHgZdywRAnDIAJ0fd/soqI4JS6D9qvEMT0z5ihNWewCfVIuD
+mbpyOyERQ+nK3CXILQ5MTNU=
+=Ze0X
 -----END PGP SIGNATURE-----
