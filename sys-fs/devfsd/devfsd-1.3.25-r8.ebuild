@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.13 2004/12/08 02:04:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.14 2005/01/10 18:25:14 ciaranm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -47,3 +47,12 @@ src_install() {
 	insinto /etc
 	doins ${FILESDIR}/devfsd.conf
 }
+
+pkg_postinst() {
+	echo
+	einfo "You may wish to read the Gentoo Linux Defice Filesystem Guide,"
+	einfo "which can be found online at:"
+	einfo "    http://www.gentoo.org/doc/en/devfs-guide.xml"
+	echo
+}
+
