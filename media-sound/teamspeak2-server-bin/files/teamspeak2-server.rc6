@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/files/teamspeak2-server.rc6,v 1.1 2003/09/27 11:27:47 jje Exp $
+
+depend() {
+        need net
+}
+
+start() {
+        ebegin "Starting TeamSpeak Server"
+	start-stop-daemon --start --quiet --chuid teamspeak2 \
+		--exec /opt/teamspeak2-server/server_linux -- \
+		-db=/var/lib/teamspeak2-server/server.dbs \
+		-ini=/var/lib/teamspeak2-server/server.ini \
+		-log=/var/log/teamspeak2-server/server.log \
+		-pid=/var/run/teamspeak2-server/server.pid \
+		-sql=/opt/teamspeak2-server/sql/ \
+		-httpdocs=/opt/teamspeak2-server/http/ &>/dev/null
+        eend $?
+}
+
+stop() {
+        ebegin "Stopping TeamSpeak Server"
+        start-stop-daemon --stop --quiet \
+		--pidfile /var/run/teamspeak2-server/server.pid
+        eend $?
+}
+
