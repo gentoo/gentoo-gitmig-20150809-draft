@@ -1,8 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.100 2003/12/02 02:02:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.101 2003/12/08 00:02:11 foser Exp $
 
 *kdelibs-3.2.0_beta2 (01 Dec 2003)
+
+  07 Dec 2003; foser <foser@gentoo.org> kdelibs-*.ebuild :
+  Fix fam-oss dep to fam, due to move
 
   01 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdelibs-3.2.0_alpha2.ebuild,
   kdelibs-3.2.0_beta2.ebuild:

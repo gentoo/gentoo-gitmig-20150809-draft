@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.1 2003/12/02 02:02:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.2 2003/12/08 00:02:11 foser Exp $
 inherit kde
 
 MY_PV=3.1.94
@@ -26,7 +26,7 @@ DEPEND="dev-lang/perl
 	alsa? ( media-libs/alsa-lib virtual/alsa )
 	cups? ( net-print/cups )
 	media-libs/tiff
-	app-admin/fam-oss
+	app-admin/fam
 	app-text/ghostscript
 	media-libs/libart_lgpl
 	sys-devel/gettext
