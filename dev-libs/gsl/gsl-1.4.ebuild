@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.4.ebuild,v 1.1 2003/11/18 21:45:23 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.4.ebuild,v 1.2 2003/11/22 03:39:21 george Exp $
 
 IUSE=""
 
 inherit flag-o-matic
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The GNU Scientific Library"
 SRC_URI="http://mirrors.rcn.net/pub/sourceware/gsl/${P}.tar.gz"
 HOMEPAGE="http://sources.redhat.com/gsl/"
@@ -21,6 +20,7 @@ replace-flags k6-3 i586
 replace-flags k6-2 i586
 replace-flags k6 i586
 filter-flags -ffast-math
+filter-mfpmath sse
 
 
 src_compile() {

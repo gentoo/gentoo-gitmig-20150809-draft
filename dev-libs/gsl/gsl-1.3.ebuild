@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.3.ebuild,v 1.4 2003/09/11 01:10:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.3.ebuild,v 1.5 2003/11/22 03:39:21 george Exp $
 
 IUSE=""
 
@@ -21,6 +21,7 @@ replace-flags k6-3 i586
 replace-flags k6-2 i586
 replace-flags k6 i586
 filter-flags -ffast-math
+filter-mfpmath sse
 
 
 src_compile() {
