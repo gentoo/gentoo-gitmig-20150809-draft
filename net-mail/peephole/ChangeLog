@@ -1,0 +1,8 @@
+# ChangeLog for net-mail/peephole
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/peephole/ChangeLog,v 1.1 2004/06/29 09:03:55 s4t4n Exp $
+	
+*peephole-1.3 (29 Jun 2004)
+
+  29 Jun 2004; Michele Noberasco <s4t4n@gentoo.org> peephole-1.3.ebuild:
+  Initial import. Needed by x11-plugins/wmpeople.
