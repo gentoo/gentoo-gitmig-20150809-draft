@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.25 2004/02/06 15:58:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.26 2004/02/06 20:39:55 gustavoz Exp $
+
+  06 Feb 2004; <gustavoz@gentoo.org> bison-1.875.ebuild:
+  stable on sparc
 
   06 Feb 2004; Aron Griffis <agriffis@gentoo.org> bison-1.875.ebuild:
   k6 replacement in the ebuild was resulting in -march=i586-3, fix and make more
