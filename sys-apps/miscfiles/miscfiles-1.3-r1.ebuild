@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.3-r1.ebuild,v 1.11 2004/06/30 02:52:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.3-r1.ebuild,v 1.12 2004/09/23 05:47:31 robbat2 Exp $
 
 inherit eutils
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="uclibc"
 
-DEPEND="virtual/libc
-	uclibc? ( app-arch/gzip )"
+DEPEND="uclibc? ( app-arch/gzip )"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
