@@ -1,4 +1,6 @@
-MD5 1c9ec85a8d00d5871a4b683de0ef5c21 ChangeLog 346
+MD5 ddcd93895263122b1e669311c71e39b9 ChangeLog 543
 MD5 b558ceb1c9fbdaf8262d35498969c2aa fcitx-1.8.5.ebuild 782
+MD5 a2e4557ba34c067f2362e53c0b24ae93 fcitx-2.0.1.ebuild 1149
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 9ae1f3d5714643599037127042dfb979 files/digest-fcitx-1.8.5 64
+MD5 61e196222f31b91faeaf1fc68de9ea32 files/digest-fcitx-2.0.1 65
