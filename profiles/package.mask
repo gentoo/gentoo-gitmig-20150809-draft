@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3273 2004/10/22 12:37:36 foser Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3274 2004/10/22 15:29:21 vapier Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -37,10 +37,13 @@
 net-www/bugport
 
 # <vapier@gentoo.org> (20 Oct 2004)
-# New SLOT-ed autoconf's
+# New SLOT-ed autoconf/automake
 =sys-devel/autoconf-2.13
 =sys-devel/autoconf-2.59-r6
 sys-devel/autoconf-wrapper
+=sys-devel/automake-1.8.5-r2
+<sys-devel/automake-1.8
+sys-devel/automake-wrapper
 
 # <hansmi@gentoo.org> (19 Oct 2004)
 # Masked all ebuilds of xeasyconf, because there is no stable
