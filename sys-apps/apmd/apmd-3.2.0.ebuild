@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.2 2003/12/31 13:53:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.3 2004/02/29 17:51:13 liquidx Exp $
 
 inherit eutils
 
@@ -54,10 +54,12 @@ src_compile() {
 S="${WORKDIR}/${PN}-${PV}.orig"
 
 src_install() {
+	dodir /usr/sbin
+	
 	make DESTDIR=${D} PREFIX=/usr install || die "install failed"
 
 	dodir /etc/apm/{event.d,suspend.d,resume.d}
-	exeinto /etc/apm ; doexe debian/apmd_proxy
+	exeinto /etc/apm ; doexe apmd_proxy
 	dodoc ANNOUNCE BUGS.apmsleep COPYING* README* ChangeLog LSM
 
 	insinto /etc/conf.d ; newins ${FILESDIR}/apmd.confd apmd

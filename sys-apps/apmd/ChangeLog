@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/apmd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.10 2003/10/13 19:32:25 plasmaroo Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.11 2004/02/29 17:51:13 liquidx Exp $
+
+*apmd-3.2.1_p4 (29 Feb 2004)
+
+  29 Feb 2004; Alastair Tse <liquidx@gentoo.org> apmd-3.2.0.ebuild,
+  apmd-3.2.1_p4.ebuild, files/apmd.confd:
+  version bump. using debian's apmd as development seems to have moved there
+  (#36952), adapted new ebuild based on changes suggested by narendra sankar
+  <nsankar@broadcom.com>. added man pages and docs.
 
   13 Oct 2003; <plasmaroo@gentoo.org> apmd-3.0.2-r3.ebuild,
   files/apmd.kernel26x.patch: Added a patch to get apmd to compile on 
