@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 2b38461c8c0a6e8516eb70e3a556f49a lutelwall-0.97.ebuild 808
 MD5 7114835218eb99faccf58ed30aa18554 lutelwall-0.96.ebuild 807
-MD5 7687ba5be8e517c7add7fdb873aa7936 ChangeLog 872
+MD5 244b14d656f469ea96977b394982d8fc ChangeLog 997
 MD5 4294c738bdb7e97e266e93850ede8705 metadata.xml 839
 MD5 fef2974bb2d7ea5a836e69362ab639e8 files/digest-lutelwall-0.96 65
+MD5 00ebccdbbc0a9361c49ce901ddd25730 files/digest-lutelwall-0.97 65
 MD5 b85dc7b7070dd0aa724f8095dbddb8db files/lutelwall 470
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCR0aL06ebR+OMO78RAr9rAKCHyMWG8U3aLhpxd09PSLhh2ExuZwCfcjXy
-WRNHL6QLzDbZdkR0gUxYSIM=
-=C09d
------END PGP SIGNATURE-----
