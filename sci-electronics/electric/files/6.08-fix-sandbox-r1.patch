@@ -1,0 +1,23 @@
+--- Makefile.in.oric	2004-03-15 10:31:14.000000000 +1030
++++ Makefile.in	2004-03-15 10:31:27.000000000 +1030
+@@ -932,15 +932,15 @@
+ 	rm -f src/vhdl/*~ src/vhdl/"#"*"#"
+ 
+ install: all
+-	$(INSTALL) -d -m755 @bindir@ /usr/share/electric/lib
+-	$(INSTALL) -m755 $(PROGNAME) @bindir@/$(PROGNAME)
+-	$(INSTALL) -m644 lib/.cadrc /usr/share/electric/lib
++	$(INSTALL) -d -m755 @bindir@ ${DESTDIR}/@datadir@/electric/lib
++	$(INSTALL) -m755 $(PROGNAME) @bindir@/$(PROGNAME)
++	$(INSTALL) -m644 lib/.cadrc ${DESTDIR}/@datadir@/electric/lib
+ 	@(cd lib ; \
+ 	for d in `$(FIND) . -type d -print`; do \
+-	  $(INSTALL) -d -m755 /usr/share/electric/lib/$$d ; \
++	  $(INSTALL) -d -m755 ${DESTDIR}/@datadir@/electric/lib/$$d ; \
+ 	  (cd $$d ; \
+ 	  for f in `$(FIND) . -type f -maxdepth 1 -print`; do \
+-	    install -m644 $$f /usr/share/electric/lib/$$d/$$f ; \
++	    install -m644 $$f ${DESTDIR}/@datadir@/electric/lib/$$d/$$f ; \
+ 	  done ) ; \
+ 	done ) ; 
+ 
