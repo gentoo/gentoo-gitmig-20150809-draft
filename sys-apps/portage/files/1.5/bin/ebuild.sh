@@ -90,7 +90,7 @@ dyn_digest() {
 			( echo; cd `/usr/bin/dirname ${FILESDIR}`; cvs add `/usr/bin/basename ${FILESDIR}`; echo)
 		fi
 	fi
-	rm ${FILESDIR}/.digest-${PF}
+	rm -f ${FILESDIR}/.digest-${PF}
 	touch ${FILESDIR}/.digest-${PF}
 	for x in ${A}
 	do

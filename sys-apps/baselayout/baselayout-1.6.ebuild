@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.ebuild,v 1.1 2001/08/13 02:15:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.ebuild,v 1.2 2001/08/13 02:38:53 drobbins Exp $
 
 SV=1.1
 S=${WORKDIR}/rc-scripts-${SV}
@@ -41,9 +41,16 @@ src_install()
 	dodir /var /var/run /var/lock/subsys
 	dosym ../var/tmp /usr/tmp
 	
-	if [ -z "`bootcd`" ]
+	if [ -z "`use bootcd`" ]
 	then
-		dodir /boot /home
+		#new boot partition layout
+		dodir /boot 
+		dodir /mnt/boot
+		#this next line adds easy detection for when /mnt/boot isn't mounted
+		touch ${D}/mnt/boot/boot
+		dosym mnt/boot/boot /boot
+		
+		dodir /home
 		dodir /usr/include /usr/src /usr/portage /usr/X11R6/include/GL
 		dosym ../X11R6/include/X11 /usr/include/X11
 		dosym ../X11R6/include/GL /usr/include/GL
@@ -56,13 +63,16 @@ src_install()
 		#/usr/include/asm.  This is the recommended approach so that kernel includes can remain
 		#constant.  The kernel includes should really only be upgraded when you upgrade glibc.
 		dodir /usr/include/linux /usr/include/asm
+		dodir /usr/share/man /usr/share/info /usr/share/doc /usr/share/misc
 
-		for foo in games man lib sbin share bin doc src
+		for foo in games lib sbin share bin share/doc share/man src
 		do
 		  dodir /usr/local/${foo}
 		done
-		dodir /usr/share/man /usr/share/info /usr/share/doc /usr/share/misc
-		
+		#local FHS compat symlinks
+		dosym share/man /usr/local/man	
+		dosym share/doc	/usr/local/doc	
+
 		#FHS compatibility symlinks stuff
 		dosym share/man /usr/man
 		dosym share/doc /usr/doc
@@ -97,7 +107,7 @@ src_install()
 	touch ${D}/var/log/wtmp
 	dodir /var/db/pkg /var/spool /var/tmp /var/lib/misc
 	chmod 1777 ${D}/var/tmp
-	dodir /root /etc/modules /proc
+	dodir /root /proc
 	
 	chmod go-rx ${D}/root
 	dodir /tmp
@@ -159,7 +169,7 @@ src_install()
 
 	dodir /etc/init.d
 	exeinto /etc/init.d
-	for foo in /etc/init.d
+	for foo in /etc/init.d/*
 	do
 		[ -f $foo ] && doexe $foo
 	done
