@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.2.ebuild,v 1.1 2005/03/13 06:07:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.2.ebuild,v 1.2 2005/03/14 00:25:49 azarah Exp $
 
 inherit eutils toolchain-funcs mono libtool
 
@@ -25,6 +25,8 @@ src_unpack() {
 	# java sucks
 	epatch "${FILESDIR}"/${PN}-0.14.1-without_java.patch
 	epatch "${FILESDIR}"/${PN}-0.14.2-no-java-tests.patch
+	# Fix race, bug #85054
+	epatch "${FILESDIR}"/${PN}-0.14.2-fix-race.patch
 
 	# bundled libtool seems to be broken so skip certain rpath tests
 	sed -i \
