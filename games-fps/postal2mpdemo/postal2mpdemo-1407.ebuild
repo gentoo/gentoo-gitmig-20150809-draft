@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.7 2004/09/17 23:58:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.8 2004/11/15 19:30:08 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="You play the Postal Dude: POSTAL 2 is only as violent as you are."
 HOMEPAGE="http://www.gopostal.com/home/"
@@ -20,12 +20,13 @@ RDEPEND="virtual/x11
 			 app-emulation/emul-linux-x86-xlibs
 			 app-emulation/emul-linux-x86-nvidia )"
 
-S=${WORKDIR}
-dir=${GAMES_PREFIX_OPT}/${PN}
-Ddir=${D}/${dir}
+S="${WORKDIR}"
+dir="${GAMES_PREFIX_OPT}/${PN}"
+Ddir="${D}/${dir}"
 
 pkg_setup() {
 	check_license
+	games_pkg_setup
 }
 
 src_unpack() {
@@ -44,9 +45,9 @@ src_install() {
 	doins README.linux postal2mpdemo.xpm postal2mpdemo_eula.txt
 
 	exeinto ${dir}
-	doexe bin/postal2mpdemo
-	dodir ${GAMES_BINDIR}
-	dosym ${dir}/postal2mpdemo ${GAMES_BINDIR}/postal2mpdemo
+	doexe bin/postal2mpdemo || die "doexe failed"
+	dodir "${GAMES_BINDIR}"
+	dosym "${dir}/postal2mpdemo" "${GAMES_BINDIR}/postal2mpdemo"
 
 	prepgamesdirs
 }
