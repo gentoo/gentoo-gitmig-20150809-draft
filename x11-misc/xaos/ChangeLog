@@ -1,10 +1,10 @@
 # ChangeLog for x11-misc/xaos
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.1 2003/03/12 10:01:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.2 2003/03/12 10:02:59 george Exp $
 
-*xaos-3.1_pre5.ebuild (12 Мар 2003)
+*xaos-3.1_pre5.ebuild (12 Mar 2003)
 
-  12 Мар 2003; George Shapovalov <george@gentoo.org> ChangeLog, xaos-3.1_pre5.ebuild, files/\{digest-xaos-3.1_pre5\} :
-  initial release
+  12 Mar 2003; George Shapovalov <george@gentoo.org> xaos-3.1_pre5.ebuild, files/digest-xaos-3.1_pre5 :
+  initial release (14181)
   A very fast real-time fractal zoomer
-  ebuild submitted by 
+  ebuild submitted by Wilbert Berendsen <wilbert@oswf.org>
