@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.12.ebuild,v 1.6 2003/03/31 22:40:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.12.ebuild,v 1.7 2003/04/03 17:15:26 foser Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -9,7 +9,7 @@ inherit virtualx libtool gnome.org
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
 
-IUSE="nls libgda gb evo python bonobo guile perl"
+IUSE="libgda gb evo python bonobo guile perl"
 
 SLOT="0"
 KEYWORDS="x86 ~ppc"
@@ -41,17 +41,14 @@ RDEPEND="=x11-libs/gtk+-1.2*
 #	 guile?  ( >=dev-util/guile-1.5 )"
 
 DEPEND="${RDEPEND}
-	 nls? ( sys-devel/gettext
-	 	>=dev-util/intltool-0.11 )"
+	sys-devel/gettext
+	>=dev-util/intltool-0.11"
 
 src_compile() {
 	# fix the relink bug, and invalid paths in .la files.
 	elibtoolize
 
 	local myconf=""
-	if [ -z "`use nls`" ] ; then
-		myconf="${myconf} --disable-nls"
-	fi
   	if [ -n "`use gb`" ]; then
     		myconf="${myconf} --with-gb"
   	else
