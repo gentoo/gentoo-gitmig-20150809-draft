@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/f2c
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.1 2003/04/12 19:33:15 george Exp $
+
+*f2c-20030320.ebuild (12 Apr 2003)
+
+  12 Apr 2003; George Shapovalov <george@gentoo.org> f2c-20030320.ebuild, files/digest-f2c-20030320 :
+  initial release (#17451)
+  Fortran to C converter
+  ebuild submitted by Tyler Trafford <ttrafford@acm.org>
