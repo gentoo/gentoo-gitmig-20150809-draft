@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r9.ebuild,v 1.12 2003/09/05 02:08:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r9.ebuild,v 1.13 2004/06/24 13:48:44 agriffis Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_unpack() {
 	echo '*static*' >> Setup.local
 
 	echo "zlib zlibmodule.c -lz" >> Setup.local
-	if [ "`use readline`" ]
+	if use readline
 	then
 		echo "readline readline.c -lreadline -lncurses" >> Setup.local
 	fi
@@ -90,7 +90,7 @@ src_install() {
 	rm -rf ${D}/usr/lib/spython${PV}/site-packages
 	dosym ../python${PV}/site-packages /usr/lib/spython${PV}/site-packages
 
-	if [ "`use build`" ]
+	if use build
 	then
 		rm -rf ${D}/usr/share/man
 		rm -rf ${D}/usr/include

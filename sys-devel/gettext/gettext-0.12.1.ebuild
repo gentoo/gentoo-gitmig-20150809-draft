@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.16 2004/06/02 19:42:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.17 2004/06/24 13:49:43 agriffis Exp $
 
 inherit eutils
 
@@ -74,7 +74,7 @@ src_install() {
 	fi
 
 	# Remove the emacs site-lisp stuff if 'emacs' is not in USE
-	if [ -z "`use emacs`" ]
+	if ! use emacs
 	then
 		rm -rf ${D}/usr/share/emacs
 	fi
