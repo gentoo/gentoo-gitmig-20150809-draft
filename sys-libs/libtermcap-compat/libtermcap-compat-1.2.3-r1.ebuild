@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3-r1.ebuild,v 1.11 2004/07/02 08:48:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3-r1.ebuild,v 1.12 2004/09/25 00:44:41 pvdabeel Exp $
 
 inherit eutils
+
+IUSE=""
 
 MY_PN=${PN/lib/}
 MY_P=${MY_PN}-${PV}
@@ -39,6 +41,7 @@ src_install () {
 	# bug #4411.
 	gen_usr_ldscript libtermcap.so
 	dosym libtermcap.so.2.0.8 /lib/libtermcap.so
+	use ppc && dosym libtermcap.so.2.0.8 /lib/libtermcap.so.2 # bug 54655 - should be no longer valid when 2.08 becomes stable
 
 	insinto /etc
 	newins ${S}/termtypes.tc termcap

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8.ebuild,v 1.7 2004/07/02 08:48:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8.ebuild,v 1.8 2004/09/25 00:44:41 pvdabeel Exp $
 
 inherit eutils
 
@@ -18,6 +18,8 @@ SRC_URI="http://www.catb.org/~esr/terminfo/termtypes.tc.gz
 	http://dev.gentoo.org/~seemant/extras/${P}-gentoo-${PATCHVER}.tar.bz2
 	mirror://gentoo/${MY_P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2"
+
+IUSE=""
 
 SLOT="0"
 LICENSE="freedist"
