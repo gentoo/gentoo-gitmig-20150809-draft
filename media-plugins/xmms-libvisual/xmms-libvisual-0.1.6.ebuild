@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-libvisual/xmms-libvisual-0.1.6.ebuild,v 1.1 2004/10/02 17:57:13 eradicator Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-libvisual/xmms-libvisual-0.1.6.ebuild,v 1.2 2004/10/02 17:58:03 eradicator Exp $
 
 IUSE=""
 

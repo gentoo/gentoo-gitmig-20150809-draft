@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 f0c796d2ae545fce4c5d3021e5f8e23f ChangeLog 390
-MD5 869682c8266e7ced3e4fb7827ea4ad54 xmms-libvisual-0.1.6.ebuild 796
+MD5 f1d4910f5565bcd22995a602f2b2a19c xmms-libvisual-0.1.6.ebuild 795
 MD5 7f95651f72fe0436146f0adc0b7dc925 files/digest-xmms-libvisual-0.1.6 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBXuwDArHZZzCEUG0RAtNwAJ45CG0z6g8iVxJYyc55YNWPne9uyQCfQLwG
-nNY7OpQ5N6IPv8AgVzDJViU=
-=932/
+iD8DBQFBXux9ArHZZzCEUG0RAuRoAJ94TL0/SlkDPCAF67vWZ5xNGQ3RwACeMUmt
+E2ahA9GUu0BEXUTgWlFh0Xc=
+=KzHj
 -----END PGP SIGNATURE-----
