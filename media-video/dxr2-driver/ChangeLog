@@ -1,8 +1,12 @@
 # ChangeLog for media-video/dxr2-driver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/ChangeLog,v 1.1 2002/08/08 00:47:24 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/ChangeLog,v 1.2 2002/08/13 18:26:38 chouser Exp $
 
 *dxr2-driver-1.0.4 (07 Aug 2002)
+
+  13 Aug 2002; Chris Houser <chouser@gentoo.org> dxr2-driver-1.0.4.ebuild,
+  ChangeLog: DEPEND was set incorrectly, preventing the ebuild from working.
+  Fixed.
 
   07 Aug 2002; Chris Houser <chouser@gentoo.org> dxr2-driver-1.0.4.ebuild,
   files/digest-dxr2-driver-1.0.4, ChangeLog: New ebuild.
