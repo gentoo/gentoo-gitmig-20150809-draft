@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.5.0.ebuild,v 1.5 2004/07/17 09:54:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.5.0.ebuild,v 1.6 2004/08/03 01:27:31 vapier Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ RDEPEND="virtual/libc
 	usb? (	>=dev-libs/libusb-0.1.7
 		>=sys-apps/hotplug-20030805-r1 )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4.0.7"
+	>=sys-apps/sed-4.0.7
+	sys-apps/shadow"
 
 pkg_setup() {
 	enewgroup openct
