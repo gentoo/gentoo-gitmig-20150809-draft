@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Grant Goodyear <g2boojum@hotmail.com>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.4-r1.ebuild,v 1.1 2001/12/12 17:35:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.6.ebuild,v 1.1 2002/01/29 00:38:48 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Grace is a WYSIWYG 2D plotting tool for the X Window System"
@@ -59,7 +59,7 @@ src_compile() {
 		-e 's:$(GRACE_HOME):$(PREFIX):g'			\
 		examples/Makefile.orig >examples/Makefile || die
 
-	emake || die
+	make || die
 }
 
 src_install() {
