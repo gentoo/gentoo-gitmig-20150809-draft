@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/tong
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/ChangeLog,v 1.1 2005/02/01 18:59:49 mr_bones_ Exp $
+
+*tong-1.0 (01 Feb 2005)
+
+  01 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +tong-1.0.ebuild:
+  initial commit - ebuild submitted by eGore via bug #76950
+
