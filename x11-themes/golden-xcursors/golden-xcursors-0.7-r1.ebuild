@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.7-r1.ebuild,v 1.1 2003/06/19 02:43:43 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.7-r1.ebuild,v 1.2 2003/06/27 00:48:14 vapier Exp $
 
 MY_P="5507-Golden-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -29,9 +29,9 @@ pkg_postinst() {
 	einfo ""
 	einfo ""
 	einfo "To globally use this set of mouse cursors edit the file:"
-	einfo "   /usr/share/cursors/xfree/default/index.theme
+	einfo "   /usr/share/cursors/xfree/default/index.theme"
 	einfo "and change the line:"
-	einfo "   Inherits=[current setting]
+	einfo "   Inherits=[current setting]"
 	einfo "to"
 	einfo "   Inherits=gold"
 	einfo "Note this will be overruled by a user's ~/.Xdefaults file"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/blueglass-xcursors-0.3-r1.ebuild,v 1.1 2003/06/19 02:44:55 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/blueglass-xcursors-0.3-r1.ebuild,v 1.2 2003/06/27 00:47:48 vapier Exp $
 
 MY_P="5532-BlueGlass-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -30,9 +30,9 @@ pkg_postinst() {
 	einfo "Xcursor.size: 48"
 	einfo ""
 	einfo "To globally use this set of mouse cursors edit the file:"
-	einfo "   /usr/share/cursors/xfree/default/index.theme
+	einfo "   /usr/share/cursors/xfree/default/index.theme"
 	einfo "and change the line:"
-	einfo "    Inherits=[current setting]
+	einfo "    Inherits=[current setting]"
 	einfo "to"
 	einfo "    Inherits=Blue"
 	einfo ""
