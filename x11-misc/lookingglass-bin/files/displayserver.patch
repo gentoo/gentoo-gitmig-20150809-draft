@@ -4,8 +4,8 @@
   
  echo $path >> /tmp/lgserver.log
  
-+set lp="`java-config -i sun-java3d,jai`"
-+set cp="`java-config -p sun-java3d,jai`:${CLASSPATH}"
++set lp="`java-config -i sun-java3d-bin,jai-bin`"
++set cp="`java-config -p sun-java3d-bin,jai-bin`:${CLASSPATH}"
 +
 +echo java.library.path ${lp} >> /tmp/lgserver.log
 +echo classpath ${cp} >> /tmp/lgserver.log
