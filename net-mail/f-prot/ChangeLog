@@ -1,13 +1,16 @@
 # ChangeLog for net-mail/f-prot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/ChangeLog,v 1.7 2002/12/09 11:52:24 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/ChangeLog,v 1.8 2002/12/10 00:59:10 raker Exp $
 
-*f-prot-3.12c (09 Dec 2002)
-                                                                                                   
+*f-prot-3.12c (08 Dec 2002)
+
+  09 Dec 2002; Nick Hadaway <raker@gentoo.org> f-prot=3.12c.ebuild :
+  Marked stable.
+
   08 Dec 2002; Jack Morgan <jmorgan@gentoo.org> f-prot-3.12a|b|c.ebuild : 
   Removed ~sparc64/sparc64 keyword
 
-  09 Dec 2002; Nick Hadaway <raker@gentoo.org> f-prot-3.12c.ebuild,
+  08 Dec 2002; Nick Hadaway <raker@gentoo.org> f-prot-3.12c.ebuild,
   files/digest-f-prot-3.12c, files/f-prot-3.12c.diff :
   Version bump.
 
