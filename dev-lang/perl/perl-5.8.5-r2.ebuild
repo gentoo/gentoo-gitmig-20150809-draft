@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5-r2.ebuild,v 1.6 2004/12/07 20:42:51 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5-r2.ebuild,v 1.7 2005/01/16 17:56:50 eradicator Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -198,6 +198,8 @@ src_configure() {
 		ewarn "Perl will not be built with berkdb support, use gcc if you needed it..."
 		myconf="${myconf} -Ui_db -Ui_ndbm"
 	fi
+
+	[ -n "${ABI}" ] && myconf="${myconf} -Dusrinc=$(get_ml_incdir)"
 
 	sh Configure -des \
 		-Darchname="${myarch}" \

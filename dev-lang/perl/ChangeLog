@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.101 2004/12/29 22:03:25 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.102 2005/01/16 17:56:50 eradicator Exp $
+
+  16 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  perl-5.8.5-r2.ebuild, perl-5.8.6-r1.ebuild, perl-5.8.6.ebuild:
+  multilib fixes for amd64's 2005.0.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
