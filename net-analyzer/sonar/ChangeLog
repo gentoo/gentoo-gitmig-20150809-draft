@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sonar
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/ChangeLog,v 1.4 2003/12/12 00:31:28 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/ChangeLog,v 1.5 2004/03/21 17:27:38 weeve Exp $
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> sonar-1.2.1.ebuild:
+  Added ~sparc keyword.
 
 *sonar-1.2.1 (11 Dec 2003)
 
