@@ -1,14 +1,24 @@
-MD5 11744829b64901a7174433bb6f9c3324 ChangeLog 2099
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9eb414e6fe400bd5608d1c8c9006f884 estraier-1.2.20.ebuild 1155
 MD5 d75bccc643fcdd740dd8013571fa3583 estraier-1.2.16.ebuild 1058
 MD5 7267a1695b419c80fe2197d0d8e4f037 estraier-1.2.18.ebuild 1067
-MD5 9eb414e6fe400bd5608d1c8c9006f884 estraier-1.2.20.ebuild 1155
 MD5 0f73c38a1b7ed5eca6b14a8ece1d376f estraier-1.2.21.ebuild 1155
+MD5 f7801927963038db2a36e76593eb6bba ChangeLog 2189
 MD5 d868c9882064f64336438d2b79c94a30 estraier-1.2.23.ebuild 1160
-MD5 5098b189f15205ad1f5a66c5ad1d1a25 estraier-1.2.24.ebuild 1194
 MD5 382a25f7a6abf0020285f37f74158690 metadata.xml 226
+MD5 360c836687a3dee5064c7e093b3aabce estraier-1.2.24.ebuild 1192
 MD5 0bd8cfe284bd0a150aabe1fa4320cfd5 files/digest-estraier-1.2.16 67
 MD5 3866538b4ff8c4a194260bdf5f17d111 files/digest-estraier-1.2.18 67
 MD5 3db1503d7faab044429c6ebb7b596d9a files/digest-estraier-1.2.20 67
 MD5 60510ca6b90ffb7fca02137ad2260e94 files/digest-estraier-1.2.21 67
 MD5 b2bc877aca7b5cd7d073e42c9128ceab files/digest-estraier-1.2.23 67
 MD5 d51f92ddeebe49417615d4288a39ad95 files/digest-estraier-1.2.24 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBlyCLVWNWqTUmv+0RAqbvAJ4yWEArazudrHMH4fNLzABTlGdZ2ACgjztl
+uikoDfd2Rb8b29wdYFPohQk=
+=y4Xc
+-----END PGP SIGNATURE-----
