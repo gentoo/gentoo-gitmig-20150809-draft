@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/xmille-2.0.ebuild,v 1.2 2004/03/02 14:16:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/xmille-2.0.ebuild,v 1.3 2004/04/13 09:47:38 mr_bones_ Exp $
 
-inherit games eutils
+inherit games
 
 DESCRIPTION="Mille Bournes card game"
 HOMEPAGE=""
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="virtual/x11"
 
-S=${WORKDIR}/${PN}-${PV}.orig
+S="${WORKDIR}/${PN}-${PV}.orig"
 
 src_unpack() {
 	unpack ${A}

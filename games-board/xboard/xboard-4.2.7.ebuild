@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.4 2004/03/02 14:14:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.5 2004/04/13 09:45:35 mr_bones_ Exp $
 
-inherit eutils games
+inherit games
 
 DESCRIPTION="GUI for gnuchess and for internet chess servers"
 HOMEPAGE="http://www.tim-mann.org/xboard.html"
