@@ -1,9 +1,9 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.6 2001/08/22 05:04:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.7 2001/08/22 21:18:13 drobbins Exp $
 
-SV=1.1.2
+SV=1.1.3
 S=${WORKDIR}/rc-scripts-${SV}
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts)"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
@@ -146,7 +146,6 @@ src_install()
 	${S}/sbin/MAKEDEV hdg
 	${S}/sbin/MAKEDEV hdh
 
-#end env-update stuff
 	cd ${S}/sbin
 	into /
 	dosbin init rc

@@ -40,7 +40,7 @@ PCV="3.1.26"
 # so we need no sources
 if [ ! "${PN}" = "linux-extras" ] ; then
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	http://www.kernel.org/pub/linux/kernel/people/alan/i2.4/patch-${KV}.bz2
+	http://www.kernel.org/pub/linux/kernel/people/alan/linux-2.4/${OKV}/patch-${KV}.bz2
 	http://dice.mfa.kfki.hu/download/reiserfs-3.6.25-2.4.4/linux-2.4.4-knfsd-6.g.patch.gz
 	http://dice.mfa.kfki.hu/download/reiserfs-3.6.25-2.4.4/linux-2.4.4-procinfo-1.d.patch.gz
 	http://dice.mfa.kfki.hu/download/reiserfs-3.6.25-2.4.4/reiserfs-quota-2.4.4.dif.bz2

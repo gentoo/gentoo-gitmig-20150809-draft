@@ -1,10 +1,10 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: tools@gentoo.org
+# Maintainer: Tools Team <tools@gentoo.org>
 #
 # NOTE: this is an x86-only ebuild!!!
 #
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7-r2.ebuild,v 1.7 2001/08/18 18:08:20 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7-r2.ebuild,v 1.8 2001/08/22 21:18:13 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Super Tiny Editor with wordstar, vi, and emacs key bindings"
@@ -20,7 +20,7 @@ src_unpack() {
 }
 
 src_compile() {
-	try emake
+	emake || die
 }
 
 src_install () {
@@ -31,14 +31,13 @@ src_install () {
 	dosym e3 /usr/bin/e3ws
 	dosym e3 /usr/bin/e3pi
 	dosym e3 /usr/bin/e3ne
-
 	if [ "`use build`" ]; then
 		# easier-to-remember shell scripts
 		dobin ${FILESDIR}/vi
 		dobin ${FILESDIR}/emacs
 		dobin ${FILESDIR}/pico
+		newbin ${FILESDIR}/pico nano
 	fi
-
 	cp e3.man e3.1
 	doman e3.1
 }

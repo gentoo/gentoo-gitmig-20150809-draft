@@ -9,14 +9,15 @@ then
 fi
 
 if [ `/usr/bin/whoami` == 'root' ] ; then
-	export PS1='\[\033[01;31;40m\]\h \[\033[01;34;40m\]\W \$ \[\033[00m\]'
+	export PS1='\[\033[01;31m\]\h \[\033[01;34m\]\W \$ \[\033[00m\]'
 	export PATH=/bin:/sbin:/usr/bin:/usr/sbin:${ROOTPATH}
 	#077 would be more secure, but 022 is generally quite realistic
 	umask 022
 else
-	export PS1='\[\033[01;32;40m\]\u@\h \[\033[01;34;40m\]\W \$ \[\033[00m\]'
+	export PS1='\[\033[01;32m\]\u@\h \[\033[01;34m\]\W \$ \[\033[00m\]'
 	export PATH=/bin:/usr/bin:${PATH}
 	umask 022
 fi
 unset ROOTPATH
-export EDITOR=/usr/bin/nano
+#This actually ends up being the e3 pico clone
+export EDITOR=/usr/bin/pico
