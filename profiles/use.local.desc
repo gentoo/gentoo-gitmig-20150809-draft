@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.372 2004/05/11 21:44:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.373 2004/05/14 17:56:19 kanaka Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -198,7 +198,6 @@ media-video/mplayer:v4l2 - Enables video4linux2 support
 media-video/vlc:faad - Enables faad2 support
 media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
-media-video/vlc:xvid - Enables xvid codec support
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
 net-analyzer/nagios-plugins:nagios-ntp - installs deps for ntp monitoring
