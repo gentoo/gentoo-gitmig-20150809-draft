@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r3.ebuild,v 1.1 2003/09/15 17:46:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r3.ebuild,v 1.2 2003/10/09 19:51:36 pappy Exp $
 
 IUSE=""
 
@@ -20,9 +20,22 @@ DEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	has_version 'sys-devel/hardened-gcc' && append-flags '-yet_exec'
+    # http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
+    if [ "${ARCH}" != "hppa" ] && [ "${ARCH}" != "hppa64" ] && has_version "sys-devel/hardened-gcc"
+    then
+        append-flags "-yet_exec -fstack-protector"
+    fi
 
+    if [ "${ARCH}" == "hppa" ] && has_version 'sys-devel/hardened-gcc'
+    then
+        append-flags "-yet_exec"
+    fi
+
+    if [ "${ARCH}" == "hppa64" ] && has_version 'sys-devel/hardened-gcc'
+    then
+        append-flags "-yet_exec"
+    fi
+	
 	cd ${S}
 	cp GNUmakefile GNUmakefile.orig
 	sed -e "s:-O2:${CFLAGS}:g" \
