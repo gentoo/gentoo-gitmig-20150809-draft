@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.1.ebuild,v 1.4 2004/06/28 21:35:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.1.ebuild,v 1.5 2004/06/28 21:45:42 agriffis Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc"
 IUSE="doc gd X"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	X? ( virtual/x11 )
 	gd? ( media-libs/libgd )"
 
@@ -40,7 +40,7 @@ src_compile() {
 		$(use_with X x) \
 		|| die "configure failed"
 	emake || die "emake failed"
-	if [ -n "$(use doc)" ] ; then
+	if use doc ; then
 		cd doc && make doc || die "make doc failed"
 	fi
 }
@@ -51,7 +51,7 @@ src_install() {
 		die "einstall failed"
 	dodoc AUTHORS PLAN README README.betatester
 	dodoc README.developer LICENSE NEWS TODO
-	if [ -n "$(use doc)" ]; then
+	if use doc; then
 		dohtml doc/html/*
 		doman doc/man/man3/*
 	fi

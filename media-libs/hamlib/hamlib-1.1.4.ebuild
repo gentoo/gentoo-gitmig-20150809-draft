@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.1.4.ebuild,v 1.2 2004/06/24 23:02:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.1.4.ebuild,v 1.3 2004/06/28 21:45:42 agriffis Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~alpha"
 IUSE="doc gd X"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	X? ( virtual/x11 )
 	gd? ( media-libs/libgd )"
 
@@ -41,7 +41,7 @@ src_compile() {
 		$(use_with X x) \
 		|| die "configure failed"
 	emake || die "emake failed"
-	if [ -n "$(use doc)" ] ; then
+	if use doc ; then
 		cd doc && make doc || die "make doc failed"
 	fi
 }
@@ -53,7 +53,7 @@ src_install() {
 		die "einstall failed"
 	dodoc AUTHORS PLAN README README.betatester
 	dodoc README.developer LICENSE NEWS TODO
-	if [ -n "$(use doc)" ]; then
+	if use doc; then
 		dohtml doc/html/*
 		doman doc/man/man3/*
 	fi
@@ -62,7 +62,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ ! -n "$(use gd)" ] ; then
+	if ! use gd ; then
 		echo
 		ewarn "Your USE flags do not contain \"gd\"."
 		ewarn "Therefore, hamlib has been built without"
