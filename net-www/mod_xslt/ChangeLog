@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_xslt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.7 2004/04/22 23:30:59 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.8 2004/04/23 13:58:50 zul Exp $
+
+  23 Apr 2004; Chuck Short <zul@gentoo.org> mod_xslt-1.0.5a.ebuild,
+  files/mod-xslt-1.0.5a-content.patch, files/mod-xslt-1.0.5a-debug.patch:
+  Added patches, closes #24104 and 25114.
 
   22 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml:
   Added metadata.xml

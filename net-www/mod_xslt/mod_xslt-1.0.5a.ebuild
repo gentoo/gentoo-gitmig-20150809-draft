@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/mod_xslt-1.0.5a.ebuild,v 1.6 2004/04/22 23:29:32 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/mod_xslt-1.0.5a.ebuild,v 1.7 2004/04/23 13:58:50 zul Exp $
 
 inherit eutils
 
@@ -19,6 +19,8 @@ SLOT="0"
 src_unpack() {
 	unpack ${A} || die; cd ${S} || die
 	epatch ${FILESDIR}/mod_xslt-1.0.5a-register.patch
+	epatch ${FILESDIR}/mod-xslt-1.0.5a-debug.patch
+	epatch ${FILESDIR}/mod-xslt-1.0.5a-content.patch
 	epatch ${FILESDIR}/mod_xslt-1.05a.patch
 	#oh brother
 	cp configure.ac configure.ac.orig
