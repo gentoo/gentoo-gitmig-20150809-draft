@@ -438,11 +438,6 @@ dev-lang/tcl-tk
 #simply won't compile for us
 =dev-python/PyQt-3.0
 
-#gbevin@gentoo.org, 20 Feb 2002
-#unstable version only for testing purposes
-# Change this so it won't conflict with glib-2.0.0 <spider@gentoo.org> 
-=dev-libs/glib-1.3.14
-
 # We are masking out the older pams now, in order to get the
 # new one propogated into everybodys systems. ( Woodchip - Mar 20 2002)
 <sys-libs/pam-0.75-r4
@@ -518,7 +513,9 @@ dev-lang/gpc
 
 # spider@gentoo.org ; 11 Apr 2002
 # Masked until we can solve the dependency issues =x11-libs/gtk+-1.2* doesn't work
->=dev-libs/glib-2.0.0
+#  >=dev-libs/glib-2.0.0
+# keeping the rest for a while :)
+
 >=dev-libs/atk-1.0.0
 >=x11-libs/pango-1.0.0
 >=x11-libs/gtk+-2.0.0
