@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.1 2003/09/10 06:36:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.2 2003/09/14 04:24:30 vapier Exp $
 
 inherit games
 
@@ -8,8 +8,8 @@ DESCRIPTION="Kids card/puzzle game"
 HOMEPAGE="http://home-2.consunet.nl/~cb007736/groundhog.html"
 SRC_URI="http://home-2.consunet.nl/~cb007736/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
 IUSE="nls"
 
