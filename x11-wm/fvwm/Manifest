@@ -1,27 +1,37 @@
-MD5 dda8d844b955f1a44d8a40547d1eae56 fvwm-2.5.12.ebuild 9752
-MD5 b91e90b446bc591842f20d2d5842346c fvwm-2.5.10-r5.ebuild 9832
-MD5 b23a899441a230e45a4fff6a37449370 fvwm-2.5.10-r6.ebuild 9911
-MD5 06177119f5e748d0c95dbd155615fbbd ChangeLog 15152
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 db6f4e2e0a846e7dd9bb975f02983177 ChangeLog 15395
 MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
-MD5 2ec81c8638226c9a1cc11cf41ff5952a fvwm-2.4.18.ebuild 3132
-MD5 167d7709634ac3bd87c3848b41bd307b fvwm-2.5.10-r3.ebuild 9266
-MD5 2a5b6dde57161daa48ec5946e78554d7 files/fvwm-2.5.10-fvwmbuttonshover.diff.gz 9994
-MD5 d91fb7d2af57653fc93a70e6e1c0a0ea files/fvwm-menu-xlock-xlockmore-compat.diff 550
-MD5 d8a3811b3a9581c42119cdc86dff4c7d files/fvwm-2.5.10-Test-update.diff 702
+MD5 b5f83e93b83ef162f9b4bb65f334c9de fvwm-2.5.12.ebuild 9567
+MD5 3f4d082c8feb0ccdb142c93348026b06 fvwm-2.5.10-r3.ebuild 9079
+MD5 5481c1007030328dde284578257aa04e fvwm-2.5.10-r5.ebuild 9645
+MD5 e2dec71f4cfff54394116c1656172ad5 fvwm-2.4.18.ebuild 2945
+MD5 8e032c7debba0196f50cbb036679259b fvwm-2.5.10-r6.ebuild 9726
 MD5 e2ceb5d855c5406a09d82442196efad8 files/README.transluceny.gz 5788
-MD5 98b1cd33f30ee47c88a2c3da2b2ddc68 files/fvwm-iconman.diff 2383
-MD5 7d84c8175928d331e6d7b253679f5654 files/digest-fvwm-2.4.18 65
-MD5 c8fa1c05cdae43bd53f68942d684f23a files/digest-fvwm-2.5.12 209
-MD5 a580b9f394262307f85eae492bbd68d9 files/centerplacement-2.5.10.diff 2431
-MD5 38cb0131791d07053b5d90bf21d1993f files/fvwm-translucent-menus.diff.gz 3582
-MD5 0fcb3587e80a443304b2e6878b6eab0a files/fvwmtabs-2.8-insecure-tmp-handling.diff 2349
-MD5 d15c4e05878e8e2b8a9d5edcf30abdc2 files/fvwm-2.5.9-translucent-menus.diff.gz 58529
 MD5 5bda5a33cdd7fc8517aa413550ad4e1e files/iconfile-2.5.10.diff 745
-MD5 0a39299dd7ca570060f545e659c77604 files/fvwm-2.5.10-FvwmCommand.diff 1013
-MD5 0c1b906138bf4e2977e7be1631f949d9 files/digest-fvwm-2.5.10-r3 128
-MD5 856bdf34d1530e03fc3aa2c6b3630ccc files/digest-fvwm-2.5.10-r5 129
-MD5 856bdf34d1530e03fc3aa2c6b3630ccc files/digest-fvwm-2.5.10-r6 129
-MD5 e9263b93f666293d0a1220ea3457efcd files/mini.happy.xpm 425
+MD5 c8fa1c05cdae43bd53f68942d684f23a files/digest-fvwm-2.5.12 209
 MD5 df03a10a40a620ce8f1fab75f9758884 files/disable-debug-statements.diff 419
-MD5 efd2297324dd0241c2a879beadfabdb7 files/fvwm-2.5.10-mips-compat.diff 2306
+MD5 38cb0131791d07053b5d90bf21d1993f files/fvwm-translucent-menus.diff.gz 3582
+MD5 e9263b93f666293d0a1220ea3457efcd files/mini.happy.xpm 425
+MD5 98b1cd33f30ee47c88a2c3da2b2ddc68 files/fvwm-iconman.diff 2383
 MD5 b20e3c8c23286531b549852ecbed4b74 files/fvwm-2.5.10-post-release.diff 2923
+MD5 d15c4e05878e8e2b8a9d5edcf30abdc2 files/fvwm-2.5.9-translucent-menus.diff.gz 58529
+MD5 0fcb3587e80a443304b2e6878b6eab0a files/fvwmtabs-2.8-insecure-tmp-handling.diff 2349
+MD5 7d84c8175928d331e6d7b253679f5654 files/digest-fvwm-2.4.18 65
+MD5 856bdf34d1530e03fc3aa2c6b3630ccc files/digest-fvwm-2.5.10-r5 129
+MD5 efd2297324dd0241c2a879beadfabdb7 files/fvwm-2.5.10-mips-compat.diff 2306
+MD5 0c1b906138bf4e2977e7be1631f949d9 files/digest-fvwm-2.5.10-r3 128
+MD5 d91fb7d2af57653fc93a70e6e1c0a0ea files/fvwm-menu-xlock-xlockmore-compat.diff 550
+MD5 0a39299dd7ca570060f545e659c77604 files/fvwm-2.5.10-FvwmCommand.diff 1013
+MD5 d8a3811b3a9581c42119cdc86dff4c7d files/fvwm-2.5.10-Test-update.diff 702
+MD5 a580b9f394262307f85eae492bbd68d9 files/centerplacement-2.5.10.diff 2431
+MD5 856bdf34d1530e03fc3aa2c6b3630ccc files/digest-fvwm-2.5.10-r6 129
+MD5 2a5b6dde57161daa48ec5946e78554d7 files/fvwm-2.5.10-fvwmbuttonshover.diff.gz 9994
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBcXmdHTu7gpaalycRAuhsAKDUJ45XS8pHstQI81x9LCdr7+YGlwCg5MYP
++ffV2yD20AinOnMW8CxEJrE=
+=bgYd
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.18.ebuild,v 1.5 2004/07/15 01:12:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.18.ebuild,v 1.6 2004/10/16 19:42:09 vapier Exp $
 
 inherit gnuconfig
 
@@ -14,9 +14,7 @@ SLOT="0"
 KEYWORDS="x86 alpha ppc sparc"
 LICENSE="GPL-2 FVWM"
 
-RDEPEND="readline? ( >=sys-libs/readline-4.1
-				ncurses? ( >=sys-libs/ncurses-5.3-r1 )
-				!ncurses? ( >=sys-libs/libtermcap-compat-1.2.3 ) )
+RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.3-r1 )
 		gtk? ( =x11-libs/gtk+-1.2*
 				imlib? ( >=media-libs/gdk-pixbuf-0.21.0
 						>=media-libs/imlib-1.9.14-r1 ) )
@@ -46,12 +44,7 @@ src_compile() {
 	else
 		myconf="${myconf} --with-readline-library"
 
-		# choose ncurses or termcap.
-		if use ncurses; then
-			myconf="${myconf} --without-termcap-library"
-		else
-			myconf="${myconf} --without-ncurses-library"
-		fi
+		myconf="${myconf} --without-termcap-library"
 	fi
 
 	# fvwm configure doesnt provide a way to disable gtk support if the

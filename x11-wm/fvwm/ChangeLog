@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.82 2004/10/06 15:50:11 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.83 2004/10/16 19:42:09 vapier Exp $
+
+  16 Oct 2004; Mike Frysinger <vapier@gentoo.org> fvwm-2.4.18.ebuild,
+  fvwm-2.5.10-r3.ebuild, fvwm-2.5.10-r5.ebuild, fvwm-2.5.10-r6.ebuild,
+  fvwm-2.5.12.ebuild:
+  Fix stupid dependency on sys-libs/libtermcap-compat (i.e. remove it) #64212.
 
 *fvwm-2.5.12 (06 Oct 2004)
 
