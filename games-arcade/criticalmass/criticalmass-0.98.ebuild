@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-0.98.ebuild,v 1.1 2003/09/10 19:29:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-0.98.ebuild,v 1.2 2003/10/27 15:43:26 mholzer Exp $
 
 inherit games
 
 DESCRIPTION="SDL/OpenGL space shoot'em up game"
 HOMEPAGE="http://criticalmass.sourceforge.net/"
 SRC_URI="mirror://sourceforge/criticalmass/CriticalMass-${PV}.tar.bz2"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
