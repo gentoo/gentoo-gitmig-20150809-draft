@@ -2,7 +2,7 @@
  * Copyright 1999-2003 Gentoo Technologies, Inc.
  * Distributed under the terms of the GNU General Public License v2
  * Author: Martin Schlemmer <azarah@gentoo.org>
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper.c,v 1.2 2003/01/15 01:59:58 azarah Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper.c,v 1.3 2003/01/15 22:28:10 azarah Exp $
  */
 
 #define _REENTRANT
@@ -113,6 +113,10 @@ int main(int argc, char **argv) {
 			buffer = NULL;
 		}
 	}
+
+	/* Set argv[0] to the correct binary, else gcc do not find internal
+	 * headers, etc (bug #8132). */
+	argv[0] = wrapperbin;
 
 	/* Ok, do it ... */
 	if (execv(wrapperbin, argv) < 0) {

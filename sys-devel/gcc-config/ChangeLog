@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.16 2003/01/15 01:59:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.17 2003/01/15 22:28:10 azarah Exp $
+
+*gcc-config-1.3.0 (16 Jan 2003)
+
+  16 Jan 2003; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.3.0.ebuild :
+
+  Set argv[0] to the correct binary, else gcc do not find internal
+  headers, etc (bug #8132).  Fixed files/wrapper.c for this.
 
 *gcc-config-1.2.9 (15 Jan 2003)
 
