@@ -5,10 +5,6 @@
 # masking new wine ebuild until testing is finished
 >=app-emulation/wine-20020122
 
-# 1 march 2002, verwilst
-# not yet finished, just stay away from this for now :o)
-=net-im/gnomemeeting-0.84.0
-
 # 18 Feb 2002, azarah.
 # Gnumeric needs 0.0.17, and most other stuff should work with this version
 >gnome-extra/gb-0.0.17
