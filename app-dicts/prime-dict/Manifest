@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5e3a9188325df3e90e6631166ed6f9b7 ChangeLog 3431
+MD5 37366937b5343d025e422e613444e86a ChangeLog 3532
+MD5 b7adba802cff94a656711641ef24ba91 prime-dict-0.8.6.ebuild 534
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 af11b8e6cab1e67ebde4151fbbc03abf prime-dict-0.8.7.ebuild 539
 MD5 c61a8fb3f76f93e9daca150becc5f3af prime-dict-0.8.5.ebuild 525
-MD5 9612277b00c33651f2e663805d5043dc prime-dict-0.8.6.ebuild 534
+MD5 af11b8e6cab1e67ebde4151fbbc03abf prime-dict-0.8.7.ebuild 539
 MD5 e97d9d98617438d57206a92f4cbf8dfe files/digest-prime-dict-0.8.7 69
-MD5 8b087882c9c87a13968d9ac89703b9e8 files/digest-prime-dict-0.8.5 69
 MD5 dcde2536998d80d6f1a2e83308cf6160 files/digest-prime-dict-0.8.6 69
+MD5 8b087882c9c87a13968d9ac89703b9e8 files/digest-prime-dict-0.8.5 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCPwAcVWNWqTUmv+0RAnrxAJ9Uop7z9PnMfVHEUdYXecRNDPTjUQCeM0gP
-rfVmxn79KRP4rYoz+RJs70s=
-=UAEh
+iD8DBQFCRdUtugEuf3OQ0akRApo2AKCalQDa60gh8VTG7POGX62nKRPPPACgoMSx
+D4IPZ0FY1OX5REcqiDN0KnQ=
+=xFtK
 -----END PGP SIGNATURE-----
