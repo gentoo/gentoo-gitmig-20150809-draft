@@ -1,6 +1,13 @@
 # ChangeLog for www-proxy/ntlmaps
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/ntlmaps/ChangeLog,v 1.4 2004/12/29 01:53:03 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/ntlmaps/ChangeLog,v 1.5 2005/01/05 12:54:03 satya Exp $
+
+*ntlmaps-0.9.8-r1 (05 Jan 2005)
+
+  05 Jan 2005; Christian Andreetta <satya@gentoo.org> files/ntlmaps.init,
+  +ntlmaps-0.9.8-r1.ebuild, ntlmaps-0.9.8.ebuild:
+  0.9.8: changed config name to make portage depcache happy.
+  0.9.8-r1: better pkg removal options, minor bugfix in conf file install
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
