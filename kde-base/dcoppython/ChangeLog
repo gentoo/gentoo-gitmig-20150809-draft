@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dcoppython
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.6 2005/02/19 15:35:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.7 2005/02/27 20:27:08 danarmak Exp $
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org>
+  dcoppython-3.4.0_beta2-r1.ebuild:
+  Fix: this revision should also get the fix that marks is as safe to use with
+  RC1.
 
 *dcoppython-3.4.0_beta2-r1 (19 Feb 2005)
 
