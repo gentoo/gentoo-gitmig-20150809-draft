@@ -1,7 +1,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Nathaniel Hirsch <nh2@njit.edu> Achim Gottinge <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/media-video/vlc/vlc-0.2.80.ebuild,v 1.1 2001/06/20 13:47:39 darks Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnomemm/gnomemm-1.2.0-r1.ebuild,v 1.1 2001/10/06 10:41:17 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnomemm/gnomemm-1.2.0-r1.ebuild,v 1.2 2001/10/06 10:50:16 hallski Exp $
 
 
 S=${WORKDIR}/${P}
@@ -16,7 +16,7 @@ DEPEND="${RDEPEND}"
 
 src_compile() {
 	./configure --host=${CHOST} 					\
-		    --prefix=/opt/gnome || die
+		    --prefix=/usr || die
 
 	emake || die
 }
