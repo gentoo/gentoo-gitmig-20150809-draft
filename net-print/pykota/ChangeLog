@@ -1,0 +1,7 @@
+# ChangeLog for net-print/pykota
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.1 2004/11/06 12:17:13 satya Exp $
+
+  06 Nov 2004; Christian Andreetta <satya@gentoo.org> :
+  version bump. CVS version of pykota 1.20
+
