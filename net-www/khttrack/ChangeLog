@@ -1,6 +1,9 @@
 # ChangeLog for net-www/khttrack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/ChangeLog,v 1.5 2004/07/03 20:59:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/ChangeLog,v 1.6 2004/08/03 19:40:08 centic Exp $
+
+  03 Aug 2004; Dominik Stadler <centic@gentoo.org> khttrack-0.10.ebuild:
+  Mark stable on x86
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
   khttrack-0.10.ebuild:
