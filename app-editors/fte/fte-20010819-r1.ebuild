@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r1.ebuild,v 1.1 2001/10/06 15:30:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r1.ebuild,v 1.2 2002/03/30 09:54:39 danarmak Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,7 +12,8 @@ SRC_URI="http://prdownloads.sourceforge.net/fte/fte-20010819-src.zip
 
 HOMEPAGE="http://fte.sourceforge.net"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc app-arch/unzip"
+RDEPEND="virtual/glibc"
 
 TARGETS=""
 
