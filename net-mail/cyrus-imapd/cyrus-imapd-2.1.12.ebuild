@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.12.ebuild,v 1.12 2004/04/26 12:20:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.12.ebuild,v 1.13 2004/06/10 21:15:20 agriffis Exp $
 
 inherit eutils
 
@@ -165,7 +165,7 @@ src_install() {
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/cyrus.rc6_2 cyrus
 
-	if [ "'use ssl'" ]; then
+	if use ssl; then
 		# from mod_ssl
 		echo "Generating self-signed test certificate"
 		echo "(Ignore any message from the yes command below)"

@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.40 2004/05/23 23:41:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.41 2004/06/10 21:15:20 agriffis Exp $
+
+  10 Jun 2004; Aron Griffis <agriffis@gentoo.org> cyrus-imapd-2.1.12.ebuild,
+  cyrus-imapd-2.1.13.ebuild, cyrus-imapd-2.1.14.ebuild,
+  cyrus-imapd-2.1.15-r1.ebuild, cyrus-imapd-2.1.15.ebuild,
+  cyrus-imapd-2.2.3.ebuild:
+  Fix use invocation, and fix nasty typo [ use ssl ] (somebody accidentally used
+  normal single quotes instead of back-quotes, so that condition would always be
+  true)
 
   23 May 2004; Jason Wever <weeve@gentoo.org> cyrus-imapd-2.2.3.ebuild:
   Added ~sparc keyword.
