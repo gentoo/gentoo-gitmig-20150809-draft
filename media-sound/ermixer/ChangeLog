@@ -1,13 +1,14 @@
 # ChangeLog for media-sound/ermixer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.20 2004/12/01 17:36:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.21 2004/12/16 09:10:00 corsair Exp $
+
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> ermixer-0.8.ebuild:
+  Stable on ppc64
 
   01 Dec 2004; Carsten Lohrke <carlo@gentoo.org> metadata.xml:
   QA: brain is not a Gentoo dev anymore
 
-  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
-
-  ermixer-0.8.ebuild:
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org> ermixer-0.8.ebuild:
   Marked ~ppc64; bug #64633
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ermixer-0.8.ebuild:
