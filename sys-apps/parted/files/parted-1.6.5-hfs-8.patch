@@ -1,0 +1,3635 @@
+diff -u -r -N parted-1.6.5/AUTHORS parted-1.6.5-hfs/AUTHORS
+--- parted-1.6.5/AUTHORS	Wed Jun 26 04:29:49 2002
++++ parted-1.6.5-hfs/AUTHORS	Tue Apr 29 05:46:52 2003
+@@ -137,3 +137,6 @@
+ Bernardo João Torres da Silveira <bernardojt@ig.com.br>
+ 	* pt_BR translation of FAQ and parted.texi
+ 
++Guillaume Knispel <k_guillaume@libertysurf.fr>
++	* nearly all hfs and hfs+ code (libparted/fs_hfs)
++	* hfs+ support for mac partitions (libparted/disk_mac.c)
+diff -u -r -N parted-1.6.5/libparted/disk_mac.c parted-1.6.5-hfs/libparted/disk_mac.c
+--- parted-1.6.5/libparted/disk_mac.c	Mon Apr  8 12:08:03 2002
++++ parted-1.6.5-hfs/libparted/disk_mac.c	Tue Apr 29 05:47:10 2003
+@@ -1068,7 +1068,8 @@
+ 		return 1;
+ 	}
+ 
+-	if (fs_type && !strcmp (fs_type->name, "hfs")) {
++	if (fs_type && (   !strcmp (fs_type->name, "hfs")
++	                || !strcmp (fs_type->name, "hfs+"))) {
+ 		strcpy (mac_data->system_name, "Apple_HFS");
+ 		mac_data->status |= 0x7f;
+ 	} else {
+@@ -1082,7 +1083,6 @@
+ static int
+ mac_partition_set_flag (PedPartition* part, PedPartitionFlag flag, int state)
+ {
+-	PedFileSystemType*	hfs = ped_file_system_type_get ("hfs");
+ 	MacPartitionData*	mac_data;
+ 
+ 	PED_ASSERT (part != NULL, return 0);
+diff -u -r -N parted-1.6.5/libparted/fs_hfs/hfs.c parted-1.6.5-hfs/libparted/fs_hfs/hfs.c
+--- parted-1.6.5/libparted/fs_hfs/hfs.c	Mon Apr  8 12:10:25 2002
++++ parted-1.6.5-hfs/libparted/fs_hfs/hfs.c	Tue Apr 29 05:48:04 2003
+@@ -1,6 +1,6 @@
+ /*
+     libparted - a library for manipulating disk partitions
+-    Copyright (C) 2000 Free Software Foundation, Inc.
++    Copyright (C) 2000, 2003 Free Software Foundation, Inc.
+ 
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+@@ -17,10 +17,52 @@
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+ 
++/*
++    Technical doc about Apple HFS and HFS+ file systems is available at : 
++    * For HFS, section "Data Organization on Volumes",
++                       "Chapter 2 - File Manager"
++           of the book "Inside Macintosh: Files"
++     http://developer.apple.com/techpubs/mac/Files/Files-99.html#HEADING99-0
++    * For HFS+, "Technical Note TN1150", "HFS Plus Volume Format"
++     http://developer.apple.com/technotes/tn/tn1150.html
++
++    Some useful HFS precisions concerning alignement and bit ordering
++    are in the HFS+ TN
++*/
++
++/* HISTORY :
++## modifications						dd-mm-yyyy
++---------------------- PATCH FOR PARTED 1.6.5 ----------------------------
++ 1 initial revision						07-04-2003
++ 2 one pass resizing, removal of debug info			08-04-2003
++ 3 safe abort if resize failed, code cleanups, timer,		10-04-2003
++   source file split, won't resize if not unmounted,
++   only relocate data if needed, minimize disk operations
++ 4 memory leaks removal, code cleanups, resize hfs+ code,	17-04-2003
++   more checks, minor hfs resize bugfix, probe code
++   returns real geometry
++ 5 hfs+ resize bugfixes :					19-04-2003
++   * fragmented fs could be corrupted
++   * VH wasn't written on error during alloc map writing
++   * attributes file could be corrupted
++ 6 Use PedSector to be able to use > 2 To HD			23-04-2003
++   Minor probe bugfix, Cleanups, HFS+ Timer tuning,
++ 7 80 columns indentation					23-04-2003
++ 8 Bugfix free blocks calculation in wrapper
++   (makes Mac OS boot !)					28-04-2003
++*/
++
++/* TODO : Think about a mean to do more allocation bitmap 
++   saves when shrinking hfs+ */
++
+ #include "config.h"
+ 
++#include <stdlib.h>
++#include <string.h>
+ #include <parted/parted.h>
+ #include <parted/endian.h>
++#include <parted/debug.h>
++#include <stdint.h>
+ 
+ #if ENABLE_NLS
+ #  include <libintl.h>
+@@ -31,32 +73,2902 @@
+ 
+ #include <string.h>
+ 
+-#define HFS_SIGNATURE	0x4244
++#include "hfs.h"
++
++
++
++/* -------------------- */
++/* --      CODE      -- */
++/* -------------------- */
++
++/* Probe an HFS volume, detecting it even if
++it is in fact a wrapper to an HFS+ volume */
++/* Used by hfsplus_probe and hfs_probe */
++static PedGeometry*
++hfs_and_wrapper_probe (PedGeometry* geom)
++{
++	uint8_t		buf[PED_SECTOR_SIZE];
++	HfsMasterDirectoryBlock	*mdb;
++	PedGeometry*	geom_ret;
++	PedSector	search, max;
++	
++	mdb = (HfsMasterDirectoryBlock *) buf;
++
++	if ((geom->length < 5)
++	    || (!ped_geometry_read (geom, buf, 2, 1))
++	    || (PED_BE16_TO_CPU (mdb->signature) != HFS_SIGNATURE) )
++		return NULL;
++
++	search = ((PedSector) PED_BE16_TO_CPU (mdb->start_block)
++		  + ((PedSector) PED_BE16_TO_CPU (mdb->total_blocks)
++		     * (PED_BE32_TO_CPU (mdb->block_size) / PED_SECTOR_SIZE )));
++	max = search + ( PED_BE32_TO_CPU (mdb->block_size) / PED_SECTOR_SIZE );
++	if (!(geom_ret = ped_geometry_new (geom->dev, geom->start, search + 2)))
++		return NULL;
++
++	for (; search < max; search++) {
++		if (!ped_geometry_set (geom_ret, geom_ret->start, search + 2)
++		    || !ped_geometry_read (geom_ret, buf, search, 1))
++			break;
++		if (PED_BE16_TO_CPU (mdb->signature) == HFS_SIGNATURE)
++			return geom_ret;
++	}
++
++	ped_geometry_destroy (geom_ret);
++	return NULL;
++}
++
++static PedGeometry*
++hfsplus_probe (PedGeometry* geom)
++{
++	PedGeometry*	geom_ret;
++	uint8_t		buf[PED_SECTOR_SIZE];
++
++	if ((geom_ret = hfs_and_wrapper_probe(geom))) {
++		/* HFS+ is embedded in an HFS volume ? */
++		HfsMasterDirectoryBlock	*mdb;
++		mdb = (HfsMasterDirectoryBlock *) buf;
++
++		if (!ped_geometry_read (geom, buf, 2, 1)
++		    || (PED_BE16_TO_CPU (mdb->old_new.embedded.signature)
++			!= HFSP_SIGNATURE)) {
++			ped_geometry_destroy (geom_ret);
++			return NULL;
++		} else
++			return geom_ret;
++	} else {
++		/* This is a standalone HFS+ volume ? */
++		PedSector	search, max;
++		HfsPVolumeHeader *vh;
++		vh = (HfsPVolumeHeader *) buf;
++
++		if (!ped_geometry_read (geom, buf, 2, 1)
++		    || (PED_BE16_TO_CPU (vh->signature) != HFSP_SIGNATURE))
++			return NULL;
++
++		max = (PedSector) PED_BE32_TO_CPU (vh->total_blocks) 
++		      * ( PED_BE32_TO_CPU (vh->block_size) / PED_SECTOR_SIZE );
++		search = max - ( PED_BE32_TO_CPU (vh->block_size)
++				 / PED_SECTOR_SIZE ) - 1;
++		if (!(geom_ret = ped_geometry_new (geom->dev, geom->start,
++						   search + 2)))
++			return NULL;
++
++		for (; search < max; search++) {
++			if (!ped_geometry_set (geom_ret, geom_ret->start,
++					       search + 2)
++			    || !ped_geometry_read (geom_ret, buf, search, 1))
++				break;
++			if (PED_BE16_TO_CPU (vh->signature) == HFSP_SIGNATURE)
++				return geom_ret;
++		}
++
++		ped_geometry_destroy (geom_ret);
++		return NULL;
++	}
++}
+ 
+ static PedGeometry*
+ hfs_probe (PedGeometry* geom)
+ {
+-	char	buf[512];
++	PedGeometry*	geom_base;
++	PedGeometry*	geom_plus = NULL;
++	
++	if ((geom_base = hfs_and_wrapper_probe(geom))
++	    && (!(geom_plus = hfsplus_probe(geom_base))))
++		return geom_base;
++	else {
++		if (geom_base) ped_geometry_destroy (geom_base);
++		if (geom_plus) ped_geometry_destroy (geom_plus);
++		return NULL;
++	}
++}
++
++#ifndef DISCOVER_ONLY
++/* declaration used by hfs_btree_search (indirect recursion) */
++static int
++hfs_file_read_sector (HfsPrivateFile* file, void *buf, PedSector sector);
++
++static int
++hfs_clobber (PedGeometry* geom)
++{
++	uint8_t	buf[PED_SECTOR_SIZE];
++
++	memset (buf, 0, PED_SECTOR_SIZE);
++	
++	/* destroy boot blocks, mdb, alternate mdb ... */
++	return	ped_geometry_write (geom, buf, 0, 1) &
++		ped_geometry_write (geom, buf, 1, 1) &
++		ped_geometry_write (geom, buf, 2, 1) &
++		ped_geometry_write (geom, buf, geom->length - 2, 1) &
++		ped_geometry_write (geom, buf, geom->length - 1, 1);
++}
++
++static int
++hfsplus_clobber (PedGeometry* geom)
++{
++	unsigned int i = 1;
++	uint8_t				buf[PED_SECTOR_SIZE];
++	HfsMasterDirectoryBlock		*mdb;
++		
++	mdb = (HfsMasterDirectoryBlock *) buf;
++	
++	if (!ped_geometry_read (geom, buf, 2, 1))
++		return 0;
++
++
++	if (PED_BE16_TO_CPU (mdb->signature) == HFS_SIGNATURE) {
++		/* embedded hfs+ */
++		PedGeometry	*embedded;
++		
++		i = (PED_BE32_TO_CPU(mdb->block_size) / PED_SECTOR_SIZE);
++		embedded = ped_geometry_new (
++		    geom->dev,
++		    (PedSector) geom->start
++		     + PED_BE16_TO_CPU (mdb->start_block)
++		     + (PedSector) PED_BE16_TO_CPU (
++			mdb->old_new.embedded.location.start_block ) * i, 
++		    (PedSector) PED_BE16_TO_CPU (
++			mdb->old_new.embedded.location.block_count ) * i );
++		i = hfs_clobber (embedded);
++		ped_geometry_destroy (embedded);
++	}
++
++	/* non-embedded or envelop destroy as hfs */
++	return ( hfs_clobber (geom) && i );
++}
++
++/* Open the data fork of a file with its first three extents and its CNID */
++static HfsPrivateFile*
++hfs_file_open (PedFileSystem *fs, uint32_t CNID,
++	       HfsExtDataRec ext_desc, PedSector sect_nb)
++{
++	HfsPrivateFile* file;
++
++	file = (HfsPrivateFile*) ped_malloc (sizeof (HfsPrivateFile));
++
++	file->fs = fs;
++	file->sect_nb = sect_nb;
++	file->CNID = CNID;
++	memcpy(file->first, ext_desc, sizeof (HfsExtDataRec));
++	memcpy(file->cache, ext_desc, sizeof (HfsExtDataRec));
++	file->start_cache = 0;
++	
++	return file;
++}
++
++/* Close an HFS file */
++static void
++hfs_file_close (HfsPrivateFile* file)
++{
++	ped_free (file);
++}
++
++/* do a B-Tree lookup */
++/* read the first record immediatly inferior or egal to the given key */
++/* return 0 on error */
++/* record_out _must_ be large enough to receive record_size bytes */
++static int
++hfs_btree_search (HfsPrivateFile* b_tree_file, HfsPrivateGenericKey* key,
++		  void *record_out, unsigned int record_size,
++		  HfsCPrivateLeafRec* record_ref)
++{
++	uint8_t			node[PED_SECTOR_SIZE];
++	HfsHeaderRecord*	header;
++	HfsNodeDescriptor*	desc = (HfsNodeDescriptor*) node;
++	HfsPrivateGenericKey*	record_key = NULL;
++	unsigned int		node_number, record_number;
++	int			i;
++	
++	/* Read the header node */
++	if (!hfs_file_read_sector(b_tree_file, node, 0))
++		return 0;
++	header = ((HfsHeaderRecord*) (node + PED_BE16_TO_CPU(*((uint16_t *)
++						(node+(PED_SECTOR_SIZE-2))))));
++
++	/* Get the node number of the root */
++	node_number = PED_BE32_TO_CPU(header->root_node);
++	
++	/* Read the root node */
++	if (!hfs_file_read_sector(b_tree_file, node, node_number))
++		return 0;
++
++	/* Follow the white rabbit */
++	while (1) {
++		record_number = PED_BE16_TO_CPU (desc->rec_nb);
++		for (i = record_number; i; i--) {
++			int cmp, min_length;
++			
++			record_key = (HfsPrivateGenericKey*)
++				(node + PED_BE16_TO_CPU(*((uint16_t *)
++					    (node+(PED_SECTOR_SIZE - 2*i)))));
++			/* check for obvious error in FS */
++			if (((uint8_t*)record_key - node < HFS_FIRST_REC)
++			    || ((uint8_t*)record_key - node
++			        >= PED_SECTOR_SIZE 
++				   - 2 * (signed)(record_number+1)))
++				return 0;
++			min_length = ( (key->key_length 
++					> record_key->key_length) ?
++						(record_key->key_length) :
++						(key->key_length) );
++			cmp = memcmp (record_key->key_content,
++				      key->key_content, min_length);
++			if (cmp < 0 || ( cmp == 0 && record_key->key_length 
++						     <= key->key_length))
++				break;
++		}
++		if (!i) return 0;
++		if (desc->type == HFS_IDX_NODE) {
++			unsigned int 	skip;
++			
++			skip = (1 + record_key->key_length + 1) & ~1;
++			node_number = PED_BE32_TO_CPU (*((uint32_t *)
++					(((uint8_t *) record_key) + skip)));
++			if (!hfs_file_read_sector(b_tree_file, node,
++						  node_number))
++				return 0;
++		} else 
++			break;
++	}
++	
++	/* copy the result if needed */
++	if (record_size)
++		memcpy (record_out, record_key, record_size);
++	
++	/* send record reference if needed */
++	if (record_ref) {
++		record_ref->node_size = 1;	/* in sectors */
++		record_ref->node_number = node_number;
++		record_ref->record_pos = (uint8_t*)record_key - node;
++		record_ref->record_number = i;
++	}
++	
++	/* success */
++	return 1;
++}
++
++static int
++hfs_get_extent_containing (HfsPrivateFile* file, unsigned int block,
++			   HfsExtDataRec cache, uint16_t* ptr_start_cache)
++{
++	uint8_t			record[sizeof (HfsExtentKey)
++				       + sizeof (HfsExtDataRec)];
++	HfsExtentKey		search;
++	HfsExtentKey*		ret_key = (HfsExtentKey*) record;
++	HfsExtDescriptor*	ret_cache = (HfsExtDescriptor*)
++					      (record + sizeof (HfsExtentKey));
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++					      file->fs->type_specific;
++	
++	
++	search.key_length = sizeof (HfsExtentKey) - 1;
++	search.type = HFS_DATA_FORK;
++	search.file_ID = file->CNID;
++	search.start = PED_CPU_TO_BE16 (block);
++
++	if (!hfs_btree_search (priv_data->extent_file, 
++			       (HfsPrivateGenericKey*) &search,
++			       record, sizeof (record), NULL))
++		return 0;
++
++	if (ret_key->file_ID != search.file_ID || ret_key->type != search.type)
++		return 0;
++
++	memcpy (cache, ret_cache, sizeof(HfsExtDataRec));
++	*ptr_start_cache = PED_BE16_TO_CPU (ret_key->start);
++	
++	return 1;
++}
++
++/* find and return the nth sector of a file */
++/* return 0 on error */
++static PedSector
++hfs_file_find_sector (HfsPrivateFile* file, PedSector sector)
++{
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++					      file->fs->type_specific;
++	HfsMasterDirectoryBlock* mdb = priv_data->mdb;
++	unsigned int 		i, s, vol_block;
++	unsigned int 		block = sector 
++					/ (PED_BE32_TO_CPU (mdb->block_size)
++					    / PED_SECTOR_SIZE);
++	unsigned int		offset = sector
++					 % (PED_BE32_TO_CPU (mdb->block_size)
++					    / PED_SECTOR_SIZE);
++	
++	/* in the three first extent */
++	for (s = 0, i = 0; i < HFS_EXT_NB; i++,
++			s += PED_BE16_TO_CPU (file->first[i].block_count)) {
++		if ((block >= s) && ( block < s + PED_BE16_TO_CPU (
++						file->first[i].block_count))) {
++			vol_block = (block - s) + PED_BE16_TO_CPU (
++						    file->first[i].start_block);
++			goto sector_found;
++		}
++	}
++	
++	/* in the three cached extent */
++	for (s = file->start_cache, i = 0; i < HFS_EXT_NB; i++,
++			s += PED_BE16_TO_CPU (file->cache[i].block_count)) {
++		if ((block >= s) && (block < s + PED_BE16_TO_CPU (
++						file->cache[i].block_count))) {
++			vol_block = (block - s) + PED_BE16_TO_CPU (
++						    file->cache[i].start_block);
++			goto sector_found;
++		}
++	}
++	
++	/* update cache */
++	if (!hfs_get_extent_containing (file, block, file->cache,
++					&(file->start_cache)))
++		return 0;
++
++	/* in the three cached extent */
++	for (s = file->start_cache, i = 0; i < HFS_EXT_NB; i++,
++			s += PED_BE16_TO_CPU (file->cache[i].block_count)) {
++		if ((block >= s) && (block < s + PED_BE16_TO_CPU (
++						file->cache[i].block_count))) {
++			vol_block = (block - s) + PED_BE16_TO_CPU (
++						    file->cache[i].start_block);
++			goto sector_found;
++		}
++	}
++	
++	return 0;
++	
++    sector_found:
++	return (PedSector) PED_BE16_TO_CPU (mdb->start_block)
++		+ (PedSector) vol_block * (PED_BE32_TO_CPU (mdb->block_size)
++					    / PED_SECTOR_SIZE)
++		+ offset;
++}
++
++/* Read the nth sector of a file */
++/* return 0 on error */
++static int
++hfs_file_read_sector (HfsPrivateFile* file, void *buf, PedSector sector)
++{
++	PedSector	abs_sector;
++
++	if (sector >= file->sect_nb)
++		return 0;
++	
++	abs_sector = hfs_file_find_sector (file, sector);
++	return abs_sector && ped_geometry_read (file->fs->geom, buf,
++						abs_sector, 1);
++}
++
++/* Write the nth sector of a file */
++/* return 0 on error */
++static int
++hfs_file_write_sector (HfsPrivateFile* file, void *buf, PedSector sector)
++{
++	PedSector	abs_sector;
++
++	if (sector >= file->sect_nb)
++		return 0;
++
++	abs_sector = hfs_file_find_sector (file, sector);
++	return abs_sector && ped_geometry_write (file->fs->geom, buf,
++						 abs_sector, 1);
++}
++
++/* This function reads bad blocks extents in the extents file
++   and store it in f.s. specific data of fs */
++static int
++hfs_read_bad_blocks (const PedFileSystem *fs)
++{
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++						fs->type_specific;
++
++	if (!priv_data->bad_blocks_loaded) {
++		uint8_t			record[sizeof (HfsExtentKey) 
++					       + sizeof (HfsExtDataRec)];
++		HfsExtentKey		search;
++		HfsExtentKey*		ret_key = (HfsExtentKey*) record;
++		HfsExtDescriptor*	ret_cache = (HfsExtDescriptor*)
++						     (record 
++						      + sizeof (HfsExtentKey));
++		unsigned int		block, last_start, first_pass = 1;
++
++		search.key_length = sizeof (HfsExtentKey) - 1;
++		search.type = HFS_DATA_FORK;
++		search.file_ID = PED_CPU_TO_BE32 (HFS_BAD_BLOCK_ID);
++
++		last_start = -1; block = 0;
++		while (1) {
++			int i;
++			
++			search.start = PED_CPU_TO_BE16 (block);
++			if (!hfs_btree_search (priv_data->extent_file,
++					       (HfsPrivateGenericKey*) &search,
++					       record, sizeof (record), NULL)) {
++				if (first_pass)
++					break;
++				else
++					return 0;
++			}
++			if (ret_key->file_ID != search.file_ID
++			    || ret_key->type != search.type)
++			    break;
++			if (PED_BE16_TO_CPU (ret_key->start) == last_start)
++			    break;
++			
++			last_start = PED_BE16_TO_CPU (ret_key->start);
++			for (i = 0; i < HFS_EXT_NB; i++) {
++				if (ret_cache[i].block_count) {
++					HfsPrivateLinkExtent*	new_xt =
++					   (HfsPrivateLinkExtent*) ped_malloc (
++					         sizeof (HfsPrivateLinkExtent));
++					new_xt->next =
++					       priv_data->bad_blocks_xtent_list;
++					memcpy(&(new_xt->extent), ret_cache+i,
++					       sizeof (HfsExtDescriptor));
++					priv_data->bad_blocks_xtent_list =
++									new_xt;
++					priv_data->bad_blocks_xtent_nb++;
++					block += PED_BE16_TO_CPU (
++						    ret_cache[i].block_count);
++				}
++			}
++			first_pass = 0;
++		}
++
++		priv_data->bad_blocks_loaded = 1;
++	}
++	
++	return 1;
++}
++
++/* free the bad blocks linked list */
++static void
++hfs_free_bad_blocks_list(HfsPrivateLinkExtent* first)
++{
++	HfsPrivateLinkExtent*	next;
++	
++	while (first) {
++		next = first->next;
++		ped_free (first);
++		first = next;
++	}
++}
++
++/* This function check if fblock is a bad block */
++static int
++hfs_is_bad_block (const PedFileSystem *fs, unsigned int fblock)
++{
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++						fs->type_specific;
++	HfsPrivateLinkExtent*	walk;
++	
++	for (walk = priv_data->bad_blocks_xtent_list; walk; walk = walk->next) {
++		/* Won't compile without the strange cast ! gcc bug ? */
++		/* or maybe C subtilties... */
++		if ((fblock >= PED_BE16_TO_CPU (walk->extent.start_block)) && 
++		    (fblock <  (unsigned int) (PED_BE16_TO_CPU (
++						    walk->extent.start_block)
++					       + PED_BE16_TO_CPU (
++						    walk->extent.block_count))))
++			return 1;
++	}
++	
++	return 0;
++}
++
++/* This function moves data of size blocks starting
++   at block *ptr_fblock to block *ptr_to_fblock */
++/* return new start or -1 on failure */
++static int
++hfs_effect_move_extent (PedFileSystem *fs, unsigned int *ptr_fblock,
++			unsigned int *ptr_to_fblock, unsigned int size)
++{
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++						fs->type_specific;
++	uint8_t*		block;
++	unsigned int		i;
++	unsigned int		new_start;
++
++	/* try to find enough room to fit the extent */
++	for (i = *ptr_to_fblock;
++	     i < *ptr_to_fblock + size && i < *ptr_fblock;
++	     i++) {
++		if (hfs_is_bad_block (fs, i))
++			*ptr_to_fblock = i+1;
++	}
++
++	if (*ptr_to_fblock < *ptr_fblock) {
++		/* enough room */
++		block = (uint8_t*) ped_malloc(PED_BE32_TO_CPU (
++						priv_data->mdb->block_size));
++
++		new_start = *ptr_to_fblock;
++
++		/* move blocks one by one */
++		for (i = 0; i < size; i++) {
++			PedSector 	abs_sector;
++			unsigned int	bit, byte;
++			unsigned int	to_bit, to_byte;
++
++			abs_sector = (PedSector) PED_BE16_TO_CPU (
++						    priv_data->mdb->start_block)
++				     + (PedSector) (*ptr_fblock + i)
++				       * (PED_BE32_TO_CPU (
++						priv_data->mdb->block_size)
++					  / PED_SECTOR_SIZE);
++			if (!ped_geometry_read (fs->geom, block, abs_sector,
++						PED_BE32_TO_CPU (
++						    priv_data->mdb->block_size)
++						  / PED_SECTOR_SIZE))
++				return -1;
++
++			abs_sector = (PedSector) PED_BE16_TO_CPU (
++						    priv_data->mdb->start_block)
++				     + (PedSector) (*ptr_to_fblock + i)
++				       * (PED_BE32_TO_CPU (
++						priv_data->mdb->block_size)
++					  / PED_SECTOR_SIZE);
++			if (!ped_geometry_write (fs->geom, block, abs_sector,
++						 PED_BE32_TO_CPU (
++						    priv_data->mdb->block_size)
++						   / PED_SECTOR_SIZE))
++				return -1;
++
++			bit = 7 - ((*ptr_fblock + i) & 7);
++			byte = (*ptr_fblock + i) / 8;
++
++			to_bit = 7 - ((*ptr_to_fblock + i) & 7);
++			to_byte = (*ptr_to_fblock + i) / 8;
++
++			/* free source block */
++			priv_data->alloc_map[byte] &= ~(1 << bit);
++
++			/* set dest block */
++			priv_data->alloc_map[to_byte] |= (1 << to_bit);
++		}
++
++		/* save the allocation map */
++		if (!ped_geometry_write(fs->geom, priv_data->alloc_map,
++					PED_BE16_TO_CPU (
++					   priv_data->mdb->volume_bitmap_block),
++					( PED_BE16_TO_CPU (
++					   priv_data->mdb->total_blocks)
++					  + PED_SECTOR_SIZE * 8 - 1)
++					/ (PED_SECTOR_SIZE * 8)))
++			return -1;
++
++		ped_free (block);
++		
++		*ptr_fblock += size;
++		*ptr_to_fblock += size;
++	} else {
++		/* not enough room */
++		new_start = *ptr_fblock;
++		*ptr_fblock = *ptr_to_fblock = new_start + size;
++	}
++
++	return new_start;
++}
++
++/* Search an extent in the catalog file and move it if found */
++/* Return 1 if everything was fine */
++/* Return -1 if an error occured */
++/* Return 0 if no extent was found */
++static int
++hfs_search_move_catalog (PedFileSystem *fs, unsigned int *ptr_fblock,
++			 unsigned int *ptr_to_fblock)
++{
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++						fs->type_specific;
++	uint8_t			node[PED_SECTOR_SIZE];
++	HfsHeaderRecord*	header;
++	HfsNodeDescriptor*	desc = (HfsNodeDescriptor*) node;
++	HfsCatalogKey*		catalog_key;
++	HfsCatalog*		catalog_data;
++	unsigned int		leaf_node, record_number;
++	unsigned int		i, j;
++	int			new_start;
++
++	/* Search the extent starting at *ptr_block in the catalog file */
++	if (!hfs_file_read_sector (priv_data->catalog_file, node, 0))
++		return -1;
++	header = ((HfsHeaderRecord*) (node + PED_BE16_TO_CPU(*((uint16_t *)
++						(node+(PED_SECTOR_SIZE-2))))));
++	leaf_node = PED_BE32_TO_CPU (header->first_leaf_node);
++	
++	for (; leaf_node; leaf_node = PED_BE32_TO_CPU (desc->next)) {
++		if (!hfs_file_read_sector (priv_data->catalog_file, node,
++					   leaf_node))
++			return -1;
++		record_number = PED_BE16_TO_CPU (desc->rec_nb);
++		for (i = 1; i <= record_number; i++) {
++		       /* fucking undocumented alignement powered by apple :p */
++			unsigned int	skip;
++			catalog_key = (HfsCatalogKey*) (node + PED_BE16_TO_CPU(
++				*((uint16_t *)(node+(PED_SECTOR_SIZE - 2*i)))));
++			skip = (1 + catalog_key->key_length + 1) & ~1;
++			catalog_data = (HfsCatalog*)(((uint8_t*)catalog_key)
++						     + skip);
++			/* check for obvious error in FS */
++			if (((uint8_t*)catalog_key - node < HFS_FIRST_REC)
++			    || ((uint8_t*)catalog_data - node
++				>= PED_SECTOR_SIZE 
++				   - 2 * (signed)(record_number+1)))
++				return -1;
++			if (catalog_data->type != HFS_CAT_FILE) continue;
++			for (j = 0; j < HFS_EXT_NB; j++) {
++				if (catalog_data
++				      ->sel.file.extents_data[j].block_count
++				    && PED_BE16_TO_CPU (catalog_data
++				         ->sel.file.extents_data[j].start_block)
++				       == (*ptr_fblock))
++					goto catalog_data_found;
++				if (catalog_data
++				      ->sel.file.extents_res[j].block_count
++				    && PED_BE16_TO_CPU (catalog_data
++				          ->sel.file.extents_res[j].start_block)
++				       == (*ptr_fblock))
++					goto catalog_res_found;
++			}
++		}
++	}
++	/* no extent starting a *ptr_block has been found in the catalog file */
++	return 0;
++
++
++	/* an extent part of a data fork has been found in the catalog file */
++    catalog_data_found:
++	new_start = hfs_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++					    PED_BE16_TO_CPU (catalog_data
++				        	->sel.file.extents_data[j]
++						.block_count));
++	if (new_start != -1) {
++		int	old_start;
++		old_start = catalog_data->sel.file.extents_data[j].start_block;
++		catalog_data->sel.file.extents_data[j].start_block =
++		    PED_CPU_TO_BE16 (new_start);
++		/* write if any changes */
++		if ((old_start != PED_CPU_TO_BE16 (new_start))
++		    && !hfs_file_write_sector (priv_data->catalog_file,
++					       node, leaf_node))
++			return -1;
++		return 1;
++	} else
++		return -1;
++	
++	/* an extent part of a resource fork has been found in the catalog file */
++    catalog_res_found:
++	new_start = hfs_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++					    PED_BE16_TO_CPU (catalog_data
++						->sel.file.extents_res[j]
++						.block_count));
++	if (new_start != -1) {
++		int	old_start;
++		old_start = catalog_data->sel.file.extents_res[j].start_block;
++		catalog_data->sel.file.extents_res[j].start_block =
++		    PED_CPU_TO_BE16 (new_start);
++		/* write if any changes */
++		if ((old_start != PED_CPU_TO_BE16 (new_start))
++		    && !hfs_file_write_sector (priv_data->catalog_file,
++					       node, leaf_node))
++			return -1;
++		return 1;
++	} else
++		return -1;
++}
++
++/* Search an extent in the extent file and move it if found */
++/* Return 1 if everything was fine */
++/* Return -1 if an error occured */
++/* Return 0 if no extent was found */
++static int
++hfs_search_move_extent (PedFileSystem *fs, unsigned int *ptr_fblock,
++			unsigned int *ptr_to_fblock)
++{
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++						fs->type_specific;
++	uint8_t			node[PED_SECTOR_SIZE];
++	HfsHeaderRecord*	header;
++	HfsNodeDescriptor*	desc = (HfsNodeDescriptor*) node;
++	HfsExtentKey*		extent_key;
++	HfsExtDescriptor*	extent_data;
++	unsigned int		leaf_node, record_number;
++	unsigned int		i, j;
++	int			new_start;
++
++	/* Search the extent in the extent file */
++	if (!hfs_file_read_sector (priv_data->extent_file, node, 0))
++		return -1;
++	header = ((HfsHeaderRecord*) (node + PED_BE16_TO_CPU(*((uint16_t *)
++						(node+(PED_SECTOR_SIZE-2))))));
++	leaf_node = PED_BE32_TO_CPU (header->first_leaf_node);
++
++	for (; leaf_node; leaf_node = PED_BE32_TO_CPU (desc->next)) {
++		if (!hfs_file_read_sector (priv_data->extent_file, node,
++					   leaf_node))
++			return -1;
++		record_number = PED_BE16_TO_CPU (desc->rec_nb);
++		for (i = 1; i <= record_number; i++) {
++			extent_key = (HfsExtentKey*)
++					(node + PED_BE16_TO_CPU(*((uint16_t *)
++					      (node+(PED_SECTOR_SIZE - 2*i)))));
++			extent_data = (HfsExtDescriptor*)(((uint8_t*)extent_key)
++						       + sizeof (HfsExtentKey));
++			/* check for obvious error in FS */
++			if (((uint8_t*)extent_key - node < HFS_FIRST_REC)
++			    || ((uint8_t*)extent_data - node 
++			        >= PED_SECTOR_SIZE
++				   - 2 * (signed)(record_number+1)))
++				return -1;
++			for (j = 0; j < HFS_EXT_NB; j++) {
++				if (extent_data[j].block_count
++				    && PED_BE16_TO_CPU (
++					    extent_data[j].start_block)
++				       == (*ptr_fblock))
++					goto extent_found;
++			}
++		}
++	}
++	/* no extent starting a *ptr_block has been found in the extents file */
++	return 0;
++
++	/* an extent has been found in the extents file */
++    extent_found:
++	new_start = hfs_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++					    PED_BE16_TO_CPU (extent_data[j]
++							     .block_count));
++	if (new_start != -1) {
++		int	old_start;
++		old_start = extent_data[j].start_block;
++		extent_data[j].start_block = PED_CPU_TO_BE16 (new_start);
++		/* This extent might have been cached into the file structure
++		   of the extent or catalog file */
++		if (priv_data->catalog_file->cache[j].start_block == old_start)
++			memcpy (priv_data->catalog_file->cache, extent_data,
++			        sizeof (HfsExtDataRec));
++		if (priv_data->extent_file->cache[j].start_block == old_start)
++			memcpy (priv_data->extent_file->cache, extent_data,
++				sizeof (HfsExtDataRec));
++		/* write if any changes */
++		if ((old_start != PED_CPU_TO_BE16 (new_start))
++		    && !hfs_file_write_sector (priv_data->extent_file, node,
++					       leaf_node))
++			return -1;
++		return 1;
++	} else
++		return -1;
++}
+ 
+-	if (geom->length < 2)
++/* Search an extent in the extent file and move it if found */
++/* Return 1 if everything was fine */
++/* Return -1 if an error occured */
++/* Return 0 if no extent was found */
++static int
++hfs_search_move_primary (PedFileSystem *fs, unsigned int *ptr_fblock,
++			 unsigned int *ptr_to_fblock)
++{
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++						fs->type_specific;
++	uint8_t			node[PED_SECTOR_SIZE];
++	unsigned int		j;
++	int			new_start;
++
++	/* Search an extent in the MDB */
++    	for (j = 0; j < HFS_EXT_NB; j++) {
++		if (priv_data->mdb->extents_file_rec[j].block_count
++		    && PED_BE16_TO_CPU (priv_data->mdb->extents_file_rec[j]
++					.start_block)
++		       == (*ptr_fblock))
++			goto ext_file_found;
++		if (priv_data->mdb->catalog_file_rec[j].block_count
++		    && PED_BE16_TO_CPU (priv_data->mdb->catalog_file_rec[j]
++					.start_block)
++		       == (*ptr_fblock))
++			goto cat_file_found;
++	}
++	return 0;
++
++    ext_file_found:
++	new_start = hfs_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++					    PED_BE16_TO_CPU (priv_data->mdb
++						->extents_file_rec[j]
++						.block_count));
++	if (new_start != -1) {
++		priv_data->mdb->extents_file_rec[j].start_block =
++		    PED_CPU_TO_BE16 (new_start);
++		memcpy (priv_data->extent_file->first,
++			priv_data->mdb->extents_file_rec,
++			sizeof (HfsExtDataRec));
++		if (!priv_data->extent_file->start_cache)
++			memcpy (priv_data->extent_file->cache,
++				priv_data->extent_file->first,
++				sizeof (HfsExtDataRec));
++		goto update_mdb;
++	} else
++		return -1;
++	
++
++    cat_file_found:
++	new_start = hfs_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++					    PED_BE16_TO_CPU (priv_data->mdb
++						->catalog_file_rec[j]
++						.block_count));
++	if (new_start != -1) {
++		priv_data->mdb->catalog_file_rec[j].start_block =
++		    PED_CPU_TO_BE16 (new_start);
++		memcpy (priv_data->catalog_file->first,
++			priv_data->mdb->catalog_file_rec,
++			sizeof (HfsExtDataRec));
++		if (!priv_data->catalog_file->start_cache)
++			memcpy (priv_data->catalog_file->cache,
++				priv_data->catalog_file->first,
++				sizeof (HfsExtDataRec));
++		goto update_mdb;
++	} else 
++		return -1;
++
++    update_mdb:
++    	if (!ped_geometry_read (fs->geom, node, 2, 1))
++		return -1;
++	memcpy (node, priv_data->mdb, sizeof (HfsMasterDirectoryBlock));
++	if (!ped_geometry_write (fs->geom, node, 2, 1))
++		return -1;
++	if (!ped_geometry_write (fs->geom, node, fs->geom->length - 2, 1))
++		return -1;
++	return 1;
++}
++
++/* This function moves an extent starting at block fblock to block to_fblock
++   if there's enough room */
++/* Return 1 if everything was fine */
++/* Return -1 if an error occured */
++/* Return 0 if no extent was found */
++static int
++hfs_move_extent_starting_at (PedFileSystem *fs, unsigned int *ptr_fblock,
++			     unsigned int *ptr_to_fblock)
++{
++	int	ret;
++	
++	/* order = decreasing probability to be found */
++	if ((ret = hfs_search_move_catalog (fs, ptr_fblock, ptr_to_fblock))
++	    || (ret = hfs_search_move_extent (fs, ptr_fblock, ptr_to_fblock))
++	    || (ret = hfs_search_move_primary (fs, ptr_fblock, ptr_to_fblock))) {
++		return ret;
++	}
++	
++	return 0;
++}
++
++/* This function moves file's data to compact used and free space,
++   starting at fblock block */
++/* return 0 on error */
++static int
++hfs_pack_free_space_from_block (PedFileSystem *fs, unsigned int fblock,
++			        PedTimer* timer)
++{
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++						fs->type_specific;
++	HfsMasterDirectoryBlock* mdb = priv_data->mdb;
++	unsigned int 		to_fblock = fblock;
++	unsigned int		start = fblock;
++	unsigned int		div = PED_BE16_TO_CPU (mdb->total_blocks)
++				      + 1 - start;
++	int			byte, bit, ret;
++	int			to_byte, to_bit;
++	
++	to_byte = byte = fblock / 8;
++	to_bit = bit = 7 - (fblock & 7);
++
++	if (!hfs_read_bad_blocks (fs))
++		return 0;
++
++	while (fblock < PED_BE16_TO_CPU (mdb->total_blocks)) {
++		if (((priv_data->alloc_map[byte] >> bit) & 1)
++		    && (!hfs_is_bad_block (fs, fblock))) {
++			if (!(ret = hfs_move_extent_starting_at (fs, &fblock,
++								 &to_fblock)))
++				to_fblock = ++fblock;
++			else if (ret == -1)
++				return 0;
++		} else {
++			fblock++;
++		}
++		
++		byte = fblock / 8;
++		bit = 7 - (fblock & 7);
++
++		to_byte = to_fblock / 8;
++		to_bit = 7 - (to_fblock & 7);
++		
++		ped_timer_update(timer, (float)(fblock - start)/div);
++	}
++	
++	return 1;
++}
++
++/* This function returns the first sector of the last free block of an
++   HFS volume we can get after a hfs_pack_free_space_from_block call */
++static PedSector
++hfs_get_empty_end (const PedFileSystem *fs)
++{
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++						fs->type_specific;
++	HfsMasterDirectoryBlock* mdb = priv_data->mdb;
++	HfsPrivateLinkExtent*	link;
++	unsigned int		block, last_bad, end_free_blocks;
++	int			byte, bit;
++
++	/* find the next block to the last bad block of the volume */
++	if (!hfs_read_bad_blocks (fs))
+ 		return 0;
++
++	last_bad = 0;
++	for (link = priv_data->bad_blocks_xtent_list; link; link = link->next) {
++		if ((unsigned int) PED_BE16_TO_CPU (link->extent.start_block)
++		    + PED_BE16_TO_CPU (link->extent.block_count) > last_bad)
++			last_bad = PED_BE16_TO_CPU (link->extent.start_block)
++			           + PED_BE16_TO_CPU (link->extent.block_count);
++	}
++
++	/* Count the free blocks from last_bad to the end of the volume */
++	end_free_blocks = 0;
++	for (block = last_bad;
++	     block < PED_BE16_TO_CPU (mdb->total_blocks);
++	     block++) {
++		byte = block / 8;
++		bit = 7 - (block & 7);
++		if (!((priv_data->alloc_map[byte]>>bit)&1))
++			end_free_blocks++;
++	}
++
++	/* Calculate the block that will by the first free at the
++	   end of the volume */
++	block = PED_BE16_TO_CPU (mdb->total_blocks) - end_free_blocks;
++
++	return (PedSector) PED_BE16_TO_CPU (mdb->start_block)
++		+ (PedSector) block * (PED_BE32_TO_CPU (mdb->block_size)
++				       / PED_SECTOR_SIZE);
++}
++
++/* return the block which should be used to pack data to have at
++   least free fblock blocks at the end of the volume */
++static unsigned int
++hfs_find_start_pack (const PedFileSystem *fs, unsigned int fblock)
++{
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++						fs->type_specific;
++	unsigned int		block;
++
++	for (block = PED_BE16_TO_CPU (priv_data->mdb->total_blocks) - 1;
++	     block && fblock;
++	     block--) {
++		if (!((priv_data->alloc_map[block / 8]
++		       >> (7 - (block & 7))) & 1))
++			fblock--;
++	}
++
++	while (block && !((priv_data->alloc_map[block / 8]
++			   >> (7 - (block & 7))) & 1))
++		block--;
++	if ((priv_data->alloc_map[block / 8] >> (7 - (block & 7))) & 1)
++		block++;
++
++	return block;
++}
++
++static PedFileSystem*
++hfs_open (PedGeometry* geom)
++{
++	uint8_t			buf[PED_SECTOR_SIZE];
++	PedFileSystem*		fs;
++	HfsMasterDirectoryBlock* mdb;
++	HfsPrivateFSData* 	priv_data;
++	
++	/* Read MDB */
+ 	if (!ped_geometry_read (geom, buf, 2, 1))
++		return NULL;
++		
++	/* Allocate memory */
++	fs = (PedFileSystem*) ped_malloc (sizeof (PedFileSystem));
++	mdb = (HfsMasterDirectoryBlock*) ped_malloc (
++					    sizeof (HfsMasterDirectoryBlock));
++	priv_data = (HfsPrivateFSData*) ped_malloc (
++					    sizeof (HfsPrivateFSData));
++
++	memcpy (mdb, buf, sizeof (HfsMasterDirectoryBlock));
++
++	/* init structures */
++	priv_data->mdb = mdb;
++	priv_data->bad_blocks_loaded = 0;
++	priv_data->bad_blocks_xtent_nb = 0;
++	priv_data->bad_blocks_xtent_list = NULL;
++	priv_data->extent_file =
++	    hfs_file_open (fs, PED_CPU_TO_BE32 (HFS_XTENT_ID),
++			   mdb->extents_file_rec,
++			   PED_CPU_TO_BE32 (mdb->extents_file_size)
++			   / PED_SECTOR_SIZE);
++	priv_data->catalog_file =
++	    hfs_file_open (fs, PED_CPU_TO_BE32 (HFS_CATALOG_ID),
++			   mdb->catalog_file_rec,
++			   PED_CPU_TO_BE32 (mdb->catalog_file_size)
++			   / PED_SECTOR_SIZE);
++
++	/* Read allocation blocks */
++	if (!ped_geometry_read(geom, priv_data->alloc_map,
++			       PED_BE16_TO_CPU (mdb->volume_bitmap_block),
++			       ( PED_BE16_TO_CPU (mdb->total_blocks)
++			         + PED_SECTOR_SIZE * 8 - 1 )
++			       / (PED_SECTOR_SIZE * 8) ) ) {
++		hfs_file_close (priv_data->extent_file);
++		hfs_file_close (priv_data->catalog_file);
++		ped_free(fs); ped_free(mdb); ped_free(priv_data);
++		return NULL;
++	}
++
++	fs->type = &hfs_type;
++	fs->geom = ped_geometry_duplicate (geom);
++	fs->type_specific = (void*) priv_data;
++	fs->checked = ( PED_BE16_TO_CPU (mdb->volume_attributes)
++			>> HFS_UNMOUNTED ) & 1;
++	
++	return fs;
++}
++
++static int
++hfs_close (PedFileSystem *fs)
++{
++	hfs_file_close (((HfsPrivateFSData*)(fs->type_specific))->extent_file);
++	hfs_file_close (((HfsPrivateFSData*)(fs->type_specific))->catalog_file);
++	if (((HfsPrivateFSData*)(fs->type_specific))->bad_blocks_loaded)
++		hfs_free_bad_blocks_list (
++			((HfsPrivateFSData*)(fs->type_specific))
++				->bad_blocks_xtent_list);
++	ped_free (((HfsPrivateFSData*)(fs->type_specific))->mdb);
++	ped_free (fs->type_specific);
++	ped_geometry_destroy (fs->geom);
++	ped_free (fs);
++	
++	return 1;
++}
++
++static PedConstraint* 
++hfs_get_resize_constraint (const PedFileSystem *fs)
++{
++	PedDevice*	dev = fs->geom->dev;
++	PedAlignment	start_align;
++	PedGeometry	start_sector;
++	PedGeometry	full_dev;
++	PedSector	min_size;
++
++	if (!ped_alignment_init (&start_align, fs->geom->start, 0))
++		return NULL;
++	if (!ped_geometry_init (&start_sector, dev, fs->geom->start, 1))
++		return NULL;
++	if (!ped_geometry_init (&full_dev, dev, 0, dev->length - 1))
++		return NULL;
++	/* 2 = last two sectors (alternate MDB and unused sector) */
++	min_size = hfs_get_empty_end(fs) + 2;
++	
++	return ped_constraint_new (&start_align, ped_alignment_any,
++				   &start_sector, &full_dev, min_size,
++				   fs->geom->length);
++}
++
++static int
++hfs_resize (PedFileSystem* fs, PedGeometry* geom, PedTimer* timer)
++{
++	uint8_t			buf[PED_SECTOR_SIZE];
++	unsigned int		nblock, nfree;
++	unsigned int		block;
++	HfsPrivateFSData* 	priv_data = (HfsPrivateFSData*)
++						fs->type_specific;
++	HfsMasterDirectoryBlock* mdb = priv_data->mdb;
++	int			resize = 1;
++	unsigned int		hfs_sect_block = ( PED_BE32_TO_CPU (
++							mdb->block_size)
++						   / PED_SECTOR_SIZE);
++
++
++	/* check preconditions */
++	PED_ASSERT (fs->geom->dev == geom->dev, return 0);
++	
++	if (fs->geom->start != geom->start)
++	{
++		ped_exception_throw (PED_EXCEPTION_NO_FEATURE,
++		      PED_EXCEPTION_CANCEL,
++		      _("Sorry, can't move the start of hfs partitions yet!"));
++		return 0;
++	}
++
++	if (geom->length > fs->geom->length
++	    || geom->length < hfs_get_empty_end(fs) + 2)
++		return 0;
++
++	/* Clear the unmounted bit */
++	mdb->volume_attributes &= PED_CPU_TO_BE16 (~( 1 << HFS_UNMOUNTED ));
++	if (!ped_geometry_read (fs->geom, buf, 2, 1))
++		return 0;
++	memcpy (buf, mdb, sizeof (HfsMasterDirectoryBlock));
++	if (!ped_geometry_write (fs->geom, buf, 2, 1))
++		return 0;
++
++	ped_timer_reset (timer);
++	ped_timer_set_state_name(timer, _("shrinking"));
++	ped_timer_update(timer, 0.0);
++	/* relocate data */
++	block = hfs_find_start_pack (fs, ( fs->geom->length - geom->length
++					   + hfs_sect_block - 1 )
++					 / hfs_sect_block );
++	if (!hfs_pack_free_space_from_block (fs, block,	timer)) {
++		resize = 0;
++		goto write_MDB;
++	}
++
++	/* Calculate new block number and other MDB field */
++	nblock = ( geom->length - (PED_BE16_TO_CPU (mdb->start_block) + 2) )
++		 / hfs_sect_block;
++	nfree = PED_BE16_TO_CPU (mdb->free_blocks)
++		- ( PED_BE16_TO_CPU (mdb->total_blocks) - nblock );
++
++	/* Check that all block after future end are really free */
++	for (block = nblock;
++	     block < PED_BE16_TO_CPU (mdb->total_blocks);
++	     block++) {
++		int	byte, bit;
++		byte = block / 8;
++		bit = 7 - (block & 7);
++		if ((priv_data->alloc_map[byte]>>bit)&1) {
++			resize = 0;
++			goto write_MDB;
++		}
++	}
++
++	/* Update geometry */
++	if (resize) {
++		/* update in fs structure */
++		if (PED_BE16_TO_CPU (mdb->next_allocation) >= nblock)
++			mdb->next_allocation = PED_CPU_TO_BE16 (0);
++		mdb->total_blocks = PED_CPU_TO_BE16 (nblock);
++		mdb->free_blocks = PED_CPU_TO_BE16 (nfree);
++		/* update parted structure */
++		fs->geom->length = geom->length;
++		fs->geom->end = fs->geom->start + geom->length - 1;
++	}
++
++	/* Set the unmounted bit */
++	mdb->volume_attributes |= PED_CPU_TO_BE16 ( 1 << HFS_UNMOUNTED );
++
++	/* Effective write */
++    write_MDB:
++	ped_timer_set_state_name(timer,_("writing HFS Master Directory Block"));
++	if (!ped_geometry_read (fs->geom, buf, 2, 1))
++		return 0;
++	memcpy (buf, mdb, sizeof (HfsMasterDirectoryBlock));
++	if (!ped_geometry_write (fs->geom, buf, 2, 1))
+ 		return 0;
++	if (!ped_geometry_write (fs->geom, buf, fs->geom->length - 2, 1))
++		return 0;
++	ped_timer_update(timer, 1.0);
++
++	return (resize);
++}
++
++/* ----- HFS+ ----- */
++
++/* Open the data fork of a file with its first eight extents and its CNID */
++static HfsPPrivateFile*
++hfsplus_file_open (PedFileSystem *fs, HfsPNodeID CNID,
++		   HfsPExtDataRec ext_desc, PedSector sect_nb)
++{
++	HfsPPrivateFile* file;
++
++	file = (HfsPPrivateFile*) ped_malloc (sizeof (HfsPPrivateFile));
++
++	file->fs = fs;
++	file->sect_nb = sect_nb;
++	file->CNID = CNID;
++	memcpy(file->first, ext_desc, sizeof (HfsPExtDataRec));
++	memcpy(file->cache, ext_desc, sizeof (HfsPExtDataRec));
++	file->start_cache = 0;
++	
++	return file;
++}
+ 
+-	if (PED_BE16_TO_CPU (*(uint16_t*) buf) == HFS_SIGNATURE)
+-		return ped_geometry_duplicate (geom);
+-	else
++/* Close an HFS+ file */
++static void
++hfsplus_file_close (HfsPPrivateFile* file)
++{
++	ped_free (file);
++}
++
++/* declaration of hfsplus_file_read(_sector)
++   because it's used by hfsplus_btree_search  (indirect recursion) */
++static int
++hfsplus_file_read_sector (HfsPPrivateFile* file, void *buf, PedSector sector);
++static int
++hfsplus_file_read(HfsPPrivateFile* file, void *buf,
++		  PedSector sector, unsigned int nb);
++
++/* do a B-Tree lookup */
++/* read the first record immediatly inferior or egal to the given key */
++/* return 0 on error */
++/* record_out _must_ be large enough to receive the whole record (key + data) */
++static int
++hfsplus_btree_search (HfsPPrivateFile* b_tree_file, HfsPPrivateGenericKey* key,
++		      void *record_out, unsigned int record_size,
++		      HfsCPrivateLeafRec* record_ref)
++{
++	uint8_t			node_1[PED_SECTOR_SIZE];
++	uint8_t*		node;
++	HfsPHeaderRecord*	header;
++	HfsPNodeDescriptor*	desc = (HfsPNodeDescriptor*) node_1;
++	HfsPPrivateGenericKey*	record_key = NULL;
++	unsigned int		node_number, record_number, size, bsize;
++	int			i;
++	
++	/* Read the header node */
++	if (!hfsplus_file_read_sector(b_tree_file, node_1, 0))
++		return 0;
++	header = (HfsPHeaderRecord*) (node_1 + HFS_FIRST_REC);
++
++	/* Get the node number of the root */
++	node_number = PED_BE32_TO_CPU (header->root_node);
++	
++	/* Get the size of a node in sectors and allocate buffer */
++	size = (bsize = PED_BE16_TO_CPU (header->node_size)) / PED_SECTOR_SIZE;
++	node = (uint8_t*) ped_malloc (bsize);
++	desc = (HfsPNodeDescriptor*) node;
++	
++	/* Read the root node */
++	if (!hfsplus_file_read (b_tree_file, node,
++				(PedSector) node_number * size, size))
++		return 0;
++
++	/* Follow the white rabbit */
++	while (1) {
++		record_number = PED_BE16_TO_CPU (desc->rec_nb);
++		for (i = record_number; i; i--) {
++			int cmp, min_length;
++			
++			record_key = (HfsPPrivateGenericKey*)
++			    (node + PED_BE16_TO_CPU(*((uint16_t *)
++					(node+(bsize - 2*i)))));
++			/* check for obvious error in FS */
++			if (((uint8_t*)record_key - node < HFS_FIRST_REC)
++			    || ((uint8_t*)record_key - node
++				>= (signed)bsize
++				   - 2 * (signed)(record_number+1))) {
++				ped_free (node);
++				return 0;
++			}
++			min_length = ((PED_BE16_TO_CPU(key->key_length)
++				      >PED_BE16_TO_CPU(record_key->key_length))?
++				PED_BE16_TO_CPU(record_key->key_length) :
++				PED_BE16_TO_CPU(key->key_length) );
++			cmp = memcmp (record_key->key_content, key->key_content,
++				      min_length);
++			if (cmp < 0 || ( cmp == 0 && PED_BE16_TO_CPU (
++							record_key->key_length)
++						     <= PED_BE16_TO_CPU (
++						           key->key_length)))
++				break;
++		}
++		if (!i) { ped_free (node); return 0; }
++		if (desc->type == HFS_IDX_NODE) {
++			unsigned int 	skip;
++			
++			skip = ( 2 + PED_BE16_TO_CPU (record_key->key_length)
++			         + 1 ) & ~1;
++			node_number = PED_BE32_TO_CPU (*((uint32_t *)
++					(((uint8_t *) record_key) + skip)));
++			if (!hfsplus_file_read(b_tree_file, node,
++					       (PedSector) node_number * size,
++					       size)) {
++				ped_free (node);
++				return 0;
++			}
++		} else 
++			break;
++	}
++	
++	/* copy the result if needed */
++	if (record_size)
++		memcpy (record_out, record_key, record_size);
++	
++	/* send record reference if needed */
++	if (record_ref) {
++		record_ref->node_size = size;	/* in sectors */
++		record_ref->node_number = node_number;
++		record_ref->record_pos = (uint8_t*)record_key - node;
++		record_ref->record_number = i;
++	}
++
++	/* success */
++	ped_free (node);
++	return 1;
++}
++
++static int
++hfsplus_get_extent_containing (HfsPPrivateFile* file, unsigned int block,
++			       HfsPExtDataRec cache, uint32_t* ptr_start_cache)
++{
++	uint8_t			record[sizeof (HfsPExtentKey)
++				       + sizeof (HfsPExtDataRec)];
++	HfsPExtentKey		search;
++	HfsPExtentKey*		ret_key = (HfsPExtentKey*) record;
++	HfsPExtDescriptor*	ret_cache = (HfsPExtDescriptor*)
++					      (record + sizeof (HfsPExtentKey));
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						file->fs->type_specific;
++	
++	
++	search.key_length = PED_CPU_TO_BE16 (sizeof (HfsPExtentKey) - 2);
++	search.type = HFS_DATA_FORK;
++	search.pad = 0;
++	search.file_ID = file->CNID;
++	search.start = PED_CPU_TO_BE32 (block);
++
++	if (!hfsplus_btree_search (priv_data->extents_file,
++				   (HfsPPrivateGenericKey*) &search,
++				   record, sizeof (record), NULL))
++		return 0;
++
++	if (ret_key->file_ID != search.file_ID || ret_key->type != search.type)
++		return 0;
++
++	memcpy (cache, ret_cache, sizeof(HfsPExtDataRec));
++	*ptr_start_cache = PED_BE32_TO_CPU (ret_key->start);
++	
++	return 1;
++}
++
++/* find the nth sector of a file */
++/* return 0 on error */
++static PedSector
++hfsplus_file_find_sector (HfsPPrivateFile* file, PedSector sector)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						file->fs->type_specific;
++	HfsPVolumeHeader*	vh = priv_data-> vh;
++	unsigned int 		i, s, vol_block;
++	unsigned int 		block = sector
++					/ ( PED_BE32_TO_CPU (vh->block_size)
++					    / PED_SECTOR_SIZE );
++	unsigned int		offset = sector
++					 % ( PED_BE32_TO_CPU (vh->block_size)
++					     / PED_SECTOR_SIZE );
++	
++	/* in the three first extent */
++	for (s = 0, i = 0;
++	     i < HFSP_EXT_NB;
++	     i++, s += PED_BE32_TO_CPU (file->first[i].block_count)) {
++		if ((block >= s) && (block < s + PED_BE32_TO_CPU (
++						file->first[i].block_count))) {
++			vol_block = (block - s)
++				    + PED_BE32_TO_CPU (file->first[i]
++						       .start_block);
++			goto plus_sector_found;
++		}
++	}
++	
++	/* in the three cached extent */
++	for (s = file->start_cache, i = 0;
++	     i < HFSP_EXT_NB;
++	     i++, s += PED_BE32_TO_CPU (file->cache[i].block_count)) {
++		if ((block >= s) && (block < s + PED_BE32_TO_CPU (
++						file->cache[i].block_count))) {
++			vol_block = (block - s)
++				    + PED_BE32_TO_CPU (file->cache[i]
++						       .start_block);
++			goto plus_sector_found;
++		}
++	}
++	
++	/* update cache */
++	if (!hfsplus_get_extent_containing (file, block, file->cache,
++					    &(file->start_cache)))
++		return 0;
++
++	/* in the three cached extent */
++	for (s = file->start_cache, i = 0;
++	     i < HFSP_EXT_NB;
++	     i++, s += PED_BE32_TO_CPU (file->cache[i].block_count)) {
++		if ((block >= s) && (block < s + PED_BE32_TO_CPU (
++						file->cache[i].block_count))) {
++			vol_block = (block - s)
++				    + PED_BE32_TO_CPU (file->cache[i]
++						       .start_block);
++			goto plus_sector_found;
++		}
++	}
++	
++	return 0;
++	
++    plus_sector_found:
++	return (PedSector) vol_block * ( PED_BE32_TO_CPU (vh->block_size)
++					 / PED_SECTOR_SIZE ) + offset;
++}
++
++/* Read the nth sector of a file */
++/* return 0 on error */
++static int
++hfsplus_file_read_sector (HfsPPrivateFile* file, void *buf, PedSector sector)
++{
++	HfsPPrivateFSData* priv_data = (HfsPPrivateFSData*)
++					    file->fs->type_specific;
++	PedSector	abs_sector;
++
++	if (sector >= file->sect_nb)
++		return 0;
++
++	abs_sector = hfsplus_file_find_sector (file, sector);
++	return abs_sector && ped_geometry_read (priv_data->plus_geom, buf,
++						abs_sector, 1);
++}
++
++static int
++hfsplus_file_read(HfsPPrivateFile* file, void *buf, PedSector sector,
++		  unsigned int nb)
++{
++	while (nb) {
++		if (!hfsplus_file_read_sector (file, buf, sector))
++			return 0;
++
++		buf += PED_SECTOR_SIZE;
++		nb--;
++		sector++;
++	}
++	
++	return 1;
++}
++
++/* Write the nth sector of a file */
++/* return 0 on error */
++static int
++hfsplus_file_write_sector (HfsPPrivateFile* file, void *buf, PedSector sector)
++{
++	HfsPPrivateFSData* priv_data = (HfsPPrivateFSData*)
++						file->fs->type_specific;
++	PedSector	abs_sector;
++
++	if (sector >= file->sect_nb)
++		return 0;
++	
++	abs_sector = hfsplus_file_find_sector (file, sector);
++	return abs_sector && ped_geometry_write (priv_data->plus_geom, buf,
++						 abs_sector, 1);
++}
++
++static int
++hfsplus_file_write (HfsPPrivateFile* file, void *buf, PedSector sector,
++		    unsigned int nb)
++{
++	while (nb) {
++		if (!hfsplus_file_write_sector (file, buf, sector))
++			return 0;
++
++		buf += PED_SECTOR_SIZE;
++		nb--;
++		sector++;
++	}
++	
++	return 1;
++}
++
++/* This function reads bad blocks extents in the extents file
++   and store it in f.s. specific data of fs */
++static int
++hfsplus_read_bad_blocks (const PedFileSystem *fs)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						    fs->type_specific;
++
++	if (!priv_data->bad_blocks_loaded) {
++		uint8_t			record[sizeof (HfsPExtentKey)
++					       + sizeof (HfsPExtDataRec)];
++		HfsPExtentKey		search;
++		HfsPExtentKey*		ret_key = (HfsPExtentKey*) record;
++		HfsPExtDescriptor*	ret_cache = (HfsPExtDescriptor*)
++					    (record + sizeof (HfsPExtentKey));
++		int			block, first_pass = 1;
++		unsigned int		last_start;
++
++		search.key_length = sizeof (HfsExtentKey) - 2;
++		search.type = HFS_DATA_FORK;
++		search.pad = 0;
++		search.file_ID = PED_CPU_TO_BE32 (HFS_BAD_BLOCK_ID);
++
++		last_start = -1; block = 0;
++		while (1) {
++			int i;
++			
++			search.start = PED_CPU_TO_BE32 (block);
++			if (!hfsplus_btree_search (priv_data->extents_file,
++						   (HfsPPrivateGenericKey*)
++							&search,
++						   record, sizeof (record),
++						   NULL))  {
++				if (first_pass)
++					break;
++				else
++					return 0;
++			}
++			if (ret_key->file_ID != search.file_ID
++			    || ret_key->type != search.type)
++				break;
++			if (PED_BE32_TO_CPU (ret_key->start) == last_start)
++				break;
++			
++			last_start = PED_BE32_TO_CPU (ret_key->start);
++			for (i = 0; i < HFSP_EXT_NB; i++) {
++				if (ret_cache[i].block_count) {
++					HfsPPrivateLinkExtent*	new_xt =
++					  (HfsPPrivateLinkExtent*) ped_malloc (
++					    sizeof (HfsPPrivateLinkExtent));
++					new_xt->next =
++					    priv_data->bad_blocks_xtent_list;
++					memcpy (&(new_xt->extent), ret_cache+i,
++						sizeof (HfsPExtDescriptor));
++					priv_data->bad_blocks_xtent_list =
++					    new_xt;
++					priv_data->bad_blocks_xtent_nb++;
++					block += PED_BE32_TO_CPU (ret_cache[i]
++								 .block_count);
++				}
++			}
++			first_pass = 0;
++		}
++
++		priv_data->bad_blocks_loaded = 1;
++	}
++	
++	return 1;
++}
++
++/* free the bad blocks linked list */
++static void
++hfsplus_free_bad_blocks_list(HfsPPrivateLinkExtent* first)
++{
++	HfsPPrivateLinkExtent*	next;
++	
++	while (first) {
++		next = first->next;
++		ped_free (first);
++		first = next;
++	}
++}
++
++/* This function check if fblock is a bad block */
++static int
++hfsplus_is_bad_block (const PedFileSystem *fs, unsigned int fblock)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	HfsPPrivateLinkExtent*	walk;
++	
++	for (walk = priv_data->bad_blocks_xtent_list; walk; walk = walk->next) {
++		/* Won't compile without the strange cast ! gcc bug ? */
++		/* or maybe C subtilties... */
++		if ((fblock >= PED_BE32_TO_CPU (walk->extent.start_block)) && 
++		    (fblock <  (unsigned int)(PED_BE32_TO_CPU (
++						walk->extent.start_block)
++			       + PED_BE32_TO_CPU (walk->extent.block_count))))
++			return 1;
++	}
++	
++	return 0;
++}
++
++static int
++hfsplus_close (PedFileSystem *fs)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++
++	if (priv_data->wrapper) hfs_close(priv_data->wrapper);
++	if (priv_data->free_geom) ped_geometry_destroy (priv_data->plus_geom);
++	ped_free(priv_data->alloc_map);
++	hfsplus_file_close (priv_data->extents_file);
++	hfsplus_file_close (priv_data->catalog_file);
++	hfsplus_file_close (priv_data->attributes_file);
++	if (priv_data->bad_blocks_loaded)
++		hfsplus_free_bad_blocks_list(priv_data->bad_blocks_xtent_list);
++	ped_free (priv_data->vh);
++	ped_free (priv_data);
++	ped_geometry_destroy (fs->geom);
++	ped_free (fs);
++
++	return 1;
++}
++
++static PedFileSystem*
++hfsplus_open (PedGeometry* geom)
++{
++	uint8_t			buf[PED_SECTOR_SIZE];
++	PedFileSystem*		fs;
++	HfsPVolumeHeader*	vh;
++	HfsPPrivateFSData* 	priv_data;
++	PedGeometry*		wrapper_geom;
++	HfsPPrivateFile*	allocation_file;
++	unsigned int		map_sectors;
++	
++	fs = (PedFileSystem*) ped_malloc (sizeof (PedFileSystem));
++	vh = (HfsPVolumeHeader*) ped_malloc (sizeof (HfsPVolumeHeader));
++	priv_data = (HfsPPrivateFSData*)ped_malloc (sizeof (HfsPPrivateFSData));
++
++	fs->geom = ped_geometry_duplicate (geom);
++	fs->type_specific = (void*) priv_data;
++
++	if ((wrapper_geom = hfs_and_wrapper_probe (geom))) {
++		HfsPrivateFSData* 	hfs_priv_data;
++		PedSector		abs_sect, length;
++		unsigned int		bs;
++
++		ped_geometry_destroy (wrapper_geom);
++		priv_data->wrapper = hfs_open(geom);
++		hfs_priv_data = (HfsPrivateFSData*)
++			priv_data->wrapper->type_specific;
++		bs = PED_BE32_TO_CPU (hfs_priv_data->mdb->block_size)
++		     / PED_SECTOR_SIZE;
++		abs_sect = (PedSector) geom->start
++			   + (PedSector) PED_BE16_TO_CPU (
++					    hfs_priv_data->mdb->start_block)
++			   + (PedSector) PED_BE16_TO_CPU (
++					    hfs_priv_data->mdb->old_new
++					    .embedded.location.start_block )
++			                 * bs;
++		length = (PedSector) PED_BE16_TO_CPU (
++					    hfs_priv_data->mdb->old_new
++					    .embedded.location.block_count)
++				     * bs;
++		priv_data->plus_geom = ped_geometry_new (geom->dev, abs_sect,
++							 length);
++		priv_data->free_geom = 1;
++	} else {
++		priv_data->wrapper = NULL;
++		priv_data->plus_geom = fs->geom;
++		priv_data->free_geom = 0;
++	}
++	
++	if (!ped_geometry_read (priv_data->plus_geom, buf, 2, 1)) {
++		if (priv_data->wrapper)
++			hfs_close(priv_data->wrapper);
++		if (priv_data->free_geom)
++			ped_geometry_destroy (priv_data->plus_geom);
++		ped_free (vh);
++		ped_free (priv_data);
++		ped_geometry_destroy (fs->geom);
++		ped_free (fs);
+ 		return NULL;
++	}
++	
++	memcpy (vh, buf, sizeof (HfsPVolumeHeader));
++	
++	priv_data->vh = vh;
++	priv_data->bad_blocks_loaded = 0;
++	priv_data->bad_blocks_xtent_nb = 0;
++	priv_data->bad_blocks_xtent_list = NULL;
++	priv_data->extents_file =
++		hfsplus_file_open (fs, PED_CPU_TO_BE32 (HFS_XTENT_ID),
++				   vh->extents_file.extents,
++				   PED_BE64_TO_CPU (
++					vh->extents_file.logical_size )
++				   / PED_SECTOR_SIZE);
++	priv_data->catalog_file =
++		hfsplus_file_open (fs, PED_CPU_TO_BE32 (HFS_CATALOG_ID),
++				   vh->catalog_file.extents,
++				   PED_BE64_TO_CPU (
++					vh->catalog_file.logical_size )
++				   / PED_SECTOR_SIZE);
++	priv_data->attributes_file =
++		hfsplus_file_open (fs, PED_CPU_TO_BE32 (HFSP_ATTRIB_ID),
++				   vh->attributes_file.extents,
++				   PED_BE64_TO_CPU (
++					vh->attributes_file.logical_size)
++				   / PED_SECTOR_SIZE);
++	map_sectors = ( PED_BE32_TO_CPU (vh->total_blocks) 
++	                + PED_SECTOR_SIZE * 8 - 1 ) / (PED_SECTOR_SIZE * 8);
++	priv_data->alloc_map = (uint8_t*)
++		ped_malloc (map_sectors * PED_SECTOR_SIZE);
++	
++	allocation_file =
++		hfsplus_file_open (fs, PED_CPU_TO_BE32 (HFSP_ALLOC_ID),
++				   vh->allocation_file.extents,
++				   PED_BE64_TO_CPU (
++					vh->allocation_file.logical_size)
++				   / PED_SECTOR_SIZE);
++	if (!hfsplus_file_read (allocation_file, priv_data->alloc_map, 0,
++				map_sectors)) {
++		hfsplus_file_close (allocation_file);
++		hfsplus_close(fs);
++		return NULL;
++	}
++	hfsplus_file_close (allocation_file);
++
++	fs->type = &hfsplus_type;
++	fs->checked = ((PED_BE32_TO_CPU (vh->attributes) >> HFS_UNMOUNTED) & 1)
++	      && !((PED_BE32_TO_CPU (vh->attributes) >> HFSP_INCONSISTENT) & 1);
++	
++	return fs;
+ }
+ 
+-#ifndef DISCOVER_ONLY
++/* This function moves data of size blocks starting at block *ptr_fblock
++   to block *ptr_to_fblock */
++/* return new start or -1 on failure */
+ static int
+-hfs_clobber (PedGeometry* geom)
++hfsplus_effect_move_extent (PedFileSystem *fs, unsigned int *ptr_fblock,
++			    unsigned int *ptr_to_fblock, unsigned int size)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	uint8_t*		block;
++	unsigned int		i;
++	unsigned int		new_start;
++
++	/* try to find enough room to fit the extent */
++	for (i = *ptr_to_fblock;
++	     i < *ptr_to_fblock + size && i < *ptr_fblock;
++	     i++) {
++		if (hfsplus_is_bad_block (fs, i))
++			*ptr_to_fblock = i+1;
++	}
++
++	if (*ptr_to_fblock < *ptr_fblock) {
++		/* enough room */
++		block = (uint8_t*) ped_malloc(PED_BE32_TO_CPU (
++						    priv_data->vh->block_size));
++
++		new_start = *ptr_to_fblock;
++
++		/* move blocks one by one */
++		for (i = 0; i < size; i++) {
++			PedSector 	abs_sector;
++			unsigned int	bit, byte;
++			unsigned int	to_bit, to_byte;
++
++			abs_sector = (PedSector) (*ptr_fblock + i)
++				* ( PED_BE32_TO_CPU (priv_data->vh->block_size)
++				    / PED_SECTOR_SIZE );
++			if (!ped_geometry_read (priv_data->plus_geom, block,
++						abs_sector,
++						PED_BE32_TO_CPU (
++						    priv_data->vh->block_size )
++						/ PED_SECTOR_SIZE))
++				return -1;
++
++			abs_sector = (PedSector) (*ptr_to_fblock + i)
++				* ( PED_BE32_TO_CPU (priv_data->vh->block_size)
++				    / PED_SECTOR_SIZE );
++			if (!ped_geometry_write (priv_data->plus_geom, block,
++						 abs_sector,
++						 PED_BE32_TO_CPU (
++						    priv_data->vh->block_size )
++						 / PED_SECTOR_SIZE))
++				return -1;
++
++			bit = 7 - ((*ptr_fblock + i) & 7);
++			byte = (*ptr_fblock + i) / 8;
++
++			to_bit = 7 - ((*ptr_to_fblock + i) & 7);
++			to_byte = (*ptr_to_fblock + i) / 8;
++
++			/* free source block */
++			priv_data->alloc_map[byte] &= ~(1 << bit);
++
++			/* set dest block */
++			priv_data->alloc_map[to_byte] |= (1 << to_bit);
++		}
++
++/* TODO : a better handling of allocation map saving process */
++#if 0
++		/* save the allocation map */
++		if (!ped_geometry_write(fs->geom, priv_data->alloc_map, PED_BE16_TO_CPU (priv_data->mdb->volume_bitmap_block),
++			(PED_BE16_TO_CPU (priv_data->mdb->total_blocks) + PED_SECTOR_SIZE * 8 - 1) / (PED_SECTOR_SIZE * 8)))
++			return -1;
++#endif
++
++		ped_free (block);
++		
++		*ptr_fblock += size;
++		*ptr_to_fblock += size;
++	} else {
++		/* not enough room */
++		new_start = *ptr_fblock;
++		*ptr_fblock = *ptr_to_fblock = new_start + size;
++	}
++
++	return new_start;
++}
++
++/* Search an extent in the catalog file and move it if found */
++/* Return 1 if everything was fine */
++/* Return -1 if an error occured */
++/* Return 0 if no extent was found */
++static int
++hfsplus_search_move_catalog (PedFileSystem *fs, unsigned int *ptr_fblock,
++			     unsigned int *ptr_to_fblock)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	uint8_t			node_1[PED_SECTOR_SIZE];
++	uint8_t*		node;
++	HfsPHeaderRecord*	header;
++	HfsPNodeDescriptor*	desc = (HfsPNodeDescriptor*) node_1;
++	HfsPCatalogKey*		catalog_key;
++	HfsPCatalog*		catalog_data;
++	unsigned int		leaf_node, record_number;
++	unsigned int		i, j, size, bsize;
++	int			new_start;
++
++	/* Search the extent starting at *ptr_block in the catalog file */
++	if (!hfsplus_file_read_sector (priv_data->catalog_file, node_1, 0))
++		return -1;
++	header = ((HfsPHeaderRecord*) (node_1 + HFS_FIRST_REC));
++	leaf_node = PED_BE32_TO_CPU (header->first_leaf_node);
++	bsize = PED_BE16_TO_CPU (header->node_size);
++	size = bsize / PED_SECTOR_SIZE;
++
++	node = (uint8_t*) ped_malloc (bsize);
++	desc = (HfsPNodeDescriptor*) node;
++	
++	for (; leaf_node; leaf_node = PED_BE32_TO_CPU (desc->next)) {
++		if (!hfsplus_file_read (priv_data->catalog_file, node,
++				        (PedSector) leaf_node * size, size)) {
++			ped_free (node);
++			return -1;
++		}
++		record_number = PED_BE16_TO_CPU (desc->rec_nb);
++		for (i = 1; i <= record_number; i++) {
++			unsigned int	skip;
++			catalog_key = (HfsPCatalogKey*)
++			    ( node + PED_BE16_TO_CPU (*((uint16_t *)
++					(node+(bsize - 2*i)))) );
++			skip = ( 2 + PED_BE16_TO_CPU (catalog_key->key_length)
++				 + 1) & ~1;
++			catalog_data = (HfsPCatalog*)
++					    (((uint8_t*)catalog_key) + skip);
++			/* check for obvious error in FS */
++			if (((uint8_t*)catalog_key - node < HFS_FIRST_REC)
++			    || ((uint8_t*)catalog_data - node
++			        >= (signed) bsize
++				   - 2 * (signed)(record_number+1))) {
++			    	ped_free (node);
++				return -1;
++			}
++			if (PED_BE16_TO_CPU(catalog_data->type)!=HFS_CAT_FILE)
++				continue;
++			for (j = 0; j < HFSP_EXT_NB; j++) {
++				if ( catalog_data->sel.file
++				     .data_fork.extents[j].block_count
++				     && PED_BE32_TO_CPU (catalog_data->sel
++				        .file.data_fork.extents[j].start_block)
++					== (*ptr_fblock) )
++					goto plus_catalog_data_found;
++				if ( catalog_data->sel.file.res_fork
++				     .extents[j].block_count
++				     && PED_BE32_TO_CPU (catalog_data->sel
++				        .file.res_fork.extents[j].start_block)
++					== (*ptr_fblock) )
++					goto plus_catalog_res_found;
++			}
++		}
++	}
++	/* no extent starting a *ptr_block has been found in the catalog file */
++	ped_free (node);
++	return 0;
++
++
++	/* an extent part of a data fork has been found in the catalog file */
++    plus_catalog_data_found:
++	new_start = hfsplus_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++						PED_BE32_TO_CPU (
++						    catalog_data->sel.file
++						    .data_fork.extents[j]
++						    .block_count ));
++	if (new_start != -1) {
++		unsigned int	old_start;
++		old_start = catalog_data->sel.file.data_fork
++			    .extents[j].start_block;
++		catalog_data->sel.file.data_fork.extents[j].start_block =
++			    PED_CPU_TO_BE32 (new_start);
++		/* write if any changes */
++		if ((old_start != (unsigned) PED_CPU_TO_BE32 (new_start))
++		    && !hfsplus_file_write (priv_data->catalog_file, node,
++					    (PedSector) leaf_node * size,
++					    size)) {
++			ped_free (node);
++			return -1;
++		}
++		ped_free (node);
++		return 1;
++	} else {
++		ped_free (node);
++		return -1;
++	}
++	
++	/* an extent part of a resource fork has been found
++	   in the catalog file */
++    plus_catalog_res_found:
++	new_start = hfsplus_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++						PED_BE32_TO_CPU (
++						    catalog_data->sel.file
++						    .res_fork.extents[j]
++						    .block_count ));
++	if (new_start != -1) {
++		unsigned int	old_start;
++		old_start = catalog_data->sel.file.res_fork
++			    .extents[j].start_block;
++		catalog_data->sel.file.res_fork.extents[j].start_block =
++			    PED_CPU_TO_BE32 (new_start);
++		/* write if any changes */
++		if ((old_start != (unsigned) PED_CPU_TO_BE32 (new_start))
++		    && !hfsplus_file_write (priv_data->catalog_file, node,
++					    (PedSector) leaf_node * size,
++					    size)) {
++			ped_free (node);
++			return -1;
++		}
++		ped_free (node);
++		return 1;
++	} else {
++		ped_free (node);
++		return -1;
++	}
++}
++
++/* Search an extent in the attributes file and move it if found */
++/* Return 1 if everything was fine */
++/* Return -1 if an error occured */
++/* Return 0 if no extent was found */
++static int
++hfsplus_search_move_attributes (PedFileSystem *fs, unsigned int *ptr_fblock,
++				unsigned int *ptr_to_fblock)
+ {
+-	char	buf[512];
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	uint8_t			node_1[PED_SECTOR_SIZE];
++	uint8_t*		node;
++	HfsPHeaderRecord*	header;
++	HfsPNodeDescriptor*	desc = (HfsPNodeDescriptor*) node_1;
++	HfsPPrivateGenericKey*	generic_key;
++	HfsPForkDataAttr*	fork_ext_data;
++	unsigned int		leaf_node, record_number;
++	unsigned int		i, j, size, bsize;
++	int			new_start;
++
++	/* attributes file is facultative */
++	if (!priv_data->attributes_file->sect_nb)
++		return 0;
++	
++	/* Search the extent starting at *ptr_block in the catalog file */
++	if (!hfsplus_file_read_sector (priv_data->attributes_file, node_1, 0))
++		return -1;
++	header = ((HfsPHeaderRecord*) (node_1 + HFS_FIRST_REC));
++	leaf_node = PED_BE32_TO_CPU (header->first_leaf_node);
++	bsize = PED_BE16_TO_CPU (header->node_size);
++	size = bsize / PED_SECTOR_SIZE;
++
++	node = (uint8_t*) ped_malloc (bsize);
++	desc = (HfsPNodeDescriptor*) node;
++	
++	for (; leaf_node; leaf_node = PED_BE32_TO_CPU (desc->next)) {
++		if (!hfsplus_file_read (priv_data->attributes_file, node,
++					(PedSector) leaf_node * size, size)) {
++			ped_free (node);
++			return -1;
++		}
++		record_number = PED_BE16_TO_CPU (desc->rec_nb);
++		for (i = 1; i <= record_number; i++) {
++			unsigned int	skip;
++			generic_key = (HfsPPrivateGenericKey*)
++				(node + PED_BE16_TO_CPU(*((uint16_t *)
++					    (node+(bsize - 2*i)))));
++			skip = ( 2 + PED_BE16_TO_CPU (generic_key->key_length)
++			         + 1 ) & ~1;
++			fork_ext_data = (HfsPForkDataAttr*)
++					    (((uint8_t*)generic_key) + skip);
++			/* check for obvious error in FS */
++			if (((uint8_t*)generic_key - node < HFS_FIRST_REC)
++			    || ((uint8_t*)fork_ext_data - node
++			        >= (signed) bsize
++				   - 2 * (signed)(record_number+1))) {
++			    	ped_free (node);
++				return -1;
++			}
++			if ( PED_BE32_TO_CPU (fork_ext_data->record_type )
++			     == HFSP_ATTR_FORK) {
++				for (j = 0; j < HFSP_EXT_NB; j++) {
++					if ( fork_ext_data->fork_res.fork
++					     .extents[j].block_count
++					     && PED_BE32_TO_CPU (
++					         fork_ext_data->fork_res
++						 .fork.extents[j].start_block )
++						== (*ptr_fblock) )
++					    	goto plus_attr_fork_found;
++				}
++			} else if ( PED_BE32_TO_CPU (fork_ext_data->record_type)
++				    == HFSP_ATTR_EXTENTS ) {
++				for (j = 0; j < HFSP_EXT_NB; j++) {
++					if ( fork_ext_data->fork_res
++					     .extents[j].block_count
++					     && PED_BE32_TO_CPU (
++					          fork_ext_data->fork_res
++						  .extents[j].start_block)
++						== (*ptr_fblock) )
++					    	goto plus_attr_ext_found;
++				}
++			} else continue;
++		}
++	}
++	/* no extent starting a *ptr_block has been found in the catalog file */
++	ped_free (node);
++	return 0;
+ 
+-	memset (buf, 0, 512);
+-	return ped_geometry_write (geom, buf, 2, 1);
++
++	/* an extent part of a attr fork has been found in the catalog file */
++    plus_attr_fork_found:
++	new_start = hfsplus_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++						PED_BE32_TO_CPU (
++						    fork_ext_data->fork_res
++						    .fork.extents[j]
++						    .block_count));
++	if (new_start != -1) {
++		unsigned int	old_start;
++		old_start = fork_ext_data->fork_res.fork.extents[j].start_block;
++		fork_ext_data->fork_res.fork.extents[j].start_block =
++			PED_CPU_TO_BE32 (new_start);
++		/* write if any changes */
++		if ((old_start != (unsigned) PED_CPU_TO_BE32 (new_start))
++		    && !hfsplus_file_write (priv_data->attributes_file, node,
++					    (PedSector) leaf_node * size,
++					    size)) {
++			ped_free (node);
++			return -1;
++		}
++		ped_free (node);
++		return 1;
++	} else {
++		ped_free (node);
++		return -1;
++	}
++
++	/* an extent part of a attr ext has been found in the catalog file */
++    plus_attr_ext_found:
++	new_start = hfsplus_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++						PED_BE32_TO_CPU (
++						    fork_ext_data->fork_res
++						    .extents[j].block_count));
++	if (new_start != -1) {
++		unsigned int	old_start;
++		old_start = fork_ext_data->fork_res.extents[j].start_block;
++		fork_ext_data->fork_res.extents[j].start_block =
++			PED_CPU_TO_BE32 (new_start);
++		/* write if any changes */
++		if ((old_start != (unsigned) PED_CPU_TO_BE32 (new_start))
++		    && !hfsplus_file_write (priv_data->attributes_file, node,
++					    (PedSector) leaf_node * size,
++					    size)) {
++			ped_free (node);
++			return -1;
++		}
++		ped_free (node);
++		return 1;
++	} else {
++		ped_free (node);
++		return -1;
++	}
++}
++
++/* Search an extent in the extent file and move it if found */
++/* Return 1 if everything was fine */
++/* Return -1 if an error occured */
++/* Return 0 if no extent was found */
++static int
++hfsplus_search_move_extent (PedFileSystem *fs, unsigned int *ptr_fblock,
++			    unsigned int *ptr_to_fblock)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	uint8_t			node_1[PED_SECTOR_SIZE];
++	uint8_t*		node;
++	HfsPHeaderRecord*	header;
++	HfsPNodeDescriptor*	desc = (HfsPNodeDescriptor*) node;
++	HfsPExtentKey*		extent_key;
++	HfsPExtDescriptor*	extent_data;
++	unsigned int		leaf_node, record_number;
++	unsigned int		i, j, size, bsize;
++	int			new_start;
++
++	/* Search the extent in the extent file */
++	if (!hfsplus_file_read_sector (priv_data->extents_file, node_1, 0))
++		return -1;
++	header = ((HfsPHeaderRecord*) (node_1 + HFS_FIRST_REC));
++	leaf_node = PED_BE32_TO_CPU (header->first_leaf_node);
++	bsize = PED_BE16_TO_CPU (header->node_size);
++	size = bsize / PED_SECTOR_SIZE;
++
++	node = (uint8_t*) ped_malloc (bsize);
++	desc = (HfsPNodeDescriptor*) node;
++	
++	for (; leaf_node; leaf_node = PED_BE32_TO_CPU (desc->next)) {
++		if (!hfsplus_file_read (priv_data->extents_file, node,
++					(PedSector) leaf_node * size, size)) {
++			ped_free (node);
++			return -1;
++		}
++		record_number = PED_BE16_TO_CPU (desc->rec_nb);
++		for (i = 1; i <= record_number; i++) {
++			extent_key = (HfsPExtentKey*)
++			    (node + PED_BE16_TO_CPU(*((uint16_t *)
++					    (node+(bsize - 2*i)))));
++			extent_data = (HfsPExtDescriptor*)
++			    (((uint8_t*)extent_key) + sizeof (HfsPExtentKey));
++			/* check for obvious error in FS */
++			if (((uint8_t*)extent_key - node < HFS_FIRST_REC)
++			    || ((uint8_t*)extent_data - node
++			        >= (signed)bsize
++				   - 2 * (signed)(record_number+1))) {
++				ped_free (node);
++				return -1;
++			}
++			for (j = 0; j < HFSP_EXT_NB; j++) {
++				if ( extent_data[j].block_count
++				     && PED_BE32_TO_CPU (
++					    extent_data[j].start_block)
++					== (*ptr_fblock) )
++					goto plus_extent_found;
++			}
++		}
++	}
++	/* no extent starting a *ptr_block has been found in the extents file */
++	ped_free (node);
++	return 0;
++
++	/* an extent has been found in the extents file */
++    plus_extent_found:
++	new_start = hfsplus_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++						PED_BE32_TO_CPU (
++						    extent_data[j]
++						    .block_count));
++	if (new_start != -1) {
++		unsigned int	old_start;
++		old_start = extent_data[j].start_block;
++		extent_data[j].start_block = PED_CPU_TO_BE32 (new_start);
++		/* This extent might have been cached into the file structure
++		   of the extent or catalog file */
++		if (priv_data->catalog_file->cache[j].start_block == old_start)
++			memcpy (priv_data->catalog_file->cache, extent_data,
++				sizeof (HfsPExtDataRec));
++		if (priv_data->extents_file->cache[j].start_block == old_start)
++			memcpy (priv_data->extents_file->cache, extent_data,
++				sizeof (HfsPExtDataRec));
++		if (priv_data->attributes_file->cache[j].start_block
++		    == old_start)
++			memcpy (priv_data->attributes_file->cache,
++				extent_data, sizeof (HfsPExtDataRec));
++		/* write if any changes */
++		if ((old_start != (unsigned) PED_CPU_TO_BE32 (new_start))
++		    && !hfsplus_file_write (priv_data->extents_file, node,
++					    (PedSector) leaf_node * size,
++					    size)) {
++			ped_free (node);
++			return -1;
++		}
++		ped_free (node);
++		return 1;
++	} else {
++		ped_free (node);
++		return -1;
++	}
++}
++
++/* Search an extent in the extent file and move it if found */
++/* Return 1 if everything was fine */
++/* Return -1 if an error occured */
++/* Return 0 if no extent was found */
++static int
++hfsplus_search_move_primary (PedFileSystem *fs, unsigned int *ptr_fblock,
++			     unsigned int *ptr_to_fblock)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	uint8_t			node[PED_SECTOR_SIZE];
++	unsigned int		j;
++	int			new_start;
++
++	/* Search an extent in the MDB */
++    	for (j = 0; j < HFSP_EXT_NB; j++) {
++		if ( priv_data->vh->extents_file.extents[j].block_count
++		     && PED_BE32_TO_CPU (
++			    priv_data->vh->extents_file.extents[j].start_block)
++			== (*ptr_fblock) )
++			goto plus_ext_file_found;
++		if ( priv_data->vh->catalog_file.extents[j].block_count
++		     && PED_BE32_TO_CPU (
++		            priv_data->vh->catalog_file.extents[j].start_block)
++			== (*ptr_fblock) )
++			goto plus_cat_file_found;
++		if ( priv_data->vh->allocation_file.extents[j].block_count
++		     && PED_BE32_TO_CPU (
++		    	 priv_data->vh->allocation_file.extents[j].start_block)
++			== (*ptr_fblock) )
++			goto plus_alloc_file_found;
++		if ( priv_data->vh->attributes_file.extents[j].block_count
++		     && PED_BE32_TO_CPU (
++		         priv_data->vh->attributes_file.extents[j].start_block)
++			== (*ptr_fblock) )
++			goto plus_attrib_file_found;
++		if ( priv_data->vh->startup_file.extents[j].block_count
++		     && PED_BE32_TO_CPU (
++		            priv_data->vh->startup_file.extents[j].start_block)
++			== (*ptr_fblock) )
++			goto plus_start_file_found;
++	}
++	return 0;
++
++    plus_start_file_found:
++	new_start = hfsplus_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++						PED_BE32_TO_CPU (
++						    priv_data->vh->startup_file
++						    .extents[j].block_count));
++	if (new_start != -1) {
++		priv_data->vh->startup_file.extents[j].start_block =
++			PED_CPU_TO_BE32 (new_start);
++#if 0
++		memcpy (priv_data->startup_file->first, priv_data->vh->startup_file.extents, sizeof (HfsPExtDataRec));
++		if (!priv_data->startup_file->start_cache)
++			memcpy (priv_data->startup_file->cache, priv_data->startup_file->first, sizeof (HfsPExtDataRec));
++#endif
++		goto plus_update_vh;
++	} else
++		return -1;
++
++    plus_attrib_file_found:
++	new_start = hfsplus_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++						PED_BE32_TO_CPU (
++						    priv_data->vh
++						    ->attributes_file
++						    .extents[j].block_count));
++	if (new_start != -1) {
++		priv_data->vh->attributes_file.extents[j].start_block =
++			PED_CPU_TO_BE32 (new_start);
++		memcpy (priv_data->attributes_file->first,
++			priv_data->vh->attributes_file.extents,
++			sizeof (HfsPExtDataRec));
++		if (!priv_data->attributes_file->start_cache)
++			memcpy (priv_data->attributes_file->cache,
++				priv_data->attributes_file->first,
++				sizeof (HfsPExtDataRec));
++		goto plus_update_vh;
++	} else
++		return -1;
++
++    plus_alloc_file_found:
++	new_start = hfsplus_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++						PED_BE32_TO_CPU (
++						    priv_data->vh
++						    ->allocation_file
++						    .extents[j].block_count));
++	if (new_start != -1) {
++		priv_data->vh->allocation_file.extents[j].start_block =
++			PED_CPU_TO_BE32 (new_start);
++#if 0
++		memcpy (priv_data->allocation_file->first, priv_data->vh->allocation_file.extents, sizeof (HfsPExtDataRec));
++		if (!priv_data->allocation_file->start_cache)
++			memcpy (priv_data->allocation_file->cache, priv_data->allocation_file->first, sizeof (HfsPExtDataRec));
++#endif
++		goto plus_update_vh;
++	} else
++		return -1;
++
++    plus_ext_file_found:
++	new_start = hfsplus_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++						PED_BE32_TO_CPU (
++						    priv_data->vh->extents_file
++						    .extents[j].block_count));
++	if (new_start != -1) {
++		priv_data->vh->extents_file.extents[j].start_block =
++			PED_CPU_TO_BE32 (new_start);
++		memcpy (priv_data->extents_file->first,
++			priv_data->vh->extents_file.extents,
++			sizeof (HfsPExtDataRec));
++		if (!priv_data->extents_file->start_cache)
++			memcpy (priv_data->extents_file->cache,
++				priv_data->extents_file->first,
++				sizeof (HfsPExtDataRec));
++		goto plus_update_vh;
++	} else
++		return -1;
++
++    plus_cat_file_found:
++	new_start = hfsplus_effect_move_extent (fs, ptr_fblock, ptr_to_fblock,
++						PED_BE32_TO_CPU (
++						    priv_data->vh->catalog_file
++						    .extents[j].block_count));
++	if (new_start != -1) {
++		priv_data->vh->catalog_file.extents[j].start_block =
++			PED_CPU_TO_BE32 (new_start);
++		memcpy (priv_data->catalog_file->first,
++			priv_data->vh->catalog_file.extents,
++			sizeof (HfsPExtDataRec));
++		if (!priv_data->catalog_file->start_cache)
++			memcpy (priv_data->catalog_file->cache,
++				priv_data->catalog_file->first,
++				sizeof (HfsPExtDataRec));
++		goto plus_update_vh;
++	} else 
++		return -1;
++
++    plus_update_vh:
++    	if (!ped_geometry_read (priv_data->plus_geom, node, 2, 1))
++		return -1;
++	memcpy (node, priv_data->vh, sizeof (HfsPVolumeHeader));
++	if (!ped_geometry_write (priv_data->plus_geom, node, 2, 1))
++		return -1;
++	if (!ped_geometry_write (priv_data->plus_geom, node,
++				 priv_data->plus_geom->length - 2, 1))
++		return -1;
++	return 1;
++}
++
++/* This function moves an extent starting at block fblock
++   to block to_fblock if there's enough room */
++/* Return 1 if everything was fine */
++/* Return -1 if an error occured */
++/* Return 0 if no extent was found */
++static int
++hfsplus_move_extent_starting_at (PedFileSystem *fs, unsigned int *ptr_fblock,
++				 unsigned int *ptr_to_fblock)
++{
++	int	ret;
++	
++	/* order = decreasing probability to be found */
++	if ((ret = hfsplus_search_move_catalog (fs, ptr_fblock, ptr_to_fblock))
++	    || (ret = hfsplus_search_move_extent (fs, ptr_fblock,
++						  ptr_to_fblock))
++	    || (ret = hfsplus_search_move_primary (fs, ptr_fblock,
++						   ptr_to_fblock))
++	    || (ret = hfsplus_search_move_attributes (fs, ptr_fblock,
++						      ptr_to_fblock))) {
++		return ret;
++	}
++	
++	return 0;
++}
++
++/* This function moves file's data to compact used and free space,
++   starting at fblock block */
++/* return 0 on error */
++static int
++hfsplus_pack_free_space_from_block (PedFileSystem *fs, unsigned int fblock,
++				    PedTimer* timer)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	HfsPVolumeHeader*	vh = priv_data->vh;
++	unsigned int 		to_fblock = fblock;
++	int			byte, bit, ret;
++	int			to_byte, to_bit;
++	unsigned int		start = fblock;
++	unsigned int		div = PED_BE32_TO_CPU (vh->total_blocks)
++				      + 1 - start;
++	
++	to_byte = byte = fblock / 8;
++	to_bit = bit = 7 - (fblock & 7);
++
++	if (!hfsplus_read_bad_blocks (fs))
++		return 0;
++
++	while ( fblock < ( priv_data->plus_geom->length - 2 )
++			 / ( PED_BE32_TO_CPU (vh->block_size)
++			     / PED_SECTOR_SIZE ) ) {
++		if (((priv_data->alloc_map[byte] >> bit) & 1)
++		    && (!hfsplus_is_bad_block (fs, fblock))) {
++			if (!(ret = hfsplus_move_extent_starting_at (fs,
++								&fblock,
++								&to_fblock)))
++				to_fblock = ++fblock;
++			else if (ret == -1)
++				return 0;
++		} else {
++			fblock++;
++		}
++		
++		byte = fblock / 8;
++		bit = 7 - (fblock & 7);
++
++		to_byte = to_fblock / 8;
++		to_bit = 7 - (to_fblock & 7);
++		
++		ped_timer_update(timer, (float)(fblock - start) / div);
++	}
++	
++	return 1;
++}
++
++/* This function returns the first sector of the last free block of
++   an HFS+ volume we can get after a hfsplus_pack_free_space_from_block call */
++static PedSector
++hfsplus_get_empty_end (const PedFileSystem *fs)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						    fs->type_specific;
++	HfsPVolumeHeader* 	vh = priv_data->vh;
++	HfsPPrivateLinkExtent*	link;
++	unsigned int		block, last_bad, end_free_blocks;
++	int			byte, bit;
++
++	/* find the next block to the last bad block of the volume */
++	if (!hfsplus_read_bad_blocks (fs))
++		return 0;
++
++	last_bad = 0;
++	for (link = priv_data->bad_blocks_xtent_list; link; link = link->next) {
++		if ((unsigned int) PED_BE32_TO_CPU (link->extent.start_block)
++		    + PED_BE32_TO_CPU (link->extent.block_count) > last_bad)
++			last_bad = PED_BE32_TO_CPU (link->extent.start_block)
++			           + PED_BE32_TO_CPU (link->extent.block_count);
++	}
++
++	/* Count the free blocks from last_bad to the end of the volume */
++	end_free_blocks = 0;
++	for (block = last_bad;
++	     block < PED_BE32_TO_CPU (vh->total_blocks);
++	     block++) {
++		byte = block / 8;
++		bit = 7 - (block & 7);
++		if (!((priv_data->alloc_map[byte]>>bit)&1))
++			end_free_blocks++;
++	}
++
++	/* Calculate the block that will by the first free at
++	   the end of the volume */
++	block = PED_BE32_TO_CPU (vh->total_blocks) - end_free_blocks;
++
++	return (PedSector) block * ( PED_BE32_TO_CPU (vh->block_size)
++				     / PED_SECTOR_SIZE );
++}
++
++static PedSector
++hfsplus_get_min_size (const PedFileSystem *fs)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	PedSector		min_size;
++
++	/* don't need to add anything because every sector
++	   is part of allocation blocks in HFS+ */
++	min_size = hfsplus_get_empty_end(fs);
++
++	if (priv_data->wrapper) {
++		HfsPrivateFSData* 	hfs_priv_data = (HfsPrivateFSData*)
++					    priv_data->wrapper->type_specific;
++		unsigned int		hfs_sect_block;
++		hfs_sect_block =
++		    PED_BE32_TO_CPU (hfs_priv_data->mdb->block_size)
++		    / PED_SECTOR_SIZE;
++		/* 
++		 * if hfs+ is embedded in an hfs wrapper then the new size is :
++		 * the new size of the hfs+ volume rounded up to the size 
++		 *     of hfs blocks
++		 * + the minimum size of the hfs wrapper without any hfs+
++		 *     modification
++		 * - the current size of the hfs+ volume in the hfs wrapper
++		 */
++		min_size = ((min_size + hfs_sect_block - 1) / hfs_sect_block)
++			   * hfs_sect_block
++			 + hfs_get_empty_end(priv_data->wrapper) + 2
++			 - (PedSector) PED_BE16_TO_CPU ( hfs_priv_data->mdb
++							->old_new.embedded
++							.location.block_count )
++			   * hfs_sect_block;
++	}
++	
++	return min_size;
++}
++
++static PedConstraint* 
++hfsplus_get_resize_constraint (const PedFileSystem *fs)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	PedDevice*	dev = fs->geom->dev;
++	PedAlignment	start_align;
++	PedGeometry	start_sector;
++	PedGeometry	full_dev;
++	PedSector	min_size;
++
++	if (!ped_alignment_init (&start_align, fs->geom->start, 0))
++		return NULL;
++	if (!ped_geometry_init (&start_sector, dev, fs->geom->start, 1))
++		return NULL;
++	if (!ped_geometry_init (&full_dev, dev, 0, dev->length - 1))
++		return NULL;
++
++	min_size = hfsplus_get_min_size (fs);
++
++	return ped_constraint_new (&start_align, ped_alignment_any,
++				   &start_sector, &full_dev, min_size,
++				   fs->geom->length);
++}
++
++/* return the block which should be used to pack data to have
++   at least free fblock blocks at the end of the volume */
++static unsigned int
++hfsplus_find_start_pack (const PedFileSystem *fs, unsigned int fblock)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	unsigned int		block;
++
++	for (block = PED_BE32_TO_CPU (priv_data->vh->total_blocks) - 1;
++	     block && fblock;
++	     block--) {
++		if (!((priv_data->alloc_map[block / 8]
++		       >> (7 - (block & 7))) & 1))
++			fblock--;
++	}
++
++	while (block && !((priv_data->alloc_map[block / 8]
++			   >> (7 - (block & 7))) & 1))
++		block--;
++	if ((priv_data->alloc_map[block / 8] >> (7 - (block & 7))) & 1)
++		block++;
++
++	return block;
++}
++
++static int
++hfsplus_volume_resize (PedFileSystem* fs, PedGeometry* geom, PedTimer* timer)
++{
++	uint8_t			buf[PED_SECTOR_SIZE];
++	unsigned int		nblock, nfree;
++	unsigned int		block;
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	HfsPVolumeHeader* 	vh = priv_data->vh;
++	int			resize = 1;
++	unsigned int		hfsp_sect_block =
++				    ( PED_BE32_TO_CPU (vh->block_size)
++				      / PED_SECTOR_SIZE );
++	HfsPPrivateFile*	allocation_file;
++	unsigned int		map_sectors;
++
++	/* Clear the unmounted bit */
++	vh->attributes &= PED_CPU_TO_BE32 (~( 1 << HFS_UNMOUNTED ));
++	if (!ped_geometry_read (priv_data->plus_geom, buf, 2, 1))
++		return 0;
++	memcpy (buf, vh, sizeof (HfsPVolumeHeader));
++	if (!ped_geometry_write (priv_data->plus_geom, buf, 2, 1))
++		return 0;
++
++	ped_timer_reset (timer);
++	ped_timer_set_state_name(timer, _("shrinking"));
++	ped_timer_update(timer, 0.0);
++	/* relocate data */
++	block = hfsplus_find_start_pack (fs, ( priv_data->plus_geom->length 
++	                                       - geom->length + hfsp_sect_block
++					       - 1 ) / hfsp_sect_block );
++	if (!hfsplus_pack_free_space_from_block (fs, block, timer)) {
++		resize = 0;
++		goto write_VH;
++	}
++
++	/* Calculate new block number and other VH field */
++	nblock = (geom->length + hfsp_sect_block - 1) / hfsp_sect_block;
++	nfree = PED_BE32_TO_CPU (vh->free_blocks) 
++		- (PED_BE32_TO_CPU (vh->total_blocks) - nblock);
++	if (priv_data->plus_geom->length % hfsp_sect_block == 1)
++		nfree++;
++	if (geom->length % hfsp_sect_block == 1)
++		nfree--;
++
++	/* Check that all block after future end are really free */
++	for ( block = nblock;
++	      block < ( priv_data->plus_geom->length - 2 )
++	    	      / ( PED_BE32_TO_CPU (vh->block_size) / PED_SECTOR_SIZE );
++	      block++ ) {
++		int	byte, bit;
++		byte = block / 8;
++		bit = 7 - (block & 7);
++		if ((priv_data->alloc_map[byte]>>bit)&1) {
++			resize = 0;
++			goto write_VH;
++		}
++	}
++
++	/* Update geometry */
++	if (resize) {
++		/* update in fs structure */
++		if (PED_BE32_TO_CPU (vh->next_allocation) >= nblock)
++			vh->next_allocation = PED_CPU_TO_BE32 (0);
++		vh->total_blocks = PED_CPU_TO_BE32 (nblock);
++		vh->free_blocks = PED_CPU_TO_BE32 (nfree);
++		/* update parted structure */
++		priv_data->plus_geom->length = geom->length;
++		priv_data->plus_geom->end = priv_data->plus_geom->start
++					    + geom->length - 1;
++	}
++
++	/* Effective write */
++    write_VH:
++    	/* lasts two sectors are allocated by the alternate VH
++	   and a reserved sector */
++	block = (priv_data->plus_geom->length - 1) / hfsp_sect_block;
++	priv_data->alloc_map[block / 8] |= 1 << (7 - (block & 7));
++	block = (priv_data->plus_geom->length - 2) / hfsp_sect_block;
++	priv_data->alloc_map[block / 8] |= 1 << (7 - (block & 7));
++    	map_sectors = ( PED_BE32_TO_CPU (vh->total_blocks)
++			+ PED_SECTOR_SIZE * 8 - 1 ) / (PED_SECTOR_SIZE * 8);
++	allocation_file =
++	    hfsplus_file_open ( fs, PED_CPU_TO_BE32 (HFSP_ALLOC_ID),
++			        vh->allocation_file.extents,
++			        PED_BE64_TO_CPU (
++			    	    vh->allocation_file.logical_size )
++			        / PED_SECTOR_SIZE );
++	if (!hfsplus_file_write (allocation_file, priv_data->alloc_map,
++				 0, map_sectors))
++		resize = 0;
++	hfsplus_file_close (allocation_file);
++
++	if (resize) {
++		/* Set the unmounted bit and clear the inconsistent bit */
++		vh->attributes |= PED_CPU_TO_BE32 ( 1 << HFS_UNMOUNTED );
++		vh->attributes &= ~ PED_CPU_TO_BE32 ( 1 << HFSP_INCONSISTENT );
++	}
++	
++	ped_timer_set_state_name(timer, _("writing HFS+ Volume Header"));
++	if (!ped_geometry_read (priv_data->plus_geom, buf, 2, 1 ))
++		return 0;
++	memcpy (buf, vh, sizeof (HfsPVolumeHeader));
++	if (!ped_geometry_write (priv_data->plus_geom, buf, 2, 1 ))
++		return 0;
++	if (!ped_geometry_write ( priv_data->plus_geom, buf,
++				  priv_data->plus_geom->length - 2, 1 ))
++		return 0;
++	ped_timer_update(timer, 1.0);
++
++	return (resize);
++}
++
++/* Update the HFS wrapper mdb and bad blocks file to reflect
++   the new geometry of the embedded HFS+ volume */
++static int
++hfsplus_wrapper_update (PedFileSystem* fs)
++{
++	uint8_t			node[PED_SECTOR_SIZE];
++	HfsCPrivateLeafRec	ref;
++	HfsExtentKey		key;
++	HfsNodeDescriptor*	node_desc = (HfsNodeDescriptor*) node;
++	HfsExtentKey*		ret_key;
++	HfsExtDescriptor*	ret_data;
++	unsigned int		i, j;
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	HfsPrivateFSData* 	hfs_priv_data = (HfsPrivateFSData*)
++					    priv_data->wrapper->type_specific;
++	unsigned int		hfs_sect_block =
++			PED_BE32_TO_CPU (hfs_priv_data->mdb->block_size)
++			/ PED_SECTOR_SIZE ;
++	PedSector		hfsplus_sect = (PedSector)
++			PED_BE32_TO_CPU (priv_data->vh->total_blocks)
++			* ( PED_BE32_TO_CPU (priv_data->vh->block_size)
++			    / PED_SECTOR_SIZE );
++	unsigned int		hfs_blocks_embedded =
++				    (hfsplus_sect + hfs_sect_block - 1)
++				    / hfs_sect_block;
++	unsigned int		hfs_blocks_embedded_old;
++
++	/* update HFS wrapper MDB */
++	hfs_blocks_embedded_old = PED_BE16_TO_CPU (
++					hfs_priv_data->mdb->old_new
++					.embedded.location.block_count );
++	hfs_priv_data->mdb->old_new.embedded.location.block_count =
++		PED_CPU_TO_BE16 (hfs_blocks_embedded);
++	/* maybe macOS will boot with this */
++	hfs_priv_data->mdb->free_blocks =
++	    PED_CPU_TO_BE16 ( PED_BE16_TO_CPU (hfs_priv_data->mdb->free_blocks)
++	                    + hfs_blocks_embedded_old
++			    - hfs_blocks_embedded );
++	
++	if (!ped_geometry_read (fs->geom, node, 2, 1))
++		return 0;
++	memcpy (node, hfs_priv_data->mdb, sizeof (HfsMasterDirectoryBlock));
++	if (!ped_geometry_write (fs->geom, node, 2, 1))
++		return 0;
++	if (!ped_geometry_write (fs->geom, node, fs->geom->length - 2, 1))
++		return 0;
++
++	/* force reload bad block list */
++	if (hfs_priv_data->bad_blocks_loaded) {
++		hfs_free_bad_blocks_list (hfs_priv_data->bad_blocks_xtent_list);
++		hfs_priv_data->bad_blocks_xtent_list = NULL;
++		hfs_priv_data->bad_blocks_xtent_nb = 0;
++		hfs_priv_data->bad_blocks_loaded = 0;
++	}
++	
++	/* clean HFS wrapper allocation map */
++	for (i = PED_BE16_TO_CPU (
++			hfs_priv_data->mdb->old_new.embedded
++			.location.start_block )
++		 + hfs_blocks_embedded;
++	     i < PED_BE16_TO_CPU (
++	    		hfs_priv_data->mdb->old_new.embedded
++			.location.start_block )
++		 + hfs_blocks_embedded_old;
++	     i++ ) {
++		hfs_priv_data->alloc_map[i/8] &= ~(1 << (7 - (i & 7)));
++	}
++	/* and save it */
++	if (!ped_geometry_write (fs->geom, hfs_priv_data->alloc_map,
++				 PED_BE16_TO_CPU (
++				      hfs_priv_data->mdb->volume_bitmap_block ),
++				 ( PED_BE16_TO_CPU (
++				        hfs_priv_data->mdb->total_blocks ) 
++				   + PED_SECTOR_SIZE * 8 - 1 )
++				 / (PED_SECTOR_SIZE * 8)))
++		return 0;
++
++
++	/* search and update the bad blocks file */
++	key.key_length = sizeof(key) - 1;
++	key.type = HFS_DATA_FORK;
++	key.file_ID = PED_CPU_TO_BE32 (HFS_BAD_BLOCK_ID);
++	key.start = 0;
++	if (!hfs_btree_search (hfs_priv_data->extent_file,
++			       (HfsPrivateGenericKey*) &key, NULL, 0, &ref))
++		return 0;
++	if (!hfs_file_read_sector (hfs_priv_data->extent_file, node,
++				   ref.node_number))
++		return 0;
++	ret_key = (HfsExtentKey*) (node + ref.record_pos);
++	ret_data = (HfsExtDescriptor*) ( node + ref.record_pos
++					 + sizeof (HfsExtentKey) );
++	
++	while (ret_key->type == key.type && ret_key->file_ID == key.file_ID) {
++		for (i = 0; i < HFS_EXT_NB; i++) {
++			if ( ret_data[i].start_block 
++			     == hfs_priv_data->mdb->old_new
++			        .embedded.location.start_block) {
++				ret_data[i].block_count =
++				    hfs_priv_data->mdb->old_new
++				    .embedded.location.block_count;
++				/* found ! : update */
++				if (!hfs_file_write_sector (
++					  hfs_priv_data->extent_file,
++					  node, ref.node_number))
++					return 0;
++				return 1;
++			}
++		}
++		
++		if (ref.record_number < PED_BE16_TO_CPU (node_desc->rec_nb)) {
++			ref.record_number++;
++		} else {
++			ref.node_number = PED_BE32_TO_CPU (node_desc->next);
++			if (!ref.node_number
++			    || !hfs_file_read_sector(hfs_priv_data->extent_file,
++						     node, ref.node_number))
++				return 0;
++			ref.record_number = 1;
++		}
++
++		ref.record_pos = PED_BE16_TO_CPU (*((uint16_t *)
++			    (node+(PED_SECTOR_SIZE - 2*ref.record_number))));
++		ret_key = (HfsExtentKey*) (node + ref.record_pos);
++		ret_data = (HfsExtDescriptor*) ( node + ref.record_pos
++						 + sizeof (HfsExtentKey) );
++	}
++	
++	/* not found : not a valid hfs+ wrapper : failure */
++	return 0;
++}
++
++static int
++hfsplus_resize (PedFileSystem* fs, PedGeometry* geom, PedTimer* timer)
++{
++	HfsPPrivateFSData* 	priv_data = (HfsPPrivateFSData*)
++						fs->type_specific;
++	PedTimer*		timer_plus;
++	PedGeometry*		embedded_geom;
++
++	/* check preconditions */
++	PED_ASSERT (fs->geom->dev == geom->dev, return 0);
++	
++	if (fs->geom->start != geom->start)
++	{
++		ped_exception_throw (PED_EXCEPTION_NO_FEATURE,
++		      PED_EXCEPTION_CANCEL,
++		      _("Sorry, can't move the start of hfs partitions yet!"));
++		return 0;
++	}
++
++	if (geom->length > fs->geom->length
++	    || geom->length < hfsplus_get_min_size (fs))
++		return 0;
++
++	if (priv_data->wrapper) {
++		PedSector		red, hgee;
++		HfsPrivateFSData* 	hfs_priv_data = (HfsPrivateFSData*)
++					    priv_data->wrapper->type_specific;
++		unsigned int		hfs_sect_block =
++			    PED_BE32_TO_CPU (hfs_priv_data->mdb->block_size)
++			    / PED_SECTOR_SIZE;
++		
++		/* There is a wrapper so we must calculate the new geometry
++		   of the embedded HFS+ volume */
++		red = ( (fs->geom->length - geom->length + hfs_sect_block - 1)
++			/ hfs_sect_block ) * hfs_sect_block;
++		/* Can't we shrink the hfs+ volume by the desired size ? */
++		if ( red > priv_data->plus_geom->length
++			   - (hgee = hfsplus_get_empty_end (fs))) {
++			/* No, shrink hfs+ by the greatest possible value */
++			hgee = ((hgee + hfs_sect_block - 1) / hfs_sect_block)
++			       * hfs_sect_block;
++			red = priv_data->plus_geom->length - hgee;
++		}
++		embedded_geom = ped_geometry_new (geom->dev,
++						  priv_data->plus_geom->start,
++						  priv_data->plus_geom->length
++						  - red);
++		
++		/* There is a wrapper so the resize process is a two stages
++		   process (embedded resizing then wrapper resizing) :
++		   we create a sub timer */
++		ped_timer_reset (timer);
++		ped_timer_set_state_name (timer,
++					  _("shrinking embedded HFS+ volume"));
++		ped_timer_update(timer, 0.0);
++		timer_plus = ped_timer_new_nested (timer, 0.98);
++	} else {
++		/* No wrapper : the desired geometry is the desired
++		   HFS+ volume geometry */
++		embedded_geom = geom;
++		timer_plus = timer;
++	}
++		
++	/* Resize the HFS+ volume */
++	if (!hfsplus_volume_resize (fs, embedded_geom, timer_plus)) {
++		if (timer_plus != timer) ped_timer_destroy_nested (timer_plus);
++		return 0;
++	}
++
++	if (priv_data->wrapper) {
++		ped_geometry_destroy (embedded_geom);
++		ped_timer_destroy_nested (timer_plus);
++		ped_timer_set_state_name(timer, _("shrinking HFS wrapper"));
++		timer_plus = ped_timer_new_nested (timer, 0.02);
++		/* There's a wrapper : second stage = resizing it */
++		if (!hfsplus_wrapper_update (fs)
++		    || !hfs_resize (priv_data->wrapper, geom, timer_plus)) {
++			ped_timer_destroy_nested (timer_plus);
++			return 0;
++		}
++		ped_timer_destroy_nested (timer_plus);
++	}
++	ped_timer_update(timer, 1.0);
++
++	return 1;
+ }
+ #endif /* !DISCOVER_ONLY */
+ 
+@@ -64,9 +2976,44 @@
+ 	probe:		hfs_probe,
+ #ifndef DISCOVER_ONLY
+ 	clobber:	hfs_clobber,
++	open:		hfs_open,
++	create:		NULL,
++	close:		hfs_close,
++	check:		NULL,
++	copy:		NULL,
++	resize:		hfs_resize,
++	get_create_constraint:	NULL,
++	get_resize_constraint:	hfs_get_resize_constraint,
++	get_copy_constraint:	NULL,
+ #else
+ 	clobber:	NULL,
++	open:		NULL,
++	create:		NULL,
++	close:		NULL,
++	check:		NULL,
++	copy:		NULL,
++	resize:		NULL,
++	get_create_constraint:	NULL,
++	get_resize_constraint:	NULL,
++	get_copy_constraint:	NULL,
+ #endif
++};
++
++static PedFileSystemOps hfsplus_ops = {
++	probe:		hfsplus_probe,
++#ifndef DISCOVER_ONLY
++	clobber:	hfsplus_clobber,
++	open:		hfsplus_open,
++	create:		NULL,
++	close:		hfsplus_close,
++	check:		NULL,
++	copy:		NULL,
++	resize:		hfsplus_resize,
++	get_create_constraint:	NULL,
++	get_resize_constraint:	hfsplus_get_resize_constraint,
++	get_copy_constraint:	NULL,
++#else
++	clobber:	NULL,
+ 	open:		NULL,
+ 	create:		NULL,
+ 	close:		NULL,
+@@ -76,23 +3023,32 @@
+ 	get_create_constraint:	NULL,
+ 	get_resize_constraint:	NULL,
+ 	get_copy_constraint:	NULL,
++#endif
+ };
+ 
++
+ static PedFileSystemType hfs_type = {
+ 	next:	NULL,
+ 	ops:	&hfs_ops,
+ 	name:	"hfs"
+ };
+ 
++static PedFileSystemType hfsplus_type = {
++	next:	NULL,
++	ops:	&hfsplus_ops,
++	name:	"hfs+"
++};
++
+ void
+ ped_file_system_hfs_init ()
+ {
+ 	ped_file_system_type_register (&hfs_type);
++	ped_file_system_type_register (&hfsplus_type);
+ }
+ 
+ void
+ ped_file_system_hfs_done ()
+ {
+ 	ped_file_system_type_unregister (&hfs_type);
++	ped_file_system_type_unregister (&hfsplus_type);
+ }
+-
+diff -u -r -N parted-1.6.5/libparted/fs_hfs/hfs.h parted-1.6.5-hfs/libparted/fs_hfs/hfs.h
+--- parted-1.6.5/libparted/fs_hfs/hfs.h	Thu Jan  1 01:00:00 1970
++++ parted-1.6.5-hfs/libparted/fs_hfs/hfs.h	Tue Apr 29 05:48:04 2003
+@@ -0,0 +1,543 @@
++/*
++    libparted - a library for manipulating disk partitions
++    Copyright (C) 2003 Free Software Foundation, Inc.
++
++    This program is free software; you can redistribute it and/or modify
++    it under the terms of the GNU General Public License as published by
++    the Free Software Foundation; either version 2 of the License, or
++    (at your option) any later version.
++
++    This program is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++    GNU General Public License for more details.
++
++    You should have received a copy of the GNU General Public License
++    along with this program; if not, write to the Free Software
++    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
++*/
++
++#ifndef _HFS_H
++#define _HFS_H
++
++
++#undef HFS_DEBUG
++
++#define HFS_SIGNATURE	0x4244
++#define HFSP_SIGNATURE	0x482B
++
++#define HFS_HARD_LOCK	 7
++#define HFS_UNMOUNTED	 8
++#define HFS_BAD_SPARED	 9
++#define HFS_SOFT_LOCK	15
++#define HFSP_NO_CACHE	10
++#define HFSP_INCONSISTENT 11
++
++#define HFS_IDX_NODE	0x00
++#define HFS_HDR_NODE	0x01
++#define HFS_MAP_NODE	0x02
++#define HFS_LEAF_NODE	0xFF
++
++#define HFS_FIRST_REC	0x0E
++#define HFS_NSD_HD_REC	0x78
++#define HFS_MAP_REC	0xF8
++
++#define HFS_DATA_FORK	0x00
++#define HFS_RES_FORK	0xFF
++
++#define HFS_CAT_DIR	0x01
++#define HFS_CAT_FILE	0x02
++#define HFS_CAT_DIR_TH	0x03
++#define HFS_CAT_FILE_TH	0x04
++
++#define HFSP_ATTR_INLINE	0x10
++#define HFSP_ATTR_FORK		0x20
++#define HFSP_ATTR_EXTENTS	0x30
++
++#define HFS_ROOT_PAR_ID		0x01
++#define HFS_ROOT_DIR_ID		0x02
++#define HFS_XTENT_ID		0x03
++#define HFS_CATALOG_ID		0x04
++#define HFS_BAD_BLOCK_ID	0x05
++#define HFSP_ALLOC_ID		0x06
++#define HFSP_STARTUP_ID		0x07
++#define HFSP_ATTRIB_ID		0x08
++#define HFSP_BOGUS_ID		0x0F
++#define HFSP_FIRST_AV_ID	0x10
++
++#define HFS_EXT_NB	3
++#define HFSP_EXT_NB	8
++
++static PedFileSystemType hfs_type;
++static PedFileSystemType hfsplus_type;
++
++
++
++/* ----------------------------------- */
++/* --      HFS DATA STRUCTURES      -- */
++/* ----------------------------------- */
++
++/* Extent descriptor */
++struct __attribute__ ((packed)) _HfsExtDescriptor {
++	uint16_t	start_block;
++	uint16_t	block_count;
++};
++typedef struct _HfsExtDescriptor HfsExtDescriptor;
++typedef HfsExtDescriptor HfsExtDataRec[HFS_EXT_NB];
++
++/* Volume header */
++struct __attribute__ ((packed)) _HfsMasterDirectoryBlock {
++	uint16_t	signature;
++	uint32_t	create_date;
++	uint32_t	modify_date;
++	uint16_t	volume_attributes;
++	uint16_t	files_in_root;
++	uint16_t	volume_bitmap_block;	/* in sectors */
++	uint16_t	next_allocation;
++	uint16_t	total_blocks;
++	uint32_t	block_size;		/* in bytes */
++	uint32_t	def_clump_size;		/* in bytes */
++	uint16_t	start_block;		/* in sectors */
++	uint32_t	next_free_node;
++	uint16_t	free_blocks;
++	uint8_t		name_length;
++	char		name[27];
++	uint32_t	backup_date;
++	uint16_t	backup_number;
++	uint32_t	write_count;
++	uint32_t	extents_clump;
++	uint32_t	catalog_clump;
++	uint16_t	dirs_in_root;
++	uint32_t	file_count;
++	uint32_t	dir_count;
++	uint32_t	finder_info[8];
++	union __attribute__ ((packed)) {
++		struct __attribute__ ((packed)) {
++			uint16_t	volume_cache_size;	/* in blocks */
++			uint16_t	bitmap_cache_size;	/* in blocks */
++			uint16_t	common_cache_size;	/* in blocks */
++		}		legacy;
++		struct __attribute__ ((packed)) {
++			uint16_t	signature;
++			HfsExtDescriptor location;
++		}		embedded;
++	}		old_new;
++	uint32_t	extents_file_size;  /* in bytes, block size multiple */
++	HfsExtDataRec	extents_file_rec;
++	uint32_t	catalog_file_size;  /* in bytes, block size multiple */
++	HfsExtDataRec	catalog_file_rec;
++};
++typedef struct _HfsMasterDirectoryBlock HfsMasterDirectoryBlock;
++
++/* B*-Tree Node Descriptor */
++struct __attribute__ ((packed)) _HfsNodeDescriptor {
++	uint32_t	next;
++	uint32_t	previous;
++	int8_t		type;
++	uint8_t		height;
++	uint16_t	rec_nb;
++	uint16_t	reserved;
++};
++typedef struct _HfsNodeDescriptor HfsNodeDescriptor;
++
++/* Header record of a whole B*-Tree */
++struct __attribute__ ((packed)) _HfsHeaderRecord {
++	uint16_t	depth;
++	uint32_t	root_node;
++	uint32_t	leaf_records;
++	uint32_t	first_leaf_node;
++	uint32_t	last_leaf_node;
++	uint16_t	node_size;
++	uint16_t	max_key_len;
++	uint32_t	total_nodes;
++	uint32_t	free_nodes;
++	int8_t		reserved[76];
++};
++typedef struct _HfsHeaderRecord HfsHeaderRecord;
++
++/* Catalog key for B*-Tree lookup in the catalog file */
++struct __attribute__ ((packed)) _HfsCatalogKey {
++	int8_t		key_length; /* length of the key without key_length */
++	int8_t		reserved;
++	uint32_t	parent_ID;
++	int8_t		name_length;
++	char		name[31];   /* in fact physicaly 1 upto 31 */
++};
++typedef struct _HfsCatalogKey HfsCatalogKey;
++
++/* Extents overflow key for B*-Tree lookup */
++struct __attribute__ ((packed)) _HfsExtentKey {
++	int8_t		key_length; /* length of the key without key_length */
++	int8_t		type;	    /* data or ressource fork */
++	uint32_t	file_ID;
++	uint16_t	start;
++};
++typedef struct _HfsExtentKey HfsExtentKey;
++
++/* Catalog subdata case directory */
++struct __attribute__ ((packed)) _HfsDir {
++	uint16_t	flags;
++	uint16_t	valence;	/* number of files in this directory */
++	uint32_t	dir_ID;
++	uint32_t	create_date;
++	uint32_t	modify_date;
++	uint32_t	backup_date;
++	int8_t		DInfo[16];	/* used by Finder, handle as reserved */
++	int8_t		DXInfo[16];	/* used by Finder, handle as reserved */
++	uint32_t	reserved[4];
++};
++typedef struct _HfsDir HfsDir;
++
++/* Catalog subdata case file */
++struct __attribute__ ((packed)) _HfsFile {
++	int8_t		flags;
++	int8_t		type;		/* should be 0 */
++	int8_t		FInfo[16];	/* used by Finder, handle as reserved */
++	uint32_t	file_ID;
++	uint16_t	data_start_block;
++	uint32_t	data_sz_byte;
++	uint32_t	data_sz_block;
++	uint16_t	res_start_block;
++	uint32_t	res_sz_byte;
++	uint32_t	res_sz_block;
++	uint32_t	create_date;
++	uint32_t	modify_date;
++	uint32_t	backup_date;
++	int8_t		FXInfo[16];	/* used by Finder, handle as reserved */
++	uint16_t	clump_size;
++	HfsExtDataRec	extents_data;
++	HfsExtDataRec	extents_res;
++	uint32_t	reserved;
++};
++typedef struct _HfsFile HfsFile;
++
++/* Catalog subdata case directory thread */
++struct __attribute__ ((packed)) _HfsDirTh {
++	uint32_t	reserved[2];
++	uint32_t	parent_ID;
++	int8_t		name_length;
++	char		name[31];
++};
++typedef struct _HfsDirTh HfsDirTh;
++
++/* Catalog subdata case file thread */
++typedef struct _HfsDirTh HfsFileTh;	/* same as directory thread */
++
++/* Catalog data */
++struct __attribute__ ((packed)) _HfsCatalog {
++	int8_t		type;
++	int8_t		reserved;
++	union {
++		HfsDir		dir;
++		HfsFile		file;
++		HfsDirTh	dir_th;
++		HfsFileTh	file_th;
++	} 		sel;
++};
++typedef struct _HfsCatalog HfsCatalog;
++
++
++
++/* ------------------------------------ */
++/* --      HFS+ DATA STRUCTURES      -- */
++/* ------------------------------------ */
++
++/* Permission struct is reserved in HFS+ official specification */
++/* May be it could be used in unix implementations of HFS+ */
++struct __attribute__ ((packed)) _HfsPPerms {
++	uint32_t	owner_ID;		/* reserved */
++	uint32_t	group_ID;		/* reserved */
++	uint32_t	permissions;		/* reserved */
++	uint32_t	special_devices;	/* reserved */
++};
++typedef struct _HfsPPerms HfsPPerms;
++
++/* HFS+ extent descriptor*/
++struct __attribute__ ((packed)) _HfsPExtDescriptor {
++	uint32_t	start_block;
++	uint32_t	block_count;
++};
++typedef struct _HfsPExtDescriptor HfsPExtDescriptor;
++typedef HfsPExtDescriptor HfsPExtDataRec[HFSP_EXT_NB];
++
++/* HFS+ fork data structure */
++struct __attribute__ ((packed)) _HfsPForkData {
++	uint64_t	logical_size;
++	uint32_t	clump_size;
++	uint32_t	total_blocks;
++	HfsPExtDataRec	extents;
++};
++typedef struct _HfsPForkData HfsPForkData;
++
++/* HFS+ catalog node ID */
++typedef uint32_t HfsPNodeID;
++
++/* HFS+ file names */
++typedef uint16_t unichar;
++struct __attribute__ ((packed)) _HfsPUniStr255 {
++	uint16_t	length;
++	unichar		unicode[255];	/* 1 upto 255 */
++};
++typedef struct _HfsPUniStr255 HfsPUniStr255;
++
++/* HFS+ volume header */
++struct __attribute__ ((packed)) _HfsPVolumeHeader {
++	uint16_t	signature;
++	uint16_t	version;
++	uint32_t	attributes;
++	uint32_t	last_mounted_version;
++	uint32_t	reserved;
++	
++	uint32_t	create_date;
++	uint32_t	modify_date;
++	uint32_t	backup_date;
++	uint32_t	checked_date;
++	
++	uint32_t	file_count;
++	uint32_t	dir_count;
++	
++	uint32_t	block_size;
++	uint32_t	total_blocks;
++	uint32_t	free_blocks;
++	
++	uint32_t	next_allocation;
++	uint32_t	res_clump_size;
++	uint32_t	data_clump_size;
++	HfsPNodeID	next_catalog_ID;
++	
++	uint32_t	write_count;
++	uint64_t	encodings_bitmap;
++	
++	uint8_t		finder_info[32];
++	
++	HfsPForkData	allocation_file;
++	HfsPForkData	extents_file;
++	HfsPForkData	catalog_file;
++	HfsPForkData	attributes_file;
++	HfsPForkData	startup_file;
++};
++typedef struct _HfsPVolumeHeader HfsPVolumeHeader;
++
++/* HFS+ B-Tree Node Descriptor */ /* same as HFS btree */
++struct __attribute__ ((packed)) _HfsPNodeDescriptor {
++	uint32_t	next;
++	uint32_t	previous;
++	int8_t		type;
++	uint8_t		height;
++	uint16_t	rec_nb;
++	uint16_t	reserved;
++};
++typedef struct _HfsPNodeDescriptor HfsPNodeDescriptor;
++
++/* Header record of a whole HFS+ B-Tree */
++struct __attribute__ ((packed)) _HfsPHeaderRecord {
++	uint16_t	depth;
++	uint32_t	root_node;
++	uint32_t	leaf_records;
++	uint32_t	first_leaf_node;
++	uint32_t	last_leaf_node;
++	uint16_t	node_size;
++	uint16_t	max_key_len;
++	uint32_t	total_nodes;
++	uint32_t	free_nodes;	/* same as hfs btree until here */
++	uint16_t	reserved1;
++	
++	uint32_t	clump_size;
++	uint8_t		btree_type;	/* must be 0 for HFS+ B-Tree */
++	uint8_t		reserved2;
++	uint32_t	attributes;
++	uint32_t	reserved3[16];
++};
++typedef struct _HfsPHeaderRecord HfsPHeaderRecord;
++
++/* Catalog key for B-Tree lookup in the HFS+ catalog file */
++struct __attribute__ ((packed)) _HfsPCatalogKey {
++	uint16_t	key_length;
++	HfsPNodeID	parent_ID;
++	HfsPUniStr255	node_name;
++};
++typedef struct _HfsPCatalogKey HfsPCatalogKey;
++
++/* HFS+ catalog subdata case dir */
++struct __attribute__ ((packed)) _HfsPDir {
++	uint16_t	flags;
++	uint32_t	valence;
++	HfsPNodeID	dir_ID;
++	uint32_t	create_date;
++	uint32_t	modify_date;
++	uint32_t	attrib_mod_date;
++	uint32_t	access_date;
++	uint32_t	backup_date;
++	HfsPPerms	permissions;
++	int8_t		DInfo[16];	/* used by Finder, handle as reserved */
++	int8_t		DXInfo[16];	/* used by Finder, handle as reserved */
++	uint32_t	text_encoding;
++	uint32_t	reserved;
++};
++typedef struct _HfsPDir HfsPDir;
++
++/* HFS+ catalog subdata case file */
++struct __attribute__ ((packed)) _HfsPFile {
++	uint16_t	flags;
++	uint32_t	reserved1;
++	HfsPNodeID	file_ID;
++	uint32_t	create_date;
++	uint32_t	modify_date;
++	uint32_t	attrib_mod_date;
++	uint32_t	access_date;
++	uint32_t	backup_date;
++	HfsPPerms	permissions;
++	int8_t		FInfo[16];	/* used by Finder, handle as reserved */
++	int8_t		FXInfo[16];	/* used by Finder, handle as reserved */
++	uint32_t	text_encoding;
++	uint32_t	reserved2;
++	
++	HfsPForkData	data_fork;
++	HfsPForkData	res_fork;
++};
++typedef struct _HfsPFile HfsPFile;
++
++/* HFS+ catalog subdata case thread */
++struct __attribute__ ((packed)) _HfsPThread {
++	int16_t		reserved;
++	HfsPNodeID	parent_ID;
++	HfsPUniStr255	node_name;
++};
++typedef struct _HfsPThread HfsPDirTh;
++typedef struct _HfsPThread HfsPFileTh;
++
++/* HFS+ Catalog leaf data */
++struct __attribute__ ((packed)) _HfsPCatalog {
++	int16_t		type;
++	union {
++		HfsPDir		dir;
++		HfsPFile	file;
++		HfsPDirTh	dir_th;
++		HfsPFileTh	file_th;
++	}		sel;
++};
++typedef struct _HfsPCatalog HfsPCatalog;
++
++/* HFS+ extents file key */
++struct __attribute__ ((packed)) _HfsPExtentKey {
++	uint16_t	key_length;
++	uint8_t		type;
++	uint8_t		pad;
++	HfsPNodeID	file_ID;
++	uint32_t	start;
++};
++typedef struct _HfsPExtentKey HfsPExtentKey;
++
++/* extent file data is HfsPExtDataRec */
++
++/* Fork data attribute file */
++struct __attribute__ ((packed)) _HfsPForkDataAttr {
++	uint32_t	record_type;
++	uint32_t	reserved;
++	union __attribute__ ((packed)) {
++		HfsPForkData	fork;
++		HfsPExtDataRec	extents;
++	}		fork_res;
++};
++typedef struct _HfsPForkDataAttr HfsPForkDataAttr;
++
++
++
++/* ---------------------------------------- */
++/* --      INTERNAL DATA STRUCTURES      -- */
++/* ---------------------------------------- */
++
++/* Data of an opened HFS file */
++struct _HfsPrivateFile {
++	PedSector		sect_nb;
++	PedFileSystem*		fs;
++	uint32_t		CNID;		/* disk order (BE) */
++	HfsExtDataRec		first;		/* disk order (BE) */
++	HfsExtDataRec		cache;		/* disk order (BE) */
++	uint16_t		start_cache;	/* CPU order */
++};
++typedef struct _HfsPrivateFile HfsPrivateFile;
++
++/* To store bad block list */
++struct _HfsPrivateLinkExtent {
++	HfsExtDescriptor		extent;
++	struct _HfsPrivateLinkExtent*	next;
++};
++typedef struct _HfsPrivateLinkExtent HfsPrivateLinkExtent;
++
++/* HFS Filesystem specific data */
++struct _HfsPrivateFSData {
++	uint8_t			alloc_map[(1<<16) / 8];
++	HfsMasterDirectoryBlock* mdb;
++	HfsPrivateFile*		extent_file;
++	HfsPrivateFile*		catalog_file;
++	char			bad_blocks_loaded;
++	unsigned int 		bad_blocks_xtent_nb;
++	HfsPrivateLinkExtent*	bad_blocks_xtent_list;
++};
++typedef struct _HfsPrivateFSData HfsPrivateFSData;
++
++/* Generic btree key */
++struct __attribute__ ((packed)) _HfsPrivateGenericKey {
++	int8_t		key_length;
++	uint8_t		key_content[1];		/* we use 1 as a minimum size */
++};
++typedef struct _HfsPrivateGenericKey HfsPrivateGenericKey;
++
++/* ----- HFS+ ----- */
++
++/* Data of an opened HFS file */
++struct _HfsPPrivateFile {
++	PedSector		sect_nb;
++	PedFileSystem*		fs;
++	HfsPNodeID		CNID;		/* disk order (BE) */
++	HfsPExtDataRec		first;		/* disk order (BE) */
++	HfsPExtDataRec		cache;		/* disk order (BE) */
++	uint32_t		start_cache;	/* CPU order */
++};
++typedef struct _HfsPPrivateFile HfsPPrivateFile;
++
++/* To store bad block list */
++struct _HfsPPrivateLinkExtent {
++	HfsPExtDescriptor		extent;
++	struct _HfsPPrivateLinkExtent*	next;
++};
++typedef struct _HfsPPrivateLinkExtent HfsPPrivateLinkExtent;
++
++/* HFS+ filesystem specific data */
++struct _HfsPPrivateFSData {
++	PedFileSystem*		wrapper;      /* NULL if hfs+ is not embedded */
++	PedGeometry*		plus_geom;    /* Geometry of HFS+ _volume_ */
++	char			free_geom;    /* 1 = plus_geom must be freed */
++	uint8_t*		alloc_map;
++	HfsPVolumeHeader*	vh;
++	HfsPPrivateFile*	extents_file;
++	HfsPPrivateFile*	catalog_file;
++	HfsPPrivateFile*	attributes_file;
++	char			bad_blocks_loaded;
++	unsigned int 		bad_blocks_xtent_nb;
++	HfsPPrivateLinkExtent*	bad_blocks_xtent_list;
++};
++typedef struct _HfsPPrivateFSData HfsPPrivateFSData;
++
++/* Generic + btree key */
++struct __attribute__ ((packed)) _HfsPPrivateGenericKey {
++	uint16_t	key_length;
++	uint8_t		key_content[1];		/* we use 1 as a minimum size */
++};
++typedef struct _HfsPPrivateGenericKey HfsPPrivateGenericKey;
++
++/* ---- common ---- */
++
++/* node and lead record reference for a BTree search */
++struct _HfsCPrivateLeafRec {
++	unsigned int	node_size;	/* in sectors */
++	unsigned int	node_number;
++	unsigned int	record_pos;
++	unsigned int	record_number;
++};
++typedef struct _HfsCPrivateLeafRec HfsCPrivateLeafRec;
++
++
++
++#endif /* _HFS_H */
