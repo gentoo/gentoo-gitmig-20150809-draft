@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.10 2004/06/09 20:20:34 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.11 2004/06/24 04:09:41 solar Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -20,9 +20,9 @@ LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 s390"
-IUSE="berkdb doc gdbm threads"
+IUSE="berkdb doc gdbm threads uclibc"
 
-DEPEND="sys-apps/groff
+DEPEND="!uclibc ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-apps/portage-2.0.48-r4
@@ -100,6 +100,10 @@ src_unpack() {
 	# /bin/ksh really is executable. Should fix bug 42665.
 	# rac 2004.06.09
 	cd ${S}; epatch ${FILESDIR}/${P}-noksh.patch
+
+	# uclibc support
+	epatch ${FILESDIR}/perl-5.8.2-uclibc.patch
+
 }
 
 src_compile() {
