@@ -1,7 +1,8 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/virtuals,v 1.15 2004/10/02 00:16:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/virtuals,v 1.16 2005/01/20 21:41:16 wolf31o2 Exp $
 
 virtual/linux-sources			sys-kernel/sparc-sources
 virtual/bootloader			sys-boot/silo
 virtual/modutils			sys-apps/module-init-tools
+virtual/dev-manager			sys-fs/devfsd
