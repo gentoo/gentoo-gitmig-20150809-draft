@@ -1,3 +1,4 @@
+MD5 c5d57ca3fe025ec6371cdcf2e475ede5 hardened-sources-2.6.11-r1.ebuild 895
 MD5 793dcc5589a9a5204e1a684c7cad7fa9 hardened-sources-2.4.28-r5.ebuild 1091
 MD5 052ed406039bee61dd336d0c26510c30 ChangeLog 12735
 MD5 3f27e55312920e3241f47b70f2ef6242 hardened-sources-2.6.10-r3.ebuild 908
@@ -11,3 +12,4 @@ MD5 8850fb5244d9d10736d95a85f3c5b3f1 files/2.4.27-CAN-2004-0394.patch 448
 MD5 d1ccc2047be533c992f67270a150a210 files/2.4.27-cmdline-race.patch 388
 MD5 98e84c850a16b9cb458be21ae4fb82df files/2.4.28-selinux-cmdline-race.patch 352
 MD5 73d345a26186ac7508ba680069f892d7 files/digest-hardened-sources-2.6.10-r3 145
+MD5 240ef418b4a76a5758c5196f18bb7caf files/digest-hardened-sources-2.6.11-r1 145
