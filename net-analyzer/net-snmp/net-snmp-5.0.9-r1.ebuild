@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.9-r1.ebuild,v 1.1 2003/09/19 21:49:33 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.9-r1.ebuild,v 1.2 2003/09/22 22:21:14 max Exp $
 
 DESCRIPTION="Software for generating and retrieving SNMP data."
 HOMEPAGE="http://net-snmp.sourceforge.net/"
-SRC_URI="mirror://sourceforge/net-snmp/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~arm ~hppa ~alpha"
 IUSE="ssl ipv6 tcpd"
 
-PROVIDES="virtual/snmp"
+PROVIDE="virtual/snmp"
 DEPEND="virtual/glibc
 	<sys-libs/db-2
 	>=sys-libs/zlib-1.1.4
@@ -25,7 +25,6 @@ S="${WORKDIR}/${P%[a-z]}"
 
 src_compile() {
 	local myconf
-
 	myconf="${myconf} `use_with ssl openssl` `use_enable -ssl internal-md5`"
 	myconf="${myconf} `use_with tcpd libwrap`"
 	myconf="${myconf} `use_enable ipv6`"
