@@ -1,6 +1,8 @@
 # ChangeLog for app-doc/howto-text
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/ChangeLog,v 1.9 2003/10/06 13:30:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/ChangeLog,v 1.10 2003/10/24 11:42:25 aliz Exp $
+
+*howto-text-20031006 (06 Oct 2003)
 
   06 Oct 2003; Heinrich Wendel <lanius@gentoo.org> howto-text-20020328.ebuild,
   howto-text-20021121.ebuild, howto-text-20030826.ebuild:
