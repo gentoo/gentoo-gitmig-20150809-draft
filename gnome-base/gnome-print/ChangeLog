@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/gnome-print
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.17 2003/07/06 11:22:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.18 2003/09/30 21:17:00 usata Exp $
 
 *gnome-print-0.37 (29 Jun 2003)
   
@@ -19,6 +19,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *gnome-print-0.35-r3 (3 Apr 2002)
+
+  01 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> gnome-print-0.35-r3.ebuild:
+  Changed app-text/tetex to virtual/tetex
 
   06 Dez 2002; Martin Holzer <mholzer@gentoo.org> gnome-print-0.35-r3.ebuild gnome-print-0.35-r2.ebuild :
   Fixed SRC_URI

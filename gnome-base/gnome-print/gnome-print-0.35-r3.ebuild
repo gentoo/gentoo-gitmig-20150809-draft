@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.19 2003/09/11 01:15:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.20 2003/09/30 21:17:00 usata Exp $
 
 IUSE="nls tetex"
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	>=app-text/ghostscript-6.50-r2
 	>=dev-libs/libxml-1.8.17
-	tetex? ( app-text/tetex )"
+	tetex? ( virtual/tetex )"
 
 src_unpack() {
 	unpack ${A}
