@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.26 2002/08/23 12:37:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.27 2002/08/30 19:09:34 verwilst Exp $
 
 *xmms-1.2.7-r13 (23 Aug 2002)
 
@@ -9,6 +9,11 @@
 
   Removed all avi stuff from xmms ebuild, since the xmms folks have updated
   the avi-xmms plugin to be statically compiled against avifile.
+
+  30 Aug 2002; Bart Verwilst <verwilst@gentoo.org>:
+ 
+  Filtered out -fforce-addr out of xmms, segfaults when trying to play a 
+  song otherwise
 
 *xmms-1.2.7-r12 (18 Jul 2002)
   31 Jul 2002; Martin Schlemmer <azarah@gentoo.org> xmms-1.2.7-r12.ebuild :
