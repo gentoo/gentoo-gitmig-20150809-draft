@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/grub
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.4 2003/12/16 05:37:35 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.5 2004/01/25 18:13:50 seemant Exp $
+
+*grub-0.93.20031222 (25 Jan 2004)
+
+  25 Jan 2004; Seemant Kulleen <seemant@gentoo.org> grub-0.93.20031222.ebuild,
+  grub-0.93.20040125.ebuild:
+  new cvs snapshots of grub. Both have the acl/ext2 and acl/ext3 issues sorted
+  out. I'll be adding another snapshot to take advantage of the SuSE prettiness
+  capabilities to grub. This should close bug #30859 by Chris PeBenito
+  <pebenito@gentoo.org>
 
   15 Dec 2003; Seemant Kulleen <seemant@gentoo.org> grub-0.93.20030118.ebuild:
   Added autoconf to compile dependencies, closing bug #33321 by Scott Taylor
