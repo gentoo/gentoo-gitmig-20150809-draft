@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/fbdesk
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.1 2003/01/26 22:42:00 bcowan Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.2 2003/02/12 09:28:01 vapier Exp $
 
 *fbdesk-1.1.2 (26 Jan 2003)
 

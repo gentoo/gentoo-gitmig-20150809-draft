@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/xdialog
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.1 2002/10/25 07:10:02 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.2 2003/02/12 09:33:16 vapier Exp $
 
 *xdialog-2.0.6 (25 Oct 2002)
 

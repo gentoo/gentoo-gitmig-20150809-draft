@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/ttmkfdir
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.10 2003/01/08 19:05:53 azarah Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.11 2003/02/12 09:32:05 vapier Exp $
 
   08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> ttmkfdir-3.0.4.ebuild :
 
