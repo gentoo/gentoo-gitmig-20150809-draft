@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.13 2004/12/28 21:00:10 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.14 2004/12/29 11:22:41 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -182,7 +182,7 @@ kernel_is() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
 	
-	local RESULT operator value test
+	local RESULT operator test value
 	RESULT=0
 	
 	operator="="
@@ -206,17 +206,21 @@ kernel_is() {
 
 	if [ -n "${1}" ]
 	then
-		[ ${KV_MAJOR} ${operator} ${1} ] || RESULT=1
+		value="${value}${1}"
+		test="${test}${KV_MAJOR}"
 	fi
 	if [ -n "${2}" ]
 	then
-		[ ${KV_MINOR} ${operator} ${2} -a ${RESULT} -eq 0 ] || RESULT=1
+		value="${value}${2}"
+		test="${test}${KV_MINOR}"
 	fi
 	if [ -n "${3}" ]
 	then
-		[ ${KV_PATCH} ${operator} ${3} -a ${RESULT} -eq 0 ] || RESULT=1
+		value="${value}${3}"
+		test="${test}${KV_PATCH}"
 	fi
-	return ${RESULT}
+	
+	[ ${test} ${operator} ${value} ] && return 0 || return 1
 }
 
 get_version() {
