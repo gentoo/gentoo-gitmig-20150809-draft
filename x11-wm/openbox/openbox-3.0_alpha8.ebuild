@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.0_alpha8.ebuild,v 1.1 2003/09/03 14:24:45 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.0_alpha8.ebuild,v 1.2 2003/09/03 15:50:37 tseng Exp $
 
 S=${WORKDIR}/${P/_/-}
 DESCRIPTION="Openbox is a standards compliant, fast, light-weight, extensible window manager."
@@ -34,7 +34,7 @@ src_install () {
 }
 
 pkg_postinst () {
-	einfo "This release moves the menu back to its own file."
-	einfo "There are also many changes in the rc3 file."
+	einfo "A few more small changes to the configs and themes."
+	einfo "Your rc3 and menu should move to rc.xml and menu.xml respectively."
 	einfo "Please check out the examples in /usr/share/openbox/ before running."
 }
