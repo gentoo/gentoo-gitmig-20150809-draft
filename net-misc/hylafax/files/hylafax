@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/files/hylafax,v 1.1 2003/11/01 04:40:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/files/hylafax,v 1.2 2003/11/01 05:10:09 nerdboy Exp $
 
 depend() {
 	need net
@@ -109,7 +109,7 @@ start() {
 		fi
 		printf "HylaFAX:"
 		if test $FAXQ_SERVER = yes ; then
-			$FAXQ; printf " faxq"
+			$FAXQ; printf " faxq "
 		fi
 		if test $HFAXD_SERVER = yes ; then
 			HFAXD_OPT="-i $FAXPORT"
@@ -126,16 +126,16 @@ start() {
 				HFAXD_OPT="$HFAXD_OPT -s $SNPPPORT"
 #				HFAXD="$HFAXD -s $SNPPPORT"
 				HFAXMSG="$HFAXMSG & with SNPP support)"
-
+			else
 				HFAXMSG="$HFAXMSG & without SNPP support)"
 			fi
-#			$HFAXD ; printf "$HFAXMSG"
+#			$HFAXD ; printf "$HFAXMSG\n"
 			echo $HFAXMSG
 			echo $HFAXD $HFAXD_OPT
 			/sbin/start-stop-daemon --start --quiet --exec $HFAXD -- $HFAXD_OPT
 		fi
 		if test $FAXQ_SERVER != yes -a $HFAXD_SERVER != yes ; then
-			printf " not started (script disabled by configure)"
+			printf " not started (script disabled by configure)\n"
 		fi
 		$ECHO "."
 	fi
