@@ -1,13 +1,13 @@
 ## Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.6 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.7 2002/10/23 17:52:38 azarah Exp $
 
 IUSE="X slang gpm"
 
 inherit libtool
 
-MY_P=${P/_/}
-S=${WORKDIR}/${PN}-1.4.0
+MY_P="${P/_/}"
+S="${WORKDIR}/${PN}-1.4.0"
 DESCRIPTION="A ASCI-Graphics Library"
 SRC_URI="mirror://sourceforge/aa-project/${MY_P}.tar.gz"
 HOMEPAGE="http://aa-project.sourceforge.net/aalib/"
@@ -21,6 +21,12 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
+pkg_setup() {
+
+	# We need autoconf-2.5
+	export WANT_AUTOCONF_2_5=1
+}
+
 src_unpack() {
 
 	unpack ${A}
@@ -30,7 +36,7 @@ src_unpack() {
 
 src_compile() {
 
-	local myconf
+	local myconf=""
 	use slang \
 		&& myconf="--with-slang-driver=yes" \
 		|| myconf="--with-slang-driver=no"

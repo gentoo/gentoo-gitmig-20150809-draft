@@ -1,10 +1,14 @@
 # ChangeLog for media-libs/aalib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.2 2002/06/21 14:06:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.3 2002/10/23 17:52:38 azarah Exp $
 
 *aalib-1.4_rc4-r2 (21 Jun 2002)
 
-  21 Jun 2002; Seemant Kulleen <seemant@gentoo.org> aalib-1.4_rc4-r2.ebuild
+  23 Oct 2002; Martin Schlemmer <azarah@gentoo.org> aalib-1.4_rc4-r2.ebuild :
+
+  Fix it to use autoconf-2.5.
+
+  21 Jun 2002; Seemant Kulleen <seemant@gentoo.org> aalib-1.4_rc4-r2.ebuild :
   files/digest-aalib-1.4_rc4-r2 :
 
   elibtoolized, and added SLOT and LICENSE
