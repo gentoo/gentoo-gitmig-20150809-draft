@@ -3,13 +3,16 @@ MD5 2b07c2619db3241a60197769cd2d99e0 baselayout-1.8.5.9.ebuild 15843
 MD5 41752745c674aec9b15d556f9a3a9d42 baselayout-1.8.6.5.ebuild 18884
 MD5 a0bfa5606b3f2887d0bc579ac23e7818 baselayout-1.8.6.6.ebuild 18880
 MD5 22cacb1440a77ed686fa6ff4ae9a1191 baselayout-1.8.5.8.ebuild 15844
+MD5 f757ddc10119ef930a4ba5c87695aaa3 baselayout-1.8.6.7.ebuild 19317
 MD5 520c7779777130658aa2c770de34ab4b files/MAKEDEV.8 9397
+MD5 4640d431aad401f1015f7360fee1aa73 files/rc-scripts-1.4.3.7.tar.bz2 92259
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 MD5 a32a9e5e0459deedba5c8355ec21b463 files/rc-scripts-1.4.3.5.tar.bz2 89804
 MD5 76a07c8f9b30bd607a50b2b3eba0ebd8 files/digest-baselayout-1.8.6.6 64
 MD5 1854fffe49998cb27f6b093fb79d3b40 files/rc-scripts-1.4.2.8.tar.bz2 79003
-MD5 3c138c67dda0de11752896ea4347e060 files/rc-scripts-1.4.3.6.tar.bz2 90790
+MD5 5f7c81a4726bcf5eae0e2a7fed5516ff files/rc-scripts-1.4.3.6.tar.bz2 92795
 MD5 963a1c8eb93fbf75d215a832b039c65a files/rc-scripts-1.4.2.9.tar.bz2 78886
 MD5 76a07c8f9b30bd607a50b2b3eba0ebd8 files/digest-baselayout-1.8.6.5 64
 MD5 76a07c8f9b30bd607a50b2b3eba0ebd8 files/digest-baselayout-1.8.5.8 64
+MD5 76a07c8f9b30bd607a50b2b3eba0ebd8 files/digest-baselayout-1.8.6.7 64
 MD5 76a07c8f9b30bd607a50b2b3eba0ebd8 files/digest-baselayout-1.8.5.9 64
