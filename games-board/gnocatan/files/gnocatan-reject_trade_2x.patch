@@ -1,0 +1,35 @@
+===================================================================
+RCS file: /cvsroot/gnocatan/gnocatan/client/gtk/interface.c,v
+retrieving revision 1.9
+retrieving revision 1.10
+diff -u -r1.9 -r1.10
+--- gnocatan/gnocatan/client/gtk/interface.c	2004/07/24 12:47:39	1.9
++++ gnocatan/gnocatan/client/gtk/interface.c	2004/08/01 09:33:15	1.10
+@@ -24,6 +24,8 @@
+ #include "cost.h"
+ #include "histogram.h"
+ 
++static gboolean already_rejected = FALSE; /** @todo UGLY HACK, remove later */
++
+ /* local functions */
+ static void frontend_state_turn (GuiEvent event);
+ 
+@@ -178,7 +180,9 @@
+ 		cb_delete_quote (quote_current_quote ()->var.d.quote_num);
+ 		return;
+ 	case GUI_QUOTE_REJECT:
+-		cb_end_quote ();
++		if (!already_rejected)
++			cb_end_quote ();
++		already_rejected = TRUE;
+ 		return;
+ 	default:
+ 		break;
+@@ -187,6 +191,7 @@
+ 
+ void frontend_quote (gint player_num, gint *they_supply, gint *they_receive)
+ {
++	already_rejected = FALSE;
+ 	if (get_gui_state () == frontend_state_quote) {
+ 		quote_begin_again(player_num, they_supply, they_receive);
+ 	} else {
