@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.4-r1.ebuild,v 1.8 2005/02/05 10:00:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.4-r1.ebuild,v 1.9 2005/03/01 23:16:10 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="ncurses gtk"
 #EVMS uses libuuid from e2fsprogs
 DEPEND="virtual/libc
 	sys-fs/e2fsprogs
-	sys-libs/device-mapper
+	sys-fs/device-mapper
 	gtk? ( =x11-libs/gtk+-1* )
 	ncurses? ( sys-libs/ncurses )"
 
