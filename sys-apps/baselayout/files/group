@@ -23,6 +23,7 @@ ftp::21:
 at::25:at
 tape::26:root
 video::27:root
+squid::31:squid
 postgress::70:postgress
 named::40:named
 users::100:games
