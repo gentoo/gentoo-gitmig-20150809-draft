@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/poi
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.1 2004/02/24 20:29:28 zx Exp $
+
+*poi-2.0 (27 Feb 2004)
+
+  27 Feb 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml, poi-2.0.ebuild:
+  Initial Import. Closes #41175
+
