@@ -1,9 +1,14 @@
 # ChangeLog for media-gfx/maya
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.4 2004/04/30 07:46:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.5 2004/04/30 09:36:35 eradicator Exp $
 
-  30 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> maya-5.0.1.ebuild:
-  app-shells/tcsh RDEPEND for Render.
+*maya-5.0.1-r1 (30 Apr 2004)
+
+  30 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> maya-5.0.1-r1.ebuild,
+  files/maya-5.0.1.md5sum:
+  Better install-from-cd support. Thanks to Henti Smith <henti@geekware.co.za>
+  for helping me test it out.
+  app-shells/tcsh or csh RDEPEND for Render.
   /usr/aw/maya5.0/bin/maya symlink made to make Render work.
 
   29 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> maya-5.0.1.ebuild:

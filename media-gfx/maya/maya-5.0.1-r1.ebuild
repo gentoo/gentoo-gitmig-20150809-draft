@@ -1,6 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.1 2004/04/30 07:46:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.2 2004/04/30 09:36:35 eradicator Exp $
+
+# Note that this ebuild requires you to set the MAYA_INSTALL_LOC environment
+# variable to the location of your maya RPMS and documentation:
+# MAYA_INSTALL_LOC=/mnt/cdrom/LINUX is default
+#
+# This directory should contain something files that look like this:
+#  -rw-rw-r--  1 root root  3503937 Mar 13  2003 AWCommon-5.3-5.i686.rpm
+#  -rw-rw-r--  1 root root   346478 Mar 13  2003 AWCommon-server-5.3-5.i686.rpm
+#  drwxr-xr-x  2 root root     2048 Apr  2  2003 LicenseMaya
+#  -rw-rw-r--  1 root root 97444965 Apr  1  2003 Maya5_0-5.0-18.i686.rpm
+#  -rwxrwxr-x  1 root root    28936 Apr  2  2003 README.html
+#  drwxrwxr-x  4 root root     2048 Apr  2  2003 documentation
+#  -rwxr-xr-x  1 root root     2404 Mar 18  2003 installDocs.sh
+#  lrwxr-xr-x  1 root root       16 Apr  2  2003 shaderLibrary -> ../shaderLibrary
+#  drwxr-xr-x  3 root root     2048 Apr  2  2003 support
 
 inherit rpm
 
@@ -10,7 +25,7 @@ S="${WORKDIR}"
 DESCRIPTION="Alias Wavefront's Maya.  Comercial modeling and animation package."
 HOMEPAGE="http://www.alias.com/eng/products-services/maya/index.shtml"
 
-SRC_URI="Maya-5.0-linux-software.tar.gz myr_maya501_gold_linux_update.tgz"
+SRC_URI="myr_maya501_gold_linux_update.tgz myr_TechDocs.zip"
 RESTRICT="fetch"
 
 # RPM versions within the tarballs which will get installed
@@ -20,13 +35,13 @@ MAYA5_0="5.0.1-135.i686"
 
 SLOT="5.0"
 
-LICENSE="mayadoc-5.0"
+LICENSE="maya-5.0 mayadoc-5.0"
 KEYWORDS="~x86"
 
 DEPEND="app-arch/unzip"
 
 RDEPEND=">=sys-libs/lib-compat-1.3
-	 app-shells/tcsh
+	 || ( app-shells/tcsh app-shells/csh )
 	 !bundled-libs? ( =x11-libs/qt-3*
 	                  >=sys-devel/gcc-3*
 	                  >=x11-libs/openmotif-2.1.30 )
@@ -35,25 +50,44 @@ RDEPEND=">=sys-libs/lib-compat-1.3
 pkg_nofetch() {
 	einfo "Please place the required files and place them in ${DISTDIR}:"
 	einfo
-	einfo "From the Maya 5.0 CD provided by Alias:"
-	einfo "Maya-5.0-linux-docs.tar.gz"
-	einfo "Maya-5.0-linux-software.tar.gz"
-	einfo
 	einfo "Downloads from Alias's support server:"
 	einfo "http://aliaswavefront.topdownloads.com/pub/bws/bws_107/myr_maya501_gold_linux_update.tgz"
 	einfo "http://aliaswavefront.topdownloads.com/pub/bws/bws_79/myr_TechDocs.zip"
+	einfo
+	einfo "Additionally, you need to place the Maya 5 CD in the CD drive (we expect /mnt/cdrom)."
+	einfo "If you don't use /mnt/cdrom or you have network installation files, then you need to set"
+	einfo "the environment variable 'MAYA_INSTALL_LOC' to the directory containing AWCommon-5.3-5.i686.rpm,"
+	einfo "AWCommon-server-5.3-5.i686.rpm, Maya5_0-5.0-18.i686.rpm, and documentation."
+	einfo
 }
 
 src_unpack() {
+	if [ -z "${MAYA_INSTALL_LOC}" ]; then
+		MAYA_INSTALL_LOC=/mnt/cdrom/LINUX
+	fi
+
+	if [ ! -d "${MAYA_INSTALL_LOC}" ]; then
+		eerror "MAYA_INSTALL_LOC is not set to a valid location.  ${MAYA_INSTALL_LOC} is not a directory."
+		die "Failure finding maya install files."
+	fi
+
+	cd ${MAYA_INSTALL_LOC}
+	ebegin "Checking md5sum of files in ${MAYA_INSTALL_LOC}"
+	md5sum -c ${FILESDIR}/${P}.md5sum
+	if [ $? -ne 0 ]; then
+		eend 1
+		die "Failure checking md5sum of files in ${MAYA_INSTALL_LOC}.  If you are certain your CD is not corrupt, file a bug at http://bugs.gentoo.org, comment out the md5sum checking in the ebuild, and proceed at your own risk."
+	fi
+	eend 0
+
 	mkdir ${S}/RPMS
 	cd ${S}/RPMS
-	unpack Maya-5.0-linux-software.tar.gz
 	unpack myr_maya501_gold_linux_update.tgz
 
 	# rpm_unpack unpacks in ${WORKDIR} no matter what we try... so get it out of the way...
 	cd ${S}
-	rpm_unpack ${S}/RPMS/AWCommon-${AWCOMMON}.rpm
-	rpm_unpack ${S}/RPMS/AWCommon-server-${AWCOMMON_SERVER}.rpm
+	rpm_unpack ${MAYA_INSTALL_LOC}/AWCommon-${AWCOMMON}.rpm
+	rpm_unpack ${MAYA_INSTALL_LOC}/AWCommon-server-${AWCOMMON_SERVER}.rpm
 	rpm_unpack ${S}/RPMS/Maya5_0-${MAYA5_0}.rpm
 
 	mkdir ${S}/insroot
@@ -71,9 +105,7 @@ src_unpack() {
 		rm -f ${S}/insroot/usr/aw/maya5.0/lib/libXm.so.2
 	fi
 
-	mkdir ${S}/docs
-	cd ${S}/docs
-	unpack Maya-5.0-linux-docs.tar.gz
+	cp -a ${MAYA_INSTALL_LOC}/documentation ${MAYA_INSTALL_LOC}/README.html ${S}
 
 	mkdir ${S}/docs.upgrade
 	cd ${S}/docs.upgrade
@@ -81,7 +113,7 @@ src_unpack() {
 }
 
 src_install() {
-	dohtml ${S}/RPMS/README.html
+	dohtml README.html
 
 	cd ${S}/insroot
 	cp -a . ${D}
@@ -138,7 +170,7 @@ src_install() {
 	newins ${FILESDIR}/aw_flexlm.conf.d aw_flexlm
 
 	# Now for the docs stuff...
-	cd ${S}/docs/documentation
+	cd ${S}/documentation
 	addpredict /var/.com.zerog.registry.lock
 	addwrite /var/.com.zerog.registry.xml
 	einfo "Starting Maya 5.0 DocServer installation..."
