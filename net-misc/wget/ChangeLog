@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.29 2003/11/19 21:37:46 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.30 2003/11/20 23:53:33 gregf Exp $
+
+  20 Nov 2003; Greg Fitzgerald <gregf@gentoo.org> wget-1.9.1-r1.ebuild:
+  Enabled ipv6 support
 
 *wget-1.9-r1 (18 Nov 2003)
 

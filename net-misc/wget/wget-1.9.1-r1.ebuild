@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r1.ebuild,v 1.8 2003/11/19 09:40:02 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r1.ebuild,v 1.9 2003/11/20 23:53:33 gregf Exp $
 
 inherit gnuconfig
 
-IUSE="ssl nls static debug socks5"
+IUSE="ssl nls static ipv6 debug socks5"
 
 NPVER=20031022
 DESCRIPTION="Network utility to retrieve files from the WWW"
@@ -39,6 +39,7 @@ src_compile() {
 
 	econf \
 		--sysconfdir=/etc/wget \
+		`use_enable ipv6` \
 		`use_enable nls` \
 		`use_enable debug` \
 		`use_with socks5 socks` \
