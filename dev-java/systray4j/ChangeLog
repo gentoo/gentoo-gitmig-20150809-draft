@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/systray4j
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/ChangeLog,v 1.9 2004/12/18 08:48:23 corsair Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/ChangeLog,v 1.10 2005/01/26 20:13:32 corsair Exp $
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> systray4j-2.4.ebuild:
+  Stable on ppc64
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> systray4j-2.4.ebuild:
   added ~ppc64 to KEYWORDS
