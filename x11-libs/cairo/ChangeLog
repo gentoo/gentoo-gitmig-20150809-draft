@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.26 2005/01/25 22:47:43 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.27 2005/01/26 15:46:32 twp Exp $
+
+  26 Jan 2005; Tom Payne <twp@gentoo.org> cairo-0.3.0.ebuild:
+  Updated glitz dependency. Bug # 79575.
 
 *cairo-0.3.0 (25 Jan 2005)
 
