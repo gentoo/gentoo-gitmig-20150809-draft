@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.0.3.ebuild,v 1.4 2001/07/22 04:55:49 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.0.3.ebuild,v 1.5 2001/07/22 05:21:45 jerry Exp $
 
 A=${P}-src.tar.gz
 S=${WORKDIR}/${P}
@@ -23,8 +23,8 @@ src_install() {
     dodoc CHANGELOG FIREWALL-PROXY-README LICENSE.txt
         READLINE-README README WHATSNEW-3.0
 
-    cd ${D}/usr/bin
-    if [ ! -e /usr/bin/ftp ] ;then
+    if [ ! -e /usr/bin/ftp ]; then
+        cd ${D}/usr/bin
         ln -s ncftp ftp
     fi
 }

@@ -25,8 +25,8 @@ src_install() {
     newman src/ftp.1 lukemftp.1
     dodoc COPYING ChangeLog README* THANKS NEWS
 
-    cd ${D}/usr/bin
     if [ ! -e /usr/bin/ftp ]; then
+        cd ${D}/usr/bin
         ln -s lukemftp ftp
     fi
 }
