@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/blas-config
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.8 2004/08/06 10:08:02 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.9 2004/08/24 17:08:57 kugelfang Exp $
+
+*blas-config-1.0.1 (24 Aug 2004)
+
+  24 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/blas-config-1.0.1.bz2, +blas-config-1.0.1.ebuild:
+  Version bump to 1.0.1 to make blas-conf CONF_LIBDIR aware. This means
+  compatibility with upcoming multilib support in portage.
 
   06 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> blas-config-1.0.0.ebuild:
   Marked stable on ppc and x86.
