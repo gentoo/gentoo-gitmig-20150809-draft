@@ -1,0 +1,9 @@
+# ChangeLog for net-analyzer/jnettop 
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.1 2003/10/10 17:44:43 mholzer Exp $
+
+*jnettop-0.9 (11 Oct 2003)
+
+  11 Oct 2003; Martin Holzer <mholzer@gentoo.org> jnettop-0.9.ebuild:
+  Initial Version. Submitted by Arturas .lajus <x11@junk.b0x.la> in #25589.
+
