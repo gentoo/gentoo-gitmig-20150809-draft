@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.ebuild,v 1.1 2003/05/28 14:14:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.ebuild,v 1.2 2003/06/17 12:58:31 caleb Exp $
 
 DESCRIPTION="GUI-independent C++ libraries for database applications"
 HOMEPAGE="http://hk-classes.sourceforge.net/"
@@ -11,9 +11,9 @@ KEYWORDS="x86"
 IUSE="mysql postgres odbc"
 
 # At least one of the following is required
-DEPEND="|| ( mysql? ( >=dev-db/mysql-3.23.54a )
-	     postgres? ( >=dev-db/postgresql-7.3 ) 
-             odbc? ( >=dev-db/unixODBC-2.0.6 ) )"
+DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
+	postgres? ( >=dev-db/postgresql-7.3 ) 
+        odbc? ( >=dev-db/unixODBC-2.0.6 )"
 	
 S=${WORKDIR}/${P}
 
