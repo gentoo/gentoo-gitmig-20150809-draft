@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gsasl
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.3 2004/07/06 20:30:02 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.4 2004/07/07 19:10:07 slarti Exp $
+
+  07 Jul 2004; Tom Martin <slarti@gentoo.org> gsasl-0.1.1.ebuild:
+  Added to ~amd64.
 
   06 Jul 2004; <langthang@gentoo.org> gsasl-0.1.1.ebuild:
   added PROVIDE virtual/gsasl, changed description, re-keyword.
