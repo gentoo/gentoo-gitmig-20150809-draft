@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.6 2004/04/28 20:22:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.7 2004/05/11 20:04:18 swtaylor Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -56,6 +56,8 @@ src_compile() {
 	# Don't build with -mfpmath=sse (Bug #14920)
 	filter-mfpmath sse
 	filter-flags -maltivec -mabi=altivec -fforce-addr -momit-leaf-frame-pointer
+	# BREG error with -fPIC
+	filter-flags -fPIC
 
 	local myconf="--with-dvdread"
 
