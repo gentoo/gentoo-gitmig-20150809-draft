@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.5.ebuild,v 1.1 2002/10/26 00:09:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.5.ebuild,v 1.2 2002/10/26 00:11:36 foser Exp $
 
 IUSE="gnome opengl"
 
@@ -10,7 +10,7 @@ LICENSE="LGPL-2.1 as-is"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=dev-lang/ocaml-3.06
-	gnome? ( >=gnome-base/libglade-0.17-r6
+	gnome? ( =gnome-base/libglade-0.17*
 		 >=gnome-base/gnome-libs-1.4.1.7 )
 	opengl? ( >=dev-ml/lablgl-0.98 
 		=x11-libs/gtkglarea-1.2* )"
