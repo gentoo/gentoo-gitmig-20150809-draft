@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.4 2002/10/17 13:45:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.5 2002/10/17 17:55:01 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An amiga emulator"
@@ -14,31 +14,29 @@ KEYWORDS="x86"
 IUSE="X gtk svga sdl"
 
 src_compile() {
-	local myopt
-	myopt="";
+	local myconf
+	myconf="";
 
 	if [ `use X` ]; then
-		myopt="--with-x --enable-dga --enable-vidmode --with-sdl --with-sdl-sound --with-sdl-gfx"
+		myconf="--with-x --enable-dga --enable-vidmode --with-sdl --with-sdl-sound --with-sdl-gfx"
 
-		use gtk && myopt="$myopt --enable-ui"
-		use gtk || myopt="$myopt --disable-ui"
+		use gtk && myconf="$myconf --enable-ui"
+		use gtk || myconf="$myconf --disable-ui"
 	else
 		if [ `use svga` ]; then
-			myopt="--with-svgalib";
+			myconf="--with-svgalib";
 		else
-			myopt="--with-asciiart";
+			myconf="--with-asciiart";
 		fi
 	fi
 
 	patch -p0 < ${FILESDIR}/uae-patch.diff
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-	        --enable-threads \
-                --enable-scsi-device \
-		${myopt} || die "./configure failed"
+	econf \
+		--enable-threads \
+		--enable-scsi-device \
+		${myconf} || die "./configure failed"
 	
-	emake || die
+	make || die
 }
 
 src_install() {

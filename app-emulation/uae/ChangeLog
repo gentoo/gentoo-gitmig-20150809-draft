@@ -1,8 +1,13 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.3 2002/10/17 13:45:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.4 2002/10/17 17:55:01 seemant Exp $
 
 *uae-0.8.22 (9 Oct 2002)
+
+  17 Oct 2002; Seemant Kulleen <seemant@gentoo.org> uae-0.8.22.ebuild :
+
+  emake->make.  Closes bug #8968 by klausman-usenet@tuts.net (Tobias
+  Klausmann)
 
   17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> uae-0.8.22.ebuild :
   Added IUSE.
