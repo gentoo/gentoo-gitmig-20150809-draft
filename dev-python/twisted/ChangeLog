@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.15 2003/04/04 23:59:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.16 2003/04/10 22:14:01 liquidx Exp $
+
+*twisted-1.0.3-r1 (10 Apr 2003)
+
+  10 Apr 2003; Alastair Tse <liquidx@gentoo.org> twisted-1.0.3-r1.ebuild:
+  added pygtk deps, and fix manhole to use pygtk2 is requested
 
 *twisted-1.0.3 (16 Feb 2003)
 
