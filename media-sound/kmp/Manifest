@@ -1,5 +1,5 @@
-MD5 3e0ff1693a8d71d05f3cf7e7f83ed27d ChangeLog 494
-MD5 85937bdc481add07f33bced8531a9839 kmp-0.01.ebuild 946
+MD5 9af3aca6772032d28fee899d75aab259 ChangeLog 603
+MD5 2bbcfd945c27f5467b6462d97889548c kmp-0.01.ebuild 957
 MD5 83c2574543d0501303b57050254e3880 metadata.xml 222
 MD5 6f827d1afc639044d5838cbf0c834d85 files/digest-kmp-0.01 61
 MD5 367223b8cfcde84caf89a4f46cab4e8e files/kmp-0.01-gcc34.patch 483
