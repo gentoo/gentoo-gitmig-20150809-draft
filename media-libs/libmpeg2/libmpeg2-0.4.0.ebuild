@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0.ebuild,v 1.1 2004/01/03 20:55:22 lu_zero Exp $
-
-IUSE="sdl X"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0.ebuild,v 1.2 2004/03/16 08:47:00 mr_bones_ Exp $
 
 inherit libtool flag-o-matic
 
@@ -15,40 +13,35 @@ HOMEPAGE="http://libmpeg2.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE="sdl X"
 
-DEPEND="sdl? ( media-libs/libsdl )
+RDEPEND="sdl? ( media-libs/libsdl )
 	X? ( virtual/x11 )"
-
-[ $ARCH = alpha ] && append-flags -fPIC
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
+	[ $ARCH = alpha ] && append-flags -fPIC
 	unpack ${A}
 
 	# get rid of the -mcpu
-	cd ${S} ; cp configure configure.orig
-	sed -e 's:OPT_CFLAGS=\"$CFLAGS -mcpu=.*\":OPT_CFLAGS=\"$CFLAGS\":g' \
-		configure.orig > configure
+	cd ${S}
+	sed -i \
+		-e 's:OPT_CFLAGS=\"$CFLAGS -mcpu=.*\":OPT_CFLAGS=\"$CFLAGS\":g' \
+			configure || die "sed configure failed"
 }
 
 src_compile() {
 	elibtoolize
-
-	local myconf=""
-
-	use sdl \
-		&& myconf="${myconf} --enable-sdl" \
-		|| myconf="${myconf} --disable-sdl"
-
-	use X && myconf="${myconf} --with-x" \
-	      || myconf="${myconf} --without-x"
-
-	econf --enable-shared \
-		${myconf} || die "./configure failed"
-	emake || make || die
+	econf \
+		--enable-shared \
+		`use_enable sdl` \
+		`use_with X x` \
+			|| die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
 }
