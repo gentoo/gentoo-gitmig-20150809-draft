@@ -1,6 +1,17 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.14 2003/03/22 10:42:02 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.15 2003/03/25 16:35:11 absinthe Exp $
+
+*tomcat-4.1.24 (25 Mar 2003)
+
+  25 Mar 2003; Dylan Carlson <absinthe@gentoo.org> omcat-4.1.24.ebuild, 
+  files/4.1.24/21tomcat, tomcat-4.1.24.ebuild, files/4.1.24/21tomcat,
+  files/4.1.24/gentoo.diff, files/4.1.24/tomcat.conf, files/4.1.24/tomcat.init:
+  Version bump.  
+  
+  Also a few changes thanks to user feedback from Anthony Murray: 
+  Fixes to init script, and changed conf.d/JAVA_HOME back to automatically
+  set itself.  Closes bug #17907.
 
 *tomcat-4.1.18-r1 (22 Mar 2003)
 
