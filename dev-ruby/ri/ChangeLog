@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/ri
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ChangeLog,v 1.3 2003/01/07 22:52:38 agriffis Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ChangeLog,v 1.4 2003/02/12 06:36:05 vapier Exp $
 
 	07 Jan 2003; Aron Griffis <agriffis@gentoo.org> ri-0.8a.ebuild:
 	Add alpha to KEYWORDS

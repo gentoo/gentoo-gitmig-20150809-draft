@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ChangeLog,v 1.5 2003/01/07 23:42:55 agriffis Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ChangeLog,v 1.6 2003/02/12 06:36:25 vapier Exp $
 
 *ruby-gdkpixbuf-0.30 (07 Jan 2003)
 

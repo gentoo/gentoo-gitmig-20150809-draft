@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/fxruby
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.1 2002/12/27 18:22:07 rphillips Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.2 2003/02/12 06:35:31 vapier Exp $
 
 *fxruby-1.0.17 (27 Dec 2002)
 

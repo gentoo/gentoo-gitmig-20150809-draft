@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/rdtool
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.3 2002/08/18 00:45:24 agriffis Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.4 2003/02/12 06:35:56 vapier Exp $
 
 *rdtool-0.6.11 (17 Aug 2002)
 
