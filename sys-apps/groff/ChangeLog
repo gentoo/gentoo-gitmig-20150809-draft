@@ -1,9 +1,11 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.25 2003/06/22 20:12:28 kumba Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.26 2003/06/23 12:39:41 nakano Exp $
 
 *groff-1.18.1-r2 (18 Mar 2003)
+
+  23 Jun 2003; Masatomo Nakano <nakano@gentoo.org> :
+  Fixed digest file for CJK
 
   22 Jun 2003; Joshua Kinard <kumba@gentoo.org> groff-1.18.1-r2.ebuild:
   Changed ~sparc to sparc in KEYWORDS
