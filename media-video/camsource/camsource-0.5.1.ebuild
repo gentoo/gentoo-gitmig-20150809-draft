@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~sparc ~sparc64 ~ppc ~alpha"
 IUSE=""
 
 DEPEND=">=dev-libs/libxml2-2.4.22 
-		>=media-libs/imlib-1.9.13-r2"
+		>=media-libs/jpeg-6b"
 		
 RDEPEND=""
 S=${WORKDIR}/${P}
@@ -31,8 +31,10 @@ src_install() {
 
 pkg_postinst() {
 
+	einfo ""
 	einfo "Please edit the configuration file: "
 	einfo "/etc/camsource.conf.example"
 	einfo "to your liking."
+	einfo ""
 
 }
