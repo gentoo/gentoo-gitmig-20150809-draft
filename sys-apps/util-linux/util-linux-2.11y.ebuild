@@ -1,25 +1,26 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11y.ebuild,v 1.2 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11y.ebuild,v 1.3 2002/12/09 23:00:53 azarah Exp $
 
 IUSE="crypt nls"
 
-CRYPT_PATCH_P=${P}-crypt-gentoo
-S=${WORKDIR}/${P}
+CRYPT_PATCH_P="${P}-crypt-gentoo"
+S="${WORKDIR}/${P}"
 DESCRIPTION="Various useful Linux utilities"
 SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.gz
 	crypt? ( http://gentoo.twobit.net/misc/${CRYPT_PATCH_P}.patch.gz )"
 # Patched for 2.11y -- NJ <carpaski@gentoo.org)
 #	crypt? ( http://www.kernel.org/pub/linux/kernel/people/hvr/util-linux-patch-int/${CRYPT_PATCH_P}.patch.gz )"
+
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2
 	sys-apps/pam-login"
 
-RDEPEND="$DEPEND sys-devel/perl
+RDEPEND="${DEPEND} sys-devel/perl
 	nls? ( sys-devel/gettext )"
 
 SLOT="0"
