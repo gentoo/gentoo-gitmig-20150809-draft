@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26ed30fba80141edb026dacc5af620cb ChangeLog 3749
 MD5 a0dba2e9f48960a31c0e5a25095e06f6 metadata.xml 426
-MD5 5cf41a2dcdb82b5729cee1bdd385d184 pikdev-0.7.1.ebuild 1617
-MD5 7f13bf23af282271a6f94987fbfea554 pikdev-0.7.1-r1.ebuild 1359
-MD5 5ba0d2ab2011fb0487b02a7f20631574 pikdev-0.6.6a.ebuild 1609
-MD5 204ebe37bf2d6ed5c9b02713d12f6a2d files/digest-pikdev-0.6.6a 65
-MD5 7efd0e0b7109cda86c1168e939828309 files/digest-pikdev-0.7.1 65
-MD5 7efd0e0b7109cda86c1168e939828309 files/digest-pikdev-0.7.1-r1 65
+MD5 26ed30fba80141edb026dacc5af620cb ChangeLog 3749
+MD5 b998c9feb5b79ffa2eb033e4dae6acd3 pikdev-0.6.6a.ebuild 1603
+MD5 dc672766bc9bcfc86e7fa8319114ef9c pikdev-0.7.1-r1.ebuild 1312
+MD5 c9b93b7ef50cf2d03a57c4b0f97fade1 pikdev-0.7.1.ebuild 1611
 MD5 4e5416bdf6b9be1c94bfe354a72415ca files/pikdev-0.7.1-fix.diff 1616
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB2H0QmdTrptrqvGERAuP0AJ4xiu3I8IrLQkXVfEZr4Ywz97HsCQCeM+HX
-RWp05C0ubEd/etdlADguqUg=
-=IO1K
------END PGP SIGNATURE-----
+MD5 7efd0e0b7109cda86c1168e939828309 files/digest-pikdev-0.7.1-r1 65
+MD5 7efd0e0b7109cda86c1168e939828309 files/digest-pikdev-0.7.1 65
+MD5 204ebe37bf2d6ed5c9b02713d12f6a2d files/digest-pikdev-0.6.6a 65
