@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r2.ebuild,v 1.5 2004/08/07 21:54:30 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r2.ebuild,v 1.6 2004/08/21 16:48:52 robmoss Exp $
 
 inherit eutils
 
@@ -22,12 +22,13 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-fpic.patch
 	mv ${S}/../mcal-drivers/* ${S}/
 	einfo "Using /var/spool/calendar instead of /var/calendar"
 	for i in FAQ-MCAL HOW-TO-MCAL mstore/mstore.c mstore/README mstore/Changelog; do
 		sed -e 's|/var/calendar|/var/spool/calendar|g' -i ${i}
 	done
+	cd ${S}
+	epatch ${FILESDIR}/${P}-fpic.patch
 }
 
 src_compile() {
