@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.17 2004/09/12 06:22:56 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.18 2004/09/18 02:49:41 pfeifer Exp $
+
+*openswan-2.2.0 (17 Sep 2004)
+
+  17 Sep 2004; Jay Pfeifer <pfeifer@gentoo.org> openswan-2.2.0.ebuild:
+  Version bump.
 
   12 Sep 2004; Jay Pfeifer <pfeifer@gentoo.org> openswan-1.0.6.ebuild,
   openswan-1.0.7.ebuild, openswan-2.1.4.ebuild, openswan-2.1.5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-1.0.7.ebuild,v 1.2 2004/09/12 06:22:56 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-1.0.7.ebuild,v 1.3 2004/09/18 02:49:41 pfeifer Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="!net-misc/strongswan
 LICENSE="GPL-2"
 RDEPEND=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 pkg_setup() {
