@@ -11,7 +11,7 @@ EXE=/usr/sbin/named
 
 start() {
 		ebegin "Starting $SERVICE..."
-     		start-stop-daemon --start --quiet --exec $EXE
+     		start-stop-daemon --start --quiet --exec $EXE -u named
 		eend $? "Started $SERVICE." "Error Starting $SERVICE."
 }
 
