@@ -2,21 +2,25 @@
 Hash: SHA1
 
 MD5 6c233d3d5334145f11bd322e6efb9efe boa-0.94.12.ebuild 1580
-MD5 203a40fedc7d648f32d5142c361355c1 boa-0.94.13-r1.ebuild 1904
+MD5 1345fdd7c6a8aa649aaaacb39a350da1 boa-0.94.14_alpha20.ebuild 2012
+MD5 880b03cd0e6ad1ace068dda3e1c37007 boa-0.94.13-r1.ebuild 1950
 MD5 7bb73a6779e6d73c6944a7435e6c1c85 boa-0.94.13.ebuild 1684
-MD5 022fad07d881d7b6e937cd7e7d2474ad ChangeLog 3598
-MD5 90c0c0ec7d80f10caafd016c5c9ecb49 files/boa-0.94.13-gcc3.patch 547
-MD5 559c4f77a9175ed60e18d816921b40c6 files/boa.conf 7168
+MD5 39270478a106c5ef381d81f823543bbe ChangeLog 4116
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 bbe2d6d519c762b0fdf3046f655fea02 files/boa.conf.d 121
-MD5 de7b84b21c6715dad6eb56ebbd87258b files/boa.rc6 895
+MD5 83939d3f288cd3f4fddfea9bc01e5027 files/digest-boa-0.94.14_alpha20 67
+MD5 90c0c0ec7d80f10caafd016c5c9ecb49 files/boa-0.94.13-gcc3.patch 547
+MD5 98776c2beacab938c843c24830ed81ab files/digest-boa-0.94.13-r1 63
+MD5 8d078a074821ed86301936cdf0bf556b files/boa-0.94.13-server_uid.patch 435
+MD5 559c4f77a9175ed60e18d816921b40c6 files/boa.conf 7168
 MD5 3f6d2bad0652220e834c786c6cb2b0ea files/digest-boa-0.94.12 63
 MD5 98776c2beacab938c843c24830ed81ab files/digest-boa-0.94.13 63
-MD5 98776c2beacab938c843c24830ed81ab files/digest-boa-0.94.13-r1 63
+MD5 de7b84b21c6715dad6eb56ebbd87258b files/boa.rc6 895
 MD5 3e9e1f39e91126bfb472bf3fcdc7fae4 files/mime.types 5488
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBOtxHI1lqEGTUzyQRAmuiAKCjvCYoISbk4tQsT83lr64kXWBGCwCeKytk
-laaskYp9DVbWivGmCD+COGQ=
-=a1mD
+iD8DBQFBeR4B94CCfB4KcwwRAnwRAKCYKsy7BrnGPdVM9pypFmnGYgwGFgCeOp0+
+qK1Fz7TizDKlKcavfar4oow=
+=R7NI
 -----END PGP SIGNATURE-----

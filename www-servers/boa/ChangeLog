@@ -1,6 +1,17 @@
 # ChangeLog for www-servers/boa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.3 2004/09/05 09:28:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.4 2004/10/22 14:51:00 solar Exp $
+
+*boa-0.94.14_alpha20 (22 Oct 2004)
+
+  22 Oct 2004; <solar@gentoo.org> +metadata.xml,
+  +files/boa-0.94.13-server_uid.patch, boa-0.94.13-r1.ebuild,
+  +boa-0.94.14_alpha20.ebuild:
+  - package boa was/is missing a metadata.xml and orignial commiter is no longer
+  an active dev so I'm adding a few updates for this package. - added tiny patch
+  for boa-0.94.13-r1 which fixes the fact that boa thought root was an invalid
+  user. - Massive updates for boa-0.94.14_alpha20 see http://www.boa.org/CHANGES
+  for more details.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
