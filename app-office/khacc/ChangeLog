@@ -1,6 +1,9 @@
 # ChangeLog for app-office/khacc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.3 2004/03/06 21:26:28 centic Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.4 2004/03/09 21:48:39 centic Exp $
+
+  09 Mar 2004; Dominik Stadler <centic@gentoo.org> khacc-1.7.8.ebuild:
+  Add einfo for necessary action for qhacc, see Bug 38825
 
 *khacc-1.7.8 (07 Mar 2004)
 
