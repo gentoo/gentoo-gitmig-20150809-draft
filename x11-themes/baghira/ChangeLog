@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.20 2004/11/28 21:59:42 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.21 2004/12/08 23:36:04 hansmi Exp $
+
+  09 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> baghira-0.6.ebuild:
+  Fixed bug #71882.
 
   28 Nov 2004; Dominik Stadler <centic@gentoo.org> baghira-0.4c.ebuild,
   baghira-0.4d.ebuild, baghira-0.5.ebuild, baghira-0.5a.ebuild,

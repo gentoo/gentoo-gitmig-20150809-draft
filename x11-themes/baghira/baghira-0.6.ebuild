@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.6.ebuild,v 1.1 2004/11/12 08:47:12 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.6.ebuild,v 1.2 2004/12/08 23:36:04 hansmi Exp $
 
 inherit kde eutils
 
@@ -16,3 +16,12 @@ IUSE=""
 DEPEND=">=kde-base/kdebase-3.2"
 RDEPEND=">=kde-base/kdebase-3.2"
 need-kde 3.2
+
+src_unpack() {
+	unpack ${P}.tar.bz2
+
+	if use ppc || use ppc64; then
+		echo "#define HAVE_PPC 1" > ${P}/ppc.h
+	fi
+}
+
