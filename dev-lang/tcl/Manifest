@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 2cfd331c4234b3d109bf51d1697bd461 tcl-8.3.4.ebuild 2538
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 a877ee904aa71800ade2fa6eea937756 tcl-8.4.6-r1.ebuild 2903
-MD5 cbc044a86f743edac1f79326839f8c1e ChangeLog 5515
+MD5 74217c8dcd28f38f21aa3b638981b7f7 tcl-8.4.6-r1.ebuild 2965
+MD5 447bdbd6b6ea3d8f2637e72ec7a4501f ChangeLog 5626
 MD5 d2bf35d1b9d4e346394bc2a823fcdf02 tcl-8.4.6.ebuild 2921
 MD5 cb07b4bc1984a971b376e1da5e478fdc files/digest-tcl-8.4.6-r1 65
 MD5 cb07b4bc1984a971b376e1da5e478fdc files/digest-tcl-8.4.6 65
@@ -12,7 +12,7 @@ MD5 d8691f60be4023222834ccdf6ee6d498 files/digest-tcl-8.3.4 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBUEefFhz/XBeRBtARAilvAKCZaTS9rzX7LP9J/XaQHQvnkZSVTACdGisJ
-JlK2nFttUnFgjm+tkd2SoSo=
-=OyyL
+iD8DBQFBUNPmFhz/XBeRBtARAi8FAKCRiZESLVV0PV5uR6aiQOhACud77ACggDLU
+FPbbxlGAdfL+iC3McEFpZI8=
+=QYqH
 -----END PGP SIGNATURE-----
