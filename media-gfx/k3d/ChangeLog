@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/k3d
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.1 2003/11/10 10:57:10 brandy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.2 2004/03/10 02:04:46 kloeri Exp $
+
+  10 Mar 2004; Bryan Østergaard,,, <kloeri@gentoo.org> k3d-0.2.5.4.ebuild:
+  Fix python compilation, bug #42822.
 
 *k3d-0.2.5.4 (10 Nov 2003)
 

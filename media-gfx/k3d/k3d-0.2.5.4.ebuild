@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.2.5.4.ebuild,v 1.1 2003/11/10 10:57:10 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.2.5.4.ebuild,v 1.2 2004/03/10 02:04:46 kloeri Exp $
+
+inherit python
 
 IUSE="truetype doc python ruby"
 
@@ -29,6 +31,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch.tar.bz2
+
+	# fix python compilation
+	python_version
+	sed -i -e "s:python2.2:python${PYVER}:g" configure
 
 }
 
