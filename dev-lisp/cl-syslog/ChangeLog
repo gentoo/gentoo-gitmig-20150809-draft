@@ -1,0 +1,9 @@
+# ChangeLog for dev-lisp/cl-syslog
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-syslog/ChangeLog,v 1.1 2003/11/29 20:41:34 mkennedy Exp $
+
+*cl-syslog-0.9.1 (29 Nov 2003)
+
+  29 Nov 2003; <mkennedy@gentoo.org> cl-syslog-0.9.1.ebuild, metadata.xml:
+  initial import.  ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
