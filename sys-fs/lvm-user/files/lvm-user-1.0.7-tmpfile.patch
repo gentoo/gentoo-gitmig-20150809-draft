@@ -1,0 +1,14 @@
+diff -ur LVM.orig/1.0.8/tools/lvmcreate_initrd LVM/1.0.8/tools/lvmcreate_initrd
+--- LVM.orig/1.0.8/tools/lvmcreate_initrd	2003-11-17 16:58:56.000000000 +0100
++++ LVM/1.0.8/tools/lvmcreate_initrd	2004-09-13 12:07:23.000000000 +0200
+@@ -233,6 +233,10 @@
+ # run out of room on the ramdisk while stripping the libraries.
+ echo "$cmd -- stripping shared libraries"
+ mkdir $TMPLIB
++if [ $? -ne 0 ]; then
++   echo "$cmd -- ERROR making $TMPLIB"
++   cleanup 1
++fi
+ for LIB in $SHLIBS; do
+    verbose "copy $LIB to $TMPLIB$LIB"
+    mkdir -p `dirname $TMPLIB$LIB`

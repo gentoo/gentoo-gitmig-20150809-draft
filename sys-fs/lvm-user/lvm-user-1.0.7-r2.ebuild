@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r1.ebuild,v 1.8 2004/11/09 22:30:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r2.ebuild,v 1.1 2004/11/10 05:57:04 vapier Exp $
 
 inherit flag-o-matic eutils
 
-S=${WORKDIR}/LVM/${PV}
 DESCRIPTION="User-land utilities for LVM (Logical Volume Manager) software"
 HOMEPAGE="http://www.sistina.com/products_lvm.htm"
 SRC_URI="ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${PV}.tar.gz"
 
 LICENSE=" || ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="~x86 -ppc ~sparc alpha ~hppa ~amd64"
+KEYWORDS="alpha amd64 hppa -ppc sparc x86"
 IUSE="static"
 
 RDEPEND="!sys-fs/lvm2"
@@ -19,26 +18,34 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4.0
 	virtual/linux-sources"
 
+S=${WORKDIR}/LVM/${PV}
+
 pkg_setup() {
 	check_KV
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-tmpfile.patch
 }
 
 src_compile() {
 	local myconf
 
-	# bug 598 -- -pipe used by default
-	filter-flags "-fomit-frame-pointer -pipe"
+	filter-flags -fomit-frame-pointer #598
 
 	if use static; then
 		myconf="--enable-static_link"
 	else
 		# bug 29694 -- make static vgscan and vgchange for initrds
-		epatch ${FILESDIR}/lvm-user-1.0.7-statics.diff
+		epatch ${FILESDIR}/lvm-user-1.0.7-statics.patch
 	fi
 
 	./configure --prefix=/ \
 		--mandir=/usr/share/man \
-		--with-kernel_dir="/usr/src/linux" ${myconf} || die "configure failed"
+		--with-kernel_dir="/usr/src/linux" \
+		${myconf} || die "configure failed"
 
 	# Fix flags
 	sed -i -e "54,56d" -e "73d" make.tmpl
@@ -47,7 +54,6 @@ src_compile() {
 }
 
 src_install() {
-
 	einstall sbindir=${D}/sbin libdir=${D}/lib
 
 	if use static; then
@@ -64,5 +70,5 @@ src_install() {
 	dodir /usr/lib
 	mv ${D}/lib/*.a ${D}/usr/lib
 
-	dodoc ABSTRACT CONTRIBUTORS COPYING* INSTALL LVM-HOWTO TODO CHANGELOG FAQ KNOWN_BUGS README WHATSNEW
+	dodoc ABSTRACT CONTRIBUTORS INSTALL LVM-HOWTO TODO CHANGELOG FAQ KNOWN_BUGS README WHATSNEW
 }

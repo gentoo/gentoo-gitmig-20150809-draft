@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lvm-user
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.6 2004/06/24 22:52:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.7 2004/11/10 05:57:03 vapier Exp $
+
+*lvm-user-1.0.7-r2 (10 Nov 2004)
+
+  10 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  -files/lvm-user-1.0.7-statics.diff, +files/lvm-user-1.0.7-statics.patch,
+  +files/lvm-user-1.0.7-tmpfile.patch, -lvm-user-1.0.7-r1.ebuild,
+  +lvm-user-1.0.7-r2.ebuild, -lvm-user-1.0.7.ebuild:
+  Version bump with security fix #68406.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> lvm-user-1.0.7-r1.ebuild:
   Add inherit eutils
