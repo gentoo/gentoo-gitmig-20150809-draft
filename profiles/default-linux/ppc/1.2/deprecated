@@ -1,0 +1,4 @@
+default-linux/ppc/2004.2
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/ppc/2004.2 make.profile
