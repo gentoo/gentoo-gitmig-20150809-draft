@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.4.1a.ebuild,v 1.2 2004/10/15 16:12:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.4.1a.ebuild,v 1.3 2005/01/11 17:13:48 carlo Exp $
 
 inherit kde
 
