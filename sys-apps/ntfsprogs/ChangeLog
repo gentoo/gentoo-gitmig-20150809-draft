@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ntfsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ntfsprogs/ChangeLog,v 1.4 2003/06/10 17:18:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ntfsprogs/ChangeLog,v 1.5 2003/08/04 22:17:10 mholzer Exp $
+
+  06 Aug 2003; Martin Holzer <mholzer@gentoo.org> ntfsprogs-1.7.1.ebuild:
+  need gcc-2.96+
 
   10 Jun 2003; <msterret@gentoo.org> ntfsprogs-1.7.1.ebuild:
   DEPEND on sed >= 4
