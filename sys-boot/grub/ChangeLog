@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.29 2004/12/08 01:20:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.30 2004/12/20 18:54:54 blubb Exp $
+
+  20 Dec 2004; Simon Stelling <blubb@gentoo.org> grub-0.95.20040823.ebuild:
+  changed WANT_AUTOMAKE to 1.8
 
   07 Dec 2004; Robin H. Johnson <robbat2@gentoo.org>
   grub-0.95.20040823.ebuild:
