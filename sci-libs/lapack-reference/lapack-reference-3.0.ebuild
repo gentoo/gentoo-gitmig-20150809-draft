@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0.ebuild,v 1.1 2004/12/29 18:28:46 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0.ebuild,v 1.2 2004/12/29 18:34:39 ribosome Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="ifc"
 
 DEPEND="sys-devel/libtool
-	app-sci/lapack-config
+	sci-libs/lapack-config
 	ifc? ( dev-lang/ifc )"
 
 RDEPEND="virtual/blas

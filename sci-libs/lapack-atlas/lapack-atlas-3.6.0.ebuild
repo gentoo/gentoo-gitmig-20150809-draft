@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.1 2004/12/29 18:26:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.2 2004/12/29 18:33:18 ribosome Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -21,8 +21,8 @@ IUSE="ifc doc"
 
 DEPEND="virtual/libc
 	>=sys-devel/libtool-1.5
-	=app-sci/blas-atlas-3.6.0
-	app-sci/lapack-config
+	=sci-libs/blas-atlas-3.6.0
+	sci-libs/lapack-config
 	ifc? ( dev-lang/ifc )"
 
 RDEPEND="virtual/libc
