@@ -1,4 +1,4 @@
-MD5 e4a7cb81b292fe7e3d2423509db74635 quake3-threewave-1.6.ebuild 577
-MD5 9e23d4c78c28662d026ca31aeacd1ffb ChangeLog 393
+MD5 e4054ccbfef998e041db50ead8f1419e ChangeLog 583
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 5dc413d0da6723475a074c6d5b36e065 files/digest-quake3-threewave-1.6 69
+MD5 db92ba037ccddab73707a0fd7beb0aff quake3-threewave-1.7.ebuild 682
+MD5 76b696b04fdb0e5f6c86f8a9b506ac78 files/digest-quake3-threewave-1.7 138
