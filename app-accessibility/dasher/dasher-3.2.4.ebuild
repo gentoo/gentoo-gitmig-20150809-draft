@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.4.ebuild,v 1.7 2004/06/24 21:17:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.4.ebuild,v 1.8 2004/06/28 22:57:09 agriffis Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
-IUSE="accessibility gnome nls"
+IUSE="accessibility gnome"
 
 # The archive claims 'qte' support, but wont compile with QT
 # Need to wait for upstream <obz@gentoo.org>
