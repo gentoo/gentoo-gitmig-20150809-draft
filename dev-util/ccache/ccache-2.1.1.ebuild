@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.1.1.ebuild,v 1.6 2003/07/19 20:18:13 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.1.1.ebuild,v 1.7 2003/09/06 08:39:20 msterret Exp $
 
 DESCRIPTION="ccache is a fast compiler cache. It is used as a front end to your
 compiler to safely cache compilation output. When the same code is compiled
@@ -24,7 +24,7 @@ src_install () {
 	exeinto /usr/bin/ccache
 	doexe ccache
 	doman ccache.1
-	dodoc COPYING README    
+	dodoc COPYING README
 }
 
 pkg_preinst() {

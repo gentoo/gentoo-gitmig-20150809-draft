@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.4 2003/07/12 14:28:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.5 2003/09/06 08:39:23 msterret Exp $
 
 #SNAPSHOT="20020825"
 TVISIONVER="2.0.1"
@@ -77,39 +77,39 @@ src_unpack() {
 }
 
 src_compile() {
-	
+
 	# Most of these use a _very_ weird build systems,
 	# so please no comments ;/
-	
+
 # ************* TVision *************
 
 	if [ ! -f "${WORKDIR}/.tvision" ]
 	then
 		cd ${WORKDIR}/tvision || die "TVision source dir do not exist!"
-	
+
 		DUMMYFLAGS=""
-	
+
 		./configure --prefix=/usr \
 			--fhs \
 			--cflags='${DUMMYFLAGS}' \
 			--cxxflags='${DUMMYFLAGS}' || die
-	
+
 		# Only build the static libs
 		perl -pi -e 's/all: static-lib dynamic-lib/all: static-lib/' Makefile
-	
+
 		# -j breaks build
 		make || die
 
 		touch ${WORKDIR}/.tvision
 	fi
 
-	
+
 # ************* SetEdit *************
-	
+
 	if [ ! -f "${WORKDIR}/.setedit" ]
 	then
 		cd ${WORKDIR}/${SETEDIT_S} || die "SetEdit source dir do not exist!"
-	
+
 		./configure --prefix=/usr \
 			--fhs \
 			--libset \
@@ -119,7 +119,7 @@ src_compile() {
 		# Latest texinfo breaks docs, so disable for now ...
 		perl -pi -e 's/needed: internac doc-basic/needed: internac/' \
 			Makefile
-	
+
 		# -j breaks build
 		make || die
 
@@ -129,10 +129,10 @@ src_compile() {
 
 		touch ${WORKDIR}/.setedit
 	fi
-	
-	
+
+
 # ************* RHIDE ***************
-	
+
 	cd ${S}
 
 	addpredict "/usr/share/rhide"
@@ -159,7 +159,7 @@ src_compile() {
 	if [ ! -f "${WORKDIR}/.rhide-configured" ]
 	then
 		econf || die
-		
+
 		if [ "${have_xfree}" = "Yes" ]
 		then
 			einfo "Compiling with XFree86 support..."
@@ -173,13 +173,13 @@ src_compile() {
 
 		touch "${WORKDIR}/.rhide-configured"
 	fi
-		
+
 	# -j breaks build
 	make prefix=/usr \
 		install_docdir=share/doc/${PF} \
 		install_infodir=share/info \
 		LDFLAGS="${LDFLAGS} ${myLDFLAGS}" || die
-	
+
 	# Update and Fix DIR entry in .info files
 	cd ${S}/share/setedit/
 	if [ -f "${WORKDIR}/${SETEDIT_S}/doc/editor.inf" ]
@@ -200,12 +200,12 @@ src_install() {
 	# Dont error out on sandbox violations.  I should really
 	# try to track this down, but its a bit tougher than usually.
 	addpredict "/:/usr/share/rhide:/libide:/libtvuti:/librhuti"
-	
+
 	make prefix=${D}/usr \
 		install_docdir=share/doc/${PF} \
 		install_infodir=share/info \
 		install || die
-	
+
 	# Install default CFG file and fix the paths
 	cd ${D}/usr/share/rhide
 	sed -e 's:/usr/local/share:/usr/share:g' \

@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.ebuild,v 1.3 2003/06/30 19:27:41 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.ebuild,v 1.4 2003/09/06 08:39:20 msterret Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
@@ -49,7 +49,7 @@ copy_files() {
 		s=${d/_$version/}
 		if [ -d ${s} ] ; then
 			dodir /opt/eclipse/${d}
-		elif [ -f ${s} ] ; then 
+		elif [ -f ${s} ] ; then
 			cp ${s} ${D}/opt/eclipse/${d}
 		elif [ -d ${s}-feature ] ; then
 			dodir /opt/eclipse/${d}

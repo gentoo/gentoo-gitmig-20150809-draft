@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.4.ebuild,v 1.14 2003/07/09 15:59:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.4.ebuild,v 1.15 2003/09/06 08:39:20 msterret Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	bonobo? ( >=gnome-base/bonobo-1.0.9-r1 )"
 
 DEPEND="${DEPEND}
-	nls? ( sys-devel/gettext 
+	nls? ( sys-devel/gettext
 		>=dev-util/intltool-0.11 )
 	>=app-text/scrollkeeper-0.2"
 

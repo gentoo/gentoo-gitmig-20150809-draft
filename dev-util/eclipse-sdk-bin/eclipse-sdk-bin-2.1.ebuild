@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/eclipse-sdk-bin-2.1.ebuild,v 1.1 2003/06/30 19:36:55 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/eclipse-sdk-bin-2.1.ebuild,v 1.2 2003/09/06 08:39:20 msterret Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
@@ -14,11 +14,11 @@ KEYWORDS="~x86 ~ppc ~sparc"
 DEPEND="${RDEPEND}
 	>=virtual/jdk-1.3
 	ppc? ( app-shells/tcsh )"
-	
+
 RDEPEND=">=virtual/jdk-1.3
 	>=x11-libs/gtk+-2.2.1-r1
 	=gnome-base/gnome-vfs-2*"
-	
+
 S=${WORKDIR}/eclipse
 
 src_compile() {
@@ -37,16 +37,16 @@ src_compile() {
 		    -e "s:\`pkg-config --libs gnome-vfs-2.0\`:-lpthread -lgnomevfs-2 -lbonobo-activation -lORBit-2 -lm -llinc -lgmodule-2.0 -ldl -lgobject-2.0 -lgthread-2.0 -lglib-2.0:" \
 			make_gtk.mak > make_gtk.mak_new
 		cp make_gtk.mak_new make_gtk.mak
-	
+
 		sh build.sh || die
-		
+
 		# move the SWT library to the correct location and clean up
 		mkdir ${S}/plugins/org.eclipse.swt.gtk_2.1.0/os/linux/ppc
 		mv *.so ${S}/plugins/org.eclipse.swt.gtk_2.1.0/os/linux/ppc
 		rm -rf ${S}/plugins/org.eclipse.swt.gtk_2.1.0/os/linux/x86
 		cd ${S}
 		rm -rf ${library_dir}
-		
+
 		# build the executable
 		bin_dir=${S}/plugins/org.eclipse.platform.source_2.1.0/src/org.eclipse.platform_2.1.0/bin
 		mkdir ${bin_dir}
@@ -54,7 +54,7 @@ src_compile() {
 		unzip -q ../launchersrc.zip
 		cd library/gtk
 		tcsh build.csh -arch ppc || die
-		
+
 		# move the executable to the correct location and clean up
 		cp eclipse ${S}
 		cd ${S}

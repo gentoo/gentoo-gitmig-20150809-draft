@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctmkit/ctmkit-19960528.ebuild,v 1.4 2003/04/02 08:42:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctmkit/ctmkit-19960528.ebuild,v 1.5 2003/09/06 08:39:20 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="old NetBSD port of FreeBSD's CTM, a set of utilities to synchronize directories through email"
@@ -22,6 +22,6 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	dodoc ctm/README 
+	dodoc ctm/README
 	doman md5/md5.1 libmd/mdX.3 ctm/ctm/ctm.1 ctm/ctm/ctm.5 ctm/ctm_rmail/ctm_rmail.1
 }

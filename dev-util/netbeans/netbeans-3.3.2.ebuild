@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.3.2.ebuild,v 1.10 2003/05/26 10:49:11 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.3.2.ebuild,v 1.11 2003/09/06 08:39:20 msterret Exp $
 
 MY_P=NetBeansIDE-release332
 S=${WORKDIR}/${PN}
@@ -45,7 +45,7 @@ src_install() {
 	rm -f ${S}/bin/fastjavac/fastjavac.sun.intel
 	rm -f ${S}/bin/unsupported/*.bat
 	dodir /opt/${P}
-	dodoc build_info 
+	dodoc build_info
 	dohtml CHANGES.html CREDITS.html README.html netbeans.css
 	# note: docs/ are docs used internally by the IDE
 	cp -Rdp beans bin docs lib modules sources system ${D}/opt/${P}

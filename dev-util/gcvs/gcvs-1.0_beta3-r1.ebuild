@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta3-r1.ebuild,v 1.8 2003/04/26 22:02:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta3-r1.ebuild,v 1.9 2003/09/06 08:39:20 msterret Exp $
 
 MY_P=${P/eta/}
 MY_P=${MY_P/_/}
@@ -13,9 +13,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
 
-DEPEND="=x11-libs/gtk+-1.2* 
-	>=dev-lang/tcl-8.3.3 
-	dev-lang/perl 
+DEPEND="=x11-libs/gtk+-1.2*
+	>=dev-lang/tcl-8.3.3
+	dev-lang/perl
 	sys-devel/bison
 	=dev-util/glademm-0.6*"
 
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_compile() {
 
-	./make_configure || die 
+	./make_configure || die
 	./configure --prefix=/usr --host=${CHOST} || die
 
 	# Ladies and Gentlemen... The following is pure evil...
@@ -57,5 +57,5 @@ src_install () {
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL README
 
-	
+
 }

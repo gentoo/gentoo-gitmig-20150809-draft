@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.4.ebuild,v 1.3 2003/06/07 05:43:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.4.ebuild,v 1.4 2003/09/06 08:39:20 msterret Exp $
 
 inherit elisp gnuconfig
 
@@ -27,13 +27,13 @@ src_compile() {
 	emake || die
 
 	if use emacs
-	then 
+	then
 		cd ${S}/contrib/xcscope
 		emacs --batch -f batch-byte-compile --no-site-file --no-init-file *.el
 	fi
 }
 
-src_install() {                               
+src_install() {
 	einstall || die
 	dodoc NEWS AUTHORS TODO COPYING Changelog INSTALL README*
 

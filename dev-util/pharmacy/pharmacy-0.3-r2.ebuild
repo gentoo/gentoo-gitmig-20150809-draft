@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pharmacy/pharmacy-0.3-r2.ebuild,v 1.3 2003/02/13 11:59:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pharmacy/pharmacy-0.3-r2.ebuild,v 1.4 2003/09/06 08:39:20 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Front-End to CVS"
@@ -25,6 +25,6 @@ src_install () {
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 
 	insinto /usr/share/doc/pharmacy/index
-	doins docs/index/* 
+	doins docs/index/*
 	insinto /usr/share/doc/pharmacy docs/index.sgml
 }

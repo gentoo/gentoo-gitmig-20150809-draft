@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.2.ebuild,v 1.9 2003/02/13 12:02:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.2.ebuild,v 1.10 2003/09/06 08:39:24 msterret Exp $
 
 IUSE="nls gnome"
 
@@ -32,7 +32,7 @@ src_compile() {
 	use gnome \
 		&& myconf="${myconf} --enable-gnome=yes" \
 		|| myconf="${myconf} --enable-gnome=no"
-							  
+
 	econf ${myconf} || die "econf failed"
 	emake || die
 }

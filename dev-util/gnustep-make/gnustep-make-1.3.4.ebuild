@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.3.4.ebuild,v 1.9 2003/07/26 08:49:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.3.4.ebuild,v 1.10 2003/09/06 08:39:20 msterret Exp $
 
 IUSE=""
 
@@ -77,7 +77,7 @@ src_install () {
 	insinto /usr/GNUstep/System/Makefiles/ix86/linux-gnu
 	insopts -m 755
 	doins which_lib user_home
-		
+
 	insinto /usr/GNUstep/System/Makefiles
 	insopts -m 755
 	doins config.guess config.sub install-sh mkinstalldirs \
@@ -113,7 +113,7 @@ src_install () {
 		java-tool.make palette.make resource-set.make service.make \
 		subproject.make test-application.make test-library.make \
 		test-tool.make tool.make
-	
+
 	cd ../Instance
 	insinto /usr/GNUstep/System/Makefiles/Instance
 	insopts -m 644

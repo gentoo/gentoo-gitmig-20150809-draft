@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.2.1.ebuild,v 1.6 2003/07/03 23:10:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.2.1.ebuild,v 1.7 2003/09/06 08:39:23 msterret Exp $
 
 inherit eutils kde
 
@@ -16,7 +16,7 @@ DEPEND=">=x11-libs/wxGTK-2.3.4
 	=sys-libs/db-3*"
 
 src_compile() {
-	econf 
+	econf
 	emake || die
 }
 
@@ -28,8 +28,8 @@ src_install () {
     	MY_KDEDIR=${KDEDIR}
     else
     	MY_KDEDIR=/usr
-	fi 
-    
+	fi
+
 	einstall \
 		datadir=${D}/usr/share \
 		GNOME_DATA_DIR=${D}/usr/share \

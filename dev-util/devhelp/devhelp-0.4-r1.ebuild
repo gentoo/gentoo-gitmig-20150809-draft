@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.4-r1.ebuild,v 1.12 2003/03/13 23:53:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.4-r1.ebuild,v 1.13 2003/09/06 08:39:20 msterret Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc  ppc"
 
-DEPEND=">=gnome-base/gnome-libs-1.4.1.7 
+DEPEND=">=gnome-base/gnome-libs-1.4.1.7
 	 >=gnome-base/ORBit-0.5.10-r1
 	 >=gnome-base/bonobo-1.0.19
 	 =gnome-base/libglade-0*

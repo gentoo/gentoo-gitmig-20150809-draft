@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.2.ebuild,v 1.5 2003/07/09 15:31:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.2.ebuild,v 1.6 2003/09/06 08:39:20 msterret Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -18,12 +18,12 @@ RDEPEND="=gnome-base/libglade-0*
 	=gnome-base/gnome-vfs-1.0*
 	>=gnome-base/bonobo-1.0
 	>=gnome-base/gnome-libs-1.4.1.2-r1
-	>=dev-libs/libxml-1.4.0	
+	>=dev-libs/libxml-1.4.0
 	dev-libs/libpcre
 	dev-util/ctags
-	dev-util/indent		
+	dev-util/indent
 	>=sys-devel/bison-1.0
-	>=app-text/scrollkeeper-0.1.4	
+	>=app-text/scrollkeeper-0.1.4
 	media-libs/gdk-pixbuf
 	media-gfx/gnome-iconedit
 	media-libs/audiofile
@@ -34,9 +34,9 @@ RDEPEND="=gnome-base/libglade-0*
 
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
-	
+
 src_compile() {
-        
+
 	local myconf
 	use nls || myconf="--disable-nls"
 
@@ -45,7 +45,7 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	einstall \
 		anjutadocdir=${D}/usr/share/doc/${PF} || die
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/cvsgraph-1.3.0.ebuild,v 1.1 2003/07/10 15:09:34 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/cvsgraph-1.3.0.ebuild,v 1.2 2003/09/06 08:39:20 msterret Exp $
 
 HOMEPAGE="http://www.akhphd.au.dk/~bertho/cvsgraph"
 KEYWORDS="~x86 ~sparc ~ppc"
@@ -21,8 +21,8 @@ DEPEND="media-libs/libgd
 	truetype? ( media-libs/freetype )"
 
 src_compile() {
-	local myopts 
-	
+	local myopts
+
 	myopts="`use_enable nls` `use_enable gif` `use_enable png` `use_enable jpeg` `use_enable truetype`"
 
 	econf ${myopts}

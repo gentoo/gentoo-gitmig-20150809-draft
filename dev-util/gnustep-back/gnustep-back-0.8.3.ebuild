@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.3.ebuild,v 1.7 2003/07/26 10:21:51 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.3.ebuild,v 1.8 2003/09/06 08:39:20 msterret Exp $
 
 inherit base
 
@@ -27,17 +27,17 @@ src_compile() {
         --with-tiff-library=/usr/lib \
         --with-tiff-include=/usr/include \
 		--with-x || die "configure failed"
-        
+
     # if we don't have Xft1, then we don't do Xft support at all
     # only gnustep-back > 0.8.4 has Xft2 support
     if [ ! -f "/usr/X11R6/include/X11/Xft1/Xft.h" ]; then
     	sed "s,^#define HAVE_XFT.*,#undef HAVE_XFT,g" config.h > config.h.new
         sed "s,^#define HAVE_UTF8.*,#undef HAVE_UTF8,g" config.h.new > config.h
-        
+
         sed "s,^WITH_XFT=.*,WITH_XFT=no," config.make > config.make.new
         sed "s,-lXft,," config.make.new > config.make
     fi
-        
+
 	make || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.1.8.ebuild,v 1.7 2003/03/09 01:15:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.1.8.ebuild,v 1.8 2003/09/06 08:39:23 msterret Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 }
 
 src_compile() {
-	
+
 	autoconf
 	automake
 	econf || die
@@ -33,7 +33,7 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	einstall \
 		DESTDIR=${D} \
 		datadir=${D}/usr/share \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ladebug-4.0.67.ebuild,v 1.4 2003/06/23 17:07:50 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ladebug-4.0.67.ebuild,v 1.5 2003/09/06 08:39:20 msterret Exp $
 #
 # Submitted By Tavis Ormandy <taviso@gentoo.org>
 #
@@ -33,7 +33,7 @@ src_unpack() {
 	local ladebug_rpm="ladebug-${RELEASE}.alpha.rpm"
 	if [ ! -f ${DISTDIR}/${ladebug_rpm} ]; then
 		eerror ""
-		eerror "Please download ${ladebug_rpm} from" 
+		eerror "Please download ${ladebug_rpm} from"
 		eerror "${HOMEPAGE}, and place it in"
 		eerror "${DISTDIR}"
 		eerror ""
@@ -48,7 +48,7 @@ src_unpack() {
 			&& find usr -type d -print0 | xargs -0 chmod a+rx
 		eend ${?}
 		assert "Failed to extract ${ladebug_rpm%.rpm}.tar.gz"
-		
+
 		eend ${?}
 	fi
 }
@@ -62,13 +62,13 @@ src_compile() {
 		einfo "Preparing emacs Ladebug integration (USE=\"emacs\"?)..."
 		rm -rf ${WORKDIR}/usr/lib/emacs
 	fi
-	
+
 	# man pages are in the wrong place
 	einfo "Reorganising man structure..."
 	rm -rf ${WORKDIR}/usr/man
 	mkdir -p ${WORKDIR}/usr/share/man/man1
 	mv ${WORKDIR}/usr/lib/compaq/ladebug-V67/ladebug.1.gz ${WORKDIR}/usr/share/man/man1
-	
+
 	einfo "Reorganising Documentation structure..."
 	mv ${WORKDIR}/usr/doc ${WORKDIR}/usr/share/
 	cp -r ${WORKDIR}/usr/share/locale/en_US ${WORKDIR}/usr/share/locale/C
@@ -77,7 +77,7 @@ src_compile() {
 src_install() {
 	# move files over
 	mv ${WORKDIR}/usr ${D} || die "Ladebug Installation Failed"
-	
+
 	# prep manpages
 	prepman ${D}/usr/share/man/man1/ladebug.1.gz
 	prepalldocs

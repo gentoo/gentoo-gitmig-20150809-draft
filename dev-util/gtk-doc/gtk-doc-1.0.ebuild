@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.0.ebuild,v 1.12 2003/08/03 02:32:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.0.ebuild,v 1.13 2003/09/06 08:39:20 msterret Exp $
 
 inherit gnome.org
 
@@ -33,7 +33,7 @@ src_compile() {
 src_install() {
 	einstall || die
 
-	dodoc AUTHORS ChangeLog COPYING INSTALL README* NEWS 
+	dodoc AUTHORS ChangeLog COPYING INSTALL README* NEWS
 	docinto doc
 	dodoc doc/README doc/*.txt
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.1.7.ebuild,v 1.1 2003/03/16 13:54:32 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.1.7.ebuild,v 1.2 2003/09/06 08:39:20 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Programmer's documentation reader with very fast fulltext searching"
@@ -16,7 +16,7 @@ DEPEND=">=net-www/mozilla-1.0
 	>=net-www/swish-e-2.2.2
 	dev-lang/perl
 	net-misc/wget"
-	
+
 pkg_setup () {
 	if [ ! -f ${ROOT}/usr/lib/mozilla/components/libwidget_gtk2.so ]
 	then

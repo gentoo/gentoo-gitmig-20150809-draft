@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mergetrees/mergetrees-0.9.3.ebuild,v 1.9 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mergetrees/mergetrees-0.9.3.ebuild,v 1.10 2003/09/06 08:39:20 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A three-way directory merge tool"
@@ -14,13 +14,13 @@ KEYWORDS="x86 sparc "
 DEPEND=">=dev-lang/perl-5
 	>=sys-apps/diffutils-2"
 
-src_compile() {                           
+src_compile() {
 	econf || die
 	make clean || die
 	emake || die
 }
 
-src_install() {                               
+src_install() {
 	einstall || die
 	dodoc AUTHORS COPYING Changelog NEWS README* TODO
 }

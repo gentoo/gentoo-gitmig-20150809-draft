@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/memprof-0.4.1-r1.ebuild,v 1.8 2003/02/13 11:58:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/memprof-0.4.1-r1.ebuild,v 1.9 2003/09/06 08:39:20 msterret Exp $
 
 IUSE="nls"
 
@@ -19,12 +19,12 @@ DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
-	
+
 src_compile() {
 	local myconf
 
 	use nls || myconf="--disable-nls"
-	
+
 	econf \
 		--disable-more-warnings \
 		${myconf} || die

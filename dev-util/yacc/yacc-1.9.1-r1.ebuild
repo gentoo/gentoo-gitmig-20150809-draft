@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.18 2003/08/14 19:51:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.19 2003/09/06 08:39:24 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Yacc"
@@ -19,12 +19,12 @@ src_unpack () {
 	cp Makefile Makefile.orig
 	sed -e "s:-O:${CFLAGS}:" Makefile.orig > Makefile
 }
-src_compile() {                           
+src_compile() {
 	make clean || die
 	make || die
 }
 
-src_install() {                               
+src_install() {
 	into /usr
 	dobin yacc
 	doman yacc.1

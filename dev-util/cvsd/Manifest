@@ -1,5 +1,5 @@
+MD5 f32f1b912ae4b45d6351aa88501fc2ac ChangeLog 425
+MD5 d01c5d5e33ee034c5d8a35164e8de070 cvsd-0.9.19.ebuild 1007
 MD5 e9233228e6757b330d72e677b1fdae41 files/cvsd.confd 71
 MD5 76bd46dc82e0c2b97b48ae751a44e3da files/cvsd.init 400
 MD5 2e49d8f8e06ad4113a3d0f1906110aa0 files/digest-cvsd-0.9.19 63
-MD5 f32f1b912ae4b45d6351aa88501fc2ac ChangeLog 425
-MD5 2884f6d6397bdb32eab0085e8e2d686b cvsd-0.9.19.ebuild 1040

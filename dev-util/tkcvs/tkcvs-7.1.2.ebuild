@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.1.2.ebuild,v 1.2 2003/02/13 12:02:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.1.2.ebuild,v 1.3 2003/09/06 08:39:23 msterret Exp $
 
 MY_P=${PN}_${PV//./_}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="TkCVS"
 SRC_URI="http://www.twobarleycorns.net/${MY_P}.tar.gz"
-HOMEPAGE="http://www.twobarleycorns.net/tkcvs.html" 
+HOMEPAGE="http://www.twobarleycorns.net/tkcvs.html"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -14,13 +14,13 @@ KEYWORDS="x86 ~sparc"
 
 RDEPEND=">=dev-lang/tk-8.3"
 
-src_compile() {                           
+src_compile() {
 	echo "It's tcl, you don't need to compile.  ;)"
 }
 
 src_install() {
 	dodir /usr/lib /usr/bin /usr/lib/tkcvs/ /usr/lib/tkcvs/bitmaps
-	
+
 	./doinstall.tcl -nox -finallib /usr/lib ${D}/usr || die
 
 	# Move man pages to FHS compliant locations

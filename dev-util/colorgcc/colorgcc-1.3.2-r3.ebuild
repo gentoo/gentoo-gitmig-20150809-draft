@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r3.ebuild,v 1.4 2003/08/26 08:48:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r3.ebuild,v 1.5 2003/09/06 08:39:20 msterret Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ DEPEND="dev-lang/perl"
 
 src_unpack() {
 	unpack ${PN}_${PV}.orig.tar.gz
-	
+
 	epatch ${DISTDIR}/${PN}_${PV}-4.2.diff.gz
 
 	# Add support for gcc-config enabled gcc.  You need gcc-config-1.2.7 or
@@ -29,8 +29,8 @@ src_unpack() {
 	cd ${S}; epatch ${FILESDIR}/${P}-gcc_config.patch
 }
 
-src_compile() { 
-	echo "Nothing to compile" 
+src_compile() {
+	echo "Nothing to compile"
 }
 
 src_install() {
@@ -44,7 +44,7 @@ src_install() {
 	dosym ../colorgcc /usr/bin/wrappers/${CHOST}-gcc
 	dosym ../colorgcc /usr/bin/wrappers/${CHOST}-g++
 	dosym ../colorgcc /usr/bin/wrappers/${CHOST}-c++
-	
+
 	dodoc COPYING CREDITS ChangeLog INSTALL colorgccrc
 }
 

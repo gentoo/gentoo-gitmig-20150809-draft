@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.26-r1.ebuild,v 1.8 2003/05/21 18:28:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.26-r1.ebuild,v 1.9 2003/09/06 08:39:20 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ltrace shows runtime library call information for dynamically linked executables"
@@ -21,7 +21,7 @@ src_compile() {
 	mv Makefile Makefile.orig
 	sed "s/ -O2 / ${CFLAGS} /" \
 		Makefile.orig > Makefile || die "sed failed...new version of Makefile?"
-	
+
 	emake all || die
 }
 

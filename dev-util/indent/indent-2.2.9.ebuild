@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.9.ebuild,v 1.6 2003/07/18 20:24:00 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.9.ebuild,v 1.7 2003/09/06 08:39:20 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Indent program source files"
@@ -20,5 +20,5 @@ src_compile() {
 
 src_install () {
 	einstall || die
-	dodoc AUTHORS COPYING NEWS README* 
+	dodoc AUTHORS COPYING NEWS README*
 }

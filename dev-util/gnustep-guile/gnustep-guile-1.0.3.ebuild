@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-guile/gnustep-guile-1.0.3.ebuild,v 1.4 2003/03/04 00:30:00 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-guile/gnustep-guile-1.0.3.ebuild,v 1.5 2003/09/06 08:39:20 msterret Exp $
 
 DESCRIPTION="GNUstep Guile bridge"
 HOMEPAGE="http://www.gnustep.org"
@@ -16,9 +16,9 @@ S=${WORKDIR}/${P}
 src_compile() {
 
 	# Source GNUstep Makefiles
-	. /usr/GNUstep/System/Makefiles/GNUstep.sh	
+	. /usr/GNUstep/System/Makefiles/GNUstep.sh
 
-	# No options are needed to configure as environment variables 
+	# No options are needed to configure as environment variables
 	# are pulled from the GNUstep Makefiles
 	./configure || die "configure failed"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.4.ebuild,v 1.1 2003/07/12 18:13:52 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.4.ebuild,v 1.2 2003/09/06 08:39:23 msterret Exp $
 
 S=${WORKDIR}/build
 
@@ -40,5 +40,5 @@ src_install() {
 
 	chmod -Rf 755 ${D}/${SN}/share/doc/${P}/demos
 	dodir /etc/env.d
-	echo "PATH=${SN}/bin" > ${D}/etc/env.d/10snavigator	
+	echo "PATH=${SN}/bin" > ${D}/etc/env.d/10snavigator
 }

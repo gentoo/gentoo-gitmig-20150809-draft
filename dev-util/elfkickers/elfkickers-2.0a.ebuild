@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a.ebuild,v 1.2 2003/07/31 17:23:46 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a.ebuild,v 1.3 2003/09/06 08:39:20 msterret Exp $
 
 IUSE=""
 
@@ -44,7 +44,7 @@ src_install() {
 	mv -f sstrip/README README.sstrip
 	insinto /usr
 	dobin ebfc/ebfc sstrip/sstrip elfls/elfls elftoc/elftoc rebind/rebind
-	doman */*.1 
+	doman */*.1
 	dodoc COPYING Changelog README
 	dodoc README.ebfc README.elfls README.elftoc README.rebind README.sstrip ebfc/elfparts.txt
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r3.ebuild,v 1.7 2003/04/23 16:13:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r3.ebuild,v 1.8 2003/09/06 08:39:20 msterret Exp $
 
 inherit eutils
 
@@ -19,10 +19,10 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}/ddd
 	epatch ${FILESDIR}/ddd-3.3.1-gcc3-gentoo.patch
-	
+
 	# Fix detection of double hipot(double, double)
 	# <azarah@gentoo.org> 05 Dec 2002
 	epatch ${FILESDIR}/ddd-3.3.1-detect-hipot.patch
@@ -30,7 +30,7 @@ src_unpack() {
 	# <azarah@gentoo.org> 05 Dec 2002
 	epatch ${FILESDIR}/ddd-3.3.1-link-libstdc++.patch
 }
-	
+
 src_compile() {
 	CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 	econf || die

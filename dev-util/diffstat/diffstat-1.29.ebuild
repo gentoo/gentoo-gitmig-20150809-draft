@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.29.ebuild,v 1.7 2003/02/13 11:50:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.29.ebuild,v 1.8 2003/09/06 08:39:20 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="diffstat reads the output of diff and displays a histogram of the insertions, deletions, and modifications per-file"
@@ -13,14 +13,14 @@ KEYWORDS="x86 sparc "
 
 DEPEND="sys-apps/diffutils"
 
-src_compile() {						   
+src_compile() {
 
 	econf || die
 	export CFLAGS="-Wshadow -Wconversion -Wstrict-prototypes -Wmissing-prototypes ${CFLAGS}"
 	make || die
 }
 
-src_install() {							   
+src_install() {
 	dobin diffstat
 	doman diffstat.1
 	dodoc README CHANGES

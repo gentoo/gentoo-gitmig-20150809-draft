@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r4.ebuild,v 1.5 2003/02/13 11:53:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r4.ebuild,v 1.6 2003/09/06 08:39:20 msterret Exp $
 
 S=${WORKDIR}/glimmer-${P_VERSION}
 DESCRIPTION="All-purpose gnome code editor."
@@ -33,7 +33,7 @@ src_compile() {
 	cd ${WORKDIR}/${P}
 	mv src/gtkextext/gtkextext.h src/gtkextext/gtkextext.h.orig
 	sed -e 's/\#include "..\/regex\/regex.h"/\#include <regex.h>/' \
-		src/gtkextext/gtkextext.h.orig >src/gtkextext/gtkextext.h	
+		src/gtkextext/gtkextext.h.orig >src/gtkextext/gtkextext.h
 	mv src/Makefile.am src/Makefile.am.orig
 	grep -v 'regex/libregex.a \\' src/Makefile.am.orig >src/Makefile.am.grep
 	sed -e 's/SUBDIRS \= regex gtkextext/SUBDIRS \= gtkextext/' \

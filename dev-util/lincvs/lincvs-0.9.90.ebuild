@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-0.9.90.ebuild,v 1.8 2003/02/13 11:58:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-0.9.90.ebuild,v 1.9 2003/09/06 08:39:20 msterret Exp $
 
 IUSE="kde"
 
@@ -65,7 +65,7 @@ src_install () {
 	doins AUTHORS COPYING ChangeLog INSTALL \
 		README SSH.txt VERSION THANKS
 	dosym /usr/share/doc/${P} /usr/share/${PN}
-	
+
 }
 
 
