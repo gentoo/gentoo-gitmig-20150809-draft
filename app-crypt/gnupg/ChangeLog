@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.45 2003/12/29 02:28:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.46 2004/01/02 21:00:09 weeve Exp $
+
+  02 Jan 2004; Jason Wever <weeve@gentoo.org> gnupg-1.2.3-r2.ebuild,
+  gnupg-1.2.3-r5.ebuild, gnupg-1.2.4.ebuild:
+  Added a workaround for some sparc32 machines that may have trouble building
+  gnupg-1.2.3-r5 and adjusted copyright dates in ebuilds.
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> gnupg-1.2.3-r5.ebuild:
   Move to mips stable (~mips -> mips)

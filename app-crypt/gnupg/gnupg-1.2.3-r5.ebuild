@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r5.ebuild,v 1.3 2003/12/29 02:28:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r5.ebuild,v 1.4 2004/01/02 21:00:09 weeve Exp $
 
 inherit eutils
 
@@ -30,6 +30,15 @@ DEPEND="caps? ( sys-libs/libcap )
 	!static? ( sys-libs/zlib )
 	virtual/glibc
 	dev-lang/perl"
+
+# Certain sparc32 machines seem to have trouble building correctly with 
+# -mcpu enabled.  While this is not a gnupg problem, it is a temporary
+# fix until the gcc problem can be tracked down.
+
+if [ ${ARCH} = "sparc" -a ${PROFILE_ARCH} = "sparc" ]; then
+	inherit flag-o-matic
+	filter-flags "-mcpu=supersparc -mcpu=v8 -mcpu=v7"
+fi
 
 src_unpack() {
 	unpack ${A}
