@@ -11,6 +11,7 @@ directfb
 divx4linux
 djbfft
 fdftk
+gnustep
 hal
 icc
 icc-pgo

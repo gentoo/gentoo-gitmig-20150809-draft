@@ -10,6 +10,7 @@ apm
 directfb
 divx4linux
 fdftk
+gnustep
 hal
 icc
 icc-pgo
