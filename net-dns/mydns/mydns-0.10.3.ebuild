@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-0.10.1.ebuild,v 1.1 2003/12/23 00:09:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-0.10.3.ebuild,v 1.1 2004/03/27 00:35:23 matsuu Exp $
 
 DESCRIPTION="A DNS-Server which gets its data from mysql-databases"
 HOMEPAGE="http://mydns.bboy.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://mydns.bboy.net/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 IUSE="nls static debug mysql postgres ssl zlib"
 
 RDEPEND="virtual/glibc
@@ -68,5 +68,4 @@ pkg_postinst() {
 		einfo "For more info see QUICKSTART.postgres."
 	fi
 	einfo
-	echo
 }
