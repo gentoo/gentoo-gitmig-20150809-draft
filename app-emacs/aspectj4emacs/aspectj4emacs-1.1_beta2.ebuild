@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/aspectj4emacs-1.1_beta2.ebuild,v 1.2 2004/04/27 19:26:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/aspectj4emacs-1.1_beta2.ebuild,v 1.3 2004/05/11 16:11:31 mkennedy Exp $
 
 inherit elisp eutils
 
@@ -26,6 +26,7 @@ SITEFILE=80aspectj4emacs-gentoo.el
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${PF}-compile-log-gentoo.patch
+	epatch ${FILESDIR}/${PF}-browse-url-new-window-gentoo.patch
 	cd ${S}
 	cp */*.el .
 	sed -i "s,@build.version.short@,${PV},g" *.el
