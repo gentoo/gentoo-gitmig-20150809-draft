@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.8 2003/02/12 02:27:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.9 2003/02/28 22:06:50 liquidx Exp $
+
+*ulogd-0.98 (28 Feb 2003)
+
+  28 Feb 2003; Alastiar Tse <liquidx@gentoo.org> ulogd-0.98.ebuild files/ulogd-0.98 :
+  Version Bump. Additions thanks to George in bug #10379.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
