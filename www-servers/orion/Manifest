@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0bdd36caab423af897535155eab06d2c orion-2.0.1.ebuild 3527
-MD5 0a76c79ab42c974a42aa6db91ad1fd54 orion-2.0.2.ebuild 3530
-MD5 ad6bfd5d1adf70dd7b7d6d8473a326d4 ChangeLog 3588
+MD5 efa6e380eab94c73e7cf675088895277 orion-2.0.1.ebuild 3543
+MD5 1bb462fe65609612de579a5b5a8b189d orion-2.0.2.ebuild 3546
+MD5 034fa2a3923e9719ab56b531e6f326e0 ChangeLog 3707
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 5e78308ed1712b24bcced31b5097e7fc files/digest-orion-2.0.1 60
 MD5 2e8906fc5bfd8955cfbac84d1ce4850c files/digest-orion-2.0.2 60
@@ -25,7 +25,7 @@ MD5 abd7c855a9b9601253916624d6f0e782 files/2.0.2/2.0.2-gentoo.patch 5301
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZphx/rLF9B432nYRAm48AJkBzcQec1Cme+GLPD+a4pwJAvaJ3ACgtksp
-wWNO28qsrQ/70pPN1Uluuq8=
-=vTti
+iD8DBQFBcarL/rLF9B432nYRAm9/AJ90oxS5bQf7+xIsgm6bzSjyfcJBXgCgtRjp
+/rUrIsdRbSOPWrIRwSEh7B0=
+=/6+j
 -----END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.2.ebuild,v 1.1 2004/08/08 17:51:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.2.ebuild,v 1.2 2004/10/16 23:12:02 axxo Exp $
 
-inherit eutils
+inherit eutils java-pkg
 
 S=${WORKDIR}/${PN}
 
@@ -81,7 +81,7 @@ src_install() {
 	# INSTALL JARS
 	cd ${S}
 	for i in `ls *.jar` ; do
-		dojar $i
+		java-pkg_dojar $i
 	done
 
 	# LINK IN SDK TOOLS.JAR
