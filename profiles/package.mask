@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <karltk@gentoo.org> (09 Jan 2004)
+# Placeholder to remind people it's deprecated.
+>=dev-util/eclipse-sdk-bin-1.0
+
 # <karltk@gentoo.org> (07 Jan 2004)
 # under disruptive development. will put back into ~arch when
 # both gtk and motif builds cleanly again.
