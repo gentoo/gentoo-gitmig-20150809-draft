@@ -3,6 +3,8 @@
 # Preprocessor for 'less'. Used when this environment variable is set:
 # LESSOPEN="|lesspipe.sh %s"
 
+trap 'exit 0' PIPE
+
 F=$1	# so we can use "set" later to play with positional params
 
 case "$F" in
@@ -35,7 +37,7 @@ case "$F" in
   *)
 	set -- $(file -L "$F")
 	if [[ $2 == Linux/* || $3 == Linux/* || $2 == ELF || $3 == ELF ]]; then
-		strings $F
+		strings "$F"
 	fi
 	;;
 esac

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/less
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.26 2004/06/15 20:01:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.27 2004/06/17 00:03:17 agriffis Exp $
+
+  16 Jun 2004; Aron Griffis <agriffis@gentoo.org> files/lesspipe.sh-r2,
+  -less-382-r1.ebuild:
+  Fix a quoting issue in lesspipe.sh-r2 and add a trap to prevent 'Broken pipe'
+  messages. Thanks to Glen in bug 38854
 
 *less-382-r1 (15 Jun 2004)
 
