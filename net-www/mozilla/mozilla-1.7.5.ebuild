@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.5.ebuild,v 1.12 2005/02/27 09:15:55 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.5.ebuild,v 1.13 2005/03/23 07:33:49 brad Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit
@@ -56,7 +56,7 @@ src_unpack() {
 	fi
 
 	# Fix stack growth logic
-	epatch ${FILESDIR}/${P}-stackgrowth.patch
+	epatch ${FILESDIR}/${PN}-stackgrowth.patch
 
 	# Fix logic error when using RAW target
 	# <azarah@gentoo.org> (23 Feb 2003)
