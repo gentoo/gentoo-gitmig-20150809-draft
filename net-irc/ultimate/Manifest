@@ -1,4 +1,6 @@
-MD5 aa6f72eb1712ed87a04940daab10fb4d ultimate-2.8.7.ebuild 3099
+MD5 2149fd517e1599b3ec20d1d3a21f2cb5 ultimate-2.8.7.ebuild 3182
+MD5 0c98f05eaed186ffdadb35afbc0e267d ChangeLog 446
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 0e80c10558167e161746bfc5d3a443e1 files/ultimateircd.rc 179
 MD5 8af0419297384fbb53922f83cc7d85df files/setup.h 483
 MD5 0e80c10558167e161746bfc5d3a443e1 files/ultimateircd.conf 179
