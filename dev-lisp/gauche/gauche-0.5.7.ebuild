@@ -1,14 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.5.2.ebuild,v 1.3 2002/07/11 06:30:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.5.7.ebuild,v 1.1 2002/07/11 23:58:09 karltk Exp $
 
 S=${WORKDIR}/Gauche-${PV}
 DESCRIPTION="A Unix system friendly scheme interpreter"
 SRC_URI="mirror://sourceforge/gauche/Gauche-${PV}.tgz"
 HOMEPAGE="http://gauche.sf.net"
-
 DEPEND="virtual/glibc"
 RDEPEND="$DEPEND"
+SLOT="0"
+LICENSE="BSD"
+KEYWORDS="x86"
 
 src_compile() {
 	./configure \
