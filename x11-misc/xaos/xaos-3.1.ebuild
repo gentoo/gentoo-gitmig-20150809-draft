@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1.ebuild,v 1.8 2004/06/24 22:37:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1.ebuild,v 1.9 2004/07/27 07:00:19 ciaranm Exp $
 
 IUSE="X svga aalib nls"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/xaos/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64 -sparc"
 
 DEPEND="X? ( virtual/x11 )
 	svga? ( >=media-libs/svgalib-1.4.3 )
