@@ -1,0 +1,8 @@
+# ChangeLog for app-sci/kunit
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kunit/ChangeLog,v 1.1 2002/11/22 22:10:57 vapier Exp $
+
+*kunit-0.5 (22 Nov 2002)
+
+  22 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Dylan Carlson <bsinthe@pobox.com>.
