@@ -1,6 +1,13 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.49 2004/04/14 11:08:15 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.50 2004/04/14 15:10:49 swtaylor Exp $
+
+*xine-ui-0.9.22-r2 (14 Apr 2004)
+
+  14 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> +xine-ui-0.9.22-r2.ebuild:
+  More fixes for that same bug, the original file was distributed with bogus
+  timestamps and included a file that should not have been in there as it gets
+  created via symlink in the build process.
 
   14 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> files/symlink-bug.patch:
   Bug 45448 - symlink-bug.patch tried to patch a file as well as the symlink to
