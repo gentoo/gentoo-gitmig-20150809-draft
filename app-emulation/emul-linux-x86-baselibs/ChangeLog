@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.12 2004/08/16 20:51:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.13 2004/08/17 00:22:05 lv Exp $
+
+*emul-linux-x86-baselibs-1.2 (16 Aug 2004)
+
+  16 Aug 2004; Travis Tilley <lv@gentoo.org>
+  +emul-linux-x86-baselibs-1.2.ebuild:
+  moved glibc into emul-linux-x86-glibc, moved libgcc_s and libstdc++ into
+  emul-linux-x86-compat, compiled using gcc 3.4 with -march=k8 -m32
 
 *emul-linux-x86-baselibs-1.1-r2 (16 Aug 2004)
 
