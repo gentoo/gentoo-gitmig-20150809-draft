@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.77-r2.ebuild,v 1.2 2004/05/09 01:55:04 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.77-r2.ebuild,v 1.3 2004/05/26 20:43:00 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
 
-IUSE="nls perl spell nas debug crypt cjk gnutls"
+IUSE="nls perl spell nas debug crypt cjk gnutls noaudio"
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
@@ -80,6 +80,7 @@ src_compile() {
 	use spell || myconf="${myconf} --disable-gtkspell"
 	use nls  || myconf="${myconf} --disable-nls"
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
+	use noaudio && myconf="${myconf} --disable-audio"
 
 	use gnutls && {
 		myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
