@@ -1,7 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Copyright 2002 Marius Bernklev <mariube@unixcore.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.7.ebuild,v 1.5 2003/07/12 09:37:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.7.ebuild,v 1.6 2003/08/07 02:09:57 vapier Exp $
 
 DESCRIPTION="Steel Bank Common Lisp"
 HOMEPAGE="http://sbcl.sourceforge.net/"
@@ -16,7 +15,6 @@ KEYWORDS="x86 ~ppc -sparc "
 PROVIDE="virtual/commonlisp"
 # the SRC_URI trickery needs this
 DEPEND=">=sys-apps/portage-2.0.27"
-IUSE=""
 
 src_unpack() {
 	

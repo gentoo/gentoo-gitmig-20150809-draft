@@ -1,25 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/plt/plt-202.ebuild,v 1.4 2003/07/12 09:37:51 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/plt/plt-202.ebuild,v 1.5 2003/08/07 02:07:31 vapier Exp $
 
-S=${WORKDIR}/${PN}/src
 DESCRIPTION="PLT Scheme, including DrScheme, mzscheme, mred, and mzc"
-SRC_URI="http://www.cs.utah.edu/plt/download/${PV}/plt/plt.src.x.tar.gz"
 HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
+SRC_URI="http://www.cs.utah.edu/plt/download/${PV}/plt/plt.src.x.tar.gz"
+
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="LGPL-2.1"
 
 DEPEND="virtual/glibc 
 	virtual/x11 
 	x11-libs/xaw 
 	sys-devel/gcc 
 	sys-devel/binutils"
-#RDEPEND=""
 
-KEYWORDS="x86"
-SLOT="0"
-LICENSE="LGPL-2.1"
+S=${WORKDIR}/${PN}/src
 
 src_compile() {
-#	cd src
 	./configure \
 		--host=${CHOST} \
 		--with-x \
@@ -28,8 +27,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
-#	cd src
+src_install() {
 	dodir usr/share/plt
 	make copytree || die
 	make mzinstall || die
@@ -40,7 +38,7 @@ src_install () {
 
 	# compile scheme sources to make startup quicker
 	/usr/bin/env PLTHOME=${D}/usr/share/plt \
-	    ${D}/usr/share/plt/bin/setup-plt || die
+		${D}/usr/share/plt/bin/setup-plt || die
 
 	# move man files to correct location and delete
 	# them out of plt tree
@@ -50,18 +48,17 @@ src_install () {
 	# move misc package documentation to proper location
 	# and delete them out of plt tree
 	dodoc ${D}/usr/share/plt/notes/COPYING.LIB \
-	    ${D}/usr/share/plt/notes/mzscheme/*
+		${D}/usr/share/plt/notes/mzscheme/*
 	rm -r ${D}/usr/share/plt/notes
 
 	# create executable scripts in /usr/bin which in turn call
 	# executables by the same name in /usr/share/plt with the
 	# correct PLTHOME path
-	for f in mzc tex2page help-desk mred mzscheme drscheme setup-plt
-	do
-	    target=${D}/usr/bin/$f
-	    echo '#! /bin/sh'> $target
-	    echo 'PLTHOME=/usr/share/plt ; export PLTHOME'>> $target
-	    echo 'exec ${PLTHOME}/bin/'$f' "$@"' >> $target
-	    chmod 755 $target
+	for f in mzc tex2page help-desk mred mzscheme drscheme setup-plt ; do
+		target=${D}/usr/bin/$f
+		echo '#! /bin/sh'> $target
+		echo 'PLTHOME=/usr/share/plt ; export PLTHOME'>> $target
+		echo 'exec ${PLTHOME}/bin/'$f' "$@"' >> $target
+		chmod 755 $target
 	done
 }
