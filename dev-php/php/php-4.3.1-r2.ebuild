@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r2.ebuild,v 1.3 2003/04/24 18:30:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r2.ebuild,v 1.4 2003/05/15 21:31:33 robbat2 Exp $
 
 inherit php eutils
 
@@ -9,7 +9,7 @@ IUSE="${IUSE} readline"
 
 DESCRIPTION="PHP Shell Interpreter"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~mips"
 
 DEPEND="${DEPEND}
 	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 ) "
