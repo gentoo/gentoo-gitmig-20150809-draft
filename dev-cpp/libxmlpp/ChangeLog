@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.15 2005/01/01 17:29:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.16 2005/02/25 02:03:40 joem Exp $
+
+  24 Feb 2005; Joe McCann <joem@gentoo.org> libxmlpp-1.0.4.ebuild:
+  add pkgconfig dep, mark x86 stable. bug 82931
 
 *libxmlpp-1.0.4 (12 Nov 2004)
 *libxmlpp-2.8.0 (12 Nov 2004)
