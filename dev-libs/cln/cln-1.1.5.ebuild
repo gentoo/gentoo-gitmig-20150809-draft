@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.5.ebuild,v 1.9 2004/06/24 23:02:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.5.ebuild,v 1.10 2004/07/14 14:09:21 agriffis Exp $
 
 inherit flag-o-matic gcc
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.ginac.de/CLN/"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="x86 ~ppc ~sparc"
+IUSE=""
 
 SRC_URI="ftp://ftp.santafe.edu/pub/gnu/${P}.tar.gz"
 #SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gnu/${P}.tar.gz"
