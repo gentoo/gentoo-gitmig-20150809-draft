@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.16 2005/01/12 22:10:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.17 2005/03/21 03:42:32 eradicator Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
-inherit gnome.org eutils libtool gnuconfig
+inherit gnome.org eutils libtool gnuconfig toolchain-funcs
 
 DESCRIPTION="The GIMP Toolkit"
 HOMEPAGE="http://www.gtk.org/"
@@ -53,7 +53,7 @@ src_compile() {
 		--with-x \
 		${myconf} || die
 
-	emake || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {

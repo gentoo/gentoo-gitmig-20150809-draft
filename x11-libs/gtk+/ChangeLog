@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.150 2005/03/09 03:47:01 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.151 2005/03/21 03:42:32 eradicator Exp $
+
+  21 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  gtk+-1.2.10-r11.ebuild:
+  Use the right toolchain compiler.
 
   09 Mar 2005; Mike Gardiner <obz@gentoo.org> gtk+-2.4.14.ebuild:
   Keyworded ppc
