@@ -1,6 +1,9 @@
 # ChangeLog for app-office/oooqs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.12 2004/08/25 15:00:35 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.13 2004/10/23 13:51:00 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> oooqs-2.0.3.ebuild:
+  Stable on sparc.
 
 *oooqs-2.0.3-r1 (25 Aug 2004)
 
