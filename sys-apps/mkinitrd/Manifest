@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea40feefe67a6dced3fc93000b5fd0b3 mkinitrd-3.5.7.ebuild 953
-MD5 161de378f20454703aa05cfc3a4ad3cd mkinitrd-3.5.7-r2.ebuild 1195
-MD5 aa5f7e875d29b048568e824ff44c6815 mkinitrd-3.5.7-r3.ebuild 1368
-MD5 01e6ae86836c13e0949b6f0f69f64d1a ChangeLog 2002
+MD5 3a6e121e29d91d944079855b6c66e0b4 ChangeLog 2136
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 4e09d06fedbff01e9e17219e50873694 files/mkinitrd-lvm_statics.diff 591
-MD5 1a8259233cb009f44a8fe20a8aa828b5 files/digest-mkinitrd-3.5.7-r2 66
-MD5 1a8259233cb009f44a8fe20a8aa828b5 files/digest-mkinitrd-3.5.7-r3 66
-MD5 0bc4fe62070fcfc54254d0e8c636ef32 files/mkinitrd-selinux.diff 1007
-MD5 d4dd490a2ad812af2c9eb5a285439c0a files/mkinitrd-3.5.7-dietssp.patch 8035
+MD5 589142fc675c693f49255465f1a5fb34 mkinitrd-3.5.7-r2.ebuild 1206
+MD5 ea40feefe67a6dced3fc93000b5fd0b3 mkinitrd-3.5.7.ebuild 953
+MD5 2ecfdeb82563dded548ac18d85130852 mkinitrd-3.5.7-r3.ebuild 1384
 MD5 1a8259233cb009f44a8fe20a8aa828b5 files/digest-mkinitrd-3.5.7 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBabse94CCfB4KcwwRAoZDAJ90iMqEf9eIVCILWiXVT9UXSAMCWQCgnLE9
-rhhKm7OhBKWmC8X77LN30Lc=
-=hyZK
------END PGP SIGNATURE-----
+MD5 1a8259233cb009f44a8fe20a8aa828b5 files/digest-mkinitrd-3.5.7-r2 66
+MD5 4e09d06fedbff01e9e17219e50873694 files/mkinitrd-lvm_statics.diff 591
+MD5 0bc4fe62070fcfc54254d0e8c636ef32 files/mkinitrd-selinux.diff 1007
+MD5 1a8259233cb009f44a8fe20a8aa828b5 files/digest-mkinitrd-3.5.7-r3 66
+MD5 d4dd490a2ad812af2c9eb5a285439c0a files/mkinitrd-3.5.7-dietssp.patch 8035

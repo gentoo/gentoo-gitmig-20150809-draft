@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mkinitrd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.14 2004/10/10 22:44:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.15 2004/10/22 02:59:41 agriffis Exp $
+
+  23 Oct 2004; Aron Griffis <agriffis@gentoo.org> mkinitrd-3.5.7-r2.ebuild,
+  mkinitrd-3.5.7-r3.ebuild:
+  add alpha/ia64 keywords
 
 *mkinitrd-3.5.7-r3 (10 Oct 2004)
 
