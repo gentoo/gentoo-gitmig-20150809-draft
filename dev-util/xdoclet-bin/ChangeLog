@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xdoclet-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdoclet-bin/ChangeLog,v 1.4 2004/10/16 18:17:52 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdoclet-bin/ChangeLog,v 1.5 2004/10/16 23:11:03 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> xdoclet-bin-1.2.1.ebuild,
+  xdoclet-bin-1.2.ebuild:
+  dojar --> java-pkg_dojar
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> xdoclet-bin-1.2.1.ebuild,
   xdoclet-bin-1.2.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdoclet-bin/xdoclet-bin-1.2.1.ebuild,v 1.2 2004/10/16 18:17:52 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdoclet-bin/xdoclet-bin-1.2.1.ebuild,v 1.3 2004/10/16 23:11:03 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="XDoclet is a code generation engine."
 SRC_URI="mirror://sourceforge/xdoclet/${P}.tgz"
@@ -15,6 +17,6 @@ RESTRICT="nomirror"
 S=${WORKDIR}/${PN%%-bin}-${PV}
 
 src_install() {
-	dojar lib/*.jar
+	java-pkg_dojar lib/*.jar
 	use doc && java-pkg_dohtml -r docs/*
 }
