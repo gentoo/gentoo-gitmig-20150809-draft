@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/boxes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.8 2004/06/28 00:48:38 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.9 2004/07/10 10:39:18 slarti Exp $
+
+  10 Jul 2004; Tom Martin <slarti@gentoo.org> boxes-1.0.1.ebuild:
+  Marked ~amd64, fixed SRC_URI and HOMEPAGE.
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> boxes-1.0.1.ebuild:
   Added ~sparc, ~mips
