@@ -1,0 +1,33 @@
+# ChangeLog for app-editors/mlview
+# Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.1 2004/04/19 03:25:26 leonardop Exp $
+
+  18 Apr 2004; L. Boshell <leonardop@gentoo.org> mlview-0.6.2.ebuild,
+  metadata.xml:
+  Marked 0.6.2 stable on x86. Adding maintainer and description to the
+  metadata file.
+  
+*mlview-0.6.2 (25 Jan 2004)
+
+  25 Jan 2004; Mike Gardiner <obz@gentoo.org> mlview-0.0.3_rc1.ebuild,
+  mlview-0.6.0.ebuild, mlview-0.6.1.ebuild, mlview-0.6.2.ebuild:
+  New version, thanks for the report on bug #35861 from <i386@sauceage.org>
+
+*mlview-0.6.1 (24 Nov 2003)
+
+  24 Nov 2003; Mike Gardiner <obz@gentoo.org> mlview-0.6.1.ebuild:
+  New version. Updated the dependencies and removed the patch - it's not
+  required anymore
+
+*mlview-0.6.0 (28 Sep 2003)
+
+  28 Sep 2003; Mike Gardiner <obz@gentoo.org> metadata.xml,
+  mlview-0.6.0.ebuild, files/mlview-0.6.0-Makefile.in.patch:
+  New version, rewrote the ebuild to take advantage of the gnome2 eclass, as
+  well as included a patch for the Makefile.in against sandbox violations
+
+*mlview-0.0.3_rc1 (05 Nov 2002)
+
+  05 Nov 2002; L. Boshell <leonardop@gentoo.org> ChangeLog,
+  mlview-0.0.3_rc1.ebuild : Initial import. Thanks to Rigo Ketelings for
+  his contribution on bug #7079.

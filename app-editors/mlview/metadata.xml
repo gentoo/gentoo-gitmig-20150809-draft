@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>gnome</herd>
+  <maintainer>
+    <email>leonardop@gentoo.org</email>
+    <name>Leonardo Boshell</name>
+  </maintainer>
+  <longdescription>
+     The MlView project is an on going effort to develop an xml editor
+     for GNOME environment. It is written in C and uses the gnome
+     libraries (libxml2, gtk+, libgnome*, etc).
+  </longdescription>
+</pkgmetadata>
