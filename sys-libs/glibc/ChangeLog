@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.30 2002/11/17 12:15:17 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.31 2002/11/18 20:58:32 cretin Exp $
 
 *glibc-2.3.1-r2 (7 Nov 2002)
 
@@ -8,6 +8,7 @@
 
   Small patch "prelinkfix" which fixes rare error with prelinking and
   preloading some executables. Patch taken from glibc CVS.
+  http://sources.redhat.com/ml/libc-alpha/2002-11/msg00151.html
 
   16 Nov 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r2.ebuild :
 
