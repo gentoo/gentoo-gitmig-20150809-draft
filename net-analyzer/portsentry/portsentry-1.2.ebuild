@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2.ebuild,v 1.4 2004/06/24 22:15:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2.ebuild,v 1.5 2004/07/06 03:10:06 malc Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/sentrytools/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND=">=sys-apps/sed-4"
 S=${WORKDIR}/${PN}_beta
