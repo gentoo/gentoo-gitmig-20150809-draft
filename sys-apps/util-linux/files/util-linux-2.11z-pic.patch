@@ -1,0 +1,76 @@
+diff -u -r -N util-linux-2.11z.orig/fdisk/llseek.c util-linux-2.11z/fdisk/llseek.c
+--- util-linux-2.11z.orig/fdisk/llseek.c	2002-10-31 14:44:31.000000000 +0100
++++ util-linux-2.11z/fdisk/llseek.c	2003-07-12 19:08:59.000000000 +0200
+@@ -3,6 +3,9 @@
+  *
+  * Copyright (C) 1994 Remy Card.  This file may be redistributed
+  * under the terms of the GNU Public License.
++ *
++ * Changes:
++ * 20030712 - Alexander Gabert <pappy@nikita.ath.cx> - adding PIC defines
+  */
+ 
+ #include <sys/types.h>
+@@ -25,7 +28,8 @@
+ 
+ #else	/* HAVE_LLSEEK */
+ 
+-#if defined(__alpha__) || defined(__ia64__) || defined(__s390x__)
++/* do not use assembler to put together syscalls at compile time (for llseek for example) when using PIC */
++#if defined(__PIC__) || defined(__pic__) || defined(__alpha__) || defined(__ia64__) || defined(__s390x__)
+ 
+ #define my_llseek lseek
+ 
+diff -u -r -N util-linux-2.11z.orig/fdisk/sfdisk.c util-linux-2.11z/fdisk/sfdisk.c
+--- util-linux-2.11z.orig/fdisk/sfdisk.c	2003-01-28 19:18:03.000000000 +0100
++++ util-linux-2.11z/fdisk/sfdisk.c	2003-07-12 19:08:38.000000000 +0200
+@@ -28,6 +28,7 @@
+  *
+  * Changes:
+  * 19990319 - Arnaldo Carvalho de Melo <acme@conectiva.com.br> - i18n
++ * 20030712 - Alexander Gabert <pappy@nikita.ath.cx> - adding PIC defines
+  */
+ 
+ #define PROGNAME "sfdisk"
+@@ -130,7 +131,9 @@
+  *
+  * Note: we use 512-byte sectors here, irrespective of the hardware ss.
+  */
+-#if !defined (__alpha__) && !defined (__ia64__) && !defined (__x86_64__) && !defined (__s390x__)
++
++/* do not use the assembler constructed syscalls for seeking if compiled as PIC */
++#if !defined(__PIC__) && !defined(__pic__) && !defined (__alpha__) && !defined (__ia64__) && !defined (__x86_64__) && !defined (__s390x__)
+ static
+ _syscall5(int,  _llseek,  uint,  fd, ulong, hi, ulong, lo,
+        loff_t *, res, uint, wh);
+@@ -142,7 +145,7 @@
+     in = ((loff_t) s << 9);
+     out = 1;
+ 
+-#if !defined (__alpha__) && !defined (__ia64__) && !defined (__x86_64__) && !defined (__s390x__)
++#if !defined(__PIC__) && !defined(__pic__) && !defined (__alpha__) && !defined (__ia64__) && !defined (__x86_64__) && !defined (__s390x__)
+     if (_llseek (fd, in>>32, in & 0xffffffff, &out, SEEK_SET) != 0) {
+ #else
+     if ((out = lseek(fd, in, SEEK_SET)) != in) {
+diff -u -r -N util-linux-2.11z.orig/mount/pivot_root.c util-linux-2.11z/mount/pivot_root.c
+--- util-linux-2.11z.orig/mount/pivot_root.c	2002-11-29 12:02:56.000000000 +0100
++++ util-linux-2.11z/mount/pivot_root.c	2003-07-12 19:07:39.000000000 +0200
+@@ -1,12 +1,17 @@
+ /* pivot_root.c - Change the root file system */
+ 
+ /* Written 2000 by Werner Almesberger */
++/*
++ * Jul 11 2003 <solar@gentoo.org>
++ * avoid using assembler constructed _syscall2() when PIC is needed
++ */
+ 
+ #include <stdio.h>
+ #include <errno.h>	/* needed for <linux/unistd.h> below */
+ 
+-#ifdef __ia64__
++#if (defined(__ia64__) || defined(__PIC__) || defined(__pic__))
+ # include <sys/syscall.h>
++# include <unistd.h>
+ # define pivot_root(new_root,put_old) syscall(SYS_pivot_root,new_root,put_old)
+ #else
+ # include <linux/unistd.h>
