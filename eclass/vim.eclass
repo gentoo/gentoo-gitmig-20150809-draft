@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.27 2003/04/29 21:11:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.28 2003/05/24 02:15:39 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -28,12 +28,19 @@ DEPEND="
 	gpm?     ( >=sys-libs/gpm-1.19.3 )
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )
 	perl?    ( dev-lang/perl )
-	python?  ( dev-lang/python )
-	ruby?    ( =dev-lang/ruby-1.6* )"  # ruby-1.8 doesn't work yet with vim
+	python?  ( dev-lang/python )"
+
+# Vim versions after 6.2d should work with Ruby 1.8 because of a local
+# Gentoo patch; working on putting it upstream (22 May 2003 agriffis)
+if [[ "$PV" == 6.2* && "${PV#6.2}" > c ]]; then
+	DEPEND="${DEPEND} ruby? ( dev-lang/ruby )"
+else
+	DEPEND="${DEPEND} ruby? ( =dev-lang/ruby-1.6* )" # 1.8 doesn't work
+fi
 
 apply_vim_patches() {
 	local p
-	cd ${S}
+	cd ${S} || die "cd ${S} failed"
 
 	# Scan the patches, applying them only to files that either
 	# already exist or that will be created by the patch
@@ -92,14 +99,13 @@ vim_src_unpack() {
 	[ -n "$VIM_ORG_PATCHES" ] && apply_vim_patches
 
 	# Another set of patch's borrowed from src rpm to fix syntax error's etc.
-	cd ${S}
-	EPATCH_SUFFIX="gz" \
-		EPATCH_FORCE="yes" \
+	cd ${S} || die "cd ${S} failed"
+	EPATCH_SUFFIX="gz" EPATCH_FORCE="yes" \
 		epatch ${WORKDIR}/gentoo/patches-all/
 
 	# Fixup a script to use awk instead of nawk
-	sed -i '1s|.*|#!/usr/bin/awk -f|' ${S}/runtime/tools/mve.awk
-	assert "Error fixing mve.awk"
+	sed -i '1s|.*|#!/usr/bin/awk -f|' ${S}/runtime/tools/mve.awk \
+		|| die "mve.awk sed failed"
 
 	# Read vimrc and gvimrc from /etc/vim
 	echo '#define SYS_VIMRC_FILE "/etc/vim/vimrc"' >> src/feature.h
@@ -114,7 +120,7 @@ src_compile() {
 	# (2) Rebuild auto/configure
 	# (3) Notice auto/configure is newer than auto/config.mk
 	# (4) Run ./configure (with wrong args) to remake auto/config.mk
-	sed -i 's/ auto.config.mk:/:/' src/Makefile
+	sed -i 's/ auto.config.mk:/:/' src/Makefile || die "Makefile sed failed"
 	rm -f src/auto/configure
 	make -C src auto/configure || die "make auto/configure failed"
 
@@ -189,7 +195,7 @@ src_compile() {
 src_install() {
 	if [ "${PN}" = "vim-core" ]; then
 		dodir /usr/{bin,share/{man/man1,vim}}
-		cd src
+		cd src || die "cd src failed"
 		make \
 			installruntime \
 			installhelplinks \
@@ -205,8 +211,8 @@ src_install() {
 			|| die "install failed"
 
 		dodoc README*
-		cd $D/usr/share/doc/$PF
-		ln -s ../../vim/*/doc $P
+		cd $D/usr/share/doc/$PF && \
+		ln -s ../../vim/*/doc $P || die "ln -s failed"
 
 		keepdir /usr/share/vim/vim${VIM_VERSION/.}/keymap
 
@@ -231,11 +237,12 @@ src_install() {
 		doins ${FILESDIR}/gvimrc
 	else
 		dobin src/vim
-		ln -s vim ${D}/usr/bin/vimdiff
-		ln -s vim ${D}/usr/bin/rvim
-		ln -s vim  ${D}/usr/bin/ex
-		ln -s vim  ${D}/usr/bin/view
-		ln -s vim  ${D}/usr/bin/rview
+		ln -s vim ${D}/usr/bin/vimdiff && \
+		ln -s vim ${D}/usr/bin/rvim && \
+		ln -s vim ${D}/usr/bin/ex && \
+		ln -s vim ${D}/usr/bin/view && \
+		ln -s vim ${D}/usr/bin/rview \
+			|| die "/usr/bin symlinks failed"
 	fi
 }
 
