@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.7_p2.ebuild,v 1.2 2003/09/13 01:33:13 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.7_p2.ebuild,v 1.3 2003/12/13 15:26:07 usata Exp $
 
 inherit base gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}${P/_p/-}.tar.gz
 	${HOMEPAGE}old/${P/_p/-}.tar.gz"
 PATCHES1=${FILESDIR}/${PN}-0.6-gentoo.diff
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc"
 SLOT=0
 IUSE="gnome canna freewnn"
 S=${WORKDIR}/${P/_p*}
