@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r2.ebuild,v 1.1 2001/10/06 14:36:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r2.ebuild,v 1.2 2001/10/07 00:14:36 hallski Exp $
 
 A=${PN}-4.0.6.tar.gz
 S=${WORKDIR}/${PN}-4.0.6
@@ -54,7 +54,7 @@ RDEPEND="virtual/glibc
 	qt? ( >=x11-libs/qt-x11-2.3.0 )
 	xml? ( >=app-text/sablotron-0.44 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
-	xml2? ( gnome-libs/libxml2 )
+	xml2? ( dev-libs/libxml2 )
 	imap? ( virtual/imap )"
 
 src_compile() {
