@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.12.ebuild,v 1.3 2004/06/24 22:40:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.12.ebuild,v 1.4 2004/08/09 17:51:09 foser Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils flag-o-matic
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ~ia64"
+KEYWORDS="x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ~ia64"
 
 # evolution, perl, guile and gb support disabled currently (or to be removed)
 
@@ -40,6 +40,19 @@ RDEPEND=">=x11-libs/gtk+-2
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.30
 	dev-util/pkgconfig"
+
+pkg_setup() {
+
+	if ! pkg-config --exists libgsf-gnome-1;
+	then
+		einfo "libgsf needs to be compiled with gnome in USE"
+		einfo "for this version of gnumeric to work. Rebuild"
+		einfo "libgsf first like this :"
+		einfo "USE=gnome emerge libgsf -vp"
+		die "libgsf was built without gnome support..."
+	fi
+
+}
 
 src_unpack() {
 

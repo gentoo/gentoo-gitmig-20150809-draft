@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.4.ebuild,v 1.6 2004/06/24 22:40:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.13.ebuild,v 1.1 2004/08/09 17:51:09 foser Exp $
 
 #provide Xmake and Xemake
-inherit virtualx libtool gnome2 eutils
+inherit virtualx libtool gnome2 eutils flag-o-matic
 
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64"
+
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ~ia64"
 
 # evolution, perl, guile and gb support disabled currently (or to be removed)
 
@@ -27,7 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/libglade-2
 	>=dev-libs/libxml2-2.4.12
-	>=gnome-extra/libgsf-1.8.2
+	>=gnome-extra/libgsf-1.9
 	>=media-libs/libart_lgpl-2.3.11
 	python? ( >=dev-lang/python-2
 		>=dev-python/pygtk-2 )
@@ -37,28 +38,33 @@ RDEPEND=">=x11-libs/gtk+-2
 #	gnomedb? ( >=gnome-extra/libgnomedb-0.90.2 )
 
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.27.2
-	dev-util/pkgconfig
-	>=sys-devel/autoconf-2.58"
+	>=dev-util/intltool-0.30
+	dev-util/pkgconfig"
+
+pkg_setup() {
+
+	if ! pkg-config --exists libgsf-gnome-1;
+	then
+		einfo "libgsf needs to be compiled with gnome in USE"
+		einfo "for this version of gnumeric to work. Rebuild"
+		einfo "libgsf first like this :"
+		einfo "USE=gnome emerge libgsf -vp"
+		die "libgsf was built without gnome support..."
+	fi
+
+}
 
 src_unpack() {
 
 	unpack ${A}
 	gnome2_omf_fix
 
-	cd ${S}
-	# fix problems with libtool-0.28 generated stuff
-	intltoolize --force
-
-	export WANT_AUTOMAKE=1.7
-	export WANT_AUTOCONF=2.5
-	aclocal || die
-	autoconf || die
-	automake -a || die
-
 }
 
 src_compile() {
+
+	# gcc bug (http://bugs.gnome.org/show_bug.cgi?id=128834)
+	filter-flags "-Os"
 
 	econf \
 		`use_with bonobo` \
@@ -69,14 +75,6 @@ src_compile() {
 
 	# the build process has to be able to connect to X
 	Xemake || die
-
-}
-
-src_install() {
-
-	gnome2_src_install
-
-	dosym /usr/share/${PN}/${PV}/share/gnome/help/gnumeric /usr/share/gnome/help/gnumeric/
 
 }
 
