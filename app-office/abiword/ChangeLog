@@ -1,8 +1,12 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.31 2003/04/01 16:21:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.32 2003/04/08 12:13:17 foser Exp $
 
 *abiword-1.1.4 (31 Mar 2003)
+
+  08 Apr 2003; foser <foser@gentoo.org> abiword-1.1.4.ebuild :
+  Moved the fribidi lib from app-text to dev-libs
+  fixed ebuild to reflect the move
 
   01 Apr 2003; foser <foser@gentoo.org> abiword-1.1.4.ebuild :
   Added patch for configure to make the wv tests work

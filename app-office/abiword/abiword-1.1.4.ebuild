@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.1.4.ebuild,v 1.2 2003/04/01 16:21:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.1.4.ebuild,v 1.3 2003/04/08 12:13:17 foser Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="virtual/x11
 	>=dev-libs/libole2-0.2.4-r1
 	>=x11-libs/gtk+-2
 	>=app-text/wv-0.7.5
-	>=app-text/fribidi-0.10.4
+	>=dev-libs/fribidi-0.10.4
 	jpeg?  ( >=media-libs/jpeg-6b-r2 )
 	perl?  ( >=dev-lang/perl-5.6 )
 	( xml2? >=dev-libs/libxml2-2.4.10 : dev-libs/expat )
@@ -45,6 +45,9 @@ src_unpack() {
 	# April 1st 2003 <foser@gentoo.org>
 	cd ${S}
 	epatch ${FILESDIR}/${P}-wv_configure_fooling.patch
+
+	cd ${S}/src/af/ev/
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 }
 
 src_compile() {
@@ -58,9 +61,9 @@ src_compile() {
 		&& myconf="${myconf} --enable-gnome" \
 		|| myconf="${myconf} --disable-gnome" 
 		
-	econf ${myconf} --with-sys-wv || die  
+	CFLAGS="${CFLAGS} `glib-config --cflags`" econf ${myconf} --with-sys-wv || die  
 
-	emake all-recursive || die
+	CFLAGS="${CFLAGS} `glib-config --cflags`" emake all-recursive || die
 }
 
 src_install() {  
