@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-print
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.6 2002/04/03 10:22:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.7 2002/04/09 22:39:28 azarah Exp $
+
+  9 Apr 2002; M.Schlemmer <azarah@gentoo.org> gnome-print-0.35-r3.ebuild :
+
+  Libtoolize to prevent possible relink problems, as well as invalid paths
+  in .la files.
 
 *gnome-print-0.35-r3 (3 Apr 2002)
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.4 2002/04/03 11:14:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.5 2002/04/09 22:39:28 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME printing library"
@@ -29,9 +29,9 @@ src_unpack() {
 }
 
 src_compile() {
+	libtoolize --copy --force
 
-	local myconf
-
+	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
 
 	./configure --host=${CHOST} \
