@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/cpuburn/cpuburn-1.4.ebuild,v 1.4 2003/06/29 15:43:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/cpuburn/cpuburn-1.4.ebuild,v 1.5 2004/02/22 17:54:16 agriffis Exp $
 
 DESCRIPTION="This program is designed to heavily load CPU chips [testing purposes]"
 HOMEPAGE="http://users.ev1.net/~redelm/"
@@ -12,7 +12,7 @@ S="${WORKDIR}/${P}"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 -ppc -sparc  -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 
 RESTRICT="nostrip"
 DEPEND="sys-devel/gcc"

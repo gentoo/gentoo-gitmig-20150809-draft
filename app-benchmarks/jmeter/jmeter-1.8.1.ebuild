@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-1.8.1.ebuild,v 1.6 2003/12/16 02:30:39 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-1.8.1.ebuild,v 1.7 2004/02/22 17:56:37 agriffis Exp $
 
 S=${WORKDIR}/${PN}-${PV}
 P=jakarta-${PN}-${PV}
@@ -12,7 +12,7 @@ DEPEND=">=dev-java/sun-jdk-1.3.1"
 RDEPEND=">=dev-java/sun-jdk-1.3.1"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 -sparc -ppc -alpha -mips -hppa -arm"
+KEYWORDS="x86 -sparc -ppc -alpha -mips -hppa"
 IUSE="doc"
 
 src_compile () {
