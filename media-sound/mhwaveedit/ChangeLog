@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/mhwaveedit
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.1 2003/05/12 19:35:30 avenj Exp $
+
+*mhwaveedit-1.2.1 (12 May 2003)
+
+  12 May 2003; Jon Portnoy <avenj@gentoo.org> mhwaveedit-1.2.1.ebuild :
+  Initial import. Ebuild submitted by Karl Haines in bug #20776.
+  Thanks Karl!
