@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.114 2004/11/29 13:57:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.115 2004/12/01 00:48:27 eradicator Exp $
+
+  30 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-driver-1.0.7-r2.ebuild:
+  Stable sparc.
 
 *alsa-driver-1.0.7-r2 (29 Nov 2004)
 
