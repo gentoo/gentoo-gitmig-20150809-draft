@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rfb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rfb/ChangeLog,v 1.6 2003/03/25 23:31:14 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rfb/ChangeLog,v 1.7 2003/06/27 20:54:45 vapier Exp $
+
+*rfb-0.6.1-r2 (27 Jun 2003)
+
+  27 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Updated the daemon to be a real daemon ;)
+  This one actually unbinds std{in,out,err} and all that stuff.
+  THX WWOODS YOU MAST0R OF C
 
 *rfb-0.6.1-r1 (25 Mar 2003)
 

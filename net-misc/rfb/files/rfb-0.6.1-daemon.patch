@@ -1,5 +1,5 @@
---- lib/rfbServer.cc.orig	2003-01-18 02:35:37.000000000 -0500
-+++ lib/rfbServer.cc	2003-01-18 02:49:07.000000000 -0500
+--- lib/rfbServer.cc.orig	2003-06-27 16:39:09.000000000 -0400
++++ lib/rfbServer.cc	2003-06-27 16:39:58.000000000 -0400
 @@ -29,9 +29,11 @@
  using std::cout;
  using std::endl;
@@ -48,8 +48,8 @@
        cerr << "encoding: " << (int) encodings.encoding[encodings.count] << endl;
        encodings.count = encodings.count + 1;
        data = (unsigned char*) &(encodings.encoding[encodings.count]);
---- include/rfbServer.h.orig	2003-01-18 02:39:38.000000000 -0500
-+++ include/rfbServer.h	2003-01-18 02:57:31.000000000 -0500
+--- include/rfbServer.h.orig	2003-06-27 16:39:19.000000000 -0400
++++ include/rfbServer.h	2003-06-27 16:39:58.000000000 -0400
 @@ -342,6 +342,7 @@
    void ResetBlocks();
    void DeleteBlocks();
@@ -58,8 +58,8 @@
  
    Block *blocks;
    unsigned int blockWidth, blockHeight;
---- x0rfbserver/x0rfbserver.cc.orig	2003-01-18 01:15:47.000000000 -0500
-+++ x0rfbserver/x0rfbserver.cc	2003-01-18 02:59:23.000000000 -0500
+--- x0rfbserver/x0rfbserver.cc.orig	2003-06-27 16:39:25.000000000 -0400
++++ x0rfbserver/x0rfbserver.cc	2003-06-27 16:43:54.000000000 -0400
 @@ -72,6 +72,7 @@
  OXClient *clientX;
  const OXWindow *root;
@@ -193,12 +193,18 @@
      } else printHelp_x0rfbserver();
    }
  
-@@ -920,6 +943,15 @@
+@@ -920,6 +943,21 @@
      break;
  
      
 +    case DAEMON: {
 +      if (fork()) { return; }
++      setsid();
++      if (fork()) { exit(0); }
++      chdir("/");
++      close(0);
++      close(1);
++      close(2);
 +      clientX = new OXClient;
 +      root = clientX->GetRoot();
 +      dpy = root->GetDisplay();
@@ -209,8 +215,8 @@
        
      case STDIO: {
        clientX = new OXClient;
---- x0rfbserver/XUpdateScanner.cc.orig	2003-01-18 02:07:02.000000000 -0500
-+++ x0rfbserver/XUpdateScanner.cc	2003-01-18 02:34:14.000000000 -0500
+--- x0rfbserver/XUpdateScanner.cc.orig	2003-06-27 16:39:30.000000000 -0400
++++ x0rfbserver/XUpdateScanner.cc	2003-06-27 16:39:58.000000000 -0400
 @@ -386,6 +386,7 @@
      }
    }
@@ -219,13 +225,13 @@
    cerr << "TILES: " << tilec << endl;
    
    if ( properties.showMousePointer ) {
---- x0rfbserver/XUpdateScanner.h.orig	2003-01-18 02:34:33.000000000 -0500
-+++ x0rfbserver/XUpdateScanner.h	2003-01-18 02:33:56.000000000 -0500
+--- x0rfbserver/XUpdateScanner.h.orig	2002-02-12 18:57:01.000000000 -0500
++++ x0rfbserver/XUpdateScanner.h	2003-06-27 16:39:58.000000000 -0400
 @@ -23,6 +23,7 @@
  
  
  #include "rfbServer.h"
 +extern bool isdaemon;
  
- namespace rfb {
  
+ namespace rfb {
