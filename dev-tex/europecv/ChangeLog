@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/europecv
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.1 2004/11/09 17:42:30 usata Exp $
+
+*europecv-20040603 (10 Nov 2004)
+
+  10 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +europecv-20040603.ebuild:
+  Initial import. Ebuild submitted by Thomas Leitner <thomas_leitner@gmx.at>;
+  bug #67520.
+
