@@ -1,7 +1,17 @@
-MD5 57aef4c5c9a05a98fcfe5afd9adfc163 ChangeLog 1373
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f7950d85bc53771a0318bb81dfc80158 ChangeLog 1481
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 86e70f4c99686288f5b126f9d0e9cdac spiralmodular-0.2.1.ebuild 1319
-MD5 731d01b073f243ff1f4c41fde15b6eed spiralmodular-0.2.2a.ebuild 1598
+MD5 e02674fa0ad0df94b280d85e99b35304 spiralmodular-0.2.2a.ebuild 1585
 MD5 f4e4b9a9232b868cf049bf9ae2c36535 files/digest-spiralmodular-0.2.1 71
 MD5 591854fbf03f041310ebc2752dcc6c9f files/digest-spiralmodular-0.2.2a 73
 MD5 88633a86b03d3e371fe880f098abee3f files/spiralmodular-0.2.1-gentoo.patch 962
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdMFuArHZZzCEUG0RAnj8AJ4zUGgze0f8qcjqGSKsj1LTryohagCfd+VH
+ckwYZsM1CBjERvKwuqQY3Cc=
+=et4R
+-----END PGP SIGNATURE-----
