@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/picptk
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picptk/ChangeLog,v 1.1 2003/10/20 09:51:31 robbat2 Exp $
+
+*picptk-0.5a (20 Oct 2003)
+
+  20 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  picptk-0.5a.ebuild, files/picptk-0.5a-headerfix.patch:
+  initial commit, package is still broken, needs more tcl/gcc3.3 fixes
+
