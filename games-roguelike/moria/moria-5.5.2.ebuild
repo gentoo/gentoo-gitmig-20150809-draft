@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.8 2004/10/31 05:16:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.9 2004/11/03 12:28:28 mr_bones_ Exp $
 
 inherit eutils gcc games
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="virtual/libc
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5"
 
 S="${WORKDIR}/umoria"
