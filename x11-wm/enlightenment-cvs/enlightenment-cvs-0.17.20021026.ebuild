@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021026.ebuild,v 1.1 2002/10/26 09:10:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021026.ebuild,v 1.2 2002/10/26 19:56:39 vapier Exp $
 
 IUSE="pic X mmx truetype opengl nls"
 
@@ -23,7 +23,8 @@ E_PREFIX=/usr/e17
 DEPEND="app-admin/fam-oss
 	dev-libs/libxml2
 	dev-libs/libpcre
-	dev-lang/ferite"
+	dev-lang/ferite
+	media-libs/imlib2"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 pkg_setup() {
