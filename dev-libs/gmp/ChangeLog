@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.38 2004/10/19 08:36:19 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.39 2004/11/01 19:50:46 pylon Exp $
+
+  01 Nov 2004; Lars Weiler <pylon@gentoo.org> gmp-4.1.4.ebuild:
+  Stable on ppc for PHP5, Bug #60442.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> gmp-4.1.3.ebuild:
   Stable on amd64.
