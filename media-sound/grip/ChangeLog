@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.23 2003/12/20 15:08:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.24 2004/01/03 15:26:55 mholzer Exp $
+
+*grip-3.1.4 (03 Jan 2004)
+
+  03 Jan 2004; Martin Holzer <mholzer@gentoo.org> grip-3.1.4.ebuild,
+  files/grip-3.1.4-cdda.patch:
+  Version bumped. Closes 36744
 
   20 Dec 2003; Guy Martin <gmsoft@gentoo.org> grip-3.1.3.ebuild:
   Marked stable on hppa.
