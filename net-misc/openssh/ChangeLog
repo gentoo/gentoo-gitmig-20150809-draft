@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.38 2003/04/02 18:47:31 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.39 2003/04/30 16:42:44 aliz Exp $
+
+*openssh-3.6.1_p2 (30 Apr 2003)
+
+  30 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> openssh-3.6.1_p2.ebuild :
+  Security update.
 
 *openssh-3.6.1_p1 (02 Apr 2003)
 
