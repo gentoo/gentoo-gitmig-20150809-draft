@@ -1,6 +1,11 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # System-wide defaults for the Portage system
 
+#Experimental: trying to use these USE variables to build up from stage 2->3 
+#thus eliminating the inherent fragility of using USE for this
+
+GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
+
 ARCH="sparc"
 
 # Host type
