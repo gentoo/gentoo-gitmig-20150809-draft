@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.1 2003/10/30 17:14:37 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.2 2004/04/01 22:08:35 vapier Exp $
 #
 # Author: Max Kalika <max@gentoo.org>
 #
@@ -33,7 +33,7 @@ gen_cnf() {
 	SSL_COUNTRY="${SSL_COUNTRY:-US}"
 	SSL_STATE="${SSL_STATE:-California}"
 	SSL_LOCALITY="${SSL_LOCALITY:-Santa Barbara}"
-	SSL_ORGANIZATION="${SSL_ORGANIZTION:-SSL Server}"
+	SSL_ORGANIZATION="${SSL_ORGANIZATION:-SSL Server}"
 	SSL_UNIT="${SSL_UNIT:-For Testing Purposes Only}"
 	SSL_COMMONNAME="${SSL_COMMONNAME:-localhost}"
 	SSL_EMAIL="${SSL_EMAIL:-root@localhost}"
