@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.36 2003/12/09 06:21:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.37 2003/12/14 22:42:39 azarah Exp $
+
+  15 Dec 2003; Martin Schlemmer <azarah@gentoo.org> pam-0.77.ebuild:
+  Mark unstable for all.
 
   09 Dec 2003; Chris PeBenito <pebenito@gentoo.org> pam-0.77.ebuild:
   Update SELinux patch in patch tarball.
