@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6.ebuild,v 1.4 2004/02/17 15:37:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6.ebuild,v 1.5 2004/02/25 22:09:21 agriffis Exp $
 
 IUSE="ssl nls slang crypt imap mbox nntp vanilla"
 
@@ -51,7 +51,6 @@ src_unpack() {
 		epatch ${DISTDIR}/${compressed_patch}
 		epatch ${DISTDIR}/${edit_threads_patch}
 		epatch ${DISTDIR}/${mbox_hook_patch}
-		use slang && epatch ${FILESDIR}/slang.patch
 		if use nntp; then
 			epatch ${DISTDIR}/${nntp_patch}
 			# I don't know how much of this is truly necessary, but it
@@ -63,6 +62,9 @@ src_unpack() {
 			autoconf						|| die "autoconf failed"
 		fi
 	fi
+
+	# Fix a slang problem that is already fixed in upstream cvs
+	epatch ${FILESDIR}/slang.patch
 }
 
 src_compile() {
