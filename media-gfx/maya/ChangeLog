@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/maya
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.9 2004/06/08 02:20:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.10 2004/06/18 19:41:32 eradicator Exp $
+
+  18 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> maya-5.0.1-r1.ebuild,
+  maya-6.0.ebuild:
+  Preliminary amd64 support... Docs don't work right because of funky java.
 
 *maya-6.0 (07 Jun 2004)
 
