@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.45 2004/10/26 13:50:12 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.46 2004/11/22 15:24:17 kosmikus Exp $
+
+  22 Nov 2004; Andres Loeh <kosmikus@gentoo.org> +files/ghc-updater,
+  ghc-6.2.2.ebuild:
+  Modified ebuild to use ghc-package.eclass (bug #69270) and to include
+  ghc-updater script (bug #69142).
 
   26 Oct 2004; Andres Loeh <kosmikus@gentoo.org> ghc-6.2.2.ebuild:
   Modified CFLAG testing code, following discussion in bug #59709.

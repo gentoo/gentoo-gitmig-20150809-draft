@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.5 2004/11/10 18:32:41 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.6 2004/11/22 15:24:17 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -14,7 +14,7 @@
 # can be removed once an forall after the first succesful install
 # of ghc.
 
-inherit base flag-o-matic eutils
+inherit base flag-o-matic eutils ghc-package
 
 IUSE="doc tetex opengl"
 
@@ -38,6 +38,7 @@ DEPEND="virtual/ghc
 	>=sys-apps/sed-3.02.80
 	>=sys-devel/flex-2.5.4a
 	>=dev-libs/gmp-4.1
+	>=sys-libs/readline-4.2
 	doc? ( >=app-text/openjade-1.3.1
 		>=app-text/sgml-common-0.6.3
 		~app-text/docbook-sgml-dtd-3.1
@@ -53,10 +54,8 @@ RDEPEND="virtual/libc
 	>=sys-devel/gcc-2.95.3
 	>=dev-lang/perl-5.6.1
 	>=dev-libs/gmp-4.1
+	>=sys-libs/readline-4.2
 	opengl? ( virtual/opengl virtual/glu virtual/glut )"
-
-# extend path to /opt/ghc/bin to guarantee that ghc-bin is found
-GHCPATH="${PATH}:/opt/ghc/bin"
 
 SUPPORTED_CFLAGS=""
 
@@ -118,7 +117,7 @@ src_compile() {
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...
 	# (--enable-threaded-rts is no longer needed)
-	PATH="${GHCPATH}" SGML_CATALOG_FILES="" econf \
+	SGML_CATALOG_FILES="" econf \
 		${myconf} || die "econf failed"
 
 	# the build does not seem to work all that
@@ -155,11 +154,14 @@ src_install () {
 	fi
 	echo SGMLDocWays="${mydoc}" >> mk/build.mk
 
+	# the libdir0 setting is needed for amd64, and does not
+	# harm for other arches
 	emake -j1 ${insttarget} \
 		prefix="${D}/usr" \
 		datadir="${D}/usr/share/doc/${PF}" \
 		infodir="${D}/usr/share/info" \
 		mandir="${D}/usr/share/man" \
+		libdir0="${D}/usr/$(get_libdir)" \
 		|| die "make ${insttarget} failed"
 
 	#need to remove ${D} from ghcprof script
@@ -171,10 +173,17 @@ src_install () {
 
 	cd ${S}/ghc
 	dodoc README ANNOUNCE LICENSE VERSION
-}
 
+	dosbin ${FILESDIR}/ghc-updater
+}
 
 pkg_postinst () {
+	ghc-reregister
 	einfo "If you have dev-lang/ghc-bin installed, you might"
-	einfo "want to unmerge it again. It is no longer needed."
+	einfo "want to unmerge it. It is no longer needed."
+	einfo " "
+	ewarn "If you upgrade from another ghc version, please run"
+	ewarn "/usr/sbin/ghc-updater to re-merge all ghc-based"
+	ewarn "Haskell libraries."
 }
+
