@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3.ebuild,v 1.4 2003/12/08 10:35:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3.ebuild,v 1.5 2004/03/06 12:52:35 lanius Exp $
 
 IUSE="snmp mysql postgres ldap kerberos ssl pam"
 
@@ -13,7 +13,7 @@ KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-RDEPEND="virtual/glibc
+DEPEND="virtual/glibc
 	sys-devel/libtool
 	>=sys-libs/db-3.2
 	sys-libs/gdbm
@@ -27,16 +27,12 @@ RDEPEND="virtual/glibc
 	frxp? ( dev-lang/python
 			dev-lang/perl )"
 
-DEPEND="${RDEPEND}"
-
 src_unpack() {
-
-	cd ${WORKDIR}
 	unpack ${MY_PN}.tar.gz
 	cd ${S}
 
+	export WANT_AUTOCONF=2.1
 	autoconf
-
 }
 
 src_compile() {
@@ -86,11 +82,9 @@ src_compile() {
 		${myconf} || die
 
 	make || die
-
 }
 
 src_install() {
-
 	dodir /etc/raddb
 
 	make R=${D} install || die
@@ -108,7 +102,6 @@ src_install() {
 	keepdir /var/run/radiusd
 	keepdir /var/log/radius
 	keepdir /var/log/radius/radacct
-
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/freeradius
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.10 2003/12/08 10:35:22 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.11 2004/03/06 12:52:35 lanius Exp $
+
+  06 Mar 2004; Heinrich Wendel <lanius@gentoo.org> freeradius-0.8.1.ebuild,
+  freeradius-0.9.0.ebuild, freeradius-0.9.3.ebuild:
+  fix bug #43318 (needs automake 2.1); remove old versions
 
   08 Dec 2003; Heinrich Wendel <lanius@gentoo.org> freeradius-0.9.0.ebuild,
   freeradius-0.9.3.ebuild:
