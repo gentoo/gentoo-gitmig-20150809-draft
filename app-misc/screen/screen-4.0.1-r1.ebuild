@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r1.ebuild,v 1.5 2003/12/13 16:58:56 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r1.ebuild,v 1.6 2003/12/14 09:13:18 rajiv Exp $
 
 inherit flag-o-matic
 
@@ -74,8 +74,8 @@ src_compile() {
 src_install () {
 	dobin screen || die "dobin failed"
 	keepdir /var/run/screen
-	fperms 2755 /usr/bin/screen
 	fowners root:utmp /{usr/bin,var/run}/screen
+	fperms 2755 /usr/bin/screen
 
 	insinto /usr/share/terminfo ; doins terminfo/screencap
 	insinto /usr/share/screen/utf8encodings ; doins utf8encodings/??
