@@ -1,7 +1,7 @@
 # Author: David Goodger
 # Contact: goodger@users.sourceforge.net
-# Revision: $Revision: 1.1 $
-# Date: $Date: 2003/06/01 03:57:44 $
+# Revision: $Revision: 1.2 $
+# Date: $Date: 2003/06/04 19:39:20 $
 # Copyright: This module has been placed in the public domain.
 
 """
@@ -33,8 +33,8 @@ class Headers(Transform):
     default_priority = 360
 
     pep_url = 'glep-%04d.html'
-    pep_cvs_url = ('http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/python/'
-                   'python/nondist/peps/pep-%04d.txt')
+    pep_cvs_url = ('http://cvs.gentoo.org/cgi-bin/viewcvs.cgi/gentoo/'
+                   'xml/htdocs/proj/en/glep/glep-%04d.txt')
     rcs_keyword_substitutions = (
           (re.compile(r'\$' r'RCSfile: (.+),v \$$', re.IGNORECASE), r'\1'),
           (re.compile(r'\$[a-zA-Z]+: (.+) \$$'), r'\1'),)
@@ -127,7 +127,7 @@ class Headers(Transform):
                     para[:] = [nodes.reference('', date, refuri=cvs_url)]
             elif name == 'content-type':
                 pep_type = para.astext()
-                uri = self.pep_url % 12
+                uri = self.pep_url % 2
                 para[:] = [nodes.reference('', pep_type, refuri=uri)]
             elif name == 'version' and len(body):
                 utils.clean_rcs_keywords(para, self.rcs_keyword_substitutions)

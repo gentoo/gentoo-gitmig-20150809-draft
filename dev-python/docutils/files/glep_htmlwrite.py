@@ -1,7 +1,7 @@
 # Author: David Goodger
 # Contact: goodger@users.sourceforge.net
-# Revision: $Revision: 1.2 $
-# Date: $Date: 2003/06/01 14:00:11 $
+# Revision: $Revision: 1.3 $
+# Date: $Date: 2003/06/04 19:39:20 $
 # Copyright: This module has been placed in the public domain.
 
 """
@@ -69,7 +69,7 @@ class Writer(html4css1.Writer):
         if pyhome == '..':
             subs['pepindex'] = '.'
         else:
-            subs['pepindex'] = pyhome + '/glep/'
+            subs['pepindex'] = 'http://www.gentoo.org/proj/en/glep'
         index = self.document.first_child_matching_class(nodes.field_list)
         header = self.document[index]
         pepnum = header[0][1].astext()
