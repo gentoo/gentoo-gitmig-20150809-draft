@@ -3,9 +3,9 @@ MD5 c13f86b0bdfdfc84a48cd2750e659856 phppgadmin-2.4.1-r1.ebuild 1003
 MD5 93bbe85d55f716aa86b1b703b70dda92 phppgadmin-3.0.0-r2.ebuild 904
 MD5 db1528ece5f3e516cce9bc0015ed92fe phppgadmin-3.0.0.ebuild 830
 MD5 e54784f92bde3c49c5ab0cc4d6349116 phppgadmin-2.4.2.ebuild 1004
-MD5 af92f6edc6f146e56cd0c053c3da6623 phppgadmin-3.0.0-r4.ebuild 949
+MD5 93b6eb332eb5b846b18f058c4f7a6f7d phppgadmin-3.0.0-r4.ebuild 932
 MD5 abdaa95f0860c491494d5d48a95b0a3f phppgadmin-3.0.0-r1.ebuild 909
-MD5 3f088b4d3f8cc76677e1add48ed98b3a ChangeLog 1436
+MD5 01e07b777197145aef38f15612f9941b ChangeLog 1583
 MD5 4318c584c4e9e5f9ed0f93613d36f112 files/digest-phppgadmin-2.4.2 68
 MD5 1b8a922fb44cbec3327e8edc591d59bb files/digest-phppgadmin-3.0.0 75
 MD5 1b8a922fb44cbec3327e8edc591d59bb files/digest-phppgadmin-3.0.0-r1 75
