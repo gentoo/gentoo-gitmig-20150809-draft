@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.2.ebuild,v 1.2 2002/12/23 06:46:58 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.2.ebuild,v 1.3 2002/12/23 07:04:38 drobbins Exp $
 
 DESCRIPTION="Console-based application to efficiently save raw partition data to an image file. Optional encryption/compression support."
 HOMEPAGE="http://www.partimage.org/"
@@ -13,7 +13,7 @@ IUSE="ssl"
 RDEPEND="virtual/glibc
     >=sys-libs/zlib-1.1.4
     >=dev-libs/lzo-1.08
-    >=dev-libs/newt-0.50.35
+    >=dev-libs/newt-0.50.35-r1
     >=sys-libs/slang-1.4.5-r2
     ssl? ( >=dev-libs/openssl-0.9.6g )"
 
