@@ -119,8 +119,9 @@ tcpd - Adds support for TCP wrappers
 tetex - Adds support for teTeX
 tiff - Adds support for the tiff image format
 truetype - Adds support for FreeType and/or FreeType2 fonts
-trusted - Used by pcmcia-cs at present
+trusted - used by pcmcia-cs to see if a regular user can add and remove pcmcia cards
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.
+wavelan - Tells pcmcia-cs that you want to use the built-in wvlan drivers instead of the Orinoco drivers
 X - Adds support for XFree86
 xface - Adds xface support -- only in use for sylpheed and sylpheed-claws
 xml - Check/Support flag for XML library (version 1)
