@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.0.ebuild,v 1.2 2001/06/08 01:08:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.0.ebuild,v 1.3 2002/04/07 13:43:27 gbevin Exp $
 
 A="docbk40.zip"
 S=${WORKDIR}/${P}
@@ -12,6 +12,8 @@ HOMEPAGE="http://www.oasis-open.org/docbook/sgml/${PV}/index.html"
 
 DEPEND=">=app-arch/unzip-5.41"
 RDEPEND="app-text/sgml-common"
+
+SLOT="4.0"
 
 src_unpack() {
   mkdir ${S}
