@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/sdl-perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.15 2004/12/15 15:00:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.16 2004/12/21 12:38:47 mcummings Exp $
+
+*sdl-perl-2.1.2-r1 (21 Dec 2004)
+
+  21 Dec 2004; Michael Cummings <mcummings@gentoo.org>
+  +sdl-perl-2.1.2-r1.ebuild:
+  Revision bump because of missing dependancies. Gentoo Devs - please either
+  confirm you have all the deps before committing or check with a perl herd
+  member.
 
   15 Dec 2004; Mike Frysinger <vapier@gentoo.org> +sdl-perl-2.1.2.ebuild:
   Version bump.
