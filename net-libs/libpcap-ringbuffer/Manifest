@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9d24a2395bb628a3571b1968aa31ad2a libpcap-ringbuffer-1.0.20041001.ebuild 1661
+MD5 c14eecc39f9e4d6b37b94f4e81df755d metadata.xml 257
+MD5 3fa20c2ffeef0c01b8d594809426ee41 ChangeLog 470
+MD5 a515448deadd95cb78cacf175a0aeba4 files/digest-libpcap-ringbuffer-1.0.20041001 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB8gVTmdTrptrqvGERAtUfAKCYD0jwu+89lDBmvbvkxRufUu5TyACdEB0W
+YmPrOEEJERcJewmJuZHWnA0=
+=Fj8K
+-----END PGP SIGNATURE-----
