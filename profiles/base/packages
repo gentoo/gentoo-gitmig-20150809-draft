@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.27 2005/02/20 03:05:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.28 2005/03/01 23:29:32 solar Exp $
 
 # Gentoo Base Profile
 
@@ -35,7 +35,7 @@
 *net-misc/iputils
 *net-misc/rsync
 *net-misc/wget
-*sys-apps/baselayout
+*virtual/baselayout
 *sys-apps/coreutils
 *sys-apps/debianutils
 *sys-apps/diffutils
