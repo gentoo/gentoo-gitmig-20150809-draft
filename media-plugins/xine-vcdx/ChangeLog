@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xine-vcdx
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/ChangeLog,v 1.6 2004/06/24 23:36:22 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/ChangeLog,v 1.7 2005/02/02 21:50:41 luckyduck Exp $
+
+  02 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> xine-vcdx-1_rc1-r1.ebuild:
+  changed vcdimager dependency, fixed #53913
 
   13 May 2004; David Holm <dholm@gentoo.org> xine-vcdx-1_rc1-r1.ebuild:
   Added to ~ppc.
