@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.4.ebuild,v 1.1 2002/05/06 19:57:08 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.4.ebuild,v 1.2 2002/05/07 00:13:45 blocke Exp $
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://www.samba.org"
 
 S=${WORKDIR}/${P}
-SRC_URI="http://us1.samba.org/samba/ftp/${P}.tar.gz"
+SRC_URI="http://us2.samba.org/samba/ftp/${P}.tar.gz"
 
 RDEPEND="virtual/glibc
 	>=sys-libs/pam-0.72
