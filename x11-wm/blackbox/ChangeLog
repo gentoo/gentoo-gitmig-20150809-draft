@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.22 2003/02/12 09:50:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.23 2003/09/25 18:05:31 mholzer Exp $
+
+  26 Sep 2003; Martin Holzer <mholzer@gentoo.org> blackbox-0.65.0-r1.ebuild:
+  added more docs. Closes #29560.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
