@@ -1,3 +1,4 @@
+MD5 c9766491a8270fb08a58c5a9486b4999 xfcalendar-4.1.99.2.ebuild 796
 MD5 400580be297a18d3110902c9c1e5b004 xfcalendar-0.1.9.ebuild 908
 MD5 083d4222385d3a6714eae6cd9d82c3bd xfcalendar-4.1.91.ebuild 794
 MD5 f3e77bbd0676ae802c87d4f136330ac6 xfcalendar-0.1.6.ebuild 827
@@ -10,5 +11,6 @@ MD5 96ccbcd1888a4ceff37f93fdc83e8ab8 files/digest-xfcalendar-0.1.6 68
 MD5 bfde7fbf93fd396d5dcef9c039375e66 files/digest-xfcalendar-0.1.8 68
 MD5 3d32c35a893af6e0a6a859974e561d41 files/digest-xfcalendar-0.1.9 68
 MD5 9259e74d4617b376f8643df2d45139cb files/digest-xfcalendar-4.1.99.1 71
+MD5 8147645c1ed9a3c315cbdbe05471c993 files/digest-xfcalendar-4.1.99.2 71
 MD5 445d638558ecc6323df686526aef57ed files/digest-xfcalendar-4.1.90 69
 MD5 6afd41553c184e4545a35cfd03067f28 files/digest-xfcalendar-4.1.91 69
