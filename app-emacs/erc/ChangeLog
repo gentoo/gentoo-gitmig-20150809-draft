@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/erc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.4 2003/05/02 18:37:58 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.5 2003/11/02 21:44:19 jbms Exp $
+
+*erc-4.0_rc2-r1 (02 Nov 2003)
+
+  02 Nov 2003; Jeremy Maitin-Shepard <jbms@gentoo.org> erc-4.0_rc2-r1.ebuild,
+  files/50erc-gentoo.el:
+  Changed 50erc-gentoo.el to load erc-auto.el.  `src_install' was changed
+	to reuse code in elisp.eclass.
 
 *erc-4.0_rc2 (02 May 2003)
 
