@@ -1,26 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 11f83de3d100083dec4fa85c3a929f78 libxklavier-1.03.ebuild 949
-MD5 22f8e44f4a1b8f783a8238cc9c095a1c libxklavier-2.0.ebuild 958
-MD5 0b9fa15c14ed4e6fb0173003a48d7a20 ChangeLog 3865
-MD5 5a267a38ce83469d40f7eb2e28de500d libxklavier-1.02.ebuild 941
 MD5 ddfe99faedd0be2841fd37eacdc38112 libxklavier-1.04.ebuild 999
-MD5 26aaee28fa7db5afc206491de549def4 libxklavier-1.04-r1.ebuild 1071
-MD5 e25e334ceafe0426056d920a3ead52c3 files/digest-libxklavier-1.03 68
-MD5 554177dc558823391aea91515efb3902 files/sun-keymaps-102.patch 687
-MD5 da5387283d8b989c1809f27825f60310 files/digest-libxklavier-2.0 67
+MD5 22f8e44f4a1b8f783a8238cc9c095a1c libxklavier-2.0.ebuild 958
+MD5 11f83de3d100083dec4fa85c3a929f78 libxklavier-1.03.ebuild 949
+MD5 18daabb0dfae6c127c908e8f1878654f ChangeLog 3960
+MD5 5a267a38ce83469d40f7eb2e28de500d libxklavier-1.02.ebuild 941
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 173b5a685b23c488a0ed03814180569f libxklavier-1.04-r1.ebuild 1071
 MD5 31529efcf0188518d362d24a148c74b5 files/libxklavier-1.04-fix_free.patch 301
-MD5 10d8c674e282f71c1dd0e11903e86e7d files/sun.xml 4572
 MD5 95f50dc00a9778b6f862c56e0c990b3f files/sun-keymaps.patch 940
-MD5 6b672d420ef40c97961975eb5be760e2 files/digest-libxklavier-1.04-r1 68
+MD5 10d8c674e282f71c1dd0e11903e86e7d files/sun.xml 4572
+MD5 da5387283d8b989c1809f27825f60310 files/digest-libxklavier-2.0 67
+MD5 554177dc558823391aea91515efb3902 files/sun-keymaps-102.patch 687
 MD5 2ee4cc635af9abc1de963e4d38525430 files/digest-libxklavier-1.02 68
+MD5 e25e334ceafe0426056d920a3ead52c3 files/digest-libxklavier-1.03 68
 MD5 6b672d420ef40c97961975eb5be760e2 files/digest-libxklavier-1.04 68
+MD5 6b672d420ef40c97961975eb5be760e2 files/digest-libxklavier-1.04-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCMf6HKRy60XGEcJIRArwEAKCMIVNBUyZ9GTA5r7iBsm47bppmkACfdzI4
-jkvSIlu74YMIl9XDFzEn4ug=
-=fVpo
+iD8DBQFCQzD1M+I1L6GK/u4RAszIAJ9jJZ3qslC55ffhwcALVq/cdVHb0gCcDTOt
+NI3i+57omdQdWLkZuuTNdec=
+=KkxT
 -----END PGP SIGNATURE-----
