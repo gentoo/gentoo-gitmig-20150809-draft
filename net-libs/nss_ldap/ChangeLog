@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nss_ldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.4 2002/10/02 23:09:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.5 2002/10/13 12:12:09 aliz Exp $
+
+*nss_ldap-2002 (13 Oct 2002)
+
+  13 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
 *nss_ldap-174-r2 (16 Jun 2002)
 
