@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.13 2005/03/14 23:01:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.14 2005/03/19 22:56:07 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -43,7 +43,7 @@ RESTRICT="nostrip"
 DEPEND="sys-devel/gcc
 	virtual/os-headers"
 RDEPEND=""
-PROVIDE="virtual/libc"
+[[ ${CTARGET} == ${CHOST} ]] && PROVIDE="virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 
