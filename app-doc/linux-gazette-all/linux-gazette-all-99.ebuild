@@ -3,7 +3,7 @@
 # $Header:
 
 DESCRIPTION="Linux Gazette - all issues"
-HOMEPAGE="http://www.linuxgazette.com/"
+HOMEPAGE="http://linuxgazette.net/"
 SRC_URI=""
 
 LICENSE="OPL"
@@ -98,4 +98,9 @@ RDEPEND="
 	=app-doc/linux-gazette-92
 	=app-doc/linux-gazette-93
 	=app-doc/linux-gazette-94
+	=app-doc/linux-gazette-95
+	=app-doc/linux-gazette-96
+	=app-doc/linux-gazette-97
+	=app-doc/linux-gazette-98
+	=app-doc/linux-gazette-99
 	"
