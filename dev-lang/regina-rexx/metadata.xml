@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<longdescription>
+Regina is a Rexx interpreter. Rexx is a programming language that was designed to be easy to use for inexperienced programmers yet powerful enough for experienced users. It is also a language ideally suited as a macro language for other applications.
+</longdescription>
+</pkgmetadata>
