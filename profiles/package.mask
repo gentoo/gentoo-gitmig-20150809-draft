@@ -24,7 +24,8 @@
 # <rac@gentoo.org> (17 July 2003) 
 # emergency mask because of confirmed reports of compilation failure 
 # see bug 24570 
->dev-libs/dvnet-0.9.4 
+# >dev-libs/dvnet-0.9.4 
+# should be solved now - masked unstable for further testing <pvdabeel@gentoo.org> (18 July 2003)
 
 # <naz@gentoo.org> (16 July 2003)
 # the cvs of gift is broken
