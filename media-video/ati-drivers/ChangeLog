@@ -1,6 +1,14 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.25 2003/10/28 01:40:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.26 2003/12/30 01:20:13 azarah Exp $
+
+*ati-drivers-3.7.0 (30 Dec 2003)
+
+  30 Dec 2003; Martin Schlemmer <azarah@gentoo.org> ati-drivers-3.7.0.ebuild,
+  files/fglrx-3.7.0-fix-fglrx_panel-includes.patch:
+  Update version.  This closes bug #36743, with thanks for ebuild and patch
+  to Alex Plank <aplank@notsohotmail.com>.  Further did a major overhaul of
+  the ebuild - lots of cleanups and form fixes.
 
   28 Oct 2003; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.8.ebuild:
   Marked x86.
