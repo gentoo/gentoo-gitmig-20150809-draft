@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doom3
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/ChangeLog,v 1.6 2004/11/26 21:28:57 wolf31o2 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/ChangeLog,v 1.7 2005/01/13 18:42:39 wolf31o2 Exp $
+
+  13 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> doom3-1.1.1286.ebuild:
+  Fixed RDEPEND for amd64.
 
 *doom3-1.1.1286 (26 Nov 2004)
 

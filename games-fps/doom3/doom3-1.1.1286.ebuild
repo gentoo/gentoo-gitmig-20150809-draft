@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.1.1286.ebuild,v 1.1 2004/11/26 21:28:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.1.1286.ebuild,v 1.2 2005/01/13 18:42:39 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -20,10 +20,7 @@ DEPEND="app-arch/bzip2
 RDEPEND="virtual/libc
 	opengl? ( virtual/opengl )
 	dedicated? ( app-misc/screen )
-	alsa? ( >=media-libs/alsa-lib-1.0.6 )
-	amd64? ( app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-nvidia	)"
+	alsa? ( >=media-libs/alsa-lib-1.0.6 )"
 
 S=${WORKDIR}
 
