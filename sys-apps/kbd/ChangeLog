@@ -1,11 +1,11 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.17 2003/08/06 20:58:34 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.18 2003/08/08 01:40:08 pvdabeel Exp $
 
 *kbd-1.08-r2 (02 Aug 2003)
 
   06 Aug 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> kbd-1.08-r2.ebuild,
-  marked -ppc for now: loading a keymap fails with 'flex input failed' 
+  marked -ppc for now: loading a non-us keymap fails with 'flex input failed' 
 
   02 Aug 2003; Martin Schlemmer <azarah@gentoo.org> kbd-1.08-r2.ebuild,
   files/kbd-1.08-kbd_repeat.patch:
@@ -22,7 +22,7 @@
 *kbd-1.08-r1 (29 Jul 2003)
 
   06 Aug 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> kbd-1.08-r2.ebuild,
-  marked -ppc for now: loading a keymap fails with 'flex input failed' 
+  marked -ppc for now: loading a non-us keymap fails with 'flex input failed' 
 
   29 Jul 2003; Martin Schlemmer <azarah@gentoo.org> kbd-1.08-r1.ebuild:
   New configure script is even more broken than before - we should not add the
