@@ -20,7 +20,8 @@ divert(-1)
 #
 
 divert(0)dnl
-VERSIONID(`$Id: sendmail.mc,v 1.1 2002/06/12 19:15:55 g2boojum Exp $')
+include(`/usr/share/sendmail-cf/m4/cf.m4')dnl
+VERSIONID(`$Id: sendmail.mc,v 1.2 2002/07/04 04:55:29 g2boojum Exp $')dnl
 OSTYPE(linux)dnl
 DOMAIN(generic)dnl
 FEATURE(`smrsh',`/usr/sbin/smrsh')dnl
