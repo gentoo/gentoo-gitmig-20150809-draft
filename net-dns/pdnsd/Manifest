@@ -1,4 +1,4 @@
-MD5 f422fc7d13f4153c3b0779ce3cdfa8fe ChangeLog 2959
+MD5 20270a168c99ff765639500b1ee9a20f ChangeLog 3083
 MD5 cd82be4729ad0da13f8e5e396dd29840 metadata.xml 437
 MD5 26bca7b616a2442959308de230497400 pdnsd-1.1.6-r7.ebuild 993
 MD5 a415c002ad5217367da41f607bf6cad6 pdnsd-1.1.7a.ebuild 990
@@ -7,6 +7,6 @@ MD5 41ac34a42c237516c92dc74df21a09ce pdnsd-1.1.10.ebuild 3105
 MD5 0be52a5ffe250606d96898f3936bc249 files/digest-pdnsd-1.1.6-r7 64
 MD5 729266103aee86613f32b6e39c03172f files/digest-pdnsd-1.1.7a 65
 MD5 2f4f436df1064eb21409e1ef613be068 files/digest-pdnsd-1.1.9 67
-MD5 257d8a4508a950c8a742eb669197bb28 files/pdnsd.online 475
-MD5 f8afdf462390be0aa19d19c93b7a2c6a files/pdnsd.rc6 790
-MD5 9f2d13f1058a1ea390762faef91772a8 files/digest-pdnsd-1.1.10 68
+MD5 d5e1cbb93d8bb06254e9daac8df76d8d files/pdnsd.online 459
+MD5 a42f0239bb9aee4cad5d2e79dc1ada63 files/pdnsd.rc6 762
+MD5 104a9136d4e55e47186ebcc1511b9f93 files/digest-pdnsd-1.1.10 68
