@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/mdadm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.21 2004/11/25 14:21:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.22 2004/12/05 20:20:54 vapier Exp $
+
+*mdadm-1.8.1 (05 Dec 2004)
+
+  05 Dec 2004; Mike Frysinger <vapier@gentoo.org> +files/mdadm.rc,
+  +mdadm-1.8.1.ebuild:
+  Version bump #71675 by Neil Bothwick. Make sure nroff isnt run #73389 by
+  Gustaf Björklund. Add init.d script #57321 by Remy Blank.
 
   25 Nov 2004; Guy Martin <gmsoft@gentoo.org> mdadm-1.7.0.ebuild:
   Stable on hppa.
