@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gliv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.8 2003/02/12 07:00:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.9 2003/03/24 04:20:40 drobbins Exp $
+
+*gliv-1.7 (23 Mar 2003)
+
+  23 Mar 2003; Daniel Robbins <drobbins@gentoo.org>: Updated version, fixed
+  dependencies as this new version doesn't support gtk+-1* anymore.
 
 *gliv-1.6 (17 Oct 2002)
 
