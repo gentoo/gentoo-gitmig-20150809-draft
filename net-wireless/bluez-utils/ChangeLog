@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.3 2003/02/21 03:59:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.4 2003/04/27 14:35:22 latexer Exp $
+
+*bluez-utils-2.3 (27 Apr 2003)
+
+  27 Apr 2003; Peter Johanson <latexer@gentoo.org> bluez-utils-2.3.ebuild:
+  Bump. Bug #18571. Thanks to Loke <faune@broadpark.no>
 
 *bluez-utils-2.2 (20 Feb 2003)
 
