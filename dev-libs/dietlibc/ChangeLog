@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.8 2003/02/12 06:02:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.9 2003/03/28 10:09:59 aliz Exp $
+
+*dietlibc-0.22 (28 Mar 2003)
+
+  28 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> dietlibc-0.22.ebuild :
+  Security update.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
