@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/tcb
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
+
+*tcb-0.9.7.4 (13 Aug 2002)
+
+  13 Aug 2002; Joachim Blaabjerg <styx@gentoo.org> tcb-0.9.7.4.ebuild :
+
+  Initial ebuild release. Wrote this on 19 Apr 2002, but didn't get it
+  committed until now. Talk about lazyness :P
