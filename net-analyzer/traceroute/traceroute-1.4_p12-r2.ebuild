@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.7 2004/06/24 22:22:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.8 2004/07/01 20:25:29 squinky86 Exp $
 
 inherit eutils gnuconfig
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm amd64"
 IUSE=""
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	>=sys-apps/sed-4"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.1_alpha3.ebuild,v 1.4 2004/06/24 22:20:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.1_alpha3.ebuild,v 1.5 2004/07/01 20:24:58 squinky86 Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=net-libs/libpcap-0.6.2-r1"
 
 RDEPEND="${DEPEND}"

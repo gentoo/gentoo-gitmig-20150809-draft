@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traffic-vis
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.7 2004/06/28 22:12:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.8 2004/07/01 20:25:59 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> traffic-vis-0.35.ebuild:
+  change virtual/glibc to virtual/libc
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> traffic-vis-0.35.ebuild:
   fix use invocation

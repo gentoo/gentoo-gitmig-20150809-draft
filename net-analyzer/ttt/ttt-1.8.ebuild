@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ttt-1.8.ebuild,v 1.3 2004/06/24 22:23:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ttt-1.8.ebuild,v 1.4 2004/07/01 20:27:38 squinky86 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="BSD"
 KEYWORDS="~x86"
 IUSE="ipv6"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	dev-lang/tcl
 	dev-lang/tk
