@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/quicktime4linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.10 2003/02/12 07:16:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.11 2003/06/13 23:17:39 seemant Exp $
+
+  13 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
+  quicktime4linux-1.5.5-r1.ebuild:
+  blocks virtual/quicktime, which libquicktime installs, closing bug #20709 by
+  Patrick Kursawe <phosphan@gentoo.org>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
