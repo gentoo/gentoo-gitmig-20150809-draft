@@ -1,0 +1,38 @@
+# ChangeLog for dev-lang/clean
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clean/ChangeLog,v 1.1 2002/07/18 22:05:59 karltk Exp $
+
+*clean-2.0.1 (18 Jul 2002)
+
+  18 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> clean-2.0.1.ebuild files/digest-clean-2.0.1 :
+ 
+  From the home page:
+
+  "
+  A Functional Programming Language like Clean is based on the concept
+  of mathematical functions. Clean is a pure functional language, there
+  is not such a thing as an assignment. This has a big advantage: a
+  function cannot have a side-effect. A Clean function is referential
+  transparent: the result of a function only depends on the value of
+  the function arguments and on nothing else.
+
+  This has important consequences:
+    o Once a function is working, it will always work. A functionwill
+      always react in the same way, regardless when and in which context
+      the function is used;
+    o One can reason about Clean functions and the Clean program as a
+      whole (which is a function application) by using traditional
+      mathematical reasoning: uniform substitution and mathematical
+      induction.
+
+  For making real world applications one needs of course to be able to
+  update a database, perform I/O, update an array destructively, pass a
+  message to another program. And, the application should run
+  efficiently enough. Although Clean does not have assignments, objects
+  can be updated destructively. Clean is the only functional language in
+  the world which has a special type system, uniqueness typing. This
+  type system is developed in Nijmegen. It enables to update function
+  arguments destructively retaining the purity of the language. 
+  "
+
+  Initial import.
