@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.19 2003/09/06 21:28:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.20 2003/11/05 01:19:57 brad_mssw Exp $
+
+  04 Nov 2003; Brad House <brad_mssw@gentoo.org> guile-1.4-r3.ebuild:
+  add amd64 flag
 
 *guile-1.6.4-r1 (06 Sep 2003)
 
