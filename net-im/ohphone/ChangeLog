@@ -1,0 +1,9 @@
+# ChangeLog for net-im/ohphone
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ohphone/ChangeLog,v 1.1 2003/09/03 10:35:59 liquidx Exp $
+
+*ohphone-1.4.1 (03 Sep 2003)
+
+  03 Sep 2003; Alastair Tse <liquidx@gentoo.org> ohphone-1.4.1.ebuild:
+  initial ebuild. thanks to roma1390 <roma1390@uosis.mif.vu.lt>
+
