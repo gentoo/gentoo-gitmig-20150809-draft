@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r1.ebuild,v 1.4 2004/12/04 08:46:37 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r1.ebuild,v 1.5 2005/01/06 20:41:01 gmsoft Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-faxcron_uid.patch
 	epatch ${FILESDIR}/${P}-tiff_version.patch
 	epatch ${FILESDIR}/configure-gcc-3.4.patch
+	epatch ${FILESDIR}/hylafax-4.2.0-fPIC.patch
 }
 
 src_compile() {
