@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/yammi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.20 2005/01/15 00:01:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.21 2005/01/29 17:06:03 greg_g Exp $
+
+  29 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> yammi-0.8.2.ebuild,
+  yammi-1.0-r1.ebuild, yammi-1.0.ebuild:
+  Proper usage of kde eclasses, to make sure KDEDIR is defined (#33079).
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> yammi-0.8.2.ebuild,
   yammi-1.0-r1.ebuild, yammi-1.0.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.16 2005/01/15 00:01:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.17 2005/01/29 17:06:03 greg_g Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils kde-functions
 
 DESCRIPTION="MP3/Ogg/Wav-Manager and Jukebox 4 XMMS/Noatun"
 HOMEPAGE="http://yammi.sourceforge.net/"
@@ -31,7 +31,8 @@ src_unpack() {
 }
 
 src_compile() {
-	addpredict ${QTDIR}/etc/settings/
+	set-qtdir 3
+	set-kdedir 3
 
 	# need to filter -fomit-frame-pointer for pentium II
 	is-flag "-march=pentium2" && filter-flags "-fomit-frame-pointer"
