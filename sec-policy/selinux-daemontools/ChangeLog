@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-daemontools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.4 2004/06/28 00:10:37 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.5 2004/10/23 09:07:54 kaiowas Exp $
+
+*selinux-daemontools-20041022 (23 Oct 2004)
+
+  23 Oct 2004; petre rodan <kaiowas@gentoo.org> metadata.xml,
+  +selinux-daemontools-20041022.ebuild:
+  added capability of supervising rsync and apache processes, minor
+  improvements, updated primary maintainer
 
 *selinux-daemontools-20040203 (03 Feb 2004)
 
