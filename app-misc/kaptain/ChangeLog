@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/kaptain
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kaptain/ChangeLog,v 1.1 2004/06/20 19:57:37 centic Exp $
+
+*kaptain-0.71 (20 Jun 2004)
+
+  20 Jun 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
+  +files/0.71-assert.patch, +kaptain-0.71.ebuild:
+  Add new Application, see Bug 53425
+
