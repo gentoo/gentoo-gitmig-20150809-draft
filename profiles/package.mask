@@ -499,17 +499,12 @@ dev-lang/tcl-tk
 =media-sound/xmms-1.2.7-r4
 =media-video/avi4xmms-0.1
 
-#seemant@gentoo.org 28 Mar 2002
-# gnome meeting has some issues with the sandbox
-#=net-im/gnomemeeting-0.84.0
-
 # moved theese to gphoto2
 =media-gfx/gphoto-2.0.0
 =media-gfx/gphoto-2.0.0-r1
 
 #seemant@gentoo.org 1 Apr 2002
 =media-video/drip-0.81
-=sys-apps/util-linux-2.11l-r1
 
 # jhhudso@gentoo.org 3 Apr 2002
 # This is the new version of shadow, needs more beta testing
