@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.62.ebuild,v 1.2 2004/04/19 11:29:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.62.ebuild,v 1.3 2004/05/17 18:13:40 kugelfang Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SRC_URI="http://nwdownloads.bioware.com/neverwinternights/linux/129/nwclient129.
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="nowin"
 RESTRICT="nostrip nomirror"
 
