@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.28 2003/11/17 18:01:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.29 2003/12/16 22:27:12 genone Exp $
+
+  16 Dec 2003; Marius Mauch <genone@gentoo.org> gettext-0.12.1.ebuild:
+  marking stable on x86
 
   17 Nov 2003; Aron Griffis <agriffis@gentoo.org> gettext-0.12.1.ebuild:
   Repair compilation on alpha when compaq-jdk/jre is installed
