@@ -1,10 +1,11 @@
 MD5 70af11249b648c110696363fb2ac241b wesnoth-0.8.ebuild 1115
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 7d005b13cef0a4660a993b3411a31eec ChangeLog 5339
+MD5 e5a5a1d9074f5a162da46823e8431f76 ChangeLog 5412
 MD5 a20d489d39fdf52c8303f30ee2284b84 wesnoth-0.8.1.ebuild 1117
 MD5 b28e4eb180684bc352b4835100ad800a wesnoth-0.8.2.ebuild 1156
 MD5 86c8e3d2d11112a6e293cbb39d5a32c3 wesnoth-0.8.4.ebuild 1237
 MD5 08a3449d1cb04c8e35c08c1ecc615255 wesnoth-0.8.5.ebuild 1384
+MD5 05c3fd9c6e7f0a68fee3a6f80e8c57d8 wesnoth-0.8.7.ebuild 1333
 MD5 c62eaa95b5f21678b071c39ae5b60f0c files/digest-wesnoth-0.8 65
 MD5 2bc8f6215be5ce7f59d5e7969ad042d1 files/digest-wesnoth-0.8.1 67
 MD5 b97ec5f679625aad3505bc806419bdf7 files/digest-wesnoth-0.8.2 67
@@ -12,3 +13,4 @@ MD5 7d789dd240ad3d907a8bda0efc0394ef files/digest-wesnoth-0.8.4 67
 MD5 69f93bd070c20b79508a17d466ae01fe files/0.8.4-conf.patch 1707
 MD5 5e435c79415e081c1f29e639fe8565a5 files/digest-wesnoth-0.8.5 67
 MD5 69f93bd070c20b79508a17d466ae01fe files/0.8.5-conf.patch 1707
+MD5 b06353437e93f7484c151125d36e5d73 files/digest-wesnoth-0.8.7 67
