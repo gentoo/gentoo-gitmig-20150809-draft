@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: George Shapovalov <george@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.2 2002/05/12 04:49:35 george Exp $
 
 S="${WORKDIR}"
 
@@ -15,12 +15,10 @@ HOMEPAGE="http://www.dtek.chalmers.se/~d3august/xt/"
 #that's the homepage for xtraceroute, not host, but that's best I can do
 #at least it is mentioned there
 
-DEPEND="x11-base/xfree
-	x11-libs/gtk+
-	net-misc/traceroute
-	x11-libs/gtkglarea
-	media-libs/gdk-pixbuf
-	net-misc/host"
+DEPEND="net-misc/bind-tools"
+#either bind or bind-tools will do,
+#but since bind-tools is just a partiall install of bind
+#there is no point in introducing new use var and doing PROVIDE dance..
 
 RDEPEND="${DEPEND}"
 
@@ -37,11 +35,13 @@ src_compile() {
 }
 
 src_install () {
-	#ATTN!!
-	#This util has slightly different format of output
-	#I will make it to install into /usr/local (both tool and man page)
-	#to let it coexist with host from bind
-	export DESTTREE=/usr/local/
-	dobin host
-	doman host.1
+	#ATTN!
+	#This util has slightly different format of output from "standard" host
+	#I will rename it to hostx, I hope this does not conflict with anything big
+	cd ${WORKDIR}
+	mv host hostx
+	mv host.1 hostx.1
+	dobin hostx
+	doman hostx.1
+	dodoc RE* 
 }
