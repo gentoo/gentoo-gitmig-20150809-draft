@@ -22,8 +22,11 @@
 ##
 
 # <seemant@gentoo.org> (23 Aug 2002)
-# masked for testing
+# masked for testing.  x3270 for version bump, and xmms for removal of avi
+# stuff
 =net-misc/x3270-3.2.19
+=media-sound/xmms-1.2.7-r13
+=media-video/avi4xmms-0.1-r2
 
 # <blizzy@gentoo.org> (23 Aug 2002)
 # masked for testing
