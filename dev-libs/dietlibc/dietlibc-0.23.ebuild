@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.23.ebuild,v 1.9 2004/07/14 14:15:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.23.ebuild,v 1.10 2004/07/20 06:21:36 eradicator Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -40,7 +40,7 @@ src_compile() {
 
 	if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc64" ]; then
 		cd ${S}
-		/usr/bin/sparc32 make
+		/usr/bin/sparc32 make || die
 	else
 		emake || die
 	fi

@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fe2bee59e2c75f4e253e9069d42c1325 ChangeLog 4567
+MD5 a38b3e68699be56cfbec1ca7d7be8431 ChangeLog 4690
 MD5 38e3d6d5a07b52b28a667d850d3cfe1c dietlibc-0.22-r2.ebuild 1667
-MD5 ebbfc614fb242e813eaa35429ef94172 dietlibc-0.23.ebuild 1756
+MD5 5100407ec03ec6e53d0b8507ed73a18d dietlibc-0.23.ebuild 1766
 MD5 3094bbd430e85329034c7a7cc26e49e7 dietlibc-0.24.ebuild 1527
-MD5 6d7429e88eda74e2e5a1d89dcda32c33 metadata.xml 400
 MD5 721c2cabf848750556eb82dc89bb9c0a dietlibc-0.25.ebuild 1571
+MD5 6d7429e88eda74e2e5a1d89dcda32c33 metadata.xml 400
 MD5 8de66752df8ab2859aa5fa2a544a09b7 dietlibc-0.26.ebuild 1573
 MD5 e33c0d8f3c56f85d1caa98118824fceb files/0.22-dirent-prototype.patch 563
 MD5 2d0f660abd258d75417ef8abd8ab5eb7 files/0.23-dirent-prototype.patch 668
 MD5 2d0f660abd258d75417ef8abd8ab5eb7 files/0.24-dirent-prototype.patch 668
+MD5 02d59156de2a7a0f914dc5769e26cdcf files/0.25-gcc34.patch 3454
 MD5 67b93dd4033c0e66d42b6bade33c73fc files/dietlibc-0.22_xdr_security_fix.patch 5566
 MD5 4713f8664ff94fb53c7696d9204406ed files/dietlibc-0.23-hppa.patch 3954
+MD5 8c25662fd30d966f24ec20ef491075a6 files/dietlibc-sparc64-makefile.patch 499
 MD5 2644f8611fcb7a147ec9ef76eaf5992a files/digest-dietlibc-0.22-r2 66
 MD5 b06d21ffc62c7a660a29351e55213a0b files/digest-dietlibc-0.23 66
 MD5 11048a235efe4eefcfffc4ccffa60821 files/digest-dietlibc-0.24 66
-MD5 9247251c0adc5ce1b626d7092ae0c903 files/gcc-33.patch 482
-MD5 8c25662fd30d966f24ec20ef491075a6 files/dietlibc-sparc64-makefile.patch 499
 MD5 a6911c79e510ea03173a809f5d7e6a40 files/digest-dietlibc-0.25 66
+MD5 9247251c0adc5ce1b626d7092ae0c903 files/gcc-33.patch 482
 MD5 4c8bea996353605b5d0b6184d8836ffe files/digest-dietlibc-0.26 66
-MD5 02d59156de2a7a0f914dc5769e26cdcf files/0.25-gcc34.patch 3454
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+i+YmdTrptrqvGERAsTDAJ9HQ8yPu/edFzSIt45JeAF19S2INQCfSoGo
-ahiNG88xSXxXen++TTmSZSk=
-=/SqE
------END PGP SIGNATURE-----

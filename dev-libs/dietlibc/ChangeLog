@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.32 2004/07/18 07:59:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.33 2004/07/20 06:21:36 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dietlibc-0.23.ebuild:
+  || die for sparc's make in src_compile().
 
 *dietlibc-0.26 (18 Jul 2004)
 
