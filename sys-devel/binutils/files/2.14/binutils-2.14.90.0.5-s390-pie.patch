@@ -1,0 +1,59 @@
+2003-07-04  Jakub Jelinek  <jakub@redhat.com>
+
+	* elf32-s390.c (allocate_dynrelocs): Use SYMBOL_REFERENCES_LOCAL
+	for pc relative relocs.
+	(elf_s390_relocate_section): Likewise.
+	* elf64-s390.c (allocate_dynrelocs): Use SYMBOL_REFERENCES_LOCAL
+	for pc relative relocs.
+	(elf_s390_relocate_section): Likewise.
+
+--- bfd/elf32-s390.c.jj	Wed Jun 25 07:53:21 2003
++++ bfd/elf32-s390.c	Fri Jul  4 12:08:11 2003
+@@ -1808,9 +1808,7 @@ allocate_dynrelocs (h, inf)
+ 
+   if (info->shared)
+     {
+-      if ((h->elf_link_hash_flags & ELF_LINK_HASH_DEF_REGULAR) != 0
+-	  && ((h->elf_link_hash_flags & ELF_LINK_FORCED_LOCAL) != 0
+-	      || info->symbolic))
++      if (SYMBOL_REFERENCES_LOCAL (info, h))
+ 	{
+ 	  struct elf_s390_dyn_relocs **pp;
+ 
+@@ -2519,10 +2517,7 @@ elf_s390_relocate_section (output_bfd, i
+ 		    && r_type != R_390_PC32DBL
+ 		    && r_type != R_390_PC32)
+ 		   || (h != NULL
+-		       && h->dynindx != -1
+-		       && (! info->symbolic
+-			   || (h->elf_link_hash_flags
+-			       & ELF_LINK_HASH_DEF_REGULAR) == 0))))
++		       && !SYMBOL_REFERENCES_LOCAL (info, h))))
+ 	      || (ELIMINATE_COPY_RELOCS
+ 		  && !info->shared
+ 		  && h != NULL
+--- bfd/elf64-s390.c.jj	2003-07-04 15:10:57.000000000 -0400
++++ bfd/elf64-s390.c	2003-07-04 15:24:06.000000000 -0400
+@@ -1780,9 +1780,7 @@ allocate_dynrelocs (h, inf)
+ 
+   if (info->shared)
+     {
+-      if ((h->elf_link_hash_flags & ELF_LINK_HASH_DEF_REGULAR) != 0
+-	  && ((h->elf_link_hash_flags & ELF_LINK_FORCED_LOCAL) != 0
+-	      || info->symbolic))
++      if (SYMBOL_REFERENCES_LOCAL (info, h))
+ 	{
+ 	  struct elf_s390_dyn_relocs **pp;
+ 
+@@ -2498,10 +2496,7 @@ elf_s390_relocate_section (output_bfd, i
+ 		    && r_type != R_390_PC32DBL
+ 		    && r_type != R_390_PC64)
+ 		   || (h != NULL
+-		       && h->dynindx != -1
+-		       && (! info->symbolic
+-			   || (h->elf_link_hash_flags
+-			       & ELF_LINK_HASH_DEF_REGULAR) == 0))))
++		       && !SYMBOL_REFERENCES_LOCAL (info, h))))
+ 	      || (ELIMINATE_COPY_RELOCS
+ 		  && !info->shared
+ 		  && h != NULL

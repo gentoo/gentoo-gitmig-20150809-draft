@@ -1,0 +1,16 @@
+--- bfd/elf64-ppc.c.jj	Wed Jul 23 11:08:09 2003
++++ bfd/elf64-ppc.c	Mon Jul 28 07:54:27 2003
+@@ -8208,7 +8208,12 @@ ppc64_elf_relocate_section (bfd *output_
+ 	      else if (!SYMBOL_REFERENCES_LOCAL (info, h)
+ 		       && !is_opd
+ 		       && r_type != R_PPC64_TOC)
+-		outrel.r_info = ELF64_R_INFO (h->dynindx, r_type);
++		{
++		  outrel.r_info = ELF64_R_INFO (h->dynindx, r_type);
++		  if (h->dynindx == -1
++		      && h->root.type == bfd_link_hash_undefweak)
++		  memset (&outrel, 0, sizeof outrel);
++		}
+ 	      else
+ 		{
+ 		  /* This symbol is local, or marked to become local,
