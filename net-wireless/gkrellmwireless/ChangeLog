@@ -1,11 +1,18 @@
 # ChangeLog for x11-plugins/gkrellmwireless
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkrellmwireless/ChangeLog,v 1.1 2002/10/31 22:11:30 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkrellmwireless/ChangeLog,v 1.2 2002/12/04 02:30:35 seemant Exp $
+
+
+*gkrellmwireless-2.0.0 (16 Oct 2002) 
+
+  03 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
+  gkrellmwireless-2.0.0.ebuild :
+
+  Changed to DEPEND on =gkrellm-2*. Thanks to chadh@gentoo.org in bug #11550
 
   31 Oct 2002; Hannes Mehnert <hannes@gentoo.org>:
   moved to net-wireless
 
-*gkrellmwireless-2.0.0 (16 Oct 2002) 
   16 Oct 2002; Spider <spider@gentoo.org> gkrellmwireless-2.0.0.ebuild :
   Added a wireless monitor for gkrellm2 , using  ~arch 
   
