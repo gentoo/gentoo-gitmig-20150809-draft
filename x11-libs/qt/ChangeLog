@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.111 2004/02/09 16:01:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.112 2004/02/09 19:45:12 caleb Exp $
+
+  09 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.2.3-r1.ebuild,
+  qt-3.3.0.ebuild:
+  A little different doc installation handling...
 
   09 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.0.ebuild:
   Add a few more config options to the lib build to

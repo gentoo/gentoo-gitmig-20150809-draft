@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.3 2004/02/09 19:32:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.4 2004/02/09 19:45:12 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -143,12 +143,7 @@ src_install() {
 	dodir ${QTBASE}/doc
 
 	if [ `use doc` ]; then
-		cd ${S}/doc
-		for x in html flyers; do
-			cp -r $x ${D}/${QTBASE}/doc
-		done
-
-		cp -r ${S}/doc/man ${D}/${QTBASE}
+		cp -r ${S}/doc ${D}/${QTBASE}
 		cp -r ${S}/examples ${D}/${QTBASE}
 		cp -r ${S}/tutorial ${D}/${QTBASE}
 	fi
