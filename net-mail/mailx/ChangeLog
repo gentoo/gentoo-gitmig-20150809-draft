@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/mailx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/ChangeLog,v 1.4 2002/12/01 22:33:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/ChangeLog,v 1.5 2002/12/08 00:15:20 raker Exp $
 
 *mailx-8.1.2.20021129 (01 Dec 2002)
+
+  07 Dec 2002; Nick Hadaway <raker@gentoo.org>
+  mailx-8.1.2.20021129.ebuild :
+  Updated some file permissions as noted on bug #8031.  Marked stable.
 
   01 Dec 2002; Nick Hadaway <raker@gentoo.org>
   mailx-8.1.2.20021129.ebuild, files/digest-mailx-8.1.2.20021129,
