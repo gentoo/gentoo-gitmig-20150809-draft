@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>www-proxy</herd>
 <maintainer>
 	<email>cyfred@gentoo.org</email>
 	<name>Andrew Bevitt</name>
 </maintainer>
-<maintainer>
-	<email>mrness@gentoo.org</email>
-	<name>Alin Nastac</name>
-</maintainer>
+<longdescription>A caching web proxy, with advanced features</longdescription>
 </pkgmetadata>
