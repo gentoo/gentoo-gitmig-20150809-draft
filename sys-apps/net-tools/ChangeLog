@@ -1,12 +1,17 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.20 2003/06/18 22:45:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.21 2003/06/22 22:15:55 kumba Exp $
+
+
+*net-tools-1.60-r7 (18 May 2003)
+
+  22 Jun 2003; Joshua Kinard <kumba@gentoo.org> net-tools-1.60-r7.ebuild:
+  Changed ~sparc & ~mips to sparc & mips
 
   18 Jun 2003; <msterret@gentoo.org> net-tools-1.60-r7.ebuild:
   Add support for use static (bug 22450) based on code from Sascha Silbe
   Use sed -i
 
-*net-tools-1.60-r7 (18 May 2003)
 
   18 May 2003; Nicholas Wourms <dragon@gentoo.org> net-tools-1.60-r7.ebuild:
   Version bump. Add Manifest. Update ether-wake to Donald Becker's latest
