@@ -1,0 +1,8 @@
+# ChangeLog for dev-perl/HTML-Tree
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/Changelog,v 1.1 2002/05/14 19:19:12 bass Exp $
+
+*HTML-Tree-3.11 (14 May 2002)
+
+  14 May 2002; J.Alberto S.L. <bass@gentoo.org> HTML-Tree-3.11.ebuild:
+	First relase.
