@@ -1,9 +1,14 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.16 2002/09/02 07:55:46 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.17 2002/10/19 22:08:23 cselkirk Exp $
 
 
 *gnumeric-1.1.8 (02 Sep 2002)
+
+  19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> gnumeric-1.1.8.ebuild :
+
+  Added ppc to KEYWORDS.
+
   02 Sep 2002; Spider <spider@gentoo.org> gnumeric-1.1.8.ebuild :
   hadto change the make install / einstall to make this build work with sandbox again. problems with configure / Makefile doing variable expansion when we dont want it to do so.
 
