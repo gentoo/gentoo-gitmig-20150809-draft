@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.0.ebuild,v 1.9 2004/11/02 21:49:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.0.ebuild,v 1.10 2004/11/07 03:04:36 mr_bones_ Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -105,7 +105,7 @@ src_compile() {
 
 	use python && myconf="${myconf} --with-python=/usr/bin/python"
 	use python || myconf="${myconf} --without-python"
-	
+
 	if use java; then
 		myconf="${myconf} --enable-javahl"
 		use jikes && myconf="${myconf} --with-jikes=yes"
@@ -252,7 +252,6 @@ EOF
 }
 
 pkg_postinst() {
-
 	use emacs && elisp-site-regen
 	if use apache2; then
 		einfo "Subversion has multiple server types. To enable the http based version"
