@@ -21,3 +21,4 @@ move sys-apps/genflags app-portage/genflags
 move sys-apps/cpio app-arch/cpio
 move net-misc/l2tpd net-dialup/l2tpd
 move net-misc/rp-l2tp net-dialup/rp-l2tp
+move app-misc/gtodo x11-misc/gtodo
