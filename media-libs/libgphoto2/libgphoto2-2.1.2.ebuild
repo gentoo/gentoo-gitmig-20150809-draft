@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.2.ebuild,v 1.1 2003/08/28 03:58:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.2.ebuild,v 1.2 2003/09/02 23:13:53 liquidx Exp $
 
 inherit libtool
 
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="nls doc jpeg"
 
+# needs >usbutils-0.11-r2 to avoid /usr/lib/libusb* conflicts with dev-libs/libusb
 RDEPEND=">=dev-libs/libusb-0.1.6
+	>=sys-apps/usbutils-0.11-r2
 	sys-apps/hotplug
 	jpeg? ( >=media-libs/libexif-0.5.9 )"
 
