@@ -55,10 +55,10 @@ pfpro
 solid
 sybase
 sybase-ct
+glitz
 
 # dietlibc
 diet
 
 # Unmask our instruction sets
 -altivec
-
