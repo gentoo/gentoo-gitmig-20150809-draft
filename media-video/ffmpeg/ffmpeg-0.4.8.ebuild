@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.ebuild,v 1.12 2004/12/14 12:16:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.ebuild,v 1.13 2005/01/03 03:12:55 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc alpha amd64 ia64 arm ~mips"
+KEYWORDS="~x86 ppc ~sparc alpha amd64 ia64 arm ~mips hppa"
 IUSE="altivec debug doc dvd encode aac imlib mmx oggvorbis sdl static truetype"
 
 DEPEND="encode? ( >=media-sound/lame-3.92 )
@@ -36,6 +36,7 @@ src_compile() {
 	# fixes bug #16281
 	use alpha && append-flags -fPIC
 	use amd64 && append-flags -fPIC
+	use hppa && append-flags -fPIC
 
 	local myconf
 	myconf="${myconf} --disable-opts --enable-pp"

@@ -1,17 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d6bc2ab30794f28fcbbd7ddc947c410c ChangeLog 6904
 MD5 c1a25439a8c44204306f2e3bc6489681 ffmpeg-0.4.7.ebuild 2183
 MD5 0acc7d8c259ec90ad9fb69b28f43d8da ffmpeg-0.4.8.20040222.ebuild 3309
 MD5 8801e336bab5d3ff8725a344e9cd9547 ffmpeg-0.4.8.20040322-r1.ebuild 3698
 MD5 c4bbe6b992b24f5c7792ce56ea70eb37 ffmpeg-0.4.8.20040322.ebuild 3269
-MD5 52df915fbbf246fcb759c24f7c3b0289 ffmpeg-0.4.8.ebuild 2394
-MD5 01c3d77b629c0e311b073db85c3e308b ffmpeg-0.4.9_pre1.ebuild 3577
+MD5 09a0ddb98a58ee29628b97786e21d98f ffmpeg-0.4.8.ebuild 2427
+MD5 93fbdb895055728be3a1324a7b0d3a0f ffmpeg-0.4.9_pre1.ebuild 3614
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 003b0062185efcb0ea5a6115fa8a646a files/0.4.8-gcc3.4-magicF2W.patch 994
 MD5 6f1d9c82b5e8c3b7c46b80bc3c1bb443 files/alpha-idct.patch 777
 MD5 7eca667f050b6c515830ff9be05bacc6 files/digest-ffmpeg-0.4.7 65
 MD5 0a76b7a4442aea90d56ac85508b2eff5 files/digest-ffmpeg-0.4.8 65
+MD5 77014ea836fa26b88ebae7c85c912059 files/ffmpeg-0.4.7-2.6.patch 491
 MD5 56615d0a04f7435f464f01f8bed50c50 files/digest-ffmpeg-0.4.8.20040222 69
 MD5 d96905e9b38176623d31ad3cffbc63fd files/digest-ffmpeg-0.4.8.20040322 69
 MD5 d96905e9b38176623d31ad3cffbc63fd files/digest-ffmpeg-0.4.8.20040322-r1 69
+MD5 003b0062185efcb0ea5a6115fa8a646a files/0.4.8-gcc3.4-magicF2W.patch 994
 MD5 e16a2db90cc2c151bdba748297e137dd files/digest-ffmpeg-0.4.9_pre1 70
-MD5 77014ea836fa26b88ebae7c85c912059 files/ffmpeg-0.4.7-2.6.patch 491
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB2LhHroRuSHgZdywRAuzCAJ48TpX5ENDD/UbAmR02PoHkyDPvHgCeJAc0
+3GwDxYNOeU17MFjDDfnCNu8=
+=Qwo9
+-----END PGP SIGNATURE-----
