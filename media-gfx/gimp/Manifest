@@ -1,18 +1,28 @@
-MD5 df316b1d4bd1c70f25f7ef811a14e5bc gimp-2.0.5.ebuild 3219
-MD5 fabca16453b64810a429711f01261e92 ChangeLog 14337
-MD5 d7a9ef0b998d360ae6254fc0508e2f7d gimp-2.0.2.ebuild 2570
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 08d3eadd8c250284e7ac4750fa78c900 gimp-2.0.4.ebuild 3208
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2951e3093e294629908f060f0d55a381 gimp-2.0.0.ebuild 2655
-MD5 284476bb4ded32c690a4aa10be6cf03a gimp-2.0.6.ebuild 3238
+MD5 d7a9ef0b998d360ae6254fc0508e2f7d gimp-2.0.2.ebuild 2570
 MD5 e7cbfba89facb9cca1a3117df924f41b gimp-1.2.5.ebuild 3206
-MD5 12ff6c7c980ee34dc7d4d94aa40059b0 files/ltmain_sh-1.5.0-fix-relink.patch 1718
-MD5 f2b58299eceabecfe5df955198c267d6 files/psd_save.c 49151
-MD5 0d3108f9120d6976ce4ccb29a131aea7 files/digest-gimp-2.0.4 133
-MD5 662e7b51f4c882429b73dea3263b39de files/digest-gimp-1.2.5 65
-MD5 79e1e1a9893478bad6a9b292dc5a82b2 files/digest-gimp-2.0.5 133
-MD5 1f2afa6b0785b0547e956d5aff63cf4d files/digest-gimp-2.0.2 65
-MD5 bbe7cd6ece5455900adcaeed9b467679 files/digest-gimp-2.0.6 134
-MD5 568ba885fc51613466e3b0039e21946c files/digest-gimp-2.0.0 65
-MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
+MD5 08d3eadd8c250284e7ac4750fa78c900 gimp-2.0.4.ebuild 3208
+MD5 284476bb4ded32c690a4aa10be6cf03a gimp-2.0.6.ebuild 3238
+MD5 af492887c53980920c9f77d2cf269d2b ChangeLog 14407
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 df316b1d4bd1c70f25f7ef811a14e5bc gimp-2.0.5.ebuild 3219
 MD5 be326cb198ec1f1f6c21a5a5a1460415 files/gimp-2.0.0-gcc34.patch 1148
+MD5 f2b58299eceabecfe5df955198c267d6 files/psd_save.c 49151
+MD5 12ff6c7c980ee34dc7d4d94aa40059b0 files/ltmain_sh-1.5.0-fix-relink.patch 1718
+MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
+MD5 662e7b51f4c882429b73dea3263b39de files/digest-gimp-1.2.5 65
+MD5 568ba885fc51613466e3b0039e21946c files/digest-gimp-2.0.0 65
+MD5 1f2afa6b0785b0547e956d5aff63cf4d files/digest-gimp-2.0.2 65
+MD5 0d3108f9120d6976ce4ccb29a131aea7 files/digest-gimp-2.0.4 133
+MD5 397055832117d5c76e873af50a2e6f30 files/digest-gimp-2.0.5 134
+MD5 bbe7cd6ece5455900adcaeed9b467679 files/digest-gimp-2.0.6 134
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBom8EI1lqEGTUzyQRAqa1AJ942/YuMHnOoEBI2dTrq47Q2n6RUQCg25LF
+RkzKG7FysI3pPT3ZAIgTp8g=
+=qlU1
+-----END PGP SIGNATURE-----
