@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/quakeforge
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.4 2004/03/21 20:10:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.5 2004/05/16 08:57:54 vapier Exp $
+
+*quakeforge-0.5.5 (16 May 2004)
+
+  16 May 2004; Mike Frysinger <vapier@gentoo.org> +files/0.5.5-ipv6.patch,
+  +quakeforge-0.5.5.ebuild:
+  Version bump #51051 by cpu
 
   21 Mar 2004; David Holm <dholm@gentoo.org> quakeforge-0.5.4.ebuild:
   Added to ~ppc.
