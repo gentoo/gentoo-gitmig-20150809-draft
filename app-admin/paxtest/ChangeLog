@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/paxtest
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.7 2003/11/28 22:16:39 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.8 2003/11/28 23:09:21 solar Exp $
+
+  28 Nov 2003; <solar@gentoo.org> paxtest-0.9.5-r1.ebuild:
+  pax flags are not stripsafe so we added nostrip restriction
 
   28 Nov 2003; <solar@gentoo.org> paxtest-0.9.1.ebuild:
   removed old paxtest
