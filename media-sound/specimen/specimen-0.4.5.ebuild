@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.4.5.ebuild,v 1.2 2004/10/16 10:37:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.4.5.ebuild,v 1.3 2004/12/04 11:54:28 eradicator Exp $
 
 DESCRIPTION="A Midi Controllable Audio Sampler"
 HOMEPAGE="http://www.gazuga.net"
@@ -8,7 +8,7 @@ SRC_URI="http://www.gazuga.net/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 #-amd64: 0.4.5: int/pointer casting
-KEYWORDS="~x86 ~ppc -amd64"
+KEYWORDS="-amd64 ~ppc ~sparc ~x86"
 
 IUSE="ladcca debug"
 
