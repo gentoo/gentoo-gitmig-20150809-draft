@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-de/ut2003-bonuspack-de-1.ebuild,v 1.3 2004/06/26 17:31:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-de/ut2003-bonuspack-de-1.ebuild,v 1.4 2004/07/03 02:22:45 mr_bones_ Exp $
 
 inherit games
 
@@ -14,23 +14,23 @@ SRC_URI="mirror://3dgamers/pub/3dgamers5/games/unrealtourn2/Missions/${MY_P}
 LICENSE="ut2003"
 SLOT="1"
 KEYWORDS="x86"
+IUSE=""
 RESTRICT="nostrip nomirror"
 
 DEPEND="app-arch/unzip"
 RDEPEND="games-fps/ut2003"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
-dir=${GAMES_PREFIX_OPT}/ut2003
-Ddir=${D}/${dir}
+dir="${GAMES_PREFIX_OPT}/ut2003"
+Ddir="${D}/${dir}"
 
 src_unpack() {
 	unzip ${DISTDIR}/${A} || die "unpacking"
 }
 
 src_install() {
-	mkdir -p ${Ddir}/System ${Ddir}/Maps ${Ddir}/StaticMeshes ${Ddir}/Textures \
-		${Ddir}/Music ${Ddir}/Help
+	mkdir -p ${Ddir}/{System,Maps,StaticMeshes,Textures,Music,Help}
 	games_umod_unpack DEBonus.ut2mod
 	prepgamesdirs
 }
