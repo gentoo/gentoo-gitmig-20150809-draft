@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/colt
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/ChangeLog,v 1.1 2004/02/16 04:30:45 zx Exp $
+
+*colt-1.1.0 (15 Feb 2004)
+
+  15 Feb 2004; <zx@gentoo.org> colt-1.1.0.ebuild:
+  Initial Import.
+  Thanks to Matteo Coloberti <xteo78@libero.it> for initial ebuild. Bug #34099
+
