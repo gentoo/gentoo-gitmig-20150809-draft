@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-0.8.ebuild,v 1.1 2003/11/09 22:48:09 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-0.9.ebuild,v 1.1 2003/11/14 01:34:30 karltk Exp $
 
 DESCRIPTION="PyPanel is a lightweight panel/taskbar for X11 window managers."
 HOMEPAGE="http://pypanel.sourceforge.net"
@@ -16,10 +16,21 @@ S="${WORKDIR}/PyPanel-${PV}"
 
 inherit distutils
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Removing offensive material
+	cp pypanelrc pypanelrc.orig
+	sed "s/%D %I:%M %p/%Y-%m-%d %H:%M/" \
+		< pypanelrc.orig > pypanelrc
+}
+
 src_compile() {
-	distutils_src_install
+	distutils_src_compile
 }
 
 src_install() {
 	distutils_src_install
+	ewarn "If you previous ran 0.8, remove ~/.pypanelrc before starting 0.9!"
 }
