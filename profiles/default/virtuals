@@ -10,3 +10,4 @@ virtual/glu			media-libs/mesa-glu
 virtual/glut			media-libs/mesa-glu
 virtual/imap			net-mail/courier-imap
 x11-libs/xaw			x11-libs/Xaw3d
+virtual/blackbox		x11-wm/blackbox
