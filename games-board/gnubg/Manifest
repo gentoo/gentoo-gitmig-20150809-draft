@@ -1,4 +1,6 @@
-MD5 21296de90e7be3164a5123885b758cd6 ChangeLog 1075
+MD5 1568e828b4bd26995ab1fa0256bddbc6 ChangeLog 1196
 MD5 3f11aaf297b2fe67404a96cda13e9bfe metadata.xml 251
 MD5 d99602b65869975006d993877850eb29 gnubg-0.13.0-r1.ebuild 2511
+MD5 8bda493b53f6277d3745b9cd45b8b0e6 gnubg-0.14.2.ebuild 2563
+MD5 0c7a8ec2862198de493c51ea97e3eed6 files/digest-gnubg-0.14.2 252
 MD5 14a8f9e2546292fc22c04fbea97287f7 files/digest-gnubg-0.13.0-r1 188
