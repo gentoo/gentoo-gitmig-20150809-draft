@@ -2,7 +2,7 @@
 
 import os
 from commands import *
-import string,md5
+import string,md5,shutil
 
 mystart=os.path.normpath(os.environ["D"])
 mypackage=os.environ["PF"]
@@ -23,15 +23,12 @@ def prepare_db():
     if not os.path.isdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage):
 	os.mkdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
 
-def movefile(srcfile,destfile):
-    try:
-        shutil.copyfile(src,dest)
-    except:
-        return 0
+def movefile(src,dest):
+    shutil.copyfile(src,dest)
     shutil.copystat(src,dest)
     mystat=os.stat(src)
     os.chown(dest,mystat[4],mystat[5]) 
-    os.unlink(srcfile)
+    os.unlink(src)
     return 1
 
 def md5digest(x):
@@ -78,7 +75,7 @@ def mergefiles():
 		print "!!!",floc[0],"->",myto
 	elif os.path.isfile(x):
 	    mymd5=md5digest(mycurpath+"/"+x)
-            if movefile(x,pathstrip(mycurpath)[0]):
+            if movefile(x,pathstrip(mycurpath)[0]+"/"+x):
 		zing="<<<"
 	    else:
 		zing="!!!"

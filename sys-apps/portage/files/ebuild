@@ -1216,7 +1216,7 @@ then
 	export O=`dirname ${1}`
 else
 	tmpfoo=`dirname ${1}`
-	export O=`( cd ${STARTDIR}/${tmpfoo}; pwd )`
+	export O=`( cd ${tmpfoo}; pwd )`
 fi
 tmpfoo=`(cd ${O}/..;pwd)`
 export CATEGORY=`/usr/bin/basename $tmpfoo`
