@@ -1,0 +1,33 @@
+# ChangeLog for x11-misc/tkseti
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/tkseti/ChangeLog,v 1.1 2004/12/24 04:16:38 ribosome Exp $
+
+*tkseti-3.06 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +tkseti-3.06.ebuild:
+  Moved from x11-misc/tkseti to sci-astronomy/tkseti.
+
+  19 Jun 2004; <pyrania@gentoo.org> tkseti-3.06.ebuild:
+  Removed default ${S}, added IUSE.
+
+  22 Mar 2004; Brandon Hale <tseng@gentoo.org> tkseti-3.06.ebuild:
+  Fix DEPEND-ness, bug #45343
+
+  22 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> tkseti-3.06.ebuild:
+  removed DEPEND=${RDEPEND}
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  19 Jul 2002; Ryan Phillips <rphillips@gentoo.org> tkseti-3.06.ebuild :
+
+  Added dependencies. Fixes #4761. Submitted by Peter Littmann
+
+*tkseti-3.06 (06 Jul 2002)
+
+  06 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
+
+  Initial Commit
+
+  06 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
+
+  
