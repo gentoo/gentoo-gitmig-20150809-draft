@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-uffi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.14 2004/10/15 19:01:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.15 2004/12/05 21:22:41 mkennedy Exp $
+
+*cl-uffi-1.4.30 (05 Dec 2004)
+
+  05 Dec 2004; Matthew Kennedy <mkennedy@gentoo.org> +cl-uffi-1.4.30.ebuild:
+  New upstream version.
 
   15 Oct 2004; <mkennedy@gentoo.org> -files/1.3.6-gentoo.patch,
   -cl-uffi-1.2.15.ebuild, -cl-uffi-1.3.4.ebuild, -cl-uffi-1.3.6.ebuild,
