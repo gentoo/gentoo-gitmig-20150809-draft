@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.7.ebuild,v 1.1 2002/04/10 02:30:21 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.7.ebuild,v 1.2 2002/04/10 02:34:35 jnelson Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -14,12 +14,12 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 
 PROVIDE="virtual/mta"
 DEPEND="virtual/glibc
-		>=sys-libs/db-3.2
-		>=dev-libs/libpcre-3.4
-		>=dev-libs/cyrus-sasl-1.5.27
-		mta-ldap? ( >=net-nds/openldap-1.2 )
-		mta-mysql? ( >=dev-db/mysql-3.23.28 )
-		mta-tls? ( >=dev-libs/openssl-0.9.6c )"
+	>=sys-libs/db-3.2
+	>=dev-libs/libpcre-3.4
+	>=dev-libs/cyrus-sasl-1.5.27
+	mta-ldap? ( >=net-nds/openldap-1.2 )
+	mta-mysql? ( >=dev-db/mysql-3.23.28 )
+	mta-tls? ( >=dev-libs/openssl-0.9.6c )"
 RDEPEND="${DEPEND} >=net-mail/mailbase-0.00 !virtual/mta"
 
 pkg_setup() {
@@ -125,8 +125,8 @@ pkg_postinst() {
 	einfo "***************************************************************"
 	einfo "* NOTE: If config file protection is enabled and you upgraded *"
 	einfo "*       from an earlier version of postfix you must update    *"
-	einfo "*       /etc/postfix/master.cf to the latest version          *"
+	einfo "*       /etc/postfix/master.cf to the latest version	     *"
 	einfo "*       (/etc/postfix/._cfg????_master.cf). Otherwise postfix *"
-	einfo "*       will not work correctly.                              *"
+	einfo "*       will not work correctly. 			     *"
 	einfo "***************************************************************"
 }
