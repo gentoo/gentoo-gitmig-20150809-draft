@@ -1,7 +1,11 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.51 2003/11/14 04:04:59 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.52 2003/11/14 22:41:40 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gst-plugins-0.6.3.ebuild,
+  gst-plugins-0.6.4.ebuild:
+  Use -fPIC on ia64 too; mark 0.6.3 stable on ia64
 
   13 Nov 2003; Brad House <brad_mssw@gentoo.org> gst-plugins-0.6.4.ebuild:
   amd64 -fPIC flag

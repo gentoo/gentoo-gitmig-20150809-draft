@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.3.ebuild,v 1.12 2003/11/08 16:14:38 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.3.ebuild,v 1.13 2003/11/14 22:41:18 agriffis Exp $
 
 inherit eutils flag-o-matic libtool gnome.org
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://gstreamer.sourceforge.net"
 
 SLOT=${PV_MAJ_MIN}
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc alpha amd64"
+KEYWORDS="x86 ppc sparc alpha amd64 ia64"
 
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=dev-libs/libxml2-2.4
@@ -34,6 +34,11 @@ src_unpack() {
 
 	# proper gcc 3.3.1 fix (#27077)
 	epatch ${FILESDIR}/${P}-gcc33.patch
+
+	# patches to build with -Werror on ia64
+	if use ia64; then
+		epatch ${FILESDIR}/${PN}-0.6.3-Werror.patch
+	fi
 
 }
 
