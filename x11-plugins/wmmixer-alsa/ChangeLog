@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmixer-alsa
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer-alsa/ChangeLog,v 1.5 2003/12/26 17:24:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer-alsa/ChangeLog,v 1.6 2004/01/04 17:55:07 aliz Exp $
+
+  04 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> wmmixer-alsa-0.6.ebuild:
+  Removing amd64 keyword because alsa-0.5 can't be satisfied.
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> wmmixer-alsa-0.6.ebuild:
   Masked on sparc as alsa-lib dependency cannot be met.
