@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/speechd-up-0.3_pre20041029.ebuild,v 1.2 2004/10/30 00:38:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/speechd-up-0.3_pre20041029.ebuild,v 1.3 2004/11/29 08:57:41 eradicator Exp $
 
 IUSE=""
 
@@ -15,6 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="virtual/libc"
+RDEPEND="app-accessibility/eflite
+	 app-accessibility/speech-dispatcher"
 
 src_compile() {
 	econf || die

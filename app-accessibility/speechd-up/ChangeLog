@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speechd-up
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/ChangeLog,v 1.7 2004/10/30 00:37:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/ChangeLog,v 1.8 2004/11/29 08:57:41 eradicator Exp $
+
+  29 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  speechd-up-0.3_pre20041029.ebuild:
+  Adding rdepend to pull in eflite and speech-dispatcher.
 
 *speechd-up-0.3_pre20041029 (29 Oct 2004)
 
