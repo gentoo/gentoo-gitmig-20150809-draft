@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000c.ebuild,v 1.2 2001/05/01 18:29:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000c.ebuild,v 1.3 2001/05/09 04:37:31 achim Exp $
 
 A=${P}-src.tar.gz
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ DESCRIPTION="Realtime audio and video editor"
 SRC_URI="ftp://heroines.sourceforge.net/pub/heroines/${A}"
 HOMEPAGE="http://heroines.sourceforge.net/"
 
-DEPEND=">=sys-libs/glibc-2.1.3
+DEPEND="virtual/glibc
 	>=sys-devel/gcc-2.95.2
 	>=media-sound/esound-0.2.19
 	>=media-libs/jpeg-6b

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.1 2001/04/27 03:47:52 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.2 2001/05/09 04:37:31 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,8 @@ SRC_URI="http://download.sourceforge.net/seahorse/${A}"
 HOMEPGAE="http://seahorse.sourceforge.net/"
 
 DEPEND=">=x11-libs/gtk+-1.2.10
-	>=app-crypt/gnupg-1.0.4"
+	>=app-crypt/gnupg-1.0.4
+	>=gnome-base/gnome-libs-1.2"
 
 src_compile() {                           
   cd ${S}

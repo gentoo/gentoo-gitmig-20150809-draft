@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-0.3.0.ebuild,v 1.1 2001/04/29 13:02:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-0.3.0.ebuild,v 1.2 2001/05/09 04:37:31 achim Exp $
 
 S=${WORKDIR}/LinCVS-0.3
 DESCRIPTION="A Graphical CVS Client"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.lincvs.de"
 DEPEND="kde? ( >=kde-base/kdelibs-2.1.1 )
         >=x11-libs/qt-x11-2.2.2"
 RDEPEND="$DEPEND
-	 dev-utils/cvs"
+	 dev-util/cvs"
 
 src_unpack () {
 

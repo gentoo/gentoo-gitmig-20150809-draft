@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r2.ebuild,v 1.1 2000/11/15 16:49:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r2.ebuild,v 1.2 2001/05/09 04:37:31 achim Exp $
 
 P=netkit-timed-0.17
 A=${P}.tar.gz
@@ -14,10 +14,7 @@ DEPEND=">=sys-apps/bash-2.04
 
 src_unpack() {
     unpack ${A}
-    if [ -n "`use glibc22`" ]
-    then
-	cp ${FILESDIR}/timed.c ${S}/timed/timed/timed.c
-    fi
+    cp ${FILESDIR}/timed.c ${S}/timed/timed/timed.c
 }
 
 src_compile() {
