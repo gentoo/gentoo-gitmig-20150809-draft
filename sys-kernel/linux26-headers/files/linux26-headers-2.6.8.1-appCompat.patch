@@ -972,12 +972,14 @@ diff -ur linux-2.6.8.1/include/linux/compiler.h linux-2.6.8.1-gentoo/include/lin
  
  /* Intel compiler defines __GNUC__. So we will overwrite implementations
   * coming from above header files here
-@@ -47,7 +59,12 @@
+@@ -47,7 +59,14 @@
  
  /* Optimization barrier */
  #ifndef barrier
 -# define barrier() __memory_barrier()
++# define __ffs /* Prevent ffs(...) getting declared when we don't need it */
 +# include <asm/system.h>
++# undef __ffs
 +# ifdef mb
 +#   define barrier() mb()
 +# else
