@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/XWine-0.3.2.ebuild,v 1.5 2004/06/24 22:37:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/XWine-0.3.2.ebuild,v 1.6 2004/06/24 23:46:48 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="GTK+ frontend for Wine"
-HOMEPAGE="http://darken.tuxfamily.org/pages/xwine_en.html"
-SRC_URI="http://darken.tuxfamily.org/projets/${P}_en.tar.gz"
+HOMEPAGE="http://darken33.free.fr/"
+SRC_URI="http://darken33.free.fr/logiciels/${P}_en.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
