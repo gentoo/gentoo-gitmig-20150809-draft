@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mockobjects
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.5 2004/10/16 17:30:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.6 2004/10/17 07:30:42 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> mockobjects-0.09.ebuild:
+  keywords ~amd64; closes #67315.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> mockobjects-0.09.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
