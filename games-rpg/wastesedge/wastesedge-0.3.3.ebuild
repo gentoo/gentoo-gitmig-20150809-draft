@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.3.ebuild,v 1.4 2004/02/12 02:02:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.3.ebuild,v 1.5 2004/02/29 21:12:16 vapier Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/adonthell/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="oggvorbis doc nls"
 RESTRICT="nouserpriv"
 
