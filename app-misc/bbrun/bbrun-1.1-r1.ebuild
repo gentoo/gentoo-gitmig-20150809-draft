@@ -1,16 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Craig Joly <joly@ee.ualberta.ca>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bbrun/bbrun-1.1-r1.ebuild,v 1.4 2001/08/15 19:25:27 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bbrun/bbrun-1.1-r1.ebuild,v 1.5 2001/08/30 19:40:10 woodchip Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="blackbox program execution dialog box"
-SRC_URI="http://bbtools.thelinuxcommunity.org/sources/contrib/${A}"
+SRC_URI="http://bbtools.thelinuxcommunity.org/sources/contrib/${P}.tar.gz"
 HOMEPAGE="http://bbtools.thelinuxcommunity.org/contrib.phtml"
 
-DEPEND=">=x11-wm/blackbox-0.61 
-	>=x11-libs/gtk+-1.2.10"
+DEPEND=">=x11-wm/blackbox-0.61
+        >=x11-libs/gtk+-1.2.10"
 
 src_unpack() {
 	unpack ${A}
@@ -21,16 +20,16 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}/bbrun
-	try emake
+	emake || die
 }
 
 src_install () {
-
-	dodoc README COPYING
 	into /usr/X11R6
 	dobin bbrun/bbrun
-	cd /usr/X11R6/bin/wm
-	cp blackbox blackbox.bak
-	sed -e s:.*blackbox:"exec /usr/X11R6/bin/bbrun \&\n&": blackbox.bak > blackbox
+	dodoc README COPYING
 }
 
+pkg_postinst() {
+	cd ${ROOT}usr/X11R6/bin/wm
+	sed -e "s/.*blackbox/exec \/usr\/X11R6\/bin\/bbrun \&\n&/" blackbox | cat > blackbox
+}
