@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.7.ebuild,v 1.3 2004/07/11 13:59:36 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.7.ebuild,v 1.4 2004/07/14 01:35:02 agriffis Exp $
 
 inherit kde-functions
 need-qt 3
@@ -12,7 +12,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE="kde"
-S=${WORKDIR}/${P}
 
 DEPEND="=x11-libs/qt-3*
 	>=media-libs/freetype-2.1
