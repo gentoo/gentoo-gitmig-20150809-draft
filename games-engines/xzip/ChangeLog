@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/xzip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/ChangeLog,v 1.4 2004/06/24 22:39:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/ChangeLog,v 1.5 2004/12/29 00:01:52 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   04 May 2004; Jason Eric Huebel <jhuebel@gentoo.org> xzip-1.8.2-r2.ebuild:
   ~amd64
@@ -12,7 +15,7 @@
 
 *xzip-1.8.2-r1 (1 Feb 2002)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> xzip-1.8.2-r1.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> xzip-1.8.2-r1.ebuild :
   Added LICENSE, KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
