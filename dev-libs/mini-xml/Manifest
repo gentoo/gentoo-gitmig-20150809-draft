@@ -1,4 +1,14 @@
-MD5 b44f7ab242191c618d60ee9d422b2d85 ChangeLog 491
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 de0ff87a1f414a77060c27d203272974 ChangeLog 600
 MD5 c22db93f2bc10eb60a519d953c11f8d9 metadata.xml 220
-MD5 0ef6f69619a35ef893d205769366d4d9 mini-xml-2.0.0.ebuild 900
+MD5 fd7ec97917025cb8d900345703524816 mini-xml-2.0.0.ebuild 823
 MD5 5b6c95aceb1378a60910f022aef1bdec files/digest-mini-xml-2.0.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBxSalArHZZzCEUG0RAifiAJwK77UsM7bZuG9VC+uOHHkOMIzzIgCfchtU
+1S5Yn4IQQdfYpXHgzlzHntI=
+=7Bk7
+-----END PGP SIGNATURE-----
