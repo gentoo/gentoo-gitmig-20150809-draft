@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a19c7e94e75ff62f2b0624385b752097 ChangeLog 2448
-MD5 b4416108d740b579fa5b4af4c4ae58ca gnome-common-2.8.0.ebuild 489
-MD5 80f69fe151b999d45d4f9885f1d30357 gnome-common-2.4.0.ebuild 483
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 362e50e7f15938a17783d53b2a1e023d gnome-common-1.2.4-r3.ebuild 1040
+MD5 9cada37974ad9925303f2895a0944069 gnome-common-2.4.0.ebuild 495
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 6104a955f4283b277edf4aeb8b45aaaf gnome-common-2.8.0.ebuild 500
 MD5 3bc13d6705b8399b69cf981e230f92ad files/digest-gnome-common-1.2.4-r3 71
-MD5 f07928a6c379d8d4193288cc987c8101 files/digest-gnome-common-2.8.0 70
 MD5 d0c6e27a224177741d264becab45349b files/digest-gnome-common-2.4.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCGPW6CHk4+ZoBpvsRAn+sAJ9bfIkcIjKGHSFWEWFRuJIav8D+cwCeIT+t
-O3n4NlFYrBJfWSBvilZQq1Y=
-=4sMS
------END PGP SIGNATURE-----
+MD5 f07928a6c379d8d4193288cc987c8101 files/digest-gnome-common-2.8.0 70
