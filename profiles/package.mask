@@ -35,6 +35,7 @@ net-p2p/lmule
 # <naz@gentoo.org> (16 July 2003)
 # the cvs of gift is broken
 >=net-p2p/gift-cvs-0.10.0
+net-p2p/giftui
 
 # <coredumb@gentoo.org> (14 July 2003)
 # Finally a php5 beta :)
