@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35.ebuild,v 1.16 2004/09/07 22:55:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35.ebuild,v 1.17 2004/11/12 03:21:16 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ~ppc64 s390"
 IUSE="nls static"
 
 DEPEND="virtual/libc
@@ -33,6 +33,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
+	export LDCONFIG=/bin/true
 
 	# building e2fsprogs on sparc results in silo breaking
 	[ "${ARCH}" = "sparc" ] && filter-flags "-fstack-protector"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.4 2004/10/03 15:57:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.5 2004/11/12 03:21:16 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -35,17 +35,17 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
 	# building e2fsprogs on sparc results in silo breaking
-	[ "${ARCH}" = "sparc" ] && filter-flags "-fstack-protector"
+	[ "${ARCH}" = "sparc" ] && filter-flags -fstack-protector
 
+	export LDCONFIG=/bin/true
+
+	local myconf
 	use static \
 		&& myconf="${myconf} --with-ldopts=-static" \
 		|| myconf="${myconf} --enable-dynamic-e2fsck --enable-elf-shlibs"
-
 	econf \
-		`use_enable nls` \
+		$(use_enable nls) \
 		${myconf} || die
 
 	# Parallel make sometimes fails
