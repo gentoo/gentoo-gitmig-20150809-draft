@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.46 2004/12/24 14:45:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.47 2004/12/25 02:26:49 lu_zero Exp $
+
+*blender-2.36 (25 Dec 2004)
+
+  25 Dec 2004; Luca Barbato <lu_zero@gentoo.org> +blender-2.36.ebuild:
+  New version
 
 *blender-2.34-r1 (24 Dec 2004)
 
