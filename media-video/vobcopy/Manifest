@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6bf0886fe06aee4f7fd46fa2bc74a82a ChangeLog 1482
+MD5 6b536b758a65eea0639393af220619ad ChangeLog 1560
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 dc75fd81a8858eec3133d25fa35175ab vobcopy-0.5.13.ebuild 735
+MD5 e97214680b7be5d4b81763cbaaa5d895 vobcopy-0.5.14.ebuild 737
 MD5 0ceae4ae8683c53a91d58b2d9ddb1463 files/digest-vobcopy-0.5.13 66
+MD5 3f53fa0ec520b896e93f77072314982e files/digest-vobcopy-0.5.14 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoYumArHZZzCEUG0RAp4jAJ9BoJgmWPr7evfCKps6dgG+4RsR6wCfaQUh
-1YKtessem3wVuhathbPzUKU=
-=+uFV
+iD8DBQFBoY2DArHZZzCEUG0RAgZ9AJ9JuCi4AGU7I/MSKuSUl71qXxQLEgCffOl1
+CINg11sxUBccNSTHVt9fPEk=
+=jsmO
 -----END PGP SIGNATURE-----
