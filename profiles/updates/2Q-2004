@@ -41,3 +41,4 @@ move net-mail/cone mail-client/cone
 move net-mail/elm mail-client/elm
 move net-mail/elmo mail-client/elmo
 move net-mail/exmh mail-client/exmh
+move net-mail/evolution mail-client/evolution
