@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.89 2003/10/26 21:15:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.90 2003/11/07 23:12:53 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
@@ -43,6 +43,7 @@ if [ -z "${SRC_URI}" ]; then
 fi
 # A patch for PHP for security
 SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.2-fopen-url-secure.patch"
+[ "${MY_PV}" = "4.3.4" ] && SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.4-phpizeexecfix.patch"
 
 # Where we work
 S=${WORKDIR}/${MY_P}
@@ -200,6 +201,9 @@ php_src_unpack() {
 	# we keep a backup of it as we need it at the end of the install
 	cp pear/PEAR/Registry.php pear/PEAR/Registry.old
 	sed -e "s:\$pear_install_dir\.:\'${D}/usr/lib/php/\' . :g" -i pear/PEAR/Registry.old 
+
+	[ "${MY_PV}" = "4.3.4" ] && \
+	epatch ${DISTDIR}/php-4.3.4-phpizeexecfix.patch
 }
 
 
