@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3-r1.ebuild,v 1.1 2004/09/10 16:30:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3-r1.ebuild,v 1.2 2004/10/10 20:32:19 eradicator Exp $
 
 inherit eutils
 
@@ -114,6 +114,12 @@ src_compile() {
 }
 
 src_install() {
+	# Setup the symlinks if libdir isn't "lib"
+	if [ "$(get_libdir)" != "lib" ]; then
+		dodir ${QTBASE}/$(get_libdir)
+		dosym $(get_libdir) ${QTBASE}/lib  
+	fi
+
 	export QTDIR=${S}
 
 	# binaries
@@ -125,7 +131,7 @@ src_install() {
 	dolib lib/libqt-mt.so.3.3.3 lib/libqui.so.1.0.0
 	dolib lib/lib{editor,qassistantclient,designercore}.a lib/libqt-mt.la
 
-	cd ${D}/$QTBASE/lib
+	cd ${D}/${QTBASE}/$(get_libdir)
 	for x in libqui.so ; do
 		ln -s $x.1.0.0 $x.1.0
 		ln -s $x.1.0 $x.1
@@ -208,7 +214,4 @@ src_install() {
 		insinto ${QTBASE}/`dirname $x`
 		doins $x
 	done
-
-	# needed to fix lib64 issues on amd64, see bug #45669
-	use amd64 && ln -s ${QTBASE}/lib ${D}/${QTBASE}/lib64
 }
