@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <chadh@gentoo.org> (11 Nov 2002)
+# masking b/c it won't compile
+=sys-apps/pcmcia-cs-3.2.2
+
 # <bcowan@gentoo.org> (09 Nov 2002)
 # masking mc due to filling entire var/tmp
 # partition during compile
