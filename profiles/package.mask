@@ -18,6 +18,9 @@
 # Incompatible with gdm
 >=media-libs/imlib-1.9.11
 
+# Mask until the new Sessions scheme is tested
+=gnome-base/gdm-2.2.5.4-r3
+
 # Causes slow DVD auth, and do not work with MPlayer
 >=media-libs/libdvdcss-1.0.0
 
