@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.2.3.ebuild,v 1.1 2003/09/10 05:27:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.2.3.ebuild,v 1.2 2003/09/13 20:48:58 vapier Exp $
 
 inherit games
 
@@ -21,7 +21,9 @@ DEPEND="dev-libs/expat
 
 src_unpack() {
 	unpack ${A}
-	sed -i "s:/etc/freelordsrc:${GAMES_SYSCONFDIR}/freelordsrc:" ${S}/src/{file,main}.cpp
+	cd ${S}
+	sed -i "s:/etc/freelordsrc:${GAMES_SYSCONFDIR}/freelordsrc:" src/{file,main}.cpp
+	epatch ${FILESDIR}/${PV}-gcc3.patch
 }
 
 src_compile() {
