@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (11 Dec 2003)
+# API change. All portage tools that meet this change in API
+# should be masked version-specific and follow immediately underneath.
+>=sys-apps/portage-2.0.49-r19
+
 # <caleb@gentoo.org> (Dec 10 2004)
 =x11-libs/qt-3.3.0_beta1
 
@@ -71,17 +76,6 @@ app-portage/kemerge
 # <robbat2@gentoo.org> (29 Nov 2003)
 # Need external testing
 >=net-mail/qmail-mysql-1.03-r13
-
-# <carpaski@gentoo.org> (23 Nov 2003)
-# Aggitating bug. Can't be fixed without invoking issues in systems
-# were portage is emerged well after an 'emerge sync'.
-=sys-apps/portage-2.0.49-r17
-
-# <carpaski@gentoo.org> (23 Nov 2003)
-# This is a mask for the API change. All portage tools that meet
-# this change in API should be masked version-specific and follow
-# immediately underneath.
->=sys-apps/portage-2.0.49-r19
 
 # <foser@gentoo.org> (23 Nov 2003)
 # Mask gdm 2.4.4 for testing of session changes
