@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+start() {
+    ebegin "Starting ntpd"
+    start-stop-daemon --start --quiet --exec /usr/bin/ntpd -- -p /var/run/ntpd.pid
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping ntpd"
+    start-stop-daemon --stop --quiet --pidfile /var/run/ntpd.pid
+    eend $?
+}
