@@ -1,0 +1,11 @@
+# ChangeLog for dev-dotnet/winelib
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/ChangeLog,v 1.1 2004/06/21 03:33:57 latexer Exp $
+
+*winelib-0.3 (20 Jun 2004)
+
+  20 Jun 2004; Peter Johanson, <latexer@gentoo.org> metadata.xml,
+  winelib-0.3.ebuild:
+  Initial commit. Ebuild by yours truly. Thanks to emes in #mono for the symlink
+  fixes.
+
