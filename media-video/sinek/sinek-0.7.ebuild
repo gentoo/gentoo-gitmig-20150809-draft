@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/sinek/sinek-0.7.ebuild,v 1.3 2002/07/25 05:40:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sinek/sinek-0.7.ebuild,v 1.4 2002/07/29 07:28:22 agenkin Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="GTK interface for xine"
-HOMEPAGE="http://sinek.soureforge.net"
+HOMEPAGE="http://sinek.sourceforge.net"
 SRC_URI="mirror://sourceforge/sinek/${P}.tar.gz"
 
 SLOT="0"
