@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/kpogre
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.13 2005/02/09 23:49:14 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.14 2005/03/20 01:44:48 matsuu Exp $
+
+*kpogre-1.3.5 (20 Mar 2005)
+
+  20 Mar 2005; MATSUU Takuto <matsuu@gentoo.org> +kpogre-1.3.5.ebuild:
+  Version bumped.
+  Added ~amd64.
 
 *kpogre-1.3.2 (09 Feb 2005)
 
