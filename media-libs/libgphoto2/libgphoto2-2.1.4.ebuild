@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.11 2004/07/13 23:00:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.12 2004/07/16 19:57:22 liquidx Exp $
 
 inherit libtool eutils
 
@@ -62,7 +62,7 @@ src_compile() {
 	local myconf
 
 	myconf="--with-rpmbuild=/bin/false"
-	myconf="--with-drivers=${GPHOTO_LIBS}"
+	myconf="--with-drivers=${cameras}"
 	use jpeg \
 		&& myconf="${myconf} --with-exif-prefix=/usr" \
 		|| myconf="${myconf} --without-exif"
