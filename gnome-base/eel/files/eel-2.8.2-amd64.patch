@@ -1,0 +1,26 @@
+diff -uprN eel.orig/eel-gdk-extensions.h eel/eel-gdk-extensions.h
+--- eel.orig/eel-gdk-extensions.h	2005-04-01 04:40:12.922802040 +0200
++++ eel/eel-gdk-extensions.h	2005-04-01 04:53:32.928182736 +0200
+@@ -28,6 +28,7 @@
+ 
+ #include <gdk/gdktypes.h>
+ #include <gdk/gdkwindow.h>
++#include <idn-int.h>
+ 
+ #define EEL_RGB_COLOR_RED	0xFF0000
+ #define EEL_RGB_COLOR_GREEN	0x00FF00
+@@ -43,10 +44,10 @@
+ 
+ /* Pack RGBA values into 32 bits */
+ #define EEL_RGBA_COLOR_PACK(r, g, b, a)		\
+-( ((a) << 24) |					\
+-  ((r) << 16) |					\
+-  ((g) <<  8) |					\
+-  ((b) <<  0) )
++( (((uint32_t)a) << 24) |					\
++  (((uint32_t)r) << 16) |					\
++  (((uint32_t)g) <<  8) |					\
++  (((uint32_t)b) <<  0) )
+ 
+ /* Pack opaque RGBA values into 32 bits */
+ #define EEL_RGB_COLOR_PACK(r, g, b)		\

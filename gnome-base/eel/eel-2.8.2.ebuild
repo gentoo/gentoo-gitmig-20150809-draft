@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.8.2.ebuild,v 1.7 2005/01/22 06:08:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.8.2.ebuild,v 1.8 2005/04/01 03:01:02 luckyduck Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="The Eazel Extentions Library"
 HOMEPAGE="http://www.gnome.org/"
@@ -29,3 +29,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS ChangeLog HACKING THANKS README NEWS TODO MAINTAINERS"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
+}
