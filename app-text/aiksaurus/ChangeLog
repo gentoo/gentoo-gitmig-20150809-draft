@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aiksaurus
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.13 2004/04/24 09:05:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.14 2004/05/12 20:22:47 kloeri Exp $
+
+  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> aiksaurus-1.0.1-r1.ebuild:
+  Stable on alpha.
 
 *aiksaurus-1.0.1-r1 (24 Apr 2004)
 
