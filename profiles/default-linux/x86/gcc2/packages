@@ -26,7 +26,6 @@
 
 #does not build with gcc-2.x
 <media-video/transcode-0.6.12
-sys-fs/ntfsprogs
 <app-arch/rar-3.2.0
 <dev-util/ddd-3.3.6
 
@@ -63,18 +62,8 @@ sys-fs/ntfsprogs
 >=net-www/squid-2.4.2s-r6
 >=net-dialup/ppp-2.4.1-r6
 =sci-mathematics/octave-2.0*
-~media-video/cinelerra
-
-#GNUStep stuff works in gcc-3 only
-~dev-util/gnustep-back
-~dev-util/gnustep-base
-~dev-util/gnustep-gui
-~dev-util/gnustep-guile
-~dev-util/gnustep-make
 
 # Needs gcc-3
-dev-libs/elfutils
-~sys-devel/prelink
 <=app-arch/rpm-4.1
 <=games-emulation/fceultra-0.90
 
