@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.61 2004/12/10 13:03:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.62 2004/12/11 00:39:19 josejx Exp $
+
+  11 Dec 2004; Joseph Jezak <josejx@gentoo.org> nfs-utils-1.0.6-r6.ebuild:
+  Marked ppc stable for bug #72113.
 
   10 Dec 2004; Guy Martin <gmsoft@gentoo.org> nfs-utils-1.0.6-r6.ebuild:
   Stable on hppa.
