@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.37.ebuild,v 1.3 2003/12/17 05:02:37 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.37.ebuild,v 1.4 2004/01/07 14:12:11 karltk Exp $
 
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/"
@@ -14,6 +14,23 @@ DEPEND=">=dev-lang/python-2.0
 	>=dev-util/dialog-0.7
 	>=dev-lang/perl-5.6
 	>=sys-apps/grep-2.5-r1"
+
+# 2004-01-07: karltk
+#
+#
+#                 W A R N I N G ! ! ! 
+#
+#
+# If you make any modification to the scripts in files/, you must also
+# make a corrsponding modification in the 'gentoolkit' cvs module, if
+# the fix is going to be part of the upcoming 0.2.0 gentoolkit release.
+# 
+# We are changing the release procedure, and new releases will be done
+# by a member of the tools-portage herd. However, any interested developer
+# is free to fix bugs for the script he/she maintains in the 'gentoolkit'
+# cvs module. 
+#
+#
 
 src_install() {
 	dodir /usr/share/gentoolkit
