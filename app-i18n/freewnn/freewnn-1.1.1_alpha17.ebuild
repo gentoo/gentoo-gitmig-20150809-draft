@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha17.ebuild,v 1.4 2004/05/10 23:04:40 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha17.ebuild,v 1.5 2004/05/10 23:10:10 lv Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch ${FILESDIR}/a017/FreeWnn-sighandler.patch
 	epatch ${FILESDIR}/a017/FreeWnn-uum.patch
 	epatch ${FILESDIR}/a017/FreeWnn-1.1.1-a017.dif
-	epatch ${FILESDIR}/a017/FreeWnn-lib64.patch
+	#epatch ${FILESDIR}/a017/FreeWnn-lib64.patch
 	use s390 && epatch ${FILESDIR}/a017/FreeWnn-s390x.patch
 
 	#Change WNNOWNER to root so we don't need to add wnn user
