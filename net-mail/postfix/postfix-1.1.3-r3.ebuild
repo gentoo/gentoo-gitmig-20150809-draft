@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.3-r2.ebuild,v 1.2 2002/03/18 02:00:53 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.3-r3.ebuild,v 1.1 2002/03/24 19:57:01 woodchip Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -45,7 +45,7 @@ src_unpack() {
 	sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" mail_params.h.orig > mail_params.h
 
 	if [ "`use mta-mysql`" ] ; then
-		CCARGS="${CCARGS} -DHAS_MYSQL"
+		CCARGS="${CCARGS} -DHAS_MYSQL -I/usr/include/mysql"
 		AUXLIBS="${AUXLIBS} -lmysqlclient -lm"
 	fi
 
