@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.6 2002/05/13 03:04:21 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.7 2002/06/20 20:15:52 agenkin Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -139,7 +139,7 @@ stop() {
   #
   # remove all sound modules
   #
-  /sbin/lsmod | grep -E "^snd" | grep -v "snd-rme9652-mem" | while read line; do \
+  /sbin/lsmod | grep -E "^snd" | grep -v "snd-hammerfall-mem" | while read line; do \
      /sbin/rmmod `echo $line | cut -d ' ' -f 1`; \
   done
   # remove the 2.2 soundcore module (if possible)
