@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6-r2.ebuild,v 1.7 2004/07/13 00:29:51 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6-r2.ebuild,v 1.8 2004/07/23 11:32:27 usata Exp $
 
 inherit eutils flag-o-matic
 IUSE="cjk ssl nls slang crypt imap mbox nntp vanilla"
@@ -27,7 +27,6 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
 RDEPEND="nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2
-	>=sys-apps/sed-4
 	net-mail/mailbase
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	slang? ( >=sys-libs/slang-1.4.2 )
@@ -38,7 +37,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64 ~mips ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64 ~mips ppc64 macos"
 
 
 pkg_setup() {
@@ -130,7 +129,6 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die
-	sed -i -e 's/README.UPGRADE//' doc/Makefile || die "sed failed"
 	make || die "make failed (myconf=${myconf})"
 }
 
