@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/genromfs-0.5.1.ebuild,v 1.9 2003/02/13 05:18:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/genromfs-0.5.1.ebuild,v 1.10 2003/09/23 20:20:55 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Create space-efficient, small, read-only romfs filesystems"
@@ -16,8 +16,7 @@ DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
-	cp Makefile Makefile.orig
-	sed -e "s%^\(CFLAGS = \)-O2%\1${CFLAGS}%" Makefile.orig > Makefile
+	sed -i -e "s%^\(CFLAGS = \)-O2%\1${CFLAGS}%" Makefile
 }
 
 src_compile() {

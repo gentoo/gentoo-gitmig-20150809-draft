@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.14 2003/09/04 05:16:02 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.15 2003/09/23 20:20:55 aliz Exp $
 
 inherit libtool eutils
 
@@ -26,8 +26,7 @@ src_unpack() {
 
 	# should fix the sigqueue overflow problems
 	cd ${S}/fam
-	mv Makefile.am Makefile.am.old
-	sed -e "s:fam_LDADD =:fam_LDADD = -lrt -lpthread:" Makefile.am.old > Makefile.am
+	sed -i -e "s:fam_LDADD =:fam_LDADD = -lrt -lpthread:" Makefile.am
 
 	elibtoolize
 
@@ -40,8 +39,7 @@ src_unpack() {
 }
 
 src_install() {
-	cp fam/fam.conf fam/fam.conf.old
-	sed s:"local_only = false":"local_only = true":g fam/fam.conf.old >fam/fam.conf
+	sed -i s:"local_only = false":"local_only = true":g fam/fam.conf
 
 	make DESTDIR=${D} install || die
 

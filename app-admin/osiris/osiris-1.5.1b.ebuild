@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-1.5.1b.ebuild,v 1.5 2003/09/06 22:08:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-1.5.1b.ebuild,v 1.6 2003/09/23 20:20:55 aliz Exp $
 
 
 DESCRIPTION="File integrity verification system"
@@ -30,9 +30,8 @@ src_compile() {
 	# The mysql module searches for the mysql.h file in the wrong place
 	# sed line replaces it with the proper path (mysql/mysql.h)
 
-	cp ${S}/src/modules/module_mysql.c ${S}/src/modules/module_mysql.c.old
-	use mysql && sed -e "s:mysql.h:mysql/mysql.h:" \
-				${S}/src/modules/module_mysql.c.old > ${S}/src/modules/module_mysql.c
+	use mysql && sed -i -e "s:mysql.h:mysql/mysql.h:" \
+				${S}/src/modules/module_mysql.c
 
 	./configure \
 		--host=${CHOST} \

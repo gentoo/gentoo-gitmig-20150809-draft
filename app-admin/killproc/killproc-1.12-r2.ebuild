@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.14 2003/09/06 22:08:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.15 2003/09/23 20:20:55 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="killproc and assorted tools for boot scripts"
@@ -18,12 +18,10 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	cp Makefile Makefile.orig
-
 	if [ ${ARCH} = "x86" ] ; then
-		sed -e "s:-O2:${CFLAGS}:" -e "s:-m486::" Makefile.orig > Makefile
+		sed -i -e "s:-O2:${CFLAGS}:" -e "s:-m486::" Makefile
 	else
-		sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
+		sed -i -e "s:-O2:${CFLAGS}:" Makefile
 	fi
 }
 

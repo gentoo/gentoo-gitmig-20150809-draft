@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-3.3.6-r1.ebuild,v 1.12 2003/02/13 05:31:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-3.3.6-r1.ebuild,v 1.13 2003/09/23 20:20:55 aliz Exp $
 
 DESCRIPTION="System performance tools for Linux"
 SRC_URI="http://www.ibiblio.org/pub/Linux/system/status/${P}.tar.gz"
@@ -17,14 +17,12 @@ RDEPEND="nls? ( sys-devel/gettext )"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	cp Makefile Makefile.orig
-	sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
+	sed -i -e "s:-O2:${CFLAGS}:" Makefile
 }
 
 src_compile() {
 	yes "" | make config
-	cp build/CONFIG build/CONFIG.orig
-	use nls || sed 's/\(ENABLE_NLS\ =\ \)y/\1n/g' build/CONFIG.orig > build/CONFIG
+	use nls || sed -i 's/\(ENABLE_NLS\ =\ \)y/\1n/g' build/CONFIG
 	make PREFIX=/usr || die
 }
 

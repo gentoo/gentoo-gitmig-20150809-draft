@@ -1,5 +1,5 @@
 MD5 ef732fe6159bbafe53ee0a6a27cd04f3 ChangeLog 2448
-MD5 cd9dc0046642bb739faa096ce9310736 msyslog-1.09a-r1.ebuild 2114
+MD5 100d6fdc437bf674116a6580a84aeb4d msyslog-1.09a-r1.ebuild 2103
 MD5 abc972b32ebeb711717856368d6eebd8 files/digest-msyslog-1.09a-r1 69
 MD5 2edcd203cb92257f4628ecc2e05520c7 files/msyslog-1.09a-gentoo.diff 4304
 MD5 ca890f415d810ad3a89d6101eeba95ec files/msyslog-confd 304

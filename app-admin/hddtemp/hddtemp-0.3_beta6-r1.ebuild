@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta6-r1.ebuild,v 1.3 2003/09/06 22:08:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta6-r1.ebuild,v 1.4 2003/09/23 20:20:55 aliz Exp $
 
 MY_P=${P/_beta/-beta}
 HDDDB_VERSION=20030609
@@ -24,13 +24,11 @@ src_unpack() {
 	gunzip <${DISTDIR}/${HDDDB_FILE}.gz >${WORKDIR}/${HDDDB_FILE}
 	cd ${S}
 	# patch Makefile
-	mv Makefile Makefile.orig
-	sed -e "s:^CFLAGS.*:CFLAGS=${CFLAGS} -DARCH_I386:" \
+	sed -i -e "s:^CFLAGS.*:CFLAGS=${CFLAGS} -DARCH_I386:" \
 		-e "s:^CC.*:CC=gcc:" \
-		Makefile.orig > Makefile
-	mv db.h db.h.orig
-	sed -e "s:/etc/hddtemp.db:${HDDDB_DIR}/${HDDDB_FILE}:" \
-		db.h.orig > db.h
+		Makefile
+	sed -i -e "s:/etc/hddtemp.db:${HDDDB_DIR}/${HDDDB_FILE}:" \
+		db.h
 }
 
 src_compile() {

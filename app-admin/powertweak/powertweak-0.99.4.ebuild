@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.7 2003/09/06 22:08:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.8 2003/09/23 20:20:55 aliz Exp $
 
 DESCRIPTION="tune your kernel and hardware settings for optimal performance"
 SRC_URI="mirror://sourceforge/powertweak/${P}.tar.bz2"
@@ -29,10 +29,9 @@ src_unpack() {
 	cd ${S} ; patch -l -p1 < ${FILESDIR}/${P}-gentoo.diff
 
 	for FILE in `find . -iname "Makefile*"`;do
-		cp ${FILE} ${FILE}.hacked
-		sed -e "s:\(^CFLAGS =.*\):\1 ${CFLAGS}:" \
+		sed -i -e "s:\(^CFLAGS =.*\):\1 ${CFLAGS}:" \
 			-e "s:\(^CPPFLAGS =.*\):\1 ${CPPFLAGS}:" \
-			${FILE}.hacked > ${FILE} || die "Hack failed"
+			${FILE} || die "Hack failed"
 	done
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6-r11.ebuild,v 1.1 2003/09/17 22:28:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6-r11.ebuild,v 1.2 2003/09/23 20:20:55 aliz Exp $
 
 DESCRIPTION="A highly configurable replacement for syslogd/klogd"
 SRC_URI="mirror://sourceforge/metalog/${P}.tar.gz"
@@ -17,15 +17,13 @@ PROVIDE="virtual/logger"
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	# adds a pidfile option.  NiCE aeoo! :)
-	patch -p1 < ${FILESDIR}/metalog-0.6-gentoo.patch || die
+	epatch ${FILESDIR}/metalog-0.6-gentoo.patch
 	cd ${S}/src
-	mv metalog.h metalog.h.orig
-	sed -e "s:/etc/metalog.conf:/etc/metalog/metalog.conf:g" \
-		metalog.h.orig > metalog.h
+	sed -i -e "s:/etc/metalog.conf:/etc/metalog/metalog.conf:g" \
+		metalog.h
 	cd ${S}/man
-	mv metalog.8 metalog.8.orig
-	sed -e "s:/etc/metalog.conf:/etc/metalog/metalog.conf:g" \
-		metalog.8.orig > metalog.8
+	sed -i -e "s:/etc/metalog.conf:/etc/metalog/metalog.conf:g" \
+		metalog.8
 }
 
 src_compile() {

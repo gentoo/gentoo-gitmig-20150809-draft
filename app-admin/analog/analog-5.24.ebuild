@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.24.ebuild,v 1.12 2003/09/20 19:56:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.24.ebuild,v 1.13 2003/09/23 20:20:55 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The most popular logfile analyser in the world"
@@ -20,11 +20,10 @@ DEPEND=">=dev-libs/libpcre-3.4
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	mv src/Makefile src/Makefile.orig
-	sed -e "s:^CFLAGS.*:CFLAGS = ${CFLAGS}:" \
+	sed -i -e "s:^CFLAGS.*:CFLAGS = ${CFLAGS}:" \
 		-e 's:^DEFS.*:DEFS = -DHAVE_GD -DHAVE_PCRE:' \
 		-e 's:^LIBS.*:LIBS = -lgd -lpng -ljpeg -lz -lpcre -lm:' \
-		src/Makefile.orig > src/Makefile
+		src/Makefile
 	epatch ${FILESDIR}/${PN}-5.1-gentoo.diff
 }
 

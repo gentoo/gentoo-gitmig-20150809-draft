@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r8.ebuild,v 1.1 2003/09/17 22:27:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r8.ebuild,v 1.2 2003/09/23 20:20:55 aliz Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Standard log daemons"
@@ -20,8 +20,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	mv Makefile Makefile.orig
-	sed -e "s:-O3:${CFLAGS}:" Makefile.orig > Makefile
+	sed -i -e "s:-O3:${CFLAGS}:" Makefile
 
 	# Handle SO_BSDCOMPAT being depricated in 2.5+ kernels.
 	cd ${S}; epatch ${FILESDIR}/${P}-SO_BSDCOMPAT.patch
