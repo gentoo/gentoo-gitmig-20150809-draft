@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/nbench
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbench/ChangeLog,v 1.5 2004/02/24 02:00:34 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbench/ChangeLog,v 1.6 2004/02/24 02:29:50 pylon Exp $
+
+  24 Feb 2004; Lars Weiler <pylon@gentoo.org> nbench-2.1.ebuild:
+  Works on ppc.  Masking ~ppc
 
   24 Feb 2004; Sven Blumenstein <bazik@gentoo.org> nbench-2.1.ebuild:
   Stable on sparc.
