@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/logjam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.23 2004/12/21 12:37:43 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.24 2004/12/21 14:16:06 joem Exp $
+
+  21 Dec 2004; Joe McCann <joem@gentoo.org> logjam-4.2.2.ebuild,
+  logjam-4.3.2.ebuild, logjam-4.4.0-r1.ebuild, logjam-4.4.0.ebuild:
+  Needs hard dep on libgtkhtml-3.0.10* now that a newer slot is available
 
 *logjam-4.4.0-r1 (21 Dec 2004)
 
