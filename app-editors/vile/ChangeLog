@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.10 2003/08/02 16:56:23 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.11 2003/08/13 09:41:24 weeve Exp $
+
+  13 Aug 2003; Jason Wever <weeve@gentoo.org> vile-9.3h.ebuild:
+  Changed ~sparc keyword to sparc to fix bug #25664.
 
   02 Aug 2003; Todd Sunderlin <todd@gentoo.org> vile-9.2z.ebuild:
   Marked stable on sparc

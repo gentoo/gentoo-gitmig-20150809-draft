@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.3h.ebuild,v 1.5 2003/03/11 21:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.3h.ebuild,v 1.6 2003/08/13 09:41:25 weeve Exp $
 
 IUSE="perl"
 
@@ -28,7 +28,7 @@ PROVIDE="virtual/editor"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc sparc ~alpha"
 
 src_unpack() {
 	unpack vile-9.3.tgz
