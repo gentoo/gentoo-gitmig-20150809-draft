@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.3.ebuild,v 1.3 2004/04/27 21:30:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.3.ebuild,v 1.4 2004/06/22 08:19:07 mr_bones_ Exp $
 
 inherit eutils
 
-DESCRIPTION="patch management script"
-HOMEPAGE="http://www.capisuite.de/capisuite/"
-SRC_URI="http://www.capisuite.de/capisuite/${P}.tar.gz"
+DESCRIPTION="An ISDN telecommunication suite"
+HOMEPAGE="http://www.capisuite.de"
+SRC_URI="http://www.capisuite.de/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/capisuite
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.3 2004/04/27 21:30:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.4 2004/06/22 08:19:07 mr_bones_ Exp $
+
+  22 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> capisuite-0.4.3.ebuild:
+  fix DESCRIPTION, HOMEPAGE, SRC_URI (bug #54714)
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> capisuite-0.4.3.ebuild:
   Add inherit eutils
