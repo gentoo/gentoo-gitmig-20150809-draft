@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.6 2003/11/24 23:49:20 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.7 2003/12/16 23:25:46 zul Exp $
+
+  16 Dec 2003; Chuck Short <zul@gentoo.org> eggdrop-1.6.15-r1.ebuild:
+  Marked stable for x86.
 
 *eggdrop-1.6.15-r1 (24 Nov 2003)
 
