@@ -1,22 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d49cddfe613f82b2b92ff6c554ab7f8a ChangeLog 1392
+MD5 86348c1c4344826e7d8f6821be336385 ChangeLog 1520
 MD5 619b858577edb26a03cdf700b6997618 metadata.xml 186
-MD5 92d7803a92cd82b4963577c7bd6f4521 pdftk-1.11.ebuild 1150
 MD5 f3146a6d7b21471d0385c92838deb6cc pdftk-0.94.1.ebuild 1192
 MD5 3086ceca07b4cbfa48ffbb5aa0861630 pdftk-1.00.ebuild 1150
-MD5 9474d3fb5cad05fc1e9c2469bd5dcafa pdftk-1.10.ebuild 1151
-MD5 a2141ca285a04351f1b61361dcdfc55f pdftk-1.12.ebuild 1150
-MD5 c27bddf90d78343218010316a8f69e45 files/digest-pdftk-1.11 62
+MD5 0846f814a55f96f15d756c922a0fd599 pdftk-1.12.ebuild 1149
 MD5 372043661fddd71d4fcb45e2799dd47c files/digest-pdftk-0.94.1 63
 MD5 2127c3d55a42d67b46fd9c1922fe252e files/digest-pdftk-1.00 62
-MD5 e28c806eb886653147cf59173914386f files/digest-pdftk-1.10 62
 MD5 feb6c853c96b6829faad008d0dba16e2 files/digest-pdftk-1.12 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBlfctVWNWqTUmv+0RAnO9AJ487d/uQxl9c52jq1st6WK5DkHvOwCfc6FQ
-6w9q7JTa1YQ8cKJ7tYyAeaI=
-=4b/i
+iD8DBQFBuDGkVWNWqTUmv+0RAqveAKC1v5eKZOrKqJA4EbWjx+F6NWSIKQCaAwfz
+cLaz9/d4RYNjxNKwwwmWt90=
+=DFZT
 -----END PGP SIGNATURE-----

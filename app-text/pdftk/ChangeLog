@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdftk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.10 2004/11/13 12:06:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.11 2004/12/09 11:13:23 usata Exp $
+
+  09 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> -pdftk-1.10.ebuild,
+  -pdftk-1.11.ebuild, pdftk-1.12.ebuild:
+  Stable on x86.
 
 *pdftk-1.12 (13 Nov 2004)
 
