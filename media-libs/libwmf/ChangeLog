@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libwmf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.13 2003/03/19 20:02:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.14 2003/03/24 02:57:21 liquidx Exp $
+
+*libwmf-0.2.8 (24 Mar 2003)
+
+  24 Mar 2003; Alastair Tse <liquidx@gentoo.org> libwmf-0.2.8.ebuild:
+  Version Bump
 
 *libwmf-0.2.7-r2 (19 Mar 2003)
 
