@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000b-r1.ebuild,v 1.1 2000/11/15 22:59:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000b-r1.ebuild,v 1.2 2000/11/27 22:40:41 achim Exp $
 
 A=${P}-src.tar.gz
 S=${WORKDIR}/${P}
@@ -41,7 +41,7 @@ src_install () {
     dobin bcast/bcast2000
     dolib.so bcbase/libbcbase.so
     insopts -m 755
-    insinto /usr/X11R6/lib/bcast2000a/plugins
+    insinto /usr/X11R6/lib/bcast2000b/plugins
     doins plugins/*.plugin
     dodoc COPYING
     docinto html

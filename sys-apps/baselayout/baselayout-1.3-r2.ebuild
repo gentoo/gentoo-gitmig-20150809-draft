@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.3-r2.ebuild,v 1.1 2000/11/22 20:56:31 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.3-r2.ebuild,v 1.2 2000/11/27 22:40:41 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -31,8 +31,7 @@ src_install()
 	dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
 	dodir /usr/share /usr/bin/ /usr/doc
 	dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
-	dodir /usr/X11R6/lib /usr/src/linux/include/linux
-	dodir /usr/src/linux/include/asm-i386
+	dodir /usr/X11R6/lib 
 	dodir /var /var/run /var/log/news
 	touch ${D}/var/run/utmp
 	touch ${D}/var/log/wtmp

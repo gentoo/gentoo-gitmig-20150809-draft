@@ -17,6 +17,7 @@ then
 fi
 
 . /etc/rc.d/config/functions
+
 KERNVERS=`uname -r`
 
 if [ ! -e /lib/modules/${KERNVERS}/modules.dep ]
