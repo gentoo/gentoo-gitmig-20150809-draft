@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.9.3.ebuild,v 1.5 2004/01/21 05:47:55 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.9.4.ebuild,v 1.1 2004/01/21 05:47:55 raker Exp $
 
 IUSE="oggvorbis mad"
 
@@ -21,7 +21,7 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 
 src_compile() {
 	local myconf
-	myconf="--with-gnu-ld"
+	myconf=""
 
 	use oggvorbis \
 		|| myconf="${myconf} --disable-ogg  --disable-oggtest \
