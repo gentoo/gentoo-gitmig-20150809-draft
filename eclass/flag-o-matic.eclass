@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.53 2004/06/01 04:28:38 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.54 2004/06/06 16:39:18 solar Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
 ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
+IUSE="debug"
 
 #
 #### filter-flags <flags> ####
