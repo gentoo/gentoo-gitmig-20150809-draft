@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.276 2004/03/17 02:42:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.277 2004/03/17 03:52:33 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 
+app-accessibility/festival:asterisk - adds a new command named tts_textasterisk that is required by net-misc/asterisk to communicate with the Festival server
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-editors/nano:justify - Toggle the justify option ...
@@ -140,7 +141,6 @@ media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
 media-sound/ecasound:audiofile - Enable libaudiofile support
-media-sound/festival:asterisk - adds a new command named tts_textasterisk that is required by net-misc/asterisk to communicate with the Festival server
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-sound/lilypond:nopfa - disable building pfa fonts
