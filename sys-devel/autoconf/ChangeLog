@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.53 2004/07/28 13:32:35 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.54 2004/07/29 20:22:45 gmsoft Exp $
+
+  29 Jul 2004; Guy Martin <gmsoft@gentoo.org> autoconf-2.59-r4.ebuild:
+  Stable on hppa.
 
   28 Jul 2004; Caleb Tennis <caleb@gentoo.org> autoconf-2.59-r4.ebuild:
   marking x86 stable
