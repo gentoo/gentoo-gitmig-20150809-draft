@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/amavis-0.3.12.ebuild,v 1.5 2004/07/07 22:56:01 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/amavis-0.3.12.ebuild,v 1.6 2004/07/10 23:34:08 langthang Exp $
 
 inherit eutils
 
@@ -64,7 +64,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if [ "$mymta" == "postfix " ]; then
+	if [ "$mymta" == "postfix" ]; then
 		patch -p1 < ${FILESDIR}/0.3.12-postfix.diff || die "patch failed"
 	fi
 
@@ -80,13 +80,13 @@ src_compile() {
 
 	local myconf
 
-	if [ "$mymta" == "postfix " ]; then
+	if [ "$mymta" == "postfix" ]; then
 		myconf="--enable-postfix"
-	elif [ "$mymta" == "qmail " ]; then
+	elif [ "$mymta" == "qmail" ]; then
 		myconf="--enable-qmail"
-	elif [ "$mymta" == "exim " ]; then
+	elif [ "$mymta" == "exim" ]; then
 		myconf="--enable-exim"
-	elif [ "$mymta" == "sendmail " ]; then
+	elif [ "$mymta" == "sendmail" ]; then
 		myconf="--enable-sendmail"
 	fi
 
@@ -103,7 +103,7 @@ src_install() {
 
 	dodir /var/amavis/quarantine
 
-	if [ "$mymta" == "qmail " ]; then
+	if [ "$mymta" == "qmail" ]; then
 		chown -R qmailq:qmail ${D}/var/amavis
 	else
 		chown -R amavis:amavis ${D}/var/amavis
