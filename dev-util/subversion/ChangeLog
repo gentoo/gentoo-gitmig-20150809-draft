@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.74 2004/05/24 09:47:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.75 2004/05/25 09:01:04 pauldv Exp $
+
+*subversion-1.0.4 (24 May 2004)
+
+  24 May 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.0.3.ebuild,
+  +subversion-1.0.4.ebuild:
+  set amd64 to stable on 1.0.3. Add a new upstream version in 1.0.4 and 
+  make it even more hard to merge subversion with autoconf-2.58
 
   24 May 2004; Bryan Østergaard <kloeri@gentoo.org> subversion-1.0.3.ebuild:
   Keyworded ~alpha, requested in bug #51550.
