@@ -1,7 +1,15 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.1 2002/12/20 22:31:04 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.2 2003/02/07 22:58:03 jhhudso Exp $
 
+*logwatch-4.3.1 (07 Feb 2003)
+
+  07 Feb 2003; Jared Hudson <jhhudso@gentoo.org> : Version bump.
+	
+	
+  07 Feb 2003; Jared Hudson <jhhudso@gentoo.org> : Changed source location,
+  since providing ftp site moved 4.2.1 to old archives.
+	
 *logwatch-4.2.1 (20 Dec 2002)
 
   20 Dec 2002; Jared Hudson <jhhudso@gentoo.org> : Initial import. Ebuild
