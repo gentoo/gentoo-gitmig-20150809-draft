@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-0.9.0.ebuild,v 1.19 2004/07/02 08:47:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-0.9.0.ebuild,v 1.20 2004/07/08 23:29:36 kloeri Exp $
 
 inherit gnuconfig eutils
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 IUSE=""
 SLOT="0"
 LICENSE="LGPL-2.1 | GPL-2"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="x86 ppc sparc amd64 ~alpha"
 
 DEPEND="virtual/libc"
 
