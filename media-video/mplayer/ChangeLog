@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.142 2004/06/02 02:53:27 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.143 2004/06/02 21:50:53 ferringb Exp $
+
+  02 Jun 2004; Brian Harring <ferringb@gentoo.org> mplayer-1.0_pre4-r1.ebuild,
+  mplayer-1.0_pre4-r2.ebuild, mplayer-1.0_pre4-r3.ebuild,
+  mplayer-1.0_pre4-r4.ebuild, mplayer-1.0_pre4.ebuild:
+  Missing IUSE for nas, nls. Added live use flag to pre4, removed the inline
+  autodetect of live, making it a use flag controlled dep. moved all IUSE
+  statements below inherit, where they should stay. Closed bugs #49481 and 
+  #36815.
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> mplayer-1.0_pre4-r4.ebuild:
   stable on amd64
