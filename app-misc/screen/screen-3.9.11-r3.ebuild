@@ -21,7 +21,8 @@ src_unpack() {
 }
 src_compile() {
 	addpredict /dev/pty/*
-	
+	addwrite /dev/pty/*
+
 	econf \
 		--with-sys-screenrc=/etc/screen/screenrc \
 		--libexecdir=/usr/lib/misc || die
