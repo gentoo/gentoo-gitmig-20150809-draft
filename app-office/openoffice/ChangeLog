@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.11 2002/11/05 21:56:31 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.12 2002/12/01 09:25:48 azarah Exp $
+
+  01 Dec 2002; Martin Schlemmer <azarah@gentoo.org> openoffice-1.0.1.ebuild-r1 :
+  Change it to use freetype-2.1.2.tar.bz2, as I was braindead at the time
+  and used the .tar.gz.  Also convert to use epatch().
 
 *openoffice-1.0.1-r1 (22 Sep 2002)
 

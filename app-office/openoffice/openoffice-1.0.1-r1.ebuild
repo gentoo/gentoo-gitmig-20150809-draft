@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r1.ebuild,v 1.5 2002/11/05 21:56:31 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r1.ebuild,v 1.6 2002/12/01 09:25:48 azarah Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -26,7 +26,7 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 # Compile problems with these ...
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
@@ -58,7 +58,7 @@ SRC_URI="http://ny1.mirror.openoffice.org/${PV}/OOo_${PV}_source.tar.bz2
 	http://sf1.mirror.openoffice.org/${PV}/OOo_${PV}_source.tar.bz2
 	http://www.stlport.org/archive/STLport-${STLP_VER}.tar.gz
 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z
-	mirror://sourceforge/freetype/freetype-2.1.2.tar.gz"
+	mirror://sourceforge/freetype/freetype-2.1.2.tar.bz2"
 HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
@@ -155,57 +155,58 @@ src_unpack() {
 
 	einfo "Applying patches..."
 	# This allows JDK 1.4.0 to be used (Prez)
-	patch -p1 < ${FILESDIR}/${PV}/${PN}-1.0.0-configure.patch || die
+	epatch ${FILESDIR}/${PV}/${PN}-1.0.0-configure.patch
 
 	# Get OO to build with gcc-3.2's libstdc++.so (Az)
 	if [ "$(gcc-version)" = "3.2" ]
 	then
-		patch -p1 < ${FILESDIR}/${PV}/${P}-use-libstdc++-5.0.0.patch || die
+		epatch ${FILESDIR}/${PV}/${P}-use-libstdc++-5.0.0.patch
 	fi
 
 	# Debian patch to enable build of zipdep
-	patch -p1 < ${FILESDIR}/${PV}/${PN}-1.0.0-zipdep-not-found.patch || die
+	epatch ${FILESDIR}/${PV}/${PN}-1.0.0-zipdep-not-found.patch
 
 	# Some Debian patches to get the build to use $CC and $CXX,
 	# thanks to nidd from #openoffice.org
-	patch -p1 < ${FILESDIR}/${PV}/${P}-gcc-version-check.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-set-compiler-vars.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-use-compiler-vars.patch || die
+	epatch ${FILESDIR}/${PV}/${P}-gcc-version-check.patch
+	epatch ${FILESDIR}/${PV}/${P}-set-compiler-vars.patch
+	epatch ${FILESDIR}/${PV}/${P}-use-compiler-vars.patch
 	# Update configure before we do anything else.
 	cd ${S}/config_office; autoconf || die; cd ${S}
 
 	# This resolves missing symbols (Debian)
-	patch -p1 < ${FILESDIR}/${PV}/${P}-compiler-flags.patch || die
+	epatch ${FILESDIR}/${PV}/${P}-compiler-flags.patch
 
 	# Enable ccache and distcc (Debian)
-	patch -p1 < ${FILESDIR}/${PV}/${P}-parallel-build.patch || die
+	epatch ${FILESDIR}/${PV}/${P}-parallel-build.patch
 	# If $HOME is not set, ccache breaks. (Debian)
-	patch -p1 < ${FILESDIR}/${PV}/${P}-dont-unset-home.patch || die
+	epatch ${FILESDIR}/${PV}/${P}-dont-unset-home.patch
 
 	if [ "$(use ppc)" ]
 	then
 		# Not sure about this .. PPC guys will have to verify.
-		patch -p1 < ${FILESDIR}/${PV}/${P}-bridge-fix-on-PPC.patch || die
+		epatch ${FILESDIR}/${PV}/${P}-bridge-fix-on-PPC.patch
 	fi
 
 	# Misc Debian patches to fixup build
-	patch -p1 < ${FILESDIR}/${PV}/${PN}-1.0.1-no-mozab.patch || die
+	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-no-mozab.patch
+	rm -f ${S}/moz/prj/build.lst
 	echo "moz     moz : NULL" > ${S}/moz/prj/build.lst
 
 	# Misc patches from Mandrake
-	patch -p1 < ${FILESDIR}/${PV}/${P}-braindamage.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-fix-asm.patch || die
+	epatch ${FILESDIR}/${PV}/${P}-braindamage.patch
+	epatch ${FILESDIR}/${PV}/${P}-fix-asm.patch
 
 	# Get OO to use STLport-4.5.3 (Az)
 	cp ${DISTDIR}/STLport-${STLP_VER}.tar.gz ${S}/stlport/download || die
 	cd ${S}/stlport
-	patch -p1 < ${FILESDIR}/${PV}/${P}-use-STLport-4.5.3.patch || die
+	epatch ${FILESDIR}/${PV}/${P}-use-STLport-4.5.3.patch
 
 	# Get OO to build with freetype-2.1.2
 	cd ${S}
 	cp ${DISTDIR}/freetype-${FT_VER}.tar.gz ${S}/freetype/download || die
 	cp ${FILESDIR}/${PV}/freetype-${FT_VER}.patch ${S}/freetype || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-use-freetype-${FT_VER}.patch || die
+	epatch ${FILESDIR}/${PV}/${P}-use-freetype-${FT_VER}.patch
 
 	# More gcc3 related fixes
 	if [ "$(gcc-major-version)" -eq 3 ] && [ "$(gcc-minor-version)" -ne 0 ]
