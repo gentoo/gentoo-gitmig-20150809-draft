@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.21 2004/08/01 21:05:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.22 2004/09/08 15:12:46 gustavoz Exp $
+
+  08 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> firebird-1.5.1.ebuild:
+  Keyworded ~sparc wrt #63184
 
   01 Aug 2004; Carsten Lohrke <carlo@gentoo.org> firebird-1.5.1.ebuild:
   small xinetd fix
