@@ -44,3 +44,4 @@ sybase-ct
 fdftk
 djbfft
 qdbm
+mzscheme

@@ -42,3 +42,4 @@ solid
 sybase
 sybase-ct
 fdftk
+mzscheme

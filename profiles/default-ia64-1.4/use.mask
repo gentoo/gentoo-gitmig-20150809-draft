@@ -62,3 +62,4 @@ qdbm
 
 hardened
 djbfft
+mzscheme
