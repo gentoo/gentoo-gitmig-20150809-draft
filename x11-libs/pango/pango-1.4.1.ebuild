@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.4.1.ebuild,v 1.6 2004/08/08 16:33:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.4.1.ebuild,v 1.7 2004/08/09 03:58:25 vapier Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2 FTL"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips ~alpha ~arm ~hppa amd64 ia64 ~ppc64"
+KEYWORDS="x86 ppc sparc ~mips ~alpha ~arm hppa amd64 ia64 ~ppc64"
 IUSE="doc"
 
 RDEPEND="virtual/x11
@@ -24,30 +24,26 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 src_unpack() {
-
 	unpack ${A}
-
 	cd ${S}
+
 	# Some enhancements from Redhat
 	epatch ${FILESDIR}/pango-1.0.99.020606-xfonts.patch
 	epatch ${FILESDIR}/${PN}-1.2.2-slighthint.patch
-
 }
 
 DOCS="AUTHORS ChangeLog README INSTALL NEWS TODO*"
 
 src_install() {
-
 	gnome2_src_install
 	rm ${D}/etc/pango/pango.modules
-
 }
 
 pkg_postinst() {
-
-	einfo "Generating modules listing..."
-	pango-querymodules > /etc/pango/pango.modules
-
+	if [ "${ROOT}" == "/" ] ; then
+		einfo "Generating modules listing..."
+		pango-querymodules > /etc/pango/pango.modules
+	fi
 }
 
 USE_DESTDIR="1"
