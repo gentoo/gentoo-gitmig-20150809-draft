@@ -1,6 +1,11 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.6 2003/05/31 14:15:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.7 2003/06/14 14:07:00 aliz Exp $
+
+*lprng-3.8.12-r1 (14 Jun 2003)
+
+  14 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
   31 May 2003; root <root@gentoo.org> lprng-3.8.12.ebuild:
   ppc keyworded
