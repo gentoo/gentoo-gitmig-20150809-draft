@@ -1,16 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.1 2004/01/05 05:01:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.2 2004/02/05 22:22:10 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="GUI for gnuchess and for internet chess servers"
 HOMEPAGE="http://www.tim-mann.org/xboard.html"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/xboard/${P}.tar.gz"
 
+KEYWORDS="x86 ppc alpha"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+IUSE=""
 
 DEPEND="games-board/gnuchess"
 
@@ -22,7 +23,7 @@ src_unpack() {
 
 src_install() {
 	egamesinstall || die
-	dodoc FAQ READ_ME ToDo ChangeLog*
-	dohtml FAQ.html
+	dodoc FAQ READ_ME ToDo ChangeLog* || die "dodoc failed"
+	dohtml FAQ.html || die "dohtml failed"
 	prepgamesdirs
 }
