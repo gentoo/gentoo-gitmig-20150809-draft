@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.25 2005/03/08 11:55:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.26 2005/03/08 11:56:49 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -175,6 +175,8 @@ get_abi_var() {
 	local abi
 	if [ $# -gt 1 ]; then
 		abi=${2}
+	elif [ -n "${ABI}" ]; then
+		abi=${ABI}
 	elif [ -n "${DEFAULT_ABI}" ]; then
 		abi=${DEFAULT_ABI}
 	else
