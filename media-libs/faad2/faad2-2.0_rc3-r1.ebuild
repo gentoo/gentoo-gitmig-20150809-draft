@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc3-r1.ebuild,v 1.1 2004/02/01 05:16:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc3-r1.ebuild,v 1.2 2004/02/02 08:17:22 eradicator Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -17,10 +17,13 @@ RDEPEND="xmms? ( >=media-sound/xmms-1.2.7
 	media-libs/id3lib )"
 
 DEPEND="${RDEPEND}
+	>=sys-apps/sed-4.0.7
 	sys-devel/automake
 	sys-devel/autoconf"
 
 S=${WORKDIR}/${PN}
+
+DOCS="AUTHORS ChangeLog INSTALL NEWS README README.linux TODO"
 
 src_compile() {
 	# see #34392
@@ -37,31 +40,23 @@ src_compile() {
 		`use_with xmms` \
 		|| die
 
-	#######################################################################
-	# BEGIN PATCH to fix Makefile so that it doesn't violate the sandbox.
-	OLD_XMMS_MAKEFILE=${S}/plugins/xmms/src/Makefile.old
-	NEW_XMMS_MAKEFILE=${S}/plugins/xmms/src/Makefile
-	cp ${NEW_XMMS_MAKEFILE} ${OLD_XMMS_MAKEFILE}
-	sed 's/^libdir = `xmms\-config \-\-input\-plugin\-dir`/xmmslibdir = `xmms\-config \-\-input\-plugin\-dir`/' ${OLD_XMMS_MAKEFILE} > ${NEW_XMMS_MAKEFILE}
-	echo "libdir = \${D}\${xmmslibdir}" >> ${NEW_XMMS_MAKEFILE}
-
-	OLD_XMMSMP4_MAKEFILE=${S}/plugins/xmmsmp4/src/Makefile.old
-	NEW_XMMSMP4_MAKEFILE=${S}/plugins/xmmsmp4/src/Makefile
-	cp ${NEW_XMMSMP4_MAKEFILE} ${OLD_XMMSMP4_MAKEFILE}
-	sed 's/^libdir = `xmms\-config \-\-input\-plugin\-dir`/xmmslibdir = `xmms\-config \-\-input\-plugin\-dir`/' ${OLD_XMMSMP4_MAKEFILE} > ${NEW_XMMSMP4_MAKEFILE}
-	echo "libdir = \${D}\${xmmslibdir}" >> ${NEW_XMMSMP4_MAKEFILE}
-	# END PATCH
-	#######################################################################
-
-	emake || die
+	# emake causes xmms plugin building to fail
+	make || die
 }
 
 src_install() {
-	einstall || die
+	# Copy over the xmms plugins first.  make install will not install these unless this is an upgrade.  See bug #38001
+	if use xmms; then
+		exeinto `xmms-config --input-plugin-dir`
+		doexe ${S}/plugins/xmmsmp4/src/.libs/libmp4.so
+		doexe ${S}/plugins/xmms/src/.libs/libaac.so
+	fi
+
+	make DESTDIR=${D} install || die
+
+	dodoc ${DOCS}
 
 	# unneeded include, breaks building of apps
 	# <foser@gentoo.org>
 	dosed "s:#include <systems.h>::" /usr/include/mpeg4ip.h
-
-	dodoc AUTHORS ChangeLog INSTALL NEWS README README.linux TODO
 }
