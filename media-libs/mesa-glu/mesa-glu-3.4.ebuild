@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.4.ebuild,v 1.3 2001/04/23 19:59:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.4.ebuild,v 1.4 2001/04/23 20:04:52 drobbins Exp $
 
 P=MesaLib-${PV}
 A=${P}.tar.gz
@@ -10,7 +10,7 @@ DESCRIPTION="OpenGL like graphic library for Linux"
 SRC_URI="ftp://gd.tuwien.ac.at/graphics/libs/Mesa/${A}"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 
-DEPEND=">=sys-libs/glibc-2.1.3 virtual/x11 virtual/opengl"
+DEPEND="virtual/glibc virtual/x11 virtual/opengl"
 
 src_compile() {
 
