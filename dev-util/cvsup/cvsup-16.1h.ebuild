@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.13 2004/07/11 15:53:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.14 2004/07/14 23:10:33 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp3.freebsd.org/pub/FreeBSD/development/CVSup/sources/${MY_P}.ta
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-* x86 ppc"
-IUSE="X opengl static doc"
+IUSE="X doc static"
 
 DEPEND="virtual/libc
 	dev-util/yacc
