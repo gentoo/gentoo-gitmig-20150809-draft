@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dejagnu
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.5 2004/05/07 12:38:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.6 2004/05/31 22:36:27 tgall Exp $
+
+  31 May 2004; Tom Gall <tgall@gentoo.org> dejagnu-1.4.4-r1.ebuild:
+  stable on ppc64
 
 *dejagnu-1.4.4-r1 (07 May 2004)
 
