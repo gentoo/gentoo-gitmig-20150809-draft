@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r1.ebuild,v 1.4 2003/03/03 08:27:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r1.ebuild,v 1.5 2003/03/03 09:01:51 seemant Exp $
 
-IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
+IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam spell"
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -20,35 +20,40 @@ KEYWORDS="~x86 ~ppc ~sparc"
 	# >=dev-libs/gmp-3.1.1
 
 DEPEND="
-	truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
-	jpeg? ( >=media-libs/jpeg-6b )
-	tiff? ( >=media-libs/tiff-3.5.5 )
 	X? ( virtual/x11 )
 	qt? ( x11-libs/qt )
 	nls? ( sys-devel/gettext )
 	pam? ( >=sys-libs/pam-0.75 )
 	png? ( >=media-libs/libpng-1.2.5 )
-	xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.95-r1 )
+	xml? ( >=net-libs/libwww-5.3.2
+		>=app-text/sablotron-0.95-r1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )
 	curl? ( >=net-ftp/curl-7.8.1 )
+	java? ( virtual/jdk )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	imap? ( >=net-mail/uw-imap-2001a-r1 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
+	jpeg? ( >=media-libs/jpeg-6b )
+	tiff? ( >=media-libs/tiff-3.5.5 )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
 	xml2? ( dev-libs/libxml2 )
-	crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
+	crypt? ( >=dev-libs/libmcrypt-2.4
+		>=app-crypt/mhash-0.8 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
-	freetds? ( >=dev-db/freetds-0.53 )
-	flash? ( media-libs/libswf >=media-libs/ming-0.2a )
+	flash? ( media-libs/libswf
+		>=media-libs/ming-0.2a )
+	spell? ( app-text/aspell )
 	berkdb? ( >=sys-libs/db-3 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
-	firebird? ( >=dev-db/firebird-1.0 )
+	freetds? ( >=dev-db/freetds-0.53 )
 	pdflib? ( >=media-libs/pdflib-4.0.1-r2 )
+	truetype? ( ~media-libs/freetype-1.3.1
+		>=media-libs/t1lib-1.3.1 )
+	firebird? ( >=dev-db/firebird-1.0 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	readline? ( >=sys-libs/ncurses-5.1
-	>=sys-libs/readline-4.1 )
-	java? ( virtual/jdk )"
+		>=sys-libs/readline-4.1 )"
 
 #Removed
 #java? ( virtual/jdk )
@@ -115,6 +120,7 @@ src_compile() {
 	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib" || myconf="${myconf} --without-jpeg"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr" || myconf="${myconf} --without-tiff"
 	use png || myconf="${myconf} --without-png"
+	use spell && myconf="${myconf} --with-pspell"
 
 	# optional support for oracle oci8 
 	if [ "`use oci8`" ] ; then 
