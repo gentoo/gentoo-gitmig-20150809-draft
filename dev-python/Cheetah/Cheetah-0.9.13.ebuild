@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Jason Jeremias <jason@penguinsolutions.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/Cheetah-0.9.13.ebuild,v 1.1 2002/06/04 07:40:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/Cheetah-0.9.13.ebuild,v 1.2 2002/07/27 05:40:14 george Exp $
 
 VERSION="0.9.13"
 S=${WORKDIR}/${P}
@@ -13,7 +12,7 @@ RDEPEND=">=dev-lang/python-2.2"
 DEPEND="${RDEPEND}"
 
 SLOT="0"
-
+KEYWORDS="x86"
 LICENSE="PSF-2.2"
 
 src_compile() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /home/cvsroot/gentoo-x86/dev-python/Numeric/Numeric-19.0.0.ebuild,v 1.3 2001/08/31 03:23:38 pm Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/Numeric-20.3.ebuild,v 1.4 2002/07/27 05:40:14 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="numerical python module"
@@ -9,6 +9,11 @@ HOMEPAGE="http://www.pfdubois.com/numpy/"
 
 # 2.1 gave sandbox violations see #21
 DEPEND=">=dev-lang/python-2.2"
+RDEPEND="${DEPEND}"
+
+SLOT="0"
+KEYWORDS="x86"
+LICENSE="as-is"
 
 src_compile() {
   

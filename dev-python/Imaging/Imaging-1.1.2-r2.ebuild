@@ -1,6 +1,6 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /home/cvsroot/gentoo-x86/skel.build,v 1.7 2001/08/25 21:15:08 chadh Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.2-r2.ebuild,v 1.3 2002/07/27 05:40:14 george Exp $
 
 S=${WORKDIR}/${P}
 
@@ -16,6 +16,11 @@ DEPEND=">=dev-lang/python-2.0
 	tcltk? ( dev-lang/tk )"
 	
 RDEPEND="${DEPEND}"
+
+SLOT="0"
+KEYWORDS="x86"
+LICENSE="as-is"
+
 
 src_compile() {
  
