@@ -1,5 +1,15 @@
-MD5 26b570fb6eeffae525dbc0a87b13b900 ChangeLog 468
-MD5 a8194687042371557add7c68a1cee41a gwebcache-1.0.0.ebuild 1227
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0c4000abc489bb8d7b731c7d90323673 gwebcache-1.0.0.ebuild 1230
+MD5 e09bbfa9d70491e810234e6ab2818390 ChangeLog 561
 MD5 38f5d2fc5324ff4b77d0473e67408a9e metadata.xml 269
-MD5 0cd4b01600e827495b84be5d7ba95116 files/digest-gwebcache-1.0.0 63
 MD5 e76dbeb5689d27e85fde516ee00303c0 files/postinstall-en.txt 454
+MD5 0cd4b01600e827495b84be5d7ba95116 files/digest-gwebcache-1.0.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBc/rvcAgAdbxYsnERAtHKAJ42fYjRUgKsehZZxmS4/LjnKabrIwCfby7b
+f/dehHZO3OaAPfBzC59VE6o=
+=Hhu9
+-----END PGP SIGNATURE-----
