@@ -1,4 +1,4 @@
-MD5 a4dd31d2f0638ee67575b03b52a9cfa5 ChangeLog 11508
+MD5 3b0008a396a1037cede29dc221fb6e4e ChangeLog 11593
 MD5 b8257ec44062f1749ae3a7108a2665b7 gconf-1.0.8-r3.ebuild 1706
 MD5 9e193ede22931c15cf5009584f5a3eaf gconf-1.0.8-r5.ebuild 1871
 MD5 2cc1f6be3f141fb058fa6c2bf9fcdeb5 gconf-1.0.9.ebuild 1862
@@ -6,7 +6,7 @@ MD5 668b047821e171d154b127786aa1c05a gconf-2.4.0.1.ebuild 1941
 MD5 75563bebacae6663798038397a7080ea gconf-2.6.0.ebuild 1959
 MD5 7e089272e0323f392f92adc9a05386be gconf-2.6.1.ebuild 2106
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 47f5460acc09eae215a2c9764abf8e8d gconf-2.6.2.ebuild 1954
+MD5 57b9c4871d481587a9d03d04758d3e64 gconf-2.6.2.ebuild 1953
 MD5 4452461d5fcfd96e2d95e62712554c71 files/GConf-2.6.1-gcc2_fix.patch 420
 MD5 e36bf98a90603eebfcc4d3dacd5fa785 files/digest-gconf-1.0.8-r3 64
 MD5 e36bf98a90603eebfcc4d3dacd5fa785 files/digest-gconf-1.0.8-r5 64
