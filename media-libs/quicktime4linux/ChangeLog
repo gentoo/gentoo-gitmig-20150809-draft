@@ -1,8 +1,13 @@
 # ChangeLog for media-libs/quicktime4linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.5 2002/07/26 12:41:02 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.6 2002/09/01 14:23:58 seemant Exp $
 
 *quicktime4linux-1.5.5 (24 May 2002)
+
+  01 Sep 2002; Seemant Kulleen <seemant@gentoo.org> quicktime4linux-1.5.5-r1 :
+
+  Added libpng as a dependency.  Thanks to twanger@bluetwanger.de (Markus
+  Bertheau) in bug #7300.
 
   26 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> quicktime4linux-1.5.5-r1 :
 
