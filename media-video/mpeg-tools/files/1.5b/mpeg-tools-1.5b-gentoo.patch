@@ -1,0 +1,24 @@
+--- mpeg_encode.old/libpnmrw.c	2003-04-11 17:39:57.000000000 +0100
++++ mpeg_encode/libpnmrw.c	2003-04-11 17:43:01.000000000 +0100
+@@ -34,6 +34,8 @@
+ #include <string.h>
+ #define rindex(s,c) strrchr(s,c)
+ 
++#include <errno.h>
++
+ 
+ /* Definitions. */
+ 
+@@ -126,11 +128,9 @@
+   pm_perror( reason )
+ char* reason;
+ {
+-  extern __const char *__const sys_errlist[];
+-  extern int errno;
+   char* e;
+ 
+-  e = sys_errlist[errno];
++  e = strerror(errno);
+ 
+   if ( reason != 0 && reason[0] != '\0' )
+     (void) fprintf( stderr, "%s: %s - %s\n", progname, reason, e );
