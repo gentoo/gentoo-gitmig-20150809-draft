@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.4 2005/01/03 22:42:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.5 2005/01/05 01:53:39 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -327,6 +327,9 @@ src_unpack() {
 	# to make the stack executable due to some libraries not containing the
 	# PT_GNU_STACK section.  Bug #32960.  <azarah@gentoo.org> (12 Nov 2003).
 	epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-dl_execstack-PaX-support.patch
+
+	# Upstream patch to fix assert.h
+	epatch ${FILESDIR}/2.3.2/${P}-assert.patch
 
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
 #	cd ${S}/io; epatch ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch

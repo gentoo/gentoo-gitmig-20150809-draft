@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d512602b4649239240dd218de521fcbb ChangeLog 63481
-MD5 7cf88dee2671dcc30659d07241b8d918 glibc-2.2.5-r9.ebuild 10915
-MD5 3b8f20dc8c32936d31a2aac4f596caf4 glibc-2.3.2-r12.ebuild 21738
-MD5 d59fdfb3aca88476d792b71922c765a5 glibc-2.3.3.20040420-r2.ebuild 21630
-MD5 48dcbf88afd15efb62b4313337261968 glibc-2.3.4.20040619-r2.ebuild 21077
+MD5 ed4fb3223e1583dc9bbfcdc884454e47 ChangeLog 63645
+MD5 5529417ce5503c488b1ccaaa2e781799 glibc-2.2.5-r9.ebuild 10915
+MD5 3b44d39389334d36b42c51887729dd4d glibc-2.3.2-r12.ebuild 21817
+MD5 39ac6b0f30c9c27a5cd04c4e0b6caadb glibc-2.3.3.20040420-r2.ebuild 21634
+MD5 e4c399efc30efc54fb478b897cd37149 glibc-2.3.4.20040619-r2.ebuild 21078
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 b4bbaaf21fccef026c3e8657457e56c9 glibc-2.3.4.20040808-r1.ebuild 25121
-MD5 1872a60b491f3f1cba81313f5ddb67b8 glibc-2.3.4.20041102.ebuild 29740
+MD5 663dd1ec49f1494962ccb7e980aec5ac glibc-2.3.4.20040808-r1.ebuild 25117
+MD5 ba454b14b54067f0ffa7de7bc6941cb4 glibc-2.3.4.20041102.ebuild 29737
 MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r9 143
 MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r12 312
 MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3.20040420-r2 312
@@ -93,6 +93,7 @@ MD5 7b6054c2e8ec654341690586bc2028c5 files/2.3.2/glibc-2.3.2-signal-ssp.diff 143
 MD5 0e3ced9c3c484f502dcade7ffffa15f4 files/2.3.2/ssp.c 3935
 MD5 250d09cb52d2c3c7f6b0c4e0a1bf47f2 files/2.3.2/sysmacros.h 2443
 MD5 d7097bf7fe910f2cba6ec69f86eb1958 files/2.3.2/glibc-2.3.2-alpha-sysdeps.patch 939
+MD5 fa3bf332c71b0b5af56b536564abc480 files/2.3.2/glibc-2.3.2-assert.patch 1596
 MD5 0e27dbd2a3b85a0e14625294296fad9a files/2.3.3/glibc-2.3.2-propolice-guard-functions-v3.patch 1986
 MD5 1b5df7c58ad160593192704cece47347 files/2.3.3/glibc-2.3.3-dl_execstack-PaX-support.patch 1791
 MD5 62f7e62583aaa70645d9c847b6a84299 files/2.3.3/glibc-2.3.3-frandom-detect.patch 1770
@@ -138,7 +139,7 @@ MD5 039f62650037a4a15cef3066b26d27c9 files/2.3.4/glibc-2.3.4-mips-update-__throw
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2cplroRuSHgZdywRAucMAJ4jE1ed6NvDyN591VNH6Gn4Xk/4AwCeP5GP
-j3RUqI4G/TvhqjSy7cr8uSg=
-=KNe4
+iD8DBQFB20itroRuSHgZdywRAoUAAJsEfYCxh8+3cdmZOAZwXWVMfnxEdQCfUtCK
+JKskttyZOiTNfkw+I0NU670=
+=GhjB
 -----END PGP SIGNATURE-----
