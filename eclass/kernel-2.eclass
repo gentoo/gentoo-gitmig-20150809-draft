@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.25 2004/02/04 17:54:27 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.26 2004/02/04 19:49:35 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -394,13 +394,12 @@ unipatch() {
 				echo "Attempting Dry-run:" > ${STDERR_T}
 				echo "cmd: patch -p${PATCH_DEPTH} --dry-run -f < ${i}" >> ${STDERR_T}
 				echo "=======================================================" >> ${STDERR_T}
-				if (patch -p${PATCH_DEPTH} --dry-run -f < ${i} >> ${STDERR_T})
+				if [ $(patch -p${PATCH_DEPTH} --dry-run -f < ${i} >> ${STDERR_T}) $? -eq 0 ]
 				then
 					echo "Attempting patch:" > ${STDERR_T}
 					echo "cmd: patch -p${PATCH_DEPTH} -f < ${i}" >> ${STDERR_T}
 					echo "=======================================================" >> ${STDERR_T}
-					$(patch -p${PATCH_DEPTH} -f < ${i} >> ${STDERR_T})
-					if [ "$?" -eq 0 ]
+					if [ $(patch -p${PATCH_DEPTH} -f < ${i} >> ${STDERR_T}) "$?" -eq 0 ]
 					then
 						eend 0
 						rm ${STDERR_T}
