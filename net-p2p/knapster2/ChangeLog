@@ -1,7 +1,13 @@
 # ChangeLog for net-p2p/knapster2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# /space/gentoo/cvsroot/gentoo-x86/net-p2p/knapster2/ChangeLog,v 1.0
-2002/07/17 17:53:00 cybersystem
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/knapster2/ChangeLog,v 1.2 2002/10/08 12:00:20 cybersystem Exp $
+
+*knapster2-0.4 (08 Oct 2002)
+
+  08 Oct 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, knapster2-0.4.ebuild, files/knapster2-0.4-gcc3.2.diff :
+
+  Added a patch, so that it compiles with gcc 3.2 now..
+  thanks to Tomasz Sterna <tomek@smoczy.net>..
 
 *knapster2-0.4 (17 July 2002)
 
