@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e8c826482b117f5173f0f4d975177cd5 ChangeLog 616
-MD5 0800b61f57a9fe6ae60ef68074003dd4 hashit-0.9.1.ebuild 875
-MD5 5cf563ccaeb05010e03df393f8598cd9 hashit-0.9.3.ebuild 875
+MD5 0e16dfc6a144991068bd9411eb3eb2f2 ChangeLog 744
+MD5 2180b5e74f7677cecdcfd236b9a082dd hashit-0.9.3.ebuild 869
 MD5 b723de6800a17e425056e1639441e435 metadata.xml 223
-MD5 a5232ad8a982aa4914c6bd7b3813791c files/digest-hashit-0.9.1 64
 MD5 ff24134d7bd76b9a29fb5019f1931f58 files/digest-hashit-0.9.3 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBf5nvI7fK2cqeyXkRAk12AJ0ToSrBUPZY6RUzK42SG9cKxCgAuwCglMWa
-JhWAXFb8/FEJalYOkGcnhLo=
-=5Rv8
+iD8DBQFBjKoyI7fK2cqeyXkRAkvcAKCQeO3ON2UOrhUtYEkWsbN0F6LexwCdFGml
+1Eo/q8zOrvYVB9cUha8COLs=
+=zzGZ
 -----END PGP SIGNATURE-----
