@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.9 2003/12/04 22:55:21 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.10 2004/01/05 22:10:53 solar Exp $
+
+*grsec-sources-2.4.23.2.0_rc4 (02 Jan 2004)
+
+  02 Jan 2004; <solar@gentoo.org> grsec-sources-2.4.23.2.0_rc4.ebuild:
+  grsecurity II kernel sources version bump
 
   02 Dec 2003; Alexander Gabert <pappy@gentoo.org>
   grsec-sources-2.4.23.1.9.13.ebuild:
