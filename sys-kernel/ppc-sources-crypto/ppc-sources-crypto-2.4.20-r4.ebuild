@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20-r3.ebuild,v 1.2 2004/04/12 16:36:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20-r4.ebuild,v 1.1 2004/04/15 11:26:28 plasmaroo Exp $
 
 IUSE="build crypt"
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 OKV=2.4.20
 KV=2.4.20
-S=${WORKDIR}/linux-ppc-crypto-${KV}
+S=${WORKDIR}/linux-ppc-crypto-${KV}-${PR}
 
 # Kernel ebuilds using the kernel.eclass can remove any patch that you
 # do not want to apply by simply setting the KERNEL_EXCLUDE shell
@@ -20,7 +20,6 @@ S=${WORKDIR}/linux-ppc-crypto-${KV}
 
 ETYPE="sources"
 
-#inherit kernel
 inherit eutils
 
 DESCRIPTION="Full cryptoapi enabled sources for the Gentoo Linux PPC kernel"
@@ -39,26 +38,25 @@ then
 		virtual/modutils sys-devel/make"
 fi
 
-
 src_unpack() {
-
 	cd ${WORKDIR}
 	unpack linux-ppc-crypto-${OKV}.tar.bz2
+	mv linux-ppc-crypto-${KV} linux-ppc-crypto-${KV}-${PR}
 	cd ${S}
-	pwd
 
 	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
 	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 	epatch ${FILESDIR}/${PN}.munmap.patch || die "Failed to apply munmap patch!"
 
-	#sometimes we have icky kernel symbols; this seems to get rid of them
+	# Sometimes we have bad kernel symbols; remove them...
 	make mrproper || die
 
-	#this file is required for other things to build properly, so we autogenerate it
+	# This file is required for other things to build properly, so we autogenerate it...
 	make include/linux/version.h || die
 
-	#fix silly permissions in tarball
+	# Fix permissions...
 	cd ${WORKDIR}
 	chown -R 0:0 *
 	chmod -R a+r-w+X,u+w *
@@ -69,7 +67,6 @@ src_unpack() {
 	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
-
 }
 
 src_compile() {
@@ -88,7 +85,7 @@ src_install() {
 		echo ">>> Copying sources..."
 		mv ${WORKDIR}/* ${D}/usr/src
 	else
-	#linux-headers
+	# Headers
 		yes "" | make oldconfig
 		echo "Ignore any errors from the yes command above."
 		make dep

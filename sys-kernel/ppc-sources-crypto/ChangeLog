@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ppc-sources-crypto
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.10 2004/04/12 16:36:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.11 2004/04/15 11:26:28 plasmaroo Exp $
+
+*ppc-sources-crypto-2.4.20-r4 (15 Apr 2004)
+
+  15 Apr 2004; <plasmaroo@gentoo.org> ppc-sources-crypto-2.4.20-r3.ebuild,
+  ppc-sources-crypto-2.4.20-r4.ebuild,
+  files/ppc-sources-crypto.CAN-2004-0109.patch:
+  Version bump for the CAN-2004-0109 issue; bug #47881.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   ppc-sources-crypto-2.4.20-r3.ebuild:
