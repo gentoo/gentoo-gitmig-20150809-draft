@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.9 2003/04/28 05:19:17 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.10 2003/06/16 23:31:00 wwoods Exp $
+
+  16 Jun 2003; Will Woods <wwoods@gentoo.org> nas-1.5.ebuild, nas-1.6.ebuild:
+  Added alpha to KEYWORDS
 
   28 Apr 2003; Lars Weiler <pylon@gentoo.org> nas-1.6.ebuild:
   Set ppc in KEYWORDS
