@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.15 2005/03/25 13:33:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.16 2005/03/31 00:06:00 vapier Exp $
 
 if [[ ${ROOT:-/} != "/" ]] ; then
 	echo "Sorry, but crossdev does not support ROOT."
@@ -47,7 +47,7 @@ EOF
 
 parse_target() {
 	[[ -z $1 ]] && usage 1
-	CTARGET=$1
+	CTARGET=${1#cross-}
 	local CPRE=${CTARGET%%-*} CPOST=${CTARGET#*-}
 
 	# Did they give us just an ARCH or the full TARGET ?

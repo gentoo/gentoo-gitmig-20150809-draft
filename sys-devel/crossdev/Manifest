@@ -5,4 +5,4 @@ MD5 5bebfeed684c75c8f16a488d34cb6d7b crossdev-0.4-r1.ebuild 1216
 MD5 bbb032e270728ffb39276e95e5653b62 files/crossdev-0.4-fixes-one.patch 1675
 MD5 e797084ae210cc0ff10ba4185eefb5e7 files/digest-crossdev-0.4-r1 64
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-crossdev-0.9.5-r1 0
-MD5 50971d5773870c7ceb40b7fd7e0f90cb files/crossdev 9761
+MD5 a215853a23adb905410ecc09191785c1 files/crossdev 9770
