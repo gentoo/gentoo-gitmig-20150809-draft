@@ -1,6 +1,9 @@
 # ChangeLog for net-im/msnlib
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.8 2004/02/04 20:05:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.9 2004/05/04 11:37:00 kloeri Exp $
+
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> msnlib-2.0.ebuild:
+  Remove default S.
 
 *msnlib-3.3 (04 Feb 2004)
 
