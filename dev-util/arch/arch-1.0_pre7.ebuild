@@ -43,8 +43,8 @@ src_compile() {
 		--with-posix-shell="/bin/bash" \
 		--with-sendmail="/usr/sbin/sendmail" || die "configure failed"
 
-	# build
-	emake || die "emake failed"
+	# parallel make may cause problems with this package
+	make || die "make failed"
 }
 
 src_install () {
