@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.5 2002/07/27 14:25:18 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.6 2002/11/21 05:52:37 zhen Exp $
+
+  20 Nov 2002, ZhEN <zhen@gentoo.org> ccache-1.9-r1.ebuild,
+  I added some info the the einfo section regarding
+  bug #6805. My change should clear up that confusion.
 
   12 Jul 2002; phoen][x <phoenix@gentoo.org> ccache-1.9-r1.ebuild, 
   files/digest-ccache-1.9-r1: New revision: Added a check before

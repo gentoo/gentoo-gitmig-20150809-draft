@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-1.9-r1.ebuild,v 1.4 2002/10/04 05:30:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-1.9-r1.ebuild,v 1.5 2002/11/21 05:52:37 zhen Exp $
 
 DESCRIPTION="ccache is a fast compiler cache. It is used as a front end to your
 compiler to safely cache compilation output. When the same code is compiled
@@ -65,7 +65,7 @@ pkg_postinst() {
 	fi
 
 
-	einfo "To use ccache, add /usr/bin/ccache to your path before /usr/bin."
+	einfo "To use ccache with **non-Portage** C compiling, add /usr/bin/ccache to your path before /usr/bin."
 	einfo "Portage 2.0.6+ will automatically take advantage of ccache with no additional steps."
 	einfo "If this is your first install of ccache, type something like this to set a maximum"
 	einfo "cache size of 2GB (or whatever you desire):"
