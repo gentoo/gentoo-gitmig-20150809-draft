@@ -1,4 +1,14 @@
-MD5 4ebf61922d8a5a2db7994d9d84b1acf3 zinf-themes-0.0.1.ebuild 1873
-MD5 a01e1fc111eae62d6b268ce7366b4295 ChangeLog 466
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 20e218e4e473febe1ec0fa949a8695b5 ChangeLog 568
 MD5 34105d947dfeceefebbe11b855c5f54b metadata.xml 336
-MD5 874c349325bfe3e945a472734a319d68 files/digest-zinf-themes-0.0.1 2487
+MD5 b9d943d85abb4ad2b344adb036215584 zinf-themes-0.0.1.ebuild 1843
+MD5 2f399b2a261281b68f91cfa8cfdc7d0c files/digest-zinf-themes-0.0.1 2429
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBSyWLKSoOBZY9iUIRAvSUAKCPBJtHf8d+xokbl/KbgxGvm8L8cgCgjkjl
+B6GFpF+5tj7/BuZ1AaI3BVo=
+=pIUV
+-----END PGP SIGNATURE-----
