@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-1.0.0.ebuild,v 1.1 2004/12/24 01:34:30 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-1.0.0.ebuild,v 1.2 2004/12/28 20:29:58 ribosome Exp $
 
 inherit kde
 
@@ -16,5 +16,5 @@ IUSE=""
 
 DEPEND=">=kde-base/kdebase-3.1"
 RDEPEND="$DEPEND
-	dev-libs/gsl"
+	sci-libs/gsl"
 need-kde 3.1
