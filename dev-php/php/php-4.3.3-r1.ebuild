@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.3-r1.ebuild,v 1.4 2003/09/17 03:08:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.3-r1.ebuild,v 1.5 2004/01/08 04:13:44 robbat2 Exp $
 
 PHPSAPI="cli"
 inherit php eutils
