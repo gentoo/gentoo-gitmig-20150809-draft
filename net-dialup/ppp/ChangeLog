@@ -1,45 +1,44 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.10 2002/09/15 08:10:32 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.11 2002/09/16 00:26:25 murphy Exp $
 
 *ppp-2.4.1-r11 (28 Aug 2002)
 
+  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> ppp-2.4.1-r11.ebuild :
+  Added sparc and sparc64 keywords. Revamped ChangeLog layout.
+  
   15 Sep 2002; phoen][x <phoenix@gentoo.org> ppp-2.4.1-r11.ebuild :
-
   Uploaded the tarball to ibiblio and modified SRC_URI.
   This closes bug 7771.
 
   05 Sep 2002; phoen][x <phoenix@gentoo.org> ppp-2.4.1-r11.ebuild :
-
   Enabled callback.
   This closes bug 7373.
   
   28 Aug 2002; phoen][x <phoenix@gentoo.org> ppp-2.4.1-r11.ebuild :
-
   Added ipv6 useflag support.
   This closes bug 6972.
 
 *ppp-2.4.1-r10 (31 Jul 2002)
   
+  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> ppp-2.4.1-r10.ebuild :
+  Added sparc and sparc64 keywords.
+
   3 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> ppp-2.4.1-r10.ebuild
   ppp-2.4.1-r9.ebuild :
-
   Added ppc to KEYWORDS.
 
   31 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ppp-2.4.1-r10.ebuild :
-
   Security fix - added a patch to prevent race condition.
 
 *ppp-2.4.1-r9
 
   16 Jul 2002; Ben Lutgens <lamer@gentoo.org> ppp-2.4.1-r[789].ebuild  :
-
   updated homepage
 
 *ppp-2.4.1-r8 (09 Apr 2002)
 
   22 May 2002; Mike Jones <ashmodai@gentoo.org> :
-
   Added (optional - USE crypt variable was used) MPPE support for ppp, enabling
   clients who use the pptp server to have encrypted connections.
 

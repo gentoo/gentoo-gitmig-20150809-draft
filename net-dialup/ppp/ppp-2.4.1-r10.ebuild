@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r10.ebuild,v 1.2 2002/08/03 16:19:50 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r10.ebuild,v 1.3 2002/09/16 00:26:25 murphy Exp $
 
 S=${WORKDIR}/${P}.pppoe4
 DESCRIPTION="Point-to-point protocol - patched for pppoe"
@@ -12,7 +12,7 @@ PROVIDE="virtual/pppd"
 
 SLOT="0"
 LICENSE="BSD GPL"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_compile() {
 
