@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-1.92-r1.ebuild,v 1.1 2000/08/13 13:10:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-1.92-r1.ebuild,v 1.2 2000/08/16 04:38:05 drobbins Exp $
 
 P=kdemultimedia-1.92
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE 2Beta - Multimedia"
-CATEGORY=kde-apps
 SRC_URI="ftp://ftp.kde.org/pub/kde/unstable/distribution/2.0Beta3/tar/src/"${A}
 HOMEPAGE="http://www.kde.org"
 
