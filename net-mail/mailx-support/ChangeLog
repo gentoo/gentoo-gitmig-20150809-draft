@@ -1,12 +1,15 @@
 # ChangeLog for net-mail/mailx-support
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx-support/ChangeLog,v 1.3 2003/07/15 09:20:07 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx-support/ChangeLog,v 1.4 2003/08/03 15:36:54 gmsoft Exp $
 
   15 Jul 2003; Christian Birchinger <joker@gentoo.org>
   mailx-support-20030215.ebuild:
   Added sparc stable keyword
 
 *mailx-support-20030215 (09 Jun 2003)
+
+  03 Aug 2003; Guy Martin <gmsoft@gentoo.org> mailx-support-20030215.ebuild :
+  Added hppa to KEYWORDS.
 
   10 Jun 2003; Joshua Kinard <kumba@gentoo.org> mailx-support-20030215.ebuild:
   Fixed Security Violation -- ChangeLog missing from Manifest;
