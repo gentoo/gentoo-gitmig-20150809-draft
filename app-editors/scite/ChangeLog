@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.33 2005/01/01 13:34:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.34 2005/03/11 18:58:18 pythonhead Exp $
+
+  11 Mar 2005; Rob Cakebread <pythonhead@gentoo.org> scite-1.6.2.ebuild:
+  Marked x86
 
   29 Dec 2004; Tom Martin <slarti@gentoo.org> scite-1.6.2.ebuild:
   Marked ~amd64, resolves bug 75831.
