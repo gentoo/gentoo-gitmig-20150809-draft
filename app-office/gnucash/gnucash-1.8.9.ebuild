@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.8 2004/10/05 14:04:05 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.9 2004/10/10 13:34:40 kugelfang Exp $
 
-inherit flag-o-matic libtool
+inherit flag-o-matic libtool eutils
 
 # won't configure with this
 filter-flags -fomit-frame-pointer
