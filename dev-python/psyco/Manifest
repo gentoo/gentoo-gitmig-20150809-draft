@@ -2,5 +2,7 @@ MD5 030a843bf28e4d82019cc3e0dc335f2a ChangeLog 487
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 b14fea0aa3057aa2dfccfec8dc79e266 psyco-1.0.0_beta1.ebuild 548
 MD5 b8130759dfbd4fe70045f0a55d7b0605 psyco-1.0.ebuild 600
+MD5 dc3dc1e94638d09e2cf0b5841b159ad8 psyco-1.1.1.ebuild 601
 MD5 d01d141cde6e4bbd46258905f4140192 files/digest-psyco-1.0 65
 MD5 4c8829b71b8338e8841cd4db577357fb files/digest-psyco-1.0.0_beta1 69
+MD5 720f9a2a3f7d1b3df3bdefd8b379a0d7 files/digest-psyco-1.1.1 67

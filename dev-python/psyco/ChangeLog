@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psyco
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.2 2003/06/23 09:22:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.3 2003/10/12 07:35:11 liquidx Exp $
+
+*psyco-1.1.1 (12 Oct 2003)
+
+  12 Oct 2003; Alastair Tse <liquidx@gentoo.org> psyco-1.1.1.ebuild:
+  version bump (#30661)
 
 *psyco-1.0 (23 Jun 2003)
 
