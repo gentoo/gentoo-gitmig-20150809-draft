@@ -1,5 +1,6 @@
-MD5 8a207e89f5a389e5dc94c5188d2242e0 ChangeLog 9663
+MD5 89e451c52c9b0fa737f76a7f06192ebf ChangeLog 9996
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 17c6617a9d19dc83d5e95b899db686f5 sylpheed-0.9.10-r1.ebuild 1626
 MD5 e5ae7dd8a21d3bd9768db39355cebda3 sylpheed-0.9.10.ebuild 1452
 MD5 0666b92ea29856ab61eebd10219af49d sylpheed-0.9.4-r1.ebuild 2342
 MD5 7cc3069c69e35577d5f41a818a62b1b0 sylpheed-0.9.4.ebuild 1710
@@ -9,6 +10,7 @@ MD5 da2ef01eefa865629abd55a6a2cd00c2 sylpheed-0.9.8-r2.ebuild 2267
 MD5 b8164c1f69f12ae95039c28721e4fe67 sylpheed-0.9.8.ebuild 1577
 MD5 e2854d860f383479cb3a397cb02b1c0c sylpheed-0.9.9-r1.ebuild 2218
 MD5 ce1c3d8a2d9d18309762912c51486210 files/digest-sylpheed-0.9.10 69
+MD5 ce1c3d8a2d9d18309762912c51486210 files/digest-sylpheed-0.9.10-r1 69
 MD5 cae6de9566012ff2a026e2fdc0124c53 files/digest-sylpheed-0.9.4 68
 MD5 418deb7215c86a6f07b378e3821bec4b files/digest-sylpheed-0.9.4-r1 149
 MD5 d02828752d567534c4fa0b6c7f757a39 files/digest-sylpheed-0.9.5-r1 149
@@ -18,3 +20,5 @@ MD5 aa4acbd6ca9721ed8ef8e1235ce5ec1a files/digest-sylpheed-0.9.8-r2 150
 MD5 097215ef01246e64be0a004a4eafcd63 files/digest-sylpheed-0.9.9-r1 149
 MD5 073edf4bf5c6725126ecd551cb6a8949 files/gtk2-patch-fix.patch 320
 MD5 f847bb1651a5b85decf13e2d8d01afe2 files/shared-mime.patch 649
+MD5 4cbec71671b7349c904f860a12fee5d9 files/sylpheed-namespace.diff 550
+MD5 f4242298cfab21456442bfe52505d2b8 files/sylpheed-procmime.diff 1119
