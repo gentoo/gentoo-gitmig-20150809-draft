@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha8.ebuild,v 1.3 2005/02/07 21:14:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha8.ebuild,v 1.4 2005/03/18 06:38:05 mrness Exp $
 
 inherit linux-mod
 
@@ -97,13 +97,21 @@ pkg_postinst() {
 		eend $?
 		einfo "modules-update to complete configuration."
 
+		einfo "Use /dev/tts/LT0 or /dev/ttyLT0 to access modem"
 	elif [ -e ${ROOT}/dev/.udev ]; then
 		ebegin "Restarting udev to reread udev rules"
 			udevstart
 		eend $?
+
+		einfo "Use /dev/ttyLTM0 to access modem"
 	fi
 
-	einfo "Use /dev/tts/LT0 to access modem"
+	einfo
+	ewarn "Remember, in order to access the modem,"
+	ewarn "you have to be in the 'dialout' group."
+	ewarn "Also, if your dialing application use locking mechanism (e.g wvdial),"
+	ewarn "you should have write access to /var/lock directory."
+	einfo
 	einfo "If you have problems, read this doc:"
 	einfo "/usr/share/doc/${PF}/html/post-install.html"
 }
