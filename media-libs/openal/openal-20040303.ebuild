@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040303.ebuild,v 1.7 2004/06/07 21:24:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040303.ebuild,v 1.8 2004/06/18 08:55:27 eradicator Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://opensource.creative.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 
 DEPEND="x86? ( dev-lang/nasm )
 	alsa? ( >=media-libs/alsa-lib-1.0.2 )
