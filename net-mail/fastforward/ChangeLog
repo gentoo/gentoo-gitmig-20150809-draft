@@ -1,9 +1,13 @@
 # ChangeLog for net-mail/fastforward
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/ChangeLog,v 1.4 2003/02/12 08:10:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/ChangeLog,v 1.5 2003/03/07 16:42:23 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*fastforward-0.51-r1 (07 Mar 2003)
+
+  07 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added patch for glibc errno issue (#16267).
+  matrixise <stephane.wirtel@belgacom.net> submitted patch #17012.
+
 *fastforward-0.51 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
