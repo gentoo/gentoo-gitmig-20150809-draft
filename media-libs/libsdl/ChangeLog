@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.62 2004/11/06 15:19:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.63 2004/11/10 14:41:29 gustavoz Exp $
+
+  10 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> libsdl-1.2.7-r3.ebuild:
+  Stable on sparc
 
   06 Nov 2004; Lars Weiler <pylon@gentoo.org> libsdl-1.2.7-r3.ebuild:
   Stable on ppc.
