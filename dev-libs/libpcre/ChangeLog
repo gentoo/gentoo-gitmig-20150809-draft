@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.28 2004/03/28 01:30:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.29 2004/03/31 17:48:15 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> libpcre-4.4.ebuild,
+  metadata.xml:
+  Added me as maintainer.  Stable on x86.
 
   28 Mar 2004; Luca Barbato <lu_zero@gentoo.org> libpcre-4.2-r1.ebuild:
   Marked ppc
