@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/pymol-0.95.ebuild,v 1.1 2004/04/20 14:23:36 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/pymol-0.95.ebuild,v 1.2 2004/04/20 14:24:27 phosphan Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pymol/${PN}-${PV/./_}-src.tgz"
 LICENSE="PSF-2.2"
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86"
 
 DEPEND="dev-lang/python
 	dev-python/pmw
