@@ -1,0 +1,5 @@
+*sword-modules-0.1 (06 Apr 2004)
+
+  06 Apr 2004; Jon Hood <squinky86@gentoo.org> sword-modules-0.1.ebuild,
+  files/digest-sword-modules-0.1 :
+  Initial ebuild, bug 21965

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>text-markup</herd>
+<maintainer>
+ <email>squinky86@gentoo.org</email>
+ <description>It isn't exactly text-markup, but it's the closest herd
+ I could find.</description>
+</maintainer>
+<longdescription>
+These are some of the more popular modules for the SWORD Project.
+They provide a large number of tools for personal study.
+</longdescription>
+</pkgmetadata>
