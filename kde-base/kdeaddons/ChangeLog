@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.60 2004/01/04 15:28:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.61 2004/01/05 23:33:58 robbat2 Exp $
+
+  05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> kdeaddons-3.0.4.ebuild,
+  kdeaddons-3.0.5b.ebuild, kdeaddons-3.1.2.ebuild, kdeaddons-3.1.4.ebuild,
+  kdeaddons-3.2.0_beta1.ebuild, kdeaddons-3.2.0_beta2.ebuild:
+  fix tail -1 issue and copyright headers
 
   04 Jan 2004; Jason Wever <weeve@gentoo.org> kdeaddons-3.2.0_beta2.ebuild:
   Added ~sparc keyword.
