@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.0-r1.ebuild,v 1.5 2002/10/05 05:39:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.0-r1.ebuild,v 1.6 2002/10/17 03:03:55 seemant Exp $
 
 IUSE="truetype nls esd imlib"
 
@@ -24,7 +24,7 @@ src_unpack(){
 
 	cd ${S}
 	
-	patch -p1< ${FILESDIR}/${P}-gcc31-gentoo.patch || die
+	patch -p1< ${FILESDIR}/${PN}-gcc31-gentoo.patch || die
 	
 	# icewm's doc dir layout is un-gentoo-like.  To fix it, we have
 	# "make install" skip the docs install, and do it ourselves.  That also
