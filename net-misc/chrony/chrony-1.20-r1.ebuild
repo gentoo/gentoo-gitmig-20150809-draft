@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.20-r1.ebuild,v 1.1 2004/10/23 12:01:42 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.20-r1.ebuild,v 1.2 2004/10/23 12:10:35 wmertens Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://chrony.sunsite.dk/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~mips sparc ~ppc"
+KEYWORDS="~x86 ~mips ~sparc ~ppc"
 IUSE="readline"
 
 DEPEND="virtual/libc
