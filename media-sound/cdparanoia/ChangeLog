@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.9 2004/04/20 17:18:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.10 2004/04/22 19:43:51 azarah Exp $
+
+*cdparanoia-3.9.8-r1 (22 Apr 2004)
+
+  22 Apr 2004; Martin Schlemmer <azarah@gentoo.org>
+  cdparanoia-3.9.8-r1.ebuild,
+  files/cdparanoia-3.9.8-include-cdda_interface_h.patch:
+  cdda_paranoia.h should include cdda_interface_h, else most configure
+  scripts testing for support fails (gnome-vfs, etc).
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   cdparanoia-3.9.8.ebuild:
