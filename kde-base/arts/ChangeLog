@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.90 2004/04/25 03:24:12 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.91 2004/04/27 08:47:51 aliz Exp $
 
   24 Apr 2004; Bret Curtis,,, <psi29a@gentoo.org> arts-1.2.2.ebuild:
   added to ~mips
@@ -11,6 +11,8 @@
 
   19 Apr 2004; Jon Hood <squinky86@gentoo.org> arts-1.2.2.ebuild:
   fix SRC_URI
+
+*arts-1.2.2 (19 Apr 2004)
 
   19 Apr 2004; Caleb Tennis <caleb@gentoo.org> +files/arts-1.2.2-buffer.patch:
   Version Bump
