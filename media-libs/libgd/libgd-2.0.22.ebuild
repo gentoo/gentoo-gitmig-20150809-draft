@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-2.0.22.ebuild,v 1.7 2004/03/04 15:56:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-2.0.22.ebuild,v 1.8 2004/04/07 23:05:28 vapier Exp $
 
 inherit eutils
 
@@ -13,12 +13,12 @@ SRC_URI="http://www.boutell.com/gd/http/${MY_P}.tar.gz
 
 LICENSE="as-is | BSD"
 SLOT="2"
-KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
 IUSE="jpeg png X truetype gif"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	png? ( >=media-libs/libpng-1.2.5 sys-libs/zlib )
-	truetype? ( >=media-libs/freetype-2.1.2 )
+	truetype? ( >=media-libs/freetype-2.1.5 )
 	X? ( virtual/x11 )"
 
 S=${WORKDIR}/${MY_P}
