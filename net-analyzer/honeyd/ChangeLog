@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/honeyd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.5 2003/09/24 13:13:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.6 2004/01/06 16:15:39 mboman Exp $
+
+*honeyd-0.7a (06 Jan 2004)
+
+  06 Jan 2004; Michael Boman <mboman@gentoo.org> honeyd-0.7a.ebuild:
+  - New upstream version
+  - Included the script and example config collection by Lance Spitzner
 
   24 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> honeyd-0.6a.ebuild:
   Fix so it actually compiles. Closing #29233.
