@@ -1,0 +1,8 @@
+# ChangeLog for x11-plugins/wmmp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/ChangeLog,v 1.1 2003/08/14 04:43:00 g2boojum Exp $
+
+*wmmp-0.8.0 (13 Aug 2003)
+
+  13 Aug 2003; Nick Hadaway <raker@gentoo.org> wmmp-0.8.0.ebuild:
+  New ebuild.  See bug #25159 for the original request.
