@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.98 2004/09/01 18:24:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.99 2004/09/01 18:43:05 robbat2 Exp $
+
+*db-1.85-r2 (01 Sep 2004)
+
+  01 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> +db-1.85-r2.ebuild:
+  Clean up old db-1.8.5 build to not for omit-frame-pointer, and grab it's patch
+  from DISTDIR.
 
   01 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> db-4.1.25_p1-r3.ebuild,
   db-4.1.25_p1-r4.ebuild, db-4.2.52_p1.ebuild, db-4.2.52_p2.ebuild:
