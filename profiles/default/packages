@@ -89,8 +89,8 @@ sys-devel/make
 sys-devel/patch
 sys-devel/perl
 sys-devel/spython
-dev-utils/cvs
-dev-utils/fbset
+dev-util/cvs
+dev-util/fbset
 net-misc/dhcpcd
 net-misc/rsync
 net-misc/wget
