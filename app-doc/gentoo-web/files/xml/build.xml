@@ -136,7 +136,7 @@ sizes and types:</p>
   </tr>
    <tr>
   	<ti>swap partition (no longer a 128 Megabyte limit)</ti>
-	<ti>&gt;=2*Amount of RAM in this system</ti>
+	<ti>&gt;=2*Amount of RAM in this system is recommended but no longer (as of kernel 2.4.10) required</ti>
 	<ti>Linux swap</ti>
   	<ti>/dev/hda2</ti>
   </tr>
@@ -588,10 +588,11 @@ configured for your first boot:</p>
 </pre>
 <p>If you need to set up any additional network interfaces, copy <c>net.eth0</c>
 or <c>net.eth0-dhcp</c> to <c>net.eth1</c> or <c>net.eth1-dhcp</c> and repeat.</p>
-<impo>Once you've set up all your network interfaces, edit <path>/etc/rc.conf</path>
-and take a good look at the <c>INTERFACES</c> environment variable.  Make sure it
-contains the names of all the network interfaces that should be running all the
-time.</impo>
+<impo>Once you've set up all your network interfaces, type the following so that
+they are automatically enabled when entering the default runlevel:</impo>
+<pre>
+# <i>rc-update add net.eth0 default</i>
+</pre>
 </body>
 </section>
 
