@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sgi-fonts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sgi-fonts/ChangeLog,v 1.1 2004/10/01 18:48:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sgi-fonts/ChangeLog,v 1.2 2004/10/17 05:50:19 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> sgi-fonts-1.0.ebuild:
+  keywords ~amd64
 
 *sgi-fonts-1.0 (02 Oct 2004)
 
