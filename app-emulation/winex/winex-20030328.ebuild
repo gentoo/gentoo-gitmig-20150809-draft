@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20030328.ebuild,v 1.2 2003/04/01 18:06:58 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20030328.ebuild,v 1.3 2003/06/08 14:36:48 mholzer Exp $
 
 inherit base
 
 DESCRIPTION="distribution of Wine with enhanced DirectX for gaming"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	mirror://gentoo/${P}-xopenfont.patch"
 HOMEPAGE="http://www.transgaming.com/"
 
 SLOT="0"
@@ -34,6 +35,8 @@ src_unpack() {
 	cd misc
 	tar jxvf ${FILESDIR}/${P}-misc.tar.bz2 &> /dev/null
 	chown root:root *
+	cd ${S}
+	epatch ${DISTDIR}/${P}-xopenfont.patch
 }
 
 src_compile() {
