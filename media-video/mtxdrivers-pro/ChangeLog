@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mtxdrivers-pro
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/ChangeLog,v 1.7 2004/03/12 19:42:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/ChangeLog,v 1.8 2004/03/12 19:45:03 seemant Exp $
+
+  12 Mar 2004; Seemant Kulleen <seemant@gentoo.org>
+  mtxdrivers-pro-1.0_beta4.ebuild:
+  removed old version
 
   12 Mar 2004; Seemant Kulleen <seemant@gentoo.org>
   mtxdrivers-pro-1.0_beta4.ebuild, files/glext.h:
