@@ -1,10 +1,31 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.72 2004/07/29 20:17:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.73 2004/07/29 23:22:34 rac Exp $
 
   29 Jul 2004; Guy Martin <gmsoft@gentoo.org> perl-5.8.4.ebuild:
   Stable on hppa.
 
+*perl-5.8.4-r1 (29 Jul 2004)
+
+  29 Jul 2004; Robert Coie <rac@gentoo.org> +perl-5.8.4-r1.ebuild:
+  Move make test to src_test, but still call it if the maketest
+  FEATURE is not enabled.  If maketest ever becomes a default, this
+  can be reconsidered.  The NDBM-GDBM patch in bug 52660 is in here,
+  and gdbm is allowed to provide ndbm, as it works for me with either
+  1.8.0-r5 (so2) or 1.8.3 (so3).  So to get ndbm, one must either
+  USE=berkdb and have db1 installed, or USE=gdbm in which case gdbm
+  will come in.  The man page fixes from bug 58620 are in.
+  src_configure has been split out of src_compile in preparation for
+  making compiles more easily resumable.  An issue genone brought up
+  where hardlinks aren't making it through portage's staging image has
+  been addressed by making /usr/bin/perl a symlink to perl5.8.4
+  instead of a hardlink.  The same issue was faced with suidperl,
+  which has been removed completely to preemptively avoid security
+  issues.  sperl${PV} is gone too, in favor of the perl recommendation
+  to use sudo instead of having setuid perl executables.  I hope this
+  will help security, but it can be restored if there is enough
+  demand.
+	
   23 Jul 2004; Robert Coie <rac@gentoo.org> perl-5.8.4.ebuild:
   keywording x86 and sparc
 
