@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.121 2005/01/05 00:38:48 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.122 2005/01/05 01:22:43 pythonhead Exp $
+
+  04 Jan 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +files/python-2.4-lib64.patch, python-2.4.ebuild:
+  Added lib64 patch
 
 *python-2.4 (04 Jan 2005)
 
