@@ -1,4 +1,4 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 
 IUSE="nls"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.linux-nis.org/nis"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
 DEPEND="virtual/glibc"
 
 src_compile() {
