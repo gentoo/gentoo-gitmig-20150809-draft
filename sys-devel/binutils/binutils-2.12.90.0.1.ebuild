@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.1.ebuild,v 1.3 2002/03/24 21:36:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.1.ebuild,v 1.4 2002/04/03 00:43:47 azarah Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -14,19 +14,19 @@ SRC_URI="http://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2"
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
 
-[ -z "`use build`" ] && DEPEND="${DEPEND} sys-devel/perl"
+[ -z "`use build`" ] && [ -z "`use bootstrap`" ] && DEPEND="${DEPEND} sys-devel/perl"
 
 
 src_compile() {
 	
-	local myconf
-
+	local myconf=""
 	use nls && \
 		myconf="${myconf} --without-included-gettext" || \
 		myconf="${myconf} --disable-nls"
 
 	# DO NOT LIBTOOLIZE, AS BINUTILS COME WITH ITS OWN VERSION
 	# OF LIBTOOL!!!!!!!
+	libtoolize --copy --force
 
 	./configure --enable-shared \
 		--enable-64-bit-bfd \
@@ -47,9 +47,11 @@ src_compile() {
 
 	if [ -z "`use build`" ]
 	then
-		#nuke the manpages to recreate them (only use this if we have perl)
-		#uncomment next line if you want proper man pages.
-		#find . -name '*.1' -exec rm {} ';'
+		if [ -z "`use bootstrap`" ]
+		then
+			#nuke the manpages to recreate them (only use this if we have perl)
+			find . -name '*.1' -exec rm {} ';'
+		fi
 		#make the info pages (makeinfo included with gcc is used)
 		make info || die
 	fi
