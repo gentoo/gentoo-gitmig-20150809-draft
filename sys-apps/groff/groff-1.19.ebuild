@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.ebuild,v 1.6 2004/06/24 22:08:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.ebuild,v 1.7 2004/06/27 17:11:35 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-#	if [ -n "`use cjk`" ]
+#	if use cjk
 #	then
 		# multibyte patch contains no-color-segfault
 #		epatch ${WORKDIR}/${MB_PATCH}.diff
@@ -81,7 +81,7 @@ src_compile() {
 
 	# Only build X stuff if we have X installed, but do
 	# not depend on it, else we get circular deps.
-	if [ -n "`use X`" ] && [ -x /usr/X11R6/bin/xmkmf ]
+	if use X && [ -x /usr/X11R6/bin/xmkmf ]
 	then
 		cd ${S}/src/xditview
 		xmkmf || die
@@ -97,7 +97,7 @@ src_install() {
 		docdir=${D}/usr/share/doc/${PF} \
 		install || die
 
-	if [ -n "`use X`" ] && [ -x /usr/X11R6/bin/xmkmf ]
+	if use X && [ -x /usr/X11R6/bin/xmkmf ]
 	then
 		cd ${S}/src/xditview
 		make DESTDIR=${D} \
