@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r3.ebuild,v 1.2 2003/04/08 08:53:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r3.ebuild,v 1.3 2003/07/28 16:25:30 gmsoft Exp $
 
 MY_P=nc${PV}
 S=${WORKDIR}/nc-${PV}
@@ -13,7 +13,7 @@ IUSE="ipv6 static"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa"
 
 DEPEND="virtual/glibc"
 

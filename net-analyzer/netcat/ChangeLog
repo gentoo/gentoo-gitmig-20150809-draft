@@ -1,10 +1,13 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.15 2003/07/13 11:30:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.16 2003/07/28 16:25:30 gmsoft Exp $
 
 *netcat-110-r3 (08 Apr 2003)
 
-  08 Arp 2003; Guy Martin <gmsoft@gentoo.org> netcat-110-r3.ebuild, files/digest-netcat-110-r3 :
+  28 Jul 2003; Guy Martin <gmsoft@gentoo.org> netcat-110-r3.ebuild :
+  Marked stable on hppa.
+
+  08 Apr 2003; Guy Martin <gmsoft@gentoo.org> netcat-110-r3.ebuild, files/digest-netcat-110-r3 :
   Added ipv6 support. Added support for the static use flag. Added ~hppa to KEYWORDS.
   Added the IUSE variable.
 
