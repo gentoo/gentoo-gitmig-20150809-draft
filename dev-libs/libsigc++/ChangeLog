@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsigc++
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.38 2004/10/11 07:25:45 obz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.39 2005/01/09 14:56:42 corsair Exp $
+
+  09 Jan 2005; Markus Rothe <corsair@gentoo.org> libsigc++-2.0.5.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   11 Oct 2004; Mike Gardiner <obz@gentoo.org> libsigc++-2.0.5.ebuild:
   Fixed inherit line, see bug #67007. Need to move to dev-cpp/libsigcpp now
