@@ -1,0 +1,11 @@
+# ChangeLog for net-ftp/weex
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.1 2003/05/08 11:34:38 phosphan Exp $
+
+*weex-3.0.0_pre20030508 (08 May 2003)
+
+  08 May 2003; Patrick Kursawe <phosphan@gentoo.org>
+  weex-3.0.0_pre20030508.ebuild:
+  Initial import. Orphaned project, but I don't know a replacement and find it
+  useful.
+
