@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.6 2004/06/18 15:33:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.7 2004/06/19 07:12:30 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,6 +37,12 @@ src_unpack() {
 
 	# Get it to work with kernel 2.6
 	epatch ${FILESDIR}/${P}-linux2.6-v2.patch
+
+	# Fix include bug #54198
+	epatch ${FILESDIR}/${P}-utils-include.patch
+
+	# Have lrmi compile with our $CFLAGS
+	epatch ${FILESDIR}/${P}-lrmi-gentoo-cflags.patch
 
 	# Disable kernel module support while building stages #38403
 	#use build && 
