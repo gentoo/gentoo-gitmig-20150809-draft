@@ -1,16 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.8 2002/05/30 01:54:49 sandymac Exp
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/pari-2.1.4.ebuild,v 1.5 2003/01/08 08:17:12 george Exp $
+
+IUSE=""
 
 DESCRIPTION="pari (or pari-gp) : a software package for computer-aided number theory"
 HOMEPAGE="http://www.parigp-home.de/"
 LICENSE="GPL-2"
+
 DEPEND="app-text/tetex"
-RDEPEND=""
+
 SRC_URI="http://www.gn-50uma.de/ftp/pari-2.1/${P}.tar.gz"
+
 KEYWORDS="~x86 ~ppc ~sparc "
 SLOT="0"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	./Configure \
