@@ -1,9 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc5.ebuild,v 1.5 2004/03/14 02:40:38 mr_bones_ Exp $
-
-inherit gcc flag-o-matic
-[ "`gcc-fullversion`" == "3.2.2" ] && replace-flags -march=pentium4 -march=pentium3
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc5.ebuild,v 1.6 2004/04/19 19:12:46 vapier Exp $
 
 MY_PV="${PV/_/-}"
 DESCRIPTION="Stand-alone JavaScript C library"
@@ -26,9 +23,9 @@ src_install() {
 	dodoc ../README
 	dohtml README.html
 	cd Linux_All_OPT.OBJ
-	dolib.a libjs.a
-	dolib.so libjs.so
-	dobin js jscpucfg
+	dolib.a libjs.a || die "libjs.a failed"
+	dolib.so libjs.so || die "libjs.so failed"
+	dobin js jscpucfg || die "dobin failed"
 	insinto /usr/include
 	doins jsautocfg.h
 }
