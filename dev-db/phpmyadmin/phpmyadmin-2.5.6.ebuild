@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.6.ebuild,v 1.1 2004/03/01 19:04:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.6.ebuild,v 1.2 2004/03/02 21:49:57 twp Exp $
 
 inherit eutils
 inherit webapp-apache
@@ -19,9 +19,8 @@ DEPEND=">=net-www/apache-1.3
 	sys-apps/findutils"
 S=${WORKDIR}/${MY_P}
 
-webapp-detect || NO_WEBSERVER=1
-
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
@@ -42,6 +41,7 @@ src_compile() {
 }
 
 src_install() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-mkdirs
 
 	local DocumentRoot=${HTTPD_ROOT}
