@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6526044b7a4ba8f7dbd721d3396026d9 ChangeLog 7482
-MD5 83e87740df883833cb46d90d9955afea gpdf-0.132-r1.ebuild 1021
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 c36bc2ff3cf96fc8de5fa8b1aeaded28 gpdf-0.132-r2.ebuild 1166
+MD5 83e87740df883833cb46d90d9955afea gpdf-0.132-r1.ebuild 1021
 MD5 5c0a87a7195230a8ebe0397dab2d7c8a gpdf-2.8.1.ebuild 1052
-MD5 1df56a1f2b38902d0a41a2a9cde3acf2 gpdf-2.8.1-r1.ebuild 1126
 MD5 04bf8f4b6aa6e4c3cad51f129164ec42 gpdf-2.8.0-r2.ebuild 1077
-MD5 e65fd891d8fadaf18dcaf232d18abdd6 files/digest-gpdf-2.8.1 64
-MD5 e65fd891d8fadaf18dcaf232d18abdd6 files/digest-gpdf-2.8.1-r1 64
-MD5 5e63c86e19a1c1387cab38b7e2902c9e files/gpdf-xpdf_3_CAN-2004-0889.patch 8115
-MD5 9336bbbfbb54ba88fb5e4aba2da1833f files/gpdf-0.112-remove_gtk24_call.patch 607
-MD5 651529b6e386b3a73ffd9cc0c19e9661 files/gpdf-xpdf-CAN-2004-1125.patch 1666
+MD5 e8fcc99afb8def9e18ab17931d7ce697 gpdf-2.8.1-r1.ebuild 1126
+MD5 0960f47403a6fe92f664feda1810268d ChangeLog 7584
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/gpdf-xpdf2_underflow.patch 2363
+MD5 e65fd891d8fadaf18dcaf232d18abdd6 files/digest-gpdf-2.8.1 64
+MD5 2fce5bedd61300fad1566a41f991a782 files/gpdf-xpdf_goo_sizet.patch 1424
+MD5 651529b6e386b3a73ffd9cc0c19e9661 files/gpdf-xpdf-CAN-2004-1125.patch 1666
+MD5 5e63c86e19a1c1387cab38b7e2902c9e files/gpdf-xpdf_3_CAN-2004-0889.patch 8115
+MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r1 64
+MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r2 64
 MD5 b32f90fc9249d1f7434659642b36f9d9 files/gpdf-xpdf_2_CAN-2004-0888.patch 2716
 MD5 f61386d00d5674f3bbb80b181e8cea3a files/digest-gpdf-2.8.0-r2 64
-MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r2 64
-MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r1 64
-MD5 2fce5bedd61300fad1566a41f991a782 files/gpdf-xpdf_goo_sizet.patch 1424
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByyvCugEuf3OQ0akRAmHsAJ0Rv921btWyGxO0+IcUD1FMVI9e7ACfbHA5
-bYA2uBRA7fR7CKn7GJJ7uls=
-=KN3q
------END PGP SIGNATURE-----
+MD5 e65fd891d8fadaf18dcaf232d18abdd6 files/digest-gpdf-2.8.1-r1 64
+MD5 9336bbbfbb54ba88fb5e4aba2da1833f files/gpdf-0.112-remove_gtk24_call.patch 607
