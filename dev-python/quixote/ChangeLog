@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/quixote
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.1 2003/04/26 21:14:31 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.2 2003/05/02 16:39:23 g2boojum Exp $
+
+*quixote-0.6 (02 May 2003)
+
+  02 May 2003; Grant Goodyear <g2boojum@gentoo.org> quixote-0.6.ebuild,
+  quixote-0.6_beta2.ebuild, quixote-0.6_beta2.ebuild,
+  quixote-0.6_beta6.ebuild, quixote-0.6_beta6.ebuild:
+  New version.  Removed old betas.
 
 *quixote-0.6_beta2 (21 Apr 2003)
 
