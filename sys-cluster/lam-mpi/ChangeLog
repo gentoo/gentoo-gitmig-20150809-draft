@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.12 2004/04/02 21:44:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.13 2004/04/16 15:02:29 fmccor Exp $
+
+  16 Apr 2004; Ferris McCormick <fmccor@gentoo.org> lam-mpi-7.0.4.ebuild:
+  Mark stable for sparc
 
   02 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; lam-mpi-7.0.4.ebuild:
   Move mpich from DEPEND to RDEPEND.
