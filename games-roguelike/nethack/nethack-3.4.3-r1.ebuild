@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.2 2004/07/10 20:55:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.3 2004/08/31 21:22:31 wolf31o2 Exp $
 
 inherit eutils gcc flag-o-matic games
 
@@ -33,8 +33,9 @@ src_unpack() {
 	source setup.sh || die
 
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-gentoo-paths.patch"
-	epatch "${FILESDIR}/${PV}-default-options.patch"
+	epatch ${FILESDIR}/${PV}-gentoo-paths.patch
+	epatch ${FILESDIR}/${PV}-default-options.patch
+	epatch ${FILESDIR}/${PV}-bison.patch
 
 	sed -i \
 		-e "s:GENTOO_STATEDIR:${GAMES_STATEDIR}/${PN}:" include/unixconf.h \
