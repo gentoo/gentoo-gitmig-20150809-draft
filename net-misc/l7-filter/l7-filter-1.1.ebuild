@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.1.ebuild,v 1.2 2005/03/21 21:06:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.1.ebuild,v 1.3 2005/03/23 10:20:49 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -89,5 +89,7 @@ pkg_postinst() {
 	ewarn "This may not work with all kernels."
 	ewarn "This only patches the current kernel source code. (${KV_DIR})"
 	ewarn "Its up to you to recompile the kernel with the l7 options"
+	ewarn
+	ewarn 'You will also need to emerge iptables with the "extensions" USE flag'
 }
 
