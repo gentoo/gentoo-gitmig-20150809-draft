@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.23 2005/02/21 05:26:26 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.24 2005/02/22 18:54:54 hardave Exp $
+
+# Hardave Riar <hardave@gentoo.org>
+# This will probablly work, but no hardware to test with
+gnokii
 
 # Hardave Riar <hardave@gentoo.org>
 # x86 binary only package
