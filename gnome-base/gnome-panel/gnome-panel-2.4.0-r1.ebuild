@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.0-r1.ebuild,v 1.1 2003/09/22 03:27:33 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.0-r1.ebuild,v 1.2 2003/10/03 16:58:11 foser Exp $
 
 inherit gnome2 eutils
 
@@ -18,7 +18,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 RDEPEND=">=x11-libs/gtk+-2.1
 	>=x11-libs/libwnck-2.3
 	>=gnome-base/ORBit2-2.4
-	>=gnome-base/gnome-vfs-2.1.3
+	>=gnome-base/gnome-vfs-2.3
 	>=gnome-base/gnome-desktop-2.3
 	>=gnome-base/libbonoboui-2.1.1
 	>=gnome-base/libglade-2
@@ -35,44 +35,29 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS README"
 
-src_compile() {
+src_unpack() {
 
-#	for i in $(find ${S}/help -iname Makefile.am); do
-#		cp ${i} ${i}.old
-#		sed -e 's:include \$(top_srcdir)/xmldocs.make::' ${i}.old > ${i}
-#	done
-
-#	cd ${S}/help/C/clock
-#	mv Makefile.am Makefile.am.old
-#	sed -e 's:include \$(top_srcdir)/xmldocs.make::' Makefile.am.old > Makefile.am
-#	cd ${S}/help/C/window-list
-#	mv Makefile.am Makefile.am.old
-#	sed -e 's:include \$(top_srcdir)/xmldocs.make::' Makefile.am.old > Makefile.am
-#	cd ${S}/help/C/workspace-switcher
-#	mv Makefile.am Makefile.am.old
-#	sed -e 's:include \$(top_srcdir)/xmldocs.make::' Makefile.am.old > Makefile.am
-
+	unpack ${A}
 
 	cd ${S}
 	use menu && epatch ${FILESDIR}/menu-${PV}.patch
-
-#	WANT_AUTOCONF_2_5=1 ./autogen.sh || die
+	# fix initial menu size
+	epatch ${FILESDIR}/${PN}-2.4-panel_size.patch
 
 	sed -i 's:--load:-v:' gnome-panel/Makefile.am
-
-	WANT_AUTOMAKE=1.4 automake -v || die
 
 	# FIXME : uh yeah, this is nice
 	touch gnome-panel/blah
 	chmod +x gnome-panel/blah
 
-	gnome2_src_compile
 }
 
 pkg_postinst() {
+
 	gnome2_pkg_postinst
 
 	einfo "setting panel gconf defaults..."
 	GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
 	${ROOT}/usr/bin/gconftool-2 --direct --config-source ${GCONF_CONFIG_SOURCE} --load=${S}/gnome-panel/panel-default-setup.entries
+
 }
