@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.102 2003/09/05 13:23:42 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.103 2003/09/06 16:15:49 liquidx Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -79,7 +79,6 @@ net-im/jabber-server:j-nomuconf - If you do NOT want the mu-conference addon bui
 net-im/jabber-server:j-noyahoo - If you do NOT want the Yahoo transport built with jabber-server (removes glib dependency)
 net-irc/xchat:xchattext - Enables the text/console front end to XChat.
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
-net-libs/gnutls:lzo - Adds support for LZO compression library
 net-mail/amavisd-new:milter - Enable Sendmail milter support
 net-mail/courier:fax - Enables fax support in the courier mail server
 net-mail/exim:exiscan - Patch providing support for content scanning backward-compatability
@@ -94,6 +93,7 @@ net-misc/openssh:skey - Enable S/Key (Single use password) authentication suppor
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
 net-p2p/pysoulseek:hyriand - Enables usage of the hyriand patch
+net-p2p/nicotine:geoip - Enable GeoIP support
 net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
 net-www/memcached:php - Include the PHP API for memcached
