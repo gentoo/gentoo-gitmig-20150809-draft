@@ -558,7 +558,7 @@ x11-themes/gtk-xfce-engine
 
 # lamer <lamer@gentoo.org> (4 Aug 2002)
 # Kismet package is new please test
-=net-analyzer/kismet-2.4.6
+=net-wireless/kismet-2.4.6
 
 # <carpaski@gentoo.org> (04 Aug 2002)
 # Testing...
