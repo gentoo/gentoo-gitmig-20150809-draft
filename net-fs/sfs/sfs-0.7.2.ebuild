@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.1 2003/03/19 01:43:05 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.2 2003/06/17 22:23:00 wmertens Exp $
 
 DESCRIPTION="SFS (Self-certifying File System) client and server daemons"
 HOMEPAGE="http://www.fs.net/"
@@ -22,32 +22,21 @@ RDEPEND="$DEPEND
 S="${WORKDIR}/${P}"
 
 pkg_setup() {
-	local sfs_gid=71 
-	local sfs_uid=71
-
 	# checking for NFS support *seems* like a good idea, but since
 	# nfs-utils doesn't do it, sfs won't either
 
-	# add the sfs group if necessary
-	if ! grep "^sfs:" /etc/group &>/dev/null; then
-		while grep ":${sfs_gid}:" /etc/group &>/dev/null; do
-			sfs_gid++ ;
-		done
+	# add the sfs user and group if necessary
+	enewuser sfs
+	enewgroup sfs
+}
 
-		ewarn "Creating group 'sfs' (w/ gid ${sfs_gid})..."
-		groupadd -g ${sfs_gid} sfs
-	fi
+src_unpack() {
+	unpack ${A}
 
-	# add the sfs user if necessary
-	if ! grep "^sfs:" /etc/passwd &>/dev/null; then
-		while grep "^[^:]*:[^:]*:${sfs_uid}:" /etc/passwd &>/dev/null; do
-			sfs_uid++ ;
-		done
-
-		ewarn "Creating user 'sfs' (w/ uid ${sfs_uid})..."
-		useradd -u ${sfs_uid} -g sfs -d / -s /dev/null \
-			-c "Self-certifying file system" sfs
-	fi
+	# Temporary workaround so that it will compile. Remove this on
+	# the next version. See bug #22791
+	cd ${S}
+	sed -i~ 's/-Werror//g' configure
 }
 
 src_compile() {
