@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.ebuild,v 1.5 2003/09/12 04:40:27 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.ebuild,v 1.6 2003/09/12 05:06:43 strider Exp $
 
 IUSE="doc gnome kde mozilla"
 
@@ -78,7 +78,7 @@ src_install () {
 	cp -a demo src.zip ${D}/opt/${P}/share/
 
 	local plugin_dir="ns610"
-	if has_version '=gcc-3.2*' ; then
+	if has_version '>=gcc-3.2*' ; then
 		plugin_dir="ns610-gcc32"
 	fi
 	if [ "`use mozilla`" ] ; then
