@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.43 2003/09/24 19:08:06 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.44 2003/10/22 22:32:42 mholzer Exp $
+
+*procps-3.1.14 (24 Oct 2003)
+
+  24 Oct 2003; Martin Holzer <mholzer@gentoo.org> procps-3.1.14.ebuild:
+  Version bumped.. Thread support is now fully working in ps. Closes #30514.
 
   24 Sep 2003; Chris PeBenito <pebenito@gentoo.org> procps-3.1.12.ebuild:
   Fix 3.1.12 SELinux patch.
