@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.1.ebuild,v 1.1 2003/07/14 20:27:57 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.1.ebuild,v 1.2 2003/07/16 22:07:45 naz Exp $
 
 DESCRIPTION="FastTrack Plugin for giFT"
 HOMEPAGE="https://developer.berlios.de/projects/gift-fasttrack/"
@@ -9,7 +9,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc"
 
-DEPENDS="virtual/glibc
+DEPEND="virtual/glibc
 	!net-p2p/gift-fasttrack-cvs
 	>=net-p2p/gift-0.11.1
 	>=sys-apps/sed-4
