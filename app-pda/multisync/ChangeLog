@@ -1,6 +1,17 @@
 # ChangeLog for app-pda/multisync
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.2 2003/09/15 11:34:03 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.3 2004/01/10 12:24:05 tad Exp $
+
+*multisync-0.81 (10 Jan 2004)
+
+  10 Jan 2004; Troy Dack <tad@gentoo.org> multisync-0.81.ebuild,
+  files/multisync-0.81-gentoo.patch:
+  Version bump to 0.81. Marked stable (0.81 is upstream stable release)
+
+  10 Jan 2004; Troy Dack <tad@gentoo.org> multisync-0.80-r1.ebuild,
+  files/multisync-0.80-r1-gentoo.patch:
+  Added patch from Jeremy Huddleston <jeremyhu@cory.eecs.berkeley.edu> to enable
+  the Opie plugin to build correctly. Closes Bug #35554.
 
   15 Sep 2003; Michael Sterrett <msterret@gentoo.org>
   multisync-0.80-r1.ebuild:
