@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.4 2003/02/12 04:50:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.5 2003/09/25 19:49:14 caleb Exp $
+
+*koffice-i18n-1.2.1-r1 (25 Sep 2003)
+*koffice-i18n-1.3_beta4
+
+  25 Sep 2003; root <root@gentoo.org> koffice-i18n-1.1.1.ebuild,
+  koffice-i18n-1.2.1-r1.ebuild, koffice-i18n-1.2.ebuild,
+  koffice-i18n-1.3_beta4.ebuild:
+  New ebuild system for these i18n files, along the lines of my new handy/dandy
+  kde-i18n ebuild stuff.  Time will tell how good it really is.
 
 *koffice-i18n-1.2.1 (11 Dec 2002)
 
