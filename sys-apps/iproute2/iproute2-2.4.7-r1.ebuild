@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.ebuild,v 1.4 2002/01/01 22:35:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7-r1.ebuild,v 1.1 2002/02/08 05:37:03 drobbins Exp $
 
 S=${WORKDIR}/iproute2
 DESCRIPTION="Kernel 2.4 routing and traffic control utilities"
@@ -11,6 +11,10 @@ DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	#This should close bug #595 -- drobbins
+	patch -p1 < ${FILESDIR}/dead-route-fix.diff || die
+	
 	# we now install the kernel headers used for compiling glibc, directly into
 	# /usr/include/{asm,linux}; which is a good thing(tm). we need to patch
 	# iproute2's Makefile to thusly compile without a /usr/src/linux tree.
