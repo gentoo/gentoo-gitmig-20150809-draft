@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/buffer-1.19-r1.ebuild,v 1.6 2004/06/28 16:00:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/buffer-1.19-r1.ebuild,v 1.7 2004/08/15 16:35:39 morfic Exp $
 
 DESCRIPTION="a tapedrive tool for speeding up reading from and writing to tape"
 HOMEPAGE="http://www.microwerks.net/~hugo/download.html"
@@ -15,6 +15,9 @@ DEPEND="virtual/libc"
 
 src_compile() {
 	make clean
+	sed -i "s:#ifndef __alpha::" buffer.c
+	sed -i "s:extern char \*shmat();::" buffer.c
+	sed -i "s:#endif /\* __alpha \*/::" buffer.c
 	emake || die "make failed"
 }
 

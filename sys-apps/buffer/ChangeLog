@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/buffer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/ChangeLog,v 1.4 2004/06/24 21:59:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/ChangeLog,v 1.5 2004/08/15 16:35:39 morfic Exp $
+
+  15 Aug 2004; Daniel Goller <morfic@gentoo.org> buffer-1.19-r1.ebuild:
+  removed offending code to close bug 60395
 
 *buffer-1.19-r1 (20 Oct 2002)
 
