@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.7 2004/09/11 13:50:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.8 2004/10/23 13:22:04 kloeri Exp $
+
+  23 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> fxscintilla-1.61.ebuild:
+  ~alpha keyword.
 
   11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> fxscintilla-1.61.ebuild:
   Added amd64 keyword.
