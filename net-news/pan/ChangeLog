@@ -1,6 +1,13 @@
 # ChangeLog for net-news/pan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.7 2002/05/23 19:15:18 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.8 2002/06/08 05:05:13 seemant Exp $
+
+*pan-0.11.94 (7 Jun 2002)
+
+  7 Jun 2002; Seemant Kulleen <seemant@gentoo.org> pan-0.11.94.ebuild
+  files/digest-pan-0.11.94 :
+
+  Version bump.
 
 *pan-0.11.93 (23 May 2002) 
   23 May 2002; Spider <spider@gentoo.org> pan-0.11.93.ebuild: 
