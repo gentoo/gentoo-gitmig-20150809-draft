@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 1a526e1f886370465b1c651d65c5a640 ChangeLog 4534
 MD5 b2aa6ed9219eeb8312622c3ef4e97791 jdbc-mysql-3.0.11.ebuild 645
-MD5 4bfbe399560068090654791b6d7b0060 jdbc-mysql-3.0.11-r1.ebuild 1006
-MD5 d26db94b7caae7cf4ee275a20087ba53 ChangeLog 4399
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 4bfbe399560068090654791b6d7b0060 jdbc-mysql-3.0.11-r1.ebuild 1006
+MD5 8ed9528fb87ca9426bacdd1b6ce0049c jdbc-mysql-3.0.15.ebuild 645
 MD5 96778981695f92599ce9eac1c669a9b0 files/digest-jdbc-mysql-3.0.11 86
 MD5 96778981695f92599ce9eac1c669a9b0 files/digest-jdbc-mysql-3.0.11-r1 86
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBWOld/rLF9B432nYRApwEAJ9HNtYphuWaCWQohiCyW/T7H4CDkwCghE++
-jWWRSiHuem22JjzaezMHcmE=
-=TGlP
------END PGP SIGNATURE-----
+MD5 694330698852b516b00653716134d612 files/digest-jdbc-mysql-3.0.15 83
