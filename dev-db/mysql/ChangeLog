@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.128 2004/09/27 03:50:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.129 2004/10/12 18:05:33 robbat2 Exp $
+
+*mysql-4.0.21 (12 Oct 2004)
+
+  12 Oct 2004; Robin H. Johnson <robbat2@gentoo.org>
+  +files/mysql-4.0.21-install-db-sh.diff, +files/mysql-4.0.21-thrssl.patch,
+  +mysql-4.0.21.ebuild:
+  Bug #63523, version bump.
 
   26 Sep 2004; Tom Gall <tgall@gentoo.org> mysql-4.0.20-r1.ebuild:
   stable on ppc64, bug #60744

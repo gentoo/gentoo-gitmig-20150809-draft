@@ -1,0 +1,11 @@
+--- mysql-4.0.21/libmysql_r/Makefile.in.orig
++++ mysql-4.0.21/libmysql_r/Makefile.in
+@@ -135,7 +135,7 @@
+ LDFLAGS = @LDFLAGS@
+ LIBDL = @LIBDL@
+ LIBOBJS = @LIBOBJS@
+-LIBS = @LIBS@ @openssl_libs@
++LIBS = @CLIENT_LIBS@ @openssl_libs@
+ LIBTOOL = @LIBTOOL@
+ LIB_EXTRA_CCFLAGS = @LIB_EXTRA_CCFLAGS@
+ LM_CFLAGS = @LM_CFLAGS@
