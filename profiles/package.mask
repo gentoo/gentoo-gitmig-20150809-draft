@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3704 2005/03/10 10:52:18 nakano Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3705 2005/03/10 16:38:54 agriffis Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Aron Griffis <agriffis@gentoo.org> (10 Mar 2005)
+# For baselayout-1.12, alpha/beta signify baselayout developers only;
+# rc signifies ~arch; 1.12.0 release will signify ~arch candidate for quick
+# stable.
+=sys-apps/baselayout-1.12.0_alpha*
+=sys-apps/baselayout-1.12.0_beta*
 
 # Aaron Walker <ka0ttic@gentoo.org> (09 Mar 2005)
 # Depends on python-2.4.
