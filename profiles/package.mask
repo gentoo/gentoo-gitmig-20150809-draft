@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <usata@gentoo.org> (30 Sep 2003)
+# Testing needed, beta version.
+=app-i18n/canna-3.7*
+
 # <avenj@gentoo.org> (25 Sep 2003)
 # Severly borks due to bad pam.d/login, see bug 29563
 =sys-apps/pam-login-3.12
