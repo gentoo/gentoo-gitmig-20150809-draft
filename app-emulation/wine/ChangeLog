@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.48 2003/07/12 11:02:04 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.49 2003/07/12 11:39:45 coronalvr Exp $
+
+  12 Jul 2003; Alex Veber <coronalvr@gentoo.org> wine-20030709.ebuild:
+  removed the kpp patch, the real fix is to use a native dll
 
   12 Jul 2003; Sergey Kuleshov <svyatogor@gentoo.org> wine-20030618-r1.ebuild:
   Bumping wine-20030618-r1 to stable.
