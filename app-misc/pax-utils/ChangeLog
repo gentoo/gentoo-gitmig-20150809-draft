@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.1 2003/10/24 10:15:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.2 2003/11/07 00:42:29 solar Exp $
+
+*pax-utils-0.0.2 (06 Nov 2003)
+
+  06 Nov 2003; <solar@gentoo.org> pax-utils-0.0.2.ebuild:
+  updated the pax-utils, added manpages etc..
 
 *pax-utils-0.0.1 (24 Oct 2003)
 
