@@ -1,7 +1,17 @@
-MD5 1d9afb6c85044bd9a06601d7943241bd ncompress-4.2.4-r1.ebuild 1064
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 86141811d8ff61b55f7d6960197013fa ncompress-4.2.4-r1.ebuild 1063
+MD5 4484b7e6a30fbf923136da2fe3fdf86e ChangeLog 2288
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 864c84fc01a151561f23d3ac81a96df3 ChangeLog 2163
 MD5 c2ae98bc7ab7e655c5af32b0f17f1a12 ncompress-4.2.4.ebuild 894
-MD5 3e1ac2326e9d786e9ab4af766c9e1313 files/digest-ncompress-4.2.4-r1 135
-MD5 44e597943ff90e32aacebcd702147801 files/digest-ncompress-4.2.4 66
 MD5 e6539b304d089dd57b63d364379500b7 files/ncompress-gcc34.patch 915
+MD5 44e597943ff90e32aacebcd702147801 files/digest-ncompress-4.2.4 66
+MD5 3e1ac2326e9d786e9ab4af766c9e1313 files/digest-ncompress-4.2.4-r1 135
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBZTuFwDHaUUJ0mYMRAts2AJ9m6YEA2FoRKOPXbWadZAcXQ6+C7wCeLVin
+59snBpzOPhK2C62QigiJq8Y=
+=jpw6
+-----END PGP SIGNATURE-----
