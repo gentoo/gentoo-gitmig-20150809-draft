@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.0.0.ebuild,v 1.1 2003/01/21 00:48:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.0.1.ebuild,v 1.1 2003/01/27 19:46:25 foser Exp $
 
 inherit gnome2
 
@@ -30,3 +30,8 @@ DEPEND=">=dev-util/pkgconfig-0.9.0
 	${RDEPEND}"
 
 DOCS="AUTHORS COPYING ChangeLog NEWS README TODO"
+
+pkg_postinst() {
+	ewarn "If you have been using 1.0.8 you might have to remove your thumbnails to correct problems."
+	ewarn "'rm -fr ~/.nautilus/thumbnails/*' as your gthumb user should do the trick."
+}
