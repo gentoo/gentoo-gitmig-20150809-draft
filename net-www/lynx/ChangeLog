@@ -1,13 +1,13 @@
 # ChangeLog for net-www/lynx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.17 2003/03/03 21:56:22 agriffis Exp $
-
-  11 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
-  Added hppa to keywords.
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.18 2003/04/16 02:42:46 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *lynx-2.8.4.1d (20 Nov 2002)
+
+  16 Apr 2003; Guy Martin <gmsoft@gentoo.org> lynx-2.8.4.1d.ebuild :
+  Marked stable on hppa.
 
   03 Mar 2003; Aron Griffis <agriffis@gentoo.org> lynx-2.8.4.1d.ebuild:
   Mark stable on alpha
@@ -19,6 +19,9 @@
   Version bump
 
 *lynx-2.8.4.1c (26 Aug 2002)
+
+  11 Feb 2003; Guy Martin <gmsoft@gentoo.org> lynx-2.8.4.1c.ebuild :
+  Added hppa to keywords.
 
   14 Sept 2002; Maarten Thibaut <murphy@gentoo.org> lynx-2.8.4.1c.ebuild :
   Added sparc/sparc64 to keywords.
