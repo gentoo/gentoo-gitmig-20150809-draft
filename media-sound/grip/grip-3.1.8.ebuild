@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.7.ebuild,v 1.1 2004/03/23 07:01:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.8.ebuild,v 1.1 2004/03/30 17:57:27 eradicator Exp $
 
 inherit eutils
 

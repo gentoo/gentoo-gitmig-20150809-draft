@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.0.3.ebuild,v 1.7 2004/01/24 06:16:12 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.0.3.ebuild,v 1.8 2004/03/30 17:57:27 eradicator Exp $
 
 IUSE="nls oggvorbis"
 
@@ -23,7 +23,6 @@ DEPEND="=x11-libs/gtk+-1.2*
 	nls? ( sys-devel/gettext )"
 
 SRC_URI="http://www.nostatic.org/grip/${P}.tar.gz"
-S=${WORKDIR}/${P}
 
 # Looks like the Makefile.in mangling is no longer required.
 # Arcady Genkin <agenkin@gentoo.org>, Sep 26, 2002.
