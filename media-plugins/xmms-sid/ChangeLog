@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-sid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/ChangeLog,v 1.10 2004/06/24 23:45:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/ChangeLog,v 1.11 2004/07/03 08:41:09 eradicator Exp $
+
+  03 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-sid-0.8.0_beta10.ebuild:
+  libsidplay2 compatibility.  Added ~amd64.
 
   11 Apr 2004; Jason Wever <weeve@gentoo.org> xmms-sid-0.7.4.ebuild:
   Marked stable on sparc.
