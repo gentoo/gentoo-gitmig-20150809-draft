@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/fidelio
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fidelio/ChangeLog,v 1.4 2002/11/17 12:14:59 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fidelio/ChangeLog,v 1.5 2003/01/29 00:03:52 raker Exp $
+
+*fidelio-1.0_beta1 (28 Jan 2003)
+
+  28 Jan 2003; Nick Hadaway <raker@gentoo.org> fidelio-1.0_beta1.ebuild,
+  files/digest-fidelio-1.0_beta1 :
+  Version bump.
 
   16 Jul 2002; Olivier Reisch <doctomoe@gentoo.org> fidelio-0.9.6-r2:
   Added ppc keyword
