@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.10.ebuild,v 1.8 2005/01/01 15:33:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.10.ebuild,v 1.9 2005/01/02 18:32:53 chriswhite Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.gnucash.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=dev-util/guile-1.6
