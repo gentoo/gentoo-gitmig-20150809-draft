@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.98.ebuild,v 1.1 2004/02/04 06:40:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.98.ebuild,v 1.2 2004/02/04 06:43:53 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,6 +14,7 @@ HOMEPAGE="http://sourceforge.net/projects/mpegplus/ http://www.personal.uni-jena
 SRC_URI="http://www.personal.uni-jena.de/~pfk/MPP/src/xmms-${PV}.zip"
 #SRC_URI="mirror://sourceforge/mpegplus/${P}.tar.bz2"
 
+RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
