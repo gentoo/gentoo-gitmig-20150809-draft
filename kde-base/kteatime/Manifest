@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8bb6884d696c1740d21fbfdde99b3e14 kteatime-3.4.0_beta1.ebuild 394
-MD5 369e311f5d29aac5114b1cd8b17de4a5 kteatime-3.4.0_rc1.ebuild 392
-MD5 0327ddd651da3a354a6920626a2ed0f7 ChangeLog 806
+MD5 9121d616805017cd2d7a50e8d9619390 kteatime-3.4.0_rc1.ebuild 396
+MD5 801be6e57b55372e11e1e2b90f2b3855 ChangeLog 976
 MD5 e8c62933b4735f8c94276f9d5ec0fcf1 kteatime-3.4.0_beta2.ebuild 394
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 5224e7a7ada9a24776f67cfcd38bd62d files/digest-kteatime-3.4.0_beta1 212
 MD5 0e9e7fa138d6dfe862e8a50162b994bc files/digest-kteatime-3.4.0_beta2 289
 MD5 72ac09de5dee4a204a0ee54a99bc0908 files/digest-kteatime-3.4.0_rc1 371
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLIpfntT9W3vfTuoRAjvxAJ45bsjKevQqiTUnzYGGDRn9Hx5qGQCcCdzW
+HMcAvwNuOYhxPJ71ylAcZgU=
+=RDcJ
+-----END PGP SIGNATURE-----
