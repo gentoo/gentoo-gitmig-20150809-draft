@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.12 2004/12/04 02:46:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.13 2004/12/08 02:04:30 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Daemon for the Linux Device Filesystem"
 HOMEPAGE="http://www.atnf.csiro.au/~rgooch/linux/"
@@ -32,8 +32,10 @@ src_unpack() {
 		-e 's:/usr/src/linux:.:' \
 		-e '32,34d;11,16d' -e '6c\' \
 		-e 'DEFINES	:= -DLIBNSL="\\"/lib/libnsl.so.1\\""' \
+		-e 's:install -s:install:' \
 		-i GNUmakefile
 	use uclibc && sed -e 's|libnsl.so.1|libnsl.so.0|' -i GNUmakefile
+	tc-export CC
 }
 
 src_install() {
