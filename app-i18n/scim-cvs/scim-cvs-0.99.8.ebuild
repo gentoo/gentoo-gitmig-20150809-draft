@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-0.99.4.ebuild,v 1.2 2004/08/21 15:29:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-0.99.8.ebuild,v 1.1 2004/08/23 10:49:58 usata Exp $
 
 inherit gnome2 eutils cvs
 
@@ -37,9 +37,11 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/automake
 	>=sys-apps/sed-4"
-PDEPEND="|| ( app-i18n/scim-m17n
-		app-i18n/scim-uim
-		app-i18n/scim-tables )"
+PDEPEND="|| ( >=app-i18n/scim-m17n-0.1.2
+		>=app-i18n/scim-uim-0.1.3
+		>=app-i18n/scim-chinese-0.4.2
+		>=app-i18n/scim-hangul-0.1.1
+		>=app-i18n/scim-tables-0.4.0 )"
 
 ELTCONF="--reverse-deps"
 SCROLLKEEPER_UPDATE="0"
@@ -86,6 +88,17 @@ pkg_postinst() {
 	einfo
 	einfo "where 'your_language' can be zh_CN, zh_TW, ja_JP.eucJP or any other"
 	einfo "UTF-8 locale such as en_US.UTF-8 or ja_JP.UTF-8"
+	einfo
+	einfo "If you prefer KDE/Qt interface, try emerge app-i18n/skim."
+	einfo
+	einfo "To use Chinese input methods:"
+	einfo "	# emerge app-i18n/scim-tables app-i18n/scim-chinese"
+	einfo "To use Korean input methods:"
+	einfo "	# emerge app-i18n/scim-hangul"
+	einfo "To use Japanese input methods:"
+	einfo "	# emerge app-i18n/scim-uim"
+	einfo "To use various input methods (more than 30 languages):"
+	einfo "	# emerge app-i18n/scim-m17n"
 	einfo
 
 	gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
