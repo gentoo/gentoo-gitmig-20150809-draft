@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3_pre0.ebuild,v 1.3 2005/02/16 09:45:56 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3_pre0.ebuild,v 1.4 2005/02/17 05:59:25 obz Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -56,8 +56,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-media-2.8
 
 	>=media-gfx/eog-2.8.2
-	!hppa? ( !mips? ( >=net-www/epiphany-1.4.6 ) )
-	>=app-arch/file-roller-2.8.3
+	!hppa? ( !mips? ( >=net-www/epiphany-1.4.8 ) )
+	>=app-arch/file-roller-2.8.4
 	>=gnome-extra/gcalctool-4.4.22
 	>=gnome-extra/gconf-editor-2.8.2
 	>=gnome-base/gdm-2.6.0.6
@@ -85,8 +85,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-utils-2.8.1
 	>=gnome-extra/gnome-games-2.8.2
 
-	>=gnome-base/libgtop-2.8.2
-	>=gnome-extra/gnome-system-monitor-2.8.1-r1
+	>=gnome-base/libgtop-2.8.3
+	>=gnome-extra/gnome-system-monitor-2.8.3
 
 	>=gnome-base/librsvg-2.8.1-r1
 	>=x11-libs/libwnck-2.8.1-r1
