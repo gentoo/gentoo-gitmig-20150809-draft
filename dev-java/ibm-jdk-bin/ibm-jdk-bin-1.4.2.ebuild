@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.14 2004/10/28 03:14:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.15 2004/11/20 09:42:44 sejo Exp $
 
 inherit java eutils
 
@@ -8,29 +8,33 @@ DESCRIPTION="IBM Java Development Kit ${PV}"
 SRC_URI="ppc? ( mirror://gentoo/IBMJava2-SDK-142.ppc.tgz )
 	ppc64? ( mirror://gentoo/IBMJava2-SDK-142.ppc64.tgz )
 	x86? ( mirror://gentoo/IBMJava2-SDK-142.tgz )
+	amd64? (mirror://gentoo/IBMJava2-SDK-AMD64-142.x86_64.tgz )
 	javacomm? (
 		x86? ( mirror://gentoo/IBMJava2-JAVACOMM-142.tgz )
 		ppc64? ( mirror://gentoo/IBMJava2-JAVACOMM-142.tgz )
+		amd64? ( mirror://gentoo/IBMJava2-JAVACOMM-AMD64-142.x86_64.tgz )
 		)"
 PROVIDE="virtual/jdk-1.4.2
 	virtual/jre-1.4.2
 	virtual/java-scheme-2"
 SLOT="1.4"
 LICENSE="IBM-J1.4"
-KEYWORDS="~ppc ~x86 ppc64"
+KEYWORDS="~ppc ~x86 ppc64 ~amd64"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.4.2* )
 	X? ( virtual/x11 )"
-RDEPEND=" !ppc64? sys-libs/lib-compat"
+RDEPEND=" !ppc64? (!amd64? sys-libs/lib-compat)"
 
 IUSE="X doc javacomm mozilla"
 
-if useq ppc; then
+if use ppc; then
 	S="${WORKDIR}/IBMJava2-ppc-142"
-elif useq ppc64; then
+elif use ppc64; then
 	S="${WORKDIR}/IBMJava2-ppc64-142"
+elif use amd64; then
+	S="${WORKDIR}/IBMJava2-amd-142"
 else
 	S="${WORKDIR}/IBMJava2-142"
 fi
