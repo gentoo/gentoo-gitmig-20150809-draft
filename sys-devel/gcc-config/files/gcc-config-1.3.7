@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.1 2004/10/13 16:29:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.2 2004/10/13 19:46:19 vapier Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 trap ":" INT QUIT TSTP
@@ -199,7 +199,7 @@ switch_profile() {
 		     "${x}" = "cpp" -o "${x}" = "cc" ]
 		then
 			# Only install a wrapper if the binary exists ...
-			${CP} -f "${ROOT}"/usr/lib/gcc-config/wrapper" \
+			${CP} -f "${ROOT}/usr/lib/gcc-config/wrapper" \
 			         "${ROOT}/usr/bin/${x}"
 
 			if [ "${OLD_CC_COMP}" != "${CC_COMP}" ]
