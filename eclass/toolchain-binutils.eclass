@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.21 2005/01/12 01:52:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.22 2005/01/15 01:19:56 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -90,8 +90,7 @@ toolchain-binutils_src_compile() {
 		|| myconf="${myconf} --disable-nls"
 	use multitarget && myconf="${myconf} --enable-targets=all"
 	[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
-	${S}/configure \
-		--prefix=/usr \
+	myconf="--prefix=/usr \
 		--host=${CHOST} \
 		--target=${CTARGET} \
 		--datadir=${DATAPATH} \
@@ -103,17 +102,19 @@ toolchain-binutils_src_compile() {
 		--includedir=${INCPATH} \
 		--enable-shared \
 		--enable-64-bit-bfd \
-		${myconf} ${EXTRA_ECONF} || die
+		${myconf} ${EXTRA_ECONF}"
+	echo ./configure ${myconf}
+	${S}/configure ${myconf} || die "configure failed"
 
-	make configure-bfd || die "configure-bfd"
-	make headers -C bfd || die "headers-bfd"
-	emake all || die "emake"
+	make configure-bfd || die "make configure-bfd failed"
+	make headers -C bfd || die "make headers-bfd failed"
+	emake all || die "emake failed"
 
 	# only build info pages if we user wants them, and if 
 	# we have makeinfo (may not exist when we bootstrap)
 	if ! has noinfo ${FEATURES} ; then
 		if type -p makeinfo ; then
-			make info || die "info"
+			make info || die "make info failed"
 		fi
 	fi
 	# we nuke the manpages when we're left with junk 
