@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.4 2004/02/17 20:30:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.5 2004/05/06 12:47:14 karltk Exp $
 
 inherit flag-o-matic base eutils gcc
-replace-flags "-march=pentium4" "-march=pentium3"
 
 DESCRIPTION="Convert files between various character sets."
 HOMEPAGE="http://www.gnu.org/software/recode/"
@@ -12,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ppc amd64 alpha ia64"
+KEYWORDS="x86 ~sparc ppc amd64 alpha ia64"
 IUSE="nls"
 
 DEPEND="virtual/glibc
@@ -29,9 +28,12 @@ src_compile() {
 	use nls || myconf="--disable-nls"
 
 	# gcc-3.2 crashes if we don't remove any -O?
-	if [ ! -z "`gcc-version`" == "3.2" ] && [ ${ARCH} == "x86" ] ; then
+	if [ "`gcc-version`" == "3.2" ] && [ ${ARCH} == "x86" ] ; then
 		filter-flags -O?
 	fi
+
+	replace-flags "-march=pentium4" "-march=pentium3"
+
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
