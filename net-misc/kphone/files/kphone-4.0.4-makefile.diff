@@ -1,0 +1,54 @@
+--- icons/Makefile.in.orig	2004-07-22 03:24:30.526934416 +0200
++++ icons/Makefile.in	2004-07-22 03:26:30.330721472 +0200
+@@ -4,12 +4,12 @@
+ ICON_DIR=$(SHAREDIR)/icons
+ 
+ install:
+-	install --mode=0755 --directory $(ICON_DIR)
++	install --mode=0755 --directory $(DESTDIR)$(ICON_DIR)
+ 	for T in *.png; do \
+-		install --mode=0644 $$T $(ICON_DIR); \
++		install --mode=0644 $$T $(DESTDIR)$(ICON_DIR); \
+ 	done
+ 
+ uninstall:
+-	rm -r $(ICON_DIR)
+-	rm -r $(SHAREDIR)
++	rm -r $(DESTDIR)$(ICON_DIR)
++	rm -r $(DESTDIR)$(SHAREDIR)
+ 
+--- kphone/Makefile.in.orig	2004-07-22 03:24:36.549018920 +0200
++++ kphone/Makefile.in	2004-07-22 03:26:07.222234496 +0200
+@@ -52,11 +52,11 @@
+ all:	kphone
+ 
+ install:	all
+-	install --mode=0755 --directory $(BIN_DIR)
+-	install --strip kphone $(BIN_DIR)
++	install --mode=0755 --directory $(DESTDIR)$(BIN_DIR)
++	install --strip kphone $(DESTDIR)$(BIN_DIR)
+ 
+ uninstall:
+-	rm -f $(BIN_DIR)/kphone 
++	rm -f $(DESTDIR)$(BIN_DIR)/kphone 
+ 
+ clean:
+ 	rm -f kphone *.o *.a *~ *.moc.cpp *.bak core
+
+--- po/Makefile.in.orig	2004-11-08 01:45:01.602724272 +0000
++++ po/Makefile.in	2004-11-08 01:45:42.939440136 +0000
+@@ -4,11 +4,11 @@
+ PO_DIR=$(SHAREDIR)/translations/
+ 
+ install:
+-	install --mode=0755 --directory $(PO_DIR)
++	install --mode=0755 --directory $(DESTDIR)$(PO_DIR)
+ 	for T in *.qm; do \
+-		install --mode=0644 $$T $(PO_DIR); \
++		install --mode=0644 $$T $(DESTDIR)$(PO_DIR); \
+ 	done
+ 
+ uninstall:
+-	rm -r $(PO_DIR)
++	rm -r $(DESTDIR)$(PO_DIR)
+ 
