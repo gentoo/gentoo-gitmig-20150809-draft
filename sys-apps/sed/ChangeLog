@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.60 2005/01/02 23:50:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.61 2005/02/19 18:26:28 vapier Exp $
+
+*sed-4.1.4 (19 Feb 2005)
+
+  19 Feb 2005; Mike Frysinger <vapier@gentoo.org> +sed-4.1.4.ebuild:
+  Version bump.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
