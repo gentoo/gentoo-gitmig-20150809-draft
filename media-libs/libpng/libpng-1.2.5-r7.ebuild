@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r7.ebuild,v 1.3 2004/07/11 03:48:07 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r7.ebuild,v 1.4 2004/07/12 08:45:56 mr_bones_ Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -21,7 +21,7 @@ src_unpack() {
 
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
-	
+
 	use macos && epatch ${FILESDIR}/macos.patch # implements strnlen
 
 	[ "`gcc-version`" == "3.2" ] && replace-cpu-flags i586 k6 k6-2 k6-3
