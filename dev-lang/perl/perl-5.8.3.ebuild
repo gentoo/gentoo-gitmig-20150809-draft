@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1-r1.ebuild,v 1.3 2003/10/20 23:16:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.3.ebuild,v 1.1 2004/01/18 06:46:58 rac Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,14 +24,14 @@ HOMEPAGE="http://www.perl.org/"
 SLOT="0"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~alpha ~mips ~hppa ~ia64"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~alpha ~mips ~hppa ~ia64 ~ppc64"
 IUSE="berkdb doc gdbm threads"
 
 DEPEND="sys-apps/groff
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-apps/portage-2.0.48-r4
-	=sys-devel/libperl-${SHORT_PV}*
+	>=sys-devel/libperl-${PV}
 	!<dev-perl/ExtUtils-MakeMaker-6.05-r6
 	!<dev-perl/File-Spec-0.84-r1
 	!<dev-perl/Test-Simple-0.47-r1"
@@ -75,22 +75,31 @@ src_unpack() {
 
 	unpack ${A}
 
+	# Get -lpthread linked before -lc.  This is needed
+	# when using glibc >= 2.3, or else runtime signal
+	# handling breaks.  Fixes bug #14380.
+	# <rac@gentoo.org> (14 Feb 2003)
+	# reinstated to try to avoid sdl segfaults 03.10.02
+	cd ${S}; epatch ${FILESDIR}/${P}-prelink-lpthread.patch
+
 	# Patch perldoc to not abort when it attempts to search
 	# nonexistent directories; fixes bug #16589.
 	# <rac@gentoo.org> (28 Feb 2003)
 
-	# we are using the vendor directory now, so it should not be
-	# empty.  this patch doesn't come close to applying, so leaving
-	# off for now.
-	# <rac@gentoo.org> (10 Jul 2003)
-
-	#cd ${S}; epatch ${FILESDIR}/${P}-perldoc-emptydirs.patch
+	cd ${S}; epatch ${FILESDIR}/${P}-perldoc-emptydirs.patch
 
 	# this lays the groundwork for solving the issue of what happens
 	# when people (or ebuilds) install different versiosn of modules
 	# that are in the core, by rearranging the @INC directory to look
 	# site -> vendor -> core.
 	cd ${S}; epatch ${FILESDIR}/${P}-reorder-INC.patch
+
+	# some well-intentioned stuff in http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&selm=Pine.SOL.4.10.10205231231200.5399-100000%40maxwell.phys.lafayette.edu
+	# attempts to avoid bringing cccdlflags to bear on static
+	# extensions (like DynaLoader).  i believe this is
+	# counterproductive on a Gentoo system which has both a shared
+	# and static libperl, so effectively revert this here.
+	cd ${S}; epatch ${FILESDIR}/${P}-picdl.patch
 }
 
 src_compile() {
@@ -114,7 +123,19 @@ src_compile() {
 	fi
 	if [ "`use berkdb`" ]
 	then
-		myconf="${myconf} -Di_db -Di_ndbm"
+		myconf="${myconf} -Di_db"
+
+		# ndbm.h is only provided by db1 (and perhaps by gdbm in
+		# error). an alternate approach here would be to check for the
+		# presence (or some string therein) of /usr/include/ndbm.h
+		# itself.
+
+		if has_version '=sys-libs/db-1*'
+		then
+			myconf="${myconf} -Di_ndbm"
+		else
+			myconf="${myconf} -Ui_ndbm"
+		fi
 	else
 		myconf="${myconf} -Ui_db -Ui_ndbm"
 	fi
@@ -140,10 +161,17 @@ src_compile() {
 		myconf="${myconf} -Ui_db -Ui_ndbm"
 	fi
 
+	# These are temporary fixes. Need to edit the build so that that libraries created
+	# only get compiled with -fPIC, since they get linked into shared objects, they
+	# must be compiled with -fPIC.  Don't have time to parse through the build system
+	# at this time.
 	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
+#	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 
 	sh Configure -des \
 		-Darchname="${myarch}" \
+		-Dcccdlflags='-fPIC' \
+		-Dccdlflags='-rdynamic' \
 		-Dcc="${CC:-gcc}" \
 		-Dprefix='/usr' \
 		-Dvendorprefix='/usr' \

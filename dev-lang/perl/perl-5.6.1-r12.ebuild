@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r12.ebuild,v 1.8 2003/09/10 01:52:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r12.ebuild,v 1.9 2004/01/18 06:46:58 rac Exp $
 
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 MM_VERSION="6.05"
