@@ -1,15 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r1.ebuild,v 1.2 2002/07/11 06:30:58 drobbins Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r1.ebuild,v 1.3 2002/07/17 00:41:10 seemant Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hanterm -- Korean terminal"
-#SRC_URI="http://www.kr.freebsd.org/~hwang/hanterm/${P}.tar.gz"
+HOMEPAGE="http://www.hanterm.org"
 SRC_URI="http://hanterm.org/download/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="x86"
+LICENSE="X11"
 
-HOMEPAGE="http://www.hanterm.org"
 
 DEPEND="virtual/glibc
 	>=x11-libs/Xaw3d-1.5
@@ -37,5 +37,5 @@ src_install() {
 	install -m ${FILESDIR}/Hanterm.gentoo ${D}/usr/X11R6/lib/X11/app-defaults/Hanterm
 
 	cd ${S}/doc
-	dodoc TODO COPYING THANKS
+	dodoc README ChangeLog
 }
