@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.22 2003/06/28 19:19:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.23 2003/07/08 16:58:32 mholzer Exp $
+
+*squirrelmail-1.4.1 (08 Jul 2003)
+
+  08 Jul 2003; Martin Holzer <mholzer@gentoo.org> squirrelmail-1.4.1.ebuild:
+  Version bumped. Closes #24097
 
   28 Jun 2003; Tavis Ormandy <taviso@gentoo.org> squirrelmail-1.4.0-r1.ebuild:
   reported as stable on alpha.
