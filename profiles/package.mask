@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3218 2004/10/05 06:43:53 suka Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3219 2004/10/05 08:41:33 eradicator Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -29,7 +29,7 @@
 =xfce-base/libxfce4util-4.1.90
 =xfce-base/libxfcegui4-4.1.90
 =xfce-base/libxfce4mcs-4.1.90
-=xfce-base/xfce-mcs-manager-4.1.90
+=xfce-base/xfce4-base-4.1.90
 =xfce-base/xfce-mcs-plugins-4.1.90
 =xfce-base/xfce4-panel-4.1.90
 =xfce-base/xfwm4-4.1.90
