@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.12 2003/07/11 19:56:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.13 2003/08/19 23:08:19 solar Exp $
+
+*bash-2.05b-r7 (19 Aug 2003)
+
+  19 Aug 2003; <solar@gentoo.org> bash-2.05b-r7.ebuild,
+  files/bash-2.05b-rbash.patch:
+  Update to add support for restricted bash when invoked from /etc/passwd as
+  /bin/rbash Bug #26854
 
 *bash-2.05b-r6 (09 Jul 2003)
  
