@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.10 2004/04/26 02:40:04 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.11 2004/06/15 07:03:33 solar Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 DESCRIPTION="GNU awk pattern-matching language"
 HOMEPAGE="http://www.gnu.org/software/gawk/gawk.html"
@@ -11,7 +11,7 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gawk/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ia64 s390"
-IUSE="nls build"
+IUSE="nls build uclibc"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
@@ -29,6 +29,8 @@ src_unpack() {
 }
 
 src_compile() {
+	use uclibc && gnuconfig_update
+
 	local myconf=
 	use nls || myconf="${myconf} --disable-nls"
 	[ -z "${CBUILD}" ] || myconf="${myconf} --build=${CBUILD}"
