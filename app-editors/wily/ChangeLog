@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/wily
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.5 2004/06/24 22:03:39 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.6 2004/09/29 23:25:06 swegener Exp $
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> wily-1.0.ebuild:
   Stable on sparc.
