@@ -1,6 +1,22 @@
 # ChangeLog for x11-plugins/gkrellshoot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/ChangeLog,v 1.2 2002/09/12 05:18:27 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/ChangeLog,v 1.3 2002/10/16 21:59:01 seemant Exp $
+
+
+*gkrellshoot-0.4.1 (16 Oct 2002)
+
+  16 Oct 2002; Seemant Kulleen <seemant@gentoo.org> gkrellshoot-0.4.1.ebuild
+  files/digest-gkrellshoot-0.4.1 :
+
+  SLOTified version for gkrellm2 submitted by: gustavo@felisberto.net
+  (Gustavo Felisberto) in bug #8926.
+
+*gkrellshoot-0.3.2 (16 Oct 2002)
+
+  16 Oct 2002; Seemant Kulleen <seemant@gentoo.org> gkrellshoot-0.3.2.ebuild
+  files/digest-gkrellshoot-0.3.2 :
+
+  Bugfix version bump for gkrellm1
 
 *gkrellshoot-0.3.11 (10 Jun 2002)
 

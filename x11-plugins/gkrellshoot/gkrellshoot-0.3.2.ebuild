@@ -1,10 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.3.11.ebuild,v 1.4 2002/10/04 06:45:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.3.2.ebuild,v 1.1 2002/10/16 21:59:01 seemant Exp $
 
-S=${WORKDIR}/gkrellShoot-0.3.11
-DESCRIPTION="A GKrellM plugin with two buttons, one to lock another to snap
-screenshots."
+S=${WORKDIR}/${P/s/S}
+DESCRIPTION="A GKrellM plugin to snap screenshots."
 SRC_URI="mirror://sourceforge/gkrellshoot/${P}.tar.gz"
 HOMEPAGE="http://gkrellshoot.sf.net"
 
@@ -19,6 +18,7 @@ DEPEND="=app-admin/gkrellm-1.2*
 RDEPEND="media-gfx/imagemagick"
 
 src_compile() {
+	export CFLAGS="${CFLAGS/-O?/}"
 	emake || die
 }
 
