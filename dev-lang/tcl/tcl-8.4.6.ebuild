@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.4 2004/04/20 09:46:57 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.5 2004/04/24 19:06:47 port001 Exp $
 
 IUSE="threads"
 
@@ -25,7 +25,7 @@ pkg_setup() {
 	if [ "`use threads`" ]
 	then
 		ewarn ""
-		ewarn "PLEASE NOTE: You are compiling tcl-8.4 with"
+		ewarn "PLEASE NOTE: You are compiling ${P} with"
 		ewarn "threading enabled."
 		ewarn "Threading is not supported by all applications"
 		ewarn "that compile against tcl. You use threading at"
