@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-spell
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.4 2003/12/30 17:15:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.5 2003/12/30 17:16:00 mcummings Exp $
+
+  30 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  gtk2-spell-1.00.ebuild, gtk2-spell-1.02.ebuild:
+  No longer on CPAN
 
 *gtk2-spell-1.03 (30 Dec 2003)
 
