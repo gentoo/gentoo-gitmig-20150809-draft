@@ -744,7 +744,9 @@ app-cdr/cddump
 
 # seemant@gentoo.org 1 May 2002
 # libpng-1.2.2 -- coz users don't --clean rsync like they should
-=media-libs/libpng-1.2.2
+# jnelson@gentoo.org 2 Jun 2002
+# set to >= instead of just = -- 1.2.3 broke lots of stuff!
+>=media-libs/libpng-1.2.2
 
 # seemant@gentoo.org 5 May 2002
 # xpdf-1.00-r1 has a dependency on the masked freetype2
