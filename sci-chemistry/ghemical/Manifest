@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 980dd49ebb7d231910cc4e43e0cbd6f3 ghemical-1.00.ebuild 1080
-MD5 1f7c4b3f17e8fe12b3ca6543d47c520c ChangeLog 1392
+MD5 7eee9f49213553ee1ee395ec0d8c2384 ghemical-1.00.ebuild 1169
+MD5 605bf18d27a39277565f181822f195bf ChangeLog 1542
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 fefd85f432335b478759ce408d355480 files/digest-ghemical-1.00 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzHhdI1lqEGTUzyQRAg88AKCClJ1jsEEdnorAOFAcc4mOCHtEQQCfTtio
-u17MX9OMevwzZFWjs2vWSaQ=
-=EsJ3
------END PGP SIGNATURE-----
+MD5 bdb8f7d12899a6cae19b4d7ff183c752 files/gcc3.4.patch 1112
