@@ -1,10 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/glpk/glpk-4.2.ebuild,v 1.4 2004/06/24 22:01:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/glpk/glpk-4.2.ebuild,v 1.5 2004/10/16 23:07:30 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="GNU Linear Programming Kit"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
-HOMEPAGE="http://www.gnu.org/software/${PN}/"
+HOMEPAGE="http://www.gnu.org/software/glpk/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -53,7 +55,7 @@ src_install() {
 	if use java; then
 		cd ${S}/contrib/jni
 		dolib c/libglpk_jni.so
-		dojar java/glpk.jar
+		java-pkg_dojar java/glpk.jar
 		docinto java
 		mv contrib/java/sample/README contrib/java/sample/README.sample
 		dodoc contrib/java/README contrib/java/sample/*

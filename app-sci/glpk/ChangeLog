@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/glpk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/glpk/ChangeLog,v 1.4 2004/06/24 22:01:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/glpk/ChangeLog,v 1.5 2004/10/16 23:07:30 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> glpk-4.2.ebuild:
+  dojar --> java-pkg_dojar
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> glpk-4.2.ebuild:
   Added IUSE, fixed bugs #44467 and #46955.
