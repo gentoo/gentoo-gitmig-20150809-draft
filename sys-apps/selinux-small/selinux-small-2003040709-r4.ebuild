@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003040709-r4.ebuild,v 1.1 2003/06/13 16:49:23 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003040709-r4.ebuild,v 1.2 2003/06/13 22:30:17 pebenito Exp $
 
 DESCRIPTION="SELinux libraries and policy compiler"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -12,8 +12,7 @@ S="${WORKDIR}/selinux"
 
 KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 IUSE="selinux static"
-DEPEND=">=sys-libs/glibc-2.3.2
-	sys-devel/flex
+DEPEND="sys-devel/flex
 	sys-libs/pam
         || (
                 >=sys-kernel/selinux-sources-2.4.20-r1
@@ -43,13 +42,18 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
-	ln -s /usr/src/linux ${WORKDIR}/lsm-2.4
-
+src_unpack() {
+	unpack ${A}
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-newstat.diff
+	has_version '>=sys-libs/glibc-2.3.2' && epatch ${FILESDIR}/${P}-newstat.diff
+	epatch ${FILESDIR}/${P}-newrole.diff
+
+	ln -s /usr/src/linux ${WORKDIR}/lsm-2.4
+}
+
+src_compile() {
 
 	einfo "Compiling checkpolicy"
 	cd ${S}/module

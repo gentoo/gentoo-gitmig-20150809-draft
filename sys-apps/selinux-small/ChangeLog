@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/selinux-small
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.21 2003/06/13 16:49:23 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.22 2003/06/13 22:30:16 pebenito Exp $
+
+  13 Jun 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-small-2003040709-r4.ebuild,
+  files/selinux-small-2003040709-newrole.diff:
+  Make newstat epatch conditional, move patching to src_unpack. Add newrole tty
+  relabeling patch.
 
 *selinux-small-2003040709-r4 (13 Jun 2003)
 

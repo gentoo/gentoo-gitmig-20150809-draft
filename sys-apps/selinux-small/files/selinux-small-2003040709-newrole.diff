@@ -1,0 +1,98 @@
+Index: newrole.c
+===================================================================
+RCS file: /home/pal/CVS/selinux/utils/newrole/newrole.c,v
+retrieving revision 1.9
+retrieving revision 1.12
+diff -u -r1.9 -r1.12
+--- selinux/utils/newrole/newrole.c	9 Jan 2003 15:20:39 -0000	1.9
++++ selinux/utils/newrole/newrole.c	13 Jun 2003 13:34:23 -0000	1.12
+@@ -63,6 +63,7 @@
+ #include <ss.h>                   /* for sid<->context routines */
+ #include <context.h>              /* for context-mangling functions */
+ #include <get_default_type.h>
++#include <signal.h>
+ 
+ /* USAGE_STRING describes the command-line args of this program. */
+ #define USAGE_STRING "USAGE: newrole -r role [ -t type ] [ -- args ]"
+@@ -272,6 +273,7 @@
+  
+   security_id_t tty_sid;	     /* The current sid of tty file */
+   security_id_t new_tty_sid;	     /* The new tty file sid */	
++  security_id_t sid;	     
+ 
+   security_context_t context_s;      /* our security context as a string */
+   int context_length;
+@@ -296,6 +298,7 @@
+   struct stat statbuf;		     /* when stat'ing the tty */
+   int fd;
+ 
++  signal(SIGHUP, SIG_DFL);
+ 
+   /*
+    *
+@@ -495,11 +498,22 @@
+ 
+   /* Fetch TTY information */
+   ttyn=ttyname(0);
+-  if( ttyn==NULL || *ttyn=='\0' || stat_secure(ttyn,&statbuf,&tty_sid) ) {
++  if( ttyn==NULL || *ttyn=='\0') {
+       fprintf(stderr, "Could not retrieve tty information.\n");
+       exit (-1);
+     }
+ 
++  fd = open(ttyn, O_RDWR);
++  if (fd < 0) {
++      fprintf(stderr, "Could not open %s.\n", ttyn);
++      exit (-1);
++  }
++	  
++  if (fstat_secure(fd,&statbuf,&tty_sid) ) {
++      fprintf(stderr, "Could not fstat_secure %s.\n", ttyn);
++      exit (-1);
++  }
++
+ #ifdef CANTSPELLGDB
+   printf("Your tty %s was labeled with SID %d\n", ttyn, tty_sid);
+ #endif
+@@ -515,7 +529,7 @@
+ #endif
+ 
+   /* Relabel it */
+-  if( chsid(ttyn,new_tty_sid)!=0 ) {
++  if( fchsid(fd,new_tty_sid)!=0 ) {
+     fprintf(stderr,"newrole: error: chsid");
+     exit(-1);
+   }
+@@ -531,18 +545,30 @@
+     /* PARENT */
+     wait(NULL);
+ 
++    /* Verify that the tty still has the SID set by newrole. */
++    if (fstat_secure(fd,&statbuf,&sid) ) {
++	  fprintf(stderr, "Could not fstat_secure %s.\n", ttyn);
++	  exit (-1);
++    }
++
++    if (sid != new_tty_sid) {
++	    fprintf(stderr, "%s changed labels.\n", ttyn);
++	    exit(-1);
++    }
++
+ #ifdef CANTSPELLGDB
+   printf("Restoring tty %s back to SID %d\n", ttyn, tty_sid);
+ #endif
+ 
+-    /* Cleanup TTY Context */
+-    chsid(ttyn,tty_sid);
++    fchsid(fd,tty_sid);
+ 
+     /* Done! */
+     exit(0);
+   }
+ 
+   /* CHILD */
++
++  close(fd);
+ 
+   /* Close and reopen descriptors 0 through 2 */
+   if( close(0) || close(1) || close(2) )
