@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/opendchub-0.7.14.ebuild,v 1.2 2004/04/27 22:01:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/opendchub-0.7.14.ebuild,v 1.3 2004/05/21 23:02:25 squinky86 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="perl"
 
 DEPEND="virtual/glibc
