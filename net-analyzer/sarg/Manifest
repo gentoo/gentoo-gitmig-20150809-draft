@@ -1,5 +1,5 @@
-MD5 bc422e75bc5754b1da6c6b42cc8adc03 ChangeLog 270
-MD5 9ceeee12a4c2f9d93d025f87446d189d sarg-1.2.2.ebuild 826
+MD5 67c3c3909fe8242d418ab62c9777417e ChangeLog 483
+MD5 abd5ce33e8bc1447d9c8beac98b22196 sarg-1.2.2.ebuild 826
 MD5 165db035d699a3b60d302ce5ff91cfbe sarg-1.4.1.ebuild 792
 MD5 b60741cb2874bce6ba11ed9ab30de7ac files/digest-sarg-1.2.2 62
 MD5 d0d0e64d8851d613b34982597a1d1cee files/digest-sarg-1.4.1 62
