@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.15 2003/01/15 00:36:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.16 2003/01/15 01:41:20 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -155,7 +155,7 @@ src_compile() {
 	# Thread Local Storage support.  This dont really work as of yet...
 #	use x86 && use tls \
 #		&& myconf="${myconf} --with-tls"
-	myconf="${myconf} --without-tls"
+	myconf="${myconf} --without-tls --without-__thread"
 
 	if [ "`uname -r | cut -d. -f2`" -ge "4" ]
 	then
@@ -262,6 +262,18 @@ pkg_postinst() {
 		echo "Please remember to set your timezone using the zic command."
 		rm -f ${ROOT}/etc/localtime
 		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime
+	fi
+
+	# Generate fastloading iconv module configuration file.
+	if [ -x ${ROOT}/usr/sbin/iconvconfig ]
+	then
+		${ROOT}/usr/sbin/iconvconfig --prefix=${ROOT}
+	fi
+
+	# Reload init ...
+	if [ "${ROOT}" = "/" ]
+	then
+		/sbin/init U &> /dev/null
 	fi
 }
 

@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.37 2003/01/15 00:36:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.38 2003/01/15 01:41:20 azarah Exp $
 
   15 Jan 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r2.ebuild :
 
@@ -8,6 +8,8 @@
   <cretin@gentoo.org> for this fix, bug #13240.
 
   Add MIPS patches, thanks to <tuxus@gentoo.org> and <dragon@gentoo.org>.
+
+  Reload init to fix fsck on reboot ...
 
   28 Dec 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r3.ebuild :
 
