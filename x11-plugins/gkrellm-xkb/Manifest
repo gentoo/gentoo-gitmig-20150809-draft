@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7923d200968429fb220743bd023f0e89 ChangeLog 361
+MD5 bd9e210457c22384582e7c1394314d3f metadata.xml 250
+MD5 9c349ee0eb9be11fe41e905b294ded19 gkrellm-xkb-1.05.ebuild 616
+MD5 b38ad568b9f37174a43010516fa22f19 files/digest-gkrellm-xkb-1.05 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCCJihQlM6RnzZP+IRAis2AJ9grk0o0glytI0YeCrx8K9aGOL+jACfRCVE
+5m1ccilI7VhTvu0MLDAnvDE=
+=AHdr
+-----END PGP SIGNATURE-----
