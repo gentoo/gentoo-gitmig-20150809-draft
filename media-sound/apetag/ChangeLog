@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/apetag
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apetag/ChangeLog,v 1.1 2004/10/07 08:24:44 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apetag/ChangeLog,v 1.2 2004/10/07 08:50:56 eradicator Exp $
+
+  07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> apetag-1.5.ebuild:
+  Added python to RDEPEND.
 
 *apetag-0.5 (07 Oct 2004)
 
