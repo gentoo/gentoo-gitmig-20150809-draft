@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.2 2003/12/12 18:07:26 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.3 2003/12/14 17:19:25 azarah Exp $
+
+  14 Dec 2003; Martin Schlemmer <azarah@gentoo.org> files/crontab,
+  files/crontab-3.0.1-r4:
+  Move comment. Add environment variables, else jobs run with vanilla
+  environment which might break some scripts.
 
   12 Dec 2003; Chris PeBenito <pebenito@gentoo.org> files/crontab,
   files/crontab-3.0.1-r4:

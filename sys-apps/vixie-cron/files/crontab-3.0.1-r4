@@ -1,11 +1,17 @@
-# check scripts in cron.hourly, cron.daily, cron.weekly and cron.monthly
 # for vixie cron
 # remember to give cron a sighup when updating this file
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/files/crontab-3.0.1-r4,v 1.2 2003/12/12 18:07:26 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/files/crontab-3.0.1-r4,v 1.3 2003/12/14 17:19:25 azarah Exp $
 #
 #
 
+# Global variables
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+HOME=/
+
+# check scripts in cron.hourly, cron.daily, cron.weekly and cron.monthly
 0  *  * * *	root	rm -f /var/spool/cron/lastrun/cron.hourly
 1  3  * * *	root	rm -f /var/spool/cron/lastrun/cron.daily
 15 4  * * 6	root	rm -f /var/spool/cron/lastrun/cron.weekly
