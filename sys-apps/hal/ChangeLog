@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/hal
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.1 2004/08/17 21:01:52 foser Exp $
+
+*hal-0.2.97 (17 Aug 2004)
+
+  17 Aug 2004; foser <foser@gentoo.org> hal-0.2.97.ebuild, metadata.xml, Changelog :
+  Initial commit of hal (Hardware Abstraction Layer), a layer on top of udev to get hardware info
+  Added init script for Gentoo
+  Added to the gnome herd for now, maintained by foser <foser@gentoo.org>
+
