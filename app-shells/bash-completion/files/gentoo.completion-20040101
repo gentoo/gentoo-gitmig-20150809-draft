@@ -2,12 +2,42 @@
 #
 # Gentoo Linux command completion.
 #
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 #
 # Author: Geert Bevin  <gbevin@theleaf.be>
 # Author: Zach Forrest <zach@disinformation.ca>
 #
+
+#
+# rc & rc-status completion command
+#
+_rc()
+{
+	local cur
+	COMPREPLY=()
+	cur=${COMP_WORDS[COMP_CWORD]}
+	if [ ${#COMP_WORDS[*]} -le 2 ]; then
+		COMPREPLY=( $( compgen -W "$(for i in /etc/runlevels/*; do echo ${i##*/}; done)" -- $cur ) )
+
+	fi
+	return 0
+}
+complete -F _rc rc
+
+_rcstatus()
+{
+	local cur opts
+	COMPREPLY=()
+	cur=${COMP_WORDS[COMP_CWORD]}
+	if [ ${#COMP_WORDS[*]} -le 2 ]; then
+		opts="-a -all -l --list -u --unused"
+		COMPREPLY=( $( compgen -W "${opts} $(for i in /etc/runlevels/*; do echo ${i##*/}; done)" -- $cur ) )
+
+	fi
+	return 0
+}
+complete -F _rcstatus rc-status
 
 #
 # distcc-config completion command
@@ -256,7 +286,9 @@ _emerge()
 		fi
 
 		if [ "${cur}" ]; then
-			if [ $(echo "${cur}" | grep '/') ]; then
+			if [[ "${cur} " == @('/'|'.'|'~'|'$')* ]]; then
+				COMPREPLY=''
+			elif [ $(echo "${cur}" | grep '/') ]; then
 				setbig=$(compgen -G "${cur}*" | ${sedcmd})"${systemactions}"
 				COMPREPLY=($(echo "${setbig}" | $grepcmd))
 			else

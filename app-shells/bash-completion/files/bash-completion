@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/files/bash-completion,v 1.1 2002/06/20 18:57:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/files/bash-completion,v 1.2 2004/01/04 16:40:57 joker Exp $
 #
 # START bash completion -- do not remove this line
 bash=${BASH_VERSION%.*}; bmajor=${bash%.*}; bminor=${bash#*.}
