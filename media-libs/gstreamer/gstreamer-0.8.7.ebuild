@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.5.ebuild,v 1.2 2004/10/09 20:57:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.7.ebuild,v 1.1 2004/10/09 20:57:55 foser Exp $
 
 inherit eutils flag-o-matic libtool gnome2
 
 # Create a major/minor combo for our SLOT and executables suffix
-PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+PVP=${PV//[-\._]/ }
 PV_MAJ_MIN=${PVP[0]}.${PVP[1]}
 
 DESCRIPTION="Streaming media framework"
@@ -14,7 +14,7 @@ LICENSE="LGPL-2"
 SRC_URI="http://gstreamer.freedesktop.org/src/gstreamer/${P}.tar.bz2"
 
 SLOT=${PV_MAJ_MIN}
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.2
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 		=app-text/docbook-xml-dtd-4.2* )"
 
 src_unpack() {
+
 	unpack ${A}
 	cd ${S}
 
@@ -46,7 +47,6 @@ src_compile() {
 	strip-flags
 	replace-flags "-O3" "-O2"
 
-	# docs hack, circumvent xmltex check
 	econf \
 		--with-configdir=/etc/gstreamer \
 		--disable-tests  \
