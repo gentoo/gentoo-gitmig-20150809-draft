@@ -35,7 +35,7 @@ case $1 in
 	shift
 	while [ -x $builder ] && [ ! -z "$1" ] ; do
 	    echo ...rebuilding $1
-	    $builder -norc -q -M $old_mem -x "
+	    $builder -norc -q -Efile utf-8 -M $old_mem -x "
 (let ((*compile-print* nil)
       (*compile-progress* nil)
       (*compile-verbose*  nil)

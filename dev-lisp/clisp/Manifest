@@ -3,10 +3,11 @@ MD5 49613e495da0b6f83016281175cb56c3 clisp-2.28.ebuild 1380
 MD5 44ca75fcfa29c894ce368e2a05834a04 clisp-2.29.ebuild 1435
 MD5 41aa178dc9617efc0c8f8d72d658dd81 clisp-2.30-r1.ebuild 2197
 MD5 a881823bfbd7a3504b176a965ee2b266 clisp-2.30.ebuild 1460
-MD5 00284072d47a76860fe005a97f8d2ece clisp-2.32.ebuild 3781
 MD5 485cde76397408cf913fc6d4c7a45a67 metadata.xml 882
 MD5 696a13636ace75f2840e73a4bd8c5433 clisp-2.31.ebuild 2907
 MD5 71f82f22579ae31fffda2943f3428c5f clisp-2.31-r1.ebuild 3820
+MD5 5b7782d622c0d1ebf64c049adf40e41d clisp-2.32-r1.ebuild 3872
+MD5 00284072d47a76860fe005a97f8d2ece clisp-2.32.ebuild 3781
 MD5 c112ebf612bf8e262c4285fd4c7e9553 files/clisp-2.30-gentoo.patch 1301
 MD5 ec015c64b7aca6f6721123c27d7d921c files/clisp-2.30-linux.lisp-upstream.patch 4712
 MD5 fe93240f140623bf55d2e503f6d8e01e files/clisp.sh 2792
@@ -18,6 +19,7 @@ MD5 27760908e107e35ff838560fb5381d5b files/digest-clisp-2.31 64
 MD5 bf978d68f0161bacd6772c07dfade6fa files/install-clc.lisp 484
 MD5 27760908e107e35ff838560fb5381d5b files/digest-clisp-2.31-r1 64
 MD5 da9eb2a136566bdce0620c950df941b2 files/digest-clisp-2.32 64
+MD5 da9eb2a136566bdce0620c950df941b2 files/digest-clisp-2.32-r1 64
 MD5 9b76ca10cf785d54c75803e8fddc91cb files/2.31/bindings-glibc-linux.lisp-gentoo.patch 1292
 MD5 9db8f3ac2974a7d9725148ecc0709cc8 files/2.31/bindings-wildcard-fnmatch.c-gentoo.patch 1248
 MD5 ff3506766c1fc9216e04f650f39c0e94 files/2.31/fastcgi-Makefile.in-gentoo.patch 654
