@@ -1,7 +1,7 @@
 #!/bin/sh
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/files/cgoban2,v 1.2 2003/09/27 01:26:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/files/cgoban2,v 1.3 2004/07/14 22:14:02 agriffis Exp $
 
 which java > /dev/null 2>&1 && \
 	java -jar INSTALL_DIR/cgoban.jar $* && \
