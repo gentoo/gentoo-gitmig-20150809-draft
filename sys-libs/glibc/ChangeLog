@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.159 2004/05/30 15:03:30 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.160 2004/05/30 15:18:39 lv Exp $
+
+  30 May 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.3_pre20040529.ebuild:
+  adding ~amd64 and ~ppc64 to keywords
 
   30 May 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.3_pre20040529.ebuild:
   misc pax/grsec fixes from peter mazinger
