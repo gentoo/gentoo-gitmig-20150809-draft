@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.36 2003/08/04 20:05:25 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.37 2003/08/11 00:53:13 azarah Exp $
+
+*libgtkhtml-3.0.8 (11 Aug 2003)
+
+  11 Aug 2003; Martin Schlemmer <azarah@gentoo.org> libgtkhtml-3.0.8.ebuild:
+  New version.
 
   15 Jul 2003; Todd Sunderlin <todd@gentoo.org> libgtkhtml-2.2.1.ebuild:
   Set stable for sparc
