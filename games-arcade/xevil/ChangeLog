@@ -1,8 +1,11 @@
 # ChangeLog for games-arcade/xevil
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/ChangeLog,v 1.2 2003/09/10 20:33:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/ChangeLog,v 1.3 2003/11/30 03:10:14 vapier Exp $
 
 *xevil-2.02_p2 (25 Jul 2003)
+
+  29 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added debian patch to fix #34390.
 
   25 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by me.
