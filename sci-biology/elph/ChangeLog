@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/elph
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/elph/ChangeLog,v 1.4 2005/01/28 01:24:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/elph/ChangeLog,v 1.5 2005/01/30 20:46:57 j4rg0n Exp $
+
+  30 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> elph-0.1.5.ebuild:
+  Unstable ppc-macos
 
   27 Jan 2005; Olivier Fisette <ribosome@gentoo.org> elph-0.1.5.ebuild:
   Ebuild clean-up.
