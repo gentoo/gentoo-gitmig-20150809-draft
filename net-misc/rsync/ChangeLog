@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.12 2002/12/20 03:50:32 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.13 2002/12/26 21:40:36 blizzy Exp $
+
+  26 Dec 2002; Maik Schreiber <blizzy@gentoo.org> rsync-2.5.6_pre20021105 :
+  Changed "~x86" to "x86" in KEYWORDS.
 
   19 Dec 2002; Dean Bailey <alron@gentoo.org> : removed sparc64 keyword
 
