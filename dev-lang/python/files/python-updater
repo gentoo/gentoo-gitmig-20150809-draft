@@ -26,7 +26,7 @@ NEW_PY_VER=$(python -V 2>&1 | sed 's:Python ::' | cut -d. -f1-2)
 
 PKGS_EXCEPTIONS="dev-lang/python sys-apps/portage"
 PKGS_MANUAL="app-office/gnumeric app-office/dia x11-libs/vte"
-LOGFILE="/tmp/python-updater.log"
+LOGFILE="/var/log/python-updater.log"
 
 # portage variables
 PKG_DBDIR=/var/db/pkg
@@ -60,12 +60,12 @@ elogecho() {
 elogerr() {
 	eerror $*
 	DATESTRING=`date +"%Y/%m/%d %H:%M:%S"`
-	echo "${DATESTRING} ! ${*}" >> ${LOGFILE}	
+	echo "${DATESTRING} ! ${*}" >> ${LOGFILE} 
 }
 
 elog() {
 	DATESTRING=`date +"%Y/%m/%d %H:%M:%S"`
-	echo "${DATESTRING} - ${*}" >> ${LOGFILE}	
+	echo "${DATESTRING} - ${*}" >> ${LOGFILE}
 }
 
 
@@ -93,6 +93,15 @@ if [ -z "${PORTDIR}" ]; then
 	exit 1
 fi	
 
+if [ ! -f ${LOGFILE} ]; then
+	if ! touch ${LOGFILE} 2>&1 > /dev/null; then
+		ewarn "Logging disabled due to permissions"
+		LOGFILE=/dev/null
+	fi
+elif [ ! -w ${LOGFILE} -o ! -L ${LOGFILE} ]; then
+	ewarn "Logging disabled due to permissions"
+	LOGFILE=/dev/null
+fi
 
 # 
 #
