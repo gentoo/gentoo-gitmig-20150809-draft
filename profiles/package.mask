@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <brain@gentoo.org> (03 Jul 2003)
+# beta version
+=app-office/koffice-1.3_beta2
+
 # <iggy@gentoo.org> (01 Jul 2003)
 # testing, it works for me, but I want more testers
 =net-mail/courier-0.42.2-r1
