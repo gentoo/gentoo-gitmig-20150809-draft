@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.10 2003/02/27 23:02:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.11 2003/03/25 04:45:33 rac Exp $
+
+*URI-1.23 (24 Mar 2003)
+
+  24 Mar 2003; <rac@gentoo.org> URI-1.23.ebuild:
+  Upstream version bump, thanks to Mike Javorski <mike_javorski@bigfoot.com>,
+  closes bug #18125.
 
   28 Feb 2003; Guy Martin <gmsoft@gentoo.org> URI-1.18-1.ebuild :
   Added hppa to keywords.
