@@ -3,9 +3,9 @@
 <pkgmetadata>
 <herd>hardened</herd>
 <maintainer>
-  <email>frogger@gentoo.org</email>
-  <name>Matthew Rickard</name>
+  <email>scox@gentoo.org</email>
+  <name>Andrea Luzzardi</name>
   <description>Primary Maintainer</description>
 </maintainer>
-<longdescription>This kernel source contains a security hardened version of the Gentoo Linux Kernel.  It contains either LSM/SELinux or GRSecurity.  It also contains Systrace and various other security and performance enhancing patches.</longdescription>
+<longdescription>This kernel source contains a security hardened version of the Linux Kernel.  It contains either LSM/SELinux or GRSecurity.</longdescription>
 </pkgmetadata>
