@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b.ebuild,v 1.3 2002/08/30 12:06:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b.ebuild,v 1.4 2002/08/30 16:06:12 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The standard GNU Bourne again shell"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 -ppc sparc sparc64"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2 
 	readline? ( >=sys-libs/readline-4.1-r2 )"

@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/bash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.6 2002/08/30 12:06:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.7 2002/08/30 16:06:12 gerk Exp $
 
 *bash-2.05b-r1 (30 Aug 2002)
+
+  30 Aug 2002; mark Guertin <gerk@gentoo.org> bash-2.05b.ebuild bash-2.05b-r1.ebuild :
+  set -ppc as readline 4.3 (required) breaks system with inplace upgrade
 
   30 Aug 2002; Seemant Kulleen <seemant@gentoo.org> bash-2.05b-r1.ebuild
   files/digest-bash-2.05b-r1 :
