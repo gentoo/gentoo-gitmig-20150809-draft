@@ -900,3 +900,8 @@ app-cdr/eroaster
 # blizzy@gentoo.org 21 Jul 2002
 # new version, needs testing
 =media-gfx/pngcrush-1.5.10
+
+
+# blizzy@gentoo.org 21 Jul 2002
+# new version, needs testing
+=net-misc/LinNeighborhood-0.6.5
