@@ -1,0 +1,9 @@
+# ChangeLog for kde-base/kdebase
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/knifty/ChangeLog,v 1.1 2003/08/12 02:16:30 caleb Exp $
+
+*knifty-0.3.2 (11 Aug 03)
+
+  11 Aug 2003; Caleb Tennis <caleb@gentoo.org> knifty-0.3.2.ebuild:
+  New ebuild.
+
