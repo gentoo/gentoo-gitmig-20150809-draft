@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.5.ebuild,v 1.2 2005/02/20 16:09:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.5-r1.ebuild,v 1.1 2005/02/21 19:44:47 carlo Exp $
 
 inherit eutils
 
@@ -12,8 +12,8 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="QScintilla is a port to Qt of Neil Hodgson's Scintilla C++ editor class."
 HOMEPAGE="http://www.riverbankcomputing.co.uk/qscintilla/"
 #SRC_URI="http://www.river-bank.demon.co.uk/download/snapshots/QScintilla/${MY_P}.tar.gz"
-#SRC_URI="http://www.river-bank.demon.co.uk/download/QScintilla/${MY_P}.tar.gz"
-SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
+SRC_URI="http://www.river-bank.demon.co.uk/download/QScintilla/${MY_P}.tar.gz"
+#SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 
 SLOT="0"
@@ -47,8 +47,8 @@ src_install() {
 	cd ${S}/qt
 	cp qextscintilla*.h "${D}/usr/include"
 	cp qscintilla*.qm "${D}/usr/share/qscintilla/translations"
-	cp libqscintilla.a* "${D}/usr/${LIBDIR}"
-	cp -d libqscintilla.so.* "${D}/usr/${LIBDIR}"
+	cp libqscintilla.a* "${D}${LIBDIR}"
+	cp -d libqscintilla.so.* "${D}${LIBDIR}"
 	dodir ${QTDIR}/translations/
 	for I in $(ls -1 qscintilla*.qm) ; do
 		dosym "/usr/share/qscintilla/translations/${I}" "${QTDIR}/translations/${I}"
