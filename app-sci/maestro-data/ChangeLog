@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/maestro-data
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maestro-data/ChangeLog,v 1.1 2004/03/09 05:03:33 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maestro-data/ChangeLog,v 1.2 2004/03/12 00:57:14 zx Exp $
+
+*maestro-data-2004-r1 (11 Mar 2004)
+
+  11 Mar 2004; Chris Aniszczyk <zx@gentoo.org> maestro-data-2004-r1.ebuild:
+  Added some new datasheets. Thanks to <nosdr4g@hotmail.com> for the update.
 
 *maestro-data-2004 (09 Mar 2004)
 
