@@ -6,6 +6,6 @@ MD5 503929f0e619836305f1e58a151baee4 files/libnet-gcc33-fix 563
 MD5 dee8fc87567b0aca2bfdc055d60a5151 files/digest-libnet-1.1.0-r3 64
 MD5 bc6bad0bf1d1716cdc3e98dd542d83f8 libnet-1.1.0-r2.ebuild 1275
 MD5 be0e07766491306b293cb00c48af1c07 libnet-1.0.2a-r2.ebuild 1036
-MD5 0dba3442cee91bf68d0b3c8e612de259 libnet-1.0.2a-r3.ebuild 1505
-MD5 535f797efbe2ec0de6a77c9397b2e2b3 libnet-1.1.0-r3.ebuild 806
+MD5 244e3a5a4760c4cabbd8787a46a6ee21 libnet-1.0.2a-r3.ebuild 1511
+MD5 ab7c389e772c06f16ed112097157af3b libnet-1.1.0-r3.ebuild 808
 MD5 1e436d6e3d09b82efc1440aa1e69715f ChangeLog 3174
