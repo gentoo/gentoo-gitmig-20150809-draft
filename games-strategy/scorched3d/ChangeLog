@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.12 2004/06/24 23:28:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.13 2004/07/04 09:59:14 mr_bones_ Exp $
+
+  04 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  -scorched3d-37.1.ebuild, scorched3d-37.2.ebuild, -scorched3d-37.ebuild:
+  Address issue with wxGTK and unicode (bug #55967) - Thanks to eradicator
+  for the code from bug #39669.  Cleaned old versions
 
 *scorched3d-37.2 (01 Jun 2004)
 
