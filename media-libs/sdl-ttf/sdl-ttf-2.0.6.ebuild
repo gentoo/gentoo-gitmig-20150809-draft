@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.6.ebuild,v 1.13 2004/08/11 02:43:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.6.ebuild,v 1.14 2004/08/12 00:18:32 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 
@@ -23,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/ft2build.patch"
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 }
 
 src_install() {
