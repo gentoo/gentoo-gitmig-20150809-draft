@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.12.ebuild,v 1.1 2003/10/20 02:58:34 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.12.ebuild,v 1.2 2003/10/20 03:04:16 max Exp $
 
 inherit flag-o-matic
 
@@ -108,7 +108,7 @@ src_install() {
 	insinto /etc/conf.d
 	newins "${FILESDIR}/mythbackend.conf" mythbackend
 
-	dodoc AUTHORS COPYING FAQ README UPGRADING keys.txt docs/*.txt
+	dodoc AUTHORS COPYING FAQ README UPGRADING keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
 
 	keepdir /var/{log,run}/mythtv
