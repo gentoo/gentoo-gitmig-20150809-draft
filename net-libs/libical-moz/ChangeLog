@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libical-moz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libical-moz/ChangeLog,v 1.4 2003/02/12 08:05:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libical-moz/ChangeLog,v 1.5 2003/07/14 15:11:46 agriffis Exp $
+
+  14 Jul 2003; Aron Griffis <agriffis@gentoo.org> libical-moz-0.23.ebuild:
+  Add ~alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
