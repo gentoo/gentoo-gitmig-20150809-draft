@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/yablex
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yablex/ChangeLog,v 1.1 2003/11/25 11:52:25 brandy Exp $
+
+*yablex-20030826 (26 Nov 2003)
+
+  26 Nov 2003; Brandy Westcott brandy@gentoo.org yablex-20030826.ebuild:
+  Initial import. Thanks to Matija Suklje <matija.suklje@rutka.net> for the
+  request. Closes bug #30955.
+
