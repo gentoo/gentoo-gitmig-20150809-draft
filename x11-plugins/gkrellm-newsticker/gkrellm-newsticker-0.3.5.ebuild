@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-newsticker/gkrellm-newsticker-0.3.5.ebuild,v 1.12 2004/07/09 23:09:38 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-newsticker/gkrellm-newsticker-0.3.5.ebuild,v 1.13 2004/07/20 17:30:59 mholzer Exp $
 
 DESCRIPTION="A news headlines scroller for GKrellM2"
-HOMEPAGE="http://gkrellm-newsticker.sourceforge.net/"
+HOMEPAGE="http://gk-newsticker.sourceforge.net/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
