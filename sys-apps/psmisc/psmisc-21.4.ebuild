@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.6 2004/04/27 17:40:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.7 2004/06/11 13:54:12 kloeri Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa ~amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm hppa ~amd64 ~ia64 ~ppc64 s390"
 IUSE="nls selinux"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
