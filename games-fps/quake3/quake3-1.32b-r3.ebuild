@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.6 2004/04/18 08:43:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.7 2004/04/19 21:47:08 wolf31o2 Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake3/linux/linuxq3apoint-${PV}-3.x86
 
 LICENSE="Q3AEULA"
 SLOT="0"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* x86 amd64"
 IUSE="${IUSE} X opengl"
 RESTRICT="nostrip"
 
@@ -72,6 +72,6 @@ pkg_postinst() {
 	# IA32 Emulation required for amd64
 	if use amd64 ; then
 		echo
-		einfo "NOTE: IA32 Emulation must be compiled into your kernel for Quake3 to run."
+		ewarn "NOTE: IA32 Emulation must be compiled into your kernel for Quake3 to run."
 	fi
 }

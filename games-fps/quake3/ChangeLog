@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake3
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.5 2003/12/06 15:06:15 wolf31o2 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.6 2004/04/19 21:47:08 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> quake3-1.32b-r3.ebuild:
+  Marking stable on amd64 (no bugs in 135 days).
 
 *quake3-1.32b-r3 (06 Dec 2003)
 
