@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/coda-client-5.3.19.ebuild,v 1.2 2002/10/24 20:52:19 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/coda-client-5.3.19.ebuild,v 1.3 2002/11/05 21:17:25 lostlogic Exp $
 
 IUSE=""
 PN="coda"
@@ -39,15 +39,18 @@ src_unpack() {
 }
 
 src_compile() {
-	OCFLAGS="${CFLAGS}"
-	CFLAGS="${CFLAGS} -lpthread"
+#	Uncomment for db4 compatibility
+#	OCFLAGS="${CFLAGS}"
+#	CFLAGS="${CFLAGS} -lpthread"
+
 	econf || die "configure failed"
 
-	mv Makeconf.setup Makeconf.setup.orig
-	sed -e "s:-lpthread::;s:-ldb:-ldb -lpthread:" \
-		Makeconf.setup.orig > Makeconf.setup
+#	Uncomment for db4 compatibility
+#	mv Makeconf.setup Makeconf.setup.orig
+#	sed -e "s:-lpthread::;s:-ldb:-ldb -lpthread:" \
+#		Makeconf.setup.orig > Makeconf.setup
+#	CFLAGS="${OCFLAGS}"
 
-	CFLAGS="${OCFLAGS}"
 	MAKEOPTS="-j1" emake || die "emake failed"
 }
 
@@ -68,14 +71,14 @@ src_install () {
 }
 
 pkg_postinst () {
-	rc-update add venus.init default
+#	rc-update add venus.init default
 	einfo
-	einfo "I have already done:"
-	einfo "   rc-update add venus.init default"
+	einfo "To enable the coda-client at boot up, please do:"
+	einfo "    rc-update venus.init default"
 	einfo
 }
 
-pkg_prerm () {
-	/etc/init.d/venus.init stop || /etc/init.d/venus.init hardstop
-	rc-update del venus.init default
-}
+#pkg_prerm () {
+#	/etc/init.d/venus.init stop || /etc/init.d/venus.init hardstop
+#	rc-update del venus.init default
+#}
