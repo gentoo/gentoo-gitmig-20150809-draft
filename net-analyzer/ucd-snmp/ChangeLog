@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ucd-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.28 2004/07/12 12:31:36 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.29 2004/07/23 09:35:50 eradicator Exp $
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ucd-snmp-4.2.6-r2.ebuild:
+  Stable amd64
 
   12 Jul 2004; Eldad Zack <eldad@gentoo.org> ucd-snmp-4.2.6-r2.ebuild:
   Changed '! use ssl' if to the correct 'use_enable !ssl' form.
