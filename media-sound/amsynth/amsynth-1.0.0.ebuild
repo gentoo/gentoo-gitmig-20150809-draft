@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0.0.ebuild,v 1.2 2004/03/03 23:12:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0.0.ebuild,v 1.3 2004/03/15 02:32:41 eradicator Exp $
 
 MY_P=${P/_rc/-rc}
 MY_P=${MY_P/amsynth/amSynth}
@@ -31,6 +31,8 @@ src_unpack() {
 
 	sed -i "/#include <alsa\\/asoundlib.h>/i\\#define ALSA_PCM_OLD_HW_PARAMS_API 1\\" src/drivers/ALSAmmapAudioDriver.h
 	sed -i "/#include <alsa\\/asoundlib.h>/i\\#define ALSA_PCM_OLD_HW_PARAMS_API 1\\" src/drivers/ALSAAudioDriver.h
+
+	epatch ${FILESDIR}/${PN}-pthread.patch
 }
 
 src_compile() {
