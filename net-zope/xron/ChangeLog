@@ -1,6 +1,6 @@
 # ChangeLog for net-zope/xron
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/xron/ChangeLog,v 1.2 2003/12/14 23:36:33 spider Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/xron/ChangeLog,v 1.3 2004/06/25 01:26:23 agriffis Exp $
 
   15 Dec 2003; <spider@gentoo.org> xron-0.0.10.ebuild:
   QA: fixing chown user.group to user:group, bug #35127

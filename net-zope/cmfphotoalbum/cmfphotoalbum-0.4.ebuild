@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphotoalbum/cmfphotoalbum-0.4.ebuild,v 1.1 2004/05/12 19:49:21 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphotoalbum/cmfphotoalbum-0.4.ebuild,v 1.2 2004/06/25 01:19:19 agriffis Exp $
 
 inherit zproduct
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-zope/zwiki
-# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zwiki/ChangeLog,v 1.8 2003/10/13 13:37:33 lanius Exp $
+# Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zwiki/ChangeLog,v 1.9 2004/06/25 01:27:34 agriffis Exp $
 
 *zwiki-0.22.0 (13 Oct 2003)
 

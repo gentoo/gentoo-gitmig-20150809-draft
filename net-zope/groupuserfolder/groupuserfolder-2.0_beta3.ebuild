@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/groupuserfolder-2.0_beta3.ebuild,v 1.2 2004/03/13 22:10:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/groupuserfolder-2.0_beta3.ebuild,v 1.3 2004/06/25 01:21:40 agriffis Exp $
 
 inherit zproduct
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.0_rc3.ebuild,v 1.2 2004/03/13 22:19:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.0_rc3.ebuild,v 1.3 2004/06/25 01:23:50 agriffis Exp $
 
 inherit zproduct
 S="${WORKDIR}/CMFPlone-2.0-RC3"

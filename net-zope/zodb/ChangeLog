@@ -1,6 +1,6 @@
 # ChangeLog for net-zope/zodb
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.2 2003/10/30 13:24:37 lanius Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.3 2004/06/25 01:26:43 agriffis Exp $
 
 *zodb-3.2 (30 Oct 2003)
 

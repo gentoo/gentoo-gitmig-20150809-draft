@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfforum/cmfforum-1.0.ebuild,v 1.6 2004/04/05 08:43:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfforum/cmfforum-1.0.ebuild,v 1.7 2004/06/25 01:18:39 agriffis Exp $
 
 inherit zproduct
 

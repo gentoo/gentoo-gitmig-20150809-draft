@@ -1,6 +1,6 @@
 # ChangeLog for net-zope/cvsfile
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cvsfile/ChangeLog,v 1.1 2004/04/18 21:53:07 batlogg Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cvsfile/ChangeLog,v 1.2 2004/06/25 01:19:49 agriffis Exp $
 
 *cvsfile-0.9.0 (18 Apr 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfformcontroller/cmfformcontroller-1.0.1.ebuild,v 1.1 2004/03/26 22:56:27 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfformcontroller/cmfformcontroller-1.0.1.ebuild,v 1.2 2004/06/25 01:18:29 agriffis Exp $
 
 inherit zproduct
 

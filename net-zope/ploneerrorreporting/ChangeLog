@@ -1,6 +1,6 @@
 # ChangeLog for net-zope/ploneerrorreporting
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/ploneerrorreporting/ChangeLog,v 1.1 2004/03/26 23:09:38 batlogg Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/ploneerrorreporting/ChangeLog,v 1.2 2004/06/25 01:24:00 agriffis Exp $
 
 *ploneerrorreporting-0.1 (27 Mar 2004)
 

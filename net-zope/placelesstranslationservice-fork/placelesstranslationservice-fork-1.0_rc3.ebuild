@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/placelesstranslationservice-fork/placelesstranslationservice-fork-1.0_rc3.ebuild,v 1.2 2004/03/26 23:51:10 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/placelesstranslationservice-fork/placelesstranslationservice-fork-1.0_rc3.ebuild,v 1.3 2004/06/25 01:23:39 agriffis Exp $
 
 inherit zproduct
 

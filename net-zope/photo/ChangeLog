@@ -1,6 +1,6 @@
 # ChangeLog for net-zope/photo
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/photo/ChangeLog,v 1.4 2004/04/05 08:19:37 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/photo/ChangeLog,v 1.5 2004/06/25 01:23:20 agriffis Exp $
 
   05 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> photo-1.2.3.ebuild:
   down to ~ppc until deps are stable
