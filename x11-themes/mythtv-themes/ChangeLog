@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.10 2004/07/14 09:19:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.11 2004/12/05 00:55:08 iggy Exp $
+
+  04 Dec 2004; Brian Jackson <iggy@gentoo.org> mythtv-themes-0.15.ebuild:
+  I can't find any of the other media-tv guys, and it's been fairly bug free,
+  so marking as x86
 
 *mythtv-themes-0.15 (14 Jul 2004)
 
