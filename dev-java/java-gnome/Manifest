@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 90e3c444913def0075d911ad5e608414 java-gnome-0.8.3.ebuild 1719
-MD5 44a0cd7b8a38e76348758e7c685db8b6 java-gnome-2.8.2-r3.ebuild 3660
-MD5 3eec01d17dab5462a2e5ee8018184c21 java-gnome-2.6.0.1-r1.ebuild 2764
-MD5 f0202da9a3b2534ea914ae6c8b3fc3a4 java-gnome-2.6.0.1.ebuild 2697
-MD5 e0499b218f299e357ac9298d8d0ac5f3 ChangeLog 4745
+MD5 1920322b7e7f90d04b39df535a4e56cf java-gnome-0.8.3.ebuild 1718
+MD5 dc04448f7107a94272809bab3ee30f54 java-gnome-2.8.2-r3.ebuild 3681
+MD5 a913b8618deea9bc78baa4068d631c09 java-gnome-2.6.0.1-r1.ebuild 2769
+MD5 87db35b4683d2c78db7d7adb8e6b926e java-gnome-2.6.0.1.ebuild 2702
+MD5 8e97f9815f403bf5be8235fe1bc98c2f ChangeLog 4906
 MD5 c690ad784a76f64ea8a11d1cdddd055c metadata.xml 1094
-MD5 4d020c1be5aa437f07433ed8d9b6c23e java-gnome-2.8.2-r2.ebuild 3653
+MD5 f7abd70c5ed0df68df8aef1f19d38a10 java-gnome-2.8.2-r2.ebuild 3674
 MD5 95eae7ebf2d8a9d2443cb7f138aab94b files/java-gnome-0.8.3-gentoo.diff 3998
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-java-gnome-2.8.2-r2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-java-gnome-2.8.2-r3 0
@@ -15,10 +12,3 @@ MD5 3b0e994589f54485c4c6f43618005bc7 files/gentoo-java-gnome-2.6.0.1.patch 3574
 MD5 a26e989caf78aa69cbd7e1572f1f6d35 files/digest-java-gnome-2.6.0.1 72
 MD5 a26e989caf78aa69cbd7e1572f1f6d35 files/digest-java-gnome-2.6.0.1-r1 72
 MD5 d0548db82a1916704411084a9a019f05 files/digest-java-gnome-0.8.3 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB0VrJ/rLF9B432nYRAlJLAKCy68lmaU08kQNqnGfFsHhhlruwpwCfWqPe
-kBoEAeg3O/leacG3PT4Xtw0=
-=+lKb
------END PGP SIGNATURE-----

@@ -1,5 +1,5 @@
-MD5 8c58fc4c6fcbc55c526980dfb67b296a ChangeLog 488
+MD5 275c7a25cd64b27158bf2beb80fa2fda ChangeLog 612
 MD5 b33389393b46858f60e15d60161f72e0 metadata.xml 834
-MD5 a6431b4af87b274824f40c7f21403126 jdictrayapi-0.8.7.ebuild 1485
+MD5 8dc1c1109b4b7b99444a40b9a326d99e jdictrayapi-0.8.7.ebuild 1502
 MD5 1970d31723d2629acdf909e4ecef05f0 files/digest-jdictrayapi-0.8.7 63
 MD5 9040a69edf0c8fe2af2c995957231c13 files/0.8.7-gentoo.patch 762
