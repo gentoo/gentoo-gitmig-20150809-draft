@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.28 2002/09/11 10:30:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.29 2002/09/14 01:52:22 seemant Exp $
+
+*fluxbox-0.1.12 (13 Sep 2002)
+
+  13 Sep 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.12.ebuild
+  files/digest-fluxbox-0.1.12 :
+
+  Upstream version bump, which is really just identical to 0.1.11-r3.
 
 *fluxbox-0.1.11-r3 (11 Sep 2002)
 
