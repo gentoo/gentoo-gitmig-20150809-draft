@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.56 2004/08/08 13:49:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.57 2004/08/10 11:04:11 eldad Exp $
+
+  10 Aug 2004; Eldad Zack <eldad@gentoo.org> net-snmp-5.1.1-r1.ebuild,
+  net-snmp-5.1.1.ebuild:
+  autoconf fix: configure didn't respect --disable-embedded-perl. Closes #59605.
 
   08 Aug 2004; Guy Martin <gmsoft@gentoo.org> net-snmp-5.1.1-r1.ebuild:
   Stable on hppa.

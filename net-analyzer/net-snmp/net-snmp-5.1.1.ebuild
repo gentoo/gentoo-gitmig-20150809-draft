@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.15 2004/08/08 10:24:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.16 2004/08/10 11:04:11 eldad Exp $
 
 inherit eutils
 
@@ -27,6 +27,14 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	perl? ( X? ( dev-perl/perl-tk ) )
 	!virtual/snmp"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	sed -i -e '551s;embed_perl="yes",;embed_perl=$enableval,;' configure.in
+	autoconf || die "autoconf failed"
+}
 
 src_compile() {
 	local myconf
