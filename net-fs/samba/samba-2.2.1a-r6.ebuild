@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.1a-r6.ebuild,v 1.3 2001/09/02 11:21:31 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.1a-r6.ebuild,v 1.4 2001/09/09 09:32:13 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Samba :)"
@@ -80,8 +80,7 @@ src_install() {
 
   make install prefix=${D}/usr BASEDIR=${D}/usr PRIVATEDIR=${D}/etc/smb/private \
 	LIBDIR=${D}/etc/smb VARDIR=${D}/var/log SWATDIR=${D}/usr/share/swat \
-	LOCKDIR=${D}/var/lock SBINDIR=${D}/usr/sbin MANDIR=${D}/usr/share/man
-  assert
+	LOCKDIR=${D}/var/lock SBINDIR=${D}/usr/sbin MANDIR=${D}/usr/share/man || die
 
   # we specified PRIVATEDIR=/etc/smb/private
   rm -rf ${D}/usr/private
@@ -90,7 +89,7 @@ src_install() {
 
   # move smbmount from /usr/sbin to /sbin, and rename it to mount.smbfs
   # which allows it to work transparently with standard 'mount' command
-  diropts -m 0755 ; dodir /sbin
+  dodir /sbin
   mv ${D}/usr/bin/smbmount ${D}/sbin/mount.smbfs
 
   cd ${S}/source/script
@@ -100,7 +99,7 @@ src_install() {
   # docs. samba has some really good ones.
   cd ${S}
   cp -a examples ${D}/usr/doc/${PF}
-  insinto /etc/smb ; insopts -m 0644 ; newins examples/smb.conf.default smb.conf.eg
+  insinto /etc/smb ; newins examples/smb.conf.default smb.conf.example
   insinto /usr/share/sgml/docbook/dbsgml ; doins docs/docbook/dbsgml/*
   insinto /usr/share/sgml/docbook/dbsgml/ent ; doins docs/docbook/dbsgml/ent/*
   dodoc COPYING Manifest README Roadmap WHATSNEW.txt
@@ -120,8 +119,7 @@ src_install() {
   docinto sgml/docbook/manpages ; dodoc docbook/manpages/*.sgml
   docinto sgml/docbook/projdoc ; dodoc docbook/projdoc/*.sgml
 
-  # install a standard, standalone-type init script
-  exeinto /etc/init.d ; exeopts -m 0755
+  exeinto /etc/init.d
   newexe ${FILESDIR}/samba.rc6 samba
 }
 
@@ -133,7 +131,7 @@ pkg_preinst() {
 		/etc/init.d/samba stop
   	fi
   fi
-  return 0
+  return # dont fail
 }
 
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.10-r6.ebuild,v 1.2 2001/09/02 11:21:31 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.10-r6.ebuild,v 1.3 2001/09/09 09:32:13 woodchip Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -39,8 +39,7 @@ src_install() {
 
   make install prefix=${D}/usr BASEDIR=${D}/usr LIBDIR=${D}/etc/smb VARDIR=${D}/var/log \
 	PRIVATEDIR=${D}/etc/smb/private SWATDIR=${D}/usr/share/swat \
-	LOCKDIR=${D}/var/lock SBINDIR=${D}/usr/sbin
-  assert
+	LOCKDIR=${D}/var/lock SBINDIR=${D}/usr/sbin || die
 
   # we specified PRIVATEDIR=/etc/smb/private
   rm -rf ${D}/usr/private
@@ -49,7 +48,7 @@ src_install() {
 
   # move smbmount from /usr/sbin to /sbin, and rename it to mount.smbfs
   # which allows it to work transparently with standard 'mount' command
-  diropts -m 0755 ; dodir /sbin
+  dodir /sbin
   mv ${D}/usr/bin/smbmount ${D}/sbin/mount.smbfs
 
   cd ${S}/source/script
@@ -80,7 +79,6 @@ src_install() {
   docinto textdocs
   dodoc textdocs/*
 
-  # install a standard, standalone-type init script
   exeinto /etc/init.d
   newexe ${FILESDIR}/samba.rc6 samba
 }
@@ -93,7 +91,7 @@ pkg_preinst() {
 		/etc/init.d/samba stop
   	fi
   fi
-  return 0
+  return # dont fail
 }
 
 
