@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/selinux-base-policy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-base-policy/ChangeLog,v 1.10 2003/07/20 17:29:20 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-base-policy/ChangeLog,v 1.11 2003/07/20 18:09:41 pebenito Exp $
 
 *selinux-base-policy-20030720 (20 Jul 2003)
 
@@ -10,7 +10,9 @@
   is needed. You may encounter problems relabeling /usr/portage, as its file
   context has changed, as files should not have the same type as a domain.
   Relabelling in permissive will fix this, or temporarily give portage_t a
-  file_type attribute. Tightened the can_exec_any() macro.
+  file_type attribute. Tightened the can_exec_any() macro. Moved staff.fc to
+  users.fc, since all users with SELinux identities should have their home
+  directories have the correct identity, not the generic identity.
 
   06 Jun 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-base-policy-20030604.ebuild:
