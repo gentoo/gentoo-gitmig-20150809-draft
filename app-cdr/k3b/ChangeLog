@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.37 2004/01/27 16:16:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.38 2004/02/07 03:11:56 pylon Exp $
+
+  07 Feb 2004; Lars Weiler <pylon@gentoo.org> k3b-0.11.1-r1.ebuild:
+  stable on x86 and ppc.
 
   27 Jan 2004; Heinrich Wendel <lanius@gentoo.org> k3b-0.11.1-r1.ebuild:
   added docs; only info about k3bsetup if it is installed
