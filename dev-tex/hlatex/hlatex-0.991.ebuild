@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-0.991.ebuild,v 1.4 2004/12/28 21:03:17 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-0.991.ebuild,v 1.5 2005/01/21 04:39:35 gongloo Exp $
 
 inherit latex-package
 
@@ -12,7 +12,7 @@ SRC_URI="http://user.chollian.net/~jh1228/data/gentoo/${P}.tar.gz
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ppc alpha ~amd64"
+KEYWORDS="x86 ppc alpha ~amd64 ~ppc-macos"
 IUSE=""
 
 add_line() {
