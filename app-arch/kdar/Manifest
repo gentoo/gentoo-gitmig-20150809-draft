@@ -1,4 +1,4 @@
-MD5 f0512b3f65fa09b96cd65683d9fe852c kdar-0.3.2.ebuild 490
 MD5 b05dc8ac9c21a8fc75ea3879641b9146 metadata.xml 251
-MD5 e0edcf14469c83c1c0e976cd370c16f3 ChangeLog 322
-MD5 e2aa849af7b22662881ded3047e6165a files/digest-kdar-0.3.2 62
+MD5 989fa181c56ac32617afb29a823e98e4 ChangeLog 480
+MD5 eba892acc833e5044f3819392332e1cb kdar-1.0.0.ebuild 498
+MD5 45271566683d38098c4754b256b7683e files/digest-kdar-1.0.0 63
