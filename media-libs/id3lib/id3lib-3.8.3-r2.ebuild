@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r2.ebuild,v 1.2 2004/07/11 20:32:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r2.ebuild,v 1.3 2004/07/21 01:01:56 eradicator Exp $
+
+IUSE="doc"
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -11,8 +13,6 @@ HOMEPAGE="http://id3lib.sourceforge.net/"
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~ppc sparc alpha ~hppa amd64 ~ia64 ~mips"
-
-IUSE=""
 
 RDEPEND="virtual/libc"
 
@@ -45,7 +45,11 @@ src_install() {
 	dosym /usr/lib/libid3-3.8.so.0.0.0 /usr/lib/libid3-3.8.so.0
 
 	dodoc AUTHORS COPYING ChangeLog HISTORY INSTALL README THANKS TODO
-#	some example programs to be placed in docs dir.
-	make clean
-	cp -a examples ${D}/usr/share/doc/${PF}/examples
+
+	# some example programs to be placed in docs dir.
+	if use doc; then
+		cp -a examples ${D}/usr/share/doc/${PF}/examples
+		cd ${D}/usr/share/doc/${PF}/examples
+		make distclean
+	fi
 }
