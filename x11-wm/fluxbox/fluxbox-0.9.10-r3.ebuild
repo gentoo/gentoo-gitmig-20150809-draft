@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.10-r3.ebuild,v 1.2 2004/09/15 20:02:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.10-r3.ebuild,v 1.3 2004/09/15 21:36:40 ciaranm Exp $
 
 inherit eutils
 
@@ -107,7 +107,7 @@ pkg_postinst() {
 	einfo "handling styles in the menu. To take advantage of this, use"
 	einfo "the following for your menu styles section:"
 	einfo " "
-	einfo "    [submenu] (Styles) (Select a Style)"
+	einfo "    [submenu] (Styles) {Select a Style}"
 	einfo "        [include] (/usr/share/fluxbox/menu.d/styles/)"
 	einfo "    [end]"
 	einfo " "

@@ -16,7 +16,7 @@ diff -u -r1.29 fluxbox-generate_menu.in
 -
 -    append_menu "[submenu] (${USERSTYLES}) {${STYLEMENUTITLE}}"
 -        append "[stylesdir] (~/.fluxbox/styles)"
-+    append_menu "[submenu] (Styles) (Select a Style)"
++    append_menu "[submenu] (Styles) {Select a Style}"
 +	append "[include] (/usr/share/fluxbox/menu.d/styles/)"
      append_menu_end
  
