@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.6.7.ebuild,v 1.1 2003/02/06 11:50:54 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.6.7.ebuild,v 1.2 2003/06/29 22:18:39 aliz Exp $
 
 DESCRIPTION="This is a collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol as described by the aegypten project."
 HOMEPAGE="http://www.gnupg.org/aegypten/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 # Note: qt support is currently broken,
 # this ebuild is hacked up to disable qt

@@ -1,8 +1,8 @@
 # ChangeLog for app-crypt/kth-krb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.10 2003/02/12 03:28:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.11 2003/06/29 22:18:39 aliz Exp $
 
-*kth-krb 1.2.1 (26 Oct 2002)
+*kth-krb-1.2.1 (26 Oct 2002)
   
   20 Jan 2003; Jon Nall <nall@gentoo.org> kth-krb-1.2.1.ebuild : 
   keyworded ~ppc

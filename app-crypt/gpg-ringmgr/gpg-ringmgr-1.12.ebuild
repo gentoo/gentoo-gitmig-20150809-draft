@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-ringmgr/gpg-ringmgr-1.12.ebuild,v 1.1 2003/05/06 06:51:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-ringmgr/gpg-ringmgr-1.12.ebuild,v 1.2 2003/06/29 22:18:39 aliz Exp $
 
 DESCRIPTION="GPG Keyring Manager to handle large GPG keyrings more easily"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 #This should work everywhere
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa"
 
 DEPEND="dev-lang/perl
 		>=app-crypt/gnupg-1.2.1"

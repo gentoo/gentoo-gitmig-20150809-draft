@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.2 2003/03/28 12:42:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.3 2003/06/29 22:18:39 aliz Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Quintuple Agent stores your (GnuPG) secrets in a secure manner."
@@ -9,7 +9,7 @@ SRC_URI="http://www.vibe.at/tools/secret-agent/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="nls"
 
 DEPEND="app-crypt/gnupg

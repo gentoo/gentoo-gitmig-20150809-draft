@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.11 2003/06/26 13:29:58 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.12 2003/06/29 22:18:39 aliz Exp $
 
   26 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> mit-krb5-1.2.8.ebuild:
   set ppc in keywords
@@ -33,6 +33,11 @@
 
   30 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> mit-krb5-1.2.7.ebuid :
   Security update. Various patches from MIT applied.  
+
+*mit-krb5-1.2.6-r3 (22 Apr 2003)
+
+  29 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *mit-krb5-1.2.6-r2 (07 Dec 2002)
 
