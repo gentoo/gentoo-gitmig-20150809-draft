@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.77 2004/04/27 21:42:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.78 2004/04/29 01:38:39 lv Exp $
+
+  28 Apr 2004; Travis Tilley <lv@gentoo.org> +files/gimp-2.0.0-gcc34.patch,
+  gimp-2.0.0.ebuild:
+  added patch for compiling with gcc 3.4
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gimp-2.0_pre3-r1.ebuild:
   Add inherit eutils

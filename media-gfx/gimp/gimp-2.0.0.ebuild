@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.0.ebuild,v 1.3 2004/04/15 12:25:27 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.0.ebuild,v 1.4 2004/04/29 01:38:40 lv Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -53,6 +53,9 @@ src_unpack() {
 	# Fix linking to older version of gimp if installed - this should
 	# void liquidx's hack, so it is removed.
 	epatch ${FILESDIR}/ltmain_sh-1.5.0-fix-relink.patch
+
+	# fix to compile using gcc 3.4
+	epatch ${FILESDIR}/${P}-gcc34.patch
 
 }
 
