@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.1.ebuild,v 1.2 2002/10/22 15:45:01 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.2.ebuild,v 1.1 2002/11/03 17:40:18 verwilst Exp $
 
 DESCRIPTION="Collection of XMMS themes"
 HOMEPAGE="http://www.xmms.org"
@@ -86,11 +86,12 @@ SRC_URI="${THEME_URI}/AbsoluteE_Xmms.zip
 	${THEME_URI}/maXMMS.tar.gz
 	${THEME_URI}/nixamp2.tar.gz
 	${THEME_URI}/sword.tar.gz
-	${THEME_URI}/xmmearth.tar.gz"
+	${THEME_URI}/xmmearth.tar.gz
+	http://mrb.tagclan.com/files/Raj._I.O._Amp_in_2000.wsz
+	http://mrb.tagclan.com/files/bluemetal.wsz
+	http://mrb.tagclan.com/files/atlantis_-_meridian.wsz
+	http://mrb.tagclan.com/files/ace.wsz"
 
-#	${THEME_URI}/ions.tar.gz
-#	${THEME_URI}/minEguE-xmms-v1.tar.gz
-#	${THEME_URI}/Helix-Sawfish-xmms.tar.gz
 
 LICENSE="Freeware"
 SLOT="0"
@@ -109,13 +110,13 @@ src_unpack() {
 		if [ -n "`echo ${bn} | grep '\.zip'`" ] ; then
 			cp ${DISTDIR}/${bn} .
 		else
-			unpack ${bn}
+			if [ -n "`echo ${bn} | grep '\.wsz'`" ] ; then
+	                        cp ${DISTDIR}/${bn} .
+			else
+				unpack ${bn}
+			fi
 		fi
 	done
-}
-
-src_compile() {
-	einfo "No compilation necessary."
 }
 
 src_install () {
