@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mboxgrep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/ChangeLog,v 1.8 2004/07/01 22:32:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/ChangeLog,v 1.9 2004/07/23 14:52:49 tomk Exp $
+
+  23 Jul 2004; <tomk@gentoo.org> mboxgrep-0.7.3.ebuild:
+  Removed redundant RDEPEND variable
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mboxgrep-0.7.3.ebuild, mboxgrep-0.7.9.ebuild:
