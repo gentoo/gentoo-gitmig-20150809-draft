@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9c816fb3d35e52cf1969ac8d8c09781e ChangeLog 1366
+MD5 1034d959609b66c9a0798d47f47d7702 ChangeLog 1456
 MD5 e62755aeb2fcd53a4426e99d3af550ed metadata.xml 549
 MD5 16cfc0e344707154059e41be70605b4b torsmo-0.14.ebuild 1206
 MD5 a786aa979967b3facbb3b472031500f3 torsmo-0.16.ebuild 1206
-MD5 06c4297e8d91817c7b1fac00615d75c5 torsmo-0.17.ebuild 1214
+MD5 f72eab3e568d91dadc084fd77a8e6f59 torsmo-0.17.ebuild 1218
 MD5 0b0637dc0d84ad4add55e41e75a72790 files/digest-torsmo-0.14 62
 MD5 db0c2639b478a6cf43ba3e09d0bbd4f9 files/digest-torsmo-0.16 62
 MD5 38f2bbcb59c900a0fc2a2f0ec2f75463 files/digest-torsmo-0.17 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA3LFuHTu7gpaalycRAjuEAKCGDsWO7r65HG0cKaLtG1vniBcZwgCeJTJ+
-irDol8IoHfTmp07z7BjGt4A=
-=d0k8
+iD8DBQFA+hKYmdTrptrqvGERAk2vAKCQgzJ1AR0emSiGczMhWInfRYD6FgCfWh9m
+PpXthIuz/aQasJGRSRdFToE=
+=P5gS
 -----END PGP SIGNATURE-----
