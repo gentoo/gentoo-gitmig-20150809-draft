@@ -1,8 +1,14 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.5 2002/10/24 20:13:29 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.6 2002/11/06 06:20:42 raker Exp $
 
-openh323-1.9.10 (24 Oct 2002)
+*openh323-1.9.10-r1 (06 Nov 2002)
+
+  06 Nov 2002; Nick Hadaway <raker@gentoo.org> openh323-1.9.10-r1.ebuild,
+  files/digest-openh323-1.9.10-r1 :
+  Added SSL support and tightened dependancy on pwlib.
+
+*openh323-1.9.10 (24 Oct 2002)
 
   24 Oct 2002; Nick Hadaway <raker@gentoo.org> openh323-1.9.10.ebuild,
   files/digest-openh323-1.9.10 :
