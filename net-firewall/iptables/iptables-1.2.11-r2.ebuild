@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.1 2004/07/03 15:36:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.2 2004/07/03 17:50:31 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,7 +37,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-files/install_all_dev_files.patch.bz2
 	use hppa && epatch ${FILESDIR}/${PV}-files/hppa.patch.bz2
 
-	sed -i "s:PF_EXT_SLIB=:PF_EXT_SLIB=stealth :g" extensions/Makefile
+	sed -i "s/PF_EXT_SLIB:=/PF_EXT_SLIB:=stealth /g" extensions/Makefile
 
 	if use extensions; then
 		epatch ${FILESDIR}/${PV}-files/iptables-1.2.9-imq1.diff.bz2
