@@ -1,4 +1,5 @@
 
 ;;; ecb site-lisp configuration 
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
+(autoload 'ecb-activate "ecb" "Autoload for ecb-activate" t)

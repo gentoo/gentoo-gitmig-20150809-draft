@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-1.90.ebuild,v 1.2 2003/02/13 07:04:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-1.90.ebuild,v 1.3 2003/03/08 22:37:15 mkennedy Exp $
 
 inherit elisp
 
@@ -46,8 +46,6 @@ src_install() {
 pkg_postinst() {
 	elisp-site-regen
 	einfo ""
-	einfo "Add the following to your ~/.emacs to use ECB:"
-	einfo "	(require 'ecb)"
 	einfo "To start ECB:"
 	einfo "	M-x ecb-activate"
 	einfo ""
