@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bd575746fd0c81796aed4c51d53346d9 chgres-0.1.ebuild 563
-MD5 184b47d0cacdba44e05217f33ebf956e ChangeLog 910
 MD5 ab7a5754c8fc6051eb104a7bc8095364 metadata.xml 453
+MD5 9726e5c6785f79996e633d81a4ffd752 ChangeLog 988
 MD5 4df6bb301e2c9022393f7cc0202727cf files/digest-chgres-0.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOuLGI1lqEGTUzyQRAqzsAKC9bgbzPAmwVnEsK3J32axKZr/LkQCgluaA
+hitUthzJswyZYZI2uOzCvRk=
+=fNyl
+-----END PGP SIGNATURE-----
