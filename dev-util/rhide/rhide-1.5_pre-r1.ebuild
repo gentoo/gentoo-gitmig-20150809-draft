@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5_pre.ebuild,v 1.3 2002/08/21 22:42:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5_pre-r1.ebuild,v 1.1 2002/09/22 07:14:06 azarah Exp $
 
-SNAPSHOT="20020726"
+SNAPSHOT="20020825"
 TVISIONVER="1.1.4"
 SETEDITVER="0.4.57"
 # RHIDE is _very_ picky about the GDB used, so dont put GDB in DEPEND
-GDBVER="5.2"
+GDBVER="5.2.1"
 
 DESCRIPTION="RHIDE is a console IDE for various languages."
 if [ -z "${SNAPSHOT}" ] ; then
@@ -14,7 +14,8 @@ if [ -z "${SNAPSHOT}" ] ; then
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 else
 	S="${WORKDIR}/${P/_}-${SNAPSHOT}"
-	SRC_URI="http://rhide.sourceforge.net/snapshots/${P/_}-${SNAPSHOT}.tar.gz"
+	SRC_URI="http://rhide.sourceforge.net/snapshots/${P/_}-${SNAPSHOT}.tar.gz
+		mirror://gentoo/${P/_}-${SNAPSHOT}.tar.gz"
 fi
 SRC_URI="${SRC_URI}
 	mirror://sourceforge/setedit/rhtvision-${TVISIONVER}.src.tar.gz
@@ -27,18 +28,37 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="virtual/glibc
-	app-text/recode
-	dev-libs/libpcre
-	sys-apps/bzip2
-	sys-apps/texinfo
-	sys-devel/gettext
-	sys-libs/gpm
-	sys-libs/zlib"
-#	app-text/tetex"
+	app-text/tetex
+	>=app-text/recode-3.6
+	>=dev-libs/libpcre-2.0.6
+	>=sys-apps/bzip2-1.0.1
+	>=sys-apps/texinfo-4.1
+	>=sys-devel/gettext-0.11.0
+	>=sys-devel/perl-5.6
+	>=sys-libs/zlib-1.1.4
+	>=sys-libs/gpm-1.20.0
+	>=sys-libs/ncurses-5.2
+	X? ( virtual/x11 )"
 
 RDEPEND="${DEPEND}
 	X? ( x11-terms/eterm )"
 
+
+src_unpack() {
+	
+	unpack ${A}
+
+	cd ${S}
+	# Get it to compile with gdb-5.2.1
+	# <azarah@gentoo.org> (22 Sep 2002)
+	patch -p1 < ${FILESDIR}/${P}-gdb521-IS_FP_REGNUM.patch || die
+	patch -p1 < ${FILESDIR}/${P}-gdb521-REGISTER_NAMES.patch || die
+
+	cd ${WORKDIR}/tvision
+	# Get tvision-1.1.4 to compile with gcc-3.1 or later
+	# <azarah@gentoo.org> (22 Sep 2002)
+	patch -p1 < ${FILESDIR}/tvision-1.1.4-gcc31-filebuf.patch || die
+}
 
 src_compile() {
 	
@@ -57,9 +77,7 @@ src_compile() {
 		--cxxflags='${DUMMYFLAGS}' || die
 	
 	# Only build the static libs
-	cp Makefile Makefile.orig
-	sed -e 's/all: static-lib dynamic-lib/all: static-lib/'	\
-		Makefile.orig >Makefile
+	perl -pi -e 's/all: static-lib dynamic-lib/all: static-lib/' Makefile
 	
 	# -j breaks build
 	make || die
@@ -84,19 +102,26 @@ src_compile() {
 # ************* RHIDE ***************
 	
 	cd ${S}
+
+	addpredict "/usr/share/rhide"
+
+	# Update snapshot version
+	if [ -n "${SNAPSHOT}" ]
+	then
+		perl -pi -e "s|1998-11-29|${SNAPSHOT}|" ${S}/idemain.cc
+	fi
 	
 	# Fix invalid "-O2" in CFLAGS and CXXFLAGS
-	cp configure configure.orig
-	sed -e 's:CFLAGS="-g -O2":CFLAGS="-g":' \
-	    -e 's:CFLAGS="-O2":CFLAGS="":' \
-	    configure.orig > configure
-	cp libgdb/makefile.src libgdb/makefile.src.orig
-	sed -e 's:-O2::g' libgdb/makefile.src.orig > \
-		libgdb/makefile.src
+	for x in configure $(find . -name '*.mak') $(find . -name 'makefile.src')
+	do
+		if [ -f ${x} ]
+		then
+			perl -pi -e 's:-O2::g' ${x}
+		fi
+	done
 
 	# Fix a dependency due to a broken .mak file
-	cp rh_comm.mak rh_comm.mak.orig
-	sed -e 's:../../../../::g' rh_comm.mak.orig > rh_comm.mak
+	perl -pi -e 's:../../../../::g' rh_comm.mak
 
 	export RHIDESRC="${S}"
 	export SETSRC="${WORKDIR}/setedit"
@@ -107,14 +132,36 @@ src_compile() {
 
 	econf || die
 	
+	#
+	# *** DETECT XFREE86 with tvision-2.0 ***
+	#
+	# None of these packages have any way to specify XFree86 support,
+	# thus we check if tvision compiled with xfree support or not.
+	#
+	# If it did compile with xfree support, we need to get rhide to link
+	# against libX11 ...
+	#
+	local myLDFLAGS=""
+	local have_xfree="$(gawk '/HAVE_X11/ { if (/yes/) print "Have XFree86" }' \
+	                    ${WORKDIR}/tvision/configure.cache)"
+
+	if [ "${have_xfree}" = "Have XFree86" ]
+	then
+		einfo "Compiling with XFree86 support..."
+		myLDFLAGS="-L/usr/X11R6/lib -lX11"
+	else
+		einfo "Compiling without XFree86 support..."
+	fi
+	#
+	# *** DETECT XFREE86 ***
+	#
+		
+	# -j breaks build
 	make prefix=/usr \
 		install_docdir=share/doc/${PF} \
 		install_infodir=share/info \
-		|| die
+		LDFLAGS="${LDFLAGS} ${myLDFLAGS}" || die
 	
-	# -j breaks build
-	make || die
-
 	# Update and Fix DIR entry in .info files
 	cd ${S}/share/setedit/
 	sed -e 's:editor.inf:setedit.info:g' \
@@ -128,6 +175,10 @@ src_compile() {
 }
 
 src_install() {
+
+	# Dont error out on sandbox violations.  I should really
+	# try to track this down, but its a bit tougher than usually.
+	addpredict "/:/usr/share/rhide:/libide:/libtvuti:/librhuti"
 	
 	make prefix=${D}/usr \
 		install_docdir=share/doc/${PF} \
@@ -137,7 +188,10 @@ src_install() {
 	# Fix .info files
 	for file in ${D}/usr/share/info/*.inf
 	do
-		mv ${file} ${file}o
+		if [ -f ${file} ]
+		then
+			mv -f ${file} ${file}o
+		fi
 	done
 
 	# Install the manpages

@@ -1,0 +1,214 @@
+--- classes/fpbase.cc	Tue Oct  9 19:05:52 2001
++++ tvision/classes/fpbase.cc	Thu Jun  6 21:30:20 2002
+@@ -22,7 +22,7 @@
+ 
+ fpbase::fpbase()
+ {
+- buf=new filebuf();
++ buf=new CLY_filebuf();
+  pstream::init(buf);
+ }
+ 
+@@ -34,7 +34,7 @@
+ 
+ fpbase::fpbase( const char *name, CLY_OpenModeT omode, int prot )
+ {
+- buf=new filebuf();
++ buf=new CLY_filebuf();
+  open(name,omode,prot);
+  pstream::init(buf);
+ }
+@@ -94,3 +94,50 @@
+  return buf;
+ }
+ 
++#ifdef CLY_DefineSpecialFileBuf
++// gcc 3.1 specific
++CLY_filebuf *CLY_filebuf::open(FILE *f, ios_base::openmode mode)
++{
++ CLY_filebuf *ret=NULL;
++ if (!this->is_open())
++   {
++    _M_file.sys_open(f,mode);
++    if (this->is_open())
++      {
++       _M_allocate_internal_buffer();
++       _M_mode=mode;
++       
++       // For time being, set both (in/out) sets  of pointers.
++       _M_set_indeterminate();
++       if ((mode & ios_base::ate) &&
++           this->seekoff(0,ios_base::end,mode)<0)
++          this->close();
++       ret=this;
++      }
++   }
++ return ret;
++}
++
++CLY_filebuf *CLY_filebuf::open(int h, ios_base::openmode mode)
++{
++ CLY_filebuf *ret=NULL;
++ if (!this->is_open())
++   {
++    _M_file.sys_open(h,mode,false);
++    if (this->is_open())
++      {
++       _M_allocate_internal_buffer();
++       _M_mode=mode;
++       
++       // For time being, set both (in/out) sets  of pointers.
++       _M_set_indeterminate();
++       if ((mode & ios_base::ate) &&
++           this->seekoff(0,ios_base::end,mode)<0)
++          this->close();
++       ret=this;
++      }
++   }
++ return ret;
++}
++#endif // CLY_DefineSpecialFileBuf
++
+--- include/tv/fpbase.h	Tue Oct  9 19:06:00 2001
++++ tvision/include/tv/fpbase.h	Thu Jun  6 21:30:20 2002
+@@ -13,6 +13,11 @@
+ and not a filebuf. This is much more convenient to make the code
+ compilable with gcc 3.x without breaking compatibility.
+ 
++SET: Added a filebuf wrapper to get access to protected members needed
++to open associate a filebuf with a C stream/file handle. Andris proposed
++this idea. This is needed for gcc 3.1 and we don't know how long this
++trick will be used.
++
+  *
+  *
+  */
+@@ -28,6 +33,23 @@
+ #if defined( Uses_fpbase ) && !defined( __fpbase )
+ #define __fpbase
+ 
++#ifdef CLY_DefineSpecialFileBuf
++class CLY_filebuf: public std::filebuf
++{
++public:
++ CLY_filebuf() : std::filebuf() {};
++ CLY_filebuf(FILE *f, std::ios_base::openmode mode)
++   { open(f,mode); };
++ CLY_filebuf(int h, std::ios_base::openmode mode)
++   { open(h,mode); };
++
++ CLY_filebuf *open(FILE *f, std::ios_base::openmode);
++ CLY_filebuf *open(int h, std::ios_base::openmode);
++ std::filebuf *open(const char *file, std::ios_base::openmode mode)
++   { return std::filebuf::open(file,mode); };
++};
++#endif
++
+ class fpbase : virtual public pstream
+ {
+ 
+@@ -49,7 +71,7 @@
+ 
+ private:
+ 
+-    CLY_std(filebuf) *buf;
++    CLY_filebuf *buf;
+ 
+ };
+ 
+--- include/compatlayer.h	Wed Feb  6 15:35:38 2002
++++ tvision/include/compatlayer.h	Mon Jun 24 16:54:15 2002
+@@ -117,6 +117,7 @@
+ #undef DIRSEPARATOR
+ #undef DIRSEPARATOR_
+ #undef CLY_ISOCpp98
++#undef CLY_filebuf
+ #undef CLY_OpenModeT
+ #undef CLY_StreamPosT
+ #undef CLY_StreamOffT
+@@ -133,6 +134,7 @@
+ #undef CreateStrStream
+ #undef GetStrStream
+ #undef UsingNamespaceStd
++#undef CLY_HiddenDifferent
+ 
+ #ifdef TVComp_GCC
+ /* GNU C is supported for various OSs: */
+@@ -225,6 +231,15 @@
+     library. GCC implemented it in version 3.0. BC++ implemented some
+     stuff in versions like BC++ 5.5. So that's a real mess. */
+  #if __GNUC__>=3
++  // gcc 3.1 needs a special filebuf
++  #if __GNUC_MINOR__<1
++   #define CLY_filebuf       std::filebuf
++   #define CLY_NewFBFromFD(f) new CLY_filebuf(fdopen(f,"rb+"),ios::in|ios::out|ios::binary)
++  #else
++   #undef  CLY_DefineSpecialFileBuf
++   #define CLY_DefineSpecialFileBuf 1
++   #define CLY_NewFBFromFD(f) new CLY_filebuf(f,ios::in|ios::out|ios::binary)
++  #endif
+   #define CLY_ISOCpp98 1
+   #define CLY_OpenModeT      std::ios::openmode
+   #define CLY_StreamPosT     std::streampos
+@@ -246,7 +242,9 @@
+   #define CLY_StreamOffT     std::streamoff
+   #define CLY_IOSSeekDir     std::ios::seekdir
+   #define CLY_FBOpenProtDef  0
+-  #define CLY_NewFBFromFD(f) new filebuf(fdopen(f,"rb+"),ios::in|ios::out|ios::binary)
++  #ifndef CLY_NewFBFromFD
++   #define CLY_NewFBFromFD(f) new filebuf(fdopen(f,"rb+"),ios::in|ios::out|ios::binary)
++  #endif
+   #define CLY_PubSetBuf(a,b) pubsetbuf(a,b)
+   #define CLY_FBOpen(a,b,c)  open(a,b)
+   #define CLY_IOSBin         std::ios::binary
+@@ -252,6 +266,7 @@
+   #undef  IOSTREAM_HEADER
+   #define IOSTREAM_HEADER <iostream>
+  #else
++  #define CLY_filebuf        filebuf
+   #define CLY_OpenModeT      int
+   #define CLY_StreamPosT     streampos
+   #define CLY_StreamOffT     streamoff
+@@ -272,7 +271,9 @@
+   #define CLY_StreamOffT     streamoff
+   #define CLY_IOSSeekDir     ios::seek_dir
+   #define CLY_FBOpenProtDef  filebuf::openprot
+-  #define CLY_NewFBFromFD(f) new filebuf(f)
++  #ifndef CLY_NewFBFromFD
++   #define CLY_NewFBFromFD(f) new filebuf(f)
++  #endif
+   #define CLY_PubSetBuf(a,b) setbuf(a,b)
+   #define CLY_HaveFBAttach   1
+   # CLY_FBOpen(a,b,c)  open(a,b,c)
+@@ -373,6 +388,7 @@
+ 
+  /* Win32/Cygwin -- OH! */
+  #ifdef TVCompf_Cygwin
++  #define CLY_HiddenDifferent 1
+   #define CLY_Have_UGID 1
+   #undef  FA_ARCH
+   #undef  FA_DIREC
+@@ -525,6 +543,7 @@
+  /* Common to all UNIX systems */
+  #ifdef TVOS_UNIX
+   /* Filesystem */
++  #define CLY_HiddenDifferent 1
+   #define CLY_Have_UGID 1
+   #undef  FA_ARCH
+   #undef  FA_DIREC
+@@ -830,6 +849,7 @@
+   #define Uses_CLY_IfStreamGetLine 1
+  #endif
+ 
++ #define CLY_filebuf        filebuf
+  #define CLY_OpenModeT      int
+  #define CLY_StreamPosT     streampos
+  #define CLY_StreamOffT     streamoff
+@@ -1040,6 +1076,7 @@
+  #define IfStreamGetLine(istream,buffer,size) \
+          istream.getline(buffer,size)
+ 
++ #define CLY_filebuf        filebuf
+  #define CLY_OpenModeT      int
+  #define CLY_StreamPosT     streampos
+  #define CLY_StreamOffT     streamoff
