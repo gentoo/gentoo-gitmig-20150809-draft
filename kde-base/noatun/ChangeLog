@@ -1,10 +1,6 @@
 # ChangeLog for kde-base/noatun
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.3 2005/02/12 15:53:21 motaboy Exp $
-
-  12 Feb 2005; Simone Gotti <motaboy@gentoo.org> :
-  Add missing file "noatun-oblique-db-location-3.4.0_beta2.diff". Fixes bug
-  #81729.
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.4 2005/02/12 15:59:02 motaboy Exp $
 
 *noatun-3.4.0_beta2 (05 Feb 2005)
 
