@@ -56,7 +56,7 @@ MD5 9996ea8d65888808363832ea1571fe0a files/digest-gcc-3.3.3_pre20040215 138
 MD5 9996ea8d65888808363832ea1571fe0a files/digest-gcc-3.3.3_pre20040322 138
 MD5 8f56750ce25ca30ffebcbdb65de95a1f files/digest-gcc-3.3.3_pre20040426 138
 MD5 8baffb486c75efe253bd2daa88daa7d6 files/gcc331_use_multilib.amd64.patch 352
-MD5 84210d636ecb686833a178bfc99c281d files/fix_libtool_files.sh 1737
+MD5 9bb4a999eb75c9e3eadab9aa71e91879 files/fix_libtool_files.sh 1731
 MD5 cf81ae4b2da79c34a005da1182c40134 files/digest-gcc-3.3.2 130
 MD5 35f63854b7b4d5ab1ed1489e517f8e24 files/digest-gcc-3.3.3 361
 MD5 4ac72f39b294a0fc6dd74f7567604d42 files/digest-gcc-3.3.4 276
@@ -65,7 +65,7 @@ MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r8 64
 MD5 f57a9900e4d0edcae7b1e327e263d2f7 files/digest-gcc-3.3 294
 MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
 MD5 12d4b0c4fc49fad52850ab007c3c7371 files/digest-gcc-3.3-r1 353
-MD5 4474cc05a408e243411df067e1ca4c2d files/scan_libgcc_linked_ssp.sh 868
+MD5 07b57d62aa1a8cd4d1cd37984ebe2053 files/scan_libgcc_linked_ssp.sh 861
 MD5 33df162e1767e168f4f39442785071af files/3.0/texinfo-4.0-no-ncurses-gentoo.diff 51748
 MD5 9c13e6b0d5770979430b76c578afa22c files/3.0/gcc3-program-transform.patch 9771
 MD5 f6b6f7c3577eccb694066bb54dd8075a files/3.3/gcc33-gentoo-branding-1.patch 870
@@ -73,8 +73,8 @@ MD5 d047c78a9141b16915d8ec3f54d1e246 files/3.3/gcc33-coreutils-compat.patch.bz2 
 MD5 453122edf63d75cca3a6c56a6dac45b0 files/3.3/gcc33-propolice-version.patch 570
 MD5 088e0807e677010cafe4e590e8711be1 files/3.3/gcc33-no-multilib-amd64.patch 343
 MD5 d6ee829d1712436361f5f1daf7b14e83 files/3.3/gcc33-gentoo-branding.patch 890
-MD5 5adb32fa5b860e9afd415fc42c160aee files/awk/fixlafiles.awk 7755
-MD5 c7e8f50ba67fce8f0c91d293e03ccf1b files/awk/scanforssp.awk 5836
+MD5 40eea3a959b76abb57fc629c029a3427 files/awk/fixlafiles.awk 7753
+MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
 MD5 51719a174883702ef1851fac4cc79398 files/3.2.1/gcc32-strip-dotdot.patch 2071
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 MD5 7978d1aaf6bae19163e83c110dec1b38 files/3.2.1/gcc32-sparc32-hack.patch 2192
