@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5_pre9.ebuild,v 1.1 2001/04/05 18:43:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5_pre9.ebuild,v 1.2 2001/04/06 18:26:30 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
@@ -70,6 +70,11 @@ pkg_postinst() {
         -e "s:^CFLAGS.*:CFLAGS=\"${CFLAGS}\":" \
         -e "s:^CXXFLAGS.*:CXXFLAGS=\"${CXXFLAGS}\":" \
         ${ROOT}/etc/make.globals.eg > ${ROOT}/etc/make.globals
+	if [ ! -e ${ROOT}/etc/make.profile ]
+	then
+		cd ${ROOT}/etc
+		ln -s /usr/portage/profiles/default make.profile
+	fi
 }
 
 
