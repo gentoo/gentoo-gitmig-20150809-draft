@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3f1ca43c894d7e42d2c8c71ee4ad287a ChangeLog 2578
-MD5 8349fbe61229f204770719d00854eadd iptraf-2.7.0-r1.ebuild 1200
+MD5 81f2d9af362d50edae978f15f8dba059 iptraf-2.7.0-r1.ebuild 1207
 MD5 c5ecdc4b72b927cc51cff03c1b70ca26 iptraf-2.7.0.ebuild 841
+MD5 dd629fc42e9416ab8717a13ad9ee0477 ChangeLog 2699
 MD5 a94566c6927ccaeca24681c25540624d metadata.xml 236
-MD5 68d035b52bb75c049cc9a59f51ce2a07 files/digest-iptraf-2.7.0 64
 MD5 1822bd37e9eff2ce7881d2a46c074037 files/digest-iptraf-2.7.0-r1 138
+MD5 68d035b52bb75c049cc9a59f51ce2a07 files/digest-iptraf-2.7.0 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA/nEEHTu7gpaalycRAkriAKDVcgQYov+BY4YwQJbBpKBLCKqqIACgnICq
-cucW/UJ11YXRX8SWp913mm4=
-=SmL/
+iD8DBQFBAPaZT+MN7JbqCpMRAhJhAJ94xH2afUlt3E7v27tQ3+ptdIFmYgCfUMt9
+PuBsj+Zf3TkTp8c0lJCt+VY=
+=SPD2
 -----END PGP SIGNATURE-----

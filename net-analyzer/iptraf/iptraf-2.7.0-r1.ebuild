@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.12 2004/07/21 13:31:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.13 2004/07/23 11:32:43 eldad Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ V6PATCH_LEVEL=alpha11
 DESCRIPTION="IPTraf is an ncurses-based IP LAN monitor"
 HOMEPAGE="http://cebu.mozcom.com/riker/iptraf/"
 SRC_URI="ftp://ftp.cebu.mozcom.com/pub/linux/net/${P}.tar.gz
-	http://dev.gentoo.org/~gmsoft/${P}-ipv6-${V6PATCH_LEVEL}.diff"
+	http://dev.gentoo.org/~gmsoft/patches/${P}-ipv6-${V6PATCH_LEVEL}.diff"
 
 LICENSE="GPL-2"
 SLOT="0"

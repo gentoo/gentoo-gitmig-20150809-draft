@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.22 2004/07/09 20:18:05 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.23 2004/07/23 11:32:43 eldad Exp $
+
+  23 Jul 2004; Eldad Zack <eldad@gentoo.org> iptraf-2.7.0-r1.ebuild:
+  Fixed URL location of ipv6 patch. Closes #58021.
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> iptraf-2.7.0-r1.ebuild,
   iptraf-2.7.0.ebuild:
