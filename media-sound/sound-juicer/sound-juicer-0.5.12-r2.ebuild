@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-0.5.12-r2.ebuild,v 1.1 2004/09/01 19:58:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-0.5.12-r2.ebuild,v 1.2 2004/09/14 08:01:47 eradicator Exp $
 
 IUSE="oggvorbis flac encode"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.burtonini.com/computing/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 
 RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/libglade-2

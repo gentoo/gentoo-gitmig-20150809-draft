@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.25 2004/09/01 19:58:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.26 2004/09/14 08:01:47 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -sound-juicer-0.5.10.1.ebuild, -sound-juicer-0.5.11.ebuild,
+  -sound-juicer-0.5.12-r1.ebuild:
+  Stable amd64, x86.  Removing old ebuilds.
 
 *sound-juicer-0.5.12-r2 (01 Sep 2004)
 
