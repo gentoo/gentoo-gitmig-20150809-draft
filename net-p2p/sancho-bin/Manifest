@@ -4,16 +4,18 @@ Hash: SHA1
 MD5 24554fe658e1b5aa6a011fb72828cb35 sancho-bin-0.9.4.16.ebuild 1484
 MD5 ab1f5207e9b467a706472c84e293cc18 sancho-bin-0.9.4.11.ebuild 1483
 MD5 74a1eeba942992914ce8ea6d3b8fb534 sancho-bin-0.9.4.14-r1.ebuild 1487
-MD5 1f4a8fbdee365259eddb6047c25c1080 ChangeLog 3218
+MD5 91017b0f9d2f47622c28701f4e8b0426 sancho-bin-0.9.4.17.ebuild 1484
+MD5 8b64e17d0ca3f8a6edbad7b4d928081d ChangeLog 3400
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 9c8935033c3fe62be83d6ad6e80d5f4e files/sancho.sh 260
 MD5 735c747877cd42821c7db531e9bc3f6b files/digest-sancho-bin-0.9.4.14-r1 158
 MD5 af6526c79837318f013013109469c41a files/digest-sancho-bin-0.9.4.11 158
 MD5 9cae9904f5eefe9dd46134d0ce76a100 files/digest-sancho-bin-0.9.4.16 158
+MD5 a077337a8c850bbf7c06d006d6a8645e files/digest-sancho-bin-0.9.4.17 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYsa4cAgAdbxYsnERAn7hAJ0QYVLbfhIYtUqAfA/dEitBAFw4wQCfRN3f
-9eL1nBdwIDNdG5EdXwF22E0=
-=Xwnx
+iD8DBQFBZsJpcAgAdbxYsnERAtKXAJ9aLTbnvDlSj2F/Yfu5BC+JC1a0/wCgkv5R
+C85MILqyEMiXdrLwrxdfPMs=
+=s2uf
 -----END PGP SIGNATURE-----
