@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6.ebuild,v 1.5 2003/10/19 17:33:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6.ebuild,v 1.6 2004/02/20 06:13:56 mr_bones_ Exp $
 
 inherit eutils games
 
