@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctmkit/ctmkit-19960528.ebuild,v 1.3 2003/02/13 11:48:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctmkit/ctmkit-19960528.ebuild,v 1.4 2003/04/02 08:42:58 seemant Exp $
 
-MY_P="ctmkit"
-S=${WORKDIR}/ctmkit
+S=${WORKDIR}/${PN}
 DESCRIPTION="old NetBSD port of FreeBSD's CTM, a set of utilities to synchronize directories through email"
 HOMEPAGE="http://www.nemeton.com.au/"
-SRC_URI="http://www.nemeton.com.au/src/${MY_P}.tar.gz"
-KEYWORDS="x86"
+SRC_URI="http://www.nemeton.com.au/src/${PN}.tar.gz"
+
 SLOT="0"
-LICENSE="public-domain RSA-MD2 RSA-MD3 RSA-MD5 as-is"
+LICENSE="public-domain RSA-MD2 RSA-MD4 RSA-MD5 as-is"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 
@@ -25,4 +25,3 @@ src_install() {
 	dodoc ctm/README 
 	doman md5/md5.1 libmd/mdX.3 ctm/ctm/ctm.1 ctm/ctm/ctm.5 ctm/ctm_rmail/ctm_rmail.1
 }
-
