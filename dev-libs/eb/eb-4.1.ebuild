@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-4.0-r1.ebuild,v 1.6 2004/08/28 13:29:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-4.1.ebuild,v 1.1 2004/08/28 13:29:24 usata Exp $
 
 inherit eutils
 
@@ -8,22 +8,15 @@ IUSE="nls"
 
 DESCRIPTION="EB is a C library and utilities for accessing CD-ROM books"
 HOMEPAGE="http://www.sra.co.jp/people/m-kasahr/eb/"
-SRC_URI="ftp://ftp.sra.co.jp/pub/misc/eb/${P}.tar.gz
-	ftp://ftp.sra.co.jp/pub/misc/eb/${P}+.diff"
+SRC_URI="ftp://ftp.sra.co.jp/pub/misc/eb/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/libc
 	sys-libs/zlib
 	nls? ( sys-devel/gettext )"
-
-src_unpack() {
-	unpack ${P}.tar.gz
-	cd ${S}
-	epatch ${DISTDIR}/${P}+.diff
-}
 
 src_compile () {
 
@@ -36,4 +29,12 @@ src_install () {
 	einstall || die
 
 	dodoc AUTHORS INSTALL* NEWS README*
+}
+
+pkg_postinst() {
+
+	einfo
+	einfo "If you are upgrading from <app-dicts/eb-${PV},"
+	einfo "you may need to rebuild applications depending on eb."
+	einfo
 }
