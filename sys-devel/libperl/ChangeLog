@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.31 2004/06/15 03:27:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.32 2004/06/16 03:45:43 dragonheart Exp $
+
+*libperl-5.8.4-r1 (16 Jun 2004)
+
+  16 Jun 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/libperl-5.8.2-uclibc.patch, +files/libperl-5.8.4-uclibc.patch,
+  +libperl-5.8.2-r1.ebuild, +libperl-5.8.4-r1.ebuild:
+  uclibc fixes thanks to Peter S. Mazinger <ps.m@gmx.net>
 
   14 Jun 2004; Aron Griffis <agriffis@gentoo.org> libperl-5.8.2.ebuild,
   libperl-5.8.3.ebuild:
