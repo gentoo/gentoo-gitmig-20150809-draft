@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.8 2005/03/24 17:58:36 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.9 2005/03/25 01:51:10 weeve Exp $
+
+  25 Mar 2005; Jason Wever <weeve@gentoo.org> kig-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   24 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> kig-3.4.0.ebuild:
   Use local flag 'kig-scripting' instead of 'python' to enable scripting

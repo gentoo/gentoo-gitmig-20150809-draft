@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbattleship
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.6 2005/03/18 16:35:58 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.7 2005/03/25 02:13:56 weeve Exp $
+
+  25 Mar 2005; Jason Wever <weeve@gentoo.org> kbattleship-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> kbattleship-3.4.0.ebuild:
   Added to ~ppc

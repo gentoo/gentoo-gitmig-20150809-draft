@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.7 2005/03/18 17:19:49 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.8 2005/03/25 01:56:55 weeve Exp $
+
+  25 Mar 2005; Jason Wever <weeve@gentoo.org> kdeedu-meta-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> kdeedu-meta-3.4.0.ebuild:
   Added to ~ppc
