@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+
+# <spider@gentoo.org> (08 Sep 2002)
+# new ebuild. cvs checkout of galeon <head> (galeon2)
+net-www/galeon-cvs
+
+
 # <carpaski@gentoo.org> (08 Sep 2002)
 # Possible/likely fix for python compile issues
 # bug #7641
