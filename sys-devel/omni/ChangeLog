@@ -1,0 +1,8 @@
+# ChangeLog for sys-devel/omni
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/ChangeLog,v 1.1 2003/06/03 13:03:24 tantive Exp $
+
+*omni-1.4a (03 Jun 2003)
+
+  03 Jun 2003; Olivier Crete <tester@tester.ca> omni-1.4a.ebuild :
+  Added new ebuild for the Omni OpenMP Compiler
