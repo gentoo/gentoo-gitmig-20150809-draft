@@ -1,15 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.0.0.ebuild,v 1.3 2004/04/27 21:45:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.2.ebuild,v 1.1 2004/05/19 13:32:09 pfeifer Exp $
 
 inherit eutils
 
 MY_P=${P/_p/_kb}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Open Source implementation of IPsec for the Linux operating system (was SuperFreeS/WAN)."
-SRC_URI="http://www.openswan.org/code/${MY_P}.tar.gz
-		mirror://gentoo/${MY_P}.tar.gz"
 HOMEPAGE="http://www.openswan.org/"
+SRC_URI="http://www.openswan.org/code/${MY_P}.tar.gz
+	mirror://gentoo/${MY_P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="-* ~x86 ~amd64"
+IUSE=""
 
 DEPEND="virtual/glibc
 	virtual/linux-sources
@@ -17,10 +22,6 @@ DEPEND="virtual/glibc
 	net-misc/host
 	sys-apps/iproute2"
 RDEPEND=""
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~x86 -*"
-
 
 check_version_h() {
 	if [ ! -f "${ROOT}/usr/src/linux/include/linux/version.h" ]
@@ -96,7 +97,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	make \
 		DESTDIR=${D} \
 		USERCOMPILE="${CFLAGS}" \
@@ -107,8 +107,7 @@ src_compile() {
 		${MYMAKE} || die
 }
 
-src_install () {
-
+src_install() {
 	make \
 		DESTDIR=${D} \
 		USERCOMPILE="${CFLAGS}" \
@@ -118,10 +117,9 @@ src_install () {
 		INC_MANDIR=share/man \
 		install || die
 
-	dodoc INSTALL COPYING CREDITS BUGS CHANGES README doc/*
+	dodoc INSTALL CREDITS BUGS CHANGES README doc/*
 	dosym /etc/ipsec/ipsec.d /etc/ipsec.d
 
 	exeinto /etc/init.d/
 	doexe ${FILESDIR}/ipsec
-
 }
