@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.54 2005/02/14 00:08:34 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.55 2005/02/17 16:38:54 hansmi Exp $
+
+  17 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> postfix-2.1.5-r2.ebuild:
+  Stable on hppa.
 
   14 Feb 2005; <plasmaroo@gentoo.org> postfix-2.1.5-r2.ebuild:
   Mark 2.1.5-r2 ~ia64.
