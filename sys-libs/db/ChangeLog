@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.38 2003/08/05 10:21:53 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.39 2003/08/16 04:44:34 azarah Exp $
+
+*db-4.0.14-r1 (16 Aug 2003)
+
+  16 Aug 2003; Martin Schlemmer <azarah@gentoo.org> db-4.0.14-r1.ebuild,
+  files/db-4.0.14-fix-dep-link.patch:
+  Get db to link libdb* to correct dependencies ... for example if we use
+  NPTL or NGPT, db detects usable mutexes, and should link against
+  libpthread, but does not do so ...
 
 *db-4.1.25_p1 (05 Aug 2003)
 
