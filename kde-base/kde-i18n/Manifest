@@ -1,26 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 124dcc13d3e5d2d62077ef7e93a71125 kde-i18n-3.3.2.ebuild 1593
-MD5 bea5c3da8c430b9dea8fee35de328174 ChangeLog 5828
+MD5 11bec1263fbb878cbf40347c6b5a1515 kde-i18n-3.2.2.ebuild 5198
+MD5 82b82ed972b85be61a598bf3b44b62ba kde-i18n-3.3.0.ebuild 5381
+MD5 e85a1e035404a811f8ae8b28495ba333 kde-i18n-3.3.2.ebuild 1681
+MD5 6d5091ac332d1faf5f7f41f50b5e0d5c kde-i18n-3.1.5.ebuild 1545
+MD5 4b8c5e274bff05a581412195d98cf979 kde-i18n-3.2.3.ebuild 5376
+MD5 3dbd17cbc8aa4dc34e5b284d216e603e kde-i18n-3.3.1.ebuild 5667
+MD5 9d10e7c41629fed1ea657976f65fc983 kde-i18n-3.2.0.ebuild 4758
+MD5 d2bf550e13d6c4aa542223196d3bebe7 ChangeLog 5954
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 1951da041eb6266e4f7ce5f768401c31 kde-i18n-3.2.2.ebuild 5199
-MD5 f392858bc9b78418cd55cfc6cc019177 kde-i18n-3.2.3.ebuild 5376
-MD5 df44a3e6167ca60c28bc827dcedfb355 kde-i18n-3.3.1.ebuild 5668
-MD5 665e9671a08c3e9c0a7cfd97fb62f634 kde-i18n-3.1.5.ebuild 1548
-MD5 f7a972713f386777ef4bd0619b2d5bcc kde-i18n-3.3.0.ebuild 5383
-MD5 33aedebc3f8cb589d9eb26f5a5113a5e kde-i18n-3.2.0.ebuild 4758
+MD5 1aa9249338ab42bbb744b4cc2cd31ad2 files/digest-kde-i18n-3.1.5 3693
 MD5 ea95d1efd0dc104e510fd992acd3d121 files/digest-kde-i18n-3.2.0 3042
+MD5 481083a749b58c393e759057ccd5ed9d files/digest-kde-i18n-3.2.2 3350
 MD5 eac0d7734f4387b032f33325f2ff48e4 files/digest-kde-i18n-3.2.3 3492
-MD5 be2b24a376f130383c134228731eea5b files/digest-kde-i18n-3.3.2 3714
 MD5 21dee583288e6ec4294e685066c2452c files/digest-kde-i18n-3.3.0 3494
 MD5 24e0ecdf191bf0a50fff46c239a2dcb9 files/digest-kde-i18n-3.3.1 3645
-MD5 1aa9249338ab42bbb744b4cc2cd31ad2 files/digest-kde-i18n-3.1.5 3693
-MD5 481083a749b58c393e759057ccd5ed9d files/digest-kde-i18n-3.2.2 3350
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB01NYugEuf3OQ0akRAjKPAJ9h22pzX+zVVXjCaQFY0Gt2qggMgQCfTCua
-xOSh0JRQPKrMM+zPcTqajbI=
-=c2y9
------END PGP SIGNATURE-----
+MD5 be2b24a376f130383c134228731eea5b files/digest-kde-i18n-3.3.2 3714
+MD5 fe416091cd30cb387c87c28e2d0a793d files/kde-i18n-ru-3.3.2-kmplot.diff 9744

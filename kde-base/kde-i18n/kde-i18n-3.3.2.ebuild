@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.2.ebuild,v 1.6 2004/12/30 01:00:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.2.ebuild,v 1.7 2005/01/02 17:24:53 carlo Exp $
 
-inherit kde
+inherit kde eutils
 
 MY_PV=${PV}
 #MY_PV=3.3
@@ -27,7 +27,6 @@ for X in ${LANGS} ; do
 done
 
 src_unpack() {
-
 	if [ -z "${LINGUAS}" ]; then
 		ewarn
 		ewarn "You must define a LINGUAS environment variable that contains a list"
@@ -38,6 +37,8 @@ src_unpack() {
 	fi
 
 	base_src_unpack unpack
+	cd ${WORKDIR}
+	use linguas_ru && epatch ${FILESDIR}/kde-i18n-ru-3.3.2-kmplot.diff
 }
 
 src_compile() {

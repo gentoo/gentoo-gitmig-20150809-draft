@@ -1,0 +1,401 @@
+===================================================================
+RCS file: /home/kde/kde-i18n/ru/docs/kdeedu/kmplot/commands.docbook,v
+retrieving revision 1.1
+retrieving revision 1.1.6.1
+diff -u -r1.1 -r1.1.6.1
+--- kde-i18n-ru-3.3.2/docs/kdeedu/kmplot/commands.docbook	2003/11/05 11:37:11	1.1
++++ kde-i18n-ru-3.3.2/docs/kdeedu/kmplot/commands.docbook	2004/12/13 19:32:22	1.1.6.1
+@@ -149,7 +149,7 @@
+ <sect1 id="a-view-menu">
+ <title
+ >Меню <guimenu
+->Вид</guimenu
++>Правка</guimenu
+ ></title>
+ 
+ <variablelist>
+@@ -157,15 +157,15 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Вид</guimenu
+-><guimenuitem
+->Оси</guimenuitem
++>Правка</guimenu
++> <guimenuitem
++>Цвета...</guimenuitem
+ > </menuchoice
+ ></term>
+ <listitem
+ ><para
+->Отобразить <guilabel
+->Настройки координатных осей</guilabel
++>Диалог <guilabel
++>Параметры цветов</guilabel
+ >. См. <xref linkend="configuration"/>. </para>
+ </listitem>
+ </varlistentry>
+@@ -174,15 +174,15 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Вид</guimenu
++>Правка</guimenu
+ ><guimenuitem
+->Шкала</guimenuitem
++>Система координат...</guimenuitem
+ > </menuchoice
+ ></term>
+ <listitem
+ ><para
+ >Диалог <guilabel
+->Масштаб</guilabel
++>Система координат</guilabel
+ >. См. <xref linkend="configuration"/>. </para>
+ </listitem>
+ </varlistentry>
+@@ -191,15 +191,15 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Вид</guimenu
++>Правка</guimenu
+ ><guimenuitem
+->Сетка</guimenuitem
++>Масштаб...</guimenuitem
+ > </menuchoice
+ ></term>
+ <listitem
+ ><para
+ >Диалог <guilabel
+->Настройки сетки</guilabel
++>Масштаб</guilabel
+ >. См. <xref linkend="configuration"/>. </para>
+ </listitem>
+ </varlistentry>
+@@ -208,15 +208,15 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Вид</guimenu
++>Правка</guimenu
+ ><guimenuitem
+->Шаг</guimenuitem
++>Шрифты...</guimenuitem
+ > </menuchoice
+ ></term>
+ <listitem
+ ><para
+ >Диалог <guilabel
+->Настройки шага</guilabel
++>Шрифты</guilabel
+ >. См. <xref linkend="configuration"/>. </para>
+ </listitem>
+ </varlistentry>
+@@ -225,7 +225,7 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Вид</guimenu
++>Правка</guimenu
+ ><guimenuitem
+ >Система координат I</guimenuitem
+ > </menuchoice
+@@ -240,7 +240,7 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Вид</guimenu
++>Правка</guimenu
+ ><guimenuitem
+ >Система координат II</guimenuitem
+ > </menuchoice
+@@ -255,7 +255,7 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Вид</guimenu
++>Правка</guimenu
+ ><guimenuitem
+ >Система координат III</guimenuitem
+ > </menuchoice
+@@ -271,7 +271,7 @@
+ <sect1 id="a-functions-menu">
+ <title
+ >Меню <guimenu
+->Функции</guimenu
++>График</guimenu
+ ></title>
+ 
+ <variablelist>
+@@ -281,22 +281,181 @@
+ ><guimenu
+ >Функции</guimenu
+ > <guimenuitem
+->Функции</guimenuitem
++>Создать график функции...</guimenuitem
++> </menuchoice>
++</term>
++<listitem
++><para
++>Диалог для создания графика функции. См. <xref linkend="using-kmplot"/>.</para
++></listitem>
++</varlistentry>
++
++<varlistentry>
++<term>
++<menuchoice
++><guimenu
++>Функции</guimenu
++> <guimenuitem
++>Создать параметрический график...</guimenuitem
++> </menuchoice>
++</term>
++<listitem
++><para
++>Диалог создания параметрического графика функции. См. <xref linkend="using-kmplot"/>.</para
++></listitem>
++</varlistentry>
++
++<varlistentry>
++<term>
++<menuchoice
++><guimenu
++>Функции</guimenu
++> <guimenuitem
++>Создать график в полярных координатах...</guimenuitem
++> </menuchoice>
++</term>
++<listitem
++><para
++>Диалог создания графика в полярных координатах. См. <xref linkend="using-kmplot"/>.</para
++></listitem>
++</varlistentry>
++
++<varlistentry>
++<term>
++<menuchoice
++><guimenu
++>Функции</guimenu
++> <guimenuitem
++>Изменить графики...</guimenuitem
+ > </menuchoice>
+ </term>
+ <listitem
+ ><para
+->Диалог задания функций. См. <xref linkend="using-kmplot"/>.</para
++>Диалог задания функций, где их можно добавлять, изменять и удалять. См. <xref linkend="using-kmplot"/>.</para
+ ></listitem>
+ </varlistentry>
+ 
+ </variablelist>
++
+ </sect1>
+ 
++<sect1 id="a-zoom-menu">
++<title
++>Меню <guimenu
++>Увеличение</guimenu
++></title>
++<para
++>Первые пять пунктов меню меняют режим увеличения.</para>
++<variablelist>
++<varlistentry>
++<term>
++<menuchoice
++><guimenu
++>Увеличение</guimenu
++> <guimenuitem
++>Обычный размер</guimenuitem
++> </menuchoice>
++</term>
++<listitem
++><para
++>Отключает увеличение.</para
++></listitem>
++</varlistentry>
++</variablelist>
++
++
++<variablelist>
++<varlistentry>
++<term>
++<menuchoice
++><guimenu
++>Увеличение</guimenu
++><guimenuitem
++>Прямоугольник</guimenuitem
++> </menuchoice>
++</term>
++<listitem
++><para
++>Минимальное и максимальное значение координат будут определяться прямоугольником, нарисованным пользователем.</para
++></listitem>
++</varlistentry>
++</variablelist>
++
++<variablelist>
++<varlistentry>
++<term>
++<menuchoice
++><guimenu
++>Увеличение</guimenu
++><guimenuitem
++>Увеличить</guimenuitem
++> </menuchoice>
++</term>
++<listitem
++><para
++>Минимальное и максимальное значение координат сблизятся, а выбранная точка графика - показана по центру.</para
++></listitem>
++</varlistentry>
++</variablelist>
++
++<variablelist>
++<varlistentry>
++<term>
++<menuchoice
++><guimenu
++>Увеличение</guimenu
++><guimenuitem
++>Уменьшить</guimenuitem
++> </menuchoice>
++</term>
++<listitem
++><para
++>Минимальное и максимальное значение координат удалятся друг от друга, а выбранная точка графика - показана по центру.</para
++></listitem>
++</varlistentry>
++</variablelist>
++
++<variablelist>
++<varlistentry>
++<term>
++<menuchoice
++><guimenu
++>Увеличение</guimenu
++><guimenuitem
++>Центрировать по точке</guimenuitem
++> </menuchoice>
++</term>
++<listitem
++><para
++>Выбранная точка графика будет показана по центру.</para
++></listitem>
++</varlistentry>
++</variablelist>
++
++<variablelist>
++<varlistentry>
++<term>
++<menuchoice
++><guimenu
++>Увеличение</guimenu
++> <guimenuitem
++>Тригонометрические функции</guimenuitem
++> </menuchoice>
++</term>
++<listitem
++><para
++>Масштаб будет привязан к тригонометрическим функциям. Работает как для градусов, так и для радианов.</para
++></listitem>
++</varlistentry>
++</variablelist>
++
++</sect1>
++
++
+ <sect1 id="a-settings-menu">
+ <title
+ >Меню <guimenu
+->Настройка</guimenu
++>Параметры</guimenu
+ ></title>
+ 
+ <variablelist>
+@@ -304,7 +463,7 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Настройка</guimenu
++>Параметры</guimenu
+ > <guimenuitem
+ >Показать панель инструментов</guimenuitem
+ > </menuchoice
+@@ -321,9 +480,9 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Настройка</guimenu
++>Параметры</guimenu
+ > <guimenuitem
+->Показать панель состояния</guimenuitem
++>Показать строку состояния</guimenuitem
+ > </menuchoice
+ ></term>
+ <listitem>
+@@ -338,7 +497,7 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Настройка</guimenu
++>Параметры</guimenu
+ > <guimenuitem
+ >Горячие клавиши...</guimenuitem
+ > </menuchoice
+@@ -355,7 +514,7 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Настройка</guimenu
++>Параметры</guimenu
+ > <guimenuitem
+ >Настроить панели инструментов...</guimenuitem
+ > </menuchoice
+@@ -372,7 +531,7 @@
+ <term
+ ><menuchoice
+ ><guimenu
+->Настройка</guimenu
++>Параметры</guimenu
+ > <guimenuitem
+ >Настроить &kmplot;</guimenuitem
+ > </menuchoice
+@@ -421,6 +580,37 @@
+ > &kde;:</para>
+ &help.menu.documentation; </sect1>
+ 
++<sect1 id="a-tools-menu">
++<title
++>Меню <guimenu
++>Сервис</guimenu
++></title>
++
++<para
++>Некоторые полезные инструменты для работы с функциями:</para>
++
++<variablelist>
++<varlistentry>
++<term
++><menuchoice
++><guimenu
++>Сервис</guimenu
++><guimenuitem
++>Получить значение по оси Y</guimenuitem
++> </menuchoice
++></term>
++<listitem>
++<para
++>Определяет значение для оси Y по заданному значению для оси X. В текущей версии работает только с обычными графиками. Введите выражение в поле рядом с "X:". В списке будут показаны доступные функции. Нажмите кнопку "Вычислить", чтобы определить значение функции. Результат будет показан в поле для Y.</para>
++</listitem>
++</varlistentry>
++</variablelist>
++
++<para
++>Стандартные пункты меню <guimenu
++>Справка</guimenu
++> &kde;:</para>
++&help.menu.documentation; </sect1>
+ 
+ </chapter>
+ <!--
