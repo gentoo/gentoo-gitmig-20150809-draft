@@ -4,13 +4,15 @@ Hash: SHA1
 MD5 42d3e1916a47fc25061e2709c9c6e249 cowloop-2.11.ebuild 1109
 MD5 f7795d438fd180afa232d6fc88d3204d cowloop-1.4.ebuild 1175
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 dfacfaedc394e54b35ecb9e0384880ff ChangeLog 737
+MD5 7cd9cd21daf4da44692034905535ddaa ChangeLog 857
+MD5 aa4fa6a4fe365445565d6e30e9b5ea9e cowloop-2.14.ebuild 1085
 MD5 5b1d181cd462a69063fe74fd3179a116 files/digest-cowloop-2.11 63
 MD5 c1f4e8a9d7f7054d5560717155944ba1 files/digest-cowloop-1.4 62
+MD5 30d42e2ee9dff210d34c789b62d48387 files/digest-cowloop-2.14 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB1xtvmdTrptrqvGERAiddAJ4j/3NTPaa95QL+PMiYR9Fm4p6b6gCgl0mX
-+xoyVPud9IUnGqRGVjXHiBM=
-=H+C1
+iD8DBQFCRKU/mdTrptrqvGERAjJcAJ4h9Nz0nmm2CXknMxzdym8OiTJCQQCfTFSY
+Nr3sSI2bcFZNc+W4Lcs2sKc=
+=yy0n
 -----END PGP SIGNATURE-----
