@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.56 2005/01/12 20:53:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.57 2005/01/14 15:10:37 luckyduck Exp $
+
+  14 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  openoffice-bin-1.1.1.ebuild, openoffice-bin-1.1.3.ebuild,
+  openoffice-bin-1.1.4.ebuild:
+  back to amd64 from of emul-linux-x86
 
   12 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   openoffice-bin-1.1.1.ebuild, openoffice-bin-1.1.3.ebuild,
