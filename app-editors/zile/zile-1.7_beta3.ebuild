@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_beta3.ebuild,v 1.2 2004/05/31 22:12:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_beta3.ebuild,v 1.3 2004/06/02 17:07:35 usata Exp $
 
 MY_P="${P/_beta/-b}"
 DESCRIPTION="tiny emacs clone"
@@ -14,7 +14,8 @@ IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2"
 DEPEND=">=dev-util/gperf-2.7.2
-	>=sys-apps/texinfo-4.3"
+	>=sys-apps/texinfo-4.3
+	virtual/tetex"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zile
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.4 2004/05/22 15:48:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.5 2004/06/02 17:07:35 usata Exp $
+
+  03 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> zile-1.7_beta3.ebuild:
+  Added virtual/tetex dependency, closing bug #51983
 
 *zile-1.7_beta3 (22 May 2004)
 
