@@ -1,7 +1,13 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.4 2002/09/09 21:53:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.5 2002/09/18 12:40:58 mcummings Exp $
 
+*GD-1.32-r2 (18 Sep 2002) <mcummings@gentoo.org> 
+
+  18 Sep 2002; <mcummings@gentoo.org> : Version bump because
+  although GD installed without error, it wasn't calling the perl module
+  eclass correctly and was misinstalling.
+  
 *GD-2.01 (8 Sep 2002)
   
   8 Sep 2002; <mcummings@gentoo.org> GD-2.01.ebuild :
