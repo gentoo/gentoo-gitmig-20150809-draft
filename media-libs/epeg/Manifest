@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 8bb571ede56589258df342c96d60da29 ChangeLog 327
 MD5 edfdfec4e93ebb0d10eb86b8a8594eba metadata.xml 324
-MD5 39fe4bb89033bf2c9cf7b86930788a8f epeg-0.9.0.20040912.ebuild 373
-MD5 db8fba27001e2b0894cde612e6b7aa3e files/digest-epeg-0.9.0.20040912 73
+MD5 e57cc43f6ad18f32fc1bae3fc21abb91 epeg-0.9.0.20041016.ebuild 373
+MD5 2ed96e44bc40529ce053283861c2772e files/digest-epeg-0.9.0.20041016 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBR3eAHTu7gpaalycRAlSBAJ93dvQrqI1e2BfsirngV/hDZSHNVgCg3jgC
-R4fhY804pvcJuU90epumnY4=
-=WZCp
+iD8DBQFBc7rbHTu7gpaalycRAsB/AJ9EMehVz+lOGGiD9goPkStyS9A98gCg1i/1
+zZUG2JFntRbm3mXLfxwl6RY=
+=W3v8
 -----END PGP SIGNATURE-----
