@@ -1,0 +1,12 @@
+# ChangeLog for net-mail/abook
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.1 2002/08/18 21:11:49 mcummings Exp $
+
+*abook-0.4.17 (08 Aug 2002)
+
+  08 Aug 2002; Michael Cummings <mcummings@gentoo.org> abook-0.4.17.ebuild :
+
+  Initial checkin. Abook is a curses based address book, primarily for use
+  by mutt. Original ebuild submitted by Sascha Hüdepohl, bug 6004 in
+  bugzilla.
+
