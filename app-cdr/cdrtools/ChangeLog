@@ -1,6 +1,16 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.47 2003/05/12 14:56:59 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.48 2003/05/17 12:26:57 aliz Exp $
+
+*cdrtools-1.1.33-r1 (17 May 2003)
+
+  17 May 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
+
+*cdrtools-1.1.39-r1 (17 May 2003)
+
+  17 May 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
   04 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
   Providing virtual/cdrtools.
