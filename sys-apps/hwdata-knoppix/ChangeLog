@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hwdata-knoppix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.7 2004/05/14 15:44:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.8 2004/05/14 16:32:11 wolf31o2 Exp $
+
+*hwdata-knoppix-0.107 (14 May 2004)
+
+  14 May 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  +hwdata-knoppix-0.107.ebuild:
+  Adding 0.107 version.  All arches please test.
 
   14 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Changing maintainers to newly formed livecd herd.
