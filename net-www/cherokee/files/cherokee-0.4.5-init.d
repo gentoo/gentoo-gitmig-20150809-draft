@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/files/cherokee-0.4.5-init.d,v 1.3 2004/03/06 03:54:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/files/cherokee-0.4.5-init.d,v 1.4 2004/07/15 00:25:54 agriffis Exp $
 
 PIDFILE=/var/run/cherokee.pid
 

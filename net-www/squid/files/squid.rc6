@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/files/squid.rc6,v 1.10 2004/03/19 01:32:29 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/files/squid.rc6,v 1.11 2004/07/15 00:34:10 agriffis Exp $
 
 opts="${opts} reload"
 

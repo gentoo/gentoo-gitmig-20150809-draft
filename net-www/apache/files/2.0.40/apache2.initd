@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2.initd,v 1.14 2004/03/29 20:03:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2.initd,v 1.15 2004/07/15 00:24:42 agriffis Exp $
 
 opts="${opts} reload"
 

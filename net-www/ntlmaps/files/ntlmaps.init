@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ntlmaps/files/ntlmaps.init,v 1.1 2004/06/11 08:43:55 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ntlmaps/files/ntlmaps.init,v 1.2 2004/07/15 00:31:05 agriffis Exp $
 
 MY_CMD="/usr/bin/python /usr/ntlmaps/main.py"
 MY_PID_FILE="/var/run/ntlmaps.pid"
