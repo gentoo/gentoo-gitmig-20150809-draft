@@ -1,10 +1,17 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.7 2002/12/10 20:08:16 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.8 2002/12/11 23:24:16 avenj Exp $
+
+*icc-7.0.065-r1 (11 Dec 2002)
+
+  11 Dec 2002; Jon Portnoy <avenj@gentoo.org> icc-7.0.065-r1.ebuild
+
+  Changed the "icc" wrapper script to properly translate gcc CFLAGS into
+  icc CFLAGS.
 
 *icc-7.0.065 (10 Dec 2002)
 
-  10 Dec 2002; Jon Portnoy <avenj@gentoo.org> icc-7.0.065-r1.ebuild:
+  10 Dec 2002; Jon Portnoy <avenj@gentoo.org> icc-7.0.065.ebuild:
 
   Changed the naming to more accurately reflect the current ICC
   version number. Also fixed the primary executable and added a warning
