@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1064 2005/04/05 15:50:03 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1065 2005/04/06 05:19:26 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -526,13 +526,14 @@ net-dialup/freeradius:frascend - Enable ascend binary mode
 net-dialup/freeradius:frlargefiles - Enable large file support
 net-dialup/freeradius:frnothreads - Disable thread support
 net-dialup/freeradius:frxp - enable experimental modules
-net-dialup/gammu:irda - Enable Infrared Support
-net-dialup/gnokii:irda - Enable Infrared Support
-net-dialup/gnokii:sms - Enable SMS Support
-net-dialup/ppp:activefilter - enable activefilter support
-net-dialup/ppp:atm - enable support for pppoatm
-net-dialup/ppp:dhcp - enable the dhcp plugin
-net-dialup/ppp:mppe-mppc - enable support for mppe-mppc
+net-dialup/gammu:irda - Enable infrared support
+net-dialup/gnokii:irda - Enable infrared support
+net-dialup/gnokii:sms - Enable SMS support
+net-dialup/ivcall:softfax - Enable soft fax support
+net-dialup/ppp:activefilter - Enable activefilter support
+net-dialup/ppp:atm - Enable support for pppoatm
+net-dialup/ppp:dhcp - Enable the dhcp plugin
+net-dialup/ppp:mppe-mppc - Enable support for mppe-mppc
 net-dns/bind:bind-mysql - enables mysql support for bind (non-dlz)
 net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
 net-dns/bind:idn - enables support for Internalized Domain Names
