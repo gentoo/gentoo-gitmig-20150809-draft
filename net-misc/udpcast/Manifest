@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f9f1d16297ef13ac3fdc7ae2712b6b88 ChangeLog 643
+MD5 f4aec8c74488ac2515a5580e2e31c5f0 udpcast-20050226.ebuild 1016
+MD5 db39a50baeac13a04f4be177adb41627 ChangeLog 776
 MD5 db21dc26a3f6b6a8a90667fc2933a7b1 metadata.xml 575
-MD5 a52b946419016588153830a19e017804 udpcast-20040222.ebuild 1010
+MD5 38c8c890d29c1e9fa1d66cd0c95b8f00 udpcast-20040222.ebuild 1015
 MD5 07450e0ec2d1b1fb3cbe08f3908d49ad files/digest-udpcast-20040222 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBIcawT+MN7JbqCpMRAutTAJ4+odfQJppC/e20ClJFxmZPqMTffwCcCyf2
-iAZdiJxM5BPiPmIUrzNuN8E=
-=uydL
------END PGP SIGNATURE-----
+MD5 f7b97c79dec4b11bde01769669058839 files/digest-udpcast-20050226 67

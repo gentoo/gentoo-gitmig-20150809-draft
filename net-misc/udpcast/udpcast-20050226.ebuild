@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/udpcast-20040222.ebuild,v 1.6 2005/03/24 16:41:25 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/udpcast-20050226.ebuild,v 1.1 2005/03/24 16:41:25 vanquirius Exp $
 
 IUSE=""
 DESCRIPTION="Multicast file transfer tool"
@@ -9,7 +9,7 @@ SRC_URI="http://udpcast.linux.lu/current/${P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND="virtual/libc
 	dev-lang/perl"
