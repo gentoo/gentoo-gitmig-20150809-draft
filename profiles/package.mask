@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3107 2004/08/26 15:16:36 lucass Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3108 2004/08/27 02:54:03 tseng Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <tseng@gentoo.org> (26 Aug 2004)
+# selinux headers update, masked until
+# new policy is ready.
+>=sys-kernel/hardened-dev-sources-2.6.7-r8
 
 # <lucass@gentoo.org> (26 Aug 2004)
 # unstable branch of pygtk
