@@ -53,6 +53,9 @@ class depgraph:
 				mydep={}
 			myebuild=self.db[myroot]["porttree"].getname(mykey)
 			edepend=portage.doebuild(myebuild,"depend",1,edebug)
+			if edepend==1:
+				print "!!! emerge aborting."
+				sys.exit(1)
 		mydep={}	
 		if portage.root=="/":
 			mydep["/"]=edepend[0]+" "+edepend[1]
@@ -189,8 +192,11 @@ class depgraph:
 					sys.exit(1)
 
 def post_emerge(retval=0):
-	root=portage.root
+	global myopts
 	print
+	if "--pretend" in myopts:
+		sys.exit(retval)
+	root=portage.root
 	if not os.path.isdir(root+"usr/share/info"):
 		print "    "+root+"usr/share/info doesn't exist, skipping info regeneration."
 	elif not os.path.exists("/usr/bin/install-info"):

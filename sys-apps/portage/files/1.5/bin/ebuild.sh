@@ -1,7 +1,11 @@
 #!/bin/bash
-source /etc/profile
+source /etc/profile > /dev/null 2>&1
 export PATH="/usr/lib/portage/bin:${PATH}"
-source /etc/rc.d/config/functions
+if [ -e /etc/rc.d/config/functions ]
+then
+	source /etc/rc.d/config/functions > /dev/null 2>&1
+fi
+	
 #if no perms are specified, dirs/files will have decent defaults
 #(not secretive, but not stupid)
 umask 022
@@ -615,8 +619,12 @@ dyn_help() {
 #then
 #	source ${PEBUILD}
 #fi
-source ${EBUILD}
-
+source ${EBUILD} 
+if [ $? -ne 0 ]
+then
+	#abort if there was a parse problem
+	exit 1
+fi
 #this is a little trick to define ${A} if it hasn't been defined yet
 if [ "${A}" = "" ]
 then
