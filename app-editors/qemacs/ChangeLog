@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.11 2005/01/01 13:33:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.12 2005/02/20 11:45:33 usata Exp $
+
+*qemacs-0.3.1-r1 (20 Feb 2005)
+
+  20 Feb 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +files/qemacs-0.3.1-make_backup.patch, +qemacs-0.3.1-r1.ebuild:
+  Added a patch to enable users to choose whether to create ~ backup file.
+  This closes bug #75052.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   qemacs-0.3.1.ebuild:
