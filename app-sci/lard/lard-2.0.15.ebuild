@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/lard-2.0.15.ebuild,v 1.2 2003/11/04 10:49:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/lard-2.0.15.ebuild,v 1.3 2004/04/19 15:53:27 phosphan Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -26,7 +28,7 @@ DEPEND="sys-devel/flex
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-configure.patch || die
+	epatch ${FILESDIR}/${P}-configure.patch
 }
 
 src_compile() {

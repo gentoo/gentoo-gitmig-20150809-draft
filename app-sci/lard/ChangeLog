@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/lard
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/ChangeLog,v 1.8 2004/04/19 10:32:35 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/ChangeLog,v 1.9 2004/04/19 15:53:27 phosphan Exp $
+
+*lard-2.0.15-r1 (19 Apr 2004)
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> lard-2.0.15-r1.ebuild,
+  lard-2.0.15.ebuild, files/2.0.15-gcc-multi-string-literal.patch:
+  Added patches from bug #25007
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> lard-20030204.ebuild:
   Using epatch instead of patch.
