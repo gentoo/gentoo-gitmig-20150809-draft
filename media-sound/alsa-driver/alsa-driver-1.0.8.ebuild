@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.4 2005/01/23 20:49:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.5 2005/01/24 09:56:58 chrb Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -61,9 +61,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-
-	[ "${PROFILE_ARCH}" == "xbox" ] && \
-		epatch ${FILESDIR}/${PN}-1.0.7-xbox.patch
 
 	convert_to_m ${S}/Makefile
 }
