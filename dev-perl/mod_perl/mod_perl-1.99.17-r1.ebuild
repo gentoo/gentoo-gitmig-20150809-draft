@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.17-r1.ebuild,v 1.1 2004/11/14 02:10:02 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.17-r1.ebuild,v 1.2 2005/03/16 23:09:56 beu Exp $
 
 inherit eutils
 
@@ -23,7 +23,6 @@ SLOT="1"
 DEPEND="dev-lang/perl
 	=net-www/apache-2*
 	>=dev-perl/CGI-2.93
-	>=sys-apps/sed-4
 	app-admin/sudo"
 
 src_unpack() {
