@@ -1,11 +1,14 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.26 2003/07/29 19:33:10 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.27 2003/08/03 22:28:37 gmsoft Exp $
 
   30 Jul 2003; Martin Holzer <mholzer@gentoo.org> hdparm-5.4.ebuild:
   Marked stable on x86.
 
 *hdparm-5.4 (27 Jun 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> hdparm-5.4.ebuild :
+  Marked stable on hppa.
 
   27 Jun 2003; <msterret@gentoo.org> hdparm-5.4.ebuild:
   version bump (bug 23593)
@@ -15,7 +18,7 @@
 
 *hdparm-5.3-r2 (01 Mar 2003)
 
-  16 Arp 2003; Guy Martin <gmsoft@gentoo.org> hdparm-5.3-r2.ebuild :
+  16 Apr 2003; Guy Martin <gmsoft@gentoo.org> hdparm-5.3-r2.ebuild :
   Marked stable on hppa.
 
   01 Apr 2003; Christian Birchinger <joker@gentoo.org> hdparm-5.3-r2.ebuild:
