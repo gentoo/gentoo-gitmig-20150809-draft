@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.1 2003/10/30 07:27:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.2 2003/11/03 16:05:59 vapier Exp $
 
 inherit games
 
@@ -59,4 +59,10 @@ src_install() {
 	insinto ${GAMES_DATADIR}/quake-data/industri
 	doins *
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	einfo "Please setup your quake pak files before playing in"
+	einfo "${GAMES_DATADIR}/quake-data"
 }
