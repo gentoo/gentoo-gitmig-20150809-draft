@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.31.ebuild,v 1.2 2004/03/21 04:11:12 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.31.ebuild,v 1.3 2004/03/30 04:59:17 latexer Exp $
 
-inherit mono flag-o-matic
+inherit eutils mono flag-o-matic
 
 strip-flags
 
 MCS_P="mcs-${PV}"
 MCS_S=${WORKDIR}/${MCS_P}
 
-IUSE=""
+IUSE="nptl"
 DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
 SRC_URI="http://www.go-mono.com/archive/${P}.tar.gz
 	http://www.go-mono.com/archive/${MCS_P}.tar.gz"
@@ -44,7 +44,15 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-nptl=no || die
+	local myconf=""
+	if [ -n "`use nptl`" ] && have_NPTL
+	then
+		myconf="${myconf} --with-nptl=yes"
+	else
+		myconf="${myconf} --with-nptl=no"
+	fi
+
+	econf ${myconf} || die
 	MAKEOPTS="${MAKEOPTS} -j1" emake || die "MONO compilation failure"
 
 	ln -s ../runtime ${WORKDIR}/${P}/runtime/lib
