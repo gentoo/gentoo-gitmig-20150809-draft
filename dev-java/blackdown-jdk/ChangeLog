@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.8 2002/05/26 20:04:17 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.9 2002/06/25 01:35:16 karltk Exp $
+
+*blackdown-jdk-1.3.1-r7 (25 Jun 2002)
+
+  25 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r7.ebuild files/digest-blackdown-jdk-1.3.1-r7:
+ 
+  Now Blackdown JDK is set to be the default VM if none are set on install.
+
+  Removed blackdown-jdk-1.3.1-r6.ebuild files/digest-blackdown-jdk-1.3.1-r6
 
 *blackdown-jdk-1.3.1-r6 (26 May 2002)
 
