@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r4.ebuild,v 1.5 2003/09/25 01:38:07 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r4.ebuild,v 1.6 2003/11/18 07:31:28 spider Exp $
 
 inherit eutils
 
@@ -23,7 +23,8 @@ KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha ~hppa ~mips"
 # we should NEVER depend on /usr/src/linux existing ever
 # ~robbat2 2003/08/16
 DEPEND="virtual/os-headers
-		>=sys-apps/sed-4"
+		>=sys-apps/sed-4
+		tetex? ( app-text/tetex )"
 RDEPEND="virtual/glibc"
 
 src_unpack() {

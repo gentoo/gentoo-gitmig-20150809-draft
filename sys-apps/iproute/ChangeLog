@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.26 2003/09/25 01:38:07 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.27 2003/11/18 07:31:28 spider Exp $
+
+  18 Nov 2003; <spider@gentoo.org> iproute-20010824-r4.ebuild:
+  Used tetex without any dependency. Added DEPEND="" statement
 
   25 Sep 2003; Christian Birchinger <joker@gentoo.org>
   iproute-20010824-r4.ebuild:
