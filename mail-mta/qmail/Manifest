@@ -2,7 +2,7 @@ MD5 326c3d12fa42f7d77ec25d0034c6386c qmail-1.03-r11.ebuild 11387
 MD5 b29fd46e11237b9ee8c69b705a91b1bf qmail-1.03-r8.ebuild 8060
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 d18a1222087e80a39b2588e0f12e6e13 qmail-1.03-r10.ebuild 11111
-MD5 c40ef2120074e7931a689ba568d107d4 ChangeLog 20391
+MD5 2030c60ffebf9ed3559ad3d3502bbaec ChangeLog 20477
 MD5 5eacc23899acc4cd889111456359ae64 qmail-1.03-r16.ebuild 19348
 MD5 48561c5b6846d4b381dfdd498b1955f4 qmail-1.03-r9.ebuild 9887
 MD5 680b7751a954606dfe22cc1b413011df qmail-1.03-r12.ebuild 13703
@@ -28,7 +28,7 @@ MD5 7f17bb21b4ada140e73809d6478a5544 files/config-sanity-check 1223
 MD5 ed8621dc81c25323e10609fc05d861df files/rc 284
 MD5 6e7b856c1034c00ee4ff63209c354c25 files/run-qmailsmtpd 839
 MD5 c8254c53c104004d5beecb39ca689d48 files/gencert.sh 224
-MD5 5c22397958f313d4cc62239e3e90c188 files/conf-smtpd 1702
+MD5 cb04143679bed2dbe504bcc922b78efc files/conf-smtpd 1875
 MD5 5897cb300c3233c91c7e221c8b4b8501 files/digest-qmail-1.03-r8 245
 MD5 fe86ebf974cc7cb1aaddff8311ae89bc files/tcp.smtp.sample 4166
 MD5 8a0617c35da5f6703ad17a74ca617a7e files/run-qmailqmtpdlog 316
