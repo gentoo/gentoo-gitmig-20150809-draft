@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/cryptlib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.5 2004/06/24 23:03:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.6 2004/11/04 09:53:08 dragonheart Exp $
+
+*cryptlib-3.1 (04 Nov 2004)
+
+  04 Nov 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  -cryptlib-3.0.ebuild, +cryptlib-3.1.ebuild, -cryptlib-3.1_beta04.ebuild,
+  cryptlib-3.1_beta05.ebuild, metadata.xml:
+  Removed old versions. Version bump as per bug #69986. Replace use with useq.
+  Added app-arch/zip dependancy as per bug #69831. Thanks to Blake Ramsdell
+  <blake@sendmail.com> and Alexandru Toma <flash3001@yahoo.com> respectively.
+  Metadata added for crypto herd.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> cryptlib-3.0.ebuild,
   cryptlib-3.1_beta04.ebuild, cryptlib-3.1_beta05.ebuild:
