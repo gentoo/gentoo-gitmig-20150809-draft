@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.8.1.ebuild,v 1.3 2003/02/13 13:52:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.8.1.ebuild,v 1.4 2003/02/28 16:55:00 liquidx Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ DESCRIPTION="Free RADIUS server with MySQL support"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/freeradius.tar.gz"
 HOMEPAGE="http://www.freeradius.org"
 KEYWORDS="~x86"
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="sys-devel/gcc"

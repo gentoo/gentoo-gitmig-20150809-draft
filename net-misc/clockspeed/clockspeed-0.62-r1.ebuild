@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.13 2003/02/10 10:31:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.14 2003/02/28 16:55:00 liquidx Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://cr.yp.to/clockspeed/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/"
 
 SLOT="0"
-LICENSE="freeware"
+LICENSE="as-is"
 KEYWORDS="x86 sparc ppc"
 
 DEPEND="sys-apps/groff"

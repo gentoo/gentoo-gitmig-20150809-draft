@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4_beta.ebuild,v 1.3 2003/02/13 14:47:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4_beta.ebuild,v 1.4 2003/02/28 16:55:00 liquidx Exp $
 
 IUSE="nls esd gnome oss"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.krasu.ru/soft/chuchelo/"
 # Currently seems to be pretty borked
 KEYWORDS="-x86 -ppc -sparc  -alpha"
 SLOT="0"
-LICENSE="nt"
+LICENSE="Artistic"
 
 DEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0

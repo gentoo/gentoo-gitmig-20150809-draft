@@ -4,7 +4,7 @@
 DESCRIPTION="Intermezzo is an advanced replicating networked filesystem."
 HOMEPAGE="http://www.inter-mezzo.org"
 
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 

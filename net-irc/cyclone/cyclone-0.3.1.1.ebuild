@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/cyclone-0.3.1.1.ebuild,v 1.6 2003/02/13 14:14:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/cyclone-0.3.1.1.ebuild,v 1.7 2003/02/28 16:55:00 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IRC daemon with hostname cloaking, SOCKS proxy checking and other advanced features"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.slashnet.org/pub/cyclone/server/${P}.tar.gz"
 HOMEPAGE="http://www.slashnet.org"
 SLOT="0"
 KEYWORDS="~ppc"
-LICENSE="GPL & BSD"
+LICENSE="GPL-2"
 DEPEND="virtual/glibc"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/pimpd-0.8.ebuild,v 1.8 2003/02/13 15:04:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/pimpd-0.8.ebuild,v 1.9 2003/02/28 16:55:00 liquidx Exp $
 # Updated to version 0.8 by Olivier Reisch on Fri Apr 26 11:44:26 CEST 2002
 
 A=pimpd_0.8.tar.gz
@@ -9,7 +9,7 @@ DESCRIPTION="pimpd is a (hopefully) RFC1413-compliant identd server supporting L
 SRC_URI="http://cats.meow.at/~peter/${A}"
 HOMEPAGE="http://cats.meow.at/~peter/pimpd.html"
 KEYWORDS="x86 sparc "
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 
 src_compile() {

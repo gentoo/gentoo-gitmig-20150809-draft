@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # /home/cvsroot/gentoo-x86/net-misc/rdate,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-990821.ebuild,v 1.12 2003/02/13 15:05:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-990821.ebuild,v 1.13 2003/02/28 16:55:00 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="rdate uses the NTP server of your choice to syncronize/show the current time"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/network/misc/${P}.tar.gz"
 HOMEPAGE="http://www.freshmeat.net/projects/rdate"
 KEYWORDS="x86 ppc sparc alpha"
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND=""

@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/tin/tin-1.4.5.ebuild,v 1.7 2003/02/13 15:17:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/tin/tin-1.4.5.ebuild,v 1.8 2003/02/28 16:55:00 liquidx Exp $
 
 IUSE="ncurses"
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v1.4/${P}.tar.gz"
 HOMEPAGE="http://www.tin.org/"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="ncurses? ( sys-libs/ncurses )"

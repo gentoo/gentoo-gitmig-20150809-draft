@@ -4,7 +4,7 @@
 
 DESCRIPTION="libraw1394 provides direct access to the IEEE 1394 bus through the Linux 1394 subsystem's raw1394 user space interface."
 HOMEPAGE="http://sourceforge.net/projects/libraw1394/"
-LICENSE="LGPL"
+LICENSE="LGPL-2.1 | GPL-2"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/libraw1394/${PN}_${PV}.tar.gz"
 S=${WORKDIR}/${P}
 

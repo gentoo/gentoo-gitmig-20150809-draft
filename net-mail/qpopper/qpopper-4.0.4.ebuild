@@ -18,7 +18,7 @@ DEPEND="virtual/glibc \
 	  ssl? ( dev-libs/openssl )"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="qpopper | GPL-2"
 KEYWORDS="x86 sparc "
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/yencode/yencode-0.46.ebuild,v 1.8 2003/02/13 15:17:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/yencode/yencode-0.46.ebuild,v 1.9 2003/02/28 16:55:00 liquidx Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/yencode/${P}.tar.gz"
@@ -9,7 +9,7 @@ DESCRIPTION="yEnc encoder/decoder package"
 DEPEND="virtual/glibc"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 src_compile() {

@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.7-r1.ebuild,v 1.1 2003/02/27 17:18:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.7-r1.ebuild,v 1.2 2003/02/28 16:55:00 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk# is a C# language binding for the GTK2 toolkit."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gtk-sharp.sourceforge.net/"
 
-LICENSE="LGPL"
+LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="gnome"
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/shout-0.8.0-r1.ebuild,v 1.7 2003/02/13 15:06:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/shout-0.8.0-r1.ebuild,v 1.8 2003/02/28 16:55:00 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Shout is a program for creating mp3 stream for use with icecast or shoutcast"
 SRC_URI="http://www.icecast.org/releases/${P}.tar.gz"
 HOMEPAGE="http://www.icecast.org"
 KEYWORDS="x86 sparc ~ppc"
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="virtual/glibc"

@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/apsfilter-7.2.2.ebuild,v 1.4 2003/02/13 15:23:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/apsfilter-7.2.2.ebuild,v 1.5 2003/02/28 16:55:00 liquidx Exp $
 
 DESCRIPTION="Apsfilter Prints So Fine, It Leads To Extraordinary Results"
 HOMEPAGE="http://www.apsfilter.org"
 KEYWORDS="x86 ppc"
 SLOT="0"
-LICENSE="postcard-apsfilter"
+LICENSE="GPL-2"
 
 DEPEND="virtual/lpr >=app-text/ghostscript-6.53-r2
 >=app-text/psutils-1.17 >=media-gfx/imagemagick-5.4.5
