@@ -44,3 +44,4 @@ slotmove ~sys-devel/libtool-1.5.2 0 1.5
 move x11-misc/kgamma kde-misc/kgamma
 move app-misc/mwavem net-dialup/mwavem
 move net-misc/linesrv net-dialup/linesrv
+move net-misc/tftp-hpa net-ftp/tftp-hpa
