@@ -1,17 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.1-r1.ebuild,v 1.7 2005/01/08 23:58:23 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.1-r1.ebuild,v 1.8 2005/01/22 07:21:05 vapier Exp $
 
-S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
+
 LICENSE="as-is"
 SLOT="2.0"
-
-IUSE="accessibility cdr dvdr hal"
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="x86 ppc sparc amd64 ~mips hppa ~ia64 alpha"
+KEYWORDS="x86 ppc sparc amd64 ~mips hppa ia64 alpha"
+IUSE="accessibility cdr dvdr hal"
+
+S=${WORKDIR}
 
 RDEPEND="!gnome-base/gnome-core
 
@@ -130,7 +131,7 @@ RDEPEND="!gnome-base/gnome-core
 # intltool
 # gtk-doc
 
-pkg_postinst () {
+pkg_postinst() {
 
 	einfo "Note that to change windowmanager to metacity do: "
 	einfo " export WINDOW_MANAGER=\"/usr/bin/metacity\""

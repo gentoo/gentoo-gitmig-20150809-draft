@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.0.2-r1.ebuild,v 1.7 2005/01/08 23:37:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.0.2-r1.ebuild,v 1.8 2005/01/22 07:16:30 vapier Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Daemon that enforces volume-related policies"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 ~ia64"
+KEYWORDS="amd64 ia64 ppc x86"
 IUSE=""
 
 # we just require the latest of the utopia stack to be on the safe side
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.29"
 
-DOCS="AUTHORS ChangeLog COPYING README HACKING NEWS TODO"
+DOCS="AUTHORS ChangeLog README HACKING NEWS TODO"
 
 src_unpack() {
 
