@@ -1,14 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4-r2.ebuild,v 1.2 2002/06/29 12:36:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4-r4.ebuild,v 1.1 2002/07/12 21:57:42 g2boojum Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)."
 HOMEPAGE="http://www.sendmail.org"
 LICENSE="Sendmail"
 SLOT="0"
+KEYWORDS="x86"
 
 PROVIDE="virtual/mta"
 DEPEND="net-dns/hesiod
+	net-mail/mailbase
 	sys-libs/gdbm
 	sys-devel/m4
 	sasl? ( dev-libs/cyrus-sasl )
@@ -38,17 +40,7 @@ SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 
 S=${WORKDIR}/${P}
 
-#adds ".keep" files so that dirs aren't auto-cleaned
-keepdir() {
-	dodir $*
-	local x
-	for x in $*
-	do
-		touch ${D}/${x}/.keep
-	done
-}
-
-pkg_setup() {
+pkg_preinst() {
 	if ! grep -q ^smmsp: /etc/group
 	then
 		groupadd smmsp || die "problem adding group smmsp"
@@ -109,8 +101,6 @@ src_install () {
 	dodir /etc/pam.d /usr/bin /usr/include/libmilter /usr/lib 
 	dodir /usr/share/man/man{1,5,8} /usr/sbin /var/log /usr/share/sendmail-cf
 	dodir /var/spool/{mqueue,clientmqueue} /etc/conf.d
-	fperms 770 /var/spool/clientmqueue
-	fperms 700 /var/spool/mqueue
 	keepdir /var/spool/{clientmqueue,mqueue}
 	for dir in libmilter libsmutil sendmail mailstats praliases smrsh makemap vacation
 	do
@@ -122,8 +112,6 @@ src_install () {
 			install -C ${OBJDIR}/${dir} \
 			|| die "install failed"
 	done
-	fowners root.smmsp /usr/sbin/sendmail
-	fowners root.smmsp /var/spool/clientmqueue
 	for dir in rmail mail.local
 	do
 		make DESTDIR=${D} MANROOT=/usr/share/man/man \
@@ -134,6 +122,10 @@ src_install () {
 			force-install -C ${OBJDIR}/${dir} \
 			|| die "install failed"
 	done
+	fowners root.smmsp /usr/sbin/sendmail
+	fowners root.smmsp /var/spool/clientmqueue
+	fperms 770 /var/spool/clientmqueue
+	fperms 700 /var/spool/mqueue
 	dosym /usr/sbin/sendmail /usr/lib/sendmail
 	dosym /usr/sbin/makemap /usr/bin/makemap
 	dodoc FAQ LICENSE KNOWNBUGS README RELEASE_NOTES doc/op/op.ps
