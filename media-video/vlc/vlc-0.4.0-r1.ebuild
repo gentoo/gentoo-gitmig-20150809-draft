@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.0-r1.ebuild,v 1.2 2002/06/18 15:09:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.0-r1.ebuild,v 1.3 2002/06/18 16:52:30 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="VideoLAN Client - DVD/video player"
@@ -36,7 +36,7 @@ src_unpack() {
 	if [ ${QTDIR} = "/usr/qt/3" ]
 	then
 		cp configure.in configure.in.orig
-		sed "s:\(-L${KDEDIR}/lib\) -lkfile:\1:" \
+		sed "s:-lkfile::" \
 			configure.in.orig > configure.in
 
 		cd ${S}/plugins/kde
