@@ -1,0 +1,2 @@
+Please use install/install.php to configure phpBB.
+After that, please delete the contribs/ and install/ directories

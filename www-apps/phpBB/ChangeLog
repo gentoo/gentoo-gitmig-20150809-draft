@@ -1,0 +1,66 @@
+# ChangeLog for net-www/phpBB
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.1 2004/08/15 15:27:23 stuart Exp $
+
+*phpBB-2.0.6-r2 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/2.0.8-postinstall-en.txt, +files/phpBB-2.0.6-security.patch,
+  +phpBB-2.0.6-r1.ebuild, +phpBB-2.0.6-r2.ebuild, +phpBB-2.0.8a-r1.ebuild,
+  +phpBB-2.0.8a.ebuild:
+  Moved from net-www/phpBB to www-apps/phpBB.
+
+*phpBB-2.0.8a-r1 (14 May 2004)
+
+  14 May 2004; Stuart Herbert <stuart@gentoo.org> phpBB-2.0.8a-r1.ebuild,
+  files/2.0.8-postinstall-en.txt:
+  Converted phpBB-2.0.8a to use webapp-config; by Lars Tiefland
+  <ltiefland@gate-birds-sky.org>; see bug #50969
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> phpBB-2.0.6-r1.ebuild:
+  Add inherit eutils
+
+*phpBB-2.0.8a (30 Mar 2004)
+
+  30 Mar 2004; Stuart Herbert <stuart@gentoo.org> phpBB-2.0.8a.ebuild:
+  Version bump; for bug #45482
+
+*phpBB-2.0.6-r2 (02 Mar 2004)
+
+  02 Mar 2004; Martin Holzer <mholzer@gentoo.org> phpBB-2.0.6-r2.ebuild:
+  this is 2.0.6d which is a security release. see bug 43474
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org> phpBB-2.0.6-r1.ebuild:
+  Fix for bug #32636
+
+  05 Dec 2003; Martin Holzer <mholzer@gentoo.org>
+  files/phpBB-2.0.6-security.patch:
+  security was added by upstream maintainer.
+
+  02 Dec 2003; Martin Holzer <mholzer@gentoo.org> :
+  updating digest. Closes #34914.
+
+  23 Nov 2003; Martin Holzer <mholzer@gentoo.org> phpBB-2.0.6-r1.ebuild:
+  adding RESTRICT="nomirror".
+
+*phpBB-2.0.6-r1 (24 Sep 2003)
+
+  24 Sep 2003; Martin Holzer <mholzer@gentoo.org> phpBB-2.0.6-r1.ebuild,
+  files/phpBB-2.0.6-security.patch:
+  Added security patch. Closes #29198.
+
+*phpBB-2.0.6 (11 Aug 2003)
+
+  11 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> phpBB-2.0.6.ebuild:
+  Version Bump
+
+*phpBB-2.0.5 (20 Jun 2003)
+
+  20 Jun 2003; Robin Johnson <robbat2@gentoo.org> phpBB-2.0.5.ebuild:
+  Version bump. Removing old ebuilds shortly as per security issue in bug
+  #23147.
+
+*phpBB-2.0.4 (07 Feb 2003)
+
+  07 Feb 2003; Ryan Phillips <rphillips@gentoo.org> :
+  New package. Submitted by Tim Radisch. Fixes #14912
