@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6.ebuild,v 1.5 2003/10/21 16:09:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6.ebuild,v 1.6 2003/11/03 02:40:31 drobbins Exp $
 
 IUSE="tcpd"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="ia64 x86 ~ppc ~alpha sparc ~arm ~hppa ~amd64"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )"
-RDEPEND="${DEPEND} >=net-nds/portmap-5b-r6"
+RDEPEND="${DEPEND} >=net-nds/portmap-5b-r6 >=sys-apps/util-linux-2.11f"
 
 src_compile() {
 	./configure \
