@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmmaiload
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.15 2004/12/06 10:13:05 s4t4n Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.16 2005/01/28 23:43:48 s4t4n Exp $
+
+  29 Jan 2005; Michele Noberasco <s4t4n@gentoo.org> wmmaiload-1.0.2.ebuild:
+  Stable for x86. Fix copyright headers.
+  wmmaiload-1.0.1.ebuild:
+  Fix copyright headers.
 
 *wmmaiload-1.0.2 (06 Dec 2004)
 

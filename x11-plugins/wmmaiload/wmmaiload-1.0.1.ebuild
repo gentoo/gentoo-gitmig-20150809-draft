@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-1.0.1.ebuild,v 1.6 2004/12/06 10:13:05 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-1.0.1.ebuild,v 1.7 2005/01/28 23:43:48 s4t4n Exp $
 
 DESCRIPTION="dockapp that monitors one or more mailboxes."
 SRC_URI="http://tnemeth.free.fr/projets/programmes/${P}.tar.gz"
