@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellaclock
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/ChangeLog,v 1.12 2004/11/06 16:30:53 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/ChangeLog,v 1.13 2004/11/12 18:34:29 gustavoz Exp $
+
+  12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gkrellaclock-0.3.2.1.ebuild:
+  Stable on sparc
 
   06 Nov 2004; <pyrania@gentoo.org> gkrellaclock-0.3.2.1.ebuild:
   Marked stable on x86.
