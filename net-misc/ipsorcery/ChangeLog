@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzers/ipsorcery
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsorcery/ChangeLog,v 1.1 2002/04/22 00:20:31 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsorcery/ChangeLog,v 1.2 2002/06/18 20:42:28 rphillips Exp $
+
+*ipsorcery-1.6 (18 Jun 2002)
+
+  18 Jun 2002; Ryan Phillips <rphillips@gentoo.org> ipsorcery-1.6.ebuild :
+  
+  Version rev
 
 *ipsorcery-1.5 (21 Apr 2002)
 
