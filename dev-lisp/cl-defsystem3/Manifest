@@ -3,7 +3,7 @@ MD5 cc712bedf9c836f2ad9fd9b8c42f4a9d cl-defsystem3-3.3i-r2.ebuild 908
 MD5 1956eb37addae2ab39815052871b9d1d cl-defsystem3-3.3i.ebuild 923
 MD5 a93f55cdeab3939d96b3792377ce93f3 cl-defsystem3-3.3i-r1.ebuild 908
 MD5 e8901fa13a83f452dc91b6d3519b213d cl-defsystem3-3.3i-r3.ebuild 928
-MD5 243b09a649b336ae0b6c505b65a9503d ChangeLog 1187
+MD5 73fc4bacde653b41a33313da82dd0ba7 ChangeLog 1253
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 53c613bb49037b519c71049e0655df9c files/digest-cl-defsystem3-3.3i 84
 MD5 53c613bb49037b519c71049e0655df9c files/digest-cl-defsystem3-3.3i-r1 84
