@@ -1,4 +1,4 @@
-MD5 eb7dba44f89e1967a5b758287ab946c4 ChangeLog 11988
+MD5 f8b2e7afad3babe24b872ab0e6bd844d ChangeLog 12120
 MD5 207931daba6df8e786e1d670a779ccd5 vim-6.1-r19.ebuild 746
 MD5 afa117c01ab0971d1617cd2859de3c50 vim-6.1-r20.ebuild 752
 MD5 77766d8697a1591edafebfdf7328fc3a vim-6.1-r21.ebuild 752
@@ -13,7 +13,7 @@ MD5 9244a0b045b3b65e3e9e427ac15a8b5f vim-6.2.ebuild 765
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 dab97fed6dad404ea6304849abaf860f vim-6.2-r1.ebuild 773
 MD5 fc5912330f03be70f7e65e16ae039030 vim-6.2-r2.ebuild 768
-MD5 13be214d37ef96b9461e8c3ec3040785 vim-6.2-r3.ebuild 772
+MD5 bc755b0b291a80045cb6cffaa98e872d vim-6.2-r3.ebuild 775
 MD5 1d11d58beb06eea4047df9e2aac21b19 files/digest-vim-6.1-r19 276
 MD5 c96b34e1faa671e615625005a24025d0 files/digest-vim-6.1-r20 276
 MD5 b7dc3cd96fb37f8c8a5afb11cd6b6af2 files/digest-vim-6.1-r21 280
