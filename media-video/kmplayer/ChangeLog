@@ -1,6 +1,13 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.13 2003/03/15 19:14:39 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.14 2003/04/26 11:53:10 hannes Exp $
+
+*kmplayer-0.7.4a (26 Apr 2003)
+
+  26 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kmplayer-0.7.3.ebuild,
+  kmplayer-0.7.4a.ebuild:
+  marked 0.7.3 stable; version bump, thanks to Frantz Dhin <fd@redspot.dk> (bug
+  #19514)
 
 *kmplayer-0.7.3 (15 Mar 2003)
 
