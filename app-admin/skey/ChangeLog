@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/skey
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.12 2004/03/24 23:21:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.13 2004/04/15 23:31:58 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> skey-1.1.5-r1.ebuild:
+  adding s390 keyword
 
   25 Mar 2004; Martin Holzer <mholzer@gentoo.org> skey-1.1.5-r1.ebuild,
   skey-1.1.5.ebuild:
