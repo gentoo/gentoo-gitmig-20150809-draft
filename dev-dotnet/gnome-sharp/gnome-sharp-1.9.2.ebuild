@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/gnome-sharp-1.9.2.ebuild,v 1.1 2005/04/02 01:14:40 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/gnome-sharp-1.9.2.ebuild,v 1.2 2005/04/02 16:34:20 swegener Exp $
 
 inherit gtk-sharp-component
 
@@ -15,7 +15,7 @@ DEPEND="${DEPEND}
 		>=gnome-base/libgnomeprintui-2.0
 		>=gnome-base/gnome-panel-2.6
 		>=x11-libs/gtk+-2.0
-		=art-sharp-${PV}*"
+		~dev-dotnet/art-sharp-${PV}"
 
 GTK_SHARP_COMPONENT_SLOT="2"
 GTK_SHARP_COMPONENT_SLOT_DEC="-2.0"

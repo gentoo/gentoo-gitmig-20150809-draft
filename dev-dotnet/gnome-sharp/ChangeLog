@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gnome-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.17 2005/04/02 01:14:40 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.18 2005/04/02 16:34:20 swegener Exp $
+
+  02 Apr 2005; Sven Wegener <swegener@gentoo.org> gnome-sharp-1.9.2.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *gnome-sharp-1.9.2 (02 Apr 2005)
 
