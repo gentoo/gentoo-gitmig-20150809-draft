@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.8.ebuild,v 1.1 2003/03/15 19:46:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.8.ebuild,v 1.2 2003/03/15 19:56:45 woodchip Exp $
 
 inherit eutils
 
-IUSE="pam acl cups ldap ssl tcpd oav"
+IUSE="pam acl cups ldap ssl tcpd"
+IUSE="${IUSE} oav"
 
 VSCAN_VER=0.3.2
 VSCAN_MODS=${VSCAN_MODS:=fprot mks openantivirus sophos trend icap} #kapersky
