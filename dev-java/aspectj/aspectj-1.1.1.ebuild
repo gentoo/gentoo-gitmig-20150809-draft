@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.1.1.ebuild,v 1.7 2004/08/25 23:27:19 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.1.1.ebuild,v 1.8 2004/10/22 10:44:07 absinthe Exp $
 
 inherit java-pkg eutils
 
@@ -11,7 +11,7 @@ DEPEND=">=virtual/jdk-1.3
 	dev-java/ant"
 SLOT="0"
 LICENSE="CPL-1.0 Apache-1.1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 RESTRICT="nomirror"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.21 2004/10/16 16:57:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.22 2004/10/22 10:40:43 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> antlr-2.7.4.ebuild:
+  Keywords ~amd64.
 
 *antlr-2.7.4 (16 Oct 2004)
 
