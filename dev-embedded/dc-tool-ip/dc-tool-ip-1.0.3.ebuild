@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dc-tool-ip/dc-tool-ip-1.0.3.ebuild,v 1.2 2004/06/25 03:07:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dc-tool-ip/dc-tool-ip-1.0.3.ebuild,v 1.3 2004/06/29 13:22:06 vapier Exp $
 
 DESCRIPTION="ethernet program loader for the Dreamcast"
 HOMEPAGE="http://adk.napalm-x.com/dc/dcload-ip/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}
 

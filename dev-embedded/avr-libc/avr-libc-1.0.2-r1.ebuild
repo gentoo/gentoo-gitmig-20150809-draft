@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.0.2-r1.ebuild,v 1.3 2004/06/24 22:05:59 agriffis Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.0.2-r1.ebuild,v 1.4 2004/06/29 13:21:45 vapier Exp $
 
 MY_P=${P/avr-/}
 DESCRIPTION="Libc for the AVR microcontroller architecture"
 HOMEPAGE="http:////www.nongnu.org/avr-libc/"
 SRC_URI="http://savannah.nongnu.org/download/avr-libc/${MY_P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
+IUSE="nls"
 
 DEPEND="dev-embedded/avr-gcc"
 

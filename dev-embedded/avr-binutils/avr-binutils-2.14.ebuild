@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-binutils/avr-binutils-2.14.ebuild,v 1.4 2004/06/24 22:05:37 agriffis Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-binutils/avr-binutils-2.14.ebuild,v 1.5 2004/06/29 13:20:42 vapier Exp $
 
 MY_P=${P/avr-/}
 S=${WORKDIR}/${MY_P}
@@ -10,11 +8,12 @@ DESCRIPTION="The GNU binutils for the AVR microcontroller architecture"
 HOMEPAGE="http://sources.redhat.com/binutils"
 SRC_URI="http://ftp.gnu.org/gnu/binutils/${MY_P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
+IUSE="nls"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	econf \

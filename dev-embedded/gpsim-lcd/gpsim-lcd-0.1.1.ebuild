@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/gpsim-lcd-0.1.1.ebuild,v 1.6 2004/06/24 22:06:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/gpsim-lcd-0.1.1.ebuild,v 1.7 2004/06/29 13:23:16 vapier Exp $
 
 inherit eutils
 
@@ -24,11 +24,6 @@ src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-gcc33.patch
 	epatch ${FILESDIR}/${P}-display_fix.patch
-}
-
-src_compile(){
-	econf || die
-	emake || die
 }
 
 src_install() {

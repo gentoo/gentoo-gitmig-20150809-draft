@@ -1,19 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0.ebuild,v 1.8 2004/06/24 22:08:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0.ebuild,v 1.9 2004/06/29 13:27:13 vapier Exp $
 
-S=${WORKDIR}/${PN}
 DESCRIPTION="Small device C compiler (for various microprocessors)"
-SRC_URI="mirror://sourceforge/sdcc/${P}.tar.gz"
 HOMEPAGE="http://sdcc.sourceforge.net/"
-RESTRICT="nomirror"
+SRC_URI="mirror://sourceforge/sdcc/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
-
 IUSE="doc"
-DEPEND="virtual/glibc
+
+DEPEND="virtual/libc
 	sys-apps/gawk
 	sys-devel/libtool
 	sys-apps/grep
@@ -22,8 +20,9 @@ DEPEND="virtual/glibc
 		virtual/tetex
 		>=app-office/lyx-1.3.4
 		sys-apps/sed )"
+RDEPEND="virtual/libc"
 
-RDEPEND="virtual/glibc"
+S=${WORKDIR}/${PN}
 
 src_compile() {
 	econf || die "Configure failed"
@@ -37,6 +36,6 @@ src_compile() {
 
 src_install() {
 	einstall || die "Make install failed"
-	dodoc COPYING ChangeLog doc/README.txt doc/libdoc.txt doc/INSTALL.txt
+	dodoc ChangeLog doc/README.txt doc/libdoc.txt doc/INSTALL.txt
 	use doc && emake -C doc docdir=${D}/usr/share/doc/${P}/ install
 }

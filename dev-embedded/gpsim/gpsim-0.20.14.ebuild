@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.20.14.ebuild,v 1.3 2004/06/24 22:06:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.20.14.ebuild,v 1.4 2004/06/29 13:22:59 vapier Exp $
 
 inherit eutils
 
@@ -21,13 +21,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gcc3.2.patch
 }
 
-src_compile(){
-	econf || die
-	emake || die
-}
-
 src_install() {
 	einstall || die
-	dodoc ANNOUNCE AUTHORS COPYING ChangeLog HISTORY INSTALL NEWS PROCESSORS
+	dodoc ANNOUNCE AUTHORS ChangeLog HISTORY INSTALL NEWS PROCESSORS
 	dodoc README README.EXAMPLES README.MODULES TODO
 }

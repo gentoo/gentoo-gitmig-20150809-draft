@@ -1,17 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/icdprog-0.3.ebuild,v 1.4 2004/06/24 22:07:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/icdprog-0.3.ebuild,v 1.5 2004/06/29 13:24:32 vapier Exp $
 
 DESCRIPTION="Microchip PIC Programmer using ICD hardware"
-HOMEPAGE="http://${PN}.sf.net/"
+HOMEPAGE="http://icdprg.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
+
 DEPEND="sys-devel/gcc
 	>=sys-apps/sed-4"
-RDEPEND="" #we don't depend on anything after we are compiled
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}

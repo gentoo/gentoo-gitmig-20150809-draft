@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-logic/gpsim-logic-0.0.2.ebuild,v 1.4 2004/06/24 22:07:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-logic/gpsim-logic-0.0.2.ebuild,v 1.5 2004/06/29 13:23:51 vapier Exp $
 
 inherit eutils
 
@@ -19,11 +19,6 @@ IUSE=""
 DEPEND=">=dev-embedded/gpsim-0.20*"
 
 S=${WORKDIR}/${MY_P}
-
-src_compile(){
-	econf || die
-	emake || die
-}
 
 src_install() {
 	einstall || die
