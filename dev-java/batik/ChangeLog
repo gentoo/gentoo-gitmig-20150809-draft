@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.19 2005/02/18 18:40:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.20 2005/03/19 23:29:24 luckyduck Exp $
+
+*batik-1.5.1-r4 (20 Mar 2005)
+
+  20 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +batik-1.5.1-r4.ebuild,
+  +batik-1.5.ebuild:
+  version 1.5 is needed to remove the packed jar issue from dev-java/fop, see
+  #63262. now all jars are accessible by jar-from, java-config -p etc
 
   18 Feb 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   batik-1.5.1-r3.ebuild:
