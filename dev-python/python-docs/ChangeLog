@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.14 2003/11/01 18:51:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.15 2003/12/05 16:44:34 liquidx Exp $
+
+  05 Dec 2003; Alastair Tse <liquidx@gentoo.org> python-docs-2.3.2.ebuild:
+  keep KEYWORDS insync with dev-lang/python-2.3
 
 *python-docs-2.3.2 (01 Nov 2003)
 
