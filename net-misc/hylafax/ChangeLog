@@ -1,11 +1,14 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.11 2002/12/09 04:33:16 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.12 2002/12/09 06:08:45 raker Exp $
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 *hylafax-4.1.5 (25 Oct 2002)
+
+  09 Dec 2002; Nick Hadaway <raker@gentoo.org> hylafax-4.1.5.ebuild :
+  Marked stable.
 
   25 Oct 2002; Nick Hadaway <raker@gentoo.org> hylafax-4.1.5.ebuild,
   files/digest-hylafax-4.1.5 :
