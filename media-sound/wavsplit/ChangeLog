@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/wavsplit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/ChangeLog,v 1.4 2004/06/25 00:29:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/ChangeLog,v 1.5 2004/07/19 23:04:25 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> wavsplit-1.0.ebuild:
+  -sparc -amd64
 
   01 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> wavsplit-1.0.ebuild:
   Stable on x86. nomirror
