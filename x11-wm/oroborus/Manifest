@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cea0b525f29b834e78fed6deffd00f93 ChangeLog 2540
+MD5 4755bc8ebb5283148211f515b32c4ea1 ChangeLog 2637
 MD5 6f678fec0c073bdd194cc247a444ae0e metadata.xml 492
-MD5 98bbc4481152e0031e5b247a2f04d9e3 oroborus-2.0.13.ebuild 1089
+MD5 0765004ab11c027dea49bf6cb6bef38a oroborus-2.0.13.ebuild 1088
 MD5 13e24714087a1ef30da95b4fc5644cd7 oroborus-2.0.4-r1.ebuild 1048
 MD5 cfe80314ff96eb45746cd7444ac5b2a8 oroborus-2.0.7.ebuild 1038
 MD5 617de7c2d459639a6e20528fb8c0a2bc oroborus-2.0.9.ebuild 1046
@@ -15,7 +15,7 @@ MD5 a6eaa4a58b9b8d1ca30c9dad6b738e08 files/oroborus.desktop 100
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCAh3DKRy60XGEcJIRAp1XAJ97JQmF6LgmFlbEgWNys0wc+EUXzACfWEwm
-F66xT8uK7fCwLnEC0Ojd5u8=
-=sz+/
+iD8DBQFCLHFHKRy60XGEcJIRAkv8AJ9wiw8x4hX1qU0RiH0qPNSrCmoQigCfTJmG
+bnkreloGm0k+LXyFCMSoMOQ=
+=VegM
 -----END PGP SIGNATURE-----
