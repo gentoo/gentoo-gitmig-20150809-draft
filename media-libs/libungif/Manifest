@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2075e7ae42a482cf39671368d49d1f8c ChangeLog 2583
-MD5 7a63ace8be99c6d71d084f4cb71fd517 libungif-4.1.3.ebuild 1586
 MD5 856cb55c5b0203cced4ba2840c8f2136 libungif-4.1.0.1b.ebuild 1744
+MD5 b77df6aca16fda7e4ce8fb709e302713 ChangeLog 2757
+MD5 849a1a4af2dcfcbedf129ead41ad0d96 libungif-4.1.3.ebuild 1590
 MD5 f71b3a2bf523f503987501c602a1c1e9 files/digest-libungif-4.1.0.1b 69
 MD5 4dce5cb6bb39518676e2056624963e1a files/libungif-4.1.0-stdarg.patch 655
 MD5 934f005d68b860ad80eff92ecf9e0273 files/libungif-CVS.patch 4542
 MD5 c8f7239f2db03a50ebcc2bd24a0cf8d0 files/digest-libungif-4.1.3 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBW9QQVWNWqTUmv+0RAuLUAJ4hNibU9+JzyVnzQcLkKIbCmhLi9gCfTd2n
-Wfefhll6SOa0KnO942R/poI=
-=FCGr
+iD8DBQFBXn3HArHZZzCEUG0RAl5KAKCDfuvUgIEUFSXZh9+XW5cvBz2rugCggo5b
+oiTaPzt1KmKGy7o37dnXaOc=
+=jqox
 -----END PGP SIGNATURE-----
