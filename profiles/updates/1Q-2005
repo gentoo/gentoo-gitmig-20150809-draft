@@ -223,3 +223,4 @@ move net-www/prozgui www-client/prozgui
 move net-www/elinks www-client/elinks
 move net-www/downman www-client/downman
 move net-www/fetch www-client/fetch
+move net-www/galeon www-client/galeon
