@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.6 2003/02/20 21:59:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.7 2003/02/21 20:41:44 agriffis Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi svga"
 
@@ -8,13 +8,23 @@ inherit libtool flag-o-matic base
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Tools for MJPEG video"
-SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz
-	 quicktime? ( http://download.sourceforge.net/mjpeg/quicktime4linux-1.4-patched.tar.gz )"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
+
+# Portage currently chokes on the following nested conditional.
+#	SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz
+#		quicktime? ( !alpha? (
+#			mirror://sourceforge/mjpeg/quicktime4linux-1.4-patched.tar.gz
+#		) )"
+if [ "$ARCH" = alpha ]; then
+	SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
+else
+	SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz
+		quicktime? ( http://download.sourceforge.net/mjpeg/quicktime4linux-1.4-patched.tar.gz )"
+fi
 
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc alpha"
 
 RDEPEND="media-libs/jpeg
 	media-libs/libpng
@@ -27,7 +37,7 @@ RDEPEND="media-libs/jpeg
 DEPEND="${RDEPEND}
 	x86? ( media-libs/libmovtar )
 	avi? ( media-video/avifile )
-	quicktime? ( >=media-libs/quicktime4linux-1.5.5-r1 )
+	quicktime? ( !alpha? ( >=media-libs/quicktime4linux-1.5.5-r1 ) )
 	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 )
 	mmx? ( dev-lang/nasm )
 	3dnow? ( dev-lang/nasm )
@@ -40,7 +50,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	base_src_unpack
 	
-	if use quicktime; then
+	if use quicktime && ! use alpha; then
 		cd ${WORKDIR}/quicktime4linux-1.4-patch
 		cp libmjpeg.h libmjpeg.h.orig
 		sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" libmjpeg.h.orig > libmjpeg.h
@@ -82,7 +92,7 @@ src_compile() {
 	use avi	\
 		|| myconf="${myconf} --without-aviplay"
 	
-	if use quicktime; then
+	if use quicktime && ! use alpha; then
 		einfo "Building quicktime4linux"
 		myconf="${myconf} --with-quicktime=${WORKDIR}/quicktime4linux-1.4-patch"
 		

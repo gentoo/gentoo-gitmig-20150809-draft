@@ -1,6 +1,6 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.19 2003/02/20 21:59:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.20 2003/02/21 20:41:44 agriffis Exp $
 
 *mjpegtools-1.6.1 (09 Feb 2003)
 
@@ -9,6 +9,10 @@
   Version bumped. Submitted by mathewalexander@surewest.net in #10970.
 
 *mjpegtools-1.6.0-r7 (27 Dec 2002)
+
+  21 Feb 2003; Aron Griffis <agriffis@gentoo.org> mjpegtools-1.6.0-r7.ebuild :
+  Disable quicktime support on alpha, where it doesn't build.
+  Mark stable on alpha in support of Gnome 2.2.
 
   20 Feb 2003; Aron Griffis <agriffis@gentoo.org> mjpegtools-1.6.0-r7.ebuild :
   Make svgalib dependent on USE=svga.  This isn't really the best
