@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20040716.ebuild,v 1.2 2004/08/03 15:44:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20040716.ebuild,v 1.3 2004/10/25 14:16:13 vapier Exp $
 
 inherit eutils base
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 -*"
+KEYWORDS="-* x86"
 IUSE="X alsa arts cups debug nas nptl opengl tcltk"
 
 DEPEND="sys-devel/gcc

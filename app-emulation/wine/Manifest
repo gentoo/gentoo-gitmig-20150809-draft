@@ -1,16 +1,16 @@
-MD5 7de6068b2fa67e8430ce2ac29961149d wine-20040408-r1.ebuild 3277
-MD5 e9ad34610fcd2d127c14e64950c95497 wine-20040121.ebuild 3275
-MD5 f8b49bdd501268de9f2ee7aa642b5300 wine-20040615-r1.ebuild 3471
-MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
-MD5 808e305f9c8d65c78dbf90400b1d7572 wine-20040505.ebuild 3325
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6111a85d7f14dd97627c303240caa276 ChangeLog 13502
-MD5 186919f09f97fe5158908ba472ba25df wine-20040716.ebuild 3445
-MD5 b5307649654483532930907b0485eaf0 files/wine-alsa.patch 86359
-MD5 b1893ef0ed5c38dabcbea9fcc3d35f59 files/digest-wine-20040716 212
-MD5 4312d9c1f7af214bd5cd25fe5f7d4521 files/digest-wine-20040615-r1 212
-MD5 b31b2888ece1838bb246d5d66818c152 files/digest-wine-20040408-r1 215
-MD5 73c3f4c41391cb7ba033bf8d34f54029 files/digest-wine-20040505 212
-MD5 f4a143ff88d5e04d456aed38b376ddb3 files/scrollbars.diff 3102
-MD5 52cb259a2838a89b23a6f00ef4b98bd0 files/digest-wine-20040121 211
-MD5 ae28341f05c0916661c1346a28720230 files/QueryActCtxw_Photoshop7.0.diff 686
+MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
+MD5 0b8a40b373bf8ab6c0368dd5a64f5449 wine-20040716.ebuild 3443
 MD5 1668a758aa2007cb99a773b3c5c844c9 files/winearts-kdecvs-fix.patch 325
+MD5 ae28341f05c0916661c1346a28720230 files/QueryActCtxw_Photoshop7.0.diff 686
+MD5 b1893ef0ed5c38dabcbea9fcc3d35f59 files/digest-wine-20040716 212
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBfQrSHTu7gpaalycRAhMPAKDXeTBjbTeOzC4uOCcZMKHy510ScQCfawKD
+EvrNMBaPSlsKtPpNFiM43uU=
+=pXja
+-----END PGP SIGNATURE-----
