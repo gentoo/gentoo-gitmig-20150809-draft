@@ -1,5 +1,9 @@
 #!/sbin/runscript
 
+depend() {
+    need net
+}
+
 checkconfig() {
     if [ ! -e /etc/ssh/sshd_config ] ; then
 	eerror "You need an /etc/ssh/sshd_config file to run sshd"
