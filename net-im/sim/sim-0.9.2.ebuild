@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.2.ebuild,v 1.10 2004/06/24 23:00:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.2.ebuild,v 1.11 2004/06/28 21:47:45 agriffis Exp $
 
-if [ $( use kde ) ]; then
+if use kde; then
 	inherit kde-base eutils
 	need-kde 3
 else
@@ -25,7 +25,8 @@ RDEPEND="ssl? ( dev-libs/openssl )
 DEPEND="$RDEPEND
 	sys-devel/flex
 	sys-devel/automake
-	>=sys-devel/autoconf-2.58"
+	>=sys-devel/autoconf-2.58
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${P}.tar.gz ; cd ${S}
@@ -43,7 +44,7 @@ src_compile() {
 	myconf="$myconf --without-gkrellm_plugin"
 	myconf="$myconf --prefix=/usr"
 
-	if [ $( use kde ) ]; then
+	if use kde; then
 		need-kde 3
 	else
 		need-qt 3
