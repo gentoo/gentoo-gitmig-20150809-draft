@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.5.ebuild,v 1.3 2003/05/24 14:23:50 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.5.ebuild,v 1.4 2003/06/08 05:25:03 seemant Exp $
 
 IUSE="nls"
 MY_P=${P/-/_}
@@ -11,7 +11,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~mips ~hppa"
 
-DEPEND=">=dev-lang/perl-5"
+DEPEND=">=sys-apps/sed-4
+	>=dev-lang/perl-5"
 RDEPEND="virtual/glibc"
 
 src_unpack() {

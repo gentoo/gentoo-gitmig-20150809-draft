@@ -1,21 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17.ebuild,v 1.1 2003/05/22 21:06:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17.ebuild,v 1.2 2003/06/08 05:26:26 seemant Exp $
 
-MY_P=netkit-rwho-${PV}
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${P}
 DESCRIPTION="Netkit - ruptime/rwho/rwhod"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${MY_P}.tar.gz"
 HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips"
-LICENSE="BSD"
-SLOT="0"
+SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 
-DEPEND="virtual/glibc"
+SLOT="0"
+LICENSE="BSD"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips"
+
+DEPEND="virtual/glibc
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {

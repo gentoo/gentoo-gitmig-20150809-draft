@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6-r2.ebuild,v 1.2 2003/05/24 02:27:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6-r2.ebuild,v 1.3 2003/06/08 05:24:29 seemant Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="~x86 ~ppc ~hppa ~arm ~sparc ~mips ~alpha"
 SLOT="0"
 
 DEPEND="virtual/glibc
+	>=sys-apps/sed-4
 	!build? ( >=dev-libs/popt-1.5 )"
 
 src_unpack() {
