@@ -2,9 +2,9 @@ MD5 84d875011ca557b0ef037f38047bf330 bestcrypt-1.2_p6.ebuild 1539
 MD5 d420cae4702001db3c9d401bba45f917 bestcrypt-1.4_p2.ebuild 1516
 MD5 458b118ea3f626f7f6a245efa5366215 bestcrypt-1.5_p6.ebuild 1500
 MD5 ebdf18b78fd87efd486d7880203fb8ec bestcrypt-1.5_p1.ebuild 1665
-MD5 d44218a866c56617b39616874ede7ddc bestcrypt-1.5_p7-r1.ebuild 1684
+MD5 9afd0bbd09af57401e0f71b639ebbd6e bestcrypt-1.5_p7-r1.ebuild 1773
 MD5 d5eb4d76e4ccea13d1ddc2f84326dc29 bestcrypt-1.5_p5.ebuild 1501
-MD5 42f2cb6580a2a65e95b613c2501c59d3 ChangeLog 3429
+MD5 4a3fcd2a813fe8c23060c46ef5221f24 ChangeLog 3527
 MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
 MD5 01e9c2227bbb3fd5ce1ccc68c921b018 bestcrypt-1.5_p7.ebuild 1508
 MD5 40c01633137047f428dcc798ecdcf0fb bestcrypt-1.5_p2.ebuild 1650

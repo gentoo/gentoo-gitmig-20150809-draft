@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p7-r1.ebuild,v 1.1 2004/10/31 15:06:06 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p7-r1.ebuild,v 1.2 2004/10/31 16:23:58 lostlogic Exp $
 
 inherit flag-o-matic eutils check-kernel
 
@@ -53,4 +53,10 @@ src_install() {
 	einfo "of the standard distribution of BestCrypt for Linux released by Jetico."
 	einfo "For more information on these additional modules:"
 	einfo "visit http://www.carceri.dk/index.php?redirect=other_bestcrypt"
+}
+
+pkg_postinst() {
+	ebegin "Updating modules"
+	update-modules > /dev/null 2>&1
+	eend $?
 }
