@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.13-r6.ebuild,v 1.5 2002/08/01 11:59:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.13-r6.ebuild,v 1.6 2002/08/16 03:55:04 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.OpenLDAP.org/"
 
 SLOT="0"
 LICENSE="OPENLDAP"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=sys-libs/ncurses-5.1
         tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
