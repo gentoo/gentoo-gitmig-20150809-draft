@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.6_pre20040813.ebuild,v 1.1 2004/08/16 13:57:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.6_pre20040813.ebuild,v 1.2 2004/08/16 14:09:54 usata Exp $
 
 S="${WORKDIR}/${PN}"
 
@@ -27,9 +27,9 @@ pkg_setup() {
 	ewarn
 	if [ ! -e /usr/qt/3/include/qinputcontext.h ] ; then
 		die "You need to rebuild >=x11-libs/qt-3.3.2 with cjk USE flag enabled."
-		if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
-			die "Your Qt was not built against the latest immodule API. Please rebuild >=x11-libs/qt-3.3.2."
-		fi
+	fi
+	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
+		die "Your Qt was not built against the latest immodule API. Please rebuild >=x11-libs/qt-3.3.2."
 	fi
 }
 
