@@ -1,0 +1,38 @@
+#!/sbin/runscript
+
+checkconfig() {
+    if [ ! -e /etc/ssh/sshd_config ] ; then
+	eerror "You need an /etc/ssh/sshd_config file to run sshd"
+	eerror "There is a sample file in /usr/share/docs/openssh"
+	return 1
+    fi
+}
+
+gen_keys() {
+    if [ ! -e /etc/ssh/ssh_host_key ] ; then
+	einfo "Generating Hostkey..."
+	/usr/bin/ssh-keygen -b 1024 -f /etc/ssh/ssh_host_key -N ''
+    fi
+    if [ ! -e /etc/ssh/ssh_host_dsa_key ] ; then
+	einfo "Generating DSA-Hostkey..."
+	/usr/bin/ssh-keygen -d -f /etc/ssh/ssh_host_dsa_key -N ''
+    fi
+    if [ ! -e /etc/ssh/ssh_host_rsa_key ] ; then
+	einfo "Generating RSA-Hostkey..."
+	/usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    gen_keys
+    ebegin "Starting sshd"
+    start-stop-daemon --start --quiet --exec /usr/sbin/sshd
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping sshd"
+    start-stop-daemon --stop --quiet --pidfile /var/run/sshd.pid
+    eend $?
+}

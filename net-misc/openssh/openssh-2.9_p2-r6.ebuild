@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2.ebuild,v 1.3 2001/09/07 09:07:37 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r6.ebuild,v 1.1 2001/09/07 09:07:37 woodchip Exp $
 
 P=openssh-2.9p2
 A=${P}.tar.gz
@@ -42,7 +42,7 @@ src_install() {
     dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
 
     insinto /etc/pam.d
-    newins ${FILESDIR}/sshd.pam.rc5 sshd
-    exeinto /etc/rc.d/init.d
-    newexe ${FILESDIR}/sshd.rc5 sshd
+    newins ${FILESDIR}/sshd.pam.rc6 sshd
+    exeinto /etc/init.d
+    newexe ${FILESDIR}/sshd.rc6 sshd
 }

@@ -1,34 +1,43 @@
-#!/sbin/runscript
-SERVICE="sshd"
+#!/bin/sh
+#RCUPDATE:2 3 4:75:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE="openssh"
+opts="start stop"
+
 PIDFILE=/var/run/sshd.pid
 EXE=/usr/sbin/sshd
 
 gen_keys() {
-	if [ ! -e /etc/ssh/ssh_host_key ] ; then
+	if [ ! -e /etc/ssh/ssh_host_key ] 
+	then
 		einfo "Generating Hostkey..."
-		/usr/bin/ssh-keygen -b 1024 -f /etc/ssh/ssh_host_key -N ''
+  		/usr/bin/ssh-keygen -b 1024 -f /etc/ssh/ssh_host_key -N ''
 	fi
-
-	if [ ! -e /etc/ssh/ssh_host_dsa_key ] ; then
+	if [ ! -e /etc/ssh/ssh_host_dsa_key ]
+	then
 		einfo "Generating DSA-Hostkey..."
 		/usr/bin/ssh-keygen -d -f /etc/ssh/ssh_host_dsa_key -N ''
 	fi
-
-	if [ ! -e /etc/ssh/ssh_host_rsa_key ] ; then
+	if [ ! -e /etc/ssh/ssh_host_rsa_key ]
+	then
 		einfo "Generating RSA-Hostkey..."
 		/usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
 	fi
 }
 
 start() {
-	gen_keys
+   	gen_keys
 	ebegin "Starting $SERVICE"
 	start-stop-daemon --start --quiet --exec $EXE
-	eend $? "Started $SERVICE." "Error starting $SERVICE."
+	eend $? 
 }
 
 stop() {
 	ebegin "Stopping $SERVICE"
 	start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
-	eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
+	eend $? 
 }
+
+doservice ${@}
