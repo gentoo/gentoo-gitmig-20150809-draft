@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.4.ebuild,v 1.6 2004/06/24 22:21:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.4.ebuild,v 1.7 2004/06/27 19:25:27 agriffis Exp $
 
 MY_P=${P/-tools/}
 S=${WORKDIR}/${MY_P}
@@ -70,10 +70,10 @@ src_compile() {
 	# installed.
 	sed -e "/^HAS_FORMS/d" config.out > config.out.1
 	sed -e "/^HAS_FORMS/d" config.mk > config.mk.1
-	if [ -z `use gtk` ] || [  -n `use build` ]; then
+	if ! use gtk || use build; then
 		sed -i -e "/^HAS_GTK/d" config.out.1
 		sed -i -e "/^HAS_GTK/d" config.mk.1
-		if [ -z `use X` ] || [ -n `use build` ]; then
+		if ! use X || use build; then
 			sed -i -e "/^HAS_XAW/d" config.out.1
 			sed -i -e "/^HAS_XAW/d" config.mk.1
 		fi
@@ -83,21 +83,16 @@ src_compile() {
 	rm -f config.out.1
 	rm -f config.mk.1
 
-	cd ${S}/cardmgr
-	emake all || die "failed compiling"
-	cd ${S}/flash
-	emake all || die "failed compiling"
+	emake all -C ${S}/cardmgr || die "failed compiling"
+	emake all -C ${S}/flash || die "failed compiling"
 }
 
 src_install () {
-	cd ${S}/cardmgr
-	make PREFIX=${D} install || die "failed installing"
-	cd ${S}/flash
-	make PREFIX=${D} install || die "failed installing"
-	cd ${S}/etc
-	make PREFIX=${D} install || die "failed installing"
-	cd ${S}/man
-	make PREFIX=${D} install-man1-x11 install-man5 install-man8
+	make install PREFIX=${D} -C ${S}/cardmgr || die "failed installing"
+	make install PREFIX=${D} -C ${S}/flash || die "failed installing"
+	make install PREFIX=${D} -C ${S}/etc || die "failed installing"
+	make install-man1-x11 install-man5 install-man8 PREFIX=${D} -C ${S}/man \
+		|| die "failed installing"
 
 	rm -rf ${D}/etc/rc*.d
 
@@ -110,7 +105,7 @@ src_install () {
 	# install our own init script
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/pcmcia.rc pcmcia
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		# install docs

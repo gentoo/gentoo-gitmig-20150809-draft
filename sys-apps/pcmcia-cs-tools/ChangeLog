@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pcmcia-cs-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/ChangeLog,v 1.7 2004/06/24 22:21:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/ChangeLog,v 1.8 2004/06/27 19:25:27 agriffis Exp $
+
+  27 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  pcmcia-cs-tools-3.2.3.ebuild, pcmcia-cs-tools-3.2.4.ebuild:
+  QA - fix use invocation, also repairing version 3.2.4, which contained 
+  [ -n `use build` ]. That construct always evaluates to true because
+  it lacks proper quoting... another good reason to switch to the
+  newer use invocation.
 
   13 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
   pcmcia-cs-tools-3.2.3.ebuild, pcmcia-cs-tools-3.2.4.ebuild:

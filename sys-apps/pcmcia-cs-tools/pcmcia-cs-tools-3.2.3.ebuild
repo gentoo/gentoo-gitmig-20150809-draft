@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.3.ebuild,v 1.8 2004/06/24 22:21:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.3.ebuild,v 1.9 2004/06/27 19:25:27 agriffis Exp $
 
 MY_P=${P/-tools/}
 S=${WORKDIR}/${MY_P}
@@ -69,10 +69,10 @@ src_compile() {
 	# installed.
 	sed -e "/^HAS_FORMS/d" config.out > config.out.1
 	sed -e "/^HAS_FORMS/d" config.mk > config.mk.1
-	if [ -z `use gtk` -o -n `use build` ]; then
+	if ! use gtk || use build; then
 		sed -i -e "/^HAS_GTK/d" config.out.1
 		sed -i -e "/^HAS_GTK/d" config.mk.1
-		if [ -z `use X` -o -n `use build` ]; then
+		if ! use X || use build; then
 			sed -i -e "/^HAS_XAW/d" config.out.1
 			sed -i -e "/^HAS_XAW/d" config.mk.1
 		fi
@@ -109,7 +109,7 @@ src_install () {
 	# install our own init script
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/pcmcia.rc pcmcia
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		# install docs
