@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sleuthkit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/ChangeLog,v 1.4 2004/05/07 04:33:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/ChangeLog,v 1.5 2004/05/07 12:36:15 dragonheart Exp $
+
+  07 May 2004; Daniel Black <dragonheart@gentoo.org> sleuthkit-1.69.ebuild:
+  Added IUSE
 
   07 May 2004; Daniel Black <dragonheart@gentoo.org> -sleuthkit-1.68.ebuild:
   removed version 1.68 as it overwrote sys-apps/file
