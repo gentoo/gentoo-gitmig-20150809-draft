@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.2.5.ebuild,v 1.2 2003/07/01 21:06:57 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.2.5.ebuild,v 1.3 2003/07/03 08:22:02 liquidx Exp $
 
 IUSE="doc ssl"
 
@@ -27,7 +27,9 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS README TODO"
-                                                                                
+
+G2CONF="${G2CONF} --disable-schemas-install"
+
 use ssl \
 	&& G2CONF="${G2CONF} --enable-openssl" \
 	|| G2CONF="${G2CONF} --disable-openssl"
