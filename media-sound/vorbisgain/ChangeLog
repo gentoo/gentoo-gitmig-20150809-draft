@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/vorbisgain
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.1 2003/03/02 07:05:28 jje Exp $
+
+*vorbisgain-0.32 (02 Mar 2003)
+
+  02 Mar 2003; jje <jje@gentoo.org> vorbisgain-0.32.ebuild:
+  Initial revision. 
+  
+  Submitted by Sebastian Droege.
+
