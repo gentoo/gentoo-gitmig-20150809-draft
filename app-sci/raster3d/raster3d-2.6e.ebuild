@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/raster3d/raster3d-2.6e.ebuild,v 1.4 2003/08/05 18:36:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/raster3d/raster3d-2.6e.ebuild,v 1.5 2004/04/19 12:21:32 phosphan Exp $
 
 Name="Raster3D"
 S="${WORKDIR}/${Name}_${PV}"
@@ -10,6 +10,7 @@ SRC_URI="http://www.bmsc.washington.edu/${PN}/${Name}_${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86"
 
 DEPEND="virtual/x11"

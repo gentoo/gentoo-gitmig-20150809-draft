@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/rasmol
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.10 2004/04/01 19:44:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.11 2004/04/19 12:20:49 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> rasmol-2.7.1.1.ebuild,
+  rasmol-2.7.2.1.1.ebuild:
+  Adding IUSE
 
   01 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
   rasmol-2.6_beta2.ebuild, rasmol-2.7.1.1.ebuild:
