@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.8 2002/09/11 14:16:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.9 2002/10/24 06:45:51 lostlogic Exp $
+
+*gpm-1.20.0-r4 (23 Oct 2002)
+
+  23 Oct 2002; Seemant Kulleen <seemant@gentoo.org> gpm-1.20.0-r4.ebuild :
+
+  The ebuild kinda smelled bad, so I gave it a refresher.
+  - Change make to MAKEOPTS="-j1" emake
+  - Change make blah install to einstall
+  - (the kicker) make all libraries, not just some mode 755 to prevent
+    a segfault I was getting when trying to start mc.
 
 *gpm-1.20.0-r3 (3 Jun 2002)
 
