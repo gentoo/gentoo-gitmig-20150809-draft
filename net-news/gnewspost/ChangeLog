@@ -1,6 +1,9 @@
 # ChangeLog for net-news/gnewspost
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/ChangeLog,v 1.9 2004/06/25 00:25:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/ChangeLog,v 1.10 2004/07/10 21:10:31 swegener Exp $
+
+  10 Jul 2004; Sven Wegener <swegener@gentoo.org> gnewspost-0.6.ebuild:
+  Marked stable on x86.
 
   19 Jun 2004; Sven Wegener <swegener@gentoo.org> gnewspost-0.6.ebuild:
   Removed S=${WORKDIR}/${P}
