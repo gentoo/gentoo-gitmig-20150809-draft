@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tolua/tolua-5.0.ebuild,v 1.3 2004/04/12 17:15:43 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tolua/tolua-5.0.ebuild,v 1.4 2004/04/19 02:05:56 weeve Exp $
 
 DESCRIPTION="a tool that simplifies the integration of C/C++ code with Lua"
 HOMEPAGE="http://www.tecgraf.puc-rio.br/~celes/tolua/"
 SRC_URI="ftp://ftp.tecgraf.puc-rio.br/pub/users/celes/tolua/${P}.tar.gz"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
