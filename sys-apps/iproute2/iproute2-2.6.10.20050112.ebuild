@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.10.20050112.ebuild,v 1.2 2005/01/15 00:55:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.10.20050112.ebuild,v 1.3 2005/01/22 02:06:21 eradicator Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,6 +33,9 @@ src_unpack() {
 	epatch \
 		${FILESDIR}/2.6.9.20041019-esqf.patch \
 		${FILESDIR}/2.6.9.20041019-wrr.patch
+
+	# Multilib fixes
+	sed -i "s:/usr/lib/tc:/usr/$(get_libdir)/tc:g" ${S}/tc/Makefile ${S}/tc/tc.c ${S}/tc/q_netem.c
 }
 
 src_compile() {
