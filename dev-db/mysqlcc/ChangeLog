@@ -1,6 +1,19 @@
 # ChangeLog for dev-db/mysqlcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.6 2003/03/09 19:47:23 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.7 2003/03/09 22:42:42 rac Exp $
+
+*mysqlcc-0.8.7-r1 (09 Mar 2003)
+
+  09 Mar 2003; <rac@gentoo.org> mysqlcc-0.8.7-r1.ebuild,
+  files/mysqlcc-0.8.7-configperms.patch, files/mysqlcc-0.8.7-qmakespec.patch:
+  The config.sub included with this package does not recognize linux-gnu
+  machines correctly, so replace it with one taken from a local automake
+  installation and run autoreconf.  Allow the ebuild to override the
+  QMAKESPEC variable, so that 'linux-g++' is picked up correctly.  These
+  are backported from the 0.8.10-r1 ebuild.  Also attempt to backport
+  the security fix eliminating world-readable configuration files and
+  directories that was applied upstream in 0.8.9, since 0.8.7 seems to
+  be the last version that will compile against MySQL 3.x.
 
 *mysqlcc-0.8.10-r1 (04 Mar 2003)
 

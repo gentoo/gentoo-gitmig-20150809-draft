@@ -1,0 +1,17 @@
+--- configure.in.orig	2003-03-04 13:13:05.000000000 -0800
++++ configure.in	2003-03-04 13:13:53.000000000 -0800
+@@ -24,7 +24,13 @@
+ AC_SUBST(MYSQLCC_HEADERS)
+ AC_SUBST(MYSQLCC_SOURCES)
+ AC_OUTPUT(mysqlcc.pro)
+-QMAKESPEC=$QTDIR/mkspecs/$host_os
++
++# the following line is disabled so that we can specify QMAKESPEC from
++# the ebuild - otherwise on some systems it looks for 'linux-gcc',
++# rather than the correct 'linux-g++'
++# Robert Coie <rac@gentoo.org> 2003.03.04
++#QMAKESPEC=$QTDIR/mkspecs/$host_os
++
+ echo "Creating Makefile with qmake"
+ QMAKESPEC=$QMAKESPEC QTDIR=$QTDIR $QTDIR/bin/qmake mysqlcc.pro
+ if test ! $? = 0 ; then
