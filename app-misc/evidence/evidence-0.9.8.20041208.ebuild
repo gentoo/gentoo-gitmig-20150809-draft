@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20041208.ebuild,v 1.1 2004/12/11 20:33:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20041208.ebuild,v 1.2 2004/12/17 03:45:55 vapier Exp $
 
 inherit enlightenment eutils flag-o-matic
 
@@ -39,22 +39,22 @@ src_compile() {
 	# if we turn this on evas gets turned off (bad !)
 	#use gnome && MY_ECONF="${MY_ECONF} --enable-canvas-gnomecanvas"
 
-#		`use_enable gnome backend-gnomevfs2`
-#		`use_enable kde backend-kio`
+#		$(use_enable gnome backend-gnomevfs2)
 	export MY_ECONF="
 		--enable-ecore-ipc
 		--enable-canvas-evas2
 		--enable-extra-themes
 		--enable-extra-iconsets
-		`use_enable xine thumbnailer-xine`
-		`use_enable avi thumbnailer-avi`
-		`use_enable mpeg thumbnailer-mpeg3`
-		`use_enable perl pcre`
-		`use_enable X x`
-		`use_enable mad libmad`
-		`use_enable oggvorbis plugin-vorbis`
-		`use_enable truetype plugin-ttf`
-		`use_enable debug`
+		$(use_enable xine thumbnailer-xine)
+		$(use_enable avi thumbnailer-avi)
+		$(use_enable mpeg thumbnailer-mpeg3)
+		$(use_enable perl pcre)
+		$(use_enable X x)
+		$(use_enable mad libmad)
+		$(use_enable oggvorbis plugin-vorbis)
+		$(use_enable truetype plugin-ttf)
+		$(use_enable debug)
+		$(use_with kde)
 		"
 	enlightenment_src_compile
 }
