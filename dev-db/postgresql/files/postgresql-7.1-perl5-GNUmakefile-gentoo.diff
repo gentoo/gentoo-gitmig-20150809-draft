@@ -1,6 +1,6 @@
---- postgresql-7.1.orig/src/interfaces/perl5/GNUmakefile	Fri Nov 17 00:08:57 2000
-+++ postgresql-7.1/src/interfaces/perl5/GNUmakefile	Tue Apr 17 19:20:19 2001
-@@ -36,20 +36,26 @@
+--- postgresql-7.1/src/interfaces/perl5/GNUmakefile.orig	Tue Apr 17 21:28:21 2001
++++ postgresql-7.1/src/interfaces/perl5/GNUmakefile	Tue Apr 17 21:28:27 2001
+@@ -36,20 +36,12 @@
  
  install: Makefile
  	$(MAKE) -f Makefile clean
@@ -12,26 +12,18 @@
 -		$(MAKE) -f Makefile install; \
 -		$(MAKE) clean; \
 -	else \
+-		echo "*****" ;\
+-		echo "* Skipping the installation of the Perl module for lack of permissions."; \
+-		echo "* To install it, change to the directory "`pwd`","; \
+-		echo "* become the appropriate user, and do \`$(MAKE) install'."; \
+-		echo "*****"; \
+-	fi
 +	POSTGRES_LIB="$(DESTDIR)$(libdir)" \
 +	POSTGRES_INCLUDE="$(DESTDIR)$(includedir)" \
 +	$(PERL) $(srcdir)/Makefile.PL
 +	$(MAKE) -f Makefile all; \
-+    PERLDEST="`$(MAKE) --quiet PREFIX=$(DESTDIR)$(prefix) -f Makefile echo-installdir`"; \
-+    if [ ! -d $(PERLDEST) ]; then \
-+      $(mkinstalldirs) $(PERLDEST); \
-+    fi; \
-+    if [ -w $(PERLDEST) ]; then \
 +        $(MAKE) PREFIX=$(DESTDIR)$(prefix) INSTALLMAN3DIR=$(DESTDIR)$(mandir)/man3 -f Makefile install; \
-+	    $(MAKE) clean; \
-+    else \
- 		echo "*****" ;\
- 		echo "* Skipping the installation of the Perl module for lack of permissions."; \
- 		echo "* To install it, change to the directory "`pwd`","; \
- 		echo "* become the appropriate user, and do \`$(MAKE) install'."; \
- 		echo "*****"; \
- 	fi
-+
-+
++        $(MAKE) clean;
  
  
  uninstall:
