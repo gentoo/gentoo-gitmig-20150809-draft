@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r3.ebuild,v 1.1 2004/02/06 17:25:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r3.ebuild,v 1.2 2004/02/06 19:53:06 mr_bones_ Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -69,7 +69,7 @@ src_unpack() {
 		 /^"\)/    { addnl=0 }
 		 addnl && !/\\n\\$/ { sub("$", " \\n\\", $0); exitstatus=0 }
 				   { print }
-         END       { exit exitstatus }' \
+		 END       { exit exitstatus }' \
 		 <include/asm-alpha/xor.h.multiline >include/asm-alpha/xor.h
 	assert "awk script failed, probably doesn't apply to ${KV}"
 	rm -f include/asm-alpha/xor.h.multiline
