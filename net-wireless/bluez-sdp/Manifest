@@ -1,5 +1,6 @@
 MD5 20f9d4d102d7760b9fd6cf4f3c0f54ed bluez-sdp-1.0.ebuild 735
 MD5 549da7977d2465149750ab9392624f81 bluez-sdp-1.2.ebuild 736
+MD5 549da7977d2465149750ab9392624f81 bluez-sdp-1.4.ebuild 736
 MD5 b29767609adab8737b72051247355b18 bluez-sdp-0.8.ebuild 735
 MD5 1ee51a05ff99c522d876caeef24d373f bluez-sdp-1.1.ebuild 735
 MD5 436bfe33f340782a882a2a413b7a20ea ChangeLog 1105
@@ -7,3 +8,4 @@ MD5 f4e5448f73faaecd85551251bbfa9c59 files/digest-bluez-sdp-0.8 65
 MD5 97072f9c08c254bfbef88c59d8458ab8 files/digest-bluez-sdp-1.0 65
 MD5 3af1fa9ee32f95a9b34828a1d7a1ca5e files/digest-bluez-sdp-1.1 65
 MD5 a4eb3d5d9d605fb95cdba2e50aeb4179 files/digest-bluez-sdp-1.2 65
+MD5 38ae18aa288994906e0882a27d34cf64 files/digest-bluez-sdp-1.4 65
