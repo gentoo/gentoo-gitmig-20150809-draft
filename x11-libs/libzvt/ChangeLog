@@ -1,0 +1,8 @@
+# ChangeLog for x11-libs/libzvt
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/ChangeLog,v 1.1 2002/05/22 18:58:37 spider Exp $
+
+
+*libzvt-1.115.2 (22 May 2002)
+  22 May 2002; Spider <spider@gentoo.org> libzvt-1.115.2.ebuild ChangeLog :
+  Added this from the gnome2 tarballs
