@@ -48,10 +48,6 @@
 # Masked for testing md5 support
 #=net-misc/openssh-3.4_p1-r3
 
-# seemant@gentoo.org (09 Jul 2002)
-# Masked for testing.
-=app-shells/tcsh-6.11
-
 # sunflare@gentoo.org (08 Jul 2002)
 # Masking out the old zsnes, since its version numbering scheme is emulation
 # scene based and not UNIX-based; portage wants 1.337 > 1.35.
