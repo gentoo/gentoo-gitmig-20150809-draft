@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.0-r3.ebuild,v 1.10 2005/01/19 13:03:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.0-r3.ebuild,v 1.11 2005/02/11 05:20:27 vapier Exp $
 
 inherit eutils flag-o-matic gcc gnuconfig
 
 DESCRIPTION="File transfer program to keep remote files into sync"
 HOMEPAGE="http://rsync.samba.org/"
 SRC_URI="http://rsync.samba.org/ftp/rsync/old-versions/${P}.tar.gz
-	http://www.imada.sdu.dk/~bardur/personal/patches/${PN}-proxy-auth/${PN}-2.5.6-proxy-auth-1.patch
+	http://www.imada.sdu.dk/~bardur/personal/40-patches/rsync-proxy-auth/rsync-2.5.6-proxy-auth-1.patch
 	acl? ( http://www.saout.de/misc/${P}-acl.diff.bz2 )"
 
 LICENSE="GPL-2"
