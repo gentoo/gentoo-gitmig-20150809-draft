@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.62.ebuild,v 1.1 2004/09/29 21:39:58 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.62.ebuild,v 1.2 2004/10/14 14:47:55 ribosome Exp $
+
+inherit gcc
 
 DESCRIPTION="PHYLIP - The PHYLogeny Inference Package"
 HOMEPAGE="http://evolution.genetics.washington.edu/${PN}.html"
@@ -8,7 +10,7 @@ SRC_URI="ftp://evolution.genetics.washington.edu/pub/${PN}/${P}.tar.gz"
 LICENSE="freedist"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -18,8 +20,8 @@ S=${WORKDIR}/${P}/src
 
 src_compile() {
 	sed -i -e "s/CFLAGS =/CFLAGS = ${CFLAGS}/" Makefile
-	sed -i -e "s/CC        = cc/CC        = ${CC:gcc}/" Makefile
-	sed -i -e "s/DC        = cc/DC        = ${CC:gcc}/" Makefile
+	sed -i -e "s/CC        = cc/CC        = $(gcc-getCC)/" Makefile
+	sed -i -e "s/DC        = cc/DC        = $(gcc-getCC)/" Makefile
 	mkdir ../fonts
 	emake -j1 all put || die
 	mv ../exe/font* ../fonts
