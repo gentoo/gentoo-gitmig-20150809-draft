@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.72 2004/11/23 11:02:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.73 2004/12/19 02:01:14 eradicator Exp $
+
+*mpg123-0.59s-r8 (18 Dec 2004)
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +mpg123-0.59s-r8.ebuild:
+  Security fix for bug #74692.
 
   23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mpg123-0.59s-r7.ebuild:
