@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.36 2005/02/18 22:33:48 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.37 2005/02/24 18:41:01 corsair Exp $
+
+  24 Feb 2005; Markus Rothe <corsair@gentoo.org>
+  cyrus-imap-admin-2.2.12.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *cyrus-imap-admin-2.2.12 (18 Feb 2005)
 
