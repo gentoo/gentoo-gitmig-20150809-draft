@@ -504,7 +504,7 @@ extern struct exec_domain	default_exec_domain;
     pending:		{ NULL, &tsk.pending.head, {{0}}},		\
     blocked:		{{0}},						\
     alloc_lock:		SPIN_LOCK_UNLOCKED,				\
-    journal_info:	NULL
+    journal_info:	NULL,					\
 }
 
 
