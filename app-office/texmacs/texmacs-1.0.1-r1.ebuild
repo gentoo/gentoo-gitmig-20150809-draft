@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.1-r1.ebuild,v 1.2 2003/09/13 07:26:26 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.1-r1.ebuild,v 1.3 2003/10/28 10:41:43 usata Exp $
 
 inherit flag-o-matic
 
@@ -17,7 +17,7 @@ SLOT="0"
 IUSE="spell"
 KEYWORDS="~x86 ~ppc"
 
-RDEPEND=">=app-text/tetex-1.0.7-r7
+RDEPEND="virtual/tetex
 	>=dev-util/guile-1.3.4
 	=sys-apps/sed-4*
 	virtual/x11
