@@ -1,3 +1,5 @@
+MD5 a18a1f3bba93597c790ea2ffccb7548d ChangeLog 1045
+MD5 c3a1ece51c17e41a2e8108b962eee2c3 libcapsinetwork-0.3.0.ebuild 695
 MD5 ee045084d57a10b2e0020f54759e0291 libcapsinetwork-0.2.5.ebuild 694
-MD5 dca93eef8c3e860da840b9c09614ccbb ChangeLog 902
+MD5 833276a2ec2be65c36622b16d8781ec6 files/digest-libcapsinetwork-0.3.0 74
 MD5 fd9c330798219f76fb2190095818f2a0 files/digest-libcapsinetwork-0.2.5 74
