@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r4.ebuild,v 1.5 2004/06/24 22:26:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r4.ebuild,v 1.6 2004/06/29 04:00:30 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="x86 alpha ppc sparc amd64 hppa"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE="cjk maildir ncurses static doc"
 
 RDEPEND=">=dev-libs/libpcre-3.9

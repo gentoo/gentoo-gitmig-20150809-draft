@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.2.1.ebuild,v 1.2 2004/06/25 03:18:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.2.1.ebuild,v 1.3 2004/06/29 03:58:10 vapier Exp $
 
-DESCRIPTION="Restricted shell for SSHd."
+DESCRIPTION="Restricted shell for SSHd"
 HOMEPAGE="http://rssh.sourceforge.net/"
 SRC_URI="mirror://sourceforge/rssh/${P}.tar.gz"
 

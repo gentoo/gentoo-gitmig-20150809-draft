@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.6.ebuild,v 1.16 2004/06/24 22:25:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.6.ebuild,v 1.17 2004/06/29 03:58:52 vapier Exp $
 
 inherit eutils
 
@@ -10,10 +10,10 @@ SRC_URI="http://www.canb.auug.org.au/~dbell/programs/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ~ia64 ppc64"
 IUSE="readline"
-KEYWORDS="x86 ppc sparc alpha hppa mips ~ia64 ppc64 amd64"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )"
 RDEPEND=""

@@ -1,20 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20040526.ebuild,v 1.3 2004/06/24 22:23:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20040526.ebuild,v 1.4 2004/06/29 03:51:30 vapier Exp $
 
-S=${WORKDIR}/${PN/-/_}
-DESCRIPTION="Programmable Completion for bash (includes emerge and ebuild commands)."
+DESCRIPTION="Programmable Completion for bash (includes emerge and ebuild commands)"
 HOMEPAGE="http://www.caliban.org/bash/index.shtml#completion"
 SRC_URI="http://www.caliban.org/files/bash/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa amd64 s390"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 s390"
+IUSE=""
 
 DEPEND="app-arch/tar
 	app-arch/bzip2"
-
 RDEPEND=">=app-shells/bash-2.05a"
+
+S=${WORKDIR}/${PN/-/_}
 
 src_install() {
 	insinto /etc

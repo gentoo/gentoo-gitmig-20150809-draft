@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.5 2004/06/24 22:24:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.6 2004/06/29 03:55:36 vapier Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~alpha arm s390"
 IUSE="static nls"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	!app-shells/pdksh"
 
 S=${WORKDIR}

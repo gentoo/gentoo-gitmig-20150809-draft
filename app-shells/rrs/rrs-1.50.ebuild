@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/rrs-1.50.ebuild,v 1.5 2004/06/24 22:25:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/rrs-1.50.ebuild,v 1.6 2004/06/29 03:57:50 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc"
 IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )
-	virtual/glibc"
+	virtual/libc"
 
 src_unpack() {
 	unpack ${A}

@@ -1,33 +1,33 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8-r2.ebuild,v 1.15 2004/06/24 22:24:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8-r2.ebuild,v 1.16 2004/06/29 03:54:48 vapier Exp $
 
-S=${WORKDIR}/esh
 DESCRIPTION="A UNIX Shell with a simplified Scheme syntax"
-SRC_URI="http://esh.netpedia.net/${P}.tar.gz"
 HOMEPAGE="http://esh.netpedia.net/"
-KEYWORDS="x86 sparc"
-SLOT="0"
-LICENSE="GPL-2"
+SRC_URI="http://esh.netpedia.net/${P}.tar.gz"
 
-DEPEND="virtual/glibc
-		>=sys-libs/ncurses-5.1
-		>=sys-libs/readline-4.1"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 sparc"
+IUSE=""
+
+DEPEND="virtual/libc
+	>=sys-libs/ncurses-5.1
+	>=sys-libs/readline-4.1"
+
+S=${WORKDIR}/${PN}
 
 src_compile() {
-
-	cp Makefile Makefile.orig
-	sed -e "s:^CFLAGS=:CFLAGS=${CFLAGS/-fomit-frame-pointer/} :" \
-		-e "s:^LIB=:LIB=-lncurses :" Makefile.orig > Makefile
+	sed -i \
+		-e "s:^CFLAGS=:CFLAGS=${CFLAGS/-fomit-frame-pointer/} :" \
+		-e "s:^LIB=:LIB=-lncurses :" Makefile
 	make || die
 }
 
 src_install() {
-
-	dobin esh
-	into /usr
+	dobin esh || die
 	doinfo doc/esh.info
-	dodoc CHANGELOG CREDITS GC_README HEADER LICENSE READLNE-HACKS TODO
+	dodoc CHANGELOG CREDITS GC_README HEADER READLNE-HACKS TODO
 	docinto html
 	dodoc doc/*.html
 	docinto examples

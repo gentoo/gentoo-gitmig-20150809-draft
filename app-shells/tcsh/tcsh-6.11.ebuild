@@ -1,36 +1,33 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.11.ebuild,v 1.13 2004/06/24 22:26:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.11.ebuild,v 1.14 2004/06/29 04:00:06 vapier Exp $
 
-IUSE="perl"
+inherit eutils
 
 S=${WORKDIR}/${P}.00
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
+HOMEPAGE="http://www.tcsh.org/"
 SRC_URI="ftp://ftp.gw.com/pub/unix/tcsh/${P}.tar.gz
 	ftp://ftp.astron.com/pub/tcsh/${P}.tar.gz
 	ftp://ftp.funet.fi/pub/unix/shells/tcsh/${P}.tar.gz"
-HOMEPAGE="http://www.tcsh.org/"
-DEPEND="virtual/glibc
+
+LICENSE="BSD"
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
+IUSE="perl"
+
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.1
 	perl? ( dev-lang/perl )"
-
-HOMEPAGE="http://www.tcsh.org/"
-
-SLOT="0"
-LICENSE="BSD"
-KEYWORDS="x86 ppc sparc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-tc.os.h-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-tc.os.h-gentoo.diff
 }
 
 src_compile() {
-
-	econf \
-		--prefix=/ || die
-
+	econf --prefix=/ || die
 	emake || die
 }
 

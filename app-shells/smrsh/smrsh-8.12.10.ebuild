@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/smrsh-8.12.10.ebuild,v 1.4 2004/06/24 22:25:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/smrsh-8.12.10.ebuild,v 1.5 2004/06/29 03:59:43 vapier Exp $
 
-DESCRIPTION="Sendmail restricted shell, for use with MTAs other than Sendmail."
-HOMEPAGE="http://www.sendmail.org"
+DESCRIPTION="Sendmail restricted shell, for use with MTAs other than Sendmail"
+HOMEPAGE="http://www.sendmail.org/"
 SRC_URI="ftp://ftp.sendmail.org/pub/sendmail/sendmail.${PV}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="sys-devel/m4
 	>=sys-apps/sed-4"
@@ -30,7 +31,7 @@ src_compile() {
 	/bin/sh Build
 }
 
-src_install () {
+src_install() {
 	cd "${S}/${PN}"
 	dosbin "${S}/obj.$(uname -s).$(uname -r).$(arch)/${PN}/${PN}"
 

@@ -1,28 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0.ebuild,v 1.7 2004/06/24 22:26:18 agriffis Exp $
-
-IUSE="maildir ncurses static doc pcre cap"
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0.ebuild,v 1.8 2004/06/29 04:00:30 vapier Exp $
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
-
 MYDATE="20040204"
 MY_P="${P/_pre/-pre-}"
-
 SRC_URI="ftp://ftp.zsh.org/pub/${MY_P}.tar.bz2
 	doc? ( ftp://ftp.zsh.org/pub/${MY_P}-doc.tar.bz2 )"
 
-SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="x86 alpha ppc sparc ~amd64 hppa"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
+IUSE="maildir ncurses static doc pcre cap"
 
-DEPEND="sys-apps/groff
-	>=sys-apps/sed-4
-	${RDEPEND}"
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
 	cap? ( sys-libs/libcap )
 	ncurses? ( >=sys-libs/ncurses-5.1 )"
+DEPEND="sys-apps/groff
+	>=sys-apps/sed-4
+	${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 

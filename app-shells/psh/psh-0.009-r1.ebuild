@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/psh-0.009-r1.ebuild,v 1.15 2004/06/24 22:25:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/psh-0.009-r1.ebuild,v 1.16 2004/06/29 03:56:45 vapier Exp $
 
 DESCRIPTION="Combines the interactive nature of a Unix shell with the power of Perl"
-SRC_URI="http://www.focusresearch.com/gregor/psh/${P}.tar.gz"
 HOMEPAGE="http://www.focusresearch.com/gregor/psh/"
+SRC_URI="http://www.focusresearch.com/gregor/psh/${P}.tar.gz"
+
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ppc sparc"
 SLOT="0"
+KEYWORDS="x86 ppc sparc"
+IUSE=""
 
 DEPEND=">=dev-lang/perl-5"
 
 src_compile() {
 	perl Makefile.PL
-
 	make || die
 }
 
@@ -23,14 +24,6 @@ src_install() {
 		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
 		install || die
 
-	dodoc COPYRIGHT HACKING MANIFEST README* RELEASE TODO
+	dodoc HACKING MANIFEST README* RELEASE TODO
 	dodoc examples/complete-examples
 }
-
-
-
-
-
-
-
-

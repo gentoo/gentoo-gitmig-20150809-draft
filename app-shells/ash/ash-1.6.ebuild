@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.11 2004/06/24 22:22:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.12 2004/06/29 03:50:32 vapier Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	-f ${DISTDIR}/bin.tar.gz src/bin/sh)
 	epatch ${DISTDIR}/dash-ash-hetio-yacc.diff.bz2
 }
+
 src_compile() {
 	# pmake name conflicts, use full path
 	/usr/bin/pmake CFLAGS:="-Wall -DBSD=1 -D_GNU_SOURCE -DGLOB_BROKEN \

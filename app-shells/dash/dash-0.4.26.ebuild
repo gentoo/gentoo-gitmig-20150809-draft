@@ -1,22 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.4.26.ebuild,v 1.2 2004/06/24 22:23:59 agriffis Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.4.26.ebuild,v 1.3 2004/06/29 03:53:13 vapier Exp $
 
 MY_P="${P/-/_}"
-S=${WORKDIR}/${PN}
 DESCRIPTION="Debian-version of NetBSD's lightweight bourne shell"
 HOMEPAGE="http://ftp.debian.org/debian/pool/main/d/dash/"
 SRC_URI="http://ftp.debian.org/debian/pool/main/d/dash/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 
 DEPEND="sys-devel/pmake
 	sys-apps/sed
 	dev-util/yacc"
+
+S=${WORKDIR}/${PN}
 
 src_compile() {
 	# pmake name conflicts, use full path

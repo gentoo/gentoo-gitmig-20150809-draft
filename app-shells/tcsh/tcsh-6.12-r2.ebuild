@@ -1,18 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12-r2.ebuild,v 1.11 2004/06/24 22:26:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12-r2.ebuild,v 1.12 2004/06/29 04:00:06 vapier Exp $
+
+inherit eutils
 
 MY_P="${PN}-${PV}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
-SRC_URI="ftp://ftp.astron.com/pub/tcsh/${MY_P}.tar.gz"
 HOMEPAGE="http://www.tcsh.org/"
+SRC_URI="ftp://ftp.astron.com/pub/tcsh/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha ia64 amd64 hppa"
+KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ia64"
 IUSE="cjk perl"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-libs/ncurses-5.1
 	perl? ( dev-lang/perl )"
 
@@ -21,11 +23,8 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-tc.os.h-gentoo.diff || die
-	if use cjk
-	then
-		patch -p0 < ${FILESDIR}/tcsh_enable_kanji.diff || die
-	fi
+	epatch ${FILESDIR}/${P}-tc.os.h-gentoo.diff
+	use cjk && epatch ${FILESDIR}/tcsh_enable_kanji.diff
 }
 
 src_compile() {

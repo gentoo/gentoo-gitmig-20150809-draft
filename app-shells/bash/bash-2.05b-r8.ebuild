@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r8.ebuild,v 1.6 2004/06/24 22:22:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r8.ebuild,v 1.7 2004/06/29 03:51:07 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -8,14 +8,14 @@ inherit eutils flag-o-matic gnuconfig
 PLEVEL="x002 x003 x004 x005 x006 x007"
 
 DESCRIPTION="The standard GNU Bourne again shell"
+HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 SRC_URI="mirror://gnu/bash/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2
 	${PLEVEL//x/mirror://gnu/bash/bash-${PV}-patches/bash${PV/\.}-}"
-HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ppc64"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ppc64"
 IUSE="nls build"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -84,7 +84,7 @@ src_install() {
 		&& rm -rf ${D}/usr \
 		|| ( \
 			doman doc/*.1
-			dodoc README NEWS AUTHORS CHANGES COMPAT COPYING Y2K
+			dodoc README NEWS AUTHORS CHANGES COMPAT Y2K
 			dodoc doc/FAQ doc/INTRO
 
 			ebegin "creating info symlink"

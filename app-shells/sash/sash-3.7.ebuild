@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.7 2004/06/24 22:25:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.8 2004/06/29 03:58:52 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa amd64 ia64 ~ppc64 s390"
 IUSE="readline"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )"
 RDEPEND=""
