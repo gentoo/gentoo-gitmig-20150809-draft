@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/speechd/speechd-0.56-r1.ebuild,v 1.1 2004/03/14 00:26:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/speechd/speechd-0.56-r1.ebuild,v 1.2 2004/03/14 13:13:32 dholm Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Implements /dev/speech (any text written to /dev/speech will be spoken aloud)"
@@ -9,7 +9,7 @@ SRC_URI="http://www.speechio.org/dl/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="esd"
 
 DEPEND="dev-lang/perl"
