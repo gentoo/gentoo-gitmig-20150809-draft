@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.86 2003/08/15 11:24:45 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.87 2003/08/17 10:21:06 g2boojum Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -54,7 +54,6 @@ media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
 media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/terminatorX:sox - Enable sox support
-media-sound/totem:gstreamer - Enable gstreamer instead of Xine backend
 media-video/ffmpeg:faad - Enables faad2 support
 media-video/transcode:altivec - Enable Altivec code portions
 media-video/vlc:matroska - Enables support for the matroska video format
