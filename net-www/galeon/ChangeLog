@@ -1,12 +1,14 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.8 2002/05/21 21:15:31 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.9 2002/05/21 21:18:15 blocke Exp $
+
+*galeon-1.2.1-r1 (21 May 2002)
+
+  21 May 2002; Bruce A. Locke <blocke@shivan.org> galeon-1.2.1-r1.ebuild:
+
+  Galeon 1.2.1 appears to work fine with Mozilla 1.0_rc2
 
 *galeon-1.2.1 (24 Apr 2002)
-
-  21 May 2002; Bruce A. Locke <blocke@shivan.org> galeon-1.2.1.ebuild :
-
-  Galeon website says its safe with Mozilla 1.0_rc2
 
   24 Apr 2002; Spider <spider@gentoo.org> galeon-1.2.1.ebuild :
   add --disable-werror to the build
