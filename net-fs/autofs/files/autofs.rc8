@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc8,v 1.8 2004/07/14 23:33:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc8,v 1.9 2004/09/02 17:56:05 swegener Exp $
 
 # rc file for automount using a Sun-style "master map".
 # We first look for a local /etc/auto.master, then a YP
@@ -189,7 +189,7 @@ reload() {
 	do
 		pid=`head -n 1 $i 2>/dev/null`
 		[ "$pid" = "" ] && continue
-		command=`tail +2 $i`
+		command=`tail -n +2 $i`
 		if ! grep -q "^$command" $TMP
 		then
 			echo "Stopping automounter: $command"

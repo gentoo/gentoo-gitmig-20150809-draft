@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.31 2004/07/28 03:41:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.32 2004/09/02 17:56:05 swegener Exp $
+
+  02 Sep 2004; Sven Wegener <swegener@gentoo.org> -files/autofs,
+  files/autofs.rc6, files/autofs.rc7, files/autofs.rc8:
+  tail +2 -> tail -n +2 to be compatible with latest coreutils. Closes bug
+  #62606.
 
   27 Jul 2004; <agriffis@gentoo.org> autofs-3.1.7-r5.ebuild:
   stable on ia64
