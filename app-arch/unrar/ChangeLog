@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.33 2004/08/12 21:27:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.34 2004/08/13 19:34:01 kloeri Exp $
+
+  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> unrar-3.4.1.ebuild:
+  Stable on alpha.
 
 *unrar-3.4.2 (12 Aug 2004)
 
