@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.13.ebuild,v 1.2 2004/03/03 04:40:07 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.13.ebuild,v 1.3 2004/03/05 15:09:31 scandium Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,8 +19,8 @@ DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.4"
 
 pkg_setup() {
-	enewgroup cvs 350
-	enewuser cvs 350 /bin/false /var/cvsroot cvs
+	enewgroup cvs
+	enewuser cvs -1 /bin/false /var/cvsroot cvs
 }
 
 src_compile() {
