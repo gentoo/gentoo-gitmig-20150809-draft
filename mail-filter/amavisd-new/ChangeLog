@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/amavisd-new
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.1 2004/06/03 06:45:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.2 2004/06/04 04:41:29 seemant Exp $
+
+  03 Jun 2004; Seemant Kulleen <seemant@gentoo.org>
+  amavisd-new-20030616_p8.ebuild, amavisd-new-20030616_p9.ebuild:
+  Change dev-perl/Mail-SpamAssassin to mail-filter/spamassassin in DEPEND strings
 
 *amavisd-new-20030616_p8 (02 Jun 2004)
 

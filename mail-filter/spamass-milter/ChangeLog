@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/spamass-milter
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.1 2004/06/03 07:30:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.2 2004/06/04 04:42:45 seemant Exp $
+
+  03 Jun 2004; Seemant Kulleen <seemant@gentoo.org>
+  spamass-milter-0.2.0.ebuild:
+  Change dev-perl/Mail-SpamAssassin to mail-filter/spamassassin in DEPEND strings
 
 *spamass-milter-0.2.0 (03 Jun 2004)
 

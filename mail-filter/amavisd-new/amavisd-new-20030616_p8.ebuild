@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20030616_p8.ebuild,v 1.1 2004/06/03 06:45:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20030616_p8.ebuild,v 1.2 2004/06/04 04:41:29 seemant Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ RDEPEND="${DEPEND}
 	dev-perl/IO-stringy
 	dev-perl/Time-HiRes
 	dev-perl/Unix-Syslog
-	dev-perl/Mail-SpamAssassin
+	mail-filter/spamassassin
 	virtual/mta
 	virtual/antivirus
 	ldap? ( dev-perl/perl-ldap )

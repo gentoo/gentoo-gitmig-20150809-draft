@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/spampd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spampd/ChangeLog,v 1.1 2004/06/03 07:33:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spampd/ChangeLog,v 1.2 2004/06/04 04:44:13 seemant Exp $
+
+  03 Jun 2004; Seemant Kulleen <seemant@gentoo.org> spampd-2.11-r1.ebuild,
+  spampd-2.11.ebuild:
+  Change dev-perl/Mail-SpamAssassin to mail-filter/spamassassin in DEPEND strings
 
 *spampd-2.11 (03 Jun 2004)
 
