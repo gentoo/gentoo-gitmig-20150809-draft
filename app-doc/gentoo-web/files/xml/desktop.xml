@@ -25,7 +25,7 @@ tree.  You really should read the Portage User Guide
 (<uri>http://www.gentoo.org/doc/portage-user.html</uri>), but if you're
 in a hurry you just need to type:
 </p>
-<pre># <c>emerge rsync</c></pre>
+<pre># <i>emerge rsync</i></pre>
 <p>A quick note is in order about the packages that I have chosen to 
 discuss here.  Gentoo Linux has a considerable wealth of window managers,
 mail transport agents, etcetera that can easily be installed.  The specific
@@ -54,8 +54,8 @@ an <c>emerge</c> to see what dependencies are going to be installed, and in our
 case it's quite a lot.
 </p>
 <pre>
-# <c>cd /usr/portage/kde-base/kdebase</c>
-# <c>emerge --pretend kdebase-2.1.1-r1.ebuild</c>
+# <i>cd /usr/portage/kde-base/kdebase</i>
+# <i>emerge --pretend kdebase-2.1.1-r1.ebuild</i>
 
 These are the packages that I would merge, in order.
 
@@ -77,7 +77,7 @@ Calculating dependencies............... done!
 [ebuild N  ] kde-base/kdelibs-2.1.2 to /
 [ebuild N  ] kde-base/kdebase-2.1.1-r1 to /
 
-# <c>emerge kdebase-2.1.1-r1.ebuild</c>
+# <i>emerge kdebase-2.1.1-r1.ebuild</i>
 </pre>
 <p>Have a nice nap!</p>
 </body>
@@ -95,7 +95,7 @@ Vertical: 55-90 KHz), the type and amount of ram (in KB) of your video card
 mouse (an intellimouse plugged into the ps/2 port <path>/dev/psaux</path>).
 </p>
 <pre># <c>xf86config</c></pre>
-<figure link="../images/xf86config.png" short="xf86config image"/>
+<figure link="/images/XF86config.png" short="xf86config image"/>
 <p>Because I have a three-button mouse I choose not to enable 
 3-button emulation.  I don't add any additional XKB keyboard options
 because I don't know what any of them do.  You'll have to guess at
@@ -115,7 +115,7 @@ a symbolic link from your mouse device to <path>/dev/mouse</path>.  If
 you are using <c>devfs</c> you may be unpleasantly surprised to discover
 that your link is not preserved upon rebooting.</warn>
 
-<pre># <c>startx</c></pre>
+<pre># <i>startx</i></pre>
 <p>If you configured X properly, running <c>startx</c> should start an
 amazingly ugly X window manager (twm, to be specific).  If X comes up,
 you're good to go.  Hit <c>&lt;ctrl&gt;&lt;alt&gt;&lt;backspace&gt;</c>
@@ -124,9 +124,9 @@ to kill the X server.</p>
 <p>If you have a wheel mouse you'll want to edit the XF86Config file
 by hand:</p>
 <pre>
-# <c>cp /etc/X11/XF86Config /etc/X11/XF86Config.working</c>
-# <c>vim /etc/X11/XF86Config</c></pre>
-<figure link="../images/XF86Configalt.png" short="XF86Config file"/>
+# <i>cp /etc/X11/XF86Config /etc/X11/XF86Config.working</i>
+# <i>vim /etc/X11/XF86Config</i></pre>
+<figure link="/images/XF86Configalt.png" short="XF86Config file"/>
 <p>Because I have an intellimouse I changed the "Protocol" from 
 "PS/2" to "IMPS/2".  Getting the wheel to scroll just requires
 adding the 'Option "ZAxisMapping" "4 5"' line, where '4' and '5'
@@ -142,8 +142,10 @@ for instructions.  Better yet, use <c>konqueror</c>, <c>opera</c>,
 Assuming that it does, kill X and we'll start a real window manager
 instead.  First, though, we need to fix a minor KDE bug.
 </p>
-<pre># <c>vim /opt/kde2.1/bin/startkde</c></pre>
-<figure link="../images/startkde.png" short="startkde image"/>
+<pre># <i>vim /opt/kde2.1/bin/startkde</i></pre>
+<pre caption="the top of the startkde file after it has been fixed">
+#!/bin/sh --login
+</pre>
 <p>By adding <e>--login</e> to the end of the <e>#! /bin/sh</e> line
 we ensure that KDE will read <path>/etc/profile</path> when starting
 up a terminal.</p>
@@ -151,7 +153,7 @@ up a terminal.</p>
 <p>Because Achim, Gentoo Linux's lead package guru, is a genius, the
 KDE ebuild configures KDE quite well all by itself.  The KDM display
 manager should work just by starting it.</p>
-<pre># <c>kdm</c></pre>
+<pre># <i>kdm</i></pre>
 <p>You should be able to log in and see KDE in full working order.
 Of course sound shouldn't be working yet, so you miss the annoying
 KDE start-up sound, but we'll fix that in a moment.  Open a 
@@ -167,10 +169,12 @@ Edit <path>/etc/rc.d/config/basic</path> so that
 default runlevel for X) and change <path>/etc/inittab</path> so that
 runlevel 4 is the default runlevel.</p>
 <pre>
-# <c>rc-update add xdm</c>
-# <c>vim /etc/inittab</c>
+# <i>rc-update add xdm</i>
+# <i>vim /etc/inittab</i>
 </pre>
-<figure link="../images/inittab.png" short="inittab image"/>
+<pre caption="the initdefault line, configured to start kdm (runlevel 4)">
+id:4:initdefault:
+</pre>
 <p>Reboot, and see if X comes up!</p>
 
 </body>
@@ -183,10 +187,14 @@ runlevel 4 is the default runlevel.</p>
 <title>Standard Kernel Sound Modules</title>
 <body>
 <p>Out of the box, Gentoo Linux doesn't support the standard
-kernel modules.  You'll have to recompile the kernel.</p>
+kernel modules.  You'll have to recompile the kernel. Generally,
+we prefer Alsa over the standard modules since they perform
+better and have niftier features (see below for Alsa instructions.)
+For standard kernel sound, install the <path>linux-sources</path>
+ebuild:</p>
 <pre>
-# <c>cd /usr/portage/sys-kernel/linux-sources</c>
-# <c>emerge linux-sources-x.y.z.ebuild</c>
+# <i>cd /usr/portage/sys-kernel/linux-sources</i>
+# <i>emerge linux-sources-x.y.z.ebuild</i>
 </pre>
 <p>The linux-sources ebuild installs the sources into /usr/src,
 and you can then compile the kernel (and your sound module)
@@ -202,13 +210,13 @@ should now be loaded.  To actually produce sound, a few more steps
 are required.
 </p>
 <pre>
-# <c>cd /dev</c>
-# <c>./MAKEDEV audio</c>
+# <i>cd /dev</i>
+# <i>/usr/sbin/MAKEDEV audio</i>
 #
-# <c>cat /opt/kde2.1/share/sounds/pop.wav &gt; /dev/dsp</c>
-# <c>cd /usr/portage/media-sound/sox</c>
-# <c>emerge sox-x.y.z.ebuild</c>
-# <c>play /opt/kde2.1/share/sounds/pop.wav</c>
+# <i>cat /opt/kde2.1/share/sounds/pop.wav &gt; /dev/dsp</i>
+# <i>cd /usr/portage/media-sound/sox</i>
+# <i>emerge sox-x.y.z.ebuild</i>
+# <i>play /opt/kde2.1/share/sounds/pop.wav</i>
 </pre>
 <p>
 If any sound at all results from cat'ing the .wav file to 
@@ -217,28 +225,60 @@ By emerge'ing sox one can use the <c>play</c> command to
 play .wav files (and, unlike using <c>cat</c>, the .wav file
 should sound good when using <c>play</c>).
 </p>
-<warn>I found that when running <e>devfs</e> the /dev/MAKEDEV script
-would be missing.  Help?</warn>
+<!-- 
+found that when running <e>devfs</e> the /dev/MAKEDEV script
+would be missing.  Help? Well, you shouldn't need to run MAKEDEV if you're
+using devfs (maybe to get /dev/dsp created?), but if you need it, its real home is in /usr/sbin (/dev/MAKEDEV is
+a symlink.  I changed the text to reflect this. [drobbins]
+-->
 </body>
 </section>
 <section>
 <title>Alsa</title>
 <body>
-<p>Gentoo Linux does support Alsa for sound using the default kernel.
-Alsa can be run with or without <e>devfs</e>.  I am going to assume
+
+<p>Gentoo Linux does support Alsa for sound using the default kernel.  Alsa can
+be run with or without <e>devfs</e>.  One note; if you've installed a new
+<path>sys-kernel/linux-sources</path> package, make sure that your Linux kernel
+has sound support enabled, and that <c>alsa</c> is defined in
+<path>/etc/make.conf</path>'s <c>USE</c> variable (important!).  Then, merge the
+<path>sys-kernel/linux-extras</path> package that matches the linux-sources
+that you are currently using.  The <path>linux-extras</path> ebuild is a special
+ebuild that uses the sources in <path>/usr/src/linux</path> to compile and install
+all necessary extra modules (like Alsa) and kernel-specific tools, like the LVM
+utilities.</p>
+
+<pre>
+# <i>vim /etc/make.conf</i>
+<comment>above, make sure that "alsa" is in the USE variable</comment>
+# <i>cd /usr/portage/sys-kernel/linux-extras</i>
+# <i>emerge linux-extras-x.y.z.ebuild</i>
+<comment>the Alsa modules will now be installed</comment>
+# <i>depmod -a</i>
+</pre>
+<p>
+I am going to assume
 here that you have <e>devfs</e> enabled; if you don't then please
 see the Gentoo FAQ:
 <uri>http://www.gentoo.org/doc/faq.html</uri>.
 </p>
 <pre>
-# <c>vim /etc/rc.d/config/modules</c>
+# <i>vim /etc/rc.d/config/modules</i>
 </pre>
-<figure link="../images/modules.png" short="modules fig"/>
+<pre caption="modules.conf with Alsa modules">
+# Put modules to be loaded, with arguments, one per line
+# The following lines will be called with "modprobe"
+  
+snd-card-ens1371
+snd-pcm-oss
+
+</pre>
 <p>
 You'll want to replace <e>snd-card-ens1371</e> with the
 appropriate sound card for your system.  Look in
 <path>/lib/modules/[kernel version]/misc/</path>
-for a list of modules.
+for a list of modules.  If you'd like to have OSS compatibility, it's
+a very good idea to make sure the <e>snd-pcm-oss</e> line is also in there.
 </p>
 <warn>
 Whatever you do, don't add kernel modules to 
@@ -248,9 +288,9 @@ be lost.
 </warn>
 <p>Now we set up the <e>kerneld</e> aliases.</p>
 <pre>
-# <c>vim /etc/modules/2.4.4-ac5</c>
+# <i>vim /etc/modules/2.4.4-ac5</i>
 </pre>
-<figure link="../images/kmod.png" short="kmod fig"/>
+<figure link="/images/kmod.png" short="kmod fig"/>
 <p>
 Again, you'll want to replace <e>snd-card-ens1371</e> with
 your sound card.  
@@ -258,18 +298,16 @@ your sound card.
 <p>We still have to help out <e>devfs</e>, however.
 Add the following to <path>/etc/devfsd.conf</path>.</p>
 <pre>
-# <c>vim /etc/devfsd.conf</c>
+# <i>vim /etc/devfsd.conf</i>
 </pre>
-<figure link="../images/devfsd.png" short="devfsd image"/>
+<figure link="/images/devfsd.png" short="devfsd image"/>
 <p>
 Reboot, and all of the sound stuff should be loaded.  You won't
 hear any sound yet, though, because alsa keeps all sound channels
 muted by default.
 </p>
 <pre>
-# <c>cd /usr/portage/media-sound/alsa-utils</c>
-# <c>emerge alsa-utils-x.y.z.ebuild</c>
-# <c>amixer</c>
+# <i>amixer</i>
 
 Group 'Input Gain',0
   Capabilities: volume mute jointly-mute
@@ -297,18 +335,21 @@ Group 'Master',0
   Limits: min = 0, max = 63
   Front-Left: 50 [79%] [mute] [---]
   Front-Right: 50 [79%] [mute] [---]
-<e>[chopped for brevity]</e>
+<comment>[chopped for brevity]</comment>
 
-# <c>amixer set Master 100 unmute</c>
-# <c>amixer set PCM 100 unmute</c>
-# <c>aplay /opt/kde2.1/share/sounds/pop.wav</c>
+# <i>amixer set Master 100 unmute</i>
+# <i>amixer set PCM 100 unmute</i>
+# <i>aplay /opt/kde2.1/share/sounds/pop.wav</i>
 </pre>
 <p>
-After installing the alsa utilities we used <c>amixer</c> to 
+After installing the alsa utilities we use <c>amixer</c> to 
 unmute the Master and PCM sound channels and to set their volume
 to 100%.  We check to see if sound is working by using the 
 <c>aplay</c> (alsa play) command.  If you hear a pop, then sound
-is indeed working.
+is indeed working.  Then, adjust the volume settings to your liking;
+the ncurses-based <c>alsamixer</c> is a great way to get them "just so".
+When you reboot your system, the <path>/etc/rc.d/init.d/alsa</path>
+script will properly save and restore your volume settings.
 </p>
 </body>
 </section>
@@ -320,9 +361,9 @@ KDE has some nice sound utilities, including the KDE sound mixer
 <c>kmix</c>.  
 </p>
 <pre>
-# <c>cd /usr/portage/kde-apps/kdemultimedia</c>
-# <c>emerge kdemultimedia-x.y.z.ebuild</c>
-# <c>kmix</c>
+# <i>cd /usr/portage/kde-apps/kdemultimedia</i>
+# <i>emerge kdemultimedia-x.y.z.ebuild</i>
+# <i>kmix</i>
 </pre>
 <note>If kmix cannot find a mixer, then it probably thinks you don't
 have sound support.  Log out and remove ~/.kde and ~/Desktop (the latter
