@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.24 2004/09/11 13:50:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.25 2004/09/19 21:34:25 axxo Exp $
+
+*xalan-2.6.0-r1 (19 Sep 2004)
+
+  19 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +xalan-2.6.0-r1.ebuild:
+  no longer uses packed jars, also removed the ugly doc building hack, and made
+  it use premade ones from apache, its not worth the trouble imo, feel free to
+  supply patches to bugs.g.o & shoot me if you believe otherwise
 
   11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> xalan-2.6.0.ebuild:
   Added amd64 keyword, closing #59279.
