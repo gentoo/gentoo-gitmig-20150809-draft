@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.1.1.ebuild,v 1.4 2005/01/13 03:53:37 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.1.1.ebuild,v 1.5 2005/01/22 23:56:24 arj Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -25,6 +25,7 @@ src_compile() {
 	[ "${ARCH}" == "ppc" ] && append-flags -O2 -fsigned-char
 	use gpm && append-ldflags -lgpm
 	filter-flags -fno-rtti
+	filter-flags -fvisibility=hidden #77109
 	elibtoolize --reverse-deps
 
 	econf \
