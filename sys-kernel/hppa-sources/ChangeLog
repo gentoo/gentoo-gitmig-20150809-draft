@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hppa-sources
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.47 2004/12/27 14:04:03 gmsoft Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.48 2005/01/01 23:10:36 gmsoft Exp $
+
+*hppa-sources-2.6.10_p2 (01 Jan 2005)
+
+  01 Jan 2005; Guy Martin <gmsoft@gentoo.org> +hppa-sources-2.6.10_p2.ebuild:
+  Version bump.
 
 *hppa-sources-2.6.10_p1 (27 Dec 2004)
 

@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.6.10_p1.ebuild,v 1.3 2005/01/01 23:10:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.6.10_p2.ebuild,v 1.1 2005/01/01 23:10:37 gmsoft Exp $
 
 ETYPE="sources"
 inherit kernel-2
 K_NOUSENAME=true
+K_NOSETEXTRAVERSION=true
 
 detect_version
 
