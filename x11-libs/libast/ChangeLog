@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libast
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.14 2004/12/28 22:50:14 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.15 2005/03/06 11:01:49 corsair Exp $
+
+  06 Mar 2005; Markus Rothe <corsair@gentoo.org> libast-0.6.1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *libast-0.6.1 (28 Dec 2004)
 

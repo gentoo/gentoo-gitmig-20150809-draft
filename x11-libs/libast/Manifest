@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 36a07b15560a767b24fa011aeb5d258e ChangeLog 1980
+MD5 0a03d3a425e6510136600736fa8b473a ChangeLog 2079
+MD5 4ff5aac6ece5cfa07cd1cea5291e6ffd libast-0.5-r2.ebuild 872
 MD5 ec45fec065a8eccc43870fc678126de7 metadata.xml 820
-MD5 060852ab3ff7e6700d9de3ac5fafb2f7 libast-0.5-r2.ebuild 870
-MD5 ffd2283cab6190c6012222527854c879 libast-0.6.1.ebuild 854
-MD5 bb5de296213b5928dd8f956e40436668 files/libast-64bit.patch 441
+MD5 b679e2438537598ebd25c8693fd532ea libast-0.6.1.ebuild 862
 MD5 2a9e814b7851e9e22178430153da8110 files/digest-libast-0.5-r2 62
+MD5 bb5de296213b5928dd8f956e40436668 files/libast-64bit.patch 441
 MD5 0cf4b65fa766332e528bddb7cf3d74e2 files/digest-libast-0.6.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0efRroRuSHgZdywRAuURAJ9VGIRf2aaR/bR21Z4TSq7Qq25a+ACdGhKv
-QDtqe0EQgVYypwaVBjX+nGs=
-=cvGW
------END PGP SIGNATURE-----
