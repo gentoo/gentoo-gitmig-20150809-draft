@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f31c03182699f2b062c9361e22b340c9 vanessa-socket-0.0.7.ebuild 637
-MD5 5faffb023ef675664a7814866c816c01 ChangeLog 789
+MD5 92b657e7e6a44bfd82e378cfa03b122b ChangeLog 879
 MD5 b959fe5232e4c7ff187525ebcff7b64c vanessa-socket-0.0.5_beta4.ebuild 655
-MD5 50108b7f705587d089391f402901604a files/digest-vanessa-socket-0.0.7 72
+MD5 295b1653022926283070a11a0792a3b4 vanessa-socket-0.0.7.ebuild 640
 MD5 c07dd0b4484ef777caabb5492943323d files/digest-vanessa-socket-0.0.5_beta4 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBLKQBKtJO8LeSoosRAp8cAJ9pi3gJktEyOfxPK0CNFCZ+rGGnCwCfVzCE
-yIQw82nGhlNvaM6dDNf2LAk=
-=6gyo
------END PGP SIGNATURE-----
+MD5 50108b7f705587d089391f402901604a files/digest-vanessa-socket-0.0.7 72

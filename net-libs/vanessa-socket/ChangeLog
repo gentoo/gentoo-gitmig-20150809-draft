@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/vanessa-socket
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/ChangeLog,v 1.5 2004/08/25 14:35:24 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/ChangeLog,v 1.6 2004/09/04 22:57:31 dholm Exp $
+
+  05 Sep 2004; David Holm <dholm@gentoo.org> vanessa-socket-0.0.7.ebuild:
+  Added to ~ppc.
 
 *vanessa-socket-0.0.7 (25 Aug 2004)
 
