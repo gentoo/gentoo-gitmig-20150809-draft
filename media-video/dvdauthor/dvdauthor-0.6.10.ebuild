@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.10.ebuild,v 1.5 2004/07/10 15:35:37 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.10.ebuild,v 1.6 2004/07/13 08:46:17 slarti Exp $
 
 inherit eutils 64-bit
 
@@ -20,8 +20,8 @@ DEPEND="media-libs/libdvdread
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc34.patch
-	64-bit && epatch ${FILESDIR}/${PV}-utf8.patch
+	epatch ${FILESDIR}/${P}-gcc34.patch
+	64-bit && epatch ${FILESDIR}/${P}-utf8.patch
 }
 
 src_install() {
