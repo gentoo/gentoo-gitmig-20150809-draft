@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ebview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.12 2004/06/24 21:39:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.13 2004/06/26 08:20:35 kugelfang Exp $
+
+  26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> ebview-0.3.5.ebuild:
+  Marked ~amd64.
 
   02 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ebview-0.3.1-r1.ebuild,
   ebview-0.3.2-r1.ebuild, ebview-0.3.5.ebuild, files/ebview-gtk24.diff:
