@@ -1,4 +1,6 @@
 MD5 d90946ed3877e40b39dd46a736228e18 ChangeLog 502
 MD5 37529cd91c0a88fdfda3c4870e0f4edf capi4k-utils-20020701.ebuild 1122
+MD5 37529cd91c0a88fdfda3c4870e0f4edf capi4k-utils-20021026.ebuild 1122
 MD5 9d1eb319e4e9254304fd1c4fbfa58bdd files/capi 646
 MD5 d4eb961f35cf41379f2574203166860f files/digest-capi4k-utils-20020701 75
+MD5 14a08bf121eef97390c18eafd8458bc7 files/digest-capi4k-utils-20021026 75
