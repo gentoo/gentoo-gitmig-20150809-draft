@@ -1,7 +1,3 @@
 MD5 a6a21d1c5141f8caf1f85fd6e035b15e ChangeLog 789
-MD5 8346cfa2978494ab9f738d68709394a7 roundup-0.4.2.ebuild 854
-MD5 dd79ce3837c690a056f992fce5f28267 roundup-0.5.5.ebuild 843
 MD5 4865423eb147fd384c6f6809c0f727a2 roundup-0.5.6.ebuild 843
-MD5 c6290a7ef23235c3710bd5255c92c6d2 files/digest-roundup-0.4.2 65
-MD5 3b375fdb6e3dfc5cb978e3030657236b files/digest-roundup-0.5.5 65
 MD5 7d5f9adaaa2f73b32c8dc22108358ba9 files/digest-roundup-0.5.6 65
