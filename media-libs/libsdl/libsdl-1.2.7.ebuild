@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7.ebuild,v 1.3 2004/03/30 05:24:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7.ebuild,v 1.4 2004/04/18 20:36:59 vapier Exp $
 
 inherit fixheadtails eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl noaudio novideo nojoystick"
 # if you disable audio/video/joystick and something breaks, you pick up the pieces
 
