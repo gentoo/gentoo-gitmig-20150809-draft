@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/super-freeswan
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/super-freeswan/ChangeLog,v 1.6 2004/05/07 12:48:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/super-freeswan/ChangeLog,v 1.7 2004/06/24 01:53:38 pfeifer Exp $
+
+  23 Jun 2004; Jay Pfeifer <pfeifer@gentoo.org> super-freeswan-1.99.7.3.ebuild,
+  super-freeswan-1.99_p4.ebuild:
+  Removed for migration to openswan.
 
   07 May 2004; David Holm <dholm@gentoo.org> super-freeswan-1.99.7.3.ebuild:
   Added to ~ppc.
