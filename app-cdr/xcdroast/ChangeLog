@@ -2,6 +2,9 @@
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
+  23 Jan 2004; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha15-r3.ebuild:
+  Inserted upstream-patch for amd64.  See bug #36676.
+
 *xcdroast-0.98_alpha15-r3 (17 Jan 2004)
 
   17 Jan 2004; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha15-r2.ebuild,

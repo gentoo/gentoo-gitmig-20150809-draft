@@ -1,0 +1,20 @@
+--- xtools.c.org	2003-11-06 11:19:10.000000000 +0100
++++ xtools.c2	2004-01-04 14:48:09.000000000 +0100
+@@ -3635,7 +3635,7 @@
+ 	return str;
+ #else
+ gchar *locstr;
+-gint in, out;
++gsize in, out;
+ 
+ 	locstr = g_locale_from_utf8(str, strlen(str), &in, &out, NULL);
+ 	if (locstr) {
+@@ -3655,7 +3655,7 @@
+ 	return str;
+ #else
+ gchar *locstr;
+-gint in, out;
++gsize in, out;
+ 
+ 	/* ok, if your filesystem is already UTF8 we are not 
+ 	   allowed to change the filenames here. */
