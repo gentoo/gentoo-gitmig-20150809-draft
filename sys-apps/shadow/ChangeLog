@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.65 2004/07/13 02:49:26 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.66 2004/07/29 15:41:27 gmsoft Exp $
+
+  29 Jul 2004; Guy Martin <gmsoft@gentoo.org> shadow-4.0.4.1-r3.ebuild:
+  Stable on hppa.
 
   12 Jul 2004; Tom Gall <tgall@gentoo.org> shadow-4.0.3-r10:ebuild:
   stable on ppc64, add ttyS0 to ppc64 securetty, and add in
