@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.9-r1.ebuild,v 1.7 2003/11/24 17:00:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.9-r1.ebuild,v 1.8 2004/01/16 17:11:01 max Exp $
 
 DESCRIPTION="Software for generating and retrieving SNMP data."
 HOMEPAGE="http://net-snmp.sourceforge.net/"

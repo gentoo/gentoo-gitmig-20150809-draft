@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.ebuild,v 1.2 2004/01/10 17:56:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.ebuild,v 1.3 2004/01/16 17:11:01 max Exp $
 
 inherit eutils
 
@@ -71,7 +71,7 @@ src_install () {
 	newdoc EXAMPLE.conf.def EXAMPLE.conf
 
 	exeinto /etc/init.d
-	newexe "${FILESDIR}/snmpdnew.rc6" snmpd
+	newexe "${FILESDIR}/snmpd-5.1.rc6" snmpd
 	insinto /etc/conf.d
 	newins "${FILESDIR}/snmpd.conf" snmpd
 
