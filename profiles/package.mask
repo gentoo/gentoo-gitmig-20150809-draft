@@ -135,3 +135,7 @@ app-editors/gtk-xemacs
 
 # Seems to be some issues with GConf 
 
+
+# Incompatible. (wait for evolution 0.13)
+>=gnome-base/gal-0.11
+
