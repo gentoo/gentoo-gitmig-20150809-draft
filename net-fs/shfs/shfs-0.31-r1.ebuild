@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.4 2003/10/16 15:15:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.5 2003/10/21 17:11:54 lu_zero Exp $
 
 IUSE="amd doc"
 
@@ -11,15 +11,20 @@ HOMEPAGE="http://shfs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="x86 ~ppc amd64"
 DEPEND="virtual/linux-sources
 		net-misc/openssh
 		amd? ( net-fs/am-utils )"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/shfs-gentoo-${PV}-makefile-root.diff
 	use ppc && epatch ${FILESDIR}/shfs-gentoo-${PV}-ppc.diff
 	use amd64 && epatch ${FILESDIR}/shfs-amd64-makefile.patch
+}
+
+src_compile() {
 	emake || die
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.4 2003/10/16 15:15:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.5 2003/10/21 17:11:54 lu_zero Exp $
+
+  21 Oct 2003; <lu_zero@gentoo.org> shfs-0.31-r1.ebuild: Fixed the ppc patch 
+  and made it use src_unpack. Works again on ppc.
 
   16 Oct 2003; <drobbins@gentoo.org> shfs-0.31-r1.ebuild: Now works on AMD64;
   much thanks to Ray Russell Reese III <russ@zerotech.net> for submitting this
