@@ -1,10 +1,25 @@
+# ChangeLog for sys-apps/discover
+# Copyright 2002 TelemetryBox Corporation; Distributed under GPL-2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/ChangeLog,v 1.3 2002/07/31 16:00:19 christoph Exp $
 
-discover-1.5-r1.ebuild July 30, 2002 christoph@gentoo.org
+*discover-1.5 (June 2002)
+  June 2002; Name <christoph@lameter.com> discover-1.5.ebuild files/digest-discover-1.5
+
+  Discover is a hardware identification system based on the libdiscover1
+  library.  Discover provides a flexible interface that programs can use to
+  report a wide range of information about the hardware that is installed on a
+  Linux system.  In addition to reporting information, discover includes
+  support for doing hardware detection at boot time.  Detection occurs in two
+  stages: The first stage, which runs from an initial ramdisk (initrd), loads
+  just the drivers needed to mount the root file system, and the second stage
+  loads the rest (ethernet cards, sound cards, etc.).
+ 
+*discover-1.5-r1 (30 July 2002)
+  30 July 2002; Name <christoph@gentoo.org> discover-1.5-r1.ebuild files/digest-discover-1.5-r1
 
   First release into gentoo cvs tree
 
-discover-1.5-r2.ebuild July 31, 2002 christoph@gentoo.org
+  31 July 2002; Name <christoph@gentoo.org>
 
   Fix ebuild RDEPEND and other things
-
  

@@ -4,32 +4,14 @@
 #
 # Released under the GPL
 #
-# -r1 provide gentoo discover script. Create missing /var/lib/discover
-#     directory
 DESCRIPTION="Discover hardware and load the appropriate drivers for that hardware."
-
-LONGDESC="
- Discover is a hardware identification system based on the libdiscover1
- library.  Discover provides a flexible interface that programs can use to
- report a wide range of information about the hardware that is installed on a
- Linux system.  In addition to reporting information, discover includes
- support for doing hardware detection at boot time.  Detection occurs in two
- stages: The first stage, which runs from an initial ramdisk (initrd), loads
- just the drivers needed to mount the root file system, and the second stage
- loads the rest (ethernet cards, sound cards, etc.)."
- 
 HOMEPAGE="http://www.progeny.com/discover"
-
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/d/discover/discover_1.5-1.tar.gz"
-
-LICENSE="GPL"
-SLOT="1"
+LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc"
-
-DEPEND="bash"
-
-# Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
-RDEPEND="home/discover-data"
+DEPEND=""
+RDEPEND="sys-apps/discover-data"
 
 S=${WORKDIR}/${P}
 
