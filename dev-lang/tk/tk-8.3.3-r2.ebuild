@@ -1,18 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3-r2.ebuild,v 1.3 2002/10/17 16:51:22 bjb Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3-r2.ebuild,v 1.4 2002/10/22 16:07:55 vapier Exp $
 
 S=${WORKDIR}/${PN}${PV}
-SRC_URI="ftp://ftp.scriptics.com/pub/tcl/tcl8_4/${PN}${PV}.tar.gz"
-
+SRC_URI="ftp://ftp.scriptics.com/pub/tcl/tcl8_3/${PN}${PV}.tar.gz"
 HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
-
 DESCRIPTION="Tk Widget Set"
-
 DEPEND="virtual/glibc
-		virtual/x11
-		=dev-lang/tcl-${PV}*"
+	virtual/x11
+	=dev-lang/tcl-${PV}*"
 
 SLOT="0"
 LICENSE="BSD"
@@ -21,7 +17,6 @@ KEYWORDS="x86 ppc sparc sparc64 alpha"
 # hyper-optimizations untested...
 #
 src_compile() {
-
 	cd ${S}/unix
 	./configure --host=${CHOST} \
 				--prefix=/usr \
@@ -30,11 +25,9 @@ src_compile() {
 				--enable-threads || die
 					
 	emake CFLAGS="${CFLAGS}" || die
-	
 }
 
 src_install() {
-	
 	#short version number
 	local v1
 	v1=${PV%.*}
@@ -68,5 +61,4 @@ src_install() {
 	
 	cd ${S}
 	dodoc README changes license.terms
-
 }
