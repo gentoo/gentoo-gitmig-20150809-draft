@@ -1,11 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-test-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-test-sources/ChangeLog,v 1.5 2003/12/01 22:10:34 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-test-sources/ChangeLog,v 1.6 2004/01/07 10:25:02 plasmaroo Exp $
+
+  07 Jan 2004; <plasmaroo@gentoo.org>
+  gentoo-test-sources-2.4.22-r1.ebuild, gentoo-test-sources-2.4.22.ebuild:
+  Removed as gentoo-sources-2.4.22 are now the newest available 2.4 series.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org>
   gentoo-test-sources-2.4.22-r1.ebuild, gentoo-test-sources-2.4.22.ebuild,
   files/do_brk_fix.patch:
-  fix do_brk vuln
+  Fix do_brk() vulnerability.
 
   23 Nov 2003; Brian Jackson <iggy@gentoo.org>
   gentoo-test-sources-2.4.22-r1.ebuild, gentoo-test-sources-2.4.22.ebuild:
