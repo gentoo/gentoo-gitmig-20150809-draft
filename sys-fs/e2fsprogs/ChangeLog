@@ -1,10 +1,14 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.35 2004/10/03 15:57:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.36 2004/10/05 01:59:52 lv Exp $
+
+*e2fsprogs-1.35-r2 (04 Oct 2004)
+
+  04 Oct 2004; Travis Tilley <lv@gentoo.org> +e2fsprogs-1.35-r2.ebuild:
+  added a new e2fsprogs ebuild with the dietlibc changes, masked -*
 
   03 Oct 2004; Travis Tilley <lv@gentoo.org> e2fsprogs-1.35-r1.ebuild:
-  revert dietlibc changes so that the amd64 stable version of e2fsprogs actually
-  compiles again
+  reverted the dietlibc changes. they cause compile problems here.
 
   03 Oct 2004; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.35-r1.ebuild:
   Support dietlibc #36306 by Adam.
