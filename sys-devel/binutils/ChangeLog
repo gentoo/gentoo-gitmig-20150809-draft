@@ -1,8 +1,12 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.68 2003/09/01 19:24:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.69 2003/09/03 20:00:42 cretin Exp $
 
 *binutils-2.14.90.0.6-r2 (01 Sep 2003)
+
+  03 Sep 2003; Stefan Jones <cretin@gentoo.org> 
+  binutils-2.14.90.0.6-r2.ebuild :
+  Move to stable for x86, to fix bug #27440
 
   01 Sep 2003; Martin Schlemmer <azarah@gentoo.org>
   binutils-2.14.90.0.2.ebuild, binutils-2.14.90.0.4.1-r1.ebuild,
