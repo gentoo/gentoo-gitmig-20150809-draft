@@ -547,10 +547,6 @@ x11-themes/gtk-xfce-engine
 # Testing...
 =net-ftp/kbear-2.0_beta1
 
-# Doug Goldstein <cardoe@gentoo.org> (03 Aug 2002)
-# masked for testing
-=net-dialup/hsflinmodem-5.03.03.02072100
-
 # George Shapovalov <george@gentoo.org> (01 Aug 2002)
 # sandbox violation
 =dev-lang/stratego-0.7.ebuild
