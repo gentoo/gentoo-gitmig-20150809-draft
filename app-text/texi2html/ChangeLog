@@ -1,6 +1,6 @@
 # ChangeLog for app-text/texi2html
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.8 2003/06/30 18:12:35 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.9 2003/07/04 15:50:16 gmsoft Exp $
 
   30 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> texi2html-1.64.ebuild:
   set ppc in keywords
@@ -11,6 +11,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *texi2html-1.64 (1 Feb 2002)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> texi2html-1.64.ebuild :
+  Added hppa to KEYWORDS.
 
   10 Mar 2003; Will Woods <wwoods@gentoo.org> texi2html-1.64.ebuild:
   Added alpha to KEYWORDS
