@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.10-r1.ebuild,v 1.1 2005/02/14 14:48:29 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.10-r1.ebuild,v 1.2 2005/02/16 17:15:42 ka0ttic Exp $
 
-inherit eutils confutils
+inherit eutils
 
 DESCRIPTION="lightweight high-performance web server"
 HOMEPAGE="http://www.lighttpd.net/"
@@ -10,11 +10,12 @@ SRC_URI="http://www.lighttpd.net/download/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
-IUSE="mysql ssl php modchat modcache modlocalizer xattr ldap"
+IUSE="mysql ssl php xattr ldap"
 RDEPEND="virtual/libc
+		app-arch/bzip2
 		>=dev-libs/libpcre-3.1
 		>=sys-libs/zlib-1.1
-		>=dev-libs/localizer-0.3.3
+		ldap? ( >=net-nds/openldap-2.1.26 )
 		mysql? ( >=dev-db/mysql-4.0.0 )
 		ssl? ( >=dev-libs/openssl-0.9.7 )
 		php? (
@@ -41,19 +42,11 @@ src_unpack() {
 src_compile() {
 	local my_conf="--libdir=/usr/$(get_libdir)/${PN}"
 
-	#                       extension		USE flag		shared?
-	# -----------------------------------------------------------------
-	enable_extension_enable mod-chat 		modchat			0
-	enable_extension_enable mod-cache		modcache		0
-	enable_extension_enable mod-localizer		modlocalizer		0
-	enable_extension_enable attr			xattr			0
-	enable_extension_enable ldap			ldap			0
-	enable_extension_enable openssl			ssl			0
-	enable_extension_enable mysql			mysql			0
-	# -----------------------------------------------------------------
-	#                       extension		USE flag		shared?
-
-	econf ${my_conf} || die "econf failed"
+	econf ${my_conf} \
+		$(use_with mysql) \
+		$(use_with ldap) \
+		$(use_with xattr attr) \
+		$(use_with ssl openssl) || die "econf failed"
 
 	emake || die "emake failed"
 }
