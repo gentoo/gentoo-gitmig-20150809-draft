@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r2.ebuild,v 1.8 2004/01/27 21:25:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r2.ebuild,v 1.9 2004/01/27 23:03:45 mr_bones_ Exp $
 
 inherit python
 
@@ -22,7 +22,7 @@ RDEPEND=""
 src_compile() {
 	python_version
 	econf || die
-    make PYTHONVERS=python${PYVER} || die "make failure"
+	make PYTHONVERS=python${PYVER} || die "make failure"
 }
 
 src_install () {
