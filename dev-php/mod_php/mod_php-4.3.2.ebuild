@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2.ebuild,v 1.3 2003/06/05 17:41:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2.ebuild,v 1.4 2003/06/05 20:06:36 robbat2 Exp $
 
 inherit php eutils
 
@@ -13,8 +13,10 @@ EXCLUDE_DB4_FIX=1
 EXCLUDE_PEAR_FIX=1
 
 DEPEND="${DEPEND}
+	|| (
+	>=net-www/apache-1.3.26-r2
 	apache2? ( >=net-www/apache-2.0.43-r1 )
-	!apache2? ( !<net-www/apache-1.3.26-r2 <net-www/apache-2 )"
+	)"
 
 src_compile() {
 	#no readline on server SAPI
