@@ -1,10 +1,13 @@
 # ChangeLog for gnome-extra/gal2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal2/ChangeLog,v 1.10 2002/12/13 10:56:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal2/ChangeLog,v 1.11 2003/01/22 22:33:14 nall Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *gal2-0.0.6 (15 Sep 2002)
+  22 Jan 2003; Jon Nall <nall@gentoo.org> gal2-0.0.6.ebuild :
+  keyworded ~ppc
+
   15 Sep 2002; Spider <spider@gentoo.org> gal2-0.0.6.ebuild :
   new version 
 
