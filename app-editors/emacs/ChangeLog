@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.15 2003/10/01 11:39:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.16 2003/12/01 06:24:23 usata Exp $
+
+  01 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> emacs-21.3-r1.ebuild:
+  Filter -fstack-protector that causes internal compiler error at xterm.c
+  Closing bug #33265
 
   31 Jul 2003; Tavis Ormandy <taviso@gentoo.org> emacs-21.3-r1.ebuild:
   stable on alpha
