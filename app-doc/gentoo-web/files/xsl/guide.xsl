@@ -1,3 +1,4 @@
+<?xml version='1.0'?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="text" indent="yes"/> 
 
@@ -9,7 +10,8 @@
 	</head>
 	<body bgcolor="#ffffff" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
 	<table class="toptable" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#000000">
-	<tr><td width="160" height="129" align="left" valign="top"><a href="/"><img border="0" src="gentoo-doc.gif"/></a></td><td>hiya</td></tr>
+	<tr><td width="160" height="129" align="left" valign="top"><a href="/"><img border="0" src="gentoo-doc.gif"/></a></td>
+	<td>&amp;nbsp;</td></tr>
 	<tr>
 		<td colspan="2" class="doclink">
 			<a href="/doc" style="color: #33ff00">documentation</a> :: <xsl:value-of select="title"/>
@@ -66,7 +68,7 @@
 	<p class="chaphead"><xsl:value-of select="title"/></p>&lt;/a&gt;
 	<xsl:apply-templates select="section"/>
 </xsl:template>
-		
+
 <xsl:template match="section">
 	<p class="secthead"><xsl:value-of select="title"/></p>
 	<xsl:apply-templates select="body"/>

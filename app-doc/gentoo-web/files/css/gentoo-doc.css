@@ -13,8 +13,12 @@ TABLE {
 	margin: 0.5em 0% 0.5em 5%;
 }
 
-PRE { 
+PRE {
 	margin: 0.5em 14% 0.5em 5%; 
+	background: #e0e0e0;
+}
+
+CODE {
 	background: #e0e0e0;
 }
 
