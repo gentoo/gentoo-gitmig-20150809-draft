@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/powerprefs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/ChangeLog,v 1.12 2005/03/26 10:20:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/ChangeLog,v 1.13 2005/03/27 01:18:57 josejx Exp $
+
+  27 Mar 2005; Joseph Jezak <josejx@gentoo.org> powerprefs-0.4.9.ebuild:
+  Fixed DEPEND, powerprefs 0.4.9 depends on pbbuttonsd-0.6.8.
 
 *powerprefs-0.4.9 (26 Mar 2005)
 
