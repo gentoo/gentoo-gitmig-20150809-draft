@@ -1,10 +1,11 @@
-MD5 09de619370e6e84c9f759f3dcb10e41d ChangeLog 2661
+MD5 b3650438ef85a27915b1d90488d1f2ad ChangeLog 2762
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
 MD5 4181d4bc03ffde84cb0ea2bc55eacbbf zaptel-0.7.0.ebuild 1403
 MD5 7f1a2d9310ce76f745a72baaa7a2ec47 zaptel-0.8.1.ebuild 1350
 MD5 2f9c63c938ecf48124ba4fd3e4f2648a zaptel-0.9.1.ebuild 3529
 MD5 50a2f3af01a95978f69765ecb3e61e8a zaptel-1.0.0.ebuild 3196
 MD5 956bb27ba1724c3c22a02c720bc211ea zaptel-1.0.1.ebuild 3186
+MD5 d3d4f57ff1e639bec87cc0391ed7e5bf zaptel-1.0.2.ebuild 3123
 MD5 4f38ae7d0fb20dee726303a35ca85eda files/digest-zaptel-0.7.0 64
 MD5 4f7493422ca6187bf1d786f94548656f files/digest-zaptel-0.8.1 64
 MD5 3921a7fd4a60c8785d510e857ff2eabe files/digest-zaptel-0.9.1 64
@@ -21,3 +22,4 @@ MD5 c80f1e0e4038771d3e3bc08284ecf917 files/zaptel-1.0.0-modulesd.diff 1941
 MD5 648b9f0335741cf4aea7542ffe4705c6 files/zaptel-1.0.1-modulesd.diff 1837
 MD5 0edad95ac20c6e43ea6ee933e25ac23a files/zaptel-1.0.1-skbuff.diff 564
 MD5 dbd81e086a8331bea5752bf92e288f43 files/digest-zaptel-1.0.1 64
+MD5 c05b7e3e46911ab74b865d91e7b85d42 files/digest-zaptel-1.0.2 64
