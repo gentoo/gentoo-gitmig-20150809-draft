@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/gwget2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget2/ChangeLog,v 1.4 2003/09/28 03:15:14 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget2/ChangeLog,v 1.5 2003/11/11 13:30:42 foser Exp $
+
+*gwget2-0.7 (11 Nov 2003)
+
+  11 Nov 2003; foser <foser@gentoo.org> gwget2-0.7.ebuild :
+  New release requested in #32916
+  disable nls USE for now, it breaks
 
 *gwget2-0.6 (28 Sep 2003)
 
