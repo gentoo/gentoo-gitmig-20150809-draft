@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 074c6419f628c01efdcc80d16e7c412a libnasl-2.1.0.ebuild 863
 MD5 a2e4498b07224f4fdc6e064d6c9bea43 libnasl-2.0.9.ebuild 924
 MD5 1560242d3c3b1ed9ee98fdf76d95af58 libnasl-2.0.10a.ebuild 862
-MD5 e09e8b875afacaa4202fa4313f6ab264 libnasl-2.0.12.ebuild 864
+MD5 2e15cfdf0aee54dabc3e44ae42101862 libnasl-2.0.12.ebuild 863
 MD5 0bc2b4ced0f08e80644f9552f633dc4b libnasl-2.0.8a.ebuild 934
 MD5 501c41ae664f704a56463e84aebbf585 ChangeLog 3743
 MD5 2b49e0e28b017e3ed6989df41c1b1d74 metadata.xml 240
@@ -23,7 +23,7 @@ MD5 66f66f3e28aba3711a59ab98581aafce files/libnasl-2.0.7-gentoo.patch 534
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBAN4eT+MN7JbqCpMRApTPAKCCs36TYWofjfvfR6iJa0HettABOACfaxDx
-1qpHb3lxf+3hYUhqmE2NFiI=
-=QNmF
+iD8DBQFBAN8IT+MN7JbqCpMRAqNqAJ9WJK7jEcDujB6ti1UDMEdldzVJdgCdGRC2
+wh5aMmkiuOJEKjiR/GHUPag=
+=kdPq
 -----END PGP SIGNATURE-----
