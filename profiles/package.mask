@@ -105,10 +105,6 @@ media-sound/mp3blaster
 # bug #34599
 <app-misc/screen-4.0.1-r1
 
-# <scox@gentoo.org> (03 Dec 2003)
-# see bug #33033
->=sys-kernel/xfs-sources-2.4.23
-
 # <iggy@gentoo.org> (02 Dec 2003)
 # preparing to drop
 sys-kernel/rsbac-sources
