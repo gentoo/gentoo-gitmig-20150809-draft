@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.77 2003/10/05 18:55:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.78 2003/10/07 18:15:20 azarah Exp $
+
+*binutils-2.14.90.0.6-r6 (07 Oct 2003)
+
+  07 Oct 2003; Martin Schlemmer <azarah@gentoo.org>
+  binutils-2.14.90.0.6-r6.ebuild,
+  files/2.14/binutils-2.14.90.0.6-bfd-elf-interp-3.patch:
+  Add correct patch to fix attributes on .interp section, thanks to feedback
+  from pipcas <pageexec@freemail.hu> and Ned Ludd <solar@gentoo.org>.
 
 *binutils-2.14.90.0.6-r5 (05 Oct 2003)
 
