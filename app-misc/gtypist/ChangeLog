@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gtypist
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.5 2003/11/04 21:51:27 usata Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.6 2004/06/07 06:05:52 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> gtypist-2.7.ebuild,
+  +metadata.xml:
+  x86 stable
 
 *gtypist-2.7 (05 Nov 2003)
 
