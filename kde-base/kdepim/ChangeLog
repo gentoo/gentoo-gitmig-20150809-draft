@@ -1,7 +1,10 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.39 2003/06/22 19:16:39 caleb Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.40 2003/07/04 16:14:26 brain Exp $
+*kdepim-3.1.2-r1 (04 Jul 2003)
+  04 Jul 2003; Michele Balisitreri <brain@gentoo.org> kdepim-3.1.2-r1.ebuild:
+  Fixes bug #22992.
+  
   21 Jun 2003; Caleb Tennis <caleb@gentoo.org>:
   Removing old ebuilds: 3.0.5a, 3.1
 

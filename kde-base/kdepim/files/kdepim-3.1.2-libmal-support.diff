@@ -1,0 +1,29 @@
+--- kpilot/conduits/configure.in.in.orig	2003-07-04 10:09:05.000000000 +0200
++++ kpilot/conduits/configure.in.in	2003-07-04 10:13:35.000000000 +0200
+@@ -93,7 +93,7 @@
+   kde_safe_CXXFLAGS="$CXXFLAGS"
+   LIBS="$LIBS $MAL_LIBS -ldl"
+   CFLAGS="$CFLAGS $MAL_INCS"
+-  CXXFLAGS="$CXXFLAGS $MAL_INCS"
++  CXXFLAGS="$CXXFLAGS $MAL_INCS -I/usr/include/libpisock"
+   AC_LANG_SAVE
+   AC_LANG_CPLUSPLUS
+   AC_TRY_LINK(dnl
+--- kpilot/conduits/malconduit/Makefile.am.orig	2003-07-04 10:09:57.000000000 +0200
++++ kpilot/conduits/malconduit/Makefile.am	2003-07-04 11:21:12.000000000 +0200
+@@ -6,7 +6,7 @@
+ 
+ ### usual kde library settings
+ 
+-INCLUDES= $(PISOCK_INCLUDE)  $(MAL_INCLUDE) -I$(top_srcdir)/kpilot/lib $(all_includes)
++INCLUDES= $(PISOCK_INCLUDE) $(MAL_INCS) -I$(top_srcdir)/kpilot/lib $(all_includes)
+ METASOURCES = AUTO
+ 
+ servicedir = $(kde_servicesdir)
+@@ -21,5 +21,5 @@
+ 	mal-conduit.cc \
+ 	mal-setup_dialog.ui
+ libmalconduit_la_LDFLAGS = $(KDE_RPATH) $(KDE_PLUGIN) $(all_libraries)
+-libmalconduit_la_LIBADD = ../../lib/libkpilot.la $(MAL_LIB) $(LIB_KDEUI)
++libmalconduit_la_LIBADD = ../../lib/libkpilot.la $(MAL_LIBS) $(LIB_KDEUI)
+ 
