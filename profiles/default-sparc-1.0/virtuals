@@ -28,3 +28,4 @@ virtual/php             dev-php/mod_php
 virtual/xforms          x11-libs/xforms-sparc
 virtual/textbrowser		net-www/links
 virtual/mda		net-mail/procmail
+virtual/krb5			app-crypt/heimdal
