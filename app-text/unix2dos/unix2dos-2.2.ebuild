@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.15 2004/07/14 00:49:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.16 2004/07/16 02:02:27 tgall Exp $
 
 inherit gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.src.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ppc alpha amd64 sparc hppa ~mips"
+KEYWORDS="x86 ppc alpha amd64 sparc hppa ~mips ppc64"
 IUSE=""
 
 DEPEND=""
