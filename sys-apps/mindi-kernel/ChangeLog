@@ -1,9 +1,9 @@
 # ChangeLog for sys-apps/mindi-kernel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-kernel/ChangeLog,v 1.2 2003/07/10 14:29:27 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-kernel/ChangeLog,v 1.3 2003/07/10 14:30:52 johnm Exp $
 
-*mindi-kernel-0.1 (10 Jul 2003)
+*mindi-kernel-1.0 (10 Jul 2003)
 
-  19 Jun 2003; John Mylchreest <johnm@gentoo.org>;
+  10 Jul 2003; John Mylchreest <johnm@gentoo.org>;
   Fixing missing files - oops
 
