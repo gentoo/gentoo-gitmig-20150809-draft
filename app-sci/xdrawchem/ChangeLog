@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/xdrawchem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.16 2003/06/24 09:45:57 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.17 2003/07/16 09:55:23 robh Exp $
+
+*xdrawchem-1.7.3 (16 Jul 2003)
+
+  16 Jul 2003; robh <robh@gentoo.org> xdrawchem-1.7.3.ebuild:
+  Version bump and fix qt/moc media-sound/moc problems. closes #24506, thanks to
+  Hermann Huttler :)
 
   24 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> xdrawchem-1.7.1.ebuild:
   stable for x86
