@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-2.0.ebuild,v 1.2 2002/05/23 06:50:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-2.0.ebuild,v 1.3 2002/06/03 06:38:35 prez Exp $
 
 #name of tarball changed
 MY_P="${P/nt/d4x}"
@@ -29,6 +29,8 @@ src_unpack() {
 	cp configure configure.orig
 	sed -e "s:CXXFLAGS=\"-O2\":CXXFLAGS=\"${CXXFLAGS}\":g" \
 		configure.orig >configure
+
+	patch -p1 <${FILESDIR}/nt-2.0-gcc31.patch
 }
 
 src_compile() {
