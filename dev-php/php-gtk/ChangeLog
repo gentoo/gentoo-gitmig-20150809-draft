@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/php-gtk
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/ChangeLog,v 1.1 2003/12/02 16:21:58 latexer Exp $
+
+*php-gtk-1.0.0 (01 Dec 2003)
+
+  01 Dec 2003; Peter Johanson <latexer@gentoo.org> php-gtk-1.0.0.ebuild:
+  Initial commit. Thanks to Harald Fielker <fielker@informatik.fh-augsburg.de>
+  for the ebuild. bugs #32825 and #8823
+
