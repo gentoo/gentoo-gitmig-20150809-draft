@@ -1,8 +1,0 @@
-# ChangeLog for app-emulation/raine
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/raine/ChangeLog,v 1.2 2003/02/12 04:02:59 vapier Exp $
-
-*raine-0.36.2 (25 Nov 2002)
-
-  25 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Javier Marcet <jmarcet@pobox.com>.

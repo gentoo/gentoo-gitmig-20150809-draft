@@ -1,8 +1,0 @@
-# ChangeLog for app-emulation/generator
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/generator/ChangeLog,v 1.1 2003/07/16 03:20:58 vapier Exp $
-
-*generator-0.35 (15 Jul 2003)
-
-  15 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by me for #20818.

@@ -1,8 +1,0 @@
-# ChangeLog for app-emulation/goosnes
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/goosnes/ChangeLog,v 1.1 2003/03/03 02:24:17 vapier Exp $
-
-*goosnes-0.5.2 (02 Mar 2003)
-
-  02 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by brian wood <doowirb7@cox.net> #11781.
