@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r1.ebuild,v 1.6 2004/04/27 21:45:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r1.ebuild,v 1.7 2004/05/12 15:22:15 dholm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.openpbs.org/"
 LICENSE="openpbs"
 SRC_URI="${NAME}.tar.gz"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="X tcltk crypt doc"
 RESTRICT="fetch"
 DEPEND="virtual/glibc
