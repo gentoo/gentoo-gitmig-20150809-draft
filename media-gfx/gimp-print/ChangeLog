@@ -1,12 +1,18 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.37 2004/04/15 12:22:56 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.38 2004/04/17 11:54:41 lanius Exp $
 
   15 Apr 2004; Stephen P. Becker <geoman@gentoo.org> gimp-print-4.2.6.ebuild:
   Added ~mips keyword.
 
   12 Apr 2004; Heinrich Wendel <lanius@gentoo.org> :
   remove old version
+
+*gimp-print-5.0.0_alpha2 (17 Apr 2004)
+
+  17 Apr 2004; Heinrich Wendel <lanius@gentoo.org>
+  gimp-print-5.0.0_alpha1.ebuild, gimp-print-5.0.0_alpha2.ebuild:
+  version bump
 
   09 Apr 2004; Heinrich Wendel <lanius@gentoo.org> gimp-print-4.2.6.ebuild,
   gimp-print-5.0.0_alpha1.ebuild:

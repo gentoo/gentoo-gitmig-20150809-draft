@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_alpha1.ebuild,v 1.4 2004/04/09 15:09:25 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_alpha2.ebuild,v 1.1 2004/04/17 11:54:41 lanius Exp $
 
 inherit flag-o-matic libtool
 
