@@ -1,6 +1,6 @@
 sys-libs/db
 sys-libs/glibc  
-sys-libs/lib-compat  
+#sys-libs/lib-compat  
 sys-libs/nss-db 
 sys-libs/pwdb      
 sys-libs/slang
@@ -36,7 +36,7 @@ sys-apps/grub
 sys-apps/gzip
 sys-apps/hdparm
 sys-apps/ipchains
-#currently doesn't build
+#currently doesn't build -- this also needs raw sockets in the kernel to run
 #sys-apps/iproute2
 sys-apps/iptables
 sys-apps/isapnptools
@@ -45,9 +45,9 @@ sys-apps/lilo
 sys-apps/lsof
 sys-apps/man
 sys-apps/man-pages
-sys-apps/mkisofs
+#sys-apps/mkisofs
 sys-apps/modutils
-sys-apps/most
+#sys-apps/most
 sys-apps/net-tools
 sys-apps/netkit-base
 sys-apps/portage
@@ -60,16 +60,17 @@ sys-apps/setserial
 sys-apps/sh-utils
 sys-apps/shadow
 sys-apps/sharutils
-sys-apps/star
+#sys-apps/star
 sys-apps/sysklogd
 sys-apps/sysvinit
 sys-apps/tar
 sys-apps/tcp-wrappers
 sys-apps/texinfo
 sys-apps/textutils
-sys-apps/ucspi-tcp
+#sys-apps/ucspi-tcp
 sys-apps/util-linux
-sys-apps/vim-nogui
+#sys-apps/vim-nogui
+app-editors/nano
 sys-apps/watchpid
 sys-apps/which
 sys-apps/xinetd
@@ -81,7 +82,7 @@ sys-devel/binutils
 sys-devel/bison
 sys-devel/flex
 sys-devel/gcc
-sys-devel/gdb
+#sys-devel/gdb
 sys-devel/gettext
 sys-devel/ld.so
 sys-devel/libtool
@@ -90,13 +91,12 @@ sys-devel/make
 sys-devel/patch
 sys-devel/perl
 sys-devel/spython
-dev-util/cvs
+#dev-util/cvs
 dev-util/fbset
 net-misc/dhcpcd
 net-misc/rsync
 net-misc/wget
 net-misc/netkit-telnetd
-#net-misc/openssh
+net-misc/openssh
 net-ftp/ftp
 #sys-kernel/linux
-
