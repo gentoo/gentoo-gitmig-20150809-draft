@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.10-r1.ebuild,v 1.1 2003/03/02 22:30:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.10-r1.ebuild,v 1.2 2003/03/06 21:23:09 azarah Exp $
 
 # This includes backwards compatability for stable kernels
 IUSE=""
@@ -24,6 +24,16 @@ SLOT="0"
 DEPEND="virtual/glibc"
 RDEPEND=">=sys-apps/devfsd-1.3.25-r1
 	>=sys-kernel/development-sources-2.5.48"
+
+pkg_setup() {
+	get_KV &> /dev/null
+
+	if [ ! -f /lib/modules/${KV}/modules.dep ]
+	then
+		eerror "Please compile and install a kernel first!"
+		die "Please compile and install a kernel first!"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
