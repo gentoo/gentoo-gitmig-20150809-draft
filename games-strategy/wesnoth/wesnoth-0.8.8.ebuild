@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.8.8.ebuild,v 1.1 2004/12/06 02:11:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.8.8.ebuild,v 1.2 2005/02/01 07:01:15 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gcc games
 
