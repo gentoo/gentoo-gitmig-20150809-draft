@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.6.0b-r3.ebuild,v 1.3 2003/06/21 16:02:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.6.0b-r3.ebuild,v 1.4 2003/09/04 01:08:10 msterret Exp $
 
 MY_P1=tcltk-${P}
 MY_P=${P/-/_}-1.1
@@ -17,20 +17,17 @@ KEYWORDS="x86 -ppc -sparc -alpha -hppa -mips -arm"
 DEPEND="virtual/x11"
 
 src_unpack() {
-
 	unpack ${MY_P}.tar.gz
 	cd ${S}
 
 	tar zxf ${MY_P1}.tar.gz
 	tar zxf ${P}.tar.gz
-
 }
 
 src_compile() {
-	
 	cd ${S}/${MY_P1}
 	./build.sh
-	
+
 	cd ${S}/${P}
 
 	./configure \
@@ -46,17 +43,15 @@ src_compile() {
 		--with-doc=/usr/share/doc/${P} || die "configure failed"
 
 	make || die "make failed"
-
 }
 
 src_install () {
-
 	cd ${S}/${P}
 	make \
 		PREFIX_LAUNCHER=${D}/usr/bin \
 		PREFIX_EXE=${D}/usr/bin \
 		PREFIX_DOC=${D}/usr/share/doc/${P} \
 		install || die
-	
+
 	dodoc doc/*
 }

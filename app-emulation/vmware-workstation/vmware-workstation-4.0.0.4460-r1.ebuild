@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.0.4460-r1.ebuild,v 1.4 2003/08/30 14:51:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.0.4460-r1.ebuild,v 1.5 2003/09/04 01:07:10 msterret Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware. The agreeing to a licence is part of the configure step
@@ -186,9 +186,9 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	einfo 
+	einfo
 	einfo "To remove all traces of vmware you will need to remove the files"
 	einfo "in /etc/vmware/, /etc/init.d/vmware, /lib/modules/*/misc/vm*.o,"
 	einfo "and .vmware/ in each users home directory."
-	einfo 
+	einfo
 }
