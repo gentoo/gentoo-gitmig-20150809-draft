@@ -1,6 +1,12 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.16 2003/02/13 07:26:41 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.17 2003/03/25 20:03:41 seemant Exp $
+
+*xpdf-2.02 (25 Mar 2003)
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xpdf-2.02.ebuild,
+  files/xpdfrc:
+  version bump into stable, due to sources being unavailable
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> xpdf-2.01.ebuild :
   set to -ppc, can't meet deps
