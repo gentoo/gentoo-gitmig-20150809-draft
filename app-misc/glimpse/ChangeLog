@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/glimpse
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/ChangeLog,v 1.11 2004/04/22 02:14:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/ChangeLog,v 1.12 2004/06/12 00:03:59 dragonheart Exp $
+
+  12 Jun 2004; Daniel Black <dragonheart@gentoo.org> glimpse-4.15-r1.ebuild,
+  glimpse-4.17.4.ebuild, +metadata.xml:
+  Added RDEPEND=!dev-libs/tre due to both providing /usr/bin/agrep. Thanks to
+  John Hampton in bug #53250
 
 *glimpse-4.17.4 (06 Dec 2003)
 

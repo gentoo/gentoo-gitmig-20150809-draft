@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.17.4.ebuild,v 1.4 2004/04/22 02:14:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.17.4.ebuild,v 1.5 2004/06/12 00:03:59 dragonheart Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,6 +12,10 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha amd64 ia64"
 IUSE="static"
+RDEPEND="!dev-libs/tre
+	virtual/glibc"
+
+DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
