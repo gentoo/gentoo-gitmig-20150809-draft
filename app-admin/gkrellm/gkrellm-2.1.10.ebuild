@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.10.ebuild,v 1.3 2003/05/21 15:13:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.10.ebuild,v 1.4 2003/06/06 22:39:56 mholzer Exp $
 
 IUSE="gtk gtk2 nls"
 
@@ -23,6 +23,8 @@ src_compile() {
 		sed -i "s:enable_nls=1:enable_nls=0:" Makefile
 	fi
 	
+	sed -i "s:INSTALLROOT = /usr/local:INSTALLROOT = /usr:" Makefile
+
 	if use gtk2 || use gtk
 	then
 		emake || die
