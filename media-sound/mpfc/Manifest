@@ -3,14 +3,16 @@ Hash: SHA1
 
 MD5 1b6a83434ff3223fd75f050eb4c67ee1 mpfc-1.3.3.ebuild 1262
 MD5 ea4dab5fca354cc5864e6e523841def9 mpfc-1.3.2.ebuild 1259
-MD5 21c9ca827fd9b42535666cd5a68ac596 ChangeLog 657
+MD5 2f0a194f9c5840d84cb312b21326eb6f ChangeLog 773
 MD5 83c2574543d0501303b57050254e3880 metadata.xml 222
+MD5 1af44bbe897ad4a6b237fd296b7e12ff mpfc-1.3.4.ebuild 1262
 MD5 7efeab71fe6d7846f773eee95fa30adf files/digest-mpfc-1.3.2 62
 MD5 112f0ac39530bcdfb993d794c4b87fa2 files/digest-mpfc-1.3.3 62
+MD5 7f3e2b95f5b5ab963577ff27af8c9051 files/digest-mpfc-1.3.4 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBfDmbE67gNkjlZFIRAj1tAJ95eoIso/lmJpfrZMAOgoQ41dhI1QCdGkDf
-KsFsZK4fUYJ6nhbo5YVSEE4=
-=ifXr
+iD8DBQFBfX1EE67gNkjlZFIRAuBHAJ9aSX6DF9Gh2tdFC56A63PrX8/UXACgq8si
+uP3MsuO0uqYmX6nUQUlvSD8=
+=wPex
 -----END PGP SIGNATURE-----
