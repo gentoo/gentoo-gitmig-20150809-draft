@@ -1,6 +1,13 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.1 2002/04/21 23:47:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.2 2002/05/02 05:16:19 mkennedy Exp $
+
+*dvdrip-0.39 (21 Apr 2002)
+
+  1 May 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  dvdrip-0.39.ebuild, files/digest-dvdrip-0.39 :
+
+  Version bump.
 
 *dvdrip-0.38 (21 Apr 2002)
 
