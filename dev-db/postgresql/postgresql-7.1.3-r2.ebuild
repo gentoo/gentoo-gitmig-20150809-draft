@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.3-r1.ebuild,v 1.1 2002/01/27 19:01:07 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.3-r2.ebuild,v 1.1 2002/01/31 02:14:33 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -14,26 +14,34 @@ DEPEND="virtual/glibc
 		>=sys-libs/ncurses-5.2
 		>=sys-libs/zlib-1.1.3
 		tcltk? ( >=dev-lang/tcl-8 )
+		perl? ( >=sys-devel/perl-5.6.1-r2 )
 		java? ( >=virtual/jdk-1.3 >=dev-java/ant-1.3 )
 		ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 		nls? ( sys-devel/gettext )"
-#		perl? ( sys-devel/perl )
 #		python? ( >=dev-lang/python-2.2-r4 )
 
 RDEPEND="virtual/glibc
 		>=sys-libs/zlib-1.1.3
 		tcltk? ( >=dev-lang/tcl-8 )
+		perl? ( >=sys-devel/perl-5.6.1-r2 )
 		java? ( >=virtual/jdk-1.3 )
 		ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
-#		perl? ( sys-devel/perl )
 #		python? ( >=dev-lang/python-2.2-r4 )
 
 src_unpack() {
 
-  unpack postgresql-${PV}.tar.gz
+	unpack postgresql-${PV}.tar.gz
 
-  cd ${S}
+	cd ${S}
 
+	# we know that a shared libperl is present, the default perl
+	# config is however set to the static libperl.a
+	# just remove the check
+	patch -p1 < ${FILESDIR}/${P}-dyn-libperl-gentoo.diff
+
+	# This patch is based on Lamar Owens, Thomas Lockhards and 
+	# Thron Eivind Glomsrod work. Thanks you all.
+	patch -p1 < ${FILESDIR}/${P}-perl5-GNUmakefile-gentoo.diff
 }
 
 src_compile() {
@@ -47,10 +55,10 @@ src_compile() {
 #	then
 #		myconf="$myconf --with-python"
 #	fi
-#	if [ "`use perl`" ]
-#	then
-#		myconf="$myconf --with-perl"
-#	fi
+	if [ "`use perl`" ]
+	then
+		myconf="$myconf --with-perl"
+	fi
 	if [ "`use java`" ]
 	then
 		myconf="$myconf --with-java"
@@ -82,6 +90,13 @@ src_compile() {
 
 src_install () {
 
+	if [ "`use perl`" ]
+	then
+		mv ${S}/src/pl/plperl/Makefile ${S}/src/pl/plperl/Makefile_orig
+		sed -e "s:(INST_DYNAMIC) /usr/lib:(INST_DYNAMIC) ${D}/usr/lib:" \
+			${S}/src/pl/plperl/Makefile_orig > ${S}/src/pl/plperl/Makefile
+	fi
+
 	make DESTDIR=${D} install || die
 	make DESTDIR=${D} install-all-headers || die
 	dodoc COPYRIGHT HISTORY INSTALL README register.txt
@@ -98,6 +113,9 @@ src_install () {
 	mv ${D}/usr/doc/postgresql/html ${D}/usr/share/doc/${PF}
 	rm -rf ${D}/usr/doc ${D}/mnt
 	exeinto /usr/bin
+	
+	dojar ${D}/usr/share/postgresql/java/postgresql.jar
+	rm ${D}/usr/share/postgresql/java/postgresql.jar
 
 	exeinto /etc/init.d/
 	doexe ${FILESDIR}/${PV}/${PN}
