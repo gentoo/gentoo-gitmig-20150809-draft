@@ -1,3 +1,5 @@
-MD5 1b3b101d2e59a4afaf363c07aaa63af8 ChangeLog 794
+MD5 984387c2550a66418ae2360716ac69d4 cacti-0.8.1.ebuild 4113
 MD5 57395465876dc8e6c61d0cc68f6c3620 cacti-0.6.8a.ebuild 1465
+MD5 1b3b101d2e59a4afaf363c07aaa63af8 ChangeLog 794
+MD5 f1e420ab088a8222b4020ab76a92c387 files/digest-cacti-0.8.1 63
 MD5 36cff775a40a01ca080d9b290109a795 files/digest-cacti-0.6.8a 64
