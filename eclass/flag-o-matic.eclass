@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.47 2004/04/12 02:33:29 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.48 2004/05/06 02:36:37 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -106,6 +106,10 @@ filter-flags() {
 
 filter-lfs-flags() {
 	filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+}
+
+append-lfs-flags() {
+	append-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 }
 
 append-flags() {
