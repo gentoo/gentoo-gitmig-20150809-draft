@@ -49,8 +49,9 @@ KDE3DIR="/usr/kde/3"
 
 # Default maintainer options
 #FEATURES="digest sandbox noclean noauto"
+#	WARNING: sanbox is broken on ppc - don't use!
 # Default user options
-#FEATURES="sandbox"
+#FEATURES=""
 
 # By default output colored text where possible, set to "true" to output only
 #black&white text
