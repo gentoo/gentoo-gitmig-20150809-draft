@@ -1,0 +1,90 @@
+diff -Nrup gdb-6.3.orig/gdb/dwarf2read.c gdb-6.3/gdb/dwarf2read.c
+--- gdb-6.3.orig/gdb/dwarf2read.c	2004-10-15 20:41:00.000000000 -0400
++++ gdb-6.3/gdb/dwarf2read.c	2004-11-27 20:35:38.000000000 -0500
+@@ -840,7 +840,7 @@ static struct line_header *(dwarf_decode
+ static void dwarf_decode_lines (struct line_header *, char *, bfd *,
+ 				struct dwarf2_cu *, struct partial_symtab *);
+ 
+-static void dwarf2_start_subfile (char *, char *);
++static void dwarf2_start_subfile (char *, char *, char *);
+ 
+ static struct symbol *new_symbol (struct die_info *, struct type *,
+ 				  struct dwarf2_cu *);
+@@ -6456,12 +6456,10 @@ dwarf_decode_lines (struct line_header *
+ 	     directory and file name numbers in the statement program
+ 	     are 1-based.  */
+           struct file_entry *fe = &lh->file_names[file - 1];
+-          char *dir;
++          char *dir = NULL;
+           if (fe->dir_index)
+             dir = lh->include_dirs[fe->dir_index - 1];
+-          else
+-            dir = comp_dir;
+-	  dwarf2_start_subfile (fe->name, dir);
++          dwarf2_start_subfile (fe->name, dir, comp_dir);
+ 	}
+ 
+       /* Decode the table. */
+@@ -6561,7 +6559,7 @@ dwarf_decode_lines (struct line_header *
+                 else
+                   dir = comp_dir;
+                 if (!decode_for_pst_p)
+-                  dwarf2_start_subfile (fe->name, dir);
++                  dwarf2_start_subfile (fe->name, dir, comp_dir);
+               }
+ 	      break;
+ 	    case DW_LNS_set_column:
+@@ -6619,7 +6617,8 @@ dwarf_decode_lines (struct line_header *
+ 
+ /* Start a subfile for DWARF.  FILENAME is the name of the file and
+    DIRNAME the name of the source directory which contains FILENAME
+-   or NULL if not known.
++   or NULL if not known.  COMP_DIR is the value of DW_AT_comp_dir.  If
++   DIRNAME specifies a relative path, it is appended to COMP_DIR.
+    This routine tries to keep line numbers from identical absolute and
+    relative file names in a common subfile.
+ 
+@@ -6638,8 +6637,19 @@ dwarf_decode_lines (struct line_header *
+    subfile, so that `break /srcdir/list0.c:1' works as expected.  */
+ 
+ static void
+-dwarf2_start_subfile (char *filename, char *dirname)
++dwarf2_start_subfile (char *filename, char *dirname, char *comp_dir)
+ {
++  struct cleanup *back_to = make_cleanup (null_cleanup, 0);
++
++  /* If we have a relative dirname, append it to comp_dir.  */
++  if (dirname != NULL && !IS_ABSOLUTE_PATH (dirname) && comp_dir != NULL)
++    {
++      dirname = concat (comp_dir, "/", dirname, NULL);
++      make_cleanup (xfree, dirname);
++    }
++  else if (dirname == NULL)
++    dirname = comp_dir;
++
+   /* If the filename isn't absolute, try to match an existing subfile
+      with the full pathname.  */
+ 
+@@ -6647,19 +6657,20 @@ dwarf2_start_subfile (char *filename, ch
+     {
+       struct subfile *subfile;
+       char *fullname = concat (dirname, "/", filename, NULL);
++      make_cleanup (xfree, fullname);
+ 
+       for (subfile = subfiles; subfile; subfile = subfile->next)
+ 	{
+ 	  if (FILENAME_CMP (subfile->name, fullname) == 0)
+ 	    {
+ 	      current_subfile = subfile;
+-	      xfree (fullname);
++	      do_cleanups (back_to);
+ 	      return;
+ 	    }
+ 	}
+-      xfree (fullname);
+     }
+   start_subfile (filename, dirname);
++  do_cleanups (back_to);
+ }
+ 
+ static void
