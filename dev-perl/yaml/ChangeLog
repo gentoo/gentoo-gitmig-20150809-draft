@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/yaml
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.1 2003/06/26 16:11:30 mcummings Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.2 2004/01/19 21:58:16 esammer Exp $
+
+  19 Jan 2004; Eric Sammer <esammer@gentoo.org> yaml-0.35.ebuild:
+  Added ~amd64 to keywords to fix dependencies. Added metadata.xml
 
 *yaml-0.35 (26 Jun 2003)
 
