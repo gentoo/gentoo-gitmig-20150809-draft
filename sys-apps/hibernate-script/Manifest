@@ -1,9 +1,10 @@
 MD5 56d6d026ca954708a780db6eb7f92dde hibernate-script-1.01.ebuild 1230
 MD5 e385d2ad9898fd6f4964feccfb717a2f hibernate-script-1.02-r1.ebuild 1795
 MD5 2c23c2646539e6a131a3ba8678fd0f06 hibernate-script-1.03.ebuild 1792
+MD5 a373b4f553e33022bb4dbc0ef926ec20 hibernate-script-1.05.ebuild 1793
 MD5 0a4e754285f5d4962a294c706a87d967 hibernate-script-1.00.ebuild 1230
 MD5 5e51954566e7a7789396ae5bc950c3de hibernate-script-1.02.ebuild 1299
-MD5 6bf9475469f17bda04aad7626c288bbc ChangeLog 1557
+MD5 a4c93b84c77fe79b39d8a9b694ec90bb ChangeLog 1700
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 1144f8e4a917acd80d359ae9a7895d31 hibernate-script-1.04.ebuild 1793
 MD5 8d975c41e4fcad78bf4ceb1fabdb27f9 files/digest-hibernate-script-1.02-r1 72
@@ -12,3 +13,4 @@ MD5 c6a307ed804ad8d67438d0de38d8d430 files/digest-hibernate-script-1.01 72
 MD5 8d975c41e4fcad78bf4ceb1fabdb27f9 files/digest-hibernate-script-1.02 72
 MD5 8d120706e9a040125072dd1a569c9851 files/digest-hibernate-script-1.03 72
 MD5 f7f2cb031a9604ee8a05f262c78a5e7f files/digest-hibernate-script-1.04 72
+MD5 51d8389f2aa4b5374d7d13b249924f09 files/digest-hibernate-script-1.05 72
