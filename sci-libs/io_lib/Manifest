@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2abb1edfc67af41fd8fc34db084c9467 io_lib-1.8.12b.ebuild 562
-MD5 fcda65df284fa9bc3b348cc91718fcb0 ChangeLog 609
+MD5 a4f332db87f2615901eb2405038a1f92 io_lib-1.8.12b.ebuild 561
+MD5 4ed71fc68dfe5ecd581f5ec09e8e1197 ChangeLog 702
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 1670ca8a79d13eea06cd7f4945e0f392 files/digest-io_lib-1.8.12b 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0fgcI1lqEGTUzyQRArl7AKDHLoLEgszwjDrhSzSWG9gdEVE0fACgq+T0
-EZwXBxbZu3PWrJikBjsPOuw=
-=aYog
------END PGP SIGNATURE-----
