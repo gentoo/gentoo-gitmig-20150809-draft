@@ -9,7 +9,7 @@ MD5 d4c03bbdb7088b3463ec88e0ab435455 ruby-1.8.0-r6.ebuild 2611
 MD5 b2f540a1319fdc9457624f55ddb122d5 ruby-1.8.0-r7.ebuild 2729
 MD5 2a1eaeffe23ec950b79dc2f50ce6d16c ruby-1.8.1-r3.ebuild 2728
 MD5 6eca81d9bf6a841858edcccf9d8e11b5 ruby-1.8.1-r6.ebuild 2780
-MD5 0fe9b9d71bf979c838986f2f89adc052 ruby-1.8.1-r7.ebuild 2781
+MD5 667426b010cc2a1b248b0a1d9f62eb96 ruby-1.8.1-r7.ebuild 2779
 MD5 da7f0769f87ee8b2249e9b9bbd8d6b44 ruby-1.8.2_pre2.ebuild 3491
 MD5 cc29fb12a2f12f94d88ed90706907e9c files/digest-ruby-1.6.8-r11 136
 MD5 b48dff624661317e05cd3ad1d6954096 files/digest-ruby-1.6.8-r6 128
@@ -26,7 +26,7 @@ MD5 999d392f0a17f7643659081973e99def files/ruby-rdoc-gentoo.diff 432
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBUsrBHTu7gpaalycRAvHLAKCrSFuhWl7S/sUfMfghHQ/ja5thjQCgl4Dv
-tlmJOWw27750pe3T1bKpXZQ=
-=PhFr
+iD8DBQFBUssLHTu7gpaalycRAmzlAKCIVFlDmIrhTM9quMtgGH3kh3IWlACggzPF
+kAMvWwupnyoxqeb9fqfJyjU=
+=Z9jz
 -----END PGP SIGNATURE-----
