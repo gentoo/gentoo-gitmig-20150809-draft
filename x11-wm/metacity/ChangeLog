@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.1 2002/05/22 22:56:03 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.2 2002/05/24 05:14:02 spider Exp $
+
+* metacity-2.3.377 (23 May 2002)
+  23 May 2002; Spider <spider@gentoo.org>  metacity-2.3.377.ebuild :
+  Version bump
 
 * metacity-2.3.233 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org>  metacity-2.3.233.ebuild :
