@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre5-r1.ebuild,v 1.4 2002/09/10 16:55:53 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre5-r1.ebuild,v 1.5 2002/09/10 17:02:39 gerk Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder
 RDEPEND=">=media-libs/divx4linux-20020418
-	x86? ( >=media-libs/win32codecs-0.60)
+	x86? ( >=media-libs/win32codecs-0.60 )
 	dvd? ( media-libs/libdvdread
 	       media-libs/libdvdcss )
 	gtk? ( =x11-libs/gtk+-1.2*
