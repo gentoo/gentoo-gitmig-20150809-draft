@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.64-r1.ebuild,v 1.1 2001/05/17 13:29:30 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.35.5-r2.ebuild,v 1.1 2001/10/06 20:15:36 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.35.5-r2.ebuild,v 1.2 2001/10/07 09:49:10 hallski Exp $
 
 A=Guppi-${PV}.tar.gz
 S=${WORKDIR}/Guppi-${PV}
@@ -17,7 +17,6 @@ RDEPEND=">=media-libs/gdk-pixbuf-0.11.0-r1
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	>=app-office/gnumeric-0.70-r2
         >=dev-util/xml-i18n-tools-0.8.4
 	python? ( >=dev-lang/python-2.0 )"
 
@@ -50,7 +49,6 @@ src_compile() {
 
 	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
-		    --disable-gnumeric 					\
 		    ${myconf} || die
 
 	make || die # Doesn't work with -j 4 (hallski)
