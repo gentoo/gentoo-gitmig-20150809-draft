@@ -1,3 +1,36 @@
+diff -ur ray.orig/src/hd/Rmakefile ray/src/hd/Rmakefile
+--- ray.orig/src/hd/Rmakefile	2003-12-15 16:52:34.000000000 +1300
++++ ray/src/hd/Rmakefile	2003-12-15 18:12:48.000000000 +1300
+@@ -24,7 +24,7 @@
+ 
+ all:	$(PROGS)
+ 
+-install:	all $(DEVS) $(SPECIAL)
++install:	all $(SPECIAL)
+ 	cp $(PROGS) $(INSTDIR)
+ 
+ clean:
+@@ -74,7 +74,7 @@
+ 	rm -f $(DEVDIR)/x11h.hdi
+ 	ln $(DEVDIR)/x11.hdi $(DEVDIR)/x11h.hdi
+ 
+-$(DEVDIR)/x11.hdi:	rhdisp.o rhdisp2.o viewbeams.o rhd_x11.o rhd_qtree.o \
++$(DEVDIR)/x11.hdi:	rhdisp.o rhdisp2.o viewbeams.o rhd_qtree.o \
+ rhd_qtree2r.o rhd_ctab.o holo.o
+ 	$(CC) $(CFLAGS) -o $(DEVDIR)/x11.hdi rhdisp.o rhdisp2.o viewbeams.o \
+ rhd_x11.o rhd_qtree.o rhd_qtree2r.o rhd_ctab.o holo.o -lrt -lX11 -lm
+diff -ur ray.orig/src/meta/Rmakefile ray/src/meta/Rmakefile
+--- ray.orig/src/meta/Rmakefile	2003-12-15 16:52:35.000000000 +1300
++++ ray/src/meta/Rmakefile	2003-12-15 18:02:14.000000000 +1300
+@@ -32,7 +32,7 @@
+ 
+ general:	$(INSTDIR)/meta2tga $(INSTDIR)/pexpand $(INSTDIR)/psort \
+ $(INSTDIR)/cv $(INSTDIR)/psmeta $(INSTDIR)/plotin \
+-$(INSTDIR)/x11meta ../lib/libmeta.a $(INSTDIR)/bgraph $(INSTDIR)/igraph \
++../lib/libmeta.a $(INSTDIR)/bgraph $(INSTDIR)/igraph \
+ $(INSTDIR)/dgraph $(INSTDIR)/gcomp $(INSTDIR)/plot4
+ 
+ special:	$(EXEC2)/mt160l $(EXEC2)/mt160 $(EXEC2)/mtext \
 diff -ur ray.orig/src/px/Rmakefile ray/src/px/Rmakefile
 --- ray.orig/src/px/Rmakefile	2003-12-15 16:52:34.000000000 +1300
 +++ ray/src/px/Rmakefile	2003-12-15 16:56:41.000000000 +1300
