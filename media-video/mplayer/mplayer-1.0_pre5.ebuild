@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5.ebuild,v 1.4 2004/07/15 08:26:31 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5.ebuild,v 1.5 2004/07/15 20:44:40 lu_zero Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -115,6 +115,9 @@ src_unpack() {
 	# GCC 3.4 fixes
 	epatch ${FILESDIR}/mplayer-1.0_pre4-alsa-gcc34.patch
 	# fixes for mga driver with kernel 2.6
+
+	#Workaround for the altivec softscaler issues
+	epatch ${FILESDIR}/mplayer-1.0_pre5-yuv2rbg_kludge.patch
 	if use matrox; then
 		get_kernel_info
 
