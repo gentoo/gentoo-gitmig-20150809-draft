@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/ksmoothdock
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ChangeLog,v 1.2 2004/10/31 00:07:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ChangeLog,v 1.3 2004/11/21 23:14:27 motaboy Exp $
+
+  22 Nov 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/ksmoothdock-3.5.1-configure-arts.patch, ksmoothdock-3.5.1.ebuild:
+  Added a patch to the configure script to honor the arts use flag. Fixes bug
+  #71919.
 
 *ksmoothdock-3.5 (30 Oct 2004)
 
