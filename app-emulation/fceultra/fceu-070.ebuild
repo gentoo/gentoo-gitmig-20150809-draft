@@ -3,10 +3,9 @@
 # Author Ryan Tolboom <ryan@gentoo.org>
 # /home/cvsroot/gentoo-x86/app-emulation/fceultra/fceu-054.ebuild,v 1.1 2001/05/26 00:39:56 ryan Exp
 
-A=fceu070src.tar.gz
 S=${WORKDIR}/fceu
 DESCRIPTION="A portable NES/Famicom Emulator"
-SRC_URI="http://fceultra.sourceforge.net/dev/${A}"
+SRC_URI="http://fceultra.sourceforge.net/dev/fceu070src.tar.gz"
 HOMEPAGE="http://fceultra.sourceforge.net"
 
 DEPEND=">=media-libs/svgalib-1.4.2"

@@ -1,12 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/dn9b-0401-r1.ebuild,v 1.1 2001/10/06 13:20:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/dn9b-0401-r1.ebuild,v 1.2 2001/11/10 02:58:37 hallski Exp $
 
-A=dn9b0401.tgz
 S=${WORKDIR}/darcnes
 DESCRIPTION="A multi-system emulator"
-SRC_URI="http://www.dridus.com/~nyef/darcnes/download/${A}"
+SRC_URI="http://www.dridus.com/~nyef/darcnes/download/dn9b0401.tgz"
 HOMEPAGE="http://www.netway.com/~nyef"
 
 DEPEND=">=media-libs/svgalib-1.4.2
