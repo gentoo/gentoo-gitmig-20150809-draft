@@ -1,0 +1,15 @@
+# ChangeLog for dev-java/libgtk-java
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.1 2004/12/04 13:42:25 karltk Exp $
+
+* libglade-java-2.8.2 (04 Dec 2004)
+
+  04 Dec 2004; <karltk@gentoo.org> :
+  Initial import. Fixes #70561.
+
+  08 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com> 
+  libglade-java-2.8.8.ebuild:
+  New ebuild. What used to be java-gnome is now multiplexed into various modular
+  subcomponents. Upstream CVS was all re-arranged, and now there is a release
+  tarball for each piece. This is the Java binding for LibGlade.
+
