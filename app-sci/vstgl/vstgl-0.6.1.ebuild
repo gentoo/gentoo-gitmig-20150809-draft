@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/vstgl/vstgl-0.6.1.ebuild,v 1.1 2002/12/06 06:41:52 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/vstgl/vstgl-0.6.1.ebuild,v 1.2 2003/01/08 05:27:06 george Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://vstgl.sourceforge.net/vstgl-0.6.1.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="x11-libs/qt
 	media-libs/libpng
