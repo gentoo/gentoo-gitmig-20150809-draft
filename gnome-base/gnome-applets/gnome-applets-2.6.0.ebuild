@@ -1,15 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.5.8.ebuild,v 1.1 2004/03/21 00:14:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.6.0.ebuild,v 1.1 2004/03/22 01:31:42 foser Exp $
 
-# FIXME : block gst until we got it sorted
 inherit gnome2
 
 DESCRIPTION="Applets for the Gnome2 Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
 
-#IUSE="doc apm acpi ipv6 gstreamer"
-IUSE="doc apm acpi ipv6"
+IUSE="doc apm acpi ipv6 gstreamer"
 SLOT="2"
 LICENSE="GPL-2 FDL-1.1"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
@@ -25,8 +23,8 @@ RDEPEND=">=x11-libs/gtk+-2.1
 	>=gnome-base/libgnomeui-2
 	>=x11-libs/libxklavier-0.97
 	apm? ( sys-apps/apmd )
-	acpi? ( sys-apps/acpid )"
-#	gstreamer? ( >=media-libs/gstreamer-0.7.3.1 )
+	acpi? ( sys-apps/acpid )
+	gstreamer? ( >=media-libs/gstreamer-0.8 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
@@ -35,8 +33,7 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog COPYING COPYING-DOCS INSTALL NEWS README"
 
-#G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable gstreamer) --enable-flags"
-G2CONF="${G2CONF} $(use_enable ipv6) --disable-gstreamer --enable-flags"
+G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable gstreamer) --enable-flags"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
