@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-#Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.0.19.ebuild,v 1.4 2003/02/13 14:00:54 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.0.19.ebuild,v 1.5 2003/09/08 07:59:35 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Provides Access to Netware services using the NCP protocol (Kernel support must be activated!)"
