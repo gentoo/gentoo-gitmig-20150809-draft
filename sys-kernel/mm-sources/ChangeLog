@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.57 2003/08/03 00:18:30 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.58 2003/08/03 02:20:30 latexer Exp $
+
+  02 Aug 2003; Peter Johanson <latexer@gentoo.org>
+  mm-sources-2.6.0_beta2-r3.ebuild:
+  Morton brainfarted, and released a -mm3-1 fairly immediately to fix a major
+  problem. Sorry for not revision bumping, but that'd mess with our naming
+  scheme. re-emerge if you were caugh off guard, or apply the patch listed at
+  http://lkml.org/lkml/2003/8/2/174
 
 *mm-sources-2.6.0_beta2-r3 (02 Aug 2003)
 
