@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.64 2004/04/20 02:03:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.65 2004/04/21 01:31:32 caleb Exp $
+
+  20 Apr 2004; Caleb Tennis <caleb@gentoo.org> -kde-3.0.5b.ebuild:
+  Removing old version
 
 *kde-3.2.2 (19 Apr 2004)
 
