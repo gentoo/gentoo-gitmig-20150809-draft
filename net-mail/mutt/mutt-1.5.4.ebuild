@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.4.ebuild,v 1.2 2003/03/26 05:10:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.4.ebuild,v 1.3 2003/03/26 05:23:45 latexer Exp $
 
 IUSE="ssl nls slang cjk crypt imap"
 
@@ -77,7 +77,7 @@ src_compile() {
 	make || die "make failed (myconf=${myconf})"
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=$D install || die
 	find $D/usr/share/doc -type f |grep -v html | xargs gzip
 	insinto /etc/mutt
@@ -89,4 +89,8 @@ src_install () {
 	fi
 
 	dodoc BEWARE COPYRIGHT ChangeLog NEWS OPS* PATCHES README* TODO VERSION
+}
+pkg_postinst() {
+	einfo "The USE variable 'imap' is not set by default on most architectures."
+	einfo "To enable imap support in mutt, make sure you have 'imap' set."
 }
