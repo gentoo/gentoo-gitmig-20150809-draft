@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php-gtk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/ChangeLog,v 1.5 2004/08/07 19:51:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/ChangeLog,v 1.6 2004/08/07 20:19:10 robbat2 Exp $
+
+  07 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> php-gtk-1.0.0.ebuild:
+  force the correct php.
 
   07 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> php-gtk-1.0.0.ebuild:
   Force to apply for PHP-CLI only.

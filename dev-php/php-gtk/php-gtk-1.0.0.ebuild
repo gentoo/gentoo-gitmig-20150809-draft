@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/php-gtk-1.0.0.ebuild,v 1.7 2004/08/07 19:51:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/php-gtk-1.0.0.ebuild,v 1.8 2004/08/07 20:19:10 robbat2 Exp $
 
 PHP_EXT_NAME="php_gtk"
 PHP_EXT_ZENDEXT="no"
@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
 DEPEND="$DEPEND"
-
-RDEPEND="=x11-libs/gtk+-1.2* =gnome-base/libglade-0.17*"
+RDEPEND="=x11-libs/gtk+-1.2* =gnome-base/libglade-0.17* dev-php/php"
 
 # Fails to compile with higher MAKEOPTS
 MAKEOPTS="-j1"
