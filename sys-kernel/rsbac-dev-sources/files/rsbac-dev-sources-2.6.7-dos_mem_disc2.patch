@@ -146,14 +146,6 @@ diff -urNp -X /usr/src/dontdiff linux-2.6.7-gentoo-r19/fs/exec.c linux-dsd/fs/ex
  	long arg_size;
  
  #ifdef CONFIG_STACK_GROWSUP
-@@ -413,7 +413,6 @@ int setup_arg_pages(struct linux_binprm 
- 
- 	down_write(&mm->mmap_sem);
- 	{
--		struct vm_area_struct *vma;
- 		mpnt->vm_mm = mm;
- #ifdef CONFIG_STACK_GROWSUP
- 		mpnt->vm_start = stack_base;
 diff -urNp -X /usr/src/dontdiff linux-2.6.7-gentoo-r19/include/linux/mm.h linux-dsd/include/linux/mm.h
 --- linux-2.6.7-gentoo-r19/include/linux/mm.h	2004-12-02 23:32:15.430905336 +0000
 +++ linux-dsd/include/linux/mm.h	2004-12-02 23:33:06.942074448 +0000

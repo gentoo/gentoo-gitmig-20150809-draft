@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/rsbac-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.16 2004/12/08 19:53:28 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.17 2004/12/11 12:52:26 kang Exp $
+
+  11 Dec 2004; Guillaume Destuynder <kang@gentoo.org>
+  files/rsbac-dev-sources-2.6.7-dos_mem_disc2.patch:
+  Fixes #73899, incoherent patch from the last security fixes removes a
+  variable it also added in fs/exec.c
 
 *rsbac-dev-sources-2.6.7-r10 (08 Dec 2004)
 

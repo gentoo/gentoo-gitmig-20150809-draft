@@ -1,5 +1,5 @@
 MD5 ed6fb50f79e8049f3f3576bb25c32747 metadata.xml 465
-MD5 99848b4cf5752f1a16862a7f5afa31ab ChangeLog 4417
+MD5 2381cc3d54015367da96222898383ad6 ChangeLog 4635
 MD5 8935fe858917edc96958d71c945d1930 rsbac-dev-sources-2.6.7-r10.ebuild 1886
 MD5 706d7794a822074aaf31502d7a7e48d3 files/2.6.7-cmdline.patch 455
 MD5 b6e38b41c8a79943df2ab2642149d06f files/rsbac-dev-sources-CAN-2004-0497.patch 2214
@@ -16,4 +16,4 @@ MD5 7872d0af6e27fb6007833b113097bb34 files/rsbac-dev-sources-2.6.7-CAN-2004-0883
 MD5 530630d25910e6bd9376b63ea099655f files/rsbac-dev-sources-2.6.7-AF_UNIX.patch 469
 MD5 ee9c2340e890a15d199f98f98e027466 files/digest-rsbac-dev-sources-2.6.7-r10 281
 MD5 91dd923056c1af13054cb00fb0a8daa3 files/rsbac-dev-sources-2.6.7-dos_mem_disc1.patch 1578
-MD5 4c0855099b2f8bd4b6e06b4903d5ba74 files/rsbac-dev-sources-2.6.7-dos_mem_disc2.patch 7578
+MD5 632a66f683783bebc9c7b565284284d0 files/rsbac-dev-sources-2.6.7-dos_mem_disc2.patch 7369
