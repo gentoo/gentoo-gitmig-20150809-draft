@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.3 2004/05/18 03:25:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.4 2004/05/19 12:21:03 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="nls build acl selinux static"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
@@ -73,14 +73,12 @@ src_unpack() {
 }
 
 src_compile() {
-
 	if [ -z "`which cvs 2>/dev/null`" ]
 	then
 		# Fix issues with gettext's autopoint if cvs is not installed,
 		# bug #28920.
 			export AUTOPOINT="/bin/true"
 	fi
-
 
 	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
