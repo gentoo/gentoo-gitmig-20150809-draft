@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.12.3-r2.ebuild,v 1.15 2004/01/18 10:02:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.12.3-r2.ebuild,v 1.16 2004/06/24 03:25:52 agriffis Exp $
 
 IUSE="nls static build"
 
@@ -40,14 +40,14 @@ src_compile() {
 		--host=${CHOST} \
 		${myconf} || die
 
-	if [ "`use static`" ]
+	if use static
 	then
 		emake -e LDFLAGS=-all-static || die
 	else
 		emake || die
 	fi
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		#make the info pages (makeinfo included with gcc is used)
 		make info || die
@@ -86,7 +86,7 @@ src_install() {
 	done
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		#install info pages
 		make infodir=${D}/usr/share/info \

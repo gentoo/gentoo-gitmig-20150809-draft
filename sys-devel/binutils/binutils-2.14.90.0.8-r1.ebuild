@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.14 2004/06/05 16:53:18 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.15 2004/06/24 03:25:52 agriffis Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -82,9 +82,9 @@ src_compile() {
 	emake tooldir="${ROOT}/usr/bin" \
 		all || die
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
-		if [ -z "`use bootstrap`" ]
+		if ! use bootstrap
 		then
 			# Nuke the manpages to recreate them (only use this if we have perl)
 			find . -name '*.1' -exec rm -f {} \; || :
@@ -146,7 +146,7 @@ src_install() {
 	fi
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		make prefix=${D}/usr \
 			mandir=${D}/usr/share/man \

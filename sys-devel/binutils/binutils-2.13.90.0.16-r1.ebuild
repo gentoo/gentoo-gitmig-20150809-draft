@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.16-r1.ebuild,v 1.13 2004/04/16 03:33:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.16-r1.ebuild,v 1.14 2004/06/24 03:25:52 agriffis Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -75,7 +75,7 @@ src_compile() {
 		--host=${CHOST} \
 		${myconf} || die
 
-	if [ "`use static`" ]
+	if use static
 	then
 		make headers -C bfd CFLAGS=-O || die
 		emake -e LDFLAGS=-all-static || die
@@ -84,9 +84,9 @@ src_compile() {
 		emake || die
 	fi
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
-		if [ -z "`use bootstrap`" ]
+		if ! use bootstrap
 		then
 			#nuke the manpages to recreate them (only use this if we have perl)
 			find . -name '*.1' -exec rm -f {} \; || :
@@ -135,7 +135,7 @@ src_install() {
 	done
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		make prefix=${D}/usr \
 			mandir=${D}/usr/share/man \

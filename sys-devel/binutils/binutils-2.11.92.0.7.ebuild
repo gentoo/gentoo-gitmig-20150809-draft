@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.7.ebuild,v 1.14 2004/01/18 10:02:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.7.ebuild,v 1.15 2004/06/24 03:25:52 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
@@ -14,12 +14,12 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	local myconf
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		myconf="--disable-nls"
 	fi
 	./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} ${myconf} || die
-	if [ "`use static`" ]
+	if use static
 	then
 		emake -e LDFLAGS=-all-static || die
 	else
@@ -54,7 +54,7 @@ src_install() {
 		ln -s ../${CHOST}/bin/${x} ${x}
 	done
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 	    dodoc COPYING* README
 	    docinto bfd
