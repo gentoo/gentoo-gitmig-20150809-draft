@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/jacksum
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.7 2004/12/12 17:54:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.8 2004/12/19 18:35:57 zx Exp $
+
+*jacksum-1.5.1 (19 Dec 2004)
+
+  19 Dec 2004; Chris Aniszczyk <zx@gentoo.org> +jacksum-1.5.1.ebuild:
+  Version bump. Closes #73700.
+  Thanks to henning <henning@wh9.tu-dresden.de> for the update.
 
   12 Dec 2004; Jason Wever <weeve@gentoo.org> jacksum-1.4.0.ebuild:
   Stable on sparc.
