@@ -1,14 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.65.ebuild,v 1.1 2005/03/25 21:44:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.65.3.ebuild,v 1.1 2005/03/25 21:53:25 seemant Exp $
 
 inherit eutils
 
-MY_DIFFV=3
-MY_DIFFP=${P/-/_}-${MY_DIFFV}.diff
+MY_P=${P/-/_}
+MY_DIFFP=${MY_P%.*}-${MY_P##*.}.diff
+MY_P=${MY_P%.*}
 DESCRIPTION="Jonathan's Own Version of Emacs -- a light emacs-like editor without LISP bindings"
 HOMEPAGE="ftp://ftp.cs.toronto.edu/cs/ftp/pub/hugh/jove-dev/"
-SRC_URI="mirror://debian/pool/main/j/${PN}/${P/-/_}.orig.tar.gz
+SRC_URI="mirror://debian/pool/main/j/${PN}/${MY_P}.orig.tar.gz
 	mirror://debian/pool/main/j/${PN}/${MY_DIFFP}.gz"
 RESTRICT="nomirror"
 
@@ -23,7 +24,7 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}/${PN}${PV}
+S=${WORKDIR}/${MY_P/_/}
 
 src_unpack() {
 	unpack ${A}
