@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.7 2004/04/10 04:32:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.8 2004/04/27 21:04:28 agriffis Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Qmail Queue Repair Application with support for big-todo"

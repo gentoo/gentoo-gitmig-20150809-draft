@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailx-support
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx-support/ChangeLog,v 1.4 2003/08/03 15:36:54 gmsoft Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx-support/ChangeLog,v 1.5 2004/04/27 20:58:05 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  mailx-support-20030215.ebuild:
+  Add inherit eutils
 
   15 Jul 2003; Christian Birchinger <joker@gentoo.org>
   mailx-support-20030215.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.26 2004/04/26 15:56:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.27 2004/04/27 20:59:00 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-thunderbird-0.4.ebuild, mozilla-thunderbird-0.5-r1.ebuild,
+  mozilla-thunderbird-0.5.ebuild:
+  Add inherit eutils
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-thunderbird-0.5-r1.ebuild:

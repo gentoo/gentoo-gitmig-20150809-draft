@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129-r2.ebuild,v 1.10 2004/01/03 13:38:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129-r2.ebuild,v 1.11 2004/04/27 20:57:18 agriffis Exp $
 
-inherit ccc
+inherit ccc eutils
 
 MX_VER="8.1.1"
 S=${WORKDIR}/mailx-${MX_VER}.orig

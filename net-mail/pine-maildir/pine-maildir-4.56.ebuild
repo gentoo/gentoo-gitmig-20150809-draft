@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.56.ebuild,v 1.6 2004/02/27 12:42:17 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.56.ebuild,v 1.7 2004/04/27 21:01:05 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="tool for reading, sending and managing electronic messages"
 HOMEPAGE="http://www.washington.edu/pine/"

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/gentoo-x86/net-mail/courier/courier-0.41.0.ebuild
 
+inherit eutils
+
 DESCRIPTION="An MTA designed specifically for maildirs"
 #SRC_URI="http://www.courier-mta.org/beta/courier/${P}.tar.bz2"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"

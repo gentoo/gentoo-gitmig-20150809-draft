@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.47 2004/04/11 04:02:39 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.48 2004/04/27 20:47:41 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> balsa-1.4.3.ebuild:
+  Add inherit eutils
 
   10 Apr 2004; <khai@gentoo.org> balsa-2.0.15-r1.ebuild:
   First commit, patch to make balsa-2.0.15-r1 compile against gtk+-2.4

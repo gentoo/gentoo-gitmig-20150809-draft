@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $
 
+inherit eutils
+
 IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl maildir lmtp ipv6 sasl"
 
 EXISCANACL_VER=${PV}-13

@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.13 2003/07/19 15:38:32 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.14 2004/04/27 20:56:16 agriffis Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Simple yet powerful mailing list manager for qmail."

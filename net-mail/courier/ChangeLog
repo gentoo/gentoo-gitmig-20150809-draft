@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.54 2004/04/21 23:42:42 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.55 2004/04/27 20:51:06 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> courier-0.45.3.ebuild,
+  courier-0.45.4.ebuild:
+  Add inherit eutils
 
   21 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.45.2.ebuild,
   courier-0.45.3.ebuild, courier-0.45.4.ebuild:

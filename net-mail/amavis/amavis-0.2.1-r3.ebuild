@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r3.ebuild,v 1.9 2004/02/28 11:11:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r3.ebuild,v 1.10 2004/04/27 20:43:40 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Virus Scanner"
 HOMEPAGE="http://www.amavis.org/"

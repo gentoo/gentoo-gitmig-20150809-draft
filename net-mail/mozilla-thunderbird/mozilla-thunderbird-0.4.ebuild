@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.4.ebuild,v 1.10 2004/03/25 08:32:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.4.ebuild,v 1.11 2004/04/27 20:59:00 agriffis Exp $
 
-inherit makeedit flag-o-matic gcc nsplugins
+inherit makeedit flag-o-matic gcc nsplugins eutils
 
 # Added to get thunderbird to compile on sparc.
 replace-sparc64-flags

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/queue-fix
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/ChangeLog,v 1.9 2004/04/10 04:32:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/ChangeLog,v 1.10 2004/04/27 21:04:28 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> queue-fix-1.4-r1.ebuild,
+  queue-fix-1.4-r2.ebuild:
+  Add inherit eutils
 
   10 Apr 2004; Joshua Kinard <kumba@gentoo.org> queue-fix-1.4-r2.ebuild:
   Marked stable on mips.

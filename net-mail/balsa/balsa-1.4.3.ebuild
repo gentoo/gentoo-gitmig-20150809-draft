@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.4.3.ebuild,v 1.4 2003/09/05 02:37:14 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.4.3.ebuild,v 1.5 2004/04/27 20:47:41 agriffis Exp $
+
+inherit eutils
 
 IUSE="ssl nls cups gtkhtml spell perl"
 

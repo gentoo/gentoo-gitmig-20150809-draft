@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.52 2004/04/24 13:03:45 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.53 2004/04/27 20:54:50 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> exim-4.12.ebuild,
+  exim-4.14.ebuild, exim-4.20-r1.ebuild, exim-4.20-r2.ebuild,
+  exim-4.20.ebuild, exim-4.21.ebuild, exim-4.22.ebuild, exim-4.24-r1.ebuild,
+  exim-4.24-r2.ebuild, exim-4.24-r3.ebuild, exim-4.24.ebuild,
+  exim-4.30-r1.ebuild, exim-4.30.ebuild, exim-4.31.ebuild, exim-4.32.ebuild:
+  Add inherit eutils
 
 *exim-4.32 (24 Apr 2004)
 

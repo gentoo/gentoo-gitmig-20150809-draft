@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/scmail
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/scmail/ChangeLog,v 1.5 2004/03/28 10:48:03 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/scmail/ChangeLog,v 1.6 2004/04/27 21:07:39 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> scmail-0.2.ebuild:
+  Add inherit eutils
 
   28 Mar 2004; Akinori Hattori <hattya@gentoo.org> scmail-0.2.ebuild,
   scmail-1.1.ebuild, scmail-1.2.ebuild:

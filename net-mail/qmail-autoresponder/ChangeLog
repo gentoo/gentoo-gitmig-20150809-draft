@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-autoresponder
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.10 2003/11/29 03:47:39 robbat2 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.11 2004/04/27 21:02:47 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  qmail-autoresponder-0.96.1-r1.ebuild, qmail-autoresponder-0.96.1.ebuild:
+  Add inherit eutils
 
   28 Nov 2003; Robin H. Johnson <robbat2@gentoo.org>
   qmail-autoresponder-0.96.1-r1.ebuild:

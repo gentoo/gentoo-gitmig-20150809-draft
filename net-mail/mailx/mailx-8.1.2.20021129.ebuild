@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129.ebuild,v 1.6 2003/09/05 02:52:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129.ebuild,v 1.7 2004/04/27 20:57:18 agriffis Exp $
 
 MX_VER="8.1.1"
 S=${WORKDIR}/mailx-${MX_VER}.orig
