@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3042 2004/08/06 20:38:56 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3043 2004/08/07 04:58:17 mkennedy Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -22,12 +22,16 @@
 ##   End example
 ##
 
-# <eradicator@gentoo.org> (6 Aug 2004)
-# New version of rosegarden has -fPIC, -fexceptions, and gcc-3.4
-# issues.  I believe the pic and gcc34 issues are fixed, but
-# the Makefiles need to be edited to strip out -fno-exceptions
-# where appropriate.
-=media-sound/rosegarden-4.0.9.9
+# <mkennedy@gentoo.org> (8 Aug 2004)
+# won't build for now
+dev-lisp/cl-rsm-gen-prog
+dev-lisp/cl-rsm-genetic-alg
+
+# <eradicator@gentoo.org> (6 Aug 2004) New version of rosegarden has
+# -fPIC, -fexceptions, and gcc-3.4 issues.  I believe the pic and
+# gcc34 issues are fixed, but the Makefiles need to be edited to strip
+# out -fno-exceptions where appropriate.
+# =media-sound/rosegarden-4.0.9.9
 
 # <liquidx@gentoo.org> (6 Aug 2004)
 # development versions of evolution.
