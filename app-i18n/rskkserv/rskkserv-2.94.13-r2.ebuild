@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r2.ebuild,v 1.1 2004/04/03 23:42:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r2.ebuild,v 1.2 2004/04/11 16:34:45 usata Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="dev-lang/ruby
+DEPEND="virtual/ruby
 	dev-ruby/ruby-tcpwrap"
 RDEPEND="${DEPEND}
 	app-i18n/skk-jisyo"
