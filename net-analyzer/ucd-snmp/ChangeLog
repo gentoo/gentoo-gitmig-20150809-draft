@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ucd-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.17 2003/10/01 17:14:48 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.18 2003/11/18 12:33:40 agriffis Exp $
+
+  18 Nov 2003; Aron Griffis <agriffis@gentoo.org> ucd-snmp-4.2.6-r2.ebuild:
+  Add ~alpha
 
   01 Oct 2003; Max Kalika <max@gentoo.org> files/snmpd.rc6:
   Remove -C from startup script.
