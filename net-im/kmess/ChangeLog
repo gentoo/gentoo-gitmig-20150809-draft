@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kmess
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.9 2003/05/29 18:12:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.10 2003/07/31 03:35:35 caleb Exp $
+
+  30 Jul 2003; Caleb Tennis <caleb@gentoo.org> kmess-1.2.1.ebuild:
+  Add kdenetwork dependency.
 
   29 May 2003; Jason Wever <weeve@gentoo.org> kmess-1.2.1.ebuild:
   Added ~sparc to keywords.
