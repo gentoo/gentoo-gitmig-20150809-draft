@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/gpsim-led
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-led/ChangeLog,v 1.1 2003/10/21 05:45:15 robbat2 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-led/ChangeLog,v 1.2 2004/03/05 06:50:37 dragonheart Exp $
+
+  05 Mar 2004; Daniel Black <dragonheart@gentoo.org> gpsim-led-0.0.3.ebuild,
+  metadata.xml:
+  Marking stable on x86
 
 *gpsim-led-0.0.3 (20 Oct 2003)
 

@@ -2,4 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dev-embedded</herd>
+<longdescription>7 Segment LED module for gpsim</longdescription>
 </pkgmetadata>
