@@ -1,12 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r6.ebuild,v 1.4 2002/12/15 22:06:27 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r3.ebuild,v 1.1 2003/01/28 04:16:42 chadh Exp $
+
+NOCO_VERSION="0.11b"
 
 S=${WORKDIR}/${P}
+OV="orinoco-${NOCO_VERSION}"
 DESCRIPTION="PCMCIA tools for Linux"
 SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
-	http://ozlabs.org/people/dgibson/dldwd/orinoco-0.12b.tar.gz"
-HOMEPAGE="http://pcmcia-cs.sourceforge.net/"
+	http://airsnort.shmoo.com/${OV}-patch.diff
+	http://ozlabs.org/people/dgibson/dldwd/${OV}.tar.gz"
+
+HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 DEPEND="sys-kernel/linux-headers"
 RDEPEND=""
 SLOT="0"
@@ -25,23 +30,34 @@ fi
 
 src_unpack() {
 	unpack ${P}.tar.gz
-#	patch -p0 < ${FILESDIR}/gentoo-${P}.patch
 
-	unpack orinoco-0.12b.tar.gz
+	if [ -z "`use wavelan`" ] ; then
+
+		unpack ${OV}.tar.gz
+		cd ${WORKDIR}/${OV}
+		patch -p1 < ${DISTDIR}/${OV}-patch.diff
+
+		cd ${S}
+		mv ../${OV}/hermes*.{c,h} \
+			../${OV}/orinoco*.{c,h} \
+			../${OV}/ieee802_11.h wireless/
+	fi
+
+
+	
 	cd ${S}
-	mv ../orinoco-0.12b/hermes*.{c,h} \
-		../orinoco-0.12b/orinoco*.{c,h} \
-		../orinoco-0.12b/ieee802_11.h wireless/
 	cp Configure Configure.orig
 	sed -e 's:usr/man:usr/share/man:g' Configure.orig > Configure
 	#man pages will now install into /usr/share/man
 
 	cd ${S}
-        ### As per the SourceForge web site reqs and bug #3400
-        # We'll replace all ide_cs with ide-cs
+	### As per the SourceForge web site reqs and bug #3400
+	# We'll replace all ide_cs with ide-cs
 	cp etc/config etc/config.orig
 	sed -e 's:ide_cs:ide-cs:g' etc/config.orig > etc/config
 	rm -f etc/config.orig
+
+
 }
 
 src_compile() {
@@ -87,10 +103,18 @@ src_compile() {
 	# The --srctree option tells pcmcia-cs to configure for the kernel in /usr/src/linux
 	# rather than the currently-running kernel.  It's Gentoo Linux policy to configure for
 	# the kernel in /usr/src/linux
+
+	sed -e "/^HAS_FORMS/d" config.out > config.out.sed
+	sed -e "/^HAS_FORMS/d" config.mk > config.mk.sed
+	sed -e "s/^FLIBS=\".*\"/FLIBS=\"\"/" config.out.sed > config.out
+	sed -e "s/^FLIBS=\".*\"/FLIBS=\"\"/" config.mk.sed > config.mk
+	rm -f config.out.sed
+	rm -f config.mk.sed
+
 	emake all || die "failed compiling"
 }
 
-src_install() {
+src_install () {
 	make PREFIX=${D} install || die "failed installing"
 	cd ${D}
 	rm -rf etc/rc*.d
@@ -128,7 +152,13 @@ src_install() {
 	fi
 }
 
-src_postinst() {
+pkg_postinst() {
 	einfo "To avail yourself of the pcmcia-cs drivers, you have to disable the PCMCIA support in the kernel."
 	einfo "(Otherwise, you might experience CardServices version mismatch errors)"
+	einfo ""
+	einfo "Proper kernel config for this package is that PCMCIA/CardBus under General Setup is off and"
+	einfo "Wireless LAN (non-ham radio) is on but no modules or drivers turned on under Network Device Support"
+	einfo "if you have wireless."
+	einfo ""
+	einfo "If you *don't* want to use Orinoco drivers or if they don't work for you, add +wavelan to USE"
 }
