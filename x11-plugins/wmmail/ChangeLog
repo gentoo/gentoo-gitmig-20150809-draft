@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmail/ChangeLog,v 1.6 2003/02/12 09:42:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmail/ChangeLog,v 1.7 2003/05/21 20:30:28 joker Exp $
+
+*wmmail-0.64-r2 (21 May 2003)
+
+  21 May 2003; Christian Birchinger <joker@gentoo.org> wmmail-0.64-r2.ebuild:
+  Synched Appspath with WindowMaker
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
