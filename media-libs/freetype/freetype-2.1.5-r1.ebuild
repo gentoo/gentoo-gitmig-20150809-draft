@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5-r1.ebuild,v 1.16 2004/09/22 19:30:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5-r1.ebuild,v 1.17 2004/10/11 05:27:57 eradicator Exp $
 
 inherit eutils flag-o-matic gnuconfig libtool
 
@@ -32,7 +32,7 @@ src_unpack() {
 src_compile() {
 	use bindist || append-flags -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER
 
-	make setup CFG="--host=${CHOST} --prefix=/usr `use_with zlib`" unix || die
+	make setup CFG="--host=${CHOST} --prefix=/usr `use_with zlib` --libdir=/usr/$(get_libdir)" unix || die
 
 	emake || die
 
@@ -45,7 +45,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr install || die
+	einstall libdir="${D}/usr/$(get_libdir)" || die
 
 	dodoc ChangeLog README
 	dodoc docs/{CHANGES,CUSTOMIZE,DEBUG,*.txt,PATENTS,TODO}

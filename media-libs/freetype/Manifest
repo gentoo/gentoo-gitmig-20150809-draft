@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 acab8bf5e3894049a0e1e08edc79d403 freetype-1.3.1-r3.ebuild 2702
-MD5 f9ddc6447e9df39e5430b55b80e1204f freetype-2.1.9.ebuild 1667
-MD5 364528d1f96d9b1bb7245d6fea27110a freetype-2.1.5-r1.ebuild 1429
+MD5 45ff4ae66d0609aeff8cda85b0394f4c freetype-2.1.9.ebuild 1701
+MD5 b87a3a9570ad964741d1f2647883273b freetype-2.1.5-r1.ebuild 1473
 MD5 dc898f382695e299dcb5e8af964af96a freetype-2.1.5.ebuild 1270
 MD5 2ec9bf7eae18a7ce6f4322816ed8d2a9 freetype-2.1.7.ebuild 1468
 MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
-MD5 016200a73f36e1ff30c0cd71e04ddfe3 ChangeLog 8420
+MD5 2cad1207bacd77d809fd2fd24327539e ChangeLog 8547
 MD5 190114f436c7144f46a79d124608cee2 freetype-1.3.1-r4.ebuild 3053
 MD5 10bd432787c1a182edece351dbf82809 files/config.mk 1240
 MD5 d42207bb27a2046e454b706339adaa25 files/digest-freetype-1.3.1-r3 136
@@ -21,7 +21,7 @@ MD5 e3d7a7456563597bb3ec82b4e7f6627c files/2.1/freetype-2.1.7-autohint-cjkfonts-
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYm6pArHZZzCEUG0RAshfAJ0QyCd7H2eTFl7L/vY6/VazXK4bagCcDUOD
-aoXDVZCq6TuAzkBm7Q9q6Zo=
-=rSaU
+iD8DBQFBahnnArHZZzCEUG0RAnZKAJ4mhIdm/12VHOFHSC2Qj7DTggzO+gCdGJ6K
+dKICqTcQxHH2k9zUn5QMpDU=
+=Fwg9
 -----END PGP SIGNATURE-----
