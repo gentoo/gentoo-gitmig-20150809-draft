@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.21.ebuild,v 1.2 2003/10/08 13:48:58 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.21.ebuild,v 1.3 2003/10/10 17:50:06 drobbins Exp $
 
 IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X"
 
@@ -20,7 +20,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 # FIXME : some more things can be (local) USE flagged
 RDEPEND=">=dev-libs/glib-2.2
-	>=x11-libs/gtk+-2.2
+	>=x11-libs/gtk+-2.2.2
 	>=x11-libs/pango-1.2
 	>=media-libs/fontconfig-2.2
 	>=media-libs/libart_lgpl-2.3.8-r1
