@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r2.ebuild,v 1.12 2004/04/08 10:36:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r2.ebuild,v 1.13 2004/04/08 17:27:49 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="standard ghostscript frontend used by programs like LyX"
 HOMEPAGE="http://wwwthep.physik.uni-mainz.de/~plass/gv/"
@@ -24,10 +26,10 @@ src_unpack() {
 }
 
 src_compile() {
-	cp config.Unix 1
-	sed -e 's:usr/local:usr:' 1 > config.Unix
-	sed -i -e "s:SCRATCH_DIR = ~/:SCRATCH_DIR = /tmp/:g" config.Unix
-	rm 1
+	sed -i \
+		-e 's:usr/local:usr:' \
+		-e "s:SCRATCH_DIR = ~/:SCRATCH_DIR = /tmp/:g" \
+		config.Unix
 
 	xmkmf || die
 	make Makefiles || die
