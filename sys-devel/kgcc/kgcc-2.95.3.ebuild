@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/kgcc-2.95.3.ebuild,v 1.4 2003/09/05 02:01:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/kgcc-2.95.3.ebuild,v 1.5 2003/10/11 21:29:59 pappy Exp $
 
 IUSE="static"
 
@@ -56,6 +56,9 @@ src_compile() {
 
 	unset CFLAGS
 	unset CXXFLAGS
+
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+	has_version "sys-devel/hardened-gcc" && CC="gcc" && export CC="${CC} -yno_propolice"
 
 	${S}/configure --prefix=${LOC} \
 		--mandir=${LOC}/share/man \
