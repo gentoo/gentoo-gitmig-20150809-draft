@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-98.ebuild,v 1.1 2005/02/06 18:22:01 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-98.ebuild,v 1.2 2005/02/23 21:41:22 motaboy Exp $
 
 inherit eutils
 
@@ -39,9 +39,5 @@ src_install() {
 	make DESTDIR=${D} os=linux install
 
 	# Install init scripts
-	insinto /etc/init.d
-	newins ${FILESDIR}/mdnsd.init.d mdnsd
-
-	# Fix the perms on the init scripts
-	fperms a+x /etc/init.d/mdnsd
+	newinitd ${FILESDIR}/mdnsd.init.d mdnsd
 }

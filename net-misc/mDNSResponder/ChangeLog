@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.1 2005/02/06 18:22:01 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.2 2005/02/23 21:41:22 motaboy Exp $
+
+  23 Feb 2005; Simone Gotti <motaboy@gentoo.org> +files/mdnsd.init.d,
+  mDNSResponder-98.ebuild:
+  Add missing mdnsd.init.d, and use function "newinitd" to install it.
 
 *mDNSResponder-98 (06 Feb 2005)
 
