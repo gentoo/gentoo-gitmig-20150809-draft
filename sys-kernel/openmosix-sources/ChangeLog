@@ -1,12 +1,38 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.2 2002/07/16 04:35:23 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.3 2002/08/28 19:41:11 tantive Exp $
 
+
+*openmosix-sources-2.4.19-r2 (27 Aug 2002)
+
+  27 Aug 2002; Michael Imhof <tantive@gentoo.org>
+  Version bumped: Including openmosix-2.4.19-r2 and evms 1.1.0
+
+*openmosix-sources-2.4.19-r1 (27 Aug 2002)
+    
+  27 Aug 2002; Michael Imhof <tantive@gentoo.org>
+  Version bumped: Including openmosix-2.4.19-r1 and evms 1.1.0
+	
+*openmosix-sources-2.4.18-r4 (16 Aug 2002)
+	
+  16 Aug 2002; Michael Imhof <tantive@gentoo.org>
+  Version bumped: This kernel now includes openmosix-2.4.18-r3 and evms 1.1.0
+		    
+*openmosix-sources-2.4.18-r3 (08 Aug 2002)
+	    
+  08 Aug 2002; Michael Imhof <tantive@gentoo.org>
+  Added evms-1.1.0 patches.
+  This kernel now contains openmosix and evms.
+		  
+*openmosix-sources-2.4.18-r2 (07 Aug 2002)
+		  
+  07 Aug 2002; Michael Imhof <tantive@gentoo.org>
+  Updated to newer kernel version (2.4.18)
+		      
 *openmosix-sources-2.4.17-r2 (09 Jul 2002)
 
   15 Jul 2002; Mark Guertin <gerk@gentoo.org>
   Added arch keywords (-ppc -sparc -sparc64)
 
   09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ChangeLog :
-
   Added ChangeLog.
