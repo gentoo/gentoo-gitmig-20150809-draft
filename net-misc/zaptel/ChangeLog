@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.35 2005/03/18 14:35:39 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.36 2005/03/21 00:44:58 stkn Exp $
+
+*zaptel-1.0.7 (21 Mar 2005)
+
+  21 Mar 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/zaptel-1.0.7-gentoo.diff, +zaptel-1.0.7.ebuild:
+  Version bump and moved some sed lines into the patch. Removed
+  selinux line in Makefile to fix #85052.
 
   18 Mar 2005; Chris Bainbridge <chrb@gentoo.org> zaptel-1.0.6.ebuild:
   Add missing call to linux-mod_pkg_postinst
