@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/tcpstat-1.3.ebuild,v 1.2 2000/08/16 04:38:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/tcpstat-1.3.ebuild,v 1.3 2000/09/15 20:09:08 drobbins Exp $
 
 P=tcpstat-1.3
 A=${P}.tar.gz
@@ -14,15 +14,15 @@ HOMEPAGE="http://www.frenchfries.net/paul/tcpstat/"
 src_compile() {
 
     cd ${S}
-    ./configure --prefix=/usr --host=${CHOST}
-    make
+    try ./configure --prefix=/usr --host=${CHOST}
+    try make
 
 }
 
 src_install () {
 
     cd ${S}
-    make DESTDIR=${D} install
+    try make DESTDIR=${D} install
     prepman
     dodoc AUTHORS ChangeLog COPYING LICENSE NEWS README*
 

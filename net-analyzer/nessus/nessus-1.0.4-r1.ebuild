@@ -30,9 +30,9 @@ src_compile() {
   export LD_LIBRARY_PATH=${D}/usr/lib:$LD_LIBRARY_PATH
   echo "Compiling libraries..."                           
   cd ${S}/nessus-libraries
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state
-  make
-  make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
+  try ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state
+  try make
+  try make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
   cd ${D}/usr/bin
   cp nessus-config nessus-config.orig
   sed -e "s:^PREFIX=:PREFIX=${D}:" \
@@ -40,41 +40,41 @@ src_compile() {
 
   echo "Compiling libnasl..."
   cd ${S}/libnasl
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state
-  make
-  make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
+  try ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state
+  try make
+  try make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
   cd ${D}/usr/bin
   cp nasl-config nasl-config.orig
   sed -e "s:^PREFIX=:PREFIX=${D}:" nasl-config.orig > nasl-config
 
   echo "Compiling core..."
   cd ${S}/nessus-core
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state
-  make
-  make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
+  try ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state
+  try make
+  try make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
 
 
   echo "Compiling plugins..."
   cd ${S}/nessus-plugins
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state
-  make
-  make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
+  try ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state
+  try make
+  try make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
  
 }
 
 src_install() {                               
   cd ${S}/nessus-libraries
-  make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
+  try make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
 
   cd ${S}/libnasl
-  make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
+  try make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
 
   cd ${S}/nessus-core
-  make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
+  try make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
   cp ${ROOT}/config/nessusd.conf ${D}/etc/nessus/
  
   cd ${S}/nessus-plugins
-  make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
+  try make prefix=${D}/usr sysconfdir=${D}/etc localstatedir=${D}/var/state install
 
   cd ${S}/nessus-libraries
   docinto nessus-libraries

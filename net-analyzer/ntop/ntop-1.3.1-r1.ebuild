@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-1.3.1-r1.ebuild,v 1.2 2000/08/16 04:38:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-1.3.1-r1.ebuild,v 1.3 2000/09/15 20:09:07 drobbins Exp $
 
 P=ntop-1.3.1
 A="${P}.tar.gz"
@@ -15,15 +15,15 @@ src_compile() {
     cd ${S}
     cp configure configure.orig
     sed -e "s:/usr/local/ssl:/usr:" configure.orig > configure
-    CFLAGS="$CFLAGS -I/usr/include/openssl" ./configure --prefix=/usr --sysconfdir=/usr/share --host=${CHOST} 
-    make
+    CFLAGS="$CFLAGS -I/usr/include/openssl" try ./configure --prefix=/usr --sysconfdir=/usr/share --host=${CHOST} 
+    try make
 
 }
 
 src_install () {
 
     cd ${S}
-    make prefix=${D}/usr sysconfdir=/${D}/usr/share install
+    try make prefix=${D}/usr sysconfdir=/${D}/usr/share install
     mv ${D}/usr/bin/plugins ${D}/usr/share/ntop
     prepman
     dodoc AUTHORS ChangeLog CONTENTS COPYING FAQ FILES HACKING
