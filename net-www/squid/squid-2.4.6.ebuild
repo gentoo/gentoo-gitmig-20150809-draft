@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.6.ebuild,v 1.1 2002/03/21 01:23:36 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.6.ebuild,v 1.2 2002/03/21 01:32:39 woodchip Exp $
 
 # this could be cleaner..
 MY_P=${PN}-2.4.STABLE6
@@ -113,8 +113,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	# Here since syslog logging is enabled by default. Also helpful
-	# if you had previously installed but never _ran_ it.
+	# This helps if you had it installed, but never _ran_ it.
 	install -m0755 -o squid -g squid -d ${ROOT}/var/cache/squid
 	install -m0755 -o squid -g squid -d ${ROOT}/var/log/squid
 }
