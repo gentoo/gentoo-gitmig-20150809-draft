@@ -1,0 +1,25 @@
+# ChangeLog for sys-apps/LSIT_libnss-mysql
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-mysql/ChangeLog,v 1.1 2003/09/17 20:45:17 max Exp $
+
+*libnss-mysql-1.0 (14 Jul 2003)
+
+  14 Jul 2003; Max Kalika <max@gentoo.org> libnss-mysql-1.0.ebuild:
+  Bump version to 1.0.
+
+  03 Jul 2003; Max Kalika <max@gentoo.org> libnss-mysql-0.9.ebuild:
+  Set KEYWORDS to ~x86.
+
+*libnss-mysql-0.9 (19 Jun 2003)
+
+  19 Jun 2003; Max Kalika <max@gentoo.org> libnss-mysql-0.8.ebuild,
+  libnss-mysql-0.9.ebuild:
+  Bump to 0.9. Upstream has changed the package name to libnss-mysql from
+  libnss_mysql, so drop the ${PN} and ${S} rewrite. Also install additional
+  documentation.
+
+*LSIT_libnss-mysql-0.8 (03 Jun 2003)
+
+  03 Jun 2003; Max Kalika <max@gentoo.org> LSIT_libnss-mysql-0.8.ebuild:
+  Initial version.
+
