@@ -1,0 +1,8 @@
+# ChangeLog for app-dicts/aspell-af
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-af/ChangeLog,v 1.1 2005/02/18 20:03:01 arj Exp $
+
+*aspell-af-0.50.0 (19 Feb 2005)
+
+  19 Feb 2005; Anders Rune Jensen <arj@gentoo.org> +aspell-af-0.50.0.ebuild:
+  Initial version. Fixes #82407.
