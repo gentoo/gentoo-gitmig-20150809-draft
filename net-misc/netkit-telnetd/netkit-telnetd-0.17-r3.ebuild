@@ -1,22 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.20 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.21 2003/10/02 06:23:31 vapier Exp $
 
 inherit eutils
 
-IUSE=""
-
-P2=netkit-telnet-${PV}
-S=${WORKDIR}/${P2}
 DESCRIPTION="Standard Linux telnet client and server"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P2}.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
+SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-telnet-${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa mips amd64"
+IUSE="build"
 
 DEPEND=">=sys-libs/ncurses-5.2"
+RDEPEND="${DEPEND}
+	virtual/inetd"
+
+S=${WORKDIR}/netkit-telnet-${PV}
 
 src_unpack() {
 	unpack ${A}
@@ -27,11 +28,10 @@ src_unpack() {
 src_compile() {
 	./configure --prefix=/usr || die
 
-	cp MCONFIG MCONFIG.orig
-	sed \
+	sed -i \
 		-e "s:-pipe -O2:${CFLAGS}:" \
 		-e "s:-Wpointer-arith::" \
-		MCONFIG.orig > MCONFIG
+		MCONFIG
 
 	make || die
 	cd telnetlogin
