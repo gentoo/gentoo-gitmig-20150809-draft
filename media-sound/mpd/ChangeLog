@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.26 2004/05/04 02:06:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.27 2004/05/24 22:04:03 ferringb Exp $
+
+*mpd-0.9.4-r1 (24 May 2004)
+
+  24 May 2004; Brian Harring <ferringb@gentoo.org> mpd-0.10.3-r1.ebuild,
+  mpd-0.10.3.ebuild, mpd-0.9.4-r1.ebuild, mpd-0.9.4.ebuild, files/mpd.rc6:
+  Rev-bumped 0.9.4 and 10.3 to -r1, fixed init script.  bug #51748
 
   03 May 2004; Jeremy Huddleston <eradicator@gentoo.org> mpd-0.10.3.ebuild,
   mpd-0.9.4.ebuild:
