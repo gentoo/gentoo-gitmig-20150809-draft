@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.6.0-r3.ebuild,v 1.1 2003/02/26 07:29:22 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.6.0-r3.ebuild,v 1.2 2003/02/26 12:14:43 kutsuya Exp $
 
 S="${WORKDIR}/Zope-${PV}-src"
 
@@ -68,7 +68,7 @@ install_help()
 	einfo "Need to setup an inituser \(admin\) before executing zope:"
 	einfo "\tzope-config --zpasswd"
     einfo "To execute default Zope instance:"
-	einfo "\t/etc/init.d/${ZGID} start"
+	einfo "\t/etc/conf.d/${ZGID} start"
 }
 
 #
