@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.13 2003/09/14 10:13:53 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.14 2003/09/17 11:55:25 taviso Exp $
 
 inherit gnuconfig
 
-IUSE="readline truetype ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi imlib tcltk debug gtk2 noxpm nosm"
+IUSE="readline truetype ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi imlib tcltk debug gtk2"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
@@ -84,10 +84,14 @@ src_compile() {
 
 	# fvwm configure doesnt provide a way to disable gtk support if the
 	# required libraries are found, this hides them from the script.
+	# Print a message indicating the errors are normal.
 	if ! use gtk; then
+		einfo "ATTN: You can safely ignore any gtk related configure errors."
+		einfo "ATTN: You can safely ignore any imlib related configure errors."
 		myconf="${myconf} --with-gtk-prefix=${T} --with-imlib-prefix=${T}"
 	else
 		if ! use imlib; then
+			einfo "ATTN: You can safely ignore any imlib related configure errors."
 			myconf="${myconf} --with-imlib-prefix=${T}"
 		fi
 	fi
@@ -178,16 +182,20 @@ src_compile() {
 
 	# Xft detection is broken in this release, the fix is in cvs
 	# which ive installed here, rerun automake to sort the problem.
-	einfo "Fixing Xft detection, please wait..."
-	(	einfo "	Running aclocal..."
-		aclocal
-		einfo "	Running autoheader..."
-		autoheader
-		einfo "	Running automake..."
-		automake --add-missing
-		einfo "	Running autoreconf..."
-		autoreconf ) 2>/dev/null
-	einfo "Fixed."
+	# This is only nescessary if `truetype` is required.
+	if use truetype; then
+		echo
+		einfo "Fixing Xft detection, please wait..."
+		(	ebegin "	Running aclocal"
+			aclocal; eend $?
+			ebegin "	Running autoheader"
+			autoheader; eend $?
+			ebegin "	Running automake"
+			automake --add-missing; eend $?
+			ebegin "	Running autoreconf"
+			autoreconf; eend $?	) 2>/dev/null
+		einfo "Fixed."
+	fi
 
 	# must specify PKG_CONFIG or Xft detection bombs.
 	econf ${myconf} PKG_CONFIG=/usr/bin/pkg-config || die
@@ -256,6 +264,7 @@ src_install() {
 	docs/COMMANDS docs/DEVELOPERS docs/FAQ docs/error_codes docs/TODO \
 	docs/fvwm.lsm
 
+	# fix a couple of symlinks.
 	prepallman
 }
 
@@ -264,9 +273,10 @@ pkg_postinst() {
 		if use tcltk; then
 			einfo "By setting the perl and tcltk USE flags, you have elected to"
 			einfo "install the FvwmTabs module, a configurable tabbing system"
-			einfo "for FVWM, you can read more about it here"
+			einfo "for FVWM. You can read more about FvwmTabs here:"
 			einfo
 			einfo "	http://users.tpg.com.au/users/scottie7/fvwmtabs.html"
+			einfo
 		fi
 	fi
 }
