@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.24 2004/05/14 19:51:34 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.25 2004/05/28 02:40:07 vapier Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -21,12 +21,11 @@ DESCRIPTION="${ASPELL_LANG} language dictionary for aspell"
 HOMEPAGE="http://aspell.net"
 SRC_URI="ftp://ftp.gnu.org/gnu/aspell/dict/${SPELLANG}/${MY_P}.tar.bz2"
 
-RDEPEND=">=app-text/aspell-0.50"
-
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64"
-PROVIDE="virtual/aspell-dict"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
 
+RDEPEND=">=app-text/aspell-0.50"
+PROVIDE="virtual/aspell-dict"
 
 aspell-dict_src_compile() {
 	./configure || die
@@ -34,10 +33,9 @@ aspell-dict_src_compile() {
 }
 
 aspell-dict_src_install() {
-
 	make DESTDIR=${D} install || die
 
-	for doc in Copyright README info; do
+	for doc in README info ; do
 		[ -s "$doc" ] && dodoc $doc
 	done
 }
