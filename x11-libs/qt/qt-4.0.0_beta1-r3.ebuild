@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r3.ebuild,v 1.1 2005/01/31 21:30:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r3.ebuild,v 1.2 2005/01/31 21:54:20 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -151,8 +151,8 @@ src_install() {
 	install -c ${S}/mkspecs/.qt.config ${D}${QTDATADIR}/mkspecs
 
 	sed -i -e "s:${S}:${QTBASEDIR}:g" ${D}/${QTBASEDIR}/qt.conf
-	sed -i -e "s:${S}:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.la
-	sed -i -e "s:${S}:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
+	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.la
+	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
 
 	# List all the multilib libdirs
 	local libdirs
