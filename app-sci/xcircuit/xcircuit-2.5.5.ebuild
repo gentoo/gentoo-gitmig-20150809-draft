@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-2.5.5.ebuild,v 1.5 2004/01/05 13:12:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-2.5.5.ebuild,v 1.6 2004/04/19 12:55:01 phosphan Exp $
 
 IUSE=""
 
 inherit flag-o-matic
-
-S=${WORKDIR}/${P}
 
 DESCRIPTION="Circuit drawing and schematic capture program."
 SRC_URI="http://xcircuit.ece.jhu.edu/archive/${P}.tar.bz2"
 HOMEPAGE="http://xcircuit.ece.jhu.edu"
 
 KEYWORDS="x86 ~ppc"
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 
