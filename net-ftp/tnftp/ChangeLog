@@ -1,0 +1,9 @@
+# ChangeLog for net-ftp/tnftp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.1 2003/09/04 21:58:35 g2boojum Exp $
+
+*tnftp-20030825 (04 Sep 2003)
+
+  04 Sep 2003; Grant Goodyear <g2boojum@gentoo.org> tnftp-20030825.ebuild:
+  New package (renamed lukemftp).
+
