@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/texpower-0.0.9d.ebuild,v 1.6 2004/04/13 14:50:26 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/texpower-0.0.9d.ebuild,v 1.7 2004/04/17 19:06:50 aliz Exp $
 
 inherit latex-package
 
 IUSE="doc"
 
-S=${WORKDIR}/${P}
 TD=${PN}-doc-pdf-${PV}
 
 DESCRIPTION="A bundle of style and class files for creating dynamic online presentations."

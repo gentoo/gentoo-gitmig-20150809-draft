@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/texpower
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.8 2004/04/13 14:50:26 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.9 2004/04/17 19:06:50 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> texpower-0.0.9d.ebuild:
+  Removed S=
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> texpower-0.0.9d.ebuild:
   marked ~amd64
