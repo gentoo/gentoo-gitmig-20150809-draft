@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/liblrdf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.8 2004/02/28 14:20:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.9 2004/03/26 19:47:25 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> liblrdf-0.3.1.ebuild,
+  liblrdf-0.3.4.ebuild, liblrdf-0.3.5.ebuild:
+  Removed cruft.
 
   28 Feb 2004; David Holm <dholm@gentoo.org> liblrdf-0.3.5.ebuild:
   Added to ~ppc.
