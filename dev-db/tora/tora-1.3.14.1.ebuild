@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.14.1.ebuild,v 1.1 2004/07/03 18:55:58 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.14.1.ebuild,v 1.2 2004/07/07 19:09:33 rizzo Exp $
 
 use debug && inherit debug
 
@@ -43,7 +43,7 @@ src_compile() {
 
 	local myconf
 	myconf="--prefix=/usr"
-	#myconf="$myconf --with-mono"
+	myconf="$myconf --with-mono"
 
 	use kde \
 		&& myconf="$myconf --with-kde" \
