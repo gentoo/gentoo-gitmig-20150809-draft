@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke (blocke@shivan.org)
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.2.0-r1.ebuild,v 1.1 2001/10/06 10:08:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.2.0-r1.ebuild,v 1.2 2001/10/07 10:02:15 azarah Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -16,7 +16,7 @@ DEPEND=">=dev-libs/glib-1.2.1-r1
 	>=gnome-base/gnome-print-0.29-r1
 	>=app-text/pspell-0.11.2
 	>=net-libs/libesmtp-0.8.3
-	>=gnome-base/gtkhtml-0.14.0-r1
+	>=gnome-extra/gtkhtml-0.14.0-r1
 	>=dev-libs/libpcre-3.4
 	nls? ( sys-devel/gettext )
 	ssl? ( dev-libs/openssl )"
