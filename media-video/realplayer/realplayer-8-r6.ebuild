@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.3 2003/07/19 12:38:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.4 2003/09/05 09:07:55 liquidx Exp $
 
 inherit nsplugins
 
@@ -14,18 +14,14 @@ HOMEPAGE="http://forms.real.com/real/player/unix/unix.html"
 # form in order to be able to download the binary. When done, you should copy
 # or move the binary into /usr/portage/distfiles. No need to chmod +x
 
-if use x86
-then
-	A="rp8_linux20_libc6_i386_cs2.bin"
-elif use ppc
-then
-	A="rp8_linux_powerpc_cs1.bin"
-elif use sparc
-then
-	A="rp8_linux_sparc_cs1.bin"
-elif use alpha
-then
-	A="rp8_linux_alpha_rh62_cs1.bin"
+if use x86; then
+	MY_A="rp8_linux20_libc6_i386_cs2.bin"
+elif use ppc; then
+	MY_A="rp8_linux_powerpc_cs1.bin"
+elif use sparc; then
+	MY_A="rp8_linux_sparc_cs1.bin"
+elif use alpha; then
+	MY_A="rp8_linux_alpha_rh62_cs1.bin"
 fi
 
 
@@ -47,7 +43,7 @@ BASE="/opt/RealPlayer8"
 S=${WORKDIR}
 
 pkg_setup() {
-	if [ ! -f ${DISTDIR}/${A} ] ; then
+	if [ ! -f ${DISTDIR}/${MY_A} ] ; then
 		eerror "Please go to:"
 		eerror "http://forms.real.com/real/player/unix/unix.html"
 		eerror "And download the appropriate realplayer binary installer"
@@ -56,7 +52,7 @@ pkg_setup() {
 		eerror "Please note, do NOT download the rpm.  Just the .bin file"
 		eerror "Named Linux 2.x (libc6 i386)"
 		eerror ""
-		eerror "Download ${A} and place it in ${DISTDIR}"
+		eerror "Download ${MY_A} and place it in ${DISTDIR}"
 		eerror "Then emerge this package again"
 
 		exit 1
@@ -66,10 +62,10 @@ pkg_setup() {
 src_unpack() {
 	if use x86 ; then 
 		BYTECOUNT=4799691
-		RP8_BIN=`echo ${A} | awk '{ print $1 }'`
-		RV9_X86=`echo ${A} | awk '{ print $2 }'`
+		RP8_BIN=`echo ${MY_A} | awk '{ print $1 }'`
+		RV9_X86=`echo ${MY_A} | awk '{ print $2 }'`
 	else
-		RP8_BIN=${A}
+		RP8_BIN=${MY_A}
 		if use ppc ; then BYTECOUNT=7260910
 		elif use alpha ; then BYTECOUNT=7130860
 		elif use sparc ; then BYTECOUNT=6375000
