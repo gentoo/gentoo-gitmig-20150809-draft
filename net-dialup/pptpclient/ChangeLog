@@ -1,7 +1,13 @@
 # ChangeLog for net-dialup/pptpclient
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.17 2004/10/06 07:27:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.18 2004/11/08 06:41:50 mrness Exp $
 
+*pptpclient-1.5.0-r1 (08 Nov 2004)
+
+  08 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  +pptpclient-1.5.0-r1.ebuild, +files/new-mppe/options.pptp:
+  Changed MPPE options, which have different names for ppp-2.4.2. Closes bug #65568.
+  
   06 Oct 2004; Daniel Black <dragonheart@gentoo.org>
   -pptpclient-1.1.0-r1.ebuild, -pptpclient-1.1.0.ebuild,
   -pptpclient-1.2.0.ebuild, pptpclient-1.3.1.ebuild, pptpclient-1.4.0.ebuild,
