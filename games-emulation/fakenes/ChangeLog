@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/fakenes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.2 2003/09/10 15:59:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.3 2003/09/26 02:40:14 vapier Exp $
+
+*fakenes-0.3.0 (25 Sep 2003)
+
+  25 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage.  ~x86 since it needs latest allegro.
 
 *fakenes-0.1.5 (13 Jul 2003)
 

@@ -1,0 +1,55 @@
+--- src/gui.c.orig	2003-09-25 22:29:25.830731224 -0400
++++ src/gui.c	2003-09-25 22:30:29.575040616 -0400
+@@ -716,9 +716,9 @@
+ 
+     TOGGLE_MENU (options_video_driver_linux_menu, 4, (gfx_driver -> id == GFX_VBEAF));
+ 
+-    TOGGLE_MENU (options_video_driver_linux_menu, 6, (gfx_driver -> id == GFX_FBCON));
++    TOGGLE_MENU (options_video_driver_linux_menu, 6, (gfx_driver -> id == GFX_FBCON)); //sedfbme
+ 
+-    TOGGLE_MENU (options_video_driver_linux_menu, 8, (gfx_driver -> id == GFX_SVGALIB));
++    TOGGLE_MENU (options_video_driver_linux_menu, 8, (gfx_driver -> id == GFX_SVGALIB)); //sedsvgalibme
+ 
+ #endif
+ 
+@@ -3238,9 +3238,9 @@
+ 
+ DRIVER_MENU_HANDLER (linux, vesa_vbe_af, GFX_VBEAF)
+ 
+-DRIVER_MENU_HANDLER (linux, framebuffer, GFX_FBCON)
++DRIVER_MENU_HANDLER (linux, framebuffer, GFX_FBCON) //sedfbme
+ 
+-DRIVER_MENU_HANDLER (linux, svgalib, GFX_SVGALIB)
++DRIVER_MENU_HANDLER (linux, svgalib, GFX_SVGALIB) //sedsvgalibme
+ 
+ #endif
+ 
+--- src/include/gui/menus.h.orig	2003-09-25 22:29:33.099626184 -0400
++++ src/include/gui/menus.h	2003-09-25 22:31:12.231555840 -0400
+@@ -593,9 +593,9 @@
+ 
+ static int options_video_driver_linux_menu_vesa_vbe_af (void);
+ 
+-static int options_video_driver_linux_menu_framebuffer (void);
++static int options_video_driver_linux_menu_framebuffer (void); //sedfbme
+ 
+-static int options_video_driver_linux_menu_svgalib (void);
++static int options_video_driver_linux_menu_svgalib (void); //sedsvgalibme
+ 
+ 
+ static MENU options_video_driver_linux_menu [] =
+@@ -606,10 +606,10 @@
+     {             "",                                         NIL, NIL, 0, NIL },
+     { "VESA VBE/&AF", options_video_driver_linux_menu_vesa_vbe_af, NIL, 0, NIL },
+     {             "",                                         NIL, NIL, 0, NIL },
+-    { "&Framebuffer", options_video_driver_linux_menu_framebuffer, NIL, 0, NIL },
+-    {             "",                                         NIL, NIL, 0, NIL },
+-    {     "&SVGAlib",     options_video_driver_linux_menu_svgalib, NIL, 0, NIL },
+-    {            NIL,                                         NIL, NIL, 0, NIL }
++    { "&Framebuffer", options_video_driver_linux_menu_framebuffer, NIL, 0, NIL }, //sedfbme
++    {             "",                                         NIL, NIL, 0, NIL }, //sedfbme
++    {     "&SVGAlib",     options_video_driver_linux_menu_svgalib, NIL, 0, NIL }, //sedsvgalibme
++    {            NIL,                                         NIL, NIL, 0, NIL } //sedsvgalibme
+ };
+ 
+ #else
