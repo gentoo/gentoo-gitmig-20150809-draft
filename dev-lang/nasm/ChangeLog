@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.27 2004/06/24 22:52:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.28 2004/12/16 19:20:47 mr_bones_ Exp $
+
+*nasm-0.98.38-r1 (16 Dec 2004)
+
+  16 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.98.38-overflow.patch, -files/nasm-0.98.36-remove-doc-target.diff,
+  -nasm-0.98.36.ebuild, +nasm-0.98.38-r1.ebuild, -nasm-0.98.38.ebuild:
+  add patch from bug #74477 to address overflow; clean older version; tidy
 
   05 Jun 2004; Aron Griffis <agriffis@gentoo.org> nasm-0.98.38.ebuild:
   Use make rules instead of applying a useless patch.

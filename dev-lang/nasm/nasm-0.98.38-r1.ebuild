@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.38.ebuild,v 1.8 2004/09/27 07:02:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.38-r1.ebuild,v 1.1 2004/12/16 19:20:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -14,18 +14,26 @@ KEYWORDS="-* x86 amd64"
 IUSE="doc build"
 
 DEPEND="!build? ( dev-lang/perl )
-	doc? ( virtual/ghostscript sys-apps/texinfo )
+	doc? ( virtual/ghostscript
+		sys-apps/texinfo )
 	sys-devel/gcc"
+RDEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-overflow.patch"
+}
 
 src_compile() {
 	./configure --prefix=/usr || die
 
 	if use build; then
-		make nasm || die
+		emake nasm || die "emake failed"
 	else
-		make all rdf || die
+		emake all rdf || die "emake failed"
 		if use doc; then
-			make doc || die
+			emake doc || die "emake failed"
 		fi
 	fi
 
@@ -33,9 +41,10 @@ src_compile() {
 
 src_install() {
 	if use build; then
-		dobin nasm
+		dobin nasm || die "dobin failed"
 	else
-		dobin nasm ndisasm rdoff/{ldrdf,rdf2bin,rdf2ihx,rdfdump,rdflib,rdx}
+		dobin nasm ndisasm rdoff/{ldrdf,rdf2bin,rdf2ihx,rdfdump,rdflib,rdx} \
+			|| die "dobin failed"
 		dosym /usr/bin/rdf2bin /usr/bin/rdf2com
 		doman nasm.1 ndisasm.1
 		dodoc AUTHORS CHANGES ChangeLog INSTALL README TODO
