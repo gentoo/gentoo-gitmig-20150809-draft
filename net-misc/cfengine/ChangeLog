@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.36 2004/08/18 12:25:35 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.37 2004/09/18 21:51:32 weeve Exp $
+
+*cfengine-2.1.10 (18 Sep 2004)
+
+  18 Sep 2004; Jason Wever <weeve@gentoo.org> cfengine-2.1.10.ebuild:
+  Stable on sparc.
 
   18 Aug 2004; Kurt Lieber <klieber@gentoo.org> :
   version bump to 2.1.10
