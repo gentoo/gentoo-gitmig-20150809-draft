@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.2 2004/10/19 23:23:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.3 2004/10/19 23:59:05 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -38,6 +38,20 @@
 # Documentation:
 # Set the DOCS variable to contain the documentation to be dodocd:
 # DOCS="ChangeLog AUTHORS README"
+#
+# Install:
+# Set the XMMS_PLUGIN_INSTALL variable to control how src_install works
+# 'einstall' - use 'einstall' to install
+# 'destdir'  - use 'make DESTDIR="${D}" install || die' to install
+# 'doexe' - use 'doexe' to install
+# destdir is default
+#
+# The 'myins_xmms' and 'myins_bmp' variables are used to add extra arguments
+# to the install line.  They are optional for einstall and destdir, but they're
+# required for doexe.  For doexe, you need to specify the plugin type in the
+# 'xmms_plugin_type' variable' and the location of the plugin in the 'myins_*'
+# variable.
+#
 
 inherit eutils libtool gnuconfig
 
@@ -154,15 +168,52 @@ xmms-plugin_src_compile() {
 }
 
 xmms-plugin_src_install() {
-	if use xmms; then
-		cd ${XMMS_S}
-		make DESTDIR="${D}" ${myins_xmms} install || die
+	if [ -z "${XMMS_PLUGIN_INSTALL}" ]; then
+		XMMS_PLUGIN_INSTALL="destdir"
 	fi
 
-	if use bmp; then
-		cd ${BMP_S}
-		make DESTDIR="${D}" ${myins_bmp} install || die
-	fi
+	case ${XMMS_PLUGIN_INSTALL} in
+	einstall)
+		if use xmms; then
+			cd ${XMMS_S}
+			einstall ${myins_xmms}
+		fi
+
+		if use bmp; then
+			cd ${BMP_S}
+			einstall ${myins_bmp}
+		fi
+	;;
+	destdir)
+		if use xmms; then
+			cd ${XMMS_S}
+			make DESTDIR="${D}" ${myins_xmms} install || die
+		fi
+
+		if use bmp; then
+			cd ${BMP_S}
+			make DESTDIR="${D}" ${myins_bmp} install || die
+		fi
+	;;
+	doexe)
+		if use xmms; then
+			xmms-config --${xmms_plugin_type}-plugin-dir >& /dev/null || die "Invalid xmms_plugin_type specified"
+			cd ${XMMS_S}
+			exeinto `xmms-config --${xmms_plugin_type}-plugin-dir`
+			doexe ${myins_xmms} || die
+		fi
+
+		if use bmp; then
+			beep-config --${xmms_plugin_type}-plugin-dir >& /dev/null || die "Invalid xmms_plugin_type specified"
+			cd ${BMP_S}
+			exeinto `beep-config --${xmms_plugin_type}-plugin-dir`
+			doexe ${myins_bmp} || die
+		fi
+	;;
+	*)
+		die "Invalid XMMS_PLUGIN_INSTALL specified: ${XMMS_PLUGIN_INSTALL}"
+	;;
+	esac
 
 	if [ -n "${DOCS}" ]; then
 		dodoc ${DOCS}
