@@ -1,6 +1,6 @@
 MD5 5d97b14d984f5699362fc255d71f3b54 ChangeLog 733
 MD5 3a16ca9785d8bbb53ac285e0160f5ccf treecc-0.2.4.ebuild 644
 MD5 7aafe9575b2ba436030a1cbd1b89fa99 metadata.xml 259
-MD5 8f0d0f671cfff04aa84c6d536a766d71 treecc-0.2.6.ebuild 645
+MD5 d58c51e1ccaf9f9aa90e3fbd757e360d treecc-0.2.6.ebuild 644
 MD5 1bf63835dacd275b9638de61c6a591d7 files/digest-treecc-0.2.4 64
 MD5 4bce131abeb25c350a57cd1c9d87adc6 files/digest-treecc-0.2.6 64
