@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.47 2003/01/21 22:08:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.48 2003/02/02 18:45:40 azarah Exp $
+
+  02 Feb 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_*.ebuild :
+
+  Fix SRC_URI for fonts, closing bug #14770.
 
   21 Jan 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_rc3.ebuild :
 

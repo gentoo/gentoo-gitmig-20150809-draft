@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc2.ebuild,v 1.3 2003/01/19 14:36:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc2.ebuild,v 1.4 2003/02/02 18:45:40 azarah Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts"
 
@@ -16,8 +16,8 @@ S="${WORKDIR}/MPlayer-${MY_PV}"
 # Only install Skin if GUI should be build (gtk as USE flag)
 SRC_URI="http://www2.mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	http://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
-	http://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
-	http://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-2.zip
+	http://mplayerhq.hu/MPlayer/releases/fonts/mp-arial-iso-8859-1.zip
+	http://mplayerhq.hu/MPlayer/releases/fonts/mp-arial-iso-8859-2.zip
 	gtk? ( mirror://gentoo/distfiles/default-skin-0.1.tar.bz2 )"
 #	 This is to get the digest problem fixed.
 #	 gtk? ( ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2 )"
