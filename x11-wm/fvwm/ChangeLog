@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.1 2002/02/01 21:53:39 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.2 2002/02/14 22:07:18 danarmak Exp $
+
+*fvwm-2.4.3-r1 (14 Feb 2002)
+
+  14 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  
+  Added /etc/X11/Sessions/fvwm, which adds fvwm to the auto-generated session
+  list in kdm and gdm.
 
 *fvwm-2.4.3 (1 Feb 2002)
 
