@@ -1,0 +1,9 @@
+# ChangeLog for app-text/pdfjam
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.1 2004/07/29 17:54:31 pclouds Exp $
+
+*pdfjam-1.10 (30 Jul 2004)
+
+  30 Jul 2004; <pclouds@gentoo.org> +pdfjam-1.10.ebuild:
+  new ebuild, submitted by Dominic Battre <dominic.battre@gmx.de> on bug 57567
+
