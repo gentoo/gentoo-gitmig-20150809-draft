@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.26-r1.ebuild,v 1.2 2003/11/22 15:18:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.26-r1.ebuild,v 1.3 2003/12/07 16:02:27 foser Exp $
 
 inherit gnome.org libtool
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE="gnutls"
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~sparc  ~ppc ~alpha ~hppa"
+KEYWORDS="x86 ~sparc  ~ppc ~alpha ~hppa"
 
 RDEPEND=">=dev-libs/glib-2.0
 	!gnutls? ( dev-libs/openssl )
@@ -18,6 +18,8 @@ RDEPEND=">=dev-libs/glib-2.0
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	dev-libs/popt
+	sys-devel/automake
+	sys-devel/autoconf
 	${RDEPEND}"
 
 src_unpack() {
@@ -25,7 +27,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-msn.patch
 	# added --with-ssl=openssl|gnutls to choose between the two.
 	epatch ${FILESDIR}/${P}-with_ssl.patch
-	cd ${S}; aclocal; automake; autoconf
+	cd ${S}; autoconf
 }
 
 src_compile() {
