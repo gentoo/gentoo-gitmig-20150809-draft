@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.86 2004/07/12 22:51:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.87 2004/08/16 23:09:39 pylon Exp $
+
+*cdrtools-2.01_alpha36 (17 Aug 2004)
+
+  17 Aug 2004; Lars Weiler <pylon@gentoo.org> -cdrtools-2.01_alpha33.ebuild,
+  +cdrtools-2.01_alpha36.ebuild:
+  Version bump. This should close bugs 56953, 57462. But probably still errors
+  with kernel-2.6.8.1.
 
 *cdrtools-2.01_alpha33 (13 Jul 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha33.ebuild,v 1.2 2004/07/13 22:38:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha36.ebuild,v 1.1 2004/08/16 23:09:39 pylon Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -27,11 +27,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.01-kernel25-support.patch
 
 	cd ${S}/DEFAULTS
-	sed -i -e "s:/opt/schily:/usr:g" Defaults.linux
-	sed -i -e "s:/usr/src/linux/include::g" Defaults.linux
+	dosed "s:/opt/schily:/usr:g" Defaults.linux
+	dosed "s:/usr/src/linux/include::g" Defaults.linux
 
 	cd ${S}/librscg
-	sed -i -e "s:/opt/schily:/usr:g" scsi-remote.c
+	dosed "s:/opt/schily:/usr:g" scsi-remote.c
 
 	cd ${S}/RULES
 	cp i386-linux-cc.rul x86_64-linux-cc.rul
@@ -84,5 +84,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The command line option 'dev=ATAPI:' should be added for IDE CD writers."
+	einfo "The command line option 'dev=ATAPI:' should be used for IDE CD writers."
 }
