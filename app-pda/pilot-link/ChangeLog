@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.18 2005/01/26 14:23:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.19 2005/01/27 10:39:38 liquidx Exp $
+
+  27 Jan 2005; Alastair Tse <liquidx@gentoo.org> pilot-link-0.11.8.ebuild:
+  fix missing patch while doing housecleaning (#79682)
 
   26 Jan 2005; Alastair Tse <liquidx@gentoo.org>
   +files/pilot-link-0.11.8-java_compile_amd64.patch,

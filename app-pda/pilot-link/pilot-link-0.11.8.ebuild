@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.13 2005/01/01 15:46:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.14 2005/01/27 10:39:38 liquidx Exp $
 
 inherit perl-module eutils
 
@@ -24,7 +24,7 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-javapath.patch
+	epatch ${FILESDIR}/${P}-java_install_all.patch
 }
 
 src_compile() {

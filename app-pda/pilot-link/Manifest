@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b8d703cf9ce10632dce9d49ab2a68cb4 ChangeLog 5905
+MD5 3ab2bf3b6729ed8946b651d655db81b5 ChangeLog 6036
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 fb9be3487ce754189ca1b324ae2f788b pilot-link-0.11.3.ebuild 1135
 MD5 1f4d9af8ae7ff1aa8a5564924a581a56 pilot-link-0.11.5-r2.ebuild 2803
 MD5 2504b52d2044a6684516a5e662360cfc pilot-link-0.11.7-r1.ebuild 1797
-MD5 92cbee3bbb10790e2eaa4fd0ccef2383 pilot-link-0.11.8.ebuild 1888
+MD5 963c9d14f1ededb062f4d5b76acdcfd9 pilot-link-0.11.8.ebuild 1893
 MD5 4341c105f427432d1d318517e0a856f3 pilot-link-0.11.8-r1.ebuild 2256
 MD5 4ed5cde53dbd9e15bb794538763b55eb files/digest-pilot-link-0.11.3 70
 MD5 6d5485ccfa72ceeae0193839586e7252 files/digest-pilot-link-0.11.5-r2 70
@@ -23,7 +23,7 @@ MD5 5bb039a94f9888c99327b7e701cc1002 files/pilot-link-0.11.8-java_install_amd64.
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB96gKRkyva5PS18kRAjTEAJ4+ItRV5whWI3T7sVswWtJR9DzRygCfbyKx
-URY2ippASqPQ6dG/qs+w2co=
-=cUdd
+iD8DBQFB+MT2Rkyva5PS18kRAlHUAJ4uwYzt6ibclbE+qRUxzgL9WPLc9gCgk/OK
+8iul6hw8rptE1TYaC14zKbE=
+=J+Er
 -----END PGP SIGNATURE-----
