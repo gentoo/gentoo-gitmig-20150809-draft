@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.123 2005/03/16 16:52:00 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.124 2005/03/16 20:39:31 dsd Exp $
+
+*gentoo-sources-2.6.11-r4 (16 Mar 2005)
+
+  16 Mar 2005; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.11-r4.ebuild:
+  Sync to Linux 2.6.11.4. Fix silent speaker on 4.1 ALSA surround. Fix ALPS
+  touchpad tapping. Deprecate sk98lin.
 
   16 Mar 2005; Daniel Drake <dsd@gentoo.org>
   gentoo-sources-2.6.11-r3.ebuild:
