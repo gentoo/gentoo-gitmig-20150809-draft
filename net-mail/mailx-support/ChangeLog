@@ -1,8 +1,18 @@
 # ChangeLog for net-mail/mailx-support
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx-support/ChangeLog,v 1.1 2003/06/09 19:01:08 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx-support/ChangeLog,v 1.2 2003/06/10 20:11:57 kumba Exp $
+
 
 *mailx-support-20030215 (09 Jun 2003)
+
+  10 Jun 2003; Joshua Kinard <kumba@gentoo.org> mailx-support-20030215.ebuild:
+  Fixed Security Violation -- ChangeLog missing from Manifest;
+  Fixed b0rked ebuild and moved source from ${FILESDIR} to a tarball;
+  Use 'epatch' instead of patch;
+  Removed 'die' statements;
+  Removed a few other things that harmed the ebuild;
+  Overall, fixed major brokeness;
+  Also added ~mips to KEYWORDS;
 
   09 Jun 2003; Nick Hadaway <raker@gentoo.org> mailx-support-20030215.ebuild,
   files/digest-mailx-support-20030215, files/mailx-support-20030215/*,
