@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.5 2004/02/08 13:48:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.6 2004/04/13 09:40:59 lordvan Exp $
+
+*lilo-22.5.8-r2 (13 Apr 2004)
+
+  13 Apr 2004; Thomas Raschbacher <lordvan@gentoo.org> lilo-22.5.8-r2.ebuild,
+  files/lilo-22.5.8-devmapper_gentoo.patch:
+  Added patch for lilo to work with device-mapper volumes (
+  http://www.saout.de/misc/ changed the patch to work with gentoo's
+  device-mapper install )
 
   08 Feb 2004; Martin Schlemmer <azarah@gentoo.org> lilo-22.5.8-r1.ebuild,
   files/lilo-22.5.8-create-install-dirs.patch:
