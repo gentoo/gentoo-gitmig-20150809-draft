@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.4.2_pre1.ebuild,v 1.3 2004/06/24 22:28:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.4.2_pre1.ebuild,v 1.4 2004/07/03 01:08:10 squinky86 Exp $
 
 inherit kde
 need-kde 3
@@ -11,8 +11,7 @@ HOMEPAGE="http://bibletime.sourceforge.net/"
 SRC_URI="http://dev.gentoo.org/~squinky86/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-# temporary ebuild to fix #48523
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 newdepend ">=app-text/sword-1.5.8_pre1
 	>=net-misc/curl-7.10"
 

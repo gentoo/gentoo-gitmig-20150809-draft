@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.8_pre1.ebuild,v 1.3 2004/07/01 12:05:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.8_pre1.ebuild,v 1.4 2004/07/03 01:07:28 squinky86 Exp $
 
 DESCRIPTION="Library for Bible reading software"
 HOMEPAGE="http://www.crosswire.org/sword/"
 
 LICENSE="GPL-2"
 SLOT="0"
-# temporary ebuild to fix bug #48523- please do not mark stable
-KEYWORDS="~x86 ~ppc ~amd64"
+# cvs snapshot required as all other versions are broken
+KEYWORDS="x86 ~ppc ~amd64"
 SRC_URI="http://dev.gentoo.org/~squinky86/files/${P}.tar.bz2"
 IUSE="icu curl"
 RDEPEND="virtual/libc
@@ -33,7 +33,7 @@ src_compile() {
 src_install() {
 	einstall || die "install failed"
 	dodir /etc
-	insdir /etc
+	insinto /etc
 	doins ${FILESDIR}/sword.conf
 
 	dodoc AUTHORS CODINGSTYLE INSTALL ChangeLog README
