@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.94 2004/12/29 20:20:18 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.95 2005/01/23 23:40:01 robbat2 Exp $
+
+  23 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> openldap-2.1.26.ebuild,
+  openldap-2.1.27-r1.ebuild, openldap-2.1.27.ebuild,
+  openldap-2.1.30-r1.ebuild, openldap-2.1.30-r2.ebuild,
+  openldap-2.1.30-r3.ebuild, openldap-2.1.30-r4.ebuild,
+  openldap-2.1.30.ebuild, openldap-2.2.14.ebuild, openldap-2.2.19.ebuild:
+  Fix bug #79216.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
