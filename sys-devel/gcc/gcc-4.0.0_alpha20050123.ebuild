@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0_alpha20050123.ebuild,v 1.3 2005/02/01 23:02:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0_alpha20050123.ebuild,v 1.4 2005/02/12 08:52:05 eradicator Exp $
 
 GCC_MANPAGE_VERSION="none"
 ETYPE="gcc-compiler"
@@ -31,6 +31,13 @@ RDEPEND="virtual/libc
 		>=sys-libs/ncurses-5.2-r2
 		nls? ( sys-devel/gettext )
 	)"
+
+
+if [[ ${CATEGORY/cross-} != ${CATEGORY} ]]; then
+	RDEPEND="${RDEPEND}
+	         ${CATEGORY}/binutils
+	         !nocxx ( >=${CATEGORY}/glibc-2.3.4.20040808-r1 )"
+fi
 
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
