@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r1.ebuild,v 1.7 2004/04/08 08:51:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r1.ebuild,v 1.8 2004/04/12 17:17:14 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -30,6 +30,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 
 RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
+	sys-devel/gettext
 	app-arch/unzip"
 
 #We want these things in DEPEND only
