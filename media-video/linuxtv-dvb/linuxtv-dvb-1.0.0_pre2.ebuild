@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2.ebuild,v 1.1 2003/03/06 19:30:23 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2.ebuild,v 1.2 2003/03/06 19:31:44 lordvan Exp $
 
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
 HOMEPAGE="http://www.linuxtv.org"
@@ -47,6 +47,8 @@ src_install() {
     # install docs
     dodoc ${S}/doc/*
     dodoc ${S}/driver/makedev.napi
+
+    # api docs still missing at the moment
 
     # install av7110_loadkeys docs
     dodir /usr/share/doc/${P}/av7110_loadkeys
