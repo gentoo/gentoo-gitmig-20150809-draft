@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.18 2003/07/25 04:01:07 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.19 2003/07/27 09:22:27 raker Exp $
 
 inherit eutils
 
@@ -226,6 +226,20 @@ src_install() {
 	insinto /var/qmail/control
 	doins ${FILESDIR}/${PV}-${PR}/defaultdelivery
 
+	einfo "Setting up the pop3d service ..."
+	insopts -o root -g root -m 755
+	diropts -m 755 -o root -g root
+	dodir /service
+	dodir /var/qmail/supervise/qmail-pop3d
+	dodir /var/qmail/supervise/qmail-pop3d/log
+	chmod +t ${D}/var/qmail/supervise/qmail-pop3d
+	diropts -m 755 -o qmaill
+	dodir /var/log/qmail/qmail-pop3d
+
+	insinto /var/qmail/supervise/qmail-pop3d
+	newins ${FILESDIR}/run-qmailpop3d run
+	insinto /var/qmail/supervise/qmail-pop3d/log
+	newins ${FILESDIR}/run-qmailpop3dlog run
 }
 
 pkg_postinst() {
@@ -279,6 +293,9 @@ pkg_postinst() {
 	echo -e "\e[32;01m and create the following links : \033[0m"
 	echo -e "\e[32;01m ln -s /var/qmail/supervise/qmail-send /service/qmail-send \033[0m"
 	echo -e "\e[32;01m ln -s /var/qmail/supervise/qmail-smtpd /service/qmail-smtpd \033[0m"
+	echo -e ""
+	echo -e "\e[32;01m To start the pop3 server as well, create the following link : \033[0m"
+	echo -e "\e[32;01m ln -s /var/qmail/supervise/qmail-pop3d /service/qmail-pop3d \033[0m"
 }
 
 pkg_config() {
