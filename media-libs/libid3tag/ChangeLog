@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libid3tag
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.3 2003/07/18 11:13:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.4 2003/07/19 06:13:09 raker Exp $
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org> libid3tag-0.15.0b.ebuild:
+  Filled out archs and adjusted build for the media-sound/mad 
+  metapackage.  Other beautification as well.
 
   18 Jul 2003; Luca Barbato <lu_zero@gentoo.org> libid3tag-0.15.0b.ebuild:
   Added keyword ~ppc
