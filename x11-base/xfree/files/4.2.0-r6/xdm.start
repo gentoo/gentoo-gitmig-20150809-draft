@@ -7,27 +7,30 @@ depend() {
 	use xfs
 }
 
-. /etc/profile.env
-export PATH=/bin:/sbin:/usr/bin:/usr/sbin:$ROOTPATH
+setup_dm() {
+	. /etc/profile.env
+	export PATH=/bin:/sbin:/usr/bin:/usr/sbin:$ROOTPATH
 
-case "`echo $DISPLAYMANAGER | awk '{ print toupper($1) }'`" in
-	KDM|KDE|KDE2|KDE3)	 
-		EXE=`which kdm`   
-		;;
-	GDM|GNOME) 
-		EXE=/usr/bin/gdm
-		;;
-	*)	
-		EXE=/usr/X11R6/bin/xdm
-		;;
-esac
+	case "`echo $DISPLAYMANAGER | awk '{ print toupper($1) }'`" in
+		KDM|KDE|KDE2|KDE3)	 
+			EXE=`which kdm`   
+			;;
+		GDM|GNOME) 
+			EXE=/usr/bin/gdm
+			;;
+		*)	
+			EXE=/usr/X11R6/bin/xdm
+			;;
+	esac
 
-test ! -x "$EXE" && EXE=/usr/X11R6/bin/xdm
+	test ! -x "$EXE" && EXE=/usr/X11R6/bin/xdm
 
-SERVICE=${EXE##*/}
-PID="/var/run/xdm.pid"
+	SERVICE=${EXE##*/}
+	PID="/var/run/xdm.pid"
+}
 
 start() {
+	setup_dm
 	ebegin "Starting ${SERVICE}"
 	start-stop-daemon --start --quiet --exe $EXE 1>&2
 	if [ -n "$?" ] ; then
@@ -46,3 +49,4 @@ stop() {
 	start-stop-daemon --stop --quiet --exe $EXE 1>&2
 	eend $? "Error stopping ${SERVICE}."
 }
+

@@ -23,3 +23,11 @@ ${sessions}" kdmrc.orig > kdmrc
     rm kdmrc.orig
     
 done
+
+# needed for kdm to display a background
+# this needs to be verified, and i implemented
+# it this way to try and avoid stale lock/whatever
+if [ -n "`ps -A | grep kdm`" ] ; then
+	eval `which kdmdesktop`
+fi
+
