@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/gnome-desktop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.45 2003/11/15 02:48:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.46 2003/12/12 23:57:36 gmsoft Exp $
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gnome-desktop-2.4.0.ebuild:
   Stable on ia64
@@ -33,6 +33,9 @@
   here. remove in the next release.
 
 *gnome-desktop-2.4.0 (12 Sep 2003)
+
+  13 Dec 2003; Guy Martin <gmsoft@gentoo.org> gnome-desktop-2.4.0.ebuild :
+  Marked stable on hppa.
 
   12 Sep 2003; <spider@gentoo.org> gnome-desktop-2.4.0.ebuild:
   Gnome 2.4
