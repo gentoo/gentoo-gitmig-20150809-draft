@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.279 2004/10/18 23:20:25 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.280 2004/10/19 19:52:14 tgall Exp $
+
+  19 Oct 2004; Tom Gall <tgall@gentoo.org> glibc-2.3.4.20040808-r1.ebuild:
+  sane fix for problem mentioned below
 
   16 Oct 2004; Tom Gall <tgall@gentoo.org> glibc-2.3.4.20040808-r1.ebuild:
   emergancy fix,  code from lv's change on 10/13 h0rked up ppc64 royally

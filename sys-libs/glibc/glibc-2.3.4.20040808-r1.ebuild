@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.9 2004/10/18 23:20:25 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.10 2004/10/19 19:52:14 tgall Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -606,9 +606,7 @@ src_install() {
 	env -uRESTRICT prepallstrip
 
 	# this directory can be empty in certain cases so || die is wrong
-	# but hey, this is an emergancy fix for ppc64 so I won't break anyone else
-	use ppc64 && mv ${T}/thread-backup/* ${D}/$(get_libdir)/
-	use !ppc64 && mv ${T}/thread-backup/* ${D}/$(get_libdir)/ || die
+	ls  ${T}/thread-backup/*  1>/dev/null 2>&1 && mv -f ${T}/thread-backup/* ${D}/$(get_libdir)/
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/lib/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
