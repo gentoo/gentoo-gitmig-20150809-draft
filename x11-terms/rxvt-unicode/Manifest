@@ -4,9 +4,9 @@ MD5 fd3af9f34e55329c6f81c4795e166845 rxvt-unicode-2.3.ebuild 1854
 MD5 cac940c1bb4823824b86ddbd04e6d182 rxvt-unicode-2.0.ebuild 1651
 MD5 010c9f0993e9ba5f789ca864a43c3de6 rxvt-unicode-1.9.ebuild 1648
 MD5 4454a562ce21c8e92bca1773a52444ca rxvt-unicode-2.2.ebuild 1820
-MD5 ca4d8db52ba49bb92f382903a2d52e0a ChangeLog 2046
+MD5 31796f4990b5b60f110c5b65bffaf6d0 ChangeLog 2165
 MD5 b5865f551fa6dd21658e0f8349638c9f metadata.xml 223
-MD5 4fb11c31de011aa68650d1c299de8691 rxvt-unicode-2.4.ebuild 1731
+MD5 d9b9dfcfa605568ffafbdb8abc8c27f8 rxvt-unicode-2.4.ebuild 1735
 MD5 1b095b27cb9c30b70a4d949fb4368dc8 files/rxvt-unicode-2.2-set_name-fix.diff 455
 MD5 d9ec4acad8a0b142ad22b0603d2440e1 files/digest-rxvt-unicode-1.9 69
 MD5 3df14201575046d2765fe03344b21ff1 files/digest-rxvt-unicode-2.0 69
