@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a3b31013525a959de46c68e297051fd1 dbconnectionbroker-bin-1.0.13.ebuild 727
+MD5 362c342007aed613f0f6bf2fd58585dd ChangeLog 956
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 3be3ad20dbef5dd4d52b4dc282dd55bb files/digest-dbconnectionbroker-bin-1.0.13 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCqN+/rLF9B432nYRAqVdAKCS3mkZ/7TSk1qj34Xn/cftDzxR4wCfYmqf
+MfCbn6bb6nNoYOb4ZMEcZ7c=
+=v4qV
+-----END PGP SIGNATURE-----

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 54ddcb47579f9ec11b1aa3884ce923ba datavision-bin-0.8.1.ebuild 1428
+MD5 b6bf5fee7b68651fa075d793318eac4d ChangeLog 708
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 04643b8d1cfb9bd9e1ba03b061d1ff01 files/digest-datavision-bin-0.8.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCqKB/rLF9B432nYRAqbeAJ9gZ1WXVu1CZIU26n5IxBTjnLlSMgCfdqs0
+8GJlxPMLPvX3Z7o2XL5Gock=
+=Agu9
+-----END PGP SIGNATURE-----
