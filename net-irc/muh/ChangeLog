@@ -1,0 +1,9 @@
+# ChangeLog for net-irc/muh
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/ChangeLog,v 1.1 2003/09/30 19:14:16 hhg Exp $
+
+*muh-2.1_rc1 (30 Sep 2003)
+
+  30 Sep 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org> muh-2.1_rc1.ebuild:
+  new package -- persistant irc bouncer
+
