@@ -16,7 +16,7 @@ MD5 f94083fd599532a162e1aef21be8050e gimp-print-cups-4.3.0.ebuild 1588
 MD5 9222cf37dcf1a827d1177f7df2fdc9d6 gimp-print-cups-4.3.5.ebuild 1785
 MD5 9208f7c542fbe9330678c8a7b67ad2c3 gimp-print-cups-4.3.8-r1.ebuild 1825
 MD5 12856ea02c00876c1e4fc0cb67e66e9d gimp-print-cups-4.3.8.ebuild 1786
-MD5 4eb9ee47822a2aa2dd2e5e4d6b345bdd ChangeLog 3705
+MD5 098baaf1dc9916cef81f22b73abbf8b2 ChangeLog 3954
 MD5 d48276635f3c9095f03574ab3b312905 gimp-print-cups-4.3.11.ebuild 1823
 MD5 2dab726f019a6fd3f7cdcafbfa87a4cd gimp-print-cups-4.3.10.ebuild 1862
 MD5 ddf44c466c8c5859ee6ab44919968a84 gimp-print-cups-4.3.16.ebuild 1821
