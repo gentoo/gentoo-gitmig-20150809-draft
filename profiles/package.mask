@@ -817,10 +817,6 @@ net-mail/exmh
 # see myself or seemant before unmasking
 =net-im/ymessenger-0.99.19-r2
 
-# <owen@gentoo.org> (30 Jun 2002 )
-# New ebuild for CCMSN. Masked For Testing.
-=net-im/ccmsn-0.3
-
 # Masked for testing of the ACL parts (styx 21 Jun 2002)
 =sys-apps/e2fsprogs-1.27-r1
 
