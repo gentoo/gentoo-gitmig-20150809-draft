@@ -1,0 +1,26 @@
+diff -Naur xmms-jack.orig/Makefile.am xmms-jack/Makefile.am
+--- xmms-jack.orig/Makefile.am	2004-09-12 20:42:07.000000000 -0700
++++ xmms-jack/Makefile.am	2004-10-20 02:51:37.099086876 -0700
+@@ -1,6 +1,6 @@
+ lib_LTLIBRARIES = libjackout.la
+-AM_CFLAGS = @GTK_CFLAGS@ -Wall
+-LIBS = @LIBS@ @GTK_LIBS@ @PTHREAD_LIBS@ @JACK_LIBS@
++AM_CFLAGS = @GTK_CFLAGS@ -Wall @XMMS_CFLAGS@
++LIBS = @LIBS@ @GTK_LIBS@ @PTHREAD_LIBS@ @JACK_LIBS@ @XMMS_LIBS@
+ libjackout_la_LDFLAGS = -module -avoid-version
+ libjackout_la_SOURCES = jack.c configure.c bio2jack.h bio2jack.c xconvert.h
+ libdir = @XMMS_OUTPUT_PLUGIN_DIR@
+diff -Naur xmms-jack.orig/Makefile.in xmms-jack/Makefile.in
+--- xmms-jack.orig/Makefile.in	2004-09-12 20:42:07.000000000 -0700
++++ xmms-jack/Makefile.in	2004-10-20 02:52:00.326940801 -0700
+@@ -105,8 +105,8 @@
+ XMMS_VISUALIZATION_PLUGIN_DIR = @XMMS_VISUALIZATION_PLUGIN_DIR@
+ 
+ lib_LTLIBRARIES = libjackout.la
+-AM_CFLAGS = @GTK_CFLAGS@ -Wall
+-LIBS = @LIBS@ @GTK_LIBS@ @PTHREAD_LIBS@ @JACK_LIBS@
++AM_CFLAGS = @GTK_CFLAGS@ -Wall @XMMS_CFLAGS@
++LIBS = @LIBS@ @GTK_LIBS@ @PTHREAD_LIBS@ @JACK_LIBS@ @XMMS_LIBS@
+ libjackout_la_LDFLAGS = -module -avoid-version
+ libjackout_la_SOURCES = jack.c configure.c bio2jack.h bio2jack.c xconvert.h
+ libdir = @XMMS_OUTPUT_PLUGIN_DIR@

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-jack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.14 2004/10/19 23:04:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.15 2004/10/20 09:55:38 eradicator Exp $
+
+  20 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/xmms-jack-0.10-cflags.patch:
+  Honor cflags from *-config.  Closes bug #68234.
 
   19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-jack-0.10.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.10.ebuild,v 1.3 2004/10/20 02:01:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.10.ebuild,v 1.4 2004/10/20 09:55:38 eradicator Exp $
 
 IUSE=""
 
@@ -18,5 +18,7 @@ DEPEND="media-sound/jack-audio-connection-kit"
 
 XMMS_S="${XMMS_WORKDIR}/${PN}"
 BMP_S="${BMP_WORKDIR}/${PN}"
+
+PATCHES="${FILESDIR}/${P}-cflags.patch"
 
 DOCS="AUTHORS ChangeLog NEWS README"
