@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/xvnkb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/ChangeLog,v 1.4 2004/06/27 18:05:55 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/ChangeLog,v 1.5 2004/09/04 04:12:28 pclouds Exp $
+
+  04 Sep 2004; <pclouds@gentoo.org> xvnkb-0.2.8a.ebuild:
+  Stable on x86
 
   28 Jun 2004; <pclouds@gentoo.org> metadata.xml, xvnkb-0.2.8a.ebuild:
   Add use flag spell, edit some info of mine in metadata.xml
