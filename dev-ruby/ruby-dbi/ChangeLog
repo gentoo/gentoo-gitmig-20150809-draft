@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-dbi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.11 2004/06/25 01:57:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.12 2004/08/05 23:32:04 arj Exp $
+
+  05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> ruby-dbi-0.0.21-r1.ebuild:
+  Depend on version 2 of sqlite.
 
 *ruby-dbi-0.0.21-r1 (23 May 2004)
 
