@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.3 2004/02/20 06:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.4 2004/03/26 11:55:52 mr_bones_ Exp $
 
-inherit games eutils gcc
+inherit eutils gcc games
 
-S=${WORKDIR}
 DESCRIPTION="fast-paced 2D shoot'em'up"
 HOMEPAGE="http://www.polyfrag.com/content/product_gunocide.html"
 SRC_URI="mirror://sourceforge/g2ex/g2ex-setup.run"
@@ -13,32 +12,36 @@ KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-ttf
-	media-libs/sdl-mixer
+	media-libs/sdl-mixer"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
+
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack_makeself
-	sed -i "s:-g:${CFLAGS}:" makefile || \
-		die "sed makefile failed"
+	sed -i "s:-g:${CFLAGS}:" makefile \
+		|| die "sed makefile failed"
 	mkdir binary
 	epatch ${FILESDIR}/${PV}-gcc3.patch
 	edos2unix config.cfg
 	sed -i \
 		-e "s:/usr/local/games/gunocide2ex/config\.cfg:${GAMES_SYSCONFDIR}/${PN}.cfg:" \
 		-e "s:/usr/local/games/gunocide2ex/hscore\.dat:${GAMES_STATEDIR}/${PN}-hscore.dat:" \
-		src/*.{h,cpp} || \
-			die "sed failed"
+		src/*.{h,cpp} \
+			|| die "sed failed"
 	sed -i \
 		-e "s:/usr/local/games:${GAMES_DATADIR}:" \
-		src/*.{h,cpp} `find gfx -name '*.txt'` || \
-			die "sed failed (2)"
+		src/*.{h,cpp} `find gfx -name '*.txt'` \
+			|| die "sed failed (2)"
 }
 
 src_compile() {
-	cd src
 	local cc=$(gcc-getCXX)
+
+	cd src
 	for f in *.cpp ; do
 		echo "${cc} ${CFLAGS} `sdl-config --cflags` ${f}"
 		${cc} ${cflags} `sdl-config --cflags` -c ${f} || \
@@ -52,8 +55,8 @@ src_install() {
 	dogamesbin src/${PN}               || die "dogamesbin failed"
 	dosym ${PN} "${GAMES_BINDIR}/g2ex" || die "dosym failed"
 	dodir "${GAMES_DATADIR}/${PN}"
-	cp -R gfx sfx lvl credits arial.ttf "${D}/${GAMES_DATADIR}/${PN}/" || \
-		die "cp failed"
+	cp -R gfx sfx lvl credits arial.ttf "${D}/${GAMES_DATADIR}/${PN}/" \
+		|| die "cp failed"
 	insinto "${GAMES_SYSCONFDIR}"
 	newins config.cfg ${PN}.cfg        || die "newins failed (cfg)"
 	insinto "${GAMES_STATEDIR}"
