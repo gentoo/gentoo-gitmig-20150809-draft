@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1.ebuild,v 1.4 2004/04/25 16:05:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1.ebuild,v 1.5 2004/04/27 02:05:11 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 hppa ~ppc"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips hppa ~amd64 ia64"
 IUSE=""
 
 DEPEND="virtual/glibc"
@@ -27,7 +27,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make \
 		DESTDIR=${D} \
 		man_prefix=/usr/share/man \
