@@ -5,12 +5,13 @@ MD5 37b477deb48ddc37a1fe2c65b2928cda openldap-2.1.30-r3.ebuild 7210
 MD5 7147b6711fd08405e22461185a531b7e openldap-2.1.27.ebuild 7058
 MD5 9ebfba53c1e7cb83ab0953c77d77210f openldap-2.1.30-r2.ebuild 7488
 MD5 2524271b77468ae682c69faa020166dd openldap-2.1.30-r4.ebuild 7279
+MD5 19e09b193cf01ff88be7f105f4053a8f openldap-2.2.23.ebuild 7837
 MD5 f4340867ff25513d0bf1cb616cffec03 openldap-2.2.19.ebuild 7980
 MD5 1874c203a77bcc3d3b2113cf472c3fbe openldap-2.2.14.ebuild 7272
 MD5 89c1b232c5c53b96513eaf580cc4f5c2 openldap-2.1.30.ebuild 7368
 MD5 c11fbc4ba7824ae4f171eee66dc52e85 openldap-2.1.26.ebuild 7096
 MD5 d03b4b8965dada31e3357108cce8e0a2 openldap-2.1.30-r1.ebuild 7382
-MD5 447b185c0be981ac80f960868808135d ChangeLog 18653
+MD5 f30ea19542dd347c2a38cd4067875c45 ChangeLog 18813
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 7901f04890caac3b418942143b60b284 openldap-2.1.27-r1.ebuild 7452
 MD5 c8d6f4ebeb92ef1085b1bb77d7b4db5f files/gencert.sh 3505
@@ -29,6 +30,7 @@ MD5 f829d2ebaab2e3e020a6b25522734331 files/digest-openldap-2.1.27 65
 MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30 65
 MD5 27d2ee25b32bf4a429ae80149508ff34 files/digest-openldap-2.2.14 65
 MD5 d1db1a9bf4afc66b26e33beef17f07f4 files/digest-openldap-2.2.19 65
+MD5 fa0a0dfbb9f3984fb2907c020e02ec73 files/digest-openldap-2.2.23 65
 MD5 b10517f0e7be829d47bb8096d86fb519 files/openldap-2.1.27-db40.patch 718
 MD5 2e6d3f7cf49a1d85468befdff2bfc1d8 files/openldap-2.1.30-ximian_connector.patch 6435
 MD5 1a7084c17a74e59db33578c0833e4099 files/2.0/slapd 584
@@ -38,7 +40,7 @@ MD5 d68ba97d9f54b8455c1e2d93c352d24a files/2.0/slurpd 495
 Version: GnuPG v1.2.6 (GNU/Linux)
 Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFB9BBvPpIsIjIzwiwRAoABAJsGVcCe/b/TZJ1Vy+IDAm2rlwdvjACdG7yS
-Zfi0FmS6FSzlrLRTicnWN3g=
-=44cd
+iD8DBQFCEJUyPpIsIjIzwiwRAhxmAKCQr2zCzXni19hWQta9qJPTtpfqvACg7ZbH
+Afsg3LVR8/Mr5iJQ1Ldm0VE=
+=4clx
 -----END PGP SIGNATURE-----
