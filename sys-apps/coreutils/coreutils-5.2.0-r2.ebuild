@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0-r2.ebuild,v 1.10 2004/06/24 22:00:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0-r2.ebuild,v 1.11 2004/06/28 18:32:47 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,6 @@ PATCH_VER=0.2
 I18N_VER=i18n-0.1
 PATCHDIR=${WORKDIR}/patch
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
@@ -27,9 +26,8 @@ RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( !hppa? ( sys-apps/acl sys-apps/attr ) )
 	nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.3-r5"
-
 DEPEND="${RDEPEND}
-	virtual/glibc
+	virtual/libc
 	>=sys-apps/portage-2.0.49
 	>=sys-devel/automake-1.8.2
 	>=sys-devel/autoconf-2.58

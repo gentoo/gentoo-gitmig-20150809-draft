@@ -1,23 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r6.ebuild,v 1.10 2004/06/25 20:30:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r6.ebuild,v 1.11 2004/06/28 18:32:47 vapier Exp $
 
 inherit eutils
 
-IUSE="nls build acl static"
-
 PATCH_VER=1.9.1
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="http://ftp.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
 	mirror://gentoo/${PN}-gentoo-${PATCH_VER}.tar.bz2
 	mirror://gentoo/${PN}-gentoo-${PATCH_VER}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ppc ~sparc alpha hppa ~mips ~amd64 ia64"
+IUSE="nls build acl static"
 
 DEPEND=">=sys-apps/portage-2.0.49
 	sys-devel/automake

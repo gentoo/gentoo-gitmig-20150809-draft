@@ -1,16 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r3.ebuild,v 1.14 2004/06/25 20:30:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r3.ebuild,v 1.15 2004/06/28 18:32:47 vapier Exp $
 
 inherit eutils flag-o-matic
-
-IUSE="nls build acl selinux static"
 
 PATCH_VER=1.4.4
 I18N_PATCH=i18n-0.2
 PATCHDIR=${WORKDIR}/patch
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu/coreutils/${P}.tar.bz2
@@ -19,18 +16,17 @@ SRC_URI="mirror://gnu/coreutils/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ~amd64 ~ppc64"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~ppc64"
+IUSE="nls build acl selinux static"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( !hppa? ( sys-apps/acl sys-apps/attr ) )
 	nls? ( sys-devel/gettext )
 	>=sys-libs/libtermcap-compat-2.0.8"
-
 DEPEND="${RDEPEND}
-	virtual/glibc
+	virtual/libc
 	>=sys-apps/portage-2.0.49
 	>=sys-devel/automake-1.7.6
 	>=sys-devel/autoconf-2.57

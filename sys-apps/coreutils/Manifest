@@ -1,15 +1,25 @@
-MD5 0e7195bb5a4acd51764f32007fbdda43 coreutils-5.2.1.ebuild 3929
-MD5 cf06c1496af113a1fb857e4107123e3f coreutils-5.0.91-r3.ebuild 3901
-MD5 06178429b07d917d1ea0fa3f3e703798 coreutils-5.2.0-r2.ebuild 4111
-MD5 739e7077583a41cc9a72fbcea6a05d7a coreutils-5.0-r6.ebuild 2677
-MD5 7fda20b59afc0e1a627d1ec49ac4fc36 coreutils-5.0.91-r4.ebuild 4233
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 82669e6198792013aa09af5f547fa115 ChangeLog 19132
+MD5 1ce51fdb0c8a9ce07b454d66413e6d09 coreutils-5.0-r6.ebuild 2656
+MD5 09b3830fd539c9ad31f378efc6dafe83 coreutils-5.2.1.ebuild 3908
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 0e4d7cf6353d10b0ffbcf4330bb51f3c coreutils-5.0.91-r3.ebuild 3877
+MD5 b48125a80955256b99cb3fdb15d4dd3f coreutils-5.0.91-r4.ebuild 4209
+MD5 330fbbbd715fa3e8d30bc4fd938c9aff coreutils-5.2.0-r2.ebuild 4089
+MD5 0059bd5b60d236909aa1fefb23fb5a40 files/DIR_COLORS 3573
+MD5 e80d3d87cfbe40bc56636167ae5b4768 files/digest-coreutils-5.0-r6 141
+MD5 36e1cce43ca15be334d54801e1dbb286 files/digest-coreutils-5.2.1 224
 MD5 a56b66f95289815e386f537689ef29a0 files/digest-coreutils-5.0.91-r3 229
 MD5 9e4492e1c7e9c927ad7c492239dbe029 files/digest-coreutils-5.0.91-r4 229
 MD5 5a7d722a7600e8834bf39c24790caaa2 files/003_all_coreutils-gentoo-uname-s390.patch 3120
 MD5 6a9f5a2ffa31d94987039066c5072982 files/digest-coreutils-5.2.0-r2 224
-MD5 36e1cce43ca15be334d54801e1dbb286 files/digest-coreutils-5.2.1 224
-MD5 5e5a5bbe9978abdf7ac26e9b9a2c0cad files/DIR_COLORS 3572
-MD5 e80d3d87cfbe40bc56636167ae5b4768 files/digest-coreutils-5.0-r6 141
 MD5 ad6c1b6661e030a48a57172f88d2960a files/coreutils-5.0.91-ppc64-1.patch 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4GSEHTu7gpaalycRAmRDAJ46hCq/owjf4kjYpMz7IO6aGpw02ACcDpCy
+u8SCOaRL8AI0x23jwNYxnrE=
+=Wte0
+-----END PGP SIGNATURE-----
