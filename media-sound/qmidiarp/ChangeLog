@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/qmidiarp
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiarp/ChangeLog,v 1.1 2004/10/03 04:39:59 chriswhite Exp $
+
+*qmidiarp-0.0.2 (03 Oct 2004)
+
+  03 Oct 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +files/qmidiarp-0.0.2-fix_qtdir_in_makefile.patch, +qmidiarp-0.0.2.ebuild:
+  Intial import into the tree.  Thanks to Eric Shattow 
+  <shadow@serverart.org> for posting.  This closes bug #66159.
+
