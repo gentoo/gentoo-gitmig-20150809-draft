@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ftpd-0.17-r1.ebuild,v 1.1 2003/06/07 08:16:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ftpd-0.17-r1.ebuild,v 1.2 2003/06/08 20:11:55 seemant Exp $
 
 inherit eutils
 
@@ -25,8 +25,8 @@ src_unpack() {
 	cd ${S}
 	if [ "`use ssl`" ]; then
 		epatch ${FILESDIR}/ssl.diff.gz
-		epatch ${FILESDIR}/${P}-shadowfix.patch
 	fi
+	epatch ${FILESDIR}/${P}-shadowfix.patch
 }
 
 src_compile() {
