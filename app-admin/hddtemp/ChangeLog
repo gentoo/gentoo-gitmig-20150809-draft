@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.12 2004/01/04 16:20:24 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.13 2004/01/11 03:16:07 weeve Exp $
+
+  10 Jan 2004; Jason Wever <weeve@gentoo.org> hddtemp-0.3_beta10.ebuild:
+  Changed ~sparc keyword to -sparc as src/backtrace.c only works for x86 and
+  requires an include file not found on sparc.
 
   04 Jan 2004; Jason Wever <weeve@gentoo.org> hddtemp-0.2.ebuild,
   hddtemp-0.3_beta10.ebuild, hddtemp-0.3_beta6-r1.ebuild,
