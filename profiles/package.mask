@@ -515,3 +515,7 @@ dev-lang/tcl-tk
 # spider@gentoo.org ; 11 Apr 2002
 # Masked until we can solve the dependency issues =x11-libs/gtk+-1.2* doesn't work
 >=x11-libs/gtk+-2.0.0
+
+# mkennedy@gentoo.org 14 Apr 2002
+# Beta, so masked for now. See also bug 1662.
+=app-arch/rar-3.0_beta5
