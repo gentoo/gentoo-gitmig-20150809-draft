@@ -1,13 +1,23 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c36d3e9465a96d7220228d2ef5457bd3 metadata.xml 451
 MD5 1bc98dbc873369180a0360b470b7d925 gentoolkit-0.2.0_pre8.ebuild 1102
 MD5 6c4d39e4dd9b2859f94f8749ffd82d94 gentoolkit-0.2.0_pre10.ebuild 990
 MD5 6d03c9d28889126d188696352def5d6e gentoolkit-0.2.0_pre9.ebuild 848
-MD5 4c406c824328196cfcb38546dea365ae gentoolkit-0.2.0_pre8-r1.ebuild 1219
-MD5 28d4c08e8a577e7234967c3413ca336b gentoolkit-0.2.0_pre10-r1.ebuild 1101
-MD5 cac36975797be257f6911b275a635ff2 ChangeLog 25950
+MD5 063567345244426a90aaa32ca5dfe479 ChangeLog 25951
+MD5 33f9f9c82b94b327238c4346dff17f16 gentoolkit-0.2.0_pre10-r1.ebuild 1105
+MD5 0127bed996ccfd70c67bba08db48222b gentoolkit-0.2.0_pre8-r1.ebuild 1219
 MD5 1b132e20e9de1c5163594b2cbd950d34 files/digest-gentoolkit-0.2.0_pre8 72
 MD5 ece108f9a9cf45a6cdd9211bb1b26db5 files/digest-gentoolkit-0.2.0_pre9 72
 MD5 096ea293c35570bd708ebd8cde10ca6b files/digest-gentoolkit-0.2.0_pre10 73
-MD5 693ad4ff7cf37c0af0232098f2d5b273 files/qpkg-security-fix-68846.diff 625
 MD5 1b132e20e9de1c5163594b2cbd950d34 files/digest-gentoolkit-0.2.0_pre8-r1 72
 MD5 096ea293c35570bd708ebd8cde10ca6b files/digest-gentoolkit-0.2.0_pre10-r1 73
+MD5 2a64dd5b5e7e57ffc34102eca6b936b3 files/qpkg-security-fix-68846.diff 645
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhEod6J2i8a8J4okRAqZbAJ4o0YWTkKRLPGF9Gf83+tJOEOHySwCdFNJi
+uVERw3MINURaOvDU7Ho9Eqo=
+=v63L
+-----END PGP SIGNATURE-----
