@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 3066e7c20c392289beda7211a634de6f ChangeLog 338
 MD5 4c5579aeec205ecb5bf7526d2eba3256 metadata.xml 1064
-MD5 44edf6e9d098da81ff36e556e36a0841 epsilon-9999.ebuild 381
-MD5 c193c23d9869d874dd32b6c9b5a007f1 epsilon-0.3.0.20041226.ebuild 391
+MD5 cdc72d49e20d537d7a9fb97b11a0d5f0 epsilon-9999.ebuild 398
+MD5 348d1df44549b38e25b72396c156c6cf epsilon-0.3.0.20041226.ebuild 408
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-epsilon-9999 0
 MD5 8adeafe546904ae28982163cc140936f files/digest-epsilon-0.3.0.20041226 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBzzVlroRuSHgZdywRAh+DAJ4xRBIEhhVkIk08vK5b93+SaxpWlACfSRKv
-jrGq0zfEqyn3S9bFO1jiUtI=
-=YyTu
+iD8DBQFB0B7UroRuSHgZdywRAmZYAJ42hXFKr/v2aII6L17qiofPO8/z3wCgiPDk
+QWEAI43vC1uIJAaogw9HOHo=
+=LZ2h
 -----END PGP SIGNATURE-----

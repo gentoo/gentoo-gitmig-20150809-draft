@@ -4,15 +4,15 @@ Hash: SHA1
 MD5 b7330788b227b62435886c4ae5a0f4e5 ChangeLog 431
 MD5 2a3cec7ded6ab2e7dcd5991e0281da06 edje-0.5.0.ebuild 489
 MD5 fa99b21e8959bf69681a42dfaa120e84 metadata.xml 2739
-MD5 c9419f7c7b3b22380b780dca511205d9 edje-0.5.0.20041226.ebuild 543
-MD5 7efaaa26513d5e50aac17c09d7682390 edje-9999.ebuild 533
+MD5 34e7d3fda22f3f896e7858559307fbea edje-0.5.0.20041226.ebuild 560
+MD5 a8b84900986d0278de1c0559f1b03aa6 edje-9999.ebuild 550
 MD5 2297a0ca2efa49dc84f9d1690911e33c files/digest-edje-0.5.0 63
 MD5 993d0713a2b5e8e84a2de1fc464043f3 files/digest-edje-0.5.0.20041226 73
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-edje-9999 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBzzNProRuSHgZdywRAhv6AJ9JzvVMu0i12KqMJV+DCCwTTUQ6IwCcCQuy
-UEOaEmbT109y+7UaxGwZaDA=
-=+mlZ
+iD8DBQFB0B3eroRuSHgZdywRAhCjAJ9/N+ty3KaxDQAz5mR9W8h+YEsSLACeLgEj
+tmxbQSmoze97rvhkAnh12qc=
+=4lhC
 -----END PGP SIGNATURE-----
