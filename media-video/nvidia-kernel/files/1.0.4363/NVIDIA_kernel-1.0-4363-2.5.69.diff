@@ -1,0 +1,49 @@
+--- NVIDIA_kernel-1.0-4363/nv.c.orig	2003-05-13 22:26:24.000000000 +0200
++++ NVIDIA_kernel-1.0-4363/nv.c	2003-05-13 22:27:39.000000000 +0200
+@@ -44,8 +44,8 @@
+ #endif
+ 
+ #ifdef CONFIG_DEVFS_FS
+-devfs_handle_t  nv_dev_handle[NV_MAX_DEVICES];
+-devfs_handle_t  nv_ctl_handle;
++int nv_dev_handle[NV_MAX_DEVICES];
++int nv_ctl_handle;
+ #endif
+ 
+ // #define NV_DBG_MEM 1
+@@ -733,21 +733,16 @@
+     }
+ 
+ #ifdef CONFIG_DEVFS_FS
+-    memset(nv_dev_handle, 0, sizeof(devfs_handle_t) * NV_MAX_DEVICES);
++    /* devfs_mk_cdev return 0 on success */
++    memset(nv_dev_handle, 1, sizeof(nv_dev_handle) * NV_MAX_DEVICES);
+     do {
+         char name[10];
+ 
+-        nv_ctl_handle = devfs_register(NULL, "nvidiactl",
+-                            DEVFS_FL_DEFAULT, nv_major, 255,
+-                            S_IFCHR | S_IRUGO | S_IWUGO,
+-                            &nv_fops, NULL);
++        nv_ctl_handle = devfs_mk_cdev(MKDEV(nv_major, 255), S_IFCHR|S_IRUGO|S_IWUGO, "nvidiactl");
+ 
+         for (i = 0; i < num_devices; i++) {
+             sprintf(name, "nvidia%d", i);
+-            nv_dev_handle[i] = devfs_register(NULL, name,
+-                                  DEVFS_FL_DEFAULT, nv_major, i,
+-                                  S_IFCHR | S_IRUGO | S_IWUGO,
+-                                  &nv_fops, NULL);
++            nv_dev_handle[i] = devfs_mk_cdev(MKDEV(nv_major, i), S_IFCHR|S_IRUGO|S_IWUGO, name);
+         }
+     } while(0);
+ #endif
+@@ -870,7 +865,8 @@
+ #ifdef CONFIG_DEVFS_FS
+     do {
+         int i;
+-        for (i = 0; nv_dev_handle[i] != 0; i++) {
++		/* devfs_mk_cdev return 0 on success */
++        for (i = 0; nv_dev_handle[i] == 0; i++) {
+             devfs_remove("nvidia%d", i);
+         }
+     } while(0);
