@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.25.ebuild,v 1.6 2005/01/31 10:59:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.25.ebuild,v 1.7 2005/03/15 14:27:26 seemant Exp $
 
 
 DESCRIPTION="Brings up/down ethernet ports automatically with cable detection"
@@ -14,7 +14,7 @@ IUSE="doc"
 
 DEPEND=">=sys-apps/sed-4
 	dev-util/pkgconfig
-	doc? ( net-www/lynx )"
+	doc? ( www-client/lynx )"
 RDEPEND=">=dev-libs/libdaemon-0.5"
 
 # Gentoo-provided scripts. Version is for the scripts, not ifplugd.

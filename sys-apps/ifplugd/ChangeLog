@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.15 2005/01/31 10:59:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.16 2005/03/15 14:27:26 seemant Exp $
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> ifplugd-0.25.ebuild,
+  ifplugd-0.26.ebuild:
+  Dependency update: net-www/lynx -> www-client/lynx.
 
   31 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> ifplugd-0.26.ebuild:
   Marked stable on x86.
