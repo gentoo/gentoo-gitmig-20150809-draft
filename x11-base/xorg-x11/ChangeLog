@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.303 2005/01/24 10:28:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.304 2005/01/25 18:35:04 fmccor Exp $
+
+  25 Jan 2005; Ferris McCormick <fmccor@gentoo.org> xorg-x11-6.8.1.902.ebuild:
+  Add ~sparc keyword for testing --- builds and runs for me.  Track for sparc
+  at Bug 79467.
 
   24 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.902-r1.ebuild:
