@@ -4,6 +4,11 @@
 # 19:20:18 aliz Exp $
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
+*pbbuttonsd-0.5.2-r1.ebuild (17 Dec 2002)
+
+  17 Dec 2002; Jon Nall <nall@gentoo.org> pbbuttonsd-0.5.2-r1.ebuild,
+  files/pbbuttons-0.5.2-replace_pmud.patch :
+  patched to actually use the pmud replacement code.
 
 *pbbuttonsd-0.5.2.ebuild (17 0ct 2002)
 
