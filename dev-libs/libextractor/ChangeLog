@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libextractor
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.12 2003/10/19 23:52:07 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.13 2004/03/25 03:19:59 weeve Exp $
+
+  24 Mar 2004; Jason Wever <weeve@gentoo.org> libextractor-0.2.2.ebuild:
+  Marked stable on sparc.
 
 *libextractor-0.2.6 (20 Oct 2003)
 
