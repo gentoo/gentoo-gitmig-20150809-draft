@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.68 2003/03/17 15:59:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.69 2003/03/21 07:38:34 azarah Exp $
+
+*baselayout-1.8.6.4-r1 (21 Mar 2003)
+
+  21 Mar 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.4-r1.ebuild :
+  Fix 'etc-update' to be 'env-update' as it *should* have been.  Tweak updating
+  of /etc/conf.d/rc and /etc/inittab to resolve bug #17829, thanks to
+  Jay Pfeifer <pfeifer@gentoo.org>.
 
   17 Mar 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.4.ebuild :
   Only run 'keepdir /usr/portage' if ${ROOT}/usr/portage do NOT exist, else we
