@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/schedutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedutils/ChangeLog,v 1.7 2003/04/12 14:54:23 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedutils/ChangeLog,v 1.8 2003/06/10 17:24:35 msterret Exp $
+
+  10 Jun 2003; <msterret@gentoo.org> schedutils-1.1.0.ebuild:
+  DEPEND on sed >= 4
 
 *schedutils-1.1.0 (12 Apr 2003)
 
