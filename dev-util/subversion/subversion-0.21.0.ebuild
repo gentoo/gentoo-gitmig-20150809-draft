@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.20.1.ebuild,v 1.3 2003/04/26 14:07:16 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.21.0.ebuild,v 1.1 2003/04/26 14:07:16 pauldv Exp $
 
 
 DESCRIPTION="A compelling replacement for CVS"
 SRC_URI="http://www.sleepycat.com/update/4.0.14/db-4.0.14.tar.gz
-	http://subversion.tigris.org/files/documents/15/3440/${P}.tar.gz"
+	http://subversion.tigris.org/files/documents/15/3712/${P}.tar.gz"
 HOMEPAGE="http://subversion.tigris.org/"
 
 SLOT="0"
 LICENSE="Apache-1.1"
 KEYWORDS="~x86"
-IUSE="ssl"
+IUSE="ssl apache2"
 
 S_DB="${WORKDIR}/db-4.0.14/build_unix"
 
@@ -19,7 +19,9 @@ DEPEND=">=dev-lang/python-2.0
 	>=sys-apps/diffutils-2.7.7
 	>=sys-devel/libtool-1.4.1-r1
 	>=sys-devel/bison-1.28-r3
-	>=net-www/apache-2.0.44
+	apache2? ( >=net-www/apache-2.0.44 )
+	!apache2? ( !>=apache-2* )
+	!dev-libs/apr
 	~sys-devel/m4-1.4
 	>=dev-lang/swig-1.3.16
 	>=net-misc/neon-0.23.8"
@@ -27,6 +29,18 @@ DEPEND=">=dev-lang/python-2.0
 RDEPEND=">=dev-lang/python-2.0
 	>=sys-apps/diffutils-2.7.7
 	~sys-devel/m4-1.4"
+
+pkg_setup() {
+	if use apache2; then
+		einfo "The apache2 subversion module will be built, and libapr from the"
+		einfo "apache package will be used instead of the included"
+	else
+		einfo "Please note that subversion and apache2 cannot be installed"
+		einfo "simultaneously without specifying the apache2 use flag. This is"
+		einfo "because subversion installs its own libapr and libapr-util in that"
+		einfo "case."
+	fi
+}
 	
 src_unpack() {
 	cd ${WORKDIR}
@@ -69,10 +83,10 @@ EOF
 
 	LDFLAGS="-L${S}/subversion/libsvn_client/.libs \
         -L${S}/subversion/libsvn_delta/.libs \
+        -L${S}/subversion/libsvn_diff/.libs \
         -L${S}/subversion/libsvn_fs/.libs \
         -L${S}/subversion/libsvn_repos/.libs \
         -L${S}/subversion/libsvn_ra/.libs \
-        -L${S}/subversion/libsvn_auth/.libs \
         -L${S}/subversion/libsvn_ra_dav/.libs \
         -L${S}/subversion/libsvn_ra_local/.libs \
         -L${S}/subversion/libsvn_ra_svn/.libs \
@@ -81,9 +95,11 @@ EOF
 	-L${WORKDIR}/dbinst/lib"
 
 
-	LDFLAGS=${LDFLAGS} econf ${myconf} --with-apxs=/usr/sbin/apxs2 \
-		--with-apr=/usr \
-		--with-apr-util=/usr \
+	use apache2 && myconf="${myconf} --with-apxs=/usr/sbin/apxs2 \
+		--with-apr=/usr --with-apr-util=/usr"
+	use apache2 || myconf="${myconf} --without-apxs"
+
+	LDFLAGS=${LDFLAGS} econf ${myconf} \
 		--with-berkeley-db=${WORKDIR}/dbinst \
 		--with-neon=/usr \
 		--disable-mod-activation \
@@ -91,7 +107,12 @@ EOF
 		--with-swig ||die "configuration failed"
 	# build subversion
 	emake || die "make of subversion failed"
-	emake swig-py || die "subversion python bindings failed"
+	#building fails without the apache apr-util as includes are wrong.
+	if [ use apache2 ]; then
+		emake swig-py || die "subversion python bindings failed"
+	else
+		emake SVN_APR_INCLUDES="-I${S}/apr/include -I${S}/apr-util/include" swig-py || die "subversion python bindings failed"
+	fi
 }
 
 
@@ -99,7 +120,6 @@ src_install () {
 	mkdir -p ${D}/etc/apache2/conf
 	mkdir -p ${D}/etc/share
 
-#	dolib ${WORKDIR}/dbinst/lib/libdb-*.so
 	mkdir -p ${D}/usr/share/subversion/bin
 	cp ${WORKDIR}/dbinst/bin/* ${D}/usr/share/subversion/bin/
 
