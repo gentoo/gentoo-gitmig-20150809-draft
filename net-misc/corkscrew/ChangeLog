@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/corkscrew
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/ChangeLog,v 1.1 2004/09/01 11:01:48 klieber Exp $
+
+*corkscrew-2.0 (01 Sep 2004)
+
+  01 Sep 2004; Kurt Lieber <klieber@gentoo.org> 
+  +metadata.xml,
+  +corkscrew-2.0.ebuild:
+  initial version
+
