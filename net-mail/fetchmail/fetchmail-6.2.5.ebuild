@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.15 2004/07/01 22:31:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.16 2004/07/15 01:47:27 agriffis Exp $
 
 IUSE="ssl nls ipv6 kerberos krb4"
 
@@ -32,9 +32,7 @@ src_unpack() {
 src_compile() {
 	autoconf
 
-	use amd64 && gnuconfig_update
-	use s390 && gnuconfig_update
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 
 	local myconf
 
