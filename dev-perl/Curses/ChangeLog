@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/Curses
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.1 2002/05/11 17:28:04 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.2 2002/07/31 12:17:51 cselkirk Exp $
 
 *Curses-1.06 (6 May 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> Curses-1.06.ebuild :
+
+  Added ppc to KEYWORDS.
 
   6 May 2002; Arcady Genkin <agenkin@thpoon.com> Curses-1.06.ebuild :
 
