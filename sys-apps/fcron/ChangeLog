@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/fcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.13 2003/03/02 08:51:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.14 2003/04/21 17:00:58 gmsoft Exp $
 
 *fcron-2.0.0-r3 (02 Mar 2003)
+
+  21 Apr 2003; Guy Martin <gmsoft@gentoo.org> fcron-2.0.0-r3.ebuild :
+  Added hppa to KEYWORDS.
 
   02 Mar 2003; Seemant Kulleen <seemant@gentoo.org> fcron-2.0.0-r3.ebuild:
   use epach, econf; and use /usr/bin/vim instead of /usr/bin/nano to close bug
