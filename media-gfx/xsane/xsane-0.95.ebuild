@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.92.ebuild,v 1.7 2004/06/24 22:53:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.95.ebuild,v 1.1 2004/09/09 15:37:13 phosphan Exp $
 
 DESCRIPTION="graphical scanning frontend"
 SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.xsane.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc amd64 ~sparc"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64"
 IUSE="gtk2 nls jpeg png tiff"
 
 DEPEND="media-gfx/sane-backends
@@ -42,8 +42,16 @@ src_install() {
 		dodir /usr/lib/gimp/1.2/plug-ins
 		dosym /usr/bin/xsane /usr/lib/gimp/1.2/plug-ins
 	fi
-#	if [ -d /usr/lib/gimp/1.3 ]; then
-#		dodir /usr/lib/gimp/1.3/plug-ins
-#		dosym /usr/bin/xsane /usr/lib/gimp/1.3/plug-ins
-#	fi
+	if [ -d /usr/lib/gimp/2.0 ]; then
+		dodir /usr/lib/gimp/2.0/plug-ins
+		dosym /usr/bin/xsane /usr/lib/gimp/2.0/plug-ins
+	fi
+}
+
+pkg_postinst() {
+	einfo ""
+	ewarn "If you are upgrading from <=xsane-0.93, please make sure to"
+	ewarn "remove ~/.sane/xsane/xsane.rc _before_ you start xsane for"
+	ewarn "the first time."
+	einfo ""
 }
