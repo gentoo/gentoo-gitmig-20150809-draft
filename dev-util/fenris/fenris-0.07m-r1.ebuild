@@ -1,22 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m.ebuild,v 1.6 2004/01/09 01:07:25 liquidx Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m-r1.ebuild,v 1.1 2004/01/09 01:07:25 liquidx Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Fenris is a tracer, GUI debugger, analyzer, partial decompiler and much more"
 HOMEPAGE="http://razor.bindview.com/tools/fenris/"
-SRC_URI="http://razor.bindview.com/tools/fenris/${PN}.tgz"
+# dev-snapshot: http://lcamtuf.coredump.cx/fenris/fenris.tgz (2004/01/08)
+SRC_URI="mirror://gentoo/${P}-r1.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
+IUSE=""
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	sys-libs/libtermcap-compat
 	app-misc/screen
 	sys-libs/ncurses
+	dev-libs/openssl
+	sys-kernel/linux-headers
 	sys-devel/gdb"
 
 RDEPEND="sys-apps/gawk"
@@ -27,10 +29,12 @@ src_unpack() {
 	epatch ${FILESDIR}/makefile.diff
 	epatch ${FILESDIR}/build.diff
 	epatch ${FILESDIR}/${P}-debian.patch
+	epatch ${FILESDIR}/${P}-noansiart.patch # disable ascii art
+	epatch ${FILESDIR}/${P}-dress.c.patch # update for latest binutils
+	epatch ${FILESDIR}/${P}-speedup.patch # to speed up makefile
 }
 
 src_compile() {
-
 	# We need to obtain libc version, this should be a reliable way :)
 	# because internal script doesn't detect libc version during the emerge
 	LIBC=`ls /lib/libc-* | awk -F- '{print $2}' | awk -F.so '{print $1}'`
@@ -60,7 +64,9 @@ src_install() {
 	into /usr
 	dobin fenris fprints getfprints ragnarok fenris-bug \
 		ragsplit dress aegir nc-aegir spliter.pl
+}
 
+pkg_postinst() {
 	einfo "These new tools are installed in /usr/bin:"
 	einfo "fenris fprints getfprints ragnarok fenris-bug ragsplit "
 	einfo "dress aegir nc-aegir spliter.pl"
