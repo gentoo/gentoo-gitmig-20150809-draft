@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.6 2001/09/01 04:31:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.7 2001/09/13 16:18:37 drobbins Exp $
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
@@ -86,7 +86,9 @@ src_install() {
     	cd ${D}/usr/lib/spython2.0
 		#remove test and lib-tk directory; we can do much more cleaning too.
 		rm -rf test lib-tk
-		#clean out byte-compiled stuff.  Not absolutely required, and doing so saves space 
+		#clean out byte-compiled stuff.  They aren't required, and doing so saves space 
+		#cd to root so "find" works properly.
+		cd ${D}
 		local x
 		for x in `find -iname '*.pyc'; find -iname '*.pyo'`
 		do
