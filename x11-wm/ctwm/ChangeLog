@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/ctwm
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.3 2003/12/01 17:02:37 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.4 2004/01/15 22:57:51 usata Exp $
+
+*ctwm-3.7_alpha4-r1 (16 Jan 2004)
+
+  16 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> ctwm-3.6-r1.ebuild,
+  ctwm-3.7_alpha4-r1.ebuild:
+  Included images and chaged image directory from /usr/share/${PF} to
+  /usr/share/${PN}. Closing bug #38329
 
 *ctwm-3.7_alpha4 (02 Dec 2003)
 
