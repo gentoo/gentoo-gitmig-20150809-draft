@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nasm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.22 2003/12/09 18:05:14 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.23 2004/01/31 02:17:24 mr_bones_ Exp $
+
+  30 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> nasm-0.98.38.ebuild:
+  inherit eutils for epatch
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> nasm-0.98.36.ebuild,
   nasm-0.98.38.ebuild:
