@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.8 2003/07/12 09:12:48 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.9 2003/07/12 18:41:13 foser Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -63,7 +63,6 @@ SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
 RDEPEND=">=x11-base/xfree-4.2.0-r11
-	>=gnome-base/ORBit-0.5.10-r1
 	>=dev-libs/libIDL-0.8.0
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/fontconfig-2.1
@@ -79,6 +78,7 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	( gtk2? >=dev-libs/glib-2.2.0 :
 	        =dev-libs/glib-1.2* )
 	gtk2?  ( >=x11-libs/pango-1.2.1 )
+	!gtk2? ( >=gnome-base/ORBit-0.5.10-r1 )
 	java?  ( virtual/jre )
 	crypt? ( >=app-crypt/gnupg-1.2.1 )"
 
