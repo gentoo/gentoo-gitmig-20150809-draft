@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.15 2004/02/26 22:20:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.16 2004/02/26 22:44:22 agriffis Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -11,8 +11,8 @@ HOMEPAGE="http://setiathome.ssl.berkeley.edu"
 SRC_URI="ppc? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.powerpc-unknown-linux-gnu.tar )
 	sparc? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.sparc-unknown-linux-gnu.tar )
 	ia64? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.ia64-Linux-gnu.tar )
-	alpha? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.alpha-unknown-linux-gnu.tar )
 	hppa? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.hppa-parisc-palinux.tar )"
+#	alpha? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.alpha-unknown-linux-gnu.tar )
 
 LICENSE="as-is"
 SLOT="0"
