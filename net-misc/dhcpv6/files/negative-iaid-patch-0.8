@@ -1,0 +1,428 @@
+diff -urN dhcp6-0.8/client6_addr.c dhcp6/client6_addr.c
+--- dhcp6-0.8/client6_addr.c	2003-06-03 12:12:00.000000000 -0700
++++ dhcp6/client6_addr.c	2003-06-13 14:55:25.000000000 -0700
+@@ -163,7 +163,7 @@
+ 	/* set up start date, and renew timer */
+ 	if ((client6_iaidaddr.timer = 
+ 	    dhcp6_add_timer(dhcp6_iaidaddr_timo, &client6_iaidaddr)) == NULL) {
+-		 dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %d",
++		 dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %u",
+ 			FNAME, client6_iaidaddr.client6_info.iaidinfo.iaid);
+ 		 return (-1);
+ 	}
+@@ -404,7 +404,7 @@
+ 	if (client6_iaidaddr.timer == NULL) {
+ 		if ((client6_iaidaddr.timer = 
+ 		     dhcp6_add_timer(dhcp6_iaidaddr_timo, &client6_iaidaddr)) == NULL) {
+-	 		dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %d",
++	 		dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %u",
+ 				FNAME, client6_iaidaddr.client6_info.iaidinfo.iaid);
+ 	 		return (-1);
+ 	    	}
+@@ -633,7 +633,7 @@
+ 	struct dhcp6_if *ifp = client6_iaidaddr.ifp;
+ 	unsigned long ioctl_cmd;
+ 	char *cmdstr;
+-	int s;
++	int s, errno;
+ 
+ 	switch(cmd) {
+ 	case IFADDRCONF_ADD:
+@@ -659,7 +659,7 @@
+ 	
+ 	req.ifr6_prefixlen = ifaddr->plen;
+ 
+-	if (ioctl(s, ioctl_cmd, &req)) {
++	if (ioctl(s, ioctl_cmd, &req) && errno != EEXIST) {
+ 		dprintf(LOG_NOTICE, "%s" "failed to %s an address on %s: %s",
+ 		    FNAME, cmdstr, ifp->ifname, strerror(errno));
+ 		close(s);
+@@ -668,7 +668,6 @@
+ 
+ 	dprintf(LOG_DEBUG, "%s" "%s an address %s on %s", FNAME, cmdstr,
+ 	    in6addr2str(&ifaddr->addr, 0), ifp->ifname);
+-	/* ToDo: netlink to DAD */
+ 	close(s); 
+ 	return (0);
+ }
+@@ -684,7 +683,7 @@
+ 	for (i = 0; i < num_device; i++, temp++) {
+ 		if (!memcmp(temp->hwaddr.data, hdaddr.data, temp->hwaddr.len)
+ 		    && hdaddr.len == temp->hwaddr.len && hdaddr.type == temp->hwaddr.type) {
+-			dprintf(LOG_DEBUG, "%s"" found interface %s iaid %d", 
++			dprintf(LOG_DEBUG, "%s"" found interface %s iaid %u", 
+ 				FNAME, ifname, temp->iaid);
+ 			return temp->iaid;
+ 		} else 
+@@ -728,7 +727,7 @@
+ 				sizeof(temp->iaid));
+ 			temp->hwaddr.type = if_hwaddr.ifr_hwaddr.sa_family;	
+ 		}
+-		dprintf(LOG_DEBUG, "%s"" create iaid %d for interface %s", 
++		dprintf(LOG_DEBUG, "%s"" create iaid %u for interface %s", 
+ 				FNAME, temp->iaid, ifr->ifr_name);
+ 		temp++;
+ 	}
+diff -urN dhcp6-0.8/common.c dhcp6/common.c
+--- dhcp6-0.8/common.c	2003-04-30 12:04:06.000000000 -0700
++++ dhcp6/common.c	2003-06-13 14:55:25.000000000 -0700
+@@ -1029,7 +1029,7 @@
+ 			/* check iaid */
+ 			optinfo->flags |= DHCIFF_TEMP_ADDRS;
+ 			optinfo->type = IATA;
+-			dprintf(LOG_DEBUG, "%s" "get option iaid is %d", 
++			dprintf(LOG_DEBUG, "%s" "get option iaid is %u", 
+ 				FNAME, optinfo->iaidinfo.iaid);
+ 			optinfo->iaidinfo.iaid = ntohl(*(u_int32_t *)cp);
+ 			if (get_assigned_ipv6addrs(cp + 4, cp + optlen, optinfo))
+@@ -1049,8 +1049,8 @@
+ 				ntohl(*(u_int32_t *)(cp + sizeof(u_int32_t)));
+ 			optinfo->iaidinfo.rebindtime = 
+ 				ntohl(*(u_int32_t *)(cp + 2 * sizeof(u_int32_t)));
+-			dprintf(LOG_DEBUG, "get option iaid is %d, renewtime %d, "
+-				"rebindtime %d", optinfo->iaidinfo.iaid,
++			dprintf(LOG_DEBUG, "get option iaid is %u, renewtime %u, "
++				"rebindtime %u", optinfo->iaidinfo.iaid,
+ 				optinfo->iaidinfo.renewtime, optinfo->iaidinfo.rebindtime);
+ 			if (get_assigned_ipv6addrs(cp + 3 * sizeof(u_int32_t), 
+ 						cp + optlen, optinfo))
+@@ -1376,7 +1376,7 @@
+ 		} else if (optinfo->type == IANA) {
+ 			optlen = sizeof(opt_iana);
+ 			dprintf(LOG_DEBUG, "set IA_NA iaidinfo: "
+-		   		"iaid %d renewtime %d rebindtime %d", 
++		   		"iaid %u renewtime %u rebindtime %u", 
+ 		   		optinfo->iaidinfo.iaid, optinfo->iaidinfo.renewtime, 
+ 		   		optinfo->iaidinfo.rebindtime);
+ 			opt_iana.iaid = htonl(optinfo->iaidinfo.iaid);
+@@ -1459,7 +1459,7 @@
+ 			break;
+ 		optlen = sizeof(opt_iapd);
+ 		dprintf(LOG_DEBUG, "set IA_PD iaidinfo: "
+-		 	"iaid %d renewtime %d rebindtime %d", 
++		 	"iaid %u renewtime %u rebindtime %u", 
+ 		  	optinfo->iaidinfo.iaid, optinfo->iaidinfo.renewtime, 
+ 		   	optinfo->iaidinfo.rebindtime);
+ 		opt_iapd.iaid = htonl(optinfo->iaidinfo.iaid);
+diff -urN dhcp6-0.8/CVS/Entries dhcp6/CVS/Entries
+--- dhcp6-0.8/CVS/Entries	1969-12-31 16:00:00.000000000 -0800
++++ dhcp6/CVS/Entries	2003-06-13 14:53:35.000000000 -0700
+@@ -0,0 +1,54 @@
++/.cvsignore/1.1.1.1/Thu Jan 16 15:41:11 2003//
++/Install/1.1/Tue Feb 18 11:30:16 2003//
++/Makefile.in/1.11/Tue May 27 20:54:52 2003//
++/ReadMe/1.10/Wed May 28 21:18:22 2003//
++/client6_addr.c/1.20/Tue Jun  3 19:12:00 2003//
++/client6_parse.y/1.8/Mon Mar 31 22:05:28 2003//
++/client6_token.l/1.7/Wed Apr  2 23:31:49 2003//
++/common.c/1.16/Wed Apr 30 19:04:06 2003//
++/common.h/1.9/Wed Apr 30 19:04:07 2003//
++/config.c/1.9/Sat Apr 12 00:25:32 2003//
++/config.guess/1.1.1.1/Thu Jan 16 15:41:11 2003//
++/config.h/1.13/Fri May 16 21:40:46 2003//
++/config.sub/1.1.1.1/Thu Jan 16 15:41:11 2003//
++/configure/1.9/Sat Apr 12 00:25:32 2003//
++/configure.in/1.4/Sat Apr 12 00:25:33 2003//
++/dad_token.l/1.4/Thu May 29 22:23:28 2003//
++/dhcp6.h/1.15/Wed May 28 21:10:32 2003//
++/dhcp6c.8/1.3/Tue May 27 20:56:41 2003//
++/dhcp6c.c/1.32/Thu Jun  5 22:51:00 2003//
++/dhcp6c.conf/1.2/Wed Mar 12 00:09:04 2003//
++/dhcp6c.conf.5/1.2/Fri Mar 28 20:16:36 2003//
++/dhcp6c.sh/1.1/Tue Feb 18 11:33:13 2003//
++/dhcp6c.sysconfig/1.1/Tue Feb 18 11:33:13 2003//
++/dhcp6relay.8/1.1.1.1/Thu Jan 16 15:41:11 2003//
++/dhcp6relay.c/1.2/Thu Feb 27 19:43:08 2003//
++/dhcp6s.8/1.2/Fri Mar 28 20:16:37 2003//
++/dhcp6s.c/1.17/Tue May 27 20:56:41 2003//
++/dhcp6s.conf/1.3/Fri Apr 18 00:19:59 2003//
++/dhcp6s.conf.5/1.3/Wed May 28 22:56:23 2003//
++/dhcp6s.sh/1.1/Tue Feb 18 11:31:49 2003//
++/dhcp6s.sysconfig/1.1/Tue Feb 18 11:31:49 2003//
++/hash.c/1.7/Tue Jun  3 19:12:00 2003//
++/hash.h/1.3/Sat Mar  1 00:24:49 2003//
++/ifaddrs.c/1.4/Tue Apr 22 18:05:33 2003//
++/ifaddrs.h/1.1.1.1/Thu Jan 16 15:41:11 2003//
++/install-sh/1.1.1.1/Thu Jan 16 15:41:11 2003//
++/lease.c/1.10/Tue Jun  3 19:12:00 2003//
++/lease.h/1.12/Wed May 28 21:12:16 2003//
++/lease_token.l/1.10/Tue Jun  3 19:51:13 2003//
++/queue.h/1.1.1.1/Thu Jan 16 15:41:11 2003//
++/ra_token.l/1.7/Mon Jun  2 20:38:15 2003//
++/radvd_token.l/1.4/Thu May 29 22:18:25 2003//
++/resolv_token.l/1.5/Thu May 22 23:00:30 2003//
++/server6_addr.c/1.17/Tue Jun  3 19:53:29 2003//
++/server6_addr.conf/1.2/Mon Feb 10 23:47:09 2003//
++/server6_conf.c/1.13/Fri May 23 19:00:37 2003//
++/server6_conf.h/1.9/Wed Apr 30 19:04:14 2003//
++/server6_parse.y/1.6/Fri May 23 19:00:37 2003//
++/server6_token.l/1.4/Fri Apr 18 20:33:17 2003//
++/strlcat.c/1.1.1.1/Thu Jan 16 15:41:11 2003//
++/strlcpy.c/1.1.1.1/Thu Jan 16 15:41:11 2003//
++/timer.c/1.7/Tue Mar 11 23:52:23 2003//
++/timer.h/1.2/Mon Feb 10 23:47:09 2003//
++D
+diff -urN dhcp6-0.8/CVS/Entries.Log dhcp6/CVS/Entries.Log
+--- dhcp6-0.8/CVS/Entries.Log	1969-12-31 16:00:00.000000000 -0800
++++ dhcp6/CVS/Entries.Log	2003-06-13 14:53:35.000000000 -0700
+@@ -0,0 +1 @@
++A D/docs////
+diff -urN dhcp6-0.8/CVS/Repository dhcp6/CVS/Repository
+--- dhcp6-0.8/CVS/Repository	1969-12-31 16:00:00.000000000 -0800
++++ dhcp6/CVS/Repository	2003-06-13 14:53:32.000000000 -0700
+@@ -0,0 +1 @@
++dhcp6
+diff -urN dhcp6-0.8/CVS/Root dhcp6/CVS/Root
+--- dhcp6-0.8/CVS/Root	1969-12-31 16:00:00.000000000 -0800
++++ dhcp6/CVS/Root	2003-06-13 14:53:32.000000000 -0700
+@@ -0,0 +1 @@
++:ext:shirleyma@cvs.sourceforge.net:/cvsroot/dhcpv6
+diff -urN dhcp6-0.8/dhcp6c.c dhcp6/dhcp6c.c
+--- dhcp6-0.8/dhcp6c.c	2003-06-05 15:51:00.000000000 -0700
++++ dhcp6/dhcp6c.c	2003-06-13 14:55:25.000000000 -0700
+@@ -478,7 +478,7 @@
+ 				FNAME, ifp->ifname);
+ 			exit(1);
+ 		}
+-		dprintf(LOG_DEBUG, "%s" "interface %s iaid is %d", 
++		dprintf(LOG_DEBUG, "%s" "interface %s iaid is %u", 
+ 			FNAME, ifp->ifname, ifp->iaidinfo.iaid);
+ 	}
+ 	client6_iaidaddr.ifp = ifp;
+@@ -487,7 +487,7 @@
+ 	duidcpy(&client6_iaidaddr.client6_info.clientid, &client_duid);
+ 	/* parse the lease file */
+ 	strcpy(leasename, PATH_CLIENT6_LEASE);
+-	sprintf(iaidstr, "%d", ifp->iaidinfo.iaid);
++	sprintf(iaidstr, "%u", ifp->iaidinfo.iaid);
+ 	strcat(leasename, iaidstr);
+ 	if ((client6_lease_file = 
+ 		init_leases(leasename)) == NULL) {
+@@ -954,7 +954,7 @@
+ 		if (!(ifp->send_flags & DHCIFF_INFO_ONLY)) {
+ 			memcpy(&optinfo.iaidinfo, &client6_iaidaddr.client6_info.iaidinfo,
+ 					sizeof(optinfo.iaidinfo));
+-			dprintf(LOG_DEBUG, "%s IAID is %d", FNAME, optinfo.iaidinfo.iaid);
++			dprintf(LOG_DEBUG, "%s IAID is %u", FNAME, optinfo.iaidinfo.iaid);
+ 			if (ifp->send_flags & DHCIFF_TEMP_ADDRS) 
+ 				optinfo.type = IATA;
+ 			else if (ifp->send_flags & DHCIFF_PREFIX_DELEGATION)
+@@ -1529,7 +1529,7 @@
+ 			client6_iaidaddr.state = ACTIVE;
+ 			if ((client6_iaidaddr.timer = dhcp6_add_timer(dhcp6_iaidaddr_timo, 
+ 						&client6_iaidaddr)) == NULL) {
+-		 		dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %d",
++		 		dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %u",
+ 					FNAME, client6_iaidaddr.client6_info.iaidinfo.iaid);
+ 		 		return (-1);
+ 			}
+diff -urN dhcp6-0.8/dhcp6s.c dhcp6/dhcp6s.c
+--- dhcp6-0.8/dhcp6s.c	2003-05-27 13:56:41.000000000 -0700
++++ dhcp6/dhcp6s.c	2003-06-13 14:55:25.000000000 -0700
+@@ -780,7 +780,7 @@
+ 				if (dh6->dh6_msgtype == DH6_REBIND)
+ 					goto fail;
+ 				num = DH6OPT_STCODE_NOBINDING;
+-				dprintf(LOG_INFO, "%s" "Nobinding for client %s iaid %d",
++				dprintf(LOG_INFO, "%s" "Nobinding for client %s iaid %u",
+ 					FNAME, duidstr(&optinfo->clientID), 
+ 						optinfo->iaidinfo.iaid);
+ 				break;
+@@ -804,7 +804,7 @@
+ 				if (TAILQ_EMPTY(&roptinfo.addr_list)) {
+ 					num = DH6OPT_STCODE_NOBINDING;
+ 					dprintf(LOG_INFO, "%s" 
+-					    "Bindings are not on link for client %s iaid %d",
++					    "Bindings are not on link for client %s iaid %u",
+ 						FNAME, duidstr(&optinfo->clientID), 
+ 						roptinfo.iaidinfo.iaid);
+ 					break;
+@@ -819,7 +819,7 @@
+ 				if (dhcp6_update_iaidaddr(&roptinfo, addr_flag) 
+ 						!= 0) {
+ 					dprintf(LOG_INFO, "%s" 
+-						"bindings failed for client %s iaid %d",
++						"bindings failed for client %s iaid %u",
+ 						FNAME, duidstr(&optinfo->clientID), 
+ 							roptinfo.iaidinfo.iaid);
+ 					num = DH6OPT_STCODE_UNSPECFAIL;
+@@ -871,7 +871,7 @@
+ 			if (found_binding) {
+ 			       if (dhcp6_update_iaidaddr(&roptinfo, addr_flag) != 0) {
+ 					dprintf(LOG_ERR,
+-					"assigned ipv6address for client iaid %d failed",
++					"assigned ipv6address for client iaid %u failed",
+ 						roptinfo.iaidinfo.iaid);
+ 					num = DH6OPT_STCODE_UNSPECFAIL;
+ 			       } else
+@@ -879,7 +879,7 @@
+ 			} else {
+ 			       	if (dhcp6_add_iaidaddr(&roptinfo) != 0) {
+ 					dprintf(LOG_ERR, 
+-					"assigned ipv6address for client iaid %d failed",
++					"assigned ipv6address for client iaid %u failed",
+ 						roptinfo.iaidinfo.iaid);
+ 					num = DH6OPT_STCODE_UNSPECFAIL;
+ 				} else
+diff -urN dhcp6-0.8/lease.c dhcp6/lease.c
+--- dhcp6-0.8/lease.c	2003-06-03 12:12:00.000000000 -0700
++++ dhcp6/lease.c	2003-06-13 14:55:25.000000000 -0700
+@@ -82,11 +82,11 @@
+ 	if (dhcp6_mode == DHCP6_MODE_CLIENT) 
+ 		fprintf(file, "\t SDUID: %s;\n", 
+ 			duidstr(&lease_ptr->iaidaddr->client6_info.serverid));
+-	fprintf(file, "\t IAID: %d ", lease_ptr->iaidaddr->client6_info.iaidinfo.iaid);
++	fprintf(file, "\t IAID: %u ", lease_ptr->iaidaddr->client6_info.iaidinfo.iaid);
+ 	fprintf(file, "\t type: %d;\n", lease_ptr->iaidaddr->client6_info.type);
+-	fprintf(file, "\t RenewTime: %d;\n", 
++	fprintf(file, "\t RenewTime: %u;\n", 
+ 		lease_ptr->iaidaddr->client6_info.iaidinfo.renewtime);
+-	fprintf(file, "\t RebindTime: %d;\n",
++	fprintf(file, "\t RebindTime: %u;\n",
+ 		lease_ptr->iaidaddr->client6_info.iaidinfo.rebindtime);
+ 	if (!IN6_IS_ADDR_UNSPECIFIED(&lease_ptr->linklocal)) {
+ 		if ((inet_ntop(AF_INET6, &lease_ptr->linklocal, addr_str, 
+@@ -107,10 +107,10 @@
+ 		     brokendown_time.tm_hour,
+ 		     brokendown_time.tm_min,
+ 		     brokendown_time.tm_sec);
+-	fprintf(file, "\t start date: %ld;\n", lease_ptr->start_date);
+-	fprintf(file, "\t PreferredLifeTime: %d;\n",
++	fprintf(file, "\t start date: %lu;\n", lease_ptr->start_date);
++	fprintf(file, "\t PreferredLifeTime: %u;\n",
+                              lease_ptr->lease_addr.preferlifetime);
+-	fprintf(file, "\t ValidLifeTime: %d;\n",
++	fprintf(file, "\t ValidLifeTime: %u;\n",
+                              lease_ptr->lease_addr.validlifetime);
+ 	fprintf(file, "}\n");
+ 	if (fflush(file) == EOF) {
+diff -urN dhcp6-0.8/lease_token.l dhcp6/lease_token.l
+--- dhcp6-0.8/lease_token.l	2003-06-03 12:51:13.000000000 -0700
++++ dhcp6/lease_token.l	2003-06-13 14:55:25.000000000 -0700
+@@ -203,7 +203,7 @@
+ <S_DUID>. {ABORT;}
+ <S_SDUID>{duid_id} {configure_duid(yytext, &client6_info.serverid);}
+ <S_SDUID>. {ABORT;}
+-<S_IAID>{number} {client6_info.iaidinfo.iaid = atoi(yytext);
++<S_IAID>{number} {client6_info.iaidinfo.iaid = atoll(yytext);
+ 		lease_flags |= LEASE_IAID_FLAG;}
+ <S_IAID>"type:" {BEGIN S_IATYPE;}
+ <S_IAID>. {ABORT;}
+@@ -281,7 +281,7 @@
+ 			memcpy(&client6_iaidaddr.client6_info, &client6_info, 
+ 				sizeof(client6_iaidaddr.client6_info));
+ 			dprintf(LOG_DEBUG, "hash add client iaidaddr type %d for "
+-				" duid %s for iaid %d",
++				" duid %s for iaid %u",
+ 				client6_iaidaddr.client6_info.type, 
+ 				duidstr(&client6_iaidaddr.client6_info.clientid), 
+ 				client6_iaidaddr.client6_info.iaidinfo.iaid);
+@@ -344,14 +344,14 @@
+ 			free(iaidaddr);
+ 			return (-1);
+ 		}
+-		dprintf(LOG_DEBUG, "hash add client iaidaddr type %d for duid %s for iaid %d",
++		dprintf(LOG_DEBUG, "hash add client iaidaddr type %d for duid %s for iaid %u",
+ 			iaidaddr->client6_info.type, 
+ 			duidstr(&iaidaddr->client6_info.clientid), 
+ 			iaidaddr->client6_info.iaidinfo.iaid);
+ 		/* update the start date and timer */
+ 		if ((iaidaddr->timer = 
+ 		     dhcp6_add_timer(dhcp6_iaidaddr_timo, iaidaddr)) == NULL) {
+-	 		dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %d",
++	 		dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %u",
+ 				FNAME, iaidaddr->client6_info.iaidinfo.iaid);
+ 	 		return (-1);
+ 	    	}
+@@ -470,7 +470,7 @@
+ 	lease_rec->iaidaddr = iaidaddr;
+ 	lease_rec->lease_addr.status_code = DH6OPT_STCODE_UNDEFINE;
+ 	TAILQ_INSERT_TAIL(&iaidaddr->lease_list, lease_rec, link);
+-	dprintf(LOG_INFO, "%s" "add lease addr %s/%d type %d to %d", 
++	dprintf(LOG_INFO, "%s" "add lease addr %s/%d type %d to %u", 
+ 		FNAME, in6addr2str(&lease_rec->lease_addr.addr, 0), lease_rec->lease_addr.plen,
+ 		lease_rec->lease_addr.type, lease_rec->iaidaddr->client6_info.iaidinfo.iaid);
+ 	return (0);
+diff -urN dhcp6-0.8/server6_addr.c dhcp6/server6_addr.c
+--- dhcp6-0.8/server6_addr.c	2003-06-03 12:53:29.000000000 -0700
++++ dhcp6/server6_addr.c	2003-06-13 14:55:25.000000000 -0700
+@@ -127,7 +127,7 @@
+ 	}
+ 	/* it's meaningless to have an iaid without any leases */	
+ 	if (TAILQ_EMPTY(&iaidaddr->lease_list)) {
+-		dprintf(LOG_INFO, "%s" "no leases are added for duid %s iaid %d", 
++		dprintf(LOG_INFO, "%s" "no leases are added for duid %s iaid %u", 
+ 			FNAME, duidstr(&iaidaddr->client6_info.clientid), 
+ 				iaidaddr->client6_info.iaidinfo.iaid);
+ 		return (0);
+@@ -145,7 +145,7 @@
+ 	/* set up timer for iaidaddr */
+ 	if ((iaidaddr->timer =
+ 	    dhcp6_add_timer(dhcp6_iaidaddr_timo, iaidaddr)) == NULL) {
+-		dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %d",
++		dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %u",
+ 			FNAME, iaidaddr->client6_info.iaidinfo.iaid);
+ 		dhcp6_remove_iaidaddr(iaidaddr);
+ 		return (-1);
+@@ -171,14 +171,14 @@
+ 		lv_next = TAILQ_NEXT(lv, link);
+ 		if ((lease = hash_search(lease_hash_table, (void *)&lv->lease_addr)) != NULL) {
+ 			if (dhcp6_remove_lease(lv)) {
+-				dprintf(LOG_ERR, "%s" "failed to remove an iaid %d", FNAME,
++				dprintf(LOG_ERR, "%s" "failed to remove an iaid %u", FNAME,
+ 					 iaidaddr->client6_info.iaidinfo.iaid);
+ 				return (-1);
+ 			}
+ 		}
+ 	}
+ 	if (hash_delete(server6_hash_table, &iaidaddr->client6_info) != 0) {
+-		dprintf(LOG_ERR, "%s" "failed to remove an iaid %d from hash",
++		dprintf(LOG_ERR, "%s" "failed to remove an iaid %u from hash",
+ 			FNAME, iaidaddr->client6_info.iaidinfo.iaid);
+ 		return (-1);
+ 	}
+@@ -200,7 +200,7 @@
+ 	client6_info.iaidinfo.iaid = optinfo->iaidinfo.iaid;
+ 	client6_info.type = optinfo->type;
+ 	if ((iaidaddr = hash_search(server6_hash_table, (void *)&client6_info)) == NULL) {
+-		dprintf(LOG_DEBUG, "%s" "iaid %d iaidaddr for client duid %s doesn't exists", 
++		dprintf(LOG_DEBUG, "%s" "iaid %u iaidaddr for client duid %s doesn't exists", 
+ 			FNAME, client6_info.iaidinfo.iaid, 
+ 			duidstr(&client6_info.clientid));
+ 	}
+@@ -269,7 +269,7 @@
+ 				dhcp6_remove_lease(lease);
+ 			}
+ 		}
+-		dprintf(LOG_DEBUG, "%s" "update iaidaddr for iaid %d", FNAME, 
++		dprintf(LOG_DEBUG, "%s" "update iaidaddr for iaid %u", FNAME, 
+ 			iaidaddr->client6_info.iaidinfo.iaid);
+ 	} else {
+ 		/* remove leases */
+@@ -292,7 +292,7 @@
+ 	}
+ 	/* it's meaningless to have an iaid without any leases */	
+ 	if (TAILQ_EMPTY(&iaidaddr->lease_list)) {
+-		dprintf(LOG_INFO, "%s" "no leases are added for duid %s iaid %d", 
++		dprintf(LOG_INFO, "%s" "no leases are added for duid %s iaid %u", 
+ 			FNAME, duidstr(&iaidaddr->client6_info.clientid), 
+ 				iaidaddr->client6_info.iaidinfo.iaid);
+ 		dhcp6_remove_iaidaddr(iaidaddr);
+@@ -302,7 +302,7 @@
+ 	if (iaidaddr->timer == NULL) {
+ 		if ((iaidaddr->timer = 
+ 		     dhcp6_add_timer(dhcp6_iaidaddr_timo, iaidaddr)) == NULL) {
+-	 		dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %d",
++	 		dprintf(LOG_ERR, "%s" "failed to add a timer for iaid %u",
+ 				FNAME, iaidaddr->client6_info.iaidinfo.iaid);
+ 	 		return (-1);
+ 	    	}
+@@ -403,7 +403,7 @@
+ 	timo.tv_sec = (long)d;
+ 	timo.tv_usec = 0;
+ 	dhcp6_set_timer(&timo, sp->timer);
+-	dprintf(LOG_DEBUG, "%s" "add lease for %s/%d iaid %d with preferlifetime %d"
++	dprintf(LOG_DEBUG, "%s" "add lease for %s/%d iaid %u with preferlifetime %d"
+ 			" with validlifetime %d", FNAME,
+ 		in6addr2str(&sp->lease_addr.addr, 0), sp->lease_addr.plen, 
+ 		sp->iaidaddr->client6_info.iaidinfo.iaid,

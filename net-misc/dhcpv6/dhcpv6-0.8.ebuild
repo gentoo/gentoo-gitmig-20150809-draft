@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.8.ebuild,v 1.2 2003/06/17 19:14:02 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.8.ebuild,v 1.3 2003/06/17 19:33:18 latexer Exp $
 
 DESCRIPTION="Server and client for DHCPv6"
 
@@ -14,6 +14,12 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND=""
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/negative-iaid-patch-0.8
+}
 
 src_install() {
 	einstall || die
