@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/quake3-urbanterror
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/ChangeLog,v 1.7 2004/01/29 10:07:36 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/ChangeLog,v 1.8 2004/04/09 18:59:04 wolf31o2 Exp $
+
+*quake3-urbanterror-3.4 (09 Apr 2004)
+
+  09 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake3-urbanterror-3.4.ebuild:
+  Version bumping to 3.4 and closing bug #42636.
 
 *quake3-urbanterror-3.2 (29 Jan 2004)
 
