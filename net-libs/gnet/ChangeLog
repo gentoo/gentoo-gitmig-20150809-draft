@@ -1,7 +1,12 @@
 # ChangeLog for net-libs/gnet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.22 2004/03/07 00:21:44 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.23 2004/03/08 11:26:12 leonardop Exp $
 
+  08 Mar 2004; L. Boshell <leonardop@gentoo.org> gnet-2.0.5.ebuild,
+  gnet-2.0.5-gtkdoc_fix.patch:
+  Patch to build the API docs correctly with gtk-doc-1.2. Closes bug
+  #43942.
+  
 *gnet-2.0.5 (06 Mar 2004)
 
   06 Mar 2004; L. Boshell <leonardop@gentoo.org> gnet-2.0.5.ebuild:
