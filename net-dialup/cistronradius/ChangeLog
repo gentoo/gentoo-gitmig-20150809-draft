@@ -1,0 +1,8 @@
+# ChangeLog for net-dialup/cistronradius
+# Copyright 1999-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/ChangeLog,v 1.1 2003/07/04 02:54:13 pfeifer Exp $
+
+*cistronradius-1.6.6 (03 Jul 2003)
+
+  03 Jul 2003; Jay Pfeifer <pfeifer@gentoo.org> ChangeLog :
+  Initial import. 
