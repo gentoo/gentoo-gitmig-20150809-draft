@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.30 2004/06/24 22:43:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.31 2004/07/19 15:53:22 solar Exp $
+
+  19 Jul 2004; <solar@gentoo.org> bison-1.875.ebuild:
+  updated bison to use gnuconfig.eclass. Needed for uclibc and maybe others.
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> bison-1.34-r1.ebuild,
   bison-1.35.ebuild, bison-1.75.ebuild:
