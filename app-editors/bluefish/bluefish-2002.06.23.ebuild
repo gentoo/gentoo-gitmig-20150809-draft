@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2002.06.23.ebuild,v 1.6 2002/10/05 05:39:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2002.06.23.ebuild,v 1.7 2002/10/16 23:09:03 vapier Exp $
 
 IUSE="nls perl"
 
@@ -27,9 +27,9 @@ src_compile() {
 	use perl && myconf="${myconf} --with-perl"
 	use nls  || myconf="${myconf} --disable-nls"
 	
-	./configure 	\
+	./configure \
 		--prefix=/usr \
-		--mandir=/usr/share/man	\
+		--mandir=/usr/share/man \
 		--host=${CHOST} \
 		--with-autocomplet \
 		${myconf} || die
@@ -49,9 +49,9 @@ src_install () {
 			$f.orig > $f
 	done
 
-	make 	\
-		DESTDIR=${D}	\
-		mandir=${D}/usr/share/man	\
+	make \
+		DESTDIR=${D} \
+		mandir=${D}/usr/share/man \
 		install || die
 
 	dodoc ABOUT-NLS AUTHORS BUGS COPYING INSTALL NEWS README TODO
