@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/mpeg2vidcodec-12-r1.ebuild,v 1.23 2005/01/21 00:39:15 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/mpeg2vidcodec-12-r1.ebuild,v 1.24 2005/02/20 05:11:01 gongloo Exp $
 
 MY_P="${PN}_v${PV}"
 S="${WORKDIR}/mpeg2"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.mpeg.org/pub/mpeg/mssg/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc amd64 hppa mips ppc64 ia64 ~ppc-macos"
+KEYWORDS="x86 ppc alpha sparc amd64 hppa mips ppc64 ia64 ppc-macos"
 IUSE=""
 
 RDEPEND="virtual/libc"
