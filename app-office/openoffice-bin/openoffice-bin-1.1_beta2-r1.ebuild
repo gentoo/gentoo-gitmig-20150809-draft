@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_beta2-r1.ebuild,v 1.1 2003/06/30 11:05:55 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_beta2-r1.ebuild,v 1.2 2003/06/30 14:33:24 brad Exp $
 
 IUSE="kde gnome"
 
@@ -140,6 +140,7 @@ src_install() {
 	dosym ooffice /usr/bin/ooimpress
 	dosym ooffice /usr/bin/oomath
 	dosym ooffice /usr/bin/oowriter
+	dosym ooffice /usr/bin/ooweb
 	dosym ooffice /usr/bin/oosetup
 	dosym ooffice /usr/bin/oopadmin
 
@@ -219,7 +220,7 @@ pkg_postinst() {
 	einfo
 	einfo " Also, for individual components, you can use any of:"
 	einfo
-	einfo "   oocalc, oodraw, ooimpress, oomath or oowriter"
+	einfo "   oocalc, oodraw, ooimpress, oomath, ooweb or oowriter"
 	einfo
 	einfo "******************************************************************"
 }

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.22 2003/06/30 11:05:55 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.23 2003/06/30 14:33:23 brad Exp $
+
+  30 Jun 2003; Brad Laue <brad@gentoo.org> openoffice-bin-1.1_beta2-r1.ebuild:
+  Add ooweb symlink
 
 *openoffice-bin-1.1_beta2-r1 (30 Jun 2003)
 
