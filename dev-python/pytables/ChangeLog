@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pytables
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.1 2004/02/15 15:50:22 kloeri Exp $
+
+*pytables-0.7.2 (15 Feb 2004)
+
+  15 Feb 2004; <kloeri@gentoo.org> pytables-0.7.2.ebuild:
+  Initial import.
+
