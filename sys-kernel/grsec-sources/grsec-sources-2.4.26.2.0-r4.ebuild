@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.26.2.0-r2.ebuild,v 1.2 2004/06/17 01:48:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.26.2.0-r4.ebuild,v 1.1 2004/06/17 14:52:48 solar Exp $
 
 # We control what versions of what we download based on the KEYWORDS we
 # are using for the various arches. Thus if we want grsec1 stable we run
@@ -8,7 +8,7 @@
 # grsec-2.0-preX which has alot more features.
 
 # the only thing that should ever differ in one of these 1.9.x ebuilds
-# and 2.x of the same kernel version is the KEYWORDS and header. 
+# and 2.x of the same kernel version is the KEYWORDS and header.
 # shame cvs symlinks don't exist
 
 ETYPE="sources"
@@ -26,8 +26,7 @@ KV="${OKV}${EXTRAVERSION}"
 PATCH_SRC_BASE="grsecurity-${PATCH_BASE}-${OKV}.patch.bz2"
 
 # hppa takes a special patch and usually has play catch up between
-# versions of this package we.
-
+# versions of this package.
 HPPA_SRC_URI=""
 if [ "${ARCH}" == "hppa" ]; then
 	PARISC_KERNEL_VERSION="pa1"
@@ -38,16 +37,6 @@ if [ "${ARCH}" == "hppa" ]; then
 fi
 
 DESCRIPTION="Vanilla sources of the linux kernel with the grsecurity ${PATCH_BASE} patch"
-
-#DYSFUNCTIONAL_SRC_URI="hppa? ( $HPPA_SRC_URI ) \
-#	!hppa? ( http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
-#		http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.sign ) \
-#	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
-
-# grr... gotta love it when upstream changes a patch without rolling a revision number.
-#SRC_URI="http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
-#	http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.sign  \
-#	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 
 SRC_URI="mirror://gentoo/grsecurity-${PATCH_BASE}-${OKV}.patch.bz2 \
 	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
@@ -80,6 +69,12 @@ src_unpack() {
 
 	# fix format string problem in panic()
 	epatch ${FILESDIR}/2.4.26-CAN-2004-0394.patch
+	# Fix local DoS bug #53804
+	epatch ${FILESDIR}/2.4.26-signal-race.patch
+	# i2c integer overflow vulnerability during the allocation of memory
+	epatch ${FILESDIR}/2.4.26-i2cproc_bus_read.patch
+	# patch to force randomization to always at least PAGE_SIZE big.
+	epatch ${FILESDIR}/2.4.26-pax-binfmt_elf-page-size.patch
 
 	mkdir docs
 	touch docs/patches.txt

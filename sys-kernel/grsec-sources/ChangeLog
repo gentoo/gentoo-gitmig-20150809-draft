@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.22 2004/06/15 17:03:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.23 2004/06/17 14:52:48 solar Exp $
+
+*grsec-sources-2.4.26.2.0-r4 (17 Jun 2004)
+
+  17 Jun 2004; <solar@gentoo.org> grsec-sources-2.4.26.2.0-r2.ebuild,
+  grsec-sources-2.4.26.2.0-r4.ebuild, files/2.4.26-i2cproc_bus_read.patch,
+  files/2.4.26-pax-binfmt_elf-page-size.patch:
+  fix i2c integer overflow vulnerability during the allocation of memory. bug
+  #54164. PaX force randomization to always at least PAGE_SIZE big. Allows glibc
+  to be compiled with binutils-2.15 and USE=hardened
 
 *grsec-sources-2.4.26.2.0-r3 (15 Jun 2004)
 
