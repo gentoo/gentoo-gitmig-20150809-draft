@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: system@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.9-r2.ebuild,v 1.4 2002/04/16 04:51:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.9-r2.ebuild,v 1.5 2002/04/23 02:07:18 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DirectFB is a thin library on top of the Linux framebuffer devices"
@@ -12,6 +12,7 @@ DEPEND="sys-devel/perl
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
+	mpeg? (media-libs/libmpeg3 )
 	flash? ( >=media-libs/libflash-0.4.10 )
 	truetype? ( >=media-libs/freetype-2.0.1 )
 	quicktime? ( media-libs/quicktime4linux )"
