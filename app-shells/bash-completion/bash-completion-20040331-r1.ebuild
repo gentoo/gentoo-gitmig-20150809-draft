@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20040331-r1.ebuild,v 1.2 2004/04/25 21:15:59 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20040331-r1.ebuild,v 1.3 2004/05/30 05:59:43 mr_bones_ Exp $
 
 S=${WORKDIR}/${PN/-/_}
 DESCRIPTION="Programmable Completion for bash (includes emerge and ebuild commands)."
@@ -29,7 +29,7 @@ src_install() {
 	insinto /etc/profile.d
 	doins ${FILESDIR}/bash-completion
 
-	dodoc COPYING Changelog README
+	dodoc Changelog README
 }
 
 pkg_postinst() {
