@@ -1,10 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.3.ebuild,v 1.2 2003/09/05 23:58:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.3.ebuild,v 1.3 2003/09/17 21:27:45 aliz Exp $
 
-IUSE="ssl kde"
-[ -n "`use kde`" ] && inherit kde-base eutils
-[ -n "`use kde`" ] || inherit base kde-functions eutils
+if [ $( use kde ) ]; then
+	inherit kde-base eutils
+	need-kde 3
+else
+	inherit base kde-functions eutils
+	need-qt 3
+fi
 
 LICENSE="GPL-2"
 DESCRIPTION="An ICQ v8 Client. Supports File Transfer, Chat, Server-Side Contactlist, ..."
@@ -12,6 +16,7 @@ SRC_URI="mirror://sourceforge/sim-icq/${P}.tar.gz"
 HOMEPAGE="http://sim-icq.sourceforge.net"
 KEYWORDS="~x86 ~ppc"
 SLOT="0"
+IUSE="ssl kde"
 
 newdepend "ssl? ( dev-libs/openssl )"
 DEPEND="$DEPEND sys-devel/flex"
@@ -46,7 +51,7 @@ src_compile() {
 	[ -n "`use kde`" ] && kde_src_compile myconf
 	myconf="$myconf --prefix=/usr"
 
-	econf $myconf --without-gkrellm || die
+	econf $myconf --without-gkrellm $( use-enable kde ) $( use-enable ssl openssl ) || die
 	make || die
 }
 
