@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1009 2005/03/13 22:19:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1010 2005/03/15 22:03:08 seemant Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -628,7 +628,7 @@ net-www/apache:mpm-threadpool - Adds support for the threadpool Apache MPM
 net-www/apache:mpm-worker - Adds support for the worker Apache MPM
 net-www/apache:no-suexec - Don't install suexec with apache
 net-www/apache:static-modules - Build modules into apache instead of having them load at run time
-net-www/elinks:lua - enable lua support
+www-client/elinks:lua - enable lua support
 net-www/gentoo-webroot-default:no-htdocs - Don't install anything in the default webroot (/var/www/localhost)
 net-www/kazehakase-cvs:estraier - enable estraier support for full-text search in history.
 net-www/kazehakase-cvs:thumbnail - enable thumbnail support.
