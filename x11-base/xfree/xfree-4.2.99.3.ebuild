@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.16 2002/12/21 21:13:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.17 2002/12/21 21:58:33 seemant Exp $
 
 IUSE="nls 3dfx pam truetype 3dnow sse mmx"
 
@@ -60,12 +60,13 @@ KEYWORDS="~x86 ~sparc ~ppc ~alpha ~mips"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	pam? ( >=sys-libs/pam-0.75 )
-	>=sys-libs/zlib-1.1.4
 	sys-devel/flex
 	sys-devel/libtool
 	sys-devel/perl
+	dev-libs/expat
 	>=media-libs/freetype-${FT2_VER}-r2
 	x11-base/opengl-update
+	>=media-libs/libpng-1.2.5-r1
 	truetype? ( x11-misc/ttmkfdir
 		app-arch/cabextract )"
 	
@@ -162,7 +163,7 @@ src_unpack () {
 		do
 			if [ -f ${DISTDIR}/${x} ]
 			then
-				einfo "   ${s/\. \/}..."
+				einfo "   ${x/\. \/}..."
 				cabextract --lowercase ${DISTDIR}/${x} > /dev/null || die
 			fi
 		done
@@ -177,6 +178,7 @@ src_unpack () {
 		>> config/cf/host.def
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
 	echo "#define GccWarningOptions -pipe" >> config/cf/host.def
+	echo "#define HasExpat YES" >> config/cf/host.def
 
 	if [ "`gcc-version`" != "2.95" ]
 	then
@@ -239,7 +241,7 @@ src_unpack () {
 	eend 0
 	
 	# Not included anymore -- obsolete
-	rm -f ${S}/doc/hardcopy/{XIE,PEX5}
+#	rm -f ${S}/doc/hardcopy/{XIE,PEX5}
 	for x in ${S}/programs/Xserver/hw/xfree86/{XF98Conf.cpp,XF98Config}
 	do
 		if [ -f ${x} ]
@@ -259,15 +261,15 @@ src_unpack () {
 		> ${S}/programs/Xserver/Imakefile
 
 	# LibPNG fixes
-	cd ${S}
-	cp xmakefile xmakefile.orig
-	sed "s:-lpng:-lpng -lz -lm:" \
-		xmakefile.orig > xmakefile
+#	cd ${S}
+#	cp xmakefile xmakefile.orig
+#	sed "s:-lpng:-lpng -lz -lm:" \
+#		xmakefile.orig > xmakefile
 
-	cd ${S}/config/cf
-	cp X11.tmpl X11.tmpl.orig
-	sed "s:-lpng:-lpng -lz -lm:" \
-		X11.tmpl.orig > X11.tmpl
+#	cd ${S}/config/cf
+#	cp X11.tmpl X11.tmpl.orig
+#	sed "s:-lpng:-lpng -lz -lm:" \
+#		X11.tmpl.orig > X11.tmpl
 	
 	cd ${S}
 
