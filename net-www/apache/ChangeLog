@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.130 2004/04/20 19:04:03 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.131 2004/04/22 01:54:00 zul Exp $
+
+  22 Apr 2004; Chuck Short <zul@gentoo.org> files/apachesplitlogfile:
+  Fixed error message in apachesplitlogfiles to make it more understandable.
+  Closes #48499.
 
   20 Apr 2004; Chuck Short <zul@gentoo.org> files/common/config.layout:
   Fix another typo.
