@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/telnetd
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.4 2004/10/16 17:38:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.5 2004/10/22 11:49:42 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> telnetd-1.0-r1.ebuild,
+  telnetd-1.0.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> telnetd-1.0-r1.ebuild,
   telnetd-1.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/webgraph-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph-bin/ChangeLog,v 1.5 2004/10/16 17:39:56 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph-bin/ChangeLog,v 1.6 2004/10/22 11:50:32 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  webgraph-bin-1.2.2-r1.ebuild, webgraph-bin-1.2.2.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   webgraph-bin-1.2.2-r1.ebuild, webgraph-bin-1.2.2.ebuild:

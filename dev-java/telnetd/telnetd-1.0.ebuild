@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/telnetd-1.0.ebuild,v 1.3 2004/10/16 17:38:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/telnetd-1.0.ebuild,v 1.4 2004/10/22 11:49:42 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://telnetd.sourceforge.net/"
 SRC_URI="mirror://sourceforge/telnetd/${P}.zip"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( dev-java/jikes )"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/quartz
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.10 2004/10/16 17:33:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.11 2004/10/22 11:46:07 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> quartz-1.3.4.ebuild,
+  quartz-1.4.0.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> quartz-1.3.4.ebuild,
   quartz-1.4.0.ebuild:
