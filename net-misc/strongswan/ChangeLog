@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.4 2004/06/19 13:25:04 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.5 2004/06/19 14:52:35 kugelfang Exp $
+
+  19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/strongswan-2.1.3-gcc34.patch, strongswan-2.1.3.ebuild:
+  Added patch to make strongswan compile with gcc-3.4.
 
 *strongswan-2.1.3 (19 Jun 2004)
 

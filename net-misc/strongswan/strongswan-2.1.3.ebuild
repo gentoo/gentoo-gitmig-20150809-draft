@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.1.3.ebuild,v 1.1 2004/06/19 13:25:04 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.1.3.ebuild,v 1.2 2004/06/19 14:52:35 kugelfang Exp $
 
 inherit eutils
 
@@ -92,6 +92,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
 src_compile() {
