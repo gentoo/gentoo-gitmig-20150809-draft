@@ -1,14 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/adplay/adplay-1.4.ebuild,v 1.1 2004/10/01 16:52:05 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/adplay/adplay-1.4.ebuild,v 1.2 2004/11/11 10:09:58 eradicator Exp $
+
+IUSE="oss esd sdl"
 
 DESCRIPTION="A console player for AdLib music"
 HOMEPAGE="http://adplug.sourceforge.net/"
 SRC_URI="mirror://sourceforge/adplug/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
-IUSE="oss esd sdl"
+KEYWORDS="amd64 ~ppc sparc x86"
+
 DEPEND=">=media-libs/adplug-1.4.1"
 
 src_compile() {
@@ -23,5 +26,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }
