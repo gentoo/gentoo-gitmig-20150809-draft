@@ -1,6 +1,9 @@
 # ChangeLog for net-im/amsn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.37 2004/09/14 22:52:16 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.38 2004/10/05 11:03:16 gmsoft Exp $
+
+  05 Oct 2004; Guy Martin <gmsoft@gentoo.org> amsn-0.93.ebuild:
+  Stable on hppa.
 
   14 Sep 2004; Olivier Crete <tester@gentoo.org> amsn-0.93.ebuild:
   Stable on x86
