@@ -1,0 +1,7 @@
+MD5 2fde273423e5e0065ab72acc5c8d4d01 squeak-vm-3.5.5180.ebuild 1190
+MD5 35c92cc4067bbcb16abb8a5fb638ee97 squeak-vm-3.4.5170.ebuild 979
+MD5 f5d4ff9233669da1d5004efa21cf4c8a squeak-vm-3.2.4956.ebuild 974
+MD5 4616a9717d3be061756b256c09fe5ad7 ChangeLog 727
+MD5 d01d765b41f8c065ec9a19a7c7278e76 files/digest-squeak-vm-3.2.4956 129
+MD5 c47ea324aaf69084cd07c9a19d3e133f files/digest-squeak-vm-3.4.5170 129
+MD5 9fe48b0176607ba4e789a8ef1f78075e files/digest-squeak-vm-3.5.5180 129

@@ -1,36 +1,53 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/squeak-vm-3.5.5180.ebuild,v 1.1 2003/05/21 11:48:25 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/squeak-vm-3.5.5180.ebuild,v 1.2 2003/05/23 17:35:40 tantive Exp $
 
-DESCRIPTION="Highly-portable Smalltalk-80 implementation VM image"
+MAJOR=3
+MINOR=5
+RELEASE=5180
+
+MM=${MAJOR}.${MINOR}
+MMDOTR=${MM}.${RELEASE}
+MMDASHR=${MM}-${RELEASE}
+
+DESCRIPTION="Squeak image file"
+
 HOMEPAGE="http://www.squeak.org/"
-MV=3.5
-NV=${MV}-5180
 
-SRC_URI="ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${MV}/Squeak${NV}.zip
-		 ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${MV}/SqueakV3.sources.gz"
+SRC_URI="ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${MM}/Squeak${MMDASHR}.zip
+         ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${MM}/SqueakV3.sources.gz"
+
 LICENSE="Apple"
-SLOT="0"
-KEYWORDS="~x86"
-IUSE=""
 
-S=
-DEPEND=
-RDEPEND="dev-lang/squeak"
+SLOT="${MM}"
+
+KEYWORDS="~x86"
+
+IUSE="mozilla"
+
+DEPEND=""
+
+RDEPEND=""
+
+S=${WORKDIR}
 
 src_compile() {
-	cd ${WORKDIR}
-	gzip Squeak${MV}.image
-	gzip Squeak${MV}.changes
+    einfo "Compressing Image/Changes files..."
+	gzip Squeak${MMDASHR}.image
+	gzip Squeak${MMDASHR}.changes
+	einfo "done!"
 }
 
 src_install() {
-	cd ${WORKDIR}
 	dodoc ReadMe.txt
 	insinto /usr/lib/squeak
-	doins	Squeak${MV}.changes.gz \
-			Squeak${MV}.image.gz \
-			SqueakV3.sources
-	dosym /usr/lib/squeak/Squeak${MV}.changes.gz /usr/lib/squeak/squeak.changes.gz
-	dosym /usr/lib/squeak/Squeak${MV}.image.gz /usr/lib/squeak/squeak.image.gz
+	doins Squeak${MMDASHR}.changes.gz
+	doins Squeak${MMDASHR}.image.gz
+	doins SqueakV3.sources
+	dosym /usr/lib/squeak/Squeak${MMDASHR}.changes.gz \
+	      /usr/lib/squeak/squeak.changes.gz
+	dosym /usr/lib/squeak/Squeak${MMDASHR}.image.gz   \
+	      /usr/lib/squeak/squeak.image.gz
+
+	einfo "Squeak 3.5-5180 image/changes now installed"
 }
