@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.20 2005/01/01 10:58:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.21 2005/03/03 16:25:44 ciaranm Exp $
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -20,7 +20,7 @@ RDEPEND="dev-util/dialog
 	sys-fs/e2fsprogs
 	sys-apps/grep
 	virtual/modutils
-	sys-apps/psmisc
+	sys-process/psmisc
 	sys-apps/sed
 	sys-apps/coreutils
 	sys-apps/util-linux
