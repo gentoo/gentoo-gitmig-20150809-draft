@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.3-r2.ebuild,v 1.9 2004/10/04 22:24:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.3-r2.ebuild,v 1.10 2004/10/14 01:45:19 kloeri Exp $
 
 IUSE="ssl sdl ieee1394 alsa esd"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnomemeeting.org/admin/downloads/latest/sources/sources/${P}
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="x86 sparc amd64 ppc"
+KEYWORDS="x86 sparc amd64 ppc ~alpha"
 
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
