@@ -1,6 +1,6 @@
 # ChangeLog for media-video/nvclock
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.4 2003/02/12 07:39:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.5 2003/04/09 21:30:41 mholzer Exp $
 
 *nvclock-0.6.2 (10 Feb 2003)
 
@@ -8,6 +8,9 @@
   Version bump + configure fixes #15123.
 
 *nvclock-0.5 (2 Jun 2002)
+
+  9 Apr 2003; Martin Holzer <mholzer@gentoo.org> nvclock-0.5.ebuild:
+  Adding /usr to make install. Closes #19060.
 
   2 Jun 2002; Joachim Blaabjerg <styx@SuxOS.org> nvclock-0.5.ebuild:
   Version bump to 0.5, QT GUI support, minor cleanup.

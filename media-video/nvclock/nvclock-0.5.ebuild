@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.4.2.ebuild,v 1.3 2002/05/23 06:50:14 seemant Exp
+# $Header: /space/gentoo/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.4.2.ebuild,v 1.3 2002/05/23 06:50:14 seemant Exp
 
 IUSE="gtk qt"
 
@@ -28,6 +28,6 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D} install	
+	make prefix=${D}/usr install	
 	dodoc AUTHORS COPYING README	
 }
