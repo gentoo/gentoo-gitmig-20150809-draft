@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.23-r1.ebuild,v 1.10 2004/07/14 20:15:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.23-r1.ebuild,v 1.11 2005/03/06 15:39:09 mcummings Exp $
 
 IUSE="gtk tcltk libwww ncurses"
 
