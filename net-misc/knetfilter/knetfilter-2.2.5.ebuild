@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetfilter/knetfilter-2.2.5.ebuild,v 1.9 2002/12/09 04:33:16 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetfilter/knetfilter-2.2.5.ebuild,v 1.10 2003/01/30 20:03:54 danarmak Exp $
 
 inherit kde-base || die
 
@@ -17,7 +17,7 @@ newdepend ">=sys-apps/iptables-1.2.5"
 
 src_unpack() {
 
-    base_src_unpack
+    kde_src_unpack
     kde_sandbox_patch ${S}/src ${S}/src/scripts
     
 }
