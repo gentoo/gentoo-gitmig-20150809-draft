@@ -1,0 +1,21 @@
+--- MPlayer-0.90pre5/Gui/mplayer/play.c	Mon Jun 10 11:39:17 2002
++++ MPlayer-0.90pre5.azarah/Gui/mplayer/play.c	Mon Jun 10 11:39:38 2002
+@@ -10,6 +10,7 @@
+ #include "../../help_mp.h"
+ #include "../../libvo/x11_common.h"
+ #include "../../input/input.h"
++#include "../../libmpdemux/stream.h"
+ 
+ #include "../app.h"
+ 
+--- MPlayer-0.90pre6/Gui/mplayer/gtk/pl.c.orig	Wed Aug  7 08:30:16 2002
++++ MPlayer-0.90pre6/Gui/mplayer/gtk/pl.c	Wed Aug  7 08:30:54 2002
+@@ -13,6 +13,8 @@
+ #include "../../../config.h"
+ #include "../../../help_mp.h"
+ 
++#include "../../../libmpdemux/stream.h"
++
+ #include "../../interface.h"
+ #include "../widgets.h"
+ #include "pl.h"
