@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.9.1.1.ebuild,v 1.3 2004/06/25 01:43:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.9.3.ebuild,v 1.1 2004/07/11 15:01:03 kloeri Exp $
 
-inherit distutils eutils
+inherit distutils
 
 MY_P="Pyrex-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -16,13 +16,6 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/python"
-
-src_unpack() {
-	unpack ${MY_P}.tar.gz
-	cd ${S}
-#	epatch ${FILESDIR}/pyrex-0.9.1.1-gentoo.patch
-	epatch ${FILESDIR}/${P}-gentoo.patch
-}
 
 src_install() {
 	mydoc="CHANGES.txt INSTALL.txt README.txt USAGE.txt"
