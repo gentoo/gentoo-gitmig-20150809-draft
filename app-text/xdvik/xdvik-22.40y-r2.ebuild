@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.11 2004/10/24 12:24:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.12 2004/10/24 15:38:02 usata Exp $
 
 inherit eutils
 
@@ -30,8 +30,10 @@ src_unpack () {
 	unpack ${MY_P}.tar.gz
 	if use cjk ; then
 		epatch ${DISTDIR}/${XDVIK_JP}.patch.gz
-		sed -i -e "/\/usr\/local/s/^/%/g" \
-			-e "/kochi-.*-subst/s/%//g" \
+		sed -i -e "/\/usr\/local/s:^:%:g" \
+			-e "/kochi-.*-subst/s:%::g" \
+			-e "s:/usr/local:/usr:g" \
+			-e "s:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/kochi-substitute:g" \
 			${S}/texk/xdvik/vfontmap.freetype || die
 	fi
 }
