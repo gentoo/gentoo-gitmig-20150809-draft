@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0.ebuild,v 1.3 2004/09/07 20:48:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0-r1.ebuild,v 1.1 2004/09/07 20:48:50 stuart Exp $
 
 MY_PN="${PN//x11/X11}"
 MY_PV="${PV}-3"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nomachine.com/developers/"
 URI_BASE="http://www.nomachine.com/download/snapshot/nxsources/"
 URI_BASE2="http://www.nomachine.com/download/nxsources/"
 SRC_NX_X11="${MY_PN}-${MY_PV}.tar.gz"
-SRC_NXAGENT="nxagent-1.4.0-44.tar.gz"
+SRC_NXAGENT="nxagent-1.4.0-47.tar.gz"
 SRC_NXAUTH="nxauth-1.4.0-1.tar.gz"
 SRC_NXCOMP="nxcomp-1.3.2-4.tar.gz"
 SRC_NXCOMPEXT="nxcompext-1.4.0-3.tar.gz"
@@ -61,7 +61,7 @@ src_compile() {
 src_install() {
 	into /usr/NX
 
-	dobin programs/Xserver/hw/nxagent
+	dobin programs/Xserver/nxagent
 	dobin programs/nxauth/nxauth
 	dobin ../nxviewer/nxviewer/nxviewer
 	dobin ../nxviewer/nxpasswd/nxpasswd
