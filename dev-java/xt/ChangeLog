@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/xt
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.9 2004/11/14 18:55:28 axxo Exp $
+
+*xt-20020426a (14 Nov 2004)
+
+  14 Nov 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +xt-20020426a.ebuild:
+  now builds from source, submitted by Jan Brinkmann <lucky@the-luckyduck.de>
+
