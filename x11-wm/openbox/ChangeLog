@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.76 2004/03/20 19:36:35 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.77 2004/04/17 13:56:45 tseng Exp $
+
+*openbox-3.2 (17 Apr 2004)
+
+  17 Apr 2004; Brandon Hale <tseng@gentoo.org> +openbox-3.2.ebuild:
+  Version bump, the bounty goes again to Aaron Kulbe (SuperLag)
 
   24 Mar 2004; Chris Aniszczyk <zx@gentoo.org> openbox-3.1-r1.ebuild:
   Marking unstable on hppa ;)

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.3.0.ebuild,v 1.10 2003/09/03 14:24:45 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.3.0.ebuild,v 1.11 2004/04/17 13:56:45 tseng Exp $
 
 IUSE="gnome kde xinerama truetype"
 
