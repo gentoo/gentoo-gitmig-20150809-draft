@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.253 2005/01/10 22:30:07 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.254 2005/01/11 21:38:27 kugelfang Exp $
+
+  11 Jan 2005; Danny van Dyk <kugelfang@gentoo.org> mplayer-1.0_pre6.ebuild:
+  mplayer now contains SIMD assembler code for AMD64. The AMD64 Team decided
+  to hard-enable SIMD assembler for all users.
 
   11 Jan 2005; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre6.ebuild:
   Adding anti-sse2 until someone tells me it doesn't create strange code.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.10 2005/01/10 22:30:07 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.11 2005/01/11 21:38:27 kugelfang Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -353,10 +353,16 @@ src_compile() {
 	myconf="${myconf} $(use_enable sse)"
 	myconf="${myconf} $(use_enable mmx)"
 	myconf="${myconf} $(use_enable mmx2)"
-	myconf="${myconf} $(use_enable 3dnow)"
 	myconf="${myconf} $(use_enable debug)"
 	myconf="${myconf} $(use_enable nls i18n)"
 
+	# mplayer now contains SIMD assembler code for amd64
+	# AMD64 Team decided to hardenable SIMD assembler for all users
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/01/11
+	if use amd64; then
+		myconf="${myconf} --enable-3dnow --enable-3dnowex --enable-sse --enable-mmx --enable-mmx2"
+	fi
+	
 	if use ppc64
 	then
 		myconf="${myconf} --disable-altivec"
