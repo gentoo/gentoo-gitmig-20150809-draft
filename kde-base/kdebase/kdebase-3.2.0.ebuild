@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0.ebuild,v 1.2 2004/02/03 18:36:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0.ebuild,v 1.3 2004/02/04 01:39:42 caleb Exp $
 inherit kde-dist
 
 IUSE="ldap pam motif encode cups ssl opengl samba java"
@@ -33,7 +33,9 @@ use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$m
 src_unpack() {
 	kde_src_unpack
 	epatch ${FILESDIR}/${P}-kcontrol.patch
+	cd ${S} && aclocal
 }
+
 
 src_compile() {
 	kde_src_compile myconf configure
