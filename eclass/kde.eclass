@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.60 2002/10/24 18:38:39 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.61 2002/10/24 18:41:35 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -44,48 +44,48 @@ kde_src_compile() {
 
 	while [ "$1" ]; do
 
-	case $1 in
-		myconf)
-			debug-print-section myconf
-			myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR}"
-			# calculate dependencies separately from compiling, enables ccache to work on kde compiles
-			myconf="$myconf --disable-dependency-tracking"
-			use qtmt 	&& myconf="$myconf --enable-mt"
-			[ -n "$DEBUG" ] && myconf="$myconf --enable-debug=full --with-debug"	|| myconf="$myconf --disable-debug --without-debug"
-			debug-print "$FUNCNAME: myconf: set to ${myconf}"
-			;;
-		configure)
-			debug-print-section configure
-			debug-print "$FUNCNAME::configure: myconf=$myconf"
-			
-			[ -n "$KDE_REMOVE_DIR" ] && kde_remove_dir $KDE_REMOVE_DIR
-			
-			# rebuild configure script, etc
-			# This can happen with e.g. a cvs snapshot			
-			if [ ! -f "./configure" ]; then
-				for x in Makefile.cvs admin/Makefile.common; do
-				if [ -f "$x" ] && [ -z "$makefile" ]; then makefile="$x"; fi
-				done
-				debug-print "$FUNCNAME: configure: generating configure script, running make -f $makefile"
-				make -f $makefile
-				[ -f "./configure" ] || die "no configure script found, generation unsuccessful"
-			fi
+		case $1 in
+			myconf)
+				debug-print-section myconf
+				myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR}"
+				# calculate dependencies separately from compiling, enables ccache to work on kde compiles
+				myconf="$myconf --disable-dependency-tracking"
+				use qtmt 	&& myconf="$myconf --enable-mt"
+				[ -n "$DEBUG" ] && myconf="$myconf --enable-debug=full --with-debug"	|| myconf="$myconf --disable-debug --without-debug"
+				debug-print "$FUNCNAME: myconf: set to ${myconf}"
+				;;
+			configure)
+				debug-print-section configure
+				debug-print "$FUNCNAME::configure: myconf=$myconf"
 
-			export PATH="${KDEDIR}/bin:${PATH}"
-			
-			cd $S
-			./configure ${myconf} || die "died running ./configure, $FUNCNAME:configure"
-			;;
-		make)
-			export PATH="${KDEDIR}/bin:${PATH}"
-			debug-print-section make
-			emake || die "died running emake, $FUNCNAME:make"
-			;;
-		all)
-			debug-print-section all
-			kde_src_compile myconf configure make
-			;;
-	esac
+				[ -n "$KDE_REMOVE_DIR" ] && kde_remove_dir $KDE_REMOVE_DIR
+
+				# rebuild configure script, etc
+				# This can happen with e.g. a cvs snapshot			
+				if [ ! -f "./configure" ]; then
+					for x in Makefile.cvs admin/Makefile.common; do
+					if [ -f "$x" ] && [ -z "$makefile" ]; then makefile="$x"; fi
+					done
+					debug-print "$FUNCNAME: configure: generating configure script, running make -f $makefile"
+					make -f $makefile
+					[ -f "./configure" ] || die "no configure script found, generation unsuccessful"
+				fi
+
+				export PATH="${KDEDIR}/bin:${PATH}"
+
+				cd $S
+				./configure ${myconf} || die "died running ./configure, $FUNCNAME:configure"
+				;;
+			make)
+				export PATH="${KDEDIR}/bin:${PATH}"
+				debug-print-section make
+				emake || die "died running emake, $FUNCNAME:make"
+				;;
+			all)
+				debug-print-section all
+				kde_src_compile myconf configure make
+				;;
+		esac
 
 	shift
 	done
