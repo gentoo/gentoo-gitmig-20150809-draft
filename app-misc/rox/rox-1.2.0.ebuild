@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# /home/cvsroot/gentoo-x86/app-misc/rox/rox-1.1.8.ebuild $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.2.0.ebuild,v 1.2 2002/04/30 23:55:32 seemant Exp $
 
 HOMEPAGE="http://rox.sourceforge.net"
 DESCRIPTION="ROX-Filer is a fast and powerful graphical file manager"
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}"
 
 src_install() {
 
-    # libxml2 header fix
+	# libxml2 header fix
 	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml -I/usr/include/libxml2"
 
 	cd ${WORKDIR}/rox-base-1.0.1/Choices
@@ -36,7 +36,7 @@ src_install() {
 	cp -rf ROX-Filer/ ${D}/usr/share/
 	${D}/usr/share/ROX-Filer/AppRun --compile
 	echo "#!/bin/sh" > "${D}/usr/bin/rox"
-        echo "exec /usr/share/ROX-Filer/AppRun \"\$@\"" >> "${D}/usr/bin/rox"
-        chmod a+x ${D}/usr/bin/rox
+	echo "exec /usr/share/ROX-Filer/AppRun \"\$@\"" >> "${D}/usr/bin/rox"
+	chmod a+x ${D}/usr/bin/rox
 
 }
