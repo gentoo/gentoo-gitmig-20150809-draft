@@ -1,0 +1,13 @@
+--- prelink/testsuite/Makefile.in.jj	2003-03-07 20:51:14.000000000 +0000
++++ prelink/testsuite/Makefile.in	2003-03-07 20:51:31.000000000 +0000
+@@ -97,8 +97,8 @@
+ 	reloc1.sh reloc2.sh reloc3.sh reloc4.sh reloc5.sh reloc6.sh \
+ 	reloc7.sh reloc8.sh reloc9.sh reloc10.sh reloc11.sh \
+ 	shuffle1.sh shuffle2.sh shuffle3.sh shuffle4.sh shuffle5.sh \
+-	layout1.sh layout2.sh tls1.sh tls2.sh tls3.sh tls4.sh \
+-	undosyslibs.sh
++	layout1.sh layout2.sh tls1.sh tls2.sh tls3.sh tls4.sh 
++#	undosyslibs.sh
+ 
+ TESTS_ENVIRONMENT = \
+ 	PRELINK="../src/prelink -c ./prelink.conf -C ./prelink.cache --ld-library-path=. --dynamic-linker=`echo ./ld*.so.*[0-9]`" \
