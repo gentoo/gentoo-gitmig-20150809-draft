@@ -1,41 +1,43 @@
-MD5 3bfb99b0f52a7525375325739362ad6f xine-lib-1_rc5.ebuild 4769
-MD5 ca3760406f4723c37bcc2a48229fb6cb xine-lib-1_rc5-r1.ebuild 4654
-MD5 ddbb024e115b90cc8e3c620d87f15cae xine-lib-1_rc3-r3.ebuild 4184
-MD5 b81434d09564e9c4442330ebc628a0de xine-lib-1_rc2.ebuild 3976
-MD5 e5ea29af2d6d5e6f7b4f9e34ecf78e87 xine-lib-1_rc4-r1.ebuild 4924
-MD5 4eebdf82dbee6f70cee8e77cd07573e6 xine-lib-0.9.13-r3.ebuild 3396
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 0f15eac2c13ae3b4e82609e2a4817691 xine-lib-1_rc3-r1.ebuild 4064
-MD5 284f6836dd3bd980216e78d0474d8344 xine-lib-1_rc3-r2.ebuild 3892
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a95754895d70ac38ef78eb245887af8a ChangeLog 22399
-MD5 b9d2ca99b55ea6ccb9c53b5cc524e282 xine-lib-1_rc5-r2.ebuild 4654
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 4eebdf82dbee6f70cee8e77cd07573e6 xine-lib-0.9.13-r3.ebuild 3396
+MD5 b81434d09564e9c4442330ebc628a0de xine-lib-1_rc2.ebuild 3976
+MD5 0f15eac2c13ae3b4e82609e2a4817691 xine-lib-1_rc3-r1.ebuild 4064
+MD5 e5ea29af2d6d5e6f7b4f9e34ecf78e87 xine-lib-1_rc4-r1.ebuild 4924
 MD5 b53ba89865f9735d9ebc10630345c917 xine-lib-1_rc4.ebuild 4484
-MD5 060bcd1d4a4ffa427139a7f188272e01 files/protect-CFLAGS.patch-1_rc4 597
-MD5 4927f9e562e68f539a5f3a6e4711d873 files/digest-xine-lib-1_rc4-r1 68
-MD5 5ddf5d90566965b047828407dcc0f5d1 files/xine-lib-1rc4-libtool1.5.6.shrext_cmds.patch 331
-MD5 5e99bec89f5cc4f0d00bcd61430d67cb files/protect-CFLAGS.patch-1_rc2 597
-MD5 0cf698a9ff87a3595140d92df7b900b6 files/xine-lib-configure.patch 342
-MD5 279ee4d06acc78adef09fe7ae4a64980 files/xine-lib-0.9.13-kxine.patch 9041
+MD5 b9d2ca99b55ea6ccb9c53b5cc524e282 xine-lib-1_rc5-r2.ebuild 4654
+MD5 f1570a69c99207f65b5cdf1d154bbcd4 files/digest-xine-lib-0.9.13-r3 68
 MD5 f90bfe4a0ee80eecb38fc34022ccab7e files/digest-xine-lib-1_rc2 67
-MD5 c666fb35b00138d90890fef3d56548f2 files/xine-lib-1_rc3-configure-sparc.patch 587
-MD5 060bcd1d4a4ffa427139a7f188272e01 files/protect-CFLAGS.patch-1_rc5 597
-MD5 d24969404b35f029bf203da4b53a3c3d files/digest-xine-lib-1_rc3-r3 68
-MD5 044cbe825fc480693aec675808e4c679 files/digest-xine-lib-1_rc5 67
-MD5 c666fb35b00138d90890fef3d56548f2 files/xine-lib-1_rc4-configure-sparc.patch 587
-MD5 3cbdef8aa211184b96474addb4f7c5d6 files/xine-lib-gcc34.patch 423
+MD5 5e99bec89f5cc4f0d00bcd61430d67cb files/protect-CFLAGS.patch-1_rc2 597
+MD5 060bcd1d4a4ffa427139a7f188272e01 files/protect-CFLAGS.patch-1_rc3 597
+MD5 beea8b4dacbd153e4c6b06e57ee711d2 files/xine-lib-0.9.12-r2-directfb.patch 746
+MD5 279ee4d06acc78adef09fe7ae4a64980 files/xine-lib-0.9.13-kxine.patch 9041
+MD5 0cf698a9ff87a3595140d92df7b900b6 files/xine-lib-configure.patch 342
+MD5 aa54582a91933533008c1211dcbcfb35 files/xine-lib-disable-directfb.patch 4169
+MD5 dcb0c79c0bb106397aad42f6d936627d files/xineconfig.patch-0.9.13 601
 MD5 e9819170d90442f5072d18dda93a8f5c files/digest-xine-lib-1_rc3-r1 68
 MD5 a52bac7d568413597e0c7932b164e58c files/xine-lib-2.6.patch 594
-MD5 3824a3bb0c207c34e9bec101cac52a91 files/digest-xine-lib-1_rc3-r2 68
-MD5 dcb0c79c0bb106397aad42f6d936627d files/xineconfig.patch-0.9.13 601
-MD5 e87a4ce6246db7db0d3cf0d967cb62d2 files/protect-CFLAGS.patch-1_rc5-r2 641
-MD5 c666fb35b00138d90890fef3d56548f2 files/xine-lib-1_rc5-configure-sparc.patch 587
-MD5 044cbe825fc480693aec675808e4c679 files/digest-xine-lib-1_rc5-r1 67
-MD5 aa54582a91933533008c1211dcbcfb35 files/xine-lib-disable-directfb.patch 4169
-MD5 060bcd1d4a4ffa427139a7f188272e01 files/protect-CFLAGS.patch-1_rc3 597
+MD5 c666fb35b00138d90890fef3d56548f2 files/xine-lib-1_rc3-configure-sparc.patch 587
+MD5 3cbdef8aa211184b96474addb4f7c5d6 files/xine-lib-gcc34.patch 423
 MD5 ae644beadf7c9218bdbd3ed27865918a files/digest-xine-lib-1_rc4 67
-MD5 044cbe825fc480693aec675808e4c679 files/digest-xine-lib-1_rc5-r2 67
-MD5 bcd5f2b8999f92c2f7215009f5ae1490 files/configure-64bit-define.patch 221
-MD5 e35c6e1b7a7cd3f4e268b1fb876cbeb5 files/protect-CFLAGS.patch-1_rc5-r1 316
+MD5 060bcd1d4a4ffa427139a7f188272e01 files/protect-CFLAGS.patch-1_rc4 597
 MD5 5d3bbb085af2a8dcaa429c1376a52c50 files/xine-lib-1-rc4-sparc_missing_include.patch 464
-MD5 beea8b4dacbd153e4c6b06e57ee711d2 files/xine-lib-0.9.12-r2-directfb.patch 746
-MD5 f1570a69c99207f65b5cdf1d154bbcd4 files/digest-xine-lib-0.9.13-r3 68
+MD5 c666fb35b00138d90890fef3d56548f2 files/xine-lib-1_rc4-configure-sparc.patch 587
+MD5 5ddf5d90566965b047828407dcc0f5d1 files/xine-lib-1rc4-libtool1.5.6.shrext_cmds.patch 331
+MD5 4927f9e562e68f539a5f3a6e4711d873 files/digest-xine-lib-1_rc4-r1 68
+MD5 bcd5f2b8999f92c2f7215009f5ae1490 files/configure-64bit-define.patch 221
+MD5 060bcd1d4a4ffa427139a7f188272e01 files/protect-CFLAGS.patch-1_rc5 597
+MD5 c666fb35b00138d90890fef3d56548f2 files/xine-lib-1_rc5-configure-sparc.patch 587
+MD5 044cbe825fc480693aec675808e4c679 files/digest-xine-lib-1_rc5-r2 67
+MD5 e35c6e1b7a7cd3f4e268b1fb876cbeb5 files/protect-CFLAGS.patch-1_rc5-r1 316
+MD5 e87a4ce6246db7db0d3cf0d967cb62d2 files/protect-CFLAGS.patch-1_rc5-r2 641
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4b0bHTu7gpaalycRAnzqAKCrBTMSAQXuqBYyau0fTqdezkWHBQCgkrmQ
+7QPH6TZkck+ZOBFAWKgiZa4=
+=GZlo
+-----END PGP SIGNATURE-----
