@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qsa
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/ChangeLog,v 1.4 2003/08/28 03:40:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/ChangeLog,v 1.5 2003/09/22 11:40:16 pauldv Exp $
+
+  22 Sep 2003; <paul@gentoo.org> metadata.xml:
+  Fix metadata.xml
 
   27 Aug 2003; Caleb Tennis <caleb@gentoo.org> qsa-1.0.0.ebuild:
   .qmake.cache fix - closes bug #23543
