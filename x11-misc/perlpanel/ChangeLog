@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/perlpanel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/ChangeLog,v 1.7 2004/09/26 14:00:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/ChangeLog,v 1.8 2004/12/20 10:30:21 mcummings Exp $
+
+*perlpanel-0.9.0 (20 Dec 2004)
+
+  20 Dec 2004; Michael Cummings <mcummings@gentoo.org>
+  +perlpanel-0.9.0.ebuild:
+  New version; closes bug 74932; finally ready for prime time
 
   26 Sep 2004; Michael Cummings <mcummings@gentoo.org> perlpanel-0.7.0.ebuild:
   updated deps
