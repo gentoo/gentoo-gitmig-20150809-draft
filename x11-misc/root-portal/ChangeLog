@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/root-portal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.7 2004/01/15 16:36:02 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.8 2004/01/16 00:15:09 tseng Exp $
+
+  15 Jan 2004; Brandon Hale <tseng@gentoo.org> root-portal-0.5.0.ebuild:
+  Further ebuild tweaks, use the gnome2 eclass. Thanks Foser.
 
   15 Jan 2004; Brandon Hale <tseng@gentoo.org> root-portal-0.5.0.ebuild:
   Update dependencies, see #38288
