@@ -25,7 +25,7 @@ virtual/textbrowser	net-www/links
 virtual/mda		net-mail/procmail
 virtual/xft		x11-base/xfree
 virtual/krb5		app-crypt/heimdal
-virtual/bootloader	sys-boot/yaboot
+virtual/bootloader	sys-boot/yaboot-static
 virtual/editor		app-editors/nano
 virtual/os-headers	sys-kernel/linux-headers
 virtual/modutils 	sys-apps/modutils
