@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.4.0.ebuild,v 1.1 2003/06/13 22:56:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.4.0.ebuild,v 1.2 2003/06/14 00:25:23 liquidx Exp $
 
 inherit distutils
 
@@ -18,3 +18,8 @@ DEPEND="virtual/python"
 S="${WORKDIR}/${MY_P}"
 
 mydoc="README"
+
+src_install() {
+	distutils_src_install
+	mv ${D}/usr/share/doc/IPython/* ${D}/usr/share/doc/${PF}/
+}
