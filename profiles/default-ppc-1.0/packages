@@ -71,8 +71,6 @@ net-www/netscape-plugger
 ~sys-kernel/usermode-sources
 ~sys-kernel/xfs-sources
 
-<=x11-libs/qt-3.0.3.1
-
 *app-arch/ncompress
 *sys-apps/baselayout
 *sys-apps/portage
