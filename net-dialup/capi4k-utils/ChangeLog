@@ -1,7 +1,15 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # Maintainer Alexander Holler <holler@ahsoftware.de>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.9 2004/06/24 22:24:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.10 2004/09/24 00:00:46 dragonheart Exp $
+
+*capi4k-utils-20040810 (24 Sep 2004)
+
+  24 Sep 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/capi-init-20040810, +capi4k-utils-20040810.ebuild:
+  Version bump. Fixes bug #52001. Hope it doesn't break 2.4 headers (otherwise
+  remove sed). Init script courtecy of Sven <skoehler@upb.de> fixes bug #51054
+  Bug #43592 fixed because of the version bump.
 
   24 Nov 2003; Heinrich Wendel <lanius@gentoo.org>
   capi4k-utils-20030616.ebuild:
