@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a50f1831b0748097c75d952228935e6a emul-linux-x86-xlibs-1.2-r7.ebuild 2172
+MD5 cf0dbc6c31bca869a2493401470381f9 emul-linux-x86-xlibs-1.2-r7.ebuild 2198
 MD5 5aa3dda16a384e963673cea0f46d1bff emul-linux-x86-xlibs-1.2-r6.ebuild 2001
 MD5 26af0271c02a589244e73f51df4410a2 emul-linux-x86-xlibs-1.2-r3.ebuild 1815
-MD5 67fd33ebaba70da5b29c72bcf25602aa ChangeLog 4295
+MD5 c3b9ddebb3fdb089b14fc6a8a39ac5e1 ChangeLog 4471
 MD5 3d107142a3ec13f947ea538fdfe0f517 metadata.xml 290
 MD5 5a7b89b29d4fbc9bc81caf9da1a9ba1d files/XI18N_OBJS 333
 MD5 67e4eda745af1451f8adbc4824048d3a files/digest-emul-linux-x86-xlibs-1.2-r3 78
@@ -15,7 +15,7 @@ MD5 42f42e0727df82ff01db88d5a027f010 files/75emul-linux-x86-x 81
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCL3pcntT9W3vfTuoRAk0AAJ9N9c7nvTBcKZ6L23gI447kRgRg1gCfXUl7
-46CBf/5zm1DTvUe/JNRx7jw=
-=6JjQ
+iD8DBQFCL56AntT9W3vfTuoRAuzCAKCf3vWT8wM2lA2W4kaWCmGHmzwemACfXQKu
+fVRhq22GbLDXwIEfPHQA5Wc=
+=d+iL
 -----END PGP SIGNATURE-----

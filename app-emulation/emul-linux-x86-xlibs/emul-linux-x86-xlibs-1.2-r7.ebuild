@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.2-r7.ebuild,v 1.1 2005/03/09 22:35:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.2-r7.ebuild,v 1.2 2005/03/10 01:10:14 cryos Exp $
 
 inherit multilib
 
@@ -39,8 +39,8 @@ src_install() {
 
 	# Create some extra symlinks, bug 81045.
 	cd ${D}/emul/linux/x86/usr/lib
-	ln -s libX11.so.6 libX11.so
-	ln -s libXext.so.6 libXext.so
+	ln -s `readlink libX11.so.6` libX11.so
+	ln -s `readlink libXext.so.6` libXext.so
 
 	# We don't use this any more
 	rm -rf ${D}/usr/X11R6
@@ -67,8 +67,8 @@ pkg_postinst() {
 
 pkg_postrm() {
 	# The symlink should be removed too.
-	if [ -L /usr/$(get_libdir)/X11/locale/lib && \
-		! -d /emul/linux/x86/usr/lib ]; then
+	if [ -L /usr/$(get_libdir)/X11/locale/lib ] && \
+		[ ! -d /emul/linux/x86/usr/lib ]; then
 		rm -f /usr/$(get_libdir)/X11/locale/lib
 	fi
 }
