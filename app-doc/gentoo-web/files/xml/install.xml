@@ -216,8 +216,14 @@ If you have a non-US keyboard, you've probably noticed that some keys aren't in 
 typing:
 </p><pre>
 # loadkeys [keymap]
-</pre><p>Replace [keymap] with the name of your preferred keymap from /usr/share/keymaps.  If you have a German keyboard, you should
-use "de-latin1-nodeadkeys".  Please <a href="mailto:drobbins@gentoo.org">email me</a> the keymaps that you use for your
+</pre><p>
+Here are some popular non-English keymaps:</p>
+<table><tr><td><b>Language</b></td><td><b>Keymap</b></td></tr>
+<tr><td>German</td><td>de-latin1-nodeadkeys</td></tr>
+<tr><td>French</td><td>fr_latin1</td></tr>
+</table>
+<p>
+Please <a href="mailto:drobbins@gentoo.org">email me</a> the keymaps that you use for your
 preferred language so that I can add them to this document.  Now, type the following commands:
 </p><pre>
 # env-update
