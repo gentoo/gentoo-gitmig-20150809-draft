@@ -1,0 +1,19 @@
+diff -u --recursive wordpress-orig/wp-admin/auth.php wordpress/wp-admin/auth.php
+--- wordpress-orig/wp-admin/auth.php	2004-10-08 20:52:08.184876209 +0100
++++ wordpress/wp-admin/auth.php	2004-10-08 20:54:31.239067434 +0100
+@@ -25,7 +25,7 @@
+ 		return false;
+ 
+ 	} else {
+-		if ($login->user_login == $user_login && md5($login->user_pass) == $user_pass_md5) {
++		if ($login->user_login == $user_login && $login->user_pass == $user_pass_md5) {
+ 			return true;
+ 		} else {
+ 			return false;
+@@ -46,4 +46,4 @@
+ 	exit();
+ }
+ 
+-?>
+\ No newline at end of file
++?>
