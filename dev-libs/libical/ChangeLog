@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.7 2004/10/15 23:43:52 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.8 2004/10/18 01:36:06 weeve Exp $
+
+  17 Oct 2004; Jason Wever <weeve@gentoo.org> libical-0.24_rc4-r1.ebuild:
+  Added ~sparc keyword wrt bug #66691.
 
 *libical-0.24_rc4-r1 (16 Oct 2004)
 
