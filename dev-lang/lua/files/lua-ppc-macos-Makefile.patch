@@ -1,0 +1,185 @@
+diff -Naur lua-5.0.2/Makefile lua-5.0.2-new/Makefile
+--- lua-5.0.2/Makefile	Sat Feb  5 14:33:58 2005
++++ lua-5.0.2-new/Makefile	Sat Feb  5 14:36:07 2005
+@@ -22,7 +22,10 @@
+ 
+ # simple test to see Lua working
+ test:	all
+-	bin/lua test/hello.lua
++	@for ltest in `ls test/*.lua | grep -v life.lua`; do \
++		echo "Running $$ltest ..."; \
++		bin/lua $$ltest; \
++	done
+ 
+ # remove debug information from binaries
+ strip:
+@@ -30,11 +33,11 @@
+ 
+ # official installation
+ install: all strip
+-	mkdir -p $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN)
+-	$(INSTALL_EXEC) bin/* $(INSTALL_BIN)
+-	$(INSTALL_DATA) include/*.h $(INSTALL_INC)
+-	$(INSTALL_DATA) lib/*.a $(INSTALL_LIB)
+-	$(INSTALL_DATA) doc/*.1 $(INSTALL_MAN)
++	mkdir -p $(DESTDIR)$(INSTALL_BIN) $(DESTDIR)$(INSTALL_INC) $(DESTDIR)$(INSTALL_LIB) $(DESTDIR)$(INSTALL_MAN)
++	$(INSTALL_EXEC) bin/* $(DESTDIR)$(INSTALL_BIN)
++	$(INSTALL_DATA) include/*.h $(DESTDIR)$(INSTALL_INC)
++	$(INSTALL_DATA) lib/*.a $(DESTDIR)$(INSTALL_LIB)
++	$(INSTALL_DATA) doc/*.1 $(DESTDIR)$(INSTALL_MAN)
+ 
+ # shared libraries (for Linux)
+ so:
+@@ -42,21 +45,35 @@
+ 	gcc -o lib/liblualib.so.$V -shared src/lib/*.o
+ 	cd lib; ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
+ 
++# shared libraries (for Darwin)
++dylib:
++	$(CC) -dynamiclib -flat_namespace -undefined suppress -o lib/liblua.$V.$@ src/*.o -install_name $(INSTALL_LIB)/liblua.$V.$@ -compatibility_version $V -current_version $V
++	$(CC) -dynamiclib -flat_namespace -undefined suppress -o lib/liblualib.$V.$@ src/lib/*.o -install_name $(INSTALL_LIB)/liblualib.$V.$@ -compatibility_version $V -current_version $V
++	cd lib; ln -fs liblua.$V.$@ liblua.$@; ln -fs liblualib.$V.$@ liblualib.$@; ln -fs liblua.$V.$@ liblua.$(V:%.0=%).$@; ln -fs liblualib.$V.$@ liblualib.$(V:%.0=%).$@
++
+ # binaries using shared libraries
+-sobin:
++sobin dylibbin:
+ 	rm -f bin/*
+ 	cd src/lua; $(MAKE)
+ 	cd src/luac; $(MAKE)
+ 
+ # install shared libraries
+ soinstall:
+-	$(INSTALL_EXEC) lib/*.so.* $(INSTALL_LIB)
+-	cd $(INSTALL_LIB); ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
++	$(INSTALL_EXEC) lib/*.so.* $(DESTDIR)$(INSTALL_LIB)
++	cd $(DESTDIR)$(INSTALL_LIB); ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
++
++dylibinstall:
++	$(INSTALL_EXEC) lib/*.dylib $(DESTDIR)$(INSTALL_LIB)/
++	cd $(DESTDIR)$(INSTALL_LIB)/; ln -fs liblua.$V.dylib liblua.dylib; ln -fs liblualib.$V.dylib liblualib.dylib
++	cd $(DESTDIR)$(INSTALL_LIB)/; ln -fs liblua.$V.dylib liblua.$(V:%.0=%).dylib; ln -fs liblualib.$V.dylib liblualib.$(V:%.0=%).dylib
+ 
+ # clean shared libraries
+ soclean:
+ 	rm -f lib/*.so* bin/*
+ 
++dylibclean:
++	rm -f lib/*.dylib bin/*
++
+ # echo config parameters
+ echo:
+ 	@echo ""
+@@ -77,6 +94,7 @@
+ 	@echo "AR = $(AR)"
+ 	@echo "RANLIB = $(RANLIB)"
+ 	@echo "STRIP = $(STRIP)"
++	@echo "DESTDIR = $(DESTDIR)"
+ 	@echo "INSTALL_ROOT = $(INSTALL_ROOT)"
+ 	@echo "INSTALL_BIN = $(INSTALL_BIN)"
+ 	@echo "INSTALL_INC = $(INSTALL_INC)"
+diff -Naur lua-5.0.2/Makefile.orig lua-5.0.2-new/Makefile.orig
+--- lua-5.0.2/Makefile.orig	Wed Dec 31 19:00:00 1969
++++ lua-5.0.2-new/Makefile.orig	Sat Feb  5 14:35:42 2005
+@@ -0,0 +1,102 @@
++# makefile for Lua hierarchy
++# see INSTALL for installation instructions
++# see config for customization instructions
++
++LUA= .
++
++include $(LUA)/config
++
++# primary targets ("co" and "klean" are used for making the distribution)
++all clean co klean:	dirs
++	cd include; $(MAKE) $@
++	cd src; $(MAKE) $@
++	cd src/lib; $(MAKE) $@
++	cd src/luac; $(MAKE) $@
++	cd src/lua; $(MAKE) $@
++
++# in case they were not created during unpacking
++dirs:	bin lib
++
++bin lib:
++	mkdir -p $@
++
++# simple test to see Lua working
++test:	all
++	bin/lua test/hello.lua
++
++# remove debug information from binaries
++strip:
++	$(STRIP) bin/*
++
++# official installation
++install: all strip
++	mkdir -p $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN)
++	$(INSTALL_EXEC) bin/* $(INSTALL_BIN)
++	$(INSTALL_DATA) include/*.h $(INSTALL_INC)
++	$(INSTALL_DATA) lib/*.a $(INSTALL_LIB)
++	$(INSTALL_DATA) doc/*.1 $(INSTALL_MAN)
++
++# shared libraries (for Linux)
++so:
++	gcc -o lib/liblua.so.$V -shared src/*.o
++	gcc -o lib/liblualib.so.$V -shared src/lib/*.o
++	cd lib; ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
++
++# binaries using shared libraries
++sobin:
++	rm -f bin/*
++	cd src/lua; $(MAKE)
++	cd src/luac; $(MAKE)
++
++# install shared libraries
++soinstall:
++	$(INSTALL_EXEC) lib/*.so.* $(INSTALL_LIB)
++	cd $(INSTALL_LIB); ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
++
++# clean shared libraries
++soclean:
++	rm -f lib/*.so* bin/*
++
++# echo config parameters
++echo:
++	@echo ""
++	@echo "These are the parameters currently set in $(LUA)/config to build Lua $V:"
++	@echo ""
++	@echo "LOADLIB = $(LOADLIB)"
++	@echo "DLLIB = $(DLLIB)"
++	@echo "NUMBER = $(NUMBER)"
++	@echo "POPEN = $(POPEN)"
++	@echo "TMPNAM = $(TMPNAM)"
++	@echo "DEGREES = $(DEGREES)"
++	@echo "USERCONF = $(USERCONF)"
++	@echo "CC = $(CC)"
++	@echo "WARN = $(WARN)"
++	@echo "MYCFLAGS = $(MYCFLAGS)"
++	@echo "MYLDFLAGS = $(MYLDFLAGS)"
++	@echo "EXTRA_LIBS = $(EXTRA_LIBS)"
++	@echo "AR = $(AR)"
++	@echo "RANLIB = $(RANLIB)"
++	@echo "STRIP = $(STRIP)"
++	@echo "INSTALL_ROOT = $(INSTALL_ROOT)"
++	@echo "INSTALL_BIN = $(INSTALL_BIN)"
++	@echo "INSTALL_INC = $(INSTALL_INC)"
++	@echo "INSTALL_LIB = $(INSTALL_LIB)"
++	@echo "INSTALL_MAN = $(INSTALL_MAN)"
++	@echo "INSTALL_EXEC = $(INSTALL_EXEC)"
++	@echo "INSTALL_DATA = $(INSTALL_DATA)"
++	@echo ""
++	@echo "Edit $(LUA)/config if needed to suit your platform and then run make."
++	@echo ""
++
++# turn config into Lua code
++# uncomment the last sed expression if you want nil instead of empty strings
++lecho:
++	@echo "-- $(LUA)/config for Lua $V"
++	@echo "VERSION = '$(V)'"
++	@make echo | grep = | sed -e 's/= /= "/' -e 's/$$/"/' #-e 's/""/nil/'
++	@echo "-- EOF"
++
++newer:
++	@find . -newer MANIFEST -type f
++
++# (end of Makefile)

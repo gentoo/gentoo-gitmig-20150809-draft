@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.1_beta20031003-r2.ebuild,v 1.6 2004/06/24 22:51:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.1_beta20031003-r2.ebuild,v 1.7 2005/02/06 01:01:06 j4rg0n Exp $
 
 inherit eutils
 
