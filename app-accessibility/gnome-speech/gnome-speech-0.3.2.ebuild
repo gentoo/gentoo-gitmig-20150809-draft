@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.2.ebuild,v 1.1 2004/03/17 22:15:32 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.2.ebuild,v 1.2 2004/03/23 02:50:58 leonardop Exp $
 
 inherit gnome2
 
@@ -21,8 +21,5 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog COPYING NEWS README"
 
-# The Java support for this package seems to be somewhat brain-damaged,
-# and although it would be nice to implement it via the "java" USE flag,
-# we will have to disable it entirely for now.
+# Check out >=gnome-speech-0.3.2-r1 for java support
 export JAVAC=no
-
