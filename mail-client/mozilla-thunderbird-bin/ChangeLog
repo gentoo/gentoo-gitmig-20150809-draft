@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/mozilla-thunderbird-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.1 2004/05/30 19:41:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.2 2004/06/03 06:36:28 seemant Exp $
+
+  02 Jun 2004; Seemant Kulleen <seemant@gentoo.org>
+  +files/0.5/icon/mozillathunderbird.desktop,
+  +files/0.5/icon/thunderbird-icon.png,
+  +files/0.6/icon/mozillathunderbird.desktop,
+  +files/0.6/icon/thunderbird-icon.png,
+  +files/icon/mozillathunderbird.desktop, +files/icon/thunderbird-icon.png:
+  added missing 0.6, 0.5 and icon dirs in FILESDIR.  epkgmove is broken, methinks
 
 *mozilla-thunderbird-bin-0.6 (04 May 2004)
 
