@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/micq-0.4.9.4.ebuild,v 1.7 2004/07/15 00:17:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/micq-0.4.9.4.ebuild,v 1.8 2005/02/22 16:13:49 usata Exp $
 
 SRC_URI="http://www.micq.org/source/${P}.tgz"
 DESCRIPTION="text based ICQ client with many features"
