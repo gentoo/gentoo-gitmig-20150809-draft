@@ -1,11 +1,21 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.5 2002/06/17 12:31:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.6 2002/07/29 15:35:40 raker Exp $
 
-*a52dec-0.7.3-r1 (17 Jun 200)
+*a52dec-0.7.4 (29 Jul 2002)
+
+  29 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  a52dec-0.7.4.ebuild, files/digest-a52dec-0.7.4 :
+
+  Version Bump.  From the source ChangeLog...
+  -The library is now fully reentrant.
+  -Added win32 output module, al file output, gain control.
+  -A few additional portability enhancements.
+
+*a52dec-0.7.3-r1 (17 Jun 2002)
 
   17 Jun 2002; Seemant Kulleen <seemant@gentoo.org> a52dec-0.7.3-r1.ebuild
-  files/digest-a52dev-0.7.3-r1 :
+  files/digest-a52dec-0.7.3-r1 :
 
   removed the "--enable-double" configure option, which Bernardo Silva
   pointed out as being wrong, and it was confirmed by upstream as being a
