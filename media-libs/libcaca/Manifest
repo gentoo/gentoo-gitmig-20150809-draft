@@ -1,7 +1,17 @@
-MD5 917fcf9cc4c5f5f117b6fcf8c81f74c0 ChangeLog 1974
-MD5 5803deb24638705484736c09a13790bb libcaca-0.9.ebuild 1070
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f6fe37c8d047c77108ace47196beb482 ChangeLog 2108
+MD5 7bf30d436e30fddf12ea27b6691c8c97 libcaca-0.9-r1.ebuild 1535
+MD5 dfda78d89e36e814653e4b5e001f75e4 libcaca-0.9.ebuild 1074
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 6b2c3db3f73bff1f5c518c4f5e1c2501 libcaca-0.9-r1.ebuild 1383
-MD5 8f10a784d1326f49c14a32fb0bcdc430 files/libcaca-0.9-libtool.patch 4596
 MD5 b74aa05e5d6b2a7d9b7108a84d6b82d7 files/digest-libcaca-0.9 63
 MD5 b74aa05e5d6b2a7d9b7108a84d6b82d7 files/digest-libcaca-0.9-r1 63
+MD5 8f10a784d1326f49c14a32fb0bcdc430 files/libcaca-0.9-libtool.patch 4596
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2buQFdQwWVoAgN4RAoWBAKCvE7CiSTOmRYilD1dzxRIG1CGzhwCeOeR8
+kAYd509/Zq692Qcx58ny8IM=
+=Kqbv
+-----END PGP SIGNATURE-----
