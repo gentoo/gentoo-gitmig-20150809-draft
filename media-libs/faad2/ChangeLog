@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.30 2004/06/14 23:43:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.31 2004/06/22 22:48:32 eradicator Exp $
+
+  22 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> -faad2-2.0.ebuild:
+  Marking 2.0-r2 stable on x86 and sparc. Removing old ebuilds. Blocking if
+  media-video/mpeg4ip is installed per bug #54311.
 
 *faad2-2.0-r2 (14 Jun 2004)
 
