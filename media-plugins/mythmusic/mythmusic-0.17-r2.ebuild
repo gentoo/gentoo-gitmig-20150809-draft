@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.17-r2.ebuild,v 1.1 2005/03/26 08:38:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.17-r2.ebuild,v 1.2 2005/03/27 00:33:23 eradicator Exp $
 
-inherit myth flag-o-matic toolchain-funcs
+inherit myth flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="Music player module for MythTV."
 HOMEPAGE="http://www.mythtv.org/"
@@ -38,14 +38,16 @@ src_unpack() {
 	fi
 
 	myth_src_unpack || die "unpack failed"
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-sample_rate_type.patch
 }
 
 src_compile() {
-	econf \
-		`use_enable aac` \
-		`use_enable X fftw` \
-		`use_enable opengl` \
-		`use_enable sdl`
+	econf 	$(use_enable aac) \
+		$(use_enable X fftw) \
+		$(use_enable opengl) \
+		$(use_enable sdl)
 
 	myth_src_compile || die
 }

@@ -1,0 +1,12 @@
+diff -Naurp mythmusic-0.17.orig/mythmusic/aacdecoder.h mythmusic-0.17/mythmusic/aacdecoder.h
+--- mythmusic-0.17.orig/mythmusic/aacdecoder.h	2005-02-05 22:14:36.000000000 -0800
++++ mythmusic-0.17/mythmusic/aacdecoder.h	2005-03-26 16:24:37.000000000 -0800
+@@ -53,7 +53,7 @@ class aacDecoder : public Decoder
+     bool done, finish;
+     long len, bitrate;
+     uchar channels;
+-    unsigned long sample_rate;
++    unsigned int sample_rate;
+     unsigned long output_size;
+     double totalTime, seekTime;
+ 
