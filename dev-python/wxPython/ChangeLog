@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.14 2002/12/13 10:56:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.15 2003/01/12 08:24:27 raker Exp $
+
+*wxPython-2.4.0.1 (12 Jan 2003)
+
+  12 Jan 2003; Nick Hadaway <raker@gentoo.org> wxPython-2.4.0.1.ebuild,
+  files/digest-wxPython-2.4.0.1 :
+  A much needed upgrade.  Works with the latest wxGTK release.
+  As we have had much problems with the 2.3.4 wxGTK series I am hoping
+  this may actually make into the stable 1.4 release or we need to bump
+  back to to 2.3.3 series of wxGTK.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
