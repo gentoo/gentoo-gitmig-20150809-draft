@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/IO-Socket-SSL-0.94.ebuild,v 1.2 2003/10/07 00:15:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/IO-Socket-SSL-0.94.ebuild,v 1.3 2003/11/12 17:14:32 wwoods Exp $
 
 inherit perl-module
 
@@ -11,6 +11,6 @@ HOMEPAGE="http://search.cpan.org/author/BEHROOZI/${P}/README"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~alpha"
 
 DEPEND="${DEPEND} dev-perl/Net-SSLeay"
