@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.54 2005/01/21 16:33:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.55 2005/01/21 16:38:17 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -75,14 +75,14 @@ SRC_URI="!minimal? ( mirror://gentoo/eurofonts-X11.tar.bz2 )
 	${GENTOO_FILES}
 	${X_DRIVERS}
 	${X_PATCHES}
-	http://freedesktop.org/~xorg/X11R${PV}/src/X11R${PV}-src1.tar.gz
-	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src2.tar.gz
-	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src3.tar.gz
-	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src4.tar.gz
-	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src5.tar.gz
+	http://xorg.freedesktop.org/X11R${PV}/src/X11R${PV}-src1.tar.gz
+	http://xorg.freedesktop.org/X11R${PV}/src/X11R${PV}-src2.tar.gz
+	http://xorg.freedesktop.org/X11R${PV}/src/X11R${PV}-src3.tar.gz
+	http://xorg.freedesktop.org/X11R${PV}/src/X11R${PV}-src4.tar.gz
+	http://xorg.freedesktop.org/X11R${PV}/src/X11R${PV}-src5.tar.gz
 	doc? (
-		http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src6.tar.gz
-		http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src7.tar.gz
+		http://xorg.freedesktop.org/X11R${PV}/src/X11R${PV}-src6.tar.gz
+		http://xorg.freedesktop.org/X11R${PV}/src/X11R${PV}-src7.tar.gz
 	)"
 
 LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
