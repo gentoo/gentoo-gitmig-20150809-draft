@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# /home/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.2 2001/08/17 00:36:00 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.4 2001/08/17 23:31:05 danarmak Exp $
 
 V=${PV}
 A=${PN}-${V}.tar.bz2
