@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.34 2004/01/14 20:32:41 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.35 2004/01/20 10:37:19 solar Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -256,22 +256,24 @@ append-ldflags() {
 	return 0
 }
 
-etexec-flags() {
-	has_version 'sys-devel/hardened-gcc' && {
-		if [ ! is-flag -yet_exec ]; then
-			debug-print ">>> appending flags -yet_exec"
+etexec-flags() {        
+	has_version sys-devel/hardened-gcc
+	if [ $? == 0 ]; then                
+		if [ "`is-flag -yet_exec`" != "true" ]; then
+			debug-print ">>> appending flags -yet_exec"                        
 			append-flags -yet_exec
 			append-ldflags -yet_exec
 		fi
-	}
+	fi
 }
 
 fstack-flags() {
-	has_version 'sys-devel/hardened-gcc' && {
-		if [ ! is-flag -yno_propolice ]; then
+	has_version sys-devel/hardened-gcc
+	if [ $? == 0 ]; then
+		if [ "`is-flag -yno_propolice`" != "true" ]; then
 			debug-print ">>> appending flags -yno_propolice"
 			append-flags -yno_propolice
 			append-ldflags -yno_propolice
 		fi
-	}
+	fi
 }
