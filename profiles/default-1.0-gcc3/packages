@@ -46,8 +46,7 @@
 # sash - static shell for system recovery
 *app-shells/sash
 
-*<dev-lang/perl-5.8.0
-*dev-perl/ExtUtils-MakeMaker
+dev-lang/perl
 *virtual/editor
 #no real cost for nano, since we already have ncurses
 *net-ftp/ftp
