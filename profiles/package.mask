@@ -2,7 +2,7 @@
 #explanation of why something is getting masked
 
 #18 Mar 2002, drobbins: this doesn't build if USE="-* build" is set
-=sys-apps/sh-utils-2.0.11-r2
+>=sys-apps/sh-utils-2.0.11-r2
 
 #GNUCash-1.6* do not work with these
 # guile-1.5 changed function names of 1.4
