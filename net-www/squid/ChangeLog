@@ -1,6 +1,13 @@
 # ChangeLog for net-www/squid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.12 2002/12/14 06:02:25 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.13 2003/01/31 23:18:49 raker Exp $
+
+*squid-2.5.1-r2 (31 Jan 2003)
+
+  31 Jan 2003; Nick Hadaway <raker@gentoo.org> squid-2.5.1-r2.ebuild,
+  files/digest-squid-2.5.1-r2 :
+  Added logic so if sasl2 is installed, squid uses it.  A couple
+  of sed statements are included to adjust incompatible code.
 
   14 Dec 2002; Donny Davies <woodchip@gentoo.org> : #8738.
 
