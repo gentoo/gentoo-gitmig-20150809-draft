@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.5 2002/07/16 21:52:28 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.6 2002/08/01 17:11:12 karltk Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -36,7 +36,8 @@ RDEPEND="$DEPEND"
 PROVIDE="virtual/jre-1.3
 	virtual/java-scheme-2"
 SLOT="0"
-LICENSE=""
+LICENSE="sun-bcla"
+KEYWORDS="x86 ppc -sparc -sparc64"
 
 src_unpack () {
 	if [ $PLATFORM = "ppc" ]; then
