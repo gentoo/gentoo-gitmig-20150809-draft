@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/whowatch
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.2 2002/07/31 03:21:51 cselkirk Exp $
 
 *whowatch-1.5.2 (1 Feb 2002)
+  30 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> whowatch-1.5.2.ebuild : 
+
+  Added ppc to KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
