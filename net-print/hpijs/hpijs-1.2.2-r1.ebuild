@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.2.2-r1.ebuild,v 1.2 2003/02/13 15:25:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.2.2-r1.ebuild,v 1.3 2003/09/26 12:26:28 lanius Exp $
 
 # Though this program runs on it's own it makes no sense to run it without ghostscript
 
 RSS_PATCH=${P}-rss.2.patch
 
 S=${WORKDIR}/${P}
-DESCRIPTION="The HP Inkjet server for Ghostscript. Provides best output for HP Inkjet Printers"
+DESCRIPTION="The HP Inkjet server for Ghostscript. Provides best output for HP Inkjet Printers and some LaserJets"
 HOMEPAGE="http://hpinkjet.sourceforge.net"
 KEYWORDS="~x86 ~ppc"
 SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz

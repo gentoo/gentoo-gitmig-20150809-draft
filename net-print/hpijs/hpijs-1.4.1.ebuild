@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.4.1.ebuild,v 1.4 2003/09/07 00:18:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.4.1.ebuild,v 1.5 2003/09/26 12:26:28 lanius Exp $
 
-DESCRIPTION="The HP Inkjet server for Ghostscript. Provides best output for HP Inkjet Printers"
+DESCRIPTION="The HP Inkjet server for Ghostscript. Provides best output for HP Inkjet Printers and some LaserJets"
 HOMEPAGE="http://hpinkjet.sourceforge.net"
 KEYWORDS="x86 ppc alpha sparc hppa amd64"
 SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz
