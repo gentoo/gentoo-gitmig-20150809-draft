@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.1.ebuild,v 1.2 2003/12/26 10:24:33 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.1.ebuild,v 1.3 2003/12/26 10:33:13 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -70,6 +70,10 @@ src_compile()  {
 		if [ "${KV}" != "`uname -r`" ]; then
 			ewarn "WARNING:- kernels do not match!"
 		fi
+	fi
+
+	if [ ! -e ${MYI2C}/linux/i2c.h ]; then
+		cp $LINUX/include/linux/i2c* ${MYI2C}/linux/
 	fi
 
 	echo
