@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2.ebuild,v 1.11 2002/12/20 16:45:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2.ebuild,v 1.12 2003/01/18 18:28:45 tuxus Exp $
 
 IUSE="ssl nls static"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/wget/${P}.tar.gz
 HOMEPAGE="http://wget.sunsite.dk"
 RDEPEND="virtual/glibc ssl? ( >=dev-libs/openssl-0.9.6b )"
 DEPEND="$RDEPEND nls? ( sys-devel/gettext )"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 LICENSE="GPL-2"
 SLOT="0"
 

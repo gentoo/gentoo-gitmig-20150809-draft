@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.10 2002/12/20 16:45:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.11 2003/01/18 18:28:45 tuxus Exp $
 
   20 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> wget-1.8.2.ebuild, wget-1.8.2-r1.ebuild
 						wget-1.8.2-r2.ebuild :
@@ -22,6 +22,9 @@
   andre@tomt.net (Andre Tomt) in bug #8286 for the patch.
 
 *wget-1.8.2 (29 May 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Removed bootcd USE flag

@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.14 2002/12/29 01:49:38 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.15 2003/01/18 18:26:18 tuxus Exp $
 
 *rsync-2.5.6_pre20021105-r1 (29 Dec 2002)
 
@@ -20,6 +20,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *rsync-2.5.5-r1 (07 May 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   29 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
