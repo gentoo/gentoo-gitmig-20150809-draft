@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.81 2005/01/16 09:00:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.82 2005/01/16 09:16:25 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -743,6 +743,8 @@ gcc_src_unpack() {
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
+	einfo "$(tc-arch)"
+
 	if [[ $(tc-arch) == "amd64" ]] \
 	   && [[ -z ${SKIP_MULTILIB_HACK} ]] && use multilib
 	then
@@ -1089,7 +1091,7 @@ gcc_do_filter_flags() {
 }
 
 gcc_src_compile() {
-	if [[ "${ARCH}" == "amd64" -a "${LD_PRELOAD}" == "/lib/libsandbox.so" ]] && use multilib; then
+	if [ "$(tc-arch)" == "amd64" -a "${LD_PRELOAD}" == "/lib/libsandbox.so" ] && use multilib; then
 		eerror "Sandbox in your installed portage does not support compilation."
 		eerror "of a multilib gcc.  Please set FEATURE=-sandbox and try again."
 		eerror "After you have a multilib gcc, re-emerge portage to have a working sandbox."
