@@ -3,13 +3,15 @@ MD5 a345cf5e489c5458d1350f2c3f7f654c strongswan-2.3.0.ebuild 3667
 MD5 0e24089da5b4a98deba361d7666912d0 strongswan-2.1.3.ebuild 3101
 MD5 cdf70aa3741741c0abd6edb69b27b093 strongswan-2.2.1.ebuild 3660
 MD5 07a7cc64a89431737d95d3f5dab32b91 strongswan-2.1.5.ebuild 3660
-MD5 ef437d0e73f4e6789df7d845496a257e ChangeLog 3255
+MD5 c1db062c99b9acb89b4c0beb572f70bd strongswan-2.3.1.ebuild 3668
+MD5 a2f01cc4b7d55afa5ffaff47c7ceba69 ChangeLog 3442
 MD5 abd57abe6fab807ba07c2010f4c2b56b strongswan-2.2.0.ebuild 3660
 MD5 48d78406890387afe4b0d4bba793f8d1 metadata.xml 634
 MD5 98cbee623e8b61da488c286699bd184c files/strongswan-2.1.3-gentoo.patch 17672
 MD5 e5c314dfa834ee14593f4b779f539ed1 files/strongswan-2.2.2-gentoo.patch 12859
 MD5 c75b166cb55a2bcbd020f38f0d3e6671 files/strongswan-2.1.3-gcc34.patch 600
 MD5 d35f8aea878066e110e6ff3d09a4f50e files/ipsec 1538
+MD5 5f32e9c4cf79b1ef1e42cb7ac53f4a7d files/strongswan-2.3.1-gentoo.patch 12012
 MD5 4b0049a6ec44eed18d06a2a06c67cdef files/strongswan-2.2.1-gentoo.patch 15278
 MD5 47a9dfbe76a29a7364281925b1315aae files/strongswan-2.3.0-gentoo.patch 12012
 MD5 d1d0e3ec8fd21afe3f0536db642d2348 files/strongswan-2.1.5-gentoo.patch 17672
@@ -20,3 +22,4 @@ MD5 9a29fb994889b751fbc635cf737dc461 files/digest-strongswan-2.2.0 69
 MD5 f114c8c4d9bea79db167485981f469ae files/digest-strongswan-2.2.1 69
 MD5 c538ae5513e73c1ab298f18b7482cbcc files/digest-strongswan-2.2.2 69
 MD5 4ef28324e1a2a0771bcc8e2198b70333 files/digest-strongswan-2.3.0 69
+MD5 079d175a0e605834ee351c23cf68a6a1 files/digest-strongswan-2.3.1 69
