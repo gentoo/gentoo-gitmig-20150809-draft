@@ -6,6 +6,9 @@
 
 *mc-4.6.0-r1 (06 May 2003)
 
+  07 Jul 2003; Jan Seidel <tuxus@gentoo.org> mc-4.6.0-r1.ebuild :
+  Marked stable on mips.
+
   02 Jul 2003; Guy Martin <gmsoft@gentoo.org> mc-4.6.0-r1.ebuild :
   Marked stable on hppa.
 
