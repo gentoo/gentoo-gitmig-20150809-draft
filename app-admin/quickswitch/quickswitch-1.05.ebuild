@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.05.ebuild,v 1.3 2004/02/22 22:11:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.05.ebuild,v 1.4 2004/02/23 06:11:00 mr_bones_ Exp $
 
 IUSE="ncurses"
 
@@ -35,6 +35,6 @@ src_install() {
 		/etc/quickswitch/switchto.conf.sample
 	dosed "s:/etc/switchto.last:/etc/quickswitch/switchto.last:" \
 		/etc/quickswitch/switchto.conf
-	
+
 	dodoc README LICENSE
 }
