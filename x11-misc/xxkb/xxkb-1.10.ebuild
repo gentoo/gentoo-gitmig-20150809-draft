@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.7 2004/08/24 10:54:07 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.8 2004/11/24 21:18:20 sekretarz Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://${PN}.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 DEPEND="virtual/x11"
 IUSE=""
 
