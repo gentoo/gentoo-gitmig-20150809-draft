@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.2.5-r1.ebuild,v 1.3 2004/03/10 13:36:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.2.5-r1.ebuild,v 1.4 2004/06/03 20:58:27 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -12,12 +12,13 @@ SRC_URI="http://t-o-m-e.net/dl/src/tome-${MY_PV}-src.tgz"
 LICENSE="Moria"
 SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
+IUSE=""
 
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5
 	virtual/x11"
 
-S=${WORKDIR}/tome-${MY_PV}-src
+S="${WORKDIR}/tome-${MY_PV}-src"
 
 src_unpack() {
 	unpack ${A}
