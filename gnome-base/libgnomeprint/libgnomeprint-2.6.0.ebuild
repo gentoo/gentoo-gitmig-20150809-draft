@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.5.4.ebuild,v 1.1 2004/03/21 16:09:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.6.0.ebuild,v 1.1 2004/03/23 13:51:28 foser Exp $
 
 inherit gnome2
 
