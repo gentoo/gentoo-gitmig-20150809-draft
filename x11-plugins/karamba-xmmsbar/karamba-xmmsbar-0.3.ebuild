@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-xmmsbar/karamba-xmmsbar-0.3.ebuild,v 1.3 2003/10/29 19:37:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-xmmsbar/karamba-xmmsbar-0.3.ebuild,v 1.4 2004/02/28 17:58:58 aliz Exp $
 
 DESCRIPTION="XMMS plugin for Karamba"
 HOMEPAGE="http://www.kdelook.org/content/show.php?content=5882"
 SRC_URI="http://www.kdelook.org/content/files/5882-xmmsbar-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND=">=x11-misc/superkaramba-0.21
 	>=media-sound/xmmsctrl-1.6"

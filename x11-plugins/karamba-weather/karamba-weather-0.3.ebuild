@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-weather/karamba-weather-0.3.ebuild,v 1.7 2003/10/29 19:33:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-weather/karamba-weather-0.3.ebuild,v 1.8 2004/02/28 17:58:58 aliz Exp $
 
 DESCRIPTION="Weather plugin for Karamba"
 HOMEPAGE="http://www.kdelook.org/content/show.php?content=5635"
 SRC_URI="http://www.kdelook.org/content/files/5635-karamba_weather-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND="|| ( >=x11-misc/karamba-0.17 >=x11-misc/superkaramba-0.21 )
 	dev-python/pyxml"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-newsticker/gkrellm-newsticker-0.3.5.ebuild,v 1.4 2004/02/23 09:45:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-newsticker/gkrellm-newsticker-0.3.5.ebuild,v 1.5 2004/02/28 17:58:57 aliz Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A news headlines scroller for GKrellM2"
@@ -12,7 +12,7 @@ DEPEND="=app-admin/gkrellm-2*
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa"
+KEYWORDS="x86 ~ppc ~sparc alpha ~hppa"
 
 src_compile() {
 	make || die

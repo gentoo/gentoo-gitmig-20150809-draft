@@ -1,8 +1,8 @@
 # ChangeLog for x11-plugins/wmpop3lb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/ChangeLog,v 1.3 2003/02/12 09:43:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/ChangeLog,v 1.4 2004/02/28 17:58:58 aliz Exp $
 
-wmpop3lb-2.4.2 (08 Oct 2002)
+*wmpop3lb-2.4.2 (08 Oct 2002)
 
   18 Jan 2003; Seeemant Kulleen <seemant@gentoo.org> wmpop3lb-2.4.2.ebuild :
 

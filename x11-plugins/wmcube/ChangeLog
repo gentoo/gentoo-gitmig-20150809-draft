@@ -1,8 +1,8 @@
 # ChangeLog for x11-plugins/wmcube
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcube/ChangeLog,v 1.4 2004/01/04 18:36:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcube/ChangeLog,v 1.5 2004/02/28 17:58:58 aliz Exp $
 
-wmcube-0.98 (24 Oct 2002)
+*wmcube-0.98 (24 Oct 2002)
 
   03 Feb 2003; Nick Hadaway <raker@gentoo.org> wmcube-0.98.ebuild :
   Updated the HOMEPAGE and SRC_URI as the authors request.

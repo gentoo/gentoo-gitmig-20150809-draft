@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-news_panel/karamba-news_panel-0.5.ebuild,v 1.3 2003/10/29 19:18:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-news_panel/karamba-news_panel-0.5.ebuild,v 1.4 2004/02/28 17:58:57 aliz Exp $
 
 DESCRIPTION="RSS News plugin for Karamba"
 HOMEPAGE="http://www.kdelook.org/content/show.php?content=5891"
 SRC_URI="http://www.kdelook.org/content/files/5891-news_panel-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND=">=x11-misc/superkaramba-0.21
 	dev-perl/HTML-Parser
