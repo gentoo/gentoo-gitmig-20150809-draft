@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwt
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.7 2003/12/02 15:18:08 phosphan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.8 2004/04/01 10:13:12 phosphan Exp $
+
+  01 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> qwt-4.2.0_rc0.ebuild,
+  qwt-4.2.0_rc1.ebuild:
+  Declaring rc1 stable, trying to fix sandbox violation (bug #45670)
 
 *qwt-4.2.0_rc1 (02 Dec 2003)
 
