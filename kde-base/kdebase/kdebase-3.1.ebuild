@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.ebuild,v 1.2 2002/11/20 14:06:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.ebuild,v 1.3 2002/11/26 20:41:49 hannes Exp $
 inherit kde-dist 
 
-IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
+IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
 KEYWORDS="x86"
@@ -18,6 +18,7 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	opengl? ( virtual/opengl )
 	samba? ( net-fs/samba )
+	java? ( virtual/jdk )
 	>=media-libs/freetype-2" 
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
 
@@ -32,7 +33,7 @@ use oggvorbis 	&& myconf="$myconf --with-vorbis"	|| myconf="$myconf --without-vo
 use opengl	&& myconf="$myconf --with-gl"		|| myconf="$myconf --without-gl"
 use ssl		&& myconf="$myconf --with-ssl"		|| myconf="$myconf --without-ssl"
 use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"
-
+use java	&& myconf="$myconf --with-java=${JDK_HOME}"	|| myconf="$myconf --without-java"
 src_compile() {
 
     kde_src_compile myconf configure
