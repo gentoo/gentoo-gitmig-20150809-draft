@@ -1,36 +1,35 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.0.ebuild,v 1.2 2003/10/20 19:12:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.0.ebuild,v 1.3 2003/11/30 11:25:58 vapier Exp $
 
-inherit games
+inherit games eutils
 
-MY_PN=hlds_l_3110_full
+MY_PV=${PV//.}
+MY_PN=hlds_l_${MY_PV}_full
 DESCRIPTION="Halflife Linux Server"
-SRC_URI="gentoo://mirror/${MY_PN}.bin"
 HOMEPAGE="http://www.valve.com/"
+SRC_URI="${MY_PN}.bin"
 
 LICENSE="ValveServer"
 SLOT="0"
 KEYWORDS="x86"
-RESTRICT="nostrip" # fetch
+RESTRICT="nostrip fetch
 
 DEPEND="sys-apps/util-linux"
 RDEPEND="dedicated? ( app-misc/screen )"
 
 S=${WORKDIR}/hlds_l
 
-#pkg_nofetch() {
-#	einfo "Please goto fileplanet and d/l ${MY_BIN}"
-#	einfo "http://www.fileplanet.com/files/50000/58368.shtml"
-#}
+pkg_nofetch() {
+	einfo "Please goto fileplanet and d/l ${MY_BIN}"
+	einfo "http://www.fileplanet.com/files/50000/58368.shtml"
+}
 
 src_unpack() {
-	local metastart=`tail -c 8 ${DISTDIR}/${MY_PN}.bin | head -c 4 | hexdump -e \"%i\"`
-	local newsize=$(expr $(ls -al ${DISTDIR}/${MY_PN}.bin | awk '{print $5}') - $metastart)
-	tail -c ${newsize} ${DISTDIR}/${MY_PN}.bin > ${MY_PN}.bin
-	echo ">>> Unpacking ${MY_PN}.bin to ${S}"
-	tar -zxf ${MY_PN}.bin
-	rm ${MY_PN}.bin
+	unpack_pdv ${MY_PN}.bin 4
+	echo ">>> Unpacking ${MY_PN}.tar.gz to ${S}"
+	tar -zxf ${MY_PN}.tar.gz
+	rm ${MY_PN}.tar.gz
 }
 
 src_install() {
