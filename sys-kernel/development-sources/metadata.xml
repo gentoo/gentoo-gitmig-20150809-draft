@@ -4,6 +4,10 @@
 <herd>x86-kernel</herd>
 <herd>kernel</herd>
 <maintainer>
+  <email>gregkh@gentoo.org</email>
+  <name>Greg Kroah-Hartman</name>
+</maintainer>
+<maintainer>
   <email>johnm@gentoo.org</email>
   <name>John Mylchreest</name>
 </maintainer>
