@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.28 2004/07/16 12:04:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.29 2004/07/20 00:22:15 mkennedy Exp $
+
+  19 Jul 2004; <mkennedy@gentoo.org> java-sdk-docs-1.5.0.ebuild:
+  Update for 1.5.0_beta2
 
 *java-sdk-docs-1.2.2.006 (16 Jul 2004)
 
