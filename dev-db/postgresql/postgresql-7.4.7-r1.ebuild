@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.7-r1.ebuild,v 1.11 2005/03/09 00:51:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.7-r1.ebuild,v 1.12 2005/03/09 08:15:33 eradicator Exp $
 
-inherit eutils gnuconfig flag-o-matic java-pkg multilib
+inherit eutils gnuconfig flag-o-matic java-pkg multilib toolchain-funcs
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 HOMEPAGE="http://www.postgresql.org/"
@@ -135,11 +135,11 @@ src_compile() {
 		--with-maxbackends=${MAX_CONNECTIONS} \
 		$myconf || die
 
-	make || die
+	make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 	cd contrib
-	make || die
+	make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 	if use xml2; then
-		make -C xml || die
+		make -C xml LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 	fi
 }
 

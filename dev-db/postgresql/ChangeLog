@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.187 2005/02/24 20:59:32 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.188 2005/03/09 08:15:33 eradicator Exp $
+
+  08 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  postgresql-7.4.7-r1.ebuild, postgresql-8.0.1-r1.ebuild:
+  Multilib fixes for when DEFAULT_ABI is not the default of the toolchain.
 
   24 Feb 2005; petre rodan <kaiowas@gentoo.org> postgresql-7.3.6-r1.ebuild,
   postgresql-7.3.7-r2.ebuild, postgresql-7.3.8.ebuild,
