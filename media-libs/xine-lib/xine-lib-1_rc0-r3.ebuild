@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r1.ebuild,v 1.3 2003/08/12 19:41:09 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r3.ebuild,v 1.1 2003/08/18 18:02:01 agenkin Exp $ 
 
 # this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
 # Commenting this out in this ebuild, because CFLAGS and CXXFLAGS are unset
@@ -25,7 +25,7 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~hppa ~sparc"
-IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome"
+IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl"
 
 DEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
@@ -41,7 +41,7 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	gnome? ( >=gnome-base/gnome-vfs-2.0 
 			dev-util/pkgconfig )
 	>=media-libs/flac-1.0.4
-	>=media-libs/libsdl-1.1.5
+	sdl? ( >=media-libs/libsdl-1.1.5 )
 	>=media-libs/libfame-0.9.0
 	>=media-libs/xvid-0.9.0
 	media-libs/speex"
@@ -82,6 +82,8 @@ src_compile() {
 	use avi	\
 		&& myconf="${myconf} --with-w32-path=/usr/lib/win32" \
 		|| myconf="${myconf} --disable-asf"
+	use sdl \
+		|| myconf="${myconf} --with-sdl-prefix=/null" # disable sdl check
 
 	einfo "myconf: ${myconf}"
 
@@ -93,16 +95,6 @@ src_compile() {
 
 	econf ${myconf} || die "Configure failed"
 
-	# since there is no --disable-gnomevfs flag we have to fix config.h by hand
-	# Gentoo bug #24409.
-	if [ ! `use gnome` ]
-	then
-		einfo "supposedly not using gnome. disabling gnome-vfs support"
-		cp config.h config.h.sed
-		cat config.h.sed |sed -e s/\#define\ HAVE_GNOME_VFS\ 1/\#undef\ HAVE_GNOME_VFS/g >config.h
-		rm config.h.sed
-	fi
-	
 	emake || die "Parallel make failed"
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.64 2003/08/13 14:28:17 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.65 2003/08/18 18:02:01 agenkin Exp $
+
+*xine-lib-1_rc0-r3 (18 Aug 2003)
+
+  18 Aug 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Obey "sdl" USE flag (patch by aethyr7@hotmail.com, bug #24519).
 
 *xine-lib-1_rc0-r2 (13 Aug 2003)
 
