@@ -3,8 +3,8 @@ MD5 cdbabaaf0af42eae047242b847352497 eog-0.6-r4.ebuild 1186
 MD5 c16be85c1617b2ab52e72d63221d82b0 eog-1.0.4.ebuild 1015
 MD5 f09f948eec785567b8c3ff78ac796533 eog-2.2.0.ebuild 913
 MD5 792865719cda3de647a191adbed7c3b2 eog-1.0.3.ebuild 1072
-MD5 7856fa3b71dfee6a8b06e4f216eefd36 ChangeLog 4448
-MD5 2fabe6add1c2d20f089877687c228a13 eog-2.2.2.ebuild 969
+MD5 84bcaf2fc717f873137a9bb36f80b5da ChangeLog 4537
+MD5 8dedf0c598fce0be937a040d088d2c67 eog-2.2.2.ebuild 965
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 df49c6aa6aae55e947388f38dcf0d6fa files/digest-eog-1.0.3 62
 MD5 09951347d08fc8b5eab8405771a959ad files/digest-eog-1.0.4 62
