@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.59 2004/01/26 23:40:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.60 2004/03/31 23:45:27 vapier Exp $
 #
-# devlist: {vapier,wolf31o2,msterret}@gentoo.org
+# devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
-# This is the games ebuild for standardizing the install of games ...
+# This is the games eclass for standardizing the install of games ...
 # you better have a *good* reason why you're *not* using games.eclass
-# in an ebuild in app-games
+# in a games ebuild
 
 inherit eutils
 
@@ -130,37 +130,6 @@ games_pkg_postinst() {
 	echo
 	einfo "See the usermod(8) manpage for more information."
 	echo
-}
-
-# some games require cdrom's to install datafiles ...
-# $1: directory or file to check for on cdrom
-# after function call, cdrom should be in ${GAMES_CD}
-games_get_cd() {
-	export GAMES_CD=${GAMES_CDROM}
-	if [ -z "${GAMES_CD}" ] ; then
-		local dir="$(dirname $1)"
-		local file="$(basename $1)"
-		local mline=""
-		for mline in `mount | egrep -e '(iso|cdrom)' | awk '{print $3}'` ; do
-			[ -d "${mline}/${dir}" ] || continue
-			find ${mline}/${dir} -iname ${file} -maxdepth 1 -printf '' && GAMES_CD=${mline}
-		done
-	fi
-	[ ! -z "${GAMES_CD}" ] && einfo "Using ${GAMES_CD} as the data source"
-}
-# Pass a description of the cd to the function
-games_verify_cd() {
-	if [ -z "${GAMES_CD}" ] ; then
-		echo
-		eerror "You must mount the $* CD first!"
-		echo
-		ewarn "If you do not have the CD, but have the data files"
-		ewarn "mounted somewhere on your filesystem, just export"
-		ewarn "the variable GAMES_CDROM so that it points to the"
-		ewarn "directory containing the files."
-		echo
-		die "You must provide the $* data before running the install"
-	fi
 }
 
 # Unpack .uz(2) files for UT/UT2003
