@@ -1,13 +1,19 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.15 2003/04/15 21:39:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.16 2003/05/25 20:38:18 prez Exp $
+
+*uw-imap-2002c (25 May 2003)
+
+  25 May 2003; Preston A. Elder <prez@gentoo.org> uw-imap-2002c.ebuild,
+  files/digest-uw-imap-2002c files/uw-ipop3s.xinetd :
+  Version bump.
+
+*uw-imap-2002b (12 Jan 2003)
 
   09 Feb 2003; Dean Bailey <alron@gentoo.org> uw-imap-2002b.ebuild, 
   uw-imap-2001a-r3.ebuild :
   Added !net-mail/vimap conflict.
   
-*uw-imap-2002b (12 Jan 2003)
-
   15 Apr 2003; Aron Griffis <agriffis@gentoo.org> uw-imap-2002b.ebuild:
   Add ~alpha to KEYWORDS
 
