@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r1.ebuild,v 1.2 2003/07/22 15:46:33 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r1.ebuild,v 1.3 2003/07/22 16:12:22 lostlogic Exp $
 
 IUSE=""
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 
-DEPEND="virtual/jre"
+DEPEND="virtual/jre
+	>=sys-apps/sed-4"
 
 src_install() {
 	dodoc README
@@ -86,6 +87,15 @@ EOF
 		CLASSPATH="/usr/lib/freenet/freenet.jar:/usr/lib/freenet/freenet-ext.jar:${CLASSPATH}"
 		$(java-config --java) freenet.node.Main --config
 		mv freenet.conf /etc
+		sed -i -e "s/^%\(ipAddress\)/\1/" \
+		       -e "s/^%\(listenPort\)/\1/" \
+		       -e "s/^%\(seedFile\)/\1/" \
+		       -e "s/^%\(logFile\)/\1/" \
+		       -e "s/^%\(storeFile\)/\1/" \
+		       -e "s/^%\(diagnosticsPath\)/\1/" \
+		       -e "s/^%\(routingDir\)/\1/" \
+		       -e "s/^%\(nodeFile\)/\1/" /etc/freenet.conf
+
 	fi
 	einfo "Congratulations, freenet is configured and up to date"
 	einfo "use '/etc/init.d/freenet start' to start it"
