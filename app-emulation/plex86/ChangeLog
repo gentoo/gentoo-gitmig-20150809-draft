@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/plex86
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/plex86/ChangeLog,v 1.1 2003/01/04 13:19:17 lordvan Exp $
+
+*plex86-20021117 (04 Jan 2003)
+
+  04 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org>:
+  
+  Initial version.
+  Fixes Bug #5327
