@@ -2,13 +2,25 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $ Header: $
 
+*gaim-0.59-r3 (18 Aug 2002)
 
-gaim-0.59-r2 ( 28 Jun 2002)
-  28 Jun 2002; Spider <spider@gentoo.org> gaim-0.59-r2.ebuild: 
+  18 Aug 2002; Bruce A. Locke <blocke@shivan.org> gaim-0.59-r3.ebuild:
+
+  Support for the optional "gtk2" keyword added to ebuild.  Gaim can
+  now be built in one of the three following configurations:
+
+  - gtk+ 1.2 version only
+  - gtk+ 1.2 version with gnome 1.4 applet
+  - gtk+ 2.0 version only
+
+*gaim-0.59-r2 (28 Jun 2002)
+
+  28 Jun 2002; Spider <spider@gentoo.org> gaim-0.59-r2.ebuild:
+
   moved gnome-core to gnome-panel 1.4.1 
 
-  
 *gaim-0.59-r1 (27 June 2002)
+
   27 June 2002; Jays Kwak <jayskwak@gentoo.org> gaim-0.59-r1.ebuild
 
   Korean encoding patch for v0.59 added.
