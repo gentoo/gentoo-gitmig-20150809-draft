@@ -1,3 +1,5 @@
-MD5 19e5bb18923a416586063ce81ec64503 ChangeLog 1237
-MD5 e471cfe8645593eaf6cd043b8188a26b rocksndiamonds-3.0.4.ebuild 1325
 MD5 913afa4b5d567e860931f122604de3a2 files/digest-rocksndiamonds-3.0.4 73
+MD5 14bde8454f845b6fd6280f6827f117ee files/digest-rocksndiamonds-3.0.6 73
+MD5 e471cfe8645593eaf6cd043b8188a26b rocksndiamonds-3.0.4.ebuild 1325
+MD5 438839ce10df86fb54a6989813246bf0 rocksndiamonds-3.0.6.ebuild 1323
+MD5 8479deff736c38602c3782ca0f8e5e42 ChangeLog 1341
