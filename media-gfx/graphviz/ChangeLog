@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.31 2004/07/22 16:18:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.32 2004/07/26 03:24:27 robbat2 Exp $
+
+  25 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> :
+  bug #58028, improved to be cleaner.
 
   22 Jul 2004; Aron Griffis <agriffis@gentoo.org> graphviz-1.10.ebuild:
   Update SRC_URI #53602, bump to 1.12 #52343, run gnuconfig_update in src_unpack
