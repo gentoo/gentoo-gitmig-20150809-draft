@@ -1,0 +1,43 @@
+Subject: Prevent ICMP crash in netfilter logging
+From: Olaf Kirch <okir@suse.de>
+References: 46016
+
+This patch fixes a remotely triggerable crash in the netfilter code
+when looking at ICMP unreachables. It dies when trying to copy
+BIGNUM bytes...
+
+Index: linux-2.6.5/net/ipv4/netfilter/ipt_LOG.c
+===================================================================
+--- linux-2.6.5.orig/net/ipv4/netfilter/ipt_LOG.c	2004-02-19 11:36:37.000000000 +0100
++++ linux-2.6.5/net/ipv4/netfilter/ipt_LOG.c	2004-09-24 15:48:54.000000000 +0200
+@@ -71,7 +71,7 @@
+ 		printk("FRAG:%u ", ntohs(iph.frag_off) & IP_OFFSET);
+ 
+ 	if ((info->logflags & IPT_LOG_IPOPT)
+-	    && iph.ihl * 4 != sizeof(struct iphdr)) {
++	    && iph.ihl * 4 > sizeof(struct iphdr)) {
+ 		unsigned char opt[4 * 15 - sizeof(struct iphdr)];
+ 		unsigned int i, optsize;
+ 
+@@ -138,7 +138,7 @@
+ 		printk("URGP=%u ", ntohs(tcph.urg_ptr));
+ 
+ 		if ((info->logflags & IPT_LOG_TCPOPT)
+-		    && tcph.doff * 4 != sizeof(struct tcphdr)) {
++		    && tcph.doff * 4 > sizeof(struct tcphdr)) {
+ 			unsigned char opt[4 * 15 - sizeof(struct tcphdr)];
+ 			unsigned int i, optsize;
+ 
+Index: linux-2.6.5/net/ipv6/netfilter/ip6t_LOG.c
+===================================================================
+--- linux-2.6.5.orig/net/ipv6/netfilter/ip6t_LOG.c	2004-09-24 15:47:00.000000000 +0200
++++ linux-2.6.5/net/ipv6/netfilter/ip6t_LOG.c	2004-09-24 15:48:35.000000000 +0200
+@@ -188,7 +188,7 @@
+ 		printk("URGP=%u ", ntohs(tcph->urg_ptr));
+ 
+ 		if ((info->logflags & IP6T_LOG_TCPOPT)
+-		    && tcph->doff * 4 != sizeof(struct tcphdr)) {
++		    && tcph->doff * 4 > sizeof(struct tcphdr)) {
+ 			unsigned int i;
+ 
+ 			/* Max length: 127 "OPT (" 15*4*2chars ") " */
