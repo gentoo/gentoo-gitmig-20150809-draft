@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/djbdns-man
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/ChangeLog,v 1.9 2004/06/24 21:39:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/ChangeLog,v 1.10 2004/06/30 00:59:11 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> djbdns-man-20020130.ebuild,
+  djbdns-man-20031023.ebuild:
+  sync IUSE (missing)
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
   djbdns-man-20031023.ebuild:
