@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.8.ebuild,v 1.2 2002/11/26 03:02:35 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.8.ebuild,v 1.3 2002/11/26 03:32:15 raker Exp $
 
-IUSE="ssl tcpd readline ipv6 gdbm ldap sasl kerberos"
+IUSE="ssl tcpd readline ipv6 gdbm ldap sasl kerberos odbc"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
@@ -22,7 +22,8 @@ DEPEND="virtual/glibc
 	readline? ( >=sys-libs/readline-4.1 )
 	gdbm?     ( >=sys-libs/gdbm-1.8.0 )
 	sasl?     ( >=dev-libs/cyrus-sasl-2.1.7-r3 )
-	kerberos? ( >=app-crypt/krb5-1.2.6 )"
+	kerberos? ( >=app-crypt/krb5-1.2.6 )
+	odbc?     ( dev-db/odbc )"
 
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
@@ -60,6 +61,9 @@ src_compile() {
 	use ipv6 && myconf="${myconf} --enable-ipv6" \
 		|| myconf="${myconf} --disable-ipv6"
 
+        use odbc && myconf="${myconf} --enable-sql" \
+                || myconf="${myconf} --disable-sql"
+
 	econf \
 		--libexecdir=/usr/lib/openldap \
 		--enable-crypt \
@@ -74,7 +78,6 @@ src_compile() {
 		--enable-passwd \
 		--enable-perl \
 		--enable-shell \
-		--enable-sql \
 		--enable-slurpd \
 		--enable-ldbm \
 		--with-ldbm-api=auto \
