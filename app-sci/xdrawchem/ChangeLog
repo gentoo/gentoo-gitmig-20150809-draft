@@ -1,10 +1,16 @@
 # ChangeLog for app-sci/xdrawchem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.13 2003/02/12 05:20:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.14 2003/04/25 08:57:40 george Exp $
+
+*xdrawchem-1.6.8 (25 Apr 2003)
+
+  25 Apr 2003; George Shapovalov <george@gentoo.org> xdrawchem-1.6.8.ebuild :
+  new version (#17547)
+  Thanks to Adam Tenderholt <a-tenderholt@northwestern.edu> for an update
 
 *xdrawchem-1.6.3 (06 Feb 2003)
 
-  06 Feb 2003; George Shapovalov <george@gentoo.org> xdrawchem-1.6.ebuild :
+  06 Feb 2003; George Shapovalov <george@gentoo.org> xdrawchem-1.6.3.ebuild :
   new version. (#13547)
   works with qt-3.1 (1.6 seems to only work with qt-3.0)
 
