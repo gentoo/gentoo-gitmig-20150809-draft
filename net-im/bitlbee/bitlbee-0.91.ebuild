@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.91.ebuild,v 1.1 2004/09/26 18:36:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.91.ebuild,v 1.2 2004/09/27 23:48:43 weeve Exp $
 
 inherit eutils gcc
 
@@ -11,11 +11,12 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64"
-IUSE="debug jabber msn oscar yahoo flood"
+IUSE="debug jabber msn oscar yahoo flood ssl"
 
 DEPEND="virtual/libc
 	>=dev-libs/glib-2.0
-	msn? ( net-libs/gnutls )"
+	msn? ( net-libs/gnutls )
+	jabber? ( ssl? ( net-libs/gnutls ) )"
 
 no_flags_die() {
 	eerror ""
@@ -46,11 +47,17 @@ src_compile() {
 	# setup useflags
 	local myconf
 	use debug && myconf="${myconf} --debug=1"
-	use msn || myconf="${myconf} --msn=0 --ssl=gnutls"
+	use msn || myconf="${myconf} --msn=0 "
 	use jabber || myconf="${myconf} --jabber=0"
 	use oscar || myconf="${myconf} --oscar=0"
 	use yahoo || myconf="${myconf} --yahoo=0"
 	use flood && myconf="${myconf} --flood=1"
+
+	if ( ( use jabber && use ssl ) || use msn ); then
+		myconf="--ssl=gnutls"
+	else
+		myconf="--ssl=bogus"
+	fi
 
 	econf --datadir=/usr/share/bitlbee --etcdir=/etc/bitlbee ${myconf} \
 		|| die "econf failed"
