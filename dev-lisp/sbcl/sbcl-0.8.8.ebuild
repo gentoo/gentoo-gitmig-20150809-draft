@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.8.ebuild,v 1.2 2004/03/24 03:29:23 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.8.ebuild,v 1.3 2004/03/24 04:21:49 mkennedy Exp $
 
 inherit common-lisp-common
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~mips"
 PROVIDE="virtual/commonlisp"
 DEPEND="dev-lisp/common-lisp-controller"
 
