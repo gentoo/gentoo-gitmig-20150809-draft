@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/msyslog
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.17 2003/09/17 22:28:28 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.18 2004/02/22 19:07:34 aliz Exp $
+
+  22 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> msyslog-1.09a-r1.ebuild:
+  Fix fPIC compilation, add amd64 keyword. Closing #38311.
 
 *msyslog-1.09a-r1 (17 Sep 2003)
 
