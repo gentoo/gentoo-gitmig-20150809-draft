@@ -1,0 +1,9 @@
+# ChangeLog for x11-wm/matchbox
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/ChangeLog,v 1.1 2003/12/16 01:37:17 port001 Exp $
+
+*matchbox-0.7.1 (16 Dec 2003)
+
+  16 Dec 2003; Ian Leitch <port001@gentoo.org> matchbox-0.7.1.ebuild:
+  Initial commit, thanks to Rene Wagner <reenoo@gmx.de>. #29009
+
