@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2789 2004/04/01 08:35:02 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2790 2004/04/01 12:30:19 pauldv Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -42,6 +42,11 @@ games-fps/ut2003
 games-fps/ut2003-demo
 games-server/ut2003-ded
 games-fps/americas-army
+
+# <pauldv@gentoo.org> (1 Apr 2004)
+# Short-term mask of the ximian 1.1.1 build. Configuration file migration is
+# again not working
+>=app-office/openoffice-ximian-1.1.52
 
 # <suka@gentoo.org> (31 Mar 2004)
 # Also short term mask the new OOo source build
