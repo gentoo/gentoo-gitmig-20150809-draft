@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.8 2002/11/11 16:14:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.9 2002/12/03 06:42:56 seemant Exp $
+
+*expat-1.95.5-r1 (02 Dec 2002)
+
+  02 Dec 2002; Seemant Kulleen <seemant@gentoo.org> expat-1.95.5-r1.ebuild
+  files/digest-expat-1.95.5-r1 :
+
+  Man page is now installed in FHS correct location.  Small enough package
+  that I version bumped.  Closes bug #11236 by k8la@arrl.net (Thomas M.
+  Beaudry)
 
 *expat-1.95.5 (11 Nov 2002)
 
