@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-notify
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/ChangeLog,v 1.10 2004/07/01 22:34:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/ChangeLog,v 1.11 2004/10/26 20:02:14 slarti Exp $
+
+  26 Oct 2004; Tom Martin <slarti@gentoo.org> qmail-notify-0.93-r1.ebuild,
+  qmail-notify-0.93-r1.ebuild:
+  Marked ~amd64, fixing ${CC} with regard to bug 69004.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   qmail-notify-0.93-r1.ebuild, qmail-notify-0.93.ebuild:

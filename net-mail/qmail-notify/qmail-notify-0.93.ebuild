@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93.ebuild,v 1.13 2004/07/15 01:58:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93.ebuild,v 1.14 2004/10/26 20:02:14 slarti Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Delayed delivery notification for qmail."
 SRC_URI="http://untroubled.org/qmail-notify/${P}.tar.gz"
@@ -18,8 +20,8 @@ RDEPEND="virtual/cron
 
 src_compile() {
 	cd ${S}
-	echo "gcc ${CFLAGS}" > conf-cc
-	echo "gcc" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	emake || die
 }
 
