@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.58 2004/06/24 23:01:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.59 2004/06/25 17:38:58 joker Exp $
+
+*sparc-sources-2.4.26-r2 (25 Jun 2004)
+
+  25 Jun 2004; Christian Birchinger <joker@gentoo.org>
+  +files/2.4.26-CAN-2004-0495.patch, +files/2.4.CAN-2004-0535.patch,
+  +sparc-sources-2.4.26-r2.ebuild:
+  Added CAN-2004-0495 and CAN-2004-0535 security fixes
 
 *sparc-sources-2.4.26-r1 (03 Jun 2004)
 
