@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.102 2004/08/23 13:21:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.103 2004/08/27 02:50:29 tgall Exp $
+
+  26 Aug 2004; Tom Gall <tgall@gentoo.org> kdegraphics-3.3.0.ebuild:
+  stable on ppc64, bug #58497
 
   23 Aug 2004; Carsten Lohrke <carlo@gentoo.org> kdegraphics-3.3.0.ebuild:
   let's block media-gfx/kolourpaint
