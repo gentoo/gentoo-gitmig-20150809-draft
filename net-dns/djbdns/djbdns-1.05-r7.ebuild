@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r7.ebuild,v 1.7 2005/01/26 21:01:10 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r7.ebuild,v 1.8 2005/03/03 18:16:05 ciaranm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="as-is"
 KEYWORDS="x86 ~sparc ~ppc ~alpha ~mips ~hppa"
 IUSE="ipv6 static selinux"
 
-RDEPEND=">=sys-apps/daemontools-0.70
+RDEPEND=">=sys-process/daemontools-0.70
 	sys-apps/ucspi-tcp
 	selinux? ( sec-policy/selinux-djbdns )"
 

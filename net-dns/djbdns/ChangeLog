@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.47 2005/03/03 18:16:05 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.48 2005/03/03 18:17:07 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> djbdns-1.05-r8.ebuild:
+  Dependency update: sys-apps/daemontools -> sys-process/daemontools.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> djbdns-1.05-r7.ebuild:
   Dependency update: sys-apps/daemontools -> sys-process/daemontools.
