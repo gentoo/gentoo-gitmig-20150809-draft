@@ -1,12 +1,14 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.14 2003/06/09 19:49:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.15 2003/09/07 00:33:01 drobbins Exp $
 
-  23 May 2003; Chuck Brewer <killian@gentoo.org>:
-  Added manifest.
-
-  29 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> mgetty-1.1.30.ebuild :
-  Added fax user to allow installation to finish. Closes #19469.
+  06 Sep 2003; Daniel Robbins <drobbins@gentoo.org> mgetty-1.1.30.ebuild,
+  mgetty-1.1.28.ebuild: made tetex dependency conditional on "doc" USE
+  variable. Too insane to depend on 100MB of sources to generate a postscript
+  doc file by default. Closing bug 28014.
+  
+  29 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> mgetty-1.1.30.ebuild : Added
+  fax user to allow installation to finish. Closes #19469.
 
 *mgetty-1.1.30 (28 Apr 2003)
 

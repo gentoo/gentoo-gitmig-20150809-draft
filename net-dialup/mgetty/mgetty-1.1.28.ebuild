@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.11 2003/09/07 00:09:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.12 2003/09/07 00:33:01 drobbins Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://alpha.greenie.net/mgetty/"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
-	app-text/tetex
+	doc? app-text/tetex
 	sys-apps/gawk
 	dev-lang/perl"
 
@@ -25,7 +25,6 @@ src_unpack() {
 	unpack ${A}
 
 	epatch ${FILESDIR}/mgetty-${PV}-gentoo.diff
-
 	cd ${S}/doc
 	sed -i "s:dvips -o mgetty.ps:dvips -M -o mgetty.ps:" Makefile
 
@@ -79,7 +78,8 @@ src_install () {
 	cd ${S}
 	dodoc BUGS ChangeLog FTP README.1st Recommend THANKS TODO
 	cd doc
-	dodoc *.txt modems.db mgetty.ps
+	dodoc *.txt modems.db 
+	use doc && dodoc mgetty.ps
 
 	#generate missing fonts if any.
 	if [ -f ${S}/doc/missfont.log ]
