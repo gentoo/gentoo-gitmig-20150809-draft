@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.12 2003/08/05 16:05:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.13 2003/10/27 02:07:55 robbat2 Exp $
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -29,8 +29,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if [ "`use qt`" ]
-	then
+	if use qt; then
 		myconf="--enable-gui=yes"
 	else
 		myconf="--enable-gui=no"
