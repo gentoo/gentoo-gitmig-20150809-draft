@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/diffball-0.4_pre4.ebuild,v 1.5 2004/06/25 02:28:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/diffball-0.4_pre4.ebuild,v 1.6 2004/07/14 23:18:06 agriffis Exp $
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Delta compression suite for using/generating binary patches"
 HOMEPAGE="http://sourceforge.net/projects/diffball"
 SRC_URI="mirror://sourceforge/diffball/diffball-${PV}.tar.bz2"
