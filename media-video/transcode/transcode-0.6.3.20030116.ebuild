@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.20030116.ebuild,v 1.4 2003/02/13 19:49:59 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.20030116.ebuild,v 1.5 2003/02/13 20:34:04 phoenix Exp $
 
 IUSE="sdl mmx mpeg sse dvd encode X quicktime avi"
 
@@ -51,8 +51,9 @@ DEPEND=">=media-libs/a52dec-0.7.3
 #	dvd? ( media-libs/libdvdread )"
 
 
-# Don't build with '-mfpmath=sse' or it will break. (Bug #14920)
-filter-flags -mfpmath=sse
+# Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
+filter-flags -mfpmath=sse 
+filter-flags -fPic
 
 src_compile() {
 
