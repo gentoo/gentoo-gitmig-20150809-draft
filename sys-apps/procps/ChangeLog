@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.71 2004/06/24 22:22:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.72 2004/07/20 21:50:30 lostlogic Exp $
+
+*procps-3.2.2 (20 Jul 2004)
+
+  20 Jul 2004; Brandon Low <lostlogic@gentoo.org>
+  +files/procps-3.2.2-selinux-E.diff, +procps-3.2.2.ebuild:
+  Bump, and I had to change the SELinux -Z option to -E for ps because -Z was
+  taken. Hopefully this works for you SELinux people, otherwise mask it out or
+  something
 
   05 Jun 2004; Travis Tilley <lv@gentoo.org> procps-3.2.1.ebuild:
   stable on amd64

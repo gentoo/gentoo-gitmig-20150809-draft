@@ -1,0 +1,14 @@
+diff -urN procps-3.1.15/ps/parser.c procps-3.1.15.new/ps/parser.c
+--- procps-3.1.15/ps/parser.c	2003-12-23 17:58:06.000000000 -0600
++++ procps-3.1.15.new/ps/parser.c	2003-12-24 13:45:08.000000000 -0600
+@@ -315,6 +315,10 @@
+       trace("-Z shows full MAC info\n");
+       format_modifiers |= FM_M;
+       break;
++    case 'E':
++      trace("-E shows SELinux contexts\n");
++      format_flags |= FF_Fc;
++      break;
+     case 'a':
+       trace("-a select all with a tty, but omit session leaders.\n");
+       simple_select |= SS_U_a;
