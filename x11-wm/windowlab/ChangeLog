@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/windowlab
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.4 2003/11/04 15:04:00 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.5 2004/01/21 08:13:43 raker Exp $
+
+*windowlab-1.20 (21 Jan 2004)
+
+  21 Jan 2004; Nick Hadaway <raker@gentoo.org> windowlab-1.20.ebuild:
+  Just a version bump.  I love this window manager.
 
   04 Nov 2003; Brandon Hale <tseng@gentoo.org> windowlab-1.12.ebuild:
   Marking 1.12 stable on x86
