@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/nagios-imagepack-1.0.ebuild,v 1.8 2004/10/25 03:07:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/nagios-imagepack-1.0.ebuild,v 1.9 2005/03/10 10:42:11 ka0ttic Exp $
 
 DESCRIPTION="Nagios imagepacks - Icons and pictures for Nagios"
 HOMEPAGE="http://www.nagios.org"
@@ -25,20 +25,14 @@ RDEPEND="net-analyzer/nagios-core"
 IUSE=""
 
 src_unpack() {
-	local bn
-	mkdir ${S}
-	cd ${S}
-	for i in ${SRC_URI} ; do
-		bn=`basename $i`
-			unpack ${bn}
-	done
-}
-
-src_compile() {
-	einfo "No compilation necessary."
+	mkdir ${S} && cd ${S}
+	unpack ${A}
 }
 
 src_install () {
+	# nagios-core installs nagios.gd2
+	rm base/nagios.gd2
+
 	insinto /usr/nagios/share/images/logos
 	doins base/* didier/* imagepak-andrade/* imagepak-bernhard/* remus/* satrapa/* werschler/*
 }
