@@ -1,3 +1,26 @@
+## BEGIN ##
+
+Copyright 2003 Tim Yamin <plasmaroo@gentoo.org>
+                         <plasmaroo@plasmaroo.squirrelserver.co.uk>
+All rights reserved.
+
+This file may freely be distributed under the conditions of the 
+GPLv2 as long as this header, and the following disclaimer is preserved.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY 
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR 
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE FREEBSD PROJECT OR 
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+## END ##
+
 diff -Naur linux-2.6.0/include/linux/blockgroup_lock.h linux-2.6.0/include/linux.plasmaroo/blockgroup_lock.h
 --- linux-2.6.0/include/linux/blockgroup_lock.h	2003-12-18 02:58:16.000000000 +0000
 +++ linux-2.6.0/include/linux.plasmaroo/blockgroup_lock.h	2003-12-24 11:54:58.000000000 +0000
@@ -64,7 +87,7 @@ diff -Naur linux-2.6.0/include/linux/fs.h linux-2.6.0/include/linux.plasmaroo/fs
 -#include <linux/radix-tree.h>
 +
 +/* This should fix any ``sys-fs'' items getting spinlocks.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.5 2003/12/26 11:11:38 plasmaroo Exp $ 
++   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.6 2003/12/26 20:01:08 plasmaroo Exp $ 
 +*/
 +
 +#ifdef __KERNEL__
@@ -84,7 +107,7 @@ diff -Naur linux-2.6.0/include/linux/isdn.h linux-2.6.0/include/linux.plasmaroo/
 -#include <linux/isdn/fsm.h>
 +
 +/* This should sort out ``ligtop'' from getting spinlocks.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.5 2003/12/26 11:11:38 plasmaroo Exp $
++   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.6 2003/12/26 20:01:08 plasmaroo Exp $
 +*/
 +#ifdef __KERNEL__
 +	#include <linux/isdn/fsm.h>
@@ -102,7 +125,7 @@ diff -Naur linux-2.6.0/include/linux/msdos_fs.h linux-2.6.0/include/linux.plasma
 -#include <linux/buffer_head.h>
 +
 +/* This should sort out any problems with ``dosfstools''.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.5 2003/12/26 11:11:38 plasmaroo Exp $
++   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.6 2003/12/26 20:01:08 plasmaroo Exp $
 +*/
 +#ifdef __KERNEL__
 +	#include <linux/buffer_head.h>
@@ -220,7 +243,7 @@ diff -Naur linux-2.6.0/include/linux/videodev.h linux-2.6.0/include/linux.plasma
 -#include <linux/device.h>
 +
 +/* Should sort out ``DirectFB''.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.5 2003/12/26 11:11:38 plasmaroo Exp $
++   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.6 2003/12/26 20:01:08 plasmaroo Exp $
 +*/
 +#ifdef __KERNEL__
 +	#include <linux/device.h>
