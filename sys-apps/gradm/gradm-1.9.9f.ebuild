@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-1.9.9f.ebuild,v 1.1 2003/04/11 15:10:29 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-1.9.9f.ebuild,v 1.2 2003/04/11 15:16:04 method Exp $
 
 DESCRIPTION="ACL administrative interface to grsecurity including gentoo policies"
 SRC_URI="http://www.grsecurity.net/${P}.tar.gz"
@@ -38,8 +38,8 @@ src_install() {
 	newexe ${FILESDIR}/grsecurity.rc grsecurity
 	insinto /etc/conf.d
 	doins ${FILESDIR}/grsecurity
-	insinto /etc/grsec
-	doins ${S}/gentoo_secure_acls
+	insinto /etc/grsec/gentoo_secure_acls
+	doins ${S}/gentoo_secure_acls/*
 	echo "include </etc/grsec/gentoo_secure_acls>" > ${D}/etc/grsec/acl
 	into /
 	dosbin gradm chpax
