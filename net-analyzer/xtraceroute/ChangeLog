@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/xtraceroute
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/ChangeLog,v 1.8 2004/04/29 09:40:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/ChangeLog,v 1.9 2004/06/04 20:40:58 squinky86 Exp $
+
+*xtraceroute-0.9.1 (04 Jun 2004)
+
+  04 Jun 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +xtraceroute-0.9.1.ebuild:
+  version bump, closes #51707
 
   29 Apr 2004; David Holm <dholm@gentoo.org> xtraceroute-0.9.0.ebuild:
   Added to ~ppc.
