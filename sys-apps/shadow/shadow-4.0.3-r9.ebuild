@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r9.ebuild,v 1.1 2003/12/08 11:53:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r9.ebuild,v 1.2 2003/12/09 22:16:21 seemant Exp $
 
 IUSE="pam selinux"
 
@@ -139,6 +139,8 @@ src_install() {
 	# The manpage install is beyond my comprehension, and
 	# also broken. Just do it over.
 	rm -rf ${D}/usr/share/man/*
+
+	rm -f man/id.1
 	for x in man/*.[0-9]
 	do
 		[ -f ${x} ] && doman ${x}
