@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/unfonts
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/ChangeLog,v 1.1 2004/07/05 05:49:01 usata Exp $
+
+*unfonts-0.0.20040526 (05 Jul 2004)
+
+  05 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +unfonts-0.0.20040526.ebuild:
+  Initial import. Ebuild submitted by Jung Tae-young <master@mytears.org>,
+  closing bug #55827
+
