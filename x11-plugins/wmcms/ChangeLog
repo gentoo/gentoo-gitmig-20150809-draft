@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmcms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/ChangeLog,v 1.6 2004/06/24 23:07:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/ChangeLog,v 1.7 2004/07/20 20:56:18 s4t4n Exp $
+
+*wmcms-0.3.5-r1 (20 Jul 2004)
+
+  20 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> : wmcms-0.3.5-r1.ebuild:
+  Revision bump, added patch to make it work seamlessly with both 2.4 and
+  2.6 kernels... Closes #40640.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
