@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94-r2.ebuild,v 1.1 2005/03/07 13:38:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94-r2.ebuild,v 1.2 2005/03/07 19:48:39 lanius Exp $
 
 inherit libtool flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="1.2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 -ppc-macos ~sparc ~x86 ~ia64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~ppc-macos ~sparc ~x86 ~ia64"
 IUSE="static"
 
 DEPEND="virtual/libc
