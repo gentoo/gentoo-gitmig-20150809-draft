@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libmcal
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.1 2003/05/09 20:17:22 robbat2 Exp $
+
+*libmcal-0.7 (09 May 2003)
+
+  09 May 2003; Robin Johnson <robbat2@gentoo.org> libmcal-0.7.ebuild,
+  ChangeLog:
+  Initial import. Ebuild submitted by Christian Skarby
+  <christian.skarby@interhost.no>.
