@@ -1,12 +1,16 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.5 2002/05/15 13:41:57 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.6 2002/05/26 16:23:53 danarmak Exp $
 
-*kdegraphics-3.0.1 (14 May 2002)
+  26 May 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  Fix typo that reset $DEPEND to "".
 
-  14 May 2002; Bart Verwilst <verwilst@gentoo.org> Changelog :
+*kdegraphics-3.0.1 (24 May 2002)
 
-  KDE 3.0.1 ebuilds. Fully tested.
+  24 May 2002; Dan Armak <danarmak@gentoo.org> Changelog :
+
+  Bugfix release (KDE 3.0.1). Ebuild cleanup. Update some deps.
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> kdegraphics-3.0.ebuild
   kdegraphics-2.2.2.ebuild :

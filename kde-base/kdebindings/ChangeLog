@@ -1,9 +1,16 @@
 # ChangeLog for kde-base/kdebindings
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.4 2002/05/03 10:20:27 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.5 2002/05/26 16:23:53 danarmak Exp $
+
+*kdebindings-3.0.1 (24 May 2002)
+
+  24 May 2002; Dan Armak <danarmak@gentoo.org> Changelog :
+
+  Bugfix release (KDE 3.0.1). Ebuild cleanup; remove a fix no longer necessary in 3.0.1.
+  Reenable java bindings compilation (fixed in this release).
 
   3 May 2002; Dan Armak <danarmak@gentoo.org>
-  Disable java bindings compuilation. There's a known bug (acknowledged on kde.org)
+  Disable java bindings compilation. There's a known bug (acknowledged on kde.org)
   to be fixed (hopefully) in 3.0.1.
 
   11 Apr 2002; Spider <spider@gentoo.org>

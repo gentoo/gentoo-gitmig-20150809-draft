@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.5 2002/05/15 13:35:51 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.6 2002/05/26 16:23:53 danarmak Exp $
+
+*kdenetwork-3.0.1 (24 May 2002)
+
+  24 May 2002; Dan Armak <danarmak@gentoo.org> Changelog :
+
+  Bugfix release (KDE 3.0.1).
 
 *kdenetwork-3.0.1 (14 May 2002)
 

@@ -1,12 +1,19 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.13 2002/05/15 13:15:35 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.14 2002/05/26 16:23:53 danarmak Exp $
 
-*kdebase-3.0.1 (14 May 2002)
+*kdebase-3.0.1 (24 May 2002)
 
-  14 May 2002; Bart Verwilst <verwilst@gentoo.org> Changelog :
+  24 May 2002; Dan Armak <danarmak@gentoo.org> Changelog :
 
-  Added kdebase 3.0.1, cleaned up the other versions/revisions, added 3.0.1 startkde diff.
+  Bugfix release (KDE 3.0.1). Ebuild cleanup. Add dep on samba, conditional
+  on samba use flag.
+  
+  14 May 2002; Bart Verwilst <verwilst@gentoo.org> Changelog:
+  
+  Create a backup copy of the default splashscreen images so that they can be
+  put back after merging and unmerging e.g. mosfet (which overwrite them).
+  (Logged by Dan Armak)
 
   5 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
   
