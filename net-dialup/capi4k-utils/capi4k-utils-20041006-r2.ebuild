@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r2.ebuild,v 1.4 2004/11/14 18:46:54 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r2.ebuild,v 1.5 2004/11/14 19:58:28 hansmi Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DESCRIPTION="CAPI4Linux Utils"
 HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 S=${WORKDIR}/${PN}
 SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/${MY_P}.tar.gz
