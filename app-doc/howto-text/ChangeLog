@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/howto-text
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/ChangeLog,v 1.13 2004/06/24 21:47:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/ChangeLog,v 1.14 2004/08/29 10:26:55 blubb Exp $
+
+  29 Aug 2004; <blubb@gentoo.org> :
+  added amd64 keyword because it doesn't need any compilation
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   howto-text-20040317.ebuild:
