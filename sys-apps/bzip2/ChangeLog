@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/bzip2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.2 2002/02/02 20:11:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.3 2002/03/21 11:42:16 seemant Exp $
+
+*bzip2-1.0.2-r1 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> bzip2-1.0.2-r1.ebuild :
+
+  HTML documentation does not get gzipped any more.  Thanks to
+  stefan@mdy.univie.ac.at for pointing this out.
 
 *bzip2-1.0.2 (2 Feb 2002)
 
