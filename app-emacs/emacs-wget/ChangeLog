@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-wget
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.1 2004/05/01 11:29:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.2 2004/05/02 17:54:15 dholm Exp $
+
+  02 May 2004; David Holm <dholm@gentoo.org> emacs-wget-0.4.2.ebuild:
+  Added to ~ppc.
 
 *emacs-wget-0.4.2 (01 May 2004)
 

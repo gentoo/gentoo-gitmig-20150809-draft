@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/emacs-wget-0.4.2.ebuild,v 1.1 2004/05/01 11:29:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/emacs-wget-0.4.2.ebuild,v 1.2 2004/05/02 17:54:15 dholm Exp $
 
 inherit elisp
 
@@ -16,7 +16,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 src_compile(){
 
