@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openmotif/openmotif-MLI-2.1.30.ebuild,v 1.2 2000/11/01 04:44:24 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30.ebuild,v 1.1 2000/12/09 15:38:34 drobbins Exp $
 
 A=openmotif-2.1.30-4_MLI.src.tar.gz
 S=${WORKDIR}/motif

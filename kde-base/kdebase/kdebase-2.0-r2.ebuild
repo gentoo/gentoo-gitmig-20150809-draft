@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.0-r2.ebuild,v 1.3 2000/11/28 16:43:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.0-r2.ebuild,v 1.4 2000/12/09 15:38:34 drobbins Exp $
 
 A="${P}.tar.bz2"
 S=${WORKDIR}/${P}
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 HOMEPAGE="http://www.kde.org/"
 
 DEPEND=">=kde-base/kdelibs-2.0
-	>=x11-wm/openmotif-MLI-2.1.30"
+	>=x11-libs/openmotif-2.1.30"
 
 src_compile() {
 
