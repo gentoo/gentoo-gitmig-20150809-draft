@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/lapack
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack/ChangeLog,v 1.4 2004/04/19 10:29:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack/ChangeLog,v 1.5 2004/04/21 20:33:05 kugelfang Exp $
+
+  21 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> :
+  Version bump to make /usr/lib/liblapack.a linkable on amd64.
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> lapack-3.0.ebuild:
   Adding IUSE
