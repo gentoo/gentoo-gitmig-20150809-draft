@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.305 2005/01/12 12:24:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.306 2005/01/31 20:07:50 plasmaroo Exp $
+
+  31 Jan 2005; <plasmaroo@gentoo.org> glibc-2.3.4.20041102.ebuild:
+  Marking stable for the 2005.0 IA64 2005.0 profile to work.
 
   12 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20040808-r1.ebuild, glibc-2.3.4.20041102.ebuild:
