@@ -3,8 +3,8 @@ MD5 b04e594ce1aa3379787924322454aba5 mod_perl-1.27.ebuild 1416
 MD5 a248818699df0c2bede5761b7b67cd4c mod_perl-1.27-r2.ebuild 1797
 MD5 026fbb84b447f735b4c86b46860f2afb mod_perl-1.99.08.ebuild 1244
 MD5 58ceed38b57307fa4190170a23408524 mod_perl-1.27-r1.ebuild 1421
-MD5 16dd03050f2cc0c430f9388cad41fefe ChangeLog 3027
-MD5 94925d26f01b6603a7b6116f9d739079 mod_perl-1.27-r3.ebuild 2009
+MD5 7aecbe36dd285e1a1becaf941c760130 ChangeLog 3027
+MD5 60e7a045de6820eeb93486d0a7747405 mod_perl-1.27-r3.ebuild 2004
 MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r1 65
 MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r2 65
 MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r3 65
