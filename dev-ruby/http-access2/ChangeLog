@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/http-access2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/ChangeLog,v 1.6 2004/06/25 01:53:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/ChangeLog,v 1.7 2004/11/14 10:16:50 usata Exp $
+
+  14 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> http-access2-0j-r1.ebuild,
+  -http-access2-0j.ebuild:
+  Stable on ppc and removed old ebuild.
 
 *http-access2-0j-r1 (10 Apr 2004)
 
