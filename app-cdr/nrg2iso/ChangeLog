@@ -1,0 +1,8 @@
+# ChangeLog for app-cdr/nrg2iso
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.1 2003/09/09 22:31:41 zul Exp $
+
+  09 Sep 2003; Chuck Short <zul@gentoo.org> :
+  Initial Version by Florian Zwoch <zwoch@backenmedia.com>
+  Closes bug #27469.
+
