@@ -1,5 +1,5 @@
 MD5 ec508af8d082d31deac2181d4ce894f7 kdelibs-3.2.3-r1.ebuild 2734
-MD5 194b3e44db49fb7f3b7812fa0b08a94c kdelibs-3.3.0_rc1.ebuild 2882
+MD5 bb8300205fe142db5d53ea0beda24bf0 kdelibs-3.3.0_rc1.ebuild 2892
 MD5 2f58e1c51efb89082af89b80505983be kdelibs-3.2.0.ebuild 2404
 MD5 8ae427fb79ac0bded83e551819b42719 kdelibs-3.2.2.ebuild 2495
 MD5 0259c3f239449f381dde6ee6a4619312 kdelibs-3.1.5-r1.ebuild 2056
@@ -22,7 +22,7 @@ MD5 6176dc207f5ba91edee9b04ab111afe5 files/digest-kdelibs-3.2.2 68
 MD5 57b3bdaa9934d84f320c1aa40a56afe4 files/digest-kdelibs-3.2.3 68
 MD5 345ce2e01cfdfa4754c47894c0271dcc files/post-3.2.3-kdelibs-kstandarddirs.patch 1417
 MD5 41d30ba8cf8d36ad3caebeedb1ddfd0e files/kdelibs-3.1.5-kjs-alphaev6-gcc3-workaround.patch 477
-MD5 8d232acefc5349654fc11c70a16fda22 files/digest-kdelibs-3.3.0_rc1 72
+MD5 0ebf6261d0b7bd06ce89a463ac7bbb36 files/digest-kdelibs-3.3.0_rc1 72
 MD5 7cebc1abb3141287db618486fd679b32 files/post-3.2.2-kdelibs-kapplication.patch 882
 MD5 76ef4c7d472a5e3659219ee223f12cb5 files/qt-3.3-printfix.patch 333
 MD5 bde52aa0bba055c4f678540ec20bfe5a files/post-3.1.5-kdelibs-ktelnetservice.patch 968

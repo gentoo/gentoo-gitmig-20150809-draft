@@ -15,7 +15,7 @@ MD5 160f44a51f4308c9c21052fd21c7d04d files/kdebase-3.2.0-kcontrol.patch 699
 MD5 6eb40b28a36f889d0f1919cdbf160ef7 files/kscreensaver.pam 79
 MD5 daa284d6a1f62c5c73deb8aeda9df57d files/digest-kdebase-3.2.3-r1 68
 MD5 ca0fc4bf60b72dd1b8d42cb7e2be5a75 files/agent-shutdown.sh 204
-MD5 7688a76a855ccc4b726fee9726de1e40 files/digest-kdebase-3.3.0_rc1 72
+MD5 fcf60f97ac31ca999d5ffa8106dae543 files/digest-kdebase-3.3.0_rc1 72
 MD5 17b088965016d9c796e570741837a2b3 files/detectwidget.cpp.diff 422
 MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379
 MD5 93966c9ed1c9c8d61604f5cffb8bf9b8 files/digest-kdebase-3.3.0_beta2 69

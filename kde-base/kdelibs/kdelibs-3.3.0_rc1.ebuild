@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0_rc1.ebuild,v 1.2 2004/08/06 18:53:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0_rc1.ebuild,v 1.3 2004/08/07 17:52:04 caleb Exp $
 
 inherit kde eutils
 set-kdedir 3.3
@@ -10,7 +10,7 @@ S=${WORKDIR}/${PN}-${MY_PV/-rc1//}
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http//www.kde.org/"
-SRC_URI="mirror://kde/unstable/${MY_PV}/src/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://kde/unstable/${MY_PV/-rc1/rc1/}/src/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.3"
