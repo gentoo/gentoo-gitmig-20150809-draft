@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.100 2004/11/26 01:47:14 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.101 2004/11/28 12:43:20 johnm Exp $
+
+  28 Nov 2004; John Mylchreest <johnm@gentoo.org> :
+  Forgot to update this so doing so now. after adding support for
+  KBUILD_OUTPUT into the eclass, I updated the nvidia-kernel ebuild to also
+  honour this
 
   26 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
   +files/1.0.6629/nv-fix-memory-limit.patch, nvidia-kernel-1.0.6629.ebuild:
