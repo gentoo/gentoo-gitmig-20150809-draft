@@ -1,0 +1,34 @@
+--- avilib/avilib.c.orig	2003-09-25 22:51:48.000000000 +0000
++++ avilib/avilib.c	2003-09-25 22:56:51.000000000 +0000
+@@ -863,15 +863,28 @@
+      
+      //if (AVI->track[j].a_chans && AVI->track[j].audio_bytes)
+        {
+-	 unsigned long nBlockAlign;
++	 unsigned long nBlockAlign = 0;
++	 unsigned long avgbsec = 0;
++	 unsigned long scalerate = 0;
+ 	   
+ 	 sampsize = avi_sampsize(AVI, j);
+ 
+ 	 nBlockAlign = (AVI->track[j].a_rate<32000)?576:1152;
+ 	 /*
+-	 printf("XXX sampsize (%d) block (%ld) rate (%ld) audio_bytes (%ld) chunks(%ld)\n", 
+-		 sampsize, nBlockAlign, AVI->track[j].a_rate, AVI->track[j].audio_bytes, AVI->track[j].audio_chunks );
++	 printf("XXX sampsize (%d) block (%ld) rate (%ld) audio_bytes (%ld) mp3rate(%ld,%ld)\n",
++	 	sampsize, nBlockAlign, AVI->track[j].a_rate,
++		(long int)AVI->track[j].audio_bytes,
++		1000*AVI->track[j].mp3rate/8, AVI->track[j].mp3rate);
+ 		 */
++
++	if (AVI->track[j].a_fmt==0x1) {
++		sampsize = (AVI->track[j].a_chans<2)?sampsize/2:sampsize;
++		avgbsec = AVI->track[j].a_rate*sampsize/4;
++		scalerate = AVI->track[j].a_rate*sampsize/4;
++	} else  {
++		avgbsec = 1000*AVI->track[j].mp3rate/8;
++		scalerate = 1000*AVI->track[j].mp3rate/8;
++	}
+ 	   
+ 	 OUT4CC ("LIST");
+ 	 OUTLONG(0);        /* Length of list in bytes, don't know yet */

@@ -1,8 +1,8 @@
-MD5 d97bd62dd3e070494da1c12fa7b8e454 ChangeLog 9705
+MD5 9cca125d7e8f4f1c74024a91d328db51 ChangeLog 9856
 MD5 9bb698a6ef1870268dc9a8e7dbf4a285 transcode-0.6.3.ebuild 3049
 MD5 4a54801c033dca53b937e3f793f5d4be transcode-0.6.6.ebuild 3348
 MD5 1ea4f41a1198c9baa644bbc9bdfc3203 transcode-0.6.7.ebuild 3375
-MD5 9d9c922108721f4d8aeff0304c1564cd transcode-0.6.8.ebuild 3330
+MD5 8d488aa2e686df62805758758c893be2 transcode-0.6.8.ebuild 3405
 MD5 bb865c02f4152b7492bdbdf2042389e5 transcode-0.6.9.ebuild 3698
 MD5 225a843999c440c3060e96b9fe6fca35 files/digest-transcode-0.6.3 68
 MD5 2e179af41bdf16c1de0a976eb914a141 files/digest-transcode-0.6.6 68
@@ -12,3 +12,4 @@ MD5 2b19613dfc575babca14ae8f3878cf9f files/digest-transcode-0.6.9 68
 MD5 14479296c3af00baa49396d77c35d01e files/transcode-0.6.7-clone_close.diff 597
 MD5 32c936c145faf596052a5cdbc95376cf files/transcode-0.6.9-makefile.patch 969
 MD5 17ed099139bdf45b65fa1f217b9bb42b files/transcode-0.6.6-2pass.patch 2005
+MD5 b2692b9cf4622fb1b35ae9464bb4d0d0 files/transcode-0.6.8-soxfunc.patch 1278
