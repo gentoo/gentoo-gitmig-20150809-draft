@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-0.99.6-r2.ebuild,v 1.6 2004/08/08 03:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-0.99.6-r2.ebuild,v 1.7 2004/08/21 04:29:47 vapier Exp $
 
 inherit eutils flag-o-matic games
 
@@ -25,9 +25,7 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 
-	replace-flags -march=i686 -march=i586		# Bug 18807 Comment #11
-	replace-flags -march=pentium3 -march=i586	# Bug 18807 Comment #4
-	replace-flags -mcpu=i686 -mcpu=i586
+	replace-cpu-flags i586 i686 pentium3 pentium4 #18807
 
 	cd "${S}/src"
 	sed -e "s:-march=i686:${CFLAGS}:" \
