@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.14 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.15 2004/07/03 12:06:20 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -193,7 +193,7 @@ subversion_bootstrap() {
 	cd "${S}"
 
 	if [ "${ESVN_PATCHES}" ]; then
-		einfo "apply paches -->"
+		einfo "apply patches -->"
 
 		for PATCH in ${ESVN_PATCHES}; do
 			if [ -f "${PATCH}" ]; then
