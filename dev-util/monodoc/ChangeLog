@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.4 2003/07/25 13:10:58 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.5 2003/12/06 05:45:33 tberman Exp $
+
+*monodoc-0.8 (06 Dec 2003)
+
+  06 Dec 2003; Todd Berman <tberman@gentoo.org> monodoc-0.8.ebuild:
+  Nice big version bump, enjoy
 
   25 Jul 2003; Todd Berman <tberman@gentoo.org> monodoc-0.5.ebuild:
   fixing lang->dotnet move depend
