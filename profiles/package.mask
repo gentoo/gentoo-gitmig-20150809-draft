@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <tantive@gentoo.org> (28 Aug 2002)
+# masked because there is a FREEZE
+=sys-apps/openmosix-user-0.2.4
+
 # <cselkirk@gentoo.org> (28 Aug 2002)
 # masked for testing
 =net-misc/keychain-2.0.2
