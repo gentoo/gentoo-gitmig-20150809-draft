@@ -1,8 +1,12 @@
 # ChangeLog for media-fonts/terminus-fonts
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.2 2003/04/23 16:02:49 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.3 2003/04/24 18:26:29 twp Exp $
 
 *terminus-fonts-4.00 (23 Apr 2003)
+
+  24 Apr 2003; Tom Payne <twp@gentoo.org> terminus-fonts-4.00-r2.ebuild :
+
+  Added pkg_postrm. Thanks Paul Totterman.
 
   23 Apr 2003; Tom Payne <twp@gentoo.org> terminus-fonts-4.00-r1.ebuild :
 
