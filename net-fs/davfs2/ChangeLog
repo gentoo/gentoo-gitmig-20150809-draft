@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.4 2004/11/09 21:19:29 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.5 2004/11/24 19:55:00 genstef Exp $
+
+*davfs2-0.2.3 (24 Nov 2004)
+
+  24 Nov 2004; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +davfs2-0.2.3.ebuild:
+  Version bump, closes bug 70692 thanks to Tobias Klauser
+  <tklauser@nuerscht.ch> and Sascha (kn0rki) Hoppe <Vipklick@gmx.de>
 
   09 Nov 2004; Maurice van der Pot <griffon26@gentoo.org>
   davfs2-0.2.2-r1.ebuild:
