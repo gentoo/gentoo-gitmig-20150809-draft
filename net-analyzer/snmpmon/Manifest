@@ -1,2 +1,14 @@
-MD5 cc3bd53fda13da4ab6869c6d9f8ac359 snmpmon-0.5.ebuild 1014
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0f85ba5eedcc0dce5da73cbb32c41f18 snmpmon-0.5.ebuild 1114
+MD5 a709b82f78abb35a77c50ecd8e906353 ChangeLog 405
+MD5 bfbc854701bf44b695955f18ceef3ca8 metadata.xml 343
 MD5 3a339c38bf11a7eac9bd3962a4d54108 files/digest-snmpmon-0.5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD4DBQFBAloTT+MN7JbqCpMRAt3JAJinbrYYZhdBTdOM8jHBwWgfXl/SAJsHfWId
+FDlA5K5/l0ZNKluf4QvLTg==
+=NpKg
+-----END PGP SIGNATURE-----
