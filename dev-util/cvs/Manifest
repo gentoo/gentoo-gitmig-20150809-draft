@@ -1,6 +1,6 @@
 MD5 d94b4b7fda338f3b27241bfd64b5a6ed cvs-1.11.10.ebuild 1045
 MD5 592fad8a8f3fb24531ca5e7c9f8c42b8 cvs-1.11.10-r1.ebuild 1150
-MD5 fa6b758a9d0092ac810a8582a13e681a ChangeLog 2710
+MD5 a60c192cca548820810ceced9a995fb1 ChangeLog 2724
 MD5 3af5ca24e7e103ac0724dfe10e7fc04a files/digest-cvs-1.11.10-r1 65
 MD5 4a9f7880c910789492e9413425e15556 files/cvspserver.xinetd.d 297
 MD5 3af5ca24e7e103ac0724dfe10e7fc04a files/digest-cvs-1.11.10 65

@@ -1,11 +1,11 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.22 2003/12/09 19:25:40 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.23 2003/12/09 19:28:00 scandium Exp $
 
 *cvs-1.11.10-r1 (09 Dec 2003)
                                                                                                                              
   09 Dec 2003; Rainer Groesslinger <scandium@gentoo.org> cvs-1.11.10-r1.ebuild:
-  minor fixes to xinet.d file,
+  minor fixes in the cvspserver xinetd file,
   cvs user/group is automatically added (bug #25313)
 
 *cvs-1.11.10 (06 Dec 2003)
