@@ -1,6 +1,14 @@
 # ChangeLog for app-sci/xdrawchem
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.5 2002/07/25 16:18:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.6 2002/08/07 10:23:01 george Exp $
+
+*xdrawchem-1.4.2 (06 Aug 2002)
+
+  06 Aug 2002; George Shapovalov <george@gentoo.org> xdrawchem-1.4.2.ebuild, files/digest-xdrawchem-1.4.2 :
+
+  new version,
+  changed data dir from /usr/share/ringinfo to /usr/share/${P} (for consistency)
+  changed LICENSE: GPL -> GPL-2
 
 *xdrawchem-1.4 (10 Jul 2002)
 
