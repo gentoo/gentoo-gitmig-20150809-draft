@@ -1,10 +1,13 @@
 # ChangeLog for net-www/squid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.6 2002/07/12 12:40:18 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.7 2002/09/15 01:26:51 blizzy Exp $
+
+  15 Sep 2002; Maik Schreiber <blizzy@gentoo.org> files/squid.rc6: Removed
+  hard dependency on /var/cache/squid.
 
 *squid-2.4.7 (12 Jul 2002)
 
-  12 Jul 2002; Bruce A. Locke <blocke@shivan.org>:
+  12 Jul 2002; Bruce A. Locke <blocke@shivan.org> :
 
   Version bump and added KEYWORDS
   
