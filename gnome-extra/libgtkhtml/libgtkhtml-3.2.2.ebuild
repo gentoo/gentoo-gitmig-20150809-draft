@@ -1,19 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.2.2.ebuild,v 1.2 2004/10/01 10:21:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.2.2.ebuild,v 1.3 2004/10/26 09:31:15 liquidx Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils versionator
 
 MY_P=${P/lib/}
 MY_PN=${PN/lib/}
+MY_MAJ_PV=$(get_version_component_range 1-2)
+
 DESCRIPTION="Lightweight HTML Rendering/Printing/Editing Engine"
 HOMEPAGE="http://www.gnome.org/"
-
-# stolen from gnome.org eclass because it support this one-off name-mangling
-
-PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
-SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
-
+SRC_URI="mirror://gnome/sources/${MY_PN}/${MY_MAJ_PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.2"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha ~ia64 ~amd64"
