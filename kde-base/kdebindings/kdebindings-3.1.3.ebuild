@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.3.ebuild,v 1.4 2003/09/17 01:37:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.3.ebuild,v 1.5 2003/09/21 22:10:58 caleb Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist
 
@@ -42,5 +42,7 @@ src_unpack()
 	cp Makefile.am Makefile.am.orig
 	sed -e 's:mozilla::' Makefile.am.orig > Makefile.am
 	fi
+
+	cd ${S} && aclocal
 }
 
