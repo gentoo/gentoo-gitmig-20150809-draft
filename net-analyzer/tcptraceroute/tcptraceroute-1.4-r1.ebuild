@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.4-r1.ebuild,v 1.1 2003/06/25 17:25:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.4-r1.ebuild,v 1.2 2003/06/28 18:02:41 aliz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://michael.toren.net/code/tcptraceroute/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~arm"
+KEYWORDS="x86 ppc sparc arm"
 
 DEPEND="net-libs/libpcap
 	=net-libs/libnet-1.0*"
