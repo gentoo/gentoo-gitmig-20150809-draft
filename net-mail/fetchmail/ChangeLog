@@ -1,8 +1,13 @@
 # ChangeLog for net-mailfetchmailChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.7 2002/10/01 09:11:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.8 2002/10/08 15:44:57 raker Exp $
 
 *fetchmail-6.1.0 (01 Oct 2002)
+
+  08 Oct 2002; Nick Hadaway <raker@gentoo.org> fetchmail-6.1.0.ebuild :
+  Added a patch to remove /usr/include warning messages if ssl is
+  enabled. 
+
   01 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Security update.
 
