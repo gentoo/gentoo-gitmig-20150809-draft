@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.2 2002/04/26 10:21:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.3 2002/05/06 22:59:53 seemant Exp $
+
+*perl-tk-800.024-r1 (6 May 2002)
+  
+  6 May 2002; Seemant Kulleen <seemant@gentoo.org>
+  perl-tk-800.024-r1.ebuild :
+
+  eclassed
 
 *perl-tk-800.024 (26 Apr 2002)
 
