@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.0.3.ebuild,v 1.3 2003/10/27 23:57:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.0.3.ebuild,v 1.4 2003/12/13 03:04:17 kloeri Exp $
 
 
 DESCRIPTION="An Apache2 DSO providing an embedded Python interpreter"
@@ -38,6 +38,8 @@ src_install() {
 	doins ${FILESDIR}/16_mod_python.conf
 	dodoc ${FILESDIR}/16_mod_python.conf README NEWS CREDITS COPYRIGHT
 	dohtml doc-html/*
+	insinto /usr/share/doc/${P}/html/icons
+	doins doc-html/icons/*
 }
 
 pkg_postinst() {
