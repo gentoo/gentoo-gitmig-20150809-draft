@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.16.ebuild,v 1.1 2003/03/16 00:14:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.16.ebuild,v 1.2 2003/03/16 03:08:15 liquidx Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2
@@ -22,10 +22,10 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libbonobo-2
 	>=gnome-base/libbonoboui-2
 	>=gnome-base/bonobo-activation-1.0.2
-	>=gnome-base/libgnomeprint-1.116.0
-	>=gnome-base/libgnomeprintui-1.116.0
+	>=gnome-base/libgnomeprint-2.2
+	>=gnome-base/libgnomeprintui-2.2
 	>=gnome-extra/gal-1.99
-	>=gnome-extra/libgsf-1.6.0
+	>=gnome-extra/libgsf-1.7.1
 	>=gnome-base/libglade-2
 	>=dev-libs/libxml2-2.4.12
 	perl?   ( >=dev-lang/perl-5.6 )
