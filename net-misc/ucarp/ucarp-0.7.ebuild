@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-0.7.ebuild,v 1.1 2004/07/13 19:29:26 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-0.7.ebuild,v 1.2 2004/07/15 00:14:35 agriffis Exp $
 
 DESCRIPTION="Userspace CARP implimentation allows hosts to share ip address."
 

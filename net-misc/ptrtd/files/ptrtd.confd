@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ptrtd/files/ptrtd.confd,v 1.1 2003/05/31 19:34:44 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ptrtd/files/ptrtd.confd,v 1.2 2004/07/15 00:09:37 agriffis Exp $
 
 
 # Config file for ptrtd
