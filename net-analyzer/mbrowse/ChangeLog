@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mbrowse
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/ChangeLog,v 1.5 2004/10/01 15:01:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/ChangeLog,v 1.6 2004/10/30 21:44:37 malc Exp $
+
+  30 Oct 2004; Malcolm Lashley <malc@gentoo.org> mbrowse-0.3.1.ebuild:
+  ~amd64 - Bug #66986
 
   01 Oct 2004; Jason Wever <weeve@gentoo.org> mbrowse-0.3.1.ebuild:
   Added ~sparc keyword.

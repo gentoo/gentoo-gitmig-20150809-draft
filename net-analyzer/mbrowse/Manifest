@@ -1,5 +1,5 @@
-MD5 ae04227774355444839ecff237ac7aea ChangeLog 874
-MD5 03d70592d4bd37a55601e8e1a739ea22 mbrowse-0.3.1.ebuild 831
+MD5 e04d2d6c5785b54e94f1c31762a0ce61 ChangeLog 967
+MD5 53e593ab1e4085a8a7c92811af1175a6 mbrowse-0.3.1.ebuild 837
 MD5 e25c84fd1a2a0c0e81cacb709f6cbbbe metadata.xml 260
 MD5 722ff9cd5c441cea1bea3c91714df7b7 files/digest-mbrowse-0.3.1 64
 MD5 1cd92450e64f554108329905ae42f71e files/0.3.1-gentoo.patch 805
