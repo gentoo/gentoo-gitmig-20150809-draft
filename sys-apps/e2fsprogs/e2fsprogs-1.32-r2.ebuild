@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.32-r2.ebuild,v 1.4 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.32-r2.ebuild,v 1.5 2003/02/23 19:35:34 agriffis Exp $
 
 IUSE="nls"
 
@@ -52,9 +52,8 @@ src_install() {
 	
 	make DESTDIR=${D} install-libs || die
 	
-	if [ "`use nls`" ]
-	then
-		( cd po; make DESTDIR=${D} install || die )
+	if use nls; then
+		make -C po DESTDIR=${D} install || die
 	fi
 	
 	dodoc COPYING ChangeLog README RELEASE-NOTES SHLIBS
