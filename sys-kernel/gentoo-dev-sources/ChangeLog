@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.74 2004/07/09 10:55:34 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.75 2004/07/12 17:06:31 gregkh Exp $
+
+*gentoo-dev-sources-2.6.7-r10 (12 Jul 2004)
+
+  12 Jul 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +gentoo-dev-sources-2.6.7-r10.ebuild:
+  This update is only for amd64 and sparc users, all other arches
+  can successfully ignore it.
+  
+  Fix bug 55155 for amd64
+  Add sparc patchset so that sparc can now use this kernel.
 
 *gentoo-dev-sources-2.6.7-r9 (09 Jul 2004)
 
