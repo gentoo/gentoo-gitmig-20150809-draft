@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <satai@gentoo.org> (13 Jan 2003)
+# Getting ready for the tetex-2.0 release.
+>app-text/tetex-1.0.7-r11
+
 # <carpaski@gentoo.org> (12 Jan 2003)
 # Testing for UserPriv compile. Works, but breaks a couple ebuilds.
 >=sys-apps/portage-2.0.47_pre1
@@ -433,10 +437,6 @@ x11-libs/gtkmm-addons
 =net-mail/courier-imap-1.5.3
 # added choosable maildir/mbox support
 =net-mail/uw-imap-2001a-r3
-
-# <satai@gentoo.org> (20 Sep 2002)
-# Too many problems.  Masking to fix.
->app-text/tetex-1.0.7-r11
 
 # <danarmak@gentoo.org> (17 Sep 2002)
 # masked for testing of the gcc3 patch I added for this new version
