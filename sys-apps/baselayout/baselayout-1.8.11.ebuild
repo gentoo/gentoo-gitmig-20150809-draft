@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.11.ebuild,v 1.3 2004/04/24 09:21:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.11.ebuild,v 1.4 2004/05/02 16:09:30 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -389,10 +389,12 @@ src_install() {
 	#
 	# Install baselayout documentation
 	#
-	doman ${S}/man/*.*
-	docinto /
-	dodoc ${FILESDIR}/copyright
-	dodoc ${S}/ChangeLog
+	if ! use build ; then
+		doman ${S}/man/*.*
+		docinto /
+		dodoc ${FILESDIR}/copyright
+		dodoc ${S}/ChangeLog
+	fi
 
 	#
 	# Install baselayout utilities
