@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.10 2001/11/10 11:31:52 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.11 2002/06/11 18:19:22 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An XML Framework"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.entity.cx"
 
 DEPEND=">=media-libs/imlib-1.9.10-r1
 	>=dev-libs/libpcre-3.2
-	tcltk? ( >=dev-lang/tcl-tk-8.1.1 )
+	tcltk? ( >=dev-lang/tk-8.1.1 )
 	perl? ( >=sys-devel/perl-5.6 )
 	python? ( >=dev-lang/python-2.0-r4 )
 	sdl? ( >=media-libs/libsdl-1.1.7 )
@@ -20,7 +20,7 @@ DEPEND=">=media-libs/imlib-1.9.10-r1
 
 RDEPEND=">=media-libs/imlib-1.9.10-r1
 	>=dev-libs/libpcre-3.2
-	tcltk? ( >=dev-lang/tcl-tk-8.1.1 )
+	tcltk? ( >=dev-lang/tk-8.1.1 )
 	perl? ( >=sys-devel/perl-5.6 )
 	python? ( >=dev-lang/python-2.0i-r4 )
 	sdl? ( >=media-libs/libsdl-1.1.7 )
