@@ -1,0 +1,28 @@
+#!/bin/sh
+#RCUPDATE:1 2 3 4 5:19:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=svc-klog
+opts="start stop"
+
+start() {
+    ebegin "Starting ${SERVICE}"
+	ln -sf ../services/${SERVICE} ${SVCDIR}/control/${SERVICE}
+    eend $retval
+}
+
+stop() {
+    ebegin "Stopping ${SERVICE}"
+   	if [ -e ${SVCDIR}/control/${SERVICE} ]
+	then
+		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}
+		rm ${SVCDIR}/control/${SERVICE}
+	fi
+	eend $?
+}
+
+doservice ${@}
+
+
+
