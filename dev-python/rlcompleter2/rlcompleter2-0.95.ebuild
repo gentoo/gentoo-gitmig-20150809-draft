@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rlcompleter2/rlcompleter2-0.95.ebuild,v 1.1 2003/03/30 00:39:19 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rlcompleter2/rlcompleter2-0.95.ebuild,v 1.2 2003/04/04 02:00:28 liquidx Exp $
 
 inherit distutils
 
@@ -12,11 +12,7 @@ KEYWORDS="~x86 ~ppc"
 LICENSE="PSF-2.2"
 IUSE=""
 
-src_install()
-{
-	mydoc="PKG-INFO ${mydoc}"
-	distutils_src_install
-}
+mydoc="PKG-INFO ${mydoc}"
 
 pkg_postinst()
 {
