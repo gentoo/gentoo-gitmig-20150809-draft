@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r1.ebuild,v 1.4 2003/11/02 19:13:50 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r1.ebuild,v 1.5 2003/11/14 15:53:53 aliz Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://ee.lbl.gov/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 alpha sparc ~mips"
+KEYWORDS="x86 alpha sparc ~mips ~amd64"
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}
@@ -33,6 +33,7 @@ src_compile() {
 	# fixes bug #21122
 	# -taviso
 	use alpha && gnuconfig_update
+	use amd64 && gnuconfig_update
 
 	# assume linux by default #26699
 	# -taviso
