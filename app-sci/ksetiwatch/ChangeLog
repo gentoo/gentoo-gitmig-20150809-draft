@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/ksetiwatch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetiwatch/ChangeLog,v 1.7 2004/06/24 22:05:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetiwatch/ChangeLog,v 1.8 2004/06/29 11:44:39 carlo Exp $
+
+  29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> ksetiwatch-2.6.0.ebuild,
+  ksetiwatch-2.6.1.ebuild:
+  QA: inherit kde-base -> inherit kde, newdepend -> DEPEPEND, need-kde after
+  R/DEPEND
 
 *ksetiwatch-2.6.1 (01 Dec 2003)
 
