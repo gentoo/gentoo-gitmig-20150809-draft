@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 387891c3013765f1ac7de1f7cb8c08aa ChangeLog 722
+MD5 7047566fac27a009b0c9055b7244d006 ChangeLog 898
 MD5 7d6203f46f91795c95ca6a22ee6dff5a hsshellscript-2.1.0.ebuild 1239
 MD5 3f6e26f4a44d1b5c6ff6380d989e6af6 metadata.xml 222
 MD5 644451fe973c437cf97d3a24a46e07e1 hsshellscript-2.2.0.ebuild 1120
+MD5 01644cea689c96ec8d3aaaee2a41e463 hsshellscript-2.2.2.ebuild 1119
 MD5 29b043a8133ca29f855bd09a4ce05033 files/digest-hsshellscript-2.1.0 71
 MD5 c16f03216f6b47b89224ab176c13aa21 files/digest-hsshellscript-2.2.0 71
+MD5 7ae622841800669416a46ccab3d9a9b0 files/digest-hsshellscript-2.2.2 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCLhOABQBy/eDH5uERAvmkAKCpBDMjYzjMR1n6efNx0V9LjBIvuQCfXT2y
-Rxxchozz3DjwhVIukiGLx2w=
-=yPTE
+iD8DBQFCOu6qBQBy/eDH5uERAmwUAJ9EzJ338Tx1HZfCZJ6sVgoaqw05dgCgsXq+
+M6R1fVEFhkbhXPCEn3VSFmM=
+=6UZA
 -----END PGP SIGNATURE-----
