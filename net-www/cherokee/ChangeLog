@@ -1,6 +1,17 @@
 # ChangeLog for net-www/cherokee
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.15 2004/04/08 12:14:10 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.16 2004/04/14 23:02:57 bass Exp $
+
+*cherokee-0.4.16 (15 Apr 2004)
+
+  15 Apr 2004; <bass@gentoo.org> cherokee-0.4.16.ebuild:
+  New version.
+  Removed the gnome-vfs support, the main cherokee-dev say this:
+   (00:33:56) Alo: quita lo de GNOME-VFS.. que eso sólo es un peligro
+                   y no vale para nada en el mundo real :)
+  (gnome-vfs is dengerous and don't usefull in the real world)
+   (00:45:14) Alo: es un buen ejemplo de como hacer un handler
+                   asincrono en Cherokee... :)
 
 *cherokee-0.4.15 (01 Apr 2004)
 
