@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.17 2003/09/22 12:14:38 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.18 2003/09/25 05:31:20 robbat2 Exp $
+
+*wolk-sources-4.9 (24 Sep 2003)
+
+  24 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> wolk-sources-4.9.ebuild:
+  version bump to 4.9
 
   22 Sep 2003; <paul@gentoo.org> metadata.xml:
   Fix metadata.xml
