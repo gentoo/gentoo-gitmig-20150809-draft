@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20040216.ebuild,v 1.2 2004/08/24 02:05:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20040820.ebuild,v 1.1 2004/08/24 02:05:14 swegener Exp $
 
 IUSE="ipv6"
 
 DESCRIPTION="ircII is an IRC and ICB client that runs under most UNIX platforms."
-SRC_URI="ftp://ircii.warped.com/pub/ircII/old/${P}.tar.bz2"
+SRC_URI="ftp://ircii.warped.com/pub/ircII/${P}.tar.bz2"
 HOMEPAGE="http://www.eterna.com.au/ircii/"
 
 RDEPEND="sys-libs/ncurses"
