@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Telnet-Cisco
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet-Cisco/ChangeLog,v 1.1 2003/06/04 01:18:06 mcummings Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet-Cisco/ChangeLog,v 1.2 2004/05/07 18:09:41 gustavoz Exp $
+
+  07 May 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  Net-Telnet-Cisco-1.10.ebuild:
+  Stable on sparc
 
 *Net-Telnet-Cisco-1.10 (03 Jun 2003)
 
