@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libgnomeui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.27 2003/07/01 21:15:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.28 2003/07/12 00:16:20 foser Exp $
+
+*libgnomeui-2.2.2 (12 Jul 2003)
+
+  12 Jul 2003; foser <foser@gentoo.org> libgnomeui-2.2.2.ebuild :
+  New version, removed perl dep
 
 *libgnomeui-2.2.1 (04 Jun 2003)
 
