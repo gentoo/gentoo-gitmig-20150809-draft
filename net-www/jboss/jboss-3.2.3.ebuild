@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.3.ebuild,v 1.3 2004/04/27 19:57:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.3.ebuild,v 1.4 2004/05/19 04:55:25 zx Exp $
 
 inherit eutils
 
@@ -75,8 +75,8 @@ src_install() {
 	classpath=$(find ${D}/${INSTALL_DIR}/client -type f -name \*.jar |sed "s,${D}/,,g")
 	classpath=$(echo ${classpath})
 	cat >${D}/usr/share/jboss/package.env <<EOF
-DESCRIPTION='Client side libraries for JBoss'
-CLASSPATH='${classpath// /:}'
+DESCRIPTION=Client side libraries for JBoss
+CLASSPATH=${classpath// /:}
 EOF
 
 	dodoc server/src/docs/LICENSE.txt ${FILESDIR}/README.gentoo
