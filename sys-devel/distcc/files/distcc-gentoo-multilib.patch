@@ -11,7 +11,7 @@ diff -Naur distcc-2.18.3-vanilla/src/distcc.c distcc-2.18.3/src/distcc.c
 +static char **getNewArgv(char **argv) {
 +    char **newargv;
 +    char newflags[MAXNEWFLAGS][MAXFLAGLEN + 1];
-+    unsigned newflagsCount;
++    unsigned newflagsCount = 0;
 +    unsigned argc;
 +    unsigned i;
 +    char **p;

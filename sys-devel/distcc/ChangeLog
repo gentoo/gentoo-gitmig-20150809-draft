@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.132 2005/01/12 06:30:25 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.133 2005/01/14 22:01:24 eradicator Exp $
+
+  14 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  files/distcc-gentoo-multilib.patch:
+  Updating patch to properly initialze newflagsCount. Thanks to Sven Wegener
+  <swegener@gentoo.org>.
 
   12 Jan 2005; Lisa Seelye <lisa@gentoo.org> -distcc-2.17-r1.ebuild,
   -distcc-2.18.3.ebuild:
