@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Tim Raedisch <tim.raedisch@udo.edu>
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.6.ebuild,v 1.3 2003/09/06 02:05:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.6.ebuild,v 1.4 2003/10/27 14:14:01 aliz Exp $
 
 S=${WORKDIR}/${PN}2
 DESCRIPTION="phpBB is a high powered, fully scalable, and highly customisable open-source bulletin board package."
 HOMEPAGE="http://www.phpbb.com/"
-SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/phpbb/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/phpbb/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
