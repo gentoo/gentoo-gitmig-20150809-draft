@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smalltalkx/smalltalkx-4.1.4.ebuild,v 1.4 2003/07/11 22:14:08 aliz Exp $
-
-IUSE=""
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smalltalkx/smalltalkx-4.1.4.ebuild,v 1.5 2003/08/05 18:56:23 vapier Exp $
 
 MY_PV=${PV//./}
 S=${WORKDIR}/stx
@@ -11,13 +9,14 @@ HOMEPAGE="http://www.exept.de/exept_99/english/welcomeFrame_smalltalk.html"
 SRC_URI="mirror://gentoo/${PN}-common-${MY_PV}.tar.gz
 	mirror://gentoo/${PN}-linux-${MY_PV}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc virtual/x11"
+DEPEND="virtual/glibc
+	virtual/x11"
 
-src_install () {
+src_install() {
 	dodir /opt
 	./INSTALL.sh -q -top ${D}/opt
 
@@ -37,5 +36,4 @@ src_install () {
 	echo "PATH=/opt/smalltalk/${PV}/bin" >> ${WORKDIR}/50smalltalkx
 	insinto /etc/env.d
 	doins ${WORKDIR}/50smalltalkx
-	
 }

@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.8.1.ebuild,v 1.8 2003/02/13 10:29:50 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.8.1.ebuild,v 1.9 2003/08/05 18:57:11 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Stratego term-rewriting language"
+HOMEPAGE="http://www.stratego-language.org/"
 SRC_URI="http://www.stratego-language.org/ftp/${P}.tar.gz"
-HOMEPAGE="http://www.stratego-language.org"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc ~alpha" 
+
 DEPEND=">=dev-libs/aterm-1.6.7
 	>=dev-libs/cpl-stratego-0.4"
-RDEPEND="$DEPEND"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha" 
-IUSE=""
 
 src_compile() {
 	# 2002-11-02, karltk@gentoo.org:
@@ -25,6 +24,6 @@ src_compile() {
 		DESTDIR=${D} || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 }
