@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/slirp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slirp/ChangeLog,v 1.8 2004/11/28 13:44:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slirp/ChangeLog,v 1.9 2004/11/29 17:12:38 mrness Exp $
+
+  29 Nov 2004; Alin Nastac <mrness@gentoo.org> slirp-1.0.16.ebuild:
+  Masked on 64-bit arches because the code is not 64-bit safe. See #72678.
 
 *slirp-1.0.16 (28 Nov 2004)
 
