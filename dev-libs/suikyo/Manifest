@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f13e5ff83f7d19b6da226f958ccc9c51 ChangeLog 2944
-MD5 8afe4eded45a484580ce855f24ffea2e metadata.xml 265
+MD5 831f7ac238916d2b30399662e60a98c9 ChangeLog 3041
 MD5 a05866986e0f47a13398a1a05d8899f5 suikyo-2.0.0.1.ebuild 846
-MD5 73be4e71ec6c4c9b2c93a28e9017c261 suikyo-2.0.1.2.ebuild 893
-MD5 4d03ee45f5b90d7f41f711bd5a383d7e files/50suikyo-gentoo.el 61
+MD5 8afe4eded45a484580ce855f24ffea2e metadata.xml 265
+MD5 8ffc5fddb74ccd0fc26e61d91550f330 suikyo-2.0.1.2.ebuild 893
 MD5 4982fe65cd281e7f9e940eadfda657b9 files/digest-suikyo-2.0.0.1 66
+MD5 4d03ee45f5b90d7f41f711bd5a383d7e files/50suikyo-gentoo.el 61
 MD5 59e814832cc49d5eefc10a41f9b85e7a files/digest-suikyo-2.0.1.2 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCCx3FVWNWqTUmv+0RAtMtAKCppFgX266UnMMKkkyt3dsKo1WMiwCcCQBA
-A87WB6PqCAcRnA7SxpHzCo4=
-=ZaZr
+iD8DBQFCRrJvugEuf3OQ0akRAgxjAJ96yoPHbXleF5GDI6Fwib7amXHt4gCgmCkB
+bNNwuGFLUelzhxCygK3pbsU=
+=791/
 -----END PGP SIGNATURE-----
