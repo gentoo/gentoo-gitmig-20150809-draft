@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.2-r1.ebuild,v 1.7 2003/09/18 21:52:17 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.2-r1.ebuild,v 1.8 2003/11/08 17:20:51 brad_mssw Exp $
 
 inherit libtool
 
@@ -16,6 +16,10 @@ KEYWORDS="x86 ~ppc sparc ~alpha hppa amd64 ia64"
 DEPEND="virtual/glibc"
 
 src_compile() {
+	if [ "${ARCH}" = "amd64" ]
+	then
+		append-flags -fPIC
+	fi
 	elibtoolize
 	econf --enable-utf8 || die
 	make || die
