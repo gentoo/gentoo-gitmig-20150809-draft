@@ -770,4 +770,4 @@ net-mail/courier
 
 # prez@gentoo.org 17 May 2002
 # needs testing
-sys-devel/gcc-3.1
+=sys-devel/gcc-3.1
