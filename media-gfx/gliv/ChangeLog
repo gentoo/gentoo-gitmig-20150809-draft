@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gliv
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.16 2004/10/18 17:49:26 azarah Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.17 2005/03/05 19:47:48 blubb Exp $
+
+  05 Mar 2005; Simon Stelling <blubb@gentoo.org> gliv-1.8.2.ebuild:
+  added ~amd64
 
   18 Oct 2004; Martin Schlemmer <azarah@gentoo.org> gliv-1.8.2.ebuild:
   Fix sandbox violation if desktop-file-utils is installed.
