@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.15 2004/01/26 00:31:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.16 2004/01/29 04:01:59 agriffis Exp $
 
 inherit eutils libtool
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/aa-project/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 IUSE="X slang gpm"
 
 DEPEND=">=sys-libs/ncurses-5.1
