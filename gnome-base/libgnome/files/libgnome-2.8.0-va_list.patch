@@ -1,0 +1,18 @@
+This patch fixes bug 67345.  The problem is that va_list is not always
+implemented as a pointer on architectures other than x86.  Using an
+uninitialized va_list is as safe as using 0 because nparams is checked
+in gnome_program_init_common.
+
+(21 Oct 2004 agriffis)
+
+--- libgnome-2.8.0/libgnome/gnome-program.c.va_list	2004-10-21 11:59:15.000000000 -0400
++++ libgnome-2.8.0/libgnome/gnome-program.c	2004-10-21 11:59:25.000000000 -0400
+@@ -1928,6 +1928,7 @@
+                            int argc, char **argv,
+                            guint nparams, GParameter *params)
+ {
++    va_list va;
+     return gnome_program_init_common (type, app_id, app_version, module_info,
+-				      argc, argv, NULL, 0, nparams, params);
++				      argc, argv, NULL, va, nparams, params);
+ }
