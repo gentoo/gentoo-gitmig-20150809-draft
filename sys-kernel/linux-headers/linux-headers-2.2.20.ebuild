@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.20.ebuild,v 1.5 2002/07/11 06:30:56 drobbins Exp $
-#OKV=original kernel version, KV=patched kernel version.  They can be the same.
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.20.ebuild,v 1.6 2002/08/10 03:17:05 seemant Exp $
+#OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
@@ -21,13 +21,13 @@ PDEVFS=devfs-patch-v99.21
 PREISERFS=linux-2.2.19-reiserfs-3.5.34-patch
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.2/linux-${PV}.tar.bz2  
+SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.2/linux-${PV}.tar.bz2
 		 ftp://ftp.atnf.csiro.au/pub/people/rgooch/linux/kernel-patches/v2.2/${PDEVFS}.gz
 		 ftp://ftp.namesys.com/pub/reiserfs-for-2.2/${PREISERFS}.bz2"
 PROVIDE="virtual/kernel"
 HOMEPAGE="http://www.kernel.org/ 
-		  http://www.atnf.csiro.au/~rgooch/linux/kernel-patches.html/
-		  http://www.namesys.com" 
+	http://www.atnf.csiro.au/~rgooch/linux/kernel-patches.html/
+	http://www.namesys.com" 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
@@ -60,11 +60,11 @@ src_unpack() {
 	cd ${S}
 	make mrproper || die
 
-	#linux-sources needs to be fully configured, too.  This is the configuration for the default kernel
+	#linux-sources needs to be fully configured, too. This is the configuration for the default kernel
 	cp ${S}/arch/i386/defconfig .config || die
 	yes "" | make oldconfig
 	echo "Ignore any errors from the yes command above."
-    
+
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
 	chown -R 0.0 *

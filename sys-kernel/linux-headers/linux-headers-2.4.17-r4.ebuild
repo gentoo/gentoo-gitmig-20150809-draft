@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r4.ebuild,v 1.3 2002/07/11 06:30:56 drobbins Exp $
-#OKV=original kernel version, KV=patched kernel version.  They can be the same.
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r4.ebuild,v 1.4 2002/08/10 03:17:05 seemant Exp $
+#OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
@@ -16,33 +16,33 @@ KEYWORDS="x86"
 # What's in this kernel?
 
 # INCLUDED:
-#   xfs (13 Feb 2002 CVS)
-#   read-latency2.patch from http://www.zipworld.com.au/~akpm/linux/2.4/2.4.18-pre9/ 
-#     (improves multiple disk read/write IO performance)
-#   fastpte 
-#     (enables an option to do fast scanning of the page tables)
-#   ide.2.4.17.02072002.patch from http://www.linuxdiskcert.org/ 
-#     (revamped IDE code)
-#   preempt-kernel-rml-2.4.17-3 from http://www.tech9.net/rml/linux/ 
-#     (preemptible kernel)
-#   loopback device deadlock fixes from akpm
+#	xfs (13 Feb 2002 CVS)
+#	read-latency2.patch from http://www.zipworld.com.au/~akpm/linux/2.4/2.4.18-pre9/ 
+#	(improves multiple disk read/write IO performance)
+#	fastpte 
+#	(enables an option to do fast scanning of the page tables)
+#	ide.2.4.17.02072002.patch from http://www.linuxdiskcert.org/ 
+#	(revamped IDE code)
+#	preempt-kernel-rml-2.4.17-3 from http://www.tech9.net/rml/linux/ 
+#	(preemptible kernel)
+#	loopback device deadlock fixes from akpm
 
 # UPDATED in 2.4.17-r4:
-#   xfs was updated from 26 Jan 2002 to 13 Feb 2002 CVS
-#   ide updated from 01192002 to 02072002
-#   preempt was updated from -1 to -3
+#	xfs was updated from 26 Jan 2002 to 13 Feb 2002 CVS
+#	ide updated from 01192002 to 02072002
+#	preempt was updated from -1 to -3
 
 # REMOVED from 2.4.17-r4:
-#   irqrate-a1 (which should close bug #396, possibly others)
-#   acpi-20020208-2.4.17.diff.gz from http://sourceforge.net/projects/acpi
+#	irqrate-a1 (which should close bug #396, possibly others)
+#	acpi-20020208-2.4.17.diff.gz from http://sourceforge.net/projects/acpi
 #	(see bug #689; this patch conflicts with the stock aic7xxx scsi driver.
-#   this bug has been sent upstream)
+#	this bug has been sent upstream)
 
 # Note: enable "Taskfile" options in kernel config if you're using IDE
 # The linuxdiskcert site says "no" but the patch author says "yes"
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
+SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
 PROVIDE="virtual/kernel"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 
@@ -77,11 +77,11 @@ src_unpack() {
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
 
-	#linux-sources needs to be fully configured, too.  This is the configuration for the default kernel
+	#linux-sources needs to be fully configured, too. This is the configuration for the default kernel
 	cp ${S}/arch/i386/defconfig .config || die
 	yes "" | make oldconfig
 	echo "Ignore any errors from the yes command above."
-    
+	 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
 	chown -R 0.0 *
