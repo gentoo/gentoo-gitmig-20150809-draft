@@ -1,24 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r1.ebuild,v 1.4 2003/10/17 04:24:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r1.ebuild,v 1.5 2003/10/17 04:27:08 vapier Exp $
 
 inherit flag-o-matic
 
-IUSE="ipv6 kde gnome mozilla"
-
-S=${WORKDIR}/${P}
 S2=${WORKDIR}/dillo-gentoo-extras-patch3
 
 DESCRIPTION="Lean GTK+-based web browser"
-HOMEPAGE="http://dillo.auriga.wearlab.de/"
+HOMEPAGE="http://www.dillo.org/"
 SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
 	mirror://gentoo/dillo-gentoo-extras-patch3.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha ~mips ~hppa"
+IUSE="ipv6 kde gnome mozilla"
 
-replace-flags "-O2 -mcpu=k6" "-O2 -mcpu=pentium"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/jpeg-6b
@@ -31,36 +28,31 @@ src_unpack() {
 
 	if [ "${DILLO_ICONSET}" = "kde" ]
 	then
-		ebegin "Using Konqueror style icon set"
+		einfo "Using Konqueror style icon set"
 		cp ${S2}/pixmaps.konq.h ${S}/src/pixmaps.h
-		eend 0
 	elif [ "${DILLO_ICONSET}" = "gnome" ]
 	then
-		ebegin "Using Ximian style icon set"
+		einfo "Using Ximian style icon set"
 		cp ${S2}/pixmaps.ximian.h ${S}/src/pixmaps.h
-		eend 0
 	elif [ "${DILLO_ICONSET}" = "mozilla" ]
 	then
-		ebegin "Using Netscape style icon set"
+		einfo "Using Netscape style icon set"
 		cp ${S2}/pixmaps.netscape.h ${S}/src/pixmaps.h
-		eend 0
 	elif [ "${DILLO_ICONSET}" = "bold" ]
 	then
-		ebegin "Using bold style icon set"
+		einfo "Using bold style icon set"
 		cp ${S2}/pixmaps.bold.h ${S}/src/pixmaps.h
-		eend 0
 	elif [ "${DILLO_ICONSET}" = "trans" ]
 	then
-		ebegin "Using transparent style icon set"
+		einfo "Using transparent style icon set"
 		cp ${S2}/pixmaps.trans.h ${S}/src/pixmaps.h
-		eend 0
 	else
-		ebegin "Using default Dillo icon set"
-		eend 0
+		einfo "Using default Dillo icon set"
 	fi
 }
 
 src_compile() {
+	replace-flags "-O2 -mcpu=k6" "-O2 -mcpu=pentium"
 	econf `use_enable ipv6` || die
 	emake || make || die
 }
