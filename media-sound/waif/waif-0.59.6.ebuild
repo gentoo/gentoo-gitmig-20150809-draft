@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.6.ebuild,v 1.2 2003/03/05 11:41:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.6.ebuild,v 1.3 2003/06/12 04:06:58 drobbins Exp $
 
-IUSE="X gnome"
+IUSE="X gnome xmms oggvorbis"
 
 S=${WORKDIR}/${PN}
 S2=${WORKDIR}/wfxmms
