@@ -1,29 +1,27 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.3 2004/06/24 23:30:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.4 2004/12/30 05:10:23 mr_bones_ Exp $
 
 inherit games
 
 DESCRIPTION="A multi-player game of strategy and coordination"
-HOMEPAGE="http://cns-web.bu.edu/pub/xpip/html/xbattle.html"
+HOMEPAGE="http://www.cgl.uwaterloo.ca/~jdsteele/xbattle.html"
 SRC_URI="ftp://cns-ftp.bu.edu/pub/xbattle/${P}.tar.gz"
 
-KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
 LICENSE="xbattle"
 SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
 IUSE=""
 
-RDEPEND="virtual/x11"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND="virtual/x11"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
-		-e "s:/export/home/lesher/:${GAMES_DATADIR}/${PN}/:" Imakefile || \
-			die "sed Imakefile failed"
+		-e "s:/export/home/lesher/:${GAMES_DATADIR}/${PN}/:" Imakefile \
+		|| die "sed Imakefile failed"
 }
 
 src_compile() {
@@ -32,13 +30,13 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin xbattle                      || die "dogamesbin failed"
+	dogamesbin xbattle || die "dogamesbin failed"
 	newgamesbin tutorial1 xbattle-tutorial1 || die "newgamesbin failed"
 	newgamesbin tutorial2 xbattle-tutorial2 || die "newgamesbin failed"
-	dodir ${GAMES_DATADIR}/${PN}            || die "dodir failed"
-	cp -r xbas/ xbos/ xbts/ ${D}${GAMES_DATADIR}/${PN}/ || die "cp failed"
-	newman xbattle.man xbattle.6            || die "newman failed"
-	dodoc README xbattle.dot                || die "dodoc failed"
+	dodir "${GAMES_DATADIR}/${PN}"
+	cp -r xbas/ xbos/ xbts/ "${D}${GAMES_DATADIR}/${PN}/" || die "cp failed"
+	newman xbattle.man xbattle.6
+	dodoc README xbattle.dot
 	prepgamesdirs
 }
 
