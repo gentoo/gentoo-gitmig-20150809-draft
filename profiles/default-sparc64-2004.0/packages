@@ -57,7 +57,7 @@
 *sys-apps/sparc-utils
 *virtual/bootloader
 *dev-util/dialog
-*sys-devel/gcc-sparc64
+*<sys-devel/gcc-sparc64-3.4.0
 
 # default-sparc-1.4 pkgs 
 *>=sys-apps/baselayout-1.8.5.5
