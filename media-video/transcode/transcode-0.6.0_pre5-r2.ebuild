@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0_pre5-r2.ebuild,v 1.3 2002/07/19 11:28:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0_pre5-r2.ebuild,v 1.4 2002/08/11 14:16:35 phoenix Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND=">=media-libs/a52dec-0.7.3
-	media-libs/libdv
+	=media-libs/libdv-0.9.5*
 	media-libs/libsdl
 	dev-lang/nasm
 	=x11-libs/gtk+-1.2*
