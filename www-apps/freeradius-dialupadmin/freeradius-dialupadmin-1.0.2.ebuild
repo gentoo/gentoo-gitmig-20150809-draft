@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/freeradius-dialupadmin-1.0.2.ebuild,v 1.2 2005/03/28 23:40:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/freeradius-dialupadmin-1.0.2.ebuild,v 1.3 2005/03/28 23:47:56 mrness Exp $
 
 inherit webapp
 
@@ -15,9 +15,9 @@ IUSE=""
 LICENSE="GPL-2"
 
 DEPEND="virtual/php
-	dev-lang/perl
-	=net-dialup/freeradius-${PV}*
-	sys-apps/findutils"
+	dev-perl/DateManip
+	sys-apps/findutils
+	=net-dialup/freeradius-${PV}*	"
 
 S="${WORKDIR}/${MY_P}/dialup_admin"
 
