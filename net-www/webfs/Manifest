@@ -1,3 +1,5 @@
+MD5 1d896fd5b7bcf0c446763568e4ffdc23 ChangeLog 463
 MD5 d5f0152295e08ca7f9e101d14c82f851 webfs-1.19.ebuild 739
-MD5 4255a1fc7a9c325db5b2ba4f7d3d6e4e ChangeLog 329
+MD5 2679cfc18378c6592ded6778e8bc3d37 webfs-1.20.ebuild 739
 MD5 6626c317fb51b75548b49eda940e4897 files/digest-webfs-1.19 61
+MD5 579ace48be13da5a18919374112e42c3 files/digest-webfs-1.20 61
