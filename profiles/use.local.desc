@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.209 2004/01/08 04:27:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.210 2004/01/08 08:42:33 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -181,6 +181,7 @@ net-misc/gnugk:accounting - Enables call logging (accounting)
 net-misc/ntp:parse-clocks - Add parse clock support
 net-misc/nut:cgi - Add CGI script support
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
+net-misc/openssh:chroot - Enable chrooting support.
 net-misc/openssh:skey - Enable S/Key (Single use password) authentication support
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
@@ -240,7 +241,7 @@ sys-kernel/wolk-sources:wolk-alsa - For WOLK's own internal alsa drivers (use at
 sys-kernel/wolk-sources:wolk-bootsplash - If you want WOLK's own bootsplash patch
 sys-kernel/wolk-sources:wolk-supermount - If you want to use supermount
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
-sys-libs/glibc:pic - If you want prelink support built into glibc
+sys-libs/glibc:pic - Build position independent code. Needed for (prelink/hardened-gcc)
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:speedo - Enables Speedo font support
