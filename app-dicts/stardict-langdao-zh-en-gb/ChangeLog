@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-langdao-zh-en-gb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-langdao-zh-en-gb/ChangeLog,v 1.4 2005/01/01 13:01:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-langdao-zh-en-gb/ChangeLog,v 1.5 2005/01/04 15:19:08 citizen428 Exp $
+
+  04 Jan 2005; Michael Kohl <citizen428@gentoo.org>
+  stardict-langdao-zh-en-gb-2.4.2.ebuild:
+  Marked stable on x86.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
