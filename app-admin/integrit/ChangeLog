@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/integrit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.8 2004/10/05 02:58:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.9 2004/12/31 03:47:34 chriswhite Exp $
+
+  31 Dec 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Taking over as maintainer.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   integrit-3.02.00.ebuild:
