@@ -1,0 +1,19 @@
+# ChangeLog for net-www/mypictures
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mypictures/ChangeLog,v 1.1 2004/08/15 15:13:01 stuart Exp $
+
+*mypictures-20040202 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/mypictures.diff, +mypictures-20040202.ebuild:
+  Moved from net-www/mypictures to www-apps/mypictures.
+
+  03 May 2004; David Holm <dholm@gentoo.org> mypictures-20040202.ebuild:
+  Added to ~ppc.
+
+*mypictures-20040202 (03 May 2004)
+
+  03 May 2004; Stuart Herbert <stuart@gentoo.org> metadata.xml,
+  mypictures-20040202.ebuild, files/mypictures.diff:
+  Initial import
+
