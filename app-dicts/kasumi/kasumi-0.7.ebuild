@@ -1,12 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-0.5-r1.ebuild,v 1.2 2005/01/01 12:56:32 eradicator Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-0.7.ebuild,v 1.1 2005/01/05 09:33:25 usata Exp $
 
 DESCRIPTION="Anthy dictionary maintenance tool"
 HOMEPAGE="http://kasumi.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/12111/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/${PN}/12766/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,12 +19,6 @@ DEPEND="virtual/libc
 	>=dev-libs/expat-1.95
 	>=x11-libs/pango-1.2
 	nls? ( sys-devel/gettext )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-store.diff
-}
 
 src_compile() {
 	econf $(use_enable nls) || die
