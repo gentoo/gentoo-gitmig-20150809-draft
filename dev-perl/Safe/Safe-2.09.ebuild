@@ -10,4 +10,4 @@ HOMEPAGE="http://search.cpan.org/src/ABERGMAN/${P}/README"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ppc sparc alpha mips"
+KEYWORDS="x86 ppc sparc alpha mips hppa"

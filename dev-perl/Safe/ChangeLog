@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Safe
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe/ChangeLog,v 1.3 2003/01/19 17:00:06 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe/ChangeLog,v 1.4 2003/02/11 12:23:09 gmsoft Exp $
+
+  11 Feb 2003; Guy Martin <gmsoft@gentoo.org> Safe-2.09.ebuild :
+  Added hppa to keywords.
 
 *Safe-2.09 (19 Dec 2002)
 
