@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.4_rc2.ebuild,v 1.1 2003/08/14 20:13:32 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.4_rc2.ebuild,v 1.2 2003/08/15 09:22:49 g2boojum Exp $
 
-IUSE="opengl debug"
+IUSE="opengl debug nptl"
 
 inherit eutils
 
@@ -29,12 +29,17 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--enable-shared --enable-threads \
-		--enable-xdbe --enable-xft --enable-static"
+	local myconf
+	myconf="--enable-shared --enable-xdbe --enable-xft --enable-static"
 
 	use debug && myconf="${myconf} --enable-debug"
 
 	use opengl || myconf="${myconf} --disable-gl"
+
+	# The fltk threading code doesn't work with nptl
+	# See bug #26569
+	use nptl && myconf="${myconf} --disable-threads" \
+		|| myconf="${myconf} --enable-threads"
 
 	# needed for glibc-2.3.1 (as far as i can test)
 	# otherwise libstdc++ won't be linked. #17894 and #15572
