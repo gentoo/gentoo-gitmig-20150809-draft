@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.6 2003/07/10 16:55:16 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.7 2003/07/11 17:55:13 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
-IUSE="${IUSE} mozsvg mozcalendar mozaccess mozinterfaceinfo mozp3p mozxmlterm"
+IUSE="${IUSE} mozsvg mozcalendar mozaccess mozp3p mozxmlterm"
 IUSE="${IUSE} moznoirc moznomail moznocompose moznoxft"
 
 inherit flag-o-matic gcc eutils nsplugins
@@ -262,10 +262,12 @@ src_compile() {
 	then
 		myext="${myext},p3p"
 	fi
-	if [ -n "`use mozinterfaceinfo`" ]
-	then
-		myext="${myext},interfaceinfo"
-	fi
+	# interfaceinfo has become part of the webservices extension, and is
+	# enabled by default - Brad
+#	if [ -n "`use mozinterfaceinfo`" ]
+#	then
+#		myext="${myext},interfaceinfo"
+#	fi
 	if [ -n "`use moznoirc`" ]
 	then
 		myext="${myext},-irc"

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.103 2003/07/10 16:55:16 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.104 2003/07/11 17:55:13 brad Exp $
+
+  11 Jul 2003; Brad Laue <brad@gentoo.org> mozilla-1.4.ebuild:
+  Remove the mozinterfaceinfo keyword, as this is built by default as part of
+  webservices. Possible addition of moznowebservices by Azarah to come.
 
   10 Jul 2003; Christian Birchinger <joker@gentoo.org> mozilla-1.4.ebuild:
   Use replace-sparc64-flags from flag-o-matic.eclass to replace the sparc64
