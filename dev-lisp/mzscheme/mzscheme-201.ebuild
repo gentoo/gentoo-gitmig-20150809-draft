@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/mzscheme-201.ebuild,v 1.5 2003/06/12 20:34:25 msterret Exp $
 
 S=${WORKDIR}/plt
 DESCRIPTION="MzScheme scheme compiler"
