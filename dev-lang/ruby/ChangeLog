@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.25 2003/07/18 20:06:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.26 2003/07/26 16:52:52 twp Exp $
+
+*ruby-1.8.0_pre4 (26 Jul 2003)
+
+  26 Jul 2003; Tom Payne <twp@gentoo.org> ruby-1.8.0_pre4.ebuild :
+  Version bump.
 
   18 Jul 2003; root <root@gentoo.org> ruby-1.6.8-r1.ebuild,
   files/ruby-1.6.8-fix-x86_64.patch:
