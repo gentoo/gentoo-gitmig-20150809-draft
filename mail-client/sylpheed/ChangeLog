@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.14 2004/06/24 22:18:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.15 2004/06/26 12:52:44 kugelfang Exp $
+
+  26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/sylpheed-0.9.12-64bit.patch, sylpheed-0.9.12.ebuild:
+  Fixed BUG #55136 (64bit cleaning).
 
   24 Jun 2004; Akinori Hattori <hattya@gentoo.org> -sylpheed-0.9.8-r2.ebuild,
   -sylpheed-0.9.9-r1.ebuild:

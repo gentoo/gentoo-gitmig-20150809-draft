@@ -1,0 +1,10 @@
+--- sylpheed-0.9.12/src/socket.c	2004-03-16 17:11:02.000000000 +0900
++++ sylpheed-0.9.12_amd64/src/socket.c	2004-06-23 15:55:36.431179296 +0900
+@@ -754,7 +760,7 @@ static gboolean sock_get_address_info_as
+ 	SockLookupData *lookup_data = (SockLookupData *)data;
+ 	GList *addr_list = NULL;
+ 	SockAddrData *addr_data;
+-	guint bytes_read;
++	gsize bytes_read;
+ 	gint ai_member[4];
+ 	struct sockaddr *addr;

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.12.ebuild,v 1.2 2004/06/24 22:18:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.12.ebuild,v 1.3 2004/06/26 12:52:44 kugelfang Exp $
 
 inherit eutils
 
@@ -36,7 +36,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-namespace.diff
 	epatch ${FILESDIR}/${PN}-procmime.diff
-
+	# For amd64 only atm, asking net-mail for unconditional patch
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/06/26
+	use amd64 && epatch ${FILESDIR}/${P}-64bit.patch
 }
 
 src_compile() {
