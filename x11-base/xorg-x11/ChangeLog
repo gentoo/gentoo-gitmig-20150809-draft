@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.234 2004/12/07 02:13:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.235 2004/12/07 02:26:52 spyderous Exp $
+
+  06 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild:
+  Remove double definition of HOSTCONF. Thanks to Georgi Georgiev
+  <chutz@gg3.net>.
 
   06 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:

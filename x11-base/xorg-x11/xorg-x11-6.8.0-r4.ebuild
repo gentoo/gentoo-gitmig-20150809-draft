@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.23 2004/12/07 02:13:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.24 2004/12/07 02:26:52 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -141,8 +141,6 @@ PROVIDE="virtual/x11
 	virtual/xft"
 
 DESCRIPTION="An X11 implementation maintained by the X.Org Foundation"
-
-HOSTCONF="config/cf/host.def"
 
 pkg_setup() {
 	FILES_DIR="${WORKDIR}/files"
@@ -570,7 +568,7 @@ check_use_combos() {
 ################
 
 host_def_setup() {
-	HOSTCONF=config/cf/host.def
+	HOSTCONF="config/cf/host.def"
 
 	ebegin "Setting up ${HOSTCONF}"
 		cd ${S}; cp ${FILES_DIR}/site.def ${HOSTCONF} \
