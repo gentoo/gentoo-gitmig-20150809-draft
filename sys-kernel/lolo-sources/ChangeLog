@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.6 2002/09/19 07:40:49 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.7 2002/09/19 21:32:30 lostlogic Exp $
 
 *lolo-sources-2.4.19.10_pre1 (19 Sep 2002)
 
@@ -31,6 +31,8 @@
   - Possibly other, depending on stability, timing, and how much I get
     harrassed about things :)
   - Fix compilation issues with sim710 and i810dma (I hope)
+  - Change up which VIA bugfixes we use
+  - Lvcool by Cardoe
 
 *lolo-sources-2.4.19.9_rc2 (02 Sep 2002)
 
