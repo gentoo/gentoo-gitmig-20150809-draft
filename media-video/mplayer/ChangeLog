@@ -1,9 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.93 2003/10/26 01:04:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.94 2003/10/26 01:07:37 lu_zero Exp $
 
   26 Oct 2003; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre2.ebuild:
   Added debug useflag, minor fixes. Closes #31978 and #31996.
+  thanks to Andrew Kirilenko <icedank@gmx.net> and Juri Haberland 
+  <juri@koschikode.com>.
 
   20 Oct 2003; Martin Holzer <mholzer@gentoo.org> mplayer-1.0_pre1-r1.ebuild,
   mplayer-1.0_pre2.ebuild:
