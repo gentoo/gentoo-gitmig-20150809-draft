@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.11 2003/04/14 05:30:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.12 2003/04/14 20:45:18 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -40,7 +40,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="1.0.7"
+PATCH_VER="1.0.8"
 FT2_VER="2.1.3"
 SISDRV_VER="060403-1"
 SAVDRV_VER="1.1.27t"
@@ -121,14 +121,18 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=x11-misc/ttmkfdir-3.0.4
 	pam? ( >=sys-libs/pam-0.75 )
 	truetype? ( app-arch/cabextract )
-	app-arch/unzip" # needed for savage driver (version 1.1.27t)
-	
-PDEPEND=">=x11-libs/xft-2.0.1-r1
-	3dfx? ( >=media-libs/glide-v3-3.10 )"
+	app-arch/unzip
+	!media-libs/xft" 
+
+# unzip - needed for savage driver (version 1.1.27t)
+# media-libs/xft - blocked because of possible interferance with xfree
+ 	
+PDEPEND="3dfx? ( >=media-libs/glide-v3-3.10 )"
 
 PROVIDE="virtual/x11
 	virtual/opengl
-	virtual/glu"	
+	virtual/glu
+	virtual/xft"	
 
 src_unpack() {
 
@@ -337,6 +341,9 @@ src_unpack() {
 	echo "#define UseFontconfig YES" >> config/cf/host.def
 	echo "#define HasFontconfig YES" >> config/cf/host.def
 
+	# Use the xfree Xft2 lib
+	echo "#define SharedLibXft YES" >> config/cf/host.def
+
 # Will uncomment this after kde, qt, and *box ebuilds are alterered to use
 # it
 #	if use xinerama
@@ -411,10 +418,6 @@ src_install() {
 	fi
 
 	# We do not want these, so remove them ...
-	rm -rf ${D}/usr/X11R6/include/X11/Xft
-	rm -f ${D}/usr/X11R6/lib/libXft.{a,so}
-	rm -f ${D}/usr/X11R6/bin/xft-config
-	rm -f ${D}/usr/X11R6/man/man3/Xft.3x*
 	rm -rf ${D}/usr/X11R6/include/fontconfig
 	rm -f ${D}/usr/X11R6/lib/libfontconfig.*
 	rm -f ${D}/usr/X11R6/bin/{fontconfig-config,fc-cache,fc-list}
@@ -423,7 +426,7 @@ src_install() {
 
 	# This one needs to be in /usr/lib
 	insinto /usr/lib/pkgconfig
-	doins ${D}/usr/X11R6/lib/pkgconfig/xcursor.pc
+	doins ${D}/usr/X11R6/lib/pkgconfig/{xcursor,xft}.pc
 	# Now remove the invalid xft.pc, and co ...
 	rm -rf ${D}/usr/X11R6/lib/pkgconfig
 
@@ -958,7 +961,6 @@ pkg_postinst() {
 	einfo "Any custom cursor sets should be placed in that directory"
 	einfo "This is different from the previous versions of 4.3 and"
 	einfo "the 4.2.99 series."
-	
 }
 
 pkg_postrm() {
