@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.5.3a.ebuild,v 1.1 2003/05/08 19:49:30 heim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.5.3a.ebuild,v 1.2 2003/05/08 19:51:53 heim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PBButtons is a program to map special Powerbook/iBook keys in Linux"
 SRC_URI="http://www.cymes.de/members/joker/projects/pbbuttons/tar/${P}.tar.gz"
 HOMEPAGE="http://www.cymes.de/members/joker/projects/pbbuttons/pbbuttons.html"
-KEYWORDS="ppc -x86 -sparc -mips"
+KEYWORDS="~ppc -x86 -sparc -mips"
 DEPEND="virtual/glibc"
 RDEPEND=""
 SLOT=0
