@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.24 2005/02/04 21:02:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.25 2005/02/06 09:11:58 corsair Exp $
+
+  06 Feb 2005; Markus Rothe <corsair@gentoo.org> servletapi-2.4-r1.ebuild:
+  Stable on ppc64; bug #76917
 
   04 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> servletapi-2.4-r1.ebuild:
   added missing eutils inherit. fixes #80773
