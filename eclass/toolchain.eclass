@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.9 2004/09/08 21:08:22 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.10 2004/09/09 17:55:44 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -316,7 +316,7 @@ make_gcc_hard() {
 gcc_version_patch() {
 	[ -z "$1" ] && die "no arguments to gcc_version_patch"
 
-	sed -i -e 's~\(const char version_string\[\] = "\S\+\s\+\)[^"]\+\(".*\)~\1@GENTOO@\2~' ${S}/gcc/version.c || die "failed to add @GENTOO@"
+	sed -i -e 's~\(const char version_string\[\] = ".....\).*\(".*\)~\1 @GENTOO@\2~' ${S}/gcc/version.c || die "failed to add @GENTOO@"
 	sed -i -e "s:@GENTOO@:$1:g" ${S}/gcc/version.c || die "failed to patch version"
 	sed -i -e 's~http:\/\/gcc\.gnu\.org\/bugs\.html~http:\/\/bugs\.gentoo\.org\/~' ${S}/gcc/version.c || die "failed to update bugzilla URL"
 }
@@ -735,20 +735,34 @@ gcc_do_make() {
 
 
 create_gcc_multilib_scripts() {
+	mkdir -p ${D}/${BINPATH}/
 	mkdir -p ${D}/usr/bin/
+
 	if has_m32 ; then
-cat > ${D}/usr/bin/gcc32 <<EOF
-#!/bin/sh
-exec /usr/bin/gcc -m32 "$@"
-EOF
-chmod +x ${D}/usr/bin/gcc32
+
+		echo -e '#!/bin/sh \nexec '"/${BINPATH}/${CHOST}-gcc -m32 "'"$@"' \
+			> ${D}/${BINPATH}/${CHOST}-gcc32-${PV}
+		chmod +x ${D}/${BINPATH}/${CHOST}-gcc32-${PV}
+		ln -s ../../${BINPATH}/${CHOST}-gcc32-${PV} ${D}/usr/bin/gcc32
+
+		echo -e '#!/bin/sh \nexec '"/${BINPATH}/${CHOST}-g++ -m32 "'"$@"' \
+			> ${D}/${BINPATH}/${CHOST}-g++32-${PV}
+		chmod +x ${D}/${BINPATH}/${CHOST}-g++32-${PV}
+		ln -s ../../${BINPATH}/${CHOST}-g++32-${PV} ${D}/usr/bin/g++32
+
 	fi
 	if has_m64 ; then
-cat > ${D}/usr/bin/gcc64 <<EOF
-#!/bin/sh
-exec /usr/bin/gcc -m64 "$@"
-EOF
-chmod +x ${D}/usr/bin/gcc64
+
+		echo -e '#!/bin/sh \nexec '"/${BINPATH}/${CHOST}-gcc -m64 "'"$@"' \
+			> ${D}/${BINPATH}/${CHOST}-gcc64-${PV}
+		chmod +x ${D}/${BINPATH}/${CHOST}-gcc64-${PV}
+		ln -s ../../${BINPATH}/${CHOST}-gcc64-${PV} ${D}/usr/bin/gcc64
+
+		echo -e '#!/bin/sh \nexec '"/${BINPATH}/${CHOST}-g++ -m64 "'"$@"' \
+			> ${D}/${BINPATH}/${CHOST}-g++64-${PV}
+		chmod +x ${D}/${BINPATH}/${CHOST}-g++64-${PV}
+		ln -s ../../${BINPATH}/${CHOST}-g++64-${PV} ${D}/usr/bin/g++64
+
 	fi
 }
 
