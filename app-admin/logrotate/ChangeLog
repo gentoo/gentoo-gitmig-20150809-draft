@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.2 2002/06/04 21:47:05 seemant Exp $
+
+*logrotate-3.5.9 (4 Jun 2002)
+
+  4 Jun 2002; Seemant Kulleen <seemant@gentoo.org> logrotate-3.5.9.ebuild
+  files/digest-logrotate-3.5.9 :
+
+  Version bump, long needed.  Also, added mailx to the DEPEND list (as
+  Debian has it as a required dep).  Thanks to ftobin@neverending.org (Frank
+  Tobin) in bug #3381
 
 *logrotate-3.3-r2 (1 Feb 2002)
 
