@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.35 2004/10/24 00:40:28 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.36 2004/11/08 23:49:13 kloeri Exp $
+
+  09 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  prelink-20040707.ebuild:
+  Stable on alpha.
 
   23 Oct 2004; Stefan Jones <cretin@gentoo.org> :
   Mark Stable on x86
