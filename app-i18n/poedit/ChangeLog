@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/poedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.7 2004/09/05 05:56:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.8 2004/09/07 03:40:42 pythonhead Exp $
+
+  06 Sep 2004; Rob Cakebread <pythonhead@gentoo.org> :
+  Version bump and add spell USE flag. Thanks Vaclav Slavik for the patch. Bug #63038
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
