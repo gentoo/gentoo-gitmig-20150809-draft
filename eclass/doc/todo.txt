@@ -1,7 +1,3 @@
 - sort out docs/sgml, get link from site
-- have ebuilds/eclasses use newdepend()
 - sort debug.eclass msgs into levels, divide output
-- eclasses that support kde/qt 2/3/... equally well, without a default major number.
-- cvs/cvsup support :-)
-- update docs
 - sort out local var declares
