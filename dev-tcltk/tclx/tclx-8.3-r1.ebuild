@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.9 2004/04/26 01:42:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.10 2004/06/03 17:43:20 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 
 	local myconf="--with-tcl=${WORKDIR}/tcl8.4.2/unix --enable-shared"
 
-	if [ `use X` ] ; then
+	if use X ; then
 		# configure and build tk
 		cd ${WORKDIR}/tk8.4.2/unix
 		econf || die "econf failed"
