@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/advancemame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.15 2004/07/02 01:45:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.16 2004/07/06 21:24:03 malc Exp $
+
+  06 Jul 2004; <malc@gentoo.org> advancemame-0.83.1.ebuild:
+  Add ~amd64 after extensive testing of many roms ;-) closes bug #53461
 
 *advancemame-0.83.1 (01 Jul 2004)
 
