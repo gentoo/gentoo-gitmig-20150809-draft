@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.6-r1.ebuild,v 1.6 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.6-r1.ebuild,v 1.7 2002/10/08 14:19:50 foser Exp $
 
 IUSE="tiff doc jpeg directfb"
 
-inherit libtool
+inherit libtool flag-o-matic
 
 SLOT="2"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
@@ -40,6 +40,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# see bug 8762
+	replace-flags "-O3" "-O2"
+
 	elibtoolize
 	
 	local myconf=""
