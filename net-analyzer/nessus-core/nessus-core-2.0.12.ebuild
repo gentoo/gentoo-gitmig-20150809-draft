@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.12.ebuild,v 1.8 2005/01/12 08:33:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.12.ebuild,v 1.9 2005/02/20 00:10:41 dragonheart Exp $
 
 inherit eutils
 
@@ -54,11 +54,7 @@ src_compile() {
 }
 
 src_install() {
-	make \
-		prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		localstatedir=${D}/var/lib \
-		mandir=${D}/usr/share/man \
+	make DESTDIR=${D} \
 		install || die "Install failed nessus-core"
 	cd ${S}
 	dodoc README* UPGRADE_README CHANGES
