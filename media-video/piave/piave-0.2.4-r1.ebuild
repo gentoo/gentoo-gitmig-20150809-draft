@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/piave/piave-0.2.4-r1.ebuild,v 1.3 2004/06/25 00:48:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/piave/piave-0.2.4-r1.ebuild,v 1.4 2004/10/18 15:11:29 zypher Exp $
 
-inherit eutils
+inherit eutils gcc
 
 DESCRIPTION="PIAVE - Piave Is A Video Editor"
 HOMEPAGE="http://modesto.sourceforge.net/piave/index.html"
@@ -30,8 +30,11 @@ DEPEND="virtual/x11
 src_compile() {
 	cd ${S}
 	epatch ${FILESDIR}/piave-0.2.4-include-arts.diff
-	`use_enable nls` \
-	myconf=${myconf}" --with-gnu-ld"
+	if [ "`gcc-minor-version`" -eq "4" ]
+	then
+	epatch ${FILESDIR}/piave-0.2.4-gcc34.patch
+	fi
+	myconf=${myconf}" --with-gnu-ld	`use_enable nls`"
 	econf ${myconf} || die "configure failed"
 	emake || die
 }

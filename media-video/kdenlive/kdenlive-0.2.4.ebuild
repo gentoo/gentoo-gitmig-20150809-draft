@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.2.4.ebuild,v 1.6 2004/06/29 12:10:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.2.4.ebuild,v 1.7 2004/10/18 15:16:12 zypher Exp $
 
-inherit kde
+inherit gcc kde
 
 DESCRIPTION="Kdenlive! (pronounced Kay-den-live) is a Non Linear Video Editing Suite for KDE."
 HOMEPAGE="http://www.uchian.pwp.blueyonder.co.uk/kdenlive.html"
@@ -16,3 +16,11 @@ IUSE=""
 DEPEND=">=media-video/piave-0.2.4
 	>=kde-base/kdesdk-3.2"
 need-kde 3
+
+src_unpack() {
+	unpack ${A}
+	if [ "`gcc-minor-version`" -eq "4" ]
+	then
+	epatch ${FILESDIR}/kdenlive-0.2.4-gcc34.patch
+	fi
+}
