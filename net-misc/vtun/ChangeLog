@@ -7,6 +7,9 @@
 
 *vtun-2.5-r2 (28 April 2002)
 
+  06 Mar 2003; Aron Griffis <agriffis@gentoo.org> vtun-2.5-r2.ebuild:
+  Add alpha to KEYWORDS
+
   09 Jul 2002; phoen][x <phoenix@gentoo.org> vtun-2.5-r2.ebuild :
   Added KEYWORDS, SLOT.
 
