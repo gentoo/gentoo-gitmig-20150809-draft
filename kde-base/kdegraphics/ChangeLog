@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.17 2002/11/22 05:30:25 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.18 2002/11/22 20:00:09 danarmak Exp $
+
+  22 Nov 2002; Dan Armak <danarmak@gentoo.org> kdegraphics-3.0.4.ebuild  :
+
+  Add a default system-wide kghostviewrc with working interpreter settings
+  (gs). Fixes bug #6562.
 
   22 Nov 2002; Dan Armak <danarmak@gentoo.org> kdegraphics-3.0.4.ebuild  :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.4.ebuild,v 1.6 2002/11/22 05:30:25 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.4.ebuild,v 1.7 2002/11/22 20:00:09 danarmak Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - graphics-related apps"
@@ -37,5 +37,16 @@ src_unpack() {
 	sed -e 's:$(KSCANDIR)::' Makefile.am.orig > Makefile.am
     fi
 
+
+}
+
+src_install() {
+
+    kde_src_install
+    
+    # default kghostviewrc beacuse kghostview doesn't generate a working default run on its 1st run
+    # fix bug #6562
+    dodir $PREFIX/share/config
+    cp $FILESDIR/$P-kghostviewrc $D/$PREFIX/share/config/kghostviewrc
 
 }
