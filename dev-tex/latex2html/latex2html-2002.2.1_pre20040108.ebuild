@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20040108.ebuild,v 1.1 2004/04/23 16:47:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20040108.ebuild,v 1.2 2004/05/18 18:40:54 fmccor Exp $
 
 MY_P=${P//./-}
 S=${WORKDIR}/${MY_P/_*/}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.latex2html.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~alpha ~amd64"
+KEYWORDS="~x86 ~alpha ~amd64 ~sparc"
 IUSE="gif png"
 
 DEPEND="virtual/ghostscript
