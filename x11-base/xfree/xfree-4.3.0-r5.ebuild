@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.9 2004/04/19 02:37:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.10 2004/04/19 03:05:56 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -266,10 +266,8 @@ src_unpack() {
 	# patch 9017 overlaps 9015 and 9016 and is applied instead
 	if [ "${ARCH}" = "amd64" ]
 	then
-		mv -f ${PATCH_DIR}/9017* ${PATCH_DIR}/excluded
-#		Breaks -- commented out, pending a fix
-#		mv -f ${PATCH_DIR}/9015* ${PATCH_DIR}/excluded
-#		mv -f ${PATCH_DIR}/9016* ${PATCH_DIR}/excluded
+		mv -f ${PATCH_DIR}/9015* ${PATCH_DIR}/excluded
+		mv -f ${PATCH_DIR}/9016* ${PATCH_DIR}/excluded
 	fi
 
 	# This was formerly applied if USE=debug, but it causes builds

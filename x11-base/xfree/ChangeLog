@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.322 2004/04/19 02:37:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.323 2004/04/19 03:05:56 spyderous Exp $
+
+  18 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r5.ebuild:
+  Revert last fix, it was some one-off error.
 
   18 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r5.ebuild:
   Prevent 9017 from applying for now, some build breakage reported by jhuebel.
