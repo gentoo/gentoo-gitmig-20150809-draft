@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> (11 Sep 2002)
+# New postfix ebuild.  Need to test tls+ipv6 patch
+=net-mail/postfix-1.1.11.20020822
+
 # <aliz@gentoo.org> (11 Sep 2002)
 # Masked for testing
 =x11-misc/hotkeys-0.5.5
