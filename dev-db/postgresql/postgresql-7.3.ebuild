@@ -1,41 +1,37 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.ebuild,v 1.5 2003/02/13 10:05:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.ebuild,v 1.6 2003/03/01 04:46:41 vapier Exp $
 
+DESCRIPTION="sophisticated Object-Relational DBMS"
+SRC_URI="ftp://ftp.us.postgresql.org/source/v${PV}/${P}.tar.gz"
+HOMEPAGE="http://www.postgresql.org/"
+
+LICENSE="POSTGRESQL"
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
 IUSE="ssl nls java python tcltk perl"
 
-S=${WORKDIR}/${P}
-DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
-SRC_URI="ftp://ftp.us.postgresql.org/source/v${PV}/${P}.tar.gz"
-HOMEPAGE="http://www.postgresql.org"
-LICENSE="POSTGRESQL"
-KEYWORDS="x86 ppc sparc"
-SLOT="0"
-
 DEPEND="virtual/glibc
-		sys-devel/autoconf
-		app-admin/sudo
-		>=sys-libs/readline-4.1
-		>=sys-libs/ncurses-5.2
-		>=sys-libs/zlib-1.1.3
-		tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
-		perl? ( >=sys-devel/perl-5.6.1-r2 )
-		python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
-		java? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3 ) 
-		ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-		nls? ( sys-devel/gettext )"
+	sys-devel/autoconf
+	app-admin/sudo
+	>=sys-libs/readline-4.1
+	>=sys-libs/ncurses-5.2
+	>=sys-libs/zlib-1.1.3
+	tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
+	perl? ( >=sys-devel/perl-5.6.1-r2 )
+	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
+	java? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3 ) 
+	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
+	nls? ( sys-devel/gettext )"
 # java dep workaround for portage bug
 # x86? ( java? ( =virtual/jdk-1.3* >=dev-java/ant-1.3 ) )
-
 RDEPEND="virtual/glibc
-		>=sys-libs/zlib-1.1.3
-		tcltk? ( >=dev-lang/tcl-8 )
-		perl? ( >=sys-devel/perl-5.6.1-r2 )
-		python? ( >=dev-lang/python-2.2 )
-		java? ( >=virtual/jdk-1.3* )
-		ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
-
-SLOT="0"
+	>=sys-libs/zlib-1.1.3
+	tcltk? ( >=dev-lang/tcl-8 )
+	perl? ( >=sys-devel/perl-5.6.1-r2 )
+	python? ( >=dev-lang/python-2.2 )
+	java? ( >=virtual/jdk-1.3* )
+	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
 
 PG_DIR="/var/lib/postgresql"
 
@@ -87,8 +83,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
-
+src_install() {
 	addwrite "/usr/share/man/man3/Pg.3pm"
 
 	if [ "`use perl`" ]
@@ -143,8 +138,7 @@ pkg_postinst() {
 	einfo ">>> Make sure the postgres user in /etc/passwd has an account setup with /bin/bash as the shell, or /bin/true"
 }
 
-
-pkg_config() {
+config() {
 	einfo ">>> Creating data directory ..."
 	mkdir -p ${PG_DIR}/data
 	chown -Rf postgres.postgres ${PG_DIR}

@@ -1,39 +1,35 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1-r2.ebuild,v 1.8 2003/02/13 10:04:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1-r2.ebuild,v 1.9 2003/03/01 04:46:41 vapier Exp $
 
+DESCRIPTION="sophisticated Object-Relational DBMS"
+SRC_URI="ftp://ftp.easynet.be/postgresql/v${PV}/${P}.tar.gz"
+HOMEPAGE="http://www.postgresql.org/"
+
+LICENSE="POSTGRESQL"
+SLOT="0"
+KEYWORDS="x86 -ppc"
 IUSE="ssl nls java python tcltk perl"
 
-S=${WORKDIR}/${P}
-DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
-SRC_URI="ftp://ftp.easynet.be/postgresql/v${PV}/${P}.tar.gz"
-HOMEPAGE="http://www.postgresql.org"
-LICENSE="POSTGRESQL"
-KEYWORDS="x86 -ppc"
-SLOT="0"
-
 DEPEND="virtual/glibc
-		sys-devel/autoconf
-		app-admin/sudo
-		>=sys-libs/readline-4.1
-		>=sys-libs/ncurses-5.2
-		>=sys-libs/zlib-1.1.3
-		tcltk? ( >=dev-lang/tcl-8 )
-		perl? ( >=sys-devel/perl-5.6.1-r2 )
-		python? ( >=dev-lang/python-2.2 )
-		java? ( =virtual/jdk-1.3* >=dev-java/ant-1.3 )
-		ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-		nls? ( sys-devel/gettext )"
-
+	sys-devel/autoconf
+	app-admin/sudo
+	>=sys-libs/readline-4.1
+	>=sys-libs/ncurses-5.2
+	>=sys-libs/zlib-1.1.3
+	tcltk? ( >=dev-lang/tcl-8 )
+	perl? ( >=sys-devel/perl-5.6.1-r2 )
+	python? ( >=dev-lang/python-2.2 )
+	java? ( =virtual/jdk-1.3* >=dev-java/ant-1.3 )
+	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
+	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc
-		>=sys-libs/zlib-1.1.3
-		tcltk? ( >=dev-lang/tcl-8 )
-		perl? ( >=sys-devel/perl-5.6.1-r2 )
-		python? ( >=dev-lang/python-2.2 )
-		java? ( =virtual/jdk-1.3* )
-		ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
-
-SLOT="0"
+	>=sys-libs/zlib-1.1.3
+	tcltk? ( >=dev-lang/tcl-8 )
+	perl? ( >=sys-devel/perl-5.6.1-r2 )
+	python? ( >=dev-lang/python-2.2 )
+	java? ( =virtual/jdk-1.3* )
+	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
 
 pkg_setup() {
 	local foo
@@ -47,7 +43,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-
 	unpack postgresql-${PV}.tar.gz
 
 	cd ${S}
@@ -60,7 +55,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf
 	use tcltk && myconf="--with-tcl"
 	use python && myconf="$myconf --with-python"
@@ -83,7 +77,6 @@ src_compile() {
 		$myconf || die
 
 	make || die
-
 }
 
 pkg_preinst() {
@@ -97,8 +90,7 @@ pkg_preinst() {
 	fi
 }
 
-src_install () {
-
+src_install() {
 	if [ "`use perl`" ]
 	then
 		mv ${S}/src/pl/plperl/Makefile ${S}/src/pl/plperl/Makefile_orig
@@ -139,9 +131,7 @@ src_install () {
 	einfo ">>> to setup the initial database environment."
 }
 
-
-pkg_config() {
-
+config() {
 	einfo ">>> Creating data directory ..."
 	mkdir -p /var/lib/postgresql/data
 	chown -Rf postgres.postgres /var/lib/postgresql
@@ -154,5 +144,4 @@ pkg_config() {
 	else
 		sudo -u postgres /usr/bin/initdb --pgdata /var/lib/postgresql/data
 	fi
-
 }
