@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-1.2.11-r1.ebuild,v 1.4 2002/10/05 05:39:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-1.2.11-r1.ebuild,v 1.5 2002/10/31 22:13:45 hannes Exp $
 
 IUSE="gnome"
 
@@ -25,7 +25,7 @@ DEPEND="=app-admin/gkrellm-1.2*
 		x11-plugins/gkrellmoon
 		x11-plugins/gkrellmouse
 		x11-plugins/gkrellmwho
-		x11-plugins/gkrellmwireless
+		net-wireless/gkrellmwireless
 		x11-plugins/gkrellshoot
 		x11-plugins/gkrellweather
 		gnome? ( x11-plugins/gkrellm-gnome )"
