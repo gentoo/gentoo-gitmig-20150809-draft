@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.0_alpha6.ebuild,v 1.3 2003/09/03 14:24:45 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.0_beta3.ebuild,v 1.1 2003/09/15 15:03:09 tseng Exp $
 
 S=${WORKDIR}/${P/_/-}
 DESCRIPTION="Openbox is a standards compliant, fast, light-weight, extensible window manager."
@@ -12,8 +12,7 @@ SLOT="3"
 DEPEND="virtual/xft
 	virtual/x11
 	>=dev-libs/glib-2
-	>=x11-libs/gtk+-2
-	>=gnome-base/libglade-2"
+	>=fontconfig-2"
 RDEPEND=${DEPEND}
 
 LICENSE="GPL-2"
@@ -29,12 +28,10 @@ src_compile() {
 
 src_install () {
 
+	dodir /etc/X11/Sessions
+	echo "/usr/bin/openbox3" > ${D}/etc/X11/Sessions/openbox3
+	fperms a+x /etc/X11/Sessions/openbox3
+
 	make DESTDIR=${D} install || die
 	dodoc README AUTHORS ChangeLog TODO
-}
-
-pkg_postinst () {
-	einfo "This release moves the menu back to its own file."
-	einfo "There are also many changes in the rc3 file."
-	einfo "Please check out the examples in /usr/share/openbox/ before running."
 }
