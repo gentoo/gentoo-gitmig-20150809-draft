@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.11 2003/03/13 23:53:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.12 2003/04/25 14:08:45 foser Exp $
+
+*devhelp-0.6.0 (25 Apr 2003)
+
+  25 Apr 2003; foser <foser@gentoo.org> devhelp-0.6.0.ebuild :
+  New version, added zlib USE flag, now uses gnome.org SRC_URI
 
 *devhelp-0.5.0 (03 Mar 2003)
 
