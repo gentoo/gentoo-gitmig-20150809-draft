@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.16 2002/09/08 21:23:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.17 2002/09/10 16:59:26 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -78,25 +78,9 @@ ECVS_MODULE_SUBDIR=$ECVS_SUBDIR
 ECVS_LOCAL=$ECVS_LOCAL
 DIR=$DIR"
 
-	# if ECVS_TOP_DIR is a symlink to a dir, get the real dir's path,
-	# otherwise addwrite() doesn't work
-	if [ -n "$ECVS_TOP_DIR" ]; then
-		# create $ECVS_TOP_DIR if missing
-		addwrite $ECVS_TOP_DIR
-		[ ! -d $ECVS_TOP_DIR -a ! -L $ECVS_TOP_DIR ] && mkdir -p $ECVS_TOP_DIR
-	    cd -P $ECVS_TOP_DIR
-	    ECVS_TOP_DIR="`pwd`"
-	    cd $OLDPWD
-	fi
-	
 	# a shorthand
-	[ -n "$ECVS_SUBDIR" ] && DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}/${ECVS_SUBDIR}" || \
-							DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}"
+	DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}/${ECVS_SUBDIR}"
 
-	[ -n "$ECVS_LOCAL" ] && ECVS_CVS_OPTIONS="$ECVS_CVS_OPTIONS -l"
-	
-	addread $DIR
-	
 	if [ "$ECVS_SERVER" == "offline" ]; then
 		# we're not required to fetch anything, the module already exists and shouldn't be updated
 	    if [ -d "$DIR" ]; then
@@ -108,19 +92,30 @@ DIR=$DIR"
 			return 1
 	    fi
 	fi
+							DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}"
+	# create target directory as needed
+	if [ ! -d "$DIR" ]; then
+		debug-print "$FUNCNAME: creating cvs directory $DIR"
+		#export SANDBOX_WRITE="$SANDBOX_WRITE:/foobar:/"
+		addwrite /foobar
+		addwrite /
+		mkdir -p /$DIR
+		export SANDBOX_WRITE=${SANDBOX_WRITE//:\/foobar:\/}
+	fi
 
+	# in case ECVS_TOP_DIR is a symlink to a dir, get the real dir's path,
+	# otherwise addwrite() doesn't work.
+	cd -P $ECVS_TOP_DIR > /dev/null
+	ECVS_TOP_DIR="`/bin/pwd`"
+	cd $OLDPWD
+	
 	# disable the sandbox for this dir
 	# not just $DIR because we want to create moduletopdir/CVS too
 	addwrite $ECVS_TOP_DIR/$ECVS_MODULE
-	
-	if [ ! -d "$DIR" ]; then
-		debug-print "$FUNCNAME: creating cvs directory $DIR"
-		einfo "Creating directory $DIR"
-		export SANDBOX_WRITE="$SANDBOX_WRITE:/foo:/"
-		mkdir -p /$DIR
-		export SANDBOX_WRITE=${SANDBOX_WRITE//:\/foo:\/}
-	fi
 
+	# add option for local (non-recursive) fetching
+	[ -n "$ECVS_LOCAL" ] && ECVS_CVS_OPTIONS="$ECVS_CVS_OPTIONS -l"
+	
 	# prepare a cvspass file just for this session so that cvs thinks we're logged
 	# in at the cvs server. we don't want to mess with ~/.cvspass.
 	echo ":pserver:${ECVS_SERVER} A" > ${T}/cvspass
@@ -141,8 +136,9 @@ DIR=$DIR"
 	fi
 	
 	debug-print "$FUNCNAME: Root<-$newserver, Repository<-$repository"
-
-	cd $DIR
+	
+	cd /$DIR
+	
 	if [ ! -d "$DIR/CVS" ]; then
 		# create a new CVS/ directory (checkout)
 		debug-print "$FUNCNAME: creating new cvs directory"
