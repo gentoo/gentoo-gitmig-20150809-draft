@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/lhs2tex
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.1 2004/03/20 20:07:34 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.2 2004/04/13 12:42:14 kosmikus Exp $
+
+*lhs2tex-1.10_pre (13 Apr 2004)
+
+  13 Apr 2004; Andres Loeh <kosmikus@gentoo.org> lhs2tex-1.10_pre.ebuild:
+  New version.
 
 *lhs2tex-1.9 (20 Mar 2004)
 
