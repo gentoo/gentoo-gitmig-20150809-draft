@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r4.ebuild,v 1.3 2003/09/24 22:02:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r4.ebuild,v 1.4 2003/12/08 07:59:15 usata Exp $
 
 MY_P="docbkx412"
 S=${WORKDIR}/${P}
@@ -26,8 +26,7 @@ src_install() {
 	# still use the -r3 build file
 	newbin ${FILESDIR}/build-docbook-catalog-${PV}-r3 build-docbook-catalog
 
-	dodir /etc/xml
-	touch ${D}/etc/xml/.keep
+	keepdir /etc/xml
 
 	insinto /usr/share/sgml/docbook/xml-dtd-${PV}
 	doins *.dtd *.mod

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2.ebuild,v 1.11 2003/09/24 22:02:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2.ebuild,v 1.12 2003/12/08 07:59:15 usata Exp $
 
 MY_P="docbook-xml-4.2"
 S=${WORKDIR}/${P}
@@ -25,8 +25,7 @@ src_install() {
 
 	newbin ${FILESDIR}/build-docbook-catalog-${PV} build-docbook-catalog
 
-	dodir /etc/xml
-	touch ${D}/etc/xml/.keep
+	keepdir /etc/xml
 
 	insinto /usr/share/sgml/docbook/xml-dtd-${PV}
 	doins *.dtd *.mod
