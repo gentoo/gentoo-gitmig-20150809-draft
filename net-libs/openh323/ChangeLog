@@ -1,9 +1,13 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.54 2004/12/29 03:22:36 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.55 2004/12/29 03:46:38 stkn Exp $
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
+
+  29 Dec 2004; Stefan Knoblich <stkn@gentoo.org> openh323-1.15.2.ebuild:
+  cleanup, SRC_URI changed, some parts taken from #69233 submitted by
+  Stefan Schweizer <genstef@gentoo.org>
 
 *openh323-1.15.2 (28 Dec 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.2.ebuild,v 1.1 2004/12/28 03:40:17 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.2.ebuild,v 1.2 2004/12/29 03:46:38 stkn Exp $
 
 IUSE="ssl novideo noaudio debug"
 
@@ -11,22 +11,23 @@ MY_P="${PN}-v${PV//./_}"
 S=${WORKDIR}/${PN}
 DESCRIPTION="Open Source implementation of the ITU H.323 teleconferencing protocol"
 HOMEPAGE="http://www.openh323.org/"
-SRC_URI="http://dev.gentoo.org/~stkn/openh323/${MY_P}-src.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}-src-tar.gz"
 
+RESTRICT="nomirror"
 SLOT="0"
 LICENSE="MPL-1.1"
 KEYWORDS="-*"
 
 DEPEND=">=sys-apps/sed-4
-	>=dev-libs/pwlib-1.8.0
+	>=dev-libs/pwlib-1.8.3
 	>=media-video/ffmpeg-0.4.7
 	ssl? ( dev-libs/openssl )"
 
 src_unpack() {
-	unpack ${A}
+	# currently complaining to UPSTREAM about new naming scheme
+	tar -C ${WORKDIR} -xzf ${DISTDIR}/${MY_P}-src-tar.gz || die "Unpacking of ${PF} failed"
 
 	cd ${S}
-
 	# Makefile is currently broken with NOTRACE=1, fix that
 	epatch ${FILESDIR}/${PN}-1.15.2-notrace.diff
 }
@@ -92,7 +93,10 @@ src_install() {
 	###
 	# Install stuff
 	#
-	make PREFIX=${D}/usr ${makeopts} install || die "install failed"
+	make PREFIX=${D}/usr \
+		OH323_FILE="libh323_${OPENH323_ARCH}.so.${PV}" \
+		${makeopts} install || die "install failed"
+
 	dobin ${S}/samples/simple/obj_${OPENH323_ARCH}/simph323
 
 	###
