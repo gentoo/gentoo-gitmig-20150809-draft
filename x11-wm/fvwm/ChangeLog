@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.12 2003/02/13 17:31:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.13 2003/07/03 18:38:54 taviso Exp $
+
+  03 Jul 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.4.7-r1.ebuild:
+  new release, now includes rplay support.
 
 *fvwm-2.4.15 (13 Feb 2003)
 
