@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.93 2004/11/01 22:52:50 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.94 2004/11/02 22:21:45 langthang Exp $
+
+  02 Nov 2004; Tuan Van <langthang@gentoo.org> -files/authdaemond.conf,
+  -files/authdaemond.rc6, -files/courier-imap-3.0.2-db40vs41.patch,
+  -files/courier-imap-3.0.2-disable-fam.diff,
+  -files/courier-imap-3.0.2-removerpm.patch, -files/courier-imapd-ssl.rc6,
+  -files/courier-pop3d-ssl.rc6, -files/gentoo-imapd-ssl.rc,
+  -files/gentoo-imapd.rc, -files/gentoo-pop3d-ssl.rc,
+  -files/gentoo-pop3d.rc, courier-imap-3.0.7.ebuild,
+  courier-imap-3.0.8.ebuild:
+  remove cruft. fix RDEPEND use? syntax error.
 
   01 Nov 2004; Tuan Van <langthang@gentoo.org> -courier-imap-3.0.5.ebuild,
   courier-imap-3.0.8.ebuild:
