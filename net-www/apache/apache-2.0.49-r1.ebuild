@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.12 2004/05/02 02:25:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.13 2004/05/03 14:36:10 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails
 
@@ -29,9 +29,6 @@ DEPEND="dev-util/yacc
 IUSE="berkdb gdbm ldap threads ipv6 doc"
 
 apache_setup_vars() {
-	# Sane makeopts
-	get_number_of_jobs
-
 	# Sets the USERDIR to default.
 	USERDIR="public_html"
 
@@ -144,6 +141,7 @@ src_compile() {
 	echo 'ac_cv_header_netinet_sctp_h=${ac_cv_header_netinet_sctp_h=no}' >> ${S}/config.cache
 	echo 'ac_cv_header_netinet_sctp_uio_h=${ac_cv_header_netinet_sctp_uio_h=no}' >> ${S}/config.cache
 
+	makeopts="${makeopts} -j1"
 	SSL_BASE="SYSTEM" \
 	WANT_AUTOCONF_2_5=1 WANT_AUTOCONF=2.5
 	./configure \
