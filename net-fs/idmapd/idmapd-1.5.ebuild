@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/idmapd/idmapd-1.5.ebuild,v 1.2 2004/06/08 15:54:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/idmapd/idmapd-1.5.ebuild,v 1.3 2004/06/08 17:58:24 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.citi.umich.edu/projects/nfsv4/nfsv4-linux/idmapd/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~arm ~hppa ~amd64 ~ppc64 ~s390"
 IUSE=""
 
 DEPEND="dev-libs/libevent"
