@@ -14,8 +14,11 @@ case "$DISPLAYMANAGER" in
     kdm|kde|KDM|KDE|kde2|KDE2|kde3|KDE3)
 	EXE=`which kdm`
 	;;
-    E|ELOGIN|ELOGIND)
+    elogin|elogind|ELOGIN|ELOGIND)
 	EXE=`which elogind`
+	;;
+    entrance|entranced|ENTRANCE|ENTRANCED)
+	EXE=`which entranced`
 	;;
     gdm|GDM|Gnome|GNOME)
 	EXE=/usr/bin/gdm
