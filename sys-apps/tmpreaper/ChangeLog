@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tmpreaper
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/ChangeLog,v 1.13 2004/09/07 18:57:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/ChangeLog,v 1.14 2004/10/17 11:24:55 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> tmpreaper-1.5.1.ebuild:
+  stable on amd64.
 
   07 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> tmpreaper-1.5.1.ebuild:
   Stable on sparc
