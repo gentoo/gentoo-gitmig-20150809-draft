@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.75.ebuild,v 1.1 2003/07/11 02:42:52 sindian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.75.ebuild,v 1.2 2003/07/12 00:13:44 sindian Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV}
@@ -26,7 +26,8 @@ then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
 	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl
-		 sys-devel/make"
+		 sys-devel/make
+		 sys-apps/module-init-tools"
 fi
 
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include"
@@ -88,4 +89,19 @@ pkg_postinst() {
 
 		ln -sf linux-${KV} ${ROOT}/usr/src/linux-beta
 	fi
+
+	echo
+    ewarn "Please note that ptyfs support has been removed from devfs"
+    ewarn "in the later 2.5.x kernels, and you have to compile it in now,"
+    ewarn "or else you will get errors when trying to open a pty."
+    ewarn "The option is File systems->Pseudo filesystems->/dev/pts"
+    ewarn "filesystem."
+    echo
+	ewarn "Also, note that you must compile in support for" 
+	ewarn "input devices (Input device support->Input devices),"
+	ewarn "the virtual terminal (Character Devices->Virtual terminal),"
+	ewarn "and the vt_console (Character Devices->Support for console...)."
+	ewarn "Otherwise, you will get the dreaded \"Uncompressing the Kernel\""
+	ewarn "error."
+	echo
 }
