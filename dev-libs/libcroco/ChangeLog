@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcroco
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.13 2004/08/05 20:37:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.14 2004/09/15 15:03:46 foser Exp $
+
+*libcroco-0.6.0 (15 Sep 2004)
+
+  15 Sep 2004; foser <foser@gentoo.org> libcroco-0.6.0.ebuild :
+  New release, slotted to 0.6
 
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> libcroco-0.5.1.ebuild:
   Stable on sparc
