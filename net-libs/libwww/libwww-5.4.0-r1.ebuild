@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r1.ebuild,v 1.16 2003/10/03 08:30:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r1.ebuild,v 1.17 2003/12/11 02:32:18 agriffis Exp $
 
 IUSE="ssl mysql"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.w3.org/Library/"
 
 SLOT="0"
 LICENSE="W3C"
-KEYWORDS="x86 ppc sparc alpha hppa amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 
 RDEPEND="dev-lang/perl
 	>=sys-libs/zlib-1.1.4

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.17 2003/12/10 14:22:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.18 2003/12/11 02:32:18 agriffis Exp $
+
+  10 Dec 2003; <agriffis@gentoo.org> libwww-5.4.0-r1.ebuild:
+  stable on ia64
 
 *libwww-5.4.0-r2 (07 Oct 2003)
 
