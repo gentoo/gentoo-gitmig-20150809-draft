@@ -1,0 +1,16 @@
+--- linphone-0.12.1/coreapi/linphonecore.c.orig	2003-12-07 18:29:04.000000000 +0000
++++ linphone-0.12.1/coreapi/linphonecore.c	2003-12-07 18:30:42.000000000 +0000
+@@ -34,9 +34,11 @@
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ 
+-#ifdef INET6  
++/* 
++   shoot me if this breaks, stkn
++   (at least it compiles now, w/o use="ipv6")
++*/
+ #include <netdb.h>  
+-#endif
+ 
+ #define MAX_IF 20
+ const double bandwidths[5]=

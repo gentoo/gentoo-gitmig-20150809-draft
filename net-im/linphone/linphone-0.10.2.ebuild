@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.10.2.ebuild,v 1.8 2003/12/31 04:21:04 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.10.2.ebuild,v 1.9 2004/01/03 02:10:56 stkn Exp $
 
 IUSE="doc gnome gtk2 gtk nls xv alsa"
 
