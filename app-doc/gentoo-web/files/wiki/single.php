@@ -92,6 +92,9 @@
 		$public = 'private';
 	}
 
+	$developer = mysql_query( 'select username from users where uid='.$todo['owner'] );
+	list( $developer ) = mysql_fetch_row( $developer );
+
 ?>
 <p>&nbsp;</p>
 <?php if ( $theirs ) { ?><form method="post" action="single.php?action=<?php if ( $action == 'new_todo' ) print 'new_todo'; else print 'update'; ?>"> <?php } ?>
@@ -112,7 +115,7 @@
 		<tr>
 			<td width="50%" valign="top">
 			<p>
-				<b>Developer:</b> <?=$dbusername;?><br>
+				<b>Developer:</b> <?=$developer;?><br>
 				<?php if ( $action == 'new_todo' ) { ?>
 					<b>Todo (will be) posted:</b> <?=date( "n/j/y", time() );?><br>
 				<?php } else { ?>
