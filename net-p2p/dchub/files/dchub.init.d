@@ -1,12 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/files/dchub.init.d,v 1.1 2003/01/26 23:18:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/files/dchub.init.d,v 1.2 2003/04/24 13:43:19 vapier Exp $
 
-# we define these 2 values here because they're mandatory
+# we define these 4 values here because they're mandatory
 DCHUB_CONF="${DCHUB_CONF_DIR}/dchub.conf.db"
-DCHUB_PASS="${DCHUB_CONF_DIR}/dchub.passwd"
-DCHUB_REQ="-c ${DCHUB_CONF} -u ${DCHUB_PASS}"
+DCHUB_USER="${DCHUB_CONF_DIR}/dchub.passwd"
+DCHUB_PASS="${DCHUB_CONF_DIR}/dchub.hubpass"
+DCHUB_FCRC="${DCHUB_CONF_DIR}/dchub.crc"
+DCHUB_REQ="-c ${DCHUB_CONF} -u ${DCHUB_USER} -P ${DCHUB_PASS} -r ${DCHUB_FCRC}"
 
 depend() {
 	need net

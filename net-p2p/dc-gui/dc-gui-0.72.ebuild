@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.71.ebuild,v 1.1 2003/03/20 13:35:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.72.ebuild,v 1.1 2003/04/24 13:45:00 vapier Exp $
 
 IUSE="nls"
 

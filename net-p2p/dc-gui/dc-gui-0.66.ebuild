@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.66.ebuild,v 1.1 2003/02/17 18:46:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.66.ebuild,v 1.2 2003/04/24 13:45:00 vapier Exp $
 
 S=${WORKDIR}/${P/-/_}
 DESCRIPTION="GUI for DCTC (GTK1 version)"
 SRC_URI="http://ac2i.tzo.com/dctc/${P/-/_}.tar.gz"
 HOMEPAGE="http://ac2i.tzo.com/dctc/"
 
-SLOT="0"
+SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 IUSE="nls"

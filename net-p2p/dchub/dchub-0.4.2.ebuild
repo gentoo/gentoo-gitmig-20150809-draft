@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/dchub-0.4.0.ebuild,v 1.2 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/dchub-0.4.2.ebuild,v 1.1 2003/04/24 13:43:19 vapier Exp $
 
 HOMEPAGE="http://www.ac2i.tzo.com/dctc/#dchub"
 DESCRIPTION="dchub (Direct Connect Hub), a linux hub for the p2p 'direct connect'"
