@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/hogwash-0.1d-r2.ebuild,v 1.4 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/hogwash-0.1d-r2.ebuild,v 1.5 2002/08/14 12:12:05 murphy Exp $
 
 S=${WORKDIR}/devel
 DESCRIPTION="An invisible, layer2 network packet scrubber based on snort"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/hogwash/hogwash-0.1.d.tgz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=net-libs/libpcap-0.6.1
 	>=net-libs/libnet-1.0.2a"

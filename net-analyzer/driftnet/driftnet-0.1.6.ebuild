@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.1 2002/07/19 04:23:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.2 2002/08/14 12:11:44 murphy Exp $
 
 DESCRIPTION="Driftnet is a program which listens to network traffic and picks out images from TCP streams it observes."
 HOMEPAGE="http://www.ex-parrot.com/~chris/driftnet/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 
 DEPEND="media-libs/jpeg

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/airsnort/airsnort-0.2.1a.ebuild,v 1.2 2002/07/18 23:22:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/airsnort/airsnort-0.2.1a.ebuild,v 1.3 2002/08/14 12:11:44 murphy Exp $
 
 MY_P=${P/a/A}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=sys-devel/autoconf-2.13
 	>=x11-libs/gtk+-1.2.10-r8

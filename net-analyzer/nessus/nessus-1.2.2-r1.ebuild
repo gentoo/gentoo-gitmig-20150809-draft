@@ -1,6 +1,6 @@
 # Copyright 2000-2002 Achim Gottinger
 # Distributed under the GPL by Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.2.2-r1.ebuild,v 1.2 2002/07/18 23:22:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.2.2-r1.ebuild,v 1.3 2002/08/14 12:12:16 murphy Exp $
 
 S=${WORKDIR}
 DESCRIPTION="A remote security scanner for Linux"
@@ -19,7 +19,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 
 src_compile() {

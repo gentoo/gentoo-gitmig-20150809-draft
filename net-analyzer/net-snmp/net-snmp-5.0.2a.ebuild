@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.2a.ebuild,v 1.1 2002/07/23 22:19:15 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.2a.ebuild,v 1.2 2002/08/14 12:12:26 murphy Exp $
 
 S=${WORKDIR}/${P%[a-z]}
 DESCRIPTION="Software for generating and retrieving SNMP data"
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc <sys-libs/db-2
 	
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	local myconf disable_sec_services

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0.99_rc2-r2.ebuild,v 1.3 2002/07/18 23:22:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0.99_rc2-r2.ebuild,v 1.4 2002/08/14 12:12:28 murphy Exp $
 
 S=${WORKDIR}/RC2/ntop
 DESCRIPTION="ntop is a unix tool that shows network usage like top"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ntop.org/ntop.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
 	>=net-libs/libpcap-0.5.2

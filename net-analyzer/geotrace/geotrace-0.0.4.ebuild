@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/geotrace/geotrace-0.0.4.ebuild,v 1.7 2002/07/18 23:22:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/geotrace/geotrace-0.0.4.ebuild,v 1.8 2002/08/14 12:11:58 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="geographical traceroute utility"
@@ -14,7 +14,7 @@ RDEPEND="net-analyzer/traceroute"
 
 SLOT="0"
 LICENSE="BSD GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {
 	unpack ${A}

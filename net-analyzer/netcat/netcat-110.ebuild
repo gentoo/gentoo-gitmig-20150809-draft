@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110.ebuild,v 1.5 2002/08/14 10:45:12 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110.ebuild,v 1.6 2002/08/14 12:12:28 murphy Exp $
 
 MY_P=nc${PV}
 S=${WORKDIR}/nc-${PV}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.l0pht.com/~weld/netcat"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="virtual/glibc"
 
