@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.2.ebuild,v 1.1 2003/03/09 17:26:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.2.ebuild,v 1.2 2003/04/05 02:35:53 lostlogic Exp $
 
 inherit gnome2
 # inherit debug to enable debugging and do it after gnome2 so as not gnome2 notices debugging
@@ -17,7 +17,7 @@ KEYWORDS="~x86"
 SLOT="0"
 
 RDEPEND="virtual/x11
-        =net-www/mozilla-1.3_beta
+        >=net-www/mozilla-1.3*
 		>=dev-libs/glib-2.0
 		>=x11-libs/gtk+-2.0
 		>=dev-libs/libxml2-2.4
