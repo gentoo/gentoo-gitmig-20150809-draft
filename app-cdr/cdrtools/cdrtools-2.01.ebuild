@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.ebuild,v 1.11 2004/10/09 19:30:12 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.ebuild,v 1.12 2004/10/19 18:06:14 vapier Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/${P}.tar.bz2"
 
 LICENSE="GPL-2 freedist"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 ppc64 mips"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -47,16 +47,16 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	dobin cdda2wav/OBJ/*-linux-cc/cdda2wav
-	dobin cdrecord/OBJ/*-linux-cc/cdrecord
-	dobin mkisofs/OBJ/*-linux-cc/mkisofs
-	dobin readcd/OBJ/*-linux-cc/readcd
-	dosbin rscsi/OBJ/*-linux-cc/rscsi
+	dobin cdda2wav/OBJ/*-linux-cc/cdda2wav || die "cdda2wav"
+	dobin cdrecord/OBJ/*-linux-cc/cdrecord || die "cdrecord"
+	dobin mkisofs/OBJ/*-linux-cc/mkisofs || die "mkisofs"
+	dobin readcd/OBJ/*-linux-cc/readcd || die "readcd"
+	dosbin rscsi/OBJ/*-linux-cc/rscsi || die "rscsi"
 	insinto /usr/include
-	doins incs/*-linux-cc/align.h incs/*-linux-cc/avoffset.h incs/*-linux-cc/xconfig.h
+	doins incs/*-linux-cc/align.h incs/*-linux-cc/avoffset.h incs/*-linux-cc/xconfig.h || die "include"
 
 	cd mkisofs/diag/OBJ/*-linux-cc
-	dobin devdump isodump isoinfo isovfy
+	dobin devdump isodump isoinfo isovfy || die "dobin"
 
 	cd ${S}
 	insinto /etc/default
