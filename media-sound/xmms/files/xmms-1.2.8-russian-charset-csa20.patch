@@ -246,8 +246,8 @@ diff -dPNur xmms-1.2.8/Input/vorbis/vorbis.c xmms-1.2.8-patched/Input/vorbis/vor
  	return displaytitle;
 diff -dPNur xmms-1.2.8/libxmms/charset_auto_russian.h xmms-1.2.8-patched/libxmms/charset_auto_russian.h
 --- xmms-1.2.8/libxmms/charset_auto_russian.h	1970-01-01 01:00:00.000000000 +0100
-+++ xmms-1.2.8-patched/libxmms/charset_auto_russian.h	2003-10-24 02:03:57.000000000 +0200
-@@ -0,0 +1,585 @@
++++ xmms-1.2.8-patched/libxmms/charset_auto_russian.h	2003-10-24 18:22:39.000000000 +0200
+@@ -0,0 +1,592 @@
 +/* 
 +Originaly stealed from GPPL's (http://gppl.terminal.ru) autorecode-xmms1.2.7 patch,
 +
@@ -259,7 +259,7 @@ diff -dPNur xmms-1.2.8/libxmms/charset_auto_russian.h xmms-1.2.8-patched/libxmms
 +    New tables, new algorithm to detect even upercase phrases (~99.7% of right answers)
 +
 +csa19:
-+    Enca support
++    CP866 support
 +*/
 +
 +typedef struct lng_stat {
@@ -764,9 +764,12 @@ diff -dPNur xmms-1.2.8/libxmms/charset_auto_russian.h xmms-1.2.8-patched/libxmms
 +    int bytes=0,rflag=0;
 +    unsigned char tmp;
 +    int res=0;
++    long l;
 +
-+    if (!len) len=strlen(buf);
-+    for (i=0;i<len;i++) {
++    l=strlen(buf);
++    if ((len)&&(l>len)) l=len;
++
++    for (i=0;i<l;i++) {
 +	if (buf[i]<128) continue;
 +	
 +	if (bytes>0) {
@@ -801,7 +804,7 @@ diff -dPNur xmms-1.2.8/libxmms/charset_auto_russian.h xmms-1.2.8-patched/libxmms
 +	}
 +	    
 +	if ((buf[i]==0xD0)||(buf[i]==0xD1)) {
-+	    if (i+1==len) break;
++	    if (i+1==l) break;
 +	    	    
 +	}
 +    }
@@ -811,8 +814,12 @@ diff -dPNur xmms-1.2.8/libxmms/charset_auto_russian.h xmms-1.2.8-patched/libxmms
 +static int check_cp866(unsigned char *buf, int len) {
 +    long i;
 +    int res=0;
-+    if (!len) len=strlen(buf);
-+    for (i=0;i<len;i++) {
++    long l;
++
++    l=strlen(buf);
++    if ((len)&&(l>len)) l=len;
++
++    for (i=0;i<l;i++) {
 +	if ((buf[i]>=0x80)&&(buf[i]<=0x9F)) res++;
 +	else if ((buf[i]>=0xA0)&&(buf[i]<=0xAF)) res++;
 +	else if ((buf[i]>=0xC0)&&(buf[i]<0xE0)) res-=2;
@@ -835,8 +842,8 @@ diff -dPNur xmms-1.2.8/libxmms/charset_auto_russian.h xmms-1.2.8-patched/libxmms
 +}
 diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 --- xmms-1.2.8/libxmms/charset.c	1970-01-01 01:00:00.000000000 +0100
-+++ xmms-1.2.8-patched/libxmms/charset.c	2003-10-24 03:01:40.000000000 +0200
-@@ -0,0 +1,848 @@
++++ xmms-1.2.8-patched/libxmms/charset.c	2003-10-24 19:10:29.000000000 +0200
+@@ -0,0 +1,870 @@
 +#include <stdio.h>
 +#include <stdlib.h>
 +#include <string.h>
@@ -889,7 +896,7 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +static int xmms_autocharset_fs = 1;
 +static int xmms_charset_fm = 1;
 +
-+static int xmms_autocharset_changed = 0;
++static int xmms_autocharset_changed = -1;
 +static iconv_t *xmms_autocharset = NULL;
 +static iconv_t *xmms_autocharset_id2utf = NULL;
 +static iconv_t *xmms_autocharset_id2id = NULL;
@@ -984,6 +991,7 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +    xmms_autocharset_fs=fs;
 +    xmms_charset_fm=fm;
 +    xmms_autocharset_changed=1;
++    xmms_charset_changed=1;
 +}
 +
 +void xmms_autocharset_init(int m) {
@@ -992,7 +1000,9 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +}
 +
 +void xmms_autocharset_free() {
++#ifdef AUTO_ENCA_SUPPORT
 +    int i,j;
++#endif
 +    xmms_autocharset_iconv_close();
 +#ifdef AUTO_ENCA_SUPPORT
 +    for (i=0;i<autocharset_list_ni;i++)
@@ -1014,10 +1024,12 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +    const char **encodings;
 +    const char *output, *id3, *fs;
 +    int i;
++
++    assert(xmms_autocharset_changed>=0);
 +    
 +    if ((!xmms_autocharset_changed)&&(!xmms_charset_changed)) return;
 +    xmms_autocharset_iconv_close();
-+    xmms_autocharset_changed=0;
++    xmms_autocharset_changed=-1;
 +
 +    xmms_autocharset_number = xmms_autocharset_number_charsets(0);
 +    if (!xmms_autocharset_number) return;
@@ -1088,12 +1100,14 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +	    
 +	}
 +    }
++    xmms_autocharset_changed=0;
 +}
 +
 +
 +static iconv_t xmms_autocharset_get(char *buf, int len) {
 +    int i;
 +    xmms_autocharset_iconv_open();
++    if (xmms_autocharset_changed<0) return (iconv_t)-1;
 +    if ((xmms_autocharset)&&(xmms_autocharset_number>0)) {
 +	i=autocharset_list[xmms_autocharset_mode].func(buf,len);
 +	if (i<xmms_autocharset_number) return xmms_autocharset[i];
@@ -1104,6 +1118,7 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +static iconv_t xmms_autocharset_get_id2id(char *buf, int len) {
 +    int i;
 +    xmms_autocharset_iconv_open();
++    if (xmms_autocharset_changed<0) return (iconv_t)-1;
 +    if ((xmms_autocharset_id2id)&&(xmms_autocharset_number>0)) {
 +	i=autocharset_list[xmms_autocharset_mode].func(buf,len);
 +	if (i<xmms_autocharset_number) return xmms_autocharset_id2id[i];
@@ -1114,6 +1129,7 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +static iconv_t xmms_autocharset_get_id2utf(char *buf, int len) {
 +    int i;
 +    xmms_autocharset_iconv_open();
++    if (xmms_autocharset_changed<0) return (iconv_t)-1;
 +    if ((xmms_autocharset_id2utf)&&(xmms_autocharset_number>0)) {
 +	i=autocharset_list[xmms_autocharset_mode].func(buf,len);
 +	if (i<xmms_autocharset_number) return xmms_autocharset_id2utf[i];
@@ -1124,6 +1140,7 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +static iconv_t xmms_autocharset_get_id2fs(char *buf, int len) {
 +    int i;
 +    xmms_autocharset_iconv_open();
++    if (xmms_autocharset_changed<0) return (iconv_t)-1;
 +    if ((xmms_autocharset_id2fs)&&(xmms_autocharset_number>0)) {
 +	i=autocharset_list[xmms_autocharset_mode].func(buf,len);
 +	if (i<xmms_autocharset_number) return xmms_autocharset_id2fs[i];
@@ -1439,7 +1456,6 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +	    }
 +	} else {
 +	    perror("iconv convert: convert");
-+//	    perror(buf);
 +	    return NULL;
 +	}
 +    }
@@ -1468,6 +1484,8 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +    iconv_t icnv;
 +
 +    xmms_charset_iconv_open();
++    xmms_autocharset_iconv_open();
++
 +    icnv = xmms_autocharset_get(buf,len);
 +
 +    if (icnv == (iconv_t)-2) return NULL;
@@ -1490,7 +1508,9 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +char *xmms_charset_recode_fs(char *buf, int len, int *rlen) {
 +    iconv_t icnv;
 +    char *tmp1, *tmp2;
++
 +    xmms_charset_iconv_open();
++
 +    if (xmms_autocharset_fs) {
 +	icnv = xmms_autocharset_get(buf,len);
 +	if (icnv != (iconv_t)-1) {
@@ -1504,7 +1524,8 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +		    } else return tmp1;
 +		}
 +	    }
-+	    else return xmms_charset_recode(iconv_output,tmp1,0,rlen);
++	    else if (iconv_output!=(iconv_t)-1) return xmms_charset_recode(iconv_output,buf,len,rlen);
++	    else return NULL;
 +	}
 +    }
 +    if (iconv_fs != (iconv_t)-1) 
@@ -1514,7 +1535,9 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +
 +char *xmms_charset_recode_fsout(char *buf, int len, int *rlen) {
 +    iconv_t icnv;
++
 +    xmms_charset_iconv_open();
++
 +    if (xmms_autocharset_fs) {
 +	icnv = xmms_autocharset_get(buf,len);
 +	if (icnv == (iconv_t)-2) return NULL;
@@ -1532,7 +1555,6 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +    int i;
 +*/
 +    if (!xmms_charset_fm) return NULL;
-+
 +    xmms_charset_iconv_open();
 +/*
 +    if (xmms_autocharset_fs) {
@@ -1574,17 +1596,18 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +    iconv_t icnv;
 +
 +    if (!xmms_charset_fm) return NULL;
-+
 +    xmms_charset_iconv_open();
++    
 +    icnv = xmms_autocharset_get_id2fs(buf,len);
 +	
 +    if (icnv==(iconv_t)-2) return NULL;
 +
-+    if (icnv != (iconv_t)-1)
++    if (icnv != (iconv_t)-1) {
 +	return xmms_charset_recode(icnv, buf, len, rlen);
-+
-+    if (iconv_pl2fs != (iconv_t)-1) 
++    }
++    if (iconv_pl2fs != (iconv_t)-1) {
 +	return xmms_charset_recode(iconv_pl2fs, buf, len, rlen);
++    }
 +    return NULL;
 +}
 +
@@ -1608,14 +1631,21 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +    if (!xmms_charset_fm) return NULL;
 +    if (!xmms_autocharset_fs) return NULL;
 +    
++    xmms_charset_iconv_open();
++    xmms_autocharset_iconv_open();
++    if (xmms_autocharset_changed<0) return NULL;
++    if (!xmms_autocharset_fs2id) return NULL;
++
++    
 +    if (check_file(path,buf)) return NULL;
 +    encodings = autocharset_list[xmms_autocharset_mode].encodings;
 +    
 +    len=strlen(buf);
 +    for (i=0;encodings[i];i++) {
-+	if (xmms_autocharset_fs2id[i]>(iconv_t)0) {
++	if ((xmms_autocharset_fs2id[i]!=(iconv_t)-1)&&(xmms_autocharset_fs2id[i]!=(iconv_t)-2)) {
 +	    tmp=xmms_charset_recode(xmms_autocharset_fs2id[i],buf,len,0);
 +	    if (tmp) {
++		puts(tmp);
 +		if (check_file(path,tmp)) return tmp;
 +		free(tmp);
 +	    }
@@ -1659,8 +1689,7 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +	icnv = xmms_autocharset_get_id2utf(buf,len);
 +	if (icnv==(iconv_t)-2) return NULL;
 +	if (icnv!=(iconv_t)-1) {
-+	    str = xmms_charset_recode(icnv, buf, len, &rlen);
-+	    puts(str);
++	    str = xmms_charset_recode(icnv, buf, len, rlen);
 +	    if (str) return str;
 +	}
 +    }
@@ -1687,8 +1716,8 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +
 diff -dPNur xmms-1.2.8/libxmms/charset_config.h xmms-1.2.8-patched/libxmms/charset_config.h
 --- xmms-1.2.8/libxmms/charset_config.h	1970-01-01 01:00:00.000000000 +0100
-+++ xmms-1.2.8-patched/libxmms/charset_config.h	2003-10-24 01:37:22.000000000 +0200
-@@ -0,0 +1,46 @@
++++ xmms-1.2.8-patched/libxmms/charset_config.h	2003-10-24 13:31:47.000000000 +0200
+@@ -0,0 +1,37 @@
 +/* Misc configuration options */
 +
 +#define CHARSET_MAX_STRING_SIZE	1024	/* 256 symbols in UTF-32 */
@@ -1706,21 +1735,17 @@ diff -dPNur xmms-1.2.8/libxmms/charset_config.h xmms-1.2.8-patched/libxmms/chars
 +    {"Russian", &autocharset_russian, {"CP1251","KOI8-R","UTF-8","IBM866"} },
 +    {"Russian UpCase",&autocharset_russian_uc, {"CP1251","KOI8-R","UTF-8","IBM866"} }
 +}},
-+{"uk","Ukrainian",{"Default","KOI8-U","CP1251","UTF-8","IBM855","MACCYRILLIC","ISO8859-5","CP1125", NULL},1,{
-+    {"Off", NULL, {NULL}}
++{"uk","Ukrainian",{"Default","KOI8-U","CP1251","UTF-8","IBM855","MACCYRILLIC","ISO8859-5","CP1125", NULL},3,{
++    {"Off", NULL, {NULL}},
++    {"Russian", &autocharset_russian, {"CP1251","KOI8-R","UTF-8","IBM866"} },
++    {"Russian UpCase",&autocharset_russian_uc, {"CP1251","KOI8-R","UTF-8","IBM866"} }
 +}},
 +{NULL,NULL,{NULL},0}
 +};
 +
 +const charset_list_t charset_list_default = { "Default", "KOI8-R", "CP1251", "CP866", "UTF-8", NULL };
 +const char **charset_list=charset_list_default;
-+/*
-+#ifdef AUTO_ENCA_SUPPORT
-+const int autocharset_list_ni=4;
-+#else
-+const int autocharset_list_ni=3;
-+#endif
-+*/
++
 +#define autocharset_list_ni_default 3
 +struct autocharset_list_t autocharset_list_default[] = {
 +    {"Off", NULL, {NULL}},
@@ -1730,11 +1755,6 @@ diff -dPNur xmms-1.2.8/libxmms/charset_config.h xmms-1.2.8-patched/libxmms/chars
 +
 +int autocharset_list_ni=autocharset_list_ni_default;
 +struct autocharset_list_t *autocharset_list=autocharset_list_default;
-+/*
-+#ifdef AUTO_ENCA_SUPPORT
-+    ,{"Russian (LibEnca)",&autocharset_enca_russian,{"CP1251","KOI8-R","UTF-8"}}
-+#endif
-+*/
 diff -dPNur xmms-1.2.8/libxmms/charset_defines.h xmms-1.2.8-patched/libxmms/charset_defines.h
 --- xmms-1.2.8/libxmms/charset_defines.h	1970-01-01 01:00:00.000000000 +0100
 +++ xmms-1.2.8-patched/libxmms/charset_defines.h	2003-10-24 03:04:12.000000000 +0200
@@ -1746,7 +1766,7 @@ diff -dPNur xmms-1.2.8/libxmms/charset_defines.h xmms-1.2.8-patched/libxmms/char
 +#define ENV_VARIABLE LC_CTYPE
 diff -dPNur xmms-1.2.8/libxmms/charset.h xmms-1.2.8-patched/libxmms/charset.h
 --- xmms-1.2.8/libxmms/charset.h	1970-01-01 01:00:00.000000000 +0100
-+++ xmms-1.2.8-patched/libxmms/charset.h	2003-10-24 01:35:54.000000000 +0200
++++ xmms-1.2.8-patched/libxmms/charset.h	2003-10-24 13:31:19.000000000 +0200
 @@ -0,0 +1,80 @@
 +#ifndef XMMS_CHARSET_H
 +#define XMMS_CHARSET_H
@@ -1757,7 +1777,7 @@ diff -dPNur xmms-1.2.8/libxmms/charset.h xmms-1.2.8-patched/libxmms/charset.h
 +int autocharset_russian_uc(char *buf,int len);
 +
 +#ifdef AUTO_ENCA_SUPPORT
-+int autocharset_enca_russian(char *buf, int len);
++static int autocharset_enca(char *buf, int len);
 +#endif
 +
 +/*
