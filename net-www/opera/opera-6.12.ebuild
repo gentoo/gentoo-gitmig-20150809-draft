@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12.ebuild,v 1.1 2003/03/25 04:01:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12.ebuild,v 1.2 2003/06/08 05:21:23 seemant Exp $
 #
 # 1. static       # Statically linked libraries, default.
 # 2. shared-2.95  # Dynamically linked libaries, compiled with gcc 2.95.
@@ -12,14 +12,14 @@
 
 DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
-LICENSE="OPERA"
 IUSE="gnome kde"
 
 # Dependencies may be augmented later (see below).
 RDEPEND="virtual/x11"
 
-KEYWORDS="-* x86"
 SLOT="0"
+LICENSE="OPERA"
+KEYWORDS="-* x86"
 
 #we can't modify (R)DEPEND info inside an if statement; that breaks metadata caching.
 #So I'm hard-coding the static version to be enabled.
