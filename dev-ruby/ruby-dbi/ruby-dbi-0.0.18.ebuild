@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.0.18.ebuild,v 1.3 2003/08/07 03:09:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.0.18.ebuild,v 1.4 2003/09/04 05:10:40 msterret Exp $
 
 DESCRIPTION="Ruby/DBI - a database independent interface for accessing databases - similar to Perl's DBI"
 HOMEPAGE="http://ruby-dbi.sourceforge.net/"
@@ -25,7 +25,7 @@ src_compile() {
 	use postgres && myconf="${myconf},dbd_pg"
 	use firebird && myconf="${myconf},dbd_interbase"
 	use odbc && myconf="${myconf},dbd_odbc"
-	
+
 	ruby setup.rb config \
 		--with=${myconf} \
 		--bin-dir="${D}/usr/bin" \
@@ -39,7 +39,7 @@ src_install() {
 	dodir /usr/bin
 	dodir /usr/lib/ruby/site_ruby/1.6
 	dodir /usr/lib/ruby/site_ruby/1.6/i686-linux-gnu
-	
+
 	ruby setup.rb install || die
 
 	dodoc LICENSE README
