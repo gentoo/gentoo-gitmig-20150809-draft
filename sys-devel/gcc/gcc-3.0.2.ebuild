@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.2.ebuild,v 1.2 2001/11/01 18:43:30 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.2.ebuild,v 1.3 2001/11/02 19:03:42 g2boojum Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
@@ -32,6 +32,7 @@ src_unpack() {
 	# Now we integrate texinfo-${TV} into gcc.  It comes with texinfo-3.12.
 	cd ${S}
 	tar xzf ${DISTDIR}/texinfo-${TV}.tar.gz || die
+	#hack, because texinfo different in gcc 3.0+
 	mkdir ${S}/texinfo
 	cp -a ${S}/texinfo-4.0/* ${S}/texinfo
 	cd ${S}/texinfo
@@ -61,6 +62,11 @@ src_compile() {
 	export CFLAGS="${CFLAGS/-O?/}"
 	export CXXFLAGS="${CXXFLAGS/-O?/}"
 
+	#build in a separate build tree
+	cd ${WORKDIR}
+	mkdir build
+	cd build
+
 	${S}/configure --prefix=${LOC} --mandir=${LOC}/share/man --infodir=${LOC}/share/info \
 	--enable-version-specific-runtime-libs --host=${CHOST} --build=${CHOST} --target=${CHOST} --enable-threads  \
 	--with-local-prefix=${LOC}/local ${myconf} || die
@@ -74,9 +80,11 @@ src_compile() {
 }
 
 src_install() {
+	#make install from the build directory
+	cd ${WORKDIR}/build
 	make install prefix=${D}${LOC} mandir=${D}${LOC}/share/man infodir=${D}${LOC}/share/info || die
 	[ -e ${D}/usr/bin/gcc ] || die "gcc not found in ${D}"
-    FULLPATH=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV}
+	FULLPATH=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH}
 	dodir /lib
 	dosym /usr/bin/cpp /lib/cpp
@@ -88,7 +96,7 @@ src_install() {
     then
 		#do a full texinfo-${TV} install
 		
-		cd ${S}/texinfo
+		cd ${WORKDIR}/build/texinfo
 	  	make DESTDIR=${D} infodir=${D}/usr/share/info install || die
 		exeinto /usr/sbin
 		doexe ${FILESDIR}/mkinfodir
@@ -151,7 +159,7 @@ src_install() {
     else
         rm -rf ${D}/usr/share/{man,info}
 		#do a minimal texinfo install (build image)
-		cd ${S}/texinfo
+		cd ${WORKDIR}/build/texinfo
 		dobin makeinfo/makeinfo util/{install-info,texi2dvi,texindex}
 	fi
 }
