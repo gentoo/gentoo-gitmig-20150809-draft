@@ -1,0 +1,87 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-2004.0/packages,v 1.1 2004/02/01 20:33:55 zhen Exp $
+
+# base system stuff
+>dev-lang/gpc-2.1
+*>=sys-apps/baselayout-1.8.6.10-r1
+*>=sys-apps/portage-2.0.49-r3
+
+# toolchain stuff
+*>=sys-devel/binutils-2.13.90.0.6-r2
+*>=sys-devel/gcc-3.2.3-r2
+*>=sys-devel/hardened-gcc-2.4.5
+*>=sys-libs/glibc-2.3.2-r1
+*virtual/modutils
+virtual/os-headers
+
+# regular package defs
+>=app-admin/sysklogd-1.4.1
+*dev-lang/python
+>=x11-base/xfree-4.1.0-r12
+# <zhen@gentoo.org> waiting for solar ...
+#*app-misc/pax-utils
+*app-shells/sash
+*sys-apps/chpax
+*dev-lang/perl
+*virtual/editor
+*net-misc/dhcpcd
+*net-misc/iputils
+*net-misc/rsync
+*net-misc/wget
+*app-shells/bash
+*app-arch/bzip2
+*sys-apps/kbd
+*app-arch/cpio
+*sys-apps/coreutils
+*sys-apps/debianutils
+*sys-apps/diffutils
+*sys-fs/e2fsprogs
+*sys-apps/ed
+*sys-apps/fbset
+*sys-apps/file
+*sys-apps/findutils
+*sys-apps/slocate
+*sys-apps/gawk
+*sys-apps/grep
+*sys-apps/groff
+*app-arch/gzip
+*sys-apps/hdparm
+*sys-apps/less
+*sys-apps/man
+*sys-apps/man-pages
+*sys-apps/net-tools
+*sys-apps/procps
+*sys-apps/psmisc
+*sys-apps/sed
+*sys-apps/setserial
+*<sys-apps/shadow-5
+
+# <zhen@gentoo.org> Again, added until bug 10135 is addressed
+*sys-apps/pam-login
+>=sys-libs/pam-0.75-r9
+*sys-libs/pwdb
+
+*app-arch/sharutils
+*app-arch/tar
+*>=sys-apps/texinfo-4.2-r1
+*sys-apps/util-linux
+*sys-apps/which
+*sys-devel/autoconf
+*>=sys-devel/automake-1.6.1-r5
+*sys-devel/bc
+*sys-devel/bin86
+*sys-devel/bison
+*sys-devel/flex
+*>=sys-devel/libtool-1.4.1-r4
+*sys-devel/m4
+*sys-devel/make
+*sys-devel/patch
+*sys-libs/cracklib  
+*sys-libs/db
+*>=sys-libs/ncurses-5.2.20020112a
+*sys-libs/readline  
+*sys-libs/zlib
+*virtual/ssh
+*sys-fs/devfsd
+
