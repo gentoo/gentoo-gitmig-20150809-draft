@@ -27,15 +27,15 @@
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
 !dev-lang/gpc
-*>=sys-apps/baselayout-1.7.9-r1
-*>=sys-apps/portage-2.0.25
+*>=sys-apps/baselayout-1.8.5.3
+*>=sys-apps/portage-2.0.45-r4
 *>=sys-devel/binutils-2.13.90.0.4
 *>=sys-devel/gcc-3.2
-*>=sys-libs/glibc-2.2.5-r7
-~sys-kernel/linux-headers-2.4.19
+*>=sys-libs/glibc-2.3.1
+>=sys-kernel/linux-headers-2.4.19
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
->=x11-base/xfree-4.1.0-r12
+>=x11-base/xfree-4.2.1
 # sash - static shell for system recovery
 *app-shells/sash
 *sys-devel/perl
@@ -98,7 +98,7 @@
 *sys-libs/cracklib  
 *<sys-libs/db-3.2.10
 *sys-libs/gdbm  
-*>=sys-libs/ncurses-5.2.20020112a
+*>=sys-libs/ncurses-5.2-r7
 *>=sys-libs/pam-0.75-r9
 *sys-libs/pwdb      
 *sys-libs/readline  
@@ -112,6 +112,7 @@
 # SPARC specific packages
 *sys-apps/sparc-utils
 *sys-apps/silo
+*>=app-editors/nvi-1.81.4
 
 # Kernel compiler
 *sys-devel/egcs64-sparc
