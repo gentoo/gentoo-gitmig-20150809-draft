@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.38 2004/03/24 22:18:05 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.39 2004/04/09 15:49:46 foser Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -20,7 +20,7 @@ USE_DESTDIR=""          # use make DESTDIR=${D} install rather than einstall
 
 [ `use debug` ] && G2CONF="${G2CONF} --enable-debug=yes"
 
-DEPEND=">=sys-apps/sed-4"
+DEPEND="${DEPEND} >=sys-apps/sed-4"
 
 gnome2_src_configure() {
 	elibtoolize ${ELTCONF}
@@ -81,13 +81,27 @@ gnome2_gconf_install() {
 	then
 		unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 		export GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
-		einfo "Installing GNOME 2 GConf Schemas"	
+		einfo "Installing GNOME 2 GConf schemas"	
 		cat ${ROOT}/var/db/pkg/*/${PN}-${PVR}/CONTENTS | grep "obj /etc/gconf/schemas" | sed 's:obj \([^ ]*\) .*:\1:' |while read F; do
-			echo "DEBUG::gconf install  ${F}"
-			${ROOT}/usr/bin/gconftool-2  --makefile-install-rule ${F}
+			# echo "DEBUG::gconf install  ${F}"
+			${ROOT}/usr/bin/gconftool-2  --makefile-install-rule ${F} 1>/dev/null
 		done
-		echo
 	fi
+}
+
+gnome2_gconf_uninstall() {
+
+	if [ -x ${ROOT}/usr/bin/gconftool-2 ]
+	then
+		unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
+		export GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
+		einfo "Uninstalling GNOME 2 GConf schemas"	
+		cat ${ROOT}/var/db/pkg/*/${PN}-${PVR}/CONTENTS | grep "obj /etc/gconf/schemas" | sed 's:obj \([^ ]*\) .*:\1:' |while read F; do
+			# echo "DEBUG::gconf install  ${F}"
+			${ROOT}/usr/bin/gconftool-2  --makefile-uninstall-rule ${F} 1>/dev/null
+		done
+	fi
+
 }
 
 gnome2_omf_fix() {
@@ -129,11 +143,17 @@ gnome2_pkg_postinst() {
 	gnome2_scrollkeeper_update
 }
 
+gnome2_pkg_prerm() {
+
+	gnome2_gconf_uninstall
+
+}
+
 gnome2_pkg_postrm() {
 	gnome2_scrollkeeper_update
 }
 
 
-EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
+EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_prerm  pkg_postrm
 
 
