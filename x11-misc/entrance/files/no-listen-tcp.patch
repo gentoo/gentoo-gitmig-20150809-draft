@@ -1,0 +1,18 @@
+http://bugs.gentoo.org/show_bug.cgi?id=65903
+
+Index: src/daemon/Entranced.h
+===================================================================
+RCS file: /cvsroot/enlightenment/e17/apps/entrance/src/daemon/Entranced.h,v
+retrieving revision 1.7
+diff -u -r1.7 Entranced.h
+--- src/daemon/Entranced.h	20 May 2004 04:02:09 -0000	1.7
++++ src/daemon/Entranced.h	12 Feb 2005 03:37:59 -0000
+@@ -18,7 +18,7 @@
+ 
+ #define ENTRANCED_DEBUG 1
+ 
+-#define X_SERVER "/usr/X11R6/bin/X -quiet"
++#define X_SERVER "/usr/X11R6/bin/X -quiet -nolisten tcp"
+ //#define X_SERVER "/usr/X11R6/bin/Xnest -full"
+ #define X_DISP ":0"             /* only used if DISPLAY variable is NOT set */
+ #define ENTRANCE PREFIX "/bin/entrance_wrapper"

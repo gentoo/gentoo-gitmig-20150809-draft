@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-9999.ebuild,v 1.2 2005/01/17 05:07:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-9999.ebuild,v 1.3 2005/02/12 03:43:31 vapier Exp $
 
 inherit enlightenment eutils
 
@@ -34,6 +34,8 @@ src_unpack() {
 		sed -i 's:default:gentooed:g' Makefile.am build_theme.sh
 		sed -i 's:\(data/themes/default/Makefile\):\1 data/themes/gentooed/Makefile:' ${S}/configure.in
 	fi
+	cd ${S}
+	epatch ${FILESDIR}/no-listen-tcp.patch
 }
 
 src_compile() {
