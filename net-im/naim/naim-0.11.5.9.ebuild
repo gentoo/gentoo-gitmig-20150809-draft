@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5.9.ebuild,v 1.5 2003/09/05 23:58:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5.9.ebuild,v 1.6 2003/10/14 17:51:18 vapier Exp $
 
 FOLDER="${P}"
 SNAP=""
@@ -15,7 +15,7 @@ HOMEPAGE="http://naim.n.ml.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ppc ~alpha ~sparc"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
