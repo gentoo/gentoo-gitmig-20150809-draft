@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.7 2003/12/26 23:34:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.8 2003/12/26 23:51:35 plasmaroo Exp $
 
 MAJ_PV=${PV:0:3}
 MIN_PV=${PV:0:6}
@@ -42,6 +42,7 @@ src_unpack() {
 	use qt || sed -i 's/qt[a-z]*//g' ${S}/samples/Makefile.am
 
 	epatch ${FILESDIR}/flvenc-patch
+	epatch ${FILESDIR}/${P}-2.6.patch
 	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
 	use sparc && epatch ${FILESDIR}/${P}-sparc.patch
 }

@@ -1,9 +1,14 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.60 2003/12/26 23:34:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.61 2003/12/26 23:51:35 plasmaroo Exp $
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> avifile-0.7.38.20030710.ebuild:
   Added patch for sparc to fix bug #36040.
+
+  26 Dec 2003; <plasmaroo@gentoo.org> avifile-0.7.38.20030710.ebuild,
+  files/avifile-0.7.38.20030710-2.6.patch:
+  Added a patch which allows avifile to compile successfully on 2.6 series
+  kernels - note; this patch requires compatible, patched 2.6.0 linux-headers.
 
   14 Dec 2003; Martin Holzer <mholzer@gentoo.org> files/flvenc-patch:
   chaning patch. Closes #35802
