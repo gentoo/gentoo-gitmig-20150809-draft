@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.15 2003/08/11 19:50:49 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.16 2003/09/13 01:07:13 solar Exp $
+
+*dietlibc-0.23 (12 Sep 2003)
+
+  12 Sep 2003; <solar@gentoo.org> dietlibc-0.23.ebuild,
+  files/0.23-dirent-prototype.patch:
+  version bump, this release fixes a ton of outstanding bugs upstream. seems the
+  dirent patch never made it's way back to fefe.de, new gentoo dirent patch
+  created to keep offsets happy.
 
   11 Aug 2003; Will Woods <wwoods@gentoo.org> dietlibc-0.22-r2.ebuild:
   Marked stable for alpha
