@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.7.7.ebuild,v 1.1 2001/12/14 21:17:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.0.ebuild,v 1.1 2001/12/22 17:58:54 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage ports system"
