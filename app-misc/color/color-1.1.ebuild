@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.1 2003/10/24 19:34:27 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.2 2003/10/24 20:05:01 taviso Exp $
 
 inherit ccc
 
@@ -38,9 +38,11 @@ src_install() {
 
 	# symlink for british users.
 	dosym /usr/bin/color /usr/bin/colour
+}
 
+pkg_postinst() {
 	einfo "For information on using color in your shell scripts,"
 	einfo "run \`color\` without any arguments."
 	einfo
-	einfo "More examples are available in ${DOCDIR}."
+	einfo "More examples are available in /usr/share/doc/${PF}."
 }
