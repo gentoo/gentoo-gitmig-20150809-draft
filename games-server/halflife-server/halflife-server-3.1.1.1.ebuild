@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.1.ebuild,v 1.6 2004/04/18 08:47:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.1.ebuild,v 1.7 2004/04/19 03:33:31 vapier Exp $
 
 inherit games eutils
 
@@ -63,7 +63,7 @@ src_install() {
 	done
 
 	prepgamesdirs
-	chown -R ${GAMES_USER_DED}:${GAMES_GROUP} ${dir}
+	chown -R ${GAMES_USER_DED}:${GAMES_GROUP} ${D}/${dir}
 }
 
 pkg_postinst() {
