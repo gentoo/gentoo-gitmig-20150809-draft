@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/daimonin-client
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.5 2004/06/24 23:15:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.6 2004/06/29 09:56:57 mr_bones_ Exp $
+
+*daimonin-client-0.96a_beta2 (29 Jun 2004)
+
+  29 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.96a_beta2-gentoo-paths.patch, +daimonin-client-0.96a_beta2.ebuild:
+  version bump (bug #52180) - ebuild and patch thanks to Alexander Sandbu
 
   16 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   daimonin-client-0.95b.ebuild:
