@@ -1,3 +1,5 @@
 MD5 a4b324163e4d76c05a0e37d2c507d08f ntl-5.3.ebuild 878
-MD5 d023ddcba53e2c01860058a0f82fd84a ChangeLog 855
+MD5 52a6123cdc6fcb19c34063fb2388a049 ntl-5.3.2.ebuild 899
+MD5 ff1be8d717a9a6f54230bdf5ec934632 ChangeLog 967
 MD5 7407d1e929b8a4ab9a8f48dbd169b5d9 files/digest-ntl-5.3 59
+MD5 1b62f475ab5f21444d3ab92e16655f05 files/digest-ntl-5.3.2 61
