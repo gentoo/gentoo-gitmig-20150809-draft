@@ -1,6 +1,13 @@
 # ChangeLog for net-im/kadu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.12 2004/06/24 22:54:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.13 2004/08/05 19:17:53 sekretarz Exp $
+
+*kadu-0.3.9 (05 Aug 2004)
+
+  05 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/kadu-0.3.9-nas-gentoo.diff, +kadu-0.3.9.ebuild:
+  Version bumped. Thanks to erl <erl@wp.pl> and Adam Jakubek
+  <mig21@static.int.pl>. Bug #55976
 
   13 May 2004; Martin Holzer <mholzer@gentoo.org> kadu-0.3.8.ebuild:
   filtering -fno-rtti.
