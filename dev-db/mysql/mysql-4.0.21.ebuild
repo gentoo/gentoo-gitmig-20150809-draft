@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.21.ebuild,v 1.9 2004/10/22 18:11:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.21.ebuild,v 1.10 2004/10/26 16:11:02 s4t4n Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -192,7 +192,7 @@ src_install() {
 
 	dohtml Docs/*.html
 	rm -f Docs/*.html
-	dodoc README COPYING COPYING.LIB Docs/manual.*
+	dodoc README COPYING Docs/manual.*
 	docinto conf-samples
 	dodoc support-files/my-*.cnf
 

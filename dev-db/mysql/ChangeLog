@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.137 2004/10/22 18:11:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.138 2004/10/26 16:11:02 s4t4n Exp $
+
+  26 Oct 2004; Michele Noberasco <s4t4n@gentoo.org> mysql-4.0.21.ebuild:
+  Removed COPYING.LIB from dodoc as the file doesn't exist.
 
   22 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> mysql-4.0.21.ebuild:
   Marked stable on amd64.
