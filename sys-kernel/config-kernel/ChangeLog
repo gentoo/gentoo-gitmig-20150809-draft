@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/config-kernel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/config-kernel/ChangeLog,v 1.7 2004/04/03 15:45:59 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/config-kernel/ChangeLog,v 1.8 2004/04/03 16:35:12 latexer Exp $
+
+*config-kernel-0.3.3 (03 Apr 2004)
+
+  03 Apr 2004; Peter Johanson <latexer@gentoo.org> config-kernel-0.3.0.ebuild,
+  config-kernel-0.3.1.ebuild, config-kernel-0.3.3.ebuild:
+  Bump for a few fixes that are only problems if one messes with 05kernel by
+  hand. Remove a few older versions.
 
 *config-kernel-0.3.2-r1 (03 Apr 2004)
 
