@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/koffice-i18n.eclass,v 1.8 2002/07/05 12:17:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/koffice-i18n.eclass,v 1.9 2002/07/09 17:04:38 danarmak Exp $
 inherit kde
 ECLASS=koffice-i18n
 
@@ -23,7 +23,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 S=${WORKDIR}/${PN}
 DESCRIPTION="KOffice ${PV} - i18n: ${PN}"
 HOMEPAGE="http://www.koffice.org/"
-
+LICENSE="GPL-2"
 DEPEND="~app-office/koffice-${PV}"
 
 myconf="$myconf --enable-final"
