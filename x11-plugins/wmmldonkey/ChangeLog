@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmldonkey
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/ChangeLog,v 1.2 2004/06/24 23:13:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/ChangeLog,v 1.3 2004/08/02 10:03:39 s4t4n Exp $
+
+  02 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmmldonkey-0.003.ebuild:
+  Still a bit buggy, but I don't see it doing any harm...
+  Stable for x86.
 
 *wmmldonkey-0.003 (26 Dec 2003)
 
