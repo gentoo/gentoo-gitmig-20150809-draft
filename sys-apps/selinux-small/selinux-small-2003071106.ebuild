@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003071106.ebuild,v 1.2 2003/07/28 19:47:38 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003071106.ebuild,v 1.3 2003/08/02 05:12:40 pebenito Exp $
 
 DESCRIPTION="SELinux libraries and policy compiler"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -31,6 +31,7 @@ pkg_setup() {
 		eerror "incorrect profile.  SELinux has a different profile than"
 		eerror "mainline Gentoo.  Make sure the /etc/make.profile symbolic"
 		eend 1 "link is pointing to /usr/portage/profiles/selinux-x86-1.4/"
+		die "Missing USE=\"selinux\"."
 	fi
 
 	if [ ! -f /usr/src/linux/security/selinux/ss/ebitmap.c ]; then
@@ -39,12 +40,14 @@ pkg_setup() {
 		eerror "for selinux-small to compile.  If the link is correct, the"
 		eerror "kernel sources may be damaged or incomplete, and will need to"
 		eend 1 "be remerged.  Please fix and retry."
+		die "Bad /usr/src/linux symlink."
 	fi
 
 	if [ -z "`use pam`" ]; then
 		eerror "pam is missing from your USE.  Currently selinux requires pam."
 		eerror "Please add pam, so all programs work correctly.  A pam-less"
 		eend 1 "install will probably be supported in the future."
+		die "Missing USE=\"selinux\"."
 	fi
 }
 
