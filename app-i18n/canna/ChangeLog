@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.32 2004/03/30 06:14:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.33 2004/04/03 23:53:15 usata Exp $
+
+  04 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> canna-3.7.ebuild:
+  Marked stable on x86 and changed -alpha to ~alpha
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; canna-3.6_p4.ebuild,
   canna-3.7.ebuild:
