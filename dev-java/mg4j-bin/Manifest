@@ -1,4 +1,14 @@
-MD5 3f63740d774c96755fc039be8de4604f mg4j-bin-0.8.2.ebuild 843
-MD5 e673a145692d2cdf31e861dd01458077 ChangeLog 530
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 56a62b7e94b84e19bde3a586f3b48b63 mg4j-bin-0.8.2.ebuild 851
+MD5 4142ea86a13cc75c9809182dd1ea9909 ChangeLog 695
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 78ad42fc9f0ed323d12fb27a10e30ac1 files/digest-mg4j-bin-0.8.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCrvT/rLF9B432nYRAq+2AKChpQNXksUxdl6Zil9+JDyMfbuLFwCdFoR/
+mjcMKXxFKJxGeQRJnaEH6vA=
+=7ccE
+-----END PGP SIGNATURE-----

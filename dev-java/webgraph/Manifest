@@ -1,4 +1,14 @@
-MD5 f5cfd8e8601765585595f5bbd47084ef ChangeLog 431
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e31626ffd0d53c0f4c25b4b2a641420d ChangeLog 539
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 36f2d303c88d9a9a4a930caee0a126bb webgraph-1.2.2.ebuild 722
+MD5 f98d9fc6ddae606beadc22386ac90963 webgraph-1.2.2.ebuild 722
 MD5 94d59ef770863702540faf8907fe006d files/digest-webgraph-1.2.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCrw0/rLF9B432nYRArMnAKCw5mqIdoTMAnzvwBjs1u8BmrKtxgCbBa3A
+/bhF30mGGEXtZH3/u1jQqho=
+=cTup
+-----END PGP SIGNATURE-----
