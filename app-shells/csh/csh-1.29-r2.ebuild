@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.4 2003/09/19 01:33:22 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.5 2003/11/17 11:45:30 taviso Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -13,10 +13,7 @@ SLOT="0"
 KEYWORDS="x86 alpha ia64"
 IUSE="static doc"
 
-DEPEND="virtual/glibc
-	sys-devel/pmake
-	>=sys-apps/sed-4
-	doc? ( sys-apps/groff )"
+DEPEND="sys-devel/pmake !app-shells/tcsh"
 RDEPEND="virtual/glibc"
 
 S=${WORKDIR}/src/bin/csh
@@ -129,15 +126,15 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	use doc >/dev/null && {
-		einfo "An Introduction to the C shell by William Joy, a "
+	use doc && {
+		einfo "An Introduction to the C shell by Bill Joy, a "
 		einfo "postscript document included with this shell has"
 		einfo "been installed in /usr/share/doc/${PF}, if you are new"
 		einfo "to the C shell, you may find it interesting."
 	} || {
 		einfo "You didnt have the \`doc\` use flag set, the"
 		einfo "postscript document \"An Introduction to the C"
-		einfo "shell by William Joy\" was not installed."
+		einfo "shell by Bill Joy\" was not installed."
 	}
 	echo
 	einfo "Example login scripts have been installed in /usr/share/doc/${PF}."

@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/csh
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.11 2003/09/17 11:16:15 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.12 2003/11/17 11:45:30 taviso Exp $
+
+  17 Nov 2003; Tavis Ormandy <taviso@gentoo.org> csh-1.29-r2.ebuild:
+  "William Joy" => "Bill Joy", I think most people would recognise the 
+  latter :)
+  block tcsh.
 
   17 Sep 2003; Tavis Ormandy <taviso@gentoo.org> csh-1.29-r1.ebuild,
   csh-1.29.ebuild:
