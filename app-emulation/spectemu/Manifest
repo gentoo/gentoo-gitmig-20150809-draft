@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7a9e48a02f5c8a302a31847c302a8b1e ChangeLog 1046
-MD5 0ad8081aea3c37e15dc8d92708c6c142 spectemu-0.9.4.ebuild 1758
+MD5 6b81af1949f1f8b2b03bbeac00b4304a spectemu-0.9.4.ebuild 1766
 MD5 3eff986352c598213569695176c1dadb files/digest-spectemu-0.9.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA31MaHTu7gpaalycRAt8iAKCjqjxuZmCgEBpOz6kIA0ENjR7hkACg1v5K
-OWSyGc3/tCgzJkGEbFV/thI=
-=r441
------END PGP SIGNATURE-----
