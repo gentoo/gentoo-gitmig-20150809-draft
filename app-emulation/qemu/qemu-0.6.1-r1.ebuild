@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.1-r1.ebuild,v 1.1 2004/11/28 01:23:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.1-r1.ebuild,v 1.2 2004/11/28 15:25:36 lu_zero Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ IUSE="softmmu sdl" # nptl qemu-fast nptlonly"
 RESTRICT="nostrip"
 
 DEPEND="virtual/libc
-	sdl? ( media-libs/libsdl )"
+	sdl? ( media-libs/libsdl )
+	app-text/texi2html"
 RDEPEND=""
 
 set_target_list() {
