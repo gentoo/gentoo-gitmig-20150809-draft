@@ -8,7 +8,7 @@ MD5 55495d9417f8b5cccf5a6a3f329e67ee xine-lib-1_rc2.ebuild 3981
 MD5 85e9a285be5f9a8e2921c0ca302219df xine-lib-1_rc3-r1.ebuild 4069
 MD5 83b7e79e248bf94ce81ab503cbdf4c7c xine-lib-1_rc3-r2.ebuild 3896
 MD5 f822564287a1fff840444a38eaa40dc5 xine-lib-1_rc3-r3.ebuild 4191
-MD5 5a9cceb2fddae141dfab82df06b4ca3e xine-lib-1_rc4-r1.ebuild 4613
+MD5 c14168cf0ecee8a7f1f19933ad54cde5 xine-lib-1_rc4-r1.ebuild 4660
 MD5 885e277078c977fdaa4d8feef850327a xine-lib-1_rc4.ebuild 4490
 MD5 f1570a69c99207f65b5cdf1d154bbcd4 files/digest-xine-lib-0.9.13-r3 68
 MD5 3824a3bb0c207c34e9bec101cac52a91 files/digest-xine-lib-1_rc3-r2 68
@@ -35,7 +35,7 @@ MD5 bcd5f2b8999f92c2f7215009f5ae1490 files/configure-64bit-define.patch 221
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA2X6PHTu7gpaalycRAjRlAJoDi43q+ToQ2zwMGnv6xO3Io8GFNwCfT14V
-lLQhq/zo7gWR+vPR54QPhsk=
-=c0Pa
+iD8DBQFA2YxPHTu7gpaalycRArqjAKC/mK71IN0lKt7MGf+ymXh+Zet2uQCdHKlo
+l6v+FI8M0rH+RkC0Mtl1cSk=
+=cW6o
 -----END PGP SIGNATURE-----
