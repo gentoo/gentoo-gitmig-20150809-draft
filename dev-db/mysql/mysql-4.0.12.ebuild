@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.12.ebuild,v 1.7 2003/12/05 21:07:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.12.ebuild,v 1.8 2004/02/04 10:14:27 kumba Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -19,7 +19,7 @@ SRC_URI="ftp://mirror.mcs.anl.gov/pub/mysql/Downloads/${SDIR}/${NEWP}.tar.gz
 	ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR}/${NEWP}.tar.gz
 	ftp://mysql.valueclick.com/pub/mysql/Downloads/${SDIR}/${NEWP}.tar.gz"
 
-KEYWORDS="~x86 ~sparc ~ppc arm"
+KEYWORDS="~x86 ~sparc ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="static readline innodb berkdb tcpd ssl debug"

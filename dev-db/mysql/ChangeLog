@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.84 2004/01/10 18:49:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.85 2004/02/04 10:14:27 kumba Exp $
+
+  04 Feb 2004; Joshua Kinard <kumba@gentoo.org> mysql-4.0.17.ebuild:
+  Added ~mips to KEYWORDS and added a check for the berkdb USE flag if we're on
+  a mips system. MySQL apparently has issues when linked to berkeley db.
 
 *mysql-4.0.17 (10 Jan 2004)
 
