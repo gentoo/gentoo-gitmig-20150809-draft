@@ -1,0 +1,11 @@
+# ChangeLog for app-crypt/calcchecksum
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/ChangeLog,v 1.1 2004/04/06 22:13:50 centic Exp $
+
+*calcchecksum-1.6_pre1 (07 Apr 2004)
+
+  07 Apr 2004; Dominik Stadler <centic@gentoo.org>
+  calcchecksum-1.6_pre1.ebuild:
+  New ebuild, thanks to Raul Fernandes <raulgf@brturbo.com> for the original
+  ebuild, see Bug 15242
+
