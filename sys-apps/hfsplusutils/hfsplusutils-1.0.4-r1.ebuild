@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.1 2003/03/30 18:43:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.2 2003/03/30 19:28:04 lu_zero Exp $
 
 MY_P="hfsplus_${PV}"
 DESCRIPTION="HFS+ Filesystem Access Utilities (PPC Only)"
@@ -20,12 +20,16 @@ S=${WORKDIR}/hfsplus-${PV}
 
 MAKEOPTS='PREFIX=/usr MANDIR=/usr/share/man'
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	patch -p0 < ${FILESDIR}/hfsplusutils-1.0.4-glob.patch || die "Patch failed"
+	epatch ${FILESDIR}/hfsplusutils-1.0.4-errno.patch	
+}
+
 src_compile() {
 	# This does a autoconf, automake, etc.
 	emake -f Makefile.cvs all || die
-
-	patch -p0 < ${FILESDIR}/hfsplusutils-1.0.4-glob.patch || die "Patch failed"
-	epatch ${FILESDIR}/hfsplusutils-1.0.4-errno.patch 
 	econf || die
 	emake || die
 }

@@ -1,6 +1,8 @@
 # ChangeLog for sys-apps/hfsplusutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/ChangeLog,v 1.7 2003/03/30 18:43:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/ChangeLog,v 1.8 2003/03/30 19:28:04 lu_zero Exp $
+
+*hfsplusutils-1.0.4-r1 (March 30, 2003)
 
   30 Mar 2003; Luca Barbato <lu_zero@gentoo.org> : hfsplusutils-1.0.4-r1.ebuild
   Made sure it works on glibc-2.3.2.
