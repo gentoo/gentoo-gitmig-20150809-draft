@@ -1,11 +1,18 @@
 # ChangeLog for x11-plugins/gkrellm-reminder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-reminder/ChangeLog,v 1.4 2002/12/13 11:00:58 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-reminder/ChangeLog,v 1.5 2002/12/14 22:16:00 seemant Exp $
+
+*gkrellm-reminder-2.0.0 (14 Dec 2002)
+
+  14 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
+  gkrellm-reminder-2.0.0.ebuild files/digest-gkrellm-reminder-2.0.0 :
+
+  Version for GKrellM2
+
+*gkrellm-reminder-0.3.5 (14 Apr 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*gkrellm-reminder-0.3.5 (14 Apr 2002)
-
   11 Sep 2002; Owen Stampflee <owen@gentoo.org> :
   Added PPC to KEYWORDS.
 
