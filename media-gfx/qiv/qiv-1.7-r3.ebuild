@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.7-r3.ebuild,v 1.3 2002/07/23 05:18:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.7-r3.ebuild,v 1.4 2002/08/26 13:57:40 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Quick Image Viewer"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.klografx.net/qiv"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="media-libs/libpng
 	>=media-libs/tiff-3.5.5
