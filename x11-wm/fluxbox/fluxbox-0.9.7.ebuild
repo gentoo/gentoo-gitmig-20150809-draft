@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.7.ebuild,v 1.1 2004/01/04 03:52:30 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.7.ebuild,v 1.2 2004/01/05 06:17:45 tseng Exp $
 
 IUSE="nls xinerama truetype kde gnome"
 
@@ -10,7 +10,8 @@ HOMEPAGE="http://www.fluxbox.org"
 
 # Please note that USE="kde gnome" simply adds support for
 # the respective protocols, and does not depend on external libraries.
-DEPEND=">=sys-devel/autoconf-2.52"
+DEPEND=">=sys-devel/autoconf-2.52
+		${RDEPEND}"
 RDEPEND="virtual/x11
 	truetype? ( media-libs/freetype )
 	nls? ( sys-devel/gettext )"
