@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.15 2003/01/21 17:25:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.16 2003/02/08 00:36:16 gmsoft Exp $
+
+  07 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
 autoconf-2.57 (21 Jan 2003)
 
