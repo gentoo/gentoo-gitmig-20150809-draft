@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.8.ebuild,v 1.11 2003/03/17 22:37:13 edolnx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.8.ebuild,v 1.12 2003/05/16 17:36:12 foser Exp $
 
 inherit flag-o-matic
 
@@ -14,6 +14,7 @@ LICENSE="GPL-2"
 IUSE="nls postgres"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
+	>=dev-libs/popt-1.5
 	 >=dev-libs/libxml-1.8.3
 	 >=gnome-extra/gtkhtml-0.14.0-r1
 	 >=gnome-extra/gal-0.13-r1
