@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/guile
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.24 2004/01/04 12:12:26 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.25 2004/01/13 03:42:23 augustus Exp $
+
+  12 Jan 2004; <augustus@gentoo.org> guile-1.6.4-r1.ebuild,
+  files/guile-amd64.patch:
+  Added support for AMD64. Builds and installs just fine. Needs further testing.
+  Bug #35481.
 
   04 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> guile-1.4-r3.ebuild:
   Add gnuconfig_update. Closing #37166.

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.4 2004/01/03 20:05:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.5 2004/01/13 03:42:23 augustus Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnu.org/software/guile/"
 
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc alpha hppa ia64"
+KEYWORDS="x86 ~ppc alpha hppa ia64 ~amd64"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/readline-4.1"
@@ -32,6 +32,10 @@ src_compile() {
 	# -g3, at least on some architectures.  (19 Aug 2003 agriffis)
 	filter-flags -g3
 
+    if [ "${ARCH}" = "amd64" ]; then
+        epatch ${FILESDIR}/guile-amd64.patch
+    fi
+		
 	econf \
 		--with-threads \
 		--with-modules || die
