@@ -1,37 +1,38 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.7 2005/01/17 07:26:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.8 2005/01/17 21:32:05 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
 #        1)  Language support and fonts should be addressed.
 
-LOC="/opt"
+IUSE="gnome java kde"
 
-INSTDIR="${LOC}/OpenOffice.org"
+INSTDIR="/opt/OpenOffice.org"
 MY_P="OOo_${PV}_LinuxIntel_install"
 use ppc && MY_P="OOo_${PV}_LinuxPowerPC_en_installer"
 
 S="${WORKDIR}/${MY_P}"
-
 DESCRIPTION="OpenOffice productivity suite"
-HOMEPAGE="http://www.openoffice.org/"
+
 SRC_URI="x86? ( mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz ) \
 		 amd64? (mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz )"
+
+HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
 KEYWORDS="x86 ~amd64"
-IUSE="gnome java kde"
 
-RDEPEND="sys-apps/findutils
-	virtual/libc
-	>=dev-lang/perl-5.0
+RDEPEND="!app-office/openoffice
 	virtual/x11
+	virtual/libc
+	virtual/lpr
+	>=dev-lang/perl-5.0
+	sys-apps/findutils
 	app-arch/zip
 	app-arch/unzip
 	java? ( >=virtual/jre-1.4.1 )
-	!app-office/openoffice
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
 DEPEND="${RDEPEND}"
@@ -40,14 +41,12 @@ src_install() {
 	# Sandbox issues; bug #8587
 	addpredict "/user"
 	addpredict "/share"
-	addpredict "/pspfontcache"
+	addpredict "/dev/dri"
 	addpredict "/usr/bin/soffice"
+	addpredict "/pspfontcache"
 	addpredict "/root/.gconfd"
 	addpredict "/opt/OpenOffice.org/foo.tmp"
 	addpredict "/opt/OpenOffice.org/delme"
-
-	# Sandbox issues; bug 8063
-	addpredict "/dev/dri"
 
 	# Autoresponse file for main installation
 	cat > ${T}/rsfile-global <<-"END_RS"
@@ -76,17 +75,16 @@ src_install() {
 
 	# Fixing install location in response file
 	sed -e "s|<destdir>|${D}${INSTDIR}|" \
-		${T}/rsfile-global > ${T}/autoresponse
+		${T}/rsfile-global > ${T}/autoresponse || die
 
 	einfo "Installing OpenOffice.org into build root..."
 	dodir ${INSTDIR}
 	cd ${S}
-	./setup -nogui -v -r:${T}/autoresponse || die "The setup program failed"
+	./setup -v -noexit -nogui -r:${T}/autoresponse || die "Setup failed"
 
-	echo
 	einfo "Removing build root from registry..."
 	# Remove totally useless stuff.
-	rm -f ${D}${INSTDIR}/program/{setup.log,sopatchlevel.sh}
+	rm -f ${D}${INSTDIR}/program/{setup.log,sopatchlevel.sh} || die
 	# Remove build root from registry and co
 	egrep -rl "${D}" ${D}${INSTDIR}/* | \
 		xargs -i perl -pi -e "s|${D}||g" {} || :
@@ -95,15 +93,6 @@ src_install() {
 	# Fix permissions
 	find ${D}${INSTDIR}/ -type f -exec chmod a+r {} \;
 	chmod a+x ${D}${INSTDIR}/share/config/webcast/*.pl
-
-	# Fix symlinks
-	for x in "soffice program/spadmin" \
-		"program/setup setup" \
-		"program/spadmin spadmin"
-	do
-		dosym $(echo ${x} | awk '{print $1}') \
-			${INSTDIR}/$(echo ${x} | awk '{print $2}')
-	done
 
 	# Install user autoresponse file
 	insinto /etc/openoffice
@@ -167,7 +156,7 @@ src_install() {
 
 
 	# Remove unneeded stuff
-	rm -rf ${D}${INSTDIR}/share/cde
+	rm -rf ${D}${INSTDIR}/share/cde || die
 
 	# Fix instdb.ins, to *not* install local copies of these
 	for entry in Kdeapplnk Kdemimetext Kdeicons Gnome_Apps Gnome_Icons Gnome2_Apps; do
