@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9ac1498d3d43a0f405daa1806d34a5f6 gst-plugins-theora-0.8.8.ebuild 334
 MD5 bedf4ecd17f6466b0cd53700db77b1c8 gst-plugins-theora-0.8.5.ebuild 328
-MD5 325ca2e6f4cb6560611039f59b37d007 ChangeLog 797
+MD5 3525369ca421fbce99e89a71c8c2d079 ChangeLog 903
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 60e6d2c3d53bf334f5e74ad298ba1f05 gst-plugins-theora-0.8.7.ebuild 333
+MD5 6ef64f3044ae2a737b66a6150e36ca1a gst-plugins-theora-0.8.7.ebuild 333
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-theora-0.8.5 71
 MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-theora-0.8.7 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-theora-0.8.8 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCMfLFevY57Fted3ERAis4AJ9iB+PQWCgMHcOxIsonVg2piWWhugCeP8ID
+byaZWPtfRz9hrSmM1HRkMNk=
+=btMV
+-----END PGP SIGNATURE-----

@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b7255af82e1c46000a6a5f6fdedf1d14 ChangeLog 4466
-MD5 1cbda138ceeff211387d045e683b972f gst-plugins-mad-0.6.4.ebuild 359
 MD5 5ba7e3b1eb980f617f78b752b070edce gst-plugins-mad-0.8.1.ebuild 439
-MD5 265575a8dc4189907671f46db0d75623 gst-plugins-mad-0.8.2.ebuild 443
-MD5 6ac68a7f7717ad4acf497400b355108f gst-plugins-mad-0.8.3.ebuild 440
-MD5 8490d8b64e2e666d5a6477c6b6b8c431 gst-plugins-mad-0.8.5.ebuild 442
-MD5 d6d6a8ed4d394deb3be9acfccb554d8a gst-plugins-mad-0.8.7.ebuild 445
 MD5 69e3652667b29554ea8ee5264d29a5f4 gst-plugins-mad-0.8.8.ebuild 445
+MD5 6ac68a7f7717ad4acf497400b355108f gst-plugins-mad-0.8.3.ebuild 440
+MD5 1cbda138ceeff211387d045e683b972f gst-plugins-mad-0.6.4.ebuild 359
+MD5 8490d8b64e2e666d5a6477c6b6b8c431 gst-plugins-mad-0.8.5.ebuild 442
+MD5 ae1eaa6f549701e2f07add33c0bbd7ac gst-plugins-mad-0.8.7.ebuild 442
+MD5 265575a8dc4189907671f46db0d75623 gst-plugins-mad-0.8.2.ebuild 443
+MD5 2bdc2fb78c9b114cede32f264626e97c ChangeLog 4566
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-mad-0.6.4 71
 MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-mad-0.8.1 71
@@ -20,7 +20,7 @@ MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-mad-0.8.8 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCL6qJKRy60XGEcJIRAsZOAKCtqhC1YF/cunkM9GMnpfa6TSrqlwCeJ9L6
-hM6hmbCls34rfsvaXwjnp9o=
-=hfVM
+iD8DBQFCMfKXevY57Fted3ERAspKAJ46ieYy3+gYEz+3eipwMwhFFPcKiwCfQTq1
++LOcuvzLKalcG00UWaR1YTM=
+=l1bS
 -----END PGP SIGNATURE-----
