@@ -1,16 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030402.ebuild,v 1.3 2003/07/22 13:01:25 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030402.ebuild,v 1.4 2003/08/07 03:47:03 vapier Exp $
 
 inherit flag-o-matic
 
-S="${WORKDIR}/${PN}"
 DESCRIPTION="postscript font editor and converter"
-SRC_URI="http://pfaedit.sourceforge.net/pfaedit_full-${PV}.tgz"
 HOMEPAGE="http://pfaedit.sourceforge.net/"
+SRC_URI="http://pfaedit.sourceforge.net/pfaedit_full-${PV}.tgz"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="x86"
 IUSE="png gif jpeg tiff truetype X"
 
@@ -19,6 +18,8 @@ DEPEND="png? ( >=media-libs/libpng-1.2.4 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7-r1 )
 	truetype? ( >=media-libs/freetype-2.1.2 )"
+
+S="${WORKDIR}/${PN}"
 
 src_compile() {
 	local myconf=""
