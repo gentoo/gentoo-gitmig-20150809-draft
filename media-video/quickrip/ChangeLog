@@ -1,0 +1,9 @@
+# ChangeLog for media-video/quickrip
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/ChangeLog,v 1.1 2003/04/16 15:43:55 liquidx Exp $
+
+*quickrip-0.4 (16 Apr 2003)
+
+  16 Apr 2003; Alastair Tse <liquidx@gentoo.org> quickrip-0.4.ebuild:
+  initial ebuild contributed by Tom Chance <tomchance@gmx.net>.
+
