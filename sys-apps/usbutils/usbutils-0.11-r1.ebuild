@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r1.ebuild,v 1.4 2003/07/16 13:38:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r1.ebuild,v 1.5 2003/07/18 20:38:13 tester Exp $
+
+inherit gnuconfig
 
 inherit gnuconfig
 
@@ -21,6 +23,8 @@ src_unpack() {
 	mv usb.ids usb.ids.orig
 	wget http://www.linux-usb.org/usb.ids
 	if [ ! -f usb.ids ] ; then mv usb.ids.orig usb.ids ; fi
+
+	use amd64 && gnuconfig_update
 	use alpha && gnuconfig_update
 }
 
