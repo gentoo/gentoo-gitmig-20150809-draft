@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/ExtUtils-F77
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.17 2004/06/25 00:27:08 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.18 2005/01/04 12:56:56 mcummings Exp $
+
+  04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  ExtUtils-F77-1.13-r1.ebuild, ExtUtils-F77-1.14-r1.ebuild,
+  ExtUtils-F77-1.14.ebuild:
+  bug 76590
 
   14 Apr 2004; Stephen P. Becker <geoman@gentoo.org>
   ExtUtils-F77-1.14-r1.ebuild:
