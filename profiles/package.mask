@@ -209,7 +209,7 @@ app-emacs/monk
 >=x11-libs/pango-1.1
 >=x11-libs/libwnck-2.1
 >=x11-terms/gnome-terminal-2.1
-x11-themes/gnome-themes
+>=x11-themes/gnome-themes-0.2
 x11-themes/gnome-icon-theme
 >=gnome-base/eel-2.1
 >=gnome-base/gail-1.1
