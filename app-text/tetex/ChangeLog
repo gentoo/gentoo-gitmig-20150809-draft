@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.28 2003/02/05 00:48:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.29 2003/02/05 05:26:32 satai Exp $
+
+  04 Feb 2003; Matthew Turk <satai@gentoo.org> : tetex-2.0.ebuild
+  Fixed installation woes; will now manually remove /usr/share/texmf/dvipdfm if
+  it exists.  This should clear up problems with conflicts between versions of
+  dvipdfm storing configuration in slightly different fashions.
 
   05 Feb 2003; Martin Schlemmer <azarah@gentoo.org> tetex-2.0.ebuild :
   Updated to use epatch.
