@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.35 2004/10/17 22:19:17 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.36 2004/12/08 21:10:38 agriffis Exp $
+
+*guile-1.6.6 (10 Dec 2004)
+
+  10 Dec 2004; Aron Griffis <agriffis@gentoo.org> +guile-1.6.6.ebuild:
+  Bump to 1.6.6
 
   17 Oct 2004; Alastair Tse <liquidx@gentoo.org>
   +files/guile-1.4-inet_aton.patch, -files/net_db.c, guile-1.4-r3.ebuild,
