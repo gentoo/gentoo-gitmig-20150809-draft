@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Fraunhofer Fokus
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.11.ebuild,v 1.1 2003/11/19 18:09:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.11.ebuild,v 1.2 2003/11/19 20:43:42 mr_bones_ Exp $
 
 DESCRIPTION="SIP Express Router"
 
@@ -30,10 +30,10 @@ check_mods() {
 	if [ "`use postgres`" ]; then
 		inc_mod="${inc_mod} postgres"
 	fi
-	
+
 	# test some additional modules for which
 	# no USE variables exist
-	
+
 	# jabber module requires dev-libs/expat
 	if [ -f "/usr/include/expat.h" ]; then
 		inc_mod="${inc_mod} jabber"
