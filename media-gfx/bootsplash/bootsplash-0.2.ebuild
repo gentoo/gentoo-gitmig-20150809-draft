@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.2.ebuild,v 1.1 2003/01/16 04:02:41 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.2.ebuild,v 1.2 2003/01/16 04:04:51 tad Exp $
 
 DESCRIPTION="Graphical backgrounds for frame buffer consoles"
 
@@ -45,9 +45,6 @@ src_install() {
 	
 	insinto /usr/share/${P}
 	doins ${S}/bootsplash-config/*.cfg
-#	doins ${S}/bootsplash-config/bootsplash-1280x1024.cfg
-#	doins ${S}/bootsplash-config/bootsplash-800x600.cfg
-#	doins ${S}/bootsplash-config/bootsplash.cfg
 	doins ${S}/*.jpg
 	
 	# link default config
@@ -63,7 +60,8 @@ src_install() {
 
 	dodoc README
 	dodoc COPYING
-	
+	dodoc CREDITS
+
 	# generate initial initrd file
 	${S}/splashutil/splash -s -f ${D}/usr/share/${P}/bootsplash.cfg > ${D}/usr/share/${P}/initrd
 }
