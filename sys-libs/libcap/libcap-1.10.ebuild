@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.8 2003/09/30 03:20:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.9 2003/10/01 11:05:34 vapier Exp $
 
 inherit base flag-o-matic
 
@@ -14,10 +14,9 @@ IUSE="python"
 
 #patch is in recent 2.2 kernels so it works there
 DEPEND="virtual/glibc
-	>=virtual/linux-sources-2.2
+	virtual/os-headers
 	python? ( >=virtual/python-2.2.1 >=dev-lang/swig-1.3.10 )"
-RDEPEND=">=virtual/linux-sources-2.2
-	python? ( >=virtual/python-2.2.1 )"
+RDEPEND="python? ( >=virtual/python-2.2.1 )"
 
 S=${WORKDIR}/${P}
 
