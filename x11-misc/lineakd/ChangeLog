@@ -1,7 +1,8 @@
 # ChangeLog for x11-misc/lineakd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.7 2003/12/13 22:56:30 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.8 2004/02/28 19:19:17 aliz Exp $
 
+*lineakd-0.7.2 (13 Dec 2003)
 *lineakd-0.7 (13 Dec 2003)
 
   13 Dec 2003; Ian Leitch <port001@gentoo.org> lineakd-0.6.1.ebuild,

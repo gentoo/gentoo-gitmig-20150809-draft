@@ -1,6 +1,8 @@
 # ChangeLog for x11-misc/karamba
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.4 2004/02/04 13:23:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.5 2004/02/28 19:19:17 aliz Exp $
+
+*karamba-0.17-r1 (04 May 2003)
 
   04 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> karamba-0.17-r1.ebuild:
   Fix to make it compile on amd64

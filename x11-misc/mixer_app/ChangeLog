@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/mixer_app
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.7 2003/11/04 03:40:44 abhishek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.8 2004/02/28 19:19:17 aliz Exp $
 
   03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
   Added metadata.xml
@@ -13,7 +13,7 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*mixer_app-1.7.0.ebuild (09 July 2002)
+*mixer_app-1.7.0 (09 July 2002)
   
   09 July 2002; George Shapovalov <george@gentoo.org> all :
   

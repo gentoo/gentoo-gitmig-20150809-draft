@@ -1,12 +1,14 @@
 # ChangeLog for x11-misc/tkseti
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/ChangeLog,v 1.5 2003/02/12 09:31:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/ChangeLog,v 1.6 2004/02/28 19:19:17 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   19 Jul 2002; Ryan Phillips <rphillips@gentoo.org> tkseti-3.06.ebuild :
 
   Added dependencies. Fixes #4761. Submitted by Peter Littmann
+
+*tkseti-3.06 (06 Jul 2002)
 
   06 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
 
