@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r3.ebuild,v 1.2 2004/08/19 17:58:13 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r3.ebuild,v 1.3 2004/08/24 16:21:46 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -143,6 +143,10 @@ src_unpack() {
 	#this patch enables true alsa output in
 	#gmplayer.  Fixes Bug #58619.
 	use alsa && epatch ${DISTDIR}/${P}-alsa-gui.patch.tar.bz2
+
+	#fix the configure script not recognizing mips64 systems
+	#fixes bug #61466
+	epatch ${FILESDIR}/${P}-mips64.patch
 
 	#Setup the matrox makefile
 	if use matrox; then
