@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.0_beta1.ebuild,v 1.6 2003/11/06 18:37:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.0_beta1.ebuild,v 1.7 2003/11/06 18:40:33 caleb Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="nas esd motif slang tcltk oggvorbis gtk alsa gstreamer"
@@ -21,6 +21,7 @@ newdepend ">=sys-libs/ncurses-5.2
 	gtk? ( =x11-libs/gtk+-1.2* )
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	gstreamer? ( media-libs/gstreamer )
+	>=media-libs/id3lib-3.8
 	!media-sound/juk"
 
 replace-flags "-O3" "-O2"
