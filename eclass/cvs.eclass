@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.41 2003/06/10 22:06:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.42 2003/06/13 09:22:47 torbenh Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -78,6 +78,10 @@ DEPEND="$DEPEND dev-util/cvs app-admin/sudo"
 
 # calls cvs_contorl, is called from cvs_src_unpack
 cvs_fetch() {
+
+	# fix for sourceforge which doesnt want -z>3 anymore.
+
+	(echo $ECVS_SERVER | grep sourceforge) && [ "$ECVS_CVS_COMMAND" == "cvs -q -f -z4" ] && ECVS_CVS_COMMAND="cvs -q -f -z3"
 
 	debug-print-function $FUNCNAME $*
 
