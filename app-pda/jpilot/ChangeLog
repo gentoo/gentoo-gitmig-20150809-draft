@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/jpilot
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.14 2004/05/03 10:15:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.15 2004/05/03 20:38:57 g2boojum Exp $
+
+*jpilot-0.99.7 (03 May 2004)
+
+  03 May 2004; Grant Goodyear <g2boojum@gentoo.org> jpilot-0.99.7.ebuild:
+  Version bump.  Thanks to Tobias Sager (bug # 44672).
 
   03 May 2004; David Holm <dholm@gentoo.org> jpilot-0.99.6-r1.ebuild:
   Added to ~ppc.
