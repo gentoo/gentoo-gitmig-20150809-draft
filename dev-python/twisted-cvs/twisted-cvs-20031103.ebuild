@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-cvs/twisted-cvs-20031103.ebuild,v 1.1 2003/11/03 07:26:28 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-cvs/twisted-cvs-20031103.ebuild,v 1.2 2004/05/07 20:22:28 kloeri Exp $
 
 ECVS_USER="anon"
 ECVS_SERVER="cvs.twistedmatrix.com:/cvs"
@@ -18,6 +18,7 @@ SRC_URI=""
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~alpha"
+IUSE=""
 
 RDEPEND="virtual/python"
 DEPEND="${DEPEND}
