@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.416 2004/06/04 20:24:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.417 2004/06/04 21:18:20 phosphan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -107,6 +107,8 @@ dev-java/quartz:struts - Enable struts support
 dev-java/sun-j2sdk:nptl - Enable support for NPTL 
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
+dev-lang/R:bzlib - use bzlib compression library
+dev-lang/R:pcre -  add perl compatible regular expressions support
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
 dev-lang/tcl:threads - Enable threads as some packages require it.
 dev-lang/tk:threads - Enable threads as some packages require it.
