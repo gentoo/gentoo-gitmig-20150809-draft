@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f95bf32fd19ead64f5fdb1855b08fa75 ChangeLog 5805
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 2cfd331c4234b3d109bf51d1697bd461 tcl-8.3.4.ebuild 2538
 MD5 d2bf35d1b9d4e346394bc2a823fcdf02 tcl-8.4.6.ebuild 2921
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 74217c8dcd28f38f21aa3b638981b7f7 tcl-8.4.6-r1.ebuild 2965
-MD5 7df9e33fdb6fd130655e28d69bf61c83 ChangeLog 5700
+MD5 4683e2041606ed608059ea7d45fa7e60 tcl-8.4.6-r1.ebuild 2963
 MD5 d8691f60be4023222834ccdf6ee6d498 files/digest-tcl-8.3.4 61
-MD5 cb07b4bc1984a971b376e1da5e478fdc files/digest-tcl-8.4.6-r1 65
 MD5 cb07b4bc1984a971b376e1da5e478fdc files/digest-tcl-8.4.6 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdVK6ugEuf3OQ0akRAuNeAJ4gM24fjlprCjdRv4/Q0Xddu/7LcACgkBn9
-/E/WXscoqYUg3KRtcyjnMXY=
-=BE/+
------END PGP SIGNATURE-----
+MD5 cb07b4bc1984a971b376e1da5e478fdc files/digest-tcl-8.4.6-r1 65
