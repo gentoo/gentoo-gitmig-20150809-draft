@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfishtank
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/ChangeLog,v 1.4 2004/06/24 22:40:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/ChangeLog,v 1.5 2004/08/28 15:57:54 tgall Exp $
+
+  28 Aug 2004; Tom Gall <tgall@gentoo.org> xfishtank-2.1.ebuild:
+  stable on ppc64, bug #59387
 
   20 Jun 2004; Ian Leitch <port001@gentoo.org> xfishtank-2.1.ebuild:
   Removed HOMEPAGE from SRC_URI
