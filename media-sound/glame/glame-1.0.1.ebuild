@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.1.ebuild,v 1.4 2004/01/21 18:42:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.1.ebuild,v 1.5 2004/01/26 00:42:06 vapier Exp $
 
 IUSE="nls gnome"
 
@@ -35,7 +35,7 @@ src_unpack() {
 	fi
 
 	# fix makefile problem
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	cd ${S}/libltdl
 	autoconf -f
 }

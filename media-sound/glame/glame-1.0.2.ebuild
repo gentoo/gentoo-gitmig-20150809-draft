@@ -1,17 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.1 2004/01/21 18:42:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.2 2004/01/26 00:42:06 vapier Exp $
 
-IUSE="nls gnome oggvorbis debug alsa"
-
-S=${WORKDIR}/${P}
-DESCRIPTION="Glame is an audio file editing utility"
-SRC_URI="mirror://sourceforge/glame/${P}.tar.gz"
+DESCRIPTION="an audio file editing utility"
 HOMEPAGE="http://glame.sourceforge.net/"
+SRC_URI="mirror://sourceforge/glame/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~sparc"
+IUSE="nls gnome oggvorbis debug alsa"
 
 DEPEND=">=dev-util/guile-1.4-r3
 	>=dev-libs/libxml-1.8.0
@@ -24,7 +22,6 @@ DEPEND=">=dev-util/guile-1.4-r3
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
 	gnome? ( <gnome-base/libglade-2 gnome-base/gnome-libs )
 	alsa? ( media-libs/alsa-lib )"
-
 RDEPEND="nls? ( >=sys-devel/gettext-0.11.3 )"
 
 src_unpack() {
@@ -39,7 +36,7 @@ src_unpack() {
 	fi
 
 	# fix makefile problem
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	cd ${S}/libltdl
 	autoconf -f
 
@@ -50,7 +47,7 @@ src_unpack() {
 src_compile() {
 	local myconf="--enable-ladspa"
 
-	if [ "`use gnome`" ]
+	if [ `use gnome` ]
 	then
 		# Use a valid icon for the GNOME menu entry
 		cp src/gui/glame.desktop src/gui/glame.desktop.old
@@ -78,14 +75,13 @@ src_compile() {
 src_install () {
 	einstall || die "Installation failed"
 
-	if [ "`use gnome`" ]
+	if [ `use gnome` ]
 	then
 		dodir /usr/share/pixmaps
 		dosym ../glame/pixmaps/glame-logo.jpg \
 		      /usr/share/pixmaps/glame-logo.jpg
 	fi
 
-	dodoc ABOUT-NLS AUTHORS BUGS COPYING CREDITS ChangeLog MAINTAINERS \
+	dodoc ABOUT-NLS AUTHORS BUGS CREDITS ChangeLog MAINTAINERS \
 		NEWS README TODO
 }
-

@@ -1,27 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9_pre1.ebuild,v 1.2 2004/01/25 21:58:58 eradicator Exp $
-
-IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9_pre1.ebuild,v 1.3 2004/01/26 00:44:46 vapier Exp $
 
 inherit flag-o-matic eutils
-filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 PATCHVER="0.2"
-
-DESCRIPTION="X MultiMedia System"
-HOMEPAGE="http://www.xmms.org/"
 
 MY_P=${P/_pre/-pre}
 S=${WORKDIR}/${MY_P}
 
+DESCRIPTION="X MultiMedia System"
+HOMEPAGE="http://www.xmms.org/"
 SRC_URI="http://www.xmms.org/files/1.2.x/${MY_P}.tar.bz2
 	mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2
 	mirror://gentoo/${P}-gentoo-patches-${PATCHVER}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64"
+IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
 DEPEND=">=sys-devel/automake-1.7.8
 	app-arch/unzip
@@ -32,7 +29,6 @@ DEPEND=">=sys-devel/automake-1.7.8
 	gnome? ( <gnome-base/gnome-panel-1.5.0 )
 	opengl? ( virtual/opengl )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
-
 RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
 	nls? ( dev-util/intltool )"
@@ -89,7 +85,7 @@ src_unpack() {
 	# different tunes that are sometimes included in a single .sid file
 	epatch ${PATCHDIR}/${P}-sid-songpos.patch
 
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	export WANT_AUTOMAKE=1.7
 	for x in . libxmms ; do
 		cd ${S}/${x}
@@ -98,6 +94,8 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+
 	local myconf=""
 
 	# Allow configure to detect mipslinux systems
@@ -144,7 +142,7 @@ src_install() {
 		GNOME_SYSCONFDIR=${D}/etc \
 		install || die "make install failed"
 
-	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO
+	dodoc AUTHORS ChangeLog FAQ NEWS README TODO
 
 	keepdir /usr/share/xmms/Skins
 	insinto /usr/share/pixmaps/

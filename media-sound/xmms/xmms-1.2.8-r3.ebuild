@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.6 2004/01/17 03:49:00 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.7 2004/01/26 00:44:46 vapier Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -80,7 +80,7 @@ src_unpack() {
 	# different tunes that are sometimes included in a single .sid file
 	epatch ${PATCHDIR}/${P}-sid-songpos.patch
 
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	for x in . libxmms ; do
 		cd ${S}/${x}
 		automake --gnu --add-missing --include-deps || die
