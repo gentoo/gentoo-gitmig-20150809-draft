@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/fargoal/fargoal-20030731b.ebuild,v 1.5 2004/11/03 13:46:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/fargoal/fargoal-20030731b.ebuild,v 1.6 2004/12/16 15:09:19 josejx Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/squidfighter/${PN}${PV}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE=""
 
 RDEPEND="media-libs/allegro"

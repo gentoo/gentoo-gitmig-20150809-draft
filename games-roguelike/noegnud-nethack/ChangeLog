@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/noegnud-nethack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/ChangeLog,v 1.7 2004/11/19 19:08:01 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/ChangeLog,v 1.8 2004/12/16 15:14:17 josejx Exp $
+
+  17 Dec 2004; Joseph Jezak <josejx@gentoo.org>
+  noegnud-nethack-0.8.2.ebuild:
+  Marked ppc stable.
 
 *noegnud-nethack-0.8.3 (19 Nov 2004)
 
