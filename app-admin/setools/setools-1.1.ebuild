@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.1.ebuild,v 1.2 2003/12/23 02:07:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.1.ebuild,v 1.3 2003/12/23 02:36:48 pebenito Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -22,17 +22,16 @@ RDEPEND="X? (
 		gtk? ( >=gnome-base/libglade-2.0 )
 	)"
 
-# adjust for tcl/tk versions
-has_version '>=dev-lang/tk-8.4' \
-	&& TCL_LIBS="-ltk8.4 -ltcl8.4 -lfl -lm -dl" \
-	|| TCL_LIBS="-ltk8.3 -ltcl8.3 -lfl -lm -dl"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
 	# fix the Makefile to listen to portage CFLAGS
 	sed -i -e "s:-O2:-O2 ${CFLAGS}:" ${S}/Makefile
+
+	# fix for tcl/tk version
+	has_version '=dev-lang/tk-8.4*' && \
+		sed -i -e 's:8.3:8.4:' ${S}/Makefile
 
 	# fix up the scripts we're going to install
 	sed -i -e 's:local/selinux/::g' ${S}/seuser/seuseradd
@@ -45,7 +44,7 @@ src_unpack() {
 	# fix up the file contexts
 	sed -i -e 's:local/selinux/::' -e 's:local/::' ${S}/policy/seuser.fc
 
-	# makefiles are broken, fix to not build tcl/tk stuff for non X
+	# makefiles are broken, fix to not build tcl stuff for non X
 	use X || epatch ${FILESDIR}/setools-1.1-fix_noX.diff
 }
 
@@ -53,16 +52,14 @@ src_compile() {
 	cd ${S}
 
 	# build command line tools
-	make all-nogui || die "command line tools compile failed"
+	emake all-nogui || die "command line tools compile failed"
 
 	if use X; then
-		# adjust for tcl/tk versions
-
-		make TCL_LIBS="${TCL_LIBS}" apol sepcut seuserx \
+		emake apol sepcut seuserx \
 			|| die "apol, sepcut, or seuserx compile failed"
 
 		if use gtk; then
-			make seaudit || die "seaudit compile failed."
+			emake seaudit || die "seaudit compile failed."
 		fi
 
 	fi
@@ -84,7 +81,7 @@ src_install() {
 	if use X; then
 		# graphical tools
 
-		make TCL_LIBS="${TCL_LIBS}" DESTDIR=${D} install-apol install-sepcut \
+		make DESTDIR=${D} install-apol install-sepcut \
 			|| die "apol and sepcut install failed."
 
 		if use gtk; then
@@ -95,7 +92,7 @@ src_install() {
 
 	if use selinux; then
 		if use X; then
-			make TCL_LIBS="${TCL_LIBS}" DESTDIR=${D} install-seuserx \
+			make DESTDIR=${D} install-seuserx \
 				|| die "seuserx install failed."
 		else
 			make DESTDIR=${D} install-seuser \
