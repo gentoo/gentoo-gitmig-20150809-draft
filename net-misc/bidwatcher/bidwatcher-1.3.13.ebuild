@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 RESTRICT="nomirror"
 HOMEPAGE="http://bidwatcher.sourceforge.net/"
 
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="x86 sparc ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
