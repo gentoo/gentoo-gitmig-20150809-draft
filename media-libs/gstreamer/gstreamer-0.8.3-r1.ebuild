@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.3-r1.ebuild,v 1.1 2004/07/11 17:47:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.3-r1.ebuild,v 1.2 2004/07/19 15:24:32 foser Exp $
 
 inherit eutils flag-o-matic libtool gnome2
 
@@ -40,6 +40,9 @@ src_unpack() {
 
 src_compile() {
 
+	# FIXME : Ugly fix for docs generation gst cache problem (#57002)
+	addpredict /var/lib/cache/gstreamer-0.8
+
 	elibtoolize
 
 	strip-flags
@@ -65,7 +68,8 @@ src_compile() {
 
 src_install() {
 
-	einstall || die
+	#	einstall || die
+	make DESTDIR=${D} install || die
 
 	# remove the unversioned binaries gstreamer provide
 	# this is to prevent these binaries to be owned by several SLOTs
