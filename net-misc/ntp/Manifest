@@ -3,7 +3,7 @@ MD5 0fe1feaac2dc04b021053d9948df36c6 files/ntpd-4.1.1b.rc 1152
 MD5 dded11ceec4b8f2c1b140341a357f507 files/linux-config-phone.patch 747
 MD5 e82bbe682098cf66f513ca2d11e4bc36 files/ntp-4.1.1b-syscall-libc.patch 522
 MD5 40c3ee9069686a0f1004b583741cfdb0 files/ntp-bk.diff 618
-MD5 b7644e452bd63c1f22d401e9583077af files/ntp.conf 1482
+MD5 34dd05f40a2e96f0e0c63020234c67ba files/ntp.conf 1481
 MD5 af48491e8d6820a3d8eba16a771e5c26 files/digest-ntp-4.1.2 129
 MD5 38e9293c73a594e5a8e3987e3b25f9b7 files/ntpd-4.1.1b.confd 1592
 MD5 047fe77e01bc9335b07bcc5d963d8683 files/4.1.2-droproot.patch 12672
@@ -12,6 +12,6 @@ MD5 7641feb9a3c472abc04bb2f57a071d4e files/ntp-client.confd 889
 MD5 fdb3976c00f471552efb9d3ac15aee60 files/ntp-client.rc 850
 MD5 77b8a8aadd740fcf2818dbac8322d40f files/ntpd.confd 396
 MD5 41689b81c25f5b79ae2d5e52a18016b0 files/ntpd.rc 898
-MD5 9656e5d79b0b3bd743d9ff04015aeb10 ntp-4.1.2.ebuild 2830
+MD5 b128f427d4d3829e7ee55f3f3e60b66b ntp-4.1.2.ebuild 2783
 MD5 dbaec4ada2da67ece2df2a15079f9506 ChangeLog 4844
 MD5 c4c6d2a49d5a0cbe91dbaaf63a88f0e8 ntp-4.1.1b-r6.ebuild 1736
