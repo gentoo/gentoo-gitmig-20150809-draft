@@ -1,6 +1,10 @@
 # ChangeLog for app-text/opensp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.13 2004/04/15 23:27:06 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.14 2004/04/22 21:10:28 mholzer Exp $
+
+  22 Apr 2004; Martin Holzer <mholzer@gentoo.org> opensp-1.5-r1.ebuild,
+  files/opensp-1.5-gcc34.patch:
+  adding patch to support gcc3.4 closes 48703
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> opensp-1.5-r1.ebuild:
   adding s390 keywords

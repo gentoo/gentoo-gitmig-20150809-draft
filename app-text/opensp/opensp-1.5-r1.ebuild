@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.16 2004/04/15 23:27:06 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.17 2004/04/22 21:10:28 mholzer Exp $
 
 inherit eutils gnuconfig
 
@@ -24,9 +24,11 @@ PDEPEND=">=app-text/openjade-1.3.2"
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	# from gentoo bug #21631 and
 	# http://sourceforge.net/tracker/index.php?func=detail&aid=742214&group_id=2115&atid=302115
 	epatch ${FILESDIR}/${P}-gcc33.patch
+	epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
 src_compile() {

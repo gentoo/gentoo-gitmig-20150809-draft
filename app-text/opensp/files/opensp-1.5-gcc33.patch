@@ -1,5 +1,5 @@
---- OpenSP-1.5/include/Attribute.h.gcc33	2003-05-22 17:04:20.000000000 +0100
-+++ OpenSP-1.5/include/Attribute.h	2003-05-22 17:04:48.000000000 +0100
+--- include/Attribute.h.gcc33	2003-05-22 17:04:20.000000000 +0100
++++ include/Attribute.h	2003-05-22 17:04:48.000000000 +0100
 @@ -25,12 +25,32 @@
  class Entity;
  class Notation;
