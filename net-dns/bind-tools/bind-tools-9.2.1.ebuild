@@ -1,5 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/net-misc/bind-tools/bind-tools-9.1.3-r1.ebuild,v 1.1 2001/12/09 23:47:08 jerrya Exp
 
 MY_P=${P//-tools}
