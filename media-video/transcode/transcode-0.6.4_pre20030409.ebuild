@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.4_pre20030409.ebuild,v 1.3 2003/05/04 19:31:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.4_pre20030409.ebuild,v 1.4 2003/05/12 16:25:11 mholzer Exp $
 
 inherit libtool flag-o-matic
 
 # Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
 filter-flags -mfpmath=sse 
-filter-flags -fPic
+filter-flags -fPIC
 
 filter-flags "-maltivec -mabi=altivec"
 
