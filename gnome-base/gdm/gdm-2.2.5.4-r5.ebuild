@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.3 2002/06/02 20:19:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.4 2002/06/19 23:53:47 azarah Exp $
 
 DESCRIPTION="GNOME Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 MY_V="`echo ${PV} |cut -b -5`"
 S=${WORKDIR}/${P}
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
+SLOT="0"
 
 DEPEND=">=sys-libs/pam-0.72
 	>=sys-apps/tcp-wrappers-7.6
