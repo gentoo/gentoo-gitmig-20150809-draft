@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/imhangul
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.7 2003/04/25 14:03:05 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.8 2003/11/16 13:28:16 jayskwak Exp $
+
+*imhangul-0.9.7 (16 Nov 2003)
+  16 Nov 2003: Jay Kwak <jayskwak@gentoo.org> imhangul-0.9.7.ebuild :
+  new version
 
 *imhangul-0.9.6 (14 Apr 2003)
 
