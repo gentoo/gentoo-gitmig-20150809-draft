@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.2_pre20040731.ebuild,v 1.4 2004/08/08 16:39:56 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.2_pre20040731.ebuild,v 1.5 2004/08/08 19:34:00 morfic Exp $
 
 inherit eutils flag-o-matic kde-functions
 
-IUSE="kde"
+IUSE=""
 
 SNAPSHOT="${PV/*_pre}"
 S="${WORKDIR}/${P/_*}"
@@ -22,7 +22,7 @@ DEPEND=">=media-libs/glut-3.7-r2
 	virtual/glu
 	media-libs/jpeg
 	media-libs/libpng
-	kde? ( >=kde-base/kdelibs-3.0.5 )"
+	>=kde-base/kdelibs-3.0.5"
 
 pkg_setup() {
 	# Set up X11 implementation
@@ -38,7 +38,6 @@ pkg_setup() {
 	einfo	"opengl-update nvidia"
 	einfo	"------------"
 	einfo	"NOTE: kde GUIs only one supported at this time "
-	einfo	"'USE=\"kde\" emerge celestia' (for the kde interface)"
 }
 
 src_unpack() {
