@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.10 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.11 2002/10/25 21:37:54 lostlogic Exp $
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
 
@@ -21,7 +21,9 @@ SLOT="0"
 if [ $ETYPE = "sources" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
-	DEPEND="!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 )"
+	DEPEND="!build? ( sys-apps/sed
+			  >=sys-devel/binutils-2.11.90.0.31
+			  >=app-admin/addpatches-0.2 )"
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
 			   sys-devel/perl
@@ -70,7 +72,7 @@ kernel_src_unpack() {
 
 	kernel_exclude
 
-	./addpatches . ${WORKDIR}/linux-${KV} || die "Addpatches failed, bad KERNEL_ExCLUDE?"
+	/usr/bin/addpatches . ${WORKDIR}/linux-${KV} || die "Addpatches failed, bad KERNEL_ExCLUDE?"
 
 	kernel_universal_unpack
 
