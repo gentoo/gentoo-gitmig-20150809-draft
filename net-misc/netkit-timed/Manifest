@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cfcd71b247eef2e06d193dca55db0833 ChangeLog 1711
-MD5 22664cdc740a57da691132f4aa64de8a netkit-timed-0.17-r7.ebuild 962
-MD5 a00dc0240ef1474ede187cd77521efad netkit-timed-0.17-r6.ebuild 849
+MD5 ac2c9302d5c7d8fff5cf4af2ec4a9d67 ChangeLog 1823
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 0742d77d356c6be01d3a8a99e377a7a0 files/0.17-timed.patch 878
+MD5 a00dc0240ef1474ede187cd77521efad netkit-timed-0.17-r6.ebuild 849
+MD5 03f4101c37573861a200fde19a92931f netkit-timed-0.17-r7.ebuild 958
 MD5 a968cd4ed6e20ba5caca252089d73a88 files/digest-netkit-timed-0.17-r6 68
 MD5 2674064ee1f22cdf5bf08d9aaeb0c23c files/timed.rc5 704
 MD5 af6cc7c3161dec7c5987639b5f4ced10 files/timed.rc6 471
-MD5 a968cd4ed6e20ba5caca252089d73a88 files/digest-netkit-timed-0.17-r7 68
 MD5 14536c906a1b3fa5a8d11640fef91f78 files/0.17-CFLAG-DEF-fix.patch 1551
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBFB+ImdTrptrqvGERAql/AJ44UNKcgnJxbjvgFUtZJ6tVIvp4BQCeMjzf
-PfldKpZyLCdzVlXssjqHcSk=
-=sGZl
------END PGP SIGNATURE-----
+MD5 0742d77d356c6be01d3a8a99e377a7a0 files/0.17-timed.patch 878
+MD5 a968cd4ed6e20ba5caca252089d73a88 files/digest-netkit-timed-0.17-r7 68
