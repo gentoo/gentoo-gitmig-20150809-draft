@@ -12,7 +12,7 @@ MD5 a673bafe30cbf7e555363d4c6a136081 php-cgi-4.3.8.ebuild 752
 MD5 ff8d280e1df6a129bc07898d5acbb1c0 php-cgi-5.0.0.ebuild 751
 MD5 28661c422a37c7eb23140532a3d84ab6 php-cgi-4.3.9.ebuild 795
 MD5 7e76422a184b68458a18cdc7a5a21834 php-cgi-5.0.2.ebuild 897
-MD5 9ecb7c8976420b539c9325868611ffcc php-cgi-4.3.9-r1.ebuild 815
+MD5 97e002bcf522c1fb90a38b7708789ce3 php-cgi-4.3.9-r1.ebuild 813
 MD5 14d868f33e29b3c9a70b118e9da58dd0 files/digest-php-cgi-5.0.1 63
 MD5 390a659097a43447e44ab5bdd59378b5 files/digest-php-cgi-4.3.8-r1 282
 MD5 286ce4ea00fde75122c14fd35c3d4672 files/digest-php-cgi-4.3.9_rc1 208
@@ -28,7 +28,7 @@ MD5 aeed7aba3334e2f1437aa1ef48d850e8 files/digest-php-cgi-4.3.9-r1 205
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBXAWtHTu7gpaalycRAsiIAKCJWe+Ez6nErW3EsBkw4P6uFcwwJgCfdTOc
-7wotgTCBys//XOc5QbYT1P0=
-=0LOO
+iD8DBQFBXAm+HTu7gpaalycRAm1GAJ4+moHYm2SQUO9sxlbnrfBj8NtH4ACeOCii
+MVlP+FivbOo+k5cdvNyPH9Q=
+=TbMX
 -----END PGP SIGNATURE-----
