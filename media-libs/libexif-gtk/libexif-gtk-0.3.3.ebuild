@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/libexif-gtk-0.3.3.ebuild,v 1.6 2004/02/22 15:18:31 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/libexif-gtk-0.3.3.ebuild,v 1.7 2004/03/28 18:02:15 liquidx Exp $
 
 inherit flag-o-matic
 
@@ -18,6 +18,11 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha amd64"
 DEPEND="dev-util/pkgconfig
 		>=x11-libs/gtk+-2.0
 		>=media-libs/libexif-0.5.9"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-gtk24.patch
+}
 
 src_compile() {
 	local myconf
