@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.5.ebuild,v 1.4 2004/03/03 22:51:41 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.5.ebuild,v 1.5 2004/04/04 09:21:34 mr_bones_ Exp $
 
 # games after gnome2 so games' functions will override gnome2's
 inherit gnome2 games
@@ -25,11 +25,17 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	sed -i \
 		-e "s:\$(datadir)/pixmaps:/usr/share/pixmaps:" \
+		-e "/DISABLE_DEPRECATED/d" \
 		{.,icons,src}/Makefile.in \
 		|| die "sed Makefile.in failed"
+}
+
+src_compile() {
 	egamesconf \
 		`use_enable ipv6` \
 		--sysconfdir=/etc \
@@ -48,7 +54,6 @@ src_install() {
 	rm -rf games && cd ${D}/${GAMES_DATADIR} && mv applications locale ../
 	use nls || rm -rf ../locale
 	mv ${WORKDIR}/gentoo ${D}/${GAMES_DATADIR}/${PN}/themes/
-
 	prepgamesdirs
 }
 
