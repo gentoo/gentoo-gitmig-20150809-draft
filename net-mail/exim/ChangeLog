@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.24 2003/03/26 05:03:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.25 2003/04/12 11:26:26 seemant Exp $
 
 *exim-4.12 (28 Jan 2003)
+
+  12 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  exim-4.12.ebuild:
+  added symlinks for rsmtp and rmail, closing bug #19126 by Stefan Fo"rster
+  <gentoo@stefan-foerster.de>
 
   25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> exim-4.12.ebuild:
   removed suid bit on /etc/conf.d/exim thanks to: Benjamin Podszun (Blafasel @
