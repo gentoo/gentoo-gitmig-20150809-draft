@@ -1,11 +1,12 @@
 # ChangeLog for dev-util/glimmer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/ChangeLog,v 1.7 2002/10/16 15:01:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/ChangeLog,v 1.8 2002/10/16 15:02:53 foser Exp $
 
 *glimmer-1.2.1-r5 (16 Oct 2002)
 
   16 Oct 2002; foser <foser@gentoo.org> glimmer-1.2.1-r5.ebuild :
   Lots of fixes for problems mentioned in bug #3693
+  Enabled python USE flag again
 
 *glimmer-1.2.1-r4 (8 Sep 2002)
 
