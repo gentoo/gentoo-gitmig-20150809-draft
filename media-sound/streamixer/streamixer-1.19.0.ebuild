@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamixer/streamixer-1.19.0.ebuild,v 1.5 2004/07/01 07:59:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamixer/streamixer-1.19.0.ebuild,v 1.6 2004/07/12 23:22:30 eradicator Exp $
 
 IUSE=""
 
@@ -8,7 +8,8 @@ DESCRIPTION="Various audio stream handling tools (non-interactive)"
 HOMEPAGE="http://bisqwit.iki.fi/source/streamixer.html"
 SRC_URI="http://bisqwit.iki.fi/src/arch/${P}.tar.bz2"
 
-KEYWORDS="x86 ~amd64"
+#-sparc: 1.19.0: bad assembly
+KEYWORDS="x86 ~amd64 -sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
