@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.25.2.0_rc5.ebuild,v 1.1 2004/02/22 02:29:16 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.25.2.0_rc5.ebuild,v 1.2 2004/03/12 02:13:58 solar Exp $
 
 # We control what versions of what we download based on the KEYWORDS we
 # are using for the various arches. Thus if we want grsec1 stable we run
@@ -53,7 +53,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.grsecurity.net"
 
 [ ${PATCH_BASE/.*/} == 1 ] && KEYWORDS="x86 -hppa" || KEYWORDS="~x86 ~sparc ~ppc ~alpha -hppa"
 
-SLOT="${OKV}"
+SLOT="${KV}"
 S="${WORKDIR}/linux-${KV}"
 
 src_unpack() {
