@@ -7,7 +7,9 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
-SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
+        http://ozlabs.org/people/dgibson/dldwd/orinoco-0.11a.tar.gz"
+
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 DEPEND="sys-kernel/linux-headers"
 RDEPEND=""
@@ -27,15 +29,14 @@ fi
 src_unpack() {
 	unpack ${P}.tar.gz
 
-	# commented this stuff out as it is still in packages.mask for testing - gerk june 08 2002
-#	unpack orinoco-0.11a.tar.gz
-#	cd ${S}
-#	mv ../orinoco-0.11a/hermes*.{c,h} \
-#		../orinoco-0.11a/orinoco*.{c,h} \
-#		../orinoco-0.11a/ieee802_11.h wireless/
-#	cp Configure Configure.orig
-#	sed -e 's:usr/man:usr/share/man:g' Configure.orig > Configure
-#	#man pages will now install into /usr/share/man
+	unpack orinoco-0.11a.tar.gz
+	cd ${S}
+	mv ../orinoco-0.11a/hermes*.{c,h} \
+		../orinoco-0.11a/orinoco*.{c,h} \
+		../orinoco-0.11a/ieee802_11.h wireless/
+	cp Configure Configure.orig
+	sed -e 's:usr/man:usr/share/man:g' Configure.orig > Configure
+	#man pages will now install into /usr/share/man
 }
 
 src_compile() {
@@ -117,7 +118,6 @@ src_install () {
 
 	# if on ppc set the ppc revised config.opts
 	if [ ${ARCH} = "ppc" ] ; then
-#		cp ${FILESDIR}/ppc.config.opt ${D}/etc/pcmcia/config.opt
 		insinto /etc/pcmcia
 		newins ${FILESDIR}/ppc.config.opts config.opts
 	fi	
