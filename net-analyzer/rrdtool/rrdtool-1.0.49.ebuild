@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.49.ebuild,v 1.3 2004/10/24 16:30:42 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.49.ebuild,v 1.4 2004/10/27 14:15:00 weeve Exp $
 
 inherit perl-module flag-o-matic gnuconfig eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.ee.ethz.ch/%7Eoetiker/webtools/${PN}/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ppc sparc ~alpha ~hppa ~amd64 ~ia64"
 IUSE="perl tcltk"
 
 DEPEND="perl? ( dev-lang/perl )
