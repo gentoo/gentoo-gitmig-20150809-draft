@@ -1,0 +1,9 @@
+# ChangeLog for net-analyzer/tcpslice
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/ChangeLog,v 1.1 2003/12/17 09:57:52 mboman Exp $
+
+*tcpslice-1.1_alpha3 (17 Dec 2003)
+
+  17 Dec 2003; Michael Boman <mboman@gentoo.org> tcpslice-1.1_alpha3.ebuild:
+  New package.
+
