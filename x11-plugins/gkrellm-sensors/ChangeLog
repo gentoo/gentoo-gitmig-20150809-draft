@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellm-sensors
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/ChangeLog,v 1.5 2003/02/12 09:36:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/ChangeLog,v 1.6 2003/12/26 17:21:57 weeve Exp $
+
+*gkrellm-sensors-0.1 (26 Dec 2003)
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> gkrellm-sensors-0.1.ebuild:
+  Masked on sparc as lm_sensors doesn't work.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
