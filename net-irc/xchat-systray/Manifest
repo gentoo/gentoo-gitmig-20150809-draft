@@ -1,4 +1,6 @@
 MD5 3ef74d75c30f74aa1008547b78f9c325 xchat-systray-2.3.1.ebuild 791
+MD5 923f59d1fac9e6f3e6b8ac0a2090e978 xchat-systray-2.4.0.ebuild 772
 MD5 e2d8abc7826b72227a8937c4f684dbca ChangeLog 458
 MD5 5d0c50012374761745d511ea0ff0fbb5 metadata.xml 195
 MD5 9a65d335f20aacff5764eae11d496abc files/digest-xchat-systray-2.3.1 77
+MD5 1a8c5c044d17c5ce8aa84c24f8ca3978 files/digest-xchat-systray-2.4.0 86
