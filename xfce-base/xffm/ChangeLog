@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xffm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.31 2004/08/07 13:42:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.32 2004/08/30 18:46:38 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xffm-4.0.6.ebuild:
+  Masked xffm-4.0.6.ebuild stable for ppc
 
   07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> xffm-4.0.6.ebuild:
   Stable on alpha.

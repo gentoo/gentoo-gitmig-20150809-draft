@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.31 2004/08/07 13:28:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.32 2004/08/30 18:46:37 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  libxfce4util-4.0.6.ebuild:
+  Masked libxfce4util-4.0.6.ebuild stable for ppc
 
   07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> libxfce4util-4.0.6.ebuild:
   Stable on alpha.
