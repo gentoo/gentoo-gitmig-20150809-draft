@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.000.ebuild,v 1.1 2003/02/22 18:36:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.000.ebuild,v 1.2 2003/02/24 09:34:00 aliz Exp $
 
 IUSE="ssl"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.webmin.com/index6.html"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc"
+KEYWORDS="x86 sparc alpha ppc"
 
 DEPEND="sys-devel/perl
 	sys-apps/lsof
