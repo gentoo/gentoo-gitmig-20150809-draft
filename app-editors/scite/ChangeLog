@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.23 2004/06/30 02:34:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.24 2004/07/08 21:34:29 pythonhead Exp $
+
+  08 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> scite-1.6.0.ebuild:
+  Added DEPEND for dev-lang/lua scripting support
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> scite-1.4.9.ebuild,
   scite-1.5.6.ebuild, scite-1.5.7.ebuild, scite-1.5.8.ebuild,

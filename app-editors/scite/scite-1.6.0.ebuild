@@ -1,24 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.0.ebuild,v 1.3 2004/06/30 02:34:38 agriffis Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.0.ebuild,v 1.4 2004/07/08 21:34:29 pythonhead Exp $
 
 MY_PV=$(echo ${PV} | sed 's:\.::g')
 
-DESCRIPTION="A very powerful editor for programmers"
-SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
-HOMEPAGE="http://www.scintilla.org"
-
-DEPEND="gtk2? ( >=x11-libs/gtk+-2 )
-	!gtk2? ( =x11-libs/gtk+-1.2* )
-	>=sys-apps/sed-4"
-
 S=${WORKDIR}/${PN}/gtk
-
-SLOT="0"
+DESCRIPTION="A very powerful editor for programmers"
+HOMEPAGE="http://www.scintilla.org"
+SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 LICENSE="PYTHON"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="gtk2"
+DEPEND="gtk2? ( >=x11-libs/gtk+-2 )
+	!gtk2? ( =x11-libs/gtk+-1.2* )
+	>=sys-apps/sed-4
+	lua? ( >=dev-lang/lua-5 )"
 
 src_unpack() {
 	unpack ${A}
@@ -72,3 +69,4 @@ src_install () {
 	dodoc ../License.txt ../README
 
 }
+
