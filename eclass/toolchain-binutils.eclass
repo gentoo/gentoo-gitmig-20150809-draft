@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.3 2004/11/15 15:54:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.4 2004/11/15 17:14:14 vapier Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
-ECLASS=toolchain
+ECLASS=toolchain-binutils
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst
 
