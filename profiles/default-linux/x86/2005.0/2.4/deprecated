@@ -1,0 +1,6 @@
+default-linux/x86/2004.3
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/x86/2004.0 make.profile
+# This is an in-development, experimental profile.  Do not use it.
