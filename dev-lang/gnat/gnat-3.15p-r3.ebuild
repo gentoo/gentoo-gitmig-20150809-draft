@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.1 2003/09/28 10:25:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.2 2003/09/29 17:07:54 dholm Exp $
 
 DESCRIPTION="The GNU Ada Toolkit"
 DEPEND="x86? ( >=app-shells/tcsh-6.0 )"
@@ -49,10 +49,10 @@ src_unpack() {
 	bzcat "${FILESDIR}/${P}-gentoo.patch.bz2" | patch -p1
 	touch ada/treeprs.ads ada/a-[es]info.h ada/nmake.ad[bs]
 
-	if [ "${ARCH}" != "x86" ]; then
+	#if [ "${ARCH}" != "x86" ]; then
 		cd "${S}"
 		bzcat "${FILESDIR}/${P}-noaddr2line.patch.bz2" | patch -p1
-	fi
+	#fi
 }
 
 src_compile() {
