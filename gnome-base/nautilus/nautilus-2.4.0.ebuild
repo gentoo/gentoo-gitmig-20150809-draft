@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.0.ebuild,v 1.1 2003/09/09 16:50:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.0.ebuild,v 1.2 2003/09/11 01:15:30 msterret Exp $
 
 inherit gnome2
 
@@ -49,7 +49,7 @@ DOCS="AUTHORS COPYIN* ChangeLo* HACKING INSTALL MAINTAINERS NEWS README THANKS T
 src_unpack() {
 
 	unpack ${A}
- 
+
 	cd ${S}
 	if [ `use cups` ]; then
 		epatch ${FILESDIR}/${PN}-2-x-printers.patch

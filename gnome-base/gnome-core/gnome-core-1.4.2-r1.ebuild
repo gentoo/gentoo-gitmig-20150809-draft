@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.2-r1.ebuild,v 1.5 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.2-r1.ebuild,v 1.6 2003/09/11 01:15:30 msterret Exp $
 
 IUSE="kde nls cups"
 
@@ -30,20 +30,20 @@ RDEPEND="=gnome-base/control-center-1.4*
 # instead.  Also, please check with Spider before you change this next time.
 
 DEPEND="${RDEPEND}
-        >=sys-apps/tcp-wrappers-7.6
-        >=app-text/scrollkeeper-0.2
-        nls? ( sys-devel/gettext
-		>=dev-util/intltool-0.11 )"
+	>=sys-apps/tcp-wrappers-7.6
+	>=app-text/scrollkeeper-0.2
+	nls? ( sys-devel/gettext
+	>=dev-util/intltool-0.11 )"
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
 
-        # libpng-1.2.5 fix
-        cp configure.in configure.in.old
-        sed -e "s:-lz:\`libpng-config --libs\`:" configure.in.old \
-                > configure.in
+	# libpng-1.2.5 fix
+	cp configure.in configure.in.old
+	sed -e "s:-lz:\`libpng-config --libs\`:" configure.in.old \
+		> configure.in
 
 	# Libtoolize
 	elibtoolize
@@ -86,10 +86,10 @@ src_compile() {
 
 src_install() {
 	make prefix=${D}/usr \
-	     mandir=${D}/usr/share/man \
-	     sysconfdir=${D}/etc \
-  	     localstatedir=${D}/var/lib \
-	     install || die
+		mandir=${D}/usr/share/man \
+		sysconfdir=${D}/etc \
+		localstatedir=${D}/var/lib \
+		install || die
 
 	# Support for new X session management scheme
 	exeinto /etc/X11/Sessions

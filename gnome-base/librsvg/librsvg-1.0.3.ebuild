@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-1.0.3.ebuild,v 1.9 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-1.0.3.ebuild,v 1.10 2003/09/11 01:15:30 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="librsvg"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 	>=media-libs/freetype-2.0.1
 	>=dev-libs/libxml-1.8
 	>=media-libs/gdk-pixbuf-0.11.0-r1
-        >=dev-libs/popt-1.5"
+	>=dev-libs/popt-1.5"
 
 
 src_compile() {
@@ -35,4 +35,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README*
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.18 2003/07/20 00:29:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.19 2003/09/11 01:15:30 msterret Exp $
 
 IUSE="nls tetex"
 
@@ -20,7 +20,7 @@ RDEPEND=">=media-libs/gdk-pixbuf-0.11.0-r1
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
-   	>=app-text/ghostscript-6.50-r2
+	>=app-text/ghostscript-6.50-r2
 	>=dev-libs/libxml-1.8.17
 	tetex? ( app-text/tetex )"
 

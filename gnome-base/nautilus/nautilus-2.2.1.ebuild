@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.1.ebuild,v 1.11 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.1.ebuild,v 1.12 2003/09/11 01:15:30 msterret Exp $
 
 inherit gnome2 eutils
 
@@ -47,9 +47,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-        # Fix bug 15450: nautilus-2.2.0.2 doesn't build without
-        # optimization.  We'll need this patch until it's fixed upstream.
-        epatch ${FILESDIR}/${PN}-2.2.0.2-locale.patch
+	# Fix bug 15450: nautilus-2.2.0.2 doesn't build without
+	# optimization.  We'll need this patch until it's fixed upstream.
+	epatch ${FILESDIR}/${PN}-2.2.0.2-locale.patch
 	# Fix bug #15984: double rightclick menus on localized systems
 	epatch ${FILESDIR}/${PN}-2.2-double_menu_entry_fix.patch
 	# Fix thumbnailer to handle bigger files (#16192)
