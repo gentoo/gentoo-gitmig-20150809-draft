@@ -8,7 +8,7 @@ MD5 56de542560e66a05f47182a080e4d80a libperl-5.8.3.ebuild 10718
 MD5 171c5bd2df821f6db9ce1314e3a1f30c libperl-5.8.2.ebuild 10700
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 fb72072205d13c03cc89b8bde10fe83a libperl-5.8.2-r1.ebuild 10811
-MD5 f2a5b69d8246199b28ff6932bf15c016 libperl-5.8.4-r1.ebuild 11089
+MD5 d4cd60004b9e05cf0633f5b373e1024c libperl-5.8.4-r1.ebuild 11088
 MD5 e0db6fc85d3fbc36111337c61ef3ffe7 libperl-5.8.5-r1.ebuild 9970
 MD5 93155b02a7e9d3cdc6d6934ce78d9f11 files/digest-libperl-5.8.4 64
 MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-libperl-5.8.5 64
@@ -30,7 +30,7 @@ MD5 d9412dab085f22309997c8f08ea1ac85 files/libperl-5.8.5-reorder-INC.patch 2211
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBa08pHTu7gpaalycRAm3BAKDJBzL0+OC9Ph7qdUBAlY/9oLYqeACdG6IY
-MAtQMeLqx+el80Dfp9Rqz4Q=
-=DlDV
+iD8DBQFBb+meHTu7gpaalycRAs5JAKCnMuk8mm9Kx+pZlF2I2H1LmlqL/gCg9hb4
+P++vgswx/dfVbQZJSoXLcPo=
+=X0Jw
 -----END PGP SIGNATURE-----
