@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r2.ebuild,v 1.1 2001/02/13 14:29:40 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r2.ebuild,v 1.2 2001/02/22 14:41:18 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,26 +10,23 @@ SRC_URI="ftp://ftp.freetype.org/pub/freetype1/${A}"
 HOMEPAGE="http://www.freetype.org/"
 
 DEPEND="virtual/glibc
-        sys-devel/gettext
-	    X? ( >=x11-base/xfree-4.0.2 )"
+        nls? ( sys-devel/gettext )"
 
-RDEPEND="virtual/glibc
-	    X? ( >=x11-base/xfree-4.0.2 )"
+RDEPEND="virtual/glibc"
 
 src_compile() {
 
   local myconf
 
-  if [ "`use X`" ]
+  if [ -z "`use nls`" ]
   then
-    myconf="--with-x"
-  else
-    myconf="--without-x"
+    myconf="${myconf} --disable-nls"
   fi
 
   try ./configure --host=${CHOST} --prefix=/usr ${myconf}
 
   # Make a small fix to disable tests
+  # Now xfree is no longer required
   cp Makefile Makefile.orig
   sed -e "s:ttlib tttest ttpo:ttlib ttpo:" Makefile.orig > Makefile
 
