@@ -1,5 +1,4 @@
 virtual/bootloader		sys-boot/yaboot
-virtual/cdrtools		app-cdr/cdrtools
 virtual/cron			sys-apps/dcron
 virtual/dev-manager		sys-fs/devfsd
 virtual/glu				x11-base/xorg-x11
