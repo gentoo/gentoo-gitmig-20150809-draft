@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.7.2.ebuild,v 1.5 2004/11/07 19:50:11 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.7.2.ebuild,v 1.6 2005/01/14 18:03:58 slarti Exp $
 
 inherit eutils
 
