@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mbuffer/mbuffer-20011008.ebuild,v 1.2 2003/09/03 20:41:21 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mbuffer/mbuffer-20011008.ebuild,v 1.3 2004/04/26 14:29:47 agriffis Exp $
 
 DESCRIPTION="M(easuring)buffer is a replacement for buffer with additional functionality."
 HOMEPAGE="http://www.rcs.ei.tum.de/~maierkom/privat/software/mbuffer/"
@@ -18,7 +18,7 @@ src_compile() {
 	myconf="${myconf} `use_enable debug`"
 	myconf="${myconf} `use_enable nls`"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "compile problem"
 }
 

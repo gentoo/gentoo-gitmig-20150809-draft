@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mondo-rescue
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.7 2003/06/19 08:37:05 johnm Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.8 2004/04/26 14:30:44 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> mondo-rescue-1.47.ebuild,
+  mondo-rescue-1.61.ebuild, mondo-rescue-1.65.ebuild:
+  Add die following econf for bug 48950
 
 *mondo-rescue-1.65 (19 Jun 2003)
 

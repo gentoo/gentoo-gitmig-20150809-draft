@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.4 2004/03/07 13:15:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.5 2004/04/26 14:32:54 agriffis Exp $
 
 IUSE="nls static"
 
@@ -32,7 +32,7 @@ src_unpack() {
 
 src_compile() {
 	econf	--program-prefix=s \
-		`use_enable nls`
+		`use_enable nls` || die "econf failed"
 
 	if use static; then
 		emake LDFLAGS="-static" || die "make failed"

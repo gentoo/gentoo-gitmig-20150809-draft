@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/ChangeLog,v 1.2 2003/02/12 09:10:53 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/ChangeLog,v 1.3 2004/04/26 14:33:46 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> usbd-0.1.ebuild:
+  Add die following econf for bug 48950
 
 *usbd-0.1 (15 Jan 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.65.ebuild,v 1.8 2004/02/23 17:40:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.65.ebuild,v 1.9 2004/04/26 14:30:44 agriffis Exp $
 
 DESCRIPTION="a nice backup tool"
 SRC_URI="http://www.microwerks.net/~hugo/download/stable/final/${PN/-rescue/}-${PV}.tgz"
@@ -23,7 +23,7 @@ DEPEND=">=app-arch/afio-2.4.7
 S=${WORKDIR}/${PN/-rescue/}-${PV}
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die "make failed"
 }
 

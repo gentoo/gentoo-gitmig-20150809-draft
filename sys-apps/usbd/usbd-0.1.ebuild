@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/usbd-0.1.ebuild,v 1.3 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/usbd-0.1.ebuild,v 1.4 2004/04/26 14:33:46 agriffis Exp $
 
 DESCRIPTION="USB Daemon"
 HOMEPAGE="http://usb.cs.tum.edu"
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
 S=${WORKDIR}/${P}
 
 src_compile() {
-	econf --prefix=/usr --sysconfdir=/etc/usbd
+	econf --prefix=/usr --sysconfdir=/etc/usbd || die "econf failed"
 	mv Makefile Makefile.orig
 	sed s/example1/''/ Makefile.orig > Makefile
 	emake || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.13.ebuild,v 1.3 2004/03/29 05:18:49 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.13.ebuild,v 1.4 2004/04/26 14:35:00 agriffis Exp $
 
 DESCRIPTION="Xinetd is a powerful replacement for inetd, with advanced features"
 HOMEPAGE="http://www.xinetd.org"
@@ -22,7 +22,7 @@ src_compile() {
 
 	# the --with-inet6 is now obsolete. Services will default to IPv4 unless configured otherwise.
 
-	econf --with-loadavg ${myconf}
+	econf --with-loadavg ${myconf} || die "econf failed"
 
 	# Fix CFLAGS
 	sed -i -e "/^CFLAGS/s/+=/=/" Makefile
