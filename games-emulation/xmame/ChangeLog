@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.8 2003/11/13 22:56:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.9 2003/11/30 05:46:16 vapier Exp $
+
+*xmame-0.77.1 (30 Nov 2003)
+
+  30 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #33889.
+
+*xmame-0.76.1 (25 Oct 2003)
 
   13 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.76.1.ebuild:
   xmame Makefiles don't like parallel make.  use -j1 to compile.
@@ -12,8 +19,6 @@
   31 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.76.1.ebuild:
   add icc USE support (bug 31769); DEPEND on sed >= 4 for -i; add more error
   checking and error messages
-
-*xmame-0.76.1 (25 Oct 2003)
 
   25 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump #Bug 31992.
