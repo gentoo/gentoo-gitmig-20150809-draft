@@ -7,6 +7,7 @@ DESCRIPTION="Library for overlaying text/glyphs in X-Windows \
 X-On-Screen-Display plus binary for sending text from command line."
 HOMEPAGE="http://www.ignavus.net/"
 SRC_URI="http://www.ignavus.net/${P}.tar.gz"
+SLOT="0.7"
 
 DEPEND="virtual/x11"
 
@@ -24,12 +25,18 @@ src_compile() {
 }
 src_install () {
 	cd ${S}
-	insinto /usr/include
+	insinto /usr/include/xosd-0.7.0
 	doins xosd.h
 	into /usr
-	dolib.a libxosd.a
-	dolib.so libxosd.so
-	dobin osd_cat
-	doman osd_cat.1 xosd.e 
+	insinto /usr/lib/xosd-0.7.0
+	doins libxosd.a
+	doins libxosd.so
+	mv osd_cat osd_cat-old
+	dobin osd_cat-old
+	mv osd_cat.1 osd_cat-old.1
+	mv xosd.3 xosd-old.3
+	ls -l
+	doman osd_cat-old.1
+	doman xosd-old.3 
 	dodoc AUTHORS ChangeLog NEWS COPYING README
 }

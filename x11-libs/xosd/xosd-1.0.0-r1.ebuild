@@ -12,7 +12,7 @@ DEPEND="virtual/x11
 	virtual/glibc"
 RDEPEND="${DEPEND}"
 LICENSE="GPL"
-SLOT="0"
+SLOT="1"
 KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {

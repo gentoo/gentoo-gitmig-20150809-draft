@@ -10,7 +10,7 @@ SRC_URI="http://www.ignavus.net/${P}.tar.gz"
 
 DEPEND="virtual/x11"
 
-SLOT="0"
+SLOT="1"
 LICENSE="GPL"
 KEYWORDS="x86 sparc sparc64"
 
