@@ -1,0 +1,12 @@
+# ChangeLog for x11-terms/xterm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.1 2003/05/31 02:23:10 seemant Exp $
+
+*xterm-179 (30 May 2003)
+
+  30 May 2003; Seemant Kulleen <seemant@gentoo.org> xterm-179.ebuild:
+  New package -- xterm's development happens outside of xfree, and then gets
+  merged into xfree's source tree. This package follows xterm's development with
+  the goal of removing xterm's compilation within the xfree ebuild.
+  Ideally, this should work with utempter library in the near future.
+
