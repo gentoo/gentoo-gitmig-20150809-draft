@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.2.20050215.ebuild,v 1.2 2005/03/03 17:15:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.2.20050215.ebuild,v 1.3 2005/03/04 11:48:50 swtaylor Exp $
 
 inherit eutils gnuconfig
 
@@ -145,10 +145,13 @@ src_install() {
 	keepdir /etc/skel/.maildir
 
 	diropts -o mail -g mail
-	dodir /var/lib/courier
-	dodir /var/run/courier
+	keepdir /var/run/courier
 	make install DESTDIR=${D} || die "install"
 	make install-configure || die "install-configure"
+
+	for dir2keep in `(cd ${D} && find ./var/lib/courier -type d)` ; do
+		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
+	done
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/courier-init courier

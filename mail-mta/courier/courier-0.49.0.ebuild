@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.2.20050130.ebuild,v 1.4 2005/03/03 17:15:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.49.0.ebuild,v 1.1 2005/03/04 11:48:50 swtaylor Exp $
 
 inherit eutils gnuconfig
 
@@ -22,7 +22,7 @@ PROVIDE="virtual/mta
 	 virtual/imapd"
 
 DEPEND="virtual/libc
-	net-libs/courier-authlib
+	>=net-libs/courier-authlib-0.55
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
 	|| ( app-misc/mime-types net-www/apache )
@@ -145,10 +145,13 @@ src_install() {
 	keepdir /etc/skel/.maildir
 
 	diropts -o mail -g mail
-	dodir /var/lib/courier
-	dodir /var/run/courier
+	keepdir /var/run/courier
 	make install DESTDIR=${D} || die "install"
 	make install-configure || die "install-configure"
+
+	for dir2keep in `(cd ${D} && find ./var/lib/courier -type d)` ; do
+		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
+	done
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/courier-init courier
@@ -180,17 +183,21 @@ src_install() {
 	etc_courier esmtpd-ssl "BOFHBADMIME=accept"
 	etc_courier esmtpd-msa "BOFHBADMIME=accept"
 	etc_courier_chg esmtpd ESMTPDSTART YES
-	etc_courier_chg esmtpd ESMTPAUTH "LOGIN CRAM-SHA1 CRAM-MD5"
-	etc_courier_chg esmtpd ESMTPAUTH_WEBADMIN "LOGIN CRAM-SHA1 CRAM-MD5"
-	etc_courier_chg esmtpd ESMTPAUTH_TLS "PLAIN LOGIN CRAM-SHA1 CRAM-MD5" ESMTPAUTHINFOTLS
-	etc_courier_chg esmtpd ESMTPAUTH_TLS_WEBADMIN "PLAIN LOGIN CRAM-SHA1 CRAM-MD5" ESMTPAUTHINFOTLS
+	etc_courier_chg esmtpd ESMTPAUTH "LOGIN CRAM-MD5 CRAM-SHA1 CRAM-SHA256"
+	etc_courier_chg esmtpd ESMTPAUTH_WEBADMIN "LOGIN CRAM-MD5 CRAM-SHA1 CRAM-SHA256"
+	etc_courier_chg esmtpd ESMTPAUTH_TLS "PLAIN LOGIN CRAM-MD5 CRAM-SHA1 CRAM-SHA256" ESMTPAUTHINFOTLS
+	etc_courier_chg esmtpd ESMTPAUTH_TLS_WEBADMIN "PLAIN LOGIN CRAM-MD5 CRAM-SHA1 CRAM-SHA256" ESMTPAUTHINFOTLS
 	etc_courier_chg esmtpd-msa ESMTPDSTART YES
 	etc_courier_chg esmtpd-msa AUTH_REQUIRED 1
 	etc_courier_chg esmtpd-ssl ESMTPDSSLSTART YES
 	etc_courier_chg esmtpd-ssl AUTH_REQUIRED 1
 	etc_courier_chg imapd IMAPDSTART YES
+	use fam && etc_courier_chg imapd IMAP_CAPABILITY "IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA AUTH=CRAM-MD5 AUTH=CRAM-SHA1 AUTH=CRAM-SHA256 IDLE"
+	use fam || etc_courier_chg imapd IMAP_CAPABILITY "IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA AUTH=CRAM-MD5 AUTH=CRAM-SHA1 AUTH=CRAM-SHA256"
 	etc_courier_chg imapd-ssl IMAPDSSLSTART YES
 	etc_courier_chg pop3d POP3DSTART YES
+	etc_courier_chg pop3d POP3AUTH "LOGIN CRAM-MD5 CRAM-SHA1 CRAM-SHA256"
+	etc_courier_chg pop3d POP3AUTH_TLS "LOGIN PLAIN CRAM-MD5 CRAM-SHA1 CRAM-SHA256"
 	etc_courier_chg pop3d-ssl POP3DSSLSTART YES
 
 	cd ${S}
