@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/powerprefs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/ChangeLog,v 1.7 2004/06/24 21:59:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/ChangeLog,v 1.8 2004/07/06 15:57:11 lu_zero Exp $
+
+  06 Jul 2004; Luca Barbato <lu_zero@gentoo.org> powerprefs-0.4.5.ebuild:
+  Marked ppc
 
   05 Jun 2004; Lars Weiler <pylon@gentoo.org> powerprefs-0.4.5.ebuild:
   Fix for datadir, so that pixmap-installion would not violate sandbox

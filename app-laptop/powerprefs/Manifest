@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7eca8db42f2810d776ae09422d0f9af7 ChangeLog 1835
+MD5 5b9e2b386570f1224f6013c5bc956b60 ChangeLog 1922
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 31d5cd74c6855dfbd588ebeff85d75a1 powerprefs-0.2.1.ebuild 865
+MD5 efdbb4cb2c8d222ec54b91fd9cb537e1 powerprefs-0.4.5.ebuild 901
 MD5 d5aa52427e9149a9e3d8410f74b92df0 powerprefs-0.2.ebuild 854
-MD5 76ed2be955689583bba03f733f30c41a powerprefs-0.3.1.ebuild 884
-MD5 9c1bb38d2411cd9306f72c59d1612ed6 powerprefs-0.4.2.ebuild 885
-MD5 ba04f563e4635aed503a6b19417dda1b powerprefs-0.4.3.ebuild 885
+MD5 31d5cd74c6855dfbd588ebeff85d75a1 powerprefs-0.2.1.ebuild 865
 MD5 7c2f615ddf1a972657745425cfd0ca28 powerprefs-0.4.4.ebuild 885
-MD5 0629c5a3bea8b1592a61a46a5ce6ac28 powerprefs-0.4.5.ebuild 901
-MD5 f2caefb8a6164c82f500def610cd7a2b files/digest-powerprefs-0.2 66
-MD5 4d7efecc2d3edef1639991bd93ad56b5 files/digest-powerprefs-0.2.1 68
-MD5 a1d22a3aeefca73d294744b4f77a87fa files/digest-powerprefs-0.3.1 68
-MD5 f70e6e6e96fe225537b346a47c7447ba files/digest-powerprefs-0.4.2 68
+MD5 76ed2be955689583bba03f733f30c41a powerprefs-0.3.1.ebuild 884
+MD5 ba04f563e4635aed503a6b19417dda1b powerprefs-0.4.3.ebuild 885
+MD5 9c1bb38d2411cd9306f72c59d1612ed6 powerprefs-0.4.2.ebuild 885
 MD5 04159fdc3ffffdf2f61147c5826889dc files/digest-powerprefs-0.4.3 68
 MD5 ddfaa33fffe7fae8547a6517abbfb4bb files/digest-powerprefs-0.4.4 68
+MD5 a1d22a3aeefca73d294744b4f77a87fa files/digest-powerprefs-0.3.1 68
+MD5 f2caefb8a6164c82f500def610cd7a2b files/digest-powerprefs-0.2 66
+MD5 f70e6e6e96fe225537b346a47c7447ba files/digest-powerprefs-0.4.2 68
 MD5 4d5afd21993f9f180dedad7850e386e5 files/digest-powerprefs-0.4.5 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA34Q/HTu7gpaalycRAn9/AJ40vSbwb6ExBfdXKDKxoRVb2gwvigCgoOIy
-9MNPV0P2740BzQPem2+ZOxU=
-=zP1v
------END PGP SIGNATURE-----
+MD5 4d7efecc2d3edef1639991bd93ad56b5 files/digest-powerprefs-0.2.1 68
