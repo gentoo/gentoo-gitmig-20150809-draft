@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.2 2004/11/25 19:47:18 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.3 2004/11/27 11:26:52 johnm Exp $
 #
 # This eclass provides functions for querying the installed kernel
 # source version, selected kernel options etc.
@@ -12,6 +12,7 @@ INHERITED="$INHERITED $ECLASS"
 # Overwritable environment Var's
 # ---------------------------------------
 KERNEL_DIR="${KERNEL_DIR:-/usr/src/linux}"
+
 
 
 # File Functions
@@ -33,7 +34,7 @@ local	ERROR
 		eerror "getfilevar requires 2 variables, with the second a valid file."
 		eerror "   getfilevar <VARIABLE> <CONFIGFILE>"
 	else
-		grep -e "^$1" $2 | sed 's: = :=:' | cut -d= -f2-
+		grep -e "^$1[= ]" $2 | sed 's: = :=:' | cut -d= -f2-
 	fi
 }
 
@@ -66,6 +67,7 @@ local	RESULT
 # kernel_is 2 6		returns true
 # kernel_is 2 6 8	returns false
 # kernel_is 2 6 9	returns true
+#
 # got the jist yet?
 
 kernel_is() {
@@ -180,6 +182,43 @@ check_modules_supported() {
 		eerror "These sources do not support loading external modules."
 		eerror "to be able to use this module please enable \"Loadable modules support\""
 		eerror "in your kernel, recompile and then try merging this module again."
+		die No support for external modules in ${KV_FUll} config
+	fi
+}
+
+check_extra_config() {
+local	config negate error
+
+	# if we haven't determined the version yet, we need too.
+	get_version;
+
+	einfo "Checking for suitable kernel configuration options"
+	for config in ${CONFIG_CHECK}
+	do
+		negate="${config:0:1}"
+		if [ "${negate}" == "!" ];
+		then
+			config="${config:1}"
+			if getfilevar_isset ${config} ${KV_DIR}/.config ;
+			then
+				eerror "  ${config}:\tshould not be set in the kernel configuration, but it is."
+				error=1
+			fi
+		else
+			if ! getfilevar_isset ${config} ${KV_DIR}/.config ;
+			then
+				eerror "  ${config}:\tshould be set in the kernel configuration, but isn't"
+				error=1
+			fi
+		fi
+	done
+
+	if [ -n "${error}" ] ;
+	then
+		eerror "Please check to make sure these options are set correctly."
+		eerror "Once you have satisfied these options, please try merging"
+		eerror "this package again."
+		die Incorrect kernel configuration options
 	fi
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.3 2004/11/25 22:40:29 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.4 2004/11/27 11:26:52 johnm Exp $
 
 # This eclass provides functions for compiling external kernel modules
 # from source.
@@ -111,6 +111,7 @@ linux-mod_pkg_setup() {
 	get_version;
 	check_kernel_built
 	check_modules_supported;
+	check_extra_config;
 	set_kvobj;
 }
 
