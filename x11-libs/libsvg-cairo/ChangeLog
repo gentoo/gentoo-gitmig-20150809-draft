@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libsvg-cairo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.10 2005/02/24 14:49:43 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.11 2005/02/24 15:05:44 latexer Exp $
+
+  24 Feb 2005; Peter Johanson <latexer@gentoo.org> libsvg-cairo-0.1.4.ebuild:
+  Move eclass inheritance to proper spot. See bug #82465.
 
 *libsvg-cairo-0.1.5 (24 Feb 2005)
 
