@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.27 2003/03/03 21:39:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.28 2003/06/24 22:22:11 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -81,7 +81,7 @@ prepgamesdirs() {
 		(
 			gamesowners -R ${D}/${dir}
 			find ${D}/${dir} -type d -print0 | xargs --null chmod 750
-			find ${D}/${dir} -type f -print0 | xargs --null chmod o-rwx
+			find ${D}/${dir} -type f -print0 | xargs --null chmod o-rwx,g+r
 		) >& /dev/null
 	done
 }
