@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3e0971734407530ef6f08d76282c9971 poppassd_ceti-1.8.4.ebuild 1230
+MD5 9d4b2a75461d556a576c30026c7d520d poppassd_ceti-1.8.4.ebuild 1229
+MD5 8d57184e242c2297d0f5bb666c494f84 ChangeLog 682
 MD5 fe827b79b11c155518347e67d1b1af8a metadata.xml 762
-MD5 32f395849fb0c72dd0b6faff7d1dca48 ChangeLog 573
 MD5 397ccdd516d577d12da910571053d732 files/digest-poppassd_ceti-1.8.4 64
+MD5 4254be91fe5aa08165875c23ec84af59 files/poppassd_ceti-gcc-3.4.patch 616
 MD5 3c5bb8c91acf9e91343716da1f3c244d files/poppassd.pam 249
 MD5 3527c23e84a922b8615f073ee22b400a files/poppassd.xinetd 245
-MD5 4254be91fe5aa08165875c23ec84af59 files/poppassd_ceti-gcc-3.4.patch 616
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB461LntT9W3vfTuoRAi+lAJ47oP8OiLJMkzx3o7hRKY1NDlvA0ACgkLmT
-1wUXeN5H+0bmYZ4lFHGVBc4=
-=mmdj
+iD8DBQFCOO/DntT9W3vfTuoRAk2BAJoDFjbqWA61WSKPpXhqS/nyhaoyywCfSpDQ
+Simdf9OurRt741xPyURY6jQ=
+=5vs4
 -----END PGP SIGNATURE-----

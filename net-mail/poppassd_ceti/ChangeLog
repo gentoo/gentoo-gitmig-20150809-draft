@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/poppassd_ceti
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/ChangeLog,v 1.2 2005/01/11 10:40:25 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/ChangeLog,v 1.3 2005/03/17 02:47:23 cryos Exp $
+
+  17 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  poppassd_ceti-1.8.4.ebuild:
+  Marked stable on amd64.
 
   11 Jan 2005; Marcus Hanwell <cryos@gentoo.org> poppassd_ceti-1.8.4.ebuild:
   Marked stable on x86, as per security bug 75820.
