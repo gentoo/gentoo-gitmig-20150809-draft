@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.13 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.14 2004/09/30 13:23:02 wolf31o2 Exp $
 
 MY_PV=${PV}-2
 S=${WORKDIR}/kudzu-${PV}
@@ -15,6 +15,7 @@ IUSE=""
 
 RDEPEND="dev-libs/newt"
 DEPEND="$RDEPEND
+	sys-devel/gettext
 	sys-libs/slang
 	sys-apps/pciutils
 	>=dev-libs/dietlibc-0.20
