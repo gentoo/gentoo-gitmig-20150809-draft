@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.6 2002/06/10 20:49:57 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.7 2002/06/12 01:17:01 spider Exp $
 
-
+*libgnome-2.0.1-r1 (11 Jun 2002)
+  11 Jun 2002; Spider <spider@gentoo.org> libgnome-2.0.1-r1.ebuild :
+  tracked down elusive typo
+  
 *libgnome-2.0.1 (10 Jun 2002)
   10 Jun 2002; Spider <spider@gentoo.org> libgnome-2.0.1.ebuild :
   new version
