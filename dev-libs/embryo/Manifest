@@ -4,15 +4,15 @@ Hash: SHA1
 MD5 dd60e8885817007fc93f43ec634a5d6e ChangeLog 307
 MD5 273c439fc3a189c8ece085e0c5dc4c67 embryo-0.9.0.ebuild 299
 MD5 1c7dbef97fa1bf38acc38cf34efede20 metadata.xml 1119
-MD5 8c8deef10e46b8f99a6e6b44555f6cfc embryo-0.9.1.20041031.ebuild 308
+MD5 58751d86221f5cf159ddc7a22fdcac24 embryo-0.9.1.20041208.ebuild 308
 MD5 ffeb327e4aa9147c305ee286e5e4624d embryo-9999.ebuild 298
 MD5 1265e8962c79ff3037f2c1ed31b92b08 files/digest-embryo-0.9.0 65
-MD5 a0c5616fd7ed7ad3cffa06d54eac1f58 files/digest-embryo-0.9.1.20041031 75
+MD5 ee4857d722cfad093f2e4b4c075f1456 files/digest-embryo-0.9.1.20041208 75
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-embryo-9999 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhwQSHTu7gpaalycRAoxVAKC8HVp4QJ8Gkrm31GBzSwJkcU/PvgCghXYV
-HvHYZXGJvsy1kbxSIpZY5l4=
-=CALe
+iD8DBQFBubn/roRuSHgZdywRAmHdAJwPooItvY3GkqYxFs00+/Y6uGFhowCgj7Po
+otFofIbvEXz048wIIZ+0M9Q=
+=FaZ9
 -----END PGP SIGNATURE-----
