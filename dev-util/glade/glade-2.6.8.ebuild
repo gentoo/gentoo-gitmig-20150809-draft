@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.6.8.ebuild,v 1.2 2005/01/29 03:15:52 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.6.8.ebuild,v 1.3 2005/01/31 15:14:05 gustavoz Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://glade.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="x86 sparc ~amd64 ~ppc"
 IUSE="gnome gnomedb"
 
 RDEPEND=">=x11-libs/gtk+-2.4
