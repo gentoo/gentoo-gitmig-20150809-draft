@@ -12,3 +12,4 @@ virtual/x11			x11-base/xfree
 sys-apps/reiserfs-utils sys-apps/reiserfsprogs
 virtual/os-headers	sys-kernel/linux-headers
 virtual/modutils sys-apps/modutils
+virtual/aspell-dict           app-dicts/aspell-en

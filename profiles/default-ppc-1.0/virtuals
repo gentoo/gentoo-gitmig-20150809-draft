@@ -32,3 +32,4 @@ virtual/editor			app-editors/nano
 virtual/os-headers		sys-kernel/linux-headers
 virtual/modutils 		sys-apps/modutils
 virtual/inetd			sys-apps/netkit-base
+virtual/aspell-dict           app-dicts/aspell-en

@@ -31,3 +31,4 @@ virtual/motif           x11-libs/openmotif
 virtual/os-headers	sys-kernel/linux-headers
 virtual/ghc             dev-lang/ghc-bin
 virtual/modutils sys-apps/modutils
+virtual/aspell-dict           app-dicts/aspell-en

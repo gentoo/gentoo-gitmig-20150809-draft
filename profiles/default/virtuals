@@ -26,3 +26,4 @@ virtual/os-headers		sys-kernel/linux-headers
 virtual/ghc				dev-lang/ghc-bin
 virtual/modutils		sys-apps/modutils
 virtual/inetd			sys-apps/netkit-base
+virtual/aspell-dict           app-dicts/aspell-en

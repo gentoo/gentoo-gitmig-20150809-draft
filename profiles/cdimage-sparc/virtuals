@@ -6,3 +6,4 @@ virtual/glibc 			sys-libs/glibc
 
 virtual/os-headers	sys-kernel/linux-headers
 virtual/modutils sys-apps/modutils
+virtual/aspell-dict           app-dicts/aspell-en

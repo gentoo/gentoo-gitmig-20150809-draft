@@ -36,3 +36,4 @@ virtual/os-headers		sys-kernel/arm-headers
 virtual/modutils 		sys-apps/modutils
 virtual/inetd			sys-apps/netkit-base
 virtual/antivirus		net-mail/clamav
+virtual/aspell-dict           app-dicts/aspell-en
