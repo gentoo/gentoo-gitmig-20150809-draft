@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 21e3f2063693ad092f9dd6ca159ebd26 ChangeLog 2289
 MD5 72a509c2b28d748f0f9b3d20de6cf74a hibernate-script-1.05.ebuild 1796
+MD5 0bc5dad50a2a62fce7870aade690f5fa ChangeLog 2291
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 51d8389f2aa4b5374d7d13b249924f09 files/digest-hibernate-script-1.05 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCNhooLLFUmVNQ7rkRAo6rAJwLuWaheY2CzJOIlMPlJHHMthwF1gCgwCSv
-VE+tUITk1BeLekBkTqD08XE=
-=ubB9
+iD8DBQFCNw8sI1lqEGTUzyQRAoXxAKDa1tIgrPRH9lAiImNrerTacnuwQgCeNr7T
+GWoolf96McwgnKhsmbWv6t0=
+=LjTf
 -----END PGP SIGNATURE-----
