@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.18 2003/05/20 20:11:56 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.19 2003/06/07 06:22:26 rac Exp $
+
+  06 Jun 2003; <rac@gentoo.org> mod_perl-1.99.09.ebuild:
+  Add sed-4 dependency, make sed die on failure
 
   20 May 2003; <rac@gentoo.org> mod_perl-1.99.09.ebuild:
   Eliminate "|| die" from the make test line, to address bug #21325.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.09.ebuild,v 1.2 2003/05/20 20:11:56 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.09.ebuild,v 1.3 2003/06/07 06:22:26 rac Exp $
 
 DESCRIPTION="An embedded Perl interpreter for Apache2"
 HOMEPAGE="http://perl.apache.org/"
@@ -9,7 +9,7 @@ NEWPV=$(echo $PV | perl -pe 's/\.([^.]+)$/_\1/')
 NEWP="${PN}-${NEWPV}"
 S=${WORKDIR}/${NEWP}
 SRC_URI="http://perl.apache.org/dist/${NEWP}.tar.gz"
-DEPEND="dev-lang/perl =net-www/apache-2* >=dev-perl/CGI-2.93"
+DEPEND="dev-lang/perl =net-www/apache-2* >=dev-perl/CGI-2.93 >=sys-apps/sed-4"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 IUSE=""
@@ -47,7 +47,7 @@ src_unpack() {
 
 	# Robert Coie <rac@gentoo.org> 2003.05.06
 
-	sed -i -e "s/sleep \$_/sleep \$_ << 2/" ${S}/Apache-Test/lib/Apache/TestServer.pm
+	sed -i -e "s/sleep \$_/sleep \$_ << 2/" ${S}/Apache-Test/lib/Apache/TestServer.pm || die "problem editing TestServer.pm"
 }
 
 src_compile() {
