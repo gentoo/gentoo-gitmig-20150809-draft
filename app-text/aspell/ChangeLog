@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.29 2004/02/18 09:18:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.30 2004/03/14 01:10:24 geoman Exp $
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> :
+  Added ~mips keyword.
 
 *aspell-0.50.5 (18 Feb 2004)
 
