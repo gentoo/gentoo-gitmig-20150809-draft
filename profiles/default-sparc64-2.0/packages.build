@@ -1,4 +1,4 @@
-# This file generated automatically at Mon Aug 19 03:02:36 CEST 2002
+# This file generated automatically at Tue Aug 20 02:24:14 CEST 2002
 #
 sys-apps/baselayout
 sys-libs/glibc
@@ -14,7 +14,7 @@ sys-apps/gawk
 sys-apps/grep
 sys-apps/gzip
 sys-apps/portage
-sys-apps/sed
+sys-apps/supersed
 sys-apps/sh-utils
 sys-apps/tar
 sys-apps/textutils
