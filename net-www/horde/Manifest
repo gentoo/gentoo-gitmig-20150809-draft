@@ -1,4 +1,4 @@
-MD5 d8b718b0d6bc749a31be0bc6a7c73ff6 files/digest-horde-2.2.5 63
 MD5 cbeccd2db419863bd44c05a645b1c72d ChangeLog 2227
+MD5 7102ab74f8b25e221ae0767b6480ce04 horde-2.2.5.ebuild 845
 MD5 cb784fc68f8ebab5c112b7067200fa7f metadata.xml 475
-MD5 739b234bf64c3a0ef05bb9259aa7a5b0 horde-2.2.5.ebuild 838
+MD5 d8b718b0d6bc749a31be0bc6a7c73ff6 files/digest-horde-2.2.5 63
