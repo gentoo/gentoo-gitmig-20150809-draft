@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.8 2004/06/02 21:50:53 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.9 2004/06/08 05:50:35 phosphan Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -111,26 +111,27 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-alsa-gcc34.patch
 
 	# fixes for mga driver with kernel 2.6
-	get_kernel_info
-	epatch ${FILESDIR}/mga-kernel-2.6.patch
-	sed -i -e "s/KERNEL_VERSION_HERE/${KV_VERSION_FULL}/" drivers/Makefile \
-		|| die "sed failed on kernel version substitution"
+	if use matrox; then
+		get_kernel_info
+		epatch ${FILESDIR}/mga-kernel-2.6.patch
+		sed -i -e "s/KERNEL_VERSION_HERE/${KV_VERSION_FULL}/" drivers/Makefile \
+			|| die "sed failed on kernel version substitution"
 
-	# preparing build for 2.6 mga kernel module
-	cp ${KV_OUTPUT}/.config ${T}/
-	ln -s /usr/src/linux/scripts ${T}/
-	ln -s /usr/src/linux/include ${T}/
-	sed -e "s:SUBDIRS:O=${T} SUBDIRS:" -i drivers/Makefile \
-		|| die "sed failed setting O=${T}"
-	sed -e "s:^MDIR = .*:MDIR = ${D}/lib/modules/${KV_VERSION_FULL}/kernel/drivers/char/:" -i drivers/Makefile \
-		|| die "sed failed correcting module install path"
-	sed -e "s:depmod -a::" -i drivers/Makefile \
-		|| die "sed failed removing depmod"
-
+		# preparing build for 2.6 mga kernel module
+		cp ${KV_OUTPUT}/.config ${T}/
+		ln -s /usr/src/linux/scripts ${T}/
+		ln -s /usr/src/linux/include ${T}/
+		sed -e "s:SUBDIRS:O=${T} SUBDIRS:" -i drivers/Makefile \
+			|| die "sed failed setting O=${T}"
+		sed -e "s:^MDIR = .*:MDIR = ${D}/lib/modules/${KV_VERSION_FULL}/kernel/drivers/char/:" -i drivers/Makefile \
+			|| die "sed failed correcting module install path"
+		sed -e "s:depmod -a::" -i drivers/Makefile \
+			|| die "sed failed removing depmod"
+	fi # end of matrox related stuff
 	# Fix hppa detection
 	[ "${ARCH}" = "hppa" ] && sed -i -e "s/9000*/parisc*/" "${S}/configure"
 
-	if [ "`use svga`" ]
+	if use svga
 	then
 		echo
 		einfo "Enabling vidix non-root mode."
@@ -416,7 +417,9 @@ pkg_postinst() {
 		einfo "application that depends on it, install >=ffmpeg-0.4.8.20040222"
 	fi
 
-	depmod -a &>/dev/null || :
+	if use matrox; then
+		depmod -a &>/dev/null || :
+	fi
 }
 
 pkg_postrm() {

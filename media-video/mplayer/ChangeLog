@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.143 2004/06/02 21:50:53 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.144 2004/06/08 05:50:35 phosphan Exp $
+
+  08 Jun 2004; Patrick Kursawe <phosphan@gentoo.org>
+  mplayer-1.0_pre4-r3.ebuild, mplayer-1.0_pre4-r4.ebuild:
+  Doing matrox related stuff only when matrox is in USE, see bug #53222
 
   02 Jun 2004; Brian Harring <ferringb@gentoo.org> mplayer-1.0_pre4-r1.ebuild,
   mplayer-1.0_pre4-r2.ebuild, mplayer-1.0_pre4-r3.ebuild,
