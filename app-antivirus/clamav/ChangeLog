@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.30 2005/01/01 11:39:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.31 2005/01/20 03:05:29 kumba Exp $
+
+  19 Jan 2005; Joshua Kinard <kumba@gentoo.org> clamav-0.75.1.ebuild:
+  Untested on mips, someone wasn't paying attention when they added the mips
+  keyword in the first place. Removing until we get user or some other
+  verification that it works.
 
   28 Dec 2004; Markus Rothe <corsair@gentoo.org> clamav-0.80.ebuild:
   Added ~ppc64 to KEYWORDS
