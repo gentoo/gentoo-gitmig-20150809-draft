@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.9 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.10 2003/07/20 01:13:23 tester Exp $
 
 inherit libtool flag-o-matic gnuconfig
 
@@ -14,12 +14,6 @@ LICENSE="as-is"
 KEYWORDS="x86 -ppc -sparc -amd64"
 
 DEPEND="virtual/glibc"
-
-src_unpack() {
-
-	unpack ${A}
-	use amd64 && gnuconfig_update
-}
 
 src_compile() {
 	# Doesn't work with -fomit-frame-pointer, at least not on k6-2.
