@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.1 2003/07/06 18:09:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.2 2003/07/08 09:17:57 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -59,9 +59,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-sou
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
-#KEYWORDS="~x86 ~ppc ~sparc ~alpha"
-# Enigmail broken
-KEYWORDS=
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -386,6 +384,7 @@ src_compile() {
 		make || die
 
 		cd ${S}/extensions/enigmail
+		./makemake
 		make || die
 	fi
 }
