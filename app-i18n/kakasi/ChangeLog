@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/kakasi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kakasi/ChangeLog,v 1.5 2004/08/14 15:37:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kakasi/ChangeLog,v 1.6 2004/11/03 16:52:15 corsair Exp $
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> kakasi-2.3.4.ebuild:
+  Added ~ppc64 keywordd; bug #69720
 
   15 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> kakasi-2.3.4.ebuild:
   Stable on ppc.
