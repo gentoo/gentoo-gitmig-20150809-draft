@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.3_rc2.ebuild,v 1.1 2004/02/10 09:04:57 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.3_rc2.ebuild,v 1.2 2004/02/10 15:58:44 brad_mssw Exp $
 
 #version of gentoo patchset
 GPV=2.19
 GPV_SRC="mirror://gentoo/genpatches-2.6-${GPV}.tar.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 UNIPATCH_LIST="${DISTDIR}/genpatches-2.6-${GPV}.tar.bz2"
 UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}/README"
