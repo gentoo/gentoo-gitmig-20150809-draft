@@ -1,3 +1,7 @@
+# 05 Oct 2004 Guy Martin <gmsoft@gentoo.org>
+# jack is not yet supported on hppa
+jack
+
 # 04 Oct 2004 Guy Martin <gmsoft@gentoo.org>
 # hal not yet tested
 hal
