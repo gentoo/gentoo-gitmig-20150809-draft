@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.12.ebuild,v 1.3 2003/10/06 10:27:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.12.ebuild,v 1.4 2003/10/07 20:07:26 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -68,7 +68,7 @@ X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
 	http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz
-	http://w1.894.telia.com/~u89404340/touchpad/synaptics-${SYNDRV_VER}.tar.bz2"
+	http://w1.894.telia.com/~u89404340/touchpad/files/synaptics-${SYNDRV_VER}.tar.bz2"
 #	mirror://gentoo/XFree86-${PV}-drivers-via-${VIADRV_VER}.tar.bz2
 # Updated Wacom driver:  http://people.mandrakesoft.com/~flepied/projects/wacom/
 # Latest Savaga drivers:  http://www.probo.com/timr/savage40.html
