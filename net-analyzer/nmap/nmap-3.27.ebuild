@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.26.ebuild,v 1.1 2003/04/25 13:49:23 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.27.ebuild,v 1.1 2003/04/29 02:39:08 lostlogic Exp $
 
 inherit gcc
 
