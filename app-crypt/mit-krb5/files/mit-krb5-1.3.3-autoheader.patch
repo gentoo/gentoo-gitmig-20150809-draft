@@ -5,7 +5,7 @@
  $(srcdir)/krb5/autoconf.h.in: $(srcdir)/krb5/autoconf.stmp
  $(srcdir)/krb5/autoconf.stmp: $(srcdir)/configure.in 
 -	cd $(srcdir) && $(AUTOHEADER) --localdir=$(CONFIG_RELTOPDIR) $(AUTOHEADERFLAGS)
-+<tab>cd $(srcdir) &&"
++	cd $(srcdir) &&\
 +                ($(AUTOHEADER) --include=$(CONFIG_RELTOPDIR) $(AUTOHEADERFLAGS) || \
 +                 $(AUTOHEADER) --localdir=$(CONFIG_RELTOPDIR) $(AUTOHEADERFLAGS))
  	touch $(srcdir)/krb5/autoconf.stmp

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.35 2004/07/16 18:11:58 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.36 2004/07/20 17:08:21 rphillips Exp $
+
+  20 Jul 2004; <rphillips@gentoo.org> files/mit-krb5-1.3.3-autoheader.patch:
+  updated autoheader patch.  Fixes #57185. Contributed by Axel Buttchereit
 
   16 Jul 2004; <rphillips@gentoo.org> files/mit-krb5-1.3.3-autoheader.patch:
   added Tuan's patch to the autoheader patch

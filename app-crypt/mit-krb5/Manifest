@@ -2,7 +2,7 @@ MD5 0bc8c3fb7f52eb5985fa39124ed732d4 mit-krb5-1.3.1-r1.ebuild 4206
 MD5 2b97be6f009b7dc0581a1e0ac2bb24a1 mit-krb5-1.3.1.ebuild 4174
 MD5 e3356da2141e2002d88c2cb2e0bb5ec4 mit-krb5-1.3.3.ebuild 4219
 MD5 79336c040eb2d01caec90ca700897bbd mit-krb5-1.3.3-r1.ebuild 4315
-MD5 5565520deb8abcf014abf11f218414f4 ChangeLog 6420
+MD5 bb3ddfe9c75d5f62a2f33a4a30fbd903 ChangeLog 6573
 MD5 43c3a7a1974ef9610bb9458e1a3a4d87 metadata.xml 353
 MD5 c451148d1b3e182a19a8f9084d0b55b8 files/krb5.confd 233
 MD5 d7dcbbab51ce1849c77c083b8d363c15 files/krb5.initd 1486
@@ -16,5 +16,5 @@ MD5 c214030264300e2d84375d23d7c1f892 files/mit-krb5kdc.initd 656
 MD5 2c4ba0f8f9513fb2f285a9224f063ad8 files/digest-mit-krb5-1.3.1 63
 MD5 596ab1238ca3a14926eb5fd3947ab4ce files/digest-mit-krb5-1.3.3 60
 MD5 a76969580caa87329b1758711499ca61 files/mit-krb5-1.3.3-aname.patch 6329
-MD5 c5f379a9bfcb98eb0d8805570ffc15f8 files/mit-krb5-1.3.3-autoheader.patch 698
+MD5 9c1e5ef724936d4d3922e788bffc70a3 files/mit-krb5-1.3.3-autoheader.patch 694
 MD5 61a61d22565605924a06789f9da352bf files/mit-krb5kadmind.initd 687
