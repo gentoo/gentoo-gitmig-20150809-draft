@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0.ebuild,v 1.2 2002/05/18 08:51:22 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0.ebuild,v 1.3 2002/05/18 17:27:52 agenkin Exp $
 
 DESCRIPTION="Opera web browser, version 6.0 Final."
 HOMEPAGE="http://www.opera.com"
@@ -11,7 +11,7 @@ S=${WORKDIR}/opera-${NV}
 SRC_URI="http://www.panix.com/opera/files/linux/600/final/en/qt_shared/opera-${NV}.tar.bz2"
 
 DEPEND="=x11-libs/qt-2*
-	=media-libs/libpng-1.0.12*"
+	=media-libs/libpng-1.2.1*"
 
 src_install() {
 
