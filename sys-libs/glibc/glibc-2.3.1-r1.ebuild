@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1.ebuild,v 1.3 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r1.ebuild,v 1.1 2002/10/26 00:53:09 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -79,6 +79,17 @@ src_unpack() {
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
 	einfo "Applying test-lfs-timeout patch..."
 	cd ${S}/io; patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch > /dev/null || die
+
+	# This add back glibc 2.2 compadibility.  See bug #8766 and #9586 for more info,
+	# and also:
+	#
+	#  http://lists.debian.org/debian-glibc/2002/debian-glibc-200210/msg00093.html
+	#
+	# We should think about remoing it in the future after things have settled.
+	#
+	# <azarah@gentoo.org> (26 Oct 2002).
+	einfo "Applying ctype-compat patch..."
+	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-ctype-compat.patch > /dev/null || die
 }
 
 src_compile() {
