@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.36 2004/03/11 04:47:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.37 2004/03/24 14:11:06 foser Exp $
+
+*esound-0.2.34 (24 Mar 2004)
+
+  24 Mar 2004; foser <foser@gentoo.org> esound-0.2.34.ebuild :
+  New release
 
   10 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> esound-0.2.33.ebuild,
   files/esound-0.2.33-gcc2_fix.patch:

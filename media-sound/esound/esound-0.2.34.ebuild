@@ -1,48 +1,47 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.29-r1.ebuild,v 1.12 2004/03/01 05:37:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.34.ebuild,v 1.1 2004/03/24 14:11:06 foser Exp $
 
-IUSE="tcpd alsa"
+inherit libtool gnome.org eutils
 
-inherit libtool gnome.org
-
-S=${WORKDIR}/${P}
 DESCRIPTION="The Enlightened Sound Daemon"
-
 HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc ~alpha hppa amd64"
 
-DEPEND=" >=media-libs/audiofile-0.1.9
+LICENSE="GPL-2 LGPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
+IUSE="tcpd alsa ipv6"
+
+DEPEND=">=media-libs/audiofile-0.1.5
 	alsa? ( >=media-libs/alsa-lib-0.5.10b )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
 
 src_unpack() {
+
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-alsa-period.diff
-	epatch ${FILESDIR}/${P}-local-vs-remote.diff
+
+	epatch ${FILESDIR}/${PN}-0.2.32-amd64.patch
+
 }
 
 src_compile() {
+
 	elibtoolize
 
-	local myconf=""
-	use tcpd && myconf="${myconf} --with-libwrap" \
-		|| myconf="${myconf} --without-libwrap"
-
-	use alsa && myconf="${myconf} --enable-alsa" \
-		|| myconf="${myconf} --enable-alsa=no"
-
 	econf \
+		`use_with tcpd libwrap` \
+		`use_enable alsa` \
+		`use_enable ipv6` \
 		--sysconfdir=/etc/esd \
-		${myconf} || die
+		|| die
 
 	make || die
+
 }
 
 src_install() {
+
 	einstall \
 		sysconfdir=${D}/etc/esd \
 		|| die
@@ -62,14 +61,4 @@ src_install() {
 	sed "s/@extradepend@/$extradepend/" <${FILESDIR}/esound.init.d >${T}/esound
 	doexe ${T}/esound
 
-}
-
-pkg_postinst() {
-	# rebuild init deps to include deps on esound
-	/etc/init.d/depscan.sh
-}
-
-pkg_postrm() {
-	# rebuild init deps to remove deps on esound
-	/etc/init.d/depscan.sh
 }
