@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.94 2005/01/22 20:41:11 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.95 2005/01/29 20:09:28 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -77,29 +77,36 @@ else
 	elif [[ "${MY_PN}" == "gvim" ]] ; then
 		IUSE="$IUSE gnome gtk gtk2 motif"
 	fi
+fi
 
-	# vim7 has some extra options. tcltk is working again, and mzscheme support
-	# has been added. netbeans now has its own USE flag, but it's only available
-	# under gvim. We have a few new GUI toolkits, and we can also install a
-	# vimpager (this is in vim6 as well, but the ebuilds don't handle it).
-	if [[ $(get_major_version ) -ge 7 ]] ; then
-		if [[ "${MY_PN}" != "vim-core" ]] ; then
-			IUSE="${IUSE} tcltk mzscheme"
-			DEPEND="$DEPEND
-				tcltk?    ( dev-lang/tcl )
-				mzscheme? ( dev-lisp/mzscheme )"
-			RDEPEND="$RDEPEND
-				tcltk?    ( dev-lang/tcl )
-				mzscheme? ( dev-lisp/mzscheme )"
-		fi
-		if [[ "${MY_PN}" == "gvim" ]] ; then
-			IUSE="$IUSE netbeans aqua nextaw qt"
-			DEPEND="$DEPEND   netbeans? ( dev-util/netbeans )"
-			RDEPEND="$RDEPEND netbeans? ( dev-util/netbeans )"
-		fi
-		if [[ "${MY_PN}" == "vim" ]] ; then
-			IUSE="$IUSE vim-pager"
-		fi
+# vim7 has some extra options. tcltk is working again, and mzscheme support
+# has been added. netbeans now has its own USE flag, but it's only available
+# under gvim. We have a few new GUI toolkits, and we can also install a
+# vimpager (this is in vim6 as well, but the ebuilds don't handle it).
+if [[ $(get_major_version ) -ge 7 ]] ; then
+	if [[ "${MY_PN}" != "vim-core" ]] ; then
+		IUSE="${IUSE} tcltk mzscheme"
+		DEPEND="$DEPEND
+			tcltk?    ( dev-lang/tcl )
+			mzscheme? ( dev-lisp/mzscheme )"
+		RDEPEND="$RDEPEND
+			tcltk?    ( dev-lang/tcl )
+			mzscheme? ( dev-lisp/mzscheme )"
+	fi
+	if [[ "${MY_PN}" == "gvim" ]] ; then
+		IUSE="$IUSE netbeans aqua nextaw qt"
+		DEPEND="$DEPEND   netbeans? ( dev-util/netbeans )"
+		RDEPEND="$RDEPEND netbeans? ( dev-util/netbeans )"
+	fi
+	if [[ "${MY_PN}" == "vim" ]] ; then
+		IUSE="$IUSE vim-pager"
+	fi
+
+	# app-vim blocks
+	if [[ "${MY_PN}" != "vim-core" ]] ; then
+		# align: bug 79982
+		RDEPEND="${RDEPEND}
+			!<app-vim/align-30-r1"
 	fi
 fi
 
