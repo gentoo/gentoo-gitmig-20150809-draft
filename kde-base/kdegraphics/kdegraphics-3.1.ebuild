@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1.ebuild,v 1.4 2003/02/01 20:01:14 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1.ebuild,v 1.5 2003/02/02 16:33:50 danarmak Exp $
 inherit kde-dist 
 
 DESCRIPTION="KDE graphics-related apps"
@@ -14,8 +14,11 @@ newdepend "gphoto2? ( >=media-gfx/gphoto2-2.0_beta1 >=media-libs/libgpio-2001060
 	    media-libs/imlib
 	    app-text/ghostscript
 	    virtual/glut virtual/opengl
+	    media-libs/tiff
 	    !media-gfx/kpovmodeler" # kpovmodeler's old separate ebuild
 #	    x86? ( scanner? sys-libs/libieee1284 )	    
+
+RDEPEND="$RDEPEND app-text/xpdf"
 
 use gphoto2	&& myconf="$myconf --with-kamera --with-gphoto2-includes=/usr/include/gphoto2 \
 				   --with-gphoto2-libraries=/usr/lib/gphoto2 \
