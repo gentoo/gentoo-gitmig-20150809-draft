@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r6.ebuild,v 1.1 2005/04/02 04:31:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r6.ebuild,v 1.2 2005/04/02 04:49:12 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -42,7 +42,7 @@ src_unpack() {
 	# Apply the ACL patches. 
 	# WARNING: These CONFLICT with the SELINUX patches
 	if use acl ; then
-		mv ${PATCHDIR}/generic/00{1,2,4}* ${PATCHDIR}/excluded
+		mv ${PATCHDIR}/generic/00{2,4}* ${PATCHDIR}/excluded
 		mv ${PATCHDIR}/selinux/001_all_coreutils-noacl* ${PATCHDIR}/excluded
 		EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/acl
 	else

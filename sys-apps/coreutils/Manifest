@@ -2,11 +2,11 @@ MD5 37c07cf9a8193aba763f700163f31a45 ChangeLog 23752
 MD5 0a532171a448adf8d523ca631e388f3b coreutils-5.2.1-r2.ebuild 4383
 MD5 a041d2d2ace692ab73aa932cae01debf coreutils-5.2.1-r3.ebuild 4205
 MD5 814ab16ac6cac4e2825942dad9b41e69 coreutils-5.2.1-r4.ebuild 4453
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 48173950e4caa8371bb7f11602704af0 coreutils-5.2.1-r5.ebuild 4463
-MD5 4407c3fc43be3cdf183f8d9765904921 coreutils-5.2.1-r6.ebuild 4298
+MD5 4093f18633df6f1e3590d7644b880abb coreutils-5.2.1-r6.ebuild 4296
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d3828e48aebb7452db7a8f8b025da0ff files/DIR_COLORS 4041
-MD5 e143fd1b8682c9fd5981b506f8b48c08 files/digest-coreutils-5.2.1-r6 149
+MD5 a7f49f56e12b6b16a5c347a666fb9b37 files/digest-coreutils-5.2.1-r6 149
 MD5 77947b96aaadc6a33d53156b5b5e4630 files/digest-coreutils-5.2.1-r2 225
 MD5 5336abda618b9eaa721564d34bb6de9b files/digest-coreutils-5.2.1-r3 225
 MD5 5a7d722a7600e8834bf39c24790caaa2 files/003_all_coreutils-gentoo-uname-s390.patch 3120
