@@ -2,6 +2,13 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+*tvtime-0.9.8.2 (09 May 2003)
+
+  09 May 2003; mkeadle <mkeadle@gentoo.org> tvtime-0.9.8.2.ebuild
+  Bump to latest release. Fixes issues with gcc 2.95x and now
+  pulls in all required deps. lirc will only be installed if lirc
+  is set in use (bug #20653).
+
 *tvtime-0.9.8.1 (07 May 2003)
 
   07 May 2003; mkeadle <mkeadle@gentoo.org> tvtime-0.9.8.1.ebuild
