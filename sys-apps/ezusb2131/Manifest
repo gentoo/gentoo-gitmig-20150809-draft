@@ -1,4 +1,14 @@
-MD5 586fe03e74f65fc6db481fea17b30a79 ezusb2131-1.0.ebuild 883
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a953411759c8f8efa6153048a4106c0 ChangeLog 357
+MD5 9be386ad422b0fabfd92efbea00edee5 ezusb2131-1.0.ebuild 1023
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 12ad28c74c2e43a88054e0c4c61f95db files/digest-ezusb2131-1.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB3LybroRuSHgZdywRAp8gAJ9CbiiOJIG2PHgHNPWmlf03cYCWXwCfdq1o
+dTCJzs1jdy5AXHon+s8Bj+w=
+=DFmu
+-----END PGP SIGNATURE-----
