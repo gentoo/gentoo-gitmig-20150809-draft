@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.78 2003/09/06 23:01:10 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.79 2003/09/12 10:21:20 lanius Exp $
+
+  12 Sep 2003; heinrich Wendel <lanius@gentoo.org> mplayer-1.0_pre1.ebuild,
+  mplayer-0.91.ebuild:
+  fixed samba dep to version 2.2.8a
 
   07 Sep 2003; Alexander Gabert <pappy@gentoo.org> mplayer-0.91.ebuild:
   added hardened-gcc excludes

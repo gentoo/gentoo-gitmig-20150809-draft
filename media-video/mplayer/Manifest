@@ -1,6 +1,6 @@
 MD5 b536633616dd0e40e4027cd1abf51d41 mplayer-0.91.ebuild 11269
 MD5 11e5afb5f7ec6f0fa02de8fa00d43020 mplayer-1.0_pre1.ebuild 10845
-MD5 c08f18defe3467ef0865ce6487f3c164 ChangeLog 14404
+MD5 b62f8eaccaeead26ebc4117f521b6fce ChangeLog 14541
 MD5 9e064190a914d26b0392a266753161ed files/mplayer-0.90-ppc-benh.patch 2029
 MD5 059e03d1d2c965b04a5e53ed850de64a files/mplayer-0.90_rc4-gtk2.patch 6183
 MD5 260489267a0ccf01fe300bce0ec1430d files/mencoder-segfault.patch 520
