@@ -1,0 +1,24 @@
+*** jah/objectlibs/FTGL/FTGL.h  Sun Sep 21 08:13:01 2003
+--- jah/objectlibs/FTGL/FTGL.h.new      Fri Jan  9 10:17:29 2004
+***************
+*** 75,82 ****
+      #define GL_TEXTURE_PRIORITY_EXT           0x8066
+      #define GL_TEXTURE_RESIDENT_EXT           0x8067
+      #define GL_TEXTURE_1D_BINDING_EXT         0x8068
+-     #define GL_TEXTURE_2D_BINDING_EXT         0x8069
+      #define GL_TEXTURE_3D_BINDING_EXT         0x806A
+  #endif
+  
+  #endif  //  __FTGL__
+--- 75,83 ----
+      #define GL_TEXTURE_PRIORITY_EXT           0x8066
+      #define GL_TEXTURE_RESIDENT_EXT           0x8067
+      #define GL_TEXTURE_1D_BINDING_EXT         0x8068
+      #define GL_TEXTURE_3D_BINDING_EXT         0x806A
+  #endif
+  
++     #define GL_TEXTURE_2D_BINDING_EXT         0x8069
++ 
+  #endif  //  __FTGL__
+
+

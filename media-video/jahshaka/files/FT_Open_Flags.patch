@@ -1,0 +1,12 @@
+diff -Naur jahshaka/jah/objectlibs/FTGL/FTFace.cpp jahshaka.new/jah/objectlibs/FTGL/FTFace.cpp
+--- jahshaka/jah/objectlibs/FTGL/FTFace.cpp	2003-09-21 08:09:55.000000000 +0200
++++ jahshaka.new/jah/objectlibs/FTGL/FTFace.cpp	2004-06-26 08:59:58.229953432 +0200
+@@ -62,7 +62,7 @@
+ {
+     FT_Open_Args open;
+ 
+-    open.flags = (FT_Open_Flags)1; // FT_OPEN_MEMORY;
++    open.flags = FT_OPEN_MEMORY;
+     open.memory_base = (FT_Byte *)pBufferBytes;
+     open.memory_size = bufferSizeInBytes;
+ 
