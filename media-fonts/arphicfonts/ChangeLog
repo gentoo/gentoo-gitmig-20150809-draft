@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/arphicfonts
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.7 2004/05/14 01:55:16 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.8 2004/05/15 09:31:12 usata Exp $
+
+  15 May 2004; Mamoru KOMACHI <usata@gentoo.org> arphicfonts-0.1-r1.ebuild,
+  arphicfonts-0.1.ebuild, metadata.xml:
+  Tidy up ebuild. Thanks to Thomas L. Kjeldsen <tlk@mayi.dk>, closing bug #44839
 
   13 May 2004; Stephen P. Becker <geoman@gentoo.org>
   arphicfonts-0.1-r1.ebuild:

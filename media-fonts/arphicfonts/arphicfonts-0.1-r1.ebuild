@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.11 2004/05/14 01:55:16 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.12 2004/05/15 09:31:12 usata Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Arphic Fonts"
@@ -50,29 +50,29 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo ">>> Making big5 font dirs..."
 	cd /usr/share/fonts/ttf/zh_TW
-	echo ">>> Creating fonts.dir info"
 	mkfontdir -e /usr/share/fonts/encodings/large \
-	-e /usr/share/fonts/encodings
-	echo ">>> Making gb2312 font dirs..."
+		-e /usr/share/fonts/encodings
 	cd /usr/share/fonts/ttf/zh_CN
-	echo ">>> Creating fonts.dir info"
 	mkfontdir -e /usr/share/fonts/encodings/large \
-	-e /usr/share/fonts/encodings
-	echo ">>> Make sure X knows about these font directories!"
-	if (  `grep -e "^.*FontPath.*\"/usr/share/fonts/ttf/zh_TW\"" /etc/X11/XF86Config -q` ); then
-		echo "Font path for big5 fonts is listed in /etc/X11/XF86Config."
-	else
-		echo ">>> You must add /usr/share/fonts/ttf/zh_TW to your font path"
-		echo ">>> to be able to use your new Big5 fonts."
+		-e /usr/share/fonts/encodings
+
+	if ( ! `grep -qie "FontPath.*/usr/share/fonts/ttf/zh_TW" /etc/X11/XF86Config` ); then
+		einfo "You must add /usr/share/fonts/ttf/zh_TW to the font paths in XF86Config"
 	fi
-	if (  `grep -e "^.*[fF]ont[Pp]ath.*\"/usr/share/fonts/ttf/zh_CN\"" /etc/X11/XF86Config -q` ); then
-		echo "Font path for gb2312 fonts is listed in /etc/X11/XF86Config."
-	else
-		echo ">>> You must add /usr/share/fonts/ttf/zh_CN to your font path"
-		echo ">>> to be able to use your new gb2312 fonts."
+	if ( ! `grep -qie "FontPath.*/usr/share/fonts/ttf/zh_CN" /etc/X11/XF86Config` ); then
+		einfo "You must add /usr/share/fonts/ttf/zh_CN to the font paths in XF86Config"
 	fi
 
-	echo ">>> Restart font server for changes to take effect."
+	einfo "Restart font server for changes to take effect."
+}
+
+pkg_postrm() {
+#	FIXME: fonts.scale files should be cleaned up if necessary
+	einfo
+	einfo "You may need to remove the following lines from 'Section \"Files\"' in"
+	einfo "XF86Config, to unmerge this package completely:"
+	einfo "\t FontPath \"/usr/share/fonts/ttf/zh_TW\""
+	einfo "\t FontPath \"/usr/share/fonts/ttf/zh_CN\""
+	einfo
 }
