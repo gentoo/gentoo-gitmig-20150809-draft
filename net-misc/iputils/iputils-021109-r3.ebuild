@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.12 2004/11/12 15:49:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.13 2004/12/08 01:00:59 vapier Exp $
 
-inherit flag-o-matic gcc gnuconfig eutils
+inherit flag-o-matic gnuconfig eutils toolchain-funcs
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
@@ -44,7 +44,7 @@ src_unpack() {
 
 	sed -i \
 		-e "/^CCOPT=/s:-O2:${CFLAGS}:" \
-		-e "/^CC=/s:gcc:$(gcc-getCC):" \
+		-e "/^CC=/s:.*::" \
 		Makefile \
 		|| die "sed Makefile opts failed"
 	sed -i \
@@ -53,7 +53,7 @@ src_unpack() {
 		|| die "sed /usr/include failed"
 	use ipv6 || sed -i -e 's:IPV6_TARGETS=:#IPV6_TARGETS=:' Makefile
 
-	sed -i "s:-ll:-lfl ${LDFLAGS}:" setkey/Makefile || die "sed setkey failed"
+	sed -i "s:-ll:-lfl -L${ROOT}/usr/lib ${LDFLAGS}:" setkey/Makefile || die "sed setkey failed"
 
 	sed -i 's:yacc:bison -y:' libipsec/Makefile #59191
 
@@ -62,6 +62,8 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC AR
+
 	if [ -e ${ROOT}/usr/include/linux/pfkeyv2.h ] ; then
 		cd ${S}/libipsec
 		emake || die "libipsec failed"
