@@ -1,5 +1,5 @@
-MD5 72ea143a42f12c178276627a434063dc jmx-1.2.1.ebuild 1546
-MD5 8504d9f1af59ef5d964e22bb82f3f077 ChangeLog 1637
+MD5 512ada93a88d7c7ff4b30cd0a80ffd0b ChangeLog 1721
+MD5 cd0248e2c40e052633e80afd7d2488da jmx-1.2.1.ebuild 1543
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 b075599e4253703c34d53059f8a7f587 files/digest-jmx-1.2.1 64
 MD5 399be713cba96daaec9b89cbf0e369d1 files/build.xml-jdk1.5.patch 314
