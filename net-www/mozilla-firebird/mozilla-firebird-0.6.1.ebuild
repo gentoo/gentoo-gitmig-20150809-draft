@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6.1.ebuild,v 1.7 2003/08/03 07:51:24 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6.1.ebuild,v 1.8 2003/08/03 08:13:02 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -216,23 +216,23 @@ pkg_preinst() {
    pkg_mv_plugins /usr/lib/MozillaFirebird/plugins
 }
 
-pkg_postinst() {
-
-	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/MozillaFirebird"
-
-	# Needed to update the run time bindings for REGXPCOM 
-	# (do not remove next line!)
-	env-update
-	# Register Components and Chrome
-	einfo "Registering Components and Chrome..."
-	LD_LIBRARY_PATH=/usr/lib/MozillaFirebird ${MOZILLA_FIVE_HOME}/regxpcom
-	LD_LIBRARY_PATH=/usr/lib/MozillaFirebird ${MOZILLA_FIVE_HOME}/regchrome
-	# Fix permissions of component registry
-	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
-	# Fix directory permissions
-	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 0755 {} \; || :
-	# Fix permissions on chrome files
-	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
-
-}
+#pkg_postinst() {
+#
+#	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/MozillaFirebird"
+#
+#	# Needed to update the run time bindings for REGXPCOM 
+#	# (do not remove next line!)
+#	env-update
+#	# Register Components and Chrome
+#	einfo "Registering Components and Chrome..."
+#	LD_LIBRARY_PATH=/usr/lib/MozillaFirebird ${MOZILLA_FIVE_HOME}/regxpcom
+#	LD_LIBRARY_PATH=/usr/lib/MozillaFirebird ${MOZILLA_FIVE_HOME}/regchrome
+#	# Fix permissions of component registry
+#	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
+#	# Fix directory permissions
+#	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 0755 {} \; || :
+#	# Fix permissions on chrome files
+#	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
+#
+#}
 
