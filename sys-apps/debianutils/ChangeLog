@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.16 2003/04/04 00:21:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.17 2003/04/12 14:48:53 seemant Exp $
 
 *debianutils-1.16.7-r1 (03 Apr 2003)
+
+  12 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  debianutils-1.16.7-r1.ebuild:
+  SMAIL license removed, thanks to: Luke-Jr <Luke7Jr@yahoo.com> in bug #18948
 
   03 Apr 2003; Seemant Kulleen <seemant@gentoo.org>
   debianutils-1.16.7-r1.ebuild, debianutils-1.16.7.ebuild,

@@ -1,0 +1,5 @@
+MD5 2c753de28217aa412016b3dcba1cc25d ChangeLog 2803
+MD5 2f974d961e1890e0f0a0e07290825ed1 debianutils-1.16.7-r1.ebuild 1357
+MD5 f668f7cf3760bd5f131cec5de5602523 files/digest-debianutils-1.16.7-r1 69
+MD5 e814d4dcbe42ad46f0fa3449b653c173 files/debianutils-1.16.7-gentoo.patch 7521
+MD5 3f67e66ea1d7aa13843f253310322f51 files/debianutils-compress.patch 743
