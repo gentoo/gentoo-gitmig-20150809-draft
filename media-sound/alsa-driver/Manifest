@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 57313a47b6cc7cac790693037ab8e358 ChangeLog 21737
 MD5 133dcf5fd2cb2802e703806517e8c2d5 alsa-driver-1.0.7-r4.ebuild 3862
 MD5 29f93511201747e9c6a7262f04f5a2cd alsa-driver-0.9.8.ebuild 2341
@@ -11,6 +8,8 @@ MD5 2891a7a2252c5be9b29ebd8311678440 alsa-driver-1.0.8_rc2.ebuild 3520
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 9b2cf1594fd2216b4c6ce2e0f26616fb alsa-driver-1.0.5a.ebuild 3609
 MD5 0bf804c34fffec8a8eced3d6f6672a71 alsa-driver-1.0.6a.ebuild 3501
+MD5 2891a7a2252c5be9b29ebd8311678440 alsa-driver-1.0.8.ebuild 3520
+MD5 14b6c8d954e36bb9d40c97cf051220f0 files/digest-alsa-driver-1.0.8 71
 MD5 bc0105e64f35a41aa0602c43e7f09733 files/alsa-driver-1.0.7-configure.patch 21924
 MD5 8c120f7730b91118d0a8148d2deb3a43 files/alsa-driver-0.9.8-au-fix.patch 1267
 MD5 1d70561326ef89e94179634d92782610 files/alsa-driver-1.0.4-devfix.patch 2756
@@ -31,10 +30,3 @@ MD5 a2ee6fa920bbac70835b4a58e5759e8c files/alsa-driver-1.0.5a-cs46xx-passthrough
 MD5 8bb31a005a1db2e306c51d017fd44e70 files/alsa-driver-1.0.5a-xbox-ac97.patch 721
 MD5 4d7c4de4eaa3007e13360d7434ecb284 files/alsa-driver-1.0.7-ioctl32.patch-r2 44165
 MD5 479ee887025f4ce7944adee1e4a6fdf3 files/digest-alsa-driver-1.0.7-r3 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB49OTArHZZzCEUG0RAlLzAJ9XeHTUEF/GXLhkuGy/JigjUdYmdACfdYUi
-hRjtAN1zkSFV0PbwkoNlxMw=
-=OF+N
------END PGP SIGNATURE-----
