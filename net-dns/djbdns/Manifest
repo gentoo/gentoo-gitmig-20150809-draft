@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 641ec6f7c8d48382dc9793143736619a djbdns-1.05-r12.ebuild 4794
 MD5 50c592c75ecd77c94452bcc000c83e92 djbdns-1.05-r9.ebuild 2745
 MD5 d21ff37c46e1d07e72044980ccabf257 djbdns-1.05-r11.ebuild 3176
 MD5 4c15ec493cc99c15649320a997816857 djbdns-1.05-r8.ebuild 2030
 MD5 6cc3ce8124b77cbddac8de092b2f006c djbdns-1.05-r3.ebuild 1670
-MD5 d4d1be35ea50242cbc50d63833272593 djbdns-1.05-r13.ebuild 4720
+MD5 9f28fae509975e127b312c5b4eaaa082 djbdns-1.05-r13.ebuild 4725
 MD5 b7abbb525fda4ee9cb0be743c6708b8f djbdns-1.05-r10.ebuild 2795
-MD5 1080ef71d278808fc1345d2c340237dd ChangeLog 7164
+MD5 22851ec1c630971ce44f3bb53af67b09 ChangeLog 7335
 MD5 948dcd32140f7bd301b6ecc28634fb1b djbdns-1.05-r7.ebuild 1926
 MD5 2c3158204cfb4b9c36b8bc78e8421b16 metadata.xml 223
 MD5 188096855028696985f1b9d839d1643f files/1.05-errno.patch 238
@@ -24,3 +27,10 @@ MD5 46e046747b9dd8a0a1300a52c142f423 files/fwdzone-fix.patch 438
 MD5 2804eedf8bf07dacf67d094c5122c723 files/dnscache-setup 6007
 MD5 7c2a17103fedf0325d120a7d254432fa files/tinydns-setup 3209
 MD5 625d040d68fa3f87d67688c0e15eb2f4 files/headtail.patch 1781
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBG8fcCHk4+ZoBpvsRAooMAJ45wxdqJdC+xJIp9AtcdH0CyThq4wCfYY9U
+yvvHrWd0JqsmMBMu2htyX2s=
+=EzdH
+-----END PGP SIGNATURE-----
