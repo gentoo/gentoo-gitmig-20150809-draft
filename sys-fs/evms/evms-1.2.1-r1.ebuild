@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-1.2.1-r1.ebuild,v 1.5 2004/06/30 17:09:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-1.2.1-r1.ebuild,v 1.6 2004/07/15 03:37:01 agriffis Exp $
 
 inherit eutils
 
@@ -75,4 +75,3 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/evms-init evms
 }
-
