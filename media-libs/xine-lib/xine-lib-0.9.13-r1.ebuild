@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r1.ebuild,v 1.2 2002/08/13 03:55:48 gerk Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r1.ebuild,v 1.3 2002/08/14 13:08:10 murphy Exp $ 
 
 inherit libtool || die "I lost my inheritance"
 
@@ -11,7 +11,7 @@ SRC_URI="http://xine.sourceforge.net/files/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
@@ -31,7 +31,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
 

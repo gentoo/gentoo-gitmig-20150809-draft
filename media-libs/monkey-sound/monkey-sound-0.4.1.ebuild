@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-sound/monkey-sound-0.4.1.ebuild,v 1.4 2002/07/23 00:12:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-sound/monkey-sound-0.4.1.ebuild,v 1.5 2002/08/14 13:08:10 murphy Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 RDEPEND=">=x11-libs/gtk+-2.0.0
 	 >=dev-libs/atk-1.0.0

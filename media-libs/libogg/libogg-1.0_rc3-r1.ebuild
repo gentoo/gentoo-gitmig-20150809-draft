@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.0_rc3-r1.ebuild,v 1.3 2002/07/16 11:36:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.0_rc3-r1.ebuild,v 1.4 2002/08/14 13:08:09 murphy Exp $
 
 S=${WORKDIR}/libogg-1.0rc3
 DESCRIPTION="the Ogg media file format library"
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_compile() {
 	./configure --prefix=/usr --host=${CHOST} || die

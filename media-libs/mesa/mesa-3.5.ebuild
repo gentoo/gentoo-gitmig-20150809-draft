@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.5.ebuild,v 1.4 2002/07/23 00:12:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.5.ebuild,v 1.5 2002/08/14 13:08:10 murphy Exp $
 
 MY_P=Mesa-${PV}
 S=${WORKDIR}/${MY_P}
@@ -22,7 +22,7 @@ fi
 
 SLOT="3.5"
 LICENSE="LGPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	local myconf
