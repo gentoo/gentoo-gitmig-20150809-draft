@@ -1,6 +1,21 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.37 2003/03/09 02:51:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.38 2003/03/22 16:34:31 dragon Exp $
+
+*binutils-2.13.90.0.20 (22 Mar 2003)
+
+  22 Mar 2003; Nicholas Wourms <dragon@gentoo.org>
+  binutils-2.13.90.0.20.ebuild,
+  files/2.13/binutils-2.13.90.0.10-x86_64-gotpcrel.patch,
+  files/2.13/binutils-2.13.90.0.18-testsuite-Wall-fixes.patch,
+  files/2.13/binutils-2.13.90.0.20-array-sects-compat.patch,
+  files/2.13/binutils-2.13.90.0.20-gas-mips-gprel.patch:
+  Bump to new beta version.  This release contains a boatload of fixes for
+  a wide variety of platforms.  It also fixes a critical bug in the previous
+  version for the mips platform.  Due to the beta nature of this version and
+  the proximity to a new gentoo release, I have set keywords to "-arch" for
+  all platforms except mips.  However, it should be tested on these other
+  platforms and keywords modified as necessary.
 
 *binutils-2.13.90.0.18-r1 (08 Mar 2003)
 
