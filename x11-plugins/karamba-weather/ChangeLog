@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/karamba-weather
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-weather/ChangeLog,v 1.1 2003/05/04 01:22:19 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-weather/ChangeLog,v 1.2 2003/10/13 20:48:26 mholzer Exp $
+
+  14 Oct 2003; Martin Holzer <mholzer@gentoo.org> karamba-weather-0.3.ebuild:
+  adding pyxml to depend. Closes #21738.
 
 *karamba-weather-0.3 (03 May 2003)
 
