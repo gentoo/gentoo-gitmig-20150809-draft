@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-2.17.1-r1.ebuild,v 1.4 2003/10/04 12:45:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-2.17.1-r1.ebuild,v 1.5 2003/11/14 20:03:42 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hercules System/370, ESA/390 and zArchitecture Mainframe Emulator"
@@ -12,7 +12,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="virtual/glibc
-	sys-apps/bzip2"
+	app-arch/bzip2"
 
 src_compile() {
 	local mycflags
