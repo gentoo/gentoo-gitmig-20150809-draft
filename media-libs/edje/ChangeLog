@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/edje
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/ChangeLog,v 1.1 2003/10/14 02:36:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/ChangeLog,v 1.2 2003/10/18 07:47:29 vapier Exp $
+
+*edje-0.0.1.20031018 (13 Oct 2003)
+
+  18 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *edje-0.0.1.20031013 (13 Oct 2003)
 
