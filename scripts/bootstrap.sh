@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.41 2003/02/27 10:23:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.42 2003/03/05 04:37:25 bcowan Exp $
 
 # IMPORTANT NOTE:
 # This script now accepts an optional argument.
@@ -42,13 +42,16 @@ then
 	source /etc/profile
 fi
 
-echo
-echo -e "${GOOD}Gentoo Linux${GENTOO_VERS}; \e[34;01mhttp://www.gentoo.org/${NORMAL}"
-echo -e " Copyright 2001-2003 Gentoo Technologies, Inc.; Distributed under the GPL"
-echo
-einfo "Starting Bootstrap of base system ..."
-echo
-echo
+if [ "$!" = "" ]
+then
+    echo
+    echo -e "${GOOD}Gentoo Linux${GENTOO_VERS}; \e[34;01mhttp://www.gentoo.org/${NORMAL}"
+    echo -e " Copyright 2001-2003 Gentoo Technologies, Inc.; Distributed under the GPL"
+    echo
+    einfo "Starting Bootstrap of base system ..."
+    echo
+    echo
+fi
 
 # This should not be set to get glibc to build properly. See bug #7652.
 LD_LIBRARY_PATH=""
@@ -151,8 +154,7 @@ export AUTOCLEAN="no"
 # Allow portage to overwrite stuff
 export CONFIG_PROTECT="-*"
 
-
-if [ "$1" = "" ] || [ "$1" = "1.5" ]
+if [ "$1" = "" ] || [ "$1" = "0" -o "$1" = "1.5" ]
 then
 	#
 	# First stage of bootstrap (aka build stage)
@@ -184,7 +186,7 @@ then
 	${GCC_CONFIG} "`${GCC_CONFIG} --get-current-profile`" &> /dev/null
 fi
 
-if [ "$1" = "" ] || [ "$1" = "2" ]
+if [ "$1" = "" ] || [ "$1" = "0" -o "$1" = "2" ]
 then
 	#
 	# Second stage of boostrap
