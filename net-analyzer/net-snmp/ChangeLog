@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.88 2005/02/27 12:50:06 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.89 2005/03/15 15:27:12 ka0ttic Exp $
+
+  15 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> net-snmp-5.2-r3.ebuild,
+  net-snmp-5.2.1.ebuild:
+  Updated to use new fixlocalpod function from perl-module.eclass instead of
+  the nasty perl-module_src_install hack - see bug 83622.
 
   27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
   net-snmp-5.1.1-r1.ebuild, net-snmp-5.2-r3.ebuild, net-snmp-5.2.ebuild:

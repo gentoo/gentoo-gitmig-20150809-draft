@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r3.ebuild,v 1.5 2005/02/27 12:50:06 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r3.ebuild,v 1.6 2005/03/15 15:27:12 ka0ttic Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -98,11 +98,10 @@ src_install () {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	if use perl ; then
-		mytargets="DESTDIR=${D} perlinstall" perl-module_src_install
+		make DESTDIR="${D}" perlinstall || die "make perlinstall failed"
+		fixlocalpod
 
-		if ! use X ; then
-			rm -f "${D}/usr/bin/tkmib"
-		fi
+		use X || rm -f "${D}/usr/bin/tkmib"
 	else
 		rm -f "${D}/usr/bin/mib2c" "${D}/usr/bin/tkmib"
 	fi
