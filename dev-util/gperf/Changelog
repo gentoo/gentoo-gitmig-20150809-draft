@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/gperf
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/Changelog,v 1.1 2002/04/04 03:57:13 chadh Exp $
+
+*gperf-2.7.2 (4/3/2002)
+
+  3 Apr 2002; Chad Huneycutt <chadh@gentoo.org> gperf-2.7.2.ebuild :
+  
+  Ebuild created
