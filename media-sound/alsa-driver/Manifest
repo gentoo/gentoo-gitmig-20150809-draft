@@ -1,14 +1,16 @@
-MD5 57313a47b6cc7cac790693037ab8e358 ChangeLog 21737
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 088425a0f2d8bf9480208483cfc5155a ChangeLog 21905
 MD5 133dcf5fd2cb2802e703806517e8c2d5 alsa-driver-1.0.7-r4.ebuild 3862
 MD5 29f93511201747e9c6a7262f04f5a2cd alsa-driver-0.9.8.ebuild 2341
 MD5 f91e7f3510d5b33588bb15b545f7a56d alsa-driver-1.0.7-r3.ebuild 3803
 MD5 3c0f4daec01807f3cce65c8fff87ff3f alsa-driver-1.0.3.ebuild 3366
 MD5 cbc06c410e94282f92dde8b31de93195 alsa-driver-1.0.8_rc1.ebuild 3519
-MD5 2891a7a2252c5be9b29ebd8311678440 alsa-driver-1.0.8_rc2.ebuild 3520
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 9b2cf1594fd2216b4c6ce2e0f26616fb alsa-driver-1.0.5a.ebuild 3609
 MD5 0bf804c34fffec8a8eced3d6f6672a71 alsa-driver-1.0.6a.ebuild 3501
-MD5 2891a7a2252c5be9b29ebd8311678440 alsa-driver-1.0.8.ebuild 3520
+MD5 58490e5ee6cad8920db143bfc2369a7f alsa-driver-1.0.8.ebuild 3516
 MD5 14b6c8d954e36bb9d40c97cf051220f0 files/digest-alsa-driver-1.0.8 71
 MD5 bc0105e64f35a41aa0602c43e7f09733 files/alsa-driver-1.0.7-configure.patch 21924
 MD5 8c120f7730b91118d0a8148d2deb3a43 files/alsa-driver-0.9.8-au-fix.patch 1267
@@ -25,8 +27,14 @@ MD5 27684bd356b1a43809d3f8c847a6abce files/alsa-driver-1.0.6a-kbuild.patch 575
 MD5 f9d35aa6adca1137e05b1cb8852ff672 files/alsa-driver-1.0.6a-emu10k1-passthrough.patch 658
 MD5 27ccbe36406f145c1d63725a53517233 files/makefile.patch 1122
 MD5 deb0bfd8e2cfe0ba434fb5a820294502 files/digest-alsa-driver-1.0.5a 72
-MD5 71ab62fbf3703a83b2fa4a80fe46a0ad files/digest-alsa-driver-1.0.8_rc2 74
 MD5 a2ee6fa920bbac70835b4a58e5759e8c files/alsa-driver-1.0.5a-cs46xx-passthrough.patch 446
 MD5 8bb31a005a1db2e306c51d017fd44e70 files/alsa-driver-1.0.5a-xbox-ac97.patch 721
 MD5 4d7c4de4eaa3007e13360d7434ecb284 files/alsa-driver-1.0.7-ioctl32.patch-r2 44165
 MD5 479ee887025f4ce7944adee1e4a6fdf3 files/digest-alsa-driver-1.0.7-r3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB5871ArHZZzCEUG0RApvTAJ4x1LAiwtAZ2R55lYnQpZZX7BsPCQCfS7X0
+zZugWSUYe8WH7fHl2qK4Sq4=
+=Nbkc
+-----END PGP SIGNATURE-----
