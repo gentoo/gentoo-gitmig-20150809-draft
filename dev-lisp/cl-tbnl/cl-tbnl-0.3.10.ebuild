@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/cl-tbnl-0.3.10.ebuild,v 1.1 2005/02/10 09:18:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/cl-tbnl-0.3.10.ebuild,v 1.2 2005/02/22 04:33:33 mkennedy Exp $
 
 inherit common-lisp
 
@@ -18,8 +18,11 @@ DEPEND="dev-lisp/cl-kmrcl
 	dev-lisp/cl-url-rewrite
 	dev-lisp/cl-ppcre"
 
+# RDEPEND="${DEPEND}
+#	apache2? ( www-apache/mod_lisp2 ) !apache2? ( www-apache/mod_lisp )"
+
 RDEPEND="${DEPEND}
-	apache2? ( www-apache/mod_lisp2 ) !apache2? ( www-apache/mod_lisp )"
+	www-apache/mod_lisp"
 
 S=${WORKDIR}/tbnl-${PV}
 
