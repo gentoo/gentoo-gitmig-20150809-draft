@@ -1,6 +1,49 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.6 2003/02/12 09:18:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.7 2003/02/13 17:57:08 livewire Exp $
+
+*wolk-sources-4.0s-pre10
+
+  13 Feb 2003; Bob Johnson <livewire@gentoo.org>:
+
+    Changelog from v4.0s-pre9 -> 4.0s-pre10
+	-   add:     TCP/IP Low Latency via sysctl
+	-   add:     sys_sendfile64
+	-   add:     ./userspace-patches: linux-dvb-2002-12-08 for rmap15b
+	-   add:     LSI MegaRAID support (driver series v2.00.2)
+	-   add:     check for swapon on mounted devices
+	-   add:     Opteron/Athlon64/Hammer/K8 support
+	-   re-add:  vservers (ctx) v16 (non-breaking gradm version)
+	-   fixed:   IPMI build error due to new ACPI merge in -pre9
+	-   fixed:   add missing bits from -ac ethernet packet padding fix
+              	     fixes 'skb_pad' unresolved symbols in many NIC drivers
+	-   fixed:   some compiler warnings
+	-   fixed:   trivial NTFS build error
+	-   fixed:   Unknown interrupt on some systems
+	-   fixed:   Failover routing
+	-   fixed:   PPC32 build errors
+	-   fixed:   AMD K6 wrongly sets PGE=y - results in a nonbootable kernel
+	-   fixed:   aic7xxx with firmware build enabled compile error
+	-   fixed:   make xconfig looks strange in the first menu
+	-   fixed:   SMP deadlock on some $MONSTERBOXEN
+	-   fixed:   nfs: mishandling of nfsroot port= option
+	-   fixed:   nfs: fixed SMP deadlock
+	-   fixed:   ext3fs: crash deleting a single non sparse file exceeding 1 Tb
+	-   fixed:   Disable Loop IV hack of CryptoAPI because we have loop-jari
+	-   update:  Matrox mga_vid / Radeon/Rage128 Driver
+	-   update:  ReiserFS data-logging v35-aa
+	-   update:  rmap VM v15d
+	-   update:  XFS v1.2-cvs as of 2003-02-09 including kdb v3.0
+	-   update:  Super FreeS/WAN v1.99-kb4 Final
+	-   update:  LSI MegaRAID support (driver series v1.18f)
+	-   update:  Broadcom Tigon3 v1.4
+	-   update:  grsecurity v1.99c Final
+	-   removed: kernel ksymoops: now also part of kdb v3.0
+	-   changed: Desktop Scheduler Tweaks: More interactivity
+	-   changed: Disable EARLY_PRINTK config option and make it always-on.
+              Or: I don't like to receive emails anymore saying:
+              "My screen is black" ;)
+	-   changed: braindead "Conntrack CLOSE_WAIT" from 3days to 2mins
 
 *wolk-sources-4.0s-pre9
 
