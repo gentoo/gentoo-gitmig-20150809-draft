@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd34d4a59abd544de002fa0115c548c8 ChangeLog 2630
 MD5 2097c3a1a84059dc0ba1158694375c13 noip-updater-2.1.1-r1.ebuild 1448
+MD5 f14160f3872eb8aa10567398b4933f3c ChangeLog 2732
 MD5 a20cdb92b8a1629599ec1bf97074d8f6 metadata.xml 545
+MD5 ced8f9146ce6aaaa6254e329056676da files/noip2.start 786
 MD5 1f86b2531c8f115fa178f23b095d0140 files/noip-2.1.1.patch 486
 MD5 9e3e84c3f86b94767256ba5b41f5b5fa files/digest-noip-updater-2.1.1-r1 61
-MD5 ced8f9146ce6aaaa6254e329056676da files/noip2.start 786
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBrwWTmdTrptrqvGERAlbOAJ9CLPEKxM6+qdNrMeQUjYIK3fwShQCcDBi+
-Qtn4gTy/VQ9JD5PF/G8BgGg=
-=gkge
------END PGP SIGNATURE-----
