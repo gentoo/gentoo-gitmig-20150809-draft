@@ -1,0 +1,42 @@
+--- radiusd-cistron-1.6.6.orig/src/acct.c
++++ radiusd-cistron-1.6.6/src/acct.c
+@@ -119,9 +119,10 @@
+  */
+ static void make_wtmp(struct radutmp *ut, struct utmp *wt, int status)
+ {
+-	char		buf[32];
++	char		buf[48];
+ 	NAS		*cl;
+ 	char		*s;
++	int		len;
+ 
+ 	/*
+ 	 *	Fill out the UTMP struct for the radwtmp file.
+@@ -143,11 +144,13 @@
+ 		s = cl->shortname;
+ 	if (s == NULL || s[0] == 0) s = uue(&(ut->nas_address));
+ #if UT_LINESIZE > 9
+-	sprintf(buf, "%03d:%.20s", ut->nas_port, s);
++	sprintf(buf, "%03u:%.20s", ut->nas_port, s);
+ #else
+-	sprintf(buf, "%02d%.20s", ut->nas_port, s);
++	sprintf(buf, "%02u%.20s", ut->nas_port, s);
+ #endif
+-	strncpy(wt->ut_line, buf, UT_LINESIZE);
++	len = UT_LINESIZE;
++	if (len > sizeof(buf)) len = sizeof(buf);
++	strncpy(wt->ut_line, buf, len);
+ 
+ 	/*
+ 	 *	We store the dynamic IP address in the hostname field.
+@@ -155,7 +158,9 @@
+ #ifdef UT_HOSTSIZE
+ 	if (ut->framed_address) {
+ 		ipaddr2str(buf, ntohl(ut->framed_address));
+-		strncpy(wt->ut_host, buf, UT_HOSTSIZE);
++		len = UT_HOSTSIZE;
++		if (len > sizeof(buf)) len = sizeof(buf);
++		strncpy(wt->ut_host, buf, len);
+ 	}
+ #endif
+ #ifdef __svr4__
