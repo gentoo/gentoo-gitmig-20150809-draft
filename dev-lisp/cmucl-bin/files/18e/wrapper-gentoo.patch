@@ -1,0 +1,19 @@
+diff -ru lisp/lib/cmucl/sample-wrapper lisp2/lib/cmucl/sample-wrapper
+--- lisp/lib/cmucl/sample-wrapper	Thu Apr 11 06:31:24 2002
++++ lisp2/lib/cmucl/sample-wrapper	Wed Jun  5 14:59:18 2002
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ #
+ # Set up CMUCLLIB environment variable to point to run-time files.
+-CMUCLLIB=/<<your-cmucl-path>>/lib/cmucl/lib
++#CMUCLLIB=/opt/cmucl/lib/cmucl/lib
+ #export CMUCLLIB
+ 
+ #
+@@ -13,4 +13,4 @@
+ 
+ #
+ # Run Lisp with these environment variables set.
+-exec /<<your-cmucl-path>>/bin/lisp "$@"
++exec /opt/cmucl/bin/lisp "$@"
+

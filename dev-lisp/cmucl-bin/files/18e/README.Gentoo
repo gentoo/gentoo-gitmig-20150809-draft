@@ -1,0 +1,22 @@
+
+* CMUCL Configuration
+
+Please note, while you do not need to do anything special while
+running cmucl itself (it is a wrapper script than sets environment
+appropriately), you will nee to set few shell environment variables
+before running the CMUCL configuration program, `config'
+
+The following is the simplest chain of commands launch CMUCL config:
+
+    cd /opt/cmucl/lib/cmucl/lib/
+    CMUCLLIB=/opt/cmucl/lib/cmucl/lib PATH=$PATH:/opt/cmucl/bin ./config
+
+* Site Configuration
+
+/etc/common-lisp/cmucl/site-lisp.lisp has been installed.  This file
+is intended for local, site-wide configuration of CMUCL.
+
+
+Local Variables: ***
+mode: outline ***
+End: ***
