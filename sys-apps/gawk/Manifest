@@ -1,5 +1,5 @@
-MD5 5af81440dbc8ee0caeaf182ee6653c7b gawk-3.1.2-r3.ebuild 2939
-MD5 8f70fd4ab472aa203f252b136aef6d6c ChangeLog 4644
+MD5 d9f42f30389bb8855615314cd5d3d0d1 gawk-3.1.2-r3.ebuild 2949
+MD5 270d16408e3bcce37bc9901031c59db9 ChangeLog 4812
 MD5 0c0299ea87325eb6a7220f00aec47776 gawk-3.1.1-r2.ebuild 2426
 MD5 9f439b073b0d1903a54a04dca5aa44af files/gawk-3.1.2-input-filesize.patch 13485
 MD5 9ee5f35f388bc0943f9f1df199bdd64d files/digest-gawk-3.1.1-r2 63
