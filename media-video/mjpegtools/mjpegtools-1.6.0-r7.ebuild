@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.11 2003/06/01 14:07:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.12 2003/06/09 21:28:18 mholzer Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi svga"
 
-inherit gcc libtool flag-o-matic base
+inherit eutils gcc libtool flag-o-matic base
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Tools for MJPEG video"

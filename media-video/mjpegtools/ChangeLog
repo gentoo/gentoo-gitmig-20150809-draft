@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.26 2003/06/01 14:36:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.27 2003/06/09 21:28:18 mholzer Exp $
+
+  09 Jun 2003; Martin Holzer <mholzer@gentoo.org> mjpegtools-1.6.0-r7.ebuild:
+  Added eutils which is needed for ppc. closes #19224.
 
   01 Jun 2003; Martin Holzer <mholzer@gentoo.org> mjpegtools-1.6.1.ebuild:
   Making gcc 2.95 compatible
