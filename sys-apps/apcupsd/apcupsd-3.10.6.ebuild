@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.7 2003/11/01 23:40:37 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.8 2003/11/02 00:04:01 tantive Exp $
 
 IUSE="doc snmp usb apache2"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 DEPEND=">=sys-apps/baselayout-1.8.4
 	virtual/glibc
 	virtual/mta
-	snmp? ( net-analyzer/ucd-snmp )
+	snmp? ( net-analyzer/net-snmp )
 	sys-libs/ncurses"
 RDEPEND="${DEPEND}
 	usb? ( sys-apps/hotplug )"
