@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/atftp-0.6.ebuild,v 1.1 2002/08/16 12:48:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/atftp-0.6.ebuild,v 1.2 2002/09/21 02:40:21 vapier Exp $
 
-DESCRIPTION="This is the ebuild file for atftp (Advanced TFTP)"
-HOMEPAGE="http://"
+DESCRIPTION="Advanced TFTP implementation client/server"
+HOMEPAGE="ftp://ftp.mamalinux.com/pub/atftp/"
 LICENSE="GPL-2"
 DEPEND=""
 SLOT="0"
