@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.16.ebuild,v 1.3 2003/11/02 17:21:40 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.16.ebuild,v 1.4 2003/11/02 18:28:22 mholzer Exp $
 
 IUSE="debug nls oggvorbis arts truetype alsa"
 filter-flags "-funroll-loops"
@@ -46,6 +46,8 @@ src_compile() {
 
 	# Fixes a save/jpeg - bug
 	cd ${S}/avidemux; epatch ${FILESDIR}/patch_jpeg.diff; cd ${S}
+
+	cd ${S}/avidemux/mpeg2enc; epatch ${FILESDIR}/gcc2.patch; cd ${S}
 
 	export WANT_AUTOCONF_2_5=1
 	autoconf

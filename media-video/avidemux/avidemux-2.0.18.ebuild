@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.2 2003/11/01 17:32:17 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.3 2003/11/02 18:28:22 mholzer Exp $
 
 IUSE="debug nls oggvorbis arts truetype alsa"
 filter-flags "-funroll-loops"
@@ -41,15 +41,14 @@ src_compile() {
 	# Fixes a possible automake error due to clock skew
 	touch -r *
 
+	cd ${S}/avidemux/mpeg2enc; epatch ${FILESDIR}/gcc2.patch; cd ${S}
+
 	export WANT_AUTOCONF_2_5=1
 	autoconf
 
 	# invalid cast
 	use ppc \
-		&& cd avidemux/ADM_video/ \
-		&& sed -e '188s/const//g' ADM_vidFont.cpp > ADM_vidFont.cpp.new \
-		&& mv ADM_vidFont.cpp.new ADM_vidFont.cpp \
-		&& cd ../..
+		&& sed -i -e '188s/const//g' avidemux/ADM_video/ADM_vidFont.cpp
 
 	local myconf
 	myconf="--with-gnu-ld --disable-warnings"
