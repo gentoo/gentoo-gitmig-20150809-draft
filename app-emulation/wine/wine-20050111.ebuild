@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050111.ebuild,v 1.2 2005/02/12 18:58:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050111.ebuild,v 1.3 2005/02/20 02:30:35 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -68,6 +68,11 @@ src_compile() {
 
 	strip-flags
 	use lcms && append-flags -I${ROOT}/usr/include/lcms
+
+	if ! built_with_use app-text/docbook-sgml-utils tetex ; then
+		export DB2PDF=true
+		export DB2PS=true
+	fi
 
 	#	$(use_enable amd64 win64)
 	# USE=debug is broken in this release

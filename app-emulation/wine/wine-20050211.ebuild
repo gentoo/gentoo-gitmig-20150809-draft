@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050211.ebuild,v 1.1 2005/02/12 19:50:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050211.ebuild,v 1.2 2005/02/20 02:30:35 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="X alsa arts cups debug nas opengl gif glut jack jpeg oss ncurses doc lcms"
 RESTRICT="maketest" #72375
 
@@ -39,6 +39,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/winearts-kdecvs-fix.patch
+	epatch "${FILESDIR}"/20050211-docs.patch
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
 
 	test_flag -fstack-protector && epatch "${FILESDIR}"/20041019-no-stack.patch #66002
@@ -68,6 +69,11 @@ src_compile() {
 
 	strip-flags
 	use lcms && append-flags -I${ROOT}/usr/include/lcms
+
+	if ! built_with_use app-text/docbook-sgml-utils tetex ; then
+		export DB2PDF=true
+		export DB2PS=true
+	fi
 
 	#	$(use_enable amd64 win64)
 	# USE=debug is broken in this release

@@ -1,0 +1,18 @@
+--- documentation/getting.sgml.orig	2005-02-19 21:00:05.000000000 -0500
++++ documentation/getting.sgml	2005-02-19 21:01:20.000000000 -0500
+@@ -30,6 +30,7 @@
+           few clicks.  Building your own installable binary package from a 
+           source package is also possible, although it is beyond the scope of 
+           this guide.
++        </para>
+       </sect2>
+ 
+       <sect2 id="installation-methods-source">
+@@ -96,6 +97,7 @@
+           installing a Wine package.  See the section on <link 
+           linkend="uninstalling-wine-source">uninstalling Wine from source
+           </link> for proper instructions.
++        </para>
+       </sect2>
+       <sect2>
+         <title>Different Distributions</title>
