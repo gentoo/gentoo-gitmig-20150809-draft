@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.2.22.ebuild,v 1.1 2004/05/07 06:57:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.2.22.ebuild,v 1.2 2004/06/14 16:53:50 aliz Exp $
 
 inherit gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/dcgui/${P}.tar.bz2"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~hppa ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc ~alpha ~hppa ~ia64 amd64"
 
 DEPEND=">=app-arch/bzip2-1.0.2
 	>=dev-libs/libxml2-2.4.22"
