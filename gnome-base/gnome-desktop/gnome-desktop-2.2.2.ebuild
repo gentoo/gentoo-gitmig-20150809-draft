@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.2.2.ebuild,v 1.1 2003/05/15 17:35:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.2.2.ebuild,v 1.2 2003/05/15 19:23:50 foser Exp $
 
 inherit gnome2 eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 	sed -i 's:GNOME.Org:Gentoo Linux:' configure.in
 
 	WANT_AUTOCONF_2_5=1 autoconf || die
-	automake || die
+	WANT_AUTOMAKE=1.4 automake || die
 
 	# Fix bug 16853 by building gnome-about with IEEE to prevent
 	# floating point exceptions on alpha
