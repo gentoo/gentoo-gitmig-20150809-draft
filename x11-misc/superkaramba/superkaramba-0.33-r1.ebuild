@@ -1,23 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.33-r1.ebuild,v 1.9 2004/07/03 22:51:23 malc Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.33-r1.ebuild,v 1.10 2004/07/06 11:48:43 carlo Exp $
 
 inherit kde eutils
-
-need-kde 3
 
 DESCRIPTION="A version of Karamba with extra extensions in-built"
 HOMEPAGE="http://netdragon.sourceforge.net/"
 SRC_URI="mirror://sourceforge/netdragon/${P}.tar.gz"
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~amd64"
-RESTRICT="nomirror"
 
-newdepend ">=kde-base/kdelibs-3.1
-	>=sys-apps/portage-2.0.49-r3"
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc ~sparc ~amd64"
+IUSE="doc"
+
+need-kde 3
 
 src_unpack() {
 	kde_src_unpack
