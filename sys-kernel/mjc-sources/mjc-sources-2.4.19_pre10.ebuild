@@ -5,7 +5,7 @@
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=2.4.18
-KV=${P}-mjc2
+KV=${P}-mjc3
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
 
