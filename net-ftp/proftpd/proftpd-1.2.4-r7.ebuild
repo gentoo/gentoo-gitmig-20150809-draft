@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.4-r7.ebuild,v 1.1 2002/03/18 17:52:44 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.4-r7.ebuild,v 1.2 2002/04/03 04:25:43 tod Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An advanced and very configurable FTP server"
@@ -45,11 +45,15 @@ src_compile() {
 }
 
 src_install() {
+	
+	#Note rundir needs to be specified to avoid sanbox violation
+	#on initial install. See Make.rules
 	make \
 		prefix=${D}/usr \
 		sbindir=${D}/usr/sbin \
 		mandir=${D}/usr/share/man \
 		localstatedir=${D}/var/run \
+		rundir=${D}/var/run/proftp \
 		sysconfdir=${D}/etc/proftpd \
 		install || die
 
