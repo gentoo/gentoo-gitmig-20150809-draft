@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.10 2004/07/25 19:33:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.11 2004/07/27 14:57:54 liquidx Exp $
+
+*curl-7.12.0-r1 (27 Jul 2004)
+
+  27 Jul 2004; Alastair Tse <liquidx@gentoo.org> +curl-7.12.0-r1.ebuild:
+  fix stupid symlink mistake by me. add comment about bumping pycurl
 
 *curl-7.12.0 (25 Jul 2004)
 
