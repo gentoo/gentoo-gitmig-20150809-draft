@@ -1,21 +1,25 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.6 2005/02/07 20:43:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.7 2005/02/10 23:08:29 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
 #
 # Make sure the good versions are marked stable before a no-lib32 profile is
-# released.
+# released as a default profile.  These masks should remain in until all old
+# versions are removed from the tree.
 <app-editors/emacs-21.3-r5
 <dev-db/postgresql-7.4.6
 <dev-lang/python-python-2.4-r2
 <dev-lang/tcl-8.4.6-r1
 <dev-lang/tk-8.4.6-r1
 <dev-libs/libmcal-0.7-r4
+<dev-python/PyQt-3.13
+<dev-python/sip-4.1.1
 <dev-tcltk/expect-5.42.1
 <media-video/transcode-0.6.14
 <net-fs/samba-3.0.11
 <net-libs/courier-authlib-0.52
 <net-libs/liblockfile-1.03-r2
+<sys-apps/dbus-0.23-r2
 <sys-apps/iproute2-2.6.10.20050112
 <sys-devel/flex-2.5.4a-r6
 <sys-libs/pam-0.77-r7
