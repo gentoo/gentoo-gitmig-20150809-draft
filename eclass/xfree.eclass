@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.11 2003/10/20 07:13:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.12 2004/01/29 16:18:07 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -53,7 +53,7 @@ get_KV_info() {
 is_kernel() {
         get_KV_info
                                                                                 
-        if [ "${KV_major}" -eq ${1} -a "${KV_minor}" -eq ${2} ]
+        if [ "${KV_major}" -eq "${1}" -a "${KV_minor}" -eq "${2}" ]
         then
                 return 0
         else
