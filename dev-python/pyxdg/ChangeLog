@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxdg
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.7 2003/09/21 15:27:43 lanius Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.8 2004/03/15 01:35:52 kloeri Exp $
+
+*pyxdg-0.4 (15 Mar 2004)
+
+  15 Mar 2004; Bryan Østergaard,,, <kloeri@gentoo.org> pyxdg-0.4.ebuild:
+  Version bump, bug #44715.
 
 *pyxdg-0.3 (13 Sep 2003)
 
