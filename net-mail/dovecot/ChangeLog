@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.9 2004/06/12 14:46:51 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.10 2004/06/24 16:18:36 g2boojum Exp $
+
+*dovecot-0.99.10.6 (24 Jun 2004)
+
+  24 Jun 2004; Grant Goodyear <g2boojum@gentoo.org> +dovecot-0.99.10.6.ebuild:
+  Version bump (Thanks to Andreas Simon, Bug # 54826).
 
 *dovecot-0.99.10.5-r1 (12 Jun 2004)
 
