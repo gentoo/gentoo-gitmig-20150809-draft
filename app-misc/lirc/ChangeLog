@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.31 2004/07/29 04:24:12 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.32 2004/08/01 22:07:51 lanius Exp $
+
+*lirc-0.7.0_pre7 (02 Aug 2004)
+
+  02 Aug 2004; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0_pre7.ebuild:
+  version bump, make it work with 2.6 kernels, install graphics
 
   28 Jul 2004; Tom Gall <tgall@gentoo.org> lirc-0.7.0_pre6.ebuild:
   stable on ppc64, bug #55076
