@@ -1,0 +1,27 @@
+--- kaffe-1.1.3/libraries/extensions/sound/alsa/org_tritonus_lowlevel_alsa_AlsaPcmHWParams.c.ark 2003-12-09 15:24:29.000000000 +0100
++++ kaffe-1.1.3/libraries/extensions/sound/alsa/org_tritonus_lowlevel_alsa_AlsaPcmHWParams.c 2003-12-09 15:25:24.000000000 +0100
+@@ -20,6 +20,11 @@
+  *   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+  */
+ 
++/* The following is needed for ALSA 1.x and doesn't have any effect on
++ * ALSA 0.9.x
++ */
++#define ALSA_PCM_OLD_HW_PARAMS_API 1
++
+ #include "org_tritonus_lowlevel_alsa_AlsaPcmHWParams.h"
+ #include "common.h"
+ 
+--- kaffe-1.1.3/libraries/extensions/sound/alsa/org_tritonus_lowlevel_alsa_AlsaPcmSWParams.c.ark 2003-12-09 15:25:46.000000000 +0100
++++ kaffe-1.1.3/libraries/extensions/sound/alsa/org_tritonus_lowlevel_alsa_AlsaPcmSWParams.c 2003-12-09 15:26:09.000000000 +0100
+@@ -20,6 +20,11 @@
+  *   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+  */
+ 
++/* The following is required on ALSA 1.0.x and doesn't have any effect
++ * on ALSA 0.9.x
++ */
++#define ALSA_PCM_OLD_SW_PARAMS_API 1
++
+ #include "common.h"
+ #include "org_tritonus_lowlevel_alsa_AlsaPcmSWParams.h"
