@@ -1,4 +1,5 @@
-MD5 af9394a0734e5b35c118abe1ede11638 ChangeLog 407
-MD5 61cc1fcc6c151ee4159e9e1b105dcf03 cl-bouquet-0.1.ebuild 728
+MD5 f839874f57bb3a82997f98959710707a ChangeLog 700
+MD5 daa32d54adcde49161e048f0fa9dc2ca cl-bouquet-0.1.ebuild 816
 MD5 09550cbfcc213daad260827408043ccd metadata.xml 379
 MD5 be4bc91e4615ba8378b928d0fbf6049a files/digest-cl-bouquet-0.1 62
+MD5 bb0088f162051bf06e30c177a9a1a79c files/cl-bouquet-0.1-clisp-package-lock-gentoo.patch 932
