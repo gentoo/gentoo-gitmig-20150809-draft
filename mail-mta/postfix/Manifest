@@ -15,11 +15,10 @@ MD5 fd78f3c5211f280a77dc8c8acd3dd898 files/postfix-2.0.9-get-FQDN.patch 1057
 MD5 7923292c13473118323ceff84e770a1d files/digest-postfix-2.1.3 357
 MD5 78c16ededccb206774194bfe05475a99 files/mailer.conf 1547
 MD5 502e444ec6b9d6fb9bbef3bb0f5e284a files/smtp.pam 254
-MD5 803eb5ffc166aaaf2f3b78ddf71fe73d files/postfix-2.0.0/main.cf.diff 2382
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBhnHD5FrxP71izLARAhryAKDQYNAmi/TufJqRPTuIVGM5xq3A/ACfWTHv
-QgOdf8ArtEw/OwFTEHLVpj4=
-=qDmk
+iD8DBQFBhnIn5FrxP71izLARAtR9AJ4zkuG/IFZ3sFL4LdxnOmf6bzlIKACeKhO+
+0USRAmO/Oi4H/e1XqUanbo4=
+=Za66
 -----END PGP SIGNATURE-----
