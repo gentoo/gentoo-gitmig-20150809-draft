@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/fakenes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.6 2004/06/24 22:26:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.7 2004/09/02 02:06:22 vapier Exp $
+
+*fakenes-0.3.1 (01 Sep 2004)
+
+  01 Sep 2004; Mike Frysinger <vapier@gentoo.org> +fakenes-0.3.1.ebuild:
+  Version bump #55090 by Till Maas.
 
   22 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> fakenes-0.1.5.ebuild:
   sync IUSE; error check; tidy
