@@ -1,12 +1,16 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.13 2002/05/28 00:00:48 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.14 2002/05/28 02:08:11 spider Exp $
 
 *gtk+-1.2.10-r8 (27 May 2002)
 
   27 May 2002; Bruce A. Locke <blocke@shivan.org> gtk+-1.2.10-r8.ebuild:
 
   Ximian patch set and redhat/mdk patch merged
+
+*gtk+-2.0.2-r6 (27 May 2002)                                                    
+  27 May 2002; Spider <spider@gentoo.org> gtk+-2.0.2-r6.ebuild:
+  fix for the use png bug, not libtoolized  
 
 *gtk+-2.0.2-r5 (23 May 2002)                                                    
   23 May 2002; Spider <spider@gentoo.org> gtk+-2.0.2-r5.ebuild:
