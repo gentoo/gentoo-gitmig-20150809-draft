@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/omake
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.1 2004/09/10 10:38:21 mattam Exp $
+
+*omake-0.9.2 (10 Sep 2004)
+
+  10 Sep 2004; Matthieu Sozeau <mattam@gentoo.org> +metadata.xml,
+  +omake-0.9.2.ebuild:
+  OMake is a better make written in ocaml, used in the metaprl projects and
+  others. Ebuild submitted by Bardur Arantsson <gentoo@scientician.net>.
+
