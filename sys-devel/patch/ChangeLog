@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/patch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.18 2003/09/17 18:55:26 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.19 2003/10/20 15:06:48 mholzer Exp $
+
+  21 Oct 2003; Martin Holzer <mholzer@gentoo.org> patch-2.5.9.ebuild:
+  Adding gentoo mirrors. Closes #30106 .
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org> patch-2.5.9.ebuild :
   ia64 keywords.
