@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.57 2005/01/21 19:46:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.58 2005/01/21 19:54:00 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1357,7 +1357,10 @@ migrate_usr_x11r6_lib() {
 		if [ ! -L ${ROOT}usr/X11R6/lib ]; then
 			einfo "    /usr/X11R6/lib is a directory, migrating..."
 			# Move everything
-			mv -f ${ROOT}usr/X11R6/lib/* ${ROOT}usr/lib
+			mv -f \
+				${ROOT}usr/X11R6/lib/* \
+				${ROOT}usr/X11R6/lib/.* \
+				${ROOT}usr/lib
 			# Remove any floating .keep files so we can run rmdir
 			find ${ROOT}usr/X11R6/lib -name '\.keep' -exec rm -f {} \;
 			# Get rid of the directory
