@@ -24,7 +24,7 @@ PKGDIR=${PORTDIR}/packages
 RPMDIR=${PORTDIR}/rpm
 CURRENTFILE=${PORTDIR}/current-packages
 PLATFORM=$CHOST
-CONFIG_PROTECT="/etc /var/qmail/control /opt/kde2.1/share/config /opt/kde2.2/share/config"
+CONFIG_PROTECT="/etc /var/qmail/control /opt/kde2.1/share/config /opt/kde2.2/share/config /usr/share/config"
 
 # Options passed to make during the build process
 MAKEOPTS="-j2"
