@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.14 2005/02/04 22:41:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.15 2005/02/05 20:41:15 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs debug
 
@@ -14,22 +14,20 @@ GENTOO_PATCH_REV="r3"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${GENTOO_PATCH_REV}.patch.bz2"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha mips hppa ~ia64 amd64 ppc64"
+SLOT="0"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="selinux pam debug"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
 	selinux? ( sys-libs/libselinux )
 	pam? ( sys-libs/pam )"
-
 RDEPEND="!virtual/cron
 	>=sys-apps/cronbase-0.2.1-r3
 	 virtual/mta
 	 selinux? ( sys-libs/libselinux )
 	 pam? ( sys-libs/pam )"
-
 PROVIDE="virtual/cron"
 
 src_unpack() {
