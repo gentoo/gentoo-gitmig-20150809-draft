@@ -1,16 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.1-r1.ebuild,v 1.13 2004/07/29 02:35:28 tgall Exp $
-
-IUSE="X truetype"
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.1-r1.ebuild,v 1.14 2004/11/04 05:25:47 vapier Exp $
 
 DESCRIPTION="Korean Baekmuk Font"
-SRC_URI="http://gentoo.or.kr/distfiles/baekmuk-fonts/${P}.tar.gz"
 HOMEPAGE="http://kldp.net/projects/baekmuk/"
+SRC_URI="http://gentoo.or.kr/distfiles/baekmuk-fonts/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="BAEKMUK"
-KEYWORDS="ia64 x86 alpha ppc sparc hppa amd64 mips ppc64"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+IUSE="X truetype"
 
 DEPEND="virtual/x11
 	truetype? ( virtual/xft )"

@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.2.ebuild,v 1.7 2004/10/23 07:38:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.2.ebuild,v 1.8 2004/11/04 05:25:47 vapier Exp $
 
 inherit font
-
-IUSE="unicode X"
 
 TTF_P="${P/fonts/ttf}"
 BDF_P="${P/fonts/bdf}"
@@ -17,8 +15,9 @@ SRC_URI="X? ( http://kldp.net/download.php/1429/${TTF_P}.tar.gz )
 	unicode? ( http://chem.skku.ac.kr/~wkpark/baekmuk/iso10646/${UNI_P}.tar.bz2 )"
 
 LICENSE="BSD"
-KEYWORDS="~ia64 x86 alpha ppc sparc hppa amd64 ~mips ~ppc64 ~ppc-macos"
 SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 ~ppc-macos sparc x86"
+IUSE="unicode X"
 
 S="${WORKDIR}"
 
