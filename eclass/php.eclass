@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.19 2003/05/23 03:52:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.20 2003/05/23 16:25:46 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -48,7 +48,7 @@ DEPEND="${DEPEND}
     gd? ( media-libs/libgd >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
     gdbm? ( >=sys-libs/gdbm-1.8.0 )
     imap? ( >=net-mail/uw-imap-2001a-r1 )
-	java? ( >=virtual/jdk-1.4 )
+	java? ( =virtual/jdk-1.4* )
     jpeg? ( >=media-libs/jpeg-6b )
     ldap? ( >=net-nds/openldap-1.2.11 )
 	mcal? ( dev-libs/libmcal )
@@ -197,7 +197,7 @@ php_src_compile() {
 	use gd && myconf="${myconf} --with-gd=/usr"
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
 	use informix && [ -n "${INFORMIXDIR}" ] && myconf="${myconf} --with-informix=${INFORMIXDIR}"
-	use java && myconf="${myconf} --with-java=${JAVA_HOME}"
+	use java && myconf="${myconf} --with-java=${JAVA_HOME}" || myconf="${myconf} --without-java"
 	use jpeg && myconf="${myconf} --with-jpeg --with-jpeg-dir=/usr --enable-exif" || myconf="${myconf} --without-jpeg"
 	use jpeg && LDFLAGS="${LDFLAGS} -ljpeg"
 	use mcal && myconf="${myconf} --with-mcal=/usr"
