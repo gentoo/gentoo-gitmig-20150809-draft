@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.18 2003/09/07 00:22:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.19 2003/10/08 06:13:19 pappy Exp $
 
 IUSE="berkdb"
 
@@ -77,6 +77,8 @@ src_compile() {
 				${S}/modules/pam_pwdb/Makefile
 		fi
 	fi
+
+	has_version "sys-devel/hardened-gcc" && sed -i "s:-lpwdb:-lpwdb -lcrypt -L/lib -L/usr/lib:" ./configure
 
 	./configure --host=${CHOST} \
 		--prefix=/ \
