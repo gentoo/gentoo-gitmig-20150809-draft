@@ -32,18 +32,27 @@
                     (:file "swank"))
        :depends-on (#+sbcl sb-bsd-sockets)))
 
-#+sbcl  (define-swank-system "swank-sbcl" "swank-source-path-parser" "swank-gray")
-#+cmu   (define-swank-system "swank-source-path-parser" "swank-cmucl")
+#+sbcl  (define-swank-system "swank-sbcl" "swank-source-path-parser" 
+	  "swank-source-file-cache" "swank-gray")
+#+cmu   (define-swank-system "swank-source-path-parser" 
+	  "swank-source-file-cache" "swank-cmucl")
 #+clisp (define-swank-system "xref" "metering" "swank-clisp" "swank-gray")
 
 (in-package #:swank-loader)
 
-(defun user-init-file ()
-  "Return the name of the user init file or nil."
-  (probe-file (merge-pathnames (user-homedir-pathname)
-                               (make-pathname :name ".swank" :type "lisp"))))
+(defun load-user-init-file ()
+  "Load the user init file, return NIL if it does not exist."
+  (load (merge-pathnames (user-homedir-pathname)
+                         (make-pathname :name ".swank" :type "lisp"))
+        :if-does-not-exist nil))
+(export 'load-user-init-file)
 
-(when (user-init-file)
-  (load (user-init-file)))
+(defun load-site-init-file ()
+  (load (make-pathname :name "site-init" :type "lisp"
+                       :defaults *load-truename*)
+        :if-does-not-exist nil))
+
+(or (load-site-init-file)
+    (load-user-init-file))
 
 ;; swank.asd ends here
