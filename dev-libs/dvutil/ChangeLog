@@ -1,11 +1,20 @@
 # ChangeLog for dev-libs/dvutil
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.6 2004/03/14 12:10:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.7 2004/05/31 02:36:39 pvdabeel Exp $
+
+*dvutil-0.13.8 (31 May 2004)
+
+  31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> dvutil-0.12.10.ebuild,
+  dvutil-0.12.7.ebuild, dvutil-0.13.1.ebuild, dvutil-0.13.10.ebuild,
+  dvutil-0.13.11.ebuild, dvutil-0.13.12.ebuild, dvutil-0.13.13.ebuild,
+  dvutil-0.13.2.ebuild, dvutil-0.13.3.ebuild, dvutil-0.13.4.ebuild,
+  dvutil-0.13.6.ebuild, dvutil-0.13.7.ebuild, dvutil-0.13.8.ebuild:
+  QAed && version updates
 
 *dvutil-0.13.12 (14 Mar 2004)
 
-  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> dvutil-0.13.12.ebuild,
-  dvutil-0.13.3.ebuild, dvutil-0.13.6.ebuild, dvutil-0.13.7.ebuild:
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> 
+  dvutil-0.13.12.ebuild, dvutil-0.13.3.ebuild, dvutil-0.13.6.ebuild, dvutil-0.13.7.ebuild:
   don't assign to A; header fix
 
 *dvutil-0.13.7 (14 Jul 2003)
