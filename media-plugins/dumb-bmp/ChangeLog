@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/dumb-bmp
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-bmp/ChangeLog,v 1.1 2004/12/21 19:43:57 chainsaw Exp $
+
+*dumb-bmp-0.01 (21 Dec 2004)
+
+  21 Dec 2004; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +dumb-bmp-0.01.ebuild:
+  Initial commit. Ebuild submitted by will@johnstonclan.net in bug #75065.
+
