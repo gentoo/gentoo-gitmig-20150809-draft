@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.0.ebuild,v 1.1 2003/10/28 13:47:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.0.ebuild,v 1.2 2004/02/07 21:51:31 ferringb Exp $
 
 # Miller Puckette uses nonstandard versioning scheme that we have to crunch
 MY_P=`echo ${P} | sed 's/\.\([0-9]\+\)$/-\1/'`
@@ -22,12 +22,8 @@ DEPEND=">=dev-lang/tcl-8.3.3
 
 src_unpack() {
 	unpack ${A}
-
-#	cd ${S} || die
-#	epatch ${FILESDIR}/${PF}.patch
-
-#	cd src || die
-#	autoconf || die
+	cd ${S}
+	epatch ${FILESDIR}/${P}-jack-fix.patch || die "Jack-audio-connection-kit fix failed"
 }
 
 src_compile() {
