@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-3.11.02-r2.ebuild,v 1.1 2005/03/09 12:59:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-3.11.02-r2.ebuild,v 1.2 2005/03/18 14:14:26 mrness Exp $
 
 inherit flag-o-matic linux-mod
 
-DESCRIPTION="CAPI4Linux drivers for AVM Fritz!Card PCI for the 2.4 Kenrel series"
+DESCRIPTION="CAPI4Linux drivers for AVM Fritz!Card PCI for the 2.4 kernel series"
 HOMEPAGE="http://www.avm.de/"
 SRC_URI="ftp://ftp.avm.de/cardware/fritzcrd.pci/linux/suse.82/fcpci-suse8.2-0${PV}.tar.gz"
 

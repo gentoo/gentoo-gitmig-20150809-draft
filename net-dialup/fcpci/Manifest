@@ -1,4 +1,14 @@
-MD5 b6cfd10db028253299a95aad98c2aeea fcpci-3.11.02-r2.ebuild 1429
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 175237edeba848f1406662641b9d8197 ChangeLog 1695
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 8c811328221a305e056eda4a394c3b86 fcpci-3.11.02-r2.ebuild 1428
 MD5 e4cdfad1b954f1a2875dce5a65e1f64c files/digest-fcpci-3.11.02-r2 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCOuJNjiC39V7gKu0RAm//AKCEGiOaC0dXIttDe2P9PsHyuqRutQCgxOs+
+fd9tKkUPJo9mfnIO3bEctPU=
+=cTvD
+-----END PGP SIGNATURE-----
