@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.99 2005/03/22 15:17:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.100 2005/03/23 15:25:37 wolf31o2 Exp $
+
+  23 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org> files/securetty:
+  Added hvc0 to securetty for ppc64 serial console.
 
   22 Mar 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/shadow-4.0.7-lastlog.patch, shadow-4.0.7-r1.ebuild:

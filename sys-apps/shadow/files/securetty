@@ -27,3 +27,4 @@ tty12
 
 tts/0
 ttyS0
+hvc0
