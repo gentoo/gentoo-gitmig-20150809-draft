@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.03.ebuild,v 1.3 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.03.ebuild,v 1.4 2002/10/19 13:32:11 azarah Exp $
 
 IUSE="nls esd gnome oss"
 
@@ -14,10 +14,9 @@ SLOT="0"
 LICENSE="nt"
 
 DEPEND="=x11-libs/gtk+-1.2*
-	>=dev-libs/glib-1.2.10
+	=dev-libs/glib-1.2*
 	>=media-libs/gdk-pixbuf-0.2.5
 	esd? ( >=media-sound/esound-0.2.7 )"
-RDEPEND=${DEPEND}
 
 
 src_unpack() {
