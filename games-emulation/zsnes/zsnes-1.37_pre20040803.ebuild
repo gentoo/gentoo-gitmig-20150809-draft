@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040508.ebuild,v 1.8 2004/08/15 03:09:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040803.ebuild,v 1.1 2004/08/15 07:30:27 vapier Exp $
 
 inherit games eutils flag-o-matic
 
 DESCRIPTION="SNES (Super Nintendo) emulator that uses x86 assembly"
-HOMEPAGE="http://www.zsnes.com/ http://emuhost.com/ipher/zsnes/"
-SRC_URI="http://ipher.emuhost.com/files/zsnes/ZSNESS_${PV/*2004}.tar.bz2"
+HOMEPAGE="http://www.zsnes.com/ http://ipherswipsite.com/zsnes/"
+SRC_URI="http://www.ipherswipsite.com/files/zsnes/ZSNESS_${PV/*2004}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	sys-devel/automake
 	>=sys-devel/autoconf-2.58"
 
-S="${WORKDIR}"
+S="${WORKDIR}/${PN}"
 
 multilib_check() {
 	if has_m32 ; then
@@ -39,27 +39,15 @@ multilib_check() {
 
 src_unpack() {
 	unpack ${A}
-
-	local f
-	for f in * ; do
-		# bug with older bash #60138
-		[ "${BASH_VERSINFO}" == "3" ] \
-			&& mv ${f} ${f/zsnes\\} \
-			&& mv ${f} ${f/zsnes\\\\}
-	done
-
-	cd src
-	aclocal || die "aclocal failed"
-	env WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
+	cd ${S}/src
+	aclocal && autoconf || die "autotools failed"
 }
 
 src_compile() {
 	use amd64 && multilib_check
 
 	cd src
-	egamesconf \
-		$(use_with opengl) \
-		|| die
+	egamesconf $(use_with opengl) || die
 	emake || die "emake failed"
 }
 
