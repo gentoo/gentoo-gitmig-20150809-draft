@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.0-r1.ebuild,v 1.1 2002/04/01 00:57:52 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.0-r1.ebuild,v 1.2 2002/04/12 19:06:08 spider Exp $
 
 MY_P="${PN}-`echo ${PV} |sed -e 's:_::'`"
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gphoto.org/"
 
 DEPEND="virtual/glibc
 	>=dev-libs/libusb-0.1.5
-	>=dev-libs/glib-1.2.10
+	=dev-libs/glib-1.2*
 	>=sys-libs/zlib-1.1.4"
 
 

@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gphoto
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.1 2002/04/01 00:59:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.2 2002/04/12 19:06:08 spider Exp $
+
+
+  11 Apr 2002; Spider <spider@gentoo.org>
+  Update all glib dependencies to use glib-1.2*  in preparation of
+unmasking the glib-2.0.1 packages
+
 
 *gphoto2-2.0-r1 (01 April 2002)
   01 April 2002; Spider <spider@gentoo.org>
