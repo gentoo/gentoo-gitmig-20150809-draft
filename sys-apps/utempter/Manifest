@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0d4bf83c384a6dd38f94a93d4afdd903 ChangeLog 3403
+MD5 d8570e14072e7d364e2ed684c02fb361 utempter-0.5.5.5.ebuild 1197
 MD5 ead67259560e11f3f635a49255114bf6 metadata.xml 181
-MD5 2751f276e7e41a6113b453b1e783fab5 utempter-0.5.5.5.ebuild 1189
-MD5 dc3d73bd0115e70f177535c0fe0a0391 utempter-0.5.5.4.ebuild 1185
+MD5 2e12659dd7ec4d6c1374d06918cd0637 utempter-0.5.5.4.ebuild 1189
 MD5 d3293569252b4437ee84ef41b158aa00 files/digest-utempter-0.5.5.5 68
 MD5 b2dc09a11b51ceac5735f963a718fa32 files/utempter-0.5.3.2-soname-makefile-fix.patch 932
 MD5 d0e4e8890ac8dd494a927260b110b33a files/digest-utempter-0.5.5.4 68
 MD5 b2dc09a11b51ceac5735f963a718fa32 files/utempter-0.5.5.4-soname-makefile-fix.patch 932
 MD5 b2dc09a11b51ceac5735f963a718fa32 files/utempter-0.5.5.5-soname-makefile-fix.patch 932
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBVBtLHTu7gpaalycRAhGEAKDKXDmfNVWrelFzzgsfuJvSWsp+zQCg0B5W
-efLugpfZGGgRVW2kKqXncmk=
-=Fjdb
------END PGP SIGNATURE-----
