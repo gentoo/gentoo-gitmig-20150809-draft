@@ -29,3 +29,8 @@ net-misc/rsync
 app-editors/nano
 sys-apps/net-tools
 sys-apps/less
+sys-kernel/ksymoops
+sys-apps/module-init-tools
+sys-apps/modutils
+app-editors/vi
+
