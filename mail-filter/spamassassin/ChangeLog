@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-SpamAssassin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.2 2004/06/07 04:23:30 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.3 2004/06/08 20:50:13 rac Exp $
+
+  08 Jun 2004; Robert Coie <rac@gentoo.org> spamassassin-2.63.ebuild:
+  Add Time-Local and Getopt-Long to the stuff that perl can fill
 
   06 Jun 2004; Robert Coie <rac@gentoo.org> spamassassin-2.63.ebuild:
   Modify the File-Spec and MakeMaker deps to be fulfillable by >=perl-5.8.2-r1
