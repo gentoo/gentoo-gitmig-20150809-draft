@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0-r2.ebuild,v 1.13 2004/07/08 00:08:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0-r2.ebuild,v 1.14 2004/07/14 01:29:30 vapier Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Network Time Protocol suite/programs"
 HOMEPAGE="http://www.ntp.org/"
-SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${P}.tar.gz"
-#	mirror://gentoo/${PF}-manpages.tbz2"
+SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${P}.tar.gz
+	mirror://gentoo/${PF}-manpages.tbz2"
 
 LICENSE="as-is"
 SLOT="0"
@@ -85,7 +85,7 @@ src_install() {
 	make install DESTDIR=${D} || die
 
 	dodoc ChangeLog INSTALL NEWS README TODO WHERE-TO-START
-#	doman ${WORKDIR}/man/*.1
+	doman ${WORKDIR}/man/*.1
 	dohtml -r html/*
 
 	insinto /usr/share/ntp
