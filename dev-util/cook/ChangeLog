@@ -1,6 +1,13 @@
 # ChangeLog for dev-utils/cook
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/ChangeLog,v 1.1 2002/02/18 18:52:48 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/ChangeLog,v 1.2 2002/07/23 10:02:35 seemant Exp $
+
+*cook-2.20 (23 Jul 2002)
+
+  23 Jul 2002; Seemant Kulleen <seemant@gentoo.org> cook-2.20.ebuild
+  files/digest-cook-2.20 :
+  
+  Version bump, because cook-2.18 is no longer hosted upstream
 
 *cook-2.18 ( 18 Feb 2002 )
 
