@@ -3,7 +3,8 @@ portage-rescue package as follows for Gentoo Linux 1.0+ systems:
 
 # tar xjpUvf portage-rescue-1.8.16.tbz2 -C /
 
-That should get Portage up and running again.
+You'll see a warning about garbage at the end of the tarball/bzip2.  That's
+normal and not a problem.  That should get Portage up and running again.
 
 Best Regards,
 
