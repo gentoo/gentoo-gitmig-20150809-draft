@@ -308,10 +308,6 @@ x11-themes/gtk-xfce-engine
 # Testing...
 =net-ftp/kbear-2.0_beta1
 
-# Donny Davies <woodchip@gentoo.org> (03 Aug 2002)
-# Needs to wait for the next baselayout release.
-=net-misc/nut-0.50.1
-
 # <george@gentoo.org> (03 Aug 2002)
 # masked for testing.
 # PLEASE DO NOT UNMASK ON SERVER! Insted please let me know if it tested Ok
