@@ -31,9 +31,9 @@
 # Core Packages
 *>=sys-apps/baselayout-1.8.6
 *>=sys-apps/portage-2.0.48
-*>=sys-devel/binutils-2.14.90.0.6
-*>=sys-devel/gcc-3.3.2
-*>=sys-libs/glibc-2.3.2-r3
+*>=sys-devel/binutils-2.14.90.0.8
+*>=sys-devel/gcc-3.4.0-r6
+*>=sys-libs/glibc-2.3.4.20040602
 *>=sys-kernel/mips-headers-2.4.21
 *>=sys-devel/gnuconfig-20030708
 
@@ -88,12 +88,12 @@
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch
-*sys-libs/cracklib  
+*sys-libs/cracklib
 *sys-libs/db
 *>=sys-libs/ncurses-5.2-r2
-*sys-libs/pam     
-*sys-libs/pwdb      
-*sys-libs/readline  
+*sys-libs/pam
+*sys-libs/pwdb
+*sys-libs/readline
 *sys-libs/zlib
 *net-misc/openssh
 *virtual/dev-manager
