@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.37 2003/04/12 17:30:35 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.38 2003/04/15 07:18:33 cretin Exp $
 
 *wine-20020411 (11 Apr 2003)
+
+  15 Apr 2002; Stefan Jones <cretin@gentoo.org> wine-20020411.ebuild :
+  use strip-flags and remove unset CFLAGS CXXFLAGS
 
   12 Apr 2002; Tilman Klar <phoenix@gentoo.org> wine-20020411.ebuild :
   Tagged this version stable ("x86"). Added support for USE="nptl".
