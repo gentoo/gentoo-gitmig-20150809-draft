@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/files/phoenix-opt,v 1.1 2003/05/10 06:57:17 george Exp $
+
+# This is the Gentoo Phoenix startup script
+# Additions, suggestions?
+# contact phoen][x <phoenix@gentoo.org>
+
+export MOZILLA_FIVE_HOME="/opt/phoenix"
+PHOENIX_PATH="/opt/phoenix"
+
+if [ -z "`/bin/ps x | /bin/grep \"[0-9] ${PHOENIX_PATH}/phoenix-bin\"`" ]; then
+    # No phoenix running
+    ${PHOENIX_PATH}/phoenix $@
+else
+    # phoenix running - open a new window
+    ${PHOENIX_PATH}/phoenix -remote "openURL($@ ,new-window)"
+fi
