@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.12 2003/08/05 09:58:07 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.13 2003/08/11 08:58:22 jje Exp $
+
+*libvorbis-1.0-r4 (11 Aug 2003)
+
+  11 Aug 2003; jje <jje@gentoo.org> libvorbis-1.0-r4.ebuild:
+  More fun with simd patch. Now add -Dsimd-3dn if 3dnow. #26242.
+  
+  Also, filter -fomit-frame-pointer for k6 arches. #26239.
 
   05 Aug 2003; jje <jje@gentoo.org> libvorbis-1.0-r1.ebuild,
   libvorbis-1.0-r2.ebuild, libvorbis-1.0.ebuild, files/libvorbis-1.0-m4.patch,
