@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.8.4.ebuild,v 1.21 2004/11/12 15:00:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.8.4.ebuild,v 1.22 2005/01/10 14:20:27 twp Exp $
 
 DESCRIPTION="unit test framework for C"
 HOMEPAGE="http://sourceforge.net/projects/check/"
