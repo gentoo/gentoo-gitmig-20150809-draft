@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.12 2004/06/24 22:16:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.13 2004/07/10 11:27:10 slarti Exp $
+
+  10 Jul 2004; Tom Martin <slarti@gentoo.org> jail-1.9-r1.ebuild:
+  Marked ~amd64.
 
   18 Apr 2004; Daniel Black <dragonheart@gentoo.org> jail-1.9-r1.ebuild:
   Homedirectory move - ref bug #47792. Thanks Aaron Peterson <alpeterson@wsu.edu>

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.12 2004/06/28 03:43:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.13 2004/07/10 11:27:10 slarti Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/jail/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc"
