@@ -1,6 +1,6 @@
-# ChangeLog for app-games/heroes
+# ChangeLog for games-action/heroes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.2 2003/09/10 20:29:23 vapier Exp $
 
   21 May 2003; Martin Holzer <mholzer@gentoo.org> heroes-0.21.ebuild:
   Fixing typo. Closes #20412.
