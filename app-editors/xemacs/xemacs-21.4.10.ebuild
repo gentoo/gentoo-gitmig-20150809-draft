@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10.ebuild,v 1.1 2002/11/03 21:48:19 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10.ebuild,v 1.2 2002/11/05 15:08:41 stubear Exp $
 
-IUSE="gpm esd postgres xface nas X jpeg tiff png mule motif"
+IUSE="gpm esd postgres xface nas X jpeg tiff png mule motif canna"
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -41,7 +41,9 @@ RDEPEND="virtual/glibc
 	xface? ( media-libs/compface )
 	tiff? ( media-libs/tiff )
 	png? ( =media-libs/libpng-1.2* )
-	jpeg? ( media-libs/jpeg )"
+	jpeg? ( media-libs/jpeg )
+
+        canna? ( app-i18n/canna )"
 
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
@@ -103,7 +105,9 @@ src_compile() {
 		myconf="${myconf} --without-postgresql"
 	use mule && myconf="${myconf} --with-mule" ||
 		myconf="${myconf} --without-mule"
-	
+        use canna && myconf="${myconf} --with-canna" ||
+                myconf="${myconf} --without-canna"
+
 	local soundconf="native"
 
 	use nas	&& soundconf="${soundconf},nas"

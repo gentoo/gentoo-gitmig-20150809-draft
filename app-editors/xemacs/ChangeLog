@@ -1,8 +1,12 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.21 2002/11/03 21:48:19 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.22 2002/11/05 15:08:41 stubear Exp $
 
 *xemacs-21.4.10 (03 Nov 2002)
+
+  05 Nov 2002; Stuart Bouyer <stubear@gentoo.org> xemacs-2.4.10.ebuild :
+  Added support for Canna (Kanji <--> Kana conversion engine) for people
+  with canna in USE.
 
   03 Nov 2002; Arcady Genkin <agenkin@gentoo.org> xemacs-2.4.10.ebuild :
   Minor version bump.
