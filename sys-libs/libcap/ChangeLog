@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.32 2005/02/03 17:22:29 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.33 2005/02/09 23:06:17 vapier Exp $
+
+*libcap-1.10-r5 (09 Feb 2005)
+
+  09 Feb 2005; Mike Frysinger <vapier@gentoo.org> +libcap-1.10-r5.ebuild:
+  Make sure we install a linker script in /usr/lib alongside the static library.
 
   03 Feb 2005; <solar@gentoo.org> -libcap-1.10-r3.ebuild,
   libcap-1.10-r4.ebuild:
