@@ -1,6 +1,12 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.12 2004/02/09 08:29:46 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.13 2004/04/08 10:36:20 lanius Exp $
+
+*gv-3.5.8-r3 (08 Apr 2004)
+
+  08 Apr 2004; Heinrich Wendel <lanius@gentoo.org> gv-3.5.8-r2.ebuild,
+  gv-3.5.8-r3.ebuild, metadata.xml, files/gv-3.5.8-antialias.patch:
+  enable antialiasing by default, bug #45208
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> gv-3.5.8-r2.ebuild:
   marked stable amd64.

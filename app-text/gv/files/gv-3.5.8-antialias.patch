@@ -1,0 +1,11 @@
+--- source/gv_user_res.dat.org	2004-04-08 12:33:57.400203510 +0200
++++ source/gv_user_res.dat	2004-04-08 12:34:03.500279743 +0200
+@@ -8,7 +8,7 @@
+ GV.fallbackOrientation:	portrait
+ GV.swapLandscape:	False
+ GV.autoCenter:		True
+-GV.antialias:		False
++GV.antialias:		True
+ GV.respectDSC:		True
+ GV.ignoreEOF:		True
+ GV.confirmPrint:	True

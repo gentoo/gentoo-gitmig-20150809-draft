@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r2.ebuild,v 1.12 2004/04/08 10:36:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r3.ebuild,v 1.1 2004/04/08 10:36:20 lanius Exp $
 
 DESCRIPTION="standard ghostscript frontend used by programs like LyX"
 HOMEPAGE="http://wwwthep.physik.uni-mainz.de/~plass/gv/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gv/unix/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc amd64"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
 
 # There's probably more, but ghostscript also depends on it,
 # so I can't identify it
@@ -19,8 +19,9 @@ DEPEND="virtual/x11
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PF}-gentoo.diff
+	epatch ${FILESDIR}/${P}-r2-gentoo.diff
 	epatch ${FILESDIR}/${PV}-gcc3.patch
+	epatch ${FILESDIR}/${P}-antialias.patch
 }
 
 src_compile() {
