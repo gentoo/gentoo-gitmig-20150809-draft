@@ -1,10 +1,20 @@
-MD5 247a4e1ede4a56690ba028ab5534fde2 ChangeLog 4966
-MD5 90f661dd7cf7029a4c8f00b74da652e5 libsndfile-1.0.9.ebuild 758
-MD5 bfcdcbdea917b696ff7e03c25cf84323 libsndfile-1.0.5.ebuild 731
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d87bf8431374da0fd7018f755d2b766a ChangeLog 5064
+MD5 de05be3ae254d65ed16e3904d7727c80 libsndfile-1.0.11.ebuild 1072
 MD5 8b60e2e17a0b68294f919d3d25a26550 libsndfile-1.0.10.ebuild 1107
-MD5 c28caeded7e53caa2bffcb21b245575f libsndfile-1.0.11.ebuild 1073
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 bfcdcbdea917b696ff7e03c25cf84323 libsndfile-1.0.5.ebuild 731
+MD5 90f661dd7cf7029a4c8f00b74da652e5 libsndfile-1.0.9.ebuild 758
+MD5 03568645ed600c683b4289c8a28a3beb files/digest-libsndfile-1.0.11 69
 MD5 741beed3c7e02485d6a453ebefaa6f69 files/digest-libsndfile-1.0.9 68
 MD5 a2f27725a7da73281e185f3fed80c16c files/digest-libsndfile-1.0.10 69
 MD5 69310df3755bad8a23a2dd9de6425318 files/digest-libsndfile-1.0.5 68
-MD5 03568645ed600c683b4289c8a28a3beb files/digest-libsndfile-1.0.11 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCPID4ugEuf3OQ0akRAmkEAJ9HVFq6XhOddTKOEry8JN2DjH2cYwCfVSkA
+8b2KdnapUkvyBRaucQ8W38k=
+=H/b2
+-----END PGP SIGNATURE-----
