@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.25 2003/03/09 16:46:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.26 2003/03/30 19:13:09 azarah Exp $
+
+  30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> automake-1.7.2.ebuild :
+  Mark stable.  It had extensive testing, and it sorda goes with latest
+  autoconf, which was marked stable to fix bug #14663.
 
   09 Mar 2003; Martin Schlemmer <azarah@gentoo.org> files/am-wrapper.pl-1.7 :
   Some new stuff have AC_PREREQ in [].

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.23 2003/03/15 14:48:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.24 2003/03/30 19:12:43 azarah Exp $
+
+  30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> autoconf-2.57-r1.ebuild :
+  Mark stable.  It had some extensive testing, and it closes bug #14663.
 
 *autoconf-2.54-r1 (15 Mar 2003)
 *autoconf-2.57-r1 (15 Mar 2003)
