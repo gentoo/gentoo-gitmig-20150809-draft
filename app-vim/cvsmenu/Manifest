@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ebfea6b87254d9b27b2293fd40485537 cvsmenu-1.80.ebuild 453
-MD5 261abe46e51545d9f5d948380c348b53 ChangeLog 852
+MD5 e0eced58935eb2e98b0729ba1bc9b7bb cvsmenu-1.80.ebuild 459
+MD5 a6c6fdec8291bac3fc68fb4f475c1375 ChangeLog 936
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 34996b45620ab2f72d2df90eaf21f26b files/digest-cvsmenu-1.80 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBN80GLLFUmVNQ7rkRAvFxAKCHSqdv61nRIlYdgSoK9DRM7oU4NwCbBSL9
-xJ1WRjc7lhIPGwsdfi+Dw+E=
-=2njF
+iD8DBQFBfitACHk4+ZoBpvsRAnR2AJ4ubWBH6L8wwgtidJqVWENXMo4cNACeMOAy
+9Sh7FUqxXr9vJvWUK/9t1Bc=
+=O2pf
 -----END PGP SIGNATURE-----
