@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.6.0b-r3.ebuild,v 1.4 2003/09/04 01:08:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.6.0b-r3.ebuild,v 1.5 2003/09/21 10:11:45 aliz Exp $
 
 MY_P1=tcltk-${P}
 MY_P=${P/-/_}-1.1
 S=${WORKDIR}/${P}
 
 DESCRIPTION="Setup tool for WiNE adapted from Codeweavers by Debian"
-SRC_URI="http://ftp.debian.org/debian/pool/main/w/winesetuptk/${MY_P}.tar.gz"
+SRC_URI="mirror://debian/pool/main/w/winesetuptk/${MY_P}.tar.gz"
 HOMEPAGE="http://packages.debian.org/unstable/otherosfs/winesetuptk.html"
 
 SLOT="0"
