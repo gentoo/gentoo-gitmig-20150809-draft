@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r2.ebuild,v 1.4 2003/07/18 21:03:47 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r2.ebuild,v 1.5 2003/08/21 23:47:29 wwoods Exp $
 
 IUSE="X"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.isdn4linux.de/pub/isdn4linux/utils/${PN}.v3.2p1.tar.bz2"
 HOMEPAGE="http://www.isdn4linux.de/"
 
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 alpha"
 LICENSE="GPL-2"
 
 RDEPEND=">=sys-apps/portage-2.0.47-r10

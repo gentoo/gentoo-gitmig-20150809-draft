@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.7 2003/07/18 21:03:47 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.8 2003/08/21 23:47:29 wwoods Exp $
+
+  21 Aug 2003; Will Woods <wwoods@gentoo.org> isdn4k-utils-3.2_p1-r2.ebuild:
+  Marked stable for alpha
 
   18 Jul 2003; Olivier Crete <tester@gentoo.org>
   isdn4k-utils-3.2_p1-r2.ebuild, files/gcc33-multiline.patch:
