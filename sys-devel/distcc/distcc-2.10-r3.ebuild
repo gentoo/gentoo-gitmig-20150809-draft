@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.10-r3.ebuild,v 1.1 2003/09/15 04:46:59 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.10-r3.ebuild,v 1.2 2003/09/15 19:18:44 lisa Exp $
 
 inherit eutils gcc flag-o-matic
 [ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -102,6 +102,8 @@ pkg_postinst() {
 	einfo "http://www.gentoo.org/doc/en/distcc.xml"
 	echo ""
 	ewarn "As of 2.10-r3, DISTCC_DIR has been moved into /etc/make.conf."
+	ewarn 'A setting of: DISTCC_DIR=${PORTAGE_TMPDIR}/.distcc at the end of'
+	ewarn "/etc/make.conf is sufficient."
 	einfo "To use the distccmon programs with Gentoo you should use this command:"
 	einfo "   sudo -H -u portage distccmon-text OR sudo -H -u portage distccmon-gnome"
 }
