@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.3.0.ebuild,v 1.4 2004/06/26 10:23:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.3.0.ebuild,v 1.5 2004/06/28 08:05:01 usata Exp $
 
 inherit gnome2
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/x11
-	>=app-i18n/scim-0.9.0"
+	|| ( >=app-i18n/scim-0.9.0 app-i18n/scim-cvs )"
 
 SCROLLKEEPER_UPDATE="0"
 G2CONF="--disable-static"

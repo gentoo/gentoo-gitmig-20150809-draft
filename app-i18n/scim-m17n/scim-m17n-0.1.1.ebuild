@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/scim-m17n-0.1.1.ebuild,v 1.3 2004/06/26 10:15:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/scim-m17n-0.1.1.ebuild,v 1.4 2004/06/28 08:06:41 usata Exp $
 
 DESCRIPTION="scim-m17n is an input module for Smart Common Input Method (SCIM) which uses m17n as backend"
 HOMEPAGE="http://freedesktop.org/~suzhe/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~alpha"
 IUSE=""
 
-DEPEND=">=app-i18n/scim-0.99.0_pre20040614
+DEPEND="|| ( >=app-i18n/scim-0.99.0_pre20040614 app-i18n/scim-cvs )
 	>=dev-libs/m17n-lib-1.0.2-r1"
 
 src_compile() {
