@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d/sun-java3d-1.32.ebuild,v 1.2 2004/07/04 18:36:28 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.32.ebuild,v 1.1 2004/07/31 14:17:50 axxo Exp $
 
 MY_P="java3d-1_3_2-build4-linux-i586"
 DESCRIPTION="Sun Java3D"

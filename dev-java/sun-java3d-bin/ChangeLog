@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-java3d
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d/ChangeLog,v 1.2 2004/07/14 21:57:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/ChangeLog,v 1.1 2004/07/31 14:17:50 axxo Exp $
+
+*sun-java3d-bin-1.32 (31 Jul 2004)
+
+  31 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +sun-java3d-bin-1.32.ebuild:
+  move dev-java/sun-java3d dev-java/sun-java3d-bin
 
 *sun-java3d-1.32 (04 Jul 2004)
 
