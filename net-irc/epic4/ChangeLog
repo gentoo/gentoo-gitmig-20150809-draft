@@ -1,8 +1,19 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.7 2002/12/07 07:06:43 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.8 2003/02/10 04:59:51 seemant Exp $
 
-*epic4-1.1.7 (22 Oct 2002)
+*epic4-1.1.10 (09 Feb 2003)
+
+  03 Dec 2002; John M. Burks <nsx@rm-f.net> epic4-1.1.10.ebuild :
+  Added new version.  Also added --without-tcl, since it won't compile
+  properly if you do have tcl on your system.
+
+*epic4-1.1.7-r1 (22 Oct 2002)
+
+  03 Dec 2002; John M. Burks <nsx@rm-f.net> epic4-1.1.7-r1.ebuild :
+  Changed optimization flags to -O.  This was requested by hop himself.
+  Also changed the url for the help file to the most recent help file
+  available.  Added global script.
 
   07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> epic4-1.0.1-r1.ebuild :
   Changed sparc64 to sparc keyword
@@ -33,7 +44,10 @@
 
   Bumped to new version. Removed the "ppc" flag from KEYWORDS.
 
-*epic4-1.0.1-r1 (1 Feb 2002)
+*epic4-1.0.1-r2 (1 Feb 2002)
+
+  09 Feb 2003; John M. Burks <nsx@rm-f.net> : Use -O, always.  Also updated
+  url for the newest help file available.  Also added a global script.
 
   15 Nov 2002; phoen][x <phoenix@gentoo.org> epic4-1.0.1-r1.ebuild :
 
