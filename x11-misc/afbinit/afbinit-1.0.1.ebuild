@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/afbinit-1.0.1.ebuild,v 1.1 2003/05/28 00:59:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/afbinit-1.0.1.ebuild,v 1.2 2003/05/28 01:02:02 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://cvs.gentoo.org/~weeve/files/${P}.tar.bz2"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="-x86 -ppc -arm -mips -hppa ~sparc"
+KEYWORDS="~sparc -x86 -ppc -arm -mips -hppa"
 IUSE=""
 
 DEPEND="virtual/glibc"
