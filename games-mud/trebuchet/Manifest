@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 50fe328a24f0a18847028d26fed3f624 ChangeLog 430
+MD5 897298addd2f02b9deb5beb72fb68f97 ChangeLog 515
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 ed3bc71bc3dc2a0a8287a2acf6e5bea6 trebuchet-1.052.ebuild 1024
+MD5 4eb5c82e72c5eed040ad9d519e690293 trebuchet-1.052.ebuild 1029
 MD5 6fb348e7e1fb29fd451857f3a8955023 files/digest-trebuchet-1.052 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBHv7+HTu7gpaalycRAnZBAJ480jBerUSsOXb/ouFM/RgcKD7jEgCgic40
-+IBHW4DVMUrYQRTJ8lWWTp4=
-=EiUA
------END PGP SIGNATURE-----
