@@ -1,7 +1,27 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.4 2003/04/23 22:22:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.5 2003/04/24 10:16:42 robbat2 Exp $
+
+# This EBUILD is totally masked presently. Use it at your own risk.  I know it
+# is severely broken, but I needed to get a copy into CVS to pass around and
+# repoman was complaining at me too much
+
+# TODO LIST
+# * USE flags
+# - needs to get cleaned up
+# - dependancies on more things for correctness
+# - JPEG/PNG/CJK correctness checking
+# * SAPI choosing inside eclass
+# - effects configure line and install code
+# * Java still flakey
+# - look at the long gcc line with repeats of java stuff
+# - needs heavy testing
+# 
+#
+#
+#
+#
 
 inherit eutils flag-o-matic
 
@@ -17,9 +37,11 @@ S=${WORKDIR}/${MY_P}
 [ -z "$SRC_URI" ] 	&& SRC_URI="http://us3.php.net/distributions/${MY_P}.tar.bz2"
 [ -z "$PROVIDE" ]	&& PROVIDE="virtual/php"
 
-IUSE="${IUSE} X berkdb cjk crypt curl firebird flash freetds gd gdbm imap jpeg ldap libwww mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml xml2 java"
-#removed: java gmp
-#both cause breakage
+IUSE="${IUSE} berkdb cjk crypt curl exif firebird flash freetds gd gdbm imap java jpeg ldap libwww mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype X xml xml2 zlib"
+IUSE="${IUSE} phpbcmath phpbz2 phpcalender phpdbase phpftp phpiconv phpmimemagic phpsafemode phpsockets phpsysv phpwddx"
+
+#removed: gmp
+#causes breakage
 
 DEPEND="${DEPEND}
     X? ( virtual/x11 )
@@ -63,6 +85,10 @@ RDEPEND="${RDEPEND}
 replace-flags "-march=k6*" "-march=i586"
 
 php_src_unpack() {
+	ewarn "This EBUILD is totally masked presently. Use it at your own risk.  I know it"
+	ewarn "is severely broken, but I needed to get a copy into CVS to pass around and"
+	ewarn "repoman was complaining at me too much"
+	
     unpack ${MY_P}.tar.bz2
     cd ${S}
 
@@ -102,6 +128,7 @@ php_src_unpack() {
 
 }
 
+#export this here so we can use it
 myconf="${myconf}"
 
 php_src_compile() {
@@ -143,6 +170,7 @@ php_src_compile() {
 	use truetype && myconf="${myconf} --with-ttf --with-t1lib"
 	use xml2 && myconf="${myconf} --with-dom"
 	use zlib && myconf="${myconf} --with-zlib --with-zlib-dir=/usr/lib"
+	use exif && myconf="${myconf} --enable-exif"
 
 	# optional support for oracle oci8
 	use oci8 && [ -n "$ORACLE_HOME" ] && myconf="${myconf} --with-oci8=${ORACLE_HOME}"
@@ -169,32 +197,26 @@ php_src_compile() {
 		myconf="${myconf} --with-xslt-sablot" 
 		myconf="${myconf} --with-xmlrpc"
 	fi
-	
-	#use java && myconf="${myconf} --with-java=${JAVA_HOME}"
+
+	#local use flags
+	use phpbcmath && myconf="${myconf} --enable-bcmath"
+	use phpbz2 && myconf="${myconf} --with-bz2"
+	use phpcalender && myconf="${myconf} --enable-calendar"
+	use phpdbase && myconf="${myconf} --enable-dbase"
+	use phpftp && myconf="${myconf} --enable-ftp"
+	use phpiconv && myconf="${myconf} --with-iconv"
+	use phpmimemagic && myconf="${myconf} --enable-mime-magic"
+	use phpsafemode && myconf="${myconf} --enable-safe-mode"
+	use phpsockets && myconf="${myconf} --enable-sockets"
+	use phpsysv && myconf="${myconf} --enable-sysvsem --enable-sysvshm"
+	use phpwddx && myconf="${myconf} --enable-wddx"
 
 	myconf="${myconf} \
-		--enable-bcmath \
-		--enable-calendar \
-		--enable-dbase \
-		--enable-ftp \
-		--enable-exif \
 		--enable-inline-optimization \
-		--enable-sockets \
-		--enable-sysvsem \
-		--enable-sysvshm \
 		--enable-track-vars \
 		--enable-trans-sid \
 		--enable-versioning \
-		--with-config-file-path=/etc/php4 \
-		--with-bz2 \
-	"
-	#this is some stuff that MIGHT be questionable in some ebuilds
-	myconf="${myconf} \
-		--enable-wddx \
-		--host=${CHOST} \
-		--prefix=/usr"
-	#dev-php/php: wddx pear
-	#dev-php/mod_php: prefix host
+		--with-config-file-path=/etc/php4" 
 
 	econf \
 		${myconf} || die "bad ./configure"
@@ -203,9 +225,14 @@ php_src_compile() {
 
 }
 
+#export this here so we can use it
+installtargets="${installtargets}"
 
 php_src_install() {
 	addwrite /usr/share/snmp/mibs/.index
+
+	installtargets="${installtargets} install-pear install-headers install-programs install-build install-modules"
+	emake INSTALL_ROOT=${D} ${installtargets} || die
 	
 	# put make here
 
@@ -228,5 +255,7 @@ php_src_install() {
     #revert Pear patch
     rm ${D}/usr/lib/php/PEAR/Registry.php
     mv ${S}/pear/PEAR/Registry.old ${D}/usr/lib/php/PEAR/Registry.php
+
+
 	
 }
