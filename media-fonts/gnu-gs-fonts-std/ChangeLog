@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/gnu-gs-fonts-std
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-std/ChangeLog,v 1.6 2004/09/29 09:59:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-std/ChangeLog,v 1.7 2004/10/16 14:26:28 chrb Exp $
+
+  16 Oct 2004; Chris Bainbridge <chrb@gentoo.org>
+  gnu-gs-fonts-std-8.11.ebuild:
+  ftp site files have disappeared, changed to sourceforge gs ftp
 
 *gnu-gs-fonts-std-8.11 (29 Sep 2004)
 
