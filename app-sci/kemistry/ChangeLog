@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/kemistry
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/ChangeLog,v 1.7 2004/03/15 14:11:59 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/ChangeLog,v 1.8 2004/03/22 05:45:12 weeve Exp $
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> kemistry-0.7.ebuild:
+  Added ~sparc keyword.
 
   15 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> kemistry-0.6.ebuild,
   kemistry-0.7.ebuild:
