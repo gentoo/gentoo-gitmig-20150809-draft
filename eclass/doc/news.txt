@@ -1,25 +1,7 @@
 15/10
-v3.4
-Multiple qt version support.
-None of the primary eclasses defines any qt depends.
-Every ebuild inherits qt?.eclass (?=2,3...) which sets QTDIR and adds qt to
-DEPEND and RDEPEND.
-If you do not inherit this explicitly, you will get a QTDIR pointing to the qt
-installed last. On a qt2/3 system this breaks everything, but on current qt2-only
-systems it has no effect and gives us some time to fix all ebuilds. (Actually,
-I'll change them all myself; it's a part of this v3.4 commit.)
-In the next revision we will have qtXYZ.eclass which will work for >=qt-X.Y.Z.
-qt2.eclass currently defines >=qt-2.3.1-r2 which is the first version with the
-/etc/env.d multi-qt support.
-Right now, no one should install qt3. We're waiting for portage support for * deps.
-Without qt3 installed, the qt2 changes (which is all I'm committing right now)
-won't affect anything.
-The one exception are those who have a qt installed in /usr. These should merge
->=qt-2.3.1-r2 and unmerge the old version.
-qt libs are binary-incompatible between minor versions (the Y in x.Y.z). To allow
-peole with <qt-2.3 to avoid recompiling all their kde apps for the new qt-2.3.1, I will
-reintroduce ebuilds for qt 2.1.x and 2.2.x into cvs, with the multi-qt support
-(does anyone still use qt2.0?).
+Added some multi-QTDIR failsafes:
+myconf+=--with-qt-dir=${QTDIR}
+LIBRARY_PATH=${LIBRARY_PATH}:${QTDIR}/lib make
 
 ~12/10
 kde-objprelink-patch fixes

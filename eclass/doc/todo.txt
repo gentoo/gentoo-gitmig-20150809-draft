@@ -3,7 +3,7 @@ inverse section requests (I like fancy names)
 
 newdepend() in virtual.eclass, consider functions.eclass or similar
 
-decide where qt deps versioning should go
+finish multi-qt stuff
 
 koffice-i18n packages
 
