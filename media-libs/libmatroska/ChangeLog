@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.37 2004/11/14 09:24:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.38 2004/12/07 19:52:35 mholzer Exp $
+
+  07 Dec 2004; Martin Holzer <mholzer@gentoo.org> libmatroska-0.7.0.ebuild:
+  x86 stable.
 
   14 Nov 2004; Markus Rothe <corsair@gentoo.org> libmatroska-0.7.4.ebuild:
   Marked ~ppc64; bug #68112
