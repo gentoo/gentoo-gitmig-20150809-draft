@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.2 2004/05/26 01:00:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.3 2004/06/15 06:47:46 solar Exp $
 
 inherit flag-o-matic gcc gnuconfig eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/${PN}-ss${PV}-try.tar.bz2
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ppc ~sparc ~mips ~alpha arm hppa amd64 ~ia64 ppc64 s390"
-IUSE="static ipv6" #doc
+IUSE="static ipv6 uclibc" #doc
 
 DEPEND="virtual/glibc
 	virtual/os-headers
@@ -50,6 +50,9 @@ src_unpack() {
 	use ipv6 || sed -i -e 's:IPV6_TARGETS=:#IPV6_TARGETS=:' Makefile
 
 	sed -i "s:-ll:-lfl ${LDFLAGS}:" setkey/Makefile || die "sed setkey failed"
+
+	use uclibc && sed -e 's/sys_errlist\[errno\]/strerror(errno)/' -i ${S}/rdisc.c
+	use uclibc && epatch ${FILESDIR}/${PN}-20020927-no-ether_ntohost.patch
 }
 
 src_compile() {

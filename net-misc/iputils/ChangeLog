@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.27 2004/06/15 02:16:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.28 2004/06/15 06:47:46 solar Exp $
+
+  15 Jun 2004; <solar@gentoo.org> iputils-021109-r3.ebuild,
+  files/iputils-20020927-no-ether_ntohost.patch:
+  added patch to allow iputils to compile with uclibc
 
   14 Jun 2004; Aron Griffis <agriffis@gentoo.org> iputils-020927.ebuild:
   Fix use invocation
