@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.90.ebuild,v 1.1 2003/04/25 05:30:24 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.90.ebuild,v 1.2 2003/06/21 06:38:21 msterret Exp $
 
 DESCRIPTION="HP OfficeJet Linux driver"
 HOMEPAGE="http://hpoj.sourceforge.net/"
@@ -53,8 +53,9 @@ src_install() {
 	dohtml *html
 	cd ..
 	dodoc COPYING LICENSE LICENSE.OpenSSL README
-	dobin apps/xojpanel/xojpanel
-	insinto /usr/include
+	use qt && \
+		dobin apps/xojpanel/xojpanel \
+		insinto /usr/include
 	doins include/hpojip.h include/ptal.h
 	cd lib
 	dolib.so hpojip/libhpojip.so*
@@ -63,7 +64,6 @@ src_install() {
 	insinto /usr/lib/sane
 	doins sane/libsane-hpoj.so*
 	dodir /usr/lib/ghostscript/filt \
-	dosym \
 	/usr/lib/ghostscript/filt/bjc600 \
 	/usr/lib/ghostscript/filt/bjc600.1 \
 	/usr/lib/ghostscript/filt/bjc600.16 \
