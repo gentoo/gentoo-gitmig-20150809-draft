@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/cryptplug
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.24 2004/10/31 15:23:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.25 2004/11/15 20:53:02 dragonheart Exp $
+
+  16 Nov 2004; Daniel Black <dragonheart@gentoo.org> -cryptplug-0.3.15.ebuild,
+  -cryptplug-0.3.16.ebuild:
+  cleanup of old ebuilds that depend on old gpgme versions in the deletion queue
 
   31 Oct 2004; Tom Gall <tgall@gentoo.org> cryptplug-0.3.16-r1.ebuild:
   stable on ppc64, bug #64485
