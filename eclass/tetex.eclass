@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.34 2005/02/11 02:48:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.35 2005/02/18 14:22:21 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -83,6 +83,45 @@ tetex_src_unpack() {
 				unpack ${TETEX_TEXMF_SRC}
 			fi
 			unpack ${TETEX_TEXMF}
+
+			# create update script
+			cat >${T}/texmf-update<<'EOF'
+#!/bin/bash
+#
+# Utility to update Gentoo teTeX distribution configuration files
+#
+
+PATH=/bin:/usr/bin
+
+for conf in texmf.cnf fmtutil.cnf updmap.cfg
+do
+	if [ -d "/etc/texmf/${conf/.*/.d}" ]
+	then
+		echo "Generating /etc/texmf/web2c/${conf} from /etc/texmf/${conf/.*/.d} ..."
+		cat /etc/texmf/${conf/.*/.d}/* > "/etc/texmf/web2c/${conf}"
+	fi
+done
+
+# configure
+echo "Configuring teTeX ..."
+mktexlsr &>/dev/null
+texconfig-sys init &>/dev/null
+texconfig-sys confall &>/dev/null
+texconfig-sys font rw &>/dev/null
+texconfig-sys font vardir /var/cache/fonts &>/dev/null
+texconfig-sys font options varfonts &>/dev/null
+updmap-sys &>/dev/null
+
+# generate
+echo "Generating format files ..."
+fmtutil-sys --missing &>/dev/null
+echo
+echo "Use 'texconfig font ro' to disable font generation for users"
+echo
+EOF
+			if [ "${TETEX_PV}" == "2.0.2" ] ; then
+				sed -i -e "s/-sys//g" ${T}/texmf-update
+			fi
 			;;
 		patch)
 			# Do not run config. Also fix local texmf tree.
@@ -188,42 +227,7 @@ tetex_src_install() {
 			einfo "Installing teTeX ..."
 			dodir ${TEXMF_PATH:-/usr/share/texmf}/web2c
 			einstall bindir=${D}/usr/bin texmf=${D}${TEXMF_PATH:-/usr/share/texmf} || die
-			
-			# Install update script
-			cat >>${T}/texmf-update<<'EOF'
-#!/bin/bash
-#
-# Utility to update Gentoo teTeX distribution configuration files
-#
 
-PATH=/bin:/usr/bin
-
-for conf in texmf.cnf fmtutil.cnf updmap.cfg
-do
-	if [ -d "/etc/texmf/${conf/.*/.d}" ]
-	then
-		echo "Generating /etc/texmf/web2c/${conf} from /etc/texmf/${conf/.*/.d} ..."
-		cat /etc/texmf/${conf/.*/.d}/* > "/etc/texmf/web2c/${conf}"
-	fi
-done
-
-# configure
-echo "Configuring teTeX ..."
-mktexlsr &>/dev/null
-texconfig-sys init &>/dev/null
-texconfig-sys confall &>/dev/null
-texconfig-sys font rw &>/dev/null
-texconfig-sys font vardir /var/cache/fonts &>/dev/null
-texconfig-sys font options varfonts &>/dev/null
-updmap-sys &>/dev/null
-
-# generate
-echo "Generating format files ..."
-fmtutil-sys --missing &>/dev/null
-echo
-echo "Use 'texconfig font ro' to disable font generation for users"
-echo
-EOF
 			dosbin ${T}/texmf-update
 			;;
 		doc)
