@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/numarray
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.6 2004/06/25 01:35:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.7 2004/07/06 07:36:37 lucass Exp $
+
+*numarray-1.0 (06 Jul 2004)
+
+  06 Jul 2004; Lukasz Strzygowski <lucass@gentoo.org> metadata.xml,
+  +numarray-1.0.ebuild:
+  Version bump. Added commands to install whole documentation and examples.
+  Added long description to metadata.xml.
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> numarray-0.9.ebuild:
   adding s390 keywords
