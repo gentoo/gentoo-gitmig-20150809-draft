@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mnet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/ChangeLog,v 1.13 2004/04/27 01:07:23 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/ChangeLog,v 1.14 2004/04/28 15:59:30 dholm Exp $
+
+  28 Apr 2004; David Holm <dholm@gentoo.org> mnet-0.6.2.383.ebuild:
+  Added to ~ppc.
 
 *mnet-0.6.2.383 (26 Apr 2004)
 
