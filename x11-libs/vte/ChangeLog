@@ -1,7 +1,11 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.12 2003/02/12 09:24:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.13 2003/02/13 11:32:58 foser Exp $
 
+*vte-0.10.19 (13 Feb 2003)
+
+  13 Feb 2003; foser <foser@gentoo.org> vte-0.10.19.ebuild :
+  There we go again, fixed DOC to be DOCS
 
 *vte-0.10.17 (04 Feb 2003)
   
