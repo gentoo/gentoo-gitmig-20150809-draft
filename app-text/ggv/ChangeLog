@@ -1,17 +1,19 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.9 2002/06/28 08:58:23 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.10 2002/06/30 18:48:43 azarah Exp $
 
+*ggv-1.1.94 (30 Jun 2002)
+  30 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Slotify.
 
-
-ggv-1.99.7-r2 (22 Jun 2002)
+*ggv-1.99.7-r2 (22 Jun 2002)
   22 Jun 2002; Spider <spider@gentoo.org> ggv-1.99.7-r2.ebuild :
   removed >= on gtk-doc
 
   28 Jun 2002; Spider <spider@gentoo.org>
   updated to mirror://
   
-ggv-1.99.7-r1 (22 Jun 2002)
+*ggv-1.99.7-r1 (22 Jun 2002)
   22 Jun 2002; Spider <spider@gentoo.org> ggv-1.99.7-r1.ebuild :
   missed a libgnomeui dependency
 

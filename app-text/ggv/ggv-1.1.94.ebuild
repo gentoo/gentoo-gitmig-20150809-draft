@@ -1,13 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.1.94.ebuild,v 1.2 2002/03/29 00:15:56 seemant Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.1.94.ebuild,v 1.3 2002/06/30 18:48:43 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Ghostview"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
+SLOT="1"
+LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.4
 	bonobo? ( >=gnome-base/bonobo-1.0.19-r1 )"
@@ -16,7 +17,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	local myconf
+	local myconf=""
 
 	use nls || myconf="--disable-nls"
 	if use bonobo; then
@@ -60,3 +61,4 @@ pkg_postinst() {
 		# 2>/dev/null >/dev/null || exit 1
     assert "gconftool-1 execution failed"
 }
+
