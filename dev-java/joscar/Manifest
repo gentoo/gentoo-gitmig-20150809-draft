@@ -1,4 +1,4 @@
-MD5 c523474a26544868dd1d0f5831aa7059 files/digest-joscar-0.9.3 69
-MD5 45cbd6f76150a66b15a13af74133b76c ChangeLog 419
+MD5 ab6725a3557db63a499708841cfe4175 ChangeLog 538
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 557d6d01b237b3b6c68e73a5d8d7aeea joscar-0.9.3.ebuild 854
+MD5 310b501c21e0b35bc04376b17acb15ac joscar-0.9.3.ebuild 881
+MD5 c523474a26544868dd1d0f5831aa7059 files/digest-joscar-0.9.3 69
