@@ -1,6 +1,16 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.18 2004/11/24 17:37:27 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.19 2004/11/27 18:21:11 ciaranm Exp $
+
+*gentoo-syntax-20041127 (27 Nov 2004)
+
+  27 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +gentoo-syntax-20041127.ebuild:
+  New version. Changes include more make.conf error highlighting (CFLAGS="-s
+  -DNDEBUG", LDFLAGS), support for /etc/portage/mirrors (bug #72228) and
+  use.desc/use.local.desc, vim-* and bash-completion eclasses recognised,
+  consistent :BugSummary naming (bug #72001), faster :BugSummary and the
+  addition of :BugDetails, better function recognition (bug #72469).
 
 *gentoo-syntax-20041113 (24 Nov 2004)
 
