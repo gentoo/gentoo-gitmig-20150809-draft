@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.54 2004/03/19 08:48:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.55 2004/03/30 04:44:11 spyderous Exp $
+
+  29 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  mjpegtools-1.6.0-r7.ebuild, mjpegtools-1.6.1.90-r1.ebuild,
+  mjpegtools-1.6.1.90-r2.ebuild, mjpegtools-1.6.1.91.ebuild,
+  mjpegtools-1.6.1.92.ebuild, mjpegtools-1.6.1.93.ebuild,
+  mjpegtools-1.6.1.ebuild, mjpegtools-1.6.2-r1.ebuild,
+  mjpegtools-1.6.2.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   18 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
   mjpegtools-1.6.2-r1.ebuild:

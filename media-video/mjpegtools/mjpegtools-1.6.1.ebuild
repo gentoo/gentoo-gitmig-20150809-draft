@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.ebuild,v 1.11 2004/02/24 19:53:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.ebuild,v 1.12 2004/03/30 04:44:11 spyderous Exp $
 
 inherit gcc libtool flag-o-matic base
 
@@ -17,7 +17,7 @@ IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi"
 RDEPEND="media-libs/jpeg
 	media-libs/libpng
 	gtk? ( =x11-libs/gtk+-1.2* )
-	X? ( x11-base/xfree )
+	X? ( virtual/x11 )
 	sdl? ( media-libs/libsdl )
 	media-libs/libdv
 	arts? ( kde-base/arts )"

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.114 2004/03/23 16:27:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.115 2004/03/30 04:42:22 spyderous Exp $
+
+  29 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; mplayer-0.92.ebuild,
+  mplayer-1.0_pre2.ebuild, mplayer-1.0_pre3-r1.ebuild,
+  mplayer-1.0_pre3-r2.ebuild, mplayer-1.0_pre3.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   23 Mar 2004; Martin Holzer <mholzer@gentoo.org> mplayer-1.0_pre3-r2.ebuild,
   files/mplayer-1.0_pre3-xmms.patch:
