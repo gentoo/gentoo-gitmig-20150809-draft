@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-4.0_beta20031113.ebuild,v 1.3 2004/03/03 02:44:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-4.0_beta20031113.ebuild,v 1.4 2004/04/11 19:14:17 weeve Exp $
 
 inherit eutils
 IUSE="java tcpd"
@@ -31,7 +31,7 @@ KEYWORDS="-* ~amd64 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND=">=x11-base/xfree-4.2.1
+DEPEND="virtual/x11
 	~media-libs/jpeg-6b
 	sys-libs/zlib
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )
