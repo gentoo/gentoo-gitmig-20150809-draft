@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-wnck
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.5 2004/08/14 11:36:47 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.6 2004/12/20 10:29:23 mcummings Exp $
+
+  20 Dec 2004; Michael Cummings <mcummings@gentoo.org>
+  gnome2-wnck-0.04-r1.ebuild:
+  unmasking for x86
 
   14 Aug 2004; Tom Martin <slarti@gentoo.org> gnome2-wnck-0.04-r1.ebuild,
   gnome2-wnck-0.04.ebuild:
