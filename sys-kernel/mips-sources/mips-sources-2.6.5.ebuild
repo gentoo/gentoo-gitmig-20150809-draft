@@ -1,18 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.3-r2.ebuild,v 1.2 2004/03/08 09:21:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.5.ebuild,v 1.1 2004/04/16 01:25:20 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20040305"
-COBALTPATCHVER="1.1"
-IP32DIFFDATE="20040229"
+CVSDATE="20040412"
+COBALTPATCHVER="1.2"
+IP32DIFFDATE="20040402"
 [ "${USE_IP32}" = "yes" ] && EXTRAVERSION="-mipscvs-${CVSDATE}-ip32" || EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
-
-
-
 
 # Miscellaneous stuff
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
@@ -72,6 +69,12 @@ src_unpack() {
 
 	# Update the vanilla sources with linux-mips CVS changes
 	epatch ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff
+
+	# Bug in 2.6.5 that triggers a kernel oops when swap is activated
+	epatch ${FILESDIR}/mipscvs-${OKV}-swapbug-fix.patch
+
+	# Security Fixes
+	epatch ${FILESDIR}/CAN-2004-0109-2.6-iso9660.patch
 
 	# Cobalt Patches
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then

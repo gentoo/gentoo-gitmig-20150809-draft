@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r10.ebuild,v 1.4 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r11.ebuild,v 1.1 2004/04/16 01:25:20 kumba Exp $
 
 
 # Version Data
@@ -26,7 +26,8 @@ inherit kernel eutils
 # 4) do_brk fix
 # 5) mremap fix
 # 6) RTC fixes
-# 7) Patches for Cobalt support
+# 7) iso9660 fix
+# 8) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -53,6 +54,10 @@ src_unpack() {
 	# MIPS RTC Fixes (Fixes memleaks, backport from 2.4.24)
 	epatch ${FILESDIR}/rtc-fixes.patch
 
+	# Binutils-2.14.90.0.8 and does some magic with page alignment
+	# that prevents the kernel from booting.  This patch fixes it.
+	epatch ${FILESDIR}/mipscvs-${OKV}-no-page-align.patch
+
 	# Security Fixes
 	echo -e ""
 	ebegin "Applying Security Fixes"
@@ -60,6 +65,7 @@ src_unpack() {
 		epatch ${FILESDIR}/CAN-2003-0985-mremap.patch
 		epatch ${FILESDIR}/CAN-2004-0010-ncpfs.patch
 		epatch ${FILESDIR}/CAN-2004-0077-do_munmap.patch
+		epatch ${FILESDIR}/CAN-2004-0109-2.4-iso9660.patch
 	eend
 
 	# Cobalt Patches

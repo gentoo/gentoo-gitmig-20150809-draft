@@ -1,0 +1,11 @@
+--- arch/mips/Makefile.orig	2004-04-15 13:21:46.285315576 -0400
++++ arch/mips/Makefile		2004-04-15 13:21:57.202655888 -0400
+@@ -45,7 +45,7 @@ GCCFLAGS	:= -I $(TOPDIR)/include/asm/gcc
+ GCCFLAGS	+= -G 0 -mno-abicalls -fno-pic -pipe
+ GCCFLAGS	+= $(call check_gcc, -mabi=32,)
+ GCCFLAGS	+= $(call check_gcc, -finline-limit=100000,)
+-LINKFLAGS	+= -G 0 -static # -N
++LINKFLAGS	+= -G 0 -static -n
+ MODFLAGS	+= -mlong-calls
+ 
+ ifdef CONFIG_DEBUG_INFO

@@ -1,0 +1,27 @@
+diff -urN linux.cvs/include/asm-mips/pgtable-32.h linux.pdh/include/asm-mips/pgtable-32.h
+--- linux.cvs/include/asm-mips/pgtable-32.h	2004-03-11 16:46:57.000000000 +0000
++++ linux.pdh/include/asm-mips/pgtable-32.h	2004-04-15 19:22:17.000000000 +0100
+@@ -208,7 +208,7 @@
+ #define __swp_entry(type,offset)	((swp_entry_t) { ((type) << 1) | ((offset) << 10) })
+ #else
+ 
+-#define __swp_type(x)		(((x).val >> 1) & 0x1f)
++#define __swp_type(x)		(((x).val >> 1) & 0x07)
+ #define __swp_offset(x)		((x).val >> 8)
+ #define __swp_entry(type,offset)	((swp_entry_t) { ((type) << 1) | ((offset) << 8) })
+ #endif
+diff -urN linux.cvs/include/linux/swap.h linux.pdh/include/linux/swap.h
+--- linux.cvs/include/linux/swap.h	2004-03-01 14:06:13.000000000 +0000
++++ linux.pdh/include/linux/swap.h	2004-04-15 19:30:31.000000000 +0100
+@@ -11,7 +11,11 @@
+  * on 32-bit-pgoff_t architectures.  And that assumes that the architecture packs
+  * the type/offset into the pte as 5/27 as well.
+  */
++#ifdef CONFIG_MIPS
++#define MAX_SWAPFILES_SHIFT	3
++#else
+ #define MAX_SWAPFILES_SHIFT	5
++#endif
+ #define MAX_SWAPFILES		(1 << MAX_SWAPFILES_SHIFT)
+ 
+ #ifdef __KERNEL__

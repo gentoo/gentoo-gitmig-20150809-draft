@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25.ebuild,v 1.3 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25-r1.ebuild,v 1.1 2004/04/16 01:25:20 kumba Exp $
 
 
 # Version Data
@@ -24,7 +24,8 @@ inherit kernel eutils
 # 2) linux-mips.org CVS snapshot diff from 28 Nov 2003
 # 3) patch to fix arch/mips[64]/Makefile to pass appropriate CFLAGS
 # 4) patch to fix the mips64 Makefile to allow building of mips64 kernels
-# 5) Patches for Cobalt support
+# 5) iso9660 fix
+# 6) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -50,6 +51,13 @@ src_unpack() {
 
 	# Patch to fix mips64 Makefile so that -finline-limit=10000 gets added to CFLAGS
 	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-inlinelimit.patch
+
+	# Binutils-2.14.90.0.8 and does some magic with page alignment
+	# that prevents the kernel from booting.  This patch fixes it.
+	epatch ${FILESDIR}/mipscvs-${OKV}-no-page-align.patch
+
+	# Security Fixes
+	epatch ${FILESDIR}/CAN-2004-0109-2.4-iso9660.patch
 
 	# Cobalt Patches
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then

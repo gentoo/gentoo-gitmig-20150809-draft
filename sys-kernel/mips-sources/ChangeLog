@@ -1,6 +1,31 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.33 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.34 2004/04/16 01:25:20 kumba Exp $
+
+*mips-sources-2.6.4-r1 (15 Apr 2004)
+
+  15 Apr 2004; Joshua Kinard <kumba@gentoo.org> mips-sources-2.4.21-r7.ebuild,
+  mips-sources-2.4.21-r8.ebuild, mips-sources-2.4.22-r10.ebuild,
+  mips-sources-2.4.22-r11.ebuild, mips-sources-2.4.23-r6.ebuild,
+  mips-sources-2.4.23-r7.ebuild, mips-sources-2.4.25-r1.ebuild,
+  mips-sources-2.4.25.ebuild, mips-sources-2.6.3-r1.ebuild,
+  mips-sources-2.6.3-r2.ebuild, mips-sources-2.6.3-r3.ebuild,
+  mips-sources-2.6.3.ebuild, mips-sources-2.6.4-r1.ebuild,
+  mips-sources-2.6.4.ebuild, mips-sources-2.6.5.ebuild,
+  files/CAN-2004-0109-2.4-iso9660.patch,
+  files/CAN-2004-0109-2.6-iso9660.patch,
+  files/mipscvs-2.4.21-no-page-align.patch,
+  files/mipscvs-2.4.22-no-page-align.patch,
+  files/mipscvs-2.4.23-no-page-align.patch,
+  files/mipscvs-2.4.25-no-page-align.patch,
+  files/mipscvs-2.6.5-swapbug-fix.patch,
+  files/mipscvs-2.6.x-no-page-align.patch:
+  Fun fun updates. Added a patch to all ebuilds to patch a security vuln in
+  isofs (CAN-2004-0109); Added several patches for the various versions to tweak
+  the flags passed to the linker to request no page alignment. Without this
+  patch, binutils-2.14.90.0.8 and up will produce unbootable kernels. Lastly,
+  the final patch is for 2.6.5 which is a workaround for a BUG() call generated
+  in the swap code.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   mips-sources-2.4.22-r10.ebuild, mips-sources-2.4.23-r6.ebuild,
