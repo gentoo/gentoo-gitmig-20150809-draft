@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.1 2003/08/12 03:16:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.2 2003/10/31 18:19:06 caleb Exp $
+
+*smb4k-0.3.0a (31 Oct 2003)
+
+  31 Oct 2003; Caleb Tennis <caleb@gentoo.org> metadata.xml, smb4k-0.3.0a.ebuild:
+  Version bump
 
 *smb4k 0.2.1 (14 Jul 2003)
 
