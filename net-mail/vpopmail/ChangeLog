@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.42 2004/08/22 02:03:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.43 2004/08/22 04:19:30 weeve Exp $
+
+  21 Aug 2004; Jason Wever <weeve@gentoo.org> vpopmail-5.4.6-r1.ebuild:
+  Stable on sparc wrt security bug #60844.
 
 *vpopmail-5.4.6-r1 (21 Aug 2004)
 

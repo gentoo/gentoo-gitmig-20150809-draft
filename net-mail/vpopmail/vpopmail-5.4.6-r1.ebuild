@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.6-r1.ebuild,v 1.1 2004/08/22 02:03:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.6-r1.ebuild,v 1.2 2004/08/22 04:19:30 weeve Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~amd64 ppc"
+KEYWORDS="x86 sparc ~amd64 ppc"
 IUSE="mysql ipalias clearpasswd"
 # vpopmail will NOT build if non-root.
 RESTRICT="nouserpriv"
@@ -90,7 +90,7 @@ src_compile() {
 			--enable-auth-logging=y \
 			--enable-valias=y \
 			--enable-mysql-replication=n \
-			--enable-mysql-limits" 
+			--enable-mysql-limits"
 
 	# Bug 20127
 	use clearpasswd \
