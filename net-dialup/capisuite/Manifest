@@ -1,9 +1,16 @@
-MD5 1caa2544e416a5ee0cb1f4bc2eaf3702 ChangeLog 1172
-MD5 24332ce69c882d6bb66dafe08ded8569 capisuite-0.4.3.ebuild 1036
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1c9b1d3901ac58ccbd0022f6002a67f1 ChangeLog 1429
+MD5 f2cb66e8baf4ed633e761bf5f55faa03 capisuite-0.4.4.ebuild 1002
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 c530152797d417b1530bf04fc29a6aac capisuite-0.4.4.ebuild 1016
 MD5 a6bdc491a9d9a33c0f41c68f06a320ca files/capisuite 487
-MD5 8cf7cf4419129ea9e97fc080c15ba077 files/capisuite-0.4.3-gentoo.patch 2238
-MD5 bb4582d756f7452bbb11542fd3c7dc46 files/digest-capisuite-0.4.3 68
 MD5 bebbd5c8d5175a594c2764902f77cb3d files/capisuite-0.4.4-gentoo.patch 3668
 MD5 3a5b2463d3fa18ad6f1fcf5f800f14c8 files/digest-capisuite-0.4.4 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlzoejtv59x0+BrURAsvWAKCr4SQ8NM52usGmeAtSQvsCxiqnMgCeM2xh
+OFA1qMJLm8AaQJnlFmzI/ag=
+=GycJ
+-----END PGP SIGNATURE-----
