@@ -1,20 +1,27 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.6.5.ebuild,v 1.11 2005/02/27 14:35:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.3.ebuild,v 1.1 2005/02/27 14:35:58 mholzer Exp $
 
 IUSE=""
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Extensible binary format library (kinda like XML)"
-SRC_URI="http://matroska.free.fr/downloads/${PN}/${P}.tar.gz"
-HOMEPAGE="http://www.matroska.org"
+HOMEPAGE="http://www.matroska.org/"
+SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc amd64 alpha ~ia64 sparc ~hppa ~mips"
+SLOT="0"
+KEYWORDS="~x86 ~sparc ppc64 ~alpha ~ppc"
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/libebml-shared2.patch
+}
 
 src_compile() {
 	cd ${S}/make/linux
@@ -30,7 +37,7 @@ src_compile() {
 	make PREFIX=/usr || die "make failed"
 }
 
-src_install () {
+src_install() {
 	cd ${S}/make/linux
 	einstall libdir="${D}/usr/$(get_libdir)" || die "make install failed"
 	dodoc ${S}/LICENSE.*

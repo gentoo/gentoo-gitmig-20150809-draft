@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libebml
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.32 2004/12/29 22:21:22 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.33 2005/02/27 14:35:58 mholzer Exp $
+
+*libebml-0.7.3 (27 Feb 2005)
+
+  27 Feb 2005; Martin Holzer <mholzer@gentoo.org>
+  +files/libebml-shared2.patch, +libebml-0.7.3.ebuild:
+  Version bumped. Closes 81467.
+  Thx to Andre Hinrichs <andre.hinrichs@gmx.de>
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

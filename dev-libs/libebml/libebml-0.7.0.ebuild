@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.0.ebuild,v 1.10 2004/12/15 21:20:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.0.ebuild,v 1.11 2005/02/27 14:35:58 mholzer Exp $
 
 inherit flag-o-matic
 
