@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.4-r1.ebuild,v 1.2 2003/06/05 21:13:48 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.4-r1.ebuild,v 1.3 2003/06/06 02:32:18 lostlogic Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -60,11 +60,10 @@ src_compile() {
 		--with-kernel="${ROOT}usr/src/linux" \
 		--with-isapnp=yes \
 		--with-sequencer=yes \
-		--with-oss=yes \
 		--with-cards="${ALSA_CARDS}" \
 		|| die "./configure failed"
 	
-	make || die "Parallel Make Failed"
+	emake || die "Parallel Make Failed"
 }
 
 
