@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.3.ebuild,v 1.4 2002/08/18 15:29:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.3.ebuild,v 1.5 2002/09/11 20:32:32 gerk Exp $
 
 inherit libtool
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/glibc
 	xmms? ( media-sound/xmms )"
 
 DEPEND="${RDEPEND}
-	dev-lang/nasm 
+	x86? ( dev-lang/nasm ) 
 	sys-apps/gawk"
 
 src_compile() {
