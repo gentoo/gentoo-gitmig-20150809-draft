@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/estraier-1.2.16.ebuild,v 1.3 2004/08/07 21:28:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/estraier-1.2.16.ebuild,v 1.4 2004/08/10 08:09:46 hattya Exp $
 
-IUSE="debug kakasi chasen"
+IUSE="debug chasen kakasi zlib"
 
 DESCRIPTION="a personal full-text search system"
 HOMEPAGE="http://estraier.sourceforge.net/"
@@ -27,8 +27,8 @@ src_compile() {
 	if use chasen; then
 		myconf="`use_enable chasen`"
 
-	elif use kakashi; then
-		myconf="`use_enable kakashi`"
+	elif use kakasi; then
+		myconf="`use_enable kakasi`"
 
 	fi
 
