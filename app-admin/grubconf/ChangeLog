@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/grubconf
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/ChangeLog,v 1.1 2003/04/18 13:41:38 liquidx Exp $
+
+*grubconf-0.4 (18 Apr 2003)
+
+  18 Apr 2003; Alastair Tse <liquidx@gentoo.org> Manifest,
+  grubconf-0.4.ebuild:
+  initial ebuild. fixes #15318
+
