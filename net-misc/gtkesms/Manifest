@@ -1,5 +1,5 @@
-MD5 7d87e2dff106e7b0c0ab3acaf2e105ae gtkesms-0.0.4.ebuild 773
-MD5 f705bc86305d08d82bfc0e184a4cff9d ChangeLog 945
+MD5 8f55ee97f0b08454a63699566b55b093 gtkesms-0.0.4.ebuild 764
+MD5 3fd189a1d9b1c7bfbb2a5407b73c6ef3 ChangeLog 936
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ff8adaa49e9d9b1bf5eaf03a313a0762 files/gtkesms.patch 578
 MD5 dd89b19cdda5acd35bfc38f6422f01bc files/digest-gtkesms-0.0.4 64

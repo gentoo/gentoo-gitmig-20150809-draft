@@ -1,4 +1,4 @@
-MD5 edceb6041bb82334c3cd14c6de484ec2 files/digest-dcetest-2.0 56
-MD5 d6575f29ec733def5d1fe9990e658126 dcetest-2.0.ebuild 850
-MD5 c7353d06bfeff43d6586dbf4167ed246 ChangeLog 380
+MD5 e081bba1d2aa453c9bb447ca2af02d74 dcetest-2.0.ebuild 842
+MD5 c8228c0dc85e61b5206957f5fe277541 ChangeLog 372
 MD5 5c046bff4023d3cee12496e0821e498a metadata.xml 627
+MD5 edceb6041bb82334c3cd14c6de484ec2 files/digest-dcetest-2.0 56

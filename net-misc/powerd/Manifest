@@ -1,4 +1,4 @@
-MD5 bfd4f4b9c8a6b00566a0b044b2a052ca ChangeLog 605
-MD5 90d91b17653c26d88cf3d54859be09ab powerd-2.0.2.ebuild 949
+MD5 72fb151ac0b621b23bdff37068e9cba5 ChangeLog 597
+MD5 576426f472e4f73d0d810d74c5d9fbf4 powerd-2.0.2.ebuild 941
 MD5 e04b3f1b7350599bef3b1266737389a5 files/digest-powerd-2.0.2 63
-MD5 99d34953c53b61b81a2e72e95b8b45bd files/powerd-init 404
+MD5 f4d6983667e6d94943eb6ca7e6394d69 files/powerd-init 403
