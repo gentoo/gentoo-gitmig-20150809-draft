@@ -1,11 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.192 2004/08/15 17:56:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.193 2004/08/15 17:58:06 agriffis Exp $
 
   15 Aug 2004; Aron Griffis <agriffis@gentoo.org> mozilla-1.6-r1.ebuild,
   mozilla-1.7-r1.ebuild, mozilla-1.7.2.ebuild, mozilla-1.7.ebuild:
   Fix bug 60285: the negated conditions in DEPEND were expressed incorrectly,
-  for example \!moznoxft is wrong, it should be \!moznoxft?
+  for example !moznoxft is wrong, it should be !moznoxft?
 
   14 Aug 2004; <plasmaroo@gentoo.org> mozilla-1.7.2.ebuild:
   Marking stable on "x86"; bug #59419.
