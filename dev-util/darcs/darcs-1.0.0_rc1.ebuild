@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.0_rc1.ebuild,v 1.1 2004/08/23 12:45:34 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.0_rc1.ebuild,v 1.2 2004/08/24 07:40:06 kosmikus Exp $
 
 DESCRIPTION="David's Advanced Revision Control System is yet another replacement for CVS"
 HOMEPAGE="http://abridgegame.org/darcs"
@@ -26,6 +26,8 @@ S=${WORKDIR}/${P/_rc/rc}
 src_compile() {
 	local myconf
 #	myconf="`use_with wxwindows wx`"
+	# distribution contains garbage files
+	make clean || die "make clean failed"
 	if use doc ; then
 		mv GNUmakefile GNUmakefile.orig
 		cat GNUmakefile.orig \
@@ -40,9 +42,9 @@ src_compile() {
 			> configure
 		chmod u+x configure
 	fi
-	econf ${myconf} || die
+	econf ${myconf} || die "configure failed"
 	echo 'INSTALLWHAT=installbin' >> autoconf.mk
-	make all || die
+	make all || die "make failed"
 }
 
 src_install() {
