@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/mdidentd-1.04a.ebuild,v 1.4 2004/06/24 23:55:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/mdidentd-1.04a.ebuild,v 1.5 2004/07/01 21:28:10 squinky86 Exp $
 
 inherit eutils
 
+IUSE=""
 DESCRIPTION="This is an identd with provides registering of idents"
 HOMEPAGE="http://druglord.freelsd.org/ezbounce/"
 SRC_URI="http://druglord.freelsd.org/ezbounce/ezbounce-${PV}.tar.gz"
@@ -12,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
 S=${WORKDIR}/ezbounce-${PV}

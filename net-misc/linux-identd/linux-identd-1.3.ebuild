@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.3.ebuild,v 1.7 2004/06/24 23:54:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.3.ebuild,v 1.8 2004/07/01 21:26:15 squinky86 Exp $
 
+IUSE=""
 DESCRIPTION="A real IDENT daemon for linux."
 HOMEPAGE="http://www.fukt.bth.se/~per/identd"
 SRC_URI="http://www.fukt.bth.se/~per/identd/${P}.tar.gz"
@@ -10,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha ~hppa ~mips ~ia64 ~amd64"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	emake CEXTRAS="${CFLAGS}" || die

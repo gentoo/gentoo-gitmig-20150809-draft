@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/mmsclient-0.0.3-r1.ebuild,v 1.5 2004/06/24 23:56:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/mmsclient-0.0.3-r1.ebuild,v 1.6 2004/07/01 21:29:40 squinky86 Exp $
 
 inherit eutils
 
@@ -13,11 +13,11 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/gcc
 	sys-devel/automake
 	sys-devel/autoconf"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/mms_client-${PV}
 

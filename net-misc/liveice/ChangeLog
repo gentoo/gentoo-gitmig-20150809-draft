@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/liveice
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/liveice/ChangeLog,v 1.5 2004/06/24 23:54:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/liveice/ChangeLog,v 1.6 2004/07/01 21:27:17 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> liveice-2000530.ebuild:
+  change virtual/glibc to virtual/libc, add IUSE
 
   23 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   liveice-2000530.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mmsclient
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/ChangeLog,v 1.9 2004/06/24 23:56:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/ChangeLog,v 1.10 2004/07/01 21:29:40 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> mmsclient-0.0.3-r1.ebuild,
+  mmsclient-0.0.3.ebuild:
+  change virtual/glibc to virtual/libc, add IUSE
 
   28 Apr 2004; David Holm <dholm@gentoo.org> mmsclient-0.0.3-r1.ebuild:
   Added to ~ppc.
