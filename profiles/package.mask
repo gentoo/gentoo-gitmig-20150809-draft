@@ -124,7 +124,7 @@ app-admin/va-systemimager-client
 <media-video/avifile-0.7.0
 >=dev-lang/python-2.1
 >=sys-apps/texinfo-4.0c
->=media-libs/pdflib-4.0.0
+#>=media-libs/pdflib-4.0.0
 >=berlin-base/berlin-0.2.2
 
 # broken
@@ -250,7 +250,8 @@ gnome-apps/netleds_applet
 gnome-apps/gnapster
 
 # Breaks Evolution (gonna test to rebuild evo, just don't have time just now).
->=gnome-base/gconf-1.0.5
+# Hope 1.0.7 fixes the problem like stated by the author -- Azarah
+#>=gnome-base/gconf-1.0.5
 
 # Needs newer evo
 >=gnome-extra/gal-0.14
