@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.5.ebuild,v 1.1 2004/10/19 02:00:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.5.ebuild,v 1.2 2004/10/19 02:35:57 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -21,6 +21,7 @@ DEPEND="virtual/opengl
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
 	sed -i \
 		-e '/^CC/d' \
@@ -31,8 +32,9 @@ src_unpack() {
 		-e "/^HISCOREDIR = /s:./:${GAMES_STATEDIR}/${PN}/:" \
 		-e "/^CONFIGDIR = /s:./:${GAMES_SYSCONFDIR}/${PN}/:" \
 		-e "/^OVERRIDEDIR = /s:./data/:${GAMES_DATADIR}/${PN}/data/:" \
-		"${S}/makefile" \
+		makefile \
 		|| die "sed failed"
+	epatch "${FILESDIR}/${PV}-gcc34.patch"
 }
 
 src_install() {

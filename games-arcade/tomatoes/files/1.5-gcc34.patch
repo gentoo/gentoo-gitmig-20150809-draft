@@ -1,0 +1,20 @@
+--- src/texture.cpp_old	2004-10-19 01:30:14.744127000 +0900
++++ src/texture.cpp	2004-10-19 01:30:34.948055536 +0900
+@@ -108,7 +108,7 @@
+ 		SDL_LockSurface(img);
+ 
+ 	// Flip the surface pixels upside down
+-	Uint8 *line = new (Uint8)[img->w*img->format->BytesPerPixel];
++	Uint8 *line = new Uint8[img->w*img->format->BytesPerPixel];
+ 	if(!line)
+ 		error_msg("Unable to flip surface %s:\nOut of memory!\n");
+ 
+@@ -207,7 +207,7 @@
+ 		SDL_LockSurface(img);
+ 
+ 	// Flip the surface pixels upside down
+-	Uint8 *line = new (Uint8)[img->w*img->format->BytesPerPixel];
++	Uint8 *line = new Uint8[img->w*img->format->BytesPerPixel];
+ 	if(!line)
+ 		error_msg("Unable to flip surface %s:\nOut of memory!\n");
+ 
