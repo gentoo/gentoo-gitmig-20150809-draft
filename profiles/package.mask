@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@@gentoo.org> (8 Oct 2003)
+# python-2.2 python-2.3 integration ebuild
+>=sys-apps/portage-2.0.49-r11
+
 # <spyderous@gentoo.org> (8 Oct 2003)
 # New major version, masked for testing
 # on advice of robbat2.
