@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.34.ebuild,v 1.4 2003/09/18 18:42:02 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.34.ebuild,v 1.5 2003/10/06 07:38:03 kumba Exp $
 
 DESCRIPTION="Gentoo Linux USE flags editor"
 HOMEPAGE="http://www.gentoo.org"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa arm alpha amd64 ia64"
+KEYWORDS="x86 ppc sparc hppa arm alpha mips amd64 ia64"
 IUSE=""
 
 RDEPEND="dev-lang/perl
