@@ -9,7 +9,7 @@ MD5 b3e4e51616a061327b46cbd31132c8c8 files/generate-asm-sparc 1654
 MD5 00e5bea1e925c2d81d32191937eb8d5b files/linux26-headers-soundcard-ppc64.patch 631
 MD5 602f7309c0163c018627f06b5f1ace3a files/linux26-headers-2.6.8.1-arm-float.patch 640
 MD5 a73786f0b9dda7e9ebacb91a192384f9 files/linux26-headers-2.6.0-sysctl_h-compat.patch 352
-MD5 a8a3d9eac82bc360a11a23777343b736 files/linux26-headers-2.6.8.1-strict-ansi-fix.patch 4116
+MD5 57e8b81485f8a1ba10d41dd7949d40a8 files/linux26-headers-2.6.8.1-strict-ansi-fix.patch 4132
 MD5 d78e0d94873de4518bca401d5688401c files/linux26-headers-2.6.7-prefetch.patch 528
 MD5 6dd79a655f006aebb7206203f3654976 files/linux26-headers-2.6.7-generic-arm-prepare.patch 978
 MD5 fb33a0ba21375f190137b9f478ad9799 files/digest-linux26-headers-2.6.8.1-r1 146
