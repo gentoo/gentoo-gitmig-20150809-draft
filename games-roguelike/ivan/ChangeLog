@@ -1,6 +1,11 @@
 # ChangeLog for games-roguelike/ivan
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ChangeLog,v 1.4 2004/06/24 23:13:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ChangeLog,v 1.5 2004/12/11 06:51:14 mr_bones_ Exp $
+
+*ivan-0.50 (10 Dec 2004)
+
+  10 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +ivan-0.50.ebuild:
+  version bump; clean older version (not gcc-3.4 happy - bug #69416)
 
   15 Mar 2004; David Holm <dholm@gentoo.org> ivan-0.430.ebuild:
   Added to ~ppc.
