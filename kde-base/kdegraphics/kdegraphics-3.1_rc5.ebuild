@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1_rc5.ebuild,v 1.2 2002/12/09 14:28:47 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1_rc5.ebuild,v 1.3 2002/12/26 00:41:46 bjb Exp $
 inherit kde-dist 
 
 DESCRIPTION="KDE graphics-related apps"
 
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc alpha"
 
 newdepend "gphoto2? ( >=media-gfx/gphoto2-2.0_beta1 >=media-libs/libgpio-20010607 )
 	    sys-devel/perl

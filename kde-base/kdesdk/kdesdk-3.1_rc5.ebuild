@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.1_rc5.ebuild,v 1.1 2002/12/08 15:32:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.1_rc5.ebuild,v 1.2 2002/12/26 00:41:46 bjb Exp $
 inherit kde-dist 
 
 DESCRIPTION="KDE SDK: kbabel, ..."
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"

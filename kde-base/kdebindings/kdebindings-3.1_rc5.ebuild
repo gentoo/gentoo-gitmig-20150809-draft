@@ -1,12 +1,12 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1_rc5.ebuild,v 1.2 2002/12/13 21:07:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1_rc5.ebuild,v 1.3 2002/12/26 00:41:46 bjb Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist 
 
 DESCRIPTION="KDE library bindings for languages other than c++"
 
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 
 newdepend "~kde-base/kdebase-${PV}
 	=x11-libs/gtk+-1.2*
