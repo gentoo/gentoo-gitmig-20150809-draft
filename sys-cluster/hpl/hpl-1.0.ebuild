@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-1.0.ebuild,v 1.6 2004/07/15 02:55:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-1.0.ebuild,v 1.7 2004/12/28 22:05:47 ribosome Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 
 DEPEND="sys-cluster/mpich
 	app-sci/blas
-	dev-libs/atlas"
+	sci-libs/atlas"
 
 src_compile() {
 	cd ${WORKDIR}/hpl
