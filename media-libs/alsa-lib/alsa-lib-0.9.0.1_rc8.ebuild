@@ -1,12 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc8.ebuild,v 1.1 2003/03/03 16:10:35 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0.1_rc8.ebuild,v 1.1 2003/03/03 17:04:45 agenkin Exp $
 
 inherit libtool
 
+# 0.9.0rc8a translation
+MY_P=${PN}-0.9.0_rc8a
+
 DESCRIPTION="Advanced Linux Sound Architecture Library"
 HOMEPAGE="http://www.alsa-project.org/"
-SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${P/_rc/rc}.tar.bz2"
+SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${MY_P/_rc/rc}.tar.bz2"
 
 SLOT="0"
 KEYWORDS="~x86"
@@ -14,7 +17,7 @@ LICENSE="GPL-2 LGPL-2.1"
 
 DEPEND="virtual/glibc"
 
-S=${WORKDIR}/${P/_rc/rc}
+S=${WORKDIR}/${MY_P/_rc/rc}
 
 src_compile() {                           
 	elibtoolize

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.21 2003/03/03 16:10:35 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.22 2003/03/03 17:04:45 agenkin Exp $
+
+*alsa-lib-0.9.0.1_rc8 (03 Mar 2003)
+
+  03 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Update to rc8a.
 
 *alsa-lib-0.9.0_rc8 (03 Mar 2003)
 
