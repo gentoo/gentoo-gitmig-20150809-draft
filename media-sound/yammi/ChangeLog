@@ -1,0 +1,14 @@
+# ChangeLog for media-sound/yammi
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.1 2003/03/15 07:04:16 jje Exp $
+
+*yammi-0.7 (15 Mar 2003)
+
+  15 Mar 2003; jje <jje@gentoo.org> yammi-0.7.ebuild:
+  Initial Revision.
+  
+  Submitted by: Elias Probst <elias.probst@t-online.de>
+  
+  "Yammi is a Jukebox-Addon for XMMS and Noatun. It supports Ogg, MP3 and WAV
+  files. The GUI bases on QT3.x and it workes independent from KDE."
+
