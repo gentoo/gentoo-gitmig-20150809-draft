@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.87 2004/10/07 00:45:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.88 2004/10/07 05:45:51 pylon Exp $
+
+  07 Oct 2004; Lars Weiler <pylon@gentoo.org> cups-1.1.20-r3.ebuild:
+  Stable on ppc as requested in bug #66501.
 
   07 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> cups-1.1.20-r3.ebuild:
   Stable on alpha, bug 66501.
