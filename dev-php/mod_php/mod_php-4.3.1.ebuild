@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.5 2003/03/03 09:20:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.6 2003/03/03 13:28:41 vapier Exp $
 
 inherit flag-o-matic 
 
@@ -43,7 +43,7 @@ DEPEND=">=net-www/apache-1.3.26-r2
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
 	xml2? ( dev-libs/libxml2 )
-	crypt? ( >=dev-libs/libmcrypt-2.4
+	crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
 	spell? ( app-text/aspell )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	freetds? ( >=dev-db/freetds-0.53 )
