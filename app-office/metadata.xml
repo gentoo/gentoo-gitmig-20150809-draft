@@ -6,8 +6,12 @@
 		spreadsheets, presentation) software packages.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie app-office enthält Bürosoftware (Textverarbeitung,
-		Tabellenkalkulation, Präsentation).
+		Die Kategorie app-office enthÃ¤lt BÃ¼rosoftware (Textverarbeitung,
+		Tabellenkalkulation, PrÃ¤sentation).
+	</longdescription>
+	<longdescription lang="es">
+		La categoría app-office contiene paquetes de oficina 
+		(procesadores de palabras, hojas de balance, presentación).
 	</longdescription>
 </catmetadata>
 
