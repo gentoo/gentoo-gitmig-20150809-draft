@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.17 2005/01/07 16:43:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.18 2005/01/08 00:36:47 solar Exp $
+
+*madwifi-driver-0.1_pre20050107 (07 Jan 2005)
+
+  07 Jan 2005; <solar@gentoo.org> +madwifi-driver-0.1_pre20050107.ebuild:
+  - linux-mod update from Stefan Schweizer
 
 *madwifi-driver-0.1_pre20050106 (07 Jan 2005)
 

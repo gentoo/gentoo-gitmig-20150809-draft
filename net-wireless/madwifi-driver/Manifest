@@ -1,21 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 6770aa3ebc719dab2fd217e370f5ad2d madwifi-driver-0.1_pre20050107.ebuild 1513
 MD5 eb4537464be469fe1276078d9269910e madwifi-driver-0.1_pre20041019.ebuild 1971
 MD5 6d574164f80c5933ed699a6fede7d28e madwifi-driver-0.1_pre20050106.ebuild 2174
-MD5 a164005448b4adba47e9dc1ee743ea49 ChangeLog 3865
+MD5 25d6563bdfa01da9216858960e3b6fd1 ChangeLog 4030
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
 MD5 87299a7ead5bf030018e9fa58f2cdf86 files/digest-madwifi-driver-0.1_pre20041019 84
 MD5 07d3f62f481b9725f606d77cd023edd5 files/digest-madwifi-driver-0.1_pre20050106 84
+MD5 283e94543234c3f396d65824fbcccb32 files/digest-madwifi-driver-0.1_pre20050107 85
 MD5 807179e31533b4895664bff1421f4381 files/madwifi-multi-ssid-support.patch 3343
 MD5 d9ea69973349d71e055b16a64039f1b7 files/madwifi-driver-2.6.8-20040814-proc_dointvec.patch 1749
 MD5 444756b2062924ee7e0e631e956d46e9 files/madwifi-driver-0.1-arp-packets-33958.patch 704
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iQCVAwUBQd67hZ4WFLgrx1GWAQJr2QQArRsIqr2IB3FMgACaVR/PzbhxQ5UWuJkC
-4dZuCqqMF3YZXHI9kUQpw6IQG7rT60wz6Ol5uyeALdoLh7pBDQXzR8mRR7miOox4
-/QBphicnmTGYQz1Nj4c4h6cVZR+s+/H2skwMGU8J3s+9Cp74UyOTGiYXiVJHWUwU
-gZ+P+1cIO3c=
-=h0C7
+iQCVAwUBQd8qgZ4WFLgrx1GWAQJ4HwP+Jcln6IPGOTCdkQilka+O3vEes2SyPEHj
+vC4JH0JplS7KZFVoViQCl5BDUe526fZstNoyy2JfvcoABlOU3hvakr6LgkuZjxWd
+o6RSPPH9moT3Yt/D6msqX7wxxpSccLGGn49Ng8WMQuXF1ycXrAoqJDNYHx0zewNq
+g8TAxph3n44=
+=ZuKl
 -----END PGP SIGNATURE-----
