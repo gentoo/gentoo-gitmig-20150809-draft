@@ -1,6 +1,6 @@
 MD5 32c83ba8d5740758240e1208255ab4f9 exmh-2.5.ebuild 1280
 MD5 fb6d4bd81fe16e8527b9f96d14174b0d exmh-2.6.3.ebuild 1291
-MD5 c55adeab0e49ac1ea878594893249cb6 ChangeLog 1445
+MD5 cf4877fc9e369e93fc93b203d57ecbcc ChangeLog 1444
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 37e66dfd152725e587a2ac03b0cc505e files/exmh-2.6.3-conf.patch 2876
 MD5 3a53f493fcbb3584e5425aeeaac9d983 files/digest-exmh-2.5 60

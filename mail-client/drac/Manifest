@@ -1,6 +1,6 @@
 MD5 eedf8f46e186a1fd10598e819a354300 drac-1.12-r1.ebuild 1952
 MD5 dceaa5ac446c90c9a01444ac7654ab74 drac-1.12.ebuild 1627
-MD5 3b0520e02e6d61566466056a9d6db599 ChangeLog 1768
+MD5 e30ec23890be1213f95ff53da51a3481 ChangeLog 1765
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 478bde42ed4cbed7f9a62e34be244e68 files/digest-drac-1.12 54
 MD5 cfc3ac36408fc92b1bde9a5a59c0f80e files/drac_rotate 2540
