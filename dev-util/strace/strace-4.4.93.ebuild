@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.93.ebuild,v 1.1 2003/02/16 10:56:48 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.93.ebuild,v 1.2 2003/02/23 02:29:35 agriffis Exp $
 
 # NOTE: For some reason, upstream has changed the naming scheme
 # for the tarballs to something quite lame:
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa mips"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa mips"
 
 DEPEND="virtual/glibc >=sys-devel/autoconf-2.54"
 
