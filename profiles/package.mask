@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lanius@gentoo.org> (27 Jan 2004)
+# this is still in development
+=net-zope/plone-2.0.0_rc3
+
 # <humpback@gentoo.org> (26 Jan 2004)
 # Needs testing
 =net-im/jabber-server-1.4.3-r2
