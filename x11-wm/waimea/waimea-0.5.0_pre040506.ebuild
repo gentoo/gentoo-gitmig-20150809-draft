@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.2 2004/06/03 22:09:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.3 2004/06/05 00:31:44 weeve Exp $
 
 inherit eutils 64-bit
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.waimea.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE="truetype xinerama"
 
 DEPEND="virtual/x11
