@@ -1,0 +1,10 @@
+# ChangeLog for gnome-base/orbit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.1 2004/08/21 14:47:37 obz Exp $
+
+*orbit-2.10.4 (21 Aug 2004)
+
+  21 Aug 2004; Mike Gardiner <obz@gentoo.org> +metadata.xml, +orbit-2.10.4.ebuild:
+  First version using the amalgamated orbit ebuild, combining ORBit and ORBit2
+  and using slots
+
