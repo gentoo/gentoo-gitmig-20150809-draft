@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3583 2005/02/10 08:38:21 mkennedy Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3584 2005/02/10 12:38:28 wolf31o2 Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (10 Feb 2005)
+# Masked while waiting on security update. Bug #81344
+<app-emulation/vmware-workstation-4.9
 
 # Matthew Kennedy <mkennedy@gentoo.org> (10 Feb 2005)
 # Masked while waiting on apache module refresh
