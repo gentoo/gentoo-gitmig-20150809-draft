@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.2.1.ebuild,v 1.11 2003/03/04 19:12:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.2.1.ebuild,v 1.12 2003/03/06 09:30:21 vapier Exp $
 
 IUSE="doc"
 
@@ -44,6 +44,7 @@ kill_gconf () {
 	then
 		/usr/bin/gconftool-2 --shutdown
 	fi
+	return 0
 }
 
 pkg_setup () {
