@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.11.ebuild,v 1.1 2003/05/17 14:15:43 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.11.ebuild,v 1.2 2003/05/17 14:25:09 agenkin Exp $
 #
 # 1. static       # Statically linked libraries, default.
 # 2. shared-2.95  # Dynamically linked libaries, compiled with gcc 2.95.
@@ -9,6 +9,9 @@
 # Note that the default variant should work for everybody, and is the
 # least likely to cause you any grief.	Only change the variant if you
 # know what you are doing.
+#
+# Note 2: The OPERA_VARIANT mechanism is currently not working (everybody gets
+# the default variant).
 
 DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
