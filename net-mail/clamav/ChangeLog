@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/clamav
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.6 2003/06/27 13:01:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.7 2003/09/06 17:49:03 weeve Exp $
+
+  06 Sep 2003; Jason Wever <weeve@gentoo.org> clamav-0.60.ebuild:
+  Marked stable on sparc.
 
 *clamav-0.60 (19 Apr 2003)
 
