@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>karltk@gentoo.org</email>
-  <name>Karl Trygve Kalleberg</name>
-  <description>Maintainer</description>
-</maintainer>
+<herd>dev-tools</herd>
 <longdescription>
 The Eclipse Project is an open source project of eclipse.org, overseen by
 a Project Management Committee (PMC) and project leaders. The work is done
