@@ -1,6 +1,6 @@
-diff -ruN cyrus-imspd-v1.7-vanilla/Makefile.in cyrus-imspd-v1.7/Makefile.in
---- cyrus-imspd-v1.7-vanilla/Makefile.in	1997-10-28 19:12:07.000000000 -0800
-+++ cyrus-imspd-v1.7/Makefile.in	2003-09-10 13:24:02.000000000 -0700
+diff -ruN cyrus-imspd-v1.7a-vanilla/Makefile.in cyrus-imspd-v1.7a/Makefile.in
+--- cyrus-imspd-v1.7a-vanilla/Makefile.in	1997-10-28 19:12:07.000000000 -0800
++++ cyrus-imspd-v1.7a/Makefile.in	2003-09-10 13:24:02.000000000 -0700
 @@ -21,7 +21,7 @@
  # SOFTWARE.
  # 
@@ -10,49 +10,9 @@ diff -ruN cyrus-imspd-v1.7-vanilla/Makefile.in cyrus-imspd-v1.7/Makefile.in
  
  srcdir = @srcdir@
  VPATH = @srcdir@
-diff -ruN cyrus-imspd-v1.7-vanilla/SMakefile cyrus-imspd-v1.7/SMakefile
---- cyrus-imspd-v1.7-vanilla/SMakefile	1969-12-31 16:00:00.000000000 -0800
-+++ cyrus-imspd-v1.7/SMakefile	2003-09-10 13:42:02.000000000 -0700
-@@ -0,0 +1,36 @@
-+#
-+# This file is specific to Carnegie Mellon University's
-+# software build process
-+#
-+
-+echo aclocal -I cmulocal
-+aclocal -I cmulocal
-+echo autoconf
-+autoconf
-+echo autoheader
-+autoheader
-+
-+CC=gcc
-+WITHAUTH="--with-auth=krb_pts --with-krb=/usr/local --with-ldap=ldap"
-+
-+LIBS=""
-+case `uname` in
-+  Linux) CFLAGS="-O3" 
-+         LIBS="-ldbm" ;;
-+  SunOS)   
-+#           CFLAGS="-xO4 -xdepend"
-+	CC=gcc
-+	CFLAGS="-g -O2"
-+         ;;
-+  *)       CFLAGS=-g ;;
-+esac
-+export CFLAGS CC LIBS
-+
-+
-+MFCOMMAND="./configure"
-+
-+unset LD_LIBRARY_PATH
-+
-+LNCOMMAND="${LNCOMMAND} ; ${SRCDIR}/configure $WITHAUTH"
-+INSTCOMMAND="${MAKE} DESTDIR=${DESTDIR} prefix=${DESTDIR} exec_prefix=${DESTDIR} install"
-+
-diff -ruN cyrus-imspd-v1.7-vanilla/imsp/Makefile.in cyrus-imspd-v1.7/imsp/Makefile.in
---- cyrus-imspd-v1.7-vanilla/imsp/Makefile.in	2000-12-17 19:37:53.000000000 -0800
-+++ cyrus-imspd-v1.7/imsp/Makefile.in	2003-09-10 13:25:06.000000000 -0700
+diff -ruN cyrus-imspd-v1.7a-vanilla/imsp/Makefile.in cyrus-imspd-v1.7a/imsp/Makefile.in
+--- cyrus-imspd-v1.7a-vanilla/imsp/Makefile.in	2000-12-17 19:37:53.000000000 -0800
++++ cyrus-imspd-v1.7a/imsp/Makefile.in	2003-09-10 13:25:06.000000000 -0700
 @@ -48,8 +48,8 @@
  
  DEFS = @DEFS@ $(DEFINES)
@@ -64,10 +24,10 @@ diff -ruN cyrus-imspd-v1.7-vanilla/imsp/Makefile.in cyrus-imspd-v1.7/imsp/Makefi
  
  CFLAGS = @CFLAGS@
  LDFLAGS = @LDFLAGS@
-diff -ruN cyrus-imspd-v1.7-vanilla/imsp/abook.c cyrus-imspd-v1.7/imsp/abook.c
---- cyrus-imspd-v1.7-vanilla/imsp/abook.c	2000-12-17 17:47:03.000000000 -0800
-+++ cyrus-imspd-v1.7/imsp/abook.c	2003-09-10 13:27:47.000000000 -0700
-@@ -109,7 +109,7 @@
+diff -ruN cyrus-imspd-v1.7a-vanilla/imsp/abook.c cyrus-imspd-v1.7a/imsp/abook.c
+--- cyrus-imspd-v1.7a-vanilla/imsp/abook.c	2000-12-17 17:47:03.000000000 -0800
++++ cyrus-imspd-v1.7a/imsp/abook.c	2003-09-10 13:27:47.000000000 -0700
+@@ -108,7 +108,7 @@
      
      /* get the ACL */
      if (!acl && sdb_get(abooks, name, SDB_ICASE, &acl) < 0) return (0);
@@ -76,7 +36,7 @@ diff -ruN cyrus-imspd-v1.7-vanilla/imsp/abook.c cyrus-imspd-v1.7/imsp/abook.c
  
      /* check for administrator */
      if (auth_level(id) == AUTH_ADMIN) mask |= ACL_ALL;
-@@ -699,7 +699,7 @@
+@@ -700,7 +700,7 @@
  		    strcpy(tmpacl, "\t");
  		    tmpc = name[osrclen];
  		    name[osrclen] = '\0';
@@ -85,7 +45,7 @@ diff -ruN cyrus-imspd-v1.7-vanilla/imsp/abook.c cyrus-imspd-v1.7/imsp/abook.c
  		    name[osrclen] = tmpc;
  		}
  		value = tmpacl;
-@@ -928,7 +928,7 @@
+@@ -932,7 +932,7 @@
  		strcpy(acl, "\t");
  		tmpc = name[ownerlen];
  		name[ownerlen] = '\0';
@@ -94,7 +54,7 @@ diff -ruN cyrus-imspd-v1.7-vanilla/imsp/abook.c cyrus-imspd-v1.7/imsp/abook.c
  		name[ownerlen] = tmpc;
  	    }
  	} else {
-@@ -937,9 +937,9 @@
+@@ -941,9 +941,9 @@
  	}
  	/* update acl */
  	if (acl
@@ -107,7 +67,7 @@ diff -ruN cyrus-imspd-v1.7-vanilla/imsp/abook.c cyrus-imspd-v1.7/imsp/abook.c
  	    if (sdb_set(abooks, name, SDB_ICASE, acl) == 0) {
  		result = AB_SUCCESS;
  	    }
-@@ -962,7 +962,7 @@
+@@ -966,7 +966,7 @@
      char *name, *rights;
  {
      /* some more error checking might be in order... */
@@ -116,9 +76,9 @@ diff -ruN cyrus-imspd-v1.7-vanilla/imsp/abook.c cyrus-imspd-v1.7/imsp/abook.c
  
      return (AB_SUCCESS);
  }
-diff -ruN cyrus-imspd-v1.7-vanilla/imsp/authize.c cyrus-imspd-v1.7/imsp/authize.c
---- cyrus-imspd-v1.7-vanilla/imsp/authize.c	2003-08-06 09:56:53.000000000 -0700
-+++ cyrus-imspd-v1.7/imsp/authize.c	2003-09-10 13:28:11.000000000 -0700
+diff -ruN cyrus-imspd-v1.7a-vanilla/imsp/authize.c cyrus-imspd-v1.7a/imsp/authize.c
+--- cyrus-imspd-v1.7a-vanilla/imsp/authize.c	2003-08-06 09:56:53.000000000 -0700
++++ cyrus-imspd-v1.7a/imsp/authize.c	2003-09-10 13:28:11.000000000 -0700
 @@ -122,7 +122,7 @@
  
      /* Get an authentication state from the libcyrus "auth" module
@@ -128,9 +88,9 @@ diff -ruN cyrus-imspd-v1.7-vanilla/imsp/authize.c cyrus-imspd-v1.7/imsp/authize.
       * Free id->state in case this isn't the first authentication this session.
       */
      if (id->state)
-diff -ruN cyrus-imspd-v1.7-vanilla/imsp/bb.c cyrus-imspd-v1.7/imsp/bb.c
---- cyrus-imspd-v1.7-vanilla/imsp/bb.c	2000-02-10 14:10:21.000000000 -0800
-+++ cyrus-imspd-v1.7/imsp/bb.c	2003-09-10 13:28:37.000000000 -0700
+diff -ruN cyrus-imspd-v1.7a-vanilla/imsp/bb.c cyrus-imspd-v1.7a/imsp/bb.c
+--- cyrus-imspd-v1.7a-vanilla/imsp/bb.c	2000-02-10 14:10:21.000000000 -0800
++++ cyrus-imspd-v1.7a/imsp/bb.c	2003-09-10 13:28:37.000000000 -0700
 @@ -385,7 +385,7 @@
      struct auth_state *id;
      char *name, *acl;
@@ -140,13 +100,13 @@ diff -ruN cyrus-imspd-v1.7-vanilla/imsp/bb.c cyrus-imspd-v1.7/imsp/bb.c
      char *user = auth_username(id);
      int len = strlen(user);
  
-diff -ruN cyrus-imspd-v1.7-vanilla/imsp/imsp_server.c cyrus-imspd-v1.7/imsp/imsp_server.c
---- cyrus-imspd-v1.7-vanilla/imsp/imsp_server.c	2003-08-06 09:56:54.000000000 -0700
-+++ cyrus-imspd-v1.7/imsp/imsp_server.c	2003-09-10 13:30:25.000000000 -0700
-@@ -1272,7 +1272,7 @@
- 		    defacl = malloc(strlen(user) + 32);
+diff -ruN cyrus-imspd-v1.7a-vanilla/imsp/imsp_server.c cyrus-imspd-v1.7a/imsp/imsp_server.c
+--- cyrus-imspd-v1.7a-vanilla/imsp/imsp_server.c	2003-08-06 09:56:54.000000000 -0700
++++ cyrus-imspd-v1.7a/imsp/imsp_server.c	2003-09-10 13:30:25.000000000 -0700
+@@ -1273,7 +1273,7 @@
+ 		    defacl = malloc(defacllen);
  		    if (defacl) {
- 			sprintf(acl = defacl, "%s\t%s\t", user,
+ 			snprintf(acl = defacl, defacllen, "%s\t%s\t", user,
 -				acl_masktostr(ACL_ALL, rbuf));
 +				cyrus_acl_masktostr(ACL_ALL, rbuf));
  		    }

@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7-r1.ebuild,v 1.2 2003/11/04 05:11:59 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7a.ebuild,v 1.1 2004/01/15 00:44:15 max Exp $
 
-inherit ssl-cert
+inherit gnuconfig ssl-cert
 
 DESCRIPTION="Internet Message Support Protocol (IMSP) server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/"
@@ -14,6 +14,10 @@ KEYWORDS="x86"
 IUSE="kerberos ldap ssl"
 
 DEPEND="virtual/glibc
+	sys-devel/gnuconfig
+	sys-devel/autoconf
+	sys-devel/automake
+	sys-devel/libtool
 	>=sys-libs/db-3.2
 	>=dev-libs/cyrus-sasl-2.1.3
 	>=dev-libs/cyrus-imap-dev-2.1.14
@@ -26,20 +30,25 @@ S="${WORKDIR}/${PN}-v${PV}"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
-	epatch "${FILESDIR}/cyrus-imspd-gentoo.patch"
 	epatch "${FILESDIR}/cyrus-imspd-db4.patch"
+	epatch "${FILESDIR}/cyrus-imspd-gentoo.patch"
 
-	# cyrus 2.2.x has an extra library.
+	# Cyrus 2.2.x has an extra library.
 	if [ "`best_version '=dev-libs/cyrus-imap-dev-2.2*'`" ] ; then
 		sed -e "s:-lcyrus:-lcyrus -lcyrus_min:" \
 			-i "${S}/imsp/Makefile.in" \
 			-i "${S}/cmulocal/libcyrus.m4" || die "sed failed"
 	fi
 
-	# recreate configure.
+	export WANT_AUTOCONF_2_5=1
+	touch config.{guess,sub}
+	gnuconfig_update
+
+	# Recreate configure.
 	ebegin "Recreating configure"
 	rm -f configure acconfig.h
-	sh SMakefile &>/dev/null || die "SMakefile failed"
+	aclocal -I cmulocal && autoheader && autoconf || \
+		die "recreate configure failed"
 	eend $?
 }
 
@@ -70,7 +79,6 @@ src_install() {
 		newins "${FILESDIR}/stunnel.conf" imspd.conf
 
 		dosed "s:#IMSPD_USE_SSL:IMSPD_USE_SSL:" /etc/conf.d/imspd
-
 		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Cyrus IMSP Server}"
 		insinto /etc/ssl/imspd
 		docert server
