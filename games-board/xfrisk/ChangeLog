@@ -1,8 +1,11 @@
 # ChangeLog for games-board/xfrisk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xfrisk/ChangeLog,v 1.2 2003/09/10 20:23:04 vapier Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xfrisk/ChangeLog,v 1.3 2004/03/24 04:44:12 mr_bones_ Exp $
 
-  29 Jun 2003; <msterret@gentoo.org> xfrisk-1.2.ebuild:
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> xfrisk-1.2.ebuild:
+  don't rdepend on sed
+
+  29 Jun 2003; Michael Sterrett <mr_bones_@gentoo.org> xfrisk-1.2.ebuild:
   don't bother to sed the spec file since it's unused
   use sed -i
   added some more docs
