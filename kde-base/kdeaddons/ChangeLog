@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.35 2003/04/11 17:02:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.36 2003/04/23 19:49:33 danarmak Exp $
+
+*kdeaddons-3.1.1-r1 (23 Apr 2003)
+
+  23 Apr 2003; Dan Armak <danarmak@gentoo.org> Manifest,
+  kdeaddons-3.1.1-r1.ebuild, files/kdeaddons-3.1.1-enable-crashes.diff:
+  Enable building of the konqueror crashes plugin. This plugin was disabled by
+  mistake (by the kde developers) in the original kde 3.1 release and was
+  reenabled shortly afterwards in kde cvs. In the even of konqueror crashing,
+  the plugin will give you a list of the URLs you had open before the crash, so
+  you can resume browsing quickly. Not that konqueror ever crashes in Gentoo,
+  this is just for the sake of completeness :-)
 
 *kdeaddons-3.0.5b (08 Apr 2003)
 
