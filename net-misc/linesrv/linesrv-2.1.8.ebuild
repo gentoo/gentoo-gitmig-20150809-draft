@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.6-r1.ebuild,v 1.9 2004/04/01 17:27:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.8.ebuild,v 1.1 2004/04/01 17:27:05 mholzer Exp $
 
 IUSE="pam"
 
@@ -12,13 +12,13 @@ SRC_URI="mirror://sourceforge/linecontrol/${P}.src.tar.bz2"
 RESTRICT="nomirror"
 #windows client: http://people.ee.ethz.ch/~sfuchs/LineControl/down/wlc-122.zip
 
-DEPEND="virtual/glibc pam? ( >=sys-libs/pam-0.75 )"
-RDEPEND="virtual/glibc net-www/apache"
+DEPEND="virtual/glibc
+	pam? ( >=sys-libs/pam-0.75 )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc"
+KEYWORDS="~x86 ~sparc"
 
-[ -z "$HTTPD_ROOT" ] && HTTPD_ROOT=/home/httpd
+[ -z "$HTTPD_ROOT" ] && HTTPD_ROOT=/var/www/localhost
 
 src_unpack() {
 	unpack ${A}
@@ -27,14 +27,8 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use pam || myconf="--disable-pamauth"
-
-	./configure \
-	--prefix=/usr \
-	--mandir=/usr/share/man \
-	--infodir=/usr/share/info \
-	--host=${CHOST} ${myconf} || die "bad configure"
-
-	make CFLAGS="${CFLAGS}" || die
+	econf ${myconf} || die "bad configure"
+	emake || die
 }
 
 src_install() {
@@ -43,7 +37,7 @@ src_install() {
 	dosbin server/linesrv
 
 	exeinto ${HTTPD_ROOT}/cgi-bin ; doexe lclog/lclog htmlstatus/htmlstatus
-	chmod 4755 ${HTTPD_ROOT}/cgi-bin/htmlstatus
+	chmod 4755 ${D}${HTTPD_ROOT}/cgi-bin/htmlstatus
 	insinto ${HTTPD_ROOT}/htdocs/lclog ; doins lclog/html/*
 
 	mknod ${D}/usr/share/linesrv/logpipe p
