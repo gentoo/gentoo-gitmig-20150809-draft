@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.18 2005/02/03 05:52:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.19 2005/02/09 03:22:25 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -88,6 +88,11 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 
 ### END DOCUMENTATION ###
 
+# Defaults:
+CFLAGS_default=""
+LIBDIR_default="${CONF_LIBDIR:-lib}"
+CDEFINE_default="__unix__"
+
 # has_multilib_profile()
 has_multilib_profile() {
 	[ -n "${MULTILIB_ABIS}" -a "${MULTILIB_ABIS}" != "${MULTILIB_ABIS/ /}" ]
@@ -107,23 +112,17 @@ has_multilib_profile() {
 #   depend on a newer version of portage (not yet released) which uses these
 #   over CONF_LIBDIR in econf, dolib, etc...
 get_libdir() {
-	LIBDIR_TEST=$(type econf)
-	if [ ! -z "${CONF_LIBDIR_OVERRIDE}" ] ; then
+	local CONF_LIBDIR
+	if [ -n  "${CONF_LIBDIR_OVERRIDE}" ] ; then
 		# if there is an override, we want to use that... always.
-		CONF_LIBDIR="${CONF_LIBDIR_OVERRIDE}"
-	elif [ -n "$(get_abi_LIBDIR)" ]; then
-		CONF_LIBDIR="$(get_abi_LIBDIR)"
-	elif [ "${LIBDIR_TEST/CONF_LIBDIR}" == "${LIBDIR_TEST}" ]; then # we don't have CONF_LIBDIR support
-		# will be <portage-2.0.51_pre20
-		CONF_LIBDIR="lib"
+		echo ${CONF_LIBDIR_OVERRIDE}
+	else
+		get_abi_LIBDIR
 	fi
-	# and of course, default to lib if CONF_LIBDIR isnt set
-	echo ${CONF_LIBDIR:=lib}
-	unset LIBDIR_TEST
 }
 
 get_multilibdir() {
-	if [ -n "$(get_abi_LIBDIR)" ]; then
+	if has_multilib_profile; then
 		eerror "get_multilibdir called, but it shouldn't be needed with the new multilib approach.  Please file a bug at http://bugs.gentoo.org and assign it to eradicator@gentoo.org"
 		exit 1
 	fi
@@ -142,12 +141,13 @@ get_multilibdir() {
 #
 # Travis Tilley <lv@gentoo.org> (31 Aug 2004)
 get_libdir_override() {
-	if [ -n "$(get_abi_LIBDIR)" ]; then
+	if has_multilib_profile; then
 		eerror "get_libdir_override called, but it shouldn't be needed with the new multilib approach.  Please file a bug at http://bugs.gentoo.org and assign it to eradicator@gentoo.org"
 		exit 1
 	fi
 	CONF_LIBDIR="$1"
 	CONF_LIBDIR_OVERRIDE="$1"
+	LIBDIR_default="$1"
 }
 
 # get_abi_var <VAR> [<ABI>]
@@ -174,7 +174,7 @@ get_abi_var() {
 	elif [ -n "${DEFAULT_ABI}" ]; then
 		abi=${DEFAULT_ABI}
 	else
-		return 1
+		abi="default"
 	fi
 
 	local var="${flag}_${abi}"
@@ -191,8 +191,8 @@ get_install_abis() {
 	local order=""
 
 	if [ -z "${MULTILIB_ABIS}" ]; then
-		echo "NOMULTILIB"
-		return 1
+		echo "default"
+		return 0
 	fi
 
 	if hasq multilib-pkg-force ${RESTRICT} || 
@@ -231,8 +231,8 @@ get_all_abis() {
 	local order=""
 
 	if [ -z "${MULTILIB_ABIS}" ]; then
-		echo "NOMULTILIB"
-		return 1
+		echo "default"
+		return 0
 	fi
 
 	for x in ${MULTILIB_ABIS}; do
@@ -259,7 +259,7 @@ get_all_libdirs() {
 			[ "$(get_abi_LIBDIR ${abi})" != "lib" ] && libdirs="${libdirs} $(get_abi_LIBDIR ${abi})"
 		done
 	elif [ -n "${CONF_LIBDIR}" ]; then
-		for dir in ${CONF_LIBDIR} ${CONF_MULTILIBDIR:=lib32}; do
+		for dir in ${CONF_LIBDIR} ${CONF_MULTILIBDIR:-lib32}; do
 			[ "${dir}" != "lib" ] && libdirs="${libdirs} ${dir}"
 		done
 	fi
