@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-0.98.ebuild,v 1.6 2005/03/27 15:17:22 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-0.98.ebuild,v 1.7 2005/03/30 05:10:28 vapier Exp $
 
 inherit findlib
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://ocamlnet.sourceforge.net"
 SRC_URI="mirror://sourceforge/ocamlnet/${P}.tar.gz"
 
 LICENSE="as-is"
-KEYWORDS="ppc x86 ~amd64"
 SLOT="0"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-ml/pcre-ocaml-4.31.0"
