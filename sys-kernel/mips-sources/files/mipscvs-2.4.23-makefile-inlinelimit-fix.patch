@@ -1,0 +1,35 @@
+--- arch/mips/Makefile.orig	2004-02-09 23:36:46.057901728 -0500
++++ arch/mips/Makefile	2004-02-09 23:38:33.666542728 -0500
+@@ -682,5 +682,6 @@ archmrproper:
+ archdep:
+ 	if [ ! -f $(TOPDIR)/include/asm-$(ARCH)/offset.h ]; then \
+ 		touch $(TOPDIR)/include/asm-$(ARCH)/offset.h; \
++		$(MAKE) -C arch/mips/tools clean; \
+ 	fi;
+ 	@$(MAKEBOOT) dep
+--- arch/mips64/Makefile.orig	2004-02-09 23:36:51.882016328 -0500
++++ arch/mips64/Makefile	2004-02-09 23:38:02.482283456 -0500
+@@ -24,6 +24,8 @@ ifdef CONFIG_CROSSCOMPILE
+ CROSS_COMPILE	= $(tool-prefix)
+ endif
+ 
++check_gcc = $(shell if $(CC) $(1) -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then echo "$(1)"; else echo "$(2)"; fi)
++
+ #
+ # The ELF GCC uses -G 0 -mabicalls -fpic as default.  We don't need PIC
+ # code in the kernel since it only slows down the whole thing.  For the
+@@ -47,7 +49,6 @@ GCCFLAGS	+= -mno-sched-prolog -fno-omit-
+ endif
+ endif
+ 
+-check_gcc = $(shell if $(CC) $(1) -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then echo "$(1)"; else echo "$(2)"; fi)
+ 
+ #
+ # CPU-dependent compiler/assembler options for optimization.
+@@ -367,5 +368,6 @@ archmrproper:
+ archdep:
+ 	if [ ! -f $(TOPDIR)/include/asm-$(ARCH)/offset.h ]; then \
+ 		touch $(TOPDIR)/include/asm-$(ARCH)/offset.h; \
++		$(MAKE) -C arch/mips/tools clean; \
+ 	fi;
+ 	@$(MAKEBOOT) dep

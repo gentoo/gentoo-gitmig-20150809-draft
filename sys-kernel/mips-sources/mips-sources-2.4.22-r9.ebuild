@@ -1,34 +1,46 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.21-r5.ebuild,v 1.1 2004/02/01 10:32:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r9.ebuild,v 1.1 2004/02/10 06:44:36 kumba Exp $
 
-ETYPE="sources"
-inherit kernel
 
+# Version Data
 OKV=${PV/_/-}
-CVSDATE=20030803
-S=${WORKDIR}/linux-${OKV}
-EXTRAVERSION=-mipscvs-${CVSDATE}
+CVSDATE="20031015"
+EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
+COBALTPATCHVER="1.0"
 
-# What's in this kernel?
+# Miscellaneous stuff
+S=${WORKDIR}/linux-${OKV}-${CVSDATE}
+
+# Eclass stuff
+ETYPE="sources"
+inherit kernel eutils
+
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 03 Aug 2003
-# 3) patch to fix arch/mips/Makefile to pass appropriate CFLAGS
+# 2) linux-mips.org CVS snapshot diff from 15 Oct 2003
+# 3) patch to fix arch/mips[64]/Makefile to pass appropriate CFLAGS
+# 4) do_brk fix
+# 5) mremap fix
+# 6) RTC fixes
+# 7) Patches for Cobalt support
 
-DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines"
+
+DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 		mirror://gentoo/mipscvs-${OKV}-${CVSDATE}.diff.bz2
-		mirror://gentoo/cobalt-patches-2.4.tar.bz2"
+		mirror://gentoo/cobalt-patches-24xx-${COBALTPATCHVER}.tar.bz2"
 HOMEPAGE="http://www.linux-mips.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources"
 KEYWORDS="-* ~mips"
 
+
 src_unpack() {
 	unpack ${A}
+	mv ${WORKDIR}/linux-${OKV} ${WORKDIR}/linux-${OKV}-${CVSDATE}
 	cd ${S}
 
 	# Update the vanilla sources with linux-mips CVS changes
@@ -36,9 +48,6 @@ src_unpack() {
 
 	# Patch arch/mips/Makefile for gcc (Pass -mips3/-mips4 for r4k/r5k cpus)
 	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-fix.patch
-
-	# Big Endian Fix (Fix in headers for big-endian machines)
-	epatch ${FILESDIR}/bigendian-byteorder-fix.patch
 
 	# do_brk fix (Fixes exploit that hit several debian servers)
 	epatch ${FILESDIR}/do_brk_fix.patch
@@ -51,9 +60,12 @@ src_unpack() {
 
 	# Cobalt Patches
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
-		for x in ${WORKDIR}/cobalt-patches-2.4/*.patch; do
+		echo -e ""
+		einfo ">>> Patching kernel for Cobalt support ..."
+		for x in ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/*.patch; do
 			epatch ${x}
 		done
+		cp ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/cobalt-patches.txt ${S}
 	fi
 
 	kernel_universal_unpack
