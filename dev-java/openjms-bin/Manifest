@@ -1,13 +1,23 @@
-MD5 24dee59c5d111268286fa4d56e0ef293 ChangeLog 1848
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 9c1f7818b7054d965d86772ac23ac05b openjms-bin-0.7.5-r3.ebuild 792
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9c38e90784efae13ba43fc06eb09ede4 openjms-bin-0.7.6.ebuild 902
-MD5 1c1f7f56172148c05424af03c5a42148 files/10openjms-0.7.5 43
-MD5 1c1f7f56172148c05424af03c5a42148 files/10openjms-0.7.6 43
+MD5 0d47ade11b0fabfd29a4381e584e07e0 openjms-bin-0.7.5-r3.ebuild 789
+MD5 e21c27848dfd9e0a21e635f4d729dc67 ChangeLog 1971
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 463cee3ced345a76c84d5a3acfcc2d81 files/rc2 777
 MD5 b7476bad5b940d9e264bf03b1392cf5f files/conf 27
 MD5 1461aa95027a29b9282a711045a06058 files/digest-openjms-bin-0.7.5-r3 63
+MD5 1c1f7f56172148c05424af03c5a42148 files/10openjms-0.7.5 43
+MD5 1c1f7f56172148c05424af03c5a42148 files/10openjms-0.7.6 43
 MD5 9c74a5db584b416d78128a5762185258 files/digest-openjms-bin-0.7.6 66
-MD5 463cee3ced345a76c84d5a3acfcc2d81 files/rc2 777
-MD5 c515bd2931ce697be23219be4556b62e files/0.7.6/10openjms-0.7.6 37
-MD5 fdae6fd4595f87aba37b3a3674faf490 files/0.7.6/conf 21
 MD5 5da586b9e51d6b1c7178848bf6e09bdd files/0.7.6/rc2 761
+MD5 fdae6fd4595f87aba37b3a3674faf490 files/0.7.6/conf 21
+MD5 c515bd2931ce697be23219be4556b62e files/0.7.6/10openjms-0.7.6 37
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpPtLI1lqEGTUzyQRAguhAJ9Wakkp5AkK7/XGFuIkdX4x0DEvMACcCb8Z
+XDwVtN3+0ydCSL/YiE0MUsI=
+=3KhO
+-----END PGP SIGNATURE-----

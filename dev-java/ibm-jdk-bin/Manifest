@@ -1,9 +1,19 @@
-MD5 4c01e9087cad5a1fb194866a1cc16882 ChangeLog 2946
-MD5 774041e39d1180afd2e12e0211b93354 ibm-jdk-bin-1.4.1-r2.ebuild 2167
-MD5 2f88465cd5ad6adb1c76759ff3078666 metadata.xml 348
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 15647dbfc295b9d696aa36d9b5aea530 ibm-jdk-bin-1.4.2.ebuild 2390
+MD5 774041e39d1180afd2e12e0211b93354 ibm-jdk-bin-1.4.1-r2.ebuild 2167
+MD5 4c01e9087cad5a1fb194866a1cc16882 ChangeLog 2946
+MD5 2f88465cd5ad6adb1c76759ff3078666 metadata.xml 348
 MD5 971e2c067f8f28bd0f7c882607650469 files/cpuinfo 12
-MD5 b218ad416aab8e8299f77cb1f749e4aa files/digest-ibm-jdk-bin-1.4.1-r2 355
-MD5 cfb8abeb0f582ad72b0971269e7dee32 files/digest-ibm-jdk-bin-1.4.2 443
+MD5 a7254981b84488a01ed49fee3e8429e2 files/digest-ibm-jdk-bin-1.4.1-r2 280
 MD5 2a5694754d47014cb37eae87a4758efb files/ibm-jdk-bin-1.4.1 451
 MD5 605642c801114b645d12bc93a5f3e911 files/ibm-jdk-bin-1.4.2 472
+MD5 cfb8abeb0f582ad72b0971269e7dee32 files/digest-ibm-jdk-bin-1.4.2 443
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpPrAI1lqEGTUzyQRAnQsAJ0erX8g82IAY6341BRCHJFzKHixVwCgsBI8
+byIlzGHrB+lqymJC1vGZuS4=
+=YkUZ
+-----END PGP SIGNATURE-----
