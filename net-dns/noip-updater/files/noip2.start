@@ -3,7 +3,7 @@
 depend() {
 	need localmount
 	need net
-	need dns
+	use dns
 }
 
 checkconfig() {

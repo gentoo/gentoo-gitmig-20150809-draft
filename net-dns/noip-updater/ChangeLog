@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.5 2003/07/13 11:40:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.6 2003/08/03 21:36:07 seemant Exp $
+
+  03 Aug 2003; Seemant Kulleen <seemant@gentoo.org>
+  noip-updater-2.0.12.ebuild, files/noip2.start:
+  dns dependency in initscript changed to use dns instead of need dns. Thanks to
+  Davi Arnaut <davi@hotpop.com> (dv in #gentoo/freenode)
 
 *noip-updater-2.0.12 (15 Jun 2003)
 
