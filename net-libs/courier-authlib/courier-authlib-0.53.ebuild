@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.53.ebuild,v 1.2 2005/01/31 04:14:07 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.53.ebuild,v 1.3 2005/01/31 23:50:08 swtaylor Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ S="${WORKDIR}/${P%%_pre}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~ppc64"
+KEYWORDS="x86 alpha amd64 arm hppa ia64 mips ppc s390 sparc ppc64"
 IUSE="postgres ldap mysql berkdb gdbm pam crypt uclibc debug"
 
 DEPEND="virtual/libc
@@ -53,8 +53,10 @@ src_unpack() {
 			autoconf ||  die "recreate bdbobj/configure failed"
 		eend $?
 	fi
-	sed -i -e'/for dir in/a\\t\t\/etc\/courier-imap \\' ${S}/authmigrate.in
-	sed -i -e'/for dir in/a\\t\t\/etc\/courier\/authlib \\' ${S}/authmigrate.in
+	sed -i -e'/for dir in/a@@INDENT@@/etc/courier-imap \\' ${S}/authmigrate.in
+	sed -i -e'/for dir in/a@@INDENT@@/etc/courier/authlib \\' ${S}/authmigrate.in
+	sed -i -e"s|@@INDENT@@|		|g" ${S}/authmigrate.in
+	sed -i -e"s|\$sbindir/makeuserdb||g" ${S}/authmigrate.in
 }
 
 src_compile() {
@@ -78,7 +80,7 @@ src_compile() {
 
 	use debug && myconf="${myconf} debug=true"
 
-	einfo "${myconf}"
+	einfo "Configuring courier-authlib: ${myconf}"
 
 	econf \
 		--sysconfdir=/etc/courier \
@@ -105,6 +107,18 @@ orderfirst() {
 	fi
 }
 
+finduserdb() {
+	for dir in \
+		/etc/courier/authlib /etc/courier /etc/courier-imap \
+		/usr/lib/courier/etc /usr/lib/courier-imap/etc \
+		/usr/local/etc /usr/local/etc/courier /usr/local/courier/etc \
+		/usr/local/lib/courier/etc /usr/local/lib/courier-imap/etc \
+		/usr/local/share/sqwebmail /usr/local/etc/courier-imap ; do
+	[ -e "$dir/userdb" ] && ( echo "found $dir/userdb" ; \
+		cp -v $dir/userdb ${D}/etc/courier/authlib/ ; continue )
+	done
+}
+
 src_install() {
 	diropts -o mail -g mail
 	dodir /etc/courier
@@ -112,6 +126,7 @@ src_install() {
 	keepdir /etc/courier/authlib
 	emake install DESTDIR="${D}" || die "install"
 	emake install-migrate DESTDIR="${D}" || die "migrate"
+	[ ! -e "${D}/etc/courier/authlib/userdb" ] && finduserdb
 	emake install-configure DESTDIR="${D}" || die "configure"
 	rm -vf ${D}/etc/courier/authlib/*.bak
 	chown mail:mail ${D}/etc/courier/authlib/*
@@ -134,6 +149,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	[ -e /etc/courier/authlib/userdb ] && \
+		( einfo "running makeuserdb" ; makeuserdb )
 	# Suggest cleaning out the following old files
 	list="`find /etc/courier -type f -maxdepth 1 | grep \"^/etc/courier/auth\"`"
 	if [ ! -z "${list}" ] ; then
