@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/camomile-0.5.3.ebuild,v 1.1 2004/08/08 08:51:41 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/camomile-0.5.3.ebuild,v 1.2 2004/08/09 02:00:37 mattam Exp $
 
 DESCRIPTION="Camomile is a comprehensive Unicode library for ocaml."
 HOMEPAGE="http://camomile.sourceforge.net/"
@@ -10,18 +10,19 @@ LICENSE="LGPL-2"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=dev-lang/ocaml-3.07"
+SLOT="0"
 
 src_compile() {
 	econf || die
 	# Does not support parallel builds.
-    make
+	make
 }
 
-src_install() {	
+src_install() {
 	local destdir=`ocamlfind printconf destdir`
-	dodir ${destdir}	
+	dodir ${destdir}
 	export OCAMLFIND_DESTDIR=${D}${destdir}
-	
+
 	# stublibs style
 	dodir ${destdir}/stublibs
 
