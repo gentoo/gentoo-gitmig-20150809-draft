@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-htmlgen
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-htmlgen/ChangeLog,v 1.8 2004/05/09 14:52:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-htmlgen/ChangeLog,v 1.9 2004/06/22 20:24:31 mkennedy Exp $
+
+*cl-htmlgen-1.2.35.20040609 (22 Jun 2004)
+
+  22 Jun 2004; <mkennedy@gentoo.org> +cl-htmlgen-1.2.35.20040609.ebuild:
+  New upstream version.
 
 *cl-htmlgen-1.2.35.20040426 (09 May 2004)
 
