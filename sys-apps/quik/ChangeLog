@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/quik
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/ChangeLog,v 1.9 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/ChangeLog,v 1.10 2003/06/10 21:48:11 vladimir Exp $
+
+*quik-2.0.1k (10 Jun 2003)
+
+  10 Jun 2003; Graham Forest <vladimir@gentoo.org> Manifest,
+  quik-2.0.1k.ebuild:
+  Added 2.0.1k, which uses completely different patches. It's currently
+  package.masked, due to needing testing, but it should compile on gcc 3.x now
 
 *quik-2.0.1.0-r3  (04 Feb 2003)
 
