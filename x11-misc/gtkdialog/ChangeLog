@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gtkdialog
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/ChangeLog,v 1.1 2004/03/20 12:39:12 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/ChangeLog,v 1.2 2004/03/21 15:20:40 dholm Exp $
+
+  21 Mar 2004; David Holm <dholm@gentoo.org> gtkdialog-0.58.8.ebuild:
+  Added to ~ppc.
 
 *gtkdialog-0.58.8 (20 Mar 2004)
 
