@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/ndu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.4 2004/07/01 22:12:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.5 2004/07/19 01:57:22 robbat2 Exp $
+
+*ndu-0.4-r1 (18 Jul 2004)
+
+  18 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> ndu-0.4-r1.ebuild:
+  minor tweaks, stable on x86.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ndu-0.4.ebuild:
   virtual/glibc -> virtual/libc
