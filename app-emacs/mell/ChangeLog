@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mell
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/ChangeLog,v 1.7 2004/06/24 22:18:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/ChangeLog,v 1.8 2004/08/02 08:03:22 usata Exp $
+
+  02 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> mell-1.0.0.ebuild:
+  Removed ${D} from init-mell.el.
 
   23 May 2004; Mamoru KOMACHI <usata@gentoo.org> mell-1.0.0.ebuild:
   Stable on ppc
