@@ -6,6 +6,9 @@
 		<email>solar@gentoo.org</email>
 		<description>First dev to need this in ebuild format.</description>
 	</maintainer>
+	<maintainer>
+		<email>tigger@gentoo.org</email>
+	</maintainer>
 	<longdescription>JFFS2 is a log-structured file system designed for use on flash devices in embedded systems. Rather than using a kind of translation layer on flash devices to emulate a normal hard drive, as is the case with older flash solutions, it places the filesystem directly on the flash chips.</longdescription>
 </pkgmetadata>
 
