@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.4_beta3.ebuild,v 1.1 2003/08/21 04:58:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.4_beta3.ebuild,v 1.2 2003/11/10 14:51:26 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.packetfactory.net/Projects/nemesis/${P/_}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha"
+KEYWORDS="x86 sparc alpha"
 
 RDEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2-r1"
