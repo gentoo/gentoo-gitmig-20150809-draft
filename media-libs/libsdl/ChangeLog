@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.71 2005/01/03 02:19:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.72 2005/01/04 09:53:42 hardave Exp $
+
+  04 Jan 2005; Hardave Riar <hardave@gentoo.org> libsdl-1.2.6-r3.ebuild:
+  Stable on mips, dep of bug #74475.
 
   02 Jan 2005; Mike Frysinger <vapier@gentoo.org>
   +files/1.2.8-keyrepeat.patch, libsdl-1.2.7-r3.ebuild, libsdl-1.2.8.ebuild:
