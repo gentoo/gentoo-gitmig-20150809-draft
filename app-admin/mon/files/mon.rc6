@@ -1,0 +1,26 @@
+#!/sbin/runscript
+
+depend() {
+	need clock
+}
+
+checkconfig() {
+	if [ ! -e /etc/mon/mon.cf ] ; then
+		eerror "You need an /etc/mon/mon.cf file to run mon"
+		eerror "There is a sample at /etc/mon/mon.cf.sample"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting mon"
+	start-stop-daemon --start --quiet --exec /usr/sbin/mon -- -P /var/run/mon.pid -f 1>&2
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping mon"
+	start-stop-daemon --stop --quiet --pid /var/run/mon.pid 1>&2
+	eend $?
+}
