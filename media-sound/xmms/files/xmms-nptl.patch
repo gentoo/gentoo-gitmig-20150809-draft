@@ -1,0 +1,43 @@
+Index: Input/mpg123/common.c
+===================================================================
+RCS file: /cvs/xmms/Input/mpg123/common.c,v
+retrieving revision 1.17
+diff -u -r1.17 common.c
+--- xmms/Input/mpg123/common.c	19 Feb 2002 23:24:05 -0000	1.17
++++ xmms/Input/mpg123/common.c	4 Feb 2003 12:39:44 -0000
+@@ -278,10 +278,9 @@
+ 
+ void mpg123_stream_close(void)
+ {
+-/*    if (flags & READER_FD_OPENED) */
+ 	if (filept)
+ 		fclose(filept);
+-	else
++	else if (mpg123_info->network_stream)
+ 		mpg123_http_close();
+ }
+ 
+@@ -659,6 +658,7 @@
+ 		filept = NULL;
+ 		mpg123_http_open(bs_filenam);
+ 		mpg123_info->filesize = 0;
++		mpg123_info->network_stream = TRUE;
+ 	}
+ 	else
+ 	{
+Index: Input/mpg123/mpg123.h
+===================================================================
+RCS file: /cvs/xmms/Input/mpg123/mpg123.h,v
+retrieving revision 1.17
+diff -u -r1.17 mpg123.h
+--- xmms/Input/mpg123/mpg123.h	19 Feb 2002 23:24:05 -0000	1.17
++++ xmms/Input/mpg123/mpg123.h	4 Feb 2003 12:39:44 -0000
+@@ -76,6 +76,7 @@
+ 	gfloat eq_mul[576];
+ 	gboolean output_audio;
+ 	gboolean first_frame;
++	gboolean network_stream;
+ 	guint32 filesize;	/* Filesize without junk */
+ }
+ PlayerInfo;
+
