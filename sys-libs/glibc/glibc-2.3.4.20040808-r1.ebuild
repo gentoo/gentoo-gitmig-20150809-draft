@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.5 2004/10/13 00:35:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.6 2004/10/13 17:16:12 gmsoft Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -290,6 +290,11 @@ do_arch_amd64_patches() {
 	# CONF_LIBDIR support
 	epatch ${FILESDIR}/2.3.4/glibc-gentoo-libdir.patch
 	sed -i -e "s:@GENTOO_LIBDIR@:$(get_libdir):g" ${S}/sysdeps/unix/sysv/linux/configure
+
+	# fixes compiling with the new binutils on at least amd64 and ia64.
+	# see http://sources.redhat.com/ml/libc-alpha/2004-08/msg00076.html
+	# and http://bugs.gentoo.org/show_bug.cgi?id=66396 for more info.
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-res_init.patch
 }
 
 
@@ -342,6 +347,12 @@ do_arch_ia64_patches() {
 	#   http://sources.redhat.com/ml/libc-alpha/2003-09/msg00165.html
 
 #	epatch ${FILESDIR}/2.3.2/${LOCAL_P}-ia64-LOAD_ARGS-fixup.patch
+
+
+	# fixes compiling with the new binutils on at least amd64 and ia64.
+	# see http://sources.redhat.com/ml/libc-alpha/2004-08/msg00076.html
+	# and http://bugs.gentoo.org/show_bug.cgi?id=66396 for more info.
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-res_init.patch
 }
 
 
@@ -509,7 +520,6 @@ src_unpack() {
 	use sparc	&& do_arch_sparc_patches
 	use x86		&& do_arch_x86_patches
 
-
 	# Remaining patches
 	cd ${S}
 
@@ -521,11 +531,6 @@ src_unpack() {
 
 	# Improved handled temporary files. bug #66358
 	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-tempfile.patch
-
-	# fixes compiling with the new binutils on at least amd64 and ia64.
-	# see http://sources.redhat.com/ml/libc-alpha/2004-08/msg00076.html
-	# and http://bugs.gentoo.org/show_bug.cgi?id=66396 for more info.
-	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-res_init.patch
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh

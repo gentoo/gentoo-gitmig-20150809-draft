@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.274 2004/10/13 00:35:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.275 2004/10/13 17:16:12 gmsoft Exp $
+
+  13 Oct 2004; Guy Martin <gmsoft@gentoo.org> glibc-2.3.4.20040808-r1.ebuild:
+  Moved Lv's latest patch into do_arch{ia64|amd64}_patches() to avoid breakage
+  for other arches.
 
   13 Oct 2004; Guy Martin <gmsoft@gentoo.org> glibc-2.3.4.20040808-r1.ebuild:
   Added unset of EPATCH_OPTS in do_arch_hppa_patches to fix patching at later
