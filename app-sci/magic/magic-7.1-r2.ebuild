@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r2.ebuild,v 1.3 2003/11/18 08:36:39 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r2.ebuild,v 1.4 2003/11/26 09:17:40 phosphan Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The VLSI design CAD tool"
@@ -28,6 +28,8 @@ src_unpack() {
 
 	# some gcc 3.3 stuff, paths...
 	cd ${S}
+	# work around cvs problem
+	sed -i 's/\$Header/\$NO_RCS_Header/' magic/proto.magic
 	epatch ${FILESDIR}/${P}-misc.patch
 
 	# Insert our idea of configuration file

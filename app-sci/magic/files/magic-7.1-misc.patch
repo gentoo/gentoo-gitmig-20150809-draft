@@ -424,13 +424,13 @@ diff -ru utils/flock.c magic-7.1/utils/flock.c
  		name_time.tv_sec, name_time.tv_usec);
  
      if ((mfile = fopen(lock_buf, "w")) == NULL)
---- magic/proto.magic	2001-10-04 00:20:29.000000000 +0200
-+++ magic/proto.magic.new	2003-11-18 09:07:18.000000000 +0100
+--- magic/proto.magic	2003-11-26 10:08:48.000000000 +0100
++++ magic/proto.magic.new	2003-11-26 10:12:36.000000000 +0100
 @@ -1,12 +1,4 @@
 -#	$(CAD_HOME)/lib/sys/.magic 
 -# 	System wide start up file for magic, defines default macros.
 -#
--#	rcsid $Header: /var/cvsroot/gentoo-x86/app-sci/magic/files/magic-7.1-misc.patch,v 1.1 2003/11/18 08:36:39 phosphan Exp $
+-#	rcsid $NO_RCS_Header: /ufs/repository/magic/magic/proto.magic,v 1.4 2001/09/26 18:24:39 tim Exp $
 -#
  #ifndef USE_NEW_MACROS
 -###############################################################################
