@@ -13,9 +13,11 @@ fi
 #2 minutes ago.
 source /etc/profile
 source /etc/make.conf
-export PROXY HTTP_PROXY FTP_PROXY
-export DEBUG MAKEOPTS USE
+export PROXY HTTP_PROXY FTP_PROXY FETCHCOMMAND PACKAGE
+export DEBUG MAKEOPTS USE MAINTAINER CHOST CFLAGS CXXFLAGS
+export DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM 
 export PATH=/usr/lib/portage/bin:${PATH}
+
 
 initvars() {
 	#fix up ROOT path so that it always has a / after it

@@ -50,7 +50,7 @@
 # we cannot support every wacky versioning scheme.  Our versioning supports
 # the vast majority of packages, however.
 
-import string
+import string,os
 
 # parsever:
 # This function accepts an 'inter-period chunk' such as
@@ -184,6 +184,36 @@ def ververify(myval):
 		ERRVER=secpart+" is not a valid integer."
 		return 0
 		#invalid number!
+
+def justname(mypkg):
+	myparts=string.split(mypkg,'-')
+	for x in myparts:
+		if ververify(x):
+			return 0
+	return 1
+
+#isinstalled will tell you if a package is installed.  Call as follows:
+# isinstalled("sys-apps/foo") will tell you if a package called foo (any
+# version) is installed.  isinstalled("sys-apps/foo-1.2") will tell you
+# if foo-1.2 (any version) is installed.
+
+def isinstalled(mycatpkg):
+	mycatpkg=string.split(mycatpkg,"/")
+	if not os.path.isdir("/var/db/pkg/"+mycatpkg[0]):
+		return 0
+	mypkgs=os.listdir("/var/db/pkg/"+mycatpkg[0])
+	if justname(mycatpkg[1]):
+		# only name specified
+		for x in mypkgs:
+			thispkgname=pkgsplit(x)[0]
+			if mycatpkg[1]==thispkgname:
+				return 1
+	else:
+		# name and version specified
+		for x in mypkgs:
+			if mycatpkg[1]==x:
+				return 1
+	return 0
 
 # This function can be used as a package verification function, i.e.
 # "pkgsplit("foo-1.2-1") will return None if foo-1.2-1 isn't a valid
