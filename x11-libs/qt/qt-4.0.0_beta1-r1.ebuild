@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.7 2004/12/29 21:09:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.8 2004/12/30 23:06:04 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -77,6 +77,8 @@ src_unpack() {
 	epatch ${FILESDIR}/qt4b1_20041228.patch
 	epatch ${FILESDIR}/qt4-rpath.patch
 	epatch ${FILESDIR}/qt4-qtprf.patch
+
+	sed -i -e "s:CFG_REDUCE_EXPORTS=auto:CFG_REDUCE_EXPORTS=no:" configure
 }
 
 src_compile() {
@@ -145,9 +147,9 @@ src_install() {
 	cp -a ${S}/mkspecs/.qt.config ${D}/usr/lib/qt4/mkspecs/.qt.config
 
 	cd ${S}/lib
-	sed -i -e "s:${D}:/usr/lib/qt4/:" *.la
+	sed -i -e "s:${S}:/usr/lib/qt4/:" *.la
 	cd ${S}/lib/pkgconfig
-	sed -i -e "s:${D}:/usr/lib/qt4/:" *.pc
+	sed -i -e "s:${S}:/usr/lib/qt4/:" *.pc
 
 	insinto /etc/env.d
 	doins ${FILESDIR}/44qt4
