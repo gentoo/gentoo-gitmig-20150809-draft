@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/kbiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/kbiff/ChangeLog,v 1.8 2004/09/25 22:01:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/kbiff/ChangeLog,v 1.9 2004/11/18 23:26:18 motaboy Exp $
+
+  19 Nov 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/kbiff-3.7-configure-arts.patch, kbiff-3.7.ebuild:
+  Added a patch to the configure script to honor the "arts" USE flag. Fixes
+  bug #69532.
 
   25 Sep 2004; Jason Wever <weeve@gentoo.org> kbiff-3.7.ebuild:
   Stable on sparc.
