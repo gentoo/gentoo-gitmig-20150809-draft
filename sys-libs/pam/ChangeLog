@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.61 2005/02/03 16:47:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.62 2005/02/04 00:22:15 azarah Exp $
+
+*pam-0.77-r7 (04 Feb 2005)
+
+  04 Feb 2005; Martin Schlemmer <azarah@gentoo.org> +pam-0.77-r7.ebuild:
+  Update static patches to not reference /usr/lib, etc directly.
 
 *pam-0.77-r6 (03 Feb 2005)
 
