@@ -1,19 +1,16 @@
-MD5 257aa66be4dbe2a7270702e7a62c1ffd ChangeLog 4176
-MD5 512aac39218de307a117d4b37dc5c339 cyrus-imap-admin-2.1.12.ebuild 2752
-MD5 87c3fc7b593f16d5fac0cc2c9b0439b0 cyrus-imap-admin-2.1.13.ebuild 2770
-MD5 54defb7156a16d16d0e1db4f0f845544 cyrus-imap-admin-2.1.14.ebuild 3238
-MD5 af2b9234157e34b067a6a9e664c73b6d cyrus-imap-admin-2.2.3.ebuild 1955
-MD5 8ebe1d335fde0cdda741b32e3c82b27a cyrus-imap-admin-2.2.8.ebuild 2032
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 44c8500e0e411a07c008afc25bf9b64f ChangeLog 4586
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 b398dd3696347604a52a40bf1a77291b files/2.1.14-db4.patch 2032
-MD5 24cfd296507c04e376368f15665041d1 files/cyrus-imap-admin-2.1.12-libwrap.patch 494
-MD5 3c48192c623e37c0e7847ba62ede8750 files/cyrus-imap-admin-2.2.3-fPIC.patch 616
-MD5 dd34152fac580be8cccb1d1b69bb1ebc files/cyrus-imap-admin-2.2.8-fPIC.patch 584
-MD5 419f3372b21d1eea29593634a57bc134 files/cyrus-imapd-2.1.12-includepath.patch 2721
-MD5 fe1bbab93ddd6cf3a9c4aacc111154d4 files/cyrus-imapd-2.2.3-db4.patch 1604
-MD5 fe1bbab93ddd6cf3a9c4aacc111154d4 files/cyrus-imapd-2.2.8-db4.patch 1604
-MD5 a73606d0350e6883a11a4c525af59551 files/digest-cyrus-imap-admin-2.1.12 71
-MD5 d63d317f0f8fa042638be86b663fffc0 files/digest-cyrus-imap-admin-2.1.13 71
-MD5 aa678d0f596367397edeea90763ab29e files/digest-cyrus-imap-admin-2.1.14 155
-MD5 6678b1b72838a7ba2cb5045909ea909f files/digest-cyrus-imap-admin-2.2.3 70
+MD5 8ebe1d335fde0cdda741b32e3c82b27a cyrus-imap-admin-2.2.8.ebuild 2032
 MD5 6453c70342b78c99a073a06292b7e757 files/digest-cyrus-imap-admin-2.2.8 70
+MD5 fe1bbab93ddd6cf3a9c4aacc111154d4 files/cyrus-imapd-2.2.8-db4.patch 1604
+MD5 dd34152fac580be8cccb1d1b69bb1ebc files/cyrus-imap-admin-2.2.8-fPIC.patch 584
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhnrE5FrxP71izLARAkPMAJ9vI4JTnPd1wL90IFqMsCWsJHqyiQCfY3M9
+nwMj1d67MyzV4fMAhxKOHpk=
+=qZrf
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.11.ebuild,v 1.2 2004/09/22 08:30:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.11-r1.ebuild,v 1.1 2004/11/01 17:58:09 g2boojum Exp $
 
 IUSE="debug ipv6 ldap mbox pam postgres sasl ssl gnutls vpopmail nopop3d mysql"
 inherit eutils
@@ -11,27 +11,28 @@ SRC_URI="http://dovecot.org/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="x86 ~amd64 ~sparc ~ppc"
 
 #PROVIDE="virtual/imapd"
 
-# Note: current dovecot will break on gnutls-1.0.5
+# Note: current dovecot will break on gnutls
+# http://www.dovecot.org/list/dovecot/2004-November/005169.html
 DEPEND=">=sys-libs/db-3.2
 	>=sys-apps/sed-4
 	ldap? ( >=net-nds/openldap-1.2 )
 	pam? ( sys-libs/pam )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
-	gnutls? ( <=net-libs/gnutls-1.0.4 )
 	postgres? ( dev-db/postgresql )
 	mysql? ( dev-db/mysql )
 	vpopmail? ( net-mail/vpopmail )"
+	#gnutls? ( <=net-libs/gnutls-1.0.4 )
 
 RDEPEND="${DEPEND}
 	net-mail/mailbase"
 
 
-pkg_preinst() {
+pkg_setup() {
 	# Add user and group for login process (same as for fedora/redhat)
 	enewgroup dovecot 97
 	enewuser dovecot 97 /bin/false /dev/null dovecot
@@ -47,10 +48,20 @@ src_compile() {
 	use postgres && myconf="${myconf} --with-pgsql"
 	use mysql && myconf="${myconf} --with-mysql"
 	use sasl && myconf="${myconf} --with-cyrus-sasl2"
+	# gnutls support no longer working
+	# (http://www.dovecot.org/list/dovecot/2004-November/005169.html)
+	use ssl && myconf="${myconf} --with-ssl=openssl"
+	if use gnutls; then
+		eerror 'GNUTLS support no longer available, see'
+		eerror 'http://www.dovecot.org/list/dovecot/2004-November/005169.html'
+		eerror
+		eerror 'Please set USE="-gnutls ssl" if you want TLS support.'
+		die
+	fi
 	# prefer gnutls to ssl if both gnutls and ssl are defined
-	use gnutls && myconf="${myconf} --with-ssl=gnutls"
-	use ssl && ! use gnutls && myconf="${myconf} --with-ssl=openssl"
-	! use gnutls && ! use ssl && myconf="${myconf} --without-ssl"
+	#use gnutls && myconf="${myconf} --with-ssl=gnutls"
+	#use ssl && ! use gnutls && myconf="${myconf} --with-ssl=openssl"
+	#! use gnutls && ! use ssl && myconf="${myconf} --without-ssl"
 	use vpopmail || myconf="${myconf} --without-vpopmail"
 
 	./configure \

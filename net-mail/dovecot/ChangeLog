@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.16 2004/09/22 08:30:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.17 2004/11/01 17:58:09 g2boojum Exp $
+
+*dovecot-0.99.11-r1 (01 Nov 2004)
+
+  01 Nov 2004; Grant Goodyear <g2boojum@gentoo.org>
+  -dovecot-0.99.10.9-r1.ebuild, +dovecot-0.99.11-r1.ebuild,
+  -dovecot-0.99.11.ebuild:
+  New revision that removes gnutls support, since
+  upstream tells us that gnutls will be broken for some
+  time (http://www.dovecot.org/list/dovecot/2004-November/005169.html),
+  thanks to Ooblick (bug #67628) for finding the problem.  Also fixed
+  permissions, thanks to tove (bug #68824).  Marking stable on x86
+  and removing old (and broken) versions.
 
   22 Sep 2004; Andrej Kacian <ticho@gentoo.org> dovecot-0.99.10.9-r1.ebuild,
   dovecot-0.99.11.ebuild:
