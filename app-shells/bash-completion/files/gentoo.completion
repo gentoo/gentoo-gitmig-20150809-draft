@@ -10,6 +10,13 @@
 #
 
 #
+# simple completion for Gentoo style init
+#
+complete -W "start stop restart pause zap ineed needsme iuse usesme broken" \
+	$(for i in /etc/init.d/*; do echo ${i##*/}; done)
+
+
+#
 # emerge completion command
 #
 _emerge()
