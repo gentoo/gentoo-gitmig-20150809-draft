@@ -1,7 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1.ebuild,v 1.1 2001/12/29 21:45:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1.ebuild,v 1.2 2002/02/12 18:55:38 danarmak Exp $
+use arts && . /usr/portage/eclass/inherit.eclass || die
 
 # I highly suggest you read the features section of the freeamp website to
 # see all the neat stuff this program can do. Pretty spiffy :)
@@ -21,17 +22,31 @@ RDEPEND="virtual/glibc
 	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND} dev-lang/nasm sys-devel/perl"
 
+use arts && inherit functions && set-kdedir
+
 # Unfortunately you can't selectively build a lot of the features. Therefore
 # this whole package is essentially a judgement call. However, I've made the
 # DEPEND in a strategic manner to ensure that your USE variable is respected
 # when the knobs are *set*.
+
+src_unpack() {
+
+    unpack ${A}
+    
+    if [ "`use arts`" ]; then
+	cd ${S}/io/arts/src
+	cp artspmo.cpp 1
+	sed -e 's:artsc/artsc.h:artsc.h:g' 1 > artspmo.cpp
+    fi
+
+}
 
 src_compile() {
 
 	local myconf
 	use alsa || myconf="${myconf} --disable-alsa"
 	use esd  || myconf="${myconf} --disable-esd"
-	use arts && export KDEDIR=/usr/kde/2
+	use arts && myconf="${myconf} --with-extra-includes=${KDEDIR}/include"
 
 	./configure --prefix=/usr --host=${CHOST} ${myconf} || die
 	make ; assert "compile problem :("
