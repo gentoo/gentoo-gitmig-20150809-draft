@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.4.1.ebuild,v 1.9 2004/08/12 23:42:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.4.1.ebuild,v 1.10 2004/08/14 19:58:47 geoman Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2 FTL"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ia64 ~ppc64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ~ppc64"
 IUSE="doc"
 
 RDEPEND="virtual/x11
