@@ -1,26 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d8af906155acd20021d8a44fcb30cce9 ChangeLog 4368
+MD5 faf9dd76877c34d04b7dcebb187fcd54 ChangeLog 4692
 MD5 ae5609d9bd55ed7d9792b7b86da4df6b hppa-dev-sources-2.6.7_p1-r2.ebuild 1180
-MD5 05bef7ac2c9a5cdf016c4be6f71d034b hppa-dev-sources-2.6.7_p14.ebuild 1176
-MD5 f1b3ae515c1f32812ecbf25193148a90 metadata.xml 223
 MD5 73864d24b030876a0f811d73fdbf556c hppa-dev-sources-2.6.7_p14-r1.ebuild 1449
+MD5 05bef7ac2c9a5cdf016c4be6f71d034b hppa-dev-sources-2.6.7_p14.ebuild 1176
+MD5 109cb26368a56cea9cf1d1210cb3e857 hppa-dev-sources-2.6.8.1_p11-r1.ebuild 1274
+MD5 f1b3ae515c1f32812ecbf25193148a90 metadata.xml 223
 MD5 e659a5ccd8cb4f1630eb94a992053474 hppa-dev-sources-2.6.8.1_p11.ebuild 1098
-MD5 ce5fc85224c09cf512dc725ee88945e4 files/digest-hppa-dev-sources-2.6.7_p1-r2 129
-MD5 f0e12ba218f53c2694a91259bdc2fdc7 files/CAN-2004-0596.patch 494
-MD5 c857b174f7e6a6b0ab2e26f9306ad0a0 files/ncr53c8xx.diff 3701
 MD5 b6e38b41c8a79943df2ab2642149d06f files/CAN-2004-0497.patch 2214
+MD5 f0e12ba218f53c2694a91259bdc2fdc7 files/CAN-2004-0596.patch 494
 MD5 c91330cc5b4044b6f59696095c2dc0fb files/CAN-2004-0626-death_packet.patch 423
+MD5 ce5fc85224c09cf512dc725ee88945e4 files/digest-hppa-dev-sources-2.6.7_p1-r2 129
 MD5 2dfffb2597dfa71f526d15fdb55ce4f8 files/digest-hppa-dev-sources-2.6.7_p14 130
 MD5 2c3b568f5f12b140ab983b53543bca15 files/digest-hppa-dev-sources-2.6.7_p14-r1 206
+MD5 154a348c46bdd0a33b20d3bbfb5e2a3b files/CAN-2004-0814.patch 131240
+MD5 452e04a312368605e145428c35bd0e05 files/ptmx-security.patch 572
+MD5 8165de5e2ab6e0d3263ea35ce856fd1b files/CAN-2004-0883.patch 3309
 MD5 b36a855496ce31ee483358985b3a409c files/firmware.c.patch 3604
+MD5 c857b174f7e6a6b0ab2e26f9306ad0a0 files/ncr53c8xx.diff 3701
 MD5 222e890035f4ad3152f0c2a625a9ea67 files/security-proc-cmdline.patch 693
 MD5 00d36aabec0074afff01d252833fdcd0 files/digest-hppa-dev-sources-2.6.8.1_p11 133
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXdVKHTu7gpaalycRAtm2AKCskwMdk1Ak94Hg8X6Y8c8EN7fnuACfbet4
-vd9yqrmpErraIKCBB1IVqno=
-=psPk
------END PGP SIGNATURE-----
+MD5 1ee8ba8362089c31fdd7d88b32eaf63e files/binfmt_elf-loader-security.patch 1938
+MD5 00d36aabec0074afff01d252833fdcd0 files/digest-hppa-dev-sources-2.6.8.1_p11-r1 133
