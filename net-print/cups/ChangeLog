@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.109 2005/01/03 16:35:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.110 2005/01/07 21:48:20 lanius Exp $
+
+*cups-1.1.23 (07 Jan 2005)
+
+  07 Jan 2005; Heinrich Wendel <lanius@gentoo.org> +cups-1.1.23.ebuild:
+  security bump, bug #77023; use pdftops wrapper instead of builtin pdftops
 
   03 Jan 2005; Heinrich Wendel <lanius@gentoo.org>
   -files/cups-1.1.20-str633.patch,
