@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.0.ebuild,v 1.8 2005/02/07 08:37:16 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.0.ebuild,v 1.9 2005/02/09 00:06:53 kloeri Exp $
 
 DESCRIPTION="Xfce 4 base ebuild"
 LICENSE="GPL-2 BSD LGPL-2"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 sparc x86"
 
 RDEPEND="~xfce-base/xfce-mcs-plugins-${PV}
 	~xfce-base/xfce4-panel-${PV}
