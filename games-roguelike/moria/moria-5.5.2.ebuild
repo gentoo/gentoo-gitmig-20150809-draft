@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.6 2004/06/24 23:13:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.7 2004/07/01 05:21:55 mr_bones_ Exp $
 
 inherit eutils gcc games
 
@@ -17,7 +17,7 @@ LICENSE="Moria"
 SLOT="0"
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-libs/ncurses-5"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.648.ebuild,v 1.7 2004/06/24 23:14:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.648.ebuild,v 1.8 2004/07/01 05:21:55 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
 IUSE="X qt gnome gtk"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r5
 	X? ( virtual/x11 )
 	qt? ( =x11-libs/qt-2* )
