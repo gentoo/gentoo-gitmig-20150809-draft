@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/make.defaults,v 1.2 2005/03/08 10:41:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/make.defaults,v 1.3 2005/03/09 07:37:46 eradicator Exp $
 
 CHOST="sparc-unknown-linux-gnu"
 
@@ -8,7 +8,7 @@ MULTILIB_ABIS="sparc32"
 DEFAULT_ABI="sparc32"
 
 CFLAGS_sparc32="-m32"
-LDFLAGS_sparc32="-m elf32-sparc"
+LDFLAGS_sparc32="-m elf32_sparc"
 CHOST_sparc32="sparc-unknown-linux-gnu"
 FAKE_TARGETS_sparc32="sparcv9-unknown-linux-gnu"
 CDEFINE_sparc32="!__arch64__"
