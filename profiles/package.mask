@@ -26,11 +26,6 @@
 # masked since it's beta
 =dev-java/sun-jdk-1.4.1_beta
 
-# <phoenix@gentoo.org> (07 Aug 2002)
-# I'll bump to winex2.1 today
-# Masked for testing
-=app-emulation/winex-20020807
-
 # <george@gentoo.org> (06 Aug 2002)
 # new version, masked for testing
 =dev-libs/gsl-1.2
