@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/SVN-Simple
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.1 2004/11/27 06:11:36 pclouds Exp $
+
+*SVN-Simple-0.26 (27 Nov 2004)
+
+  27 Nov 2004; <pclouds@gentoo.org> +metadata.xml, +SVN-Simple-0.26.ebuild:
+  New ebuild
+
