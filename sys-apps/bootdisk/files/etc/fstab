@@ -2,7 +2,8 @@
 #
 # <fs>          <mountpoint>    <type>  <opts>      		<dump/pass>
 /dev/loop0	/		ext2    defaults		0 0
-proc            /proc           proc    defaults    		0 0
+/dev/ram0	/initrd		ext2	defaults		0 0
+proc            /initrd/proc    proc    defaults    		0 0
 none		/initrd/dev/pts	devpts	mode=620		0 0
 
 

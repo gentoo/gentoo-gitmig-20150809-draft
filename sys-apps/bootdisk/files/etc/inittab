@@ -15,7 +15,7 @@ l0:0:wait:/sbin/reboot -nfi
 l6:6:wait:/sbin/halt  -nfip
 
 # System initialization (runs when system boots).
-si:S:sysinit:/etc/rc
+si:S:sysinit:/sbin/rc
 
 # TERMINALS
 1:12345:respawn:/sbin/agetty 38400 tty1 linux
