@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.15 2004/04/17 15:02:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.16 2004/05/31 00:21:32 kloeri Exp $
+
+  31 May 2004; Bryan Østergaard <kloeri@gentoo.org> phpsysinfo-2.1-r2.ebuild:
+  Stable on alpha.
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> phpsysinfo-2.1-r1.ebuild:
   Added IUSE=.
