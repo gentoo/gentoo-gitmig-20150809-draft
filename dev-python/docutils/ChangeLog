@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.16 2004/11/02 01:22:44 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.17 2004/11/02 02:46:11 weeve Exp $
+
+  01 Nov 2004; Jason Wever <weeve@gentoo.org> docutils-0.3.3-r1.ebuild:
+  Added ~sparc keyword.
 
   01 Nov 2004; Dylan Carlson <absinthe@gentoo.org> :
   Keywords ~amd64. 

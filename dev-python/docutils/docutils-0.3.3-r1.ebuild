@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.3-r1.ebuild,v 1.5 2004/11/02 01:22:44 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.3-r1.ebuild,v 1.6 2004/11/02 02:46:11 weeve Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/docutils/${P}-alpha.tar.gz"
 
 LICENSE="public-domain PYTHON BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ~alpha ~amd64 "
+KEYWORDS="x86 ppc ~alpha ~amd64 ~sparc"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.1"
