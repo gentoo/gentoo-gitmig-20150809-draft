@@ -1,6 +1,12 @@
 # ChangeLog for media-video/helixplayer
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.1 2004/07/14 20:18:27 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.2 2004/07/15 01:25:06 eradicator Exp $
+
+  14 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  helixplayer-1.0_beta1.ebuild:
+  -amd64 -sparc. Build fails silently on both platforms. Amd64 needs a build
+  system patch, but it still fails. Sparc appears to be supported, but it fails
+  to build as well.
 
 *helixplayer-1.0_beta1 (15 Jul 2004)
 

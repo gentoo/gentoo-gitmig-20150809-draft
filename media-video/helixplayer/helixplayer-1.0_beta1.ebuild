@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0_beta1.ebuild,v 1.1 2004/07/14 20:18:27 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0_beta1.ebuild,v 1.2 2004/07/15 01:25:06 eradicator Exp $
 
 DESCRIPTION="A free open-source media player by real"
 HOMEPAGE="http://www.helixplayer.org/"
 SRC_URI="https://helixcommunity.org/download.php/487/${P}-beta-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+# -sparc -amd64: 1.0_beta1: build fails on both platforms... --eradicator
+KEYWORDS="~x86 -sparc -amd64"
 IUSE="mozilla"
 DEPEND="media-libs/libtheora
 		media-libs/libogg"
