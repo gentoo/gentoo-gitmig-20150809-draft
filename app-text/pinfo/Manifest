@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2a6d0a6604dc95d534d45f572d10b594 ChangeLog 2707
 MD5 262ed25624f9e1e05e0e0219aa47c103 pinfo-0.6.5_p2-r1.ebuild 945
 MD5 c180c71e2d55114d19232b81ad1de136 pinfo-0.6.7.ebuild 939
-MD5 c8b24c3fe6bc4d8a9ca31ef8abe90f32 pinfo-0.6.8.ebuild 779
+MD5 1e5d6f766fa823e2fcde45e94c725c89 pinfo-0.6.8.ebuild 797
 MD5 e132eaa5418eb067f4db536d63f27e07 files/digest-pinfo-0.6.5_p2-r1 65
 MD5 cd407b1e6a446c80f336c862fe75b56f files/digest-pinfo-0.6.7 63
 MD5 43cd937abc939c31ddaea990ea29acd7 files/digest-pinfo-0.6.8 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBlsHPHTu7gpaalycRAvK1AKCNucREEAHfNd9gp60MXCd/tPDzTgCfbW5S
+nQIaU7W3NdEOQJYXLySz1es=
+=ABc/
+-----END PGP SIGNATURE-----
