@@ -63,10 +63,6 @@
 # tightvnc works, so masking this for now - Gerk June 26 2002
 ~net-misc/vnc
 
-# libdv currently unmergable, immediate fixes didn't work, looks like it is 
-# very x86 specific - Gerk June 26 2002
-~media-libs/libdv
-
 # ebuilds installing precompiled stuff:
 
 ~net-www/netscape-communicator
