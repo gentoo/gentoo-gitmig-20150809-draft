@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.29 2004/09/06 01:13:57 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.30 2004/09/06 21:26:41 pebenito Exp $
+
+*selinux-base-policy-20040906 (06 Sep 2004)
+
+  06 Sep 2004; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-base-policy-20040906.ebuild:
+  New release with 1.14 merge, which has policy 18 (fine-grained netlink)
+  features.
 
   05 Sep 2004; Chris PeBenito <pebenito@gentoo.org>
   selinux-base-policy-20040225.ebuild, -selinux-base-policy-20040509.ebuild,
