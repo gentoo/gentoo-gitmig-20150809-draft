@@ -3,7 +3,7 @@
 # Maintainer: System Team <system@gentoo.org>
 # /home/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2.ebuild,v 1.3 2001/09/07 09:07:37 woodchip Exp
 
-P=openssh-2.9p2
+P=openssh-2.9.9p2
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Port of OpenBSD's free SSH release"
