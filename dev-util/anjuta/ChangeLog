@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.40 2004/07/03 14:07:16 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.41 2004/08/22 19:54:02 lisa Exp $
+
+  22 Aug 2004; Lisa Seelye <lisa@gentoo.org> -anjuta-1.0.2.ebuild,
+  -anjuta-1.2.0-r1.ebuild, -anjuta-1.2.0.ebuild, -anjuta-1.2.1-r1.ebuild,
+  -anjuta-1.2.1.ebuild, anjuta-1.2.2-r1.ebuild:
+  add docs on doc USE flag to close bug #53146
+
+  22 Aug 2004; Lisa Seelye <lisa@gentoo.org> -anjuta-1.0.2.ebuild,
+  -anjuta-1.2.0-r1.ebuild, -anjuta-1.2.0.ebuild, -anjuta-1.2.1-r1.ebuild,
+  -anjuta-1.2.1.ebuild:
+  cleaning up a bit
 
 *anjuta-1.2.2-r1 (03 Jul 2004)
 
