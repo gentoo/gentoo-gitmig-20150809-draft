@@ -1,4 +1,4 @@
-# where you keep your formatdb formated data sets
-BLASTDB="/usr/var/ncbi/db"
-# convenient for binary or odd location isntall
-#PATH=/usr/bin
+# Location of the formatdb data sets
+BLASTDB="/usr/share/ncbi/formatdb"
+# Location of the ".ncbi.rc" file which sets the default path for shared data.
+NCBI=/etc/ncbi

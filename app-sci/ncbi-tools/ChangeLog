@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/ncbi-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.14 2004/06/24 22:11:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.15 2004/10/04 01:56:33 ribosome Exp $
+
+*ncbi-tools-20040616 (03 Oct 2004)
+
+  03 Oct 2004; Olivier Fisette <ribosome@gentoo.org> files/21ncbi,
+  -files/dot-ncbirc, +files/ncbirc, -ncbi-tools-20031103.ebuild,
+  -ncbi-tools-20040202-r1.ebuild, +ncbi-tools-20040616.ebuild:
+  Updated version and new ebuild. This fixes bug #65941.
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> ncbi-tools-20031103.ebuild,
   ncbi-tools-20040202-r1.ebuild:
