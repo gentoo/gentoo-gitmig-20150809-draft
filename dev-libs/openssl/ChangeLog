@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.41 2003/07/24 04:46:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.42 2003/07/29 20:13:54 wwoods Exp $
+
+  29 Jul 2003; Will Woods <wwoods@gentoo.org> openssl-0.9.6j.ebuild:
+  Use SSH_TARGET on alpha to force it to honor CHOST, marked stable.
 
 *openssl-0.9.6j (23 May 2003)
 
