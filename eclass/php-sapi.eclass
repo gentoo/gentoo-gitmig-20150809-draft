@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.48 2004/08/22 00:49:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.49 2004/09/15 07:45:15 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -45,7 +45,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.6-includepath.diff http://dev.gentoo
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp mssql"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp mssql debug"
 
 # Hardened-PHP support
 #
@@ -146,7 +146,7 @@ fi
 # These are extra bits we need only at compile time
 DEPEND="${RDEPEND} ${DEPEND}
 	imap? ( virtual/imap-c-client )
-	mcal? ( dev-libs/libmcal )"
+	mcal? ( dev-libs/libmcal !=dev-libs/libmcal-0.7-r2 )"
 #9libs causes a configure error
 DEPEND="${DEPEND} !dev-libs/9libs"
 #dev-libs/libiconv causes a compile failure
@@ -394,7 +394,7 @@ php-sapi_src_compile() {
 	myconf="${myconf} `use_with kerberos kerberos /usr` `use_with pam`"
 	myconf="${myconf} `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable ipv6`"
-	myconf="${myconf} `use_with yaz`"
+	myconf="${myconf} `use_with yaz` `use_enable debug`"
 	if use curl; then
 		myconf="${myconf} --with-curlwrappers --with-curl=/usr"
 	else
@@ -638,6 +638,8 @@ php-sapi_pkg_postinst() {
 		ewarn "it, and re-merge >=dev-php/php-4.3.4-r2 afterwards to ensure"
 		ewarn "your PHP installation is consistant."
 	fi
+	ewarn "If you have additional third party PHP extensions (such as"
+	ewarn "dev-php/turck-mmcache) you may need to recompile them now."
 }
 
 php-sapi_securityupgrade() {

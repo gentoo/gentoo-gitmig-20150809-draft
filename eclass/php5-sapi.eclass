@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.27 2004/09/05 20:57:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.28 2004/09/15 07:45:15 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.php.net/"
 LICENSE="PHP-3"
 SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session shared sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session shared sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="$DEPEND
@@ -66,11 +66,11 @@ DEPEND="$DEPEND
 	sybase? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
 	tiff? ( media-libs/tiff )
-	truetype? ( media-libs/freetype >=media-libs/t1lib-5.0.0 )
+	truetype? ( =media-libs/freetype-1* =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 )
 	wddx? ( dev-libs/expat )
 	xpm? ( virtual/x11 )
 	xsl? ( dev-libs/libxslt )
-	zlib? ( sys-libs/zlib )"
+	zlib? ( sys-libs/zlib ) "
 
 # this would be xml2?, but PEAR requires XML support
 # and we always want to build PEAR.
@@ -175,6 +175,7 @@ php5-sapi_check_awkward_uses () {
 	else
 		enable_extension_with	"freetype-dir"	"truetype"	0 "/usr"
 		enable_extension_with	"t1lib"			"truetype"	0 "/usr"
+		enable_extension_with	"ttf"			"truetype"	0 "/usr"
 		enable_extension_enable	"gd-jis-conf"	"nls"		0
 		enable_extension_enable	"gd-native-ttf"	"truetype"	0
 		enable_extension_with 	"png-dir" 		"png" 		0 "/usr"
@@ -229,7 +230,7 @@ php5-sapi_check_awkward_uses () {
 	# both provide the same functionality
 	confutils_use_conflict "readline" "libedit"
 	# Recode is not liked.
-	confutils_use_conflict "recode" "mysql" "imap" "nis" # "yaz"
+	confutils_use_conflict "recode" "mysql" "imap" "nis" #"yaz"
 
 	if ! useq session ; then
 		enable_extension_disable	"session"		"session"		1
@@ -404,11 +405,11 @@ php5-sapi_src_compile () {
 	enable_extension_with		"xmlrpc"		"xmlrpc"		1
 	enable_extension_enable		"yp"			"nis"			1
 	enable_extension_with		"zlib"			"zlib"			1
+	enable_extension_enable		"debug"			"debug"			0
 
 	php5-sapi_check_awkward_uses
 
 	# DBA support
-
 	enable_extension_enable		"dba"		"dba" 1
 
 	# readline support
@@ -495,5 +496,8 @@ php5-sapi_pkg_postinst() {
 	# and is usable
 	mkdir -p ${PEAR_CACHE}
 	chmod 1777 ${PEAR_CACHE}
+
+	ewarn "If you have additional third party PHP extensions (such as"
+	ewarn "dev-php/turck-mmcache) you may need to recompile them now."
 }
 
