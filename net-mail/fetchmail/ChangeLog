@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.18 2002/12/16 22:48:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.19 2002/12/27 00:05:16 raker Exp $
+
+*fetchmail-6.2.0-r2 (26 Dec 2002)
+
+  26 Dec 2002; Nick Hadaway <raker@gentoo.org> fetchmail-6.2.0-r1.ebuild,
+  digest-fetchmail-6.2.0-r1, files/fetchmail-6.2.0-gentoo.diff :
+  Enable ipv6 support.
 
   16 Dec 2002; Aron Griffis <agriffis@gentoo.org> fetchmail-6.2.0.ebuild :
   Added ~alpha to KEYWORDS
