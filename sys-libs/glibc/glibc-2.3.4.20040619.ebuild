@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.19 2004/07/22 05:46:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.20 2004/07/22 12:22:00 gmsoft Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -342,6 +342,8 @@ do_arch_hppa_patches() {
 	do
 		epatch ${i}
 	done
+
+	use hardened && epatch ${FILESDIR}/2.3.4/glibc-2.3.4-hppa-hardened-disable__init_arrays.patch
 
 }
 
