@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/win4lin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.4 2003/02/12 04:03:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.5 2003/02/28 17:35:53 liquidx Exp $
 
 *win4lin-4.0.12 (10 Jan 2002)
+  
+  28 Feb 2002; Alastair Tse <liquidx@gentoo.org> win4lin-4.0.12.ebuild:
+  Updated IUSE field
 
   10 Jan 2002; J.Alberto Suárez L. <bass@gentoo.org> win4lin-4.0.12.ebuild:
   The next-generation :)
