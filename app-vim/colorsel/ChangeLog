@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/colorsel
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorsel/ChangeLog,v 1.1 2004/04/16 22:41:35 ciaranm Exp $
+
+*colorsel-20040416 (16 Apr 2004)
+
+  16 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +colorsel-20040416.ebuild:
+  Initial version
+
