@@ -1,0 +1,147 @@
+diff -ur xchat-1.8.9/configure xchat-1.8.9-euirc/configure
+--- xchat-1.8.9/configure	Sat Apr 27 06:57:11 2002
++++ xchat-1.8.9-euirc/configure	Mon May 27 15:58:44 2002
+@@ -754,7 +754,7 @@
+ 
+ PACKAGE=xchat
+ 
+-VERSION=1.8.9
++VERSION=1.8.9-euIRC-0.1
+ 
+ if test "`cd $srcdir && pwd`" != "`pwd`" && test -f $srcdir/config.status; then
+   { echo "configure: error: source directory already configured; run "make distclean" there first" 1>&2; exit 1; }
+diff -ur xchat-1.8.9/src/common/userlist.c xchat-1.8.9-euirc/src/common/userlist.c
+--- xchat-1.8.9/src/common/userlist.c	Tue Dec 25 04:58:10 2001
++++ xchat-1.8.9-euirc/src/common/userlist.c	Mon May 27 15:56:08 2002
+@@ -208,7 +208,12 @@
+ 	switch (prefix)
+ 	{
+ 	case '*':
++		user->founder = level;
++		sess->ops += offset;
++		break;
++	case '!':
+ 		user->admin = level;
++		sess->ops += offset;
+ 		break;
+ 	case '@':
+ 		user->op = level;
+diff -ur xchat-1.8.9/src/common/userlist.h xchat-1.8.9-euirc/src/common/userlist.h
+--- xchat-1.8.9/src/common/userlist.h	Wed Aug 15 11:28:01 2001
++++ xchat-1.8.9-euirc/src/common/userlist.h	Mon May 27 15:56:08 2002
+@@ -11,6 +11,7 @@
+ 	unsigned int access;	/* axs bit field */
+ 	char prefix; /* @ + % */
+ 	unsigned int admin:1;
++	unsigned int founder:1;
+ 	unsigned int op:1;
+ 	unsigned int hop:1;
+ 	unsigned int voice:1;
+diff -ur xchat-1.8.9/src/fe-gtk/Makefile.in xchat-1.8.9-euirc/src/fe-gtk/Makefile.in
+--- xchat-1.8.9/src/fe-gtk/Makefile.in	Mon May 20 05:44:31 2002
++++ xchat-1.8.9-euirc/src/fe-gtk/Makefile.in	Mon May 27 15:54:08 2002
+@@ -450,7 +450,7 @@
+ 	../common/../../config.h ../common/history.h gtkutil.h \
+ 	../pixmaps/globe.xpm ../pixmaps/server.xpm ../pixmaps/admin.xpm \
+ 	../pixmaps/op.xpm ../pixmaps/hop.xpm ../pixmaps/voice.xpm \
+-	../pixmaps/xchat_mini.xpm ../pixmaps/xchat.xpm
++	../pixmaps/xchat_mini.xpm ../pixmaps/xchat.xpm ../pixmaps/founder.xpm
+ plugingui.o: plugingui.c fe-gtk.h ../../config.h ../common/xchat.h \
+ 	../common/../../config.h ../common/history.h ../common/plugin.h \
+ 	../common/text.h ../common/util.h gtkutil.h
+diff -ur xchat-1.8.9/src/fe-gtk/pixmaps.c xchat-1.8.9-euirc/src/fe-gtk/pixmaps.c
+--- xchat-1.8.9/src/fe-gtk/pixmaps.c	Thu Aug  9 14:57:52 2001
++++ xchat-1.8.9-euirc/src/fe-gtk/pixmaps.c	Mon May 27 15:56:08 2002
+@@ -34,6 +34,7 @@
+ #include "../pixmaps/globe.xpm"
+ #include "../pixmaps/server.xpm"
+ #include "../pixmaps/admin.xpm"
++#include "../pixmaps/founder.xpm"
+ #include "../pixmaps/op.xpm"
+ #include "../pixmaps/hop.xpm"
+ #include "../pixmaps/voice.xpm"
+@@ -46,6 +47,7 @@
+ GdkPixmap *pix_globe;
+ GdkPixmap *pix_server;
+ GdkPixmap *pix_admin;
++GdkPixmap *pix_founder;
+ GdkPixmap *pix_op;
+ GdkPixmap *pix_hop;
+ GdkPixmap *pix_voice;
+@@ -55,6 +57,7 @@
+ GdkBitmap *mask_globe;
+ GdkBitmap *mask_server;
+ GdkBitmap *mask_admin;
++GdkBitmap *mask_founder;
+ GdkBitmap *mask_op;
+ GdkBitmap *mask_hop;
+ GdkBitmap *mask_voice;
+@@ -124,6 +127,7 @@
+ 	pixmap_load_from_data (&pix_globe,		&mask_globe,		globe_xpm);
+ 	pixmap_load_from_data (&pix_server,		&mask_server,		server_xpm);
+ 	pixmap_load_from_data (&pix_admin,		&mask_admin,		admin_xpm);
++	pixmap_load_from_data (&pix_founder,		&mask_founder,		founder_xpm);
+ 	pixmap_load_from_data (&pix_op,			&mask_op,			op_xpm);
+ 	pixmap_load_from_data (&pix_hop,			&mask_hop,			hop_xpm);	
+ 	pixmap_load_from_data (&pix_voice,		&mask_voice,		voice_xpm);
+diff -ur xchat-1.8.9/src/fe-gtk/pixmaps.h xchat-1.8.9-euirc/src/fe-gtk/pixmaps.h
+--- xchat-1.8.9/src/fe-gtk/pixmaps.h	Tue May 29 17:51:17 2001
++++ xchat-1.8.9-euirc/src/fe-gtk/pixmaps.h	Mon May 27 15:56:08 2002
+@@ -1,5 +1,6 @@
+ extern GdkPixmap *pix_globe;
+ extern GdkPixmap *pix_admin;
++extern GdkPixmap *pix_founder;
+ extern GdkPixmap *pix_op;
+ extern GdkPixmap *pix_hop;
+ extern GdkPixmap *pix_voice;
+@@ -9,6 +10,7 @@
+ 
+ extern GdkBitmap *mask_globe;
+ extern GdkBitmap *mask_admin;
++extern GdkBitmap *mask_founder;
+ extern GdkBitmap *mask_op;
+ extern GdkBitmap *mask_hop;
+ extern GdkBitmap *mask_voice;
+diff -ur xchat-1.8.9/src/fe-gtk/userlistgui.c xchat-1.8.9-euirc/src/fe-gtk/userlistgui.c
+--- xchat-1.8.9/src/fe-gtk/userlistgui.c	Sun Aug  5 15:30:24 2001
++++ xchat-1.8.9-euirc/src/fe-gtk/userlistgui.c	Mon May 27 15:56:08 2002
+@@ -41,6 +41,9 @@
+ 	switch (prefix)
+ 	{
+ 	case '*':
++		*mask = mask_founder;
++		return pix_founder;
++	case '!':
+ 		*mask = mask_admin;
+ 		return pix_admin;
+ 	case '@':
+diff -ur xchat-1.8.9/src/pixmaps/admin.xpm xchat-1.8.9-euirc/src/pixmaps/admin.xpm
+--- xchat-1.8.9/src/pixmaps/admin.xpm	Sat May 26 05:17:10 2001
++++ xchat-1.8.9-euirc/src/pixmaps/admin.xpm	Mon May 27 15:56:08 2002
+@@ -3,7 +3,7 @@
+ "7 7 4 1",
+ " 	c None",
+ "+	c #000000",
+-"@	c #FF4422",
++"@	c #800080",
+ "#	c #FFFFFF",
+ "  +++  ",
+ " +@@@+ ",
+diff -ur xchat-1.8.9/src/pixmaps/founder.xpm xchat-1.8.9-euirc/src/pixmaps/founder.xpm
+--- xchat-1.8.9/src/pixmaps/founder.xpm	Mon May 27 15:59:12 2002
++++ xchat-1.8.9-euirc/src/pixmaps/founder.xpm	Mon May 27 15:56:08 2002
+@@ -0,0 +1,14 @@
++/* XPM */
++static char * founder_xpm[] = {
++"7 7 4 1",
++" 	c None",
++"+	c #000000",
++"@	c #FF4422",
++"#	c #FFFFFF",
++"  +++  ",
++" +@@@+ ",
++"+@#@@@#",
++"+@@@@@#",
++"+@@@@@#",
++" +@@@# ",
++"  ###  "};
