@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.2.ebuild,v 1.2 2003/09/14 11:59:51 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.2.ebuild,v 1.3 2003/09/14 12:13:58 obz Exp $
 
 inherit gnome2
 
@@ -25,8 +25,7 @@ RDEPEND=">=dev-lang/python-2.2
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	dev-util/intltool
-	!x11-plugins/desklet-external"
+	dev-util/intltool"
 
 # the external desklet is included in this version, we don't
 # use the one from x11-plugins anymore
