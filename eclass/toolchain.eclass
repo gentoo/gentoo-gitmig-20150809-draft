@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.85 2005/01/16 10:37:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.86 2005/01/16 13:33:11 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -284,8 +284,8 @@ get_gcc_src_uri() {
 
 	echo "${GCC_SRC_URI}"
 }
-S="$(gcc_get_s_dir)"
-SRC_URI="$(get_gcc_src_uri)"
+S=$(gcc_get_s_dir)
+SRC_URI=$(get_gcc_src_uri)
 #---->> S + SRC_URI essentials >>----
 
 
@@ -666,25 +666,27 @@ gcc-compiler_pkg_preinst() {
 
 gcc-compiler_pkg_postinst() {
 	export LD_LIBRARY_PATH=${LIBPATH}:${LD_LIBRARY_PATH}
-	should_we_gcc_config && do_gcc_config
+	do_gcc_config
 
 	# Update libtool linker scripts to reference new gcc version ...
+	use multislot && return 0
+
 	if [[ ${ROOT} == "/" ]] && \
-	   [ -f "${WORKDIR}/.oldgccversion" -o -f "${WORKDIR}/.oldgccchost" ]
+	   [[ -f ${WORKDIR}/.oldgccversion || -f ${WORKDIR}/.oldgccchost ]]
 	then
 		local OLD_GCC_VERSION=
 		local OLD_GCC_CHOST=
 
-		if [ -f "${WORKDIR}/.oldgccversion" ] && \
-		   [ -n "$(cat "${WORKDIR}/.oldgccversion")" ]
+		if [[ -f ${WORKDIR}/.oldgccversion ]] && \
+		   [[ -n $(<"${WORKDIR}/.oldgccversion") ]]
 		then
-			OLD_GCC_VERSION="$(cat "${WORKDIR}/.oldgccversion")"
+			OLD_GCC_VERSION=$(<"${WORKDIR}/.oldgccversion")
 		else
-			OLD_GCC_VERSION="${GCC_CONFIG_VER}"
+			OLD_GCC_VERSION=${GCC_CONFIG_VER}
 		fi
 
-		if [ -f "${WORKDIR}/.oldgccchost" ] && \
-		   [ -n "$(cat "${WORKDIR}/.oldgccchost")" ]
+		if [[ -f ${WORKDIR}/.oldgccchost ]] && \
+		   [[ -n $(<"${WORKDIR}/.oldgccchost") ]]
 		then
 			OLD_GCC_CHOST="--oldarch $(cat "${WORKDIR}/.oldgccchost")"
 		fi
@@ -1652,7 +1654,7 @@ do_gcc_PIE_patches() {
 
 should_we_gcc_config() {
 	# we only want to switch compilers if installing to /
-	[ ${ROOT} == "/" ] || return 1
+	[[ ${ROOT} == "/" ]] || return 1
 
 	# we always want to run gcc-config if we're bootstrapping, otherwise
 	# we might get stuck with the c-only stage1 compiler
@@ -1664,15 +1666,19 @@ should_we_gcc_config() {
 		return $([[ ! -e ${ROOT}/etc/env.d/gcc/config-${CTARGET} ]])
 	fi
 
-	# if the current config is invalid, we definately want a new one
-	[ "$(gcc-config -L | grep -v ^\ )" == "no-config" ] && return 0
+	# multislot pretty much means we want to save all our compilers
+	# ... lets not screw with gcc in that case
+	use multislot && return 1
+
+	# if the current config is invalid, we definitely want a new one
+	gcc-config -c >&/dev/null || return 0
 
 	# if the previously selected config has the same major.minor as the
 	# version we are installing, then it will probably be uninstalled
 	# for being in the same SLOT. we cannot rely on the previous check
 	# to handle this, since postinst sometimes happens BEFORE the
 	# previous version is removed. :|
-	# ...skip this check if the current version is -exactly- the same
+	# ... skip this check if the current version is -exactly- the same
 	local c_gcc_conf_ver=$(gcc-config -c | awk -F - '{ print $5 }')
 	local c_majmin=$(get_version_component_range 1-2 ${c_gcc_conf_ver})
 	if [ "${c_gcc_conf_ver}" != "${GCC_CONFIG_VER}" ] ; then
@@ -1706,16 +1712,20 @@ should_we_gcc_config() {
 }
 
 do_gcc_config() {
+	should_we_gcc_config || return 0
+
 	# the grep -v is in there to filter out informational messages >_<
-	local current_gcc_config="$(gcc-config -c | grep -v ^\ )"
+	local current_gcc_config=$(gcc-config -c ${CTARGET} | grep -v ^\ )
 
 	# figure out which specs-specific config is active. yes, this works
 	# even if the current config is invalid.
-	local current_specs="$(echo ${current_gcc_config} | awk -F - '{ print $6 }')"
-	[ "${current_specs}" != "" ] && local use_specs="-${current_specs}"
+	local current_specs=$(echo ${current_gcc_config} | awk -F - '{ print $6 }')
+	local use_specs=""
+	[[ -n ${current_specs} ]] && use_specs=-${current_specs}
 
-
-	if [ -n "${use_specs}" -a ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ] ; then
+	if [[ -n ${use_specs} ]] && \
+	   [[ ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ]]
+	then
 		ewarn "The currently selected specs-specific gcc config,"
 		ewarn "${current_specs}, doesn't exist anymore. This is usually"
 		ewarn "due to enabling/disabling hardened or switching to a version"
@@ -1723,16 +1733,10 @@ do_gcc_config() {
 		ewarn "config will be used, and the previous preference forgotten."
 		ebeep
 		epause
+		use_specs=""
 	fi
 
-
-	if [ -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ] ; then
-		# we dont want to lose the current specs setting!
-		gcc-config ${CTARGET}-${GCC_CONFIG_VER}${use_specs}
-	else
-		# ...unless of course the specs-specific entry doesnt exist :)
-		gcc-config --use-portage-chost ${CTARGET}-${GCC_CONFIG_VER}
-	fi
+	gcc-config ${CTARGET}-${GCC_CONFIG_VER}${use_specs}
 }
 
 # This function allows us to gentoo-ize gcc's version number and bugzilla
