@@ -1,6 +1,9 @@
 # ChangeLog for net-im/centericq
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.35 2004/01/09 18:52:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.36 2004/02/17 13:26:53 dholm Exp $
+
+  17 Feb 2004; David Holm <dholm@gentoo.org> centericq-4.9.9.ebuild:
+  Added to ~ppc.
 
   09 Jan 2004; Jason Wever <weeve@gentoo.org> centericq-4.9.8.ebuild:
   Marked stable on sparc.
