@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-2.0-r1.ebuild,v 1.1 2005/03/06 02:03:43 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-2.0-r1.ebuild,v 1.2 2005/03/06 13:03:54 humpback Exp $
 
 RESTRIC="nomirror"
 DESCRIPTION="Some nice themes for the GDM Greeter"
@@ -50,7 +50,6 @@ SRC_URI="${THEME_URI}GDM-300-lantueno.tar.gz
 	${THEME_URI}GDM-FreeBSD.tar.gz
 	${THEME_URI}GDM-FreeBSDarth.tar.gz
 	${THEME_URI}GDM-Gentoo-Bluebox.tar.gz
-	${THEME_URI}GDM-Gentoo-Emergence.tar.gz
 	${THEME_URI}GDM-GlassFoot.tar.gz
 	${THEME_URI}GDM-Glassy.tar.gz
 	${THEME_URI}GDM-GnomeOrange.tar.gz
