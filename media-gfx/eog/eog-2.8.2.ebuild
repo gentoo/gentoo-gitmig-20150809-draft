@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.8.1.ebuild,v 1.2 2004/12/06 06:40:03 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.8.2.ebuild,v 1.1 2004/12/06 06:40:03 obz Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 SLOT="1"
 IUSE="jpeg"
-KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips ~ppc64"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips ~ppc64"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/gconf-2.6
@@ -20,7 +20,6 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/libgnomecanvas-2.6
 	>=gnome-base/libglade-2.4
 	>=media-libs/libart_lgpl-2.3.16
-	>=gnome-base/eel-2.6
 	jpeg? ( >=media-libs/libexif-0.5.12
 		media-libs/jpeg )"
 
@@ -31,7 +30,7 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} $(use_with jpeg libjpeg) $(use_with jpeg libexif)"
 
-DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS HACKING DEPENDS THANKS TODO"
+DOCS="AUTHORS ChangeLog README NEWS HACKING THANKS TODO"
 
 src_unpack() {
 
