@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.30.0.ebuild,v 1.3 2004/03/14 12:28:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.30.0.ebuild,v 1.4 2004/06/03 16:13:18 agriffis Exp $
 
 MY_V="${PV//\./_}"
 
@@ -28,7 +28,7 @@ src_compile() {
 	local PYTHON_VERSION=$(/usr/bin/python -V 2>&1 | /usr/bin/cut -d . -f 2,3)
 	local BOOST_TOOLSET
 
-	if [ "`use icc`" ] ; then
+	if use icc ; then
 		BOOST_TOOLSET="intel-linux"
 	else
 		BOOST_TOOLSET="gcc"
@@ -39,7 +39,7 @@ src_compile() {
 	./build.sh ${BOOST_TOOLSET} || die "Failed to build bjam"
 	cd ${S}
 
-	if [ "`use icc`" ] ; then
+	if use icc ; then
 		./tools/build/jam_src/bin.linux${ARCH}/bjam -j2 \
 		-sBOOST_ROOT=${S} \
 		-sPYTHON_ROOT=/usr \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6.ebuild,v 1.2 2004/05/09 13:21:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6.ebuild,v 1.3 2004/06/03 16:16:41 agriffis Exp $
 
 IUSE="ssl sdl ieee1394 alsa esd"
 
@@ -44,7 +44,7 @@ src_compile() {
 	local plugins
 	local myconf
 
-	if [ "`use ssl`" ]; then
+	if use ssl; then
 		export OPENSSLFLAG=1
 		export OPENSSLDIR="/usr"
 		export OPENSSLLIBS="-lssl -lcrypt"
@@ -66,7 +66,7 @@ src_compile() {
 	use alsa \
 		&& plugins="${plugins} alsa"
 
-	if [ -n "`use esd`" ]; then
+	if use esd; then
 		# fixes bug #45059
 		export ESDDIR=/usr
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0.ebuild,v 1.4 2004/04/17 03:57:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0.ebuild,v 1.5 2004/06/03 16:13:18 agriffis Exp $
 
 MyPV=${PV//./_}
 
@@ -29,7 +29,7 @@ src_compile() {
 	local BOOST_TOOLSET
 	local arch
 
-	if [ "`use icc`" ] ; then
+	if use icc ; then
 		BOOST_TOOLSET="intel-linux"
 	else
 		BOOST_TOOLSET="gcc"
@@ -46,7 +46,7 @@ src_compile() {
 		arch=${ARCH}
 	fi
 
-	if [ "`use icc`" ] ; then
+	if use icc ; then
 		./tools/build/jam_src/bin.linux${arch}/bjam -j2 \
 		-sBOOST_ROOT=${S} \
 		-sPYTHON_ROOT=/usr \

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.16 2004/04/17 03:57:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.17 2004/06/03 16:13:18 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> boost-1.30.0.ebuild,
+  boost-1.30.2.ebuild, boost-1.31.0.ebuild:
+  Fix use invocation
 
   16 Apr 2004; Jason Wever <weeve@gentoo.org> boost-1.31.0.ebuild:
   Stable on sparc.

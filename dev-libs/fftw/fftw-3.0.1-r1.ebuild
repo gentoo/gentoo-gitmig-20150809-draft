@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-3.0.1-r1.ebuild,v 1.1 2004/04/19 14:16:08 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-3.0.1-r1.ebuild,v 1.2 2004/06/03 16:07:44 agriffis Exp $
 
 IUSE="3dnow sse mpi"
 
@@ -26,7 +26,7 @@ filter-mfpmath
 # according to the docs, -O0 can cause trouble too! So pending further
 # testing, ...
 
-if [ `use sse` ]; then
+if use sse; then
 	filter-flags -O3 -O1 -O -Os
 	append-flags -O2
 fi
@@ -51,10 +51,10 @@ src_compile() {
 	#mpi is not a valid flag yet. In this revision it is used merely to block --enable-mpi option
 	#it might be needed if it is decided that lam is an optional dependence
 
-	if [ `use sse` ]; then
+	if use sse; then
 		myconfsingle="$myconfsingle --enable-sse"
 		myconfdouble="$myconfdouble --enable-sse2"
-	elif [ `use 3dnow` ]; then
+	elif use 3dnow; then
 		myconfsingle="$myconfsingle --enable-k7"
 	fi
 

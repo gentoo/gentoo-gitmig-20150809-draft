@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.2.ebuild,v 1.4 2004/03/09 00:48:59 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.2.ebuild,v 1.5 2004/06/03 16:16:41 agriffis Exp $
 
 DESCRIPTION="Portable Multiplatform Class Libraries for OpenH323"
 HOMEPAGE="http://www.openh323.org/"
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ "`use ssl`" ]; then
+	if use ssl; then
 		export OPENSSLFLAG=1
 		export OPENSSLDIR=/usr
 		export OPENSSLLIBS="-lssl -lcrypt"
