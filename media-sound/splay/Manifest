@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 ca5be3e35f5c71027ef9387deeb70c7c ChangeLog 791
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 56fa5f5696aac81cccc62121816843ea splay-0.9.5.2.ebuild 967
-MD5 f95b7f3dbc94cd0a49db7e8da5860849 ChangeLog 693
+MD5 8f73e2555b53183889ea8d4669c676fc splay-0.9.5.2.ebuild 966
 MD5 2dfdb702aadb0c285c3bbeb861a81810 files/digest-splay-0.9.5.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOsgPI1lqEGTUzyQRAtouAJ9tvGFE6aEx1AX0TnoQC/3K1wctBQCeKWxE
-7KATru0ucT8ViWVQ/R2HaGo=
-=TbzT
------END PGP SIGNATURE-----
