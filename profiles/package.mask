@@ -436,10 +436,6 @@ app-misc/ldapbrowser
 # to have it in /bin.
 <sys-apps/gawk-3.1.0-r3
 
-# <woodchip@gentoo.org> (24 Jul 2002)
-# apparently fatally flawed.
-<net-misc/fakeidentd-1.7
-
 # <spider@gentoo.org> (25 Jul 2002)
 #  Just a minor change, worth testing
 # as it uses less RAM during compile
@@ -545,17 +541,6 @@ media-libs/nurbs++
 # (jhhudso, 14 Jan 2003)
 dev-libs/libiconv
 
-# This one really mess with a lot of stuff.  We will have to wait until
-# everything is sorted, or apps have adapted to it.
-#
-# Problematic stuff:
-#     Nautils (no fonts in tabls, and view panels)
-#     Gnome2 components do not compile
-#     prob a load of others we still have to find out about.
-#
-# Azarah - 01 May 2002
-=media-libs/freetype-2.1.0*
-
 # masked for security reasons
 # see
 # http://online.securityfocus.com/advisories/4061
@@ -609,15 +594,6 @@ sys-apps/sysvinit
 
 # broken
 =app-doc/quanta-docs-1.0
-
-#incomplete and very dangerous < Danarmak >
-#
-# 20020430 (PreZ) Several people have reported the 641d build and bin
-# works installs work fine.  So the 641b one will remain masked alone.
-=app-office/openoffice-641b
-# mask 641d to enable 1.0.0
->app-office/openoffice-bin-2.0.0
->app-office/openoffice-2.0.0
 
 #buggy < Danarmak, Verwilst >
 =x11-libs/qt-x11-2.3.2
