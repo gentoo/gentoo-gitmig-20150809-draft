@@ -1,21 +1,21 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.33 2002/09/17 21:58:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.34 2002/09/30 00:05:32 seemant Exp $
 
 *fluxbox-0.1.12-r1 (17 Sep 2002)
 
   17 Sep 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.12-r1.ebuild
   files/digest-fluxbox-0.1.12-r1 :
 
-  Update: few hours later: Rachel refined the patch a little and added a
+  Update: few hours later: Rach refined the patch a little and added a
   subtle blurb in the fluxbox manpage as well.  Mucho thanks :)
 
   This revision bump incorporates two patches.  The first is the Vano patch
   from bug #5005 which makes the root menu disappear on left click anywhere.
   The second is the rootmenu patch which was posted many months ago on the
   fluxbox mailing lists against an older version of fluxbox.  The patch was
-  recently foreported to this version of flux by Rachel Holmes.  The
-  original patch was BSD licensed, as is Rachel's version of it.  Basically,
+  recently foreported to this version of flux by Rach Holmes.  The
+  original patch was BSD licensed, as is Rach's version of it.  Basically,
   it allows the rootmenu to be bound to a key. So, for instance, in
   ~/.fluxbox/keys:
 
