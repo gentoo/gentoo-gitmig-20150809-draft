@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.97 2004/09/21 08:25:31 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.98 2004/09/21 08:35:30 pauldv Exp $
+
+  21 Sep 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.1.0_rc2.ebuild:
+  Fix two issues. Bug #63991 to add support for authz_svn authentication in 
+  the default apache2 configuration file (conditional). Bug #64672 to take 
+  into account that with the new fs_fs support the server part is no longer 
+  dependent on berkeley db.
 
   21 Sep 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.0.6.ebuild:
   Fix the location of the jar archive (bug #64800)

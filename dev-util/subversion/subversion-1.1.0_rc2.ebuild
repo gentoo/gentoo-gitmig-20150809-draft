@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.0_rc2.ebuild,v 1.4 2004/09/05 19:00:40 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.0_rc2.ebuild,v 1.5 2004/09/21 08:35:30 pauldv Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -128,23 +128,21 @@ src_compile() {
 		( emake external-all && emake local-all ) || die "make of subversion failed"
 	fi
 
-	#building fails without the apache apr-util as includes are wrong.
-	#Also the python bindings do not work without db installed
-	if use berkdb; then
-		if use python; then
-			if use apache2; then
-				emake swig-py || die "subversion python bindings failed"
-			else
-				emake SVN_APR_INCLUDES="-I${S}/apr/include -I${S}/apr-util/include" swig-py || die "subversion python bindings failed"
-			fi
-		fi
-		if use perl; then
-			make swig-pl || die "Perl library building failed"
-		fi
-		if use java; then
-			make JAVACFLAGS="-source 1.3 -encoding iso8859-1" javahl || die "Compilation failed"
+	if use python; then
+		#building fails without the apache apr-util as includes are wrong.
+		if use apache2; then
+			emake swig-py || die "subversion python bindings failed"
+		else
+			emake SVN_APR_INCLUDES="-I${S}/apr/include -I${S}/apr-util/include" swig-py || die "subversion python bindings failed"
 		fi
 	fi
+	if use perl; then
+		make swig-pl || die "Perl library building failed"
+	fi
+	if use java; then
+		make JAVACFLAGS="-source 1.3 -encoding iso8859-1" javahl || die "Compilation failed"
+	fi
+
 	cd ${S}
 	if use emacs; then
 		einfo "compiling emacs support"
@@ -170,23 +168,21 @@ src_install () {
 		fi
 	fi
 
-	if use berkdb; then
-		dobin svn-config
-		if use python; then
-			make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D}  LD_LIBRARY_PATH="-L${D}/usr/lib" || die "Installation of subversion python bindings failed"
+	dobin svn-config
+	if use python; then
+		make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D}  LD_LIBRARY_PATH="-L${D}/usr/lib" || die "Installation of subversion python bindings failed"
 
-			# move python bindings
-			mkdir -p ${D}${PYTHON_DIR}/site-packages
-			mv ${D}/usr/lib/svn-python/svn ${D}${PYTHON_DIR}/site-packages
-			mv ${D}/usr/lib/svn-python/libsvn ${D}${PYTHON_DIR}/site-packages
-			rmdir ${D}/usr/lib/svn-python
-		fi
-		if use perl; then
-			make DESTDIR=${D} install-swig-pl || die "Perl library building failed"
-		fi
-		if use java; then
-			make DESTDIR="${D}" install-javahl || die "installation failed"
-		fi
+		# move python bindings
+		mkdir -p ${D}${PYTHON_DIR}/site-packages
+		mv ${D}/usr/lib/svn-python/svn ${D}${PYTHON_DIR}/site-packages
+		mv ${D}/usr/lib/svn-python/libsvn ${D}${PYTHON_DIR}/site-packages
+		rmdir ${D}/usr/lib/svn-python
+	fi
+	if use perl; then
+		make DESTDIR=${D} install-swig-pl || die "Perl library building failed"
+	fi
+	if use java; then
+		make DESTDIR="${D}" install-javahl || die "installation failed"
 	fi
 
 	dodoc BUGS COMMITTERS COPYING HACKING INSTALL README
@@ -219,7 +215,7 @@ src_install () {
 
 
 	#Install apache module config
-	if useq apache2 && useq berkdb; then
+	if useq apache2; then
 		mkdir -p ${D}/etc/apache2/conf/modules.d
 		cat <<EOF >${D}/etc/apache2/conf/modules.d/47_mod_dav_svn.conf
 <IfDefine SVN>
@@ -234,6 +230,11 @@ src_install () {
 		AuthUserFile ${SVN_REPOS_LOC}/conf/svnusers
 		Require valid-user
 	</Location>
+	<IfDefine SVN_AUTHZ>
+		<IfModule !authz_svn_module.c>
+			LoadModule authz_svn_module	extramodules/mod_authz_svn.so
+		</IfModule>
+	</IfDefine>
 </IfDefine>
 EOF
 	fi
@@ -242,29 +243,23 @@ EOF
 pkg_postinst() {
 
 	use emacs && elisp-site-regen
-	if use berkdb; then
-		if use apache2; then
-			einfo "Subversion has multiple server types. To enable the http based version"
-			einfo "you must edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
-			einfo ""
-		fi
-		einfo "A repository needs to be created using the \"ebuild <path to ${PVR}.ebuild> config\" command"
-		einfo "or using svnadmin (see man svnadmin) if this subversion install is used as server"
+	if use apache2; then
+		einfo "Subversion has multiple server types. To enable the http based version"
+		einfo "you must edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
 		einfo ""
-		einfo "If you upgraded from an older version of berkely db and experience"
-		einfo "problems with your repository then run the following command:"
-		einfo "    su apache -c \"db4_recover -h /path/to/repos\""
+	fi
+	einfo "A repository needs to be created using the \"ebuild <path to ${PVR}.ebuild> config\" command"
+	einfo "or using svnadmin (see man svnadmin) if this subversion install is used as server"
+	einfo ""
+	einfo "If you upgraded from an older version of berkely db and experience"
+	einfo "problems with your repository then run the following command:"
+	einfo "    su apache -c \"db4_recover -h /path/to/repos\""
 
-		if use apache2; then
-			einfo ""
-			einfo "To allow web access a htpasswd file needs to be created using the"
-			einfo "following command:"
-			einfo "   htpasswd2 -m -c ${SVN_REPOS_LOC}/conf/svnusers USERNAME"
-		fi
-
-	else
-		einfo "Your subversion is client only as the server is only build when"
-		einfo "the berkdb flag is set"
+	if use apache2; then
+		einfo ""
+		einfo "To allow web access a htpasswd file needs to be created using the"
+		einfo "following command:"
+		einfo "   htpasswd2 -m -c ${SVN_REPOS_LOC}/conf/svnusers USERNAME"
 	fi
 }
 
