@@ -1,5 +1,5 @@
 --- Python-2.2.3/Python/import.c	2003-03-23 14:32:56.000000000 +0000
-+++ /tmp/import.c	2003-10-09 09:45:51.000000000 +0100
++++ Python-2.2.3/Python/import.c	2003-10-09 09:45:51.000000000 +0100
 @@ -719,6 +719,7 @@
  write_compiled_module(PyCodeObject *co, char *cpathname, long mtime)
  {

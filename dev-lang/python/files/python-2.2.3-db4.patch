@@ -1,11 +1,13 @@
 --- Python-2.2.3/setup.py	2003-05-22 18:36:54.000000000 +0100
 +++ Python-2.2.3.new/setup.py	2003-07-03 19:42:29.000000000 +0100
-@@ -429,8 +429,10 @@
+@@ -429,8 +429,12 @@
          # Berkeley DB 3.x.)
  
          dblib = []
 -        if self.compiler.find_library_file(lib_dirs, 'db-3.2'):
 -            dblib = ['db-3.2']
++        if self.compiler.find_library_file(lib_dirs, 'db-4.1'):
++            dblib = ['db-4.1']
 +        if self.compiler.find_library_file(lib_dirs, 'db-4.0'):
 +            dblib = ['db-4.0']
 +        elif self.compiler.find_library_file(lib_dirs, 'db-3.2'):
