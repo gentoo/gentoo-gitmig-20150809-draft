@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.2.2.ebuild,v 1.1 2004/10/29 19:00:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.2.2.ebuild,v 1.2 2004/12/20 15:24:07 vapier Exp $
 
 inherit libtool kde-functions eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/qhacc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~alpha ~hppa ~ppc ~sparc ~x86"
 IUSE="doc mysql ofx postgres sqlite"
 
 DEPEND="ofx? ( ~dev-libs/libofx-0.7.0 )
@@ -31,14 +31,18 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--libdir=/usr/lib/qhacc --bindir=/usr/bin --includedir=/usr/include --datadir=/usr/share/qhacc
-			$(use_enable mysql)
-			$(use_enable postgres psql)
-			$(use_enable sqlite)
-			$(use_enable ofx) $(use_with ofx ofx-includes /usr/include/libofx)"
-
-	econf ${myconf} || die "./configure failed"
-	emake -j 1 || die "make failed"
+	econf \
+		--libdir=/usr/lib/qhacc \
+		--bindir=/usr/bin \
+		--includedir=/usr/include \
+		--datadir=/usr/share/qhacc \
+		$(use_enable mysql) \
+		$(use_enable postgres psql) \
+		$(use_enable sqlite) \
+		$(use_enable ofx) \
+		$(use_with ofx ofx-includes /usr/include/libofx) \
+		|| die "./configure failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
@@ -50,7 +54,7 @@ src_install() {
 	insinto /usr/share/qhacc/easysetup
 	doins ${S}/contrib/easysetup/*
 	rm -rf ${D}/var
-	dodoc AUTHORS ChangeLog COPYING FILE_FORMAT INSTALL NEWS README THANKS TODO UPGRADE
+	dodoc AUTHORS ChangeLog FILE_FORMAT INSTALL NEWS README THANKS TODO UPGRADE
 }
 
 pkg_postinst() {
