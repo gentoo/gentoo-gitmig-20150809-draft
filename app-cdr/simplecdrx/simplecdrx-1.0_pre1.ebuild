@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.0_pre1.ebuild,v 1.9 2002/08/16 02:31:09 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.0_pre1.ebuild,v 1.10 2002/10/17 13:22:03 aliz Exp $
 
 MY_P="${PN}-`echo ${PV} |sed -e 's:_:-:'`"
 S=${WORKDIR}/${MY_P}
@@ -10,6 +10,7 @@ HOMEPAGE="http://ogre.rocky-road.net/cdr.shtml"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
+IUSE="gnome"
 
 #todo: add blade encoder
 DEPEND="sys-devel/gcc media-sound/mad app-cdr/cdrtools app-cdr/cdrdao 
