@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.7 2003/10/29 03:16:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.8 2003/11/29 17:31:50 pebenito Exp $
 
 inherit eutils
 
@@ -19,6 +19,9 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=dev-libs/popt-1.5
 	>=sys-apps/sed-4
 	selinux? ( sys-libs/libselinux )"
+
+RDEPEND="${DEPEND}
+	selinux? ( sec-policy/selinux-logrotate )"
 
 src_unpack() {
 	unpack ${PN}_${PV}.orig.tar.gz

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.18 2003/10/29 03:16:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.19 2003/11/29 17:31:50 pebenito Exp $
+
+  29 Nov 2003; Chris PeBenito <pebenito@gentoo.org> logrotate-3.6.5-r1.ebuild:
+  Add SELinux policy RDEP.
 
   28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> logrotate-3.6.5-r1.ebuild,
   logrotate-3.6.5.ebuild, files/logrotate-3.6.5-selinux.diff.bz2:
