@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.99 2003/11/20 13:45:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.100 2003/11/29 22:56:02 brad_mssw Exp $
 
   20 Nov 2003; Luca Barbato <lu_zero@gentoo.org> kdebase-3.1.4.ebuild:
   Marked ppc
@@ -8,6 +8,9 @@
   20 Nov 2003; Caleb Tennis <caleb@gentoo.org> kdebase-3.2.0_beta1-r1.ebuild,
   files/kde-np.pam:
   Add new kde-np pam module for autologin.  See bug 33690
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> kdebase-3.1.4.ebuild:
+  mark stable on amd64
 
   12 Nov 2003; Caleb Tennis <caleb@gentoo.org> kdebase-3.2.0_beta1-r1.ebuild:
   Fix a couple of lines
