@@ -1,4 +1,14 @@
-MD5 a756939a97cc335e11a78802332bc353 ChangeLog 444
-MD5 162c3cac8605c86c46aa1996f9cf7cd8 japanesecodecs-1.4.9.ebuild 728
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bed0ead0ef1b85bf43d6c81859882ea2 ChangeLog 444
+MD5 4456add8246e61e0cc5e1d22d1023fdd japanesecodecs-1.4.9.ebuild 728
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 1faa4ac09ca67207df0649df30e461f7 files/digest-japanesecodecs-1.4.9 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCBvhZxtZcznfol0URAkGoAKD/Ez8ewdt95D9F3Ca+SWgvoXPwdgCgz+UI
+wu9XPZeODKCoAGnN54P+tiw=
+=TLcl
+-----END PGP SIGNATURE-----
