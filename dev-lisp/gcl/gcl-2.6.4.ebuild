@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.4.ebuild,v 1.2 2004/08/29 00:57:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.4.ebuild,v 1.3 2004/11/14 22:44:35 mkennedy Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -11,14 +11,14 @@ SRC_URI="ftp://ftp.gnu.org/gnu/gcl/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
-IUSE="emacs readline debug X tcltk ansi custreloc dlopen gprof"
+IUSE="emacs readline debug X tcltk ansi custreloc dlopen gprof doc"
 
 DEPEND=">=app-text/texi2html-1.64
 	emacs? ( virtual/emacs )
 	X? ( virtual/x11 )
 	readline? ( sys-libs/readline )
 	>=dev-libs/gmp-4.1
-	virtual/tetex"
+	doc? ( virtual/tetex )"
 
 src_unpack() {
 	unpack ${A}

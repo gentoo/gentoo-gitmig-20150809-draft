@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.23 2004/08/29 00:57:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.24 2004/11/14 22:44:35 mkennedy Exp $
+
+  14 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org> gcl-2.6.4.ebuild:
+  Conditionally depend on tetex via doc USE flag; Resolves Bug #70300
 
   29 Aug 2004; David Holm <dholm@gentoo.org> gcl-2.6.4.ebuild:
   Added to ~ppc.
