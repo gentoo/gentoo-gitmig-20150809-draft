@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.34 2004/07/13 20:30:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.35 2004/08/04 23:01:56 liquidx Exp $
+
+  04 Aug 2004; Alastair Tse <liquidx@gentoo.org> -redhat-artwork-0.39.ebuild,
+  -redhat-artwork-0.47.ebuild, -redhat-artwork-0.81.ebuild,
+  -redhat-artwork-0.88-r2.ebuild, -redhat-artwork-0.88.ebuild,
+  redhat-artwork-0.96.ebuild:
+  cleanup and fix multiple issues with 0.96 including LC_ALL (#59334), long
+  standing qt sandbox violations (#25445), xfree/xorg cursor install paths
+  (#53348)
 
   13 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   redhat-artwork-0.73.ebuild:

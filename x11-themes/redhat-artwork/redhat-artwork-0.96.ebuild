@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.3 2004/06/28 23:20:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.4 2004/08/04 23:01:56 liquidx Exp $
 
 inherit eutils rpm
 
@@ -42,15 +42,14 @@ _replace() {
 	done
 }
 
-src_unpack() {
-	rpm_src_unpack
-}
-
 src_compile() {
+
+	use kde && addwrite "${QTDIR}/etc/settings"
 
 	export WANT_AUTOCONF=2.5
 	# dies is LANG has UTF-8
 	export LANG=C
+	export LC_ALL=C
 
 	use kde || (
 
@@ -74,9 +73,6 @@ src_compile() {
 		-e  "s|qt||" \
 			art/Makefile.in.old > art/Makefile.in
 
-	autoconf
-	automake
-
 	)
 
 	# disable gtk 1.x support if gtk use keyword is not set
@@ -98,8 +94,10 @@ src_compile() {
 	sed -e  "s|Bluecurve1||" \
 	art/gtk/Makefile.am.old > art/gtk/Makefile.am
 
-	autoconf
-	automake
+	)
+
+	[ -z "`use kde`" -o -z "`use gtk`" ] && (
+		aclocal && autoconf && automake --add-missing || die "auto* failed"
 	)
 
 	# paths have to be fixed for kde
@@ -127,6 +125,10 @@ src_compile() {
 }
 
 src_install () {
+	# dies is LANG has UTF-8
+	export LANG=C
+	export LC_ALL=C
+
 	make prefix=${D}/usr kde_moduledir=${D}/${KDEDIR}/lib \
 	styledir=${D}/${KDEDIR}/lib/kde3/plugins/styles \
 	settingsdir=${D}/${KDEDIR}/etc/settings install || die
@@ -162,11 +164,15 @@ src_install () {
 	sed -e 's|Screenshot=|#Screenshot=|' GdmGreeterTheme.desktop > GdmGreeterTheme.desktop.mod
 	mv GdmGreeterTheme.desktop.mod GdmGreeterTheme.desktop
 
-	# move cursors to /usr/share/cursors/xfree
+	# move cursors to /usr/share/cursors/${X11_IMPL}
+	X11_IMPLEM_P="$(portageq best_version ${ROOT} virtual/x11)"
+	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+	X11_IMPLEM="${X11_IMPLEM##*\/}"
+
 	for x in Bluecurve Bluecurve-inverse; do
-		dodir /usr/share/cursors/xfree/${x}
-		mv ${D}/usr/share/icons/${x}/cursors ${D}/usr/share/cursors/xfree/${x}
-		dosym /usr/share/cursors/xfree/${x}/cursors /usr/share/icons/${x}/cursors
+		dodir /usr/share/cursors/${X11_IMPLEM}/${x}
+		mv ${D}/usr/share/icons/${x}/cursors ${D}/usr/share/cursors/${X11_IMPLEM}/${x}
+		dosym /usr/share/cursors/${X11_IMPLEM}/${x}/cursors /usr/share/icons/${x}/cursors
 	done
 
 	# remove xmms skin if unneeded
