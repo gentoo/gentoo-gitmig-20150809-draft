@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.8 2003/01/30 09:33:05 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.9 2003/02/04 10:35:58 raker Exp $
+
+*libsndfile-1.0.4 (04 Feb 2003)
+
+  04 Feb 2003; Nick Hadaway <raker@gentoo.org> libsndfile-1.0.4.ebuild,
+  files/digest-libsndfile-1.0.4 :
+  Version bump.  Adds XI and PVM support and some minor bug fixes.
 
 *libsndfile-1.0.3 (30 Jan 2003)
 
