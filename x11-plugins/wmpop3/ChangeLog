@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmpop3
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3/ChangeLog,v 1.1 2003/01/14 07:02:24 raker Exp $
+
+*wmpop3-0.5.6a (14 Jan 2003)
+
+  14 Jan 2003; Nick Hadaway <raker@gentoo.org> wmpop3-0.5.6a.ebuild,
+  files/digest-wmpop3-0.5.6a :
+  New ebuild.  dockapp for checking a pop3 server.
