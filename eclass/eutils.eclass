@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.163 2005/03/26 06:33:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.164 2005/03/30 14:12:25 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1765,8 +1765,9 @@ newpamd() {
 # $2 == binary to run
 # $3 == directory to chdir before running binary
 # $4 == extra LD_LIBRARY_PATH's (make it : delimited)
+# $5 == path for wrapper
 make_wrapper() {
-	local wrapper=$1 bin=$2 chdir=$3 libdir=$4
+	local wrapper=$1 bin=$2 chdir=$3 libdir=$4 path=$5
 	local tmpwrapper=$(emktemp)
 	cat << EOF > "${tmpwrapper}"
 #!/bin/sh
@@ -1775,5 +1776,11 @@ export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:${libdir}"
 exec ${bin} "\$@"
 EOF
 	chmod go+rx "${tmpwrapper}"
-	newbin "${tmpwrapper}" "${wrapper}"
+	if [ -n "${5}" ]
+	then
+		exeinto ${5}
+		newexe "${tmpwrapper}" "${wrapper}"
+	else
+		newbin "${tmpwrapper}" "${wrapper}"
+	fi
 }
