@@ -1,6 +1,9 @@
 # ChangeLog for net-news/slrn
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.17 2004/06/19 01:56:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.18 2004/06/19 18:08:16 kugelfang Exp $
+
+  19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> slrn-0.9.8.0-r1.ebuild:
+  Marked ~amd64.
 
   19 Jun 2004; Sven Wegener <swegener@gentoo.org> slrn-0.9.7.4-r1.ebuild,
   slrn-0.9.7.4.ebuild, slrn-0.9.8.0.ebuild:
