@@ -295,7 +295,7 @@ src_install() {
 		try make PREFIX=${D} install  
 		rm -rf ${D}/etc/rc.d
 		insinto /etc/rc.d/init.d
-		doins ${FILESDIR}/${PV}/pcmcia
+		doins ${FILESDIR}/${KV}/pcmcia
 	    fi	    
 	    #fix symlink
 	    cd ${D}/lib/modules/${KV}
