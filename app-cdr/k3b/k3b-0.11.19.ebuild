@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.19.ebuild,v 1.4 2005/02/22 18:20:57 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.19.ebuild,v 1.5 2005/02/22 20:14:40 greg_g Exp $
 
 inherit kde eutils
 
@@ -59,6 +59,9 @@ src_compile() {
 	local _S=${S}
 	local myconf="--enable-libsuffix= $(use_with kde k3bsetup) \
 		--with-external-libsamplerate"
+
+	# it is important to disable flac for bug #82558.
+	use flac || export ac_cv_lib_FLAC_FLAC__seekable_stream_decoder_process_single="no"
 
 	# Build process of K3B
 	kde_src_compile
