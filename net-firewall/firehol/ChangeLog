@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.10 2004/11/09 13:59:59 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.11 2004/11/12 19:41:10 blubb Exp $
+
+  12 Nov 2004; Simon Stelling <blubb@gentoo.org> firehol-1.214.ebuild:
+  added ~amd64
 
 *firehol-1.214 (09 Nov 2004)
 
