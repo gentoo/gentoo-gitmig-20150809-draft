@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.28.0.ebuild,v 1.2 2005/01/13 06:19:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.28.0.ebuild,v 1.3 2005/02/25 13:32:04 ka0ttic Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.laurentconstantin.com/common/netw/${PN}/download/v${PV/.*}/$
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="~net-libs/netwib-${PV}"
