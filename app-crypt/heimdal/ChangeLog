@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.13 2003/12/16 01:06:51 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.14 2004/02/17 15:54:17 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> heimdal-0.6.ebuild:
+  Fix compilation on gcc3 and use -fPIC for editline.a. This is a proper -fPIC
+  fix so no complaining please! ;-)
 
   15 Dec 2003; Jason Wever <weeve@gentoo.org> heimdal-0.4e-r1.ebuild,
   heimdal-0.5.1-r1.ebuild, heimdal-0.5.1.ebuild, heimdal-0.5.ebuild,

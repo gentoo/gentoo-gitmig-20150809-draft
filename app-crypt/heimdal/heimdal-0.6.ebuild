@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.ebuild,v 1.5 2003/12/16 01:06:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.ebuild,v 1.6 2004/02/17 15:54:17 agriffis Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pdc.kth.se/heimdal/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 -sparc ppc"
+KEYWORDS="x86 -sparc ppc ~alpha ~ia64"
 IUSE="ssl ldap berkdb ipv6 krb4"
 PROVIDE="virtual/krb5"
 
@@ -24,10 +24,14 @@ DEPEND="
 	# -- Kain <kain@kain.org> 05 Dec 2002
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A} || die
+	epatch ${FILESDIR}/heimdal-0.6-gcc3.patch || die
 
-	cd ${S}/lib/krb5
-	sed -i "s:LIB_crypt = @LIB_crypt@:LIB_crypt = -lssl @LIB_crypt@:g" Makefile.in
+	# Um, I don't think the below is doing anything since automake is
+	# run in src_compile(), but I'll leave it alone since this ebuild
+	# isn't mine... (16 Feb 2004 agriffis)
+	cd ${S}/lib/krb5 || die
+	sed -i "s:LIB_crypt = @LIB_crypt@:LIB_crypt = -lssl @LIB_crypt@:g" Makefile.in || die
 }
 
 src_compile() {
@@ -39,19 +43,25 @@ src_compile() {
 	automake -a || die "configure problem"
 	autoconf || die "configure problem"
 
-	local myconf
+	local myconf="
+		$(use_with ipv6)
+		$(use_with berkdb berkely-db)"
 
-	use ssl && myconf="--with-openssl=/usr" || myconf="--without-openssl"
+	use ssl \
+		&& myconf="--with-openssl=/usr" \
+		|| myconf="--without-openssl"
 
 	#use ldap && myconf="${myconf} --with-open-ldap=/usr"
 
-	use ipv6 || myconf="${myconf} --without-ipv6"
-
-	use berkdb || myconf="${myconf} --without-berkely-db"
-	use krb4 && myconf="${myconf} --with-krb4=/usr/athena --disable-shared" \
+	use krb4 \
+		&& myconf="${myconf} --with-krb4=/usr/athena --disable-shared" \
 		|| myconf="${myconf} --enable-shared"
 
 	econf ${myconf}
+
+	# editline archive is linked into shared objects, needs to be
+	# built with -fPIC (16 Feb 2004 agriffis)
+	sed -i -e '/^CFLAGS\>/s/$/ -fPIC/' lib/editline/Makefile || die
 
 	emake || die
 }

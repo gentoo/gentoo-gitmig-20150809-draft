@@ -1,0 +1,13 @@
+--- heimdal-0.6/lib/krb5/verify_krb5_conf.c.gcc3	2004-02-16 21:22:53.000000000 -0500
++++ heimdal-0.6/lib/krb5/verify_krb5_conf.c	2004-02-16 21:23:08.000000000 -0500
+@@ -449,8 +449,8 @@
+ 
+ #if 0
+ struct entry kdcdefaults_entries[] = {
+-    { "kdc_ports, krb5_config_string, mit_entry },
+-    { "v4_mode, krb5_config_string, mit_entry },
++    { "kdc_ports", krb5_config_string, mit_entry },
++    { "v4_mode", krb5_config_string, mit_entry },
+     { NULL }
+ };
+ #endif
