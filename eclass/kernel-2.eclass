@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.97 2005/02/09 11:23:25 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.98 2005/02/09 21:07:14 hollow Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -159,8 +159,10 @@ unpack_2_4() {
 universal_unpack() {
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
-	[[ ${OKV} != ${KV_FULL} ]] && mv linux-${OKV} linux-${KV_FULL} \
+	if [[ "${OKV}" != "${KV_FULL}" ]]; then
+		mv linux-${OKV} linux-${KV_FULL} \
 			|| die "Unable to move source tree to ${KV_FULL}."
+	fi
 	cd ${S}
 
 	# change incorrect install path
