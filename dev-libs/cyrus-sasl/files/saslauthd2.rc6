@@ -16,6 +16,6 @@ start() {
 
 stop() {
 	ebegin "Stopping saslauthd"
-	start-stop-daemon --stop --quiet --pidfile /var/lib/sasl2/mux.pid
+	start-stop-daemon --stop --quiet --pidfile /var/lib/sasl2/saslauthd.pid
 	eend $?
 }
