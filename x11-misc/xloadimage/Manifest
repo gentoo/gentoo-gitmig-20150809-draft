@@ -1,0 +1,6 @@
+MD5 f102ffc8a514e61ed009dabf9487af9b xloadimage-4.1-r1.ebuild 1538
+MD5 61957b639baa788294130a3afd482b7a xloadimage-4.1.ebuild 1385
+MD5 d3d2ac3a5eb13fadb20f953d51fc0af9 ChangeLog 1465
+MD5 c411c977cc7ae79dd96aad933980dbb2 files/xloadimage-4.1-include-errno_h.patch 303
+MD5 bad387ba03d0111a70dd7066ba97d5e5 files/digest-xloadimage-4.1-r1 140
+MD5 bad387ba03d0111a70dd7066ba97d5e5 files/digest-xloadimage-4.1 140
