@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpg-agent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.6 2005/03/07 08:18:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.7 2005/03/14 18:29:29 agriffis Exp $
+
+  14 Mar 2005; Aron Griffis <agriffis@gentoo.org> gpg-agent-1.9.15.ebuild:
+  Add ~alpha, ~ia64
 
   07 Mar 2005; Daniel Black <dragonheart@gentoo.org> gpg-agent-1.9.15.ebuild:
   Readded keywords ~sparc ~hppa ~ppc64 due to dependancy keywords added.

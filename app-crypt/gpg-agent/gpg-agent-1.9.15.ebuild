@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.15.ebuild,v 1.2 2005/03/07 08:18:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.15.ebuild,v 1.3 2005/03/14 18:29:29 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${GPG_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~sparc ~hppa ~ppc64"
+KEYWORDS="~amd64 ~ppc ~x86 ~sparc ~hppa ~ppc64 ~alpha ~ia64"
 # KEYWORDS missing due to below packages
 # ~mips ~s390 ~arm - libksba libpth bug #79171
 # ~alpha  - libksa bug #79172 
