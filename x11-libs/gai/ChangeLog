@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gai
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.1 2003/12/10 11:42:24 lordvan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.2 2004/01/11 01:04:35 seemant Exp $
+
+  10 Jan 2004; Seemant Kulleen <seemant@gentoo.org> gai-0.5.0_pre6.ebuild:
+  switch to use_enable and other cleanups. Thanks to Charles Allen
+  <crallen@purdue.edu> in bug #37698 for pointing out why use_enable should be
+  used
 
 *gai-0.5.0_pre6 (10 Dec 2003)
 
