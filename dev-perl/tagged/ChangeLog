@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/tagged
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/tagged/ChangeLog,v 1.1 2004/09/04 11:18:45 mcummings Exp $
+
+*tagged-0.40 (04 Sep 2004)
+
+  04 Sep 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +tagged-0.40.ebuild:
+  Provides the MP3::Tag sets, this is a dependancy for mp3mover (bug 21174)
+
