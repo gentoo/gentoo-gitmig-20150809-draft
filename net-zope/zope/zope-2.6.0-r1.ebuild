@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.0-r1.ebuild,v 1.3 2003/06/09 22:05:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.0-r1.ebuild,v 1.4 2003/09/08 06:02:05 msterret Exp $
 
 S="${WORKDIR}/Zope-${PV}-src"
 
@@ -24,7 +24,7 @@ src_compile() {
 
 src_install() {
 
-  	dodoc LICENSE.txt README.txt
+	dodoc LICENSE.txt README.txt
 	docinto doc ; dodoc doc/*.txt
 	docinto doc/PLATFORMS ; dodoc doc/PLATFORMS/*
 	docinto doc/changenotes ; dodoc doc/changenotes/*

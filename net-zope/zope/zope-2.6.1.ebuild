@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.1.ebuild,v 1.4 2003/09/07 00:21:34 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.1.ebuild,v 1.5 2003/09/08 06:02:05 msterret Exp $
 
 S="${WORKDIR}/Zope-${PV}-src"
 
@@ -56,9 +56,9 @@ RCNAME=zope.initd
 
 setup_security()
 {
-    chown -R ${ZUID}:${2} ${1}
-    chmod -R g+u ${1}
-    chmod -R o-rwx ${1}
+	chown -R ${ZUID}:${2} ${1}
+	chmod -R g+u ${1}
+	chmod -R o-rwx ${1}
 }
 
 #
@@ -67,7 +67,7 @@ install_help()
 {
 	einfo "Need to setup an inituser (admin) before executing zope:"
 	einfo "\tzope-config --zpasswd"
-    einfo "To execute default Zope instance:"
+	einfo "To execute default Zope instance:"
 	einfo "\t/etc/init.d/${ZGID} start"
 }
 
@@ -81,19 +81,19 @@ pkg_setup()
 		ewarn "with this version of zope. Emerge at your own risk."
 		sleep 12
 	fi
-    if ! groupmod ${ZGID} > /dev/null 2>&1 ; then
+	if ! groupmod ${ZGID} > /dev/null 2>&1 ; then
 		groupadd ${ZGID} || die "Can not add ${ZGID} group!"
-    fi
-    if ! id ${ZUID} > /dev/null 2>&1 ; then
+	fi
+	if ! id ${ZUID} > /dev/null 2>&1 ; then
 		useradd -d ${ZS_DIR} -c "Zope root user" -u 261 ${ZUID} \
 	|| die "Can not add ${ZUID} user!"
-    fi
+	fi
 }
 
 #
 
 src_compile() {
-    $python wo_pcgi.py || die "Failed to compile."
+	$python wo_pcgi.py || die "Failed to compile."
 }
 
 #
@@ -104,34 +104,34 @@ src_install() {
 	docinto doc/PLATFORMS ; dodoc doc/PLATFORMS/*
 	docinto doc/changenotes ; dodoc doc/changenotes/*
 
-    # using '/etc/init.d/zope'
+	# using '/etc/init.d/zope'
 	rm -Rf start stop LICENSE.txt README.txt doc/
 
 	# Need to rip out the zinstance stuff out
-    # but save as templates
+	# but save as templates
 	mkdir -p .templates/import
 	cp import/README.txt .templates/import/
 	mv -f Extensions/ .templates/
 	mv -f var/ .templates/
 
-    # Add conf.d script.
-    dodir /etc/conf.d
-    echo "ZOPE_OPTS=\"-u zope\"" | \
-    cat - ${FILESDIR}/${PV}/zope.envd > .templates/zope.confd
+	# Add conf.d script.
+	dodir /etc/conf.d
+	echo "ZOPE_OPTS=\"-u zope\"" | \
+	cat - ${FILESDIR}/${PV}/zope.envd > .templates/zope.confd
 
-    # Fill in environmental variables
-    sed -i -e "/ZOPE_HOME=/ c\\ZOPE_HOME=${ZSERVDIR}\\ " \
-        -e "/SOFTWARE_HOME=/ c\\SOFTWARE_HOME=${ZSERVDIR}/lib/python\\ " \
+	# Fill in environmental variables
+	sed -i -e "/ZOPE_HOME=/ c\\ZOPE_HOME=${ZSERVDIR}\\ " \
+		-e "/SOFTWARE_HOME=/ c\\SOFTWARE_HOME=${ZSERVDIR}/lib/python\\ " \
 		.templates/zope.confd
 
-    # Add rc-script.
+	# Add rc-script.
 	#!! TODO: fill in $python in zope-r2.initd
-    sed -e "/python=/ c\\python=\"${python}\"\\ " ${FILESDIR}/${PV}/${RCNAME} \
+	sed -e "/python=/ c\\python=\"${python}\"\\ " ${FILESDIR}/${PV}/${RCNAME} \
 		> .templates/zope.initd
 
-    # Copy the remaining contents of ${S} into the ${D}.
-    dodir ${ZSERVDIR}
-    cp -a . ${D}${ZSERVDIR}
+	# Copy the remaining contents of ${S} into the ${D}.
+	dodir ${ZSERVDIR}
+	cp -a . ${D}${ZSERVDIR}
 
 	setup_security ${D}${ZSERVDIR} ${ZGID}
 }
