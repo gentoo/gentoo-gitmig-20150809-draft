@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.1 2004/03/16 20:09:06 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.2 2004/03/23 20:59:15 twp Exp $
+
+*ion3-20040316_p1 (23 Mar 2004)
+
+  23 Mar 2004; Tom Payne <twp@gentoo.org> ion3-20040316_p1.ebuild :
+  Version bump.
 
 *ion3-20040316 (16 Mar 2004)
 
