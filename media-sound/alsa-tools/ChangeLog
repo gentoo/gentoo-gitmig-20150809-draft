@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.67 2005/01/26 06:52:41 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.68 2005/02/13 03:34:47 robbat2 Exp $
+
+  12 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  alsa-tools-1.0.7.ebuild:
+  Add ~mips for my XXS1500 hardware.
 
   26 Jan 2005; Chris White <chriswhite@gentoo.org>
   alsa-tools-1.0.8-r1.ebuild:

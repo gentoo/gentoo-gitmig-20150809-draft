@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.75-r1.ebuild,v 1.10 2004/12/06 20:06:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.75-r1.ebuild,v 1.11 2005/02/13 03:36:26 robbat2 Exp $
 
 inherit eutils
 
