@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.14 2002/05/28 02:08:11 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.15 2002/05/28 08:52:12 spider Exp $
+
+*gtk+-2.0.3 (28 May 2002)                                                    
+  28 May 2002; Spider <spider@gentoo.org> gtk+-2.0.3.ebuild:
+  new stable branch  
 
 *gtk+-1.2.10-r8 (27 May 2002)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.5 2002/05/22 19:31:07 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.6 2002/05/28 08:52:12 spider Exp $
+
+*pango-1.0.2 (28 May 2002)
+  28 May 2002; Spider <spider@gentoo.org>; pango-1.0.2.ebuild :
+  new release. finally
 
 *pango-1.0.1-r4 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org>; pango-1.0.1-r4.ebuild :
