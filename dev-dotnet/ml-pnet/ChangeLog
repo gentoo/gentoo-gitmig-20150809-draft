@@ -1,11 +1,10 @@
 # ChangeLog for dev-dotnet/ml-pnet
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ChangeLog,v 1.20 2005/02/06 16:08:27 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ChangeLog,v 1.21 2005/02/06 17:24:25 scandium Exp $
 
   06 Feb 2005; Rainer Groesslinger <scandium@gentoo.org>
-  +files/System.ServiceProcess.build.patch, ml-pnet-0.6.12.ebuild:
-  fix use of DESTDIR (bug #80941) and a patch to fix compilation
-  of System.ServiceProcess
+  ml-pnet-0.6.12.ebuild:
+  fix use of DESTDIR (bug #80941)
 
 *ml-pnet-0.6.12 (16 Jan 2005)
 
