@@ -1,26 +1,27 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r2.ebuild,v 1.8 2004/10/31 11:18:34 hansmi Exp $
-
-IUSE="gtk gtk2 gpm nls"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r2.ebuild,v 1.9 2004/10/31 19:52:31 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="Aumix volume/mixer control program."
-SRC_URI="http://jpj.net/~trevor/aumix/${P}.tar.bz2"
+DESCRIPTION="Aumix volume/mixer control program"
 HOMEPAGE="http://jpj.net/~trevor/aumix/"
+SRC_URI="http://jpj.net/~trevor/aumix/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 hppa amd64 sparc ~alpha ~ia64 ~mips ppc"
+SLOT="0"
+KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc sparc x86"
+IUSE="gtk gtk2 gpm nls"
 
 #alsa support is broken in 2.8	alsa? ( >=media-libs/alsa-lib-0.9.0_rc1 )
-DEPEND=">=sys-libs/ncurses-5.2
-	gpm?  ( >=sys-libs/gpm-1.19.3 )
-	gtk?  (
-			!gtk2? ( =x11-libs/gtk+-1.2* )
-			gtk2? ( >=x11-libs/gtk+-2.0.0 )
-	)
+RDEPEND=">=sys-libs/ncurses-5.2
+	gpm? ( >=sys-libs/gpm-1.19.3 )
+	gtk? (
+		!gtk2? ( =x11-libs/gtk+-1.2* )
+		gtk2? ( >=x11-libs/gtk+-2.0.0 )
+	)"
+DEPEND="${RDEPEND}
+	>=sys-apps/portage-2.0.51
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
@@ -59,7 +60,7 @@ src_compile() {
 src_install() {
 	einstall
 
-	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 
 	insinto /usr/share/applications
 	doins ${FILESDIR}/aumix.desktop
@@ -67,5 +68,5 @@ src_install() {
 	dodir /usr/share/pixmaps
 	ln -s ../aumix/aumix.xpm ${D}/usr/share/pixmaps
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/aumix.rc6 aumix
+	newinitd ${FILESDIR}/aumix.rc6 aumix
 }
