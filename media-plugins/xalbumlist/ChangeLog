@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xalbumlist
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xalbumlist/ChangeLog,v 1.1 2004/01/25 22:36:43 eradicator Exp $
+
+*xalbumlist-2.2 (25 Jan 2004)
+
+  25 Jan 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  xalbumlist-2.2.ebuild:
+  Album management tool for controlling xmms. Ebuild provided by Sam Stephenson
+  <sam@conio.net> ib bug #31450. Closes bug #31241
+
