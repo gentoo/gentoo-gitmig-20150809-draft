@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.15 2004/05/14 04:13:09 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.16 2004/06/08 01:08:34 agriffis Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk gtk2 alsa"
 
@@ -104,10 +104,10 @@ src_compile() {
 	# Allow configure to detect mipslinux systems
 	use mips && gnuconfig_update
 
-	if [ `use amd64` ]; then
+	if use amd64; then
 		myconf="${myconf} --disable-simd"
 	else
-	  	if [ `use 3dnow` ] || [ `use mmx` ] ; then
+	  	if use 3dnow || use mmx ; then
 			myconf="${myconf} --enable-simd"
 		else
 			myconf="${myconf} --disable-simd"
@@ -157,7 +157,7 @@ src_install() {
 	insinto /etc/X11/wmconfig
 	donewins xmms/xmms.wmconfig xmms
 
-	if [ `use gnome` ] ; then
+	if use gnome ; then
 		insinto /usr/share/gnome/apps/Multimedia
 		doins xmms/xmms.desktop
 		dosed "s:xmms_mini.xpm:mini/xmms_mini.xpm:" \
