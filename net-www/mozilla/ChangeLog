@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.77 2002/12/26 01:41:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.78 2002/12/26 20:14:40 azarah Exp $
+
+  26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r4.ebuild :
+
+  Same as last -r3, just created to make sure we have all the fixes, and
+  marked stable for x86.
 
   26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
 
