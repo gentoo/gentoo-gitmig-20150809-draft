@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r8.ebuild,v 1.5 2004/12/22 23:13:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r8.ebuild,v 1.6 2005/01/10 22:52:41 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -58,31 +58,29 @@ src_unpack() {
 src_compile() {
 	export CC="$(tc-getCC)"
 	cd ${S}/src; ${CC} ${CFLAGS} tbz2tool.c -o tbz2tool
+
 	cd ${S}/src/sandbox-1.1
-	case ${ARCH} in
-		"x86")
-			make CFLAGS="-march=i386 -O1 -pipe" || die
-			;;
-		"amd64")
-			check_multilib
-			make CFLAGS="-O1 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
-			;;
-		"sparc")
-			if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
-				check_multilib
-				make CFLAGS="-O1 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
-			else
-				make CFLAGS="-O1 -pipe" || die
-			fi
-			;;
-		*)
-			if useq ppc-macos || useq x86-fbsd; then
-				ewarn "NOT BUILDING SANDBOX ON $ARCH"
-			else
-				make CFLAGS="-O1 -pipe" || die
-			fi
-			;;
-	esac
+	if use ppc-macos || use x86-fbsd; then
+		ewarn "NOT BUILDING SANDBOX ON ${ARCH}"
+	elif [ -n "${MULTILIB_ABIS}" ] && ! hasq ${FEATURES}; then
+		for ABI in ${MULTILIB_ABIS}; do
+			export ABI
+			make clean
+			make CFLAGS="-O1 -pipe" libsandbox.so || die
+			mv libsandbox.so libsandbox.so.${ABI}
+		done
+		make clean
+		export ABI="${DEFAULT_ABI}"
+		make CFLAGS="-O1 -pipe" || die
+	elif [ "${ARCH}" == "amd64" ]; then
+		check_multilib
+		make CFLAGS="-O1 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
+	elif [ "${ARCH}" == "x86" ]; then
+		make CFLAGS="-march=i386 -O1 -pipe" || die
+	else
+		make CFLAGS="-O1 -pipe" || die
+	fi
+
 	cd ${S}/bin
 }
 
@@ -129,19 +127,30 @@ src_install() {
 	doexe *
 	doexe ${S}/src/tbz2tool
 
+	#install sandbox
+	cd ${S}/src/sandbox-1.1
 	if use ppc-macos || use x86-fbsd; then
 		ewarn "Not installing sandbox on ${ARCH}"
-	else
-		#install sandbox
-		cd ${S}/src/sandbox-1.1
-		if [ "$ARCH" == "amd64" -o "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
-			check_multilib
-			make DESTDIR="${D}" HAVE_64BIT_ARCH="${MULTILIB}" install || \
-			die "Failed to compile sandbox"
-		else
+	elif [ -n "${MULTILIB_ABIS}" ]; then
+		for ABI in ${MULTILIB_ABIS}; do
+			cp libsandbox.so.${ABI} libsandbox.so
 			make DESTDIR="${D}" install || \
-			die "Failed to compile sandbox"
-		fi
+			die "Failed to install sandbox"
+			if [ "$(get_libdir)" = "lib" ]; then
+				mv ${D}/lib/libsandbox.so ${D}/lib/libsandbox.so.real 
+			else
+				dodir /$(get_libdir)
+				mv ${D}/lib/libsandbox.so ${D}/$(get_libdir)
+			fi
+		done
+		[ -f "${D}/lib/libsandbox.so.real" ] && mv ${D}/lib/libsandbox.so.real ${D}/lib/libsandbox.so
+	elif [ "${ARCH}" == "amd64" -a -z "${MULTILIB_ABIS}" ]; then
+		check_multilib
+		make DESTDIR="${D}" HAVE_64BIT_ARCH="${MULTILIB}" install || \
+		die "Failed to install sandbox"
+	else
+		make DESTDIR="${D}" install || \
+		die "Failed to install sandbox"
 	fi
 
 	#symlinks
@@ -181,13 +190,6 @@ src_install() {
 
 	#documentation
 	dodoc ${S}/ChangeLog
-
-	# Fix dumb placement of libsandbox
-	if [ "${PROFILE_ARCH}" = "sparc64-multilib" -a "${MULTILIB}" = "1" ]; then
-		dodir /lib64
-		mv ${D}/lib/lib* ${D}/lib64
-		mv ${D}/lib32/lib* ${D}/lib
-	fi
 }
 
 
