@@ -3,6 +3,7 @@ MD5 bca2bb471b3871f73c122fd478476414 wv2-0.0.7.ebuild 706
 MD5 ba66c68087e0323ff989009f86290d5b wv2-0.0.8.ebuild 671
 MD5 eb5c6df15d6c4604665b886cbfc1ba1b wv2-0.1.ebuild 666
 MD5 e7af0a6199eabe4b9c86d157b1e98c3b wv2-0.0.9.ebuild 671
+MD5 3eb60ccdbbb7c5c16f940dfe2bfffdc5 metadata.xml 222
 MD5 c502c016b6ecdbd0365bd345b55391ec files/digest-wv2-0.1 60
 MD5 5afef0e25528eda3ea95665f55a3e967 files/digest-wv2-0.0.7 62
 MD5 04600766f44805a4f82585e49d950c7e files/digest-wv2-0.0.8 62
