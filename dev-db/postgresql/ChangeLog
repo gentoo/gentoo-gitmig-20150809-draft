@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.177 2005/02/06 20:45:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.178 2005/02/11 21:41:45 nakano Exp $
+
+*postgresql-7.4.7-r1 (11 Feb 2005)
+
+  11 Feb 2005; Masatomo Nakano <nakano@gentoo.org>
+  +files/postgresql-7.3.9-securityfix.patch,
+  +files/postgresql-7.4.7-securityfix.patch,
+  +files/postgresql-8.0.1-securityfix.patch, +postgresql-7.3.9-r1.ebuild,
+  +postgresql-7.4.7-r1.ebuild, +postgresql-8.0.1-r1.ebuild:
+  Fixed security problem. (#81350)
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> postgresql-7.4.7.ebuild:
   Marked stable on mips.

@@ -1,0 +1,71 @@
+--- pgsql/src/pl/plpgsql/src/gram.y	2005/01/21 00:17:02	1.64.4.1
++++ pgsql/src/pl/plpgsql/src/gram.y	2005/02/08 18:21:59	1.64.4.3
+@@ -1766,8 +1766,19 @@ read_sql_construct(int until,
+ 						 errmsg("missing \"%s\" at end of SQL statement",
+ 								expected)));
+ 		}
++
+ 		if (plpgsql_SpaceScanned)
+ 			plpgsql_dstring_append(&ds, " ");
++
++		/* Check for array overflow */
++		if (nparams >= 1024)
++		{
++			plpgsql_error_lineno = lno;
++			ereport(ERROR,
++					(errcode(ERRCODE_PROGRAM_LIMIT_EXCEEDED),
++					 errmsg("too many variables specified in SQL statement")));
++		}
++
+ 		switch (tok)
+ 		{
+ 			case T_SCALAR:
+@@ -1940,6 +1951,15 @@ make_select_stmt(void)
+ 
+ 					while ((tok = yylex()) == ',')
+ 					{
++						/* Check for array overflow */
++						if (nfields >= 1024)
++						{
++							plpgsql_error_lineno = plpgsql_scanner_lineno();
++							ereport(ERROR,
++									(errcode(ERRCODE_PROGRAM_LIMIT_EXCEEDED),
++									 errmsg("too many INTO variables specified")));
++						}
++
+ 						tok = yylex();
+ 						switch(tok)
+ 						{
+@@ -1990,6 +2010,16 @@ make_select_stmt(void)
+ 
+ 		if (plpgsql_SpaceScanned)
+ 			plpgsql_dstring_append(&ds, " ");
++
++		/* Check for array overflow */
++		if (nparams >= 1024)
++		{
++			plpgsql_error_lineno = plpgsql_scanner_lineno();
++			ereport(ERROR,
++					(errcode(ERRCODE_PROGRAM_LIMIT_EXCEEDED),
++					 errmsg("too many variables specified in SQL statement")));
++		}
++
+ 		switch (tok)
+ 		{
+ 			case T_SCALAR:
+@@ -2085,6 +2115,15 @@ make_fetch_stmt(void)
+ 
+ 				while ((tok = yylex()) == ',')
+ 				{
++					/* Check for array overflow */
++					if (nfields >= 1024)
++					{
++						plpgsql_error_lineno = plpgsql_scanner_lineno();
++						ereport(ERROR,
++								(errcode(ERRCODE_PROGRAM_LIMIT_EXCEEDED),
++								 errmsg("too many INTO variables specified")));
++					}
++
+ 					tok = yylex();
+ 					switch(tok)
+ 					{
