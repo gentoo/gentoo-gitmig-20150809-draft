@@ -1,0 +1,57 @@
+--- src.old/lib/libsswf_tags.c++	2005-01-14 03:27:39.000000000 -0500
++++ src/lib/libsswf_tags.c++	2005-03-04 17:04:50.536424560 -0500
+@@ -3211,27 +3211,13 @@
+ 
+ 	if(value < 0) {
+ 		// a special case
+-		if(value == -1) {
+-			return 1;
+-		}
+-		cnt = 33;
+-		do {
+-			cnt--;
+-			value *= 2;
+-		} while(value < 0);
++		value =~ value;
+ 	}
+-	else {
+-		// a special case
+-		if(value == 0) {
+-			return 1;
+-		}
+-		cnt = 33;
+-		do {
+-			cnt--;
+-			value *= 2;
+-		} while(value > 0);
++	cnt = 1;
++	while(value >0){
++		cnt++;
++		value = value / 2;
+ 	}
+-
+ 	return cnt;
+ }
+ 
+@@ -3240,16 +3226,11 @@
+ {
+ 	long	cnt;
+ 
+-	// a special case
+-	if(value == 0) {
+-		return 1;
+-	}
+-	cnt = 32;
+-	while((long) value > 0) {
+-		cnt--;
+-		value *= 2;
+-	}
+-
++	cnt = 0;
++	do {
++		cnt++;
++		value = value / 2;
++	}while( value > 0); 
+ 	return cnt;
+ }
+ 

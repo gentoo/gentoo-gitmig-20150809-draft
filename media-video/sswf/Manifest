@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 14ce890ce2a266096089444b3fddb13a ChangeLog 437
+MD5 879e979979ffbf65d9e9f83de468e842 sswf-1.7.1.ebuild 926
+MD5 2e81f831b4e538f1a38b746690ccc4f4 ChangeLog 588
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 58cb63b3420f4ad83ef5d2950a83b69d sswf-1.7.1.ebuild 793
 MD5 c392e1bf9a9d255e7ee4063fdd0a94f4 files/digest-sswf-1.7.1 135
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCO3yaI1lqEGTUzyQRAudBAJ0c1V7Jwt00TrqPao0fL0vob55gwgCfe0YO
-hKUARpugC63FvkbcrmABjNM=
-=khsb
------END PGP SIGNATURE-----
+MD5 2f1d64349330efef29feb4f3488fbedb files/sound_wave_t.patch 927
+MD5 58facf820044cbb63f8205e5623b251a files/bitsize.patch 820

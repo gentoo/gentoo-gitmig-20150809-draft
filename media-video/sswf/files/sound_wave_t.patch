@@ -1,0 +1,14 @@
+--- include/sswf/libsswf.h.old	2005-01-14 03:27:39.000000000 -0500
++++ include/sswf/libsswf.h	2005-03-08 23:38:40.524934320 -0500
+@@ -2157,8 +2157,9 @@
+ 	struct sound_wave_t {
+ 		short		format;			// the data format (we only support PCM)
+ 		short		channels;		// number of channels (1 - mono, 2 - stereo)
+-		long		rate;			// exact sample rate to play the sound at
+-		long		avarage_rate;		// average rate for the entire set of samples (this may vary in compressed files)
++/* rate and average_rate are 4 bytes each, long on some platforms is 8 bytes */
++		int		rate;			// exact sample rate to play the sound at
++		int		avarage_rate;		// average rate for the entire set of samples (this may vary in compressed files)
+ 		short		align;			// byte alignment of the samples (every char, short, long...)
+ 		/* the following is format dependent, but at this time doesn't vary for us */
+ 		short		width;			// width of the samples (8 or 16)
