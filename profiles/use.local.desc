@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.70 2003/07/22 17:17:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.71 2003/07/22 21:57:21 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -62,6 +62,7 @@ net-mail/exim:lmtp - Adds support for lmtp
 net-mail/ssmtp:md5sum - Enables MD5 summing for ssmtp
 net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
+net-misc/ntp:parse-clocks - Add parse clock support
 net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
 net-www/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
 net-www/mozilla:moznoirc - If you do NOT want the IRC client built with mozilla
