@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.25 2004/03/01 13:01:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.26 2004/04/20 15:11:14 agriffis Exp $
+
+  20 Apr 2004; <agriffis@gentoo.org> imlib2-1.0.6-r1.ebuild,
+  imlib2-1.1.0.ebuild:
+  Add missing ia64 keyword
 
 *imlib2-1.1.0.20040221 (22 Feb 2004)
 
