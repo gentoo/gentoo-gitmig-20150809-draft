@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.6.1.ebuild,v 1.5 2004/05/21 18:01:19 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.6.1.ebuild,v 1.6 2004/05/30 15:13:34 kugelfang Exp $
 
 inherit gnome2
 
@@ -22,8 +22,10 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 DOCS="AUTHORS COPYING* ChangeLog NEWS README INSTALL"
 
 src_compile() {
-	aclocal -I scripts
-	automake -c -f
-	autoconf
+	if [ "${ARCH}" = "amd64" ]; then
+		aclocal -I scripts
+		automake -c -f
+		autoconf
+	fi
 	gnome2_src_compile
 }
