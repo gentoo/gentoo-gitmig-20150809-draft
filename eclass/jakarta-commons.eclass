@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.2 2003/03/18 22:37:41 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.3 2003/03/22 11:48:56 absinthe Exp $
 
 inherit base
 ECLASS=jakarta-commons
@@ -67,6 +67,8 @@ jakarta-commons_src_compile() {
 							if [ "${each}" == "jar" ] ; then
 								target=${each}
 							elif [ "${each}" == "dist-jar" ] ; then
+								target=${each}
+							elif [ "${each}" == "compile" ] ; then
 								target=${each}
 							fi
 						done
