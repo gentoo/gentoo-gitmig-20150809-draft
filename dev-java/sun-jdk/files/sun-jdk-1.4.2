@@ -1,0 +1,13 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author: Karl Trygve Kalleberg
+
+VERSION="Sun JDK @PV@"
+JAVA_HOME=/opt/@P@
+CLASSPATH=.:/opt/@P@/jre/lib:/opt/@P@/lib/tools.jar
+JDK_HOME=/opt/@P@
+JAVAC=${JAVA_HOME}/bin/javac
+ADDPATH="${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:${JAVA_HOME}/jre/javaws"
+ADDLDPATH="/opt/@P@/jre/lib"
+MANPATH="/opt/@P@/man"
+ENV_VARS="JAVA_HOME CLASSPATH JDK_HOME JAVAC ADDPATH ADDLDPATH MANPATH"
