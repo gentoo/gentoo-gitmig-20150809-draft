@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.7 2003/02/13 12:46:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.8 2003/03/10 11:42:48 seemant Exp $
 
-inherit libtool
+inherit libtool flag-o-matic
 
 S=${WORKDIR}/jpeg-mmx
 DESCRIPTION="JPEG library with mmx enhancements"
@@ -16,10 +16,17 @@ KEYWORDS="x86 -ppc -sparc "
 DEPEND="virtual/glibc"
 
 src_compile() {
+	# Doesn't work with -fomit-frame-pointer, at least not on k6-2.
+	# Someone mentioned that this may be a k6 issue only; I have
+	# just a k6-2 to test it on, so I'll just adjust it for the
+	# machine I can test.
+	is-flag "-march=k6-3" && strip-flags "-fomit-frame-pointer"
+	is-flag "-march=k6-2" && strip-flags "-fomit-frame-pointer"
+	is-flag "-march=k6" && strip-flags "-fomit-frame-pointer"
+
 	elibtoolize
 	econf --enable-shared || die "configure failed"
 	emake || die "make failed"
-
 }
 
 src_install() {

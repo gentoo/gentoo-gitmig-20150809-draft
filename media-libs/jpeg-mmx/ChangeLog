@@ -1,11 +1,16 @@
 # ChangeLog for media-libs/jpeg-mmx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.5 2003/02/12 07:08:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.6 2003/03/10 11:42:48 seemant Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
 *jpeg-mmx-1.1.2-r1 (08 Jul 2002)
+
+  10 Mar 2003; Seemant Kulleen <seemant@gentoo.org> jpeg-mmx-1.1.2-r1.ebuild:
+  fixes for k6 architectures and -fomit-frame-pointer, thanks to: Mark McKenna
+  <lanatha@kasmir.org> in bug #15559
+
   08 Jul 2002; Spider <spider@gentoo.org> jpeg-mmx-1.1.2-r1.ebuild :
   change so the .la file doesn't contain the ${D} path.
   update to latest portage rules
