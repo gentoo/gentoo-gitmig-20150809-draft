@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.23 2003/04/24 16:31:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.24 2003/04/29 00:05:54 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -12,13 +12,15 @@ EXPORT_FUNCTIONS src_unpack
 
 inherit eutils
 
-IUSE="gnome gpm gtk gtk2 ncurses nls perl python ruby X"
+IUSE="gnome gpm gtk gtk2 ncurses nls perl python ruby vim-with-x X"
 
 HOMEPAGE="http://www.vim.org/"
 SLOT="0"
 LICENSE="vim"
 
+# portage dependency is for use_with/use_enable
 DEPEND="
+	>=sys-apps/portage-2.0.45-r3
 	>=sys-apps/sed-4
 	sys-devel/autoconf
 	dev-util/cscope
@@ -143,7 +145,8 @@ src_compile() {
 
 		if [ ${PN} = vim ]; then
 			# don't test USE=X here... see bug #19115
-			myconf="${myconf} --enable-gui=no --without-x"
+			# but need to provide a way to link against X... see bug #20093
+			myconf="${myconf} --enable-gui=no `use_with vim-with-x x`"
 		elif [ ${PN} = gvim ]; then
 			myconf="${myconf} --with-vim-name=gvim --with-x"
 			if use gtk2; then
