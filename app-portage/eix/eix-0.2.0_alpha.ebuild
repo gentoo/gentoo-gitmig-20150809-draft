@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.0_alpha.ebuild,v 1.1 2005/02/01 06:17:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.0_alpha.ebuild,v 1.2 2005/02/01 14:31:43 hollow Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
 HOMEPAGE="http://sourceforge.net/projects/eix"
@@ -18,6 +18,8 @@ RDEPEND="sys-apps/portage
 	virtual/libc"
 
 src_compile() {
+	epatch ${FILESDIR}/${PV}-portdir.patch || die "portdir patch failed"
+
 	aclocal
 	libtoolize --force --copy
 	autoconf
