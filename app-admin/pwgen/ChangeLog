@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.14 2004/03/07 07:51:50 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.15 2004/03/07 18:33:17 tgall Exp $
+
+  07 Mar 2004; Tom Gall <tgall@gentoo.org> pwgen-2.03-r1.ebuild:
+  stable on ppc64
 
   06 Mar 2004; Ilya A. Volynets-Evenbakh <ilya@total-knowledge.com>
   pwgen-2.03-r1.ebuild:
