@@ -1,0 +1,27 @@
+--- /var/tmp/portage/leo-4.2/work/leo-4.2-final/src/leoConfig.py	2004-07-20 08:11:58.000000000 -0700
++++ /var/tmp/abeni/leoConfig.py	2004-11-08 22:49:31.055019376 -0800
+@@ -9,6 +9,7 @@
+ import os
+ import string
+ import sys
++import shutil
+ 
+ class baseConfig:
+     """The base class for Leo's configuration handler."""
+@@ -84,10 +85,12 @@
+     
+     def init (self):
+     
+-        try:
+-            self.configDir = sys.leo_config_directory
+-        except:
+-            self.configDir = g.os_path_join(g.app.loadDir,"..","config")
++        self.configDir = os.path.expanduser("~/.leo")
++        if not os.path.exists(self.configDir):
++            os.mkdir(self.configDir)
++            config_file = "%s/leoConfig.txt" % \
++                            g.os_path_join(g.app.loadDir,"..","config")
++            shutil.copy(config_file, self.configDir)
+     
+         self.configFileName = g.os_path_join(self.configDir,"leoConfig.txt")
+     

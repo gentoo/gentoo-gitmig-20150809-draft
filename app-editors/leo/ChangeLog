@@ -1,0 +1,10 @@
+# ChangeLog for app-editors/leo
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.1 2004/12/02 05:40:50 pythonhead Exp $
+
+*leo-4.2 (01 Dec 2004)
+
+  01 Dec 2004; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +files/leoConfig.py.patch, +leo-4.2.ebuild:
+  Initial commit. Closes bug# 69561
+
