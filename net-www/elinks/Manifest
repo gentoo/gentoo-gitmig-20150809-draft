@@ -1,5 +1,3 @@
-MD5 6c604f6e7d887016d032c7990828824c ChangeLog 1206
-MD5 8d65e9a4067f9d18afa2b66b8066f406 elinks-0.4.1.ebuild 2654
-MD5 98db7e43fe2937771b0942a215e4aa59 elinks-0.4.2.ebuild 2774
-MD5 9297ee25a7411630b8d6299afde4b077 files/digest-elinks-0.4.1 123
+MD5 ab295b4b2501fe32200f617ef6b84b7f elinks-0.4.2.ebuild 2773
+MD5 dbcfff12dcd7a6fbcb2d39d441d942a0 ChangeLog 1441
 MD5 197f5b6299b8a88d767c58726add73a9 files/digest-elinks-0.4.2 129

@@ -1,6 +1,11 @@
 # ChangeLog for net-www/elinks
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.8 2003/06/27 21:36:19 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.9 2003/09/15 14:26:13 seemant Exp $
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> elinks-0.4.1.ebuild,
+  elinks-0.4.2.ebuild:
+  changed the lua dependency to be on the 4.0 branch, as elinks can't read the
+  5.0 branch. Thanks to: jmw@operamail.com in bug #27504
 
   27 Jun 2003; Christian Birchinger <joker@gentoo.org> elinks-0.4.2.ebuild:
   Marked stable on x86
