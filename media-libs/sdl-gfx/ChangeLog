@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/sdl-gfx
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.1 2002/07/05 16:18:53 seemant Exp $
+
+*sdl-gfx-2.0.3 (5 Jul 2002)
+
+  05 Jul 2002; Seemant Kulleen <seemant@gentoo.org> sdl-gfx-2.0.3.ebuild
+  files/digest-sdl-gfx-2.0.3 :
+
+  New package, submitted by: cme@astray.com (Leon Brocard) in bug #4487
