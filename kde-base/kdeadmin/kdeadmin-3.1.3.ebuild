@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.1.3.ebuild,v 1.3 2003/08/13 12:15:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.1.3.ebuild,v 1.4 2003/08/28 02:58:22 caleb Exp $
 inherit kde-dist 
 
 IUSE="pam foreign-package foreign-sysvinit"
@@ -12,12 +12,12 @@ newdepend "pam? ( >=sys-libs/pam-0.72 )
 
 use pam		&& myconf="$myconf --with-pam"	|| myconf="$myconf --without-pam --with-shadow"
 
-if [ -n "`use foreign-package`" ]; then
-    myconf="$myconf --with-rpmlib"
-else
+#if [ -n "`use foreign-package`" ]; then
+#    myconf="$myconf --with-rpmlib"
+#else
     myconf="$myconf --without-rpm"
     KDE_REMOVE_DIR="$KDE_REMOVE_DIR kpackage"
-fi
+#fi
 
 if [ -z "`use foreign-sysvinit`" ]; then
     KDE_REMOVE_DIR="$KDE_REMOVE_DIR ksysv"
