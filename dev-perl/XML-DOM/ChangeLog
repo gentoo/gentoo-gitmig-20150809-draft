@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/XML-DOM
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.2 2002/05/06 16:52:38 seemant Exp $
+
+*XML-DOM-1.39 (6 May 2002)
+
+  6 May 2002; Seemant Kulleen <seemant@gentoo.org> XML-DOM-1.39.ebuild
+  files/digest-XML-DOM-1.39 :
+
+  Version bump, eclassed.
 
 *XML-DOM-1.25 (1 Feb 2002)
 
