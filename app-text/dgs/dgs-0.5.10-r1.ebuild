@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.18 2003/08/04 19:18:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.19 2003/08/31 18:53:40 mholzer Exp $
 
 inherit gnuconfig
 
 DESCRIPTION="A Ghostscript based DPS server"
-SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/dgs/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/old/dgs/${P}.tar.gz"
 HOMEPAGE="http://www.gyve.org/dgs/"
 
 SLOT="0"
