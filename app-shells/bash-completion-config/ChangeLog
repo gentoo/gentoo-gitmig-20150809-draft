@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion-config
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.3 2004/10/31 12:55:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.4 2004/10/31 14:24:44 sekretarz Exp $
+
+  31 Oct 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  bash-completion-config-0.2.ebuild:
+  ~amd64 keyworded
 
   31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   bash-completion-config-0.2.ebuild:
