@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.44 2003/07/22 00:34:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.45 2003/07/22 00:52:49 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -15,7 +15,7 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 	perlinfo updatepod
 
 eval `perl '-V:version'`
-newdepend=">=dev-lang/perl-5.6.1-r12"
+newdepend ">=dev-lang/perl-5.6.1-r12"
 SRC_PREP="no"
 
 SITE_LIB=""
