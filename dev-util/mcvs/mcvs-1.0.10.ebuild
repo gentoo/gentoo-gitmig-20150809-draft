@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mcvs/mcvs-1.0.10.ebuild,v 1.2 2004/01/26 21:56:52 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mcvs/mcvs-1.0.10.ebuild,v 1.3 2004/03/18 18:37:38 mkennedy Exp $
 
 inherit common-lisp-common
 
@@ -14,7 +14,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 DEPEND=">=dev-lisp/clisp-2.32
-	dev-util/cvs"
+	dev-util/cvs
+	app-text/rcs"
 
 S=${WORKDIR}/${P}
 
