@@ -3,7 +3,7 @@ MD5 6bbcf1aafec0078c22497fa89978e86d kdemultimedia-3.2.3.ebuild 1528
 MD5 963d43f63fa58026d51d9033ac072a50 kdemultimedia-3.3.1.ebuild 1703
 MD5 c5019ea992fa01620e6479bb5843a8f2 kdemultimedia-3.3.2.ebuild 1768
 MD5 c30451109ded40ba088c351cd6cdbf89 ChangeLog 22368
-MD5 c9b3a3c49be4b45049ca4d2f9884e03c kdemultimedia-3.4.0_rc1.ebuild 1518
+MD5 d8efa8b52887fa4357e5d94b6ee25f53 kdemultimedia-3.4.0_rc1.ebuild 1544
 MD5 11c38f7562cf996fb1581692bd48b4c0 kdemultimedia-3.4.0_beta2.ebuild 1581
 MD5 6c2feb4410d11d575b5277c085b7d3b6 kdemultimedia-3.4.0_beta1.ebuild 1578
 MD5 02f0ce7ea2ec6f7f7042f7f40f7f7fe7 files/artsc-typo.diff 439
