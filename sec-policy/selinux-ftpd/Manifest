@@ -4,11 +4,13 @@ Hash: SHA1
 MD5 e78d98a3e43eef11526fb5763be5e275 ChangeLog 377
 MD5 ca13c291511690216cc31fbee7c29544 metadata.xml 381
 MD5 d85a12ad4fbfd728d24deb104c5cf33d selinux-ftpd-20040713.ebuild 384
+MD5 336d1cf8f1f0f627dd37d8ee2c1a6331 selinux-ftpd-20041120.ebuild 387
 MD5 d4be74a3ae4f41f4d63011051d8dd6f5 files/digest-selinux-ftpd-20040713 72
+MD5 9093ca19af29679e5a3dbbfdaf1a8eb7 files/digest-selinux-ftpd-20041120 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBTjjAGFJQsIJWJy4RAkTMAKCDmqLOuWoqfjfSEdgQu6lqPwg3GACfe6ug
-9EK/RqIqnVbCvN5YQcWKMTQ=
-=ADqK
+iD8DBQFBoj4lGSBEIeh4AEYRAtFHAJ4/pYEEksPbVOfJiEW5S3RNxhShHwCfeIL4
+pbILciBkUnrJq2CF0wC+gVA=
+=KBwe
 -----END PGP SIGNATURE-----
