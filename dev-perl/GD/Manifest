@@ -2,20 +2,17 @@
 Hash: SHA1
 
 MD5 0ab34e250b08ab909938a30792f62210 ChangeLog 3284
-MD5 ffab7f5a74ecabefc7f27c4d8abd91d7 GD-1.41.ebuild 1160
 MD5 5a339d80f4211b47e14760803e70a555 GD-2.16.ebuild 1033
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3414eaaf55c99db12b57eb31924d007e GD-2.12.ebuild 1186
-MD5 065c81a3514e7e1cfd94bac1db4549bb files/1.41-makefile-opts.patch 706
 MD5 6de948299056cc91cace53859a8f0c7e files/digest-GD-2.16 59
-MD5 411e0281d6e0bf68ac6d1b61a71bd863 files/digest-GD-1.41 59
 MD5 b51ab87c113e42bd5560824fc63bc2bc files/2.12-gif-support.patch 21921
 MD5 7eb7412d4e5148d2fda9df7bb29eae59 files/digest-GD-2.12 59
 MD5 d3ec1d86076b989f9b63c3f04270a3f6 files/2.12-makefile-opts.patch 1743
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhZtAHTu7gpaalycRAlv+AKDfq78PnE4rVqC8yrLsAhQkpawehACfXw+q
-VZdoxvAHT1qvEJJ/RWX3+oY=
-=pZBb
+iD8DBQFBiCkgHTu7gpaalycRAoarAJ4+be3Wa1ezzfyt6kc7vWQlHMAeuQCg62aY
+h4/0w69cMgHmZTyV8Cui2ZM=
+=FWGR
 -----END PGP SIGNATURE-----
