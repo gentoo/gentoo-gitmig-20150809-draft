@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cthumb/ChangeLog,v 1.1 2002/12/02 16:35:12 mcummings Exp $
+
+*cthumb-4.2 (05 Sep 2002) cthumb-4.2.ebuild ChangeLog, digest-cthumb-4.2
+
+  05 Sep 2002; Sven Vermeulen <sven.vermeulen@rug.ac.be> cthumb-4.2.ebuild :
+
+  Created first cthumb-ebuild. Commited by mcummings, closes bug 7542
