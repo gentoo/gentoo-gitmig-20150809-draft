@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/freewnn
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.9 2004/05/10 22:08:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.10 2004/05/10 22:30:25 lv Exp $
+
+  10 May 2004; Travis Tilley <lv@gentoo.org> -freewnn-1.1.1_alpha17.ebuild:
+  i made a mistake, removing ebuild until i can figure out why its trying to
+  build kWnn
 
 *freewnn-1.1.1_alpha17 (10 May 2004)
 
