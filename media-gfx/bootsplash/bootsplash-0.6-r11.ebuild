@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r11.ebuild,v 1.4 2004/03/27 19:20:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r11.ebuild,v 1.5 2004/03/28 09:41:01 spock Exp $
 
 IUSE=""
 S=${WORKDIR}/${PF}
@@ -10,10 +10,11 @@ SRC_URI="http://dev.gentoo.org/~spock/portage/distfiles/${PF}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND=">=media-libs/freetype-2
-	media-libs/libmng"
+	media-libs/libmng
+	>=sys-apps/baselayout-1.8.6.13-r1"
 
 src_compile() {
 	# compile utils
