@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.51 2004/11/26 01:47:42 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.52 2004/11/26 01:49:05 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -721,11 +721,4 @@ kernel-2_pkg_postinst() {
 
 kernel-2_pkg_setup() {
 	[ "${ETYPE}" == "headers" ] && setup_headers
-
-	# This is to fix some weird portage bug? in stable versions of portage.
-	if [ "${ETYPE}" == "sources" ] ;
-	then
-		[ -z "${K_NODETECTVER}" ] && detect_version
-		detect_arch
-	fi
 }
