@@ -1,8 +1,11 @@
 # ChangeLog for dev-java/kissme
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/ChangeLog,v 1.2 2002/08/01 18:35:41 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/ChangeLog,v 1.3 2002/09/20 20:58:53 vapier Exp $
 
 *kissme-0.19 (1 Feb 2002)
+
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated HOMEPAGE variable
 
   01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> kissme-0.19.ebuild : 
 

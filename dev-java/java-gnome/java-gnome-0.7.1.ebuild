@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.7.1.ebuild,v 1.6 2002/08/01 17:58:21 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.7.1.ebuild,v 1.7 2002/09/20 20:53:03 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="This is a sample skeleton ebuild file"
 SRC_URI="mirror://sourceforge/java-gnome/java-gnome-0.7.1.tar.gz"
-HOMEPAGE="http://java-gnome.sf.net"
+HOMEPAGE="http://java-gnome.sourceforge.net/"
 DEPEND="virtual/glibc
 	gnome? ( >=gnome-base/gnome-libs-1.4 )
 	virtual/jdk
