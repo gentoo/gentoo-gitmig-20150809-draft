@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.144 2004/10/15 03:52:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.145 2004/10/16 14:01:57 kugelfang Exp $
+
+  16 Oct 2004; Danny van Dyk <kugelfang@gentoo.org>
+  postgresql-7.3.7-r2.ebuild, postgresql-7.4.5-r2.ebuild:
+  Marked stable on amd64.
 
   14 Oct 2004; Jason Wever <weeve@gentoo.org> postgresql-7.3.7-r2.ebuild:
   Stable on sparc wrt security bug #66371.
