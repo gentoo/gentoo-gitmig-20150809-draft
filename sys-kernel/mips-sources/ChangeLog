@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.28 2004/02/27 11:52:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.29 2004/03/08 09:15:49 kumba Exp $
+
+*mips-sources-2.6.3-r1 (08 Mar 2004)
+
+  08 Mar 2004; Joshua Kinard <kumba@gentoo.org> mips-sources-2.6.3-r1.ebuild,
+  mips-sources-2.6.3-r2.ebuild, mips-sources-2.6.3.ebuild:
+  2.6.x versions of mips-sources. Snapshots are from 20040218, 20040301, and
+  20040305. Cobalt-mips patches are included for eventual usage of 2.6 on Cobalt
+  microserver systems. The 20040305 ebuild also contains a minimal patchset from
+  Iluxa that allows proper SGI O2 functionality.
 
 *mips-sources-2.4.22-r10 (18 Feb 2004)
 
