@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.64 2004/06/09 20:20:34 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.65 2004/06/15 06:18:26 solar Exp $
+
+  15 Jun 2004; <solar@gentoo.org> perl-5.8.2-r1.ebuild,
+  files/perl-5.8.2-uclibc.patch:
+  basic initial uclibc support needed for bootstrapping
 
   09 Jun 2004; Robert Coie <rac@gentoo.org> +files/perl-5.8.4-noksh.patch,
   perl-5.8.4.ebuild:

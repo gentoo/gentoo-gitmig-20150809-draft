@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2-r1.ebuild,v 1.13 2004/06/03 15:39:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2-r1.ebuild,v 1.14 2004/06/15 06:18:26 solar Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -20,9 +20,9 @@ SLOT="0"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
 KEYWORDS="x86 amd64 sparc ppc alpha mips hppa ia64 ppc64"
-IUSE="berkdb doc gdbm threads"
+IUSE="berkdb doc gdbm threads uclibc"
 
-DEPEND="sys-apps/groff
+DEPEND="!uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-apps/portage-2.0.48-r4
@@ -94,11 +94,14 @@ src_unpack() {
 	# counterproductive on a Gentoo system which has both a shared
 	# and static libperl, so effectively revert this here.
 	cd ${S}; epatch ${FILESDIR}/${P}-picdl.patch
+
+	# uclibc support
+	epatch ${FILESDIR}/perl-5.8.2-uclibc.patch
 }
 
 src_compile() {
-	# Perl has problems compiling with -Os in your flags
-	replace-flags "-Os" "-O2"
+	# Perl has problems compiling with -Os in your flags with glibc
+	use uclibc || replace-flags "-Os" "-O2"
 	# This flag makes compiling crash in interesting ways
 	filter-flags -malign-double
 
