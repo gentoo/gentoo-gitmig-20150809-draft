@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gift-openft
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.2 2003/08/03 05:10:11 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.3 2003/08/16 23:10:06 lostlogic Exp $
+
+*gift-openft-0.2.0.0 (16 Aug 2003)
+
+  16 Aug 2003; Brandon Low <lostlogic@gentoo.org> gift-openft-0.2.0.0.ebuild:
+  Bump
 
   03 Aug 2003; <iggy@gentoo.org> gift-openft-0.1.0.5.ebuild:
   giftdatadir -> datadir; fixes bug 25753
