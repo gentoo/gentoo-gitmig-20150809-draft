@@ -1,0 +1,5 @@
+PATH=/opt/kde2.1/bin
+ROOTPATH=/opt/kde2.1/bin
+LDPATH=/opt/kde2.1/lib
+KDEDIR=/opt/kde2.1
+MANPATH=/opt/kde2.1/share/man
