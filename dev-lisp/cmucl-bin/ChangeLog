@@ -1,0 +1,37 @@
+# ChangeLog for dev-lisp/cmucl-bin
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/ChangeLog,v 1.1 2002/06/06 22:51:55 karltk Exp $
+
+*cmucl-bin-18d (07 Jun 2002)
+
+  07 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> cmucl-bin-18d.ebuild files/digest-cmucl-bin-18d :
+
+  From the web page:
+
+  CMUCL is a free implementation of the Common Lisp programming language
+  which runs on most major Unix platforms. It mainly conforms to the ANSI
+  Common Lisp standard. Here is a summary of its main features:
+
+    * a sophisticated native-code compiler which is capable of powerful
+      type inferences, and generates code competitive in speed with C
+      compilers.
+    * generational garbage collection and multiprocessing capability on
+      the x86 ports.
+    * a foreign function interface which allows interfacing with C code
+      and system libraries, including shared libraries on most
+      platforms, and direct access to Unix system calls.
+    * support for interprocess communication and remote procedure calls.
+    * an implementation of CLOS, the Common Lisp Object System, which
+      includes multimethods and a metaobject protocol.
+    * a graphical source-level debugger using a Motif interface, and a
+      code profiler.
+    * an interface to the X11 Window System (CLX), and a sophisticated
+      graphical widget library (Garnet).
+    * programmer-extensible input and output streams.
+    * an Emacs-like editor implemented in Common Lisp.
+    * public domain: free, with full source code and no strings attached
+      (and no warranty). Like the GNU/Linux and *BSD operating systems,
+      CMUCL is maintained and improved by a team of volunteers
+      collaborating over the Internet.
+
+  Ebuild contributed by Thomas L. Bevan <tom@regex.com.au>.
