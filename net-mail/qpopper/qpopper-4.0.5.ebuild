@@ -18,7 +18,7 @@ DEPEND="virtual/glibc \
 
 SLOT="0"
 LICENSE="qpopper | GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc"
 
 src_compile() {                           
 	CO=" --enable-apop=/etc/pop.auth \
