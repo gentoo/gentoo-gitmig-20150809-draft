@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.101 2005/03/08 20:46:12 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.102 2005/03/21 17:59:26 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -82,8 +82,11 @@ fi
 # vim7 has some extra options. tcltk is working again, and mzscheme support
 # has been added. netbeans now has its own USE flag, but it's only available
 # under gvim. We have a few new GUI toolkits, and we can also install a
-# vimpager (this is in vim6 as well, but the ebuilds don't handle it).
+# vimpager (this is in vim6 as well, but the ebuilds don't handle it). There
+# is now a spellchecker too.
 if [[ $(get_major_version ) -ge 7 ]] ; then
+	IUSE="${IUSE} spell"
+
 	if [[ "${MY_PN}" != "vim-core" ]] ; then
 		IUSE="${IUSE} tcltk mzscheme"
 		DEPEND="$DEPEND
@@ -348,6 +351,12 @@ src_compile() {
 			if [[ "${MY_PN}" == "gvim" ]] ; then
 				myconf="${myconf} `use_enable netbeans`"
 			fi
+
+			# spell checking is turned on when we have syntax.
+			if ! use spell ; then
+				sed -i -e '/# \+define FEAT_SPELL/d' src/feature.h || \
+					die "couldn't disable spell"
+			fi
 		fi
 
 		# --with-features=huge forces on cscope even if we --disable it. We need
@@ -509,8 +518,10 @@ src_install() {
 		fi
 
 		# These files might have slight security issues, so we won't
-		# install them. See bug #77841.
-		rm ${D}/usr/share/vim/vim${VIM_VERSION/.}/tools/{vimspell.sh,tcltags}
+		# install them. See bug #77841. We don't mind if these don't
+		# exist.
+		rm ${D}/usr/share/vim/vim${VIM_VERSION/.}/tools/{vimspell.sh,tcltags} \
+			|| true
 
 	elif [[ "${MY_PN}" == "gvim" ]] ; then
 		dobin src/gvim
@@ -558,6 +569,17 @@ src_install() {
 			dobashcompletion ${FILESDIR}/xxd-completion xxd
 		else
 			dobashcompletion ${FILESDIR}/${MY_PN}-completion ${MY_PN}
+		fi
+	fi
+
+	if [[ $(get_major_version ) -ge 7 ]] ; then
+		if ! use spell ; then
+			rm -fr ${D}/usr/share/vim/vim${VIM_VERSION/.}/spell || true
+		else
+			if [[ "${MY_PN}" == "vim-core" ]] ; then
+				insinto /usr/share/vim/vim${VIM_VERSION//./}/spell
+				doins ${S}/runtime/spell/*.spl
+			fi
 		fi
 	fi
 }
@@ -633,6 +655,14 @@ pkg_postinst() {
 			echo
 			# TODO: once we have the GUIs working, display a message explaining
 			# them.
+		fi
+
+		if use spell ; then
+			einfo "You have enabled spell checking support. This is rather, uh,"
+			einfo "experimental at the moment. To enable it, use the following"
+			einfo "command:"
+			einfo "    :setlocal spell spelllang=en"
+			einfo "Currently only en, en_us and en_uk are available."
 		fi
 	fi
 	einfo
