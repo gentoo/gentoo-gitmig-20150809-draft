@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.22 2005/02/15 12:08:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.23 2005/02/24 09:51:20 dragonheart Exp $
+
+*nagios-2.0b_p2 (24 Feb 2005)
+
+  24 Feb 2005; Daniel Black <dragonheart@gentoo.org> nagios-2.0b_p1.ebuild,
+  +nagios-2.0b_p2.ebuild:
+  Version bump as per bug #83116. Thanks to Allen Parker <allenp@efn.org>
 
 *nagios-2.0b_p1 (15 Feb 2005)
 
