@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1056 2005/03/30 17:12:59 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1057 2005/03/30 17:19:20 nakano Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -795,6 +795,7 @@ www-apps/nut:cgi - Add CGI script support
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
 www-client/elinks:lua - enable lua support
 www-client/kazehakase-cvs:estraier - enable estraier support for full-text search in history.
+www-client/kazehakase-cvs:firefox - Use firefox's Gecko engine.
 www-client/kazehakase-cvs:thumbnail - enable thumbnail support.
 www-client/kazehakase:estraier - enable estraier support for full-text search in history.
 www-client/kazehakase:firefox - Use firefox's Gecko engine.
