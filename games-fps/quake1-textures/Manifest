@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 357d470a62f4ceb503fa75a3a27dc515 ChangeLog 386
-MD5 ce075c2a1a5d7b16e1a88312b808e4ac quake1-textures-20040716.ebuild 797
+MD5 0e60a078217c49b5fc423f3604869422 ChangeLog 481
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 f6a8b7fed5e27c5b8318337bbfcae889 quake1-textures-20040716.ebuild 801
 MD5 8ab5e38cec4e0869a59d09015968b1b0 files/digest-quake1-textures-20040716 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBEwEyHTu7gpaalycRAiYXAKCo/ImyX8RQKCcbwUh9U2rIQIRA7ACeMWQF
-5FrLBxNtgo0Sp1IDzTU0A4c=
-=zuFc
------END PGP SIGNATURE-----
