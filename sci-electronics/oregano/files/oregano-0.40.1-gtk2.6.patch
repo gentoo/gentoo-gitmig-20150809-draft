@@ -1,0 +1,12 @@
+diff -Nura oregano-0.40.1/src/file.c oregano-0.40.1-gtk2.6/src/file.c
+--- oregano-0.40.1/src/file.c	2004-12-30 11:10:44.000000000 -0300
++++ oregano-0.40.1-gtk2.6/src/file.c	2005-01-26 12:16:01.228267936 -0300
+@@ -39,7 +39,7 @@
+ #include "dialogs.h"
+ #include "save-schematic.h"
+ 
+-#if (GTK_MINOR_VERSION==4)
++#if (GTK_MINOR_VERSION>=4)
+ 
+ char *
+ dialog_open_file (SchematicView *sv)

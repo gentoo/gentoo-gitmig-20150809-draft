@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.5 2005/01/25 22:38:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.6 2005/01/26 15:27:26 gustavoz Exp $
+
+  26 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/oregano-0.40.1-gtk2.6.patch, oregano-0.40.1.ebuild:
+  GTK+ 2.6 fix wrt #79563
 
   25 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> oregano-0.40.1.ebuild:
   Keyworded ~ppc
