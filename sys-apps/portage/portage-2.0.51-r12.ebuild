@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r12.ebuild,v 1.1 2005/01/13 18:05:47 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r12.ebuild,v 1.2 2005/01/14 14:32:51 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ S=${WORKDIR}/${PF}
 DESCRIPTION="The Portage Package Management System (Similar to BSD's ports). The primary package management and distribution system for Gentoo."
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="http://zarquon.twobit.net/gentoo/portage/${PF}.tar.bz2 http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.tar.bz2"
-RESTRICT="nosandbox sandbox"
+RESTRICT="nosandbox sandbox multilib-pkg-force"
 
 # Contact carpaski with a reason before you modify any of these.
 #KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
@@ -62,17 +62,17 @@ src_compile() {
 	cd ${S}/src/sandbox-1.1
 	if use ppc-macos || use x86-fbsd; then
 		ewarn "NOT BUILDING SANDBOX ON ${ARCH}"
-	elif [ -n "${MULTILIB_ABIS}" ] && ! hasq ${FEATURES}; then
+	elif [ -n "${MULTILIB_ABIS}" ]; then
 		OABI="${ABI}"
-		for ABI in ${MULTILIB_ABIS}; do
+		for ABI in $(get_abi_order); do
 			export ABI
 			make clean
-			make CFLAGS="-O1 -pipe" libsandbox.so || die
+			make CFLAGS="-O1 -pipe -DSB_HAVE_64BIT_ARCH" libsandbox.so || die
 			mv libsandbox.so libsandbox.so.${ABI}
 		done
 		make clean
 		export ABI="${DEFAULT_ABI}"
-		make CFLAGS="-O1 -pipe" || die
+		make CFLAGS="-O1 -pipe -DSB_HAVE_64BIT_ARCH" sandbox || die
 		ABI="${OABI}"
 	elif [ "${ARCH}" == "amd64" ]; then
 		check_multilib
