@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.1.ebuild,v 1.2 2004/11/16 21:03:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.1.ebuild,v 1.3 2004/11/17 16:00:54 vapier Exp $
 
 inherit eutils
 
@@ -22,16 +22,15 @@ set_target_list() {
 	TARGET_LIST="arm-user i386-user ppc-user sparc-user" #i386-softmmu ppc-softmmu
 	use softmmu && TARGET_LIST="${TARGET_LIST} i386-softmmu ppc-softmmu"
 	use qemu-fast && \
-		if [ "`use nptl`" ] # -a "`use nptlonly `" ]
+		if use nptl # && use nptlonly
 		then
 			ewarn "qemu-fast won't build with nptl, useflag disabled"
 		else
-			use sdl && \
-			(
+			if use sdl ; then
 				ewarn "qemu-fast enabled beware you need every library that"
 				ewarn "qemu would link compiled static you may need to emerge"
 				ewarn "again alsa-lib and nas"
-			)
+			fi
 			TARGET_LIST="${TARGET_LIST} i386"
 		fi
 	export TARGET_LIST
