@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/java-wakeonlan-0.3.0.ebuild,v 1.4 2004/08/30 18:46:39 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/java-wakeonlan-0.3.0.ebuild,v 1.5 2004/10/16 18:18:31 axxo Exp $
 
 inherit java-pkg
 
@@ -32,13 +32,10 @@ src_compile() {
 src_install() {
 	java-pkg_dojar deploy/wakeonlan.jar
 
-	local my_cp
-	my_cp=`java-config --classpath=commons-logging,commons-cli,java-wakeonlan`
-
 	echo "#!/bin/sh" > ${PN}
-	echo '${JAVA_HOME}'/bin/java -cp ${my_cp} wol.WakeOnLan '$*' >> ${PN}
+	echo '${JAVA_HOME}'/bin/java -cp '$(java-config -p commons-logging,commons-cli,java-wakeonlan)' wol.WakeOnLan '$*' >> ${PN}
 	dobin ${PN}
 
 	dodoc doc/README
-	use doc && dohtml -r deploy/doc/javadoc/*
+	use doc && java-pkg_dohtml -r deploy/doc/javadoc/*
 }
