@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4.ebuild,v 1.1 2004/02/25 07:50:24 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4.ebuild,v 1.2 2004/02/25 07:51:12 zx Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,8 @@ DESCRIPTION="Servlet API 5 from jakarta.apache.org"
 HOMEPAGE="http://jakarta.apache.org/"
 SRC_URI="http://apache.roweboat.net/jakarta/tomcat-5/v5.0.19/src/jakarta-tomcat-5.0.19-src.tar.gz"
 DEPEND=">=virtual/jdk-1.4
-			  >=dev-java/ant-1.5"
+			  >=dev-java/ant-1.5
+		jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jdk-1.4"
 LICENSE="Apache-1.1"
 SLOT="2.4"
