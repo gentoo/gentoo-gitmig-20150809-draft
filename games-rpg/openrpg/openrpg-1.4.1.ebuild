@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/openrpg/openrpg-1.4.1.ebuild,v 1.1 2003/09/10 06:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openrpg/openrpg-1.4.1.ebuild,v 1.2 2003/09/18 17:14:07 vapier Exp $
 
 inherit games
 
 DESCRIPTION="Open RPG Client"
-SRC_URI="mirror://sourceforge/openrpg/${P}.tar.gz"
 HOMEPAGE="http://www.openrpg.com/"
+SRC_URI="mirror://sourceforge/openrpg/${P}.tar.gz"
 
-KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=dev-python/wxPython-2.3.3.1
 	>=dev-lang/python-2.2.1"
