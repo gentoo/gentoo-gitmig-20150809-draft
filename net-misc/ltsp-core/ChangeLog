@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ltsp-core
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.12 2003/10/30 17:36:53 lanius Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.13 2004/01/17 20:40:43 lanius Exp $
+
+*ltsp-core-4.0 (17 Jan 2004)
+
+  17 Jan 2004; Heinrich Wendel <lanius@gentoo.org> ltsp-core-4.0.ebuild,
+  ltsp-core-4.0_beta1.ebuild:
+  version bump
 
   30 Oct 2003; Heinrich Wendel <lanius@gentoo.org> ltsp-core-3.0.9-r1.ebuild,
   ltsp-core-3.0.9-r2.ebuild, ltsp-core-3.0.9-r3.ebuild,
