@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.28 2004/07/14 19:40:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.29 2004/09/23 20:16:18 lv Exp $
 
 inherit gnuconfig
 
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr install || die "make install failed"
+	make DESTDIR=${D} install || die "make install failed"
 
 	# if gif is not in USE, then ungif is preferred
 	use gif || rm -rf "${D}/usr/bin"
