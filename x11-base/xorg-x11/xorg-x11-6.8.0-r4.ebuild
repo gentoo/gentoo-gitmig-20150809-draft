@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.10 2004/11/21 22:42:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.11 2004/11/21 22:49:34 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -68,9 +68,9 @@ GENTOO_FILES="http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-files-
 	mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="!minimal? ( mirror://gentoo/eurofonts-X11.tar.bz2 )
-	!minimal? ( font-server? ( http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 ) )
+	( font-server? ( http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 )
 	!minimal? ( mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2 )
-	!minimal? ( nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 ) )
+	( nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	${GENTOO_FILES}
 	${X_DRIVERS}
 	${X_PATCHES}
@@ -207,18 +207,18 @@ src_unpack() {
 		ebegin "Unpacking Gentoo cursors"
 			unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2 > /dev/null
 		eend 0
-
-		# Unpack extra fonts stuff from Mandrake
-		ebegin "Unpacking fonts"
-			if use nls; then
-				unpack gemini-koi8-u.tar.bz2 > /dev/null
-			fi
-			unpack eurofonts-X11.tar.bz2 > /dev/null
-			if use font-server; then
-				unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
-			fi
-		eend 0
 	fi
+
+	# Unpack extra fonts stuff from Mandrake
+	ebegin "Unpacking fonts"
+		if use nls; then
+			unpack gemini-koi8-u.tar.bz2 > /dev/null
+		fi
+		unpack eurofonts-X11.tar.bz2 > /dev/null
+		if use font-server; then
+			unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
+		fi
+	eend 0
 
 	# Remove bum encoding
 	rm -f ${WORKDIR}/usr/share/fonts/encodings/urdunaqsh-0.enc
@@ -333,14 +333,12 @@ src_install() {
 
 	compose_files_setup
 
-	if ! use minimal; then
-		if use font-server; then
-			encode_xfsft_files
-		fi
+	if use font-server; then
+		encode_xfsft_files
+	fi
 
-		if use nls; then
-			setup_koi8_fonts
-		fi
+	if use nls; then
+		setup_koi8_fonts
 	fi
 
 	etc_files_install
@@ -438,9 +436,7 @@ pkg_postinst() {
 	if [ "${ROOT}" = "/" ]; then
 		umask 022
 
-		if ! use minimal; then
-			font_setup
-		fi
+		font_setup
 
 		if use opengl; then
 			switch_opengl_implem
