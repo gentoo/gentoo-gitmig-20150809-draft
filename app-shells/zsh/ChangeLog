@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.27 2003/08/27 19:11:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.28 2003/08/31 22:34:54 usata Exp $
+
+*zsh-4.1.1-r2 (01 Sep 2003)
+
+  01 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.1.1-r2.ebuild:
+  Statically link libpcre.  For discussion, see Bug #27392 and #27064
 
 *zsh-4.1.1-r1 (28 Aug 2003)
 
