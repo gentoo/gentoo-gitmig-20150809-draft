@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r12.ebuild,v 1.1 2003/03/28 05:23:40 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r12.ebuild,v 1.2 2003/03/28 17:14:06 carpaski Exp $
 
 IUSE="build"
 
@@ -161,11 +161,11 @@ pkg_postinst() {
 	fi
 
 	echo
-	einfo "NOTICE: PLEASE update your make.globals. All user changes to variables"
-	einfo "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
+	eerror "NOTICE: PLEASE update your make.globals. All user changes to variables"
+	eerror "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
 	echo
-	einfo "NOTICE: The wheel group requirement for non-root users has been changed to"
-	einfo "group portage. Group portage must be a valid group for user to use portage."
+	eerror "NOTICE: The wheel group requirement for non-root users has been changed to"
+	eerror "group portage. Group portage must be a valid group for user to use portage."
 	echo
 	einfo "Feature additions are noted in help and make.conf descriptions. Update"
 	einfo "them using 'etc-update' please. Maintaining current configs for portage"
@@ -176,16 +176,19 @@ pkg_postinst() {
 	einfo "should be in your worldfile but were removed by a recently discovered"
 	einfo "'-e bug' or if you deleted it: run 'regenworld' as root."
 	echo
-	einfo "The 2.0.47 line of portages contains an optional userpriv mode that"
-	einfo "enables portage to drop root privleges and run as a normal user. It is"
-	einfo "enabled via FEATURES by adding userpriv."
-	echo
-	einfo "Please 'emerge sync' after merging portage to update some permissions."
+	eerror "The late 2.0.47 portages contains enhanced digests which contain all"
+	eerror "the files and ebuilds used, not just the archives extracted. This is to"
+	eerror "help discovering corruption and increasing security and should require"
+	eerror "no extra work from end-users. If portage reports a bad file that is not"
+	eerror "in the distfiles directory, after you've deleted it an re-sync'd, report it."
 	echo
 	if [ -z $PORTAGE_TEST ]; then
-		echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-		sleep 5
+		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
+		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
+		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
+		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
+		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
+		sleep 8
 
 		# Kill the existing counter and generate a new one.
 		echo -n "Recalculating the counter... "
