@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6.ebuild,v 1.11 2004/10/20 15:40:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6.ebuild,v 1.12 2004/10/21 06:22:42 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -62,13 +62,18 @@ src_unpack() {
 
 	elibtoolize #40317
 
+	# Fix building on amd64, #49569
+	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
+
+	epatch ${FILESDIR}/${P}-pic.patch
+	use pic && epatch ${FILESDIR}/${P}-mmx.patch
+
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
 	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure
 }
 
 src_compile() {
 	filter-flags -maltivec -mabi=altivec
-	filter-flags -fstack-protector -fPIC
 	filter-flags -fforce-addr
 	filter-flags -momit-leaf-frame-pointer #46339
 	filter-flags -funroll-all-loops #55420

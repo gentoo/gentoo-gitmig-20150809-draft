@@ -1,0 +1,57 @@
+diff -ur src.orig/libffmpeg/libavcodec/i386/dsputil_mmx.c src/libffmpeg/libavcodec/i386/dsputil_mmx.c
+--- src.orig/libffmpeg/libavcodec/i386/dsputil_mmx.c	2004-10-17 12:17:07.406331880 +0200
++++ src/libffmpeg/libavcodec/i386/dsputil_mmx.c	2004-10-17 12:17:57.600701176 +0200
+@@ -56,7 +56,7 @@
+     "pcmpeqd %%" #regd ", %%" #regd " \n\t"\
+     "paddb %%" #regd ", %%" #regd " \n\t" ::)
+ 
+-#ifndef PIC
++#ifndef __PIC__
+ #define MOVQ_BONE(regd)  __asm __volatile ("movq %0, %%" #regd " \n\t" ::"m"(mm_bone))
+ #define MOVQ_WTWO(regd)  __asm __volatile ("movq %0, %%" #regd " \n\t" ::"m"(mm_wtwo))
+ #else
+diff -ur src.orig/libffmpeg/libavcodec/i386/dsputil_mmx_rnd.h src/libffmpeg/libavcodec/i386/dsputil_mmx_rnd.h
+--- src.orig/libffmpeg/libavcodec/i386/dsputil_mmx_rnd.h	2004-10-17 12:17:07.405332032 +0200
++++ src/libffmpeg/libavcodec/i386/dsputil_mmx_rnd.h	2004-10-17 12:17:52.989402200 +0200
+@@ -96,7 +96,7 @@
+ 	"addl	%5, %3			\n\t"
+ 	"subl	$4, %0			\n\t"
+ 	"jnz	1b			\n\t"
+-#ifdef PIC //Note "+bm" and "+mb" are buggy too (with gcc 3.2.2 at least) and cant be used
++#ifdef __PIC__ //Note "+bm" and "+mb" are buggy too (with gcc 3.2.2 at least) and cant be used
+         :"+m"(h), "+a"(src1), "+c"(src2), "+d"(dst)
+ #else
+         :"+b"(h), "+a"(src1), "+c"(src2), "+d"(dst)
+@@ -191,7 +191,7 @@
+ 	"addl	$32, %2			\n\t"
+ 	"subl	$2, %0			\n\t"
+ 	"jnz	1b			\n\t"
+-#ifdef PIC //Note "+bm" and "+mb" are buggy too (with gcc 3.2.2 at least) and cant be used
++#ifdef __PIC__ //Note "+bm" and "+mb" are buggy too (with gcc 3.2.2 at least) and cant be used
+ 	:"+m"(h), "+a"(src1), "+c"(src2), "+d"(dst)
+ #else
+ 	:"+b"(h), "+a"(src1), "+c"(src2), "+d"(dst)
+diff -ur src.orig/libffmpeg/libavcodec/msmpeg4.c src/libffmpeg/libavcodec/msmpeg4.c
+--- src.orig/libffmpeg/libavcodec/msmpeg4.c	2004-10-17 12:17:07.419329904 +0200
++++ src/libffmpeg/libavcodec/msmpeg4.c	2004-10-17 12:18:06.573337128 +0200
+@@ -837,7 +837,7 @@
+        necessitate to modify mpegvideo.c. The problem comes from the
+        fact they decided to store the quantized DC (which would lead
+        to problems if Q could vary !) */
+-#if defined ARCH_X86 && !defined PIC
++#if defined ARCH_X86 && !defined __PIC__
+     asm volatile(
+         "movl %3, %%eax		\n\t"
+ 	"shrl $1, %%eax		\n\t"
+diff -ur src.orig/xine-utils/cpu_accel.c src/xine-utils/cpu_accel.c
+--- src.orig/xine-utils/cpu_accel.c	2004-10-17 12:17:07.577305888 +0200
++++ src/xine-utils/cpu_accel.c	2004-10-17 12:18:14.393148336 +0200
+@@ -63,7 +63,7 @@
+   int AMD;
+ 
+   caps = 0;
+-#ifndef PIC
++#ifndef __PIC__
+ #define cpuid(op,eax,ebx,ecx,edx)       \
+     __asm__ ("cpuid"                    \
+          : "=a" (eax),                  \

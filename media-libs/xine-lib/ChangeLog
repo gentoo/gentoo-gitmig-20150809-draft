@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.152 2004/10/20 15:40:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.153 2004/10/21 06:22:42 chriswhite Exp $
 
   20 Oct 2004; Luca Barbato <lu_zero@gentoo.org> xine-lib-1_rc6.ebuild:
   Made sure the ppc workaround is applied on ppc64 too
@@ -20,6 +20,13 @@
   -xine-lib-1_rc5-r2.ebuild, xine-lib-1_rc5-r3.ebuild, xine-lib-1_rc6.ebuild:
   Big cleanup.
   Removing xvid and divx4linux dependencies, see bug #56179
+
+  21 Oct 2004; Chris White <chriswhite@gentoo.org>
+  +files/xine-lib-1_rc6-mmx.patch, +files/xine-lib-1_rc6-pic.patch,
+  xine-lib-1_rc6.ebuild:
+  Fixed -fPIC and -fstack-protector via patches provided by Kevin F. Quinn
+  <co@kevquinn.com> in bug #67863. Added an mmx patch in to further fix the
+  issues.
 
   26 Sep 2004; Tom Gall <tgall@gentoo.org> xine-lib-1_rc5-r3.ebuild
   stable on ppc64, bug #59948
