@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythgame
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.12 2004/02/03 14:14:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.13 2004/02/06 14:38:57 max Exp $
+
+  06 Feb 2004; Max Kalika <max@gentoo.org> mythgame-0.14.ebuild:
+  Ditch the postinst() message and don't attempt to install non-existant db
+  files.
 
 *mythgame-0.14 (03 Feb 2004)
 
