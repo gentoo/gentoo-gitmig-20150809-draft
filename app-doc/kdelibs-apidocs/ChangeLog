@@ -1,6 +1,6 @@
 # ChangeLog for app-doc/kdelibs-apidocs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.6 2003/02/12 03:37:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.7 2003/02/15 07:06:51 gerk Exp $
 
 *kdelibs-apidocs-3.1-r1 (05 Feb 2003)
 
@@ -23,6 +23,9 @@
   needed for kdevelop-3.0_alpha2, because kde-3.1 is not public yet
 
 *kdelibs-apidocs-3.1 (21 Nov 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> kdelibs-apidocs-3.1-r1.ebuild kdelibs-apidocs-3.1.ebuild kdelibs-apidocs-3.1_rc5.ebuild kdelibs-apidocs-3.1_rc6.ebuild :
+  set ppc in keywords
 
   21 Nov 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
