@@ -1,0 +1,74 @@
+# Add USE flags that don't work on Darwin here
+
+# these will more than likely never work on darwin
+3dfx
+3dnow
+3dnowex
+acpi
+alsa
+apm
+caps
+directfb
+divx4linux
+djbfft
+fbcon
+fdftk
+gpm
+hardened
+icc
+icc-pgo
+mmx
+mmx2
+mzscheme
+oss
+qdbm
+selinux
+solid
+sse
+sse2
+svga
+sybase
+sybase-ct
+rtc
+uclibc
+voodoo3
+v4l
+v4l2
+
+# need porting
+acl
+arts
+doc
+firebird
+fmod
+gnome
+gtk
+gtk2
+jack-tmpfs
+kde
+mikmod
+mono
+socks5
+xmms
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oci8
+oracle7
+pfpro
+solid

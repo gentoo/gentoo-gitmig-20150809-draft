@@ -1,0 +1,9 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header:
+
+virtual/bootloader	sys-boot/bootx
+virtual/kernel		sys-libs/libsystem
+virtual/libc	   	sys-libs/libsystem
+virtual/logger		app-admin/sysklogd
+virtual/os-headers	sys-libs/libsystem

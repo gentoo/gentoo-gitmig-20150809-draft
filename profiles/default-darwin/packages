@@ -1,0 +1,11 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: 
+
+### Gentoo for Darwin profile ###
+
+# Things we want emerge system to install
+
+*net-misc/wget
+*virtual/editor
+*sys-apps/sed
