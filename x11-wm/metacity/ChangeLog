@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.77 2004/11/12 03:03:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.78 2004/11/12 10:08:14 obz Exp $
+
+  12 Nov 2004; Mike Gardiner <obz@gentoo.org> metacity-2.8.5.ebuild:
+  Keyworded ppc for GNOME 2.8
 
   12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> metacity-2.8.5.ebuild:
   Stable on sparc
