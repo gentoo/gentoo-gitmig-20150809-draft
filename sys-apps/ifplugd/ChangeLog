@@ -1,0 +1,13 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.1 2003/03/21 15:58:05 wmertens Exp $
+
+  21 Mar 2003; Wout Mertens <wmertens@gentoo.org> :
+  Fixed the action script, otherwise ifplugd would die when dhcpcd
+  failed. Also put it in stable, because it has no downstream
+  dependencies and it works for me.
+  
+*ifplugd-0.13 (17 Mar 2003)
+
+  17 Mar 2003; Wout Mertens <wmertens@gentoo.org> :
+  Initial ebuild.

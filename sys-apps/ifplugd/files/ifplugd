@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/files/ifplugd,v 1.1 2003/03/17 15:24:17 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/files/ifplugd,v 1.2 2003/03/21 15:58:05 wmertens Exp $
 
 #NB: Config is in /etc/conf.d/ifplugd
 
@@ -15,11 +15,15 @@ start() {
 	for IF in $INTERFACES ; do
 		echo -n "$IF "
 		$IFPLUGD -i $IF $ARGS
-		if [ $? -ne 0 ]; then
-			eend $? "Problem starting for $IF"
-			return 1
-		fi
+	# You can't trust the exit code, so we pretend it works
+	#	status=$?
+	#	if [ $status -ne 0 ]; then
+	#		echo
+	#		eend $status "Problem starting for $IF"
+	#		return 1
+	#	fi
 	done
+	echo
 	eend 0
 }
 
@@ -27,8 +31,9 @@ stop() {
 	einfon "Stopping ifplugd: "
 	for IF in $INTERFACES ; do
 		echo -n "$IF "
-		$IFPLUGD -k -i $IF || ewarn "Couldn't stop instance for $IF"
+		$IFPLUGD -k -i $IF
 	done
+	echo
 	eend 0
 }
 

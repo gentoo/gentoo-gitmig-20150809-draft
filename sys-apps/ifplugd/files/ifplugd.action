@@ -1,29 +1,28 @@
 #!/bin/sh
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/files/ifplugd.action,v 1.2 2003/03/21 15:58:05 wmertens Exp $
 #
-# This file is part of ifplugd, and adapted for use in Gentoo Linux.
+# Gentoo-specific ifplugd.action
 #
-# ifplugd is free software; you can redistribute it and/or modify it under
-# the terms of the GNU General Public License as published by the Free
-# Software Foundation; either version 2 of the License, or (at your
-# option) any later version.
+# This file gets called by ifplugd when it wants to bring an interface
+# up or down.
 #
-# ifplugd is distributed in the hope that it will be useful, but WITHOUT
-# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
-# for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with ifplugd; if not, write to the Free Software Foundation,
-# Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
 
-set -e
+case "$2" in
+	up)
+		state=start
+		;;
+	down)
+		state=stop
+		;;
+	*)
+		echo "$0: wrong arguments"
+		echo "Call with <interface> <up|down>"
+		exit 1
+		;;
+esac
 
-if [ -z "$1" ] || [ -z "$2" ] ; then
-	echo "Wrong arguments" > /dev/stderr
-	exit 1
-fi
-
-[ "$2" = "up" ] && /etc/init.d/net.$1 start > /dev/null
-[ "$2" = "down" ] && /etc/init.d/net.$1 stop > /dev/null
+[ -x /etc/init.d/net.$1 ] && /etc/init.d/net.$1 --quiet $state
 
 exit 0
