@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3443 2005/01/04 01:54:52 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3444 2005/01/04 11:18:38 ka0ttic Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -29,10 +29,6 @@
 # <hansmi@gentoo.org> (02 Jan 2005)
 # Masked for testing
 =mail-mta/qmail-1.03-r16
-
-# <ka0ttic@gentoo.org> (01 Jan 2005)
-# Masked for testing. See bug #74694.
-=app-text/vilistextum-2.6.7
 
 # <lisa@thedoh.com> (31 Dec 2004)
 # Masked for user testing.  Please see bug #75420.
