@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r3.ebuild,v 1.5 2004/02/03 20:31:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r3.ebuild,v 1.6 2004/02/05 10:34:16 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -493,6 +493,15 @@ src_install() {
 			doins ${x}
 		done
 	fi
+
+	# Do not actually install the desktop bindings for users, we have
+	# installed them globally
+	for module in gid_Module_Optional_Gnome gid_Module_Optional_Kde gid_Module_Optional_Cde
+	do
+		perl -pi -e "/^Module $module/ .. /^End/ and s|(Installed.*)=.*|\1= NO;|" \
+		${D}${INSTDIR}/program/instdb.ins
+	done
+
 
 
 	# Remove unneeded stuff
