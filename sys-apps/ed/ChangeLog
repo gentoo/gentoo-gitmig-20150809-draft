@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.17 2004/10/07 21:45:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.18 2004/10/10 03:06:51 tgall Exp $
+
+  09 Oct 2004; Tom Gall <tgall@gentoo.org> ed-0.2-r4.ebuild:
+  stable on ppc64, bug #66400
 
   07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> ed-0.2-r4.ebuild:
   Stable amd64.
