@@ -1,11 +1,15 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.17 2004/11/04 14:59:53 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.18 2004/11/09 08:52:31 voxus Exp $
+
+  09 Nov 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  cdk-4.9.11.20031210-r1.ebuild:
+  Added libtool dependency, closing #70125.
 
 *cdk-4.9.11.20031210-r1 (04 Nov 2004)
 
   04 Nov 2004; Konstantin Arkhipov <voxus@gentoo.org>
-  +cdk-4.9.11.20031210-r1:
+  +cdk-4.9.11.20031210-r1.ebuild:
   Closing bug #66332.
 
   29 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
