@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.0.0.ebuild,v 1.2 2003/03/16 16:59:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.0.0.ebuild,v 1.3 2003/03/16 17:25:47 liquidx Exp $
 
 MY_PN="${PN/soulseek/slsk}"
 MY_P="${MY_PN}-${PV}"
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="oggvorbis"
 
-DEPEND="=x11-libs/gtk+-1.2*
-	>=dev-lang/python-2.1
+DEPEND=">=dev-lang/python-2.1
 	>=dev-python/wxPython-2.4.0.1
 	~x11-libs/wxGTK-2.4.0
 	oggvorbis? ( media-libs/pyvorbis media-libs/pyogg )"
