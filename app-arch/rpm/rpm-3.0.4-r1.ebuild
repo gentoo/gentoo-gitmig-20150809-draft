@@ -1,14 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-3.0.4-r1.ebuild,v 1.2 2000/08/16 04:37:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-3.0.4-r1.ebuild,v 1.3 2000/08/23 07:00:07 drobbins Exp $
 
 P=rpm-3.0.4
 A="${P}.tar.gz bzip2-0.9.5d.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="Red Hat Package Management Utils"
 SRC_URI="ftp://ftp.rpm.org/pub/rpm/dist/rpm-3.0.x/${P}.tar.gz
-	 ftp://ftp.kernel.org/pub/software/utils/compress/bzip2/bzip2-0.9.5.tar.gz"
+	 ftp://ftp.kernel.org/pub/software/utils/compress/bzip2/bzip2-0.9.5d.tar.gz"
 HOMEPAGE="http://www.rpm.org/"
 
 src_unpack () {

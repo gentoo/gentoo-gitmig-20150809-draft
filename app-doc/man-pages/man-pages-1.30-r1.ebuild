@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/man-pages/man-pages-1.30-r1.ebuild,v 1.2 2000/08/16 04:37:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/man-pages/man-pages-1.30-r1.ebuild,v 1.3 2000/08/23 07:00:07 drobbins Exp $
 
 P=man-pages-1.30
 A="${P}.tar.gz netman-cvs.tar.gz man2.tar.gz"
 #A0=man-pages-1.23-spell.patch
 S=${WORKDIR}/${P}
 DESCRIPTION="A somewhat comprehensive collection of Linux man pages"
+# some URI's missing here
 SRC_URI="ftp://ftp.win.tue.nl/pub/linux-local/manpages/man-pages-1.30.tar.gz"
 
 src_compile() {                           
