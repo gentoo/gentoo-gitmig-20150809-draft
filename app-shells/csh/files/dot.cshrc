@@ -22,7 +22,6 @@ endif
 # some options you might want in an interactive shell
 if ($?prompt) then
 	set filec						# use <ESC><ESC> to complete on filenames.
-	set emacs						# simple line editing.
 	set history = 1000				# remember last 1000 commands
 	set ignoreeof					# dont exit if ^D is hit by accident
 	set mail = (/var/mail/$USER)	# where is your user mbox?
