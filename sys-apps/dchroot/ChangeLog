@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/dchroot
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dchroot/ChangeLog,v 1.1 2005/02/12 02:17:16 vapier Exp $
+
+*dchroot-0.10 (11 Feb 2004)
+
+  11 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Gabriel Ebner #44700.
