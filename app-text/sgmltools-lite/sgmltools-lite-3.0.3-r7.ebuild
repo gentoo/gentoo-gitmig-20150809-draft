@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r7.ebuild,v 1.5 2004/05/12 23:06:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r7.ebuild,v 1.6 2004/06/06 16:03:53 weeve Exp $
 
 inherit sgml-catalog
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="tetex"
-KEYWORDS="x86 ~ppc ~sparc alpha amd64 hppa"
+KEYWORDS="x86 ~ppc sparc alpha amd64 hppa"
 
 DEPEND="virtual/python
 	app-text/sgml-common
