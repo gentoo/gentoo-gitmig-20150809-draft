@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.2 2002/02/02 18:12:04 azarah Exp $
+
+*gnome-utils-1.4.1.2 (2 Feb 2002)
+
+  2 Feb 2002; M.Schlemmer <azarah@gentoo.org> gnome-utils-1.4.1.2.ebuild :
+
+  Updated date in copyright;  changed Author to Maintainer;  removed the
+  DEPEND on portage since it is not needed anymore.  Bumped the shadow
+  DEPEND down to 4, as it compiles fine; removed the guile patch, as it
+  seems fixed.
 
 *gnome-utils-1.4.1.1-r4 (1 Feb 2002)
 
