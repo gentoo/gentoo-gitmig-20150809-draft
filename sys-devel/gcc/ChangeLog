@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.359 2004/11/29 18:38:10 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.360 2004/12/04 01:41:38 lv Exp $
+
+  03 Dec 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.3-r1.ebuild:
+  keyworded as testing on previously supported archs, as well as ia64 which
+  works now, yay
 
   29 Nov 2004; Rob Holland <tigger@gentoo.org> files/gcc-spec-env.patch:
   fixup gcc_specs patch to handle empty string

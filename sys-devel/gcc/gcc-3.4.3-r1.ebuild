@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.4 2004/11/29 05:47:11 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.5 2004/12/04 01:41:39 lv Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-#KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa ~ppc ~sparc"
-KEYWORDS="-*"
+KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa ~ppc ~sparc ~ia64"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
@@ -36,14 +35,14 @@ DEPEND="${RDEPEND}
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
 PDEPEND="sys-devel/gcc-config
-	!nocxx? ( !mips? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) )"
+	!nocxx? ( !mips? ( !ia64? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
 
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
 #GCC_MANPAGE_VERSION="none"
 BRANCH_UPDATE="20041125"
 PATCH_VER="1.1"
-PIE_VER="8.7.6.7"
+PIE_VER="8.7.7"
 PIE_CORE="gcc-3.4.3-piepatches-v${PIE_VER}.tar.bz2"
 PP_VER="3_4_3"
 PP_FVER="${PP_VER//_/.}-0"
@@ -162,7 +161,7 @@ src_unpack() {
 	# if you attempt to build gcj.
 	if use objc && ! use gcj ; then
 		epatch ${FILESDIR}/3.4.3/libffi-without-libgcj.patch
-		epatch ${FILESDIR}/3.4.3/libffi-nogcj-lib-path-fix.patch
+		#epatch ${FILESDIR}/3.4.3/libffi-nogcj-lib-path-fix.patch
 	fi
 
 	# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
