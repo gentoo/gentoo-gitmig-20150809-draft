@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+  02 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
+  Added metadata
+
   12 Oct 2003; Heinrich Wendel <lanius@gentoo.org> 3ddesktop-0.2.4.ebuild,
   3ddesktop-0.2.5.ebuild:
   fixed dodoc
