@@ -1,6 +1,6 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.39 2004/05/08 18:13:29 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.40 2004/05/12 11:50:56 aliz Exp $
 
 *avidemux-2.0.24 (08 May 2004)
 
@@ -14,6 +14,8 @@
 
   Removed divx4linux dep as it's not used anyway. Closes bug #45176
   bumped to stable
+
+*avidemux-2.0.22 (28 Feb 2004)
   
   28 Feb 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.22.ebuild:
   Version bumped.
