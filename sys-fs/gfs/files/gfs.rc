@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs.rc,v 1.1 2005/03/22 13:59:10 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs.rc,v 1.2 2005/03/23 02:53:06 xmerlin Exp $
 
 depend() {
 	use dns logger
-	use net gnbd-client
+	use net
 	need cluster-manager cluster-locking-manager fenced
 	provide cluster
 }
