@@ -1,0 +1,10 @@
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/files/mosix.map,v 1.1 2001/11/24 16:46:07 drobbins Exp $
+ 
+# Each line should contain 3 fields, mapping IP addresses to MOSIX node-numbers:
+# 1) first MOSIX node-number in range.
+# 2) IP address of the above node (or node-name from /etc/hosts).
+# 3) number of nodes in this range.
+# 
+
+# MOSIX number			IP			number of nodes

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.5.2.ebuild,v 1.1 2001/11/24 02:13:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.5.2.ebuild,v 1.2 2001/11/24 16:46:04 drobbins Exp $
 
 S=${WORKDIR}/user
 DESCRIPTION="User-land utilities for MOSIX process migration (clustering) software"
@@ -69,8 +69,11 @@ src_install () {
 	dobin mosctl
 	doman mosctl.1
 
-	exeinto /etc/rc.d/init.d
+	exeinto /etc/init.d
 	newexe ${FILESDIR}/mosix.init-${PV} mosix
+	insinto /etc
+	#stub mosix.map file
+	doins ${FILESDIR}/mosix.map
 	cd ${S}
 	doman man?/*
 }
