@@ -755,9 +755,13 @@ app-cdr/cddump
 <net-analyzer/tcpdump-3.6.2-r1
 
 # mkennedy@gentoo.org 12 May 2002 
-# app-editors/xemacs-gamma can do gtk too (makes gtk-xemacs somewhat 
-# redundant) 
+# will be renames to app-editors/xemacs-gtk (so we'll have xemacs,
+# xemacs-gtk, xemacs-motif)
 app-editors/gtk-xemacs
+
+# mkennedy@gentoo.org 20 May 2002
+# replaced (see app-editors/xemacs)
+app-editors/xemacs-gamma
 
 # g2boojum@gentoo.org 14 May 2002
 # courier needs to have .maildir stuff fixed
@@ -771,7 +775,3 @@ net-mail/courier
 # Why did this get installed by profiles? its broken. 
 # should be updated to 4.2 
 sys-apps/texinfo
-
-# mkennedy@gentoo.org 19 May 2002
-# testing
-=app-editors/xemacs-21.4.8
