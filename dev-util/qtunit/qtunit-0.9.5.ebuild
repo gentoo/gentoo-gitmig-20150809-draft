@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.4.ebuild,v 1.1 2002/02/28 23:04:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.5.ebuild,v 1.1 2002/03/04 12:35:29 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="QtUnit is a unit testing framework for c++"
@@ -30,7 +30,6 @@ src_install () {
 	dosym /usr/lib/libqtunit.so.1.0 /usr/lib/libqtunit.so.1
 	dosym /usr/lib/libqtunit.so.1 /usr/lib/libqtunit.so
 	dobin bin/guitestrunner
-	dobin bin/standalonerunner
 	dobin bin/texttestrunner
 	
 	dodir /usr/include/qtunit
