@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-1.9_alpha90.ebuild,v 1.2 2004/11/28 04:58:01 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-1.9_alpha90.ebuild,v 1.3 2004/11/30 07:06:07 zypher Exp $
 
 inherit eutils
 
@@ -73,7 +73,7 @@ src_install() {
 	done
 
 	dodir /opt/${PN}/plugins
-	local dirs="csplugins jfxplugins jitplugins rfxplugins ftplugins"
+	local dirs="csplugins jfxplugins jitplugins rfxplugins rtplugins"
 	for i in $dirs ; do
 	    dodir /opt/${PN}/plugins/${i}
 	    cp -a ${S}/plugins/${i}/*.so ${D}/opt/${PN}/plugins/${i}/
@@ -81,6 +81,7 @@ src_install() {
 
 	cp -a jahshaka ${D}/opt/${PN}/
 
+	dodir /usr/bin
 	ln -s ${D}/opt/${PN}/jahshaka ${D}/usr/bin/jahshaka
 
 	dodoc README AUTHORS TODO
