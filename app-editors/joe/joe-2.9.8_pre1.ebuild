@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.8_pre1.ebuild,v 1.2 2002/11/12 17:50:29 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.8_pre1.ebuild,v 1.3 2002/11/30 02:41:02 vapier Exp $
 
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
@@ -14,32 +14,12 @@ LICENSE="GPL-1"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
 
-#src_unpack() {
-#
-#	unpack ${A}
-#	cd ${S}
-#	cp Makefile Makefile.orig
-#	sed -e "s/-O2/${CFLAGS}/" Makefile.orig > Makefile
-#
-#}
-
 src_compile() {                           
-
-	econf || die
+	econf
 	make || die
 }
 
 src_install() {                              
-#	into /usr
-#	dobin joe
-#	doman joe.1
-#	dolib joerc
-#	for i in jmacs jstar jpico rjoe
-#	do
-#	  dosym joe /usr/bin/$i
-#	  dosym joe.1.gz /usr/share/man/man1/$i.1.gz
-#	  dolib ${i}rc
-#	done
-	einstall || die
+	einstall
 	dodoc COPYING INFO LIST README TODO VERSION
 }

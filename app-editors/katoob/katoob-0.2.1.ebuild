@@ -1,17 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.2.1.ebuild,v 1.2 2002/10/05 05:39:07 drobbins Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.2.1.ebuild,v 1.3 2002/11/30 02:42:46 vapier Exp $
 
 DESCRIPTION="Small text editor based on the GTK+ library 2.0"
 HOMEPAGE="http://www.arabeyes.org/project.php?proj=katoob"
 SRC_URI="mirror://sourceforge/arabeyes/${P}.tar.gz"
-S="${WORKDIR}/${P}"
 
 LICENSE="GPL-2"
 KEYWORDS="x86"
 SLOT="0"
+IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2
 	>=dev-util/pkgconfig-0.12"
@@ -19,15 +17,12 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
 	local myconf=""
-	
 	use nls || myconf="--disable-nls"
-	
-	econf $myconf || die "Configuration failed"
+	econf ${myconf}
 	emake || die "Compilation failed"
 }
 
 src_install() {
-	einstall || die "Installation failed"
-
+	einstall
 	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING NEWS README THANKS TODO
 }
