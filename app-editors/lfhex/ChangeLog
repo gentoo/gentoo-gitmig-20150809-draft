@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/lfhex
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.1 2004/06/14 03:32:32 dragonheart Exp $
+
+*lfhex-0.3.7 (14 Jun 2004)
+
+  14 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +lfhex-0.3.7.ebuild:
+  Initial import. Ebuild thanks to CJ Kucera <gentoo@apocalyptech.com> in bug
+  #52295
+
