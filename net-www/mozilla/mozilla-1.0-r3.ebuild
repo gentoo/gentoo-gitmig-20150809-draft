@@ -1,11 +1,33 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.19 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.20 2002/11/20 15:10:42 azarah Exp $
 
 IUSE="moznomail java mozp3p mozaccess gtk2 mozinterfaceinfo ssl ldap mozxmlterm mozctl gnome mozsvg"
 
-inherit makeedit
+inherit makeedit nsplugins
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
+
+# Recently there has been a lot of stability problem in Gentoo-land.  Many
+# things can be the cause to this, but I believe that it is due to gcc3
+# still having issues with optimizations, or with it not filtering bad
+# combinations (protecting the user maybe from himeself) yet.
+#
+# This can clearly be seen in large builds like glibc, where too aggressive
+# CFLAGS cause the tests to fail miserbly.
+#
+# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
+# knows what he is talking about:
+#
+#   People really shouldn't force code-specific options on... It's a
+#   bad idea. The -march options aren't just to look pretty. They enable
+#   options that are sensible (and include sse,mmx,3dnow when apropriate).
+#
+# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
+# you do not like it, comment it, but do not bugreport if you run into
+# problems.
+#
+# <azarah@gentoo.org> (13 Oct 2002)
+strip-flags
 
 # handle _rc versions
 MY_PV1=${PV/_}
@@ -325,6 +347,9 @@ src_install() {
 	doins ${FILESDIR}/10mozilla
 	dodoc LEGAL LICENSE README/mozilla/README*
 
+	# Move plugins dir
+	src_mv_plugins usr/lib/mozilla/plugins
+
 	# Fix icons to look the same everywhere
 	insinto /usr/lib/mozilla/icons
 	doins ${S}/build/package/rpm/SOURCES/mozicon16.xpm
@@ -366,6 +391,9 @@ pkg_preinst() {
 	then 
 		rm -rf ${ROOT}/usr/lib/mozilla/chrome
 	fi
+
+	# Move old plugins dir
+	pkg_mv_plugins /usr/lib/mozilla/plugins
 }
 
 pkg_postinst() {
@@ -412,7 +440,7 @@ pkg_postinst() {
 		${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt
 	${MOZILLA_FIVE_HOME}/regchrome
 	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
-
+	
     
 	echo
 	ewarn "Please unmerge old versions of mozilla, as the header"

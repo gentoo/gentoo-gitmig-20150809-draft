@@ -1,14 +1,36 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r3.ebuild,v 1.2 2002/11/18 20:16:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r3.ebuild,v 1.3 2002/11/20 15:10:42 azarah Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
-inherit flag-o-matic gcc makeedit eutils
+inherit flag-o-matic gcc makeedit eutils nsplugins
 
 # Crashes on start when compiled with -fomit-frame-pointer
 filter-flags "-fomit-frame-pointer"
+
+# Recently there has been a lot of stability problem in Gentoo-land.  Many
+# things can be the cause to this, but I believe that it is due to gcc3
+# still having issues with optimizations, or with it not filtering bad
+# combinations (protecting the user maybe from himeself) yet.
+#
+# This can clearly be seen in large builds like glibc, where too aggressive
+# CFLAGS cause the tests to fail miserbly.
+#
+# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
+# knows what he is talking about:
+#
+#   People really shouldn't force code-specific options on... It's a
+#   bad idea. The -march options aren't just to look pretty. They enable
+#   options that are sensible (and include sse,mmx,3dnow when apropriate).
+#
+# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
+# you do not like it, comment it, but do not bugreport if you run into
+# problems.
+#
+# <azarah@gentoo.org> (13 Oct 2002)
+strip-flags
 
 EMVER="0.63.3"
 IPCVER="0.99.63"
@@ -354,6 +376,9 @@ src_install() {
 	doins ${FILESDIR}/10mozilla
 	dodoc LEGAL LICENSE README/mozilla/README*
 
+	# Move plugins dir
+	src_mv_plugins usr/lib/mozilla/plugins
+
 	# Fix icons to look the same everywhere
 	insinto /usr/lib/mozilla/icons
 	doins ${S}/build/package/rpm/SOURCES/mozicon16.xpm
@@ -395,6 +420,9 @@ pkg_preinst() {
     if [ -e ${ROOT}/usr/lib/component.reg ] ; then
 		rm -f ${ROOT}/usr/lib/component.reg
 	fi
+
+	# Move old plugins dir
+	pkg_mv_plugins /usr/lib/mozilla/plugins
 }
 
 pkg_postinst() {
