@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109.ebuild,v 1.4 2004/01/03 15:04:13 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109.ebuild,v 1.5 2004/01/04 14:26:02 plasmaroo Exp $
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
@@ -12,7 +12,8 @@ KEYWORDS="~x86 ~sparc ~alpha ~ppc ~hppa ~mips ~amd64 ~ia64 ppc64"
 IUSE="static" #doc
 
 DEPEND="virtual/glibc
-	virtual/os-headers"
+	virtual/os-headers
+	dev-util/yacc"
 #	doc? ( app-text/openjade
 #		dev-perl/SGMLSpm
 #		app-text/docbook-sgml-dtd
