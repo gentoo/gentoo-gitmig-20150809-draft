@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.5.ebuild,v 1.1 2005/02/21 00:09:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.5.ebuild,v 1.2 2005/02/22 06:31:55 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils
 
 # libgrass support is coming soon...
 #	grass? ( >=sci-geosciences/grass-5.0 )
 
-IUSE="jpeg png gif python postgres mysql ogdi fits"
+IUSE="jpeg png gif python postgres mysql ogdi fits debug"
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats"
 HOMEPAGE="http://www.remotesensing.org/gdal/index.html"
@@ -60,6 +60,9 @@ src_compile() {
 		myconf="--with-gif=no ${myconf}"
 	fi
 
+	if useq debug ; then
+	        export CFG=debug
+	fi
 #	if useq grass ; then # no libgrass in 5.0.3 !!!
 #		myconf="--with-libgrass=/usr/grass5/lib ${myconf}"
 #	else

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.1 2005/02/21 00:09:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.2 2005/02/22 06:31:55 nerdboy Exp $
+
+  21 Feb 2005; Steve Arnold <nerdboy@gentoo.org> gdal-1.2.5.ebuild:
+  added debug flag at user request
 
 *gdal-1.2.5 (20 Feb 2005)
 
