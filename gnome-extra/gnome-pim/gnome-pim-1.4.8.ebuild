@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.8.ebuild,v 1.6 2003/05/22 22:26:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.8.ebuild,v 1.7 2003/06/10 14:58:29 liquidx Exp $
 
 IUSE="pda"
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 ~sparc "
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
 
 DEPEND="${RDEPEND}
-	pda? ( gnome-extra/gnome-pilot )"
+	pda? ( <gnome-extra/gnome-pilot-2 )"
 
 src_unpack() {
 	unpack ${A}
@@ -29,20 +29,11 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure --host=${CHOST}					\
-		    --prefix=/usr					\
-		    --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
-		    || die
-
+	econf 
 	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
-	     install || die
-
+	einstall || die
 	dodoc AUTHORS COPYING* ChangeLog NEWS README*
 }
