@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-libs/pdfkit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pdfkit/ChangeLog,v 1.1 2004/10/22 05:18:11 fafhrd Exp $
+
+*pdfkit-0.8 (21 Oct 2004)
+
+  21 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +pdfkit-0.8.ebuild:
+  New package; keyworded for ~ppc.
+
