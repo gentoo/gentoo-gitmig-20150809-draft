@@ -1,11 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.3_pre1-r1.ebuild,v 1.3 2002/12/09 04:42:02 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.3.ebuild,v 1.1 2002/12/29 01:37:36 drobbins Exp $
 
-MY_P="icewm-1.2.3pre1"
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="Ice Window Manager"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.icewm.org"
 IUSE="esd gnome imlib nls spell truetype"
 
@@ -18,7 +16,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc "
 
 src_unpack(){
 	unpack ${A}
@@ -26,7 +24,6 @@ src_unpack(){
 }
 
 src_compile(){
-
 	use esd \
 		&& myconf="${myconf} --with-esd-config=/usr/bin/esd-config"
 
@@ -56,7 +53,7 @@ src_compile(){
 
 	CXXFLAGS="${CXXFLAGS}" econf \
 		--with-xpm \
-		--with-libdir=/usr/lib/icewm \
+		--with-libdir=/usr/share/icewm \
 		--with-cfgdir=/etc/icewm \
 		--with-docdir=/usr/share/doc/${PF}/html \
 		${myconf} || die "configure failed"
@@ -74,4 +71,9 @@ src_install(){
 	echo "/usr/bin/icewm" >> icewm
 	exeinto /etc/X11/Sessions
 	doexe icewm
+}
+
+pkg_postinst() {
+	echo "Please note that the default icewm libdir has moved from"
+	echo "/usr/lib/icewm to /usr/share/icewm."
 }

@@ -1,9 +1,9 @@
-diff -urN icewm-1.2.3pre1-old/Makefile icewm-1.2.3pre1/Makefile
---- icewm-1.2.3pre1-old/Makefile	2002-10-20 07:05:09.000000000 -0700
-+++ icewm-1.2.3pre1/Makefile	2002-11-02 03:25:37.000000000 -0800
-@@ -125,12 +125,12 @@
+diff -urN icewm-1.2.3/Makefile icewm-1.2.3-new/Makefile
+--- icewm-1.2.3/Makefile	Thu Dec 26 12:05:47 2002
++++ icewm-1.2.3-new/Makefile	Sat Dec 28 18:12:30 2002
+@@ -110,12 +110,12 @@
  
- install-docs: docs $(LSM)
+ install-docs: docs
  	@echo ------------------------------------------
 -	@rm -fr "$(DESTDIR)$(DOCDIR)/icewm-$(VERSION)"
 -	@$(INSTALLDIR) "$(DESTDIR)$(DOCDIR)/icewm-$(VERSION)"
@@ -19,12 +19,12 @@ diff -urN icewm-1.2.3pre1-old/Makefile icewm-1.2.3pre1/Makefile
  	@echo ------------------------------------------
  
  install-nls: nls
-diff -urN icewm-1.2.3pre1-old/Makefile.in icewm-1.2.3pre1/Makefile.in
---- icewm-1.2.3pre1-old/Makefile.in	2002-10-20 07:04:54.000000000 -0700
-+++ icewm-1.2.3pre1/Makefile.in	2002-11-02 03:25:37.000000000 -0800
-@@ -125,12 +125,12 @@
+diff -urN icewm-1.2.3/Makefile.in icewm-1.2.3-new/Makefile.in
+--- icewm-1.2.3/Makefile.in	Thu Dec 26 12:05:29 2002
++++ icewm-1.2.3-new/Makefile.in	Sat Dec 28 18:12:30 2002
+@@ -110,12 +110,12 @@
  
- install-docs: docs $(LSM)
+ install-docs: docs
  	@echo ------------------------------------------
 -	@rm -fr "$(DESTDIR)$(DOCDIR)/icewm-$(VERSION)"
 -	@$(INSTALLDIR) "$(DESTDIR)$(DOCDIR)/icewm-$(VERSION)"
@@ -40,10 +40,10 @@ diff -urN icewm-1.2.3pre1-old/Makefile.in icewm-1.2.3pre1/Makefile.in
  	@echo ------------------------------------------
  
  install-nls: nls
-diff -urN icewm-1.2.3pre1-old/src/Makefile icewm-1.2.3pre1/src/Makefile
---- icewm-1.2.3pre1-old/src/Makefile	2002-10-20 07:05:09.000000000 -0700
-+++ icewm-1.2.3pre1/src/Makefile	2002-11-02 03:25:38.000000000 -0800
-@@ -26,7 +26,7 @@
+diff -urN icewm-1.2.3/src/Makefile icewm-1.2.3-new/src/Makefile
+--- icewm-1.2.3/src/Makefile	Thu Dec 26 12:05:48 2002
++++ icewm-1.2.3-new/src/Makefile	Sat Dec 28 18:12:30 2002
+@@ -28,7 +28,7 @@
                  -DEXEEXT='"$(EXEEXT)"' \
                  -DICEWMEXE='"icewm$(EXEEXT)"' \
                  -DICEHELPEXE='"icehelp$(EXEEXT)"' \
@@ -51,11 +51,11 @@ diff -urN icewm-1.2.3pre1-old/src/Makefile icewm-1.2.3pre1/src/Makefile
 +                -DICEHELPIDX='"$(DOCDIR)//icewm.html"'
  
  CXXFLAGS =      -fpermissive -Wall -Wpointer-arith -Wconversion -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Winline -Woverloaded-virtual -W -fno-exceptions -fno-rtti -g -O2 $(DEBUG) $(DEFS) \
- 	         -I/usr/X11R6/include -I/usr/X11R6/include  
-diff -urN icewm-1.2.3pre1-old/src/Makefile.in icewm-1.2.3pre1/src/Makefile.in
---- icewm-1.2.3pre1-old/src/Makefile.in	2002-10-20 07:04:55.000000000 -0700
-+++ icewm-1.2.3pre1/src/Makefile.in	2002-11-02 03:25:38.000000000 -0800
-@@ -26,7 +26,7 @@
+ 	         -I/usr/X11R6/include -I/usr/include/Xft2 -I/usr/include/freetype2 -I/usr/X11R6/include -I/usr/X11R6/include  # `fc-config --cflags`
+diff -urN icewm-1.2.3/src/Makefile.in icewm-1.2.3-new/src/Makefile.in
+--- icewm-1.2.3/src/Makefile.in	Thu Dec 26 12:05:30 2002
++++ icewm-1.2.3-new/src/Makefile.in	Sat Dec 28 18:12:30 2002
+@@ -28,7 +28,7 @@
                  -DEXEEXT='"$(EXEEXT)"' \
                  -DICEWMEXE='"icewm$(EXEEXT)"' \
                  -DICEHELPEXE='"icehelp$(EXEEXT)"' \
@@ -63,23 +63,10 @@ diff -urN icewm-1.2.3pre1-old/src/Makefile.in icewm-1.2.3pre1/src/Makefile.in
 +                -DICEHELPIDX='"$(DOCDIR)//icewm.html"'
  
  CXXFLAGS =      @CXXFLAGS@ $(DEBUG) $(DEFS) \
- 	        @CORE_CFLAGS@ @IMAGE_CFLAGS@ @AUDIO_CFLAGS@ @GNOME_CFLAGS@
-diff -urN icewm-1.2.3pre1-old/src/aapm.cc icewm-1.2.3pre1/src/aapm.cc
---- icewm-1.2.3pre1-old/src/aapm.cc	2002-10-20 07:04:55.000000000 -0700
-+++ icewm-1.2.3pre1/src/aapm.cc	2002-11-02 03:25:37.000000000 -0800
-@@ -462,8 +462,7 @@
-     class YPixbuf * gradient(parent()->getGradient());
- 
-     if (gradient) {
--        g.copyPixbuf(*gradient, this->x(), this->y(),
--                     width((), height(), 0, 0));
-+        g.copyPixbuf(*gradient, this->x(), this->y(), width(), height(), 0, 0);
-     }
-     else
- #endif
-diff -urN icewm-1.2.3pre1-old/src/wmclient.h icewm-1.2.3pre1/src/wmclient.h
---- icewm-1.2.3pre1-old/src/wmclient.h	2002-10-20 07:04:55.000000000 -0700
-+++ icewm-1.2.3pre1/src/wmclient.h	2002-11-02 03:25:37.000000000 -0800
+ 	        @CORE_CFLAGS@ @IMAGE_CFLAGS@ @AUDIO_CFLAGS@ # `fc-config --cflags`
+diff -urN icewm-1.2.3/src/wmclient.h icewm-1.2.3-new/src/wmclient.h
+--- icewm-1.2.3/src/wmclient.h	Thu Dec 26 12:05:30 2002
++++ icewm-1.2.3-new/src/wmclient.h	Sat Dec 28 18:12:38 2002
 @@ -13,9 +13,10 @@
  
  #ifndef __YIMP_XUTIL__
