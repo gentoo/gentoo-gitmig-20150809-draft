@@ -1,8 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/fix_libtool_files.sh,v 1.10 2004/07/15 00:59:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/fix_libtool_files.sh,v 1.11 2005/01/18 01:58:18 vapier Exp $
 
 usage() {
 cat << "USAGE_END"
@@ -25,52 +24,46 @@ Usage: fix_libtool_files.sh <old-gcc-version> [--oldarch <old-CHOST>]
 
       # fix_libtool_files.sh `gcc -dumpversion` --oldarch i586-pc-linux-gnu
 
-
 USAGE_END
-
-        exit 1
+	exit 1
 }
 
-if [ "$2" != "--oldarch" -a "$#" -ne 1 ] || \
-   [ "$2" = "--oldarch" -a "$#" -ne 3 ]
+if [[ $2 != "--oldarch" && $# -ne 1 ]] || \
+   [[ $2 == "--oldarch" && $# -ne 3 ]]
 then
 	usage
 fi
 
-ARGV1="$1"
-ARGV2="$2"
-ARGV3="$3"
+ARGV1=$1
+ARGV2=$2
+ARGV3=$3
 
 source /etc/profile
 source /sbin/functions.sh
 
-if [ "`id -u`" -ne 0 ]
-then
+if [[ ${EUID} -ne 0 ]] ; then
 	eerror "${0##*/}: Must be root."
 	exit 1
 fi
 
-if [ "${ARGV2}" = "--oldarch" -a "x${ARGV3}" != "x" ]
-then
-	OLDCHOST="${ARGV3}"
+if [[ ${ARGV2} == "--oldarch" ]] && [[ -n ${ARGV3} ]] ; then
+	OLDCHOST=${ARGV3}
 else
 	OLDCHOST=
 fi
 
 AWKDIR="/lib/rcscripts/awk"
 
-if [ ! -r "${AWKDIR}/fixlafiles.awk" ]
-then
+if [[ ! -r ${AWKDIR}/fixlafiles.awk ]] ; then
 	eerror "${0##*/}: ${AWKDIR}/fixlafiles.awk does not exist!"
 	exit 1
 fi
 
-OLDVER="${ARGV1}"
+OLDVER=${ARGV1}
 
 export OLDVER OLDCHOST
 
 einfo "Scanning libtool files for hardcoded gcc library paths..."
 /bin/gawk -f "${AWKDIR}/fixlafiles.awk"
-
 
 # vim:ts=4
