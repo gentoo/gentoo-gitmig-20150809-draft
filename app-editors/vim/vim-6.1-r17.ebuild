@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.11 2002/12/16 21:15:48 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.12 2002/12/27 17:38:35 rphillips Exp $
 
 VIMPATCH="vimpatch-1-263.tar.bz2"
 inherit vim
@@ -38,7 +38,7 @@ src_compile() {
 	# the configure script should autodetect X being installed, so
 	# we'll specifically turn it off if X is not in the USE vars.
 	# -rphillips
-	use X      && myconf="$myconf --without-x"
+	use X      && myconf="$myconf --with-x"
 
 	# This should fix a sandbox violation. 
  	for file in /dev/pty/s*
