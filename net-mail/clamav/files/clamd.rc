@@ -8,6 +8,9 @@ depend() {
 
 start() {
 	if [ "${START_CLAMD}" = "yes" ]; then
+		if [ -f "/tmp/clamd" ]; then
+                	rm -f /tmp/clamd
+                fi
 		if [ -n "${CLAMD_LOG}" -a ! -f "${CLAMD_LOG}" ]; then
 			touch "${CLAMD_LOG}"
 			chown clamav:clamav "${CLAMD_LOG}"
@@ -33,7 +36,7 @@ start() {
 stop() {
 	if [ "${START_CLAMD}" = "yes" ]; then
 		ebegin "Stopping clamd"
-		start-stop-daemon --stop --quiet --pidfile /var/run/clamd.pid
+		start-stop-daemon --stop --quiet --name clamd
 		eend $? "Failed to stop clamd"
 	fi
 	if [ "${START_FRESHCLAM}" = "yes" ]; then

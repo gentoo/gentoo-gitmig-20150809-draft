@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/clamav
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.12 2004/01/20 19:03:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.13 2004/01/22 09:31:17 hanno Exp $
+
+  22 Jan 2004; Hanno Boeck <hanno@gentoo.org> files/clamd.rc:
+  Some fixes to the init.d-script.
 
 *clamav-0.65 (20 Jan 2004)
 
