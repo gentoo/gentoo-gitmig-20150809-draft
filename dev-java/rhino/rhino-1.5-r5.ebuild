@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5-r5.ebuild,v 1.1 2004/04/02 04:22:05 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5-r5.ebuild,v 1.2 2004/04/03 17:00:17 zx Exp $
 
 inherit java-pkg
 
 MY_P="rhino1_5R5"
 DESCRIPTION="Rhino is an open-source implementation of JavaScript written entirely in Java. It is typically embedded into Java applications to provide scripting to end users"
-SRC_URI="http://64.12.168.21/pub/mozilla.org/js/${MY_P}.zip"
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/js/${MY_P}.zip"
 HOMEPAGE="http://www.mozilla.org/rhino/"
 LICENSE="NPL-1.1"
 SLOT="0"

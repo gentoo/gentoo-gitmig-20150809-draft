@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.7 2004/04/02 04:22:05 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.8 2004/04/03 17:00:17 zx Exp $
+
+*rhino-1.5-r5 (03 Apr 2004)
+
+  03 Apr 2004; Chris Aniszczyk <zx@gentoo.org> rhino-1.5-r5.ebuild:
+  Fixing SRC_URI. Closes #46669
 
   01 Apr 2004; Chris Aniszczyk <zx@gentoo.org> rhino-1.5_rc5.ebuild:
   Closes #45597, #46227
