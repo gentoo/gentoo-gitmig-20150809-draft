@@ -3,7 +3,7 @@ To complete your installation ...
 
 1. Create a new database for dotproject in mysql:
 
-	mysql> CREATE DATABASE dotpoject;
+	mysql> CREATE DATABASE dotproject;
 	mysql> GRANT ALL PRIVILEGES ON dotproject.*
 	       TO dotproject@localhost IDENTIFIED BY
 	       "yourpassword" WITH GRANT OPTION
