@@ -11,13 +11,16 @@ depend() {
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin:$ROOTPATH
 
 case "$DISPLAYMANAGER" in
-    kdm|kde|KDM|KDE|kde2|KDE2|kde3|KDE3)	 
-	EXE=`which kdm`   
+    kdm|kde|KDM|KDE|kde2|KDE2|kde3|KDE3)
+	EXE=`which kdm`
 	;;
-    gdm|GDM|Gnome|GNOME) 
+    E|ELOGIN|ELOGIND)
+	EXE=`which elogind`
+	;;
+    gdm|GDM|Gnome|GNOME)
 	EXE=/usr/bin/gdm
 	;;
-    *)	
+    *)
 	EXE=/usr/X11R6/bin/xdm ;;
 esac
 
