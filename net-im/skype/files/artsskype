@@ -1,0 +1,30 @@
+#!/bin/bash
+progname="skype"
+progpath="/opt/${progname}/"
+shellcheck=` which artsshell 2> /dev/null `
+artsdcheck=` ps x | grep artsd | grep -v grep `
+if [[ -z ${shellcheck} ]]
+then
+	echo "No installed artsshell found"
+	echo "Assuming you're running no sound daemon"
+	echo "Starting ${progname} without a sound wrapper"
+	${progpath}/${progname}.bin
+				
+else
+	if [ ${shellcheck} == ${KDEDIR}/bin/artsshell ]
+	then
+		echo "installed artsshell found"
+		echo "Checking for a running artsd"
+		if [[ -n ${artsdcheck} ]]
+		then
+			echo "Running artsd found"
+			echo "Starting artsd wrapped ${progname}"
+			artsdsp ${progpath}/${progname}.bin
+		else
+			echo "No running artsd found"
+			echo "Starting ${progname} without artsd"
+			${progpath}/${progname}.bin
+		fi
+	fi
+fi
+exit 0
