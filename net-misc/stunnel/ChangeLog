@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.22 2003/10/28 14:53:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.23 2003/10/28 15:23:38 aliz Exp $
+
+*stunnel-4.04-r2 (28 Oct 2003)
+
+  28 Oct 2003; Daniel AHlberg <aliz@gentoo.org> stunnel-4.04-r2 :
+  Now stunnel should run with its own uid/gid instead of noboody/nogroup. Experimental!
+  Closes #24572.
 
   28 Oct 2003; Daniel Ahlberg <aliz@gentoo.org> stunnel-4.04-r1 stunnel-3.26.ebuild :
   Depend on >=openssl-0.9.6j becuse of blinding issues.
