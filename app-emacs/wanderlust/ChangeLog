@@ -1,0 +1,80 @@
+# ChangeLog for app-emacs/wl
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.1 2003/10/10 20:12:39 usata Exp $
+
+  11 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  wanderlust-2.10.1-r1.ebuild, wanderlust-2.11.18.20031008.ebuild,
+  wanderlust-2.11.4.20030728.ebuild, wanderlust-2.8.1.ebuild,
+  files/70wl-gentoo.el:
+  Moved from app-emacs/wl to app-emacs/wanderlust. Removed
+  intermediate CVS snapshot (app-emacs/wanderlust-cvs now provides
+  up-to-date version of wl)
+
+*wl-2.11.18.20031008 (09 Oct 2003)
+
+  09 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> wl-2.11.18.20031008.ebuild:
+  New snapshot
+
+*wl-2.11.18.20030927 (01 Oct 2003)
+*wl-2.11.16.20030921 (22 Sep 2003)
+*wl-2.11.13.20030915 (22 Sep 2003)
+*wl-2.11.9.20030823 (25 Aug 2003)
+*wl-2.11.7.20030812 (13 Aug 2003)
+*wl-2.11.6.20030807 (08 Aug 2003)
+
+*wl-2.11.4.20030728 (29 Jul 2003)
+
+  29 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> wl-2.11.4.20030728.ebuild:
+  New beta version (This branch, 2.11.x, shouldn't be marked as stable).
+
+*wl-2.10.1-r1 (09 Jul 2003)
+
+  25 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> wl-2.10.1-r1.ebuild,
+  wl-2.10.1.ebuild:
+  Changed DEPEND to virtual/{flim,semi}
+
+  09 Jul 2003; Masatomo Nakano <nakano@gentoo.org> wl-2.10.1-r1.ebuild:
+  Marked as stable.
+
+*wl-2.10.1 (06 Jul 2003)
+
+  07 Jul 2003; Masatomo Nakano <nakano@gentoo.org> wl-2.10.1.ebuild:
+  Added ssl support.
+
+  06 Jul 2003; Masatomo Nakano <nakano@gentoo.org> wl-2.10.1.ebuild:
+  Version bumped as unstable.
+
+*wl-2.10.0-r1 (18 Jun 2003)
+
+  08 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> wl-2.10.0-r1.ebuild:
+  Removed stale version
+
+  18 Jun 2003; Masatomo Nakano <nakano@gentoo.org> wl-2.10.0-r1.ebuild:
+  Fixed ebuild bug.
+
+*wl-2.10.0 (13 Dec 2002)
+
+  08 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> wl-2.10.0.ebuild:
+  Removed stale version
+
+  29 May 2003; YAMAKURA Makoto <yakina@gentoo.org> wl-2.10.0.ebuild,
+  wl-2.8.1.ebuild:
+  Added S
+
+  24 Dec 2002; Masatomo Nakano <nakano@gentoo.org> ChangeLog,
+  wl-2.10.0.ebuild
+
+	Changed Keywords from ~x86 to x86.
+
+  13 Dec 2002; Masatomo Nakano <nakano@gentoo.org> ChangeLog,
+  wl-2.10.0.ebuild, files/digest-wl-2.10.0
+
+  Version bump.
+
+*wl-2.8.1 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  wl-2.8.1.ebuild, files/70wl-gentoo.el, 
+  files/digest-wl-2.8.1 :
+
+  Initial import.
