@@ -240,6 +240,8 @@ app-emacs/monk
 # <foser@gentoo.org> (27 Oct 2002)
 # Unstable GNOME2 tree mask (2.1)
 # Expect things to break if you unmask this !
+# Only tested on x86, other archs *will* break
+# I repeat : do NOT even try unless you're using x86
 >=x11-libs/vte-0.9.2
 >=x11-libs/xft-2.0
 >=x11-libs/gtk+-2.1
