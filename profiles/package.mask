@@ -36,6 +36,7 @@ kde-apps/quanta
 kde-apps/webconfig
 gnome-base/gdk-pixbuf
 gnome-base/glibwww
+gnome-apps/gphoto
 
 #this is an RC6-only ebuild (no supervise support)
 #=sys-apps/dcron-2.7-r5
