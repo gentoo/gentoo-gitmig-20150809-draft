@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.15 2004/05/05 14:34:41 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.16 2004/05/06 20:18:21 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails
 
@@ -167,7 +167,7 @@ src_compile() {
 		--enable-layout=Gentoo \
 		--with-program-name=apache2 \
 		--with-devrandom=/dev/urandom \
-		--host=${CHOST} ${myconf} || die "bad ./configure"
+		--host=${CHOST} ${myconf} || die "bad ./configure please submit bug report to bugs.gentoo.org. Include your config.layout."
 		#--with-mpm={worker|prefork|perchild|leader|threadpool}
 
 	emake || die "problem compiling Apache2 :("
