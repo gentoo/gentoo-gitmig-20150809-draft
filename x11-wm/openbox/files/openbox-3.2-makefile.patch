@@ -1,0 +1,14 @@
+--- Makefile.am.orig	2004-05-06 01:59:08.943196669 -0700
++++ Makefile.am	2004-05-06 02:02:30.184343747 -0700
+@@ -55,6 +55,11 @@
+ 	-DDEFAULT_THEME=\"$(theme)\"
+ render_libobrender_la_LDFLAGS = \
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
++render_libobrender_la_LIBADD = \
++	$(X_LIBS) \
++	$(XFT_LIBS) \
++	$(GLIB_LIBS) \
++	$(XML_LIBS) 
+ render_libobrender_la_SOURCES = \
+ 	gettext.h \
+ 	render/color.h \
