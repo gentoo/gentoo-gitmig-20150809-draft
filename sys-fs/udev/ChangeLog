@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.55 2004/07/02 18:39:32 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.56 2004/07/09 20:33:20 gregkh Exp $
+
+*udev-030 (09 Jul 2004)
+
+  09 Jul 2004; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-030.ebuild:
+  version bump to 030
+  Should fix bug 55959 for amd64 (actually the bug was there for all arches
+  the others just got lucky...)
 
 *udev-029 (02 Jul 2004)
 
