@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-0.9.19.ebuild,v 1.4 2004/07/14 23:11:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-0.9.23.ebuild,v 1.1 2004/08/02 08:38:36 kosmikus Exp $
 
 DESCRIPTION="David's Advanced Revision Control System is yet another replacement for CVS"
 HOMEPAGE="http://abridgegame.org/darcs"
@@ -12,13 +12,15 @@ KEYWORDS="~x86"
 IUSE="doc wxwindows"
 
 DEPEND=">=net-misc/curl-7.10.2
-	>=virtual/ghc-6.0
+	>=virtual/ghc-6.2
 	wxwindows?  ( dev-haskell/wxhaskell )
 	doc?  ( virtual/tetex
 		dev-tex/latex2html )"
 
 RDEPEND=">=net-misc/curl-7.10.2
 	wxwindows?  ( dev-haskell/wxhaskell )"
+
+S=${WORKDIR}/${P}
 
 src_compile() {
 	local myconf
