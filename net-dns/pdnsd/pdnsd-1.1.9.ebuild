@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.9.ebuild,v 1.2 2004/02/03 06:17:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.9.ebuild,v 1.3 2004/02/19 08:07:20 dragonheart Exp $
 
 DESCRIPTION="Proxy DNS server with permanent caching"
 
@@ -12,7 +12,10 @@ HOMEPAGE="http://home.t-online.de/home/Moestl http://www.phys.uu.nl/%7Erombouts/
 
 IUSE="ipv6 debug isdn"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	>=sys-apps/sed-4"
+
+RDEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="BSD | GPL-2"
@@ -20,7 +23,8 @@ LICENSE="BSD | GPL-2"
 # Should work on  alpha arm hppa i386 ia64 m68k mips mipsel powerpc s390 sparc 
 # REF http://packages.debian.org/cgi-bin/search_packages.pl?searchon=names&version=all&exact=1&keywords=pdnsd
 # According to release notes 1.1.8b1par7 is effectively 1.1.9 with minor documentation changes
-KEYWORDS="~x86 ~ppc ~sparc"
+
+KEYWORDS="x86 ~ppc ~sparc"
 
 S=${WORKDIR}/${PN}-${PV}
 
@@ -68,10 +72,10 @@ src_install() {
 	newexe ${FILESDIR}/pdnsd.rc6 pdnsd
 	newexe ${FILESDIR}/pdnsd.online pdnsd-online
 
-	[ `use ipv6` ] && \
-		sed -i "s:-- -s:-- -6 -s:" ${D}/etc/init.d/pdnsd
+	use ipv6 && \
+		sed -i -e "s:-- -s:-- -6 -s:" ${D}/etc/init.d/pdnsd
 
-	[ `use ipv6` ] && \
+	use ipv6 && \
 		ewarn "make sure your servers in /etc/pdnsd/pdnsd.conf are reachable with IPv6"
 
 	keepdir /etc/conf.d
