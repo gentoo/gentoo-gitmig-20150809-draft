@@ -31,9 +31,6 @@ net-misc/djbdns
 >=media-libs/mesa-3.5
 >=media-libs/mesa-glu-3.5
 
-#-mjc unstable
->=sys-kernel/linux-sources-2.4.18_pre3
-
 # We are masking out the 4.x series shadow until we remove dependencies
 # on libshadow from other ebuilds.  (drobbins, 19 Jan 2002)
 <=sys-apps/shadow-5
