@@ -1,6 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
+$HEADER$
 
 P="Linux-mini-HOWTOs"
 S=${WORKDIR}/${P}
