@@ -1,6 +1,16 @@
 # ChangeLog for net-im/centericq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.6 2002/07/09 17:50:40 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.7 2002/07/12 01:04:48 lostlogic Exp $
+
+*centericq-4.7.7-r1 (11 Jul 2002)
+
+  11 Jul 2002; Brandon Low <lostlogic@gentoo.org> centericq-4.7.7-r1.ebuild :
+
+  Thanks to Leonardo Boshell for the following changes:
+  - Support for the `nls' USE item
+  - "do" some documents with dodoc
+  - Remove the unnecessary and rather dumb src_unpack function.
+  - Add the LICENSE variable
 
 *centericq-4.7.7 (09 Jul 2002)
 
