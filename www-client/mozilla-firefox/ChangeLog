@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.10 2005/03/25 03:42:11 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.11 2005/03/25 20:03:41 brad Exp $
+
+  25 Mar 2005; Brad Laue <brad@gentoo.org> mozilla-firefox-1.0.2-r1.ebuild:
+  Change perl -pi -e to sed -i -e - fixes bug #86639.
 
 *mozilla-firefox-1.0.2-r1 (24 Mar 2005)
 
