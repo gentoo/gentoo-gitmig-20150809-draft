@@ -1,4 +1,15 @@
-MD5 1c07aa22a6a520390908d21f73096b03 sidekick-0.3.ebuild 908
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 72ed8392a587158770d17fd4a0119599 sidekick-0.3.ebuild 1010
+MD5 a6a36bbe5e7966de17fedc25145c5873 ChangeLog 379
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 047efe6e4b69596b77e37d190e0adbaa files/build.xml.patch 314
 MD5 764c2030037576f85d86d4ed38c8dd68 files/digest-sidekick-0.3 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBSrCw/rLF9B432nYRApVrAJ0XKNOoQTxDdkjylAyeJaPsfH3AhQCgskyU
+6djf2L4OXsQHuf+eh4FvrEs=
+=J//q
+-----END PGP SIGNATURE-----
