@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.ebuild,v 1.7 2004/11/27 21:19:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.ebuild,v 1.8 2004/12/04 02:08:35 vapier Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -232,13 +232,16 @@ src_install() {
 		cd ${D}${BINPATH}
 		for x in gcc g++ c++ g77 gcj
 		do
-			rm -f ${CTARGET}-${x}
-			[ -f "${x}" ] && ln -sf ${x} ${CTARGET}-${x}
+			if [ "${CHOST}" == "${CTARGET}" ] && [ -f "${CTARGET}-${x}" ]
+			then
+				[ ! -f "${x}" ] && mv "${CTARGET}-${x}" "${x}"
+				ln -sf ${x} ${CTARGET}-${x}
+			fi
 
 			if [ -f "${CTARGET}-${x}-${PV}" ]
 			then
 				rm -f ${CTARGET}-${x}-${PV}
-				ln -sf ${x} ${CTARGET}-${x}-${PV}
+				ln -sf ${CTARGET}-${x} ${CTARGET}-${x}-${PV}
 			fi
 		done
 	fi

@@ -1,12 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.21 2004/11/21 23:03:06 lv Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.22 2004/12/04 02:08:35 vapier Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
-HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
-LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="-* amd64 ~mips ~ppc64 ~x86 -hppa -ppc"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
@@ -294,13 +291,16 @@ src_install() {
 		cd ${D}${BINPATH}
 		for x in gcc g++ c++ g77 gcj
 		do
-			rm -f ${CTARGET}-${x}
-			[ -f "${x}" ] && ln -sf ${x} ${CTARGET}-${x}
+			if [ "${CHOST}" == "${CTARGET}" ] && [ -f "${CTARGET}-${x}" ]
+			then
+				[ ! -f "${x}" ] && mv "${CTARGET}-${x}" "${x}"
+				ln -sf ${x} ${CTARGET}-${x}
+			fi
 
 			if [ -f "${CTARGET}-${x}-${PV}" ]
 			then
 				rm -f ${CTARGET}-${x}-${PV}
-				ln -sf ${x} ${CTARGET}-${x}-${PV}
+				ln -sf ${CTARGET}-${x} ${CTARGET}-${x}-${PV}
 			fi
 		done
 	fi
@@ -451,4 +451,3 @@ pkg_postinst() {
 		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION} ${OLD_GCC_CHOST}
 	fi
 }
-
