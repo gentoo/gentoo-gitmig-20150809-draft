@@ -5,8 +5,10 @@ MD5 a6e20691dd5d5f8e2714d8336693bb06 glib-perl-0.90.ebuild 728
 MD5 873c527fe611c7b26475c8a6d68d9825 glib-perl-0.96.ebuild 728
 MD5 16fb1de5b6fc8d9220c4bd04992ec428 glib-perl-0.97.ebuild 706
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 a7f3c02e44ca3d8586e27c93f8c73893 glib-perl-1.012.ebuild 614
 MD5 bc6e56a28b2c2019e2c781f7fb68df6c files/digest-glib-perl-0.26 60
 MD5 0aff6d36d069ff9a2a4a0855af47a2f6 files/digest-glib-perl-0.90 60
 MD5 1909ddaff9e702b95aa5999d76a60706 files/digest-glib-perl-0.92 60
 MD5 66e342d6a31263cafe0b554d659021bf files/digest-glib-perl-0.96 60
 MD5 71924a12b6f59ef6fe42c3d2d203f103 files/digest-glib-perl-0.97 60
+MD5 3708565214e916a2d14f98ed97f5f6c8 files/digest-glib-perl-1.012 62
