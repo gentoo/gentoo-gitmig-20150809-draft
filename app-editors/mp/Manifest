@@ -7,7 +7,7 @@ MD5 b6599f3c352d9094cc47c59a5a9a141b mp-3.3.10.ebuild 1517
 MD5 dcef69b68c93d433d0ea24a7d76cd143 mp-3.3.1.ebuild 1159
 MD5 38dea2513d652b4f727653f3492eb769 mp-3.2.10.ebuild 953
 MD5 a84ba8795412c9dfd6fa7bda75bdd635 mp-3.1.9.ebuild 675
-MD5 bfbb7541bfc7c13003bec47e9742b7a1 ChangeLog 3325
+MD5 e3f5cd50ae191ec9af8bab0b8d86e06a ChangeLog 3326
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 135880e17116622cd1cfff6f0b370a29 files/digest-mp-3.1.9 59
 MD5 7835cbf7dd8763f5ab1be1769263021d files/digest-mp-3.3.1 60
@@ -19,9 +19,9 @@ MD5 d22844d76e60bb29e5368dfedaf91501 files/digest-mp-3.3.10 61
 MD5 f58c1b9239be39f8724f3a172f67c465 files/mp-3.3.9-fix-builtin-regex-warnings.diff 1353
 MD5 82dd8f227fdd5b56584b2adf5242a53b files/gentoo-synh-mp.patch-3.2.11 2027
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB6O7LI1lqEGTUzyQRAqutAJ0U+d+/mBN9KRsJuw2V9doCUUzdrQCfYUo1
-+VMbBHwfn0M8DOpgvYCIyHc=
-=UH2J
+iD8DBQFB6kouEZCkKN40op4RApUGAJoCDIOVDZN1yENYdAuBsAfx/rQk7gCgoDQ8
+KyChSThkJQV5VDH+l+4WSLU=
+=XVA7
 -----END PGP SIGNATURE-----
