@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.72 2003/10/19 03:34:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.73 2003/10/19 21:57:44 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -37,7 +37,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="2.1.19"
+PATCH_VER="2.1.20"
 FT2_VER="2.1.3"
 XCUR_VER="0.3.1"
 SISDRV_VER="131003-1"
@@ -135,7 +135,7 @@ PROVIDE="virtual/x11
 
 #inherit needs to happen *after* DEPEND has been defined to have "newdepend"
 #do the right thing. Otherwise RDEPEND doesn't get set properly.
-inherit eutils flag-o-matic gcc
+inherit eutils flag-o-matic gcc xfree
 
 DESCRIPTION="Xfree86: famous and free X server"
 
@@ -250,6 +250,10 @@ src_unpack() {
 		fi
 	fi
 
+	# Bug #30541, workaround
+	is_kernel "2" "4" || \
+		mv -f ${PATCH_DIR}/9132* ${PATCH_DIR}/excluded
+
 	# Various Patches from all over
 	EPATCH_SUFFIX="patch" epatch ${PATCH_DIR}
 
@@ -265,7 +269,7 @@ src_unpack() {
 	#
 	#  http://people.mandrakesoft.com/~flepied/projects/wacom/
 	#
-	if [ "`uname -r | cut -d. -f1,2`" != "2.2" ]
+	if [ ! `is_kernel "2" "2"` ]
 	then
 		ebegin "Updating Wacom USB Driver"
 		gzip -dc ${DISTDIR}/xf86Wacom.c.gz > \
@@ -317,7 +321,7 @@ src_unpack() {
 		fi
 	fi
 
-	if [ "`uname -r | cut -d. -f1,2`" != "2.2" ]
+	if [ ! `is_kernel "2" "2"` ]
 	then
 		echo "#define HasLinuxInput YES" >> config/cf/host.def
 	fi
