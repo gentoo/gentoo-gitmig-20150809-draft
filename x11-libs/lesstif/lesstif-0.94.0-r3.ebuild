@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r3.ebuild,v 1.1 2005/03/02 16:58:10 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r3.ebuild,v 1.2 2005/03/02 17:23:37 lanius Exp $
 
 inherit libtool flag-o-matic multilib
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="virtual/libc
 	virtual/x11
-	x11-libs/motif-config"
+	>=x11-libs/motif-config-0.3"
 
 PROVIDE="virtual/motif"
 
@@ -45,9 +45,10 @@ src_install() {
 
 
 	einfo "Fixing binaries"
+	dodir /usr/share/lesstif
 	for file in `ls ${D}/usr/bin`
 	do
-		mv ${D}/usr/bin/${file} ${D}/usr/bin/${file}-lesstif
+		mv ${D}/usr/bin/${file} ${D}/usr/share/lesstif/${file}
 	done
 
 	einfo "Fixing libraries"
