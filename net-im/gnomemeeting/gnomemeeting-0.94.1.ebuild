@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.11 2004/06/24 22:52:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.12 2004/07/15 00:12:43 agriffis Exp $
 
 IUSE="sdl ssl"
 
 inherit gnome2
-
-S="${WORKDIR}/${P}"
 
 SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/${P}.tar.gz"
 HOMEPAGE="http://www.gnomemeeting.org"
@@ -78,5 +76,3 @@ src_compile() {
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS FAQ TODO"
 G2CONF="${G2CONF} --enable-platform-gnome-2"
 SCHEMAS="gnomemeeting.schema"
-
-
