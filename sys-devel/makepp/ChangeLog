@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/makepp
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/makepp/ChangeLog,v 1.1 2003/04/27 22:49:19 rac Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/makepp/ChangeLog,v 1.2 2004/06/11 18:25:12 kloeri Exp $
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> makepp-1.18.ebuild:
+  Stable on alpha.
 
 *makepp-1.18 (27 Apr 2003)
 

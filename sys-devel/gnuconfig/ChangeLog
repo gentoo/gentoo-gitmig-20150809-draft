@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.8 2004/04/29 17:40:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.9 2004/06/11 18:18:54 kloeri Exp $
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> gnuconfig-20040214.ebuild:
+  Stable on alpha.
 
   29 Apr 2004; Guy Martin <gmsoft@gentoo.org> gnuconfig-20040214.ebuild:
   Marked stable on hppa.

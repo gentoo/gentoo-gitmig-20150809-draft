@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.0.ebuild,v 1.11 2004/05/14 03:37:08 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.0.ebuild,v 1.12 2004/06/11 18:23:48 kloeri Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha -hppa amd64 mips ppc64 ia64"
+KEYWORDS="x86 ppc sparc alpha -hppa amd64 mips ppc64 ia64"
 IUSE="nls"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
