@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/maestro
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maestro/ChangeLog,v 1.2 2004/06/24 22:09:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maestro/ChangeLog,v 1.3 2004/08/24 03:12:18 zx Exp $
+
+  23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> maestro-2004.ebuild:
+  Marking stable on x86
 
 *maestro-2004 (29 Feb 2004)
 
