@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.1 2001/06/19 21:17:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.2 2001/06/20 04:52:56 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -80,6 +80,8 @@ src_install() {
 	dobin ${DISTDIR}/cvs2cl.pl
 	dosbin ${FILESDIR}/bin/cvslog.sh
 	dosbin ${FILESDIR}/bin/wiki.pl
+	chmod o-rwx,g+rx ${D}/usr/sbin/wiki.pl
+	chown root.dbadmin ${D}/usr/sbin/wiki.pl
 }
 	
 pkg_postinst() {
