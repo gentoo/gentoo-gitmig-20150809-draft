@@ -33,6 +33,9 @@
 
 # <verwilst@gentoo.org> (28 Jul 2002)
 # stupid thing can't find a c++ compiler half the time
+
+# <azarah@gentoo.org> (29 Jul 2002)
+# this one works fine on all my boxes .. please try 1.17.2-r2 ?
 >=sys-apps/groff-1.17
 
 
@@ -135,6 +138,12 @@ net-misc/radvd
 
 # <aliz@gentoo.org> (24 Jul 2002)
 # masked for testing
+#
+# <azarah@gentoo.org> (29 Jul 2002)
+# I have major formatting problems with this one .. even
+# just viewing manpages it do not handle properly, so
+# PLEASE make sure that this works for most people, or
+# that you have a definate fix!!!!
 =sys-apps/groff-1.18
 
 # <seemant@gentoo.org> (23 Jul 2002)
