@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# pebenito@gentoo.org (17 Aug 2003)
+# yet another masking for new selinux api
+>=sec-policy/selinux-base-policy-20030817
+
 # robbat2@gentoo.org (14 Aug 2003)
 # This will be released along with scgi, mod_scgi, fastcgi, mod_fastcgi
 net-www/pcgi
