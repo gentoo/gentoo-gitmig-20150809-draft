@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/freenet6
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.1 2003/05/28 18:36:41 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.2 2003/06/10 15:24:54 latexer Exp $
+
+  10 Jun 2003; Peter Johanson <latexer@gentoo.org> freenet6-0.9.7.ebuild,
+  files/gentoo.sh:
+  Added a gentoo.sh script which matches gentoo's placement of things. bug #21865
 
 *freenet6-0.9.7 (28 May 2003)
 
