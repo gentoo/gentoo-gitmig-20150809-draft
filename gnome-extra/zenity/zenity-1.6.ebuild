@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-1.6.ebuild,v 1.4 2003/09/16 22:28:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-1.6.ebuild,v 1.5 2003/09/16 23:03:03 agriffis Exp $
 
 inherit gnome2
 
@@ -24,3 +24,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README THANKS TODO"
+
+src_compile() {
+	gnome2_src_configure "$@"
+	# Fix bug which breaks compilation with some CFLAGS and compiler
+	# combinations.  See bug 28664 for more information
+	echo '#include <locale.h>' >> config.h
+	emake || die "compile failure"
+}

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.3 2003/09/16 22:28:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.4 2003/09/16 23:03:03 agriffis Exp $
+
+  16 Sep 2003; Aron Griffis <agriffis@gentoo.org> zenity-1.6.ebuild:
+  Fix bug which causes compilation failures for some combinations of CFLAGS and
+  compiler versions. See bug 28664
 
   16 Sep 2003; Aron Griffis <agriffis@gentoo.org> zenity-1.6.ebuild:
   Add ~alpha
