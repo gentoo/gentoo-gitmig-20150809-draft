@@ -1,10 +1,10 @@
+MD5 ef1f672bffacaa134f4be29e71af2ad7 ChangeLog 10427
 MD5 f3942f82433bf5ae16461240cbcc4984 metadata.xml 300
 MD5 665131dd815e781e7fb75a405e7c8c11 openoffice-ximian-1.1.51-r1.ebuild 15080
-MD5 52e27b9b0c1d0fe5aeb780ee95d688a3 openoffice-ximian-1.1.53.ebuild 14861
-MD5 306123f155769cc00478ece73816167b openoffice-ximian-1.1.54.ebuild 14856
+MD5 df3e58bcab2bb210c8a820c3fc0b4809 openoffice-ximian-1.1.53.ebuild 14864
+MD5 a8fdb18b1f75b032c6909c83d9f70485 openoffice-ximian-1.1.54.ebuild 14864
 MD5 c2a3b052ff6297d97e7c224477411d58 openoffice-ximian-1.1.55-r1.ebuild 15674
-MD5 e17156410fbf615aaab1c92f6e08a178 openoffice-ximian-1.1.55.ebuild 14971
-MD5 ef1f672bffacaa134f4be29e71af2ad7 ChangeLog 10427
+MD5 7c293ec11d46453ea09957be133c9bae openoffice-ximian-1.1.55.ebuild 14973
 MD5 bd8a36025a84cb2ad840e822f513e468 files/digest-openoffice-ximian-1.1.51-r1 213
 MD5 304c8e86d82be8c1971b0b3f9102cd0e files/digest-openoffice-ximian-1.1.53 215
 MD5 20aeba3e9637ae6553b4fa6d41e1d0af files/digest-openoffice-ximian-1.1.54 215
@@ -22,7 +22,6 @@ MD5 d1a499cfa276614323b547e013d5c6a0 files/1.1.0/ximian-openoffice.keys 6298
 MD5 9c99fdd340eb8e4c9f09c236eb1a899f files/1.1.0/xooffice-wrapper-1.3 9398
 MD5 fc8711196de6324c9fae45342d159bf3 files/1.1.1/build.patch 330
 MD5 6fd623d53d17e17f953232da5b04447f files/1.1.1/fixscale.patch 1035
-MD5 31663a485adc28ea4f98c20d16b186c2 files/1.1.1/gentoo-1.1.55.patch 606
 MD5 ec45b66d175ad9662716a06e7c678cef files/1.1.1/newstlportfix.patch 10362
 MD5 7978a9c1f590a83622b8040ee83197a4 files/1.1.1/nptl.patch 1285
 MD5 7499a81bad1959834a0e6f995200e3e8 files/1.1.1/openoffice-1.1.0-linux-2.6-fix.patch 603
@@ -30,3 +29,4 @@ MD5 0b9b6204209b8be145648863dbffaa99 files/1.1.1/openoffice-1.1.0-sparc64-fix.pa
 MD5 6ecbfeab440a03f031dbfa0631404aa0 files/1.1.1/ximian-openoffice.applications 980
 MD5 d1a499cfa276614323b547e013d5c6a0 files/1.1.1/ximian-openoffice.keys 6298
 MD5 3ddc9b8931d1842fad3c0dd468e70846 files/1.1.1/xooffice-wrapper-1.3 9221
+MD5 31663a485adc28ea4f98c20d16b186c2 files/1.1.1/gentoo-1.1.55.patch 606
