@@ -6,6 +6,3 @@
 
 >=sys-apps/sysklogd-1.4.1
 >dev-lang/gpc-2.1
-
-*app-portage/gentoolkit
-

@@ -10,5 +10,3 @@
 *sys-libs/libstdc++-v3
 *>=sys-libs/glibc-2.3.4.20040605
 >=sys-apps/sysklogd-1.4.1
-
-*net-misc/dhcpcd
