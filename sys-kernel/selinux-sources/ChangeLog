@@ -1,21 +1,21 @@
 # ChangeLog for sys-kernel/selinux-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.25 2003/12/02 08:46:53 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.26 2003/12/05 17:27:52 plasmaroo Exp $
 
 *selinux-sources-2.4.21-r5 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org>
   selinux-sources-2.4.21-r5.ebuild:
-  version bump for do_brk vuln
+  Version bump for 'do_brk' vulnerability.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org>
   selinux-sources-2.4.21-r4.ebuild, files/do_brk_fix.patch:
-  fix do_brk vuln
+  Fix 'do_brk' vulnerability.
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   selinux-sources-2.4.21-r4.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
 *selinux-sources-2.4.21-r4 (26 Oct 2003)
 
@@ -26,7 +26,7 @@
 
   13 Oct 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-sources-2.4.21-r3.ebuild:
-  Mark stable
+  Mark stable.
 
 *selinux-sources-2.4.21-r3 (03 Oct 2003)
 
@@ -36,7 +36,7 @@
 
   02 Oct 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-sources-2.4.21-r2.ebuild:
-  Mark stable
+  Mark stable.
 
 *selinux-sources-2.4.21-r2 (14 Aug 2003)
 
@@ -47,29 +47,29 @@
 
   14 Aug 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-sources-2.4.20-r5.ebuild, selinux-sources-2.4.21.ebuild:
-  Mark stable
+  Mark stable.
 
 *selinux-sources-2.4.21 (12 Jul 2003)
 
   12 Jul 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-sources-2.4.21.ebuild:
-  New upstream NSA release for 2.4.21
+  New upstream NSA release for 2.4.21.
 
   29 May 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-sources-2.4.20-r5.ebuild:
-  Mark stable
+  Mark stable.
 
 *selinux-sources-2.4.20-r5 (21 May 2003)
 
   21 May 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-sources-2.4.20-r5.ebuild:
-  New rev to add routing hashing tables security fix
+  New revision to add routing hashing tables security fix.
 
 *selinux-sources-2.4.20-r4 (14 Apr 2003)
 
   23 Apr 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-sources-2.4.20-r4.ebuild:
-  Mark stable
+  Mark stable.
 
   14 Apr 2003; <pebenito@gentoo.org> selinux-sources-2.4.20-r4.ebuild:
   New NSA upstream version.  Added ptrace and ext3 data=journal fixes.
@@ -77,24 +77,25 @@
 *selinux-sources-2.4.20-r3 (01 Apr 2003)
 
   01 Apr 2003; Joshua Brindle <method@gentoo.org> selinux-sources-2.4.20-r3.ebuild:
-  changed patch
+  Changed the patch.
 
   01 Apr 2003; Joshua Brindle <method@gentoo.org> selinux-sources-2.4.20-r2.ebuild,
   selinux-sources-2.4.20-r3.ebuild:
-  cvs snapshot version 20030328, fixes some includes that broke compilations
+  CVS snapshot version 20030328, fixes some includes that broke 
+  compilations.
 
 *selinux-sources-2.4.20-r2 (25 Mar 2003)
 
   25 Mar 2003; Joshua Brindle <method@gentoo.org> selinux-sources-2.4.20-r2.ebuild:
-  added second patch
+  Added a second patch.
 
   25 Mar 2003; Joshua Brindle <method@gentoo.org> selinux-sources-2.4.20-r2.ebuild:
-  bumped to new nsa revision; changed to stable x86
+  Bumped to new NSA revision; changed to stable 'x86'
 
 *selinux-sources-2.4.20-r1 (17 Mar 2003)
 
   17 Mar 2003; Joshua Brindle <method@gentoo.org> selinux-sources-2.4.20-r1.ebuild:
-  revision bump to fix headers previously uninstalled
+  Revision bump to fix headers previously uninstalled.
 
 *selinux-sources-2.4.20 (17 Dec 2002)
 
@@ -106,7 +107,7 @@
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : Changed sparc ~sparc keywords.
 
   30 Oct 2002; Joachim Blaabjerg <styx@gentoo.org>
   selinux-sources-2.4.19.ebuild, ChangeLog, files/digest-selinux-sources-2.4.19:
