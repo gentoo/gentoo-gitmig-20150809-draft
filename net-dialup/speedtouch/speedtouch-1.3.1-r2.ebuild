@@ -1,11 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r1.ebuild,v 1.1 2004/12/18 15:11:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.1 2004/12/22 21:42:05 mrness Exp $
 
 inherit flag-o-matic
 
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="GPL Driver for the Alcatel Speedtouch USB under *nix"
 HOMEPAGE="http://speedtouch.sf.net/"
 SRC_URI="mirror://sourceforge/speedtouch/${MY_P}.tar.bz2"
@@ -18,12 +19,12 @@ IUSE="static debug"
 DEPEND=""
 RDEPEND=">=net-dialup/ppp-2.4.1"
 
-pkg_unpack() {
+src_unpack() {
 	unpack ${A}
 
 	#Increase minlevel of reports in atm.c
 	#At least one of the reports could affect performance due to call frequency
-	sed -i -e 's/report(0/report(1/' src/atm.c
+	sed -i -e 's/report(0/report(1/' ${S}/src/atm.c
 }
 
 src_compile() {

@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/speedtouch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.25 2004/12/18 15:59:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.26 2004/12/22 21:42:05 mrness Exp $
+
+*speedtouch-1.3.1-r2 (22 Dec 2004)
+
+  22 Dec 2004; Alin Nastac <mrness@gentoo.org> -speedtouch-1.3.1-r1.ebuild,
+  +speedtouch-1.3.1-r2.ebuild:
+  Proper fix bug #74770.
 
 *speedtouch-1.3.1-r1 (18 Dec 2004)
 
