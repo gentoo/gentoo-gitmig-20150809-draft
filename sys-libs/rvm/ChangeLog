@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/rvm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/rvm/ChangeLog,v 1.10 2004/09/03 18:24:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/rvm/ChangeLog,v 1.11 2004/10/23 15:30:26 griffon26 Exp $
+
+*rvm-1.10 (23 Oct 2004)
+
+  23 Oct 2004; Maurice van der Pot <griffon26@gentoo.org> +rvm-1.10.ebuild,
+  rvm-1.9.ebuild:
+  Version bump for new coda release
+  Marked rvm-1.9 stable on x86
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> rvm-1.8.ebuild:
   Masked rvm-1.8.ebuild stable for ppc

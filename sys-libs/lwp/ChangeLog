@@ -1,6 +1,17 @@
 # ChangeLog for sys-libs/lwp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.15 2004/09/03 18:24:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.16 2004/10/23 15:28:42 griffon26 Exp $
+
+*lwp-1.12 (23 Oct 2004)
+
+  23 Oct 2004; Maurice van der Pot <griffon26@gentoo.org> lwp-1.11.ebuild,
+  +lwp-1.12.ebuild:
+  Version bump for new coda release 6.0.7
+  Marked lwp-1.11 stable on x86
+
+*lwp-1.12 (21 Oct 2004)
+
+  21 Oct 2004; Maurice van der Pot <griffon26@gentoo.org> +lwp-1.12.ebuild:
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> lwp-1.10.ebuild:
   Masked lwp-1.10.ebuild stable for ppc
