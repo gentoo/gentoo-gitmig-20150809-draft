@@ -1,3 +1,13 @@
-MD5 90086cf7cc2ad67a7d7df1f00f83a6d8 localepurge-0.2.ebuild 788
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2b521019927cf618ebe7ad5ab93e04c9 ChangeLog 566
+MD5 56dc0004cc7fecca9eb62018c6e990c1 localepurge-0.2.ebuild 808
 MD5 3e908ea9bb1a364f34b0bd613def47f5 files/digest-localepurge-0.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA8e8EHTu7gpaalycRAhTIAKC5kMsh24k4D7sDc6RuqUlDGYZf4QCglZJZ
+dJPxMeDcdCEaTGH+67GnnYE=
+=eaSM
+-----END PGP SIGNATURE-----
