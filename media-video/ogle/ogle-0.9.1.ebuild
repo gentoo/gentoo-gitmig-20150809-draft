@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.1.ebuild,v 1.8 2004/05/04 02:19:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.1.ebuild,v 1.9 2004/06/01 08:15:50 ferringb Exp $
 
-inherit libtool
+inherit eutils libtool
 
 IUSE="oss mmx alsa xv"
 
@@ -22,6 +22,12 @@ DEPEND=">=media-libs/libdvdcss-1.2.2
 	>=dev-libs/libxml2-2.4.19
 	>=media-libs/a52dec-0.7.3
 	alsa? ( media-libs/alsa-lib )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/ogle-configure-alsa-fix.patch || die "failed applying alsa-fix"
+}
 
 src_compile() {
 	# STOP!  If you make any changes, make sure to unmerge all copies

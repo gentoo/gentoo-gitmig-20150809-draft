@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2.ebuild,v 1.5 2004/05/04 02:19:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2.ebuild,v 1.6 2004/06/01 08:15:50 ferringb Exp $
 
-inherit libtool
+inherit eutils libtool
 
 DESCRIPTION="Full featured DVD player that supports DVD menus."
 HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"
@@ -21,6 +21,12 @@ DEPEND=">=media-libs/libdvdcss-1.2.2
 	>=dev-libs/libxml2-2.4.19
 	>=media-libs/a52dec-0.7.3
 	alsa? ( media-libs/alsa-lib )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/ogle-configure-alsa-fix.patch || die "applying alsa-fix failed"
+}
 
 src_compile() {
 	# STOP!  If you make any changes, make sure to unmerge all copies
