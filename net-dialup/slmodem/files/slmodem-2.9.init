@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.10 2004/12/05 09:28:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.11 2005/01/22 02:33:26 mrness Exp $
 
 depend() {
 	need logger
@@ -38,19 +38,19 @@ function loadsmodule {
 
 	if [ -z "${MDEV}" ]; then MDEV="/dev/${MODULE}0"; fi
 
-	#sleep as per http://bugs.gentoo.org/show_bug.cgi?id=47947#c59
+	#sleep as per http://bugs.gentoo.org/show_bug.cgi?id=77162
 	ebegin "Waiting for ${MODULE} modem driver initialisation"
 	local COUNT=0
 	if [ "$RC_NOCOLOR" != "yes" ]; then 
 		echo -e "\e[A\e[49G   "
 		echo -ne "\e[A\e[49G"
 	fi
-	while [ ! -c ${MDEV} -a ${COUNT} -lt 5 ];
+	while [ ! -c ${MDEV} -a ${COUNT} -lt 20 ];
 	do
 		sleep 0.5
 		echo -n "."
 		COUNT=`expr ${COUNT} + 1`
-   	done
+   done
 
 	if [ "$RC_NOCOLOR" != "yes" ]; then echo; fi
  
