@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.133 2005/03/15 12:17:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.134 2005/03/19 17:51:20 pythonhead Exp $
+
+*python-2.4-r3 (19 Mar 2005)
+
+  19 Mar 2005; Rob Cakebread <pythonhead@gentoo.org>
+  files/python-2.4-libdir.patch, +python-2.4-r3.ebuild:
+  Removed multiple dirs in sys path. bug# 83109
 
   15 Mar 2005; Alastair Tse <liquidx@gentoo.org> python-2.3.5.ebuild:
   more multilib fixes (#76791)
