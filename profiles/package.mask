@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3219 2004/10/05 08:41:33 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3220 2004/10/05 11:13:14 twp Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -85,10 +85,6 @@ net-im/skype
 # depend on ApacheHandler2.
 >=dev-perl/mod_perl-1.99.16
 dev-perl/libapreq2
-
-# Tom Payne <twp@gentoo.org> (28 Sep 2004)
-# masked pending resolution of bug #65582
-=dev-db/phpmyadmin-2.6.0
 
 # Mamoru KOMACHI <usata@gentoo.org> (28 Sep 2004)
 # masked for security reason; bug #64947
