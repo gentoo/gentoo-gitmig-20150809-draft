@@ -1,6 +1,14 @@
-# ChangeLog for media-video/avifile
+# ChangeLog for media-video/transcode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.3 2002/04/15 21:48:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.4 2002/04/21 23:34:38 mkennedy Exp $
+
+*transcode-0.6.0_pre4-r1 (21 Apr 2002)
+
+  21 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  transcode-0.6.0_pre4-r1.ebuild,
+  files/digest-transcode-0.6.0_pre4-r1, ChangeLog :
+
+  Added missing dependency media-libs/a52dec. Corrected ChangeLog header.
 
 *transcode-0.6.0_pre4 (15 Apr 2002)
 
