@@ -1,0 +1,6 @@
+MD5 ec0e9b6b9630c9ff5c562338fda7ad29 ChangeLog 4000
+MD5 15b26e0476ab66bb9e7d1d8ba03c0392 WindowMaker-0.80.1-r2.ebuild 3081
+MD5 149468de16cc612dda204d4ae9a56816 WindowMaker-0.80.2.ebuild 3055
+MD5 ea778106abbddc560e19120d5b7547bd files/WindowMaker-0.80.1-gentoo.patch 4333
+MD5 dda192d90a51a83abae0c5e7c953e53a files/digest-WindowMaker-0.80.1-r2 144
+MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-WindowMaker-0.80.2 144
