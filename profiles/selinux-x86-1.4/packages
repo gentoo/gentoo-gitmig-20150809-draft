@@ -35,7 +35,7 @@
 *>=sys-apps/portage-2.0.25
 *>=sys-devel/binutils-2.13.90.0.4
 *>=sys-devel/gcc-3.2
-*<sys-libs/glibc-2.3.2
+*>=sys-libs/glibc-2.2.5
 *dev-lang/python
 
 >dev-lang/gpc-2.1
