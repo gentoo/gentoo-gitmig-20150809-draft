@@ -1,0 +1,23 @@
+diff -uNr gdkpixbuf/rbgdk-pixbuf-format.c gdkpixbuf.new/rbgdk-pixbuf-format.c
+--- gdkpixbuf/rbgdk-pixbuf-format.c	2004-11-15 04:39:34.000000000 +1300
++++ gdkpixbuf.new/rbgdk-pixbuf-format.c	2004-12-16 21:26:42.729147720 +1300
+@@ -13,7 +13,6 @@
+ #if RBGDK_PIXBUF_CHECK_VERSION(2,2,0)
+ 
+ #ifdef HAVE_GDK_PIXBUF_GDK_PIXBUF_IO_H
+-#define GDK_PIXBUF_ENABLE_BACKEND
+ #include <gdk-pixbuf/gdk-pixbuf-io.h>
+ #endif
+ 
+diff -uNr gdkpixbuf/rbgdk-pixbuf.h gdkpixbuf.new/rbgdk-pixbuf.h
+--- gdkpixbuf/rbgdk-pixbuf.h	2004-11-15 04:39:34.000000000 +1300
++++ gdkpixbuf.new/rbgdk-pixbuf.h	2004-12-16 21:26:42.729147720 +1300
+@@ -9,6 +9,8 @@
+   Copyright (C) 2002-2004 Masao Mutoh
+ ************************************************/
+ 
++
++#define GDK_PIXBUF_ENABLE_BACKEND
+ #include <gdk-pixbuf/gdk-pixbuf.h>
+ #include <gdk-pixbuf/gdk-pixdata.h>
+ #include "rbgobject.h"

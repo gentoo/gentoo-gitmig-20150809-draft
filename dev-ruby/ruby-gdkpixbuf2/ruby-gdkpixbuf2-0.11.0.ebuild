@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ruby-gdkpixbuf2-0.11.0.ebuild,v 1.1 2004/11/25 03:16:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ruby-gdkpixbuf2-0.11.0.ebuild,v 1.2 2005/03/08 02:56:59 twp Exp $
 
 inherit ruby ruby-gnome2
 
@@ -11,3 +11,4 @@ USE_RUBY="ruby16 ruby18 ruby19"
 DEPEND=">=x11-libs/gtk+-2.0.0"
 RDEPEND="${DEPEND}
 	>=dev-ruby/ruby-glib2-${PV}"
+PATCHES="${FILESDIR}/${P}-fix-includes.patch"
