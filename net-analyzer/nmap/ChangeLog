@@ -1,11 +1,16 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.18 2003/03/10 08:43:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.19 2003/03/17 18:06:34 mholzer Exp $
+
+*nmap-3.15_beta3 (17 Mar 2003)
+
+  17 Mar 2003; Martin Holzer <mholzer@gentoo.org> nmap-3.15_beta3.ebuild:
+  Version bumped. closes #17658.
+
+*nmap-3.15_beta2 (27 Feb 2003)
 
   10 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> nmap-3.15_beta2 files/digest-nmap-3.15_beta2 :
   Changed distfile to .tgz one becuse of md5sum confusion of .tar.bz2 file. Closes #16795.
-
-*nmap-3.15_beta2 (27 Feb 2003)
 
   27 Feb 2003; Martin Holzer <mholzer@gentoo.org nmap-3.15_beta2.ebuild
   digest-nmap-3.15_beta2 ChangeLog :
