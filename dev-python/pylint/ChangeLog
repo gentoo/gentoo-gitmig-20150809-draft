@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.14 2005/01/24 00:17:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.15 2005/03/19 04:15:44 fserb Exp $
+
+*pylint-0.6.3 (19 Mar 2005)
+
+  19 Mar 2005; Fernando Serboncini <fserb@gentoo.org> +pylint-0.6.3.ebuild:
+  Version bump.
 
 *pylint-0.6.0 (24 Jan 2005)
 
