@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-calendar
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-calendar/ChangeLog,v 1.4 2004/04/13 14:10:52 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-calendar/ChangeLog,v 1.5 2004/04/17 16:36:27 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> latex-calendar-3.1.ebuild:
+  Added IUSE=.
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> latex-calendar-3.1.ebuild:
   marked ~amd64

@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Felix Kurth <felix@fkurth.de>
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/SIunits/SIunits-1.25.ebuild,v 1.5 2004/04/13 13:59:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/SIunits/SIunits-1.25.ebuild,v 1.6 2004/04/17 16:36:26 aliz Exp $
 
 inherit latex-package
 S=${WORKDIR}/SIunits
@@ -11,7 +11,7 @@ HOMEPAGE="ftp://ftp.dante.de/tex-archive/help/Catalogue/entries/siunits.html"
 LICENSE="LPPL-1.2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
-
+IUSE=""
 
 src_install () {
 	latex-package_src_doinstall all

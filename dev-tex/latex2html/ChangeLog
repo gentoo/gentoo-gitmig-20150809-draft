@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex2html
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.7 2004/02/09 08:24:49 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.8 2004/04/17 16:36:41 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> latex2html-2002.2.1.ebuild:
+  Added amd64 keyword.
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> latex2html-2002.2.ebuild:
   added amd64 keyword.

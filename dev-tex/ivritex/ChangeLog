@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ivritex
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.4 2004/04/13 13:46:09 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.5 2004/04/17 16:36:27 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> ivritex-1.1.1.ebuild:
+  Added IUSE=, removed S=.
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> ivritex-1.1.1.ebuild:
   marked ~amd64

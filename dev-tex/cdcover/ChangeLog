@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/cdcover
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cdcover/ChangeLog,v 1.4 2004/04/13 12:46:57 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cdcover/ChangeLog,v 1.5 2004/04/17 16:36:26 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> cdcover-1.3b.ebuild:
+  Added ISUE=.
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> cdcover-1.3b.ebuild:
   marked ~amd64

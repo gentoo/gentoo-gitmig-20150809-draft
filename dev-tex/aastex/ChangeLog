@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/aastex
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/aastex/ChangeLog,v 1.5 2004/04/13 12:44:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/aastex/ChangeLog,v 1.6 2004/04/17 16:36:26 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> aastex-5.0.2.ebuild:
+  Added ISUE=.
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> aastex-5.2.ebuild:
   marked ~amd64

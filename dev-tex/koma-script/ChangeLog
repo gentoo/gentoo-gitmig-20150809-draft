@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/koma-script
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.3 2004/04/13 13:49:57 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.4 2004/04/17 16:36:27 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  koma-script-20040111-r1.ebuild, koma-script-20040111.ebuild:
+  Added IUSE=.
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> koma-script-20040111-r1.ebuild:
   marked ~amd64

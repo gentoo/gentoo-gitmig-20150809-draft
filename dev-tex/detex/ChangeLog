@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/detex
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.5 2004/04/16 20:32:26 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.6 2004/04/17 16:36:26 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> detex-2.7.ebuild:
+  Removed S=.
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> detex-2.7.ebuild:
   added s390 keywords

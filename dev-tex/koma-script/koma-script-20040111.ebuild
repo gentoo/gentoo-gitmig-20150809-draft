@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: koma-script-20040111.ebuild,v 1.1 2004/01/31 14:48:38 usata Exp $
+# $Id: koma-script-20040111.ebuild,v 1.2 2004/04/17 16:36:27 aliz Exp $
 
 inherit latex-package
 
@@ -14,6 +14,7 @@ LICENSE="LPPL-1.2"
 #for License details see /usr/share/doc/latex-foiltex-2.1.3/foiltex.ins
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 src_install () {
 	latex-package_src_doinstall all

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ivritex-1.1.1.ebuild,v 1.5 2004/04/13 13:46:09 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ivritex-1.1.1.ebuild,v 1.6 2004/04/17 16:36:27 aliz Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
 SRC_URI="mirror://sourceforge/ivritex/${P}.tar.gz"
 HOMEPAGE="http://ivritex.sourceforge.net/"
 SLOT="0"
