@@ -27,6 +27,7 @@ if ( $submitted ) {
 			mysql_query( "insert into users set username='$username',password='$pass1',admin=$admin,title='$title',email='$email',realname='$realname',team=$team" );
 			
 			if ( $leader ) mysql_query( "update teams set leader=$uid where gid=$team" );
+			elseif ( !$leader && $wasleader ) mysql_query( "update teams set leader=0 where gid=$team" );
 
 			print '<p style="color:red;">User added to database.</p>';
 		} else {
@@ -37,6 +38,7 @@ if ( $submitted ) {
 			mysql_query( $query );
 
 			if ( $leader ) mysql_query( "update teams set leader=$xuid where gid=$team" );
+			elseif ( !$leader && $wasleader ) mysql_query( "update teams set leader=0 where gid=$team" );
 
 			print '<p style="color:red;">User information updated.</p>';
 		}
@@ -126,6 +128,7 @@ if ( !$xuid ) {
 	</tr>
 	</table>
 	<input type="hidden" name="submitted" value="1">
+	<input type="hidden" name="wasleader" value="<?=$leader;?>">
 	<input type="hidden" name="xuid" value="<?=$xuid;?>">
 	<p><input type="submit" value="Submit"></p>
 	</form>
