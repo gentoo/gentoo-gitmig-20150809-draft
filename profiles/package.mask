@@ -38,10 +38,6 @@
 # version bumped, masked for testing
 =sys-libs/db-4.1.24
 
-# <mkeadle@gentoo.org> (07 Oct 2002)
-# Masked for short testing of new Openbox
-=x11-wm/openbox-2.1.2
-
 # <lostlogic@gentoo.org> (06 Oct 2002)
 # Masked new kernels
 =sys-kernel/xfs-sources-2.4.19-r2
