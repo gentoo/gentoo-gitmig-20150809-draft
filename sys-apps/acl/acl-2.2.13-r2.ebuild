@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.11 2004/05/01 21:58:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.12 2004/05/07 01:14:55 randy Exp $
 
 DESCRIPTION="Access control list utilities, libraries and headers"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
@@ -22,6 +22,7 @@ src_compile() {
 	use sparc && unset PLATFORM
 	use ppc && unset PLATFORM
 	use ppc64 && unset PLATFORM
+	use s390 && unset PLATFORM
 	autoconf || die
 
 	./configure \
