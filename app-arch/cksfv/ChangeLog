@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cksfv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.6 2003/03/28 10:45:06 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.7 2003/10/01 19:48:38 taviso Exp $
+
+  01 Oct 2003; Tavis Ormandy <taviso@gentoo.org> cksfv-1.3.ebuild:
+  Stable on alpha
 
   28 Mar 2003: Pieter Van den Abeele <pvdabeel@gentoo.org> : updated ~ppc to ppc
 
