@@ -43,10 +43,6 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-#	sed -i -e 's:\#define.*USER_DIR.*\"Maildir\":\#define\tUSER_DIR\t\".maildir\":' \
-#		webmail/sqwebmail.h || die "failed to change maildir"
-#	sed -i -e 's:maildir="Maildir";:maildir=".maildir";:' \
-#		webmail/auth.c || die "failed to change maildir"
 	use norewrite && epatch ${FILESDIR}/norewrite.patch
 }
 
@@ -67,7 +63,6 @@ src_compile() {
 		myconf="${myconf} --without-authvchkpw"
 	fi
 
-	#
 	# 1. If nls is enabled and ENABLE_UNICODE is not empty...
 	#    enable the specified unicode sets
 	# 2. If nls is enabled and no unicode sets are specified,
@@ -260,7 +255,7 @@ src_install() {
 	chg_cfg authdaemonrc authmodulelist authpam
 	chg_cfg authdaemonrc version authdaemond.plain
 	set_mime esmtpd esmtpd-ssl esmtpd-msa
-	set_maildir courierd imapd pop3d sqwebmaild
+	set_maildir courierd imapd imapd-ssl pop3d pop3d-ssl sqwebmaild *.dist
 }
 
 pkg_postinst() {
@@ -275,15 +270,9 @@ pkg_postinst() {
 	einfo "$ chmod a+rx /usr/lib/courier/courier/webmail"
 	einfo "Then visit: http(s)://localhost/courier/webmail"
 	echo
-	einfo "imap behavior has changed, you may need to have your imap clients logoff"
-	einfo "and back on again"
-	echo
-	echo
-	ewarn "The init scripts for courier have changed."
-	ewarn "There is now one init script (/etc/init.d/courier). The rest"
-	ewarn "are obsolete. You can remove /etc/init.d/courier-*. You also"
-	ewarn "need to edit the following files in /etc/courier to enable"
-	ewarn "the different services:"
+	ewarn "There is one init script (/etc/init.d/courier)."
+	ewarn "Each component is activated by a line in its config"
+	ewarn "which is in /etc/courier:"
 	ewarn "imapd"
 	ewarn "imapd-ssl"
 	ewarn "pop3d"
