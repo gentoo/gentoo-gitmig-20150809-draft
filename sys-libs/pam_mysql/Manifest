@@ -1,3 +1,5 @@
+MD5 7a4a57f70f425abc0a5ee62ffb3b246c ChangeLog 655
 MD5 67dcb009e9b38ba331d57a18a05fe281 pam_mysql-0.4.7.ebuild 883
-MD5 2366ef3ef6d6fff4503067a459631111 ChangeLog 530
+MD5 26d20da8932d9652d0439470fcc52c03 pam_mysql-0.5.ebuild 871
 MD5 321f5b5eb63426fa78d6f069aeb5e1d5 files/digest-pam_mysql-0.4.7 65
+MD5 a7e0e0308d553dc4013157deceb6bb21 files/digest-pam_mysql-0.5 64

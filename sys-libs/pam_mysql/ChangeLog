@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam_mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_mysql/ChangeLog,v 1.4 2003/02/12 09:21:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_mysql/ChangeLog,v 1.5 2003/06/22 19:07:38 woodchip Exp $
+
+*pam_mysql-0.5 (22 Jun 2003)
+
+  22 Jun 2003; Donny Davies <woodchip@gentoo.org> pam_mysql-0.5.ebuild:
+  Bump, close #11353.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
