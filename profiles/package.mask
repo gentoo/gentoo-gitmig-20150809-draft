@@ -348,7 +348,3 @@ dev-lang/tcl-tk
 # instead. Also, this release hasn't been tested with xfs yet, only with
 # reiserfs
 >=sys-apps/grub-0.91
-
-# 1 Feb 2002; Bevin <gbeivn@gentoo.org> : seems not to work for a number
-# of people, should be investigated
-=sys-devel/perl-5.6.1-r2
