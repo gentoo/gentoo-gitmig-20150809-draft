@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r1.ebuild,v 1.1 2003/12/12 21:47:03 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.1 2004/04/08 10:26:37 lanius Exp $
 
 DESCRIPTION="HP OfficeJet Linux driver"
 HOMEPAGE="http://hpoj.sourceforge.net/"
 SRC_URI="mirror://sourceforge/hpoj/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="ssl scanner qt X snmp cups usb"
 
 DEPEND="qt?      ( >=x11-libs/qt-3.1.0-r1 )
@@ -16,10 +16,12 @@ DEPEND="qt?      ( >=x11-libs/qt-3.1.0-r1 )
 	scanner? ( || ( X? ( >=media-gfx/xsane-0.89 ) >=media-gfx/sane-frontends-1.0.9 ) )
 	snmp?    ( virtual/snmp )
 	cups?    ( >=net-print/cups-1.1.18-r2 )
-	usb?     ( dev-libs/libusb )"
+	usb?     ( dev-libs/libusb sys-apps/hotplug )"
 
 src_compile() {
-	local myconf
+	epatch ${FILESDIR}/udev.patch
+	epatch ${FILESDIR}/${P}-kernel26.patch.bz2
+
 	use snmp \
 	&& myconf="${myconf} --with-snmp=/usr" \
 	|| myconf="${myconf} --without-snmp"

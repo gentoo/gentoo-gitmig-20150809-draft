@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hpoj
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.14 2004/03/27 17:33:46 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.15 2004/04/08 10:26:37 lanius Exp $
+
+*hpoj-0.91-r3 (08 Apr 2004)
+
+  08 Apr 2004; Heinrich Wendel <lanius@gentoo.org> hpoj-0.91-r1.ebuild,
+  hpoj-0.91-r3.ebuild, files/hpoj-0.91-kernel26.patch.bz2:
+  add support for kernel 2.6, bug #42921
 
   27 Mar 2004; Heinrich Wendel <lanius@gentoo.org> hpoj-0.91-r2.ebuild,
   files/hpoj.init:
