@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e51b64e0f89c847fe92eb8a8e2961ee2 ChangeLog 1373
-MD5 27c170e610eb76f039609039b0446a3d wmmemmon-1.0.1.ebuild 765
+MD5 bc47e7053ee36daec42c632acffc3f85 ChangeLog 1465
 MD5 5fa4588139595046ad0fbf1623ddba40 metadata.xml 623
+MD5 99edc2bdb839c014bc8a622f240b37ce wmmemmon-1.0.1.ebuild 766
 MD5 857eb8c9ba9823482749d4e34f1d80aa files/digest-wmmemmon-1.0.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCBPkjugEuf3OQ0akRArKuAJ495cVwinmJ5QfkNLURNs9YS6mL7ACdFOKu
-W6Al3ulYzuLMjEg03WYTyeo=
-=VRBZ
------END PGP SIGNATURE-----
