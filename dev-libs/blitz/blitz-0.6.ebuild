@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.6.ebuild,v 1.3 2003/07/12 09:22:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.6.ebuild,v 1.4 2003/09/10 01:53:50 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="High-performance C++ numeric library"
@@ -15,28 +15,28 @@ LICENSE="GPL-2"
 
 src_compile() {
 
-    # default to gcc
-    local myconf="--with-cxx=gcc"
-    # ICC: if we've got it, use it
-    use icc && myconf="--with-cxx=icc"
-    # oops, they're not in the distribution, but the build requires them
-    touch NEWS AUTHORS
-    ./configure ${myconf} --prefix=${D}/usr
-    emake || die
-    emake check-testsuite || die
+	# default to gcc
+	local myconf="--with-cxx=gcc"
+	# ICC: if we've got it, use it
+	use icc && myconf="--with-cxx=icc"
+	# oops, they're not in the distribution, but the build requires them
+	touch NEWS AUTHORS
+	./configure ${myconf} --prefix=${D}/usr
+	emake || die
+	emake check-testsuite || die
 }
 
 src_install () {
 
-    emake install || die
-    cd ${S}
-    dodoc ChangeLog ChangeLog.1 LICENSE README README.binutils TODO COPYING LEGAL
-    cd ${D}/usr
-    dohtml -r doc/blitz
-    rm -rf ${D}/usr/doc
-    rm -rf ${D}/usr/demos
-    rm -rf ${D}/usr/testsuite
-    rm ${D}/usr/include/random/Makefile.am
-    rm ${D}/usr/examples/Makefile
-    mv benchmarks examples ${D}/usr/share/doc/${P}
+	emake install || die
+	cd ${S}
+	dodoc ChangeLog ChangeLog.1 LICENSE README README.binutils TODO COPYING LEGAL
+	cd ${D}/usr
+	dohtml -r doc/blitz
+	rm -rf ${D}/usr/doc
+	rm -rf ${D}/usr/demos
+	rm -rf ${D}/usr/testsuite
+	rm ${D}/usr/include/random/Makefile.am
+	rm ${D}/usr/examples/Makefile
+	mv benchmarks examples ${D}/usr/share/doc/${P}
 }

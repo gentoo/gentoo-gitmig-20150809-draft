@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.14.ebuild,v 1.4 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.14.ebuild,v 1.5 2003/09/10 01:54:42 msterret Exp $
 
 inherit eutils
 
@@ -33,21 +33,21 @@ src_unpack() {
 	cd ${S}
 
 	# patch for db4 detection and their respective versioned symbols
-        epatch ${FILESDIR}/2.1.14-db4.patch
+	epatch ${FILESDIR}/2.1.14-db4.patch
 
 	# add libwrap defines as we don't have a dynamicly linked library.
 	epatch ${FILESDIR}/cyrus-imap-dev-2.1.12-libwrap.patch
 
 	# Does running autoconf squash any of this?
-        use ipv6 && epatch ${WORKDIR}/${IPV6_P}.diff
+	use ipv6 && epatch ${WORKDIR}/${IPV6_P}.diff
 
-        libtoolize --copy --force
-        aclocal -I cmulocal || die
-        autoheader || die
-        autoconf || die
+	libtoolize --copy --force
+	aclocal -I cmulocal || die
+	autoheader || die
+	autoconf || die
 
-        # remove spurious -I/usr/includes which make configure tests fail
-        epatch ${FILESDIR}/cyrus-imapd-2.1.12-includepath.patch
+	# remove spurious -I/usr/includes which make configure tests fail
+	epatch ${FILESDIR}/cyrus-imapd-2.1.12-includepath.patch
 
 	# when linking with rpm, you need to link with more libraries.
 	cp configure configure.orig
