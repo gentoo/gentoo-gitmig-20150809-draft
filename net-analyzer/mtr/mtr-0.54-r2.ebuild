@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.54-r2.ebuild,v 1.8 2004/12/17 23:30:56 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.54-r2.ebuild,v 1.9 2005/01/31 17:11:56 gustavoz Exp $
 
 inherit flag-o-matic
 
