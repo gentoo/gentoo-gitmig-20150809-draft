@@ -1,0 +1,246 @@
+#!/bin/sh
+#
+# A bit of hackery to update everything that is humanly possible
+# that maybe related to an older version of python. This script can
+# be run as many times as you like. It will log the results in
+# /tmp/python-updater.log
+#
+# OLD_PY_VER      = old python version we are upgrading from
+# NEW_PY_VER      = new python version we are upgrading to
+# PKGS_EXCEPTIONS = packages that should NOT be re-emerged for any reason
+# PKGS_MANUAL     = packages that should be re-emerged even if they don't
+#                   fit the criteria (eg. ones that have python compiled
+#                   statically) - FIXME
+#
+# Runtime Variables:
+# 
+# PKGS_TO_REMERGE = list of packages we deem to need re-emerging
+# PKGS_OK         = list of packages that should be merged without any problems
+# PKGS_MISSING    = list of packages that are installed, but cannot be merged
+#                   because they have been pruned from portage
+# PKGS_MASKED     = list of packages that are installed, but masked.
+#
+
+OLD_PY_VER=2.2
+NEW_PY_VER=$(python -V 2>&1 | sed 's:Python ::' | cut -d. -f1-2)
+OLD_MODULES_DIR=/usr/lib/python${OLD_PY_VER}
+
+PKGS_EXCEPTIONS="dev-lang/python"
+PKGS_MANUAL="app-office/gnumeric app-office/dia x11-libs/vte"
+LOGFILE="/tmp/python-updater.log"
+
+# portage variables
+PKG_DBDIR=/var/db/pkg
+PORTDIR=`portageq portdir`
+PORTDIR_OVERLAYS=`portageq portdir_overlay`
+
+PRETEND=0
+PKGS_TO_REMERGE=""
+PKGS_COUNT_REMERGE=0
+
+# load the gentoo-style info macros, but hack to get around
+# it thinking this is an rc script
+EBUILD="1" 
+source /sbin/functions.sh
+
+# misc helper functions
+eloginfo() {
+	einfo $*
+	DATESTRING=`date +"%Y/%m/%d %H:%M:%S"`
+	echo "${DATESTRING} - ${*}" >> ${LOGFILE}
+}
+
+elogecho() {
+	echo -n "   "
+	echo $*
+	DATESTRING=`date +"%Y/%m/%d %H:%M:%S"`
+	echo "${DATESTRING} - ${*}" >> ${LOGFILE}
+}
+
+elogerr() {
+	eerror $*
+	DATESTRING=`date +"%Y/%m/%d %H:%M:%S"`
+	echo "${DATESTRING} ! ${*}" >> ${LOGFILE}	
+}
+
+elog() {
+	DATESTRING=`date +"%Y/%m/%d %H:%M:%S"`
+	echo "${DATESTRING} - ${*}" >> ${LOGFILE}	
+}
+
+# 
+#
+# Command Line Parsing
+#
+#
+
+if [ -n "$1" ]; then
+	case "$1" in
+		-h) 
+			echo "usage: python-updater [-h|-p]"
+			echo " -h    help"
+			echo " -p    pretend (don't do anything)"
+			;;
+		-p)
+			PRETEND=1
+			;;
+		*)
+			;;
+	esac
+fi	
+
+#
+#
+# Find all packages that have installed something in 
+# /usr/lib/python${OLD_PY_VER}
+#
+#
+
+eloginfo "Starting Python Updater from ${OLD_PY_VER} to ${NEW_PY_VER} :"
+eloginfo "Searching for packages with files in ${OLD_MODULES_DIR} .."
+
+# iterate thru all the installed package's contents
+for content in `find ${PKG_DBDIR} -name CONTENTS`; do
+    # extract the category, package name and package version
+    CATPKGVER=$(echo ${content} | sed "s:${PKG_DBDIR}/\(.*\)/CONTENTS:\1:")
+    
+    # exclude packages that are an exception, like portage and python itself.
+    exception=0
+    for exp in ${PKGS_EXCEPTIONS}; do
+    	if [ -n "$(echo ${CATPKGVER} | grep ${exp})" ]; then
+			exception=1
+			break;
+		fi
+    done
+	
+    if [ ${exception} = 1 ]; then
+       continue;
+    fi
+
+    if fgrep "${OLD_MODULES_DIR}" ${content} > /dev/null; then
+       PKGS_TO_REMERGE="${PKGS_TO_REMERGE} ${CATPKGVER}"
+	   elogecho "Adding to list: ${CATPKGVER}"
+    fi
+done    
+
+# now we have to do each emerge seperately because if an installed version
+# does not have the corresponding ebuild in portage, then it will bail.
+
+eloginfo "Calculating Upgrade Package List .."
+
+PKGS_OK=""
+PKGS_MASKED=""
+PKGS_MISSING=""
+
+MASKED_STRING="been masked"
+MISSING_STRING="there are no masked or unmasked ebuilds to satisfy"
+
+for pkg in ${PKGS_TO_REMERGE}; do
+   emerge_output="$(emerge -p \=$pkg 2>&1)"
+   if $(echo "${emerge_output}" | grep "${MASKED_STRING}" > /dev/null); then
+      PKGS_MASKED="${PKGS_MASKED} $pkg"
+	  elogecho "$pkg is masked"	  
+   elif $(echo "${emerge_output}" | grep "${MISSING_STRING}" > /dev/null); then
+      PKGS_MISSING="${PKGS_MISSING} $pkg"
+	  elogecho "$pkg is missing from portage"
+   else
+      PKGS_OK="${PKGS_OK} $pkg"
+	  PKGS_COUNT_REMERGE=$((PKGS_COUNT_REMERGE + 1))
+   fi
+done      
+
+#
+# Check the actual order which these should be merged (probably doesn't work)
+#
+
+eloginfo "Re-ordering packages to merge .."
+
+PKGS_OK_SORTED_CMD="emerge -p " 
+for pkg in $PKGS_OK; do
+	PKGS_OK_SORTED_CMD="${PKGS_OK_SORTED_CMD} =$pkg"
+done
+PKGS_OK_SORTED_CMD="${PKGS_OK_SORTED_CMD}"
+
+eloginfo "Preparing to merge these packages in this order:"
+PKGS_OK_SORTED="`${PKGS_OK_SORTED_CMD}  | grep ebuild | sed 's:\[ebuild.*\] ::'`"
+for pkg in $PKGS_OK_SORTED; do
+	elogecho "$pkg"
+done
+
+# we emerge each package seperately to ensure we know exactly which ones might
+# cause an error, and then report it at the end
+
+COUNT=1
+PKGS_FAILED=""
+if [ "${PRETEND}" != "1" ]; then
+	for pkg in ${PKGS_OK}; do
+		eloginfo "Starting to merge ($COUNT/$PKGS_COUNT_REMERGE) $pkg .."
+		if ! emerge --oneshot --nodeps =$pkg; then
+			PKGS_FAILED="${PKGS_FAILED} $pkg"
+			elogerr "Failed merging $pkg ($COUNT/$PKGS_COUNT_REMERGE)!"
+		fi
+		COUNT=$((COUNT+1))		
+	done
+fi
+
+# final output stuff
+OUTPUT_PKGS_MASKED=""
+for pkg in ${PKGS_MASKED}; do OUTPUT_PKGS_MASKED="${OUTPUT_PKGS_MASKED} \=$pkg"; done
+OUTPUT_PKGS_MISSING=""
+for pkg in ${PKGS_MISSING}; do OUTPUT_PKGS_MISSING="${OUTPUT_PKGS_MISSING} $pkg"; done
+OUTPUT_PKGS_FAILED=""
+for pkg in ${PKGS_FAILED}; do OUTPUT_PKGS_FAILED="${OUTPUT_PKGS_FAILED} \=$pkg"; done
+
+if [ -n "${PKGS_FAILED}" -o -n "${PKGS_MISSING}" -o -n "${PKGS_MASKED}" ]; then
+   ewarn "************************************************************"
+   ewarn "* Packages that still need to be manually emerged :        *"
+   ewarn "************************************************************"
+   if [ -n "${OUTPUT_PKGS_MASKED}" ]; then
+      ewarn " Masked Packages:"
+	  ewarn " ----------------"
+      ewarn " Unmask the following packages (at your own risk) and  "
+      ewarn " emerge them using this command after removing the '-p'"
+      ewarn " parameter."
+      ewarn ""
+      ewarn " emerge -p ${OUTPUT_PKGS_MASKED}"
+      ewarn ""
+   fi
+   if [ -n "${OUTPUT_PKGS_MISSING}" ]; then
+      ewarn " Missing Packages:"
+	  ewarn " -----------------"
+      ewarn " These packages need to be updated because their versions do"
+      ewarn " not exist in portage anymore."
+      ewarn ""
+      for x in ${OUTPUT_PKGS_MISSING}; do 
+         echo "   ${x}"
+      done
+      ewarn ""
+   fi
+   if [ -n "${OUTPUT_PKGS_FAILED}" ]; then
+      ewarn " Failed Packaged:"
+	  ewarn " ----------------"
+      ewarn " These packages have failed and need to be re-emerged again."
+	  ewarn " Alternatively, try re-running this script again to see if it"
+	  ewarn " can be fixed."
+      ewarn ""
+      ewarn " emerge -p ${OUTPUT_PKGS_FAILED}"
+      ewarn ""
+   fi
+   
+   elog "Python update completed with errors."
+   elog "Masked Packages:"
+   for x in ${PKGS_MASKED}; do
+   		elog $x
+   done
+   elog "Missing Packages:"
+   for x in ${PKGS_MISSING}; do
+   		elog $x
+   done
+   elog "Failed Packages:"
+   for x in ${PKGS_FAILED}; do
+   		elog $x
+   done   
+   elog "Update script completed."
+else
+   eloginfo "Python update completed successfully."
+fi

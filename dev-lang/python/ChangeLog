@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.36 2003/10/03 15:51:33 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.37 2003/10/07 21:29:09 liquidx Exp $
+
+*python-2.3.2 (07 Oct 2003)
+
+  07 Oct 2003; Alastair Tse <liquidx@gentoo.org> python-2.2.3-r2.ebuild,
+  python-2.3.2.ebuild, files/python-2.2.3-db4.patch,
+  files/python-2.3-add_portage_search_path.patch, files/python-config-2.3,
+  files/python-updater:
+  it has been a long time coming, but finally there's a 2.3.x release in portage
+  along with a python-2.2.3 update that should fix some niggling issues and also
+  uses the new alternative class. 2.3.2 is still masked and should stay that way
+  until we can confirm the rebuilding script works.
 
   03 Oct 2003; Alexander Gabert <pappy@gentoo.org> python-2.2.3-r1.ebuild:
   filter-flags because of segfaulting with fstackprotector in CFLAGS
