@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.87 2005/01/18 01:54:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.88 2005/01/18 06:05:21 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -602,7 +602,7 @@ create_gcc_env_entry() {
 
 	LDPATH="${LIBPATH}"
 
-	if [ -n "${MULTILIB_ABIS}" ]; then
+	if has_multilib_profile; then
 		local abi=
 		for abi in ${MULTILIB_ABIS}; do
 			local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
@@ -776,7 +776,7 @@ gcc_src_unpack() {
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
 	if [[ $(tc-arch) == "amd64" ]] \
-	   && [[ -z ${SKIP_MULTILIB_HACK} ]] && use multilib
+	   && [[ -z ${SKIP_MULTILIB_HACK} ]] && use_multilib
 	then
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
 	fi
@@ -814,11 +814,11 @@ gcc-library-configure() {
 
 gcc-compiler-configure() {
 	# multilib support
-	case $(tc-arch) in
-		amd64|mips|sparc)
-		confgcc="${confgcc} $(use_enable multilib)"
-		;;
-	esac
+	if use_multilib; then
+		confgcc="${confgcc} --enable-multilib"
+	else
+		confgcc="${confgcc} --disable-multilib"
+	fi
 
 	# GTK+ is preferred over xlib in 3.4.x (xlib is unmaintained
 	# right now). Much thanks to <csm@gnu.org> for the heads up.
@@ -831,7 +831,7 @@ gcc-compiler-configure() {
 	# Add --with-abi flags to enable respective MIPS ABIs
 	case $(tc-arch) in
 		mips)
-		use multilib && confgcc="${confgcc} --with-abi=32"
+		use_multilib && confgcc="${confgcc} --with-abi=32"
 		use n64 && confgcc="${confgcc} --with-abi=n64"
 		use n32 && confgcc="${confgcc} --with-abi=n32"
 		;;
@@ -1121,7 +1121,7 @@ gcc_do_filter_flags() {
 }
 
 gcc_src_compile() {
-	if [[ $(tc-arch) == "amd64" ]] && [[ ${LD_PRELOAD} == "/lib/libsandbox.so" ]] && use multilib; then
+	if [[ $(tc-arch) == "amd64" ]] && [[ ${LD_PRELOAD} == "/lib/libsandbox.so" ]] && use_multilib; then
 		eerror "Sandbox in your installed portage does not support compilation."
 		eerror "of a multilib gcc.  Please set FEATURE=-sandbox and try again."
 		eerror "After you have a multilib gcc, re-emerge portage to have a working sandbox."
@@ -1481,7 +1481,7 @@ gcc_do_filter_flags() {
 
 	# If we use multilib on mips, we shouldn't pass -mabi flag - it breaks
 	# build of non-default-abi libraries.
-	use mips && use multilib && filter-flags "-mabi*"
+	use mips && use_multilib && filter-flags "-mabi*"
 
 	# Compile problems with these (bug #6641 among others)...
 	#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
@@ -1758,7 +1758,7 @@ gcc_version_patch() {
 #
 disgusting_gcc_multilib_HACK() {
 	local libdirs
-	[[ -n ${MULTILIB_ABIS} ]] \
+	has_multilib_profile \
 		&& libdirs="../$(get_abi_LIBDIR amd64) ../$(get_abi_LIBDIR x86)" \
 		|| libdirs="../$(get_libdir) ../$(get_multilibdir)"
 	einfo "updating multilib directories to be: ${libdirs}"
@@ -1783,4 +1783,15 @@ fix_libtool_libdir_paths() {
 		dirpath=$(dirname ${archive} | sed -e "s:^${D}::")
 		sed -i ${archive} -e "s:^libdir.*:libdir=\'${dirpath}\':"
 	done
+}
+
+use_multilib() {
+	case $(tc-arch) in
+		amd64|mips|sparc)
+			has_multilib_profile || use multilib
+		;;
+		*)
+			false
+		;;
+	esac
 }
