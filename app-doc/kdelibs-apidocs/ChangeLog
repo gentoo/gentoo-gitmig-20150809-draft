@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/kdelibs-apidocs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.34 2004/06/24 21:47:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.35 2004/08/07 17:57:02 caleb Exp $
+
+  07 Aug 2004; Caleb Tennis <caleb@gentoo.org> -kdelibs-apidocs-3.1.2.ebuild,
+  -kdelibs-apidocs-3.1.4.ebuild:
+  Remove old versions, remove app-doc/qt-docs out of the dep chain
 
   28 Feb 2004; Jason Wever <weeve@gentoo.org> kdelibs-apidocs-3.1.5.ebuild:
   Marked stable on sparc.
