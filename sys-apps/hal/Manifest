@@ -1,7 +1,8 @@
 MD5 4265ce12f38a8dc8ef24fe9e56c449d9 hal-0.4.1.ebuild 2396
 MD5 90547a95bd5c26e49711a482c1eaef26 hal-0.4.1-r1.ebuild 2507
 MD5 3e506a597274c818f662edbe0c7d2b59 hal-0.2.98-r1.ebuild 2062
-MD5 3623707794adfd9e8fd4381df20dc27f ChangeLog 1951
+MD5 b9a2efb8ba58b932f0a0b720745f5326 ChangeLog 2088
+MD5 09d0d4a219070b23ea4fd27fda2e8694 hal-0.4.2.ebuild 2475
 MD5 731695e9263a5a2e1eeba290b36078d5 metadata.xml 219
 MD5 192112dfb678a9795a93d3cdcc50bb95 files/hald 543
 MD5 715f2a2e9a6980bae0823241ea50787f files/hal-0.4.0-allow-floppy-drives.patch 738
@@ -9,6 +10,7 @@ MD5 72d398ab014b2630043ef2a4d9990e2f files/digest-hal-0.2.98-r1 63
 MD5 f1cf07edc63d04f0ef33911de97ea2f2 files/digest-hal-0.4.1-r1 62
 MD5 399570c945e0f4bffbeb645e057e027b files/hal-0.4.1-dm_devices_tab.patch 1028
 MD5 f1cf07edc63d04f0ef33911de97ea2f2 files/digest-hal-0.4.1 62
+MD5 a9afa7e41b21ea5f012765a8ced6c10d files/digest-hal-0.4.2 62
 MD5 fa38b59d0ab9bdf0ff3363cd756d902a files/hal-0.4.0-old_storage_policy.patch 1217
 MD5 90ea63d4a4b9885b7a6eab147dcb428b files/hal-0.4.0-clean-on-startup.patch 2653
 MD5 a0ce1c268e0b7d0967ec7b8e0d0d26d2 files/hal-0.4.1-old_storage_policy.patch 1216
