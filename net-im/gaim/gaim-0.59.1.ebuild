@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.1.ebuild,v 1.1 2002/08/27 04:00:35 gaarde Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.1.ebuild,v 1.2 2002/08/31 19:35:32 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK Instant Messenger client"
@@ -43,8 +43,13 @@ src_compile() {
 	use nas  || myopts="${myopts} --disable-nas"
 	use perl || myopts="${myopts} --disable-perl"
 
-	use arts || myopts="${myopts} --disable-artsc"
-	use arts && KDEDIR="${KDE3DIR}"
+	if [ "` use arts`" ]; then
+	    inherit kde-functions
+	    set-kdedir 3
+	    # $KDEDIR now points to arts location
+	else
+	    myopts="${myopts} --disable-artsc"
+	fi
 
 	use nls  || myopts="${myopts} --disable-nls"
 
