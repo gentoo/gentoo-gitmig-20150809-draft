@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/mutella
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/ChangeLog,v 1.9 2003/03/06 12:25:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/ChangeLog,v 1.10 2003/04/29 12:37:18 hanno Exp $
 
 *mutella-0.4.3 (06 Mar 2003)
+
+  29 Apr 2003; Hanno Boeck <hanno@gentoo.org> mutella-0.4.3.ebuild :
+  Changed keywords to stable.
 
   06 Mar 2003; Hanno Boeck <hanno@gentoo.org> mutella-0.4.3.ebuild :
   New version.
