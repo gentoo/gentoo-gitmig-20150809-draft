@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public Form License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphoto/cmfphoto-0.1.ebuild,v 1.5 2003/09/08 06:53:30 msterret Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphoto/cmfphoto-0.1.ebuild,v 1.6 2003/09/08 10:45:19 msterret Exp $
 
 inherit zproduct
 
