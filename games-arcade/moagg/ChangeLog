@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/moagg
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/ChangeLog,v 1.2 2004/07/26 10:27:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/ChangeLog,v 1.3 2004/07/28 23:36:44 mr_bones_ Exp $
+
+*moagg-0.13 (28 Jul 2004)
+
+  28 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> +moagg-0.13.ebuild:
+  version bump (bug #58480) - comments from Gard Spreemann
 
   26 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> moagg-0.12.ebuild:
   work around reported sandbox errors
