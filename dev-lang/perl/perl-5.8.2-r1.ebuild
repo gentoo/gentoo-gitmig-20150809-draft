@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2-r1.ebuild,v 1.10 2004/04/28 06:06:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2-r1.ebuild,v 1.11 2004/04/28 07:56:46 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -144,11 +144,11 @@ src_compile() {
 		# <rac@gentoo.org> 2003.06.26
 		myconf="${myconf} -Dd_u32align"
 	fi
-	if use sparc`" ]
+	if use sparc
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
-	if use sparc64`" ]
+	if use sparc64
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
