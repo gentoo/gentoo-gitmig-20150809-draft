@@ -1,8 +1,13 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.4 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.5 2002/09/01 23:41:39 azarah Exp $
 
-*pam-login-3.6-r1.ebuild (14 July 2002)
+*pam-login-3.7 (2 Sep 2002)
+
+  2 Sep 2002; Martin Schlemmer <azarah@gentoo.org> pam-login-3.7.ebuild :
+  Update version.  This is basically just a bugfix release that fixes
+  the issues with 3.6 that was fixed in -r1 and -r2, namely bugs #3147,
+  #3643 and it not compiling with USE="-nls".  This closes bug #7328.
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> pam-login-3.6.ebuild :
   Added LICENSE, KEYWORDS.
