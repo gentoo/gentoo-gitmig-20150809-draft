@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.51 2005/03/15 21:34:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.52 2005/03/16 09:34:14 eradicator Exp $
+
+*vanilla-sources-2.2.26-r1 (16 Mar 2005)
+*vanilla-sources-2.0.40-r1 (16 Mar 2005)
+
+  16 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -vanilla-sources-2.0.40.ebuild, +vanilla-sources-2.0.40-r1.ebuild,
+  -vanilla-sources-2.2.26.ebuild, +vanilla-sources-2.2.26-r1.ebuild:
+  The 2.0 and 2.2 ebuilds were installing an older kernel version. Now they
+  properly install 2.2.26 and 2.0.40.
 
   15 Mar 2005; Tony Vroon <chainsaw@gentoo.org>
   vanilla-sources-2.6.11.2.ebuild:
