@@ -1,5 +1,5 @@
-MD5 b0eac053fe08998126dbb611d6288193 motioneye-1.2.ebuild 718
-MD5 aebafc347fdece19c9acaf70ed8383a6 ChangeLog 424
 MD5 f935ca6b6e2481293e6beb9700c64cd0 metadata.xml 347
+MD5 cbf3b0b78bbc45f87e9e3d649dd95aeb motioneye-1.2.ebuild 734
+MD5 f8f1108be77e1918d923b7c61c588109 ChangeLog 518
 MD5 128dd9baaab4670b680bf36e89000f0a files/digest-motioneye-1.2 64
 MD5 0d53ead4c9f82be6444880b879181c1d files/motioneye-1.2-Makefile.diff 476
