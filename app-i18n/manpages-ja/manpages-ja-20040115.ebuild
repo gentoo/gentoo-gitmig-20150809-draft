@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040115.ebuild,v 1.4 2004/02/25 12:57:32 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040115.ebuild,v 1.5 2004/04/03 19:28:07 usata Exp $
 
 IUSE=""
 
@@ -19,6 +19,7 @@ S="${WORKDIR}/${MY_P}"
 
 DEPEND=""
 RDEPEND=">=sys-apps/groff-1.18.1-r2
+	=sys-apps/groff-1.18*
 	sys-apps/man"
 
 src_install () {

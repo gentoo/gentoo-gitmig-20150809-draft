@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/manpages-ja
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.13 2004/03/31 20:16:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.14 2004/04/03 19:28:07 usata Exp $
+
+  04 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> manpages-ja-20031115.ebuild,
+  manpages-ja-20031215.ebuild, manpages-ja-20040115.ebuild,
+  manpages-ja-20040215.ebuild, manpages-ja-20040315.ebuild:
+  Force groff-1.18 (no i18n patch for 1.19 available atm)
 
 *manpages-ja-20040315 (01 Apr 2004)
 
