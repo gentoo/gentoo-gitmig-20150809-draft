@@ -1,10 +1,19 @@
 # ChangeLog for x11-plugins/wmacpi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.11 2004/08/13 19:32:26 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.12 2004/08/20 03:01:35 s4t4n Exp $
+
+*wmacpi-1.99_p7 (20 Aug 2004)
+
+  20 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmacpi-1.99_p7.ebuild:
+  Version bump. Add DEPEND on x11-libs/libdockapp, change acpi and acpi.1
+  names to acpi-batt-status and acpi-batt-status.1 to fix #60685.
+  Marking it stable for x86.
+  wmacpi-1.99_p6.ebuild, files/digest-wmacpi-1.99_p6:
+  Remove older version...
 
 *wmacpi-1.99_p6 (13 Aug 2004)
 
-  13 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmacpi-1.99_p3.ebuild:
+  13 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmacpi-1.99_p6.ebuild:
   Version bump. This version only supports acpi, so all apm related
   stuff was removed from ebuild... Closes #60237.
 
