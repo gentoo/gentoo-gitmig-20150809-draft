@@ -1,0 +1,8 @@
+# ChangeLog for dev-php/phpsysinfo
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.1 2003/01/31 22:21:08 rphillips Exp $
+
+*phpsysinfo-1.2 (31 Jan 2003)
+
+  31 Jan 2003; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  New package. Submitted by Zack Gilburd. Fixes #12711
