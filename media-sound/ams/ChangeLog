@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ams
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.14 2004/11/21 20:01:37 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.15 2004/11/26 14:04:37 josejx Exp $
+
+  27 Nov 2004; Joseph Jezak <josejx@gentoo.org> ams-1.8.7.ebuild:
+  Marked ~ppc for bug #71979.
 
 *ams-1.8.7 (21 Nov 2004)
 
