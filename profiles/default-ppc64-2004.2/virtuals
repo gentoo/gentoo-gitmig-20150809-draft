@@ -61,3 +61,4 @@ virtual/w3m		www-client/w3a
 virtual/mailx           mail-client/mailx
 virtual/pdfviewer		app-text/xpdf
 virtual/fam             app-admin/fam
+virtual/gnustep-back    gnustep-base/gnustep-back-art
