@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.3.4-r1.ebuild,v 1.1 2002/07/19 17:27:49 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.3.4-r1.ebuild,v 1.2 2002/07/19 18:05:39 raker Exp $
 
 DESCRIPTION="GNUstep base package"
 HOMEPAGE="http://www.gnustep.org"
@@ -31,7 +31,7 @@ src_install () {
 	
 	make install \
 		GNUSTEP_INSTALLATION_DIR=${D}/usr/GNUstep/System \
-		INSTALL_ROOT_DIR=${D}/usr/GNUstep \
+		INSTALL_ROOT_DIR=${D} \
 		|| die "install failed"
 
 }
