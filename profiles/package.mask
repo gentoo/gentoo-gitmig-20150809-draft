@@ -1184,3 +1184,8 @@ app-cdr/eroaster
 # naz@gentoo.org 4 Aug 2002
 # masked for testing
 >=media-sound/ecasound-2.0.4
+
+# rphillips@gentoo.org 18 Aug 2002
+# masked for testing... should fix bug #2708
+=dev-php/mod_php-4.2.2-r1
+=dev-php/php-4.2.2-r1
