@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-1.7.0.ebuild,v 1.2 2004/06/24 21:45:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-1.7.0.ebuild,v 1.3 2004/07/01 11:47:31 eradicator Exp $
 
 IUSE="X"
 
@@ -14,7 +14,7 @@ DESCRIPTION="Qtopia Deskyop sync application for Zaurus PDA's"
 SRC_URI="ftp://ftp.trolltech.com/qtopia/desktop/RedHat9.0/qtopia-desktop-${PV}${REV}rh9.i386.rpm"
 HOMEPAGE="http://www.trolltech.com/download/qtopia/"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="virtual/x11"
 
 LICENSE="trolltech_PUL-1.0"

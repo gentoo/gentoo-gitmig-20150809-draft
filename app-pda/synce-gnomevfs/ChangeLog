@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/synce-gnomevfs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.4 2004/06/24 21:45:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.5 2004/07/01 11:48:17 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  synce-gnomevfs-0.2.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  synce-gnomevfs-0.2.ebuild:
+  virtual/glibc -> virtual/libc
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> synce-gnomevfs-0.2.ebuild,
   synce-gnomevfs-0.8.ebuild:

@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/plptools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  plptools-0.11-r1.ebuild, plptools-0.11.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  plptools-0.11-r1.ebuild, plptools-0.11.ebuild:
+  virtual/glibc -> virtual/libc
+
   26 Jun 2004; Alastair Tse <liquidx@gentoo.org>
   +files/plptools-0.12-assert.h.patch, plptools-0.12.ebuild:
   fix assert header problems (#50150)

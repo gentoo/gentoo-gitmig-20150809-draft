@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.9 2004/06/24 21:43:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.10 2004/07/01 11:46:44 eradicator Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="evo irmc opie ldap bluetooth"
 # opie  - opie plugin                ( local )
 # ldap  - ldap plugin - experimental
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=gnome-base/libbonobo-2.2
 	>=gnome-base/libgnomeui-2.2
 	>=gnome-base/libgnome-2.2

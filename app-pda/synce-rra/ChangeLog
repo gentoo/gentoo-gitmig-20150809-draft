@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/synce-rra
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/ChangeLog,v 1.6 2004/06/24 21:46:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-rra/ChangeLog,v 1.7 2004/07/01 11:49:13 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  synce-rra-0.8.4.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  synce-rra-0.8.4.ebuild:
+  virtual/glibc -> virtual/libc
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> synce-rra-0.8.4-r1.ebuild,
   synce-rra-0.8.4.ebuild:

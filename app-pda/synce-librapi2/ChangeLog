@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/synce-librapi2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.8 2004/06/24 21:46:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.9 2004/07/01 11:48:30 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  synce-librapi2-0.7.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  synce-librapi2-0.7.ebuild:
+  virtual/glibc -> virtual/libc
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> synce-librapi2-0.7.ebuild,
   synce-librapi2-0.8.1.ebuild, synce-librapi2-0.8.9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.3.ebuild,v 1.6 2004/06/24 21:44:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.3.ebuild,v 1.7 2004/07/01 11:47:04 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A suite of tools contains a series of conduits for moving
@@ -9,7 +9,7 @@ system."
 
 SRC_URI="http://pilot-link.org/source/${P}.tar.bz2"
 HOMEPAGE="http://www.pilot-link.org/"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
