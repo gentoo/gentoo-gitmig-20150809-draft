@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.31 2004/02/17 13:31:19 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.32 2004/02/20 12:47:37 gmsoft Exp $
+
+  20 Feb 2004; Guy Martin <gmsoft@gentoo.org> cdrdao-1.1.7-r3.ebuild:
+  Marked stable on hppa.
 
   17 Feb 2004; Lars Weiler <pylon@gentoo.org> :
   Corrected the md5sum
