@@ -1,8 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.31 2002/11/26 12:08:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.32 2002/12/04 15:00:56 foser Exp $
 
 *xchat-1.9.6 (26 Nov 2002)
+
+  04 Dec 2002; foser <foser@gentoo.org> xchat-1.9.6.ebuild :
+  Readded, disabled the segfaulting japanese conv support
 
   26 Nov 2002; foser <foser@gentoo.org> xchat-1.9.6.ebuild :
   New version
