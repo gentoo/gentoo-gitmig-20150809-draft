@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.6.ebuild,v 1.8 2004/06/29 14:38:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.6.ebuild,v 1.9 2004/08/08 10:09:46 scandium Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	use amd64 && replace-flags -O? -O1
+	has_version '=sys-devel/gcc-3.4*' && replace-flags -O? -O1
 	econf || die
 	emake -j1 || die
 }

@@ -1,5 +1,5 @@
-MD5 02f9ab5b5a75a08f954f1e7bbf4af37b pnet-0.6.6.ebuild 1276
-MD5 9a5ba5ca3f4e4048edea78fe0248d275 pnet-0.6.8.ebuild 1136
+MD5 05b43f2de0eaa47a1d6096306154b5a2 pnet-0.6.6.ebuild 1302
+MD5 586e8c62ebacce9dc535db4dd0cde3b0 pnet-0.6.8.ebuild 1160
 MD5 f6c763b65c6ad145c693fdb500d3c594 ChangeLog 3262
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 97a60b64bbeb718a8c070c92ca94e5ab files/verify_branch.c.patch 389
