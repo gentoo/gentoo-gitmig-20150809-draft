@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha8.ebuild,v 1.3 2005/02/07 21:14:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10.ebuild,v 1.1 2005/02/07 21:14:19 mrness Exp $
 
 inherit linux-mod
 
@@ -9,15 +9,15 @@ DESCRIPTION="Winmodems with Lucent Apollo (ISA) and Mars (PCI) chipsets"
 HOMEPAGE="http://www.heby.de/ltmodem/"
 SRC_URI="http://www.physcip.uni-stuttgart.de/heby/ltmodem/${MY_P}.tar.gz
 	http://www.sfu.ca/~cth/ltmodem/${MY_P}.tar.gz
-	http://linmodems.technion.ac.il/packages/ltmodem/kernel-2.6/ltmodem-2.6-alk-6.tar.bz2"
+	http://linmodems.technion.ac.il/packages/ltmodem/kernel-2.6/ltmodem-2.6-alk-7.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 
 RESTRICT="nouserpriv"
 
-S=${WORKDIR}/${PN}-2.6-alk-6
+S=${WORKDIR}/${PN}-2.6-alk-7
 S_2_4=${WORKDIR}/${MY_P}
 
 DEPEND="sys-apps/util-linux"
