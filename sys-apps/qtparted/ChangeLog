@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/qtparted
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.4 2003/09/08 02:10:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.5 2003/10/11 16:34:54 lanius Exp $
+
+  11 Oct 2003; Heinrich Wendel <lanius@gentoo.org> qtparted-0.3.2.ebuild,
+  qtparted-0.4.0_rc1.ebuild:
+  changed dep to qt 3.1
 
 *qtparted-0.4.0_rc1 (07 Sep 2003)
 
