@@ -1,8 +1,14 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.4 2002/08/14 15:06:00 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.5 2002/09/05 21:28:52 seemant Exp $
 
 *unzip-5.42-r1 (25 Jul 2002)
+
+  05 Sep 2002; Seemant Kulleen <seemant@gentoo.org> unzip-5.42-r1.ebuild :
+
+  Per bug #7540 by rob1@rekl.yi.org (robert longhausen), the arch was not
+  matching.  The arch check has been switched to the new format (use x86 &&
+  || )
 
   15 Aug 2002; Jack Morgan <jmorgan@gentoo.org> :
   Added KEYWORDS sparc64
