@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-ISO
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/ChangeLog,v 1.12 2004/04/16 11:21:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/ChangeLog,v 1.13 2004/05/26 08:23:06 kloeri Exp $
+
+  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> Date-ISO-1.30.ebuild:
+  Stable on alpha.
 
   16 Apr 2004; Michael Cummings <mcummings@gentoo.org>
   Date-ISO-1.28-r1.ebuild, Date-ISO-1.28.ebuild, Date-ISO-1.30.ebuild:
