@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.16 2004/03/24 14:31:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.17 2004/04/03 03:41:24 pylon Exp $
 
 inherit flag-o-matic libtool
 filter-flags -ffast-math
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
 SRC_URI="mirror://gnu/gmp/${P}.tar.gz"
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ~ppc sparc alpha amd64 ia64 ~mips ~hppa"
+KEYWORDS="x86 ppc sparc alpha amd64 ia64 ~mips ~hppa"
 DEPEND="~sys-devel/m4-1.4"
 
 src_unpack() {
