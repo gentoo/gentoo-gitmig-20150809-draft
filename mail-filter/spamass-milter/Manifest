@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f35dd890857d0520809754c077cf4135 ChangeLog 1391
+MD5 d415be6df7992ff4ec5420ae79bad8fc ChangeLog 1500
 MD5 06dd3cc51e395ab6b5a26a08d478a20b metadata.xml 224
 MD5 3c5e71a09169653de6ba7d4f00692de5 spamass-milter-0.2.0.ebuild 1097
-MD5 b27d0c94903f3939ef425124df4a3a02 spamass-milter-0.3.0.ebuild 1105
+MD5 8a442aaad289ee6289b3a0e8d3d3bd63 spamass-milter-0.3.0.ebuild 1103
 MD5 6eb8a3de8515f037fac65110c0f01563 files/README.gentoo 756
 MD5 8366b48906aec5d343a1796672b3bea3 files/digest-spamass-milter-0.2.0 72
 MD5 9b3cd222a3e0e7e2d9efcf05ab733597 files/spamass-milter.conf 388
@@ -13,7 +13,7 @@ MD5 61950fa1041550e97fa464db1faafa92 files/digest-spamass-milter-0.3.0 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCClfAKRy60XGEcJIRAqd1AJ4v1nQoXXvNfbSXQm8daFacOjQsnwCfdh3j
-plFcwIzzv04yJOzb4uqlVSs=
-=EInT
+iD8DBQFCLHdhKRy60XGEcJIRAmLCAJ9GcaFRk4n2E2j8HTR30fGSLW8XGQCeOeF8
+9fngta/3eidzPceUgX8JIKY=
+=/Uif
 -----END PGP SIGNATURE-----
