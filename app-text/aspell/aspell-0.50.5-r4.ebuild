@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r4.ebuild,v 1.9 2004/09/23 04:36:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r4.ebuild,v 1.10 2004/10/23 01:55:54 ndimiduk Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/aspell/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 s390 sparc x86 ~ppc-macos"
 IUSE="gpm"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -24,7 +24,9 @@ src_unpack() {
 }
 
 src_compile() {
-	[ "${ARCH}" == "ppc" ] && append-flags -O2 -fsigned-char
+	if [ "${ARCH}" == "ppc" ] || [ "${ARCH}" == "ppc-macos" ]; then
+		append-flags -O2 -fsigned-char
+	fi
 	use gpm && append-ldflags -lgpm
 	filter-flags -fno-rtti
 	elibtoolize --reverse-deps
