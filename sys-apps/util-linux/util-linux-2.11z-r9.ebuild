@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r9.ebuild,v 1.3 2004/03/07 09:21:48 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r9.ebuild,v 1.4 2004/04/20 03:44:38 lv Exp $
 
 IUSE="crypt nls static pam"
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic
 
 ## see below for details on pic.patch
 case ${ARCH} in
-	"x86"|"hppa"|"sparc64"|"ppc"|"mips")
+	"x86"|"hppa"|"sparc64"|"ppc"|"mips"|"amd64")
 		;;
 	*)
 		filter-flags -fPIC
