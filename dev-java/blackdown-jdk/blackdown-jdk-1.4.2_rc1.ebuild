@@ -1,15 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.9 2004/06/01 23:06:17 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.10 2004/06/07 21:56:42 agriffis Exp $
 
 IUSE="doc"
 
 inherit java nsplugins
 
-JREV="rc1"
-
-JV="${PV}"
-JV="${JV/_rc1/}"
+JREV=${PV#*_}
+JV=${PV%_*}
 
 S="${WORKDIR}/j2sdk${JV}"
 DESCRIPTION="Blackdown Java Development Kit ${PV}"
@@ -17,21 +15,6 @@ J_URI="ftp://ftp.tux.org/pub/java/JDK-${JV}"
 SRC_URI="amd64? ( ${J_URI}/amd64/${JREV}/j2sdk-${JV}-${JREV}-linux-amd64.bin )
 	x86? ( ${J_URI}/i386/${JREV}/j2sdk-${JV}-${JREV}-linux-i586-gcc3.2.bin )"
 #	sparc? ( ${J_URI}/sparc/${JREV}/j2sdk-${JV}-${JREV}-linux-sparc.bin )"
-
-
-if [ "${ARCH}" = "amd64" ]
-then
-	MY_A="j2sdk-${JV}-${JREV}-linux-amd64.bin"
-elif [ "${ARCH}" = "x86" ]
-then
-	MY_A="j2sdk-${JV}-${JREV}-linux-i586-gcc3.2.bin"
-elif [ "${ARCH}" = "sparc" ]
-then
-	MY_A="j2sdk-${JV}-${JREV}-linux-sparc.bin"
-elif [ "${ARCH}" = "ppc" ]
-then
-	MY_A="j2sdk-${JV}-${JREV}-linux-ppc.bin"
-fi
 
 HOMEPAGE="http://www.blackdown.org"
 
@@ -51,33 +34,28 @@ PROVIDE="virtual/jdk-1.4.2
 get_offset() {
 	[ ! -f "$1" ] && return
 
-	local offset="`gawk '
+	local offset=$(gawk '
 		/^[[:space:]]*skip[[:space:]]*=/ {
-
 			sub(/^[[:space:]]*skip[[:space:]]*=/, "")
 			SKIP = $0
 		}
+		END { print SKIP }' $1)
 
-		END { print SKIP }
-	' $1`"
-
-	eval echo $offset
+	echo $offset
 }
 
 src_unpack () {
-	local offset="`get_offset ${DISTDIR}/${MY_A}`"
+	local offset=$(get_offset ${DISTDIR}/${A})
 
 	if [ -z "${offset}" ] ; then
-		eerror "Failed to get offset of tarball!"
 		die "Failed to get offset of tarball!"
 	fi
 
-	echo ">>> Unpacking ${MY_A}..."
-	tail -n +${offset} ${DISTDIR}/${MY_A} | tar --no-same-owner -jxpf - || die
+	echo ">>> Unpacking ${A}..."
+	tail -n +${offset} ${DISTDIR}/${A} | tar --no-same-owner -jxpf - || die
 }
 
-unpack_jars()
-{
+unpack_jars() {
 	# New to 1.4.2 
 	local PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar jre/lib/ext/localedata.jar jre/lib/plugin.jar jre/javaws/javaws.jar"
 	local JAVAHOME="${D}/opt/${P}"
@@ -104,7 +82,7 @@ unpack_jars()
 }
 
 src_install () {
-	local PLATFORM=
+	typeset platform
 
 	dodir /opt/${P}
 
@@ -117,24 +95,16 @@ src_install () {
 	dohtml README.html
 
 	# Install mozilla plugin
-	if [ "${ARCH}" = "x86" ] ; then
-		PLATFORM="i386"
-	fi
-
-	if [ "${ARCH}" = "amd64" ] ; then
-		PLATFORM="amd64"
-	fi
-
-	if [ "${ARCH}" = "sparc" ] ; then
-		PLATFORM="sparc"
-	fi
-
-	inst_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/javaplugin_oji.so
+	case ${ARCH} in
+		amd64|x86) platform="i386" ;;
+		ppc) platform="ppc" ;;
+		sparc*) platform="sparc" ;;
+	esac
+	inst_plugin /opt/${P}/jre/plugin/${platform}/mozilla/javaplugin_oji.so
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
 
-	dosed "s/standard symbols l/symbol/g" \
-		/opt/${P}/jre/lib/font.properties
+	sed -i "s/standard symbols l/symbol/g" ${D}/opt/${P}/jre/lib/font.properties
 
 	# install env into /etc/env.d
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
