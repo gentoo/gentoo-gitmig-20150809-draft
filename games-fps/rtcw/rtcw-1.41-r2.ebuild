@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.1 2004/08/22 17:50:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.2 2004/09/20 03:53:13 lv Exp $
 
 inherit games
 
@@ -13,14 +13,15 @@ SRC_URI="mirror://3dgamers/pub/3dgamers5/games/returnwolfenstein/Missions/wolf-l
 
 LICENSE="RTCW"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="opengl dedicated"
 RESTRICT="nostrip nomirror"
 
 DEPEND="virtual/libc"
 RDEPEND="dedicated? ( app-misc/screen )
 	!dedicated? ( virtual/opengl )
-	opengl? ( virtual/opengl )"
+	opengl? ( virtual/opengl )
+	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
 S=${WORKDIR}
 
