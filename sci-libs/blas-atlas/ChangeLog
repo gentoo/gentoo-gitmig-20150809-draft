@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/blas-atlas
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.2 2004/12/29 21:53:29 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.3 2005/03/02 17:41:37 pbienst Exp $
+
+  02 Mar 2005; Peter Bienstman <pbienst@gentoo.org> blas-atlas-3.6.0.ebuild:
+  Improve error message (fix bug 83494, thanks to Daniel Herzog).
 
 *blas-atlas-3.6.0 (29 Dec 2004)
 

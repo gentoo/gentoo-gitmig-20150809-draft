@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.2 2004/12/29 18:30:32 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.3 2005/03/02 17:41:37 pbienst Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,7 +27,7 @@ S=${WORKDIR}/ATLAS
 pkg_setup() {
 	if [ -z `which g77` ]; then
 		eerror "No fortran compiler found on the system!"
-		eerror "Please add f77 to your USE flags and reemerge gcc!"
+		eerror "Please add fortran to your USE flags and reemerge gcc!"
 		die
 	fi
 }
