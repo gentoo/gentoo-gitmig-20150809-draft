@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: system@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.10.ebuild,v 1.2 2002/05/01 08:28:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.11-r1.ebuild,v 1.1 2002/06/08 09:01:41 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DirectFB is a thin library on top of the Linux framebuffer devices"
@@ -16,28 +16,38 @@ DEPEND="sys-devel/perl
 	flash? ( >=media-libs/libflash-0.4.10 )
 	truetype? ( >=media-libs/freetype-2.0.1 )
 	quicktime? ( media-libs/quicktime4linux )"
-#	avi? ( =media-video/avifile-0.6* )
+#	avi? ( >=media-video/avifile-0.7.4.20020426-r2 )"
 
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	cp configure configure.orig
+	sed -e 's:ac_safe=`echo "libmpeg3.h:ac_safe=`echo "libmpeg3/libmpeg3.h:' \
+		-e 's:#include <libmpeg3.h>:#include <libmpeg3/libmpeg3.h>:' \
+		configure.orig > configure
+}
 
 src_compile() {
 	
-	local myconf
+	local myconf=""
 	
-	use mmx	\
-		&& myconf="${myconf} --enable-mmx"	\
+	# Bug in the ./configure script that breaks if you
+	# have --enable-mmx
+	use mmx \
+		&& myconf="${myconf} --enable-mmx" \
 		|| myconf="${myconf} --disable-mmx"
 
-# avifile that is in portage currently does not work with directfb
-# an older one in the 0.6.0 series is required.
+# Still do not work currently
 #	use avi	\
-#		&& myconf="${myconf} --enable-avifile"	\
+#		&& myconf="${myconf} --enable-avifile" \
 #		|| myconf="${myconf} --disable-avifile"
-	
 	myconf="${myconf} --disable-avifile"
 	
 	use mpeg \
-		&& myconf="${myconf} --with-libmpeg3=/usr/include/libmpeg3" \
+		&& myconf="${myconf} --enable-libmpeg3" \
 		|| myconf="${myconf} --disable-libmpeg3"
+	
 
 	use jpeg \
 		&& myconf="${myconf} --enable-jpeg" \
@@ -59,10 +69,14 @@ src_compile() {
 
 	use mpeg && ( \
 		cd ${S}/interfaces/IDirectFBVideoProvider
-		patch < ${FILESDIR}/${PN}-gentoo-patch Makefile
+		cp idirectfbvideoprovider_libmpeg3.c \
+			idirectfbvideoprovider_libmpeg3.c.orig
+	
+		sed s':#include <libmpeg3.h>:#include <libmpeg3/libmpeg3.h>:' \
+			idirectfbvideoprovider_libmpeg3.c.orig > \
+				idirectfbvideoprovider_libmpeg3.c
 		cd ${S}
 	)
-
 	make || die
 
 }
@@ -79,3 +93,4 @@ src_install () {
 	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
 	dohtml -r docs/html
 }
+
