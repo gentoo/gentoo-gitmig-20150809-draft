@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.1.7.ebuild,v 1.3 2004/01/02 21:14:44 aether Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.1.7.ebuild,v 1.4 2004/01/08 20:29:44 agriffis Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 RDEPEND="virtual/python"
 #DEPEND="$DEPEND"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha ia64"
 IUSE=""
 
 src_install() {
