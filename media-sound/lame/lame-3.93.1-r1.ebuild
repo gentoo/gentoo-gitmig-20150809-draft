@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.9 2003/11/16 18:41:40 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.10 2003/11/22 07:26:00 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gcc
 
 DESCRIPTION="LAME Ain't an Mp3 Encoder"
 HOMEPAGE="http://www.mp3dev.org/mp3/"
@@ -28,6 +28,8 @@ src_compile() {
 	is-flag "-march=k6-3" && filter-flags "-fomit-frame-pointer"
 	is-flag "-march=k6-2" && filter-flags "-fomit-frame-pointer"
 	is-flag "-march=k6" && filter-flags "-fomit-frame-pointer"
+
+	[ "`gcc-fullversion`" == "3.3.2" ] && replace-flags -march=2.0 -march=1.0
 
 	local myconf=""
 	if [ "`use gtk`" ] ; then
