@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Released under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.4 2003/08/07 02:31:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.5 2003/08/12 08:21:45 stuart Exp $
 
 inherit php-lib
 
@@ -40,7 +40,7 @@ src_install() {
 	# patch 1:
 	# make jpgraph use the correct group for file permissions
 
-	sed -i "s|^DEFINE(\"CACHE_FILE_GROUP\",\"wwwadmin\");|DEFINE(\"CACHE_FILE_GROUP\", \"${HTTPD_GROUP}\";|" src/jpgraph.php
+	sed -i "s|^DEFINE(\"CACHE_FILE_GROUP\",\"wwwadmin\");|DEFINE(\"CACHE_FILE_GROUP\", \"${HTTPD_GROUP}\");|" src/jpgraph.php
 
 	# patch 2:
 	# make jpgraph use the correct directory for caching
@@ -56,7 +56,7 @@ src_install() {
 	# don't read the READ_CACHE if we're not creating any images in the
 	# cache in the first place (doh)
 
-	sed -i 's|DEFINE("READ_CACHE",true);|DEFINE("READ_CACHE", $USE_CACHE);|' src/jpgraph.php
+	sed -i 's|DEFINE("READ_CACHE",true);|DEFINE("READ_CACHE", USE_CACHE);|' src/jpgraph.php
 
 	# install php files
 	einfo "Building list of files to install"
