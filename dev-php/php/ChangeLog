@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.122 2004/09/24 18:25:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.123 2004/09/27 11:19:04 sejo Exp $
+
+  27 Sep 2004; <SeJo@gentoo.org> php-4.3.9.ebuild:
+  stable for gsla: 64223
 
 *php-5.0.2 (24 Sep 2004)
 
