@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.1 2003/07/02 13:08:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.2 2003/07/08 20:40:38 vapier Exp $
 
 inherit games
 
@@ -54,8 +54,9 @@ games-q3mod_src_install() {
 
 	dodir ${GAMES_SYSCONFDIR}/quake3
 
+	dodir ${GAMES_PREFIX}/.q3a
 	prepgamesdirs
-	chmod g+rw ${D}/${mdir}
+	chmod g+rw ${D}/${mdir} ${D}/${GAMES_PREFIX}/.q3a
 	chmod -R g+rw ${D}/${GAMES_SYSCONFDIR}/quake3
 }
 
@@ -84,6 +85,7 @@ EOF
 
 games-q3mod_make_init.d() {
 cat << EOF > ${T}/q3ded-${MOD_NAME}.init.d
+#!/sbin/runscript
 $(<${PORTDIR}/header.txt)
 
 depend() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.37 2003/07/08 17:42:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.38 2003/07/08 20:40:38 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -100,7 +100,7 @@ gamesenv() {
 games_pkg_setup() {
 	enewgroup ${GAMES_GROUP} 35
 	enewuser ${GAMES_USER} 35 /bin/false /usr/games ${GAMES_GROUP}
-	use dedicated && enewuser ${GAMES_USER_DED} 36 /bin/false /usr/games ${GAMES_GROUP}
+	use dedicated && enewuser ${GAMES_USER_DED} 36 /bin/bash /usr/games ${GAMES_GROUP}
 	return 0
 }
 
