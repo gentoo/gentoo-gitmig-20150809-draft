@@ -418,6 +418,7 @@ src_install() {
 	    #no need for a static library in /lib
 	    mv ${D}/lib/*.a ${D}/usr/lib
 	    
+	    cd ${S}/extras/LVM/${LVMV}
 	    docinto LVM-${LVMV}
 	    dodoc ABSTRACT CHANGELOG CONTRIBUTORS COPYING COPYING.LIB FAQ KNOWN_BUGS LVM-HOWTO
 	    dodoc README TODO WHATSNEW
@@ -436,7 +437,7 @@ src_install() {
 	if [ "`use xfs`" ]
 	then
 	    cd ${S}/extras/xfs-${XFSV}/acl
-	    chmod +x install.sh
+	    chmod +x install-sh
 	    try make \
 		PKG_SBIN_DIR=${D}/sbin \
 		PKG_INC_DIR=${D}/usr/include/acl \
@@ -448,7 +449,7 @@ src_install() {
 	    dodoc README doc/CHANGES doc/COPYING doc/PORTING
 	    
 	    cd ${S}/extras/xfs-${XFSV}/attr
-	    chmod +x install.sh
+	    chmod +x install-sh
 	    try make \
 		PKG_SBIN_DIR=${D}/bin \
 		PKG_INC_DIR=${D}/usr/include/acl \
@@ -460,7 +461,7 @@ src_install() {
 	    dodoc README doc/CHANGES doc/COPYING doc/PORTING
 	    
 	    cd ${S}/extras/xfs-${XFSV}/xfsprogs
-	    chmod +x install.sh
+	    chmod +x install-sh
 	    try make \
 		PKG_SBIN_DIR=${D}/sbin \
 		PKG_BIN_DIR=${D}/usr/sbin \
@@ -473,7 +474,7 @@ src_install() {
 	    dodoc README doc/CHANGES doc/COPYING docs/CREDITS doc/PORTING doc/README.LVM doc/README.quota
 	    
 	    cd ${S}/extras/xfs-${XFSV}/dmapi
-	    chmod +x install.sh
+	    chmod +x install-sh
 	    try make \
 		PKG_INC_DIR=${D}/usr/include/dmapi \
 		PKG_LIB_DIR=${D}/usr/lib \
@@ -484,7 +485,7 @@ src_install() {
 	    dodoc README doc/CHANGES doc/COPYING doc/PORTING
 	    
 	    cd ${S}/extras/xfs-${XFSV}/xfsdump
-	    chmod +x install.sh
+	    chmod +x install-sh
 	    try make \
 		PKG_BIN_DIR=${D}/usr/sbin \
 		PKG_LIB_DIR=${D}/usr/lib \
@@ -534,6 +535,7 @@ src_install() {
 	    dodoc COPYING INSTALL FAQ README WARNING
 	    docinto alsa-${AV}/doc
 	    dodoc doc/README.1st doc/SOUNDCARDS
+	    mkdir -p ${D}/lib/modules/${KV}/misc
 	    cp modules/*.o ${D}/lib/modules/${KV}/misc
         fi
 	if [ "`use pcmcia-cs`" ]
