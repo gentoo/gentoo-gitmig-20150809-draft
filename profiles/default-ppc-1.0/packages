@@ -33,6 +33,9 @@
 
 # PPC PROFILE
 
+# masked for testing
+=sys-apps/pbbuttonsd-0.4.10
+
 # ebuilds installing precompiled stuff:
 
 net-www/netscape-communicator
