@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.5 2004/07/27 03:06:12 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.6 2004/07/27 21:26:03 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -33,7 +33,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 	)"
 PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-2.28 )"
 
-pkg_setup() {
+print_gaim_warning() {
 	ewarn
 	ewarn "If you are merging ${P} from an earlier version, you will need"
 	ewarn "to re-merge any plugins like gaim-encryption or gaim-snpp."
@@ -49,12 +49,19 @@ pkg_setup() {
 	ewarn
 	ewarn "Please read the gaim FAQ at http://gaim.sourceforge.net/faq.php"
 	ewarn
+	einfo
+	einfo "Note that we are now filtering all unstable flags in C[XX]FLAGS."
+	einfo
 	for TICKER in 1 2 3 4 5; do
 		# Double beep here.
 		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
 		echo -ne "\a" ; sleep 1
 	done
-	sleep 8
+	sleep 3
+}
+
+pkg_setup() {
+	print_gaim_warning
 }
 
 src_unpack() {
@@ -68,7 +75,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# Stabilize things
+	# Stabilize things, for your own good
 	strip-flags
 	replace-flags -O? -O2
 
@@ -113,25 +120,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn
-	ewarn "If you are merging ${P} from an earlier version, you will need"
-	ewarn "to re-merge any plugins like gaim-encryption or gaim-snpp."
-	ewarn
-	ewarn "If you experience problems with gaim, file them as bugs with"
-	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
-	ewarn "as bugs with gaim's sourceforge tracker, and by all means DO NOT"
-	ewarn "seek help in #gaim."
-	ewarn
-	ewarn "Be sure to USE=\"debug\" and include a backtrace for any seg"
-	ewarn "faults, see http://gaim.sourceforge.net/gdb.php for details on"
-	ewarn "backtraces."
-	ewarn
-	ewarn "Please read the gaim FAQ at http://gaim.sourceforge.net/faq.php"
-	ewarn
-	for TICKER in 1 2 3 4 5; do
-		# Double beep here.
-		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-		echo -ne "\a" ; sleep 1
-	done
-	sleep 8
+	print_gaim_warning
 }
