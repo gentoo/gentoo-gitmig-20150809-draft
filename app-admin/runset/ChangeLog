@@ -1,8 +1,13 @@
 # ChangeLog for app-admin/runset
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/ChangeLog,v 1.2 2002/07/20 00:45:17 aliz Exp $
 
 *runset-1.4 (1 Feb 2002)
+
+  20 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> runet-1.4.ebuild :
+
+  Fixed the .info file before installing the package to avoid errors after
+  merge.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
