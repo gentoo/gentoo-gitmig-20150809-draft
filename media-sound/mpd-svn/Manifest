@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4c003907e4e0b2a947a1c7adf9429976 ChangeLog 1817
+MD5 41f72b769ae2e6281e9fd22e2a966af2 ChangeLog 1929
 MD5 28ed49040b6ddc36def2c2a536394b37 metadata.xml 251
 MD5 5a4765c742d30faf156bab729fbf06e7 mpd-svn-20050312.ebuild 3654
 MD5 02fed60e83a2a4fa97ffb270283f346b mpd-svn-20050131.ebuild 3196
 MD5 e7f3e335924e2b9efad414e4f269076d mpd-svn-20041207.ebuild 3111
 MD5 fd2c2dd25dc00071a4f48bc07eb8fca4 mpd-svn-20050308.ebuild 3497
 MD5 22e3fa9684ff58f754a41fb785c8b32a files/digest-mpd-svn-20050131 69
-MD5 e3327bcec95f3e72efa0fb37e77e5812 files/mpd.pidfile.rc6 815
+MD5 02158d2f5c411a78b65c7f692fb81405 files/mpd.pidfile.rc6 717
 MD5 4e6ca0e3263baccca8dbe560cb7304da files/mpd.rc6 881
 MD5 9d06583bf2f3ca00fa9a5ae6c01cab9b files/digest-mpd-svn-20050312 69
 MD5 51916f6bb6ff487021c4c26f76a1d8e7 files/digest-mpd-svn-20050308 69
@@ -16,7 +16,7 @@ MD5 a7cc5b5be644089b25d206fe9b71ebd1 files/digest-mpd-svn-20041207 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCNCwIQlM6RnzZP+IRAkYYAJ43H6TQpr8Qkxo6DxB/QaNXYoIwGACgvVaV
-8iNhFf8IO9hNFESEOOgBX8k=
-=zWyl
+iD8DBQFCNGzhQlM6RnzZP+IRAmtbAJ9RQE3Yp5WeuIaW+JW9+j5nt4XPzQCeNoc+
+H9aYsK2HkdyxxkXWaZvkQp0=
+=i+a0
 -----END PGP SIGNATURE-----
