@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.14 2003/09/11 16:06:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.15 2003/11/14 03:13:10 brad_mssw Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="x86 ppc sparc ~alpha"
+KEYWORDS="x86 ppc sparc ~alpha ~amd64"
 
 DEPEND="virtual/glibc
 	app-arch/zip
@@ -39,6 +39,11 @@ src_unpack() {
 
 	# workaround to satisfy linux-2.6* (#24626)
 	cp ${S}/mozilla/security/coreconf/Linux2.5.mk ${S}/mozilla/security/coreconf/Linux2.6.mk
+
+	if [ "${ARCH}" = "amd64" ]
+	then
+		cd ${S}; epatch ${FILESDIR}/${PN}-${PV}-amd64.patch
+	fi
 }
 
 src_compile() {
