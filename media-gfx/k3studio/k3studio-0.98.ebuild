@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3studio/k3studio-0.98.ebuild,v 1.1 2002/07/05 00:29:21 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3studio/k3studio-0.98.ebuild,v 1.2 2002/07/05 09:55:52 verwilst Exp $
 
 inherit kde-base || die
 
@@ -19,8 +19,8 @@ HOMEPAGE="http://k3studio.sourceforge.net"
 src_compile() {
 	myconf="--with-qhull-includes=/usr/include/qhull"
 	myconf="$myconf --with-qhull-libraries=/usr/lib"
-	myconf="$myconf	--with-python-includes=/usr/include/python2.2"
-	myconf="$myconf --with-python-libraries=\\\"-L. -L/usr/lib/python2.2/config `python-config`\\\""
+	myconf="$myconf --with-python-includes=/usr/include/python2.2"
+	myconf="$myconf --with-python-libraries=/usr/lib/python2.2/config"
 
 	kde_src_compile myconf
 	kde_src_compile configure
