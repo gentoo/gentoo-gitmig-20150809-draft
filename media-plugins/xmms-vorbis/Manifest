@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 51f80d7c1a3840a4891534d41618369c xmms-vorbis-1.2.10.ebuild 548
-MD5 b0b3ea9859e0e0a92a8c051c481e45ab xmms-vorbis-1.2.10-r1.ebuild 623
 MD5 ac959d9c822b90e6fc6c613f2b37645a ChangeLog 708
+MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
+MD5 b0b3ea9859e0e0a92a8c051c481e45ab xmms-vorbis-1.2.10-r1.ebuild 623
+MD5 51f80d7c1a3840a4891534d41618369c xmms-vorbis-1.2.10.ebuild 548
 MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-vorbis-1.2.10 142
-MD5 290b77ae077793d89ff8882b5c413f42 files/digest-xmms-vorbis-1.2.10-r1 227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNNvkArHZZzCEUG0RAmGFAJ9Tme/BKK+hZXPiYoHhzzGIFxyavQCffUIE
-GpYsqwVWkANTcPZRngvBw3k=
-=dEiV
------END PGP SIGNATURE-----
+MD5 29189a07ebf2ac1578898c2234dc1bce files/digest-xmms-vorbis-1.2.10-r1 227
