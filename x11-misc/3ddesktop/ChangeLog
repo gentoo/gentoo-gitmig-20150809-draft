@@ -2,6 +2,11 @@
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+*3ddesktop-0.2.5-r1 (13 Apr 2004)
+
+  13 Apr 2004; Brandon Hale <tseng@gentoo.org> 3ddesktop-0.2.5-r1.ebuild:
+  Apply patch to reduce memory usage, bug #28712
+
   11 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; 3ddesktop-0.2.4.ebuild,
   3ddesktop-0.2.5.ebuild:
   Change dependency from x11-base/xfree to virtual/x11 (#47537).
