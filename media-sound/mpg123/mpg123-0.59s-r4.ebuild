@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r4.ebuild,v 1.9 2004/09/23 04:29:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r4.ebuild,v 1.10 2004/10/19 03:06:39 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mpg123.de/mpg123/${PN}-pre${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ia64 amd64 ppc sparc alpha hppa mips"
+KEYWORDS="x86 ia64 amd64 ppc sparc alpha hppa mips ppc64"
 IUSE="mmx 3dnow esd nas oss"
 
 RDEPEND="virtual/libc
@@ -43,10 +43,13 @@ src_unpack() {
 	# amd64.  It's good to understand the distinction between int and
 	# long: ANSI says that int should be 32-bits, long should be the
 	# native size of the CPU (usually the same as a pointer).
-	epatch ${FILESDIR}/${P}-amd64.patch
+	use ppc64 || epatch ${FILESDIR}/${P}-amd64.patch
 
 	# Fix Makefile missing quotes
 	epatch ${FILESDIR}/${P}-Makefile.patch
+
+	# ppc64 support
+	use ppc64 && epatch ${FILESDIR}/${P}-ppc64.patch
 
 	# Don't force gcc since icc/ccc might be possible
 	sed -i -e "s|CC=gcc||" Makefile

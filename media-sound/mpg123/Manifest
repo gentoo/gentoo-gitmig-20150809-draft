@@ -1,24 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5124d7bf6706d9e63474c888e022dffe ChangeLog 8902
-MD5 829702e07fe83ab34f2508638631c884 mpg123-0.59s-r3.ebuild 3409
+MD5 9ed88107fc101a9e1d50da5d5ef6f952 ChangeLog 9034
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 7e799be8dd937ef75148664c21d96d75 mpg123-0.59s-r2.ebuild 1859
-MD5 e255ccd22cc647189d2f2de7649c6280 mpg123-0.59s-r4.ebuild 3483
+MD5 829702e07fe83ab34f2508638631c884 mpg123-0.59s-r3.ebuild 3409
+MD5 752aab82c466fe5ae4e5b897cf6f02de mpg123-0.59s-r4.ebuild 3570
 MD5 7c93b2634ad65c23562f86f6e0b051e2 files/0.59s-generic.patch 532
-MD5 78e5e78b54876dbecebb45acec8fb449 files/digest-mpg123-0.59s-r3 67
 MD5 78e5e78b54876dbecebb45acec8fb449 files/digest-mpg123-0.59s-r2 67
-MD5 7d563752464873b664d7d242e9d06bbd files/mpg123-0.59s-amd64.patch 2680
-MD5 a80297615f6515bb5631c177511c989a files/mpg123-0.59s-security.diff 1075
-MD5 7130077c0324ee5b3cfd58e291976a0e files/mpg123-0.59s-heapfix.diff 337
-MD5 1cb1d88ea5199e7b4ddca1a53f9db530 files/mpg123-0.59s-Makefile.patch 952
+MD5 78e5e78b54876dbecebb45acec8fb449 files/digest-mpg123-0.59s-r3 67
 MD5 78e5e78b54876dbecebb45acec8fb449 files/digest-mpg123-0.59s-r4 67
 MD5 fd09acbf52f3f87f5901e8d74a4227b0 files/mpg123-0.59s-CAN-2004-0805.patch 465
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBUlEbHTu7gpaalycRArXtAJ9BsIJnFZZ+C2p+Bn4KM55lnI3vzgCePNFR
-twkinOtGCbAMePp23l6W+ws=
-=/J1M
------END PGP SIGNATURE-----
+MD5 1cb1d88ea5199e7b4ddca1a53f9db530 files/mpg123-0.59s-Makefile.patch 952
+MD5 7d563752464873b664d7d242e9d06bbd files/mpg123-0.59s-amd64.patch 2680
+MD5 7130077c0324ee5b3cfd58e291976a0e files/mpg123-0.59s-heapfix.diff 337
+MD5 a80297615f6515bb5631c177511c989a files/mpg123-0.59s-security.diff 1075
+MD5 d403232cad9d481f51c07e34bcc9b4b6 files/mpg123-0.59s-ppc64.patch 1441
