@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.10_pre1.ebuild,v 1.11 2003/03/15 14:54:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.10_pre1.ebuild,v 1.12 2003/05/08 11:17:53 phosphan Exp $
 
 S=${WORKDIR}/svn
 S_APACHE=${WORKDIR}/httpd-2.0
@@ -24,7 +24,7 @@ HOMEPAGE="http://subversion.tigris.org/"
 
 SLOT="0"
 LICENSE="Apache-1.1"
-KEYWORDS="x86 sparc "
+KEYWORDS="~x86 ~sparc "
 
 DEPEND=">=dev-lang/python-2.0
 	>=sys-apps/diffutils-2.7.7

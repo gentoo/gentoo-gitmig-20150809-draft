@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.14 2003/05/06 12:46:05 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.15 2003/05/08 11:17:52 phosphan Exp $
+
+  08 May 2003; Patrick Kursawe <phosphan@gentoo.org>
+  subversion-0.10_pre1.ebuild:
+  Set -0.10_pre1 to ~arch, it seems to be quite broken. YMMV, see bug #20571.
 
 *subversion-0.21.0-r1 (30 Apr 2003)
 
