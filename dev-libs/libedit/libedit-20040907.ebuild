@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20040907.ebuild,v 1.6 2004/11/07 07:34:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20040907.ebuild,v 1.7 2004/11/07 14:49:48 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="arm hppa ia64 ppc s390 x86 ~ppc64"
+KEYWORDS="arm hppa ia64 ppc s390 x86 ppc64"
 IUSE=""
 
 DEPEND="sys-libs/ncurses
