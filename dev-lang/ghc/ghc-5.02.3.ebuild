@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.3 2002/07/18 03:41:50 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.4 2002/07/29 16:13:02 seemant Exp $
 
 
 # ebuild for Glorious Glasgow Haskell
@@ -41,26 +41,24 @@ KEYWORDS="x86"
 
 # FIXME: Add USE support for parallel haskell (requires PVM)
 #        Get PVM from ftp://ftp.netlib.org/pvm3/
-DEPEND="virtual/glibc
-		>=sys-devel/perl-5.6.1
-		>=sys-devel/gcc-2.95.3
-		>=sys-devel/make-3.79.1
-		>=sys-apps/sed-3.02.80
-		>=sys-devel/flex-2.5.4a
-		doc? ( >=app-text/openjade-1.3.1
-				>=app-text/sgml-common-0.6.3
-				app-text/docbook-sgml-dtd-3.1
-				>=app-text/docbook-dsssl-stylesheets-1.64
-				tetex? ( >=app-text/tetex-1.0.7
-						>=app-text/jadetex-3.12 ) )
-		opengl? ( virtual/opengl
-				virtual/glu
-				virtual/glut )"
+DEPEND=">=sys-devel/perl-5.6.1
+	>=sys-devel/gcc-2.95.3
+	>=sys-devel/make-3.79.1
+	>=sys-apps/sed-3.02.80
+	>=sys-devel/flex-2.5.4a
+	doc? ( >=app-text/openjade-1.3.1
+		>=app-text/sgml-common-0.6.3
+		=app-text/docbook-sgml-dtd-3.1
+		>=app-text/docbook-dsssl-stylesheets-1.64
+		tetex? ( >=app-text/tetex-1.0.7
+			>=app-text/jadetex-3.12 ) )
+	opengl? ( virtual/opengl
+		virtual/glu
+		virtual/glut )"
 
-RDEPEND="virtual/glibc
-		>=sys-devel/gcc-2.95.3
-		>=sys-devel/perl-5.6.1
-		opengl? ( virtual/opengl virtual/glu virtual/glut )"
+RDEPEND=">=sys-devel/gcc-2.95.3
+	>=sys-devel/perl-5.6.1
+	opengl? ( virtual/opengl virtual/glu virtual/glut )"
 
 
 # Settings for the individual stages...
