@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.6.5.ebuild,v 1.2 2004/01/29 18:22:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.6.5.ebuild,v 1.3 2004/02/09 11:04:52 aliz Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 IUSE="quicktime"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~amd64"
 
 DEPEND="x11-libs/gtk+
 	dev-libs/glib

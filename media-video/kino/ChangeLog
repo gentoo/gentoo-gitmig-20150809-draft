@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.9 2004/01/29 18:22:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.10 2004/02/09 11:04:52 aliz Exp $
+
+  09 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> kino-0.6.5.ebuild:
+  AMD64 keyword.
 
   29 Jan 2004; <gustavoz@gentoo.org> kino-0.6.4.ebuild, kino-0.6.5.ebuild:
   keyworded sparc and ~sparc
