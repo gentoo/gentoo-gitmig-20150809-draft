@@ -1,0 +1,48 @@
+--- pvm3/src/pvmd.c.x86_64_segfault	2004-09-08 15:35:36.000000000 -0400
++++ pvm3/src/pvmd.c	2005-02-02 14:09:39.727751000 -0500
+@@ -1711,6 +1711,7 @@
+ 
+ 	gettimeofday(&tnow, (struct timezone*)0);
+ 	if (pvmdebmask || myhostpart) {
++	        char *ctm;
+ 		PVM_TIMET time_temp;
+ 		pvmlogprintf("%s (%s) %s %s\n",
+ 				hosts->ht_hosts[hosts->ht_local]->hd_name,
+@@ -1719,7 +1720,9 @@
+ 				PVM_VER);
+ 		pvmlogprintf("ready ");
+ 		time_temp = (PVM_TIMET) tnow.tv_sec;
+-		pvmlogprintf(ctime(&time_temp));
++		ctm = ctime(&time_temp);
++		if( ctm != NULL )
++		    pvmlogprintf("%s\n", ctm);
+ 	}
+ 
+ 	/*
+--- pvm3/src/pvmlog.c.x86_64_segfault	2004-05-26 11:56:36.000000000 -0400
++++ pvm3/src/pvmlog.c	2005-02-02 14:11:37.539821000 -0500
+@@ -174,7 +174,11 @@
+  * Initial revision
+  *
+  */
+-
++#if defined (__STDC__) || defined(IMA_WIN32_WATCOM)
++#include <stdarg.h>
++#else
++#include <varargs.h>
++#endif
+ #include <stdio.h>
+ #include <pvm3.h>
+ #include <errno.h>
+@@ -188,11 +192,6 @@
+ #include <strings.h>
+ #define	CINDEX(s,c)	index(s,c)
+ #endif
+-#if defined (__STDC__) || defined(IMA_WIN32_WATCOM)
+-#include <stdarg.h>
+-#else
+-#include <varargs.h>
+-#endif
+ 
+ #ifndef PVMDLOGMAX
+ #define PVMDLOGMAX 1000000			/* (approx) max chars to log to file */

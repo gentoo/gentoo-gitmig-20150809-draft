@@ -1,0 +1,12 @@
+diff -urN pvm3.orig/lib/pvmgetarch pvm3/lib/pvmgetarch
+--- pvm3.orig/lib/pvmgetarch	2004-02-03 12:12:05.000000000 -0800
++++ pvm3/lib/pvmgetarch	2005-02-21 22:34:48.484957880 -0800
+@@ -75,6 +75,8 @@
+ 	Linux,sparc* )          ARCH=LINUXSPARC ;;
+ 	Linux,hp_pa )           ARCH=LINUXHPPA ;;
+ 	Linux,ppc )             ARCH=LINUXPPC ;;
++	Linux,s390 )            ARCH=LINUXS390 ;;
++	Linux,s390x )           ARCH=LINUXS390X ;;
+ 	Linux,m68k )            ARCH=LINUXATARI ;;
+ 	BSD/OS,i[3456]86 )      ARCH=BSD386 ;;
+ 	FreeBSD,i[3456]86 )     ARCH=FREEBSD ;;

@@ -1,0 +1,33 @@
+diff -ur pvm3/src/pvmcruft.c pvm3-lhh/src/pvmcruft.c
+--- pvm3/src/pvmcruft.c	2001-09-27 17:25:10.000000000 -0400
++++ pvm3-lhh/src/pvmcruft.c	2004-03-31 11:03:08.361416845 -0500
+@@ -293,7 +293,7 @@
+  ***************/
+ 
+ #ifndef RSHCOMMAND
+-#define RSHCOMMAND  "/usr/ucb/rsh"
++#define RSHCOMMAND  "/usr/bin/rsh"
+ #endif
+ 
+ char *getenv();
+@@ -840,6 +840,7 @@
+ char *
+ pvmgetroot()
+ {
++	struct stat st_buf;
+ 	static char *rd = 0;
+ 
+ 	if (!rd) {
+@@ -874,6 +875,12 @@
+ #endif
+ 
+ 		if (!rd) {
++			rd = strdup("/usr/share/pvm3");
++			if (stat(rd, &st_buf) == 0)
++				return rd;
++			free(rd);
++			rd = NULL;
++
+ 			pvmlogerror("PVM_ROOT environment variable not set.\n");
+ 			pvmbailout(0);
+ 			exit(1);		/* the other meaning of bail out */

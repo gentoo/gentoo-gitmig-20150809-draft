@@ -1,0 +1,159 @@
+--- pvm3/console/Makefile.aimk.strerror	1997-08-28 14:12:54.000000000 -0400
++++ pvm3/console/Makefile.aimk	2005-02-02 13:20:52.764031000 -0500
+@@ -22,6 +22,7 @@
+ LIBPREFIX	=	lib
+ PVMLIBDEP	=	$(PVMLDIR)/$(LIBPREFIX)$(PVMLIB).a
+ TRCLIBDEP	=	$(TRCLDIR)/$(LIBPREFIX)$(TRCLIB).a
++CFLOPTS        +=       -DUSESTRERROR      
+ CFLAGS		=	$(CFLOPTS) -DIMA_$(PVM_ARCH) -I$(PVMIDIR) -I$(TRCIDIR) \
+ 				-I$(PVMSDIR) $(ARCHCFLAGS)
+ LIBS		=	$(LOPT) -L$(TRCLDIR) -L$(PVMLDIR) \
+--- pvm3/examples/Makefile.aimk.strerror	2004-01-14 13:43:37.000000000 -0500
++++ pvm3/examples/Makefile.aimk	2005-02-02 13:21:39.364384000 -0500
+@@ -24,7 +24,7 @@
+ BDIR		=	$(PVMDIR)/bin
+ XDIR		=	$(BDIR)/$(PVM_ARCH)
+ 
+-CFLOPTS		=	-g
++CFLOPTS		=	-g -DUSESTRERROR
+ CFLAGS		=	$(CFLOPTS) -I$(PVMDIR)/include $(ARCHCFLAGS)
+ 
+ ##### Need to select some architecture-specific libraries to link tasks
+--- pvm3/pvmgs/Makefile.aimk.strerror	2001-11-30 15:33:11.000000000 -0500
++++ pvm3/pvmgs/Makefile.aimk	2005-02-02 13:26:37.580869000 -0500
+@@ -32,6 +32,7 @@
+ # server requests, where XXX is the number of seconds for the timeout.
+ # (Note: this flag can also be added to the ARCHCFLAGS define in the
+ # PVM conf file, i.e.:  $PVM_ROOT/conf/$PVM_ARCH.def )
++CFLOPTS        +=       -DUSESTRERROR
+ CFLAGS		=	$(CFLOPTS) -I$(PVMIDIR) -I$(PVMSDIR) -DIMA_$(PVM_ARCH) \
+ 				$(ARCHCFLAGS)
+ 
+--- pvm3/src/lpvmgen.c.strerror	2004-02-17 13:01:29.000000000 -0500
++++ pvm3/src/lpvmgen.c	2005-02-02 13:31:13.922251000 -0500
+@@ -642,6 +642,8 @@
+ #ifndef USESTRERROR
+ extern char *sys_errlist[];
+ extern int sys_nerr;
++#else
++#include <string.h>
+ #endif
+ #endif
+ 
+@@ -878,7 +880,7 @@
+ 		em = pvmtxt;
+ 	} else */
+ #ifdef USESTRERROR
+-		em = strerror( errno );
++		em = (char*)strerror( errno );
+ #else
+ 		em = ((errno >= 0 && errno < sys_nerr)
+ 			? sys_errlist[errno] : "Unknown Error");
+--- pvm3/src/pvmlog.c.strerror	2004-05-26 11:56:36.000000000 -0400
++++ pvm3/src/pvmlog.c	2005-02-02 13:33:14.497555000 -0500
+@@ -233,6 +233,8 @@
+ #ifndef USESTRERROR
+ extern int sys_nerr;
+ extern char *sys_errlist[];
++#else
++#include <string.h>
+ #endif
+ #endif
+ 
+--- pvm3/tracer/Makefile.aimk.strerror	1998-10-01 17:13:24.000000000 -0400
++++ pvm3/tracer/Makefile.aimk	2005-02-02 13:34:38.069899000 -0500
+@@ -16,7 +16,7 @@
+ PVMVERSION	=
+ #PVMVERSION	=	-DUSE_PVM_33
+ 
+-CFLOPTS		=	-O
++CFLOPTS		=	-O -DUSESTRERROR
+ #CFLOPTS	=	-g
+ 
+ #CC			=	cc
+--- pvm3/gexamples/Makefile.aimk.strerror	2000-02-16 16:48:37.000000000 -0500
++++ pvm3/gexamples/Makefile.aimk	2005-02-02 13:22:09.154564000 -0500
+@@ -22,7 +22,7 @@
+ PVMIDIR	=	$(PVMDIR)/include
+ PVMLDIR	=	$(PVMDIR)/lib/$(PVM_ARCH)
+ PVMLIB	=	$(LOPT) -L$(PVMLDIR) -lgpvm3 -lpvm3 $(ARCHLIB)
+-CFLOPTS	=	-g
++CFLOPTS	=	-g -USESTRERROR
+ CFLAGS	=	$(CFLOPTS) -I$(PVMIDIR) $(ARCHCFLAGS)
+ SDIR	=	$(PVMDIR)/gexamples
+ BDIR	=	$(PVMDIR)/bin
+--- pvm3/hoster/Makefile.aimk.strerror	1997-08-28 15:39:09.000000000 -0400
++++ pvm3/hoster/Makefile.aimk	2005-02-02 13:23:09.409249000 -0500
+@@ -20,7 +20,7 @@
+ BDIR		=	$(PVMDIR)/bin
+ XDIR		=	$(BDIR)/$(PVM_ARCH)
+ 
+-CFLOPTS		=	-O
++CFLOPTS		=	-O -DUSESTRERROR
+ CFLAGS		=	$(CFLOPTS) -I$(PVMIDIR) -I$(PVMSDIR) -DIMA_$(PVM_ARCH) \
+ 				$(ARCHCFLAGS)
+ LIBS		=	-L$(PVMLDIR) -l$(PVMLIB) $(ARCHLIB)
+--- pvm3/libfpvm/Makefile.aimk.strerror	1999-03-15 14:05:11.000000000 -0500
++++ pvm3/libfpvm/Makefile.aimk	2005-02-02 13:24:14.698895000 -0500
+@@ -9,6 +9,7 @@
+ SHELL			=	/bin/sh
+ PVMDIR			=	../..
+ SDIR			=	$(PVMDIR)/libfpvm
++CFLOPTS		       +=       -DUSESTRERROR
+ CFLAGS			=	$(CFLOPTS) -c -DIMA_$(PVM_ARCH) \
+ 					-I$(SDIR) -I$(PVMDIR)/include -I$(PVMDIR)/src \
+ 					$(CDEBUGFLAGS) $(ARCHCFLAGS)
+--- pvm3/rm/Makefile.aimk.strerror	1997-08-28 17:20:11.000000000 -0400
++++ pvm3/rm/Makefile.aimk	2005-02-02 13:27:20.596810000 -0500
+@@ -25,7 +25,7 @@
+ BDIR		=	$(PVMDIR)/bin
+ XDIR		=	$(BDIR)/$(PVM_ARCH)
+ 
+-CFLOPTS		=	-g
++CFLOPTS		=	-g -DUSESTRERROR
+ CFLAGS		=	$(CFLOPTS) -I$(PVMIDIR) $(ARCHCFLAGS) \
+ 				-DIMA_$(PVM_ARCH) $(ARCHCFLAGS) \
+ 			$(DEBUG_FLAGS)
+--- pvm3/shmd/Makefile.aimk.strerror	1999-03-11 15:19:33.000000000 -0500
++++ pvm3/shmd/Makefile.aimk	2005-02-02 13:28:10.182175000 -0500
+@@ -35,6 +35,7 @@
+ PVMLIB		=	pvm3
+ LIBPREFIX	=	lib
+ PVMLIBDEP	=	$(PVMLDIR)/$(LIBPREFIX)$(PVMLIB).a
++CFLOPTS	       +=       -DUSESTRERROR
+ CFLAGS		=	$(CFLOPTS) -I$(PVMIDIR) -I$(PVMSDIR) -DIMA_$(PVM_ARCH) \
+ 				$(ARCHCFLAGS) -DSEM
+ LIBS		=	$(LOPT) -L$(PVMLDIR) -l$(PVMLIB) $(ARCHLIB)
+--- pvm3/tasker/Makefile.aimk.strerror	1997-06-17 16:48:50.000000000 -0400
++++ pvm3/tasker/Makefile.aimk	2005-02-02 13:34:17.114875000 -0500
+@@ -18,7 +18,7 @@
+ BDIR		=	$(PVMDIR)/bin
+ XDIR		=	$(BDIR)/$(PVM_ARCH)
+ 
+-CFLOPTS		=	-g
++CFLOPTS		=	-g -DUSESTRERROR
+ CFLAGS		=	$(CFLOPTS) -I$(PVMIDIR) $(ARCHCFLAGS) \
+ 				-DIMA_$(PVM_ARCH) $(ARCHCFLAGS)
+ LIBS		=	-L$(PVMLDIR) -l$(PVMLIB) $(ARCHLIB)
+--- pvm3/xep/Makefile.aimk.strerror	1997-08-29 10:17:48.000000000 -0400
++++ pvm3/xep/Makefile.aimk	2005-02-02 13:35:18.149780000 -0500
+@@ -20,7 +20,7 @@
+ XDIR		=	$(BDIR)/$(PVM_ARCH)
+ 
+ #CFLOPTS	=	-O
+-CFLOPTS		=	-g
++CFLOPTS		=	-g -USESTRERROR
+ CFLAGS		=	$(CFLOPTS) -I$(PVMIDIR) -L$(PVMLDIR) $(ARCHCFLAGS)
+ LIBS		=	-l$(PVMLIB) $(ARCHLIB) $(OS2XEPLIBS)
+ XLIBS		=	-lXaw -lXmu -lXext -lXt -lX11
+--- pvm3/Makefile.aimk.strerror	2003-03-28 13:29:52.000000000 -0500
++++ pvm3/Makefile.aimk	2005-02-02 13:25:36.013498000 -0500
+@@ -24,7 +24,7 @@
+ #
+ 
+ #CC			=	cc
+-#CFLOPTS	=	-g
++#CFLOPTS	        =	-g   -DUSESTRERROR 
+ #F77		=	f77
+ #FFLOPTS	=	-g
+ #PVMDIR		=	../..
