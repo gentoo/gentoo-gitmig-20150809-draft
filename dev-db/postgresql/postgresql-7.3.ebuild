@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.ebuild,v 1.10 2003/09/06 22:25:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.ebuild,v 1.11 2003/09/10 01:45:05 msterret Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.us.postgresql.org/source/v${PV}/${P}.tar.gz"
@@ -63,7 +63,7 @@ src_compile() {
 	use libg++ && myconf="$myconf --with-CXX"
 
 	# these are the only working CFLAGS I could get on ppc, so locking them
-        # down, anything more aggressive fails (i.e. -mcpu or -Ox)
+	# down, anything more aggressive fails (i.e. -mcpu or -Ox)
 	# Gerk - Nov 26, 2002
 	use ppc && CFLAGS="-pipe -fsigned-char"
 
