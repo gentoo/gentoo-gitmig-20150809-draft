@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+
 <herd>no-herd</herd>
 <maintainer>
-  <email>raker@gentoo.org</email>
+  <email>humpback@gentoo.org</email>
 </maintainer>
+<longdescription>ProFTPD grew out of the desire to have a secure and 
+configurable FTP server, and out of a significant admiration of the Apache web 
+server.</longdescription>
 </pkgmetadata>

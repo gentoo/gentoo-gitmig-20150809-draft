@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.64 2004/06/24 22:47:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.65 2004/07/08 00:32:07 humpback Exp $
+
+*proftpd-1.2.10_rc1-r1 (08 Jul 2004)
+
+  08 Jul 2004; Gustavo Felisberto <humpback@gentoo.org>; metadata.xml,
+  +proftpd-1.2.10_rc1-r1.ebuild:
+  Adding suport fpr mod_shaper a trafic-shaper for all the server. Also
+  rager@g seems to be missing so I will maintain this in the meantime.
 
 *proftpd-1.2.10_rc1 (08 Jun 2004)
 
