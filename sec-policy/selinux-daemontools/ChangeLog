@@ -1,6 +1,14 @@
 # ChangeLog for sec-policy/selinux-daemontools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.6 2004/10/28 09:24:57 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.7 2004/11/13 19:40:14 kaiowas Exp $
+
+*selinux-daemontools-20041111 (13 Nov 2004)
+
+  13 Nov 2004; petre rodan <kaiowas@gentoo.org>
+  -selinux-daemontools-20040203.ebuild,
+  -selinux-daemontools-20041022.ebuild,
+  +selinux-daemontools-20041111.ebuild:
+  new services that can be supervised: apache, stunnel
 
   28 Oct 2004; petre rodan <kaiowas@gentoo.org>
   selinux-daemontools-20041022.ebuild:
