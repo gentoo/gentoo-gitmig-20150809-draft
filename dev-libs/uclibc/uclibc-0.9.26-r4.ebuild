@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r4.ebuild,v 1.2 2004/07/30 19:40:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r4.ebuild,v 1.3 2004/08/06 16:12:50 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -72,8 +72,10 @@ src_unpack() {
 	fi
 
 	# support archs which dont implement all syscalls
-	[ -z "${CVS_VER}" ] && epatch ${FILESDIR}/${PV}/arm-fix-missing-syscalls.patch || \
-		epatch ${FILESDIR}/${PV}/uclibc-0.9.26-arm-dl-sysdep.patch
+	[ -z "${CVS_VER}" ] \
+		&& epatch ${FILESDIR}/${PV}/arm-fix-missing-syscalls.patch \
+		|| epatch ${FILESDIR}/${PV}/uclibc-0.9.26-arm-dl-sysdep.patch
+	epatch ${FILESDIR}/${PV}/arm-ucontext.patch
 
 	# build all .S files w/ -Wa,--noexecstack
 	if [ "0${CVS_VER}" -ge "20040730" ]; then
@@ -150,11 +152,13 @@ src_unpack() {
 	sed -i -e 's:KERNEL_SOURCE.*:KERNEL_SOURCE="/usr":' .config
 
 	check_main_libc
-	if [ "${SYS_LIBC}" = "uClibc" ]
-	then
-		sed -i -e 's:SHARED_LIB_LOADER_PREFIX=.*:SHARED_LIB_LOADER_PREFIX="/lib":' .config
-		sed -i -e 's:DEVEL_PREFIX=.*:DEVEL_PREFIX="/usr":' .config
-		sed -i -e 's:RUNTIME_PREFIX=.*:RUNTIME_PREFIX="/":' .config
+	if [ "${SYS_LIBC}" = "uClibc" ] ; then
+		sed -i \
+			-e 's:SHARED_LIB_LOADER_PREFIX=.*:SHARED_LIB_LOADER_PREFIX="/lib":' \
+			-e 's:DEVEL_PREFIX=.*:DEVEL_PREFIX="/usr":' \
+			-e 's:RUNTIME_PREFIX=.*:RUNTIME_PREFIX="/":' \
+			.config
+		sed -i '/LIBRARY_CACHE:=/s:#::' Rules.mak
 	fi
 
 	make -s oldconfig > /dev/null || die "could not make oldconfig"
@@ -164,6 +168,8 @@ src_unpack() {
 	cp .config myconfig
 
 	emake clean >/dev/null || die "could not clean"
+
+	sed -i 's:\$(R_PREFIX):\\"$(RUNTIME_PREFIX)\\" $(LIBRARY_CACHE):' utils/Makefile
 }
 
 src_compile() {

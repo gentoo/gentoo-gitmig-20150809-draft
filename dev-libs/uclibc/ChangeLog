@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.29 2004/07/30 17:10:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.30 2004/08/06 16:12:50 vapier Exp $
+
+  06 Aug 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/0.9.26/arm-ucontext.patch, uclibc-0.9.26-r4.ebuild:
+  Make sure arm/ucontext.h includes the right context files and fix the ld utils
+  to properly read/write /etc/ld.so.* files.
 
 *uclibc-0.9.26-r4 (30 Jul 2004)
 
