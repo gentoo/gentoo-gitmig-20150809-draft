@@ -1,18 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.5_pre20041110-r3.ebuild,v 1.2 2005/02/06 09:43:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.6_pre20041219-r1.ebuild,v 1.1 2005/02/23 05:52:20 mrness Exp $
 
-inherit eutils
+inherit eutils linux-info
 
 MY_PV="${PV/*_pre/}"
 MY_P="${PN}-CVS-${MY_PV:0:4}-${MY_PV:4:2}-${MY_PV:6:2}"
-S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="ISDN4Linux Utils"
 SRC_URI="ftp://ftp.isdn4linux.de/pub/isdn4linux/CVS-Snapshots/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.isdn4linux.de/"
 
-KEYWORDS="~x86 ~amd64 ~alpha"
+KEYWORDS="x86 amd64 alpha"
 LICENSE="GPL-2"
 IUSE="X unicode"
 SLOT="0"
@@ -24,9 +23,15 @@ DEPEND="virtual/linux-sources
 	dev-lang/tcl
 	X? ( virtual/x11 )"
 RDEPEND="${DEPEND}
-	virtual/modutils"
+	virtual/modutils
+	net-dialup/ppp"
+
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
+	CONFIG_CHECK="PPP"
+	linux-info_pkg_setup
+
 	# Get country code from I4L_CC variable
 	# default country: DE (Germany)
 	I4L_CC=$(echo -n "${I4L_CC}" | tr "[:lower:]" "[:upper:]")
@@ -103,9 +108,18 @@ src_install() {
 	dodir /dev /etc/isdn /usr/bin /usr/sbin
 	make DESTDIR=${D} install || die "make install failed"
 
-	# remove obsolete firmware files
+	# remove obsolete firmware files (these are in net-dialup/isdn-firmware)
 	rm -f ${D}/usr/share/isdn/{bip1120.btl,dnload.bin,ds4bri.bit,dspdload.bin}
 	rm -f ${D}/usr/share/isdn/{loadpg.bin,pc_??_ca.bin,prload.bin,te_????.*}
+
+	# move ISAR.BIN (hisax firmware) to /lib/firmware
+	insinto /lib/firmware
+	doins ${D}/usr/share/isdn/ISAR.BIN
+	rm -f ${D}/usr/share/isdn/ISAR.BIN
+
+	# install autoload/hotplug blacklist
+	insinto /etc/hotplug/blacklist.d
+	newins ${FILESDIR}/${PV}/isdn.blacklist isdn
 
 	# install docs (base)
 	dodoc NEWS README Mini-FAQ/isdn-faq.txt scripts/makedev.sh FAQ/_howto/xp*
@@ -136,23 +150,22 @@ src_install() {
 	dodoc eurofile/scripts/{eft_useradd,check_system,ix25test,eftd.sh,eftp.sh}
 
 	# install init-scripts
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PV}/isdn.init isdn
-	newexe ${FILESDIR}/${PV}/net.ippp0 net.ippp0
-	newexe ${FILESDIR}/${PV}/isdnlog.init isdnlog.contr0
+	newinitd ${FILESDIR}/${PV}/isdn.initd isdn
+	newinitd ${FILESDIR}/${PV}/hisax.initd hisax
+	newinitd ${FILESDIR}/${PV}/net.ippp0 net.ippp0
+	newinitd ${FILESDIR}/${PV}/isdnlog.initd isdnlog.contr0
 
 	# install init-configs
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${PV}/isdn.conf isdn
-	newins ${FILESDIR}/${PV}/isdnlog.conf isdnlog.contr0
+	dodir /etc/conf.d  # BUG: w/o newconfd failes
+	newconfd ${FILESDIR}/${PV}/isdn.confd isdn
+	newconfd ${FILESDIR}/${PV}/isdnlog.confd isdnlog.contr0
 
-	# install example scripts and configs
+	# install example ippp scripts and configs
 	exeinto /etc/ppp
 	insinto /etc/ppp
-	doexe ${FILESDIR}/${PV}/{ip-up,ip-down}
 	doins ${FILESDIR}/${PV}/{ioptions,options.ippp0}
 
-	# install example configs
+	# install example isdn configs
 	insinto /etc/isdn
 	doins isdnlog/samples/{isdn,rate}.conf.{at,de,lu,nl,no,pl}
 	newins isdnlog/samples/isdn.conf isdn.conf.unknown
@@ -165,6 +178,10 @@ src_install() {
 		newins isdnlog/samples/rate.conf.${I4L_CC_LOW} rate.conf
 	fi
 	sed -i -e "s:/usr/lib/isdn/:/usr/share/isdn/:g" ${D}/etc/isdn/isdn.conf*
+
+	# install example hisax config
+	insinto /etc
+	doins ${FILESDIR}/${PV}/hisax.conf
 
 	# install sample provider script
 	exeinto /etc/isdn
@@ -181,10 +198,6 @@ src_install() {
 	# install logrotate configs
 	insinto /etc/logrotate.d
 	newins ${FILESDIR}/${PV}/isdnlog.logrotated isdnlog
-
-	# ipppd module from sys-apps/baselayout  thinks ipppd should be in /sbin; waiting #73067 to be solved
-	dodir /sbin
-	dosym /usr/sbin/ipppd /sbin/ipppd
 }
 
 pkg_postinst() {
@@ -192,6 +205,7 @@ pkg_postinst() {
 	einfo "Please edit:"
 	einfo
 	einfo "- /etc/conf.d/isdn   to contain your ISDN kernel modules"
+	einfo "- /etc/hisax.conf    if you have hisax supported cards"
 	einfo "- /etc/ppp/*         critical if you need networking"
 	einfo
 	einfo "For isdnlog you should edit:"
