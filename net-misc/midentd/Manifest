@@ -1,0 +1,4 @@
+MD5 bc12b146137671b1b7d8d1359b4a5017 files/digest-midentd-2.3.1 64
+MD5 5445c18416fedeea882c4173f8fd8a81 files/midentd.rc 519
+MD5 2bff997b55af52efe0f7dd05f6fc7bc5 midentd-2.3.1.ebuild 840
+MD5 181d91a030cd9bc8fe8da9f7c23b209c ChangeLog 358
