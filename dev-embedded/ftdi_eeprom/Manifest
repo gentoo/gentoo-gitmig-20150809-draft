@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 516ec1a96261183baf65f4412a73bd6a ftdi_eeprom-0.2.ebuild 593
+MD5 32dc8ddab4d0bcbb126f955743ee3947 metadata.xml 275
+MD5 677fb234a64da205dfb8aec0b8826990 ChangeLog 443
+MD5 4beb8ea171af08c035e8c6db5bae70e7 files/digest-ftdi_eeprom-0.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB5lE6mdTrptrqvGERAhiuAJ9NYATihSD4JV3EoJDe7N7ShraxTgCfTXVY
+e5vpryZMxs7BBlYamWQnNpQ=
+=9wf8
+-----END PGP SIGNATURE-----

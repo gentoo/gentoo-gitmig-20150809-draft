@@ -1,0 +1,11 @@
+# ChangeLog for dev-embedded/ftdi_eeprom
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ChangeLog,v 1.1 2005/01/13 10:45:08 dragonheart Exp $
+
+*ftdi_eeprom-0.2 (13 Jan 2005)
+
+  13 Jan 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +ftdi_eeprom-0.2.ebuild:
+  Initial import as per bug #77635. Thanks to Laurence Withers
+  <lwithers@users.sf.net>
+
