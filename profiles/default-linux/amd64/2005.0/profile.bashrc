@@ -11,7 +11,7 @@ export CFLAGS_amd64
 export CFLAGS_x86
 
 # Make sure they updated to 2005.0 properly
-if [ -L /lib32 -o -L /usr/lib32 -o -L /usr/X11R6/lib32 ]; then
+if [ -L /lib32 -o -L /usr/lib32 ]; then
 	eerror "It appears you have switched to the 2005.0 profile without following"
 	eerror "the upgrade guide.  Please see the following URL for more information:"
 	eerror "http://www.gentoo.org/proj/en/base/amd64/2005.0-upgrade-amd64.xml"
