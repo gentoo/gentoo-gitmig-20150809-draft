@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/crystal
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.7 2004/11/09 08:40:51 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.8 2004/12/30 13:38:00 voxus Exp $
+
+*crystal-0.9.1 (30 Dec 2004)
+
+  30 Dec 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  -crystal-0.8.0.ebuild,
+  crystal-0.9.0.ebuild,
+  +crystal-0.9.1.ebuild:
+  Version bump, closing bug #76115. 0.9.0 replaces 0.8.0 in stable x86.
 
 *crystal-0.9.0 (09 Nov 2004)
 
