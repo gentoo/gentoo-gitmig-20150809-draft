@@ -1,0 +1,7 @@
+# ChangeLog for app-admin/pcihpview
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pcihpview/ChangeLog,v 1.1 2004/03/16 18:26:31 gregkh Exp $
+
+  10 Mar 2004; <gregkh@gentoo.org> :
+  Initial ebuild creation
+
