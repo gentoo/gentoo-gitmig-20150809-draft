@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Config-IniFiles
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.4 2003/02/12 06:15:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.5 2003/06/07 11:32:20 mcummings Exp $
+
+*Config-IniFiles-2.38 (07 Jun 2003)
+
+  07 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Config-IniFiles-2.38.ebuild:
+  CPAN update
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
