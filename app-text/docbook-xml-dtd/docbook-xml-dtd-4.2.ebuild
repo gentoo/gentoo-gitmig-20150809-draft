@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2.ebuild,v 1.7 2003/09/05 22:37:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2.ebuild,v 1.8 2003/09/06 19:29:19 obz Exp $
 
 MY_P="docbook-xml-4.2"
 S=${WORKDIR}/${P}
@@ -38,5 +38,34 @@ src_install() {
 }
 
 pkg_postinst() {
+
+	# FIXME: this script needs to work with 4.2 as well as 4.1.2
 	build-docbook-catalog
+
+	# we need to add the docbookx.dtd to local, so 
+	# packages that refer to it dont need to go http
+	# for it <obz@gentoo.org>
+	CATALOG=/etc/xml/catalog
+
+	/usr/bin/xmlcatalog --noout --add "rewriteSystem" \
+		"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" \
+		"/usr/share/sgml/docbook/xml-dtd-4.2/docbookx.dtd" \
+		${CATALOG}
+
+	/usr/bin/xmlcatalog --noout --add "rewriteURI" \
+		"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" \
+		"/usr/share/sgml/docbook/xml-dtd-4.2/docbookx.dtd" \
+		${CATALOG}
+	
+}	
+
+pkg_postrm( ) {
+
+	# and clean up the docbookx.dtd once we've been removed
+	CATALOG=/etc/xml/catalog
+	/usr/bin/xmlcatalog --noout --del \
+		"/usr/share/sgml/docbook/xml-dtd-4.2/docbookx.dtd" \
+		${CATALOG}
+
 }
+
