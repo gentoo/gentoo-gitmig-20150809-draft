@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.5.6.ebuild,v 1.5 2003/09/06 23:32:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.5.6.ebuild,v 1.6 2003/10/08 10:29:50 liquidx Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pygame.org/"
 IUSE=""
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~sparc ~alpha"
+KEYWORDS="~ppc x86 ~sparc ~alpha"
 
 DEPEND="virtual/python
 	>=media-libs/libsdl-1.2.5
