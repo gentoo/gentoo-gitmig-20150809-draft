@@ -1,0 +1,14 @@
+# ChangeLog for net-p2p/azureus-bin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.4 2004/03/05 07:19:27 eradicator Exp $
+
+*azureus-bin-2.0.7.1_pre20040224 (04 Mar 2004)
+
+  04 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  azureus-bin-2.0.7.1_pre20040224.ebuild, metadata.xml,
+  files/azureus-bin-2.0.7.1_pre20040224-gentoo.sh,
+  files/azureus-bin-Makefile.patch:
+  Azureus is a Java based bittorrent client. Initial ebuild provided by me and
+  Andy Daniels <danielsa@uwstout.edu> in bug #35556... only swt interface
+  currently
+
