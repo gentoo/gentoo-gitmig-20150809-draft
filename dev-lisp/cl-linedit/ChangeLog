@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-linedit
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-linedit/ChangeLog,v 1.1 2004/02/15 10:33:49 mkennedy Exp $
+
+*cl-linedit-0.14.8 (15 Feb 2004)
+
+  15 Feb 2004; <mkennedy@gentoo.org> cl-linedit-0.14.8.ebuild, metadata.xml,
+  files/0.14.8-Makefile, files/0.14.8-linedit.asd-uffi-glue-gentoo.patch:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

@@ -1,0 +1,6 @@
+MD5 48a0b30a1a2286bcb46c13deb5750bf7 cl-linedit-0.14.8.ebuild 1037
+MD5 c12dc434890a31a073ff82279295a818 ChangeLog 391
+MD5 6310c8b01587b6100d7a50443ee27454 metadata.xml 820
+MD5 5f8cc94766061989efdc39a3138e88e6 files/0.14.8-linedit.asd-uffi-glue-gentoo.patch 2770
+MD5 8484e646d6628ae40d929863632d4e8e files/0.14.8-Makefile 164
+MD5 185f37d78a060f449f048c6571695583 files/digest-cl-linedit-0.14.8 65
