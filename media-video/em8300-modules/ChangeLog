@@ -1,6 +1,10 @@
 # ChangeLog for media-video/em8300-modules
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.12 2004/09/06 19:40:10 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.13 2004/10/04 03:43:25 iggy Exp $
+
+  03 Oct 2004; <iggy@gentoo.org> em8300-modules-0.15.0_pre20040525.ebuild,
+  em8300-modules-0.15.0_pre20040906.ebuild:
+  switched custom ARCH setting code to use set_arch_to_* from eutils
 
 *em8300-modules-0.15.0_pre20040906 (06 Sep 2004)
 

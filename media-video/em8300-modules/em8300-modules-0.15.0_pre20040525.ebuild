@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.0_pre20040525.ebuild,v 1.4 2004/09/02 00:00:20 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.0_pre20040525.ebuild,v 1.5 2004/10/04 03:43:25 iggy Exp $
 
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
 HOMEPAGE="http://dxr3.sourceforge.net"
@@ -24,11 +24,9 @@ src_unpack () {
 }
 
 src_compile ()  {
-
-	make ARCH="`uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ \
-				-e s/arm.*/arm/ -e s/sa110/arm/ \
-				-e s/s390x/s390/ -e s/parisc64/parisc/`" || die
-
+	set_arch_to_kernel
+	make  || die
+	set_arch_to_portage
 }
 
 src_install () {
