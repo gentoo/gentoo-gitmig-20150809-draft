@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/eclipse-emf-bin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-emf-bin/ChangeLog,v 1.1 2004/06/03 11:45:38 karltk Exp $
+
+*eclipse-emf-bin-200403250631 (01 Jun 2004)
+
+  01 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-emf-bin-200403250631.ebuild:
+  Initial import. Ebuild submitted by Kai Zimmermann <zimmermann79@gmx.de>, with
+  some modifications by myself to use the eclipse-ext eclass.
+
