@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <solar@gentoo.org> (29 Sep 2003)
+# masked for security reasons bug 26787
+<=media-sound/mpg123-0.59s
+
 # <usata@gentoo.org> (30 Sep 2003)
 # Testing needed, beta version.
 =app-i18n/canna-3.7*
