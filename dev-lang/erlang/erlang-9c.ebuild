@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c.ebuild,v 1.1 2003/05/10 18:59:14 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c.ebuild,v 1.2 2003/05/30 03:12:31 george Exp $
 
 IUSE="X ssl"
 
@@ -11,7 +11,7 @@ S="${WORKDIR}/otp_src_R9B-1"
 
 LICENSE="EPL"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-lang/perl-5.6.1
 	X?	( >=x11-base/xfree-4.2.0-r12 )
