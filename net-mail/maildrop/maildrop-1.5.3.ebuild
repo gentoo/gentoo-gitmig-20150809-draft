@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.3.ebuild,v 1.1 2003/07/09 08:21:27 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.3.ebuild,v 1.2 2003/12/01 20:27:51 seemant Exp $
 
 IUSE="mysql ldap gdbm berkdb"
 
@@ -23,7 +23,7 @@ DEPEND="dev-lang/perl
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	mysql? ( >=dev-db/mysql-3.23.51 )
 	ldap? ( >=net-nds/openldap-2.0.23 )"
-RDEPEND="$DEPEND"
+
 PROVIDE="virtual/mda"
 
 src_compile() {
