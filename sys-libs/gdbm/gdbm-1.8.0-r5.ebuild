@@ -1,24 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.32 2004/03/23 17:16:13 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.33 2004/04/28 20:34:14 vapier Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
-IUSE="berkdb static"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU database libraries included for compatibility with Perl"
 HOMEPAGE="http://www.gnu.org/software/gdbm/gdbm.html"
 SRC_URI="mirror://gnu/gdbm/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64 s390"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+IUSE="berkdb static"
 
 DEPEND="virtual/glibc
-	berkdb? (
-	amd64? sys-libs/db
-	!amd64? ( =sys-libs/db-1.85-r1 ) )"
+	berkdb? ( =sys-libs/db-1.85-r1 )"
 
 RDEPEND="virtual/glibc"
 
@@ -30,12 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-
-
-	if [ ! `is-flag "-fomit-frame-pointer"` ]
-	then
-		append-flags "-fomit-frame-pointer"
-	fi
+	! is-flag "-fomit-frame-pointer" && append-flags "-fomit-frame-pointer"
 
 	local myconf
 
@@ -46,7 +37,6 @@ src_compile() {
 }
 
 src_install() {
-
 	einstall \
 		man3dir=${D}/usr/share/man/man3 || die
 
@@ -55,5 +45,5 @@ src_install() {
 
 	dosed "s:/usr/local/lib':/usr/lib':g" /usr/lib/libgdbm.la
 
-	dodoc COPYING ChangeLog NEWS README
+	dodoc ChangeLog NEWS README
 }
