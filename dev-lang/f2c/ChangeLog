@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/f2c
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.6 2004/08/06 09:56:47 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.7 2004/08/06 12:26:14 fmccor Exp $
+
+  06 Aug 2004; Ferris McCormick <fmccor@gentoo.org> f2c-20030320.ebuild:
+  Stable for sparc (part of bug 55386).
 
   06 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> f2c-20030320.ebuild:
   Marked stable on amd64 and ppc.
