@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.106 2004/10/08 11:47:23 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.107 2004/10/08 12:03:10 pauldv Exp $
+
+  08 Oct 2004; <pauldv@gentoo.org> +files/subversion-1.1.0-build.patch,
+  -files/subversion-1.1.0-rc4-build.patch, subversion-1.1.0.ebuild:
+  The previous fix was not applied. Also fix bug #66644 by broadening the 
+  sed script that hacks around the svnversion stuff (the output is 
+  constant)
 
   08 Oct 2004; <pauldv@gentoo.org> files/subversion-1.1.0-rc4-build.patch:
   Fix javahl linking (again) to fix bug #66625, this fix comes from rc2
