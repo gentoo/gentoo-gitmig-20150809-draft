@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.13.ebuild,v 1.1 2003/06/30 19:27:05 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.13.ebuild,v 1.2 2003/07/11 06:30:06 raker Exp $
 
-IUSE="ssl mysql sasl ldap ipv6 maildir mbox"
+IUSE="ssl mysql sasl ldap ipv6 maildir mbox postgres"
 
 inherit eutils
 
@@ -10,6 +10,7 @@ TLS_P="pfixtls-0.8.14-2.0.12-0.9.7b"
 IPV6="1.15"
 IPV6_P="ipv6-${IPV6}-pf-2.0.13"
 IPV6_TLS_P="tls+${IPV6_P}"
+PGSQL_P="postfix-pg.postfix-2.0.0.2"
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org"
@@ -31,7 +32,8 @@ DEPEND=">=sys-libs/db-3.2
 	ldap? ( >=net-nds/openldap-1.2 )
 	mysql? ( >=dev-db/mysql-3.23.51 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
-	sasl? ( dev-libs/cyrus-sasl )"
+	sasl? ( dev-libs/cyrus-sasl )
+	postgres? ( >=dev-db/postgresql-7.1 )"
 
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
@@ -90,6 +92,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
+
 	if [ "`use ssl`" ]; then
 		if [ "`use ipv6`" ]; then
 			epatch ${DISTDIR}/${IPV6_TLS_P}.patch.gz
@@ -102,6 +105,13 @@ src_unpack() {
 	elif [ "`use ipv6`" ]; then
 		epatch ${DISTDIR}/${IPV6_P}.patch.gz
 	fi
+
+	if [ "`use postgres`" ]; then
+		epatch ${FILESDIR}/${PGSQL_P}.patch.bz2
+		CCARGS="${CCARGS} -DHAS_PGSQL -I/usr/include/postgresql"
+                AUXLIBS="${AUXLIBS} -lpq"
+	fi
+
 	cd ${S}/conf
 	sed -i -e "s:/usr/libexec/postfix:/usr/lib/postfix:" main.cf
 
@@ -220,6 +230,12 @@ src_install () {
 	#install an rmail for UUCP, closing bug #19127
 	cd ${S}/auxiliary/rmail
 	dobin rmail
+
+	if [ "`use postgres`" ]; then
+		cd ${S}/README_FILES
+		dodoc PGSQL_README
+		cd ${S}
+	fi
 }
 
 pkg_postinst() {

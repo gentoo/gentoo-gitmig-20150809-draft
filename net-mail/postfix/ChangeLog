@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.76 2003/06/30 19:27:05 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.77 2003/07/11 06:30:06 raker Exp $
+
+  11 Jul 2003; Nick Hadaway <raker@gentoo.org> postfix-2.0.13.ebuild,
+  files/postfix-pg.postfix-2.0.0.2.patch.bz2:
+  Added postgres support and associated patch.  Also installs a
+  PGSQL_README.  Closes bug #23996
 
 *postfix-2.0.13 (30 Jun 2003)
 
