@@ -1,11 +1,10 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.43-r1.ebuild,v 1.2 2001/12/27 05:05:12 karltk Exp $
+# Maintainer: Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.43-r1.ebuild,v 1.3 2002/01/01 22:35:51 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A somewhat comprehensive collection of Linux man pages"
-
 SRC_URI="ftp://ftp.win.tue.nl/pub/home/aeb/linux-local/manpages/man-pages-1.43.tar.gz"
 
 # Modern netman versions are part of the standard man-pages for Linux
