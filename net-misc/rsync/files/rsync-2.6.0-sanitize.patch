@@ -1,11 +1,15 @@
+Fix a security issue with rsyncd not properly sanitizing paths.
+
+Ripped from upstream cvs.
+
 Index: options.c
 ===================================================================
 RCS file: /cvsroot/rsync/options.c,v
 retrieving revision 1.139
 retrieving revision 1.141
 diff -u -b -B -r1.139 -r1.141
---- options.c	22 Feb 2004 08:56:43 -0000	1.139
-+++ options.c	27 Mar 2004 19:42:13 -0000	1.141
+--- options.c
++++ options.c
 @@ -21,6 +21,8 @@
  #include "rsync.h"
  #include "popt.h"
@@ -117,8 +121,8 @@ RCS file: /cvsroot/rsync/clientserver.c,v
 retrieving revision 1.118
 retrieving revision 1.117
 diff -u -b -B -r1.118 -r1.117
---- clientserver.c	27 Mar 2004 09:44:01 -0000	1.118
-+++ clientserver.c	4 Feb 2004 17:06:07 -0000	1.117
+--- clientserver.c
++++ clientserver.c
 @@ -423,19 +423,6 @@
  		}
  	}
@@ -145,8 +149,8 @@ RCS file: /cvsroot/rsync/proto.h,v
 retrieving revision 1.184
 retrieving revision 1.185
 diff -u -b -B -r1.184 -r1.185
---- proto.h	17 Feb 2004 23:13:06 -0000	1.184
-+++ proto.h	27 Mar 2004 09:44:34 -0000	1.185
+--- proto.h
++++ proto.h
 @@ -260,6 +260,7 @@
  void strlower(char *s);
  void clean_fname(char *name);
@@ -161,8 +165,8 @@ RCS file: /cvsroot/rsync/util.c,v
 retrieving revision 1.132
 retrieving revision 1.133
 diff -u -b -B -r1.132 -r1.133
---- util.c	17 Feb 2004 23:13:10 -0000	1.132
-+++ util.c	27 Mar 2004 09:44:49 -0000	1.133
+--- util.c
++++ util.c
 @@ -775,6 +775,34 @@
  	*sanp = '\0';
  }
