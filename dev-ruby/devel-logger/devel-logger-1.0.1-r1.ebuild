@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/devel-logger-1.0.1.ebuild,v 1.6 2004/04/10 08:38:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/devel-logger-1.0.1-r1.ebuild,v 1.1 2004/04/10 08:38:56 usata Exp $
+
+inherit ruby
 
 MY_P=${PN}-${PV//./_}
 DESCRIPTION="Lightweight logging utility"
@@ -11,7 +13,12 @@ SLOT="0"
 KEYWORDS="alpha hppa mips sparc x86"
 IUSE=""
 DEPEND="virtual/ruby"
+USE_RUBY="any"
 S=${WORKDIR}/${MY_P}
+
+src_compile() {
+	return
+}
 
 src_install() {
 	cp install.rb install.rb.orig

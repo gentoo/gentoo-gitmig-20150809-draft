@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/amstd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.8 2004/03/18 21:35:00 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.9 2004/04/10 08:37:26 usata Exp $
+
+  10 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> amstd-2.0.0-r1.ebuild,
+  amstd-2.0.0.ebuild:
+  virtual/ruby fix
 
 *amstd-2.0.0-r1 (16 Nov 2003)
 
