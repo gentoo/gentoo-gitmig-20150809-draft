@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.23 2003/07/18 22:01:13 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.24 2003/08/26 00:42:29 taviso Exp $
+
+*gnupg-1.2.3 (26 Aug 2003)
+
+  26 Aug 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.3.ebuild:
+  new stable release, also enabling experimental support for external 
+  hkp, requested in #16457
 
 *gnupg-1.2.2-r1 (18 Jul 2003)
 
