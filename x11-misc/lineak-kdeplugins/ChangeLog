@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lineak-kdeplugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/ChangeLog,v 1.2 2005/01/03 14:00:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/ChangeLog,v 1.3 2005/02/19 15:59:49 greg_g Exp $
+
+  19 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
+  lineak-kdeplugins-0.8.2.ebuild:
+  Fix usage of kde eclasses.
 
   03 Jan 2005; Stefan Schweizer <genstef@gentoo.org>
   lineak-kdeplugins-0.8.2.ebuild:
