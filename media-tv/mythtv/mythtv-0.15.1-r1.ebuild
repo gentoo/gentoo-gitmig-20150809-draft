@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1-r1.ebuild,v 1.7 2004/07/14 09:30:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1-r1.ebuild,v 1.8 2004/09/18 06:33:06 cardoe Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -107,7 +107,7 @@ src_compile() {
 	if use dvb ; then
 		sed -e 's:#CONFIG += using_dvb:CONFIG += using_dvb:' \
 			-e 's:#DEFINES += USING_DVB:DEFINES += USING_DVB:' \
-			-e 's:#INCLUDEPATH += /usr/src/.*:INCLUDEPATH += /usr/include:' \
+			-e 's:#INCLUDEPATH += /usr/src/.*:INCLUDEPATH += /usr/include/linux/dvb:' \
 			-i 'settings.pro' || die "enable dvb sed failed"
 	fi
 	if use lcd ; then
