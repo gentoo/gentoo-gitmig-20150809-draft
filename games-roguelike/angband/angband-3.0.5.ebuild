@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.5.ebuild,v 1.4 2004/09/23 09:31:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.5.ebuild,v 1.5 2004/09/23 09:32:47 mr_bones_ Exp $
 
 inherit games
 
@@ -51,5 +51,6 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	chmod -R g+w "${ROOT}${GAMES_DATADIR}"/angband/lib/{apex,save,user}
 }
