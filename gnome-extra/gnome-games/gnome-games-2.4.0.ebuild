@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.4.0.ebuild,v 1.1 2003/09/11 23:48:29 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.4.0.ebuild,v 1.2 2003/09/12 00:01:15 spider Exp $
 
 inherit gnome2
 
@@ -32,6 +32,6 @@ src_install() {
 
 	for BLERHG in aisleriot blackjack glines gnect  gnibbles gnobots2 gnome-stones  gnometris gnomine gnotravex gnotski gtali iagno mahjongg same-gnome ; do
 		docinto ${BLERHG}
-		dodoc ${BLERHG}/AUTHORS ${BLERHG}/ChangeLog ${BLERHG}/TODO ${BLERHG}/NEWS ${BLERHG}/README ${BLERHG}/COPYING
+		dodoc ${BLERHG}/[AUTHORS,ChangeLog,TODO,NEWS,README,COPYING]
 	done
 }

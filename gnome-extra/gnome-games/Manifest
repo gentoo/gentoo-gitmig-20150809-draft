@@ -4,7 +4,7 @@ MD5 400c968bbe70fb61bf34b88f75c7b92c gnome-games-2.0.4.ebuild 2606
 MD5 0d41430e782eb9b7742447873fe4ffb2 gnome-games-2.2.0.ebuild 2165
 MD5 73363f84d88e1b9a6cb01d288eccea34 gnome-games-2.2.1.ebuild 2189
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 46d828b271891465ecfaaf6b0c040ea6 gnome-games-2.4.0.ebuild 1107
+MD5 43bb945fadcbcbf732bc53fa95c49ec7 gnome-games-2.4.0.ebuild 1059
 MD5 2301a09a3e02fd7e40f6ee5a7e79e95c files/digest-gnome-games-1.4.0.3-r3 72
 MD5 571bc37cda8b2861b02db12dadbfebeb files/digest-gnome-games-2.0.4 71
 MD5 9f891db92df75c8ddd14ed54e40e22ea files/digest-gnome-games-2.2.0 71
