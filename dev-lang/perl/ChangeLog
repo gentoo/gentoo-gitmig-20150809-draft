@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.32 2003/07/25 21:02:24 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.33 2003/07/25 21:10:46 gmsoft Exp $
 
   25 Jul 2003; <rac@gentoo.org> perl-5.8.1_rc1.ebuild, perl-5.8.1_rc2.ebuild:
   Forward-port alpha and hppa fixes from 5.8.0-r9
@@ -48,6 +48,9 @@
   those uninstalled before they steal our files again
 
 *perl-5.8.0-r12 (25 Jun 2003)
+
+  25 Jul 2003; Guy Martin <gmsoft@gentoo.org> perl-5.8.0-r12.ebuild :
+  Marked stable on hppa.
 
   25 Jun 2003; <rac@gentoo.org> perl-5.8.0-r12.ebuild,
   files/perl-5.8.0-reorder-INC.patch:

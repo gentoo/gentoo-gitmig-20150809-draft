@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r12.ebuild,v 1.9 2003/07/25 18:01:14 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r12.ebuild,v 1.10 2003/07/25 21:10:46 gmsoft Exp $
 
 inherit eutils flag-o-matic 
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.perl.org/"
 SLOT="0"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
-KEYWORDS="x86 amd64 sparc ppc alpha mips ~hppa"
+KEYWORDS="x86 amd64 sparc ppc alpha mips hppa"
 IUSE="berkdb doc gdbm threads"
 
 DEPEND="sys-apps/groff
@@ -151,7 +151,9 @@ src_compile() {
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
-	
+
+	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
+
 cat > config.over <<EOF
 installprefix=${D}/usr
 installarchlib=\`echo \$installarchlib | sed "s!\$prefix!\$installprefix!"\`
