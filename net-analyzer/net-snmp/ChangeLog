@@ -1,10 +1,13 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.12 2003/05/03 04:15:19 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.13 2003/05/08 02:22:26 nitro Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *net-snmp-5.0.6 (14 Oct 2002)
+
+  07 May 2003; Kyle Manna <nitro@gentoo.org> net-snmp-5.0.6.ebuild:
+  Commented out kerberos support, generates compile errors.
 
   02 May 2003; Kyle Manna <nitro@gentoo.org> net-snmp-5.0.6.ebuild:
   Removed double quotes.  Closes #5882.  Now using sed for kerberos.
