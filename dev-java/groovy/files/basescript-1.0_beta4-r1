@@ -1,0 +1,109 @@
+#!/bin/sh
+##############################################################################
+##                                                                          ##
+##  Groovy JVM Bootstrap for UN*X                                           ##
+##                                                                          ##
+##############################################################################
+
+##
+## $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/files/basescript-1.0_beta4-r1,v 1.1 2004/05/05 21:33:29 karltk Exp $
+##
+## Modified for Gentoo by Karl Trygve Kalleberg <karltk@gentoo.org>
+##
+
+PROGNAME=`basename "$0"`
+DIRNAME=`dirname "$0"`
+
+# Use the maximum available, or set MAX_FD != -1 to use that
+MAX_FD="maximum"
+
+# External dependencies
+asm_classpath="@asm_classpath@"
+bsf_classpath="@bsf_classpath@"
+classworlds_classpath="@classworlds_classpath@"
+commons_cli_classpath="@commons_cli_classpath@"
+mockobjects_classpath="@mockobjects_classpath@"
+xerces_classpath="@xerces_classpath@"
+xmojo_classpath="@xmojo_classpath@"
+
+final_classpath="${asm_classpath}:${bsf_classpath}:${classworlds_classpath}:${commons_cli_classpath}:${mockobjects_classpath}:${xerces_classpath}:${xmojo_classpath}"
+
+GROOVY_HOME="@groovy-home@"
+
+warn() {
+    echo "${PROGNAME}: $*"
+}
+
+die() {
+    warn "$*"
+    exit 1
+}
+
+# Use default grok-classworlds config
+if [ -z "$CLASSWORLDS_CONF" ]; then
+    CLASSWORLDS_CONF="$GROOVY_HOME/conf/@scriptname@-classworlds.conf"
+fi
+
+# Determine the Java command to use to start the JVM
+if [ -z "$JAVACMD" ]; then
+    if [ -n "$JAVA_HOME" ]; then
+        if [ -x "$JAVA_HOME/jre/sh/java" ]; then
+            # IBM's JDK on AIX uses strange locations for the executables
+            JAVACMD="$JAVA_HOME/jre/sh/java"
+        else
+            JAVACMD="$JAVA_HOME/bin/java"
+        fi
+    else
+        JAVACMD="java"
+    fi
+fi
+if [ ! -x "$JAVACMD" ]; then
+    die "JAVA_HOME is not defined correctly; can not execute: $JAVACMD"
+fi
+if [ -z "$JAVA_HOME" ] ; then
+    warn "JAVA_HOME environment variable is not set"
+fi
+
+# Increase the maximum file descriptors if we can
+if [ "$cygwin" = "false" ]; then
+    MAX_FD_LIMIT=`ulimit -H -n`
+    if [ $? -eq 0 ]; then
+        if [ "$MAX_FD" = "maximum" -o "$MAX_FD" = "max" ]; then
+            # use the system max
+            MAX_FD="$MAX_FD_LIMIT"
+        fi
+
+        ulimit -n $MAX_FD
+        if [ $? -ne 0 ]; then
+            warn "Could not set maximum file descriptor limit: $MAX_FD"
+        fi
+    else
+        warn "Could not query system maximum file descriptor limit: $MAX_FD_LIMIT"
+    fi
+fi
+
+# Setup Profiler
+useprofiler=false
+if [ "x$PROFILER" != "x" ]; then
+    if [ -r "$PROFILER" ]; then
+        . $PROFILER
+        useprofiler=true
+    else
+        die "Profiler file not found: $PROFILER"
+    fi
+fi
+
+TOOLS_JAR="$JAVA_HOME/lib/tools.jar"
+
+# Start the Profiler or the JVM
+if $useprofiler; then
+    runProfiler
+else
+    exec $JAVACMD $JAVA_OPTS \
+        -classpath "${final_classpath}" \
+        -Dprogram.name="$PROGNAME" \
+        -Dclassworlds.conf="$CLASSWORLDS_CONF" \
+        -Dgroovy.home="$GROOVY_HOME" \
+        -Dtools.jar="$TOOLS_JAR" \
+        org.codehaus.classworlds.Launcher "$@"
+fi
