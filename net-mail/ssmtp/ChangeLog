@@ -1,7 +1,10 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.15 2003/06/15 21:32:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.16 2003/07/09 20:22:54 raker Exp $
 
+
+  09 Jul 2003; Nick Hadaway <raker@gentoo.org> ssmtp-2.60.3.ebuild:
+  Removed the auto ssl enable config generation.  See bug #22658
 
 *ssmtp-2.60.3 (09 Jun 2003)
 

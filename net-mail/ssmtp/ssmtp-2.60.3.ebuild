@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.3.ebuild,v 1.3 2003/06/15 21:32:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.3.ebuild,v 1.4 2003/07/09 20:22:54 raker Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 SRC_URI="ftp://ftp.es.debian.org/debian/pool/main/s/ssmtp/ssmtp_${PV}.tar.gz"
@@ -53,39 +53,26 @@ src_install() {
 	newdoc ssmtp-2.60.lsm
 	insinto /etc/ssmtp
 	doins ssmtp.conf revaliases
+
+	# Set up config file
+	# See bug #22658
+        #local conffile="/etc/ssmtp/ssmtp.conf"
+        #local hostname=`hostname -f`
+        #local domainname=`hostname -d`
+        #mv ${conffile} ${conffile}.orig
+        #sed -e "s:rewriteDomain=:rewriteDomain=${domainname}:g" \
+        #        -e "s:_HOSTNAME_:${hostname}:" \
+        #        -e "s:^mailhub=mail:mailhub=mail.${domainname}:g" \
+        #        ${conffile}.orig > ${conffile}.pre
+	#if [ `use ssl` ];
+        #then
+        #        sed -e "s:^#UseTLS=YES:UseTLS=YES:g" \
+        #                ${conffile}.pre > ${conffile}
+        #        mv ${conffile}.pre ${conffile}.orig
+        #else
+        #        mv ${conffile}.pre ${conffile}
+        #fi
 }
 
-#pkg_config() {
-#
-#	local conffile="/etc/ssmtp/ssmtp.conf"
-#	local hostname=`hostname -f`
-#	local domainname=`hostname -d`
-#	mv ${conffile} ${conffile}.orig
-#	sed -e "s:rewriteDomain=:rewriteDomain=${domainname}:g" \
-#		-e "s:_HOSTNAME_:${hostname}:" \
-#		-e "s:^mailhub=mail:mailhub=mail.${domainname}:g" \
-#		${conffile}.orig > ${conffile}
-#}
-
-pkg_postinst() {
-
-        local conffile="/etc/ssmtp/ssmtp.conf"
-        local hostname=`hostname -f`
-        local domainname=`hostname -d`
-        mv ${conffile} ${conffile}.orig
-        sed -e "s:rewriteDomain=:rewriteDomain=${domainname}:g" \
-                -e "s:_HOSTNAME_:${hostname}:" \
-                -e "s:^mailhub=mail:mailhub=mail.${domainname}:g" \
-                ${conffile}.orig > ${conffile}.pre
-
-        if [ `use ssl` ];
-        then
-                sed -e "s:^#UseTLS=YES:UseTLS=YES:g" \
-                        ${conffile}.pre > ${conffile}
-                mv ${conffile}.pre ${conffile}.orig
-        else
-                mv ${conffile}.pre ${conffile}
-        fi
-}
 
 
