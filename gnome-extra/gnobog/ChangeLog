@@ -1,6 +1,6 @@
 # ChangeLog for gnome-extra/gnobog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnobog/ChangeLog,v 1.5 2003/02/12 06:53:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnobog/ChangeLog,v 1.6 2003/03/29 11:08:21 seemant Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -9,6 +9,10 @@
   KEYWORDS  added
     
 *gnobog-0.4.3 (28 May 2002)
+
+  29 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gnobog-0.4.3.ebuild:
+  HOMEPAGE fix by Frantz Dhin <tragedy_rm@hotmail.com> in bug #18299
+
   28 May 2002; Spider <spider@gentoo.org> gnobog-0.4.3.ebuild ChangeLog:
   initial release, a Gnome Bookmarks Organizer from bugzilla :)
   lintool check
