@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.18 2004/03/15 19:06:11 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.19 2004/03/16 19:37:24 twp Exp $
+
+*lua-5.0.2 (16 Mar 2004)
+
+  16 Mar 2004; Tom Payne <twp@gentoo.org> lua-5.0.2.ebuild :
+  Version bump.
 
   15 Mar 2004; Tom Payne <twp@gentoo.org> lua-5.0.1_beta20031003-r1.ebuild, lua-5.0.1_beta20031003.ebuild, lua-5.0_beta.ebuild :
   Removed old versions. Lua 4.0*: inherit eutils, use epatch.
