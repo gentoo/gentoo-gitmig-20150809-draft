@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.14.20020802.ebuild,v 1.1 2002/08/05 04:57:59 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.14.20020802.ebuild,v 1.2 2002/08/13 23:21:17 azarah Exp $
+
+inherit libtool
 
 MY_P=${P/.200/-200}
 MY_S=${PN}0.7-0.7.14
@@ -23,7 +25,7 @@ KEYWORDS="x86"
 
 src_compile() {
 
-	einfo "${S}"
+	elibtoolize
 
 	local myconf=""
 	local kdepre=""
@@ -58,9 +60,10 @@ src_compile() {
 			&& LDFLAGS="${LDFLAGS}"
 		)
 
+	# Rather not use custom ones here .. build should set as high as
+	# safe by itself.
+	unset CFLAGS CXXFLAGS LDFLAGS
 	
-	export CFLAGS=${CFLAGS/-O?/-O2}
-	export LDFLAGS
 	./configure --prefix=/usr \
 		--host=${CHOST} \
 		--enable-quiet \
