@@ -1,6 +1,10 @@
 # ChangeLog for net-im/naim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.38 2004/03/27 05:23:49 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.39 2004/06/03 15:02:53 humpback Exp $
+
+  03 Jun 2004; Gustavo Felisberto <humpback@gentoo.org>; :
+  Version bump. Thanks to Luke Macken <lewk@csh.rit.edu> for calling our
+  attention in bug 52793
 
   30 Mar 2004; Chris Aniszczyk <zx@gentoo.org> naim-0.11.6.4.ebuild:
   Marking stable on hppa.
