@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c3e49dd55c97af6d6aa863b85b04f383 gentoo-dev-sources-2.6.11-r2.ebuild 1634
+MD5 d0a3b04f125df96b9b47948c8cf8e28d gentoo-dev-sources-2.6.11-r2.ebuild 1617
 MD5 12f9ab0e37ae26ac24dc373ae9b6ad23 gentoo-dev-sources-2.6.1-r2.ebuild 2241
 MD5 5dc2606c69c78aa64a99b3ae316ad5dc gentoo-dev-sources-2.6.9-r9.ebuild 1631
 MD5 b58f2f89ed8df9e95487de620613ddc4 gentoo-dev-sources-2.6.10-r7.ebuild 1628
@@ -29,7 +29,7 @@ MD5 980949de52189c7d9c1d791b7f5cc27e files/2.6-do_munmap.patch 743
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCL0ASiJcSIUGNthERAuOwAKCMHUg6C2FBX50q43JLFma1xkDyjACeNPQI
-id7MUWwz53uBSUysXQGn1XM=
-=cGZh
+iD8DBQFCL0CCiJcSIUGNthERAg3eAKCTAUt7WE6q8PR7xr7oCdntKfV7WgCfVRlB
+wEAAZkanjm2/5j0MaEIYKpo=
+=7AkE
 -----END PGP SIGNATURE-----
