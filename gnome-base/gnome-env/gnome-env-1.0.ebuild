@@ -12,5 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 src_install() {
 	insinto /etc/env.d
 	doins ${FILESDIR}/90gnome
+	exeinto /usr/X11R6/bin/wm
+	doins ${FILESDIR}/gnome
 }
 
