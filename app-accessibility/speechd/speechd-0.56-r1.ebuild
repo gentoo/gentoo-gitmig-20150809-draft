@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56-r1.ebuild,v 1.8 2004/07/22 11:35:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56-r1.ebuild,v 1.9 2004/09/15 17:51:11 eradicator Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.speechio.org/dl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 IUSE="esd"
 
 DEPEND="dev-lang/perl"

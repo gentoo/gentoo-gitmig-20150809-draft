@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8-r2.ebuild,v 1.8 2004/07/22 10:11:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8-r2.ebuild,v 1.9 2004/09/15 17:50:39 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 
 RDEPEND=">=app-accessibility/flite-1.2"
 
