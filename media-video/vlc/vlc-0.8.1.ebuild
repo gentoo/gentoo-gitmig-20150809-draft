@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.2 2005/01/08 04:13:09 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.3 2005/01/08 05:04:17 chriswhite Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -105,8 +105,7 @@ src_compile () {
 	# so the configure script won't find it
 	# unless we setup the proper variable
 	if use mozilla ; then
-		myconf="${myconf} --enable-mozilla"
-		MOZILLA_CONFIG=/usr/lib/mozilla/mozilla-config
+		myconf="${myconf} --enable-mozilla MOZILLA_CONFIG=/usr/lib/mozilla/mozilla-config"
 	else
 		myconf="${myconf} --disable-mozilla"
 	fi
