@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.9 2003/11/26 10:40:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.10 2004/04/27 13:06:15 aliz Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~mips"
 IUSE=""
 DEPEND=""
-RDEPEND="net-misc/host"
+RDEPEND="net-dns/bind-tools"
 if [ `use mips` ]; then
 	S="${WORKDIR}/dnetc${MIN_PV}-ps2linux-mipsel"
 fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9002.479.ebuild,v 1.2 2004/04/21 11:56:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9002.479.ebuild,v 1.3 2004/04/27 13:06:15 aliz Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~hppa -mips"
 IUSE=""
 DEPEND=""
-RDEPEND="net-misc/host"
+RDEPEND="net-dns/bind-tools"
 if [ `use hppa` ]; then
 	S="${WORKDIR}/dnetc${MIN_PV}-linux-hppa"
 fi

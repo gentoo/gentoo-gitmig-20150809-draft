@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.20 2004/04/21 11:56:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.21 2004/04/27 13:06:15 aliz Exp $
+
+  27 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> dnetc-2.9001.478.ebuild,
+  dnetc-2.9002.479.ebuild, dnetc-2.9003.481-r1.ebuild,
+  dnetc-2.9005.483.ebuild:
+  Depend on net-dns/bind-tools instead of net-misc/host as host installs its
+  binary has hostx. Closing #48250.
 
   21 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> dnetc-2.9002.479.ebuild:
   Update keywords.
