@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/xmingw-w32api-2.5.ebuild,v 1.1 2004/03/17 14:43:33 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/xmingw-w32api-2.5.ebuild,v 1.2 2004/04/07 08:35:29 cretin Exp $
+
+inherit eutils
 
 MY_P=${P/xmingw-}
 RUNTIME=mingw-runtime-3.2
@@ -24,6 +26,7 @@ src_unpack() {
 	unpack ${MY_P}-src.tar.gz
 	ln -s ${MY_P} w32api
 	ln -s ${RUNTIME} mingw
+	epatch ${FILESDIR}/${P}-ocidl.patch
 }
 
 src_compile() {

@@ -1,0 +1,11 @@
+--- w32api-2.5/include/ocidl.h.jj	2004-04-07 09:29:55.166925344 +0100
++++ w32api-2.5/include/ocidl.h	2004-04-07 09:30:16.808635304 +0100
+@@ -59,7 +59,7 @@
+ 	LPOLESTR pstrName;
+ 	CLSID clsid;
+ } PROPBAG2;
+-enum tagQACONTAINERFLAGS
++typedef enum tagQACONTAINERFLAGS
+ {
+ 	QACONTAINER_SHOWHATCHING = 1,
+ 	QACONTAINER_SHOWGRABHANDLES = 2,

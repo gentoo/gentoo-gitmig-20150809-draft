@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xmingw-w32api
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/ChangeLog,v 1.4 2004/03/18 21:45:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/ChangeLog,v 1.5 2004/04/07 08:35:29 cretin Exp $
+
+  07 Apr 2004; Stefan Jones <cretin@gentoo.org> :
+  Added patch to ocidl.h to fix bug #46886
 
 *xmingw-w32api-2.5 (17 Oct 2004)
 
