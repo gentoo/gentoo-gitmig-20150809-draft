@@ -1,0 +1,18 @@
+# ChangeLog for dev-java/activation
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-activation/ChangeLog,v 1.1 2004/04/28 00:07:29 karltk Exp $
+
+*gnu-activation-20040331 (28 Apr 2004)
+
+  281 Apr 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  activation-20040331.ebuild: Moved over from dev-java/activation
+
+  19 Apr 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  activation-20040331.ebuild:
+  not parallel build safe
+
+*activation-20040331 (01 Apr 2004)
+
+  01 Apr 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  activation-20040331.ebuild: Initial import. Ebuild submitted by
+  myself. No joke.
