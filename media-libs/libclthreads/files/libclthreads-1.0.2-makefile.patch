@@ -1,0 +1,26 @@
+--- clthreads-1.0.0.orig/Makefile	2004-08-24 00:33:18.572183288 +0200
++++ clthreads-1.0.0/Makefile	2004-08-24 00:35:13.527707392 +0200
+@@ -3,10 +3,8 @@
+ LDLIBS +=
+ 
+ 
+-#CLTHREADS_LIBDIR = /usr/local/lib
+-#CLTHREADS_INCDIR = /usr/local/include
+-CLTHREADS_LIBDIR = /usr/lib
+-CLTHREADS_INCDIR = /usr/include
++CLTHREADS_LIBDIR = ${DESTDIR}/usr/lib
++CLTHREADS_INCDIR = ${DESTDIR}/usr/include
+ CLTHREADS_SO = libclthreads.so
+ CLTHREADS_MAJ = $(CLTHREADS_SO).1
+ CLTHREADS_MIN = $(CLTHREADS_MAJ).0.0
+@@ -20,8 +18,8 @@
+ 
+ 
+ install:	$(CLTHREADS_MIN)
+-	cp -f $(CLTHREADS_H) $(CLTHREADS_INCDIR)
+-	cp -f $(CLTHREADS_MIN) $(CLTHREADS_LIBDIR)
++	install -D $(CLTHREADS_H) $(CLTHREADS_INCDIR)/$(CLTHREADS_H)
++	install -D $(CLTHREADS_MIN) $(CLTHREADS_LIBDIR)/$(CLTHREADS_MIN)
+ 	/sbin/ldconfig -n $(CLTHREADS_LIBDIR)
+ 	ln -sf $(CLTHREADS_MIN) $(CLTHREADS_LIBDIR)/$(CLTHREADS_SO)
+ 
