@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.12-r2.ebuild,v 1.1 2002/12/25 18:59:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.12-r2.ebuild,v 1.2 2003/01/03 17:47:55 foser Exp $
 
 inherit eutils gnome.org
 
@@ -12,7 +12,7 @@ KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 IUSE="nls"
 SRC_URI="${SRC_URI}
-	http://cvs.gentoo.org/~foser/gentoo-gdm-theme.tar.bz2"
+	mirror://gentoo/gentoo-gdm-theme.tar.bz2"
 MY_V="`echo ${PV} |cut -b -5`"
 
 RDEPEND=">=sys-libs/pam-0.72
@@ -28,7 +28,6 @@ RDEPEND=">=sys-libs/pam-0.72
 
 DEPEND="${RDEPEND}
 	>=x11-base/xfree-4.2.0-r3"
-
 
 src_unpack() {
 	unpack ${A}
@@ -48,8 +47,7 @@ src_unpack() {
 
 	rm -f gdm.conf.in.orig
 
-	# Make the config use the Gentoo theme
-	
+	# Make the config use the Gentoo theme	
 }
 
 src_compile() {
