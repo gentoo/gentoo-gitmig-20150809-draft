@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/mod_bandwidth-2.0.4.ebuild,v 1.2 2004/04/04 22:36:52 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/mod_bandwidth-2.0.4.ebuild,v 1.3 2004/04/16 14:26:27 weeve Exp $
 
 DESCRIPTION="Bandwidth Management Module for Apache"
 HOMEPAGE="http://www.cohprog.com/v3/bandwidth/intro-en.html"
 SRC_URI="ftp://ftp.cohprog.com/pub/apache/module/1.3.0/mod_bandwidth.c"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 IUSE=""
 DEPEND="=net-www/apache-1*"
 
