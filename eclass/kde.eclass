@@ -1,10 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.1 2001/09/28 19:25:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.2 2001/09/28 19:30:09 danarmak Exp $
 # This is the kde ebuild for std. kde-dependant apps which follow configure/make/make install
 # procedures and have std. configure options. 
-. /usr/portage/inherit.eclass || die
+. /usr/portage/eclass/inherit.eclass || die
 inherit c autoconf base || die
 ECLASS=kde
 
