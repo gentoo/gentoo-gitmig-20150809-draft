@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0.ebuild,v 1.2 2003/06/27 23:58:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0.ebuild,v 1.3 2003/06/29 17:00:38 liquidx Exp $
 
 IUSE="ssl"
 
@@ -70,9 +70,9 @@ src_install() {
 
 	rm ${D}/usr/lib/libopenh323.so
 	if [ ${ARCH} = "ppc" ] ; then
-		dosym libh323_linux_ppc_r.so.${PV} /usr/lib/libopenh323.so
+		dosym /usr/lib/libh323_linux_ppc_r.so.${PV} /usr/lib/libopenh323.so
 	else
-		dosym libh323_linux_x86_r.so.${PV} /usr/lib/libopenh323.so
+		dosym /usr/lib/libh323_linux_x86_r.so.${PV} /usr/lib/libopenh323.so
 	fi
 
 
