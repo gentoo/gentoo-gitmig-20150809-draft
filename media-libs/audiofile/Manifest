@@ -2,9 +2,9 @@ MD5 0e9affe0f4e3aa609a95175592c4aca2 audiofile-0.2.3-r1.ebuild 808
 MD5 42dc76158b2ef5722ad71803b7029b9a audiofile-0.2.5.ebuild 866
 MD5 2b07e1d9b0a96a5fe8dbf3444604299d audiofile-0.2.6-r1.ebuild 953
 MD5 b1c1e66027e4a3d589733032f35ed38f audiofile-0.2.4.ebuild 867
-MD5 d036d7897cb82d78c0c680e5bd0b4890 ChangeLog 2979
+MD5 e623783b8f3b405b7c8be5c5efc09ae4 ChangeLog 3078
 MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
-MD5 6bb6fab422cb7606cfff9d2d550dca12 audiofile-0.2.6.ebuild 796
+MD5 b0e24694589906f4fb4f94f541bff379 audiofile-0.2.6.ebuild 795
 MD5 6be24f4f613faf959f406fcbe756324e files/sfconvert-eradicator.patch 4345
 MD5 229f6edb9a272909dd6c3f847c52c89f files/digest-audiofile-0.2.4 67
 MD5 bd21c46ede9b8210a6706ceda2b44659 files/digest-audiofile-0.2.5 67
