@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.20 2004/04/12 00:34:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.21 2004/04/12 02:00:19 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -176,9 +176,17 @@ pkg_setup() {
 	PATCHDIR="${WORKDIR}/patch"
 	EXCLUDED="${PATCHDIR}/excluded"
 
+	# Set up CFLAGS
 	filter-flags "-funroll-loops"
 
 	ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O1 -O2 -O3 -pipe -fomit-frame-pointer -g"
+	# arch-specific section added by popular demand
+	case "${ARCH}" in
+		mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
+		# -fomit-frame-pointer known to break things and is pointless
+		# according to ciaranm
+		sparc)	filter-flags "-fomit-frame-pointer"
+	esac
 
 	# Recently there has been a lot of stability problem in Gentoo-land.  Many
 	# things can be the cause to this, but I believe that it is due to gcc3
