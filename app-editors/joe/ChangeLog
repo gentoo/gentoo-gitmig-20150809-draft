@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/joe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.33 2005/01/01 13:28:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.34 2005/03/22 19:10:57 tomk Exp $
+
+*joe-3.2 (22 Mar 2005)
+
+  22 Mar 2005; Tom Knight <tomk@gentoo.org> joe-3.0-r2.ebuild,
+  +joe-3.2.ebuild:
+  Version bump to 3.2, added eutils inherit to 3.0-r2
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
