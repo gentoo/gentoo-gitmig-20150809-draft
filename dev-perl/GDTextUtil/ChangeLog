@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GDTextUtil
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.2 2003/02/12 06:18:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.3 2003/11/04 02:20:33 weeve Exp $
+
+  03 Nov 2003; Jason Wever <weeve@gentoo.org> GDTextUtil-0.83.ebuild:
+  Added ~sparc keyword.
 
 *GDTextUtil-0.83 (05 Nov 2002)
 
