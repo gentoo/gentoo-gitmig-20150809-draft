@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.11-r2.ebuild,v 1.4 2001/06/01 16:18:55 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.11-r2.ebuild,v 1.5 2001/06/01 16:24:34 achim Exp $
 
 A=${PN}-stable-20000704.tgz
 S=${WORKDIR}/${P}
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	berkdb? ( >=sys-libs/db-3.2.3h )""
+	berkdb? ( >=sys-libs/db-3.2.3h )"
 
 src_compile() {
   local myconf
@@ -27,7 +27,7 @@ src_compile() {
   fi
   if [ "`use berkdb`" ] ; then
      myconf="--enable-ldbm --with-ldbm-api=db"
-  else [ "`use gdbm`" ] ; then
+  elif [ "`use gdbm`" ] ; then
      myconf="$myconf --enable-ldbm --with-ldbm-api=gdbm"
   fi
   ./configure --host=${CHOST} --enable-passwd \
