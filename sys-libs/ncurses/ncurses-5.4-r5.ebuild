@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.16 2004/12/07 14:11:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.17 2004/12/07 22:31:09 vapier Exp $
 
-inherit eutils flag-o-matic gnuconfig
+inherit eutils flag-o-matic gnuconfig toolchain-funcs
 
 DESCRIPTION="console display library"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
@@ -59,6 +59,7 @@ src_compile() {
 	# We need the basic terminfo files in /etc, bug #37026.  We will
 	# add '--with-terminfo-dirs' and then populate /etc/terminfo in
 	# src_install() ...
+	tc-export BUILD_CC
 	econf \
 		--libdir=/$(get_libdir) \
 		--with-terminfo-dirs="/etc/terminfo:/usr/share/terminfo" \
