@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.5 2004/04/27 21:42:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.6 2004/04/30 12:12:07 lanius Exp $
 
 inherit eutils
 
@@ -136,7 +136,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ ! -e ${ROOT}dev/.devfsd || ! -e ${ROOT}dev/.udev ]
+	if ! [ -e ${ROOT}dev/.devfsd ] || [ -e ${ROOT}dev/.udev ]
 	then
 		if [ ! -e ${ROOT}dev/ppp ]; then
 			mknod ${ROOT}dev/ppp c 108 0
