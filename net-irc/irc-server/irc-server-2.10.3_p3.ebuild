@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.10.3_p3.ebuild,v 1.1 2003/10/04 00:52:26 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.10.3_p3.ebuild,v 1.2 2004/01/20 22:56:19 mholzer Exp $
 
 DESCRIPTION="RFC compliant IRC server"
 HOMEPAGE="http://www.irc.org"
@@ -98,7 +98,7 @@ src_install() {
 		ircd_log_dir=${D}/var/log \
 		install-server install-tkserv || die
 
-	fowners `cat ${T}/user`.`cat ${T}/group` /var/run/ircd
+	fowners `cat ${T}/user`:`cat ${T}/group` /var/run/ircd
 
 	cd ../doc
 	dodoc *-New alt-irc-faq Authors BUGS ChangeLog Etiquette example.conf \
