@@ -1,16 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e9727a29a214721755d1d10428019123 ChangeLog 1585
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 f4cee3e8c2364a990a17ae849ddadb51 skkserv-9.6-r2.ebuild 942
+MD5 ca7b3618ff5c4833dc7e39e206038a93 ChangeLog 1771
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 1df3aea278eee9b2092c36820697e769 skkserv-9.6-r3.ebuild 1000
+MD5 f7ae492754c0a99cb5a29b6473492494 files/skkserv-9.6-inet_ntoa-gentoo.patch 334
 MD5 e024045d7d565a14129a2eaf6dc17b75 files/digest-skkserv-9.6-r2 60
+MD5 e024045d7d565a14129a2eaf6dc17b75 files/digest-skkserv-9.6-r3 60
+MD5 95787af84c6ab5564abccc1ed695e2d2 files/skkserv.initd 459
 MD5 70c1dee7241cbbc22e632050f07e8f4e files/skkserv-9.6-segfault-gentoo.patch 479
-MD5 06e2b5d59f2c16fd420199c7e4cfb888 files/skkserv.initd 460
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA33ziHTu7gpaalycRAmQ5AKCGxGfXHs258u02JldMEQBO1nNqMQCg9ffI
-AFDGlwi4kOwj3JX68c0kwc4=
-=YMkp
------END PGP SIGNATURE-----
