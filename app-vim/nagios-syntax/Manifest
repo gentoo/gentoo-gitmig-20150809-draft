@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e64581dffc6f108cee4595a79639e36 ChangeLog 495
-MD5 ee39da4391b5c7e7aeefbb368fabf632 nagios-syntax-20050105.ebuild 569
+MD5 b184c848dcc175fb1cbe3d4a404a65f4 ChangeLog 605
 MD5 75259e9b11fda64f118fbe37abe3da32 metadata.xml 456
+MD5 f1f082c5484bbc7e7091ebcd919fafa8 nagios-syntax-20050105.ebuild 576
 MD5 058b32a9d07195eef3a52330df6988b6 files/digest-nagios-syntax-20050105 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB/9vrLLFUmVNQ7rkRAuuBAKCZ1OoQy4tQ768uDg5Xg9X9/yELGQCeJ0Cq
-XFbKZ5VGOx7JN0hqwyGMZmE=
-=W6nU
------END PGP SIGNATURE-----
