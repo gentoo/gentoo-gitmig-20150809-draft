@@ -1,11 +1,16 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.31 2003/04/29 07:37:49 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.32 2003/05/18 16:08:59 agenkin Exp $
 
   29 Apr 2003; Brandon Low <lostlogic@gentoo.org> xine-ui-0.9.10-r1.ebuild,
   xine-ui-0.9.10-r1.ebuild, xine-ui-0.9.12-r1.ebuild,
   xine-ui-0.9.12-r1.ebuild:
   Remove unneeded cruft
+
+*xine-ui-0.9.21 (25 Mar 2003)
+
+  25 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
 
 *xine-ui-0.9.20 (25 Mar 2003)
 
