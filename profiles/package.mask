@@ -24,6 +24,7 @@
 # <foser@gentoo.org> (30 Jan 2003)
 # GNOME 2.2 RC2 Mask
 # !!! DO NOT UNMASK, COMMIT IS NOT YET COMPLETE !!!
+>=gnome-base/gnome-2.2_rc2
 >=gnome-base/gnome-desktop-2.2.0
 >=gnome-base/ORBit2-2.5.1
 >=gnome-base/bonobo-activation-2.2.0
