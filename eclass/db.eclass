@@ -1,9 +1,9 @@
 # This is a common location for functions used in the sys-libs/db ebuilds
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.2 2003/08/21 11:04:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.3 2003/08/21 11:04:54 robbat2 Exp $
 
 ECLASS=db
 INHERITED="$INHERITED $ECLASS"
-EXPORT_FUNCTIONS db_fix_so
+EXPORT_FUNCTIONS db_fix_so db_src_install_doc db_src_install_usrbinslot db_src_install_headerslot db_src_install_usrlibcleanup
 
 db_fix_so () {
 	cd ${ROOT}/usr/lib
