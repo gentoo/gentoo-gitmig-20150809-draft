@@ -1,20 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r2.ebuild,v 1.5 2003/08/14 19:20:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r2.ebuild,v 1.6 2003/10/02 07:39:53 vapier Exp $
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A graphics library for fast image creation"
-SRC_URI="http://www.boutell.com/gd/http/${MY_P}.tar.gz"
 HOMEPAGE="http://www.boutell.com/gd/"
+SRC_URI="http://www.boutell.com/gd/http/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is | BSD"
-KEYWORDS="x86 ~ppc sparc hppa amd64"
-IUSE="X truetype freetype-version-1"
+SLOT="0"
+KEYWORDS="x86 ppc sparc hppa amd64"
+IUSE="X truetype freetype-version-1 jpeg"
 
 DEPEND="media-libs/libpng
-	media-libs/jpeg
+	jpeg? ( media-libs/jpeg )
 	X? ( virtual/x11 )
 	freetype-version-1? ( =media-libs/freetype-1* ) :
 		( truetype? ( =media-libs/freetype-2* ) )"
@@ -34,9 +34,13 @@ src_unpack() {
 	use X \
 		&& compopts="${compopts} -DHAVE_XPM" \
 		&& libsopts="${libsopts} -lXpm -lX11"
+	use jpeg \
+		&& compopts="${compopts} -DHAVE_LIBJPEG" \
+		&& libsopts="${libsopts} -ljpeg" \
+		|| epatch ${FILESDIR}/${PV}-jpeg-inc.patch
 
-	compopts="${compopts} -DHAVE_LIBPNG -DHAVE_LIBJPEG"
-	libsopts="${libsopts} -lpng -ljpeg"
+	compopts="${compopts} -DHAVE_LIBPNG"
+	libsopts="${libsopts} -lpng"
 
 	if [ `use freetype-version-1` ] ; then
 		compopts="${compopts} -DHAVE_LIBTTF"
@@ -48,12 +52,12 @@ src_unpack() {
 		incopts="-I/usr/include/freetype2"
 	fi
 
-	mv Makefile Makefile.old || die
-	sed -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
+	sed -i \
+		-e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
 		-e "s:^\(LIBS\)=.*:\1=-lm -lgd -lz ${libsopts}:" \
 		-e "s:^\(INCLUDEDIRS\)=:\1=${incopts} :" \
 		-e "s:\(COMPILER=\)gcc:\1${CC:-gcc}:" \
-		Makefile.old > Makefile || die
+		Makefile || die
 }
 
 src_compile() {

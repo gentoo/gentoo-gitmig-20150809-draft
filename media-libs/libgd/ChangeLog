@@ -1,11 +1,15 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.32 2003/07/09 23:22:57 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.33 2003/10/02 07:39:53 vapier Exp $
+
+*libgd-1.8.4-r2 (30 Jun 2003)
+
+  02 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Make jpeg support optional again and fix it so that it'll actually
+  compile when jpeg is not present #23648.
 
   10 Jul 2003; Christian Birchinger <joker@gentoo.org> libgd-1.8.4-r2.ebuild:
   Added sparc stable keyword
-
-*libgd-1.8.4-r2 (30 Jun 2003)
 
   06 Jul 2003; Guy Martin <gmsoft@gentoo.org> libgd-1.8.4-r2.ebuild :
   Marked stable on hppa.
