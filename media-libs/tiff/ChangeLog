@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.8 2003/06/20 06:57:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.9 2003/09/05 19:33:03 mholzer Exp $
+
+*tiff-3.6.0_beta2 (06 Sep 2003)
+
+  06 Sep 2003; Martin Holzer <mholzer@gentoo.org> tiff-3.6.0_beta2.ebuild:
+  Version bumped.
 
   19 Jun 2003; <msterret@gentoo.org> tiff-3.5.7-r1.ebuild:
   clear ROOT on install (bug 23102); patch by Martin Gadbois
