@@ -1,6 +1,10 @@
 # ChangeLog for games-server/mtavc
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/ChangeLog,v 1.4 2004/01/02 04:58:32 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/ChangeLog,v 1.5 2004/05/27 05:15:33 mr_bones_ Exp $
+
+  26 May 2004; Michael Sterrett <mr_bones_@gentoo.org> mtavc-0.2.0.ebuild,
+  mtavc-0.2.2.ebuild:
+  cleaned old versions
 
 *mtavc-0.3 (01 Jan 2003)
 
