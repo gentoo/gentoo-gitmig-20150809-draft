@@ -1,6 +1,6 @@
 # ChangeLog for net-www/mod_gzip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/ChangeLog,v 1.9 2003/02/13 09:14:13 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/ChangeLog,v 1.10 2003/04/16 14:33:46 taviso Exp $
 
   13 Feb 2003; Rajiv Manglani <rajiv@gentoo.org> mod_gzip.conf-new :
 
@@ -8,6 +8,9 @@
   option to the default of 500 bytes.
 
 *mod_gzip-1.3.26.1a (22 Jan 2003)
+
+  16 Apr 2003; Tavis Ormandy <taviso@gentoo.org> mod_gzip-1.3.26.1a.ebuild:
+  Marking ~alpha.
 
   22 Jan 2003; Donny Davies <woodchip@gentoo.org> : Version bump; #13378.
   Also fixes #11685.  Thanks xtango@netcombbs.com.ar (Ernesto).  

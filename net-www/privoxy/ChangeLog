@@ -1,8 +1,11 @@
 # ChangeLog for net-www/privoxy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.9 2003/02/27 22:42:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.10 2003/04/16 14:33:46 taviso Exp $
 
 *privoxy-3.0.0 (14 Dec 2002)
+
+  16 Apr 2003; Tavis Ormandy <taviso@gentoo.org> privoxy-3.0.0.ebuild:
+  Marking ~alpha.
 
   27 Feb 2003; Martin Holzer <mholzer@gentoo.org> privoxy-3.0.0.ebuild :
   Marked as stable and changed SLOT="2" to prevent broken package.
