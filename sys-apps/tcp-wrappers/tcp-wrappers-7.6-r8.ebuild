@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.14 2004/07/01 21:40:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.15 2004/07/17 01:28:13 mr_bones_ Exp $
 
 inherit eutils
 
@@ -26,9 +26,11 @@ src_unpack() {
 	cd ${S}
 
 	chmod ug+w Makefile
-	sed -i -e "s:-O:${CFLAGS}:" \
+	sed -i \
+		-e "s:-O:${CFLAGS}:" \
 		-e "s:AUX_OBJ=.*:AUX_OBJ= \\\:" \
-	Makefile
+		Makefile \
+		|| die "sed Makefile failed"
 
 	PATCHDIR=${WORKDIR}/${PV}-patches
 
@@ -38,6 +40,13 @@ src_unpack() {
 
 	use static || epatch ${PATCHDIR}/${P}-shared.patch.bz2
 	use ipv6 && epatch ${PATCHDIR}/${P}-ipv6-1.14.diff.bz2
+
+	# make it parallel-friendly.
+	sed -i \
+		-e 's:@make :@$(MAKE) :' \
+		-e 's:make;:$(MAKE);:' \
+		Makefile \
+		|| die "sed Makefile failed"
 }
 
 src_compile() {
@@ -46,17 +55,17 @@ src_compile() {
 	use static || myconf="${myconf} -DHAVE_WEAKSYMS"
 	use ipv6 && myconf="${myconf} -DINET6=1 -Dss_family=__ss_family -Dss_len=__ss_len"
 
-	make ${MAKEOPTS} \
+	emake \
 		REAL_DAEMON_DIR=/usr/sbin \
 		GENTOO_OPT="${myconf}" \
 		MAJOR=0 MINOR=${PV:0:1} REL=${PV:2:3} \
-		config-check || die
+		config-check || die "emake config-check failed"
 
-	make ${MAKEOPTS} \
+	emake \
 		REAL_DAEMON_DIR=/usr/sbin \
 		GENTOO_OPT="${myconf}" \
 		MAJOR=0 MINOR=${PV:0:1} REL=${PV:2:3} \
-		linux || die
+		linux || die "emake linux failed"
 }
 
 src_install() {

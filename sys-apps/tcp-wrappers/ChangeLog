@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tcp-wrappers
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.32 2004/07/01 21:40:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.33 2004/07/17 01:28:13 mr_bones_ Exp $
+
+  16 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  tcp-wrappers-7.6-r8.ebuild:
+  error check sed; use emake; modify Makefile to make parallel-friendly
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   tcp-wrappers-7.6-r3.ebuild, tcp-wrappers-7.6-r4.ebuild,
