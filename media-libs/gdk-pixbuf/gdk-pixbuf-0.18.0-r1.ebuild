@@ -1,23 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.16.0-r9.ebuild,v 1.3 2002/05/23 06:50:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.18.0-r1.ebuild,v 1.1 2002/06/24 02:13:19 azarah Exp $
 
-#provide Xmake and Xemake
-
-inherit virtualx
+inherit virtualx libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Image Library"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz"
 
-DEPEND="media-libs/jpeg
+DEPEND=">=media-libs/imlib-1.9.14-r1
+	media-libs/jpeg
 	media-libs/tiff
 	=x11-libs/gtk+-1.2*
 	>=media-libs/libpng-1.2.1
 	>=gnome-base/gnome-libs-1.4.1.2-r1"
 # We need gnome-libs here, else gnome support do not get compiled into
 # gdk-pixbuf (the GnomeCanvasPixbuf library )
+
+SLOT="0"
 
 src_unpack() {
 
@@ -31,7 +31,7 @@ src_unpack() {
 src_compile() {
 
 	#update libtool, else we get the "relink bug"
-	libtoolize --copy --force
+	elibtoolize
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
