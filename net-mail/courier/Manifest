@@ -2,7 +2,7 @@ MD5 cde0b9d363f6d323dff0b3435d2e89d0 courier-0.42.2.ebuild 9694
 MD5 9b88ca074a30918d9a752ca19aea095c courier-0.42.2-r3.ebuild 10211
 MD5 6993a637562fbfd0e0a84e0bc4cf1cf8 courier-0.42.2-r2.ebuild 10113
 MD5 891fa054ac6cfcaee491ccaae9b84a85 metadata.xml 463
-MD5 d84dd080930881c6df7ab83722e849c0 ChangeLog 4956
+MD5 cc4ed7783f515d1f895caaeaceb358ab ChangeLog 5201
 MD5 53327473ab98ae5f796aa93d31126841 courier-0.42.2-r1.ebuild 9800
 MD5 b24f71b5e2b701cdcb758c2f6e3b1083 files/digest-courier-0.42.2-r3 68
 MD5 52f032e570c6f5f9f69b4e4bdfa562a1 files/password.dist 247
