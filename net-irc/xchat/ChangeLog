@@ -1,12 +1,19 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.4 2002/04/17 19:29:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.5 2002/05/21 09:45:08 blocke Exp $
+
+*xchat-1.8.9.ebuild (21 May 2002)
+
+  21 May 2002; Bruce A. Locke <blocke@shivan.org> xchat-1.8.9.ebuild :
+
+  Version update and .desktop file cleanup
+
+*xchat-1.8.8-r1 ( 30 Mar 2002)
 
   17 Apr 2002; Seemant Kulleen <seemant@gentoo.org> xchat-1.8.8-r1.ebuild :
 
   gdk-pixbuf is now in gnome USE.
 
-*xchat-1.8.8-r1 ( 30 Mar 2002)
 
   30 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xchat-1.8.8-r1.ebuild :
 
