@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2.ebuild,v 1.1 2004/03/19 16:27:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2.ebuild,v 1.2 2004/03/19 16:34:41 eradicator Exp $
 
 IUSE="static"
 
@@ -47,8 +47,9 @@ src_install () {
 		for lib in lib/*.so*; do
 			if [ -f ${lib} ]; then
 				dolib.so ${lib}
-				majlib=`basename ${lib} | sed 's:\(\.so\.[0-9]\)\(\.[0-9]*\)*$:\1:'`
-				noverlib=`basename ${lib} | sed 's:\(\.so\)\(\.[0-9]*\)*$:\1:'`
+				lib=`basename ${lib}`
+				majlib=`echo ${lib} | sed 's:\(\.so\.[0-9]\)\(\.[0-9]*\)*$:\1:'`
+				noverlib=`echo ${lib} | sed 's:\(\.so\)\(\.[0-9]*\)*$:\1:'`
 
 				dosym ${lib} /usr/lib/${majlib}
 				dosym ${lib} /usr/lib/${noverlib}
