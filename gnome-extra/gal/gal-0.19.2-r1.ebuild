@@ -1,11 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.19.2-r1.ebuild,v 1.3 2002/07/11 06:30:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.19.2-r1.ebuild,v 1.4 2002/07/25 02:56:56 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Gnome Application Libraries"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
+SLOT="0"
+LICENSE="GPL-2 LGPL-2.1"
+KEYWORDS="x86"
+
 
 DEPEND="nls? ( sys-devel/gettext )
 	>=dev-util/intltool-0.11
@@ -17,6 +21,7 @@ DEPEND="nls? ( sys-devel/gettext )
 	>=gnome-base/gnome-print-0.34
 	=gnome-base/libglade-0*
 	>=dev-libs/libxml-1.8.16"
+RDEPEND=${DEPEND}
 
 src_compile() {
 	local myconf

@@ -1,7 +1,11 @@
 # ChangeLog for gnome-extra/gal2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal2/ChangeLog,v 1.3 2002/06/15 13:00:25 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal2/ChangeLog,v 1.4 2002/07/25 02:59:05 spider Exp $
 
+
+  25 Jul 2002; Spider <spider@gentoo.org>
+  SLOT KEYWORDS and LICENSE added
+    
 
 gal2-0.0.4-r1 (15 June 2002)
   15 Jun 2002 ; Spider <spider@gentoo.org> gal2-0.0.4-r1.ebuild :
