@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.39 2004/08/24 02:50:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.40 2004/08/25 01:11:09 gustavoz Exp $
+
+  24 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> busybox-1.00_rc3.ebuild:
+  Keyworded ~sparc
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> busybox-1.00_rc3.ebuild:
   Sync IUSE (uclibc missing)
