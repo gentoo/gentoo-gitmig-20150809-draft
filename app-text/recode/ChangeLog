@@ -1,6 +1,9 @@
 # ChangeLog for app-text/recode
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.17 2004/05/06 12:47:14 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.18 2004/05/13 07:48:23 kumba Exp $
+
+  13 May 2004; Joshua Kinard <kumba@gentoo.org> recode-3.6-r1.ebuild:
+  Added ~mips to KEYWORDS.
 
   06 May 2004; Karl Trygve Kalleberg <karltk@gentoo.org> recode-3.6-r1.ebuild:
   Fix for bogus gcc version check. Marked stable on x86, as the previous
