@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 01a5ffd007276a349c8306ca16dec779 ChangeLog 3900
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 5891bb850ba9b34c67c037c90f3a1016 usbutils-0.11-r3.ebuild 1390
-MD5 fc7f496eec3ed67c2cfbba171054abd2 usbutils-0.11-r5.ebuild 1476
+MD5 9added37ba3c6cc72f18b943f6556523 usbutils-0.11-r5.ebuild 1478
 MD5 2a3ab2fbd47668ba8fb125e2f80aa898 usbutils-0.11-r4.ebuild 1396
 MD5 f703ade59119743d4225df9fb4623aa8 files/digest-usbutils-0.11-r4 128
 MD5 ff18a11aef5916bf61226bf1d9503b15 files/digest-usbutils-0.11-r3 128
@@ -13,9 +13,9 @@ MD5 d20a32b2ea8220b81490216ee51cba82 files/usbutils-0.11-fix-usb-ids-man-page-re
 MD5 79f1705c48b215f002d9f6541cdca376 files/0.11/ppc64-usbutils-kheaderfix.patch 621
 MD5 02a749d768d2c60df972e04643b4a071 files/0.11/lsusb-endian.patch 1834
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBnubOmdTrptrqvGERAk1TAJ4u6rghqYy5vJ7i4f7f3PztKha5UgCfarDT
-Oqz4IiIq7NKPXUDSVCYLGm0=
-=Bv5E
+iD8DBQFB1wY9roRuSHgZdywRAgX8AKCKlqfCHTf+ScKPWF7Ktl+//pZ2+gCgktVQ
+y/o1BRa6LRhW0HO5mYRSdDc=
+=Zlua
 -----END PGP SIGNATURE-----
