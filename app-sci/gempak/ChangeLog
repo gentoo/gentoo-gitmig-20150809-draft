@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/gempak
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gempak/ChangeLog,v 1.2 2004/04/19 09:42:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gempak/ChangeLog,v 1.3 2004/06/03 07:44:06 spyderous Exp $
+
+*gempak-5.7.2_p2 (03 Jun 2004)
+
+  03 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  +gempak-5.7.2_p2.ebuild:
+  Version bump (#49138).
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> gempak-5.6m.ebuild:
   Adding IUSE
