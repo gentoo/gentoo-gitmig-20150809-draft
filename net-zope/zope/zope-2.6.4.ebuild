@@ -1,16 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4_rc1.ebuild,v 1.1 2004/01/21 21:21:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4.ebuild,v 1.1 2004/02/12 15:45:36 lanius Exp $
 
 inherit eutils
 
-MY_PV=${PV/_/-}
-
-S="${WORKDIR}/Zope-${MY_PV}-src"
+S="${WORKDIR}/Zope-${PV}-src"
 
 DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites."
 HOMEPAGE="http://www.zope.org"
-SRC_URI="http://www.zope.org/Products/Zope/2.6.4rc1/Zope-${MY_PV}-src.tgz"
+SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz"
 LICENSE="ZPL"
 SLOT="${PV}"
 
@@ -90,13 +88,6 @@ pkg_setup() {
 	fi
 	enewgroup ${ZGID}
 	enewuser ${ZUID} 261 /bin/bash ${ZS_DIR} ${ZGID}
-}
-
-src_unpack() {
-	unpack ${A}
-	einfo "Patching structured text"
-	cd ${S}/lib/python/StructuredText/
-	epatch ${FILESDIR}/i18n-1.0.0.patch
 }
 
 src_compile() {
