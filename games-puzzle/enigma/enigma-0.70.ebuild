@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.70.ebuild,v 1.1 2003/09/10 06:36:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.70.ebuild,v 1.2 2003/09/11 06:51:20 msterret Exp $
 
 inherit games
 
@@ -13,10 +13,10 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="virtual/glibc
-	>=media-libs/libsdl-1.2.4
-	>=media-libs/sdl-mixer-1.2.0
-	>=media-libs/sdl-image-1.2.0
-	=dev-lang/lua-4.0"
+	>=media-libs/libsdl-1.2.0
+	media-libs/sdl-mixer
+	media-libs/sdl-image
+	>=dev-lang/lua-4.0"
 
 src_compile() {
 	egamesconf --enable-optimize || die
