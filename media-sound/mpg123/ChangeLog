@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.46 2004/07/01 10:58:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.47 2004/09/14 21:34:20 solar Exp $
+
+*mpg123-0.59s-r4 (14 Sep 2004)
+
+  14 Sep 2004; <solar@gentoo.org> +files/mpg123-0.59s-CAN-2004-0805.patch,
+  +mpg123-0.59s-r4.ebuild:
+  security bump. bug #63079 : A malicious formatted mp3/2 causes mpg123 to fail
+  header checks, this may allow arbitrary code to be executed with the privilege
+  of the user trying to play the mp3.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mpg123-0.59s-r2.ebuild, mpg123-0.59s-r3.ebuild:
