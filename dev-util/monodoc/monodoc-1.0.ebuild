@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.0.ebuild,v 1.2 2004/06/30 15:58:32 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.0.ebuild,v 1.3 2004/07/04 17:05:13 latexer Exp $
 
 inherit mono
 
@@ -14,14 +14,22 @@ IUSE=""
 DEPEND=">=dev-dotnet/mono-1.0
 		>=x11-libs/gtk-sharp-1.0"
 
+src_unpack() {
+	if [ ! -f ${ROOT}/usr/lib/mono/gtk-sharp/gtkhtml-sharp.dll ]
+	then
+		echo
+		eerror "Support for gtkhtml missing from gtk-sharp!"
+		eerror "Please re-emerge gtk-sharp with 'gtkhtml' in USE,"
+		eerror "then emerge monodoc."
+		die "gtkhtml support missing from gtk-sharp"
+	fi
+	unpack ${A}
+}
+
 src_compile() {
 	econf || die
 	MAKEOPTS="${MAKEOPTS} -j1"
-	emake || {
-		echo
-		ewarn "If for some reason this fails, try adding 'gtkhtml' to your USE variables, re-emerge gtk-sharp, then emerge monodoc"
-		die "make failed"
-	}
+	emake || die "make failed"
 }
 
 src_install() {
