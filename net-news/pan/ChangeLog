@@ -1,6 +1,13 @@
 # ChangeLog for net-news/pan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.9 2002/06/19 16:49:48 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.10 2002/06/23 12:37:03 stroke Exp $
+
+*pan-0.12.0-r1 (23 Jun 2002)
+
+  23 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> pan-0.12.0-r1.ebuild:
+
+  Removed libgnome depencence. Closes bug #4003
+
 
 *pan-0.12.0 (19 Jun 2002)
 
