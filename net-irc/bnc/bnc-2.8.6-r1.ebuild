@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.8.6-r1.ebuild,v 1.1 2004/06/21 22:52:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.8.6-r1.ebuild,v 1.2 2004/06/21 23:30:48 swegener Exp $
 
 inherit eutils
 
@@ -20,16 +20,22 @@ DEPEND="virtual/glibc"
 
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
 	# fix gcc-3.4 compilation, bug #54689.
 	epatch ${FILESDIR}/bnc-2.8.6-gotofail-labelfix.patch
 	epatch ${FILESDIR}/bncsetup.patch
-	econf || die
-	emake || die
-	mv mkpasswd bncmkpasswd
+}
+
+src_compile() {
+	econf || die "econf failed"
+	emake OPTS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
+	mv mkpasswd bncmkpasswd
 	dodoc CHANGES README
 	dobin bnc bncchk bncsetup bncmkpasswd || die
 	insinto /usr/share/${MY_P}
