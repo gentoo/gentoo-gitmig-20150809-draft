@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.2.ebuild,v 1.7 2004/10/16 17:05:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.2.ebuild,v 1.8 2004/10/22 01:10:06 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -220,16 +220,12 @@ src_install() {
 	fi
 
 	# FHS compatibility symlinks stuff
-	dosym ../var/tmp /usr/tmp
-	dosym share/man /usr/man
-	dosym share/doc /usr/doc
-	dosym share/info /usr/info
+	dosym /var/tmp /usr/tmp
 	dosym ../../share/info	/usr/X11R6/share/info
-	dosym ../X11R6/include/X11 /usr/include/X11
-	dosym ../X11R6/include/GL /usr/include/GL
-	dosym ../X11R6/lib/X11 /usr/lib/X11
+	dosym /usr/X11R6/include/X11 /usr/include/X11
+	dosym /usr/X11R6/include/GL /usr/include/GL
+	dosym /usr/X11R6/lib/X11 /usr/lib/X11
 	dosym share/man /usr/local/man
-	dosym share/doc	/usr/local/doc
 
 	#
 	# Setup files in /etc
