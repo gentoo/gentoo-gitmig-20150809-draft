@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.32 2003/08/03 15:21:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.33 2003/09/17 21:20:23 solar Exp $
+
+*bind-9.2.2-r3 (17 Sep 2003)
+
+  17 Sep 2003; <solar@gentoo.org> bind-9.2.2-r3.ebuild:
+  Recently verisign added a wildcard A record to the .COM and .NET TLD DNS zones
+  making all .com and .net domains appear to be registered. Adding ISC bind
+  patch. Updated ebuild submission by Bryan Stine. Added a few comments from
+  Danny and Corporate Gadfly to pkg_postinst.
 
   15 Jul 2003; Martin Holzer <mholzer@gentoo.org> files/named.conf-r2:
   Fixed pid patch. Closes #24497
