@@ -1,4 +1,6 @@
-MD5 a6d96c7170c7b5a9458409aef1e66366 ChangeLog 896
 MD5 763e0d7abd146ee59ce086c4ae28958a akregator-1.0_beta3.ebuild 458
 MD5 847999e7e4c4132a3a719821758026d0 metadata.xml 226
+MD5 e589d0b5867e53b7567710d2f34c56c2 akregator-1.0_beta6.ebuild 445
+MD5 0949e823691ab70b844120c54114d2a5 ChangeLog 1049
 MD5 b71858bbf72fba1cf7f3f58bf099df62 files/digest-akregator-1.0_beta3 72
+MD5 ba05c1117508b614b339bb01eecd8732 files/digest-akregator-1.0_beta6 71
