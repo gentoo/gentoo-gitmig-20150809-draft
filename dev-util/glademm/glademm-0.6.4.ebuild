@@ -1,13 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.9 2004/02/20 17:19:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.10 2004/04/25 21:45:35 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A C++ backend for glade, the GUI designer for Gtk."
 HOMEPAGE="http://home.wtal.de/petig/Gtk/"
 SRC_URI="http://distro.ibiblio.org/pub/linux/distributions/sorcerer/sources/${P}b.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 sparc"
 
 DEPEND="=dev-util/glade-0.6*
@@ -28,7 +30,7 @@ src_unpack() {
 	then
 		cd ${WORKDIR}
 		# Fix supplied by "Nicholas Wourms" <nwourms@netscape.net> 
-		patch -p0 < ${FILESDIR}/glademm-0.6.4b-gcc3.patch || die
+		epatch ${FILESDIR}/glademm-0.6.4b-gcc3.patch
 	fi
 
 	# fixes gcc3 missing includes #40283
@@ -37,14 +39,9 @@ src_unpack() {
 
 }
 
-src_compile() {
-	econf
-	emake || die
-}
-
 src_install() {
-	einstall
-	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL NEWS README TODO
+	einstall || die
+	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README TODO
 	dodoc docs/*.txt docs/glade.wishlist
 	dohtml -r docs
 }

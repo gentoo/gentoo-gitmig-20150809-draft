@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.10 2004/03/25 08:26:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.11 2004/04/25 21:48:49 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Scheme interpreter"
-SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/guile/"
+SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 
-IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc alpha hppa ia64 ~amd64 sparc mips"
+IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/readline-4.1"
@@ -24,9 +24,6 @@ DEPEND=">=sys-libs/ncurses-5.1
 SLOT="12"
 MAJOR="1.6"
 
-# Problems with parallel builds (#34029), so I'm taking the safer route
-MAKEOPTS="${MAKEOPTS} -j1"
-
 src_compile() {
 	# Fix for bug 26484: This package fails to build when built with
 	# -g3, at least on some architectures.  (19 Aug 2003 agriffis)
@@ -39,7 +36,8 @@ src_compile() {
 	econf \
 		--with-threads \
 		--with-modules || die
-	emake || die
+	# Problems with parallel builds (#34029), so I'm taking the safer route
+	emake -j1 || die
 }
 
 src_install() {
