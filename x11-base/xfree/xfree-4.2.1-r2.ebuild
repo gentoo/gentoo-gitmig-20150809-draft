@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.6 2002/12/15 10:44:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.7 2002/12/16 18:39:05 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -388,7 +388,7 @@ src_install() {
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/DPS /usr/include/DPS
 	dosym ../X11R6/include/GL /usr/include/GL
-	dosym ../X11R6/lib/X11 /usr/lib/X11
+	dosym ../X11R6/lib /usr/lib/X11
 	dosym ../../usr/X11R6/lib/X11/xkb /etc/X11/xkb
 
 	# Some critical directories
@@ -551,6 +551,12 @@ pkg_preinst() {
 		fi
 		
 	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/X11R6/lib/X11
+	fi
+
+	# This one was borked, so make sure fixed one gets installed.
+	if [ -L ${ROOT}/usr/lib/X11 ]
+	then
+		rm -f ${ROOT}/usr/lib/X11
 	fi
 
 	# clean the dinamic libGL stuff's home to ensure
