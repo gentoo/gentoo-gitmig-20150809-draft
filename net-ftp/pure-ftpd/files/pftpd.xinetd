@@ -1,0 +1,10 @@
+# This runs the Pure-FTPd Server
+service ftp 
+{ 
+    socket_type = stream 
+    server = /usr/sbin/pure-ftpd 
+    protocol = tcp 
+    user = root 
+    wait = no
+    disable = no 
+}
