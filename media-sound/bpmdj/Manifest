@@ -1,8 +1,9 @@
-MD5 c715b65fce426ce9892d6f1fb32d383d ChangeLog 921
+MD5 d6ca51c27a0bac943b867bf6062ee569 ChangeLog 1026
 MD5 847619c2dd902167fc813fe0802fc2c6 bpmdj-1.5.ebuild 665
 MD5 39c4c29e27042920fd02fed7dbe45596 bpmdj-1.6.ebuild 632
 MD5 e9d4f384578a02deb87e22031b08f4da bpmdj-1.7.ebuild 699
 MD5 b8894961ee2856bdff66b65e48418fd3 bpmdj-1.8.ebuild 666
+MD5 ce4d5fa56da079be2201b46f52cdf6c4 bpmdj-1.9.ebuild 623
 MD5 946e0049ea85710b4cc9fea4b9986ccf files/digest-bpmdj-1.7 66
 MD5 de7ee79975ed2158d870f352f9961778 files/digest-bpmdj-1.5 65
 MD5 6c2b6421f6c4ade4a1bb8040a5a78247 files/digest-bpmdj-1.6 65
@@ -10,3 +11,4 @@ MD5 1ab89fc05943dbae022e30c2ef830df8 files/makefile 7686
 MD5 0916592b27a911e4693cc4ad8f56a650 files/digest-bpmdj-1.8 65
 MD5 4f7cb7fcaf48f820d690675d5d76fcd6 files/fabsl-1.7.patch 896
 MD5 a8b35f9eec4a969f1c2dddc22c58f185 files/fabsl-1.8.patch 971
+MD5 db7cfc7cc26eb7fe63fcb6d62f215117 files/digest-bpmdj-1.9 66
