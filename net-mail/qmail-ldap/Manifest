@@ -9,7 +9,7 @@ MD5 1dcd3bb9666d5015bca6b7eb33478542 files/errno.patch.bz2 401
 MD5 b69ae80155ab4d0555b66a79ae5ab95d files/digest-qmail-ldap-1.03-r1 452
 MD5 c378c5845848ee31d70f0d05cbcf86be files/dot_qmail 12
 MD5 8af1f30a164fbdec0d51d11ef82dcaa9 files/tls.patch.bz2 406
-MD5 0b5b699aaf38366692d70ac3aa3a51e9 files/qmail-control 809
+MD5 1a590268c013010a19477f9eb7397972 files/qmail-control 805
 MD5 d24fa37b58967d2d8022c84c88148ed6 files/control/file 41
 MD5 04f43d57aee8dc0b8e2465eeb7035e2b files/control/ldapbasedn 19
 MD5 f77794722007d48a2d7751684ac23580 files/control/ldaplogin 45

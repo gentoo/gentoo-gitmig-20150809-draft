@@ -1,0 +1,13 @@
+#!/bin/sh
+LL=`head -1 /var/qmail/control/qmail-pop3d-loglevel`
+SL=`head -1 /var/qmail/control/qmail-pop3d-softlimit`
+HOSTNAME=`head -1 /var/qmail/control/me`
+exec 						\
+	env MAILDIR=Maildir			\
+	env LOGLEVEL=$LL  			\
+	/usr/bin/softlimit -m $SL 		\
+	/usr/bin/softlimit -m 20000000 		\
+        /usr/bin/tcpserver -H -R -c100 0 110 	\
+	/var/qmail/bin/qmail-popup  		\
+	$HOSTNAME /var/qmail/bin/auth_pop 	\
+	/var/qmail/bin/qmail-pop3d $MAILDIR 2>&1
