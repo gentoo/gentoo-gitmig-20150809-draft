@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/SQL-Statement
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.1 2005/02/07 12:38:12 mcummings Exp $
+
+*SQL-Statement-1.09 (07 Feb 2005)
+
+  07 Feb 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +SQL-Statement-1.09.ebuild:
+  Bug 59148
+
