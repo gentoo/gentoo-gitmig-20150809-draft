@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@uwyn.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04.ebuild,v 1.1 2002/04/10 21:06:49 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04.ebuild,v 1.2 2002/04/11 02:45:51 drobbins Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="An Object-Oriented Data Analysis Framework"
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 	>=media-libs/xpm-3.4k
 	>=media-libs/freetype-2.0.9
 	opengl? ( virtual/opengl virtual/glu )
-	mysql? ( >=dev-db/mysql-4.23.49 )
+	mysql? ( >=dev-db/mysql-3.23.49 )
 	postgres? ( >=dev-db/postgresql-7.1.3-r4 )"
 RDEPEND="${DEPEND}"
 
