@@ -1,22 +1,8 @@
 # GR Security toggles.
 #
+# Note: chpax support has been removed from this init script.
+# Configure /etc/conf.d/chpax instead
 
-# Files that we should remove PAGE_EXEC enforcement from
-PAGE_EXEC_EXEMPT="/usr/X11R6/bin/XFree86 /usr/lib/wine/bin/wine"
-
-# Files we should turn off trampoline emmulation for
-TRAMPOLINE_EXEMPT=""
-
-# Files we should not restrict mprotect on
-MPROTECT_EXEMPT=""
-
-# Files we should not randomize mmap for
-MMAP_EXEMPT=""
-
-# Files not to enforce segmentation based non-executable pages
-SEGMENTATION_EXEMPT="${PAGE_EXEC_EXEMPT}"
-
-# 
 # Check your running kernel for valid options.
 # "sysctl -a | grep kernel.grsecurity. | cut -d '.' -f 3  | awk '{print $1}'"
 # 
@@ -80,7 +66,21 @@ SEGMENTATION_EXEMPT="${PAGE_EXEC_EXEMPT}"
 # tpe_glibc
 # tpe_restrict_all
 
+# Strict set with negligible performance impact:
+#ENABLED="audit_chdir audit_group audit_ipc audit_mount chroot_caps \
+#         chroot_deny_chmod chroot_deny_chroot chroot_deny_fchdir \
+#         chroot_deny_mknod chroot_deny_mount chroot_deny_pivot \
+#         chroot_deny_shmat chroot_deny_sysctl chroot_deny_unix \
+#         chroot_enforce_chdir chroot_execlog chroot_findtask \
+#         chroot_restrict_nice dmesg exec_logging execve_limiting \
+#         fifo_restrictions forkfail_logging linking_restrictions rand_isns \
+#         rand_ip_ids rand_pids rand_rpc rand_tcp_src_ports signal_logging \
+#         socket_all socket_client socket_server timechange_logging tpe"
+
 ENABLED=""
+
+# Set when audit_group is enabled
+audit_gid=1007
 
 # Set when allow_ptrace_group is enabled
 ptrace_gid=10
