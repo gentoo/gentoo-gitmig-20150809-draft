@@ -1,8 +1,16 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.5 2002/07/06 23:30:33 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.6 2002/07/19 01:59:54 seemant Exp $
 
-gftp-2.0.12-r2 (06 Jul 2002)
+*gftp-2.0.12-r3 (18 Jul 2002)
+
+  18 Jul 2002; Seemant Kulleen <seemant@gentoo.org> gftp-2.0.12-r3.ebuild
+  files/digest-gftp-2.0.12-r3 :
+
+  Sandbox violation fixed. Closes bug # 5217 by yariv@vipe.technion.ac.il
+  (Yariv Ido)
+
+*gftp-2.0.12-r2 (06 Jul 2002)
   06 Jul 2002; Spider <spider@gentoo.org> gftp-2.0.12-r2.ebuild :
   using the gtk2 USE flag and fixed it up to pass lintool checks
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.12-r2.ebuild,v 1.2 2002/07/17 09:39:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.12-r3.ebuild,v 1.1 2002/07/19 01:59:54 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome based FTP Client"
@@ -29,7 +29,7 @@ src_compile() {
 
 src_install() {
 
-	make prefix=${D}/usr mandir=${D}/usr/share/man install || die
+	einstall || die
 
 	dodoc COPYING ChangeLog README* THANKS TODO
 	dodoc docs/USERS-GUIDE
