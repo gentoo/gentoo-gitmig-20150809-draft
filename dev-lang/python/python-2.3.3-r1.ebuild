@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.13 2004/06/13 04:50:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.14 2004/06/15 06:22:55 solar Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -19,7 +19,7 @@ DESCRIPTION="A really great language"
 SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${MY_PV}.tar.bz2"
 HOMEPAGE="http://www.python.org"
 
-IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X"
+IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X uclibc"
 LICENSE="PSF-2.2"
 SLOT="2.3"
 
@@ -73,8 +73,8 @@ src_configure() {
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm bsddb"
 		use readline \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} readline"
-		[ -z "use X" -o -z "use tcltk" ] \
-			&& PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
+		( use X && use tcltk ) \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
 		use ncurses \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _curses _curses_panel"
 		use ssl \
@@ -143,6 +143,14 @@ src_install() {
 
 	# install python-updater in /usr/sbin
 	dosbin ${FILESDIR}/python-updater
+
+	if use build ; then
+		rm -rf ${D}/usr/lib/python2.3/{test,encodings,email,lib-tk,bsddb/test}
+	else
+		use uclibc && rm -rf ${D}/usr/lib/python2.3/{test,bsddb/test}
+		use berkdb || rm -rf ${D}/usr/lib/python2.3/bsddb
+		( use X && use tcltk ) || rm -rf ${D}/usr/lib/python2.3/lib-tk
+	fi
 }
 
 pkg_postrm() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.99 2004/06/13 04:50:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.100 2004/06/15 06:22:55 solar Exp $
+
+  15 Jun 2004; <solar@gentoo.org> python-2.3.3-r1.ebuild:
+  USE= cleanups and added uclibc
 
   12 Jun 2004; Tom Gall <tgall@gentoo.org> python-2.3.3-r1.ebuild:
   stable on ppc64, bug #53575
