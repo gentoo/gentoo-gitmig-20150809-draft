@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DB_File
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/ChangeLog,v 1.19 2004/02/20 20:24:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/ChangeLog,v 1.20 2004/02/27 17:29:09 mcummings Exp $
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org> DB_File-1.807.ebuild:
+  Marking stable for x86
 
   20 Feb 2004; Aron Griffis <agriffis@gentoo.org> DB_File-1.803-r2.ebuild,
   DB_File-1.807.ebuild:
