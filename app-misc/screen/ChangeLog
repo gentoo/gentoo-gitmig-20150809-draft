@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.4 2002/04/08 03:06:46 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.5 2002/06/03 22:19:01 naz Exp $
+
+*screen-3.9.11-r3 (3 Jun 2002)
+
+ 3 Jun 2002; Michael M Nazaroff <naz@gentoo.org> screen-3.9.11-r3.ebuild
+
+ Added in sandbox_predict to help correct a sandbox violation trying to test
+ /dev/pty/s0, this should take care of the issue.
 
 *screen-3.9.11-r2 (7 Mar 2002)
 
