@@ -1,3 +1,8 @@
+# 20 Feb 2005 Guy Martin <gmsoft@gentoo.org>
+# Hardware for asterisk not yet tested
+zaptel
+resperl
+
 # 18 Feb 2005 Guy Martin <gmsoft@gentoo.org>
 # No emboss support on hppa for now
 emboss
