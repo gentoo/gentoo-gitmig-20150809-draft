@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre-r4.ebuild,v 1.1 2004/08/22 12:36:05 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre-r5.ebuild,v 1.1 2004/08/22 19:33:46 voxus Exp $
 
 inherit eutils
 

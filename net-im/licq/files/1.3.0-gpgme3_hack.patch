@@ -18,3 +18,14 @@
  
  cat >>confdefs.h <<_ACEOF
  #define HAVE_LIBGPGME 1
+--- include/licq_gpg.h.orig	2004-08-22 22:58:46.660566481 +0400
++++ include/licq_gpg.h	2004-08-22 22:57:15.460429001 +0400
+@@ -3,7 +3,7 @@
+ #define _LICQ_GPG_H_INCLUDED_
+ 
+ #ifdef HAVE_LIBGPGME
+-#include <gpgme.h>
++#include <gpgme3/gpgme.h>
+ #endif
+ #include <pthread.h>
+ 
