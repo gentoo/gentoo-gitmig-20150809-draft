@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.38 2004/04/21 22:05:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.39 2004/04/27 08:33:39 aliz Exp $
 
 *mips-sources-2.4.22-r12 (21 Apr 2004)
+*mips-sources-2.4.23-r8 (21 Apr 2004)
+*mips-sources-2.4.25-r2 (21 Apr 2004)
+*mips-sources-2.4.26-r1 (21 Apr 2004)
 
   21 Apr 2004; Joshua Kinard <kumba@gentoo.org>
   +files/CAN-2004-0177-ext3_jbd.patch, +files/CAN-2004-0178-sbblaster.patch,

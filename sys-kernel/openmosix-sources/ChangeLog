@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.42 2004/04/21 12:51:44 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.43 2004/04/27 08:33:39 aliz Exp $
 
 *openmosix-sources-2.4.26 (21 Apr 2004)
 
@@ -9,6 +9,7 @@
   Version bumped. Cleaned out old ebuild. Closes #48479.
 
 *openmosix-sources-2.4.25-r3 (18 Apr 2004)
+*openmosix-sources-2.4.22-r6 (18 Apr 2004)
 
   18 Apr 2004; <plasmaroo@gentoo.org>
   +files/openmosix-sources.CAN-2004-0010.patch,
