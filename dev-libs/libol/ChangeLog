@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/libol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.16 2003/03/28 12:33:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.17 2003/04/14 14:20:41 gmsoft Exp $
 
 *libol-0.3.9 (09 Feb 2003)
+
+  14 Apr 2003; Guy Martin <gmsoft@gentoo.org> libol-0.3.9.ebuild :
+  Added hppa to KEYWORDS.
 
   28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> libol-0.3.9.ebuild:
   Mark stable on ppc
