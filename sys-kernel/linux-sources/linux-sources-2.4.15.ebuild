@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15.ebuild,v 1.2 2001/11/24 00:42:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15.ebuild,v 1.3 2001/11/24 00:43:13 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -121,14 +121,7 @@ src_unpack() {
 
 	cd ${S}
 	#patchorama ${DISTDIR}/ext3-2.4-${EXT3V}-2414.gz ${DISTDIR}/patch-${KV}.bz2 ${GFILESDIR}/2.4.15pre1aa1/* ${DISTDIR}/acpi-${ACPIV}.diff.gz
-	patchorama ${DISTDIR}/patch-${KV}.bz2 ${DISTDIR}/${LOWLV}-low-latency.patch.gz ${DISTDIR}/preempt-kernel-rml-2.4.15-pre4-1.patch
-	#echo ">>> Fixing up rejects..."
-	#cd ${GFILESDIR}/2.4.15pre1aa1-fixes
-	#cp array.c ${S}/fs/proc || die
-	#cp filemap.c ${S}/mm || die 
-	#cp sched.h ${S}/include/linux || die
-	#cp fs.h ${S}/include/linux || die
-	#cp low-latency.h ${S}/include/linux || die
+	#patchorama ${DISTDIR}/patch-${KV}.bz2 ${DISTDIR}/${LOWLV}-low-latency.patch.gz ${DISTDIR}/preempt-kernel-rml-2.4.15-pre4-1.patch
 	
 	echo "Preparing for compilation..."
 	cd ${S}
