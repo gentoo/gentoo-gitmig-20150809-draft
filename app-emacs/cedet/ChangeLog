@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.4 2005/01/01 13:40:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.5 2005/01/12 05:38:43 mkennedy Exp $
+
+  11 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> cedet-1.0_beta3.ebuild:
+  Marking x86 stable
 
   11 Sep 2004; Tom Martin <slarti@gentoo.org> cedet-1.0_beta3.ebuild:
   Marked ~amd64, resolves bug 59276. Thanks to Gabriel Ebner
