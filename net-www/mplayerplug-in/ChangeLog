@@ -1,12 +1,14 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.8 2003/09/13 20:57:08 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.9 2003/09/15 15:00:15 seemant Exp $
 
 *mplayerplug-in-0.91 (13 Sep 2003)
 
   13 Sep 2003; David Holm <david@realityrift.com> <avatar@gentoo.org>
   mplayerplug-in-0.91.ebuild:
-  Version bump, contains bugfixes for playing quicktime etc.
+  Version bump, contains bugfixes for playing quicktime etc.  Bugzilla
+  wasn't checked when doing this, but yuntaku@sunny-net.ne.jp had submitted
+  this ebuild in bug #28336
 
   29 Jun 2003; Brad Laue <brad@gentoo.org> mplayerplug-in-0.80.ebuild:
   Mark 0.80 stable on x86
