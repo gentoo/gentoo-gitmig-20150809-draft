@@ -1,0 +1,80 @@
+# ChangeLog for sys-apps/cpudyn
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/ChangeLog,v 1.1 2005/03/14 22:37:27 ciaranm Exp $
+
+*cpudyn-1.0 (14 Mar 2005)
+*cpudyn-0.99.0 (14 Mar 2005)
+
+  14 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/cpudyn-0.99.0-init_conf_updates.patch, +files/cpudyn.init,
+  +metadata.xml, +cpudyn-0.99.0.ebuild, +cpudyn-1.0.ebuild:
+  Moved from sys-apps/cpudyn to sys-power/cpudyn.
+
+*cpudyn-1.0 (10 Oct 2004)
+
+  10 Oct 2004; Mike Frysinger <vapier@gentoo.org> files/cpudyn.init,
+  +cpudyn-1.0.ebuild:
+  Version bump #53507 by Jakob Schiotz.
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cpudyn-0.4.7-r1.ebuild, cpudyn-0.5.0.ebuild, cpudyn-0.6.1.ebuild,
+  cpudyn-0.99.0.ebuild:
+  Masked cpudyn-0.99.0.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cpudyn-0.4.7-r1.ebuild, cpudyn-0.5.0.ebuild, cpudyn-0.6.1.ebuild:
+  Masked cpudyn-0.6.1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cpudyn-0.4.7-r1.ebuild, cpudyn-0.5.0.ebuild:
+  Masked cpudyn-0.5.0.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cpudyn-0.4.7-r1.ebuild:
+  Masked cpudyn-0.4.7-r1.ebuild stable for ppc
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> cpudyn-0.5.0.ebuild,
+  cpudyn-0.6.1.ebuild, cpudyn-0.99.0.ebuild:
+  Add inherit eutils
+
+  18 Apr 2004; Travis Tilley <lv@gentoo.org> cpudyn-0.99.0.ebuild:
+  marking cpudyn stable on amd64, as its the preferred way to make use of the
+  cool n quiet support present in athlon64 processors and yet we didnt have a
+  single version marked stable until now...
+
+*cpudyn-0.99.0 (08 Mar 2004)
+
+  08 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> cpudyn-0.99.0.ebuild,
+  files/cpudyn-0.99.0-init_conf_updates.patch, files/cpudyn.init-0.99.0:
+  version bump. add in patch from bug #41825 for better cpufreq checking.
+
+  01 Feb 2004; Jon Portnoy <avenj@gentoo.org> cpudyn-0.6.1.ebuild :
+  AMD64 keywords.
+
+*cpudyn-0.5.0 (19 Jan 2004)
+*cpudyn-0.6.1 (19 Jan 2004)
+
+  19 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> cpudyn-0.5.0.ebuild,
+  cpudyn-0.6.1.ebuild, files/cpudyn-0.5.0-init_conf_updates.patch:
+  fixed bugs #38482, #37619, #32523.
+
+*cpudyn-0.4.7-r1 (02 Dec 2003)
+
+  02 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> cpudyn-0.4.6.ebuild,
+  cpudyn-0.4.7-r1.ebuild, cpudyn-0.4.7.ebuild, files/cpudyn.conf.extra,
+  files/cpudyn.init:
+  fix bug 34891, move vars to conf file, backported to all ebuilds. -r1 moved to
+  x86.
+
+*cpudyn-0.4.7 (21 Oct 2003)
+
+  21 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> cpudyn-0.4.7.ebuild,
+  files/cpudyn.init, metadata.xml:
+  version bump and fix bug #31575. add metadata.xml.
+
+*cpudyn-0.4.6 (09 Oct 2003)
+
+  09 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> cpudyn-0.4.6.ebuild,
+  files/cpudyn.init:
+  initial commit, thanks to degrenier@easyconnect.fr bug #30558
+
