@@ -6,8 +6,8 @@
  	+([^IZzjy])f)
 -		ext='tar'
 -		regex=$ext
-+		ext='t?(ar.)@(gz|Z|bz?(2))'
-+		regex='t\(ar\.\)\(gz\|Z\|bz2\?\)'
++		ext='t?(ar?(.))@(gz|Z|bz?(2))'
++		regex='t\(ar?(\.)\)\(gz\|Z\|bz2\?\)'
  		;;
  	*[Zz]*f)
  		ext='t?(ar.)@(gz|Z)'
