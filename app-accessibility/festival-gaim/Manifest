@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0bf38e03d0c5f03992d906f5d5baa60b ChangeLog 2292
+MD5 73bec6dc9ffed0b2ec8f7ccca34c1dba ChangeLog 2407
 MD5 bf64a326684f299ba4b5225fc472f951 festival-gaim-0.81.ebuild 793
 MD5 1846f613d6d41e3b8ad07c732edeafe1 metadata.xml 205
-MD5 150d37088ecdeade5603f1adc76d69ae festival-gaim-1.00.ebuild 791
+MD5 dc6b9bfa5aca02deb3c90fd8a65fd93e festival-gaim-1.00.ebuild 788
 MD5 f3e776ac858b8b89d7626b94ab2e69a8 files/digest-festival-gaim-0.81 69
 MD5 dcb2796b5c841c223bc2508ef85795ab files/digest-festival-gaim-1.00 69
 MD5 1a5f43e004ec0bfa631cc7628f65a91b files/festival-gaim-0.71-gentoo.patch 1073
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXshGArHZZzCEUG0RAjA8AJ44xghpSKbT0QitCNG00lGwMSB87wCeLhnK
-66/f891QS/9zSeyFHOFwtfc=
-=Kp9y
------END PGP SIGNATURE-----
