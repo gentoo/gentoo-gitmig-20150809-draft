@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b843663ae76f591b7cf42d1d984e69c1 ChangeLog 1219
+MD5 b1d0b05d868b5c1b03243d7b1f6f6489 ChangeLog 1341
 MD5 a9f5f52746c074dbbaad7b14f0e6d0ab ifp-line-0.2.3.ebuild 683
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 aedca1872dcf54714640d30b7dec1e6d ifp-line-0.2.4.2.ebuild 703
-MD5 d23e3d3d0fa308767d675152b787b221 ifp-line-0.2.4.4.ebuild 706
+MD5 b4f83328b0da5344bf882ee968728e71 ifp-line-0.2.4.4.ebuild 707
 MD5 a4caa674c28a9a105cea1b1822e3fdb1 files/digest-ifp-line-0.2.3 65
 MD5 c109be4d5870daa34311921844f32cf6 files/digest-ifp-line-0.2.4.2 67
 MD5 2b8322fae2afedf7ec93e2afaa909cd6 files/digest-ifp-line-0.2.4.4 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdKnlArHZZzCEUG0RAh4NAJ9ykGY/ZOrlWFZJV/MjR+Q/Z1BPHQCfcX0y
-9cBpAJip5CZCUf8IMmSjSRs=
-=PSRg
+iD8DBQFBdKzvArHZZzCEUG0RAvPqAJ0dcfE3FovFpZI75sVAfNBxCmDELQCfeCqr
+0l/ypi7+Zw/c1hAfbVy9lIE=
+=/Grb
 -----END PGP SIGNATURE-----

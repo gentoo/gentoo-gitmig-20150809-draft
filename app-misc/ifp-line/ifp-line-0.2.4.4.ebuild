@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ifp-line-0.2.4.4.ebuild,v 1.2 2004/10/19 05:44:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ifp-line-0.2.4.4.ebuild,v 1.3 2004/10/19 05:57:15 eradicator Exp $
 
 DESCRIPTION="iRiver iFP open-source driver"
 HOMEPAGE="http://ifp-driver.sourceforge.net/"
@@ -24,5 +24,5 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "to use ifp-line as non-root user, please follow"
-	ewarn "the instructions in /usr/share/doc/${P}/TIPS.gz"
+	ewarn "the instructions in /usr/share/doc/${PF}/TIPS.gz"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ifp-line
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ChangeLog,v 1.9 2004/10/19 05:44:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ChangeLog,v 1.10 2004/10/19 05:57:15 eradicator Exp $
+
+  18 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ifp-line-0.2.4.4.ebuild:
+  Fixed doc dir mentioned in einfo.
 
   18 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ifp-line-0.2.4.4.ebuild:
