@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/kunststoff
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff/ChangeLog,v 1.2 2004/12/26 23:32:07 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff/ChangeLog,v 1.3 2005/02/04 23:24:14 luckyduck Exp $
+
+  05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> kunststoff-2.0.2.ebuild:
+  stable on amd64 and x86
 
   27 Dec 2004; Thomas Matthijs <axxo@gentoo.org> files/build.xml:
   fix #75734

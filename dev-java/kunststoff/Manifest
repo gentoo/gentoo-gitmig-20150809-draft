@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2176980b7e6de47c7353f24ab9faf0e0 ChangeLog 510
+MD5 2141cd58ed9c5a516fadacbfdc5c162a ChangeLog 619
 MD5 c558971b688496ca772b8fd80640e3e3 metadata.xml 432
-MD5 f9ba7c8606273da626cdbf355cb5826a kunststoff-2.0.2.ebuild 1012
+MD5 b690fb89a9a685d7a14ec5310368014b kunststoff-2.0.2.ebuild 1013
 MD5 e8ddfb7120b8efa5fdaa52e166306e81 files/build.xml 1453
 MD5 59f0e167a8125279da4aa129e2b558eb files/digest-kunststoff-2.0.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBz0oI/rLF9B432nYRAqHCAKDM8d3S0oj8wEaxDsEtumj+iSnfqwCgwb6L
-ZTuCUY2HjePrUXNO7PjLLHo=
-=G7Q0
------END PGP SIGNATURE-----
