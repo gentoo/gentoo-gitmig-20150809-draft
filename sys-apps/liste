@@ -1,54 +1,101 @@
-00baselayout
-00initscripts
-CVS
-at
-bash
-bzip2
-console-data
-console-tools
-cpio
-debianutils
-diffutils
-e2fsprogs
-ebuild
-file
-fileutils
-findutils
-gawk
-grep
-groff
-gzip
-hdparm
-ipchains
-isapnptools
-less
-lilo
-liste
-logrotate
-man
-mkisofs
-modutils
-most
-net-tools
-netkit-base
-portage
-procps
-psmisc
-raidtools
-sed
-setserial
-sh-utils
-shadow
-sharutils
-shtool
-sysklogd
-sysvinit
-tar
-tcp-wrappers
-textutils
-updated
-util-linux
-vcron
-vim-nogui
-which
-xinetd
+? 00baselayout/00baselayout-1.1-r1.ebuild
+? 00baselayout/files
+? 00initscripts/files
+? 00initscripts/00initscripts-1.0-r1.ebuild
+? at/files
+? at/at-3.1.8-r1.ebuild
+? bash/files
+? bash/bash-2.03-r1.ebuild
+? bzip2/files
+? bzip2/bzip2-1.0.0-r1.ebuild
+? console-data/files
+? console-data/console-data-1999.08.29-r1.ebuild
+? console-tools/console-tools-0.2.3-r1.ebuild
+? cpio/files
+? cpio/cpio-2.4.2-r1.ebuild
+? debianutils/files
+? debianutils/debianutils-1.13.3-r1.ebuild
+? diffutils/files
+? diffutils/diffutils-2.7-r1.ebuild
+? e2fsprogs/files
+? e2fsprogs/e2fsprogs-1.18-r1.ebuild
+? ebuild/ebuild-1.2-r1.ebuild
+? ebuild/files
+? file/file-3.31-r1.ebuild
+? file/files
+? fileutils/files
+? fileutils/fileutils-4.0x-r1.ebuild
+? findutils/files
+? findutils/findutils-4.1-r1.ebuild
+? gawk/gawk-3.0.4-r1.ebuild
+? grep/files
+? grep/grep-2.4.2-r1.ebuild
+? groff/files
+? groff/groff-1.15-r1.ebuild
+? gzip/files
+? gzip/gzip-1.2.4a-r1.ebuild
+? hdparm/files
+? hdparm/hdparm-3.9-r1.ebuild
+? ipchains/files
+? ipchains/ipchains-1.3.9-r1.ebuild
+? isapnptools/files
+? isapnptools/isapnptools-1.22-r1.ebuild
+? less/files
+? less/less-358-r1.ebuild
+? lilo/files
+? lilo/lilo-21.5-r1.ebuild
+? logrotate/files
+? logrotate/logrotate-3.3-r1.ebuild
+? man/files
+? man/man-1.5h1-r1.ebuild
+? mkisofs/files
+? mkisofs/mkisofs-1.13-r1.ebuild
+? modutils/files
+? modutils/modutils-2.3.12-r1.ebuild
+? most/files
+? most/most-4.9.0-r1.ebuild
+? net-tools/files
+? net-tools/net-tools-1.57-r1.ebuild
+? netkit-base/files
+? netkit-base/netkit-base-0.16-r1.ebuild
+? portage/portage-1.0.ebuild
+? procps/files
+? procps/procps-2.0.7-r1.ebuild
+? psmisc/files
+? psmisc/psmisc-19-r1.ebuild
+? raidtools/files
+? raidtools/raidtools-0.90-r1.ebuild
+? sed/files
+? sed/sed-3.02-r1.ebuild
+? setserial/files
+? setserial/setserial-2.17-r1.ebuild
+? sh-utils/files
+? sh-utils/sh-utils-2.0j-r1.ebuild
+? shadow/files
+? shadow/shadow-19990827-r1.ebuild
+? sharutils/files
+? sharutils/sharutils-4.2.1-r1.ebuild
+? shtool/files
+? shtool/shtool-1.5.1-r1.ebuild
+? sysklogd/files
+? sysklogd/sysklogd-1.3.31-r1.ebuild
+? sysvinit/files
+? sysvinit/sysvinit-2.78-r1.ebuild
+? tar/files
+? tar/tar-1.13.17-r1.ebuild
+? tcp-wrappers/files
+? tcp-wrappers/tcp-wrappers-7.6-r1.ebuild
+? textutils/files
+? textutils/textutils-2.0f-r1.ebuild
+? updated/files
+? updated/updated-2.11-r1.ebuild
+? util-linux/files
+? util-linux/util-linux-2.10m-r1.ebuild
+? vcron/files
+? vcron/vcron-3.0p1-r1.ebuild
+? vim-nogui/files
+? vim-nogui/vim-nogui-5.7-r1.ebuild
+? which/files
+? which/which-2.11-r1.ebuild
+? xinetd/files
+? xinetd/xinetd-2.1.8.8p3-r1.ebuild
