@@ -1,0 +1,8 @@
+# ChangeLog for app-doc/ebook-gcc
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebook-python/ChangeLog,v 1.1 2003/05/06 19:24:33 mholzer Exp $
+
+*ebook-python-2.2.1 (06 May 2003)
+
+  06 May 2003; Martin Holzer <mholzer@gentoo.org> ebook-python-2.2.1.ebuild:
+  Initial version.
