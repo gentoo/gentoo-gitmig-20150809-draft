@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.1 2002/10/24 21:48:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.2 2002/10/30 17:43:57 raker Exp $
 
 IUSE="sdl ssl"
 
@@ -19,10 +19,30 @@ KEYWORDS="x86 -ppc -sparc -sparc64"
 DEPEND="=dev-libs/pwlib-1.3.11*
 	=net-libs/openh323-1.9.10*
 	>=net-nds/openldap-2.0.25
-	>=gnome-base/gnome-2.0.1
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sdl? ( >=media-libs/libsdl-1.2.3 )
-	media-libs/Speex"
+	media-libs/Speex
+	virtual/x11
+	gnome-base/libgnomeui
+	gnome-base/libbonoboui
+	gnome-base/libgnomecanvas
+	gnome-base/libgnome
+	media-libs/libart_lgpl
+	x11-libs/pango
+	>=x11-libs/gtk+-2.0.0
+	dev-libs/atk
+	gnome-base/gnome-vfs
+	gnome-base/gconf
+	gnome-base/libbonobo
+	gnome-base/ORBit2
+	dev-libs/popt
+	dev-libs/libxml2
+	sys-libs/zlib
+	net-libs/linc
+	>=dev-libs/glib-2.0.0
+	media-libs/freetype
+	dev-libs/expat
+	media-libs/fontconfig"
 
 RDEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.12.0

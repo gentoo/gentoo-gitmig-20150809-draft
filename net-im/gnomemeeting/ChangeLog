@@ -1,8 +1,12 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.8 2002/10/24 21:48:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.9 2002/10/30 17:43:57 raker Exp $
 
 *gnomemeeting-0.94.1 (24 Oct 2002)
+
+  30 Oct 2002; Nick Hadaway <raker@gentoo.org>
+  gnomemeeting-0.94.1.ebuild :
+  Tightened dependancies.
 
   24 Oct 2002; Nick Hadaway <raker@gentoo.org>
   gnomemeeting-0.94.1.ebuild, files/digest-gnomemeeting-0.94.1 :
