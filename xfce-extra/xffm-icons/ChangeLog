@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xffm-icons
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xffm-icons/ChangeLog,v 1.4 2003/09/03 23:49:37 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xffm-icons/ChangeLog,v 1.5 2003/09/12 04:47:32 bcowan Exp $
+
+*xffm-icons-3.99.4 (12 Sep 2003)
+
+  12 Sep 2003; Brad Cowan <bcowan@gentoo.org> xffm-icons-3.99.4.ebuild:
+  Version bump.
 
 *xffm-icons-3.99.3 (03 Sep 2003)
 

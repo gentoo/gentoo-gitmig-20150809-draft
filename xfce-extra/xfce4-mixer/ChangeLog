@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.4 2003/09/03 23:44:50 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.5 2003/09/12 04:41:49 bcowan Exp $
+
+*xfce4-mixer-3.99.4 (12 Sep 2003)
+
+  12 Sep 2003; Brad Cowan <bcowan@gentoo.org> xfce4-mixer-3.99.4.ebuild:
+  Version bump.
 
 *xfce4-mixer-3.99.3 (03 Sep 2003)
 
