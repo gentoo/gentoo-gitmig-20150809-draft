@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.25 2004/09/11 22:13:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.26 2004/10/27 03:44:37 morfic Exp $
+
+  26 Oct 2004; Daniel Goller <morfic@gentoo.org> libstdc++-v3-3.3.4.ebuild:
+  Do the required magic to deal with G3, G4, G5 archs on gcc3.3
+  Closing bug 64252
 
   11 Sep 2004; Travis Tilley <lv@gentoo.org> -libstdc++-v3-3.3.4-r1.ebuild:
   temporarily removing ebuild pending a redesign of the toolchain eclass.

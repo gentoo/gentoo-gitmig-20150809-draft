@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.4 2004/10/06 22:27:08 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.5 2004/10/27 03:44:37 morfic Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -27,6 +27,14 @@ do_filter_flags() {
 
 	# gcc 3.3 doesn't support -march=pentium-m
 	replace-flags -march=pentium-m -march=pentium3
+
+	#GCC 3.3 does not understand G3, G4, G5 on ppc
+	replace-flags -mcpu=G3 -mcpu=750
+	replace-flags -mcpu=G4 -mcpu=7400
+	replace-flags -mtune=G3 -mtune=750
+	replace-flags -mtune=G4 -mtune=7400
+	filter-flags -mcpu=G5
+	filter-flags -mtune=G5
 
 	# gcc 3.3 doesn't support -mtune on numerous archs, so xgcc will fail
 	if use x86 || use amd64 ; then
