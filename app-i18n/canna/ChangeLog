@@ -1,9 +1,14 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.5 2002/11/16 05:35:58 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.6 2002/11/18 09:00:24 nakano Exp $
 
 *canna-3.6 (16 Nov 2002)
 
+  18 Nov 2002; Masatomo Nakano <nakano@gentoo.org> canna-3.6.ebuild 
+	ChangeLog :
+
+  Changed "~x86" to "x86".
+	
   16 Nov 2002; Masatomo Nakano <nakano@gentoo.org> canna-3.6.ebuild
 	files/canna-3.6-gentoo.diff files/canna.initd files/canna.confd
 	digest-canna-3.6 ChangeLog :
