@@ -3,7 +3,7 @@ MD5 40d8c8936e6bd657d558993a17cd99a4 cdrdao-1.1.7-r2.ebuild 2742
 MD5 2c25e3db297f0e8289c305717b57d8f0 cdrdao-1.1.7.ebuild 1943
 MD5 bab69ebf527bd1791f4969f30c35cb38 metadata.xml 417
 MD5 2cd045e56443e0408ce72c682eaf9ac6 cdrdao-1.1.7-r3.ebuild 3032
-MD5 2abaedc35d0afd950dd5db6c5adfaa28 cdrdao-1.1.8-r1.ebuild 1795
+MD5 ccea71451a447aab1ee1c7d3d3c78735 cdrdao-1.1.8-r1.ebuild 1790
 MD5 b947425a706844668b6bf8c1e60b9b34 cdrdao-1.1.8.ebuild 1412
 MD5 1bd898276248137b5368abe381d1f0dd ChangeLog 5357
 MD5 3ea011fa1308fc478529300a80443aab files/cdrdao-1.1.5-c++.patch 1622

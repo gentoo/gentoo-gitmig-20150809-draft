@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.1 2004/03/17 04:25:23 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.2 2004/03/17 07:39:46 pylon Exp $
 
 inherit flag-o-matic eutils
 
@@ -48,7 +48,7 @@ src_compile() {
 	./configure --build="${CHOST}"\
 		--host="${CHOST}" \
 		--prefix=/usr \
-		`use_enable debug debug=full` \
+		`use_enable debug debug` \
 		`use_with gnome gnome` || die "configure failed"
 
 	emake || die
