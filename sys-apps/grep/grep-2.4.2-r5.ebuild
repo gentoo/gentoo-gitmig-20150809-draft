@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.4.2-r5.ebuild,v 1.7 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.4.2-r5.ebuild,v 1.8 2003/02/13 15:57:54 vapier Exp $
 
 IUSE="nls build"
 

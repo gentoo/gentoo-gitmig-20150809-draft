@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.14.ebuild,v 1.11 2003/02/09 18:19:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.14.ebuild,v 1.12 2003/02/13 16:22:19 vapier Exp $
 
 DESCRIPTION="Prints out location of specified executables that are in your path"
 HOMEPAGE="http://www.xs4all.nl/~carlo17/which/"

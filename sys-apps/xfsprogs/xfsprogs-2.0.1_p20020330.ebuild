@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.0.1_p20020330.ebuild,v 1.1 2002/12/22 05:29:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.0.1_p20020330.ebuild,v 1.2 2003/02/13 16:22:58 vapier Exp $
 
 S=${WORKDIR}/cmd/${PN}
 OPV=20020330

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.54.ebuild,v 1.3 2003/02/09 01:40:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.54.ebuild,v 1.4 2003/02/13 16:04:58 vapier Exp $
 
 MY_PN=${PN/-/}
 S=${WORKDIR}/${P}

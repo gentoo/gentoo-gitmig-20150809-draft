@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.37.ebuild,v 1.15 2002/12/20 21:16:44 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.37.ebuild,v 1.16 2003/02/13 15:56:21 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.34.ebuild,v 1.7 2002/10/04 21:28:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.34.ebuild,v 1.8 2003/02/13 16:19:12 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A ucspi implementation for unix sockets."

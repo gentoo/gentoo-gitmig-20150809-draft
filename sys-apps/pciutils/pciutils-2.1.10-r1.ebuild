@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.10-r1.ebuild,v 1.7 2003/02/12 12:43:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.10-r1.ebuild,v 1.8 2003/02/13 16:09:27 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various utilities dealing with the PCI bus"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11-r1.ebuild,v 1.2 2002/12/13 11:38:28 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11-r1.ebuild,v 1.3 2003/02/13 15:56:31 vapier Exp $
 
 IUSE="acl nls build"
 ACLPV=4.1.11acl-0.8.25

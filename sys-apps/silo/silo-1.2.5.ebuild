@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/silo-1.2.5.ebuild,v 1.11 2003/01/06 09:18:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/silo-1.2.5.ebuild,v 1.12 2003/02/13 16:15:05 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"

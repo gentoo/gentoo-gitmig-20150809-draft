@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.2.4a-r6.ebuild,v 1.12 2002/12/09 04:37:25 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.2.4a-r6.ebuild,v 1.13 2003/02/13 15:59:05 vapier Exp $
 
 IUSE="nls build"
 

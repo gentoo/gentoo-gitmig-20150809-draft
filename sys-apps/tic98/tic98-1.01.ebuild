@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tic98/tic98-1.01.ebuild,v 1.3 2002/11/30 21:48:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tic98/tic98-1.01.ebuild,v 1.4 2003/02/13 16:18:04 vapier Exp $
 
 DESCRIPTION="tic98 is a compressor for black-and-white images, in particular scanned documents. It gets very good compression, better than AT&T's DjVu system.  tic98 also includes ppmd text compression (ppmd) and number compression (b_gamma_enc)"
 HOMEPAGE="http://www.cs.waikato.ac.nz/~singlis/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.2-r5.ebuild,v 1.12 2003/01/06 22:05:32 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.2-r5.ebuild,v 1.13 2003/02/13 16:17:10 vapier Exp $
 
 IUSE="nls build"
 

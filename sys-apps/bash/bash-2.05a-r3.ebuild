@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a-r3.ebuild,v 1.10 2003/01/01 06:56:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a-r3.ebuild,v 1.11 2003/02/13 15:49:32 vapier Exp $
 
 inherit flag-o-matic gnuconfig
 

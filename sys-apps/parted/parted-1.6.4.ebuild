@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.4.ebuild,v 1.2 2003/01/03 08:17:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.4.ebuild,v 1.3 2003/02/13 16:08:53 vapier Exp $
 
 IUSE="nls static readline"
 

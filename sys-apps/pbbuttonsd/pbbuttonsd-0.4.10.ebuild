@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.4.10.ebuild,v 1.8 2002/12/09 04:37:26 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/pbbuttonsd-0.4.10.ebuild,v 1.9 2003/02/13 16:09:04 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PBButtons is a PPC-only program to map special Powerbook/iBook keys in Linux"

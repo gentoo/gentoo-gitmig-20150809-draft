@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.7.ebuild,v 1.11 2003/02/09 17:05:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.7.ebuild,v 1.12 2003/02/13 16:08:42 vapier Exp $
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?

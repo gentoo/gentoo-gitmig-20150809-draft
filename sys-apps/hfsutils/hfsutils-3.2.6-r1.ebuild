@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsutils/hfsutils-3.2.6-r1.ebuild,v 1.1 2003/02/05 02:43:09 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsutils/hfsutils-3.2.6-r1.ebuild,v 1.2 2003/02/13 16:00:02 vapier Exp $
 
 DESCRIPTION="HFS FS Access utils"
 SRC_URI="ftp://ftp.mars.org/pub/hfs/${P}.tar.gz"
