@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.1-r4.ebuild,v 1.4 2002/08/14 15:40:58 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.1-r4.ebuild,v 1.5 2002/08/26 20:10:30 rphillips Exp $
 
 A=php-${PV}.tar.gz
 S=${WORKDIR}/php-${PV}
@@ -161,6 +161,7 @@ src_compile() {
 		--enable-calendar \
 		--enable-trans-sid \
 		--enable-safe-mode \
+		--enable-exif \
 		--enable-versioning \
 		--enable-track-vars \
 		--enable-inline-optimization \
