@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.23.ebuild,v 1.6 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.26.ebuild,v 1.1 2003/05/17 14:59:53 foser Exp $
 
 inherit gnome.org
 
@@ -10,17 +10,17 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips"
 
-DEPEND=">=dev-libs/popt-1.5
-	>=dev-lang/perl-5.6.0"
+DEPEND=">=dev-lang/perl-5.6.0"
 
 src_compile() {                           
-	econf || die "configure flawed" 
-	emake || die "compile flawed" 
+	econf || die "configure failed" 
+	emake || die "compile failed" 
 }
 
 src_install() {
 	einstall || die "installation failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README TODO COPYING INSTALL
+	dodoc doc/I18N-HOWTO
 }
