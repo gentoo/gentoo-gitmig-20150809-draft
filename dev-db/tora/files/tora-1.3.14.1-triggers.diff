@@ -1,0 +1,11 @@
+--- tobrowser.cpp.orig	2004-09-10 18:05:29.000000000 +0200
++++ tobrowser.cpp	2004-09-10 17:58:45.000000000 +0200
+@@ -1456,6 +1456,8 @@
+   curr->addTab(resultExtract,tr("Script"));
+   SecondMap[TAB_TRIGGER_EXTRACT]=resultExtract;
+ 
++  connect(curr,SIGNAL(currentChanged(QWidget *)),this,SLOT(changeSecondTab(QWidget *)));
++  
+   splitter=new QSplitter(Horizontal,TopTab,TAB_ACCESS);
+   TopTab->addTab(splitter,tr("Access"));
+ #ifdef TOEXTENDED_MYSQL

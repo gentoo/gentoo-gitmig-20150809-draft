@@ -1,0 +1,24 @@
+--- tora-1.3.14.1/tooracleconnection.cpp	2004-07-02 07:27:57.000000000 +0200
++++ tora-1.3.14.1.ivan/tooracleconnection.cpp	2004-10-17 05:07:04.000000000 +0200
+@@ -362,7 +362,7 @@
+     virtual void cancel(void);
+     virtual bool eof(void)
+     {
+-      if (!Query)
++      if (!Query || Cancel)
+ 	return true;
+       return Query->eof();
+     }
+@@ -965,9 +965,10 @@
+   oracleSub *conn=dynamic_cast<oracleSub *>(query()->connectionSub());
+   if (!conn)
+     throw QString::fromLatin1("Internal error, not oracle sub connection");
+-  if (Running)
++  if (Running) {
+     conn->Connection->cancel();
+-  else {
++    Cancel=true;
++  } else {
+     Cancel=true;
+     conn->Lock.up();
+   }

@@ -1,0 +1,148 @@
+*** toinvalid.cpp.old	Thu Jul 22 19:38:19 2004
+--- toinvalid.cpp	Thu Jul 22 19:40:12 2004
+***************
+*** 45,54 ****
+--- 45,55 ----
+  #include "toresultlong.h"
+  #include "toresultview.h"
+  #include "tosql.h"
+  #include "totool.h"
+  
++ 
+  #ifdef TO_KDE
+  #  include <kmenubar.h>
+  #endif
+  
+  #include <qlabel.h>
+***************
+*** 113,124 ****
+  		  tr("Refresh list"),
+  		  this,SLOT(refresh()),
+  		  toolbar);
+  
+    new QToolButton(QPixmap((const char **)compile_xpm),
+! 		  tr("Recompile selected"),
+! 		  tr("Recompile selected"),
+  		  this,SLOT(recompileSelected()),
+  		  toolbar);
+  
+    toolbar->setStretchableWidget(new QLabel(toolbar,TO_KDE_TOOLBAR_WIDGET));
+    new toChangeConnection(toolbar,TO_KDE_TOOLBAR_WIDGET);
+--- 114,125 ----
+  		  tr("Refresh list"),
+  		  this,SLOT(refresh()),
+  		  toolbar);
+  
+    new QToolButton(QPixmap((const char **)compile_xpm),
+! 		  tr("Recompile all invalid"),
+! 		  tr("Recompile all invalid"),
+  		  this,SLOT(recompileSelected()),
+  		  toolbar);
+  
+    toolbar->setStretchableWidget(new QLabel(toolbar,TO_KDE_TOOLBAR_WIDGET));
+    new toChangeConnection(toolbar,TO_KDE_TOOLBAR_WIDGET);
+***************
+*** 126,139 ****
+    QSplitter *splitter=new QSplitter(Horizontal,this);
+  
+    Objects=new toResultLong(false,false,toQuery::Background,splitter);
+    Objects->setSQL(SQLListInvalid);
+  
+!   Objects->setSelectionMode(QListView::Extended);
+    connect(Objects,SIGNAL(selectionChanged()),this,SLOT(changeSelection()));
+-   connect(Objects,SIGNAL(currentChanged(QListViewItem *)),
+- 	  this,SLOT(changeSelection()));
+  
+    Source=new toResultExtract(false,splitter);
+    Source->setSQL(SQLListSource);
+  
+    connect(Source,SIGNAL(executed()),this,SLOT(refresh()));
+--- 127,138 ----
+    QSplitter *splitter=new QSplitter(Horizontal,this);
+  
+    Objects=new toResultLong(false,false,toQuery::Background,splitter);
+    Objects->setSQL(SQLListInvalid);
+  
+!   Objects->setSelectionMode(QListView::Single);
+    connect(Objects,SIGNAL(selectionChanged()),this,SLOT(changeSelection()));
+  
+    Source=new toResultExtract(false,splitter);
+    Source->setSQL(SQLListSource);
+  
+    connect(Source,SIGNAL(executed()),this,SLOT(refresh()));
+***************
+*** 160,194 ****
+    QProgressDialog progress(tr("Recompiling all invalid"),
+  			   tr("Cancel"),Objects->childCount(),this,"progress",true);
+    progress.setCaption("Recompiling");
+    progress.show();
+  
+-   int i=0;
+  
+    for(QListViewItem *item=Objects->firstChild();item;item=item->nextSibling()) {
+      toResultViewItem *ci=dynamic_cast<toResultViewItem *>(item);
+!     if (ci&&ci->isSelected()) {
+        toConnection &conn=connection();
+        progress.setLabelText("Recompiling "+ci->allText(1)+"."+ci->allText(2));
+!       progress.setProgress(i);
+        qApp->processEvents();
+        QString type=ci->allText(2);
+        QString sql;
+        if (type=="INDEX")
+  	sql="ALTER "+ci->allText(2)+" "+conn.quote(ci->allText(0))+"."+conn.quote(ci->allText(1))+" REBUILD";
+        else if (type=="PACKAGE BODY")
+! 	sql="ALTER PACKAGE "+conn.quote(ci->allText(0))+"."+conn.quote(ci->allText(1))+" COMPILE BODY REUSE SETTINGS";
+        else
+! 	sql="ALTER "+ci->allText(2)+" "+conn.quote(ci->allText(0))+"."+conn.quote(ci->allText(1))+" COMPILE REUSE SETTINGS";
+        try {
+  	conn.execute(sql);
+        } catch(...) {
+        }
+      }
+-     i++;
+    }
+!   refresh();
+  }
+  
+  void toInvalid::windowActivated(QWidget *widget)
+  {
+    if (widget==this) {
+--- 159,196 ----
+    QProgressDialog progress(tr("Recompiling all invalid"),
+  			   tr("Cancel"),Objects->childCount(),this,"progress",true);
+    progress.setCaption("Recompiling");
+    progress.show();
+  
+  
+    for(QListViewItem *item=Objects->firstChild();item;item=item->nextSibling()) {
+      toResultViewItem *ci=dynamic_cast<toResultViewItem *>(item);
+!     if (ci){
+        toConnection &conn=connection();
+        progress.setLabelText("Recompiling "+ci->allText(1)+"."+ci->allText(2));
+!       progress.setProgress(progress.progress()+1);
+        qApp->processEvents();
++       if (progress.wasCancelled())
++         break; 
+        QString type=ci->allText(2);
+        QString sql;
+        if (type=="INDEX")
+  	sql="ALTER "+ci->allText(2)+" "+conn.quote(ci->allText(0))+"."+conn.quote(ci->allText(1))+" REBUILD";
+        else if (type=="PACKAGE BODY")
+! 	sql="ALTER PACKAGE "+conn.quote(ci->allText(0))+"."+conn.quote(ci->allText(1))+" COMPILE BODY";
+        else
+! 	sql="ALTER "+ci->allText(2)+" "+conn.quote(ci->allText(0))+"."+conn.quote(ci->allText(1))+" COMPILE";
+        try {
+  	conn.execute(sql);
+        } catch(...) {
+        }
+      }
+    }
+!   if (progress.isVisible())
+!       progress.close();
+!   qApp->processEvents();
+!   this->refresh();
+  }
+  
+  void toInvalid::windowActivated(QWidget *widget)
+  {
+    if (widget==this) {
