@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.10.ebuild,v 1.11 2004/04/27 21:14:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.10.ebuild,v 1.12 2004/04/28 12:49:05 foser Exp $
 
 inherit gnome2 gnome.org libtool eutils
 
@@ -18,7 +18,10 @@ RDEPEND=">=gnome-base/libgnomeprint-2.2.0
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/libgnomecanvas-2.2.0.2
 	>=dev-libs/libxml2-2.0
-	app-text/scrollkeeper"
+	app-text/scrollkeeper
+	!>x11-libs/gtk+-2.3"
+# this & older versions of gal will not build vs. gtk-2.4 api
+
 DEPEND="sys-devel/gettext
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )
