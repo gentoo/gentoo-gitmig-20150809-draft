@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4f6478610f57ec2d3673875ce79a9bb3 ChangeLog 7182
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 95af6c53bb925120179d1462f1560461 xfsprogs-2.6.25.ebuild 1623
-MD5 6461306a81999756f315f813107027e9 xfsprogs-2.6.13.ebuild 1921
+MD5 b4eac64327a9d6633896133906a14d66 xfsprogs-2.6.13.ebuild 1922
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 0ccba5779bd5c7edc42cac54ed360fa5 files/digest-xfsprogs-2.6.25 71
 MD5 3d4e4aea1da9c2a07cc9581930aab671 files/digest-xfsprogs-2.6.13 71
 MD5 911b4db00dda0d9aad7d79c8f2de99c3 files/2.6.13-configure.patch 238
 MD5 7b6e7879f947d56d486f1d17f3c8f3e1 files/2.6.13-uclibc-mincore.patch 1141
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBaHxqHTu7gpaalycRAiUDAKD1unxSm2n0wC6BVT+WEd8MFHblVwCfcVzR
-LYq1i1YXlzkvfDgcTVhVILE=
-=P2OS
------END PGP SIGNATURE-----

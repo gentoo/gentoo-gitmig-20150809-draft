@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.13.ebuild,v 1.6 2004/10/08 00:36:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.13.ebuild,v 1.7 2004/10/16 20:28:22 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -29,13 +29,13 @@ src_unpack() {
 		include/builddefs.in \
 		|| die "sed include/builddefs.in failed"
 
-	# mincore does not appear to be part of POSIX or the Single Unix 
+	# mincore does not appear to be part of POSIX or the Single Unix
 	# Specification. So we patch it out for uclibc builds.
 	epatch ${FILESDIR}/${PV}-uclibc-mincore.patch
 	use uclibc && append-flags -D__UCLIBC__
 
 	epatch ${FILESDIR}/${PV}-configure.patch #65735
-	autoreconf -i || die "autoreconf" 
+	autoreconf -i || die "autoreconf"
 }
 
 src_compile() {
