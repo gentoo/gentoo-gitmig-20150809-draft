@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.20 2003/05/17 14:59:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.21 2003/07/24 17:18:55 gmsoft Exp $
 
 *intltool-0.26 (17 May 2003)
+
+  24 Jul 2003; Guy Martin <gmsoft@gentoo.org>
+  Marked stable on hppa.
 
   17 May 2003; foser <foser@gentoo.org> intltool-0.26.ebuild ;
   New version, removed popt dep, should fix #15194
