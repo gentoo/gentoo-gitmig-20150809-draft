@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.3.22.ebuild,v 1.1 2004/10/22 21:47:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.3.22.ebuild,v 1.2 2004/12/28 08:18:02 eradicator Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ RDEPEND="media-libs/jpeg
 	 X? ( virtual/x11 )"
 
 DEPEND="${RDEPEND}
+	sys-devel/libtool
 	>=sys-devel/automake-1.8"
 
 src_unpack() {
@@ -37,11 +38,12 @@ src_unpack() {
 	# Gentoo-specific stuff to fix the build/install process
 	epatch ${FILESDIR}/${PN}-1.3.11-gentoo.patch
 
-	# redirecting aclocal to /dev/null because there are alot of warnings
-	# output for deprecated stuff in 1.8.5
-	WANT_AUTOMAKE=1.8 aclocal >& /dev/null
-	WANT_AUTOMAKE=1.8 automake
-	WANT_AUTOCONF=2.5 autoconf
+	export WANT_AUTOMAKE=1.8 
+	export WANT_AUTOCONF=2.5
+	aclocal
+	libtoolize --force --copy
+	automake -a -f -c
+	autoconf
 }
 
 src_compile() {
