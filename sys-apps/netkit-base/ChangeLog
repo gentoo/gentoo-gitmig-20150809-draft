@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/netkit-base
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.19 2003/07/04 05:26:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.20 2003/07/06 16:05:09 gmsoft Exp $
 
 
 *netkit-base-0.17-r8 (19 Jun 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> netkit-base-0.17-r8.ebuild :
+  Added hppa to KEYWORDS.
 
   04 Jul 2003; Joshua Kinard <kumba@gentoo.org> netkit-base-0.17-r8.ebuild:
   Adding mips to KEYWORDS to comply with profile changes
