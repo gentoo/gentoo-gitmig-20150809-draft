@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6.ebuild,v 1.9 2004/10/31 16:56:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6.ebuild,v 1.10 2004/11/07 14:19:34 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/vtun
 DESCRIPTION="Create virtual tunnels over TCP/IP networks with traffic shaping, encryption, and compression"
 SRC_URI="mirror://sourceforge/vtun/${P}.tar.gz"
 HOMEPAGE="http://vtun.sourceforge.net/"
-KEYWORDS="x86 sparc ~amd64 ~alpha"
+KEYWORDS="x86 sparc ~amd64 ~alpha ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
