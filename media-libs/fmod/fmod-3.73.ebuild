@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.73.ebuild,v 1.2 2004/06/24 22:59:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.73.ebuild,v 1.3 2004/07/13 08:20:59 eradicator Exp $
+
+IUSE=""
 
 MY_P="fmodapi${PV/.}linux"
 S=${WORKDIR}/${MY_P}
@@ -8,11 +10,13 @@ DESCRIPTION="music and sound effects library, and a sound processing system"
 SRC_URI="http://www.fmod.org/files/${MY_P}.tar.gz"
 HOMEPAGE="http://www.fmod.org/"
 
-IUSE=""
-
 SLOT="0"
 LICENSE="fmod"
-KEYWORDS="~x86"
+KEYWORDS="-* x86 ~amd64"
+
+DEPEND"virtual/libc"
+RDEPEND="${DEPEND}
+	 amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
 src_install() {
 	dolib api/libfmod-${PV}.so

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/fmod
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.12 2004/07/07 10:02:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.13 2004/07/13 08:20:59 eradicator Exp $
+
+  13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> -fmod-3.61.ebuild,
+  -fmod-3.62.ebuild, -fmod-3.70.ebuild:
+  Stable x86.  ~amd64.  Added amd64 compat libs as DEP.
 
   07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> :
   Fixed digest because of crazy upstream devs not bumping versions.
