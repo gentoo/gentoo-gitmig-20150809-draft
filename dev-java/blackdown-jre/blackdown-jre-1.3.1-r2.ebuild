@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r2.ebuild,v 1.1 2001/12/15 01:07:51 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r2.ebuild,v 1.2 2001/12/30 04:06:13 karltk Exp $
 
 A=j2re-1.3.1-FCS-linux-i386.tar.bz2
 S=${WORKDIR}/j2re1.3.1
@@ -131,6 +131,7 @@ src_install () {
 	dodoc COPYRIGHT LICENSE README INSTALL
 
 	if [ "`use mozilla`" ] ; then
+		dodir /usr/lib/mozilla/plugins
 		dosym /opt/${P}/plugin/i386/mozilla/javaplugin_oji.so /usr/lib/mozilla/plugins/javaplugin_oji.so
 	fi
 	
