@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.6.1.ebuild,v 1.3 2004/12/28 20:07:09 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.6.1.ebuild,v 1.4 2004/12/28 20:28:56 ribosome Exp $
 
 inherit base flag-o-matic
 
@@ -17,12 +17,12 @@ S="${WORKDIR}/${P/_/-}"
 
 DEPEND="virtual/libc
 	fftw? ( =dev-libs/fftw-2.1* )
-	>=dev-libs/gsl-1.3
+	>=sci-libs/gsl-1.3
 	qt? ( >=x11-libs/qt-3.3 )
 	>=sys-libs/readline-4.2
 	mpi? ( sys-cluster/lam-mpi )
 	ginac? ( >=sci-mathematics/ginac-1.2.0 )
-	gsl? ( dev-libs/gsl )
+	gsl? ( sci-libs/gsl )
 	cln? ( >=sci-libs/cln-1.1.6 )"
 
 replace-flags k6-3 i586
