@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r1.ebuild,v 1.11 2003/02/24 20:51:01 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r1.ebuild,v 1.12 2003/03/13 10:31:43 doctomoe Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="5"
-KEYWORDS="x86 ~ppc ~sparc alpha hppa arm mips"
+KEYWORDS="x86 ppc ~sparc alpha hppa arm mips"
 
 DEPEND="virtual/glibc"
 
