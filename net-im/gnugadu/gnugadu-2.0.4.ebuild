@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.0.4.ebuild,v 1.1 2004/08/05 10:02:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.0.4.ebuild,v 1.2 2004/08/21 19:51:56 spock Exp $
 
 IUSE="debug tlen esd oss xosd arts jabber perl spell"
 
@@ -35,7 +35,8 @@ src_unpack() {
 
 src_compile() {
 
-	myconf="--with-gui --with-gadu --with-remote --with-docklet_system_tray --with-docklet_dockapp --with-sms --with-update --with-external"
+	myconf="--with-gui --with-gadu --with-remote --with-docklet_system_tray --with-docklet_dockapp \
+		--with-sms --with-update --with-external --with-gghist --with-history-external-viewer"
 	use spell && myconf="${myconf} --with-gtkspell"
 
 	if use arts; then
