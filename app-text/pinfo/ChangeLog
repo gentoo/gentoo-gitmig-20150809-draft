@@ -1,7 +1,10 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.5 2002/08/07 14:43:08 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.6 2002/12/09 04:17:44 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *pinfo-0.6.5_p2-r1 (22 Jul 2002)
 
   07 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> pinfo-0.6.5_p2-r1.ebuild 

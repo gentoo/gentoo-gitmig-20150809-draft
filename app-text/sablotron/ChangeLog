@@ -1,7 +1,10 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.8 2002/11/27 02:45:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.9 2002/12/09 04:17:45 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *sablotron-0.96 (26 Nov 2002)
 
   26 Nov 2002; Michael Cummings <mcummings@gentoo.org> sablotron-0.96.ebuild:

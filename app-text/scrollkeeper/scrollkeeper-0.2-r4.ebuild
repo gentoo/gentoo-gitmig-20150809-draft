@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.2-r4.ebuild,v 1.11 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.2-r4.ebuild,v 1.12 2002/12/09 04:17:45 manson Exp $
 
 IUSE="nls"
 
@@ -9,7 +9,7 @@ DESCRIPTION="A cataloging system for documentation on open systems"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://scrollkeeper.sourceforge.net"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 LICENSE="FDL-1.1 LGPL-2.1"
 
 RDEPEND=">=dev-libs/libxml-1.8.11

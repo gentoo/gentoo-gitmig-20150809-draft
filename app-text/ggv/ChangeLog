@@ -1,7 +1,10 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.18 2002/11/11 15:29:24 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.19 2002/12/09 04:17:44 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *ggv-1.99.96 (11 Nov 2002) :
 
   11 Nov 2002; Spider <spider@gentoo.org> ggv-1.99.96.ebuild 

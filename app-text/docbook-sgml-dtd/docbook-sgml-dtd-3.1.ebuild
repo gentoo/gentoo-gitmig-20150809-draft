@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-3.1.ebuild,v 1.13 2002/10/04 05:04:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-3.1.ebuild,v 1.14 2002/12/09 04:17:43 manson Exp $
 
 MY_P="docbk31"
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ RDEPEND="app-text/sgml-common"
 
 SLOT="3.1"
 
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc  alpha"
 src_unpack() {
 	mkdir ${S}
 	cd ${S}

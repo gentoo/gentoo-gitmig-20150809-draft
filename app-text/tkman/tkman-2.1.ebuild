@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1.ebuild,v 1.7 2002/11/23 20:24:44 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1.ebuild,v 1.8 2002/12/09 04:17:45 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TkMan man and info page browser"
 SRC_URI="http://tkman.sourceforge.net/${PN}.tar.gz"
 HOMEPAGE="http://tkman.sourceforge.net/"
-KEYWORDS="x86 ~ppc sparc sparc64"
+KEYWORDS="x86 ~ppc sparc "
 SLOT="0"
 LICENSE="Artistic"
 

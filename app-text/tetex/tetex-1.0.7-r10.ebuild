@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r10.ebuild,v 1.10 2002/10/24 23:23:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r10.ebuild,v 1.11 2002/12/09 04:17:45 manson Exp $
 
 IUSE="ncurses X libwww png"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/
 	 http://www.ibiblio.org/gentoo/distfiles/teTeX-french.tar.gz"
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
 
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 SLOT="0"
 LICENSE="GPL-2"
 

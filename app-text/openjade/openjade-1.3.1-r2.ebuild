@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r2.ebuild,v 1.7 2002/10/19 16:16:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r2.ebuild,v 1.8 2002/12/09 04:17:44 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Jade is an implemetation of DSSSL - an ISO standard for formatting SGML (and XML) documents"
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
 
 RDEPEND="virtual/glibc
 	app-text/sgml-common"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 src_compile() {
 

@@ -1,7 +1,10 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.4 2002/11/21 19:35:10 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.5 2002/12/09 04:17:43 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *djvu-3.5.9-r1 (21 Nov 2002)
 
   21 Nov 2002; phoen][x <phoenix@gentoo.org> djvu-3.5.9-r1.ebuild,

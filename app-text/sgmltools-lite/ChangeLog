@@ -1,7 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.11 2002/09/20 20:16:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.12 2002/12/09 04:17:45 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *sgmltools-lite-3.0.3-r5 (12 Sep 2002)
 
   20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :

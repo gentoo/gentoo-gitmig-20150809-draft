@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmltex/xmltex-1.0.ebuild,v 1.11 2002/11/23 20:09:18 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmltex/xmltex-1.0.ebuild,v 1.12 2002/12/09 04:17:45 manson Exp $
 
 MY_P="base"
 S=${WORKDIR}/${MY_P}
@@ -9,7 +9,7 @@ DESCRIPTION="A namespace-aware XML parser written in Tex"
 SRC_URI="ftp://ftp.tex.ac.uk/tex-archive/macros/xmltex/${MY_P}.tar.gz"
 HOMEPAGE="http://users.ox.ac.uk/~rahtz/passivetex/"
 
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 LICENSE="freedist"
 SLOT="0"
 

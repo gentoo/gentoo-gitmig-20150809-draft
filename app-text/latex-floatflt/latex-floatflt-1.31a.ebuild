@@ -10,5 +10,5 @@ SRC_URI="ftp://ftp.dante.de/tex-archive/macros/latex/contrib/other/floatflt.tar.
 HOMEPAGE="http://www.ctan.org/tex-archive/help/Catalogue/entries/floatflt.html?action=/tex-archive/macros/latex/contrib/other/floatflt/"
 LICENSE="LPPL"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.13.ebuild,v 1.7 2002/10/20 18:40:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.13.ebuild,v 1.8 2002/12/09 04:17:45 manson Exp $
 
 IUSE="tcltk"
 
@@ -9,7 +9,7 @@ S="${WORKDIR}/${P}"
 DESCRIPTION="uu, xx, base64, binhex decoder"
 SRC_URI="http://ibiblio.org/pub/Linux/utils/text/${P}.tar.gz"
 HOMEPAGE="http://www.fpx.de/fp/Software/UUDeview/"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="tcltk?  ( dev-lang/tcl dev-lang/tk )"

@@ -11,7 +11,7 @@ HOMEPAGE="ftp://ftp.dante.de/tex-archive/help/Catalogue/entries/foiltex.html"
 LICENSE="as-is"
 #for License details see /usr/share/doc/latex-foiltex-2.1.3/foiltex.ins
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 
 src_install () {

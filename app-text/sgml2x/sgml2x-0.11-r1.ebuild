@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/sgml2x-0.11-r1.ebuild,v 1.14 2002/10/04 05:07:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/sgml2x-0.11-r1.ebuild,v 1.15 2002/12/09 04:17:45 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Frontend for jade and jadetex"
@@ -9,7 +9,7 @@ HOMEPAGE="http://sgml2x.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=sys-devel/perl-5"
 

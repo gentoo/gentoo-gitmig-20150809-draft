@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gmanedit/gmanedit-0.3.3-r2.ebuild,v 1.6 2002/10/17 14:31:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gmanedit/gmanedit-0.3.3-r2.ebuild,v 1.7 2002/12/09 04:17:44 manson Exp $
 
 S=${WORKDIR}/${P}.orig
 DESCRIPTION="Gnome based manpage editor"
 SRC_URI="http://gmanedit.sourceforge.net/files/${P}.tar.bz2"
 HOMEPAGE="http://gmanedit.sourceforge.net/"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="nls"

@@ -1,7 +1,10 @@
 # ChangeLog for app-text/ttf2pt1
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.4 2002/10/19 16:16:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.5 2002/12/09 04:17:45 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *ttf2pt1-3.4.0 (1 Feb 2002)
 
   19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> ttf2pt1-3.4.0.ebuild :

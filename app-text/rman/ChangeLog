@@ -1,7 +1,10 @@
 # ChangeLog for app-text/rman
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.3 2002/11/23 20:23:19 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.4 2002/12/09 04:17:44 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *rman-3.0.9 (23 Nov 2002)
 
   23 Nov 2002; Sascha Schwabbauer <cybersystem@gentoo.org> rman-3.0.9.ebuild :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.2-r1.ebuild,v 1.1 2002/11/11 13:51:02 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.2-r1.ebuild,v 1.2 2002/12/09 04:17:43 manson Exp $
 
 inherit libtool
 
@@ -13,7 +13,7 @@ DEPEND=">=sys-libs/ncurses-5.2"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 #
 # These flags a reset here because too much optimisation can cause aspell's

@@ -1,7 +1,10 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.3 2002/11/06 06:23:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.4 2002/12/09 04:17:45 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *vilistextum-2.6.1.ebuild (2 August 2002)
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> vilistextum-2.6.1.ebuild :

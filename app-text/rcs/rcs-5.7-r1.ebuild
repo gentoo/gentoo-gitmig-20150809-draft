@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r1.ebuild,v 1.9 2002/10/04 05:07:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r1.ebuild,v 1.10 2002/12/09 04:17:44 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Revision Control System"
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc"
 
 RDEPEND="sys-apps/diffutils"
 
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 src_compile() {
 

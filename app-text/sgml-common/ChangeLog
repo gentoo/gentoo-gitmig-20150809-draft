@@ -1,7 +1,10 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.8 2002/09/12 07:20:19 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.9 2002/12/09 04:17:45 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *sgml-common-0.6.3-r2 (12 Sep 2002)
   12 Sep 2002; satai <satai@gentoo.org> sgml-common-0.6.3-r2.ebuild :
   Added more robust file checking.

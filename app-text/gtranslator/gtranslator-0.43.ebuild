@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.43.ebuild,v 1.4 2002/11/02 19:10:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.43.ebuild,v 1.5 2002/12/09 04:17:44 manson Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gtranslator.org/download/releases/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.gtranslator.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=gnome-base/gnome-libs-1.2
 	( >=gnome-base/gconf-1.0
