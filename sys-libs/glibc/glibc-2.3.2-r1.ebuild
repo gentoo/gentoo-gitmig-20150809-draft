@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.2 2003/04/19 19:37:34 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.3 2003/04/20 20:59:26 method Exp $
 
 IUSE="nls pic build nptl"
 
@@ -230,7 +230,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-        if [ `is-flag "-fstack-protector"` -a  `has "sandbox" $FEATURES` ]
+
+        if [ -n "`is-flag "-fstack-protector"`" -a -n "`has "sandbox" $FEATURES`" ]
         then
                 eerror "You have both -fstack-protector and sandbox enabled"
                 eerror "glibc will not compile correctly with both of these enabled"
