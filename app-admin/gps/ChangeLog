@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/gps
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/ChangeLog,v 1.1 2002/10/31 18:27:14 seemant Exp $
+
+*gps-1.1.0 (31 Oct 2002)
+
+  31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> gps-1.1.0.ebuild
+  ChangeLog files/digest-gps-1.1.0 :
+
+  New package -- a GTK+-1.2 applet to show process statistics (like top).

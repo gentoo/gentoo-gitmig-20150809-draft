@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2.
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/files/rgpsp,v 1.1 2002/10/31 18:27:14 seemant Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting Remote Graphical Process Statistics daemon"
+	start-stop-daemon --start --quiet --exec /usr/bin/rgpsp
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Remote Graphical Process Statistics daemon"
+	start-stop-daemon --stop --quiet --name rgpsp
+	eend $?
+}
