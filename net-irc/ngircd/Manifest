@@ -2,16 +2,14 @@
 Hash: SHA1
 
 MD5 2b2613ab9209dadfe265681b922f886c ngircd-0.8.3.ebuild 1298
-MD5 3d53ccc6540946cba8037116fe3fc4cd ngircd-0.8.2.ebuild 1298
-MD5 6e914cc7051d5483714945a8322bba64 ChangeLog 1679
+MD5 781a11a3781af5c9f3f791a5278d60df ChangeLog 1774
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 8a38f32703577610207bcdfbe516a38d files/ngircd.init.d 521
-MD5 85f74471b4534e3e27fa2b6ad6dce3bd files/digest-ngircd-0.8.2 64
 MD5 fc2670f2b2116c79574e78c6b04bf721 files/digest-ngircd-0.8.3 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD4DBQFCAmM4I1lqEGTUzyQRAn49AKCAATcQvjYbQxCmUyoOzcdaWkTXcQCYx7o8
-tHfyNxgSHmf6Jqn/GY1NQA==
-=AizY
+iD8DBQFCA4riI1lqEGTUzyQRAgC7AJ9Fg50QuxhIe0QM30l7tOXAHKH0BwCgr5Tx
+wNboV86G9nQ433dLBkZQGQg=
+=1f6g
 -----END PGP SIGNATURE-----
