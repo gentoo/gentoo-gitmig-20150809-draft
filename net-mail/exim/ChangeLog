@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.23 2003/03/25 22:50:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.24 2003/03/26 05:03:05 seemant Exp $
 
 *exim-4.12 (28 Jan 2003)
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> exim-4.12.ebuild:
+  removed suid bit on /etc/conf.d/exim thanks to: Benjamin Podszun (Blafasel @
+  irc) <Dar@Dar-Klajid.de> in bug #18148
 
   07 Feb 2003; Nick Hadaway <raker@gentoo.org> exim-4.12.ebuild :
   Marked stable for x86.

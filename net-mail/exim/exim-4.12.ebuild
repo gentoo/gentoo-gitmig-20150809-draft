@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.12.ebuild,v 1.5 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.12.ebuild,v 1.6 2003/03/26 05:03:05 seemant Exp $
 
-inherit eutils
+IUSE="tcpd ssl postgres mysql ldap pam"
 
 EXISCAN_VER=${PV}-21
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
@@ -13,13 +13,12 @@ HOMEPAGE="http://www.exim.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc"
-IUSE="tcpd ssl postgres mysql ldap pam"
 
 PROVIDE="virtual/mta"
 
-DEPEND="virtual/glibc
+DEPEND=">=sys-apps/sed-4.0.5
+	dev-lang/perl
 	>=sys-libs/db-3.2
-	>=dev-lang/perl-5.6.0
 	>=dev-libs/libpcre-3.4
 	pam? ( >=sys-libs/pam-0.75 )
 	tcpd? ( sys-apps/tcp-wrappers )
@@ -27,6 +26,7 @@ DEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	mysql? ( >=dev-db/mysql-3.23.28 )
 	postgres? ( >=dev-db/postgresql-7 )"
+
 RDEPEND="${DEPEND}
 	!virtual/mta
 	>=net-mail/mailbase-0.00"
@@ -62,13 +62,11 @@ src_unpack() {
 
 	cd Local
 	if use pam; then
-		cp Makefile Makefile.orig
-		sed -e "s:# SUPPORT_PAM=yes:SUPPORT_PAM=yes:" Makefile.orig > Makefile
+		sed -i "s:# \(SUPPORT_PAM=yes\):\1:" Makefile
 		myconf="${myconf} -lpam"
 	fi
 	if use tcpd; then
-		cp Makefile Makefile.orig
-		sed -e "s:# USE_TCP_WRAPPERS=yes:USE_TCP_WRAPPERS=yes:" Makefile.orig > Makefile
+		sed -i "s:# \(USE_TCP_WRAPPERS=yes\):\1:" Makefile
 		myconf="${myconf} -lwrap"
 	fi
 	if [ -n "$myconf" ] ; then
@@ -77,65 +75,54 @@ src_unpack() {
 
 	cd ${S}
 	if use ssl; then
-		cp Local/Makefile Local/Makefile.tmp
-		sed -e "s:# SUPPORT_TLS=yes:SUPPORT_TLS=yes:" \
-			-e "s:# TLS_LIBS=-lssl -lcrypto:TLS_LIBS=-lssl -lcrypto:" Local/Makefile.tmp > Local/Makefile
+		sed -i \
+			-e "s:# \(SUPPORT_TLS=yes\):\1:" \
+			-e "s:# \(TLS_LIBS=-lssl -lcrypto\):\1:" Local/Makefile
 	fi
 
 	LOOKUP_INCLUDE=
 	LOOKUP_LIBS=
 
 	if use ldap; then
-		cp Local/Makefile Local/Makefile.tmp
-		sed -e "s:# LOOKUP_LDAP=yes:LOOKUP_LDAP=yes:" \
-			-e "s:# LDAP_LIB_TYPE=OPENLDAP2:LDAP_LIB_TYPE=OPENLDAP2:" \
-			Local/Makefile.tmp >| Local/Makefile
+		sed -i \
+			-e "s:# \(LOOKUP_LDAP=yes\):\1:" \
+			-e "s:# \(LDAP_LIB_TYPE=OPENLDAP2\):\1:" Local/Makefile
 		LOOKUP_INCLUDE="-I/usr/include/ldap"
 		LOOKUP_LIBS="-L/usr/lib -lldap -llber"
 	fi
 
 	if use mysql; then
-		cp Local/Makefile Local/Makefile.tmp
-		sed -e "s:# LOOKUP_MYSQL=yes:LOOKUP_MYSQL=yes:" \
-			Local/Makefile.tmp >| Local/Makefile
+		sed -i "s:# LOOKUP_MYSQL=yes:LOOKUP_MYSQL=yes:" Local/Makefile
 		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I/usr/include/mysql"
 		LOOKUP_LIBS="$LOOKUP_LIBS -L/usr/lib -lmysqlclient"
 	fi
 
 	if use postgres; then
-		cp Local/Makefile Local/Makefile.tmp
-		sed -e "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" \
-			Local/Makefile.tmp >| Local/Makefile
+		sed -e "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" Local/Makefile
 		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I/usr/include/postgresql"
 		LOOKUP_LIBS="$LOOKUP_LIBS -lpq"
 	fi
 
 	if [ -n "$LOOKUP_INCLUDE" ]; then
-		cp Local/Makefile Local/Makefile.tmp
-		sed -e "s:# LOOKUP_INCLUDE=-I /usr/local/ldap/include -I /usr/local/mysql/include -I /usr/local/pgsql/include:LOOKUP_INCLUDE=$LOOKUP_INCLUDE:" \
-			Local/Makefile.tmp >| Local/Makefile
+		sed -i "s:# LOOKUP_INCLUDE=-I /usr/local/ldap/include -I /usr/local/mysql/include -I /usr/local/pgsql/include:LOOKUP_INCLUDE=$LOOKUP_INCLUDE:" \
+			Local/Makefile
 	fi
 
 	if [ -n "$LOOKUP_LIBS" ]; then
-		cp Local/Makefile Local/Makefile.tmp
-		sed -e "s:# LOOKUP_LIBS=-L/usr/local/lib -lldap -llber -lmysqlclient -lpq:LOOKUP_LIBS=$LOOKUP_LIBS:" \
-			Local/Makefile.tmp >| Local/Makefile
+		sed -i "s:# LOOKUP_LIBS=-L/usr/local/lib -lldap -llber -lmysqlclient -lpq:LOOKUP_LIBS=$LOOKUP_LIBS:" \
+			Local/Makefile
 	fi
 
 
 	cat Makefile | sed -e 's/^buildname=.*/buildname=exim-gentoo/g' > Makefile.gentoo && mv -f Makefile.gentoo Makefile
 
-	cp Local/Makefile Local/Makefile.tmp
-	sed -e "s:# LOOKUP_DSEARCH=yes:LOOKUP_DSEARCH=yes:" Local/Makefile.tmp >| Local/Makefile
+	sed -i "s:# LOOKUP_DSEARCH=yes:LOOKUP_DSEARCH=yes:" Local/Makefile
 
-	cp Local/Makefile Local/Makefile.tmp
-	sed -e "s:# LOOKUP_CDB=yes:LOOKUP_CDB=yes:" Local/Makefile.tmp >| Local/Makefile
+	sed -i "s:# LOOKUP_CDB=yes:LOOKUP_CDB=yes:" Local/Makefile
 }
 
 src_compile() {
-
 	make || die
-
 }
 
 
@@ -182,6 +169,7 @@ src_install () {
 	newexe ${FILESDIR}/exim.rc6 exim
 	insinto /etc/conf.d
 	newins ${FILESDIR}/exim.confd exim
+	fperms 644 /etc/conf.d/exim
 }
 
 
