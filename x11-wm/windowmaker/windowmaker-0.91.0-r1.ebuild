@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.2 2004/11/15 06:26:29 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.3 2004/11/23 20:40:15 eradicator Exp $
 
 inherit eutils gnustep-funcs
 
@@ -24,7 +24,7 @@ RDEPEND="nls? ( >=sys-devel/gettext-0.10.39 )
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc amd64 ~mips"
 
 if use gnustep; then
 	egnustep_install_domain "System"
@@ -131,6 +131,9 @@ src_install() {
 	echo "/usr/bin/wmaker" >> wmaker
 	exeinto /etc/X11/Sessions/
 	doexe wmaker
+
+	insinto /etc/X11/dm/Sessions
+	doins ${FILESDIR}/wmaker.desktop
 }
 
 pkg_postinst() {
