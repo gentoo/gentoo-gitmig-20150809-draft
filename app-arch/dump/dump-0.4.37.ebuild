@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.37.ebuild,v 1.2 2004/10/17 10:03:36 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.37.ebuild,v 1.3 2004/10/26 03:01:03 vapier Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Dump/restore ext2fs backup utilities"
+HOMEPAGE="http://dump.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dump/${MY_P}.tar.gz"
-HOMEPAGE="http://dump.sourceforge.net"
 
-SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc ~ia64 ~alpha ~amd64"
+SLOT="0"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="readline static"
 
 DEPEND=">=sys-fs/e2fsprogs-1.27
@@ -27,36 +27,38 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	if use readline ; then
-		for i in configure.in configure
-		do
-			sed -i "s:-ltermcap:-lncurses:g" \
-				${i}
-		done
-	fi
+	sed -i "s:-ltermcap:-lncurses:g" configure || die
 }
 
 src_compile() {
-	local myconf=""
-	use static \
-		&& myconf="${myconf} --enable-static --enable-staticz" \
-		|| myconf="${myconf} --enable-shared"
-
 	econf \
 		--with-dumpdatespath=/etc/dumpdates \
 		--with-binowner=root \
 		--with-bingroup=root \
 		--enable-largefile \
-		`use_enable readline` \
-		${myconf} || die
-
+		$(use_enable static) \
+		$(use_enable static staticz) \
+		$(use_enable readline) \
+		|| die
 	emake || die
 }
 
 src_install() {
+	# built on old autotools, no DESTDIR support
 	einstall MANDIR=${D}/usr/share/man/man8 || die
+	mv "${D}"/usr/sbin/{,dump-}rmt
+	mv "${D}"/usr/share/man/man8/{,dump-}rmt.8
 
-	dodoc CHANGES COPYRIGHT KNOWNBUGS MAINTAINERS README \
-		REPORTING-BUGS THANKS TODO
-	dodoc -r examples/dump_on_cd
+	dodoc CHANGES KNOWNBUGS MAINTAINERS README REPORTING-BUGS THANKS TODO
+	cd examples
+	local d=
+	for d in * ; do
+		docinto ${d}
+		dodoc ${d}/*
+	done
+}
+
+pkg_postinst() {
+	ewarn "Dump now installs 'rmt' as 'dump-rmt'."
+	ewarn "This is to avoid conflicts with tar's 'rmt'."
 }
