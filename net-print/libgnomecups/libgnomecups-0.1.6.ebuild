@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.1.6.ebuild,v 1.14 2004/06/25 00:40:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.1.6.ebuild,v 1.15 2004/11/08 19:09:48 vapier Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa ia64 amd64 mips"
+KEYWORDS="x86 ppc alpha sparc hppa ia64 amd64 mips arm"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
