@@ -1,12 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/make.defaults,v 1.1 2004/12/31 03:40:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/make.defaults,v 1.2 2004/12/31 10:36:24 eradicator Exp $
 
-ARCH="sparc"
-ACCEPT_KEYWORDS="${ARCH}"
-
-# Used in ebuilds for verifying multilib userland
-PROFILE_ARCH="sparc64-multilib"
-
-# We're on sparc64 machines
+# 64bit kernel, 32/64bit multilib userland 
 CHOST="sparc64-unknown-linux-gnu"
+PROFILE_ARCH="sparc64-multilib"
