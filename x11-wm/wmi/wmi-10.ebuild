@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/wmi-10.ebuild,v 1.3 2004/11/04 16:08:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/wmi-10.ebuild,v 1.4 2005/02/20 20:00:29 slarti Exp $
 
 DESCRIPTION="WMI is a new window manager for X11, which combines the best features of larswm, ion, evilwm and ratpoison into one window manager."
 SRC_URI="http://download.berlios.de/wmi/${P}.tar.gz"
@@ -12,7 +12,7 @@ DEPEND="virtual/x11
 	media-libs/fontconfig
 	media-libs/freetype"
 
-KEYWORDS="x86 ppc ~ppc-macos"
+KEYWORDS="x86 ppc ~ppc-macos ~amd64"
 SLOT="0"
 IUSE=""
 

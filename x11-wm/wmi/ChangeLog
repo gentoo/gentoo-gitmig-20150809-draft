@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/wmi
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/ChangeLog,v 1.11 2004/11/04 16:08:27 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/ChangeLog,v 1.12 2005/02/20 20:00:29 slarti Exp $
+
+  20 Feb 2005; Tom Martin <slarti@gentoo.org> wmi-10.ebuild:
+  Marked ~amd64, resolves bug 82454.
 
   05 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> wmi-10.ebuild:
   Stable on x86 and ppc.
