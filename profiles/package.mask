@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lu_zero@gentoo.org> (14 May 2003)
+# Not yet ready, sadly
+=media-video/cinelerra-1.1.6
+
 # <mkennedy@gentoo.org> (8 May 2003)
 # waiting for jboss user to be added to passwd
 =net-www/jboss-3.2.1
