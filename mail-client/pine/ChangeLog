@@ -1,7 +1,14 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.11 2004/07/24 13:59:16 alexander Exp $
-  
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.12 2004/07/28 02:14:33 langthang Exp $
+
+*pine-4.61 (27 Jul 2004)
+
+  27 Jul 2004; Tuan Van <langthang@gentoo.org> +pine-4.61.ebuild:
+  Version bump, resolve bug #58205.
+  Thanks to: Anders Hellgren <andh@gentoo.se>
+  This ebuild also installs mailutil tool, resolve bug #53489.
+
   24 Jun 2004; Alexander Plank <alexander@gentoo.org> pine-4.58-r3.ebuild:
   add -macos; doesn't compile correctly
 
