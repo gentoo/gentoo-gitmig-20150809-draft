@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.52 2004/10/02 20:39:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.53 2004/10/07 23:00:24 lu_zero Exp $
+
+  08 Oct 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.14.1.ebuild:
+  Marked stable
 
   02 Oct 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.14.1.ebuild:
   Cleanup + remove a stray patch
