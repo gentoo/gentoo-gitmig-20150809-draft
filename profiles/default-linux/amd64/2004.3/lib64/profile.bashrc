@@ -37,3 +37,5 @@ setup_multilib_variables() {
 }
 
 [ "${CCHOST}" == "" -o "${CCHOST}" == "${CHOST}" -o "${CCHOST}" == "${CHOST32}" ] && setup_multilib_variables
+[ "${CONF_MULTILIBDIR}" == "lib" -a "${CONF_LIBDIR}" == "lib64" ] && SKIP_MULTILIB_HACK="YES"
+
