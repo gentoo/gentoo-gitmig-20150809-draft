@@ -1,0 +1,9 @@
+# ChangeLog for net-wireless/bluez-firmware
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-firmware/ChangeLog,v 1.1 2004/09/26 18:48:22 liquidx Exp $
+
+*bluez-firmware-1.0 (26 Sep 2004)
+
+  26 Sep 2004; Alastair Tse <liquidx@gentoo.org> +bluez-firmware-1.0.ebuild:
+  intiial commit
+
