@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/systemc-2.0.1.ebuild,v 1.4 2003/02/13 09:26:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/systemc-2.0.1.ebuild,v 1.5 2004/04/26 16:09:27 agriffis Exp $
 
 IUSE=""
 
@@ -33,7 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 	cd ${S}/src/systemc/kernel
 	ar cru ../../../src/libsystemc.a sc_attribute.o sc_cor_fiber.o sc_cor_qt.o sc_event.o sc_kernel_ids.o sc_lambda.o sc_main.o sc_module.o sc_module_name.o sc_module_registry.o sc_name_gen.o sc_object.o sc_object_manager.o sc_process_int.o sc_runnable.o sc_sensitive.o sc_simcontext.o sc_time.o sc_ver.o sc_wait.o sc_wait_cthread.o

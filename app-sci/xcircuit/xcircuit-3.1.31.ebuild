@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-3.1.31.ebuild,v 1.3 2004/04/21 06:12:28 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-3.1.31.ebuild,v 1.4 2004/04/26 16:13:47 agriffis Exp $
 
 DESCRIPTION="Circuit drawing and schematic capture program."
 SRC_URI="http://xcircuit.ece.jhu.edu/archive/${P}.tgz"
@@ -21,9 +21,9 @@ src_compile() {
 	aclocal && autoconf || die "Could not recreate configuration files!"
 
 	if [ `use tcltk` ]; then
-		econf --with-tcl --with-tk
+		econf --with-tcl --with-tk || die "econf failed"
 	else
-		econf
+		econf || die "econf failed"
 	fi
 
 	if [ `use tcltk` ]; then

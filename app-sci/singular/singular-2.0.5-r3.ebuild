@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/singular-2.0.5-r3.ebuild,v 1.2 2004/03/24 14:02:53 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/singular-2.0.5-r3.ebuild,v 1.3 2004/04/26 16:04:54 agriffis Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_unpack () {
 
 src_compile() {
 	local myconf="${myconf} --with-NTL --prefix=${D}/usr"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	make CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die "make failed"
 }
 

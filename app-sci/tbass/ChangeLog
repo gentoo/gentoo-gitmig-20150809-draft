@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/tbass
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.12 2004/04/25 22:55:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.13 2004/04/26 16:10:14 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> tbass-20030108.ebuild:
+  Add die following econf for bug 48950
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> tbass-20030108.ebuild,
   tbass-20030725.3.3.ebuild:

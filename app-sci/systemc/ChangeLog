@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/systemc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/ChangeLog,v 1.4 2003/10/23 13:47:05 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/ChangeLog,v 1.5 2004/04/26 16:09:27 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> systemc-2.0.1.ebuild:
+  Add die following econf for bug 48950
 
 *systemc-2.0.1 (05 Dec 2002)
   

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030108.ebuild,v 1.8 2004/04/25 22:55:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030108.ebuild,v 1.9 2004/04/26 16:10:14 agriffis Exp $
 
 IUSE=""
 
@@ -47,7 +47,7 @@ src_compile() {
 
 	# configure tech paths
 	cd ${WORKDIR}/balsa-tech-ams-1.0
-	econf
+	econf || die "econf failed"
 
 	cd ${WORKDIR}/balsa-tech-verilog-1.0
 	econf || die "econf failed"
