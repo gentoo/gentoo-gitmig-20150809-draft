@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r2.ebuild,v 1.3 2003/01/31 20:00:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r2.ebuild,v 1.4 2003/01/31 20:01:17 danarmak Exp $
 NEED_KDE_DONT_ADD_KDELIBS_DEP=1 # we're a special case, see below
 inherit eutils flag-o-matic kde-dist
 
@@ -227,7 +227,7 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 	
 	# fix bug #12705: make sure default Xreset, Xsetup, Xwilling files are installed
 	# into the kdm config dir
-	cd ${S}/kdm/frontend
+	cd ${S}/kdm/kfrontend
 	./genkdmconf --in . --no-old
 	insinto ${PREFIX}/share/config/kdm
 	doins Xreset Xsetup Xstartup
