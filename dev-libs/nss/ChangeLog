@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.29 2004/10/16 19:49:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.30 2004/11/06 08:30:30 mr_bones_ Exp $
+
+  06 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> nss-3.9.2.ebuild:
+  Don't use sed in global scope
 
   16 Oct 2004; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild,
   nss-3.9.2.ebuild:
