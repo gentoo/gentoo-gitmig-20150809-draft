@@ -1,4 +1,4 @@
-# This file generated automatically at Wed Aug 14 17:56:07 CEST 2002
+# This file generated automatically at Wed Aug 14 19:27:09 CEST 2002
 #
 # IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
 
@@ -118,7 +118,7 @@
 *sys-libs/zlib
 *net-misc/openssh
 *sys-apps/devfsd
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-2.0/packages,v 1.1 2002/08/14 15:56:36 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-2.0/packages,v 1.2 2002/08/14 17:31:48 murphy Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
@@ -131,4 +131,4 @@
 *sys-devel/egcs64-sparc
 
 # VNC is broken on x86, maintainer uses i386 specific makefile
-<net-misc/vnc-3.3.3-r2
+!net-misc/vnc
