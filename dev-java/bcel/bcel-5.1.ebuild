@@ -1,20 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.5 2004/01/17 04:29:48 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.6 2004/01/17 06:02:02 strider Exp $
 
 inherit java-pkg eutils
 
 DESCRIPTION="The Byte Code Engineering Library: analyze, create, manipulate Java class files"
 HOMEPAGE="http://jakarta.apache.org/bcel/"
-SRC_URI="http://jakarta.apache.org/builds/jakarta-bcel/release/v${PV}/${PN}-${PV}-src.tar.gz"
+SRC_URI="mirror://apache/jakarta/${PN}/source/${PN}-${PV}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 ~sparc"
 IUSE="doc jikes"
-DEPEND=""
-RDEPEND=">=virtual/jdk-1.2
+DEPEND=">=virtual/jdk-1.2
 	>=dev-java/regexp-1.2
 	jikes? ( dev-java/jikes )"
+RDEPEND="${DEPEND}"
 DEP_APPEND="regexp"
 
 src_compile() {

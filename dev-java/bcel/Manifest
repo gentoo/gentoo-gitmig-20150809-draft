@@ -1,5 +1,5 @@
-MD5 8b05cd809eb17962c8c21925c225ce96 bcel-5.1.ebuild 1100
-MD5 80b1c2dee64e5d0e012adcbefc1bc857 ChangeLog 631
+MD5 93019faa0e110b6be72bd6fde616e829 bcel-5.1.ebuild 1085
+MD5 5c20f4ada708023f7e0900487e72147c ChangeLog 737
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 4259eb38f8431da842c2b40c302d0ebb files/digest-bcel-5.1 64
 MD5 88f16b1c12a8814d078c5eb3906d2218 files/bcel-5.1-gentoo.diff 457
