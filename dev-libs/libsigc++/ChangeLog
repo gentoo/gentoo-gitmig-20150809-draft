@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.13 2003/02/12 06:06:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.14 2003/05/16 09:14:40 liquidx Exp $
+
+*libsigc++-1.2.5 (16 May 2003)
+
+  16 May 2003; Alastair Tse <liquidx@gentoo.org> libsigc++-1.2.5.ebuild:
+  version bump.
 
 *libsigc++-1.2.3 (06 Jan 2003)
 
