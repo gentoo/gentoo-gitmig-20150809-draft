@@ -1,4 +1,14 @@
-MD5 e53f5eb277edc94850cae1a9b9351d61 ChangeLog 468
-MD5 ef2e12e2f4e4390072494bfc650fe184 mclient-2.8.ebuild 604
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e72dc1bad9ae16ec5603dba22814ada2 ChangeLog 549
+MD5 11cf8246fdf564a770455effeb764cda mclient-2.8.ebuild 600
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 4e72b0d8ceb9d720a0b2ce5552ea1350 files/digest-mclient-2.8 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnnUWjtv59x0+BrURAqkWAJ0Z9Fs4unNTvT5Z76CoWH7nuzinpACgjrbR
+Qk8+wi+YtqY9ZQ7mkIo5A84=
+=EFr2
+-----END PGP SIGNATURE-----
