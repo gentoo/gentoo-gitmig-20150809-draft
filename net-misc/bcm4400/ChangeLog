@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bcm4400
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.10 2005/01/01 22:39:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.11 2005/01/31 18:49:55 genstef Exp $
+
+  31 Jan 2005; Stefan Schweizer <genstef@gentoo.org> -bcm4400-3.0.7.ebuild,
+  bcm4400-3.0.8.ebuild:
+  x86 stable thanks to Philip Kovacs <kovacsp3@comcast.net> in bug 74250, old
+  ebuilds clean-out
 
 *bcm4400-3.0.8 (01 Jan 2005)
 
