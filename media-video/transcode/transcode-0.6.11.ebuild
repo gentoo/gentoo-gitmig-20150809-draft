@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.10 2005/01/17 16:26:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.11 2005/01/24 22:29:29 luckyduck Exp $
 
 inherit libtool flag-o-matic eutils gcc
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE="sdl mmx mpeg sse 3dnow encode X quicktime avi altivec"
 
 DEPEND=">=media-libs/a52dec-0.7.4
-	>=media-libs/libdv-0.99
+	<=media-libs/libdv-0.102
 	x86? ( >=dev-lang/nasm-0.98.36 )
 	>=media-libs/libdvdread-0.9.0
 	>=media-video/ffmpeg-0.4.6
