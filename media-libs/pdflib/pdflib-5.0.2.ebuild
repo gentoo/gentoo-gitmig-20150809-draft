@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.8 2004/01/24 00:49:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.9 2004/01/24 01:31:31 seemant Exp $
 
 IUSE="tcltk perl python java"
 
@@ -95,9 +95,9 @@ src_install() {
 
 	dodoc readme.txt doc/*
 
-	# seemant: seems like the makefiles for pdflib generate and install the
-	# .jar file into /usr/share/pdflib/lib anyway
-
+	# seemant: seems like the makefiles for pdflib generate the .jar file
+	# anyway
+	use java && dojar bind/pdflib/java/pdflib.jar
 
 	# karltk: This is definitely NOT how it should be done!
 	# we need this to create pdflib.jar (we will not have the source when
