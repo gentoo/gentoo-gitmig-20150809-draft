@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.5.2.ebuild,v 1.1 2003/09/20 11:21:57 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.5.2.ebuild,v 1.2 2003/12/06 23:18:55 lanius Exp $
 
 DESCRIPTION="Graphical patch bay for the ALSA sequencer API."
 HOMEPAGE="http://pkl.net/~node/alsa-patch-bay.html"
@@ -17,9 +17,7 @@ IUSE="fltk"
 # it may go away in the future.
 DEPEND="!fltk? >=dev-cpp/gtkmm-2.0
 	fltk? >=x11-libs/fltk-1.1.2
-	>=media-sound/alsa-driver-0.9.0_rc1
-	>=media-libs/alsa-lib-0.9.0_rc1
-	>=media-sound/alsa-utils-0.9.0_rc1"
+	>=media-libs/alsa-lib-0.9.0_rc1"
 
 SRC_URI="http://pkl.net/~node/software/${P}.tar.gz"
 S=${WORKDIR}/${P}
