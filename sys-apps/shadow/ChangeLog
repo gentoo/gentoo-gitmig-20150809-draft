@@ -1,8 +1,15 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.28 2003/02/24 01:31:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.29 2003/02/24 14:24:31 azarah Exp $
 
 *shadow-4.0.3-r4 (23 Feb 2003)
+
+  24 Feb 2003; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r4.ebuild :
+  Remove the patch again, as it could be a security risk.  Users can use:
+
+     # sudo -u nobody ls
+
+  If they need to run commands as user with '/bin/false' as login ...
 
   23 Feb 2003; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r4.ebuild :
   If su should not simulate a login shell, use '/bin/sh' as shell to enable

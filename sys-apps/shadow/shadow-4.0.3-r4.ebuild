@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r4.ebuild,v 1.1 2003/02/24 01:31:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r4.ebuild,v 1.2 2003/02/24 14:24:31 azarah Exp $
 
 IUSE=""
 
@@ -43,7 +43,8 @@ src_unpack() {
 	# running of commands as user with /bin/false as shell, closing bug #15015.
 	#
 	# <azarah@gentoo.org> (23 Feb 2003)
-	cd ${S}; epatch ${FILESDIR}/${P}-nologin-run-sh.patch
+# This one could be a security hole ...
+#	cd ${S}; epatch ${FILESDIR}/${P}-nologin-run-sh.patch
 
 	# Patch the useradd manpage to be a bit more clear, closing bug #13203.
 	# Thanks to Guy <guycad@mindspring.com>.
