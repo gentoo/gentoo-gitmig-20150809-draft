@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.50 2004/07/17 18:24:27 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.51 2004/07/27 21:52:33 karltk Exp $
+
+*eclipse-sdk-3.0.0-r1 21 Jul 2004
+
+  21 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  Fixed mozilla embedding problem, #56516. Fixed dependency issue, #56840.
 
   17 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-3.0.0_pre9.ebuild, eclipse-sdk-3.0.0_rc1.ebuild, 
