@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.10 2004/10/27 14:36:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.11 2004/12/04 13:09:04 karltk Exp $
+
+  04 Dec 2004; <karltk@gentoo.org> fastutil-4.3.1.ebuild:
+  Partial fix for #73329.
 
 *fastutil-4.3.1 (26 Oct 2004)
 

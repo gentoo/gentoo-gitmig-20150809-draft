@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.3.1.ebuild,v 1.1 2004/10/26 13:16:56 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.3.1.ebuild,v 1.2 2004/12/04 13:09:04 karltk Exp $
 
 inherit java-pkg
 
@@ -8,12 +8,12 @@ DESCRIPTION="Provides type-specific maps, sets and lists with a small memory foo
 SRC_URI="http://fastutil.dsi.unimi.it/${P}-src.tar.gz"
 HOMEPAGE="http://fastutil.dsi.unimi.it"
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="4.3"
 IUSE="doc jikes"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 DEPEND=">=virtual/jdk-1.4
-		 >=dev-java/ant-1.5.4"
+	 >=dev-java/ant-1.5.4"
 
 src_compile() {
 	make sources || die "failed to make sources"
