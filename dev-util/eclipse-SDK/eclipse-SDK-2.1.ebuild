@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/eclipse-SDK-20030307_rc2.ebuild,v 1.1 2003/03/17 09:58:58 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/eclipse-SDK-2.1.ebuild,v 1.1 2003/04/12 12:39:33 pvdabeel Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
-SRC_URI="http://download2.eclipse.org/downloads/drops/S-RC2-200303071024/eclipse-SDK-RC2-linux-gtk.zip"
+SRC_URI="http://download2.eclipse.org/downloads/drops/R-2.1-200303272130/eclipse-SDK-2.1-linux-gtk.zip"
 IUSE=""
 
 SLOT="0"
@@ -13,9 +13,11 @@ KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND=">=virtual/jdk-1.3
 	=x11-libs/gtk+-2*
+	=gnome-base/gnome-vfs-2*
 	ppc? ( app-shells/tcsh )"
 	
 RDEPEND=">=virtual/jdk-1.3
+	=gnome-base/gnome-vfs-2*
 	=x11-libs/gtk+-2*"
 	
 S=${WORKDIR}/eclipse
@@ -32,7 +34,8 @@ src_compile() {
 		unzip -q ../swt-pisrc.zip
 		sed -e "s:/bluebird/teamswt/swt-builddir/ive:\$(JAVA_HOME):" \
 		    -e "s:JAVA_JNI=\$(IVE_HOME)/bin/include:JAVA_JNI=\$(IVE_HOME)/include:" \
-		    -e "s:\`pkg-config --libs gthread-2.0\`:-lgthread-2.0 -lglib-2.0:" \
+		    -e "s:\`pkg-config --libs gthread-2.0\`:-lpthread -lgthread-2.0 -lglib-2.0:" \
+		    -e "s:\`pkg-config --libs gnome-vfs-2.0\`:-lpthread -lgnomevfs-2 -lbonobo-activation -lORBit-2 -lm -llinc -lgmodule-2.0 -ldl -lgobject-2.0 -lgthread-2.0 -lglib-2.0:" \
 			make_gtk.mak > make_gtk.mak_new
 		cp make_gtk.mak_new make_gtk.mak
 	
