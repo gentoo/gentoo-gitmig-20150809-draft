@@ -1,0 +1,9 @@
+# ChangeLog for media-plugins/xmms-fc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fc/ChangeLog,v 1.1 2003/06/05 01:01:37 robh Exp $
+
+*xmms-fc-0.5.3 (03 Jun 2003)
+
+  03 Jun 2003; robh <robh@gentoo.org> xmms-fc-0.5.3.ebuild:
+  Inital import. Thanks to Erlend Hamberg, bug #21357
+
