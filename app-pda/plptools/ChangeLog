@@ -1,0 +1,9 @@
+# ChangeLog for app-pda/plptools
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+
+*plptools-0.11.ebuild (17 Dec 2002)
+
+  17 Dec 2002; B.Lauwers <blauwers@gentoo.org> :
+  Initial release. Set of libraries and utilities to communicate with a Psion
+  palmtop over a serial line. Ebuild submitted by Stas Gobunov <left@komus.net>
+
