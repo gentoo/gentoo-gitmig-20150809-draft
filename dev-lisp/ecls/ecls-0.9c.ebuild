@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9c.ebuild,v 1.2 2004/07/03 11:22:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9c.ebuild,v 1.3 2004/10/28 15:00:12 mkennedy Exp $
 
 inherit eutils
 
@@ -15,13 +15,15 @@ IUSE="X"
 
 DEPEND="X? ( virtual/x11 )
 	=dev-libs/gmp-4*
-	dev-libs/boehm-gc"
+	dev-libs/boehm-gc
+	app-text/texi2html"
 
 S=${WORKDIR}/ecl-${PV}
 
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${PV}-gcc-3.4-gentoo.patch
+	epatch ${FILESDIR}/${PV}-texinfo-gentoo.patch
 }
 
 src_compile() {

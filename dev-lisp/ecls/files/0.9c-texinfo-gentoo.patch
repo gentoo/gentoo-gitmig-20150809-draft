@@ -1,0 +1,73 @@
+diff -ur ecl-0.9c.orig/src/doc/user.txi ecl-0.9c/src/doc/user.txi
+--- ecl-0.9c.orig/src/doc/user.txi	2003-10-30 10:58:44.000000000 -0600
++++ ecl-0.9c/src/doc/user.txi	2004-10-27 15:25:46.042697728 -0500
+@@ -3407,11 +3407,11 @@
+ @deffnx {Method} {(setf documentation)} {new-value (list list) @optional{} doc-type}
+ @end deffn
+ 
+-@defun {ensure-generic-function} {function-name @keys{} lambda-list @keys :argument-precedence-order :declare :documentation :generic-function-class|ekeys{:method-combination :method-class :environment}}
+-@example
+-function-name ::= symbol | (setf symbol)
+-@end example
+-@end defun
++@c @defun {ensure-generic-function} {function-name @keys{} lambda-list @keys :argument-precedence-order :declare :documentation :generic-function-class|ekeys{:method-combination :method-class :environment}}
++@c @example
++@c function-name ::= symbol | (setf symbol)
++@c @end example
++@c @end defun
+ 
+ @defun {find-class} {symbol @optional{} errorp environment}
+ 
+@@ -3430,29 +3430,29 @@
+ 
+ The generic function function-keywords is used to return the keyword parameter specifiers for a given method.
+ 
+-@defmac {generic-function} {lambda-list \mchoice{option | @{method-description@}*}}
++@c @defmac {generic-function} {lambda-list \mchoice{option | @{method-description@}*}}
+ 
+-@example
+-option ::= (:argument-precedence-order @{parameter-name@}+)
+-        | (declare @{declaration@}+)
+-        | (:documentation string)
+-        | (:method-combination symbol @{arg@}*)
+-        | (:generic-function-class class-name)
+-        | (:method-class class-name)
+-method-description ::= (:method @{method-qualifier@}*
+-                                specialized-lambda-list
+-                                @{declaration | @var{documentation}@}*
+-                                @{form@}*)
+-@end example
+-The @code{generic-function} macro creates an anonymous generic function. The
+-generic function is created with the set of methods specified by its method
+-descriptions.  The @var{option}, @var{method-qualifier}, and
+-@var{specialized-lambda-list} arguments are the same as for @code{defgeneric}.
+-The generic function object is returned as the result.  If no method
+-descriptions are specified, an anonymous generic function with no methods is
+-created.  See @macref{defgeneric}, @macref{generic-flet},
+-@macref{generic-labels}, @macref{defmethod}.
+-@end defmac
++@c @example
++@c option ::= (:argument-precedence-order @{parameter-name@}+)
++@c         | (declare @{declaration@}+)
++@c         | (:documentation string)
++@c         | (:method-combination symbol @{arg@}*)
++@c         | (:generic-function-class class-name)
++@c         | (:method-class class-name)
++@c method-description ::= (:method @{method-qualifier@}*
++@c                                 specialized-lambda-list
++@c                                 @{declaration | @var{documentation}@}*
++@c                                 @{form@}*)
++@c @end example
++@c The @code{generic-function} macro creates an anonymous generic function. The
++@c generic function is created with the set of methods specified by its method
++@c descriptions.  The @var{option}, @var{method-qualifier}, and
++@c @var{specialized-lambda-list} arguments are the same as for @code{defgeneric}.
++@c The generic function object is returned as the result.  If no method
++@c descriptions are specified, an anonymous generic function with no methods is
++@c created.  See @macref{defgeneric}, @macref{generic-flet},
++@c @macref{generic-labels}, @macref{defmethod}.
++@c @end defmac
+ 
+ @deffn {Generic} {initialize-instance}  instance @rest{} initargs
+ @deffnx {Method} {initialize-instance} {(instance standard-object) @rest{} initargs}
+Only in ecl-0.9c/src/doc: user.txi~

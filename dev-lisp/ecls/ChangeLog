@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/ecls
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.8 2004/07/03 11:22:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.9 2004/10/28 15:00:12 mkennedy Exp $
+
+  28 Oct 2004; Matthew Kenendy <mkennedy@gentoo.org>
+  +files/0.9c-texinfo-gentoo.patch, ecls-0.9c.ebuild:
+  Included patch to work around texinfo build problems.
 
   03 Jul 2004; David Holm <dholm@gentoo.org> ecls-0.9c.ebuild:
   Added to ~ppc.
