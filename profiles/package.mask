@@ -21,6 +21,27 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (31 Oct 2002)
+# kde 3.1 rc1: masked permanently
+~x11-libs/qt-3.1_pre20021024
+~kde-base/arts-1.1.0.1
+~kde-base/kde-3.1_rc1
+~kde-base/kdeaddons-3.1_rc1
+~kde-base/kdeadmin-3.1_rc1
+~kde-base/kdeartwork-3.1_rc1
+~kde-base/kdebase-3.1_rc1
+~kde-base/kdebindings-3.1_rc1
+~kde-base/kdeedu-3.1_rc1
+~kde-base/kdegames-3.1_rc1
+~kde-base/kdegraphics-3.1_rc1
+~kde-base/kdelibs-3.1_rc1
+~kde-base/kdemultimedia-3.1_rc1
+~kde-base/kdenetwork-3.1_rc1
+~kde-base/kdepim-3.1_rc1
+~kde-base/kdesdk-3.1_rc1
+~kde-base/kdetoys-3.1_rc1
+~kde-base/kdeutils-3.1_rc1
+
 # The user submitted ebuild for Speex is *not enough*.
 # There are issues with gcc3 that I've contacted the
 # authors about that I'm told will be resolved in beta2.
