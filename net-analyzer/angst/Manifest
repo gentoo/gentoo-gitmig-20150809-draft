@@ -1,7 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 201ecf5afe97649838a391c148fe8638 angst-0.4b-r1.ebuild 794
-MD5 6d2243e746f4a125b0168e448cdab2d3 angst-0.4b.ebuild 682
 MD5 89f97f133251e92a6fa6848e1516935f ChangeLog 854
 MD5 627c0901fa5d3e5cc4aab74635d35f3f metadata.xml 274
-MD5 2e59247b348d1067a433e5787b585f20 files/digest-angst-0.4b 61
 MD5 2e59247b348d1067a433e5787b585f20 files/digest-angst-0.4b-r1 61
 MD5 5e2378564ab6bc44916bc53b430dc1d2 files/0.4b-libnet-1.0.patch 518
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjMzhT+MN7JbqCpMRAgnsAJ0WcVxJGguIY2sukUpV+V7YdTj06gCcCUth
+QbSL2O8adypzUyLZIHEHgfc=
+=0JEQ
+-----END PGP SIGNATURE-----
