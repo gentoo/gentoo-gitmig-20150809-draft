@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gift
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gift/ChangeLog,v 1.3 2002/05/30 20:45:58 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gift/ChangeLog,v 1.4 2002/06/11 18:39:40 verwilst Exp $
+
+*gift-0.10.0_pre020611 (11 June 2002)
+
+  11 June 2002; Bart Verwilst <verwilst@gentoo.org> :
+  Another new snapshot, first one i tested on gcc 3.1 :o)
 
 *gift-0.10.0_pre020527 (30 May 2002)
 
