@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4_rc4.ebuild,v 1.3 2003/11/17 03:32:28 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4_rc4.ebuild,v 1.4 2003/11/17 03:40:42 max Exp $
 
 inherit distutils
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="matrox dvd encode lirc X"
 
-DEPEND=">=dev-python/pygame-1.5.6
+DEPEND="${DEPEND}
+	>=dev-python/pygame-1.5.6
 	>=dev-python/Imaging-1.1.3
 	>=dev-python/pyxml-0.8.2
 	>=dev-python/twisted-1.0.7
