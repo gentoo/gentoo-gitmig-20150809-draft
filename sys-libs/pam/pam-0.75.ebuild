@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75.ebuild,v 1.4 2001/08/11 05:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75.ebuild,v 1.5 2001/08/16 04:14:30 chadh Exp $
 
 P=pam-${PV}
 A=Linux-PAM-${PV}.tar.gz
@@ -75,6 +75,3 @@ src_install() {
    ln -s lib${i}.so.${PV} lib${i}.so.0
  done
 }
-
-
-

@@ -1,0 +1,7 @@
+auth       requisite  pam_listfile.so \
+		item=user sense=deny file=/etc/ftpusers onerr=succeed
+auth       requisite  pam_shells.so
+#auth	   required   pam_mysql.so user=root passwd=123 db=pam table=user
+auth       required   pam_pwdb.so
+account    required   pam_pwdb.so
+session	   required   pam_pwdb.so
