@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 068527d99dea7055da94064d63cade68 ChangeLog 1262
-MD5 a8da910aa2229f907ac649f1b985959b whowatch-1.5.2.ebuild 780
+MD5 30a3cb20a11ab476ad89cf099eeb7cc9 whowatch-1.5.2.ebuild 785
 MD5 28a6caa17456e7a25e61c5ff223b3494 files/digest-whowatch-1.5.2 65
 MD5 f9118c4c52dc9a3258fcb7a65aa1f55d files/whowatch-1.5.2-gentoo.diff 430
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBm3+9HTu7gpaalycRAmKHAKCjPlLaQ5NQ9ezjk1h/94WyU+OcTACgpeAD
+V0u4/sUp9YpkomspJwRir5A=
+=jzPT
+-----END PGP SIGNATURE-----
