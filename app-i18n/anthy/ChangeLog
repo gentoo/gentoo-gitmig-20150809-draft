@@ -1,0 +1,12 @@
+# ChangeLog for app-i18n/anthy
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.1 2003/08/20 14:02:45 usata Exp $
+
+*anthy-4300b (20 Aug 2003)
+
+  20 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> anthy-4300b.ebuild,
+  50anthy-gentoo.el:
+  Initial import.  Ebuild first created by Satoshi Fuktommy
+  <fuktommy@phaeton.cs.uec.ac.jp> and polished by MATSUU Takuto
+  <matsuu@gentoo.org> at GentooJP BugTrack
+
