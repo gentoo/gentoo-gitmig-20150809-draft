@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-devel/xemacs-devel-1.50.ebuild,v 1.2 2003/10/03 02:46:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-devel/xemacs-devel-1.50.ebuild,v 1.3 2004/02/21 22:45:52 brad_mssw Exp $
 
 SLOT="0"
 IUSE=""
@@ -15,7 +15,7 @@ app-xemacs/rmail
 app-xemacs/tm
 app-xemacs/apel
 "
-KEYWORDS="x86 ~ppc alpha sparc"
+KEYWORDS="amd64 x86 ~ppc alpha sparc"
 
 inherit xemacs-packages
 
