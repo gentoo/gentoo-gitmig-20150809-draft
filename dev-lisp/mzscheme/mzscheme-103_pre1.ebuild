@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/mzscheme-103_pre1.ebuild,v 1.8 2004/06/25 00:00:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/mzscheme-103_pre1.ebuild,v 1.9 2004/07/14 16:25:04 agriffis Exp $
 
 S=${WORKDIR}/plt
 DESCRIPTION="MzScheme scheme compiler"
@@ -11,6 +11,7 @@ DEPEND=""
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86"
+IUSE=""
 
 src_compile() {
 	cd src

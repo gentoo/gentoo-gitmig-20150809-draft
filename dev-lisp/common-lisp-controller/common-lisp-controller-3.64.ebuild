@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.64.ebuild,v 1.10 2004/06/24 23:58:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.64.ebuild,v 1.11 2004/07/14 16:21:38 agriffis Exp $
 
 DESCRIPTION="Common Lisp Controller"
 HOMEPAGE="http://packages.debian.org/unstable/devel/common-lisp-controller.html"
@@ -9,6 +9,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/common-lisp-controller/${PN}_$
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc"
+IUSE=""
 
 DEPEND="sys-apps/netkit-base
 	dev-lisp/cl-defsystem3
