@@ -462,9 +462,9 @@ sys-apps/mkisofs
 =sys-apps/portage-2.0.19
 =sys-apps/portage-2.0.20
 =sys-apps/portage-2.0.21
-#testing
 =sys-apps/portage-2.0.24
-
+#testing
+=sys-apps/portage-2.0.26
 
 # lamer@gentoo.org (15 Jul 2002)
 # Needs socks testing
