@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-pdf
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.5 2003/10/17 12:44:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.6 2003/12/09 18:00:15 lanius Exp $
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> cups-pdf-1.1.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
 
   17 Oct 2003; Heinrich Wendel <lanius@gentoo.org> cups-pdf-1.0.ebuild,
   cups-pdf-1.1.ebuild:

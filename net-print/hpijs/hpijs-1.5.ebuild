@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.5.ebuild,v 1.1 2003/11/25 18:40:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.5.ebuild,v 1.2 2003/12/09 17:59:46 lanius Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://hpinkjet.sourceforge.net"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz
 	http://www.linuxprinting.org/download/foomatic/foomatic-db-hpijs-${DB_V}.tar.gz"
-DEPEND="app-text/ghostscript
+DEPEND="virtual/ghostscript
 	cups? ( net-print/cups )
 	net-print/foomatic-filters
 	foomaticdb? ( net-print/foomatic-db-engine )"

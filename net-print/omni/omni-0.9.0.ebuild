@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.0.ebuild,v 1.4 2003/09/07 00:18:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.0.ebuild,v 1.5 2003/12/09 17:59:16 lanius Exp $
 
 DESCRIPTION="Omni provides support for many printers with a pluggable framework (easy to add devices)"
 HOMEPAGE="http://sourceforge.net/projects/omniprint"
@@ -10,7 +10,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86"
 DEPEND=""
-RDEPEND=">=app-text/ghostscript-7.05.3-r2
+RDEPEND="virtual/ghostscript
 	>=dev-libs/libxml-1.8.6
 	dev-libs/glib
 	cups? ( >=net-print/cups-1.1.14 )

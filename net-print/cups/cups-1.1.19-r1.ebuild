@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.9 2003/09/25 13:58:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.10 2003/12/09 17:58:40 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -126,7 +126,7 @@ pkg_postinst() {
 	install -d -m0755 ${ROOT}/etc/cups/{interfaces,ppd}
 
 	einfo
-	einfo "emerge >=app-text/ghostscript-7.05-r1 if you need to print"
+	einfo "emerge virtual/ghostscript if you need to print"
 	einfo "to a non-postscript printer (after cups itself! even if it's"
 	einfo "already installed!)"
 	einfo
