@@ -1,4 +1,4 @@
-MD5 eafeb585b01deef893043390f128587b ChangeLog 15685
+MD5 1e67cda7ec8d64db174a11a9429adfc8 ChangeLog 15772
 MD5 e5c392a89829e864886bf08bd05a4919 gnome-vfs-1.0.5-r3.ebuild 1943
 MD5 d29d9cf8d7faf835e2e59cf2d64eabcc gnome-vfs-2.8.3-r1.ebuild 2204
 MD5 ce61b31cbeaa511b66b4e4eab483e282 gnome-vfs-2.6.1.1.ebuild 1751
@@ -7,7 +7,7 @@ MD5 a6c0e4fd5056d056279862d6730500da gnome-vfs-2.8.1-r2.ebuild 2224
 MD5 3f31e708c7ae2f7d071eae7e08197c0c gnome-vfs-2.8.4.ebuild 2229
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e77c78abdddca4a02fd259b927623ad0 gnome-vfs-2.10.0-r1.ebuild 1973
-MD5 7f85050614712e8fd4c9cd377f5d6877 gnome-vfs-2.8.4-r1.ebuild 2305
+MD5 0cbee69f1e350fddc03f540ea5daa925 gnome-vfs-2.8.4-r1.ebuild 2304
 MD5 a88e201c8f2ec5444db0bea2e8c302b4 files/digest-gnome-vfs-1.0.5-r3 68
 MD5 87c1b9929fce8975fc0f9aedb3cab3f0 files/digest-gnome-vfs-2.8.3-r1 154
 MD5 6126fab0b179eb680b819593f4bf1412 files/digest-gnome-vfs-2.6.1.1 71
