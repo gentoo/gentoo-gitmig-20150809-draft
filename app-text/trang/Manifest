@@ -1,4 +1,14 @@
-MD5 be9f1a388779b106ed3cb7ff48a7fbc8 ChangeLog 595
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a581baba92ed87a7337d755d91c7786b trang-20030619.ebuild 743
+MD5 ff65ddf7f3526852f2289b4d5c5e668e ChangeLog 697
 MD5 79a5dd1b805e5bca495aec6d6a73826b metadata.xml 176
-MD5 46c63e055de311500c9d6b3c2b2bcb95 trang-20030619.ebuild 714
 MD5 15d93b4d4f695718d4ab66cf366b1e42 files/digest-trang-20030619 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcanO/rLF9B432nYRAuCzAJ4nT2AFStJuoCK3ojlS0pTTVislPACfZP+d
++GoQ0Qm1kiGFHs9ecO75Qbs=
+=+nNR
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/trang
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.4 2004/08/24 03:20:57 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.5 2004/10/16 23:07:49 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> trang-20030619.ebuild:
+  dojar --> java-pkg_dojar
 
   23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> trang-20030619.ebuild:
   Marking stable on x86
