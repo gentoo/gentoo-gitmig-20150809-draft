@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-eb
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-eb/ChangeLog,v 1.1 2003/09/20 08:57:11 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-eb/ChangeLog,v 1.2 2004/04/10 16:26:37 usata Exp $
+
+*ruby-eb-2.5a (11 Apr 2004)
+
+  11 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-eb-2.5a.ebuild:
+  Version bumped. virtual/ruby fix
 
 *ruby-eb-2.3 (20 Sep 2003)
 
