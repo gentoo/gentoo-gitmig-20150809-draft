@@ -1,5 +1,4 @@
 MD5 e323b5351ac58603fc9497e38afa2cd8 ChangeLog 5700
-MD5 f36b5472f5e3d0c018bc86bef90f32ad pine-4.50-r4.ebuild 3704
 MD5 37994e5c4bd29aa962d7aabd71b867a3 pine-4.51.ebuild 3288
 MD5 1c4d008a28cd63b6c397dafa0984d2ba pine-4.52.ebuild 4962
 MD5 d4fd2cf54e68d170617662d79a863a7c pine-4.53-r1.ebuild 3171
@@ -7,7 +6,8 @@ MD5 45c644a3d0a590508f04d8a69acf2171 pine-4.53-r2.ebuild 3280
 MD5 01fb0e5a73e44dbc58ab82231cb4d795 pine-4.53-r3.ebuild 3401
 MD5 37003d87e8c831b47aa8d49b6d31475b pine-4.53-r4.ebuild 3394
 MD5 18c2039a178a6c1f11b2320e8c427f53 pine-4.53.ebuild 3168
-MD5 ae08fd3d2e17e365bd3d41bb5fa9b6e0 files/digest-pine-4.50-r4 61
+MD5 6d1ff585763746b4f069fd9380a022f1 pine-4.50-r4.ebuild 3663
+MD5 c47b08cab6132957eef9c0d61862f951 files/digest-pine-4.50-r4 131
 MD5 f25b20265d7415e876da759aef7feb4b files/digest-pine-4.51 118
 MD5 66b753d10185904c7df571e7a6a3d562 files/digest-pine-4.52 655
 MD5 23c27a2910c4b454eefea9ea019e22bb files/digest-pine-4.53 61
@@ -26,4 +26,3 @@ MD5 3803bda87f35ee20456ab2b363460db9 files/pine-4.31-segfix.patch 460
 MD5 aed38f617192b6de2ada1847c48cabe7 files/pine-4.33-whitespace.patch 337
 MD5 e11e8fb4fba9fc54b7c0f302d79458bf files/pine-4.40-boguswarning.patch 512
 MD5 6fca405df4fd22a5708ddf83e8081716 files/pine-4.40-lockfile-perm.patch 932
-MD5 8340a12bbc737d62fa1be8779fc1cdee files/pine-4.50-maildir.patch 46382

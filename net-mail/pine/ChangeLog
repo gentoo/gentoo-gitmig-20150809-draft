@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.29 2003/04/15 16:09:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.30 2003/04/15 22:24:42 mholzer Exp $
 
 *pine-4.53-r4 (14 Feb 2003)
 
@@ -42,6 +42,14 @@
   changes.  New digest file, ebuild is still the same.
 
 *pine-4.53 (17 Jan 2003)
+
+  15 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  pine-4.50-r4.ebuild, pine-4.53-r1.ebuild, pine-4.53-r1.ebuild,
+  pine-4.53-r2.ebuild, pine-4.53-r2.ebuild, pine-4.53-r3.ebuild,
+  pine-4.53-r3.ebuild, pine-4.53.ebuild, pine-4.53.ebuild,
+  files/pine-4.50-maildir.patch:
+  Removed old crusty ebuilds, moved pine-4.50-maildir.patch to distfiles,
+  changed ebuild to use epatch.
 
   17 Jan 2003; Nick Hadaway <raker@gentoo.org> pine-4.53.ebuild,
   files/digest-pine-4.53 :
