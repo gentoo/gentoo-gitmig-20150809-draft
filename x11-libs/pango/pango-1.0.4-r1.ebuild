@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.4-r1.ebuild,v 1.1 2002/08/04 07:43:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.4-r1.ebuild,v 1.2 2002/08/04 08:29:30 spider Exp $
 
 inherit libtool
 
@@ -26,8 +26,13 @@ src_compile() {
 	elibtoolize
 	local myconf
 	use doc && myconf="--enable-gtk-doc" || myconf="--disable-gtk-doc"
+	if [ -n "$DEBUG" ]; then
+		myconf="${myconf}  --enable-debug"
+	fi
+				
+	
 	econf ${myconf} --without-qt  || die
-	 make || die "serial make failed" 
+	make || die "serial make failed" 
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.6-r1.ebuild,v 1.1 2002/08/04 07:43:02 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.6-r1.ebuild,v 1.2 2002/08/04 08:29:30 spider Exp $
 
 inherit libtool
 
@@ -44,7 +44,10 @@ src_compile() {
 	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
 	use jpeg ||  myconf="${myconf} --without-libjpeg"
 	use tiff ||  myconf="${myconf} --without-libtiff"
-	
+	if [ -n "$DEBUG" ]; then
+		myconf="${myconf}  --enable-debug"
+	fi
+		
 	econf --with-gdktarget=x11 ${myconf} || die
 
 # gtk+ isn't multithread friendly due to some obscure code generation bug
