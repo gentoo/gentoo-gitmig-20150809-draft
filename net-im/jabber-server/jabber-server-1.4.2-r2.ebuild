@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.3 2002/11/12 22:11:31 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.4 2002/11/13 12:56:03 verwilst Exp $
 
 IUSE="ssl"
 
@@ -15,6 +15,7 @@ SRC_URI="http://jabberd.jabberstudio.org/downloads/jabber-${PV}.tar.gz
 	 http://files.jabberstudio.org/mu-conference/muconference-0.3.tar.gz"
 
 DEPEND=">=dev-libs/pth-1.4.0
+	>=dev-libs/glib-2
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 SLOT="0"
@@ -26,7 +27,6 @@ src_unpack() {
 	unpack jabber-${PV}.tar.gz
 	cd ${S}
 	patch -p0 < ${FILESDIR}/mio_ssl.c.patch
-	patch -p0 < ${FILESDIR}/pth.patch
 	tar -xjf ${FILESDIR}/config-1.4.2.tar.bz2
 	unpack msn-transport-stable-20011217.tar.gz
 	unpack aim-transport-stable-20021112.tar.gz
@@ -47,23 +47,23 @@ src_compile() {
 	mv jabberd/jabberd.c jabberd/jabberd.c.orig
 	sed 's:pstrdup(jabberd__runtime,HOME):"/usr/bin":' jabberd/jabberd.c.orig > jabberd/jabberd.c
 	rm -f jabberd/jabberd.c.orig
-	./configure --with-pth-includes=../jabberd/pth-1.4.0 ${myconf} || die
+	./configure ${myconf} || die 
 	make || die
 
         cd ${S}/aim-transport
-	./autogen.sh --with-pth-includes=../jabberd/pth-1.4.0 || die
-        make CFLAGS="-Ijabberd/pth-1.4.0 -DAIM_BUILDDATE=\"`date +%Y%m%d`\" -DAIM_BUILDTIME=\"`date +%H%M%S`\" " || die
+	./configure || die 
+        make || die
+	make install
 
         cd ${S}/msn-transport
 	./bootstrap || die
-        ./configure --with-pth-includes=../jabberd/pth-1.4.0 || die
-        make CFLAGS="-Ijabberd/pth-1.4.0" || die
+        ./configure || die
+        make || die
 
 	cd ${S}/mu-conference
-	pass
+	make || die 
 
         cd ${S}/yahoo-transport-2
-	CPPFLAGS="$CPPFLAGS -I../jabberd -I../../jabberd -I../jabberd/pth-1.4.0" ./autogen.sh || die
         make || die
 
 }
@@ -75,9 +75,19 @@ src_install() {
 	touch error.log
 	touch record.log
         exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6 jabber
-        mkdir -p ${D}/usr/jabber-${PV}
-        cp -rf * ${D}/usr/jabber-${PV}/
-	cd ${D}/usr/jabber-${PV}/jabberd
+        mkdir -p ${D}/usr/sbin
+	mkdir -p ${D}/etc/jabber
+	mkdir -p ${D}/usr/lib/jabber
+	cp ${S}/jabberd/jabberd ${D}/usr/sbin/
+	cp ${S}/aim-transport/src/aimtrans.so ${D}/usr/lib/jabber/
+	cp ${S}/aim-transport/Install_AIM_3.5.1670.exe ${D}/usr/lib/jabber/
+	cp ${S}/msn-transport/src/msntrans.so ${D}/usr/lib/jabber/
+	cp ${S}/mu-conference/src/mu-conference.so ${D}/usr/lib/jabber/
+	cp ${S}/yahoo-transport-2/yahoo-transport.so ${D}/usr/lib/jabber/
+	cd ${D}/etc/jabber
+	tar -xjf ${FILESDIR}/config-1.4.2-r1.tar.bz2
+
+
 
 }
 
