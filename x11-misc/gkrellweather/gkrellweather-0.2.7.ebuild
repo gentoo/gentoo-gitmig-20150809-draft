@@ -25,7 +25,7 @@ src_install () {
 
     insinto /usr/share/gkrellm/plugins
     doins gkrellweather.so
-    insinto /usr/bin
+    exeinto /usr/bin
     doexe GrabWeather 
     dodoc README ChangeLog COPYING
 }
