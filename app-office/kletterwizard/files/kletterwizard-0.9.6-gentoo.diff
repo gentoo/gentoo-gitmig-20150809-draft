@@ -1,0 +1,48 @@
+--- klw-latex/Makefile.orig	2004-07-25 15:51:58.775033528 -0400
++++ klw-latex/Makefile	2004-07-25 15:52:15.329516864 -0400
+@@ -431,7 +431,6 @@
+ 	-mkdir -p ${DOSSIER}/tex/latex/klw/
+ 	cp klw.cls ${DOSSIER}/tex/latex/klw/
+ 	cp rechnung.sty ${DOSSIER}/tex/latex/klw/
+-	texhash
+ 
+ uninstall :
+ 	-rm -rf ${DOSSIER}/tex/latex/klw
+--- klw-latex/Makefile.am.orig	2004-07-25 15:51:43.225397432 -0400
++++ klw-latex/Makefile.am	2004-07-25 15:52:24.384140352 -0400
+@@ -9,7 +9,6 @@
+ 	-mkdir -p ${DOSSIER}/tex/latex/klw/
+ 	cp klw.cls ${DOSSIER}/tex/latex/klw/
+ 	cp rechnung.sty ${DOSSIER}/tex/latex/klw/
+-	texhash
+ 
+ 
+ uninstall :
+--- klw-latex/Makefile.in.orig	2004-07-25 14:01:55.131939872 -0400
++++ klw-latex/Makefile.in	2004-07-25 15:51:30.433342120 -0400
+@@ -244,7 +244,7 @@
+ localstatedir = @localstatedir@
+ mandir = @mandir@
+ oldincludedir = @oldincludedir@
+-prefix = @prefix@
++prefix = ${DESTDIR}/@prefix@
+ program_transform_name = @program_transform_name@
+ qt_includes = @qt_includes@
+ qt_libraries = @qt_libraries@
+@@ -263,7 +263,7 @@
+ xdg_appsdir = @xdg_appsdir@
+ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+-DOSSIER = @texmfpath@
++DOSSIER = ${DESTDIR}/@texmfpath@
+ subdir = klw-latex
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+@@ -431,7 +431,6 @@
+ 	-mkdir -p ${DOSSIER}/tex/latex/klw/
+ 	cp klw.cls ${DOSSIER}/tex/latex/klw/
+ 	cp rechnung.sty ${DOSSIER}/tex/latex/klw/
+-	texhash
+ 
+ uninstall :
+ 	-rm -rf ${DOSSIER}/tex/latex/klw

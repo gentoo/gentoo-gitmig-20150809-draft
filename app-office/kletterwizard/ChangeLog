@@ -1,6 +1,15 @@
 # ChangeLog for app-office/kletterwizard
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.5 2004/07/01 11:49:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.6 2004/07/25 20:06:45 absinthe Exp $
+
+*kletterwizard-0.9.6 (25 Jul 2004)
+
+  25 Jul 2004; Dylan Carlson <absinthe@gentoo.org>
+  +files/kletterwizard-0.9.6-gentoo.diff, kletterwizard-0.9.2.ebuild,
+  kletterwizard-0.9.4.ebuild, +kletterwizard-0.9.6.ebuild:
+  Version bump. Had to work around sandbox violations associated with
+  kletterwizard's new latex class. All other ebuilds were fixed to depend on
+  virtual/tetex to fix bug #57175.
 
   01 Jul 2004; David Holm <dholm@gentoo.org> kletterwizard-0.9.4.ebuild:
   Added to ~ppc.
