@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.16-r1.ebuild,v 1.2 2001/12/15 03:26:52 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.16-r1.ebuild,v 1.3 2001/12/15 15:34:38 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -9,8 +9,8 @@
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=${PV}
 KV=${OKV}
-S=${WORKDIR}/linux-${PVR}
-S2=${WORKDIR}/linux-${PVR}-extras
+S=${WORKDIR}/linux-${KV}
+S2=${WORKDIR}/linux-${KV}-extras
 
 # Patch versions. We now have a new system.  To enable a patch, set the patch version.  To disable
 # a patch, comment out the patch version and it won't be enabled.  In this ebuild, ACPI, low latency
@@ -67,8 +67,8 @@ src_unpack() {
 
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
-	mv linux linux-${PVR} || die
-	dodir /usr/src/linux-${PVR}-extras
+	mv linux linux-${KV} || die
+	dodir /usr/src/linux-${KV}-extras
 	if [ "$MOSIX" ]
 	then
 		cd ${S2}
@@ -77,8 +77,11 @@ src_unpack() {
 	cd ${S}
 	patchorama $PATCHES
 	echo "Fixing up a single reject..."
-	#This is a reject related to both low latency and XFS's kdb modifying the same enum.  No biggie.
+	This is a reject related to both low latency and XFS's kdb modifying the same enum.  No biggie.
 	cp ${GFILESDIR}/sysctl.h ${S}/include/linux
+	echo "Removing -xfs extension from the kernel..."
+	cp Makefile Makefile.orig
+	sed -e 's:EXTRAVERSION =-xfs:EXTRAVERSION =:g' Makefile.orig > Makefile
 	echo "Preparing for compilation..."
 	
 	#sometimes we have icky kernel symbols; this seems to get rid of them
@@ -124,9 +127,9 @@ src_install() {
 		dodir /usr/include/asm
 		cp -ax ${S}/include/asm-i386/* ${D}/usr/include/asm
 	fi
-	if [ -d ${D}/usr/src/linux-${PVR} ]
+	if [ -d ${D}/usr/src/linux-${KV} ]
 	then
-		cd ${D}/usr/src/linux-${PVR}
+		cd ${D}/usr/src/linux-${KV}
 		if [ -e .config ]
 		then
 			mv .config .config.eg
@@ -151,9 +154,9 @@ pkg_preinst() {
 pkg_postinst() {
 	[ "$PN" = "linux-headers" ] && return
 	rm -f ${ROOT}/usr/src/linux
-	ln -sf linux-${PVR} ${ROOT}/usr/src/linux
+	ln -sf linux-${KV} ${ROOT}/usr/src/linux
 	#copy over our .config if one isn't already present
-	cd ${ROOT}/usr/src/linux-${PVR}
+	cd ${ROOT}/usr/src/linux-${KV}
 	if [ "${PN}" = "linux-sources" ] && [ -e .config.eg ] && [ ! -e .config ]
 	then
 		cp -a .config.eg .config
