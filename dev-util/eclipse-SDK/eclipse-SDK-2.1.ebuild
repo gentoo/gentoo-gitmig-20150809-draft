@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/eclipse-SDK-2.1.ebuild,v 1.1 2003/04/12 12:39:33 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/eclipse-SDK-2.1.ebuild,v 1.2 2003/04/23 14:21:16 foser Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
@@ -11,14 +11,13 @@ SLOT="0"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86 ~ppc ~sparc"
 
-DEPEND=">=virtual/jdk-1.3
-	=x11-libs/gtk+-2*
-	=gnome-base/gnome-vfs-2*
+DEPEND="${RDEPEND}
+	>=virtual/jdk-1.3
 	ppc? ( app-shells/tcsh )"
 	
 RDEPEND=">=virtual/jdk-1.3
-	=gnome-base/gnome-vfs-2*
-	=x11-libs/gtk+-2*"
+	>=x11-libs/gtk+-2.2.1-r1
+	=gnome-base/gnome-vfs-2*"
 	
 S=${WORKDIR}/eclipse
 
