@@ -1,4 +1,4 @@
-MD5 07cf5f7c448ea2633f6c265a7b144538 ChangeLog 1655
+MD5 20528b60df575c053fc906a4c66ed8b6 ChangeLog 1748
 MD5 a5397ba084be1b74a03a4183c197fbcf gnustep-gui-0.7.9.ebuild 1046
 MD5 4a4b2ed7f0bd1eab702517e802fbae7b gnustep-gui-0.8.0.ebuild 1046
 MD5 5c721fa7717ddd659cad6086771f7d5c gnustep-gui-0.8.3.ebuild 1079
@@ -6,7 +6,7 @@ MD5 419d68660ff9f90dac0788e1ce70134c gnustep-gui-0.8.5.ebuild 1079
 MD5 accfcc4fae076562f894a06c5b4747a1 gnustep-gui-0.8.5-r1.ebuild 803
 MD5 4d7544f543ca76fe9024808772a871b7 gnustep-gui-0.8.7.ebuild 813
 MD5 80699754a7e9adb6c02df33c8fa16fd6 metadata.xml 161
-MD5 cd6185087091993901425f4761fd38a0 gnustep-gui-0.8.8.ebuild 813
+MD5 d2206d10d62572812cc8c88a2e29456d gnustep-gui-0.8.8.ebuild 820
 MD5 6511d4ca362a94c774358fa192e6db0b files/digest-gnustep-gui-0.7.9 70
 MD5 5baad5af49b8264c69ed660df9f0c066 files/digest-gnustep-gui-0.8.0 70
 MD5 1f422b6764274b25f0b97d452edf5855 files/digest-gnustep-gui-0.8.3 70
