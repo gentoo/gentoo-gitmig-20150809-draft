@@ -1,11 +1,11 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.51 2004/07/06 20:28:04 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.52 2004/07/06 20:49:20 squinky86 Exp $
 
 *mldonkey-2.5.16-r7 (06 Jul 2004)
 
   06 Jul 2004; Jon Hood <squinky86@gentoo.org> +mldonkey-2.5.16-r7.ebuild:
-  version bump irt #55555
+  version bump irt #55555, change all ocaml dependencies to >=3.07
 
   04 Jul 2004; Jon Hood <squinky86@gentoo.org> mldonkey-2.5.21-r2.ebuild:
   fix RDEPEND on lablgtk, closes #56081
