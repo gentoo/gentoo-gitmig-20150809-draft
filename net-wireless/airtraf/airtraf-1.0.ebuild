@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.0.ebuild,v 1.3 2003/02/13 15:27:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.0.ebuild,v 1.4 2003/02/14 07:40:08 latexer Exp $
 
 DESCRIPTION="AirTraf 802.11b Wireless traffic sniffer"
 HOMEPAGE="http://www.elixar.com/"
@@ -19,7 +19,7 @@ src_compile() {
 
 	# Do some sedding to make compile flags work
 
-	cp Makefile.rules ${T}
+	mv Makefile.rules ${T}
 	sed -e "s:gcc:${CC}:" \
 		-e "s:CFLAGS   = -Wall -O2:CFLAGS   = ${CFLAGS} -Wall:" \
 		-e "s:c++:${GXX}:" \
