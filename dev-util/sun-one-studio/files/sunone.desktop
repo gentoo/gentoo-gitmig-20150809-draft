@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Sun ONE Studio
+Comment=Sun Java IDE
+Icon=/opt/s1studioce/bin/icons/ide.ico
+Exec=/opt/s1studioce/bin/runide.sh
+Terminal=false
+Type=Application
+StartupNotify=false
