@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6a71326a2a500af639ecf5e5367ef2f1 alienwave-0.3.0.ebuild 616
 MD5 a6542aac5109b601fff45911b23b1a67 ChangeLog 446
+MD5 203cbd8d727a2bfc86470be8515b1320 alienwave-0.3.0.ebuild 616
 MD5 69bd61de16c74c22893bb09f29950ee1 metadata.xml 159
 MD5 58cfa7382f7d047eca167ff3fa90ac89 files/digest-alienwave-0.3.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBr6qI/UDVUK2NELYRAoXAAJ0eS8IvCSWgC+U9cFETxZbH5HowngCeIlzs
-Y4HTCx56xtKRbCqn2e+uBUQ=
-=56uj
------END PGP SIGNATURE-----
