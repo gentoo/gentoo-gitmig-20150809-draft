@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r4.ebuild,v 1.1 2004/07/09 18:05:47 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r5.ebuild,v 1.1 2004/08/05 13:58:58 plasmaroo Exp $
 
 OKV="2.4.20"
 OKB="2.4"
@@ -16,7 +16,8 @@ inherit kernel-2
 RESTRICT="nomirror"
 DESCRIPTION="Full sources for Marc-Christian Peterson's WOLK kernel, based on 2.4.20 vanilla with many popular patches and fixes"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/mcp/${OKB}-WOLK/"
-SRC_URI="mirror://kernel/linux/kernel/people/mcp/${OKB}-WOLK/${WOLK_SRC}"
+SRC_URI="mirror://kernel/linux/kernel/people/mcp/${OKB}-WOLK/${WOLK_SRC}
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${PN}-4.11-CAN-2004-0415.patch"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips"
 
@@ -25,7 +26,9 @@ mailing list: http://sourceforge.net/mailarchive/forum.php?forum_id=8245.
 Refer to the 2.4-WOLK-README file for further information. You will find
 this file in the directory containing the sources."
 
-UNIPATCH_LIST="${FILESDIR}/${PN}.CAN-2004-0133.patch
+UNIPATCH_LIST="
+	${DISTDIR}/${PN}-4.11-CAN-2004-0415.patch
+	${FILESDIR}/${PN}.CAN-2004-0133.patch
 	${FILESDIR}/${PN}.CAN-2004-0181.patch
 	${FILESDIR}/${PN}.CAN-2004-0394.patch
 	${FILESDIR}/${PN}.CAN-2004-0495.patch
