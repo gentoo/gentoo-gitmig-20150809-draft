@@ -2,7 +2,8 @@ MD5 20f66ad9707e27f5c611425f478fb3d7 glibc-2.3.2-r2.ebuild 17907
 MD5 98520b25e20895a0a30622874d4065e6 glibc-2.3.2-r3.ebuild 17342
 MD5 1c54b2080b34510638c0e121ce46bf3b glibc-2.3.3_pre20031222.ebuild 18446
 MD5 907f77a5ef6d031929ca6a7c0e6f16fe glibc-2.3.1-r5.ebuild 10876
-MD5 5e9497798247b6f39e45e848b0df9ce0 ChangeLog 24643
+MD5 81003d0774c79e5d3ee92164a7b5f204 ChangeLog 24801
+MD5 efa4250ea67388f76101bac036611a88 glibc-2.3.3_pre20040117.ebuild 18446
 MD5 6b7bd83ec3d1365bace1564b9ac1e006 glibc-2.3.2-r9.ebuild 18500
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 75ebcae60b030cad2cf7c201380cb871 glibc-2.2.5-r9.ebuild 10003
@@ -22,6 +23,7 @@ MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r9 312
 MD5 4404ee4b6e3017819d8f36082e0265e5 files/test-sysctl_h.c 54
 MD5 de6744f3ba45c52573febfa91a3d1d1d files/digest-glibc-2.3.2-r2 296
 MD5 439cce38dd07f6669b9bb50f0c211b41 files/digest-glibc-2.3.1-r5 141
+MD5 49374df695743477ccba680199a0ff87 files/digest-glibc-2.3.3_pre20040117 312
 MD5 c02420990c4908a6336d81ea5192a37e files/glibc-manpages-2.3.1.tar.bz2 14755
 MD5 75983ceba061c090373c14394d08d32c files/2.3.1/glibc-2.3.1-typeo_dl-runtime_c.patch 848
 MD5 2b746db4988cf7f5c6824302561b7eb5 files/2.3.1/glibc23-06-hppa-tests.dpatch 21021
