@@ -2,25 +2,23 @@
 Hash: SHA1
 
 MD5 88f17719957f009d1e0d4f93e1bd01a2 development-sources-2.6.6.ebuild 997
-MD5 ca1f47df068961aa6c593ba48b871d5d development-sources-2.6.8.ebuild 528
 MD5 7e4e1272f74842d9a110c00399d7fc9f development-sources-2.6.8.1.ebuild 555
 MD5 eeceb31d16d4879c28142757eaf36379 development-sources-2.6.5.ebuild 1395
 MD5 87b98538df412d9f30ba35bd3d8fe153 development-sources-2.6.10_rc1.ebuild 606
 MD5 bd78750f3868d90dde38a9657b1ef195 development-sources-2.6.7.ebuild 996
 MD5 f419cebd2c3711686bf25bceaa5c420d development-sources-2.6.9.ebuild 639
-MD5 8d8f5d669bbf9dec4539bf05d3ef6813 ChangeLog 26398
+MD5 4d1c67b4e84fb019910f3cea25e156f9 ChangeLog 26514
 MD5 5caccd9193acfe5a3a07ea88861cb11b metadata.xml 660
 MD5 155dda0cbd63a01416c6a8a1b8785046 files/digest-development-sources-2.6.10_rc1 201
 MD5 a09d4ddd7fe62bbf298879c6450cb6e7 files/digest-development-sources-2.6.5 208
 MD5 214f14a8b49844fc44f74d8ab84019de files/digest-development-sources-2.6.6 137
 MD5 23e1b75850b5a41b95c65e7771f39c48 files/digest-development-sources-2.6.7 137
-MD5 1623b556519b6205de4d6ad67af4d842 files/digest-development-sources-2.6.8 66
 MD5 414403f6046e06086e6d2fb0e2d5be60 files/digest-development-sources-2.6.9 135
 MD5 18bed04a1b45de515096089cc10913ec files/digest-development-sources-2.6.8.1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBelrOchej4aZK9/cRAvWWAJ9nhKmb8aEIDSxvHk+dzEyxtBi/dgCffjkG
-8z0N4l8ro4CF/OqLl4gf/qY=
-=hFwc
+iD8DBQFBemJpchej4aZK9/cRAmzHAJ9nT2CSvPzwixHfyWMKtj9WxfQC8wCeJaUR
+NvzuVYXPnaOykEg7+njq7cI=
+=xws3
 -----END PGP SIGNATURE-----
