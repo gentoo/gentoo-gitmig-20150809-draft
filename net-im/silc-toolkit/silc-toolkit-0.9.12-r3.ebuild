@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r3.ebuild,v 1.3 2004/09/05 12:04:46 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r3.ebuild,v 1.4 2004/09/17 09:35:38 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,8 +21,15 @@ src_unpack() {
 	cd ${S}
 
 	sed -i \
-		-e 's:-cp -R $(srcdir)/tutorial $(prefix):-cp -R $(srcdir)/tutorial $(docdir):' \
+		-e "s:\$(srcdir)/tutorial \$(prefix):\$(srcdir)/tutorial \$(docdir):" \
 		Makefile.in
+
+	# also modify Makefile.am, since the build process seems to recreate
+	# Makefile.in and start over (see bug 63089)
+	sed -i \
+		-e "s:\$(srcdir)/tutorial \$(prefix):\$(srcdir)/tutorial \$(docdir):" \
+		Makefile.am
+
 	sed -i \
 		-e "s:-g -O2:${CFLAGS}:g" \
 		configure
