@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3.ebuild,v 1.3 2003/07/01 15:15:47 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3.ebuild,v 1.4 2003/07/06 09:14:12 kumba Exp $
 
 IUSE="readline tcltk berkdb bootstrap"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${PV}.tgz"
 
 HOMEPAGE="http://www.python.org"
 LICENSE="PSF-2.2"
-KEYWORDS="amd64 ~x86 ~ppc sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="amd64 ~x86 ~ppc sparc ~alpha mips ~hppa ~arm"
 
 DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
