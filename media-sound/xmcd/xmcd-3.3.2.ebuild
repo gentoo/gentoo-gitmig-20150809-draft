@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.7 2004/09/15 17:47:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.8 2004/09/15 18:35:09 eradicator Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ KEYWORDS="x86 ~ppc sparc amd64"
 
 DEPEND="virtual/x11
 	x11-libs/openmotif
+	media-libs/flac
 	alsa? ( media-libs/alsa-lib )
 	encode? ( >=media-sound/lame-3.93.1 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
@@ -52,29 +53,29 @@ src_install() {
 	# shamelessly culled from SuSE .spec file...
 	ebegin "Running install script"
 		BATCH_BINDIR=${D}/usr/X11R6/bin \
-		BATCH_LIBDIR=${D}/usr/X11R6/lib/X11 \
-		BATCH_XMCDLIB=${D}/usr/X11R6/lib/X11/xmcd \
+		BATCH_LIBDIR=${D}/usr/X11R6/$(get_libdir)/X11 \
+		BATCH_XMCDLIB=${D}/usr/X11R6/$(get_libdir)/X11/xmcd \
 		BATCH_MANDIR=${D}/usr/X11R6/man/man1 \
 		BATCH_CDDBDIR=${D}/var/lib/xmcd/cddb \
 		BATCH_DISCOGDIR=${D}/var/lib/xmcd/discog \
-		sh install.sh -n -b
+		sh install.sh -n -b || die
 	eend 0
 
-	dodir /usr/lib
 	for lib in libcddb.so.1 libcddb.a libcddbkey1.a libcddbkey2.a; do
-		cp ${S}/cddb_d/${lib} ${D}/usr/lib
+		dolib cddb_d/${lib}
 	done
-	dosym libcddbkey2.a /usr/lib/libcddbkey.a
-	dosym libcddb.so.1 /usr/lib/libcddb.so
+
+	dosym libcddbkey2.a /usr/$(get_libdir)/libcddbkey.a
+	dosym libcddb.so.1 /usr/$(get_libdir)/libcddb.so
 
 	# a small fixup...
-	rm -rf ${D}/usr/X11R6/lib/X11/xmcd/docs
+	rm -rf ${D}/usr/X11R6/$(get_libdir)/X11/xmcd/docs
 	dodir etc
-	dosym ../usr/X11R6/lib/X11/xmcd/config /etc/xmcd
+	dosym ../usr/X11R6/$(get_libdir)/X11/xmcd/config /etc/xmcd
 
 	# move binaries to correct place
 	ebegin "Moving binaries to target location"
-		(cd ${D}/usr/X11R6/lib/X11/xmcd/bin-*;
+		(cd ${D}/usr/X11R6/$(get_libdir)/X11/xmcd/bin-*;
 		 sed -e "s@${D}@@g" \
 		 < ${D}/usr/X11R6/bin/.xmcd_start > start
 		 cp start ${D}/usr/X11R6/bin/.xmcd_start
@@ -84,14 +85,14 @@ src_install() {
 		(cd ${D}/usr/X11R6/bin; \
 		 ln -s ../lib/X11/xmcd/bin-*/start xmcd; \
 		 ln -s ../lib/X11/xmcd/bin-*/start cda)
-		cp ${D}/usr/X11R6/lib/X11/xmcd/config/common.cfg \
-		   ${D}/usr/X11R6/lib/X11/xmcd/config/cdrom
+		cp ${D}/usr/X11R6/$(get_libdir)/X11/xmcd/config/common.cfg \
+		   ${D}/usr/X11R6/$(get_libdir)/X11/xmcd/config/cdrom
 		for i in config/config.sh scripts/genidx ; do
 		 sed -e "s@${D}@@g" \
-		 < ${D}/usr/X11R6/lib/X11/xmcd/$i \
-		 > ${D}/usr/X11R6/lib/X11/xmcd/$i.tmp
-		 mv ${D}/usr/X11R6/lib/X11/xmcd/$i.tmp \
-		    ${D}/usr/X11R6/lib/X11/xmcd/$i
+		 < ${D}/usr/X11R6/$(get_libdir)/X11/xmcd/$i \
+		 > ${D}/usr/X11R6/$(get_libdir)/X11/xmcd/$i.tmp
+		 mv ${D}/usr/X11R6/$(get_libdir)/X11/xmcd/$i.tmp \
+		    ${D}/usr/X11R6/$(get_libdir)/X11/xmcd/$i
 		done
 	eend 0
 
@@ -99,9 +100,9 @@ src_install() {
 		# fix ownership
 		chown -R root:root ${D}
 		# remove setuid bit
-		chmod 0755 ${D}/usr/X11R6/lib/X11/xmcd/bin-*/{cda,xmcd,start,gobrowser}
-		chmod 0755 ${D}/usr/X11R6/lib/X11/xmcd/config/config.sh
-		chmod 0755 ${D}/usr/X11R6/lib/X11/xmcd/scripts/genidx
+		chmod 0755 ${D}/usr/X11R6/$(get_libdir)/X11/xmcd/bin-*/{cda,xmcd,start,gobrowser}
+		chmod 0755 ${D}/usr/X11R6/$(get_libdir)/X11/xmcd/config/config.sh
+		chmod 0755 ${D}/usr/X11R6/$(get_libdir)/X11/xmcd/scripts/genidx
 		# change perms
 		chmod 0644 ${D}/var/lib/xmcd/discog/index.html
 		chmod 0644 ${D}/var/lib/xmcd/discog/*/*/index.html
@@ -110,15 +111,15 @@ src_install() {
 	if use x86
 	then
 		ebegin "Adding Gracenote CDDB² support"
-			exeinto /usr/X11R6/lib/X11/xmcd/lib-Linux-i686
+			exeinto /usr/X11R6/$(get_libdir)/X11/xmcd/lib-Linux-i686
 			doexe ${WORKDIR}/${P}/cddb_d/libcddb.so.1
-			dosym libcddb.so.1 /usr/X11R6/lib/X11/xmcd/lib-Linux-i686/libcddb.so
+			dosym libcddb.so.1 /usr/X11R6/$(get_libdir)/X11/xmcd/lib-Linux-i686/libcddb.so
 		eend 0
 	fi
 
 	# install documentation
 	dodoc docs_d/*
-	dosym ../../../../../usr/share/doc/${P} /usr/X11R6/lib/X11/xmcd/docs
+	dosym ../../../../../usr/share/doc/${P} /usr/X11R6/$(get_libdir)/X11/xmcd/docs
 }
 
 pkg_postinst() {
