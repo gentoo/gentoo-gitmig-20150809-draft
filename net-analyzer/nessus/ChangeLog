@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.40 2004/08/12 19:50:56 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.41 2004/08/12 20:11:44 eldad Exp $
+
+  12 Aug 2004; Eldad Zack <eldad@gentoo.org> -nessus-2.0.11.ebuild,
+  nessus-2.0.12.ebuild, -nessus-2.1.0.ebuild:
+  ppc64 -> ~ppc64, and moved to 2.0.12. wrt bug #57456.
 
   12 Aug 2004; Eldad Zack <eldad@gentoo.org> nessus-2.0.10a.ebuild,
   nessus-2.0.11.ebuild, -nessus-2.0.7-r1.ebuild, -nessus-2.0.7.ebuild,
