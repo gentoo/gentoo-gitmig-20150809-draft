@@ -1,0 +1,19 @@
+# ChangeLog for net-www/horde-nag
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.1 2004/08/15 12:31:30 stuart Exp $
+
+*horde-nag-1.1.1 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +horde-nag-1.1.1.ebuild:
+  Moved from net-www/horde-nag to www-apps/horde-nag.
+
+*horde-nag-1.1.1 (26 Feb 2004)
+
+  26 Feb 2004; Martin Holzer <mholzer@gentoo.org> horde-nag-1.1.1.ebuild:
+  Version bumped.
+
+*horde-nag-1.1 (19 Jan 2004)
+
+  19 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial ebuild made by me.
