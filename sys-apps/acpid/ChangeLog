@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/acpid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.8 2003/05/14 18:35:04 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.9 2003/06/07 08:35:46 seemant Exp $
+
+*acpid-1.0.2-r1 (07 Jun 2003)
+
+  07 Jun 2003; Seemant Kulleen <seemant@gentoo.org> acpid-1.0.1-r1.ebuild,
+  acpid-1.0.2-r1.ebuild, acpid-1.0.2.ebuild:
+  NO OPTIMISATIONS. DO NOT CHANGE THAT. Closes bug #22365 by Sybren Harmsma
+  <S.Harmsma@student.rug.nl>
 
 *acpid-1.0.2 (14 May 2003)
 
