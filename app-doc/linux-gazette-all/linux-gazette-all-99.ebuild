@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/linux-gazette-all-99.ebuild,v 1.4 2004/06/30 01:08:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/linux-gazette-all-99.ebuild,v 1.5 2004/07/14 17:58:04 slarti Exp $
 
 DESCRIPTION="Linux Gazette - all issues"
 HOMEPAGE="http://linuxgazette.net/"
@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE="OPL"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 RDEPEND="

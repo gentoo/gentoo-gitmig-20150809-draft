@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/linux-gazette
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette/ChangeLog,v 1.5 2004/06/30 01:05:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette/ChangeLog,v 1.6 2004/07/14 17:55:55 slarti Exp $
+
+  14 Jul 2004; Tom Martin <slarti@gentoo.org> linux-gazette-*.ebuild:
+  Marked ~amd64.
 
 *linux-gazette-83 (29 Jun 2004)
 
