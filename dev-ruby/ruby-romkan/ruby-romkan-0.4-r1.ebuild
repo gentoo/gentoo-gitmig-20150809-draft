@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ruby-romkan-0.4-r1.ebuild,v 1.4 2004/02/22 22:26:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ruby-romkan-0.4-r1.ebuild,v 1.5 2004/04/10 16:08:56 usata Exp $
 
 inherit ruby
 
@@ -11,4 +11,4 @@ LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="alpha ~hppa ~mips ~ppc sparc x86 ia64"
 IUSE=""
-DEPEND="dev-lang/ruby"
+DEPEND="virtual/ruby"
