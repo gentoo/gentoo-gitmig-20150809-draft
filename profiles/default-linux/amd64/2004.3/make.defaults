@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/make.defaults,v 1.6 2004/09/17 17:00:38 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/make.defaults,v 1.7 2004/09/20 00:27:54 lv Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
 
 # GCC 3.4.2 has multilib enabled by default, but we still need multilib in USE
 # for compatibility
-GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses multilib readline zlib erandom -java -nptl"
+GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses multilib readline zlib -java -nptl"
 
 # Sane, functional, almost-but-not-quite-minimal default for USE
 USE="${GRP_STAGE23_USE} bitmap-fonts oss alsa crypt jpeg nls userlocales opengl png xml2 acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xprint xrandr xv"
