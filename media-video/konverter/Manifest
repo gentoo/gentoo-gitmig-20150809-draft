@@ -1,4 +1,6 @@
-MD5 3ea3c892bbfc141174caa09e26963368 ChangeLog 497
 MD5 e18087c9551ce516c8963d1c9169c83c konverter-0.5.ebuild 634
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 f5633c4c6f91f3650beda46f1395099c ChangeLog 635
+MD5 0e11cd20b36bfe78d82e9bfc55f0e340 konverter-0.6.ebuild 642
+MD5 94ac335c777d2ab382f81d53ab7d34ff files/digest-konverter-0.6 65
 MD5 95c0b261b77765a208a0cbbdd09e78c8 files/digest-konverter-0.5 65
