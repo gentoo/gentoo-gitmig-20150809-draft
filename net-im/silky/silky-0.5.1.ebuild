@@ -1,20 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silky/silky-0.5.1.ebuild,v 1.3 2004/07/01 22:19:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silky/silky-0.5.1.ebuild,v 1.4 2004/07/07 22:23:01 swegener Exp $
 
-IUSE=""
+IUSE="debug"
 
 DESCRIPTION="Simple and easy to use GTK+ based os-independent SILC client."
-HOMEPAGE="http://silky.sourceforge.net"
-SRC_URI="mirror://sourceforge/silky/silky-${PV}.tar.gz"
-KEYWORDS="~x86 ~ppc ~sparc"
+HOMEPAGE="http://silky.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+KEYWORDS="x86 ~ppc ~sparc"
 LICENSE="GPL-2"
 
 SLOT="0"
 
-# Silky currently does not work with silc-toolkit newer than 0.9.11. This bug
-# is to be addressed in next release of Silky.
-DEPEND="sys-libs/glibc
+DEPEND="virtual/libc
 	sys-libs/zlib
 	>=gnome-base/libglade-2
 	>=x11-libs/gtk+-2.2
@@ -23,30 +21,17 @@ DEPEND="sys-libs/glibc
 	>=dev-libs/glib-2.2
 	dev-libs/libxml2
 	app-misc/mime-types
-	net-im/silc-toolkit"
-
-RDEPEND="virtual/libc"
-
-src_unpack() {
-	unpack ${A}
-}
+	>=net-im/silc-toolkit-0.9.12-r2"
 
 src_compile() {
-	local myconf
-
-	myconf="${myconf} --with-silc-includes=/usr/include/silc-toolkit "
-	myconf="${myconf} --with-silc-libs=/usr/lib "
-
-	if [ "${DEBUG}" ]
-	then
-		einfo "debugging"
-		myconf="${myconf} --enable-debug"
-	fi
-
-	econf ${myconf} || die "./configure failed"
-	emake || die
+	econf \
+		--with-silc-includes=/usr/include/silc-toolkit \
+		--with-silc-libs=/usr/lib \
+		$(use_enable debug) \
+		|| die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install
+	make DESTDIR=${D} install || die "make install failed"
 }
