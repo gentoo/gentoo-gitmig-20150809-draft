@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.12 2003/10/08 16:04:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.13 2003/12/12 15:24:10 aliz Exp $
 
 inherit gcc eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.povray.org/"
 
 SLOT="0"
 LICENSE="povlegal-3.5"
-KEYWORDS="x86 ppc alpha"
+KEYWORDS="x86 ppc alpha ~amd64"
 IUSE="icc X svga"
 
 DEPEND="media-libs/libpng
@@ -34,6 +34,11 @@ pkg_setup() {
 		die "This build needs gcc-3.2 or later"
 	fi
 	fi
+}
+
+src_unpack() {
+	unpack ${A} ; cd ${S}
+	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/povray
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.24 2003/10/08 16:02:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.25 2003/12/12 15:24:10 aliz Exp $
+
+  12 Dec 2003; Daniel Ahlberg <aliz@gentoo.org> povray-3.50c.ebuild:
+  Add amd64 keyword. AMD64 patch contributed by Kris Kersey <augustus@linuxhardware.org>
+  in #34027.
 
   08 Oct 2003; Luca Barbato <lu_zero@gentoo.org> povray-3.50c.ebuild:
   Fixed bug #25149
