@@ -1,11 +1,18 @@
 # ChangeLog for app-text/dictd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.3 2002/12/13 10:56:19 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.4 2002/12/15 00:54:33 seemant Exp $
+
+*dictd-1.8.0 (14 Dec 2002)
+
+  14 Dec 2002; Seemant Kulleen <seemant@gentoo.org> dictd-1.8.0.ebuild
+  files/digest-dictd-1.8.0 files/1.8.0/* :
+
+  Version bump, thanks to: absinthe@pobox.com (Dylan Carlson) in bug #12113
+
+*dictd-1.5.5-r6 (1 Feb 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*dictd-1.5.5-r6 (1 Feb 2002)
-
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
