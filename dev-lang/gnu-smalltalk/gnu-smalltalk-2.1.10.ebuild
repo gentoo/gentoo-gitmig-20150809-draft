@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.10.ebuild,v 1.1 2005/03/31 05:27:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.10.ebuild,v 1.2 2005/03/31 19:07:40 mkennedy Exp $
 
 inherit elisp-common flag-o-matic eutils gcc
 
@@ -38,7 +38,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	if use tclk; then
+	if use tcltk; then
 		myconf="
 		`use_with tcltk tcl=/usr/lib` \
 		`use_with tcltk tk=/usr/lib`"
