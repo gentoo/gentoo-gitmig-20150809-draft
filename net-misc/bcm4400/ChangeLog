@@ -1,8 +1,13 @@
 # ChangeLog for net-misc/bcm4400
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.4 2003/07/13 14:31:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.5 2003/10/02 08:24:16 kumba Exp $
+
 
 *bcm4400-1.0.1 (Jan 18 2003)
+
+  02 Oct 2003; Joshua Kinard <kumba@gentoo.org> bcm4400-1.0.1.ebuild,
+  files/bcm4400-1.0.1-gcc33-fix.patch:
+  Added a patch to the ebuild that fixes a gcc-3.3 issue.  Closes Bug #28614.
 
   18 Jan 2003; Seth Chandler <sethbc@gentoo.org> bcm4400-1.0.1.ebuild :
   initial import into portage
