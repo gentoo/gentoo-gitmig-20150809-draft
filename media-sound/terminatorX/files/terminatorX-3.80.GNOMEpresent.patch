@@ -1,0 +1,979 @@
+diff -ru terminatorX-3.80-org/configure terminatorX-3.80/configure
+--- terminatorX-3.80-org/configure	2003-04-17 00:27:42.000000000 +0200
++++ terminatorX-3.80/configure	2003-04-26 19:56:25.000000000 +0200
+@@ -7223,6 +7223,8 @@
+ fi
+ 
+ 
++GNOMEpresent=fl
++
+ echo "$as_me:$LINENO: checking for GNOME" >&5
+ echo $ECHO_N "checking for GNOME... $ECHO_C" >&6
+ 	echo "$as_me:$LINENO: result: in progress" >&5
+@@ -7305,6 +7307,13 @@
+ 			gnomedatadir=${datadir}
+ 		fi
+ 
++   		echo "$as_me:$LINENO: result: Found GNOME - installing terminatorX.desktop." >&5
++echo "${ECHO_T}Found GNOME - installing terminatorX.desktop." >&6
++		OPTION_GNOME="yes"
++    	else
++   		echo "$as_me:$LINENO: result: GNOME not found." >&5
++echo "${ECHO_T}GNOME not found." >&6
++    	fi
+ 
+ 
+ if test "$gnomepresent" = yes; then
+@@ -7315,13 +7324,6 @@
+   GNOMEpresent_FALSE=
+ fi
+ 
+-   		echo "$as_me:$LINENO: result: Found GNOME - installing terminatorX.desktop." >&5
+-echo "${ECHO_T}Found GNOME - installing terminatorX.desktop." >&6
+-		OPTION_GNOME="yes"
+-    	else
+-   		echo "$as_me:$LINENO: result: GNOME not found." >&5
+-echo "${ECHO_T}GNOME not found." >&6
+-    	fi
+ 
+ 
+ found_libxml=false
+diff -ru terminatorX-3.80-org/configure.in terminatorX-3.80/configure.in
+--- terminatorX-3.80-org/configure.in	2003-03-31 20:36:26.000000000 +0200
++++ terminatorX-3.80/configure.in	2003-04-26 19:56:16.000000000 +0200
+@@ -404,6 +404,8 @@
+ dnl 	AC_DEFINE(USE_DGA2)
+ dnl fi
+ 
++GNOMEpresent=fl
++
+ AC_MSG_CHECKING(for GNOME)
+ 	AC_MSG_RESULT([in progress])
+ 	AC_CHECK_PROG(gnomepresent, gnome-name-service, yes, no)
+@@ -415,12 +417,12 @@
+ 			gnomedatadir=${datadir}
+ 		fi
+ 		AC_SUBST(gnomedatadir)
+-		AM_CONDITIONAL(GNOMEpresent, test "$gnomepresent" = yes)
+    		AC_MSG_RESULT([Found GNOME - installing terminatorX.desktop.])
+ 		OPTION_GNOME="yes"
+     	else
+    		AC_MSG_RESULT([GNOME not found.])
+     	fi
++	AM_CONDITIONAL(GNOMEpresent, test "$gnomepresent" = yes)
+ 
+ 
+ dnl Detecting libxml. Based on dia's test.
+diff -ru terminatorX-3.80-org/depcomp terminatorX-3.80/depcomp
+--- terminatorX-3.80-org/depcomp	2003-02-21 00:31:32.000000000 +0100
++++ terminatorX-3.80/depcomp	2003-03-26 20:29:58.000000000 +0100
+@@ -31,16 +31,7 @@
+ fi
+ # `libtool' can also be set to `yes' or `no'.
+ 
+-if test -z "$depfile"; then
+-   base=`echo "$object" | sed -e 's,^.*/,,' -e 's,\.\([^.]*\)$,.P\1,'`
+-   dir=`echo "$object" | sed 's,/.*$,/,'`
+-   if test "$dir" = "$object"; then
+-      dir=
+-   fi
+-   # FIXME: should be _deps on DOS.
+-   depfile="$dir.deps/$base"
+-fi
+-
++depfile=${depfile-`echo "$object" | sed 's,\([^/]*\)$,.deps/\1,;s/\.\([^.]*\)$/.P\1/'`}
+ tmpdepfile=${tmpdepfile-`echo "$depfile" | sed 's/\.\([^.]*\)$/.T\1/'`}
+ 
+ rm -f "$tmpdepfile"
+@@ -206,53 +197,18 @@
+   rm -f "$tmpdepfile"
+   ;;
+ 
+-icc)
+-  # Must come before tru64.
+-
+-  # Intel's C compiler understands `-MD -MF file'.  However
+-  #    icc -MD -MF foo.d -c -o sub/foo.o sub/foo.c
+-  # will fill foo.d with something like
+-  #    foo.o: sub/foo.c
+-  #    foo.o: sub/foo.h
+-  # which is wrong.  We want:
+-  #    sub/foo.o: sub/foo.c
+-  #    sub/foo.o: sub/foo.h
+-  #    sub/foo.c:
+-  #    sub/foo.h:
+-
+-  "$@" -MD -MF "$tmpdepfile"
+-  stat=$?
+-  if test $stat -eq 0; then :
+-  else
+-    rm -f "$tmpdepfile"
+-    exit $stat
+-  fi
+-  rm -f "$depfile"
+-  # Each line is of the form `foo.o: dependent.h'.
+-  # Do two passes, one to just change these to
+-  # `$object: dependent.h' and one to simply `dependent.h:'.
+-  sed -e "s,^[^:]*:,$object :," < "$tmpdepfile" > "$depfile"
+-  sed -e "s,^[^:]*: \(.*\)$,\1:," < "$tmpdepfile" >> "$depfile"
+-  rm -f "$tmpdepfile"
+-  ;;
+-
+ tru64)
+-   # The Tru64 compiler uses -MD to generate dependencies as a side
++   # The Tru64 AIX compiler uses -MD to generate dependencies as a side
+    # effect.  `cc -MD -o foo.o ...' puts the dependencies into `foo.o.d'.
+-   # At least on Alpha/Redhat 6.1, Compaq CCC V6.2-504 seems to put
++   # At least on Alpha/Redhat 6.1, Compaq CCC V6.2-504 seems to put 
+    # dependencies in `foo.d' instead, so we check for that too.
+    # Subdirectories are respected.
+-   dir=`echo "$object" | sed -e 's|/[^/]*$|/|'`
+-   test "x$dir" = "x$object" && dir=
+-   base=`echo "$object" | sed -e 's|^.*/||' -e 's/\.o$//' -e 's/\.lo$//'`
+ 
++   tmpdepfile1="$object.d"
++   tmpdepfile2=`echo "$object" | sed -e 's/.o$/.d/'` 
+    if test "$libtool" = yes; then
+-      tmpdepfile1="$dir.libs/$base.lo.d"
+-      tmpdepfile2="$dir.libs/$base.d"
+       "$@" -Wc,-MD
+    else
+-      tmpdepfile1="$dir$base.o.d"
+-      tmpdepfile2="$dir$base.d"
+       "$@" -MD
+    fi
+ 
+@@ -284,42 +240,34 @@
+ 
+ dashmstdout)
+   # Important note: in order to support this mode, a compiler *must*
+-  # always write the proprocessed file to stdout, regardless of -o.
+-  "$@" || exit $?
+-
+-  # Remove the call to Libtool.
+-  if test "$libtool" = yes; then
+-    while test $1 != '--mode=compile'; do
+-      shift
+-    done
+-    shift
+-  fi
+-
+-  # Remove `-o $object'.
+-  IFS=" "
+-  for arg
+-  do
+-    case $arg in
+-    -o)
+-      shift
+-      ;;
+-    $object)
+-      shift
+-      ;;
+-    *)
+-      set fnord "$@" "$arg"
+-      shift # fnord
+-      shift # $arg
++  # always write the proprocessed file to stdout, regardless of -o,
++  # because we must use -o when running libtool.
++  test -z "$dashmflag" && dashmflag=-M
++  ( IFS=" "
++    case " $* " in
++    *" --mode=compile "*) # this is libtool, let us make it quiet
++      for arg
++      do # cycle over the arguments
++        case "$arg" in
++	"--mode=compile")
++	  # insert --quiet before "--mode=compile"
++	  set fnord "$@" --quiet
++	  shift # fnord
++	  ;;
++	esac
++	set fnord "$@" "$arg"
++	shift # fnord
++	shift # "$arg"
++      done
+       ;;
+     esac
+-  done
+-
+-  test -z "$dashmflag" && dashmflag=-M
+-  # Require at least two characters before searching for `:'
+-  # in the target name.  This is to cope with DOS-style filenames:
+-  # a dependency such as `c:/foo/bar' could be seen as target `c' otherwise.
+-  "$@" $dashmflag |
+-    sed 's:^[  ]*[^: ][^:][^:]*\:[    ]*:'"$object"'\: :' > "$tmpdepfile"
++    "$@" $dashmflag | sed 's:^[^:]*\:[ 	]*:'"$object"'\: :' > "$tmpdepfile"
++  ) &
++  proc=$!
++  "$@"
++  stat=$?
++  wait "$proc"
++  if test "$stat" != 0; then exit $stat; fi
+   rm -f "$depfile"
+   cat < "$tmpdepfile" > "$depfile"
+   tr ' ' '
+@@ -337,40 +285,36 @@
+   ;;
+ 
+ makedepend)
+-  "$@" || exit $?
+-  # Remove any Libtool call
+-  if test "$libtool" = yes; then
+-    while test $1 != '--mode=compile'; do
+-      shift
+-    done
+-    shift
+-  fi
+   # X makedepend
+-  shift
+-  cleared=no
+-  for arg in "$@"; do
+-    case $cleared in
+-    no)
+-      set ""; shift
+-      cleared=yes ;;
+-    esac
+-    case "$arg" in
+-    -D*|-I*)
+-      set fnord "$@" "$arg"; shift ;;
+-    # Strip any option that makedepend may not understand.  Remove
+-    # the object too, otherwise makedepend will parse it as a source file.
+-    -*|$object)
+-      ;;
+-    *)
+-      set fnord "$@" "$arg"; shift ;;
+-    esac
+-  done
+-  obj_suffix="`echo $object | sed 's/^.*\././'`"
+-  touch "$tmpdepfile"
+-  ${MAKEDEPEND-makedepend} -o"$obj_suffix" -f"$tmpdepfile" "$@"
++  (
++    shift
++    cleared=no
++    for arg in "$@"; do
++      case $cleared in no)
++        set ""; shift
++	cleared=yes
++      esac
++      case "$arg" in
++        -D*|-I*)
++	  set fnord "$@" "$arg"; shift;;
++	-*)
++	  ;;
++	*)
++	  set fnord "$@" "$arg"; shift;;
++      esac
++    done
++    obj_suffix="`echo $object | sed 's/^.*\././'`"
++    touch "$tmpdepfile"
++    ${MAKEDEPEND-makedepend} 2>/dev/null -o"$obj_suffix" -f"$tmpdepfile" "$@"
++  ) &
++  proc=$!
++  "$@"
++  stat=$?
++  wait "$proc"
++  if test "$stat" != 0; then exit $stat; fi
+   rm -f "$depfile"
+   cat < "$tmpdepfile" > "$depfile"
+-  sed '1,2d' "$tmpdepfile" | tr ' ' '
++  tail +3 "$tmpdepfile" | tr ' ' '
+ ' | \
+ ## Some versions of the HPUX 10.20 sed can't process this invocation
+ ## correctly.  Breaking it into two sed invocations is a workaround.
+@@ -380,39 +324,35 @@
+ 
+ cpp)
+   # Important note: in order to support this mode, a compiler *must*
+-  # always write the proprocessed file to stdout.
+-  "$@" || exit $?
+-
+-  # Remove the call to Libtool.
+-  if test "$libtool" = yes; then
+-    while test $1 != '--mode=compile'; do
+-      shift
+-    done
+-    shift
+-  fi
+-
+-  # Remove `-o $object'.
+-  IFS=" "
+-  for arg
+-  do
+-    case $arg in
+-    -o)
+-      shift
+-      ;;
+-    $object)
+-      shift
+-      ;;
+-    *)
+-      set fnord "$@" "$arg"
+-      shift # fnord
+-      shift # $arg
++  # always write the proprocessed file to stdout, regardless of -o,
++  # because we must use -o when running libtool.
++  ( IFS=" "
++    case " $* " in
++    *" --mode=compile "*)
++      for arg
++      do # cycle over the arguments
++        case $arg in
++	"--mode=compile")
++	  # insert --quiet before "--mode=compile"
++	  set fnord "$@" --quiet
++	  shift # fnord
++	  ;;
++	esac
++	set fnord "$@" "$arg"
++	shift # fnord
++	shift # "$arg"
++      done
+       ;;
+     esac
+-  done
+-
+-  "$@" -E |
++    "$@" -E |
+     sed -n '/^# [0-9][0-9]* "\([^"]*\)".*/ s:: \1 \\:p' |
+     sed '$ s: \\$::' > "$tmpdepfile"
++  ) &
++  proc=$!
++  "$@"
++  stat=$?
++  wait "$proc"
++  if test "$stat" != 0; then exit $stat; fi
+   rm -f "$depfile"
+   echo "$object : \\" > "$depfile"
+   cat < "$tmpdepfile" >> "$depfile"
+@@ -424,25 +364,32 @@
+   # Important note: in order to support this mode, a compiler *must*
+   # always write the proprocessed file to stdout, regardless of -o,
+   # because we must use -o when running libtool.
+-  "$@" || exit $?
+-  IFS=" "
+-  for arg
+-  do
+-    case "$arg" in
+-    "-Gm"|"/Gm"|"-Gi"|"/Gi"|"-ZI"|"/ZI")
+-	set fnord "$@"
+-	shift
+-	shift
+-	;;
+-    *)
++  ( IFS=" "
++    case " $* " in
++    *" --mode=compile "*)
++      for arg
++      do # cycle over the arguments
++        case $arg in
++	"--mode=compile")
++	  # insert --quiet before "--mode=compile"
++	  set fnord "$@" --quiet
++	  shift # fnord
++	  ;;
++	esac
+ 	set fnord "$@" "$arg"
+-	shift
+-	shift
+-	;;
++	shift # fnord
++	shift # "$arg"
++      done
++      ;;
+     esac
+-  done
+-  "$@" -E |
+-  sed -n '/^#line [0-9][0-9]* "\([^"]*\)"/ s::echo "`cygpath -u \\"\1\\"`":p' | sort | uniq > "$tmpdepfile"
++    "$@" -E |
++    sed -n '/^#line [0-9][0-9]* "\([^"]*\)"/ s::echo "`cygpath -u \\"\1\\"`":p' | sort | uniq > "$tmpdepfile"
++  ) &
++  proc=$!
++  "$@"
++  stat=$?
++  wait "$proc"
++  if test "$stat" != 0; then exit $stat; fi
+   rm -f "$depfile"
+   echo "$object : \\" > "$depfile"
+   . "$tmpdepfile" | sed 's% %\\ %g' | sed -n '/^\(.*\)$/ s::	\1 \\:p' >> "$depfile"
+diff -ru terminatorX-3.80-org/install-sh terminatorX-3.80/install-sh
+--- terminatorX-3.80-org/install-sh	2003-02-21 00:31:32.000000000 +0100
++++ terminatorX-3.80/install-sh	2003-03-26 20:29:58.000000000 +0100
+@@ -56,7 +56,7 @@
+ 
+ while [ x"$1" != x ]; do
+     case $1 in
+-	-c) instcmd=$cpprog
++	-c) instcmd="$cpprog"
+ 	    shift
+ 	    continue;;
+ 
+@@ -79,7 +79,7 @@
+ 	    shift
+ 	    continue;;
+ 
+-	-s) stripcmd=$stripprog
++	-s) stripcmd="$stripprog"
+ 	    shift
+ 	    continue;;
+ 
+@@ -106,132 +106,128 @@
+ 
+ if [ x"$src" = x ]
+ then
+-	echo "$0: no input file specified" >&2
++	echo "install:	no input file specified"
+ 	exit 1
+ else
+-	:
++	true
+ fi
+ 
+ if [ x"$dir_arg" != x ]; then
+ 	dst=$src
+ 	src=""
+-
+-	if [ -d "$dst" ]; then
++	
++	if [ -d $dst ]; then
+ 		instcmd=:
+ 		chmodcmd=""
+ 	else
+-		instcmd=$mkdirprog
++		instcmd=mkdir
+ 	fi
+ else
+ 
+ # Waiting for this to be detected by the "$instcmd $src $dsttmp" command
+-# might cause directories to be created, which would be especially bad
++# might cause directories to be created, which would be especially bad 
+ # if $src (and thus $dsttmp) contains '*'.
+ 
+-	if [ -f "$src" ] || [ -d "$src" ]
++	if [ -f $src -o -d $src ]
+ 	then
+-		:
++		true
+ 	else
+-		echo "$0: $src does not exist" >&2
++		echo "install:  $src does not exist"
+ 		exit 1
+ 	fi
+-
++	
+ 	if [ x"$dst" = x ]
+ 	then
+-		echo "$0: no destination specified" >&2
++		echo "install:	no destination specified"
+ 		exit 1
+ 	else
+-		:
++		true
+ 	fi
+ 
+ # If destination is a directory, append the input filename; if your system
+ # does not like double slashes in filenames, you may need to add some logic
+ 
+-	if [ -d "$dst" ]
++	if [ -d $dst ]
+ 	then
+-		dst=$dst/`basename "$src"`
++		dst="$dst"/`basename $src`
+ 	else
+-		:
++		true
+ 	fi
+ fi
+ 
+ ## this sed command emulates the dirname command
+-dstdir=`echo "$dst" | sed -e 's,[^/]*$,,;s,/$,,;s,^$,.,'`
++dstdir=`echo $dst | sed -e 's,[^/]*$,,;s,/$,,;s,^$,.,'`
+ 
+ # Make sure that the destination directory exists.
+ #  this part is taken from Noah Friedman's mkinstalldirs script
+ 
+ # Skip lots of stat calls in the usual case.
+ if [ ! -d "$dstdir" ]; then
+-defaultIFS='
+-	'
+-IFS="${IFS-$defaultIFS}"
++defaultIFS='	
++'
++IFS="${IFS-${defaultIFS}}"
+ 
+-oIFS=$IFS
++oIFS="${IFS}"
+ # Some sh's can't handle IFS=/ for some reason.
+ IFS='%'
+-set - `echo "$dstdir" | sed -e 's@/@%@g' -e 's@^%@/@'`
+-IFS=$oIFS
++set - `echo ${dstdir} | sed -e 's@/@%@g' -e 's@^%@/@'`
++IFS="${oIFS}"
+ 
+ pathcomp=''
+ 
+ while [ $# -ne 0 ] ; do
+-	pathcomp=$pathcomp$1
++	pathcomp="${pathcomp}${1}"
+ 	shift
+ 
+-	if [ ! -d "$pathcomp" ] ;
++	if [ ! -d "${pathcomp}" ] ;
+         then
+-		$mkdirprog "$pathcomp"
++		$mkdirprog "${pathcomp}"
+ 	else
+-		:
++		true
+ 	fi
+ 
+-	pathcomp=$pathcomp/
++	pathcomp="${pathcomp}/"
+ done
+ fi
+ 
+ if [ x"$dir_arg" != x ]
+ then
+-	$doit $instcmd "$dst" &&
++	$doit $instcmd $dst &&
+ 
+-	if [ x"$chowncmd" != x ]; then $doit $chowncmd "$dst"; else : ; fi &&
+-	if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd "$dst"; else : ; fi &&
+-	if [ x"$stripcmd" != x ]; then $doit $stripcmd "$dst"; else : ; fi &&
+-	if [ x"$chmodcmd" != x ]; then $doit $chmodcmd "$dst"; else : ; fi
++	if [ x"$chowncmd" != x ]; then $doit $chowncmd $dst; else true ; fi &&
++	if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd $dst; else true ; fi &&
++	if [ x"$stripcmd" != x ]; then $doit $stripcmd $dst; else true ; fi &&
++	if [ x"$chmodcmd" != x ]; then $doit $chmodcmd $dst; else true ; fi
+ else
+ 
+ # If we're going to rename the final executable, determine the name now.
+ 
+-	if [ x"$transformarg" = x ]
++	if [ x"$transformarg" = x ] 
+ 	then
+-		dstfile=`basename "$dst"`
++		dstfile=`basename $dst`
+ 	else
+-		dstfile=`basename "$dst" $transformbasename |
++		dstfile=`basename $dst $transformbasename | 
+ 			sed $transformarg`$transformbasename
+ 	fi
+ 
+ # don't allow the sed command to completely eliminate the filename
+ 
+-	if [ x"$dstfile" = x ]
++	if [ x"$dstfile" = x ] 
+ 	then
+-		dstfile=`basename "$dst"`
++		dstfile=`basename $dst`
+ 	else
+-		:
++		true
+ 	fi
+ 
+-# Make a couple of temp file names in the proper directory.
++# Make a temp file name in the proper directory.
+ 
+ 	dsttmp=$dstdir/#inst.$$#
+-	rmtmp=$dstdir/#rm.$$#
+-
+-# Trap to clean up temp files at exit.
+-
+-	trap 'status=$?; rm -f "$dsttmp" "$rmtmp" && exit $status' 0
+-	trap '(exit $?); exit' 1 2 13 15
+ 
+ # Move or copy the file name to the temp name
+ 
+-	$doit $instcmd "$src" "$dsttmp" &&
++	$doit $instcmd $src $dsttmp &&
++
++	trap "rm -f ${dsttmp}" 0 &&
+ 
+ # and set any options; do chmod last to preserve setuid bits
+ 
+@@ -239,38 +235,17 @@
+ # ignore errors from any of these, just make sure not to ignore
+ # errors from the above "$doit $instcmd $src $dsttmp" command.
+ 
+-	if [ x"$chowncmd" != x ]; then $doit $chowncmd "$dsttmp"; else :;fi &&
+-	if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd "$dsttmp"; else :;fi &&
+-	if [ x"$stripcmd" != x ]; then $doit $stripcmd "$dsttmp"; else :;fi &&
+-	if [ x"$chmodcmd" != x ]; then $doit $chmodcmd "$dsttmp"; else :;fi &&
+-
+-# Now remove or move aside any old file at destination location.  We try this
+-# two ways since rm can't unlink itself on some systems and the destination
+-# file might be busy for other reasons.  In this case, the final cleanup
+-# might fail but the new file should still install successfully.
+-
+-{
+-	if [ -f "$dstdir/$dstfile" ]
+-	then
+-		$doit $rmcmd -f "$dstdir/$dstfile" 2>/dev/null ||
+-		$doit $mvcmd -f "$dstdir/$dstfile" "$rmtmp" 2>/dev/null ||
+-		{
+-		  echo "$0: cannot unlink or rename $dstdir/$dstfile" >&2
+-		  (exit 1); exit
+-		}
+-	else
+-		:
+-	fi
+-} &&
++	if [ x"$chowncmd" != x ]; then $doit $chowncmd $dsttmp; else true;fi &&
++	if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd $dsttmp; else true;fi &&
++	if [ x"$stripcmd" != x ]; then $doit $stripcmd $dsttmp; else true;fi &&
++	if [ x"$chmodcmd" != x ]; then $doit $chmodcmd $dsttmp; else true;fi &&
+ 
+ # Now rename the file to the real destination.
+ 
+-	$doit $mvcmd "$dsttmp" "$dstdir/$dstfile"
++	$doit $rmcmd -f $dstdir/$dstfile &&
++	$doit $mvcmd $dsttmp $dstdir/$dstfile 
+ 
+ fi &&
+ 
+-# The final little trick to "correctly" pass the exit status to the exit trap.
+ 
+-{
+-	(exit 0); exit
+-}
++exit 0
+diff -ru terminatorX-3.80-org/missing terminatorX-3.80/missing
+--- terminatorX-3.80-org/missing	2003-02-21 00:31:32.000000000 +0100
++++ terminatorX-3.80/missing	2003-03-26 20:29:58.000000000 +0100
+@@ -1,6 +1,6 @@
+ #! /bin/sh
+ # Common stub for a few missing GNU programs while installing.
+-# Copyright (C) 1996, 1997, 1999, 2000, 2002 Free Software Foundation, Inc.
++# Copyright 1996, 1997, 1999, 2000 Free Software Foundation, Inc.
+ # Originally by Fran,cois Pinard <pinard@iro.umontreal.ca>, 1996.
+ 
+ # This program is free software; you can redistribute it and/or modify
+@@ -78,7 +78,7 @@
+     ;;
+ 
+   -v|--v|--ve|--ver|--vers|--versi|--versio|--version)
+-    echo "missing 0.4 - GNU automake"
++    echo "missing 0.3 - GNU automake"
+     ;;
+ 
+   -*)
+@@ -87,12 +87,7 @@
+     exit 1
+     ;;
+ 
+-  aclocal*)
+-    if test -z "$run" && ($1 --version) > /dev/null 2>&1; then
+-       # We have it, but it failed.
+-       exit 1
+-    fi
+-
++  aclocal)
+     echo 1>&2 "\
+ WARNING: \`$1' is missing on your system.  You should only need it if
+          you modified \`acinclude.m4' or \`${configure_ac}'.  You might want
+@@ -102,11 +97,6 @@
+     ;;
+ 
+   autoconf)
+-    if test -z "$run" && ($1 --version) > /dev/null 2>&1; then
+-       # We have it, but it failed.
+-       exit 1
+-    fi
+-
+     echo 1>&2 "\
+ WARNING: \`$1' is missing on your system.  You should only need it if
+          you modified \`${configure_ac}'.  You might want to install the
+@@ -116,11 +106,6 @@
+     ;;
+ 
+   autoheader)
+-    if test -z "$run" && ($1 --version) > /dev/null 2>&1; then
+-       # We have it, but it failed.
+-       exit 1
+-    fi
+-
+     echo 1>&2 "\
+ WARNING: \`$1' is missing on your system.  You should only need it if
+          you modified \`acconfig.h' or \`${configure_ac}'.  You might want
+@@ -139,12 +124,7 @@
+     touch $touch_files
+     ;;
+ 
+-  automake*)
+-    if test -z "$run" && ($1 --version) > /dev/null 2>&1; then
+-       # We have it, but it failed.
+-       exit 1
+-    fi
+-
++  automake)
+     echo 1>&2 "\
+ WARNING: \`$1' is missing on your system.  You should only need it if
+          you modified \`Makefile.am', \`acinclude.m4' or \`${configure_ac}'.
+@@ -155,34 +135,6 @@
+ 	   while read f; do touch "$f"; done
+     ;;
+ 
+-  autom4te)
+-    if test -z "$run" && ($1 --version) > /dev/null 2>&1; then
+-       # We have it, but it failed.
+-       exit 1
+-    fi
+-
+-    echo 1>&2 "\
+-WARNING: \`$1' is needed, and you do not seem to have it handy on your
+-         system.  You might have modified some files without having the
+-         proper tools for further handling them.
+-         You can get \`$1Help2man' as part of \`Autoconf' from any GNU
+-         archive site."
+-
+-    file=`echo "$*" | sed -n 's/.*--output[ =]*\([^ ]*\).*/\1/p'`
+-    test -z "$file" && file=`echo "$*" | sed -n 's/.*-o[ ]*\([^ ]*\).*/\1/p'`
+-    if test -f "$file"; then
+-	touch $file
+-    else
+-	test -z "$file" || exec >$file
+-	echo "#! /bin/sh"
+-	echo "# Created by GNU Automake missing as a replacement of"
+-	echo "#  $ $@"
+-	echo "exit 0"
+-	chmod +x $file
+-	exit 1
+-    fi
+-    ;;
+-
+   bison|yacc)
+     echo 1>&2 "\
+ WARNING: \`$1' is missing on your system.  You should only need it if
+@@ -237,11 +189,6 @@
+     ;;
+ 
+   help2man)
+-    if test -z "$run" && ($1 --version) > /dev/null 2>&1; then
+-       # We have it, but it failed.
+-       exit 1
+-    fi
+-
+     echo 1>&2 "\
+ WARNING: \`$1' is missing on your system.  You should only need it if
+ 	 you modified a dependency of a manual page.  You may need the
+@@ -293,23 +240,23 @@
+     # Look for gnutar/gtar before invocation to avoid ugly error
+     # messages.
+     if (gnutar --version > /dev/null 2>&1); then
+-       gnutar "$@" && exit 0
++       gnutar ${1+"$@"} && exit 0
+     fi
+     if (gtar --version > /dev/null 2>&1); then
+-       gtar "$@" && exit 0
++       gtar ${1+"$@"} && exit 0
+     fi
+     firstarg="$1"
+     if shift; then
+ 	case "$firstarg" in
+ 	*o*)
+ 	    firstarg=`echo "$firstarg" | sed s/o//`
+-	    tar "$firstarg" "$@" && exit 0
++	    tar "$firstarg" ${1+"$@"} && exit 0
+ 	    ;;
+ 	esac
+ 	case "$firstarg" in
+ 	*h*)
+ 	    firstarg=`echo "$firstarg" | sed s/h//`
+-	    tar "$firstarg" "$@" && exit 0
++	    tar "$firstarg" ${1+"$@"} && exit 0
+ 	    ;;
+ 	esac
+     fi
+diff -ru terminatorX-3.80-org/mkinstalldirs terminatorX-3.80/mkinstalldirs
+--- terminatorX-3.80-org/mkinstalldirs	2003-02-21 00:31:32.000000000 +0100
++++ terminatorX-3.80/mkinstalldirs	2003-03-26 20:29:58.000000000 +0100
+@@ -4,108 +4,37 @@
+ # Created: 1993-05-16
+ # Public domain
+ 
+-errstatus=0
+-dirmode=""
+-
+-usage="\
+-Usage: mkinstalldirs [-h] [--help] [-m mode] dir ..."
++# $Id: terminatorX-3.80.GNOMEpresent.patch,v 1.1 2003/06/25 10:41:17 torbenh Exp $
+ 
+-# process command line arguments
+-while test $# -gt 0 ; do
+-  case $1 in
+-    -h | --help | --h*)         # -h for help
+-      echo "$usage" 1>&2
+-      exit 0
+-      ;;
+-    -m)                         # -m PERM arg
+-      shift
+-      test $# -eq 0 && { echo "$usage" 1>&2; exit 1; }
+-      dirmode=$1
+-      shift
+-      ;;
+-    --)                         # stop option processing
+-      shift
+-      break
+-      ;;
+-    -*)                         # unknown option
+-      echo "$usage" 1>&2
+-      exit 1
+-      ;;
+-    *)                          # first non-opt arg
+-      break
+-      ;;
+-  esac
+-done
+-
+-for file
+-do
+-  if test -d "$file"; then
+-    shift
+-  else
+-    break
+-  fi
+-done
+-
+-case $# in
+-  0) exit 0 ;;
+-esac
+-
+-case $dirmode in
+-  '')
+-    if mkdir -p -- . 2>/dev/null; then
+-      echo "mkdir -p -- $*"
+-      exec mkdir -p -- "$@"
+-    fi
+-    ;;
+-  *)
+-    if mkdir -m "$dirmode" -p -- . 2>/dev/null; then
+-      echo "mkdir -m $dirmode -p -- $*"
+-      exec mkdir -m "$dirmode" -p -- "$@"
+-    fi
+-    ;;
+-esac
++errstatus=0
+ 
+ for file
+ do
+-  set fnord `echo ":$file" | sed -ne 's/^:\//#/;s/^://;s/\// /g;s/^#/\//;p'`
+-  shift
++   set fnord `echo ":$file" | sed -ne 's/^:\//#/;s/^://;s/\// /g;s/^#/\//;p'`
++   shift
+ 
+-  pathcomp=
+-  for d
+-  do
+-    pathcomp="$pathcomp$d"
+-    case $pathcomp in
+-      -*) pathcomp=./$pathcomp ;;
+-    esac
+-
+-    if test ! -d "$pathcomp"; then
+-      echo "mkdir $pathcomp"
+-
+-      mkdir "$pathcomp" || lasterr=$?
+-
+-      if test ! -d "$pathcomp"; then
+-  	errstatus=$lasterr
+-      else
+-  	if test ! -z "$dirmode"; then
+-	  echo "chmod $dirmode $pathcomp"
+-    	  lasterr=""
+-  	  chmod "$dirmode" "$pathcomp" || lasterr=$?
+-
+-  	  if test ! -z "$lasterr"; then
+-  	    errstatus=$lasterr
+-  	  fi
+-  	fi
+-      fi
+-    fi
++   pathcomp=
++   for d
++   do
++     pathcomp="$pathcomp$d"
++     case "$pathcomp" in
++       -* ) pathcomp=./$pathcomp ;;
++     esac
++
++     if test ! -d "$pathcomp"; then
++        echo "mkdir $pathcomp"
++
++        mkdir "$pathcomp" || lasterr=$?
++
++        if test ! -d "$pathcomp"; then
++  	  errstatus=$lasterr
++        fi
++     fi
+ 
+-    pathcomp="$pathcomp/"
+-  done
++     pathcomp="$pathcomp/"
++   done
+ done
+ 
+ exit $errstatus
+ 
+-# Local Variables:
+-# mode: shell-script
+-# sh-indentation: 2
+-# End:
+ # mkinstalldirs ends here
+diff -ru terminatorX-3.80-org/src/tX_global.c terminatorX-3.80/src/tX_global.c
+--- terminatorX-3.80-org/src/tX_global.c	2003-04-16 21:45:56.000000000 +0200
++++ terminatorX-3.80/src/tX_global.c	2003-04-30 22:14:27.000000000 +0200
+@@ -230,8 +230,8 @@
+ 	char indent[]="\t";
+ 	FILE *rc=NULL;
+ 	gzFile rz=NULL;
+-	_store_compress_xml=0;
+ 	char tmp_xml_buffer[4096];
++	_store_compress_xml=0;
+ 	
+ 	get_rc_name(rc_name);
+ 
+@@ -316,6 +316,9 @@
+ char *encode_xml(char *dest, const char *src) {
+ 	int i, t, max;
+ 	char tmp[4096];
++	int outlen=4096;
++	int inlen;
++	int res;
+ 	
+ 	tmp[0]=0;
+ 	t=0;
+@@ -333,16 +336,13 @@
+ 	}
+ 	tmp[t]=0;
+ 
+-	int outlen=4096;
+-	int inlen=t;
+-	
+-	int res=isolat1ToUTF8((unsigned char *) dest, &outlen, (unsigned char *) tmp, &inlen);
++	inlen=t;
++	res=isolat1ToUTF8((unsigned char *) dest, &outlen, (unsigned char *) tmp, &inlen);
+ 	dest[outlen]=0;
+ 	if (res<0) {
+ 		tX_error("failed to encode string (%s) to UTF-8.", src);
+ 	}
+ 	
+-	//tX_debug("encode_xml: from \"%s\" to \"%s\".", src, dest); 
+ 	return dest;
+ }
+ 
+diff -ru terminatorX-3.80-org/src/tX_widget.c terminatorX-3.80/src/tX_widget.c
+--- terminatorX-3.80-org/src/tX_widget.c	2003-04-12 18:17:23.000000000 +0200
++++ terminatorX-3.80/src/tX_widget.c	2003-04-26 19:42:48.000000000 +0200
+@@ -154,10 +154,11 @@
+ }
+ 
+ static void gtk_tx_destroy(GtkObject * object) {
++	GtkTx *tx;
+ 	g_return_if_fail(object != NULL);
+ 	g_return_if_fail(GTK_IS_TX(object));
+ 
+-	GtkTx *tx=GTK_TX(object);
++	tx=GTK_TX(object);
+ 	
+ 	if (tx->disp_data) { free(tx->disp_data); tx->disp_data=NULL; }
+ 	
