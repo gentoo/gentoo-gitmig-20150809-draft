@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc., Emil Skoldberg (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r1.ebuild,v 1.1 2003/10/27 12:22:55 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r1.ebuild,v 1.2 2003/10/27 13:24:31 scandium Exp $
 
 inherit flag-o-matic
 
@@ -65,7 +65,8 @@ src_compile() {
 	use opengl	|| myconf="${myconf} --without-GL --without-GLUT"
 	use gtk		&& myconf="${myconf} --with-GTK" \
 			|| myconf="${myconf} --without-GTK"
-	use gtk2	&& myconf="${myconf} --with-GTK2"
+	use gtk2	&& myconf="${myconf} --with-GTK2" \
+			|| myconf="${myconf} --without-GTK2"
 	use gnome	|| myconf="${myconf} --without-gnome"
 
 	# We have to use --disable-make_conf to override make.conf settings
