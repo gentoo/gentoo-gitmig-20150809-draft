@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/ioncube_loaders
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ChangeLog,v 1.1 2003/08/03 22:29:05 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ChangeLog,v 1.2 2003/10/14 03:41:09 robbat2 Exp $
+
+  13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  add metadata.xml
 
 *dev-php/ioncube_loaders-2.1 (03 Aug 2003)
 
