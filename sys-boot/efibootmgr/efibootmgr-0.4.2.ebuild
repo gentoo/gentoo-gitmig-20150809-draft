@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.4.2.ebuild,v 1.4 2004/06/24 22:34:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.4.2.ebuild,v 1.5 2004/07/01 21:45:43 eradicator Exp $
 
 inherit eutils
 
@@ -21,8 +21,8 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND="virtual/glibc"	# don't think there's anything else
-RDEPEND="virtual/glibc"
+DEPEND="virtual/libc"	# don't think there's anything else
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A} && cd ${S} || die "failed to unpack"

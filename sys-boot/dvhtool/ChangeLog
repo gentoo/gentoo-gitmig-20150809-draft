@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/dvhtool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/ChangeLog,v 1.5 2004/06/24 22:34:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/ChangeLog,v 1.6 2004/07/01 21:45:25 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dvhtool-1.0.1.ebuild:
+  virtual/glibc -> virtual/libc
 
   29 May 2004; Robin H. Johnson <robbat2@gentoo.org> dvhtool-1.0.1.ebuild:
   add ~x86 so I can manipulate sgi volume headers on an x86 box

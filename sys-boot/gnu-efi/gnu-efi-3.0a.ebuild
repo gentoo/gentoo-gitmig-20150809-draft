@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0a.ebuild,v 1.5 2004/06/24 22:34:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0a.ebuild,v 1.6 2004/07/01 21:46:11 eradicator Exp $
 
 inherit eutils
 
@@ -13,8 +13,8 @@ SLOT="3"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND="virtual/glibc"	# don't think there's anything else
-RDEPEND="virtual/glibc"
+DEPEND="virtual/libc"	# don't think there's anything else
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A} && cd ${S} || die "failed to unpack"

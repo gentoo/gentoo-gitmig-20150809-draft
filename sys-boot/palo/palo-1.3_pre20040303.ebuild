@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.3_pre20040303.ebuild,v 1.3 2004/06/24 22:35:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.3_pre20040303.ebuild,v 1.4 2004/07/01 21:46:25 eradicator Exp $
 
 MY_V=${PV/_pre/-CVS}
 DESCRIPTION="PALO : PArisc Linux Loader"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="-* ~hppa"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 PROVIDE="virtual/bootloader"
 
 S=${WORKDIR}/palo
