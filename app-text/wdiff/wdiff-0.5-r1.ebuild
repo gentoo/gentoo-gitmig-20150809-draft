@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5-r1.ebuild,v 1.2 2004/08/26 01:54:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5-r1.ebuild,v 1.3 2004/09/03 00:31:28 dholm Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="~x86 ~sparc ~mips ~ppc"
 
 DEPEND="sys-libs/libtermcap-compat
 	sys-apps/diffutils
