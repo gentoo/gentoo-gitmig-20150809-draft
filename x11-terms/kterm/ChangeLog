@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/kterm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.10 2004/06/20 18:46:01 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.11 2004/06/21 17:36:25 usata Exp $
+
+  22 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> -kterm-6.2.0-r1.ebuild,
+  kterm-6.2.0-r2.ebuild:
+  Fix use invocation
 
   20 Jun 2004; Ian Leitch <port001@gentoo.org> kterm-6.2.0-r1.ebuild:
   No need to set S

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r2.ebuild,v 1.4 2004/04/27 21:16:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r2.ebuild,v 1.5 2004/06/21 17:36:25 usata Exp $
 
 inherit eutils
 
@@ -31,8 +31,7 @@ src_unpack(){
 	epatch ${FILESDIR}/${P}-gentoo.patch
 	epatch ${FILESDIR}/${PN}-ad-gentoo.diff
 
-	if [ `use Xaw3d` ]
-	then
+	if use Xaw3d ; then
 		epatch ${FILESDIR}/kterm-6.2.0-Xaw3d.patch
 	fi
 }
