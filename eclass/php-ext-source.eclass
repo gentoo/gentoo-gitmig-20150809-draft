@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.7 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.8 2004/07/06 22:24:47 robbat2 Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -28,7 +28,7 @@ EXPORT_FUNCTIONS src_compile src_install
 # ---end ebuild configurable settings
 
 DEPEND="${DEPEND}
-		virtual/php
+		dev-php/php
 		>=sys-devel/m4-1.4
 		>=sys-devel/libtool-1.4.3"
 

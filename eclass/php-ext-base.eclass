@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.12 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.13 2004/07/06 22:24:47 robbat2 Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -35,7 +35,7 @@ EXT_DIR="`php-config --extension-dir 2>/dev/null`"
 # ---end ebuild configurable settings
 
 DEPEND="${DEPEND}
-		virtual/php
+		dev-php/php
 		>=sys-devel/m4-1.4
 		>=sys-devel/libtool-1.4.3"
 
