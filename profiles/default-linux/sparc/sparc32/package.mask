@@ -1,2 +1,7 @@
 # Masked until bug #60413 is fixed.
 media-libs/xine-lib
+
+# Still needing 2.4
+sys-kernel/linux26-headers
+sys-kernel/gentoo-dev-sources
+sys-kernel/development-sources
