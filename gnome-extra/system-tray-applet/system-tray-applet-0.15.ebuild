@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/system-tray-applet/system-tray-applet-0.15.ebuild,v 1.1 2002/10/27 15:06:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/system-tray-applet/system-tray-applet-0.15.ebuild,v 1.2 2002/12/07 14:47:26 foser Exp $
 
 inherit gnome2 debug
 
@@ -9,7 +9,7 @@ DESCRIPTION="Systrem tray applet for gnome2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64 ppc alpha"
+KEYWORDS="~x86"
 
 RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gnome-panel-2"
