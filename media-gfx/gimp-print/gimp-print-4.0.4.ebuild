@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.0.4.ebuild,v 1.1 2000/12/11 12:13:18 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.0.4.ebuild,v 1.2 2000/12/11 16:27:20 achim Exp $
 
 A=print-${PV}.tar.gz
 S=${WORKDIR}/print-${PV}
@@ -23,15 +23,17 @@ src_compile() {
   sed -e "s:^libexecdir = :libexecdir = ${D}/: " \
   Makefile.orig > Makefile	
   try make
+
 }
 
-src_install() {                               
+src_install() {
   cd ${S}
   try make DESTDIR=${D} install-binPROGRAMS
   insinto /usr/X11R6/lib/gimp/1.1/plug-ins/
   insopts -m755
   doins print
   dodoc AUTHORS ChangeLog COPYING NEWS README* RELNOTES
+  
 }
 
 
