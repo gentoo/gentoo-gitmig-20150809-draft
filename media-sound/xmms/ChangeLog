@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.148 2004/10/30 21:09:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.149 2004/10/31 09:37:24 eradicator Exp $
+
+  31 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r9.ebuild:
+  Removing .desktop from applnk.  Removed postinst ewarning
 
 *xmms-1.2.10-r9 (30 Oct 2004)
 

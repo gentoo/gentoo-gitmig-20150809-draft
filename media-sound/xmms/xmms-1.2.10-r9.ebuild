@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r9.ebuild,v 1.1 2004/10/30 21:09:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r9.ebuild,v 1.2 2004/10/31 09:37:24 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac mad"
 
@@ -112,8 +112,6 @@ src_install() {
 	insinto /etc/X11/wmconfig
 	donewins xmms/xmms.wmconfig xmms
 
-	insinto /usr/share/applnk/Multimedia
-	doins ${FILESDIR}/xmms.desktop
 	insinto /usr/share/applications
 	doins ${FILESDIR}/xmms.desktop
 
@@ -122,10 +120,4 @@ src_install() {
 	doins ${WORKDIR}/gentoo_ice/*
 	docinto gentoo_ice
 	dodoc ${WORKDIR}/README
-}
-
-pkg_postinst() {
-	ewarn "This version of xmms is under development and subject to change."
-	ewarn "while it is still in package.mask.  Additionally, cjk support is"
-	ewarn "not yet availible in this version."
 }
