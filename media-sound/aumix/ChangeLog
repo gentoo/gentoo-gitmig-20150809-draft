@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.47 2004/12/16 09:02:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.48 2004/12/29 01:09:48 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> aumix-2.8-r2.ebuild:
   Stable on ppc64
@@ -61,7 +64,7 @@
   Fix aumix segfaulting when env(HOME) is not defined. Thanks to Collins Richey
   <erichey2@comcast.net>. Closes bug #57291
 
-  13 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> aumix-2.8-r1.ebuild:
+  13 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> aumix-2.8-r1.ebuild:
   Stable on alpha.
 
   10 Jun 2004; Guy Martin <gmsoft@gentoo.org> aumix-2.8-r1.ebuild:

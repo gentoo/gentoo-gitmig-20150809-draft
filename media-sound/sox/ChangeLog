@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.37 2004/12/10 11:22:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.38 2004/12/29 01:14:03 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   10 Dec 2004; Joseph Jezak <josejx@gentoo.org> :
   Tested and marked ppc stable.
@@ -46,7 +49,7 @@
   11 Aug 2004; Brian Harring <ferringb@gentoo.org> sox-12.17.4-r2.ebuild: 
   Use flag operators -must- be wrapped in parenthesis, blah? node isn't valid.
 
-  30 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> sox-12.17.4-r2.ebuild:
+  30 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> sox-12.17.4-r2.ebuild:
   Stable on alpha.
 
   29 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>

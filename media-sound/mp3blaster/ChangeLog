@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3blaster
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.18 2004/11/22 20:36:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.19 2004/12/29 01:12:49 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   22 Nov 2004; Markus Rothe <corsair@gentoo.org> mp3blaster-3.2.0.ebuild:
   Added ~ppc64 to KEYWORDS; bug #72100
@@ -9,7 +12,7 @@
   -mp3blaster-3.1.1.ebuild:
   toolchain love for bug #69012.
 
-  13 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mp3blaster-3.2.0.ebuild:
+  13 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mp3blaster-3.2.0.ebuild:
   Stable on alpha.
 
   23 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>

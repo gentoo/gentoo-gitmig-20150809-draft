@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.76 2004/12/20 20:25:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.77 2004/12/29 01:13:29 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Dec 2004; Markus Rothe <corsair@gentoo.org> mpg123-0.59s-r8.ebuild:
   Stable on ppc64
@@ -70,7 +73,7 @@
   24 Oct 2004; Aron Griffis <agriffis@gentoo.org> mpg123-0.59s-r5.ebuild:
   stable on ia64
 
-  22 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> mpg123-0.59s-r5.ebuild:
+  22 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mpg123-0.59s-r5.ebuild:
   Stable on alpha, bug 68343.
 
   22 Oct 2004; Guy Martin <gmsoft@gentoo.org> mpg123-0.59s-r5.ebuild:
@@ -93,7 +96,7 @@
   18 Sep 2004; Joshua Kinard <kumba@gentoo.org> mpg123-0.59s-r4.ebuild:
   Marked stable on mips.
 
-  16 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> mpg123-0.59s-r4.ebuild:
+  16 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> mpg123-0.59s-r4.ebuild:
   Stable on alpha, bug 63079.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
