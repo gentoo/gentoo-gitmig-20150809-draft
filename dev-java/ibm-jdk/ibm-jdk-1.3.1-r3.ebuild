@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r3.ebuild,v 1.7 2004/03/18 05:51:32 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r3.ebuild,v 1.8 2004/04/27 18:40:06 pvdabeel Exp $
 
 IUSE="doc"
 
@@ -24,7 +24,6 @@ SRC_URI="${SRC_JAVA}"
 DEPEND="virtual/glibc
 		>=dev-java/java-config-0.2.5
 		doc? ( =dev-java/java-sdk-docs-1.3.1* )"
-RESTRICT="fetch"
 RDEPEND="$DEPEND"
 PROVIDE="virtual/jre-1.3.1
 	virtual/jdk-1.3.1
