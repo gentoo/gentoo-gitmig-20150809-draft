@@ -1,6 +1,6 @@
 MD5 9a5a31d0345f8fbb605c1e91dc0caed3 accessx-0950-r1.ebuild 773
 MD5 0c09d062d1e92cbc1243b3da311504e2 accessx-0950.ebuild 664
-MD5 73af947fb3df7f7667e92581cfe2c750 ChangeLog 964
+MD5 cf5e02c7d8c28d8ccb64cfd301f9fa2b ChangeLog 961
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 fb7ad94abfb681ca6ba8d09e740339b2 files/access-gcc3-gentoo.patch 355
 MD5 07c27dbfdef1d506b42ec5a0cc0bc40c files/digest-accessx-0950 62
