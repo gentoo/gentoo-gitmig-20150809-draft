@@ -28,49 +28,52 @@ RDEPEND=">=gnome-base/gnome-print-0.29
 	bonobo? ( >=gnome-base/bonobo-1.0 ) "
 
 src_unpack() {
-  unpack ${A}
-  cd ${S}
-  cp configure configure.orig
-  sed -e 's:"%d,:"%d",:' configure.orig > configure
+	unpack ${A}
+	cd ${S}
+	
+	patch -p0 < ${FILESDIR}/${P}-gdk-gc-ref.patch
+#	cp configure configure.orig
+#	sed -e 's:"%d,:"%d",:' configure.orig > configure
 }
 
 src_compile() {
-  local myconf
-  if [ -z "`use nls`" ] ; then
-    myconf="--disable-nls"
-  fi
-  if [ -z "`use bonobo`" ] ; then
-    myconf="$myconf --without-bonobo"
-  fi
-  if [ "`use gb`" ]; then
-    #does not work atm
-    myconf="$myconf --without-gb"
-  else
-    myconf="$myconf --without-gb"
-  fi
-  if [ "`use perl`" ]; then
-    myconf="$myconf --with-perl"
-  else
-    myconf="$myconf --without-perl"
-  fi
-  if [ "`use python`" ]; then
-    myconf="$myconf --with-python"
-  else
-    myconf="$myconf --without-python"
-  fi
-  if [ "`use libgda`" ]; then
-    myconf="$myconf --with-gda"
-  else
-    myconf="$myconf --without-gda"
-  fi
-  try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome ${myconf}
-  cd ${S}
-  try pmake
+	local myconf
+	if [ -z "`use nls`" ] ; then
+		myconf="--disable-nls"
+	fi
+	if [ -z "`use bonobo`" ] ; then
+		myconf="$myconf --without-bonobo"
+  	fi
+  	if [ "`use gb`" ]; then
+    		#does not work atm
+    		myconf="$myconf --without-gb"
+  	else
+    		myconf="$myconf --without-gb"
+  	fi
+  	if [ "`use perl`" ]; then
+    		myconf="$myconf --with-perl"
+  	else
+    		myconf="$myconf --without-perl"
+  	fi
+  	if [ "`use python`" ]; then
+    		myconf="$myconf --with-python"
+  	else
+    		myconf="$myconf --without-python"
+  	fi
+  	if [ "`use libgda`" ]; then
+    		myconf="$myconf --with-gda"
+  	else
+    		myconf="$myconf --without-gda"
+  	fi
+
+  	try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome --without-evolution ${myconf} 
+
+	emake || die "Building of package failed."
 }
 
 src_install() {
-  try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome PREFIX=${D}/usr install
-  dodoc AUTHORS COPYING *ChangeLog HACKING NEWS README TODO
+  	make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome PREFIX=${D}/usr install || die
+  	dodoc AUTHORS COPYING *ChangeLog HACKING NEWS README TODO
 
 }
 
