@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.21 2004/09/22 03:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.22 2004/09/24 00:11:05 vapier Exp $
 
-inherit gnuconfig
+inherit gnuconfig flag-o-matic
 
 DESCRIPTION="Super-useful stream editor"
 HOMEPAGE="http://www.gnu.org/software/sed/sed.html"
@@ -17,24 +17,27 @@ RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-src_compile() {
-	# Needed for mips and probably others
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	gnuconfig_update
+}
 
+src_compile() {
+	local myconf=""
 	if use macos || use ppc-macos ; then
-		EXTRA_ECONF="--program-prefix=g"
+		myconf="--program-prefix=g"
 	fi
-	econf $(use_enable nls) || die "Configure failed"
-	if use static ; then
-		emake LDFLAGS=-static || die "Static build failed"
-	else
-		emake || die "Shared build failed"
-	fi
+	econf \
+		$(use_enable nls) \
+		${myconf} \
+		|| die "Configure failed"
+
+	use static && append-ldflags -static
+	emake LDFLAGS="${LDFLAGS}" || die "build failed"
 }
 
 src_install() {
-	local x
-
 	into /
 	dobin sed/sed
 	if ! use build
@@ -50,6 +53,7 @@ src_install() {
 	rm -f "${D}/usr/bin/sed"
 	if use macos || use ppc-macos ; then
 		cd "${D}"
+		local x
 		for x in $(find . -name 'sed*' -print);
 		do
 			mv "$x" "${x//sed/gsed}"
