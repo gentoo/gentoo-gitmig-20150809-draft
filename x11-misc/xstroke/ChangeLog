@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xstroke
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.6 2003/02/17 00:32:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.7 2003/03/11 08:06:57 seemant Exp $
+
+*xstroke-0.5.12-r1 (11 Mar 2003)
+
+  11 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xstroke-0.5.12-r1.ebuild:
+  compile fix, and SRC_URI update; both thanks to: Thomas Weidner
+  <yasea@gmx.net> in bug #17137.  Also, man page is now installed.
 
 *xstroke-0.5.12 (31 May 2002)
   
