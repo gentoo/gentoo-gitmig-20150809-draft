@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/qmail-scanner
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/ChangeLog,v 1.5 2002/12/13 11:00:08 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/ChangeLog,v 1.6 2003/01/22 00:22:10 raker Exp $
+
+*qmail-scanner-1.15 (21 Jan 2003)
+
+  21 Jan 2003; Nick Hadaway <raker@gentoo.org> qmail-scanner-1.15.ebulid, 
+  files/digest-qmail-scanner-1.15 :
+  Version bump.  This one should be compatible with perl-5.8
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
