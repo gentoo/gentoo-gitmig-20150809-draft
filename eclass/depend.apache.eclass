@@ -1,7 +1,6 @@
-# Copyright 2004 Gentoo Technologies, Inc.
+# Copyright 2004-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Michael Tindal <mtindal@gmail.com>
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.8 2005/01/21 00:00:53 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.9 2005/01/21 07:52:12 vericgar Exp $
 ECLASS=depend.apache
 INHERITED="$INHERITED $ECLASS"
 
@@ -18,8 +17,11 @@ INHERITED="$INHERITED $ECLASS"
 ##
 ## Stores the version of apache we are going to be ebuilding.  This variable is
 ## set by the need_apache{|1|2} functions.
+##
+## This needs to stay as '1' until apache2 is on by default -- although it
+## doesn't matter much as it's set by the need_apache functions.
 ####
-APACHE_VERSION='2'
+APACHE_VERSION='1'
 
 ####
 ## APXS1, APXS2
@@ -82,14 +84,23 @@ APACHE2_MODULESDIR="${APACHE2_BASEDIR}/modules"
 ## APACHE1_DEPEND, APACHE2_DEPEND
 ##
 ## Dependencies for apache 1.x and apache 2.x
-##
-## apache2 must be at least version 2.0.52-r3, this is lowest version
-##     containing our new overall changes -- trapni (Jan 21 2005)
-## apache1 must be at least version 1.3.33-r1, but how to 
-##     define the DEPEND here? (FIXME) -- trapni (Jan 21 2005)
+##  - apache2 must be at least version 2.0.52-r3, this is lowest version
+##    containing our new overall changes -- trapni (Jan 21 2005)
+##  - apache1 must be at least version 1.3.33-r1, but how to 
+##    define the DEPEND here? (FIXME) -- trapni (Jan 21 2005)
+##     - currently not possible - bug #4315 -- vericgar (Jan 21 2005)
 ####
 APACHE1_DEPEND="=net-www/apache-1*"
 APACHE2_DEPEND=">=net-www/apache-2.0.52-r3"
+
+
+####
+## APACHE_DEPEND
+##
+## Dependency magic based on useflags to use the right DEPEND
+####
+
+APACHE_DEPEND="apache2? ( ${APACHE2_DEPEND} ) !apache2? ( ${APACHE1_DEPEND} )"
 
 ####
 ## need_apache1
@@ -123,14 +134,20 @@ need_apache2() {
 	APACHE_VERSION='2'
 }
 
+
+####
+## DO NOT CHANGE THIS FUNCTION UNLESS YOU UNDERSTAND THE CONSEQUENCES IT 
+## WILL HAVE ON THE CACHE! There MUST be a apache2? () block in DEPEND for
+## things to work correct in the dependency calculation stage.
+####
 need_apache() {
 	debug-print-function need_apache
 
 	IUSE="${IUSE} apache2"
+	DEPEND="${DEPEND} ${APACHE_DEPEND}"
 	if useq apache2; then
-		need_apache2
+		APACHE_VERSION='2'
 	else
-		need_apache1
+		APACHE_VERSION='1'
 	fi
 }
-
