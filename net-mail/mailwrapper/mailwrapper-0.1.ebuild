@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.1.ebuild,v 1.8 2004/03/19 02:35:45 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.1.ebuild,v 1.9 2004/03/29 12:31:30 pylon Exp $
 
 DESCRIPTION="Program to invoke an appropriate MTA based on a config file"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${P}.tbz2"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips ~ppc ~alpha ~amd64 ~hppa ia64 ppc64"
+KEYWORDS="~x86 ~sparc ~mips ppc ~alpha ~amd64 ~hppa ia64 ppc64"
 IUSE=""
 DEPEND=""
 S=${WORKDIR}/${P}
