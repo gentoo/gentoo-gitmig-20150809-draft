@@ -1,8 +1,11 @@
 # ChangeLog for app-arch/dump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.8 2002/09/07 00:30:48 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.9 2002/10/19 16:24:28 aliz Exp $
 
 *dump-0.4.31 (13 Aug 2002)
+
+  19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> dump-0.4.31.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
 
   6 Sep 2002; Owen Stampflee <owen@gentoo.org> :
   Added PPC to KEYWORDS.
@@ -13,11 +16,17 @@
 
 *dump-0.4.30 (27 Jul 2002)
 
+  19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> dump-0.4.30.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
   27 Jul 2002; Nick Hadaway <raker@gentoo.org>
   dump-0.4.30.ebuild, files/digest-dump-0.4.30 :
   Version bump.
 
 *dump-0.4.29 (11 Jul 2002)
+
+  19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> dump-0.4.29.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
 
   11 Jul 2002; Seemant Kulleen <seemant@gentoo.org> dump-0.4.29.ebuild
   files/digest-dump-0.4.29 :
