@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.38 2003/11/15 03:16:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.39 2003/12/06 18:00:09 liquidx Exp $
+
+  06 Dec 2003; Alastair Tse <liquidx@gentoo.org> gnome-media-2.4.0.ebuild,
+  gnome-media-2.4.1.1.ebuild:
+  add parallel build restrictions (#30036)
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gnome-media-2.4.0.ebuild:
   Stable on ia64

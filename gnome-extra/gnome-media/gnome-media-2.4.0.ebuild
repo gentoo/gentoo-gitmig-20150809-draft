@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.4.0.ebuild,v 1.9 2003/11/15 03:16:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.4.0.ebuild,v 1.10 2003/12/06 18:00:09 liquidx Exp $
 
 inherit gnome2
 
@@ -36,3 +36,4 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
 
 USE_DESTDIR="1"
+MAKEOPTS="${MAKEOPTS} -j1"
