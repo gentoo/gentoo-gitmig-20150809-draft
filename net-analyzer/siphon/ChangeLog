@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/siphon
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.1 2003/10/20 18:40:10 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.2 2003/10/30 23:11:33 port001 Exp $
+
+*siphon-666 (30 Oct 2003)
+
+  30 Oct 2003; Ian Leitch <port001@gentoo.org> siphon-666.ebuild:
+  Use our own CFLAGS
 
   20 Oct 2003; Ian Leitch <port001@gentoo.org> :
   New package, thanks  Cory McWilliams <mcwilc@rpi.edu> #22181

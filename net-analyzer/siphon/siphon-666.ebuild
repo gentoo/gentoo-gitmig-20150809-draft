@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/siphon-666.ebuild,v 1.1 2003/10/20 18:40:10 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/siphon-666.ebuild,v 1.2 2003/10/30 23:11:33 port001 Exp $
 
 IUSE=""
 MY_P=${PN}-v.${PV}
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${MY_P}
 	sed -i "s:osprints\.conf:/etc/osprints.conf:" log.c
+	sed -i "s:^CFLAGS = .*$:CFLAGS = ${CFLAGS} -pthread -ggdb -I.:" Makefile
 }
 
 src_compile() {
