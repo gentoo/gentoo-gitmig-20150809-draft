@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.35 2004/10/05 11:22:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.36 2004/10/06 20:12:27 pylon Exp $
+
+  06 Oct 2004; Lars Weiler <pylon@gentoo.org> arson-0.9.8_beta2.ebuild:
+  Changed dependency from app-cdr/cdrtools to virtual/cdrtools. This resolves
+  bug #66518.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   arson-0.9.7-r3.ebuild, arson-0.9.8_beta2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.10 2004/10/05 11:22:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.11 2004/10/06 20:12:27 pylon Exp $
 
 inherit kde eutils gcc
 
@@ -19,7 +19,7 @@ IUSE="oggvorbis"
 
 DEPEND=">=media-sound/cdparanoia-3.9.8
 	>=media-sound/bladeenc-0.94.2
-	>=app-cdr/cdrtools-1.11.24
+	virtual/cdrtools
 	>=media-sound/normalize-0.7.4
 	oggvorbis? ( media-libs/libvorbis
 		media-libs/libogg )
