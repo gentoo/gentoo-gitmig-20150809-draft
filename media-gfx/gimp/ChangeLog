@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.101 2004/12/22 15:25:36 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.102 2004/12/22 16:43:11 obz Exp $
+
+  23 Dec 2004; Mike Gardiner <obz@gentoo.org> gimp-2.2.0.ebuild, gimp-2.0.6.ebuild:
+  More fixes, changed doc? to gtkhtml? (bug #74848), and fixed USE=-doc to not install any developer documentation in 2.2.0
 
   22 Dec 2004; Mike Gardiner <obz@gentoo.org> +files/pygimp-logo.png,
   -files/pygimp-logo.png.bz2, gimp-2.2.0.ebuild:
@@ -27,7 +30,7 @@
   +gimp-2.0.6.ebuild:
   New version, updated the manual
 
-  03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> gimp-2.0.5.ebuild:
+  03 Nov 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> gimp-2.0.5.ebuild:
   ~alpha keyword.
 
 *gimp-2.0.5 (29 Oct 2004)
@@ -80,7 +83,7 @@
   gimp-1.2.4.ebuild, gimp-1.2.5.ebuild:
   Fix use invocation
 
-  05 Jun 2004; Bryan �stergaard <kloeri@gentoo.org> gimp-1.2.5.ebuild:
+  05 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> gimp-1.2.5.ebuild:
   Stable on alpha.
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> gimp-2.0.0.ebuild:

@@ -2,9 +2,9 @@ MD5 2951e3093e294629908f060f0d55a381 gimp-2.0.0.ebuild 2655
 MD5 d7a9ef0b998d360ae6254fc0508e2f7d gimp-2.0.2.ebuild 2570
 MD5 e7cbfba89facb9cca1a3117df924f41b gimp-1.2.5.ebuild 3206
 MD5 1fbffd70f406bee33a8827ebf6f43c48 gimp-2.0.4.ebuild 3205
-MD5 0a1fccdc8aeceba00980fc6d94cdc680 gimp-2.2.0.ebuild 3426
-MD5 284476bb4ded32c690a4aa10be6cf03a gimp-2.0.6.ebuild 3238
-MD5 d1cfea65dcd648fdd8a9ef5a1c811b86 ChangeLog 14884
+MD5 c1e60ad669f691e24a19620620d58222 gimp-2.2.0.ebuild 3512
+MD5 b56ad7481b4838ae420404ee8f2c84cc gimp-2.0.6.ebuild 3238
+MD5 4a3f1162ae671016ab360876aeb25ae6 ChangeLog 15102
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 df316b1d4bd1c70f25f7ef811a14e5bc gimp-2.0.5.ebuild 3219
 MD5 be326cb198ec1f1f6c21a5a5a1460415 files/gimp-2.0.0-gcc34.patch 1148

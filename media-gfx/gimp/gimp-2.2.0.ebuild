@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.0.ebuild,v 1.3 2004/12/22 15:43:24 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.0.ebuild,v 1.4 2004/12/22 16:43:11 obz Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -34,7 +34,7 @@ RDEPEND="virtual/x11
 	dev-libs/libxslt
 
 	gimpprint? ( =media-gfx/gimp-print-4.2* )
-	doc? ( =gnome-extra/libgtkhtml-2* )
+	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
 
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2
@@ -89,11 +89,15 @@ src_compile() {
 	else
 		HARDENED_SUPPRESS_MMX="`use_enable mmx`"
 	fi
+	
+	local myconf
+	use doc || myconf="${myconf} --disable-devel-docs"
 
 	econf \
 		--disable-default-binary \
 		--with-x \
 		"${HARDENED_SUPPRESS_MMX}" \
+		${myconf} \
 		`use_enable sse` \
 		`use_enable altivec` \
 		`use_enable doc gtk-doc` \
