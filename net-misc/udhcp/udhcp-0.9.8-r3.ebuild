@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.6 2004/03/25 21:20:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.7 2004/05/24 22:29:12 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,8 @@ SRC_URI="http://udhcp.busybox.net/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~mips ~ia64 amd64"
+KEYWORDS="x86 ~ppc sparc ~mips ~alpha arm hppa amd64 ~ia64"
+IUSE=""
 
 DEPEND="virtual/glibc"
 PROVIDE="virtual/dhcpc"
