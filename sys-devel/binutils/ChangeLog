@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.73 2003/09/20 21:50:58 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.74 2003/09/21 05:28:32 kumba Exp $
+
+
+*binutils-2.14.90.0.6-r3 (13 Sep 2003)
 
   20 Sep 2003; Alexander Gabert <pappy@gentoo.org>
   binutils-2.14.90.0.6-r3.ebuild:
@@ -10,10 +13,7 @@
   files/2.14/binutils-2.14.90.0.6-bfd-elf-interp.patch:
   A change that defines expected section attributes for a select set of
   hardcoded section names was incorrectly added to binutils by redhat. This fix
-  is for bfd/elf.c for the .interp entry which should have SHF_ALLOC instead of
-  0
-
-*binutils-2.14.90.0.6-r3 (13 Sep 2003)
+  is for bfd/elf.c for the .interp entry which should have SHF_ALLOC instead of 0
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org> binutils-2.14.90.0.6-r3.ebuild :
   ia64 keywords.
@@ -26,6 +26,9 @@
   latest binutls by Chris Lee <clee@kde.org>, bug #27540.
 
 *binutils-2.14.90.0.6-r2 (01 Sep 2003)
+
+  21 Sep 2003; Joshua Kinard <kumba@gentoo.org> binutils-2.14.90.0.6-r2.ebuild:
+  Changed ~mips to mips in KEYWORDS
 
   03 Sep 2003; Stefan Jones <cretin@gentoo.org> 
   binutils-2.14.90.0.6-r2.ebuild :
