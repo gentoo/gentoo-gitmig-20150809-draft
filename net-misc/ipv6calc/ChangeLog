@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/palo
+# ChangeLog for net-misc/ipv6calc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.1 2003/03/20 04:44:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.2 2003/04/22 10:25:11 vapier Exp $
 
 *ipv6calc-0.45 (06 Mar 2003)
 
