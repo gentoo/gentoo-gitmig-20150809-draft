@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2.ebuild,v 1.1 2004/08/30 17:08:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2.ebuild,v 1.2 2004/10/02 16:38:03 axxo Exp $
 
 inherit java-utils
 
@@ -17,13 +17,25 @@ IUSE="jikes doc"
 
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}
+	doc? ( 
+		=app-text/docbook-xml-dtd-4.3* 
+		=app-text/docbook-xsl-stylesheets-1.65.1*
+	)
 	>=dev-java/ant-1.5.4
 	jikes? ( >=dev-java/jikes-1.17 )"
 
 S="${WORKDIR}/jEdit"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if use doc; then
+		echo "docbook.dtd.catalog=/usr/share/sgml/docbook/xml-dtd-4.3/docbook.cat" > build.properties
+		echo "docbook.xsl=/usr/share/sgml/docbook/xsl-stylesheets-1.65.1" >> build.properties
+	fi
+}
 src_compile() {
-	local antflags=""
+	local antflags="dist"
 
 	if use jikes ; then
 		einfo "Please ignore the following compiler warnings."
@@ -31,9 +43,9 @@ src_compile() {
 		antflags="${antflags} -Dbuild.compiler=jikes"
 	fi
 
-	use doc && antflags="${antflags} javadoc"
+	use doc && antflags="${antflags} javadoc docs-html"
 
-	ant dist ${antflags} || die "compile problem"
+	ant ${antflags} || die "compile problem"
 }
 
 src_install () {
