@@ -1,13 +1,17 @@
 # Config file for /etc/init.d/barnyard
 
 PIDFILE="/var/run/barnyard.pid"
+LOG_FILE="snort_unified.log"
 
 # You probably don't want to change this, but in case you do
 LOGDIR="/var/log/snort"
 ARCHIVEDIR="$LOGDIR/archive"
+GENMSG_FILE="/etc/snort/gen-msg.map"
+SIDMSG_FILE="/etc/snort/sid-msg.map"
+WALDO_FILE="$LOGDIR/barnyard.waldo"
 
 # Probably not this either
 CONF=/etc/snort/barnyard.conf
 
 # This pulls in the options above
-BARNYARD_OPTS="-c $CONF -d $LOGDIR -g /etc/snort/gen-msg.map -s /etc/snort/sid-msg.map -w $LOGDIR/barnyard.waldo -L $LOGDIR -a $ARCHIVEDIR -f snort.alert"
+BARNYARD_OPTS="-D -c $CONF -d $LOGDIR -g $GENMSG_FILE -s $SIDMSG_FILE -w $WALDO_FILE -L $LOGDIR -a $ARCHIVEDIR -f $LOG_FILE -X $PIDFILE"
