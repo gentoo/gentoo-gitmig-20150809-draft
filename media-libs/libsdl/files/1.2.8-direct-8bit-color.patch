@@ -6,15 +6,6 @@ retrieving revision 1.13
 diff -u -r1.12 -r1.13
 --- src/video/SDL_pixels.c	30 Nov 2004 14:28:20 -0000	1.12
 +++ src/video/SDL_pixels.c	12 Jan 2005 19:38:24 -0000	1.13
-@@ -22,7 +22,7 @@
- 
- #ifdef SAVE_RCSID
- static char rcsid =
-- "@(#) $Id: 1.2.8-direct-8bit-color.patch,v 1.1 2005/01/14 00:59:42 vapier Exp $";
-+ "@(#) $Id: 1.2.8-direct-8bit-color.patch,v 1.1 2005/01/14 00:59:42 vapier Exp $";
- #endif
- 
- /* General (mostly internal) pixel/color manipulation routines for SDL */
 @@ -61,160 +61,45 @@
  	/* Set up the format */
  	format->BitsPerPixel = bpp;

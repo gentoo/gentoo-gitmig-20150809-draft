@@ -6,15 +6,6 @@ retrieving revision 1.12
 diff -u -r1.11 -r1.12
 --- include/SDL_endian.h	27 Nov 2004 23:11:20 -0000	1.11
 +++ include/SDL_endian.h	12 Jan 2005 06:04:47 -0000	1.12
-@@ -22,7 +22,7 @@
- 
- #ifdef SAVE_RCSID
- static char rcsid =
-- "@(#) $Id: 1.2.8-amd64-endian.patch,v 1.1 2005/01/14 00:59:42 vapier Exp $";
-+ "@(#) $Id: 1.2.8-amd64-endian.patch,v 1.1 2005/01/14 00:59:42 vapier Exp $";
- #endif
- 
- /* Functions for reading and writing endian-specific values */
 @@ -68,7 +68,7 @@
  #elif defined(__GNUC__) && defined(__x86_64__)
  static __inline__ Uint16 SDL_Swap16(Uint16 x)

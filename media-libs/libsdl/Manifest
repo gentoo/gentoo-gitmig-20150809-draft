@@ -17,7 +17,7 @@ MD5 4f1ce33c931d461bed06277f60341085 files/1.2.6-nobuggy-X.patch 568
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.7-nobuggy-X.patch 568
 MD5 e0c6c6ffc15475282fc864b8f52f0abf files/1.2.8-linux26.patch 1268
 MD5 abf0c6fe9d93e5b0cc9a4dbb6d93ad87 files/1.2.7-joystick2.patch 16196
-MD5 4a2d1ec0616ac20777043a1341e7f04b files/1.2.8-amd64-endian.patch 943
+MD5 5d1fcf4587b0ce9cd723aa69f9ef7dba files/1.2.8-amd64-endian.patch 651
 MD5 71a857d2bbcc34c4807638eb5d710f2e files/1.2.7-26headers.patch 1017
 MD5 323ad5b1e83521630dd4d54819c5efbd files/1.2.8-gcc2.patch 743
 MD5 2e9d99f7ab858b5a64d124abea4565b9 files/digest-libsdl-1.2.7-r3 62
@@ -25,11 +25,11 @@ MD5 88437c556d9b4571f08de4a4e2d9323a files/1.2.8-libcaca.patch 23278
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.8-nobuggy-X.patch 568
 MD5 4ce5ec18eafcf0b1c6caf31c9f67cb1d files/digest-libsdl-1.2.8-r1 62
 MD5 22c541533c3c588f430b62440053071f files/1.2.8-gcc2-asm.patch 10160
-MD5 8de3272b60b93842b7b87949620de869 files/1.2.8-direct-8bit-color.patch 7727
+MD5 e6471a33cb0d62a807640ef3eccffb5f files/1.2.8-direct-8bit-color.patch 7414
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB5xmgroRuSHgZdywRAiCYAKCHsZJKdcMIJT6zxijUcNPH0a73oACfZ6/R
-ihFbYqa13uG9bSTbTqzK6F8=
-=Fjsc
+iD8DBQFB5ymHroRuSHgZdywRAnQAAJ9cHzgSLoxJiT3Mxxgw30kaXCNAtgCfST49
+8wB7lcTvMhwyAYzYTeSZ62I=
+=HvUq
 -----END PGP SIGNATURE-----
