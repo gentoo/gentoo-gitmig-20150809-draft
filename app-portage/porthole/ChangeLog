@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.14 2004/10/17 09:59:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.15 2004/11/29 12:11:53 genone Exp $
+
+*porthole-0.4.1 (29 Nov 2004)
+
+  29 Nov 2004; Marius Mauch <genone@gentoo.org> +porthole-0.4.1.ebuild:
+  version bump, required from portage-2.0.51
 
   17 Oct 2004; David Holm <dholm@gentoo.org> porthole-0.3.1.ebuild:
   What happened to ppc?!
