@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ChangeLog,v 1.7 2003/02/12 06:36:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ChangeLog,v 1.8 2003/07/21 17:04:44 twp Exp $
+
+*ruby-gtk-0.34 (21 Jul 2003)
+
+	21 Jul 2003; Tom Payne <twp@gentoo.org> ruby-gtk-0.34.ebuild :
+	Version bump.
 
 *ruby-gtk-0.30 (07 Jan 2003)
 
