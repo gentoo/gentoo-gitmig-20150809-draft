@@ -25,7 +25,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
          mirror://gentoo/patches-${KV}.tar.bz2"
 
 HOMEPAGE="http://www.kernel.org/ http://www.nsa.gov/selinux"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="${KV}"
 
 src_unpack() {
