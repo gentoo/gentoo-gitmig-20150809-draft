@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/rtcw
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.10 2004/04/20 23:29:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.11 2004/04/24 15:26:39 wolf31o2 Exp $
+
+  24 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> rtcw-1.41.ebuild:
+  Adding wolfmp wolfsp einfo at end of install and closing bug #48864.
 
   20 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> rtcw-1.41.ebuild:
   Fixing digest and invalid source location.  Bad wolfie!  Closing bug #48480.

@@ -76,7 +76,8 @@ pkg_postinst() {
 	einfo "sp_pak1.pk3 and sp_pak2.pk3 from a Window installation into ${dir}/main/"
 	echo
 	einfo "To play the game run:"
-	einfo " wolf"
+	einfo " wolfsp (single-player)"
+	einfo " wolfmp (multi-player)"
 	if [ "`use dedicated`" ];
 	then
 		echo
