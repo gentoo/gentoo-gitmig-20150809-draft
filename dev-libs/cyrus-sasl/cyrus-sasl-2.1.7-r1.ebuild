@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.7-r1.ebuild,v 1.3 2002/09/10 14:47:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.7-r1.ebuild,v 1.4 2002/09/10 20:18:36 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -87,7 +87,9 @@ src_install () {
 }
 
 pkg_postinst() {
+
 	# empty directories..
-	install -d -m0755 ${ROOT}/var/lib/sasl2
-	install -d -m0755 ${ROOT}/etc/sasl2
+	dodir /var/lib/sasl2
+	dodir /etc/sasl2
+
 }
