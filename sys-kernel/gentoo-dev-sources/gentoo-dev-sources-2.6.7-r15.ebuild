@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.7-r15.ebuild,v 1.1 2004/11/23 20:39:07 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.7-r15.ebuild,v 1.2 2004/11/24 07:14:06 eradicator Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -8,11 +8,11 @@ detect_version
 detect_arch
 
 #version of gentoo patchset
-GPV=7.47
+GPV=7.48
 GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
 	mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
 
-KEYWORDS="-*"
+KEYWORDS="~sparc"
 
 UNIPATCH_LIST="${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
 	       ${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
