@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/airsnort-0.2.4a.ebuild,v 1.1 2004/08/31 12:08:44 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/airsnort-0.2.4a.ebuild,v 1.2 2004/09/05 14:30:10 aliz Exp $
 
 DESCRIPTION="802.11b Wireless Packet Sniffer/WEP Cracker"
 HOMEPAGE="http://airsnort.shmoo.com/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="pcmcia"
 
 DEPEND=">=sys-devel/autoconf-2.13
