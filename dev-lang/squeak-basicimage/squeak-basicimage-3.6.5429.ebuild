@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/squeak-basicimage-3.6.5429.ebuild,v 1.1 2004/04/28 17:09:36 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/squeak-basicimage-3.6.5429.ebuild,v 1.2 2004/05/12 16:23:01 jhhudso Exp $
 
 MY_P="Squeak3.6-5429"
 DESCRIPTION="Squeak basic image file"
 HOMEPAGE="http://www.squeak.org/"
-SRC_URI="ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${PV/_*}/${MY_P}-basic.zip
-	ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${PV/_*}/SqueakV3.sources.gz"
+SRC_URI="ftp://st.cs.uiuc.edu/Smalltalk/Squeak/3.6/${MY_P}-basic.zip
+	ftp://st.cs.uiuc.edu/Smalltalk/Squeak/3.6/SqueakV3.sources.gz"
 
 LICENSE="Apple"
-SLOT="${PV/_*}"
+SLOT="3.6"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 PROVIDE="virtual/squeak-image"
@@ -36,5 +36,5 @@ src_install() {
 	dosym /usr/lib/squeak/${MY_P}-basic.image.gz \
 		/usr/lib/squeak/squeak.image.gz
 
-	einfo "Squeak ${PV/_p/-} image/changes now installed"
+	einfo "Squeak ${PV} image/changes now installed"
 }
