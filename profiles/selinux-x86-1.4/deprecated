@@ -1,5 +1,0 @@
-selinux/2004.1/x86
-# rm /etc/make.profile
-# ln -s /usr/portage/profiles/selinux/2004.1/x86 /etc/make.profile
-# emerge -u libselinux checkpolicy policycoreutils selinux-base-policy
-# emerge baselayout
