@@ -7,7 +7,8 @@
 #<=sys-devel/binutils-2.15.90.0.1.1-r3
 
 # minimal versions
--*>=net-misc/iputils-021109-r3
+#-*>=net-misc/iputils-021109-r3
+-*net-misc/iputils
 *>=sys-devel/bison-1.875
 
 # remove stuff not needed on uclibc
