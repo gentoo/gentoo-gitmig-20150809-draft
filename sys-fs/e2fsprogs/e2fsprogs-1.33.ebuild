@@ -1,17 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.33.ebuild,v 1.1 2003/09/15 17:46:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.33.ebuild,v 1.2 2003/09/20 05:21:17 seemant Exp $
 
 inherit eutils
+
+IUSE="nls static"
 
 DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 hppa ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="nls"
+KEYWORDS="x86 amd64 hppa ~ppc"
 
 #debianutils is for 'readlink'
 DEPEND="${DEPEND}
@@ -28,11 +29,15 @@ src_unpack() {
 }
 
 src_compile() {
+	
+	local myconf
+	use static \
+		&& myconf="${myconf} --with-ldopts=-static" \
+		|| myconf="${myconf} --enable-dynamic-e2fsck --enable-elf-shlibs"
+	
 	econf \
-		--enable-dynamic-e2fsck \
-		--enable-elf-shlibs \
 		`use_enable nls` \
-		|| die
+		${myconf} || die
 
 	# Parallel make sometimes fails
 	MAKEOPTS="-j1" emake || die
