@@ -1,11 +1,12 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.21 2003/04/23 09:07:14 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.22 2003/06/13 11:02:03 gmsoft Exp $
 
-  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
-  Added hppa to keywords.
 
 *diffutils-2.8.4-r3 (04 Feb 2003)
+
+  13 Jun 2003; Guy Martin <gmnsoft@gentoo.org> diffutils-2.8.4-r3.ebuild :
+  Added hppa to KEYWORDS.
 
   22 Apr 2003; <msterret@gentoo.org> diffutils-2.8.4-r3.ebuild:
   Added support for USE=static Added use_enable nls to cleanup myconf
@@ -48,6 +49,9 @@
 
   02 Apr 2003; Rajiv Manglani <rajiv@gentoo.org> :
   fixed if/else typo.
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
   18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
