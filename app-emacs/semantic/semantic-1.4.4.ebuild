@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/semantic-1.4.4.ebuild,v 1.1 2003/09/21 02:57:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/semantic-1.4.4.ebuild,v 1.2 2003/12/08 05:58:04 usata Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://cedet.sourceforge.net/semantic.shtml"
 SRC_URI="mirror://sourceforge/cedet/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/emacs
 	>=app-emacs/speedbar-0.14_beta4

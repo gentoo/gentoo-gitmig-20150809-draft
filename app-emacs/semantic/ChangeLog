@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/semantic
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/ChangeLog,v 1.6 2003/11/16 19:38:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/ChangeLog,v 1.7 2003/12/08 05:58:04 usata Exp $
 
 *semantic-1.4.4-r1 (16 Nov 2003)
 
@@ -15,6 +15,9 @@
   corrected description. resolves bug 31879
 
 *semantic-1.4.4 (20 Sep 2003)
+
+  08 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> semantic-1.4.4.ebuild:
+  Marked as stable
 
   20 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> semantic-1.4.4.ebuild,
   files/60semantic-gentoo.el:
