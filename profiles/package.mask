@@ -734,10 +734,6 @@ dev-libs/libmrproject
 >=dev-python/pygtk-1.99.0
 
 
-# Libtoolized version, test this!
-
-=x11-libs/gtk+-2.0.2-r5
-
 # mkennedy@gentoo.org 14 Apr 2002
 # Beta, so masked for now. See also bug 1662.
 =app-arch/rar-3.0_beta5
