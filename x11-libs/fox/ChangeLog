@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/fox
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.1 2002/07/29 20:35:08 stroke Exp $
+
+*fox-1.0.17.ebuild (29 Jul 2002)
+
+  29 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> fox-1.0.17.ebuild:
+
+  Initial cvs import.
+  Ebuild submitted by Brian Olsen <bnolsen@attbi.com> (bug #3969)
