@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.7 2002/04/29 15:21:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.8 2002/05/03 01:56:02 jnelson Exp $
+
+*python-2.2.1 (2 May 2002)
+
+  2 May 2002; Jon Nelson <jnelson@gentoo.org>: python-2.2.1.ebuild
+  Update to 2.2.1, and completely re-vamp build procedure
+  This should solve several build issues.
 
 *python-2.2-r7 (29 Apr 2002)
 
