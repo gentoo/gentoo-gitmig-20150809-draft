@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.96 2005/02/08 22:24:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.97 2005/02/09 11:23:25 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -603,8 +603,9 @@ detect_version() {
 	CKV=${CKV:-${PV}}
 	OKV=${OKV:-${CKV}}
 	OKV=${OKV/_beta/-test}
-	OKV=${OKV/_rc*}
-	OKV=${OKV/_pre*}
+	OKV=${OKV/_rc/-rc}
+	OKV=${OKV/-r*}
+	OKV=${OKV/_p*}
 
 	KV_MAJOR=$(get_version_component_range 1 ${OKV})
 	KV_MINOR=$(get_version_component_range 2 ${OKV})
