@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004c-r3.ebuild,v 1.8 2005/03/06 07:55:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004c-r3.ebuild,v 1.9 2005/03/10 23:34:51 cryos Exp $
 
 inherit eutils flag-o-matic
 
@@ -153,10 +153,10 @@ src_install() {
 	fi
 
 	if use amd64; then
-		dolib.so c-client/libc-client.so*
+		dolib.so c-client/libc-client.so.1.0.0
 		cd ${D}/usr/$(get_libdir)
 		ln -s libc-client.so.1.0.0 libc-client.so.1
-		ln -s libc-client.so.1 libc-client.so
+		ln -s libc-client.so.1.0.0 libc-client.so
 	fi
 
 	cd ${S}
