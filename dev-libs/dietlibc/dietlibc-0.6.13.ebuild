@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.6.13.ebuild,v 1.1 2001/01/13 20:07:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.6.13.ebuild,v 1.2 2001/05/28 14:35:01 achim Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A minimal libc"
@@ -27,7 +27,8 @@ src_install () {
     dodir /usr/include/dietlibc
     cp -a include/* ${D}/usr/include/dietlibc
     dolib.a dietlibc.a
-
+    exeinto /usr/lib/dietlibc
+    doexe start.o
     dodoc AUTHOR BUGS CAVEAT CHANGES README THANKS TODO
 
 
