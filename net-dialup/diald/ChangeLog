@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/diald
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/ChangeLog,v 1.4 2003/05/23 06:00:45 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/ChangeLog,v 1.5 2003/11/19 14:09:13 lanius Exp $
+
+  19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
+  metadata
 
 *diald-1.0-r1 (22 May 2003)
   
