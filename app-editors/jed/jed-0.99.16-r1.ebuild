@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.11 2004/01/18 20:14:46 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.12 2004/02/05 01:25:18 liquidx Exp $
 
 IUSE="X gpm truetype"
 
 P0=${PN}-0.99-16
 S=${WORKDIR}/${P0}
 DESCRIPTION="Console S-Lang-based editor"
-SRC_URI="ftp://ftp.jedsoft.org/pub/davis/jed/v0.99/${P0}.tar.bz2"
+SRC_URI="ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/jed/v0.99/${P0}.tar.bz2"
 HOMEPAGE="http://www.jedsoft.org/jed/"
 
 DEPEND=">=sys-libs/slang-1.4.5

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.15 2004/01/18 20:14:46 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.16 2004/02/05 01:25:18 liquidx Exp $
+
+  05 Feb 2004; Alastair Tse <liquidx@gentoo.org> jed-0.99.16-r1.ebuild:
+  add more reliable SRC_URI
 
   18 Jan 2004; Chuck Short <zul@gentoo.org> jed-0.99.14-r1.ebuild,
   jed-0.99.16-r1.ebuild, jed-0.99.16.ebuild:
