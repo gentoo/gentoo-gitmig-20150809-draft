@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.4.20020606.ebuild,v 1.1 2002/06/07 14:52:04 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.4.20020606.ebuild,v 1.2 2002/06/07 15:26:31 gerk Exp $
 
 PV=3.0.4
 S=${WORKDIR}/qt-copy-${PV}
@@ -11,7 +11,7 @@ SLOT="3"
 
 SRC_URI="ftp://ftp.kde.org/pub/kde/stable/3.0.1/src/qt-copy-${PV}.tar.bz2
 	 ftp://ftp.nnongae.com/pub/gentoo/qt-copy-${PV}-onthespot.patch
-         http://darkstar.net/~gerk/qt-copy-${PV}-cvs.patch"
+         http://darkstar.net/~gerk/${P}-cvs.patch.tar.bz2"
 
 HOMEPAGE="http://www.trolltech.com/"
 
@@ -36,6 +36,7 @@ src_unpack() {
 	export QTDIR=${S}
 
 	unpack qt-copy-${PV}.tar.bz2
+	unpack ${P}-cvs.patch.tar.bz2
 
 # qt patch - for ami, fixed on the spot bug. 
 # If you have any problem with this patch , you can remove it except Korean
