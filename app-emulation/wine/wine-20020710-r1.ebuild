@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020710-r1.ebuild,v 1.2 2002/07/19 06:02:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020710-r1.ebuild,v 1.3 2002/07/21 03:14:55 cardoe Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Wine is a free implementation of Windows on Unix."
@@ -10,8 +10,7 @@ KEYWORDS="x86 -ppc -sparc -sparc64"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/glibc
-	virtual/x11
+DEPEND="virtual/x11
 	sys-devel/gcc
 	sys-devel/flex
 	dev-util/yacc
