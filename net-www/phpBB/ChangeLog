@@ -1,0 +1,8 @@
+# ChangeLog for net-www/phpBB
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/ChangeLog,v 1.1 2003/02/07 22:30:26 rphillips Exp $
+
+*phpBB-2.0.4 (07 Feb 2003)
+
+  07 Feb 2003; Ryan Phillips <rphillips@gentoo.org> :
+  New package. Submitted by Tim Radisch. Fixes #14912
