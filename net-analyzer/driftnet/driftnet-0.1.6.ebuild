@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.9 2004/01/26 22:49:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.10 2004/02/24 04:37:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="media-libs/jpeg
 		media-libs/libungif
 		net-libs/libpcap
 		gtk? ( <x11-libs/gtk+-1.3.0 )"
-RDEPEND="media-sound/mpg123"
+RDEPEND="virtual/mpg123"
 
 src_compile() {
 	if [ `use gtk` ]; then
