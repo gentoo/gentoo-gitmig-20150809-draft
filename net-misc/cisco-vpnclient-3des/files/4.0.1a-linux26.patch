@@ -11,7 +11,7 @@
      while (default_pt != NULL && default_pt->type != htons(ETH_P_IP))
      {
 -        default_pt = default_pt->next;
-+        default_pt = list_entry(dummy_pt.list.next, struct packet_type, list);
++        default_pt = list_entry(default_pt.list.next, struct packet_type, list);
      }
      if (!default_pt)
      {
