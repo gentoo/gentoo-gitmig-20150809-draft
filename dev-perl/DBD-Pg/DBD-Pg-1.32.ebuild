@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.32.ebuild,v 1.1 2004/06/05 17:10:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.32.ebuild,v 1.2 2004/06/06 21:51:58 rac Exp $
 
 inherit perl-module
 inherit eutils
@@ -23,10 +23,5 @@ export POSTGRES_LIB=/usr/lib/postgresql/
 
 mydoc="Changes README"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-versparse.patch
-}
 
 
