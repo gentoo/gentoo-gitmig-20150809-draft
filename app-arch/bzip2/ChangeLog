@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.9 2004/06/26 08:19:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.10 2004/06/26 09:17:11 seemant Exp $
+
+  26 Jun 2004; Seemant Kulleen <seemant@gentoo.org> bzip2-1.0.2-r3.ebuild:
+  my mistake
 
   26 Jun 2004; Seemant Kulleen <seemant@gentoo.org> bzip2-1.0.2-r3.ebuild:
   can not have virtual/libc at all yet actually

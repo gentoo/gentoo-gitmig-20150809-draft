@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.14 2004/06/26 08:22:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.15 2004/06/26 09:18:50 seemant Exp $
+
+  26 Jun 2004; Seemant Kulleen <seemant@gentoo.org> cabextract-0.5.ebuild,
+  cabextract-0.6.ebuild, cabextract-1.0.ebuild:
+  my mistake
 
   26 Jun 2004; Seemant Kulleen <seemant@gentoo.org> cabextract-0.5.ebuild,
   cabextract-0.6.ebuild, cabextract-1.0.ebuild:
