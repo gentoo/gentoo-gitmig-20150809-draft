@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-0.99.ebuild,v 1.3 2004/06/24 22:36:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-0.99.ebuild,v 1.4 2004/10/07 21:25:26 sekretarz Exp $
 
 inherit gcc
 
@@ -23,7 +23,12 @@ src_compile() {
 	use png || myconf="${myconf} --without-libpng"
 	use gif || myconf="${myconf} --without-libungif"
 	use jpeg || myconf="${myconf} --without-libjpeg"
-	econf ${myconf} || die
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		${myconf} || die "econf failed"
+
 	emake CC="$(gcc-getCC) ${CFLAGS}" || die
 }
 
