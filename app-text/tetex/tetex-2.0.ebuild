@@ -1,19 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20030112.ebuild,v 1.2 2003/01/13 23:00:01 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.ebuild,v 1.1 2003/02/03 05:35:40 satai Exp $
 
 inherit flag-o-matic
 
 IUSE="ncurses X libwww png"
+S=${WORKDIR}/tetex-src-${PV}
 
-TEXMFSRC="teTeX-texmf-beta-20030112.tar.gz"
+TETEXSRC="tetex-src-${PV}.tar.gz"
+TEXMFSRC="tetex-texmfsrc-${PV}.tar.gz"
+TEXMF="tetex-texmf-${PV}.tar.gz"
 
-S=${WORKDIR}/teTeX-src-beta-20030112
 DESCRIPTION="teTeX is a complete TeX distribution"
-SRC_URI="ftp://cam.ctan.org/tex-archive/systems/unix/teTeX-beta/teTeX-src-beta-${PV}.tar.gz
-	 ftp://cam.ctan.org/tex-archive/systems/unix/teTeX-beta/teTeX-texmf-beta-${PV}.tar.gz"
+SRC_URI="ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TETEXSRC}
+         ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TEXMFSRC}
+         ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TEXMF}"
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
-
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
@@ -30,7 +32,7 @@ RDEPEND=">=sys-devel/perl-5.2
 
 
 src_unpack() {
-	unpack teTeX-src-beta-${PV}.tar.gz
+	unpack ${TETEXSRC}
 
 	cd ${S}
 	#patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
@@ -41,6 +43,9 @@ src_unpack() {
 	pwd
 	einfo "Unpacking ${TEXMFSRC}"
 	tar --no-same-owner -xzf ${DISTDIR}/${TEXMFSRC} || die
+
+	einfo "Unpacking ${TEXMF}"
+	tar --no-same-owner -xzf ${DISTDIR}/${TEXMF} || die
 
 	# Do not run config stuff
 	cd ${WORKDIR}
@@ -161,7 +166,6 @@ pkg_postinst() {
 		texconfig font vardir /var/cache/fonts &>/dev/null
 		einfo "Generating format files..."
 		fmtutil --missing &>/dev/null # This should generate all missing fmt files.
-		
 		echo
 		einfo "Use 'texconfig font rw' to allow all users to generate fonts."
 		echo
