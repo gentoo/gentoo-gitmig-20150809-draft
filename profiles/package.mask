@@ -23,6 +23,10 @@
 
 # <agenkin@gentoo.org> (21 Oct 2002)
 # Masking pending unfreeze.
+=app-cdr/bin2iso-19b-r1
+
+# <agenkin@gentoo.org> (21 Oct 2002)
+# Masking pending unfreeze.
 # This one depends on unmasking lesstif (below).
 =net-www/opera-static-6.03-r1
 
