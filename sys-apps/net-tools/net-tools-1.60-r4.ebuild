@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r4.ebuild,v 1.1 2002/06/21 23:38:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r4.ebuild,v 1.2 2002/07/11 06:30:55 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="standard Linux network tools"

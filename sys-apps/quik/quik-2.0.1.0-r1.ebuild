@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Pieter Van den Abeele <pvdabeel@gentoo.org>
-# Author: Adrian Rutledge <atma@ayerie.dnsalias.net>
-# $Id: quik-2.0.1.0-r1.ebuild,v 1.1 2002/04/27 10:38:37 pvdabeel Exp $
+# $Id: quik-2.0.1.0-r1.ebuild,v 1.2 2002/07/11 06:30:55 drobbins Exp $
 
 S="${WORKDIR}/quik-2.0"
 A="quik_2.0e.orig.tar.gz"

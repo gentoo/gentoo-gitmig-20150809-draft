@@ -1,8 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-1.3.13.ebuild,v 1.5 2001/12/26 11:05:46 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-1.3.13.ebuild,v 1.6 2002/07/11 06:30:55 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs filesystem utilities"

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.60-r1.ebuild,v 1.3 2002/04/25 06:56:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.60-r1.ebuild,v 1.4 2002/07/11 06:30:54 drobbins Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}

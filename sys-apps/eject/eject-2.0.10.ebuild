@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Daniel Robbins <drobbins@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.6.ebuild,v 1.3 2001/12/31 23:47:55 azarah Exp
 
 S=${WORKDIR}/${P}

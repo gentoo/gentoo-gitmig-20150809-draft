@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-3.02.80-r2.ebuild,v 1.1 2001/02/27 16:46:47 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-3.02.80-r2.ebuild,v 1.2 2002/07/11 06:30:55 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

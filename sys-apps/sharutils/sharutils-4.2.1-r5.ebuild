@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r5.ebuild,v 1.1 2002/03/18 02:39:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r5.ebuild,v 1.2 2002/07/11 06:30:55 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

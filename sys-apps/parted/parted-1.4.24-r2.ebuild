@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.24-r2.ebuild,v 1.1 2002/03/30 01:35:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.24-r2.ebuild,v 1.2 2002/07/11 06:30:55 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An advanced partition modification system"

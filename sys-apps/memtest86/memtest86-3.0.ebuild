@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Alastair Nicol <ifni@blueyonder.co.uk>
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A stand alone memory test for x86 computers"

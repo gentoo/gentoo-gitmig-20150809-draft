@@ -1,6 +1,5 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Maarten Thibaut <murphy@gentoo.org>
 
 A=`echo ${P}|sed 's/sparc-utils-/sparc-utils_/'`.orig.tar.gz
 S=${WORKDIR}/${P}.orig

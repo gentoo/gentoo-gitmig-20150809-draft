@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r3.ebuild,v 1.1 2001/10/18 20:09:25 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r3.ebuild,v 1.2 2002/07/11 06:30:55 drobbins Exp $
 # Note: the daemon's current 2.4 version has nothing to do with kernel versions
 
 A=noflushd_2.4.orig.tar.gz

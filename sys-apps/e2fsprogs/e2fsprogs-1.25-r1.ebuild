@@ -1,8 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r1.ebuild,v 1.4 2002/07/10 16:17:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r1.ebuild,v 1.5 2002/07/11 06:30:53 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard ext2 and ext3 filesystem utilities"

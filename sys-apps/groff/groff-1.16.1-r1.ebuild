@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.16.1-r1.ebuild,v 1.5 2002/07/10 16:17:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.16.1-r1.ebuild,v 1.6 2002/07/11 06:30:54 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text formatter used for man pages"
