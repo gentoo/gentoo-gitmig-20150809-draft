@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/portmon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.6 2004/07/01 20:13:37 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.7 2004/07/10 11:41:56 eldad Exp $
+
+  10 Jul 2004; Eldad Zack <eldad@gentoo.org> portmon-1.9.ebuild,
+  portmon-2.0.ebuild:
+  marked x86 stable
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> portmon-1.9.ebuild,
   portmon-2.0.ebuild:
