@@ -6,7 +6,7 @@ diff -Naur sword-1.5.7.vanilla/src/mgr/installmgr.cpp sword-1.5.7/src/mgr/instal
  
  		/* Switch on full protocol/debug output */
 -		curl_easy_setopt(curl, CURLOPT_VERBOSE, TRUE);
-+		curl_easy_setopt(curl, CURLOPT_VERBOSE);
++		curl_easy_setopt(curl, CURLOPT_VERBOSE, true);
  
  		res = curl_easy_perform(curl);
  
