@@ -46,7 +46,6 @@
 						main menu ::<br/>
 						&#160;<a class="oldlink" href="/index.html">About Gentoo Linux</a><br/>
 						&#160;<a class="oldlink" href="/index-download.html">Download/Install</a><br/> 
-						&#160;<a class="oldlink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a><br/> 
 						&#160;<a class="oldlink" href="/index-changelog.html">CVS Changelog</a><br/> 
 						&#160;<a class="oldlink" href="/index-projects.html">Projects</a><br/> 
 						<br/>
@@ -272,14 +271,6 @@ of your sale will go towards further Gentoo Linux development.</p>
 						</xsl:otherwise>
 					</xsl:choose>
 					<xsl:choose>
-						<xsl:when test="/mainpage/@id='download'">
-							<a class="highlight" href="/index-download.html">Download/Install</a> | <a class="menulink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a> |
-						</xsl:when>
-						<xsl:otherwise>
-							<a class="menulink" href="/index-download.html">Download/Install</a> | <a class="menulink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a> |
-						</xsl:otherwise>
-					</xsl:choose>
-					<xsl:choose>
 						<xsl:when test="/mainpage/@id='changelog'">
 							<a class="highlight" href="/index-changelog.html">CVS Changelog</a> |
 						</xsl:when>
@@ -334,16 +325,16 @@ User Docs:<br/>
 						<br/>
 	
 						Mailing Lists:<br/><br/>
-						<font color="#ff0000">New! General User List:</font><br/> <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-user">gentoo-user</a><br/><br/>
-						<font color="#ff0000">New! Ebuild submissions:</font><br/> <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-ebuild">gentoo-ebuild</a><br/><br/>
+						<font color="#ff0000">New! General User List:</font><br/> <a class="altlink" href="http://lists.gentoo.org/gentoo-user">gentoo-user</a><br/><br/>
+						<font color="#ff0000">New! Ebuild submissions:</font><br/> <a class="altlink" href="http://lists.gentoo.org/gentoo-ebuild">gentoo-ebuild</a><br/><br/>
 						
-						Developer list:<br/> <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">gentoo-dev</a><br/><br/>
-						Announcements:<br/> <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</a><br/><br/>
-						Daily CVS logs:<br/>  <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-cvs">gentoo-cvs</a><br/><br/>
-						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo">Complete list of mailing lists</a><br/>
+						Developer list:<br/> <a class="altlink" href="http://lists.gentoo.org/gentoo-dev">gentoo-dev</a><br/><br/>
+						Announcements:<br/> <a class="altlink" href="http://lists.gentoo.org/gentoo-announce">gentoo-announce</a><br/><br/>
+						Daily CVS logs:<br/>  <a class="altlink" href="http://lists.gentoo.org/gentoo-cvs">gentoo-cvs</a><br/><br/>
+						<a class="altlink" href="http://lists.gentoo.org">Complete list of mailing lists</a><br/>
 						<br/>
 						Other Resources:<br/>
-						<a class="altlink" href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> (browse our repository)<br/>
+						<a class="altlink" href="http://www.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> (browse our repository)<br/>
 						IRC: #gentoo on <a class="altlink" href="http://www.openprojects.net/">OPN</a><br/>
 						<br/><br/></p></td></tr></table>
 					</td></tr>
