@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.60 2004/03/15 20:03:20 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.61 2004/03/16 23:12:10 max Exp $
+
+*cyrus-sasl-2.1.17 (16 Mar 2004)
+
+  16 Mar 2004; Max Kalika <max@gentoo.org> cyrus-sasl-2.1.17.ebuild,
+  cyrus-sasl-2.1.18.ebuild:
+  Re-add 2.1.17. Forward port arch fixes from 2.1.17 to 2.1.18. Fix
+  DEPEND/RDEPEND settings.
 
 *cyrus-sasl-2.1.18 (15 Mar 2004)
 
