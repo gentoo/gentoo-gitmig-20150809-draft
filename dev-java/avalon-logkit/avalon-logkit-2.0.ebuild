@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.3 2005/03/13 19:38:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.4 2005/03/22 14:30:47 luckyduck Exp $
 
 inherit java-pkg
 
@@ -26,8 +26,8 @@ RDEPEND=">=virtual/jre-1.4
 				dev-java/gnu-javamail
 				dev-java/sun-javamail-bin
 			)
-			dev-java/servletapi
-		)"
+		)
+		=dev-java/servletapi-2.3*"
 
 S=${WORKDIR}/${PF}.dev-0
 
@@ -58,7 +58,7 @@ src_unpack() {
 		fi
 	fi
 
-	local libs="log4j"
+	local libs="log4j,servletapi-2.3"
 	use jms && libs="${libs},${jms}"
 	use javamail && libs="${libs},${javamail}"
 
