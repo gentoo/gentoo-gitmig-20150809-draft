@@ -1,0 +1,11 @@
+diff -ur transcode-0.6.0pre4.orig/import/af6_decore.cpp transcode-0.6.0pre4/import/af6_decore.cpp
+--- transcode-0.6.0pre4.orig/import/af6_decore.cpp	Tue Mar 26 15:40:31 2002
++++ transcode-0.6.0pre4/import/af6_decore.cpp	Fri May  3 22:30:24 2002
+@@ -42,7 +42,6 @@
+ #include <avifile/creators.h>
+ #include <iostream>
+ 
+-using namespace std;
+ using namespace Creators;
+ 
+ #ifdef __cplusplus

@@ -1,6 +1,13 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.5 2002/05/04 03:44:57 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.6 2002/05/16 19:11:24 danarmak Exp $
+
+*transcode-0.6.0_pre5 (16 May 2002)
+
+  16 May 2002; Dan Armak <danarmak@gentoo.org>
+  
+  New upstream version, lots of fixes. Fixes infamous bug #2583 (and many duplicates)
+  - dv_init() being called without parameters.
 
 *transcode-0.6.0_pre4-r2 (3 May 2002)
 
