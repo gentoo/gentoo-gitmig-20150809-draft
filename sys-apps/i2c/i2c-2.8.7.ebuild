@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.7.ebuild,v 1.1 2004/07/12 15:04:04 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.7.ebuild,v 1.2 2004/07/13 12:15:52 plasmaroo Exp $
 
 inherit eutils
 
@@ -65,7 +65,7 @@ src_compile ()  {
 			einfo "*****************************************************************"
 			echo
 			ewarn "Non-2.4 kernel detected; doing nothing..."
-			exit 0
+			return
 		else
 			LINUX='/usr/src/linux'
 		fi
