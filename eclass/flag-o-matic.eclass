@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.68 2004/08/08 21:07:21 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.69 2004/09/14 02:06:36 lv Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -312,8 +312,11 @@ get-flag() {
 }
 
 has_hardened() {
-	test_version_info Hardened
-	return $?
+	test_version_info Hardened && return 0
+	# the specs file wont exist unless gcc has GCC_SPECS support
+	[ -f "${GCC_SPECS}" -a "${GCC_SPECS}" != "${GCC_SPECS/hardened/}" ] && \
+		return 0
+	return 1
 }
 
 has_pic() {
