@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mylink/mylink-0.93.ebuild,v 1.5 2004/06/24 23:28:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mylink/mylink-0.93.ebuild,v 1.6 2004/12/25 05:41:27 vapier Exp $
 
 inherit eutils games
 
 DESCRIPTION="a free Uplink clone"
-HOMEPAGE="http://home.as-netz.de/gblech/klasse10/misc/mylink/mylink.html"
+HOMEPAGE="http://home.as-netz.de/gblech/mylink/"
 SRC_URI="http://home.as-netz.de/gblech/klasse10/misc/mylink/${P}.tar.bz2"
 
 LICENSE="GPL-2"
