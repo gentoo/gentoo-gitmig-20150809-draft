@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.0.ebuild,v 1.1 2003/12/30 01:02:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.0-r1.ebuild,v 1.1 2004/01/06 21:48:33 plasmaroo Exp $
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV}
@@ -35,14 +35,15 @@ src_unpack() {
 	unpack linux-${OKV}.tar.bz2
 
 	cd ${S}
-	
+
 	epatch ${DISTDIR}/Kernel-Win4Lin3-${OKV}.patch || die "Error: Failed to appky Win4Lin3 patch!"
 	ebegin "Applying mki-adapter26_1_3_3.patch"
 	patch -Np1 -i ${DISTDIR}/mki-adapter26_1_3_3.patch > /dev/null 2>&1 || die "Error: Failed to apply mki-adapter patch!"
 	eend $?
 
-	unset ARCH
+	epatch ${FILESDIR}/${PN}-2.6.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
 
+	unset ARCH
 	# Sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
 
