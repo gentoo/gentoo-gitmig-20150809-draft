@@ -4,8 +4,8 @@ MD5 3f65a48fa532756d5355988bfe57f373 samba-3.0.0_rc2.ebuild 9562
 MD5 6adb64b61b61cb31435b40d5f1bc0f8c samba-3.0.0_rc1-r1.ebuild 9954
 MD5 b35c300a3c9d6b4b3c21a23da57593e9 samba-3.0.0_beta2-r1.ebuild 9825
 MD5 c6ca541cd6ede56525c6b8f2c02eb60d samba-2.2.8a.ebuild 10847
-MD5 fdbe23afff9c80ddf926b7847861a1a9 samba-3.0.0_rc3.ebuild 9605
-MD5 060cb82981b2c555be7a82e87ed8d126 ChangeLog 10776
+MD5 0a6a8f73cdfea2e8bd9f14c5a22d542e samba-3.0.0_rc3.ebuild 9605
+MD5 8d8d7f2c369d31ede2879a714bbbdc75 ChangeLog 10779
 MD5 23bf9d13bd13e51abb07688b00cab9b6 files/winbind-init 896
 MD5 9780745de080ee53a34c1b2f9fb1f228 files/digest-samba-2.2.8a 135
 MD5 ba636412fdffb621dcd28e79fb247d7c files/swat.xinetd 525
