@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.7-r5.ebuild,v 1.1 2004/08/10 00:52:17 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.7-r5.ebuild,v 1.2 2004/08/23 14:02:21 spock Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -10,6 +10,7 @@ MKI_VERSION='1_3_6'
 UNIPATCH_LIST="
 	${DISTDIR}/Kernel-Win4Lin3-${OKV}.patch
 	${DISTDIR}/linux-${OKV}-CAN-2004-0415.patch
+	${DISTDIR}/mki-adapter26_${MKI_VERSION}.patch:1
 	${FILESDIR}/${PN}.CAN-2004-0497.patch
 	${FILESDIR}/${PN}-2.6.CAN-2004-0596.patch
 	${FILESDIR}/${PN}-2.6.IPTables-RDoS.patch
@@ -30,10 +31,3 @@ K_EXTRAEINFO="If there are issues with this kernel, search http://bugs.gentoo.or
 existing bug. Only create a new bug if you have not found one that matches
 your issue. It is best to do an advanced search as the initial search has a
 very low yield. Please assign your bugs to x86-kernel@gentoo.org."
-
-# Temporary fix for bug #58008
-src_unpack() {
-	kernel-2_src_unpack
-	cd ${S}
-	patch -Np1 -i ${DISTDIR}/mki-adapter26_${MKI_VERSION}.patch > /dev/null 2>&1 || die 'Error: Failed to apply mki-adapter patch!'
-}
