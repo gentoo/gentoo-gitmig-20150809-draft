@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.4 2004/09/05 20:40:39 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.5 2004/09/12 16:59:34 robmoss Exp $
 
 inherit mount-boot eutils flag-o-matic gcc gnuconfig
 
@@ -15,6 +15,7 @@ KEYWORDS="~x86"
 IUSE="static"
 
 DEPEND=">=sys-libs/ncurses-5.2-r5
+	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.5"
 PROVIDE="virtual/bootloader"
 
@@ -54,7 +55,7 @@ src_compile() {
 
 	autoconf || die
 	aclocal || die
-	automake || die
+	WANT_AUTOMAKE=1.7 automake || die
 
 	# build the net-bootable grub first
 	CFLAGS="" \

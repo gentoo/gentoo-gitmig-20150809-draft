@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.24 2004/09/05 20:40:39 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.25 2004/09/12 16:59:34 robmoss Exp $
+
+  12 Sep 2004; <rmoss@gentoo.org> grub-0.94-r1.ebuild, grub-0.94-r2.ebuild,
+  grub-0.95.20040823.ebuild:
+  Adding >=automake-1.7 dep for grub-0.9{4,5} as per bug 63509.
 
   05 Sep 2004; <rmoss@gentoo.org> grub-0.95.20040823.ebuild:
   The grub binary is in /sbin, not /usr/sbin. Fixing.
