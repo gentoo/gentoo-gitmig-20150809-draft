@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.53 2002/05/15 17:09:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.54 2002/05/15 17:11:44 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -27,8 +27,11 @@ src_unpack() {
 		ln -s /home/drobbins/gentoo-src gentoo-src
 	elif [ "$myhost" = "chiba.3jane.net" ]
 		cvs -d /home/cvsroot co gentoo-src
+	elif [ -n "$GENTOO_SRCDIR" ]
+	then
+		ln -s ${GENTOO_SRCDIR} gentoo-src || die
 	else
-		die "This ebuild has not been tweaked for your system."
+		die "Please set the GENTOO_SRCDIR env var to point to the gentoo-src tree"
 	fi
 }
 
