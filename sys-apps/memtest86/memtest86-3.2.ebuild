@@ -1,16 +1,17 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0-r2.ebuild,v 1.8 2004/09/25 03:12:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.2.ebuild,v 1.1 2005/01/02 19:15:26 chainsaw Exp $
 
 inherit mount-boot eutils
 
-IUSE="serial"
 DESCRIPTION="A stand alone memory test for x86 computers"
-SRC_URI="http://www.memtest86.com/${P}.tar.gz"
 HOMEPAGE="http://www.memtest86.com/"
-KEYWORDS="-* x86"
+SRC_URI="http://www.memtest86.com/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="-* ~x86"
+IUSE="serial"
 
 DEPEND="virtual/libc"
 
@@ -18,12 +19,16 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# a little fix to make gcc-3.3.x happy
-	epatch ${FILESDIR}/memtest86-3.0.patch
-	sed -e '/DISCARD/d' -i memtest_shared.lds
+	# bug 66630
+	epatch ${FILESDIR}/${P}-test-pic.patch
+
+	sed -i -e '/DISCARD/d' memtest_shared.lds
 
 	if use serial ; then
-		sed -e 's/#define SERIAL_CONSOLE_DEFAULT 0/#define SERIAL_CONSOLE_DEFAULT 1/' -i config.h
+		sed -i \
+			-e 's/#define SERIAL_CONSOLE_DEFAULT 0/#define SERIAL_CONSOLE_DEFAULT 1/' \
+			config.h \
+			|| die
 	fi
 }
 
@@ -32,9 +37,8 @@ src_compile() {
 }
 
 src_install() {
-
-	dodir /boot/memtest86
-	cp memtest.bin ${D}/boot/memtest86/memtest.bin
+	insinto /boot/memtest86
+	doins memtest.bin || die
 	dodoc README README.build-process
 }
 

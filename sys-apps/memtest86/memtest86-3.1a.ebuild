@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.1a.ebuild,v 1.2 2004/12/07 15:10:02 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.1a.ebuild,v 1.3 2005/01/02 19:15:26 chainsaw Exp $
 
 inherit mount-boot eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.memtest86.com/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE="serial"
 
 DEPEND="virtual/libc"
@@ -20,7 +20,7 @@ src_unpack() {
 	cd ${S}
 
 	# bug 66630
-	epatch ${FILESDIR}/memtest86-3.1a-test-pic.patch
+	epatch ${FILESDIR}/${P}-test-pic.patch
 
 	sed -i -e '/DISCARD/d' memtest_shared.lds
 

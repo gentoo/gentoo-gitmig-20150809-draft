@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/memtest86
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.22 2004/12/07 15:10:02 solar Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.23 2005/01/02 19:15:26 chainsaw Exp $
+
+*memtest86-3.2 (02 Jan 2005)
+
+  02 Jan 2005; Tony Vroon <chainsaw@gentoo.org> -files/memtest86-3.0.patch,
+  -memtest86-3.0-r2.ebuild, memtest86-3.1a.ebuild, +memtest86-3.2.ebuild:
+  Version bump. 3.1a stable on x86. Portability update to no-PIC patching, old
+  ebuild and patch cleaned. Closes bug #76432.
 
   07 Dec 2004; <solar@gentoo.org> +files/memtest86-3.1a-test-pic.patch,
   memtest86-3.1a.ebuild:
