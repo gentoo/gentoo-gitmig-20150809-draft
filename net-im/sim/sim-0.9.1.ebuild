@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.1.ebuild,v 1.2 2003/11/20 18:04:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.1.ebuild,v 1.3 2003/11/26 15:11:53 aliz Exp $
 
 if [ $( use kde ) ]; then
 	inherit kde-base eutils
@@ -20,7 +20,9 @@ SLOT="0"
 IUSE="ssl kde"
 
 newdepend "ssl? ( dev-libs/openssl )"
-DEPEND="$DEPEND sys-devel/flex"
+DEPEND="$DEPEND
+	sys-devel/flex
+	>=sys-devel/automake-1.7.8"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -42,6 +44,8 @@ src_compile() {
 	else
 		need-qt 3
 	fi
+
+	WANT_AUTOMAKE=1.7
 
 	use kde && kde_src_compile myconf
 
