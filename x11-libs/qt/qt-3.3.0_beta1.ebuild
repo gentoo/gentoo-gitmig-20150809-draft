@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.1 2003/12/11 13:34:58 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.2 2003/12/24 20:45:18 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${MY_PV}.tar.bz2"
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
 KEYWORDS="x86"
-IUSE="cups nas postgres opengl mysql odbc gif doc firebird zlib icc sqlite"
+IUSE="cups nas postgres opengl mysql odbc gif doc firebird zlib icc sqlite oci8"
 
 DEPEND="virtual/x11
 	virtual/xft
@@ -73,6 +73,7 @@ src_compile() {
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite"
 	use firebird    && myconf="${myconf} -plugin-sql-ibase"
+	use oci8	&& myconf="${myconf} -plugin-sql-oci"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
 	use xinerama    && myconf="${myconf} -xinerama"
