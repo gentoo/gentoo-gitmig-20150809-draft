@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r2.ebuild,v 1.2 2003/04/18 16:13:10 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r2.ebuild,v 1.3 2003/06/23 17:03:35 taviso Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc
 RDEPEND="$DEPEND"
 LICENSE="compaq-sdla"
 SLOT="5.2.01"
-KEYWORDS="-x86 -ppc -sparc ~alpha"
+KEYWORDS="-x86 -ppc -sparc alpha"
 IUSE="ev6"
 	
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.2 2003/05/25 19:25:23 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.3 2003/06/23 17:04:20 taviso Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
@@ -14,7 +14,7 @@ RDEPEND="dev-libs/libots
 		 dev-libs/libcpml"
 LICENSE="compaq-sdla"
 SLOT="0"
-KEYWORDS="-* ~alpha"
+KEYWORDS="-* alpha"
 IUSE="ev6 doc"
 
 # non portage variable
