@@ -1,0 +1,14 @@
+--- Makefile	2003-04-04 01:34:18.000000000 +0100
++++ Makefile.aldumb	2003-07-08 16:17:14.000000000 +0100
+@@ -286,8 +286,8 @@
+ $(CORE_EXAMPLES_EXE): examples/%$(EXE_SUFFIX): examples/%.o $(CORE_LIB_FILE_RELEASE)
+ 	$(CC) $^ -o $@ $(LDFLAGS) $(LINK_MATH)
+ 
+-$(ALLEGRO_EXAMPLES_EXE): examples/%$(EXE_SUFFIX): examples/%.o $(ALLEGRO_LIB_FILE_RELEASE) $(CORE_LIB_FILE_RELEASE)
+-	$(CC) $^ -o $@ $(LDFLAGS) $(LINK_ALLEGRO)
++$(ALLEGRO_EXAMPLES_EXE): examples/%$(EXE_SUFFIX): examples/%.o $(ALLEGRO_LIB_FILE_RELEASE)
++	$(CC) $^ -o $@ $(LDFLAGS) -ldumb $(LINK_ALLEGRO)
+ 
+ $(CORE_EXAMPLES_OBJ): examples/%.o: examples/%.c include/dumb.h
+ 	$(CC) -c $< -o $@ $(CFLAGS_RELEASE)
+
