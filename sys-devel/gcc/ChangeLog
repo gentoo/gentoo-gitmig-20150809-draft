@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.271 2004/06/09 09:39:23 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.272 2004/06/20 18:13:19 azarah Exp $
+
+*gcc-3.3.4 (20 Jun 2004)
+
+  20 Jun 2004; Martin Schlemmer <azarah@gentoo.org>
+  +files/3.3.4/gcc334-gentoo-branding.patch, +gcc-3.3.4.ebuild:
+  Update version. Add uclibc changes as from Ned Ludd (not sure who they from).
+  PIE support is for the moment disabled, and thus the '-*' in KEYWORDS.
+  Closes bug #54321.
 
   09 Jun 2004; Alexander Gabert <pappy@gentoo.org> gcc-3.3.3-r6.ebuild:
   removing the hardened PIE SSP logic for sparc - it breaks glibc compiling with
