@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/eet
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.3 2003/03/11 15:46:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.4 2003/03/19 07:15:18 gerk Exp $
 
 *eet-0.0.1.20030310 (10 Mar 2003)
+
+  19 Mar 2003; Mark Guertin <gerk@gentoo.org> eet-0.0.1.20030310.ebuild:
+  set ~ppc in keywords and also -fPIC for ppc
 
   11 Mar 2003; Aron Griffis <agriffis@gentoo.org> eet-0.0.1.20030310.ebuild:
   Add ~alpha to KEYWORDS and -fPIC for alpha
