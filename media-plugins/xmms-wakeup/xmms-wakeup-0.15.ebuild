@@ -1,15 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wakeup/xmms-wakeup-0.15.ebuild,v 1.3 2004/06/24 23:46:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wakeup/xmms-wakeup-0.15.ebuild,v 1.4 2004/07/19 20:17:15 eradicator Exp $
 
 IUSE=""
 
 DESCRIPTION="XMMS Wake-up Call is a client & server program which allows you to run XMMS remotely, intended to be used as a wake-up call."
 HOMEPAGE="http://xmms-wake-up.sourceforge.net"
 SRC_URI="mirror://sourceforge/xmms-wake-up/xmms-wakeup-0.15.tar.gz"
-RESTRICT="nomirror"
 
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="x86 amd64 sparc ~ppc"
 SLOT="0"
 
 LICENSE="GPL-2"
