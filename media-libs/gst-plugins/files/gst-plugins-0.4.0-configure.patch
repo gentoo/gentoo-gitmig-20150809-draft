@@ -1,0 +1,20 @@
+--- configure.orig	Mon Jul  8 07:28:37 2002
++++ configure	Mon Jul  8 07:32:39 2002
+@@ -12022,7 +12022,7 @@
+   if test "$AALIB_CONFIG" = "no" ; then
+     no_aalib=yes
+   else
+-    AALIB_CFLAGS=`$AALIB_CONFIG $aalibconf_args --cflags`
++    AALIB_CFLAGS=`$AALIB_CONFIG $aalibconf_args --cflags|sed s:-I/usr/include::`
+     AALIB_LIBS=`$AALIB_CONFIG $aalibconf_args --libs`
+ 
+     aalib_major_version=`$AALIB_CONFIG $aalib_args --version | \
+@@ -14099,7 +14099,7 @@
+     HAVE_DVDNAV=no
+   else
+     DVDNAV_LIBS=`dvdnav-config --libs `
+-    DVDNAV_CFLAGS=`dvdnav-config --cflags `
++    DVDNAV_CFLAGS=`dvdnav-config --cflags |sed s:-I/usr/include::`
+     HAVE_DVDNAV=yes
+   fi
+ 
