@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.121 2004/07/09 20:48:57 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.122 2004/07/09 22:08:47 ciaranm Exp $
+
+  09 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  development-sources-2.6.7-r1.ebuild:
+  No sparc patchset here, so -sparc
 
 *development-sources-2.6.7-r1 (09 Jul 2004)
 
