@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.148 2004/07/23 11:56:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.149 2004/07/26 18:28:57 caleb Exp $
+
+  26 Jul 2004; Caleb Tennis <caleb@gentoo.org> kdelibs-3.3.0_beta2.ebuild:
+  add dep to libidn. Maybe this can be use flagged later, but it's such a small
+  library that for now I'm just going to put it in and see what happens.
 
 *kdelibs-3.3.0_beta2 (23 Jul 2004)
 
