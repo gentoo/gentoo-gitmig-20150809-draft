@@ -1,0 +1,8 @@
+# ChangeLog for x11-libs/guile-gtk 
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.1 2002/10/23 19:36:28 spider Exp $
+
+*guile-gtk-0.19 (23 Oct 2002)
+  23 Oct 2002; Spider <spider@gentoo.org> guile-gtk-0.19.ebuild :initial 
+  release, package provided by <jonner@mailandnews.com> " Jonathan Rogers" And edited by me.
+
