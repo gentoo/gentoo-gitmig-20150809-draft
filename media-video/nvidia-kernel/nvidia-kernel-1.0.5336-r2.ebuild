@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5336-r2.ebuild,v 1.1 2004/04/08 00:10:51 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5336-r2.ebuild,v 1.2 2004/04/13 17:07:54 cyfred Exp $
 
 inherit eutils
 
@@ -98,10 +98,13 @@ src_unpack() {
 #		ln -snf Makefile.nvidia Makefile
 		sed -e "s:5328:${NV_V/1.0-/}:g" \
 			${FILESDIR}/${PV}/Makefile > ${S}/makefile
-	fi
 
-	# if you set this then it's your own fault when stuff breaks :)
-	[ ! -z "${USE_CRAZY_OPTS}" ] && sed -i "s:-O:${CFLAGS}:" Makefile
+		# Makefile is now makefile so we will do sed here instead.
+		[ ! -z "${USE_CRAZY_OPTS}" ] && sed -i "s:-O:${CFLAGS}:" makefile
+	else
+		# if you set this then it's your own fault when stuff breaks :)
+		[ ! -z "${USE_CRAZY_OPTS}" ] && sed -i "s:-O:${CFLAGS}:" Makefile
+	fi
 }
 
 src_compile() {
