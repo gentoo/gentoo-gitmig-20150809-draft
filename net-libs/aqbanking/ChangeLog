@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/aqbanking
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.1 2004/12/21 17:02:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.2 2004/12/26 19:59:49 weeve Exp $
+
+*aqbanking-0.9.8 (26 Dec 2004)
+
+  26 Dec 2004; Jason Wever <weeve@gentoo.org> aqbanking-0.9.8.ebuild:
+  Added ~sparc keyword wrt bug #73702.
 
   21 Dec 2004; Hanno Boeck <hanno@gentoo.org> :
   Initial commit (thanks to Florian Mueller in bug #72470).
