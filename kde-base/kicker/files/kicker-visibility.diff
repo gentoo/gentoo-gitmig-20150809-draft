@@ -1,0 +1,90 @@
+--- kicker/share/global.cpp.orig	2005-02-03 11:13:29.000000000 +0200
++++ kicker/share/global.cpp	2005-02-05 18:33:56.110425712 +0200
+@@ -36,7 +36,7 @@
+ namespace KickerLib
+ {
+ 
+-KPanelExtension::Position directionToPosition(KPanelApplet::Direction d )
++KDE_EXPORT KPanelExtension::Position directionToPosition(KPanelApplet::Direction d )
+ {
+     switch (d)
+     {
+@@ -59,7 +59,7 @@
+     }
+ }
+ 
+-KPanelExtension::Position directionToPopupPosition(KPanelApplet::Direction d)
++KDE_EXPORT KPanelExtension::Position directionToPopupPosition(KPanelApplet::Direction d)
+ {
+     switch (d)
+     {
+@@ -82,7 +82,7 @@
+     }
+ }
+ 
+-KPanelApplet::Direction positionToDirection(KPanelExtension::Position p)
++KDE_EXPORT KPanelApplet::Direction positionToDirection(KPanelExtension::Position p)
+ {
+     switch (p)
+     {
+@@ -105,7 +105,7 @@
+     }
+ }
+ 
+-int sizeValue(KPanelExtension::Size s)
++KDE_EXPORT int sizeValue(KPanelExtension::Size s)
+ {
+     switch (s)
+     {
+@@ -128,7 +128,7 @@
+     }
+ }
+ 
+-QString newDesktopFile(const KURL& url)
++KDE_EXPORT QString newDesktopFile(const KURL& url)
+ {
+    QString base = url.fileName();
+    if (base.endsWith(".desktop"))
+@@ -151,7 +151,7 @@
+    return file;
+ }
+ 
+-QString copyDesktopFile(const KURL& url)
++KDE_EXPORT QString copyDesktopFile(const KURL& url)
+ {
+    QString file = newDesktopFile(url);
+    KURL dest;
+@@ -160,7 +160,7 @@
+    return file;
+ }
+ 
+-QPoint popupPosition(KPanelApplet::Direction d, const QWidget* popup, const QWidget* source)
++KDE_EXPORT QPoint popupPosition(KPanelApplet::Direction d, const QWidget* popup, const QWidget* source)
+ {
+ 	if( !QApplication::reverseLayout() || d == KPanelApplet::Left || d == KPanelApplet::Right ) {
+ 		return popupPosition( d, popup, source, QPoint( 0, 0 ) );
+@@ -169,7 +169,7 @@
+ 	}
+ }
+ 
+-QPoint popupPosition(KPanelApplet::Direction d, const QWidget* popup, const QWidget* source, const QPoint& p)
++KDE_EXPORT QPoint popupPosition(KPanelApplet::Direction d, const QWidget* popup, const QWidget* source, const QPoint& p)
+ {
+ //	kdDebug(1210) << "popupPosition():" << endl;
+ //	kdDebug(1210) << m->width() << ", " << m->height() << endl;
+@@ -210,7 +210,7 @@
+ 	}
+ }
+ 
+-void colorize(QImage& image)
++KDE_EXPORT void colorize(QImage& image)
+ {
+     // mercilessly ripped from the k menu side image colorizing
+     KConfig *config = KGlobal::config();
+--- kicker/share/kickerSettings.kcfgc.orig	2005-02-05 18:33:19.000000000 +0200
++++ kicker/share/kickerSettings.kcfgc	2005-02-05 18:33:28.352645536 +0200
+@@ -3,3 +3,4 @@
+ ClassName=KickerSettings
+ Mutators=true
+ IncludeFiles=qapplication.h
++Visibility=KDE_EXPORT
