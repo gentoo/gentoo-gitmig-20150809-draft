@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.755 2004/11/23 17:33:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.756 2004/11/23 17:34:28 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -671,7 +671,7 @@ www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to
 www-servers/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:freetype - Enables Freetype font support
-x11-base/kdrive:fs - Enables font server support
+x11-base/kdrive:font-server - Enables font server support
 x11-base/kdrive:speedo - Enables Speedo font support
 x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/x11-drm:gatos - Installs DRM built to work alongside GATOS features
