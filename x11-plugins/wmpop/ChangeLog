@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.3 2004/06/24 23:16:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.4 2004/11/25 05:40:21 weeve Exp $
+
+  24 Nov 2004; Jason Wever <weeve@gentoo.org> wmpop-0.53.ebuild:
+  Added ~sparc keyword.
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> wmpop-0.53.ebuild:
   Marked stable.
