@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+  30 Oct 2003; Brandon Hale <tseng@gentoo.org> metadata.xml:
+  Added metadata.xml
+
 *bbtime-0.1.5 (12 Dec 2002)
   
   12 Dec 2002; Matt Keadle <mkeadle@gentoo.org> bbtime-0.1.5.ebuild
