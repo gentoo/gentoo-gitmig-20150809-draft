@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.168 2004/02/08 15:29:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.169 2004/02/08 19:40:59 lu_zero Exp $
+
+  08 Feb 2004; Luca Barbato <lu_zero@gentoo.org>
+  files/3.3.2/gcc332-altivec-fix.patch:
+  Updated the altivec fix for gcc-3.3.2-r7
 
 *gcc-3.3.2-r7 (08 Feb 2004)
 
