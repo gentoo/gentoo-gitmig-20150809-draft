@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-1.4.0.ebuild,v 1.1 2004/09/19 19:42:34 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-1.4.0.ebuild,v 1.2 2004/09/20 18:32:56 rphillips Exp $
 
 DESCRIPTION="XASTIR"
 HOMEPAGE="http://xastir.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="ax25 festival shape imagemagick curl"
+IUSE="imagemagick curl"
 
 DEPEND="virtual/libc
 	x11-libs/openmotif
