@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.7 2003/02/12 08:30:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.8 2003/09/14 16:11:48 iggy Exp $
+
+*pump-0.8.19 (14 Sep 2003)
+
+  14 Sep 2003; <iggy@gentoo.org> pump-0.8.19.ebuild:
+  version bump thanks to hillster
 
 *pump-0.8.11 (1 Feb 2002)
 
