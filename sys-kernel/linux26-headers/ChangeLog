@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.37 2004/11/29 03:07:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.38 2004/12/07 23:42:08 eradicator Exp $
+
+  07 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/linux26-headers-2.6.8.1-sparc-glibcsafe.patch,
+  -files/linux26-headers-2.6.8.1-sparc-signal_h.patch,
+  linux26-headers-2.6.8.1-r1.ebuild:
+  Fixed a few more asm-sparc / glibc problems. Not bumping because it's not
+  affecting many packages and not many people are using 2.6 headers on sparc.
 
   28 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/linux26-headers-2.6.8.1-sparc-signal_h.patch,
