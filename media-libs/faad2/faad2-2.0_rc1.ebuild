@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc1.ebuild,v 1.1 2003/10/02 03:10:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc1.ebuild,v 1.2 2003/10/02 03:15:07 lu_zero Exp $
 
 inherit eutils libtool
 
@@ -14,7 +14,8 @@ KEYWORDS="~x86 ~ppc ~sparc amd64"
 DEPEND=">=media-libs/libsndfile-1.0.1
 	>=libtool-1.4.1-r10
 	sys-devel/automake
-	sys-devel/autoconf"
+	sys-devel/autoconf
+	xmms? ( >=media-sound/xmms-1.2.7 )"
 SLOT="0"
 
 src_unpack() {
