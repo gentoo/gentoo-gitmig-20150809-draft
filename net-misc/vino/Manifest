@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fed52bf70c9706a1929f57f4d4bfadf6 ChangeLog 2584
+MD5 dfa055cda261bb504b5e6bb6ebf5b79e ChangeLog 2668
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 bda6ba466a06aabdb4539759d7dbe6b7 vino-2.10.0.ebuild 983
 MD5 bfce24ad38b627014ff2012be03591ab vino-2.8.0.1.ebuild 984
-MD5 b92169ad7f22062b2f132525d000e99d vino-2.8.1.ebuild 976
-MD5 8998fdcfa6d5c111f54a22a2170ade9f files/digest-vino-2.8.1 63
+MD5 a30a747df73486117733610673e2b4e7 vino-2.8.1.ebuild 975
 MD5 6a6e29695e536c76e6b01b930d65c430 files/digest-vino-2.10.0 64
 MD5 adec2ad7322fd787fd437d9e1e1550d6 files/digest-vino-2.8.0.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCPbfhugEuf3OQ0akRAgOqAKCddPfSVtKUYg1n/lTptwUNmlu8QwCfTHLH
-K4Qz+DFk/JLeScGrl7B1oPQ=
-=+GFd
------END PGP SIGNATURE-----
+MD5 8998fdcfa6d5c111f54a22a2170ade9f files/digest-vino-2.8.1 63
