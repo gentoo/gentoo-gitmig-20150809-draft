@@ -1,6 +1,9 @@
 # ChangeLog for games-action/maelstrom
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.7 2003/10/24 10:07:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.8 2003/12/12 09:31:27 avenj Exp $
+
+  12 Dec 2003; Jon Portnoy <avenj@gentoo.org> maelstrom-3.0.6-r1.ebuild :
+  AMD64 keywords.
 
 *maelstrom-3.0.6-r1 (24 Oct 2003)
 
