@@ -11,7 +11,7 @@ LICENSE="LGPL-2"
 KEYWORDS="x86 ppc sparc amd64"
 SLOT="0"
 IUSE=""
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/libPropList-0.10.1-r2.ebuild,v 1.12 2004/06/24 22:05:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/libPropList-0.10.1-r2.ebuild,v 1.13 2004/06/28 18:57:02 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libPropList"
@@ -10,7 +10,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc "
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 
