@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.224 2005/03/30 05:45:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.225 2005/03/31 15:58:08 tgall Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  31 Mar 2005; Tom Gall <tgall@gentoo.org> +rc-scripts-1.4.16-livecd-hvc.patch
+  add support for hvc (ppc64 console on partitioned systems)
 
 *baselayout-1.11.10-r5 (30 Mar 2005)
 

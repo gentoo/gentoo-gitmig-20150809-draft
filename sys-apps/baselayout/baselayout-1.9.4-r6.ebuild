@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r6.ebuild,v 1.5 2005/03/01 22:01:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r6.ebuild,v 1.6 2005/03/31 15:58:08 tgall Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -46,6 +46,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/rc-scripts-1.4.16-splash.patch
 	epatch ${FILESDIR}/rc-scripts-1.4.16-livecd.patch
+	epatch ${FILESDIR}/rc-scripts-1.4.16-livecd-hvc.patch
 
 	#
 	# Baselayout setup
