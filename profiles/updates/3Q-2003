@@ -30,7 +30,4 @@ move x11-misc/xfprint xfce-base/xfprint
 move x11-libs/libxfce4mcs xfce-base/libxfce4mcs
 move x11-libs/libxfce4util xfce-base/libxfce4util
 move x11-libs/libxfcegui4 xfce-base/libxfcegui4
-
-
-
-
+move net-print/gimp-print-cups media-gfx/gimp-print
