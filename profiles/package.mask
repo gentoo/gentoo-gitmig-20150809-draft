@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <karltk@gentoo.org> (01 Feb 2004)
+# does not work, will not maintain atm.
+app-portage/porthole
+
 # <dragonheart@gentoo.org> (01 Feb 2004)
 # work in progress
 sys-devel/uclibc-buildroot
