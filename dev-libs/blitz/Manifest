@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1904bb30e240297bfe0d8e20a2e56365 ChangeLog 2013
+MD5 1f885135a80849425eeaf0bcd03aa07c ChangeLog 2104
 MD5 850b96dc19a3d17b6ea7242dc23abe4b blitz-0.6.ebuild 1135
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 2fd9890d71c556f167d0c4d98f155bad blitz-0.7.ebuild 930
-MD5 e6fc15881be4e6e073f0b640755c2c7b blitz-0.8.ebuild 1348
-MD5 d1f9260439ebbed770545edb520634ff files/digest-blitz-0.8 62
-MD5 de10c5070943a0175877a7c57662b130 files/digest-blitz-0.6 62
+MD5 dcdae50de74e5b3e39528e4556c7fd22 blitz-0.8.ebuild 1352
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 0d094a795dfe2a48b69bb20806d7c7f6 files/blitz-0.7.diff 404
-MD5 25bdc3e906721240b60b78d884513dac files/digest-blitz-0.7 64
 MD5 aec395997215484daccc8736089de0de files/blitz-0.8-makefile.patch 9107
+MD5 de10c5070943a0175877a7c57662b130 files/digest-blitz-0.6 62
+MD5 25bdc3e906721240b60b78d884513dac files/digest-blitz-0.7 64
+MD5 d1f9260439ebbed770545edb520634ff files/digest-blitz-0.8 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB5uClmdTrptrqvGERArhlAKCdxIr1qvIXAH4LfG6dT7Tev+GpjgCfYR6G
-aF6XXTOocwGtpLdKc6GSkEM=
-=SbbD
+iD8DBQFCQYx1j/6BxsMI4gYRAq4ZAJ0QlNT1bKy8Q0jSTQmnzvFPw/OeQwCdHFsb
+I++EbV6+YuoNVHnGJ6E8ftM=
+=WUPx
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.8.ebuild,v 1.3 2005/01/13 20:57:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.8.ebuild,v 1.4 2005/03/23 15:33:49 g2boojum Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ DEPEND="virtual/tetex
 IUSE="icc"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 LICENSE="GPL-2"
 
 src_unpack() {
