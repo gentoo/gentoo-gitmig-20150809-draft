@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.83 2004/11/03 17:58:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.84 2004/11/03 23:48:02 vapier Exp $
+
+*shadow-4.0.5-r2 (03 Nov 2004)
+
+  03 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/shadow-4.0.5-hack-X-envvars.patch, +shadow-4.0.5-r2.ebuild:
+  Restore DISPLAY/XAUTHORITY env passing hack for now #69925.
 
 *shadow-4.0.5-r1 (03 Nov 2004)
 
