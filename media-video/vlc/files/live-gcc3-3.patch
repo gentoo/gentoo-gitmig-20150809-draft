@@ -1,0 +1,30 @@
+--- live.old/groupsock/Groupsock.cpp	2004-01-31 23:57:01.000000000 +0100
++++ live/groupsock/Groupsock.cpp	2004-01-31 23:59:36.000000000 +0100
+@@ -26,7 +26,11 @@
+ #if defined(__WIN32__) || defined(_WIN32)
+ #include <strstrea.h>
+ #else
+-#include <strstream.h>
++#  if !defined(__GNUC__) || (__GNUC__ < 3)
++#    include <strstream.h>
++#  else
++#    include <sstream>
++#  endif
+ #endif
+ #include <stdio.h>
+ 
+--- live.old/groupsock/NetInterface.cpp	2004-01-31 23:57:20.000000000 +0100
++++ live/groupsock/NetInterface.cpp	2004-02-01 00:00:16.000000000 +0100
+@@ -24,7 +24,11 @@
+ #if defined(__WIN32__) || defined(_WIN32)
+ #include <strstrea.h>
+ #else
+-#include <strstream.h>
++#  if !defined(__GNUC__) || (__GNUC__ < 3)
++#    include <strstream.h>
++#  else
++#    include <sstream>
++#  endif
+ #endif
+ 
+ ////////// NetInterface //////////

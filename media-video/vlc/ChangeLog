@@ -1,6 +1,16 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.41 2004/02/23 13:36:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.42 2004/03/11 22:10:26 kanaka Exp $
+
+*vlc-0.7.1 (11 Mar 2004)
+
+  11 Mar 2004; Joel Martin <kanaka@gentoo.org> vlc-0.7.1.ebuild,
+  files/live-gcc3-3.patch:
+  Merged latest unstable vlc-0.6.2-r1, and vlc provided ebuild by Derk-Jan
+  Hartman. Depend on new ffmpeg ebuild instead of pulling down ffmpeg directly.
+  Add LiveMedia, libcaca support. No implicit mplayer dependency. Bump faad2
+  requirement. General cleanup. Removed other arches because or arch dependency
+  issues.
 
   23 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> vlc-0.6.0-r1.ebuild,
   vlc-0.6.1.ebuild, vlc-0.6.2-r1.ebuild, vlc-0.6.2.ebuild:
