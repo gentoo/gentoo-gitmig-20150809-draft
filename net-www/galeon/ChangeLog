@@ -1,7 +1,13 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.20 2002/09/06 04:28:46 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.21 2002/09/16 04:20:15 blocke Exp $
 
+*galeon-1.2.6 (16 Sep 2002)
+
+  16 Sep 2002; Bruce A. Locke <blocke@shivan.org> galeon-1.2.6.ebuild:
+  Version bump, recommended gcc 3.2 ./configure fix, and unneeded patch
+  removal.  Note: This does not fix the upstream bug involving crashes
+  with forms and gcc 3.2.  (see GNOME bugzilla bug #67691)
 
 *galeon-1.2.5-r1 (29 Aug 2002)
   06 Sep 2002; Spider <spider@gentoo.org> galeon-1.2.5-r1.ebuild :

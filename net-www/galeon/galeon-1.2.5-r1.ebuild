@@ -7,6 +7,8 @@ SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 	 mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://galeon.sourceforge.net"
 
+inherit debug
+
 LICENSE="gpl-2"
 KEYWORDS="*"
 SLOT="0"

@@ -1,27 +1,24 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.3.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.6.ebuild,v 1.1 2002/09/16 04:20:16 blocke Exp $
+
 S=${WORKDIR}/${P}
-DESCRIPTION="A small web-browser for gnome that uses mozillas render engine"
+DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 	 mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://galeon.sourceforge.net"
-
-LICENSE="gpl-2"
-KEYWORDS="*"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 SLOT="0"
 
-# dont merge mozilla-1.0, as it wont work with galeon, rather start
-# with mozilla-1.0-r1
-DEPEND="~net-www/mozilla-1.0
-	>net-www/mozilla-1.0
+# This version of galeon supports multiple versions.  We are allowing only
+# mozilla 1.1-r1 and 1.2a at this time.
+DEPEND=">=net-www/mozilla-1.1-r1
+	<=net-www/mozilla-1.2a
 	>=gnome-base/gnome-libs-1.4.1.4
-	( >=gnome-base/libglade-0.17
-	  <gnome-base/libglade-1.99.0 )
-	( >=gnome-base/gnome-vfs-1.0
-	  <gnome-base/gnome-vfs-1.9.0 )
-	( >=gnome-base/gconf-1.0
-	  <gnome-base/gconf-1.1.0 )
+	<=gnome-base/libglade-0.99.0
+	=gnome-base/gnome-vfs-1.0*
+	=gnome-base/gconf-1.0*
 	>=gnome-base/oaf-0.6.7
 	>=dev-libs/libxml-1.8.16
 	>=media-libs/gdk-pixbuf-0.16.0-r1
@@ -30,19 +27,25 @@ DEPEND="~net-www/mozilla-1.0
 
 	# bonobo? ( >=gnome-base/bonobo-1.0.19-r1 )
 
-src_unpack() {
+pkg_setup() {
 
-	unpack ${A}
-	cd ${S}
-	# These patches break on this version of galeon.
-	# Are they needed for gcc3/3.1 support?
-	#patch -p1 < ${FILESDIR}/galeon-1.2.0-gcc3.patch || die
-	#patch -p1 < ${FILESDIR}/galeon-1.2.1-gcc3.1.patch || die
+	if [ ! -f ${ROOT}/usr/lib/mozilla/components/libwidget_gtk.so ]
+	then
+		eerror
+		eerror "It seems that your Mozilla was not compiled against gtk+-1.2,"
+		eerror "but rather gtk+-2.0.  As Galeon does not support this setup yet,"
+		eerror "you will have to remerge Mozilla with gtk+-1.2 support.  This"
+		eerror "can be done by taking \"gtk2\" out of your USE flags:"
+		eerror
+		eerror " # USE="-gtk2" emerge mozilla "
+		eerror
+		die "Need Mozilla compiled with gtk+-1.2!!"
+	fi
 }
 
 src_compile() {
 
-	local myconf
+	local myconf=""
 
 	use nls || myconf="${myconf} --disable-nls"
 	# use bonobo && myconf="${myconf} --enable-gnome-file-selector"
@@ -56,11 +59,12 @@ src_compile() {
 		--with-mozilla-includes=${MOZILLA_FIVE_HOME}/include \
 		--without-debug	--disable-werror \
 		--disable-applet \
+		--disable-werror \
 		--disable-install-schemas \
-		--enable-nautilus-view=auto \
+		--enable-nautilus-view=no \
 		${myconf} || die
 
-	emake || die
+	emake || make || die
 }
 
 src_install() {
@@ -87,8 +91,8 @@ pkg_postinst() {
 	
 	if [ -z "`use gnome`" ]
 	then
-		einfo "Please remerge libglade with gnome support, or else galeon"
-		einfo "will not be able to start up."
+		einfo "Please make sure libglade was built with gnome support, or"
+		einfo "else galeon will not be able to start up."
 		einfo
 		einfo 'To do this, type: '
 		einfo 'USE="gnome" emerge libglade'
