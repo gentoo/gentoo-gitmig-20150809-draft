@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snmpmon
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmpmon/ChangeLog,v 1.1 2004/07/24 12:33:06 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmpmon/ChangeLog,v 1.2 2004/08/28 14:42:03 eldad Exp $
+
+  28 Aug 2004; Eldad Zack <eldad@gentoo.org> snmpmon-0.5.ebuild:
+  x86 stable
 
 *snmpmon-0.5 (24 Jul 2004)
 

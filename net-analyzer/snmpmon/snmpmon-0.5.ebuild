@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmpmon/snmpmon-0.5.ebuild,v 1.1 2004/07/24 12:33:06 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmpmon/snmpmon-0.5.ebuild,v 1.2 2004/08/28 14:42:03 eldad Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ RESTRICT="nomirror"
 SLOT="0"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=net-analyzer/net-snmp-5.0.9-r1"
 

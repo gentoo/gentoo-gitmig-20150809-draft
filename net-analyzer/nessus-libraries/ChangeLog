@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.37 2004/08/13 10:08:12 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.38 2004/08/28 14:31:37 eldad Exp $
+
+  28 Aug 2004; Eldad Zack <eldad@gentoo.org> nessus-libraries-2.1.1.ebuild:
+  x86 stable
 
   13 Aug 2004; Eldad Zack <eldad@gentoo.org> nessus-libraries-2.0.12.ebuild,
   nessus-libraries-2.1.1.ebuild:
