@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/xmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.7 2004/07/17 21:37:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.8 2004/10/23 23:04:15 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> xmail-1.20.ebuild:
+  Added ~sparc keyword.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> xmail-1.16-r1.ebuild,
   xmail-1.16.ebuild, xmail-1.20.ebuild:
