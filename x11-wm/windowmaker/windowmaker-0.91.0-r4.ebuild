@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r4.ebuild,v 1.1 2005/03/19 23:24:38 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r4.ebuild,v 1.2 2005/03/20 05:22:45 fafhrd Exp $
 
 inherit eutils gnustep-funcs flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.windowmaker.org/pub/source/release/${P/windowm/WindowM}.tar.g
 	mirror://gentoo/windowmaker-0.9X-use-giflib.patch.bz2"
 HOMEPAGE="http://www.windowmaker.org/"
 
-IUSE="gif gnustep jpeg nls png tiff modelock vdesktop xinerama"
+IUSE="gif gnustep jpeg nls png tiff modelock xinerama"
 DEPEND="x11-base/xorg-x11
 	media-libs/fontconfig
 	gif? ( >=media-libs/giflib-4.1.0-r3 )
@@ -51,7 +51,7 @@ src_compile() {
 	myconf="--enable-xpm $(use_enable png) $(use_enable jpeg) $(use_enable gif) $(use_enable tiff)"
 
 	# non required X capabilities
-	myconf="${myconf} $(use_enable modelock) $(use_enable vdesktop) $(use_enable xinerama)"
+	myconf="${myconf} $(use_enable modelock) $(use_enable xinerama)"
 
 	# integrate with GNUstep environment, or not
 	if use gnustep ; then
@@ -178,13 +178,6 @@ pkg_postinst() {
 		einfo "WPrefs.app can be launched at /usr/lib/GNUstep/Applications/WPrefs.app/WPrefs"
 		einfo "  or by simply **clicking on it in the WindowMaker default dock.**"
 		einfo ""
-	fi
-
-	if use vdesktop ; then
-		ewarn "Note that enabling support for NETWM virtual desktops will make"
-		ewarn "  menus that should be autoscrolling seem to not scroll, as they"
-		ewarn "  are not off the screen, but rather in another virtual desktop."
-		ewarn ""
 	fi
 
 	ewarn "This package provides libwraster.so.3.  Packages depending on"
