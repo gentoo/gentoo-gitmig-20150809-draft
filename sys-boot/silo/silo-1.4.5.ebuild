@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.5.ebuild,v 1.4 2004/06/24 22:36:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.5.ebuild,v 1.5 2004/06/28 01:50:33 agriffis Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="sys-fs/e2fsprogs
 src_compile() {
 	filter-flags "-fstack-protector"
 
-	if [ `use hardened` ]
+	if use hardened
 	then
 		make ${MAKEOPTS} CC="${CC:-gcc} -fno-stack-protector -fno-pic"
 	else

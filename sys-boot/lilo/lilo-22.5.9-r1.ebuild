@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.9-r1.ebuild,v 1.2 2004/06/24 22:35:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.9-r1.ebuild,v 1.3 2004/06/28 01:48:08 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,7 +45,7 @@ src_unpack() {
 	# #19397, but unfortunately that breaks the timeout at boot.
 	# If you can overcome these problems, a patch is very welcome.
 
-	if [ `use devmap` ]; then
+	if use devmap; then
 		# devmapper-patch (boot on evms/lvm2)
 		cd ${S}; epatch ${FILESDIR}/${P}-devmapper_gentoo.patch
 	fi
@@ -70,7 +70,7 @@ src_compile() {
 	HARDENED_CFLAGS="`test_flag -fno-pic` `test_flag -nopie`"
 
 	# we explicitly prevent the custom CFLAGS for stability reasons
-	if [ `use static` ]; then
+	if use static; then
 		emake CC="${CC:=gcc} ${HARDENED_CFLAGS}" lilo-static || die
 		mv lilo-static lilo || die
 	else
