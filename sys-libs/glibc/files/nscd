@@ -30,7 +30,7 @@ start() {
 }
 stop () {
 	ebegin "Shutting down Name Service Cache Daemon"
-	start-stop-daemon --stop --quiet --pid /var/run/nscd.pid 1>&2
+	start-stop-daemon --stop --quiet --pidfile /var/run/nscd.pid 1>&2
 	eend $? "Error stopping $SERVICE"
 }
 

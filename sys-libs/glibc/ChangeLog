@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.97 2003/10/26 16:38:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.98 2003/10/27 17:59:09 azarah Exp $
+
+  27 Oct 2003; Martin Schlemmer <azarah@gentoo.org> files/nscd:
+  We need to pass '--pidfile' and not '--pid' to start-stop-daemon, thanks to
+  Markus Rippl <markus.rippl@iconparc.de> for reporting.
 
   26 Oct 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r8.ebuild:
   Remove the sysmacros.h hack, as it is no longer needed.
