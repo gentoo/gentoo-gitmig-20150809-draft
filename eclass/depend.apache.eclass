@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.3 2004/07/24 08:39:33 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.4 2004/07/24 08:47:01 stuart Exp $
 
 ECLASS="depend.apache"
 INHERITED="$INHERITED $ECLASS"
@@ -84,5 +84,7 @@ depend_apache() {
 			return
 		fi
 	fi
+
+	[ -z "$DETECT_APACHE" ] && DETECT_APACHE=2
 }
 
