@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31_pre2.ebuild,v 1.1 2004/04/09 14:05:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31_pre2.ebuild,v 1.2 2004/04/09 14:11:43 seemant Exp $
 
 IUSE="nls oggvorbis flac gtk2"
 
@@ -32,7 +32,9 @@ src_unpack() {
 		epatch ${DISTDIR}/${MY_P}-dsd1.patch
 		export WANT_AUTOMAKE=1.7
 		export WANT_AUTOCONF=2.5
-		autoreconf
+		ebegin "Remaking configure script (be patient)"
+		autoreconf &>/dev/null
+		eend $?
 	else
 		epatch ${FILESDIR}/${MY_P}-fix-configure.patch
 		export WANT_AUTOCONF=2.5
