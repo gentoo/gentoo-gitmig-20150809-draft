@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre22.ebuild,v 1.1 2004/09/11 02:09:17 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre22.ebuild,v 1.2 2004/09/11 04:00:22 carpaski Exp $
 
 IUSE="build multilib selinux"
 
@@ -330,12 +330,19 @@ pkg_postinst() {
 	if [ -d "${ROOT}usr/portage/distfiles" ]; then
 		chown -R root:portage "${ROOT}usr/portage/distfiles"
 		chmod 0664 "${ROOT}usr/portage/distfiles"/*
+
+		find "${ROOT}usr/portage/distfiles" -type f -maxlevel 1 -print0 | \
+		xargs -0 -n 500 chmod 0644
+
 		chmod 2775 "${ROOT}usr/portage/distfiles"
 		chmod 2775 "${ROOT}usr/portage/distfiles/cvs-src"
 	fi
 	if [ -d "${ROOT}/${PORTDIR}/distfiles" ]; then
 		chown -R root:portage "${ROOT}/${PORTDIR}/distfiles"
-		chmod 0664 "${ROOT}/${PORTDIR}/distfiles"/*
+
+		find "${ROOT}/${PORTDIR}/distfiles" -type f -maxlevel 1 -print0 | \
+		xargs -0 -n 500 chmod 0644
+
 		chmod 2775 "${ROOT}/${PORTDIR}/distfiles"
 		chmod 2775 "${ROOT}/${PORTDIR}/distfiles/cvs-src"
 	fi
