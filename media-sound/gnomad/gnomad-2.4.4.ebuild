@@ -21,7 +21,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=gnome-base/libgnomeui-2
 	>=media-libs/libnjb-1.1
