@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.8 2004/11/30 13:36:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.9 2005/01/03 15:51:12 ticho Exp $
 
 inherit eutils
 
