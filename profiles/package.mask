@@ -214,7 +214,7 @@ app-admin/va-systemimager-client
 >=media-video/mpeg2-movie-1.5
 >=media-gfx/autotrace-0.26
 =net-ftp/lftp-2.4.3
-
+=media-sound/grip-2.98.3
 # untested
 >=net-fs/netatalk-1.5
 >=dev-db/unixODBC-2.0.8
