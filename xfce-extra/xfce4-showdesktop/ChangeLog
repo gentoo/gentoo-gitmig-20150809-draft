@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-showdesktop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-showdesktop/ChangeLog,v 1.9 2004/03/03 01:11:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-showdesktop/ChangeLog,v 1.10 2004/03/09 04:04:27 psi29a Exp $
+
+  08 Mar 2004; Bret Curtis <psi29a@gentoo.org> xfce4-showdesktop-0.3.0.ebuild:
+  Added ~mips to KEYWORDS
 
   02 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   xfce4-showdesktop-0.3.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-themes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/ChangeLog,v 1.11 2004/03/03 01:15:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/ChangeLog,v 1.12 2004/03/09 03:57:04 psi29a Exp $
+
+  08 Mar 2004; Bret Curtis <psi29a@gentoo.org> xfce4-themes-4.0.3.ebuild:
+  Added ~mips to KEYWORDS
 
   02 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   xfce4-themes-4.0.3.ebuild:
