@@ -1,7 +1,7 @@
 
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/zope-config-0.1-r1.ebuild,v 1.2 2003/03/04 05:00:35 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/zope-config-0.1-r1.ebuild,v 1.3 2003/04/04 01:31:48 kutsuya Exp $
 
 DESCRIPTION="A Gentoo Zope multi-Instance configure tool."
 SRC_URI=""
@@ -10,7 +10,7 @@ IUSE=""
  
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~ppc"
  
 DEPEND=""
 RDEPEND=">=dev-util/dialog-0.7
