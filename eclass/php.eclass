@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.92 2003/11/24 06:19:09 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.93 2003/12/09 05:02:59 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
@@ -204,7 +204,7 @@ php_src_unpack() {
 	# fix PEAR installer for our packaging
 	# we keep a backup of it as we need it at the end of the install
 	cp pear/PEAR/Registry.php pear/PEAR/Registry.old
-	sed -e "s:\$pear_install_dir\.:\'${D}/usr/lib/php/\' . :g" -i pear/PEAR/Registry.old 
+	sed -e "s:\$pear_install_dir\.:\'${D}/usr/lib/php/\' . :g" -i pear/PEAR/Registry.php
 
 	[ "${MY_PV}" = "4.3.4" ] && \
 	epatch ${DISTDIR}/php-4.3.4-phpizeexecfix.patch
@@ -438,11 +438,8 @@ php_src_install() {
 	doins build/* acinclude.m4 configure.in Makefile.global scan_makefile_in.awk
 	# Deprecated : pear/pear.m4
 
-	#revert Pear patch
-	rm ${D}/usr/lib/php/PEAR/Registry.php
 	#should this possibly result to the SAME original value it was ? (\$pear_install_dir)
-	cat ${S}/pear/PEAR/Registry.old | sed -e 's:${PORTAGE_TMPDIR}/${PF}::' > ${D}/usr/lib/php/PEAR/Registry.php
-
+	cp ${S}/pear/PEAR/Registry.old ${D}/usr/lib/php/PEAR/Registry.php
 
 	# Support for Java extension
 	# 1. install php_java.jar file into ${EXT_DIR}
