@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.7 2004/01/17 17:15:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.8 2004/01/24 13:54:07 suka Exp $
 
 IUSE="kde gnome"
 
@@ -67,7 +67,7 @@ src_install() {
 		JavaSupport=preinstalled_or_none
 	END_RS
 
-	# Autoresponse file for user isntallation
+	# Autoresponse file for user installation
 	cat > ${T}/rsfile-local <<-"END_RS"
 		[ENVIRONMENT]
 		INSTALLATIONMODE=INSTALL_WORKSTATION
@@ -119,15 +119,11 @@ src_install() {
 	sed -e "s|<pv>|${PV}|g" \
 		${FILESDIR}/${PV}/ooffice-wrapper-1.3 > ${T}/ooffice
 	doexe ${T}/ooffice
+
 	# Component symlinks
-	dosym ooffice /usr/bin/oocalc
-	dosym ooffice /usr/bin/oodraw
-	dosym ooffice /usr/bin/ooimpress
-	dosym ooffice /usr/bin/oomath
-	dosym ooffice /usr/bin/oowriter
-	dosym ooffice /usr/bin/ooweb
-	dosym ooffice /usr/bin/oosetup
-	dosym ooffice /usr/bin/oopadmin
+	for app in calc draw impress math writer web setup padmin; do
+		dosym ooffice /usr/bin/oo${app}
+	done
 
 	einfo "Installing Menu shortcuts (need \"gnome\" or \"kde\" in USE)..."
 	if [ -n "`use gnome`" ]
@@ -158,10 +154,9 @@ src_install() {
 		insinto /usr/share/applnk/OpenOffice.org\ 1.1
 		# Install the files needed for the catagory
 		doins ${kdeloc}/.directory
-		doins ${kdeloc}/.order
 		dodir /usr/share
 		# Install the icons and mime info
-		cp -r ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
+		cp -a ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
 
 		for x in ${kdeloc}/*.desktop
 		do
@@ -174,14 +169,9 @@ src_install() {
 		done
 	fi
 
-	# Unneeded, as they get installed into /usr/share...
-#	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
+
+	# Remove unneeded stuff
 	rm -rf ${D}${INSTDIR}/share/cde
-
-	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
-		echo 'Categories=Application;Office;' >> ${f}
-	done
-
 
 	# Make sure these do not get nuked.
 	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb}
