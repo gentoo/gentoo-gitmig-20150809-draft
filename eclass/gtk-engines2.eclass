@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.6 2004/02/01 13:11:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.7 2004/03/25 01:25:56 liquidx Exp $
 
 # Author: Alastair Tse <liquidx@gentoo.org>
 # 
@@ -63,11 +63,11 @@ fi
 
 # --- define some deps for binary packages
 if [ -n "${HAS_GTK1}" -a ! -n "${HAS_GTK2}" ]; then
-	newdepend "=x11-libs/gtk+-1.2*"
+	DEPEND="${DEPEND} =x11-libs/gtk+-1.2*"
 elif [ -n "${HAS_GTK1}" -a -n "${HAS_GTK2}" ]; then
-	newdepend "=x11-libs/gtk+-1.2*" "=x11-libs/gtk+-2*"
+	DEPEND="${DEPEND} =x11-libs/gtk+-1.2* =x11-libs/gtk+-2*"
 elif [ ! -n "${HAS_GTK1}" -a -n "${HAS_GTK2}" ]; then
-	newdepend ">=x11-libs/gtk+-2"
+	DEPEND="${DEPEND} >=x11-libs/gtk+-2"
 fi
 
 # --- if we don't have any gtk version, we depend on USE flags to tell us
@@ -75,7 +75,7 @@ fi
 # --- tell us what DEPEND it wants.
 
 if ! has_version "x11-libs/gtk+"; then
-	newdepend "gtk2? ( >=x11-libs/gtk+-2 ) : ( =x11-libs/gtk+-1.2* )"
+	DEPEND="gtk2? ( >=x11-libs/gtk+-2 ) !gtk2? ( =x11-libs/gtk+-1.2* )"
 	use gtk2 \
 		&& HAS_GTK2=1 \
 		|| HAS_GTK1=1
