@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/ccs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.7 2005/03/19 15:27:44 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.8 2005/03/19 21:00:47 xmerlin Exp $
+
+  19 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +files/ccsd.conf,
+  +files/ccsd.rc, ccs-0.24.ebuild:
+  added gentoo compliant init/conf files
 
 *ccs-0.24 (19 Mar 2005)
 

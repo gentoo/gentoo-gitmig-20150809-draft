@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-0.24.ebuild,v 1.1 2005/03/19 15:27:44 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-0.24.ebuild,v 1.2 2005/03/19 21:00:47 xmerlin Exp $
 
 inherit linux-mod
 
@@ -30,6 +30,9 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+
+	exeinto /etc/init.d ; newexe ${FILESDIR}/ccsd.rc ccsd || die
+	insinto /etc/conf.d ; newins ${FILESDIR}/ccsd.conf ccsd || die
 }
 
 pkg_postinst() {
