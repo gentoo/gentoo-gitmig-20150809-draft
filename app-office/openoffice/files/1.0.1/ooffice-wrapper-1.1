@@ -177,10 +177,11 @@ fi # LOCALE != OLDLOCALE
 ## That's it. Launch the beast (with the given args)
 ##
 
+export LD_PRELOAD=/usr/lib/libfreetype.so
 case `basename $0` in
-  oosetup) LD_PRELOAD=/usr/lib/libfreetype.so.6 exec "$OOHOME/setup" ;;
-  oopadmin) LD_PRELOAD=/usr/lib/libfreetype.so.6 exec "$OOHOME/spadmin" ;;
-  *) LD_PRELOAD=/usr/lib/libfreetype.so.6 exec "$OOHOME/soffice" "$@" ;;
+  oosetup) exec "$OOHOME/setup" ;;
+  oopadmin) exec "$OOHOME/spadmin" ;;
+  *) exec "$OOHOME/soffice" "$@" ;;
 esac
 	  
 ## Changelog
