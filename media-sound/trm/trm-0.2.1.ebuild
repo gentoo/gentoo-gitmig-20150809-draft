@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trm/trm-0.2.1.ebuild,v 1.4 2004/06/27 01:31:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trm/trm-0.2.1.ebuild,v 1.5 2004/08/11 12:39:47 caleb Exp $
 
 IUSE=""
 
@@ -16,7 +16,8 @@ SLOT="0"
 DEPEND=">=media-libs/musicbrainz-2.0.1
 	media-libs/libmad
 	media-libs/libvorbis
-	media-libs/libogg"
+	media-libs/libogg
+	!media-libs/tunepimp"
 
 src_install() {
 	dodoc README

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/trm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trm/ChangeLog,v 1.4 2004/06/27 01:31:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trm/ChangeLog,v 1.5 2004/08/11 12:39:47 caleb Exp $
+
+  11 Aug 2004; Caleb Tennis <caleb@gentoo.org> trm-0.2.1.ebuild:
+  Block tunepimp as it is a replacement for this package
 
   26 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> trm-0.2.1.ebuild:
   Stable x86.  Added ~amd64.
