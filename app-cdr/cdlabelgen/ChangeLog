@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdlabelgen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.9 2003/09/16 23:13:31 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.10 2003/09/22 22:31:36 zul Exp $
+
+  22 Sep 2003; Chuck Short <zul@gentoo.org> cdlabelgen-2.6.1.ebuild:
+  Replaced patch, cdlabelgen now uses sed to change the Makefile. Easier
+  for future versions.
 
 *cdlabelgen-2.6.1 (16 Sep 2003)
 
