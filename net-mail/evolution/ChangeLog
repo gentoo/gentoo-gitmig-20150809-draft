@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.10 2002/04/13 10:53:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.11 2002/04/22 19:58:40 azarah Exp $
+
+*evolution-1.0.3-r5 (22 Apr 2002)
+
+  22 Apr 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.3-r.ebuild :
+
+  Resolve bug #334.
 
 *evolution-1.0.3-r4 (13 Apr 2002)
   13 Apr 2002; Spider <spider@gentoo.org> evolution-1.0.3-r4.ebuild :
