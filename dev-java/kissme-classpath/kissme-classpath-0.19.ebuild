@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme-classpath/kissme-classpath-0.19.ebuild,v 1.7 2002/10/04 05:11:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme-classpath/kissme-classpath-0.19.ebuild,v 1.8 2003/02/13 10:12:42 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Classpath specifically tailored to kissme"

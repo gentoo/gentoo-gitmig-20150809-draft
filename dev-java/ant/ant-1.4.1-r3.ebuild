@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.4.1-r3.ebuild,v 1.9 2002/12/07 06:18:52 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.4.1-r3.ebuild,v 1.10 2003/02/13 10:06:18 vapier Exp $
 
 S=${WORKDIR}/jakarta-ant-${PV}
 DESCRIPTION="Build system for Java"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.2_alpha2-r1.ebuild,v 1.1 2003/01/12 19:12:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.2_alpha2-r1.ebuild,v 1.2 2003/02/13 10:06:50 vapier Exp $
 
 S=${WORKDIR}/${PN}-2.7.2a2
 DESCRIPTION="A parser generator for Java, C++ and Sather, written in Java"
