@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a40c6074c1183d1cde93393aa08c1b7e ChangeLog 15581
-MD5 c23f232faeac14ad659d68f75825c20c cups-1.1.23.ebuild 3803
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 59404234e8dfa10d387de039ba444d9f cups-1.1.23_rc1.ebuild 3908
+MD5 4b723e65fd198ddf58d9e027b7e128e9 ChangeLog 15681
 MD5 ab256a940dce545d2c5873ae2b3dc533 cups-1.1.23-r1.ebuild 3866
+MD5 c23f232faeac14ad659d68f75825c20c cups-1.1.23.ebuild 3803
+MD5 59404234e8dfa10d387de039ba444d9f cups-1.1.23_rc1.ebuild 3908
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 eb02b2008717b62447ec2d2ac1e37d5a files/digest-cups-1.1.23 72
 MD5 eb02b2008717b62447ec2d2ac1e37d5a files/digest-cups-1.1.23-r1 72
 MD5 a097b6a9c53c9ef50a6f3662d802cdfa files/xpdf-pl3.patch 348
@@ -19,7 +19,7 @@ MD5 a072271745e21050d873cc0cd2d7b6aa files/digest-cups-1.1.23_rc1 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB78ipKRy60XGEcJIRAgoIAJ9eZBAOwuC1pB5wtcSNVnae5gusFwCfa3Zt
-kWViFx9pf2jtzZyB/i29avQ=
-=LLsm
+iD8DBQFB78lHKRy60XGEcJIRAiL5AJ4tvoHcmw0LWBLSvYZk5YwkBn4DIgCcDoks
+k89h+Uz9Eb+AUSuiqGZ3exU=
+=fUZ1
 -----END PGP SIGNATURE-----
