@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.6.6_pre20040928-r2.ebuild,v 1.1 2004/10/05 16:26:19 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.6.6_pre20040928-r2.ebuild,v 1.2 2004/10/05 16:29:06 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -30,7 +30,7 @@ src_compile() {
 	egnustep_env
 
 	EPATCH_OPTIONS="-d ${S}" epatch ${FILESDIR}/seperate-desktop-recycler.patch
-	
+
 	econf || die "configure failed"
 
 	egnustep_make
