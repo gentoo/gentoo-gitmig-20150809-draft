@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.12 2004/06/25 00:46:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.13 2004/07/14 22:06:16 agriffis Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2"
+IUSE="3dfx 3dnow X aalib alsa arts debug directfb dvb dvd encode esd fbcon ggi gif gnome gtk ipv6 joystick jpeg lirc matroska matrox mmx mpeg nas nls oggvorbis opengl oss samba sdl sse svga theora truetype v4l v4l2 xinerama xmms"
 
 inherit eutils flag-o-matic
 
@@ -105,7 +105,7 @@ src_unpack() {
 	# Fix to diable xmms support. Closes 45356
 	epatch ${FILESDIR}/${P}-xmms.patch
 
-	#Fix libmatroska 
+	#Fix libmatroska
 	if has_version '>=libmatroska-0.6.3'
 	then
 		cd ${S}; epatch ${FILESDIR}/${P}-libmatroska063.diff
@@ -409,4 +409,3 @@ pkg_postrm() {
 		rm -f ${ROOT}/usr/share/mplayer/subfont.ttf
 	fi
 }
-

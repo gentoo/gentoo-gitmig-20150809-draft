@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.16 2004/06/29 17:46:44 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.17 2004/07/14 22:06:16 agriffis Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live bidi mad xvid divx4linux png xinerama libcaca mpeg nas nls"
+IUSE="3dfx 3dnow X aalib alsa arts bidi debug directfb divx4linux dvb dvd encode esd fbcon ggi gif gnome gtk ipv6 joystick jpeg libcaca lirc live mad matroska matrox mmx mpeg nas nls oggvorbis opengl oss png samba sdl sse svga theora truetype v4l v4l2 xinerama xmms xvid"
 
 # NOTE to myself:  Test this thing with and without dvd/gtk+ support,
 #                  as it seems the mplayer guys dont really care to
@@ -109,7 +109,7 @@ src_unpack() {
 	# Fix head/tail call for new coreutils
 	epatch ${FILESDIR}/${PN}-0.90-coreutils-fixup.patch
 
-	#bug #49669, horrid syntax errors in help/help_mp-ro.h	
+	#bug #49669, horrid syntax errors in help/help_mp-ro.h
 	epatch ${FILESDIR}/${P}-help_mp-ro.h.patch
 
 	# GCC 3.4 fixes
@@ -452,4 +452,3 @@ pkg_postrm() {
 		rm -f ${ROOT}/usr/share/mplayer/subfont.ttf
 	fi
 }
-

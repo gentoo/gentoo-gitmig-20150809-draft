@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r1.ebuild,v 1.10 2004/06/29 10:03:52 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r1.ebuild,v 1.11 2004/07/14 22:06:16 agriffis Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live mad bidi divx4linux xvid mpeg nas nls"
+IUSE="3dfx 3dnow X aalib alsa arts bidi debug directfb divx4linux dvb dvd encode esd fbcon ggi gif gnome gtk ipv6 joystick jpeg lirc live mad matroska matrox mmx mpeg nas nls oggvorbis opengl oss samba sdl sse svga theora truetype v4l v4l2 xinerama xmms xvid"
 
 # NOTE to myself:  Test this thing with and without dvd/gtk+ support,
 #                  as it seems the mplayer guys dont really care to
@@ -409,4 +409,3 @@ pkg_postrm() {
 		rm -f ${ROOT}/usr/share/mplayer/subfont.ttf
 	fi
 }
-

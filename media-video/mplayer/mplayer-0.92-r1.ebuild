@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92-r1.ebuild,v 1.5 2004/06/25 00:46:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92-r1.ebuild,v 1.6 2004/07/14 22:06:16 agriffis Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc"
+IUSE="3dfx 3dnow X aalib alsa arts directfb dvb dvd encode esd fbcon ggi gif gnome gtk jpeg lirc matrox mmx mpeg nas nls oggvorbis opengl oss samba sdl sse svga truetype xmms"
 
 inherit eutils flag-o-matic
 
