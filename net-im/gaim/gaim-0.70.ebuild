@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.70.ebuild,v 1.1 2003/09/29 15:51:05 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.70.ebuild,v 1.2 2003/09/29 15:51:40 lostlogic Exp $
 
 IUSE="nls perl spell nas ssl"
 
@@ -23,7 +23,7 @@ DEPEND="=sys-libs/db-1*
 	>=media-libs/audiofile-0.2.0
 	perl? ( >=dev-lang/perl-5.6.1
 		>=sys-apps/sed-4.0.0 )
-	dev-libs/nss 
+	dev-libs/nss
 	spell? ( >=app-text/gtkspell-2.0.2 )"
 
 src_unpack() {
