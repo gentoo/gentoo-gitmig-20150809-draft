@@ -1,11 +1,15 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.2 2002/06/21 01:53:31 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.3 2002/07/01 20:59:34 nitro Exp $
 
 
 *ulogd-0.97-r1,  (20 Jun 2002)
+  
+  1 Jul 2002; Kyle Manna <nitro@gentoo.org> ulogd-0.97-r1.ebuild :
 
-  20 Jun 2002; George Shapovalov <george@gentoo.org> Changelog :
+  Added the two mysql docs to the dodoc line
+
+  20 Jun 2002; Kyle Manna <nitro@gentoo.org> ulogd-0.97-r1.ebuild :
 
   Added a sed script to fix paths in ulogd.conf
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-0.97-r1.ebuild,v 1.1 2002/06/21 01:53:31 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-0.97-r1.ebuild,v 1.2 2002/07/01 20:59:34 nitro Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="iptables daemon for ULOG target for userspace iptables filter logging"
@@ -38,6 +38,6 @@ src_install() {
 
 	dodoc README AUTHORS Changes 
 	cd doc/
-	dodoc ulogd.txt ulogd.a4.ps
+	dodoc ulogd.txt ulogd.a4.ps mysql.table mysql.table.ipaddr-as-string
 	dohtml ulogd.html
 }
