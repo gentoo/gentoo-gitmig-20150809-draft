@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/autorun
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/autorun/ChangeLog,v 1.1 2004/10/10 01:47:18 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/autorun/ChangeLog,v 1.2 2005/03/09 00:40:48 vapier Exp $
+
+*autorun-3.15 (08 Mar 2005)
+
+  08 Mar 2005; Mike Frysinger <vapier@gentoo.org> +autorun-3.15.ebuild:
+  Version bump #84474 by Zachary Slater.
 
 *autorun-3.10 (09 Oct 2004)
 
