@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.5.ebuild,v 1.2 2005/01/04 12:50:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.5.ebuild,v 1.3 2005/03/29 09:23:57 luckyduck Exp $
 
 IUSE=""
 
@@ -67,4 +67,7 @@ pkg_postinst() {
 	einfo "See http://forums.winamp.com/showthread.php?threadid=75736 for more information on setting up on demand content"
 	einfo
 	einfo "FAQ's can be found at: http://forums.winamp.com/showthread.php?threadid=75736 and can help you with server setup."
+	einfo
+	einfo "An shoutcast guide can be found at http://www.gentoo.org/doc/en/shoutcast-config.xml"
+	einfo
 }
