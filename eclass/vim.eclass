@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.34 2003/07/30 03:03:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.35 2003/07/30 18:47:06 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
 # 	Seemant Kulleen <seemant@gentoo.org>
 # 	Aron Griffis <agriffis@gentoo.org>
 
+inherit eutils vim-doc
 ECLASS=vim
+INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack
-
-inherit eutils
 
 IUSE="$IUSE ncurses nls"
 if [ ${PN} != vim-core ]; then
@@ -263,6 +263,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	# Update documentation tags (from vim-doc.eclass)
+	update_vim_helptags
+
 	einfo
 	if [ ${PN} = gvim ]; then
 		einfo "To enable UTF-8 viewing, set guifont and guifontwide: "
@@ -292,4 +295,9 @@ pkg_postinst() {
 	# Make convenience symlinks, hopefully without stepping on toes
 	[ -f /usr/bin/gvim ] && ln -s gvim /usr/bin/vim 2>/dev/null
 	[ -f /usr/bin/vim ] && ln -s vim /usr/bin/vi 2>/dev/null
+}
+
+pkg_postrm() {
+	# Update documentation tags (from vim-doc.eclass)
+	update_vim_helptags
 }
