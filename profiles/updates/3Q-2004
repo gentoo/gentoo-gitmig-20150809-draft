@@ -162,3 +162,4 @@ move net-www/middleman www-proxy/middleman
 move net-www/ntlmaps www-proxy/ntlmaps
 move net-www/oops www-proxy/oops
 move net-www/squid www-proxy/squid
+move net-www/squidguard www-proxy/squidguard
