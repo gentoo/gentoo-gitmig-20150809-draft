@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.6-r1.ebuild,v 1.1 2004/05/04 19:23:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.6-r1.ebuild,v 1.2 2004/05/07 19:33:04 agriffis Exp $
 
 IUSE="gtk2 ipv6 ldap crypt xinerama"
 
@@ -37,7 +37,7 @@ RDEPEND="virtual/x11
 		=x11-libs/gtk+-1.2*
 		>=gnome-base/ORBit-0.5.10-r1 )
 	crypt? ( >=app-crypt/gnupg-1.2.1 )
-	>=net-www/mozilla-launcher-1.6"
+	>=net-www/mozilla-launcher-1.7-r1"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -249,9 +249,10 @@ src_install() {
 	# fix permissions
 	chown -R root:root ${D}/usr/lib/MozillaThunderbird
 
-	# use mozilla-launcher-1.6 which supports thunderbird
+	# use mozilla-launcher which supports thunderbird as of version 1.6.
+	# version 1.7-r1 moved the script to /usr/libexec
 	dodir /usr/bin
-	dosym mozilla-launcher /usr/bin/thunderbird
+	dosym /usr/libexec/mozilla-launcher /usr/bin/thunderbird
 
 	# Install icon and .desktop for menu entry
 	if use gnome; then
