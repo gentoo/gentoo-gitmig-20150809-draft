@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.19 2004/09/10 08:30:47 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.20 2004/11/14 16:32:05 max Exp $
+
+  14 Nov 2004; <max@gentoo.org> lvm2-2.00.15-r1.ebuild, lvm2-2.00.15.ebuild:
+  Fix SRC_URI to reflect reality.
 
   10 Sep 2004; Rob Holland <tigger@gentoo.org> lvm2-2.00.15-r1.ebuild:
   fix syntax bug. thanks to swtaylor@gentoo.org
