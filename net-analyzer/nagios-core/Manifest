@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ec1f8e3e0757da4a5c760f407b123bc1 nagios-core-1.2-r3.ebuild 7091
+MD5 e4ffec908f9991ffd916e63a4bb2c002 nagios-core-1.2-r3.ebuild 7167
 MD5 b2b5a4982c7a888addfc7c5bb2ec173e nagios-core-1.2-r2.ebuild 6619
-MD5 420deb8860eb27f3377d5a7fdfd719dc ChangeLog 7716
+MD5 7600f2709b8f25fbd925b222127fa685 ChangeLog 7906
 MD5 a1ece421fae3536d1e5dd9b5ecb0215d metadata.xml 928
 MD5 8e2eaa206717b94fb41508c7ab17a135 nagios-core-1.2-r1.ebuild 6669
 MD5 dad3fb46e8f73ac54d9239a542bc82e0 files/nagios.conf 362
@@ -19,7 +19,7 @@ MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2-r3 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBgqChT+MN7JbqCpMRAkbNAKCMe1mwtOq1FLQezE6QE8RBjHl7xACeOfpI
-3IjzK+in4IeuLkFg4DyqxjE=
-=fzD0
+iD8DBQFBokJnT+MN7JbqCpMRAspoAKCJvTrAN839GRCzFFKlKytT/3IQQgCaAoYQ
+N+DJP2RvL6oMv63zfHhcVJM=
+=lYsk
 -----END PGP SIGNATURE-----
