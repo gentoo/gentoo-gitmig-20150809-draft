@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.9 2003/12/29 21:08:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.10 2004/01/07 20:23:26 mr_bones_ Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X Load Image: view images or load them to root window"
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	
+
 	sed -i Imakefile \
 		-e "/^DEFINES =/s/$/ -DHAVE_GUNZIP/" \
 		-e "/CCOPTIONS =/s/=.*/=/"
@@ -40,7 +40,7 @@ src_unpack() {
 src_compile() {
 
 	/usr/X11R6/bin/xmkmf || die
-	
+
 	emake CDEBUGFLAGS="${CFLAGS}" || die
 }
 
