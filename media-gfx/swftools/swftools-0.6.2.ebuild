@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.5.0-r1.ebuild,v 1.5 2004/11/30 19:52:42 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.6.2.ebuild,v 1.1 2004/11/30 19:52:42 rizzo Exp $
 
 inherit eutils
 
@@ -16,14 +16,7 @@ DEPEND=">=media-libs/t1lib-1.3.1
 		media-libs/freetype
 		media-libs/jpeg
 		avi? ( media-video/avifile )"
-		#avi? ( =media-video/avifile-0.7.37.20030522-r2 )"
 RDEPEND=""
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/swftools-0.5.0-font.patch
-}
 
 src_compile() {
 	econf || die "Configure failed."
