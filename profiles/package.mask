@@ -850,3 +850,7 @@ app-arch/gnorpm
 # Masked because it doesnt work properly
 # and because I'm not inclined to break that many users systems. see bug #3065
 x11-libs/gdkxft
+
+# seemant@gentoo.org 5 Jun 2002
+# Masked because xscreensaver has compilation problems.  Many of them.
+=app-misc/xscreensaver-4.04.2
