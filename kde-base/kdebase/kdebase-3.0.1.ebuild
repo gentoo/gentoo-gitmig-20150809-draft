@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.1.ebuild,v 1.1 2002/05/13 19:42:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.1.ebuild,v 1.2 2002/05/14 15:04:11 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 
 inherit kde-dist
@@ -66,10 +66,16 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
     sed -e 's:SessionTypes=:SessionTypes=kde-3.0,kde-2.2.2,:' kdmrc.orig > kdmrc
     rm kdmrc.orig
 
+    #backup splashscreen images, so they can be put back when unmerging 
+    #mosfet or so.
+    cd ${D}/${KDEDIR}/share/apps
+    cp -rf ksplash/ ksplash.default
+
+    # Show gnome icons when choosing new icon for desktop shortcut
     mkdir -p ${D}/usr/share/pixmaps
-    mv ${D}/usr/kde/3/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
-    rm -rf ${D}/usr/kde/3/share/apps/kdesktop/pics/
-    cd ${D}/usr/kde/3/share/apps/kdesktop/
+    mv ${D}/${KDEDIR}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
+    rm -rf ${D}/${KDEDIR}/share/apps/kdesktop/pics/
+    cd ${D}/${KDEDIR}/share/apps/kdesktop/
     ln -sf /usr/share/pixmaps/ pics
 
     rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
