@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/adns-python
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.3 2003/04/25 01:30:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.4 2003/11/01 13:32:41 weeve Exp $
+
+  01 Nov 2003; Jason Wever <weeve@gentoo.org> adns-python-1.0.0.ebuild:
+  Added ~sparc keyword.
 
 *adns-python-1.0.0 (03 Mar 2003)
 
