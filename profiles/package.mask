@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3048 2004/08/09 08:21:49 mr_bones_ Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3049 2004/08/09 20:26:55 chriswhite Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -122,10 +122,6 @@ games-arcade/mtp-target-bin
 # <pythonhead@gentoo.org> (22 June 2004)
 # Breaks a lot of wxGTK apps, masked until those are worked out
 =x11-libs/wxGTK-2.5.1
-
-# <klieber@gentoo.org> (22 June 2004)
-# security masked due to issue described in #53494
-net-www/roundup
 
 # <robbat2@gentoo.org> (20 June 2004)
 # mask waiting for sys-libs/db-4.2
