@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.1 2005/01/07 18:12:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.2 2005/01/07 18:45:12 aliz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.realvnc.com/dist/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
-IUSE=""
+IUSE="client server"
 
 DEPEND="sys-libs/zlib
 	media-libs/freetype
@@ -26,6 +26,12 @@ DEPEND="sys-libs/zlib
 
 PROVIDE="virtual/vnc"
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	if ! use client && ! use server ; then
+		die "You must have either client or server or both in USE"
+	fi
+}
 
 src_unpack() {
 	mkdir -p ${S}/xc ; cd ${S}
@@ -58,13 +64,13 @@ src_unpack() {
 }
 
 src_compile() {
-	# client
+	use client && (
 	econf --with-installed-zlib || die
-	emake || die
+	emake || die )
 
-	# server
+	use server && (
 	cd ${S}/xc
-	make CDEBUGFLAGS="${CFLAGS}" CXXDEBUGFLAGS="${CXXFLAGS}" World FAST=1 || die
+	make CDEBUGFLAGS="${CFLAGS}" CXXDEBUGFLAGS="${CXXFLAGS}" World FAST=1 || die )
 }
 
 src_install() {

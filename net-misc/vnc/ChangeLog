@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.30 2005/01/07 18:12:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.31 2005/01/07 18:45:12 aliz Exp $
 
 *vnc-4.0-r1 (07 Jan 2005)
 
@@ -11,6 +11,7 @@
   Create /usr/X11R6/lib/modules/extensions so that .so file gets installed, closing #63596.
   Added patch to prevent /tmp execution, closing #71295.
   Don't hardcode CC/CXX, closing #69277.
+  Split server and client with USE flags, closing #68290."
   Updated SRC_URI to xorg.freedesktop.org.
 
   15 Sep 2004; <agriffis@gentoo.org> vnc-4.0.ebuild:
