@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.8 2003/09/07 03:11:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.9 2003/11/16 22:12:03 usata Exp $
+
+*rdtool-0.6.14-r1 (17 Nov 2003)
+
+  17 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> rdtool-0.6.14-r1.ebuild,
+  rdtool-0.6.14.ebuild, files/50rdtool-gentoo.el:
+  Added emacs IUSE flag. DEPENDs on either ruby18 or shim-ruby18 (if you
+  are using shim-ruby18 with ruby16, you don't have to install ruby18). 
+  Added amstd DEPEND back. Closing bug #33558.
 
 *rdtool-0.6.14 (06 Sep 2003)
 
