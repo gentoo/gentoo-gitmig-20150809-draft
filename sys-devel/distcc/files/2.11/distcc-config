@@ -8,7 +8,7 @@
 # This script developed by Zachary T Welch at Superlucidity Services, LLC
 #  based on ideas from irc discussion and the clear need for this support
 # 
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.11/distcc-config,v 1.1 2003/09/24 00:46:02 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.11/distcc-config,v 1.2 2003/12/06 17:31:04 lisa Exp $
 # Changelog
 # 
 # 21 Jul 2003 - Changed install environment to EXCLUDE DISTCC_HOSTS from /etc/env.d/02distcc.
@@ -87,7 +87,7 @@ dccc_install_user() {
 	USERFIX="/usr/sbin/${USERFIX}"
 	if [ -x "${USERFIX}" ]
 	then
-		if ! ${USERFIX} -g daemon -s /bin/false -d /dev/null \
+		if ! ${USERFIX} -u 240 -g daemon -s /bin/false -d /dev/null \
 				-c "distccd" distcc 
 		then
 			dccc_exit "unable to create or modify user"

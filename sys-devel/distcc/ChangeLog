@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.84 2003/11/21 17:52:44 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.85 2003/12/06 17:31:03 lisa Exp $
+
+  06 Dec 2003; Lisa Seelye <lisa@gentoo.org> files/2.11/distcc-config,
+  files/2.11.1p/distcc-config:
+  fix distcc-config to default to uid 240, to close bug 35096
+
+  06 Dec 2003; Lisa Seelye <lisa@gentoo.org> files/2.11.1p/distcc-config:
+  fix distcc-config to default to uid 240, to close bug 35096 (will fix the
+  lower versions in a second)
 
 *distcc-2.11.2-r1 (21 Nov 2003)
 
