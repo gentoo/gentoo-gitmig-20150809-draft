@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snmptt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/ChangeLog,v 1.10 2005/01/31 14:35:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/ChangeLog,v 1.11 2005/02/13 03:29:58 weeve Exp $
+
+  12 Feb 2005; Jason Wever <weeve@gentoo.org> snmptt-1.0.ebuild:
+  Stable on sparc.
 
   31 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> snmptt-1.0.ebuild:
   Marked stable on x86.

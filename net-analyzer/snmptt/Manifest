@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce7ffe59f5cafaf99d65c59543198388 snmptt-0.9-r1.ebuild 1269
-MD5 fac9ee55805764364ca517ae8f735892 snmptt-1.0.ebuild 1267
-MD5 df6cb2da7887b0f719ef5b4a36fb93d8 ChangeLog 1368
+MD5 90c58212a6fdffc7e18f21628350b323 ChangeLog 1451
 MD5 193ab07812b3cd299e6fd2dd3d40d15c metadata.xml 215
+MD5 500f4c9beba0332135f255256ff5857d snmptt-0.9-r1.ebuild 1267
+MD5 8ec6d58ef25157861c1f7595857dea01 snmptt-1.0.ebuild 1264
 MD5 1563776a631f989d7d781026125a53d0 files/digest-snmptt-0.9-r1 59
 MD5 b6787c534ab58fab31a50732394c5027 files/digest-snmptt-1.0 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB/kI3EZCkKN40op4RAiyHAJ9sk+zMSsep+O74AnpkznGrk0V6KQCgppHO
-0W0GtPqd3Ml6aqZyDs9aLdI=
-=7C8H
------END PGP SIGNATURE-----

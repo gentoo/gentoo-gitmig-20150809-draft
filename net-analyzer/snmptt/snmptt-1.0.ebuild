@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/snmptt-1.0.ebuild,v 1.3 2005/01/31 14:35:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/snmptt-1.0.ebuild,v 1.4 2005/02/13 03:29:58 weeve Exp $
 
 MY_P=${P/-/_}
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.snmptt.org/"
 
 LICENSE="GPL-2"
 
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 SLOT="0"
 IUSE="mysql postgres"
 
