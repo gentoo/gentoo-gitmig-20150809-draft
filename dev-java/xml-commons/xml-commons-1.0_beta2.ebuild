@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.5 2005/02/06 19:49:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.6 2005/03/04 12:13:50 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://xml.apache.org/commons/"
 SRC_URI="mirror://apache/xml/commons/xml-commons-1.0.b2.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4
