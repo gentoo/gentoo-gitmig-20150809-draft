@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/Convert-BER
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.2 2002/05/05 14:08:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.3 2002/07/31 11:56:31 cselkirk Exp $
 
 *Convert-BER-1.31-r2 (5 May 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> Convert-BER-1.31-r2.ebuild :
+
+  Added ppc to KEYWORDS.
 
   5 May 2002; Seemant Kulleen <seemant@gentoo.org>
   Convert-BER-1.31-r2.ebuild files/digest-Convert-BER-r2 :
