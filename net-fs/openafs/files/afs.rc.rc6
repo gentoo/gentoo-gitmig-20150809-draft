@@ -50,7 +50,7 @@ check_ext2() {
 check_cacheinfo(){
  [ ! -f /usr/vice/etc/cacheinfo ] && {
     PART=`cat /proc/mounts | grep vice | grep ext2 | awk '{print $1}'`
-    CACHESIZE=`df $PART | tail -1 | awk '{print $(NF-2)}'`
+    CACHESIZE=`df $PART | grep ^/ | awk '{print $4}'`
     CACHESIZE=`expr $CACHESIZE \* 9`
     CACHESIZE=`expr $CACHESIZE / 10`
     echo "/afs:/usr/vice/cache:$CACHESIZE" > /usr/vice/etc/cacheinfo     
