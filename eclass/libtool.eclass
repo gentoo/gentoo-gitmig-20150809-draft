@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.28 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.29 2004/09/22 16:00:42 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -111,6 +111,7 @@ elibtoolize() {
 	local deptoremove=
 	local my_dirlist=
 	local elt_patches="portage relink max_cmd_len sed test tmp"
+	local start_dir="${PWD}"
 
 	my_dirlist="$(ELT_find_ltmain_sh)"
 
@@ -254,7 +255,5 @@ elibtoolize() {
 		rm -f libtool
 	fi
 
-	# We need to change the pwd back to $S, as we may be called in
-	# src_compile()
-	cd ${S}
+	cd "${start_dir}"
 }
