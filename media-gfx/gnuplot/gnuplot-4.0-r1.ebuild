@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0-r1.ebuild,v 1.2 2004/10/05 11:50:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0-r1.ebuild,v 1.3 2004/10/17 05:46:48 usata Exp $
 
 inherit eutils
+# inherit elisp-common
 
 MY_P="${P}.0"
 
@@ -14,6 +15,7 @@ LICENSE="gnuplot"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~sparc"
 IUSE="doc gd ggi pdflib plotutils png readline svga X xemacs"
+#IUSE="${IUSE} emacs"
 
 DEPEND="
 	xemacs? ( virtual/xemacs )
@@ -26,6 +28,7 @@ DEPEND="
 	svga? ( media-libs/svgalib )
 	readline? ( >=sys-libs/readline-4.2 )
 	plotutils? ( media-libs/plotutils )"
+#	emacs? ( app-emacs/gnuplot-mode )
 
 S=${WORKDIR}/${MY_P}
 
@@ -36,11 +39,14 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--datadir=/usr/share/${PN} --with-gihdir=/usr/share/${PN}/gih"
+	local myconf="--with-gihdir=/usr/share/${PN}/gih"
 
 	myconf="${myconf} $(use_with X x)"
 	myconf="${myconf} $(use_with svga linux-vga)"
 	myconf="${myconf} $(use_with gd)"
+	myconf="${myconf} $(use_with plotutils plot /usr/lib)"
+	myconf="${myconf} $(use_with png png /usr/lib)"
+	myconf="${myconf} $(use_with pdflib pdf /usr/lib)"
 
 	use ggi \
 		&& myconf="${myconf} --with-ggi=/usr/lib --with-xmi=/usr/lib" \
@@ -50,19 +56,13 @@ src_compile() {
 		&& myconf="${myconf} --with-readline=gnu --enable-history-file" \
 		|| myconf="${myconf} --with-readline"
 
-	use plotutils \
-		&& myconf="${myconf} --with-plot=/usr/lib" \
-		|| myconf="${myconf} --without-plot"
-
-	use png \
-		&& myconf="${myconf} --with-png=/usr/lib" \
-		|| myconf="${myconf} --without-png"
-
-	use pdflib \
-		&& myconf="${myconf} --with-pdf=/usr/lib" \
-		|| myconf="${myconf} --without-pdf"
-
-	! use xemacs && myconf="${myconf} --without-lisp-files"
+	if use xemacs ; then
+		export EMACS=xemacs
+		myconf="${myconf} --with-lispdir=/usr/lib/xemacs/site-packages/${PN}"
+	else
+		export EMACS=no
+		myconf="${myconf} --without-lisp-files"
+	fi
 
 	# This is a hack to avoid sandbox violations when using the Linux console.
 	# Creating the DVI and PDF tutorials require /dev/svga to build the

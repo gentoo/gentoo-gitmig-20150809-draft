@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.29 2004/10/05 11:50:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.30 2004/10/17 05:46:48 usata Exp $
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> gnuplot-4.0-r1.ebuild:
+  Detects XEmacs correctly; bug #66765.
 
   05 Oct 2004; Jason Wever <weeve@gentoo.org> gnuplot-4.0-r1.ebuild:
   Added ~sparc keyword.
