@@ -1,14 +1,17 @@
 # ChangeLog for dev-java/ibm-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.18 2002/12/03 18:38:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.19 2002/12/03 19:06:28 strider Exp $
 
   03 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
   Removed invalid sourcing of the eclasses (this is depricated).
 
 *ibm-jdk-1.4.0-r1 (02 Dec 2002)
 
+  03 Dec 2002; Adrian Almenar <strider@gentoo.org> ibm-jdk-1.4.0-r1.ebuild
+  Fixed a typo in the ebuild and in ChangeLog. Thanks azarah !!.
+
   02 Dec 2002; Adrian Almenar <strider@gentoo.org> 
-  Added: ibm-jdk-1.4.0.ebuild files/digest-ibm-jdk-1.4.0
+  Added: ibm-jdk-1.4.0-r1.ebuild files/digest-ibm-jdk-1.4.0-r1
   Modified: files/ibm-jdk-1.4.0
   Fixed an error on setting classpath. IBM cuts the (rt.jar on sun-jdk) on
   various files that need to be added to classpath.
