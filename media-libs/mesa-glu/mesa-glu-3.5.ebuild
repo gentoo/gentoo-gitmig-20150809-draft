@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.5.ebuild,v 1.13 2004/06/24 23:16:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.5.ebuild,v 1.14 2004/07/14 20:19:25 agriffis Exp $
 
 S=${WORKDIR}/Mesa-${PV}
 DESCRIPTION="OpenGL like graphic library for Linux, this package only contains the glu and glut parts"
@@ -11,6 +11,7 @@ HOMEPAGE="http://mesa3d.sourceforge.net/"
 SLOT="3.5"
 LICENSE="LGPL-2"
 KEYWORDS="x86 ppc sparc "
+IUSE="3dnow mmx sse"
 
 DEPEND="virtual/x11"
 PROVIDE="virtual/glu virtual/glut"
@@ -51,4 +52,3 @@ src_install() {
 	cd ${S}
 	dodoc docs/*
 }
-
