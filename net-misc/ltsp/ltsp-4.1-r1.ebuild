@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.7 2005/03/02 11:10:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.8 2005/03/06 11:53:00 lanius Exp $
 
 IUSE="X debug nas esd audiofile snmp"
 
@@ -151,6 +151,7 @@ src_install() {
 
 	# several other stuff
 	rm -fR ${D}/usr/share/
+	rm -fR ${D}/opt/ltsp-4.1/i386/usr/share/aclocal
 }
 
 pkg_postinst() {
