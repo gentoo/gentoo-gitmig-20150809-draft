@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.14 2003/07/31 04:37:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.15 2003/08/01 22:43:22 azarah Exp $
+
+  02 Aug 2003; Martin Schlemmer <azarah@gentoo.org>
+  files/kbd-1.08-sparc-fixes.patch:
+  Sparc64 fixes, bug #25517 again.
 
   31 Jul 2003; Martin Schlemmer <azarah@gentoo.org> kbd-1.08-r1.ebuild:
   Fix struct kbd_rate not being fixed for sparc to use 'period' and not 'rate',

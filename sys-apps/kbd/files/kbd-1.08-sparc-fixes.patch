@@ -4,7 +4,7 @@
  	struct kbd_repeat kbdrep_s;
  
  	/* don't change, just test */
-+#ifdef __sparc__
++#if defined (__sparc__) || defined (__sparc64__)
 +	kbdrep_s.rate = -1;
 +#else
  	kbdrep_s.period = -1;
@@ -16,23 +16,23 @@
  
  	/* do the change */
  	if (rate == 0)				  /* switch repeat off */
-+#ifdef __sparc__
++#if defined (__sparc__) || defined (__sparc64__)
 +		kbdrep_s.rate = 0;
 +#else
  		kbdrep_s.period = 0;
 +#endif
  	else
-+#ifdef __sparc__
++#if defined (__sparc__) || defined (__sparc64__)
 +		kbdrep_s.rate  = 1000.0 / rate; /* convert cps to msec */
 +#else
  		kbdrep_s.period  = 1000.0 / rate; /* convert cps to msec */
 +#endif
-+#ifdef __sparc__
++#if defined (__sparc__) || defined (__sparc64__)
 +	if (kbdrep_s.rate < 1)
 +#else
  	if (kbdrep_s.period < 1)
 +#endif
-+#ifdef __sparc__
++#if defined (__sparc__) || defined (__sparc64__)
 +		kbdrep_s.rate = 1;
 +#else
  		kbdrep_s.period = 1;
@@ -44,14 +44,14 @@
  	}
  
  	/* report */
-+#ifdef __sparc__
++#if defined (__sparc__) || defined (__sparc64__)
 +	if (kbdrep_s.rate == 0)
 +#else
  	if (kbdrep_s.period == 0)
 +#endif
  		rate = 0;
  	else
-+#ifdef __sparc__
++#if defined (__sparc__) || defined (__sparc64__)
 +		rate = 1000.0 / (double) kbdrep_s.rate;
 +#else
  		rate = 1000.0 / (double) kbdrep_s.period;
@@ -63,13 +63,13 @@
  		exit( 1 );
  	}
  
-+#ifdef __sparc__
++#if defined (__sparc__) || defined (__sparc64__)
 +	kbdrate_s.rate = (int) (rate + 0.5);  /* round up */
 +#else
  	kbdrate_s.period = (int) (rate + 0.5);  /* round up */
 +#endif
  	kbdrate_s.delay = delay * HZ / 1000;  /* convert ms to Hz */
-+#ifdef __sparc__
++#if defined (__sparc__) || defined (__sparc64__)
 +	if (kbdrate_s.rate > 50)
 +		kbdrate_s.rate = 50;
 +#else
@@ -83,7 +83,7 @@
  
  	if (!silent)
  		printf( "Typematic Rate set to %d cps (delay = %d ms)\n",
-+#ifdef __sparc__
++#if defined (__sparc__) || defined (__sparc64__)
 +			kbdrate_s.rate, kbdrate_s.delay * 1000 / HZ );
 +#else
  			kbdrate_s.period, kbdrate_s.delay * 1000 / HZ );
