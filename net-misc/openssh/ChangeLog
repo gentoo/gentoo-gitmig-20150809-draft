@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.60 2004/01/08 10:07:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.61 2004/01/10 22:56:42 brad_mssw Exp $
+
+  10 Jan 2004; Brad House <brad_mssw@gentoo.org> openssh-3.7.1_p2-r2.ebuild:
+  install doesn't seem to be creating /var/empty
 
   08 Jan 2004; <solar@gentoo.org> openssh-3.5_p1-r1.ebuild,
   openssh-3.6.1_p2.ebuild, openssh-3.7.1_p2-r1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.1 2004/01/08 10:07:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.2 2004/01/10 22:56:42 brad_mssw Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -115,7 +115,15 @@ src_install() {
 
 pkg_postinst() {
 	# empty dir for the new priv separation auth chroot..
-	install -d -m0755 -o root -g root ${ROOT}/var/empty
+	#install -d -m0755 -o root -g root ${ROOT}/var/empty
+	# install doesn't seem to be doing its job, on amd64 at least
+	# Brad House <brad_mssw@gentoo.org> 01/10/2004
+	if [ ! -d "${ROOT}/var/empty" ]
+	then
+		mkdir -p "${ROOT}/var/empty"
+		chmod 0755 "${ROOT}/var/empty"
+		chown root:root "${ROOT}/var/empty"
+	fi
 
 	enewgroup sshd 22
 	enewuser sshd 22 /bin/false /var/empty sshd
