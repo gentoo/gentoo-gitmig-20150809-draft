@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/x11fonts-jmk-3.0.ebuild,v 1.2 2004/02/22 21:15:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/x11fonts-jmk-3.0.ebuild,v 1.3 2004/06/24 22:32:19 agriffis Exp $
 
 MY_P=jmk-x11-fonts-${PV}
 S=${WORKDIR}/${MY_P}

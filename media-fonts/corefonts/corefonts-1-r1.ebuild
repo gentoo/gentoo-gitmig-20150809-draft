@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/corefonts-1-r1.ebuild,v 1.3 2004/02/16 03:12:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/corefonts-1-r1.ebuild,v 1.4 2004/06/24 22:27:21 agriffis Exp $
 
 DESCRIPTION="Microsoft's TrueType core fonts"
 HOMEPAGE="http://corefonts.sourceforge.net/"

@@ -1,6 +1,6 @@
 # ChangeLog for media-fonts/baekmuk-fonts
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.10 2004/06/07 21:28:53 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.11 2004/06/24 22:26:58 agriffis Exp $
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> baekmuk-fonts-2.1-r1.ebuild:
   Fix use invocation

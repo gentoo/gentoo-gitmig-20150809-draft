@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05-r1.ebuild,v 1.1 2004/05/15 17:27:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05-r1.ebuild,v 1.2 2004/06/24 22:32:29 agriffis Exp $
 
 KCFONTS="${P}.tgz"
 

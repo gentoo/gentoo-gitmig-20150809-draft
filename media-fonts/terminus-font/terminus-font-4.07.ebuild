@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.07.ebuild,v 1.3 2004/06/07 20:56:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.07.ebuild,v 1.4 2004/06/24 22:31:23 agriffis Exp $
 
 DESCRIPTION="A clean fixed font for the console and X11"
 HOMEPAGE="http://www.is-vn.bg/hamster/jimmy-en.html"

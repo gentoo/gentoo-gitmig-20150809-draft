@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.1 2004/06/21 13:11:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.2 2004/06/24 22:28:33 agriffis Exp $
 
 inherit rpm font
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05.ebuild,v 1.6 2004/05/15 17:27:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05.ebuild,v 1.7 2004/06/24 22:32:29 agriffis Exp $
 
 DESCRIPTION="Kuo Chauo Chinese Fonts collection in BIG5 encoding"
 SRC_URI="ftp://ftp.freebsd.org.tw/pub/releases/i386/4.9-RELEASE/packages/x11-fonts/${P}.tgz"
