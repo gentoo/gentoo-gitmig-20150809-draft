@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.0-r1.ebuild,v 1.5 2004/04/25 22:26:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.0-r1.ebuild,v 1.6 2004/06/14 08:45:42 kloeri Exp $
 
 DESCRIPTION="Standard informational utilities and process-handling tools"
 SRC_URI="mirror://sourceforge/uptimed/${P}.tar.bz2"
@@ -10,6 +10,7 @@ HOMEPAGE="http://unixcode.org/uptimed/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
+IUSE=""
 
 src_compile() {
 	sed -i "s:-d /var/:-d ${D}/var/:g" ${S}/Makefile.am

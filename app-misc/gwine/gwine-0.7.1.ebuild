@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gwine/gwine-0.7.1.ebuild,v 1.2 2004/03/06 12:11:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gwine/gwine-0.7.1.ebuild,v 1.3 2004/06/14 09:10:04 kloeri Exp $
 
 inherit perl-module
 
@@ -11,6 +11,7 @@ SRC_URI="http://download.gna.org/gwine/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=dev-lang/perl-5.8.0
 		>=dev-perl/glib-perl-0.90
