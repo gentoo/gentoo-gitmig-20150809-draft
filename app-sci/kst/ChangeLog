@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/kst
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kst/ChangeLog,v 1.9 2004/10/13 13:47:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kst/ChangeLog,v 1.10 2004/12/03 16:44:47 phosphan Exp $
+
+*kst-1.0.0 (03 Dec 2004)
+
+  03 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> +kst-1.0.0.ebuild:
+  Version bump
 
   13 Oct 2004; Caleb Tennis <caleb@gentoo.org> :
   Version bump, plus a new runtime dep
