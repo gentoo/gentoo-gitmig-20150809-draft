@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-1.00.ebuild,v 1.4 2004/03/16 16:16:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-1.00.ebuild,v 1.5 2004/04/27 08:12:52 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,6 +13,7 @@ SRC_URI="mirror://sourceforge/njam/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 RDEPEND=">=media-libs/sdl-mixer-1.2.5
 	>=media-libs/sdl-image-1.2.2

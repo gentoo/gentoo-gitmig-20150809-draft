@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2.ebuild,v 1.4 2004/03/02 14:13:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2.ebuild,v 1.5 2004/04/27 08:16:26 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -14,6 +14,7 @@ SRC_URI="http://www.xevil.com/download/stable/xevilsrc${MY_PV}.zip
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/x11"
 

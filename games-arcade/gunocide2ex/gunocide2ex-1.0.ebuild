@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.4 2004/03/26 11:55:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.5 2004/04/27 08:07:42 mr_bones_ Exp $
 
 inherit eutils gcc games
 
@@ -8,9 +8,10 @@ DESCRIPTION="fast-paced 2D shoot'em'up"
 HOMEPAGE="http://www.polyfrag.com/content/product_gunocide.html"
 SRC_URI="mirror://sourceforge/g2ex/g2ex-setup.run"
 
-KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
+IUSE=""
 
 RDEPEND="media-libs/libsdl
 	media-libs/sdl-ttf

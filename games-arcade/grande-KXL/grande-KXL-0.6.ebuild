@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/grande-KXL/grande-KXL-0.6.ebuild,v 1.2 2004/02/20 06:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/grande-KXL/grande-KXL-0.6.ebuild,v 1.3 2004/04/27 08:07:13 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="ZANAC type game"
-SRC_URI="http://kxl.hn.org/download/${P}.tar.gz"
 HOMEPAGE="http://kxl.hn.org/"
+SRC_URI="http://kxl.hn.org/download/${P}.tar.gz"
 
-KEYWORDS="x86"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=dev-games/KXL-1.1.7"
 

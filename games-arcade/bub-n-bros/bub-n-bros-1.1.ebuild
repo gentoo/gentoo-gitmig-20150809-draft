@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.1.ebuild,v 1.2 2004/02/20 06:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.1.ebuild,v 1.3 2004/04/27 08:02:34 mr_bones_ Exp $
 
 inherit games
 
@@ -11,11 +11,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=dev-lang/python-2.2*"
 RDEPEND=">=dev-python/pygame-1.5.5"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_compile() {
 	# Compile the "statesaver" extension module to enable the Clock bonus

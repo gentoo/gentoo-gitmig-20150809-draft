@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.3 2004/02/20 06:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.4 2004/04/27 08:14:07 mr_bones_ Exp $
 
 inherit games
 
 DESCRIPTION="2D Geometric Space Combat"
-SRC_URI="mirror://sourceforge/sscx/${P}.tar.bz2"
-RESTRICT="nomirror"
 HOMEPAGE="http://sscx.sourceforge.net/"
+SRC_URI="mirror://sourceforge/sscx/${P}.tar.bz2"
 
-KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
+IUSE=""
 
 RDEPEND="virtual/opengl
 	virtual/glu

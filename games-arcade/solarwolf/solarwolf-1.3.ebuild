@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.3.ebuild,v 1.3 2004/01/29 07:07:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.3.ebuild,v 1.4 2004/04/27 08:13:22 mr_bones_ Exp $
 
 inherit games
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.pygame.org/shredwheat/solarwolf/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ~sparc"
+IUSE=""
 
 DEPEND="dev-python/pygame
 	dev-lang/python

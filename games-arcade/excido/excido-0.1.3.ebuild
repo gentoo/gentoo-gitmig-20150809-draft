@@ -9,8 +9,9 @@ HOMEPAGE="http://icculus.org/excido/"
 SRC_URI="http://icculus.org/excido/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
 SLOT="0"
+KEYWORDS="x86"
+IUSE=""
 
 DEPEND="dev-games/physfs
 	media-libs/libsdl
