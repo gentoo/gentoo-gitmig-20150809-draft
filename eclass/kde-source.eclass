@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.14 2003/04/08 17:48:12 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.15 2003/04/19 11:52:50 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -33,8 +33,22 @@ INHERITED="$INHERITED $ECLASS"
 [ -z "$ECVS_SERVER" ] && ECVS_SERVER="anoncvs.kde.org:/home/kde"
 [ -z "$ECVS_AUTH" ] && ECVS_AUTH="pserver"
 
-# default for kde-base ebuilds
-[ -z "$ECVS_MODULE" ] && ECVS_MODULE="$PN"
+# ECVS_SUBDIR reimplementation
+if [ -n "$KCVS_SUBDIR" ]; then
+    ECVS_MODULE="$KCVS_MODULE/$KCVS_SUBDIR"
+	S="$WORKDIR/$KCVS_MODULE"
+elif [ -n "$KCVS_MODULE" ]; then
+    ECVS_MODULE="$KCVS_MODULE"
+	S="$WORKDIR/$KCVS_MODULE"
+else
+    # default for kde-base ebuilds
+    ECVS_MODULE="$PN"
+	S="$WORKDIR/$ECVS_MODULE"
+fi
+
+# If a tag is specified as ECVS_BRANCH, it will be used for the kde-common module
+# as well. If that is wrong (fex when checking out kopete branch kopete_0_6_2_release),
+# use KCVS_BRANCH instead.
 
 # Other variables: see cvs.eclass
 
@@ -46,8 +60,6 @@ inherit cvs
 ECLASS=kde-source
 
 # --- end user-configurable settings ---
-
-S="$WORKDIR/$ECVS_MODULE"
 
 DESCRIPTION="$DESCRIPTION (cvs) "
 
@@ -70,27 +82,43 @@ kde-source_src_unpack() {
 	# So, if we just fetched a module's subdir, fetch the top directory
 	# of the module (non-recursively) and make it build only the subdirectory
 	# we need
-	if [ -n "$ECVS_SUBDIR" -a -n "$ECVS_SERVER" ]; then
-		
-		ECVS_SUBDIR= ECVS_LOCAL=yes cvs_src_unpack
-		
-		# we need the module//doc/name directory too, and the top-level doc/ directory
-		ECVS_SUBDIR=doc ECVS_LOCAL=yes cvs_src_unpack
+	if [ -n "$KCVS_SUBDIR" ]; then
+	
+		if [ -n "$KCVS_BRANCH" ]; then
+		    ECVS_BRANCH2="$ECVS_BRANCH"
+		    ECVS_BRANCH="$KCVS_BRANCH"
+		fi
+
+		ECVS_MODULE="$KCVS_MODULE" ECVS_LOCAL=yes cvs_src_unpack
+
+		# we need the <module>/doc/<name> directory too,
+		# and we need the top-level doc/ directory fetched locally
+		ECVS_MODULE="${KCVS_MODULE}/doc" ECVS_LOCAL=yes cvs_src_unpack
 		# but, if such a directory doesn't exist on the cvs server and we're
 		# in offline mode cvs.eclass will abort, so only call this if we're
 		# in online mode or the dir is already fetched
-		if [ -d "$ECVS_TOP_DIR/$ECVS_MODULE/doc/$ECVS_SUBDIR" -o "$ECVS_SERVER" != "offline" ]; then
-			debug-print "$FUNCNAME: fetching doc/$ECVS_SUBDIR..."
-			ECVS_SUBDIR=doc/$ECVS_SUBDIR cvs_src_unpack
+		if [ -d "$ECVS_TOP_DIR/$KCVS_MODULE/doc/$KCVS_SUBDIR" -o "$ECVS_SERVER" != "offline" ]; then
+			ECVS_MODULE="${KCVS_MODULE}/doc/${KCVS_SUBDIR}" cvs_src_unpack
 		fi
 		
+		if [ -n "$KCVS_BRANCH" ]; then
+		    ECVS_BRANCH="$ECVS_BRANCH2"
+		fi
+
 	fi
-	
+
 	# typically for kde cvs, the admin subdir lives in the kde-common module
 	# which is also needed
 	if [ ! -d "$S/admin" ]; then
-		ECVS_MODULE="kde-common" ECVS_SUBDIR="admin" cvs_src_unpack
-		mv ${WORKDIR}/kde-common/admin $WORKDIR/$ECVS_MODULE
+		ECVS_MODULE="kde-common/admin" cvs_src_unpack
+		IFS2="$IFS"
+		IFS="/"
+		path=""
+		for x in $ECVS_MODULE; do
+			[ -z "$path" ] && path="$x"
+		done
+		IFS="$IFS2"
+		mv ${WORKDIR}/kde-common/admin $WORKDIR/$path
 	fi
 
 	# make sure we give them a clean cvs checkout
