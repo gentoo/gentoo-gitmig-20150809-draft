@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.2.2.ebuild,v 1.2 2005/01/01 15:59:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.2.3.ebuild,v 1.1 2005/01/16 19:10:46 vapier Exp $
 
 DESCRIPTION="Restricted shell for SSHd"
 HOMEPAGE="http://rssh.sourceforge.net/"
@@ -30,6 +30,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog CHROOT INSTALL README TODO
 }
