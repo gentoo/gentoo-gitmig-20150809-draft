@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r5.ebuild,v 1.1 2003/07/19 15:11:27 jayskwak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r5.ebuild,v 1.2 2003/07/20 03:13:43 seemant Exp $
 
 inherit eutils
 
-IUSE="cups nas postgres opengl mysql odbc gif"
+IUSE="cups nas postgres opengl mysql odbc gif cjk"
 
 S=${WORKDIR}/qt-x11-free-${PV}
 
@@ -58,7 +58,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-qmlined.diff
 	epatch ${FILESDIR}/${P}-r3-qsocket.diff
 	epatch ${FILESDIR}/${P}-qlistview-dnd.diff
-	epatch ${FILESDIR}/${P}-korean-xim.patch
+
+	use cjk && epatch ${FILESDIR}/${P}-korean-xim.patch
 	
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
