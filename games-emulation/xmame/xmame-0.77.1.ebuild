@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.77.1.ebuild,v 1.4 2004/01/01 23:41:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.77.1.ebuild,v 1.5 2004/01/11 01:24:26 vapier Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -69,16 +69,21 @@ src_unpack() {
 		;;
 	esac
 
-	if [ `use icc` ] ; then
-		epatch ${FILESDIR}/${PV}-icc.patch
-		sed -i \
-			-e '/^CC/s:gcc:icc:' Makefile \
-			|| die "sed Makefile (icc) failed"
-	fi
 	if [ `use net` ] ; then
 		sed -i \
 			-e '/XMAME_NET/s:#::' Makefile \
 			|| die "sed Makefile (net) failed"
+		if [ `use icc` ] ; then
+			ewarn "Sorry, but net support is not compatible with icc."
+			ewarn "icc support has been ignored in favor of net support."
+		fi
+	else
+		if [ `use icc` ] ; then
+			epatch ${FILESDIR}/${PV}-icc.patch
+			sed -i \
+				-e '/^CC/s:gcc:icc:' Makefile \
+				|| die "sed Makefile (icc) failed"
+		fi
 	fi
 	if [ `use esd` ] ; then
 		sed -i \
