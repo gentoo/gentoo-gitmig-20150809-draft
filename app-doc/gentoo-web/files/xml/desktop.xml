@@ -11,8 +11,8 @@
    and samba (unix/windows interoperability).
 </abstract>
 
-<version>0.1</version>
-<date>22 June 2001</date>
+<version>0.2</version>
+<date>1 July 2001</date>
 
 <chapter>
 <title>Preliminaries</title>
@@ -80,6 +80,16 @@ Calculating dependencies............... done!
 # <i>emerge kdebase-2.1.1-r1.ebuild</i>
 </pre>
 <p>Have a nice nap!</p>
+<note>If you have the Gentoo Linux rc5 binary CD, then you can install
+the packages directly off of the CD.</note>
+<pre caption="Installing binary packages from the CD">
+# <c>export PKGDIR=/mnt/cdrom/gentoo/packages</c>
+<comment>Normally Portage expects packages to be in /usr/portage/packages
+</comment>
+# <c>emerge --usepkg /mnt/cdrom/gentoo/packages/All/kdebase-2.1.1-r1.tbz2</c>
+<comment>The <c>--usepkg</c> flag makes sure that binary packages are used
+for the dependencies (if available).</comment>
+</pre>
 </body>
 </section>
 
@@ -95,7 +105,6 @@ Vertical: 55-90 KHz), the type and amount of ram (in KB) of your video card
 mouse (an intellimouse plugged into the ps/2 port <path>/dev/psaux</path>).
 </p>
 <pre># <c>xf86config</c></pre>
-<figure link="/images/XF86config.png" short="xf86config image"/>
 <p>Because I have a three-button mouse I choose not to enable 
 3-button emulation.  I don't add any additional XKB keyboard options
 because I don't know what any of them do.  You'll have to guess at
@@ -126,7 +135,18 @@ by hand:</p>
 <pre>
 # <i>cp /etc/X11/XF86Config /etc/X11/XF86Config.working</i>
 # <i>vim /etc/X11/XF86Config</i></pre>
-<figure link="/images/XF86Configalt.png" short="XF86Config file"/>
+<pre caption="Pointer section of XF86Config">
+Section "InputDevice"
+
+# Identifier and driver
+
+    Identifier	"Mouse1"
+    Driver	"mouse"
+    <i>Option "Protocol"    "IMPS/2" </i>
+    Option "Device"      "/dev/psaux"
+    <i>Option "ZAxisMapping"	"4 5"</i>
+
+</pre>
 <p>Because I have an intellimouse I changed the "Protocol" from 
 "PS/2" to "IMPS/2".  Getting the wheel to scroll just requires
 adding the 'Option "ZAxisMapping" "4 5"' line, where '4' and '5'
@@ -144,7 +164,10 @@ instead.  First, though, we need to fix a minor KDE bug.
 </p>
 <pre># <i>vim /opt/kde2.1/bin/startkde</i></pre>
 <pre caption="the top of the startkde file after it has been fixed">
-#!/bin/sh --login
+<i>#!/bin/sh --login</i>
+#
+#  DEFAULT KDE STARTUP SCRIPT ( KDE-2.1 )
+#
 </pre>
 <p>By adding <e>--login</e> to the end of the <e>#! /bin/sh</e> line
 we ensure that KDE will read <path>/etc/profile</path> when starting
@@ -184,56 +207,6 @@ id:4:initdefault:
 <chapter>
 <title>Sound</title>
 <section>
-<title>Standard Kernel Sound Modules</title>
-<body>
-<p>Out of the box, Gentoo Linux doesn't support the standard
-kernel modules.  You'll have to recompile the kernel. Generally,
-we prefer Alsa over the standard modules since they perform
-better and have niftier features (see below for Alsa instructions.)
-For standard kernel sound, install the <path>linux-sources</path>
-ebuild:</p>
-<pre>
-# <i>cd /usr/portage/sys-kernel/linux-sources</i>
-# <i>emerge linux-sources-x.y.z.ebuild</i>
-</pre>
-<p>The linux-sources ebuild installs the sources into /usr/src,
-and you can then compile the kernel (and your sound module)
-in the usual manner 
-(<uri>http://www.linuxdoc.org/HOWTO/Kernel-HOWTO.html</uri>).
-If you choose to compile the sound driver as a module (not
-compile it directly into the kernel), they you need to add
-the module name (without the .o extension) to 
-<path>/etc/rc.d/config/modules</path>.</p>
-<p>
-Reboot the machine.  With any luck the appropriate sound driver 
-should now be loaded.  To actually produce sound, a few more steps
-are required.
-</p>
-<pre>
-# <i>cd /dev</i>
-# <i>/usr/sbin/MAKEDEV audio</i>
-#
-# <i>cat /opt/kde2.1/share/sounds/pop.wav &gt; /dev/dsp</i>
-# <i>cd /usr/portage/media-sound/sox</i>
-# <i>emerge sox-x.y.z.ebuild</i>
-# <i>play /opt/kde2.1/share/sounds/pop.wav</i>
-</pre>
-<p>
-If any sound at all results from cat'ing the .wav file to 
-<path>/dev/dsp</path>, then sound is probably working.
-By emerge'ing sox one can use the <c>play</c> command to 
-play .wav files (and, unlike using <c>cat</c>, the .wav file
-should sound good when using <c>play</c>).
-</p>
-<!-- 
-found that when running <e>devfs</e> the /dev/MAKEDEV script
-would be missing.  Help? Well, you shouldn't need to run MAKEDEV if you're
-using devfs (maybe to get /dev/dsp created?), but if you need it, its real home is in /usr/sbin (/dev/MAKEDEV is
-a symlink.  I changed the text to reflect this. [drobbins]
--->
-</body>
-</section>
-<section>
 <title>Alsa</title>
 <body>
 
@@ -269,12 +242,12 @@ see the Gentoo FAQ:
 # Put modules to be loaded, with arguments, one per line
 # The following lines will be called with "modprobe"
   
-snd-card-ens1371
+snd-card-emu10k1
 snd-pcm-oss
 
 </pre>
 <p>
-You'll want to replace <e>snd-card-ens1371</e> with the
+You'll want to replace <e>snd-card-emu10k1</e> with the
 appropriate sound card for your system.  Look in
 <path>/lib/modules/[kernel version]/misc/</path>
 for a list of modules.  If you'd like to have OSS compatibility, it's
@@ -288,25 +261,54 @@ be lost.
 </warn>
 <p>Now we set up the <e>kerneld</e> aliases.</p>
 <pre>
-# <i>vim /etc/modules/2.4.4-ac5</i>
+# <i>vim /etc/modules/2.4.4-ac9</i>
 </pre>
-<figure link="/images/kmod.png" short="kmod fig"/>
+<pre caption="end of /etc/modules/2.4.4-ac9 with Alsa additions">
+depfile=/lib/modules/2.4.4-ac9/modules.dep
+persistdir=/var/lib/modules/persist
+ 
+<i># Alsa</i>
+<i>alias char-major-116 snd</i>
+ 
+<i># OSS stuff</i>
+<i>alias snd-card-0 snd-card-emu10k1</i>
+<i>alias char-major-14 soundcore</i>
+<i>alias sound-slot-0 snd-card-0</i>
+<i>alias sound-service-0-0 snd-mixer-oss</i>
+<i>alias sound-service-0-1 snd-seq-oss</i>
+<i>alias sound-service-0-3 snd-pcm-oss</i>
+<i>alias sound-service-0-12 snd-pcm-oss</i>
+</pre>
 <p>
-Again, you'll want to replace <e>snd-card-ens1371</e> with
+Again, you'll want to replace <e>snd-card-emu10k1</e> with
 your sound card.  
 </p>
-<p>We still have to help out <e>devfs</e>, however.
+<p>We should still help out <e>devfs</e>, however.
 Add the following to <path>/etc/devfsd.conf</path>.</p>
 <pre>
 # <i>vim /etc/devfsd.conf</i>
 </pre>
-<figure link="/images/devfsd.png" short="devfsd image"/>
+<pre caption="end of devfsd.conf file with Alsa additions">
+CHANGE          .*              COPY    $devpath /dev-state/$devname
+CREATE          .*              COPY    $devpath /dev-state/$devname
+ 
+<i># Alsa stuff</i>
+<i>LOOKUP          snd             MODLOAD ACTION snd</i>
+<i>REGISTER        sound/.*        PERMISSIONS root.audio 660</i>
+<i>REGISTER        snd/.*          PERMISSIONS root.audio 660</i>
+</pre>
+<note>Notice that we have just set <path>/dev/sound</path>
+permissions to be <c>root.audio</c>.  Thus, for non-root users to
+use audio they will have to be part of the <c>audio</c> group.
+</note>
 <p>
 Reboot, and all of the sound stuff should be loaded.  You won't
 hear any sound yet, though, because alsa keeps all sound channels
 muted by default.
 </p>
 <pre>
+# <i>cd /usr/portage/media-sound/alsa-utils</i>
+# <i>emerge alsa-utils-0.5.10.ebuild</i>
 # <i>amixer</i>
 
 Group 'Input Gain',0
@@ -354,6 +356,56 @@ script will properly save and restore your volume settings.
 </body>
 </section>
 <section>
+<title>Standard Kernel Sound Modules</title>
+<body>
+<p>Out of the box, Gentoo Linux doesn't support the standard
+kernel modules.  You'll have to recompile the kernel. (Generally,
+we prefer Alsa over the standard modules since they perform
+better and have niftier features, see above.)
+For standard kernel sound, install the <path>linux-sources</path>
+ebuild:</p>
+<pre>
+# <i>cd /usr/portage/sys-kernel/linux-sources</i>
+# <i>emerge linux-sources-x.y.z.ebuild</i>
+</pre>
+<p>The linux-sources ebuild installs the sources into /usr/src,
+and you can then compile the kernel (and your sound module)
+in the usual manner 
+(<uri>http://www.linuxdoc.org/HOWTO/Kernel-HOWTO.html</uri>).
+If you choose to compile the sound driver as a module (not
+compile it directly into the kernel), they you need to add
+the module name (without the .o extension) to 
+<path>/etc/rc.d/config/modules</path>.</p>
+<p>
+Reboot the machine.  With any luck the appropriate sound driver 
+should now be loaded.  To actually produce sound, a few more steps
+are required.
+</p>
+<pre>
+# <i>cd /dev</i>
+# <i>/usr/sbin/MAKEDEV audio</i>
+#
+# <i>cat /opt/kde2.1/share/sounds/pop.wav &gt; /dev/dsp</i>
+# <i>cd /usr/portage/media-sound/sox</i>
+# <i>emerge sox-x.y.z.ebuild</i>
+# <i>play /opt/kde2.1/share/sounds/pop.wav</i>
+</pre>
+<p>
+If any sound at all results from cat'ing the .wav file to 
+<path>/dev/dsp</path>, then sound is probably working.
+By emerge'ing sox one can use the <c>play</c> command to 
+play .wav files (and, unlike using <c>cat</c>, the .wav file
+should sound good when using <c>play</c>).
+</p>
+<!-- 
+found that when running <e>devfs</e> the /dev/MAKEDEV script
+would be missing.  Help? Well, you shouldn't need to run MAKEDEV if you're
+using devfs (maybe to get /dev/dsp created?), but if you need it, its real home is in /usr/sbin (/dev/MAKEDEV is
+a symlink.  I changed the text to reflect this. [drobbins]
+-->
+</body>
+</section>
+<section>
 <title>Sound and KDE</title>
 <body>
 <p>
@@ -362,6 +414,18 @@ KDE has some nice sound utilities, including the KDE sound mixer
 </p>
 <pre>
 # <i>cd /usr/portage/kde-apps/kdemultimedia</i>
+# <i>emerge --pretend kdemultimedia-x.y.z.ebuild</i>
+ 
+These are the packages that I would merge, in order.
+ 
+Calculating dependencies...... done!
+[ebuild N  ] media-sound/esound-0.2.22-r2 to /
+[ebuild N  ] media-libs/libogg-1.0_beta4 to /
+[ebuild N  ] media-libs/libvorbis-1.0_beta4 to /
+[ebuild N  ] dev-libs/glib-1.2.10 to /
+[ebuild N  ] x11-libs/gtk+-1.2.10-r1 to /
+[ebuild N  ] kde-apps/kdemultimedia-2.1.1 to /
+
 # <i>emerge kdemultimedia-x.y.z.ebuild</i>
 # <i>kmix</i>
 </pre>
@@ -380,16 +444,138 @@ the sound mixer properly.
 <title>Postfix -- Install and Configure</title>
 <body>
 <p>
-Coming soon!
+I happen to like the <c>postfix</c> mail system because it emulates
+<c>sendmail</c> without the considerable nightmare of having to 
+configure <c>sendmail</c>.  While we're at it we'll also install 
+<c>mutt</c>, a mail reader, so that we can test out our 
+<c>postfix</c> configuration.
 </p>
+<pre>
+# <i>cd /usr/portage/net-mail/postfix</i>
+# <i>emerge --pretend postfix-20010228.2-r1.ebuild</i>
+
+These are the packages that I would merge, in order.
+ 
+Calculating dependencies... done!
+[ebuild N  ] dev-libs/libpcre-3.4-r1 to /
+[ebuild N  ] net-mail/mailbase-0.00-r1 to /
+[ebuild N  ] net-mail/postfix-20010228.2 to /
+
+# <i>emerge postfix-20010228.2-r1.ebuild</i>
+
+# <i>cd ../mutt</i>
+# <i>emerge mutt-1.2.5-r2.ebuild</i>
+</pre>
+<p>
+If you only intend to use your mail server for sending mail,
+then postfix is already set up for you.  Otherwise, you'll 
+want to edit <path>/etc/postfix/main.cf</path>.  The 
+<path>main.cf</path> file is reasonably well documented, and
+the defaults are reasonable for a standalone machine.  If
+your workstation is directly on the internet (i.e., having
+its own non-private IP address and DNS name) then the only
+change you will probably have to make is enabling postfix to receive
+mail.
+</p>
+<pre caption="turning on mail reception in main.cf">
+# RECEIVING MAIL
+
+# The inet_interfaces parameter specifies the network interface
+# addresses that this mail system receives mail on.  By default,
+# the software claims all active interfaces on the machine. The
+# parameter also controls delivery of mail to user@[ip.address].
+#
+#inet_interfaces = all
+#inet_interfaces = $myhostname
+#inet_interfaces = $myhostname, localhost
+<i>inet_interfaces = $myhostname, localhost</i>
+<i>mydestination = $myhostname, localhost.$mydomain</i>
+</pre>
+
+
 </body>
 </section>
 <section>
 <title>Postfix Testing (with Mutt)</title>
 <body>
 <p>
-Coming soon!
+Let's see if it works.
 </p>
+<pre>
+# <i>postfix check</i>
+postfix-script: warning: creating missing Postfix pid directory
+postfix-script: warning: creating missing Postfix incoming directory
+postfix-script: warning: creating missing Postfix active directory
+postfix-script: warning: creating missing Postfix bounce directory
+postfix-script: warning: creating missing Postfix defer directory
+postfix-script: warning: creating missing Postfix deferred directory
+postfix-script: warning: creating missing Postfix flush directory
+postfix-script: warning: creating missing Postfix saved directory
+postfix-script: warning: creating missing Postfix corrupt directory
+postfix-script: warning: creating missing Postfix public directory
+postfix-script: warning: creating missing Postfix private directory
+# <i>postfix start</i>
+postfix-script: starting the Postfix mail system
+# <i>newaliases</i>
+# <i>mutt -x root</i>
+/root/.maildir does not exist. Create it? ([y]/n): <comment>[answer y]</comment>
+To:  &lt;root&gt;
+Subject: test
+(End message with a . on a line by itself)
+test
+.
+
+# <i>mutt</i>
+<comment>[You should see your message]</comment>
+</pre>
+<p>
+By using <c>postfix check</c> we make sure that <path>main.cf</path>
+parses properly and a number of important directories are created.
+Running <c>postfix start</c> then starts the mailer, and 
+<c>newaliases</c> sets up the system mail aliases.  I then used
+<c>mutt</c> (in <c>mailx</c>, or old-fashioned <c>mail</c>, mode)
+to send a message to myself on the local machine.  Along the way
+<c>mutt</c> creates the user's (root's, in this case) mail spool
+directory, <path>~/.maildir</path>.  Running <c>mutt</c> in
+full interactive mode then showed me my message, so at least local
+sending and delivery is working.  I then sent mail to one of my
+non-local email addresses (not shown) and verified that the mail
+did, indeed, get there.
+</p>
+<note>If you send mail to an account using the default 
+<path>main.cf</path> from a machine on a private network, then
+it is possible you will never see it.  Many mail servers automatically
+reject mail coming from a source that can't be reached by reverse-DNS.
+</note>
+<p>
+Assuming everything is working, then it's time to set up postfix
+so that it starts at boot time.
+</p>
+<pre>
+# <i>postfix stop</i>
+postfix-script: starting the Postfix mail system
+# <i>rc-update add postfix</i>
+Adding postfix to runlevel 2 3 4
+# <i>/etc/rc.d/init.d/postfix start</i>
+Starting postfix......     [  ok  ]
+</pre>
+<note>Veteran <c>sendmail</c> or <c>postfix</c> junkies may
+be more used to storing mail in 
+<path>/var/spool/mail</path> instead of in the user directories,
+and that mail is then stored in <e>mbox</e> format instead of
+in <e>maildir</e> format.  It is not all that hard to reconfigure
+<c>postfix</c> and <c>mutt</c> to use the standard unix mailbox
+system (<e>mbox</e>) format instead.  Edit <path>/etc/postfix/main.cf</path>
+to comment out <i>home_mailbox</i> and uncomment
+<i>mail_spool_directory = /var/spool/mail</i>.
+Make the mail spool directory with 
+<c>mkdir -p /var/spool/mail</c> and restart <c>postfix</c>.
+That will take care of the mailer, for <c>mutt</c> you just
+have to edit <path>/etc/mutt/Muttrc</path> to use <e>mbox</e>
+with <i>set mbox_type = mbox</i> 
+and the <path>/var/spool/mail</path> directory
+with <i>set spoolfile=/var/spool/mail</i>.
+</note>
 </body>
 </section>
 </chapter>
@@ -400,7 +586,23 @@ Coming soon!
 <title>Simple printing -- PDQ</title>
 <body>
 <p>
-Coming soon!
+For simple systems where you don't need <c>samba</c>
+samba support the PDQ printing system is nice and simple.
+</p>
+<pre>
+# <i>cd /usr/portage/net-print/pdq</i>
+# <i>emerge pdq-2.2.1.ebuild</i>
+# <i>xpdq</i>
+</pre>
+<p>
+Just click on <path>Printer/Add printer</path> and add your
+printer.  If your type of printer isn't listed, see
+<uri>http://www.linuxprinting.org</uri>, and you can
+generate the required files from their web site.  You will
+want to click on "Driver options" to further finish configuring
+the printer in <c>xpdq</c>.  Any printers set up by running
+<c>xpdq</c> as root will be available to all users.  That's all
+it takes!
 </p>
 </body>
 </section>
