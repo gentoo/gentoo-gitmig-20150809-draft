@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.2_rc2.ebuild,v 1.1 2004/03/27 00:27:19 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.2.ebuild,v 1.1 2004/03/30 22:11:22 plasmaroo Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/${PV/_*//}/${
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86 ~sparc ~hppa ~alpha ~ppc"
+KEYWORDS="amd64 x86 sparc hppa alpha ppc"
 
 DEPEND="amd64? ( media-gfx/bootsplash )
 	x86? ( media-gfx/bootsplash )"
