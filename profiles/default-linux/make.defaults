@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.6 2004/12/22 14:24:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.7 2004/12/25 03:51:52 vapier Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -14,6 +14,3 @@
 
 # bitmap-fonts: build X the (upstream) default way
 USE="bitmap-fonts"
-
-# Have everyone update config.{sub,guess} by default
-FEATURES="autoconfig"
