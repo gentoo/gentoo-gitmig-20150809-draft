@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1-r2.ebuild,v 1.15 2004/09/08 03:09:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1-r2.ebuild,v 1.16 2004/10/01 00:21:04 geoman Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86 ~mips"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.0.3
