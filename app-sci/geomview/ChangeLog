@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/geomview
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/geomview/ChangeLog,v 1.3 2004/04/19 09:46:23 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/geomview/ChangeLog,v 1.4 2004/04/20 12:27:15 phosphan Exp $
+
+  20 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> geomview-1.8.1-r3.ebuild:
+  Some people seem to have problems with GL headers, adding -DGL_GLEXT_LEGACY to
+  CFLAGS. See bug #44896.
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> geomview-1.8.1-r3.ebuild:
   moved to epatch
