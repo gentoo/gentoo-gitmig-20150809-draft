@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.8 2002/06/26 20:17:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.9 2002/06/26 22:38:07 azarah Exp $
 # This eclass patches ltmain.sh distributed with libtoolized packages with the
 # relink and portage patch
 ECLASS=libtool
@@ -10,6 +10,7 @@ newdepend sys-devel/libtool
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
+ELIBTOOL_VERSION=1.8.1
 
 elibtoolize() {
 
@@ -179,7 +180,7 @@ portage_patch() {
 	patch ${opts} -p0 <<-"ENDPATCH"
 		--- ltmain.sh.orig	Wed Apr  3 01:19:37 2002
 		+++ ltmain.sh	Sun May 26 19:50:52 2002
-		@@ -3940,9 +3940,40 @@
+		@@ -3940,9 +3940,41 @@
 		 		  $echo "$modename: \`$deplib' is not a valid libtool archive" 1>&2
 		 		  exit 1
 		 		fi
@@ -199,14 +200,15 @@ portage_patch() {
 		+		fi
 		+		;;
 		+	      *)
-		+	      	if test "$installed" = yes && test "$S"; then
+		+	      	if test "$installed" = yes; then
 		+		  # We do not want portage's build root ($S) present.
-		+	          if test -n "`echo $deplib |grep -e "$S"`"
-		+		  then
+		+	          if test -n "`echo $deplib |grep -e "$S"`" && test "$S"; then
 		+		    newdependency_libs=""
 		+		  # We do not want portage's install root ($D) present.
 		+		  elif test -n "`echo $deplib |grep -e "$D"`" && test "$D"; then
 		+		    mynewdependency_lib="`echo "$deplib" |sed -e "s:$D::g" -e 's://:/:g'`"
+		+		  else
+		+		    mynewdependency_lib="$deplib"
 		+		  fi
 		+		else
 		+		  mynewdependency_lib="$deplib"
