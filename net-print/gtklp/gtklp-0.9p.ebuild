@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-0.9p.ebuild,v 1.5 2004/06/25 00:39:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-0.9p.ebuild,v 1.6 2004/07/15 03:54:32 agriffis Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gtklp.sourceforge.net"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 LICENSE="GPL-2"
-IUSE=""
+IUSE="nls ssl"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=net-print/cups-1.1.7
