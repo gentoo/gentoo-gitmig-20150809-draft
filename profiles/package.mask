@@ -710,6 +710,7 @@ gnome-extra/gnome-vfs-extras
 gnome-extra/libgnomeprint
 gnome-extra/libgnomeprintui
 gnome-extra/libgtkhtml
+gnome-extra/libgail-gnome
 x11-terms/gnome-terminal
 
 >=media-gfx/eog-0.110.0
