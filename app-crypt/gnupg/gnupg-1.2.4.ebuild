@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.5 2004/02/22 18:10:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.6 2004/02/23 12:40:00 taviso Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 # non-commercial use.
 use idea && LICENCE="${LICENCE} | IDEA"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ~amd64 ~ia64"
 IUSE="X ldap nls static caps idea"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
@@ -39,6 +39,14 @@ DEPEND="caps? ( sys-libs/libcap )
 	app-arch/bzip2
 	virtual/glibc
 	dev-lang/perl"
+
+# Certain sparc32 machines seem to have trouble building correctly with 
+# -mcpu enabled.  While this is not a gnupg problem, it is a temporary
+# fix until the gcc problem can be tracked down.
+
+if [ "${ARCH}" == "sparc" ] && [ "${PROFILE_ARCH}" == "sparc" ]; then
+	filter-flags "-mcpu=supersparc -mcpu=v8 -mcpu=v7"
+fi
 
 src_unpack() {
 	unpack ${A}
