@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/noexec
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noexec/ChangeLog,v 1.2 2004/06/24 22:19:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noexec/ChangeLog,v 1.3 2004/06/30 22:12:18 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> noexec-1.1.0.ebuild:
+  sync IUSE (missing)
 
 *noexec-1.1.0 (22 Feb 2004)
 
