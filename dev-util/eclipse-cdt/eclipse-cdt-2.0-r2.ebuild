@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt/eclipse-cdt-2.0-r2.ebuild,v 1.2 2004/08/23 00:04:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt/eclipse-cdt-2.0-r2.ebuild,v 1.3 2004/08/23 00:05:58 mr_bones_ Exp $
 
 inherit eclipse-ext
 
@@ -20,13 +20,13 @@ S=${WORKDIR}/${P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-        mkdir -p ${S}/results/eclipse-copy
-        (
-                cd ${S}/results/eclipse-copy
-                lndir -silent /usr/lib/eclipse-3
-                # getProtectionDomain().getCodeSource() my buttocks...
-                rm startup.jar ; cp /usr/lib/eclipse-3/startup.jar .
-        )
+	mkdir -p ${S}/results/eclipse-copy
+	(
+		cd ${S}/results/eclipse-copy
+		lndir -silent /usr/lib/eclipse-3
+		# getProtectionDomain().getCodeSource() my buttocks...
+		rm startup.jar ; cp /usr/lib/eclipse-3/startup.jar .
+	)
 	mkdir -p ${S}/results/final-result
 	touch ${S}/results/final-result/compilelog.txt
 
@@ -47,7 +47,7 @@ src_compile() {
 	addwrite /proc/cpuinfo
 	einfo "Building native code"
 	(
-		cd results/plugins/org.eclipse.cdt.core.linux/library || die 
+		cd results/plugins/org.eclipse.cdt.core.linux/library || die
 		make ARCH=x86 all || die "Failed to compile platform-specific code"
 	)
 	einfo "Building Java code"
@@ -62,11 +62,11 @@ src_compile() {
 }
 
 src_install() {
-        eclipse-ext_require-slot 3
+	eclipse-ext_require-slot 3
 
-        eclipse-ext_create-ext-layout source
+	eclipse-ext_create-ext-layout source
 
-        eclipse-ext_install-features results/final-result/eclipse/features/*
-        eclipse-ext_install-plugins results/final-result/eclipse/plugins/*
+	eclipse-ext_install-features results/final-result/eclipse/features/*
+	eclipse-ext_install-plugins results/final-result/eclipse/plugins/*
 }
 
