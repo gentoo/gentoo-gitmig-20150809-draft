@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/bogofilter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/ChangeLog,v 1.24 2003/12/29 20:19:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/ChangeLog,v 1.25 2004/01/07 19:30:43 seemant Exp $
+
+*bogofilter-0.15.13.1 (07 Jan 2004)
+
+  07 Jan 2004; Seemant Kulleen <seemant@gentoo.org>
+  bogofilter-0.15.13.1.ebuild, bogofilter-0.15.13.ebuild:
+  bug fix release from upstream. Thanks again to tove <bugs@veller.net> in bug
+  #36452
 
   29 Dec 2003; Seemant Kulleen <seemant@gentoo.org> bogofilter-0.15.13.ebuild:
   fixed missing header and IUSE line
