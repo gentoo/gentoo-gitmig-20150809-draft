@@ -1,0 +1,8 @@
+# ChangeLog for media-libs/tse3
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.1 2003/02/25 00:03:46 lu_zero Exp $
+
+*tse3-0.2.5 (24 Feb 2003)
+
+  24 Feb 2003; Luca Barbato <lu_zero@gentoo.org> :
+  Initial import.  Ebuild submitted by Michele Balistreri <brain87@gmx.net>.
