@@ -17,6 +17,7 @@ MD5 63c04234282e1e6cac60d7e5c33744eb exim-4.24-r3.ebuild 6338
 MD5 482c7b79ff60dfedc0e74e209390f775 exim-4.32.ebuild 7567
 MD5 5c33ac93eaeeedff608a372b506d8a32 exim-4.32-r1.ebuild 7567
 MD5 ef9b89a399a9f57e2922d6c73c425849 exim-4.33.ebuild 7567
+MD5 8804a631e3e5f24fc4dd3037b73f4e2a exim-4.33-r1.ebuild 7620
 MD5 716eeb4b64c876fe0f3e1f22a7ae2a76 exim-4.30.ebuild 6310
 MD5 68fc403ba2c98ccba281939085cb9052 files/auth_conf.sub 775
 MD5 0cb2ffe88c81fd7ac8429b5a19d58b35 files/configure 16346
@@ -48,3 +49,5 @@ MD5 11bc429bd869bdc9709fabe221ac29a7 files/digest-exim-4.30 132
 MD5 56085a2d36e00a6a48cacc7baeb5f451 files/digest-exim-4.30-r1 62
 MD5 3aebdc3dd469414ad4c1f0219c9db79a files/digest-exim-4.32-r1 132
 MD5 904b31332322109b4d2a382d6a253412 files/digest-exim-4.33 133
+MD5 5127f4b2ace5cf148e2ac21e101ac967 files/exim-4.33-r1-header-syntax.patch 1017
+MD5 904b31332322109b4d2a382d6a253412 files/digest-exim-4.33-r1 133

@@ -1,0 +1,37 @@
+*** exim-4.33/src/verify.c  Wed May  5 11:08:36 2004
+--- verify.c	Thu May  6 14:36:40 2004
+***************
+*** 1264,1282 ****
+
+      if (recipient == NULL && Ustrcmp(errmess, "empty address") != 0)
+        {
+-       uschar hname[64];
+-       uschar *t = h->text;
+-       uschar *tt = hname;
+        uschar *verb = US"is";
+        int len;
+
+-       while (*t != ':') *tt++ = *t++;
+-       *tt = 0;
+-
+        /* Arrange not to include any white space at the end in the
+        error message. */
+
+-       t = ss;
+        while (t > s && isspace(t[-1])) t--;
+
+        /* Add the address which failed to the error message, since in a
+--- 1264,1276 ----
+
+      if (recipient == NULL && Ustrcmp(errmess, "empty address") != 0)
+        {
+        uschar *verb = US"is";
++       uschar *t = ss;
+        int len;
+
+        /* Arrange not to include any white space at the end in the
+        error message. */
+
+        while (t > s && isspace(t[-1])) t--;
+
+        /* Add the address which failed to the error message, since in a
