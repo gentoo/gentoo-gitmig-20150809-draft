@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.3.ebuild,v 1.14 2005/01/02 02:13:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.6.ebuild,v 1.1 2005/01/02 02:13:45 mholzer Exp $
 
 inherit eutils
 
@@ -12,24 +12,19 @@ SRC_URI="http://web.wt.net/~billw/gkrellmss/${P}.tar.gz"
 
 DEPEND="=app-admin/gkrellm-2*
 	=sci-libs/fftw-2*
-	media-sound/esound"
+	esd? ( media-sound/esound )
+	alsa? ( media-libs/alsa-lib )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc ~alpha"
-
-src_unpack() {
-	unpack ${P}.tar.gz
-
-	cd ${S}
-	epatch ${FILESDIR}/gkrellmss-patch-2.3.diff
-}
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 src_compile() {
 	local myconf
 
 	use nls && myconf="${myconf} enable_nls=1"
 
+	addpredict /dev/snd
 	emake ${myconf} || die
 }
 
