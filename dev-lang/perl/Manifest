@@ -7,7 +7,7 @@ MD5 9eceadb989c647b4e869bcbac96e386c perl-5.8.2-r1.ebuild 9685
 MD5 2e12d1ca4fc14ee68b5727d97e73733f perl-5.8.3.ebuild 9654
 MD5 ac643921124ee8aab3a924e6803d65dd perl-5.8.4.ebuild 10452
 MD5 c9977e777888ff440301019693bae0b6 perl-5.8.4-r1.ebuild 11566
-MD5 506f0124d24226190ac831acfc55dce0 perl-5.8.5.ebuild 11444
+MD5 e7bb4863b130d4e8db0bca31c10c920e perl-5.8.5.ebuild 11490
 MD5 93155b02a7e9d3cdc6d6934ce78d9f11 files/digest-perl-5.8.4 64
 MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.4-perldoc-emptydirs.patch 489
 MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-5.8.4-picdl.patch 250
@@ -41,7 +41,7 @@ MD5 803b7c028f59008ea1e6d577e5c0bab0 files/stat.t 8884
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBMCRKHTu7gpaalycRAiD0AJ45fDYlPAgjaoAHtX0EIg9+ITWYmwCgnkmz
-MkyVA3/fxJaDBcACqZ0sLKM=
-=7Xcl
+iD8DBQFBMDKXHTu7gpaalycRAl34AKD8JdIyWbr75QeLuHuC3h79Gw3vLgCfXBVU
+0llGH6Z7q5K16gFSJWaWgc0=
+=KczY
 -----END PGP SIGNATURE-----
