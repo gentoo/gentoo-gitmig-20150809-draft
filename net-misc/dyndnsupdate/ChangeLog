@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dyndnsupdate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dyndnsupdate/ChangeLog,v 1.4 2003/02/12 08:21:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dyndnsupdate/ChangeLog,v 1.5 2003/05/25 17:34:38 taviso Exp $
+
+  25 May 2003; Tavis Ormandy <taviso@gentoo.org> dyndnsupdate-0.6.14.ebuild:
+  removing gcc hardcode
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
