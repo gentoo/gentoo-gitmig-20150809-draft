@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020826-r2.ebuild,v 1.4 2003/08/07 09:20:48 taviso Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020826-r2.ebuild,v 1.5 2003/09/07 00:45:48 msterret Exp $
 
 inherit eutils
 

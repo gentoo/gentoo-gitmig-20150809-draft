@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020401-r1.ebuild,v 1.6 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020401-r1.ebuild,v 1.7 2003/09/07 00:45:48 msterret Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${WORKDIR}/hotplug-conf/hotplug.rc hotplug
-	
+
 	insinto /etc/conf.d
 	newins ${WORKDIR}/hotplug-conf/usb.conf usb
 
