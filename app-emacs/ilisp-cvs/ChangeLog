@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/ilisp-cvs
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp-cvs/ChangeLog,v 1.1 2004/01/17 20:58:19 mkennedy Exp $
+
+*ilisp-cvs-5.12.0 (07 Jan 2004)
+
+  07 Jan 2004; <mkennedy@gentoo.org> ilisp-cvs-5.12.0.ebuild, metadata.xml,
+  files/60ilisp-cvs-gentoo.el, files/ilisp-keybindings.el, files/ilisp.asd,
+  files/ilisp.el:
+  Initial import.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
