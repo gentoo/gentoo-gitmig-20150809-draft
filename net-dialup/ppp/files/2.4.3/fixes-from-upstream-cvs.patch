@@ -2,15 +2,6 @@ Patches from upstream CVS for bug IDs 1103-1106.
 diff -Nru ppp-2.4.3.orig/pppd/auth.c ppp-2.4.3/pppd/auth.c
 --- ppp-2.4.3.orig/pppd/auth.c	2004-11-12 12:30:51.000000000 +0200
 +++ ppp-2.4.3/pppd/auth.c	2005-01-09 15:42:42.938985272 +0200
-@@ -68,7 +68,7 @@
-  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-  */
- 
--#define RCSID	"$Id: fixes-from-upstream-cvs.patch,v 1.1 2005/01/09 13:54:23 mrness Exp $"
-+#define RCSID	"$Id: fixes-from-upstream-cvs.patch,v 1.1 2005/01/09 13:54:23 mrness Exp $"
- 
- #include <stdio.h>
- #include <stddef.h>
 @@ -532,9 +532,12 @@
  link_required(unit)
      int unit;
@@ -44,15 +35,6 @@ diff -Nru ppp-2.4.3.orig/pppd/auth.c ppp-2.4.3/pppd/auth.c
 diff -Nru ppp-2.4.3.orig/pppd/options.c ppp-2.4.3/pppd/options.c
 --- ppp-2.4.3.orig/pppd/options.c	2005-01-09 15:41:20.733482408 +0200
 +++ ppp-2.4.3/pppd/options.c	2005-01-09 15:43:57.593636040 +0200
-@@ -40,7 +40,7 @@
-  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-  */
- 
--#define RCSID	"$Id: fixes-from-upstream-cvs.patch,v 1.1 2005/01/09 13:54:23 mrness Exp $"
-+#define RCSID	"$Id: fixes-from-upstream-cvs.patch,v 1.1 2005/01/09 13:54:23 mrness Exp $"
- 
- #include <ctype.h>
- #include <stdio.h>
 @@ -58,12 +58,12 @@
  #ifdef PPP_FILTER
  #include <pcap.h>
@@ -106,15 +88,6 @@ diff -Nru ppp-2.4.3.orig/pppd/options.c ppp-2.4.3/pppd/options.c
 diff -Nru ppp-2.4.3.orig/pppd/tty.c ppp-2.4.3/pppd/tty.c
 --- ppp-2.4.3.orig/pppd/tty.c	2004-11-13 14:07:29.000000000 +0200
 +++ ppp-2.4.3/pppd/tty.c	2005-01-09 15:42:42.937985424 +0200
-@@ -68,7 +68,7 @@
-  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-  */
- 
--#define RCSID	"$Id: fixes-from-upstream-cvs.patch,v 1.1 2005/01/09 13:54:23 mrness Exp $"
-+#define RCSID	"$Id: fixes-from-upstream-cvs.patch,v 1.1 2005/01/09 13:54:23 mrness Exp $"
- 
- #include <stdio.h>
- #include <ctype.h>
 @@ -755,14 +755,6 @@
  		close(pty_master);
  		pty_master = -1;

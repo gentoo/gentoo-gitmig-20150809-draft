@@ -53,14 +53,14 @@ MD5 636e57af528015248a294a363a4ecaf8 files/2.4.3/confd.ppp0 2781
 MD5 fa2a5b8df496922fa2fb592115953b6b files/2.4.3/options-pppoe 53
 MD5 561a149f78198208724ab4527837eb8c files/2.4.3/mpls.patch 10470
 MD5 46f07887363e6b1cf7ae30e522bf4eeb files/2.4.3/net.ppp0 4414
-MD5 d4ab907865c5df0cc25eaf8fa42dedf3 files/2.4.3/fixes-from-upstream-cvs.patch 3832
+MD5 d166dfb51a6e7fa6a5a05120817dbccd files/2.4.3/fixes-from-upstream-cvs.patch 2862
 MD5 5d83af7b897082a0b1ecd70a2cc2a0c7 files/2.4.3/modules.ppp 268
 MD5 05cb3f055d11109381811e26568a9b30 files/2.4.3/ip-down 734
 MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/2.4.3/pppoe.html 7605
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB4TeZjiC39V7gKu0RAiB7AJwOrK9IpKUw/tM9cCqfDaPqjYJLWwCfYb1u
-knWbNpnHDiAFoeagGzJd89g=
-=/9DV
+iD8DBQFB4cufjiC39V7gKu0RAhOKAJ9Kuy5r3lCpIUEBhQKcXBamTXX2BwCfSLTH
+oWF3XACH+q1iZ/Xvz4N8d1A=
+=9OOg
 -----END PGP SIGNATURE-----
