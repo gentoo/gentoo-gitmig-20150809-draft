@@ -28,7 +28,7 @@
 
 # <verwilst@gentoo.org> (28 Jul 2002)
 # stupid thing can't find a c++ compiler half the time
->=sys-apps/groff-1.1.17
+>=sys-apps/groff-1.17
 
 
 # <blizzy@gentoo.org> (28 Jul 2002)
