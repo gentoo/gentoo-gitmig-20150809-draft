@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-1.0.1.ebuild,v 1.5 2004/06/24 23:02:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-1.0.1.ebuild,v 1.6 2004/10/03 07:08:40 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -29,6 +29,18 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.17"
 
 DOCS="AUTHORS ChangeLog NEWS README* TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# bug #66142
+	sed -i \
+		-e 's/default:/default:;/' src/goal-view.c \
+		|| die "sed failed"
+	sed -i \
+		-e 's/games.games/games:games/' Makefile.in \
+		|| die "sed failed"
+}
 
 src_compile() {
 	# Seems to fix the infamous "OrigTree module" bug
