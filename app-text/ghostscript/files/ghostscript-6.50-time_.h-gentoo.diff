@@ -1,0 +1,13 @@
+--- src/time_.h~	Tue Sep 19 21:00:51 2000
++++ src/time_.h	Mon Mar  5 06:16:46 2001
+@@ -38,9 +38,7 @@
+  */
+ #ifdef HAVE_SYS_TIME_H
+ #  include <sys/time.h>
+-#  if defined(Plan9) || defined(M_UNIX) || defined(_IBMR2) || defined(_SEQUENT_)	/* Plan 9, SCO, AIX and Sequent's DYNIX/ptx need both time.h and sys/time.h! */
+-#    include <time.h>
+-#  endif
++#  include <time.h>
+ #else
+ #  include <time.h>
+ #  ifndef __DECC

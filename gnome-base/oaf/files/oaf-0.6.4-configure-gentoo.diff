@@ -1,0 +1,3139 @@
+diff -r -u oaf-0.6.4.orig/Makefile.in oaf-0.6.4/Makefile.in
+--- oaf-0.6.4.orig/Makefile.in	Tue Feb 27 07:05:15 2001
++++ oaf-0.6.4/Makefile.in	Mon Mar  5 03:28:35 2001
+@@ -1,6 +1,7 @@
+-# Makefile.in generated automatically by automake 1.4 from Makefile.am
++# Makefile.in generated automatically by automake 1.4d from Makefile.am
+ 
+-# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
++# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001
++# Free Software Foundation, Inc.
+ # This Makefile.in is free software; the Free Software Foundation
+ # gives unlimited permission to copy and/or distribute it,
+ # with or without modifications, as long as this notice is preserved.
+@@ -10,7 +11,6 @@
+ # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ # PARTICULAR PURPOSE.
+ 
+-
+ SHELL = @SHELL@
+ 
+ srcdir = @srcdir@
+@@ -32,8 +32,6 @@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+ 
+-DESTDIR =
+-
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+@@ -46,9 +44,11 @@
+ AUTOHEADER = @AUTOHEADER@
+ 
+ INSTALL = @INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
++INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_STRIP_FLAG =
++INSTALL_HEADER = $(INSTALL_DATA)
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = :
+@@ -57,6 +57,8 @@
+ NORMAL_UNINSTALL = :
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
++
++@SET_MAKE@
+ host_alias = @host_alias@
+ host_triplet = @host@
+ APP_LIBS = @APP_LIBS@
+@@ -112,18 +114,49 @@
+ YACC = @YACC@
+ l = @l@
+ 
++
+ NULL = 
+ 
+-SUBDIRS =  	po 			intl 			docs 			idl 			liboaf 			api-docs		oafd 			utils 			test			$(NULL)
++SUBDIRS = \
++	po 		\
++	intl 		\
++	docs 		\
++	idl 		\
++	liboaf 		\
++	api-docs	\
++	oafd 		\
++	utils 		\
++	test		\
++	$(NULL)
+ 
+ 
+ bin_SCRIPTS = oaf-config
+ 
+-EXTRA_DIST =  	oaf-config.in					oaf.m4						oafConf.sh.in					oafConf.sh					oaf.spec.in					oaf-config.xml					oaf-config.xml.sample				oaf.spec					xml-i18n-extract.in				xml-i18n-merge.in				xml-i18n-update.in				AUTHORS						COPYING						ChangeLog					NEWS						README						$(NULL)
++EXTRA_DIST = \
++	oaf-config.in				\
++	oaf.m4					\
++	oafConf.sh.in				\
++	oafConf.sh				\
++	oaf.spec.in				\
++	oaf-config.xml				\
++	oaf-config.xml.sample			\
++	oaf.spec				\
++	xml-i18n-extract.in			\
++	xml-i18n-merge.in			\
++	xml-i18n-update.in			\
++	AUTHORS					\
++	COPYING					\
++	ChangeLog				\
++	NEWS					\
++	README					\
++	$(NULL)
+ 
+ 
+ oafconfigdir = $(sysconfdir)/oaf
+-oafconfig_DATA =  	oaf-config.xml			oaf-config.xml.sample		$(NULL)
++oafconfig_DATA = \
++	oaf-config.xml		\
++	oaf-config.xml.sample	\
++	$(NULL)
+ 
+ 
+ confexecdir = $(libdir)
+@@ -131,12 +164,14 @@
+ 
+ m4datadir = $(datadir)/aclocal
+ m4data_DATA = oaf.m4
++subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = config.h
+-CONFIG_CLEAN_FILES =  oaf.spec oaf-config oafConf.sh
++CONFIG_CLEAN_FILES =  oaf.spec intl/Makefile oaf-config oafConf.sh
+ SCRIPTS =  $(bin_SCRIPTS)
+ 
++DIST_SOURCES = 
+ DATA =  $(confexec_DATA) $(m4data_DATA) $(oafconfig_DATA)
+ 
+ DIST_COMMON =  README ./stamp-h.in ABOUT-NLS AUTHORS COPYING COPYING.LIB \
+@@ -146,18 +181,18 @@
+ oaf-config.in oaf.spec.in oafConf.sh.in
+ 
+ 
+-DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
++DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = tar
+ GZIP_ENV = --best
++DIST_SUBDIRS =  $(SUBDIRS)
+ all: all-redirect
+ .SUFFIXES:
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps Makefile
++	cd $(top_srcdir) && $(AUTOMAKE) --gnu Makefile
+ 
+ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) \
+-	  && CONFIG_FILES=$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	  && CONFIG_FILES=$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ 
+ $(ACLOCAL_M4): @MAINTAINER_MODE_TRUE@ configure.in  acinclude.m4
+ 	cd $(srcdir) && $(ACLOCAL)
+@@ -173,108 +208,108 @@
+ 		$(MAKE) stamp-h; \
+ 	else :; fi
+ stamp-h: $(srcdir)/config.h.in $(top_builddir)/config.status
++	@rm -f stamp-h stamp-hT
++	@echo timestamp > stamp-hT 2> /dev/null
+ 	cd $(top_builddir) \
+ 	  && CONFIG_FILES= CONFIG_HEADERS=config.h \
+ 	     $(SHELL) ./config.status
+-	@echo timestamp > stamp-h 2> /dev/null
+-$(srcdir)/config.h.in: @MAINTAINER_MODE_TRUE@$(srcdir)/stamp-h.in
++	@mv stamp-hT stamp-h
++$(srcdir)/config.h.in: @MAINTAINER_MODE_TRUE@$(srcdir)/./stamp-h.in
+ 	@if test ! -f $@; then \
+-		rm -f $(srcdir)/stamp-h.in; \
+-		$(MAKE) $(srcdir)/stamp-h.in; \
++		rm -f $(srcdir)/./stamp-h.in; \
++		$(MAKE) $(srcdir)/./stamp-h.in; \
+ 	else :; fi
+-$(srcdir)/stamp-h.in: $(top_srcdir)/configure.in $(ACLOCAL_M4) acconfig.h
++$(srcdir)/./stamp-h.in: $(top_srcdir)/configure.in $(ACLOCAL_M4) acconfig.h
++	@rm -f $(srcdir)/./stamp-h.in $(srcdir)/./stamp-h.inT
++	@echo timestamp > $(srcdir)/./stamp-h.inT 2> /dev/null
+ 	cd $(top_srcdir) && $(AUTOHEADER)
+-	@echo timestamp > $(srcdir)/stamp-h.in 2> /dev/null
+-
+-mostlyclean-hdr:
+-
+-clean-hdr:
++	@mv $(srcdir)/./stamp-h.inT $(srcdir)/./stamp-h.in
+ 
+ distclean-hdr:
+ 	-rm -f config.h
+-
+-maintainer-clean-hdr:
+ oaf.spec: $(top_builddir)/config.status oaf.spec.in
+-	cd $(top_builddir) && CONFIG_FILES=$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	cd $(top_builddir) && CONFIG_FILES=$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
++intl/Makefile: $(top_builddir)/config.status $(top_srcdir)/intl/Makefile.in
++	cd $(top_builddir) && CONFIG_FILES=$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ oaf-config: $(top_builddir)/config.status oaf-config.in
+-	cd $(top_builddir) && CONFIG_FILES=$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	cd $(top_builddir) && CONFIG_FILES=$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ oafConf.sh: $(top_builddir)/config.status oafConf.sh.in
+-	cd $(top_builddir) && CONFIG_FILES=$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	cd $(top_builddir) && CONFIG_FILES=$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ 
+ install-binSCRIPTS: $(bin_SCRIPTS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	@list='$(bin_SCRIPTS)'; for p in $$list; do \
++	  f="`echo $$p|sed '$(transform)'`"; \
+ 	  if test -f $$p; then \
+-	    echo " $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`"; \
+-	    $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
+-	  else if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`"; \
+-	    $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
+-	  else :; fi; fi; \
++	    echo " $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/$$f"; \
++	    $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/$$f; \
++	  elif test -f $(srcdir)/$$p; then \
++	    echo " $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/$$f"; \
++	    $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/$$f; \
++	  else :; fi; \
+ 	done
+ 
+ uninstall-binSCRIPTS:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(bin_SCRIPTS)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
++	@list='$(bin_SCRIPTS)'; for p in $$list; do \
++	  f="`echo $$p|sed '$(transform)'`"; \
++	  echo " rm -f $(DESTDIR)$(bindir)/$$f"; \
++	  rm -f $(DESTDIR)$(bindir)/$$f; \
+ 	done
+ 
+ install-confexecDATA: $(confexec_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(confexecdir)
+ 	@list='$(confexec_DATA)'; for p in $$list; do \
+-	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(confexecdir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(confexecdir)/$$p; \
+-	  else if test -f $$p; then \
+-	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(confexecdir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(confexecdir)/$$p; \
+-	  fi; fi; \
++	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(confexecdir)/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(confexecdir)/$$f; \
+ 	done
+ 
+ uninstall-confexecDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(confexec_DATA)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(confexecdir)/$$p; \
++	@list='$(confexec_DATA)'; for p in $$list; do \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " rm -f $(DESTDIR)$(confexecdir)/$$f"; \
++	  rm -f $(DESTDIR)$(confexecdir)/$$f; \
+ 	done
+ 
+ install-m4dataDATA: $(m4data_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(m4datadir)
+ 	@list='$(m4data_DATA)'; for p in $$list; do \
+-	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(m4datadir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(m4datadir)/$$p; \
+-	  else if test -f $$p; then \
+-	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(m4datadir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(m4datadir)/$$p; \
+-	  fi; fi; \
++	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(m4datadir)/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(m4datadir)/$$f; \
+ 	done
+ 
+ uninstall-m4dataDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(m4data_DATA)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(m4datadir)/$$p; \
++	@list='$(m4data_DATA)'; for p in $$list; do \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " rm -f $(DESTDIR)$(m4datadir)/$$f"; \
++	  rm -f $(DESTDIR)$(m4datadir)/$$f; \
+ 	done
+ 
+ install-oafconfigDATA: $(oafconfig_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(oafconfigdir)
+ 	@list='$(oafconfig_DATA)'; for p in $$list; do \
+-	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(oafconfigdir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(oafconfigdir)/$$p; \
+-	  else if test -f $$p; then \
+-	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(oafconfigdir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(oafconfigdir)/$$p; \
+-	  fi; fi; \
++	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(oafconfigdir)/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(oafconfigdir)/$$f; \
+ 	done
+ 
+ uninstall-oafconfigDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(oafconfig_DATA)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(oafconfigdir)/$$p; \
++	@list='$(oafconfig_DATA)'; for p in $$list; do \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " rm -f $(DESTDIR)$(oafconfigdir)/$$f"; \
++	  rm -f $(DESTDIR)$(oafconfigdir)/$$f; \
+ 	done
+ 
+ # This directory's subdirectories are mostly independent; you can cd
+@@ -283,9 +318,6 @@
+ # (1) if the variable is set in `config.status', edit `config.status'
+ #     (which will cause the Makefiles to be regenerated when you run `make');
+ # (2) otherwise, pass the desired values on the `make' command line.
+-
+-@SET_MAKE@
+-
+ all-recursive install-data-recursive install-exec-recursive \
+ installdirs-recursive install-recursive uninstall-recursive  \
+ check-recursive installcheck-recursive info-recursive dvi-recursive:
+@@ -311,11 +343,16 @@
+ maintainer-clean-recursive:
+ 	@set fnord $(MAKEFLAGS); amf=$$2; \
+ 	dot_seen=no; \
+-	rev=''; list='$(SUBDIRS)'; for subdir in $$list; do \
+-	  rev="$$subdir $$rev"; \
+-	  test "$$subdir" = "." && dot_seen=yes; \
++	case "$@" in \
++	  distclean-* | maintainer-clean-*) list='$(DIST_SUBDIRS)' ;; \
++	  *) list='$(SUBDIRS)' ;; \
++	esac; \
++	rev=''; for subdir in $$list; do \
++	  if test "$$subdir" = "."; then :; else \
++	    rev="$$subdir $$rev"; \
++	  fi; \
+ 	done; \
+-	test "$$dot_seen" = "no" && rev=". $$rev"; \
++	rev="$$rev ."; \
+ 	target=`echo $@ | sed s/-recursive//`; \
+ 	for subdir in $$rev; do \
+ 	  echo "Making $$target in $$subdir"; \
+@@ -334,15 +371,17 @@
+ 
+ tags: TAGS
+ 
+-ID: $(HEADERS) $(SOURCES) $(LISP)
+-	list='$(SOURCES) $(HEADERS)'; \
+-	unique=`for i in $$list; do echo $$i; done | \
+-	  awk '    { files[$$0] = 1; } \
++ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
++	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
++	unique=`for i in $$list; do \
++	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
++	  done | \
++	  $(AWK) '    { files[$$0] = 1; } \
+ 	       END { for (i in files) print i; }'`; \
+-	here=`pwd` && cd $(srcdir) \
+-	  && mkid -f$$here/ID $$unique $(LISP)
++	mkid -fID $$unique $(LISP)
+ 
+-TAGS: tags-recursive $(HEADERS) $(SOURCES) config.h.in $(TAGS_DEPENDENCIES) $(LISP)
++TAGS: tags-recursive $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
++		$(TAGS_FILES) $(LISP)
+ 	tags=; \
+ 	here=`pwd`; \
+ 	list='$(SUBDIRS)'; for subdir in $$list; do \
+@@ -350,68 +389,87 @@
+ 	    test -f $$subdir/TAGS && tags="$$tags -i $$here/$$subdir/TAGS"; \
+    fi; \
+ 	done; \
+-	list='$(SOURCES) $(HEADERS)'; \
+-	unique=`for i in $$list; do echo $$i; done | \
+-	  awk '    { files[$$0] = 1; } \
++	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
++	unique=`for i in $$list; do \
++	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
++	  done | \
++	  $(AWK) '    { files[$$0] = 1; } \
+ 	       END { for (i in files) print i; }'`; \
+-	test -z "$(ETAGS_ARGS)config.h.in$$unique$(LISP)$$tags" \
+-	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags config.h.in $$unique $(LISP) -o $$here/TAGS)
++	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
++	  || etags $(ETAGS_ARGS) $$tags  $$unique $(LISP)
+ 
+-mostlyclean-tags:
+-
+-clean-tags:
++GTAGS:
++	here=`CDPATH=: && cd $(top_builddir) && pwd` \
++	  && cd $(top_srcdir) \
++	  && gtags -i $$here
+ 
+ distclean-tags:
+ 	-rm -f TAGS ID
+ 
+-maintainer-clean-tags:
+-
+ distdir = $(PACKAGE)-$(VERSION)
+ top_distdir = $(distdir)
+ 
++
+ # This target untars the dist file and tries a VPATH configuration.  Then
+ # it guarantees that the distribution is self-contained by making another
+ # tarfile.
+ distcheck: dist
+-	-rm -rf $(distdir)
+-	GZIP=$(GZIP_ENV) $(TAR) zxf $(distdir).tar.gz
++	-chmod -R a+w $(distdir) > /dev/null 2>&1; rm -rf $(distdir)
++	GZIP=$(GZIP_ENV) gunzip -c $(distdir).tar.gz | $(AMTAR) xf -
++	chmod -R a-w $(distdir); chmod a+w $(distdir)
+ 	mkdir $(distdir)/=build
+ 	mkdir $(distdir)/=inst
+-	dc_install_base=`cd $(distdir)/=inst && pwd`; \
+-	cd $(distdir)/=build \
++	chmod a-w $(distdir)
++	dc_install_base=`CDPATH=: && cd $(distdir)/=inst && pwd` \
++	  && cd $(distdir)/=build \
+ 	  && ../configure --srcdir=.. --prefix=$$dc_install_base \
+ 	  && $(MAKE) $(AM_MAKEFLAGS) \
+ 	  && $(MAKE) $(AM_MAKEFLAGS) dvi \
+ 	  && $(MAKE) $(AM_MAKEFLAGS) check \
+ 	  && $(MAKE) $(AM_MAKEFLAGS) install \
+ 	  && $(MAKE) $(AM_MAKEFLAGS) installcheck \
+-	  && $(MAKE) $(AM_MAKEFLAGS) dist
+-	-rm -rf $(distdir)
++	  && $(MAKE) $(AM_MAKEFLAGS) uninstall \
++	  && test `find $$dc_install_base -type f -print | wc -l` -le 1 \
++	  && $(MAKE) $(AM_MAKEFLAGS) dist \
++	  && $(MAKE) $(AM_MAKEFLAGS) distclean \
++	  && rm -f $(distdir).tar.gz \
++	  && test `find . -type f -print | wc -l` -eq 0
++	-chmod -R a+w $(distdir) > /dev/null 2>&1; rm -rf $(distdir)
+ 	@banner="$(distdir).tar.gz is ready for distribution"; \
+ 	dashes=`echo "$$banner" | sed s/./=/g`; \
+ 	echo "$$dashes"; \
+ 	echo "$$banner"; \
+ 	echo "$$dashes"
+ dist: distdir
+-	-chmod -R a+r $(distdir)
+-	GZIP=$(GZIP_ENV) $(TAR) chozf $(distdir).tar.gz $(distdir)
+-	-rm -rf $(distdir)
++	-find $(distdir) -type d ! -perm -777 -exec chmod a+rwx {} \; -o \
++	  ! -type d ! -perm -444 -links 1 -exec chmod a+r {} \; -o \
++	  ! -type d ! -perm -400 -exec chmod a+r {} \; -o \
++	  ! -type d ! -perm -444 -exec $(SHELL) $(install_sh) -c -m a+r {} {} \; \
++	|| chmod -R a+r $(distdir)
++	$(AMTAR) chof - $(distdir) | GZIP=$(GZIP_ENV) gzip -c > $(distdir).tar.gz
++	-chmod -R a+w $(distdir) > /dev/null 2>&1; rm -rf $(distdir)
+ dist-all: distdir
+-	-chmod -R a+r $(distdir)
+-	GZIP=$(GZIP_ENV) $(TAR) chozf $(distdir).tar.gz $(distdir)
+-	-rm -rf $(distdir)
++	-find $(distdir) -type d ! -perm -777 -exec chmod a+rwx {} \; -o \
++	  ! -type d ! -perm -444 -links 1 -exec chmod a+r {} \; -o \
++	  ! -type d ! -perm -400 -exec chmod a+r {} \; -o \
++	  ! -type d ! -perm -444 -exec $(SHELL) $(install_sh) -c -m a+r {} {} \; \
++	|| chmod -R a+r $(distdir)
++	$(AMTAR) chof - $(distdir) | GZIP=$(GZIP_ENV) gzip -c > $(distdir).tar.gz
++	-chmod -R a+w $(distdir) > /dev/null 2>&1; rm -rf $(distdir)
++
+ distdir: $(DISTFILES)
+-	-rm -rf $(distdir)
++	-chmod -R a+w $(distdir) > /dev/null 2>&1; rm -rf $(distdir)
+ 	mkdir $(distdir)
+-	-chmod 777 $(distdir)
++	$(mkinstalldirs) $(distdir)/. $(distdir)/intl $(distdir)/liboaf $(distdir)/po . intl liboaf po
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+-	    cp -pr $$d/$$file $(distdir)/$$file; \
++	    cp -pR $$d/$$file $(distdir) \
++	    || exit 1; \
+ 	  else \
+ 	    test -f $(distdir)/$$file \
+-	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-	    || cp -p $$d/$$file $(distdir)/$$file || :; \
++	    || cp -p $$d/$$file $(distdir)/$$file \
++	    || exit 1; \
+ 	  fi; \
+ 	done
+ 	for subdir in $(SUBDIRS); do \
+@@ -419,8 +477,8 @@
+ 	    test -d $(distdir)/$$subdir \
+ 	    || mkdir $(distdir)/$$subdir \
+ 	    || exit 1; \
+-	    chmod 777 $(distdir)/$$subdir; \
+-	    (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) top_distdir=../$(distdir) distdir=../$(distdir)/$$subdir distdir) \
++	    (cd $$subdir && \
++	      $(MAKE) $(AM_MAKEFLAGS) top_distdir=../$(distdir) distdir=../$(distdir)/$$subdir distdir) \
+ 	      || exit 1; \
+ 	  fi; \
+ 	done
+@@ -432,7 +490,7 @@
+ check: check-recursive
+ installcheck-am:
+ installcheck: installcheck-recursive
+-all-recursive-am: config.h
++all-redirect: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
+ install-exec-am: install-binSCRIPTS install-confexecDATA
+@@ -448,9 +506,8 @@
+ 		uninstall-m4dataDATA uninstall-oafconfigDATA
+ uninstall: uninstall-recursive
+ all-am: Makefile $(SCRIPTS) $(DATA) config.h
+-all-redirect: all-recursive-am
+ install-strip:
+-	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
++	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
+ installdirs: installdirs-recursive
+ installdirs-am:
+ 	$(mkinstalldirs)  $(DESTDIR)$(bindir) $(DESTDIR)$(confexecdir) \
+@@ -466,43 +523,42 @@
+ 	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+ 
+ maintainer-clean-generic:
+-mostlyclean-am:  mostlyclean-hdr mostlyclean-tags mostlyclean-generic
+-
+-mostlyclean: mostlyclean-recursive
+-
+-clean-am:  clean-hdr clean-tags clean-generic mostlyclean-am
+-
++	@echo "This command is intended for maintainers to use"
++	@echo "it deletes files that may require special tools to rebuild."
++	-rm -f Makefile.in
+ clean: clean-recursive
+ 
+-distclean-am:  distclean-hdr distclean-tags distclean-generic clean-am
+-	-rm -f libtool
++clean-am: clean-generic mostlyclean-am
+ 
+ distclean: distclean-recursive
+ 	-rm -f config.status
+ 
+-maintainer-clean-am:  maintainer-clean-hdr maintainer-clean-tags \
+-		maintainer-clean-generic distclean-am
+-	@echo "This command is intended for maintainers to use;"
+-	@echo "it deletes files that may require special tools to rebuild."
++distclean-am: clean-am distclean-generic distclean-hdr distclean-tags
+ 
+ maintainer-clean: maintainer-clean-recursive
+ 	-rm -f config.status
+ 
+-.PHONY: mostlyclean-hdr distclean-hdr clean-hdr maintainer-clean-hdr \
+-uninstall-binSCRIPTS install-binSCRIPTS uninstall-confexecDATA \
+-install-confexecDATA uninstall-m4dataDATA install-m4dataDATA \
+-uninstall-oafconfigDATA install-oafconfigDATA install-data-recursive \
+-uninstall-data-recursive install-exec-recursive \
+-uninstall-exec-recursive installdirs-recursive uninstalldirs-recursive \
+-all-recursive check-recursive installcheck-recursive info-recursive \
+-dvi-recursive mostlyclean-recursive distclean-recursive clean-recursive \
+-maintainer-clean-recursive tags tags-recursive mostlyclean-tags \
+-distclean-tags clean-tags maintainer-clean-tags distdir info-am info \
+-dvi-am dvi check check-am installcheck-am installcheck all-recursive-am \
+-install-exec-am install-exec install-data-am install-data install-am \
+-install uninstall-am uninstall all-redirect all-am all installdirs-am \
+-installdirs mostlyclean-generic distclean-generic clean-generic \
+-maintainer-clean-generic clean mostlyclean distclean maintainer-clean
++maintainer-clean-am: distclean-am maintainer-clean-generic
++
++mostlyclean: mostlyclean-recursive
++
++mostlyclean-am: mostlyclean-generic
++
++.PHONY: all-recursive all-redirect check check-am check-recursive clean \
++	clean-generic clean-recursive distclean distclean-generic \
++	distclean-hdr distclean-recursive distclean-tags distdir dvi \
++	dvi-am dvi-recursive info info-am info-recursive install \
++	install-am install-binSCRIPTS install-confexecDATA install-data \
++	install-data-am install-data-recursive install-exec \
++	install-exec-am install-exec-recursive install-m4dataDATA \
++	install-oafconfigDATA install-recursive install-strip \
++	installcheck installcheck-am installcheck-recursive installdirs \
++	installdirs-am installdirs-recursive maintainer-clean \
++	maintainer-clean-generic maintainer-clean-recursive mostlyclean \
++	mostlyclean-generic mostlyclean-recursive tags tags-recursive \
++	uninstall uninstall-am uninstall-binSCRIPTS \
++	uninstall-confexecDATA uninstall-m4dataDATA \
++	uninstall-oafconfigDATA uninstall-recursive
+ 
+ 
+ #dist-hook: oaf.spec
+diff -r -u oaf-0.6.4.orig/aclocal.m4 oaf-0.6.4/aclocal.m4
+--- oaf-0.6.4.orig/aclocal.m4	Tue Feb 27 07:03:52 2001
++++ oaf-0.6.4/aclocal.m4	Mon Mar  5 03:28:29 2001
+@@ -1019,7 +1019,7 @@
+ XML_I18N_UPDATE='$(top_builddir)/xml-i18n-update'
+ AC_SUBST(XML_I18N_UPDATE)dnl
+ 
+-AC_PATH_PROG(XML_I18N_TOOLS_PERL, perl5.00404)
++AC_PATH_PROG(XML_I18N_TOOLS_PERL, perl5.6.0)
+ if test -z "$XML_I18N_TOOLS_PERL"; then
+    AC_MSG_ERROR([perl not found; required for xml-i18n-tools])
+ fi
+diff -r -u oaf-0.6.4.orig/api-docs/Makefile.in oaf-0.6.4/api-docs/Makefile.in
+--- oaf-0.6.4.orig/api-docs/Makefile.in	Tue Feb 27 07:05:30 2001
++++ oaf-0.6.4/api-docs/Makefile.in	Mon Mar  5 03:28:36 2001
+@@ -1,6 +1,7 @@
+-# Makefile.in generated automatically by automake 1.4 from Makefile.am
++# Makefile.in generated automatically by automake 1.4d from Makefile.am
+ 
+-# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
++# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001
++# Free Software Foundation, Inc.
+ # This Makefile.in is free software; the Free Software Foundation
+ # gives unlimited permission to copy and/or distribute it,
+ # with or without modifications, as long as this notice is preserved.
+@@ -10,7 +11,6 @@
+ # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ # PARTICULAR PURPOSE.
+ 
+-
+ SHELL = @SHELL@
+ 
+ srcdir = @srcdir@
+@@ -32,8 +32,6 @@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+ 
+-DESTDIR =
+-
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+@@ -46,9 +44,11 @@
+ AUTOHEADER = @AUTOHEADER@
+ 
+ INSTALL = @INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
++INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_STRIP_FLAG =
++INSTALL_HEADER = $(INSTALL_DATA)
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = :
+@@ -57,6 +57,8 @@
+ NORMAL_UNINSTALL = :
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
++
++@SET_MAKE@
+ host_alias = @host_alias@
+ host_triplet = @host@
+ APP_LIBS = @APP_LIBS@
+@@ -112,6 +114,7 @@
+ YACC = @YACC@
+ l = @l@
+ 
++
+ NULL = 
+ 
+ # The name of the module.
+@@ -127,57 +130,79 @@
+ 
+ TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
+ 
+-tmpl_sources =  	tmpl/utilities.sgml			tmpl/initialization.sgml		tmpl/query.sgml				tmpl/registration.sgml			tmpl/debugging.sgml			$(NULL)
++tmpl_sources = \
++	tmpl/utilities.sgml		\
++	tmpl/initialization.sgml	\
++	tmpl/query.sgml			\
++	tmpl/registration.sgml		\
++	tmpl/debugging.sgml		\
++	$(NULL)
+ 
+ 
+ liboaf_docdir = $(HTML_DIR)
+-liboaf_doc_DATA =  	liboaf.html				$(NULL)
+-
+-
+-my_sgml_files =  	tutorial.sgml				migrating.sgml				oafinfo-ref.sgml			configuring.sgml			query-langage.sgml			architecture.sgml			liboaf.sgml				fdl.sgml				$(NULL)
+-
+-
+-EXTRA_DIST =  	$(my_sgml_files)		oaf.png				liboaf-decl.txt			liboaf-sections.txt		$(NULL)
++liboaf_doc_DATA = \
++	liboaf.html			\
++	$(NULL)
++
++
++my_sgml_files = \
++	tutorial.sgml			\
++	migrating.sgml			\
++	oafinfo-ref.sgml		\
++	configuring.sgml		\
++	query-langage.sgml		\
++	architecture.sgml		\
++	liboaf.sgml			\
++	fdl.sgml			\
++	$(NULL)
++
++
++EXTRA_DIST = \
++	$(my_sgml_files)	\
++	oaf.png			\
++	liboaf-decl.txt		\
++	liboaf-sections.txt	\
++	$(NULL)
+ 
++subdir = api-docs
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
++DIST_SOURCES = 
+ DATA =  $(liboaf_doc_DATA)
+ 
+ DIST_COMMON =  Makefile.am Makefile.in
+ 
+ 
+-DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
++DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = tar
+ GZIP_ENV = --best
+-all: all-redirect
++all: all-am
+ .SUFFIXES:
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps api-docs/Makefile
++	cd $(top_srcdir) && $(AUTOMAKE) --gnu api-docs/Makefile
+ 
+ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) \
+-	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ 
+ 
+ install-liboaf_docDATA: $(liboaf_doc_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(liboaf_docdir)
+ 	@list='$(liboaf_doc_DATA)'; for p in $$list; do \
+-	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(liboaf_docdir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(liboaf_docdir)/$$p; \
+-	  else if test -f $$p; then \
+-	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(liboaf_docdir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(liboaf_docdir)/$$p; \
+-	  fi; fi; \
++	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(liboaf_docdir)/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(liboaf_docdir)/$$f; \
+ 	done
+ 
+ uninstall-liboaf_docDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(liboaf_doc_DATA)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(liboaf_docdir)/$$p; \
++	@list='$(liboaf_doc_DATA)'; for p in $$list; do \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " rm -f $(DESTDIR)$(liboaf_docdir)/$$f"; \
++	  rm -f $(DESTDIR)$(liboaf_docdir)/$$f; \
+ 	done
+ tags: TAGS
+ TAGS:
+@@ -185,17 +210,17 @@
+ 
+ distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
+ 
+-subdir = api-docs
+ 
+ distdir: $(DISTFILES)
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+-	    cp -pr $$d/$$file $(distdir)/$$file; \
++	    cp -pR $$d/$$file $(distdir) \
++	    || exit 1; \
+ 	  else \
+ 	    test -f $(distdir)/$$file \
+-	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-	    || cp -p $$d/$$file $(distdir)/$$file || :; \
++	    || cp -p $$d/$$file $(distdir)/$$file \
++	    || exit 1; \
+ 	  fi; \
+ 	done
+ 	$(MAKE) $(AM_MAKEFLAGS) top_distdir="$(top_distdir)" distdir="$(distdir)" dist-hook
+@@ -219,9 +244,8 @@
+ uninstall-am: uninstall-liboaf_docDATA
+ uninstall: uninstall-am
+ all-am: Makefile $(DATA)
+-all-redirect: all-am
+ install-strip:
+-	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
++	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
+ installdirs:
+ 	$(mkinstalldirs)  $(DESTDIR)$(liboaf_docdir)
+ 
+@@ -235,33 +259,33 @@
+ 	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+ 
+ maintainer-clean-generic:
+-mostlyclean-am:  mostlyclean-generic
+-
+-mostlyclean: mostlyclean-am
+-
+-clean-am:  clean-generic mostlyclean-am clean-local
+-
++	@echo "This command is intended for maintainers to use"
++	@echo "it deletes files that may require special tools to rebuild."
++	-rm -f Makefile.in
+ clean: clean-am
+ 
+-distclean-am:  distclean-generic clean-am
+-	-rm -f libtool
++clean-am: clean-generic clean-local mostlyclean-am
+ 
+ distclean: distclean-am
+ 
+-maintainer-clean-am:  maintainer-clean-generic distclean-am \
+-		maintainer-clean-local
+-	@echo "This command is intended for maintainers to use;"
+-	@echo "it deletes files that may require special tools to rebuild."
++distclean-am: clean-am distclean-generic
+ 
+ maintainer-clean: maintainer-clean-am
+ 
+-.PHONY: uninstall-liboaf_docDATA install-liboaf_docDATA tags distdir \
+-info-am info dvi-am dvi check check-am installcheck-am installcheck \
+-install-exec-am install-exec install-data-local install-data-am \
+-install-data install-am install uninstall-am uninstall all-redirect \
+-all-am all installdirs mostlyclean-generic distclean-generic \
+-clean-generic maintainer-clean-generic clean mostlyclean distclean \
+-maintainer-clean
++maintainer-clean-am: distclean-am maintainer-clean-generic \
++	maintainer-clean-local
++
++mostlyclean: mostlyclean-am
++
++mostlyclean-am: mostlyclean-generic
++
++.PHONY: check check-am clean clean-generic distclean distclean-generic \
++	distdir dvi dvi-am info info-am install install-am install-data \
++	install-data-am install-data-local install-exec install-exec-am \
++	install-liboaf_docDATA install-strip installcheck \
++	installcheck-am installdirs maintainer-clean \
++	maintainer-clean-generic mostlyclean mostlyclean-generic \
++	uninstall uninstall-am uninstall-liboaf_docDATA
+ 
+ 
+ @ENABLE_GTK_DOC_TRUE@liboaf.html:
+diff -r -u oaf-0.6.4.orig/configure oaf-0.6.4/configure
+--- oaf-0.6.4.orig/configure	Tue Feb 27 07:04:12 2001
++++ oaf-0.6.4/configure	Mon Mar  5 03:28:41 2001
+@@ -1545,8 +1545,8 @@
+ 
+ XML_I18N_UPDATE='$(top_builddir)/xml-i18n-update'
+ 
+-# Extract the first word of "perl5.00404", so it can be a program name with args.
+-set dummy perl5.00404; ac_word=$2
++# Extract the first word of "perl5.6.0", so it can be a program name with args.
++set dummy perl5.6.0; ac_word=$2
+ echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+ echo "configure:1552: checking for $ac_word" >&5
+ if eval "test \"`echo '$''{'ac_cv_path_XML_I18N_TOOLS_PERL'+set}'`\" = set"; then
+diff -r -u oaf-0.6.4.orig/docs/Makefile.in oaf-0.6.4/docs/Makefile.in
+--- oaf-0.6.4.orig/docs/Makefile.in	Tue Feb 27 07:05:22 2001
++++ oaf-0.6.4/docs/Makefile.in	Mon Mar  5 03:28:35 2001
+@@ -1,6 +1,7 @@
+-# Makefile.in generated automatically by automake 1.4 from Makefile.am
++# Makefile.in generated automatically by automake 1.4d from Makefile.am
+ 
+-# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
++# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001
++# Free Software Foundation, Inc.
+ # This Makefile.in is free software; the Free Software Foundation
+ # gives unlimited permission to copy and/or distribute it,
+ # with or without modifications, as long as this notice is preserved.
+@@ -10,7 +11,6 @@
+ # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ # PARTICULAR PURPOSE.
+ 
+-
+ SHELL = @SHELL@
+ 
+ srcdir = @srcdir@
+@@ -32,8 +32,6 @@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+ 
+-DESTDIR =
+-
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+@@ -46,9 +44,11 @@
+ AUTOHEADER = @AUTOHEADER@
+ 
+ INSTALL = @INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
++INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_STRIP_FLAG =
++INSTALL_HEADER = $(INSTALL_DATA)
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = :
+@@ -57,6 +57,8 @@
+ NORMAL_UNINSTALL = :
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
++
++@SET_MAKE@
+ host_alias = @host_alias@
+ host_triplet = @host@
+ APP_LIBS = @APP_LIBS@
+@@ -112,26 +114,32 @@
+ YACC = @YACC@
+ l = @l@
+ 
+-EXTRA_DIST = oaf.dia oaf-use.dia INTERNALS 	id-format.txt query-language.txt 	limitations.txt debugging.txt 	standard-attributes.txt test.oafinfo 	oaf-regloc.txt
+ 
++EXTRA_DIST = oaf.dia oaf-use.dia INTERNALS \
++	id-format.txt query-language.txt \
++	limitations.txt debugging.txt \
++	standard-attributes.txt test.oafinfo \
++	oaf-regloc.txt
++
++subdir = docs
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
++DIST_SOURCES = 
+ DIST_COMMON =  Makefile.am Makefile.in
+ 
+ 
+-DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
++DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = tar
+ GZIP_ENV = --best
+-all: all-redirect
++all: all-am
+ .SUFFIXES:
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps docs/Makefile
++	cd $(top_srcdir) && $(AUTOMAKE) --gnu docs/Makefile
+ 
+ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) \
+-	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ 
+ tags: TAGS
+ TAGS:
+@@ -139,17 +147,17 @@
+ 
+ distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
+ 
+-subdir = docs
+ 
+ distdir: $(DISTFILES)
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+-	    cp -pr $$d/$$file $(distdir)/$$file; \
++	    cp -pR $$d/$$file $(distdir) \
++	    || exit 1; \
+ 	  else \
+ 	    test -f $(distdir)/$$file \
+-	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-	    || cp -p $$d/$$file $(distdir)/$$file || :; \
++	    || cp -p $$d/$$file $(distdir)/$$file \
++	    || exit 1; \
+ 	  fi; \
+ 	done
+ info-am:
+@@ -172,9 +180,8 @@
+ uninstall-am:
+ uninstall: uninstall-am
+ all-am: Makefile
+-all-redirect: all-am
+ install-strip:
+-	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
++	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
+ installdirs:
+ 
+ 
+@@ -187,31 +194,31 @@
+ 	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+ 
+ maintainer-clean-generic:
+-mostlyclean-am:  mostlyclean-generic
+-
+-mostlyclean: mostlyclean-am
+-
+-clean-am:  clean-generic mostlyclean-am
+-
++	@echo "This command is intended for maintainers to use"
++	@echo "it deletes files that may require special tools to rebuild."
++	-rm -f Makefile.in
+ clean: clean-am
+ 
+-distclean-am:  distclean-generic clean-am
+-	-rm -f libtool
++clean-am: clean-generic mostlyclean-am
+ 
+ distclean: distclean-am
+ 
+-maintainer-clean-am:  maintainer-clean-generic distclean-am
+-	@echo "This command is intended for maintainers to use;"
+-	@echo "it deletes files that may require special tools to rebuild."
++distclean-am: clean-am distclean-generic
+ 
+ maintainer-clean: maintainer-clean-am
+ 
+-.PHONY: tags distdir info-am info dvi-am dvi check check-am \
+-installcheck-am installcheck install-exec-am install-exec \
+-install-data-am install-data install-am install uninstall-am uninstall \
+-all-redirect all-am all installdirs mostlyclean-generic \
+-distclean-generic clean-generic maintainer-clean-generic clean \
+-mostlyclean distclean maintainer-clean
++maintainer-clean-am: distclean-am maintainer-clean-generic
++
++mostlyclean: mostlyclean-am
++
++mostlyclean-am: mostlyclean-generic
++
++.PHONY: check check-am clean clean-generic distclean distclean-generic \
++	distdir dvi dvi-am info info-am install install-am install-data \
++	install-data-am install-exec install-exec-am install-strip \
++	installcheck installcheck-am installdirs maintainer-clean \
++	maintainer-clean-generic mostlyclean mostlyclean-generic \
++	uninstall uninstall-am
+ 
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+diff -r -u oaf-0.6.4.orig/idl/Makefile.in oaf-0.6.4/idl/Makefile.in
+--- oaf-0.6.4.orig/idl/Makefile.in	Tue Feb 27 07:05:23 2001
++++ oaf-0.6.4/idl/Makefile.in	Mon Mar  5 03:28:35 2001
+@@ -1,6 +1,7 @@
+-# Makefile.in generated automatically by automake 1.4 from Makefile.am
++# Makefile.in generated automatically by automake 1.4d from Makefile.am
+ 
+-# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
++# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001
++# Free Software Foundation, Inc.
+ # This Makefile.in is free software; the Free Software Foundation
+ # gives unlimited permission to copy and/or distribute it,
+ # with or without modifications, as long as this notice is preserved.
+@@ -10,7 +11,6 @@
+ # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ # PARTICULAR PURPOSE.
+ 
+-
+ SHELL = @SHELL@
+ 
+ srcdir = @srcdir@
+@@ -32,8 +32,6 @@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+ 
+-DESTDIR =
+-
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+@@ -46,9 +44,11 @@
+ AUTOHEADER = @AUTOHEADER@
+ 
+ INSTALL = @INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
++INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_STRIP_FLAG =
++INSTALL_HEADER = $(INSTALL_DATA)
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = :
+@@ -57,6 +57,8 @@
+ NORMAL_UNINSTALL = :
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
++
++@SET_MAKE@
+ host_alias = @host_alias@
+ host_triplet = @host@
+ APP_LIBS = @APP_LIBS@
+@@ -112,48 +114,49 @@
+ YACC = @YACC@
+ l = @l@
+ 
++
+ idldir = $(datadir)/idl
+ idl_DATA = oaf.idl oaf-factory.idl
+ EXTRA_DIST = $(idl_DATA)
++subdir = idl
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
++DIST_SOURCES = 
+ DATA =  $(idl_DATA)
+ 
+ DIST_COMMON =  Makefile.am Makefile.in
+ 
+ 
+-DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
++DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = tar
+ GZIP_ENV = --best
+-all: all-redirect
++all: all-am
+ .SUFFIXES:
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps idl/Makefile
++	cd $(top_srcdir) && $(AUTOMAKE) --gnu idl/Makefile
+ 
+ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) \
+-	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ 
+ 
+ install-idlDATA: $(idl_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(idldir)
+ 	@list='$(idl_DATA)'; for p in $$list; do \
+-	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(idldir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(idldir)/$$p; \
+-	  else if test -f $$p; then \
+-	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(idldir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(idldir)/$$p; \
+-	  fi; fi; \
++	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(idldir)/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(idldir)/$$f; \
+ 	done
+ 
+ uninstall-idlDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(idl_DATA)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(idldir)/$$p; \
++	@list='$(idl_DATA)'; for p in $$list; do \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " rm -f $(DESTDIR)$(idldir)/$$f"; \
++	  rm -f $(DESTDIR)$(idldir)/$$f; \
+ 	done
+ tags: TAGS
+ TAGS:
+@@ -161,17 +164,17 @@
+ 
+ distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
+ 
+-subdir = idl
+ 
+ distdir: $(DISTFILES)
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+-	    cp -pr $$d/$$file $(distdir)/$$file; \
++	    cp -pR $$d/$$file $(distdir) \
++	    || exit 1; \
+ 	  else \
+ 	    test -f $(distdir)/$$file \
+-	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-	    || cp -p $$d/$$file $(distdir)/$$file || :; \
++	    || cp -p $$d/$$file $(distdir)/$$file \
++	    || exit 1; \
+ 	  fi; \
+ 	done
+ info-am:
+@@ -194,9 +197,8 @@
+ uninstall-am: uninstall-idlDATA
+ uninstall: uninstall-am
+ all-am: Makefile $(DATA)
+-all-redirect: all-am
+ install-strip:
+-	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
++	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
+ installdirs:
+ 	$(mkinstalldirs)  $(DESTDIR)$(idldir)
+ 
+@@ -210,31 +212,31 @@
+ 	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+ 
+ maintainer-clean-generic:
+-mostlyclean-am:  mostlyclean-generic
+-
+-mostlyclean: mostlyclean-am
+-
+-clean-am:  clean-generic mostlyclean-am
+-
++	@echo "This command is intended for maintainers to use"
++	@echo "it deletes files that may require special tools to rebuild."
++	-rm -f Makefile.in
+ clean: clean-am
+ 
+-distclean-am:  distclean-generic clean-am
+-	-rm -f libtool
++clean-am: clean-generic mostlyclean-am
+ 
+ distclean: distclean-am
+ 
+-maintainer-clean-am:  maintainer-clean-generic distclean-am
+-	@echo "This command is intended for maintainers to use;"
+-	@echo "it deletes files that may require special tools to rebuild."
++distclean-am: clean-am distclean-generic
+ 
+ maintainer-clean: maintainer-clean-am
+ 
+-.PHONY: uninstall-idlDATA install-idlDATA tags distdir info-am info \
+-dvi-am dvi check check-am installcheck-am installcheck install-exec-am \
+-install-exec install-data-am install-data install-am install \
+-uninstall-am uninstall all-redirect all-am all installdirs \
+-mostlyclean-generic distclean-generic clean-generic \
+-maintainer-clean-generic clean mostlyclean distclean maintainer-clean
++maintainer-clean-am: distclean-am maintainer-clean-generic
++
++mostlyclean: mostlyclean-am
++
++mostlyclean-am: mostlyclean-generic
++
++.PHONY: check check-am clean clean-generic distclean distclean-generic \
++	distdir dvi dvi-am info info-am install install-am install-data \
++	install-data-am install-exec install-exec-am install-idlDATA \
++	install-strip installcheck installcheck-am installdirs \
++	maintainer-clean maintainer-clean-generic mostlyclean \
++	mostlyclean-generic uninstall uninstall-am uninstall-idlDATA
+ 
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+diff -r -u oaf-0.6.4.orig/liboaf/Makefile.in oaf-0.6.4/liboaf/Makefile.in
+--- oaf-0.6.4.orig/liboaf/Makefile.in	Tue Feb 27 07:05:27 2001
++++ oaf-0.6.4/liboaf/Makefile.in	Mon Mar  5 03:28:36 2001
+@@ -1,6 +1,7 @@
+-# Makefile.in generated automatically by automake 1.4 from Makefile.am
++# Makefile.in generated automatically by automake 1.4d from Makefile.am
+ 
+-# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
++# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001
++# Free Software Foundation, Inc.
+ # This Makefile.in is free software; the Free Software Foundation
+ # gives unlimited permission to copy and/or distribute it,
+ # with or without modifications, as long as this notice is preserved.
+@@ -10,7 +11,6 @@
+ # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ # PARTICULAR PURPOSE.
+ 
+-
+ SHELL = @SHELL@
+ 
+ srcdir = @srcdir@
+@@ -32,8 +32,6 @@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+ 
+-DESTDIR =
+-
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+@@ -46,9 +44,11 @@
+ AUTOHEADER = @AUTOHEADER@
+ 
+ INSTALL = @INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
++INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_STRIP_FLAG =
++INSTALL_HEADER = $(INSTALL_DATA)
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = :
+@@ -57,6 +57,8 @@
+ NORMAL_UNINSTALL = :
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
++
++@SET_MAKE@
+ host_alias = @host_alias@
+ host_triplet = @host@
+ APP_LIBS = @APP_LIBS@
+@@ -112,29 +114,91 @@
+ YACC = @YACC@
+ l = @l@
+ 
++
+ NULL = 
+ 
+ lib_LTLIBRARIES = liboaf.la
+ 
+-INCLUDES =  	-I$(top_srcdir) 			-I$(top_builddir) 			-I$(top_srcdir)/liboaf 			-I$(top_builddir)/liboaf 		-DOAF_LOCALEDIR=\""$(datadir)/locale"\" 	@ORBIT_CFLAGS@ 				@GLIB_CFLAGS@ 				-DVERSION=\"$(VERSION)\"		$(NULL)
+-
+-
+-LDFLAGS =  	@ORBIT_LIBS@ 		@GLIB_LIBS@		$(NULL)
++INCLUDES = \
++	-I$(top_srcdir) 		\
++	-I$(top_builddir) 		\
++	-I$(top_srcdir)/liboaf 		\
++	-I$(top_builddir)/liboaf 	\
++	-DOAF_LOCALEDIR=\""$(datadir)/locale"\" \
++	@ORBIT_CFLAGS@ 			\
++	@GLIB_CFLAGS@ 			\
++	-DVERSION=\"$(VERSION)\"	\
++	$(NULL)
++
++
++LDFLAGS = \
++	@ORBIT_LIBS@ 	\
++	@GLIB_LIBS@	\
++	$(NULL)
+ 
+ 
+ liboafincludedir = $(includedir)/liboaf
+ 
+-liboafinclude_HEADERS =  	oaf.h 				liboaf.h 			oaf-async.h			oaf-registration.h		oaf-actid.h			oaf-activate.h			oaf-mainloop.h			oaf-plugin.h			oaf-servreg.h			oaf-util.h			oaf-async.h			oaf-factory.h 			oaf-factory-suppress.h		liboaf-version.h		$(NULL)
+-
+-
+-liboaf_la_SOURCES =  	oaf-stubs.c 			oaf-skels.c 			oaf-common.c 			oaf-mainloop.c 			oaf-actid.c 			liboaf-private.h 		oaf-factory-stubs.c 		oaf-factory-skels.c 		oaf-factory-common.c 		oaf-plugin.c 			oaf-activate.c 			oaf-activate-private.h 		oaf-registration.c 		oaf-servreg.c 			oaf-util.c			oaf-i18n.h			oaf-async.c			oaf-async-corba.h		oaf-async-corba.c		$(NULL)
+-
+-
+-BUILT_SOURCES =  	oaf-stubs.c 			oaf-skels.c 			oaf-common.c 			oaf-factory-stubs.c 		oaf-factory-skels.c 		oaf-factory-common.c 		oaf.h 				oaf-factory.h			$(NULL)
+-
+-
+-CLEANFILES =  	stamp-idl 			stamp-factory-idl 		$(BUILT_SOURCES)		$(NULL)
++liboafinclude_HEADERS = \
++	oaf.h 			\
++	liboaf.h 		\
++	oaf-async.h		\
++	oaf-registration.h	\
++	oaf-actid.h		\
++	oaf-activate.h		\
++	oaf-mainloop.h		\
++	oaf-plugin.h		\
++	oaf-servreg.h		\
++	oaf-util.h		\
++	oaf-async.h		\
++	oaf-factory.h 		\
++	oaf-factory-suppress.h	\
++	liboaf-version.h	\
++	$(NULL)
++
++
++liboaf_la_SOURCES = \
++	oaf-stubs.c 		\
++	oaf-skels.c 		\
++	oaf-common.c 		\
++	oaf-mainloop.c 		\
++	oaf-actid.c 		\
++	liboaf-private.h 	\
++	oaf-factory-stubs.c 	\
++	oaf-factory-skels.c 	\
++	oaf-factory-common.c 	\
++	oaf-plugin.c 		\
++	oaf-activate.c 		\
++	oaf-activate-private.h 	\
++	oaf-registration.c 	\
++	oaf-servreg.c 		\
++	oaf-util.c		\
++	oaf-i18n.h		\
++	oaf-async.c		\
++	oaf-async-corba.h	\
++	oaf-async-corba.c	\
++	$(NULL)
++
++
++BUILT_SOURCES = \
++	oaf-stubs.c 		\
++	oaf-skels.c 		\
++	oaf-common.c 		\
++	oaf-factory-stubs.c 	\
++	oaf-factory-skels.c 	\
++	oaf-factory-common.c 	\
++	oaf.h 			\
++	oaf-factory.h		\
++	$(NULL)
++
++
++CLEANFILES = \
++	stamp-idl 		\
++	stamp-factory-idl 	\
++	$(BUILT_SOURCES)	\
++	$(NULL)
+ 
++subdir = liboaf
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES =  liboaf-version.h
+@@ -146,39 +210,50 @@
+ LIBS = @LIBS@
+ liboaf_la_LDFLAGS = 
+ liboaf_la_LIBADD = 
+-liboaf_la_OBJECTS =  oaf-stubs.lo oaf-skels.lo oaf-common.lo \
++am_liboaf_la_OBJECTS =  oaf-stubs.lo oaf-skels.lo oaf-common.lo \
+ oaf-mainloop.lo oaf-actid.lo oaf-factory-stubs.lo oaf-factory-skels.lo \
+ oaf-factory-common.lo oaf-plugin.lo oaf-activate.lo oaf-registration.lo \
+ oaf-servreg.lo oaf-util.lo oaf-async.lo oaf-async-corba.lo
+-CFLAGS = @CFLAGS@
++liboaf_la_OBJECTS =  $(am_liboaf_la_OBJECTS)
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
++CFLAGS = @CFLAGS@
+ CCLD = $(CC)
+-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
++LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++DIST_SOURCES =  $(liboaf_la_SOURCES)
+ HEADERS =  $(liboafinclude_HEADERS)
+ 
+-DIST_COMMON =  Makefile.am Makefile.in liboaf-version.h.in
++depcomp = $(SHELL) $(top_srcdir)/depcomp
++@AMDEP@DEP_FILES =  $(DEPDIR)/oaf-actid.Plo $(DEPDIR)/oaf-activate.Plo \
++@AMDEP@$(DEPDIR)/oaf-async-corba.Plo $(DEPDIR)/oaf-async.Plo \
++@AMDEP@$(DEPDIR)/oaf-common.Plo $(DEPDIR)/oaf-factory-common.Plo \
++@AMDEP@$(DEPDIR)/oaf-factory-skels.Plo $(DEPDIR)/oaf-factory-stubs.Plo \
++@AMDEP@$(DEPDIR)/oaf-mainloop.Plo $(DEPDIR)/oaf-plugin.Plo \
++@AMDEP@$(DEPDIR)/oaf-registration.Plo $(DEPDIR)/oaf-servreg.Plo \
++@AMDEP@$(DEPDIR)/oaf-skels.Plo $(DEPDIR)/oaf-stubs.Plo \
++@AMDEP@$(DEPDIR)/oaf-util.Plo
++DIST_COMMON =  $(liboafinclude_HEADERS) Makefile.am Makefile.in \
++liboaf-version.h.in
+ 
+ 
+-DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
++DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = tar
+ GZIP_ENV = --best
+ SOURCES = $(liboaf_la_SOURCES)
+-OBJECTS = $(liboaf_la_OBJECTS)
++OBJECTS = $(am_liboaf_la_OBJECTS)
+ 
+ all: all-redirect
+ .SUFFIXES:
+-.SUFFIXES: .S .c .lo .o .s
++.SUFFIXES: .c .h .lo .o
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps liboaf/Makefile
++	cd $(top_srcdir) && $(AUTOMAKE) --gnu liboaf/Makefile
+ 
+ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) \
+-	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ 
+ liboaf-version.h: $(top_builddir)/config.status liboaf-version.h.in
+-	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ 
+ mostlyclean-libLTLIBRARIES:
+ 
+@@ -194,45 +269,24 @@
+ 	$(mkinstalldirs) $(DESTDIR)$(libdir)
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo "$(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(libdir)/$$p"; \
+-	    $(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(libdir)/$$p; \
++	    echo " $(LIBTOOL)  --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$p"; \
++	    $(LIBTOOL)  --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$p; \
+ 	  else :; fi; \
+ 	done
+ 
+ uninstall-libLTLIBRARIES:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(lib_LTLIBRARIES)'; for p in $$list; do \
++	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
++	  echo " $(LIBTOOL)  --mode=uninstall rm -f $(DESTDIR)$(libdir)/$$p"; \
+ 	  $(LIBTOOL)  --mode=uninstall rm -f $(DESTDIR)$(libdir)/$$p; \
+ 	done
+ 
+-.c.o:
+-	$(COMPILE) -c $<
+-
+-.s.o:
+-	$(COMPILE) -c $<
+-
+-.S.o:
+-	$(COMPILE) -c $<
+-
+ mostlyclean-compile:
+ 	-rm -f *.o core *.core
+ 
+-clean-compile:
+-
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-maintainer-clean-compile:
+-
+-.c.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+-.s.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+-.S.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+ 
+@@ -240,8 +294,7 @@
+ 	-rm -rf .libs _libs
+ 
+ distclean-libtool:
+-
+-maintainer-clean-libtool:
++	-rm -f libtool
+ 
+ liboaf.la: $(liboaf_la_OBJECTS) $(liboaf_la_DEPENDENCIES)
+ 	$(LINK) -rpath $(libdir) $(liboaf_la_LDFLAGS) $(liboaf_la_OBJECTS) $(liboaf_la_LIBADD) $(LIBS)
+@@ -250,62 +303,101 @@
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(liboafincludedir)
+ 	@list='$(liboafinclude_HEADERS)'; for p in $$list; do \
+-	  if test -f "$$p"; then d= ; else d="$(srcdir)/"; fi; \
+-	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(liboafincludedir)/$$p"; \
+-	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(liboafincludedir)/$$p; \
++	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " $(INSTALL_HEADER) $$d$$p $(DESTDIR)$(liboafincludedir)/$$f"; \
++	  $(INSTALL_HEADER) $$d$$p $(DESTDIR)$(liboafincludedir)/$$f; \
+ 	done
+ 
+ uninstall-liboafincludeHEADERS:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(liboafinclude_HEADERS)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(liboafincludedir)/$$p; \
++	@list='$(liboafinclude_HEADERS)'; for p in $$list; do \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " rm -f $(DESTDIR)$(liboafincludedir)/$$f"; \
++	  rm -f $(DESTDIR)$(liboafincludedir)/$$f; \
+ 	done
+ 
+ tags: TAGS
+ 
+-ID: $(HEADERS) $(SOURCES) $(LISP)
+-	list='$(SOURCES) $(HEADERS)'; \
+-	unique=`for i in $$list; do echo $$i; done | \
+-	  awk '    { files[$$0] = 1; } \
++ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
++	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
++	unique=`for i in $$list; do \
++	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
++	  done | \
++	  $(AWK) '    { files[$$0] = 1; } \
+ 	       END { for (i in files) print i; }'`; \
+-	here=`pwd` && cd $(srcdir) \
+-	  && mkid -f$$here/ID $$unique $(LISP)
++	mkid -fID $$unique $(LISP)
+ 
+-TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) $(LISP)
++TAGS: $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
++		$(TAGS_FILES) $(LISP)
+ 	tags=; \
+ 	here=`pwd`; \
+-	list='$(SOURCES) $(HEADERS)'; \
+-	unique=`for i in $$list; do echo $$i; done | \
+-	  awk '    { files[$$0] = 1; } \
++	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
++	unique=`for i in $$list; do \
++	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
++	  done | \
++	  $(AWK) '    { files[$$0] = 1; } \
+ 	       END { for (i in files) print i; }'`; \
+ 	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
+-	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags  $$unique $(LISP) -o $$here/TAGS)
+-
+-mostlyclean-tags:
++	  || etags $(ETAGS_ARGS) $$tags  $$unique $(LISP)
+ 
+-clean-tags:
++GTAGS:
++	here=`CDPATH=: && cd $(top_builddir) && pwd` \
++	  && cd $(top_srcdir) \
++	  && gtags -i $$here
+ 
+ distclean-tags:
+ 	-rm -f TAGS ID
+ 
+-maintainer-clean-tags:
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-actid.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-activate.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-async-corba.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-async.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-common.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-factory-common.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-factory-skels.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-factory-stubs.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-mainloop.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-plugin.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-registration.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-servreg.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-skels.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-stubs.Plo
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-util.Plo
++
++distclean-depend:
++	-rm -rf $(DEPDIR)
++
++@AMDEP@CCDEPMODE = @CCDEPMODE@
++
++.c.o:
++@AMDEP@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
++@AMDEP@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(COMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
++.c.lo:
++@AMDEP@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
++@AMDEP@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
++@AMDEP@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(LTCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
+ 
+ distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
+ 
+-subdir = liboaf
+ 
+ distdir: $(DISTFILES)
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+-	    cp -pr $$d/$$file $(distdir)/$$file; \
++	    cp -pR $$d/$$file $(distdir) \
++	    || exit 1; \
+ 	  else \
+ 	    test -f $(distdir)/$$file \
+-	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-	    || cp -p $$d/$$file $(distdir)/$$file || :; \
++	    || cp -p $$d/$$file $(distdir)/$$file \
++	    || exit 1; \
+ 	  fi; \
+ 	done
+-
+ info-am:
+ info: info-am
+ dvi-am:
+@@ -314,6 +406,9 @@
+ check: check-am
+ installcheck-am:
+ installcheck: installcheck-am
++all-redirect: $(BUILT_SOURCES)
++	$(MAKE) $(AM_MAKEFLAGS) all-am
++
+ install-exec-am: install-libLTLIBRARIES
+ install-exec: install-exec-am
+ 
+@@ -326,9 +421,8 @@
+ uninstall-am: uninstall-libLTLIBRARIES uninstall-liboafincludeHEADERS
+ uninstall: uninstall-am
+ all-am: Makefile $(LTLIBRARIES) $(HEADERS)
+-all-redirect: all-am
+ install-strip:
+-	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
++	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
+ installdirs:
+ 	$(mkinstalldirs)  $(DESTDIR)$(libdir) $(DESTDIR)$(liboafincludedir)
+ 
+@@ -343,47 +437,44 @@
+ 	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+ 
+ maintainer-clean-generic:
++	@echo "This command is intended for maintainers to use"
++	@echo "it deletes files that may require special tools to rebuild."
++	-rm -f Makefile.in
+ 	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
+-mostlyclean-am:  mostlyclean-libLTLIBRARIES mostlyclean-compile \
+-		mostlyclean-libtool mostlyclean-tags \
+-		mostlyclean-generic
+-
+-mostlyclean: mostlyclean-am
+-
+-clean-am:  clean-libLTLIBRARIES clean-compile clean-libtool clean-tags \
+-		clean-generic mostlyclean-am
+-
+ clean: clean-am
+ 
+-distclean-am:  distclean-libLTLIBRARIES distclean-compile \
+-		distclean-libtool distclean-tags distclean-generic \
+-		clean-am
+-	-rm -f libtool
++clean-am: clean-generic clean-libLTLIBRARIES clean-libtool \
++	mostlyclean-am
+ 
+ distclean: distclean-am
+ 
+-maintainer-clean-am:  maintainer-clean-libLTLIBRARIES \
+-		maintainer-clean-compile maintainer-clean-libtool \
+-		maintainer-clean-tags maintainer-clean-generic \
+-		distclean-am
+-	@echo "This command is intended for maintainers to use;"
+-	@echo "it deletes files that may require special tools to rebuild."
++distclean-am: clean-am distclean-compile distclean-depend \
++	distclean-generic distclean-libLTLIBRARIES distclean-libtool \
++	distclean-tags
+ 
+ maintainer-clean: maintainer-clean-am
+ 
+-.PHONY: mostlyclean-libLTLIBRARIES distclean-libLTLIBRARIES \
+-clean-libLTLIBRARIES maintainer-clean-libLTLIBRARIES \
+-uninstall-libLTLIBRARIES install-libLTLIBRARIES mostlyclean-compile \
+-distclean-compile clean-compile maintainer-clean-compile \
+-mostlyclean-libtool distclean-libtool clean-libtool \
+-maintainer-clean-libtool uninstall-liboafincludeHEADERS \
+-install-liboafincludeHEADERS tags mostlyclean-tags distclean-tags \
+-clean-tags maintainer-clean-tags distdir info-am info dvi-am dvi check \
+-check-am installcheck-am installcheck install-exec-am install-exec \
+-install-data-am install-data install-am install uninstall-am uninstall \
+-all-redirect all-am all installdirs mostlyclean-generic \
+-distclean-generic clean-generic maintainer-clean-generic clean \
+-mostlyclean distclean maintainer-clean
++maintainer-clean-am: distclean-am maintainer-clean-generic \
++	maintainer-clean-libLTLIBRARIES
++
++mostlyclean: mostlyclean-am
++
++mostlyclean-am: mostlyclean-compile mostlyclean-generic \
++	mostlyclean-libLTLIBRARIES mostlyclean-libtool
++
++.PHONY: all-redirect check check-am clean clean-generic \
++	clean-libLTLIBRARIES clean-libtool distclean distclean-compile \
++	distclean-depend distclean-generic distclean-libLTLIBRARIES \
++	distclean-libtool distclean-tags distdir dvi dvi-am info \
++	info-am install install-am install-data install-data-am \
++	install-exec install-exec-am install-libLTLIBRARIES \
++	install-liboafincludeHEADERS install-strip installcheck \
++	installcheck-am installdirs maintainer-clean \
++	maintainer-clean-generic maintainer-clean-libLTLIBRARIES \
++	mostlyclean mostlyclean-compile mostlyclean-generic \
++	mostlyclean-libLTLIBRARIES mostlyclean-libtool tags uninstall \
++	uninstall-am uninstall-libLTLIBRARIES \
++	uninstall-liboafincludeHEADERS
+ 
+ 
+ oaf-stubs.c oaf-skels.c oaf.h oaf-common.c: stamp-idl
+diff -r -u oaf-0.6.4.orig/oafd/Makefile.in oaf-0.6.4/oafd/Makefile.in
+--- oaf-0.6.4.orig/oafd/Makefile.in	Tue Feb 27 07:05:41 2001
++++ oaf-0.6.4/oafd/Makefile.in	Mon Mar  5 03:28:36 2001
+@@ -1,6 +1,7 @@
+-# Makefile.in generated automatically by automake 1.4 from Makefile.am
++# Makefile.in generated automatically by automake 1.4d from Makefile.am
+ 
+-# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
++# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001
++# Free Software Foundation, Inc.
+ # This Makefile.in is free software; the Free Software Foundation
+ # gives unlimited permission to copy and/or distribute it,
+ # with or without modifications, as long as this notice is preserved.
+@@ -10,7 +11,6 @@
+ # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ # PARTICULAR PURPOSE.
+ 
+-
+ SHELL = @SHELL@
+ 
+ srcdir = @srcdir@
+@@ -32,8 +32,6 @@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+ 
+-DESTDIR =
+-
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+@@ -46,9 +44,11 @@
+ AUTOHEADER = @AUTOHEADER@
+ 
+ INSTALL = @INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
++INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_STRIP_FLAG =
++INSTALL_HEADER = $(INSTALL_DATA)
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = :
+@@ -57,6 +57,8 @@
+ NORMAL_UNINSTALL = :
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
++
++@SET_MAKE@
+ host_alias = @host_alias@
+ host_triplet = @host@
+ APP_LIBS = @APP_LIBS@
+@@ -112,17 +114,51 @@
+ YACC = @YACC@
+ l = @l@
+ 
++
+ NULL = 
+ 
+ bin_PROGRAMS = oafd oaf-client
+ 
+-INCLUDES =  	-I$(top_srcdir) 				-I$(top_builddir) 				-I$(top_builddir)/liboaf			-I$(top_srcdir)/liboaf				-DOAFINFODIR=\"$(pkgdatadir)\" 			-DOAF_LOCALEDIR=\""$(datadir)/locale"\" 	@ORBIT_CFLAGS@ 					@XML_CFLAGS@ 					@GLIB_CFLAGS@					-DOAF_CONFDIR=\"$(sysconfdir)\"			$(NULL)
+-
+-
+-oafd_SOURCES =  	oafd-corba-extensions.c				oafd-corba-extensions.h				qsort_ex.c					qsort_ex.h					oaf-skels.c					ac-query-lex.c					ac-query-parse.c				ac-query-parse.h				ac-query-expr.h					ac-corba.c					ac-query-expr.c					od-corba.c					od-load.c					od-utils.c					od-activate.c					main.c						od-utils.h					oafd.h
+-
+-
+-LDADD = ../liboaf/liboaf.la 	@ORBIT_LIBS@ -lORBitCosNaming -lname-server 	@XML_LIBS@ 	@INTLLIBS@ 	@GLIB_LIBS@
++INCLUDES = \
++	-I$(top_srcdir) 			\
++	-I$(top_builddir) 			\
++	-I$(top_builddir)/liboaf		\
++	-I$(top_srcdir)/liboaf			\
++	-DOAFINFODIR=\"$(pkgdatadir)\" 		\
++	-DOAF_LOCALEDIR=\""$(datadir)/locale"\" \
++	@ORBIT_CFLAGS@ 				\
++	@XML_CFLAGS@ 				\
++	@GLIB_CFLAGS@				\
++	-DOAF_CONFDIR=\"$(sysconfdir)\"		\
++	$(NULL)
++
++
++oafd_SOURCES = \
++	oafd-corba-extensions.c			\
++	oafd-corba-extensions.h			\
++	qsort_ex.c				\
++	qsort_ex.h				\
++	oaf-skels.c				\
++	ac-query-lex.c				\
++	ac-query-parse.c			\
++	ac-query-parse.h			\
++	ac-query-expr.h				\
++	ac-corba.c				\
++	ac-query-expr.c				\
++	od-corba.c				\
++	od-load.c				\
++	od-utils.c				\
++	od-activate.c				\
++	main.c					\
++	od-utils.h				\
++	oafd.h
++
++
++LDADD = ../liboaf/liboaf.la \
++	@ORBIT_LIBS@ -lORBitCosNaming -lname-server \
++	@XML_LIBS@ \
++	@INTLLIBS@ \
++	@GLIB_LIBS@
+ 
+ 
+ oaf_client_SOURCES = client.c
+@@ -139,6 +175,7 @@
+ BUILT_SOURCES = ac-query-lex.c ac-query-parse.c ac-query-parse.h oaf-skels.c
+ 
+ CLEANFILES = stamp-parser stamp-idl
++subdir = oafd
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
+@@ -149,42 +186,51 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-oafd_OBJECTS =  oafd-corba-extensions.o qsort_ex.o oaf-skels.o \
++am_oaf_client_OBJECTS =  client.o
++oaf_client_OBJECTS =  $(am_oaf_client_OBJECTS)
++oaf_client_LDADD = $(LDADD)
++oaf_client_DEPENDENCIES =  ../liboaf/liboaf.la
++oaf_client_LDFLAGS = 
++am_oafd_OBJECTS =  oafd-corba-extensions.o qsort_ex.o oaf-skels.o \
+ ac-query-lex.o ac-query-parse.o ac-corba.o ac-query-expr.o od-corba.o \
+ od-load.o od-utils.o od-activate.o main.o
++oafd_OBJECTS =  $(am_oafd_OBJECTS)
+ oafd_LDADD = $(LDADD)
+ oafd_DEPENDENCIES =  ../liboaf/liboaf.la
+ oafd_LDFLAGS = 
+-oaf_client_OBJECTS =  client.o
+-oaf_client_LDADD = $(LDADD)
+-oaf_client_DEPENDENCIES =  ../liboaf/liboaf.la
+-oaf_client_LDFLAGS = 
+-CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
++CFLAGS = @CFLAGS@
+ CCLD = $(CC)
+-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
++LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++DIST_SOURCES =  $(oaf_client_SOURCES) $(oafd_SOURCES)
+ DATA =  $(oafinfo_DATA)
+ 
++depcomp = $(SHELL) $(top_srcdir)/depcomp
++@AMDEP@DEP_FILES =  $(DEPDIR)/ac-corba.Po $(DEPDIR)/ac-query-expr.Po \
++@AMDEP@$(DEPDIR)/ac-query-lex.Po $(DEPDIR)/ac-query-parse.Po \
++@AMDEP@$(DEPDIR)/client.Po $(DEPDIR)/main.Po $(DEPDIR)/oaf-skels.Po \
++@AMDEP@$(DEPDIR)/oafd-corba-extensions.Po $(DEPDIR)/od-activate.Po \
++@AMDEP@$(DEPDIR)/od-corba.Po $(DEPDIR)/od-load.Po $(DEPDIR)/od-utils.Po \
++@AMDEP@$(DEPDIR)/qsort_ex.Po
+ DIST_COMMON =  Makefile.am Makefile.in
+ 
+ 
+-DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
++DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = tar
+ GZIP_ENV = --best
+-SOURCES = $(oafd_SOURCES) $(oaf_client_SOURCES)
+-OBJECTS = $(oafd_OBJECTS) $(oaf_client_OBJECTS)
++SOURCES = $(oaf_client_SOURCES) $(oafd_SOURCES)
++OBJECTS = $(am_oaf_client_OBJECTS) $(am_oafd_OBJECTS)
+ 
+ all: all-redirect
+ .SUFFIXES:
+-.SUFFIXES: .S .c .lo .o .s
++.SUFFIXES: .c .h .lo .o
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps oafd/Makefile
++	cd $(top_srcdir) && $(AUTOMAKE) --gnu oafd/Makefile
+ 
+ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) \
+-	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ 
+ 
+ mostlyclean-binPROGRAMS:
+@@ -201,45 +247,26 @@
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+-	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
++	    f="`echo $$p|sed -e 's/$(EXEEXT)$$//' -e '$(transform)' -e 's/$$/$(EXEEXT)/'`"; \
++	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(bindir)/$$f"; \
++	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(bindir)/$$f; \
+ 	  else :; fi; \
+ 	done
+ 
+ uninstall-binPROGRAMS:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(bin_PROGRAMS)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
++	@list='$(bin_PROGRAMS)'; for p in $$list; do \
++	  f="`echo $$p|sed -e 's/$(EXEEXT)$$//' -e '$(transform)' -e 's/$$/$(EXEEXT)/'`"; \
++	  echo " rm -f $(DESTDIR)$(bindir)/$$f"; \
++	  rm -f $(DESTDIR)$(bindir)/$$f; \
+ 	done
+ 
+-.c.o:
+-	$(COMPILE) -c $<
+-
+-.s.o:
+-	$(COMPILE) -c $<
+-
+-.S.o:
+-	$(COMPILE) -c $<
+-
+ mostlyclean-compile:
+ 	-rm -f *.o core *.core
+ 
+-clean-compile:
+-
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-maintainer-clean-compile:
+-
+-.c.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+-.s.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+-.S.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+ 
+@@ -247,81 +274,113 @@
+ 	-rm -rf .libs _libs
+ 
+ distclean-libtool:
++	-rm -f libtool
+ 
+-maintainer-clean-libtool:
++oaf-client: $(oaf_client_OBJECTS) $(oaf_client_DEPENDENCIES)
++	@rm -f oaf-client
++	$(LINK) $(oaf_client_LDFLAGS) $(oaf_client_OBJECTS) $(oaf_client_LDADD) $(LIBS)
+ 
+ oafd: $(oafd_OBJECTS) $(oafd_DEPENDENCIES)
+ 	@rm -f oafd
+ 	$(LINK) $(oafd_LDFLAGS) $(oafd_OBJECTS) $(oafd_LDADD) $(LIBS)
+ 
+-oaf-client: $(oaf_client_OBJECTS) $(oaf_client_DEPENDENCIES)
+-	@rm -f oaf-client
+-	$(LINK) $(oaf_client_LDFLAGS) $(oaf_client_OBJECTS) $(oaf_client_LDADD) $(LIBS)
+-
+ install-oafinfoDATA: $(oafinfo_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(oafinfodir)
+ 	@list='$(oafinfo_DATA)'; for p in $$list; do \
+-	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(oafinfodir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(oafinfodir)/$$p; \
+-	  else if test -f $$p; then \
+-	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(oafinfodir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(oafinfodir)/$$p; \
+-	  fi; fi; \
++	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(oafinfodir)/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(oafinfodir)/$$f; \
+ 	done
+ 
+ uninstall-oafinfoDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(oafinfo_DATA)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(oafinfodir)/$$p; \
++	@list='$(oafinfo_DATA)'; for p in $$list; do \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " rm -f $(DESTDIR)$(oafinfodir)/$$f"; \
++	  rm -f $(DESTDIR)$(oafinfodir)/$$f; \
+ 	done
+ 
+ tags: TAGS
+ 
+-ID: $(HEADERS) $(SOURCES) $(LISP)
+-	list='$(SOURCES) $(HEADERS)'; \
+-	unique=`for i in $$list; do echo $$i; done | \
+-	  awk '    { files[$$0] = 1; } \
++ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
++	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
++	unique=`for i in $$list; do \
++	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
++	  done | \
++	  $(AWK) '    { files[$$0] = 1; } \
+ 	       END { for (i in files) print i; }'`; \
+-	here=`pwd` && cd $(srcdir) \
+-	  && mkid -f$$here/ID $$unique $(LISP)
++	mkid -fID $$unique $(LISP)
+ 
+-TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) $(LISP)
++TAGS: $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
++		$(TAGS_FILES) $(LISP)
+ 	tags=; \
+ 	here=`pwd`; \
+-	list='$(SOURCES) $(HEADERS)'; \
+-	unique=`for i in $$list; do echo $$i; done | \
+-	  awk '    { files[$$0] = 1; } \
++	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
++	unique=`for i in $$list; do \
++	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
++	  done | \
++	  $(AWK) '    { files[$$0] = 1; } \
+ 	       END { for (i in files) print i; }'`; \
+ 	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
+-	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags  $$unique $(LISP) -o $$here/TAGS)
+-
+-mostlyclean-tags:
++	  || etags $(ETAGS_ARGS) $$tags  $$unique $(LISP)
+ 
+-clean-tags:
++GTAGS:
++	here=`CDPATH=: && cd $(top_builddir) && pwd` \
++	  && cd $(top_srcdir) \
++	  && gtags -i $$here
+ 
+ distclean-tags:
+ 	-rm -f TAGS ID
+ 
+-maintainer-clean-tags:
++@AMDEP@@_am_include@ $(DEPDIR)/ac-corba.Po
++@AMDEP@@_am_include@ $(DEPDIR)/ac-query-expr.Po
++@AMDEP@@_am_include@ $(DEPDIR)/ac-query-lex.Po
++@AMDEP@@_am_include@ $(DEPDIR)/ac-query-parse.Po
++@AMDEP@@_am_include@ $(DEPDIR)/client.Po
++@AMDEP@@_am_include@ $(DEPDIR)/main.Po
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-skels.Po
++@AMDEP@@_am_include@ $(DEPDIR)/oafd-corba-extensions.Po
++@AMDEP@@_am_include@ $(DEPDIR)/od-activate.Po
++@AMDEP@@_am_include@ $(DEPDIR)/od-corba.Po
++@AMDEP@@_am_include@ $(DEPDIR)/od-load.Po
++@AMDEP@@_am_include@ $(DEPDIR)/od-utils.Po
++@AMDEP@@_am_include@ $(DEPDIR)/qsort_ex.Po
++
++distclean-depend:
++	-rm -rf $(DEPDIR)
++
++@AMDEP@CCDEPMODE = @CCDEPMODE@
++
++.c.o:
++@AMDEP@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
++@AMDEP@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(COMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
++.c.lo:
++@AMDEP@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
++@AMDEP@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
++@AMDEP@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(LTCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
+ 
+ distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
+ 
+-subdir = oafd
+ 
+ distdir: $(DISTFILES)
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+-	    cp -pr $$d/$$file $(distdir)/$$file; \
++	    cp -pR $$d/$$file $(distdir) \
++	    || exit 1; \
+ 	  else \
+ 	    test -f $(distdir)/$$file \
+-	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-	    || cp -p $$d/$$file $(distdir)/$$file || :; \
++	    || cp -p $$d/$$file $(distdir)/$$file \
++	    || exit 1; \
+ 	  fi; \
+ 	done
+-
+ info-am:
+ info: info-am
+ dvi-am:
+@@ -330,6 +389,9 @@
+ check: check-am
+ installcheck-am:
+ installcheck: installcheck-am
++all-redirect: $(BUILT_SOURCES)
++	$(MAKE) $(AM_MAKEFLAGS) all-am
++
+ install-exec-am: install-binPROGRAMS
+ install-exec: install-exec-am
+ 
+@@ -342,9 +404,8 @@
+ uninstall-am: uninstall-binPROGRAMS uninstall-oafinfoDATA
+ uninstall: uninstall-am
+ all-am: Makefile $(PROGRAMS) $(DATA)
+-all-redirect: all-am
+ install-strip:
+-	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
++	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
+ installdirs:
+ 	$(mkinstalldirs)  $(DESTDIR)$(bindir) $(DESTDIR)$(oafinfodir)
+ 
+@@ -359,45 +420,42 @@
+ 	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+ 
+ maintainer-clean-generic:
++	@echo "This command is intended for maintainers to use"
++	@echo "it deletes files that may require special tools to rebuild."
++	-rm -f Makefile.in
+ 	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
+-mostlyclean-am:  mostlyclean-binPROGRAMS mostlyclean-compile \
+-		mostlyclean-libtool mostlyclean-tags \
+-		mostlyclean-generic
+-
+-mostlyclean: mostlyclean-am
+-
+-clean-am:  clean-binPROGRAMS clean-compile clean-libtool clean-tags \
+-		clean-generic mostlyclean-am
+-
+ clean: clean-am
+ 
+-distclean-am:  distclean-binPROGRAMS distclean-compile distclean-libtool \
+-		distclean-tags distclean-generic clean-am
+-	-rm -f libtool
++clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
+ 
+ distclean: distclean-am
+ 
+-maintainer-clean-am:  maintainer-clean-binPROGRAMS \
+-		maintainer-clean-compile maintainer-clean-libtool \
+-		maintainer-clean-tags maintainer-clean-generic \
+-		distclean-am
+-	@echo "This command is intended for maintainers to use;"
+-	@echo "it deletes files that may require special tools to rebuild."
++distclean-am: clean-am distclean-binPROGRAMS distclean-compile \
++	distclean-depend distclean-generic distclean-libtool \
++	distclean-tags
+ 
+ maintainer-clean: maintainer-clean-am
+ 
+-.PHONY: mostlyclean-binPROGRAMS distclean-binPROGRAMS clean-binPROGRAMS \
+-maintainer-clean-binPROGRAMS uninstall-binPROGRAMS install-binPROGRAMS \
+-mostlyclean-compile distclean-compile clean-compile \
+-maintainer-clean-compile mostlyclean-libtool distclean-libtool \
+-clean-libtool maintainer-clean-libtool uninstall-oafinfoDATA \
+-install-oafinfoDATA tags mostlyclean-tags distclean-tags clean-tags \
+-maintainer-clean-tags distdir info-am info dvi-am dvi check check-am \
+-installcheck-am installcheck install-exec-am install-exec \
+-install-data-am install-data install-am install uninstall-am uninstall \
+-all-redirect all-am all installdirs mostlyclean-generic \
+-distclean-generic clean-generic maintainer-clean-generic clean \
+-mostlyclean distclean maintainer-clean
++maintainer-clean-am: distclean-am maintainer-clean-binPROGRAMS \
++	maintainer-clean-generic
++
++mostlyclean: mostlyclean-am
++
++mostlyclean-am: mostlyclean-binPROGRAMS mostlyclean-compile \
++	mostlyclean-generic mostlyclean-libtool
++
++.PHONY: all-redirect check check-am clean clean-binPROGRAMS \
++	clean-generic clean-libtool distclean distclean-binPROGRAMS \
++	distclean-compile distclean-depend distclean-generic \
++	distclean-libtool distclean-tags distdir dvi dvi-am info \
++	info-am install install-am install-binPROGRAMS install-data \
++	install-data-am install-exec install-exec-am \
++	install-oafinfoDATA install-strip installcheck installcheck-am \
++	installdirs maintainer-clean maintainer-clean-binPROGRAMS \
++	maintainer-clean-generic mostlyclean mostlyclean-binPROGRAMS \
++	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
++	tags uninstall uninstall-am uninstall-binPROGRAMS \
++	uninstall-oafinfoDATA
+ 
+ 
+ @XML_I18N_MERGE_OAF_RULE@
+diff -r -u oaf-0.6.4.orig/test/Makefile.in oaf-0.6.4/test/Makefile.in
+--- oaf-0.6.4.orig/test/Makefile.in	Tue Feb 27 07:05:54 2001
++++ oaf-0.6.4/test/Makefile.in	Mon Mar  5 03:28:37 2001
+@@ -1,6 +1,7 @@
+-# Makefile.in generated automatically by automake 1.4 from Makefile.am
++# Makefile.in generated automatically by automake 1.4d from Makefile.am
+ 
+-# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
++# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001
++# Free Software Foundation, Inc.
+ # This Makefile.in is free software; the Free Software Foundation
+ # gives unlimited permission to copy and/or distribute it,
+ # with or without modifications, as long as this notice is preserved.
+@@ -10,7 +11,6 @@
+ # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ # PARTICULAR PURPOSE.
+ 
+-
+ SHELL = @SHELL@
+ 
+ srcdir = @srcdir@
+@@ -32,8 +32,6 @@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+ 
+-DESTDIR =
+-
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+@@ -46,9 +44,11 @@
+ AUTOHEADER = @AUTOHEADER@
+ 
+ INSTALL = @INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
++INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_STRIP_FLAG =
++INSTALL_HEADER = $(INSTALL_DATA)
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = :
+@@ -57,6 +57,8 @@
+ NORMAL_UNINSTALL = :
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
++
++@SET_MAKE@
+ host_alias = @host_alias@
+ host_triplet = @host@
+ APP_LIBS = @APP_LIBS@
+@@ -112,32 +114,62 @@
+ YACC = @YACC@
+ l = @l@
+ 
++
+ NULL = 
+ 
+-noinst_PROGRAMS =  	oaf-empty-server 		oaf-test-client			oaf-test-async			$(NULL)
++noinst_PROGRAMS = \
++	oaf-empty-server 	\
++	oaf-test-client		\
++	oaf-test-async		\
++	$(NULL)
+ 
+ 
+-bin_PROGRAMS =  	oaf-run-query			$(NULL)
++bin_PROGRAMS = \
++	oaf-run-query		\
++	$(NULL)
+ 
+ 
+-oaf_test_async_SOURCES =  	oaf-test-async.c 		$(NULL)
++oaf_test_async_SOURCES = \
++	oaf-test-async.c 	\
++	$(NULL)
+ 
+ 
+-oaf_test_client_SOURCES =  	oaf-test-client.c 		empty-common.c 			empty.h 			empty-stubs.c			$(NULL)
++oaf_test_client_SOURCES = \
++	oaf-test-client.c 	\
++	empty-common.c 		\
++	empty.h 		\
++	empty-stubs.c		\
++	$(NULL)
+ 
+ 
+-oaf_run_query_SOURCES =  	oaf-run-query.c 		empty-common.c 			empty.h 			empty-stubs.c			$(NULL)
++oaf_run_query_SOURCES = \
++	oaf-run-query.c 	\
++	empty-common.c 		\
++	empty.h 		\
++	empty-stubs.c		\
++	$(NULL)
+ 
+ 
+-oaf_empty_server_SOURCES =  	empty-server.c 			empty.h 			empty-common.c 			empty-skels.c			$(NULL)
++oaf_empty_server_SOURCES = \
++	empty-server.c 		\
++	empty.h 		\
++	empty-common.c 		\
++	empty-skels.c		\
++	$(NULL)
+ 
+ 
+-BUILT_SOURCES =  	empty.h 			empty-common.c 			empty-stubs.c 			empty-skels.c			$(NULL)
++BUILT_SOURCES = \
++	empty.h 		\
++	empty-common.c 		\
++	empty-stubs.c 		\
++	empty-skels.c		\
++	$(NULL)
+ 
+ 
+ CLEANFILES = empty_built
+ 
+-INCLUDES = -I$(top_srcdir) -I$(top_builddir) -I$(top_builddir)/liboaf -DOAFINFODIR=\"$(pkgdatadir)\" 	@ORBIT_CFLAGS@ @XML_CFLAGS@ @GLIB_CFLAGS@
++INCLUDES = -I$(top_srcdir) -I$(top_builddir) -I$(top_builddir)/liboaf -DOAFINFODIR=\"$(pkgdatadir)\" \
++	@ORBIT_CFLAGS@ @XML_CFLAGS@ @GLIB_CFLAGS@
+ 
+ LDADD = ../liboaf/liboaf.la @ORBIT_LIBS@ @GLIB_LIBS@
+ 
+@@ -149,6 +181,7 @@
+ bin_SCRIPTS = oaf-slay
+ 
+ EXTRA_DIST = empty.idl oaf-slay.tmpl $(oaffiles) broken.oafinfo
++subdir = test
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
+@@ -159,51 +192,62 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-oaf_run_query_OBJECTS =  oaf-run-query.o empty-common.o empty-stubs.o
+-oaf_run_query_LDADD = $(LDADD)
+-oaf_run_query_DEPENDENCIES =  ../liboaf/liboaf.la
+-oaf_run_query_LDFLAGS = 
+-oaf_empty_server_OBJECTS =  empty-server.o empty-common.o empty-skels.o
++am_oaf_empty_server_OBJECTS =  empty-server.o empty-common.o \
++empty-skels.o
++oaf_empty_server_OBJECTS =  $(am_oaf_empty_server_OBJECTS)
+ oaf_empty_server_LDADD = $(LDADD)
+ oaf_empty_server_DEPENDENCIES =  ../liboaf/liboaf.la
+ oaf_empty_server_LDFLAGS = 
+-oaf_test_client_OBJECTS =  oaf-test-client.o empty-common.o \
++am_oaf_run_query_OBJECTS =  oaf-run-query.o empty-common.o empty-stubs.o
++oaf_run_query_OBJECTS =  $(am_oaf_run_query_OBJECTS)
++oaf_run_query_LDADD = $(LDADD)
++oaf_run_query_DEPENDENCIES =  ../liboaf/liboaf.la
++oaf_run_query_LDFLAGS = 
++am_oaf_test_async_OBJECTS =  oaf-test-async.o
++oaf_test_async_OBJECTS =  $(am_oaf_test_async_OBJECTS)
++oaf_test_async_LDADD = $(LDADD)
++oaf_test_async_DEPENDENCIES =  ../liboaf/liboaf.la
++oaf_test_async_LDFLAGS = 
++am_oaf_test_client_OBJECTS =  oaf-test-client.o empty-common.o \
+ empty-stubs.o
++oaf_test_client_OBJECTS =  $(am_oaf_test_client_OBJECTS)
+ oaf_test_client_LDADD = $(LDADD)
+ oaf_test_client_DEPENDENCIES =  ../liboaf/liboaf.la
+ oaf_test_client_LDFLAGS = 
+-oaf_test_async_OBJECTS =  oaf-test-async.o
+-oaf_test_async_LDADD = $(LDADD)
+-oaf_test_async_DEPENDENCIES =  ../liboaf/liboaf.la
+-oaf_test_async_LDFLAGS = 
+ SCRIPTS =  $(bin_SCRIPTS)
+ 
+-CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
++CFLAGS = @CFLAGS@
+ CCLD = $(CC)
+-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
++LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++DIST_SOURCES =  $(oaf_empty_server_SOURCES) $(oaf_run_query_SOURCES) \
++$(oaf_test_async_SOURCES) $(oaf_test_client_SOURCES)
+ DATA =  $(emptydata_DATA)
+ 
++depcomp = $(SHELL) $(top_srcdir)/depcomp
++@AMDEP@DEP_FILES =  $(DEPDIR)/empty-common.Po $(DEPDIR)/empty-server.Po \
++@AMDEP@$(DEPDIR)/empty-skels.Po $(DEPDIR)/empty-stubs.Po \
++@AMDEP@$(DEPDIR)/oaf-run-query.Po $(DEPDIR)/oaf-test-async.Po \
++@AMDEP@$(DEPDIR)/oaf-test-client.Po
+ DIST_COMMON =  Makefile.am Makefile.in
+ 
+ 
+-DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
++DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = tar
+ GZIP_ENV = --best
+-SOURCES = $(oaf_run_query_SOURCES) $(oaf_empty_server_SOURCES) $(oaf_test_client_SOURCES) $(oaf_test_async_SOURCES)
+-OBJECTS = $(oaf_run_query_OBJECTS) $(oaf_empty_server_OBJECTS) $(oaf_test_client_OBJECTS) $(oaf_test_async_OBJECTS)
++SOURCES = $(oaf_empty_server_SOURCES) $(oaf_run_query_SOURCES) $(oaf_test_async_SOURCES) $(oaf_test_client_SOURCES)
++OBJECTS = $(am_oaf_empty_server_OBJECTS) $(am_oaf_run_query_OBJECTS) $(am_oaf_test_async_OBJECTS) $(am_oaf_test_client_OBJECTS)
+ 
+ all: all-redirect
+ .SUFFIXES:
+-.SUFFIXES: .S .c .lo .o .s
++.SUFFIXES: .c .h .lo .o
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps test/Makefile
++	cd $(top_srcdir) && $(AUTOMAKE) --gnu test/Makefile
+ 
+ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) \
+-	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ 
+ 
+ mostlyclean-binPROGRAMS:
+@@ -220,15 +264,18 @@
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+-	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
++	    f="`echo $$p|sed -e 's/$(EXEEXT)$$//' -e '$(transform)' -e 's/$$/$(EXEEXT)/'`"; \
++	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(bindir)/$$f"; \
++	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(bindir)/$$f; \
+ 	  else :; fi; \
+ 	done
+ 
+ uninstall-binPROGRAMS:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(bin_PROGRAMS)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
++	@list='$(bin_PROGRAMS)'; for p in $$list; do \
++	  f="`echo $$p|sed -e 's/$(EXEEXT)$$//' -e '$(transform)' -e 's/$$/$(EXEEXT)/'`"; \
++	  echo " rm -f $(DESTDIR)$(bindir)/$$f"; \
++	  rm -f $(DESTDIR)$(bindir)/$$f; \
+ 	done
+ 
+ mostlyclean-noinstPROGRAMS:
+@@ -240,34 +287,12 @@
+ 
+ maintainer-clean-noinstPROGRAMS:
+ 
+-.c.o:
+-	$(COMPILE) -c $<
+-
+-.s.o:
+-	$(COMPILE) -c $<
+-
+-.S.o:
+-	$(COMPILE) -c $<
+-
+ mostlyclean-compile:
+ 	-rm -f *.o core *.core
+ 
+-clean-compile:
+-
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-maintainer-clean-compile:
+-
+-.c.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+-.s.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+-.S.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+ 
+@@ -275,108 +300,137 @@
+ 	-rm -rf .libs _libs
+ 
+ distclean-libtool:
++	-rm -f libtool
+ 
+-maintainer-clean-libtool:
++oaf-empty-server: $(oaf_empty_server_OBJECTS) $(oaf_empty_server_DEPENDENCIES)
++	@rm -f oaf-empty-server
++	$(LINK) $(oaf_empty_server_LDFLAGS) $(oaf_empty_server_OBJECTS) $(oaf_empty_server_LDADD) $(LIBS)
+ 
+ oaf-run-query: $(oaf_run_query_OBJECTS) $(oaf_run_query_DEPENDENCIES)
+ 	@rm -f oaf-run-query
+ 	$(LINK) $(oaf_run_query_LDFLAGS) $(oaf_run_query_OBJECTS) $(oaf_run_query_LDADD) $(LIBS)
+ 
+-oaf-empty-server: $(oaf_empty_server_OBJECTS) $(oaf_empty_server_DEPENDENCIES)
+-	@rm -f oaf-empty-server
+-	$(LINK) $(oaf_empty_server_LDFLAGS) $(oaf_empty_server_OBJECTS) $(oaf_empty_server_LDADD) $(LIBS)
++oaf-test-async: $(oaf_test_async_OBJECTS) $(oaf_test_async_DEPENDENCIES)
++	@rm -f oaf-test-async
++	$(LINK) $(oaf_test_async_LDFLAGS) $(oaf_test_async_OBJECTS) $(oaf_test_async_LDADD) $(LIBS)
+ 
+ oaf-test-client: $(oaf_test_client_OBJECTS) $(oaf_test_client_DEPENDENCIES)
+ 	@rm -f oaf-test-client
+ 	$(LINK) $(oaf_test_client_LDFLAGS) $(oaf_test_client_OBJECTS) $(oaf_test_client_LDADD) $(LIBS)
+ 
+-oaf-test-async: $(oaf_test_async_OBJECTS) $(oaf_test_async_DEPENDENCIES)
+-	@rm -f oaf-test-async
+-	$(LINK) $(oaf_test_async_LDFLAGS) $(oaf_test_async_OBJECTS) $(oaf_test_async_LDADD) $(LIBS)
+-
+ install-binSCRIPTS: $(bin_SCRIPTS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	@list='$(bin_SCRIPTS)'; for p in $$list; do \
++	  f="`echo $$p|sed '$(transform)'`"; \
+ 	  if test -f $$p; then \
+-	    echo " $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`"; \
+-	    $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
+-	  else if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`"; \
+-	    $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
+-	  else :; fi; fi; \
++	    echo " $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/$$f"; \
++	    $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/$$f; \
++	  elif test -f $(srcdir)/$$p; then \
++	    echo " $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/$$f"; \
++	    $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/$$f; \
++	  else :; fi; \
+ 	done
+ 
+ uninstall-binSCRIPTS:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(bin_SCRIPTS)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
++	@list='$(bin_SCRIPTS)'; for p in $$list; do \
++	  f="`echo $$p|sed '$(transform)'`"; \
++	  echo " rm -f $(DESTDIR)$(bindir)/$$f"; \
++	  rm -f $(DESTDIR)$(bindir)/$$f; \
+ 	done
+ 
+ install-emptydataDATA: $(emptydata_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(emptydatadir)
+ 	@list='$(emptydata_DATA)'; for p in $$list; do \
+-	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(emptydatadir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(emptydatadir)/$$p; \
+-	  else if test -f $$p; then \
+-	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(emptydatadir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(emptydatadir)/$$p; \
+-	  fi; fi; \
++	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(emptydatadir)/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(emptydatadir)/$$f; \
+ 	done
+ 
+ uninstall-emptydataDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(emptydata_DATA)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(emptydatadir)/$$p; \
++	@list='$(emptydata_DATA)'; for p in $$list; do \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " rm -f $(DESTDIR)$(emptydatadir)/$$f"; \
++	  rm -f $(DESTDIR)$(emptydatadir)/$$f; \
+ 	done
+ 
+ tags: TAGS
+ 
+-ID: $(HEADERS) $(SOURCES) $(LISP)
+-	list='$(SOURCES) $(HEADERS)'; \
+-	unique=`for i in $$list; do echo $$i; done | \
+-	  awk '    { files[$$0] = 1; } \
++ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
++	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
++	unique=`for i in $$list; do \
++	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
++	  done | \
++	  $(AWK) '    { files[$$0] = 1; } \
+ 	       END { for (i in files) print i; }'`; \
+-	here=`pwd` && cd $(srcdir) \
+-	  && mkid -f$$here/ID $$unique $(LISP)
++	mkid -fID $$unique $(LISP)
+ 
+-TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) $(LISP)
++TAGS: $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
++		$(TAGS_FILES) $(LISP)
+ 	tags=; \
+ 	here=`pwd`; \
+-	list='$(SOURCES) $(HEADERS)'; \
+-	unique=`for i in $$list; do echo $$i; done | \
+-	  awk '    { files[$$0] = 1; } \
++	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
++	unique=`for i in $$list; do \
++	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
++	  done | \
++	  $(AWK) '    { files[$$0] = 1; } \
+ 	       END { for (i in files) print i; }'`; \
+ 	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
+-	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags  $$unique $(LISP) -o $$here/TAGS)
++	  || etags $(ETAGS_ARGS) $$tags  $$unique $(LISP)
+ 
+-mostlyclean-tags:
+-
+-clean-tags:
++GTAGS:
++	here=`CDPATH=: && cd $(top_builddir) && pwd` \
++	  && cd $(top_srcdir) \
++	  && gtags -i $$here
+ 
+ distclean-tags:
+ 	-rm -f TAGS ID
+ 
+-maintainer-clean-tags:
++@AMDEP@@_am_include@ $(DEPDIR)/empty-common.Po
++@AMDEP@@_am_include@ $(DEPDIR)/empty-server.Po
++@AMDEP@@_am_include@ $(DEPDIR)/empty-skels.Po
++@AMDEP@@_am_include@ $(DEPDIR)/empty-stubs.Po
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-run-query.Po
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-test-async.Po
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-test-client.Po
++
++distclean-depend:
++	-rm -rf $(DEPDIR)
++
++@AMDEP@CCDEPMODE = @CCDEPMODE@
++
++.c.o:
++@AMDEP@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
++@AMDEP@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(COMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
++.c.lo:
++@AMDEP@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
++@AMDEP@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
++@AMDEP@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(LTCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
+ 
+ distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
+ 
+-subdir = test
+ 
+ distdir: $(DISTFILES)
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+-	    cp -pr $$d/$$file $(distdir)/$$file; \
++	    cp -pR $$d/$$file $(distdir) \
++	    || exit 1; \
+ 	  else \
+ 	    test -f $(distdir)/$$file \
+-	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-	    || cp -p $$d/$$file $(distdir)/$$file || :; \
++	    || cp -p $$d/$$file $(distdir)/$$file \
++	    || exit 1; \
+ 	  fi; \
+ 	done
+-
+ info-am:
+ info: info-am
+ dvi-am:
+@@ -385,6 +439,9 @@
+ check: check-am
+ installcheck-am:
+ installcheck: installcheck-am
++all-redirect: $(BUILT_SOURCES)
++	$(MAKE) $(AM_MAKEFLAGS) all-am
++
+ install-exec-am: install-binPROGRAMS install-binSCRIPTS
+ install-exec: install-exec-am
+ 
+@@ -398,9 +455,8 @@
+ 		uninstall-emptydataDATA
+ uninstall: uninstall-am
+ all-am: Makefile $(PROGRAMS) $(SCRIPTS) $(DATA)
+-all-redirect: all-am
+ install-strip:
+-	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
++	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
+ installdirs:
+ 	$(mkinstalldirs)  $(DESTDIR)$(bindir) $(DESTDIR)$(bindir) \
+ 		$(DESTDIR)$(emptydatadir)
+@@ -416,49 +472,47 @@
+ 	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+ 
+ maintainer-clean-generic:
++	@echo "This command is intended for maintainers to use"
++	@echo "it deletes files that may require special tools to rebuild."
++	-rm -f Makefile.in
+ 	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
+-mostlyclean-am:  mostlyclean-binPROGRAMS mostlyclean-noinstPROGRAMS \
+-		mostlyclean-compile mostlyclean-libtool \
+-		mostlyclean-tags mostlyclean-generic
+-
+-mostlyclean: mostlyclean-am
+-
+-clean-am:  clean-binPROGRAMS clean-noinstPROGRAMS clean-compile \
+-		clean-libtool clean-tags clean-generic mostlyclean-am
+-
+ clean: clean-am
+ 
+-distclean-am:  distclean-binPROGRAMS distclean-noinstPROGRAMS \
+-		distclean-compile distclean-libtool distclean-tags \
+-		distclean-generic clean-am
+-	-rm -f libtool
++clean-am: clean-binPROGRAMS clean-generic clean-libtool \
++	clean-noinstPROGRAMS mostlyclean-am
+ 
+ distclean: distclean-am
+ 
+-maintainer-clean-am:  maintainer-clean-binPROGRAMS \
+-		maintainer-clean-noinstPROGRAMS \
+-		maintainer-clean-compile maintainer-clean-libtool \
+-		maintainer-clean-tags maintainer-clean-generic \
+-		distclean-am
+-	@echo "This command is intended for maintainers to use;"
+-	@echo "it deletes files that may require special tools to rebuild."
++distclean-am: clean-am distclean-binPROGRAMS distclean-compile \
++	distclean-depend distclean-generic distclean-libtool \
++	distclean-noinstPROGRAMS distclean-tags
+ 
+ maintainer-clean: maintainer-clean-am
+ 
+-.PHONY: mostlyclean-binPROGRAMS distclean-binPROGRAMS clean-binPROGRAMS \
+-maintainer-clean-binPROGRAMS uninstall-binPROGRAMS install-binPROGRAMS \
+-mostlyclean-noinstPROGRAMS distclean-noinstPROGRAMS \
+-clean-noinstPROGRAMS maintainer-clean-noinstPROGRAMS \
+-mostlyclean-compile distclean-compile clean-compile \
+-maintainer-clean-compile mostlyclean-libtool distclean-libtool \
+-clean-libtool maintainer-clean-libtool uninstall-binSCRIPTS \
+-install-binSCRIPTS uninstall-emptydataDATA install-emptydataDATA tags \
+-mostlyclean-tags distclean-tags clean-tags maintainer-clean-tags \
+-distdir info-am info dvi-am dvi check check-am installcheck-am \
+-installcheck install-exec-am install-exec install-data-am install-data \
+-install-am install uninstall-am uninstall all-redirect all-am all \
+-installdirs mostlyclean-generic distclean-generic clean-generic \
+-maintainer-clean-generic clean mostlyclean distclean maintainer-clean
++maintainer-clean-am: distclean-am maintainer-clean-binPROGRAMS \
++	maintainer-clean-generic maintainer-clean-noinstPROGRAMS
++
++mostlyclean: mostlyclean-am
++
++mostlyclean-am: mostlyclean-binPROGRAMS mostlyclean-compile \
++	mostlyclean-generic mostlyclean-libtool \
++	mostlyclean-noinstPROGRAMS
++
++.PHONY: all-redirect check check-am clean clean-binPROGRAMS \
++	clean-generic clean-libtool clean-noinstPROGRAMS distclean \
++	distclean-binPROGRAMS distclean-compile distclean-depend \
++	distclean-generic distclean-libtool distclean-noinstPROGRAMS \
++	distclean-tags distdir dvi dvi-am info info-am install \
++	install-am install-binPROGRAMS install-binSCRIPTS install-data \
++	install-data-am install-emptydataDATA install-exec \
++	install-exec-am install-strip installcheck installcheck-am \
++	installdirs maintainer-clean maintainer-clean-binPROGRAMS \
++	maintainer-clean-generic maintainer-clean-noinstPROGRAMS \
++	mostlyclean mostlyclean-binPROGRAMS mostlyclean-compile \
++	mostlyclean-generic mostlyclean-libtool \
++	mostlyclean-noinstPROGRAMS tags uninstall uninstall-am \
++	uninstall-binPROGRAMS uninstall-binSCRIPTS \
++	uninstall-emptydataDATA
+ 
+ 
+ empty.h empty-common.c empty-stubs.c empty-skels.c: empty_built
+diff -r -u oaf-0.6.4.orig/utils/Makefile.in oaf-0.6.4/utils/Makefile.in
+--- oaf-0.6.4.orig/utils/Makefile.in	Tue Feb 27 07:05:46 2001
++++ oaf-0.6.4/utils/Makefile.in	Mon Mar  5 03:28:37 2001
+@@ -1,6 +1,7 @@
+-# Makefile.in generated automatically by automake 1.4 from Makefile.am
++# Makefile.in generated automatically by automake 1.4d from Makefile.am
+ 
+-# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
++# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001
++# Free Software Foundation, Inc.
+ # This Makefile.in is free software; the Free Software Foundation
+ # gives unlimited permission to copy and/or distribute it,
+ # with or without modifications, as long as this notice is preserved.
+@@ -10,7 +11,6 @@
+ # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ # PARTICULAR PURPOSE.
+ 
+-
+ SHELL = @SHELL@
+ 
+ srcdir = @srcdir@
+@@ -32,8 +32,6 @@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+ 
+-DESTDIR =
+-
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+@@ -46,9 +44,11 @@
+ AUTOHEADER = @AUTOHEADER@
+ 
+ INSTALL = @INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
++INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_STRIP_FLAG =
++INSTALL_HEADER = $(INSTALL_DATA)
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = :
+@@ -57,6 +57,8 @@
+ NORMAL_UNINSTALL = :
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
++
++@SET_MAKE@
+ host_alias = @host_alias@
+ host_triplet = @host@
+ APP_LIBS = @APP_LIBS@
+@@ -112,18 +114,34 @@
+ YACC = @YACC@
+ l = @l@
+ 
++
+ NULL = 
+ 
+ bin_PROGRAMS = oaf-sysconf
+ 
+-oaf_sysconf_SOURCES =  	oaf-sysconf.c				$(NULL)
+-
+-
+-INCLUDES =  	$(XML_CFLAGS)					$(GLIB_CFLAGS)					-I$(top_srcdir)					-I$(top_srcdir)/oafd/				-I$(top_srcdir)/liboaf/				-DOAF_LOCALEDIR=\""$(datadir)/locale"\"		-DOAF_CONFDIR=\"$(sysconfdir)\"			$(NULL)
+-
+-
+-oaf_sysconf_LDADD =  	$(XML_LIBS)				$(GLIB_LIBS)				$(INTLLIBS)				$(NULL)
++oaf_sysconf_SOURCES = \
++	oaf-sysconf.c			\
++	$(NULL)
++
++
++INCLUDES = \
++	$(XML_CFLAGS)				\
++	$(GLIB_CFLAGS)				\
++	-I$(top_srcdir)				\
++	-I$(top_srcdir)/oafd/			\
++	-I$(top_srcdir)/liboaf/			\
++	-DOAF_LOCALEDIR=\""$(datadir)/locale"\"	\
++	-DOAF_CONFDIR=\"$(sysconfdir)\"		\
++	$(NULL)
++
++
++oaf_sysconf_LDADD = \
++	$(XML_LIBS)			\
++	$(GLIB_LIBS)			\
++	$(INTLLIBS)			\
++	$(NULL)
+ 
++subdir = utils
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
+@@ -134,33 +152,36 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-oaf_sysconf_OBJECTS =  oaf-sysconf.o
++am_oaf_sysconf_OBJECTS =  oaf-sysconf.o
++oaf_sysconf_OBJECTS =  $(am_oaf_sysconf_OBJECTS)
+ oaf_sysconf_DEPENDENCIES = 
+ oaf_sysconf_LDFLAGS = 
+-CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
++CFLAGS = @CFLAGS@
+ CCLD = $(CC)
+-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
++LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++DIST_SOURCES =  $(oaf_sysconf_SOURCES)
++depcomp = $(SHELL) $(top_srcdir)/depcomp
++@AMDEP@DEP_FILES =  $(DEPDIR)/oaf-sysconf.Po
+ DIST_COMMON =  Makefile.am Makefile.in
+ 
+ 
+-DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
++DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = tar
+ GZIP_ENV = --best
+ SOURCES = $(oaf_sysconf_SOURCES)
+-OBJECTS = $(oaf_sysconf_OBJECTS)
++OBJECTS = $(am_oaf_sysconf_OBJECTS)
+ 
+-all: all-redirect
++all: all-am
+ .SUFFIXES:
+-.SUFFIXES: .S .c .lo .o .s
++.SUFFIXES: .c .lo .o
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps utils/Makefile
++	cd $(top_srcdir) && $(AUTOMAKE) --gnu utils/Makefile
+ 
+ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) \
+-	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= CONFIG_LINKS= $(SHELL) ./config.status
+ 
+ 
+ mostlyclean-binPROGRAMS:
+@@ -177,45 +198,26 @@
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+-	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
++	    f="`echo $$p|sed -e 's/$(EXEEXT)$$//' -e '$(transform)' -e 's/$$/$(EXEEXT)/'`"; \
++	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(bindir)/$$f"; \
++	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(bindir)/$$f; \
+ 	  else :; fi; \
+ 	done
+ 
+ uninstall-binPROGRAMS:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(bin_PROGRAMS)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
++	@list='$(bin_PROGRAMS)'; for p in $$list; do \
++	  f="`echo $$p|sed -e 's/$(EXEEXT)$$//' -e '$(transform)' -e 's/$$/$(EXEEXT)/'`"; \
++	  echo " rm -f $(DESTDIR)$(bindir)/$$f"; \
++	  rm -f $(DESTDIR)$(bindir)/$$f; \
+ 	done
+ 
+-.c.o:
+-	$(COMPILE) -c $<
+-
+-.s.o:
+-	$(COMPILE) -c $<
+-
+-.S.o:
+-	$(COMPILE) -c $<
+-
+ mostlyclean-compile:
+ 	-rm -f *.o core *.core
+ 
+-clean-compile:
+-
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-maintainer-clean-compile:
+-
+-.c.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+-.s.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+-.S.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+-
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+ 
+@@ -223,8 +225,7 @@
+ 	-rm -rf .libs _libs
+ 
+ distclean-libtool:
+-
+-maintainer-clean-libtool:
++	-rm -f libtool
+ 
+ oaf-sysconf: $(oaf_sysconf_OBJECTS) $(oaf_sysconf_DEPENDENCIES)
+ 	@rm -f oaf-sysconf
+@@ -232,49 +233,71 @@
+ 
+ tags: TAGS
+ 
+-ID: $(HEADERS) $(SOURCES) $(LISP)
+-	list='$(SOURCES) $(HEADERS)'; \
+-	unique=`for i in $$list; do echo $$i; done | \
+-	  awk '    { files[$$0] = 1; } \
++ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
++	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
++	unique=`for i in $$list; do \
++	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
++	  done | \
++	  $(AWK) '    { files[$$0] = 1; } \
+ 	       END { for (i in files) print i; }'`; \
+-	here=`pwd` && cd $(srcdir) \
+-	  && mkid -f$$here/ID $$unique $(LISP)
++	mkid -fID $$unique $(LISP)
+ 
+-TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) $(LISP)
++TAGS: $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
++		$(TAGS_FILES) $(LISP)
+ 	tags=; \
+ 	here=`pwd`; \
+-	list='$(SOURCES) $(HEADERS)'; \
+-	unique=`for i in $$list; do echo $$i; done | \
+-	  awk '    { files[$$0] = 1; } \
++	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
++	unique=`for i in $$list; do \
++	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
++	  done | \
++	  $(AWK) '    { files[$$0] = 1; } \
+ 	       END { for (i in files) print i; }'`; \
+ 	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
+-	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags  $$unique $(LISP) -o $$here/TAGS)
+-
+-mostlyclean-tags:
++	  || etags $(ETAGS_ARGS) $$tags  $$unique $(LISP)
+ 
+-clean-tags:
++GTAGS:
++	here=`CDPATH=: && cd $(top_builddir) && pwd` \
++	  && cd $(top_srcdir) \
++	  && gtags -i $$here
+ 
+ distclean-tags:
+ 	-rm -f TAGS ID
+ 
+-maintainer-clean-tags:
++@AMDEP@@_am_include@ $(DEPDIR)/oaf-sysconf.Po
++
++distclean-depend:
++	-rm -rf $(DEPDIR)
++
++@AMDEP@CCDEPMODE = @CCDEPMODE@
++
++.c.o:
++@AMDEP@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
++@AMDEP@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(COMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
++.c.lo:
++@AMDEP@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
++@AMDEP@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
++@AMDEP@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(LTCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
+ 
+ distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
+ 
+-subdir = utils
+ 
+ distdir: $(DISTFILES)
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+-	    cp -pr $$d/$$file $(distdir)/$$file; \
++	    cp -pR $$d/$$file $(distdir) \
++	    || exit 1; \
+ 	  else \
+ 	    test -f $(distdir)/$$file \
+-	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-	    || cp -p $$d/$$file $(distdir)/$$file || :; \
++	    || cp -p $$d/$$file $(distdir)/$$file \
++	    || exit 1; \
+ 	  fi; \
+ 	done
+-
+ info-am:
+ info: info-am
+ dvi-am:
+@@ -295,9 +318,8 @@
+ uninstall-am: uninstall-binPROGRAMS
+ uninstall: uninstall-am
+ all-am: Makefile $(PROGRAMS)
+-all-redirect: all-am
+ install-strip:
+-	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
++	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
+ installdirs:
+ 	$(mkinstalldirs)  $(DESTDIR)$(bindir)
+ 
+@@ -311,43 +333,40 @@
+ 	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+ 
+ maintainer-clean-generic:
+-mostlyclean-am:  mostlyclean-binPROGRAMS mostlyclean-compile \
+-		mostlyclean-libtool mostlyclean-tags \
+-		mostlyclean-generic
+-
+-mostlyclean: mostlyclean-am
+-
+-clean-am:  clean-binPROGRAMS clean-compile clean-libtool clean-tags \
+-		clean-generic mostlyclean-am
+-
++	@echo "This command is intended for maintainers to use"
++	@echo "it deletes files that may require special tools to rebuild."
++	-rm -f Makefile.in
+ clean: clean-am
+ 
+-distclean-am:  distclean-binPROGRAMS distclean-compile distclean-libtool \
+-		distclean-tags distclean-generic clean-am
+-	-rm -f libtool
++clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
+ 
+ distclean: distclean-am
+ 
+-maintainer-clean-am:  maintainer-clean-binPROGRAMS \
+-		maintainer-clean-compile maintainer-clean-libtool \
+-		maintainer-clean-tags maintainer-clean-generic \
+-		distclean-am
+-	@echo "This command is intended for maintainers to use;"
+-	@echo "it deletes files that may require special tools to rebuild."
++distclean-am: clean-am distclean-binPROGRAMS distclean-compile \
++	distclean-depend distclean-generic distclean-libtool \
++	distclean-tags
+ 
+ maintainer-clean: maintainer-clean-am
+ 
+-.PHONY: mostlyclean-binPROGRAMS distclean-binPROGRAMS clean-binPROGRAMS \
+-maintainer-clean-binPROGRAMS uninstall-binPROGRAMS install-binPROGRAMS \
+-mostlyclean-compile distclean-compile clean-compile \
+-maintainer-clean-compile mostlyclean-libtool distclean-libtool \
+-clean-libtool maintainer-clean-libtool tags mostlyclean-tags \
+-distclean-tags clean-tags maintainer-clean-tags distdir info-am info \
+-dvi-am dvi check check-am installcheck-am installcheck install-exec-am \
+-install-exec install-data-am install-data install-am install \
+-uninstall-am uninstall all-redirect all-am all installdirs \
+-mostlyclean-generic distclean-generic clean-generic \
+-maintainer-clean-generic clean mostlyclean distclean maintainer-clean
++maintainer-clean-am: distclean-am maintainer-clean-binPROGRAMS \
++	maintainer-clean-generic
++
++mostlyclean: mostlyclean-am
++
++mostlyclean-am: mostlyclean-binPROGRAMS mostlyclean-compile \
++	mostlyclean-generic mostlyclean-libtool
++
++.PHONY: check check-am clean clean-binPROGRAMS clean-generic \
++	clean-libtool distclean distclean-binPROGRAMS distclean-compile \
++	distclean-depend distclean-generic distclean-libtool \
++	distclean-tags distdir dvi dvi-am info info-am install \
++	install-am install-binPROGRAMS install-data install-data-am \
++	install-exec install-exec-am install-strip installcheck \
++	installcheck-am installdirs maintainer-clean \
++	maintainer-clean-binPROGRAMS maintainer-clean-generic \
++	mostlyclean mostlyclean-binPROGRAMS mostlyclean-compile \
++	mostlyclean-generic mostlyclean-libtool tags uninstall \
++	uninstall-am uninstall-binPROGRAMS
+ 
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
