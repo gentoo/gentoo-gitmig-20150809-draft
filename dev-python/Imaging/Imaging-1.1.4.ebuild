@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.8 2004/02/26 19:00:38 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.9 2004/03/14 21:17:31 avenj Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pythonware.com/products/pil/index.htm"
 SRC_URI="http://www.effbot.org/downloads/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 sparc ~alpha ~ppc"
+KEYWORDS="x86 sparc ~alpha ~ppc ~amd64"
 LICENSE="as-is"
 
 DEPEND="virtual/python
@@ -26,6 +26,8 @@ src_unpack() {
 }
 
 src_compile() {
+	append-flags -fPIC
+
 	export OPT=${CFLAGS}
 
 	#Build the core imaging library (libImaging.a)
