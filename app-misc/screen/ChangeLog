@@ -1,10 +1,14 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.7 2002/08/01 07:13:33 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.8 2002/08/03 16:15:09 cselkirk Exp $
 
 *screen-3.9.11-r3 (27 Jul 2002)
 
-27 Jul 2002; Michael M Nazaroff <naz@gentoo.org> screen-3.9.11-r3.ebuild
+  3 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> screen-3.9.11-r3.ebuild :
+
+  Added ppc to KEYWORDS.
+
+  27 Jul 2002; Michael M Nazaroff <naz@gentoo.org> screen-3.9.11-r3.ebuild
 
   Small typo fix.. /dev/ptys/* in ebuild instead of /dev/pty/*. Don't think
   needs revision bump.
