@@ -1,12 +1,13 @@
 # ChangeLog for media-gfx/gphoto
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/ChangeLog,v 1.5 2002/11/06 10:37:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/ChangeLog,v 1.6 2002/11/06 11:41:15 seemant Exp $
 
 *gphoto-0.4.3-r2 (12 June 2002)
 
   06 Nov 2002; Seemant Kulleen <seemant@gentoo.org> gphoto-0.4.3-r2 :
 
-  FHS standard manpages installation now -- switched to econf and einstall
+  FHS standard manpages installation now -- switched to econf and einstall.
+  Also use flag-o-matic eclass to filter out the -pipe compile optimisation.
 
   12 June 2002; Matthew Kennedy <mkennedy@gentoo.org>
   files/digest-gphoto-0.4.3-r2,
