@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugport/bugport-1.125.ebuild,v 1.3 2004/09/28 01:35:37 swegener Exp $
 
 inherit webapp
-
-# $Header: /var/cvsroot/gentoo-x86/net-www/bugport/bugport-1.125.ebuild,v 1.2 2004/07/22 23:44:47 dholm Exp $
 
 DESCRIPTION="Web-based system for managing tasks and defects throughout the software development process"
 HOMEPAGE="http://www.incogen.com/index.php?type=General&param=bugport"
