@@ -1,0 +1,11 @@
+--- configure	Fri Sep  6 02:48:05 2002
++++ configure.old	Fri Sep  6 02:47:40 2002
+@@ -7650,7 +7650,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpspell -lstdc++ -lpspell-modules $LIBS"
++LIBS="-laspell -lstdc++ $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line 7655 "configure"
+ #include "confdefs.h"

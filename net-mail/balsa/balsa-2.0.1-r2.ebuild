@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.1-r2.ebuild,v 1.1 2002/09/04 06:06:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.1-r2.ebuild,v 1.2 2002/09/06 10:10:58 seemant Exp $
 
 inherit debug 
 
@@ -38,6 +38,11 @@ src_unpack() {
 	# this patch is from Riccardo Persichetti
 	# (ricpersi@libero.it) to make balsa compile
 	patch -p0 < ${FILESDIR}/${P}-gentoo.patch || die
+
+	# this patch is from Seemant Kulleen to make it compile against aspell
+	# instead of the deprecated pspell
+	cd ${S}
+	patch -p0 < ${FILESDIR}/configure.diff || die
 
 
 	# Workaround for bug #4095, replaces the varmail patch.
