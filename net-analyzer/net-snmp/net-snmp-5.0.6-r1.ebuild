@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6-r1.ebuild,v 1.6 2003/07/01 16:48:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6-r1.ebuild,v 1.7 2003/07/31 20:26:06 agriffis Exp $
 
 IUSE="ssl kerberos ipv6 tcpd"
 PROVIDE="virtual/snmp"
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc <sys-libs/db-2
 	
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc arm hppa"
+KEYWORDS="x86 ppc sparc arm hppa alpha"
 
 src_unpack() {
 	unpack ${A}

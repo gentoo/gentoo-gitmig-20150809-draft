@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.18 2003/07/01 16:48:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.19 2003/07/31 20:26:06 agriffis Exp $
+
+  31 Jul 2003; Aron Griffis <agriffis@gentoo.org> net-snmp-5.0.6-r1.ebuild,
+  net-snmp-5.0.8.ebuild:
+  Mark 5.0.6-r1 stable on alpha, and 5.0.8 testing on ~alpha
 
   01 Jul 2003; Martin Holzer <mholzer@gentoo.org> net-snmp-5.0.6-r1.ebuild,
   net-snmp-5.0.8.ebuild:
@@ -32,19 +36,34 @@
  
 *net-snmp-5.0.6 (14 Oct 2002)
 
+<<<<<<< ChangeLog
+<<<<<<< ChangeLog
+<<<<<<< ChangeLog
+<<<<<<< ChangeLog
+  29 Mar 2003; Aron Griffis <agriffis@gentoo.org> net-snmp-5.0.6.ebuild:
+  Add ~alpha to KEYWORDS
+
+=======
+=======
+=======
+=======
   07 May 2003; Kyle Manna <nitro@gentoo.org> net-snmp-5.0.6.ebuild:
   Commented out kerberos support, generates compile errors.
 
+>>>>>>> 1.13
   02 May 2003; Kyle Manna <nitro@gentoo.org> net-snmp-5.0.6.ebuild:
   Removed double quotes.  Closes #5882.  Now using sed for kerberos.
 
+>>>>>>> 1.12
   21 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
   net-snmp-5.0.6.ebuild, files/net-snmpd.rc6:
   Fixing type in doc info. Closes #15535.
 
+>>>>>>> 1.10
   06 Apr 2003; Zach Welch <zwelch@gentoo.org> net-snmp-5.0.6.ebuild:
   add arm keyword
 
+>>>>>>> 1.9
   14 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Security update. Added patch to fix compilation with libwrap.
 
