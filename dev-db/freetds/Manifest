@@ -4,17 +4,17 @@ Hash: SHA1
 MD5 be75ebdf36add4f6df033ed4e06c1c4b freetds-0.61-r1.ebuild 734
 MD5 cf0f10ac2069bc929c98b6654dd188b2 freetds-0.62.4.ebuild 993
 MD5 560c49b4a0c958a7d4606269661bc18e freetds-0.62.1.ebuild 808
-MD5 b6accd0798a0991c2ad4b396e26855b5 ChangeLog 3898
+MD5 2f183d60f9de5fdcefc15dda3ac3ff19 ChangeLog 3986
 MD5 328087fb5b0786dd8a0f27de74cf023d metadata.xml 220
-MD5 78a128324e9eb4becaca5379a44f8ce6 freetds-0.62.3.ebuild 985
+MD5 1c22c66863926b5619d9b30b08ab7cb3 freetds-0.62.3.ebuild 981
 MD5 ec951e4b36deea921446e7af76b38aaa files/digest-freetds-0.62.1 67
 MD5 278063aa59256a04662b39fa771f7325 files/digest-freetds-0.62.3 67
 MD5 f0ddaa5aefd28204ae348649abf43e03 files/digest-freetds-0.62.4 67
 MD5 4d7f9bc13bc7adba2de9083a7090ba50 files/digest-freetds-0.61-r1 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCFdZ5aGfFFLhbXWkRAk6/AKCYiFT7rwlC5fcJdej7+AggQC+hogCbBCDi
-DO1ucRHtCCJHyDnxJi8bu/c=
-=Tfzw
+iD8DBQFCGTSOM+I1L6GK/u4RAnwCAJ45WMJFJoP526RF68BPIdYzOCE5MQCeKqOk
+uiWM40siDdmQfCNEF5ErEck=
+=xOjq
 -----END PGP SIGNATURE-----
