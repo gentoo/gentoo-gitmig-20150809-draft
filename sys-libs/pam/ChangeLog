@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.44 2004/02/09 21:20:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.45 2004/03/07 10:08:47 kumba Exp $
+
+  07 Mar 2004; Joshua Kinard <kumba@gentoo.org> pam-0.77.ebuild:
+  Marked stable on mips.
 
   09 Feb 2004; <gustavoz@gentoo.org> pam-0.77.ebuild:
   stable on sparc
