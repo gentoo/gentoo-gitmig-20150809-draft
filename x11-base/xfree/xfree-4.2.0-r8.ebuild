@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r8.ebuild,v 1.1 2002/03/14 23:52:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r8.ebuild,v 1.2 2002/03/21 22:59:12 azarah Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -17,6 +17,7 @@ SRC_URI="$SRC_PATH0/X${MY_V}src-1.tgz
 	 $SRC_PATH1/X${MY_V}src-3.tgz
 	 ftp://ftp.xfree86.org/pub/XFree86/4.2.0/fixes/4.2.0-xlib-i18n-module.patch
 	 ftp://ftp.xfree86.org/pub/XFree86/4.2.0/fixes/4.2.0-zlib-security.patch
+	 ftp://ftp.xfree86.org/pub/XFree86/4.2.0/fixes/4.2.0-libGLU-bad-extern.patch
 	 http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz"
 # NOTE:  4.2.0-xlib-i18n-module.patch is ONLY for XFree86 4.2.0
 
@@ -41,9 +42,12 @@ src_unpack () {
 	# resolve bug #794
 	# NOTE:  4.2.0-xlib-i18n-module.patch is ONLY for XFree86 4.2.0
 	#        4.2.0-zlib-security.patch is also ONLY for XFree86 4.2.0
+	#        4.2.0-libGLU-bad-extern.patch same here .. fixes gcc-3.x compile
+	#                                      errors
 	cd ${WORKDIR}
 	patch -p0 < ${DISTDIR}/${PV}-xlib-i18n-module.patch || die
 	patch -p0 < ${DISTDIR}/${PV}-zlib-security.patch || die
+	patch -p0 < ${DISTDIR}/${PV}-libGLU-bad-extern.patch || die
 	
 	cd ${S}
 	cp ${FILESDIR}/${PVR}/site.def config/cf/host.def
@@ -147,11 +151,13 @@ src_install() {
 
 pkg_preinst() {
 	#this changed from a file to a symlink
-	rm -rf /usr/X11R6/lib/X11/XftConfig
+	rm -rf ${ROOT}/usr/X11R6/lib/X11/XftConfig
 }
 
 pkg_postinst() {
+	env-update
 	echo ">>> Making font dirs..."
-	find /usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1 -exec mkfontdir {} ';'
+	find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1 \
+		-exec /usr/X11R6/bin/mkfontdir {} ';'
 }
 

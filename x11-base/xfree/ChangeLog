@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.6 2002/03/14 23:52:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.7 2002/03/21 22:59:12 azarah Exp $
+
+  21 Mar 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Add gcc-3.x compile patch.  Also resolve the mkfontdir issue in
+  pkg_postinst(), closing bug #996.
 
 *xfree-4.2.0-r8 (15 Mar 2002)
 
