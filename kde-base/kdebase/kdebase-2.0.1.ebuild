@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.0.1.ebuild,v 1.2 2000/12/09 15:38:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.0.1.ebuild,v 1.3 2000/12/11 17:30:49 achim Exp $
 
 A="${P}.tar.bz2"
 S=${WORKDIR}/${P}
@@ -16,15 +16,13 @@ DEPEND=">=kde-base/kdelibs-2.0.1
 	>=x11-libs/openmotif-2.1.30"
 
 src_compile() {
-
+    QTBASE=/usr/X11R6/lib/qt
     export CFLAGS="${CFLAGS} -I/usr/X11R6/include"
     export CXXFLAGS="${CXXFLAGS} -I/usr/X11R6/include"
     export CPPFLAGS="${CXXFLAGS} -I/usr/X11R6/include"
     try ./configure --prefix=/opt/kde2 --host=${CHOST} --with-shadow --with-x \
 		--with-pam=yes --with-ldap \
-		--with-qt-dir=/usr/lib/qt \
-		--with-qt-includes=/usr/lib/qt/include \
-		--with-qt-libs=/usr/lib/qt/lib
+		--with-qt-dir=$QTBASE \
     try make
 }
 
