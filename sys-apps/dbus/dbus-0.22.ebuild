@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22.ebuild,v 1.5 2004/09/18 22:12:17 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22.ebuild,v 1.6 2004/09/18 22:17:51 lv Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono
@@ -58,8 +58,8 @@ src_compile() {
 		--with-system-pid-file=/var/run/dbus.pid \
 		--with-system-socket=/var/lib/dbus/system_bus_socket \
 		--with-session-socket-dir=/tmp \
-		--disable-doxygen-docs` \
-		--disable-xml-docs` \
+		--disable-doxygen-docs \
+		--disable-xml-docs \
 		--disable-mono-docs \
 		${myconf} \
 		|| die
