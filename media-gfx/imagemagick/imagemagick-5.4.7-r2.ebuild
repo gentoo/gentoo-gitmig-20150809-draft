@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7-r2.ebuild,v 1.1 2002/09/24 22:32:54 mcummings Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7-r2.ebuild,v 1.2 2002/10/04 05:45:02 vapier Exp $
 
 inherit libtool
 inherit perl-module
