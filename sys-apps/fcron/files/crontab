@@ -1,6 +1,6 @@
 # /etc/crontab
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/files/crontab,v 1.6 2004/04/19 18:35:11 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/files/crontab,v 1.7 2004/07/18 04:34:03 dragonheart Exp $
 
 # fcron || dcron:
 # This is NOT the system crontab! fcron and dcron do not support a system crontab.
