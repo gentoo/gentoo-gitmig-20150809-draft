@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/countrycodes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.1 2004/02/29 22:10:15 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.2 2004/04/10 09:43:54 mr_bones_ Exp $
+
+  10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  countrycodes-1.0.5.ebuild:
+  don't assign default to S; don't rdepend on sed; use emake; install man pages
+  in proper location; tidy
 
 *countrycodes-1.0.5 (29 Feb 2004)
 
