@@ -200,3 +200,6 @@ gnome-apps/gnapster
 # Not tested properly - Azarah
 =gnome-base/gdm-2.2.4.2
 
+# Breaks Evolution (gonna test to rebuild evo, just don't have time just now).
+>=gnome-base/gconf-1.0.5
+
