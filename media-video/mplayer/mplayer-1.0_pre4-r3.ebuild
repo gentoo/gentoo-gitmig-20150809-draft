@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.5 2004/05/28 09:42:42 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.6 2004/06/01 09:17:54 ferringb Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live bidi mad xvid divx4linux"
 
@@ -236,6 +236,7 @@ src_compile() {
 		`use_enable truetype freetype` \
 		`use_enable opengl gl` \
 		`use_enable sdl` \
+		`use_enable bidi fribidi` \
 		`use_enable nls i18n` \
 		`use_enable samba smb` \
 		`use_enable aalib aa` \
