@@ -38,6 +38,7 @@ PCV="3.1.26"
 
 # We use build in /usr/src/linux in case of linux-extras
 # so we need no sources
+if [ ! "${PN}" = "linux-extras" ] ; then
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	http://www.kernel.org/pub/linux/kernel/people/alan/i2.4/patch-${KV}.bz2
 	http://dice.mfa.kfki.hu/download/reiserfs-3.6.25-2.4.4/linux-2.4.4-knfsd-6.g.patch.gz
@@ -47,6 +48,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz
 	ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
 	http://prdownloads.sourceforge.net/pcmcia-cs/pcmcia-cs-${PCV}.tar.gz"
+fi
 
 if [ "$PN" != "linux-extras" ]
 then
@@ -73,7 +75,7 @@ if [ ! $PN = "linux-extras" ] ; then
     RDEPEND=">=sys-apps/reiserfs-utils-3.6.25-r1"
     DEPEND=">=sys-apps/modutils-2.4.2 sys-devel/perl"
 else
-    DEPEND=">=sys-kernel/linux-sources-${PV}_${PR}"
+    DEPEND=">=sys-kernel/${PF/extras/sources}"
 fi
 if [ "`use build`" ] && [ $PN = "linux-sources" ] ; then
     DEPEND=""
@@ -373,7 +375,7 @@ src_install() {
 	else
 		dodir /usr/src
 		cd ${S}
-		make mrproper
+		#make mrproper
 
 		if [ "`use build`" ] ; then
 			dodir /usr/src/linux-${KV}
