@@ -1,16 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.3 2003/12/02 16:56:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.4 2004/02/03 20:48:08 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A graphical version of nethack (unofficially developed version 1.94)"
 HOMEPAGE="http://falconseye.sourceforge.net/"
 SRC_URI="http://cage.ugent.be/~jdemeyer/nethack/nethack-341-jtp-194a.tar.bz2"
 
+KEYWORDS="x86 ppc"
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="x86 ppc"
+IUSE=""
 
 DEPEND="media-libs/libsdl
 	dev-util/yacc
