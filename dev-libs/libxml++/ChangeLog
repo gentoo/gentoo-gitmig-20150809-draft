@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml++
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml++/ChangeLog,v 1.4 2003/03/03 22:16:52 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml++/ChangeLog,v 1.5 2003/06/06 13:14:17 weeve Exp $
+
+  06 Jun 2003; Jason Wever <weeve@gentoo.org> libxml++-0.21.0.ebuild:
+  Added ~sparc to keywords.
 
 *libxml++-0.21.0 (02 Mar 2003)
 
