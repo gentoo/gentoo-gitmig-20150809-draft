@@ -1,4 +1,5 @@
-MD5 0c56a54eeff3b54173bf9b08d754011a kickpim-0.5.3.ebuild 516
+MD5 23fd4ba5e3d434f337a8e9d6b6059600 ChangeLog 564
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 823c4ea6c19a8ea901d20aa0773591bc ChangeLog 455
+MD5 3691dab0d190f87cb9534246b87ace17 kickpim-0.5.3.ebuild 591
+MD5 26afc3fcba026cf83bad3f5d6c625c40 files/kickpim-0.5.3-fPIC.patch 1384
 MD5 7d8f01840667f295b0a5a4cbcafe2327 files/digest-kickpim-0.5.3 66
