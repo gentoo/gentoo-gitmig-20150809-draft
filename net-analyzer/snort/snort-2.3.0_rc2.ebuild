@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.0_rc2.ebuild,v 1.4 2005/01/12 02:08:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.0_rc2.ebuild,v 1.5 2005/01/25 10:33:46 ka0ttic Exp $
 
 inherit eutils gnuconfig
 
@@ -60,7 +60,7 @@ src_unpack() {
 	fi
 	# need to pick up prelude and or flexresp patches
 	einfo "Regenerating autoconf/automake files"
-	sh ./autogen.sh
+	autoreconf -f -i || die "autoreconf failed"
 
 	if use snortsam
 	then
