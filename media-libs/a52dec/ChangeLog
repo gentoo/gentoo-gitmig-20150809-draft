@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.9 2003/02/12 07:05:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.10 2003/11/04 23:17:55 mr_bones_ Exp $
+
+  04 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> a52dec-0.7.4.ebuild:
+  add IUSE to fix bug 32722; fix DESCRIPTION; use emake; more error
+  checking/messages; tidy
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
