@@ -1,7 +1,10 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.16 2002/07/13 16:42:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.17 2002/07/25 01:09:22 spider Exp $
 
+  25 Jul 2002; Spider <spider@gentoo.org> galeon-1.2.5.ebuild :
+  some minor dep changes to make it not pull in gnome2 stuff while we wait for the new portage syntax
+  
   14 Jul 2002; Martin Schlemmer <azarah@gentoo.org> galeon-1.2.5.ebuild :
   Add an check for Mozilla compiled against gtk+-1.2, if not quit with
   an error message.

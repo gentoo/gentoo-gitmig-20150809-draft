@@ -16,12 +16,9 @@ SLOT="0"
 DEPEND="~net-www/mozilla-1.0
 	>net-www/mozilla-1.0
 	>=gnome-base/gnome-libs-1.4.1.4
-	( >=gnome-base/libglade-0.17
-	  <gnome-base/libglade-1.99.0 )
-	( >=gnome-base/gnome-vfs-1.0
-	  <gnome-base/gnome-vfs-1.9.0 )
-	( >=gnome-base/gconf-1.0
-	  <gnome-base/gconf-1.1.0 )
+	<=gnome-base/libglade-0.99.0
+	=gnome-base/gnome-vfs-1.0*
+	=gnome-base/gconf-1.0*
 	>=gnome-base/oaf-0.6.7
 	>=dev-libs/libxml-1.8.16
 	>=media-libs/gdk-pixbuf-0.16.0-r1
