@@ -1,6 +1,9 @@
 # ChangeLog for media-video/camsource
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.6 2003/06/09 17:23:30 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.7 2004/02/25 18:27:40 bazik Exp $
+
+  25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> camsource-0.7.0-r1.ebuild:
+  Stable on sparc.
 
 *camsource-0.7.0-r1 (10 Jun 2003)
 
