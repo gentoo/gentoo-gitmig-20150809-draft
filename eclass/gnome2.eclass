@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.19 2002/07/18 13:08:37 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.20 2002/08/05 21:19:52 spider Exp $
 
 inherit libtool
 
@@ -23,7 +23,7 @@ if [ -n "$DEBUG" ]; then
 fi
 
 ELTCONF=""
-SCROLLKEEPER_UPDATE="0"
+SCROLLKEEPER_UPDATE="1"
 
 gnome2_src_configure() {
 	elibtoolize ${ELTCONF}
@@ -57,25 +57,31 @@ gnome2_src_install() {
 	fi
 
 	# only update scrollkeeper if this package needs it
-	[ -d ${D}/var/lib/scrollkeeper ] && SCROLLKEEPER_UPDATE="1"
+	[ ! -d ${D}/var/lib/scrollkeeper ] && SCROLLKEEPER_UPDATE="0"
+}
+
+
+gnome2_gconf_install() {
+	if [ -x ${ROOT}/usr/bin/gconftool-2 ]
+	then
+	        unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
+		export GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
+		einfo "installing gnome2 gconf schemas"	
+		cat ${ROOT}/var/db/pkg/*/${PN}-${PVR}/CONTENTS | grep "obj /etc/gconf/schemas" | sed 's:obj \([^ ]*\) .*:\1:' |while read F; do
+			echo "DEBUG::gconf install  ${F}"
+				${ROOT}/usr/bin/gconftool-2  --makefile-install-rule ${F}
+		done
+	fi
+	# schema installation
 }
 
 gnome2_pkg_postinst() {
-	# No more SCHEMAS variable :)
-        unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-	export GCONF_CONFIG_SOURCE=`/usr/bin/gconftool-2 --get-default-source`
-	einfo "installing gnome2 gconf schemas"	
-	cat ${WORKDIR}/../build-info/CONTENTS | grep "obj /etc/gconf/schemas" | sed 's:obj \([^ ]*\) .*:\1:' |while read F; do
-		echo "DEBUG::gconf install  ${F}"
-		/usr/bin/gconftool-2  --makefile-install-rule ${F}
-	done
+	gnome2_gconf_install
 	
-	# schema installation
-
-	if [ -x /usr/bin/scrollkeeper-update ] && [ SCROLLKEEPER_UPDATE = "1" ]
+	if [ -x ${ROOT}/usr/bin/scrollkeeper-update ] && [ SCROLLKEEPER_UPDATE = "1" ]
 	then
 		echo ">>> Updating Scrollkeeper"
-		scrollkeeper-update -p /var/lib/scrollkeeper
+		scrollkeeper-update -p ${ROOT}/var/lib/scrollkeeper
 	fi
 }
 
