@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/at
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.9 2003/02/21 23:02:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.10 2003/11/06 10:00:05 usata Exp $
+
+  06 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> at-3.1.8-r3.ebuild,
+  at-3.1.8-r6.ebuild, at-3.1.8-r7.ebuild, at-3.1.8-r8.ebuild:
+  Changed fowners at.at to fowners at:at. See bug #30596.
 
   18 Jan 2003; Aron Griffis <agriffis@gentoo.org> at-3.1.8-r8.ebuild :
   Add alpha to KEYWORDS

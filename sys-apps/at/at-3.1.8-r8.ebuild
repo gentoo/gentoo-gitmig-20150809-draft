@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r8.ebuild,v 1.13 2003/09/22 01:14:20 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r8.ebuild,v 1.14 2003/11/06 10:00:05 usata Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Queues jobs for later execution"
@@ -37,7 +37,7 @@ src_install() {
 	do
 		dodir /var/cron/${i}
 		fperms 700 /var/cron/${i}
-		fowners at.at /var/cron/${i}
+		fowners at:at /var/cron/${i}
 		touch ${D}/var/cron/${i}/.SEQ
 	done
 
