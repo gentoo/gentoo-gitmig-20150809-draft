@@ -1,12 +1,13 @@
-# Copyright 2004 Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.12 2004/10/29 22:13:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.13 2005/02/02 23:53:40 vapier Exp $
 
 aalib				media-libs/aalib
 adns				net-libs/adns
 afs					net-fs/openafs
 alsa				media-libs/alsa-lib
 arts				kde-base/arts
+bash-completion		app-shells/bash-completion
 berkdb				sys-libs/db
 bonobo				gnome-base/bonobo
 canna				app-i18n/canna
