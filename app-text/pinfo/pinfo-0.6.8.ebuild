@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.8.ebuild,v 1.6 2004/04/25 23:06:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.8.ebuild,v 1.7 2004/04/27 17:29:24 agriffis Exp $
 
 MY_P=${PN}-${PV/_/}
 S=${WORKDIR}/${MY_P}
@@ -18,17 +18,7 @@ DEPEND="sys-libs/ncurses
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	local myconf
-
-	use readline \
-		&& myconf="${myconf} --with-readline" \
-		|| myconf="${myconf} --without-readline"
-
-	use nls \
-		&& myconf="${myconf} --enable-nls" \
-		|| myconf="${myconf} --disable-nls"
-
-	econf ${myconf} || die "econf failed"
+	econf $(use_with readline) $(use_enable nls) || die "econf failed"
 	emake || die
 }
 

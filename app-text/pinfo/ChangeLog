@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.15 2004/04/25 23:06:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.16 2004/04/27 17:29:24 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> pinfo-0.6.8.ebuild:
+  Use use_with and use_enable to clean up ebuild
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> pinfo-0.6.5_p2-r1.ebuild,
   pinfo-0.6.7.ebuild, pinfo-0.6.8.ebuild:
