@@ -1,0 +1,10 @@
+# ChangeLog for net-im/mercury-bin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/mercury-bin/ChangeLog,v 1.1 2005/02/04 18:27:21 humpback Exp $
+
+*mercury-bin-1708 (04 Feb 2005)
+
+  04 Feb 2005; Gustavo Felisberto <humpback@gentoo.org>; +metadata.xml,
+  +files/icon32.gif, +files/mercury.sh, +mercury-bin-1708.ebuild:
+  Initial import. Thanks to everyone in bug #77141.
+
