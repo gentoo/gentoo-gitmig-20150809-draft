@@ -1,10 +1,17 @@
 # ChangeLog for app-emulation/winex-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.9 2003/02/12 04:04:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.10 2003/03/16 15:03:14 phoenix Exp $
+
+*winex-cvs-3.0_pre1 (16 Mar 2003)
+
+  16 Mar 2003; phoen][x <phoenix@gentoo.org> winex-cvs-3.0_pre1.ebuild :
+  Version bump. Minor modification to the ebuild to make it work: Portage does
+  not allow the ebuild to be called exactly like the CVS-branch
+  (winex-cvs-3-0-pre-1) so i worked around it. 
 
 *winex-cvs-2.2.1 (13 Nov 2002)
 
-  05 Feb 2003; phoen][x <phoenix@gentoo.org> winex-cvs-2.2.1 :
+  05 Feb 2003; phoen][x <phoenix@gentoo.org> winex-cvs-2.2.1.ebuild :
   Modified X dependencies. You can build winex without X now (for commandline
   applications) - this closes bug #14651.
 
