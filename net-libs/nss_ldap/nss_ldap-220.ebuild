@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-220.ebuild,v 1.1 2004/08/24 19:05:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-220.ebuild,v 1.2 2004/08/24 19:06:05 robbat2 Exp $
 
 inherit fixheadtails eutils gnuconfig
 
@@ -23,7 +23,7 @@ src_unpack() {
 	EPATCH_OPTS="-d${S} -p1" epatch ${FILESDIR}/${PN}-220-db4.2-patch.diff
 	cd ${S}
 	epatch ${FILESDIR}/nsswitch.ldap.diff
-	
+
 	aclocal || die "aclocal failed"
 	autoheader || die "autoheader failed"
 	automake || die "automake failed"
