@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.3.1.ebuild,v 1.4 2004/06/28 22:45:52 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.3.1.ebuild,v 1.5 2004/09/22 17:52:59 port001 Exp $
 
 DESCRIPTION="A GTK+-based frontend to Portage"
 HOMEPAGE="http://porthole.sourceforge.net"
@@ -39,5 +39,5 @@ pkg_setup() {
 src_install() {
 	python setup.py install --root=${D} || die
 	chmod -R a+r ${D}/usr/share/porthole
-	chmod -R a+r ${D}/usr/doc/porthole-${PV}
+	chmod -R a+r ${D}/usr/share/doc/porthole-${PV}
 }

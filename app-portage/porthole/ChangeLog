@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.12 2004/06/28 22:45:52 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.13 2004/09/22 17:52:59 port001 Exp $
+
+  22 Sep 2004; Ian Leitch <port001@gentoo.org> porthole-0.3.1.ebuild:
+  Fixed chmod path - #64838. Removed 0.3-r1, 0.3, 0.2 and 40k cvs patch. 
 
   29 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> porthole-0.3.1.ebuild:
   Marked ~amd64.
