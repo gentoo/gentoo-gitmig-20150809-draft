@@ -1,9 +1,9 @@
 # ChangeLog for mail-filter/clamassassin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.2 2004/08/06 11:56:30 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.3 2004/08/06 12:02:58 slarti Exp $
 
   06 Aug 2004; Tom Martin <slarti@gentoo.org> clamassassin-1.2.0.ebuild:
-  Use $() instead of ``, replace use_enable subject_rewrite with subjectrewrite.
+  Use $() instead of ``, replace use_enable subject_rewrite with subject-rewrite.
 
 *clamassassin-1.2.0 (05 Aug 2004)
 
