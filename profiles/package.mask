@@ -824,10 +824,6 @@ app-editors/gtk-xemacs
 # replaced (see app-editors/xemacs)
 app-editors/xemacs-gamma
 
-# g2boojum@gentoo.org 14 May 2002
-# courier needs to have .maildir stuff fixed
-net-mail/courier
-
 # spider@gentoo.org 18 May 2002
 # Why did this get installed by profiles? its broken. 
 # should be updated to 4.2 
