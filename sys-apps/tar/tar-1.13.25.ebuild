@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25.ebuild,v 1.3 2001/12/27 20:53:56 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25.ebuild,v 1.4 2001/12/27 20:54:29 woodchip Exp $
 
 S=${WORKDIR}/${P}
 
@@ -36,7 +36,6 @@ src_install() {
 	if [ -z "`use build`" ] 
 	then
 		dodoc AUTHORS ChangeLog* COPYING NEWS README* PORTS THANKS
-		doman ${FILESDIR}/tar.1
 	else
 		rm -rf ${D}/usr/share
 	fi
