@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r4.ebuild,v 1.3 2000/11/30 23:15:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r4.ebuild,v 1.4 2001/01/27 14:41:34 achim Exp $
 
 P=gcc-2.95.2
 A="gcc-2.95.2.tar.gz 
@@ -45,7 +45,7 @@ src_unpack() {
     gzip -dc ${DISTDIR}/libg++-2.8.1.3-20000914.diff.gz | patch -p1
     einfo "Moving trees"
     cd ${S}
-    rm -rf texinfo
+    #rm -rf texinfo
     mv ../libg++-2.8.1.3/* .
     rmdir ../libg++-2.8.1.3
     zcat ${FILESDIR}/${A0} | patch -p0
@@ -64,14 +64,14 @@ src_compile() {
 	fi
 	try ${S}/configure --prefix=${T} --enable-version-specific-runtime-libs \
 		       --host=${CHOST} --enable-threads --enable-shared \
-		        --with-local-prefix=${T}/local --enable-nls 
+		        --with-local-prefix=${T}/local --enable-nls
 	# Parallel build does not work				       
 	try make ${MAKEOPTS} bootstrap-lean
 }
 
 src_install() { 
   
-	try make install prefix=${D}${T} mandir=${D}${T}/man 
+	try make install prefix=${D}${T} mandir=${D}${T}/man
         FULLPATH=${D}${T}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH}
 	dodir /lib

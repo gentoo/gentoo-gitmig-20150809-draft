@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r1.ebuild,v 1.1 2001/01/22 16:00:40 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r1.ebuild,v 1.2 2001/01/27 14:41:33 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -30,7 +30,7 @@ src_install()
 	do
 		dodir /usr/local/${foo}
 	done
-	doman ${FILESDIR}/MAKEDEV.8
+
 	dodir /usr/lib
 	dodir /usr/sbin
 	dosbin ${FILESDIR}/MAKEDEV ${FILESDIR}/run-crons
@@ -44,7 +44,8 @@ src_install()
 	dosym share/doc /usr/doc
 	dosym share/info /usr/info
 #end FHS 2.1 stuff
-	
+	doman ${FILESDIR}/MAKEDEV.8	
+
 	dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
 	dodir /usr/X11R6/lib 
 	dodir /var /var/shm /var/run /var/log/news

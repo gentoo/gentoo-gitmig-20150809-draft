@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-build/gcc/gcc-2.95.2-r4.ebuild,v 1.2 2001/01/27 08:38:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-build/gcc/gcc-2.95.2-r4.ebuild,v 1.3 2001/01/27 14:41:34 achim Exp $
 
 P=gcc-2.95.2
 A="gcc-2.95.2.tar.gz 
@@ -69,10 +69,10 @@ src_install() {
 	try make install prefix=${D}${T} mandir=${D}${T}/man
         cd texinfo
         dobin makeinfo/makeinfo util/texi2dvi util/install-info util/texindex
-        FULLPATH=${D}${T}/lib/gcc-lib/${THOST}/${PV}
+        FULLPATH=${D}${T}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH}
 	dodir /lib
-	dosym	${T}/lib/gcc-lib/${THOST}/${PV}/cpp /lib/cpp
+	dosym	${T}/lib/gcc-lib/${CHOST}/${PV}/cpp /lib/cpp
 	dosym   /usr/bin/gcc /usr/bin/cc
         rm -rf ${D}/usr/info ${D}/usr/man
 }
