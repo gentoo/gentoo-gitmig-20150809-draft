@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/bison
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.22 2003/12/08 22:26:14 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.23 2004/02/01 10:54:01 kumba Exp $
+
+  01 Feb 2004; Joshua Kinard <kumba@gentoo.org> bison-1.34-r1.ebuild,
+  bison-1.35.ebuild, bison-1.75.ebuild, bison-1.875.ebuild:
+  Bump to mips stable (needed for upcoming stageballs)
 
   20 Nov 2003; Aron Griffis <agriffis@gentoo.org> bison-1.875.ebuild:
   Stable on alpha
