@@ -295,6 +295,20 @@ def vercmp(val1,val2):
 				return myret
 	return 0
 
+def pkgcmp(pkg1,pkg2):
+	mycmp=vercmp(pkg1[1],pkg2[1])
+	if mycmp>0:
+		return 1
+	if mycmp<0:
+		return -1
+	r1=string.atoi(pkg1[2][1:])
+	r2=string.atoi(pkg2[2][1:])
+	if r1>r2:
+		return 1
+	if r2>r1:
+		return -1
+	return 0
+
 def pkgsame(pkg1,pkg2):
 	if (string.split(pkg1,'-')[0])==(string.split(pkg2,'-')[0]):
 		return 1
