@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.4 2002/03/21 13:19:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.5 2002/04/12 16:47:32 spider Exp $
+
+*glib-2.0.0-r1 (11 Apr 2002)
+  11 Apr 2002 ; Spider <spider@gentoo.org> glib-2.0.1-r1.ebuild:
+  This is a release of the glib 2.0, new API makes it incompatible with glib 1.2 and thus you need both versions installed.
 
 *glib-1.2.10-r4 (21 Mar 2002)
 
