@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.20 2003/07/31 16:02:09 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.21 2003/07/31 22:41:37 taviso Exp $
 
   31 Jul 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7.ebuild:
   imlib USE flag
@@ -19,6 +19,11 @@
   30 Jul 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7.ebuild:
   Imported fvwm-2.5.7 from the Unstable branch, available to unstable users.
   Some Excellent new features available (Xft, Alpha blending, etc)
+
+*fvwm-2.4.16-r1 (31 Jul 2003)
+
+  31 Jul 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.4.16-r1:
+  Backporting the new ebuild to 2.4.x
 
 *fvwm-2.4.16 (06 Jul 2003)
 
