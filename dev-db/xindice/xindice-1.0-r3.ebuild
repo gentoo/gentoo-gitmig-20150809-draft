@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r1.ebuild,v 1.3 2004/08/23 07:37:23 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r3.ebuild,v 1.1 2004/10/06 06:58:49 phosphan Exp $
 
 inherit eutils
 
@@ -10,10 +10,11 @@ SRC_URI="http://xml.apache.org/xindice/dist/xml-xindice-${PV}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~ppc"
 IUSE="doc"
 
-DEPEND=">=dev-java/sun-jdk-1.3"
+DEPEND=">=virtual/jdk-1.3
+	dev-java/ant"
 
 S=${WORKDIR}/xml-${P}
 
@@ -35,8 +36,8 @@ src_unpack() {
 
 src_compile() {
 	export XINDICE_HOME=${S}
-	bin/ant || die "compile failed"
-	use doc && bin/ant docs
+	ant || die "compile failed"
+	use doc && ant docs
 }
 
 src_install() {
@@ -57,7 +58,7 @@ src_install() {
 	dodir /etc/init.d
 	insinto /etc/init.d
 	insopts -m0755
-	doins ${FILESDIR}/xindice
+	newins ${FILESDIR}/xindice-r2 xindice
 	insinto ${TARGET}
 	doins start
 	keepdir /opt/xindice/db
