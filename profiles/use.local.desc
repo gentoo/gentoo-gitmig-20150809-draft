@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.55 2003/06/26 02:16:27 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.56 2003/06/27 22:26:06 msterret Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -11,6 +11,7 @@ app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
 app-editors/xemacs:neXt - Chooses the neXt L&F widget set
 app-editors/xemacs:lucid - Chooses the lucid widget set (default, deprecated)
+app-games/freecraft-fcmp:music - Also installs the music that the project provides
 app-games/scummvm:mad - disables media-sound/mad support if not set
 app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
