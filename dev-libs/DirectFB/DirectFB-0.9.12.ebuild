@@ -1,17 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.12.ebuild,v 1.12 2003/08/04 21:21:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.12.ebuild,v 1.13 2003/08/06 13:34:08 vapier Exp $
 
-IUSE="gif quicktime mpeg png truetype flash jpeg mmx"
-
-S=${WORKDIR}/${P}
-DESCRIPTION="DirectFB is a thin library on top of the Linux framebuffer devices"
+DESCRIPTION="a thin library that sits on top of the Linux framebuffer devices"
+HOMEPAGE="http://www.directfb.org/"
 SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
-HOMEPAGE="http://www.directfb.org"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
+SLOT="0"
 KEYWORDS="x86 sparc ppc alpha"
+IUSE="gif quicktime mpeg png truetype flash jpeg mmx"
 
 DEPEND="dev-lang/perl
 	gif? ( media-libs/giflib )
@@ -23,7 +21,6 @@ DEPEND="dev-lang/perl
 	quicktime? ( virtual/quicktime )"
 #	avi? ( >=media-video/avifile-0.7.4.20020426-r2 )"
 
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -34,7 +31,6 @@ src_unpack() {
 }
 
 src_compile() {
-	
 	local myconf=""
 	
 	# Bug in the ./configure script that breaks if you
