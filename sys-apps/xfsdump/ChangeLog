@@ -1,8 +1,21 @@
 # ChangeLog for sys-apps/xfsdump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/ChangeLog,v 1.2 2002/07/14 19:20:20 aliz Exp $
+
+*xfsdump-20020330.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> xfsdump-20020330.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+*xfsdump-1.1.7.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> xfsdump-1.1.7.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
 *xfsdump-20020124 (1 Feb 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> xfsdump-20020124.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

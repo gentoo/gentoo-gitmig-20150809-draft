@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/memtest86
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.1 2002/06/03 22:11:31 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.2 2002/07/14 19:20:18 aliz Exp $
 
 *memtest86-3.0 (03 Jun 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> memtest86-3.0.ebuild :
+  Added KEYWORDS.
 
   03 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> memtest86-3.0.ebuild files/digest-memtest86-3.0 :
 

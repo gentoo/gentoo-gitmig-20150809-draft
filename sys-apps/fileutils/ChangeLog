@@ -1,8 +1,14 @@
 # ChangeLog for sys-apps/fileutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.5 2002/05/04 10:36:33 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.6 2002/07/14 19:20:17 aliz Exp $
 
 *fileutils-4.1.8-r2 (04 May 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> fileutils-4.1.8.ebuild :
+  Added KEYWORDS, SLOT.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> fileutils-4.1.8-r2.ebuild :
+  Added KEYWORDS, SLOT.
 
   04 May 2002; Bruce A. Locke <blocke@shivan.org> fileutils-4.1.8-r2.ebuild:
 

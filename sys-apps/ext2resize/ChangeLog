@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/ext2resize
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ext2resize/ChangeLog,v 1.1 2002/06/01 12:01:54 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ext2resize/ChangeLog,v 1.2 2002/07/14 19:20:17 aliz Exp $
 
 *ext2resize-1.1.17 (29 May 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> ext2resize-1.1.17.ebuild :
+  Added KEYWORDS, SLOT.
 
   29 May 2002; B.Lauwers <blauwers@gentoo.org> ChangeLog :
   

@@ -6,6 +6,9 @@ S=${WORKDIR}/${P}.orig
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
 SRC_URI="http://http.us.debian.org/debian/pool/main/s/sparc-utils/${A}"
 HOMEPAGE="http://www.debian.org"
+KEYWORDS=""
+SLOT="0"
+LICENSE="GPL-2"
 DEPEND="sys-kernel/linux-headers"
 RDEPEND="virtual/glibc"
 

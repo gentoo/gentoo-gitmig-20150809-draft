@@ -1,9 +1,11 @@
 # ChangeLog for sys-apps/mondo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/ChangeLog,v 1.1 2002/05/15 19:32:06 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/ChangeLog,v 1.2 2002/07/14 19:20:18 aliz Exp $
 
 *mondo-0.6 (15 May 2002)
 
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> mondo-0.6.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
   15 May 2002; Arcady Genkin <agenkin@thpoon.com> mondo-0.6.ebuild:
 
   Initial version, submitted by MvOstheim@web.de (Michael v.Ostheim).

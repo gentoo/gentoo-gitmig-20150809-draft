@@ -1,8 +1,14 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.8 2002/07/09 11:41:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.9 2002/07/14 19:20:19 aliz Exp $
 
 *util-linux-2.11r-r1 (9 Jul 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> util-linux-2.11r-r1.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> util-linux-2.11r.ebuild :
+  Added LICENSE, KEYWORDS.
 
   9 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> util-linux-2.11r-r1.ebuild files/digest-util-linux-2.11r-r1 :
 
@@ -15,6 +21,9 @@
   Version update.
 
 *util-linux-2.11o-r3 (28 Apr 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> util-linux-2.11o-r3.ebuild :
+  Added LICENSE, KEYWORDS.
 
   28 Apr 2002; Martin Schlemmer <azarah@gentoo.org> :
 

@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/dnotify
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.1 2002/06/14 19:41:07 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.2 2002/07/14 19:20:17 aliz Exp $
 
 *dnotify-0.5.0 (14 June 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> dnotify-0.5.0.ebuild :
+  Added KEYWORDS, SLOT.
 
   14 June 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   

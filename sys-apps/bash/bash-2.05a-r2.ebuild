@@ -1,11 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a-r2.ebuild,v 1.7 2002/07/11 06:30:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a-r2.ebuild,v 1.8 2002/07/14 19:20:16 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The standard GNU Bourne again shell"
 SRC_URI="ftp://ftp.gnu.org/gnu/bash/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
+KEYWORDS="x86"
+SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2 readline? ( >=sys-libs/readline-4.1-r2 )"

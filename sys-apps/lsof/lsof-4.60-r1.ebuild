@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.60-r1.ebuild,v 1.4 2002/07/11 06:30:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.60-r1.ebuild,v 1.5 2002/07/14 19:20:18 aliz Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}
@@ -8,6 +8,9 @@ DESCRIPTION="Lists open files for running Unix processes"
 SRC_URI="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}_W.tar.gz
 	ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/${MY_P}_W.tar.gz"
 HOMEPAGE="http://"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc virtual/linux-sources"
 

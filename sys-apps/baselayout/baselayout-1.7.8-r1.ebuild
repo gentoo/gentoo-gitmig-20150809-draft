@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.8-r1.ebuild,v 1.2 2002/07/10 16:17:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.8-r1.ebuild,v 1.3 2002/07/14 19:20:16 aliz Exp $
 
 SV="1.3.4"
 SVREV=""
@@ -12,6 +12,8 @@ DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysv
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
 #	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
+KEYWORDS="x86"
+SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="sys-kernel/linux-headers"

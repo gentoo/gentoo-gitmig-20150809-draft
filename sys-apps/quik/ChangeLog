@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/quik
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: ChangeLog,v 1.1 2002/07/09 12:16:05 aliz Exp $
+# $Id: ChangeLog,v 1.2 2002/07/14 19:20:19 aliz Exp $
 
 *quik-2.0.1.0-r1  (Wed Apr 24 10:34:12 2002 CEST)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> quik-2.0.1.0-r1.ebuild :
+  Added LICENSE, SLOT.
 
 Wed Apr 24 10:34:56 2002 CEST; pvdabeel <pvdabeel@gentoo.org> all:
 

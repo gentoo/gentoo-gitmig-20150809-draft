@@ -1,12 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.2-r2.ebuild,v 1.2 2002/07/10 16:17:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.2-r2.ebuild,v 1.3 2002/07/14 19:20:16 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A high-quality data compressor used extensively by Gentoo Linux"
 SRC_URI="ftp://sourceware.cygnus.com/pub/bzip2/v102/${P}.tar.gz
 	ftp://ftp.freesoftware.com/pub/sourceware/bzip2/v102/${P}.tar.gz"
 HOMEPAGE="http://sourceware.cygnus.com/bzip2/"
+KEYWORDS="x86"
+SLOT="0"
 DEPEND="virtual/glibc"
 LICENSE="BZIP2"
 

@@ -1,13 +1,19 @@
 # ChangeLog for sys-apps/ami
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ami/ChangeLog,v 1.2 2002/07/11 01:43:28 jayskwak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ami/ChangeLog,v 1.3 2002/07/14 19:20:15 aliz Exp $
 
 *ami-1.0.11-r2 (11 Jul 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> ami-1.0.11-r2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   09 Jul 2002; Jays Kwak <jayskwak@gentoo.org> ami-1.0.11-r2 :
   remove gnome-applet option for GNOME2
 
 *ami-1.0.11-r1 (09 Jul 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> ami-1.0.11-r1.ebuild :
+  Added KEYWORDS, SLOT.
 
   09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ChangeLog :
 

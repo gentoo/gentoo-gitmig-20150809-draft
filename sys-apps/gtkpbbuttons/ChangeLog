@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/gtkpbbuttons
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/ChangeLog,v 1.1 2002/07/09 20:25:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/ChangeLog,v 1.2 2002/07/14 19:20:18 aliz Exp $
 
 *gtkpbbuttons-0.4.6b (09 Jul 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> gtkpbbuttons-0.4.6b.ebuild :
+  Added KEYWORDS, SLOT.
 
   09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ChangeLog :
 

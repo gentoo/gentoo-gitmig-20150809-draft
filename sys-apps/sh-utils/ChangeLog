@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.7 2002/07/09 23:10:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.8 2002/07/14 19:20:19 aliz Exp $
 
   09 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
   files/sh-utils-2.0.11-gentoo.patch :
@@ -21,6 +21,9 @@
   creation)
 
 *sh-utils-2.0.11-r4 (20 Mar 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> sh-utils-2.0.11-r4.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   20 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sh-utils-2.0.11-r4.ebuild :
 

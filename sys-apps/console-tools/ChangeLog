@@ -1,8 +1,16 @@
 # ChangeLog for sys-apps/console-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/ChangeLog,v 1.2 2002/07/14 19:20:16 aliz Exp $
+
+*console-tools-0.2.3-r3.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> console-tools-0.2.3-r3.ebuild :
+  Added KEYWORDS, SLOT.
 
 *console-tools-0.2.3-r4 (1 Feb 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> console-tools-0.2.3-r4.ebuild :
+  Added KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

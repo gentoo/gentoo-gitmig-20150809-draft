@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r5.ebuild,v 1.1 2002/07/05 08:49:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r5.ebuild,v 1.2 2002/07/14 19:20:19 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -8,6 +8,7 @@ SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
 	http://ozlabs.org/people/dgibson/dldwd/orinoco-0.12a.tar.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
+KEYWORDS="x86"
 DEPEND="sys-kernel/linux-headers"
 RDEPEND=""
 SLOT="0"

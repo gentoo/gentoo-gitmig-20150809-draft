@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11r-r1.ebuild,v 1.3 2002/07/14 15:18:01 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11r-r1.ebuild,v 1.4 2002/07/14 19:20:19 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various useful Linux utilities"
 SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.gz
          http://www.kernel.org/pub/linux/kernel/people/hvr/util-linux-patch-int/${P}.patch.gz"
+HOMEPAGE=""
+KEYWORDS="x86"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2

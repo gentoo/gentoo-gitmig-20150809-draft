@@ -1,13 +1,19 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.7 2002/04/09 03:36:31 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.8 2002/07/14 19:20:18 aliz Exp $
 
 *lilo-21.7.5-r2 (8 Apr 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> lilo-21.7.5-r2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   8 Apr 2002; Donny Davies <woodchip@gentoo.org> lilo-21.7.5-r2.ebuild,
   lilo-21.7.5-r1.ebuild, lilo-22.1-r2.ebuild :
 
   Sync pkg_setup() with lilo-22.1-r3 and added the sample lilo.conf.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> lilo-22.1-r3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
   Removed the stale ebuilds.
 
 *lilo-22.1-r3 (5 Apr 2002)

@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/pbbuttonsd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/ChangeLog,v 1.1 2002/07/09 12:16:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/ChangeLog,v 1.2 2002/07/14 19:20:18 aliz Exp $
+
+*pbbuttonsd-0.4.9-r2.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> pbbuttonsd-0.4.9-r2.ebuild :
+  Added KEYWORDS.
+
+*pbbuttonsd-0.4.9-r1.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> pbbuttonsd-0.4.9-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+*pbbuttonsd-0.4.10.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> pbbuttonsd-0.4.10.ebuild :
+  Added KEYWORDS.
 
 *pbbuttons-0.4.10 (Sat Jun  8 11:38:34 EST 2002); gerk <gerk@gentoo.org>:
 

@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
         http://ozlabs.org/people/dgibson/dldwd/orinoco-0.11a.tar.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
+KEYWORDS="x86"
 DEPEND="sys-kernel/linux-headers"
 RDEPEND=""
 SLOT=0

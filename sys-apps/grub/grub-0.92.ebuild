@@ -6,6 +6,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="GNU GRUB boot loader"
 SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/grub"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 

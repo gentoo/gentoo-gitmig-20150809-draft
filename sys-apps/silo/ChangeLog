@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/ChangeLog,v 1.1 2002/04/16 02:03:58 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/ChangeLog,v 1.2 2002/07/14 19:20:19 aliz Exp $
 
 *silo-1.2.5 (15 Feb 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> silo-1.2.5.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   15 Feb 2002; M.Thibaut <murphy@gentoo.org> ChangeLog :
   

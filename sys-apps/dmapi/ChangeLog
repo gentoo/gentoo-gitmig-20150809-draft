@@ -1,8 +1,27 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.2 2002/07/14 19:20:17 aliz Exp $
+
+*dmapi-20020330.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> dmapi-20020330.ebuild :
+  Added KEYWORDS, SLOT.
+
+*dmapi-0.2.2-r1.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> dmapi-0.2.2.ebuild :
+  Added KEYWORDS, SLOT.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> dmapi-0.2.2-r1.ebuild :
+  Added KEYWORDS, SLOT.
 
 *dmapi-20020124-r1 (1 Feb 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> dmapi-20020124.ebuild :
+  Added KEYWORDS, SLOT.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> dmapi-20020124-r1.ebuild :
+  Added KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

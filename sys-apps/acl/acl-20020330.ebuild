@@ -1,11 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-20020330.ebuild,v 1.4 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-20020330.ebuild,v 1.5 2002/07/14 19:20:15 aliz Exp $
 
 S=${WORKDIR}/cmd/${PN}
 DESCRIPTION="XFS dump/restore utilities"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${PV}.tar.bz2"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
+KEYWORDS="x86"
+SLOT="0"
 LICENSE="LGPL-2.1"
 
 DEPEND="virtual/glibc sys-devel/autoconf >=sys-apps/attr-20020330 sys-devel/make"

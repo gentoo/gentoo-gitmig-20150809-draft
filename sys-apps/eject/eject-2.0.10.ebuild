@@ -6,6 +6,8 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A command to eject a disc from the CD-ROM drive"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/disk-management/${P}.tar.gz"
 HOMEPAGE="http://www.pobox.com/~tranter/eject.html"
+KEYWORDS="x86"
+SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"

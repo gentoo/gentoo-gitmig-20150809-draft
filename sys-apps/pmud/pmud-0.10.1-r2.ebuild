@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: pmud-0.10.1-r2.ebuild,v 1.2 2002/07/11 06:30:55 drobbins Exp $
+# $Id: pmud-0.10.1-r2.ebuild,v 1.3 2002/07/14 19:20:19 aliz Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="PowerMac power management utilities"
 SRC_URI="http://linuxppc.jvc.nl/${P}.tar.gz"
 HOMEPAGE="http://penguinppc.org/"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 DEPEND="sys-kernel/linux-headers
 	X? ( virtual/x11 )"
 RDEPEND="sys-apps/util-linux"

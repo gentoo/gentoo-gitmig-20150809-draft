@@ -5,6 +5,8 @@ DESCRIPTION="Administratinve interface to grsecurity"
 SRC_URI="http://www.grsecurity.net/gradm-1.2.1.tar.gz
 	http://pageexec.virtualave.net/chpax.c"
 HOMEPAGE="http://www.grsecurity.net"
+KEYWORDS="x86"
+SLOT="0"
 #DEPEND=""
 LICENSE="GPL-2"
 

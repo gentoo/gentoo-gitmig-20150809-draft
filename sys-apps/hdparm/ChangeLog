@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.7 2002/07/08 20:44:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.8 2002/07/14 19:20:18 aliz Exp $
 
 *hdparm-5.2-r1 (08 Jul 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> hdparm-5.2.ebuild :
+  Added KEYWORDS, SLOT.
 
   08 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :
 
@@ -15,6 +18,9 @@
   Upgrade to 5.2
   
 *hdparm-4.9 (02 May 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> hdparm-4.9.ebuild :
+  Added KEYWORDS.
 
   02 May 2002; Daniel Robbins <drobbins@gentoo.org> :
 

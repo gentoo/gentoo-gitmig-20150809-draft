@@ -6,6 +6,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
 SRC_URI="http://www.ultralinux.nl/silo/download/${A}"
 HOMEPAGE="http://freshmeat.net/projects/silo/index.html"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 DEPEND="sys-apps/e2fsprogs sys-apps/sparc-utils"
 
 src_compile() {

@@ -1,13 +1,19 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.5 2002/05/04 17:18:13 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.6 2002/07/14 19:20:16 aliz Exp $
 
     4 May 2002; Thilo Bangert <bangert@gentoo.org> dcron-2.7-r8.ebuild
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> dcron-2.7-r8.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   made lintool happy - added LICENSE
   
 
 *dcron-2.7-r9 (20 Apr 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> dcron-2.7-r9.ebuild :
+  Added KEYWORDS, SLOT.
 
   20 Apr 2002; Thilo Bangert <bangert@gentoo.org> files/crontab
 

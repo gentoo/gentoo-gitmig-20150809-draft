@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.19-r1.ebuild,v 1.4 2002/07/11 06:30:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.19-r1.ebuild,v 1.5 2002/07/14 19:20:19 aliz Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -8,6 +8,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Use this to try make tarballs :)"
 SRC_URI="ftp://alpha.gnu.org/gnu/tar/"${A}
 HOMEPAGE="http://www.gnu.org/software/tar/"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
         nls? ( >=sys-devel/gettext-0.10.35 )"

@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.4 2002/07/12 07:15:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.5 2002/07/14 19:20:16 aliz Exp $
 
 *apmd-3.0.2-r3 (12 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> apmd-3.0.2-r3.ebuild :
+  Added KEYWORDS.
   
   12 July 2002; Doug Goldstein <cardoe@gentoo.org>; apmd-3.0.2-r3.ebuild
   patched to respect the X use variable and to build xapmd if +X and not build it otherwise
@@ -10,11 +13,17 @@
 
 *apmd-3.0.2-r2 (02 May 2002)
 
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> apmd-3.0.2-r2.ebuild :
+  Added KEYWORDS, SLOT.
+
   02 May 2002; Daniel Robbins <drobbins@gentoo.org>: New release with a new
   patch to fix compilation with recent 2.4 kernels.  Closes bug #1472; thanks
   meekrob! :)
 
 *apmd-3.0.2-r1 (17 March 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> apmd-3.0.2-r1.ebuild :
+  Added KEYWORDS, SLOT.
 
   17 March 2002; Donny Davies <woodchip@gentoo.org> apmd-3.0.2-r1.ebuild,
   files/apmd.rc6 : Fixed initscript booboo which prevented apmd from starting

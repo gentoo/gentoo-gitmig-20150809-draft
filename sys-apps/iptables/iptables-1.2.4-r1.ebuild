@@ -1,9 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.4-r1.ebuild,v 1.4 2002/07/11 06:30:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.4-r1.ebuild,v 1.5 2002/07/14 19:20:18 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Kernel 2.4 routing and traffic control utilities"
+HOMEPAGE="http://www.iptables.org"
+KEYWORDS="x86"
+SLOT="0"
 SRC_URI="http://netfilter.samba.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 

@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.9-r2.ebuild,v 1.1 2002/06/03 00:12:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.9-r2.ebuild,v 1.2 2002/07/14 19:20:18 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various utilities dealing with the PCI bus"
 SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz
 	ftp://ftp.yggdrasil.com/pub/dist/device_control/pcimodules/pcimodules-pciutils-2.1.8.diff.gz"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~mj/pciutils.html"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 

@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/lvm-user
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.4 2002/06/24 13:01:44 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.5 2002/07/14 19:20:18 aliz Exp $
 
 *lvm-user-1.0.4 (23 Jun 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> lvm-user-1.0.4.ebuild :
+  Added KEYWORDS.
 
  23 Jun 2002; Jon Nelson <jnelson@gentoo.org>: lvm-user-1.0.4.ebuild
  Update to 1.0.4
@@ -13,10 +16,19 @@
  
 *lvm-user-1.0.3 (9 Apr 2002)
 
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> lvm-user-1.0.3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
  9 Apr 2002; Jon Nelson <jnelson@jamponi.net>: lvm-user-1.0.3.ebuild
  Update to 1.0.3
  
 *lvm-user-1.0.1_rc4-r1 (8 Feb 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> lvm-user-1.0.1_rc4.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> lvm-user-1.0.1_rc4-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   8 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: remove "-fomit-frame-pointer"
   from $CFLAGS if it's in there.  This closes bug #598.

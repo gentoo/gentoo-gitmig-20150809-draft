@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-1.0.0-r1.ebuild,v 1.2 2002/07/11 06:30:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-1.0.0-r1.ebuild,v 1.3 2002/07/14 19:20:17 aliz Exp $
 
 # You need to have an evms-patched kernel source tree in /usr/src/linux
 # to build this.  Either take care of that yourself or do these steps :
@@ -20,6 +20,7 @@
 
 DESCRIPTION="Utilities for the IBM Enterprise Volume Management System"
 HOMEPAGE="http://www.sourceforge.net/projects/evms"
+KEYWORDS="x86"
 
 S=${WORKDIR}/${P}
 SRC_URI="ftp://ftp.sourceforge.net/pub/sourceforge/${PN}/${P}.tar.gz"

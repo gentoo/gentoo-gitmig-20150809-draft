@@ -1,8 +1,9 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedutils/schedutils-0.0.5.ebuild,v 1.1 2002/06/01 13:53:23 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedutils/schedutils-0.0.5.ebuild,v 1.2 2002/07/14 19:20:19 aliz Exp $
 
 DESCRIPTION="Utilities for manipulating kernel schedular parameters"
 HOMEPAGE="http://tech9.net/rml/"
+KEYWORDS="x86"
 LICENSE=GPL-2
 
 RDEPEND="virtual/glibc"

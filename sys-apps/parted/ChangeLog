@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.5 2002/06/09 03:08:22 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.6 2002/07/14 19:20:18 aliz Exp $
 
 *parted-1.6.1 (8 Jun 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> parted-1.6.1.ebuild :
+  Added KEYWORDS.
 
   8 Jun 2002; Donny Davies <woodchip@gentoo.org> :
 
@@ -12,12 +15,18 @@
 
 *parted-1.4.24-r3 (16 Apr 2002)
 
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> parted-1.4.24-r3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
   16 Apr 2002; Seemant Kulleen <seemant@gentoo.org> parted-1.4.24-r3.ebuild :
 
   Closes bug #1690 and related bugs.  Thanks to everyone for the patches and
   fixes.
 
 *parted-1.4.24-r2 (29 Mar 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> parted-1.4.24-r2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   29 Mar 2002; Seemant Kulleen <seemant@gentoo.org> parted-1.4.24-r2.ebuild :
 

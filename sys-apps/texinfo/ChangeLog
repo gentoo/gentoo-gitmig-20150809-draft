@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.6 2002/07/08 21:41:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.7 2002/07/14 19:20:19 aliz Exp $
 
 *texinfo-4.2-r5 (8 Jul 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> texinfo-4.2-r5.ebuild :
+  Added KEYWORDS.
 
   5 Jul 2002; Martin Schlemmer <azarah@gentoo.org> texinfo-4.2-r5.ebuild :
 
@@ -13,6 +16,9 @@
   resolve an issue where the info pages was not readable, closing bug #4672.
 
 *texinfo-4.2-r4 (1 Jul 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> texinfo-4.2-r4.ebuild :
+  Added KEYWORDS.
 
   Remove automake DEPEND, as it is not needed, and pulls in perl during
   bootstrap.

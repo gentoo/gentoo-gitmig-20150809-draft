@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/hfsutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsutils/ChangeLog,v 1.1 2002/07/09 12:16:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsutils/ChangeLog,v 1.2 2002/07/14 19:20:18 aliz Exp $
 
 *hfsutils-3.2.6 (Sun Mar 17 23:27:28 CST 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> hfsutils-3.2.6.ebuild :
+  Added KEYWORDS.
 
 June 21 2002 Gerk (gerk@gentoo.org)
 

@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/tmpreaper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/ChangeLog,v 1.2 2002/07/14 19:20:19 aliz Exp $
 
 *tmpreaper-1.4.12 (1 Feb 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> tmpreaper-1.4.12.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

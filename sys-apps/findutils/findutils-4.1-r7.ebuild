@@ -1,11 +1,13 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1-r7.ebuild,v 1.4 2002/07/11 06:30:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1-r7.ebuild,v 1.5 2002/07/14 19:20:17 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU utilities to find files"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/findutils/${P}.tar.gz http://www.ibiblio.org/gentoo/distfiles/findutils-4.1.diff.gz"
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
+KEYWORDS="x86"
+SLOT="0"
 DEPEND="virtual/glibc sys-devel/gettext"
 RDEPEND="virtual/glibc"
 LICENSE="GPL-2"

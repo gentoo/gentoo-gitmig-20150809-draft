@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/thinkpad
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/ChangeLog,v 1.1 2002/04/25 23:35:59 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/ChangeLog,v 1.2 2002/07/14 19:20:19 aliz Exp $
 
 *thinkpad-3.2 (25 April 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> thinkpad-3.2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   25 April 2002; Wout Mertens <Wout.Mertens@advalvas.be> ChangeLog :
 

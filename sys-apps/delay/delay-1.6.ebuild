@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/delay/delay-1.6.ebuild,v 1.1 2002/07/02 18:00:40 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/delay/delay-1.6.ebuild,v 1.2 2002/07/14 19:20:16 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Delay is a sleeplike program that counts down the number of seconds specified on its command line."
 HOMEPAGE="http://onegeek.org/~tom/software/delay/"
+KEYWORDS="x86"
 SRC_URI="http://onegeek.org/~tom/software/delay/dl/${P}.tar.gz" 
 LICENSE="GPL-2"
 SLOT="0"

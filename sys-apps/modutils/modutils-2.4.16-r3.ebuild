@@ -1,12 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.16-r3.ebuild,v 1.2 2002/07/11 06:30:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.16-r3.ebuild,v 1.3 2002/07/14 19:20:18 aliz Exp $
 
 S=${WORKDIR}/${P}
 SLOT="0"
 DESCRIPTION="Standard kernel module utilities"
 SRC_URI="http://www.kernel.org/pub/linux/utils/kernel/modutils/v2.4/${P}.tar.bz2"
-
+HOMEPAGE=""
+KEYWORDS="x86"
+LICENSE="GPL-2"
 DEPEND="virtual/glibc"
 #	zlib? ( sys-libs/zlib )"
 

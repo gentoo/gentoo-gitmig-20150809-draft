@@ -1,8 +1,19 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.27 2002/05/12 22:44:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.28 2002/07/14 19:20:16 aliz Exp $
+
+*baselayout-1.7.9-r2.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> baselayout-1.7.9-r2.ebuild :
+  Added KEYWORDS.
 
 *baselayout-1.7.9-r1 (13 May 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> baselayout-1.7.9.ebuild :
+  Added KEYWORDS.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> baselayout-1.7.9-r1.ebuild :
+  Added KEYWORDS.
 
   13 May 2002; M.Schlemmer <azarah@gentoo.org> :
 
@@ -11,6 +22,9 @@
 *baselayout-1.7.9 (12 May 2002)
 
 *baselayout-1.7.8-r1 (23 Apr 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> baselayout-1.7.8-r1.ebuild :
+  Added KEYWORDS, SLOT.
 
   23 Apr 2002; M.Schlemmer <azarah@gentoo.org> :
 

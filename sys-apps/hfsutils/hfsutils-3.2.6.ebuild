@@ -6,6 +6,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="HFS FS Access utils"
 SRC_URI="ftp://ftp.mars.org/pub/hfs/${P}.tar.gz"
 HOMEPAGE="http://www.mars.org/home/rob/proj/hfs/"
+KEYWORDS="x86"
 DEPEND="virtual/glibc"
 RDEPEND=""
 SLOT="0"

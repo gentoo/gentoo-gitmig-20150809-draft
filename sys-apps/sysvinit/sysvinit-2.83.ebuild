@@ -1,12 +1,16 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.83.ebuild,v 1.2 2002/07/11 06:30:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.83.ebuild,v 1.3 2002/07/14 19:20:19 aliz Exp $
 
 S=${WORKDIR}/${P}/src
 DESCRIPTION="System initialization stuff"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/init/${P}.tar.gz"
 DEPEND="virtual/glibc"
 RDEPEND="$DEPEND sys-apps/file"
+HOMEPAGE=""
+LICENSE="GPL-2"
+KEYWORDS="x86"
+SLOT="0"
 
 src_unpack() {
 

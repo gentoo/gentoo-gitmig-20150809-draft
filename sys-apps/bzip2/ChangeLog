@@ -1,14 +1,23 @@
 # ChangeLog for sys-apps/bzip2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.4 2002/06/30 04:54:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.5 2002/07/14 19:20:16 aliz Exp $
 
 *bzip2-1.0.2-r2 (29 Jun 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> bzip2-1.0.2.ebuild :
+  Added KEYWORDS, SLOT.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> bzip2-1.0.2-r2.ebuild :
+  Added KEYWORDS, SLOT.
 
   29 Jun 2002; Daniel Robbins <drobbins@gentoo.org> : new rev of bzip2 that
   uses user-defined CFLAGS, but keeps existing "-fomit-frame-pointer" and
   "-fno-strength-reduce" options.
 
 *bzip2-1.0.2-r1 (21 Mar 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> bzip2-1.0.2-r1.ebuild :
+  Added KEYWORDS, SLOT.
 
   21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> bzip2-1.0.2-r1.ebuild :
   HTML documentation does not get gzipped any more.  Thanks to
@@ -21,3 +30,6 @@
   Updated.
 
 *bzip2-1.0.1-r4 (1 Feb 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> bzip2-1.0.1-r4.ebuild :
+  Added KEYWORDS, SLOT.

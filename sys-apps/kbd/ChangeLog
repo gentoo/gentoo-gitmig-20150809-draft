@@ -1,8 +1,14 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.2 2002/03/23 05:46:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.3 2002/07/14 19:20:18 aliz Exp $
 
   22 Mar 2002; Daniel Robbins <drobbins@gentoo.org> kbd-1.06-r1.ebuild :
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> kbd-1.06.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> kbd-1.06-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
   Fixed Matthew Kennedy's patch which was totally broken in every way and
   killed this ebuild.
 

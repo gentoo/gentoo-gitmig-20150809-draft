@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/cronbase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.6 2002/06/26 22:10:23 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.7 2002/07/14 19:20:16 aliz Exp $
 
 *cronbase-0.2.1 (27 Jun 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> cronbase-0.2.1.ebuild :
+  Added KEYWORDS, SLOT.
 
   26 Jun 2002; Thilo Bangert <bangert@gentoo.org> files/run-crons :
   

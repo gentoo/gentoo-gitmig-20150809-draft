@@ -1,13 +1,19 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.4 2002/06/21 23:38:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.5 2002/07/14 19:20:18 aliz Exp $
 
 *net-tools-1.60-r4 (21 Jun 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> net-tools-1.60-r4.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   21 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
   Only install /bin/hostname during USE=build.
 
 *net-tools-1.60-r3 (20 Mar 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> net-tools-1.60-r3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   20 Mar 2002; Seemant Kulleen <seemant@gentoo.org> net-tools-1.60-r3 :
 

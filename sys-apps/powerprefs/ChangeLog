@@ -1,8 +1,14 @@
 # ChangeLog for sys-apps/powerprefs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerprefs/ChangeLog,v 1.1 2002/07/09 12:16:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerprefs/ChangeLog,v 1.2 2002/07/14 19:20:19 aliz Exp $
 
 * powerprefs-0.2.1 - June 21 2002 Gerk (gerk@gentoo.org)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> powerprefs-0.2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> powerprefs-0.2.1.ebuild :
+  Added KEYWORDS.
 	added ARCH check, no revision bump
 
 * powerprefs-0.2.1 (first Changelog entry) - Sat Jun  8 11:58:08 EST 2002

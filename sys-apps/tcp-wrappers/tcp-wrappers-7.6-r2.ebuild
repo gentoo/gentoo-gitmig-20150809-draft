@@ -1,11 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r2.ebuild,v 1.2 2002/07/11 06:30:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r2.ebuild,v 1.3 2002/07/14 19:20:19 aliz Exp $
 
 A=tcp_wrappers_${PV}.tar.gz
 A0="tcp_wrappers_${PV}.dif"
 A1="tcp_wrappers_${PV}-ipv6-1.6.diff.gz"
-
+HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="Freeware"
 S=${WORKDIR}/tcp_wrappers_${PV}
 DESCRIPTION="tcp wrappers"
 SRC_URI="ftp://ftp.porcupine.org/pub/security/${A}"

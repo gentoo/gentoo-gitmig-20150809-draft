@@ -5,6 +5,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A stand alone memory test for x86 computers"
 SRC_URI="http://www.teresaudio.com/memtest86/${P}.tar.gz"
 HOMEPAGE="http://www.teresaudio.com/memtest86/"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 

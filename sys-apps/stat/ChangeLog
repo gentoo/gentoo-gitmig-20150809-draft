@@ -1,8 +1,11 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/stat/ChangeLog,v 1.2 2002/04/27 23:34:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/stat/ChangeLog,v 1.3 2002/07/14 19:20:19 aliz Exp $
 
 *stat-2.5 (2002-02-08)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> stat-2.5.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   8 Feb 2002; Arcady Genkin <agenkin@thpoon.com> stat-2.5.ebuild, ChangeLog:
   
