@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6.ebuild,v 1.1 2002/08/18 22:39:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6.ebuild,v 1.2 2002/08/18 22:41:43 mcummings Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://axkit.org/"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86"
 
 newdepend ">=dev-perl/libapreq-0.31 \
 	>=dev-perl/Compress-Zlib-1.10 \
