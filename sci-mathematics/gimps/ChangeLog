@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/gimps
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.1 2004/12/28 05:30:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.2 2004/12/28 16:10:55 spock Exp $
+
+*gimps-24.6 (28 Dec 2004)
+
+  28 Dec 2004; Michal Januszewski <spock@gentoo.org> +gimps-24.6.ebuild:
+  Version bump. Closes #74981.
 
 *gimps-23.5 (28 Dec 2004)
 
