@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.28 2004/02/22 19:13:21 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.29 2004/02/22 22:32:05 tuxus Exp $
+
+  22 Feb 2004; <tuxus@gentoo.org> elfutils-0.89.ebuild:
+  files/elfutils-0.89-alpha-mips-atime.diff:  Fix 0.89 compilation on mips
 
   22 Feb 2004; <tuxus@gentoo.org> elfutils-0.84.ebuild:
   Fix 0.84 compilation on mips
