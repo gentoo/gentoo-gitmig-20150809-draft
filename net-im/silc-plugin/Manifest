@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2148fb34842c2145025b46844f159af silc-plugin-1.0.1.ebuild 2815
 MD5 84d5e549cddb403d19592ac87456e6d0 ChangeLog 655
 MD5 3d21d1bc81cfd81bfd0b0b3b2123b71c metadata.xml 271
+MD5 2f433c3705a93fd43e85a16c0bf8f492 silc-plugin-1.0.1.ebuild 2805
 MD5 ce1069db2e4cfc5c0b0d4b988c6c053c files/digest-silc-plugin-1.0.1 202
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBNi2510xuJSrg3/sRApudAJ9x1QQTsOanmjlxKe+EHIf9vSp0+wCdGEV6
-oLMQOX0P1CsmFYd7aaGzUYA=
-=MefX
------END PGP SIGNATURE-----

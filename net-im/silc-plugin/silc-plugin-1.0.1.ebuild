@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.3 2004/09/01 20:14:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.4 2004/09/01 20:19:30 seemant Exp $
 
 IRSSI_PV=0.8.9
 
@@ -28,10 +28,10 @@ src_compile() {
 	einfo "Preparing silc-client\n"
 	cd ${S_SILC}
 	econf --with-helpdir=${D}/usr/share/irssi/help/silc/ \
-	    --without-libtoolfix \
-	    --enable-static \
-	    `use_with pic` \
-	    `use_enable debug` || die "silc-client configure failed"
+		--without-libtoolfix \
+		--enable-static \
+		`use_with pic` \
+		`use_enable debug` || die "silc-client configure failed"
 	emake -C lib || die "silc-client's lib compilation failed"
 
 	echo
