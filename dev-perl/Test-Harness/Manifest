@@ -3,7 +3,7 @@ MD5 a5550d903f0a9b96955065d3930cb872 Test-Harness-2.24-r1.ebuild 579
 MD5 ff0b3dc75dd87cf9ca23f3dba1c7d81d Test-Harness-2.24.ebuild 614
 MD5 89c368239e125743a4a97f89dae508f8 Test-Harness-2.28-r1.ebuild 645
 MD5 da02305ded0b59bea169f7b9d54e3ed5 Test-Harness-2.28.ebuild 611
-MD5 ac4eb49c1e7ec3f6da176782322c99ea Test-Harness-2.42.ebuild 555
+MD5 7f72b3d36b879a20c0f41f6459e05a6b Test-Harness-2.42.ebuild 568
 MD5 0109a4c497846b632d5e1f7308bf57b3 Test-Harness-2.30.ebuild 648
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 ee278ea352cf771c9939fb1bdba27ac3 files/digest-Test-Harness-2.24 68
