@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 938fa6bcfda4ccfbc70c86b6dc193a99 ChangeLog 493
-MD5 c0c893dfb28e3d4f698e966e4c93fdf8 libmaitretarot-0.1.98.ebuild 624
+MD5 77dd72329de7a689952db89f4da7dace ChangeLog 495
+MD5 faf3d8fc5186543b657b5bb8c1891c47 libmaitretarot-0.1.98.ebuild 628
 MD5 a44a4f7a26dee54d063f720d7a197f3c metadata.xml 808
 MD5 79af9e43c2c6f010ba7b98820ea0c9ad files/digest-libmaitretarot-0.1.98 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4YVWHTu7gpaalycRAhV0AKCp0C1syGKA0pl3HEhQclIbKTjRowCgigeX
-C2mtY8oJ50QF3XCgDGndrJ0=
-=etKi
------END PGP SIGNATURE-----

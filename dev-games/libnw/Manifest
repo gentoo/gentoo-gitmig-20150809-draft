@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dbf51375a7cf95e47952ca0a5350c7bf ChangeLog 474
-MD5 326e8c7ce5e8c93b74588b471dec8d40 libnw-1.30.01.ebuild 631
+MD5 ad5d2a68c13bb801f22d2f3428876297 ChangeLog 476
+MD5 900f81cb3b88c2f0b2fd6707c4602de0 libnw-1.30.01.ebuild 635
 MD5 121b60b99e952886c6320cb9b6f4c291 metadata.xml 828
 MD5 a7d0b743d8f9b810d84a1e4ded62ccd8 files/digest-libnw-1.30.01 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4YV2HTu7gpaalycRAgQ9AKClg0RBhAuqmeqJTKEGODVXamT6EwCgx4rQ
-gvwGSZraMSnOjzXzTLxbqT4=
-=5MxQ
------END PGP SIGNATURE-----

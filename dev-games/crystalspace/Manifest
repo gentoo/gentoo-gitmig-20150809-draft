@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f32eb4717dc0ce6836c073261ba5616f ChangeLog 1829
+MD5 ee57a512766bae0dfcf88452136cc05f ChangeLog 1833
 MD5 e4c7a49ca08eb200cfa0a9f9246e2257 metadata.xml 959
-MD5 7461768bdabf0bfad4a5292196896699 crystalspace-0.98.4.ebuild 1825
+MD5 26fa201134c798931d9ca15c72d2283f crystalspace-0.98.4.ebuild 1829
 MD5 e28ffc0ee4f66ce9d10b5005d0acbf59 files/0.98.4-gl.patch 1632
 MD5 bec0edb0863c282510494dc014bbf750 files/digest-crystalspace-0.98.4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB1IO0roRuSHgZdywRAvXnAJ4pfWG+c8ELCm/Q4g0Cw6dxPnUyrgCgjmsv
-yQMPHSbmoIvs2cOTka2tNtc=
-=Sude
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d2cb12afb9899cec796a01d7fdb5d55 ChangeLog 1843
+MD5 573b2494302f89ee9cb92834a1707547 ChangeLog 1848
 MD5 78f796f369931ffa9a8cc4b41bca4152 metadata.xml 463
-MD5 b176beb06138e5210862b3848a0cb55d cel-0.98.2.ebuild 960
+MD5 40856da7b839bd4527ddcb776c4f1313 cel-0.98.2.ebuild 964
 MD5 8e54147304e2aec1e50541504c77d5db files/digest-cel-0.98.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzSs5roRuSHgZdywRArVAAKCT+tmxwF4mkbauammM4nSIqwBIFQCfc4We
-6WOeqIiBOZWMIxxlx8EHpRQ=
-=jhyP
------END PGP SIGNATURE-----

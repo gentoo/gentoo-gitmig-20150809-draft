@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 267047b45eb77f30f887fb0d4700192a ChangeLog 1185
-MD5 f0d807ec6c2e9c3bd5c5b2880350fc83 ggz-client-libs-0.0.5-r1.ebuild 716
+MD5 df79a64215b493f7104195df1244d49e ChangeLog 1189
+MD5 ab6828f3b0798c48402eb8b43b5b7ebb ggz-client-libs-0.0.5-r1.ebuild 721
 MD5 665c31fd905d36415b61c101784ff673 metadata.xml 428
-MD5 844d430e922f9b9e82ec92d48b494389 ggz-client-libs-0.0.9.ebuild 642
+MD5 746b00f06a5765e8eb1055de7a4c4456 ggz-client-libs-0.0.9.ebuild 646
 MD5 3cfe0db81adbb18f98e13933004ef522 files/digest-ggz-client-libs-0.0.5-r1 73
 MD5 0b3623a2d12cead86ed543fad7d9f491 files/digest-ggz-client-libs-0.0.9 73
 MD5 104ad789b738ff6ee3b1408cdc37bbf4 files/ggz-client-libs-0.0.5-gcc32.diff 649
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBz0G0roRuSHgZdywRApmOAJ0cv2qkT106gW3Ch6lcmJR/D4Y1LgCbBTwh
-chyAGtkGHtBepK4kuFkDUN4=
-=swTs
------END PGP SIGNATURE-----

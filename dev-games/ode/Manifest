@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c0458c1ef504d855494adf1c51d806d3 ChangeLog 2105
+MD5 ca153da159bc2aeb3ebf5e9f78247f77 ChangeLog 2111
 MD5 897a7d200c1e7b0159d465d3220c9eff metadata.xml 509
-MD5 652bb8b3ddf461519d23c3c489d77a07 ode-0.039.ebuild 754
-MD5 0c566d927231a92ebff6fb25700fce50 ode-0.5-r1.ebuild 1661
+MD5 ebb21c625ec49dbf7de436af329ef3d7 ode-0.039.ebuild 756
+MD5 a8071813e7d4d4e5a572e3a8050ca3c4 ode-0.5-r1.ebuild 1665
 MD5 d91fbe34bc92b37eaca8d00521fa93cd files/digest-ode-0.039 59
 MD5 24a10f16623003a6f4c8df5d8a0c11f5 files/digest-ode-0.5-r1 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzmAfroRuSHgZdywRAtKZAKCDFGCot8N6AldfhU2u1EZdjecB+QCdFmGj
-MilB9WEAnhoCZMjtJkgT5a4=
-=TltV
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bee25fd9ac28b66a8c88d6feb1833ddb ChangeLog 485
-MD5 31fc9627a3f01104e663f5e17ed10431 libmt_client-0.1.98.ebuild 648
+MD5 cf609a8c1dec10d761cec55120219526 ChangeLog 487
+MD5 210d27be1d3190956ea35e23494a7087 libmt_client-0.1.98.ebuild 652
 MD5 a44a4f7a26dee54d063f720d7a197f3c metadata.xml 808
 MD5 002d3d80bd6e8467c1edaaeef9b9afd4 files/digest-libmt_client-0.1.98 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4YVnHTu7gpaalycRAk0tAKCQN1+pN8Jh1s24nRljQalRUefzZACeNtcU
-DYbgvOuCB0ohhN2OShtm6A0=
-=up74
------END PGP SIGNATURE-----
