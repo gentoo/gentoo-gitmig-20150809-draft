@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/kportagemaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kportagemaster/ChangeLog,v 1.1 2002/06/12 20:23:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kportagemaster/ChangeLog,v 1.2 2002/06/15 19:47:02 danarmak Exp $
+
+*kportagemaster-0.2 (15 Jun 2002)
+
+  15 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New upstream version, close #3758.
 
 *kportagemaster-0.1 (12 Jun 2002)
 
