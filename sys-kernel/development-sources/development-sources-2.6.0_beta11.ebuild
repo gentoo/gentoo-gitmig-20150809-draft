@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta11.ebuild,v 1.1 2003/11/27 01:45:53 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta11.ebuild,v 1.2 2003/11/30 12:59:02 plasmaroo Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #Original Kernel Version before Patches
@@ -117,11 +117,11 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+
 	[ "$ETYPE" = "headers" ] && return
 	[ ! ${GPV} == 0 ] && KV="${KV}-patchset-${GPV}"
 	[ ! -e ${ROOT}usr/src/linux-beta ] && ln -sf linux-${KV} ${ROOT}/usr/src/linux-beta
 
-	echo
 	ewarn "Please note that ptyfs support has been removed from devfs"
 	ewarn "and you have to compile it in now, or else you will get"
 	ewarn "errors when trying to open a pty. The option is:"
@@ -136,5 +136,7 @@ pkg_postinst() {
 	ewarn "error."
 	echo
 	ewarn "PLEASE NOTE THIS IS NOT OFFICIALLY SUPPORTED BY GENTOO."
+	echo
 	sleep 5
+
 }
