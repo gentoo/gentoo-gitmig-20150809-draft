@@ -1,0 +1,28 @@
+diff -uprN ../opMixer-0.75.orig/src/gui.cc src/gui.cc
+--- ../opMixer-0.75.orig/src/gui.cc	2005-03-13 20:08:23.473296872 +0100
++++ src/gui.cc	2005-03-13 21:13:59.667904336 +0100
+@@ -184,9 +184,9 @@ MixerGUI::MixerGUI (char *device) : 
+   scaletable = manage(new Table(3,myMixer.NumDevices(),false));
+   menubar = new MenuBar();
+   statusbar = manage(new Label(title));
+-  scaleboxes= new (VScale *)[myMixer.NumDevices()];
+-  adj = new (Adjustment *)[myMixer.NumDevices()];
+-  mutebuttons = new (CheckButton *)[myMixer.NumDevices()];
++  scaleboxes= new VScale *[myMixer.NumDevices()];
++  adj = new Adjustment *[myMixer.NumDevices()];
++  mutebuttons = new CheckButton *[myMixer.NumDevices()];
+   //--- initialize some vars to avoid segfaults =P //
+   set_policy(0,0,0);
+   lastload=new char[3];
+diff -uprN ../opMixer-0.75.orig/src/ossmixer.cc src/ossmixer.cc
+--- ../opMixer-0.75.orig/src/ossmixer.cc	2005-03-13 20:08:23.473296872 +0100
++++ src/ossmixer.cc	2005-03-13 20:20:31.979547088 +0100
+@@ -15,7 +15,7 @@ ossMixer::ossMixer(void){
+ 
+ void ossMixer::init(void){
+   char *names[]=SOUND_DEVICE_NAMES;
+-  lineinfos = new (LineInfo *)[SOUND_MIXER_NRDEVICES];
++  lineinfos = new LineInfo *[SOUND_MIXER_NRDEVICES];
+   if (-1== (fd = open(mixer_device,O_RDWR))) {
+     std::cout << endl
+ 	      << "Error opening mixer device [" << mixer_device << "]" << endl

@@ -1,4 +1,15 @@
-MD5 cec65d635e767a2c00040b79a5816f6f ChangeLog 961
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0ac09fc4b6806d812d8450b729777308 opmixer-0.75.ebuild 1084
+MD5 b86cf77667c6351b524a2533ac35a4fd ChangeLog 1101
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 daf7919e6958aa841c807ebcb411bfca opmixer-0.75.ebuild 928
+MD5 c84f0516671e975810adc32baf3ad8f3 files/0.75-gcc34.patch 1354
 MD5 5c5aff3a5d8372e6a48046af97b6343c files/digest-opmixer-0.75 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNJ+H06ebR+OMO78RAt4xAJ9gJ5LHLJDFD5c5Asat9sEhX8U5uQCfbmzO
+IA7AoyvsrY9nH1ET8jELpr4=
+=/wEe
+-----END PGP SIGNATURE-----
