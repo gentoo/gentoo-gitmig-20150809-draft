@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.24-r2.ebuild,v 1.1 2004/04/15 18:04:22 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.24-r3.ebuild,v 1.1 2004/04/17 13:57:19 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
 
 UML_PATCH="uml-patch-2.4.24-1"
 
-# we patch against vanilla-sources only
 DESCRIPTION="Full (vanilla) sources for the User Mode Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${PV}.tar.bz2
 	mirror://sourceforge/user-mode-linux/${UML_PATCH}.bz2"
@@ -32,7 +31,10 @@ src_unpack() {
 	mv linux-${PV} ${S} && cd ${S}
 	epatch ${DISTDIR}/${UML_PATCH}.bz2
 	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0010.patch || die "Failed to add the CAN-2004-0010 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
 
 	kernel_universal_unpack
 }
@@ -40,7 +42,7 @@ src_unpack() {
 src_install() {
 	mkdir -p ${D}/usr/src/uml
 
-	# fix silly permissions in tarball
+	# Fix permissions
 	cd ${WORKDIR}
 	chown -R root:root *
 	chmod -R a+r-w+X,u+w *
@@ -49,7 +51,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	# create linux symlink
+	# Create linux symlink
 	if [ ! -e ${ROOT}usr/src/uml/linux ]
 	then
 		rm -f ${ROOT}usr/src/uml/linux
