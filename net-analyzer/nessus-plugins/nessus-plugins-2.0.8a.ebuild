@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.0.8a.ebuild,v 1.3 2004/06/05 14:30:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.0.8a.ebuild,v 1.4 2004/06/19 10:35:57 kloeri Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A remote security scanner for Linux (nessus-plugins)"
@@ -8,6 +8,7 @@ HOMEPAGE="http://www.nessus.org/"
 SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
 DEPEND=">=net-analyzer/nessus-core-${PV}"
 SLOT="0"
+IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
