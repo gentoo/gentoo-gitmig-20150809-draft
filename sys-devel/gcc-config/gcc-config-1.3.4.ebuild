@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.4.ebuild,v 1.6 2004/07/02 09:32:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.4.ebuild,v 1.7 2004/07/15 03:18:36 agriffis Exp $
 
 IUSE=""
 
@@ -8,7 +8,6 @@ W_VER="1.4.1"
 
 DISABLE_GEN_GCC_WRAPPERS="yes"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Utility to change the gcc compiler being used."
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org/"
@@ -92,4 +91,3 @@ pkg_postinst() {
 		fi
 	fi
 }
-
