@@ -1,7 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.19 2004/01/12 06:26:56 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.20 2004/01/12 14:35:57 karltk Exp $
 
+*gentoolkit-0.2.0_pre4 (12 Jan 2004)
+
+  12 Jan 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  gentoolkit-0.2.0_pre4.ebuild: Previous release missed 'gentoolkit.py'
+  rendering equery unusable.
+  
 *gentoolkit-0.2.0_pre3 (12 Jan 2004)
 
   09 Jan 2004; Marius Mauch <genone@gentoo.org>
