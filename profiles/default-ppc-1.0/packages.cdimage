@@ -48,7 +48,6 @@ sys-devel/bc
 sys-devel/ld.so
 sys-libs/cracklib
 sys-libs/glibc
-sys-libs/lib-compat
 sys-libs/ncurses
 sys-libs/pam
 sys-libs/pwdb
