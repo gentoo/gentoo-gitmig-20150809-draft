@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/ptlink-ircd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.4 2004/10/18 16:08:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.5 2004/11/14 15:39:28 swegener Exp $
+
+*ptlink-ircd-6.19.1 (14 Nov 2004)
+
+  14 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  -ptlink-ircd-6.18.1.ebuild, ptlink-ircd-6.18.2.ebuild,
+  +ptlink-ircd-6.19.1.ebuild:
+  Version bump. Removed old ebuild.
 
 *ptlink-ircd-6.18.2 (18 Oct 2004)
 
