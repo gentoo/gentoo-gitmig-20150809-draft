@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.55 2004/06/08 20:49:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.56 2004/06/10 00:24:57 lv Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -301,6 +301,26 @@ has_ssp() {
 	return 1
 }
 
+has_m64() {
+	temp=`mktemp`
+	echo "int main() { return(0); }" > ${temp}.c
+	gcc -m64 -o /dev/null ${temp}.c > /dev/null 2>&1
+	ret=$?
+	rm -f ${temp}.c
+	[ "$ret" != "1" ] && return 0
+	return 1
+}
+
+has_m32() {
+	temp=`mktemp`
+	echo "int main() { return(0); }" > ${temp}.c
+	gcc -m32 -o /dev/null ${temp}.c > /dev/null 2>&1
+	ret=$?
+	rm -f ${temp}.c
+	[ "$ret" != "1" ] && return 0
+	return 1
+}
+
 replace-sparc64-flags() {
 	local SPARC64_CPUS="ultrasparc v9"
 
@@ -369,3 +389,4 @@ fstack-flags() {
 		export CFLAGS="${CFLAGS} `test_flag -fno-stack-protector`"
 	fi
 }
+
