@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/yosucker-37.ebuild,v 1.2 2003/10/02 13:32:15 abhishek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/yosucker-39.ebuild,v 1.1 2003/10/02 13:32:15 abhishek Exp $
 
 MY_P="YoSucker-pr${PV}"
 S=${WORKDIR}/${MY_P}
@@ -9,7 +9,7 @@ DESCRIPTION="Perl script that downloads mail from a Yahoo! webmail account to a 
 SRC_URI="mirror://sourceforge/yosucker/${MY_P}.tar.gz"
 HOMEPAGE="http://yosucker.sourceforge.net"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 SLOT="0"
 
