@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.124 2005/01/05 18:24:34 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.125 2005/01/06 17:23:42 kloeri Exp $
+
+  06 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> python-2.4.ebuild:
+  Fix broken Manifest.
 
   05 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> python-2.4.ebuild:
   Only apply lib64 patch on CONF_LIBDIR == lib64
