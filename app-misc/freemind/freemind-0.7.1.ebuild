@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.7.1.ebuild,v 1.11 2004/10/16 18:14:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.7.1.ebuild,v 1.12 2004/12/13 05:49:30 weeve Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://freemind.sf.net"
 SRC_URI="mirror://sourceforge/freemind/${PN}-src-${PV//./_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ppc amd64"
+KEYWORDS="x86 sparc ppc amd64"
 IUSE="doc jikes"
 DEPEND="dev-java/ant
 		>=virtual/jdk-1.4*
