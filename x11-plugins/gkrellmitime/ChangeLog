@@ -1,6 +1,21 @@
 # ChangeLog for x11-plugins/gkrellmitime
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/ChangeLog,v 1.1 2002/08/30 01:49:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/ChangeLog,v 1.2 2002/10/16 21:36:51 seemant Exp $
+
+*gkrellmitime-1.0 (16 Oct 2002)
+
+  16 Oct 2002; Seemant Kulleen <seemant@gentoo.org> gkrellmitime-1.0.ebuild
+  files/digest-gkrellmitime-1.0 :
+
+  GKrellM2 version submitted by: gustavo@felisberto.net (Gustavo Felisberto)
+  in bug #8926.
+
+*gkrellmitime-0.5.1 (16 Oct 2002)
+
+  16 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
+  gkrellmitime-0.5.1.ebuild files/digest-gkrellmitime-0.5.1 :
+
+  Version bump for the gkrellm version (includes NLS support now).
 
 *gkrellmitime-0.4 (1 Feb 2002)
 
