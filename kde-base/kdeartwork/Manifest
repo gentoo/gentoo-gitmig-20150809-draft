@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ddd3221aa684e9c33a1948922c33fae ChangeLog 13328
-MD5 b948e62a3a984f2ad370f7bca9780b66 kdeartwork-3.2.2.ebuild 498
-MD5 d720aab0d669beca41c57b080fe79fe3 kdeartwork-3.3.1.ebuild 674
-MD5 29ab0a1e83eab176309fbe96ed1c105b kdeartwork-3.2.3.ebuild 606
+MD5 bd553ef75dc1e7bb04c32b155a315f07 kdeartwork-3.4.0_beta1.ebuild 531
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 b9d2c0a62277ff2256f7140b41f6fa71 kdeartwork-3.2.0.ebuild 491
-MD5 569c7167d8eba51184f32d59548712e0 kdeartwork-3.3.0.ebuild 851
 MD5 667484022e059352c915d711ab3fb5b8 kdeartwork-3.3.2.ebuild 677
-MD5 bd553ef75dc1e7bb04c32b155a315f07 kdeartwork-3.4.0_beta1.ebuild 531
-MD5 b1917d58e026721bef996f7238f91fd0 files/digest-kdeartwork-3.2.2 71
-MD5 c34d3074ca608e62d2de9eba80a3cb2c files/digest-kdeartwork-3.2.0 71
+MD5 cbcf460442f7a9851bc344677fe16108 ChangeLog 13329
+MD5 569c7167d8eba51184f32d59548712e0 kdeartwork-3.3.0.ebuild 851
+MD5 29ab0a1e83eab176309fbe96ed1c105b kdeartwork-3.2.3.ebuild 606
+MD5 d720aab0d669beca41c57b080fe79fe3 kdeartwork-3.3.1.ebuild 674
+MD5 b948e62a3a984f2ad370f7bca9780b66 kdeartwork-3.2.2.ebuild 498
 MD5 750b31061cf39ebc204bbc9b012da76a files/digest-kdeartwork-3.2.3 71
-MD5 71ae2484985e5597a671357e5ccc6e72 files/digest-kdeartwork-3.3.1 71
-MD5 4fef77564341d14de7efedac9437d258 files/digest-kdeartwork-3.3.0 71
-MD5 47117c4358388ad57e28193e59ca41ff files/3.3.0-kfiresaver-Makefile.am.patch 1024
-MD5 667743a96cce7b95f425585895883e4f files/3.3.0-kfiresaver-configure.in.in.patch 499
 MD5 976327b55d73654f03a7c4545f59d516 files/digest-kdeartwork-3.3.2 71
+MD5 4fef77564341d14de7efedac9437d258 files/digest-kdeartwork-3.3.0 71
+MD5 c34d3074ca608e62d2de9eba80a3cb2c files/digest-kdeartwork-3.2.0 71
+MD5 667743a96cce7b95f425585895883e4f files/3.3.0-kfiresaver-configure.in.in.patch 499
 MD5 595f71ecbc63e670bbdefc0eb6245ca8 files/digest-kdeartwork-3.4.0_beta1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB9Y2AroRuSHgZdywRAr2XAJ4mTQuM4Woh64P4xreDTmQjs9efmACfSEeG
-1vNyeYciSwyIpw5Wp9QHaD4=
-=q5mF
------END PGP SIGNATURE-----
+MD5 47117c4358388ad57e28193e59ca41ff files/3.3.0-kfiresaver-Makefile.am.patch 1024
+MD5 71ae2484985e5597a671357e5ccc6e72 files/digest-kdeartwork-3.3.1 71
+MD5 b1917d58e026721bef996f7238f91fd0 files/digest-kdeartwork-3.2.2 71
