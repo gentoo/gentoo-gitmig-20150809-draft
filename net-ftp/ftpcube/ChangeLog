@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpcube
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.25 2004/07/03 12:13:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.26 2004/10/30 21:49:55 slarti Exp $
+
+  30 Oct 2004; Tom Martin <slarti@gentoo.org> ftpcube-0.4.3-r1.ebuild:
+  Marked ~amd64 for bug 69552.
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> ftpcube-0.4.0.ebuild,
   ftpcube-0.4.1.ebuild, ftpcube-0.4.2.ebuild, ftpcube-0.4.3-r1.ebuild,
