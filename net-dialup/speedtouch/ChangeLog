@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/speedtouch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.12 2003/12/23 11:54:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.13 2003/12/25 16:53:18 twp Exp $
+
+  25 Dec 2003; Tom Payne <twp@gentoo.org> speedtouch-1.2_beta3-r2.ebuild :
+  Install *.html correctly. Add MODEM_RUN_EXTRAOPTS to conf.d and init.d scripts.
 
 *speedtouch-1.2_beta3 (23 Dec 2003)
 
