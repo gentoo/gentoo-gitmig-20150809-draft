@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.180 2004/10/29 06:20:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.181 2004/10/29 06:27:22 spyderous Exp $
+
+  28 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r2.ebuild:
+  USE=xv wrongly requires USE=opengl, but this is a bug in the source
+  (#67996). Forcing them to be used together until upstream fixes it.
 
   28 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.35 2004/10/29 06:20:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.36 2004/10/29 06:27:22 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -226,6 +226,12 @@ pkg_setup() {
 
 	if use dri && ! use opengl; then
 		die "The dri USE flag requires the opengl flag."
+	fi
+
+	if use xv && ! use opengl; then
+		eerror "See http://bugs.gentoo.org/show_bug.cgi?id=67996"
+		eerror "The xv USE flag currently requires the opengl flag."
+		die "This is a known bug. Do not report it."
 	fi
 
 	# on amd64 we need /usr/lib64/X11/locale/lib to be a symlink
