@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r3.ebuild,v 1.2 2003/11/28 19:08:16 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r3.ebuild,v 1.3 2003/11/30 15:49:54 pappy Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -243,6 +243,11 @@ src_unpack() {
 			then
 				eerror "found binaries that are dynamically linked to the libgcc with __guard@@GCC"
 				eerror "you need to compile these binaries without CFLAGS -fstack-protector/hcc -r"
+				echo
+				eerror "also you have to make sure that using ccache needs the cache to be flushed"
+				eerror "wipe out /var/tmp/ccache or /root/.ccache, this will remove possible saved"
+				eerror "-fstack-protector arguments that still may reside in such a compiler cache"
+				echo
 				eerror "when such binaries are found, gcc cannot remove libgcc propolice functions"
 				eerror "leading to gcc -static -fstack-protector breaking, see gentoo bug id 25299"
 				einfo  "you can run 'qpkg -f' from the gentoolkit package and reemerge the program"
