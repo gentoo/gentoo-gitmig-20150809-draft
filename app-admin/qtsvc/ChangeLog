@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/qtsvc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/ChangeLog,v 1.11 2005/01/01 11:21:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/ChangeLog,v 1.12 2005/03/03 18:12:31 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> qtsvc-0.2.ebuild:
+  Dependency update: sys-apps/daemontools -> sys-process/daemontools.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> qtsvc-0.2.ebuild:
   Masked qtsvc-0.2.ebuild stable for ppc
