@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/darcnes
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/ChangeLog,v 1.4 2004/05/10 21:40:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/ChangeLog,v 1.5 2004/05/11 00:57:01 mr_bones_ Exp $
+
+  10 May 2004; Michael Sterrett <mr_bones_@gentoo.org> darcnes-0401-r2.ebuild:
+  again with the use fun and games
 
   10 May 2004; Michael Sterrett <mr_bones_@gentoo.org> darcnes-0401-r2.ebuild:
   make X optional for the svgalib lovers.
