@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.6 2003/03/04 11:11:49 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.7 2003/03/12 06:45:49 jhhudso Exp $
 #
 # Author Ryan Phillips <rphillips@gentoo.org>
 #
@@ -56,7 +56,7 @@ LICENSE="vim"
 
 src_unpack() {
 	unpack ${A}
-	unpack ${LANG}
+	use nls && unpack ${LANG}
 	# Fixup a script to use awk instead of nawk
 	cd ${S}/runtime/tools
 	mv mve.awk mve.awk.old
