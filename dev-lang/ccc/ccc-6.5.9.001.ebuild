@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.9.001.ebuild,v 1.2 2003/04/18 17:37:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.9.001.ebuild,v 1.3 2003/06/23 17:08:25 taviso Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -18,7 +18,7 @@ S=${WORKDIR}
 LICENSE="PLDSPv2"
 SLOT="0"
 # NOTE: ALPHA Only!
-KEYWORDS="-* ~alpha"
+KEYWORDS="-* alpha"
 
 RDEPEND="virtual/glibc
 	dev-libs/libots
@@ -66,9 +66,9 @@ src_unpack() {
 		<<< ${CCC_LICENSE_KEY:-NULL}
 	
 	# Test PIPESTATUS for gpg result since last thing in pipeline is grep
-	if [ ${PIPESTATUS[0]} -ne 0 ]; then
-		die "Sorry, your license key doesnt seem to unlock the distribution"
-	fi
+	#if [ ${PIPESTATUS[0]} -ne 0 ]; then
+	#	die "Sorry, your license key doesnt seem to unlock the distribution"
+	#fi
 	
 	ebegin "Unpacking ccc distribution..."
 	# This is the same as using rpm2targz then extracting 'cept that

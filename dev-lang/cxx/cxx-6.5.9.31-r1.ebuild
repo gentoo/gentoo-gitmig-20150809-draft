@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.3 2003/06/15 11:43:33 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.4 2003/06/23 17:11:53 taviso Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -19,7 +19,7 @@ S=${WORKDIR}
 LICENSE="PLDSPv2"
 SLOT="0"
 # NOTE: ALPHA Only!
-KEYWORDS="-* ~alpha"
+KEYWORDS="-* alpha"
 
 DEPEND="sys-devel/gcc-config
 	app-arch/rpm2targz
