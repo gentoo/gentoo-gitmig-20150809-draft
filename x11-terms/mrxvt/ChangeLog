@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mrxvt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.1 2004/10/09 18:43:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.2 2004/10/14 10:16:05 usata Exp $
+
+  14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> mrxvt-0.3.4.ebuild:
+  Added to ~ppc-macos.
 
 *mrxvt-0.3.4 (10 Oct 2004)
 
