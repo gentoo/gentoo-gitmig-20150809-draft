@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/g-brief
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.6 2004/10/16 16:09:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.7 2004/10/17 11:54:28 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> g-brief-4.0.1.ebuild:
+  stable on amd64.
 
   17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> g-brief-4.0.1.ebuild:
   Blocks >=tetex-2.96.
