@@ -2,10 +2,10 @@ MD5 5bbb57c76f0cf851a9c3a1b9d955493d coda-6.0.3.ebuild 2969
 MD5 1c6dd8cd026083d4d4c5a42c39d6bcf6 ChangeLog 1223
 MD5 1b45d9e2da0f37197bb054ea7da892ce metadata.xml 360
 MD5 a069d20d74c89546ecd73c7a00f14c8f coda-6.0.6.ebuild 2991
-MD5 b5550891c4e2104251149fb87d2e7caa files/codasrv 817
-MD5 7468f975c0e71ab6eac41f2a045f25f0 files/auth2 971
-MD5 5fb50c606e6ed10b77976f2fbe7d013f files/venus 686
-MD5 d0d76bd97bdc83a098386a6f935c5e85 files/coda-update 1148
+MD5 ff0041a17fcc173f319e56d0645bd739 files/codasrv 806
+MD5 c574f7f2e3d8d7fbeff65c5a0707764f files/auth2 960
+MD5 6376d6d4e43074de8c5a7447ddd08475 files/venus 675
+MD5 f17ca8660b5ee127de9d36a910fbd537 files/coda-update 1137
 MD5 464a8cd91e3af12266c0570034388221 files/coda-6.0.6-gcc3.4.patch 1984
 MD5 d21e4e5142a0266459b5ad8b39e3e707 files/coda-6.0.3-iowr.patch 607
 MD5 d08316a08429d573d30dbc9924707206 files/digest-coda-6.0.3 63

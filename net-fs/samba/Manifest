@@ -3,7 +3,7 @@ MD5 633511d04d7a7d7702c17089c85ba697 samba-3.0.1-r1.ebuild 11333
 MD5 df4f73693b725799675e37ba3f90643f samba-3.0.2a-r2.ebuild 12249
 MD5 7bb830f107c1336e0b136ad7aacd5e5f ChangeLog 17476
 MD5 63bc25b07c7404f26d602e69ddad747e metadata.xml 458
-MD5 88b5abd8e04f84a7507ab35555f305b7 files/winbind-init 490
+MD5 ccc96fcdc7493be42da52364061c6c17 files/winbind-init 484
 MD5 fcebd975211fecf647f6cecf26ba5c96 files/samba-3.0.4.patch 8086
 MD5 d57ae3d7c51d488034f992de323e52b8 files/swat.xinetd 524
 MD5 20997c75e29fec20efbb2cd6695cd3a9 files/recycle.conf 776
@@ -11,7 +11,7 @@ MD5 9e78d5e97b1c5f85d9c21636d1f234a4 files/smbldap_conf.pm 7092
 MD5 cbaa5a39d9bd67b13f8131b426a4256b files/samba-2.2.5-gp-reloc-fix.patch 431
 MD5 c78caa4193cd606b58c158c57b5adbd7 files/nsswitch.conf-wins 389
 MD5 341521b710d02d57a70acd49b1d4c06b files/samba-conf 1291
-MD5 d911202dbaf3b115b6a812cb8cda07ca files/samba-init 1098
+MD5 83b384d6b47ecbf20525cc9a7baaa77a files/samba-init 1093
 MD5 fd2382184b6a07e63cb07ff26b578fd2 files/config-svc-smbd+nmbd 784
 MD5 f402c2c4103f4c13ac3cc5fa165940db files/nonroot-bind.diff 757
 MD5 5d3129a0f6bcbec6ec91d217881a34e1 files/nsswitch.conf-winbind 298
@@ -27,7 +27,7 @@ MD5 9560b7e29d3a65db029fc1800e84abcc files/samba-pdb_ldap-exop.patch 3921
 MD5 6f854f1d9edcfc32c4379c0f90c91c93 files/smbusers 201
 MD5 5b90f114bd4f12bee1e9e7db2c3a34f9 files/system-auth-winbind 866
 MD5 990fe15ff8a0e79f39069fff6475536d files/samba-3.0.2a-smbprint.patch 1224
-MD5 d487b34533f59d3a1a1c38717d3d221e files/samba-svc 981
+MD5 6acf6a5e92ff2cfc5f09b88f5d01b63e files/samba-svc 975
 MD5 b6cdc1468e45f92f19873e0c6c5b6e94 files/samba.pam 332
 MD5 81931e1d9764390841dec0d0f327a114 files/digest-samba-3.0.2a-r2 204
 MD5 de43ff30dd5f1431590fd62a997e71b4 files/samba-3.0.4-python-setup.patch 833
