@@ -1,30 +1,15 @@
 # This is a list of USE flags that should not be used on PPC
 
-x86 
-
-afs
 3dnow
+acpi
+afs
 avi
+hdf
 icc
 icc-pgo
 mmx
-svga
-sse 
-firebird
-tcc
-acpi
-
-# For ppc SElinux support please use the SElinux profile
-# Maintained by Chris Pebenito <pebenito@gentoo.org>
-
 selinux
-
-# HDF is currently broken on ppc, masking
-# until it is fixed
-hdf
-
-# media-libs/glide-v3 requires some extra work on ppc
-3dfx
-
-#mask until sys-cluster/lam-mpi is tested on ppc
-mpi
+sse 
+svga
+tcc
+x86 

@@ -1,4 +1,4 @@
-X		x11-base/xfree
+X		x11-base/xorg-x11
 aalib		media-libs/aalib	
 alsa		media-libs/alsa-lib
 arts		kde-base/arts
@@ -42,4 +42,3 @@ tcltk		dev-lang/tcl dev-lang/tk
 tcpd		sys-apps/tcp-wrappers
 tetex		app-text/tetex
 ungif		media-libs/ungif
-#xinerama

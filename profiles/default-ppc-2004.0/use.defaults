@@ -1,4 +1,4 @@
-X		x11-base/xfree
+X		x11-base/xorg-x11
 aalib		media-libs/aalib	
 alsa		media-libs/alsa-lib
 arts		kde-base/arts
