@@ -1,6 +1,17 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.67 2003/09/25 02:20:48 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.68 2003/09/27 04:47:17 woodchip Exp $
+
+*apache-1.3.28-r1 (27 Sep 2003)
+
+  27 Sep 2003; Donny Davies <woodchip@gentoo.org> apache-1.3.28-r1.ebuild,
+  files/apache-1.3.27_db4_gentoo.patch, files/apache-1.3.28-zombie-cgi.patch,
+  files/apache.rc6, files/2.0.40/apache2.confd,
+  files/2.0.40/commonapache2.conf, files/conf/apache.conf,
+  files/conf/commonapache.conf:
+  Move --datadir to /var/www/localhost; prepare for the upcoming vhost-config
+  and webapp-config tools.  Added patches to fix #26632 and #29124.  Hopefully
+  fix #28552 and #28619 also.  Fix #29606.  Fix #29329.  Whew!
 
 *apache-2.0.47-r1 (24 Sep 2003)
 
