@@ -1,0 +1,10 @@
+# ChangeLog for app-text/enchant
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.1 2003/07/28 17:44:46 foser Exp $
+
+*enchant-0.1.0 (28 Jul 2003)
+
+  28 Jul 2003; foser <foser@gentoo.org> ChangeLog, metadata.xml, enchant-0.1.0.ebuild :
+  Initial commit, wrapper for spellchecker libraries to provide a common API
+  Added to GNOME herd for now, since right now it's only used by Abiword, but in time
+  another herd should take over
