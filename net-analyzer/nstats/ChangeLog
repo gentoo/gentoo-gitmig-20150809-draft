@@ -1,0 +1,9 @@
+# ChangeLog for net-analyzer/nstats
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nstats/ChangeLog,v 1.1 2002/04/14 06:44:48 woodchip Exp $
+
+*nstats-0.3.2-r2 (14 Apr 2002)
+
+  14 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+  
+  Initial check-in.  Thanks go to Lukas Beeler <lb-gentoo@projectdream.org>.
