@@ -1,0 +1,22 @@
+--- XFree86-4.2.99.3/xc/lib/Xau/Imakefile.build-libs-with-pic	2001-01-17 14:42:24.000000000 -0500
++++ XFree86-4.2.99.3/xc/lib/Xau/Imakefile	2003-01-09 11:25:46.000000000 -0500
+@@ -37,6 +37,8 @@ SRCS =	AuDispose.c AuFileName.c AuGetAdd
+ OBJS =	AuDispose.o AuFileName.o AuGetAddr.o AuGetBest.o AuLock.o \
+ 	AuRead.o AuUnlock.o AuWrite.o $(K5ENCOBJ)
+ 
++#define IncludeNormalLibInSharedObject
++
+ #include <Library.tmpl>
+ 
+ DependTarget()
+--- XFree86-4.2.99.3/xc/programs/Xserver/hw/xfree86/parser/Imakefile.build-libs-with-pic	2002-05-31 14:46:02.000000000 -0400
++++ XFree86-4.2.99.3/xc/programs/Xserver/hw/xfree86/parser/Imakefile	2003-01-09 11:25:51.000000000 -0500
+@@ -36,6 +36,8 @@ CONFIG_DEFINES = -DXCONFIGDIR=\"$(XCONFI
+ 		 -DXCONFIGFILE=\"$(XCONFIGFILE)\" \
+ 		 -DXVERSION="$(XVERS)"
+ 
++#define IncludeNormalLibInSharedObject
++
+ #include <Library.tmpl>
+ 
+ SpecialCObjectRule(scan,NullParameter,$(CONFIG_DEFINES) $(MODULEDEFINES) $(EXT_DEFINES))
