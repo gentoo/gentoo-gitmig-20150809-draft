@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.5.ebuild,v 1.2 2004/09/23 03:39:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.5.ebuild,v 1.3 2004/09/29 16:33:43 mholzer Exp $
 
 inherit eutils
 
@@ -14,7 +14,6 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~arm ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="krb4 static"
-RESTRICT="nomirror"
 
 DEPEND="virtual/libc
 	sys-devel/autoconf
