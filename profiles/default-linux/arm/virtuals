@@ -1,1 +1,9 @@
-virtual/bootloader		sys-boot/nettrom
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/virtuals,v 1.2 2004/09/22 00:31:48 vapier Exp $
+
+virtual/bootloader			sys-boot/nettrom
+virtual/x11					x11-base/xorg-x11
+virtual/opengl				x11-base/xorg-x11
+virtual/glu					x11-base/xorg-x11
+virtual/xft					x11-base/xorg-x11

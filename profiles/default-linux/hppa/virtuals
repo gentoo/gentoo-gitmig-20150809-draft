@@ -1,5 +1,10 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/virtuals,v 1.4 2004/09/22 00:32:23 vapier Exp $
+
 virtual/bootloader		sys-boot/palo
-virtual/x11			x11-base/xorg-x11
+virtual/x11				x11-base/xorg-x11
 virtual/opengl			x11-base/xorg-x11
-virtual/glu			x11-base/xorg-x11
+virtual/glu				x11-base/xorg-x11
+virtual/xft				x11-base/xorg-x11
 virtual/alsa			sys-kernel/hppa-dev-sources
