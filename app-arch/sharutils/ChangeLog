@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.22 2004/10/02 07:04:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.23 2004/10/10 02:26:00 tgall Exp $
+
+  09 Oct 2004; Tom Gall <tgall@gentoo.org> sharutils-4.2.1-r10.ebuild:
+  stable on ppc64, bug #65773
 
   02 Oct 2004; Joshua Kinard <kumba@gentoo.org> sharutils-4.2.1-r10.ebuild:
   Marked stable on mips.
