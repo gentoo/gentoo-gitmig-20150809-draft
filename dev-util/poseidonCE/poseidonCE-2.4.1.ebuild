@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-2.4.1.ebuild,v 1.3 2004/07/31 21:50:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-2.4.1.ebuild,v 1.4 2004/08/30 18:38:34 zx Exp $
 
 IUSE="doc gnome kde"
 DESCRIPTION="A UML CASE-Tool powered by Java"
@@ -8,7 +8,7 @@ SRC_URI="${P}.zip"
 HOMEPAGE="http://www.gentleware.com/"
 LICENSE="PoseidonCommon.pdf"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 RDEPEND=">=virtual/jdk-1.4.1"
 RESTRICT="fetch"
 

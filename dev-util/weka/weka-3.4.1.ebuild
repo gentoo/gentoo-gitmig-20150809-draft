@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.1.ebuild,v 1.2 2004/06/25 02:50:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.1.ebuild,v 1.3 2004/08/30 18:39:32 zx Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV//./-}.zip"
 HOMEPAGE="http://www.cs.waikato.ac.nz/ml/weka/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 DEPEND=">=virtual/jdk-1.4.1"
 IUSE="doc"
 

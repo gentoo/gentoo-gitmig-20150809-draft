@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/j/j-0.20.2.ebuild,v 1.4 2004/07/14 23:46:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/j/j-0.20.2.ebuild,v 1.5 2004/08/30 18:36:24 zx Exp $
 
 IUSE=""
 SRC_URI="mirror://sourceforge/armedbear-${PN}/${P}.tar.gz"
@@ -9,7 +9,7 @@ DESCRIPTION="Programmer's text editor written in Java, includes Armed Bear Lisp.
 HOMEPAGE="http://armedbear-j.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 
 DEPEND=">=virtual/jdk-1.4"
 

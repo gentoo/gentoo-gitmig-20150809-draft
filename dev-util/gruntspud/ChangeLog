@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gruntspud
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gruntspud/ChangeLog,v 1.5 2004/06/25 02:35:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gruntspud/ChangeLog,v 1.6 2004/08/30 18:35:15 zx Exp $
+
+  30 Aug 2004; Chris Aniszczyk <zx@gentoo.org> gruntspud-0.4.6_beta.ebuild:
+  Marking x86
 
   12 Apr 2004; Chris Aniszczyk <zx@gentoo.org> gruntspud-0.4.5_beta.ebuild:
   Clean up.
