@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.129 2005/02/09 11:19:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.130 2005/02/17 18:19:40 pythonhead Exp $
+
+*python-2.3.5 (17 Feb 2005)
+
+  17 Feb 2005; Rob Cakebread <pythonhead@gentoo.org> +python-2.3.5.ebuild:
+  Version bump.
 
   09 Feb 2005; Luca Barbato <lu_zero@gentoo.org> python-2.3.4-r1.ebuild:
   Marked ppc
