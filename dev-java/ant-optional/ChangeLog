@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-optional
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ChangeLog,v 1.4 2004/01/22 01:26:45 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ChangeLog,v 1.5 2004/01/22 01:29:58 strider Exp $
+
+  21 Jan 2004; Adrian Almenar <strider@gentoo.org>
+  ant-optional-1.6.0-r2.ebuild:
+  Added missing ant call. Thanks to Chetan Sarva <gentoo-bugs@fw2.net> for the
+  fix. Closes #38874.
 
   21 Jan 2004; Adrian Almenar <strider@gentoo.org>
   ant-optional-1.6.0-r2.ebuild:
