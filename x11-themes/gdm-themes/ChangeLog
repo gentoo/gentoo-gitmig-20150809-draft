@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gdm-themes
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.12 2004/11/19 15:40:49 humpback Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.13 2005/01/30 22:03:52 humpback Exp $
+
+  30 Jan 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  gdm-themes-2.0.ebuild:
+  Marked x86
 
   19 Nov 2004; Gustavo Felisberto <humpback@gentoo.org>;
   gdm-themes-2.0.ebuild:
