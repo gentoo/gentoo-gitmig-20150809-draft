@@ -14,7 +14,7 @@ virtual/glu             x11-base/xfree
 virtual/glut            media-libs/glut
 virtual/imapUW          net-mail/uw-imap
 virtual/imapd           net-mail/courier-imap
-virtual/inetd		sys-apps/netkit-base
+virtual/inetd		sys-apps/xinetd
 virtual/jack		media-sound/jack-audio-connection-kit
 virtual/jdk             dev-java/blackdown-jdk
 virtual/jre             dev-java/blackdown-jre

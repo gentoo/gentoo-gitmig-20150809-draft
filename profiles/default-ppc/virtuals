@@ -29,7 +29,7 @@ virtual/bootloader		 sys-apps/yaboot
 virtual/editor			 app-editors/nano
 virtual/os-headers	     sys-kernel/linux-headers
 virtual/modutils         sys-apps/modutils
-virtual/inetd            sys-apps/netkit-base
+virtual/inetd            sys-apps/xinetd
 virtual/aspell-dict           app-dicts/aspell-en
 virtual/skkserv		app-i18n/skkserv
 virtual/ghc		dev-lang/ghc-bin

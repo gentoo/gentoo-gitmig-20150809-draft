@@ -40,7 +40,7 @@ virtual/ghc             dev-lang/ghc-bin
 #sys-apps/modutils		sys-apps/module-init-tools
 #virtual/modutils		sys-apps/module-init-tools
 virtual/modutils		sys-apps/module-init-tools
-virtual/inetd			sys-apps/netkit-base
+virtual/inetd			sys-apps/xinetd
 virtual/antivirus		net-mail/clamav
 virtual/aspell-dict           app-dicts/aspell-en
 virtual/skkserv		app-i18n/skkserv

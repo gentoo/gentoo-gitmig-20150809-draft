@@ -33,7 +33,7 @@ virtual/jack			media-sound/jack-audio-connection-kit
 virtual/os-headers		sys-kernel/linux-headers
 virtual/ghc				dev-lang/ghc-bin
 virtual/modutils 		sys-apps/modutils
-virtual/inetd			sys-apps/netkit-base
+virtual/inetd			sys-apps/xinetd
 virtual/aspell-dict           app-dicts/aspell-en
 virtual/skkserv		app-i18n/skkserv
 virtual/snmp		net-analyzer/net-snmp
