@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.24 2004/07/11 03:22:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.25 2004/07/16 05:53:17 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -400,6 +400,14 @@ host_def_setup() {
 			echo "#define XF86CardDrivers mga glint s3virge sis savage trident \
 				chips tdfx fbdev ati DevelDrivers vga nv imstt \
 				XF86OSCardDrivers XF86ExtraCardDrivers" >> config/cf/host.def
+		fi
+
+		if use ppc64
+		then
+			echo "#define MakeDllModules YES" >> config/cf/host.def
+			echo "#define XF86VgaHw YES" >> config/cf/host.def
+			echo "#define XF86FBDevHw YES" >> config/cf/host.def
+			echo "#define XF86CardDrivers fbdev v4l ati vga nv" >> config/cf/host.def
 		fi
 
 		if use sparc
@@ -1353,7 +1361,42 @@ pkg_postinst() {
 		chmod 1777 ${x}
 	done
 
+	if use ppc64
+	then
+		#The problem about display driver is fixed.
+		cd ${ROOT}/usr/X11R6/lib/modules/drivers
+		mv fbdev_drv.so fbdev_drv.so.orig
+		mv ati_drv.so ati_drv.so.orig
+		mv nv_drv.so nv_drv.so.orig
+
+		ld -shared -o ${ROOT}/usr/X11R6/lib/modules/drivers/fbdev_drv.so ${ROOT}/usr/X11R6/lib/modules/drivers/fbdev_drv.so.orig ${ROOT}/usr/X11R6/lib/modules/linux/libfbdevhw.so ${ROOT}/usr/X11R6/lib/modules/libshadow.so ${ROOT}/usr/X11R6/lib/modules/libshadowfb.so ${ROOT}/usr/X11R6/lib/modules/libfb.so
+		ld -rpath /usr/X11R6/lib/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
+		ld -rpath /usr/X11R6/lib/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
+
+		#The problem about DRI module and GLX module is fixed.
+		cd ${ROOT}/usr/X11R6/lib/modules/extensions
+		mv libglx.so libglx.so.orig
+		mv libdri.so libdri.so.orig
+
+		ld -rpath ${ROOT}/usr/X11R6/lib/modules/extensions -shared -o libglx.so libglx.so.orig libGLcore.so
+		ld -rpath ${ROOT}/usr/X11R6/lib/modules/extensions -shared -o libdri.so libdri.so.orig libglx.so
+	fi
+
 	print_info
+}
+
+pkg_prerm() {
+
+	if use ppc64
+	then
+		cd ${ROOT}/usr/X11R6/lib/modules/drivers
+		mv fbdev_drv.so.orig fbdev_drv.so
+		mv ati_drv.so.orig ati_drv.so
+		mv nv_drv.so.orig nv_drv.so
+		cd ${ROOT}/usr/X11R6/lib/modules/extensions
+		mv libglx.so.orig libglx.so
+		mv libdri.so.orig libdri.so
+	fi
 }
 
 pkg_postrm() {
