@@ -1,6 +1,6 @@
 diff -Naur aumix-2.8.orig/configure aumix-2.8/configure
 --- aumix-2.8.orig/configure	2002-11-24 17:35:48.000000000 -0800
-+++ aumix-2.8/configure	2004-10-31 02:11:40.038574588 -0800
++++ aumix-2.8/configure	2002-11-24 17:35:48.000000000 -0800
 @@ -3801,10 +3801,6 @@
  USE_INCLUDED_LIBINTL=no
  
@@ -14,7 +14,7 @@ diff -Naur aumix-2.8.orig/configure aumix-2.8/configure
  # This file is a shell script that caches the results of configure
 diff -Naur aumix-2.8.orig/configure.in aumix-2.8/configure.in
 --- aumix-2.8.orig/configure.in	2002-11-24 17:04:16.000000000 -0800
-+++ aumix-2.8/configure.in	2004-10-31 02:11:09.622964264 -0800
++++ aumix-2.8/configure.in	2002-11-24 17:04:16.000000000 -0800
 @@ -240,9 +240,6 @@
  USE_INCLUDED_LIBINTL=no
  AC_SUBST(USE_INCLUDED_LIBINTL)

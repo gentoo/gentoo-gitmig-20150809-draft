@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.44 2004/11/08 23:30:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.45 2004/11/11 03:24:18 eradicator Exp $
+
+  10 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  files/aumix-2.8-nls.patch:
+  Prevent auto* from rerunning... closes bug #70379.
 
   08 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -aumix-2.7-r4.ebuild, -aumix-2.8.ebuild:
