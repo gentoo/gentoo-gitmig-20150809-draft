@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.45 2004/11/04 17:43:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.46 2004/11/24 21:27:26 swegener Exp $
+
+  24 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Added missing digest entries.
 
   04 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org> sbcl-0.8.15.ebuild,
   sbcl-0.8.16.ebuild:
