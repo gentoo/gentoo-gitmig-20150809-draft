@@ -1,4 +1,4 @@
-MD5 272f8ae71369239d44b8132a38bf503b ChangeLog 3537
+MD5 e8498d0f3dfed9c94c51a6c499521e0f ChangeLog 3605
 MD5 4c8efbf2124d4b212b360663d088eb4a lufs-0.7.0.ebuild 1340
 MD5 a6e67e52e63e7387b28437be23ae71fc lufs-0.8.0-r1.ebuild 1374
 MD5 4af657e5ccd93d3fc3689a60f013eca6 lufs-0.8.0.ebuild 1358
@@ -7,7 +7,7 @@ MD5 ded4d54b30a607446fa6f95cb945d690 lufs-0.9.4.ebuild 1438
 MD5 eb9ac63ee8dfb05e251df7aa77381946 lufs-0.9.5.ebuild 1599
 MD5 5d2de3bf14dc86deb882aa136a7fd989 lufs-0.9.6.ebuild 1798
 MD5 71dc77ea46f5b9c63d0727a66ab26fcf lufs-0.9.7-r1.ebuild 2013
-MD5 544925318e724d00e73c584f45652b4a lufs-0.9.7-r2.ebuild 2270
+MD5 4d78402cec389795dff5d66e4530029a lufs-0.9.7-r2.ebuild 2264
 MD5 b664ede1e143f7903c8ccf0b2f515d05 lufs-0.9.7.ebuild 1838
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c574a7036eebafdb31765fec945e0498 files/digest-lufs-0.7.0 62

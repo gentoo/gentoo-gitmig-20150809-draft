@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r2.ebuild,v 1.2 2004/05/28 15:41:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r2.ebuild,v 1.3 2004/05/28 16:30:41 steel300 Exp $
 
 inherit kmod eutils
 
@@ -36,7 +36,7 @@ src_compile() {
 	kmod_make_linux_writable
 	local myconf
 	myconf="--enable-wavfs --enable-cardfs"
-	if use nokernelsupport; then
+	if use disablekernelsupport; then
 		myconf="${myconf} --disable-kernel-support"
 	fi
 	if ! use lufsusermount; then
