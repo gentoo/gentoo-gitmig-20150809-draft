@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.1 2004/06/03 09:53:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.2 2004/06/03 22:09:01 kugelfang Exp $
 
-inherit eutils
+inherit eutils 64-bit
 
 S="${WORKDIR}/${PN}-0.5.0"
 DESCRIPTION="Window manager based on BlackBox"
@@ -20,6 +20,12 @@ DEPEND="virtual/x11
 	x11-libs/libsvg-cairo"
 
 PROVIDE="virtual/blackbox"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	64-bit && epatch ${FILESDIR}/${PN}-0.5.0-64bit-clean.patch
+}
 
 src_compile() {
 	econf \

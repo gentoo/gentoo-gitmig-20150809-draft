@@ -1,0 +1,14 @@
+--- src/Net.cc.orig	2004-05-05 16:17:21.000000000 +0200
++++ src/Net.cc	2004-06-03 21:00:29.142984648 +0200
+@@ -1590,7 +1590,11 @@
+ #define MAX_ICON_MATCH_DIFF 5000
+ 
+ void NetHandler::getWmIconImage(WaWindow *ww) {
++#ifdef LONG64 //necessary on 64bit archs
++    CARD64 *data;
++#elif
+     CARD32 *data;
++#endif
+     int status = Success - 1;
+ 
+     status = XGetWindowProperty(ww->display, ww->id, net_wm_icon_image, 0L,
