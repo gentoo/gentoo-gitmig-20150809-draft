@@ -1,8 +1,19 @@
 # ChangeLog for app-office/mrproject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/ChangeLog,v 1.11 2003/02/12 05:13:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/ChangeLog,v 1.12 2003/02/20 21:26:59 spider Exp $
 
 
+
+*mrproject-0.9 (20 Feb 2003)
+
+  20 Feb 2003; Spider <spider@gentoo.org> mrproject-0.9.ebuild :
+  added print dep, libbonobo
+  removed doc  USE (not supported in this package anymore)
+  moved to use gnome2.eclass
+  removed nls USE (not supported in gnome2 packages)
+
+
+    
 *mrproject-0.8 (02 Feb 2003)
   
   04 Feb 2003; Jon Nall <nall@gentoo.org> mrproject-0.8.ebuild :
