@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-0.6.ebuild,v 1.12 2004/12/04 23:26:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-0.6.ebuild,v 1.13 2005/01/25 16:08:24 greg_g Exp $
 
 inherit eutils kde
 
@@ -29,17 +29,15 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure \
-		--disable-dependency-tracking \
-		--datadir="${KDEDIR}" \
-		|| die "./configure failed"
-	emake || die "emake failed"
+	myconf="--disable-dependency-tracking"
+
+	kde_src_compile
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	kde_src_install
 
 	cd ../${PN}-themepack || die "Themes seem to be missing."
-	insinto ${KDEDIR}/share/apps/knights/themes/
+	insinto /usr/share/apps/knights/themes/
 	doins *.tar.gz || die "doins failed"
 }
