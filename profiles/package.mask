@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <spyderous@gentoo.org> (11 July 2003)
+# xfree development series
+>=x11-base/xfree-4.3.99
+
 # <robbat2@gentoo.org> (11 Jul 2003)
 # nss_ldap 209 is borked!
 # See bug #23434
