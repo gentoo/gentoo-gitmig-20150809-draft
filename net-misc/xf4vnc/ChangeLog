@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/xf4vnc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xf4vnc/ChangeLog,v 1.1 2004/03/29 14:43:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xf4vnc/ChangeLog,v 1.2 2004/04/28 09:25:19 aliz Exp $
+
+  28 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> xf4vnc-4.3.0.103.ebuild,
+  xf4vnc-4.3.0.104.ebuild:
+  Fixed KEYWORDS, mark stable on x86.
 
 *xf4vnc-4.3.0.104 (29 Mar 2004)
 *xf4vnc-4.3.0.103 (29 Mar 2004)
