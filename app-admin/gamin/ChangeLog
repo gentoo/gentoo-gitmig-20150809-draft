@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.1 2004/08/19 21:44:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.2 2004/08/22 22:43:17 azarah Exp $
+
+*gamin-0.0.6-r1 (23 Aug 2004)
+
+  23 Aug 2004; Martin Schlemmer <azarah@gentoo.org>
+  +files/gamin-0.0.6-inotify_h-include.patch,
+  +files/gamin-0.0.6-runtime-backend-select.patch, +files/inotify-0.8.1.h,
+  +gamin-0.0.6-r1.ebuild:
+  Add runtime-backend-select.patch to select between inotify/dnotify/poll at run
+  time. Add inotify header, and fixup build to use a local copy.
 
 *gamin-0.0.6 (19 Aug 2004)
 
