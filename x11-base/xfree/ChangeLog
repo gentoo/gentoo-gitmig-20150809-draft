@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.223 2003/10/19 22:30:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.224 2003/10/22 04:32:28 spyderous Exp $
+
+  22 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
+  New PATCH_VER 2.1.21. Fix 0127_all_4.3.0-makefile-fastbuild.patch. It was
+  broken since cleaning up patch 0119 but got missed since USE=debug is needed
+  to apply it. Thanks to Geoff Kassel <geoffk@itee.uq.edu.au> on bug #31718.
 
   19 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
   Added warning for patch 9132, since it's compile time. If one switches from
