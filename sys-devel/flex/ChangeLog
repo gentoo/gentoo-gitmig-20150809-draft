@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.27 2005/01/21 00:07:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.28 2005/02/15 06:21:40 kito Exp $
+
+  15 Feb 2005; Kito <kito@gentoo.org> flex-2.5.4a-r6.ebuild:
+  ~ppc-macos keyword
 
 *flex-2.5.4a-r6 (20 Jan 2005)
 
