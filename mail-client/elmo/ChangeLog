@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/elmo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/ChangeLog,v 1.1 2004/05/30 02:41:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/ChangeLog,v 1.2 2004/06/03 15:47:34 dholm Exp $
+
+  03 Jun 2004; David Holm <dholm@gentoo.org> elmo-0.6.ebuild:
+  Added to ~ppc.
 
 *elmo-0.5 (29 May 2004)
 
