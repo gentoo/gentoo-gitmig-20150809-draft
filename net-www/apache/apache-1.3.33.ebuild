@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33.ebuild,v 1.7 2004/10/30 11:41:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33.ebuild,v 1.8 2004/11/06 03:14:03 urilith Exp $
 
 # Gentoo ARCH teams
 #
@@ -25,6 +25,7 @@ SRC_URI="http://www.apache.org/dist/httpd/apache_${PV}.tar.gz
 	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}.tar.gz
 	http://dev.gentoo.org/~stuart/apache/apache-patches-1.3.33.tar.bz2"
 
+
 # The mod_ssl archive is only for providing the EAPI patch in here.
 # You should install the net-www/mod_ssl package for the actual DSO.
 
@@ -34,9 +35,9 @@ DEPEND="dev-lang/perl <=sys-libs/db-4.1
 	>=dev-libs/expat-1.95.2
 	>=sys-apps/sed-4
 	=sys-libs/db-1*
-	selinux? ( sec-policy/selinux-apache )
-	ssl? ( =net-www/mod_ssl-${mod_ssl_dep} )
-	!<net-www/mod_ssl-${mod_ssl_dep}"
+	selinux? ( sec-policy/selinux-apache )"
+
+PDEPEND="ssl? ( =net-www/mod_ssl-${mod_ssl_dep} )"
 
 LICENSE="Apache-2.0"
 SLOT="1"
