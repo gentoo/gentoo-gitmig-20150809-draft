@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.4.4.ebuild,v 1.3 2004/11/11 18:00:40 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.4.4.ebuild,v 1.4 2004/11/12 04:09:11 gustavoz Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha ~amd64 ~ia64"
+KEYWORDS="x86 ppc sparc ~alpha ~amd64 ~ia64"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.4.1
