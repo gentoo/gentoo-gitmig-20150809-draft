@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/cocoon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/ChangeLog,v 1.4 2004/10/20 05:20:06 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/ChangeLog,v 1.5 2004/11/29 08:58:54 eradicator Exp $
+
+*cocoon-2.1.5.1 (21 Oct 2004)
+
+  21 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +cocoon-2.1.5.1.ebuild:
+  Version bump.
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> cocoon-2.1.4.ebuild:
   Keywords ~amd64.
