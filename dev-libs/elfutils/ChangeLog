@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.41 2005/02/09 19:54:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.42 2005/02/17 17:27:12 corsair Exp $
+
+  17 Feb 2005; Markus Rothe <corsair@gentoo.org> elfutils-0.97.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *elfutils-0.97 (09 Feb 2005)
 
