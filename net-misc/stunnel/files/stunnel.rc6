@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/files/stunnel.rc6,v 1.3 2003/02/14 23:08:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/files/stunnel.rc6,v 1.4 2003/07/22 12:50:17 joker Exp $
 
 depend() {
 	need net
@@ -14,7 +14,7 @@ start() {
 }
 
 stop() {
-	ebegin "Stopping net-snmpd"
+	ebegin "Stopping stunnel"
 	start-stop-daemon --stop --quiet --exec /usr/sbin/stunnel -- /etc/stunnel/stunnel.conf
 	eend $?
 }
