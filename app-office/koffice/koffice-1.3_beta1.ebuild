@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3_beta1.ebuild,v 1.2 2003/05/19 13:02:52 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3_beta1.ebuild,v 1.3 2003/05/24 11:34:30 brain Exp $
 inherit kde-base flag-o-matic
 
 # TODO : mysql support
@@ -25,7 +25,8 @@ DEPEND="$DEPEND
 	>=media-libs/libart_lgpl-2.3.9
 	>=media-gfx/imagemagick-5.4.5
 	>=app-text/wv2-0.0.9
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	>=dev-libs/qsa-1.0_pre20030513"
 
 export LIBPYTHON="`python-config --libs`"
 export LIBPYTHON="${LIBPYTHON//-L \/usr\/lib\/python2.2\/config}"
