@@ -1,21 +1,31 @@
-MD5 4a1f1ea6abd92cf2e06e60e39616459a ChangeLog 6688
-MD5 20fe4291e581b225cb055f6751cefa40 libfwbuilder-2.0.1.ebuild 768
-MD5 9f4832acea13ed0646628fabe45db1cf libfwbuilder-1.0.2-r1.ebuild 1036
-MD5 de858e99fa93001e17493107a1376237 libfwbuilder-2.0.0.ebuild 823
-MD5 88909765e6882784c0f4ca31534f7f00 libfwbuilder-2.0.5.ebuild 768
-MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
-MD5 f60ab3583d0ba938926acb6d0b04e916 libfwbuilder-1.0.2-r2.ebuild 954
-MD5 fdf8c1a19b0e9597fd88bbc683388cd6 libfwbuilder-2.0.6.ebuild 761
-MD5 7e1bf89f3194dd95ff3c575d0725d935 libfwbuilder-2.0.4.ebuild 768
-MD5 f68c3458614347e77b47ee4fe9c25101 libfwbuilder-2.0.2.ebuild 768
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cb1e9519ece528465dc08ed61949c7fe libfwbuilder-2.0.3.ebuild 768
+MD5 9f4832acea13ed0646628fabe45db1cf libfwbuilder-1.0.2-r1.ebuild 1036
+MD5 88909765e6882784c0f4ca31534f7f00 libfwbuilder-2.0.5.ebuild 768
+MD5 de858e99fa93001e17493107a1376237 libfwbuilder-2.0.0.ebuild 823
+MD5 f68c3458614347e77b47ee4fe9c25101 libfwbuilder-2.0.2.ebuild 768
+MD5 7e1bf89f3194dd95ff3c575d0725d935 libfwbuilder-2.0.4.ebuild 768
+MD5 f60ab3583d0ba938926acb6d0b04e916 libfwbuilder-1.0.2-r2.ebuild 954
+MD5 265e1ba51a1363d573bd779e79475475 ChangeLog 6800
+MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
+MD5 8cb5de87d8bcb507ab6c746ff441dbb7 libfwbuilder-2.0.6.ebuild 763
+MD5 20fe4291e581b225cb055f6751cefa40 libfwbuilder-2.0.1.ebuild 768
+MD5 2cdda8f867cfe8664c4630fe62aa1099 files/digest-libfwbuilder-1.0.2-r1 72
+MD5 18d017187b228dd614d7ae00283f788a files/digest-libfwbuilder-1.0.2-r2 72
+MD5 bd7f345d52b044e87b5cea9d1017f4bf files/libfwbuilder-1.0.2-libxml2.patch 2166
 MD5 8b6d58e88deb3ce4ebb8d89a8a87f71e files/digest-libfwbuilder-2.0.0 70
+MD5 8c6e33308e525276f9495da9785c4d70 files/digest-libfwbuilder-2.0.1 70
+MD5 2b388fb3cdd3e977f419da2a7e114dfc files/digest-libfwbuilder-2.0.2 70
+MD5 efb9e2fed4147429a66984f38988e428 files/digest-libfwbuilder-2.0.3 70
 MD5 de96f81e32bb5833012f588f3b1c544a files/digest-libfwbuilder-2.0.4 70
 MD5 905ed5985178226c9c9b2d7fe56debd2 files/digest-libfwbuilder-2.0.5 70
 MD5 318eed1dc99e8153d2dfdfd9cca6923e files/digest-libfwbuilder-2.0.6 70
-MD5 efb9e2fed4147429a66984f38988e428 files/digest-libfwbuilder-2.0.3 70
-MD5 2b388fb3cdd3e977f419da2a7e114dfc files/digest-libfwbuilder-2.0.2 70
-MD5 2cdda8f867cfe8664c4630fe62aa1099 files/digest-libfwbuilder-1.0.2-r1 72
-MD5 bd7f345d52b044e87b5cea9d1017f4bf files/libfwbuilder-1.0.2-libxml2.patch 2166
-MD5 8c6e33308e525276f9495da9785c4d70 files/digest-libfwbuilder-2.0.1 70
-MD5 18d017187b228dd614d7ae00283f788a files/digest-libfwbuilder-1.0.2-r2 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCPErf06ebR+OMO78RArHWAKCI8tng6Zk1l10ZKniv39bDP2WPowCdE8Ib
+NA6Sf7pEfG6empCuFp333yk=
+=O9pW
+-----END PGP SIGNATURE-----
