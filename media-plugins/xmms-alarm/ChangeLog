@@ -1,11 +1,16 @@
 # ChangeLog for media-plugins/xmms-alarm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alarm/ChangeLog,v 1.4 2003/07/12 18:40:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alarm/ChangeLog,v 1.5 2003/09/15 15:03:43 vapier Exp $
+
+*xmms-alarm-0.3.3 (15 Sep 2003)
+
+  15 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*xmms-alarm-0.3.2 (25 Oct 2002)
 
   12 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xmms-alarm-0.3.2.ebuild:
   unmasked on x86, thanks to Magnade in #gentoo-dev
-
-*xmms-alarm-0.3.2 (25 Oct 2002)
 
   25 Oct 2002; Seemant Kulleen <seemant@gentoo.org> xmms-alarm-0.3.2.ebuild
   files/digest-xmms-alarm-0.3.2 ChangeLog xmms-alarm-0.2.2.ebuild
