@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.14 2004/06/29 17:36:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.15 2004/09/06 18:05:24 ciaranm Exp $
+
+inherit eutils
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -39,7 +41,7 @@ warning() {
 	ewarn "upgrade completes.  To obtain such a list of packages for your"
 	ewarn "system, you may use 'revdep-rebuild' from app-portage/gentoolkit."
 	ewarn
-	sleep 5
+	epause 5
 }
 
 pkg_setup() {
