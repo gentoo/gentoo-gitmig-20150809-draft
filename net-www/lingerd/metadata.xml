@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>apache</herd>
+  <maintainer>
+    <email>hollow@gentoo.org</email>
+    <name>Benedikt Boehm</name>
+  </maintainer>
+  <longdescription>
+    Lingerd is a daemon (service) designed to take over the job of properly
+    closing network connections from an http server like Apache.
+  </longdescription>
+</pkgmetadata>
