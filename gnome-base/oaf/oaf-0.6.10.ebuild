@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.10.ebuild,v 1.9 2003/07/06 11:04:35 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.10.ebuild,v 1.10 2003/07/20 00:29:22 tester Exp $
 
 IUSE="nls"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 RDEPEND="virtual/glibc
 	>=dev-libs/popt-1.5

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.5 2003/07/06 11:07:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.6 2003/07/20 00:29:22 tester Exp $
 
 IUSE="ssl nls"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 RDEPEND="( =gnome-base/gconf-1.0* )	
 	>=gnome-base/gnome-libs-1.4.1.2
