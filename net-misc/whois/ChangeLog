@@ -1,11 +1,14 @@
 # ChangeLog for net-misc/whois
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.17 2003/05/24 14:23:50 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.18 2003/06/20 01:09:53 zwelch Exp $
 
   24 May 2003; Christian Birchinger <joker@gentoo.org> whois-4.6.5.ebuild:
   Added sparc stable keyword
 
 *whois-4.6.5 (09 May 2003)
+
+  19 Jun 2003; Zach Welch <zwelch@gentoo.org whois-4.6.5.ebuild:
+  add arm keyword
 
   21 May 2003; Martin Holzer <mholzer@gentoo.org> whois-4.6.5.ebuild:
   Marked stable on x86.
