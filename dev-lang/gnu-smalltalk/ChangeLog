@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/gnu-smalltalk
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.3 2004/08/18 21:58:15 mkennedy Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.4 2005/03/31 05:27:19 mkennedy Exp $
+
+*gnu-smalltalk-2.1.10 (31 Mar 2005)
+
+  31 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/2.1.10-gst-image-temp.patch, metadata.xml,
+  +gnu-smalltalk-2.1.10.ebuild:
+  New upstream version; Resolves Bug #78880; Update contributed by Luis F.
+  Araujo <araujo@gentoo.org>; Created Luis maintainer entry to metadata.xml.
 
   18 Aug 2004; <mkennedy@gentoo.org> gnu-smalltalk-2.1.8.ebuild:
   Fixed problem with configuration parameters when tcltk is not in USE

@@ -5,6 +5,9 @@
   <maintainer>
     <email>mkennedy@gentoo.org</email>
   </maintainer>
+  <maintainer>
+    <email>araujo@gentoo.org</email>
+  </maintainer>
   <longdescription>
     GNU Smalltalk is a free implementation of the Smalltalk-80
     language which runs on most versions on Unix and, in general,
