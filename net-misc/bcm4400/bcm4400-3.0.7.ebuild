@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/bcm4400-3.0.7.ebuild,v 1.5 2004/07/15 02:39:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/bcm4400-3.0.7.ebuild,v 1.6 2005/01/01 22:39:36 genstef Exp $
 
 SRC_URI="http://www.broadcom.com/docs/driver_download/440x/linux-3.0.7.zip"
 DESCRIPTION="Driver for the bcm4400 10/100 network card (in the form of kernel modules)."

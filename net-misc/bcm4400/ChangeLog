@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/bcm4400
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.9 2004/06/24 23:36:09 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.10 2005/01/01 22:39:36 genstef Exp $
+
+*bcm4400-3.0.8 (01 Jan 2005)
+
+  01 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  -files/bcm4400-1.0.1-gcc33-fix.patch, -bcm4400-1.0.1.ebuild,
+  +bcm4400-3.0.8.ebuild:
+  Version Bump thanks to John Dangler <jdangler@atlantic.net> for reporting in
+  bug 74250 and to Philip Kovacs <kovacsp3@comcast.net> for ebuild/testing.
+  Cleaned out old version, added metadata.xml with kernel herd.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> bcm4400-1.0.1.ebuild:
   Add inherit eutils
