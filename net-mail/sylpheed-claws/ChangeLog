@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.2 2002/02/22 15:24:26 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.3 2002/03/12 12:48:50 seemant Exp $
+
+*sylpheed-claws-0.7.4 ( 12 Mar 2002 )
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org>  Simple copy of 0.7.4 ebuild
+  but with the additional checks for nls in USE.
 
 *sylpheed-claws-0.7.2 ( 22 Feb 2002 )
 
