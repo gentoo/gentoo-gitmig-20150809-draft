@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.5-r1.ebuild,v 1.1 2003/05/10 06:57:17 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.5-r1.ebuild,v 1.2 2003/05/12 22:32:01 george Exp $
 
 IUSE=""
 
@@ -51,4 +51,12 @@ src_install() {
 pkg_preinst() {
 	# Remove the old plugins dir
 	pkg_mv_plugins /opt/${MY_PN}/plugins
+}
+
+pkg_postinst() {
+	einfo ""
+	einfo "Please note!!!"
+	einfo "phoenix-bin has been moved under /opt/phoenix/,"
+	einfo "to make it FHS compliant!"
+	einfo ""
 }
