@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmtimer
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.5 2003/03/27 05:28:19 vladimir Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.6 2004/01/11 01:32:31 port001 Exp $
+
+  11 Jan 2004; Ian Leitch <port001@gentoo.org> wmtimer-2.4.ebuild:
+  Fixed incorrect negation of directories (#37647), added IUSE, split x11 and
+  gtk into RDEPEND
 
 * wmtimer-2.4 (12 August 2002)
 
