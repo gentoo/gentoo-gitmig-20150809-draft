@@ -1,6 +1,12 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.70 2004/04/11 19:35:13 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.71 2004/04/18 01:43:06 khai Exp $
+
+*abiword-2.0.6 (17 Apr 2004)
+
+  17 Apr 2004; <khai@gentoo.org> abiword-2.0.5.ebuild, abiword-2.0.6.ebuild:
+  Added the gnome-vfs fix again because it might still break with some specific
+  setups.
 
   11 Apr 2004; <khai@gentoo.org> :
   Bug fix release, should deprecate the amd64 patch.

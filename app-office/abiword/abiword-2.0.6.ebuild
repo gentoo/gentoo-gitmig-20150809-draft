@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.6.ebuild,v 1.1 2004/04/11 18:07:51 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.6.ebuild,v 1.2 2004/04/18 01:43:06 khai Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/${P}/abi
 DESCRIPTION="Fully featured yet light and fast cross platform word processor"
 HOMEPAGE="http://www.abisource.com"
 
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
 LICENSE="GPL-2"
@@ -41,17 +41,23 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-		econf \
-		`use_enable gnome` \
-		`use_with xml2 libxml2` \
-		`use_enable spell enchant` \
-		`use_enable debug` \
-		--enable-bidi \
-		--enable-threads \
-		--without-ImageMagick \
-		--disable-scripting \
-		--disable-gucharmap \
-		--with-sys-wv || die
+	econf \
+	`use_enable gnome` \
+	`use_with xml2 libxml2` \
+	`use_enable spell enchant` \
+	`use_enable debug` \
+	--enable-bidi \
+	--enable-threads \
+	--without-ImageMagick \
+	--disable-scripting \
+	--disable-gucharmap \
+	--with-sys-wv || die
+
+	# this is a hack since I don't want to go hack in the gnome-vfs headerfiles.
+	# The issue is about gnome-vfs containing "long long" which makes gcc 3.3.1 balk
+	cp configure configure.old
+	cat configure.old |sed s:-pedantic::g >configure
+	rm -f configure.old
 
 	emake all-recursive || die
 
