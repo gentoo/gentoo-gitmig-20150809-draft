@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kmobiletools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kmobiletools/ChangeLog,v 1.5 2005/03/05 10:59:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kmobiletools/ChangeLog,v 1.6 2005/04/03 08:30:28 centic Exp $
+
+*kmobiletools-0.4.3.1 (01 Apr 2005)
+
+  01 Apr 2005; Dominik Stadler <centic@gentoo.org>
+  +kmobiletools-0.4.3.1.ebuild:
+  Add new Version 0.4.3.1, fixes Bug 86839
 
   05 Mar 2005; Joseph Jezak <josejx@gentoo.org> kmobiletools-0.4.2.ebuild:
   Marked ~ppc for bug #83731.
