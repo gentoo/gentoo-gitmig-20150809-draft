@@ -1,35 +1,21 @@
 #!/sbin/runscript
-
-PREFIX="/usr"
-PGDATA="/var/lib/postgresql/data"
-PGUSER="postgres"
-PATH="/bin:/usr/bin"
-DAEMON="$PREFIX/bin/pg_ctl"
-
-opts="start stop restart status"
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/dev-db/mysql/files/mysql.rc6,v 1.1 2002/01/06 00:53:24 woodchip Exp
 
 depend() {
-    need net
+	need net
 }
 
-start() {
-    ebegin "Starting PostgreSQL"
-    su - $PGUSER -c "$DAEMON start -D '$PGDATA' -s -o -i" | logger 1>&2 &
-    eend $?
+start()	{
+	ebegin "Starting postgres"
+	start-stop-daemon  --start --quiet --background --chuid postgres --exec \
+		/usr/bin/postmaster -- -D/var/lib/postgresql -N 1024 -B 2048
+	eend $?
 }
 
-stop() {
-    ebegin "Stopping PostgreSQL"
-    su - $PGUSER -c "$DAEMON stop -D '$PGDATA' -s -m fast"
-    eend $?
-}
-
-restart() {
-    ebegin "Restarting PostgreSQL"
-    su - $PGUSER -c "$DAEMON restart -D '$PGDATA' -s -m fast" &
-    eend $?
-}
-
-status() {
-    su - $PGUSER -c "$DAEMON status -D '$PGDATA'"
+stop ()	{
+	ebegin "Stopping postgres"
+	start-stop-daemon --stop --quiet --pidfile=/var/lib/postgresql/postmaster.pid
+	eend $?
 }
