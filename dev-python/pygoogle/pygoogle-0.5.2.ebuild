@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $ Header: $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoogle/pygoogle-0.5.2.ebuild,v 1.2 2003/03/02 18:15:43 liquidx Exp $
 
 inherit distutils
 
