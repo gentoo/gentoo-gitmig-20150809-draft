@@ -1,0 +1,112 @@
+diff -urN devtodo-0.1.18.orig/acconfig.h devtodo-0.1.18/acconfig.h
+--- devtodo-0.1.18.orig/acconfig.h	2004-02-09 09:10:37.000000000 -0500
++++ devtodo-0.1.18/acconfig.h	1969-12-31 19:00:00.000000000 -0500
+@@ -1,6 +0,0 @@
+-/* System configuration directory */
+-#undef SYSCONFDIR
+-
+-/* Use termcap to get terminal width */
+-#undef USETERMCAP
+-@TOP@
+diff -urN devtodo-0.1.18.orig/configure.in devtodo-0.1.18/configure.in
+--- devtodo-0.1.18.orig/configure.in	2004-08-29 22:09:57.000000000 -0400
++++ devtodo-0.1.18/configure.in	2004-11-18 02:07:54.106856224 -0500
+@@ -25,7 +25,7 @@
+ # Don't use termcap to obtain window size
+ AC_ARG_WITH(termcap, [  --without-termcap       don't use termcap to obtain terminal width])
+ if test "${with_termcap}_" = _ -o "${with_termcap}_" = yes; then
+-	AC_DEFINE(USETERMCAP)
++	AC_DEFINE(USETERMCAP, [], [Use termcap?])
+ fi
+ 
+ # Check for various headers and functions - although I'm not doing anything 
+@@ -79,7 +79,7 @@
+ AC_SUBST(READLINE_LIBS)
+ 
+ SYSCONFDIR="`eval echo $sysconfdir`"
+-AC_DEFINE_UNQUOTED(SYSCONFDIR, "$SYSCONFDIR")
++AC_DEFINE_UNQUOTED(SYSCONFDIR, "$SYSCONFDIR", [System configuration directory])
+ AC_SUBST(SYSCONFDIR)
+ 
+ AC_CHECK_PROG(HAVE_CRASH_CONFIG, crash-config, yes)
+diff -urN devtodo-0.1.18.orig/doc/devtodo.1.in devtodo-0.1.18/doc/devtodo.1.in
+--- devtodo-0.1.18.orig/doc/devtodo.1.in	2004-08-29 06:02:00.000000000 -0400
++++ devtodo-0.1.18/doc/devtodo.1.in	2004-11-18 02:07:38.040298712 -0500
+@@ -20,9 +20,6 @@
+ .TP 
+ \fBtdd \fI<indices>\fP\fP
+ Mark the specified items as being done.
+-.TP 
+-\fBtdl [\-g \fI<index>\fP] \fI<database>\fP\fP
+-Link the specified devtodo database into the current one, optionally grafting it as a child of the specified index.
+ .SH "DESCRIPTION"
+ .LP 
+ \fBtodo\fP is a program aimed specifically at programmers (but usable by anybody at the terminal) to aid in day\-to\-day development.
+@@ -372,6 +369,10 @@
+ .TP 
+ \fB~/.todorc\fR
+ User-specific options are specified in this file. Please refer to the section \fBTODORC\fR for more information.
++.SH "BUGS"
++.LP
++Because of a conflict with app-misc/tdl, the tdl symbolic link and the tdl manual page have been removed.  
++See \fIhttp://bugs.gentoo.org/show_bug.cgi?id=55371\fR for more information.
+ .SH "AUTHORS"
+ .LP 
+ Alec Thomas \fI<alec@swapoff.org>\fR
+diff -urN devtodo-0.1.18.orig/doc/Makefile.am devtodo-0.1.18/doc/Makefile.am
+--- devtodo-0.1.18.orig/doc/Makefile.am	2004-02-09 09:10:37.000000000 -0500
++++ devtodo-0.1.18/doc/Makefile.am	2004-11-18 02:07:38.039298864 -0500
+@@ -1,5 +1,5 @@
+ man_MANS=devtodo.1
+-manlinks=tda tdr tdd tde tdl todo
++manlinks=tda tdr tdd tde todo
+ 
+ install-data-local:
+ 	mkdir -p $(DESTDIR)$(mandir)/man1
+diff -urN devtodo-0.1.18.orig/src/Makefile.am devtodo-0.1.18/src/Makefile.am
+--- devtodo-0.1.18.orig/src/Makefile.am	2004-08-29 06:08:26.000000000 -0400
++++ devtodo-0.1.18/src/Makefile.am	2004-11-18 02:07:46.086075568 -0500
+@@ -1,18 +1,12 @@
+ bin_PROGRAMS=devtodo
+ devtodo_SOURCES=Todo.cc Todo.h TodoDB.cc TodoDB.h support.cc support.h \
+ 	main.cc todoterm.cc todoterm.h Loaders.cc Loaders.h todorl.h
+-binlinks=tda tdr tdd tdl tde todo
++binlinks=tda tdr tdd tde todo
+ 	
+ devtodo_LDADD=../util/libutil.la
+ INCLUDES=-I../util
+ LIBS=@READLINE_LIBS@
+ 
+-if DEBUG
+-CPPFLAGS=-g
+-else
+-CPPFLAGS+=-DNDEBUG
+-endif
+-
+ install-exec-hook:
+ 	cd $(DESTDIR)$(bindir); for i in $(binlinks); do $(LN_S) -f devtodo $$i; done
+ 
+diff -urN devtodo-0.1.18.orig/src/TodoDB.cc devtodo-0.1.18/src/TodoDB.cc
+--- devtodo-0.1.18.orig/src/TodoDB.cc	2004-02-09 09:10:37.000000000 -0500
++++ devtodo-0.1.18/src/TodoDB.cc	2004-11-18 02:07:38.042298408 -0500
+@@ -750,7 +750,6 @@
+ 			if (options.verbose > 1)
+ 				cout << info << "todo: permanently removing item '" << (*j) << "'" << normal << endl;
+ 			erase(todo, *j);
+-			t->db->setDirty(true);
+ 		} else
+ 			notfound.push_back(*j);
+ 	}
+@@ -949,7 +948,11 @@
+ 	if (out.bad()) 
+ 		throw exception("couldn't open TODO for generation");
+ 
+-	if (titleText != "") wraptext(out, titleText, 0, options.columns);
++	if (titleText != "") {
++	    wraptext(out, titleText, 0, options.columns);
++	    out << endl << endl;
++	}
++
+ 	if (options.verbose > 1)
+ 		cout << "todo: generating using format '" << options.format["verbose-generated"] << "'" << endl;
+ 	filterView();
