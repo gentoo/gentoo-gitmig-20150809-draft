@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.7-r4.ebuild,v 1.1 2004/12/03 21:39:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.7-r4.ebuild,v 1.2 2004/12/04 06:55:09 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -30,7 +30,7 @@ src_compile() {
 
 src_install() {
 	newbin ${FILESDIR}/${PN}-${PV} ${PN} || die "install gcc-config"
-	dosed "s:PORTAGE-VERSION:${PV}:" /usr/bin/${PN}
+	dosed "s:PORTAGE-VERSION:${PVR}:" /usr/bin/${PN}
 
 	exeinto /usr/lib/gcc-config
 	doexe wrapper || die "install wrapper"
