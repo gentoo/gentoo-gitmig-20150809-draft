@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.3 2004/06/02 02:31:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.4 2004/06/21 21:34:52 mr_bones_ Exp $
 
 inherit flag-o-matic libtool
 
@@ -80,7 +80,7 @@ src_compile() {
 
 src_install() {
 	einstall pkgdatadir=${D}/usr/share/gnucash || die "install failed"
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog HACKING NEWS README* TODO
+	dodoc ABOUT-NLS AUTHORS ChangeLog HACKING NEWS README* TODO
 	dodoc docs/README*
 
 	cd ${WORKDIR}/${PN}-docs-${DOC_VER}
