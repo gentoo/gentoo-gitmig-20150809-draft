@@ -1,0 +1,407 @@
+# ChangeLog for net-www/epiphany
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.1 2005/03/23 14:12:18 seemant Exp $
+
+*epiphany-1.4.5 (23 Mar 2005)
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/epiphany-1.2.9-mozilla-1.7.3.patch,
+  +files/epiphany-1.3.4-fix_includes.patch,
+  +files/epiphany-1.4.6-fix_includes.patch,
+  +files/epiphany-1.4.6-moz-nsiurip.patch,
+  +files/epiphany-1.5.5-fix_includes.patch,
+  +files/epiphany-1.6.0-fix_includes.patch,
+  +files/epiphany-1.6.0-view_source.patch,
+  +files/epiphany-1.6.0-wallet_fix.patch,
+  +files/epiphany-1.6.0-wallet_password.patch, +metadata.xml,
+  +epiphany-1.2.9-r1.ebuild, +epiphany-1.2.10.ebuild,
+  +epiphany-1.4.4.ebuild, +epiphany-1.4.5.ebuild, +epiphany-1.4.6.ebuild,
+  +epiphany-1.4.7.ebuild, +epiphany-1.4.8.ebuild, +epiphany-1.6.0.ebuild,
+  +epiphany-1.6.0-r1.ebuild, +epiphany-1.6.0-r2.ebuild:
+  Moved from net-www/epiphany to www-client/epiphany.
+
+  21 Mar 2005; Guy Martin <gmsoft@gentoo.org> epiphany-1.4.6.ebuild,
+  epiphany-1.4.8.ebuild:
+  Stable on hppa.
+
+*epiphany-1.6.0-r2 (15 Mar 2005)
+
+  15 Mar 2005; Joe McCann <joem@gentoo.org>
+  +files/epiphany-1.6.0-view_source.patch, +epiphany-1.6.0-r2.ebuild:
+  patch from epiphany cvs to fix view page source. Thanks to the tracking in
+  but 85337
+
+*epiphany-1.6.0-r1 (12 Mar 2005)
+
+  12 Mar 2005; Joe McCann <joem@gentoo.org>
+  +files/epiphany-1.6.0-fix_includes.patch,
+  +files/epiphany-1.6.0-wallet_fix.patch,
+  +files/epiphany-1.6.0-wallet_password.patch, +epiphany-1.6.0-r1.ebuild,
+  epiphany-1.6.0.ebuild:
+  Add patch from cvs to fix personaldata/passwords.Also add patch from mailing
+  list to fix problem with mozilla-1.7 wallet code. Remove bogus deps as well
+
+*epiphany-1.6.0 (08 Mar 2005)
+
+  08 Mar 2005; Joe McCann <joem@gentoo.org>
+  +files/epiphany-1.5.5-fix_includes.patch, +epiphany-1.6.0.ebuild:
+  gnome-2.10 release
+
+*epiphany-1.4.8 (17 Feb 2005)
+
+  17 Feb 2005; Mike Gardiner <obz@gentoo.org> +epiphany-1.4.8.ebuild:
+  New version
+
+  08 Jan 2005; Tom Martin <slarti@gentoo.org> epiphany-1.4.6.ebuild:
+  Stable on amd64, resolving bug 77102.
+
+  24 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> epiphany-1.4.6.ebuild:
+  Stable on alpha.
+
+  21 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> epiphany-1.4.6.ebuild:
+  Stable on sparc
+
+*epiphany-1.4.7 (22 Dec 2004)
+
+  22 Dec 2004; Mike Gardiner <obz@gentoo.org> +epiphany-1.4.7.ebuild:
+  New version, still requires the nsiurip patch
+
+  20 Dec 2004; Mike Gardiner <obz@gentoo.org>
+  +files/epiphany-1.4.6-moz-nsiurip.patch, epiphany-1.4.6.ebuild:
+  Added a patch to configure, and configure.in to correct the includes for the
+  GlobalHistory tests - see bug #74972
+
+  19 Dec 2004; Mike Gardiner <obz@gentoo.org> epiphany-1.4.6.ebuild:
+  Keyworded x86 and ppc for GNOME 2.8.1
+
+  11 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> epiphany-1.4.5.ebuild:
+  Stable on alpha.
+
+  06 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> epiphany-1.4.5.ebuild:
+  Stable on sparc
+
+*epiphany-1.4.6 (06 Dec 2004)
+
+  06 Dec 2004; Mike Gardiner <obz@gentoo.org>
+  +files/epiphany-1.4.6-fix_includes.patch, +epiphany-1.4.6.ebuild:
+  New version
+
+*epiphany-1.2.10 (22 Nov 2004)
+
+  22 Nov 2004; Mike Gardiner <obz@gentoo.org> +epiphany-1.2.10.ebuild,
+  +epiphany-1.4.5.ebuild:
+  New versions, 1.4.5 was requested in bug #72034
+
+  13 Nov 2004; <plasmaroo@gentoo.org> epiphany-1.2.9-r1.ebuild:
+  Marking stable on IA64.
+
+  12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> epiphany-1.4.4.ebuild:
+  Stable on sparc
+
+  11 Nov 2004; Mike Gardiner <obz@gentoo.org> epiphany-1.4.4.ebuild:
+  Keyworded ppc for GNOME 2.8
+
+*epiphany-1.4.4 (17 Oct 2004)
+
+  17 Oct 2004; Alastair Tse <liquidx@gentoo.org> +epiphany-1.4.4.ebuild:
+  version bump
+
+  20 Sep 2004; Malcolm Lashley <malc@gentoo.org> epiphany-1.2.9-r1.ebuild:
+  Stable on amd64 for security bug
+
+  19 Sep 2004; <kloeri@gentoo.org> epiphany-1.2.9-r1.ebuild:
+  Stable on alpha, bug 63996.
+
+  17 Sep 2004; <SeJo@gentoo.org> epiphany-1.2.9-r1.ebuild:
+  stable ppc bug:63996
+
+  16 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  epiphany-1.2.9-r1.ebuild:
+  Stable on sparc wrt #63996
+
+*epiphany-1.4.0 (16 Sep 2004)
+*epiphany-1.2.9-r1 (16 Sep 2004)
+
+  16 Sep 2004; foser <foser@gentoo.org> epiphany-1.2.9-r1.ebuild :
+  1.4.0 : gnome 2.8 release, remove deprecated gnome USE
+  Add patch to fix the buildtime include paths
+  1.2.9-r1,1.4.0 : Update mozilla dep to 1.7.3, security fix (#63996)
+  Add fix to make epi build with moz 1.7.3
+
+*epiphany-1.2.9 (14 Sep 2004)
+
+  14 Sep 2004; Mike Gardiner <obz@gentoo.org> +epiphany-1.2.9.ebuild:
+  New version, last updates for a GNOME 2.6 release.
+
+  23 Aug 2004; <spider@gentoo.org> :
+  Versionbump, patch unnecessary, this fixes some mozilla issues to be more
+  futureproof
+
+  23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.2.7-r1.ebuild:
+  Stable on alpha.
+
+  18 Aug 2004; Travis Tilley <lv@gentoo.org> epiphany-1.2.7-r1.ebuild:
+  stable on amd64
+
+*epiphany-1.2.7-r1 (18 Aug 2004)
+
+  18 Aug 2004; foser <foser@gentoo.org> epiphany-1.2.7-r1.ebuild :
+  Bump, fix moz dep to 1.7.2 because of security issues (#59419)
+  Marked stable on x86 & sparc
+
+*epiphany-1.2.6-r1 (17 Aug 2004)
+
+  17 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  +files/epiphany-1.2.6-moz-1.7.2.patch, +epiphany-1.2.6-r1.ebuild:
+  Fix for epiphany not compiling against stable Mozilla; fix for bug # 60501;
+  thanks to Lorenzo Hernández García-Hierro <lorenzo@gnu.org> for the basis of
+  the patch
+
+  09 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> epiphany-1.2.7.ebuild:
+  Stable on sparc wrt #59419
+
+  05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> epiphany-1.2.6.ebuild:
+  Stable on sparc
+
+  03 Aug 2004; <spider@gentoo.org> epiphany-1.2.6.ebuild,
+  epiphany-1.2.7.ebuild:
+  Fixes for glib version dependency. Thanks to Andrew Cowie who pointed it out.
+
+*epiphany-1.2.7 (01 Aug 2004)
+
+  01 Aug 2004; <spider@gentoo.org> +files/epiphany-1.2.7-nautilus_view.patch,
+  +epiphany-1.2.7.ebuild:
+  New upstream version, adds a patch for the nautilus view that went into CVS
+
+  26 Jul 2004; Mike Gardiner <obz@gentoo.org> epiphany-1.2.6.ebuild:
+  Marked 1.2.6 x86 as mozilla 1.7 has moved to x86. See bug #55005 or brad[] for
+  more information
+
+  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.2.2.ebuild:
+  Stable on alpha.
+
+*epiphany-1.2.6 (19 Jun 2004)
+
+  19 Jun 2004; Yi Qiang <khai@gentoo.org> :
+  Version bump, fixes compilation with latest mozilla trunks
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> :
+  Marked stable on amd64.
+
+  20 May 2004; L. Boshell <leonardop@gentoo.org> epiphany-1.2.5.ebuild,
+  files/epiphany-1.2.5-gcc2_fix.patch:
+  Added patch to fix compilation under gcc-2.
+
+*epiphany-1.2.5 (04 May 2004)
+
+  04 May 2004; foser <foser@gentoo.org> epiphany-1.2.5.ebuild :
+  New release
+
+*epiphany-1.2.3 (20 Apr 2004)
+
+  20 Apr 2004; foser <foser@gentoo.org> epiphany-1.2.3.ebuild :
+  New release
+
+  19 Apr 2004; <khai@gentoo.org> epiphany-1.0.3.ebuild, epiphany-1.0.7.ebuild,
+  epiphany-1.2.2.ebuild:
+  Fixed homepage url, closes #48166
+
+  17 Apr 2004; Travis Tilley <lv@gentoo.org> epiphany-1.0.7.ebuild:
+  stable on amd64
+
+*epiphany-1.2.2 (01 Apr 2004)
+
+  01 Apr 2004; foser <foser@gentoo.org> epiphany-1.2.2.ebuild
+  Gnome 2.6 final final
+
+*epiphany-1.2.1 (22 Mar 2004)
+
+  22 Mar 2004; foser <foser@gentoo.org> epiphany-1.2.1.ebuild
+  Gnome 2.6 final
+
+*epiphany-1.2.0 (20 Mar 2004)
+
+  20 Mar 2004; foser <foser@gentoo.org> epiphany-1.2.0.ebuild
+  Gnome 2.6 commit
+
+  09 Mar 2004; <agriffis@gentoo.org> epiphany-1.0.7.ebuild:
+  stable on alpha and ia64
+
+  10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> epiphany-1.0.7.ebuild:
+  set ppc in keywords
+
+  09 Feb 2004; <gustavoz@gentoo.org> epiphany-1.0.7.ebuild:
+  stable on sparc
+
+  07 Feb 2004; <spider@gentoo.org> epiphany-1.0.7.ebuild:
+  remove dep on XML::Parser, and add a hard dep on intltool >= 0.29. This build
+  has an RDEPEND on XML::Parser instead.
+
+  06 Feb 2004; <spider@gentoo.org> epiphany-1.0.7.ebuild:
+  Stable x86 to match mozilla.
+
+  29 Jan 2004; Aron Griffis <agriffis@gentoo.org> epiphany-1.0.6.ebuild:
+  stable on alpha and ia64
+
+*epiphany-1.0.7 (18 Jan 2004)
+
+  18 Jan 2004; <spider@gentoo.org> epiphany-1.0.7.ebuild:
+  Versionbump, now works with moz 1.6.  
+  Added XML-Parser dep due to another configure check for it. (darn intltool)
+
+  17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> epiphany-1.0.6.ebuild:
+  set ppc in keywords
+
+  09 Jan 2004; <gustavoz@gentoo.org> epiphany-1.0.6.ebuild:
+  marked stable on sparc
+
+  14 Dec 2003; <spider@gentoo.org> epiphany-1.0.6.ebuild:
+  KEYWORDS x86
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> epiphany-1.0.4.ebuild:
+  Stable on ia64
+
+  12 Nov 2003; Todd Sunderlin <todd@gentoo.org> epiphany-1.0.4.ebuild:
+  changed to stable on sparc
+
+*epiphany-1.0.6 (11 Nov 2003)
+
+  11 Nov 2003; foser <foser@gentoo.org> epiphany-1.0.6.ebuild :
+  New version
+
+  08 Nov 2003; Todd Sunderlin <todd@gentoo.org> epiphany-1.0.ebuild:
+  added sparc keyword
+
+*epiphany-1.0.4 (23 Oct 2003)
+
+  23 Oct 2003; foser <foser@gentoo.org> epiphany-1.0.4.ebuild :
+  New version
+
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> epiphany-1.0.ebuild:
+  set ppc in keywords
+
+  20 Oct 2003; Aron Griffis <agriffis@gentoo.org> epiphany-1.0.2.ebuild:
+  Stable on alpha
+
+*epiphany-1.0.3 (17 Oct 2003)
+
+  17 Oct 2003; <spider@gentoo.org> epiphany-1.0.3.ebuild:
+  Versionbump to make it work with moz 1.5
+
+*epiphany-1.0.2 (14 Oct 2003)
+
+  14 Oct 2003; Mike Gardiner <obz@gentoo.org> epiphany-1.0.2.ebuild:
+  New version, this includes the patch to fix bug gnome bug #124042, 
+  so no need to patch in this version
+
+  07 Oct 2003; Alastair Tse <liquidx@gentoo.org> epiphany-1.0.1.ebuild,
+  files/epiphany-1.0.1-session_get_windows-session.patch:
+  added patch to fix --server issues
+
+  05 Oct 2003; Mike Gardiner <obz@gentoo.org> epiphany-1.0.ebuild:
+  Marked stable on x86
+
+  05 Oct 2003; L. Boshell <leonardop@gentoo.org> epiphany-1.0.ebuild:
+  Taking a different approach with the patch. Just disable -Werror by
+  default, since it brings up troubles that are gcc-2's fault anyway.
+  
+  04 Oct 2003; L. Boshell <leonardop@gentoo.org> epiphany-1.0.ebuild:
+  Added patch to make it compile under gcc-2. Thanks to Tristan Henderson
+  for the patch and contribution on bug #28686.
+
+*epiphany-1.0.1 (04 Oct 2003)
+
+  04 Oct 2003; foser <foser@gentoo.org> epiphany-1.0.1.ebuild :
+  New version
+
+  17 Sep 2003; Aron Griffis <agriffis@gentoo.org> epiphany-1.0.ebuild:
+  Add ~alpha
+
+*epiphany-1.0 (09 Sep 2003)
+
+  09 Sep 2003; Mike Gardiner <obz@gentoo.org> epiphany-1.0.ebuild:
+  New version, including nautilus view support
+
+*epiphany-0.9.3 (01 Sep 2003)
+
+  08 Sep 2003; foser <foser@gentoo.org> epiphany-0.9.3.ebuild :
+  Remove bonobo-activation dep (#28156), should be there trough libbonoboui
+
+  01 Sep 2003; foser <foser@gentoo.org> epiphany-0.9.3.ebuild :
+  New version, re-added sparc keyword.. got lost along the way
+
+  24 Aug 2003; Jason Wever <weeve@gentoo.org> epiphany-0.8.4.ebuild,
+  epiphany-0.9.1.ebuild:
+  Added ~sparc to keywords.
+
+*epiphany-0.9.1 (24 Aug 2003)
+
+  24 Aug 2003; foser <foser@gentoo.org> epiphany-0.9.1.ebuild :
+  New version, use mozdev for SRC_URI for now
+
+*epiphany-0.8.4 (12 Aug 2003)
+
+  12 Aug 2003; foser <foser@gentoo.org> epiphany-0.8.4.ebuild :
+  New version again
+
+*epiphany-0.8.3 (11 Aug 2003)
+
+  11 Aug 2003; foser <foser@gentoo.org> epiphany-0.8.3.ebuild :
+  New version, fixed moz dep, remove the Werror disabling stuff all the way
+
+*epiphany-0.8.2 (07 Aug 2003)
+
+  07 Aug 2003; foser <foser@gentoo.org> epiphany-0.8.2.ebuild :
+  new version
+  remove -Werror in a simpler way (thnx hanno & lqx in #22413)
+
+*epiphany-0.8.0 (16 Jul 2003)
+
+  27 Jul 2003; foser <foser@gentoo.org> epiphany-0.8.0.ebuild :
+  Fix mozilla dep to be moer forgiving
+  Remove -Werror to fix gcc2 build failures (#22413)
+
+  16 Jul 2003; Hanno Boeck <hanno@gentoo.org> epiphany-0.8.0.ebuild:
+  Version bump.
+
+*epiphany-0.7.3-r1 (10 Jul 2003)
+
+  10 Jul 2003; <spider@gentoo.org> epiphany-0.7.3-r1.ebuild:
+  this is a mozilla 1.4 compatible build. MAKEOPTS is limited due to paralell
+  build failures here
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> epiphany-0.7.0.ebuild,
+  epiphany-0.7.3.ebuild:
+  moved scrollkeeper to RDEPEND since we need it at postinst
+
+*epiphany-0.7.3 (29 Jun 2003)
+
+  29 Jun 2003; foser <foser@gentoo.org> epiphany-0.7.3.ebuild :
+  New version, add postinst info about changed gconf keys
+
+  09 Jun 2003; Luca Barbato <lu_zero@gentoo.org> epiphany-0.7.0.ebuild,
+  files/ppc_va_list.patch:
+  fix a ppc problem about copying va_list
+
+  07 Jun 2003; Alastair Tse <liquidx@gentoo.org> epiphany-0.7.0.ebuild:
+  cleanup and add debug eclass
+
+*epiphany-0.7.0 (07 Jun 2003)
+
+  07 Jun 2003; Alastair Tse <liquidx@gentoo.org> epiphany-0.7.0.ebuild:
+  new version.
+
+*epiphany-0.6.1 (19 May 2003)
+
+  19 May 2003; Hanno Boeck <hanno@gentoo.org> epiphany-0.6.1.ebuild:
+  Version bump.
+
+*epiphany-0.6.0 (04 May 2003)
+
+  04 May 2003; foser <foser@gentoo.org> epiphany-0.6.0.ebuild :
+  New version
+
+*epiphany-0.5.0 (14 Apr 2003)
+
+  14 Apr 2003; foser <foser@gentoo.org> epiphany-0.5.0.ebuild, ChangeLog :
+  Initial commit of this GNOME2 browser
