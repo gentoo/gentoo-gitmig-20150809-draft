@@ -1,0 +1,10 @@
+# ChangeLog for net-firewall/ipset
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.1 2005/03/10 09:56:57 robbat2 Exp $
+
+*ipset-2.1.0.20050119 (10 Mar 2005)
+
+  10 Mar 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +ipset-2.1.0.20050119.ebuild:
+  Initial commit, ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
