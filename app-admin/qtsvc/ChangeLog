@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/qtsvc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/ChangeLog,v 1.5 2004/03/29 23:18:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/ChangeLog,v 1.6 2004/04/15 23:21:51 centic Exp $
+
+*qtsvc-0.2 (16 Apr 2004)
+
+  16 Apr 2004; Dominik Stadler <centic@gentoo.org> +qtsvc-0.2.ebuild:
+  Version bump to 0.2, see Bug 21666
 
   29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> qtsvc-0.1-r1.ebuild:
   inherit eutils for epatch
