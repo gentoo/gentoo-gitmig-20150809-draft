@@ -1,12 +1,20 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.53 2004/03/28 15:36:20 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.54 2004/04/23 16:09:09 foser Exp $
+
+*gstreamer-0.8.1 (23 Apr 2004)
+
+  23 Apr 2004; foser <foser@gentoo.org> gstreamer-0.8.1.ebuild :
+  New release, fix removal of nonversioned binaries
 
   28 Mar 2004; Luca Barbato <lu_zero@gentoo.org> gstreamer-0.8.0.ebuild:
   Removed an unnecessary patch.
 
   23 Mar 2004; Martin Holzer <mholzer@gentoo.org> :
   fixing depend qa issue. see 45343.
+
+  23 Mar 2004; foser <foser@gentoo.org> gstreamer-0.8.0.ebuild :
+  Remove eclass functionality, we shouldn't use that here
 
 *gstreamer-0.8.0 (21 Mar 2004)
 

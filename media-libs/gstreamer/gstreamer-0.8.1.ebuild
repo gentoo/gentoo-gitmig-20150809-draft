@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.0.ebuild,v 1.3 2004/04/23 16:09:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.1.ebuild,v 1.1 2004/04/23 16:09:09 foser Exp $
 
 # FIXME : re-enable docs build
 inherit eutils flag-o-matic libtool gnome2
@@ -70,9 +70,8 @@ src_install() {
 
 	einstall || die
 
-	# remove the unversioned gst binaries
-	# or they will be owned by several slots
-
+	# remove the unversioned binaries gstreamer provide
+	# this is to prevent these binaries to be owned by several SLOTs
 	cd ${D}/usr/bin
 	for gst_bins in `ls *-${PV_MAJ_MIN}`
 	do
