@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/swftools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.4 2004/02/13 15:33:20 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.5 2004/02/21 19:50:41 rizzo Exp $
+
+  21 Feb 2004; Don Seiler <rizzo@gentoo.org>; swftools-0.5.0-r1.ebuild:
+  Correcting deps and avi2swf only works with specificed version
 
 *swftools-0.5.0-r1 (13 Feb 2004)
 
