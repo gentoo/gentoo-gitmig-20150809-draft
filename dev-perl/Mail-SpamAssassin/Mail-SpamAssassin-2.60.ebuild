@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.60.ebuild,v 1.3 2003/09/08 11:38:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.60.ebuild,v 1.4 2003/09/12 06:14:20 rajiv Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.spamassassin.org"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2 | Artistic"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
 
 DEPEND="dev-perl/Net-DNS
 	dev-perl/HTML-Parser
