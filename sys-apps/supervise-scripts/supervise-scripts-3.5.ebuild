@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/supervise-scripts-3.5.ebuild,v 1.10 2004/06/25 23:38:26 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/supervise-scripts-3.5.ebuild,v 1.11 2004/07/15 02:36:30 agriffis Exp $
 
 inherit fixheadtails
 DESCRIPTION="Starting and stopping daemontools managed services."
@@ -10,6 +10,7 @@ SRC_URI="http://untroubled.org/supervise-scripts/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ~ppc sparc alpha"
+IUSE=""
 
 RDEPEND=">=sys-apps/daemontools-0.70"
 DEPEND=">=sys-apps/daemontools-0.70

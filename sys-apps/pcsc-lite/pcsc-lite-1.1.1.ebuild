@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.1.1.ebuild,v 1.8 2004/06/24 22:21:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.1.1.ebuild,v 1.9 2004/07/15 02:24:11 agriffis Exp $
 
 inherit eutils
 
@@ -10,6 +10,7 @@ SRC_URI="http://www.linuxnet.com/middleware/files/${P}.tar.gz"
 
 LICENSE="as-is"
 KEYWORDS="x86 amd64"
+IUSE=""
 SLOT="0"
 
 DEPEND="sys-devel/make
