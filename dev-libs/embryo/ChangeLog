@@ -1,9 +1,6 @@
 # ChangeLog for dev-libs/embryo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/embryo/ChangeLog,v 1.4 2004/09/06 21:21:02 axxo Exp $
-
-  06 Sep 2004; Thomas Matthijs <axxo@gentoo.org> metadata.xml:
-  fixed broken xml in metadata.xml
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/embryo/ChangeLog,v 1.5 2004/09/14 22:57:07 vapier Exp $
 
 *eet-0.9.0.???????? (30 Mar 2004)
 
