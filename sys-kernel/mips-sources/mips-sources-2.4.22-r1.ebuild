@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r1.ebuild,v 1.1 2003/08/26 07:24:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r1.ebuild,v 1.2 2003/08/30 10:14:23 kumba Exp $
 
 
 ETYPE="sources"
@@ -31,6 +31,9 @@ src_unpack() {
 
 	# Update the vanilla sources with linux-mips CVS changes
 	cat ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff | patch -p1
+
+	# Patch the SGI WD scsi driver so the kernel can boot
+	cat ${FILESDIR}/mipscvs-${OKV}-${CVSDATE}-sgiwd-fix.patch | patch -p0
 
 	# Patch arch/mips/Makefile for gcc	
 	cat ${FILESDIR}/mipscvs-${OKV}-${CVSDATE}-makefile-fix.patch | patch -p0
