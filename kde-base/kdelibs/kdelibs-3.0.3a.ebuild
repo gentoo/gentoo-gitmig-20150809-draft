@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.3a.ebuild,v 1.4 2002/10/05 05:39:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.3a.ebuild,v 1.5 2002/10/27 11:16:57 danarmak Exp $
 
 IUSE="ssl cups ipv6 alsa"
 inherit kde kde.org
@@ -45,7 +45,8 @@ RDEPEND="$RDEPEND
 	dev-lang/python
 	>=sys-apps/portage-2.0.36" # for bug #7359
 
-myconf="$myconf --enable-final --with-distribution=Gentoo"
+set_enable_final
+myconf="$myconf --with-distribution=Gentoo"
 use ipv6	|| myconf="$myconf --with-ipv6-lookup=no"
 use ssl		&& myconf="$myconf --with-ssl-dir=/usr"		|| myconf="$myconf --without-ssl"
 use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"

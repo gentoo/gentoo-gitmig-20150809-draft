@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_beta2.ebuild,v 1.4 2002/10/16 19:10:17 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_beta2.ebuild,v 1.5 2002/10/27 11:16:57 danarmak Exp $
 
 IUSE="ssl cups ipv6 alsa"
 inherit kde kde.org 
@@ -44,7 +44,7 @@ RDEPEND="$RDEPEND
 	>=sys-apps/portage-2.0.36" # for #7359
 
 myconf="$myconf --with-distribution=Gentoo --enable-libfam --enable-dnotify"
-#myconf="$myconf --enable-final"
+#set_enable_final
 
 qtver-from-kdever ${PV}
 need-qt $selected_version
