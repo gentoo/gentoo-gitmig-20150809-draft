@@ -1,0 +1,11 @@
+--- plugins/opengl/openglapi.stub	2005-01-11 17:45:19.164377640 +0000
++++ plugins/opengl/openglapi.stub.new	2005-01-11 17:45:26.625243416 +0000
+@@ -144,7 +144,7 @@
+ {
+     return NULL;
+ }
+-};
++}
+ #endif //HAVE_GL_GLUT_H
+ ");
+ 

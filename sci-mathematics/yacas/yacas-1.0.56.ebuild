@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.56.ebuild,v 1.1 2004/12/28 15:19:17 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.0.56.ebuild,v 1.2 2005/01/14 09:12:36 phosphan Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${WORKDIR}/${P}.patch
+	epatch ${FILESDIR}/opengl-gcc3.4.patch
 }
 
 src_compile() {
