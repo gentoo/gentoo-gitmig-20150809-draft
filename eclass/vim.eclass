@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.81 2004/11/29 20:35:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.82 2004/12/11 21:42:38 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -74,7 +74,8 @@ else
 
 	# vim7 has some extra options. tcltk is working again, and mzscheme support
 	# has been added. netbeans now has its own USE flag, but it's only available
-	# under gvim (*not* kvim).
+	# under gvim (*not* kvim). We can also install a vimpager (this is in vim6
+	# as well, but the ebuilds don't handle it).
 	if [[ $(get_major_version ) -ge 7 ]] ; then
 		if [[ "${MY_PN}" != "vim-core" ]] ; then
 			IUSE="${IUSE} tcltk mzscheme"
@@ -89,6 +90,9 @@ else
 			IUSE="$IUSE netbeans"
 			DEPEND="$DEPEND   netbeans? ( dev-util/netbeans )"
 			RDEPEND="$RDEPEND netbeans? ( dev-util/netbeans )"
+		fi
+		if [[ "${MY_PN}" == "vim" ]] ; then
+			IUSE="$IUSE vim-pager"
 		fi
 	fi
 fi
@@ -462,6 +466,11 @@ src_install() {
 		ln -s vim ${D}/usr/bin/view && \
 		ln -s vim ${D}/usr/bin/rview \
 			|| die "/usr/bin symlinks failed"
+		if [[ $(get_major_version ) -ge 7 ]] ; then
+			use vim-pager && \
+					ln -s /usr/share/vim/vim${VIM_VERSION//./}/macros/less.sh \
+					${D}/usr/bin/vimpager
+		fi
 	fi
 }
 
