@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.9 2003/05/17 11:20:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.10 2003/05/17 11:23:16 mholzer Exp $
 
 *mtr-0.54 (17 May 2003)
 
@@ -30,12 +30,9 @@
   Submitted by Hannes Mehnert <hannes@mehnert.org>.
    
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
-  
   Added LICENSE, SLOT.
 
 *mtr-0.49 (15 Mar 2002)
 
   15 Mar 2002; Bruce A. Locke <blocke@shivan.org> mtr-0.49.ebuild :
-
   New version of mtr.  Removed older versions with security issues.
-
