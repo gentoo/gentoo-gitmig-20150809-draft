@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.18 2005/01/02 03:59:13 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.19 2005/01/02 07:20:48 langthang Exp $
+
+  01 Jan 2005; Tuan Van <langthang@gentoo.org> files/configure-db4.patch:
+  adjust patch for the newer version.
 
 *courier-authlib-0.52 (01 Jan 2005)
 
