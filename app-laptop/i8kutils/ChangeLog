@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/i8kutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.3 2004/06/24 21:58:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.4 2004/08/04 21:39:54 sekretarz Exp $
+
+*i8kutils-1.25 (04 Aug 2004)
+
+  04 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org> +i8kutils-1.25.ebuild:
+  Version bump, fixing SRC_URI
 
 *i8kutils-1.17 (08 Mar 2004)
 
