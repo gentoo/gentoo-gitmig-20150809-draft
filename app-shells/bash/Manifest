@@ -1,9 +1,10 @@
-MD5 9e0220e9201f376b804fb6b94490c3a8 ChangeLog 11955
+MD5 1c4ba48f99e8e73bf0143e2d019c2f88 ChangeLog 12208
 MD5 1c3d1b503b35b4719b1435d83b12a73e bash-2.05b-r11.ebuild 3742
 MD5 017417fc2c09cbaecfe3837baa3e0227 bash-2.05b-r9.ebuild 3531
 MD5 7f7feb247c305544c899366672599232 bash-3.0-r7.ebuild 4060
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 ded385d3c69da943b2f408c18b4c6c21 bash-3.0-r8.ebuild 3949
+MD5 761160a21f9a69be631b044d0be387e5 bash-3.0-r9.ebuild 4267
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 MD5 90ba92c981c1d26e45d88ecd23a1fbf5 files/bash-2.05b-multibyte-locale.patch 1897
 MD5 3b905c7c9341c9009bd68f14c047815e files/bash-2.05b-rbash.patch 804
@@ -14,8 +15,8 @@ MD5 4a3ebcb995491c2730d156b314cbab0b files/bash-3.0-etc-inputrc.patch 1223
 MD5 28c9d7407d5332c29dddb656a4a1f1ce files/bash-3.0-invisible.patch 705
 MD5 0392b634a7a02302d24ccc4a4b349423 files/bash-3.0-local-array.patch 275
 MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r9 461
-MD5 13a88fae79fed8f76999ec8fdca2f085 files/digest-bash-3.0-r8 976
 MD5 694b8b1e47e4743e78ee5f7515f76542 files/bash-3.0-posixtrap.patch 789
+MD5 13a88fae79fed8f76999ec8fdca2f085 files/digest-bash-3.0-r9 976
 MD5 96238e7d942d091ca71574ba7392e847 files/bash-3.0-array-stripping.patch 294
 MD5 a2845a2a194bba75c1875f4a1ad49344 files/bash30-014 698
 MD5 ca64aff9caa582e07e0b34ed87d60d80 files/bash-2.05b-jobs.patch 876
@@ -23,3 +24,5 @@ MD5 05f32594822720a84f58197c1535fc82 files/bash-3.0-jobs.patch 1064
 MD5 1fbe0324b1b5778d693d82cddcabeb9e files/digest-bash-3.0-r7 817
 MD5 3d73159ab671b57a3f488c044e1a1f47 files/bash-2.05b-setlocale.patch 694
 MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r11 461
+MD5 13a88fae79fed8f76999ec8fdca2f085 files/digest-bash-3.0-r8 976
+MD5 6bc03ea9b1de46a4789e8223f2224658 files/bash-3.0-read-builtin-pipe.patch 689
