@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.1.ebuild,v 1.4 2004/06/29 19:12:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.1.ebuild,v 1.5 2004/08/13 08:44:03 mr_bones_ Exp $
 
 DESCRIPTION="Various development tools for NeoEngine"
 HOMEPAGE="http://www.neoengine.org/"
@@ -17,13 +17,20 @@ DEPEND=">=dev-games/neoengine-${PV}
 S="${WORKDIR}/neoengine-${PV}/neotools"
 
 src_unpack() {
+	local i
+
 	unpack ${A}
 
-	cd ${S}
-	sed -i -e 's/BUILD_STATIC/BUILD_DYNAMIC/g' configure
-	for i in `find ${S} -name 'Makefile.in'`; do
-		sed -i -e 's/BUILD_STATIC/BUILD_DYNAMIC/g' ${i};
-		sed -i -e 's/_static//g' ${i};
+	cd "${S}"
+	sed -i \
+		-e 's/BUILD_STATIC/BUILD_DYNAMIC/g' configure \
+		|| die "sed configure failed"
+	for i in `find "${S}" -name Makefile.in`; do
+		sed -i \
+			-e 's/BUILD_STATIC/BUILD_DYNAMIC/g' \
+			-e 's/_static//g' \
+			${i} \
+			|| die "sed ${i} failed"
 	done
 }
 
