@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/jakarta-regexp-1.3.ebuild,v 1.2 2005/04/02 18:07:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/jakarta-regexp-1.3-r1.ebuild,v 1.1 2005/04/04 13:36:59 axxo Exp $
 
 inherit java-pkg
 
