@@ -497,3 +497,4 @@ move sys-apps/reiserfsprogs sys-fs/reiserfsprogs
 move sys-apps/udftools sys-fs/udftools
 move sys-apps/xfsdump sys-fs/xfsdump
 move sys-apps/xfsprogs sys-fs/xfsprogs
+move app-admin/dosfstools sys-fs/dosfstools
