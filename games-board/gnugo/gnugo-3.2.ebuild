@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.2.ebuild,v 1.1 2003/09/10 17:46:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.2.ebuild,v 1.2 2004/02/05 22:17:37 mr_bones_ Exp $
 
 DESCRIPTION="A Go-playing program"
 SRC_URI="mirror://gnu/gnugo/${P}.tar.gz"
