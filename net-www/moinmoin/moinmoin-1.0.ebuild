@@ -1,43 +1,49 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/moinmoin-1.0.ebuild,v 1.7 2003/02/13 15:39:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/moinmoin-1.0.ebuild,v 1.8 2003/11/16 21:51:16 mholzer Exp $
+
+inherit webapp-apache
 
 PN0="moin"
 S=${WORKDIR}/${PN0}-${PV}
-HTTPD_ROOT="/home/httpd/htdocs"
-HTTPD_USER="apache"
 
 DESCRIPTION="Python WikiClone"
-
 SRC_URI="http://download.sourceforge.net/${PN0}/${PN0}-${PV}.tar.gz"
 HOMEPAGE="http://moin.sourceforge.net"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=">=dev-lang/python-2.2"
 
-RDEPEND="net-www/apache"
+webapp-detect || NO_WEBSERVER=1
+HTTPD_USER="apache"
+HTTPD_GROUP="apache"
+
+pkg_setup() {
+	webapp-pkg_setup "${NO_WEBSERVER}"
+	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
+}
 
 src_compile() {
 	python setup.py build || die "python build failed"
 }
 
 src_install () {
+	local DocumentRoot=${HTTPD_ROOT}
+	local destdir=${DocumentRoot}/${PN}
+	dodir ${destdir}
+
 	python setup.py install --root=${D} --prefix=/usr install || die "python install failed"
-	dodir ${HTTPD_ROOT}/${P}
-	dosym ${HTTPD_ROOT}/${P} ${HTTPD_ROOT}/${PN}
+
 	cd ${D}/usr/share/moin
-	cp -r data htdocs/* ${D}/${HTTPD_ROOT}/${P}
-	cp cgi-bin/* ${D}/${HTTPD_ROOT}/${P}
+	cp -r data htdocs/* ${D}/${HTTPD_ROOT}/${PN}
+	cp cgi-bin/* ${D}/${HTTPD_ROOT}/${PN}
 	cd ${D}/${HTTPD_ROOT}
-	chown -R ${HTTPD_USER}.${HTTPD_USER} ${P}
-	cd ${D}/${HTTPD_ROOT}/${P}
+	chown -R ${HTTPD_USER}.${HTTPD_USER} ${PN}
+	cd ${D}/${HTTPD_ROOT}/${PN}
 	chmod  a+x moin.cgi
-	mv moin_config.py moin_config.py.orig
-	sed -e "s/\/wiki/\/moinmoin/" moin_config.py.orig \
-		> moin_config.py
-	rm moin_config.py.orig
+	sed -i -e "s/\/wiki/\/moinmoin/" moin_config.py
 }
 
 pkg_postinst() {
