@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r1.ebuild,v 1.1 2004/12/27 21:24:47 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r1.ebuild,v 1.2 2005/01/10 07:27:36 phosphan Exp $
 
 inherit kde-functions eutils
 
@@ -9,8 +9,8 @@ MY_P=${P}-1.src
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A 2D CAD package based upon Qt."
 SRC_URI="http://www.ribbonsoft.com/archives/qcad/${MY_P}.tar.gz
-		doc? ( mirror://gentoo/qcad-manual-200404.tar.bz2 )"
-#		mirror://gentoo/qcaddoc-${MY_PV}.tar.bz2"
+		doc? ( mirror://gentoo/qcad-manual-200404.tar.bz2
+				http://dev.gentoo.org/~phosphan/qcad-manual-200404.tar.bz2 )"
 HOMEPAGE="http://www.ribbonsoft.com/qcad.html"
 
 LICENSE="GPL-2"
