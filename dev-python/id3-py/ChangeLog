@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/id3-py
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/id3-py/ChangeLog,v 1.1 2003/04/19 00:56:25 blauwers Exp $
+
+*id3-py-1.2 (19 Apr 2003)
+
+  19 Apr 2003; Bart Lauwers <blauwers@gentoo.org> :
+  Initial import.  Ebuild submitted by Aleksandr Tarutin <at@heliolab.net> in
+  Bug #7888.
