@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/httpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/httpd/ChangeLog,v 1.4 2005/01/01 13:48:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/httpd/ChangeLog,v 1.5 2005/02/01 07:56:39 mkennedy Exp $
+
+*httpd-1.0 (01 Feb 2005)
+
+  01 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  files/50httpd-gentoo.el, +httpd-1.0.ebuild:
+  New upstream version.
 
 *httpd-0.5 (31 Oct 2002)
 
