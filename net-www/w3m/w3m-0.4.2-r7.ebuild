@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r5.ebuild,v 1.1 2004/01/04 18:35:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r7.ebuild,v 1.1 2004/01/21 15:26:39 usata Exp $
 
-IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk async"
-#IUSE="canna nls unicode"
+IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk nls async"
+#IUSE="canna unicode"
 
 W3M_CVS_PV="1.890"
 W3M_CVS_P="${PN}-cvs-${W3M_CVS_PV}"
@@ -12,10 +12,13 @@ DESCRIPTION="Text based WWW browser, supports tables and frames"
 PATCH_PATH="http://www.page.sannet.ne.jp/knabe/w3m/"
 SRC_URI="mirror://gentoo/${W3M_CVS_P}.tar.gz
 	http://dev.gentoo.org/~usata/distfiles/${W3M_CVS_P}.tar.gz
+	http://dev.gentoo.org/~usata/distfiles/${W3M_CVS_P}-1.896.diff.gz
 	async? ( ${PATCH_PATH}/${W3M_CVS_P}-async-5.diff.gz )
-	${PATCH_PATH}/${W3M_CVS_P}-nls-4.diff
-	${PATCH_PATH}/${W3M_CVS_P}-ja.po.diff"
-# canna? ( http://www.j10n.org/files/${W3M_CVS_P}-canna.patch )"
+	${PATCH_PATH}/${W3M_CVS_P}-nls-4.diff"
+# w3m color patch:
+#	http://homepage3.nifty.com/slokar/w3m/${P}-cvs-1.895_256-001.patch.gz
+# w3n canna inline patch:
+#	canna? ( http://www.j10n.org/files/${W3M_CVS_P}-canna.patch )
 
 HOMEPAGE="http://w3m.sourceforge.net/"
 
@@ -61,11 +64,14 @@ src_unpack() {
 
 	unpack ${W3M_CVS_P}.tar.gz
 	cd ${S}
+	epatch ${DISTDIR}/${W3M_CVS_P}-1.896.diff.gz
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
 	epatch ${FILESDIR}/${PN}-m17n-search-gentoo.diff
+	epatch ${FILESDIR}/${PN}-libwc-gentoo.diff
 	epatch ${DISTDIR}/${W3M_CVS_P}-nls-4.diff
-	epatch ${DISTDIR}/${W3M_CVS_P}-ja.po.diff
+	#epatch ${DISTDIR}/${W3M_CVS_P}-ja.po.diff
 	use async && epatch ${DISTDIR}/${W3M_CVS_P}-async-5.diff.gz
+	#epatch ${DISTDIR}/${P}-cvs-1.895_256-001.patch.gz
 	#use canna && epatch ${DISTDIR}/${W3M_CVS_P}-canna.patch
 }
 
@@ -104,19 +110,20 @@ src_compile() {
 		migemo_command="no"
 	fi
 
+	# emacs-w3m doesn't like "--enable-m17n --disable-unicode,"
+	# so we better enable or disable both
 	if [ -n "`use cjk`" ] ; then
 		myconf="${myconf}
+			--enable-m17n
+			--enable-unicode
 			--enable-japanese=E
 			--with-charset=EUC-JP"
 	else
 		myconf="${myconf}
+			--disable-m17n
 			--with-charset=US-ASCII"
 	fi
 
-	# You can't disable cjk and nls at the moment(w3mhelper hangs)
-	# `use_enable nls` `use_enable cjk`
-	# You can't disable unicode(build fails)
-	# `use_enable unicode`
 	econf --enable-keymap=w3m \
 		--with-editor=/usr/bin/nano \
 		--with-mailer=/bin/mail \
@@ -124,10 +131,10 @@ src_compile() {
 		--with-termlib=ncurses \
 		--with-imagelib="${imagelib}" \
 		--with-migemo="${migemo_command}" \
-		--enable-m17n \
 		`use_enable gpm mouse` \
 		`use_enable ssl digest-auth` \
 		`use_with ssl` \
+		`use_enable nls` \
 		${myconf} "$@" || die
 		# `use_with canna`
 
