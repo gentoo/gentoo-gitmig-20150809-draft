@@ -1,7 +1,8 @@
+MD5 0710c66d198bc9a2b02fb6b9d8ac8e7f openmosix-sources-2.4.22-r5.ebuild 1603
 MD5 25d01a1e98a46f5a326e39c04dfc7dde openmosix-sources-2.4.21-r3.ebuild 3830
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
-MD5 1837dd43d8ca50668ab89c94c43cee1e openmosix-sources-2.4.22-r4.ebuild 1680
-MD5 2600fbf0eacfbb91059524ae853b4680 ChangeLog 4873
+MD5 9c64a3218336d1423834a1dea2fdc0da openmosix-sources-2.4.22-r4.ebuild 1681
+MD5 c4a7179a54ad5b2483db010721543762 ChangeLog 5060
 MD5 64383e94fe00374f8975f2925c133ed2 openmosix-sources-2.4.20-r8.ebuild 2895
 MD5 a34a2174db03596d6e809074fae1422b openmosix-sources-2.4.25-r2.ebuild 1293
 MD5 e2e2b545b6fcdcecf49e33798efa5b84 files/openmosix-sources-2.4.22.rtc_fix.patch 7073
@@ -14,3 +15,4 @@ MD5 518e0cc8ace05bda990128ccf3d11c32 files/digest-openmosix-sources-2.4.21-r3 19
 MD5 032ff70c5895cc1a2dfbe2a58ebde1f7 files/openmosix-sources-2.4.20.munmap.patch 819
 MD5 efe1d77bc50e3b37a4dcc0154edd1862 files/digest-openmosix-sources-2.4.22-r4 134
 MD5 ec82894c1f49e075f00a952c78783119 files/openmosix-sources-2.4.22.crypto_fix.patch 485
+MD5 199264742137ada4477d69f816dc5454 files/digest-openmosix-sources-2.4.22-r5 134
