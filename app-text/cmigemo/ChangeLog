@@ -1,0 +1,11 @@
+# ChangeLog for app-text/cmigemo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.1 2003/09/30 18:13:15 usata Exp $
+
+*cmigemo-1.1.013 (01 Oct 2003)
+
+  01 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> cmigemo-1.1.013.ebuild,
+  files/cmigemo-1.1.013-migemo-dict.diff:
+  Initial import. Ebuild submitted by Hattya <hattya@inter7.jp>.
+  This closes Bug #30006
+
