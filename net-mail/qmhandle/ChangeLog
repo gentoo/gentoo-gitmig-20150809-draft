@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmhandle
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmhandle/ChangeLog,v 1.9 2004/12/29 03:28:39 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmhandle/ChangeLog,v 1.10 2005/03/03 16:28:00 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> qmhandle-1.2.0.ebuild:
+  Dependency update: sys-apps/psmisc -> sys-process/psmisc.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
