@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.2 2002/03/21 11:30:27 seemant Exp $
+
+*db-3.2.3h-r4 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> db-3.2.3h-r4.ebuild :
+
+  HTML documentation will no longer get gzipped -- but too small a change
+  to warrant having the users remerge this.  Thanks so stefan@mdy.univie.ac.at 
+  for the bug.
 
 *db-3.2.3h-r4 (1 Feb 2002)
 

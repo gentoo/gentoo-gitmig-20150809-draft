@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r4.ebuild,v 1.6 2002/02/10 17:51:02 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r4.ebuild,v 1.7 2002/03/21 11:30:27 seemant Exp $
 
 S=${WORKDIR}/${P}/build_unix
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
@@ -49,13 +49,13 @@ src_install () {
 
     cd ${S}/..
     dodoc README LICENSE
+    prepalldocs
     if [ -d ${D}/usr/share/doc/${PF} ]
     then
 	mv ${D}/usr/docs ${D}/usr/share/doc/${PF}/html
     else
 	mv ${D}/usr/docs ${D}/usr/doc/${PF}/html
     fi
-    prepalldocs
 
 	#for some reason, db.so's are *not* readable by group or others, resulting in no one
 	#but root being able to use them!!! This fixes it -- DR 15 Jun 2001
