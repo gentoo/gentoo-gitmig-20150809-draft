@@ -2,7 +2,7 @@
 #
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/files/MozillaFirebird,v 1.5 2004/02/06 18:37:46 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/files/MozillaFirebird,v 1.6 2004/02/07 19:49:34 agriffis Exp $
 
 # Set to "window" if you prefer new Firebird windows instead of new tabs
 newtype=${MOZILLA_NEWTYPE:-"tab"}
@@ -52,11 +52,32 @@ declare -a screens=(
       for (i = 0; i < $NF; i++) printf("%s.%d\n", disp, i)
     }')
   )
+
+# Attempt to fix bug 39797 by making sure MozillaFirebird is running
+# on the DISPLAY prior to calling mozilla-xremote-client.  The
+# problem here is that mozilla-xremote-client will return a zero
+# exit status if it contacts a Thunderbird-0.3 instance, even though
+# Thunderbird can't handle the openURL request.  :-(
+#
+# Note: This seems to be fixed with Thunderbird-0.4, which rejects the
+# openURL request appropriately.
+declare -a candidates=()
 for s in $DISPLAY "${screens[@]}"; do 
-  DISPLAY=${s} ${fbpath}/mozilla-xremote-client "openURL($url, new-$newtype)" \
-  && exit 0
+  if DISPLAY=${s} xwininfo -root -tree | grep -q 'MozillaFirebird-bin'; then
+    candidates=("${candidates[@]}" ${s})
+  fi
 done
-retval=$?
+
+if [[ ${#candidates[@]} > 0 ]]; then
+  for s in "${candidates[@]}"; do 
+    DISPLAY=${s} ${fbpath}/mozilla-xremote-client "openURL($url, new-$newtype)" \
+    && exit 0
+  done
+  retval=$?
+else
+  # simulate mozilla-xremote-client's response when it can't find an instance
+  retval=2
+fi
 
 if [[ $retval -eq 2 || $retval -eq 3 ]] ; then
   # 2 = No running windows found, so start a new instance

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.36 2004/02/06 18:37:46 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.37 2004/02/07 19:49:34 agriffis Exp $
+
+  07 Feb 2004; Aron Griffis <agriffis@gentoo.org> files/MozillaFirebird:
+  Fix bug 39797 by scanning for Firebirds running on attached screens prior to
+  calling mozilla-xremote-client
 
 *mozilla-firebird-0.7-r2 (06 Feb 2004)
 
