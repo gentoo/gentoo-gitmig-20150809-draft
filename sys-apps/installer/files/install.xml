@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<machine name="linux" domain="bagwan">
+
+    <os>
+	<name>gentoolinux</name>
+	<arch>i686-pc-linux-gnu</arch>
+    </os>
+
+    <time>
+        <zone>Europe/Berlin</zone>
+	<gmt />
+    </time>
+
+    <keyboard>
+	<keymap>de-latin1-nodeadkeys</keymap>
+	<font>grfixed</font>
+    </keyboard>
+
+    <boot>
+	<verbose />
+	<fsckfix />
+    </boot>
+
+    <login>
+	<su />
+	<delay />
+    </login>
+
+    <syslogs>
+	<remote />
+	<!-- include syslog.xml -->
+    </syslogs>
+
+    <mounts>
+
+	<mount>
+	    <device>/dev/hdc3</device>
+	    <point>/</point>
+	    <type>reiserfs</type>
+	    <dump>1</dump>
+	    <pass>1</pass>
+	</mount>
+
+	<mount>
+	    <device>/dev/hda3</device>
+	    <point>none</point>
+	    <type>swap</type>
+	</mount>
+
+	<mount>
+	    <device>/dev/cdrom</device>
+   	    <point>/mnt/cdrom</point>
+	    <type>iso9660</type>
+	    <pass>2</pass>
+	    <options>noauto,ro</options>
+	</mount>
+
+	<mount>
+	    <device>proc</device>
+	    <point>/proc</point>
+	    <type>proc</type>
+	</mount>
+
+	<mount>
+	    <device>none</device>
+	    <point>/dev/pts</point>
+	    <type>devpts</type>
+	    <options>mode=620</options>
+	</mount>
+
+    </mounts>
+
+
+
+
+
+    <network>
+
+	<resolv>
+	    <domain>bagwan</domain>
+	    <search/>
+	    <options/>
+	    <sortlist/>	
+	    <nameserver>192.168.2.3</nameserver>
+	</resolv>
+
+	<interfaces>
+
+	    <interface type="eth">
+		<name>eth0</name>
+		<ipv4>
+		    <ip>192.168.1.4</ip>
+		    <broadcast>192.168.1.255</broadcast>
+		    <netmask>255.255.255.0</netmask>
+		    <network>192.168.1.0</network>
+		    <gateway>192.168.1.1</gateway>
+	        </ipv4>
+	    </interface>
+
+	</interfaces>
+
+    </network>
+
+</machine>
+
+
+
+
+
