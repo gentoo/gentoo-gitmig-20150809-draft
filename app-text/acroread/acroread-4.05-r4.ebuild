@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: system@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-4.05-r4.ebuild,v 1.2 2002/04/27 08:20:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-4.05-r4.ebuild,v 1.3 2002/05/22 11:09:48 seemant Exp $
 
 MY_P=linux-ar-405
 S=${WORKDIR}/ILINXR.install
@@ -11,6 +11,8 @@ HOMEPAGE="http://www.adobe.com/products/acrobat/"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/x11"
+
+LICENSE="Adobe"
 
 src_unpack() {
 
