@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-DigestMD5/Authen-DigestMD5-0.04.ebuild,v 1.6 2004/12/24 13:38:35 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-DigestMD5/Authen-DigestMD5-0.04.ebuild,v 1.7 2005/01/13 02:15:51 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~salva/${P}/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~ppc64"
+KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha ~ppc64"
 IUSE=""
 
 SRC_TEST="do"
