@@ -1,5 +1,5 @@
-MD5 6b54074b31515269bc3f171d32f20755 rp-pppoe-3.5.ebuild 1267
-MD5 01a54c691b29e91172e212757d0c3a9c ChangeLog 2860
+MD5 195c8da0ef3cfb45249b7f106b70cbeb ChangeLog 2953
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 ac3c6e3c758b2db05400c77ff233430f rp-pppoe-3.5.ebuild 1265
 MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5 64
 MD5 a03400d33b0c19d422acd5661e9d260b files/rp-pppoe.rc 499
