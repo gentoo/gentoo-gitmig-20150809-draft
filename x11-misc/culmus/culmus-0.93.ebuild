@@ -1,10 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/culmus-0.90.ebuild,v 1.3 2004/01/29 23:04:11 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/culmus-0.93.ebuild,v 1.1 2004/01/29 23:04:11 mksoft Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hebrew Type1 fonts"
-SRC_URI="mirror://sourceforge/culmus/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/culmus/${P}.tar.gz \
+http://culmus.sourceforge.net/fancy/dorian.tar.gz \
+http://culmus.sourceforge.net/fancy/gladia.tar.gz \
+http://culmus.sourceforge.net/fancy/ozrad.tar.gz \
+http://culmus.sourceforge.net/fancy/gan.tar.gz"
 HOMEPAGE="http://culmus.sourceforge.net/"
 KEYWORDS="~x86"
 SLOT="0"
@@ -13,6 +17,7 @@ LICENSE="GPL-2 | LICENSE-BITSTREAM"
 src_install () {
 	dodir /usr/X11R6/lib/X11/fonts/culmus
 	cp -a * ${D}/usr/X11R6/lib/X11/fonts/culmus
+	cp -a ${WORKDIR}/*.{afm,pfa}  ${D}/usr/X11R6/lib/X11/fonts/culmus
 	rm ${D}/usr/X11R6/lib/X11/fonts/culmus/{CHANGES,LICENSE,LICENSE-BITSTREAM,GNU-GPL,culmus.spec}
 	dodoc CHANGES LICENSE LICENSE-BITSTREAM
 }
