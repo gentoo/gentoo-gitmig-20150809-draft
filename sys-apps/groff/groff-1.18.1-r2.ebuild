@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r2.ebuild,v 1.7 2003/07/16 13:47:25 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r2.ebuild,v 1.8 2003/09/07 00:43:50 msterret Exp $
 
 IUSE="X cjk"
 
@@ -72,7 +72,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--infodir=\${inforoot} \
 		${myconf} || die
-		
+
 	# emake doesn't work
 	make || die
 
@@ -103,7 +103,7 @@ src_install() {
 			install \
 			install.man || die
 	fi
-	
+
 	#the following links are required for xman
 	dosym eqn /usr/bin/geqn
 	dosym tbl /usr/bin/gtbl

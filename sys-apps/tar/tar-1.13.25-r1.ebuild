@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r1.ebuild,v 1.11 2003/09/02 19:01:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r1.ebuild,v 1.12 2003/09/07 00:55:30 msterret Exp $
 
 IUSE="nls static build"
 
@@ -36,7 +36,7 @@ src_install() {
 	cd ${D}
 	mv usr/lib/misc/rmt usr/sbin/rmt.gnu
 	dosym rmt.gnu /usr/sbin/rmt
-	if [ -z "`use build`" ] 
+	if [ -z "`use build`" ]
 	then
 		dodoc AUTHORS ChangeLog* COPYING NEWS README* PORTS THANKS
 		doman ${FILESDIR}/tar.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ucspi-proxy-0.95.ebuild,v 1.1 2003/08/11 09:46:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ucspi-proxy-0.95.ebuild,v 1.2 2003/09/07 00:39:09 msterret Exp $
 
 DESCRIPTION="A proxy program that passes data back and forth between two connections set up by a UCSPI server and a UCSPI client."
 HOMEPAGE="http://untroubled.org/ucspi-proxy/"
@@ -20,5 +20,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc ANNOUNCEMENT NEWS README TODO 
+	dodoc ANNOUNCEMENT NEWS README TODO
 }

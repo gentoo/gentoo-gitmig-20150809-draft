@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11.ebuild,v 1.10 2003/07/18 20:40:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11.ebuild,v 1.11 2003/09/07 00:57:32 msterret Exp $
 
 
 inherit gnuconfig
@@ -43,12 +43,12 @@ src_compile() {
 	use nls ||myconf="--disable-nls"
 
 	econf ${myconf} || die
-			
+
 	emake || die
 }
 
 src_install() {
-	einstall rootexecbindir=${D}/bin || die 
+	einstall rootexecbindir=${D}/bin || die
 
 	insinto /etc
 	insopts -m0644

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/buffer-1.19-r1.ebuild,v 1.3 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/buffer-1.19-r1.ebuild,v 1.4 2003/09/07 00:51:33 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a tapedrive tool for speeding up reading from and writing to tape"
@@ -14,7 +14,7 @@ KEYWORDS="x86 amd64"
 DEPEND="virtual/glibc"
 
 src_compile() {
-	make clean	
+	make clean
 	emake || die "make failed"
 }
 

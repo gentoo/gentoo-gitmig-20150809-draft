@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r7.ebuild,v 1.1 2003/08/04 19:44:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r7.ebuild,v 1.2 2003/09/07 00:44:11 msterret Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3
 	sys-devel/gettext"
-	
+
 RDEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3"
 
@@ -31,7 +31,7 @@ pkg_preinst() {
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	# Get su to call pam_open_session(), and also set DISPLAY and XAUTHORITY,
 	# else the session entries in /etc/pam.d/su never get executed, and
@@ -69,7 +69,7 @@ src_compile() {
 		--enable-static=yes \
 		--host=${CHOST} \
 		${myconf} || die "bad configure"
-		
+
 	# Parallel make fails sometimes
 	make || die "compile problem"
 }
@@ -125,7 +125,7 @@ src_install() {
 	newins shadow chfn
 	newins shadow useradd
 	newins shadow groupadd
-	
+
 	cd ${S}
 	# The manpage install is beyond my comprehension, and
 	# also broken. Just do it over.
@@ -134,13 +134,13 @@ src_install() {
 	do
 		[ -f ${x} ] && doman ${x}
 	done
-	
+
 	# Dont install the manpage, since we dont use
 	# login with shadow
 	rm -f ${D}/usr/share/man/man1/login.*
 	# We use pam, so this is not applicable.
 	rm -f ${D}/usr/share/man/man5/suauth.*
-	
+
 	cd ${S}/doc
 	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
 	docinto txt
@@ -167,7 +167,7 @@ pkg_postinst() {
 		ewarn
 		ewarn "  ${ROOT}etc/pam.d/system-auth.bak"
 		echo
-	
+
 		cp -a ${ROOT}/etc/pam.d/system-auth \
 			${ROOT}/etc/pam.d/system-auth.bak;
 		mv -f ${ROOT}/etc/pam.d/system-auth.new \

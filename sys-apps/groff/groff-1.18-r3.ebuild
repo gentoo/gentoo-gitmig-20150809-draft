@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18-r3.ebuild,v 1.4 2003/07/16 13:47:25 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18-r3.ebuild,v 1.5 2003/09/07 00:43:48 msterret Exp $
 
 IUSE=""
 
@@ -34,12 +34,12 @@ src_compile() {
 	# Fix problems with not finding g++
 	[ -z "${CC}" ] && export CC="gcc"
 	[ -z "${CXX}" ] && export CXX="g++"
-	
+
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=\${inforoot} || die
-		
+
 	# emake doesn't work
 	make || die
 
@@ -70,7 +70,7 @@ src_install() {
 			install \
 			install.man || die
 	fi
-	
+
 	#the following links are required for xman
 	dosym eqn /usr/bin/geqn
 	dosym tbl /usr/bin/gtbl

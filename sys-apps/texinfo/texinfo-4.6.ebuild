@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.1 2003/09/02 18:44:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.2 2003/09/07 00:53:17 msterret Exp $
 
 IUSE="nls build"
 
@@ -17,7 +17,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 	!build? ( >=sys-libs/ncurses-5.2-r2
 		nls? ( sys-devel/gettext ) )"
 
-RDEPEND="virtual/glibc 
+RDEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 src_unpack() {
@@ -41,8 +41,8 @@ src_compile() {
 
 	export WANT_AUTOMAKE_1_6=1
 	econf ${myconf} || die
-	
-	emake || die 
+
+	emake || die
 }
 
 src_install() {
@@ -53,7 +53,7 @@ src_install() {
 		make DESTDIR=${D} \
 			infodir=/usr/share/info \
 			install || die
-			
+
 		exeinto /usr/sbin
 		doexe ${FILESDIR}/mkinfodir
 
@@ -61,7 +61,7 @@ src_install() {
 			die "Could not install texinfo.info!!!"
 		fi
 
-		dodoc AUTHORS ChangeLog COPYING INTRODUCTION NEWS README TODO 
+		dodoc AUTHORS ChangeLog COPYING INTRODUCTION NEWS README TODO
 		docinto info
 		dodoc info/README
 		docinto makeinfo

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11y.ebuild,v 1.11 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11y.ebuild,v 1.12 2003/09/07 00:37:11 msterret Exp $
 
 IUSE="crypt nls"
 
@@ -59,7 +59,7 @@ src_compile() {
 
 	if [ -z "`use nls`" ]
 	then
-		cp defines.h defines.h.orig	
+		cp defines.h defines.h.orig
 		grep -v "ENABLE_NLS" \
 			defines.h.orig > defines.h
 		cp defines.h defines.h.orig
@@ -70,7 +70,7 @@ src_compile() {
 		sed -e "s:SUBDIRS=po \\\:SUBDIRS= \\\:g" \
 			Makefile.orig > Makefile
 	fi
-	
+
 	emake LDFLAGS="" || die
 	cd sys-utils; makeinfo *.texi || die
 }

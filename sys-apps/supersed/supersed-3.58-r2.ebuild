@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58-r2.ebuild,v 1.10 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58-r2.ebuild,v 1.11 2003/09/07 00:57:02 msterret Exp $
 
 IUSE="nls static build"
 
@@ -34,7 +34,7 @@ src_compile() {
 	use static \
 		&& myconf="${myconf} --disable-html" \
 		|| myconf="${myconf} --enable-html"
-	
+
 	if [ -f /bin/sed ]
 	then
 		echo "simple conf"
@@ -44,7 +44,7 @@ src_compile() {
 		./bootstrap.sh
 		econf ${myconf} || die
 	fi
-	
+
 	rm -f ${S}/doc/sed.info*
 
 	if [ -z "`use static`" ]
@@ -59,7 +59,7 @@ src_install() {
 	# choose any name, but sed for now. If supersed is chosen to replace
 	# good ol' sed, that will work too.
 	newname="ssed"
-	
+
 	into /
 	newbin sed/sed ${newname}
 

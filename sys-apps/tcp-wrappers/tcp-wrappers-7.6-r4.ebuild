@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.19 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.20 2003/09/07 00:53:43 msterret Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch ${PATCHDIR}/${MY_P}-ipv6-1.6.diff
 	epatch ${PATCHDIR}/${MY_P}-stdc.diff
 	epatch ${PATCHDIR}/${MY_P}.diff
-	
+
 	cp Makefile Makefile.orig
 	sed -e "s:-O2:${CFLAGS} -fPIC:" \
 		-e "s:AUX_OBJ=.*:AUX_OBJ= \\\:" Makefile.orig > Makefile

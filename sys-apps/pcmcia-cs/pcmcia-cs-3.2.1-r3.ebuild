@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r3.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r3.ebuild,v 1.4 2003/09/07 00:42:03 msterret Exp $
 
 NOCO_VERSION="0.11b"
 
@@ -25,7 +25,7 @@ else
 	MY_ARCH="ppc"
 fi
 
-# Note: To use this ebuild, you should have the usr/src/linux symlink to 
+# Note: To use this ebuild, you should have the usr/src/linux symlink to
 # the kernel directory that pcmcia-cs should use for configuration.
 
 src_unpack() {
@@ -44,7 +44,7 @@ src_unpack() {
 	fi
 
 
-	
+
 	cd ${S}
 	cp Configure Configure.orig
 	sed -e 's:usr/man:usr/share/man:g' Configure.orig > Configure
@@ -79,7 +79,7 @@ src_compile() {
 	else
 		myconf="$myconf --nopnp"
 	fi
-	
+
 	if [ -n "`use nocardbus`" ] ; then
 		myconf="$myconf --nocardbus"
 	else
@@ -95,11 +95,11 @@ src_compile() {
 		--uflags="$CFLAGS" \
 		--kflags="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer" \
 		$myconf || die "failed configuring"
-	# nopnp and noapm are important, because without them the pcmcia-cs 
-	# tools will require a kernel with ISA PnP and/or APM support, 
-	# which cannot be guaranteed.  We need to make sure the tools 
+	# nopnp and noapm are important, because without them the pcmcia-cs
+	# tools will require a kernel with ISA PnP and/or APM support,
+	# which cannot be guaranteed.  We need to make sure the tools
 	# work *all* the time, not just some of the time.
-	
+
 	# The --srctree option tells pcmcia-cs to configure for the kernel in /usr/src/linux
 	# rather than the currently-running kernel.  It's Gentoo Linux policy to configure for
 	# the kernel in /usr/src/linux
@@ -123,7 +123,7 @@ src_install () {
 	# not to build them in the first place
 	rm -rf usr/X11R6
 	# todo: if they are nstalled, move them to /usr
-		
+
 	insinto /etc/conf.d
 	newins ${FILESDIR}/pcmcia.conf pcmcia
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.1.ebuild,v 1.15 2003/09/02 18:59:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.1.ebuild,v 1.16 2003/09/07 00:52:46 msterret Exp $
 
 IUSE="nls static build"
 
@@ -18,12 +18,12 @@ DEPEND="nls? ( sys-devel/gettext )"
 src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
-	
+
 	econf \
 		--build=${CHOST} \
 		--without-included-regex \
 		${myconf} || die
-		
+
 	if [ "`use static`" ]
 	then
 		emake LDFLAGS=-static || die
@@ -34,16 +34,16 @@ src_compile() {
 
 src_install() {
 	einstall || die
-		
+
 	dodir /bin
 	mv ${D}/usr/bin/cat ${D}/bin
 	dosym /bin/cat /usr/bin/cat
 	# For baselayout
 	mv ${D}/usr/bin/wc ${D}/bin
 	dosym /bin/wc /usr/bin/wc
-	
+
 	rmdir ${D}/usr/lib
-	
+
 	if [ -z "`use build`" ]
 	then
 		dodoc AUTHORS COPYING ChangeLog NEWS README* THANKS TODO

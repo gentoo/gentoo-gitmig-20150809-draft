@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r4.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r4.ebuild,v 1.4 2003/09/07 00:44:11 msterret Exp $
 
 IUSE=""
 
@@ -20,12 +20,12 @@ KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3
 	sys-devel/gettext"
-	
+
 RDEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3"
 
 
-pkg_preinst() { 
+pkg_preinst() {
 	rm -f ${ROOT}/etc/pam.d/system-auth.new
 }
 
@@ -65,7 +65,7 @@ src_compile() {
 		--enable-static=yes \
 		--host=${CHOST} \
 		${myconf} || die "bad configure"
-		
+
 	# Parallel make fails sometimes
 	make || die "compile problem"
 }
@@ -132,13 +132,13 @@ src_install() {
 		mkdir -p ${dir}
 		cp ${x} ${dir}
 	done
-	
+
 	# Dont install the manpage, since we dont use
 	# login with shadow
 	rm -f ${D}/usr/share/man/man1/login.*
 	# We use pam, so this is not applicable.
 	rm -f ${D}/usr/share/man/man5/suauth.*
-	
+
 	cd ${S}/doc
 	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
 	docinto txt
@@ -154,7 +154,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	
+
 	local CHECK1="$(md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1)"
 	local CHECK2="$(md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1)"
 
@@ -166,7 +166,7 @@ pkg_postinst() {
 		ewarn
 		ewarn "  ${ROOT}etc/pam.d/system-auth.bak"
 		echo
-		
+
 		cp -a ${ROOT}/etc/pam.d/system-auth \
 	              ${ROOT}/etc/pam.d/system-auth.bak;
 		mv -f ${ROOT}/etc/pam.d/system-auth.new \

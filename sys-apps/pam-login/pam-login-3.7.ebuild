@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.7.ebuild,v 1.13 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.7.ebuild,v 1.14 2003/09/07 00:57:32 msterret Exp $
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
@@ -25,12 +25,12 @@ src_compile() {
 	use nls ||myconf="--disable-nls"
 
 	econf ${myconf} || die
-			
+
 	emake || die
 }
 
 src_install() {
-	einstall rootexecbindir=${D}/bin || die 
+	einstall rootexecbindir=${D}/bin || die
 
 	insinto /etc
 	insopts -m0644

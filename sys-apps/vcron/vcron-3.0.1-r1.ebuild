@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.22 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.23 2003/09/07 00:36:41 msterret Exp $
 
 inherit eutils
 
@@ -66,7 +66,7 @@ src_install() {
 
 	insinto /usr/sbin
 	insopts -o root -g root -m 0750 ; doins cron
-	
+
 	insinto /usr/bin
 	insopts -o root -g cron -m 4750 ; doins crontab
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58-r1.ebuild,v 1.8 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58-r1.ebuild,v 1.9 2003/09/07 00:57:02 msterret Exp $
 
 IUSE="nls static build"
 
@@ -23,7 +23,7 @@ src_compile() {
 	use static \
 		&& myconf="${myconf} --disable-html" \
 		|| myconf="${myconf} --enable-html"
-	
+
 	if [ -f /usr/bin/sed ]
 	then
 		echo "simple conf"

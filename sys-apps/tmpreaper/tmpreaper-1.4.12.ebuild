@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/tmpreaper-1.4.12.ebuild,v 1.16 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/tmpreaper-1.4.12.ebuild,v 1.17 2003/09/07 00:46:58 msterret Exp $
 
 MYP="tmpreaper_1.4.12"
 S=${WORKDIR}/${P}
@@ -21,7 +21,7 @@ src_compile() {
 src_install() {
 	dosbin tmpreaper
 	doman tmpreaper.8
-	dodoc ChangeLog 
+	dodoc ChangeLog
 	#added debian/* files for people who want cron.daily and related files.
 	cd debian
 	dodoc changelog conffiles copyright cron.daily dirs

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.22.ebuild,v 1.10 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.22.ebuild,v 1.11 2003/09/07 00:43:02 msterret Exp $
 
 inherit flag-o-matic
 
@@ -35,7 +35,7 @@ src_compile() {
 	then
 		mymake="ARCH=hppa"
 	fi
-	
+
 	emake ${mymake} || die "emake failed"
 }
 
