@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.6.0.ebuild,v 1.1 2005/02/08 12:48:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.6.0.ebuild,v 1.2 2005/02/17 23:19:31 mattam Exp $
 
 inherit eutils
 
@@ -77,7 +77,8 @@ src_compile() {
 
 src_install() {
 
-	TEXMFADVI=/usr/share/texmf/advi
+	TEXMFADVI="/usr/share/texmf/tex/latex/advi"
+
 	dodir /usr/bin $TEXMFADVI
 	make MANDIR=${D}/usr/share/man/man1 \
 		ADVI_LOC=${D}/${TEXMFADVI} \
@@ -102,7 +103,7 @@ pkg_postinst() {
 
 		echo ""
 		einfo "If you wish to use Japanese True Type fonts with"
-		einfo "active-dvi, please edit /usr/share/texmf/advi/jpfonts.conf"
+		einfo "active-dvi, please edit /usr/share/texmf/tex/latex/advi/jpfonts.conf"
 		echo ""
 
 	fi
