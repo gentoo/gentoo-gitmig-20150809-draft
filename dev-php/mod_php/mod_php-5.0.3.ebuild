@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.3.ebuild,v 1.1 2004/12/16 06:49:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.3.ebuild,v 1.2 2005/01/09 20:58:25 weeve Exp $
 
 IUSE="${IUSE} apache2"
 
-KEYWORDS="~ia64 ~ppc ~x86 ~ppc64"
+KEYWORDS="~ia64 ~ppc ~x86 ~ppc64 ~sparc"
 PROVIDE="virtual/php-${PV} virtual/httpd-php-${PV}"
 
 detectapache() {
@@ -73,6 +73,7 @@ src_unpack() {
 	detectapache domsg
 
 	php5-sapi_src_unpack
+	[ "${ARCH}" == "sparc" ] && epatch ${FILESDIR}/stdint.diff
 }
 
 src_compile() {

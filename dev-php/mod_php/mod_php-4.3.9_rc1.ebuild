@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.9_rc1.ebuild,v 1.1 2004/08/12 10:50:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.9_rc1.ebuild,v 1.2 2005/01/09 20:58:25 weeve Exp $
 
 IUSE="${IUSE} apache2"
 

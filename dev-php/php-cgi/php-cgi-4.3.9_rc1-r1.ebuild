@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.9_rc1-r1.ebuild,v 1.2 2004/08/14 22:09:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.9_rc1-r1.ebuild,v 1.3 2005/01/09 21:02:39 weeve Exp $
 
 PHPSAPI="cgi"
 SRC_URI_BASE="http://downloads.php.net/ilia/" # for RC only
