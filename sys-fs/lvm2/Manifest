@@ -1,6 +1,16 @@
-MD5 c6edd74e7fe61eec26ddb7184fa95ad5 lvm2-2.00.15.ebuild 837
-MD5 bd63bdd17131b238dcac13a89c5235e1 lvm2-2.00.08.ebuild 798
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a653bb010e20b3b0d2aa2c9f4a188a9c ChangeLog 3540
+MD5 3dd589b1b667b547e2247a92e88e42ef lvm2-2.00.15.ebuild 843
+MD5 a2e1b9e13538302bfd5fdc487aae6135 lvm2-2.00.08.ebuild 804
 MD5 8ef457f9ac46b73b855b4a4e5ff9d7d3 metadata.xml 243
-MD5 7d15c279aadf5df9c1486c878916c893 files/digest-lvm2-2.00.08 61
 MD5 0409dfc70844e92c416235b013569411 files/digest-lvm2-2.00.15 61
+MD5 7d15c279aadf5df9c1486c878916c893 files/digest-lvm2-2.00.08 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4vSRHTu7gpaalycRAostAJ41PSpto7qYqeCEGiVcz6NvhsXW4gCg+YZv
+jcXwTX9WDMzFXAnkx4u3WL4=
+=lR9J
+-----END PGP SIGNATURE-----

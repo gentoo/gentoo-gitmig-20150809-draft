@@ -1,8 +1,18 @@
-MD5 1bd91939616bcf6b2a0831c604342d98 hfsplusutils-1.0.4.ebuild 1033
-MD5 55ad95882ff45e98c73749f120c7dfc1 hfsplusutils-1.0.4-r1.ebuild 1139
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7e538d21b5ceb36019e9983585e8b115 ChangeLog 1332
+MD5 f296c91f59d65953f84e3a33d13639e1 hfsplusutils-1.0.4-r1.ebuild 1145
+MD5 5ad6dbaadfbf7deb8b1f9b7310b67c80 hfsplusutils-1.0.4.ebuild 1028
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 4d95cf7ea2995218d48dbf18375f0673 files/digest-hfsplusutils-1.0.4 70
+MD5 4d95cf7ea2995218d48dbf18375f0673 files/digest-hfsplusutils-1.0.4-r1 70
 MD5 55d48aa8e0ed10af513c1ccf3afeb25f files/hfsplusutils-1.0.4-errno.patch 445
 MD5 04d73b3a534085a657c52eee99c5e1d4 files/hfsplusutils-1.0.4-glob.patch 288
-MD5 4d95cf7ea2995218d48dbf18375f0673 files/digest-hfsplusutils-1.0.4-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4vP2HTu7gpaalycRAnTaAKC0aHAOLV/1OFc0f0wJO0fd6YBhtgCglQ1p
+KI0oI617Hm5yB0PrMES6xpY=
+=/FEV
+-----END PGP SIGNATURE-----
