@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.31.ebuild,v 1.2 2003/04/17 22:55:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.31.ebuild,v 1.3 2003/06/22 06:20:52 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU lexical analyser generator"
@@ -9,7 +9,7 @@ HOMEPAGE="http://lex.sourceforge.net/"
 
 SLOT="0"
 LICENSE="FLEX"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"

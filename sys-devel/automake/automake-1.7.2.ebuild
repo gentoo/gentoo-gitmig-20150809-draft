@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.2.ebuild,v 1.6 2003/03/30 19:13:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.2.ebuild,v 1.7 2003/06/22 06:24:43 drobbins Exp $
 
 IUSE=""
 
@@ -59,7 +59,7 @@ HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 
 LICENSE="GPL-2"
 SLOT="1.5"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+KEYWORDS="amd64 x86 ppc sparc alpha mips hppa arm"
 
 DEPEND="dev-lang/perl
 	>=sys-devel/autoconf-2.57"
