@@ -1,5 +1,15 @@
-MD5 1467171adafcf240b1afac2a7c72daff bass-0.ebuild 734
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 31b337cb5e7b9e8705a9bdde5918f8fb ChangeLog 663
+MD5 1fdc1c0dd4faa25dc25fb8688e59a02a bass-0.ebuild 769
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 2a32d6e6a684f1b7b753008f654c1f3f files/bass 49
 MD5 ff351fdd9fae00bfd828fc41c3fd99b3 files/digest-bass-0 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCa1HTu7gpaalycRAg32AKDliM7UT0hZ/ztTIB3+oWtOAQpZfgCgv2vO
+YZ1FTcVScC5H5vg7VnGdU08=
+=vVkE
+-----END PGP SIGNATURE-----
