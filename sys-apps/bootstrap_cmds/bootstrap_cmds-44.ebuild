@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bootstrap_cmds/bootstrap_cmds-44.ebuild,v 1.4 2004/09/27 18:39:23 kito Exp $
 
-DESCRIPTION="Darwin bootstrap_cmds - config, decomment, mig, relpath,"
-WEBPAGE="http://darwinsource.opendarwin.org/10.3.5/"
+DESCRIPTION="Darwin bootstrap_cmds - config, decomment, mig, relpath"
+HOMEPAGE="http://darwinsource.opendarwin.org/10.3.5/"
 SRC_URI="http://darwinsource.opendarwin.org/tarballs/apsl/${P}.tar.gz"
 
 LICENSE="APSL-2"
 
 SLOT="0"
-#KEYWORDS="~ppc-macos"
+KEYWORDS="~ppc-macos"
 IUSE=""
-KEYWORDS=""
 DEPEND="virtual/libc"
 
 ##
@@ -22,22 +21,21 @@ DEPEND="virtual/libc"
 
 BUILDARCHS="ppc"
 
-DontPutThatInGlobalScope () {
-
-mkdir -p ${WORKDIR}/build/obj ${WORKDIR}/build/sym ${S}/BUILD
+pkg_setup() {
+	mkdir -p ${WORKDIR}/build/obj ${WORKDIR}/build/sym ${S}/BUILD
+	export RC_OS=macos
+	export RC_ARCHS=${BUILDARCHS}
+	export TARGETS=${BUILDARCHS}
+	export SRCROOT=${S}
+	export OBJROOT=${WORKDIR}/build/obj
+	export DSTROOT=${D}
+	export SYMROOT=${WORKDIR}/build/sym
+	export RC_CFLAGS="${CFLAGS}"
 }
 
-export RC_OS=macos
-export RC_ARCHS=${BUILDARCHS}
-export TARGETS=${BUILDARCHS}
-export SRCROOT=${S}
-export OBJROOT=${WORKDIR}/build/obj
-export DSTROOT=${D}
-export SYMROOT=${WORKDIR}/build/sym
-export RC_CFLAGS="${CFLAGS}"
-
 src_compile() {
-	emake || die "make failed :("
+	cd ${S}
+	emake || die "make failed"
 }
 
 src_install() {
