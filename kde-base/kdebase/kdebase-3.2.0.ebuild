@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0.ebuild,v 1.4 2004/02/05 16:39:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0.ebuild,v 1.5 2004/02/10 01:40:55 vapier Exp $
+
 inherit kde-dist
 
-IUSE="ldap pam motif encode cups ssl opengl samba java"
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64"
+IUSE="ldap pam motif encode cups ssl opengl samba java"
 
 DEPEND="media-sound/cdparanoia
 	ldap? ( net-nds/openldap )
@@ -19,16 +20,7 @@ DEPEND="media-sound/cdparanoia
 	samba? ( net-fs/samba )
 	java? ( || ( virtual/jdk virtual/jre ) )
 	>=media-libs/freetype-2"
-
 RDEPEND="$DEPEND sys-apps/eject"
-
-myconf="$myconf --with-dpms --with-cdparanoia"
-myconf="$myconf `use_with ldap` `use_with motif`"
-myconf="$myconf `use_with encode lame` `use_with cups`"
-myconf="$myconf `use_with opengl gl` `use_with ssl`"
-
-use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"
-use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$myconf --without-java"
 
 src_unpack() {
 	kde_src_unpack
@@ -36,15 +28,25 @@ src_unpack() {
 	cd ${S} && aclocal
 }
 
-
 src_compile() {
+	myconf="$myconf --with-dpms --with-cdparanoia"
+	myconf="$myconf `use_with ldap` `use_with motif`"
+	myconf="$myconf `use_with encode lame` `use_with cups`"
+	myconf="$myconf `use_with opengl gl` `use_with ssl`"
+
+	use pam \
+		&& myconf="$myconf --with-pam=yes" \
+		|| myconf="$myconf --with-pam=no --with-shadow"
+	use java \
+		&& myconf="$myconf --with-java=$(java-config --jdk-home)" \
+		|| myconf="$myconf --without-java"
+
 	kde_src_compile myconf configure
 	kde_remove_flag kdm/kfrontend -fomit-frame-pointer
 	kde_src_compile make
 }
 
 src_install() {
-
 	kde_src_install
 	cd ${S}/kdm && make DESTDIR=${D} GENKDMCONF_FLAGS="--no-old --no-backup" install
 
