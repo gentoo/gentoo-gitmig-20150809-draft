@@ -132,3 +132,4 @@ move net-www/scgi www-apps/scgi
 move net-www/swish-e www-apps/swish-e
 move net-www/tikiwiki www-apps/tikiwiki
 move net-www/trac www-apps/trac
+move net-www/twiki www-apps/twiki
