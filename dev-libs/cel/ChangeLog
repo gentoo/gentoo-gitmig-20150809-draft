@@ -1,12 +1,18 @@
 # ChangeLog for dev-libs/cel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/ChangeLog,v 1.4 2003/06/10 20:48:27 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/ChangeLog,v 1.5 2003/07/02 23:19:29 blauwers Exp $
 
-  10 Jun 2003; <msterret@gentoo.org> cel-20030413.ebuild:
-  DEPEND on sed >= 4
+*cel-20030413-r1 (02 Jul 2003)
+
+  02 Jul 2003; <blauwers@gentoo.org> cel-20030413-r1.ebuild, Changelog :
+  Added a new revision of the cel ebuild to fix numerous problems, the
+  includes will now install in the proper place, sed 4 no longer required,
+  environment var CEL added, and several ebuild tooling errors corrected.
 
 *cel-20030413 (13 Apr 2003)
 
+  10 Jun 2003; <msterret@gentoo.org> cel-20030413.ebuild:
+  DEPEND on sed >= 4
   13 Apr 2003; Philip Walls <malverian@gentoo.org> cel-20030413.ebuild :
   Cel snapshot that works with Planeshift
   19 May 2003; Thomas Raschbacher <lordvan@gentoo.org> cel-20030413.ebuild:
