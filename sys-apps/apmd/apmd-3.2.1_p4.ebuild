@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.1_p4.ebuild,v 1.12 2005/01/04 11:52:56 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.1_p4.ebuild,v 1.13 2005/02/06 00:41:22 solar Exp $
 
 inherit eutils
 
@@ -19,10 +19,11 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc ppc64 x86"
 IUSE="X nls"
 
-DEPEND="virtual/os-headers
-	>=sys-apps/debianutils-1.16
-	>=sys-apps/sed-4
+RDEPEND=">=sys-apps/debianutils-1.16
 	X? ( virtual/x11 )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
+	virtual/os-headers"
 
 src_unpack() {
 	unpack ${A}

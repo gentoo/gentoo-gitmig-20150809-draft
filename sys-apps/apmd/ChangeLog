@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.22 2005/01/04 11:52:56 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.23 2005/02/06 00:41:22 solar Exp $
+
+  05 Feb 2005; <solar@gentoo.org> apmd-3.2.1_p4.ebuild:
+  - q/a virtual/os-headers should not be set in an ebuilds RDEPEND
 
   04 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> files/apmd.confd:
   Removed --proxy-timeout argument, fixes bug #57732.

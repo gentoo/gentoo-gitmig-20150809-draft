@@ -1,7 +1,10 @@
-MD5 ba231fcf8fcbc551479607d63087b8cc apmd-3.2.1_p4.ebuild 1563
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 023f16ef80ba48a196ca62e299c4c6fe apmd-3.2.1_p4.ebuild 1585
 MD5 88e3463d354ae8c261776456764ad06e apmd-3.0.2-r3.ebuild 1781
 MD5 cbc58a4049aeb897ae36c29f870d79c8 apmd-3.2.0.ebuild 1912
-MD5 a962740db993f374aeb627e6f52e6acb ChangeLog 3505
+MD5 d329d5bd46285d76bb023cfbd1b315c5 ChangeLog 3630
 MD5 c699d919f1c3463ae0e91f2c28c8b687 metadata.xml 184
 MD5 7bb0220959a949bad3d9726cf05ebcf9 files/digest-apmd-3.0.2-r3 61
 MD5 648c4b025de00c2bf42aafaebed2f4ef files/digest-apmd-3.2.1_p4 130
@@ -12,3 +15,12 @@ MD5 253b79375ab72606e4fdf89109ed2c03 files/apmsleep.c.diff.3.2.0 301
 MD5 bed1c6668552bbf528df267c302a75eb files/apmd-3.2.0.kernel26x.patch 627
 MD5 a2b499e3ffda161e88b518f5b830a434 files/digest-apmd-3.2.0 66
 MD5 3492719252a335494c99444cf4d76899 files/apmd.confd 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iQCVAwUBQgVnkp4WFLgrx1GWAQJCdQP/Z8vHKlKwReMX/5ASapcG6ikzYcVv/NKa
+4mtXYRLImow6Mo3i0QW3Btm/GVbLvQoqFQIHt3gOBmx0n05AlMcvJYGb+iH3vv+X
+6IEL14pLAJFgfOL9iEavINaDwEPhj0v+AnKnGDZuw0Ihk6U7uWisMoWQExm46U/r
+WQjjDXV24K8=
+=xLiz
+-----END PGP SIGNATURE-----
