@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.0.ebuild,v 1.1 2002/08/24 06:15:11 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.0.ebuild,v 1.2 2002/08/27 04:51:24 mkennedy Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -19,9 +19,9 @@ src_unpack() {
 
 	unpack ${A}
 
-	if [ "`gcc --version | cut -f1 -d.`" -eq 3 ] ||
-	   ([ -n "${CXX}" ] && [ "`${CXX} --version | cut -f1 -d.`" -eq 3 ]) ||
-	   [ "`gcc --version|grep gcc|cut -f1 -d.|cut -f3 -d\ `" -eq 3 ]
+	if [ "`gcc --version | cut -f1 -d.`" == "3" ] ||
+	   ([ -n "${CXX}" ] && [ "`${CXX} --version | cut -f1 -d.`" == "3" ]) ||
+	   [ "`gcc --version|grep gcc|cut -f1 -d.|cut -f3 -d\ `" == "3" ]
 	then
 		cd ${S}
 		# Removed azarah's patch for _pre2 (doesn't seem to be
