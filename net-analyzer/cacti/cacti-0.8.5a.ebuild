@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.5a.ebuild,v 1.6 2004/07/05 11:27:39 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.5a.ebuild,v 1.7 2004/07/08 03:36:01 weeve Exp $
 
 inherit eutils webapp-apache
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.raxnet.net/downloads/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~amd64"
 IUSE="snmp mysql"
 
 DEPEND=""
