@@ -1,6 +1,10 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.23 2004/02/28 22:12:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.24 2004/03/16 07:02:38 seemant Exp $
+
+  15 Mar 2004; Seemant Kulleen <seemant@gentoo.org> realplayer-8-r5.ebuild:
+  remove -r5 as it was unstable on all arches, which -r7 will be, plus it
+  violated bug 44712 by Michael Sterret <mr_bones_@gentoo.org>
 
   28 Feb 2004; Alastair Tse <liquidx@gentoo.org> realplayer-8-r7.ebuild:
   add mention about artsdsp (#30699)
