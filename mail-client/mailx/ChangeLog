@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mailx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.2 2004/06/04 18:26:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.3 2004/06/07 04:09:39 agriffis Exp $
+
+*mailx-8.1.2.20021129-r3 (07 Jun 2004)
+
+  07 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  +mailx-8.1.2.20021129-r3.ebuild:
+  Apply 64-bit compatibility patch on all architectures instead of just ia64
 
   04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   mailx-8.1.2.20021129-r2.ebuild:
