@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.5 2002/03/09 02:39:37 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.6 2002/03/15 15:06:53 seemant Exp $
+
+*fluxbox-0.1.7-r2 (15 Mar 2002)
+  15 Mar 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.7-r3.ebuild :
+
+  This package now provides virtual/fluxbox, so as to allow blackbox
+  applications (which are completely compatible with fluxbox) to run without
+  having to emerge blackbox as well.
 
 *fluxbox-0.1.7-r1 (9 Mar 2002)
 
