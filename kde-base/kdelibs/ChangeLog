@@ -1,6 +1,18 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.2 2002/02/23 20:55:15 danarmak Exp $
+
+*kdelibs-2.2.2-r3 (22 Feb 2002)
+
+  1 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  
+  Added KDEDIRS export to env.d file - will come in handy when several KDEs are
+  installed side-by-side. If you're not into that kind of thing, you don't care
+  about it and needn't upgrade.
+  
+  Added support for customizing kde install locations. You probably don't need it,
+  in which case you don't want to hear about it. Note: untested support for now,
+  but doesn't break anything else.
 
 *kdelibs-2.2.2-r2 (1 Feb 2002)
 

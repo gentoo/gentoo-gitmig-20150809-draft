@@ -1,15 +1,20 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2.ebuild,v 1.5 2001/12/08 12:09:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r3.ebuild,v 1.1 2002/02/23 20:55:15 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
-inherit kde-dist || die
+inherit kde kde.org || die
+#don't inherit kde-dist! it calls need-kde which adds kdelibs to depend -> circular deps!
 
-DESCRIPTION="${DESCRIPTION}Libraries"
+DESCRIPTION="KDE ${PV} - Libraries"
+HOMEPAGE="http//www.kde.org/"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here. so we recreate the entire
 # DEPEND from scratch.
-COMMONDEPEND=">=sys-devel/gcc-2.95.2
+DEPEND=""
+RDEPEND=""
+
+newdepend ">=sys-devel/gcc-2.95.2
 		virtual/glibc
 		sys-devel/ld.so
 		sys-devel/perl
@@ -24,45 +29,68 @@ COMMONDEPEND=">=sys-devel/gcc-2.95.2
 		>=media-libs/tiff-3.5.5
 		app-admin/fam-oss"
 
-DEPEND="$COMMONDEPEND
+DEPEND="$DEPEND
 	sys-devel/make
 	sys-devel/autoconf
 	sys-devel/automake"
 
-RDEPEND="$COMMONDEPEND
+RDEPEND="$RDEPEND
 	app-text/sgml-common
 	cups? ( net-print/cups )
-	dev-lang/python
-	~kde-base/kde-env-${PV}"
-	
-need-qt 2.2.4
+	dev-lang/python"
 
-BASE=/usr/lib/${P}
+myconf="$myconf --enable-final"
+
+qtver-from-kdever $PV
+need-qt $selected_version
+
+set-kdedir $PV
+
+src_unpack() {
+    
+	base_src_unpack
+	
+	kde_sandbox_patch ${S}/{arts/soundserver,kio/kpac}
+	
+}
 
 src_compile() {
-
+    
 	kde_src_compile myconf
 
-	myconf="$myconf --disable-libafm"
 	use ipv6	|| myconf="$myconf --with-ipv6-lookup=no"
 	use ssl		&& myconf="$myconf --with-ssl-dir=/usr"		|| myconf="$myconf --without-ssl"
 	use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"
 	use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
-	myconf="$myconf --prefix=${BASE}"
 	
+	myconf="$myconf --prefix=$KDE2LIBSDIR"
+
 	kde_src_compile configure make
 
 }
 
 src_install() {
-	
+
 	kde_src_install
 	
 	docinto html
 	dodoc *.html
 	
-	insinto /etc/env.d
-	doins ${FILESDIR}/79${P}
+	dodir /etc/env.d
+	
+	if [ "$KDE2DIR" != "$KDE2LIBSDIR" ]; then
+	    echo "KDEDIR=${KDE2DIR}
+KDEDIRS=${KDE2LIBSDIR}:${KDE2DIR}
+PATH=${KDE2LIBSDIR}/bin:${KDE2DIR}/bin
+ROOTPATH=${KDE2LIBSDIR}/bin:${KDE2DIR}/bin
+LDPATH=${KDE2LIBSDIR}/lib:${KDE2DIR}/lib" > ${D}/etc/env.d/70kdelibs-2.2.2
+	else
+	    echo "KDEDIR=${KDE2DIR}
+KDEDIRS=${KDE2DIR}
+PATH=${KDE2LIBSDIR}/bin
+ROOTPATH=${KDE2LIBSDIR}/bin
+LDPATH=${KDE2LIBSDIR}/lib" > ${D}/etc/env.d/70kdelibs-2.2.2
+	fi
 
 }
 
