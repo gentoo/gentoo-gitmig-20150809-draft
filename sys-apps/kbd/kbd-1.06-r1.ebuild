@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.06-r1.ebuild,v 1.10 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.06-r1.ebuild,v 1.11 2002/10/19 02:06:32 vapier Exp $
 
 IUSE="nls"
 
@@ -25,9 +25,9 @@ src_compile() {
 }
 
 src_install() {
-	make  \
-	DESTDIR=${D} \
-	DATADIR=${D}/usr/share \
-	MANDIR=${D}/usr/share/man \
-	install || die
+	make \
+		DESTDIR=${D} \
+		DATADIR=${D}/usr/share \
+		MANDIR=${D}/usr/share/man \
+		install || die
 }

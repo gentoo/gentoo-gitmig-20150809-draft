@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/irda-utils-0.9.13.ebuild,v 1.7 2002/10/04 06:26:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/irda-utils-0.9.13.ebuild,v 1.8 2002/10/19 02:06:32 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IrDA Utilities, tools for IrDA communication"
@@ -11,20 +11,21 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/irdadump
-        cp autogen.sh autogen.sh.orig
-        sed -e "s:1.2:1.4:g" autogen.sh.orig > autogen.sh
-        rm autogen.sh.orig
+	cp autogen.sh autogen.sh.orig
+	sed -e "s:1.2:1.4:g" autogen.sh.orig > autogen.sh
+	rm autogen.sh.orig
 }
 
 src_compile() {
 	make ROOT="${D}" RPM_BUILD_ROOT="${D}" || die "Making failed."
 }
 
-src_install () {
+src_install() {
 	dodir /etc/rc.d/init.d
  	dodir /usr/bin
  	dodir /usr/sbin
@@ -49,4 +50,3 @@ src_install () {
 
 	dodoc README
 }
-
