@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.4.ebuild,v 1.4 2004/06/27 17:34:27 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.4.ebuild,v 1.5 2004/07/03 22:59:56 zx Exp $
 
 inherit java-pkg
 
@@ -14,8 +14,6 @@ DEPEND=">=virtual/jdk-1.3
 		>=dev-java/ant-1.5
 		>=dev-java/log4j-1.2.7
 		dev-java/dom4j
-		dev-java/commons-dbcp
-		dev-java/commons-pool
 		dev-java/commons-logging"
 IUSE="doc"
 
