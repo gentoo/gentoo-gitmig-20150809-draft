@@ -4,4 +4,4 @@
 # Usage:
 #	aoss <command> <command options and arguments>
 
-LD_PRELOAD=/emul/linux/x86/usr/lib/libaoss.so exec "$@"
+LD_PRELOAD=libaoss.so exec "$@"
