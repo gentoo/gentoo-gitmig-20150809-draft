@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/SphinxTrain
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
+
+  16 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  SphinxTrain-0.9.1-r1.ebuild, SphinxTrain-0.9.1.ebuild:
+  sphinx2 and festival are in app-accessibility now
+
+  16 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  SphinxTrain-0.9.1.ebuild:
+  sphinx2 and festival are in app-accessibility now
 
 *SphinxTrain-0.9.1-r1 (28 Sep 2003)
 
