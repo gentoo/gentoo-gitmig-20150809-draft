@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/xdrawchem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.31 2004/10/25 09:31:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.32 2004/10/29 01:53:20 weeve Exp $
+
+  28 Oct 2004; Jason Wever <weeve@gentoo.org> xdrawchem-1.8.5.ebuild:
+  Added ~sparc keyword.
 
   25 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> xdrawchem-1.7.8.ebuild,
   xdrawchem-1.8.4.ebuild, xdrawchem-1.8.5.ebuild:
