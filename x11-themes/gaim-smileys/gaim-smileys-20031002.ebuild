@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/gaim-smileys-20031002.ebuild,v 1.2 2004/03/12 01:02:34 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/gaim-smileys-20031002.ebuild,v 1.3 2004/04/17 12:26:49 aliz Exp $
 
+IUSE=""
 DESCRIPTION="Snapshot of Available Gaim Smiley Themes"
 HOMEPAGE="http://gaim.sourceforge.net/themes.php"
 # use absolute links rather than php-redirects from gaim.sf.net

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.4 2004/03/14 17:32:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.5 2004/04/17 12:26:49 aliz Exp $
 
 inherit kde
 need-kde 3.1
@@ -10,7 +10,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="stylish \"Fusion X Aqua\" theme for KDE"
 HOMEPAGE="http://www.kdelook.org/content/show.php?content=5296"
 SRC_URI="http://www.kdelook.org/content/files/5296-${MY_P}.tar.gz"
-
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.4.1.ebuild,v 1.7 2004/04/17 09:45:40 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.4.1.ebuild,v 1.8 2004/04/17 12:26:49 aliz Exp $
 
 # FIXME : the engines in here should probably be disabled and done in seperate ebuilds
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A set of gnome2 themes, with sets for users with limited or low vision"
 HOMEPAGE="http://www.gnome.org/softwaremap/projects/gnome-themes"

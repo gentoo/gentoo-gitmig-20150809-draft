@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gaim-smileys
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/ChangeLog,v 1.8 2004/03/12 01:02:34 malverian Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/ChangeLog,v 1.9 2004/04/17 12:26:49 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> gaim-smileys-20031002.ebuild:
+  Added IUSE=
 
   11 Mar 2004; Philip Walls <malverian@gentoo.org>
   Added amd64 keywords

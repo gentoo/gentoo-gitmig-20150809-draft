@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.5.ebuild,v 1.2 2004/03/03 16:33:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.5.ebuild,v 1.3 2004/04/17 12:26:49 aliz Exp $
 
 inherit kde
 need-kde 3.2
@@ -8,7 +8,7 @@ need-kde 3.2
 DESCRIPTION="A neat KDE style based on the Java Alloy Look&Feel from Incors (http://www.incors.com)."
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=10605"
 SRC_URI="http://www.kde-look.org/content/files/10605-${P}.tar.bz2"
-
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 DEPEND=">=kde-base/kdebase-3.2

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/alloy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.4 2004/03/30 10:31:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.5 2004/04/17 12:26:49 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> alloy-0.3.ebuild,
+  alloy-0.4.1a.ebuild, alloy-0.5.ebuild:
+  Added IUSE=
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> alloy-0.3.ebuild:
   don't assign default to S

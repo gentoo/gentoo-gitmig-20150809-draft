@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.5.ebuild,v 1.6 2004/03/24 19:03:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.5.ebuild,v 1.7 2004/04/17 12:26:49 aliz Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Additional themes for GNOME 2.2"
 HOMEPAGE="http://librsvg.sourceforge.net/theme.php"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.3.ebuild,v 1.5 2004/03/30 10:31:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.3.ebuild,v 1.6 2004/04/17 12:26:49 aliz Exp $
 
 inherit kde-base
 need-kde 3.1
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 DEPEND="kde-base/kdebase"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+IUSE=""
 
 src_compile(){
 	./configure --prefix=$KDEDIR || die
