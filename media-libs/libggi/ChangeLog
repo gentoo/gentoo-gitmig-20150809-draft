@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.3 2002/06/05 19:42:20 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.4 2002/07/23 21:43:22 gerk Exp $
 
 *libggi-2.0.1 (05 Jun 2002)
+
+  23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   05 Jun 2002; Olivier Reisch <doctomoe@gentoo.org> libggi-2.0.1.ebuild
 
