@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/junkie/junkie-0.3.1-r1.ebuild,v 1.2 2005/01/19 01:31:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/junkie/junkie-0.3.1-r1.ebuild,v 1.3 2005/01/25 17:29:04 greg_g Exp $
 
 inherit gnome2
 
@@ -38,12 +38,12 @@ src_install() {
 	fi
 
 	KDE_LINKS_DIR="/usr/share/applnk/Internet"
-	KDE_ICONS_DIR="${KDEDIR}/share/icons/default.kde"
+	KDE_ICONS_DIR="/usr/share/pixmaps"
 
 	if use kde;
 	then
 		dodir ${KDE_LINKS_DIR} ${KDE_ICONS_DIR}
-		einfo "Installing KDE icons in default theme"
+		einfo "Installing KDE icons"
 		for x in ${ICONS}
 		do
 			cp ${S}/$x ${D}/${KDE_ICONS_DIR}/junkie-$x
