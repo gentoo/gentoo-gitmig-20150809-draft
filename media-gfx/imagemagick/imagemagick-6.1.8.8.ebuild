@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.8.8.ebuild,v 1.3 2005/01/17 21:45:19 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.8.8.ebuild,v 1.4 2005/01/18 14:46:55 sekretarz Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.imagemagick.org/pub/${MY_PN}/${MY_P2}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-# PLEASE BUMP AND UPDATE KEYWORDS OF dev-perl/perlmagick TO MATCH THIS. THANK YOU. 
+# PLEASE BUMP AND UPDATE KEYWORDS OF dev-perl/perlmagick TO MATCH THIS. THANK YOU.
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf jbig perl graphviz fpx"
 
@@ -45,6 +45,7 @@ src_unpack() {
 	cd ${S}
 
 	chmod +x config.sub
+	epatch ${FILESDIR}/${P}-fpx.patch
 }
 
 src_compile() {
@@ -78,10 +79,10 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install
 
-	# bug 69705
+	#bug 69705
 	rm -f ${D}/usr/lib/libltdl*
 
-	# bug 73464
+	#bug 73464
 	rm -f ${D}/usr/lib/perl5/5.8.6/x86_64-linux/perllocal.pod
 
 	dosed "s:-I/usr/include ::" /usr/bin/Magick-config

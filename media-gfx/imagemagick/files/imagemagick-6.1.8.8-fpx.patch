@@ -1,0 +1,11 @@
+--- ImageMagick-6.1.8/coders/fpx.c.orig	2005-01-14 02:07:46.000000000 +0100
++++ ImageMagick-6.1.8/coders/fpx.c	2005-01-18 15:34:54.452921808 +0100
+@@ -975,7 +975,7 @@
+     if (p == (const PixelPacket *) NULL)
+       break;
+     if (fpx_info.numberOfComponents == 1)
+-      (void) ImportQuantumPixels(image,GrayQuantum,pixels);
++      (void) ImportQuantumPixels(image,GrayQuantum,0,pixels);
+     else
+       if (image->matte == MagickFalse)
+         (void) ImportQuantumPixels(image,RGBQuantum,0,pixels);
