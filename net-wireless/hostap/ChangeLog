@@ -1,9 +1,13 @@
 # ChangeLog for net-wireless/hostap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.6 2003/03/01 07:26:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.7 2003/03/03 01:39:09 latexer Exp $
+
+  2 Mar 2003; Peter Johanson <latexer@gentoo.org> hostap-20021012-r1.ebuild :
+  fix to PCMCIA_VERSION. Combination of double quotes and use of "which" should
+  solve the problem of setting the PCMCIA_VERSION variable.
 
   1 Mar 2003; Peter Johanson <latexer@gentoo.org> hostap-20021012-r1.ebuild :
-  Final fix to PCMCIA_VERSION.
+  fix to PCMCIA_VERSION.
 
   27 Feb 2003; Peter Johanson <latexer@gentoo.org> hostap-20021012-r1.ebuild :
   Major fixes to work with latest portage. HOSTAP_DRIVERS functionality now works.
