@@ -2,31 +2,6 @@
 	include "functions.php";
 	main_header( 'Todo' );
 
-	if ( $action == 'post_followup' && $uid && $followup ) {
-		// if they just hit refresh after posting, the post will be resubmitted.
-		// now, i'm going to make sure the same followup doesn't get posted twice.
-		$already = mysql_query( "select fid from followups where followup='$followup' and tid='$tid'" );
-		list( $already ) = mysql_fetch_array( $already );
-		if ( !$already ) {
-			// okay, it's not in there. let's submit.
-			$result = mysql_query ( "insert into followups set tid=$tid,uid=$uid,date=".time().",followup='$followup'" );
-		}
-	}
-
-	if ( !$committed && $action != 'new_todo' ) {
-		$todo = mysql_query( "select * from todos where tid=$tid" );
-		$todo = mysql_fetch_array( $todo );
-	}
-	if ( $action != 'new_todo' && !$todo['tid'] ) {
-		// tid wasn't in the database
-		print '<p style="color:red;">The specified todo doesn\'t seem to be available.</p>';
-		main_footer();
-		exit;
-	}
-
-	if ( $action == 'new_todo' ) { $theirs = 1; unset( $tid ); }
-	if ( $todo['owner'] == $uid ) $theirs = 1;
-
 	if ( $committed && $uid ) {
 		// okay, they just submitted an update. Let's validate and commit it.
 		if ( !$title || !$longdesc ) {
@@ -63,6 +38,38 @@
 			$todo = mysql_fetch_array( $todo );
 		}
 	}
+
+	if ( $action == 'post_followup' && $uid && $followup ) {
+		// if they just hit refresh after posting, the post will be resubmitted.
+		// now, i'm going to make sure the same followup doesn't get posted twice.
+		$already = mysql_query( "select fid from followups where followup='$followup' and tid='$tid'" );
+		list( $already ) = mysql_fetch_array( $already );
+		if ( !$already ) {
+			// okay, it's not in there. let's submit.
+			$result = mysql_query ( "insert into followups set tid=$tid,uid=$uid,date=".time().",followup='$followup'" );
+		}
+	}
+
+	if ( $action != 'new_todo' ) {
+		$todo = mysql_query( "select * from todos where tid=$tid" );
+		$todo = mysql_fetch_array( $todo );
+	}
+	if ( $action != 'new_todo' && !$todo['title'] ) {
+		// tid wasn't in the database
+		print '<p style="color:red;">The specified todo doesn\'t seem to be available.</p>';
+		main_footer();
+		exit;
+	}
+
+	if ( $action == 'new_todo' ) { $theirs = 1; unset( $tid ); }
+	if ( $todo['owner'] == $uid ) $theirs = 1;
+
+	if ( $uid ) {
+		$admin = mysql_query( "select admin from users where uid=$uid" );
+		list( $admin ) = mysql_fetch_row( $admin );
+		if ( $admin ) $theirs = 1;
+	}
+
 
 	if ( $todo['priority'] == 0 ) {
 		$priority = 'complete';
