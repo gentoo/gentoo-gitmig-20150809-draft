@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-apps/krusader/krusader-0.65.1.ebuild,v 1.1 2000/09/18 17:25:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-apps/krusader/krusader-0.65.1.ebuild,v 1.2 2000/09/21 04:21:02 achim Exp $
 
 P=krusader-0.65-1
 A=${P}.tar.gz
@@ -20,7 +20,8 @@ src_unpack () {
 src_compile() {
 
     cd ${S}
-    ./configure --prefix=/opt/kde --host=${CHOST}
+    ./configure --prefix=/opt/kde --host=${CHOST} \
+		--with-qt-dir=/usr/lib/qt-x11-2.2.0
     make
 
 }
