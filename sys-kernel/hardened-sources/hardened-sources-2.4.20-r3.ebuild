@@ -13,7 +13,7 @@ OKV=2.4.20
 EXTRAVERSION=-hardened-r3
 KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
-DESCRIPTION="Special Security Hardened Gentoo Kernel"
+DESCRIPTION="Special Security Hardened Gentoo Linux Kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
  	 mirror://gentoo/patches-${KV}.tar.bz2"
 
@@ -30,13 +30,13 @@ src_unpack() {
 	# We can't use LSM/SELinux and GRSec in the same kernel.  If USE=selinux, we will
 	# patch in LSM/SELinux and drop support for GRsec.  Otherwise we will include GRSec.
 	if [ "`use selinux`" ]; then
-		einfo "Enabling SELinux support.  This will drop GRSec support."
+		einfo "Enabling SELinux support.  This will drop GRSec2 support."
 		for file in *grsec*; do
 			einfo "Dropping ${file}.."
 			rm -f ${file}
 		done
 	else
-		einfo "Did not find \"selinux\" in use, building with GRSec support."
+		einfo "Did not find \"selinux\" in use, building with GRSec2 support."
 		for file in *lsm* *selinux*; do
 			einfo "Dropping ${file}..."
 			rm -f ${file}
@@ -64,7 +64,6 @@ src_install() {
 pkg_postinst() {
 	einfo "This kernel contains LSM/SElinux or GRSecurity, and Systrace"
 	einfo "Also included are various other performance and security related patches"
-	einfo "This is not yet a production ready kernel.  If you experience problems with"
-	einfo "this kernel please report them by assigning bugs on bugs.gentoo.org to"
-	einfo "frogger@gentoo.org"
+	einfo "If you experience problems with this kernel please report them by"
+	einfo "assigning bugs on bugs.gentoo.org to frogger@gentoo.org"
 }

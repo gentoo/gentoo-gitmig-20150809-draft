@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.8 2003/06/08 18:19:20 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.9 2003/06/09 00:40:47 frogger Exp $
+
+  08 Jun 2003; Matthew Rickard <frogger@gentoo.org>
+  hardened-sources-2.4.20-r3.ebuild:
+  Removed warnings from ebuild.  This kernel should be safe to
+  use at this point.
 
 *hardened-sources-2.4.20-r3 (08 Jun 2003)
 
