@@ -1,12 +1,17 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.14 2002/10/09 16:50:50 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.15 2002/10/13 20:16:44 verwilst Exp $
 
 *kdemultimedia-3.0.4 (09 Oct 2002)
 
   09 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   KDE 3.0.4, the latest bugfix release.
+
+  13 Okt 2002; Bart Verwilst <verwilst@gentoo.org> Changelog:
+
+  Filter out -fforce-addr, because it b0rks kdemm compilation.
+  Compiles fine when filtered.
 
   04 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 

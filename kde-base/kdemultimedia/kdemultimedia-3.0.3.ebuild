@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.3.ebuild,v 1.6 2002/10/05 05:39:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.3.ebuild,v 1.7 2002/10/13 20:16:44 verwilst Exp $
 
 IUSE="nas esd motif gtk tcltk slang"
 inherit kde-dist flag-o-matic
@@ -27,7 +27,7 @@ newdepend ">=sys-libs/ncurses-5.2
 #	>=app-cdr/cdrdao-1.1.5 )"
 
 replace-flags "-O3" "-O2"
-
+filter-flags "-fforce-addr"
 myaudio="--enable-audio=oss"
 myinterface="--enable-interface=xaw,ncurses"
 myconf="$myconf --enable-xaw --enable-ncurses"
