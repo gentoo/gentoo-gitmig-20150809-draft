@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r1.ebuild,v 1.3 2004/10/05 19:38:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r2.ebuild,v 1.1 2004/10/19 21:18:02 eradicator Exp $
 
 IUSE="nls gnome opengl oggvorbis mikmod alsa oss esd mmx"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/beepmp/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="x86 ~sparc ~amd64 ~ppc"
 
 RDEPEND="app-arch/unzip
 	>=x11-libs/gtk+-2.4
@@ -59,13 +59,10 @@ src_compile() {
 	econf \
 		--with-dev-dsp=/dev/sound/dsp \
 		--with-dev-mixer=/dev/sound/mixer \
+		--includedir=/usr/include/beep-media-player \
 		`use_enable oggvorbis vorbis` \
-		`use_enable oggvorbis oggtest` \
-		`use_enable oggvorbis vorbistest` \
 		`use_enable esd` \
-		`use_enable esd esdtest` \
 		`use_enable mikmod` \
-		`use_enable mikmod mikmodtest` \
 		`use_with mikmod libmikmod` \
 		`use_enable opengl` \
 		`use_enable nls` \
@@ -84,15 +81,14 @@ src_install() {
 	doins beep.svg
 	doins beep/beep_mini.xpm
 
+	dosym /usr/include/beep-media-player/bmp /usr/include/beep-media-player/xmms
+
 	# Get the app registered for KDE
 	insinto /usr/share/applnk/Multimedia
 	doins ${D}/usr/share/applications/bmp.desktop
 
-	# We'll use xmms skins / plugins for the time being
-
-	dodir /usr/share/beep
+	# We'll use xmms skins
 	dosym /usr/share/xmms/Skins /usr/share/beep/Skins
-	dosym /usr/share/xmms/Plugins /usr/share/beep/Plugins
 
 	# Plugins want beep-config, this wasn't included
 	dobin ${FILESDIR}/beep-config
@@ -105,6 +101,6 @@ pkg_postinst() {
 	einfo "This program is unstable on sparc when poking heavily with the GUI."
 	einfo "It's reportedly unstable on some x86 boxes also, YMMV."
 	echo
-	einfo "We're using xmms skins/plugins for the time being, they have been symlinked."
+	einfo "We're using xmms skins for the time being, they have been symlinked."
 	echo
 }

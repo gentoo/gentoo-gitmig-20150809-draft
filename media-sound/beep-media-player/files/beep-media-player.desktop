@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Beep Media Player
-Comment=Beep Media Player
-Encoding=Legacy-Mixed
-Exec=beep-media-player
-Icon=beep.svg
-MimeType=audio/x-scpls;audio/x-mpegurl;audio/mpegurl;audio/mp3;audio/x-mp3;audio/mpeg;audio/x-mpeg;audio/x-wav;application/x-ogg
-Terminal=0
-Type=Application
