@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.4.0.ebuild,v 1.1 2002/11/15 12:03:31 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.4.1.ebuild,v 1.1 2002/12/27 18:16:19 azarah Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="RhythmBox - an iTunes clone for GNOME"
 SRC_URI="http://www.rhythmbox.org/download/${P}.tar.gz"
 HOMEPAGE="http://www.rhythmbox.org/"
@@ -21,15 +21,27 @@ RDEPEND=">=x11-libs/gtk+-2.0.0
 	=gnome-base/libbonobo-2.0*
 	=gnome-base/bonobo-activation-1.0*
 	=gnome-base/libgnomecanvas-2.0*
-	>=media-libs/monkey-media-0.6.0
+	>=media-libs/monkey-media-0.6.1
 	>=gnome-base/gconf-1.2.1
 	>=gnome-base/ORBit2-2.4.1
 	>=sys-devel/gettext-0.11.1
-	>=media-libs/gst-plugins-0.4.2"
+	=media-libs/gst-plugins-0.4.2*"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	dev-util/intltool"
+
+
+src_unpack() {
+	
+	unpack ${A}
+
+	# Soften the message displayed at startup, and only do
+	# it once.  Ugly hack I know, but somebody with more C
+	# will have to fix this if need be ...
+	# <azarah@gentoo.org> (27 Dec 2002).
+	cd ${S}; epatch ${FILESDIR}/${PN}-0.4.1-check_gentoo-be-nicer.patch
+}
 
 src_install () {
 
@@ -43,7 +55,6 @@ src_install () {
 	
 }
 
-LIBTOOL_FIX="1"
-
 DOC="AUTHORS COPYING ChangeLog  INSTALL INSTALL.GNU HACKING NEWS README THANKS TODO"
 SCHEMA="rhythmbox.schemas"
+

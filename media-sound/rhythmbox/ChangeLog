@@ -1,10 +1,15 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.7 2002/12/04 19:45:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.8 2002/12/27 18:16:19 azarah Exp $
 
-*rhythmbox-0.4.0 (04 Dec 2002)
+*rhythmbox-0.4.1 (26 Dec 2002)
 
-  04 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
+  26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> rhythmbox-0.4.1.ebuild :
+  New version.
+
+*rhythmbox-0.4.0-r1 (04 Dec 2002)
+
+  04 Dec 2002; Martin Schlemmer <azarah@gentoo.org> rhythmbox-0.4.0-r1.ebuild :
   Fix crash if LANG not set, closing bug #10946.
 
 *rhythmbox-0.4.0 (15 Nov 2002)
