@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r3.ebuild,v 1.5 2004/10/08 00:01:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r3.ebuild,v 1.6 2004/10/08 04:53:54 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -161,7 +161,7 @@ src_install() {
 	fi
 
 	cd ${S}/doc
-	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
+	dodoc INSTALL README WISHLIST
 	docinto txt
 	dodoc HOWTO LSM README.* *.txt
 

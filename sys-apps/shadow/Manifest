@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 5b423dcdf2cb80e422412e25319e878c ChangeLog 13453
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 049d760ceef1080f7af1ce165ac6cf1e shadow-4.0.4.1-r4.ebuild 5988
-MD5 91635d256aa7c6804336bb55b7263d71 shadow-4.0.4.1-r3.ebuild 5961
+MD5 2447ad2a0036a0c962627d3f8ae56f1f shadow-4.0.4.1-r4.ebuild 5979
+MD5 5e8918c1ffa5fc209873b54e7ac7bc44 shadow-4.0.4.1-r3.ebuild 5944
 MD5 cef6788bc7c8c5468c1b1f68df77ed9e files/digest-shadow-4.0.4.1-r4 67
 MD5 e70a5f61d37c3c67a4b860d8a6191dbc files/securetty 230
 MD5 058f760e522ab65e270293003805fe61 files/shadow-4.0.4.1-userdel-missing-brackets.patch 380
@@ -25,7 +25,7 @@ MD5 1baa646400c4a596290e9d4b9e1c09b2 files/pam.d/system-auth-1.1 491
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBZdjsHTu7gpaalycRAn1RAJwLS0LOjQDdKZvDpyvw2JFhQUnziwCgvlSn
-SQ32w/TcAHFtlMB7sh07/lk=
-=d9hx
+iD8DBQFBZh1vHTu7gpaalycRAmiSAJ9PCvDxmO+U+wS2TQrT73gwTo74bwCgr+17
+sCFCmiOzFk6mF48/hHEfFCA=
+=kopE
 -----END PGP SIGNATURE-----
