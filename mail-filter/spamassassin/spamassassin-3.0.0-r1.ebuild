@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.0-r1.ebuild,v 1.1 2004/09/24 16:22:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.0-r1.ebuild,v 1.2 2004/10/16 14:02:51 mcummings Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.apache.org/dist/spamassassin/${MY_P}.tar.bz2"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64"
-IUSE="berkdb ssl doc"
+IUSE="berkdb qmail ssl doc"
 
 DEPEND=">=dev-lang/perl-5.8.2-r1
 	>=dev-perl/PodParser-1.22
@@ -82,8 +82,7 @@ mydoc="NOTICE
 	STATISTICS.set2
 	STATISTICS.set3"
 
-# Commented out until qmail is a valid keyword - mcummings
-#use qmail && mydoc="${mydoc} README.qmail"
+use qmail && mydoc="${mydoc} README.qmail"
 
 
 src_move_doc() {
@@ -138,10 +137,6 @@ src_compile() {
 		make text_html_doc
 	fi
 
-	# FIXME: Remove the following block in the final ebuild.
-	if [ "${PV//[^_]/}" == _ ]; then
-		hasq maketest $FEATURES || perl-module_src_test
-	fi
 }
 
 src_install () {
