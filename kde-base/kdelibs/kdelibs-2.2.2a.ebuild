@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2a.ebuild,v 1.7 2002/12/09 04:25:04 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2a.ebuild,v 1.8 2003/01/06 08:39:08 hannes Exp $
 
 IUSE="ssl cups ipv6 alsa"
 inherit kde kde.org
@@ -22,18 +22,18 @@ S=$WORKDIR/kdelibs-2.2.2
 DEPEND=""
 RDEPEND=""
 newdepend ">=sys-devel/gcc-2.95.2
-		virtual/glibc
-		sys-devel/perl
-		>=media-libs/audiofile-0.1.9
-		>=sys-apps/bzip2-1.0.1
-		>=dev-libs/libxslt-1.0.7
-		>=dev-libs/libpcre-3.5
-		>=dev-libs/libxml2-2.4.10
-		ssl? ( >=dev-libs/openssl-0.9.6 )
-		alsa? ( >=media-libs/alsa-lib-0.5.9 )
-		cups? ( net-print/cups )
-		>=media-libs/tiff-3.5.5
-		app-admin/fam-oss"
+	virtual/glibc
+	sys-devel/perl
+	>=media-libs/audiofile-0.1.9
+	>=sys-apps/bzip2-1.0.1
+	>=dev-libs/libxslt-1.0.7
+	>=dev-libs/libpcre-3.5
+	>=dev-libs/libxml2-2.4.10
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	alsa? ( >=media-libs/alsa-lib-0.5.9 >=media-sound/alsa-driver-0.5.9 )
+	cups? ( net-print/cups )
+	>=media-libs/tiff-3.5.5
+	app-admin/fam-oss"
 
 DEPEND="$DEPEND
 	sys-devel/make

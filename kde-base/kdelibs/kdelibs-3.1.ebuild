@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.9 2002/12/08 20:58:48 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.10 2003/01/06 08:39:08 hannes Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -26,7 +26,7 @@ newdepend "sys-devel/perl
 	>=dev-libs/libpcre-3.5
 	>=dev-libs/libxml2-2.4.10
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	alsa? ( >=media-libs/alsa-lib-0.5.9 )
+	alsa? ( >=media-libs/alsa-lib-0.5.9 >=media-sound/alsa-driver-0.5.9 )
 	cups? ( >=net-print/cups-1.1.14 )
 	>=media-libs/tiff-3.5.5
 	app-admin/fam-oss
