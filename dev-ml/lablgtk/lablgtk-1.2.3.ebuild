@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.3.ebuild,v 1.11 2004/05/28 20:56:38 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.3.ebuild,v 1.12 2004/06/03 17:11:56 agriffis Exp $
 
 IUSE="gnome opengl"
 
@@ -33,11 +33,11 @@ src_compile() {
 
 	local myconf
 
-	if [ `use gnome` ]; then
+	if use gnome; then
 		myconf="$myconf USE_GNOME=1 USE_GLADE=1"
 	fi
 
-	if [ `use opengl` ]; then
+	if use opengl; then
 		myconf="$myconf USE_GL=1"
 	fi
 
