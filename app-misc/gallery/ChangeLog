@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gallery
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/ChangeLog,v 1.24 2004/04/21 19:10:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/ChangeLog,v 1.25 2004/04/21 19:20:57 mholzer Exp $
+
+  21 Apr 2004; Martin Holzer <mholzer@gentoo.org> gallery-1.4.1_p1.ebuild,
+  gallery-1.4.2.ebuild, gallery-1.4.3.ebuild:
+  adding IUSE
 
 *gallery-1.4.3 (21 Apr 2004)
 

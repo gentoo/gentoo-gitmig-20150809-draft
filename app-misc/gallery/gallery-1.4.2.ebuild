@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.2.ebuild,v 1.2 2004/02/23 17:52:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.2.ebuild,v 1.3 2004/04/21 19:20:57 mholzer Exp $
 
 inherit webapp-apache
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="apache2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 DEPEND=">=net-www/apache-1.3.24-r1
 	>=dev-php/mod_php-4.1.2-r5
