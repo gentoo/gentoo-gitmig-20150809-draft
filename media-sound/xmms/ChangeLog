@@ -1,23 +1,28 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.30 2002/10/17 21:08:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.31 2002/11/15 00:39:27 vapier Exp $
+
+*xmms-1.2.7-r15 (14 Nov 2002)
+
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Made src_install delete ${D}/usr/lib/xmms/Input/libidcin.so.
+  It causes ppc users to crash and the xmms developers have removed
+  it from the distribution anyways.
 
 *xmms-1.2.7-r14 (17 Oct 2002)
 
   17 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
-
   Add back the patch to link xmms against libstdc++, as some plugins
   need it.
 
 *xmms-1.2.7-r13 (23 Aug 2002)
 
   12 Oct 2002; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r13.ebuild :
-
   Added directfb to IUSE.  XMMS doesn't need it, but will link to it if
   present, so it needs to be recompiled if DirectFB is updated.
 
-  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> xmms-1.2.7-r13.ebuild : Added
-  sparc/sparc64 keywords. Revamped ChangeLog layout.
+  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> xmms-1.2.7-r13.ebuild :
+  Added sparc/sparc64 keywords. Revamped ChangeLog layout.
 
   23 Aug 2002; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r13.ebuild
   files/digest-xmms-1.2.7-r13 : Removed all avi stuff from xmms ebuild,
