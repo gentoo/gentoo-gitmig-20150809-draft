@@ -1,9 +1,19 @@
 # ChangeLog for dev-libs/libmrproject
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/ChangeLog,v 1.11 2002/12/13 10:56:29 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/ChangeLog,v 1.12 2003/02/03 04:06:18 spider Exp $
 
+
+*libmrproject-0.8 (02 Feb 2003)
+  
+  02 Feb 2003; Spider <spider@gentoo.org> libmrproject-0.8.ebuild :
+  bumped the version
+
+
+*unknown version entry....
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+      // Spider - for what version? - 
+
+   
 *libmrproject-0.7 (02 Dec 2002)
   
   06 Dec 2002; Martin Holzer <mholzer@gentoo.org> libmrproject-0.7.ebuild :
