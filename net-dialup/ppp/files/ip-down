@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# this is a script which is executed after connecting the ppp interface.
+# this is a script which is executed after disconnecting the ppp interface.
 # look at man pppd for details
 
 # the followings parameters are available:
