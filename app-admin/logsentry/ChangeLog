@@ -1,11 +1,14 @@
 # ChangeLog for app-admin/logsentry
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.5 2003/02/12 02:24:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.6 2003/03/28 10:27:14 pvdabeel Exp $
 
   07 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> logsentry-1.1.1.ebuild :
   Updated dependencies, closes #13332.
 
 *logsentry-1.1.1 (27 Sept. 2002)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> logsentry-1.1.1 :
+  Moved to stable on ppc
 
   07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> logsentry-1.1.1 :
   Changed sparc64 to sparc keyword
