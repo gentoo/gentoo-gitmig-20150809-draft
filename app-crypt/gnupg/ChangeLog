@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.70 2004/07/31 22:44:51 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.71 2004/08/05 18:34:29 slarti Exp $
+
+  05 Aug 2004; Tom Martin <slarti@gentoo.org> gnupg-1.2.5.ebuild:
+  Marked ~amd64, resolving 59409. Thanks to Jens Ott <jo@plusserver.de> for
+  reporting.
 
   31 Jul 2004; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.5.ebuild:
   installation fails with nls enabled, using sed to make the
