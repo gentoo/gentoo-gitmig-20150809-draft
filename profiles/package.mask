@@ -439,10 +439,6 @@ dev-php/mod_php
 # with the new pam rollout. ( Woodchip - Mar 20 2002)
 >=sys-apps/shadow-5
 
-# mask older packages due to version change .. new one will be seen
-# by portage as older ....
->=net-mail/postfix-20010000
-
 # earlier versions are exploitable
 <sys-apps/at-3.1.8-r7
 
@@ -976,8 +972,8 @@ net-mail/spamassassin
 =sys-apps/util-linux-2.11r-r1
 
 # raker@gentoo.org 10 Jul 2002
-# net-mail/postfix/postfix-1.1.11-r2 masked for testing saslv2 patch
-=net-mail/postfix-1.1.11-r2
+# postfix-1.1.11-r3.ebuild provided by Alexander Holler (NMU) Please test!
+>=net-mail/postfix-1.1.11-r2
 
 # stroke@gentoo.org 11 Jul 2002
 # app-cdr/eroaster-2.1.0 development branch #4250, masked for testing
