@@ -1,6 +1,6 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.41 2004/07/11 19:44:00 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.42 2004/07/18 14:13:54 aliz Exp $
 
 *webapp-config-1.10-r5 (11 Jul 2004)
 
@@ -9,7 +9,7 @@
   Version bump; fix for broken CONFIG_PROTECT behaviour; new variables exported
   for hook scripts & post install text files
 
-*webapp-config-1.10-r3 (07 Jul 2004)
+*webapp-config-1.10-r4 (07 Jul 2004)
 
   07 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   +webapp-config-1.10-r3.ebuild:

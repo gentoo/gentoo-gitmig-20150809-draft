@@ -1,9 +1,11 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.56 2004/07/07 02:34:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.57 2004/07/18 14:13:54 aliz Exp $
 
   07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.2.2.ebuild:
   Stable on alpha.
+
+*epiphany-1.2.6 (19 Jun 2004)
 
   19 Jun 2004; Yi Qiang <khai@gentoo.org> :
   Version bump, fixes compilation with latest mozilla trunks
