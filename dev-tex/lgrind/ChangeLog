@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/lgrind
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.1 2003/10/02 15:28:23 obz Exp $
+
+*lgrind-3.67 (02 Oct 2003)
+
+  02 Oct 2003; Mike Gardiner <obz@gentoo.org> lgrind-3.67.ebuild,
+  metadata.xml:
+  First version of lgrind. Thanks to <steingrd@ifi.uio.no> for request and
+  ebuild submission on bug #28279
+
