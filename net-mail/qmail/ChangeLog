@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.38 2003/09/01 05:22:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.39 2003/09/01 19:38:09 robbat2 Exp $
+
+  01 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild:
+  more tweaks to r12
 
   31 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
   files/1.03-r12/config-sanity-check, files/1.03-r12/maildir-quota-fix.patch,
