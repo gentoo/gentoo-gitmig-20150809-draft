@@ -1,0 +1,16 @@
+Index: tools/fstab-sync.c
+===================================================================
+RCS file: /cvs/hal/hal/tools/fstab-sync.c,v
+retrieving revision 1.27
+diff -u -r1.27 fstab-sync.c
+--- tools/fstab-sync.c	21 Oct 2004 21:27:44 -0000	1.27
++++ tools/fstab-sync.c	8 Dec 2004 13:14:04 -0000
+@@ -1506,7 +1506,7 @@
+ 
+ static boolean fs_table_line_is_mounted (FSTableLine *line)
+ {
+-  FILE *f;
++  FILE *f = NULL;
+   boolean is_mounted = FALSE;
+   struct mntent *m;
+ 

@@ -1,42 +1,47 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.1.ebuild,v 1.4 2004/12/20 09:31:34 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.2-r1.ebuild,v 1.1 2004/12/22 17:51:30 foser Exp $
 
-inherit eutils debug python
+inherit eutils python
 
 DESCRIPTION="Hardware Abstraction Layer"
 HOMEPAGE="http://www.freedesktop.org/Software/hal"
-SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
+SRC_URI="http://freedesktop.org/~david/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
-IUSE=""
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~ppc64"
+IUSE="debug pcmcia"
 
-RDEPEND=">=dev-libs/glib-2.2.2
+RDEPEND=">=dev-libs/glib-2.4
 	>=sys-apps/dbus-0.22-r1
 	dev-libs/expat
 	sys-fs/udev
 	sys-apps/hotplug
 	sys-libs/libcap
+	>=sys-apps/util-linux-2.12i
 	sys-kernel/linux26-headers"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.29"
 
+# dep on a specific util-linux version for 
+# managed mount patches #70873
+
 src_unpack() {
 
 	unpack ${A}
 
 	cd ${S}
-	# remove RH only stuff
-	epatch ${FILESDIR}/${PN}-0.4.0-old_storage_policy.patch
+	# remove pamconsole option
+	epatch ${FILESDIR}/${PN}-0.4.1-old_storage_policy.patch
 	# fix floppy drives be shown
 	epatch ${FILESDIR}/${PN}-0.4.0-allow-floppy-drives.patch
-	# smallish device manaager fix
-	cd ${S}/tools/device-manager
-	epatch ${FILESDIR}/${P}-dm_devices_tab.patch
+	# fix for some odd cdromdrives giving misinformation
+	epatch ${FILESDIR}/${P}-cdrom_media_check.patch
+	# fix possible fstab sync crash
+	epatch ${FILESDIR}/${P}-fstab_sync_crash.patch
 
 }
 
@@ -44,6 +49,8 @@ src_compile() {
 
 	# FIXME : docs
 	econf \
+		`use_enable debug verbose-mode` \
+		`use_enable pcmcia pcmcia-support` \
 		--enable-fstab-sync \
 		--enable-hotplug-map \
 		--disable-doxygen-docs \
@@ -89,7 +96,7 @@ pkg_postinst() {
 	ewarn "that will create mount rules for non-existing devices in"
 	ewarn "fstab if needed, mount points will be created in /media."
 	ewarn "This functionality alters /etc/fstab runtime on the filesystem"
-	ewarn "and might have unforseen side-effects."
+	ewarn "and should be considered a security risk."
 	echo
 	einfo "The HAL daemon needs to be running for certain applications to"
 	einfo "work. Suggested is to add the init script to your start-up"

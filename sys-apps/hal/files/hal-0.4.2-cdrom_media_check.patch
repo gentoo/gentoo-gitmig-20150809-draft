@@ -1,0 +1,31 @@
+--- hal-0.4.2/hald/linux/block_class_device.c
++++ hal-0.4.2.new/hald/linux/block_class_device.c
+@@ -354,7 +354,7 @@
+ 	}
+ 	
+ 	/* while we're at it, check if we support media changed */
+-	if (ioctl (fd, CDROM_MEDIA_CHANGED) >= 0) {
++	if (capabilities & CDC_MEDIA_CHANGED) {
+ 		hal_device_property_set_bool (d, "storage.cdrom.support_media_changed", TRUE);
+ 	} else {
+ 		hal_device_property_set_bool (d, "storage.cdrom.support_media_changed", FALSE);
+@@ -879,7 +879,18 @@
+ 			break;
+ 			
+ 		case CDS_DISC_OK:
+-			got_media = TRUE;
++			HAL_INFO (("CD-ROM drive %s is reported to contain a CD.", device_file));
++
++			/* some CD-ROMs report CDS_DISK_OK even with an open
++			 * tray; if media check has the same value two times in
++			 * a row then this seems to be the case and we must not
++			 * report that there is a media in it. */
++			if (hal_device_property_get_bool (d, "storage.cdrom.support_media_changed") &&
++			    ioctl (fd, CDROM_MEDIA_CHANGED, CDSL_CURRENT) && 
++			    ioctl (fd, CDROM_MEDIA_CHANGED, CDSL_CURRENT)) 
++				HAL_INFO (("CD-ROM drive %s: media checking is broken, assuming no CD is inside.", device_file));
++			else
++			    got_media = TRUE;
+ 			break;
+ 			
+ 		case -1:
