@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.0.2.ebuild,v 1.7 2004/08/12 14:58:42 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.0.2.ebuild,v 1.8 2004/08/19 22:44:44 foser Exp $
 
 inherit gnome2 eutils
 
@@ -23,7 +23,6 @@ RDEPEND=">=dev-libs/pwlib-1.6.6
 	>=gnome-base/libbonobo-2.0
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/libgnome-2.0
-	>=net-libs/linc-0.5.0
 	>=x11-libs/gtk+-2.0.0
 	>=dev-libs/glib-2.0.0
 	>=gnome-base/gconf-2.0

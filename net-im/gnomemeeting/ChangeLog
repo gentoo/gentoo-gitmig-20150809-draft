@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.39 2004/08/12 14:58:42 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.40 2004/08/19 22:44:44 foser Exp $
+
+  19 Aug 2004; foser <foser@gentoo.org> gnomemeeting-1.0.2.ebuild :
+  Remove linc dep for future releases (#45789)
+  Add long description to metadata (#45789)
 
   12 Aug 2004; Mike Gardiner <obz@gentoo.org> gnomemeeting-1.0.2.ebuild:
   Added fix for GConf permissions, see bug #59764
