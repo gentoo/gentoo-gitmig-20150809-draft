@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.19 2003/12/15 05:20:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.20 2003/12/17 07:03:48 kumba Exp $
+
+  17 Dec 2003; Joshua Kinard <kumba@gentoo.org> mips-sources-2.4.22-r1.ebuild,
+  mips-sources-2.4.22-r2.ebuild, mips-sources-2.4.22-r3.ebuild,
+  mips-sources-2.4.22-r5.ebuild:
+  Removed 2.4.22-r1 through -r3 ebuilds, and bump 2.4.22-r5 ebuild to mips stable
 
 *mips-sources-2.4.23-r1 (15 Dec 2003)
 
