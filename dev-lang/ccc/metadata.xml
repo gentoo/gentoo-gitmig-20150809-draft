@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>taviso@gentoo.org</email>
+  <name>Tavis Ormandy</name>
+</maintainer>
+<longdescription>
+Compaq C for Linux Alpha Systems provides the same code optimization technology used in Compaq Fortran for Linux Alpha Systems, which is current with the very latest compilers for Compaq Tru64 UNIX. This can provide significant performance improvements in applications previously built for Linux Alpha. Improvements of a factor of two or more have been seen in some floating-point intensive applications, while more modest improvements on the order of 15% to 30% are more often seen for integer codes.
+
+The Compaq C compiler is a standards-compliant, multi-dialect, feature-rich implementation of the C language. It contains a highly optimizing code generator specifically designed to exploit the 64-bit Alpha architecture. It is particularly well-suited and contains extended support for systems programming, parallel programming, and mathematical computing.
+
+The compiler supports most language features and options provided by the newest C compilers for Tru64 UNIX. This compiler also extends the language dialect and diagnostic message controls found in the most recent Tru64 UNIX C compilers to provide better compatibility with gcc, and adds compatibility with the gcc command line to minimize makefile changes.
+</longdescription>
+</pkgmetadata>
