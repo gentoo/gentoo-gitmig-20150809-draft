@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.64 2005/02/17 22:06:55 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.65 2005/02/18 04:54:54 tester Exp $
+
+  17 Feb 2005; Olivier Crête <tester@gentoo.org> cyrus-imapd-2.2.12.ebuild:
+  Marking stable on x86 for security bug #82404
 
 *cyrus-imapd-2.2.12 (17 Feb 2005)
 
