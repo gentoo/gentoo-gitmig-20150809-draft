@@ -13,7 +13,7 @@ DEPEND="virtual/glibc virtual/x11"
 RDEPEND=">=net-misc/openssh-2.3.0 virtual/x11"
 
 src_compile() {
-    try ./configure 
+    try ./configure --prefix=/usr --libexecdir=/usr/lib/misc 
     try xmkmf
     try make includes
     try make
@@ -23,7 +23,7 @@ src_compile() {
 src_install() {
     newman x11-ssh-askpass.man x11-ssh-askpass.1 
     dobin x11-ssh-askpass
+    dodir /usr/lib/misc
+    dosym /usr/bin/x11-ssh-askpass /usr/lib/misc/ssh-askpass
     dodoc ChangeLog README TODO
-    docinto html
-    dodoc *.html
 }
