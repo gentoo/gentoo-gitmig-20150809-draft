@@ -1,0 +1,11 @@
+--- util/fluxbox-generate_menu.in.orig	2005-01-24 14:53:07.125141280 +0000
++++ util/fluxbox-generate_menu.in	2005-01-24 15:07:09.921016832 +0000
+@@ -1165,6 +1169,8 @@
+                find_it cdcd        append "[exec] (cdcd) {${DEFAULT_TERM} -e cdcd}"
+                find_it cplay       append "[exec] (cplay) {${DEFAULT_TERM} -e cplay}"
+                find_it alsamixer   append "[exec] (AlsaMixer) {${DEFAULT_TERM} -e alsamixer}"
++               find_it orpheus     append "[exec] (orpheus) {${DEFAULT_TERM} -e orpheus}"
++               find_it mp3blaster  append "[exec] (mp3blaster) {${DEFAULT_TERM} -e mp3blaster}"
+        append_menu_end
+ 
+ 

@@ -1,6 +1,23 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.140 2005/01/19 10:06:12 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.141 2005/01/24 18:50:37 ciaranm Exp $
+
+*fluxbox-0.9.12-r1 (24 Jan 2005)
+
+  24 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/0.9.12/fluxbox-0.9.12-3853-zero-is-not-null.patch,
+  +files/0.9.12/fluxbox-0.9.12-3853-zero-is-still-not-null.patch,
+  +files/0.9.12/fluxbox-0.9.12-3856-hide-and-seek-is-bad.patch,
+  +files/0.9.12/fluxbox-0.9.12-3860-menu-backups.patch,
+  +files/0.9.12/fluxbox-0.9.12-pretty-eye-candy.patch,
+  +files/0.9.12/fluxbox-0.9.12-sweet-sweet-music.patch,
+  +files/0.9.12/fluxbox-0.9.12-vi-sucks-use-vim.patch,
+  +files/0.9.12/fluxbox-0.9.12-you-got-mail.patch,
+  +fluxbox-0.9.12-r1.ebuild, -fluxbox-0.9.12.ebuild:
+  Killed 0.9.12, added a 0.9.12-r1 which hopefully doesn't have nasty
+  vanishing window bugs. Patches: vanishing window on untab fix (upstream),
+  64-bit fixes (upstream), fix menu backups (upstream), menu locations
+  (Gentoo), icon locations (Gentoo), extra menu contents (Gentoo).
 
   19 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> fluxbox-0.9.12.ebuild:
   Fix imlib2 option

@@ -1,0 +1,43 @@
+--- util/fluxbox-generate_menu.in.orig	2005-01-24 14:53:07.125141280 +0000
++++ util/fluxbox-generate_menu.in	2005-01-24 15:07:09.921016832 +0000
+@@ -153,21 +153,25 @@
+     if [ -z "${INSTALL}" ]; then
+         echo -n "      $*" >> ${MENUFILENAME}
+         execname="`echo $*|cut -d\( -f2|cut -d\) -f1`"
+-        if [ "${PNG_ICONS}" = "no" ]; then
+-            if [ -r "${HOME}/.fluxbox/icons/$execname.xpm" ]; then
+-                echo "<${HOME}/.fluxbox/icons/$execname.xpm>"  >> ${MENUFILENAME}
+-            else
+-                echo >> ${MENUFILENAME}
+-            fi
+-        else
+-            if [ -r "${HOME}/.fluxbox/icons/$execname.png" ]; then
+-                echo "<${HOME}/.fluxbox/icons/$execname.png>"  >> ${MENUFILENAME}
+-            elif [ -r "${HOME}/.fluxbox/icons/$execname.xpm" ]; then
+-                echo "<${HOME}/.fluxbox/icons/$execname.xpm>"  >> ${MENUFILENAME}
+-            else
+-                echo >> ${MENUFILENAME}
+-            fi
+-        fi
++        for P in {${HOME}/.fluxbox,/usr/share,/usr/local/share}/{icons,pixmaps} ; do
++            for S in "" "-icon" ; do
++                if [ "${PNG_ICONS}" = "no" ]; then
++                    if [ -r "${P}/$execname${S}.xpm" ]; then
++                        echo -n "<${P}/$execname${S}.xpm>"  >> ${MENUFILENAME}
++                        break
++                    fi
++                else
++                    if [ -r "${P}/$execname${S}.png" ]; then
++                        echo -n "<${P}/$execname${S}.png>"  >> ${MENUFILENAME}
++                        break
++                    elif [ -r "${P}/$execname${S}.xpm" ]; then
++                        echo -n "<${P}/$execname${S}.xpm>"  >> ${MENUFILENAME}
++                        break
++                    fi
++                fi
++            done
++        done
++        echo >> ${MENUFILENAME}
+     else
+         echo "      $*" >> ${MENUFILENAME}
+     fi

@@ -1,0 +1,15 @@
+--- trunk/src/Window.cc	2005/01/20 12:40:02	3855
++++ trunk/src/Window.cc	2005/01/20 22:41:34	3856
+@@ -3483,9 +3483,10 @@
+             detachClient(*old_attached);
+             // move window by relative amount of mouse movement
+             // since just detached, move relative to old location
+-            if (client.m_win != 0)
++            if (client.m_win != 0) {
+                 client.m_win->move(frame().x() - m_last_resize_x + x, frame().y() - m_last_resize_y + y);
+-
++                client.m_win->show();
++                }
+         }
+ 	else if(attach_to_win==this && attach_to_win->isTabable()) {
+ 		//reording of tabs within a frame

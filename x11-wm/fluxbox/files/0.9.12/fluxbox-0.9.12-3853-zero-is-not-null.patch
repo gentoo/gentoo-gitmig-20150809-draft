@@ -1,0 +1,16 @@
+--- /trunk/src/FbCommands.cc	2005/01/18 19:06:04	3852
++++ trunk/src/FbCommands.cc	2005/01/20 12:30:35	3853
+@@ -131,11 +131,11 @@
+         displaystring += intbuff;
+         setsid();
+         putenv(const_cast<char *>(displaystring.c_str()));
+-        execl("/bin/sh", "/bin/sh", "-c", m_cmd.c_str(), 0);
++        execl("/bin/sh", "/bin/sh", "-c", m_cmd.c_str(), static_cast<void*>(NULL));
+         exit(0);
+     }
+ #else //   __EMX__
+-    spawnlp(P_NOWAIT, "cmd.exe", "cmd.exe", "/c", m_cmd.c_str(), 0);
++    spawnlp(P_NOWAIT, "cmd.exe", "cmd.exe", "/c", m_cmd.c_str(), static_cast<void*>(NULL));
+ #endif // !__EMX__
+ 
+ }

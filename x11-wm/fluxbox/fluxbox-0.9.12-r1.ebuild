@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.12.ebuild,v 1.3 2005/01/19 10:33:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.12-r1.ebuild,v 1.1 2005/01/24 18:50:37 ciaranm Exp $
 
 inherit eutils
 
@@ -38,6 +38,18 @@ src_unpack() {
 	# files in menu [include] items. This patch will allow us to do clever
 	# things with style ebuilds.
 	epatch ${FILESDIR}/${PV}/${P}-our-styles-go-over-here.patch
+
+	# menu generator things
+	epatch ${FILESDIR}/${PV}/${P}-you-got-mail.patch
+	epatch ${FILESDIR}/${PV}/${P}-sweet-sweet-music.patch
+	epatch ${FILESDIR}/${PV}/${P}-vi-sucks-use-vim.patch
+	epatch ${FILESDIR}/${PV}/${P}-pretty-eye-candy.patch
+
+	# fixes
+	epatch ${FILESDIR}/${PV}/${P}-3853-zero-is-not-null.patch
+	epatch ${FILESDIR}/${PV}/${P}-3853-zero-is-still-not-null.patch
+	epatch ${FILESDIR}/${PV}/${P}-3856-hide-and-seek-is-bad.patch
+	epatch ${FILESDIR}/${PV}/${P}-3860-menu-backups.patch
 
 	# Add in the Gentoo -r number to fluxbox -version output.
 	if [[ "${PR}" == "r0" ]] ; then

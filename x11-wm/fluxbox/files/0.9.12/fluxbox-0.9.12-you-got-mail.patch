@@ -1,0 +1,12 @@
+--- util/fluxbox-generate_menu.in.orig	2005-01-24 14:43:03.503905656 +0000
++++ util/fluxbox-generate_menu.in	2005-01-24 14:44:17.793611904 +0000
+@@ -1089,7 +1089,9 @@
+ 
+     append_submenu Mail
+         normal_find sylpheed kmail evolution thunderbird mozilla-thunderbird
++        normal_find sylpheed-claws
+         find_it mutt        append "[exec]   (mutt) {${DEFAULT_TERM} -e mutt}"
++        find_it pine        append "[exec]   (pine) {${DEFAULT_TERM} -e pine}"
+     append_menu_end
+ 
+     append_submenu News

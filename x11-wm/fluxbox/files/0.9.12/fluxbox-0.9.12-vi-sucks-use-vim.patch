@@ -1,0 +1,16 @@
+--- util/fluxbox-generate_menu.in.orig	2005-01-24 14:53:07.125141280 +0000
++++ util/fluxbox-generate_menu.in	2005-01-24 15:07:09.921016832 +0000
+@@ -1131,10 +1135,10 @@
+ 
+ append_submenu "${EDITORMENU}"
+     normal_find gvim bluefish nedit gedit xedit kword kwrite kate anjuta \
+-        wings xemacs emacs kvim cream
++        wings xemacs emacs kvim cream evim
+     find_it     nano   append "[exec]   (nano)     {${DEFAULT_TERM} -e nano}"
+-    find_it     vi     append "[exec]   (vi)       {${DEFAULT_TERM} -e vi}" ||\
+-        find_it     vim    append "[exec]   (vim)      {${DEFAULT_TERM} -e vim}"
++    find_it     vim     append "[exec]   (vim)       {${DEFAULT_TERM} -e vim}" ||\
++        find_it     vi    append "[exec]   (vi)      {${DEFAULT_TERM} -e vi}"
+     find_it     zile   append "[exec]   (zile)     {${DEFAULT_TERM} -e zile}"
+     find_it     jed    append "[exec]   (jed)      {${DEFAULT_TERM} -e jed}"
+     find_it     emacs  append "[exec]   (emacs-nw) {${DEFAULT_TERM} -e emacs -nw}"
