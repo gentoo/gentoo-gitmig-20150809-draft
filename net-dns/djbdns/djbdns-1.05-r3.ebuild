@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.13 2004/03/27 16:03:29 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.14 2004/06/09 21:02:43 agriffis Exp $
 
 DESCRIPTION="Excellent high-performance DNS services"
 SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
@@ -20,7 +20,7 @@ S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	if [ `use ipv6` ] ; then
+	if use ipv6 ; then
 		bzcat ${DISTDIR}/djbdns-1.05-test17.diff.bz2 | \
 		patch -d ${S} -p1 || die "Failed to apply the ipv6 patch"
 	fi
