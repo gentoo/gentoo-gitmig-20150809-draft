@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r10.ebuild,v 1.9 2003/02/08 00:27:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r10.ebuild,v 1.10 2003/02/10 12:03:59 seemant Exp $
 
 IUSE="berkdb gdbm"
 
@@ -77,7 +77,7 @@ src_compile() {
 		${myconf} || die
 	# add optimization flags
     cp config.sh config.sh.orig
-    sed -e "s/optimize='-O2'/optimize=\'${CFLAGS}\'/" config.sh.orig > config.sh
+    sed -e "s:optimize='-O2':optimize=\'${CFLAGS}\':" config.sh.orig > config.sh
 	# create libperl.so and move it out of the way
 	mv -f Makefile Makefile_orig
 	sed -e 's#^CCDLFLAGS = -rdynamic -Wl,-rpath,/usr/lib/perl5/.*#CCDLFLAGS = -rdynamic#' \
@@ -139,7 +139,7 @@ EOF
 
     #Optimize ;)
     cp config.sh config.sh.orig
-    sed -e "s/optimize='-O2'/optimize=\'${CFLAGS}\'/" config.sh.orig > config.sh
+    sed -e "s:optimize='-O2':optimize=\'${CFLAGS}\':" config.sh.orig > config.sh
     #THIS IS USED LATER:
     export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 
