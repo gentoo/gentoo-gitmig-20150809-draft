@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/imp3sh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/ChangeLog,v 1.1 2003/03/27 10:13:31 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/ChangeLog,v 1.2 2003/06/12 21:00:10 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> imp3sh-0.2.3.ebuild:
+  fix Header
 
 *imp3sh-0.2.3 (16 Mar 2003)
   

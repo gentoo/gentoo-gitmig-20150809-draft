@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
-
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.2.14.ebuild,v 1.2 2003/06/12 20:57:16 msterret Exp $
 
 DESCRIPTION="gAlan - Graphical Audio Language"
 SRC_URI="mirror://sourceforge/galan/${P}.tar.gz"
