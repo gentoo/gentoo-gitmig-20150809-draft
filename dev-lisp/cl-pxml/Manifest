@@ -1,7 +1,0 @@
-MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
-MD5 f3c276d0d0f8401f457cbcb36e9dcd03 cl-pxml-20030325.ebuild 942
-MD5 e37d3a59f7fa76a4a055f53bd85c2d18 ChangeLog 483
-MD5 4b2a2a9b68656ff431ee8a42a4ab2392 files/pxml.asd 417
-MD5 f63cd1b313a37c1b83b1f3683ea80deb files/digest-cl-pxml-20030325 68
-MD5 7c9071a34b1da982b0af9de90a394c55 files/pxml-20030325-gentoo.patch 2929
-MD5 bbb59dd54bc4d55b47dc59a45bd238a0 files/pxml-gentoo.patch 1535
