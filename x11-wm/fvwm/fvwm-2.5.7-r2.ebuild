@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.9 2003/09/05 00:56:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.10 2003/09/08 08:21:46 taviso Exp $
 
 inherit gnuconfig
 
@@ -53,7 +53,7 @@ src_unpack() {
 
 	use alpha && gnuconfig_update
 
-	# CFLAGS containing comma will break this, so change it for !
+	# CFLAGS containing comma (eg -mfpmath=sse,387) will break this, so change it for !
 	sed -i 's#\x27s,xCFLAGSx,$(CFLAGS),\x27#\x27s!xCFLAGSx!$(CFLAGS)!\x27#' ${S}/utils/Makefile.am
 
 	# Xft detection is totally b0rked if using pkg-config, this update from cvs.
