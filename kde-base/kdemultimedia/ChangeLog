@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.132 2004/11/06 18:39:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.133 2004/11/07 23:37:07 josejx Exp $
+
+  08 Nov 2004; Joseph Jezak <josejx@gentoo.org> kdemultimedia-3.3.1.ebuild:
+  Marked ppc stable.
 
   06 Nov 2004; Luca Barbato <lu_zero@gentoo.org> kdemultimedia-3.3.0.ebuild,
   kdemultimedia-3.3.1.ebuild:

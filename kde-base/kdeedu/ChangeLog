@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.98 2004/11/05 19:12:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.99 2004/11/07 23:42:17 josejx Exp $
+
+  08 Nov 2004; Joseph Jezak <josejx@gentoo.org> kdeedu-3.3.1.ebuild:
+  Marked ppc stable.
 
   05 Nov 2004; Caleb Tennis <caleb@gentoo.org> kdeedu-3.3.1.ebuild:
   x86 stable
