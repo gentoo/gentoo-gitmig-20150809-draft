@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.3a-r2.ebuild,v 1.3 2005/01/22 21:37:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.4.ebuild,v 1.1 2005/01/22 21:37:02 eradicator Exp $
 
 IUSE="crypt ldap ssl virus-scan"
 
@@ -35,7 +35,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 HOMEPAGE="http://www.squirrelmail.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ~ppc sparc x86"
 
 DEPEND="virtual/php
 	dev-perl/DB_File
@@ -48,9 +48,6 @@ src_unpack() {
 	cd ${S}
 	mv config/config_default.php config/config.php
 	epatch ${FILESDIR}/${PN}-fortune.patch
-
-	# Security bug #70739
-	epatch ${FILESDIR}/${P}-xss.patch
 
 	# Now do the plugins
 	cd ${S}/plugins
