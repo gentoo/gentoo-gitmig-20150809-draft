@@ -1,0 +1,13 @@
+--- src/tar.c.orig	2003-12-01 15:11:05.000000000 +0100
++++ src/tar.c	2004-01-03 22:53:47.403210688 +0100
+@@ -1244,6 +1244,10 @@
+ 	}
+     }
+ 
++  /* Hardcode absolute_names_option to enabled, to avoid getting bitten
++     by a buggy check that removes too much when ./ is in the path */
++  absolute_names_option = true;
++
+   /* Handle operands after any "--" argument.  */
+   for (; optind < argc; optind++)
+     {

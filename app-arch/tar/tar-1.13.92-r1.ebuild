@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.92.ebuild,v 1.1 2003/12/29 04:02:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.92-r1.ebuild,v 1.1 2004/01/04 16:54:34 seemant Exp $
 
 inherit eutils gnuconfig
 
@@ -20,6 +20,12 @@ DEPEND="app-arch/gzip
 	app-arch/ncompress"
 
 RDEPEND="nls? ( >=sys-devel/gettext-0.10.35 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-hardcode-absolute-names-to-on.diff
+}
 
 src_compile() {
 

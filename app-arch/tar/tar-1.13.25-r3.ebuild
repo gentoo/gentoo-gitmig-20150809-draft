@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.25-r3.ebuild,v 1.4 2003/12/17 04:10:09 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.25-r3.ebuild,v 1.5 2004/01/04 16:54:34 seemant Exp $
 
 inherit eutils gnuconfig
 
