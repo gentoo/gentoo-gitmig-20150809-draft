@@ -1,9 +1,16 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.4 2002/10/02 06:06:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.5 2002/10/19 03:45:17 seemant Exp $
 
+*netpbm-9.12-r4 (16 Oct 2002)
 
-*netpvm-9.12-r3 (01 Oct 2002)
+  16 Oct 2002; Seemant Kulleen <seemant@gentoo.org> netpbm-9.12-r4.ebuild
+  files/digest-netpbm-9.12-r4 :
+
+  Fixed symlinks pointing back to non-existent binaries in the sandbox.
+  Thanks to gaarde@yahoo.com (Paul Belt) in bug #9328.
+
+*netpbm-9.12-r3 (01 Oct 2002)
 
   01 Oct 2002; Seemant Kulleen <seemant@gentoo.org> netpbm-9.12-r3.ebuild :
 
