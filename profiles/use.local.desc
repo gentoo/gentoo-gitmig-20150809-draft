@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.384 2004/05/23 14:08:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.385 2004/05/23 14:27:20 jhhudso Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -233,6 +233,9 @@ net-dns/djbdns:fwdzone - enables forward zone patch
 net-dns/djbdns:ipv6arpa - enables ipv6 arpa patch
 net-dns/djbdns:multipleip - enables multi-IP patch
 net-dns/djbdns:roundrobin - enables round robin patch
+net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
+net-dns/djbdns:semanticfix - makes tinydns-data handle more semantic errors
+net-dns/djbdns:cnamefix - changes the CNAME behavior of dnscache
 net-dns/pdnsd:isdn - enable isdn features
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
