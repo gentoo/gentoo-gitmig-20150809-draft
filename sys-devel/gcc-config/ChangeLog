@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc-config
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.39 2003/11/18 19:39:07 azarah Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.40 2004/02/08 16:52:01 azarah Exp $
+
+*gcc-config-1.3.5 (08 Feb 2004)
+
+  08 Feb 2004; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.3.5.ebuild,
+  files/gcc-config-1.3.5, files/wrapper-1.4.2.c:
+  Update wrapper to also treat symlinks as valid targets - this fixes a problem
+  where $CHOST-gcc called the symlink, and not the proper binary. Also fix a few
+  issues where we used data->tmp as they can cause possible corruption when used
+  in recursive calls and child functions.  Closes bug #39162.
 
 *gcc-config-1.3.4 (18 Nov 2003)
 
