@@ -1,0 +1,47 @@
+# ChangeLog for app-gnustep/pantomime
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.1 2004/07/23 13:39:14 fafhrd Exp $
+
+*pantomime-1.1.0 (23 Jul 2004)
+
+  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> +metadata.xml,
+  +files/pantomime-1.1.0_pre2-compilation-fix.diff, +pantomime-1.1.0.ebuild,
+  +pantomime-1.1.0_pre2.ebuild:
+  Moved from app-gnustep/pantomime to gnustep-libs/pantomime.
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  pantomime-1.1.0.ebuild, pantomime-1.1.0_pre2.ebuild:
+  Changing the eclass to gnustep-old
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  pantomime-1.1.0.ebuild, pantomime-1.1.0_pre2.ebuild:
+  Changing the eclass to gnustep-old
+
+  01 Jun 2004; Aron Griffis <agriffis@gentoo.org> pantomime-1.1.0.ebuild:
+  Fix use invocation
+
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pantomime-1.1.0.ebuild,
+  pantomime-1.1.0_pre2.ebuild:
+  Stable on alpha.
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> pantomime-1.1.0_pre2.ebuild:
+  Added IUSE=
+
+  29 Jan 2004; Aron Griffis <agriffis@gentoo.org> pantomime-1.1.0.ebuild:
+  add ~alpha
+
+*pantomime-1.1.0 (21 Aug 2003)
+
+  21 Aug 2003; Nick Hadaway <raker@gentoo.org> pantomime-1.1.0.ebuild:
+  Version bump.  New stable revision.
+
+*pantomime-1.1.0_pre2 (15 Jul 2003)
+
+  17 Jul 2003; Michele Balistreri <brain@gentoo.org> pantomime-1.1.0_pre2.ebuild:
+  Fixing compilation problems
+
+  16 Jul 2003; Michele Balistreri <brain@gentoo.org> pantomime-1.1.0_pre2.ebuild:
+  Changing license information as they were invalid
+  
+  15 Jul 2003; Nick Hadaway <raker@gentoo.org> pantomime-1.1.0_pre2.ebuild:
+  New ebuild.
