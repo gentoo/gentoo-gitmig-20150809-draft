@@ -1,0 +1,12 @@
+# ChangeLog for dev-perl/Class-MethodMaker-1.08
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/ChangeLog,v 1.1 2003/02/12 03:18:24 seemant Exp $
+
+*Class-MethodMaker-1.08 (11 Feb 2003)
+
+  11 Feb 2003; Seemant Kulleen <seemant@gentoo.org> ChangeLog
+  Class-MethodMaker-1.08.ebuild files/digest-Class-MethodMaker-1.08 :
+
+  New perl module, required by Term-ProgressBar, which is required by
+  xmltv, which is required by mythtv.  Ebuild submission by Tony Clark
+  <tclark@telia.com> in bug #13033
