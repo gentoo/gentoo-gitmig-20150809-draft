@@ -1,10 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90-r2.ebuild,v 1.2 2002/10/23 15:21:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90-r2.ebuild,v 1.3 2002/11/30 21:59:33 vapier Exp $
 
-IUSE="nls gnome bonobo truetype png"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Diagram Creation Program"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/gnome-office/dia.shtml"
@@ -12,6 +9,7 @@ HOMEPAGE="http://www.gnome.org/gnome-office/dia.shtml"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
+IUSE="nls gnome bonobo truetype png"
 
 RDEPEND=">=dev-libs/libxml-1.8.14
 	>=media-libs/gdk-pixbuf-0.7
@@ -20,8 +18,7 @@ RDEPEND=">=dev-libs/libxml-1.8.14
 	bonobo? ( gnome-base/bonobo )
 	truetype? ( >=media-libs/freetype-2.0.5 )
 	png? ( media-libs/libpng
-		>=media-libs/libart_lgpl-2.1 )" 
-
+		>=media-libs/libart_lgpl-2.1 )"
 # Python module needs some work
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
@@ -43,14 +40,13 @@ src_compile() {
 
 	use nls || myconf="${myconf} --disable-nls"
  
-    # enable-gnome-print not recoomended
+	# enable-gnome-print not recoomended
 
-	econf ${myconf} || die
+	econf ${myconf}
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
-
 	dodoc AUTHORS COPYING ChangeLog README NEWS TODO KNOWN_BUGS
 }
