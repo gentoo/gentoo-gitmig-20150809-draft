@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-0.4.ebuild,v 1.1 2004/08/30 03:18:34 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-0.4.ebuild,v 1.2 2004/08/31 07:39:32 pyrania Exp $
 
-IUSE="oggvorbis perl pythoni faad flac"
+IUSE="oggvorbis perl python faad flac"
 
 DESCRIPTION="icecast MP3 streaming client. supports on the fly re-encoding"
 SRC_URI="http://svn.xiph.org/releases/ices/${P}.tar.gz"
