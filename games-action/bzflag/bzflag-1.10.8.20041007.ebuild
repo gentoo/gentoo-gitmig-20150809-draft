@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.8.20041007.ebuild,v 1.2 2005/01/20 04:48:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.8.20041007.ebuild,v 1.3 2005/01/20 05:03:00 vapier Exp $
 
 inherit flag-o-matic games
 
@@ -35,9 +35,9 @@ src_compile() {
 		ewarn
 		ewarn "You are building a server-only copy of BZFlag"
 		ewarn
-		egamesconf ${myconf} || die
+		egamesconf --disable-client || die
 	else
-		egamesconf ${myconf} || die
+		egamesconf || die
 	fi
 	emake || die "emake failed"
 }
