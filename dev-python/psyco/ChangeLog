@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psyco
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.12 2004/12/30 22:56:22 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.13 2005/01/12 16:33:30 pythonhead Exp $
+
+*psyco-1.4 (12 Jan 2005)
+
+  12 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> +psyco-1.4.ebuild:
+  Version bump. Changed deps for python 2.4
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
