@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/libgnomemm-2.0.0-r1.ebuild,v 1.2 2003/10/17 21:47:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/libgnomemm-2.0.0-r1.ebuild,v 1.3 2004/02/16 21:37:31 gustavoz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/gtkmm/${P}.tar.gz"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
 LICENSE="LGPL-2.1"
 
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 SLOT="0"
 
 RDEPEND=">=dev-cpp/gtkmm-2
