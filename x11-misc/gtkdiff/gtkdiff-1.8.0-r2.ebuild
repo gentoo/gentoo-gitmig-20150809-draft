@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdiff/gtkdiff-1.8.0-r2.ebuild,v 1.4 2004/04/26 14:49:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdiff/gtkdiff-1.8.0-r2.ebuild,v 1.5 2004/05/11 10:12:19 lv Exp $
 
 DESCRIPTION="GNOME Frontend for diff"
 SRC_URI="http://home.catv.ne.jp/pp/ginoue/software/gtkdiff/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://home.catv.ne.jp/pp/ginoue/software/gtkdiff/index-e.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha ~sparc"
+KEYWORDS="x86 alpha ~sparc ~amd64"
 IUSE="nls"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
