@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.2.ebuild,v 1.4 2004/01/07 13:58:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.4.ebuild,v 1.1 2004/01/07 13:58:35 foser Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils
@@ -9,13 +9,14 @@ DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64"
 
 # evolution, perl, guile and gb support disabled currently (or to be removed)
 
 # FIXME : should rethink gda/gnomedb USE stuff
 
-IUSE="libgda gnomedb python bonobo"
+#IUSE="libgda gnomedb python bonobo"
+IUSE="libgda python bonobo"
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2
@@ -45,8 +46,8 @@ src_unpack() {
 	gnome2_omf_fix
 
 	cd ${S}
-	# fixes a sandbox issue - foser <foser@gentoo.org>
-	epatch ${FILESDIR}/${PN}-1.2.1-fix_doc_destdir_install.patch
+	# fix problems with libtool-0.28 generated stuff
+	intltoolize --force
 
 }
 
@@ -64,7 +65,12 @@ src_compile() {
 
 }
 
+src_install() {
+
+	gnome2_src_install
+
+	dosym /usr/share/${PN}/${PV}/share/gnome/help/gnumeric /usr/share/gnome/help/gnumeric/
+
+}
+
 DOCS="AUTHORS COPYING* ChangeLog HACKING NEWS README TODO"
-
-USE_DESTDIR="1"
-
