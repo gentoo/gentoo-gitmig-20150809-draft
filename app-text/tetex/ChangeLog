@@ -1,6 +1,6 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.57 2004/02/26 06:06:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.58 2004/02/29 18:10:26 aliz Exp $
 
   25 Feb 2004; Joshua Kinard <kumba@gentoo.org> tetex-2.0.2-r3.ebuild:
   Added ~mips to KEYWORDS to satisfy repoman deps.
@@ -63,6 +63,9 @@
   files/tetex-2.0.diff, files/texmf.dif:
   Simplified tetex-1.0.7-r??-gentoo.diff.  This closes Bug #28136.
   Removed old unnecessary patches.
+
+*tetex-2.0.2-r1 (06 Sep 2003)
+*tetex-1.0.7-r13 (06 Sep 2003)
 
   06 Sep 2003; Daniel Robbins <drobbins@gentoo.org> tetex-2.0.2-r1.ebuild,
   tetex-1.0.7-r13.ebuild: removed png, libwww and ncurses USE variables, which

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-3.1.ebuild,v 1.7 2004/01/20 06:56:20 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-3.1.ebuild,v 1.8 2004/02/29 18:10:25 aliz Exp $
 
 DESCRIPTION="Dos2unix converts DOS or MAC text files to UNIX format"
 HOMEPAGE=""
@@ -16,8 +16,8 @@ RDEPEND="!app-text/hd2u"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}.patch || die
-	patch -p1 < ${FILESDIR}/${P}-segfault.patch || die
+	epatch ${FILESDIR}/${P}.patch
+	epatch ${FILESDIR}/${P}-segfault.patch
 }
 
 src_compile() {

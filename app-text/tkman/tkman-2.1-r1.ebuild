@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1-r1.ebuild,v 1.6 2004/02/22 20:07:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1-r1.ebuild,v 1.7 2004/02/29 18:10:26 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TkMan man and info page browser"
@@ -17,7 +17,7 @@ DEPEND=">=app-text/rman-3.0.9
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
-	patch -p0 <${FILESDIR}/${PF}-gentoo.diff || die
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 
 	# A workaround until app-text/rman-3.1 is stable
 	has_version '>=sys-apps/groff-1.18' \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.19 2003/08/31 18:53:40 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.20 2004/02/29 18:10:25 aliz Exp $
 
 inherit gnuconfig
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-gs-time_.h-gentoo.diff
+	epatch ${FILESDIR}/${P}-gs-time_.h-gentoo.diff
 	use amd64 && gnuconfig_update
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.11 2003/11/24 21:31:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.12 2004/02/29 18:10:25 aliz Exp $
 
 inherit libtool sgml-catalog
 
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	einfo "Patching msggen.pl for perl-5.6.*"
-	patch -p0 < ${FILESDIR}/${P}-msggen.pl.patch || die
+	epatch ${FILESDIR}/${P}-msggen.pl.patch
 }
 
 src_compile() {

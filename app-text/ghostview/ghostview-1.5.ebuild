@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5.ebuild,v 1.14 2003/12/09 17:43:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5.ebuild,v 1.15 2004/02/29 18:10:25 aliz Exp $
 
 inherit eutils
 
@@ -26,8 +26,7 @@ src_unpack() {
 src_compile() {
 	PATH=/usr/X11R6/bin:${PATH} # root doesn't get this by default
 	xmkmf -a || die
-	cp Makefile Makefile.old
-	sed -e "s,all:: ghostview.\$(MANSUFFIX).html,all:: ,g" Makefile.old > Makefile
+	sed -i -e "s,all:: ghostview.\$(MANSUFFIX).html,all:: ,g" Makefile
 	emake || die
 }
 

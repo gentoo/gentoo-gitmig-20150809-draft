@@ -1,10 +1,10 @@
 # ChangeLog for app-text/xpdf-japanese
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf-japanese/ChangeLog,v 1.6 2003/02/12 05:36:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf-japanese/ChangeLog,v 1.7 2004/02/29 18:10:26 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*xpdf-japanese-1.ebuild (16 Aug 2002)
+*xpdf-japanese-1 (16 Aug 2002)
 
   02 Sep 2002; Jack Morgan <jmorgan@gentoo.org>  xpdf-japanese-1.ebuild,
   Added sparc/sparc64 keywords :

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/hd2u
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hd2u/ChangeLog,v 1.8 2003/10/03 22:21:44 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hd2u/ChangeLog,v 1.9 2004/02/29 18:10:25 aliz Exp $
 
 *hd2u-0.8.2 (03 Oct 2003)
 
@@ -17,7 +17,7 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*hd2u-0.8.0,  (10 May 2002)
+*hd2u-0.8.0 (10 May 2002)
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> hd2u-0.8.0.ebuild :
   Added KEYWORDS, SLOT.

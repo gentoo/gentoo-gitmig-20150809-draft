@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.6 2004/01/20 20:24:24 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.7 2004/02/29 18:10:26 aliz Exp $
 
 DESCRIPTION="unix2dos - UNIX to DOS text file format converter"
 HOMEPAGE=""
@@ -17,9 +17,9 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	patch -p1 < ${FILESDIR}/${PN}-mkstemp.patch || die
-	patch -p1 < ${FILESDIR}/${P}-segfault.patch || die
-	patch -p1 < ${FILESDIR}/${P}-manpage.patch || die
+	epatch ${FILESDIR}/${PN}-mkstemp.patch
+	epatch ${FILESDIR}/${P}-segfault.patch
+	epatch ${FILESDIR}/${P}-manpage.patch
 }
 
 src_compile() {

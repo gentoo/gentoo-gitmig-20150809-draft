@@ -1,6 +1,8 @@
 # ChangeLog for app-text/dictd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.11 2004/02/09 07:13:59 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.12 2004/02/29 18:10:25 aliz Exp $
+
+*dictd-1.9.11 (09 Feb 2004)
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> files/1.9.11-r1/dict.conf,
   files/1.9.11-r1/dictd, files/1.9.11-r1/dictd.conf,

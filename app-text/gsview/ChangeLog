@@ -1,9 +1,11 @@
 # ChangeLog for app-text/gsview
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.2 2003/12/13 13:24:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.3 2004/02/29 18:10:25 aliz Exp $
 
   13 Dec 2003; Heinrich Wendel <lanius@gentoo.org> gsview-4.5.ebuild:
   fixed some typos, added `use doc` functionality
+
+*gsview-4.5 (09 Dec 2003)
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> gsview-4.5.ebuild:
   initial ebuild, bug #33142, submitted by Craig Bradney <cbradney@zip.com.au>
