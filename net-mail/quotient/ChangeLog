@@ -1,0 +1,8 @@
+# ChangeLog for net-mail/quotient
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/ChangeLog,v 1.1 2004/02/17 17:03:31 lordvan Exp $
+
+*quotient-0.8.8 (17 Feb 2004)
+
+  17 Feb 2004; Thomas Raschbacher <lordvan@gentoo.org> quotient-0.8.8.ebuild:
+  initial release
