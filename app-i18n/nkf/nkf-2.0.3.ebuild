@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.3.ebuild,v 1.1 2003/10/11 03:38:59 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.3.ebuild,v 1.2 2004/01/04 16:56:11 nakano Exp $
 
 use perl && inherit perl-module
 

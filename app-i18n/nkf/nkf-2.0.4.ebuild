@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.2.ebuild,v 1.5 2003/09/30 13:43:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.4.ebuild,v 1.1 2004/01/04 16:56:11 nakano Exp $
 
 use perl && inherit perl-module
 
@@ -10,10 +10,9 @@ SRC_URI="http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/${MY_P}.tar.gz"
 HOMEPAGE="http://sourceforge.jp/projects/nkf/"
 DEPEND="virtual/glibc
 	$DEPEND"
-RDEPEND="$DEPEND"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE="perl cjk"
-LICENSE="public-domain"
+LICENSE="as-is"
 SLOT="0"
 S=${WORKDIR}/${MY_P}
 
@@ -33,7 +32,8 @@ src_install () {
 	if [ `use cjk` ]; then
 		dodir /usr/share/man/ja/man1
 		insinto /usr/share/man/ja/man1
-		newins nkf.1j nkf.1
+		./nkf -e nkf.1j > nkf.1
+		doins nkf.1
 	fi
 	dodoc INSTALL* nkf.doc
 	if [ `use perl` ]; then
