@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.4 2002/06/29 23:16:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.5 2002/07/12 14:37:55 seemant Exp $
+
+*sgml-common-0.6.3-r2 (12 Jul 2002)
+
+  12 Jul 2002; Seemant Kulleen <seemant@gentoo.org> :
+
+  bumped revision so as to force a remerge.
 
 *sgml-common-0.6.3-r1 (30 Jun 2002)
   30 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.1-r1.ebuild,v 1.3 2002/07/11 06:30:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r2.ebuild,v 1.1 2002/07/12 14:37:55 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Base ISO character entities and utilities for SGML"
@@ -17,19 +17,19 @@ src_unpack() {
 
 src_compile() {
 	./configure	\
-		--prefix=/usr	\
-		--sysconfdir=/etc	\
+		--prefix=/usr \
+		--sysconfdir=/etc \
 		--mandir=/usr/share/man || die
 
 	emake || die
 }
 
 src_install () {
-	make	\
+	make \
 		prefix=${D}/usr	\
 		sysconfdir=${D}/etc	\
 		mandir=${D}/usr/share/man \
-		docdir=${D}/usr/share/doc	\
+		docdir=${D}/usr/share/doc \
 		install || die
 
 }
@@ -37,12 +37,13 @@ src_install () {
 pkg_postinst() {
 	if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ]
 	then
-		install-catalog --add 	\
-			/etc/sgml/sgml-ent.cat	\
+		echo ">>> Installing Catalogs..."
+		install-catalog --add \
+			/etc/sgml/sgml-ent.cat \
 			/usr/share/sgml/sgml-iso-entities-8879.1986/catalog
 
-		install-catalog --add 	\
-			/etc/sgml/sgml-docbook.cat 	\
+		install-catalog --add \
+			/etc/sgml/sgml-docbook.cat \
 			/etc/sgml/sgml-ent.cat
 	else
 		echo "install-catalog not found!"
@@ -50,14 +51,20 @@ pkg_postinst() {
 }
 
 pkg_prerm() {
-	if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ]
-	then
-		install-catalog --remove 	\
-			/etc/sgml/sgml-docbook.cat 	\
-			/etc/sgml/sgml-ent.cat
+	cp /usr/bin/install-catalog ${T}
+}
 
-		install-catalog --remove 	\
-			/etc/sgml/sgml-ent.cat 	\
+pkg_postrm() {
+	if [ ! -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ]
+	then
+		echo ">>> Removing Catalogs..."
+		${T}/install-catalog --remove \
+			/etc/sgml/sgml-ent.cat \
 			/usr/share/sgml/sgml-iso-entities-8879.1986/catalog
+	
+		${T}/install-catalog --remove \
+			/etc/sgml/sgml-docbook.cat \
+			/etc/sgml/sgml-ent.cat
 	fi
 }
+
