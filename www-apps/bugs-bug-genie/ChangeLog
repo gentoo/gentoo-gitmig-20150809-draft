@@ -1,0 +1,10 @@
+# ChangeLog for www-apps/bugs-bug-genie
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/ChangeLog,v 1.1 2004/08/30 11:22:12 rl03 Exp $
+
+*bugs-bug-genie-1.5 (30 Aug 2004)
+
+  30 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +files/postinstall-en.txt, +bugs-bug-genie-1.5.ebuild:
+  Initial ebuild (by swegener, minor cleanups). Closes #50319.
+

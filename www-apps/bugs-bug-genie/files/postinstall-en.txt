@@ -1,0 +1,2 @@
+To configure BUGS - The Bug Genie please use install.php
+After you've configured BUGS, please delete install.php
