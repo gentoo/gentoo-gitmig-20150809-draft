@@ -1,6 +1,9 @@
-MD5 eed27deafec1a2f39995230a1189382f ChangeLog 2119
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 893198601b890b5caf56f8e8916aaf8d ChangeLog 2119
 MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
-MD5 787465434e4b8515700d5cdb068a719e util-vserver-0.30.196.ebuild 1370
+MD5 7df03d8655f3c4281661d6159ff47dd7 util-vserver-0.30.196.ebuild 1370
 MD5 db4295d67ea5ff66ec872fa3563f146c util-vserver-0.30.ebuild 1337
 MD5 de373141d8d3eeffd74dccdd3b7e7196 files/digest-util-vserver-0.30 70
 MD5 0f34731a7d8119fc5e3f9322bf727521 files/digest-util-vserver-0.30.196 74
@@ -8,3 +11,10 @@ MD5 3fb961ce171c0f04c695c76f698daa94 files/rebootmgr.initd 966
 MD5 1cb2a7908a23ba002862f1885b136418 files/vservers.initd 2501
 MD5 f7a463d2443b495aa0e2554051ad5949 files/0.30.196/vservers.confd 1020
 MD5 67a441a0026927594aaa0926fbb5a13f files/0.30.196/vservers.initd 1270
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCC+eemPFBzbX68WERAq1SAJ9m5feixsaxaCi1IFSGNpxLPAAhtACcD7iH
+TGxLzc1h2p4QDBdZjRNcXiE=
+=ILvF
+-----END PGP SIGNATURE-----
