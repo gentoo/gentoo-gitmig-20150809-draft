@@ -1,4 +1,4 @@
-MD5 a4000e59b0c870d05c967a934bef7ef3 ChangeLog 825
-MD5 84ee0d282a6f943cd6989d7f84618512 glimpse-4.15-r1.ebuild 686
+MD5 74b9516e3c8071a61f13731c0c73eb84 glimpse-4.15-r1.ebuild 688
+MD5 b84573a73707620851aed00f7e4e69df ChangeLog 945
 MD5 70ba17a37033e7a97c52c9a359f613e0 files/4.15-errno.patch 4623
 MD5 42e75d4b9b3765782ef71b6519d8adc9 files/digest-glimpse-4.15-r1 64

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/glimpse
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/ChangeLog,v 1.6 2003/11/16 17:35:38 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/ChangeLog,v 1.7 2003/12/05 15:17:37 weeve Exp $
+
+  05 Dec 2003; Jason Wever <weeve@gentoo.org> glimpse-4.15-r1.ebuild:
+  Marked stable on sparc to fix broken dependencies.
 
   16 Nov 2003; Brad House <brad_mssw@gentoo.org> glimpse-4.15-r1.ebuild:
   mark stable on amd64

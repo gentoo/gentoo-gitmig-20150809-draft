@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.15-r1.ebuild,v 1.2 2003/11/16 17:35:38 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.15-r1.ebuild,v 1.3 2003/12/05 15:17:37 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://webglimpse.net/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~ppc ~mips amd64"
+KEYWORDS="x86 ~ppc ~mips amd64 sparc"
 
 src_compile() {
 	epatch ${FILESDIR}/${PV}-errno.patch
