@@ -1,27 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-0.0.2.20030220.ebuild,v 1.4 2003/03/20 13:05:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-0.0.2.20030629.ebuild,v 1.1 2003/06/29 17:52:18 vapier Exp $
 
-inherit flag-o-matic
+inherit enlightenment flag-o-matic
 
-IUSE=""
-
-S=${WORKDIR}/${PN}
 DESCRIPTION="core event abstraction layer and X abstraction layer (nice convenience library)"
 HOMEPAGE="http://www.enlightenment.org/pages/ecore.html"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
-DEPEND="virtual/x11"
+DEPEND="${DEPEND}
+	virtual/x11"
 
-pkg_setup() {
-	# the stupid gettextize script prevents non-interactive mode, so we hax it
-	cp `which gettextize` ${T} || die "could not copy gettextize"
-	cp ${T}/gettextize ${T}/gettextize.old
-	sed -e 's:read dummy < /dev/tty::' ${T}/gettextize.old > ${T}/gettextize
+S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${A}
+	gettext_modify
 }
 
 src_compile() {
