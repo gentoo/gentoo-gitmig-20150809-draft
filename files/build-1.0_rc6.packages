@@ -1,5 +1,5 @@
 ./sys-apps/baselayout/baselayout-1.6-r1.ebuild
-./sys-libs/glibc/glibc-2.2.3-r5.ebuild
+./sys-libs/glibc/glibc-2.2.4.ebuild
 ./sys-apps/bash/bash-2.04-r4.ebuild
 ./sys-apps/bzip2/bzip2-1.0.1-r4.ebuild
 ./sys-apps/debianutils/debianutils-1.13.3-r4.ebuild
@@ -10,7 +10,7 @@
 ./sys-apps/gawk/gawk-3.0.6-r4.ebuild
 ./sys-apps/grep/grep-2.4.2-r4.ebuild
 ./sys-apps/gzip/gzip-1.2.4a-r5.ebuild
-./sys-apps/portage/portage-1.6.1.ebuild
+./sys-apps/portage/portage-1.6.2.ebuild
 ./sys-apps/sed/sed-3.02.80-r3.ebuild
 ./sys-apps/sh-utils/sh-utils-2.0j-r4.ebuild
 ./sys-apps/tar/tar-1.13.19-r1.ebuild
