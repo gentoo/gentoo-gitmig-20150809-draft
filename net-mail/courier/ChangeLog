@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.56 2004/04/28 08:32:50 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.57 2004/04/28 10:04:51 swtaylor Exp $
+
+  28 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.45.2.ebuild,
+  courier-0.45.3.ebuild:
+  get ppc mask caught up
 
   28 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.45.2.ebuild,
   courier-0.45.3.ebuild, courier-0.45.4.ebuild:
