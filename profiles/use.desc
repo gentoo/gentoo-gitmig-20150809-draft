@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.91 2003/04/22 08:24:31 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.92 2003/04/22 17:51:32 utx Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -66,6 +66,7 @@ jpeg - Adds JPEG image support
 junit - Adds junit awareness -- useful for developers.
 kde - Adds support for kde-base/kde (K Desktop Enviroment)
 kerberos - Adds kerberos support
+ladcca - Adds Linux Audio Developer's Configuration and Connection API support (LADCCA)
 lcms - Adds lcms support to media-gfx/imagemagick (Color management)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
 leim - Adds input methods support to Emacs
