@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.5.ebuild,v 1.4 2004/06/24 22:21:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.5.ebuild,v 1.5 2004/09/10 13:57:42 axxo Exp $
 
 inherit java-pkg
 
@@ -29,7 +29,7 @@ src_compile() {
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 
 	use junit && antflags="${antflags} -Djunit.jar=`java-config --classpath=junit`"
-	antflags="${antflags} -Dcommons-beanutils.jar=`java-config --classpath=commons-beanutils`"
+	antflags="${antflags} -Dcommons-beanutils.jar=`java-config --classpath=commons-beanutils | sed s/:.*//`"
 	antflags="${antflags} -Dcommons-collections.jar=`java-config --classpath=commons-collections`"
 	antflags="${antflags} -Dcommons-logging.jar=/usr/share/commons-logging/lib/commons-logging.jar"
 	ant ${antflags} || die "compilation failed"
