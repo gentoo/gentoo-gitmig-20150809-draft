@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0.ebuild,v 1.2 2004/06/29 16:52:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0.ebuild,v 1.3 2004/07/05 19:08:13 robbat2 Exp $
 
 inherit gcc eutils
 
@@ -18,7 +18,9 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 RDEPEND="sys-libs/glibc"
-DEPEND="sys-devel/gcc ${RDEPEND}"
+DEPEND="sys-devel/gcc
+		>=sys-kernel/linux-headers-2.4.22
+		${RDEPEND}"
 
 src_unpack() {
 	unpack ${DEBIANPKG_TARBALL}
@@ -26,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	$(gcc-getCC) ${CFLAGS} ${PN}.c -o ${PN}
+	$(gcc-getCC) ${CFLAGS} ${PN}.c -o ${PN} || die "Failed to compile!"
 }
 
 src_install() {

@@ -1,5 +1,5 @@
-MD5 67fe27b03bba2fb336b57cdddaf74713 ChangeLog 529
-MD5 a3f464313bd7f36847daf51fdd6ce542 ifenslave-1.1.0.ebuild 1306
+MD5 287a01f7e91179b50793b0d41bcc93d4 ifenslave-1.1.0.ebuild 1374
+MD5 92fdf6b2043ffe18fcd551a1338253a7 ChangeLog 639
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 6a346d07a88e3a602e0cde43d7b65245 files/digest-ifenslave-1.1.0 146
 MD5 baa11efd6a70e31bb43a1d09f1b1930a files/modules.d-bond 1153
