@@ -2,10 +2,12 @@ MD5 77e3eb02c209a92016f4f01ebbdb2322 metakit-2.4.9.2.ebuild 1491
 MD5 09016b2fa10c449d2dd647c66182314e metakit-2.4.9.3-r1.ebuild 1275
 MD5 df6f5d69fb3b8d526233e3c13a8897c8 metakit-2.4.9.2-r1.ebuild 1518
 MD5 12b797ce43b2deed9ff1d70dea043bd5 metakit-2.4.9.3.ebuild 1224
+MD5 36da15dba21221e4a47f616aa8e1e407 metakit-2.4.9.3-r2.ebuild 1194
 MD5 617900173d314bbf02d97c5e588f84e1 metakit-2.4.7.37.ebuild 1573
-MD5 f76705fae585f202abaca38439cff581 ChangeLog 1473
+MD5 90e6fa645acc4b16ebd988e42cfe047b ChangeLog 1598
 MD5 3fc96743460411b499e8c6dd39c756fd files/digest-metakit-2.4.9.2 133
 MD5 00fc347ece0536a96f90ddf76d90bf51 files/digest-metakit-2.4.9.3 67
 MD5 0f63d5f3d5f137464097c1539a07496d files/digest-metakit-2.4.9.2-r1 67
 MD5 00fc347ece0536a96f90ddf76d90bf51 files/digest-metakit-2.4.9.3-r1 67
+MD5 00fc347ece0536a96f90ddf76d90bf51 files/digest-metakit-2.4.9.3-r2 67
 MD5 e045e605eab23d2201a5ba644558f6e7 files/digest-metakit-2.4.7.37 68

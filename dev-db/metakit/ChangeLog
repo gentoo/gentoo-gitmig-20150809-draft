@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.11 2004/02/13 21:48:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.12 2004/02/14 00:22:25 kloeri Exp $
+
+*metakit-2.4.9.3-r2 (14 Feb 2004)
+
+  14 Feb 2004; <kloeri@gentoo.org> metakit-2.4.9.3-r2.ebuild:
+  Fix broken include path.
 
 *metakit-2.4.9.3-r1 (13 Feb 2004)
 
