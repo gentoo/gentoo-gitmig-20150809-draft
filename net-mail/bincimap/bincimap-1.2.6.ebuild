@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.6.ebuild,v 1.2 2004/03/05 17:25:03 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.6.ebuild,v 1.3 2004/03/28 05:01:45 nakano Exp $
 
 DESCRIPTION="IMAP server for Maildir"
 SRC_URI="http://www.bincimap.org/dl/tarballs/1.2/${P}final.tar.bz2"
@@ -51,10 +51,10 @@ pkg_postinst() {
 
 	einfo "To start bicimap at boot you have to enable the /etc/init.d/svscan rc file"
 	einfo "and create the following links:"
-	einfo "ln -s /etc/bincimap/service/imap /service/imap"
+	einfo "ln -s /var/lib/service/imap /service/imap"
 
 	einfo "If you want to use ssl connections, create the following links: "
-	einfo "ln -s /etc/bincimap/service/imaps /service/imaps"
+	einfo "ln -s /var/lib/service/imaps /service/imaps"
 }
 
 pkg_config() {
