@@ -1,5 +1,5 @@
-MD5 6ea1a75dd9fe010df8738a1832e15cbe ChangeLog 774
-MD5 57903d582e95ac2aa821c11f1fbf5ba1 automake-wrapper-1.ebuild 891
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 caef7b8e5d5725c30212d8229ff5856f ChangeLog 874
+MD5 489bf639da7b3af5b3627bdf65e2ceaf automake-wrapper-1.ebuild 889
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-automake-wrapper-1 0
 MD5 e144cb70829218ab9da4e7d05412e4b0 files/am-wrapper-1.sh 3393
