@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.22 2005/01/04 12:43:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.23 2005/03/15 18:27:04 sebastian Exp $
+
+*phpsysinfo-2.3-r1 (15 Mar 2005)
+
+  15 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  +phpsysinfo-2.3-r1.ebuild:
+  DEPEND on virtual/httpd-php, fixes bug 65452.
 
   04 Jan 2005; Markus Rothe <corsair@gentoo.org> phpsysinfo-2.3.ebuild:
   Stable on ppc64
