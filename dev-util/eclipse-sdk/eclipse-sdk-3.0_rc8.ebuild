@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0_rc8.ebuild,v 1.2 2004/04/15 11:26:18 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0_rc8.ebuild,v 1.3 2004/04/20 19:00:48 humpback Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 		ewarn ""
 		einfo "This package cannot be built with gtk2 and motif in USE"
 		einfo "Please use only one"
-		einfo "you can type USE=\"-motif +gtk2\" emerge ${P}.ebuild"
+		einfo "you can type USE=\"-motif gtk2\" emerge ${P}.ebuild"
 		ewarn ""
 		sleep 5
 		die
