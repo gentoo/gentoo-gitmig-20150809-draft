@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r2.ebuild,v 1.5 2003/09/20 20:14:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r2.ebuild,v 1.6 2004/04/16 10:20:57 mr_bones_ Exp $
+
+inherit gnat
 
 DESCRIPTION="The GNU Ada Toolkit"
 DEPEND="x86? ( >=app-shells/tcsh-6.0 )"
@@ -28,8 +30,6 @@ case ${ARCH} in
 			GNATBOOT="${WORKDIR}/${P}-powerpc-unknown-linux-gnu"
 			;;
 esac
-
-inherit gnat
 
 src_unpack() {
 	unpack ${A}

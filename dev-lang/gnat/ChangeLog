@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.20 2004/03/02 09:25:00 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.21 2004/04/16 10:20:57 mr_bones_ Exp $
+
+  16 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> gnat-3.15p-r1.ebuild,
+  gnat-3.15p-r2.ebuild:
+  move inherit to the right place
 
   29 Dec 2003; David Holm <dholm@gentoo.org> gnat-3.15p-r3.ebuild:
   Fixed bug #34021 (some symlinks were pointing to /var/tmp).
