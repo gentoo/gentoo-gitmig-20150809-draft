@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.11.ebuild,v 1.2 2004/05/17 14:08:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.15.ebuild,v 1.1 2004/05/17 14:08:47 spock Exp $
 
 inherit mount-boot
 
 DESCRIPTION="Memory tester based on memtest86"
 HOMEPAGE="http://www.memtest.org/"
-SRC_URI="http://www.memtest.org/download/memtest_source_v${PV}.tar.gz"
+SRC_URI="http://www.memtest.org/download/${PV}/memtest_source_v${PV}.tar.gz"
 MY_P=${P/-/_v}
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="serial"
 DEPEND="virtual/glibc"
 
@@ -21,7 +21,7 @@ src_unpack() {
 	cd ${S}
 
 	# a little fix to make gcc-3.3.x happy
-	sed -e '/DISCARD/d' -i memtest_shared.lds
+	#sed -e '/DISCARD/d' -i memtest_shared.lds
 
 	if [ `use serial` ] ; then
 		sed -e 's/#define SERIAL_CONSOLE_DEFAULT 0/#define SERIAL_CONSOLE_DEFAULT 1/' -i config.h
