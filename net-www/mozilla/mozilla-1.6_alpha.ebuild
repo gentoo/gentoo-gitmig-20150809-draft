@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6a.ebuild,v 1.2 2003/11/21 20:20:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6_alpha.ebuild,v 1.1 2003/12/20 18:37:49 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -58,7 +58,7 @@ PATCH_VER="1.0"
 
 # handle _rc versions
 MY_PV1="${PV/_}"
-MY_PV2="${MY_PV1/eta}"
+MY_PV2="${MY_PV1/lpha}"
 S="${WORKDIR}/mozilla"
 DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
