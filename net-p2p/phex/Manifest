@@ -1,5 +1,15 @@
-MD5 703aaea48566c7e769504b29794f9796 ChangeLog 433
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc0a4e14d0a8dfdd276202b671196321 phex-2.0.0.76.ebuild 776
+MD5 c68b5decb4eadeb82e0ad6a2e1a3f54e ChangeLog 524
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 4189a9da5bc7312eda1c100d99da4eaf phex-2.0.0.76.ebuild 773
 MD5 4bdd6b068f3ef84f8c2f258a685c1c65 files/digest-phex-2.0.0.76 63
 MD5 3089ad1db7b9aaf83ddad49afa8165bc files/phex.sh 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBKV9XcAgAdbxYsnERAqAqAJsEThKWgsJ+MBOFJjZkXNhcXwadBgCeKZi7
+0HBQYo0VlOLz1+hTgaWxhiA=
+=627L
+-----END PGP SIGNATURE-----
