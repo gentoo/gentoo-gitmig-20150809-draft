@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.9 2003/09/06 23:56:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.10 2003/09/11 01:18:39 msterret Exp $
 
 inherit gcc eutils
 
@@ -81,7 +81,7 @@ src_compile() {
 
 	fi
 
-    # fix library dependency
+	# fix library dependency
 	if [ "`use X`" ]; then
 		echo 's/LIBS = \(.*\)/LIBS = \1 -ldl -lpthread/' >> makefile.sed
 	else

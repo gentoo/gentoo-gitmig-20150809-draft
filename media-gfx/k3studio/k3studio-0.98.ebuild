@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3studio/k3studio-0.98.ebuild,v 1.8 2003/07/22 20:11:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3studio/k3studio-0.98.ebuild,v 1.9 2003/09/11 01:18:39 msterret Exp $
 
 inherit kde-base
 
@@ -14,10 +14,10 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 newdepend "=dev-lang/python-2.2*
-   >=media-libs/glut-3.7
-   >=sys-libs/readline-4.1
-   >=media-libs/freetype-2.0.5
-   >=media-libs/qhull-3.1"
+	>=media-libs/glut-3.7
+	>=sys-libs/readline-4.1
+	>=media-libs/freetype-2.0.5
+	>=media-libs/qhull-3.1"
 
 src_compile() {
 	kde_src_compile myconf

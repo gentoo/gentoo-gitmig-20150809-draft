@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.1.4.ebuild,v 1.3 2003/02/13 12:37:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.1.4.ebuild,v 1.4 2003/09/11 01:18:39 msterret Exp $
 
 DESCRIPTION="Image viewer/manager with optional support for MPEG movies."
 HOMEPAGE="http://pornview.sourceforge.net"
@@ -38,8 +38,7 @@ src_install() {
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 
 	einfo "Sorry, mplayer support is broken so we had to disable it"
-        einfo "Please do not open a bug even if this is fixed by"
-        einfo "the pornview developer himself"
+	einfo "Please do not open a bug even if this is fixed by"
+	einfo "the pornview developer himself"
 
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kpovmodeler/kpovmodeler-0.2.ebuild,v 1.4 2003/02/13 12:36:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kpovmodeler/kpovmodeler-0.2.ebuild,v 1.5 2003/09/11 01:18:39 msterret Exp $
 inherit kde-base
 
 need-kde 3
@@ -23,11 +23,11 @@ ewarn "updated or fixed. In addition, it won't even compile on a kde 3.1 system.
 
 src_unpack() {
 
-    warning_msg
-    kde_src_unpack
+	warning_msg
+	kde_src_unpack
 
 }
 
 src_postinst() {
-    warning_msg
+	warning_msg
 }
