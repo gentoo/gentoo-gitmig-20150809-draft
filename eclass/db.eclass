@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.10 2004/08/23 12:38:34 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.11 2004/08/24 01:12:06 tester Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 
 ECLASS=db
@@ -86,5 +86,5 @@ db_src_install_usrlibcleanup() {
 	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*so.[23]' -exec rm \{} \;
 	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*a' -exec rm \{} \;
 	
-	rm ${D}/usr/include/db.h ${D}/usr/include/db_185.h
+	rm -f ${D}/usr/include/db.h ${D}/usr/include/db_185.h
 }
