@@ -1,6 +1,17 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.55 2004/06/26 00:05:31 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.56 2004/08/12 19:11:59 usata Exp $
+
+*zsh-4.2.1_alpha1 (13 Aug 2004)
+
+  13 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +files/_gcc-config,
+  +files/_genlop, +files/_gentoolkit, -files/_portage,
+  +files/_portage-20040730, -zsh-4.1.1-r4.ebuild, -zsh-4.2.0.ebuild,
+  +zsh-4.2.1_alpha1.ebuild:
+  New test release. Added completions for genlop, gensync, qpkg, equery,
+  gcc-config, and completion cache support. All these neat completions
+  were contributed by oberyno <oberyno@gmail.com>, see bug #58198.
+  Install Misc/* and Util/* scripts, see bug #54520.
 
   26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> zsh-4.2.0-r1.ebuild:
   Marked stable on amd64.

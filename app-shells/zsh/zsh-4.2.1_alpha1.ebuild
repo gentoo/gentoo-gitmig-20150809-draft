@@ -1,18 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0.ebuild,v 1.8 2004/06/29 04:00:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.1_alpha1.ebuild,v 1.1 2004/08/12 19:11:59 usata Exp $
+
+inherit eutils
+
+MYDATE="20040730"
+MY_PV="${PV/_alpha1/-test-A}"
+MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
-MYDATE="20040204"
-MY_P="${P/_pre/-pre-}"
-SRC_URI="ftp://ftp.zsh.org/pub/${MY_P}.tar.bz2
-	doc? ( ftp://ftp.zsh.org/pub/${MY_P}-doc.tar.bz2 )"
+SRC_URI="ftp://ftp.zsh.org/pub/development/${MY_P}.tar.bz2
+	cjk? ( http://www.ono.org/software/dist/zsh-4.2.0-euc-0.2.patch.gz )
+	doc? ( ftp://ftp.zsh.org/pub/development/${MY_P}-doc.tar.bz2 )"
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
-IUSE="maildir ncurses static doc pcre cap"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64"
+IUSE="maildir ncurses static doc pcre cap cjk"
 
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
 	cap? ( sys-libs/libcap )
@@ -26,6 +31,8 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	use doc && unpack ${MY_P}-doc.tar.bz2
+	cd ${S}
+	use cjk && epatch ${DISTDIR}/zsh-4.2.0-euc-0.2.patch.gz
 	cd ${S}/Doc
 	ln -sf . man1
 	# fix zshall problem with soelim
@@ -48,7 +55,7 @@ src_compile() {
 		--enable-zlogout=/etc/zsh/zlogout \
 		--enable-zprofile=/etc/zsh/zprofile \
 		--enable-zshrc=/etc/zsh/zshrc \
-		--enable-fndir=/usr/share/zsh/${PV}/functions \
+		--enable-fndir=/usr/share/zsh/${PV%_*}/functions \
 		--enable-site-fndir=/usr/share/zsh/site-functions \
 		--enable-function-subdirs \
 		--enable-ldflags="${LDFLAGS}" \
@@ -78,7 +85,7 @@ src_install() {
 	einstall \
 		bindir=${D}/bin \
 		libdir=${D}/usr/lib \
-		fndir=${D}/usr/share/zsh/${PV}/functions \
+		fndir=${D}/usr/share/zsh/${PV%_*}/functions \
 		sitefndir=${D}/usr/share/zsh/site-functions \
 		install.bin install.man install.modules \
 		install.info install.fns || die "make install failed"
@@ -86,11 +93,18 @@ src_install() {
 	insinto /etc/zsh
 	doins ${FILESDIR}/zprofile
 
-	keepdir /usr/share/zsh/site-functions
 	insinto /usr/share/zsh/site-functions
-	newins ${FILESDIR}/_portage-${MYDATE} _portage
-	insinto /usr/share/zsh/${PV}/functions/Prompts
-	doins ${FILESDIR}/prompt_gentoo_setup
+	newins ${FILESDIR}/_portage-${MYDATE} _portage || die
+	doins ${FILESDIR}/{_genlop,_gcc-config,_gentoolkit} || die
+	insinto /usr/share/zsh/${PV%_*}/functions/Prompts
+	doins ${FILESDIR}/prompt_gentoo_setup || die
+
+	# install miscellaneous scripts; bug #54520
+	sed -i -e "s:/usr/local:/usr:g" {Util,Misc}/* || "sed failed"
+	insinto /usr/share/zsh/${PV%_*}/Util
+	doins Util/* || die "doins Util scripts failed"
+	insinto /usr/share/zsh/${PV%_*}/Misc
+	doins Misc/* || die "doins Misc scripts failed"
 
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
 
@@ -114,13 +128,16 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-
 	einfo
-	einfo "If you want to enable Portage completion and Gentoo prompt,"
+	einfo "If you want to enable Portage completions and Gentoo prompt,"
 	einfo "add"
 	einfo "	autoload -U compinit promptinit"
 	einfo "	compinit"
 	einfo "	promptinit; prompt gentoo"
+	einfo "to your ~/.zshrc"
+	einfo
+	einfo "Also, if you want to enable cache for the completions, add"
+	einfo "	zstyle ':completion::complete:*' use-cache 1"
 	einfo "to your ~/.zshrc"
 	einfo
 	# see Bug 26776

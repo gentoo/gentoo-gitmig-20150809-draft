@@ -1,29 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6c526518e733c96c2052529eb19ee74c ChangeLog 9572
-MD5 28ed8ea6cdccb353e2e8ad783eb51f5b metadata.xml 506
+MD5 5f24ce2a901d02baa59a09e2cb7f1972 ChangeLog 10087
 MD5 708c996d82ee2e1638a48016d7f5d698 zsh-4.0.9-r3.ebuild 2701
-MD5 6cd83da550a4aae0041706df8758aad2 zsh-4.1.1-r4.ebuild 3345
 MD5 a8d76905e8a9727607b10c1b3722dcc9 zsh-4.1.1-r5.ebuild 3389
+MD5 28ed8ea6cdccb353e2e8ad783eb51f5b metadata.xml 506
 MD5 607a5475313774b3ee38918e633cfd6a zsh-4.2.0-r1.ebuild 3692
-MD5 4e208fc31947da41f21eaa5bf7bcabd7 zsh-4.2.0.ebuild 3538
-MD5 81e325aacd554d2c5f6d14efe45d1ffd files/zsh-strncmp.diff 354
-MD5 d401be6503fc2e34341d56e99ee25e94 files/_portage-20040204 10954
-MD5 1a527b6a4700642b4742d9cc8de90285 files/digest-zsh-4.1.1-r4 199
+MD5 8d8c7b8b5bd2491c6a88f5829163edb4 zsh-4.2.1_alpha1.ebuild 4247
+MD5 e400db175b1bae0205d68e538940d292 files/_gcc-config 1130
+MD5 de58f149f41740c394800ba8d2cdf361 files/digest-zsh-4.0.9-r3 199
+MD5 1a527b6a4700642b4742d9cc8de90285 files/digest-zsh-4.1.1-r5 199
+MD5 46563792d80acf9492dd3afeaf4b19fd files/prompt_gentoo_setup 1612
 MD5 64023b41a9987655e0e014d32562cfad files/zprofile 404
 MD5 f83ccd2b6f1cd3e75c910c48159892f5 files/zsh-4.1.1-gentoo.diff 488
 MD5 de0db046f0f40cb1cc3cd3f6e6b2645a files/zshenv 318
-MD5 2aa47fce01c92a0cc7e070f04018ac93 files/_portage 7539
-MD5 1a527b6a4700642b4742d9cc8de90285 files/digest-zsh-4.1.1-r5 199
-MD5 476cf7906a080d52beee81d76fd2a82a files/digest-zsh-4.2.0 130
-MD5 de58f149f41740c394800ba8d2cdf361 files/digest-zsh-4.0.9-r3 199
-MD5 46563792d80acf9492dd3afeaf4b19fd files/prompt_gentoo_setup 1612
+MD5 d401be6503fc2e34341d56e99ee25e94 files/_portage-20040204 10954
+MD5 4d4d3f13f7a73a8d0f8c2d1108eb366b files/digest-zsh-4.2.1_alpha1 213
+MD5 81e325aacd554d2c5f6d14efe45d1ffd files/zsh-strncmp.diff 354
+MD5 c76debf789c176c979dd02600c707a7e files/_genlop 5248
 MD5 9c5e675b40ea6a43fd461f262df24fb4 files/digest-zsh-4.2.0-r1 199
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4OlzHTu7gpaalycRAgQDAJ9kOjVR5LF9dAmq8xBtX6j5ZAf8igCg49xl
-7KeFCRt4jlLAuVxa9eysWqA=
-=cHiB
------END PGP SIGNATURE-----
+MD5 57e489dcba8d277ca3d44d2b415031b3 files/_gentoolkit 6555
+MD5 3f90e9d6e04d7ada6aa481519d74cc8a files/_portage-20040730 12959
