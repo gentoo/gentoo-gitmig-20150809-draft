@@ -2,8 +2,8 @@ MD5 9cca125d7e8f4f1c74024a91d328db51 ChangeLog 9856
 MD5 9bb698a6ef1870268dc9a8e7dbf4a285 transcode-0.6.3.ebuild 3049
 MD5 4a54801c033dca53b937e3f793f5d4be transcode-0.6.6.ebuild 3348
 MD5 1ea4f41a1198c9baa644bbc9bdfc3203 transcode-0.6.7.ebuild 3375
-MD5 8d488aa2e686df62805758758c893be2 transcode-0.6.8.ebuild 3405
-MD5 bb865c02f4152b7492bdbdf2042389e5 transcode-0.6.9.ebuild 3698
+MD5 ff726f8c3e289690e6dd3cf9d30c57d7 transcode-0.6.8.ebuild 3435
+MD5 923bd8d8f188188c4d128467454b477f transcode-0.6.9.ebuild 3727
 MD5 225a843999c440c3060e96b9fe6fca35 files/digest-transcode-0.6.3 68
 MD5 2e179af41bdf16c1de0a976eb914a141 files/digest-transcode-0.6.6 68
 MD5 4a954714299d666fbf12472d96760bed files/digest-transcode-0.6.7 68

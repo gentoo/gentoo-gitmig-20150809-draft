@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.8.ebuild,v 1.6 2003/09/24 20:58:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.8.ebuild,v 1.7 2003/09/24 21:13:20 mholzer Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -32,7 +32,8 @@ DEPEND=">=media-libs/a52dec-0.7.3
 	>=media-gfx/imagemagick-5.4.9.0
 	media-libs/netpbm
 	X? ( virtual/x11 )
-	avi? (	>=media-video/avifile-0.7.25 )
+	avi? (	<media-video/avifile-0.7.38
+		>=media-video/avifile-0.7.25 )
 	avi? ( x86? ( >=media-libs/divx4linux-20030428 ) )
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.89 )
