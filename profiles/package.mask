@@ -26,10 +26,6 @@
 # masking new cups for testing
 =net-print/cups-1.1.16
 
-# <tantive@gentoo.org> (10 Oct 2002)
-# Enabled the autodiscovery daemon (omdiscd).
-=sys-apps/openmosix-user-0.2.4-r2
-
 # <kain@gentoo.org> (10 Oct 2002)
 # Newer ppc kernel; wants more testing.
 =sys-kernel/ppc-sources-2.4.20-r1
@@ -50,10 +46,6 @@
 # Masked new kernels
 =sys-kernel/xfs-sources-2.4.19-r2
 =sys-kernel/gentoo-sources-2.4.19-r10
-
-# <tantive@gentoo.org> (05 Oct 2002)
-# Version bumped, masked for testing, supporting evms-1.2
-=sys-kernel/openmosix-sources-2.4.19-r6
 
 # <hannes@gentoo.org> (04 Oct 2002)
 # masking pending testing/freeze. look at #8649 for more information
@@ -102,10 +94,6 @@ dev-libs/commoncpp2
 =kde-base/kdesdk-3.1_beta2
 =kde-base/kdetoys-3.1_beta2
 =kde-base/kdeutils-3.1_beta2
-
-# <tantive@gentoo.org> (02 Oct 2002)
-# Initial release, masked due to freeze and for testing.
-=app-admin/openmosixtest-0.1-r1
 
 # <woodchip@gentoo.org> (02 Oct 2002)
 # chase latest release; update/report please.
