@@ -1,6 +1,9 @@
 # ChangeLog for net-www/horde-chora
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.1 2004/08/15 10:09:42 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.2 2004/08/15 16:26:37 stuart Exp $
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> horde-chora-1.2.2.ebuild:
+  Dep change to reflect net-www split
 
 *horde-chora-1.2.2 (15 Aug 2004)
 
