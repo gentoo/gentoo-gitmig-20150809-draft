@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.14 2004/01/18 18:21:44 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.15 2004/02/23 16:41:08 usata Exp $
 
 inherit libtool
 
 S="${WORKDIR}/Sablot-${PV}"
 DESCRIPTION="An XSLT Parser in C++"
-SRC_URI="http://download-2.gingerall.cz/download/sablot/Sablot-${PV}.tar.gz"
-HOMEPAGE="http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act"
+SRC_URI="http://download-1.gingerall.cz/download/sablot/Sablot-${PV}.tar.gz"
+HOMEPAGE="http://www.gingerall.com/charlie/ga/xml/p_sab.xml"
 
 SLOT="0"
 LICENSE="MPL-1.1"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.ebuild,v 1.6 2004/02/23 16:41:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.1.ebuild,v 1.1 2004/02/23 16:41:08 usata Exp $
 
 inherit libtool
 
@@ -10,13 +10,13 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="An XSLT Parser in C++"
 SRC_URI="http://download-1.gingerall.cz/download/sablot/${MY_P}.tar.gz"
-HOMEPAGE="http://www.gingerall.com/charlie/ga/xml/p_sab.xml"
+HOMEPAGE="http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act"
 # Sablotron can optionally be built under GPL, using MPL for now
 LICENSE="MPL-1.1"
 
 SLOT="0"
 IUSE="doc perl"
-KEYWORDS="~x86 ~sparc ~ppc ~hppa alpha ~amd64 ia64"
+KEYWORDS="~x86 ~sparc ~ppc ~hppa ~alpha ~amd64 ~ia64"
 
 DEPEND=">=dev-libs/expat-1.95.6-r1
 	>=dev-perl/XML-Parser-2.3"
@@ -51,7 +51,7 @@ src_compile() {
 
 src_install() {
 
-	einstall prefix=${D}/usr || die "Install failed"
+	einstall || die "Install failed"
 	dodoc ${DOCS}
 
 }
