@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/generator
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.9 2004/07/01 11:14:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.10 2004/07/11 18:48:52 slarti Exp $
+
+  11 Jul 2004; Tom Martin <slarti@gentoo.org> generator-0.35.ebuild:
+  Marked ~amd64, closing 53460.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   generator-0.35.ebuild:

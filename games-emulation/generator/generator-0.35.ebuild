@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.11 2004/07/01 11:14:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.12 2004/07/11 18:48:52 slarti Exp $
 
 inherit eutils gcc games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.squish.net/generator/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE="svga gtk"
 
 RDEPEND="virtual/libc
