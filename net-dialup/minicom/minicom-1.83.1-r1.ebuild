@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1-r1.ebuild,v 1.10 2003/03/19 16:21:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1-r1.ebuild,v 1.11 2003/04/24 21:07:01 vladimir Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Serial Communication Program"
@@ -53,4 +53,13 @@ src_install() {
 	doins ${FILESDIR}/minirc.dfl 
 	
 	dodoc Readme Copyright
+}
+
+pkg_postinst() {
+	einfo "Minicom relies on the net-misc/lrzsz package to transfer"
+	einfo "files using the XMODEM, YMODEM and ZMODEM protocols."
+	echo
+	einfo "If you need the capability of using the above protocols,"
+	einfo "make sure to install net-misc/lrsz."
+	echo
 }
