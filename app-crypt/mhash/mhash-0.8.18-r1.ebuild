@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.8.18-r1.ebuild,v 1.2 2003/05/01 20:14:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.8.18-r1.ebuild,v 1.3 2003/05/01 20:26:56 robbat2 Exp $
 
 DESCRIPTION="mhash is a library providing a uniform interface to a large number of hash algorithms."
 SRC_URI="mirror://sourceforge/mhash/${P}.tar.gz"
@@ -22,7 +22,6 @@ src_compile() {
 
 src_install() {
 	dodir /usr/{bin,include,lib}
-
 	einstall || die "install failure"
 
 	dodoc AUTHORS COPYING INSTALL NEWS README TODO THANKS ChangeLog
