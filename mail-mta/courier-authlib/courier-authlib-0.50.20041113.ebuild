@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier-authlib/courier-authlib-0.50.20041113.ebuild,v 1.2 2004/11/16 07:44:58 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier-authlib/courier-authlib-0.50.20041113.ebuild,v 1.3 2004/11/16 23:05:18 swtaylor Exp $
 
 inherit eutils
 
@@ -35,8 +35,8 @@ src_compile() {
 
 	if [ -f /var/vpopmail/etc/lib_deps ]; then
 		myconf="${myconf} --with-authvchkpw --without-authmysql --without-authpgsql"
-		use mysql && einfo "vpopmail found. authmysql will not be built."
-		use postgres && einfo "vpopmail found. authpgsql will not be built."
+		use mysql && ewarn "vpopmail found. authmysql will not be built."
+		use postgres && ewarn "vpopmail found. authpgsql will not be built."
 	else
 		myconf="${myconf} --without-authvchkpw `use_with mysql authmysql` `use_with postgres authpostgres`"
 	fi
@@ -67,6 +67,11 @@ src_install() {
 	emake install DESTDIR="${D}" || die "install"
 	emake install-migrate DESTDIR="${D}" || die "migrate"
 	emake install-configure DESTDIR="${D}" || die "configure"
-	dodoc AUTHORS COPYING* ChangeLog* INSTALL* NEWS* README*
+	rm ${D}/etc/courier/authlib/*.bak
+	dodoc AUTHORS COPYING ChangeLog* INSTALL NEWS README
+	dohtml README.html README_authlib.html NEWS.html INSTALL.html README.authdebug.html
+	use ldap && dodoc authldap.schema
+	use mysql && ( dodoc README.authmysql.myownquery ; dohtml README.authmysql.html )
+	use postgres && dohtml README.authpostgres.html
 }
 
