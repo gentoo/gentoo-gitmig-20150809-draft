@@ -50,9 +50,6 @@
 !sys-apps/lilo
 !sys-apps/grub
 
-# VNC is broken on sparc64, maintainer uses i386 specific makefile
-!net-misc/vnc
-
 # Get a decent editor - BROKEN
 !app-editors/levee
 
