@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.90.ebuild,v 1.3 2003/10/26 03:59:01 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.90.ebuild,v 1.4 2004/01/11 13:49:58 lanius Exp $
 
 inherit virtualx
 
@@ -26,7 +26,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	virtual/x11
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
-	motif? ( virtual/motif
+	motif? ( x11-libs/openmotif
 		app-text/recode )
 	opengl? ( virtual/opengl )
 	quicktime? ( virtual/quicktime )"
