@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.10 2004/09/25 13:07:24 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.11 2004/09/27 01:31:14 lv Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -294,7 +294,7 @@ host_def_setup() {
 			fi
 
 			#to fix #56702 for now, thanks Spanky
-			[ "$(gcc-version)" == "3.4" ] && test_flag -mno-sse2 && append-flags -mno-sse2
+			[ "$(gcc-version)" == "3.4" ] && use x86 && test_flag -mno-sse2 && append-flags -mno-sse2
 
 
 			# Try a fix for #49310, see #50931 for more info. <spyderous>
