@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-3.1.ebuild,v 1.10 2002/09/12 07:20:19 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-3.1.ebuild,v 1.11 2002/09/16 05:22:47 owen Exp $
 
 MY_P="docbk31"
 S=${WORKDIR}/${P}
@@ -36,7 +36,7 @@ pkg_postinst() {
 		install-catalog --add \
 			/etc/sgml/sgml-docbook-${PV}.cat \
 			/usr/share/sgml/docbook/sgml-dtd-${PV}/catalog
-		nstall-catalog --add \
+		install-catalog --add \
 			/etc/sgml/sgml-docbook-${PV}.cat \
 			/etc/sgml/sgml-docbook.cat
 	fi

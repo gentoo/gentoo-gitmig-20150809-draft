@@ -1,6 +1,6 @@
 # ChangeLog for app-text/docbook-sgml-dtd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.4 2002/09/12 07:20:19 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.5 2002/09/16 05:22:47 owen Exp $
 
 *docbook-sgml-dtd-4.0.ebuild (12 Sep 2002)
 
@@ -18,6 +18,9 @@
   Added more robust file checking.
 
 *docbook-sgml-dtd-3.1.ebuild (12 Sep 2002)
+
+  15 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Fixed a typo.
 
   12 Sep 2002; satai <satai@gentoo.org> docbook-sgml-dtd-3.1.ebuild :
   Added more robust file checking.  Also added pkg_prerm.
