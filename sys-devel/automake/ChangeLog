@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.44 2004/02/19 21:16:00 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.45 2004/03/23 23:07:12 weeve Exp $
+
+  23 Mar 2004; Jason Wever <weeve@gentoo.org> automake-1.8.2.ebuild:
+  Stable on sparc.
 
   19 Feb 2004; <tuxus@gentoo.org> automake-1.7.7.ebuild:
   Marked stable on mips
