@@ -1,6 +1,16 @@
-MD5 efe816693ca4b8158bb9d4ec3dbe4aeb vimcommander-1.52.ebuild 1063
-MD5 d7152edfcb98ffd6162973476983f7c2 vimcommander-1.54.2.2.ebuild 1074
-MD5 a3f20f486c7244d653956622da3fe7b7 ChangeLog 936
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 90c8a1c5b1817e9dfe3a9ae32a238a87 vimcommander-1.54.2.2.ebuild 1110
+MD5 2b3188a7753f9a45e0fc7f0908f7f352 ChangeLog 1059
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 efe816693ca4b8158bb9d4ec3dbe4aeb vimcommander-1.52.ebuild 1063
 MD5 9331dceeec76a6e442a160e310679f07 files/digest-vimcommander-1.52 68
 MD5 4e2da61fa5055a0218337f1af9921c8a files/digest-vimcommander-1.54.2.2 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBPN/6LLFUmVNQ7rkRAgCqAJ0YNGAfrCPwMQQj4XGujy3zmR9coACgtBT3
+LjfrCn9sZaTWgqjz/yJeSVc=
+=Dhmk
+-----END PGP SIGNATURE-----

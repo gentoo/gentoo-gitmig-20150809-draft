@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/vimcommander-1.54.2.2.ebuild,v 1.6 2004/07/14 13:50:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/vimcommander-1.54.2.2.ebuild,v 1.7 2004/09/06 22:11:46 ciaranm Exp $
 
 inherit vim-plugin
 
@@ -9,6 +9,8 @@ HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=808"
 LICENSE="GPL-2"
 KEYWORDS="alpha sparc ~x86 ~ppc"
 IUSE=""
+
+VIM_PLUGIN_HELPFILES="vimcommander"
 
 function src_unpack() {
 	unpack ${A}
