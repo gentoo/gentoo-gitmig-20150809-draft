@@ -1,7 +1,13 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.36 2004/08/22 11:48:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.37 2004/09/12 19:24:05 pvdabeel Exp $
 
+  12 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  debianutils-1.16.7-r4.ebuild:
+  keeping in stable, but made coreutils a !macos? dependency
+  Debianutils is needed for portage, but we haven't been able to create a 
+  coreutils virtual yet.
+ 
   22 Aug 2004; Michael Hanselmann <hansmi@gentoo.org>
   debianutils-1.16.7-r4.ebuild:
   Added to macos. Stable because it's a dependency for bleeding-edge
