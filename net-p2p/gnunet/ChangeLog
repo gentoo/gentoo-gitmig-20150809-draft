@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.17 2004/03/23 07:00:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.18 2004/03/23 07:08:58 eradicator Exp $
+
+  22 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gnunet-0.5.4-r1.ebuild, gnunet-0.5.5.ebuild, gnunet-0.6.0.ebuild,
+  gnunet-0.6.0a.ebuild, gnunet-0.6.1a.ebuild, gnunet-0.6.1b.ebuild,
+  gnunet-0.6.1c.ebuild:
+  Updated webpage and SRC_URI to gnu locations. Removed old ebuilds.
 
 *gnunet-0.6.1c (22 Mar 2004)
 

@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.1c.ebuild,v 1.1 2004/03/23 07:00:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.1c.ebuild,v 1.2 2004/03/23 07:08:58 eradicator Exp $
 
 inherit libtool
 
 S="${WORKDIR}/GNUnet-${PV}"
 DESCRIPTION="GNUnet is an anonymous, distributed, reputation based network."
-HOMEPAGE="http://www.ovmj.org/GNUnet/"
-SRC_URI="http://www.ovmj.org/GNUnet/download/GNUnet-${PV}.tar.bz2"
+HOMEPAGE="http://www.gnu.org/software/GNUnet/"
+SRC_URI="mirror://gnu/${PN}/GNUnet-${PV}.tar.bz2"
+RESTRICT="nomirror"
 
 IUSE="ipv6 gtk crypt mysql"
 
