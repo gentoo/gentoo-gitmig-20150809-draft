@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.0.8.ebuild,v 1.4 2004/07/01 03:08:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.0.8.ebuild,v 1.5 2004/09/25 07:40:36 vapier Exp $
 
 inherit flag-o-matic games
 
@@ -30,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	replace-cpu-flags i586 k6 k6-1 k6-2
+	replace-cpu-flags k6 k6-1 k6-2 i586
 
 	local makeopts="RO_GAME_DIR=${GAMES_DATADIR}/${PN} RW_GAME_DIR=${GAMES_STATEDIR}/${PN}"
 	if use X || { ! use X && ! use sdl; } ; then
