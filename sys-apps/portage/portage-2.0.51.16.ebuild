@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.16.ebuild,v 1.1 2005/02/06 13:20:02 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.16.ebuild,v 1.2 2005/02/18 11:43:29 eradicator Exp $
 
-inherit flag-o-matic eutils toolchain-funcs
+inherit flag-o-matic eutils toolchain-funcs multilib
 
 # If the old /lib/sandbox.so is in /etc/ld.so.preload, it can
 # cause everything to segfault !!
@@ -62,7 +62,7 @@ src_compile() {
 	cd ${S}/src/sandbox-1.1
 	if use ppc-macos || use x86-fbsd; then
 		ewarn "NOT BUILDING SANDBOX ON ${ARCH}"
-	elif [ -n "${MULTILIB_ABIS}" ]; then
+	elif has_multilib_profile; then
 		OABI="${ABI}"
 		for ABI in $(get_install_abis); do
 			export ABI
@@ -139,10 +139,10 @@ src_install() {
 	cd ${S}/src/sandbox-1.1
 	if use ppc-macos || use x86-fbsd; then
 		ewarn "Not installing sandbox on ${ARCH}"
-	elif [ -n "${MULTILIB_ABIS}" ]; then
+	elif has_multilib_profile; then
 		into /
 		OABI="${ABI}"
-		for ABI in ${MULTILIB_ABIS}; do
+		for ABI in $(get_install_abis); do
 			newlib.so libsandbox.so.${ABI} libsandbox.so
 		done
 		into /usr

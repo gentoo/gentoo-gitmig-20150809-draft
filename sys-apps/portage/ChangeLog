@@ -1,7 +1,17 @@
 # ChangeLog for sys-apps/portage
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.34 2004/08/16 08:35:24 carpaski Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.35 2005/02/18 11:43:28 eradicator Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/portage/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*portage-2.0.51-r15 (18 Feb 2005)
+
+  18 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  portage-2.0.51-r10.ebuild, portage-2.0.51-r11.ebuild,
+  portage-2.0.51-r12.ebuild, portage-2.0.51-r13.ebuild,
+  portage-2.0.51-r14.ebuild, portage-2.0.51-r15.ebuild,
+  portage-2.0.51.16.ebuild:
+  Switch to using multilib.eclass rather than querrying profile variables
+  directly to fix bug #82027.
 
