@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7.ebuild,v 1.6 2004/09/27 15:46:47 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7.ebuild,v 1.7 2004/10/01 06:56:04 geoman Exp $
 
 inherit eutils flag-o-matic
 
@@ -46,7 +46,7 @@ RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="arm alpha amd64 hppa ia64 ~mips ppc ppc64 s390 sparc x86"
+KEYWORDS="arm alpha amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
 
 src_unpack() {
 	local i
