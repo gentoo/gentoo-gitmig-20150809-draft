@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.0.ebuild,v 1.3 2005/03/20 11:38:23 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.0.ebuild,v 1.4 2005/03/20 11:42:56 cryos Exp $
 
 inherit kde eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="KDE internationalization package"
 HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 SLOT="${KDEMAJORVER}.${KDEMINORVER}"
 
