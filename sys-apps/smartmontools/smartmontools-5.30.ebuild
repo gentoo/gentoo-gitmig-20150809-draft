@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.30.ebuild,v 1.6 2004/10/10 01:16:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.30.ebuild,v 1.7 2004/10/10 01:19:36 vapier Exp $
 
 DESCRIPTION="control and monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.)"
 HOMEPAGE="http://smartmontools.sf.net/"
@@ -20,6 +20,7 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/smartd.rc smartd
+	insinto /etc/conf.d; newins ${FILESDIR}/smartd.confd smartd
 }
 
 pkg_postinst() {
