@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.7 2002/07/27 10:44:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.8 2002/08/13 11:57:45 danarmak Exp $
 
 inherit kde-base
 need-kde 3
@@ -50,15 +50,15 @@ src_install() {
     kde_src_install
     
     # setup htdig for use with kdevelop out-of-the-box (sort of)
-    sed -e "s:_KDEDIR_:${KDEDIR}:g" ${FILESDIR}/htdig.conf > ${D}/${KDEDIR}/share/apps/kdevelop/tools/htdig.conf
-    dodir ${KDEDIR}/share/apps/kdevelop/htdig/db
+    sed -e "s:_KDEDIR_:${PREFIX}:g" ${FILESDIR}/htdig.conf > ${D}/${PREFIX}/share/apps/kdevelop/tools/htdig.conf
+    dodir ${PREFIX}/share/apps/kdevelop/htdig/db
     
     # kdelibs documentation - pregenerated so we don't need kdelibs sources etc
-    cp -r ${WORKDIR}/KDE-Documentation ${D}/${KDEDIR}/share/apps/kdevelop/
+    cp -r ${WORKDIR}/KDE-Documentation ${D}/${PREFIX}/share/apps/kdevelop/
     
     # c/cpp reference package
-    dodir ${KDEDIR}/share/doc/HTML/en/kdevelop/reference
-    cp -r ${WORKDIR}/c_cpp_reference-1.0/reference/{C,CPLUSPLUS,GRAPHICS} ${D}/${KDEDIR}/share/doc/HTML/en/kdevelop/reference/
+    dodir ${PREFIX}/share/doc/HTML/en/kdevelop/reference
+    cp -r ${WORKDIR}/c_cpp_reference-1.0/reference/{C,CPLUSPLUS,GRAPHICS} ${D}/${PREFIX}/share/doc/HTML/en/kdevelop/reference/
 
 }
 
@@ -67,7 +67,7 @@ pkg_postinst() {
 einfo "Don't run the kdevelop setup! It will try to generate the kdelibs documentation,"
 einfo "but a pregenerated package of it has been installed with this ebuild."
 einfo "Instead, run kdevelop, go to Options->Kdevelop Setup, Documentation tab, and change"
-einfo "the value of KDE-Libraries-Doc to $KDEDIR/share/apps/kdevelop/KDE-Documentation/ ."
+einfo "the value of KDE-Libraries-Doc to $PREFIX/share/apps/kdevelop/KDE-Documentation/ ."
 einfo ""
 einfo "Oh, and if you think of a nice way to automate this from the ebuild, pray tell"
 einfo "(but test first!) :-)"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.8 2002/07/03 07:56:16 danarmak Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.9 2002/08/13 11:57:45 danarmak Exp $
+
+  13 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix for installing outside the kde prefix: should use $PREFIX not $KDEDIR.
 
 *kdevelop-2.1.2 (03 Jul 2002)
 
