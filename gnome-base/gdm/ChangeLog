@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.44 2003/11/17 11:37:40 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.45 2003/11/23 17:48:38 foser Exp $
+
+*gdm-2.4.4.5 (23 Nov 2003)
+
+  23 Nov 2003; foser <foser@gentoo.org> gdm-2.4.4.5.ebuild, files/2.4.4/* :
+  Cleaned up ebuild
+  Moved tcp-wrappers to DEP
+  Temporary removed gentoo theme
+  Now use our own Xsession file to source .bash_profile, needed for keychain
+  Added libart_lgpl dep
 
 *gdm-2.4.1.7-r1 (17 Nov 2003)
 
