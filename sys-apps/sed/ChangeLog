@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.15 2003/02/09 02:30:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.16 2003/02/11 08:24:20 gerk Exp $
+
+  11 Feb 2003; Mark Guertin <gerk@gentoo.org> sed-4.0.5.ebuild :
+  Added ppc to keywords, beat on this extensively and it seems 
+  previous issues are resolved.
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> sed-4.0.5.ebuild :
   Added hppa to keywords.
