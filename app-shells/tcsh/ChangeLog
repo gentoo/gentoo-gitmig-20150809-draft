@@ -1,8 +1,11 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.4 2002/07/16 03:12:06 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.5 2002/09/20 18:57:50 vapier Exp $
 
 *tcsh-6.11 (09 Jul 2002)
+
+  19 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added more hosts to SRC_URI and added HOMEPAGE variable
 
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
   Changed KEYWORDS="*" to KEYWORDS="x86 ppc"
@@ -13,6 +16,9 @@
   Version bump.  Thanks to: gentoo@subgroove.net in bug #4740
 
 *tcsh-6.10-r3 (21 Mar 2002)
+
+  19 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added more hosts to SRC_URI and added HOMEPAGE variable
 
   21 Mar 2002; Seemant Kulleen <seemant@gentoo.org>  tcsh-6.10-r3.ebuild :
 

@@ -1,11 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.10-r3.ebuild,v 1.4 2002/08/16 02:37:45 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.10-r3.ebuild,v 1.5 2002/09/20 18:57:50 vapier Exp $
       
 S=${WORKDIR}/${P}.00
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
-#ugh, astron.com doesn't support passive ftp... maybe another source?
-SRC_URI="ftp://ftp.astron.com/pub/tcsh/${P}.tar.gz"
+SRC_URI="ftp://ftp.gw.com/pub/unix/tcsh/${P}.tar.gz
+	ftp://ftp.astron.com/pub/tcsh/${P}.tar.gz
+	ftp://ftp.funet.fi/pub/unix/shells/tcsh/${P}.tar.gz"
+HOMEPAGE="http://www.tcsh.org/"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
     perl? ( sys-devel/perl )"
