@@ -1,3 +1,14 @@
-MD5 386feaa8b9f6a9e569a60d79a60119dc ChangeLog 1698
-MD5 d191db0241886582b2bb0db87c6fb489 logsentry-1.1.1.ebuild 1585
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a8af69a559f9ac17dfa602015add4a3e ChangeLog 1837
+MD5 362b987ca6104e1a9f940bc18b2437cd logsentry-1.1.1.ebuild 1586
+MD5 fd96e5e81bdbba974aeff5d2c03cfb0c metadata.xml 305
 MD5 03f9002c435a60fa69ed010578e34fd7 files/digest-logsentry-1.1.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB1Ne+FdQwWVoAgN4RAgFiAJ0ZLqNvqr+UEZTT2rX8IZOY+kWZHwCgyRBp
+crgln1NMX21k3YvL0+v83as=
+=f0gS
+-----END PGP SIGNATURE-----

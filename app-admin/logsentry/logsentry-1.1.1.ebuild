@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.20 2004/12/18 17:27:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.21 2004/12/31 04:41:32 chriswhite Exp $
 
 DESCRIPTION="automatically monitor system logs and mail security violations on a periodic basis"
 
 # Seems that the project has been discontinued by CISCO?
-#HOMEPAGE="http://www.psionic.com/products/logsentry.html/"
+HOMEPAGE="http://sourceforge.net/projects/sentrytools/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
