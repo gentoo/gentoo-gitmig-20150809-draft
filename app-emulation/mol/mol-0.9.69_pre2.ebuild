@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.69_pre2.ebuild,v 1.1 2003/05/24 23:59:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.69_pre2.ebuild,v 1.2 2003/06/09 22:08:43 msterret Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,8 @@ DESCRIPTION="MOL (Mac-on-Linux) lets PPC users run MacOS (X) under Linux (rsync 
 SRC_URI="http://cvs.gentoo.org/~lu_zero/distfiles/${P}.tar.bz2"
 HOMEPAGE="http://www.maconlinux.net/"
 
-DEPEND=">=sys-kernel/ppc-sources-benh-2.4.20-r10"
+DEPEND=">=sys-kernel/ppc-sources-benh-2.4.20-r10
+	>=sys-apps/sed-4"
 RDEPEND="net-misc/dhcp
 	net-firewall/iptables"
 SLOT="0"

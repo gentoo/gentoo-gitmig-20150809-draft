@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.20 2003/05/24 23:59:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.21 2003/06/09 22:08:43 msterret Exp $
+
+  09 Jun 2003; <msterret@gentoo.org> mol-0.9.69_pre1.ebuild,
+  mol-0.9.69_pre2.ebuild:
+  DEPEND on sed >= 4
 
 *mol-0.9.69_pre2 (25 May 2003)
 
