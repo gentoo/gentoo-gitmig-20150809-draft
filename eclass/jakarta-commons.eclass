@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.9 2004/01/14 03:58:20 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.10 2004/01/19 03:43:47 strider Exp $
 
 inherit base java-pkg
 ECLASS=jakarta-commons
@@ -15,7 +15,8 @@ DEPEND="$DEPEND
         >=virtual/jdk-1.3
         >=dev-java/ant-1.4
         >=dev-java/log4j-1.2
-        junit? ( >=dev-java/junit-3.7 )"
+        junit? ( >=dev-java/junit-3.7 )
+        jikes? ( >=dev-java/jikes-1.18 )"
 
 RDEPEND="$RDEPEND >=virtual/jdk-1.3"
 SLOT="$SLOT"
