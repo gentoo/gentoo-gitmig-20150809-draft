@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/bio2jack
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bio2jack/ChangeLog,v 1.1 2004/08/26 00:50:01 pkdawson Exp $
+
+*bio2jack-0.2 (25 Aug 2004)
+
+  25 Aug 2004; Patrick Dawson <pkdawson@gentoo.org> bio2jack-0.2.ebuild :
+  Initial import.  Ebuild submitted by Eric Shattow <shadow@serverart.org>.
+  Closes bug #60819.
