@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.109 2005/02/11 12:34:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.110 2005/03/08 23:53:51 eradicator Exp $
+
+  08 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  perl-5.8.6-r3.ebuild:
+  More multilib fixes.
 
 *perl-5.8.5-r4 (11 Feb 2005)
 

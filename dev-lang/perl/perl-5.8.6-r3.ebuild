@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r3.ebuild,v 1.1 2005/02/11 12:34:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r3.ebuild,v 1.2 2005/03/08 23:53:51 eradicator Exp $
 
-inherit eutils flag-o-matic gcc
+inherit eutils flag-o-matic gcc multilib
 
 # The slot of this binary compat version of libperl.so
 PERLSLOT="1"
@@ -151,9 +151,11 @@ src_configure() {
 		einfo "using ithreads"
 		mythreading="-multi"
 		myconf="-Dusethreads ${myconf}"
-		myarch="${CHOST%%-*}-linux-thread"
+		myarch=$(get_abi_CHOST)
+		myarch="${myarch%%-*}-linux-thread"
 	else
-		myarch="${CHOST%%-*}-linux"
+		myarch=$(get_abi_CHOST)
+		myarch="${myarch%%-*}-linux"
 	fi
 
 	local inclist=$(for v in $PERL_OLDVERSEN; do echo -n "$v $v/$myarch$mythreading "; done)
