@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.16.ebuild,v 1.4 2003/10/18 04:48:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.16.ebuild,v 1.5 2004/02/26 03:58:13 weeve Exp $
 
 IUSE=""
 
@@ -28,7 +28,11 @@ pkg_setup() {
 }
 
 src_compile() {
-	emake -f Makefile.lnx || die
+	if [ `use x86`] ; then
+		emake -f Makefile.lnx || die
+	elif [ `use sparc` ]; then
+		emake -f Makefile.slx || die
+	fi
 	sed -e "s:/var/MailRoot:/etc/xmail:g" sendmail.sh > sendmail.sh.new
 }
 
