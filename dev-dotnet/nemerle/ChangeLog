@@ -1,0 +1,11 @@
+# ChangeLog for dev-dotnet/nemerle
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nemerle/ChangeLog,v 1.1 2004/07/02 19:30:33 latexer Exp $
+
+*nemerle-0.1.4 (02 Jul 2004)
+
+  02 Jul 2004; Peter Johanson <latexer@gentoo.org> +metadata.xml,
+  +nemerle-0.1.4.ebuild:
+  Initial commit. Ebuilds based off version by Robert Prehn
+  <prehn@ece.utexas.edu>. See bug #42211.
+
