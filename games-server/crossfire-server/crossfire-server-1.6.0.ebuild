@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.6.0.ebuild,v 1.1 2004/05/30 10:22:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.6.0.ebuild,v 1.2 2004/05/30 18:34:38 vapier Exp $
 
 inherit eutils games
 
 MY_P="${P/-server}"
-DESCRIPTION="Client for the nethack-style but more in the line of UO"
+DESCRIPTION="server for the crossfire clients"
 HOMEPAGE="http://crossfire.real-time.com/"
 SRC_URI="mirror://sourceforge/crossfire/${MY_P}.tar.bz2"
 
