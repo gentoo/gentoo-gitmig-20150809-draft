@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.22 2005/01/02 21:12:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.23 2005/02/28 00:12:41 joem Exp $
+
+*gramps-1.0.8 (27 Feb 2005)
+
+  27 Feb 2005; Joe McCann <joem@gentoo.org> +gramps-1.0.10.ebuild,
+  gramps-1.0.8.ebuild:
+  New version, bug 83433. Mark previous version x86 stable
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
