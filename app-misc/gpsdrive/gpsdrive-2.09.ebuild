@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.09.ebuild,v 1.1 2004/03/04 04:18:58 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.09.ebuild,v 1.2 2004/04/25 22:16:51 agriffis Exp $
 
 DESCRIPTION="displays GPS position on a map"
 HOMEPAGE="http://gpsdrive.kraftvoll.at"
@@ -16,7 +16,7 @@ DEPEND="sys-devel/gettext
 	>=dev-libs/libpcre-4.2"
 
 src_compile() {
-	econf `use_enable nls`
+	econf `use_enable nls` || die "econf failed"
 	emake || die "compile failed"
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.13 2004/03/16 11:26:05 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.14 2004/04/25 22:27:19 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> workrave-1.2.2.ebuild:
+  Add die following econf for bug 48950
 
   16 Mar 2004; L. Boshell <leonardop@gentoo.org> workrave-1.4.0-r1.ebuild,
   workrave-1.4.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r2.ebuild,v 1.9 2004/04/06 04:24:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r2.ebuild,v 1.10 2004/04/25 22:23:11 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -58,7 +58,7 @@ src_compile() {
 		$(use_enable pam) \
 		--with-socket-dir=/var/run/screen \
 		--with-sys-screenrc=/etc/screenrc \
-		--enable-rxvt_osc ${myconf}
+		--enable-rxvt_osc ${myconf} || die "econf failed"
 
 #	# Fix bug 12683 by fixing up term.h (remove dups and add missing).
 #	# This is really an upstream problem in screen, I think.

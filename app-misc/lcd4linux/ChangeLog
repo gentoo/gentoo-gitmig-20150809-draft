@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lcd4linux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.10 2004/03/01 19:43:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.11 2004/04/25 22:20:50 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> lcd4linux-0.9.11.ebuild,
+  lcd4linux-0.9.9.ebuild:
+  Add die following econf for bug 48950
 
   01 Mar 2004; Martin Holzer <mholzer@gentoo.org> lcd4linux-0.9.11.ebuild:
   x86 stable and png issue.

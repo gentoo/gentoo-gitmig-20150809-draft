@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.4 2004/04/25 22:14:17 agriffis Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	make || die
 }
 

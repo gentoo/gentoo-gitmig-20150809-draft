@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.4.4.ebuild,v 1.1 2004/04/02 19:34:26 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.4.4.ebuild,v 1.2 2004/04/25 22:22:28 agriffis Exp $
 
 DESCRIPTION="Command line tool for transfering mp3s to and from a Rio 600, 800, Rio Riot, and Nike PSA/Play"
 HOMEPAGE="http://rioutil.sourceforge.net/"
@@ -16,7 +16,7 @@ DEPEND="sys-libs/zlib"
 src_compile() {
 	local myconf="--with-usbdevfs"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "compile failure"
 }
 

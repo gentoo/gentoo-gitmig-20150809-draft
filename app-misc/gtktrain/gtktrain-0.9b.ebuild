@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktrain/gtktrain-0.9b.ebuild,v 1.8 2004/03/14 10:59:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktrain/gtktrain-0.9b.ebuild,v 1.9 2004/04/25 22:18:31 agriffis Exp $
 
 DESCRIPTION="GUI app for calculating fastest train routes"
 SRC_URI="http://www.on.rim.or.jp/~katamuki/software/train/${P}.tar.gz"
@@ -16,7 +16,7 @@ DEPEND=">=dev-libs/libtrain-0.9b
 
 src_compile() {
 	use nls || NLS_OPTION="--disable-nls"
-	econf ${NLS_OPTION}
+	econf ${NLS_OPTION} || die "econf failed"
 	emake || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.04-r1.ebuild,v 1.3 2004/04/06 04:17:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.04-r1.ebuild,v 1.4 2004/04/25 22:16:51 agriffis Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf `use_enable nls`
+	econf `use_enable nls` || die "econf failed"
 	emake || die "compile failed"
 
 }

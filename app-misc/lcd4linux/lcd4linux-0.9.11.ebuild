@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.11.ebuild,v 1.2 2004/03/01 19:43:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.11.ebuild,v 1.3 2004/04/25 22:20:50 agriffis Exp $
 
 DESCRIPTION="system and ISDN information is shown on an external display or in a X11 window."
 SRC_URI="mirror://sourceforge/lcd4linux/${P}.tar.gz"
@@ -26,7 +26,7 @@ src_compile() {
 
 	econf \
 		--sysconfdir=/etc/lcd4linux \
-		--with-drivers="all${myconf}"
+		--with-drivers="all${myconf}" || die "econf failed"
 
 	emake || die
 }

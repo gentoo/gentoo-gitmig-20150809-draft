@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.14 2004/04/14 10:53:53 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.15 2004/04/25 22:21:36 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> lcdproc-0.4.1-r1.ebuild,
+  lcdproc-0.4.3.ebuild:
+  Add die following econf for bug 48950
 
 *lcdproc-0.4.5 (14 Apr 2004)
 
