@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gcloop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gcloop/ChangeLog,v 1.3 2004/02/17 15:38:47 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gcloop/ChangeLog,v 1.4 2004/02/26 23:31:10 lu_zero Exp $
+
+  27 Feb 2004; Luca Barbato <lu_zero@gentoo.org> gcloop-0.99.20040217.ebuild:
+  Marked ppc
 
 *gcloop-0.99.20040217 (17 Feb 2004)
 
