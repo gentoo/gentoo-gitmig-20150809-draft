@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.17 2004/10/26 13:32:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.18 2004/12/18 17:48:53 chriswhite Exp $
+
+  19 Dec 2004; Chris White <chriswhite@gentoo.org>
+  win32codecs-20040916-r1.ebuild:
+  Marked stable to prepare for mplayer security marking.
 
 *win32codecs-20040916-r1 (26 Oct 2004)
 
