@@ -1,8 +1,12 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.1 2002/10/31 22:31:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.2 2003/01/31 23:16:49 mholzer Exp $
 
 *tix-8.2.0b1 (11 Oct 2002)
+
+  31 Jan 2003; Martin Holzer <mholzer@gentoo.org> tix-8.2.0b1.ebuild
+  files/tix-8.2.0-gentoo.diff ChangeLog :
+  Change SRC_URI to use mirror://sourceforge. Fixed diff. Closes #14141.
 
   11 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> tix-8.2.0b1.ebuild files/digest-tix-8.2.0b1 :
   Initial import. Ebuild submitted by Pete Gale <pete@SoulCoffee.org>.
