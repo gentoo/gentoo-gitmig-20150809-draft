@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/scilab
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.14 2004/04/27 19:40:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.15 2004/06/06 16:47:14 kugelfang Exp $
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> scilab-2.7-r3.ebuild:
+  Marked stable on amd64.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> scilab-2.7-r3.ebuild:
   Add inherit eutils

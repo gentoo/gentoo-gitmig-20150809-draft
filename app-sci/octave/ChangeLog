@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/octave
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.29 2004/05/27 13:41:25 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.30 2004/06/06 16:47:49 kugelfang Exp $
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> octave-2.1.57-r1.ebuild:
+  Marked stable on amd64.
 
   27 May 2004; Patrick Kursawe <phosphan@gentoo.org> octave-2.1.57-r1.ebuild:
   Fixed typo about g77/f77 USE flag, bug #51858

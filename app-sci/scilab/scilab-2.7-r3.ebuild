@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r3.ebuild,v 1.3 2004/04/27 19:40:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r3.ebuild,v 1.4 2004/06/06 16:47:14 kugelfang Exp $
 
 inherit virtualx eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.scilab.org/"
 
 LICENSE="scilab"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 amd64"
 IUSE="tcltk gtk"
 
 DEPEND="virtual/x11

@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/openbabel/openbabel-1.100.2.ebuild,v 1.5 2004/05/15 09:45:07 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/openbabel/openbabel-1.100.2.ebuild,v 1.6 2004/06/06 17:00:46 kugelfang Exp $
 
 DESCRIPTION="Open Babel interconverts file formats used in molecular modeling."
 
 SRC_URI="mirror://sourceforge/openbabel/${P}.tar.gz"
 HOMEPAGE="http://openbabel.sourceforge.net/"
-KEYWORDS="x86 sparc ppc ~amd64"
+KEYWORDS="x86 sparc ppc amd64"
 
 SLOT="0"
 LICENSE="GPL-2"
