@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/rskkserv
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/ChangeLog,v 1.1 2003/09/20 08:48:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/ChangeLog,v 1.2 2003/10/16 17:05:34 usata Exp $
 
 *rskkserv-2.94.12a (20 Sep 2003)
+
+  17 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> rskkserv-2.94.12a.ebuild:
+  Marked stable on x86
 
   20 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> rskkserv-2.94.12a.ebuild,
   files/rskkserv-2.94.12a-gentoo.diff, files/rskkserv-skk-jisyo-extra.diff,
