@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/fluxbox-styles-fluxmod
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.19 2005/02/19 18:59:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.20 2005/03/26 00:41:00 hansmi Exp $
+
+  26 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  fluxbox-styles-fluxmod-20050128.ebuild:
+  Stable on ppc.
 
   19 Feb 2005; Markus Rothe <corsair@gentoo.org>
   fluxbox-styles-fluxmod-20050128.ebuild:
