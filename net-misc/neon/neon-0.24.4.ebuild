@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.24.4.ebuild,v 1.4 2004/04/26 13:21:31 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.24.4.ebuild,v 1.5 2004/06/02 20:09:00 pvdabeel Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTTP and WebDAV client library"
@@ -12,7 +12,7 @@ DEPEND="expat? ( dev-libs/expat )
 	zlib? ( sys-libs/zlib )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE="ssl zlib expat"
 
 src_compile() {
