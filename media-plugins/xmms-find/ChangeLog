@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-find
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-find/ChangeLog,v 1.5 2004/07/03 21:39:07 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-find/ChangeLog,v 1.6 2004/07/03 23:09:37 weeve Exp $
+
+  03 Jul 2004; Jason Wever <weeve@gentoo.org> xmms-find-0.5.0.ebuild:
+  Added ~sparc keyword.
 
 *xmms-find-0.5.0 (03 Jul 2004)
 
