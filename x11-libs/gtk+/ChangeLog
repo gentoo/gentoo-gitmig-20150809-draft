@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.36 2002/11/15 22:16:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.37 2002/11/21 01:16:28 foser Exp $
+
+*gtk+-2.0.9 (20 Nov 2002)
+
+  20 Nov 2002; foser <foser@gentoo.org> gtk+-2.0.9.ebuild :
+  New version, mainly fixes a bug which made metacity crash
 
 *gtk-2.0.8-r1 (15 Nov 2002)
 
