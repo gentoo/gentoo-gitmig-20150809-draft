@@ -3,9 +3,11 @@ MD5 cc8bbd461a0559ee54683531d80991ba leafnode-2.0.0_alpha20030621.ebuild 2466
 MD5 fa92fe676f7817a2f451e57a5129a290 leafnode-1.9.42.ebuild 1866
 MD5 63bd6e87942a25d48bd5365edd8246c0 metadata.xml 268
 MD5 2ae0fa913eb09f0843235c67be8acca6 leafnode-2.0.0_alpha20031028.ebuild 2470
+MD5 cb4ce6451c9a492f0105233f5e2d55a4 leafnode-1.9.49.ebuild 1857
 MD5 c9e3a9028be25e8e193bccd6a72179f0 files/fetchnews.cron 179
 MD5 510836c882c3365d0441ba7d8854ba6b files/leafnode.xinetd 230
 MD5 2f9497c399cca56885460b88ee53da0b files/texpire.cron 159
 MD5 06eec26c72070f70f182ebcf05cd22a3 files/digest-leafnode-2.0.0_alpha20030621 82
 MD5 d07ba6707cd78e8407f2c28c2e016ff9 files/digest-leafnode-1.9.42 72
 MD5 6c9c7d9c54204328331615d7b725fe7b files/digest-leafnode-2.0.0_alpha20031028 82
+MD5 55746f46949f232f8cc02f902f807b08 files/digest-leafnode-1.9.49 72
