@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.18.ebuild,v 1.7 2004/10/02 08:35:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.18.ebuild,v 1.8 2004/11/01 03:28:11 weeve Exp $
 
 inherit elisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.uni-mainz.de/pub/software/gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 IUSE=""
 
 DEPEND="virtual/libc
