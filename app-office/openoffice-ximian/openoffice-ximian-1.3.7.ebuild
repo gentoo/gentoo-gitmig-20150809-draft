@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.3 2005/01/14 21:17:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.4 2005/01/16 16:30:11 suka Exp $
 
 # Notes:
 #
@@ -28,13 +28,13 @@ inherit flag-o-matic eutils toolchain-funcs
 
 IUSE="gnome kde java curl zlib nptl"
 
-OO_VER=1.1.3
-PATCHLEVEL=OOO_1_1_3
-ICON_VER=OOO_1_1-10
-KDE_ICON_VER=OOO_1_1-0.3
-KDE_ICON_PATH=documents/159/1975
+OO_VER="1.1.3"
+PATCHLEVEL="OOO_1_1_3"
+ICON_VER="OOO_1_1-10"
+KDE_ICON_VER="OOO_1_1-0.3"
+KDE_ICON_PATH="documents/159/1975"
 INSTDIR="/opt/Ximian-OpenOffice"
-PATCHDIR=${WORKDIR}/ooo-build-${PV}
+PATCHDIR="${WORKDIR}/ooo-build-${PV}"
 S="${WORKDIR}/OOo_${OO_VER}_src"
 DESCRIPTION="Ximian-ized version of OpenOffice.org, a full office productivity suite."
 SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}-1_source.tar.gz
@@ -517,7 +517,7 @@ src_install() {
 	doexe ${T}/xooffice
 
 	# Component symlinks
-	for app in calc draw impress html math writer setup; do
+	for app in calc draw html impress math writer setup; do
 		dosym xooffice /usr/bin/xoo${app}
 	done
 
@@ -575,9 +575,9 @@ pkg_postinst() {
 
 	einfo " To start Ximian-OpenOffice.org, run:"
 	einfo
-	einfo "   $ xooffice"
+	einfo " $ xooffice"
 	einfo
 	einfo " Also, for individual components, you can use any of:"
 	einfo
-	einfo "   xoocalc, xoodraw, xooimpress, xoomath, xooweb or xoowriter"
+	einfo " xoocalc, xoodraw, xoohtml, xooimpress, xoomath or xoowriter"
 }
