@@ -1,20 +1,44 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.12 2002/10/12 06:41:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.13 2002/10/13 01:17:30 azarah Exp $
 
 IUSE="nls pic build"
+
 inherit flag-o-matic
 
 filter-flags "-fomit-frame-pointer -malign-double"
+
+# Recently there has been a lot of stability problem in Gentoo-land.  Many
+# things can be the cause to this, but I believe that it is due to gcc3
+# still having issues with optimizations, or with it not filtering bad
+# combinations (protecting the user maybe from himeself) yet.
+#
+# This can clearly be seen in large builds like glibc, where too aggressive
+# CFLAGS cause the test to fail miserbly.
+#
+# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
+# knows what he is talking about:
+#
+#   People really shouldn't force code-specific options on... It's a
+#   bad idea. The -march options aren't just to look pretty. They enable
+#   options that are sensible (and include sse,mmx,3dnow when apropriate).
+#
+# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
+# you do not like it, comment it, but do not bugreport if you run into
+# problems.
+#
+# <azarah@gentoo.org> (13 Oct 2002)
+strip-flags
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
+
 KEYWORDS="x86 ppc sparc sparc64 alpha"
-LICENSE="GPL-2"
 SLOT="2.2"
+LICENSE="GPL-2"
 
 #portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 #drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
@@ -22,15 +46,13 @@ DEPEND="sys-kernel/linux-headers
 	nls? ( sys-devel/gettext )"
 RDEPEND="sys-kernel/linux-headers"
 
-if [ -z "`use build`" ]
-then
-	RDEPEND="${RDEPEND}
-		sys-apps/baselayout"
-else
-	RDEPEND="${RDEPEND}
-		>=sys-apps/portage-1.8.9_pre1
-		sys-apps/baselayout"
-fi
+DEPEND=">=sys-devel/gcc-3.2-r1
+	>=sys-devel/binutils-2.13.90.0.4-r1
+	sys-kernel/linux-headers
+	nls? ( sys-devel/gettext )"
+RDEPEND="sys-kernel/linux-headers
+	sys-apps/baselayout
+	build? ( >=sys-apps/portage-1.9.0 )"
 
 PROVIDE="virtual/glibc"
 
