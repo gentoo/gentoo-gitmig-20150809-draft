@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0.1.ebuild,v 1.10 2005/03/12 19:44:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0.1.ebuild,v 1.11 2005/03/16 06:09:20 eradicator Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -96,13 +96,16 @@ src_compile() {
 	####################################
 
 	# ./configure picks up the mozconfig stuff
+	export LD="$(tc-getLD)"
+	export CC="$(tc-getCC)"
+	export CXX="$(tc-getCXX)"
 	econf
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
 	edit_makefiles
 
-	emake MOZ_PHOENIX=1 || die
+	emake MOZ_PHOENIX=1 CXX="$(tc-getCXX)" CC="$(tc-getCC)" LD="$(tc-getLD)" || die
 }
 
 src_install() {
