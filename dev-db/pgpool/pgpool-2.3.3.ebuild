@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-2.3.3.ebuild,v 1.1 2005/01/01 03:19:53 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-2.3.3.ebuild,v 1.2 2005/02/11 17:56:49 nakano Exp $
 
 DESCRIPTION="Connection pool server for PostgreSQL"
-HOMEPAGE="http://www2b.biglobe.ne.jp/~caco/pgpool/"
-SRC_URI="http://www2b.biglobe.ne.jp/~caco/pgpool/${P}.tar.gz"
+HOMEPAGE="http://pgpool.projects.postgresql.org/"
+SRC_URI="ftp://ftp.sra.co.jp/pub/cmd/postgres/pgpool/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
