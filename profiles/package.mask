@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <vladimir@gentoo.org> (05 Mar 2003)
+# Seriously buggy ebuilds, install random stuff to /etc/gshield
+net-misc/gshield
+
 # <vapier@gentoo.org> (03 Mar 2003)
 # package compiles fine then doesnt run ...
 app-games/xboing
