@@ -2,21 +2,21 @@
 Hash: SHA1
 
 MD5 d3c87f54a87338e8a626d17df8cafec0 ChangeLog 3088
-MD5 750873506395f749a2460344924c9716 taglib-1.3.ebuild 901
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 2c221bbabd9c4236fd4e0221e3754bcd taglib-1.1.ebuild 889
 MD5 59e4dcc1bde033b02fd5ccb40273a864 taglib-1.0.ebuild 850
-MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 da62f8078272b20ec516c00642a890e7 taglib-1.2.ebuild 895
-MD5 bf110b894ee2d3ec33d0c409d562d631 taglib-1.3.1.ebuild 899
+MD5 750873506395f749a2460344924c9716 taglib-1.3.ebuild 901
+MD5 450c3a659380c846be1229d4dd7f4263 taglib-1.3.1.ebuild 897
+MD5 5bf7e9ce7bf6ca9af9361b7b5b909873 files/digest-taglib-1.1 62
 MD5 e5d3c1a247ce1f6d9f56f6bdc2fe5bb4 files/digest-taglib-1.0 62
+MD5 b3ed88057b7e51136adaa1711b749831 files/digest-taglib-1.2 62
 MD5 9a9b4381886b133dd250c078fb7332d6 files/digest-taglib-1.3 62
 MD5 cc8a58ea8028f3539fcee148baeffcc1 files/digest-taglib-1.3.1 64
-MD5 b3ed88057b7e51136adaa1711b749831 files/digest-taglib-1.2 62
-MD5 5bf7e9ce7bf6ca9af9361b7b5b909873 files/digest-taglib-1.1 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB8k48ugEuf3OQ0akRAsw+AJwOUBfoa3yTodgX4vOurlxRuIiQogCgotjM
-kNkWBt4jTRnh8t92AfUDXHk=
-=MFhh
+iD8DBQFB9ZuaroRuSHgZdywRAhLuAJ90FQndHdS4msXhinYQ3ns9z5HNSQCgg4HB
+cQSk1GsbvnWL16OD48Gw8dc=
+=3hUg
 -----END PGP SIGNATURE-----
