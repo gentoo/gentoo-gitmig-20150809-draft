@@ -4,5 +4,9 @@
 	<longdescription lang="en">
 		The gnustep-apps category contains GNUstep applications.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie gnustep-apps enthält Applikationen für die
+		GNUstep-Umgebung.
+	</longdescription>
 </catmetadata>
 
