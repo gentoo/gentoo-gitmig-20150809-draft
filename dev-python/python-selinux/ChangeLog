@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-selinux
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.4 2003/07/30 01:20:51 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.5 2003/10/03 04:25:39 method Exp $
+
+*python-selinux-2.5 (02 Oct 2003)
+
+  02 Oct 2003; Joshua Brindle <method@gentoo,org> python-selinux-2.5.ebuild:
+  new api version
 
 *python-selinux-1.2 (29 Jul 2003)
 
