@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.5 2002/03/30 00:23:40 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.6 2002/04/02 01:58:22 azarah Exp $
+
+*evolution-1.0.3-r1 (2 April 2002)
+
+  02 Apr 2002; M.Schlemmer <azarah@gentoo.org> evolution-1.0.3-r1.ebuild :
+
+  Finally fix the filter crash bug, resolving bug #886.  Resolve bug 1355, which
+  is the imap literal sting issue.  Add ftp.gnome.org back into SRC_URI ... it is
+  in the stable branch now ...
 
 *evolution-1.0.3 (29 Mar 2002)
 
