@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/piozone
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/ChangeLog,v 1.1 2003/08/11 20:11:43 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/ChangeLog,v 1.2 2004/03/12 11:14:36 mr_bones_ Exp $
+
+  12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> piozone-1.0-r2.ebuild:
+  don't assign default to S; header fix; tidy
 
 *piozone-1.0-r2 (12 Aug 2003)
 
