@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/tmda
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.37 2003/11/17 20:27:09 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.38 2003/12/01 19:21:39 agenkin Exp $
+
+*tmda-0.90 (01 Dec 2003)
+
+  01 Dec 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
 
 *tmda-0.89 (17 Nov 2003)
 
