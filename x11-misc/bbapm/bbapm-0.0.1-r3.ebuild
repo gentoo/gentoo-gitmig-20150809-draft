@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/bbapm-0.0.1-r3.ebuild,v 1.1 2002/12/12 17:47:30 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/bbapm-0.0.1-r3.ebuild,v 1.2 2003/01/06 14:59:40 jmorgan Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://bbtools.thelinuxcommunity.org/sources/${P}.tar.gz"
 HOMEPAGE="http://bbtools.thelinuxcommunity.org/contrib.phtml"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86"
 
 DEPEND="virtual/blackbox
 	>=sys-apps/apmd-3.0.1"
