@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.ebuild,v 1.1 2001/10/29 02:49:10 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.ebuild,v 1.2 2002/04/14 18:52:53 seemant Exp $
 
 S=${WORKDIR}/T1Lib-${PV}
 DESCRIPTION="A Type 1 Rasterizer Library for UNIX/X11"
@@ -15,21 +15,22 @@ DEPEND="virtual/glibc
 src_compile() {
 
 	local myconf
-	if [ "`use X`" ]
-	then
-		myconf="--with-x"
-	else
-		myconf="--without-x"
-	fi
+	local myopt
 
-	./configure --host=${CHOST} --prefix=/usr --datadir=/etc ${myconf} || die
-
-	if [ "`use tetex`" ]
-	then
-		emake || die
-	else
-		emake without_doc || die
-	fi
+	use X	\
+		&& myconf="--with-x"	\
+		|| myconf="--without-x"
+	
+	use tetex	\
+		&& myopt="without_doc"
+	
+	./configure 	\
+		--host=${CHOST}	\
+		--prefix=/usr	\
+		--datadir=/etc	\
+		${myconf} || die
+	
+	emake ${myopt} || die
 }
 
 src_install() {
