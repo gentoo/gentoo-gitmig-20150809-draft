@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.1.ebuild,v 1.1 2003/10/21 18:54:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.1.ebuild,v 1.2 2003/10/21 21:19:57 foser Exp $
 
 inherit gnome2
 
@@ -14,8 +14,8 @@ IUSE="oggvorbis cups gstreamer"
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/pango-1.2
 	>=x11-libs/gtk+-2.2
-	>=dev-libs/libxml2-2.4.7
 	>=gnome-base/eel-${PV}
+	>=dev-libs/libxml2-2.4.7
 	>=gnome-base/gnome-vfs-2.3.5
 	>=media-sound/esound-0.2.27
 	>=gnome-base/gconf-2.3
@@ -60,8 +60,7 @@ src_unpack() {
 
 	# regenerating only needed with patching
 	if [ `use cups` ] || [ `use gstreamer` ]; then
-		# nasteh
-		WANT_AUTOMAKE_2_5=1 autoheader-2.57 || die
+		WANT_AUTOCONF_2_5=1 autoheader || die
 		WANT_AUTOCONF_2_5=1 autoconf || die
 		WANT_AUTOMAKE=1.4 automake || die
 	fi
