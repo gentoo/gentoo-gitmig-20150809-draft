@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.959 2005/02/19 10:15:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.960 2005/02/20 23:29:04 ciaranm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -764,6 +764,7 @@ x11-terms/eterm:escreen - enable built in screen support
 x11-terms/eterm:etwin - enable twin support
 x11-terms/mlterm:uim - Enable uim support
 x11-terms/mrxvt:xgetdefault - Enable resources via X instead of rxvt small version
+x11-terms/rxvt-unicode:tabs - Install the experimental urxvt-tabbed client
 x11-terms/rxvt-unicode:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-wm/enlightenment:nothemes - Don't include the standard E themes
