@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.4 2002/04/19 01:35:02 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.5 2002/05/02 21:21:24 drobbins Exp $
+
+*rsync-2.5.5 (02 May 2002)
+
+  20 May 2002; Daniel Robbins <drobbins@gentoo.org>: new ebuild to hopefully
+  fix some "dead rsync --daemon" processes... the problem that just won't go
+  away.
 
 *rsync-2.5.4-r1 (18 Apr 2002)
 
