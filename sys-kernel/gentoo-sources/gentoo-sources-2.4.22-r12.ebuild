@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r11.ebuild,v 1.1 2004/06/14 20:37:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r12.ebuild,v 1.1 2004/06/24 15:29:37 plasmaroo Exp $
 
 ETYPE="sources"
 UNIPATCH_LIST="
@@ -15,8 +15,10 @@ UNIPATCH_LIST="
 	${FILESDIR}/${PN}-2.4.CAN-2004-0181.patch
 	${FILESDIR}/${PN}-2.4.CAN-2004-0394.patch
 	${FILESDIR}/${PN}-2.4.CAN-2004-0427.patch
+	${FILESDIR}/${PN}-2.4.CAN-2004-0495.patch
+	${FILESDIR}/${PN}-2.4.CAN-2004-0535.patch
 	${FILESDIR}/${PN}-2.4.FPULockup-53804.patch
-	${DISTDIR}/gentoo-sources-${PVR/11/5}.patch.bz2"
+	${DISTDIR}/gentoo-sources-${PVR/12/5}.patch.bz2"
 
 inherit kernel-2
 detect_version
@@ -25,7 +27,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	http://dev.gentoo.org/~iggy/gentoo-sources-${PVR/11/5}.patch.bz2"
+	http://dev.gentoo.org/~iggy/gentoo-sources-${PVR/12/5}.patch.bz2"
 KEYWORDS="x86 -*"
 SLOT="${KV}"
 
