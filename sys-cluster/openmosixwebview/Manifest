@@ -1,2 +1,5 @@
-MD5 33c9b3968c2e20bceaaaa867a621ea8a openmosixwebview-0.2.13.ebuild 556
+MD5 3abb6d528c5bc2ec54f4772b10553ef8 openmosixwebview-0.2.13.ebuild 1216
+MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
+MD5 b40a01090a06dd7fe28779ede0064e09 ChangeLog 414
 MD5 421481f267afdab92a093a25c83ee07a files/digest-openmosixwebview-0.2.13 74
+MD5 edd227003ba45c2141ebf7677b07b75c files/apache.conf 184
