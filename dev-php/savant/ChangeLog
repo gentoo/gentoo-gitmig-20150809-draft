@@ -1,0 +1,11 @@
+# ChangeLog for dev-php/PEAR-MDB
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/savant/ChangeLog,v 1.1 2004/07/31 15:17:31 coredumb Exp $
+
+*savant-1.5.2 (31 Jul 2004)
+
+  31 Jul 2004; Tal Peer <coredumb@gentoo.org> +metadata.xml,
+  +savant-1.5.2.ebuild:
+  Initial import, closes bug #43449. Original ebuild by Joby Walker
+  <zorloc@imperium.org>, modified by me to properly use the php-pear eclass.
+
