@@ -1,0 +1,9 @@
+# ChangeLog for dev-tcltk/tclperl
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/ChangeLog,v 1.1 2004/05/16 23:14:49 matsuu Exp $
+
+*tclperl-2.5 (17 May 2004)
+
+  17 May 2004; <matsuu@gentoo.org> +tclperl-2.5.ebuild:
+  Initial import.
+
