@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r3.ebuild,v 1.2 2003/08/03 04:23:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r3.ebuild,v 1.3 2003/08/03 07:26:37 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -11,6 +11,8 @@ inherit flag-o-matic gcc eutils nsplugins
 
 # Crashes on start when compiled with -fomit-frame-pointer
 filter-flags "-fomit-frame-pointer"
+filter-flags -ffast-math
+append-flags -s -fforce-addr
 
 # Sparc support ...
 replace-sparc64-flags

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.113 2003/07/31 16:19:17 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.114 2003/08/03 07:26:37 brad Exp $
+
+  03 Aug 2003; Brad Laue <brad@gentoo.org> mozilla-1.4-r3.ebuild:
+  Filter the same flags firebird does.
 
 *mozilla-1.4-r3 (31 Jul 2003)
 
