@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.20 2003/03/14 07:55:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.21 2003/03/15 00:52:12 rphillips Exp $
 
   13 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gvim-6.1-r6.ebuild :
 
@@ -19,6 +19,12 @@
   Unmasked, security update.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*gvim-6.1-r7 (14 Mar 2003)
+
+  14 Mar 2003; Ryan Phillips <rphillips@gentoo.org> gvim-6.1-r7.ebuild :
+  Added Bret Towe's ebuild fixes to include gtk2 support in gvim.
+  Uses patches 1-390
  
 *gvim-6.1-r6 (21 Jan 2003)
 
