@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.4 2003/09/12 04:17:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.5 2003/09/13 00:37:23 foser Exp $
 
 # IMPORTANT
 #
@@ -13,7 +13,7 @@
 
 inherit gnome2 gst-plugins eutils flag-o-matic
 
-DESCRIPTION="Base pack of plugins for gstreamer"
+DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="http://gstreamer.net/"
 
 LICENSE="GPL-2"
@@ -26,6 +26,8 @@ RDEPEND="=media-libs/gstreamer-${PV}*
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
+
+PDEPEND=">=media-plugins/gst-plugins-oss-${PV}"
 
 BUILD_GST_PLUGINS="ffmpeg"
 
@@ -88,6 +90,17 @@ pkg_postinst () {
 
 	gnome2_pkg_postinst
 	gst-plugins_pkg_postinst
+
+	echo ""
+	einfo "The Gstreamer plugins setup has changed quite a bit on Gentoo,"
+	einfo "applications now should provide you with the basic plugins."
+	echo ""
+	einfo "Right now this package installs at least an OSS output plugin to have"
+	einfo "a standard sound output plugin, but this might change in the future."
+	echo ""
+	einfo "The new seperate plugins are all named 'gst-plugins-<plugin>'."
+	einfo "To get a listing of currently available plugins do 'emerge -s gst-plugins-'."
+	einfo "In most cases it shouldn't be needed though to emerge extra plugins."
 
 }
 
