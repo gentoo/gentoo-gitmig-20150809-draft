@@ -1,31 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.5.ebuild,v 1.3 2003/09/29 12:10:17 lu_zero Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.5.ebuild,v 1.4 2004/02/14 07:23:30 mr_bones_ Exp $
 
 DESCRIPTION="A C library for reading and writing files containing sampled sound"
-HOMEPAGE="http://www.zipworld.com.au/~erikd/libsndfile/"
-SRC_URI="http://www.zipworld.com.au/~erikd/libsndfile/${P}.tar.gz"
+HOMEPAGE="http://www.mega-nerd.com/libsndfile/"
+SRC_URI="http://www.mega-nerd.com/libsndfile/${P}.tar.gz"
 
-SLOT="0"
-LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc"
+LICENSE="LGPL-2.1"
+SLOT="0"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
-src_compile () {
-
-	econf || die "configure failed"
-
-	make || die "make failed"
-
-}
-
 src_install () {
-
-	einstall || die "make install failed"
-
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
-
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
 }
