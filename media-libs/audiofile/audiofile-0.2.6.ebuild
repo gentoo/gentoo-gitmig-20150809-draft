@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.6.ebuild,v 1.7 2004/07/01 07:55:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.6.ebuild,v 1.8 2004/07/14 18:49:48 agriffis Exp $
 
 inherit libtool gnuconfig
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc"
 
 src_compile() {
 	# Allows configure to detect mipslinux systems
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	elibtoolize
 
