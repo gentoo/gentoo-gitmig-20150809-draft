@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r3.ebuild,v 1.3 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r3.ebuild,v 1.4 2003/08/26 08:48:47 kumba Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ http://ftp.debian.org/debian/pool/main/c/${PN}/${PN}_${PV}-4.2.diff.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~mips"
 
 DEPEND="dev-lang/perl"
 
