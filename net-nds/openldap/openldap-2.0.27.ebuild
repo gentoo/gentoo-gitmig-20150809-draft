@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27.ebuild,v 1.8 2003/06/06 23:58:22 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27.ebuild,v 1.9 2003/06/19 19:10:15 wwoods Exp $
 
 DESCRIPTION="LDAP suite of application and development tools"
 SRC_URI="ftp://ftp.OpenLDAP.org/pub/OpenLDAP/openldap-release/${P}.tgz"
 HOMEPAGE="http://www.OpenLDAP.org/"
 
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc alpha"
 LICENSE="OPENLDAP"
 IUSE="ssl tcpd readline ipv6 gdbm ldap kerberos odbc"
 
