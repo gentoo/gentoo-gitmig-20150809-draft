@@ -1,78 +1,86 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.18.ebuild,v 1.16 2004/06/24 21:32:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.1 2004/10/17 17:14:12 liquidx Exp $
+
+MY_FILESDIR="${FILESDIR}/${PV}"
+THEMES_VERSION="0.0.7"
 
 DESCRIPTION="Logfile Analyzer"
 HOMEPAGE="http://jan.kneschke.de/projects/modlogan/"
 SRC_URI="http://jan.kneschke.de/projects/modlogan/download/${P}.tar.gz
-	 http://www.kneschke.de/projekte/modlogan/download/gd-1.8.1.tar.gz"
+	 http://jan.kneschke.de/projects/modlogan/download/modlogan-themes-${THEMES_VERSION}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ia64 ~amd64 ~ppc ~sparc ~alpha ~hppa"
 IUSE="nls mysql"
 
-DEPEND="virtual/x11
-	dev-libs/libxml
+RDEPEND="dev-libs/libxml
 	dev-libs/libxml2
 	media-libs/jpeg
 	media-libs/libpng
-	=media-libs/freetype-1.3*
+	>=media-libs/gd-2
 	>=dev-libs/libpcre-3.2
 	>=net-libs/adns-1.0
+	sys-libs/zlib
+	app-arch/bzip2
+	dev-lang/perl
+	X? ( virtual/x11 )
 	mysql? ( >=dev-db/mysql-3.23.26 )"
-RDEPEND="nls? ( sys-devel/gettext )"
+
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	cd ${S}/../gd-1.8.1
-	export CFLAGS="$CFLAGS -I/usr/include/freetype"
-
-	./configure || die
-	make || die
-
-	cp .libs/libgd.so.0.0.0 libgd.so.0.0.0
-	ln -s libgd.so.0.0.0 libgd.so
-
 	local myconf
+
 	use mysql \
-		 && myconf="--with-mysql=/usr" \
-		 || myconf="--without-mysql"
+		&& myconf="--with-mysql=/usr" \
+		|| myconf="--without-mysql"
 
 	use nls || myconf="${myconf} --disable-nls"
-
-	cd ${S}
+	
 	econf \
 		--enable-plugins \
-		--sysconfdir=/etc/modlogan \
+		--sysconfdir=/etc \
 		--libdir=/usr/lib/modlogan \
-		--with-gd=${WORKDIR}/gd-1.8.1/ \
 		--disable-check-dynamic \
-		${myconf} || die "econf failed"
-
-	make || die
+		${myconf} || die
+	
+	emake || die
 }
 
 src_install() {
-	cd ${S}/../gd-1.8.1
-	into /usr
-	dolib libgd.so.0.0.0
-
-	cd ${S}
 	einstall \
-		sysconfdir=${D}/etc/modlogan \
+		sysconfdir=${D}/etc \
 		libdir=${D}/usr/lib/modlogan || die
 
 	insinto /etc/modlogan
-	newins ${FILESDIR}/sample.conf modlogan.conf.sample
-	newins ${FILESDIR}/sample.def.conf modlogan.def.conf.sample
+
+	newins ${MY_FILESDIR}/sample.conf modlogan.conf.sample
+	newins ${MY_FILESDIR}/sample.def.conf modlogan.def.conf.sample
+
+	insinto /etc/modlogan
+	newins doc/modlogan.css-dist modlogan.css
+	doins doc/output.tmpl
 	doins doc/modlogan.searchengines
-	insinto /etc/httpd
-	newins ${FILESDIR}/modlogan.conf httpd.modlogan
-	dodir /home/httpd/modlogan
+### needs some fixing
+#	insinto /etc/httpd
+#	newins ${MY_FILESDIR}/modlogan.conf httpd.modlogan
+###
+	keepdir /var/www/localhost/htdocs/modlogan
 	preplib /usr
 	dodoc AUTHORS ChangeLog README NEWS TODO
-	dodoc doc/*.txt doc/*.conf doc/glosar doc/stats
+	dodoc doc/*.txt doc/*.conf doc/*-dist doc/glosar doc/stats
 	dohtml -r html
+
+	# install themes
+	cd ${S}/../modlogan-themes-${THEMES_VERSION}
+	dodir /usr/share/modlogan/themes
+	for i in `ls -1`; do
+		einfo "installing theme $i"
+		cp -Rf $i ${D}/usr/share/modlogan/themes/
+	done
 }
 
 pkg_postinst() {

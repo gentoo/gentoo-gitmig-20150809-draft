@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/modlogan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.17 2004/10/05 02:58:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.18 2004/10/17 17:14:12 liquidx Exp $
+
+*modlogan-0.8.13 (17 Oct 2004)
+
+  17 Oct 2004; Alastair Tse <liquidx@gentoo.org> metadata.xml,
+  -files/modlogan.conf, -files/sample.conf, -files/sample.def.conf,
+  +files/0.8.13/modlogan.conf, +files/0.8.13/sample.conf,
+  +files/0.8.13/sample.def.conf, -modlogan-0.7.18.ebuild,
+  -modlogan-0.7.4-r1.ebuild, -modlogan-0.8.10.ebuild,
+  +modlogan-0.8.13.ebuild:
+  cleanup, version bump, reorganise /etc/modlogan to be more sensible.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   modlogan-0.8.10-r1.ebuild, modlogan-0.8.10.ebuild:

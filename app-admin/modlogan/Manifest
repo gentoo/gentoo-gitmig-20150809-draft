@@ -1,16 +1,22 @@
-MD5 3a2cad75f34da6459ab72291f1fdb317 ChangeLog 2897
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 1eeeb33d3341261265d965c2abf8bb7d modlogan-0.7.18.ebuild 2353
-MD5 0489e321ec08d1109b47a00f48c855db modlogan-0.7.4-r1.ebuild 2420
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dc43d9610bcecc6ab6bc4d7802ce977e ChangeLog 3328
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 475bd0ad4bcb31c87f5bcc096d885a6b modlogan-0.8.10-r1.ebuild 2980
-MD5 90bc2633945cc3527f38081441ae3d9f modlogan-0.8.10.ebuild 2363
-MD5 543b8b188066fad85df5b30c2c7adbbf files/digest-modlogan-0.7.18 128
-MD5 d471e4d2f40dd27ed20334729d7de263 files/digest-modlogan-0.7.4-r1 126
-MD5 1dfe057138bc6b37bc313b7bafce15e0 files/digest-modlogan-0.8.10 127
+MD5 8a3f000775bfc5561111ecd2f41ee5ba modlogan-0.8.13.ebuild 2559
 MD5 eff845321cd889ffb7be6eaabc38205d files/digest-modlogan-0.8.10-r1 199
-MD5 1508bf93ccc2d4b8d381ae0094bdaeba files/modlogan.conf 228
-MD5 61162d9bfcbe972114996bf4cc47c3ef files/sample.conf 1844
-MD5 aaae54e619fac1ead5fb9b904775db55 files/sample.def.conf 12786
+MD5 9be382a2d0a56eec829a69bfc7fc2a42 files/digest-modlogan-0.8.13 140
 MD5 c95a2f59d42ca578ae23355f467743ba files/0.8/modlogan.conf 189
 MD5 cd845b930a3a89ad0e76c33a95ba385d files/0.8/sample.conf 2913
 MD5 8215abd50a0724bf4042c01821cd5dff files/0.8/sample.def.conf 11586
+MD5 c95a2f59d42ca578ae23355f467743ba files/0.8.13/modlogan.conf 189
+MD5 cd845b930a3a89ad0e76c33a95ba385d files/0.8.13/sample.conf 2913
+MD5 ebdfbd95c53173652997f659bb11a04a files/0.8.13/sample.def.conf 11436
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcqjVRkyva5PS18kRAhiQAJ9W81/g5oINQQr0ituG5wW6WpCxrwCdHhdU
+E6rzk4B+e2exTYoduLJYd7k=
+=czWu
+-----END PGP SIGNATURE-----
