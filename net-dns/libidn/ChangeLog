@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.10 2004/08/22 16:37:18 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.11 2004/08/23 15:49:19 psi29a Exp $
+
+  23 Aug 2004; psi29a <psi29a@gentoo.org> libidn-0.5.4.ebuild:
+  Added to ~mips
 
   22 Aug 2004; Tom Gall <tgall@gentoo.org> libidn-0.5.4.ebuild:
   stable on ppc64, bug #58179
