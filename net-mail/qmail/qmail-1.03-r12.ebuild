@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.3 2003/08/12 08:16:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.4 2003/08/13 02:45:40 robbat2 Exp $
 
 inherit eutils
 
@@ -20,7 +20,10 @@ SRC_URI="mirror://qmail/qmail-1.03.tar.gz
 	mirror://gentoo/qmail-tls.patch.tbz2
 	mirror://qmail/qmail-1.03-qmtpc.patch
 	http://qmail.goof.com/qmail-smtpd-relay-reject
-	mirror://gentoo/qmail-local-tabs.patch"
+	mirror://gentoo/qmail-local-tabs.patch
+  	http://www.shupp.org/patches/qmail-maildir++.patch
+  	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-date-localtime.patch.txt
+  	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-limit-bounce-size.patch.txt"
 
 SLOT="0"
 LICENSE="as-is"
@@ -111,30 +114,37 @@ src_unpack() {
 	# provide badrcptto support
 	# as per bug #17283
 	# patch re-diffed from original at http://www.iecc.com/bad-rcpt-noisy-patch.txt
+	# presently this breaks qmail so it is disabled
 	#epatch ${FILESDIR}/${PV}-${PR}/bad-rcpt-noisy-patch
 
-	cd ${S}
+	# Apply patch to make qmail-local and qmail-pop3d compatible with the
+	# maildir++ quota system that is used by vpopmail and courier-imap
+	epatch ${DISTDIR}/qmail-maildir++.patch
 
-	if [ `use ssl` ]; then
-		echo "${CC} ${CFLAGS} -DTLS" > conf-cc
-	else
-		echo "${CC} ${CFLAGS}" > conf-cc
-	fi
+	# Apply patch for local timestamps.
+	# This will make the emails headers be written in localtime rather than GMT
+	# If you really want, uncomment it yourself, as mail really should be in GMT
+	# epatch ${DISTDIR}/qmail-date-localtime.patch.txt
 
-	echo "${CC} ${LDFLAGS}" > conf-ld
-	echo "500" > conf-spawn
+	# Apply patch to add ESMTP SIZE support to qmail-smtpd
+	# This helps your server to be able to reject excessively large messages
+	# "up front", rather than waiting the whole message to arrive and then
+	# bouncing it because it exceeded your databytes setting
+	epatch ${DISTDIR}/qmail-limit-bounce-size.patch.txt
+
+	echo -n "${CC} ${CFLAGS}" >>${S}/conf-cc	
+	use ssl && echo -n '-DTLS' >>${S}/conf-cc
+	echo -n "${CC} ${LDFLAGS}" > ${S}/conf-ld
+	echo -n "500" > ${S}/conf-spawn
 
 }
 
 src_compile() {
-	cd ${S}
 	emake it man || die
 }
 
 src_install() {
-
-	cd ${S}
-
+	
 	einfo "Setting up directory hierarchy ..."
 
 	diropts -m 755 -o root -g qmail
@@ -160,27 +170,25 @@ src_install() {
 	dodoc SYSDEPS TARGETS THANKS THOUGHTS TODO VERSION
 	dodoc ${WORKDIR}/tls-patch.txt 
 
-	insopts -o qmailq -g qmail -m 4711
 	insinto /var/qmail/bin
-	doins qmail-queue qmail-queue
+	insopts -o qmailq -g qmail -m 4711
+	doins qmail-queue 
         
 	insopts -o root -g qmail -m 700
-	insinto /var/qmail/bin
 	doins qmail-lspawn qmail-start qmail-newu qmail-newmrh
         
 	insopts -o root -g qmail -m 711
-	insinto /var/qmail/bin
 	doins qmail-getpw qmail-local qmail-remote qmail-rspawn \
 	qmail-clean qmail-send splogger qmail-pw2u
  
 	insopts -o root -g qmail -m 755
-	insinto /var/qmail/bin
 	doins qmail-inject predate datemail mailsubj qmail-showctl \
 	qmail-qread qmail-qstat qmail-tcpto qmail-tcpok qmail-pop3d \
 	qmail-popup qmail-qmqpc qmail-qmqpd qmail-qmtpd qmail-smtpd \
 	sendmail tcp-env qreceipt qsmhook qbiff forward preline \
 	condredirect bouncesaying except maildirmake maildir2mbox \
-	maildirwatch qail elq pinq config-fast qmail-newbrt
+	maildirwatch qail elq pinq config-fast 
+	#doins qmail-newbrt
 
 	into /usr
 	einfo "Installing manpages"
@@ -303,6 +311,9 @@ pkg_postinst() {
 }
 
 pkg_config() {
+
+	# avoid some weird locale problems
+	export LC_ALL="C"
 
 	if [ ${ROOT} = "/" ] ; then
 		if [ ! -f ${ROOT}/var/qmail/control/me ] ; then
