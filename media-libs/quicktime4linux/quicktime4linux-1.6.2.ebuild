@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.6.2.ebuild,v 1.3 2003/07/31 22:24:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.6.2.ebuild,v 1.4 2003/08/06 13:14:43 vapier Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="quicktime library for linux"
 HOMEPAGE="http://heroinewarrior.com/quicktime.php3"
@@ -21,9 +23,11 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gentoo-libmpeg3.patch
 	epatch ${FILESDIR}/${PV}-gentoo-sharedlib.patch
+	[ "${ARCH}" == "ppc" ] && sed -i 's:-mno-ieee-fp::g' `find -name 'Makefile*' -o -name 'configure*'`
 }
 
 src_compile() {
+	append-flags -I${S}/libdv-0.98/libdv -I${S}/libdv-0.98
 	make || die
 	make util || die
 }
