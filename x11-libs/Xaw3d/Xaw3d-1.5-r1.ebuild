@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.15 2003/12/20 16:13:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.16 2004/02/18 13:43:30 agriffis Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -26,7 +26,7 @@ HOMEPAGE="http://freshmeat.net/projects/xaw3d/"
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64 hppa"
+KEYWORDS="x86 ppc sparc alpha amd64 hppa ia64"
 
 # There _might_ be something else, but I doubt it.
 DEPEND="virtual/x11"

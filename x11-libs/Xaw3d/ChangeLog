@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/Xaw3d
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.9 2003/12/20 16:13:52 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.10 2004/02/18 13:43:30 agriffis Exp $
+
+  18 Feb 2004; Aron Griffis <agriffis@gentoo.org> Xaw3d-1.5-r1.ebuild:
+  stable on ia64
 
   20 Dec 2003; Guy Martin <gmsoft@gentoo.org> Xaw3d-1.5-r1.ebuild:
   Marked stable on hppa.

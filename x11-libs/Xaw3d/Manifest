@@ -1,5 +1,5 @@
-MD5 f76d65ca57ac321928a262e13571cb50 ChangeLog 1277
-MD5 0dc3ec412658efcce57f53048b7ffc0b Xaw3d-1.5-r1.ebuild 1922
+MD5 13894d94c90afe5a80c0b29a7cd4a8aa ChangeLog 1369
+MD5 fe460acd02c8f03934bd47f8a6f9d6e0 Xaw3d-1.5-r1.ebuild 1929
 MD5 8103db23293fc4226cadb7df282f952b files/Xaw3d-out-of-tree.diff 232
 MD5 014f228d620c9680e30cdf1c068635c2 files/Xaw3d-xfree86.diff 420
 MD5 12f07352cba3c1cfefa93e5f9d10c4a0 files/digest-Xaw3d-1.5-r1 61
