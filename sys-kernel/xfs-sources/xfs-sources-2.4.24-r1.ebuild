@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.24-r1.ebuild,v 1.1 2004/01/22 18:09:55 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.24-r1.ebuild,v 1.2 2004/02/12 12:53:22 livewire Exp $
 
 ETYPE="sources"
 
@@ -18,7 +18,7 @@ DESCRIPTION="Full sources for the XFS Specialized Gentoo Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	http://dev.gentoo.org/~scox/kernels/v2.4/xfs-sources-${PV}-r1.patch.bz2"
 
-KEYWORDS="~x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc "
 SLOT="${KV}"
 
 src_unpack() {
