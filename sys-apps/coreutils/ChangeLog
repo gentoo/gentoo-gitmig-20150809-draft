@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.5 2003/03/11 20:08:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.6 2003/03/11 22:12:38 zwelch Exp $
 
 *coreutils-4.5.9-r1 (11 Mar 2003)
 
@@ -28,6 +28,10 @@
   Fix manpages again by manually installing.
 
 *coreutils-4.5.9 (06 Mar 2003)
+
+  11 Mar 2003; Zach Welch <zwelch@gentoo.org> coreutils-4.5.9-r1.ebuild,
+  coreutils-4.5.9.ebuild:
+  add arm keyword
 
   06 Mar 2003; Seemant Kulleen <seemant@gentoo.org> coreutils-4.5.9.ebuild
   ChangeLog files/digest-coreutils-4.5.9 :
