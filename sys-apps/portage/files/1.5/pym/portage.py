@@ -1031,7 +1031,7 @@ def dep_listcleanup(deplist):
 				if len(x)==1:
 					newlist.append(x[0])
 				elif len(x)!=0:
-					newlist.append(dep_listcleanup(x))
+					newlist=newlist+dep_listcleanup(x)
 			else:
 				newlist.append(x)
 	return newlist
