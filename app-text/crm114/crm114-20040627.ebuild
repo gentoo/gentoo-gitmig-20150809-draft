@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040627.ebuild,v 1.1 2004/07/13 05:04:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040627.ebuild,v 1.2 2004/07/13 20:44:15 agriffis Exp $
 
 inherit eutils
 
-IUSE="nls static"
+IUSE="emacs nls static"
 
 MY_P=${P}-BlameSeifkes.src
 S=${WORKDIR}/${MY_P}

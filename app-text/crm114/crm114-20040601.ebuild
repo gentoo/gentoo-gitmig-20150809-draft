@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040601.ebuild,v 1.6 2004/07/01 11:56:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040601.ebuild,v 1.7 2004/07/13 20:44:15 agriffis Exp $
 
 inherit eutils
 
-IUSE="nls static"
+IUSE="emacs nls static"
 
 MY_P=${P}-BlameKyoto.src
 S=${WORKDIR}/${MY_P}
