@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.21 2005/01/15 13:47:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.22 2005/02/01 18:27:16 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,6 +14,8 @@ LICENSE="MOTIF"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ppc-macos sparc x86"
 IUSE=""
+
+PROVIDE="virtual/motif"
 
 DEPEND="virtual/libc
 	virtual/x11

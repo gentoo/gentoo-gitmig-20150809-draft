@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r4.ebuild,v 1.13 2005/01/15 13:47:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r4.ebuild,v 1.14 2005/02/01 18:27:16 lanius Exp $
 
 inherit eutils
 
@@ -17,6 +17,8 @@ DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 
 SLOT="0"
+
+PROVIDE="virtual/motif"
 
 # glibc-2.3.2-r1/gcc-3.2.3 /w `-mcpu=athlon-xp -O2', right-clicking
 # in nedit triggers DPMS monitor standby instead of popping up the 
