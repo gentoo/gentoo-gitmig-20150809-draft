@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/ant-contrib
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.1 2004/07/31 20:21:43 axxo Exp $
+
+*ant-contrib-1.0_beta1 (31 Jul 2004)
+
+  31 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +ant-contrib-1.0_beta1.ebuild:
+  initial import, requested 58693
+
