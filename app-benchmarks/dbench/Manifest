@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 88ac9f6b89481984c37a7918e547a610 ChangeLog 1067
-MD5 79ab48758df4a6e2a287063a836ebf29 dbench-2.0.ebuild 846
+MD5 a208533da4218a5c91fb90698e6a4069 ChangeLog 1165
+MD5 75df64cf6ba5ac3b173b6f477d9b93ed dbench-2.0.ebuild 855
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 a142bb2058c79ef4a6ee2ab38def85e1 files/digest-dbench-2.0 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBVHB2I1lqEGTUzyQRAsh4AKCC/e4k23ajdqPAr+hYgimPD+cu3wCgvpXm
-6J4ui1x3LEhXT6atEhzS2+8=
-=epJa
+iD8DBQFBqsYSArHZZzCEUG0RAqGqAKCAvmKvmw90FL2+leR9S7P++ZeOnACbB3HY
+mTVk/2Lt6/i/9zgIFwIeZXo=
+=j+GM
 -----END PGP SIGNATURE-----
