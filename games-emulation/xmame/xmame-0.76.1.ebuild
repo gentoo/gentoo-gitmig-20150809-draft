@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.76.1.ebuild,v 1.3 2003/11/03 23:52:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.76.1.ebuild,v 1.4 2003/11/13 22:56:00 mr_bones_ Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -127,19 +127,19 @@ src_unpack() {
 
 src_compile() {
 	[ ! -z "`use X``use dga``use xv`" ] && {
-		emake DISPLAY_METHOD=x11 || die "emake failed (x11)";
+		emake -j1 DISPLAY_METHOD=x11 || die "emake failed (x11)";
 	}
 	[ `use sdl` ] && {
-		emake DISPLAY_METHOD=SDL || die "emake failed (SDL)";
+		emake -j1 DISPLAY_METHOD=SDL || die "emake failed (SDL)";
 	}
 	[ `use svga` ] && {
-		emake DISPLAY_METHOD=svgalib || die "emake failed (svgalib)";
+		emake -j1 DISPLAY_METHOD=svgalib || die "emake failed (svgalib)";
 	}
 	[ `use ggi` ] && {
-		emake DISPLAY_METHOD=ggi || die "emake failed (ggi)";
+		emake -j1 DISPLAY_METHOD=ggi || die "emake failed (ggi)";
 	}
 	[ `use opengl` ] && {
-		emake DISPLAY_METHOD=xgl || die "emake failed (xgl)";
+		emake -j1 DISPLAY_METHOD=xgl || die "emake failed (xgl)";
 	}
 }
 

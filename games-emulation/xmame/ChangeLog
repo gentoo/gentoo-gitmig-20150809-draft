@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.7 2003/11/03 23:52:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.8 2003/11/13 22:56:00 mr_bones_ Exp $
+
+  13 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.76.1.ebuild:
+  xmame Makefiles don't like parallel make.  use -j1 to compile.
 
   03 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.76.1.ebuild:
   replace the arch if/then thing with a case statement; added support for ia64
