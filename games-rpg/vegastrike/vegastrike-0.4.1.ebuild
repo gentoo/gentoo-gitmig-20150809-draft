@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.4 2003/12/31 06:32:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.5 2004/01/26 00:21:29 vapier Exp $
 
 inherit games eutils flag-o-matic
 
@@ -70,7 +70,7 @@ src_unpack() {
 	sed -i '/^SUBDIRS =/s:tools::' Makefile.am
 	sed -i 's:$(liblowlevel)::' src/networking/Makefile.am
 	aclocal || die "aclocal failed"
-	WANT_AUTOCONF_2_5=1 autoconf || die "autoconf failed"
+	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
 	automake -a || die "automake failed"
 }
 
