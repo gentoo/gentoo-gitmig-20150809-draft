@@ -1,0 +1,9 @@
+# ChangeLog for sys-kernel/ia64-sources
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.1 2003/09/17 18:23:49 drobbins Exp $
+
+*ia64-sources-2.4.22 (17 Sep 2003)
+
+  17 Sep 2003; Daniel Robbins <drobbins@gentoo.org>
+  ia64-sources-2.4.22.ebuild: New ebuild to provide a kernel for ia64
+  (Itanium) systems.
