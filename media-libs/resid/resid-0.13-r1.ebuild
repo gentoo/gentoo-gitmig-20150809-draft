@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/resid-0.13-r1.ebuild,v 1.8 2004/07/01 08:03:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/resid-0.13-r1.ebuild,v 1.9 2004/07/14 20:25:31 agriffis Exp $
 
 DESCRIPTION="C++ library to emulate the C64 SID chip"
 HOMEPAGE="http://sidplay2.sourceforge.net"
@@ -10,7 +10,6 @@ SLOT="0"
 IUSE=""
 KEYWORDS="x86 sparc "
 DEPEND="virtual/libc"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf || die
