@@ -8,9 +8,9 @@ MD5 3109b96bc158387cee3c80744e3e0238 Archive-Tar-1.03.ebuild 640
 MD5 0e21f73698c54ac665d71cd9e14fce6c Archive-Tar-1.05.ebuild 651
 MD5 d22499f51d2ee79be55d5b91462c940f Archive-Tar-1.09.ebuild 647
 MD5 be0cb46bf080767f52ebae7a33756179 Archive-Tar-1.10.ebuild 656
-MD5 92000a527aad8e50455932016b55b492 ChangeLog 2805
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 f18ceb5d48e464dbd992cb555499f604 Archive-Tar-1.23.ebuild 573
+MD5 c65490abc969fdc9e7a8b036a2c56033 Archive-Tar-1.23.ebuild 577
+MD5 c951284962d27ff8e78e5b6bc701eeaa ChangeLog 2889
 MD5 72ec20dcefcab7ea32233243f74bd8e2 files/digest-Archive-Tar-0.22 67
 MD5 72ec20dcefcab7ea32233243f74bd8e2 files/digest-Archive-Tar-0.22-r1 67
 MD5 d2a15c0f5c163430b9a19b866881db2e files/digest-Archive-Tar-1.00 67
@@ -22,7 +22,7 @@ MD5 51ec5b92f118dc1788fb084caa09512c files/digest-Archive-Tar-1.23 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBsnsxtG5z4I8BtQoRAlfaAJ9ysa2ysfiKdQVbEEc3a+rgqaKVLwCfURM/
-1cZxEa7IogjDO0BDMqzv25M=
-=fsBU
+iD8DBQFByWKL60LfUIagIAkRAqAQAJ9vM7sTLlttH1vJAaTiVB8Cs5BC6QCfWIyN
+nh27to+ttEAH8thQs3yDMyo=
+=y/Fv
 -----END PGP SIGNATURE-----
