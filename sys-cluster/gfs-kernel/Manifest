@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 578f04b8238e66d1f4fb8a95dc72e828 gfs-kernel-2.6.9.ebuild 1007
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 ed890529d43feb81d4e91770e569b975 ChangeLog 366
+MD5 9b28526ddcfa5f88df8d5c014978eedd gfs-kernel-2.6.9.ebuild 1019
 MD5 9787a1d26d66d08a9384e0cea116ca2b files/digest-gfs-kernel-2.6.9 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB+ZC+gMUyd/cdjWsRAnDvAJ0e/5EJ8evB+VhrMmH/VVIGMJq+IgCggnun
-LI36/wk4NQV7GPYKIUsHiLw=
-=D8Nl
+iD8DBQFB+ZFUgMUyd/cdjWsRAqCQAJ9NYklGJucBdUawcZNZ37Q/gun5agCfZn4r
+wMq5/KQUo/Pcd6ENhxyGUeU=
+=6cgs
 -----END PGP SIGNATURE-----
