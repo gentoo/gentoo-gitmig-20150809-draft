@@ -1,9 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1.ebuild,v 1.1 2002/08/30 19:49:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1.ebuild,v 1.2 2002/08/30 22:55:10 azarah Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit makeedit
+
+EMVER="0.65.2"
+IPCVER="1.0.0.1"
 
 # handle _rc versions
 MY_PV1=${PV/_}
@@ -11,8 +14,8 @@ MY_PV2=${MY_PV1/eta}
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.gz
-	crypt? ( http://enigmail.mozdev.org/dload/src/enigmail-0.63.3.tar.gz
-	         http://enigmail.mozdev.org/dload/src/ipc-0.99.63.tar.gz )"
+	crypt? ( http://enigmail.mozdev.org/dload/src/enigmail-${EMVER}.tar.gz
+	         http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )"
 HOMEPAGE="http://www.mozilla.org"
 
 KEYWORDS="x86 ppc sparc sparc64"
