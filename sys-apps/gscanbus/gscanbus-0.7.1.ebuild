@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gscanbus/gscanbus-0.7.1.ebuild,v 1.5 2004/04/03 23:00:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gscanbus/gscanbus-0.7.1.ebuild,v 1.6 2004/05/26 14:49:57 kugelfang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/gscanbus/${P}.tgz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ppc"
+KEYWORDS="~x86 ~sparc ppc ~amd64"
 IUSE=""
 
 DEPEND=">=sys-libs/libraw1394-0.9.0
