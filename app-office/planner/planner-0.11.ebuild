@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.11.ebuild,v 1.3 2004/02/22 14:49:08 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.11.ebuild,v 1.4 2004/04/03 16:04:36 spider Exp $
 
 
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://planner.imendio.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha amd64"
 IUSE="doc postgres"
 
 RDEPEND=">=x11-libs/gtk+-2.0.5
