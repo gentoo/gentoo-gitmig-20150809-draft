@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.16 2004/01/16 20:59:47 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.17 2004/01/17 07:30:09 darkspecter Exp $
+
+  17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> :
+  manifest fix
 
   16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> dmapi-2.0.5-r1.ebuild:
   set ppc in keywords
