@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.8 2003/05/17 07:18:38 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.9 2003/05/27 09:06:31 jje Exp $
+
+  27 May 2003; jje <jje@gentoo.org> lilypond-1.6.9.ebuild:
+  Fixed web-doc target, die was missing...
 
 *lilypond-1.6.9 (17 May 2003)
 
