@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.6 2002/07/18 20:01:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.7 2002/07/27 21:49:44 spider Exp $
 
 
 S=${WORKDIR}/${P}
@@ -14,16 +14,17 @@ KEYWORDS="x86 ppc"
 
 HOMEPAGE="http://www.gnome.org/"
 
+# =gnome-base/gnome-core-1.4*
 RDEPEND="mozilla? ( >=net-www/mozilla-1.0_rc3 )
 	>=app-admin/fam-oss-2.6.4
 	>=media-sound/cdparanoia-3.9.8
 	>=gnome-base/bonobo-1.0.9-r1
-	=gnome-base/gnome-core-1.4*
 	>=gnome-base/libghttp-1.0.9-r1
 	=gnome-base/gnome-vfs-1.0*
 	>=gnome-base/librsvg-1.0.1
 	=gnome-base/eel-1.0*
-	>=gnome-extra/medusa-0.5.1-r1"
+	>=gnome-extra/medusa-0.5.1-r1
+	=gnome-base/gnome-panel-1.4*"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )

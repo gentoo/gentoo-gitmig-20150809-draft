@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.22 2002/07/25 22:18:56 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.23 2002/07/27 21:49:44 spider Exp $
 
 
 *nautilus-2.0.2 (25 Jul 2002)
@@ -54,6 +54,9 @@ natutils-2.0.0-r1 (15 Jun 2002)
   Converted to gnome2 eclass
 
 *nautilus-1.0.6-r9 (26 May 2002)
+  27 Jul 2002; Spider <spider@gentoo.org> nautilus-1.0.6-r9.ebuild :
+  Changed the deps to not use gnome-core.. I can't understand why anyone would want to use this for gnome2, but I needed it to be able to test with gnome 2 and have this working still.... 
+  
   04 Jun 2002; Bruce A. Locke <blocke@shivan.org> nautilus-1.0.6-r9.ebuild:
   Hopefully gnome2 proof dependencies
 
