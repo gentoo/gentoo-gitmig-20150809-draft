@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1.ebuild,v 1.2 2002/09/13 18:00:05 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1.ebuild,v 1.3 2002/09/16 10:31:01 hannes Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -67,6 +67,7 @@ KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="dev-util/cscope
 	>=sys-libs/ncurses-5.2-r2
+	=app-editors/vim-core-6.1
 	x11-base/xfree
 	gpm?	( >=sys-libs/gpm-1.19.3 )
 	gnome?	( gnome-base/gnome-libs )
