@@ -128,3 +128,20 @@ diff -ur kde-i18n-de-3.1/docs/kdegames/kolf/index.docbook kde-i18n-3.1.new/de/do
  ></shortcut
  > <guimenu
  >Gehe zu</guimenu
+--- kde-i18n-de/de/docs/kdenetwork/kit/index.docbook~	2003-02-27 23:06:04.000000000 +0100
++++ kde-i18n-de.new/de/docs/kdenetwork/kit/index.docbook	2003-02-27 23:06:35.000000000 +0100
+@@ -1,10 +1,10 @@
+ <?xml version="1.0" ?>
+ <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+   <!ENTITY kappname "&kit;">
+-  <!ENTITY AOL "<trademark class='registered'
+-><acronym
+->AOL</acronym
+-></trademark
++  <!ENTITY AOL "<acronym
++><trademark class='registered'
++>AOL</trademark
++></acronym
+ >">
+   <!ENTITY package "kdenetwork">
+   <!ENTITY % addindex "IGNORE">
