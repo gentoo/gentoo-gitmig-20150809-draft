@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.27 2005/03/13 14:53:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.28 2005/03/24 15:24:54 weeve Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -26,6 +26,7 @@ informix
 firebird
 lirc
 lm_sensors
+mmxext
 nvidia
 oci8
 pic
