@@ -477,3 +477,10 @@ dev-lang/tcl-tk
 # This reduces the bloat, but it will be better tested once the freeze is over
 =media-sound/xmms-1.2.7-r4
 =media-video/avi4xmms-0.1
+
+
+# This is an experimental patched version that is 
+# supposed to work with both alsa 0.5 and alsa 0.9
+# unpack and try
+=media-sound/esound-0.2.24-r50
+
