@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.2.0_beta2.ebuild,v 1.1 2003/12/04 15:54:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.2.0_beta2.ebuild,v 1.2 2003/12/26 16:56:56 caleb Exp $
 
 inherit kde
 need-kde ${PV}
@@ -12,12 +12,14 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 SLOT="$KDEMAJORVER.$KDEMINORVER"
 RESTRICT="nomirror"
-
-newdepend="$newdepend >=sys-apps/portage-2.0.49-r8"
+DEPEND="~kde-base/kdebase-${PV}
+	>=sys-apps/portage-2.0.49-r8"
 
 LANGS="af ar bg bs ca cs cy da de el en_GB eo es et eu fa fi fr
 he hr hu is it ja lt mn ms mt nb nl nn nso pl pt pt_BR ro ru
-se sk sl sr sv ta th tr uk uz ven wa xh zh_CN zh_TW zu"
+se sl sr sv ta th tr uk uz ven wa xh zh_CN zh_TW zu"
+
+# sk removed due to compilation failures
 
 #
 # Define the LINGUAS environment variable to contain which language(s) you would
