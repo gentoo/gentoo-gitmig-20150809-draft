@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.ebuild,v 1.4 2003/03/09 13:07:05 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.ebuild,v 1.5 2003/04/12 04:49:25 jje Exp $
 
 inherit cvs            
 
@@ -33,7 +33,11 @@ S="${WORKDIR}/${PN/-cvs/}"
 src_compile() {
 
 	sh autogen.sh
-
+        # nasty little hack to create version.h, will remove when this
+        # is fixed upstream...
+        cd gtk_ardour 
+        sh version.sh remake || die "failed to create version.h" 
+        cd ..
 	econf || die "configure failed"
 
 	# while troubleshooting upgrades to ardour-cvs-0.6 i changed from
