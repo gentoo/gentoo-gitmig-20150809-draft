@@ -1,5 +1,6 @@
 MD5 6b2b67632eebb3f72d238a9934ce228a ksimus-0.3.6.ebuild 578
 MD5 bea4dbca3d69b04dab508768e08125a4 ksimus-0.3.6-r1.ebuild 832
-MD5 7f81f3436187a6cbe8838ec9c7a65e9d ChangeLog 660
+MD5 2861a4c8fb5b56579f00413218b6fc28 ChangeLog 688
+MD5 c000c0728c9136f1b54cbc3a5fc07644 metadata.xml 220
 MD5 744267bc1f43695ed7f186e671a127c0 files/digest-ksimus-0.3.6-r1 133
 MD5 55164f1100d647c9abc6309cff7139e9 files/digest-ksimus-0.3.6 67
