@@ -13,7 +13,7 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
 USE="sparc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
-GRP_STAGE23_USE="x86 berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
+GRP_STAGE23_USE="sparc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 
 ACCEPT_KEYWORDS="sparc"
 FEATURES="strict sfperms"
