@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/eject
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.19 2004/02/24 20:28:09 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.20 2004/02/25 20:06:29 gmsoft Exp $
+
+  25 Feb 2004; Guy Martin <gmsoft@gentoo.org> eject-2.0.13.ebuild:
+  Marked stable on hppa.
 
   24 Feb 2004; <augustus@gentoo.org> eject-2.0.13.ebuild:
   Made eject-2.0.13 stable on amd64. BUG #42720.
