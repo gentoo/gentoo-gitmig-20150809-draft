@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.5.92.1.ebuild,v 1.1 2004/08/06 19:41:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.5.92.1.ebuild,v 1.2 2004/08/13 22:32:32 mr_bones_ Exp $
 
 inherit eutils virtualx gnome2 debug flag-o-matic
 
@@ -91,8 +91,8 @@ src_compile() {
 	# Use standalone NSS/NSPR if only 'ssl' in USE
 	# Openssl support doesn't work and has been disabled in cvs
 
-	if [ -n "`use ssl`" ]; then
-		if [ -n "`use mozilla`" ]; then
+	if use ssl ; then
+		if  use mozilla ; then
 			NSS_LIB=/usr/lib/mozilla
 			NSS_INC=/usr/lib/mozilla/include
 		else
