@@ -941,7 +941,6 @@ app-admin/va-systemimager-client
 =media-sound/grip-2.98.3
 =media-sound/grip-2.98.3-r1
 # untested
->=dev-db/unixODBC-2.0.8
 =app-editors/fte-20010819
 
 #older versions were reported as broken, 0.30 works fine (george)
