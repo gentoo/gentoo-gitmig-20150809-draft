@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.10.ebuild,v 1.3 2005/01/13 22:29:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.10.ebuild,v 1.4 2005/03/03 23:21:18 ticho Exp $
 
 inherit gnome2 eutils mono
 
@@ -47,9 +47,7 @@ src_install() {
 		docinto tutorial
 		dodoc docs/tutorial/html/*
 	fi
-}
 
-pkg_preinst() {
 	# rename these two, so they don't conflict with app-arch/sharutils
 	# (bug #70392)	Ticho, 2004-11-10
 	mv ${D}/usr/bin/uuencode ${D}/usr/bin/gmime-uuencode
