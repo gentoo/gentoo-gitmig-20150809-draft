@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/detex-2.7.ebuild,v 1.2 2003/09/06 23:50:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/detex-2.7.ebuild,v 1.3 2003/10/06 14:29:35 obz Exp $
 
 DESCRIPTION="A filter program that removes the LaTeX (or TeX) control sequences"
 HOMEPAGE="http://www.cs.purdue.edu/homes/trinkle/detex/"
 SRC_URI="http://www.cs.purdue.edu/homes/trinkle/detex/detex-2.7.tar"
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="virtual/glibc sys-devel/flex"
 
