@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/cpio
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.6 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.7 2002/12/19 18:13:28 avenj Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -11,6 +11,9 @@
 
   09 Dec 2002; Jon Portnoy <avenj@gentoo.org> :
   Updated to use icc if USE=icc.
+
+  19 Dec 2002; Jon Portnoy <avenj@gentoo.org> :
+  Pulled out ICC support for now (see bug #12357)
 
 *cpio-2.4.2-r4 (1 Feb 2002)
 
