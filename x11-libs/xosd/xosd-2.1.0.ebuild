@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.1.0.ebuild,v 1.2 2003/02/13 17:05:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.1.0.ebuild,v 1.3 2003/03/08 23:13:19 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library for overlaying text/glyphs in X-Windows \
@@ -15,7 +15,7 @@ DEPEND="virtual/x11
 RDEPEND=${DEPEND}
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 
 src_compile() {
 	local myconf
