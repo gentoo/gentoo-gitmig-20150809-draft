@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.1.98.ebuild,v 1.1 2003/11/10 17:37:24 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.1.98.ebuild,v 1.2 2003/11/25 23:38:18 foser Exp $
 
 # development version
 inherit gnome2 debug
@@ -28,18 +28,12 @@ RDEPEND=">=dev-libs/glib-2.0.6
 	>=x11-libs/vte-0.9
 	>=dev-libs/libxml2-2.4.23
 	>=x11-libs/pango-1.1.1
-	>=dev-util/glademm-2.0.0
-	>=dev-cpp/gtkmm-2.2.8
 	dev-libs/libpcre
 	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-
 DOCS="AUTHORS COPYING ChangeLog FUTURE NEWS README THANKS TODO"
 
-src_compile() {
-	econf
-	cd ${S}/scintilla && emake && cd .. && emake
-}
+MAKEOPTS="${MAKEOPTS} -j1"
