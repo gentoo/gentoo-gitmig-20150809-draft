@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r5.ebuild,v 1.1 2002/11/21 22:16:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r5.ebuild,v 1.2 2002/11/24 01:20:13 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -104,7 +104,7 @@ pkg_setup() {
 	eerror "This is a very alpha ebuild and changes in here"
 	eerror "are not yet set in stone!  Please do NOT merge"
 	eerror "this if you are not a developer!"
-	die
+#	die
 }
 
 src_unpack() {
@@ -163,6 +163,14 @@ src_unpack() {
 		
 		rm -f ${x}.orig
 	done
+
+	# This next bit is for updating libtool linker scripts ...
+	OLD_GCC_VERSION="`gcc -dumpversion`"
+
+	if [ "${OLD_GCC_VERSION}" != "${MY_PV_FULL}" ]
+	then
+		echo "${OLD_GCC_VERSION}" > ${WORKDIR}/.oldgccversion
+	fi
 }
 
 src_compile() {
@@ -418,6 +426,14 @@ pkg_postinst() {
 	if [ "${ROOT}" = "/" -a "${COMPILER}" = "gcc3" ]
 	then
 		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
+	fi
+
+	# Update libtool linker scripts to reference new gcc version ...
+	if [ -f ${WORKDIR}/.oldgccversion -a "${ROOT}" = "/" ]
+	then 
+		OLD_GCC_VERSION="`cat ${WORKDIR}/.oldgccversion`"
+
+		${FILESDIR}/fix_libtool_files.sh ${OLD_GCC_VERSION}
 	fi
 	
 	# Fix ncurses b0rking (if r5 isn't unmerged)

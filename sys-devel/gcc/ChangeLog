@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.41 2002/11/21 22:16:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.42 2002/11/24 01:20:13 azarah Exp $
+
+  24 Nov 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.1.ebuild,
+  gcc-3.2.1-r5.ebuild :
+
+  Get these to run ${FILESDIR}/fix_libtool_files.sh, and thus fix libtool
+  linker scripts to reference the right gcc version ...  This should close
+  bug #11094.
 
 *gcc-3.2.1 (21 Nov 2002)
 *gcc-3.2.1-r5 (21 Nov 2002)
