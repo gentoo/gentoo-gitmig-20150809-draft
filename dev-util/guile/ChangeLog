@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.9 2003/02/06 03:56:19 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.10 2003/02/06 04:04:51 nall Exp $
+
+  05 Feb 2003; Jon Nall <nall@gentoo.org> guile-1.4.1.ebuild :
+  changed to -ppc as this compiles, but guile-config breaks
+  immediately
 
   05 Feb 2003; Jon Nall <nall@gentoo.org> guile-1.4.1.ebuild :
   added ~ppc
