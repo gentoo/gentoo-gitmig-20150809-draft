@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m.ebuild,v 1.8 2004/02/08 20:54:31 vapier Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m.ebuild,v 1.9 2004/02/11 01:08:08 vapier Exp $
 
 inherit eutils
 
@@ -94,21 +93,20 @@ src_install() {
 
 	dodoc COPYING LSM README* TODO
 
-	if [ -n "`use nls`" ]
-	then
+	if use nls ; then
 		cd ${S}/msgs
 		./inst.sh ?? ${D}/usr/share/locale/%L/%N
 	fi
 
-	chown root:man ${D}/usr/bin/man
-	chmod 2555 ${D}/usr/bin/man
-
 	# Needed for makewhatis
 	keepdir /var/cache/man
-
 	exeinto /etc/cron.weekly
 	doexe ${FILESDIR}/makewhatis.cron
 
+	fowners root:man /usr/bin/man
+	fperms 2555 /usr/bin/man
+
+	diropts -m0775 -g man
 	for x in $(awk '
 		/^MANSECT/ {
 			split($2, sects, ":")
@@ -119,4 +117,3 @@ src_install() {
 		keepdir /var/cache/man/${x}
 	done
 }
-
