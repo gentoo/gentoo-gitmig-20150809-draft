@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.25 2004/06/24 23:11:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.26 2004/06/28 20:03:32 morfic Exp $
+
+  28 Jun 2004; Daniel Goller <morfic@gentoo.org> libmatroska-0.7.0.ebuild:
+  Added conditional CFLAGS to fix problem with locale of source on gcc-3.4
+  Fixes Bug #52385
 
   09 Jun 2004; Luca Barbato <lu_zero@gentoo.org> libmatroska-0.7.0.ebuild:
   Same fix from amd64
