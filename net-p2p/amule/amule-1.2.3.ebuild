@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.2.3.ebuild,v 1.3 2004/01/07 22:52:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.2.3.ebuild,v 1.4 2004/02/28 09:12:38 eradicator Exp $
 
 MY_P=${P/m/M}
 S=${WORKDIR}/${MY_P}
@@ -19,6 +19,16 @@ IUSE="nls"
 DEPEND=">=x11-libs/wxGTK-2.4.1
 	>=net-ftp/curl-7.9.7
 	>=sys-libs/zlib-1.2.1"
+
+pkg_setup() {
+	if wx-config --cppflags | grep gtk2u >& /dev/null; then
+		einfo "${PN} will not build if wxGTK was compiled"
+		einfo "with unicode support.  If you are using a version of"
+		einfo "wxGTK <= 2.4.2, you must set USE=-gtk2.  In newer versions,"
+		einfo "you must set USE=-unicode."
+		die "wxGTK must be re-emerged without unicode suport"
+	fi
+}
 
 src_compile () {
 	econf `use_enable nls` || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.1.2.ebuild,v 1.5 2004/01/30 07:13:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.1.2.ebuild,v 1.6 2004/02/28 09:12:38 eradicator Exp $
 
 MY_P=${P/m/M}
 S=${WORKDIR}/${MY_P}
@@ -22,13 +22,12 @@ DEPEND="$RDEPEND
 	>=sys-devel/autoconf-2.58"
 
 pkg_setup() {
-	# FIXME: Is this really how we want to do this ?
-	GREP=`grep ' unicode' /var/db/pkg/x11-libs/wxGTK*/USE`
-	if [ "${GREP}" != "" ]; then
-		eerror "This package doesn't work with wxGTK"
-		eerror "compiled with gtk2 and unicode in USE"
-		eerror "Please re-compile wxGTK with -unicode"
-		die "aborting..."
+	if wx-config --cppflags | grep gtk2u >& /dev/null; then
+		einfo "${PN} will not build if wxGTK was compiled"
+		einfo "with unicode support.  If you are using a version of"
+		einfo "wxGTK <= 2.4.2, you must set USE=-gtk2.  In newer versions,"
+		einfo "you must set USE=-unicode."
+		die "wxGTK must be re-emerged without unicode suport"
 	fi
 }
 
