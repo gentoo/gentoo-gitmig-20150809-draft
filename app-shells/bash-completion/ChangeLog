@@ -1,10 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.29 2003/02/17 20:58:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.30 2003/02/18 10:07:27 seemant Exp $
 
 *bash-completion-20030209 (17 Feb 2003)
 
-  17 Feb 2003;  <root@gentoo.org> bash-completion-20030209.ebuild files/digest-bash-completion-20030209 :
+  17 Feb 2003; Seemant Kulleen <seemant@gentoo.org> bash-completion-20030209.ebuild files/digest-bash-completion-20030209 :
   version bump, thanks to Jeff Stuart <jstuart@computer-city.net> in bug #15553
 
 *bash-completion-20021231 (08 Dec 2003)
