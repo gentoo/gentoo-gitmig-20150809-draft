@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/captive
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.4 2005/02/13 21:02:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.5 2005/02/15 17:57:46 genstef Exp $
+
+  15 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
+  captive-1.1.5-r2.ebuild:
+  Adding new depend on >=fuse-2.2 .. it does not work with old versions(1.4)
+  as I learned from Milbo in #gentoo-anfaenger in IRC, thanks. I also added a
+  dep on >=lufis-0.3 to make sure that people can take advantage of the uid=
+  and gid= options and because it is more likely then that lufis is rebuilt
+  when upgrading fuse from 1.4 to 2.2 .. rebuilding lufis is necessary when
+  upgrading fuse major versions.
 
 *captive-1.1.5-r2 (13 Feb 2005)
 
