@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.1_rc1.ebuild,v 1.2 2003/10/02 00:44:59 hhg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.1_rc1.ebuild,v 1.3 2003/11/18 20:36:24 hhg Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/muh/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
 src_compile() {
 	econf || die "configure failed"
