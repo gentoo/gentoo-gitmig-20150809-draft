@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.4.ebuild,v 1.5 2005/01/05 02:23:54 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.4.ebuild,v 1.6 2005/01/14 23:47:00 danarmak Exp $
 
 inherit kde
 
@@ -14,9 +14,9 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE=""
 SLOT="0"
 
-DEPEND="kde-base/kdebase
+DEPEND="|| ( kde-base/kdebase-meta kde-base/kdebase )
 	media-plugins/kipi-plugins"
-RDEPEND="kde-base/kdebase
+RDEPEND="|| ( kde-base/kdebase-meta kde-base/kdebase )
 	media-plugins/kipi-plugins"
 need-kde 3.1
 

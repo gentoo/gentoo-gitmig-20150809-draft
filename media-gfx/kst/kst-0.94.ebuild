@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-0.94.ebuild,v 1.1 2004/12/24 01:34:30 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-0.94.ebuild,v 1.2 2005/01/14 23:45:37 danarmak Exp $
 
 inherit kde
 
@@ -14,5 +14,5 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=kde-base/kdebase-3.1"
+DEPEND="|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.1 )"
 need-kde 3.1

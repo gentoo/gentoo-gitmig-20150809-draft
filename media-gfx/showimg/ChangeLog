@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/showimg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.24 2005/01/05 02:23:54 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.25 2005/01/14 23:47:00 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> showimg-0.9.3.ebuild,
+  showimg-0.9.4.ebuild:
+  Changed dep on kdebase to accept kdebase-meta, the split 'meta' package.
+  This dep will be narrowed down in the future to the precise split packages
+  required.
 
   05 Jan 2005; Marcus Hanwell <cryos@gentoo.org> showimg-0.9.4.ebuild:
   Marked ~amd64 as requested in bug 72943.
