@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tinyca
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/ChangeLog,v 1.6 2003/10/01 12:17:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/ChangeLog,v 1.7 2003/12/08 12:57:11 mholzer Exp $
+
+*tinyca-0.5.4 (08 Dec 2003)
+
+  08 Dec 2003; Martin Holzer <mholzer@gentoo.org> tinyca-0.5.4.ebuild:
+  Version bumped. Closes #
 
 *tinyca-0.4.2 (11 Sep 2002)
 
