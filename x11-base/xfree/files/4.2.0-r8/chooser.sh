@@ -1,7 +1,8 @@
 #!/bin/sh
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.0-r8/chooser.sh,v 1.1 2002/03/14 23:52:57 azarah Exp $
+# Author:  Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.0-r8/chooser.sh,v 1.2 2002/04/04 15:32:56 azarah Exp $
 
 #if $XSESSION is "", source first /etc/conf.d/basic, and then /etc/rc.conf
 if [ -z "$XSESSION" ]
