@@ -795,9 +795,6 @@ app-cdr/cddump
 # xpdf-1.00-r1 has a dependency on the masked freetype2
 =app-text/xpdf-1.00-r1
 
-# spider@gentoo.org 7 May 2002
-# can somone check I did the right thing?
-=dev-perl/gtk-perl-0.7008-r4.ebuild
 
 # spider@gentoo.org 9 May 2002
 # Security update see:
