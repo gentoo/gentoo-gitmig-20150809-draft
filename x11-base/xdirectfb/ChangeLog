@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xdirectfb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.21 2004/06/24 21:57:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.22 2004/11/06 07:23:13 spyderous Exp $
+
+  05 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>; :
+  Fix up digest -- remove unused entries.
 
   26 Mar 2004; David Holm <dholm@gentoo.org> xdirectfb-1.0_rc5-r1.ebuild:
   Added to ~ppc.
