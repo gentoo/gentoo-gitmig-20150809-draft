@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/debug
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/debug/ChangeLog,v 1.5 2004/06/24 23:08:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/debug/ChangeLog,v 1.6 2004/11/01 20:43:03 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  debug-1.16.ebuild:
+  Marked ~ppc64; bug #67094
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> debug-1.16.ebuild:
   Stable on alpha
