@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.2 2004/09/07 19:28:31 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.3 2004/09/08 19:08:32 stuart Exp $
+
+*nxserver-freenx-0.2.1 (08 Sep 2004)
+
+  08 Sep 2004; Stuart Herbert <stuart@gentoo.org>
+  +nxserver-freenx-0.2.1.ebuild:
+  Version bump; still no fix for suspend / resume problems yet
 
 *nxserver-freenx-0.2 (07 Sep 2004)
 
