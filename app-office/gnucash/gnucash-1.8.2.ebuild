@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2.ebuild,v 1.2 2003/06/10 13:22:35 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2.ebuild,v 1.3 2003/07/09 16:37:39 liquidx Exp $
 
 # FIXME - ebuild needs a good look at
 
@@ -21,17 +21,18 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	 <gnome-extra/gal-1.99
 	 >=gnome-extra/guppi-0.35.5-r2
 	 >=gnome-base/gnome-print-0.21
-	 postgres? ( dev-db/postgresql )"
+	gnome-base/libghttp
+	<gnome-base/libglade-2
+	media-libs/gdk-pixbuf
+	>=dev-libs/g-wrap-1.3.4
+	<dev-util/guile-1.4.1	
+	postgres? ( dev-db/postgresql )"
 
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
 	>=dev-libs/slib-2.3.8
 	>=dev-lang/swig-1.3_alpha4
-	>=dev-libs/g-wrap-1.3.4
-	<gnome-base/libglade-2
-	media-libs/gdk-pixbuf
-	<dev-util/guile-1.4.1
-	gnome-base/libghttp
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 # these flags to GCC interfere with G_INLINE_FUNC usage in this package
