@@ -1,4 +1,6 @@
 MD5 0d105f366400138a65fd5dae8eeab21e smarty-docs-2.5.0.ebuild 548
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
 MD5 9c708d7356c593c591ff9b342abeb1e1 ChangeLog 334
+MD5 0d105f366400138a65fd5dae8eeab21e smarty-docs-2.6.0.ebuild 548
 MD5 641fdee412971de5933b7da56c1cf9c0 files/digest-smarty-docs-2.5.0 69
+MD5 07523ebbe30f8f113791aa0328a95890 files/digest-smarty-docs-2.6.0 69
