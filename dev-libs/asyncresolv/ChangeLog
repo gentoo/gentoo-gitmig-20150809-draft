@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/asyncresolv
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/asyncresolv/ChangeLog,v 1.1 2004/07/14 09:04:39 jhhudso Exp $
+
+*asyncresolv-0.0.3 (14 Jul 2004)
+
+  14 Jul 2004; Jared Hudson <jhhudso@gentoo.org> +asyncresolv-0.0.3.ebuild:
+  Initial import.
+
