@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.ebuild,v 1.2 2003/09/11 01:39:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.ebuild,v 1.3 2003/09/11 08:42:04 obz Exp $
 
 inherit gnome2
 
@@ -29,6 +29,16 @@ DEPEND="${RDEPEND}
 
 USE_DESTDIR="1"
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README TODO"
+
+src_unpack( ) {
+
+	unpack ${A}
+	cd ${S}
+	# patch to prevent building the Sensors that are
+	# included here, we have them in x11-plugins/
+	epatch ${FILESDIR}/gdesklets-core-0.21-Sensors.patch
+
+}
 
 src_install( ) {
 

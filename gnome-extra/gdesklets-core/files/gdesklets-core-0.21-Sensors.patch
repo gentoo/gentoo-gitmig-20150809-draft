@@ -1,0 +1,33 @@
+--- configure.old	2003-09-11 16:28:53.633506672 +0800
++++ configure	2003-09-11 16:29:35.545135136 +0800
+@@ -9617,7 +9617,7 @@
+ fi
+ 
+ 
+-                                                                                                                                                                                    ac_config_files="$ac_config_files Makefile config/Makefile data/Makefile desktop/Makefile doc/Makefile doc/man/Makefile display/Makefile factory/Makefile libdesklets/Makefile locale/Makefile main/Makefile po/Makefile sensor/Makefile Sensors/Makefile Sensors/External/Makefile Sensors/FontSelector/Makefile utils/Makefile gdesklets-core.pc"
++                                                                                                                                                                                    ac_config_files="$ac_config_files Makefile config/Makefile data/Makefile desktop/Makefile doc/Makefile doc/man/Makefile display/Makefile factory/Makefile libdesklets/Makefile locale/Makefile main/Makefile po/Makefile sensor/Makefile utils/Makefile gdesklets-core.pc"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+ # tests run on this system so they can be shared between configure
+--- configure.in.old	2003-09-11 16:29:00.404477328 +0800
++++ configure.in	2003-09-11 16:30:52.633415936 +0800
+@@ -66,9 +66,6 @@
+ main/Makefile
+ po/Makefile
+ sensor/Makefile
+-Sensors/Makefile
+-Sensors/External/Makefile
+-Sensors/FontSelector/Makefile
+ utils/Makefile
+ gdesklets-core.pc
+ ])
+--- Makefile.in.old	2003-09-11 16:29:06.695520944 +0800
++++ Makefile.in	2003-09-11 16:31:11.226589344 +0800
+@@ -181,7 +181,6 @@
+ AUTOMAKE_OPTIONS = 1.6 dist-bzip2
+ 
+ SUBDIRS = \
+-	Sensors	\
+ 	config	\
+ 	data	\
+ 	desktop	\

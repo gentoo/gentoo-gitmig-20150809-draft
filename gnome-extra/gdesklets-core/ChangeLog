@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.3 2003/09/10 12:47:12 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.4 2003/09/11 08:42:04 obz Exp $
+
+  11 Sep 2003; Mike Gardiner <obz@gentoo.org> gdesklets-core-0.21.ebuild,
+  files/gdesklets-core-0.21-Sensors.patch:
+  Added a patch against 0.21 to prevent building the included Sensors, because
+  they dont work, and we have them in x11-plugins
 
 *gdesklets-core-0.21 (10 Sep 2003)
 
