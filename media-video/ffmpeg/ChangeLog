@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.16 2003/06/26 18:29:12 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.17 2003/07/02 18:13:25 raker Exp $
+
+  02 Jul 2003; Nick Hadaway <raker@gentoo.org> ffmpeg-0.4.7_pre20030624.ebuild,
+  files/alpha-idct.patch:
+  Addresses bug #23563.  This problem was fixed upstream in cvs.
+  Added a small patch.  
 
 *ffmpeg-0.4.7_pre20030624 (26 Jun 2003)
 

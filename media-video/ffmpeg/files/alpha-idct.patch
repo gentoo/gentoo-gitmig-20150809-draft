@@ -1,0 +1,18 @@
+diff -urN ffmpeg-cvs-2003-06-24/libavcodec/alpha/dsputil_alpha.c ffmpeg-cvs-2003-06-24-modified/libavcodec/alpha/dsputil_alpha.c
+--- ffmpeg-cvs-2003-06-24/libavcodec/alpha/dsputil_alpha.c	2003-06-20 20:11:30.000000000 -0500
++++ ffmpeg-cvs-2003-06-24-modified/libavcodec/alpha/dsputil_alpha.c	2003-07-02 12:58:06.000000000 -0500
+@@ -20,6 +20,7 @@
+ #include "asm.h"
+ #include "../dsputil.h"
+ 
++extern void simple_idct_axp(DCTELEM *block);
+ extern void simple_idct_put_axp(uint8_t *dest, int line_size, DCTELEM *block);
+ extern void simple_idct_add_axp(uint8_t *dest, int line_size, DCTELEM *block);
+ 
+@@ -363,5 +364,5 @@
+     
+     c->idct_put = simple_idct_put_axp;
+     c->idct_add = simple_idct_add_axp;
+-    c->idct_idct = simple_idct_axp;
++    c->idct = simple_idct_axp;
+ }
