@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r3.ebuild,v 1.4 2003/09/12 11:34:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r3.ebuild,v 1.5 2003/09/12 12:14:17 seemant Exp $
 
 inherit eutils
 
@@ -103,4 +103,7 @@ pkg_postinst() {
 	then
 		rm -f ${ROOT}/usr/bin/hostname
 	fi
+
+	einfo "Please remove textutils, fileutils and sh-utils from your system"
+	einfo "As they are deprecated by coreutils"
 }
