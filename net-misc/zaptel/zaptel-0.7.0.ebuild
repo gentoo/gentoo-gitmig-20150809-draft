@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-0.7.0.ebuild,v 1.2 2004/02/19 00:25:57 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-0.7.0.ebuild,v 1.3 2004/03/16 00:28:12 stkn Exp $
 
 IUSE=""
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 DEPEND="virtual/glibc
-	virtual/linux-sources
-	!sys-kernel/gentoo-dev-sources"
+	virtual/linux-sources"
 
 pkg_setup() {
 	# check if we're running a 2.6 kernel (not supported, atm)
