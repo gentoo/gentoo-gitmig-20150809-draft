@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libid3tag
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.23 2004/12/29 00:50:48 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.24 2005/01/12 03:57:18 vapier Exp $
+
+  11 Jan 2005; Mike Frysinger <vapier@gentoo.org> libid3tag-0.15.1b.ebuild:
+  Disable C++ checks #74489.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
