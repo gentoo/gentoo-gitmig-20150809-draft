@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4-r1.ebuild,v 1.4 2003/12/15 03:18:58 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4-r1.ebuild,v 1.5 2003/12/19 00:59:14 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 
 RESTRICT="nomirror"
 P_HIERPG="hier-Pg7.3-0.3"
 HOMEPAGE="http://www.postgresql.org/ http://gppl.terminal.ru/index.eng.html"
-SRC_URI="mirror://postgresql/v${PV}/${P}.tar.gz
+SRC_URI="mirror://postgresql/src/${PV}/${P}.tar.gz
 	pg-hier? ( http://gppl.terminal.ru/${P_HIERPG}.tar.gz )"
 
 LICENSE="POSTGRESQL"
@@ -24,7 +24,7 @@ DEPEND="virtual/glibc
 	tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( !ppc? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base ) )
-	java? ( !amd64? ( !hppa? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3 ) ) )
+	java? ( !amd64? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3 ) )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	nls? ( sys-devel/gettext )"
 # java dep workaround for portage bug
@@ -34,7 +34,7 @@ RDEPEND="virtual/glibc
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( !ppc? ( >=dev-lang/python-2.2 ) )
-	java? ( !amd64? ( !hppa? ( >=virtual/jdk-1.3* ) ) )
+	java? ( !amd64? ( >=virtual/jdk-1.3* ) )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
 
 PG_DIR="/var/lib/postgresql"
