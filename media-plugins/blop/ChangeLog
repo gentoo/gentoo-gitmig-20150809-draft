@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/blop
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/blop/ChangeLog,v 1.5 2004/05/10 23:45:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/blop/ChangeLog,v 1.6 2004/06/20 23:30:29 fvdpol Exp $
+
+*blop-0.2.8 (21 Jun 2004)
+
+  21 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> +metadata.xml,
+  +blop-0.2.8.ebuild:
+  Updated to new upstream version.
 
   10 May 2004; Travis Tilley <lv@gentoo.org> blop-0.2.7.ebuild:
   added ~amd64 keyword
