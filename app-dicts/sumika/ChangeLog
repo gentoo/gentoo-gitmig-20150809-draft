@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/sumika
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/ChangeLog,v 1.10 2004/05/11 07:10:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/ChangeLog,v 1.11 2004/06/17 14:43:14 hattya Exp $
+
+  17 Jun 2004; Akinori Hattori <hattya@gentoo.org> sumika-0.11.ebuild,
+  sumika-0.12.ebuild:
+  stable on x86.
 
 *sumika-0.12 (11 May 2004)
 
