@@ -1,6 +1,6 @@
-# ChangeLog for app-misc/xhkeys
+# ChangeLog for x11-misc/xhkeys
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/ChangeLog,v 1.1 2003/11/20 23:29:49 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/ChangeLog,v 1.2 2003/11/21 06:39:02 vapier Exp $
 
 *xhkeys-1.0.0 (20 Nov 2003)
 
