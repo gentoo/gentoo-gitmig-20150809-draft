@@ -1,8 +1,11 @@
-# ChangeLog for app-dicts/babytrans-en2pt
+# ChangeLog for app-dicts/babytrans-en2get
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ger/ChangeLog,v 1.1 2004/09/10 06:24:19 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ger/ChangeLog,v 1.2 2004/09/16 19:58:40 angusyoung Exp $
 
-  10 Oct 2004; Otavio Piske <angusyoung@gentoo.org> babytrans-en2ger-0.1.ebuild :
+  16 Sep 2004; Otavio Piske <angusyoung@gentoo.org> :
+  Corrected ChangeLog to according to Gentoo standard
+
+* babytrans-en2ger-0.1 (10 Sep 2004)
+
+  10 Sep 2004; Otavio Piske <angusyoung@gentoo.org> babytrans-en2ger-0.1.ebuild :
   Initial release (bug #26490)
-
-* babytrans-en2ger-0.1 (10 Oct 2004)
