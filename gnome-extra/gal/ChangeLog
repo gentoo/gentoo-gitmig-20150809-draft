@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.43 2003/08/11 00:51:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.44 2003/08/14 13:26:02 agriffis Exp $
+
+  12 Aug 2003; Aron Griffis <agriffis@gentoo.org> gal-1.99.9.ebuild:
+  Add ~alpha to KEYWORDS
 
 *gal-1.99.9 (11 Aug 2003)
 
