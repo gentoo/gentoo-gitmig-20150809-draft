@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.6 2004/03/06 20:38:56 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.7 2004/04/02 20:50:41 plasmaroo Exp $
+
+*ntfsprogs-1.9.0 (02 Apr 2004)
+
+  02 Apr 2004; <plasmaroo@gentoo.org> +ntfsprogs-1.9.0.ebuild:
+  Version bump. Closes bug #44354. 1.8.5 is now marked stable on
+  X86.
 
 *ntfsprogs-1.8.5 (06 Mar 2004)
 
