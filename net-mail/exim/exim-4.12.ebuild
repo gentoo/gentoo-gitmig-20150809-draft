@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.12.ebuild,v 1.6 2003/03/26 05:03:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.12.ebuild,v 1.7 2003/04/12 11:26:26 seemant Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam"
 
@@ -32,8 +32,9 @@ RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00"
 
 src_unpack() {
-	local myconf
 	unpack ${A}
+
+	local myconf
 
 	cd ${S}
 	einfo "Patching exiscan support into exim ${PV}.."
@@ -134,11 +135,13 @@ src_install () {
 	doins exim
 
 	dodir /usr/bin /usr/sbin /usr/lib
-	dosym /usr/sbin/exim /usr/bin/mailq
-	dosym /usr/sbin/exim /usr/bin/newaliases
-	dosym /usr/sbin/exim /usr/bin/mail
+	dosym ../sbin/exim /usr/bin/mailq
+	dosym ../sbin/exim /usr/bin/newaliases
+	dosym ../sbin/exim /usr/bin/mail
+	dosym exim /usr/sbin/rsmtp
+	dosym exim /usr/sbin/rmail
+	dosym exim /usr/sbin/sendmail
 	dosym /usr/sbin/exim /usr/lib/sendmail
-	dosym /usr/sbin/exim /usr/sbin/sendmail
 
 	exeinto /usr/sbin
 	for i in exicyclog exim_dbmbuild exim_dumpdb exim_fixdb exim_lock \

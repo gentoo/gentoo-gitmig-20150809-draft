@@ -1,5 +1,5 @@
-MD5 06e1fd565299c4d80285bba813f69342 exim-4.12.ebuild 5433
-MD5 c7605ff955e90bf1a9f6755578fce1e0 ChangeLog 4373
+MD5 8005f95f6688a5d565730faff9078734 exim-4.12.ebuild 5433
+MD5 cdaaa628d9d68d18edc523255229f3a2 ChangeLog 4562
 MD5 e371598dfbc199313fc7637ef5e4bc20 exim-4.10.ebuild 6155
 MD5 0883fe67a34142a57e6f39ed9419cbee files/system_filter.exim 8118
 MD5 0cb2ffe88c81fd7ac8429b5a19d58b35 files/configure 16346
