@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mairix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.5 2004/07/01 22:32:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.6 2004/09/01 15:23:06 ticho Exp $
+
+*mairix-0.15 (01 Sep 2004)
+
+  01 Sep 2004; Andrej Kacian <ticho@gentoo.org> +mairix-0.15.ebuild:
+  Version bump. Closes #50849, reported by Bardur Arantsson
+  <gentoo@scientician.net>.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mairix-0.10.ebuild:
   virtual/glibc -> virtual/libc
