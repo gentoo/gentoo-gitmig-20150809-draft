@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/gotmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.2 2002/05/11 18:37:58 g2boojum Exp $
+
+*gotmail-0.6.6.7 (11 May 2002)
+
+  11 May 2002; Grant Goodyear <g2boojum@gentoo.org> :
+  
+  New version.  It looks like debian is now maintaining the base
+  package.
 
 *gotmail-0.6.6 (1 Feb 2002)
 
