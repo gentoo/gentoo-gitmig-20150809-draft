@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.4 2002/07/08 02:40:42 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.5 2002/07/08 10:20:14 lostlogic Exp $
+
+*gtk-gnutella-0.90-r2 (08 Jul 2002)
+
+  08 Jul 2002; Brandon Low <lostlogic@gentoo.org> gtk-gnutella-0.90-r2.ebuild :
+
+  0.90 Stable released you were close to this with -r1, but this is the latest
+  greatest from the gtk-gnutella folks who I've been working with to get this
+  out with as perfect quality for all users as possible, enjoy.
 
 *gtk-gnutella-0.90-r1 (07 Jul 2002)
 
