@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.4_alpha21.ebuild,v 1.3 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.4_alpha21.ebuild,v 1.4 2002/07/21 20:49:31 gerk Exp $
 
 S=${WORKDIR}/star-1.4
 
 DESCRIPTION="Includes star, an enhanced (world\'s fastest) tar, as well as enhanced mt/rmt"
 SRC_URI="ftp://ftp.fokus.gmd.de/pub/unix/star/alpha/${PN}-1.4a21.tar.gz"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/star.html"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="virtual/glibc"
