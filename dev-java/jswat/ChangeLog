@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jswat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.9 2004/02/29 01:14:26 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.10 2004/06/03 01:44:48 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> jswat-2.17-r1.ebuild:
+  Fix use invocation
 
 *jswat-2.21 (28 Feb 2004)
 
