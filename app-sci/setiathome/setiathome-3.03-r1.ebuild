@@ -1,12 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.4 2002/08/01 11:40:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.5 2002/08/28 11:51:56 seemant Exp $
 
-# generic archive name, this should be a link to the real archive
-A="${P}.tar"
-
-# this directory will not exist at first, we rename the real directory
-# to this name later
 S="${WORKDIR}/${P}"
 
 # no version number on this install dir since upgrades will be using same dir
@@ -15,16 +10,15 @@ I=/opt/setiathome
 
 DESCRIPTION="Search for Extraterrestrial Intelligence (SETI) @ home"
 HOMEPAGE="http://setiathome.ssl.berkeley.edu"
-DEPEND=">=virtual/glibc-2.1
-		>=sys-apps/baselayout-1.8.0"
-RDEPEND=">=virtual/glibc-2.1
-	X? ( x11-base/xfree )"
+DEPEND=">=sys-apps/baselayout-1.8.0"
+RDEPEND="X? ( x11-base/xfree )"
+
 SLOT="0"
 LICENSE="proprietary"
 KEYWORDS="x86"
 
 src_unpack () {
-	if [ ! -e ${DISTDIR}/${A} ] ; then
+	if [ ! -e ${DISTDIR}/${P}.tar ] ; then
 		einfo "Please download the appropriate setiathome archive"
 		einfo "for your system's architecture from:"
 		einfo "http://setiathome.ssl.berkeley.edu/unix.html"
@@ -32,13 +26,13 @@ src_unpack () {
 		einfo "The archive should be placed into /usr/portage/distfiles."
 		einfo "After that, create a symbolic link:"
 		einfo ""
-		einfo "\tln -s <archive> ${DISTDIR}/${A}"
+		einfo "\tln -s <archive> ${DISTDIR}/${P}.tar"
 
 		die "package archive not found"
 	fi
 
 	cd ${WORKDIR}
-	tar xf ${DISTDIR}/${A}
+	tar xf ${DISTDIR}/${P}.tar
 
 	# find real directory ...
 	dir="`find . -type d -name "${P}*" -mindepth 1 -maxdepth 1 | \
