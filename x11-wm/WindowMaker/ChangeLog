@@ -1,8 +1,11 @@
 # ChangeLog for x11-wm/WindowMaker
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.13 2002/08/07 03:02:59 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.14 2002/09/13 23:15:04 owen Exp $
 
 *WindowMaker-0.80.1-r2 (17 Jul 2002)
+
+  13 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
 
   06 Aug 2002; Nick Hadaway <raker@gentoo.org> WindowMaker-0.80.1-r2.ebuild, 
   files/wmfpo-81.patch, files/WindowMaker-0.80.1-gentoo.patch :
