@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/crystal
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.8 2004/12/30 13:38:00 voxus Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.9 2005/03/08 15:43:05 greg_g Exp $
+
+  08 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> -crystal-0.9.0.ebuild,
+  crystal-0.9.1.ebuild:
+  Stable on x86.
 
 *crystal-0.9.1 (30 Dec 2004)
 
