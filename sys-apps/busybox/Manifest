@@ -1,4 +1,4 @@
-MD5 cce972250fb80d0c1d4e19d59dbe8ab0 ChangeLog 3148
+MD5 e6e6de980618700bb801797c6be6e56f ChangeLog 3568
 MD5 041f6348b9b2c3051a19d8f3611cd259 busybox-0.50.ebuild 1024
 MD5 d2aea6e7d4671cde6cb2da4579fbb6f1 busybox-0.60.2.ebuild 1242
 MD5 bfec32dd92d147690a1271b7915a1579 busybox-0.60.3-r1.ebuild 1103
@@ -7,7 +7,7 @@ MD5 cbc0a83fefc19b66aa495c08cf2c2d9b busybox-0.60.5-r1.ebuild 1433
 MD5 482b4170d2e88c1218be4f43f124d26d busybox-0.60.5.ebuild 1043
 MD5 d62c3f2a74eb8b11a24e53b6ad346d43 busybox-1.00_pre3.ebuild 4392
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d62c3f2a74eb8b11a24e53b6ad346d43 busybox-1.00_pre4.ebuild 4392
+MD5 2f47f0cc19c18bcea9f4828dcab94aa7 busybox-1.00_pre4.ebuild 4392
 MD5 cd67b7e833d718b6fde55506d1cb556d busybox-0.60.5-r2.ebuild 2150
 MD5 9ce965b12114a360496fe06e952139a8 files/Config.h 11695
 MD5 24ec3839ecb3e429bf29a819398b7753 files/Config.h-0.60.2-cd 13772
