@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9.ebuild,v 1.1 2004/07/24 16:31:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9.ebuild,v 1.2 2004/07/25 00:04:48 dragonheart Exp $
 
 inherit kmod eutils
 
@@ -10,19 +10,14 @@ SRC_URI="http://www.smlink.com/main/down/${P}.tar.gz"
 LICENSE="Smart-Link"
 SLOT="${KV}"
 KEYWORDS="~x86"
-IUSE="alsa"
+IUSE="alsa usb"
 
 DEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )
-	sys-kernel/linux-headers"
-
-#	sys-kernel/config-kernel
+	virtual/os-headers"
 
 RDEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )"
-
-#KMOD_SOURCES="${P}.tar.gz"
-#KMOD_KOUTPUT_PATCH=""
 
 src_unpack() {
 	# Unpack and set some variables
@@ -51,8 +46,6 @@ src_compile() {
 	fi
 
 	mkdir ${S}/workdir
-	#cd ${S}/workdir
-	#cp ${KV_OUTPUT}/.config .
 
 	emake -C ${S} \
 		KERNEL_VER=${KV_VERSION_FULL} \
@@ -66,6 +59,13 @@ src_compile() {
 #	cd modem
 #	emake modem_test
 #	./modem_test || die "failed modem test"
+#
+#	if use usb
+#	then
+#	# USB modem test
+#	else
+#	# PCI modem test
+#	fi
 #}
 
 src_install() {
@@ -79,11 +79,25 @@ src_install() {
 	dodir /var/lib/slmodem
 	fowners root:dialout /var/lib/slmodem
 
-	dodoc COPYING Changes README README.1st
+	dodoc COPYING Changes README
 
 	# Install /etc/{devfs,modules,init,conf}.d/slmodem files
 	insinto /etc/conf.d/; newins ${FILESDIR}/${PN}-2.9.conf ${PN}
 	insopts -m0755; insinto /etc/init.d/; newins ${FILESDIR}/${PN}-2.9.init ${PN}
+
+	if use alsa
+	then
+		sed -i -e "s/ALSA=.*/ALSA=yes/" -e "s:# DEV=/dev/ttySL0:DEV=/dev/ttySL0:" ${D}//etc/conf.d/slmodem
+	else
+		sed -i -e "s/ALSA=.*/ALSA=yes/" ${D}//etc/conf.d/slmodem
+		if use usb
+		then
+			sed -i -e "s:# DEV=/dev/slusb0:DEV=/dev/slusb0:" ${D}//etc/conf.d/slmodem
+		else
+			sed -i -e "s:# DEV=/dev/slamr0:DEV=/dev/slamr0:" ${D}//etc/conf.d/slmodem
+		fi
+	fi
+
 
 	# Make some devices if we aren't using devfs
 	# If we are using devfs, restart it
@@ -103,34 +117,6 @@ src_install() {
 	else
 		make -C drivers DESTDIR=${D} KERNELRELEASE=1 KERNEL_VER=${KV_VERSION_FULL} install-devices
 	fi
-
-	#if 1
-	#then
-	# simple raw devs
-	#	dodir /dev
-	#	ebegin "Creating /dev/slamr* devices"
-	#	local C="0"
-	#	while [ "${C}" -lt "4" ]
-	#	do
-	#		if [ ! -c ${ROOT}/dev/slamr${C} ]
-	#		then
-	#			mknod ${D}/dev/slamr${C} c 212 ${C}
-	#		#	doco suggests that the slmodemd creates these
-	#		#	ln -s slamr${C} ttySL${C}
-	#		fi
-	#		if [ ! -c ${ROOT}/dev/slamr${C} ]
-	#		then
-	#			mknod ${D}/dev/slusb${C} c 213 ${C}
-	#		#TODO usb or slamr (AMR/CNR/PCI) version for symlinks???
-	#		#	ln -s sl${C} ttySL${C}
-	#		fi
-
-	#		C="`expr $C + 1`"
-	#	done
-	#	eend 0
-	#	cd ${D}/dev
-	#	ln -s ttySL0 modem
-	#fi
 
 }
 
@@ -159,8 +145,12 @@ pkg_postinst() {
 
 	einfo "You must edit /etc/conf.d/${PN} for your configuration"
 
+	einfo "To add slmodem to your startup - type : rc-update add slmodem default"
+
 	if use alsa;
 	then
+		einfo "I hope you have already added alsa to your startup: "
+		einfo "otherwise type: rc-update add alsa-sound boot"
 		einfo
 		einfo "If you need to use snd-intel8x0m from the kernel"
 		einfo "compile it as a module and edit /etc/module.d/alsa"
