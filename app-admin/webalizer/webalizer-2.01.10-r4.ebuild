@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.1 2003/11/02 22:32:59 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.2 2003/11/02 22:36:48 tantive Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
@@ -58,4 +58,12 @@ src_install() {
 
 	dodoc README* CHANGES COPYING Copyright sample.conf
 	dodir /var/www/webalizer
+}
+
+pkg_postinst(){
+	einfo
+	einfo "Just type webalizer to generate your stats."
+	einfo "You can also use cron to generate them e.g. every day."
+	einfo "They can be accessed via http://localhost/webalizer"
+	einfo
 }
