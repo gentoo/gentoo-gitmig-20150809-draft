@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.48 2004/06/24 21:59:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.49 2004/06/27 11:31:40 twp Exp $
+
+*phpmyadmin-2.5.7 (27 Jun 2004)
+
+  27 Jun 2004; <twp@gentoo.org> +phpmyadmin-2.5.7.ebuild:
+  Version bump. Bug # 53422.
 
   08 May 2004; <twp@gentoo.org> phpmyadmin-2.5.6-r1.ebuild:
   Mark ~all-ARCHs, block earlier versions to force uninstall pre-emerge.
