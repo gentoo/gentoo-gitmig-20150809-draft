@@ -2,12 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.64-r1.ebuild,v 1.1 2001/05/17 13:29:30 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.35.5-r2.ebuild,v 1.2 2001/10/07 09:49:10 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.35.5-r2.ebuild,v 1.3 2001/10/19 22:11:59 hallski Exp $
 
-A=Guppi-${PV}.tar.gz
-S=${WORKDIR}/Guppi-${PV}
+S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Plottin Tool"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/Guppi/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/Guppi/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/guppi/"
 
 RDEPEND=">=media-libs/gdk-pixbuf-0.11.0-r1
@@ -49,13 +48,18 @@ src_compile() {
 
 	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
+		    --sysconfdir=/etc					\
+		    --localstatedir=/var/lib				\
 		    ${myconf} || die
 
 	make || die # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {                               
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/etc					\
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
