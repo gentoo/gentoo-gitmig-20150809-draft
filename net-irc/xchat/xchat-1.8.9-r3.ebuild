@@ -1,6 +1,6 @@
 # Copyrigth 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.9-r3.ebuild,v 1.2 2002/08/26 21:06:33 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.9-r3.ebuild,v 1.3 2002/08/29 07:52:39 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
@@ -63,9 +63,12 @@ src_compile() {
 		&& myopts="${myopts} --enable-hebrew --enable-japanese-conv" \
 		|| myopts="${myopts} --disable-nls"
 
-	use mmx	\
-		&& myopts="${myopts} --enable-mmx"	\
-		|| myopts="${myopts} --disable-mmx"
+	if use x86
+	then
+		use mmx	\
+			&& myopts="${myopts} --enable-mmx"	\
+			|| myopts="${myopts} --disable-mmx"
+	fi
 	
 	use ipv6 \
 		&& myopts="${myopts} --enable-ipv6"
