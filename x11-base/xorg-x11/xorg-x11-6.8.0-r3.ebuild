@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r3.ebuild,v 1.4 2004/11/24 02:17:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r3.ebuild,v 1.5 2004/12/07 04:03:52 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -15,7 +15,7 @@
 #   TARGET: patchset 0.2
 #		Nothing yet =)
 
-inherit eutils flag-o-matic toolchain-funcs x11
+inherit eutils flag-o-matic toolchain-funcs x11 linux-info
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -302,7 +302,7 @@ host_def_setup() {
 		fi
 
 		if ( [ -e "${ROOT}/usr/src/linux" ] && \
-			[ ! `is_kernel "2" "2"` ] ) || \
+			[ ! `kernel_is "2" "2"` ] ) || \
 			[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 		then
 			echo "#define HasLinuxInput YES" >> ${HOSTCONF}
@@ -419,7 +419,7 @@ host_def_setup() {
 				echo "#define ModuleAsCmd CcCmd -c -x assembler -fno-pie -fno-PIE" >> ${HOSTCONF}
 			fi
 			if ( [ -e "${ROOT}/usr/src/linux" ] && \
-			  !( `is_kernel "2" "6"` ) ) || \
+			  !( `kernel_is "2" "6"` ) ) || \
 			  [ "`uname -r | cut -d. -f1,2`" != "2.6" ]
 			then
 				einfo "Building for kernels less than 2.6 requires special treatment"

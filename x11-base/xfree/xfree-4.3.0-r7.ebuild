@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.14 2004/11/11 06:50:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.15 2004/12/07 03:59:46 spyderous Exp $
 
-inherit eutils flag-o-matic toolchain-funcs x11
+inherit eutils flag-o-matic toolchain-funcs x11 linux-info
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -312,7 +312,7 @@ src_unpack() {
 	#  http://people.mandrakesoft.com/~flepied/projects/wacom/
 	#
 	if ( [ -e "${ROOT}/usr/src/linux" ] && \
-		[ ! `is_kernel "2" "2"` ] ) || \
+		[ ! `kernel_is "2" "2"` ] ) || \
 		[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 	then
 		ebegin "Updating Wacom USB Driver"
@@ -366,7 +366,7 @@ src_unpack() {
 	fi
 
 	if ( [ -e "${ROOT}/usr/src/linux" ] && \
-		[ ! `is_kernel "2" "2"` ] ) || \
+		[ ! `kernel_is "2" "2"` ] ) || \
 		[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 	then
 		echo "#define HasLinuxInput YES" >> config/cf/host.def
