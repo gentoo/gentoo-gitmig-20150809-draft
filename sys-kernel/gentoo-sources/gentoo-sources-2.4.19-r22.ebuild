@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r21.ebuild,v 1.1 2004/08/08 18:32:21 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r22.ebuild,v 1.1 2004/08/14 14:35:32 plasmaroo Exp $
 
 IUSE="acpi4linux crypt xfs"
 
@@ -35,7 +35,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://gentoo.lostlogicx.com/patches-${KV/-r21/-r10}.tar.bz2
+	 http://gentoo.lostlogicx.com/patches-${KV/-r22/-r10}.tar.bz2
 	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
 KEYWORDS="x86 -ppc -sparc -amd64 -ia64"
 SLOT="${KV}"
@@ -44,7 +44,7 @@ src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
 
-	cd ${KV/-r21/-r10}
+	cd ${KV/-r22/-r10}
 	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
 
@@ -89,4 +89,5 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.20-CAN-2004-0685.patch || die "Failed to add the CAN-2004-0685 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
+	epatch ${FILESDIR}/${PN}-2.4.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
 }
