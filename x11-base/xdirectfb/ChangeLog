@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xdirectfb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.16 2004/03/17 18:55:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.17 2004/03/17 18:56:36 spyderous Exp $
+
+  17 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xdirectfb-1.0_rc3-r1.ebuild, xdirectfb-1.0_rc4.ebuild:
+  Pull old versions.
 
   17 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xdirectfb-1.0_rc5.ebuild:
