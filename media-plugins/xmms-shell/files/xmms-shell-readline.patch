@@ -1,0 +1,10 @@
+--- xmms-shell-0.99.3/configure.in.orig	2004-02-04 00:19:03.000000000 -0800
++++ xmms-shell-0.99.3/configure.in	2004-02-04 00:19:44.000000000 -0800
+@@ -30,6 +30,7 @@
+ 
+ if test x$with_readline = xyes
+  then
++  AC_CHECK_LIB(ncurses, main)
+   AC_CHECK_LIB(readline, readline)
+  fi
+ 
