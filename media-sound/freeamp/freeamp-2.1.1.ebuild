@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1.ebuild,v 1.5 2002/04/04 13:05:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1.ebuild,v 1.6 2002/04/12 17:15:30 spider Exp $
 use arts && . /usr/portage/eclass/inherit.eclass
 use arts && inherit kde-functions && set-kdedir
 
@@ -14,7 +14,8 @@ HOMEPAGE="http://www.freeamp.org/"
 S=${WORKDIR}/freeamp
 
 RDEPEND="virtual/glibc
-	>=dev-libs/glib-1.2.5 >=x11-libs/gtk+-1.2.5
+	=dev-libs/glib-1.2*
+	>=x11-libs/gtk+-1.2.5
 	>=sys-libs/zlib-1.1.3 >=sys-libs/ncurses-5.2
 	~media-libs/freetype-1.3.1 >=media-libs/musicbrainz-1.0.1
 	esd? ( media-sound/esound ) alsa? ( media-libs/alsa-lib )
