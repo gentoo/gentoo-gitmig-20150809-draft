@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/quake3-wop
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-wop/ChangeLog,v 1.1 2004/11/10 16:09:17 wolf31o2 Exp $
+
+*quake3-wop-1.0_beta1 (10 Nov 2004)
+
+  10 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +quake3-wop-1.0_beta1.ebuild:
+  Initial import. Original ebuild by Markus Rothe <corsair@gentoo.org> and
+  submitted to bug #54404. Closing bug #54404.
+
