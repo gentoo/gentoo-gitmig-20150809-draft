@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/xpvm-1.2.5.ebuild,v 1.3 2004/04/25 21:58:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/xpvm-1.2.5.ebuild,v 1.4 2004/04/29 12:13:43 port001 Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XPVM: A graphical console and monitor for PVM"
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.csm.ornl.gov/pvm/pvm_home.html"
 IUSE=""
 
 DEPEND=">=sys-cluster/pvm-3.4.1
-	=dev-lang/tcl-8.3.4
-	=dev-lang/tk-8.3.4"
+	dev-lang/tcl
+	dev-lang/tk"
 RDEPEND=""
 
 SLOT="0"

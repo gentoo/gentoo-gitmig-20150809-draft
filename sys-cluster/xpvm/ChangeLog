@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/xpvm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/ChangeLog,v 1.6 2004/04/25 21:58:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/ChangeLog,v 1.7 2004/04/29 12:13:43 port001 Exp $
+
+  29 Apr 2004; Ian Leitch <port001@gentoo.org> xpvm-1.2.5-r1.ebuild,
+  xpvm-1.2.5.ebuild:
+  Fixed DEPEND for tcl & tk
 
 *xpvm-1.2.5-r3 (25 Apr 2004)
 
