@@ -38,7 +38,7 @@
 	<b>PCMCIA-CS</b> and <b>lm_sensors</b> 
 	support built-in to the kernel, <b>"vanilla"</b> (stock) kernel 
 	packages/compatibility for those who prefer unpatched kernels,
-	<b>Xfree86 4.1.0</b>, <b>OpenGL</b>, <b>KDE 2.2.1</b> and <b>GNOME 1.4</b>,
+	<b>Xfree86 4.1.0</b>, <b>OpenGL</b>, <b>KDE 2.2.2</b> and <b>GNOME 1.4</b>,
 	tcp-wrappers, xinetd, <b>iptables</b> and Linux <b>QoS</b> tools,
 	modern <b>qmail</b> (with optional <b>mysql</b> and <b>LDAP</b> support), 
 	<b>postfix</b> and <b>exim</b> MTAs,
@@ -69,7 +69,7 @@
 		Linux technologies and applications.  Tell Portage what ebuild you'd
 		like to install, and Portage will auto-download, unpack, patch,
 		configure, compile and install the package.  Thanks to Portage
-		auto-dependency resolution, you can install <b>KDE 2.2.1</b> or <b>GNOME 1.4</b>
+		auto-dependency resolution, you can install <b>KDE 2.2.2</b> or <b>GNOME 1.4</b>
 		by typing in a single command, and the resultant installed binaries
 		will be optimized and customized to your exact specifications.</p>
 
