@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.16 2004/10/16 17:19:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.17 2004/10/17 02:09:48 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -48,7 +48,7 @@ RDEPEND="${DEPEND}
 	!app-text/dvipdfm
 	>=dev-lang/perl-5.2
 	dev-util/dialog"
-PDEPEND="X? ( app-text/xdvik )"
+#PDEPEND="X? ( app-text/xdvik )"
 PROVIDE="virtual/tetex"
 
 tetex_src_unpack() {
