@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.2.ebuild,v 1.2 2005/01/23 10:59:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.2.ebuild,v 1.3 2005/03/23 06:11:22 vapier Exp $
 
 inherit eutils
 
@@ -11,12 +11,10 @@ SRC_URI="http://opensc.org/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-*" #~amd64 ~ppc ~x86 ~ppc64
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="usb"
 
-RDEPEND="virtual/libc
-	usb? (	>=dev-libs/libusb-0.1.7
-		>=sys-apps/hotplug-20030805-r1 )"
+RDEPEND="usb? (	>=dev-libs/libusb-0.1.7 >=sys-apps/hotplug-20030805-r1 )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -30,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	insinto /etc
 	doins etc/openct.conf || die
@@ -41,8 +39,7 @@ src_install() {
 		newexe etc/hotplug.openct openct || die
 	fi
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/openct.rc openct || die
+	newinitd ${FILESDIR}/openct.rc openct
 
 	diropts -m0750 -gopenct
 	keepdir /var/run/openct
