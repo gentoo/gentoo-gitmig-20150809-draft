@@ -1,0 +1,11 @@
+--- vfs/utilvfs.c	2002-12-15 13:38:18.000000000 -0600
++++ vfs/utilvfs.c	2004-07-25 14:36:26.000000000 -0500
+@@ -87,7 +87,7 @@
+     }
+ 
+     /* search for any possible user */
+-    at = strchr (pcopy, '@');
++    at = strrchr (pcopy, '@');
+ 
+     /* We have a username */
+     if (at) {

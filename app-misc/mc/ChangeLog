@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 
+*mc-4.6.0-r9 (02 Aug 2004)
+
+  02 Aug 2004; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r9.ebuild,
+  files/mc-4.6.0-ftp.patch:
+  add support for th @ character in ftp, bug #58330
+
 *mc-4.6.0-r8 (24 May 2004)
 
   24 May 2004; Heinrich Wendel <lanius@gentoo.org> :

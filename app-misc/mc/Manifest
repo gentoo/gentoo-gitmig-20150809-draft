@@ -1,7 +1,8 @@
 MD5 f79a9b6d20e503ceb2011fabdf31cf30 mc-4.5.55-r7.ebuild 1869
 MD5 e7db7f553193b22c5476e2edd47e8bce mc-4.6.0-r7.ebuild 2668
+MD5 16ae32c6035caec06a8d01cd3c32e98f mc-4.6.0-r9.ebuild 2603
 MD5 380e402de37ee9afa92ee152393acb93 mc-4.6.0-r8.ebuild 2570
-MD5 2da24dc8518d1d3914a1bc8ef192db38 ChangeLog 7478
+MD5 4b964b81751733daa11d7e5a508bb593 ChangeLog 7658
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 f354988cbbb82187fa4eb1978def6903 mc-4.6.0-r5.ebuild 2573
 MD5 d8853d9a555c715676945a15c98030c1 files/digest-mc-4.5.55-r7 125
@@ -14,3 +15,5 @@ MD5 2a6c3ed30597eadaa19a6dbdd3ce168d files/mc-4.6.0-cpan-2003-1023.patch 475
 MD5 042fefdf0b2c229a62b4e18200099389 files/digest-mc-4.6.0-r5 214
 MD5 042fefdf0b2c229a62b4e18200099389 files/digest-mc-4.6.0-r7 214
 MD5 d576baf06c64df107664f4724b7632a2 files/digest-mc-4.6.0-r8 139
+MD5 d576baf06c64df107664f4724b7632a2 files/digest-mc-4.6.0-r9 139
+MD5 99fd5760d0ddfc08292de6a62b573e73 files/mc-4.6.0-ftp.patch 285
