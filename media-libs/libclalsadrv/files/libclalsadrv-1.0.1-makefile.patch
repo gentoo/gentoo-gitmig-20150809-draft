@@ -1,0 +1,26 @@
+--- clalsadrv-1.0.1.orig/Makefile	2004-08-24 01:22:35.904600424 +0200
++++ clalsadrv-1.0.1/Makefile	2004-08-24 01:25:40.084600808 +0200
+@@ -3,10 +3,8 @@
+ LDLIBS += -lclalsadrv -lclthreads -lrt
+ 
+ 
+-#CLALSADRV_LIBDIR = /usr/local/lib
+-#CLALSADRV_INCDIR = /usr/local/include
+-CLALSADRV_LIBDIR = /usr/lib
+-CLALSADRV_INCDIR = /usr/include
++CLALSADRV_LIBDIR = ${DESTDIR}/usr/lib
++CLALSADRV_INCDIR = ${DESTDIR}/usr/include
+ CLALSADRV_SO = libclalsadrv.so
+ CLALSADRV_MAJ = $(CLALSADRV_SO).1
+ CLALSADRV_MIN = $(CLALSADRV_MAJ).0.1
+@@ -20,8 +18,8 @@
+ 
+ 
+ install:	$(CLALSADRV_MIN)
+-	cp -f $(CLALSADRV_H) $(CLALSADRV_INCDIR)
+-	cp -f $(CLALSADRV_MIN) $(CLALSADRV_LIBDIR)
++	install -D $(CLALSADRV_H) $(CLALSADRV_INCDIR)/$(CLALSADRV_H)
++	install -D $(CLALSADRV_MIN) $(CLALSADRV_LIBDIR)/$(CLALSADRV_MIN)
+ 	/sbin/ldconfig -n $(CLALSADRV_LIBDIR)
+ 	ln -sf $(CLALSADRV_MIN) $(CLALSADRV_LIBDIR)/$(CLALSADRV_SO)
+ 
