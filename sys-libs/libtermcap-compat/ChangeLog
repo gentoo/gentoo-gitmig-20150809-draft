@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libtermcap-compat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.10 2003/02/27 21:27:16 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.11 2003/09/06 14:16:45 taviso Exp $
+
+*libtermcap-compat-1.2.3-r1 (06 Sep 2003)
+
+  06 Sep 2003; Tavis Ormandy <taviso@gentoo.org>
+  libtermcap-compat-1.2.3-r1.ebuild:
+  libraries owned by user `bin` instead of `root` #24211
+  changed patch command to use `epatch`.
 
   08 Feb 2003; Guy Martin <gmsoft@gentoo.org> libtermcap-compat-1.2.3.ebuild :
   Added hppa to keywords.
