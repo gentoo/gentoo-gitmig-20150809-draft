@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.77 2004/12/19 07:39:33 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.78 2004/12/22 03:16:19 gustavoz Exp $
+
+  22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-terminal-2.8.0.ebuild:
+  Stable on sparc
 
   19 Dec 2004; Mike Gardiner <obz@gentoo.org> gnome-terminal-2.8.0.ebuild:
   Keyworded x86 and ppc for GNOME 2.8.1
