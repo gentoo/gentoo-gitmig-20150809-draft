@@ -1,10 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/snmpy-1.0_alpha4.ebuild,v 1.11 2003/02/13 11:39:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/snmpy-1.0_alpha4.ebuild,v 1.12 2003/04/04 01:22:43 liquidx Exp $
+
+
+IUSE=""
+
+inherit distutils
 
 TARNAME=snmpy-alpha-4
 S=${WORKDIR}/${TARNAME}
-DESCRIPTION="python SNMP interface"
+DESCRIPTION="Python SNMP interface"
 SRC_URI="mirror://sourceforge/snmpy/${TARNAME}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/snmpy/"
 LICENSE="CNRI"
@@ -16,4 +21,3 @@ DEPEND="virtual/python
 
 
 mydocs="RELEASE-NOTES docs/docs.html"
-inherit distutils

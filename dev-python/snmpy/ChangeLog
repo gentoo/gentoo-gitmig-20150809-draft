@@ -1,10 +1,13 @@
 # ChangeLog for dev-python/snmpy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/ChangeLog,v 1.5 2003/02/12 06:35:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/ChangeLog,v 1.6 2003/04/04 01:22:43 liquidx Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *snmpy-1.0_alpha4 (28 Apr 2002)
+
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org> snmpy-1.0_alpha4.ebuild:
+  Added IUSE
 
   28 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog 
    snmpy-1.0_alpha4.ebuild:
