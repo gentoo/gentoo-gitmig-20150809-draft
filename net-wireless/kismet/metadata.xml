@@ -6,4 +6,8 @@
   <email>latexer@gentoo.org</email>
   <name>Peter Johanson</name>
 </maintainer>
+<maintainer>
+  <email>brix@gentoo.org</email>
+  <name>Henrik Brix Andersen</name>
+</maintainer>
 </pkgmetadata>
