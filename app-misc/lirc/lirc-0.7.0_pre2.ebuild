@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.1 2003/10/11 21:53:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.2 2003/10/12 20:19:16 mholzer Exp $
 
 inherit eutils
 
@@ -80,6 +80,7 @@ src_compile() {
 		--with-kerneldir="/usr/src/linux" \
 		--with-moduledir="/lib/modules/${KV}/misc" \
 		--disable-manage-devices \
+		--enable-sandboxed \
 		${LIRC_OPTS} || die "./configure failed"
 
 	emake || die

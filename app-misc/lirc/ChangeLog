@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.6 2003/10/11 21:53:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.7 2003/10/12 20:19:16 mholzer Exp $
+
+  13 Oct 2003; Martin Holzer <mholzer@gentoo.org> :
+  fixing sandbox issue. closes #30982
 
 *lirc-0.7.0_pre2 (11 Oct 2003)
 
