@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.15 2004/05/14 02:09:31 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.16 2004/05/24 02:20:57 dostrow Exp $
 
 inherit libtool
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/mesa3d/MesaLib-${MESA_VER}.tar.bz2
 
 LICENSE="X11 | GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa ia64 amd64 mips"
+KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64 mips"
 
 DEPEND="virtual/opengl
 	virtual/glu"
