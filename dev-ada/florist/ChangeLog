@@ -1,0 +1,11 @@
+# ChangeLog for dev-ada/florist
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/ChangeLog,v 1.1 2003/07/25 05:46:05 george Exp $
+
+*florist-3.15p (24 Jul 2003)
+
+  24 Jul 2003; George Shapovalov <george@gentoo.org> florist-3.15p.ebuild, Manifest, files/{digest-florist-3.15p} :
+  initial release (#11290)
+  POSIX Ada Bindings
+  ebuild submitted by Mikko Ala-Fossi <maf@iki.fi>
+  and cleaned up and made GNAE compatible by David Holm <dholm@telia.com>
