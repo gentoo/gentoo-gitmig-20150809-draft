@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.6 2004/03/20 11:43:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.7 2004/03/31 07:26:58 mr_bones_ Exp $
 
 inherit eutils gcc games
 
@@ -13,13 +13,15 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="svga gtk"
 
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc
 	gtk? (
 		=x11-libs/gtk+-1*
 		media-libs/libsdl
 	)
 	svga? ( media-libs/svgalib )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( media-libs/jpeg )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
 	x86? ( dev-lang/nasm )"
 
 src_unpack() {
@@ -27,7 +29,7 @@ src_unpack() {
 
 	cd ${S}
 	mkdir my-bins
-	if [ "${ARCH}" == "ppc" ]; then
+	if use ppc ; then
 		sed -i \
 			-e 's/-minline-all-stringops//g' configure \
 				|| die "sed configure failed"
@@ -45,12 +47,12 @@ src_unpack() {
 
 src_compile() {
 	local myconf="--with-gcc=$(gcc-major-version)"
+	local mygui=
 
-	[ "${ARCH}" == "x86" ] \
+	use x86 \
 		&& myconf="${myconf} --with-raze" \
 		|| myconf="${myconf} --with-cmz80"
 
-	local mygui
 	for mygui in `use gtk` `use svga` ; do
 		[ "${mygui}" == "svga" ] && mygui=svgalib
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/generator
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.5 2004/03/20 11:43:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.6 2004/03/31 07:26:58 mr_bones_ Exp $
+
+  30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> generator-0.35.ebuild:
+  don't rdepend on nasm; "use arch" instead of "ARCH == "
 
   20 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> generator-0.35.ebuild,
   files/logging.patch, files/netbsd-gcc-3.3.patch:
