@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/grpn
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.1 2003/06/19 01:46:36 seemant Exp $
+
+*grpn-1.1.2 (18 Jun 2003)
+
+  18 Jun 2003; Seemant Kulleen <seemant@gentoo.org> grpn-1.1.2.ebuild:
+  new package for reverse polish notation graphical calculator. ebuild submitted
+  by Anders Bo Rasmussen <gentoo@fuzz.dk> in bug #20429
+
