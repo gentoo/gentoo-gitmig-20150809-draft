@@ -1,8 +1,16 @@
-MD5 0f56ee450b3a30d0ee8daaec66b11983 t-prot-1.49.ebuild 1080
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 078667e46cad272ba43f8b02711770d1 t-prot-1.49.ebuild 1080
 MD5 2ed660d3e5834a4d1abbde7c7191ab02 t-prot-1.48.ebuild 783
-MD5 cdc9e12a27255a8130588e458f69f275 ChangeLog 448
+MD5 a8c229496518b8470317326b4a3692a4 ChangeLog 585
 MD5 9d7120f9b92852e129ad7428da4971ba metadata.xml 251
-MD5 59ec99d9c731927abd8bf25582f2b5f6 t-prot-1.47.ebuild 783
-MD5 cbdb80feacde060bdb517793c43c44fe files/digest-t-prot-1.47 62
 MD5 adb94bce6a829feea31bd59ab7a42fa8 files/digest-t-prot-1.48 62
 MD5 d052c4d8b273cc3aa24d060a8e952dd6 files/digest-t-prot-1.49 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCA4LsV3J2n04EauwRAlCIAJ45BuRx9+c2tlKxYfmx4BIO94IFuACdEn6Q
+ROlqGVVlHnLT5iaKCSOqNeM=
+=aLHf
+-----END PGP SIGNATURE-----
