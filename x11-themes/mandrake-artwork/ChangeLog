@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/mandrake-artwork
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.7 2003/11/12 15:35:36 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.8 2003/11/15 15:29:59 brad Exp $
+
+*mandrake-artwork-0.9.6 (15 Nov 2003)
+
+  15 Nov 2003; Brad Laue <brad@gentoo.org> mandrake-artwork-0.9.6.ebuild:
+  Bump to 0.9.6
 
   12 Nov 2003; Brad Laue <brad@gentoo.org> mandrake-artwork-0.9.3.ebuild:
   Stable on x86
