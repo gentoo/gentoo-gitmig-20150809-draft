@@ -1,8 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.31 2002/08/29 07:45:12 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.32 2002/09/03 04:54:02 owen Exp $
 
 *postgresql-7.2.2 (26 Aug 2002)
+  2 Sep 2002; Owen Stampflee <owen@gentoo.org> postgresql-7.2.2.ebuild :
+  Added PPC to KEYWORDS.
 
   29 Aug 2002; Ryan Phillips <rphillips@gentoo.org> postgresql-7.2.2.ebuild :
 
