@@ -1,37 +1,33 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2.ebuild,v 1.7 2004/01/15 01:04:44 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r4.ebuild,v 1.1 2004/03/08 23:45:35 seemant Exp $
+
+IUSE=""
+
+inherit flag-o-matic
 
 #This should be fairly consistant now, unless we have any _pre releases...
-MYP="${P/_p/pl}"
-
-# 01/Mar/2003: Fix for bug #11960 by Jason Wever <weeve@gentoo.org>
-# start fix
-inherit flag-o-matic
-if [ ${ARCH} = "sparc" ]
-then
-	filter-flags "-O3"
-	filter-flags "-O2"
-	filter-flags "-O"
-fi
-# end fix
-
-S=${WORKDIR}/${MYP}
+MY_P="${P/_p/pl}"
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="ISC Dynamic Host Configuration Protocol"
-SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MYP}.tar.gz"
+SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MY_P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/DHCP"
+
+SLOT="0"
 LICENSE="isc-dhcp"
 KEYWORDS="x86 ppc sparc ~mips amd64"
 
-SLOT="0"
-DEPEND="virtual/glibc sys-apps/groff"
 RDEPEND="virtual/glibc"
+DEPEND="${RDEPEND}
+	sys-apps/groff"
+
+PROVIDE="virtual/dhcpc"
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	patch -p0 < ${FILESDIR}/dhclient.c-3.0-dw-cli-fix.patch || die
+	epatch ${FILESDIR}/dhclient.c-3.0-dw-cli-fix.patch
 
 	cd ${S}/includes
 	cat <<- END >> site.h
@@ -42,6 +38,15 @@ src_unpack() {
 }
 
 src_compile() {
+	# 01/Mar/2003: Fix for bug #11960 by Jason Wever <weeve@gentoo.org>
+	# start fix
+	if [ ${ARCH} = "sparc" ]
+	then
+		filter-flags "-O3"
+		filter-flags "-O2"
+		filter-flags "-O"
+	fi
+	# end fix
 	cat <<- END > site.conf
 CC = gcc ${CFLAGS}
 ETC = /etc/dhcp
@@ -61,7 +66,7 @@ src_install() {
 
 	cd ${S}/work.linux-2.2/client
 	into / ; dosbin dhclient
-	into /usr ; doman *.5 *.8
+	doman *.5 *.8
 
 	cd ../dhcpctl ; dolib libdhcpctl.a ; doman *.3
 	insinto /usr/include ; doins dhcpctl.h
