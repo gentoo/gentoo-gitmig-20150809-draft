@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.34 2005/02/12 20:35:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.35 2005/02/26 04:39:57 mr_bones_ Exp $
+
+*xmame-0.92 (25 Feb 2005)
+
+  25 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> +xmame-0.92.ebuild:
+  version bump
 
   12 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.90.ebuild:
   Don't try to install setuid (bug #81693)
