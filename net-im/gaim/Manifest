@@ -4,7 +4,7 @@ MD5 aa9da4cfd1f76b7a3b1c12a0420b830a gaim-1.0.3-r2.ebuild 3747
 MD5 3f61bfc37925fd51bb156374c9a48f79 gaim-1.1.0.ebuild 3697
 MD5 8d46d85afe6927b6e6ff5e0766d2e8f6 gaim-1.1.1.ebuild 3700
 MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
-MD5 65be19c1b733aa0d846de63251df6228 gaim-1.1.2.ebuild 3632
+MD5 d253ef09fa126fe8795e80529536d5ae gaim-1.1.2.ebuild 3655
 MD5 f9039f6cb5717109cf48a9f7e5d51a32 files/digest-gaim-1.0.2-r1 64
 MD5 3c880530528d7d9a72baa22afc76736d files/digest-gaim-1.0.3-r2 64
 MD5 1174abb3ad652e16b24889e7fe0a36db files/digest-gaim-1.1.0 64
