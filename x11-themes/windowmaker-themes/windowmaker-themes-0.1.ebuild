@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.5 2003/12/08 05:45:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.6 2004/06/11 20:26:30 kugelfang Exp $
 
 # TODO: Break themes up by author and into sub-dirs named after
 # the author
@@ -91,7 +91,7 @@ SRC_URI="${THEME_URI}3white.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha ~amd64"
 
 DEPEND=""
 RDEPEND="x11-wm/windowmaker"

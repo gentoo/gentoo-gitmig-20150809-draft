@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/windowmaker-themes
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/ChangeLog,v 1.4 2003/12/08 05:45:09 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/ChangeLog,v 1.5 2004/06/11 20:26:30 kugelfang Exp $
+
+  11 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
+  windowmaker-themes-0.1.ebuild:
+  Marked ~amd64.
 
   07 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
   windowmaker-themes-0.1.ebuild:
