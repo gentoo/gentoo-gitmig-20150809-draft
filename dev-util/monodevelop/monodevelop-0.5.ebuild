@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.5.ebuild,v 1.2 2004/07/14 23:54:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.5.ebuild,v 1.3 2004/08/09 19:30:19 latexer Exp $
 
-inherit mono
+inherit mono eutils
 
 DESCRIPTION="MonoDevelop is a project to port SharpDevelop to Gtk#"
 SRC_URI="http://www.go-mono.com/archive/1.0/${P}.tar.gz"
@@ -19,6 +19,11 @@ DEPEND=">=dev-libs/icu-2.6
 
 KEYWORDS="~x86 ~ppc"
 SLOT="0"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-compat.diff
+}
 
 src_compile() {
 	econf || die
