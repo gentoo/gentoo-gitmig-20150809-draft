@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/textutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.14 2003/07/18 12:50:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.15 2003/09/02 18:59:52 mholzer Exp $
+
+  02 Sep 2003; Martin Holzer <mholzer@gentoo.org> textutils-2.1.ebuild:
+  Now uses mirror://gnu.
 
 *textutils-2.1-r1 (18 Jul 2003)
 
