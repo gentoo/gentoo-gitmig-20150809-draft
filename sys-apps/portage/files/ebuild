@@ -87,6 +87,16 @@ try() {
 	fi
 }
 
+dyn_touch() {
+	for x in ${A} 
+	do
+  		if [ -e ${DISTDIR}/${x} ]
+		then	
+			touch ${DISTDIR}/${x}
+		fi
+	done
+}
+
 dyn_digest() {
     local x
     if [ ! -d ${FILESDIR} ]
@@ -651,7 +661,7 @@ src_menu() {
 	prerm|postrm|preinst|postinst|config)
 	    pkg_${MYfoo}
 	    ;;
-	help|clean|fetch|digest|pkginfo|pkgloc|unmerge|install)
+	help|touch|clean|fetch|digest|pkginfo|pkgloc|unmerge|install)
 	    dyn_${MYfoo}
 	    ;;
 	package)
