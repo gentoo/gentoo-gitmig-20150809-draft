@@ -1,4 +1,14 @@
-MD5 48f89aab0722bf3157e8ccac2976acac Crypt-Cracklib-0.01.ebuild 818
-MD5 168d6feb840bb0530a84b909b422f83a ChangeLog 468
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1e5b982490be1956d4ae3ae71f31efd0 ChangeLog 578
+MD5 72142728132dd559e244f50d84946047 Crypt-Cracklib-0.01.ebuild 817
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 143a54a18651f73595fc7b8a51f6d05e files/digest-Crypt-Cracklib-0.01 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBHiRKI1lqEGTUzyQRAsCyAKCMbx3sdod6CZU/KbbJca3DvrzZEACgqui6
+q8wUdIPQ7BCgrP/4SNIMHjg=
+=WKnB
+-----END PGP SIGNATURE-----
