@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.18-r2.ebuild,v 1.5 2003/03/30 23:08:58 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.18-r2.ebuild,v 1.6 2003/08/18 06:12:19 kumba Exp $
 
 IUSE="arts gtk gnome nls tcltk"
- 
+inherit gnuconfig
+
 S=${WORKDIR}/${P}
 
 DESCRIPTION="XFce is a lightweight desktop environment for various UNIX systems."
@@ -12,7 +13,7 @@ HOMEPAGE="http://www.xfce.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~mips"
 
 DEPEND="virtual/x11
 	=x11-libs/gtk+-1.2*
@@ -25,6 +26,10 @@ RDEPEND="nls? ( sys-devel/gettext )
 	tcltk? ( dev-lang/tk )"
 
 src_compile() {
+
+	# Allow configure to detect mipslinux systems
+	use mips && gnuconfig_update
+
 	local myconf
 
 	use gtk && myconf="--enable-imlib=no --enable-gdk-pixbuf=/usr"
