@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.51 2004/07/20 01:39:33 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.52 2004/07/28 06:58:38 lv Exp $
+
+  28 Jul 2004; Travis Tilley <lv@gentoo.org>
+  +files/firefox-0.9-nsFormHistory-crash-fix.patch,
+  mozilla-firefox-0.9.1.ebuild:
+  added a patch that fixes a 64bit specific autocomplete crash
 
   19 Jul 2004; Travis Tilley <lv@gentoo.org> mozilla-firefox-0.9.1.ebuild:
   stable on amd64

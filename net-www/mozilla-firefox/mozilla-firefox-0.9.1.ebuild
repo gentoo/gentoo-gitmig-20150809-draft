@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9.1.ebuild,v 1.5 2004/07/20 01:39:33 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9.1.ebuild,v 1.6 2004/07/28 06:58:38 lv Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
@@ -51,6 +51,10 @@ src_unpack() {
 	# alpha stubs patch from lfs project.
 	# <taviso@gentoo.org> (26 Jun 2003)
 	use alpha && epatch ${FILESDIR}/mozilla-1.3-alpha-stubs.patch
+
+	# this patch fixes upstream bug 248442 "Crash in form autocomplete
+	# (64-bit arch only)".
+	epatch ${FILESDIR}/firefox-0.9-nsFormHistory-crash-fix.patch
 }
 
 src_compile() {
