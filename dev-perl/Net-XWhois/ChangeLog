@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Net-XWhois
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XWhois/ChangeLog,v 1.1 2005/03/13 13:13:16 mcummings Exp $
+
+*Net-XWhois-0.90 (13 Mar 2005)
+
+  13 Mar 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Net-XWhois-0.90.ebuild:
+  New ebuild for bug 84801, original provided by Beber
+  <beber.gentoo@gmail.com> for awstats ebuild
+
