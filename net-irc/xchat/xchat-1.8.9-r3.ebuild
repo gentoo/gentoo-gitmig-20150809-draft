@@ -1,6 +1,6 @@
-# Copyrigth 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.9-r3.ebuild,v 1.6 2002/10/04 06:05:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.9-r3.ebuild,v 1.7 2002/10/04 21:12:54 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
