@@ -1,6 +1,13 @@
 # ChangeLog for games-board/ggz-gtk-client
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.4 2004/06/24 22:16:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.5 2004/12/26 23:03:50 vapier Exp $
+
+*ggz-gtk-client-0.0.9 (26 Dec 2004)
+
+  26 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/0.0.9-duplicate-prototypes.patch, -ggz-gtk-client-0.0.7.ebuild,
+  +ggz-gtk-client-0.0.9.ebuild:
+  Version bump #69432 by Bryan Duff.
 
   27 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
   ggz-gtk-client-0.0.7.ebuild:
