@@ -1,0 +1,61 @@
+--- zlib-1.1.4/Makefile.in.build-fPIC	2003-01-30 01:35:18.000000000 -0500
++++ zlib-1.1.4/Makefile.in	2003-01-30 01:40:49.000000000 -0500
+@@ -41,6 +41,8 @@ includedir = ${prefix}/include
+ OBJS = adler32.o compress.o crc32.o gzio.o uncompr.o deflate.o trees.o \
+        zutil.o inflate.o infblock.o inftrees.o infcodes.o infutil.o inffast.o
+ 
++PIC_OBJS = $(OBJS:%.o=%.lo)
++
+ OBJA =
+ # to use the asm code: make OBJA=match.o
+ 
+@@ -80,8 +82,11 @@ match.o: match.S
+ 	mv _match.o match.o
+ 	rm -f _match.s
+ 
+-$(SHAREDLIB).$(VER): $(OBJS)
+-	$(LDSHARED) -o $@ $(OBJS) -lc
++%.lo: %.c
++	$(CC) $(CFLAGS) -DPIC -fPIC -c $< -o $@
++
++$(SHAREDLIB).$(VER): $(PIC_OBJS)
++	$(LDSHARED) -o $@ $(PIC_OBJS) -lc
+ 	rm -f $(SHAREDLIB) $(SHAREDLIB).1
+ 	ln -s $@ $(SHAREDLIB)
+ 	ln -s $@ $(SHAREDLIB).1
+@@ -92,11 +97,8 @@ example: example.o $(LIBS)
+ minigzip: minigzip.o $(LIBS)
+ 	$(CC) $(CFLAGS) -o $@ minigzip.o $(LDFLAGS)
+ 
+-install: $(LIBS)
+-	-@if [ ! -d $(includedir)  ]; then mkdir $(includedir); fi
++install-libs: $(LIBS)
+ 	-@if [ ! -d $(libdir) ]; then mkdir $(libdir); fi
+-	cp zlib.h zconf.h $(includedir)
+-	chmod 644 $(includedir)/zlib.h $(includedir)/zconf.h
+ 	cp $(LIBS) $(libdir)
+ 	cd $(libdir); chmod 755 $(LIBS)
+ 	-@(cd $(libdir); $(RANLIB) libz.a || true) >/dev/null 2>&1
+@@ -109,6 +111,11 @@ install: $(LIBS)
+ # The ranlib in install is needed on NeXTSTEP which checks file times
+ # ldconfig is for Linux
+ 
++install: install-libs
++	-@if [ ! -d $(includedir)  ]; then mkdir $(includedir); fi
++	cp zlib.h zconf.h $(includedir)
++	chmod 644 $(includedir)/zlib.h $(includedir)/zconf.h
++
+ uninstall:
+ 	cd $(includedir); \
+ 	v=$(VER); \
+--- zlib-1.1.4/configure.build-fPIC	2003-01-30 01:35:18.000000000 -0500
++++ zlib-1.1.4/configure	2003-01-30 01:39:59.000000000 -0500
+@@ -130,7 +130,7 @@ if test $shared -eq 1; then
+   if test "`($CC -c $SFLAGS $test.c) 2>&1`" = "" &&
+      test "`($LDSHARED -o $test$shared_ext $test.o) 2>&1`" = ""; then
+     CFLAGS="$SFLAGS"
+-    LIBS="$SHAREDLIB.$VER"
++    LIBS="$LIBS $SHAREDLIB.$VER"
+     echo Building shared library $SHAREDLIB.$VER with $CC.
+   elif test -z "$old_cc" -a -z "$old_cflags"; then
+     echo No shared library suppport.
