@@ -1,3 +1,6 @@
 MD5 f34de81f0c04f0c4ba2a5288ef5a979b udhcp-0.9.8.ebuild 721
+MD5 a08d74fcb332a5fc965e94ecb51bcc4f udhcp-0.9.8-r1.ebuild 779
 MD5 a56b24f41aef5572ff8582f904b9b861 ChangeLog 535
+MD5 83ca9ef49068eb2140999999f245f486 files/digest-udhcp-0.9.8-r1 62
 MD5 83ca9ef49068eb2140999999f245f486 files/digest-udhcp-0.9.8 62
+MD5 e4f37bd21182d45854f195abbc529306 files/udhcp.init 1005
