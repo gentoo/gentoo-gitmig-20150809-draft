@@ -1,7 +1,5 @@
 MD5 5d49a3a91d32b827dc5a26a4a47e9503 ChangeLog 729
 MD5 1489b846c740d19dc96c1561d42c6d7c gift-openft-0.1.0.5.ebuild 1073
-MD5 7b441ff2d1424dc3ca03a526e017a265 gift-openft-0.2.0.0.ebuild 1078
 MD5 9c83b9f3230e23a2c8c2172c1a1a08bc gift-openft-0.2.1.1.ebuild 1073
 MD5 c9354d85a093cd23c1baef275db4802e files/digest-gift-openft-0.1.0.5 72
-MD5 f868ae34af565bee0712d77325dad834 files/digest-gift-openft-0.2.0.0 72
 MD5 1f68036610082ca44a3a554b9d90d614 files/digest-gift-openft-0.2.1.1 72
