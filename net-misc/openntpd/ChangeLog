@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.7 2004/09/28 01:26:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.8 2004/10/01 10:54:54 kugelfang Exp $
+
+  01 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> openntpd-20040824p.ebuild:
+  Marked ~amd64.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Gentoo Technologies, Inc. -> Gentoo Foundation
