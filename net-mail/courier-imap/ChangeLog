@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.76 2004/07/01 22:30:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.77 2004/07/05 07:37:12 robbat2 Exp $
+
+  05 Jul 2004; Robin H. Johnson <robbat2@gentoo.org>
+  courier-imap-3.0.2-r1.ebuild, courier-imap-3.0.2.ebuild,
+  courier-imap-3.0.4-r1.ebuild, courier-imap-3.0.4.ebuild:
+  bug #55956, backport fix I put into 3.0.5 for gdbm vs. berkdb.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   courier-imap-2.1.2-r2.ebuild, courier-imap-3.0.2-r1.ebuild,
