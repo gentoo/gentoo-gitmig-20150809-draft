@@ -1,5 +1,8 @@
-MD5 6324121a9e9f2a0d3374e3dc40344323 ChangeLog 7923
-MD5 f4c372d6faa5fad1037d5903da388ba8 lyx-1.3.5.ebuild 3308
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0a46ab8408793071a973fc4585902412 ChangeLog 8139
+MD5 d71ebb664234845c99fd4a57edd925e7 lyx-1.3.5.ebuild 3345
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 f25127a7ddcdf89a9e199787ef7d552a lyx-1.3.4.ebuild 3115
 MD5 5ccd191a3dc796feeda9dcee291d2863 files/digest-lyx-1.3.5 239
@@ -8,3 +11,11 @@ MD5 b86918456f67f911e357a76308cd0fdb files/lyx-1.3.4-gcc34.patch 6589
 MD5 f6bf30211847fb321f0000cd415d9e5b files/lyx-1.3.2-nomktex.patch 449
 MD5 363bfca924cf46b61d21faa4dbfcd43f files/lyx-1.3.3-configure-diff 1953
 MD5 4dc1e1cc2b4e056a629fbfd1334c390e files/lyx.desktop 188
+MD5 2a779b20a7425abd5eea3b5ee01698f7 files/lyx-1.3.5-boost.patch 655
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBbTCxVWNWqTUmv+0RAkH2AJ9nHrkyU4OeYbAWxFWDZghVweRRrQCggrSk
+s0xTzSB6izWol6t9Ex1Py2c=
+=4DNS
+-----END PGP SIGNATURE-----

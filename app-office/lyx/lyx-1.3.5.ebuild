@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5.ebuild,v 1.1 2004/10/10 12:32:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5.ebuild,v 1.2 2004/10/13 13:47:48 usata Exp $
 
 inherit kde-functions eutils libtool
 
@@ -48,6 +48,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.3.2-nomktex.patch
 	epatch ${FILESDIR}/${PN}-1.3.3-configure-diff
+	epatch ${FILESDIR}/${P}-boost.patch
 	elibtoolize || die
 }
 
