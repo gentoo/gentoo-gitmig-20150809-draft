@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r1.ebuild,v 1.3 2002/06/05 02:20:19 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r1.ebuild,v 1.4 2002/06/05 16:11:35 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Virtual File System."
@@ -10,7 +10,8 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
 
-RDEPEND="=gnome-base/gconf-1.0.*
+RDEPEND="( >=gnome-base/gconf-1.0.6
+			<gnome-base/gconf-1.1 )	
 	 >=gnome-base/gnome-libs-1.4.1.2
 	 >=gnome-base/gnome-mime-data-1.0.1
 	 >=sys-apps/bzip2-1.0.2
