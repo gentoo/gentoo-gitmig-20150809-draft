@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.0.5a.ebuild,v 1.3 2003/01/11 11:49:46 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.0.5a.ebuild,v 1.4 2003/01/24 17:20:40 danarmak Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - network apps: kmail..."
+newdepend "~kde-base/kdebase-${PV} sys-devel/perl" # perl is used for ksirc scripting
 KEYWORDS="x86 ~ppc ~alpha ~sparc"
-newdepend "~kde-base/kdebase-${PV}"
 
 src_unpack() {
     unpack ${P}.tar.bz2
