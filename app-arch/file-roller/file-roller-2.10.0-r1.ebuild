@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.10.0-r1.ebuild,v 1.3 2005/03/20 02:18:48 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.10.0-r1.ebuild,v 1.4 2005/03/29 10:20:26 foser Exp $
 
 inherit gnome2 eutils
 
@@ -39,7 +39,7 @@ src_unpack() {
 	# options.  On Gentoo, star is /usr/bin/tar, GNU tar is /bin/tar
 	epatch ${FILESDIR}/${PN}-2.8.0-use_bin_tar.patch
 	# use a local rpm2cpio script to avoid the dep
-	epatch ${FILESDIR}/${PN}-2.6-use_fr_rpm2cpio.patch
+	epatch ${FILESDIR}/${PN}-2.10-use_fr_rpm2cpio.patch
 	#allow filenames with whitespaces
 	epatch ${FILESDIR}/${P}-fix_whitespace.patch
 }
