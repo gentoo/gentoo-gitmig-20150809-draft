@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mdadm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.7 2003/11/21 15:37:51 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.8 2004/01/30 04:35:24 robbat2 Exp $
+
+*mdadm-1.5.0 (29 Jan 2004)
+
+  29 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> mdadm-1.5.0.ebuild:
+  bug #39683, version bump.
 
 *mdadm-1.4.0 (21 Nov 2003)
 
