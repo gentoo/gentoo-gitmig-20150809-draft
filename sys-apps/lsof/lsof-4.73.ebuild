@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.73.ebuild,v 1.4 2005/02/05 11:17:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.73.ebuild,v 1.5 2005/02/07 04:04:49 kumba Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 mips ppc ~ppc64 s390 sparc x86"
 IUSE="static"
 
 DEPEND="virtual/libc"
