@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.745 2004/11/20 17:05:20 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.746 2004/11/20 18:18:46 chainsaw Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -394,7 +394,6 @@ media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:faad - Enables faad2 support
 media-sound/sound-juicer:hal - Enable Hardware Abstraction Layer (HAL) support
 media-sound/tagtool:mp3 - Enables id3lib support for tagging mp3's
-media-sound/terminatorx:sox - Enable sox support
 media-tv/freevo:matrox - Enable output support on Matrox cards
 media-tv/mythfrontend:cle266 - Enable viaslice hardware MPEG decoding support
 media-tv/mythfrontend:lcd - Enable LCD display support using lcdproc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.201 2004/11/12 13:55:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.202 2004/11/20 18:18:46 chainsaw Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -249,6 +249,7 @@ soap - Adds support for SOAP
 sockets - Adds support for tcp/ip sockets
 socks5 - Adds support for the socks5 proxy
 solid - Adds support for the Solid database engine
+sox - Adds support for Sound eXchange (SoX)
 speex - Adds support for the speex audio codec
 spell - Adds dictionary support
 spl - Adds support for the Standard PHP Library
