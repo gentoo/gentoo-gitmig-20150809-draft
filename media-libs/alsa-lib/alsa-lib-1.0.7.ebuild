@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.7.ebuild,v 1.5 2005/01/02 06:24:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.7.ebuild,v 1.6 2005/01/12 16:57:52 gmsoft Exp $
 
 IUSE="static jack doc"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 
 RDEPEND="virtual/alsa
 	>=media-sound/alsa-headers-${PV}"

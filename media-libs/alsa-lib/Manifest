@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d6a157361b00e19b7541236a9adb5684 alsa-lib-1.0.7.ebuild 2064
-MD5 2455d64f02b4f74832f49f5297d0007b ChangeLog 14603
+MD5 578e4534916bc2cbe77d2365bcbacc98 ChangeLog 14687
 MD5 5659184e067dbf68af9e9251837332c5 alsa-lib-0.9.8.ebuild 1584
 MD5 c840b6d57683f228d3db41a4091e78a5 alsa-lib-1.0.2.ebuild 1609
-MD5 ac0499313adb253d4e050427ffa2ee88 alsa-lib-1.0.6.ebuild 1911
-MD5 013a6ca851a596f112b4d3a182438959 alsa-lib-1.0.8_rc1.ebuild 1613
-MD5 6357a1ba435460e8bd79caaa887cf2e5 alsa-lib-1.0.5.ebuild 1734
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 6f25a91cdae08f1cd6cd2cb121506a49 alsa-lib-1.0.5-r3.ebuild 1766
-MD5 8ba7bd0bfd177d142b304ad90dc8b75b files/digest-alsa-lib-1.0.8_rc1 70
+MD5 6357a1ba435460e8bd79caaa887cf2e5 alsa-lib-1.0.5.ebuild 1734
+MD5 ac0499313adb253d4e050427ffa2ee88 alsa-lib-1.0.6.ebuild 1911
+MD5 98d5945e60649b24f0acc1a2aa6af71d alsa-lib-1.0.7.ebuild 2059
+MD5 013a6ca851a596f112b4d3a182438959 alsa-lib-1.0.8_rc1.ebuild 1613
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 ff6b3f2ba9f419d2e31c55f93da0e170 files/alsa-lib-1.0.7-pcm_wait.patch 342
 MD5 190a6c4ffe2eef20e3095ab70ea34941 files/configure.diff 586
-MD5 86565eb0601b611f39adb8f5ad47b622 files/digest-alsa-lib-1.0.7 67
 MD5 8a3190d9f23acedd006359afb79f60bc files/digest-alsa-lib-0.9.8 67
 MD5 ebf9199686eb993db91c807d7fd90dcb files/digest-alsa-lib-1.0.2 67
-MD5 5d0f60405a57450fdd98ceb5d4398056 files/digest-alsa-lib-1.0.6 67
 MD5 446ddecdcb2f56eec8683f1294749061 files/digest-alsa-lib-1.0.5 67
 MD5 446ddecdcb2f56eec8683f1294749061 files/digest-alsa-lib-1.0.5-r3 67
-MD5 ff6b3f2ba9f419d2e31c55f93da0e170 files/alsa-lib-1.0.7-pcm_wait.patch 342
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB2a2uArHZZzCEUG0RAt/pAJwMt6VKPtHS3zUNaT7mh3Ok0dSwIwCeNQZS
-CqP9YZBh1G5g/tFlJ3xslT4=
-=GqYp
------END PGP SIGNATURE-----
+MD5 5d0f60405a57450fdd98ceb5d4398056 files/digest-alsa-lib-1.0.6 67
+MD5 86565eb0601b611f39adb8f5ad47b622 files/digest-alsa-lib-1.0.7 67
+MD5 8ba7bd0bfd177d142b304ad90dc8b75b files/digest-alsa-lib-1.0.8_rc1 70
