@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.10 2003/09/12 16:44:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.11 2003/09/12 16:48:26 agriffis Exp $
+
+  12 Sep 2003; Aron Griffis <agriffis@gentoo.org> lilypond-1.6.9.ebuild:
+  Remove web-doc building since it's broken in this ebuild and the 1.8.0 ebuild
+  will have it fixed. This finishes bug 21305
 
   12 Sep 2003; Aron Griffis <agriffis@gentoo.org> lilypond-1.6.9.ebuild:
   Fix (part of) bug 21305 by disabling ccache.

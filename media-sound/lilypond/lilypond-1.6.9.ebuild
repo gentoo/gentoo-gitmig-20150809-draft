@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.4 2003/09/12 16:44:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.5 2003/09/12 16:48:26 agriffis Exp $
 
 inherit gcc
 
@@ -12,7 +12,6 @@ SRC_URI="http://www.lilypond.org/ftp/${MY_PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc"
 
 DEPEND=">=dev-lang/python-2.2.1-r2
 	>=dev-lang/perl-5.6.1-r6
@@ -53,16 +52,6 @@ src_compile() {
 		eerror "Unsupported GCC version, 2.95 and 3.2 are supported"
 		die
 	fi
-	
-	if use doc; then
-		make web-doc \
-			prefix=${D}/usr \
-			datadir=${D}/usr/share \
-			lilypond_data=${D}/usr/share/lilypond \
-			local_lilypond_datadir=${D}/usr/share/lilypond/${PV} \
-			topdir=${D}/usr \
-			|| die "make web-doc failed"
-	fi
 }
 
 src_install () {
@@ -80,7 +69,6 @@ src_install () {
 	doins buildscripts/out/lilypond-profile \
 		buildscripts/out/lilypond-login \
 		buildscripts/out/clean-fonts
-	use doc && dohtml -A ly,pdf,gz -r Documentation *.html *.png
 }
 
 pkg_postinst () {
