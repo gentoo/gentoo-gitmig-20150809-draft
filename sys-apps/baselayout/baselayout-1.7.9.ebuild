@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.5-r1.ebuild,v 1.2 2002/03/24 09:08:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.9.ebuild,v 1.1 2002/05/12 22:00:33 azarah Exp $
 
-SV="1.3.1"
+SV="1.3.5"
 SVREV=""
 #sysvinit version
 SVIV="2.83"
@@ -13,12 +13,15 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.ta
 #	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 
+SLOT="0"
+
 DEPEND="sys-kernel/linux-headers"
 RDEPEND=""
-if [ -z "`use build`" ]
-then
-	RDEPEND="sys-apps/kbd"
-fi
+#baselayout shouldn't have any runtime dependencies.  it creates circular deps fast.
+#if [ -z "`use build`" ]
+#then
+#	RDEPEND="sys-apps/kbd"
+#fi
 
 #This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
 
@@ -200,9 +203,13 @@ src_install()
 	keepdir /lib /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
 
-	dodir /etc/X11
-	exeinto /etc/X11
-	doexe ${S}/sbin/startDM.sh
+	#dont add a new /etc/{passwd,shadow} if they exist
+	[ -f ${ROOT}/etc/passwd ] && rm -f ${D}/etc/passwd
+	[ -f ${ROOT}/etc/shadow ] && rm -f ${D}/etc/shadow
+
+#	dodir /etc/X11
+#	exeinto /etc/X11
+#	doexe ${S}/sbin/startDM.sh
 
 	keepdir /lib/dev-state
 	if [ $altmerge -eq 1 ]
@@ -273,6 +280,19 @@ src_install()
 	#/etc/init.d/net.ppp* should only be readible by root
 	chmod 0600 ${D}/etc/init.d/net.ppp*
 
+	#these moved from /etc/init.d/ to /sbin to help newb systems
+	#from breaking
+	exeinto /sbin
+	doexe ${S}/sbin/depscan.sh
+	doexe ${S}/sbin/runscript.sh
+	doexe ${S}/sbin/functions.sh
+	doexe ${S}/sbin/rc-envupdate.sh
+	doexe ${S}/sbin/rc-help.sh
+	#compat symlinks (some stuff have hardcoded paths)
+	dosym /sbin/depscan.sh /etc/init.d/depscan.sh
+	dosym /sbin/runscript.sh /etc/init.d/runscript.sh
+	dosym /sbin/functions.sh /etc/init.d/functions.sh
+
 	dodir /etc/skel
 	insinto /etc/skel
 	for foo in `find ${S}/etc/skel -type f -maxdepth 1`
@@ -298,6 +318,29 @@ src_install()
 		done
 	done
 
+}
+
+pkg_preinst() {
+	#make sure symlinks of these get installed.
+	if [ -e ${ROOT}/etc/init.d/depscan.sh ] && \
+	   [ ! -L ${ROOT}/etc/init.d/depscan.sh ]
+	then
+		rm -f ${ROOT}/etc/init.d/depscan.sh
+	fi
+	if [ -e ${ROOT}/etc/init.d/runscript.sh ] && \
+	   [ ! -L ${ROOT}/etc/init.d/runscript.sh ]
+	then
+		rm -f ${ROOT}/etc/init.d/runscript.sh
+	fi
+	if [ -e ${ROOT}/etc/init.d/functions.sh ] && \
+	   [ ! -L ${ROOT}/etc/init.d/functions.sh ]
+	then
+		rm -f ${ROOT}/etc/init.d/functions.sh
+	fi
+	if [ -e ${ROOT}/etc/init.d/rc-help.sh ]
+	then
+		rm -f ${ROOT}/etc/init.d/rc-help.sh
+	fi
 }
 
 pkg_postinst() {
@@ -363,5 +406,13 @@ EOF
 		then
 			cp -ax ${ROOT}/dev/shm/.init.d/. ${ROOT}/${svcdir}
 		fi
+	fi
+
+	#reload init to fix unmounting problems of / on next reboot
+	# this is really needed, as without the new version of init cause init
+	# not to quit properly on reboot, and causes a fsck of / on next reboot.
+	if [ "$ROOT" = "/" ] && [ -z "`use bootstrap`" ] && [ -z "`use build`" ]
+	then
+		/sbin/init U &>/dev/null
 	fi
 }
