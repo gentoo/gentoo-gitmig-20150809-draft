@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# this patch works for me on x86 and ppc but breaks other ppl :( (kain, 08 May 2002)
+=sys-devel/gdb-5.1.1-r1
+
 # I can't test my pbbuttons ebuild - need some help from powerbook
 # owners please (daybird, 07 May 2002)
 sys-apps/pbbuttonsd
