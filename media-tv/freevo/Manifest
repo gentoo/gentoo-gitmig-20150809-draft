@@ -1,27 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9e28496685b7f6af1a289db19f0a21c8 freevo-1.5.1.ebuild 2971
-MD5 d513fe0e8bffa622ad7b319b41be7cb3 freevo-1.5.0.ebuild 2684
-MD5 681feb353200ab976b8261b54405d894 freevo-1.4.ebuild 2891
+MD5 7e1811172893b922130a74315a524fc2 freevo-1.5.1.ebuild 2970
 MD5 a239a8b0f7d4fed739085b5c69c89ad4 freevo-1.5.2.ebuild 2971
-MD5 965c25759457f632741298acef86e106 freevo-1.5.0-r1.ebuild 2974
-MD5 c1bf66055dfcd6b12db946076a8e0729 freevo-1.4.1.ebuild 2898
-MD5 7cc0c3902db51246db144f312bc71246 ChangeLog 3650
+MD5 40f1cf4a22d7419c6b60f579a0990b21 ChangeLog 3864
 MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 5d133b7b77b8eae5551f9c2fa5cb97e0 files/digest-freevo-1.5.0-r1 65
-MD5 b7207c96a2d7c66f3f5ea64cb9c4134e files/digest-freevo-1.4.1 65
-MD5 5d133b7b77b8eae5551f9c2fa5cb97e0 files/digest-freevo-1.5.0 65
 MD5 20137be2595c8c7411bc0082bab68834 files/digest-freevo-1.5.1 65
 MD5 84e85cacf67d54ca5f607eaed7b728fc files/digest-freevo-1.5.2 65
 MD5 bac3c1bd1a66937edf2ce722b769b0af files/xbox-lircrc 1690
-MD5 e26254b3f0d93c202890eb20eac92959 files/digest-freevo-1.4 63
 MD5 b4b9c96e219591f94f781cbb7e023333 files/freevo.rc6 1709
 MD5 059b24952b8a2cc20aca4572f32a6630 files/freevo.conf 1265
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBhRAhMSkoRwEucGERAt07AKCuLcW4HCUgnba23qXAeBlxUD8dhwCcDyiQ
-RXUfUmQQOiT+02jCSYXv1wA=
-=XgTc
+iD8DBQFBhRp7MSkoRwEucGERAv/AAKCQe6u9gOE7iSOePXjHuBh3NOKbKwCffPcJ
+5dQ+f5aZopsOTxYLNSLMnrY=
+=4SI1
 -----END PGP SIGNATURE-----
