@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtkDPS
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.4 2003/02/12 09:23:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.5 2003/07/28 21:29:01 mholzer Exp $
+
+*gtkDPS-0.3.4 (28 Jul 2003)
+
+  28 Jul 2003; Martin Holzer <mholzer@gentoo.org> gtkDPS-0.3.3-r1.ebuild,
+  gtkDPS-0.3.4.ebuild:
+  Version bumped & Hp update.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
