@@ -1,0 +1,7 @@
+Options +ExecCGI
+DirectoryIndex dspam.cgi
+AuthAuthoritative On
+AuthType Basic
+AuthName DSPAM
+AuthUserFile .htpasswd
+Require valid-user
