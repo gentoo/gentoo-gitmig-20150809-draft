@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.4.1.ebuild,v 1.7 2005/02/22 17:06:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.4.1.ebuild,v 1.8 2005/03/11 03:21:58 latexer Exp $
 
 inherit gnome2 mono
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2
 
 # none of the mono versions we want are stable,
 # so we are masking mono support for now.
-#	!sparc? ( mono? ( >=dev-dotnet/mono-0.96 ) )"
+#	!sparc? ( mono? ( >=dev-lang/mono-0.96 ) )"
 
 DEPEND="${RDEPEND}
 	dev-util/intltool
