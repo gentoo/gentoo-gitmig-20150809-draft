@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2-r1.ebuild,v 1.5 2002/08/29 22:42:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2-r1.ebuild,v 1.6 2002/08/30 00:09:04 seemant Exp $
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
@@ -67,7 +67,7 @@ src_compile ()
 	# ./configure only support 'gpm' features auto-detection, so if
 	# 'sys-libs/gpm' is compiled on your system, you'll compile links
 	# with gpm support ...
-	# This patch adds support for various little fix's
+	# This patch adds support for various little fixes
 	patch -p1 < ${WORKDIR}/links.patch || die
 
 	econf ${myconf} || die
@@ -78,6 +78,11 @@ src_install ()
 {
 	einstall || die "make install failed"
 
+	if [ ! -f /usr/bin/links ]
+	then
+		dosym links2 /usr/bin/links
+	fi
+
 	# Only install links icon if X driver was compiled in ...
 	use X && ( \
 		insinto /usr/share/pixmaps
@@ -87,7 +92,7 @@ src_install ()
 	
 	# links needs to be setuid for it to work with svga
 	use svga && ( \
-		fperms 4755 /usr/bin/links
+		fperms 4755 /usr/bin/links2
 	)
 	
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SITES TODO
