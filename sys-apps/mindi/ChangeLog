@@ -1,24 +1,28 @@
 # ChangeLog for sys-apps/mindi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.15 2004/08/24 03:22:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.16 2004/09/12 06:32:55 pfeifer Exp $
+
+  12 Sep 2004; Jay Pfeifer <pfeifer@gentoo.org> mindi-1.03.ebuild,
+  mindi-1.10.ebuild:
+  Add depend for sys-fs/dosfstools to ebuilds closing bug #63466
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> mindi-0.86.ebuild:
   Removed duplicate RESTRICT="nouserpriv" and call dodir only once.
 
-  15 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org>; mindi-1.10.ebuild:
+  15 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org> mindi-1.10.ebuild:
   Fixing a digest change for mindi-1.10...
 
-  12 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org>; mindi-1.03.ebuild:
+  12 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org> mindi-1.03.ebuild:
   Fix sweet little digest and file change for mindi-1.03.tgz.
 
 *mindi-1.10 (12 Aug 2004)
 
-  12 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org>; mindi-1.10.ebuild:
+  12 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org> mindi-1.10.ebuild:
   Version bump. This is package masked for testing.
 
 *mindi-1.03 (12 Aug 2004)
 
-  12 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org>; mindi-1.03.ebuild:
+  12 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org> mindi-1.03.ebuild:
   Version bump.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> mindi-0.85.ebuild,
@@ -35,12 +39,12 @@
 
 *mindi-0.86 (02 Sep 2003)
 
-  02 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> mindi-0.86.ebuild :
+  02 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> mindi-0.86.ebuild:
   Security update.
 
 *mindi-0.85 (19 Jun 2003)
 
-  19 Jun 2003; John Mylchreest <johnm@gentoo.org>; mindi-0.85.ebuild:
+  19 Jun 2003; John Mylchreest <johnm@gentoo.org> mindi-0.85.ebuild:
   Bumping version
 
 *mindi-0.81 (17 Jan 2003)
