@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.5 2003/09/11 01:17:47 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.6 2003/09/20 10:37:16 jje Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -21,7 +21,11 @@ src_unpack() {
 
 	cd ${S}
 	if [ `use x86` ] ; then
-		use sse && epatch ${FILESDIR}/${PN}-simd.patch
+		if [ `use sse` ]; then
+			epatch ${FILESDIR}/${PN}-simd.patch
+			# patch doesn't support sse2. See #28439
+			filter-flags "-msse2"
+		fi
 		use 3dnow && append-flags -Dsimd_3dn
 	fi
 

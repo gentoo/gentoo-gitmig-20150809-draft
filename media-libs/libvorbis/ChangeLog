@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.15 2003/08/16 11:34:07 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.16 2003/09/20 10:37:16 jje Exp $
+
+  20 Sep 2003; jje <jje@gentoo.org> libvorbis-1.0-r4.ebuild:
+  Filtering -msse2. Closes #28439.
 
   16 Aug 2003; jje <jje@gentoo.org> libvorbis-1.0-r4.ebuild:
   Filter -march=pentium?. See bug #26463.
