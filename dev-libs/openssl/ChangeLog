@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.50 2003/09/30 15:03:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.51 2003/09/30 18:32:42 joker Exp $
+
+  30 Sep 2003; Christian Birchinger <joker@gentoo.org> openssl-0.9.6k.ebuild:
+  Added sparc stable keyword
 
 *openssl-0.9.7c (30 Sep 2003)
 *openssl-0.9.6k (30 Sep 2003)
