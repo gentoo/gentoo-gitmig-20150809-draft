@@ -1,0 +1,9 @@
+# ChangeLog for net-analyzer/scanssh
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/ChangeLog,v 1.1 2002/12/02 14:04:36 aliz Exp $
+
+*scanssh-1.6b (1 Dec 2002)
+
+  1 Dec 2002; Thilo Bangert <bangert@gentoo.org> :
+  initial import
+
