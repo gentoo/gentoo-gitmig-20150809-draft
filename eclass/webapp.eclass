@@ -1,5 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.8 2004/04/23 14:19:35 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -19,7 +20,7 @@ ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
-DEPEND="$DEPEND net-www/webapp-config"
+DEPEND="$DEPEND >=net-www/webapp-config-1.3"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install
 
@@ -66,7 +67,7 @@ function webapp_import_config ()
 
 function webapp_strip_appdir ()
 {
-	echo "$1" | sed -e "s|${MY_APPDIR}/||g;"
+	echo "$1" | sed -e "s|${D}${MY_APPDIR}/||g;"
 }
 
 function webapp_strip_d ()
@@ -93,7 +94,7 @@ function webapp_configfile ()
 	local MY_FILE="`webapp_strip_appdir $1`"
 
 	einfo "(config) $MY_FILE"
-	echo "$MY_FILE" >> $WA_CONFIGLIST
+	echo "$MY_FILE" >> ${D}${WA_CONFIGLIST}
 }
 
 # ------------------------------------------------------------------------
@@ -110,7 +111,7 @@ function webapp_postinst_txt
 	webapp_checkfileexists "$2"
 
 	einfo "(rtfm) $2 (lang: $1)"
-	cp "$2" "${MY_APPDIR}/postinst-$1.txt"
+	cp "$2" "${D}${MY_APPDIR}/postinst-$1.txt"
 }
 
 # ------------------------------------------------------------------------
@@ -133,7 +134,7 @@ function webapp_runbycgibin ()
 	MY_FILE="`webapp_strip_cwd $MY_FILE`"
 
 	einfo "(cgi-bin) $1 - $MY_FILE"
-	echo "$1 $MY_FILE" >> $WA_RUNBYCGIBINLIST
+	echo "$1 $MY_FILE" >> ${D}${WA_RUNBYCGIBINLIST}
 }
 
 # ------------------------------------------------------------------------
@@ -155,7 +156,7 @@ function webapp_serverowned ()
 	local MY_FILE="`webapp_strip_appdir $1`" 
 	
 	einfo "(server owned) $MY_FILE"
-	echo "$MY_FILE" >> $WA_SOLIST
+	echo "$MY_FILE" >> ${D}${WA_SOLIST}
 }
 
 # ------------------------------------------------------------------------
@@ -180,8 +181,8 @@ function webapp_sqlscript ()
 	# scripts for specific database engines go into their own subdirectory
 	# just to keep things readable on the filesystem
 
-	if [ ! -d "${MY_SQLSCRIPTSDIR}/$1" ]; then
-		mkdir -p "${MY_SQLSCRIPTSDIR}/$1" || libsh_die "unable to create directory ${MY_SQLSCRIPTSDIR}/$1"
+	if [ ! -d "${D}${MY_SQLSCRIPTSDIR}/$1" ]; then
+		mkdir -p "${D}${MY_SQLSCRIPTSDIR}/$1" || libsh_die "unable to create directory ${D}${MY_SQLSCRIPTSDIR}/$1"
 	fi
 
 	# warning:
@@ -193,11 +194,11 @@ function webapp_sqlscript ()
 	if [ -n "$3" ]; then
 		# yes we are
 		einfo "($1) upgrade script from ${PN}-${PVR} to $3"
-		cp $2 ${MY_SQLSCRIPTSDIR}/$1/${3}_to_${PVR}.sql
+		cp $2 ${D}${MY_SQLSCRIPTSDIR}/$1/${3}_to_${PVR}.sql
 	else
 		# no, we are not
 		einfo "($1) create script for ${PN}-${PVR}"
-		cp $2 ${MY_SQLSCRIPTSDIR}/$1/${PVR}_create.sql
+		cp $2 ${D}${MY_SQLSCRIPTSDIR}/$1/${PVR}_create.sql
 	fi
 }
 
@@ -231,32 +232,32 @@ function webapp_src_install ()
 
 function webapp_pkg_setup ()
 {
-	if [ -f /etc/vhosts/webapp-config ] ; then
-		. /etc/vhosts/webapp-config
-	else
-		die "Unable to find /etc/vhosts/webapp-config"
-	fi
+	# pull in the shared configuration file
+
+	. /etc/vhosts/webapp-config || die "Unable to open /etc/vhosts/webapp-config file"
 
 	# are we emerging something that is already installed?
 
-	if [ -d "${MY_APPROOT}/${MY_APPSUFFIX}" ]; then
+	if [ -d "${D}${MY_APPROOT}/${MY_APPSUFFIX}" ]; then
 		# yes we are
 		ewarn "Removing existing copy of ${PN}-${PVR}"
-		rm -rf "${MY_APPROOT}/${MY_APPSUFFIX}"
+		rm -rf "${D}${MY_APPROOT}/${MY_APPSUFFIX}"
 	fi
 
 	# create the directories that we need
 
-	mkdir -p ${MY_HTDOCSDIR}
-	mkdir -p ${MY_HOSTROOTDIR}
-	mkdir -p ${MY_CGIBINDIR}
-	mkdir -p ${MY_ICONSDIR}
-	mkdir -p ${MY_ERRORSDIR}
-	mkdir -p ${MY_SQLSCRIPTSDIR}
+	mkdir -p ${D}${MY_HTDOCSDIR}
+	mkdir -p ${D}${MY_HOSTROOTDIR}
+	mkdir -p ${D}${MY_CGIBINDIR}
+	mkdir -p ${D}${MY_ICONSDIR}
+	mkdir -p ${D}${MY_ERRORSDIR}
+	mkdir -p ${D}${MY_SQLSCRIPTSDIR}
 }
 
 function webapp_pkg_postinst ()
 {
-	G_HOSTNAME="${VHOST_HOSTNAME}"
+	G_HOSTNAME="localhost"
+	. /etc/vhosts/webapp-config
+
 	use vhosts || /usr/sbin/webapp-config -I -u root -d "${VHOST_ROOT}/htdocs/${PN}/" ${PN} ${PVR}
 }
