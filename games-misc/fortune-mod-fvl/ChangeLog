@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/multiimonc
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-fvl/ChangeLog,v 1.1 2004/10/07 21:07:57 hansmi Exp $
+
+*fortune-mod-fvl-20030120 (07 Oct 2004)
+
+  07 Oct 2004; Michael Hanselmann <hansmi@gentoo.org>
+  +fortune-mod-fvl-20030120.ebuild:
+  Initial import. Thanks to René Nussbaumer <gentoo@killerfox.hansmi.ch> for
+  providing the ebuild.
+
