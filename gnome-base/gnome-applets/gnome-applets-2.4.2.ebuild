@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.4.2.ebuild,v 1.1 2004/02/05 20:57:17 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.4.2.ebuild,v 1.2 2004/02/06 01:25:06 spider Exp $
 
 inherit gnome2
 
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.1
 	>=gnome-base/libgnomeui-2
 	virtual/x11
 	apm? ( sys-apps/apmd )
-	acpi? ( sys-apps/acpid )"
+	!ppc? (	acpi? ( sys-apps/acpid ) )"
 	# Virtual/x11 for XKB.h 
 
 DEPEND="${RDEPEND}
@@ -35,18 +35,8 @@ DOCS="AUTHORS ChangeLog COPYING COPYING-DOCS INSTALL NEWS README"
 G2CONF="${G2CONF} $(use_enable ipv6)"
 
 src_unpack() {
-
 	unpack ${A}
-
-	# http://bugzilla.gnome.org/show_bug.cgi?id=88553
-	# http://www.its.caltech.edu/~dmoore/battstat/
-	if [ -n "`use acpi`" ]; then
-		cd ${S}/battstat
-		epatch ${FILESDIR}/battstat-acpi-events-2.3.90.diff
-	fi
-
 	gnome2_omf_fix
-
 }
 
 src_install () {

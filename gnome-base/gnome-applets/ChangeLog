@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.51 2004/02/05 20:57:17 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.52 2004/02/06 01:25:06 spider Exp $
+
+  06 Feb 2004; <spider@gentoo.org> gnome-applets-2.4.0.ebuild,
+  gnome-applets-2.4.1-r1.ebuild, gnome-applets-2.4.1-r2.ebuild,
+  gnome-applets-2.4.2.ebuild:
+  escaping acpi? dependency with !ppc? ()  check. Makes dependencies happy again
+
+  06 Feb 2004; <spider@gentoo.org> gnome-applets-2.4.2.ebuild:
+  Finally acpi is fixed, remove the patch from src_unpack (it failed anyhow.
+  *ahumm*)
 
 *gnome-applets-2.4.2 (05 Feb 2004)
 
