@@ -5,4 +5,4 @@ MD5 2baac2d4f1c8f01957aaaf6b6349c203 files/021109-gcc34.patch 347
 MD5 66a524e27160410a2dbaef8d2eed5365 files/digest-iputils-021109-r3 73
 MD5 2914690e065cf1bbe470e1ba316492c9 ChangeLog 4124
 MD5 76871f0c90fed0ac3f59fd56e5bbf753 iputils-020927.ebuild 1410
-MD5 3e6aa2beaec7660207f0e59c1d60ddd3 iputils-021109-r3.ebuild 2398
+MD5 22c5b0e39c7c22bd422e59e7ce72ef60 iputils-021109-r3.ebuild 2401

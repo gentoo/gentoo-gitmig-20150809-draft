@@ -9,5 +9,5 @@ MD5 9721b39b5edf1cf4f94f1ac84cdc1cbe files/oidentd_masq.conf 429
 MD5 30f0c56d802c6a7f6b42d5ddfe1553f1 ChangeLog 2158
 MD5 51334b67d2cbed22e0efec4143bc6ff0 metadata.xml 245
 MD5 31475d0459d14ddb23ad13da001797a2 oidentd-2.0.6.ebuild 1058
-MD5 8e53cf11ed58c873b2da7a5bcc5c61da oidentd-2.0.7-r1.ebuild 1067
+MD5 283c9c99d6ed239b8c09598a0eb3582d oidentd-2.0.7-r1.ebuild 972
 MD5 d648e6935cf635f042e35249d0545f89 oidentd-2.0.7.ebuild 1057
