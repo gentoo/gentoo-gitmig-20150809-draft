@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.387 2004/05/26 17:11:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.388 2004/05/26 17:45:34 kugelfang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -353,7 +353,6 @@ sys-devel/binutils:multitarget - Adds support to binutils for canadian cross com
 sys-devel/gcc:f77 - Build support for the f77 language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
-sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:uclibc - Enable uclibc specific patches for gcc
 sys-devel/gdb:objc - Build support for the Objective C code language
