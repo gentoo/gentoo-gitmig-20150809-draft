@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/etheme-BlueSteel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-BlueSteel/ChangeLog,v 1.1 2004/05/11 07:14:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-BlueSteel/ChangeLog,v 1.2 2004/05/31 06:26:17 vapier Exp $
+
+*etheme-BlueSteel-0.16.7.1 (31 May 2004)
+
+  31 May 2004; Mike Frysinger <vapier@gentoo.org>
+  +etheme-BlueSteel-0.16.7.1.ebuild:
+  Version bump.
 
 *etheme-BlueSteel-0.16.7 (11 May 2004)
 
