@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r3.ebuild,v 1.1 2005/01/29 21:25:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r3.ebuild,v 1.2 2005/02/18 18:40:39 compnerd Exp $
 
 inherit java-pkg
 
@@ -31,6 +31,15 @@ src_unpack() {
 }
 
 src_compile() {
+	if [ $(memory) -lt 262144 ] ; then
+		echo
+		ewarn "To build batik, atleast 256MB of RAM is recommended."
+		ewarn "Your system has less than 256MB of RAM, continuing anyways."
+		echo
+
+		export ANT_OPTS=-Xmx256m
+	fi
+
 	local antflags="jars"
 	ant ${antflags} || die "compile problem"
 }
@@ -47,4 +56,8 @@ src_install () {
 	echo '${JAVA_HOME}/bin/java -classpath $(java-config -p batik,xerces-2,rhino-1.5,fop) org.apache.batik.apps.svgbrowser.Main $*' >> ${PN}
 	dobin ${PN}
 
+}
+
+function memory() {
+	cat /proc/meminfo | grep Memtotal | sed -r "s/[^0-9]*([0-9]+).*/\1/"
 }

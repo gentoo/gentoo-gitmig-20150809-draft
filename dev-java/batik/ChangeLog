@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.18 2005/01/29 21:25:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.19 2005/02/18 18:40:39 compnerd Exp $
+
+  18 Feb 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  batik-1.5.1-r3.ebuild:
+  Added memory check; Resolves bug #82377
 
 *batik-1.5.1-r3 (29 Jan 2005)
 
