@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.77 2003/08/28 05:52:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.78 2003/09/13 09:51:11 coredumb Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -88,7 +88,12 @@ RDEPEND="
 # libswf is ONLY available on x86
 RDEPEND="${RDEPEND}
 	flash? ( x86? ( media-libs/libswf ) >=media-libs/ming-0.2a )"
-	
+
+#The new XML extension in PHP5 requires libxml2-2.5.10
+if [ "${PV:0:1}" = "5" ]; then
+	RDEPEND="${RDEPEND}
+		>=dev-libs/libxml2-2.5.10"
+fi
 	
 	# Testing per bug #13382
 if runningunstable; then
