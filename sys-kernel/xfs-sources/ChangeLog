@@ -1,0 +1,11 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.1 2002/04/29 06:29:21 sandymac Exp $
+
+  29 apr 2002; William McArthur <sandymac@gentoo.org> xfs-sources-2.4.18.ebuild:
+
+  Added sys-apps/xfsprogs to DEPEND. These aren't stictly needed but the user
+  will very likely want them.
+
+*xfs-sources-2.4.18 (25 Apr 2002)
+
