@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r13.ebuild,v 1.4 2005/02/19 10:49:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r13.ebuild,v 1.5 2005/02/21 19:29:10 eradicator Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -19,9 +19,7 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-# alpha was removed because it doesnt satisfy DEPEND.  See bug #66572.
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~alpha"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="nls esd mmx oggvorbis 3dnow mikmod directfb alsa oss arts jack sndfile lirc flac mad mp3"
 
@@ -57,6 +55,12 @@ PDEPEND="lirc? ( media-plugins/xmms-lirc )
 	 oss? ( media-plugins/xmms-oss )"
 
 src_unpack() {
+	if ! has_version '>=sys-devel/gettext-0.14.1'; then
+		eerror "Sorry, you seem to have USE=-nls with an old version of gettext"
+		eerror "on your system.  Unfortunately, that will cause xmms to fail emerging."
+		eerror "Please either remove gettext or upgrade to version 0.14.1."
+	fi
+
 	unpack ${A}
 	cd ${S}
 
