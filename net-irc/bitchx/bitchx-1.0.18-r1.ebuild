@@ -1,10 +1,9 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r1.ebuild,v 1.1 2001/02/22 22:26:50 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r1.ebuild,v 1.2 2001/04/18 01:09:58 drobbins Exp $
 
-P=BitchX-1.0c18
-A=${P}.tar.gz
+A=ircii-pana-1.0c18.tar.gz
 S=${WORKDIR}/BitchX
 DESCRIPTION="An IRC Client"
 SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${A}"
