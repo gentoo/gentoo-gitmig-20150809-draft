@@ -1,6 +1,11 @@
 # ChangeLog for net-im/kopete
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.30 2003/12/31 13:50:01 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.31 2004/01/18 15:31:31 caleb Exp $
+
+*kopete-0.8_beta1 (18 Jan 2004)
+
+  18 Jan 2004; Caleb Tennis <caleb@gentoo.org> kopete-0.8_beta1.ebuild:
+  Newbeta version, not compatible with KDE 3.2
 
   31 Dec 2003; Heinrich Wendel <lanius@gentoo.org> kopete-0.7.3.ebuild,
   kopete-0.7.4.ebuild:
