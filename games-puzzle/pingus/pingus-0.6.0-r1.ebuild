@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.10 2004/09/30 11:28:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.11 2005/01/16 18:22:10 vapier Exp $
 
 inherit eutils flag-o-matic games
 
@@ -10,7 +10,7 @@ SRC_URI="http://pingus.seul.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 IUSE="nls opengl"
 
 DEPEND=">=media-libs/hermes-1.3.2-r2
@@ -20,8 +20,8 @@ DEPEND=">=media-libs/hermes-1.3.2-r2
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-gcc3.patch"
-	epatch "${FILESDIR}/${PV}-gcc34.patch" # bug 63773
+	epatch "${FILESDIR}"/${PV}-gcc3.patch
+	epatch "${FILESDIR}"/${PV}-gcc34.patch #63773
 	autoconf || die
 }
 
@@ -40,6 +40,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS INSTALL NEWS README TODO
 	# pos install process ... FIXME
 	mv "${D}/usr/games/games" "${D}/usr/games/bin"
 	cd "${D}/usr/share/games"
