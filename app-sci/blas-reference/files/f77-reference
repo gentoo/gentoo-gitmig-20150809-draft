@@ -1,0 +1,14 @@
+F77LIBS="-L/usr/lib/blas/reference -lblas"
+
+setup() {
+ 
+einfo "/usr/lib/libblas.so -> blas/reference/libblas.so"
+ln -sf blas/reference/libblas.so /usr/lib/libblas.so
+
+einfo "/usr/lib/libblas.so.0 -> blas/reference/libblas.so.0"
+ln -sf blas/reference/libblas.so.0 /usr/lib/libblas.so.0
+ 
+einfo "/usr/lib/libblas.a -> blas/reference/libblas.a"
+ln -sf blas/reference/libblas.a /usr/lib/libblas.a
+
+}
