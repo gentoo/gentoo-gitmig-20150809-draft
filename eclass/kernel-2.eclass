@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.33 2004/04/16 18:14:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.34 2004/04/20 08:42:30 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -92,8 +92,7 @@ if [ "${ETYPE}" == "sources" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
-		>=sys-devel/binutils-2.11.90.0.31 )
-		>=sys-kernel/config-kernel-0.3.3"
+		>=sys-devel/binutils-2.11.90.0.31 )"
 
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
@@ -245,10 +244,7 @@ preinst_headers() {
 # pkg_postinst functions
 #==============================================================
 postinst_sources() {
-	if [ -x "${ROOT}/usr/bin/config-kernel" ]
-	then
-		${ROOT}/usr/bin/config-kernel --eclass-symlink ${KV}
-	elif [ ! -h ${ROOT}usr/src/linux ]
+	if [ ! -h ${ROOT}usr/src/linux ]
 	then
 		ln -sf ${ROOT}usr/src/linux-${KV} ${ROOT}usr/src/linux
 	fi
