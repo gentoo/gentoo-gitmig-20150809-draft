@@ -1,5 +1,5 @@
-MD5 4077f2e1ee23784bd71fd303261c0217 hashalot-0.1.0.ebuild 506
-MD5 2c759d0b1d05edce9a51b19e2574193d ChangeLog 1323
+MD5 c70839f5731e95e0cf38a144082c34cf ChangeLog 1409
+MD5 75ca4bac35184a51b15fbd5bc1645ae0 hashalot-0.1.0.ebuild 502
 MD5 8eb4308f8d3f4089a9bae029e5bec3a7 hashalot-0.2.0.ebuild 483
 MD5 d6246fcf94994932fe9833e67abc7931 files/digest-hashalot-0.1.0 65
 MD5 5d200800acbba240ce3762c3c0aa0d65 files/digest-hashalot-0.2.0 65
