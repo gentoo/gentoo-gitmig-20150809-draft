@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3066e7c20c392289beda7211a634de6f ChangeLog 338
 MD5 4c5579aeec205ecb5bf7526d2eba3256 metadata.xml 1064
 MD5 1ad39f820a20fca9dad1deeb4071797d epsilon-9999.ebuild 398
-MD5 2d1275fb261090793973b6cebd56e3a7 epsilon-0.3.0.20050116.ebuild 408
+MD5 2cfba3a5b4833b2960bc8b449f0676fa epsilon-0.3.0.20050220.ebuild 408
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-epsilon-9999 0
-MD5 e36dbd3c123f6c1e6de6b48bd40d6b6e files/digest-epsilon-0.3.0.20050116 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB6zD4roRuSHgZdywRAg44AJ4kcM0u+jvCUrVs4QS73PqoyKOVEQCeJ/5m
-jsP2RWpq90LWfsfws4fvW4o=
-=9Iv+
------END PGP SIGNATURE-----
+MD5 c0623a46e85dff741048d04d81f664b2 files/digest-epsilon-0.3.0.20050220 74
