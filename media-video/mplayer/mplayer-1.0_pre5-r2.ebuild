@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.7 2004/07/27 18:34:41 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.8 2004/07/28 21:00:19 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -126,6 +126,11 @@ src_unpack() {
 
 	#bug #58082.  Fixes LANGUAGE variable issues
 	epatch ${FILESDIR}/mplayer-1.0_pre5-r1-conf_locale.patch
+
+	#mplayer gui uses oss all the time.
+	#this patch enables true alsa output in
+	#gmplayer.  Fixes Bug #58619.
+	use alsa && epatch ${FILESDIR}/${P}-alsa-gui.patch
 
 	#Setup the matrox makefile
 	if use matrox; then
