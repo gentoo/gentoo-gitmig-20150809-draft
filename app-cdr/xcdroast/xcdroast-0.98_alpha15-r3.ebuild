@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.12 2005/03/30 01:05:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.13 2005/03/30 09:20:48 mr_bones_ Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_enable gtk2) \
 		--disable-dependency-tracking || die
-	
+
 	make PREFIX=/usr || die
 }
 
@@ -62,7 +62,7 @@ src_install() {
 
 	insinto /usr/share/icons/hicolor/48x48/apps
 	newins ${S}/xpms/xcdricon.xpm xcdroast.xpm
-	
+
 	make_desktop_entry xcdroast "X-CD-Roast" xcdroast "AudioVideo;DiscBurning"
 }
 
