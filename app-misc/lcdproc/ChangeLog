@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.9 2004/03/08 20:47:24 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.10 2004/03/31 13:02:43 aliz Exp $
+
+*lcdproc-0.4.4 (31 Mar 2004)
+
+  31 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> lcdproc-0.4.4.ebuild:
+  Version bump. New ebuild contriuted by Rene Wagner <reenoo@gmx.de> in #46296.
 
   08 Mar 2004; Jon Portnoy <avenj@gentoo.org> lcdproc-0.4.3-r2.ebuild :
   AMD64 keywords.
