@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r2.ebuild,v 1.1 2001/06/16 18:46:11 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r2.ebuild,v 1.2 2001/06/27 03:49:24 achim Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -17,7 +17,9 @@ HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 DEPEND="nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
 
 if [ -z "`use bootstrap`" ] ; then
-RDEPEND="gd? ( sys-libs/zlib media-libs/libpng )"
+RDEPEND="gd? ( sys-libs/zlib media-libs/libpng ) sys-apps/baselayout"
+else
+RDEPEND="sys-apps/baselayout"
 fi
 
 PROVIDE="virtual/glibc"

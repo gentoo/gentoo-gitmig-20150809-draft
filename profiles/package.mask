@@ -13,7 +13,7 @@
 # incompatible
 >=sys-libs/readline-4.2
 >sys-devel/automake-1.4-r2
->=media-libs/mesa-glue-3.5
+>=media-libs/mesa-glu-3.5
 
 # broken
 app-admin/powertweak
