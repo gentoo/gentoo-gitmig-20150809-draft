@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.225 2005/02/21 14:50:55 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.226 2005/02/21 15:00:04 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -270,7 +270,7 @@ scanner - Adds support for scanner hardware (e.g. build the sane frontend in kde
 sdl - Adds support for Simple Direct Layer (media library)
 selinux - !!internal use only!! Security Enhanced Linux support, this must be set by the selinux profile or breakage will occur
 session - Adds persistent session support
-sharedext - Adds support for building shared extensions
+sharedext - Adds support for building shared extensions in php
 sharedmem - Adds support for shared memory use
 simplexml - support for simplexml
 skey - Enable S/Key (Single use password) authentication support
