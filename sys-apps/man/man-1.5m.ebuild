@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m.ebuild,v 1.7 2004/02/08 20:47:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m.ebuild,v 1.8 2004/02/08 20:54:31 vapier Exp $
 
 
 inherit eutils
 
 NV="1.5m2"
 DESCRIPTION="Standard commands to read man pages"
-SRC_URI="mirror://kernel/linux/utils/man/man-${NV}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/man/"
+SRC_URI="mirror://kernel/linux/utils/man/man-${NV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -106,7 +106,7 @@ src_install() {
 	# Needed for makewhatis
 	keepdir /var/cache/man
 
-	exeinto /etc/cron.daily
+	exeinto /etc/cron.weekly
 	doexe ${FILESDIR}/makewhatis.cron
 
 	for x in $(awk '

@@ -1,10 +1,6 @@
 #!/bin/sh
-#
-# Uncomment the following if you want 
-# your whatis database rebuilt regularly
-#
 # this is part of the man package
-#
-#
+# it updates the searchly database
+# for manpages
 
 /usr/sbin/makewhatis
