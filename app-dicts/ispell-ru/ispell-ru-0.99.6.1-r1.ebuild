@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.6.1-r1.ebuild,v 1.8 2004/09/04 06:57:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.6.1-r1.ebuild,v 1.9 2004/10/05 12:30:50 pvdabeel Exp $
 
 MY_P=rus-ispell-${PV%.*}f${PV#*.*.}
 S="${WORKDIR}"
@@ -11,7 +11,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/-${MY_P
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
-KEYWORDS="~ppc x86 ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="ppc x86 ~sparc ~alpha ~mips ~hppa"
 
 DEPEND="app-text/ispell"
 
