@@ -1,3 +1,5 @@
 MD5 9383535a5a4770efb101227e11dddae6 glib-0.26.ebuild 717
+MD5 9383535a5a4770efb101227e11dddae6 glib-0.90.ebuild 717
 MD5 ae8474ad2e6b93e0a7e5e62cce965609 ChangeLog 392
 MD5 bc6e56a28b2c2019e2c781f7fb68df6c files/digest-glib-0.26 60
+MD5 0aff6d36d069ff9a2a4a0855af47a2f6 files/digest-glib-0.90 60

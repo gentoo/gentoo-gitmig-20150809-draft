@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/glib
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib/ChangeLog,v 1.1 2003/07/20 15:49:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib/ChangeLog,v 1.2 2003/07/22 11:38:18 mcummings Exp $
+
+*glib-0.90 (22 Jul 2003)
+
+  22 Jul 2003; Michael Cummings <mcummings@gentoo.org> glib-0.90.ebuild:
+  CPAN version bump
 
 *glib-0.26 (20 Jul 2003)
 
