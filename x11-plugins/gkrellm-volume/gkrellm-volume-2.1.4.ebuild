@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/gkrellm-volume-2.1.4.ebuild,v 1.7 2003/09/06 05:56:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/gkrellm-volume-2.1.4.ebuild,v 1.8 2004/06/19 03:55:00 kloeri Exp $
 
+IUSE=""
 MY_P=${PN}2-${PV}
 S=${WORKDIR}/${PN}
 DESCRIPTION="A mixer control plugin for gkrellm"
