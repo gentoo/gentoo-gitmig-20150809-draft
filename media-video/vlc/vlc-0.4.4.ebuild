@@ -1,12 +1,12 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.4.ebuild,v 1.7 2002/11/09 19:01:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.4.ebuild,v 1.8 2002/12/22 23:21:49 mholzer Exp $
 
 IUSE="arts qt ncurses dvd gtk nls 3dfx esd directfb kde X alsa ggi oggvorbis gnome"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="VideoLAN Client - DVD/video player"
-SRC_URI="http://www.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="http://www.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.videolan.org"
 
 SLOT="0"
@@ -137,7 +137,6 @@ src_compile(){
 	
 	econf \
 		--with-sdl \
-		--disable-a52 \
 		--enable-release \
 		--enable-mad \
 		--enable-a52 \

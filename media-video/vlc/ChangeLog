@@ -1,8 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.15 2002/11/09 19:01:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.16 2002/12/22 23:21:49 mholzer Exp $
 
 *vlc-0.4.5 (09 Nov 2002)
+
+  22 Dec 2002; Martin Holzer <mholzer@gentoo.org> vlc-0.4.4.ebuild files/digest-vlc-0.4.4 Changelog :
+  Changed .tar.gz to .tar.bz2, removed --disable-a52
 
   09 Nov 2002; Seemant Kulleen <seemant@gentoo.org>  vlc-0.4.5.ebuild
   files/digest-vlc-0.4.5 :
@@ -10,6 +13,9 @@
   Version bump, thanks to: mholzer@gentoo.org (Martin Holzer) in bug #10426
 
 *vlc-0.4.4 (13 Aug 2002)
+
+  22 Dec 2002; Martin Holzer <mholzer@gentoo.org> vlc-0.4.4.ebuild files/digest-vlc-0.4.4 Changelog :
+  Changed .tar.gz to .tar.bz2, removed --disable-a52
 
   28 Sep 2002; Nick Hadaway <raker@gentoo.org> vlc-0.4.4.ebuild :
   Removed redundant configure options.  Changed to einstall.
