@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/kiosktool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kiosktool/ChangeLog,v 1.5 2004/11/04 16:49:52 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kiosktool/ChangeLog,v 1.6 2004/11/21 00:01:22 weeve Exp $
+
+  20 Nov 2004; Jason Wever <weeve@gentoo.org> kiosktool-0.9.ebuild:
+  Added ~sparc keyword.
 
   04 Nov 2004; Konstantin Arkhipov <voxus@gentoo.org> kiosktool-0.9.ebuild:
   Unmasked on x86.
