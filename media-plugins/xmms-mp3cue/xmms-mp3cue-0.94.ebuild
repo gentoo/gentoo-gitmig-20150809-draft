@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mp3cue/xmms-mp3cue-0.94.ebuild,v 1.3 2004/03/29 23:04:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mp3cue/xmms-mp3cue-0.94.ebuild,v 1.4 2004/04/08 07:39:58 eradicator Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://brianvictor.tripod.com/mp3cue.htm"
 SRC_URI="http://brianvictor.tripod.com/XMMS-mp3cue-${PV}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="debug"
 
 S=${WORKDIR}/XMMS-mp3cue-${PV}
