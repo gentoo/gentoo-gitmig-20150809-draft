@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.6 2003/02/12 08:24:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.7 2003/02/12 14:54:48 gmsoft Exp $
+
+ 12 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+ Added hppa to keywords.
 
 *iputils-020927 (03 Jan 2003)
 
