@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/twin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/ChangeLog,v 1.2 2002/08/07 20:57:06 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/ChangeLog,v 1.3 2002/09/10 12:32:57 seemant Exp $
+
+*twin-0.4.4 (10 Sep 2002)
+
+  10 Sep 2002; Seemant Kulleen <seemant@gentoo.org> twin-0.4.4.ebuild
+  files/digest-twin-0.4.4 :
+
+  Long needed version bump.  What are we, debian?
 
 *twin-0.3.8-r1 (1 Feb 2002)
 
