@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b8e40d30c56383e32020464f83748a87 expect-5.40.0.ebuild 1782
-MD5 b11b36e157d70d502c832a8ba12431e2 expect-5.37.1-r2.ebuild 3282
-MD5 a15812d97737f672a6d9337ddd345e48 expect-5.37.1-r1.ebuild 1823
-MD5 f001e495299ea5f655b7c99f55169dc3 expect-5.40.0-r1.ebuild 2565
 MD5 2c2e4d327b75ac648bc8e2e6eab0d2bb ChangeLog 3248
+MD5 a15812d97737f672a6d9337ddd345e48 expect-5.37.1-r1.ebuild 1823
+MD5 b8e40d30c56383e32020464f83748a87 expect-5.40.0.ebuild 1782
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 b702779d28e4fa816d97911108cba524 expect-5.37.1-r2.ebuild 3038
+MD5 bc5b75bbc851ee1f11b61dc67c07a5a9 expect-5.40.0-r1.ebuild 2559
 MD5 56f93170a590d0db63d826802dcc9847 files/digest-expect-5.40.0 65
 MD5 f4bfc81e857154719e1924f00b505ea3 files/digest-expect-5.37.1-r1 65
 MD5 f4bfc81e857154719e1924f00b505ea3 files/digest-expect-5.37.1-r2 65
 MD5 56f93170a590d0db63d826802dcc9847 files/digest-expect-5.40.0-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA9ChH7aJl2DRYeA4RAgTNAJ0SP4NVxRfUN/Jyf8evn6dljaUoygCgjiF7
-o4pZkddXzb0y+L18jnMOQqk=
-=EJvA
------END PGP SIGNATURE-----

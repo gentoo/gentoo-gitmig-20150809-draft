@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r2.ebuild,v 1.4 2004/07/13 18:23:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r2.ebuild,v 1.5 2004/07/14 21:43:03 mr_bones_ Exp $
 
 inherit gnuconfig
 
@@ -35,7 +35,7 @@ HERE
 
 	cat >${WORKDIR}/Makefile.examples.gentoo <<HERE
 include Makefile
-                                                                               
+
 gentoo_examples:
 	for i in \$(G_SCRIPTS) ; do \\
 		if [ -f \$(srcdir)/example/\$\$i ] ; then \\
@@ -45,7 +45,7 @@ gentoo_examples:
 						${D}/usr/share/doc/${PF}/examples/\$\$i ; \\
 		fi ; \\
 	done
-                                                                               
+
 	for i in \$(G_SCRIPTS_MANPAGES) ; do \\
 		if [ -f \$(srcdir)/example/\$\$i.man ] ; then \\
 			\$(INSTALL_DATA) \$(srcdir)/example/\$\$i.man \\
@@ -53,10 +53,10 @@ gentoo_examples:
 			gzip ${D}/usr/share/doc/${PF}/examples/\$\$i.1 ; \\
 		fi ; \\
 	done
-                                                                               
+
 HERE
 }
-	
+
 src_compile() {
 	if [ "${ARCH}" == "amd64" ]; then
 		gnuconfig_update
