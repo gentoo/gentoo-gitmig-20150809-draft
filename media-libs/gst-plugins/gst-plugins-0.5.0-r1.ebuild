@@ -1,17 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.2-r1.ebuild,v 1.4 2002/12/24 00:25:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.5.0-r1.ebuild,v 1.1 2002/12/27 18:14:07 azarah Exp $
 
-inherit libtool gnome2 flag-o-matic
+inherit eutils libtool gnome2 flag-o-matic
 
 IUSE="encode quicktime mpeg oggvorbis jpeg esd gnome mikmod avi sdl png alsa arts dvd aalib"
-S=${WORKDIR}/${P}
-DESCRIPTION="Additional plugins for gstreamer - streaming media framework"
 
+S="${WORKDIR}/${P}"
+DESCRIPTION="Additional plugins for gstreamer - streaming media framework"
 # bz2 gives 404 right now 
 #SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.bz2"
 SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.gz"
-
 HOMEPAGE="http://gstreamer.sourceforge.net"
 
 SLOT="0"
@@ -21,7 +20,7 @@ KEYWORDS="~x86 ~sparc ~ppc"
 # required packages
 # there are many many optional libraries. features are compiled if the libraries
 # are present. most optional libraries are from gnome.
-DEPEND=">=media-libs/gstreamer-0.4.2
+DEPEND="=media-libs/gstreamer-${PV}*
 	>=gnome-base/gconf-1.2.0
 	media-sound/mad
 	media-libs/flac
@@ -31,17 +30,17 @@ DEPEND=">=media-libs/gstreamer-0.4.2
 	encode? ( media-sound/lame )
 	quicktime? ( media-libs/openquicktime )
 	mpeg? (	=media-libs/libmpeg2-0.2* )
-	oggvorbis? ( 	media-libs/libvorbis 
-			media-libs/libogg )
+	oggvorbis? ( media-libs/libvorbis 
+	             media-libs/libogg )
 	jpeg? (	media-video/mjpegtools 
-		mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 ) )
+	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 ) )
 	esd? ( media-sound/esound )
 	gnome? ( >=gnome-base/gnome-vfs-2.0.1 )
 	mikmod? ( media-libs/libmikmod )
 	sdl? ( media-libs/libsdl )
 	png? ( >=media-libs/libpng-1.2.3 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 
-		media-sound/jack-audio-connection-kit )
+	media-sound/jack-audio-connection-kit )
 	arts? ( >=kde-base/arts-1.0.2 )
 	dvd? ( 	media-libs/libdvdnav )
 	aalib? ( media-libs/aalib )
@@ -53,16 +52,29 @@ DEPEND=">=media-libs/gstreamer-0.4.2
 src_unpack() {
 	unpack ${A}
 
-	# fix for gst-launch-ext
-	patch -d ${S} -p1 < ${FILESDIR}/gentoo-gst-0.4.2-launch.patch || die
+# Already fixed
+#	# fix for gst-launch-ext
+#	cd ${S}; epatch ${FILESDIR}/gentoo-gst-0.4.2-launch.patch
 
-	if [ "${ARCH}" = "ppc" ]
-	then
-		einfo "Patching makefile to fix parallel build bug"
-		patch -d ${S} -p0 < ${FILESDIR}/gst-plugins-0.4.2-parallel-make-depfix.patch || die
-		einfo "Patching wav support in gst-plugins to be big-endian friendly"
-		patch -d ${S} -p0 < ${FILESDIR}/gst-plugins-0.4.2-wavparse-bigendian.patch || die
-	fi
+# Already applied ...
+#	if [ "${ARCH}" = "ppc" ]
+#	then
+#		cd ${S}
+#		EPATCH_SINGLE_MSG="Patching makefile to fix parallel build bug" \
+#		epatch ${FILESDIR}/${PN}-0.4.2-parallel-make-depfix.patch
+#		EPATCH_SINGLE_MSG="Patching wav support in gst-plugins to be big-endian friendly" \
+#		epatch ${FILESDIR}/${PN}-0.4.2-wavparse-bigendian.patch || die
+#	fi
+
+	# If the sound device for OSS was already open when gstreamer are started,
+	# libgstossaudio.so never returns, as opening the device without the
+	# O_NONBLOCK flag in Linux do not return if the device was busy.  Gnome
+	# bug at:
+	#
+	#   http://bugzilla.gnome.org/show_bug.cgi?id=102025
+	#
+	# <azarah@gentoo.org> (27 Dec 2002).
+	cd ${S}; epatch ${FILESDIR}/${P}-never-return-on-oss-busy.patch
 }
 
 src_compile() {
@@ -75,8 +87,7 @@ src_compile() {
 	# this is an ugly patch to remove -I/usr/include from some CFLAGS
 	# patch -p0 < ${FILESDIR}/${P}-configure.patch
 
-	local myconf
-	myconf=""
+	local myconf=""
 
 	# FIXME : do this for _all_ IUSE flags
 	use avi \
@@ -86,10 +97,10 @@ src_compile() {
 		&& myconf="${myconf} --enable-aalib" \
 		|| myconf="${myconf} --disable-aalib"
 	use dvd \
-		&& myconf="${myconf} --enable-dvdread --enable-dvdnav
-				 --enable-libdv" \
-		|| myconf="${myconf} --disable-dvdread --disable-dvdnav
-				 --disable-libdv"
+		&& myconf="${myconf} --enable-dvdread --enable-dvdnav \
+		                     --enable-libdv" \
+		|| myconf="${myconf} --disable-dvdread --disable-dvdnav \
+		                     --disable-libdv"
 	use esd \
 		&& myconf="${myconf} --enable-esd --enable-esdtest" \
 		|| myconf="${myconf} --disable-esd --disable-esdtest"
@@ -123,7 +134,7 @@ src_install () {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"		
 	make DESTDIR=${D} install || die
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-	
+
 	dodoc AUTHORS COPYING INSTALL README RELEASE TODO 
 }
 
@@ -131,3 +142,4 @@ pkg_postinst () {
 	gnome2_gconf_install
 	gst-register
 }
+

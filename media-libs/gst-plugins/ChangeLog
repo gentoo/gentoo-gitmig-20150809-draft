@@ -1,7 +1,26 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.18 2002/12/26 23:22:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.19 2002/12/27 18:14:07 azarah Exp $
+
+*gst-plugins-0.4.2-r2 (27 Dec 2002)
+*gst-plugins-0.5.0-r1 (27 Dec 2002)
+
+  27 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gst-plugins-0.4.2-r2.ebuild,
+                                                    gst-plugins-0.5.0-r1.ebuild :
+  If the sound device for OSS was already open when gstreamer are started,
+  libgstossaudio.so never returns, as opening the device without the
+  O_NONBLOCK flag in Linux do not return if the device was busy.
+  
+  Patch to fix this.
+  - For gst-plugins-0.4.2-r2 we need to patch gst_osssink_open_audio() in
+    sys/oss/gstosssink.c.
+  - For gst-plugins-0.5.0-r1 we need to patch gst_osscommon_open_audio() in
+    sys/oss/gstosscommon.c.
+  
+  Gnome bug at:
+
+    http://bugzilla.gnome.org/show_bug.cgi?id=102025
 
 *gst-plugins-0.5.0 (26 Dec 2002)
 
