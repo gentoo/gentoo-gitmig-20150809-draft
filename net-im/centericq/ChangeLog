@@ -1,6 +1,13 @@
 # ChangeLog for net-im/centericq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.7 2002/07/12 01:04:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.8 2002/07/26 16:15:17 lostlogic Exp $
+
+*centericq-4.7.8 (26 Jul 2002)
+
+  26 Jul 2002; Brandon Low <lostlogic@gentoo.org> centericq-4.7.8.ebuild :
+
+  New revision as pointed out in bug #5583 thanks Mat Rinsch
+  for the tip.
 
 *centericq-4.7.7-r1 (11 Jul 2002)
 
