@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.1 2003/07/13 17:39:20 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.2 2003/07/24 03:04:17 george Exp $
 #
 # Author: David Holm <dholm@telia.com>
 #
@@ -26,7 +26,8 @@ ADAMAKE=${ADAMAKE:-gnatmake}
 ADABIND=${ADABIND:-gnatbind}
 
 filter-flags "-mmmx -msse -mfpmath=sse -frename-registers \
-	-fprefetch-loop-arrays -falign-functions=4"
+	-fprefetch-loop-arrays -falign-functions=4 -falign-jumps=4 -falign-loops=4 \
+	-msse2 -frerun-loop-opt"
 
 ADACFLAGS=${ADACFLAGS:-${CFLAGS}}
 ADACFLAGS=${ADACFLAGS//pentium-mmx/i586}
