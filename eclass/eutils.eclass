@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.65 2003/11/10 22:18:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.66 2003/11/15 21:48:37 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -974,8 +974,17 @@ unpack_makeself() {
 	if [ "${pipestatus//0}" != "" ]
 	then
 		# maybe it isnt gzipped ... they usually are, but not always ...
-		tail -n +${skip} ${src} | tar -x --no-same-owner -f - \
-			|| die "failure unpacking makeself ${shrtsrc} ('${ver}' +${skip})"
+		tail -n +${skip} ${src} 2>/dev/null \
+			| tar -x --no-same-owner -f - 2>/dev/null
+		pipestatus="${pipestatus// }"
+		if [ "${pipestatus//0}" != "" ]
+		then
+			# and every once in a while they are bzipped2 ...
+			tail -n +${skip} ${src} 2>/dev/null \
+				| bunzip2 -c 2>/dev/null \
+				| tar -x --no-same-owner -f - 2>/dev/null \
+				|| die "failure unpacking makeself ${shrtsrc} ('${ver}' +${skip})"
+		fi
 	fi
 }
 
