@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.27 2003/12/29 03:19:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.28 2004/01/05 20:06:59 weeve Exp $
+
+  05 Jan 2004; Jason Wever <weeve@gentoo.org> ccache-2.3.ebuild:
+  Marked stable on sparc.
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> ccache-2.3.ebuild:
   Move to mips stable (~mips -> mips)
