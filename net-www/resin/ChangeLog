@@ -1,6 +1,9 @@
 # ChangeLog for net-www/resin
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/resin/ChangeLog,v 1.1 2003/04/30 13:17:37 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/resin/ChangeLog,v 1.2 2003/04/30 13:58:29 absinthe Exp $
+
+  30 Apr 2003; Dylan Carlson <absinthe@gentoo.org> resin-2.1.9.ebuild:
+  With the addition of resin-ee, the two are now set to block each other.
 
 *resin-2.1.9 (30 Apr 2003)
 
