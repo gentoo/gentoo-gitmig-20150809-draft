@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.1-r1.ebuild,v 1.3 2004/12/19 06:16:31 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.1-r1.ebuild,v 1.4 2004/12/20 09:31:34 joem Exp $
 
 inherit eutils debug python
 
@@ -23,7 +23,8 @@ RDEPEND=">=dev-libs/glib-2.2.2
 	sys-kernel/linux26-headers"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	>=dev-util/intltool-0.29"
 
 # dep on a specific util-linux version for 
 # managed mount patches #70873
