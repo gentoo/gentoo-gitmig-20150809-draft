@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.0d.ebuild,v 1.1 2004/12/21 13:04:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.0e.ebuild,v 1.1 2005/01/22 20:16:47 plasmaroo Exp $
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
@@ -8,7 +8,7 @@ SRC_URI="http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/3.1.0/${P}.ta
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE="bootsplash"
 
 DEPEND="sys-fs/e2fsprogs
