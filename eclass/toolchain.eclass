@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.38 2004/10/26 18:51:57 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.39 2004/10/26 21:16:09 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -1106,7 +1106,9 @@ gcc_src_compile() {
 	einfo "Compiling ${PN} ..."
 	gcc_do_make ${GCC_MAKE_TARGET}
 
-	if [ "${ETYPE}" == "gcc-compiler" -a "${SPLIT_SPECS}" == "true" ] ; then
+	# Do not create multiple specs files for PIE+SSP if boundschecking is in
+	# USE, as we disable PIE+SSP when it is.
+	if [ "${ETYPE}" == "gcc-compiler" -a "${SPLIT_SPECS}" == "true" ]  && use !boundschecking ; then
 		split_out_specs_files || die "failed to split out specs"
 	fi
 
