@@ -949,8 +949,3 @@ app-cdr/eroaster
 # g2boojum@gentoo.org 16 Jul 2002
 # new net-tools ; needs testing
 =sys-apps/net-tools-1.60-r5
-
-
-# blizzy@gentoo.org 21 Jul 2002
-# new version, needs testing
-=media-gfx/pngcrush-1.5.10
