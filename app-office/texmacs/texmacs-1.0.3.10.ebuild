@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.3.7.ebuild,v 1.4 2004/06/24 22:45:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.3.10.ebuild,v 1.1 2004/07/07 00:31:15 usata Exp $
 
 # although flag-o-matic functions in portage, we should inherit it
 inherit flag-o-matic
