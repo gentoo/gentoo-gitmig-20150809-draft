@@ -1,16 +1,27 @@
 # ChangeLog for app-admin/gentoolkit/lintool/scripts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/ChangeLog,v 1.6 2003/02/14 21:59:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/ChangeLog,v 1.7 2003/02/22 04:31:17 agriffis Exp $
+
+21 Feb 2003 Aron Griffis <agriffis@gentoo.org>
+	* fix some bugs in echangelog...
+		- make it work with gtk+ (and other ebuilds with regex specials)
+		- recognize (broken) *version with ending "." or ".ebuild"
+		- get trailing spacing right when coming from stdin
+		- use all cmdline args instead of just first for entry
+		- make a new changelog if it seems appropriate
+	* fix some bugs in ekeyword...
+		- don't die if the file hasn't changed
+		- inspect ARGV[0] to see if it looks like a keyword
 
 13 Feb 2003 Aron Griffis <agriffis@gentoo.org>
     * update ekeyword to fix strange spacing from other keyword tools
 
 12 Feb 2003 Aron Griffis <agriffis@gentoo.org>
     * update echangelog to insert entry at the correct location in the
-	  ChangeLog
+      ChangeLog
 
 10 Feb 2003 Aron Griffis <agriffis@gentoo.org>
-	* add echangelog and ekeyword
+    * add echangelog and ekeyword
 
 11 Nov 2002 Martin Holzer <mholzer@gentoo.org>
-	* fix emerge-webrsync 0 byte bug  
+    * fix emerge-webrsync 0 byte bug  
