@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.3 2004/10/06 09:53:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.4 2004/10/06 22:04:33 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0.7"
-KEYWORDS="~x86 ~alpha ~ia64"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 IUSE="3dnow X alsa avi debug dvd esd mmx oggvorbis qt sdl sse static truetype xv zlib"
 
 DEPEND=">=media-libs/jpeg-6b
@@ -46,6 +46,7 @@ src_unpack() {
 	# make sure pkgconfig file is correct #53183
 	cd ${S}
 	epatch ${FILESDIR}/throw.patch
+	use sparc && epatch ${FILESDIR}/${P}-sparc.patch
 	rm -f avifile.pc
 	sed -i "/^includedir=/s:avifile$:avifile-${PV:0:3}:" avifile.pc.in
 }
