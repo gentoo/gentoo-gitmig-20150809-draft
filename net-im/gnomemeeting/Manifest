@@ -4,7 +4,7 @@ MD5 47de6c573e8eecaf15701fa92828052d gnomemeeting-0.98.0.ebuild 1712
 MD5 5d394c7a91fac2c3aeda203db87a302e gnomemeeting-0.98.5-r1.ebuild 1876
 MD5 83fb4d300b69e785e3ee4ceed568665b gnomemeeting-0.98.5.ebuild 1869
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
-MD5 163dc97de8ab04321d35e1173376b600 gnomemeeting-1.00.ebuild 1935
+MD5 8cf73e76f9a1044c83a66583ad5cffb3 gnomemeeting-1.00.ebuild 1941
 MD5 458cb44a30e47a07c5116219068ab5a3 files/digest-gnomemeeting-0.94.1 72
 MD5 c91514d9a4bf338c62c4ef78ddb97553 files/digest-gnomemeeting-0.98.0 73
 MD5 1eeb16dcd662b2829936876613f02611 files/digest-gnomemeeting-0.98.5 73
