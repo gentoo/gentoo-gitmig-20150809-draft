@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.1.ebuild,v 1.5 2004/03/16 01:32:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.1.ebuild,v 1.6 2004/04/01 14:13:09 lv Exp $
 
 inherit kde
 
@@ -73,6 +73,10 @@ src_install() {
 	else
 		rm -r ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
 	fi
+
+	# needed to fix lib64 issues on amd64, see bug #45669
+	use amd64 && ln -s ${KDEDIR}/lib ${D}/${KDEDIR}/lib64
+	
 }
 
 pkg_postinst() {
