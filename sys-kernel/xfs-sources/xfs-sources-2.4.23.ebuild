@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.23.ebuild,v 1.1 2003/12/03 19:00:18 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.23.ebuild,v 1.2 2003/12/06 16:34:59 scox Exp $
 
 IUSE="build crypt"
 
@@ -50,6 +50,7 @@ src_unpack() {
 	else
 		einfo "Cryptographic support enabled..."
 	fi
-
 	kernel_src_unpack
+	cd ${S}
+	epatch ${FILESDIR}/xconfig_target_fix.patch || die "failed to fix xconfig"
 }
