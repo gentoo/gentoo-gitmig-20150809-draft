@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r2.ebuild,v 1.1 2001/02/22 11:54:35 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r2.ebuild,v 1.2 2001/05/01 18:29:05 achim Exp $
 
 P=tetex-1.0.7
 A="teTeX-src-1.0.7.tar.gz teTeX-texmf-1.0.2.tar.gz ec-ready-mf-tfm.tar.gz teTeX-french.tar.gz"
@@ -13,12 +13,12 @@ SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/
 DEPEND="virtual/glibc sys-apps/ed
 	>=media-libs/libpng-1.0.9
     libwww? ( >=net-libs/libwww-5.3.2-r1 )
-	X? ( >=x11-base/xfree-4.0.1 )"
+	X? ( virtual/x11 )"
 
 RDEPEND="virtual/glibc
     >=sys-devel/perl-5.2
 	>=media-libs/libpng-1.0.9
-	X? ( >=x11-base/xfree-4.0.1 )"
+	X? ( virtual/x11 )"
 
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-4.05.ebuild,v 1.2 2001/04/29 19:37:22 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-4.05.ebuild,v 1.3 2001/05/01 18:29:05 achim Exp $
 
 A=linux-ar-405.tar.gz
 S=${WORKDIR}/ILINXR.install
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.adobe.com/pub/adobe/acrobatreader/unix/4.x/${A}"
 HOMEPAGE="http://www.adobe.com/products/acrobat/"
 
 DEPEND=""
-RDEPEND=">=x11-base/xfree-4.0.2"
+RDEPEND="virtual/x11"
 
 src_compile() {
 
