@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4.ebuild,v 1.1 2004/06/20 18:13:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4.ebuild,v 1.2 2004/06/24 04:31:25 agriffis Exp $
 
 IUSE="static nls bootstrap build X multilib gcj f77 objc pic hardened uclibc debug"
 
@@ -326,7 +326,7 @@ src_unpack() {
 		mkdir -p ${WORKDIR}/patch/exclude
 		mv -f ${WORKDIR}/patch/16* ${WORKDIR}/patch/exclude/
 
-		if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+		if use multilib && [ "${ARCH}" = "amd64" ]
 		then
 			mv -f ${WORKDIR}/patch/06* ${WORKDIR}/patch/exclude/
 			bzip2 -c ${FILESDIR}/gcc331_use_multilib.amd64.patch > \
@@ -394,9 +394,9 @@ src_unpack() {
 
 	[ -n "${PIE_VER}" ] && release_version="${release_version}, pie-${PIE_VER}"
 
-	# if ( use hardened && ( use x86 || use sparc || use amd64 ) )
+	# if use hardened && ( use x86 || use sparc || use amd64 )
 	# the use hardened && use sparc part breaks glibc compiling - pappy
-	if ( use hardened && ( use x86 || use amd64 ) )
+	if use hardened && ( use x86 || use amd64 )
 	then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
 		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
@@ -459,15 +459,14 @@ src_compile() {
 	# X11 support is still very experimental but enabling it is
 	# quite innocuous...  [No, gcc is *not* linked to X11...]
 	# <dragon@gentoo.org> (15 May 2003)
-	if [ -z "`use build`" -a -n "`use gcj`" -a -n "`use X`" -a \
-	     -f /usr/X11R6/include/X11/Xlib.h ]
+	if ! use build && use gcj && use X && [ -f /usr/X11R6/include/X11/Xlib.h ]
 	then
 		myconf="${myconf} --x-includes=/usr/X11R6/include --x-libraries=/usr/X11R6/lib"
 		myconf="${myconf} --enable-interpreter --enable-java-awt=xlib --with-x"
 	fi
 
 	# Multilib not yet supported
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		einfo "WARNING: Multilib support enabled. This is still experimental."
 		myconf="${myconf} --enable-multilib"
@@ -552,7 +551,7 @@ src_compile() {
 	einfo "Building GCC..."
 	# Only build it static if we are just building the C frontend, else
 	# a lot of things break because there are not libstdc++.so ....
-	if [ -n "`use static`" -a "${gcc_lang}" = "c" ]
+	if use static && [ "${gcc_lang}" = "c" ]
 	then
 		# Fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
@@ -614,7 +613,7 @@ src_install() {
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		# amd64 is a bit unique because of multilib.  Add some other paths
 		echo "LDPATH=\"${LIBPATH}:${LIBPATH}/32:${LIBPATH}/../lib64:${LIBPATH}/../lib32\"" >> \
@@ -776,7 +775,7 @@ src_install() {
 	exeinto /sbin
 	doexe ${FILESDIR}/fix_libtool_files.sh
 
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		# If using multilib, GCC has a bug, where it doesn't know where to find
 		# -lgcc_s when linking while compiling with g++ .  ${LIBPATH} is in
@@ -796,7 +795,7 @@ pkg_preinst() {
 
 	# Make again sure that the linker "should" be able to locate
 	# libstdc++.so ...
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		# Can't always find libgcc_s.so.1, make it find it
 		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
@@ -808,7 +807,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		# Can't always find libgcc_s.so.1, make it find it
 		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.13 2004/03/25 08:12:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.14 2004/06/24 04:31:25 agriffis Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -253,20 +253,20 @@ src_compile() {
 	local myconf=
 	local gcc_lang=
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		myconf="${myconf} --enable-shared"
 		gcc_lang="c,c++,f77,objc"
 	else
 		gcc_lang="c"
 	fi
-	if [ -z "`use nls`" -o "`use build`" ]
+	if ! use nls || use build
 	then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
-	if [ -n "`use java`" -a -z "`use build`" ]
+	if use java && ! use build
 	then
 		gcc_lang="${gcc_lang},java"
 	fi
@@ -276,8 +276,7 @@ src_compile() {
 	# X11 support is still very experimental but enabling it is
 	# quite innocuous...  [No, gcc is *not* linked to X11...]
 	# <dragon@gentoo.org> (15 May 2003)
-	if [ -n "`use java`" -a -n "`use X`" -a -z "`use build`" -a \
-	     -f /usr/X11R6/include/X11/Xlib.h ]
+	if use java && use X && ! use build && [ -f /usr/X11R6/include/X11/Xlib.h ]
 	then
 		myconf="${myconf} --x-includes=/usr/X11R6/include --x-libraries=/usr/X11R6/lib"
 		myconf="${myconf} --enable-interpreter --enable-java-awt=xlib --with-x"
@@ -334,7 +333,7 @@ src_compile() {
 	einfo "Building GCC..."
 	# Only build it static if we are just building the C frontend, else
 	# a lot of things break because there are not libstdc++.so ....
-	if [ -n "`use static`" -a "${gcc_lang}" = "c" ]
+	if use static && [ "${gcc_lang}" = "c" ]
 	then
 		# Fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
@@ -395,7 +394,7 @@ src_install() {
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${D}${LIBPATH}
 
@@ -473,7 +472,7 @@ src_install() {
 	fi
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		docinto /${CCHOST}
@@ -508,7 +507,7 @@ src_install() {
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
 
-		if [ -n "`use java`" ]
+		if use java
 		then
 			cd ${S}/fastjar
 			docinto ${CCHOST}/fastjar

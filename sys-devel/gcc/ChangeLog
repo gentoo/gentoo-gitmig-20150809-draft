@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.272 2004/06/20 18:13:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.273 2004/06/24 04:31:24 agriffis Exp $
+
+  24 Jun 2004; Aron Griffis <agriffis@gentoo.org> gcc-3.3-r1.ebuild,
+  gcc-3.3.2-r1.ebuild, gcc-3.3.2-r2.ebuild, gcc-3.3.2-r3.ebuild,
+  gcc-3.3.2-r4.ebuild, gcc-3.3.2-r5.ebuild, gcc-3.3.2-r6.ebuild,
+  gcc-3.3.2-r7.ebuild, gcc-3.3.2.ebuild, gcc-3.3.3-r3.ebuild,
+  gcc-3.3.3-r4.ebuild, gcc-3.3.3-r5.ebuild, gcc-3.3.3-r6.ebuild,
+  gcc-3.3.3.ebuild, gcc-3.3.3_pre20040130.ebuild,
+  gcc-3.3.3_pre20040215.ebuild, gcc-3.3.3_pre20040322.ebuild,
+  gcc-3.3.3_pre20040408-r1.ebuild, gcc-3.3.3_pre20040426.ebuild,
+  gcc-3.3.4.ebuild, gcc-3.3.ebuild, gcc-3.4.0-r6.ebuild:
+  Fix use invocation and regenerate broken manifest
 
 *gcc-3.3.4 (20 Jun 2004)
 
