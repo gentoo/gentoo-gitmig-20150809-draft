@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r10.ebuild,v 1.2 2004/07/13 18:04:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r10.ebuild,v 1.3 2004/08/01 02:18:06 geoman Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/aterm/${P}.tar.bz2
 HOMEPAGE="http://aterm.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~mips"
 
 DEPEND="media-libs/jpeg
 	media-libs/libpng

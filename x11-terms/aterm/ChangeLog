@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.38 2004/07/29 00:28:20 alexander Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.39 2004/08/01 02:18:06 geoman Exp $
+
+  31 Jul 2004; Stephen P. Becker <geoman@gentoo.org> aterm-0.4.2-r10.ebuild,
+  aterm-0.4.2-r7.ebuild:
+  r7 stable, r10 testing on mips
 
   17 Jul 2004; Alexander Plank <alexander@gentoo.org> aterm-0.4.2-r9.ebuild:
   add macos keyword
