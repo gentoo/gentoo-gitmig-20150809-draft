@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 718bd9b01897d40d98b4074e95c0ad6f rivatv-0.8.5-r2.ebuild 2536
-MD5 ce15cc766c820b7c09fc326bb5b76517 rivatv-0.8.5-r3.ebuild 1546
+MD5 71b6a86fcc50c85cd482cb7142ead820 rivatv-0.8.5-r3.ebuild 1539
 MD5 0be39e6eace0493c9141af3c18e13f5e metadata.xml 253
-MD5 e79f70ce7570f8d0b329ba5945b027c1 ChangeLog 3367
+MD5 78f7854e0a2c1ab6609380c94dcfed07 ChangeLog 3479
 MD5 5131b86f70269727631f034136b8f1fb rivatv-0.8.2.ebuild 970
 MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5-r3 64
 MD5 675738a65f00503869783cd7f88ce0b1 files/digest-rivatv-0.8.2 64
@@ -14,7 +14,7 @@ MD5 f6b7a21ad2968b561a94db1b084fad7d files/rivatv-0.8.3-configure.patch 429
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB9m9c5+pdB4IBr0URAkTSAKCwF1l3znnQHbJDkv1I63OPNqAcSACgq0Vd
-0Ah3hfzOZEh76dZD7euYci4=
-=pn6b
+iD8DBQFB+ZeD5+pdB4IBr0URAupDAKCoRfG5jxJNtUK4ERA58RMDiMHqhwCfVQCC
+6x+S6cxyV16dFGUFAaSwwlg=
+=0GiR
 -----END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.5-r3.ebuild,v 1.1 2005/01/25 16:09:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.5-r3.ebuild,v 1.2 2005/01/28 01:37:59 cardoe Exp $
 
-inherit eutils linux-mod toolchain-funcs
+inherit linux-mod toolchain-funcs
 
 S=${WORKDIR}/${P/_/-}
 DESCRIPTION="kernel driver for nVidia based cards with video-in"
