@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8.ebuild,v 1.3 2004/01/05 22:41:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8.ebuild,v 1.4 2004/01/11 14:01:56 azarah Exp $
 
 inherit eutils
 
 PATCHVER=0.1
 
-MY_PN=${PN/lib/}
-MY_PN=${MY_PN/-compat/}
-MY_P=${MY_PN}-${PV}
-S=${WORKDIR}/${MY_P}
-PATCHDIR=${WORKDIR}/patch
+MY_PN="${PN/lib/}"
+MY_PN="${MY_PN/-compat/}"
+MY_P="${MY_PN}-${PV}"
+S="${WORKDIR}/${MY_P}"
+PATCHDIR="${WORKDIR}/patch"
 DESCRIPTION="Compatibility package for old termcap-based programs"
 HOMEPAGE="http://www.catb.org/~esr/terminfo/"
 SRC_URI="http://www.catb.org/~esr/terminfo/termtypes.tc.gz
@@ -48,7 +48,10 @@ src_install () {
 	rm -rf ${D}/include
 
 	cd ${D}/lib; mv libtermcap.a ../usr/lib
-	dosym libtermcap.so.2.0.8 /lib/libtermcap.so
+	# Make sure we link to /lib/libtermcap.so, not /usr/lib/libtermcap.a,
+	# bug #4411.
+	gen_usr_ldscript libtermcap.so
+	dosym libtermcap.so.${PV} /lib/libtermcap.so
 
 	insinto /etc
 	doins ${WORKDIR}/termcap

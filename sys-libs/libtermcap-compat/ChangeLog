@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libtermcap-compat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.16 2004/01/05 22:34:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.17 2004/01/11 14:01:56 azarah Exp $
+
+  11 Jan 2004; Martin Schlemmer <azarah@gentoo.org>
+  libtermcap-compat-1.2.3-r1.ebuild, libtermcap-compat-1.2.3.ebuild,
+  libtermcap-compat-2.0.8.ebuild:
+  Make sure we link to /lib/libtermcap.so, not /usr/lib/libtermcap.a, bug #4411.
 
   05 Jan 2004; Seemant Kulleen <seemant@gentoo.org>
   libtermcap-compat-2.0.8.ebuild:
