@@ -180,6 +180,28 @@
 				</tr>
 				<tr>
 				<td align="center">
+							<!-- Begin PayPal Logo -->
+						<form action="https://www.paypal.com/cgi-bin/webscr" methd="post">
+						<input type="hidden" name="cmd" value="_xclick"/>
+						<input type="hidden" name="business" value="drobbins@gentoo.org"/>
+						<input type="hidden" name="item_name" value="Gentoo Linux Support"/>
+						<input type="hidden" name="item_number" value="1000"/>
+						<input type="hidden" name="image_url" value="http://www.gentoo.org/images/paypal.png"/>
+						<input type="hidden" name="no_shipping" value="1"/>
+						<input type="hidden" name="return" value="http://www.gentoo.org"/>
+						<input type="hidden" name="cancel_return" value="http://www.gentoo.org"/>
+						<input type="image" src="http://images.paypal.com/images/x-click-but21.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"/>
+						</form>
+						<!-- End PayPal Logo -->
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<img src="/images/line.gif"/>
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
 					<p class="alttext">Purchase RAM using this link, and a percentage
 of your sale will go towards further Gentoo Linux development.</p>
 <a href="http://www.qksrv.net/click-477620-5032687" target="_top" ><img src="http://www.qksrv.net/image-477620-5032687" width="125" height="125" alt="DDR Memory at Crucial.com" border="0"/></a>
@@ -299,7 +321,7 @@ User Docs:<br/>
 						<a class="altlink" href="/doc/desktop.html">Desktop Guide</a><br/>
 						<a class="altlink" href="/doc/portage-user.html">Portage User Guide</a><br/>
 						<font color="#ff0000">New!</font> <a class="altlink" href="/doc/openafs.html">OpenAFS Installation Guide</a><br/>
-						<a class="altlink" href="/doc/build.html">Build CD Install Guide</a><br/>
+						<a class="altlink" href="/doc/build.html">"From Source" CD Install Guide</a><br/>
 						<a class="altlink" href="/index-download.html">Binary CD Install Guide</a><br/>
 						<a class="altlink" href="/doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a><br/>
 						<br/>
@@ -367,7 +389,29 @@ User Docs:<br/>
 				<img src="/images/line.gif"/>
 				</td>
 				</tr>
-<tr>
+				<tr>
+				<td align="center">
+							<!-- Begin PayPal Logo -->
+						<form action="https://www.paypal.com/cgi-bin/webscr" methd="post">
+						<input type="hidden" name="cmd" value="_xclick"/>
+						<input type="hidden" name="business" value="drobbins@gentoo.org"/>
+						<input type="hidden" name="item_name" value="Gentoo Linux Support"/>
+						<input type="hidden" name="item_number" value="1000"/>
+						<input type="hidden" name="image_url" value="http://www.gentoo.org/images/paypal.png"/>
+						<input type="hidden" name="no_shipping" value="1"/>
+						<input type="hidden" name="return" value="http://www.gentoo.org"/>
+						<input type="hidden" name="cancel_return" value="http://www.gentoo.org"/>
+						<input type="image" src="http://images.paypal.com/images/x-click-but21.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"/>
+						</form>
+						<!-- End PayPal Logo -->
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<img src="/images/line.gif"/>
+				</td>
+				</tr>
+				<tr>
 				<td align="center">
 					<p class="alttext">Purchase RAM using this link, and a percentage
 of your sale will go towards further Gentoo Linux development.</p>
