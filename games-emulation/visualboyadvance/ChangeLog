@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/visualboyadvance
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.18 2004/09/04 09:37:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.19 2004/09/08 04:26:50 vapier Exp $
+
+*visualboyadvance-1.7.2 (07 Sep 2004)
+
+  07 Sep 2004; Mike Frysinger <vapier@gentoo.org>
+  visualboyadvance-1.7.2.ebuild:
+  Add support for GTK interface #52242 by jason perez et al.
 
   04 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
   visualboyadvance-1.7.2.ebuild:
