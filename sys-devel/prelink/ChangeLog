@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.39 2005/03/11 19:40:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.40 2005/03/13 13:46:04 azarah Exp $
+
+*prelink-20050207 (13 Mar 2005)
+
+  13 Mar 2005; Martin Schlemmer <azarah@gentoo.org>
+  +prelink-20050207.ebuild:
+  Update version. Add the blacklisted stuff from Fedora. Revamp the generation
+  of the env.d file.
 
   11 Mar 2005; Heinrich Wendel <lanius@gentoo.org> prelink-20041123.ebuild:
   stable on x86,amd64
