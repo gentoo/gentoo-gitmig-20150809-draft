@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.17 2004/10/19 21:20:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.18 2004/10/28 22:17:05 foser Exp $
+
+  29 Oct 2004; foser <foser@gentoo.org> dbus-0.22-r1.ebuild :
+  Disable mono USE, so we can mark stable
 
   21 Oct 2004; Aron Griffis <agriffis@gentoo.org> dbus-0.22-r1.ebuild:
   add ~ia64

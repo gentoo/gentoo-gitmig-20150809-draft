@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22-r1.ebuild,v 1.3 2004/10/19 21:20:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22-r1.ebuild,v 1.4 2004/10/28 22:17:05 foser Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono python
@@ -8,7 +8,7 @@ inherit debug eutils mono python
 # FIXME : fix docs
 # FIXME : qt (#65504)
 #IUSE="X gtk qt python mono doc xml2"
-IUSE="X gtk python mono xml2"
+IUSE="X gtk python xml2"
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to eachother"
 HOMEPAGE="http://www.freedesktop.org/software/dbus/"
@@ -16,7 +16,7 @@ SRC_URI="http://www.freedesktop.org/software/dbus/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
-KEYWORDS="~x86 ~ppc ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~amd64 ~ia64"
 
 RDEPEND=">=dev-libs/glib-2
 	xml2? ( >=dev-libs/libxml2-2.6 )
@@ -24,8 +24,8 @@ RDEPEND=">=dev-libs/glib-2
 	X? ( virtual/x11 )
 	gtk? ( >=x11-libs/gtk+-2 )
 	python? ( >=dev-lang/python-2.2
-		>=dev-python/pyrex-0.9 )
-	mono? ( >=dev-dotnet/mono-0.95 )"
+		>=dev-python/pyrex-0.9 )"
+#	mono? ( >=dev-dotnet/mono-0.95 )"
 #	qt? ( >=x11-libs/qt-3 )
 
 DEPEND="${RDEPEND}
@@ -59,7 +59,7 @@ src_compile() {
 		`use_enable X x` \
 		`use_enable gtk` \
 		`use_enable python` \
-		`use_enable mono` \
+		--disable-mono \
 		--disable-qt \
 		--enable-glib \
 		--enable-verbose-mode \
@@ -74,6 +74,7 @@ src_compile() {
 		${myconf} \
 		|| die
 
+#		`use_enable mono` \
 #		`use_enable qt` \
 #		`use_enable doc doxygen-docs` \
 #		`use_enable doc xml-docs` \
