@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.5.ebuild,v 1.4 2004/11/08 19:38:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.5.ebuild,v 1.5 2004/11/23 10:28:09 liquidx Exp $
 
 DESCRIPTION="Command line utilities to work with desktop menu entries"
 HOMEPAGE="http://www.freedesktop.org/software/desktop-file-utils/"
@@ -17,10 +17,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
-	make prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		localstatedir=${D}/var/lib \
-		install || die
-
+	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog NEWS README
 }
