@@ -1,6 +1,6 @@
 # ChangeLog for net-news/newspost
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/ChangeLog,v 1.6 2003/07/20 14:38:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/ChangeLog,v 1.7 2003/08/02 14:48:41 lisa Exp $
 
 *newspost-2.1.1 (20 Jul 2003)
 
@@ -16,6 +16,10 @@
   New upstream version. Closes bug #16037 - thanks to BiOCHiP for submitting.
 
 *newspost-2.0 (29 Jul 2002)
+
+  02 Aug 2003; Lisa Seelye <lisa@gentoo.org> :
+  new-news/gnewspost-0.6 has a depend on =net-news/newspost-2.0, so keep this ebuild
+  around please.
 
   29 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
