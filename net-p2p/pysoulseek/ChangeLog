@@ -1,8 +1,13 @@
 # ChangeLog for net-p2p/pysoulseek
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.32 2004/03/13 12:15:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.33 2004/03/13 12:27:34 tester Exp $
 
-  13 Mar 2004; <tester@gentoo.org> pysoulseek-1.2.4.ebuild,
+*pysoulseek-1.2.5 (13 Mar 2004)
+
+  13 Mar 2004; Olivier Crete <tester@gentoo.org> pysoulseek-1.2.5.ebuild:
+  Version bump
+
+  13 Mar 2004; Olivier Crete <tester@gentoo.org> pysoulseek-1.2.4.ebuild,
   pysoulseek-1.2.4b.ebuild:
   Remove RDEPEND=DEPEND, fixing bug #44510 report by dragonheart@gentoo.org.
 
