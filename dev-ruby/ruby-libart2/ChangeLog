@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-libart2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart2/ChangeLog,v 1.14 2004/08/18 17:18:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart2/ChangeLog,v 1.15 2004/10/05 08:16:51 usata Exp $
+
+  05 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -ruby-libart2-0.10.0.ebuild,
+  ruby-libart2-0.10.1.ebuild:
+  Stable on x86 and alpha; bug #66274.
 
 *ruby-libart2-0.10.1 (19 Aug 2004)
 
