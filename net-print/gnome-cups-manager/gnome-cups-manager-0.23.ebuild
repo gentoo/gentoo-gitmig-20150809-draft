@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.23.ebuild,v 1.7 2004/12/27 15:12:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.23.ebuild,v 1.8 2005/01/16 20:40:50 gmsoft Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha sparc ~hppa ~ia64 ~amd64 ~arm ~mips"
+KEYWORDS="x86 ~ppc ~alpha sparc hppa ~ia64 ~amd64 ~arm ~mips"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
