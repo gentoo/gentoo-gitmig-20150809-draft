@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r3.ebuild,v 1.5 2002/09/16 16:05:48 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r3.ebuild,v 1.6 2002/09/21 22:20:22 vapier Exp $
 
 # note to self: check for java deps
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.0.x/${P}.tar.gz"
 HOMEPAGE="http://www.rpm.org/"
 
 SLOT="0"
-LICENSE="GPL-2 | LGPL-2"
+LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 RDEPEND="=sys-libs/db-3.2*
