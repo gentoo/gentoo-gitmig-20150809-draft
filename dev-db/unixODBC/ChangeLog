@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/unixODBC
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.22 2004/02/11 05:24:43 rphillips Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.23 2004/02/20 02:56:58 rphillips Exp $
+
+*unixODBC-2.2.8 (19 Feb 2004)
+
+  19 Feb 2004; Ryan Phillips <rphillips@gentoo.org> unixODBC-2.2.8.ebuild:
+  version bump
 
   10 Feb 2004; root <root@gentoo.org> unixODBC-2.2.6-r1.ebuild:
   changed USE var from gtk to gnome and tweaked dependency. Fixes #34916
