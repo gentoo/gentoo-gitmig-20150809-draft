@@ -1,6 +1,12 @@
 # ChangeLog for app-text/pdfjam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.5 2005/01/01 16:29:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.6 2005/02/21 13:29:45 usata Exp $
+
+*pdfjam-1.20 (21 Feb 2005)
+
+  21 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> +pdfjam-1.20.ebuild:
+  Version bumped; bug #82688. Thanks to Till Maas <opensource@gmx.net> for
+  fixing manpages.
 
   27 Nov 2004; <pclouds@gentoo.org> pdfjam-1.10.ebuild,+metadata.xml:
   Marked 1.10 stable on x86. Added missing metadata.xml

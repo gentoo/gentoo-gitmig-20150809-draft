@@ -1,4 +1,6 @@
-MD5 e1d6448f961aa51069ad899d1707ec02 ChangeLog 672
+MD5 37e8367c9a561e2a2427510c5af5e47d ChangeLog 860
 MD5 9aae986f7f3cf86f3ee8d3aeeae00410 pdfjam-1.10.ebuild 830
 MD5 ccf9ea2ff9f57801ca037faea678a353 metadata.xml 165
+MD5 79352ad98311283430d0b5b9d1f148c6 pdfjam-1.20.ebuild 878
 MD5 d84422e37203b5db8f34d67021f04d0a files/digest-pdfjam-1.10 59
+MD5 2526f2c4a21ee7e0b997ed7a0ce4ea18 files/digest-pdfjam-1.20 59
