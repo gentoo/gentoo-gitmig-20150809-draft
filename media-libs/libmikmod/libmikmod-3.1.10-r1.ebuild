@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10-r1.ebuild,v 1.7 2003/11/23 20:36:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10-r1.ebuild,v 1.8 2003/11/24 10:41:18 seemant Exp $
 
 inherit gnuconfig
 inherit flag-o-matic
@@ -9,8 +9,8 @@ IUSE="oss esd alsa"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library to play a wide range of module formats"
-SRC_URI="http://www.mikmod.org/files/libmikmod/${P}.tar.gz"
 HOMEPAGE="http://mikmod.raphnet.net/"
+SRC_URI="${HOMEPAGE}/files/${P/-/_}.tar.gz"
 
 DEPEND=">=media-libs/audiofile-0.2.3
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )

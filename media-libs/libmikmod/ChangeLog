@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.13 2003/11/23 20:36:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.14 2003/11/24 10:41:18 seemant Exp $
+
+  24 Nov 2003; Seemant Kulleen <seemant@gentoo.org>
+  libmikmod-3.1.10-r1.ebuild, libmikmod-3.1.10.ebuild:
+  SRC_URI fix
 
   23 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
   libmikmod-3.1.10-r1.ebuild, libmikmod-3.1.10.ebuild:
