@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.96 2003/08/12 01:55:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.97 2003/08/20 08:27:07 robbat2 Exp $
+
+  20 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  add metadata.xml
 
 *mod_php-4.3.3_rc3 (11 Aug 2003)
 
