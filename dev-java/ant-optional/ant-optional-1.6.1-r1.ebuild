@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.1-r1.ebuild,v 1.1 2004/03/17 04:05:37 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.1-r1.ebuild,v 1.2 2004/03/17 04:08:57 zx Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://ant.apache.org"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-DEPEND="=dev-java/ant-${PV}
+DEPEND="=dev-java/ant-${PV}-r1
 	>=dev-java/java-config-1.2
 	>=dev-java/log4j-1.2.8
 	>=dev-java/xerces-2.6.1
