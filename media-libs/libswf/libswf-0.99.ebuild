@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/libswf-0.99.ebuild,v 1.16 2004/07/01 08:01:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/libswf-0.99.ebuild,v 1.17 2004/07/14 20:16:26 agriffis Exp $
 
 S=${WORKDIR}/dist
 DESCRIPTION="A library for flash movies"
@@ -10,6 +10,7 @@ HOMEPAGE="ftp://ftp.sgi.com/sgi/graphics/grafica/flash/index.html"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 -sparc ppc hppa -mips amd64"
+IUSE=""
 
 DEPEND="virtual/libc
 	app-arch/unzip"

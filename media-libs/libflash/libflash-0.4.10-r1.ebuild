@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/libflash-0.4.10-r1.ebuild,v 1.14 2004/06/24 23:09:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/libflash-0.4.10-r1.ebuild,v 1.15 2004/07/14 20:07:45 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.directfb.org/download/contrib/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64"
+IUSE=""
 
 DEPEND="media-libs/jpeg
 	sys-libs/zlib"

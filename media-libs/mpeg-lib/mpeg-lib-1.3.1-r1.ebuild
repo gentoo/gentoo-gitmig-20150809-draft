@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mpeg-lib/mpeg-lib-1.3.1-r1.ebuild,v 1.20 2004/07/01 08:01:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mpeg-lib/mpeg-lib-1.3.1-r1.ebuild,v 1.21 2004/07/14 20:19:46 agriffis Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}
@@ -13,6 +13,7 @@ DEPEND="virtual/libc"
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 mips"
+IUSE=""
 
 src_compile() {
 
