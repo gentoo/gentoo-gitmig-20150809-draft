@@ -1,6 +1,7 @@
 MD5 5bf3ce68ed1923dc3a3996a58987a360 metadata.xml 247
+MD5 521638d1d667beac89a02efc9e35450f mmsv2-1.0.1.ebuild 1964
 MD5 a5491c388c5d4e58aa7be910390f600c mmsv2-1.0.ebuild 1993
-MD5 9877c34b76bbb545d88f92aa9e0d0ddf ChangeLog 744
+MD5 2760548ae68e6fe86509beab7f8a8c32 ChangeLog 860
 MD5 6fa7c28b3f99e78eb31cd4c997093c6c mmsv2-0.93.ebuild 2052
 MD5 59e51c44d90764df633e8acb7531acea files/digest-mmsv2-1.0 63
 MD5 930867e107776e2dbea0db0152cebbf0 files/digest-mmsv2-0.93 64
@@ -8,3 +9,4 @@ MD5 9135587faf412d13acfbabc90302583c files/vgagl-compile-fix 633
 MD5 c37b9e69a333c9c7eaead7353ea5ee9a files/input-lirc.diff 544
 MD5 f4458312970b2d8e986d84a9d05a3a22 files/input-keyboard.diff 547
 MD5 15f841e3a249b011bec2ecda0ee6c223 files/config.diff 628
+MD5 fd3551be026560612608371ed357264a files/digest-mmsv2-1.0.1 65

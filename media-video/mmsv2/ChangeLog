@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mmsv2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.4 2005/03/01 22:19:19 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.5 2005/03/28 18:39:28 arj Exp $
+
+*mmsv2-1.0.1 (28 Mar 2005)
+
+  28 Mar 2005; Anders Rune Jensen <arj@gentoo.org> +mmsv2-1.0.1.ebuild:
+  New version.
 
   01 Mar 2005; Anders Rune Jensen <arj@gentoo.org> mmsv2-1.0.ebuild:
   Fix compilation with svga enabled. Found by Andreas.
