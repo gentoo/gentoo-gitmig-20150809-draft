@@ -216,3 +216,4 @@ move net-www/opera www-client/opera
 move sys-apps/cpuspeedy sys-power/cpuspeedy
 move sys-apps/acpid sys-power/acpid
 move sys-apps/mtx sys-block/mtx
+move net-www/netscape-communicator www-client/netscape-communicator
