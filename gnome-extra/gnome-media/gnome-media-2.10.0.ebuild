@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.10.0.ebuild,v 1.1 2005/03/09 04:53:37 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.10.0.ebuild,v 1.2 2005/03/21 22:44:13 foser Exp $
 
 inherit gnome2
 
@@ -27,6 +27,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=media-libs/gstreamer-0.8
 	>=media-libs/gst-plugins-0.8.2
 	>=gnome-extra/nautilus-cd-burner-2.9
+	>=media-plugins/gst-plugins-cdparanoia-0.8
 	oggvorbis? ( >=media-plugins/gst-plugins-vorbis-0.8.2
 		>=media-plugins/gst-plugins-ogg-0.8.2 )
 	mad? ( >=media-plugins/gst-plugins-mad-0.8.2 )"
