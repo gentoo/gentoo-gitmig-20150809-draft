@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udftools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.4 2004/07/01 21:51:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.5 2004/11/06 20:17:44 dsd Exp $
+
+*udftools-1.0.0b-r3 (06 Nov 2004)
+
+  06 Nov 2004; <dsd@gentoo.org> metadata.xml,
+  +files/cdrwtool-linux2.6-fix.patch, +udftools-1.0.0b-r3.ebuild:
+  New maintainer. Version bump and pktsetup patch thanks to Rafal Dejewski
+  <r2dtu@wp.pl> and Daniel Webert <rockoo@rockoo.homelinux.org> in bug #49760.
+  Add a cdrwtool fix for recent 2.6 kernels.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   udftools-1.0.0b.ebuild:

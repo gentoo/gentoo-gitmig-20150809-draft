@@ -1,0 +1,16 @@
+Fix CD blanking for kernels 2.6.8 and newer
+(write access is required to perform blanking commands)
+
+ - Daniel Drake <dsd@gentoo.org>
+
+--- udftools-1.0.0b3/cdrwtool/main.c.orig	2004-11-06 16:39:36.651892368 +0000
++++ udftools-1.0.0b3/cdrwtool/main.c	2004-11-06 16:39:48.184139200 +0000
+@@ -242,7 +242,7 @@
+ 	udf_init_disc(&disc.udf_disc);
+ 	strcpy(filename, CDROM_DEVICE);
+ 	parse_args(argc, argv, &disc, filename);
+-	if ((fd = open(filename, O_RDONLY | O_NONBLOCK)) < 0)
++	if ((fd = open(filename, O_RDWR | O_NONBLOCK)) < 0)
+ 	{
+ 		perror("open cdrom device");
+ 		return fd;
