@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-MakeMaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.39 2003/12/26 01:18:43 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.40 2003/12/29 03:07:30 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org>
+  ExtUtils-MakeMaker-6.20.ebuild:
+  Move to mips stable (~mips -> mips)
 
 *ExtUtils-MakeMaker-6.21 (25 Dec 2003)
 
