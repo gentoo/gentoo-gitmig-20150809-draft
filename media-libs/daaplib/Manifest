@@ -1,4 +1,5 @@
-MD5 15a77c6cf29eab1e6248f1bd373d9896 ChangeLog 528
-MD5 c6e52ef5c18cec7d7197de365421eca3 daaplib-0.1.1a.ebuild 1055
+MD5 fb2e5bdc60976ee98eeb68742ab8df31 ChangeLog 706
+MD5 768f7371992bec18b3c428a5bc06ebff daaplib-0.1.1a.ebuild 915
 MD5 0589e7641e96ea672f142cb3fd282e8b metadata.xml 397
+MD5 2ec77395a6d005da75eb0f9a9f3650dd files/daaplib-0.1.1a-Makefile 930
 MD5 c4e1bf55fa774a3c2698e7e9bd20fa0a files/digest-daaplib-0.1.1a 62
