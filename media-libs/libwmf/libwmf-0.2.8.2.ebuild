@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.2.ebuild,v 1.2 2003/12/09 17:51:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.2.ebuild,v 1.3 2004/01/07 14:42:58 gustavoz Exp $
 
 inherit libtool
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha amd64 hppa"
+KEYWORDS="x86 ppc alpha amd64 hppa ~sparc"
 IUSE="jpeg X"
 
 DEPEND="virtual/ghostscript
