@@ -39,13 +39,4 @@ ACCEPT_KEYWORDS="arm"
 
 FEATURES="sandbox sfperms strict nodoc noinfo noman autoconfig"
 #FEATURES="${FEATURES} userpriv usersandbox"
-PORTDIR=/usr/portage/
 PKGDIR=${PORTDIR}/packages/${CHOST}/
-
-# arm little endian (netwinder)
-#CFLAGS="-mcpu=strongarm110 -Os -pipe"
-#CHOST="armv4l-pc-linux-uclibc"
-
-# arm big endian (nslu2)
-#CFLAGS="-mcpu=armeb -Os -pipe"
-#CHOST="armveb-pc-linux-uclibc"
