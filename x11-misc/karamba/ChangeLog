@@ -1,9 +1,6 @@
 # ChangeLog for x11-misc/karamba
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.10 2004/06/28 19:57:52 agriffis Exp $
-
-  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> karamba-0.17.ebuild:
-  sync IUSE
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.11 2004/06/28 19:59:34 agriffis Exp $
 
   20 Jun 2004; Ian Leitch <port001@gentoo.org> karamba-0.17-r1.ebuild:
   Added IUSE
