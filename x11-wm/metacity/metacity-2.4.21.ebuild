@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.21.ebuild,v 1.1 2003/01/31 02:39:40 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.21.ebuild,v 1.2 2003/01/31 02:42:52 foser Exp $
 
 inherit gnome2
 
@@ -11,8 +11,9 @@ SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
+# sharp gtk dep is for a certain speed patch
 RDEPEND="virtual/x11
-	>=x11-libs/gtk+-2
+	>=x11-libs/gtk+-2.2.0-r1
 	>=gnome-base/gconf-1.2
 	>=gnome-base/libglade-2
 	>=x11-libs/startup-notification-0.4"
