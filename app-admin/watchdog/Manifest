@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 55d8482736018858f46118f8636198c6 ChangeLog 1243
-MD5 22ccd403860117b3e9763f4a2e3027b7 watchdog-5.2.ebuild 1333
-MD5 4ccfbdc253591500153eef8f90a3865e watchdog-5.2.4.ebuild 1389
+MD5 8e9dd75d119939782dbed0ca726f63ad watchdog-5.2.ebuild 1328
+MD5 18f2d6af01f48b3d4780e5fbb85add1a watchdog-5.2.4.ebuild 1396
+MD5 757b9ad893b290e7f0e8281d87970b1e files/watchdog.conf.d 273
 MD5 b8a1e49beda941e07c53020b8fb7a1a9 files/digest-watchdog-5.2 64
 MD5 96232179b747a1bcacf83442f9217ec4 files/5.2-alpha.patch 329
-MD5 a9e8cf348af5828fbdc72e8c1a3bb730 files/5.2-sundries.patch 874
-MD5 ba2c02768a2e772c14e6332dd6b2e65e files/5.2.4-sundries.patch 752
-MD5 0f333f39bc92c0a210e813ee338da9e7 files/digest-watchdog-5.2.4 71
 MD5 9295e082000d8e9585828e14b9247524 files/watchdog 660
-MD5 757b9ad893b290e7f0e8281d87970b1e files/watchdog.conf.d 273
+MD5 a9e8cf348af5828fbdc72e8c1a3bb730 files/5.2-sundries.patch 874
+MD5 0f333f39bc92c0a210e813ee338da9e7 files/digest-watchdog-5.2.4 71
+MD5 ba2c02768a2e772c14e6332dd6b2e65e files/5.2.4-sundries.patch 752
 MD5 e3a3640b31e70f2956ed8ed4bb39f04a files/5.2.4-uclibc.patch 312
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBjHpbHTu7gpaalycRAvwjAJ9T414cZG4G8GdP7LQoZqteprEkdACgngj5
+FceHZ0hRvr7h3iM/R1H3uWc=
+=dxtG
+-----END PGP SIGNATURE-----
