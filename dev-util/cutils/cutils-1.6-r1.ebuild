@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/cutils-1.6-r1.ebuild,v 1.6 2004/11/06 15:52:46 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/cutils-1.6-r1.ebuild,v 1.7 2004/12/05 15:51:08 pyrania Exp $
+
+inherit eutils
 
 DESCRIPTION="C language utilities"
 HOMEPAGE="http://www.sigala.it/sandro/software.html#cutils"

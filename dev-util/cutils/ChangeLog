@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.9 2004/11/06 15:52:46 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.10 2004/12/05 15:51:08 pyrania Exp $
+
+  05 Dec 2004; Markus Nigbur <pyrania@gentoo.org> cutils-1.6-r1.ebuild:
+  Inherit eutils.
 
   06 Nov 2004; <pyrania@gentoo.org> cutils-1.6-r1.ebuild:
   Hooray for epatch.
