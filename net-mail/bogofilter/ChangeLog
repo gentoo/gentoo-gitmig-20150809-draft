@@ -1,13 +1,19 @@
 # ChangeLog for net-mail/bogofilter
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/ChangeLog,v 1.27 2004/02/10 16:51:30 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/ChangeLog,v 1.28 2004/02/10 18:56:09 lostlogic Exp $
 
 *bogofilter-0.17.1 (10 Feb 2004)
+*bogofilter-0.16.4 (10 Feb 2004)
 
   10 Feb 2004; Brandon Low <lostlogic@gentoo.org> bogofilter-0.15.13.1.ebuild,
   bogofilter-0.16.4.ebuild, bogofilter-0.17.1.ebuild:
   Fix keyword issues by making depend _really_ special, and add 2 new versions.
   0.16.4 should be moved to stable cautiously as it deprecates many features
+  BTW, most of this work was not done by me, but rather by: 
+
+  Torsten Veller <bugs@veller.net>, many thanks.
+
+  Closed bugs: 36452, 37017, 41086.
 
   07 Feb 2004; Lars Weiler <pylon@gentoo.org> bogofilter-0.15.13.1.ebuild:
   stable on ppc
