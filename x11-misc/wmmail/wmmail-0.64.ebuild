@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmmail/wmmail-0.64.ebuild,v 1.5 2002/08/02 17:54:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmmail/wmmail-0.64.ebuild,v 1.6 2002/08/14 23:44:15 murphy Exp $
 
 DESCRIPTION="Mail checking dock applet for WindowMaker (mbox, POP3, IMAP, mh, and MailDir)"
 HOMEPAGE="http://www.eecg.toronto.edu/cgi-bin/cgiwrap/chanb/index.cgi?wmmail"
 WMMAIL_NAME="WMMail.app"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 SRC_URI="http://www.eecg.utoronto.ca/~chanb/WMMail.app/WMMail.app-${PV}.tar.gz"
 S="${WORKDIR}/WMMail.app-${PV}"

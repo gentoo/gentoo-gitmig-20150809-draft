@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
 HOMEPAGE="http://www.arphic.com.tw/"
 LICENSE="Arphic"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/x11
 	x11-misc/ttmkfdir"

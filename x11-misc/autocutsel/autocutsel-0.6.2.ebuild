@@ -6,7 +6,7 @@ DESCRIPTION="Synchronise the two copy/paste buffers mainly used by X application
 HOMEPAGE="http://www.lepton.fr/tools/autocutsel/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/glibc virtual/x11"
 RDEPEND=${DEPEND}

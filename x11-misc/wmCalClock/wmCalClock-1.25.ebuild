@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmCalClock/wmCalClock-1.25.ebuild,v 1.4 2002/07/11 06:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmCalClock/wmCalClock-1.25.ebuild,v 1.5 2002/08/14 23:44:15 murphy Exp $
 
 S=${WORKDIR}/${P}/Src
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml"
 DEPEND="x11-base/xfree"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	emake || die

@@ -12,7 +12,7 @@ SRC_URI="http://www.cse.unsw.edu.au/~flam/repository/c/gkrellm/${P}.tar.gz
 HOMEPAGE="http://www.cse.unsw.edu.au/~flam/programs/gkrellweather.html"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=app-admin/gkrellm-1.2.9
 	>=net-misc/wget-1.5.3"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ASFiles/ASFiles-1.0.ebuild,v 1.6 2002/07/22 13:38:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ASFiles/ASFiles-1.0.ebuild,v 1.7 2002/08/14 23:44:14 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NeXTish filemanager, hacked from OffiX"
@@ -8,7 +8,7 @@ SRC_URI="http://www.tigr.net/afterstep/download/ASFiles/ASFiles-1.0.tar.gz"
 HOMEPAGE="http://www.tigr.net/afterstep/list.pl"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=x11-wm/afterstep-1.8.8
 		>=x11-libs/dnd-1.1"

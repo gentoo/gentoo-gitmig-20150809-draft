@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-0.8.ebuild,v 1.3 2002/07/08 21:31:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-0.8.ebuild,v 1.4 2002/08/14 23:44:15 murphy Exp $
 
 MY_P=${P/./}
 S=${WORKDIR}/${MY_P}
@@ -9,7 +9,7 @@ SRC_URI="http://www.selena.kherson.ua/xvadim/${P}.tar.bz2"
 HOMEPAGE="http://www.selena.kherson.ua/xvadim"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/x11
 	x11-libs/qt

@@ -10,6 +10,6 @@ SRC_URI="http://download.berlios.de/kgamma/${P}.tar.gz"
 HOMEPAGE="http://kgamma.berlios.de/index2.php"
 LICENSE="GPL-2"
 
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 #myconf="$myconf --enable-final"

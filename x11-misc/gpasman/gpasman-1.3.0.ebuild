@@ -1,6 +1,6 @@
 # Copyrigth 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.3.0.ebuild,v 1.5 2002/08/02 17:54:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.3.0.ebuild,v 1.6 2002/08/14 23:44:15 murphy Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ SRC_URI="http://gpasman.nl.linux.org/${P}.tar.gz"
 HOMEPAGE="http://gpasman.nl.linux.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 RDEPEND="${DEPEND}"

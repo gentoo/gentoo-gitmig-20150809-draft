@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmmon/wmmon-1.0_beta2-r1.ebuild,v 1.6 2002/08/02 17:54:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmmon/wmmon-1.0_beta2-r1.ebuild,v 1.7 2002/08/14 23:44:15 murphy Exp $
 S="${WORKDIR}/wmmon.app"
 
 DESCRIPTION="Dockable system resources monitor applette for WindowMaker"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.bensinclair.com/dockapp/"
 DEPEND="x11-base/xfree x11-wm/WindowMaker virtual/glibc"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {
 	unpack "${A}"

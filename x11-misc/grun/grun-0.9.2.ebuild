@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.6 2002/08/05 09:38:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.7 2002/08/14 23:44:15 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A GTK/X11 application launcher with nice features such as a history"
@@ -16,7 +16,7 @@ SRC_URI="http://ftp.us.debian.org/debian/pool/main/g/grun/grun_0.9.2.orig.tar.gz
 HOMEPAGE="http://www.geocities.com/ResearchTriangle/Facility/1468/sg/grun."
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 # The dependencies following the gentoo policy as suggested by gbevin
 DEPEND="=dev-libs/glib-1.2*

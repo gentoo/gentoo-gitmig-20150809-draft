@@ -8,7 +8,7 @@ HOMEPAGE="http://www.on.cs.keio.ac.jp/~yasu/jp_fonts.html"
 
 LICENSE="kochi-fonts"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=xfree-4.2.0-r9
 	>=ttmkfdir-0.0-r1"

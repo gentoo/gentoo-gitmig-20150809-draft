@@ -10,7 +10,7 @@ SRC_URI="http://gkrellm.luon.net/files/${MY_P}-${PV}.tar.gz"
 HOMEPAGE="http://gkrellm.luon.net/volume.phtml"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=app-admin/gkrellm-1.0.6"
 

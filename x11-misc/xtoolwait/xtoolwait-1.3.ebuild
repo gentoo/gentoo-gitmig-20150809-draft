@@ -8,7 +8,7 @@ DESCRIPTION="Xtoolwait notably decreases the startup time of an X session"
 DEPEND="virtual/x11"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	xmkmf

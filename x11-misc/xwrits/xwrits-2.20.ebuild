@@ -6,7 +6,7 @@ SRC_URI="http://www.lcdf.org/xwrits/xwrits-2.20.tar.gz"
 HOMEPAGE="http://www.lcdf.org/xwrits/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="x11-base/xfree"
 
