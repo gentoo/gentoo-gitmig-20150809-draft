@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 b38502c2e8035e7f49ccf7e716b7e431 mythmusic-0.16.ebuild 1187
-MD5 b2bf65701f41cda138bb52bfa7b37246 ChangeLog 4460
-MD5 0f77d836dd4ffdc5900701f79396c7cb mythmusic-0.17.ebuild 1201
+MD5 14e754e4378f378f9f5d2a2f001ea86f ChangeLog 4617
+MD5 85776acd61e74ad93318ad93b9eb2802 mythmusic-0.17.ebuild 1201
 MD5 0c4f0d4e54c834f25ac644f8eed3b589 files/digest-mythmusic-0.17 67
 MD5 8042c0bc391d60a2d3842e9956cb6ad7 files/digest-mythmusic-0.16 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDNVa5+pdB4IBr0URAtthAKChwIPMSOffeX31QlCFu6DP7bB9rgCfSfNC
+ujAAad15MzDcpxHVNF3NJPo=
+=DFFW
+-----END PGP SIGNATURE-----
