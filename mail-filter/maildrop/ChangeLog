@@ -1,10 +1,10 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.10 2004/09/20 07:40:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.11 2004/09/20 07:43:01 ticho Exp $
 
   20 Sep 2004; Andrej Kacian <ticho@gentoo.org> maildrop-1.7.0-r1.ebuild,
   maildrop-1.7.0-r2.ebuild, maildrop-1.7.0.ebuild:
-  Updated homepage for 1.7.0 ebuilds. Closes #64577, reported by Daniel Webert
+  Updated homepage Closes #64577, reported by Daniel Webert
   <rockoo@rockoo.homelinux.org>.
 
 *maildrop-1.7.0-r2 (28 Aug 2004)
