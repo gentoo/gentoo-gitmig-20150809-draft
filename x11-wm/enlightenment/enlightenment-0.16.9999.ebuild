@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.3 2004/06/25 03:13:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.4 2004/06/28 23:00:38 agriffis Exp $
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e16/e"
@@ -12,13 +12,14 @@ HOMEPAGE="http://www.enlightenment.org/"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64"
-IUSE="nls esd gnome kde"
+IUSE="esd nls"
 
 DEPEND=">=media-libs/fnlib-0.5
 	esd? ( >=media-sound/esound-0.2.19 )
 	=media-libs/freetype-1*
 	>=gnome-base/libghttp-1.0.9-r1
-	>=media-libs/imlib-1.9.8"
+	>=media-libs/imlib-1.9.8
+	>=sys-apps/sed-4"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/e16/e

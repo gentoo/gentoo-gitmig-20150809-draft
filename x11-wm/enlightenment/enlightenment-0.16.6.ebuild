@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.12 2004/06/25 03:13:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.13 2004/06/28 23:00:38 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/enlightenment/${P/_/-}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64"
-IUSE="nls esd gnome kde"
+IUSE="esd nls"
 
 DEPEND=">=media-libs/fnlib-0.5
 	esd? ( >=media-sound/esound-0.2.19 )
