@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/dir2ogg
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.1 2004/10/11 23:13:38 pkdawson Exp $
+
+*dir2ogg-0.8 (11 Oct 2004)
+
+  11 Oct 2004; Patrick Dawson <pkdawson@gentoo.org> dir2ogg-0.8.ebuild:
+  Initial import. Closes bug #61435. Thanks to Darren Kirby.
+
