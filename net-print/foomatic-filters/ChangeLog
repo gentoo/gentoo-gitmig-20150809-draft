@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.23 2004/09/19 15:51:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.24 2004/09/22 07:41:30 kumba Exp $
+
+  22 Sep 2004; Joshua Kinard <kumba@gentoo.org> foomatic-filters-3.0.2.ebuild:
+  Marked stable on mips.
 
   19 Sep 2004; Danny van Dyk <kugelfang@gentoo.org>
   foomatic-filters-3.0.2.ebuild:
