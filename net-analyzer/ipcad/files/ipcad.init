@@ -1,0 +1,30 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -f /etc/ipcad.conf ] ; then
+		eerror "No /etc/ipcad.conf file exists!"
+		return 1
+	fi
+	
+	return 0
+}
+
+start() {
+	# Comment out the following line to get faster startups
+	checkconfig || return 1
+
+	ebegin "Starting ipcad"
+	start-stop-daemon --start --quiet --exec /usr/sbin/ipcad -- ${IPCAD_OPTS} >/dev/null
+	eend $?
+}
+
+stop () {
+	ebegin "Stopping ipcad"
+	start-stop-daemon --stop --quiet \
+		--pidfile=/var/ipcad/run/ipcad.pid --retry 20
+	eend $?
+}

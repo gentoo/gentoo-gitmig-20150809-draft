@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/ipcad
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.1 2004/07/25 15:25:25 eldad Exp $
+
+*ipcad-3.6.2 (25 Jul 2004)
+
+  25 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  +files/ipcad.conf.d, +files/ipcad.init, +ipcad-3.6.2.ebuild:
+  Initial ebuild. Thanks to Shernakov Artem <artemsh@permonline.ru>. Closes
+  #53695.
+
