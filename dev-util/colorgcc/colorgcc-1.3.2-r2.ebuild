@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r2.ebuild,v 1.4 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r2.ebuild,v 1.5 2003/10/27 09:01:01 aliz Exp $
 
 IUSE=""
 
@@ -9,8 +9,8 @@ inherit eutils
 S="${WORKDIR}/${P}"
 DESCRIPTION="Adds color to gcc output"
 HOMEPAGE="http://packages.debian.org/testing/devel/colorgcc.html"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/${PN}/${PN}_${PV}.orig.tar.gz
-http://ftp.debian.org/debian/pool/main/c/${PN}/${PN}_${PV}-4.1.diff.gz"
+SRC_URI="mirror://debian/pool/main/c/${PN}/${PN}_${PV}.orig.tar.gz
+	mirror://debian/pool/main/c/${PN}/${PN}_${PV}-4.1.diff.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
