@@ -1,0 +1,32 @@
+===================================================================
+RCS file: /home2/webcvs/mirror/kdenetwork/kmail/Attic/kmcomposewin.cpp,v
+retrieving revision 1.627.2.11
+retrieving revision 1.627.2.12
+diff -u -p -r1.627.2.11 -r1.627.2.12
+--- kmail/kmcomposewin.cpp	2003/03/08 16:49:14	1.627.2.11
++++ kmail/kmcomposewin.cpp	2003/03/24 20:23:01	1.627.2.12
+@@ -1857,10 +1857,7 @@ Kpgp::Result KMComposeWin::composeMessag
+     innerBodyPart.setBodyEncoded( body );
+     DwBodyPart* innerDwPart = theMessage.createDWBodyPart( &innerBodyPart );
+     innerDwPart->Assemble();
+-    // insert an empty line before the first body part because some broken MTAs
+-    // seem to add an empty line if it's not present and this would break the
+-    // signature (cf. bug 55629)
+-    body  = "\n--";
++    body  = "--";
+     body +=     boundaryCStr;
+     body +=                 "\n";
+     body += innerDwPart->AsString().c_str();
+@@ -2631,11 +2628,7 @@ kdDebug() << "**************************
+ 
+       QCString mainStr;
+ 
+-      // insert an empty line before the first body part because some broken
+-      // MTAs seem to add an empty line if it's not present and this would
+-      // break the signature of a message which contains this message as
+-      // attachment (cf. bug 55629)
+-      mainStr  = "\n--";
++      mainStr  = "--";
+       mainStr +=       boundaryCStr;
+ 
+       if( structuring.data.includeCleartext && (0 < clearCStr.length()) ) {

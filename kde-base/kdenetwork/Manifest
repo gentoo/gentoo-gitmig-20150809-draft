@@ -4,14 +4,14 @@ MD5 3eae1afd41911bfee40a760b1bf8568a kdenetwork-3.0.5a.ebuild 967
 MD5 ce60f0025c07b1748b3b6254be3858c2 kdenetwork-3.1.ebuild 920
 MD5 960d3fd45443a3d76d0e244c9b3833b3 kdenetwork-3.1.1.ebuild 880
 MD5 7ee307959ba5ec560a0ad4044842f832 kdenetwork-3.0.4-r1.ebuild 1058
-MD5 d076d96395aa0b0006214d7d79017453 kdenetwork-3.1.1-r1.ebuild 997
-MD5 0574cd343f13f18977de6c6e816c857d ChangeLog 4967
+MD5 564a8dc3457bef3cd777102cc10934d7 kdenetwork-3.1.1-r1.ebuild 1001
+MD5 ad757abcaae03a2838cfc3017c79a3f0 ChangeLog 5257
 MD5 8cfc35635879b3b4fc158d2efa9ec0bb files/lisa 559
 MD5 86ce22554d0bf8df52bc6fe7425184a3 files/reslisa 570
 MD5 5eff7873bc0ddc7248a5c0a3d44ba2db files/digest-kdenetwork-2.2.2-r2 139
 MD5 3939e85ee43aba114cc3ece4194145b6 files/reslisa.conf 340
 MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
-MD5 ea32ef78624e86438c87a6cd5654183b files/kdenetwork-3.1.1-kmail-sig.diff 1464
+MD5 1b93352391186816969c66a339688062 files/kdenetwork-3.1.1-kmail-sig.diff 1442
 MD5 450c5fbda500f395c2514d2fb8f6a5b4 files/kdenetwork-3.1-libxml2-2.5.2.diff 559
 MD5 c97042204651bd92a0d0ccff4d6d0467 files/digest-kdenetwork-3.0.5a 71
 MD5 f67a62b0d07393c5fe1e38380eee7225 files/digest-kdenetwork-3.0.5b 71
