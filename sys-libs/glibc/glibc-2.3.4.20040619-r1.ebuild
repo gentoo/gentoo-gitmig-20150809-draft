@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.16 2004/09/10 16:48:21 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.17 2004/09/13 04:05:31 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -333,6 +333,7 @@ do_arch_arm_patches() {
 	cd ${S};
 
 	# Any needed patches for arm go here
+	epatch ${FILESDIR}/2.3.4/${PN}-2.3.4-arm-ioperm.patch
 }
 
 
