@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0.ebuild,v 1.2 2004/03/23 03:27:14 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0.ebuild,v 1.3 2004/05/25 19:23:45 st_lim Exp $
 
 inherit java-pkg
 
@@ -37,7 +37,7 @@ src_unpack() {
 
 src_compile() {
 	local antflags="jar"
-	use jikes && antflags="{antflags} -Dbuild.compiler=jikes"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "compile problem"
 }
 
