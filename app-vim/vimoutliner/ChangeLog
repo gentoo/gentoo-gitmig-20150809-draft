@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/vimoutliner
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/ChangeLog,v 1.1 2004/11/28 13:17:08 ciaranm Exp $
+
+*vimoutliner-0.3.3 (28 Nov 2004)
+
+  28 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +vimoutliner-0.3.3.ebuild:
+  New package, as requested in bug #67261
+
