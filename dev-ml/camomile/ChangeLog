@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ulex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.1 2004/08/08 08:51:41 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.2 2004/08/09 18:48:39 mr_bones_ Exp $
+
+  09 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> camomile-0.5.3.ebuild:
+  header fix; tidy
 
 *camomile-0.5.3 (08 Aug 2004)
 
