@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.2 2005/03/24 01:28:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.3 2005/03/24 21:07:01 agriffis Exp $
+
+*mozilla-launcher-1.30 (24 Mar 2005)
+
+  24 Mar 2005; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-launcher-1.28.ebuild, -mozilla-launcher-1.29.ebuild,
+  +mozilla-launcher-1.30.ebuild:
+  Don't call openURL() without *something* between the parens #86458
 
 *mozilla-launcher-1.29 (24 Mar 2005)
 
