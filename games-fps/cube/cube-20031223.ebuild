@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20031223.ebuild,v 1.1 2004/01/05 05:30:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20031223.ebuild,v 1.2 2004/01/29 07:44:34 vapier Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/cube/${MY_P}.zip"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc hppa"
 
 DEPEND="virtual/opengl
 	media-libs/libsdl
