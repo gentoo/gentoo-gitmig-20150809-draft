@@ -1,0 +1,14 @@
+diff -ur yammi-1.0-old/yammi/yammimodel.cpp yammi-1.0/yammi/yammimodel.cpp
+--- yammi-1.0-old/yammi/yammimodel.cpp	2004-06-16 10:57:18.860199808 -0400
++++ yammi-1.0/yammi/yammimodel.cpp	2004-06-16 10:58:01.756678552 -0400
+@@ -642,6 +642,10 @@
+   d.setNameFilter(filePattern);
+ 	d.setSorting( QDir::Name );
+ 	const QFileInfoList* list = d.entryInfoList();
++	if (!list) {
++		cerr << "ERROR: Skipping directory " << path << "\n";
++		return true;
++	}
+ 	int filesToScan=list->count();
+ 	progress->setTotalSteps(filesToScan);
+ 	QFileInfoListIterator it( *list );								      // create list iterator

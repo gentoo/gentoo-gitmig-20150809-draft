@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/yammi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.16 2004/06/25 00:30:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.17 2004/07/07 11:19:07 eradicator Exp $
+
+*yammi-1.0-r1 (07 Jul 2004)
+
+  07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/yammi-1.0-traverse.patch, +yammi-1.0-r1.ebuild:
+  Revbump to include patch in bug #54089 provided by Joseph Turian
+  <turian@gmail.com>. Added to ~sparc.
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> yammi-0.8.2.ebuild,
   yammi-1.0.ebuild:
