@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.13-r6.ebuild,v 1.8 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.13-r6.ebuild,v 1.9 2002/12/03 18:41:58 wwoods Exp $
+
+inherit gnuconfig
 
 IUSE="gdbm tcpd"
 
@@ -11,11 +13,17 @@ HOMEPAGE="http://www.OpenLDAP.org/"
 
 SLOT="0"
 LICENSE="OPENLDAP"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 ~alpha"
 
 DEPEND=">=sys-libs/ncurses-5.1
         tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
         gdbm? ( >=sys-libs/gdbm-1.8.0 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use alpha && gnuconfig_update
+}
 
 src_compile() {
 	local myconf
