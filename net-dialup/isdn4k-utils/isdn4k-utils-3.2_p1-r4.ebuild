@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r4.ebuild,v 1.6 2004/07/01 22:07:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r4.ebuild,v 1.7 2004/09/24 02:14:45 dragonheart Exp $
 
 inherit eutils
 
@@ -22,9 +22,9 @@ RDEPEND=">=sys-apps/portage-2.0.47-r10
 	virtual/libc
 	sys-libs/ncurses
 	sys-libs/gdbm
+	dev-lang/tcl
 	X? (
 		virtual/x11
-		dev-lang/tcl
 	)"
 
 DEPEND="${RDEPEND}
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+
 	# Get country code from I4L_CC variable
 	# default country: DE (Germany)
 	export I4L_CC=`echo -n "${I4L_CC}" | tr "[:lower:]" "[:upper:]"`
@@ -41,8 +42,11 @@ src_unpack() {
 	export I4L_CC_LOW=`echo -n "${I4L_CC}" | tr "[:upper:]" "[:lower:]"`
 	cd ${S}
 
+	# fix for 2.6 headers
+	find . -name \*.c | xargs sed -i -e 's:linux/capi.h>$:linux/compiler.h>\n#include <linux/capi.h>:g'
+
 	# Patch .config file to suit our needs
-	cat ${FILESDIR}/${PV}-r4/config | { \
+	cat ${FILESDIR}/${PVR}/config | { \
 		if use X >/dev/null; then
 			cat
 		else
@@ -69,7 +73,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/gcc33-multiline.patch
 
-	for x in capi20 capiinfo capiinit
+	for x in capi20 capiinfo capiinit ../vbox3-${VBOX_V}
 	do
 		cd ${S}/${x}
 		[ -f ltmain.sh ] && libtoolize --force
@@ -78,6 +82,9 @@ src_unpack() {
 		automake --add-missing
 		autoconf
 	done
+
+	cd ${WORKDIR}/vbox3-${VBOX_V}
+	epatch ${FILESDIR}/${PVR}/vbox-makefile.am.patch || die "failed to patch"
 }
 
 src_compile() {
@@ -114,7 +121,10 @@ src_install() {
 	doins options.ippp0
 
 	cd ${S}/../vbox3-${VBOX_V}
-	einstall || die
+	emake DESTDIR=${D} install || die
+
+	cd ${D}/etc/isdn
+	epatch ${FILESDIR}/${PVR}/pathfix.patch || die
 }
 
 pkg_postinst() {

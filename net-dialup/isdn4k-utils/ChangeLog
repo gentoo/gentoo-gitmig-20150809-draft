@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.19 2004/07/01 22:07:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.20 2004/09/24 02:14:45 dragonheart Exp $
+
+  24 Sep 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/3.2_p1-r4/pathfix.patch, +files/3.2_p1-r4/vbox-makefile.am.patch,
+  isdn4k-utils-3.2_p1-r4.ebuild:
+  Fixes bugs #53796 - tcl depend and bug #45124 - config file improvement.
+  Thanks to Georg Weiss <georg@georgweiss.de> and Frank Eichentopf
+  <frei@hap-bb.de>. Fixes 2.6 headers problem too.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   isdn4k-utils-3.2_p1-r2.ebuild, isdn4k-utils-3.2_p1-r3.ebuild,
