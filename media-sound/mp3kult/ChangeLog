@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3kult
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/ChangeLog,v 1.5 2003/06/22 05:06:25 jje Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/ChangeLog,v 1.6 2004/03/31 18:33:31 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mp3kult-0.7-r1.ebuild, mp3kult-0.7.ebuild:
+  Stable on x86.  Removing old version.
 
   22 Jun 2003; jje <jje@gentoo.org> mp3kult-0.7-r1.ebuild:
   Added LDFLAGS hack to resolve mysql ssl linking issue.
