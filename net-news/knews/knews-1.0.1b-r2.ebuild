@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r2.ebuild,v 1.4 2003/02/13 15:15:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r2.ebuild,v 1.5 2003/04/23 00:10:41 lostlogic Exp $
 
 IUSE="xface png jpeg"
 
@@ -18,7 +18,7 @@ KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	virtual/mta
-	sys-apps/supersed
+	=sys-apps/sed-4*
 	jpeg? ( >=media-libs/jpeg-6 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	xface? ( >=media-libs/compface-1.4 )"
@@ -28,17 +28,17 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use jpeg \
-		&& ssed -i "s:\(#define HAVE_JPEG\).*:\1\t1:" configure.h
+		&& sed -i "s:\(#define HAVE_JPEG\).*:\1\t1:" configure.h
 
 	use png \
-		&& ssed -i "s:\(#define HAVE_PNG\).*:\1\t1:" configure.h
+		&& sed -i "s:\(#define HAVE_PNG\).*:\1\t1:" configure.h
 
 	use xface \
-		&& ssed -i "s:\(#define HAVE_COMPFACE\).*:\1\t1:" configure.h
+		&& sed -i "s:\(#define HAVE_COMPFACE\).*:\1\t1:" configure.h
 
-	ssed -i "s:\(#define HAVE_XPM\).*:\1\t1:" configure.h
+	sed -i "s:\(#define HAVE_XPM\).*:\1\t1:" configure.h
 
-	ssed -i "s:\(#define DEFAULT_EDIT_COMMAND\).*:\1 \"${EDITOR} %s\":" configure.h
+	sed -i "s:\(#define DEFAULT_EDIT_COMMAND\).*:\1 \"${EDITOR} %s\":" configure.h
 
 	patch -p1 < ${WORKDIR}/${MY_P}-gentoo.diff || die
 }
