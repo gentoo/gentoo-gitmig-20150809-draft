@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/colo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.1 2004/04/05 07:49:06 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.2 2004/04/21 09:42:07 kumba Exp $
+
+*colo-1.6 (21 Apr 2004)
+
+  21 Apr 2004; Joshua Kinard <kumba@gentoo.org> +files/colo-1.6-gentoo.patch,
+  +colo-1.6.ebuild:
+  New revision of colo. Adds a number of new features, including booting from
+  RAID, loadable initrd, and other bits.
 
 *colo-1.4 (05 Apr 2004)
 
