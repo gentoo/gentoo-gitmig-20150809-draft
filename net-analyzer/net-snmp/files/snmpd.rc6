@@ -16,7 +16,7 @@ start() {
 	checkconfig || return 1
 	ebegin "Starting net-snmpd"
 	start-stop-daemon --start --quiet --exec /usr/sbin/snmpd \
-		-- -C -c /etc/snmp/snmpd.conf ${SNMPD_FLAGS}
+		-- -c /etc/snmp/snmpd.conf ${SNMPD_FLAGS}
 	eend $?
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.23 2003/09/24 04:36:16 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.24 2003/10/01 17:13:44 max Exp $
+
+  01 Oct 2003; Max Kalika <max@gentoo.org> files/snmpd.rc6:
+  Remove -C from startup script.
 
   23 Sep 2003; Max Kalika <max@gentoo.org> net-snmp-5.0.1.ebuild,
   net-snmp-5.0.2a-r1.ebuild, net-snmp-5.0.2a.ebuild, net-snmp-5.0.6-r1.ebuild,
