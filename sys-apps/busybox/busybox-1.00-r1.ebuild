@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.12 2005/03/09 01:07:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.13 2005/04/06 00:23:59 vapier Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ~mips ~ppc sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~mips ppc sparc x86"
 IUSE="debug uclibc static savedconfig netboot floppyboot make-symlinks"
 
 DEPEND="virtual/libc
@@ -48,6 +48,9 @@ src_unpack() {
 	epatch ${FILESDIR}/1.00/busybox-read-timeout.patch
 	epatch ${FILESDIR}/1.00/readlink-follow.patch
 	epatch ${FILESDIR}/1.00/more-insmod-arches.patch
+
+	# Don't let KBUILD_OUTPUT mess us up #88088
+	unset KBUILD_OUTPUT
 
 	#bunzip
 	#ftp://ftp.simtreas.ru/pub/my/bb/new/find.c.gz
