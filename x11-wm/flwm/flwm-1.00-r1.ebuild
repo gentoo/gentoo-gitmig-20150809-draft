@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r1.ebuild,v 1.1 2001/08/09 03:38:36 tadpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r1.ebuild,v 1.2 2001/10/12 00:50:46 hallski Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -25,6 +25,6 @@ src_compile() {
 src_install() {
     doman flwm.1
     dodoc README flwm_wmconfig
-    into /usr/X11R6
+    into /usr
     dobin flwm
 }
