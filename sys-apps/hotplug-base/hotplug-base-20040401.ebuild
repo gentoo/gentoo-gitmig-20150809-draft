@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug-base/hotplug-base-20040401.ebuild,v 1.4 2004/04/24 04:41:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug-base/hotplug-base-20040401.ebuild,v 1.5 2004/04/25 20:42:41 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips ~alpha hppa ~amd64 ~ia64"
+KEYWORDS="x86 ppc sparc ~mips ~alpha arm hppa ~amd64 ~ia64"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
