@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 117b261740f354e85795ac2833ac8565 ChangeLog 1938
-MD5 e77bc958900854cca6c40f1a53fa8a1c elmo-1.3.2-r1.ebuild 1105
+MD5 46998290385061786b4ac5b8545524ec elmo-1.3.2-r1.ebuild 1101
+MD5 285a3c96d558aa67a640c00afbbdf09a ChangeLog 2045
 MD5 cacb53d68e2c3a3ab17570cddf992a76 metadata.xml 279
-MD5 030a20e67a5eb594c5aa4216043285d0 files/configure.in.patch 1991
 MD5 ae516ca333aa45e8df3b9964414f04ff files/digest-elmo-1.3.2-r1 62
+MD5 030a20e67a5eb594c5aa4216043285d0 files/configure.in.patch 1991
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBmZTzI1lqEGTUzyQRAmqcAJ47xJB85Mv2HaMCfCWdzy7vnhsN6wCeKQkR
-y9Ea1pCVo+k6hjlq7/LODO0=
-=Rfq8
+iD8DBQFBrOyZI1lqEGTUzyQRAlgBAKCGo+1GVbGn0c7EB1r9yNeuGJokfwCcDpN4
+oEcaStund8hyF2LnPgk2spA=
+=oOOO
 -----END PGP SIGNATURE-----
