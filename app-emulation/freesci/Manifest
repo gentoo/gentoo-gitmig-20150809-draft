@@ -1,3 +1,5 @@
-MD5 84bd8ed5858b47d6a99e59419ac0b55b ChangeLog 558
-MD5 d2f95f72a9d6aebeeab9e2d940f8ff9b freesci-0.3.3.ebuild 799
 MD5 ddaa777cfa9c98a98580e5c80594a400 files/digest-freesci-0.3.3 66
+MD5 f4396d74a3074af057c248aa3785e894 files/digest-freesci-0.3.4a 67
+MD5 d2f95f72a9d6aebeeab9e2d940f8ff9b freesci-0.3.3.ebuild 799
+MD5 f7b129ef3b87919f8a80b6b6de6796e5 ChangeLog 654
+MD5 c2afce32d0419d57f30aaa1b8154ae58 freesci-0.3.4a.ebuild 796
