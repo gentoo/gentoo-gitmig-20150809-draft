@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/nuvola
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.4 2004/11/11 23:39:17 centic Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.5 2005/02/05 15:53:43 centic Exp $
+
+  05 Feb 2005; Dominik Stadler <centic@gentoo.org> nuvola-1.0.ebuild,
+  -nuvola-1.0_beta.ebuild, -nuvola-1.0_rc1.ebuild:
+  Remove beta-versions and mark stable on x86
 
 *nuvola-1.0 (12 Nov 2004)
 
