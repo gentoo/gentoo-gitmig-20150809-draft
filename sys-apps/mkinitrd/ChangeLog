@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mkinitrd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.15 2004/10/22 02:59:41 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.16 2005/02/12 05:54:20 vapier Exp $
+
+*mkinitrd-4.2.0.3 (12 Feb 2005)
+
+  12 Feb 2005; Mike Frysinger <vapier@gentoo.org> +mkinitrd-4.2.0.3.ebuild:
+  Version bump.
 
   23 Oct 2004; Aron Griffis <agriffis@gentoo.org> mkinitrd-3.5.7-r2.ebuild,
   mkinitrd-3.5.7-r3.ebuild:
