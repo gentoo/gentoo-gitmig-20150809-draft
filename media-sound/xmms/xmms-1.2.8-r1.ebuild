@@ -1,19 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r1.ebuild,v 1.3 2003/09/13 19:39:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r1.ebuild,v 1.4 2003/09/14 07:40:10 seemant Exp $
+
+IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
 inherit flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 DESCRIPTION="X MultiMedia System"
 HOMEPAGE="http://www.xmms.org/"
-SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.gz
+SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
 	mirror://gentoo/gentoo_ice.zip"
 
-LICENSE="GPL-2"
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips"
-IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
 DEPEND="app-arch/unzip
 	=x11-libs/gtk+-1.2*
@@ -23,12 +24,13 @@ DEPEND="app-arch/unzip
 	gnome? ( <gnome-base/gnome-panel-1.5.0 )
 	opengl? ( virtual/opengl )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
+
 RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
 	nls? ( dev-util/intltool )"
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${P}.tar.bz2
 	cd ${S}
 
 	# Patch to allow external programmes to have the "jump to" dialog box
