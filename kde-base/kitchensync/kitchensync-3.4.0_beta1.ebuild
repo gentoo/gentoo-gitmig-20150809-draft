@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.4.0_beta1.ebuild,v 1.1 2005/01/15 02:24:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.4.0_beta1.ebuild,v 1.2 2005/01/18 18:26:58 danarmak Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -24,3 +24,6 @@ KMEXTRACTONLY="
 	libkcal/
 	libkdepim/
 	libkdenetwork/"
+
+# Disabled by default in kontact/plugins/Makefile.am, so check before enabling - 3.4.0_beta1 -- danarmak
+# KMEXTRA="kontact/plugins/kitchensync"
