@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.41 2005/02/06 18:08:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.42 2005/04/01 04:47:16 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> libwww-perl-5.800.ebuild:
+  stable on ia64
 
   06 Feb 2005; Markus Rothe <corsair@gentoo.org> libwww-perl-5.800.ebuild:
   Stable on ppc64
