@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CGI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.21 2003/08/20 09:57:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.22 2003/10/15 20:33:21 mcummings Exp $
+
+  15 Oct 2003; Michael Cummings <mcummings@gentoo.org> CGI-2.99.ebuild:
+  No changes in 73 days, marked stable
 
 *CGI-3.00 (20 Aug 2003)
 

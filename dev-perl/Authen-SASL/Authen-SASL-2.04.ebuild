@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/Authen-SASL-2.04.ebuild,v 1.2 2003/09/26 20:45:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/Authen-SASL-2.04.ebuild,v 1.3 2003/10/15 20:32:33 mcummings Exp $
 
 inherit perl-module
 
@@ -12,6 +12,6 @@ SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 export OPTIMIZE="$CFLAGS"
