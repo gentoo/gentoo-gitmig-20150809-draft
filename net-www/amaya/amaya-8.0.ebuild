@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-8.0.ebuild,v 1.12 2004/09/03 23:24:07 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-8.0.ebuild,v 1.13 2005/01/02 01:53:30 mholzer Exp $
 
 inherit libtool
 
