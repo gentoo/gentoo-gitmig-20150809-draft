@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.6 2003/10/04 19:06:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.7 2003/11/20 02:26:37 vapier Exp $
 
 inherit games
 
@@ -169,8 +169,7 @@ pkg_postinst() {
 				if [ "$CDKEY1" == "$CDKEY2" ]; then
 					echo "$CDKEY1" | tr a-z A-Z > ${dir}/System/cdkey
 					einfo "Thank you!"
-					sleep 1
-					exit 0
+					break
 				else
 					eerror "Your CD key entries don't match. Try again."
 				fi
