@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.6 2004/05/03 09:14:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.7 2004/05/07 02:01:08 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -387,6 +387,13 @@ src_unpack() {
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
+
+	# disable --as-needed from being compiled into gcc specs
+	# natively when using >=sys-devel/binutils-2.15.90.0.3 this is
+	# done to keep our gcc backwards compatible with binutils. 
+	# gcc 3.4.1 cvs has patches that need back porting.. 
+	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
+	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
 
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }

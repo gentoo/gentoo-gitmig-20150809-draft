@@ -1,6 +1,21 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.239 2004/05/06 21:04:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.240 2004/05/07 02:01:08 lv Exp $
+
+  06 May 2004; Travis Tilley <lv@gentoo.org> gcc-3.3.3-r3.ebuild,
+  gcc-3.3.3.ebuild, gcc-3.4.0-r1.ebuild:
+  made the compatibility check look for the actual .so instead of just the
+  versioned directory that contains it because there may or may not be any
+  shared objects to back up... The PPC-specific gcc 3.3.3 ebuilds for some
+  reason install libstdc++ directly to /usr/lib/ on PPC64, so this change should
+  allow gcc 3.4.0-r1 to install on this arch without tar failing.
+
+  06 May 2004; Travis Tilley <lv@gentoo.org> gcc-3.3.3-r3.ebuild,
+  gcc-3.3.3.ebuild, gcc-3.4.0-r1.ebuild:
+  copied the sed magick from 3.3.3-r4 that should fix building gcc with binutils
+  2.15.90.0.3 and then downgrading to a previous version. it disables the
+  --as-needed support that only gets compiled in when using binutils 2.15.90.0.2
+  or higher (proper support of which has been moved back to a gcc 3.5 target)
 
   06 May 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0-r1.ebuild:
   added gcc333_pre20040408-stack-size.patch for testing on ppc64

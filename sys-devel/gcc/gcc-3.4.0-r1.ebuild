@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r1.ebuild,v 1.3 2004/05/06 21:04:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r1.ebuild,v 1.4 2004/05/07 02:01:08 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -427,6 +427,13 @@ src_unpack() {
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 
+	# disable --as-needed from being compiled into gcc specs
+	# natively when using >=sys-devel/binutils-2.15.90.0.3 this is
+	# done to keep our gcc backwards compatible with binutils. 
+	# gcc 3.4.1 cvs has patches that need back porting.. 
+	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
+	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
+
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }
 
@@ -624,14 +631,18 @@ src_install() {
 	# libstdc++, we need to provide compatibility for binary-only apps
 	# which are linked against the old version. Every arch should have
 	# one of these marked stable, so lets look for the newest version
-	# first.
-	if [ -d ${LOC}/lib/gcc-lib/${CCHOST}/3.3.3 ]
+	# first. We need to check for the .so instead of just the directory
+	# because there may or may not be any shared objects to back up...
+	# The PPC-specific gcc 3.3.3 ebuilds for some reason install directly
+	# to /usr/lib/ on PPC64, so we'll have to add logic for this later. :/
+	# Travis Tilley <lv@gentoo.org>
+	if [ -f ${LOC}/lib/gcc-lib/${CCHOST}/3.3.3/libstdc++.so ]
 	then
 		gcc_compat 3.3.3
-	elif [ -d ${LOC}/lib/gcc-lib/${CCHOST}/3.3.2 ]
+	elif [ -f ${LOC}/lib/gcc-lib/${CCHOST}/3.3.2/libstdc++.so ]
 	then
 		gcc_compat 3.3.2
-	elif [ -d ${LOC}/lib/gcc-lib/${CCHOST}/3.2.3 ]
+	elif [ -f ${LOC}/lib/gcc-lib/${CCHOST}/3.2.3/libstdc++.so ]
 	then
 		gcc_compat 3.2.3
 	fi
