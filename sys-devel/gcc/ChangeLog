@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.20 2002/06/29 17:44:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.21 2002/07/03 21:17:09 azarah Exp $
+
+  3 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Add the /usr/bin/$CHOST-g++ symlink, as it is needed now for
+  some weird reason.
 
 *gcc-2.95.3-r7 (29 Jun 2002)
 

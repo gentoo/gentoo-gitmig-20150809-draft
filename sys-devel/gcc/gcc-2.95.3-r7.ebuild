@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.5 2002/07/01 22:21:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.6 2002/07/03 21:17:09 azarah Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
@@ -119,6 +119,8 @@ src_install() {
 	dodir /lib
 	dosym /usr/bin/cpp /lib/cpp
 	dosym gcc /usr/bin/cc
+	dosym g++ /usr/bin/${CHOST}-g++
+	dosym g++ /usr/bin/${CHOST}-c++
 	dodir /etc/env.d
 	echo "LDPATH=${LOC}/lib/gcc-lib/${CHOST}/${PV}" > \
 		${D}/etc/env.d/05gcc
@@ -190,9 +192,15 @@ src_install() {
 pkg_preinst() {
 	# downgrading from gcc-3.x will leave this symlink, so
 	# remove it.  resolves bug #3527
-	if [ -L ${ROOT}/usr/bin/${CHOST}-g++ ]
+	if [ -L ${ROOT}/usr/bin/${CHOST}-g++ ] || \
+	   [ -f ${ROOT}/usr/bin/${CHOST}-g++ ]
 	then
 		rm -f ${ROOT}/usr/bin/${CHOST}-g++
+	fi
+	if [ -L ${ROOT}/usr/bin/${CHOST}-c++ ] || \
+	   [ -f ${ROOT}/usr/bin/${CHOST}-c++ ]
+	then
+		rm -f ${ROOT}/usr/bin/${CHOST}-c++
 	fi
 }
 
