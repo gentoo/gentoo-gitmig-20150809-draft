@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/csh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.24 2005/01/13 01:51:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.25 2005/04/02 14:18:00 taviso Exp $
+
+  02 Apr 2005; Tavis Ormandy <taviso@gentoo.org> csh-1.29-r3.ebuild:
+  marking ~ppc on request.
 
   12 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> csh-1.29-r3.ebuild:
   Stable on sparc

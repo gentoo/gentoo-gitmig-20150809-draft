@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 974ac79ebb6efb51b4982f233a4c98c6 ChangeLog 3449
+MD5 baef97d9ec8ee254ae39e0beda75529c csh-1.29-r3.ebuild 4293
 MD5 0a3c7e79ac0325c4492e1010f8ce472c csh-1.29-r2.ebuild 4249
-MD5 18e55453b5ec31e0539405c31a5d6e35 csh-1.29-r3.ebuild 4290
+MD5 04b595d339fe61b7c81c7b38feb74071 ChangeLog 3544
 MD5 ce0694a6af9197d929533e9d0dfcb706 metadata.xml 706
+MD5 49c0a95e6881eb7e2932d149f62f0de2 files/mksignames.c 10722
+MD5 213922a7d6fdee0a89e9a349653be22d files/linux-vs-bsd.diff 7483
 MD5 8eb726131df145785642164034fb5a74 files/digest-csh-1.29-r2 60
 MD5 8eb726131df145785642164034fb5a74 files/digest-csh-1.29-r3 60
+MD5 9a4c41baf0e48fb12e83a51b0b15f297 files/retype-input.diff 2352
 MD5 56092454f21f9d462f4514aadf4c78cd files/dot.cshrc 1549
 MD5 2365e5e2ca11496be2169a6944a38994 files/dot.login 224
-MD5 213922a7d6fdee0a89e9a349653be22d files/linux-vs-bsd.diff 7483
-MD5 49c0a95e6881eb7e2932d149f62f0de2 files/mksignames.c 10722
-MD5 9a4c41baf0e48fb12e83a51b0b15f297 files/retype-input.diff 2352
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB5dQbKRy60XGEcJIRApM/AJ9dD9kw+pjh8qCqIiN1LQE7pwEungCcDTNF
-L04habqPtRYhg311DBA8ZJs=
-=zb+1
------END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r3.ebuild,v 1.11 2005/01/13 01:51:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r3.ebuild,v 1.12 2005/04/02 14:18:00 taviso Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 alpha arm ~amd64 ia64 sparc"
+KEYWORDS="x86 alpha arm ~amd64 ia64 sparc ~ppc"
 IUSE="static doc"
 
 DEPEND="sys-devel/pmake !app-shells/tcsh
