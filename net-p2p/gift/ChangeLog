@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.13 2002/08/24 23:31:21 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.14 2002/09/01 21:42:24 verwilst Exp $
+*gift-0.10.0_pre020830 (1 Sept 2002) Bart Verwilst <verwilst@gentoo.org>
+
+  Fixed giFT-setup script
 
 *gift-0.10.0_pre020823 (23 Aug 2002) Bart Verwilst <verwilst@gentoo.org>
 
