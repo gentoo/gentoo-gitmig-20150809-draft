@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/kemistry-0.7.ebuild,v 1.8 2004/09/05 16:14:30 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/kemistry-0.7.ebuild,v 1.9 2004/10/24 02:56:13 weeve Exp $
 
 inherit kde eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kemistry/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~amd64"
+KEYWORDS="x86 sparc ~amd64"
 IUSE=""
 
 DEPEND="kde-base/kdesdk"

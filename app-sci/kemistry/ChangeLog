@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/kemistry
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/ChangeLog,v 1.12 2004/09/05 16:14:30 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/ChangeLog,v 1.13 2004/10/24 02:56:13 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> kemistry-0.7.ebuild:
+  Stable on sparc.
 
   05 Sep 2004; Malcolm Lashley <malc@gentoo.org>
   +files/kemistry-0.7-fPIC.patch, +files/kemistry-0.7-gcc3.4.patch,
