@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r1.ebuild,v 1.1 2001/07/03 16:50:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r1.ebuild,v 1.2 2001/07/05 00:32:00 achim Exp $
 
 A=${PN}-4.0.6.tar.gz
 S=${WORKDIR}/${PN}-4.0.6
@@ -116,7 +116,7 @@ src_compile() {
     ./configure --enable-safe-mode --enable-ftp --enable-track-vars --with-gmp \
 	--enable-dbase --enable-sysvsem --enable-sysvshm --with-zlib=yes --enable-bcmath \
 	--enable-calendar --enable-versioning --enable-inline-optimization --enable-trans-sid \
-	--with-gd --with-ttf --with-t1lib --with-jpeg-dir=/usr/lib \
+	--with-gd --with-ttf --with-t1lib --with-jpeg-dir=/usr/lib --prefix=/usr \
 	--with-config-file-path=`/usr/sbin/apxs -q SYSCONFDIR` --host=${CHOST} \
 	--with-apxs="/usr/sbin/apxs -ltiff" --with-exec-dir="/usr/lib/apache/bin" $myconf
     try make
@@ -125,11 +125,12 @@ src_compile() {
 
 src_install() {                 
   cd ${S}
+  try make INSTALL_ROOT=${D} install-pear
   dodir /usr/lib/apache
   cp .libs/libphp4.so ${D}/usr/lib/apache
+
   dodir /etc/httpd
   cp php.ini-dist ${D}/etc/httpd/php.ini
-  into /usr
   dodoc CODING_STANDARDS LICENSE EXTENSIONS 
   dodoc RELEASE_PROCESS README.* TODO NEWS
   dodoc ChangeLog* *.txt
