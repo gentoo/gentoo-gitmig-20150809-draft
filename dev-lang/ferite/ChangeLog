@@ -1,8 +1,11 @@
 # ChangeLog for dev-lang/ferite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.6 2003/01/09 15:38:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.7 2003/01/24 22:33:29 vapier Exp $
 
 *ferite-0.99.5 (17 Aug 2002)
+
+  24 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added econf in place of configure.  Fix for #14463.
 
   09 Jan 2003; Martin Holzer <mholzer@gentoo.org> ferrite-0.99.5.ebuild :
   Changed SRC_URI to mirror://sf
@@ -11,14 +14,14 @@
   added ~ppc to KEYWORDS
 
   17 Aug 2002; G.Shapovalov <george@gentoo.org> ChangeLog :
-  
   new version
   also modified ebuild to fix sandbox violation
 
-
 *ferite-0.99.4 (1 May 2002)
 
-  1 May 2002; G.Saraber <gsaraber@rarcoa.com> ChangeLog :
+  24 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added econf in place of configure.  Fix for #14463.
 
+  1 May 2002; G.Saraber <gsaraber@rarcoa.com> ChangeLog :
   modified the glib ebuild into ferite :)
   original by Achim Gottinger <achim@gentoo.org>
