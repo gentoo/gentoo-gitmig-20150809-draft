@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.8 2004/03/29 22:39:30 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.9 2004/03/30 18:54:38 rac Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 filter-flags -fno-exceptions
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc sparc alpha hppa ~mips amd64 ia64 ppc64 s390"
 IUSE="debug gpm"
 
 DEPEND="virtual/glibc
-	!build? ( gpm? ( sys-libs/gpm ) )"
+	!bootstrap? ( gpm? ( sys-libs/gpm ) )"
 
 src_unpack() {
 	unpack ${A}
