@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.6.ebuild,v 1.1 2004/11/08 16:14:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.6.ebuild,v 1.2 2004/11/08 20:26:05 agriffis Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -141,6 +141,7 @@ src_install() {
 	kdir /lib/rcscripts/awk
 	kdir /lib/rcscripts/sh
 	dodir /lib/rcscripts/net.modules.d	# .keep file messes up net.lo
+	dodir /lib/rcscripts/net.modules.d/helpers.d
 	kdir /mnt
 	kdir -m 0700 /mnt/cdrom
 	kdir -m 0700 /mnt/floppy
@@ -339,6 +340,8 @@ src_install() {
 	# problematic with CONFIG_PROTECT
 	insinto /lib/rcscripts/net.modules.d
 	doins ${S}/lib/rcscripts/net.modules.d/*
+	insinto /lib/rcscripts/net.modules.d/helpers.d
+	doins ${S}/lib/rcscripts/net.modules.d/helpers.d/*
 
 	#
 	# Install baselayout documentation
