@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.20 2005/01/23 00:05:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.21 2005/02/12 05:44:12 mr_bones_ Exp $
+
+*vice-1.16 (12 Feb 2005)
+
+  12 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> +vice-1.16.ebuild:
+  version bump (bug #67601) - use flag diff from Christian Harms
 
   22 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> vice-1.14-r1.ebuild:
   Changed use_with gnome to use_enable gnome and closing bug #77836.
