@@ -1,10 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.8.ebuild,v 1.1 2003/02/19 05:54:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.8.ebuild,v 1.2 2003/02/23 13:19:54 azarah Exp $
 
 IUSE="nls"
 
 inherit eutils libtool
+
+REQ_MOZ_VER="1.2"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
@@ -16,7 +18,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~alpha"
 SLOT="0"
 
-RDEPEND="=net-www/mozilla-1.2*
+RDEPEND="=net-www/mozilla-${REQ_MOZ_VER}*
 	>=gnome-base/gnome-libs-1.4.1.4
 	<=gnome-base/libglade-0.99.0
 	=gnome-base/gnome-vfs-1.0*
@@ -61,7 +63,10 @@ src_compile() {
 
 	elibtoolize
 
-	local myconf=""
+	local myconf=
+	local moz_ver="`pkg-config --modversion mozilla-xpcom | cut -d. -f1,2 2>/dev/null`"
+
+	[ -z "${moz_ver}" ] && moz_ver="${REQ_MOZ_VER}"
 
 	use nls || myconf="${myconf} --disable-nls"
 	# use bonobo && myconf="${myconf} --enable-gnome-file-selector"
@@ -78,7 +83,7 @@ src_compile() {
 		--disable-werror \
 		--disable-install-schemas \
 		--enable-nautilus-view=no \
-		--with-mozilla-snapshot=1.2 \
+		--with-mozilla-snapshot=${moz_ver} \
 		${myconf} || die
 
 	emake || make || die
