@@ -1,19 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4.ebuild,v 1.1 2002/06/10 01:03:48 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4.ebuild,v 1.2 2002/06/11 20:55:31 g2boojum Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)."
 HOMEPAGE="http://www.sendmail.org"
 LICENSE=""
 SLOT="0"
 
-# Build-time dependencies, such as
-#    ssl? ( >=openssl-0.9.6b )
-#    >=perl-5.6.1-r1
-# It is advisable to use the >= syntax show above, to reflect what you
-# had installed on your system when you tested the package.  Then
-# other users hopefully won't be caught without the right version of
-# a dependency.
 PROVIDE="virtual/mta"
 DEPEND="virtual/glibc
 		net-misc/hesiod
@@ -64,6 +57,32 @@ src_unpack() {
 	do
 		cat ${FILESDIR}/${file}.patch | patch -d ${S} -p1 || die "${file} patch failed"
 	done
+
+	confCCOPTS="${CFLAGS}"
+	confMAPDEF="-DNEWDB -DMAP_REGEX"
+	confENVDEF="-DXDEBUG=0"
+	confLIBS="-lnsl -lcrypt"
+	conf_sendmail_ENVDEF="-DFALSE=0 -DTRUE=1"
+	conf_sendmail_LIBS=""
+	use sasl && confLIBS="${confLIBS} -lsasl" && \
+		conf_sendmail_ENVDEF="${conf_sendmail_ENVDEF} -DSASL" && \
+		conf_sendmail_LIBS="${conf_sendmail_LIBS} -lsasl"
+	use tcpd && confENVDEF="${confENVDEF} -DTCPWRAPPERS" \
+		&& confLIBS="${confLIBS} -lwrap"
+	use ssl && confENVDEF="${confENVDEF} -DSTARTTLS" \
+		&& confLIBS="${confLIBS} -lssl -lcrypto" \
+		&& conf_sendmail_ENVDEF="${conf_sendmail_ENVDEF} -DSTARTTLS" \
+		&& conf_sendmail_LIBS="${conf_sendmail_LIBS} -ssl -lcrypto"
+	use ldap && confMAPDEF="${confMAPDEF} -DLDAPMAP" \
+		&& confLIBS="${confLIBS} -lldap -llber"
+	use gdbm && confLIBS="${confLIBS} -lgdbm"
+	sed -e "s/@@confCCOPTS@@/${confCCOPTS}/" \
+		-e "s/@@confMAPDEF@@/${confMAPDEF}/" \
+		-e "s/@@confENVDEF@@/${confENVDEF}/" \
+		-e "s/@@confLIBS/${confLIBS}/" \
+		-e "s/@@conf_sendmail_ENVDEF@@/${conf_sendmail_ENVDEF}/" \
+		-e "s/@@conf_sendmail_LIBS@@/${conf_sendmail_LIBS}/" \
+		${FILESDIR}/site.config.m4 > ${S}/devtools/Site/site.config.m4
 }
 
 src_compile() {
@@ -132,10 +151,4 @@ localhost			RELAY
 127.0.0.1			RELAY
 
 EOF
-	for map in virtusertable access domaintable mailertable
-	do
-		touch ${D}/etc/mail/${map}
-		${D}/usr/bin/makemap -C ${D}/etc/mail/sendmail.cf hash ${D}/etc/mail/${map}.db \
-			< ${D}/etc/mail/${map}
-	done
 }
