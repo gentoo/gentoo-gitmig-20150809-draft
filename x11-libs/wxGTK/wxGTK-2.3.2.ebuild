@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Tod Neidt <tneidt@fidnet.com>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2.ebuild,v 1.1 2002/01/02 16:54:11 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2.ebuild,v 1.2 2002/01/24 21:47:10 gbevin Exp $
 
 S=${WORKDIR}/${P}
 
@@ -59,7 +59,6 @@ src_compile() {
 	
 	use odbc && myconf="$myconf --with-odbc" #disabled by default
 	use gif  || myconf="$myconf --disable-gif" #enabled by default
-	use nls  || myconf="$myconf --disable-intl" #enabled by default
 	use opengl && myconf="$myconf --with-opengl" #disabled by default
     
 	./configure --infodir=/usr/share/info \
