@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r5.ebuild,v 1.1 2004/03/08 23:45:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r5.ebuild,v 1.2 2004/04/06 10:40:04 method Exp $
 
-IUSE="static"
+IUSE="static selinux"
 
 inherit eutils flag-o-matic
 
@@ -19,6 +19,8 @@ KEYWORDS="x86 ppc sparc ~mips ppc64 hppa"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
+
+RDEPEND="selinux? ( sec-policy/selinux-dhcp )"
 
 PROVIDE="virtual/dhcpc"
 
