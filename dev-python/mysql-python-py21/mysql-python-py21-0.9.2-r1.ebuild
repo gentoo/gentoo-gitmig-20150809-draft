@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python-py21/mysql-python-py21-0.9.2-r1.ebuild,v 1.1 2003/04/05 07:29:31 lordvan Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python-py21/mysql-python-py21-0.9.2-r1.ebuild,v 1.2 2003/04/05 20:29:30 kutsuya Exp $
 PYTHON_SLOT_VERSION="2.1"
-inherit distutils
 
+inherit distutils
 S="${WORKDIR}/MySQL-python-${PV}"
 
 DESCRIPTION="MySQL Module for python" 
@@ -16,20 +15,21 @@ DEPEND="virtual/glibc
 	>=dev-db/mysql-3.22.19
 	${DEPEND}"
 RDEPEND="${DEPEND}${RDEPEND}"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
-src_compile() {
-    if has_version '>=dev-db/mysql-4.0.10' >& /dev/null
-	then
-	mv setup.py setup.orig
-	sed -e 's/thread_safe_library = YES/thread_safe_library = NO/' \
-	    setup.orig > setup.py
+src_compile() 
+{
+    if has_version '>=dev-db/mysql-4.0.10' >& /dev/null ; then
+		mv setup.py setup.orig
+		sed -e 's/thread_safe_library = YES/thread_safe_library = NO/' \
+		setup.orig > setup.py
     fi
     distutils_src_compile
 }
 
-src_install() {
+src_install() 
+{
 	distutils_src_install
 	dohtml doc/*
 }
