@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkwebmon/gkwebmon-0.2.ebuild,v 1.1 2004/03/25 02:47:55 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkwebmon/gkwebmon-0.2.ebuild,v 1.2 2004/05/12 07:44:17 aliz Exp $
 
 IUSE=""
-
-S=${WORKDIR}/${P}
 DESCRIPTION="A web monitor plugin for GKrellM2"
 HOMEPAGE="http://gkwebmon.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gkwebmon/${P}.tgz"

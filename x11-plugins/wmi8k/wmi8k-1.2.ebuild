@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmi8k/wmi8k-1.2.ebuild,v 1.1 2004/04/12 20:51:26 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmi8k/wmi8k-1.2.ebuild,v 1.2 2004/05/12 07:44:17 aliz Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Dockapp for (some) Dell laptops that provides fans and temperature monitoring"
 SRC_URI="http://dockapps.org/download.php/id/337/${PN}.${PV}.tar.gz http://www.stoffel.net/${PN}.${PV}.tar.gz"
 HOMEPAGE="http://www.stoffel.net"
-
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
