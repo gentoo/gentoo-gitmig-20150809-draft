@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.8.0.ebuild,v 1.6 2004/09/23 14:18:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.8.0.ebuild,v 1.7 2004/11/08 02:00:41 josejx Exp $
 
 inherit games
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/gav/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64 sparc"
+KEYWORDS="x86 ppc ~amd64 sparc"
 IUSE=""
 
 RDEPEND="media-libs/sdl-image
