@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.4 2004/04/13 13:21:13 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.5 2004/04/21 14:57:04 usata Exp $
+
+*pgf-0.61 (22 Apr 2004)
+
+  22 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> pgf-0.61.ebuild:
+  Version bumped. Closing bug #48414
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> pgf-0.60.ebuild:
   marked ~amd64
