@@ -1,7 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b75e7517ea7205944b487f54df407287 motif-config-0.4.ebuild 1239
+MD5 b75e7517ea7205944b487f54df407287 motif-config-0.5.ebuild 1239
 MD5 606a2b3434f4b97797be379825bfd498 ChangeLog 1733
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 76af3b1b80127315546ef5ea7f5875e1 files/bindings.tbz2 5342
@@ -9,14 +7,9 @@ MD5 cedbeed369bab9555dd6fda29c8bc4c3 files/motif-config-0.1 6466
 MD5 474ea3ce052f62b920a365f98586b01b files/motif-config-0.2 6298
 MD5 5779611c009207dddfb57fb178e03c46 files/motif-config-0.3 6300
 MD5 d0c6c16eecaccd8f086236778392183d files/motif-config-0.4 6594
+MD5 d1ba6cf77c6aba29de01c64f838a3ecf files/motif-config-0.5 7058
 MD5 beb566e653a0a239409d76dc502c87e1 files/system.mwmrc 4358
 MD5 aaf04376f7011a2f68b7961100f611fb files/Mwm.defaults 536
 MD5 b4cca983e552045606f845e17a00e1d6 files/bitmaps.tbz2 3165
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.4 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLccuevY57Fted3ERAjqJAKDATZ2iPUJ/5g292e5+vja4Jx/W8wCgqiLq
-3CpiLCUN9vwdOjhyfjuY/mo=
-=zclr
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.5 0

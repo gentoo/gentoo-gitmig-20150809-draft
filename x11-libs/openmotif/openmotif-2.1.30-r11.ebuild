@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r11.ebuild,v 1.4 2005/03/10 14:26:55 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r11.ebuild,v 1.5 2005/03/14 13:57:30 lanius Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -18,7 +18,7 @@ PROVIDE="virtual/motif"
 
 RDEPEND="virtual/libc
 	virtual/x11
-	>=x11-libs/motif-config-0.4"
+	>=x11-libs/motif-config-0.5"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
@@ -156,7 +156,12 @@ src_install() {
 }
 
 # Profile stuff
+pkg_setup() {
+	motif-config --start-install
+}
+
 pkg_postinst() {
+	motif-config --finish-install
 	motif-config --install openmotif-2.1
 }
 
