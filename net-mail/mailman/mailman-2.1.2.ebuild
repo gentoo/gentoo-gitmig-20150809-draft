@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2.ebuild,v 1.1 2003/05/20 01:58:24 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2.ebuild,v 1.2 2003/05/23 01:45:32 tberman Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Mailman, the mailing list server with webinterface"
@@ -44,7 +44,8 @@ src_compile() {
 src_install () {
 	ID=${D}${INSTALLDIR}
         cd ${S}
-        mkdir -p ${ID}
+        mkdir -p ${ID}/logs
+	touch ${ID}/logs/.keep
         chown -R mailman.mailman ${ID}
         chmod 2775 ${ID}
         make prefix=${ID} var_prefix=${ID} doinstall || die
@@ -52,12 +53,12 @@ src_install () {
 	doins ${FILESDIR}/mailman.conf
 	
 	dodoc ${FILESDIR}/README.gentoo
-	dodoc ACK* BUGS FAQ NEWS README* TODO UPGRADING
+	dodoc ACK* BUGS FAQ NEWS README* TODO UPGRADING INSTALL
 	dodoc contrib/README.check_perms_grsecurity contrib/mm-handler.readme
 	dodoc contrib/virtusertable contrib/mailman.mc
 
 	cp contrib/*.py contrib/majordomo2mailman.pl contrib/auto \
-		contrib/mm-handler* ${D}/home/mailman/bin
+		contrib/mm-handler* ${D}/usr/local/mailman/bin
 
 	# Save the old config into the new package as CONFIG_PROTECT
 	# doesn't work for this package.
