@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.33 2004/10/10 17:41:29 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.34 2004/10/10 18:12:18 usata Exp $
 
 inherit gnuconfig flag-o-matic libtool eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
-	!macos? ( !ppc-macos? ( >=sys-apps/sed-4 ) )"
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -26,6 +26,7 @@ src_unpack() {
 	sed -i 's/ltconfig.*/& $CHOST/' configure
 	gnuconfig_update
 	uclibctoolize
+	( use ppc-macos || use macos ) && darwintoolize
 }
 
 src_compile() {
