@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Storable
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.26 2004/06/01 23:00:36 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.27 2004/06/06 22:52:55 mcummings Exp $
+
+*Storable-2.12 (06 Jun 2004)
+
+  06 Jun 2004; Michael Cummings <mcummings@gentoo.org> Storable-2.12.ebuild:
+  new version on cpan
 
   01 Jun 2004; Tom Gall <tgall@gentoo.org> Storable-2.09.ebuild:
   Stable on ppc64, bug #52701
