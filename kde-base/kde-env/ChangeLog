@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.15 2004/02/10 06:47:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.16 2004/04/25 03:18:23 psi29a Exp $
+
+  24 Apr 2004; Bret Curtis <psi29a@gentoo.org> kde-env-3-r2.ebuild:
+  Added to ~mips
 
   10 Feb 2004; Lars Weiler <pylon@gentoo.org> :
   Stable on ppc.
