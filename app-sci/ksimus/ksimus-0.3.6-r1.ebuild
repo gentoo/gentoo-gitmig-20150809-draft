@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksimus/ksimus-0.3.6-r1.ebuild,v 1.1 2003/07/01 14:34:30 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksimus/ksimus-0.3.6-r1.ebuild,v 1.2 2003/07/08 11:47:07 phosphan Exp $
 
 inherit kde-base
 
@@ -20,6 +20,7 @@ need-kde 3
 
 src_unpack() {
 	unpack ${A}
+	patch < ${FILESDIR}/${PN}-${PV}-patch.patch || die "patch for patch failed"
 	cd ${S}
 	patch -p1 < ../${MY_PATCH} || die "patch failed"
 	cd ksimus/tools
