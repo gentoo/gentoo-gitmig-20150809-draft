@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/xclass-0.7.4.ebuild,v 1.6 2003/06/27 11:56:43 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/xclass-0.7.4.ebuild,v 1.7 2003/06/27 20:55:30 vapier Exp $
 
 DESCRIPTION="a C++ GUI toolkit for the X windows environment"
 HOMEPAGE="http://xclass.sourceforge.net/"
@@ -8,12 +8,10 @@ SRC_URI="ftp://mitac11.uia.ac.be/pub/xclass/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
-IUSE=""
+KEYWORDS="x86 ppc ~sparc ~alpha"
 
 DEPEND="virtual/x11
 	virtual/glibc"
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	econf --enable-shared=yes --with-x
