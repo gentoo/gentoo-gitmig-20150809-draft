@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.7 2002/08/16 04:04:42 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.8 2002/08/27 22:53:33 murphy Exp $
 
 # NOTE: For some reason, upstream has changed the naming scheme
 # for the tarballs to something quite lame:
@@ -28,6 +28,12 @@ DEPEND="virtual/glibc sys-devel/autoconf"
 RDEPEND="${DEPEND}"
 
 src_compile() {
+	# Compile fails with -O3 on sparc64 but works on x86, sparc untested
+	if [ "${ARCH}" == "sparc" -o "${ARCH}" == "sparc64" ]; then
+		if [ -n "${CFLAGS}" ]; then
+			CFLAGS=`echo ${CFLAGS} | sed -e 's:-O3:-O2:'`
+		fi
+	fi
 	# configure is broken by default for sparc and possibly others, regen
 	# from configure.in
 	autoconf

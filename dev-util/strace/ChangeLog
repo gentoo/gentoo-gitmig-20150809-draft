@@ -1,10 +1,17 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.4 2002/08/01 18:26:40 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.5 2002/08/27 22:53:33 murphy Exp $
 
 *strace-4.4 (27 Apr 2002)
 
+  27 Aug 2002; Maarten Thibaut <murphy@gentoo.org> strace-4.4.ebuild :
+  
+  Added sparc and sparc64 to keywords.
+  Bugfix for sparc and sparc64 where emerge would fail if the "-O3" option
+  were present in CFLAGS.
+
   01 Aug 2002; Mark Guertin <gerk@gentoo.org> strace-4.4.ebuild :
+  
   Added ppc to keywords
 
   17 May 2002; Bruce A. Locke <blocke@shivan.org> strace-4.4.ebuild :
