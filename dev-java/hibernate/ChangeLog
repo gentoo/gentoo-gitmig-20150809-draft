@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/hibernate
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.14 2004/11/25 14:35:13 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.15 2004/12/27 14:27:39 st_lim Exp $
+
+  27 Dec 2004; Lim Swee Tat <st_lim@gentoo.org> hibernate-2.1.7.ebuild:
+  Fixed the URL to the correct one.  There was an update to hibernate-2.1.7c
 
 *hibernate-2.1.7 (25 Nov 2004)
 
