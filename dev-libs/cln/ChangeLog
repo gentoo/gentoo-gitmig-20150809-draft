@@ -1,0 +1,13 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/ChangeLog,v 1.1 2002/10/29 09:11:50 george Exp $
+
+*cln-1.1.15 (31 Aug 2002)
+
+  28 Oct 2002; George Shapovalov <george@gentoo.org> cln-1.1.15.ebuild, ChangeLog :
+
+  cleaned app (KEYWORDS, SLOT..., C[XX]FLAGS filters) and added to portage
+
+  31 Aug 2002; Pierre-Henri Jondot <Pierre-Henri.Jondot@wanadoo.fr> Changelog :
+  ebuild submitted by Pierre-Henri Jondot <Pierre-Henri.Jondot@wanadoo.fr> 
+
