@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/smssend
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smssend/ChangeLog,v 1.12 2004/12/16 06:26:37 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smssend/ChangeLog,v 1.13 2004/12/16 07:12:13 absinthe Exp $
+
+*smssend-3.4 (16 Dec 2004)
+
+  16 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
+  +files/smssend-3.4-verizon.diff, +smssend-3.4.ebuild:
+  Version bump. Created patch for Verizon Wireless that is not in upstream
+  release yet.
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> smssend-3.3.ebuild:
   keywords ~amd64 to close bug 73496.
