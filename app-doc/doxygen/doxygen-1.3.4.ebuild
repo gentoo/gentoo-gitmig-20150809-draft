@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.4.ebuild,v 1.1 2003/10/20 07:41:57 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.4.ebuild,v 1.2 2003/10/27 12:36:24 usata Exp $
 
 IUSE="doc qt"
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 RDEPEND="media-gfx/graphviz
 	qt? ( x11-libs/qt )
-	doc? ( app-text/tetex
+	doc? ( virtual/tetex
 		app-text/ghostscript )"
 
 DEPEND=">=sys-apps/sed-4
