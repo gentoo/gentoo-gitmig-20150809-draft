@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.1 2005/01/15 12:37:53 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.2 2005/01/26 16:19:49 ka0ttic Exp $
 
 # Original Author: Aaron Walker <ka0ttic@gentoo.org>
 #
@@ -135,25 +135,6 @@ docrontab() {
 		dosym ${crontab##*/} /usr/bin/crontab || \
 			die "failed to create /usr/bin/crontab symlink"
 	fi
-}
-
-# dopamd [ file ] [ new file ]
-#
-# Install pam auth config file in /etc/pam.d
-#
-# NOTE: this would make much more sense as a portage script (eg. doenvd)
-#
-#   The first argument, 'file' is required.  Install as 'new file', if
-#   specified.
-
-dopamd() {
-	local pamd="${1}" newpamd="${2:-${1}}"
-	[[ -z "${1}" ]] && die "dopamd requires at least one argument."
-	
-	insinto /etc/pam.d
-	# these are the default doins options, but be explicit just in case
-	insopts -m 0644 -o root -g root
-	newins ${pamd} ${newpamd} || die "failed to install ${newpamd}"
 }
 
 cron-pkg_postinst() {
