@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.39 2004/10/06 18:22:26 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.40 2004/10/25 22:53:07 klieber Exp $
+
+*cfengine-2.1.10-r1 (25 Oct 2004)
+
+  25 Oct 2004; Kurt Lieber <klieber@gentoo.org> +cfengine-2.1.10-r1.ebuild:
+  bumpage to fix 68709 and 64411
 
   06 Oct 2004; Kurt Lieber <klieber@gentoo.org> cfengine-2.1.10.ebuild:
   added ~amd64 to ebuild
