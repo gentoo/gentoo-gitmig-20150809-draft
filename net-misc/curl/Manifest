@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2964306ed6c7eae2f10a4b51ab0d1951 curl-7.10.8-r1.ebuild 1087
-MD5 dc117f992b3951d6034bf197e87af661 curl-7.11.0.ebuild 978
-MD5 15b11562a35a25f57c11882625925d1f curl-7.11.1.ebuild 1025
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 15b11562a35a25f57c11882625925d1f curl-7.11.1.ebuild 1025
+MD5 c6ddd6b589b20588245afd0cd43976c2 curl-7.13.1.ebuild 1131
+MD5 dc117f992b3951d6034bf197e87af661 curl-7.11.0.ebuild 978
 MD5 ddeadcb2f1766f7b1a125c436a37a7ac curl-7.12.0-r2.ebuild 1290
+MD5 2964306ed6c7eae2f10a4b51ab0d1951 curl-7.10.8-r1.ebuild 1087
+MD5 db432eee418d5f78dc2140c3db95021e ChangeLog 7662
 MD5 60132aceae3f343c6e3dd478d956f1e9 curl-7.12.3.ebuild 1135
-MD5 036c99efed75a9a18ce1c64df544118c ChangeLog 7557
-MD5 c277345ae92466afbfd78f07f57808fa curl-7.13.1.ebuild 1131
-MD5 dc352925b526421b92ff81fc9b8315da files/7.12.0-no-fputc.patch 312
-MD5 e2795c792b9a04fd73ca556ce257f39f files/curl-7.10.5-badssl.patch 343
-MD5 05e37478314d224f2ce5840f2e1f31c9 files/curl-7.10.8-transfer-segv.patch 744
-MD5 4bc4b19a5cd9b1bb8be92330189dbecb files/digest-curl-7.10.8-r1 65
 MD5 3d8968398ac9406fdf47efe23004dcdc files/digest-curl-7.11.0 65
-MD5 960d346648779ac90316a39974aff792 files/digest-curl-7.11.1 65
-MD5 b1be312bb3cb53a17c9ba9683bda165a files/digest-curl-7.12.0-r2 65
 MD5 d667046d2f490bf2dec632acd537248c files/digest-curl-7.12.3 65
+MD5 dc352925b526421b92ff81fc9b8315da files/7.12.0-no-fputc.patch 312
 MD5 159b437588320b2a3f726d3aa55890e5 files/digest-curl-7.13.1 65
+MD5 4bc4b19a5cd9b1bb8be92330189dbecb files/digest-curl-7.10.8-r1 65
+MD5 960d346648779ac90316a39974aff792 files/digest-curl-7.11.1 65
+MD5 e2795c792b9a04fd73ca556ce257f39f files/curl-7.10.5-badssl.patch 343
+MD5 b1be312bb3cb53a17c9ba9683bda165a files/digest-curl-7.12.0-r2 65
+MD5 05e37478314d224f2ce5840f2e1f31c9 files/curl-7.10.8-transfer-segv.patch 744
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCMDBjRkyva5PS18kRAm5vAJ9n1dEporLqgpiPUrGps9Ah6RukGwCeOLVn
-I4aI+SCQPWSE6LArm5x0Fhw=
-=/WVg
+iD8DBQFCMFD8KRy60XGEcJIRAoFUAKCvdxaNisVEpu2jbY3FUEJ+7p7dWACeN4kU
+obj4NYxK7ijTNdCaZfCe1yM=
+=Crh4
 -----END PGP SIGNATURE-----
