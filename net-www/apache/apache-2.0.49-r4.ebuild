@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r4.ebuild,v 1.10 2004/07/07 18:46:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r4.ebuild,v 1.11 2004/07/08 16:22:26 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -27,7 +27,8 @@ DEPEND="dev-util/yacc
 	>=sys-apps/sed-4
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
-	!mips? ( ldap? ( =net-nds/openldap-2* ) )"
+	!mips? ( ldap? ( =net-nds/openldap-2* ) )
+	selinux? (sec-policy/seelinux-apache)"
 
 apache_setup_vars() {
 	# Sets the USERDIR to default.
