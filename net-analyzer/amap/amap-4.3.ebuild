@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-4.3.ebuild,v 1.4 2004/05/20 18:16:20 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-4.3.ebuild,v 1.5 2004/06/20 03:49:32 weeve Exp $
 
 DESCRIPTION="A network scanning tool for pentesters"
 HOMEPAGE="http://www.thc.org/releases.php"
 SRC_URI="http://packetstormsecurity.nl/groups/thc/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ia64 ~sparc ~ppc"
+KEYWORDS="x86 ~amd64 ~ia64 sparc ~ppc"
 IUSE="ssl"
 DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6j )"
