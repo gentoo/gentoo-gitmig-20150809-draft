@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.75 2004/09/23 20:10:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.76 2004/10/05 03:54:34 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -189,15 +189,19 @@ games_umod_unpack() {
 # $1 == wrapper name
 # $2 == binary to run
 # $3 == directory to chdir before running binary
+# $4 == extra LD_LIBRARY_PATH's (make it : delimited)
 games_make_wrapper() {
 	local wrapper="$1" ; shift
 	local bin="$1" ; shift
 	local chdir="$1" ; shift
+	local libdir="$1" ; shift
 	local tmpwrapper="$(mymktemp ${T})"
 	cat << EOF > "${tmpwrapper}"
 #!/bin/sh
 cd "${chdir}"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${libdir}"
 exec ${bin} "\$@"
 EOF
+	chmod go+rx "${tmpwrapper}"
 	newgamesbin "${tmpwrapper}" "${wrapper}"
 }
