@@ -2,5 +2,5 @@ MD5 fa4aefc57679135f80c2762fcb2f0a74 files/0.4-jpeg.patch 540
 MD5 198eb6eaae065c1fc596876e91e6edb2 files/digest-irrlicht-0.4 62
 MD5 3d0c46bd872601ae474803a089531688 files/0.4-opengl.patch 189
 MD5 7b37375664460afe01f8a7e43267fc32 files/0.4-system-libs.patch 608
-MD5 6d9f26b71d26e8561cbf9854a954a21f irrlicht-0.4.ebuild 1089
+MD5 c0fc97ee462dd66b6cd1262614659ccc irrlicht-0.4.ebuild 1093
 MD5 1fe3063eace1ad237b7dea96e1321734 ChangeLog 346
