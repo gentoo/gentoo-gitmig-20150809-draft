@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/skkinput
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/ChangeLog,v 1.8 2003/05/05 07:48:41 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/ChangeLog,v 1.9 2003/06/24 07:53:27 phosphan Exp $
+
+  24 Jun 2003; Patrick Kursawe <phosphan@gentoo.org>
+  skkinput-2.06.3-r1.ebuild:
+  Stable for x86
 
   06 May 2003; Patrick Kursawe <phosphan@gentoo.org> skkinput-2.06.3-r1.ebuild :
   depending on new virtual/skkserv, removed unpack function.
