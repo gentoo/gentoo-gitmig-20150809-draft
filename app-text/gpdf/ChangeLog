@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.42 2004/08/09 00:05:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.43 2004/08/30 19:17:54 kloeri Exp $
+
+  30 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gpdf-0.132.ebuild:
+  Remove src_compile as append-flags -fPIC isn't needed for alpha anymore.
 
   08 Aug 2004; foser <foser@gentoo.org> gpdf-0.132.ebuild :
   Add scrollkeeper to RDEP fixes bug #53921

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.132.ebuild,v 1.7 2004/08/09 00:05:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.132.ebuild,v 1.8 2004/08/30 19:17:54 kloeri Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -28,10 +28,3 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS CHANGES ChangeLog COPYING INSTALL NEWS README*"
-
-src_compile() {
-
-	use alpha && append-flags -fPIC
-	gnome2_src_compile
-
-}
