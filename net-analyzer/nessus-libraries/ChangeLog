@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.34 2004/08/12 19:59:48 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.35 2004/08/12 20:19:57 eldad Exp $
+
+  12 Aug 2004; Eldad Zack <eldad@gentoo.org> nessus-libraries-2.0.10a.ebuild:
+  GLSA 200408-11: masking 2.0.10a for all archs besides alpha until 2.0.12 will
+  be stable on alpha
 
   12 Aug 2004; Eldad Zack <eldad@gentoo.org> -nessus-libraries-2.0.11.ebuild,
   nessus-libraries-2.0.12.ebuild, -nessus-libraries-2.0.7.ebuild,
