@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tuxcards
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.4 2004/12/03 21:25:31 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.5 2004/12/13 22:56:57 ticho Exp $
+
+  13 Dec 2004; Andrej Kacian <ticho@gentoo.org> tuxcards-1.1.ebuild,
+  tuxcards-1.2.ebuild:
+  Removed extra line in src_install().
 
   03 Dec 2004; Andrej Kacian <ticho@gentoo.org> tuxcards-1.2.ebuild:
   Use kde-functions eclass. Closes #73252, reported by Botykai Zsolt
