@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/basiliskII
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/ChangeLog,v 1.9 2003/12/08 19:03:09 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/ChangeLog,v 1.10 2004/03/21 14:22:39 dholm Exp $
+
+*basiliskII-1.0.0_pre20020115 (21 Mar 2004)
+
+  21 Mar 2004; David Holm <dholm@gentoo.org> basiliskII-1.0.0.ebuild,
+  basiliskII-1.0.0_pre20020115.ebuild, metadata.xml:
+  Moved basiliskII-1.0.0.ebuild to basiliskII-jit since it is a fork of
+  basiliskII and not the same project. Added the latest prerelease of basiliskII
+  and added ~ppc to the keywords.
 
   08 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
   basiliskII-1.0.0.ebuild:

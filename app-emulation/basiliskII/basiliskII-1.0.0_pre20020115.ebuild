@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0.ebuild,v 1.4 2004/02/20 06:03:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20020115.ebuild,v 1.1 2004/03/21 14:22:40 dholm Exp $
+
+IUSE="X gtk xv esd dga"
 
 inherit flag-o-matic
 
@@ -8,37 +10,31 @@ inherit flag-o-matic
 ### Mac OS 7.5.3r2 is available freely from the Apple Homepage
 ### System ROMS can be retreived from a 'real' Mac, See info/man pages
 
-S="${WORKDIR}/BasiliskII-jit-1.0/src/Unix"
-DESCRIPTION="BasiliskII Macintosh Emulator"
-HOMEPAGE="http://gwenole.beauchesne.online.fr/basilisk2/"
-SRC_URI="http://hometown.aol.de/wimdk/files/BasiliskII-jit-1.0-mdk-src.tar.bz2"
-
+DESCRIPTION="BasiliskII-0.9.0 Macintosh Emulator (Stable Release)"
+HOMEPAGE="http://www.uni-mainz.de/~bauec002/B2Main.html"
 LICENSE="GPL-2 | LGPL-2.1"
-KEYWORDS="x86 -ppc"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
-IUSE="X gtk xv esd dga"
+### We'll set $S Manually, it's version dependant, and nested strangely.
+S=${WORKDIR}/BasiliskII-1.0/src/Unix
 
 ### fbdev support in the stable release...  the cvs branch is broken, period!
 ### gtk and esd support are compile time options, we'll check the usual
 ### use variables here and set ./configure options accordingly
 
 DEPEND="gtk? ( x11-libs/gtk+ )
-	esd? ( media-sound/esound )
-	>=sys-apps/sed-4"
+	esd? ( media-sound/esound )"
 
-src_unpack() {
-	unpack ${A}
 
-	# Fix up the vendor (bug 35352)
-	sed -i \
-		-e "s/Mandrake/Gentoo/g" ${S}/keycodes || \
-			die "sed keycods failed"
-}
+SRC_URI="http://iphcip1.physik.uni-mainz.de/~cbauer/BasiliskII_src_15012002.tar.gz"
 
 src_compile() {
+
 	#fpu_x86 doesnt compile properly if -O3 or greater :(
 	replace-flags -O[3-9] -O2
+
+	strip-flags -mpowerpc-gfxopt
 
 	local myflags
 
@@ -56,26 +52,22 @@ src_compile() {
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
-		--enable-jit-compiler \
-		${myflags} || die "./configure failed"
+		${myflags} || die "BasiliskII ./configure Failed"
 
 	#hack to link against libstdc++ for gcc3.x compatibility
-	sed -i \
-		-e 's:-o $(OBJ_DIR)/gencpu:-lstdc++ -o $(OBJ_DIR)/gencpu:' \
-		Makefile || die "sed Makefile failed"
+	cp Makefile Makefile.old
+	sed -e 's:-o $(OBJ_DIR)/gencpu:-lstdc++ -o $(OBJ_DIR)/gencpu:' \
+		Makefile.old > Makefile
 
-	emake || die "emake failed"
+	emake || die "BasiliskII Make Failed"
 }
 
-src_install() {
+src_install () {
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
-		install || die "make install failed"
-
-	cd ../..
-	dodoc ChangeLog INSTALL README TECH TODO TODO.JIT
+		install || die "BasiliskII Make Install Failed"
 
 ### Networking is _disabled_ in this revision,  hopefully -r2 will
 ### resolve the permissions issue / linux src compilation problem
@@ -86,4 +78,5 @@ src_install() {
 ### provides (effectivly) an ethernet bridge between basliskII and the kernel
 
 #	make modules
+
 }
