@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/smarty-docs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.23 2005/03/26 03:04:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.24 2005/03/27 12:28:23 kloeri Exp $
+
+  27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  smarty-docs-2.6.7.ebuild:
+  Stable on alpha.
 
   26 Mar 2005; Jason Wever <weeve@gentoo.org> smarty-docs-2.6.7.ebuild:
   Stable on SPARC.
