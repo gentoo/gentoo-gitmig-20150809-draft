@@ -1,0 +1,12 @@
+# ChangeLog for media-video/sub2srt
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/sub2srt/ChangeLog,v 1.1 2005/03/22 18:39:28 luckyduck Exp $
+
+*sub2srt-0.5.3 (22 Mar 2005)
+
+  22 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +sub2srt-0.5.3.ebuild:
+  Initial import, ebuild based on the contributions by David Holm
+  <dholm@gentoo.org> and Roland "Robelix" Obermayer <masta@robelix.com>. Fixes
+  #64043
+
