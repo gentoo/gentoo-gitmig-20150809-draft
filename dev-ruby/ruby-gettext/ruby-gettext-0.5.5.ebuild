@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-0.5.5.ebuild,v 1.1 2004/04/10 12:51:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-0.5.5.ebuild,v 1.2 2004/04/16 14:51:46 dholm Exp $
 
 inherit ruby
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ponx.s5.xrea.com/hiki/ruby-gettext.html"
 # The source tarball was downloaded from the site above
 SRC_URI="mirror://gentoo/${PN}-package-${PV}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 USE_RUBY="ruby16 ruby18 ruby19"
 SLOT="0"
 LICENSE="Ruby"
