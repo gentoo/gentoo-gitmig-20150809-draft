@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/smartsuite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smartsuite/ChangeLog,v 1.1 2002/07/23 23:28:34 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smartsuite/ChangeLog,v 1.2 2002/07/30 04:01:11 cselkirk Exp $
 
 *smartsuite-2.1 (23 Jul 2002)
+  
+  29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> smartsuite-2.1.ebuild :
+
+  Added ppc to KEYWORDS. Added RDEPEND.
 
   23 Jul 2002; Arcady Genkin <agenkin@thpoon.com> smartsuite-2.1.ebuild :
 
