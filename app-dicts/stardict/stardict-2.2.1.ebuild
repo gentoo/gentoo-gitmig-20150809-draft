@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.2.1.ebuild,v 1.7 2004/06/24 21:45:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.2.1.ebuild,v 1.8 2004/08/19 21:40:04 foser Exp $
 
 inherit gnome2
 
@@ -49,3 +49,16 @@ pkg_postinst() {
 	echo
 	einfo "  emerge -s stardict-"
 }
+
+CFLAGS="${CFLAGS} -UG_DISABLE_DEPRECATED \
+		-UGDK_DISABLE_DEPRECATED \
+		-UGDK_PIXBUF_DISABLE_DEPRECATED \
+		-UGTK_DISABLE_DEPRECATED \
+		-UGNOME_DISABLE_DEPRECATED"
+
+CXXFLAGS="${CXXFLAGS} -UG_DISABLE_DEPRECATED \
+		-UGDK_DISABLE_DEPRECATED \
+		-UGDK_PIXBUF_DISABLE_DEPRECATED \
+		-UGTK_DISABLE_DEPRECATED \
+		-UGNOME_DISABLE_DEPRECATED"
+
