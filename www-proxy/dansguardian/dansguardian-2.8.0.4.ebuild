@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/dansguardian-2.8.0.4.ebuild,v 1.1 2005/02/25 22:29:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/dansguardian-2.8.0.4.ebuild,v 1.2 2005/03/08 19:47:54 mrness Exp $
 
 inherit eutils
 
@@ -12,7 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~ppc64"
 IUSE=""
-DEPEND="virtual/libc"
+DEPEND="!www-proxy/dansguardian-dgav
+	virtual/libc"
 
 src_unpack() {
 	unpack ${A}
@@ -26,8 +27,7 @@ src_compile() {
 		--installprefix=${D} \
 		--mandir=/usr/share/man/ \
 		--cgidir=/var/www/localhost/cgi-bin/ || die "./configure failed"
-	sed -i -e 's/^\(CFLAGS *\)=/\1+=/' Makefile #add user CFLAGS
-	emake || die "emake failed"
+	emake OPTIMISE="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {

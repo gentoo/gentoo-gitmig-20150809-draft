@@ -1,6 +1,11 @@
 # ChangeLog for www-proxy/dansguardian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/ChangeLog,v 1.9 2005/02/25 22:29:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/ChangeLog,v 1.10 2005/03/08 19:47:54 mrness Exp $
+
+  08 Mar 2005; Alin Nastac <mrness@gentoo.org> dansguardian-2.7.1.ebuild,
+  dansguardian-2.7.6.ebuild, dansguardian-2.8.0.2.ebuild,
+  dansguardian-2.8.0.4.ebuild:
+  Inter-block this package with dansguardian-dgav.
 
 *dansguardian-2.8.0.4 (26 Feb 2005)
 

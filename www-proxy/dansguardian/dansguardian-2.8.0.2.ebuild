@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/dansguardian-2.8.0.2.ebuild,v 1.5 2005/02/25 22:29:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/dansguardian-2.8.0.2.ebuild,v 1.6 2005/03/08 19:47:54 mrness Exp $
 
 inherit eutils
 
@@ -12,7 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc ppc64"
 IUSE=""
-DEPEND="virtual/libc"
+DEPEND="!www-proxy/dansguardian-dgav
+	virtual/libc"
 
 src_unpack() {
 	unpack ${A}
