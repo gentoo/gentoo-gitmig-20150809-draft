@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 55e8212768055f4e180cf12628aa791c freepops-0.0.16.ebuild 976
+MD5 e051803dd2451073a7b5744bfd0724c5 ChangeLog 355
+MD5 21c9bd65b924f959e9ec675d33b6df27 metadata.xml 222
+MD5 b71405786c9e3c12e18c1b5435dc4b1f files/digest-freepops-0.0.16 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD4DBQFBSipBHTu7gpaalycRAvo7AJUbYboji6gpHfCIDEp++lquemQjAJ9ActoP
+0WYfvbguNFJleEudfwdYtw==
+=YnXL
+-----END PGP SIGNATURE-----
