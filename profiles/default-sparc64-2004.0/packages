@@ -73,7 +73,6 @@
 *app-shells/sash
 *dev-lang/perl
 *virtual/editor
-*net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/iputils
 *net-misc/rsync
