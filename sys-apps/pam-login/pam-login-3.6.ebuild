@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.6.ebuild,v 1.1 2002/04/28 14:19:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.6.ebuild,v 1.2 2002/04/28 14:39:43 azarah Exp $
 
 MY_PN="${PN/pam-/pam_}"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -13,8 +13,7 @@ DEPEND="virtual/glibc
 	sys-libs/pam
 	>=sys-apps/shadow-4.0.2-r5"
 	
-RDEPEND="virtual/glibc"
-
+SLOT="0"
 
 src_compile() {
         
