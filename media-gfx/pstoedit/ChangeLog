@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pstoedit
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.7 2003/12/09 17:49:35 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.8 2004/01/31 09:58:47 obz Exp $
+
+  31 Jan 2004; Mike Gardiner <obz@gentoo.org> pstoedit-3.32.ebuild,
+  pstoedit-3.33.ebuild:
+  Now installs all documentation, and a man page. Removed -pedantic flag which
+  causes errors with libEMF
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> pstoedit-3.32.ebuild,
   pstoedit-3.33.ebuild:

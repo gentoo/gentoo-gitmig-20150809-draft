@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.32.ebuild,v 1.7 2003/12/09 17:49:35 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.32.ebuild,v 1.8 2004/01/31 09:58:47 obz Exp $
 
 inherit libtool
 
@@ -22,6 +22,14 @@ DEPEND="media-libs/libpng
 RDEPEND="${DEPEND}
 	virtual/ghostscript"
 
+src_unpack() {
+
+	unpack ${A}; cd ${S}
+	# remove the -pedantic flag, see bug #39575
+	sed -i -e "s/\-pedantic//" configure
+
+}
+
 src_compile() {
 	elibtoolize
 	econf
@@ -29,7 +37,10 @@ src_compile() {
 }
 
 src_install () {
+
 	make DESTDIR=${D} install || die "make install failed"
 	dodoc readme.txt copying
-	dodoc changelog.htm
+	dohtml changelog.htm index.html doc/pstoedit.htm
+	doman doc/pstoedit.1
+
 }
