@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.154 2005/01/04 15:03:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.155 2005/01/23 00:55:45 eradicator Exp $
+
+*xmms-1.2.10-r10 (22 Jan 2005)
+
+  22 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/po-update.pl, +xmms-1.2.10-r10.ebuild:
+  Revbump to latest upstream cvs. Added a skin dir browser and numberic keypad
+  controls. This should fix bug #71262.
 
   04 Jan 2005; Markus Rothe <corsair@gentoo.org> xmms-1.2.10-r5.ebuild,
   xmms-1.2.10-r9.ebuild:
