@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/bootsplash 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.32 2004/03/28 09:41:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.33 2004/04/04 20:16:34 spock Exp $
+
+*bootsplash-0.6-r13 (04 Apr 2004)
+
+  04 Apr 2004; Michal Januszewski <spock@gentoo.org>
+  bootsplash-0.6-r13.ebuild:
+  Here's a new version of bootsplash, it includes some new fixes and has all the
+  features of -r11 and -r12. This bootsplash revision is no longer dependent on
+  baselayout-1.8.6.13-r1.
 
   28 Mar 2004; Michal Januszewski <spock@gentoo.org>
   bootsplash-0.6-r10.ebuild, bootsplash-0.6-r11.ebuild,
