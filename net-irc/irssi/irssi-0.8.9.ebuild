@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9.ebuild,v 1.2 2003/12/12 16:55:26 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9.ebuild,v 1.3 2004/01/05 18:39:43 agriffis Exp $
 
 IUSE="nls ipv6 perl ssl"
 
@@ -10,7 +10,7 @@ DESCRIPTION="A modular textUI IRC client with IPv6 support."
 SRC_URI="http://irssi.org/files/${P}.tar.bz2"
 HOMEPAGE="http://irssi.org/"
 
-DEPEND=">=dev-libs/glib-1.2
+DEPEND=">=dev-libs/glib-2.2.1
 	sys-libs/ncurses
 	>=sys-apps/sed-4
 	perl? ( dev-lang/perl )
@@ -21,7 +21,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ~mips ~amd64 ia64"
 
 src_unpack() {
 	unpack ${A}
@@ -32,15 +32,13 @@ src_unpack() {
 	sed -i \
 		-e 's/[^ 	]\+\.html//g' docs/Makefile.in || \
 			die "sed doc/Makefile.in failed"
-
-#	epatch ${FILESDIR}/${P}-configure.patch || die
 }
 
 src_compile() {
 	# Note: there is an option to build a GUI for irssi, but according
 	# to the website the GUI is no longer developed, so that option is
 	# not used here.
-	local myconf="--without-servertest --with-bot --with-proxy --with-ncurses"
+	local myconf="--with-glib2 --without-servertest --with-proxy --with-ncurses"
 
 	myconf="${myconf} `use_enable nls`"
 	myconf="${myconf} `use_with perl`"
