@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.358 2004/09/06 20:56:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.359 2004/09/17 06:27:57 spyderous Exp $
+
+  16 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r7.ebuild:
+  PATCH_VER 2.1.25.8. This ebuild is *not* the hard-masked enhanced version it
+  once was. It is now a security bump to 4.3.0-r6, our standard 4.3.0 release.
+  Add 9925_all_6.7.0-libXpm-CAN-2004-0687-CAN-2004-0688.patch to fix stack and
+  integer overflows in libXpm (Chris Evans, Alan Coopersmith, Matthiew Herrb)
+  (#64152).
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> xfree-4.3.0-r7.ebuild:
   Switch to use epause and ebeep, bug #62950
