@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.21.ebuild,v 1.3 2004/06/25 20:31:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.21.ebuild,v 1.4 2004/08/08 12:06:42 dholm Exp $
 
 # because of the experimental nature debug by default
 inherit debug
@@ -13,7 +13,7 @@ SRC_URI="http://www.freedesktop.org/software/dbus/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Academic"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=dev-libs/glib-2
 	dev-libs/expat
