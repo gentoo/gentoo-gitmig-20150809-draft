@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.162 2005/03/23 12:46:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.163 2005/03/26 06:33:16 eradicator Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -111,8 +111,8 @@ gen_usr_ldscript() {
 	# Just make sure it exists
 	dodir /usr/${libdir}
 
-	while [[ $# -gt 0 ]] ; do
-		cat > "${D}/usr/${libdir}/$1" <<-END_LDSCRIPT
+	for lib in "${@}" ; do
+		cat > "${D}/usr/${libdir}/${lib}" <<-END_LDSCRIPT
 		/* GNU ld script
 		   Since Gentoo has critical dynamic libraries 
 		   in /lib, and the static versions in /usr/lib, 
@@ -121,10 +121,9 @@ gen_usr_ldscript() {
 		
 		   See bug http://bugs.gentoo.org/4411 for more info.
 		 */
-		GROUP ( /${libdir}/$1 )
+		GROUP ( /${libdir}/${lib} )
 		END_LDSCRIPT
-		fperms a+x "/usr/${libdir}/$1"
-		shift
+		fperms a+x "/usr/${libdir}/${lib}"
 	done
 }
 
