@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/vtwm-5.4.6a.ebuild,v 1.2 2003/08/24 19:14:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/vtwm-5.4.6a.ebuild,v 1.3 2003/08/25 22:04:11 usata Exp $
 
 IUSE=""
 
@@ -28,7 +28,7 @@ src_install() {
 
 	echo "#!/bin/sh" > vtwm
 	echo "xsetroot -cursor_name left_ptr &" >> vtwm
-	echo "/usr/X11R6/bin/vtwm" >> vtwm
+	echo "/usr/bin/vtwm" >> vtwm
 	exeinto /etc/X11/Sessions
 	doexe vtwm
 	dodoc doc/4.6.*

@@ -1,8 +1,11 @@
 # ChangeLog for x11-wm/vtwm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/ChangeLog,v 1.1 2003/08/24 19:04:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/ChangeLog,v 1.2 2003/08/25 22:04:11 usata Exp $
 
 *vtwm-5.4.6a (25 Aug 2003)
+
+  26 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> vtwm-5.4.6a.ebuild:
+  Xsession entry for vtwm should refer to /usr/bin/vtwm
 
   25 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> vtwm-5.4.6a.ebuild:
   Initial import.  Ebuild submitted by Andrew Casey <drewbian@tsn.cc>
