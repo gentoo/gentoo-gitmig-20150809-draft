@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.10.0.ebuild,v 1.1 2004/03/23 22:44:47 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.10.0.ebuild,v 1.2 2004/03/24 14:04:03 gustavoz Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gok.ca/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="~x86 -sparc ~hppa ~alpha ~ia64 ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~hppa ~alpha ~ia64 ~ppc ~amd64"
 
 IUSE=""
 
