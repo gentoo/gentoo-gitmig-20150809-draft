@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/make
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.20 2004/07/17 00:32:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.21 2004/10/10 03:57:29 vapier Exp $
+
+*make-3.80-r1 (09 Oct 2004)
+
+  09 Oct 2004; Mike Frysinger <vapier@gentoo.org> +files/3.80-memory.patch,
+  +make-3.80-r1.ebuild:
+  Add patch for 'virtual memory exhausted' bug. Patch comes from
+  Debian/upstream. Bug by Natanael Copa #48765.
 
   16 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> make-3.80.ebuild:
   gnuconfig_update in src_unpack; use emake; use bz2; use econf; use use_enable;
