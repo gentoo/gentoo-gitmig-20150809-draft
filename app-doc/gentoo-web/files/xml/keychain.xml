@@ -8,8 +8,8 @@ This page contains information about Keychain, an OpenSSH-compatible RSA/DSA key
 application for bash.
 </abstract>
 
-<version>1.4</version>
-<date>20 Sep 2001</date>
+<version>1.5</version>
+<date>21 Sep 2001</date>
 
 <chapter>
 <title>Keychain Intro</title>
@@ -61,8 +61,11 @@ time you really need to reinitialize the long-running <c>ssh-agent</c> process.
 
 <p>
 The most recent release of <c>keychain</c> can be found here:<br/><br/>
-<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.4.tar.bz2</uri>
+<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.5.tar.bz2</uri>
 </p>
+<pre caption="md5sum">
+11747092170b1a4df3ae8afc0a672987  keychain-1.5.tar.bz2
+</pre>
 </body>
 </section>
 </chapter>
@@ -93,6 +96,17 @@ unencrypted private keys.
 # ChangeLog for KeyChain; http://www.gentoo.org/projects/keychain
 # Copyright 2001 Gentoo Technologies, Inc.; Distributed under the GPL
 # Written by Daniel Robbins (drobbins@gentoo.org)
+
+*keychain 1.5 (21 Sep 2001)
+
+  21 Sep 2001; David Hull (hull@paracel.com):
+  misc. compatibility, signal handling, cleanup fixes
+  
+  21 Sep 2001; 
+  "ps" test to find the right one for your OS.
+
+  20 Sep 2001; Marko Myllynen (myllynen@lut.fi):
+  grep [s]sh-agent to grep "[s]sh-agent" (zsh fix)
 
 *keychain 1.4 (20 Sep 2001)
 
