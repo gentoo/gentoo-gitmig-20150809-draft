@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.4-r1.ebuild,v 1.2 2001/04/29 01:55:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.4-r1.ebuild,v 1.3 2001/04/29 02:00:55 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version
 OKV=2.4.4
@@ -35,7 +35,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 #	 http://download.sourceforge.net/xmlprocfs/linux-2.4-xmlprocfs-${XMLV}.patch.gz
 #	 ftp://ftp.reiserfs.com/pub/reiserfs-for-2.4/linux-${OKV}-reiserfs-${RV}.patch.gz
 
-if [ "`use alsa`" ]
+if [ -n "`use alsa`" ]
 then
     SRC_URI="$SRC_URI ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2"
 fi
@@ -253,6 +253,13 @@ src_install() {
 	cd include
 	doins asound.h asoundid.h asequencer.h ainstr_*.h
     fi 
+
+	#don't overwrite existing .config if present
+	cd ${D}/usr/src/linux
+	if [ -e .config ]
+	then
+		cp .config .config.eg
+	fi
 }
 
 pkg_postinst() {
@@ -266,7 +273,18 @@ pkg_postinst() {
     fi
     rm -f ${ROOT}/usr/src/linux
     ln -sf linux-${KV} ${ROOT}/usr/src/linux
+
+	#copy over our .config if one isn't already present
+	cd ${ROOT}/usr/src/linux
+	if [ -e .config.eg ]
+	then
+		if [ ! -e .config ]
+		then
+			cp .config.eg .config
+		fi
+	fi
 }
+
 
 pkg_postrm() {
     rm -rf ${ROOT}/usr/src/linux ${ROOT}/usr/src/linux-${KV}
