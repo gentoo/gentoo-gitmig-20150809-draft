@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.4 2004/02/07 21:28:42 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.5 2004/02/08 20:34:12 sergey Exp $
+
+  08 Feb 2004; Sergey Kuleshov <svyatogor@gentoo.org> kaffeine-0.4.1.ebuild:
+  Fixed the DEPEND.
 
   07 Feb 2004; Brian Harring <ferringb@gentoo.org> kaffeine-0.4.ebuild:
   Changing GenericName entry to english, closing #40602
