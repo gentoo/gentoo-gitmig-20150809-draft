@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0.ebuild,v 1.1 2004/04/13 12:06:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0.ebuild,v 1.2 2004/04/20 11:08:54 phosphan Exp $
 
 IUSE="atlas X tcltk gnome"
 
@@ -25,7 +25,7 @@ DEPEND="virtual/glibc
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.4
-			=gnome-base/libglade-0.17*
+			>=gnome-base/libglade-0.17
 			>=dev-libs/libxml-1.8.16
 			>=gnome-base/ORBit-0.5.12
 			>=media-libs/imlib-1.9.10

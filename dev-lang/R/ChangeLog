@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.18 2004/04/13 12:06:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.19 2004/04/20 11:08:54 phosphan Exp $
+
+  20 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> R-1.9.0.ebuild:
+  Changed dependency - works also with current libglade, see bug #47825
 
 *R-1.9.0 (13 Apr 2004)
 
