@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_transform/mod_transform-0.6.0.ebuild,v 1.1 2005/01/09 00:08:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_transform/mod_transform-0.6.0.ebuild,v 1.2 2005/02/09 16:37:30 hollow Exp $
 
 inherit eutils apache-module
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND=">=dev-libs/libxslt-1.0.22
-	>=dev-libs/libxml2-2.6.6"
+DEPEND=">=dev-libs/libxslt-1.1.5
+	>=dev-libs/libxml2-2.6.11"
 
 APACHE2_MOD_CONF="10_${PN}"
 APACHE2_MOD_DEFINE="TRANSFORM"

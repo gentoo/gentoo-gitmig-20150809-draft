@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_transform
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_transform/ChangeLog,v 1.4 2005/01/09 00:07:59 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_transform/ChangeLog,v 1.5 2005/02/09 16:37:30 hollow Exp $
+
+  09 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  mod_transform-0.6.0.ebuild:
+  fixed DEPEND. closes #81361
 
 *mod_transform-0.6.0 (09 Jan 2005)
 
