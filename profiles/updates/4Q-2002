@@ -81,4 +81,4 @@ move gnome-extra/mc app-misc/mc
 move sys-apps/i2c sys-kmods/i2c
 move sys-apps/lm_sensors sys-kmods/lm_sensors
 move media-sound/freeamp media-sound/zinf
-
+move app-text/xmltex app-text/passivetex
