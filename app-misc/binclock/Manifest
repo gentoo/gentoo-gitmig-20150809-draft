@@ -1,4 +1,16 @@
-MD5 4d0404c1bd463b26228f253693889280 ChangeLog 449
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cb95049da9b61d5db8b9a66ba59453d5 binclock-1.4.ebuild 784
 MD5 6aa052192f3b4d092235e43ddc1e45b0 metadata.xml 342
+MD5 1fe14348f3740f57e8df5c80f66d1754 ChangeLog 570
+MD5 1feaa933941385bbc88b03145b2dab16 binclock-1.5.ebuild 763
 MD5 52a6995091112a9ea6c90d28f1151db1 files/digest-binclock-1.4 63
+MD5 e7c6bf1d56a3cefbf13c62abdbc3ebf1 files/digest-binclock-1.5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBA9gEAXomK8S72HoRAvcyAJ9j5of0rAetT3p0vDVa1aCCsNqsAACfXOr1
+WOsXim9nM7EeNMn5KMA96ho=
+=RenD
+-----END PGP SIGNATURE-----
