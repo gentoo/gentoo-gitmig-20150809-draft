@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/rte
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/ChangeLog,v 1.7 2003/02/12 07:16:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/ChangeLog,v 1.8 2003/03/26 11:31:17 malverian Exp $
+
+*rte-0.5.1 (26 Mar 2003)
+
+  26 Mar 2003; Philip Walls <malverian@gentoo.org> rte-0.5.1.ebuild,
+  digest-rte-0.5.1 :
+  Version bump; Thanks to: Theofilos Intzoglou <oscar10@yifan.net>
+  Resolves bug #18182
 
 *rte-0.5 (30 Jan 2003)
   30 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org>: rte-0.5.ebuild:
