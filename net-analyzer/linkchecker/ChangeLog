@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.7 2004/09/08 13:00:33 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.8 2004/11/24 05:21:49 kingtaco Exp $
+
+  23 Nov 2004; Mike Doty <kingtaco@gentoo.org> linkchecker-1.12.1.ebuild:
+  ~amd64 keyword added
 
   08 Sep 2004; Renat Lumpau <rl03@gentoo.org> metadata.xml:
   Fixed herd name

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-1.12.1.ebuild,v 1.4 2004/07/11 10:18:23 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-1.12.1.ebuild,v 1.5 2004/11/24 05:21:49 kingtaco Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://linkchecker.sourceforge.net/"
 DESCRIPTION="LinkChecker can check HTML documents for broken links."
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 RESTRICT="nomirror"
 SLOT=0
 
