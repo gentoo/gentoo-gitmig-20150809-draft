@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.9 2004/07/11 17:47:32 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.10 2004/07/14 13:47:18 agriffis Exp $
 
-IUSE="atlas X tcltk gnome"
+IUSE="X atlas f77 gnome tcltk"
 
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 

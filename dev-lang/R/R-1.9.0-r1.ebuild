@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0-r1.ebuild,v 1.6 2004/07/11 17:47:32 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0-r1.ebuild,v 1.7 2004/07/14 13:47:18 agriffis Exp $
 
 IUSE="blas X tcltk gnome zlib bzlib pcre f2c"
 
@@ -42,7 +42,7 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 pkg_setup() {
 	if [ -z "$(which g77 2>/dev/null)" ]; then
 		einfo "Couldn't find g77 Fortran Compiler."
-		if [ -z "$(use f2c)" ]; then
+		if ! use f2c; then
 			eerror "Trying to emerge this packet w/o fortran compiler."
 			eerror "Try again with USE=\"f2c\" emerge dev-lang/R."
 			die "No fortran compiler, no f2c."
@@ -128,4 +128,3 @@ src_install () {
 	fi
 
 }
-
