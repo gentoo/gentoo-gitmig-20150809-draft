@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.29 2003/03/31 19:41:24 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.30 2003/04/16 00:19:34 gmsoft Exp $
 
 *screen-3.9.15 (13 Mar 2003)
+
+  16 Apr 2003; Guy Martin <gmsoft@gentoo.org> screen-3.9.15.ebuild :
+  Marked stable on hppa.
 
   31 Mar 2003; Jan Seidel <tuxus@gentoo.org> screen-3.9.15.ebuild:
   Added mips to KEYWORDS
@@ -13,10 +16,10 @@
   13 Mar 2003; Brandon Low <lostlogic@gentoo.org> screen-3.9.15.ebuild:
   Version bump
 
+*screen-3.9.13-r4 (16 Jan 2003)
+
   10 Feb 2003; Guy Martin <gmsoft@gentoo.org> screen-3.9.13-r4.ebuild :
   Added hppa to keywords.
-
-*screen-3.9.13-r4 (16 Jan 2003)
 
   16 Jan 2003; Aron Griffis <agriffis@gentoo.org> screen-3.9.13-r4.ebuild :
   Revision bump since the last change affects run-time, not compile-time.
