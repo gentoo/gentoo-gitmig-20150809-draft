@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.3-r1.ebuild,v 1.4 2002/07/27 12:55:33 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.3-r1.ebuild,v 1.5 2002/08/06 19:02:36 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DOS Emulator"
@@ -8,7 +8,7 @@ SRC_URI="http://telia.dl.sourceforge.net/sourceforge/dosemu/dosemu-freedos-bin.t
 	http://telia.dl.sourceforge.net/sourceforge/dosemu/dosemu-1.1.3.tgz"
 HOMEPAGE="http://www.dosemu.org"
 LICENSE="GPL | LGPL"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 SLOT="0"
 DEPEND="X? ( virtual/x11 )
 		svga? ( media-libs/svgalib )"
