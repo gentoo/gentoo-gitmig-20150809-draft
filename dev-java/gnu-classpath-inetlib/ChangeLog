@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/inetlib
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.1 2004/04/02 09:54:37 karltk Exp $
+
+*gnu-classpath-inetlib-20040331 (01 Apr 2004)
+
+  01 Apr 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  gnu-classpath-inetlib-20040331.ebuild: Initial import. Ebuild
+  submitted by myself. No joke.
