@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.6.ebuild,v 1.2 2004/10/17 01:56:05 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.6.ebuild,v 1.3 2004/11/05 11:11:11 chainsaw Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DOLILO_V="0.2"
 IUSE="devmap static"
@@ -17,11 +17,11 @@ SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${P}.tar.gz
 
 SLOT="0"
 LICENSE="BSD GPL-2"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
-RDEPEND="devmap? ( >=sys-libs/device-mapper-1.00.08 )"
+RDEPEND=">=sys-apps/sed-4
+	devmap? ( >=sys-libs/device-mapper-1.00.08 )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	>=sys-devel/bin86-0.15.5"
 
 PROVIDE="virtual/bootloader"
@@ -67,10 +67,10 @@ src_compile() {
 
 	# we explicitly prevent the custom CFLAGS for stability reasons
 	if use static; then
-		emake CC="${CC:=gcc} ${HARDENED_CFLAGS}" lilo-static || die
+		emake CC="$(tc-getCC) ${HARDENED_CFLAGS}" lilo-static || die
 		mv lilo-static lilo || die
 	else
-		emake CC="${CC:=gcc} ${HARDENED_CFLAGS}" lilo || die
+		emake CC="$(tc-getCC) ${HARDENED_CFLAGS}" lilo || die
 	fi
 }
 
@@ -182,8 +182,6 @@ pkg_postinst() {
 	fi
 
 	echo
-	einfo "Please note that all the loader files (/boot/*.b) are now linked"
-	einfo "into LILO, and thus no longer installed."
 	einfo "Issue 'dolilo' instead of 'lilo' to have a friendly wrapper that"
 	einfo "handles mounting and unmounting /boot for you. It can do more then"
 	einfo "that when asked, edit /etc/conf.d/dolilo to harness it's full potential."
