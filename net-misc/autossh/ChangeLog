@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/autossh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.8 2004/06/07 06:46:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.9 2004/06/14 16:51:10 aliz Exp $
+
+  14 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> autossh-1.2d.ebuild,
+  autossh-1.2e.ebuild, autossh-1.2f.ebuild:
+  Unmasked on x86, added IUSE and removed S=.
 
   07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> autossh-1.2e.ebuild:
   Stable on alpha.
