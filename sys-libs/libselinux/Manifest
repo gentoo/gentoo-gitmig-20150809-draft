@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1b6f6c5bf59c105a29f7fc6a574c3c94 ChangeLog 3850
+MD5 c577c8745e0220a8fcaa71fc419d95cc ChangeLog 4029
 MD5 652c5e8a0a081bf4317359f04f65a603 metadata.xml 537
 MD5 e0aed8c433fe3c6f3fec67306c598cc3 libselinux-1.16.ebuild 1228
-MD5 44223f8af4145b1e0270e8fd3b32beaf libselinux-1.18.ebuild 1290
+MD5 411a0c5474c21dfa44cd2b82ba3d3665 libselinux-1.18.ebuild 1286
+MD5 a62ae15f8f1358838a3da13da59c6ce1 libselinux-1.20.ebuild 1253
 MD5 df040452d72f2635e048a0c69d739e02 files/digest-libselinux-1.16 63
 MD5 ba65b8fb0c686c30d5ec81292bedda02 files/digest-libselinux-1.18 63
 MD5 629c294226ad0d96a81c6d9d44fb1669 files/selinuxconfig.c.diff 646
+MD5 fe6a7f18cac0b37104c6f767ee7a5c87 files/digest-libselinux-1.20 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB2elHMTuwkQ6eEKsRAqNcAJ9jhe8mxr/JNxqjqKyDpywCNGz/KwCfUxeC
-5gIf1HflWKB0MfchV5A3opU=
-=RwZx
+iD8DBQFB301yMTuwkQ6eEKsRAgRZAKCNKSolbowYnIvje7pag/Ig2cf5YgCfVyGu
+JaiIftalypu4A8F2YhqQyb0=
+=1mK8
 -----END PGP SIGNATURE-----
