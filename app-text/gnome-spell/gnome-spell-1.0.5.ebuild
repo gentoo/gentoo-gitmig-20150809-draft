@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5.ebuild,v 1.12 2004/07/14 01:59:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5.ebuild,v 1.13 2004/08/21 15:42:57 foser Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ RDEPEND=">=gnome-base/libgnomeui-2.2
 	>=gnome-base/libbonoboui-2.0
 	>=gnome-base/libglade-2.0
 	>=gnome-base/libbonobo-2.0
-	>=gnome-base/ORBit2-2.0
+	>=gnome-base/orbit-2.0
 	virtual/aspell-dict"
 
 DEPEND="${RDEPEND}
