@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perlmagick
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.21 2004/10/04 21:08:56 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.22 2004/10/19 22:13:44 hansmi Exp $
+
+  20 Oct 2004; Michael Hanselmann <hansmi@gentoo.org>
+  perlmagick-6.1.0.1.ebuild:
+  Stable on ppc. Bug 67553.
 
 *perlmagick-6.1.0.1 (04 Oct 2004)
 
