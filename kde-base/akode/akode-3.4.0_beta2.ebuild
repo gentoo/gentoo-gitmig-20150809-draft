@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/akode-3.4.0_beta2.ebuild,v 1.3 2005/02/06 11:41:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/akode-3.4.0_beta2.ebuild,v 1.4 2005/02/15 16:03:36 greg_g Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -25,10 +25,9 @@ DEPEND="arts? ( $(deprange $PV $MAXKDEVER kde-base/arts) )
 # TODO: configure needs a pkg-config file for media-sound/jack to detect it
 
 src_compile() {
-	use oggvorbis && myconf="$myconf --with-vorbis=/usr" || myconf="$myconf --without-vorbis"
 	use speex && myconf="$myconf --with-extra-includes=/usr/include/speex"
 	myconf="$myconf $(use_with mad libmad) $(use_with flac) $(use_with libsamplerate)
-			$(use_with alsa) $(use_with jack)"
+			$(use_with alsa) $(use_with jack) $(use_with oggvorbis vorbis)"
 
 	kde-meta_src_compile
 }
