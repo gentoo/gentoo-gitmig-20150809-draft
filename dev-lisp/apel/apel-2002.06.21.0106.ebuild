@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # Copyright 2002 moto kawasaki <kawasaki@kawasaki3.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/apel/apel-2002.06.21.0106.ebuild,v 1.6 2002/10/04 05:18:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/apel/apel-2002.06.21.0106.ebuild,v 1.7 2002/10/20 18:42:33 vapier Exp $
 
 Name=`echo ${P} | sed -e 's#\.##g'`
 A="${Name}.tar.gz"
@@ -11,7 +11,6 @@ DESCRIPTION="A Portable Emacs Library -- apel"
 SRC_URI="ftp://ftp.m17n.org/pub/mule/apel/snapshots/${A}"
 HOMEPAGE="http://cvs.m17n.org/elisp/APEL/"
 DEPEND=">=app-editors/emacs-20.4"
-RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
