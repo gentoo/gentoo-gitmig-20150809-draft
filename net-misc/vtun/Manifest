@@ -5,12 +5,12 @@ MD5 eae860aeae73e470782dd4ece745d0b1 files/vtun-2.5-makefile.patch 1794
 MD5 f48bedfa560d860030f8da2155092016 files/vtun-2.5-expect.patch 334
 MD5 e5c8a47e7b30540f4094b1aa6d3f6e5f files/digest-vtun-2.5-r1 59
 MD5 e5c8a47e7b30540f4094b1aa6d3f6e5f files/digest-vtun-2.5-r2 59
-MD5 3a3f5cf7a037b2ad6befefa9cf60f782 files/vtun.rc 686
+MD5 99b7d4ae33a415f3290cfe405a98a58c files/vtun.rc 683
 MD5 1e46f74e06c298440ef80e55ea493cbb files/vtun-2.5-r2-gentoo-gcc3.1.patch 767
 MD5 49170c19de7a8830d2d2135f244b750a files/vtun-2.6-makefile.patch 1919
 MD5 aaca53280167208d5eb97bff83a69895 vtun-2.5-r2.ebuild 2048
 MD5 ca28bbd9a58ea15db59628325049c3d1 vtun-2.5.ebuild 1723
 MD5 9858296d6cacc8b64ce59085597684ff vtun-2.5-r1.ebuild 1945
-MD5 eea16e7c32c661a0af0cf1eb4a0f7503 ChangeLog 1789
+MD5 aea49f12d7866bad5c145db322850b2e ChangeLog 1869
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 001470426bdd24abb1ea48ba110cb53f vtun-2.6.ebuild 1648
