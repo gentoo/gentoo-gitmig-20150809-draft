@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.13 2003/09/07 11:50:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.14 2003/12/13 13:05:36 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
@@ -13,7 +13,7 @@ DEPEND=">=media-libs/jpeg-6b
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="x86 ppc sparc amd64 hppa"
 
 # 13/May/2003: Fix for bug #14392  by Jason Wever <weeve@gentoo.org>
 # start fix
