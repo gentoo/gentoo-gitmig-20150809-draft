@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.10 2003/10/20 12:01:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.11 2003/11/03 15:55:37 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -28,10 +28,15 @@ fi
 
 ruby_src_unpack() {
 	if [ "${USE_RUBY_1_6}" -a "${USE_RUBY_1_8}" ] && \
-		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] ; then
+		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] && \
+		[ -n "${RUBY_SLOT}" ] ; then
 		mkdir -p ${S}/{1.6,1.8}
-		cd ${S}/1.6; unpack ${A}; cd -
-		cd ${S}/1.8; unpack ${A}; cd -
+		if [ "${RUBY_SLOT}" = "1.6" -o "${RUBY_SLOT}" = "0" ] ; then
+			cd ${S}/1.6; unpack ${A}; cd -
+		fi
+		if [ "${RUBY_SLOT}" = "1.8" -o "${RUBY_SLOT}" = "0" ] ; then
+			cd ${S}/1.8; unpack ${A}; cd -
+		fi
 	else
 		unpack ${A}
 	fi
@@ -74,15 +79,20 @@ erubyconf() {
 
 ruby_econf() {
 	if [ "${USE_RUBY_1_6}" -a "${USE_RUBY_1_8}" ] && \
-		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] ; then
-		einfo "running econf for ruby 1.6 ;)"
-		cd 1.6/${S#${WORKDIR}}
-		erubyconf ruby16 $@ || die
-		cd -
-		einfo "running econf for ruby 1.8 ;)"
-		cd 1.8/${S#${WORKDIR}}
-		erubyconf ruby18 $@ || die
-		cd -
+		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] && \
+		[ -n "${RUBY_SLOT}" ] ; then
+		if [ "${RUBY_SLOT}" = "1.6" -o "${RUBY_SLOT}" = "0" ] ; then
+			einfo "running econf for ruby 1.6 ;)"
+			cd 1.6/${S#${WORKDIR}}
+			erubyconf ruby16 $@ || die
+			cd -
+		fi
+		if [ "${RUBY_SLOT}" = "1.8" -o "${RUBY_SLOT}" = "0" ] ; then
+			einfo "running econf for ruby 1.8 ;)"
+			cd 1.8/${S#${WORKDIR}}
+			erubyconf ruby18 $@ || die
+			cd -
+		fi
 	else
 		einfo "running econf for ruby ;)"
 		erubyconf ruby $@ || die
@@ -97,15 +107,20 @@ erubymake() {
 
 ruby_emake() {
 	if [ "${USE_RUBY_1_6}" -a "${USE_RUBY_1_8}" ] && \
-		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] ; then
-		einfo "running emake for ruby 1.6 ;)"
-		cd 1.6/${S#${WORKDIR}}
-		erubymake $@ || die
-		cd -
-		einfo "running emake for ruby 1.8 ;)"
-		cd 1.8/${S#${WORKDIR}}
-		erubymake $@ || die
-		cd -
+		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] && \
+		[ -n "${RUBY_SLOT}" ] ; then
+		if [ "${RUBY_SLOT}" = "1.6" -o "${RUBY_SLOT}" = "0" ] ; then
+			einfo "running emake for ruby 1.6 ;)"
+			cd 1.6/${S#${WORKDIR}}
+			erubymake $@ || die
+			cd -
+		fi
+		if [ "${RUBY_SLOT}" = "1.8" -o "${RUBY_SLOT}" = "0" ] ; then
+			einfo "running emake for ruby 1.8 ;)"
+			cd 1.8/${S#${WORKDIR}}
+			erubymake $@ || die
+			cd -
+		fi
 	else
 		einfo "running emake for ruby ;)"
 		erubymake $@ || die
@@ -137,7 +152,8 @@ erubyinstall() {
 	elif [ -f extconf.rb -o -f Makefile ] ; then
 		make DESTDIR=${D} $@ install || die "make install failed"
 	else
-		if [ "${WANT_RUBY_1_6}" -o "${WANT_RUBY_1_8}" ] ; then
+		if [ "${WANT_RUBY_1_6}" -o "${WANT_RUBY_1_8}" \
+			-o "${RUBY_SLOT}" = "1.6" -o "${RUBY_SLOT}" = "1.8" ] ; then
 			siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
 		else
 			siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitedir"]')
@@ -150,15 +166,21 @@ erubyinstall() {
 ruby_einstall() {
 
 	if [ "${USE_RUBY_1_6}" -a "${USE_RUBY_1_8}" ] && \
-		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] ; then
-		einfo "running einstall for ruby 1.6 ;)"
-		cd ${S}/1.6/${S#${WORKDIR}}
-		erubyinstall ruby16 $@
-		cd -
-		einfo "running einstall for ruby 1.8 ;)"
-		cd ${S}/1.8/${S#${WORKDIR}}
-		erubyinstall ruby18 $@
-		S=${S}/1.8/${S#${WORKDIR}}
+		[ ! "${WANT_RUBY_1_6}" -a ! "${WANT_RUBY_1_8}" ] && \
+		[ -n "${RUBY_SLOT}" ] ; then
+		if [ "${RUBY_SLOT}" = "1.6" -o "${RUBY_SLOT}" = "0" ] ; then
+			einfo "running einstall for ruby 1.6 ;)"
+			MY_S=${S}/1.6/${S#${WORKDIR}}
+			cd ${MY_S}
+			erubyinstall ruby16 $@
+		fi
+		if [ "${RUBY_SLOT}" = "1.8" -o "${RUBY_SLOT}" = "0" ] ; then
+			einfo "running einstall for ruby 1.8 ;)"
+			MY_S=${S}/1.8/${S#${WORKDIR}}
+			cd ${MY_S}
+			erubyinstall ruby18 $@
+		fi
+		S=${MY_S}
 		#cd -
 	else
 		einfo "running einstall for ruby ;)"
