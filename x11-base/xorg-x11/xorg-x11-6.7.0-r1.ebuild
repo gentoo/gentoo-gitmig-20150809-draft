@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.20 2004/07/05 22:34:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.21 2004/07/06 11:42:55 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -8,14 +8,8 @@
 # libxkbfile.so, libxkbui.so
 
 # TODO
-# 05 July 2004 <spyderous@gentoo.org>
-#   TARGET: 1.1.1
-#		spy: #50562 -- add SDK/pie compat patch
-#		spy: #54132 -- xorgconfig still adds old font paths
-# 		spy: #38232 -- move 4152_all_4.3.0-allow-xdm-server-quotes.patch over
-#			from xfree-4.3.0-r7
-# 		spy: #21120 -- sun type6 kbd patch ported from xfree 4.3.0
-#   TARGET: 1.2 (6.7.0-r2)
+# 06 July 2004 <spyderous@gentoo.org>
+#   TARGET: patchset 1.2 (6.7.0-r2)
 #		spy: #48095 -- add S3 support for laptop suspend
 #		spy: #49155 -- updated keymap for french-belgian azerty
 #		spy: Move 9000_all_4.3.0-lnx-evdev-core.patch,
@@ -42,7 +36,7 @@ IUSE="3dfx 3dnow cjk debug doc hardened ipv6 mmx nls pam pie sdk sse static"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.2"
-PATCH_VER="1.1"
+PATCH_VER="1.1.1"
 #RENDER_VER="0.8"
 # Needed for xrender.pc in addition to external libs
 XRENDER_VER="0.8.4"
@@ -76,7 +70,6 @@ GENTOO_FILES="http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/${P}-f
 
 SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
 	http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2
-	http://dev.gentoo.org/~tgall/xorg-x11-6.7.0-ppc64-support-updates.patch
 	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
 	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	${GENTOO_FILES}
@@ -202,8 +195,10 @@ pkg_setup() {
 	# See bug #35468, circular pam-X11 dep
 	if use pam && [ "`best_version x11-base/${PN}`" ]
 	then
+		einfo "Previous X installation detected"
 		einfo "Enabling PAM features in ${PN}..."
 	else
+		einfo "Previous X installation NOT detected"
 		einfo "Disabling PAM features in ${PN}..."
 	fi
 
@@ -632,11 +627,6 @@ fi
 			touch Xft/config.h
 		eend 0
 		cd ${S}
-	fi
-
-	if [ "${ARCH}" == "ppc64" ]
-	then
-		cp $DISTDIR/xorg-x11-6.7.0-ppc64-support-updates.patch ${PATCHDIR}/9999_all_6.7.0-ppc64-support-updates.patch
 	fi
 
 	patch_setup

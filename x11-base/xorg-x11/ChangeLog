@@ -1,6 +1,21 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.68 2004/07/05 22:42:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.69 2004/07/06 11:42:55 spyderous Exp $
+
+  06 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r1.ebuild:
+  PATCH_VER 1.1.1. Move ppc64 patch over from its formerly bad placement as a
+  separate file into the patchball as
+  9360_all_6.7.0-ppc64-support-updates.patch. Add
+  4152_all_4.3.0-allow-xdm-server-quotes.patch from xfree-4.3.0-r7 (#38232).
+  This allows quoted expressions in /etc/X11/xdm/Xservers to be used properly.
+  Add 0425_all_6.7.0-sun-type6-keyboard.patch from xfree-4.3.0-r7 (#21120),
+  ported by reporter. Add 9855_all_6.7.0-fix-SDK-pie-build.patch to fix a module
+  naming problem on pie builds, which resulted in the SDK install breaking
+  (#50562). Add 9355_all_6.7.0-xorgconfig-fontdir-fixes.patch, which stops the
+  tool from adding /usr/X11R6 font paths when fonts are installed elsewhere
+  (#54132). Also update TODO and add a little more warning for the auto-PAM
+  stuff. This should be ready to go stable on x86 if nothing huge comes up.
 
   05 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>; -xorg-x11-6.7.0.ebuild:
   Pull old version, vulnerable to security hole.
