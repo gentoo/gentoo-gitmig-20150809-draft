@@ -1,0 +1,7 @@
+# ChangeLog for www-client/rabbitticker
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/rabbitticker/ChangeLog,v 1.1 2004/10/05 10:48:08 jstubbs Exp $
+
+  05 Oct 2004; <jason@gentoo.org> :
+  Initial Ebuild
+
