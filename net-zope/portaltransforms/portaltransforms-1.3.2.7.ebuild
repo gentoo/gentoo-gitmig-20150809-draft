@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.3.2.7.ebuild,v 1.1 2004/12/04 20:13:55 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.3.2.7.ebuild,v 1.2 2005/03/15 14:25:59 seemant Exp $
 
 inherit zproduct
 
@@ -25,7 +25,7 @@ RDEPEND=">=net-zope/cmf-1.4.7
 		app-text/xlhtml
 		app-text/unrtf
 		dev-python/docutils
-		net-www/lynx
+		www-client/lynx
 		app-text/pdftohtml"
 
 src_install()
