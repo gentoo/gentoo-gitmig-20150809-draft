@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.901.ebuild,v 1.8 2004/01/31 17:52:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.901.ebuild,v 1.9 2004/02/06 23:36:06 cyfred Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -194,6 +194,13 @@ src_unpack() {
 	mv -f ${PATCH_DIR}/9960_all_4.3.0-exec-shield-GNU* ${PATCH_DIR}/excluded
 	mv -f ${PATCH_DIR}/9961_all_4.3.0-libGL-exec-shield* ${PATCH_DIR}/excluded
 
+	# We dont have an implementation for S/390's yet...
+	if [ ! "${ARCH}" = "s390" ]
+	then
+		mv -f ${PATCH_DIR}/7500* ${PATCH_DIR}/excluded
+	fi
+
+#
 #	if [ ! "`use gatos`" ]
 #	then
 		mv -f ${PATCH_DIR}/9841_all_4.3.0-gatos-mesa* ${PATCH_DIR}/excluded

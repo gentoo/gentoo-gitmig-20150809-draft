@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.274 2004/01/31 17:52:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.275 2004/02/06 23:36:06 cyfred Exp $
+
+  07 Feb 2004; Andrew Bevitt <cyfred@gentoo.org>; xfree-4.3.0-r3.ebuild,
+  xfree-4.3.99.16.ebuild, xfree-4.3.99.901.ebuild, xfree-4.3.99.902.ebuild:
+  Updating to exclude 7500_all_4.0.1-s390-nohardware.patch on any arch except
+  non-existant s390
 
   31 Jan 2004; <donnie@gentoo.org> xfree-4.3.99.16.ebuild,
   xfree-4.3.99.901.ebuild, xfree-4.3.99.902.ebuild:

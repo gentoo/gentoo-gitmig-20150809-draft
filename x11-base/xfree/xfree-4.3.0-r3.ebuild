@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.93 2004/01/27 11:53:57 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.94 2004/02/06 23:36:06 cyfred Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -241,6 +241,12 @@ src_unpack() {
 
 		mv -f ${PATCH_DIR}/0260_ia64_4.2.99.1-gcc3.1.patch \
 			${PATCH_DIR}/excluded
+	fi
+
+	# We dont have an implementation for S/390's yet...
+	if [ ! "${ARCH}" = "s390" ]
+	then
+		mv -f ${PATCH_DIR}/7500* ${PATCH_DIR}/excluded
 	fi
 
 	# This was formerly applied if USE=debug, but it causes builds
