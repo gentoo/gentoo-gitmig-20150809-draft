@@ -1,7 +1,9 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.43 2004/06/04 09:32:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.44 2004/06/07 01:32:59 kumba Exp $
 
+  07 Jun 2004; Joshua Kinard <kumba@gentoo.org> mips-sources-2.6.6-r1.ebuild:
+  Change the IP32DIFFDATE back to a known working date.
 
 *mips-sources-2.4.25-r3 (04 Jun 2004)
 

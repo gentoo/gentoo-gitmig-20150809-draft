@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.6-r1.ebuild,v 1.1 2004/06/04 09:32:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.6-r1.ebuild,v 1.2 2004/06/07 01:32:59 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20040604"
 COBALTPATCHVER="1.4"
-IP32DIFFDATE="20040519"
+IP32DIFFDATE="20040402"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 
