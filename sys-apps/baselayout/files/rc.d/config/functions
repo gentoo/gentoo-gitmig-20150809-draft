@@ -46,7 +46,7 @@ function eend() {
 
 function supervised() {
   local service=`basename $0 | sed -e "s:^[0-9][0-9]::"`
-    if [ -f "$ROOT/etc/supervise/$service" ]
+    if [ -L "$ROOT/etc/supervise/$service" ]
     then
       echo "0"
     fi
