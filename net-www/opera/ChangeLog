@@ -1,6 +1,10 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.82 2004/10/26 17:59:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.83 2004/11/03 10:44:58 eradicator Exp $
+
+  03 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  opera-7.60_alpha2.ebuild:
+  Fixed digest and SRC_URI.
 
 *opera-7.60_alpha2 (26 Oct 2004)
 

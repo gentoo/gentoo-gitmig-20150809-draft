@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.60_alpha2.ebuild,v 1.1 2004/10/26 17:59:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.60_alpha2.ebuild,v 1.2 2004/11/03 10:44:58 eradicator Exp $
 
 IUSE="static spell"
 
@@ -13,25 +13,18 @@ DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
 
 # that's an ugly workaround for the broken src_uri syntax
+OPERA_URI="http://snapshot.opera.com/unix/${OPERAFTPDIR}/"
 SRC_URI="
-	x86? ( static? ( http://snapshot.opera.com/unix/${OPERAFTPDIR}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
-	x86? ( !static? ( http://snapshot.opera.com/unix/${OPERAFTPDIR}/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-	amd64? ( http://snapshot.opera.com/unix/${OPERAFTPDIR}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
-	ppc? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )
-	sparc? ( http://snapshot.opera.com/unix/${OPERAFTPDIR}/intel-linux/en//${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )"
+	x86? ( static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+	x86? ( !static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	amd64? ( ${OPERA}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
+	sparc? ( static? ( ${OPERA_URI}/sparc-linux/en/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
+	sparc? ( !static? ( ${OPERA_URI}/sparc-linux/en/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )
+	ppc? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )"
 
-# ppc shared version does not work as it uses gcc-2.95 - lanius
-#	ppc? ( static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
-#	ppc? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/ppc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )
-
-# amd64 shared libs require app-emulation/emul-linux-x86-qtlibs-1 which is not stable yet
-#	amd64? ( static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
-#	amd64? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-
-# sparc shared version does not work for me as it uses gcc-2.95 - eradicator
-#	sparc? ( static?  ( mirror://opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
-#	sparc? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/sparc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )"
-
+#	amd64? ( !static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+#	ppc? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 )
+#	ppc? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.3-shared-qt.ppc-en.tar.bz2 )
 
 # Dependencies may be augmented later (see below).
 DEPEND=">=sys-apps/sed-4
@@ -42,14 +35,10 @@ RDEPEND="virtual/x11
 	media-libs/libexif
 	x11-libs/openmotif
 	spell? ( app-text/aspell )
-	amd64? ( app-emulation/emul-linux-x86-xlibs )
-	!amd64? ( !sparc? ( !static? ( =x11-libs/qt-3* ) ) )"
+	amd64? ( static? ( app-emulation/emul-linux-x86-xlibs ) 
+	         !static? ( =app-emulation/emul-linux-x86-qtlibs-1* ) )
 
-#	static? (
-#		amd64? ( app-emulation/emul-linux-x86-xlibs ) )
-#	!static? (
-#		amd64? ( =app-emulation/emul-linux-x86-qtlibs-1* )
-#		!amd64? ( =x11-libs/qt-3* ) )
+	x86? ( !static? ( =x11-libs/qt-3* ) )"
 
 SLOT="0"
 LICENSE="OPERA"
