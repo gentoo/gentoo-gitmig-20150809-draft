@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.28.0.ebuild,v 1.9 2003/10/17 19:57:04 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.28.0.ebuild,v 1.10 2003/12/13 12:54:23 pauldv Exp $
 
 inherit libtool
 
@@ -256,7 +256,7 @@ pkg_config() {
 		/usr/bin/svnadmin create ${SVN_REPOS_LOC}/repos
 
 		einfo ">>> Setting repository permissions ..."
-		chown -Rf apache.apache ${SVN_REPOS_LOC}/repos
+		chown -Rf apache:apache ${SVN_REPOS_LOC}/repos
 		chmod -Rf 755 ${SVN_REPOS_LOC}/repos
 	fi
 }

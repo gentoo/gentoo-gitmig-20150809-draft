@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.40 2003/11/09 11:41:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.41 2003/12/13 12:54:23 pauldv Exp $
+
+  13 Dec 2003; <paul@gentoo.org> subversion-0.27.0.ebuild,
+  subversion-0.28.0.ebuild, subversion-0.30.0.ebuild:
+  fix chown syntax
 
 *subversion-0.32.1 (09 Nov 2003)
 
