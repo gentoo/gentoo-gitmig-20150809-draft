@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/xarchon-0.50.ebuild,v 1.3 2004/02/27 03:35:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/xarchon-0.50.ebuild,v 1.4 2004/06/03 22:31:26 agriffis Exp $
 
 inherit games
 
@@ -20,7 +20,7 @@ DEPEND="virtual/x11
 
 src_compile() {
 	local mysndconf
-	[ `use esd` ] \
+	use esd \
 		&& mysndconf="--with-esd-prefix=/usr" \
 		|| mysndconf="--disable-sound"
 	egamesconf \

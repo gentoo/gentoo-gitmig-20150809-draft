@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.2 2004/02/20 07:38:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.3 2004/06/03 22:26:26 agriffis Exp $
 
 inherit games flag-o-matic eutils
 
@@ -24,7 +24,7 @@ S=${WORKDIR}/freecnc++
 
 src_unpack() {
 	unpack freecnc++-${PV}-src.tar.bz2
-	if [ `use nocd` ] ; then
+	if use nocd ; then
 		mkdir data ; cd data
 		unpack cc1demo1.zip cc1demo2.zip
 		for f in * ; do
@@ -56,7 +56,7 @@ src_install() {
 	insinto ${GAMES_SYSCONFDIR}/${PN}
 	doins conf/*
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
-	if [ `use nocd` ] ; then
+	if use nocd ; then
 		cd ${WORKDIR}/data
 		insinto ${GAMES_DATADIR}/${PN}
 		doins *.mix *.aud

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.1.ebuild,v 1.10 2004/03/28 07:05:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.1.ebuild,v 1.11 2004/06/03 22:23:02 agriffis Exp $
 
 inherit games
 
@@ -47,7 +47,7 @@ src_compile() {
 	local myclient="no"
 	use X && myclient="xaw"
 	use Xaw3d && myclient="xaw3d"
-	if [ `use gtk` ] ; then
+	if use gtk ; then
 		use gtk2 \
 			&& myclient="gtk-2.0" \
 			|| myclient="gtk"
