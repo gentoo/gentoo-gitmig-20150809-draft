@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.3.ebuild,v 1.2 2003/06/14 17:38:28 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.3.ebuild,v 1.3 2003/06/15 21:32:44 kumba Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 SRC_URI="ftp://ftp.es.debian.org/debian/pool/main/s/ssmtp/ssmtp_${PV}.tar.gz"
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://ftp.es.debian.org/debian/pool/main/s/ssmtp/"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips"
 LICENSE="GPL-2"
-IUSE="ssl ipv6 md5"
+IUSE="ssl ipv6 md5sum"
 
 DEPEND="virtual/glibc
 	ssl? ( dev-libs/openssl )"
@@ -23,10 +23,10 @@ S=${WORKDIR}/ssmtp-2.60
 src_compile() {
 	local myconf
 
-	use ssl && ( epatch ${FILESDIR}/starttls.diff || die )
+	use ssl && ( epatch ${FILESDIR}/starttls.diff )
 	use ssl && myconf="${myconf} --enable-ssl"
 	use ipv6 && myconf="${myconf} --enable-inet6"
-	use md5 && myconf="${myconf} --enable-md5suth"
+	use md5sum && myconf="${myconf} --enable-md5suth"
 
 	econf \
 		--sysconfdir=/etc/ssmtp \
