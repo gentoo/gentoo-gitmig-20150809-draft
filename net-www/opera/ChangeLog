@@ -1,13 +1,17 @@
 # ChangeLog for net-www/opera
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.6 2002/04/24 18:57:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.7 2002/05/12 17:20:11 karltk Exp $
+
+*opera-6.0_beta2 (12 May 2002)
+
+  12 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> opera-6.0_beta2.ebuild files/digest-opera-6.0_beta2:
+
+  New upstream version. Spent time moving it all into /opt. Start opera
+  with the /opt/opera/bin/opera script.
 
 *opera-6.0_pre4-r3 (24 Apr 2002)
 
-  24 Apr 2002; Seemant Kulleen <seemant@gentoo.org> opera-6.0_pre4-r3.ebuild 
-  files/digest-opera-6.0_pre4-r2 :
-
-
+  24 Apr 2002; Seemant Kulleen <seemant@gentoo.org> opera-6.0_pre4-r3.ebuild files/digest-opera-6.0_pre4-r2 :
 
 *opera-6.0_pre4-r2 (18 Apr 2002)
 
@@ -35,8 +39,8 @@
 
   3 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
   
-  Added fix for bug #508 to both 5.0 and 6.0_pre3 ebuilds. This fixes the incorrect
-  dependency, which installed QT3 instead of QT2.
+  Added fix for bug #508 to both 5.0 and 6.0_pre3 ebuilds. This fixes the 
+  incorrect dependency, which installed QT3 instead of QT2.
 
 *opera-6.0_pre3 (1 Feb 2002)
 
