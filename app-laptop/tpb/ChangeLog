@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/tpb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/ChangeLog,v 1.7 2004/09/19 11:32:25 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/ChangeLog,v 1.8 2004/10/17 12:32:22 brix Exp $
+
+  17 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> tpb-0.6.3.ebuild:
+  Stable on x86
 
 *tpb-0.6.3 (19 Sep 2004)
 
