@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.38 2004/09/12 10:32:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.39 2004/09/22 20:51:58 eradicator Exp $
+
+*libvorbis-1.1.0 (22 Sep 2004)
+
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -libvorbis-1.0-r2.ebuild, -libvorbis-1.0-r3.ebuild,
+  -libvorbis-1.0.1-r1.ebuild, -libvorbis-1.0.1.ebuild,
+  +libvorbis-1.1.0.ebuild:
+  Version bump.  Removing old versions.
 
   12 Sep 2004; Michael Hanselmann <hansmi@gentoo.org>
   libvorbis-1.0.1-r2.ebuild:
