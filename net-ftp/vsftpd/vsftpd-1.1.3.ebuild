@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.1.3.ebuild,v 1.6 2003/07/13 11:55:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.1.3.ebuild,v 1.7 2003/12/08 16:24:07 spider Exp $
 
 inherit flag-o-matic
 
@@ -48,7 +48,7 @@ src_install() {
 	newdoc vsftpd.conf vsftpd.conf.dist.sample
 	docinto security ; dodoc SECURITY/*
 	cp -a EXAMPLE ${D}/usr/share/doc/${PF}/examples
-	chown -R root.root ${D}/usr/share/doc/${PF} # :\
+	chown -R root:root ${D}/usr/share/doc/${PF} # :\
 
 	insinto /etc ; doins ${FILESDIR}/ftpusers
 	insinto /etc/vsftpd ; newins ${FILESDIR}/vsftpd.conf vsftpd.conf.sample
