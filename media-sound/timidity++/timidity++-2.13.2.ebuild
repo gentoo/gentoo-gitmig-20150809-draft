@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.2 2004/11/23 11:12:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.3 2004/12/19 04:54:11 eradicator Exp $
 
 IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa arts jack portaudio emacs"
 
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 
 RDEPEND="${RDEPEND}
-	tcltk? ( >=dev-lang/tk-8.1 )
+	X? ( tcltk? ( >=dev-lang/tk-8.1 ) )
 	emacs? ( virtual/emacs )"
 
 src_compile() {
