@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.2.0.ebuild,v 1.11 2004/07/01 20:40:56 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.2.0.ebuild,v 1.12 2004/07/15 02:38:15 agriffis Exp $
 
 IUSE="doc"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Asterisk - Full PBX in Software"
 HOMEPAGE="http://www.asterisk.org"
 SRC_URI="ftp://ftp.asterisk.org/pub/telephony/${PN}/old-releases/${P}.tar.gz"

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.9.0.ebuild,v 1.5 2004/07/05 20:39:42 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.9.0.ebuild,v 1.6 2004/07/15 02:38:15 agriffis Exp $
 
-IUSE="doc alsa mysql gtk mmx nopri nozaptel noiax vhosts"
+IUSE="alsa doc gtk mmx mysql noiax nopri nozaptel"
 
 inherit eutils webapp-apache
 
