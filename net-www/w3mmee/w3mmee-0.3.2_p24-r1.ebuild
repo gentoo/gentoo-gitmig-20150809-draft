@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24.ebuild,v 1.2 2003/08/22 14:41:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24-r1.ebuild,v 1.1 2003/08/22 14:41:46 usata Exp $
 
 IUSE="cjk gpm imlib nls ssl"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://pub.ks-and-ks.ne.jp/prog/w3mmee/"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="x86 -alpha ppc ~sparc"
+KEYWORDS="~x86 -alpha ~ppc ~sparc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
@@ -104,7 +104,7 @@ src_compile() {
 		-cflags=${CFLAGS} -ldflags=${LDFLAGS} \
 		${myconf} || die
 
-	emake || die "make failed"
+	emake MAN='env LC_MESSAGES=$${LC_MESSAGES:-$${LC_ALL:-$${LANG}}} LANG=C man' || die "make failed"
 }
 
 src_install() {
@@ -112,10 +112,19 @@ src_install() {
 	einstall DESTDIR=${D}
 
 	# w3mman and manpages conflict with those from w3m
-	mv ${D}/usr/bin/w3mman ${D}/usr/bin/w3mmeeman
+	mv ${D}/usr/bin/w3m{,mee}man
 	mv ${D}/usr/share/man/ja/man1/w3m{,mee}.1
 	mv ${D}/usr/share/man/man1/w3m{,mee}.1
 	mv ${D}/usr/share/man/man1/w3mman{,mee}.1
+
+	# creates symlinks if w3m is not installed
+	if [ ! -e /usr/bin/w3m ] ; then
+		dosym /usr/bin/w3m{mee,}
+		dosym /usr/bin/w3m{mee,}man
+		dosym /usr/share/man/ja/man1/w3m{mee,}.1
+		dosym /usr/share/man/man1/w3m{mee,}.1
+		dosym /usr/share/man/man1/w3m{mee,}man.1
+	fi
 
 	dodoc 00INCOMPATIBLE.html ChangeLog NEWS* README
 	docinto en
