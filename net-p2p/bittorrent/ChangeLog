@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/bittorrent 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.6 2003/04/01 16:18:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.7 2003/05/07 05:46:14 phosphan Exp $
+
+*bittorrent-3.2.1b-r1 (07 May 2003)
+
+  07 May 2003; Patrick Kursawe <phosphan@gentoo.org>
+  bittorrent-3.2.1b-r1.ebuild, files/bittorrent-3.2.1b.patch:
+  Patch supplied in bug #20524 - should fix some overflows and
+  problems with progress bar. Thanks to Denis Braekhus
+  <denis@startsiden.no> for finding it.
 
 *bittorrent-3.2.1b (01 Apr 2003)
 
