@@ -1,12 +1,21 @@
-MD5 8f4ab4ec77b7f977628c5ff500db25a0 ChangeLog 2886
-MD5 683e64667af43e734a8e8e95dd32a0dd ngrep-1.40.ebuild 690
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9d35e61055f0978907fa7f3c8eb9d2eb ngrep-1.41.ebuild 865
+MD5 683e64667af43e734a8e8e95dd32a0dd ngrep-1.40.ebuild 690
+MD5 b786cd87e13cfb310ea97ad37305727c ngrep-1.42.ebuild 832
+MD5 460d8a8d412db7da3a09b18cdb41c048 ChangeLog 2992
 MD5 e99ee6f3b5e19365555835847126019c metadata.xml 220
-MD5 1995ef3622b1adb3b5860d42f89f19ec ngrep-1.42.ebuild 846
-MD5 5f8cb88ab65dc7e41938e74b1ae80257 files/digest-ngrep-1.40 62
-MD5 27a5fb2463a3a04049149b52e991cb72 files/digest-ngrep-1.41 63
-MD5 25121c21888e24c6bea5ca388fc07d5c files/ngrep-1.38-r2-gentoo.diff 201
 MD5 7f3fb523c91eb34349228d8a33087777 files/ngrep-1.41-fix-HAVE_DUMB_UDPHDR-test.patch 403
 MD5 c24376fcf32b73b917074846599e69c4 files/ngrep-1.41-libpcap-include.patch 3099
+MD5 5f8cb88ab65dc7e41938e74b1ae80257 files/digest-ngrep-1.40 62
+MD5 27a5fb2463a3a04049149b52e991cb72 files/digest-ngrep-1.41 63
 MD5 85a227510da15e6a2af304931c2ec1e7 files/digest-ngrep-1.42 63
 MD5 a7fdfbde749237f8813aefb8a2a93d7e files/ngrep-1.42-libpcap-include.patch 6398
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBf2RmT+MN7JbqCpMRAuSmAJ9o09xp17BGssKyriKr7u8emzTsAACcDb6O
+oOpoDPA6RA96Or6jVZo35pc=
+=EIs9
+-----END PGP SIGNATURE-----
