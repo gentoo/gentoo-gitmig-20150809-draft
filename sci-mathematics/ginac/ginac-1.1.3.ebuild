@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.1.3.ebuild,v 1.1 2004/12/28 05:33:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.1.3.ebuild,v 1.2 2004/12/28 20:05:57 ribosome Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 
-DEPEND="dev-libs/cln"
+DEPEND="sci-libs/cln"
 
 src_compile() {
 	filter-flags "-funroll-loops -frerun-loop-opt"
