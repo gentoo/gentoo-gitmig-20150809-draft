@@ -1,6 +1,11 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.47 2004/07/17 22:19:30 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.48 2004/08/14 15:51:39 usata Exp $
+
+  15 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> dillo-0.7.3-r7.ebuild,
+  dillo-0.8.0-r4.ebuild, dillo-0.8.0-r5.ebuild, dillo-0.8.1.ebuild,
+  dillo-0.8.2.ebuild:
+  Sync use variables.
 
   11 Jul 2004; Jason Wever <weeve@gentoo.org> dillo-0.8.0-r4.ebuild:
   Stable on sparc.
