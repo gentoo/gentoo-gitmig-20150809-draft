@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/ptabtools
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.1 2004/09/12 23:25:45 pkdawson Exp $
+
+*ptabtools-0.3.1 (12 Sep 2004)
+
+  12 Sep 2004; Patrick Dawson <pkdawson@gentoo.org> ptabtools-0.3.1.ebuild:
+  Initial import.  Ebuild submitted by Ghislain Bourgeois.
+  Closes bug #63183
