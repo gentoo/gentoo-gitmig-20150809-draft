@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.20.ebuild,v 1.5 2003/03/27 00:26:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.20-r1.ebuild,v 1.1 2003/04/09 15:27:53 dragon Exp $
 
 IUSE="nls bootstrap build"
 
@@ -15,7 +15,8 @@ filter-flags "-fomit-frame-pointer -fssa"
 S="${WORKDIR}/${P}"
 DESCRIPTION="Tools necessary to build programs"
 SRC_URI="ftp://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2
-	ftp://ftp.kernel.org/pub/linux/devel/binutils/test/${P}.tar.bz2"
+	ftp://ftp.kernel.org/pub/linux/devel/binutils/test/${P}.tar.bz2
+	http://cvs.gentoo.org/~dragon/${P}-20030409-cvs-update.patch.bz2"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
@@ -43,6 +44,13 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	# CVS Branch Updates
+	# This is necessary to get ppc & x86 working again.  It also
+	# provides futher updates and necessary fixes for mips.
+	# <dragon@gentoo.org> (09 Apr 2003)
+	epatch ${WORKDIR}/${P}-20030409-cvs-update.patch
+
 	# Various patches from Redhat/Mandrake...
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-glibc21.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-x86_64-testsuite.patch

@@ -1,6 +1,20 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.42 2003/03/31 00:28:25 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.43 2003/04/09 15:27:53 dragon Exp $
+
+*binutils-2.13.90.0.20-r1 (09 Apr 2003)
+
+  09 Apr 2003; Nicholas Wourms <dragon@gentoo.org>
+  binutils-2.13.90.0.20-r1.ebuild:
+  Added cvs update patch to (hopefully) address the problems reported in
+  bugs #16363, #17986, & #18873.  This also includes the fix from Alan
+  Modra for the problem where ld would segfault when building kde on
+  ppc.  In addition to that, it also has some more mips/mips64 updates
+  which should address a few of the current problems we were experiencing
+  initially.  As with the previous version, "Handle With Care..."  That
+  being said, testing would be greatly appreciated and arches unmasked
+  as they are confirmed stable.  I removed the previous ebuild since it
+  has been causing lots of trouble.
 
   23 Mar 2003; Martin Schlemmer <azarah@gentoo.org> binutils-2.13.90.0.20.ebuild :
   Add '~x86' to KEYWORDS.
