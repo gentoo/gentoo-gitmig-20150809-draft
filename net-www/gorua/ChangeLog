@@ -1,8 +1,17 @@
 # ChangeLog for net-www/gorua
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/ChangeLog,v 1.2 2003/09/27 08:43:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/ChangeLog,v 1.3 2003/10/12 20:21:45 usata Exp $
+
+*gorua-0.16-r1 (13 Oct 2003)
+
+  13 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> gorua-0.16-r1.ebuild,
+  files/bookmarks_sample, files/goRua.sh:
+  Updated 2chmenu.html path and bookmark. Changed install site dir.
 
 *gorua-0.16 (11 Sep 2003)
+
+  13 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> gorua-0.16.ebuild:
+  Considered as stable for alpha, sparc and ppc.
 
   27 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> gorua-0.16.ebuild:
   Marked stable on x86
