@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.4 2004/03/25 17:25:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.5 2004/03/31 01:45:40 todd Exp $
 
 inherit eutils fixheadtails
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cstr.ed.ac.uk/download/festival/1.4.3/${MY_P}-release.tar.gz
 
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc amd64"
+KEYWORDS="x86 ~ppc sparc amd64"
 
 RDEPEND="virtual/glibc"
 IUSE=""
