@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.2 2001/03/19 21:00:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.3 2001/04/28 12:42:41 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -18,9 +18,9 @@ DEPEND=">=dev-perl/XML-DOM-1.25
 
 src_install () {
 
-    insinto /usr/lib/perl5/site_perl/5.6.0/XML/DOM
+    insinto /usr/lib/perl5/site_perl/5.6.1/XML/DOM
     doins XML/DOM/Map.pm
-    insinto /usr/lib/perl5/site_perl/5.6.0/XML
+    insinto /usr/lib/perl5/site_perl/5.6.1/XML
     doins XML/SGMLSpl.pm
     insinto /usr/share/sgml/docbook/db2X-customization/common
     doins xslt/common/*
