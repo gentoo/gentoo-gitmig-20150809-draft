@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.9 2004/08/25 02:20:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.10 2004/10/23 18:02:56 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> cppunit-1.10.2.ebuild:
+  Added ~sparc keyword.
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> cppunit-1.10.2.ebuild,
   cppunit-1.8.0.ebuild:
