@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0_pre1.ebuild,v 1.2 2004/01/09 11:10:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0_pre1.ebuild,v 1.3 2004/01/30 05:52:20 drobbins Exp $
 
 inherit debug flag-o-matic libtool
 
@@ -48,6 +48,7 @@ RDEPEND=">=dev-libs/glib-2.2
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	dev-util/intltool
+	>=sys-devel/autoconf-2.58
 	doc? ( >=dev-util/gtk-doc-1 )"
 #	sys-devel/gettext
 

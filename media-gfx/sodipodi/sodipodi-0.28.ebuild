@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.28.ebuild,v 1.10 2004/01/26 00:30:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.28.ebuild,v 1.11 2004/01/30 05:51:02 drobbins Exp $
 
 inherit flag-o-matic
 
@@ -20,7 +20,8 @@ RDEPEND=">=gnome-base/gnome-print-0.35
 	xml2? ( dev-libs/libxml2 )
 	wmf? ( >=media-libs/libwmf-0.2.1 )"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	>=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A}

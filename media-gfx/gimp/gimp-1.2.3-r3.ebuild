@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.13 2004/01/26 00:27:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.14 2004/01/30 05:52:20 drobbins Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	python? ( >=dev-lang/python-2.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 DEPEND="nls? ( sys-devel/gettext )
-	sys-devel/autoconf
+	>=sys-devel/autoconf-2.58
 	sys-devel/automake
 	>=media-libs/mpeg-lib-1.3.1
 	${RDEPEND}"

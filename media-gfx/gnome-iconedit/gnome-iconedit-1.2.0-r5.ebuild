@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.15 2004/01/26 00:28:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.16 2004/01/30 05:53:25 drobbins Exp $
 
 inherit flag-o-matic
 
@@ -12,12 +12,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc ~amd64"
 
-DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
+RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	=x11-libs/gtk+-1.2*
 	>=media-libs/gdk-pixbuf-0.11.0-r1
 	dev-libs/libxml
 	media-libs/libpng
 	gnome-base/ORBit"
+
+DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 # Gnome-Print support is broken
 #	>=gnome-base/gnome-print-0.30
 # Bonobo support is broken
