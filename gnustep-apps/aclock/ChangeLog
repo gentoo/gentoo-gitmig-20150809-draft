@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/aclock
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/aclock/ChangeLog,v 1.1 2004/09/24 01:07:05 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/aclock/ChangeLog,v 1.2 2004/09/28 00:50:15 swegener Exp $
+
+  28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/config-aclock.sh:
+  Gentoo Technologies, Inc. -> Gentoo Foundation
 
 *aclock-0.1.0 (31 Aug 2004)
 
