@@ -166,7 +166,7 @@
 
 <?php
 	// okay, now we get to spit out all the followups.
-	$result = mysql_query( 'select * from followups where tid='.$tid.' order by date desc' );
+	$result = mysql_query( 'select * from followups where tid='.$tid.' order by date' );
 	while ( $fup = mysql_fetch_array( $result ) ) {
 		$fuser = mysql_query( 'select username from users where uid='.$fup['uid'] );
 		list( $fuser ) = mysql_fetch_row( $fuser );
