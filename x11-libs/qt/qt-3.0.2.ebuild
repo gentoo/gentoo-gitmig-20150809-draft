@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.2.ebuild,v 1.1 2002/03/02 21:02:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.2.ebuild,v 1.2 2002/03/15 11:47:51 danarmak Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -25,6 +25,8 @@ export QTDIR=${S}
 
 src_unpack() {
 
+    export QTDIR=${S}
+
     unpack ${A}
 
     cd ${S}
@@ -35,26 +37,33 @@ src_unpack() {
 
 src_compile() {
 
-	export LDFLAGS="-ldl"
+    export QTDIR=${S}
+    
+    export LDFLAGS="-ldl"
 
-	use nas		&& myconf="${myconf} -system-nas-sound"
-	use gif		&& myconf="${myconf} -qt-gif"
-	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
-	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql -I/usr/include/postgresql/libpq -L/usr/lib"
-	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
-	[ -n "$DEBUG" ]	&& myconf="${myconf} -debug" 		|| myconf="${myconf} -release -no-g++-exceptions"
+    use nas		&& myconf="${myconf} -system-nas-sound"
+    use gif		&& myconf="${myconf} -qt-gif"
+    use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
+    use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql -I/usr/include/postgresql/libpq -L/usr/lib"
+    use odbc	&& myconf="${myconf} -plugin-sql-odbc"
+    [ -n "$DEBUG" ]	&& myconf="${myconf} -debug" 		|| myconf="${myconf} -release -no-g++-exceptions"
+    
+    # avoid wasting time building things we won't install
+    rm -rf tutorial examples
 	
-	# avoid wasting time building things we won't install
-	rm -rf tutorial examples
-	
-	./configure -sm -thread -stl -system-zlib -system-libjpeg ${myconf} \
-		-system-libmng -system-libpng -ldl -lpthread -xft || die
+    ./configure -sm -thread -stl -system-zlib -system-libjpeg ${myconf} \
+    	-system-libmng -system-libpng -ldl -lpthread -xft || die
 
-	emake src-qmake src-moc sub-src sub-tools || die
+    export QTDIR=${S}
+
+    emake src-qmake src-moc sub-src sub-tools || die
 
 }
 
 src_install() {
+
+
+    export QTDIR=${S}
 
     cd ${S}
 
