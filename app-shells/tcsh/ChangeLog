@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.17 2003/12/22 15:07:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.18 2003/12/22 15:31:12 gmsoft Exp $
+
+*tcsh-6.12-r3 (22 Dec 2003)
+
+  22 Dec 2003; Guy Martin <gmsoft@gentoo.org> tcsh-6.12-r3.ebuild, 
+  files/tcsh-complete :
+  Revision bump to fix bug #33155. Marked stable on hppa.
 
   13 Dec 2003; Brad House <brad_mssw@gentoo.org> tcsh-6.12-r2.ebuild:
   mark stable on amd64
@@ -16,10 +22,6 @@
   Marking ~alpha, fixes #21125
 
 *tcsh-6.12-r2 (7 Mar 2003)
-
-  22 Dec 2003; Guy Martin <gmsoft@gentoo.org> tcsh-6.12-r2.ebuild, 
-  files/tcsh-complete :
-  Fixed bug #33155. Marked stable on hppa.
 
   7 Mar 2003; Alain Penders <alain@gentoo.org> : Added minor patch to enable
   kanji support when cjk flag is set.
