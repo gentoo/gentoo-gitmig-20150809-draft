@@ -74,14 +74,6 @@ gnome-extra/nautilus-cd-burner
 # Bugs #14378 #14459
 app-crypt/heimdal
 
-# <danarmak@gentoo.org> (28 Jan 2003)
-# new revisions, masked so i can commit them untested. they contain various fixes.
-# after initial testing by the bug reporters i'll mark them ~
-=kde-base/kdelibs-3.0.5a-r1
-=kde-base/kdelibs-3.1-r1
-=kde-base/kdebase-3.0.5a-r2
-=kde-base/kdebase-3.1-r1
-
 # <chadh@gentoo.org> (23 Jan 2003)
 # new pcmcia-cs ebuilds need testing and acceptance
 sys-apps/pcmcia-cs-tools
