@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/super-freeswan/super-freeswan-1.99.7.3.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/super-freeswan/super-freeswan-1.99.7.3.ebuild,v 1.3 2003/10/05 04:25:22 kumba Exp $
 
 MY_P=${P/_p/_kb}
 S=${WORKDIR}/${MY_P}
@@ -24,6 +24,14 @@ pkg_setup() {
 		echo compile an IPSec-enabled kernel and attempt this ebuild again.
 		exit 1
 	}
+}
+
+src_unpack() {
+	unpack ${A}
+
+	# Patch that fixes some bad CFLAGS specified in the Makefiles.
+	# Closes Bug #29783
+	epatch ${FILESDIR}/${P}-bad-cflags-fix.patch
 }
 
 src_compile() {
