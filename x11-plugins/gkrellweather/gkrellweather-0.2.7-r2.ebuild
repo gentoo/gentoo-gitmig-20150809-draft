@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-0.2.7-r2.ebuild,v 1.9 2003/06/12 22:25:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-0.2.7-r2.ebuild,v 1.10 2003/09/03 16:43:01 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DEBPATCH=${PN}_${PV}-1.diff.gz
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cse.unsw.edu.au/~flam/programs/gkrellweather.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="=app-admin/gkrellm-1.2*
 	>=net-misc/wget-1.5.3"
@@ -31,7 +31,7 @@ src_compile() {
 
 src_install () {
 	exeinto /usr/share/gkrellm
-	doexe GrabWeather 
+	doexe GrabWeather
 
 	insinto /usr/lib/gkrellm/plugins
 	doins gkrellweather.so
