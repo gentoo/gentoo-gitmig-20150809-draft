@@ -1,0 +1,37 @@
+# ChangeLog for dev-perl/Apache-Gallery
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.1 2004/08/15 09:37:21 stuart Exp $
+
+*Apache-Gallery-0.8 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/apache-gallery.conf, +Apache-Gallery-0.6.ebuild,
+  +Apache-Gallery-0.8.ebuild:
+  Moved from dev-perl/Apache-Gallery to www-apps/Apache-Gallery.
+
+  05 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  Apache-Gallery-0.6.ebuild, Apache-Gallery-0.8.ebuild:
+  Keyword fix, virtual for older version
+
+  05 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  Apache-Gallery-0.8.ebuild:
+  changed to virtaul/x11
+
+*Apache-Gallery-0.8 (05 Jun 2004)
+
+  05 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  Apache-Gallery-0.8.ebuild:
+  new version, new deps
+
+  29 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  files/apache-gallery.conf:
+  Totally missed the missing apache-gallery.conf file. Thanks to Dan Noe
+  <dpn@isomerica.net> in Bug 25136 for catching that
+
+*Apache-Gallery-0.6 (20 Jun 2003)
+
+  20 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Apache-Gallery-0.6.ebuild:
+  New ebuild. Original ebuild submitted in bug 11725 by Jens Hilligsoee
+  <gentoo@hilli.dk>
+
