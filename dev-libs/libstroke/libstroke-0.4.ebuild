@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.4.ebuild,v 1.12 2003/03/09 20:39:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.4.ebuild,v 1.13 2003/04/03 22:14:29 vladimir Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Stroke and Guesture recognition Library"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.etla.net/libstroke"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc alpha"
+KEYWORDS="x86 sparc alpha ~ppc"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=x11-base/xfree-4.0.3"

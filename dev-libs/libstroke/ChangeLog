@@ -1,10 +1,13 @@
 # ChangeLog for dev-libs/libstroke
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/ChangeLog,v 1.6 2003/03/09 20:39:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/ChangeLog,v 1.7 2003/04/03 22:14:29 vladimir Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *libstroke-0.4 (1 Feb 2002)
+
+  03 Apr 2003; Graham Forest <vladimir@gentoo.org> libstroke-0.4.ebuild:
+  set ~ppc in keywords
 
   09 Mar 2003; Aron Griffis <agriffis@gentoo.org> libstroke-0.4.ebuild:
   Mark stable on alpha
