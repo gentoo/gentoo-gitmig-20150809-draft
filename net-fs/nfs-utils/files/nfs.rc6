@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.rc6,v 1.1 2001/12/23 23:25:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.rc6,v 1.2 2002/01/13 22:29:12 agriffis Exp $
 
 #---------------------------------------------------------------------------
 # This script starts/stops the following
-#    rpc.statd if necessary (also checked by init.d/nfsmount)
-#    rpd.rquotad
-#    rpd.nfsd
-#    rpc.mountd
+#	 rpc.statd if necessary (also checked by init.d/nfsmount)
+#	 rpd.rquotad
+#	 rpd.nfsd
+#	 rpc.mountd
 #---------------------------------------------------------------------------
 
 # NB: Config is in /etc/conf.d/nfs
@@ -48,9 +48,14 @@ start() {
 	then
 		start_statd
 
+		# Exportfs likes to hang if networking isn't working.
+		# If that's the case, then try to kill it so the
+		# bootup process can continue.
 		if grep -q '^/' /etc/exports &>/dev/null; then
 			ebegin "Exporting NFS directories"
-			/sbin/exportfs -r 1>&2
+			/sbin/exportfs -r 1>&2 &
+			( sleep 5; kill -9 $! &>/dev/null & )
+			wait
 			eend $? "Error exporting NFS directories"
 		fi
 
@@ -106,7 +111,12 @@ stop() {
 	# to umount/(re)mount the filesystem.
 	if [ "$RESTARTING" = no ]; then
 		ebegin "Unexporting NFS directories"
-		/sbin/exportfs -ua 1>&2
+		# Exportfs likes to hang if networking isn't working.
+		# If that's the case, then try to kill it so the
+		# bootup process can continue.
+		/sbin/exportfs -ua 1>&2 &
+		( sleep 5; kill -9 $! &>/dev/null & )
+		wait
 		eend $? "Error unexporting NFS directories"
 	fi
 
@@ -114,7 +124,14 @@ stop() {
 }
 
 reload() {
-	/sbin/exportfs -r
+	# Exportfs likes to hang if networking isn't working.
+	# If that's the case, then try to kill it so the
+	# bootup process can continue.
+	ebegin "Reloading /etc/exports"
+	/sbin/exportfs -r 1>&2 &
+	( sleep 5; kill -9 $! &>/dev/null & )
+	wait
+	eend $? "Error exporting NFS directories"
 }
 
 restart() {
