@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.49 2004/11/12 06:43:50 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.50 2004/11/24 20:04:25 brix Exp $
+
+*wireless-tools-28_pre3 (24 Nov 2004)
+
+  24 Nov 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +wireless-tools-28_pre3.ebuild:
+  Version bump. Added multicall USE flag to install a minimal footprint version
+  of the most commonly used tools, honor CFLAGS, use toolchain-funcs.eclass to
+  determine compilation tools. Thanks to solar for his input on this and for the
+  original idea :)
 
 *wireless-tools-28_pre1 (12 Nov 2004)
 
