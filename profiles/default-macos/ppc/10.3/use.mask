@@ -1,2 +1,0 @@
-# This file contains use flags masked on Mac OS X version 10.3. Only use flags that should be masked on
-# this specific version need to be added here
