@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.51 2003/06/17 18:51:05 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.52 2003/06/19 04:10:44 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -256,10 +256,10 @@ php_src_compile() {
 	myconf="${myconf} `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable cjk mbstring` `use_enable cjk mbregex`"
 
-	if [ `use gd-bundled` ] ; then
-		myconf="${myconf} --with-gd"
-	elif [ `use gd` ] ; then
+	if [ -n "`use gd-external`" ] ; then
 		myconf="${myconf} --with-gd=/usr"
+	elif [ -n "`use gd`" ] ; then
+		myconf="${myconf} --with-gd"
 	else
 		myconf="${myconf} --without-gd"
 	fi
@@ -310,6 +310,7 @@ php_src_compile() {
 	myconf="${myconf} --with-ndbm --with-cdb"
 	
 	# No DEPENDancies
+	mycony="${myconf} --enable-pcntl"
 	myconf="${myconf} --enable-bcmath"
 	myconf="${myconf} --enable-calendar"
 	myconf="${myconf} --enable-dbase"
