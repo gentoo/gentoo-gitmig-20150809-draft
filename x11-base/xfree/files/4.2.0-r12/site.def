@@ -12,10 +12,10 @@
 #define XprtServer YES
 #define XnestServer YES
 #define SharedLibXau YES
-#define BuildFonts YES
-#define BuildFreeType YES
+#define UseFreetype2 YES
 #define BuildFreetype2Library YES
-#define BuildXTrueType YES
+#define Freetype2Version 9.0.2
+#define BuildFonts YES
 /* #define BuildCyrillicFonts YES */
 #define BuildXF86MiscExt YES
 #define BuildXInputExt YES
