@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/bnfc-2.1.2.ebuild,v 1.1 2004/10/26 15:01:03 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/bnfc-2.1.2.ebuild,v 1.2 2004/11/11 11:11:49 mr_bones_ Exp $
 
 DESCRIPTION="BNF Converter -- a sophisticated parser generator"
 HOMEPAGE="http://www.cs.chalmers.se/~markus/BNFC/"
@@ -28,7 +28,7 @@ src_compile() {
 
 src_install() {
 	dobin bnfc
-	if [ `use doc` ] ; then
+	if use doc ; then
 		cd doc
 		pdflatex LBNF-report.tex
 		pdflatex LBNF-report.tex
