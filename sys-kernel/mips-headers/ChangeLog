@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/mips-headers
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.26 2005/02/24 19:42:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.27 2005/02/27 05:55:41 kumba Exp $
+
+*mips-headers-2.6.10 (27 Feb 2005)
+
+  27 Feb 2005; Joshua Kinard <kumba@gentoo.org>
+  +files/mips-headers-2.6.10-ip27-build64.patch, mips-headers-2.4.23.ebuild,
+  mips-headers-2.4.28-r1.ebuild, +mips-headers-2.6.10.ebuild:
+  2.4.28 broke stuff, like procps on Octane & IP28. Will investigate, but
+  masking for now. Made 2.4.23 unstable, and added a 2.6.10 ebuild based on
+  kernel-2.eclass. Disturbingly enough, glibc will build against 2.6.10 on o32.
+  This requires experimentation.
 
 *mips-headers-2.4.28-r1 (24 Feb 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.28-r1.ebuild,v 1.1 2005/02/24 19:42:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.28-r1.ebuild,v 1.2 2005/02/27 05:55:41 kumba Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -24,7 +24,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 HOMEPAGE="http://www.linux-mips.org/"
 SLOT="0"
 PROVIDE="virtual/os-headers"
-KEYWORDS="-* ~mips"
+KEYWORDS="-*"
 IUSE=""
 
 src_unpack() {
