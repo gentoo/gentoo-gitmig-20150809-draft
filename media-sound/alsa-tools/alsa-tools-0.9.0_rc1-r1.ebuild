@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.0_rc1-r1.ebuild,v 1.9 2004/02/19 09:10:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.0_rc1-r1.ebuild,v 1.10 2004/02/19 18:49:05 eradicator Exp $
 
 S="${WORKDIR}/${P/_rc/rc}"
 DESCRIPTION="Advanced Linux Sound Architecture tools"
@@ -18,7 +18,7 @@ DEPEND=">=media-libs/alsa-lib-0.9.0_rc1
 #
 # By default, all the supported tools will be compiled.
 # If you want to only compile for specific tool(s), set ALSA_TOOLS
-# environment to a space-separated list of toolss that you want to build.
+# environment to a space-separated list of tools that you want to build.
 # For example:
 #
 #   env ALSA_TOOLS='as10k1 ac3dec' emerge alsa-tools 
