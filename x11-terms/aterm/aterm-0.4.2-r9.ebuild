@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.6 2004/06/12 19:43:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.7 2004/06/13 15:15:29 spock Exp $
 
 inherit eutils
 
@@ -24,6 +24,8 @@ src_unpack() {
 	cp feature.h feature.h.orig
 	sed "s:\(#define LINUX_KEYS\):/\*\1\*/:" \
 		feature.h.orig > feature.h
+
+	sed -i "s:    KeySym          keysym;:    KeySym          keysym = 0;:" command.c
 
 	cd ${S}
 	epatch ${FILESDIR}/aterm-0.4.2-borderless.patch
