@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.4.ebuild,v 1.2 2004/06/24 22:18:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.4.ebuild,v 1.3 2004/07/14 16:33:57 agriffis Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda"
 
 inherit eutils
-
-S=${WORKDIR}/${P}
 
 DESCRIPTION="A lightweight email client and newsreader"
 SRC_URI="http://sylpheed.good-day.net/${PN}/${P}.tar.bz2"
