@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.3 2004/04/03 23:48:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.4 2004/04/06 04:48:27 tseng Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick theora ipv6"
 
-inherit eutils
+inherit eutils flag-o-matic
 
 # NOTE to myself:  Test this thing with and without dvd/gtk+ support,
 #                  as it seems the mplayer guys dont really care to
@@ -139,6 +139,8 @@ src_unpack() {
 
 src_compile() {
 
+	filter-flags -fPIC
+
 	use matrox && check_KV
 
 	local myconf=
@@ -218,10 +220,7 @@ src_compile() {
 		myconf="${myconf} --enable-linux-devfs"
 	fi
 
-	if has_version 'sys-devel/hardened-gcc' && [ "${CC}" = "gcc" ]
-	then
-		CC="${CC} -yet_exec"
-	fi
+	has_pic && CC="${CC} -yet_exec"
 
 	# Crashes on start when compiled with most optimizations.
 	# The code have CPU detection code now, with CPU specific
