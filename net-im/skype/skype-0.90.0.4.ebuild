@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.90.0.4.ebuild,v 1.3 2004/06/24 23:00:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.90.0.4.ebuild,v 1.4 2004/06/26 12:43:46 humpback Exp $
 
 inherit eutils
 
@@ -45,8 +45,11 @@ src_install() {
 	exeinto /opt/skype
 	doexe skype
 	( use arts || use esd ) && doexe skype.bin
-	insinto /opt/skype
+	#It seems skype wants the wave in /usr/share/skype
+	#http://forum.skype.com/bb/viewtopic.php?t=4145
+	insinto /usr/share/skype
 	doins call_in.wav
+	insinto /opt/skype
 	make_desktop_entry skype "Skype VoIP" ../icons/hicolor/49x48/apps/skype.png
 	for SIZE in 16 24 32 48
 	do
