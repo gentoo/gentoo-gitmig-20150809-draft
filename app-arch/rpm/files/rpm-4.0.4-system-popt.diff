@@ -124,7 +124,7 @@ diff -ur rpm-4.0.4.orig/build/Makefile.am rpm-4.0.4/build/Makefile.am
  	-I$(top_srcdir)/beecrypt \
 -	-I$(top_srcdir)/popt \
  	@INCPATH@
- 
+
  LIBS =
 diff -ur rpm-4.0.4.orig/build/Makefile.in rpm-4.0.4/build/Makefile.in
 --- rpm-4.0.4.orig/build/Makefile.in	Fri Feb 15 01:58:40 2002
@@ -135,20 +135,29 @@ diff -ur rpm-4.0.4.orig/build/Makefile.in rpm-4.0.4/build/Makefile.in
  	-I$(top_srcdir)/beecrypt \
 -	-I$(top_srcdir)/popt \
  	@INCPATH@
- 
- 
+
+
+@@ -394,7 +394,7 @@
+ 	../beecrypt/mp32opt.h ../beecrypt/rsa.h ../beecrypt/rsakp.h \
+ 	../beecrypt/rsapk.h rpmbuild.h ../lib/rpmcli.h ../lib/rpmlib.h \
+ 	../rpmio/rpmmessages.h ../rpmio/rpmlog.h ../rpmio/rpmerr.h \
+-	../lib/header.h ../lib/hdrinline.h ../popt/popt.h \
++	../lib/header.h ../lib/hdrinline.h /usr/include/popt.h \
+ 	../rpmio/rpmmacro.h ../lib/stringbuf.h ../lib/misc.h rpmspec.h \
+ 	buildio.h ../lib/psm.h ../lib/fsm.h ../lib/cpio.h \
+ 	../lib/depends.h myftw.h ../beecrypt/md5.h ../debug.h
 diff -ur rpm-4.0.4.orig/configure rpm-4.0.4/configure
 --- rpm-4.0.4.orig/configure	Thu Feb 14 01:03:27 2002
 +++ rpm-4.0.4/configure	Mon May 13 10:36:06 2002
 @@ -1633,7 +1633,7 @@
  AS=${AS-as}
- 
+
  if test "$ac_cv_prog_gcc" = yes; then
 -    CFLAGS="$CFLAGS -D_GNU_SOURCE -D_REENTRANT -Wall -Wpointer-arith -Wstrict-prototypes -Wmissing-prototypes -Wno-char-subscripts"
 +    CFLAGS="$CFLAGS -D_GNU_SOURCE -D_REENTRANT -Wall  -Wstrict-prototypes -Wmissing-prototypes -Wno-char-subscripts"
  fi
  export CFLAGS
- 
+
 @@ -13349,7 +13349,7 @@
  
  
@@ -239,7 +248,6 @@ diff -ur rpm-4.0.4.orig/lib/Makefile.in rpm-4.0.4/lib/Makefile.in
  
  
  mylibs = -lrpm -lrpmdb -lrpmio -lpopt @LIBS@ @INTLLIBS@ @LIBMISC@
-Only in rpm-4.0.4.orig: popt
 diff -ur rpm-4.0.4.orig/python/Makefile.am rpm-4.0.4/python/Makefile.am
 --- rpm-4.0.4.orig/python/Makefile.am	Sat Jan 19 17:44:19 2002
 +++ rpm-4.0.4/python/Makefile.am	Mon May 13 10:38:04 2002
