@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.9-r1.ebuild,v 1.9 2004/04/13 11:51:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.9-r1.ebuild,v 1.10 2004/04/22 20:52:34 lv Exp $
 
 inherit eutils flag-o-matic
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-cpp.patch
 	epatch ${FILESDIR}/${P}-zlib.patch
+	epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
 src_compile() {
