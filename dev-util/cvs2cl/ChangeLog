@@ -1,18 +1,76 @@
-# ChangeLog for dev-util/cvs2cl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2cl/ChangeLog,v 1.4 2004/07/20 23:07:03 vapier Exp $
+2004-07-21 20:48  dholm
 
-*cvs2cl-2.57 (20 Jul 2004)
+	* cvs2cl-2.57.ebuild: Added to ~ppc.
 
-  20 Jul 2004; Mike Frysinger <vapier@gentoo.org> +cvs2cl-2.57.ebuild:
-  Version bump #57461 by Sergey Borodich.
+2004-07-21 01:07  vapier
 
-*cvs2cl-2.50 (29 Nov 2003)
+	* Manifest: ver bump #57461 (Manifest recommit)
 
-  29 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
-  Version bump.
+2004-07-21 01:07  vapier
 
-*cvs2cl-2.49 (13 Jul 2003)
+	* ChangeLog, cvs2cl-2.57.ebuild, files/digest-cvs2cl-2.57: ver bump
+	  #57461
 
-  13 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by me for #11523.
+2004-07-15 00:56  agriffis
+
+	* Manifest: sync IUSE (missing) (Manifest recommit)
+
+2004-07-15 00:56  agriffis
+
+	* cvs2cl-2.50.ebuild: sync IUSE (missing)
+
+2004-06-25 04:25  agriffis
+
+	* Manifest: (Manifest recommit)
+
+2004-06-25 04:25  agriffis
+
+	* ChangeLog, cvs2cl-2.50.ebuild: update copyright line: Gentoo
+	  Technologies => Gentoo Foundation
+
+2004-05-19 01:58  jhuebel
+
+	* Manifest: ~amd64 (Manifest recommit)
+
+2004-05-19 01:58  jhuebel
+
+	* cvs2cl-2.50.ebuild: ~amd64
+
+2004-03-13 02:49  mr_bones_
+
+	* Manifest: header fix (Manifest recommit)
+
+2004-03-13 02:49  mr_bones_
+
+	* cvs2cl-2.50.ebuild: header fix
+
+2003-11-29 22:38  vapier
+
+	* Manifest: fixing Manifest
+
+2003-11-29 22:16  vapier
+
+	* ChangeLog, cvs2cl-2.49.ebuild, cvs2cl-2.50.ebuild,
+	  files/digest-cvs2cl-2.49, files/digest-cvs2cl-2.50: ver bump
+
+2003-07-18 23:27  vapier
+
+	* Manifest: fixing Manifest
+
+2003-07-18 21:00  vapier
+
+	* cvs2cl-2.49.ebuild: GPL-2 it
+
+2003-07-13 06:32  vapier
+
+	* ChangeLog, cvs2cl-2.49.ebuild, files/digest-cvs2cl-2.49,
+	  Manifest: initial ebuild #11523
+
+2003-07-03 07:03  robbat2
+
+	* .frozen: removing lockfile
+
+2003-07-03 04:12  robbat2
+
+	* .frozen: Add frozen lock support
+
