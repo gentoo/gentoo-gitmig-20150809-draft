@@ -1,54 +1,50 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.10 2002/07/19 17:20:54 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.11 2002/09/03 15:08:21 raker Exp $
+
+*sendmail-8.12.6 (03 Sep 2002)
+
+  03 Sep 2002; Nick Hadaway <raker@gentoo.org> sendmail-8.12.6.ebuild,
+  files/digest-sendmail-8.12.6.ebuild :
+  Version bump.
 
 *sendmail-8.12.5 (19 Jul 2002)
 
   19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
-
   new version; fixes buffer overflow; thanks to raker!
 
 *sendmail-8.12.4-r5 (13 Jul 2002)
 
   13 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
-
   sasl fixes; thanks to Jay 'Eraserhead' Felice
 
 *sendmail-8.12.4-r4 (12 Jul 2002)
 
   12 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
-
   fixed permissions (thanks to Harald Kubota for catching the problem),
   moved group/passwd stuff to pkg_preinst
 
 *sendmail-8.12.4-r3 (04 Jul 2002)
 
   04 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
-
   Some useful fixes; thanks to Alessandro Pisani
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 
   29 Jun 2002; Seemant Kulleen <seemant@gentoo.org> sendmail-8.12.4-r2.ebuild:
-
   Changed net-misc/hesiod to net-dns/hesiod per bug #4321 by 
   simons+gentoo@cryp.to (Peter Simons)
 
   27 Jun 2002; Grant Goodyear <g2boojum@gentoo.org> sendmail-8.12.4-r2.ebuild:
-  
-  Make sure that queue directories don't get cleaned away.
+    Make sure that queue directories don't get cleaned away.
 
   24 Jun 2002; Thilo Bangert <bangert@gentoo.org> sendmail-8.12.4-r1.ebuild:
-  
-  added symlink /usr/sbin/sendmail -> /usr/lib/sendmail
+    added symlink /usr/sbin/sendmail -> /usr/lib/sendmail
 
   22 Jun 2002; William McArthur <sandymac@gentoo.org> sendmail-8.12.4-r1.ebuild:
-
   Fixed a type in the use ssl section, "-ssl" should have been "-lssl"
 
 *sendmail-8.12.4-r1 (12 June 2002)
 
   12 June 2002; Grant Goodyear <g2boojum@gentoo.org> : 
-
   Added an init script and fixed permissions.  It now
   works out-of-the-box, at least for sending mail and
   locally receiving mail.  Currently set up to use it's
@@ -57,22 +53,5 @@
 *sendmail-8.12.4 (10 June 2002)
 
   10 June 2002; Grant Goodyear <g2boojum@gentoo.org> : 
-
   New package.
  
--- Explanation of ChangeLog format:
- 
-  Every new version or revision of the package should be marked by a '*'
-  seperator line as above. Changes since the last revision have to be added to
-  the top of the file, underneath the initial copyright and cvs header
-  comments, in exactly the same format as this comment.
-  
-  This means that you start with header line that has the following format,
-  indented two spaces:
-  
-  DD MMM YYYY; your_name <your_email> changed_file1, changed_file2: Your
-  explanation should follow. It should be indented and wrapped at a line width
-  of 80 characters.  The changed_files can be omitted if they are obvious; for
-  example, if you are only modifying the .ebuild file and committing a new rev
-  of a package.  Any details about what exactly changed in the code should be
-  added as a message when the changes are committed to cvs, not in this file.
