@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.95.1.ebuild,v 1.8 2004/03/31 18:27:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.95.1.ebuild,v 1.9 2004/04/01 19:17:03 gustavoz Exp $
 
 inherit flag-o-matic gcc
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
 IUSE="gtk debug"
 
 RDEPEND=">=sys-libs/ncurses-5.2
