@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.6 2003/05/08 10:29:59 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.7 2003/07/19 02:26:37 jje Exp $
 
 #timidity++-2.12.0 (05 Jul 2002)
+
+*timidity++-2.12.0-r2 (19 Jul 2003)
+
+  19 Jul 2003; jje <jje@gentoo.org> timidity++-2.12.0-r2.ebuild:
+  Wrapped audios="oss" in use oss.
 
 *timidity++-2.12.0-r1 (08 May 2003)
 
