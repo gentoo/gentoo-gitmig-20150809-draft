@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mplus-fonts
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/ChangeLog,v 1.21 2004/03/24 21:51:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/ChangeLog,v 1.22 2004/03/25 13:41:54 gustavoz Exp $
+
+  25 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  mplus-fonts-2.1.4.ebuild:
+  stable on sparc
 
 *mplus-fonts-2.2.0 (25 Mar 2004)
 
