@@ -1,9 +1,12 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.7 2003/02/12 12:28:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.8 2003/02/21 01:50:50 zwelch Exp $
+
+  20 Feb 2003; Zach Welch <zwelch@gentoo.org> :
+  Added arm to keywords.
 
   12 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
-  Added hpa to keywords.
+  Added hppa to keywords.
 
 *ssmtp-2.48 (02 Feb 2003)
 
