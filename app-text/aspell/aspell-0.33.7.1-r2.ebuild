@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1-r1.ebuild,v 1.8 2002/07/24 10:35:23 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1-r2.ebuild,v 1.1 2002/07/24 10:35:23 aliz Exp $
 
 inherit libtool
 
@@ -36,9 +36,6 @@ if [ -e /lib/libc-2.2.5.so ] && [ `gcc -dumpversion` == "2.95.3" ]; then
 		touch /root/.aspell.conf
 	fi
 fi
-
-touch /root/.aspell.conf
-mkdir -p /etc/aspell && touch /etc/aspell/aspell.conf
 
 src_unpack() {
 
