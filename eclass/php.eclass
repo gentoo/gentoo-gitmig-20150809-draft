@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.28 2003/05/31 22:51:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.29 2003/06/01 03:11:30 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -28,9 +28,9 @@ S=${WORKDIR}/${MY_P}
 [ -z "$PROVIDE" ]	&& PROVIDE="virtual/php"
 # PHP does automatic mirroring from this URI
 if [ -z "$SRC_URI" ]; then
-	SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2 
-		mirror://gentoo/${MY_P}-db4.diff.gz 
-		http://cvs.gentoo.org/~robbat2/distfiles/${MY_P}-db4.diff.gz"
+	SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
+	#Remove the DB4 stuff temporarily
+	#mirror://gentoo/${MY_P}-db4.diff.gz 
 fi
 
 IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype xml xml2 zlib "
@@ -176,17 +176,17 @@ php_src_unpack() {
 	# pear's world writable files is a php issue fixed in their cvs tree.
 	# http://bugs.php.net/bug.php?id=20978
 	# http://bugs.php.net/bug.php?id=20974
-	if [ -z "${EXCLUDE_PEAR_FIX}" ]; then
-		EPATCH_SINGLE_MSG="Applying fix for PEAR world writable files"
-		epatch ${FILESDIR}/pear_config.diff || die "epatch failed"
-	fi
+	#if [ -z "${EXCLUDE_PEAR_FIX}" ]; then
+	#	EPATCH_SINGLE_MSG="Applying fix for PEAR world writable files"
+	#	epatch ${FILESDIR}/pear_config.diff || die "epatch failed"
+	#fi
 
-	if [ -z "${EXCLUDE_DB4_FIX}" ]; then
-		EPATCH_SINGLE_MSG="Applying DB4 patch"
-		epatch ${DISTDIR}/php-${PV}-db4.diff.gz
-		cd ${S}
-		autoconf
-	fi
+	#if [ -z "${EXCLUDE_DB4_FIX}" ]; then
+	#	EPATCH_SINGLE_MSG="Applying DB4 patch"
+	#	epatch ${DISTDIR}/php-${PV}-db4.diff.gz
+	#	cd ${S}
+	#	autoconf
+	#fi
 }
 
 
