@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Craig Joly <joly@ee.ualberta.ca>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r1.ebuild,v 1.1 2001/10/06 12:36:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r1.ebuild,v 1.2 2002/03/29 00:11:42 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small personal databases manager for Linux"
@@ -36,7 +36,7 @@ src_compile() {
 
 	if [ -z "`use nls`" ]
 	then
-		myopts="$myopts --disable-nls"
+		myopts="${myopts} --disable-nls"
 	fi
 
 	cp ${FILESDIR}/Makefile.in intl/Makefile.in
@@ -45,21 +45,24 @@ src_compile() {
 	sed -e "7293 c\ if test -f /usr/include/pygtk/pygtk.h; then" \
 	< configure.orig > configure
 
-	try ./configure  --host=${CHOST} ${myopts} --prefix=/usr
+	./configure 	\
+		--host=${CHOST}	\
+		${myopts}	\
+		--prefix=/usr || die
 
 	cd src
 	cp Makefile Makefile.orig
 	sed -e "s:install-exec-local::" \
-	    -e "s:^\::gentoo change\::" Makefile.orig > Makefile
+		-e "s:^\::gentoo change\::" Makefile.orig > Makefile
 	cd ..
 
-    try emake
+	emake || die
 
 }
 
 src_install () {
 
-	try make DESTDIR=${D} install
+	make DESTDIR=${D} install || die
 
 	dosym gaby ${prefix}/bin/gbc
 	dosym gaby ${prefix}/bin/gcd
@@ -75,4 +78,3 @@ src_install () {
 	doins gnome-gaby-builder.png gnome-gaby.png
 	
 }
-

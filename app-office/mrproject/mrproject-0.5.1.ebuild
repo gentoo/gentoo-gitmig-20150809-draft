@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.5.1.ebuild,v 1.1 2002/01/23 17:46:30 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.5.1.ebuild,v 1.2 2002/03/29 00:13:57 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Project management application for GNOME"
@@ -9,15 +9,15 @@ SRC_URI="ftp://ftp.codefactory.se/pub/software/mrproject/source/${P}.tar.gz"
 HOMEPAGE="http://mrproject.codefactory.se/"
 
 RDEPEND=">=media-libs/gdk-pixbuf-0.11.0-r1
-	 >=gnome-base/ORBit-0.5.10-r1
-         >=gnome-extra/gal-0.18.1
-	 >=gnome-base/bonobo-1.0.17
-	 >=gnome-base/libglade-0.17-r1
-	 >=dev-libs/libxml-1.8.15
-	 >=gnome-base/gconf-1.0.7
-	 >=gnome-base/gnome-vfs-1.0.3
-	 >=gnome-base/oaf-0.6.6-r1
-	 >=gnome-base/gnome-print-0.34"
+	>=gnome-base/ORBit-0.5.10-r1
+	>=gnome-extra/gal-0.18.1
+	>=gnome-base/bonobo-1.0.17
+	>=gnome-base/libglade-0.17-r1
+	>=dev-libs/libxml-1.8.15
+	>=gnome-base/gconf-1.0.7
+	>=gnome-base/gnome-vfs-1.0.3
+	>=gnome-base/oaf-0.6.6-r1
+	>=gnome-base/gnome-print-0.34"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
@@ -31,23 +31,20 @@ src_compile() {
 	fi
 
 	./configure --host=${CHOST} 					\
-		    --prefix=/usr 					\
-		    --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
-		    --disable-more-warnings 				\
-		    --without-python $myconf || die
+		--prefix=/usr 					\
+		--sysconfdir=/etc					\
+		--localstatedir=/var/lib				\
+		--disable-more-warnings 				\
+		--without-python $myconf || die
 
 	emake || die
 }
 
 src_install () {
 	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
-	     install || die
+		sysconfdir=${D}/etc					\
+		localstatedir=${D}/var/lib					\
+		install || die
 
 	dodoc AUTHORS COPYING ChangeLog README NEWS TODO
 }
-
-
-

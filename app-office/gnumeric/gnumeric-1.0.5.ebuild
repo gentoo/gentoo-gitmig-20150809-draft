@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.5.ebuild,v 1.1 2002/03/17 22:21:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.5.ebuild,v 1.2 2002/03/29 00:12:43 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
@@ -100,8 +100,8 @@ src_compile() {
 src_install() {
 
   	make prefix=${D}/usr \
-	     sysconfdir=${D}/etc \
-	     install || die
+		sysconfdir=${D}/etc \
+		install || die
 
   	dodoc AUTHORS COPYING *ChangeLog HACKING NEWS README TODO
 }
