@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0a.ebuild,v 1.9 2003/08/03 03:47:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0a.ebuild,v 1.10 2004/06/12 03:40:30 agriffis Exp $
 
 DESCRIPTION="light Unix download accelerator"
 HOMEPAGE="http://www.lintux.cx/axel.html"
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc"
 src_compile() {
 	cd work/${P}
 	local myconf
-	[ `use debug` ] && myconf="--debug=1 --strip=0"
+	use debug && myconf="--debug=1 --strip=0"
 	./configure \
 		--prefix=/usr \
 		--etcdir=/etc \

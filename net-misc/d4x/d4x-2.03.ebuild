@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.03.ebuild,v 1.9 2004/04/26 12:30:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.03.ebuild,v 1.10 2004/06/12 03:34:54 agriffis Exp $
 
 IUSE="nls esd gnome oss"
 
@@ -65,7 +65,7 @@ src_install () {
 	insinto /usr/share/pixmaps
 	doins *.png *.xpm
 
-	if [ "`use gnome`" ] ; then
+	if use gnome ; then
 		insinto /usr/share/gnome/apps/Internet
 		newins nt.desktop d4x.desktop
 	fi

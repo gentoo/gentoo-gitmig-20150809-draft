@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.9.ebuild,v 1.5 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.9.ebuild,v 1.6 2004/06/12 03:39:51 agriffis Exp $
 
 DESCRIPTION="SIP Express Router"
 
@@ -20,11 +20,11 @@ DEPEND=">=sys-devel/gcc-2.95.3
 S="${WORKDIR}/${P}"
 
 src_compile() {
-	if [ ! "`use ipv6`" ]; then
+	if ! use ipv6; then
 		cp Makefile.defs Makefile.defs.orig
 		sed -e "s/-DUSE_IPV6//g" Makefile.defs.orig > Makefile.defs;
 	fi
-	if [ "`use mysql`" ]; then
+	if use mysql; then
 		cp Makefile Makefile.orig
 		sed -e "s/ mysql //g" Makefile.orig > Makefile;
 	fi

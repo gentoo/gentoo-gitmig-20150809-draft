@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.11.ebuild,v 1.3 2003/11/20 16:07:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.11.ebuild,v 1.4 2004/06/12 03:39:51 agriffis Exp $
 
 DESCRIPTION="SIP Express Router"
 
@@ -24,10 +24,10 @@ inc_mod=""
 make_options=""
 
 check_mods() {
-	if [ "`use mysql`" ]; then
+	if use mysql; then
 		inc_mod="${inc_mod} mysql"
 	fi
-	if [ "`use postgres`" ]; then
+	if use postgres; then
 		inc_mod="${inc_mod} postgres"
 	fi
 
@@ -46,11 +46,11 @@ check_mods() {
 }
 
 src_compile() {
-	if [ ! "`use ipv6`" ]; then
+	if ! use ipv6; then
 		sed -i -e "s/-DUSE_IPV6//g" Makefile.defs
 	fi
 	# optimization can result in strange debuging symbols so omit it in case
-	if [ "`use debug`" ]; then
+	if use debug; then
 		make_options="${make_options} mode=debug"
 	else
 		make_options="${make_options} CFLAGS=${CFLAGS}"
@@ -87,7 +87,7 @@ src_install () {
 	newexe gentoo/ser.init ser
 
 	# fix what the Makefile don't do
-	if [ ! "`use mysql`" ]; then
+	if ! use mysql; then
 		rm ${D}/usr/sbin/ser_mysql.sh
 	fi
 }
