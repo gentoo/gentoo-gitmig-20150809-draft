@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/gcl-cvs
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl-cvs/ChangeLog,v 1.1 2004/12/10 03:50:16 mkennedy Exp $
+
+*gcl-cvs-2.7.0 (09 Dec 2004)
+
+  09 Dec 2004; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +files/gcl, +files/gcl.notcltk, +files/gcl.sh, +gcl-cvs-2.7.0.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

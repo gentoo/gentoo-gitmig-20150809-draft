@@ -1,0 +1,19 @@
+#!/bin/sh
+
+SYS=@SYS@
+
+# Use the Common Lisp Controller image in preference to the standard
+# image.
+
+if [ -x $SYS/saved_ansi_gcl ] ; then
+    EXE=saved_ansi_gcl;
+else
+    EXE=saved_ansi_gcl.dist;
+fi
+
+exec $SYS/$EXE -dir $SYS/ -libdir @DIR@/ \
+   -eval '(setq si::*allow-gzipped-file* t)' \
+   -eval '(setq si::*tk-library* "/usr/lib/tk@TKVERS@")' \
+     "$@"
+
+# other options: -load /tmp/foo.o -load jo.lsp -eval "(joe 3)"
