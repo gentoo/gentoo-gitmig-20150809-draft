@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.82-r1.ebuild,v 1.3 2004/01/09 20:45:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.82-r1.ebuild,v 1.4 2004/03/30 03:58:23 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~alpha"
+KEYWORDS="x86 sparc alpha"
 IUSE="debug jabber msn oscar yahoo"
 
 DEPEND="virtual/glibc
