@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r1.ebuild,v 1.6 2004/06/30 17:12:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r1.ebuild,v 1.7 2004/10/03 09:52:54 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,10 +14,10 @@ SLOT="0"
 KEYWORDS="~x86 -ppc ~sparc alpha ~hppa ~amd64"
 IUSE="static"
 
-DEPEND=">=sys-apps/sed-4.0
+RDEPEND="!sys-fs/lvm2"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4.0
 	virtual/linux-sources"
-RDEPEND="${DEPEND}
-	!sys-fs/lvm2"
 
 pkg_setup() {
 	check_KV

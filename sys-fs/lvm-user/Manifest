@@ -2,16 +2,16 @@
 Hash: SHA1
 
 MD5 835ffbbfb0ddd5bef64a1f651aec397f ChangeLog 4456
-MD5 eba6beafad0abb1b70a94cb5d4daacfb lvm-user-1.0.7-r1.ebuild 1662
-MD5 59f8651a6eaa6b5e10eb906b0874ab44 lvm-user-1.0.7.ebuild 1275
+MD5 289c7040c4fd9ef66466c32303d91e01 lvm-user-1.0.7-r1.ebuild 1663
+MD5 2a7c8f476209fe179084d1585e753fa8 lvm-user-1.0.7.ebuild 1276
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7 61
 MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7-r1 61
 MD5 7484cb0ecb2a997be4910a8612e951cf files/lvm-user-1.0.7-statics.diff 1040
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFA4vR/HTu7gpaalycRAl5KAKC1NGkyLCVZN6Ri1y91Zv2khXzeUgCggwj/
-CJrNdRoWGW2uYOqLwdcWeT4=
-=TGxl
+iD8DBQFBX8v8HTu7gpaalycRAtoZAJwJ7HE/CYj6Bw5SZYtp4+E57CdmJQCgpF9n
+sstZgWanVwzqFLmPAsGRoZ4=
+=iVqf
 -----END PGP SIGNATURE-----
