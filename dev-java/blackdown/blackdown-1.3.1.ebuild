@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Damon Conway <damon@3jane.net> 
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown/blackdown-1.3.1.ebuild,v 1.1 2001/08/18 16:35:49 kabau Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown/blackdown-1.3.1.ebuild,v 1.2 2001/08/22 03:59:26 kabau Exp $
 
 A=j2re-1.3.1-FCS-linux-i386.tar.bz2
 S=${WORKDIR}/j2re1.3.1
@@ -29,11 +29,11 @@ src_install () {
 	exeinto /opt/${P}/bin/i386
 	doexe bin/i386/realpath
 
-	insinto /opt/${P}/bin/i386/green_threads
-	doins bin/i386/green_threads/*
+	exeinto /opt/${P}/bin/i386/green_threads
+	doexe bin/i386/green_threads/*
 
-	insinto /opt/${P}/bin/i386/native_threads
-	doins bin/i386/native_threads/*
+	exeinto /opt/${P}/bin/i386/native_threads
+	doexe bin/i386/native_threads/*
 
 	insinto /opt/${P}/lib
 	doins lib/*
