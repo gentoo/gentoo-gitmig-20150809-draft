@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.109 2004/08/19 01:35:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.110 2004/08/26 01:50:04 seemant Exp $
+
+*coreutils-5.2.1-r2 (25 Aug 2004)
+
+  25 Aug 2004; Seemant Kulleen <seemant@gentoo.org>
+  +coreutils-5.2.1-r2.ebuild:
+  Version bump to incorporate two fixes. First, the uname patch is made to work
+  on amd64 architecture (fixing bug #59774 by Danny van Dyk
+  <kugelfang@gentoo.org>), and the second is a fix to sort on large files
+  reported by: qube99@hotmail.com in bug #39515, and fixed by: Sven Wegener
+  <swegener@gentoo.org>
 
   18 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   coreutils-5.2.1-r1.ebuild:
