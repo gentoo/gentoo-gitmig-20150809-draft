@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/pptpd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.13 2004/12/30 09:05:31 jhhudso Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.14 2005/02/12 09:36:50 mrness Exp $
+
+  12 Feb 2005; Alin Nastac <mrness@gentoo.org> -pptpd-1.1.4_beta4.ebuild,
+  pptpd-1.2.1.ebuild:
+  Mark stable on x86 and remove old ebuild.
 
 *pptpd-1.2.1 (30 Dec 2004)
 
