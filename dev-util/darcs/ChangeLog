@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.25 2004/11/08 14:18:16 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.26 2004/11/25 21:47:41 kosmikus Exp $
+
+  25 Nov 2004; Andres Loeh <kosmikus@gentoo.org> darcs-1.0.0.ebuild:
+  Removed wxhaskell dependency, because wxhaskell features are currently
+  disabled. Added ~amd64 flag (bug #58590).
 
   08 Nov 2004; Andres Loeh <kosmikus@gentoo.org> darcs-1.0.0.ebuild:
   Ebuild cleanup.
