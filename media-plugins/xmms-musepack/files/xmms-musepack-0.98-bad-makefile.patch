@@ -1,0 +1,13 @@
+--- Makefile.orig	2003-10-30 12:30:42.972519912 +0000
++++ Makefile	2003-10-30 12:31:49.509404768 +0000
+@@ -1,8 +1,8 @@
+ VERSION = 0.98
+-OPTIONS = -Wall -shared -O3 -march=pentiumpro -mpentium --fast-math -DPOSIX -D_REENTRANT -DREENTRANT -I.. -DMPP_ENCODER
++OPTIONS = -Wall -shared $(ARCH) -DPOSIX -D_REENTRANT -DREENTRANT -DMPP_ENCODER
+ 
+ 
+-SOURCE  = in_mpc.c bitstream.c huffsv46.c huffsv7.c requant.c synth_filter.c mpc_dec.c equalizer.c equal.c ../tags.c
++SOURCE  = in_mpc.c bitstream.c huffsv46.c huffsv7.c requant.c synth_filter.c mpc_dec.c equalizer.c equal.c tags.c
+ HEADER  =          bitstream.h huffsv46.h huffsv7.h requant.h synth_filter.h mpc_dec.h equalizer.h equal.h        minimax.h
+ EQUAL   = akg_k141.h akg_k401.h akg_k501.h sh_hd580.h sh_hd600.h sf_amati.h
+ 
