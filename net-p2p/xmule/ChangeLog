@@ -1,0 +1,8 @@
+# ChangeLog for net-p2p/xmule
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.1 2003/06/08 18:59:47 malverian Exp $
+
+*xmule-1.5.0 (08 Jun 2003)
+
+  08 Jun 2003; Philip Walls <malverian@gentoo.org> xmule-1.5.0.ebuild :
+  Initial import.
