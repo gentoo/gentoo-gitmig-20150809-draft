@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.36 2004/08/23 00:00:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.37 2004/08/30 00:03:32 nerdboy Exp $
+
+*hylafax-4.2.0 (29 Aug 2004)
+
+  29 Aug 2004; Steve Arnold <nerdboy@gentoo.org>
+  +files/hylafax-4.2.0-dso.patch, +files/hylafax-4.2.0-faxcron_uid.patch,
+  +hylafax-4.2.0.ebuild:
+  added/fixed latest official stable upstream version (bug 62026)
 
   22 Aug 2004; Jason Wever <weeve@gentoo.org> hylafax-4.1.8-r4.ebuild:
   Stable on sparc.
