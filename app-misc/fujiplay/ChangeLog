@@ -1,10 +1,8 @@
 # ChangeLog app-misc/fujiplay
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fujiplay/ChangeLog,v 1.1 2003/02/16 07:14:50 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fujiplay/ChangeLog,v 1.2 2003/04/22 10:15:30 vapier Exp $
 
-*fujiplay-1.33.ebuild (09 Feb 2003)
-  15 Feb 2003: Seth Chandler <sethbc@gentoo.org> fujiplay-1.33.ebuild:
+*fujiplay-1.33 (15 Feb 2003)
+
+  15 Feb 2003; Seth Chandler <sethbc@gentoo.org> fujiplay-1.33.ebuild:
   added fujiplay to portage...
-
-
-
