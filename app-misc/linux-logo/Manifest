@@ -2,21 +2,21 @@
 Hash: SHA1
 
 MD5 04e5b3e82a31dcafdd57882d7a6130f4 linux-logo-4.09.ebuild 1798
+MD5 5f4e42e4251c9cd25e3f45eb113a4cd8 linux-logo-4.10.ebuild 1800
 MD5 d093a95d4645c067cb09b02e68147fc3 linux-logo-4.07-r1.ebuild 1456
-MD5 8bb44af09c101296dba65314ff8ea32d linux-logo-4.07.ebuild 1116
-MD5 eec706e5af0151cd2c9f515f6b08c004 ChangeLog 3433
+MD5 1262a5f93c393c335eb8c2acb045c02c ChangeLog 3604
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
 MD5 466609d5bad726de258ba8d9a6307f42 files/linux-logo-4.07-gentoo-logo.patch 2450
 MD5 cc543656874c53d470f4f0b923444cd5 files/linux-logo.initscript 449
 MD5 6c88e72ae5d2b3b6a9c268c326663956 files/digest-linux-logo-4.07-r1 66
-MD5 6c88e72ae5d2b3b6a9c268c326663956 files/digest-linux-logo-4.07 66
 MD5 845d6cc3f98a1b0adfc731c46787481f files/digest-linux-logo-4.09 66
+MD5 3ddbb863f8e5c48fb1ce225554f5231d files/digest-linux-logo-4.10 66
 MD5 949ec6c4aac331264efdb8a0aa0d7525 files/gentoo.logo 4732
 MD5 72ee7112b7111772d9434f266ee9e16f files/linux-logo.conf 1213
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCPENU06ebR+OMO78RAq7vAJ9jmZ6yzLlXy+28SKuiXU46As4clACgles/
-wXRUYoKcYyLWkDQ6AS9cYqk=
-=Hl/T
+iD8DBQFCTak1chej4aZK9/cRAmkHAJwNh0iK7FSZs1ZcOH1NWATajlG2eQCfUa1f
+alG+ii3OJAfKnPufwjkxa5k=
+=Vt1y
 -----END PGP SIGNATURE-----
