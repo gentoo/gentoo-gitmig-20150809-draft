@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cymbaline
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cymbaline/ChangeLog,v 1.4 2004/06/24 23:56:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cymbaline/ChangeLog,v 1.5 2004/07/06 08:05:38 eradicator Exp $
+
+  06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> :
+  Version bump.  sparc and amd64 keywording.
 
   23 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   cymbaline-0.9r.ebuild, metadata.xml:
