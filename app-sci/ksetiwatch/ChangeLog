@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/ksetiwatch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetiwatch/ChangeLog,v 1.10 2004/10/16 15:17:32 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetiwatch/ChangeLog,v 1.11 2004/10/30 13:31:58 pbienst Exp $
+
+  30 Oct 2004; Peter Bienstman <pbienst@gentoo.org> ksetiwatch-3.0.0.ebuild:
+  Mark stable on x86.
 
 *ksetiwatch-3.0.0 (16 Oct 2004)
 
