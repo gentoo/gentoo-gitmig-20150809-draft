@@ -1,0 +1,26 @@
+#!/sbin/runscript
+
+depend() {
+    need net
+}
+
+checkconfig() {
+    if [ ! -e /etc/dhcp/dhcpd.conf ] ; then
+	eerror "You need an /etc/dhcp/dhcpd.conf file to run dhcpd"
+	eerror "There is a sample conf file in /usr/share/doc/dhcp"
+	return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    ebegin "Starting dhcpd"
+    start-stop-daemon --start --quiet --exec /usr/sbin/dhcpd -- eth0
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping dhcpd"
+    start-stop-daemon --stop --quiet --exec /usr/sbin/dhcpd
+    eend $?
+}

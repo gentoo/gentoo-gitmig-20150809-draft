@@ -1,0 +1,89 @@
+# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_rc12-r6.ebuild,v 1.1 2001/09/09 09:09:08 woodchip Exp $
+
+P=dhcp-3.0rc12
+A=${P}.tar.gz
+S=${WORKDIR}/${P}
+DESCRIPTION="ISC Dynamic Host Configuration Protocol"
+SRC_URI="ftp://ftp.isc.org/isc/dhcp/${A}"
+HOMEPAGE="http://www.isc.org/products/DHCP"
+
+DEPEND="virtual/glibc sys-apps/groff"
+RDEPEND="virtual/glibc"
+
+src_unpack() {
+
+    unpack ${A}
+    cd ${S}/includes
+    cat <<- END >> site.h
+	#define _PATH_DHCPD_CONF "/etc/dhcp/dhcpd.conf"
+	#define _PATH_DHCLIENT_DB "/var/lib/dhcp/dhclient.leases"
+	#define _PATH_DHCPD_DB "/var/lib/dhcp/dhcpd.leases"
+	END
+}
+
+src_compile() {
+
+    cat <<- END > site.conf
+	CC = gcc ${CFLAGS}
+	ETC = /etc/dhcp
+	VARDB = /var/lib/dhcp
+	ADMMANDIR = /usr/share/man/man8
+	FFMANDIR = /usr/share/man/man5
+	LIBMANDIR = /usr/share/man/man3
+	END
+
+    ./configure --with-nsupdate || die
+    make || die
+}
+
+src_install2() {
+
+  # hmm is this misbehaving outside of the tempdir?
+  try make DESTDIR=${D} install
+}
+
+src_install() {
+
+    dodir /var/lib/dhcp
+
+    cd ${S}/work.linux-2.2/client
+    into / ; dosbin dhclient
+    into /usr ; doman *.5 *.8
+
+    cd ../dhcpctl ; dolib libdhcpctl.a ; doman *.3
+    insinto /usr/include ; doins dhcpctl.h
+
+    cd ../omapip ; dolib libomapi.a ; doman *.3
+    cd ../relay ; dosbin dhcrelay ; doman *.8
+    cd ../common ; doman *.5
+    cd ../server ; dosbin dhcpd ; doman *.5 *.8
+
+    cd ${S}/client
+    # admins might wanna edit dhclient-script, so /etc is proper for it.
+    dosed "s:/etc/dhclient-script:/etc/dhcp/dhclient-script:" dhclient.conf
+    insinto /etc/dhcp ; newins dhclient.conf dhclient.conf.sample
+    exeinto /etc/dhcp ; newexe scripts/linux dhclient-script.sample
+
+    cd ${S}/server
+    insinto /etc/dhcp ; newins dhcpd.conf dhcpd.conf.sample
+
+    cd ${S}/includes/omapip
+    insinto /usr/include/omapip ; doins alloc.h buffer.h omapip.h
+
+    cd ${S}/includes/isc-dhcp
+    insinto /usr/include/isc-dhcp
+    doins boolean.h dst.h int.h lang.h list.h result.h types.h
+
+    cd ${S}
+    dodoc ANONCVS CHANGES COPYRIGHT README RELNOTES
+    newdoc client/dhclient.conf dhclient.conf.sample
+    newdoc client/scripts/linux dhclient-script.sample
+    newdoc server/dhcpd.conf dhcpd.conf.sample
+    docinto doc ; dodoc doc/*
+
+    exeinto /etc/init.d
+    newexe ${FILESDIR}/dhcp.rc6 dhcp
+}
