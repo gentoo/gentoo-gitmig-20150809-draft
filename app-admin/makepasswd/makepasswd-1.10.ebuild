@@ -10,6 +10,7 @@ DEPEND=""
 RDEPEND="perl"
 
 SRC_URI="http://ftp.debian.org/debian/dists/stable/main/source/admin/makepasswd_${PV}.orig.tar.gz"
+SLOT="0"
 
 src_install () {
 	into /usr

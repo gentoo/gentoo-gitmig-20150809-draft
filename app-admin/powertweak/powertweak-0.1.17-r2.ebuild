@@ -1,10 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.1.17-r2.ebuild,v 1.1 2002/07/14 20:51:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.1.17-r2.ebuild,v 1.2 2002/07/17 20:43:17 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Powertweak"
 SRC_URI="http://powertweak.sourceforge.net/files/${P}.tar.bz2"
+SLOT="0"
 HOMEPAGE="http://powertweak.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="0"

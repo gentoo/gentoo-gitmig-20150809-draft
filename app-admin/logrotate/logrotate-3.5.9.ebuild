@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.5.9.ebuild,v 1.3 2002/07/06 18:49:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.5.9.ebuild,v 1.4 2002/07/17 20:43:16 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Rotates, compresses, and mails system logs"
 SRC_URI="http://ftp.debian.org/debian/pool/main/l/${PN}/${PN}_${PV}.orig.tar.gz"
+SLOT="0"
 	
 HOMEPAGE="http://packages.debian.org/unstable/admin/logrotate.html"
 LICENSE="GPL-2"

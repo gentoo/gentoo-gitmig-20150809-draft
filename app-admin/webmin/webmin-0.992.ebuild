@@ -1,9 +1,10 @@
 # Copyright 2002, Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-0.992.ebuild,v 1.2 2002/07/12 01:40:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-0.992.ebuild,v 1.3 2002/07/17 20:43:17 drobbins Exp $
 
 DESCRIPTION="Webmin, a web-based system administration interface"
 SRC_URI="http://www.webmin.com/download/${P}.tar.gz"
+SLOT="0"
 HOMEPAGE="http://www.webmin.com/"
 LICENSE="BSD"
 SLOT="0"

@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r7.ebuild,v 1.1 2002/07/08 21:27:48 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r7.ebuild,v 1.2 2002/07/17 20:43:17 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="mon is a highly configurable service monitoring daemon"
 SRC_URI="ftp://ftp.kernel.org/pub/software/admin/mon/${P}.tar.bz2"
+SLOT="0"
 HOMEPAGE="http://www.kernel.org/software/mon/"
 LICENSE="GPL-2"
 SLOT="0"

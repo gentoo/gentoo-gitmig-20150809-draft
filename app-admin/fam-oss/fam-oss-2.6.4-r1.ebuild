@@ -1,10 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.4-r1.ebuild,v 1.2 2002/07/11 06:30:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.4-r1.ebuild,v 1.3 2002/07/17 20:43:16 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="fam, the File Alteration Monitor."
 SRC_URI=ftp://oss.sgi.com/projects/fam/download/${P}.tar.gz""
+SLOT="0"
 HOMEPAGE="http://oss.sgi.com/projects/fam/"
 
 DEPEND=">=sys-devel/perl-5.6.1"

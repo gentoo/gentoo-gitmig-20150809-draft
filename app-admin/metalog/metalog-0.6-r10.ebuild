@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6-r10.ebuild,v 1.1 2002/07/15 21:37:01 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6-r10.ebuild,v 1.2 2002/07/17 20:43:16 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A highly configurable replacement for syslogd/klogd"
 SRC_URI="mirror://sourceforge/metalog/${P}.tar.gz"
+SLOT="0"
 HOMEPAGE="http://metalog.sourceforge.net/"
 LICENSE="GPL-2"
 KEYWORDS="x86"

@@ -5,6 +5,7 @@
 S=${WORKDIR}/${PN}
 DESCRIPTION="A java portage browser and installer."
 SRC_URI="http://portagemaster.sourceforge.net/packages/portagemaster-${PV}.tar.bz2"
+SLOT="0"
 HOMEPAGE="http://portagemaster.sourceforge.net"
 RDEPEND="virtual/jre"
 LICENSE="GPL-2"

@@ -4,6 +4,7 @@
 S=${WORKDIR}/${P}
 DESCRIPTION="mon is a highly configurable service monitoring daemon."
 SRC_URI="ftp://ftp.kernel.org/pub/software/admin/mon/${P}.tar.bz2"
+SLOT="0"
 HOMEPAGE="http://www.kernel.org/software/mon/"
 LICENSE="GPL-2"
 SLOT="0"
