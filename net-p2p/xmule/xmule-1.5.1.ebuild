@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.5.1.ebuild,v 1.1 2003/06/18 16:52:14 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.5.1.ebuild,v 1.2 2003/06/19 22:03:55 scandium Exp $
 
 DESCRIPTION="GPL eDonkey clone that doesn't suck"
 HOMEPAGE="http://xmule.sourceforge.net"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=x11-libs/wxGTK-2.4
 	>=sys-libs/zlib-1.1.4"
