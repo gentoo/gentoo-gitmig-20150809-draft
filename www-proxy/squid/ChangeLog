@@ -1,12 +1,12 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.42 2005/03/03 18:37:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.43 2005/03/03 19:23:53 mrness Exp $
 
 *squid-2.5.9 (03 Mar 2005)
 
   03 Mar 2005; Alin Nastac <mrness@gentoo.org>
   +files/squid-2.5.9-gentoo.diff, +squid-2.5.9.ebuild:
-  Security bump (#83955).
+  Security bump (#83955). Turn off by default client IP disclosure (#83976).
 
   28 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   squid-2.5.8-r1.ebuild:

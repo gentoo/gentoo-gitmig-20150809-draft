@@ -260,6 +260,16 @@ diff -Nru squid-2.5.STABLE9.orig/src/cf.data.pre squid-2.5.STABLE9/src/cf.data.p
  	say.
  
  	Leave this at off if you have multiple backend servers, and use a
+@@ -2918,6 +2918,9 @@
+ 	If you disable this, it will appear as
+ 
+ 		X-Forwarded-For: unknown
++NOCOMMENT_START
++forwarded_for off
++NOCOMMENT_END
+ DOC_END
+ 
+ NAME: log_icp_queries
 @@ -3229,7 +3237,11 @@
  	If you wish to create your own versions of the default
  	(English) error files, either to customize them to suit your
