@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.33 2004/02/07 21:36:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.34 2004/02/11 17:48:05 azarah Exp $
+
+*libtool-1.5.2-r2 (11 Feb 2004)
+
+  11 Feb 2004; Martin Schlemmer <azarah@gentoo.org> libtool-1.5.2-r2.ebuild,
+  files/1.5.2/libtool-1.5.2-libtool_m4-shared_ext.patch:
+  If a package use an older libtool, and libtool.m4 for that package is
+  updated, but not libtool, then we run into an issue where $shared_ext
+  is not set.  This results in libraries being built without '.so'
+  extension, bug #40901.
 
 *libtool-1.5.2-r1 (07 Feb 2004)
 
