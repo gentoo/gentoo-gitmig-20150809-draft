@@ -1,11 +1,12 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.21.ebuild,v 1.2 2002/03/06 18:55:22 gbevin Exp $
+# Maintainer: Peter Gavin <pete@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.24-r1.ebuild,v 1.1 2002/03/27 14:06:43 seemant Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="an advanced partition modification system"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/${PN}/${P}.tar.gz"
+DESCRIPTION="An advanced partition modification system"
+SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz
+	ftp://gatekeeper.dec.com/pub/GNU/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/${PN}"
 
 DEPEND="virtual/glibc
@@ -23,17 +24,16 @@ src_compile() {
 	fi
 	if [ "`use python`" ]
 	then
-	myconf="${myconf} --with-python"
+		myconf="${myconf} --with-python"
 	fi
 	if [ -z "`use nls`" ]
 	then
 		myconf="${myconf} --disable-nls"
-	else
-		myconf="${myconf}"
 	fi
 	
 	./configure --prefix=/usr \
 		--target=${CHOST} \
+		--mandir=/usr/share/man \
 		${myconf} || die
 		
 	emake || die
