@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/build-rel.sh,v 1.2 2002/08/16 14:29:29 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/build-rel.sh,v 1.3 2002/08/20 20:22:33 murphy Exp $
 #
 # Where we get the sauce
 SOURCE=../default-x86-2.0
@@ -24,10 +24,7 @@ for f in $FILES; do
 	if [ -s ${SOURCE}/${f} ]; then
 		echo -n "${f}: keep"
 		keepfile $f
-		if [ "${f}" != "virtuals" -a "${f}" != "use.defaults" ]; then
-			echo "# This file generated automatically at `date`" > ${f}
-			echo "#" >> ${f}
-		else
+		if [ -r ${f} ]; then
 			rm ${f}
 			touch ${f}
 		fi
