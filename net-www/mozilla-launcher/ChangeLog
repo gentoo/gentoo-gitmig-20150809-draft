@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.25 2004/08/20 03:25:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.26 2004/08/21 01:42:36 tgall Exp $
+
+  20 Aug 2004; Tom Gall <tgall@gentoo.org> mozilla-launcher-1.18.ebuild:
+  stable on ppc64, bug #54583
 
 *mozilla-launcher-1.18 (19 Aug 2004)
 
