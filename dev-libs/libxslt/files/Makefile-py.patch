@@ -1,0 +1,18 @@
+--- python/Makefile.old	Fri Sep  6 04:51:27 2002
++++ python/Makefile	Fri Sep  6 04:52:06 2002
+@@ -479,11 +479,11 @@
+ 	cat $(srcdir)/libxsl.py libxsltclass.py > libxslt.py
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(libdir)/python${PYTHON_VERSION}/site-packages
+-	/bin/install -c -m 0644 libxslt.py $(libdir)/python${PYTHON_VERSION}/site-packages
+-	$(mkinstalldirs) $(DOCS_DIR)
++	$(mkinstalldirs) $(DESTDIR)/$(libdir)/python${PYTHON_VERSION}/site-packages
++	/bin/install -c -m 0644 libxslt.py $(DESTDIR)/$(libdir)/python${PYTHON_VERSION}/site-packages
++	$(mkinstalldirs) $(DESTDIR)/$(DOCS_DIR)
+ 	@(for doc in $(DOCS) ; \
+-	   do /bin/install -c -m 0644 $$doc $(DOCS_DIR) ; done)
++	   do /bin/install -c -m 0644 $$doc $(DESTDIR)/$(DOCS_DIR) ; done)
+ 
+ $(GENERATED): gen_prog
+ 
