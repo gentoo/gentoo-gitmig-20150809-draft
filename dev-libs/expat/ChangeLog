@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.38 2004/09/25 05:47:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.39 2004/11/20 08:45:39 cardoe Exp $
+
+  20 Nov 2004; Doug Goldstein <cardoe@gentoo.org> expat-1.95.8.ebuild:
+  stable on x86
 
 *expat-1.95.8 (22 Sep 2004)
 
