@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.9.1.ebuild,v 1.2 2003/02/13 13:58:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.9.1.ebuild,v 1.3 2003/02/15 15:20:49 foser Exp $
+
+inherit gnome2 eutils
 
 IUSE="nls"
 
@@ -21,6 +23,12 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}/src ; epatch ${FILESDIR}/${P}-gcc2_fixes.patch
+}
 
 src_compile() {
 	local myconf
