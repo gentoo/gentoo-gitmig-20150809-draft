@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-2.0.4.ebuild,v 1.1 2004/07/18 07:46:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-2.0.8.ebuild,v 1.1 2004/08/18 22:28:23 matsuu Exp $
 
 DESCRIPTION="Connection pool server for PostgreSQL"
 HOMEPAGE="http://www2b.biglobe.ne.jp/~caco/pgpool/"
@@ -16,7 +16,7 @@ DEPEND="dev-db/postgresql"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e "s:/tmp:/var/run:g" pgpool.conf.sample || die
+	sed -i -e "/^logdir/s:/tmp:/var/run:g" pgpool.conf.sample || die
 }
 
 src_compile() {
