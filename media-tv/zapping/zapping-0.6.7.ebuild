@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.6.7.ebuild,v 1.2 2003/07/15 22:05:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.6.7.ebuild,v 1.3 2003/12/15 23:53:03 mholzer Exp $
 
 DESCRIPTION="TV- and VBI- viewer for the Gnome environment"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+RESTRICT="nomirror"
 HOMEPAGE="http://zapping.sourceforge.net/"
 
 SLOT="0"
