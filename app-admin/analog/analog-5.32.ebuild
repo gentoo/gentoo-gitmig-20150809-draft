@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.5 2003/12/10 18:39:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.6 2004/02/06 10:57:10 aliz Exp $
 
 inherit eutils
 
@@ -18,6 +18,17 @@ DEPEND=">=dev-libs/libpcre-3.4
 	media-libs/jpeg
 	media-libs/libpng
 	>=sys-apps/sed-4"
+
+pkg_setup() {
+	local gd_use="$(</var/db/pkg/`best_version media-libs/libgd`/USE)"
+	if [ ! "`has jpeg ${gd_use}`" ] ; then
+		eerror "libgd is missing jpeg support. Please add"
+		eerror "'jpeg' to your USE flags, and re-emerge libgd."
+		die "libgd needs jpeg support"
+	fi
+
+	return 0
+}
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
