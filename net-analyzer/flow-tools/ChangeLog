@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.7 2005/01/26 19:51:06 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.8 2005/01/27 10:33:03 ka0ttic Exp $
+
+  27 Jan 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/flow-tools-0.67-fix-a-zillion-warnings.diff,
+  +files/flow-tools-0.67-fix-configure.diff,
+  +files/flow-tools-0.67-gcc34.diff, files/flow-tools-0.67-memleak.patch,
+  files/flow-tools-0.67-nodebug.patch, flow-tools-0.67.ebuild:
+  Added a sleu of patches: gcc-3.4 fixes, fixes of 99% of the *many* compiler
+  warnings, and configure.in fixes so that --with-XXX and --without-XXX work
+  properly - bug 79652. Also updated nodebug and memleak patches so that they
+  can be applied from ${S}.
 
 *flow-tools-0.67 (26 Jan 2005)
 

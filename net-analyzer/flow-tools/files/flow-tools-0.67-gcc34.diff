@@ -1,0 +1,52 @@
+diff -urN flow-tools-0.67.orig/src/flow-cat.c flow-tools-0.67/src/flow-cat.c
+--- flow-tools-0.67.orig/src/flow-cat.c	2005-01-25 22:46:00.000000000 -0500
++++ flow-tools-0.67/src/flow-cat.c	2005-01-26 22:24:32.066024216 -0500
+@@ -551,6 +551,7 @@
+         break;
+ 
+ next_file:
++      ;
+ 
+     }  /* FOREACH filename in dir */
+ 
+diff -urN flow-tools-0.67.orig/src/flow-dscan.c flow-tools-0.67/src/flow-dscan.c
+--- flow-tools-0.67.orig/src/flow-dscan.c	2005-01-25 22:46:00.000000000 -0500
++++ flow-tools-0.67/src/flow-dscan.c	2005-01-26 22:25:37.492077944 -0500
+@@ -560,6 +560,7 @@
+       ager(&ds, total_flows32);
+ 
+ skip2:
++    ;
+ 
+ 
+   } /* while rec */
+@@ -806,6 +807,7 @@
+   fterr_info("ager: reset hash run");
+ 
+ skip3:
++  ;
+ 
+ } /* ager */
+ 
+diff -urN flow-tools-0.67.orig/src/flow-fanout.c flow-tools-0.67/src/flow-fanout.c
+--- flow-tools-0.67.orig/src/flow-fanout.c	2005-01-25 22:46:00.000000000 -0500
++++ flow-tools-0.67/src/flow-fanout.c	2005-01-26 22:27:26.381524232 -0500
+@@ -840,6 +840,7 @@
+       } /* fte.buf_size */
+     
+ skip1:
++    ;
+ 
+     } /* if FD_ISSET */
+ 
+diff -urN flow-tools-0.67.orig/src/flow-receive.c flow-tools-0.67/src/flow-receive.c
+--- flow-tools-0.67.orig/src/flow-receive.c	2005-01-25 22:46:00.000000000 -0500
++++ flow-tools-0.67/src/flow-receive.c	2005-01-26 22:26:54.761331232 -0500
+@@ -733,6 +733,7 @@
+       } /* for */
+ 
+ skip1:
++    ;
+ 
+     } /* if FD_ISSET */
+ 

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.67.ebuild,v 1.1 2005/01/26 19:51:06 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.67.ebuild,v 1.2 2005/01/27 10:33:03 ka0ttic Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Flow-tools is a package for collecting and processing NetFlow data"
 HOMEPAGE="http://www.splintered.net/sw/flow-tools/"
@@ -11,33 +11,61 @@ SRC_URI="ftp://ftp.eng.oar.net/pub/flow-tools/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="mysql"
+IUSE="mysql postgres debug"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	sys-apps/tcp-wrappers
-	sys-libs/zlib"
+	sys-libs/zlib
+	sys-devel/flex
+	!postgres? ( mysql? ( dev-db/mysql ) )
+	!mysql? ( postgres? ( dev-db/postgresql ) )"
+
+DEPEND="${RDEPEND}
+	sys-devel/bison"
 
 pkg_setup() {
+	if use mysql && use postgres ; then
+		echo
+		eerror "The mysql and postgres USE flags are mutually exclusive."
+		eerror "Please choose either USE=mysql or USE=postgres, but not both."
+		die
+	fi
+
 	enewgroup flowtools
 	enewuser flowtools -1 /bin/false /var/lib/flow-tools flowtools
 }
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
-	epatch ${FILESDIR}/${P}-nodebug.patch
+	cd ${S}
+	epatch ${FILESDIR}/${P}-fix-configure.diff
+	epatch ${FILESDIR}/${P}-gcc34.diff
+	epatch ${FILESDIR}/${P}-fix-a-zillion-warnings.diff
+	use debug || epatch ${FILESDIR}/${P}-nodebug.patch
 	epatch ${FILESDIR}/${P}-memleak.patch
+
+	sed -i "s|\(^.*CFLAGS=\).*$|\1-Wall|" \
+		configure.in src/Makefile.am lib/Makefile.am || die "sed CFLAGS failed"
 }
 
 src_compile() {
+	einfo "Running autoreconf"
+	autoreconf -f -i || die "autoreconf failed"
+
+	use mysql && append-flags "-L/usr/lib/mysql -I/usr/include/mysql"
+	use postgres && append-flags "-L/usr/lib/postgres -I/usr/include/postgres"
+
 	econf \
-		`use_with mysql` || die "econf failed"
+		--localstatedir=/etc/flow-tools \
+		$(use_with mysql) \
+		$(use_with postgres pgsql) \
+		|| die "econf failed"
 
 	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die "emake install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 	dodoc COPYING ChangeLog README INSTALL SECURITY TODO
 
 	keepdir /var/lib/flow-tools

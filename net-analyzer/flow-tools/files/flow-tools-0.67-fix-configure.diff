@@ -1,0 +1,150 @@
+diff -urN flow-tools-0.67.orig/acconfig.h flow-tools-0.67/acconfig.h
+--- flow-tools-0.67.orig/acconfig.h	2005-01-27 02:12:31.445092912 -0500
++++ flow-tools-0.67/acconfig.h	1969-12-31 19:00:00.000000000 -0500
+@@ -1,26 +0,0 @@
+-
+-/* Name of package.  */
+-#undef PACKAGE
+-
+-/* Version of package.  */
+-#undef VERSION
+-
+-/* Linux */
+-#undef _BSD_SOURCE
+-
+-/* Linux */
+-#undef HAVE_FEATURES_H
+-
+-/* BSD socket */
+-#undef HAVE_SOCK_SIN_LEN
+-
+-/* MYSQL */
+-#undef HAVE_MYSQL
+-
+-/* PGSQL */
+-#undef HAVE_PGSQL
+-
+-/* DEC */
+-#undef HAVE_LL_STRTOUL
+-
+-
+diff -urN flow-tools-0.67.orig/configure.in flow-tools-0.67/configure.in
+--- flow-tools-0.67.orig/configure.in	2005-01-27 02:12:31.444093064 -0500
++++ flow-tools-0.67/configure.in	2005-01-27 02:27:27.114930400 -0500
+@@ -17,6 +17,38 @@
+ AC_PROG_RANLIB
+ AM_PROG_LEX
+ 
++AC_ARG_WITH(mysql,
++ [ --with-mysql    Compile in MySQL support. (default=no)],
++ [ac_with_mysql=$withval],
++ [ac_with_mysql=no])
++
++if test x$ac_with_mysql = xyes ; then
++    LIBS="-L/usr/lib/mysql"
++    AC_CHECK_LIB(mysqlclient, my_init,
++     [
++	MYSQLCFLAGS="-L/usr/lib/mysql -I/usr/include/mysql"
++	MYSQLLIB="-lmysqlclient"
++	AC_DEFINE([HAVE_MYSQL], 1, [Compile MySQL support])
++     ]
++    )
++fi
++
++AC_ARG_WITH(pgsql,
++ [ --with-pgsql    Compile in PostgreSQL support (default=no)],
++ [ac_with_pgsql=$withval],
++ [ac_with_pgsql=no])
++
++if test x$ac_with_pgsql = xyes ; then
++    LIBS="-L/usr/lib/postgresql"
++    AC_CHECK_LIB(pq, PQsetdbLogin,
++      [
++	PGSQLCFLAGS="-L/usr/lib/postgresql -I/usr/include/postgresql"
++	PGSQLLIB="-lpq"
++	AC_DEFINE([HAVE_PGSQL], 1, [Compile PostgreSQL support])
++      ]
++    )
++fi
++
+ AC_SUBST(YLIB)
+ AC_SUBST(MYSQLLIB)
+ AC_SUBST(MYSQLCFLAGS)
+@@ -25,54 +57,6 @@
+ AC_SUBST(PGSQLCFLAGS)
+ AC_SUBST(PGSQLINCLUDE)
+ 
+-dnl extra argument: --with-mysql
+-WITH_MYSQL=
+-AC_ARG_WITH(mysql,
+-[  --with-mysql[=PATH]           Compile in MySQL support. (default=no)],
+-[ if test -x "$withval"; then
+-    WHERE_MYSQL=$withval
+-  else
+-    WHERE_MYSQL="/usr"
+-  fi
+-]
+-)
+-
+-dnl extra argument: --with-pgsql
+-WITH_PGSQL=
+-AC_ARG_WITH(pgsql,
+-[  --with-pgsql[=PATH]           Compile in PostgreSQL support. (default=no)],
+-[ if test -x "$withval"; then
+-    WHERE_PGSQL=$withval
+-  else
+-    WHERE_PGSQL="/usr"
+-  fi
+-]
+-)
+-
+-dnl Checks for libraries.
+-
+-if test "x$WHERE_MYSQL" != "x"; then
+-  LIBS="-L$WHERE_MYSQL/lib/mysql"
+-  AC_CHECK_LIB(mysqlclient, my_init,
+-    [
+-      MYSQLCFLAGS="-L$WHERE_MYSQL/lib/mysql -I$WHERE_MYSQL/include/mysql"
+-      MYSQLLIB="-lmysqlclient"
+-      AC_DEFINE(HAVE_MYSQL)
+-    ]
+-  )
+-fi
+-
+-if test "x$WHERE_PGSQL" != "x"; then
+-  LIBS="-L$WHERE_PGSQL/lib/pgsql"
+-  AC_CHECK_LIB(pq, PQsetdbLogin,
+-    [
+-      PGSQLCFLAGS="-L$WHERE_PGSQL/lib -I$WHERE_PGSQL/include/pgsql"
+-      PGSQLLIB="-lpq"
+-      AC_DEFINE(HAVE_PGSQL)
+-    ]
+-  )
+-fi
+-
+ AC_CHECK_LIB(y, main,YLIB="$YLIB -ly",)
+ AC_CHECK_LIB(z, zlibVersion)
+ case "X$LIBS" in
+@@ -95,11 +79,11 @@
+ #include <sys/socket.h>
+ #include <netinet/in.h>],
+ [struct sockaddr_in sock; sock.sin_len = sizeof(sock);],
+-echo yes;AC_DEFINE(HAVE_SOCK_SIN_LEN), 
++echo yes;AC_DEFINE([HAVE_SOCK_SIN_LEN], 1, [Define if sockaddr_in.sin_len member exists]), 
+ echo no)
+ 
+ 
+-AC_DEFINE(_BSD_SOURCE)
++AC_DEFINE([_BSD_SOURCE], 1, [Define BSD source])
+ 
+ dnl Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST
+@@ -136,7 +120,7 @@
+ }
+ ],
+ [AC_MSG_RESULT(yes)
+-  AC_DEFINE(HAVE_LL_STRTOUL)
++  AC_DEFINE([HAVE_LL_STRTOUL], 1, [Define if strtoul returns 64 bits])
+ ],
+ [AC_MSG_RESULT(no)],
+ )
