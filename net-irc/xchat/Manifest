@@ -4,8 +4,8 @@ MD5 849da81b46b8b7ea36a6454227a1f12d xchat-1.8.11.ebuild 2230
 MD5 bc68023a361d1a90c51651cc396d6bc3 xchat-2.0.0.ebuild 1929
 MD5 b8b48f2cd8a05c37ee506f688b1c5f5b xchat-2.0.1.ebuild 1999
 MD5 02f182c540386303cb887a0aacbdfd2c xchat-2.0.2-r2.ebuild 2152
-MD5 ef4f52cee6708be4c3d78d4b5bc7f0c1 xchat-2.0.3-r1.ebuild 1927
-MD5 eba9299858a03cbb36633f2e810cbe4d ChangeLog 9382
+MD5 abb6ce9b6db024b87209f10ee70f0889 xchat-2.0.3-r1.ebuild 1926
+MD5 f3e5efb06bd3a5895bc1b74a96330402 ChangeLog 9487
 MD5 49fe65f2f395661cba1e7673ab0bada9 xchat-2.0.4.ebuild 1781
 MD5 011b499714e85d4177185aabaeb1db15 files/00_all_tabs-leftright-and-gtk-icons.patch 13367
 MD5 7c2450584076659603dc908ffc53b537 files/digest-xchat-1.8.10-r1 65
