@@ -9,4 +9,3 @@ icc-pgo
 mmx
 svga
 sse
-nas
