@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9d6ed3fe7e3f42038061de8d3ad19752 ChangeLog 1686
-MD5 8fc44dcc9bddefdda1333e0fac5d3e3d ooodi-0.55.ebuild 671
+MD5 771958d440d8a28ad3d66f97ac3a9f21 ChangeLog 1777
 MD5 b590f3f0a2ce3f620006995e5243fa6f metadata.xml 163
-MD5 2e1570b27d24e9e837911193272bd590 ooodi-0.68.ebuild 703
+MD5 8fc44dcc9bddefdda1333e0fac5d3e3d ooodi-0.55.ebuild 671
+MD5 9f93432528bc21a1bc21102e1332a383 ooodi-0.68.ebuild 702
 MD5 3b56ec8506ed8634051dc090a3916962 files/digest-ooodi-0.55 62
 MD5 46d77626c4a6f8a6885b8a7c3c06cc8b files/digest-ooodi-0.68 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCRJMf5mJXAu5GbtIRAvAiAJ9NQK4a7WXtNnPKboc1uZQbR30JjwCdEXTN
-XTLgN4SXtp9/oaUBwP+XtR0=
-=9izB
+iD8DBQFCSwdgKRy60XGEcJIRAoZ3AJ4z4M99WqjN73hMwC/VS1Qw3ho+6QCfeqKb
+YRKXaCIW+vpERPXSEJIr+Aw=
+=eJGN
 -----END PGP SIGNATURE-----
