@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c0721b3702a6cc481893add2d7b076a4 ChangeLog 6839
 MD5 aa73d5edf312beeab44fa9d58a603ad4 metadata.xml 636
 MD5 1a21a1a6d53937eec7e2a1417bb8ef72 ntp-4.1.2.ebuild 3167
@@ -10,7 +7,7 @@ MD5 4e13c1a5fa0fa54e3b65ec311dd7270a files/broadcastclient.patch 451
 MD5 af48491e8d6820a3d8eba16a771e5c26 files/digest-ntp-4.1.2 129
 MD5 dded11ceec4b8f2c1b140341a357f507 files/linux-config-phone.patch 747
 MD5 e82bbe682098cf66f513ca2d11e4bc36 files/ntp-4.1.1b-syscall-libc.patch 522
-MD5 500b14873736bf0603c2d2f18a3c81d6 files/ntp-client.confd 1039
+MD5 4f4017fa574282838cfdd774216f7e73 files/ntp-client.confd 1042
 MD5 2965cff99d89c28ae19c1a967f697777 files/ntp-client.rc 925
 MD5 0dada7317e7863c0ceaf835b4f96df3e files/ntp.conf 1422
 MD5 83dde3b948b28c278d496252494c935f files/ntpd.confd 393
@@ -22,10 +19,3 @@ MD5 83dee5f8ef2a863c2ba2bb91c432f732 files/ntpd.rc 862
 MD5 8f2b873f4294daf289f6e8787fd30439 files/ntpd-4.1.2.confd 394
 MD5 b8fc232f85be1313aee4c5a6f0048ca7 files/ntp-client-4.1.2.rc 840
 MD5 5fc28af5c2a508eeb67a4d5d0ffab341 files/digest-ntp-4.2.0-r2 135
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBazi+HTu7gpaalycRAk7zAKChsb09ingd0KPd1dT6eQq74Y6PaQCffbkr
-8cWPMJcbIf69cD0EXT5QGLQ=
-=WDm4
------END PGP SIGNATURE-----

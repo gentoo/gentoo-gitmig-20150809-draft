@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.confd,v 1.8 2004/08/25 14:31:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.confd,v 1.9 2004/10/28 12:25:34 vapier Exp $
 
 # Command to run to set the clock initially
 # Most people should just leave this line alone ...
@@ -12,7 +12,7 @@ NTPCLIENT_CMD="ntpdate"
 # Most people should just uncomment this variable and
 # change 'someserver' to a valid hostname which you
 # can aquire from the URL's below
-NTPCLIENT_OPTS="-Q -u pool.ntp.org"
+NTPCLIENT_OPTS="-Q -b -u pool.ntp.org"
 
 # How long to wait (in seconds) before giving up.
 # Useful for when you boot and DNS/internet isn't
