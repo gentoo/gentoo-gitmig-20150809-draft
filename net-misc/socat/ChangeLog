@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/socat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.4 2003/06/25 20:25:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.5 2003/07/29 19:47:10 mholzer Exp $
+
+*socat-1.3.2.0 (30 Jul 2003)
+
+  30 Jul 2003; Martin Holzer <mholzer@gentoo.org> socat-1.3.2.0.ebuild:
+  Version bumped
 
 *socat-1.3.1.0 (25 Jun 2003)
 
