@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.16 2002/10/13 21:56:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.17 2002/10/14 20:57:09 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -30,7 +30,7 @@ filter-flags "-fomit-frame-pointer -malign-double"
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
@@ -40,8 +40,8 @@ KEYWORDS="x86 ppc sparc sparc64 alpha"
 SLOT="2.2"
 LICENSE="GPL-2"
 
-#portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
-#drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
+# Portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
+# drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
 DEPEND="sys-kernel/linux-headers
 	nls? ( sys-devel/gettext )"
 RDEPEND="sys-kernel/linux-headers
@@ -51,7 +51,7 @@ RDEPEND="sys-kernel/linux-headers
 
 PROVIDE="virtual/glibc"
 
-#lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
+# Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
 export CFLAGS="${CFLAGS//-O?} -O2"
 export CXXFLAGS="${CFLAGS}"
 
@@ -163,9 +163,9 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--libexecdir=/usr/lib/misc \
 		${myconf} || die
-	#This next option breaks the Sun JDK and the IBM JDK
-	#We should really keep compatibility with older kernels, anyway
-	#--enable-kernel=2.4.0
+	# This next option breaks the Sun JDK and the IBM JDK
+	# We should really keep compatibility with older kernels, anyway
+	# --enable-kernel=2.4.0
 	
 	einfo "Building GLIBC..."
 	make PARALLELMFLAGS="${MAKEOPTS}" || die
@@ -194,11 +194,14 @@ src_install() {
 			localedata/install-locales -C buildhere || die
 		
 		einfo "Installing man pages and docs..."
-		#install linuxthreads man pages
+		# Install linuxthreads man pages
 		dodir /usr/share/man/man3
 		doman ${S}/man/*.3thr
 		
-		install -m 644 nscd/nscd.conf ${D}/etc
+		# Install nscd config file
+		insinto /etc
+		doins ${S}/nscd/nscd.conf
+		
 		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE \
 			NEWS NOTES PROJECTS README*
 	else
@@ -217,16 +220,17 @@ src_install() {
 		done
 	fi
 	
-	#is this next line actually needed or does the makefile get it right?
-	#It previously has 0755 perms which was killing things.
-	chmod 4755 ${D}/usr/lib/misc/pt_chown
+	# Is this next line actually needed or does the makefile get it right?
+	# It previously has 0755 perms which was killing things.
+	fperms 4755 /usr/lib/misc/pt_chown
+	
 	rm -f ${D}/etc/ld.so.cache
 
-	#prevent overwriting of the /etc/localtime symlink.  We'll handle the
-	#creation of the "factory" symlink in pkg_postinst().
+	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the
+	# creation of the "factory" symlink in pkg_postinst().
 	rm -f ${D}/etc/localtime
 
-	#some things want this, notably ash.
+	# Some things want this, notably ash.
 	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
 }
 
