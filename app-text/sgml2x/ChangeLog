@@ -1,6 +1,6 @@
 # ChangeLog for app-text/sgml2x
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/ChangeLog,v 1.5 2004/03/12 08:49:49 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/ChangeLog,v 1.6 2004/06/24 22:51:39 agriffis Exp $
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> sgml2x-0.11-r1.ebuild:
   Don't assign default to S; header fix

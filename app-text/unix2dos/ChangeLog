@@ -1,6 +1,6 @@
 # ChangeLog for app-text/unix2dos
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/ChangeLog,v 1.9 2004/06/23 11:31:56 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/ChangeLog,v 1.10 2004/06/24 22:54:41 agriffis Exp $
 
   23 Jun 2004; Guy Martin <gmsoft@gentoo.org> unix2dos-2.2.ebuild:
   Marked stable on hppa.

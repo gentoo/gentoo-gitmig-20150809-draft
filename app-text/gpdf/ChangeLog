@@ -1,6 +1,6 @@
 # ChangeLog for app-text/gpdf
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.33 2004/06/03 23:08:58 geoman Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.34 2004/06/24 22:37:31 agriffis Exp $
 
   03 Jun 2004; Stephen P. Becker <geoman@gentoo.org> gpdf-0.131.ebuild:
   Stable on mips.

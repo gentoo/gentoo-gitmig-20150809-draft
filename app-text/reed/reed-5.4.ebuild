@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/reed/reed-5.4.ebuild,v 1.5 2004/03/12 09:18:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/reed/reed-5.4.ebuild,v 1.6 2004/06/24 22:50:05 agriffis Exp $
 
 DESCRIPTION="This is a text pager (text file viewer), used to display etexts."
 HOMEPAGE="http://www.sacredchao.net/software/reed/index.shtml"

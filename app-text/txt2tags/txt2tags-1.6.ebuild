@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-1.6.ebuild,v 1.5 2004/06/02 15:22:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-1.6.ebuild,v 1.6 2004/06/24 22:54:31 agriffis Exp $
 
 DESCRIPTION="Txt2tags is a tool for generating marked up documents (HTML, SGML, ...) from a plain text file with markup."
 SRC_URI="http://txt2tags.sourceforge.net/src/${P}.tgz"

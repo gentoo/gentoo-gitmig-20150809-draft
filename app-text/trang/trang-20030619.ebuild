@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619.ebuild,v 1.1 2004/05/13 18:14:47 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20030619.ebuild,v 1.2 2004/06/24 22:53:49 agriffis Exp $
 
 DESCRIPTION="Trang: Multi-format schema converter based on RELAX NG"
 HOMEPAGE="http://thaiopensource.com/relaxng/trang.html"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.4.ebuild,v 1.8 2004/04/27 23:54:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.4.ebuild,v 1.9 2004/06/24 22:53:59 agriffis Exp $
 
 MY_PV="${PV}b3"
 DESCRIPTION="Lists directories recursively, and produces an indented listing of files."

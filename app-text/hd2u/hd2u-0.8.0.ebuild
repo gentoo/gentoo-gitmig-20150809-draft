@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hd2u/hd2u-0.8.0.ebuild,v 1.13 2004/04/25 23:01:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hd2u/hd2u-0.8.0.ebuild,v 1.14 2004/06/24 22:38:46 agriffis Exp $
 
 DESCRIPTION="Dos2Unix text file converter"
 SRC_URI="http://www.megaloman.com/~hany/_data/hd2u/${P}.tgz"

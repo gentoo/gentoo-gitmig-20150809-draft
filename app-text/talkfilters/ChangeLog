@@ -1,6 +1,6 @@
 # ChangeLog for app-text/talkfilters
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.3 2004/04/21 03:00:00 absinthe Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.4 2004/06/24 22:52:52 agriffis Exp $
 
   20 Apr 2004; Dylan Carlson <absinthe@gentoo.org> talkfilters-2.1.ebuild:
   added amd64 to KEYWORDS.

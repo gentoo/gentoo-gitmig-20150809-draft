@@ -1,6 +1,6 @@
 # ChangeLog for app-text/sgmltools-lite
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.26 2004/06/06 16:03:53 weeve Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.27 2004/06/24 22:51:50 agriffis Exp $
 
   06 Jun 2004; Jason Wever <weeve@gentoo.org> sgmltools-lite-3.0.3-r7.ebuild:
   Stable on sparc.

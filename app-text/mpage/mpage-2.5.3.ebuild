@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/mpage-2.5.3.ebuild,v 1.5 2004/05/10 18:33:50 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/mpage-2.5.3.ebuild,v 1.6 2004/06/24 22:45:04 agriffis Exp $
 
 DESCRIPTION="Many to one page printing utility"
 HOMEPAGE="http://www.mesa.nl/"

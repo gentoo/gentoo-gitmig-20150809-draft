@@ -1,6 +1,6 @@
 # ChangeLog for app-text/duali
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duali/ChangeLog,v 1.4 2004/06/06 23:52:28 dragonheart Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/duali/ChangeLog,v 1.5 2004/06/24 22:33:50 agriffis Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   duali-0.1.1.ebuild:

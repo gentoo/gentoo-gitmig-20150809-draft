@@ -1,6 +1,6 @@
 # ChangeLog for app-text/mecab
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.4 2004/06/21 17:31:24 usata Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.5 2004/06/24 22:44:11 agriffis Exp $
 
   22 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> mecab-0.76.ebuild:
   Stable on x86

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/code2html-0.9.1.ebuild,v 1.4 2004/05/03 11:57:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/code2html-0.9.1.ebuild,v 1.5 2004/06/24 22:30:05 agriffis Exp $
 
 DESCRIPTION="Converts source files to colored HTML output."
 HOMEPAGE="http://www.palfrader.org/code2html/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2sxw/wpd2sxw-0.6.0.ebuild,v 1.4 2004/06/11 22:14:24 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2sxw/wpd2sxw-0.6.0.ebuild,v 1.5 2004/06/24 22:55:46 agriffis Exp $
 
 DESCRIPTION="WordPerfect Document (wpd) to OpenOffice.org (sxw) converter"
 HOMEPAGE="http://libwpd.sf.net"

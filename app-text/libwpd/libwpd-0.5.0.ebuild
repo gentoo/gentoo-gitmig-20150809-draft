@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.5.0.ebuild,v 1.3 2004/04/25 11:52:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.5.0.ebuild,v 1.4 2004/06/24 22:43:16 agriffis Exp $
 
 DESCRIPTION="WordPerfect Document import/export library"
 HOMEPAGE="http://libwpd.sf.net"

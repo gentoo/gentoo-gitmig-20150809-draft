@@ -1,6 +1,6 @@
 # ChangeLog for app-text/html-xml-utils
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.12 2004/06/06 15:59:21 weeve Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.13 2004/06/24 22:40:23 agriffis Exp $
 
   06 Jun 2004; Jason Wever <weeve@gentoo.org> html-xml-utils-2.8-r1.ebuild:
   Stable on sparc.

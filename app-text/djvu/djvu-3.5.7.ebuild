@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.7.ebuild,v 1.10 2004/05/02 10:37:10 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.7.ebuild,v 1.11 2004/06/24 22:32:09 agriffis Exp $
 
 MY_P="${PN}libre-${PV}"
 DESCRIPTION="A web-centric format and software platform for distributing documents and images."

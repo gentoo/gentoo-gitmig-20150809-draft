@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cook/cook-1.0.2.ebuild,v 1.4 2004/04/01 12:28:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cook/cook-1.0.2.ebuild,v 1.5 2004/06/24 22:30:26 agriffis Exp $
 
 DESCRIPTION="COOK is an embedded language which can be used as a macro preprocessor and for similar text processing."
 HOMEPAGE="http://cook.sourceforge.net/"

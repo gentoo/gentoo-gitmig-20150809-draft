@@ -1,6 +1,6 @@
 # ChangeLog for app-text/xhtml1
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.8 2003/11/20 10:12:59 obz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.9 2004/06/24 22:56:40 agriffis Exp $
 
   20 Nov 2003; Mike Gardiner <obz@gentoo.org> metadata.xml,
   xhtml1-20020801-r1.ebuild, xhtml1-20020801.ebuild:

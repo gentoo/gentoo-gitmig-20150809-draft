@@ -1,6 +1,6 @@
 # ChangeLog for app-text/kaspaliste
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/ChangeLog,v 1.4 2004/06/04 15:40:30 carlo Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/ChangeLog,v 1.5 2004/06/24 22:42:22 agriffis Exp $
 
   04 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kaspaliste-0.94.ebuild,
   metadata.xml:

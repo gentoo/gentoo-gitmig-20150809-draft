@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r1.ebuild,v 1.13 2004/03/12 08:48:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r1.ebuild,v 1.14 2004/06/24 22:49:44 agriffis Exp $
 
 DESCRIPTION="Revision Control System"
 SRC_URI="ftp://ftp.gnu.org/gnu/rcs/${P}.tar.gz"
