@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-libsynce
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-libsynce/ChangeLog,v 1.6 2004/03/30 12:10:58 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-libsynce/ChangeLog,v 1.7 2004/04/25 22:39:20 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> synce-libsynce-0.7.ebuild,
+  synce-libsynce-0.8.1.ebuild:
+  Add die following econf for bug 48950
 
 *synce-libsynce-0.8.9 (30 Mar 2004)
 

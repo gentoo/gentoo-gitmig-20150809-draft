@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce-serial
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-serial/ChangeLog,v 1.7 2004/03/26 12:34:10 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-serial/ChangeLog,v 1.8 2004/04/25 22:42:12 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> synce-serial-0.4.ebuild,
+  synce-serial-0.7.ebuild, synce-serial-0.8-r1.ebuild,
+  synce-serial-0.8.9.ebuild, synce-serial-0.8.ebuild:
+  Add die following econf for bug 48950
 
 *synce-serial-0.8.9 (26 Mar 2004)
 

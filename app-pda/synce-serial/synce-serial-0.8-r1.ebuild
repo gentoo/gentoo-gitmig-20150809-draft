@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-serial/synce-serial-0.8-r1.ebuild,v 1.2 2004/02/29 00:07:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-serial/synce-serial-0.8-r1.ebuild,v 1.3 2004/04/25 22:42:12 agriffis Exp $
 
 DESCRIPTION="Synchronize Windows CE devices with computers running GNU/Linux, like MS ActiveSync."
 HOMEPAGE="http://sourceforge.net/projects/synce/"
@@ -15,7 +15,7 @@ DEPEND=""
 RDEPEND=">=net-dialup/ppp-2.4.1"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-gnomevfs
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.2 2003/09/02 19:40:09 liquidx Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.3 2004/04/25 22:36:23 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> synce-gnomevfs-0.2.ebuild,
+  synce-gnomevfs-0.8.ebuild:
+  Add die following econf for bug 48950
 
 *synce-gnomevfs-0.8 (02 Sep 2003)
 

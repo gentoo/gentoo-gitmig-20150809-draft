@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.5.ebuild,v 1.7 2003/09/24 20:36:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.5.ebuild,v 1.8 2004/04/25 22:30:52 agriffis Exp $
 
 SYNCMAL="0.71.2"
 MALSYNC="2.1.1"
@@ -35,7 +35,7 @@ src_compile() {
 	use nls || myconf="--disable-nls"
 	use gtk2 && myconf="${myconf} --enable-gtk2" \
 			 || myconf="${myconf} --disable-gtk2"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 
 	# make sure we use $CFLAGS
 	sed -i "s/-g -O2/${CFLAGS}/" Makefile
@@ -43,7 +43,7 @@ src_compile() {
 
 	# build malsync plugin
 	cd ${S}/jpilot-syncmal_${SYNCMAL}
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die
 }
 

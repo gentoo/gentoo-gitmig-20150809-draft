@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-dccm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-dccm/ChangeLog,v 1.5 2004/03/26 12:34:10 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-dccm/ChangeLog,v 1.6 2004/04/25 22:35:00 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> synce-dccm-0.3.1.ebuild,
+  synce-dccm-0.7.ebuild, synce-dccm-0.8.9.ebuild, synce-dccm-0.8.ebuild:
+  Add die following econf for bug 48950
 
 *synce-dccm-0.8.9 (26 Mar 2004)
 
