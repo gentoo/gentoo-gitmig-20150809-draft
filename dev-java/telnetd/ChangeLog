@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/telnetd
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.1 2004/08/16 21:06:37 zx Exp $
+
+*telnetd-1.0 (16 Aug 2004)
+
+  16 Aug 2004; Chris Aniszczyk <zx@gentoo.org> +metadata.xml,
+  +telnetd-1.0.ebuild:
+  Initial Import. Closes #59117
+  Thanks to Dag Viggo Lokøen <dag.viggo@lokoen.org> for the initial ebuild.
+
