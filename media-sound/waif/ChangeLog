@@ -1,0 +1,16 @@
+# ChangeLog for media-sound/waif
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.1 2003/02/08 02:34:12 seemant Exp $
+
+*waif-0.59.3 (07 Feb 2003)
+
+  07 Feb 2003; Seemant Kulleen <seemant@gentoo.org> waif-0.59.3.ebuild
+  ChangeLog files/digest-waif-0.59.3 :
+
+  Why Another Infernal Frontend?!  Well, this is more of an un-frontend
+  written in expect.  Essentially, it acts as a front end to play different
+  kinds of audio files (from wav to mp3 to ogg to realplayer to midi) -- you
+  choose the player (including xmms and freeamp) for each time, execute
+  waif, which backgrounds itself and plays at your command.   It is heavily
+  documented, so take a peek through the docs, and emerge takcd to control
+  your cdplayer with waif as well.  Note that this is a console app.
