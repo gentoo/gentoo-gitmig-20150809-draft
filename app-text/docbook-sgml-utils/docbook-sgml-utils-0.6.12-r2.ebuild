@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12-r2.ebuild,v 1.11 2004/11/08 14:49:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12-r2.ebuild,v 1.12 2004/11/15 06:59:20 usata Exp $
 
 inherit eutils
 
@@ -21,8 +21,8 @@ DEPEND=">=dev-lang/perl-5
 	app-text/docbook-dsssl-stylesheets
 	app-text/openjade
 	dev-perl/SGMLSpm
-	=app-text/docbook-xml-simple-dtd-4.1.2.4
-	=app-text/docbook-xml-simple-dtd-1.0
+	~app-text/docbook-xml-simple-dtd-4.1.2.4
+	~app-text/docbook-xml-simple-dtd-1.0
 	app-text/docbook-xml-dtd
 	~app-text/docbook-sgml-dtd-3.0
 	~app-text/docbook-sgml-dtd-3.1
