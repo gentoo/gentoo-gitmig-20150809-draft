@@ -1,7 +1,12 @@
 # ChangeLog for net-dialup/kpnadsl4linux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/ChangeLog,v 1.8 2004/07/01 22:07:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/ChangeLog,v 1.9 2004/11/07 08:50:26 mrness Exp $
 
+  07 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  kpnadsl4linux-1.10-r1.ebuild:
+  include etc-update in the info message (#46985)
+  add DEPEND to RDEPEND
+  
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   kpnadsl4linux-1.10-r1.ebuild:
   virtual/glibc -> virtual/libc
