@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@bigfoot.com>
 
-P2=gaim-0.11.0pre13
+P2=gaim-0.11.0pre14
 S=${WORKDIR}/${P2}
 DESCRIPTION="Gtk AOL Instant Messenger client"
 SRC_URI="http://prdownloads.sourceforge.net/gaim/${P2}.tar.bz2"
