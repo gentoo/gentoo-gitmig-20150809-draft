@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/xloadimage
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.9 2005/01/02 23:54:38 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.10 2005/02/28 15:46:04 taviso Exp $
+
+*xloadimage-4.1-r2 (28 Feb 2005)
+
+  28 Feb 2005; Tavis Ormandy <taviso@gentoo.org>
+  +files/xloadimage-4.1-zio-shell-meta-char.diff, +xloadimage-4.1-r2.ebuild:
+  security patch, escape shell meta chars when viewing compressed files.
 
   02 Jan 2005; <gongloo@gentoo.org> xloadimage-4.1-r1.ebuild:
   Stable on ppc-macos.
