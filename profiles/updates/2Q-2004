@@ -6,3 +6,4 @@ move media-sound/speechd app-accessibility/speechd
 move media-sound/speech-tools app-accessibility/speech-tools
 move media-sound/flite app-accessibility/flite
 move media-sound/sphinx2 app-accessibility/sphinx2
+move media-sound/SphinxTrain app-accessibility/SphinxTrain
