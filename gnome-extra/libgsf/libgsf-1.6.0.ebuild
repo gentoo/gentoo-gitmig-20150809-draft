@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.6.0.ebuild,v 1.5 2003/02/22 00:12:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.6.0.ebuild,v 1.6 2003/07/15 13:33:33 todd Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ DESCRIPTION="The GNOME Structured File Library"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ~sparc ~ppc alpha"
+KEYWORDS="x86 sparc ~ppc alpha"
 
 RDEPEND=">=dev-libs/libxml2-2.4.16
 	 >=dev-libs/glib-2
