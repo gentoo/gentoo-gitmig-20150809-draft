@@ -1,11 +1,11 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.7 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.8 2002/12/24 09:12:19 seemant Exp $
+
+*id3lib-3.8.0 (23 Aug 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*id3lib-3.8.0 (23 Aug 2002)
-
   26 Aug 2002; Matthew Kennedy <mkennedy@gentoo.org>
   id3lib-3.8.0.ebuild, ChangeLog :
 
