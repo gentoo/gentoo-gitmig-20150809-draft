@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (21 Dec 2002)
+# Testing for UserPriv compile
+>=sys-apps/portage-2.0.47_pre1
+
 # <aliz@gentoo.org> (20 Dec 2002)
 # Masked until lordvan takes a look
 =net-print/cups-1.1.18
