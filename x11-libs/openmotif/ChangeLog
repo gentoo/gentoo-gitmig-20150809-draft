@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.21 2003/11/25 03:57:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.22 2003/11/30 12:17:51 lanius Exp $
+
+  30 Nov 2003; Heinrich Wendel <lanius@gentoo.org> openmotif-2.1.30-r3.ebuild,
+  openmotif-2.2.2-r3.ebuild:
+  clean ebuild for openmotif 2.2
 
   24 Nov 2003; Aron Griffis <agriffis@gentoo.org> openmotif-2.2.2-r2.ebuild:
   Add ~alpha
