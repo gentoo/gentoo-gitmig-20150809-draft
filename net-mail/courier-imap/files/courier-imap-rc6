@@ -1,0 +1,25 @@
+#!/sbin/runscript
+
+depend() {
+    need net
+}
+
+checkconfig() {
+    if [ ! -e /etc/courier-imap/imapd ] ; then
+        eerror "You need an /etc/courier-imap/imapd file to run Courier imap"
+        return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    ebegin "Starting Courier imap"
+    /usr/lib/courier-imap/imapd.rc start
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping Courier imap"
+    /usr/lib/courier-imap/imapd.rc stop
+    eend $?
+}
