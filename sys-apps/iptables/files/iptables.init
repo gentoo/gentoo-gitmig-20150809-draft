@@ -2,7 +2,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or
 # later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/files/iptables.init,v 1.5 2003/01/08 12:39:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/files/iptables.init,v 1.6 2003/01/09 09:46:57 aliz Exp $
+
+opts="start stop save"
 
 depend() {
 	need logger net
@@ -14,7 +16,7 @@ start() {
 	if [ ! -f ${IPTABLES_SAVE} ]
 	then
 		einfo "Not starting iptables. First create some rules then run"
-		einfo "iptables-save > ${IPTABLES_SAVE}"
+		einfo "/etc/init.d/iptables save"
 	else 
 		einfo "Restoring iptables ruleset"
 		/sbin/iptables-restore ${SAVE_RESTORE_OPTIONS} < ${IPTABLES_SAVE}
@@ -69,3 +71,10 @@ stop() {
 		done
 	eend $?
 }
+
+save() {
+        ebegin "Saving iptables state"
+        /sbin/iptables-save ${SAVE_RESTORE_OPTIONS} > ${IPTABLES_SAVE}
+        eend $?
+}
+

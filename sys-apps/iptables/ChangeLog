@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iptables
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.19 2003/01/08 12:39:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.20 2003/01/09 09:46:57 aliz Exp $
+
+  09 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> files/iptables.init :
+  Readded save() function, closes #7752.
 
   08 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> files/iptables.init :
   Forgot to remove save() function from initscript.
