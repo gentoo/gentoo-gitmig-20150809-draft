@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.8.ebuild,v 1.1 2003/06/06 23:53:04 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.8.ebuild,v 1.2 2003/06/09 15:17:31 rphillips Exp $
 
 inherit eutils
 
@@ -62,7 +62,7 @@ src_install () {
 		mv ${D}/usr/share/man/man8/${i}.8 ${D}/usr/share/man/man8/k${i}.8
 		mv ${D}/usr/sbin/${i} ${D}/usr/sbin/k${i}
 	done
-	for i in {rcp,rsh,telnet,v4rcp,ftp,rlogin}
+	for i in {rcp,rsh,telnet,ftp,rlogin}
 	do
 		mv ${D}/usr/share/man/man1/${i}.1 ${D}/usr/share/man/man1/k${i}.1
 		mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
@@ -78,7 +78,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "See /usr/share/doc/${P}/html/admin.html for documentation."
+	einfo "See /usr/share/doc/${PF}/html/admin.html for documentation."
 	echo ""
 	einfo "The client apps are installed with the k prefix"
 	einfo "(ie. kftp, kftpd, ktelnet, ktelnetd, etc...)"
