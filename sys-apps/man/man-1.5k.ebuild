@@ -1,16 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k.ebuild,v 1.4 2002/09/21 03:28:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k.ebuild,v 1.5 2002/09/27 10:21:44 seemant Exp $
 
 NV=1.5k
 S=${WORKDIR}/${PN}-${NV}
 DESCRIPTION="Standard commands to read man pages"
 SRC_URI="http://www.kernel.org/pub/linux/utils/man/man-${NV}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/man/"
+
 DEPEND="virtual/glibc"
 
-RDEPEND="virtual/glibc
-	sys-apps/cronbase
+RDEPEND="sys-apps/cronbase
 	sys-apps/groff"
 
 SLOT="0"
@@ -36,6 +36,11 @@ src_unpack() {
 			-e "CFLAGS = $CFLAGS" \
 			Makefile.in.orig > Makefile.in
 	done
+
+	cd ${S}/gencat
+	cp Makefile Makefile.orig
+	sed -e "s:cc -o:gcc -o:" Makefile.orig > Makefile
+
 }
 
 src_compile() {
