@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.22 2003/03/09 16:46:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.23 2003/03/15 14:48:28 azarah Exp $
+
+*autoconf-2.54-r1 (15 Mar 2003)
+*autoconf-2.57-r1 (15 Mar 2003)
+
+  15 Mar 2003; Martin Schlemmer <azarah@gentoo.org> :
+  Update m4 DEPEND to work with m4-1.4 we are now using.
 
   09 Mar 2003; Martin Schlemmer <azarah@gentoo.org> files/ac-wrapper.pl :
   Some new stuff have AC_PREREQ in [].
