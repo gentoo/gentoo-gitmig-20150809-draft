@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.8.2.ebuild,v 1.2 2003/08/03 23:28:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.8.2.ebuild,v 1.3 2003/08/04 01:24:02 stuart Exp $
 
 MY_P="phpMp-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -16,10 +16,13 @@ IUSE=""
 DEPEND=">=net-www/apache-1.3.27-r1 >=mod_php-4.2.3-r2"
 
 inherit webapp-apache
-webapp-determine-installowner
-webapp-determine-htdocsdir
+webapp-detect || NO_WEBSERVER=1
 
 PHPMP_DIR="${HTTPD_ROOT}/phpMp"
+
+pkg_setup() {
+	webapp-pkg_setup "${NO_WEBSERVER}"
+}
 
 src_compile() {            
 	#we need to have this empty function ... default compile hangs
