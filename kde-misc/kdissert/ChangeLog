@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kdissert
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.1 2004/11/25 17:27:10 carlo Exp $
+
+*kdissert-0.3.0 (25 Nov 2004)
+
+  25 Nov 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +kdissert-0.3.0.ebuild:
+  Initial ebuild, #27773.
+
