@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/leif
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/leif/ChangeLog,v 1.5 2004/09/13 20:07:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/leif/ChangeLog,v 1.6 2004/10/17 09:51:14 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> leif-12.0.1_pre1891.ebuild:
+  Added to ~ppc.
 
 *leif-12.0.1_pre1891 (14 Sep 2004)
 *leif-11.4_p1467 (14 Sep 2003)

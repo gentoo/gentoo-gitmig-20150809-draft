@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/leif/leif-12.0.1_pre1891.ebuild,v 1.1 2004/09/13 20:07:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/leif/leif-12.0.1_pre1891.ebuild,v 1.2 2004/10/17 09:51:14 dholm Exp $
 
 inherit iiimf eutils
 
 DESCRIPTION="Language Engine is a component that provide actual Input Method service for IIIMF"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 RDEPEND="dev-libs/eimil"
