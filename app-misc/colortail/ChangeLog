@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/colortail
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
+
+*colortail-0.3.0 (12 Feb 2002)
+
+  12 Feb 2002; mike polniak <mikpolniak@adelphia.net> colortail-0.3.0.ebuild :
+  
+  Colortail lets you custom color your log files and works like tail.
+
