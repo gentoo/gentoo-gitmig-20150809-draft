@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.42.ebuild,v 1.3 2004/07/09 19:03:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.42.ebuild,v 1.4 2004/07/27 00:59:02 vapier Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="small SSH 2 server designed for small memory environments"
 HOMEPAGE="http://matt.ucc.asn.au/dropbear/"
@@ -12,6 +14,12 @@ KEYWORDS="x86 ppc mips arm"
 IUSE="zlib multicall static"
 
 DEPEND="zlib? ( sys-libs/zlib )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	gnuconfig_update
+}
 
 src_compile() {
 	econf `use_enable zlib` || die
