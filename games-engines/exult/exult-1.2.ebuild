@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.2 2004/12/22 03:09:39 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.3 2005/02/17 17:47:07 mr_bones_ Exp $
 
 inherit games
 
@@ -15,13 +15,15 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE="timidity zlib mmx 3dnow"
 
-DEPEND=">=media-libs/libsdl-1.2*
+RDEPEND=">=media-libs/libsdl-1.2*
 	>=media-libs/sdl-mixer-1.2.4
 	media-libs/smpeg
 	media-libs/libogg
 	media-libs/libvorbis
 	timidity? ( >=media-sound/timidity++-2* )
 	zlib? ( sys-libs/zlib )"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 # upstream says... "the opengl renderer is very very experimental and
 # not recommended for actual use"
