@@ -15,6 +15,14 @@ function eecho() {
 	fi
 }
 
+function eechon() {
+	echo -n "${*}"
+	if [ -n "$BOOTING" ]
+	then
+		echo -n "${*}" >&2
+	fi
+}
+
 function ebegin() {
     eecho "${*}..."
     }
@@ -101,6 +109,6 @@ function einfo() {
     }
 
 function einfon() {
-    eecho -n "$ENOCH_HILITE$1$ENOCH_NORMAL"
+    eechon "$ENOCH_HILITE$1$ENOCH_NORMAL"
     }
 

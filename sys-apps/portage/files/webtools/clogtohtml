@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+"""Parse ChangeLog, no validation."""
+
+import string
+import portage
+import sys
+import os
+
+portdir=portage.getsetting("PORTDIR")
+if not os.path.exists(portdir+"/ChangeLog"):
+	print "!!! Error: Can't find ChangeLog.  Exiting."
+	print
+	sys.exit(1)
+entry=0
+a=open(portdir+"/ChangeLog")
+mylines=a.readlines()
+pos=0
+print '<p class="itemdesc">'
+while (pos<len(mylines)) and (entry<10):
+	curline=mylines[pos][:-1]
+	if len(curline)==0:
+		pos=pos+1
+		continue
+	splitline=string.split(curline)
+	if splitline[0]=="date":
+		print '<table width="100%" border=0 cellspacing=0 cellpadding=0><tr><td align="center" class="infobox"><b>'+string.join(splitline[1:]," ")+"</b></td></tr></table>"
+		pos=pos+1
+		continue
+	elif splitline[0]=="new":
+		pkgsplit=string.split(splitline[1],"/")
+		print "<b>New package",pkgsplit[1]+"</b><br>"
+	elif splitline[0]=="upd":
+		pkgsplit=string.split(splitline[1],"/")
+		print "<b>Updated package",pkgsplit[1],"to",splitline[3]+"</b><br>"
+	elif splitline[0]=="rel":
+		print "<h2>New Release! Gentoo Linux",splitline[1]+"</h2><br>"
+		desc=""
+	elif splitline[0]=="del":
+		print "<b>Removed package",splitline[1]+"</b><br>"
+		desc=""
+	pos=pos+2
+	desc=""
+	while mylines[pos][:-1]!="":
+		desc=desc+string.strip(mylines[pos][:-1])
+		pos=pos+1
+	if desc:
+		print '<p class="itemdesc">'+desc+'</p>'
+	print "<br>"
+	pos=pos+1
+	entry=entry+1
+print '</p>'
