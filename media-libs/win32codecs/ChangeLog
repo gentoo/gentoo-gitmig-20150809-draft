@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.13 2004/08/14 03:22:00 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.14 2004/10/23 15:20:28 chriswhite Exp $
+
+*win32codecs-20040916 (23 Oct 2004)
+
+  23 Oct 2004; Chris White <chriswhite@gentoo.org>
+  +win32codecs-20040916.ebuild:
+  bumped to 20040916 which uses 1 tarball instead of 3. real and xanim USE flags
+  added onto the existing quicktime USE flag.
 
 *win32codecs-20040703 (14 Aug 2004)
 
