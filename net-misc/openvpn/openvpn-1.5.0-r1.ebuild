@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.5.0-r1.ebuild,v 1.10 2005/01/22 22:59:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.5.0-r1.ebuild,v 1.11 2005/02/05 16:59:59 solar Exp $
 
 inherit gnuconfig
 
@@ -13,9 +13,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc ~alpha"
 
-DEPEND=">=dev-libs/lzo-1.07
-	virtual/os-headers
+RDEPEND=">=dev-libs/lzo-1.07
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
+DEPEND="${RDEPEND} virtual/os-headers"
 
 src_unpack() {
 	unpack ${A}

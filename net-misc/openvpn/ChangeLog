@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.23 2005/01/22 22:59:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.24 2005/02/05 16:59:59 solar Exp $
+
+  05 Feb 2005; <solar@gentoo.org> openvpn-1.5.0-r1.ebuild,
+  openvpn-1.6.0.ebuild:
+  - q/a fix. os-headers are not needed in RDEPEND
 
   23 Jan 2005; Daniel Black <dragonheart@gentoo.org> openvpn-1.5.0-r1.ebuild,
   openvpn-1.6.0.ebuild:

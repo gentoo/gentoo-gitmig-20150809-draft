@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.3.2.ebuild,v 1.7 2004/08/25 02:52:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.3.2.ebuild,v 1.8 2005/02/05 16:59:59 solar Exp $
 
 IUSE="ssl"
 
