@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.121 2003/09/20 04:27:01 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.122 2003/09/24 21:51:34 liquidx Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -15,20 +15,11 @@ app-editors/xemacs:lucid - Chooses the lucid widget set (default, deprecated)
 app-editors/xemacs:neXt - Chooses the neXt L&F widget set
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
-games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
-games-fps/duke3d:nophysfs - Disables support for physfs
-games-fps/quake2-relnev:noqmax - Do not build the pretty version (quake max)
-games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
-games-misc/fortune-mod:offensive - Allow fortune to offend you
-games-rpg/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
-games-server/halflife-metamod:src - use the source, not the binary install
-games-server/halflife-statsme:nocstrike - no counterstrike
-games-server/halflife-statsme:nodod - no day of defeat
-games-server/halflife-statsme:notfc - no team fortress classic
-games-strategy/freecraft-fcmp:music - Also installs the music that the project provides
 app-misc/grass:nviz - support GLw functionality
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
+app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)
+app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
 app-sci/gmt:gmtfull - Full resolution bathimetry database;
 app-sci/gmt:gmthigh - Adds high resolution bathimetry database
 app-sci/gmt:gmtsuppl - Supplement functions for GMT;
@@ -53,6 +44,17 @@ dev-php/php:gd-external - Use the external version of libgd rather than the bund
 dev-python/anygui:wxwin - enable wxwin support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
+games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
+games-fps/duke3d:nophysfs - Disables support for physfs
+games-fps/quake2-relnev:noqmax - Do not build the pretty version (quake max)
+games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
+games-misc/fortune-mod:offensive - Allow fortune to offend you
+games-rpg/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
+games-server/halflife-metamod:src - use the source, not the binary install
+games-server/halflife-statsme:nocstrike - no counterstrike
+games-server/halflife-statsme:nodod - no day of defeat
+games-server/halflife-statsme:notfc - no team fortress classic
+games-strategy/freecraft-fcmp:music - Also installs the music that the project provides
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 gnome-extra/libgda:sqlite - Enable sqlite support for GnomeDB.
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
@@ -83,6 +85,8 @@ media-video/vlc:xvid - Enables xvid codec support
 net-analyzer/slurm:altcolors - Use alternative color set
 net-analyzer/nstat:pcap - enable pcap support
 net-dialup/ppp:activefilter - enable activefilter support
+net-dialup/gnokii:bluetooth - Enable Bluetooth Support
+net-dialup/gnokii:irda - Enable Infrared Support
 net-fs/ftpfs:autofs - Adds support for autofs mounting
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
@@ -164,5 +168,4 @@ x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
-app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)
-app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
+
