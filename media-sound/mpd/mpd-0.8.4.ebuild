@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.8.4.ebuild,v 1.1 2003/08/14 04:28:36 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.8.4.ebuild,v 1.2 2003/08/14 04:30:00 g2boojum Exp $
 
 IUSE="oggvorbis mad"
 
 DESCRIPTION="Music Player Daemon (mpd)"
 SRC_URI="http://mercury.chem.pitt.edu/~shank/${P}.tar.gz"
-HOMEPAGE="http://musicpd.sourceforge.net/"
+HOMEPAGE="http://www.musicpd.org"
 
 KEYWORDS="~x86"
 SLOT="0"
