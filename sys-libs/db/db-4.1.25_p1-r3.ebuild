@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.5 2003/12/17 04:19:25 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.6 2003/12/20 10:57:14 pauldv Exp $
 
 IUSE="tcltk java doc"
 
-inherit eutils
+inherit eutils gnuconfig
 inherit db
 
 #Number of official patches
@@ -50,6 +50,18 @@ src_unpack() {
 
 src_compile() {
 	addwrite /proc/self/maps
+
+	# Mips needs a gnuconfig update so obscure things like mips64 are known
+	# db-4.1.25_p1 extracts to ${WORKDIR}/db-4.1.25, so we need to strip the _p1
+	if use mips; then
+		einfo "Updating config.{guess,sub} for mips"
+		local OLDS="${S}"
+		S="${S}/dist"
+		gnuconfig_update
+		S="${OLDS}"
+	fi
+
+
 	local myconf="--enable-rpc"
 
 	use java \
