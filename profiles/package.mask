@@ -790,6 +790,7 @@ net-www/opera
 >=media-sound/alsa-driver-0.9.0_rc3
 >=media-libs/alsa-lib-0.9.0_rc3
 >=media-sound/alsa-utils-0.9.0_rc3
+>=media-sound/alsa-tools-0.9.0_rc4
 
 
 # 18 Feb 2002, azarah.
