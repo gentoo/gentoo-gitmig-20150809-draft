@@ -1,16 +1,23 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.27 2003/01/19 19:24:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.28 2003/02/05 21:20:30 phoenix Exp $
 
 *wine-20030115 (19 Jan 2003)
+
+  05 Feb 2003; phoen][x <phoenix@gentoo.org> wine-20030115.ebuild:
+  Modified X dependencies. You can build wine without X now (for commandline
+  applications) - this closes bug #14651.
 
   19 Jan 2003; Luca Barbato <lu_zero@gentoo.org> : wine-20030115.ebuild
   Version bump.
 
+*wine-20021125 (28 Nov 2002)
+
+  05 Feb 2003; phoen][x <phoenix@gentoo.org> wine-20021125.ebuild:
+  Modified X dependencies. You can build wine without X now (for commandline
+  applications) - this closes bug #14651. Put this version into the stable profile.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*wine-20021125 (28 Nov 2002)
 
   28 Nov 2002; phoen][x <phoenix@gentoo.org> wine-20021125.ebuild, ChangeLog,
   files/wine-20021125-fake_windows.tar.bz2, files/wine-20021125-misc.tar.bz2 :
