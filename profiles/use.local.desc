@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1025 2005/03/21 01:55:16 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1026 2005/03/21 19:36:09 rizzo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -547,6 +547,7 @@ net-im/ekg2:nogg - Disable Gadu-Gadu plugin
 net-im/gaim:eds - Enable Evolution Data Server (EDS) support
 net-im/gaim:gnutls - Use GnuTLS for SSL support
 net-im/gaim:silc - Enable SILC protocol support
+net-im/gaim:xscreensaver - Enables xscreensaver support for status
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/kadu:amarok - Enables amarok support in kadu
 net-im/kadu:extraicons - Enables extra icon sets
