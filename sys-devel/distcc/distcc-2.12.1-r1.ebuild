@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1-r1.ebuild,v 1.1 2004/03/06 19:51:58 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1-r1.ebuild,v 1.2 2004/04/18 04:20:19 vapier Exp $
 
 inherit eutils gcc flag-o-matic
-[ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 PATCHLEVEL="2.11.1p"
 
@@ -50,9 +49,9 @@ src_compile() {
 	use gtk && ! use gnome && ! use mips && myconf="${myconf} --with-gtk"
 	use gtk && use gnome && ! use mips && myconf="${myconf} --with-gnome"
 	use mips && use gtk || use gnome && ewarn "X support for Mips has been disabled."
-
 	#Above, mips is excluded due to version issues. 2004-02-20
 
+	[ `gcc-major-version` -eq 2 ] && filter-lfs-flags
 
 	if use ipv6; then
 		ewarn "To use IPV6 you must have IPV6 compiled into your kernel"
