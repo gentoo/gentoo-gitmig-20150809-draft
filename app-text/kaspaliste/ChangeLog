@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kaspaliste
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/ChangeLog,v 1.3 2004/05/16 20:25:41 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/ChangeLog,v 1.4 2004/06/04 15:40:30 carlo Exp $
+
+  04 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kaspaliste-0.94.ebuild,
+  metadata.xml:
+  wrong herd name: kde -> kde-other,
+  deprecated eclass: kde-base -> kde
 
   16 May 2004; Dominik Stadler <centic@gentoo.org> kaspaliste-0.94.ebuild:
   Add IUSE
