@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3194 2004/09/28 05:36:43 usata Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3195 2004/09/28 15:06:08 axxo Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -548,8 +548,10 @@ net-misc/zebra
 # <strider@gentoo.org> (10 Jan 2004)
 # Masking since its a beta release.
 # <axxo@gentoo.org>
-# If you use 1.5 you will get sandbox violation on /dev/random
+# If you use 1.5 you will get sandbox violations on /dev/random
 # please don't file any more bugs on that issue 
+# Also you'll have to remerge everything you merge with 1.5 if
+# you want to downgrade to 1.4
 >=dev-java/sun-jdk-1.4.99
 >=dev-java/java-sdk-docs-1.4.99
 
