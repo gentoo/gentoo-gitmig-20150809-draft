@@ -496,7 +496,7 @@ their files. In the interests of simplicity and consistency, we elect to install
 KDE and GNOME packages into the <path>/usr</path> hierarchy.</impo>
 
 <p>In general, you should have ebuilds install their files into the <path>/usr</path>
-tree.  <e>Some</e> programs can be compiled with or without GNOME, KDE and X11 libraries,
+tree.  <e>Some</e> programs can be compiled and linked with or without GNOME, KDE and X11 libraries,
 which can cause confusion.  Our solution is to install everything into <path>/usr</path>
 which avoids ambiguity and needless complexity for ebuild authors.  The location in which to
 install a program's files should <e>not</e> depend on the presence or abscence of specific
