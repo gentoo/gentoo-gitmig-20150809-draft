@@ -1,12 +1,14 @@
-MD5 ca87274b1c49fdcabdeef6f607292d47 ChangeLog 5913
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 645cfca1cf7691a073dc63846ace39a7 ChangeLog 6196
 MD5 f455fbb5d96167058282b93599457a4f metadata.xml 470
-MD5 72aff3378f6951459ec959a25c0010db selinux-sources-2.4.26.ebuild 679
-MD5 17016435906e398e97736dea9a4c44de selinux-sources-2.4.25-r2.ebuild 801
-MD5 34d6f48ac6be8e100b26a50097b6d9f6 selinux-sources-2.4.24-r2.ebuild 1005
-MD5 21f3a4f186017d925067335e24db36a1 files/selinux-sources-2.4.25.CAN-2004-0109.patch 1877
-MD5 69447df9da3cc0678dc94d99e514d93d files/digest-selinux-sources-2.4.24-r2 145
-MD5 174438d215b70cad5ffb00ca8123c062 files/selinux-sources-2.4.24.munmap.patch 837
-MD5 ac42024b6e6ee1e2165914db4b22a61c files/selinux-sources-2.4.25.CAN-2004-0178.patch 424
-MD5 eaeda68a619caaddd5b8fdc5e7c39932 files/selinux-sources-2.4.25.CAN-2004-0177.patch 384
-MD5 5b59de8931749376328efcb2798be298 files/digest-selinux-sources-2.4.25-r2 145
-MD5 fd644cd3317016d4bb3c1121340c08b1 files/digest-selinux-sources-2.4.26 145
+MD5 7ff252c9b7a0ba39619ba2114438d7c8 selinux-sources-2.4.26-r1.ebuild 680
+MD5 8e29d8447b2dad414d874b9f126e468e files/digest-selinux-sources-2.4.26-r1 145
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFAz2K6GFJQsIJWJy4RApHRAJ9NVqeWO+8YCtPa6Nw8ul74TfxCEQCfcI4v
+1KCkAcKh1T4gaB0ksodYod8=
+=M83c
+-----END PGP SIGNATURE-----
