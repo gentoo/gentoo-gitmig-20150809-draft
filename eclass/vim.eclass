@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.38 2003/09/10 13:58:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.39 2003/09/27 22:30:55 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -48,13 +48,20 @@ HOMEPAGE="http://www.vim.org/"
 SLOT="0"
 LICENSE="vim"
 
-# portage dependency is for use_with/use_enable
-DEPEND="$DEPEND >=sys-apps/portage-2.0.45-r3
+# Portage dependancy is for use_with/use_enable.
+# ctags dependancy allows help tags to be rebuilt properly, along
+# with detection of exuberant-ctags by configure.
+DEPEND="$DEPEND 
+	>=sys-apps/portage-2.0.45-r3
 	>=sys-apps/sed-4
 	sys-devel/autoconf
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )
+	dev-util/ctags
 	"
-RDEPEND="$RDEPEND ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )"
+RDEPEND="$RDEPEND 
+	ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )
+	dev-util/ctags
+	"
 
 apply_vim_patches() {
 	local p
@@ -129,8 +136,18 @@ vim_src_unpack() {
 	sed -i 's/defout/stdout/g' ${S}/src/if_ruby.c
 
 	# Read vimrc and gvimrc from /etc/vim
-	echo '#define SYS_VIMRC_FILE "/etc/vim/vimrc"' >> src/feature.h
-	echo '#define SYS_GVIMRC_FILE "/etc/vim/gvimrc"' >> src/feature.h
+	echo '#define SYS_VIMRC_FILE "/etc/vim/vimrc"' >> ${S}/src/feature.h
+	echo '#define SYS_GVIMRC_FILE "/etc/vim/gvimrc"' >> ${S}/src/feature.h
+
+	# Use exuberant ctags which installs as /usr/bin/exuberant-ctags.
+	# Hopefully this pattern won't break for a while at least.
+	# This fixes bug 29398 (27 Sep 2003 agriffis)
+	sed -i 's/\<ctags\("\| [-*.]\)/exuberant-&/g' \
+		${S}/runtime/doc/syntax.txt \
+		${S}/runtime/doc/tagsrch.txt \
+		${S}/runtime/doc/usr_29.txt \
+		${S}/runtime/menu.vim \
+		${S}/src/configure.in
 }
 
 src_compile() {
