@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r2.ebuild,v 1.2 2005/03/10 13:48:08 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r2.ebuild,v 1.3 2005/03/13 13:58:09 xmerlin Exp $
 
-inherit gnuconfig eutils
+inherit gnuconfig eutils flag-o-matic
 
 DESCRIPTION="Console-based application to efficiently save raw partition data to an image file. Optional encryption/compression support."
 HOMEPAGE="http://www.partimage.org/"
@@ -49,6 +49,8 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -fno-exceptions
+
 	local myconf
 	use nologin && myconf="${myconf} --disable-login"
 

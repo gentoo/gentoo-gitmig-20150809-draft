@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/partimage
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.3 2005/03/10 13:48:08 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.4 2005/03/13 13:58:09 xmerlin Exp $
+
+  13 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  partimage-0.6.4-r2.ebuild:
+  fixed bug #84445, thanks to Joseph Cheek <joseph@lycoris.com>
 
   10 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org>
   partimage-0.6.4-r2.ebuild:
