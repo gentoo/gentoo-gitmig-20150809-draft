@@ -32,14 +32,13 @@
 *>=sys-apps/baselayout-1.8.6
 *>=sys-apps/portage-2.0.48
 *>=sys-devel/binutils-2.14.90.0.8
-*>=sys-devel/gcc-3.4.0-r6
+*>=sys-devel/gcc-3.4.1-r2
 *>=sys-libs/glibc-2.3.4.20040602
-*>=sys-kernel/mips-headers-2.4.21
+*>=sys-kernel/mips-headers-2.6.6
 *>=sys-devel/gnuconfig-20030708
 
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
-*app-shells/sash
 *dev-lang/perl
 *virtual/editor
 *net-misc/dhcpcd

@@ -1,4 +1,5 @@
 sys-apps/baselayout
+sys-kernel/mips-headers
 sys-libs/glibc
 sys-apps/texinfo
 app-shells/bash
