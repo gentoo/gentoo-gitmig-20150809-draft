@@ -17,7 +17,7 @@ checkconfig() {
 start() {
         checkconfig
 	ebegin "Starting GIMPS"
-	nice -n 19 /opt/gimps/mprime -b${GIMPS_CPUS} -w${GIMPS_DIR} ${GIMPS_OPTIONS}
+	/opt/gimps/mprime -b${GIMPS_CPUS} -w${GIMPS_DIR} ${GIMPS_OPTIONS}
         eend $?
 }
 
