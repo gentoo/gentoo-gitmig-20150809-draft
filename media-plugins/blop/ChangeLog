@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/blop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/blop/ChangeLog,v 1.2 2003/02/12 07:18:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/blop/ChangeLog,v 1.3 2003/06/12 20:46:38 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> blop-0.2.5.ebuild:
+  fix Header
 
 *blop-0.2.5 (26 Jan 2003)
 
