@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/at
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.10 2003/11/06 10:00:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.11 2003/11/19 19:55:03 caleb Exp $
+
+  19 Nov 2003; Caleb Tennis <caleb@gentoo.org> at-3.1.8-r3.ebuild, at-3.1.8-r6.ebuild,
+  at-3.1.8-r7.ebuild:
+  Removed old versions. They were masked in package.mask anyway and haven't been
+  updated in a very long time.
 
   06 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> at-3.1.8-r3.ebuild,
   at-3.1.8-r6.ebuild, at-3.1.8-r7.ebuild, at-3.1.8-r8.ebuild:
