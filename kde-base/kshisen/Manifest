@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6aa00f2cf39544406591eeb7dbf26fe7 kshisen-3.4.0_rc1.ebuild 534
-MD5 87ae5d15d2e5f3ea5a08fe722080f476 kshisen-3.4.0.ebuild 533
-MD5 c7066335b347873a8d9448f4fa19993a ChangeLog 1137
+MD5 eb6f4dcedc5e1a5738ec61dc1d1ca2f8 kshisen-3.4.0.ebuild 536
+MD5 0ef7283231a3581352e3c2ad87df257a ChangeLog 1223
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-kshisen-3.4.0 68
 MD5 8b19b23f6a048c71e6c5d2550695c013 files/digest-kshisen-3.4.0_rc1 378
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOwSZUpKYMelfdYERAsVdAKCNMLD7i1PS6M4prR0S7UzlN2G3PwCfaLFN
+GMBNAzMYZf36nkotH35s39Y=
+=JiZJ
+-----END PGP SIGNATURE-----

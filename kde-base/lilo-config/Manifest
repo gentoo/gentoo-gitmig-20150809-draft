@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 57f6cd5229fcf0018ae4fe143391723d lilo-config-3.4.0_rc1.ebuild 423
-MD5 ae738199192218b305ae374b1820b5b8 ChangeLog 1023
-MD5 497c6616414ba569cc46e77bd2143de1 lilo-config-3.4.0.ebuild 426
+MD5 8d92f8f9d8d434e7bbb7754b0b04eb26 ChangeLog 1113
+MD5 a35ff281ef4536e5707eb2c270f2a5c1 lilo-config-3.4.0.ebuild 429
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 d593b6b8d568cef10aecca256d8dd6be files/never-disable.diff 281
 MD5 361b4361884418de6b9a13b860ed6a67 files/digest-lilo-config-3.4.0_rc1 376
 MD5 dff739018360a0997224c39ad20e83fb files/digest-lilo-config-3.4.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOwRdUpKYMelfdYERAjB3AJ0TYsChyjfGt9omfcplR9QdzxfUkgCfZrqq
+lTeKwGzOKAamv/dVmxUB6LI=
+=2YCy
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2c1ff380a6a22b2983300d7dc907c758 kpager-3.4.0_rc1.ebuild 380
-MD5 644a85b0c1de3c243c035f913c47206c kpager-3.4.0.ebuild 379
-MD5 07d98fbda9a1b16ef4fd79746099ccb2 ChangeLog 1128
+MD5 4cb35d5195cc667c410a5dc8b85134a4 kpager-3.4.0.ebuild 382
+MD5 4fe7ce83f17dc38a19897bacee852fd2 ChangeLog 1213
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-kpager-3.4.0_rc1 378
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kpager-3.4.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOwy5UpKYMelfdYERAtQ9AJ48vjOkp2frjo0wNBD/0W1nU5JNDQCeOe2c
+qeatYkGk6xjnklTrPFACnao=
+=/wTp
+-----END PGP SIGNATURE-----

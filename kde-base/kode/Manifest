@@ -1,4 +1,14 @@
-MD5 298d56f5c54fdf78959d5be9387ec666 kode-3.4.0.ebuild 363
-MD5 30a3fed56e7f1d50fc9b2fadcc2a295a ChangeLog 1007
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 652cccb534ba6d4b9620b3c55d12619a kode-3.4.0.ebuild 366
+MD5 cc7b7aa3c42c80053e152ee72e4ae9f9 ChangeLog 1090
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kode-3.4.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOvtHUpKYMelfdYERAigoAJwMRTLRyImdsKfwJl7Yu3prMPtjMACfdMd4
+ba6ByuI4bW6T8llDuExYI0E=
+=jKN8
+-----END PGP SIGNATURE-----

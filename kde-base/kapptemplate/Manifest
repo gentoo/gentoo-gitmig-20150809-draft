@@ -1,4 +1,14 @@
-MD5 1eb3b9a26cbac84296767b5cf5991b97 kapptemplate-3.4.0.ebuild 467
-MD5 43f6c47dbe73a34cabb136f53cbf8069 ChangeLog 1075
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4bda0960650ded18f663e0c2f535da17 kapptemplate-3.4.0.ebuild 470
+MD5 303c7e5753324aedb2abe83b5d6d9bc0 ChangeLog 1166
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-kapptemplate-3.4.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOwlPUpKYMelfdYERArirAJ0R0f32HuqIlYhx/Umhdor83x+DywCdHcOI
+R08FizkUtFSGcBz1DLtx7Es=
+=E8Ee
+-----END PGP SIGNATURE-----

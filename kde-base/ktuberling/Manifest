@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 31300176aa0c25152baea81f2fc8074b ktuberling-3.4.0_rc1.ebuild 534
-MD5 01cbe1ee9090bce445a7749b8212c4f2 ktuberling-3.4.0.ebuild 533
-MD5 db6cdca4ba28c42cdd7a167c870baba6 ChangeLog 1168
+MD5 6df2fc910d80f1bde45a881f74bb3dd2 ktuberling-3.4.0.ebuild 536
+MD5 cd4af714de4c46157e3db942cc82b40b ChangeLog 1257
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-ktuberling-3.4.0 68
 MD5 8b19b23f6a048c71e6c5d2550695c013 files/digest-ktuberling-3.4.0_rc1 378
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOvosUpKYMelfdYERAiheAJ4wWZLDd5H6eNPNW66gcfL+L7VtQQCghi40
+rZ9VCoMX99RQiOWibIlaKBE=
+=K3+R
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
-MD5 46e147ecf6862d145028623db0da618a kdesdk-scripts-3.4.0.ebuild 454
-MD5 bcdfc76381ddbf3a82141bbf347ab9a1 ChangeLog 1238
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e966eba388e5f657bb7857e6e6972a30 kdesdk-scripts-3.4.0.ebuild 457
+MD5 69a38266da6288ca7a98461080ec5eec ChangeLog 1333
 MD5 b7c43210df516b490d240b8a7ba2c2c8 kdesdk-scripts-3.4.0_rc1.ebuild 455
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-kdesdk-scripts-3.4.0 66
 MD5 5278998b3d2ca1313a1cd967b9c51b58 files/digest-kdesdk-scripts-3.4.0_rc1 368
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOwebUpKYMelfdYERArPDAJ9Gx4UL147rZIC1a/lLE4tLEK87hgCbBB6a
+kONBriqaiI6fEFNN97Hw/rM=
+=TCDT
+-----END PGP SIGNATURE-----

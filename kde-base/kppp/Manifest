@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ecc5da27e8e2609031199967ed3b30c6 kppp-3.4.0_rc1.ebuild 383
-MD5 8558dabc206e2a85a486cd9b7658f18d kppp-3.4.0.ebuild 382
-MD5 50d52863bfee55ebad0796b9c68b7868 ChangeLog 1110
+MD5 25272f457bfd5b865879a127fac3b105 kppp-3.4.0.ebuild 385
+MD5 b71a0127b8f14d88684b12df2a4c6d6f ChangeLog 1193
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ee82ae945549a695ca5353dd33e3ce47 files/digest-kppp-3.4.0_rc1 389
 MD5 622d3497792334fa87e483e249da693d files/digest-kppp-3.4.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOvu4UpKYMelfdYERAuHfAJ4103xvyqElqy/Q94vo5V8XBKKEQgCfaNX+
+l8aw8Xm4r800j2v2Gu51c7A=
+=uKSx
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3c82daefad1f11ed4b034d550d1bf38d ktimer-3.4.0_rc1.ebuild 359
-MD5 2a2d445bcc4681f7375d5449b4c3ced5 ktimer-3.4.0.ebuild 358
-MD5 dba9ef55990e186a2c6f9c9b72962f12 ChangeLog 1128
+MD5 bed97c14d09baee568bb326160f2deed ktimer-3.4.0.ebuild 361
+MD5 a19f5632a209f34e859afc48b7f563a3 ChangeLog 1213
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 2e986761e662b965b58e8ca3bbe8579b files/digest-ktimer-3.4.0_rc1 378
 MD5 dbade662a75a6b44c890deef5400485f files/digest-ktimer-3.4.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOw2nUpKYMelfdYERAnIBAJ48FS41BWLuZTT4CfgDh97FzF0PkQCeLo7l
+EG7g4TZ4Xx0ZN5ogP6WJLuI=
+=N/oP
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
-MD5 ba463beb6e93a8073c54db4fd7fb0bd5 kmahjongg-3.4.0.ebuild 522
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4825ea81421b8b409788be79339ea32d kmahjongg-3.4.0.ebuild 525
 MD5 943ea0eeca543895eb4de55b4bcca7e2 kmahjongg-3.4.0_rc1.ebuild 523
-MD5 6a3a4ebc483af95a8fb70980c3e4263d ChangeLog 1159
+MD5 7a9ce899416928706b09f790a2f317ff ChangeLog 1247
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-kmahjongg-3.4.0 68
 MD5 8b19b23f6a048c71e6c5d2550695c013 files/digest-kmahjongg-3.4.0_rc1 378
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOw+hUpKYMelfdYERAsQ8AJ9VjM/HyX35L6KDHvcu/n9/viTgNgCfRMW0
+dpB6rHVFpkMZrQ/GO5Wox6c=
+=fNtJ
+-----END PGP SIGNATURE-----

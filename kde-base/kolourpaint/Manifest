@@ -1,6 +1,16 @@
-MD5 613ab602c8cb35979652ac7884735c74 kolourpaint-3.4.0.ebuild 384
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c33b0d39038868a0260c474955fa35fe kolourpaint-3.4.0.ebuild 387
 MD5 0782ca0fa561d37128f6783098b43fdf kolourpaint-3.4.0_rc1.ebuild 385
-MD5 db74239da689942bb13b7c38a93cd8a5 ChangeLog 1177
+MD5 4a6648075fce91b8d6648dc0ca1d91d6 ChangeLog 1267
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 4ac1ee7d57d8c40f18fe0d54cf80c8f5 files/digest-kolourpaint-3.4.0_rc1 393
 MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kolourpaint-3.4.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOw9oUpKYMelfdYERAoIgAJ0R3Ed6vPDwUQmr/ChCKvzSwYF08gCeMyqM
+EfH2FteuCoTZhiJsAtdUX+M=
+=Ta3J
+-----END PGP SIGNATURE-----

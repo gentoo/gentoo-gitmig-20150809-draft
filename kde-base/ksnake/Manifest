@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2de29df10ad6f40a220d8c7b77802cdb ksnake-3.4.0_rc1.ebuild 520
-MD5 308df2fb118991939ba090a2bf087693 ChangeLog 1128
+MD5 e1c26cb6fe2d42b5c6f2fd2e0f4a1c55 ChangeLog 1213
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 e918801a1643b33c4ebe1564a3922862 ksnake-3.4.0.ebuild 519
+MD5 d74195412fa271b2a95da36e1e7b8f95 ksnake-3.4.0.ebuild 522
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-ksnake-3.4.0 68
 MD5 8b19b23f6a048c71e6c5d2550695c013 files/digest-ksnake-3.4.0_rc1 378
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOw1ZUpKYMelfdYERAjFRAJwJrXFrckVMx8036/3HhmZ5nqDiNwCfbtFb
+BxTa9Tg7yrh+Yb7Oqoaq0Iw=
+=QQ1G
+-----END PGP SIGNATURE-----

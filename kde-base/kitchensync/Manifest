@@ -1,6 +1,16 @@
-MD5 8edb5c1d54e6400a794e59a8abeb4260 kitchensync-3.4.0.ebuild 886
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 28bcc1b664e07234300d4cd2bc3824f8 kitchensync-3.4.0.ebuild 889
 MD5 20b9c500a0aea7b234db2a36e60b0ded kitchensync-3.4.0_rc1.ebuild 887
-MD5 24e111ab46ab2674b62ed6c632964647 ChangeLog 1412
+MD5 db3cd6af4788b787280dfaca71281ed7 ChangeLog 1502
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kitchensync-3.4.0 67
 MD5 35ccfa3433a499de2fd98af78d32b7db files/digest-kitchensync-3.4.0_rc1 373
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOw5LUpKYMelfdYERAiPrAJ90ZBv6WLhYDNj7WY/PXE+bd7yWiACfax3a
+P+gM+hDCGvPECbI2a80B/L8=
+=Wr9W
+-----END PGP SIGNATURE-----

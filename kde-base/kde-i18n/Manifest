@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dab85fdb3edb009f8a8fcdb11d80b565 kde-i18n-3.3.2.ebuild 1679
-MD5 848a0f29dac30b0efcf7f4ced6cc8e20 kde-i18n-3.4.0.ebuild 1374
+MD5 9b492514636eb0aaa8fe69f4d32c0fd9 kde-i18n-3.4.0.ebuild 1379
 MD5 4b8c5e274bff05a581412195d98cf979 kde-i18n-3.2.3.ebuild 5376
 MD5 e7754491447e02160b2955de72b3f355 kde-i18n-3.3.1.ebuild 5676
-MD5 0d9fd61035a61cbfd0d3ce2da88ef44f ChangeLog 6747
+MD5 ab1fd0e06f405e8e4940a89cab5f0a3f ChangeLog 6836
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 eac0d7734f4387b032f33325f2ff48e4 files/digest-kde-i18n-3.2.3 3492
 MD5 24e0ecdf191bf0a50fff46c239a2dcb9 files/digest-kde-i18n-3.3.1 3645
 MD5 be2b24a376f130383c134228731eea5b files/digest-kde-i18n-3.3.2 3714
 MD5 4132e0717a74837f7e81bd5922babf43 files/digest-kde-i18n-3.4.0 3501
 MD5 fe416091cd30cb387c87c28e2d0a793d files/kde-i18n-ru-3.3.2-kmplot.diff 9744
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOwg/UpKYMelfdYERAuHdAJ9wmvZ4VxJkfurs962a1+OwNjLMuQCggyCL
+0b1oRlnmd6Sz5iGUDYlfJL0=
+=mdtI
+-----END PGP SIGNATURE-----

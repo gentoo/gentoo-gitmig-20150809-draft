@@ -1,6 +1,16 @@
-MD5 a7fa29956e97107e71f129f9c5f1e256 kturtle-3.4.0.ebuild 429
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ead8ed88bf35e961168e1ae42b220c36 kturtle-3.4.0.ebuild 432
 MD5 300ccdebd010e44a3d3554bd38774983 kturtle-3.4.0_rc1.ebuild 430
-MD5 58deeeb0c7a2223c059cf58556622611 ChangeLog 1137
+MD5 b8c0582cc8da60f69621851d497e4da4 ChangeLog 1223
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-kturtle-3.4.0 67
 MD5 e86b3031f18fffbe826fe58a427e65ba files/digest-kturtle-3.4.0_rc1 371
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOwYZUpKYMelfdYERAiJeAJ9o5ffNylzBCCxLz53j3wkKzbW1rgCffyAZ
+QERdDLPl9JewqrORS+7VCu8=
+=BJlV
+-----END PGP SIGNATURE-----

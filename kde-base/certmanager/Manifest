@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a93a08abc18c29cb210a247aea3519a0 certmanager-3.4.0_rc1.ebuild 671
-MD5 417bb8d190c1ef77e7511ae6315cf41b ChangeLog 1193
+MD5 d9a79c34a9e5e19a1a9cbc1ed8b10976 ChangeLog 1283
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 198208ca180a1447c8430a4f8f6acaaf certmanager-3.4.0.ebuild 670
+MD5 d2323d8734d013970081c56ab3f45b2d certmanager-3.4.0.ebuild 673
 MD5 35ccfa3433a499de2fd98af78d32b7db files/digest-certmanager-3.4.0_rc1 373
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-certmanager-3.4.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOwjcUpKYMelfdYERAkGnAJ4ubA0SUclIzsS2I2sboY5lwbueZQCfbplO
+Wfwecz78F8j2qJVjPwp+MLM=
+=Zq7d
+-----END PGP SIGNATURE-----
