@@ -5,10 +5,13 @@
 		The app-antivirus category contains antivirus software.
 	</longdescription>
 	<longdescription lang="es">
-		La categoría app-antivirus contiene software anti-virus.
+		La categorÃ­a app-antivirus contiene software anti-virus.
 	</longdescription>
 	<longdescription lang="de">    
-		Die Kategorie app-antivirus enthält Antiviren-Software.
+		Die Kategorie app-antivirus enthÃ¤lt Antiviren-Software.
+	</longdescription>
+	<longdescription lang="nl">
+		De categorie app-antivirus bevate antivirus applicaties.
 	</longdescription>
 </catmetadata>
 
