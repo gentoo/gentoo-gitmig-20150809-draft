@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.11 2005/02/19 18:52:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.12 2005/03/25 17:53:04 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -121,6 +121,7 @@ src_compile() {
 	# Required for some architectures, because they don't support ghc fully ...
 	use ppc || use amd64 && echo "SplitObjs=NO" >> mk/build.mk
 	use amd64 && echo "GhcUnregisterised=YES" >> mk/build.mk
+	use amd64 && echo "GhcWithInterpreter=NO" >> mk/build.mk
 
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...

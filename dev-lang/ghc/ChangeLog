@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.55 2005/03/23 19:27:33 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.56 2005/03/25 17:53:04 kosmikus Exp $
+
+  25 Mar 2005; Andres Loeh <kosmikus@gentoo.org> ghc-6.2.2.ebuild,
+  ghc-6.4.ebuild:
+  ghc-6.4 supports registered builds on amd64. ghci is still not supported on
+  amd64, but it fails with a more informative error message now (bug #82541).
 
   23 Mar 2005; Andres Loeh <kosmikus@gentoo.org> ghc-6.4.ebuild:
   Added dependency on haddock.
