@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.3.0.ebuild,v 1.9 2004/03/21 19:16:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.3.0.ebuild,v 1.10 2004/06/11 08:49:29 spyderous Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 DEPEND="${DEPEND}
-	>=x11-base/xfree-4.3.0-r6"
+	>=x11-base/xfree-4.3.0-r7"
 
 pkg_setup() {
 	if has_version ">=x11-base/xfree-4.3.99"
