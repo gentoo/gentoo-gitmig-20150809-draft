@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0_p1-r2.ebuild,v 1.2 2001/10/02 19:22:26 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0_p1-r6.ebuild,v 1.1 2001/10/02 19:22:26 woodchip Exp $
 
 P=vcron-3.0p1
 A=cron3.0pl1.tar.gz
@@ -29,6 +29,6 @@ src_install() {
   doman crontab.[15] cron.8
   dodoc CHANGES CONVERSION FEATURES MAIL MANIFEST README THANKS
 
-  exeinto /etc/rc.d/init.d
-  newexe ${FILESDIR}/vcron.rc5
+  exeinto /etc/init.d
+  newexe ${FILESDIR}/vcron.rc6 vcron
 }
