@@ -1,6 +1,6 @@
-diff -u -N zoo/ar.h /usr/src/redhat/SOURCES/zoo-2.10/ar.h
---- zoo/ar.h	1993-05-01 06:04:22.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/ar.h	2002-06-20 17:19:36.000000000 +0200
+diff -ur zoo/ar.h zoo-gentoo/ar.h
+--- zoo/ar.h	2003-09-26 23:51:22.000000000 +1200
++++ zoo-gentoo/ar.h	2003-09-26 23:58:43.000000000 +1200
 @@ -15,11 +15,9 @@
  /* uchar should be 8 bits or more */
  /* typedef unsigned char  uchar;   -- already in zoo.h */
@@ -52,9 +52,9 @@ diff -u -N zoo/ar.h /usr/src/redhat/SOURCES/zoo-2.10/ar.h
  void putbits PARMS((int n , uint x ));
  int fread_crc PARMS((uchar *p , int n , FILE *f ));
  void fwrite_crc PARMS((uchar *p , int n , FILE *f ));
-diff -u -N zoo/basename.c /usr/src/redhat/SOURCES/zoo-2.10/basename.c
---- zoo/basename.c	1991-07-16 17:48:04.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/basename.c	2002-06-20 17:19:36.000000000 +0200
+diff -ur zoo/basename.c zoo-gentoo/basename.c
+--- zoo/basename.c	2003-09-26 23:51:22.000000000 +1200
++++ zoo-gentoo/basename.c	2003-09-26 23:59:12.000000000 +1200
 @@ -18,7 +18,7 @@
  
  /* This function strips device/directory information from
@@ -64,9 +64,9 @@ diff -u -N zoo/basename.c /usr/src/redhat/SOURCES/zoo-2.10/basename.c
  char *pathname;
  char fname[];
  {
-diff -u -N zoo/bsd.c /usr/src/redhat/SOURCES/zoo-2.10/bsd.c
---- zoo/bsd.c	1993-05-01 06:21:53.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/bsd.c	1991-07-05 18:00:00.000000000 +0200
+diff -ur zoo/bsd.c zoo-gentoo/bsd.c
+--- zoo/bsd.c	2003-09-26 23:51:22.000000000 +1200
++++ zoo-gentoo/bsd.c	2003-09-27 00:00:44.000000000 +1200
 @@ -74,26 +74,14 @@
  #define SEC_IN_DAY	(24L * 60L * 60L)
  #define INV_VALUE		(SEC_IN_DAY + 1L)
@@ -95,59 +95,9 @@ diff -u -N zoo/bsd.c /usr/src/redhat/SOURCES/zoo-2.10/bsd.c
  	return retval;
  }
  
-diff -u -N zoo/Copyright /usr/src/redhat/SOURCES/zoo-2.10/Copyright
---- zoo/Copyright	1991-07-16 17:47:06.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/Copyright	1970-01-01 01:00:00.000000000 +0100
-@@ -1,46 +0,0 @@
--
--                            COPYRIGHT
--
--
--The following rules apply only to the zoo archiver itself.
--Currently, all extract-only programs, and all supporting utili-
--ties, are fully in the public domain and are expected to remain so
--for the forseeable future.
--
--            COPYRIGHT STATEMENT FOR ZOO ARCHIVE PROGRAM
--
--1.   "This software" refers separately to each existing version, and
--     each existing authorized derivative work, of my zoo archive
--     program as of the date at the bottom of this copyright statement.
--
--2.   DISTRIBUTION IN UNMODIFIED FORM:  You may copy this software in
--     unmodified form for any purpose, whether commercial or
--     noncommercial, provided that you make no attempt to restrict
--     distribution of it by others.
--
--3.   CREATION OF DERIVATIVE WORKS:  You may create and distribute
--     derivative works made from any source code files that are part of
--     this software, provided that you (a) preserve all copyright
--     notices and author attributions, (b) do not create, whether
--     deliberately or through negligence, any derivative work that
--     violates the compatibility goals describe in the reference manual
--     for zoo 2.1, (c) do not attempt to restrict the distribution or
--     use of the derivative work by others, (d) make the fully commented
--     source code of the derivative work available to me at no cost if
--     I so request, and make no attempt to restrict the distribution
--     or use of this source code.
--
--4.   NO WARRANTY.  I make no claim that this software is free of defects.
--     I do not accept any legal obligation to provide any bug fixes or
--     any other type of support whatsoever.  I disclaim all liability
--     for damages, whether direct or consequential.
--
--5.   EXCEPTIONS:  Exceptions to the above conditions are probably
--     possible.  Please contact me to negotiate.
--
--6.   The prohibition against incompatible derivative works does not 
--     necessarily imply that the archiver and the archive format cannot
--     be enhanced.  However, if any incompatibility is created, it may
--     be done only with my permission.
--
--                                   -- Rahul Dhesi 1991/07/07
-diff -u -N zoo/decode.c /usr/src/redhat/SOURCES/zoo-2.10/decode.c
---- zoo/decode.c	1993-05-01 06:04:21.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/decode.c	2002-06-20 17:19:36.000000000 +0200
+diff -ur zoo/decode.c zoo-gentoo/decode.c
+--- zoo/decode.c	2003-09-26 23:51:22.000000000 +1200
++++ zoo-gentoo/decode.c	2003-09-27 00:02:18.000000000 +1200
 @@ -27,8 +27,8 @@
  */
  
@@ -170,9 +120,9 @@ diff -u -N zoo/decode.c /usr/src/redhat/SOURCES/zoo-2.10/decode.c
  
  	r = 0;
  	while (--j >= 0) {
-diff -u -N zoo/encode.c /usr/src/redhat/SOURCES/zoo-2.10/encode.c
---- zoo/encode.c	1993-05-01 05:46:58.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/encode.c	1991-07-05 18:00:00.000000000 +0200
+diff -ur zoo/encode.c zoo-gentoo/encode.c
+--- zoo/encode.c	2003-09-26 23:51:22.000000000 +1200
++++ zoo-gentoo/encode.c	2003-09-27 00:02:56.000000000 +1200
 @@ -5,11 +5,6 @@
  Adapted from "ar" archiver written by Haruhiko Okumura.
  */
@@ -197,10 +147,9 @@ diff -u -N zoo/encode.c /usr/src/redhat/SOURCES/zoo-2.10/encode.c
  #include "errors.i"
  
  FILE *lzh_infile;
-Binary files zoo/fiz and /usr/src/redhat/SOURCES/zoo-2.10/fiz differ
-diff -u -N zoo/huf.c /usr/src/redhat/SOURCES/zoo-2.10/huf.c
---- zoo/huf.c	1993-05-01 05:46:40.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/huf.c	1991-07-05 18:00:00.000000000 +0200
+diff -ur zoo/huf.c zoo-gentoo/huf.c
+--- zoo/huf.c	2003-09-26 23:51:22.000000000 +1200
++++ zoo-gentoo/huf.c	2003-09-27 00:03:20.000000000 +1200
 @@ -5,10 +5,6 @@
  
  Adapted from "ar" archiver written by Haruhiko Okumura.
@@ -223,9 +172,9 @@ diff -u -N zoo/huf.c /usr/src/redhat/SOURCES/zoo-2.10/huf.c
  #define NP (DICBIT + 1)
  #define NT (CODE_BIT + 3)
  #define PBIT 4  /* smallest integer such that (1U << PBIT) > NP */
-diff -u -N zoo/lzd.c /usr/src/redhat/SOURCES/zoo-2.10/lzd.c
---- zoo/lzd.c	1993-05-01 06:06:19.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/lzd.c	1991-07-05 18:00:00.000000000 +0200
+diff -ur zoo/lzd.c zoo-gentoo/lzd.c
+--- zoo/lzd.c	2003-09-26 23:51:22.000000000 +1200
++++ zoo-gentoo/lzd.c	2003-09-27 00:03:54.000000000 +1200
 @@ -59,7 +59,7 @@
  extern unsigned int filt_lzd_word;
  #endif /* FILTER */
@@ -235,9 +184,9 @@ diff -u -N zoo/lzd.c /usr/src/redhat/SOURCES/zoo-2.10/lzd.c
  static int firstchar PARMS ((int));
  static void cbfill PARMS ((void));
  
-diff -u -N zoo/lzh.c /usr/src/redhat/SOURCES/zoo-2.10/lzh.c
---- zoo/lzh.c	1993-05-01 06:04:21.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/lzh.c	2002-06-20 17:19:36.000000000 +0200
+diff -ur zoo/lzh.c zoo-gentoo/lzh.c
+--- zoo/lzh.c	2003-09-26 23:51:22.000000000 +1200
++++ zoo-gentoo/lzh.c	2003-09-27 00:04:56.000000000 +1200
 @@ -45,14 +45,14 @@
  
  	decode_start();
@@ -255,18 +204,18 @@ diff -u -N zoo/lzh.c /usr/src/redhat/SOURCES/zoo-2.10/lzh.c
  #ifdef SHOW_DOTS
  		(void) putc('.', stderr);
  		(void) fflush(stderr);
-diff -u -N zoo/lzh.h /usr/src/redhat/SOURCES/zoo-2.10/lzh.h
---- zoo/lzh.h	1991-07-16 17:51:50.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/lzh.h	2002-06-20 17:19:36.000000000 +0200
+diff -ur zoo/lzh.h zoo-gentoo/lzh.h
+--- zoo/lzh.h	2003-09-26 23:51:22.000000000 +1200
++++ zoo-gentoo/lzh.h	2003-09-27 00:05:21.000000000 +1200
 @@ -34,4 +34,4 @@
  #define CBIT 9  /* $\lfloor \log_2 NC \rfloor + 1$ */
  #define CODE_BIT  16  /* codeword length */
  
 -extern ushort left[], right[];
 +extern my_ushort left[], right[];
-diff -u -N zoo/makefile /usr/src/redhat/SOURCES/zoo-2.10/makefile
---- zoo/makefile	1991-07-16 17:52:08.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/makefile	2002-06-20 17:21:13.000000000 +0200
+diff -ur zoo/makefile zoo-gentoo/makefile
+--- zoo/makefile	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/makefile	2003-09-27 00:06:54.000000000 +1200
 @@ -18,13 +18,13 @@
  
  MAKE = make	      # needed for some systems e.g. older BSD
@@ -312,9 +261,9 @@ diff -u -N zoo/makefile /usr/src/redhat/SOURCES/zoo-2.10/makefile
  prterror.o: zoofns.h zooio.h
  sysv.o: /usr/include/sys/stat.h /usr/include/sys/types.h /usr/include/time.h
  sysv.o: nixmode.i nixtime.i
-diff -u -N zoo/maketbl.c /usr/src/redhat/SOURCES/zoo-2.10/maketbl.c
---- zoo/maketbl.c	1991-07-16 17:52:32.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/maketbl.c	2002-06-20 17:19:36.000000000 +0200
+diff -ur zoo/maketbl.c zoo-gentoo/maketbl.c
+--- zoo/maketbl.c	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/maketbl.c	2003-09-27 00:27:15.000000000 +1200
 @@ -16,10 +16,10 @@
  int nchar;
  uchar bitlen[];
@@ -347,9 +296,9 @@ diff -u -N zoo/maketbl.c /usr/src/redhat/SOURCES/zoo-2.10/maketbl.c
  		k = 1 << tablebits;
  		while (i != k) table[i++] = 0;
  	}
-diff -u -N zoo/maketree.c /usr/src/redhat/SOURCES/zoo-2.10/maketree.c
---- zoo/maketree.c	1991-07-16 17:52:38.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/maketree.c	2002-06-20 17:19:36.000000000 +0200
+diff -ur zoo/maketree.c zoo-gentoo/maketree.c
+--- zoo/maketree.c	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/maketree.c	2003-09-27 00:09:06.000000000 +1200
 @@ -12,7 +12,7 @@
  
  static int    n, heapsize;
@@ -393,9 +342,18 @@ diff -u -N zoo/maketree.c /usr/src/redhat/SOURCES/zoo-2.10/maketree.c
  	/* make tree, calculate len[], return root */
  {
  	int i, j, k, avail;
-diff -u -N zoo/options.h /usr/src/redhat/SOURCES/zoo-2.10/options.h
---- zoo/options.h	1993-05-01 06:27:59.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/options.h	1991-07-05 18:00:00.000000000 +0200
+diff -ur zoo/options.h zoo-gentoo/options.h
+--- zoo/options.h	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/options.h	2003-09-27 00:12:07.000000000 +1200
+@@ -31,7 +31,7 @@
+ #define GETTZ
+ #define FATTR
+ #define T_SIGNAL	void
+-#define VARARGS
++#define STDARG
+ #define NEED_MEMMOVE
+ /* #define NEED_MEMCPY */
+ #define T_UINT16		unsigned short		/* must be 16 bit unsigned */
 @@ -73,6 +73,7 @@
  /* #define UNBUF_LIMIT	512 */
  #define  T_SIGNAL void
@@ -437,9 +395,85 @@ diff -u -N zoo/options.h /usr/src/redhat/SOURCES/zoo-2.10/options.h
  #endif /* BSD4_3 */
  
  /*  Ultrix 4.1 */
-diff -u -N zoo/sysv.c /usr/src/redhat/SOURCES/zoo-2.10/sysv.c
---- zoo/sysv.c	1991-07-16 17:55:34.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/sysv.c	2002-06-20 17:19:36.000000000 +0200
+diff -ur zoo/prterror.c zoo-gentoo/prterror.c
+--- zoo/prterror.c	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/prterror.c	2003-09-27 00:26:15.000000000 +1200
+@@ -23,15 +23,7 @@
+ # include <ctype.h>	/* for isdigit() */
+ #endif
+ 
+-#ifdef STDARG
+ # include <stdarg.h>
+-#else
+-# ifdef VARARGS
+-#  include <varargs.h>
+-# else
+-#  include "MUST DEFINE STDARG OR VARARGS"
+-# endif
+-#endif
+ 
+ #ifdef NEED_VPRINTF
+ static int zvfprintf();
+@@ -115,29 +107,11 @@
+ char could_not_open[] = "Could not open %s.\n";
+ #endif
+ 
+-#ifdef STDARG
+-void prterror(int level, char *format, ...)
+-#else
+-/*VARARGS*/
+-void prterror(va_alist)
+-va_dcl
+-#endif
++void prterror(level, format, a, b, c, d)
++register int level;
++char *format, *a, *b, *c, *d;
+ {
+-	va_list args;
+    char string[120];       /* local format string */
+-#ifdef VARARGS
+-	int level;
+-	char *format;
+-#endif
+-
+-#ifdef STDARG
+-	va_start(args, format);
+-#else
+-	va_start(args);
+-	level = va_arg(args, int);
+-	format = va_arg(args, char *);
+-#endif
+-
+    *string = '\0';         /* get a null string to begin with */
+ 
+ #ifdef OOZ
+@@ -149,7 +123,7 @@
+    switch (level) {
+       case 'M': *string = '\0';                    /* fall through to 'm' */
+       case 'm': if (quiet) return; break;
+-      case 'w': 
++      case 'w':
+ 			if (quiet > 1) return;
+ 			strcat (string, "WARNING:  "); break;
+       case 'e': 
+@@ -163,12 +137,8 @@
+    strcat (string, format);      /* just append supplied format string */
+ 
+ 	/* and print the whole thing */
+-#ifdef NEED_VPRINTF
+-	(void) zvfprintf(stdout, string, args);
+-#else
+-   (void) vprintf(string, args);
+-#endif
+-	fflush (stdout);
++   printf (string, a, b, c, d);   /* and print the whole thing */
++        fflush (stdout);
+ 
+    if (level == 'f')       /* and abort on fatal error 'f' but not 'F' */
+       zooexit (1);
+diff -ur zoo/sysv.c zoo-gentoo/sysv.c
+--- zoo/sysv.c	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/sysv.c	2003-09-27 00:13:00.000000000 +1200
 @@ -129,6 +129,7 @@
  exists by the name of the needed directory.
  */
@@ -456,9 +490,9 @@ diff -u -N zoo/sysv.c /usr/src/redhat/SOURCES/zoo-2.10/sysv.c
  
  /* No file truncate system call in older System V.  If yours has one,
  add it here -- see bsd.c for example.  It's ok for zootrunc to be
-diff -u -N zoo/zoo.1 /usr/src/redhat/SOURCES/zoo-2.10/zoo.1
---- zoo/zoo.1	1993-05-01 06:10:09.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/zoo.1	1991-07-05 18:00:00.000000000 +0200
+diff -ur zoo/zoo.1 zoo-gentoo/zoo.1
+--- zoo/zoo.1	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/zoo.1	2003-09-27 00:41:08.000000000 +1200
 @@ -176,15 +176,15 @@
  Novice@@Equivalent
  Command@Description@Expert Command
@@ -489,21 +523,87 @@ diff -u -N zoo/zoo.1 /usr/src/redhat/SOURCES/zoo-2.10/zoo.1
  Matches any single character.
  .sp 1
  Arbitrary combinations of 
-diff -u -N zoo/zooadd2.c /usr/src/redhat/SOURCES/zoo-2.10/zooadd2.c
---- zoo/zooadd2.c	1991-07-20 01:38:10.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/zooadd2.c	1991-07-05 18:00:00.000000000 +0200
-@@ -263,7 +263,7 @@
-    direntry->zoo_tag = ZOO_TAG;
-    direntry->type = 2;                  /* type is now 2 */
- #ifdef GETTZ
--	direntry->tz = gettz() / (15 * 60); /* seconds => 15-min units */
-+	direntry->tz = (uchar) (gettz() / (15 * 60)); /* seconds => 15-min units */
- #else
-    direntry->tz = NO_TZ;                /* timezone unknown */
- #endif
-diff -u -N zoo/zooadd.c /usr/src/redhat/SOURCES/zoo-2.10/zooadd.c
---- zoo/zooadd.c	1993-05-01 05:43:38.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/zooadd.c	2002-06-20 17:19:36.000000000 +0200
+diff -ur zoo/zoo.c zoo-gentoo/zoo.c
+--- zoo/zoo.c	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/zoo.c	2003-09-27 00:42:34.000000000 +1200
+@@ -225,17 +225,17 @@
+    if (cmd != NONE) {
+       switch (cmd) {
+ 
+-	 case ADD:      zooadd (zooname, filecount, &argv[3], "ahP"); break;
+-	 case FRESHEN:  zooadd (zooname, filecount, &argv[3], "ahuP"); break;
+-	 case UPDATE:   zooadd (zooname, filecount, &argv[3], "ahunP"); break;
+-	 case MOVE:     zooadd (zooname, filecount, &argv[3], "ahMP"); break;
++	 case ADD:      zooadd (zooname, filecount, &argv[3], "aP:"); break;
++	 case FRESHEN:  zooadd (zooname, filecount, &argv[3], "auP:"); break;
++	 case UPDATE:   zooadd (zooname, filecount, &argv[3], "aunP:"); break;
++	 case MOVE:     zooadd (zooname, filecount, &argv[3], "aMP:"); break;
+ 
+          case EXTRACT:  zooext (zooname, "x"); break;
+          case TEST:     zooext (zooname, "xNd"); break;
+          case PRINT:    zooext (zooname, "xp"); break;
+ 
+          case DELETE:   zoodel (zooname, "DP",1); break;
+-	 case LIST:     zoolist (&argv[2], "Vm", argc-2); break;
++	 case LIST:     zoolist (&argv[2], "VC", argc-2); break;
+          case COMMENT:  comment (zooname, "c"); break;
+          default: goto show_usage;
+       }
+diff -ur zoo/zoo.h zoo-gentoo/zoo.h
+--- zoo/zoo.h	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/zoo.h	2003-09-27 00:19:06.000000000 +1200
+@@ -1,9 +1,5 @@
+ /* derived from: zoo.h 2.16 88/01/27 23:21:36 */
+ 
+-#ifndef ZOO_H
+-
+-#define ZOO_H
+-
+ /*
+ The contents of this file are hereby released to the public domain.
+ 
+@@ -131,7 +127,7 @@
+    char fname[FNAMESIZE]; 		/* filename */
+ 
+    int var_dir_len;           /* length of variable part of dir entry */
+-   char tz;                   /* timezone where file was archived */
++   uchar tz;                   /* timezone where file was archived */
+    unsigned int dir_crc;      /* CRC of directory entry */
+ 
+    /* fields for variable part of directory entry follow */
+@@ -244,5 +240,3 @@
+ #define	MAXGEN				0x0f
+ /* version mask to prune down to correct size on large-word machines */
+ #define VER_MASK				0xffff
+-
+-#endif  /* ZOO_H */
+diff -ur zoo/zoo.man zoo-gentoo/zoo.man
+--- zoo/zoo.man	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/zoo.man	2003-09-27 00:20:31.000000000 +1200
+@@ -121,15 +121,15 @@
+      Novice                                        Equivalent
+      Command    Description                        Expert Command
+      ____________________________________________________________
+-     -add       add files to archive               ahP
++     -add       add files to archive               aP
+      -extract   extract files from archive         x
+-     -move      move files to archive              ahMP
++     -move      move files to archive              aMP
+      -test      test archive integrity             xNd
+      -print     extract files to standard output   xp
+      -delete    delete files from archive          DP
+-     -list      list archive contents              Vm
+-     -update    add new or newer files             ahunP
+-     -freshen   by add newer files                 ahuP
++     -list      list archive contents              VC
++     -update    add new or newer files             aunP
++     -freshen   by add newer files                 auP
+      -comment   add comments to files              c
+ 
+      Expert commands
+diff -ur zoo/zooadd.c zoo-gentoo/zooadd.c
+--- zoo/zooadd.c	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/zooadd.c	2003-09-27 00:16:12.000000000 +1200
 @@ -34,9 +34,7 @@
                 int *, int *, int *, int *, int *, int *, int *, int *));
  int ver_too_high PARMS ((struct zoo_header *));
@@ -532,35 +632,21 @@ diff -u -N zoo/zooadd.c /usr/src/redhat/SOURCES/zoo-2.10/zooadd.c
  
     this_file = zooopen(this_path, Z_READ);
     if (this_file == NOFILE) {
-diff -u -N zoo/zoo.c /usr/src/redhat/SOURCES/zoo-2.10/zoo.c
---- zoo/zoo.c	1991-07-17 14:28:43.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/zoo.c	1991-07-05 18:00:00.000000000 +0200
-@@ -225,17 +225,17 @@
-    if (cmd != NONE) {
-       switch (cmd) {
- 
--	 case ADD:      zooadd (zooname, filecount, &argv[3], "ahP"); break;
--	 case FRESHEN:  zooadd (zooname, filecount, &argv[3], "ahuP"); break;
--	 case UPDATE:   zooadd (zooname, filecount, &argv[3], "ahunP"); break;
--	 case MOVE:     zooadd (zooname, filecount, &argv[3], "ahMP"); break;
-+         case ADD:      zooadd (zooname, filecount, &argv[3], "aP:"); break;
-+         case FRESHEN:  zooadd (zooname, filecount, &argv[3], "auP:"); break;
-+         case UPDATE:   zooadd (zooname, filecount, &argv[3], "aunP:"); break;
-+         case MOVE:     zooadd (zooname, filecount, &argv[3], "aMP:"); break;
- 
-          case EXTRACT:  zooext (zooname, "x"); break;
-          case TEST:     zooext (zooname, "xNd"); break;
-          case PRINT:    zooext (zooname, "xp"); break;
- 
-          case DELETE:   zoodel (zooname, "DP",1); break;
--	 case LIST:     zoolist (&argv[2], "Vm", argc-2); break;
-+         case LIST:     zoolist (&argv[2], "VC", argc-2); break;
-          case COMMENT:  comment (zooname, "c"); break;
-          default: goto show_usage;
-       }
-diff -u -N zoo/zooext.c /usr/src/redhat/SOURCES/zoo-2.10/zooext.c
---- zoo/zooext.c	1993-05-01 05:58:50.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/zooext.c	1991-07-05 18:00:00.000000000 +0200
+diff -ur zoo/zooadd2.c zoo-gentoo/zooadd2.c
+--- zoo/zooadd2.c	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/zooadd2.c	2003-09-27 00:15:27.000000000 +1200
+@@ -263,7 +263,7 @@
+    direntry->zoo_tag = ZOO_TAG;
+    direntry->type = 2;                  /* type is now 2 */
+ #ifdef GETTZ
+-	direntry->tz = gettz() / (15 * 60); /* seconds => 15-min units */
++	direntry->tz = (uchar) (gettz() / (15 * 60)); /* seconds => 15-min units */
+ #else
+    direntry->tz = NO_TZ;                /* timezone unknown */
+ #endif
+diff -ur zoo/zooext.c zoo-gentoo/zooext.c
+--- zoo/zooext.c	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/zooext.c	2003-09-27 00:17:24.000000000 +1200
 @@ -626,7 +626,7 @@
  
  /* Ctrl_c() is called if ^C is hit while a file is being extracted.
@@ -570,9 +656,9 @@ diff -u -N zoo/zooext.c /usr/src/redhat/SOURCES/zoo-2.10/zooext.c
  {
  #ifndef NOSIGNAL
     signal (SIGINT, SIG_IGN);     /* ignore any more */
-diff -u -N zoo/zoofns.h /usr/src/redhat/SOURCES/zoo-2.10/zoofns.h
---- zoo/zoofns.h	1993-05-01 05:57:35.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/zoofns.h	2002-06-20 17:19:36.000000000 +0200
+diff -ur zoo/zoofns.h zoo-gentoo/zoofns.h
+--- zoo/zoofns.h	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/zoofns.h	2003-09-27 00:18:14.000000000 +1200
 @@ -42,12 +42,12 @@
  int cfactor PARMS ((long, long));
  int chname PARMS ((char *, char *));
@@ -597,37 +683,9 @@ diff -u -N zoo/zoofns.h /usr/src/redhat/SOURCES/zoo-2.10/zoofns.h
  void break_off PARMS ((void));
  void close_file PARMS ((ZOOFILE));
  void comment PARMS ((char *, char *));
-diff -u -N zoo/zoo.h /usr/src/redhat/SOURCES/zoo-2.10/zoo.h
---- zoo/zoo.h	1993-05-01 05:40:56.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/zoo.h	1991-07-05 18:00:00.000000000 +0200
-@@ -1,9 +1,5 @@
- /* derived from: zoo.h 2.16 88/01/27 23:21:36 */
- 
--#ifndef ZOO_H
--
--#define ZOO_H
--
- /*
- The contents of this file are hereby released to the public domain.
- 
-@@ -131,7 +127,7 @@
-    char fname[FNAMESIZE]; 		/* filename */
- 
-    int var_dir_len;           /* length of variable part of dir entry */
--   char tz;                   /* timezone where file was archived */
-+   uchar tz;                   /* timezone where file was archived */
-    unsigned int dir_crc;      /* CRC of directory entry */
- 
-    /* fields for variable part of directory entry follow */
-@@ -244,5 +240,3 @@
- #define	MAXGEN				0x0f
- /* version mask to prune down to correct size on large-word machines */
- #define VER_MASK				0xffff
--
--#endif  /* ZOO_H */
-diff -u -N zoo/zooio.h /usr/src/redhat/SOURCES/zoo-2.10/zooio.h
---- zoo/zooio.h	1993-05-01 05:39:50.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/zooio.h	1991-07-05 18:00:00.000000000 +0200
+diff -ur zoo/zooio.h zoo-gentoo/zooio.h
+--- zoo/zooio.h	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/zooio.h	2003-09-27 00:19:49.000000000 +1200
 @@ -12,8 +12,6 @@
  #define	OK_STDIO
  #endif
@@ -637,33 +695,9 @@ diff -u -N zoo/zooio.h /usr/src/redhat/SOURCES/zoo-2.10/zooio.h
  #ifndef PARMS
  #ifdef LINT_ARGS
  #define	PARMS(x)		x
-diff -u -N zoo/zoo.man /usr/src/redhat/SOURCES/zoo-2.10/zoo.man
---- zoo/zoo.man	1991-07-17 15:12:22.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/zoo.man	1991-07-05 18:00:00.000000000 +0200
-@@ -121,15 +121,15 @@
-      Novice                                        Equivalent
-      Command    Description                        Expert Command
-      ____________________________________________________________
--     -add       add files to archive               ahP
-+     -add       add files to archive               aP:
-      -extract   extract files from archive         x
--     -move      move files to archive              ahMP
-+     -move      move files to archive              aMP:
-      -test      test archive integrity             xNd
-      -print     extract files to standard output   xp
-      -delete    delete files from archive          DP
--     -list      list archive contents              Vm
--     -update    add new or newer files             ahunP
--     -freshen   by add newer files                 ahuP
-+     -list      list archive contents              VC
-+     -update    add new or newer files             aunP:
-+     -freshen   by add newer files                 auP:
-      -comment   add comments to files              c
- 
-      Expert commands
-diff -u -N zoo/zoopack.c /usr/src/redhat/SOURCES/zoo-2.10/zoopack.c
---- zoo/zoopack.c	1993-05-01 05:59:21.000000000 +0200
-+++ /usr/src/redhat/SOURCES/zoo-2.10/zoopack.c	2002-06-20 17:20:15.000000000 +0200
+diff -ur zoo/zoopack.c zoo-gentoo/zoopack.c
+--- zoo/zoopack.c	2003-09-26 23:51:23.000000000 +1200
++++ zoo-gentoo/zoopack.c	2003-09-27 00:21:21.000000000 +1200
 @@ -171,7 +171,7 @@
  } else {
     strcpy (temp_file, xes);
@@ -682,3 +716,4 @@ diff -u -N zoo/zoopack.c /usr/src/redhat/SOURCES/zoo-2.10/zoopack.c
  {
  #ifndef NOSIGNAL
     signal (SIGINT, SIG_IGN);     /* ignore future control ^Cs for now */
+
