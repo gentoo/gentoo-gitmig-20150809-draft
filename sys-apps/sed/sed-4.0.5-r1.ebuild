@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.5-r1.ebuild,v 1.1 2003/03/04 21:34:05 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.5-r1.ebuild,v 1.2 2003/03/04 21:38:52 lostlogic Exp $
 
 DESCRIPTION="Super-useful stream editor"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/sed/${P}.tar.gz"
@@ -31,6 +31,9 @@ src_install() {
 	then
 		einstall || die "install failed"
 		dodoc COPYING NEWS README* THANKS TODO AUTHORS BUGS ANNOUNCE ChangeLog
+		docinto examples
+		dodoc ${FILESDIR}/dos2unix ${FILESDIR}/unix2dos
+
 	else
 		dodir /usr/bin
 	fi
