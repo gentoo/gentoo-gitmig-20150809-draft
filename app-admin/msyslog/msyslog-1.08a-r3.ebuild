@@ -1,23 +1,26 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08a-r2.ebuild,v 1.3 2002/07/17 20:43:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08a-r3.ebuild,v 1.1 2002/07/25 12:54:55 seemant Exp $
 
+MY_P=${PN}-v${PV}
+S=${WORKDIR}/${MY_P}
+S2=${WORKDIR}/${PN}-gentoo
 DESCRIPTION="Flexible and easy to integrate syslog with modularized input/output"
 HOMEPAGE="http://www.core-sdi.com/download/download1.html"
-SRC_URI="http://community.corest.com/pub/${PN}/${PN}-v${PV}.tgz"
-SLOT="0"
-S=${WORKDIR}/${PN}-v${PV}
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz
+	mirror://gentoo/${P}-gentoo.diff.tar.bz2"
 
-RDEPEND="virtual/glibc mysql? ( >=dev-db/mysql-3.23 ) postgres? ( >=dev-db/postgresql-7 )"
-DEPEND="virtual/glibc"
-KEYWORDS="x86"
-LICENSE="BSD"
 SLOT="0"
+LICENSE="BSD"
+KEYWORDS="x86"
+
+DEPEND="mysql? ( >=dev-db/mysql-3.23 )
+	postgres? ( >=dev-db/postgresql-7 )"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	# fix paths for pidfile, config file, libdir, logdir, manpages, etc...
-	patch -p1 < ${FILESDIR}/${PN}-${PV}-gentoo.diff || die "bad patchfile"
+	patch -p1 < ${S2}/${P}-gentoo.diff || die "bad patchfile"
 }
 
 src_compile() {
@@ -25,10 +28,9 @@ src_compile() {
 	use mysql || myconf="${myconf} --without-mysql"
 	use postgres || myconf="${myconf} --without-pgsql"
 
-	./configure \
-		--prefix=/usr \
+	econf \
 		--with-daemon-name=msyslogd \
-		--host=${CHOST} ${myconf} || die "bad ./configure"
+		${myconf} || die "bad ./configure"
 
 	emake || die "compile problem"
 }
@@ -50,9 +52,9 @@ src_install() {
 		QUICK_INSTALL README src/TODO doc/*
 	docinto examples ; dodoc src/examples/*
 
-	insinto /etc/msyslog ; doins ${FILESDIR}/msyslog.conf
-	insinto /etc/conf.d ; newins ${FILESDIR}/msyslog-confd msyslog
-	exeinto /etc/init.d ; newexe ${FILESDIR}/msyslog-init msyslog
+	insinto /etc/msyslog ; doins ${S2}/msyslog.conf
+	insinto /etc/conf.d ; newins ${S2}/msyslog-confd msyslog
+	exeinto /etc/init.d ; newexe ${S2}/msyslog-init msyslog
 }
 
 pkg_postinst() {

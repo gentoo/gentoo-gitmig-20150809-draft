@@ -1,8 +1,0 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/files/msyslog-confd,v 1.2 2002/05/04 01:22:36 woodchip Exp $
-
-# Config file for /etc/init.d/msyslog
-
-# Passed to /usr/sbin/msyslogd...
-MSYSLOG_OPTS="-i unix /dev/log -i linux"
