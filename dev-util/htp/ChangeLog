@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/htp/ChangeLog,v 1.1 2004/04/23 12:16:19 stuart Exp $
+
+*htp-1.15 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> htp-1.15.ebuild,
+  metadata.xml:
+  Initial import; thanks to DC <ddcc@email.com>; see bug #40573
+
