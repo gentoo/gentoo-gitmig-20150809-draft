@@ -17,7 +17,7 @@
 
 # 14-Feb-2002, if it works it works, if it dies, it dies silently and
 # people end up with a broken 
-#>=sys-libs/glibc-2.2.5
+>=sys-libs/glibc-2.2.5
 
 # Won't compile yet for me..<Verwilst, 10 feb 2002>
 =net-misc/tightvnc-1.2.2
@@ -96,7 +96,7 @@ app-admin/webconfig
 #(12/22/01 - drobbins)
 
 #untested/not approved stuff, please do not use
-#>=sys-apps/portage-1.8.9_pre1
+>=sys-apps/portage-1.8.9_pre1
 >=sys-apps/portage-1.9_pre1
 
 #incomplete and very dangerous < Danarmak >
