@@ -1,24 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 4282157341327ebdc6e83199da5fc876 ChangeLog 10185
+MD5 ae53e7849e679480cbfaac218b82819a apcupsd-3.10.16-r3.ebuild 2601
 MD5 27ae5add10fc42e77804f1ecd768df87 metadata.xml 226
-MD5 74e598a06446374ea9bbc4c86d8501a7 apcupsd-3.10.15-r1.ebuild 2486
-MD5 39877c38da580ed1b85baae751b23266 ChangeLog 9969
-MD5 3806c79d53f3731cb4499a20197cec01 apcupsd-3.10.16-r3.ebuild 2694
+MD5 3326f948227834f39ad2c23bb3e0a7ef apcupsd-3.10.15-r1.ebuild 2395
 MD5 ed12d329ca566b8f2632d425828ea5d7 files/digest-apcupsd-3.10.16-r3 68
 MD5 ec48a12c6d8b56aeffbeaa629f8835ad files/digest-apcupsd-3.10.15-r1 68
-MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.16/smtp.patch 2663
-MD5 ac24c9a1e199dfd66650ca55ce1e33f4 files/3.10.16/ucd-snmp.patch 425
-MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.16/apache.conf 157
-MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.16/apcupsd.in.patch 315
-MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.15/smtp.patch 2663
-MD5 ac24c9a1e199dfd66650ca55ce1e33f4 files/3.10.15/ucd-snmp.patch 425
 MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.15/apache.conf 157
 MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.15/apcupsd.in.patch 315
+MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.15/smtp.patch 2663
+MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.16/apache.conf 157
+MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.16/apcupsd.in.patch 315
+MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.16/smtp.patch 2663
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBxuUBKtJO8LeSoosRAvyJAKCjtIHEaAlBQeWnt6M+BGOm4uG9pgCgoONj
-OgquIqVzxgjDt/fqhXrJ6vQ=
-=e61r
+iD8DBQFCGUk9mdTrptrqvGERAvl1AJ9Z8hqNLvOwKGzPJHL1OUnJUKPOogCfcV0M
+N9a6++JKNk5+HJG2+a9qhRk=
+=Ysx0
 -----END PGP SIGNATURE-----

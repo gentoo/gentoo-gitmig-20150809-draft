@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/apcupsd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.54 2004/12/20 13:42:13 tantive Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.55 2005/02/21 02:36:38 dragonheart Exp $
+
+  21 Feb 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/3.10.15/ucd-snmp.patch, -files/3.10.16/ucd-snmp.patch,
+  apcupsd-3.10.15-r1.ebuild, apcupsd-3.10.16-r3.ebuild:
+  removing ucd-snmp as per bug #69451
 
 *apcupsd-3.10.16-r3 (20 Dec 2004)
 
