@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.77 2004/11/13 19:18:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.78 2004/12/05 00:55:24 swegener Exp $
+
+  05 Dec 2004; Sven Wegener <swegener@gentoo.org> screen-4.0.2.ebuild:
+  Added some more error checking. Some cosmetical rearrangements.
 
   13 Nov 2004; Sven Wegener <swegener@gentoo.org> screen-4.0.2.ebuild:
   Removed large comment section from ebuild.

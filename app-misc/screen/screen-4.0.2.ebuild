@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.21 2004/11/13 19:18:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.22 2004/12/05 00:55:24 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -35,20 +35,19 @@ src_unpack() {
 
 	# Fix manpage.
 	sed -i \
-		-e "s:/usr/local/etc/screenrc:/etc/screenrc:g;
-		s:/usr/local/screens:/var/run/screen:g;
-		s:/local/etc/screenrc:/etc/screenrc:g;
-		s:/etc/utmp:/var/run/utmp:g;
-		s:/local/screens/S-:/var/run/screen/S-:g" doc/screen.1 || \
-			die "sed doc/screen.1 failed"
+		-e "s:/usr/local/etc/screenrc:/etc/screenrc:g" \
+		-e "s:/usr/local/screens:/var/run/screen:g" \
+		-e "s:/local/etc/screenrc:/etc/screenrc:g" \
+		-e "s:/etc/utmp:/var/run/utmp:g" \
+		-e "s:/local/screens/S-:/var/run/screen/S-:g" \
+		doc/screen.1 \
+		|| die "sed doc/screen.1 failed"
 
 	# configure as delivered with screen is made with autoconf-2.5
-	WANT_AUTOCONF=2.5 autoconf
+	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
 }
 
 src_compile() {
-	local myconf
-
 	addpredict "`tty`"
 	addpredict "${SSH_TTY}"
 
@@ -64,7 +63,8 @@ src_compile() {
 		$(use_enable pam) \
 		--with-socket-dir=/var/run/screen \
 		--with-sys-screenrc=/etc/screenrc \
-		--enable-rxvt_osc ${myconf} || die "econf failed"
+		--enable-rxvt_osc \
+		|| die "econf failed"
 
 	# Second try to fix bug 12683, this time without changing term.h
 	# The last try seemed to break screen at run-time.
@@ -76,7 +76,7 @@ src_compile() {
 
 src_install() {
 	dobin screen || die "dobin failed"
-	keepdir /var/run/screen
+	keepdir /var/run/screen || die "keepdir failed"
 	fowners root:utmp /{usr/bin,var/run}/screen || die "fowners failed"
 	fperms 2755 /usr/bin/screen || die "fperms failed"
 
@@ -89,11 +89,11 @@ src_install() {
 
 	use pam && {
 		insinto /etc/pam.d
-		newins ${FILESDIR}/screen.pam.system-auth screen \
-			|| die "newins failed"
+		newins ${FILESDIR}/screen.pam.system-auth screen || die "newins failed"
 	}
 
-	dodoc README ChangeLog INSTALL TODO NEWS* patchlevel.h \
+	dodoc \
+		README ChangeLog INSTALL TODO NEWS* patchlevel.h \
 		doc/{FAQ,README.DOTSCREEN,fdpat.ps,window_to_display.ps} \
 		|| die "dodoc failed"
 
