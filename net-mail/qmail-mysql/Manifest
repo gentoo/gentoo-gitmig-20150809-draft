@@ -1,6 +1,3 @@
-MD5 aaab984437497b31ff784dfb2fe1103a ChangeLog 553
-MD5 8cbbebf383f4ddde46c482d8c30f1de2 qmail-mysql-1.03.ebuild 8592
-MD5 7dbe164188aa14fd05fa2c26d1095a9a files/digest-qmail-mysql-1.03 385
 MD5 c378c5845848ee31d70f0d05cbcf86be files/1.03/dot_qmail 12
 MD5 5cb0c8c4c9feeee55362d77a99076c2f files/1.03/99qmail 44
 MD5 b24f4dbd450d2d4eddc75ba19cebb915 files/1.03/defaultdelivery 34
@@ -11,3 +8,6 @@ MD5 23a2babf3049fe012de21c17e550b3e5 files/1.03/run-qmailsend 29
 MD5 834dad5113515d0f00981fdc1d07fa84 files/1.03/run-qmailsendlog 96
 MD5 aa0823cdce32c502c856664c8b0ce775 files/1.03/run-qmailsmtpd 231
 MD5 f43900d79a0aacb5e0d71b0bb6c06fea files/1.03/run-qmailsmtpdlog 97
+MD5 7dbe164188aa14fd05fa2c26d1095a9a files/digest-qmail-mysql-1.03 385
+MD5 aaab984437497b31ff784dfb2fe1103a ChangeLog 553
+MD5 90b95837c60f389c54cbc4836bc47f09 qmail-mysql-1.03.ebuild 8588

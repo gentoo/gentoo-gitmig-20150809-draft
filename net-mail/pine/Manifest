@@ -16,8 +16,8 @@ MD5 e11e8fb4fba9fc54b7c0f302d79458bf files/pine-4.40-boguswarning.patch 512
 MD5 6fca405df4fd22a5708ddf83e8081716 files/pine-4.40-lockfile-perm.patch 932
 MD5 f8bcd68c09b6f41aa63dd617c8d8a62a files/digest-pine-4.53-r4 141
 MD5 48a7892ba081a1a408fd557bb42610c6 pine-4.50-r4.ebuild 3664
-MD5 37994e5c4bd29aa962d7aabd71b867a3 pine-4.51.ebuild 3288
-MD5 1c4d008a28cd63b6c397dafa0984d2ba pine-4.52.ebuild 4962
-MD5 55a85b05dbce06004087ea9d23396847 pine-4.56.ebuild 3420
-MD5 cbd092f16cb8ce1a91c1a730c0d9f30a ChangeLog 6579
+MD5 619b7b1eb30ba29e5d464f089abf02ed pine-4.51.ebuild 3285
+MD5 f05339b6cbd7edfd6e9b4c721a8090eb pine-4.52.ebuild 4959
+MD5 b6e96e1f1596ec6d6c6ce56690d22a86 pine-4.56.ebuild 3419
+MD5 29c9213da4656d03cba0f8ba2b8ff776 ChangeLog 6669
 MD5 37003d87e8c831b47aa8d49b6d31475b pine-4.53-r4.ebuild 3394
