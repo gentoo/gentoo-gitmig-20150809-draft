@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.48 2003/07/21 21:19:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.49 2003/08/04 21:13:03 gmsoft Exp $
 
 *imagemagick-5.5.7-r1 (22 Jul 2003)
 
@@ -18,6 +18,9 @@
   fixed freetype DEPEND
 
 *imagemagick-5.5.6-r1 (12 May 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> imagemagick-5.5.6-r1.ebuild :
+  Marked stable on hppa.
 
   12 May 2003; Graham Forest <vladimir@gentoo.org>
   imagemagick-5.5.6-r1.ebuild:
