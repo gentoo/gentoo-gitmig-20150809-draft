@@ -13,5 +13,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/perl-5 
 	dev-perl/Crypt-OpenSSL-Random 
 	dev-libs/openssl"
+KEYWORDS="x86"
+SLOT="0"
 
 	mydoc="rfc*.txt"
