@@ -123,6 +123,7 @@
 *=sys-devel/binutils-2.12.90.0.7
 *=sys-devel/gcc-2.95.3-r7
 *~sys-libs/glibc-2.2.5
+*sys-apps/texinfo
 
 # Only 2.4.19 is patched for ppc
 # temporarily commented out (debugging)
