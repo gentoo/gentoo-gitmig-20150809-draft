@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-4.1.ebuild,v 1.3 2004/10/26 17:04:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-4.1.ebuild,v 1.4 2004/11/20 11:37:14 kugelfang Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cmbi.kun.nl/pub/molgraph/${PN}/${MY_P}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="opengl"
 
 DEPEND="virtual/libc
