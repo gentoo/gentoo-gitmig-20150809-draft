@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.6.2.ebuild,v 1.1 2005/03/01 12:10:50 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.6.2-r1.ebuild,v 1.1 2005/03/07 03:04:15 leonardop Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://developer.gnome.org/projects/gap/"
 LICENSE="LGPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="doc static"
 RESTRICT="maketest"
 
 RDEPEND=">=gnome-base/gail-1.3
@@ -20,11 +20,10 @@ RDEPEND=">=gnome-base/gail-1.3
 	dev-libs/popt
 	>=gnome-base/orbit-2
 	virtual/x11"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
 
-#MAKEOPTS="${MAKEOPTS} -j1"
-
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+G2CONF="${G2CONF} $(use_enable static)"
