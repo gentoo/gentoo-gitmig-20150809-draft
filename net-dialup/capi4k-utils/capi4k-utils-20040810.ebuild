@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20040810.ebuild,v 1.1 2004/09/24 00:00:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20040810.ebuild,v 1.2 2004/10/05 12:03:07 dragonheart Exp $
 
 YEAR_PV=${PV:0:4}
 MON_PV=${PV:4:2}
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/${MY_P}.tar.gz ftp://ftp.in-berli
 HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/linux-sources
