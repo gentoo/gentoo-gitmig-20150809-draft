@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/horde-turba-1.2.1.ebuild,v 1.2 2003/10/18 19:03:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/horde-turba-1.2.1.ebuild,v 1.3 2003/12/04 17:50:14 mholzer Exp $
+
+inherit webapp-apache
 
 DESCRIPTION="Turba ${PV} is the Horde address book / contact management program"
 HOMEPAGE="http://www.horde.org"
@@ -14,19 +16,12 @@ RDEPEND=">=net-www/horde-2.2.4"
 IUSE=""
 S=${WORKDIR}/${MY_P}
 
-find_http_root() {
-	export HTTPD_ROOT=`grep apache /etc/passwd | cut -d: -f6`/htdocs
-	if [ -z "${HTTPD_ROOT}" ]; then
-		eerror "HTTPD_ROOT is null! Using defaults."
-		eerror "You probably want to check /etc/passwd"
-		HTTPD_ROOT="/home/httpd/htdocs"
-	fi
-
-	export REGISTRY=${HTTPD_ROOT}/horde/config/registry.php
-	[ -f ${REGISTRY} ] || REGISTRY=${HTTPD_ROOT}/horde/config/registry.php.dist
-}
+webapp-detect || NO_WEBSERVER=1
 
 pkg_setup() {
+	webapp-pkg_setup "${NO_WEBSERVER}"
+	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
+
 	GREPSQL=`grep sql /var/db/pkg/dev-php/mod_php*/USE`
 	GREPLDAP=`grep ldap /var/db/pkg/dev-php/mod_php*/USE`
 	if [ "${GREPSQL}" != "" ] || [ "${GREPLDAP}" != "" ] ; then
@@ -35,31 +30,31 @@ pkg_setup() {
 		eerror "Missing SQL or LDAP support in mod_php !"
 		die "aborting..."
 	fi
-	find_http_root
+
+	export REGISTRY=${HTTPD_ROOT}/horde/config/registry.php
+	[ -f ${REGISTRY} ] || REGISTRY=${HTTPD_ROOT}/horde/config/registry.php.dist
+
 	[ -f ${REGISTRY} ] || die "${REGISTRY} not found"
 }
 
 src_install () {
-	# detecting apache usergroup
-	GID=`grep apache /etc/group |cut -d: -f3`
-	if [ -z "${GID}" ]; then
-		einfo "Using default GID of 81 for Apache"
-		GID=81
-	fi
+	local DocumentRoot=${HTTPD_ROOT}
+	local destdir=${DocumentRoot}/horde/turba
 
-	find_http_root
 	dodoc COPYING README docs/*
 	rm -rf COPYING README docs
-	dodir ${HTTPD_ROOT}/horde/turba
-	cp -r . ${D}/${HTTPD_ROOT}/horde/turba
+
+	dodir ${destdir}
+	cp -r . ${D}${destdir}
+	cd ${D}/${HTTPD_ROOT}/horde
 
 	# protecting files
-	chown -R apache.${GID} ${D}/${HTTPD_ROOT}/horde/turba
-	find ${D}/${HTTPD_ROOT}/horde/turba/ -type f -exec chmod 0640 {} \;
-	find ${D}/${HTTPD_ROOT}/horde/turba/ -type d -exec chmod 0750 {} \;
+	chown -R ${HTTPD_USER}:${HTTPD_GROUP} turba
+	find ${D}/${destdir} -type f -exec chmod 0640 {} \;
+	find ${D}/${destdir} -type d -exec chmod 0750 {} \;
 }
 
 pkg_postinst() {
 	find_http_root
-	einfo "Please read ${HTTPD_ROOT}/horde/turba/docs/INSTALL !"
+	einfo "Please read /usr/share/doc/${PF}/INSTALL.gz !"
 }

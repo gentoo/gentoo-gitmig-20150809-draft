@@ -1,6 +1,9 @@
 # ChangeLog for net-www/horde-turba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/ChangeLog,v 1.7 2003/10/18 19:03:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/ChangeLog,v 1.8 2003/12/04 17:50:14 mholzer Exp $
+
+  04 Dec 2003; Martin Holzer <mholzer@gentoo.org> horde-turba-1.2.1.ebuild:
+  added webapps-apache
 
   19 Oct 2003; Martin Holzer <mholzer@gentoo.org> horde-turba-1.2.1.ebuild:
   marked x86 stable.
