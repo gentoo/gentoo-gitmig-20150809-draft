@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 85974165f6fb56380f6cf1803aa5d120 emboss-2.9.0.ebuild 1783
-MD5 5c598aa55233741c4d6b2bbffbc8f551 ChangeLog 2989
+MD5 4f9f3650e9ece15abd80d61255cdfd51 ChangeLog 3080
+MD5 70894270c33560a40dac665ec27ea1c3 emboss-2.9.0.ebuild 1792
 MD5 6051afb1f26bf343082490327784b958 metadata.xml 1013
-MD5 68e42b6377bb0887a0aeac76cf530854 files/digest-emboss-2.9.0 66
 MD5 ef2dfa3d13837026f59c0cf5f04f67c5 files/22emboss-r1 110
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy39QI1lqEGTUzyQRAqGAAKDZ6GomC9XikhbdugjHGtOqCbtfBgCeJ/IV
-CBBR+GYPZL2iB9CniwPkkj4=
-=Wqi/
------END PGP SIGNATURE-----
+MD5 68e42b6377bb0887a0aeac76cf530854 files/digest-emboss-2.9.0 66
