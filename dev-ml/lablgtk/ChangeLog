@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.24 2004/08/14 01:36:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.25 2004/08/23 18:13:33 mattam Exp $
+
+  23 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> lablgtk-1.2.5.ebuild,
+  lablgtk-1.2.6.ebuild:
+  Compiles perfectly fine with ocaml-3.08
 
   13 Aug 2004; Jason Wever <weeve@gentoo.org> lablgtk-2.4.0.ebuild:
   Added ~sparc keyword.
