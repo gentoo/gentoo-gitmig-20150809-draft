@@ -1,0 +1,12 @@
+# ChangeLog for dev-perl/Apache-Session
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.1 2002/12/14 21:52:48 mkennedy Exp $
+
+*Apache-Session-1.54 (14 Dec 2002)
+
+  14 Dec 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  Apache-Session-1.54.ebuild, ChangeLog,
+  files/digest-Apache-Session-1.54 :
+	
+  Initial import.
+
