@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.20020412.ebuild,v 1.1 2002/04/12 15:46:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.20020412.ebuild,v 1.2 2002/04/13 17:22:09 azarah Exp $
 
 MY_P=${PN}${PV}
 MY_P=${MY_P/.2/-2}
@@ -13,12 +13,11 @@ HOMEPAGE="http://divx.euro.ru/"
 
 DEPEND=">=media-libs/divx4linux-20011025
 	media-libs/jpeg
+	media-libs/win32codecs
 	sdl? ( >=media-libs/libsdl-1.2.2 )
-	avi? ( media-libs/win32codecs )
 	qt? ( =x11-libs/qt-2* )
 	nas? ( >=media-libs/nas-1.4.2 )
 	oggvorbis? ( media-libs/libvorbis )"
-
 
 src_compile() {
 
@@ -46,10 +45,6 @@ src_compile() {
 		|| myconf="${myconf} --disable-sdl --disable-sdltest"
 	
 	use nas && LDFLAGS="-L/usr/X11R6/lib -lXt"
-
-	use avi	\
-		&& myconf="${myconf} --enable-win32"	\
-		|| myconf="${myconf} --disable-win32"
 
 	use oggvorbis	\
 		&& myconf="${myconf} --enable-vorbis"	\
