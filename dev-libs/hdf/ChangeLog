@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/hdf
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/ChangeLog,v 1.1 2003/12/17 08:10:54 phosphan Exp $
+
+*hdf-4.2.0 (17 Dec 2003)
+
+  17 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> hdf-4.2.0.ebuild:
+  Initial import. Let's see if it can work with external netCDF.
+
