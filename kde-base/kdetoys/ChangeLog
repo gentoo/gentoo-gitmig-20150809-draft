@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.20 2003/02/12 06:58:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.21 2003/02/12 17:50:36 hannes Exp $
+
+  12 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdetoys-3.0.2.ebuild,
+  kdetoys-3.0.3.ebuild, kdetoys-3.1_rc6.ebuild: removed old ebuilds
 
   01 Feb 2003; Jack Morgan <jmorgan@gentoo.org> kdetoys-3.1.ebuild:
   added ~sparc to keywords
