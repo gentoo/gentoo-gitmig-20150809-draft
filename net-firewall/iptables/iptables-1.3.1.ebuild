@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1.ebuild,v 1.2 2005/03/09 16:37:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1.ebuild,v 1.3 2005/03/28 00:08:57 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,7 +43,9 @@ pkg_setup() {
 
 
 src_unpack() {
-	unpack ${P}.tar.bz2 ${L7_P}.tar.gz ; cd ${S}
+	unpack ${P}.tar.bz2
+	use extensions && unpack ${L7_P}.tar.gz
+	cd ${S}
 
 	EPATCH_OPTS="-p0" \
 	epatch ${FILESDIR}/${PV}-files/install_ipv6_apps.patch.bz2
