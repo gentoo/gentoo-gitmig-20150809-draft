@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.12.2-r1.ebuild,v 1.1 2001/10/06 14:36:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.12.2-r1.ebuild,v 1.2 2001/10/07 09:04:01 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -21,11 +21,13 @@ DEPEND=">=net-www/mozilla-0.9.4-r2
 
 src_compile() {
     local myconf
+
     if [ -z "`use nls`" ] ; then
       myconf="--disable-nls"
     fi
 
-    ./configure --prefix=/usr --sysconfdir=/etc/gnome  			\
+    ./configure --prefix=/usr						\
+		--sysconfdir=/etc  					\
 		--host=${CHOST}                                        	\
 		--with-mozilla-libs=${MOZILLA_FIVE_HOME}		\
 		--with-mozilla-includes=${MOZILLA_FIVE_HOME}/include	\
@@ -38,6 +40,8 @@ src_compile() {
 
 src_install () {
     gconftool --shutdown
+
     make DESTDIR=${D} install || die
+
     dodoc AUTHORS ChangeLog COPYING* FAQ NEWS README TODO THANKS
 }
