@@ -1,8 +1,11 @@
 # ChangeLog for net-libs/linc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.23 2003/07/01 17:12:25 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.24 2003/07/01 18:39:09 gmsoft Exp $
 
 *linc-1.0.3 (23 jun 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> linc-1.0.3.ebuild :
+  Added hppa to KEYWORDS.
 
   01 Jul 2003; Todd Sunderlin <todd@gentoo.org> linc-1.0.3.ebuild:
   set stable on sparc
