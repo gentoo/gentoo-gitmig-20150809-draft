@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.1 2004/11/29 19:11:47 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.2 2005/01/01 04:22:39 eradicator Exp $
 
 inherit java gcc
 
@@ -85,7 +85,7 @@ src_install () {
 	set_java_env ${FILESDIR}/${VMHANDLE}
 
 	# Fix for bug #26629.
-	if [ "${PROFILE_ARCH}" = "sparc64" ]
+	if [ "${PROFILE_ARCH}" = "sparc64" -o "${PROFILE_ARCH}" = "sparc64-multilib" ]
 	then
 		sed -i -e 's/\/\//\/sparc\//g' \
 			${D}/etc/env.d/java/20blackdown-jre-1.4.1
