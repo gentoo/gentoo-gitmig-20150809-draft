@@ -1,0 +1,15 @@
+# ChangeLog for dev-ruby/ruby-ldap
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.1 2003/04/14 11:40:00 twp Exp $
+
+*ruby-ldap-0.8.0 (14 Apr 2003)
+
+  14 Apr 2003; Tom Payne <twp@gentoo.org> ruby-ldap-0.8.0.ebuild :
+
+  Initial commit.
+
+*ruby-ldap-0.7.2 (14 Apr 2003)
+
+  14 Apr 2003; Tom Payne <twp@gentoo.org> ruby-ldap-0.7.2.ebuild :
+
+  Initial commit. Ebuild submitted by Miles Egan (bug # 19170).
