@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.4 2002/07/29 16:13:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.5 2002/08/02 04:44:53 seemant Exp $
 
 
 # ebuild for Glorious Glasgow Haskell
@@ -23,8 +23,8 @@
 #
 # USE variable summary:
 #   opengl - Build HOpenGL (OpenGL binding for Haskell).
-#   doc    - Build extra documenation from DocBook sources, namely
-#            the GHC User's Guide and the hslibs docs. In HTML format.
+#   doc	- Build extra documenation from DocBook sources, namely
+#		the GHC User's Guide and the hslibs docs. In HTML format.
 #   tetex  - Build the above docs as PostScript as well.
 #
 # 2002-05-22  Sven Moritz Hallberg <pesco@gmx.de>
@@ -40,7 +40,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 # FIXME: Add USE support for parallel haskell (requires PVM)
-#        Get PVM from ftp://ftp.netlib.org/pvm3/
+#	Get PVM from ftp://ftp.netlib.org/pvm3/
 DEPEND=">=sys-devel/perl-5.6.1
 	>=sys-devel/gcc-2.95.3
 	>=sys-devel/make-3.79.1
@@ -93,8 +93,8 @@ if test -z "${GHC}"; then
 	echo I will bootstrap from HC files.
 	boot_from_hc=yes
 
-    # This is the version of our "base GHC", that is, the one we will use
-    # for the first build from Haskell source. It's the stage 1's
+	# This is the version of our "base GHC", that is, the one we will use
+	# for the first build from Haskell source. It's the stage 1's
 	# version if there is no outside GHC, or that one's version
 	# otherwise (see else clause below).
 	BASE_GHC_VERSION=${STAGE1_PV}
@@ -116,8 +116,8 @@ fi
 # Determine which source files to download:
 #  - We always need the source distribution for the final version.
 #  - If bootstrap from HC files is required:
-#     - We need the corresponding source distribution.
-#     - We need a set of HC files suitable for our architecture.
+#	 - We need the corresponding source distribution.
+#	 - We need a set of HC files suitable for our architecture.
 
 # List of platforms for which registerised HC files are available.
 HC_PLATS="x86 sparc"
@@ -193,14 +193,14 @@ src_unpack() {
 src_compile() {
 	if test x$boot_from_hc = xyes; then
 		echo ">>> Bootstrapping GHC ${STAGE1_PV} from HC files"
-		build_stage1        # bootstrap from HC files
+		build_stage1	# bootstrap from HC files
 	fi
 	if test x$need_stage2 = xyes; then
 		echo ">>> Bootstrapping intermediate GHC ${PV} using GHC ${BASE_GHC_VERSION}"
-		build_stage2        # bootstrap intermediate GHC
+		build_stage2	# bootstrap intermediate GHC
 	fi
 	echo ">>> Building complete GHC ${PV} using GHC ${PV} itself"
-	build_stage3            # final build
+	build_stage3		# final build
 }
 
 src_install() {

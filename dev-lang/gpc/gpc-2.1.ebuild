@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.4 2002/07/22 08:02:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.5 2002/08/02 04:44:53 seemant Exp $
 
 S="${WORKDIR}/gcc-2.95.3"
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 	#comment out read to let ebuild continue
 	cp config-lang.in config-lang.in.orig
-    sed -e "s:read:#read:" config-lang.in.orig > config-lang.in
+	sed -e "s:read:#read:" config-lang.in.orig > config-lang.in
 
 	#this fix seems to be specific to gentoo glibc
 	#one of the patches to glibc-2.2.5-r4 was causing problems
@@ -52,12 +52,12 @@ src_compile() {
 
 	#lets reduce optimisation somewhat
 	export CFLAGS="${CFLAGS/-O?/-O2}"
-    export CXXFLAGS="${CXXFLAGS/-O?/-O2}"
+	export CXXFLAGS="${CXXFLAGS/-O?/-O2}"
 
 	#it also looks like gpc does not like -pipe
 	#resolved!
-    #export CFLAGS="${CFLAGS/-pipe/}"
-    #export CXXFLAGS="${CXXFLAGS/-pipe/}"
+	#export CFLAGS="${CFLAGS/-pipe/}"
+	#export CXXFLAGS="${CXXFLAGS/-pipe/}"
 
 	./configure --enable-languages=pascal\
 		--host=${CHOST} --build=${CHOST} --target=${CHOST} \

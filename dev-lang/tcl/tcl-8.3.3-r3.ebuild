@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r3.ebuild,v 1.3 2002/07/23 05:08:47 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r3.ebuild,v 1.4 2002/08/02 04:44:54 seemant Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -46,11 +46,11 @@ src_install() {
 	
 	# fix the tclConfig.sh to eliminate refs to the build directory
 	sed -e "s,^TCL_BUILD_LIB_SPEC='-L${S}/unix,TCL_BUILD_LIB_SPEC='-L/usr/lib," \
-	    -e "s,^TCL_SRC_DIR='${S}',TCL_SRC_DIR='/usr/lib/tcl${v1}/include'," \
-	    -e "s,^TCL_BUILD_STUB_LIB_SPEC='-L${S}/unix,TCL_BUILD_STUB_LIB_SPEC='-L/usr/lib," \
-	    -e "s,^TCL_BUILD_STUB_LIB_PATH='${S}/unix,TCL_BUILD_STUB_LIB_PATH='/usr/lib," \
-	    -e "s,^TCL_LIB_FILE='libtcl8.3..TCL_DBGX..so',TCL_LIB_FILE=\"libtcl8.3\$\{TCL_DBGX\}.so\"," \
-	    ${D}/usr/lib/tclConfig.sh > ${D}/usr/lib/tclConfig.sh.new
+		-e "s,^TCL_SRC_DIR='${S}',TCL_SRC_DIR='/usr/lib/tcl${v1}/include'," \
+		-e "s,^TCL_BUILD_STUB_LIB_SPEC='-L${S}/unix,TCL_BUILD_STUB_LIB_SPEC='-L/usr/lib," \
+		-e "s,^TCL_BUILD_STUB_LIB_PATH='${S}/unix,TCL_BUILD_STUB_LIB_PATH='/usr/lib," \
+		-e "s,^TCL_LIB_FILE='libtcl8.3..TCL_DBGX..so',TCL_LIB_FILE=\"libtcl8.3\$\{TCL_DBGX\}.so\"," \
+		${D}/usr/lib/tclConfig.sh > ${D}/usr/lib/tclConfig.sh.new
 	mv ${D}/usr/lib/tclConfig.sh.new ${D}/usr/lib/tclConfig.sh
 	
 	# install private headers

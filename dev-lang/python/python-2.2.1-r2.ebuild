@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r2.ebuild,v 1.3 2002/07/21 00:54:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r2.ebuild,v 1.4 2002/08/02 04:44:54 seemant Exp $
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -36,7 +36,7 @@ src_compile() {
 	t=${S}/Makefile.pre.in
 	cp $t $t.orig || die
 	sed 's:install-platlib.*:& --install-scripts=$(BINDIR):' $t.orig > $t
-        
+	
 	local myopts
 	#if we are creating a new build image, we remove the dependency on g++
 	if [ "`use build`" -a ! "`use bootstrap`" ]

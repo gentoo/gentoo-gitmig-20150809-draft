@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r7.ebuild,v 1.4 2002/07/23 04:40:42 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r7.ebuild,v 1.5 2002/08/02 04:44:54 seemant Exp $
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -36,10 +36,10 @@ src_compile() {
 	t=${S}/Makefile.pre.in
 	cp $t $t.orig || die
 	sed 's:install-platlib.*:& --install-scripts=$(BINDIR):' $t.orig > $t
-        
+	
 	# adjust Setup to include the various modules we need
 	cd ${S}
-        # turn **on** shared
+	# turn **on** shared
 	scmd="s:#\(\*shared\*\):\1:;"
 	# adjust for USE readline
 	if use readline; then
@@ -79,11 +79,11 @@ src_compile() {
 	# no USE vars to switch off these adjustments:
 	scmd="$scmd  s:#\(_locale .*\):\1:;"  # access to ISO C locale support
 	scmd="$scmd  s:#\(syslog .*\):\1:;"   # syslog daemon interface
-	scmd="$scmd  s:#\(zlib .*\):\1:;"     # This require zlib 1.1.3 (or later).
+	scmd="$scmd  s:#\(zlib .*\):\1:;"	 # This require zlib 1.1.3 (or later).
 	scmd="$scmd  s:#\(termios .*\):\1:;"  # Steen Lumholt's termios module
 	scmd="$scmd  s:#\(resource .*\):\1:;" # Jeremy Hylton's rlimit interface
 	sed "$scmd" Modules/Setup.dist > Modules/Setup
-       
+	   
 	local myopts
 	#if we are creating a new build image, we remove the dependency on g++
 	if [ "`use build`" -a ! "`use bootstrap`" ]

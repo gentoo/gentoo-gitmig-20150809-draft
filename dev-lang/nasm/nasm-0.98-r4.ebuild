@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98-r4.ebuild,v 1.3 2002/07/23 04:11:56 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98-r4.ebuild,v 1.4 2002/08/02 04:44:54 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="groovy little assembler"
@@ -20,7 +20,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86"
 
-src_compile() {                           
+src_compile() {			   
 	./configure --prefix=/usr || die
 
 	if [ "`use build`" ]; then

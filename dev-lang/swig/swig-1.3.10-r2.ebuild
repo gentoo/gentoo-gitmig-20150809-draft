@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r2.ebuild,v 1.3 2002/07/23 05:02:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r2.ebuild,v 1.4 2002/08/02 04:44:54 seemant Exp $
 
 S=${WORKDIR}/SWIG-${PV}
 DESCRIPTION="Simplied Wrapper and Interface Generator"
@@ -26,17 +26,17 @@ src_compile() {
 	local myc
 
 	use python && myc="$myc --with-py" \
-	           || myc="$myc --without-py"
+		   || myc="$myc --without-py"
 	use java && myc="$myc --with-java=$JAVA_HOME --with-javaincl=${JAVA_HOME}/include" \
-	         || myc="$myc --without-java"
+		 || myc="$myc --without-java"
 	use ruby && myc="$myc --with-ruby=/usr/bin/ruby" \
-	         || myc="$myc --without-ruby"
+		 || myc="$myc --without-ruby"
 	use guile && myc="$myc --with-guile" \
-	          || myc="$myc --without-guile"
+		  || myc="$myc --without-guile"
 	use tcltk && myc="$myc --with-tcl" \
-	          || myc="$myc --without-tcl"
+		  || myc="$myc --without-tcl"
 	use perl && myc="$myc --with-perl" \
-	         || myc="$myc --without-perl"
+		 || myc="$myc --without-perl"
 	
 	unset CXXFLAGS
 	unset CFLAGS

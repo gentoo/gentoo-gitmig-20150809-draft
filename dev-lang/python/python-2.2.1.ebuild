@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1.ebuild,v 1.4 2002/07/23 04:40:42 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1.ebuild,v 1.5 2002/08/02 04:44:54 seemant Exp $
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -35,21 +35,21 @@ src_compile() {
 	t=${S}/Makefile.pre.in
 	cp $t $t.orig || die
 	sed 's:install-platlib.*:& --install-scripts=$(BINDIR):' $t.orig > $t
-        
-        # turn **on** shared
+	
+	# turn **on** shared
 		echo '*shared*' >> Modules/Setup.local
-       
+	   
 	local myopts
 	#if we are creating a new build image, we remove the dependency on g++
 	if [ "`use build`" -a ! "`use bootstrap`" ]
 	then
 		myopts="--with-cxx=no"
 	fi
-        
+	
 	./configure \
 		--prefix=/usr \
 		--without-libdb \
-                --with-fpectl \
+		--with-fpectl \
 		--infodir='${prefix}'/share/info \
 		--mandir='${prefix}'/share/man $myopts || die
 	emake || die "Parallel make failed"
@@ -69,7 +69,7 @@ src_install() {
 	newexe ${FILESDIR}/python-config-${PYVER} python-config
 
 	# seems like the build do not install Makefile.pre.in anymore
-        # it probably shouldn't - use DistUtils, people!
+	# it probably shouldn't - use DistUtils, people!
 	insinto /usr/lib/python${PYVER}/config
 	doins ${S}/Makefile.pre.in
 
