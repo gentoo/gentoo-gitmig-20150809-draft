@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.67 2003/07/19 03:11:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.68 2003/07/21 07:20:39 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -24,6 +24,7 @@ function runningunstable() { has ~${ARCH} ${ACCEPT_KEYWORDS} > /dev/null ; }
 
 [ -z "${MY_PN}" ] && MY_PN=php
 [ -z "${MY_P}" ] && MY_P=${MY_PN}-${PV}
+[ -z "${MY_PF}" ] && MY_PF=${MY_P}-${PR}
 [ -z "${HOMEPAGE}" ]	&& HOMEPAGE="http://www.php.net/"
 [ -z "${LICENSE}" ]	&& LICENSE="PHP"
 [ -z "${PROVIDE}" ]	&& PROVIDE="virtual/php"
@@ -33,6 +34,8 @@ if [ -z "${SRC_URI}" ]; then
 	#Remove the DB4 stuff temporarily
 	#mirror://gentoo/${MY_P}-db4.diff.gz 
 fi
+# A patch for PHP for security
+SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-fopen-url-secure.patch"
 
 # Where we work
 S=${WORKDIR}/${MY_P}
@@ -444,6 +447,9 @@ php_src_install() {
 		#( cd ${D} ; ln -snf ${PHPEXTDIR}/java.so ${D}/${PHPEXTDIR}/libphp_java.so )
 	fi
 
+	#url_fopen
+	patch ${phpinisrc} <${DISTDIR}/${MY_P}-fopen-url-secure.patch
+
 	# A lot of ini file funkiness
 	insinto ${PHPINIDIRECTORY}
 	newins ${phpinisrc} ${PHPINIFILENAME}
@@ -459,4 +465,15 @@ php_pkg_preinst() {
 
 php_pkg_postinst() {
 	einfo "The INI file for this build is ${PHPINIDIRECTORY}"
+}
+
+php_securityupgrade() {
+	if has_version "<${PF}"; then
+		ewarn "This is a security upgrade for PHP!"
+		ewarn "Please ensure that you apply any changes to the apache and PHP"
+		ewarn "configutation files!"
+	else
+		einfo "This is a security upgrade for PHP!"
+		einfo "However it is not critical for your machine"
+	fi
 }
