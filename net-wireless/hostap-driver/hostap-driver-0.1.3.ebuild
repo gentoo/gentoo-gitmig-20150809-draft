@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.3.ebuild,v 1.2 2004/04/27 22:11:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.3.ebuild,v 1.3 2004/06/01 15:00:53 latexer Exp $
 
 # pcmcia eclass inherits eutils
 inherit pcmcia eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://hostap.epitest.fi/"
 SRC_URI="${SRC_URI} http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="${IUSE} hostap-nopci hostap-noplx"
 DEPEND=">=net-wireless/wireless-tools-25"
 RDEPEND="!net-wireless/hostap"
