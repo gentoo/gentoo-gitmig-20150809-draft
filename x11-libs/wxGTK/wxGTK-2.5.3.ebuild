@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.3.ebuild,v 1.1 2004/11/13 03:32:58 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.3.ebuild,v 1.2 2004/11/13 17:13:58 pythonhead Exp $
 
 inherit eutils
 
@@ -58,13 +58,12 @@ src_compile() {
 	myconf="${myconf} `use_with opengl`"
 	myconf="${myconf} --with-gtk"
 	myconf="${myconf} `use_enable debug`"
-	myconf="${myconf} --enable-monolithic"
 
 	if ! use no_wxgtk1 ; then
 		mkdir build_gtk
 		einfo "Building gtk version"
 		cd build_gtk
-		../configure ${myconf} `use_with odbc`\
+		../configure ${myconf} --disable-gtk2 `use_with odbc`\
 			--host=${CHOST} \
 			--prefix=/usr \
 			--infodir=/usr/share/info \
