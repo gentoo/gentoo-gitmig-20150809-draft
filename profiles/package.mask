@@ -522,3 +522,4 @@ dev-lang/tcl-tk
 # >ncurses-5.2-r5 causes an incompatibility here
 # masking until that can be resolved
 =sys-devel/gdb-5.1.1
+>=sys-libs/ncurses-5.2.20020112a
