@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/revdep-rebuild,v 1.3 2003/10/19 20:52:54 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/revdep-rebuild,v 1.4 2003/12/16 23:56:42 vapier Exp $
 
 # revdep-rebuild: Reverse dependency rebuilder.
 # Author: Stanislav Brabec <utx@gentoo.org>
@@ -338,7 +338,7 @@ wait
 
 if [ "$(cat $LLIST.6_status)" -gt 0 ] ; then
 	echo
-	echo -e "${RD}Result is not OK, you have following chances:${NO}"
+	echo -e "${RD}Result is not OK, you have following choices:${NO}"
 	echo "- if emerge failed during build, fix the problems and re-run revdep-rebuild"
 	echo "    or"
 	echo "- use -X or --package-names as first argument (try to rebuild package, not exact"
