@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.4.1.ebuild,v 1.1 2003/08/04 09:52:20 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.4.1.ebuild,v 1.2 2003/08/04 11:41:36 taviso Exp $
 
 DESCRIPTION="Command line To Do List manager"
 HOMEPAGE="http://www.rc0.org.uk/tdl/"
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
 	local i
 	
-	dodoc COPYING README NEWS
+	dodoc COPYING README NEWS tdl.txt ${FILESDIR}/screenshot.png
 	doinfo tdl.info
 	dohtml tdl.html
 	
