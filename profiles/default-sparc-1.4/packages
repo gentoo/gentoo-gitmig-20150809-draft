@@ -36,11 +36,9 @@
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
 >=x11-base/xfree-4.2.1
-# sash - static shell for system recovery
 *app-shells/sash
 *sys-devel/perl
 *app-editors/nano
-#no real cost for nano, since we already have ncurses
 *net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/rsync
@@ -60,7 +58,6 @@
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
-#*sys-apps/grub
 *sys-apps/gzip
 *sys-apps/hdparm
 *sys-apps/iptables
@@ -105,22 +102,8 @@
 *sys-libs/zlib
 *net-misc/openssh
 *sys-apps/devfsd
-# Please edit the file packages.sparc, it will be included in
-# packages the next time you run ../default-sparc-1.0/scripts/build.rel
-#
-# SPARC specific packages
 *sys-apps/sparc-utils
 *sys-apps/silo
 *dev-util/dialog
-# Kernel compiler
-# Not needed on sparc32
-# *sys-devel/egcs64-sparc
 
-# VNC is broken on x86, maintainer uses i386 specific makefile
-!net-misc/vnc
 
-# Get a decent editor - BROKEN
-#*app-editors/levee
-
-# Sed replacement - POSTPONED
-#*sys-apps/supersed
