@@ -1,5 +1,6 @@
 MD5 69bc8d998776c53a123bbe3562140c22 eggdrop-1.6.15.ebuild 1612
 MD5 4950d111dfcccb977880b70569121318 ChangeLog 683
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 e410ac6d9adce910c8f37daf99a4b0e1 files/eggdrop-1.6.15-config.patch 6182
 MD5 de237a9eaabae91f41afbd6d18448320 files/eggdrop-1.6.15-configure-in.patch 575
 MD5 86513844ef13a664bc5bf7d1a68d2d59 files/eggdrop-1.6.15-potential-undef-tm-struct.patch 523
