@@ -1,8 +1,8 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.20 2002/12/25 11:27:25 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.21 2002/12/25 12:16:15 raker Exp $
 
-courier-imap-1.6.1 (12 Dec 2002)
+*courier-imap-1.6.1 (12 Dec 2002)
 
   25 Dec 2002; Nick Hadaway <raker@gentoo.org> courier-imap-1.6.1.ebuild,
   files/gentoo-imapd-1.6.1.rc, files/gentoo-imapd-ssl-1.6.1.rc,
@@ -15,7 +15,7 @@ courier-imap-1.6.1 (12 Dec 2002)
   Version bump.  Added a test for vpopmail so proper configure options
   are passed.
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *courier-imap-1.5.3 (25 Sep 2002)
 
