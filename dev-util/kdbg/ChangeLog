@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.13 2003/07/12 13:23:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.14 2003/09/09 14:07:38 caleb Exp $
+
+*kdbg-1.2.9 (09 Sep 2003)
+
+  09 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdbg-1.2.9.ebuild:
+  New security/bugfix release - bug #28220
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> kdbg-1.2.5.3.ebuild :
   Marked ppc stable
