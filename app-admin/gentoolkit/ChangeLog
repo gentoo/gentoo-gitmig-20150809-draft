@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.81 2003/05/25 17:36:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.82 2003/05/26 15:52:01 agriffis Exp $
+
+*gentoolkit-0.1.25 (26 May 2003)
+
+  26 May 2003; Aron Griffis <agriffis@gentoo.org> gentoolkit-0.1.25.ebuild,
+  files/scripts/echangelog:
+  Fix bug 21022 by restricting echangelog to C locale
 
 *gentoolkit-0.1.24 (25 May 2003)
 
