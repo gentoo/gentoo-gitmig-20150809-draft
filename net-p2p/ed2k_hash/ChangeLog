@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ed2k_hash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.7 2004/07/01 09:15:46 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.8 2004/09/03 00:29:22 malc Exp $
+
+  02 Sep 2004; Malcolm Lashley <malc@gentoo.org> ed2k_hash-0.4.0.ebuild:
+  Fixed hashing on 64bit (amd64) and keyworded - closes bug #62587
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> ed2k_hash-0.4.0.ebuild:
   virtual/glibc needs changed to virtual/libc; stable on ppc
