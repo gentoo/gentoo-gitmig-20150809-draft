@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.36 2003/08/11 16:14:11 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.37 2003/09/22 03:44:49 strider Exp $
+
+*ant-1.5.4 (21 Sep 2003)
+
+  21 Sep 2003; Adrian Almenar <strider@gentoo.org> ant-1.5.3-r3.ebuild,
+  ant-1.5.3-r4.ebuild, ant-1.5.3-r5.ebuild, ant-1.5.4.ebuild, files/1.5.4/ant:
+  Added but masked 1.5.4, updated ant ebuild so now can use bcel support if
+  available, also updated patches
 
   11 Aug 2003; Adrian Almenar <strider@gentoo.org> ant-1.5.3-r5.ebuild:
   Updating ant as its working ok, has been tested.
