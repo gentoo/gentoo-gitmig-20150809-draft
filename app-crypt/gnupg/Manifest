@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e731c49592004844cf8ab3a29b8ec99f ChangeLog 13850
-MD5 e194019c15bd9618185e7d43401261f0 gnupg-1.4.0.ebuild 3140
+MD5 e358536fec0247287a319e163c668e48 ChangeLog 13934
 MD5 edc18da65abb2c4ea780b6f4820c9b1b gnupg-1.2.4.ebuild 4251
-MD5 e39d7c78212ede7e858f7f72b8729635 gnupg-1.2.6.ebuild 3684
-MD5 f060c73f6f74e7174b1f7d7c570421fe metadata.xml 572
+MD5 fd564227223a5edea07e8e4f749fbaf5 gnupg-1.2.6.ebuild 3679
 MD5 ee8dfcfec88f977c2a447f99d15967d9 gnupg-1.9.10.ebuild 2859
-MD5 a8d4b32b219641e9b9df83b581a935ba files/digest-gnupg-1.4.0 117
-MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
+MD5 f060c73f6f74e7174b1f7d7c570421fe metadata.xml 572
+MD5 e194019c15bd9618185e7d43401261f0 gnupg-1.4.0.ebuild 3140
 MD5 7f0e728ae9c6810cb9c61500fdc39fc9 files/digest-gnupg-1.2.4 117
-MD5 dd317d852aed29e96c5a542f00d0766e files/gnupg-1.2.6-ppc64.patch 454
+MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
+MD5 8c88d9fdef69bdda173170c5a8abd59e files/digest-gnupg-1.9.10 65
 MD5 c6114a5a40f10aeca63d07b59fed650f files/gnupg-1.2.4-hppa_unaligned_constant.patch 1213
 MD5 cdb57d67164c7a63a167c33426c0a7a3 files/gnupg-1.2.4.ppc64.patch 471
-MD5 8c88d9fdef69bdda173170c5a8abd59e files/digest-gnupg-1.9.10 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB1WcpmdTrptrqvGERAmnDAJ4l++E+p22pEdfhLX5wyCggRzOZCACeJgVB
-d4iZDeWV2FREc2Add7II6VU=
-=Ezxy
------END PGP SIGNATURE-----
+MD5 a8d4b32b219641e9b9df83b581a935ba files/digest-gnupg-1.4.0 117
+MD5 dd317d852aed29e96c5a542f00d0766e files/gnupg-1.2.6-ppc64.patch 454

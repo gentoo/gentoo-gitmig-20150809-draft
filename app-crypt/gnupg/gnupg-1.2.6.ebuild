@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.19 2004/12/31 14:50:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.20 2005/01/01 12:01:16 corsair Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2
 
 LICENSE="GPL-2 idea? ( IDEA )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ppc ~ppc-macos s390 sparc x86 ~ia64 ~mips ~ppc64"
+KEYWORDS="alpha amd64 arm hppa ppc ~ppc-macos s390 sparc x86 ~ia64 ~mips ppc64"
 IUSE="X ldap nls static idea"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
