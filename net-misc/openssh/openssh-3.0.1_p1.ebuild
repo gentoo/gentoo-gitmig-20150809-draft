@@ -1,9 +1,8 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.0.1_p1.ebuild,v 1.1 2001/11/20 21:03:17 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.0.1_p1.ebuild,v 1.2 2001/12/02 03:25:51 drobbins Exp $
 
-P=openssh-3.0.1p1
 S=${WORKDIR}/${P}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${P}.tar.gz"

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r4.ebuild,v 1.1 2001/11/11 11:02:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r4.ebuild,v 1.2 2001/12/02 03:25:51 drobbins Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -45,7 +45,7 @@ src_unpack () {
 
 src_compile() {
 
-	make World || die
+	emake World || die
 }
 
 src_install() {

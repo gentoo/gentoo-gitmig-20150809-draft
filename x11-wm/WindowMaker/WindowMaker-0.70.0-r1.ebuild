@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.70.0-r1.ebuild,v 1.3 2001/11/07 22:03:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.70.0-r1.ebuild,v 1.4 2001/12/02 03:25:51 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -20,6 +20,7 @@ DEPEND="virtual/glibc virtual/x11
 # Replaced by WINGS
 #	>=x11-libs/libPropList-0.10.1"
 
+#NOTE: the default menu has the wrong path for the WMPrefs utility.  Needs fixing.
 
 src_compile() {
 
