@@ -1,0 +1,8 @@
+# ChangeLog for dev-ruby/ruby-termios
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.1 2003/05/19 12:49:23 twp Exp $
+
+*ruby-termios-0.9.4 (19 May 2003)
+
+  19 May 2003; Tom Payne <twp@gentoo.org> ruby-termios-0.9.4.ebuild :
+  Initial release.
