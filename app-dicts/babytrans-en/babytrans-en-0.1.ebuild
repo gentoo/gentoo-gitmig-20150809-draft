@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/babytrans-en-0.1.ebuild,v 1.1 2004/09/10 05:32:30 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/babytrans-en-0.1.ebuild,v 1.2 2004/09/16 19:51:11 angusyoung Exp $
 
 MY_P="english.dic.gz"
 MY_F="english.dic"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.ac-grenoble.fr/ge/languages/babylon_dict/${MY_P}"
 #I was not able to discover what is the license of this file. 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=""
