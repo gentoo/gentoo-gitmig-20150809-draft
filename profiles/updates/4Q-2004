@@ -48,3 +48,4 @@ move net-misc/tftp-hpa net-ftp/tftp-hpa
 move net-wireless/wpa-supplicant net-wireless/wpa_supplicant
 move net-dialup/capi4k-firmware net-dialup/isdn-firmware
 move rox-extra/systemtray rox-base/systemtray
+move app-sci/qrna sci-biology/qrna
