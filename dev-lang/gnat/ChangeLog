@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.4 2003/08/17 19:50:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.5 2003/08/27 15:03:26 dholm Exp $
+
+*gnat-5.0_pre20030822 (27 Aug 2003)
+
+  27 Aug 2003; David Holm <dholm@gentoo.org> gnat-5.0_pre20030822.ebuild:
+  Added a gnat 5.0 CVS snapshot. It is masked in package.mask because it is
+  unstable, but some people might want it for updating their code or simply to
+  test the new gcc 3-based backend.
 
   17 Aug 2003; David Holm <dholm@gentoo.org> metadata.xml:
   Added metadata.xml
