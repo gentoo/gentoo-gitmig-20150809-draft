@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dar
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.5 2004/02/10 16:58:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.6 2004/02/14 05:42:41 matsuu Exp $
+
+*dar-2.1.0-r1 (14 Feb 2004)
+
+  14 Feb 2004; MATSUU Takuto <matsuu@gentoo.org> dar-2.1.0-r1.ebuild:
+  Added replace-flags -O[3-9] -O2.
 
 *dar-2.0.4-r1 (11 Feb 2004)
 
