@@ -1,10 +1,18 @@
-MD5 91e4298e6a05cb0f5d0d6c8ff2a6c619 ChangeLog 1903
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0cb50f91c0070a47bcd7703e6c3e0671 PEAR-HTML_Template_Sigma-1.0.2.ebuild 435
-MD5 2f1fe0689d96d6c602629bd2de8ad1c8 PEAR-HTML_Template_Sigma-1.0.ebuild 691
-MD5 aad494404f17d0606202300a97017882 PEAR-HTML_Template_Sigma-1.1.1.ebuild 447
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 22505a3263443444b9bc4400c0bc0d50 PEAR-HTML_Template_Sigma-1.1.2.ebuild 447
-MD5 4f6b59ca12371fec7bd39dea387c6ac5 files/digest-PEAR-HTML_Template_Sigma-1.0 71
+MD5 aad494404f17d0606202300a97017882 PEAR-HTML_Template_Sigma-1.1.1.ebuild 447
+MD5 a5ef7d3392d8d25167ae31e285a1fab4 ChangeLog 2065
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 cab852583645fc48ebb3c82df03df684 files/digest-PEAR-HTML_Template_Sigma-1.0.2 73
 MD5 e96df12b3bb4f2be95f98625123679a2 files/digest-PEAR-HTML_Template_Sigma-1.1.1 73
 MD5 6e1978b38089cfbc773cad2f05a812ce files/digest-PEAR-HTML_Template_Sigma-1.1.2 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCLdsDaGfFFLhbXWkRAtkaAJ0bEqDlA8pEiknoBIx3FxcbViqy4ACfeXE3
+KKx4EwGLOy1jvEMnAxGNvFY=
+=+eNn
+-----END PGP SIGNATURE-----
