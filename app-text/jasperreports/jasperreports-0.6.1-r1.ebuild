@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r1.ebuild,v 1.4 2005/01/01 16:23:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r1.ebuild,v 1.5 2005/01/20 16:02:31 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -21,7 +21,7 @@ RDEPEND=">=virtual/jdk-1.2
 	dev-java/commons-beanutils
 	dev-java/commons-collections
 	dev-java/commons-logging
-	app-text/itext
+	dev-java/itext
 	dev-java/poi"
 
 src_compile() {
