@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/nwwine-20030911.ebuild,v 1.2 2004/06/24 22:31:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/nwwine-20030911.ebuild,v 1.3 2004/07/14 14:36:56 agriffis Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/nwwine-20030618-misc.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* x86"
-IUSE="nas arts cups opengl alsa tcltk"
+IUSE="X alsa arts cups debug nas opengl tcltk"
 
 S=${WORKDIR}/nwwine-based-on-${PV}
 
