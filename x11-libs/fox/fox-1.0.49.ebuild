@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.49.ebuild,v 1.9 2004/06/24 22:00:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.49.ebuild,v 1.10 2004/06/28 17:28:50 agriffis Exp $
 
 IUSE="cups opengl"
 DESCRIPTION="C++ based Toolkit for developing Graphical User Interfaces easily and effectively"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86 sparc alpha ia64 hppa amd64 ~ppc"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	opengl? ( virtual/opengl )"
 

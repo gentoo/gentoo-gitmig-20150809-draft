@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.0.5.ebuild,v 1.5 2004/06/24 22:01:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.0.5.ebuild,v 1.6 2004/06/28 17:32:57 agriffis Exp $
 
 DESCRIPTION="This library provides a gtk+ front end to su and sudo"
 HOMEPAGE="http://www.nongnu.org/gksu/"
@@ -18,7 +18,7 @@ DEPEND="sys-apps/gawk
 	nls? ( sys-devel/gettext )
 	sys-devel/libtool
 	sys-devel/gcc
-	virtual/glibc
+	virtual/libc
 	>=dev-util/gtk-doc-1.0
 	sys-devel/m4
 	sys-devel/bison"
@@ -28,7 +28,7 @@ RDEPEND="dev-libs/atk
 	dev-libs/glib
 	media-libs/fontconfig
 	media-libs/freetype
-	virtual/glibc
+	virtual/libc
 	sys-libs/zlib
 	virtual/x11
 	x11-libs/gtk+

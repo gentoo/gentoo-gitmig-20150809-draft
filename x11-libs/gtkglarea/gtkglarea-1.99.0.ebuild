@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.19 2004/06/24 22:02:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.20 2004/06/28 17:35:45 agriffis Exp $
 
 inherit gnome2 gnuconfig
 
@@ -11,7 +11,7 @@ SLOT="2"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=x11-libs/gtk+-2.0.3
 	virtual/glu
 	virtual/opengl"
