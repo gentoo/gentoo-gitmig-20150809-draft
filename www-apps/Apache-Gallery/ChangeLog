@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/Apache-Gallery
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.4 2004/09/20 14:22:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.5 2004/09/21 16:15:11 rl03 Exp $
+
+*Apache-Gallery-0.8-r1 (21 Sep 2004)
+
+  21 Sep 2004; Renat Lumpau <rl03@gentoo.org> metadata.xml,
+  files/apache-gallery.conf, +Apache-Gallery-0.8-r1.ebuild:
+  Version bump, this time done right. Resolves bug #52020.
 
   20 Sep 2004; Michael Cummings <mcummings@gentoo.org>
   Apache-Gallery-0.8.ebuild:
