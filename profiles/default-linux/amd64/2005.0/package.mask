@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.1 2005/01/08 20:18:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.2 2005/01/10 04:15:15 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to / look in proper $(get_libdir))
@@ -14,6 +14,14 @@
 =sys-devel/binutils-2.15.91.0.1
 =sys-devel/binutils-2.15.91.0.2
 =sys-devel/binutils-2.15.92.0.2-r1
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# gcc ebuilds that haven't been updated to use the src_install in
+# toolchain.eclass yet
+~sys-devel/gcc-3.4.0
+~sys-devel/gcc-3.4.1
+~sys-devel/gcc-3.4.2
+=sys-devel/gcc-3.4.3
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Don't use packages which do ugly symlink hackery for lib/lib64
