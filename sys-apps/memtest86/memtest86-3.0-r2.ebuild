@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0-r2.ebuild,v 1.1 2004/02/01 20:57:14 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0-r2.ebuild,v 1.2 2004/02/05 20:34:19 augustus Exp $
 
 inherit mount-boot
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A stand alone memory test for x86 computers"
 SRC_URI="http://www.memtest86.com/${P}.tar.gz"
 HOMEPAGE="http://www.memtest86.com/"
-KEYWORDS="~x86 ~amd64 -ppc -sparc "
+KEYWORDS="~x86 -amd64 -ppc -sparc "
 LICENSE="GPL-2"
 SLOT="0"
 
