@@ -1,0 +1,12 @@
+diff -ur gqview-1.3.6/src/view_file_list.c gqview-1.3.6-fix/src/view_file_list.c
+--- gqview-1.3.6/src/view_file_list.c	2003-12-14 20:53:34.000000000 -0500
++++ gqview-1.3.6-fix/src/view_file_list.c	2003-12-16 18:01:54.000000000 -0500
+@@ -1263,7 +1263,7 @@
+ 					/* update, file changed */
+ 					size = text_from_size(fd->size);
+ 					gtk_list_store_set(store, &iter, FILE_COLUMN_SIZE, size,
+-									 FILE_COLUMN_DATE, text_from_time(fd->date) -1);
++									 FILE_COLUMN_DATE, text_from_time(fd->date), -1);
+ 					g_free(size);
+ 					}
+ 				else if (fd != old_fd)
