@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.7.0.ebuild,v 1.5 2005/01/01 18:14:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.7.0.ebuild,v 1.6 2005/01/20 18:12:46 luckyduck Exp $
 
 inherit java-pkg
 
@@ -12,8 +12,9 @@ DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-core-1.4
 	>=dev-java/commons-collections-2.1
 	>=dev-java/commons-logging-1.0.2
-	junit? ( >=dev-java/junit-3.7 )"
-RDEPEND=">=virtual/jdk-1.3
+	junit? ( >=dev-java/junit-3.7 )
+	jikes? ( dev-java/jikes )"
+RDEPEND=">=virtual/jre-1.3
 	>=dev-java/commons-collections-2.1
 	>=dev-java/commons-logging-1.0.2"
 LICENSE="Apache-1.1"

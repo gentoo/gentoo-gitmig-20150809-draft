@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.4.2.ebuild,v 1.5 2005/01/01 18:23:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.4.2.ebuild,v 1.6 2005/01/20 18:07:37 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,9 +10,10 @@ HOMEPAGE="http://www.enterprisedt.com"
 LICENSE="LGPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="jikes doc"
-DEPEND="virtual/jdk
-	>=dev-java/ant-1.5"
-RDEPEND="virtual/jdk"
+DEPEND=">=virtual/jdk-1.4
+	>=dev-java/ant-1.5
+	jikes? ( dev-java/jikes )"
+RDEPEND=">=virtual/jdk-1.4"
 SLOT="0"
 
 src_compile() {

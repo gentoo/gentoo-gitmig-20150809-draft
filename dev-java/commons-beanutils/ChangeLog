@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.18 2005/01/18 17:34:21 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.19 2005/01/20 18:12:46 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  commons-beanutils-1.6.1-r1.ebuild, commons-beanutils-1.7.0.ebuild:
+  added missing jikes dependency. see #78819.
 
   18 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   commons-beanutils-1.6.1-r1.ebuild:

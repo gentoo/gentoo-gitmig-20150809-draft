@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.3.0.ebuild,v 1.6 2005/01/11 17:27:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.3.0.ebuild,v 1.7 2005/01/20 18:10:31 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -10,8 +10,9 @@ SRC_URI="mirror://apache/jakarta/commons/net/source/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-core-1.5.4
 	>=dev-java/oro-2.0.7
-	junit? ( dev-java/junit )"
-RDEPEND=">=virtual/jdk-1.3"
+	junit? ( dev-java/junit )
+	jikes? ( dev-java/jikes )"
+RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~ppc64"
