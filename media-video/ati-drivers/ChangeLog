@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.49 2004/09/23 13:07:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.50 2004/09/23 22:51:09 lu_zero Exp $
+
+  24 Sep 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.12.0.ebuild:
+  Minor fix
 
   23 Sep 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.12.0.ebuild:
   Pinning the deps, should be a better way to handle the issue
