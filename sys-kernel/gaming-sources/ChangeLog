@@ -1,0 +1,9 @@
+# ChangeLog for sys-kernel/gaming-sources
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.1 2003/03/11 21:46:48 seemant Exp $
+
+*gaming-sources-2.4.20-r1 (11 Mar 2003)
+
+  11 Mar 2003; Seemant Kulleen <seemant@gentoo.org> ChangeLog :
+
+  Added ChangeLog to gaming-sources.
