@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.4 2003/06/23 01:15:18 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.5 2003/07/03 20:25:21 lu_zero Exp $
 
 MY_P="hfsplus_${PV}"
 DESCRIPTION="HFS+ Filesystem Access Utilities (PPC Only)"
 SRC_URI="http://ftp.penguinppc.org/users/hasi/${MY_P}.src.tar.bz2"
 HOMEPAGE="http://ftp.penguinppc.org/users/hasi/"
 
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
