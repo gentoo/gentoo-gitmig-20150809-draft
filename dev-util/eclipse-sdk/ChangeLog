@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.55 2004/07/31 23:34:49 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.56 2004/08/02 09:40:13 sejo Exp $
+
+  02 Aug 2004; <SeJo@gentoo.org> eclipse-sdk-3.0.0-r3.ebuild:
+  added ~ppc keyword
 
   01 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-2.1.3-r5.ebuild: Fixed || () problems, see #56840. Removed old
