@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.2.ebuild,v 1.5 2005/01/03 00:32:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.21.2.ebuild,v 1.6 2005/01/05 00:31:06 kingtaco Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.dattalo.com/gnupic/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 
 IUSE="X doc"
 DEPEND="X? ( >=x11-libs/gtk+extra-0.99.17 )

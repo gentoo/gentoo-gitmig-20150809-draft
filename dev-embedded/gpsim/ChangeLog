@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.13 2005/01/03 00:32:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.14 2005/01/05 00:31:06 kingtaco Exp $
+
+  04 Jan 2005; Mike Doty <kingtaco@gentoo.org> gpsim-0.21.2.ebuild:
+  ~amd64 keyword added
 
   03 Jan 2005; Daniel Black <dragonheart@gentoo.org> gpsim-0.21.2.ebuild:
   updated gnuconfig to solve bug #74997. This will hopefully make this amd64
