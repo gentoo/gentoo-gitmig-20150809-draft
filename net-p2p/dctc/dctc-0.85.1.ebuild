@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.0.ebuild,v 1.1 2003/03/11 13:06:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.1.ebuild,v 1.1 2003/04/24 13:30:08 vapier Exp $
 
 DESCRIPTION="Direct Connect Text Client, almost famous file share program"
 SRC_URI="http://ac2i.tzo.com/dctc/${P}.tar.gz"
