@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kcachegrind/kcachegrind-0.3b.ebuild,v 1.1 2003/05/23 10:40:56 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kcachegrind/kcachegrind-0.3b.ebuild,v 1.2 2003/07/06 07:47:10 pauldv Exp $
 inherit kde-base
 
 need-kde 3
@@ -11,6 +11,6 @@ SRC_URI="mirror://sourceforge/kcachegrind/${P}.tar.gz"
 HOMEPAGE="http://kcachegrind.sourceforge.net"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND="$RDEPEND >=dev-util/calltree-0.2.95"
