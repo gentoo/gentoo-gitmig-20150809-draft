@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3699 2005/03/09 13:01:04 kosmikus Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3700 2005/03/09 15:20:54 liquidx Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Alastair Tse <liquidx@gentoo.org> (09 Mar 2005)
+# Unsupported upstream, superceded by qc-usb.
+media-video/qce-ga
 
 # Andres Loeh <kosmikus@gentoo.org> (09 Mar 2005)
 # ghc-6.{3,4} is still in development
@@ -912,11 +916,6 @@ x11-misc/xeasyconf
 # <liquidx@gentoo.org> (16 Oct 2004)
 # Deprecate old unsupported gphoto-0.4.3. use gphoto2.
 media-gfx/gphoto
-
-# <liquidx@gentoo.org> (16 Oct 2004)
-# Deprecated bluez modules
-net-wireless/bluez-sdp
-net-wireless/bluez-pan
 
 # <foser@gentoo.org> (13 Oct 2004)
 # 2 masks to make gnome 2.8 behave
