@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.29-r1.ebuild,v 1.1 2004/04/29 06:06:04 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.29-r1.ebuild,v 1.2 2004/04/29 15:17:21 ciaranm Exp $
 
 inherit vim-plugin eutils
 
@@ -73,7 +73,7 @@ pkg_postinst() {
 	einfo "install full English and French dictionaries, use:"
 	einfo "    LINGUAS=\"en fr\""
 	einfo " "
-	if [ -z ${LINGUAS} ] ; then
+	if [ -z "${LINGUAS}" ] ; then
 		einfo "By default, a small English dictionary was installed."
 		einfo " "
 	fi
