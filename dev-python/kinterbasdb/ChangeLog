@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/kinterbasdb
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.1 2002/07/29 09:48:10 danarmak Exp $
+
+*kinterbasdb-3.0.1_pre3 (29 Jul 2002)
+
+  29 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  User submission #4998 by Al Grabauskas. KInterbasDB is a python database
+  interface to firebird.
