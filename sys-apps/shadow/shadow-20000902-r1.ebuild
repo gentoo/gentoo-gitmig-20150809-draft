@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20000902.ebuild,v 1.3 2000/12/01 21:58:45 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20000902-r1.ebuild,v 1.1 2000/12/11 05:05:03 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -18,8 +18,8 @@ src_compile() {
 }
 
 src_install() {                               
-        cd ${S}
-        try make install prefix=${D}/usr exec_prefix=${D}
+	cd ${S}
+	try make install prefix=${D}/usr exec_prefix=${D}
 	mv ${D}/lib ${D}/usr
 	dosed "s:/lib:/usr/lib:" /usr/lib/libshadow.la
 	cd ${D}/usr/sbin
@@ -45,6 +45,7 @@ src_install() {
 	doins limits shells 
 	insopts -m0600
 	doins suauth login.access
+	doins ${S}/debian/securetty
 	cd ${S}/doc
 	dodoc ANNOUNCE CHANGES INSTALL LICENSE README WISHLIST 
 	docinto txt
