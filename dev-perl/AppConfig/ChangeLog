@@ -1,0 +1,8 @@
+# ChangeLog for dev-perl/AppConfig
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.1 2002/08/06 21:06:20 achim Exp $
+
+*AppConfig-1.52 (07 AUG 2002)
+
+  07 AUG 2002; achim <achim@gentoo.org> Initial version
+
