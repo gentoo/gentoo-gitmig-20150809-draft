@@ -8,7 +8,8 @@ ${ROOT}/usr/sbin/rc-update autogen halt force
 for i in bootmisc checkfs checkroot clock hostname \
 	 inet isapnp keymaps local modules mountall \
 	 pretty rmnologin sendsigs serial single \
-	 sysklogd umountfs urandom dcron xinetd 
+	 umountfs urandom \
+	 svc-dcron svc-xinetd svc-klog svc-syslog
 do
   ${ROOT}/usr/sbin/rc-update add $i
 done

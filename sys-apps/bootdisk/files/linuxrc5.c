@@ -117,7 +117,7 @@ int getspace(char *dev) {
 	return 0;
 }
 int main(void) {
-	char *drives[]={ "/dev/hda2","/dev/hdc","/dev/hdd","/dev/hdb","/dev/hda","/dev/scd0","/dev/scd1"};
+	char *drives[]={ "/dev/hdc","/dev/hdd","/dev/hdb","/dev/hda","/dev/scd0","/dev/scd1"};
 	int i,mresult;
 	char mychar;
 	FILE *distfile;	
@@ -136,7 +136,7 @@ int main(void) {
 	while ( 1 ) {
 		printf("Trying %s...",drives[i]);
 		sleep(1);
-		mresult=domount(drives[i],"/distcd","reiserfs",MS_MGC_VAL|MS_RDONLY,NULL);
+		mresult=domount(drives[i],"/distcd","iso9660",MS_MGC_VAL|MS_RDONLY,NULL);
 		if (mresult==2) {
 			//a CD of some kind was found
 			printf("\n%sCD found...%s\n",color,off);

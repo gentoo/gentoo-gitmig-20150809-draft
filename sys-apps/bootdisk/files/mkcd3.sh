@@ -282,7 +282,7 @@ mkinitrd() {
 
         echo "5. Creating /mnt dirs"
         cd ../mnt
-        dodirs floppy gentoo ram
+        dodirs floppy gentoo ram boot
 
         # *********** 6 ************
 
@@ -318,7 +318,7 @@ mkinitrd
 cd ${BROOT}
 
 echo ">>> Generating boot.img"
-dd if=/dev/zero of=boot.img bs=1024 count=20000
+dd if=/dev/zero of=boot.img bs=1024 count=22000
 mke2fs boot.img
 mount -o loop ${BROOT}/boot.img ${BROOT}/mnt
 cp -af ${BOOTIMG}/* ${BROOT}/mnt

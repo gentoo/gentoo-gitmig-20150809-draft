@@ -4,17 +4,17 @@
 . /etc/rc.d/config/basic
 . /etc/rc.d/config/functions
 
-SERVICE=svc-dcron
+SERVICE=dcron
 opts="start stop"
 
 start() {
-    ebegin "Starting ${SERVICE}"
+    ebegin "Starting supervised ${SERVICE}"
 	ln -sf ../services/${SERVICE} ${SVCDIR}/control/${SERVICE}
     eend $?
 }
 
 stop() {
-    ebegin "Stopping ${SERVICE}"
+    ebegin "Stopping supervised ${SERVICE}"
    	if [ -e ${SVCDIR}/control/${SERVICE} ]
 	then
 		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}/log

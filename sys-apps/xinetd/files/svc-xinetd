@@ -3,7 +3,7 @@
 
 . /etc/rc.d/config/functions
 
-SERVICE=svc-xinetd
+SERVICE=xinetd
 opts="start stop"
 
 prepconfig() {
@@ -23,13 +23,14 @@ prepconfig() {
 }
 
 start() {
-    ebegin "Starting ${SERVICE}"
+    prepconfig
+    ebegin "Starting supervised ${SERVICE}"
 	ln -sf ../services/${SERVICE} ${SVCDIR}/control/${SERVICE}
     eend $?
 }
 
 stop() {
-    ebegin "Stopping ${SERVICE}"
+    ebegin "Stopping supervised ${SERVICE}"
    	if [ -e ${SVCDIR}/control/${SERVICE} ]
 	then
 		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}
