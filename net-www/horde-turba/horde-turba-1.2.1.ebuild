@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/horde-turba-1.2.1.ebuild,v 1.8 2004/01/19 06:46:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/horde-turba-1.2.1.ebuild,v 1.9 2004/01/19 06:57:37 vapier Exp $
 
 inherit webapp-apache
 
@@ -26,13 +26,8 @@ pkg_setup() {
 		eerror "Missing SQL or LDAP support in mod_php !"
 		die "aborting..."
 	fi
-
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
-
-	export REGISTRY=${HTTPD_ROOT}/horde/config/registry.php
-	[ -f ${REGISTRY} ] || REGISTRY=${HTTPD_ROOT}/horde/config/registry.php.dist
-	[ -f ${REGISTRY} ] || die "${REGISTRY} not found"
 }
 
 src_install() {
