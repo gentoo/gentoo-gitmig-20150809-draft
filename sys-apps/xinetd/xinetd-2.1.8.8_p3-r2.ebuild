@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.1.8.8_p3-r2.ebuild,v 1.1 2000/12/10 05:08:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.1.8.8_p3-r2.ebuild,v 1.2 2000/12/13 17:29:17 achim Exp $
 
 P=xinetd-2.1.8.8p3
 A=${P}.tar.gz
@@ -28,9 +28,11 @@ src_install() {
     exeinto /etc/rc.d/init.d
     doexe ${FILESDIR}/xinetd
 	insinto /etc
-	doins ${FILESDIR}/xinetd.conf
+#	doins ${FILESDIR}/xinetd.conf
+	dodir /etc/svc.d/control
 	exeinto /etc/svc.d/services/xinetd
-	doexe ${FILESDIR}/xinetd-run
+	newexe ${FILESDIR}/xinetd-run run
+	ln -s ../services/xinetd ${D}/etc/svc.d/control/xinetd
 	touch /etc/svc.d/services/xinetd/down
 }
 
