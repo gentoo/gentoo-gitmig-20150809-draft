@@ -1,20 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.4.0.ebuild,v 1.3 2005/01/03 11:33:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.6.0.ebuild,v 1.1 2005/03/08 13:39:50 liquidx Exp $
 
 inherit gnome.org python flag-o-matic
 
 DESCRIPTION="GTK+2 bindings for Python"
 HOMEPAGE="http://www.pygtk.org/"
-SRC_URI="ftp://ftp.gnome.org/pub/gnome/sources/pygtk/2.4/${P}.tar.bz2"
+SRC_URI="${SRC_URI}
+		doc? ( http://www.pygtk.org/dist/pygtk2reference.tbz2 )"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
-IUSE="gnome opengl"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
+IUSE="gnome opengl doc"
 
 RDEPEND=">=dev-lang/python-2.3
-	>=x11-libs/gtk+-2.4.0
+	>=x11-libs/gtk+-2.6.0
 	>=dev-libs/glib-2.4.0
 	gnome? ( >=gnome-base/libglade-2.3.6 )
 	opengl? ( virtual/opengl
@@ -25,6 +26,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	if use doc; then
+		unpack pygtk2reference.tbz2
+	fi
 	# disable pyc compiling
 	mv ${S}/py-compile ${S}/py-compile.orig
 	ln -s /bin/true ${S}/py-compile
@@ -38,16 +42,21 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog INSTALL MAPPING NEWS README THREADS TODO
 	rm examples/Makefile*
 	cp -r examples ${D}/usr/share/doc/${PF}/
 
 	python_version
-	mv ${D}/usr/lib/python${PYVER}/site-packages/pygtk.py \
-		${D}/usr/lib/python${PYVER}/site-packages/pygtk.py-2.0
-	mv ${D}/usr/lib/python${PYVER}/site-packages/pygtk.pth \
-		${D}/usr/lib/python${PYVER}/site-packages/pygtk.pth-2.0
+	mv ${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py \
+		${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py-2.0
+	mv ${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth \
+		${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth-2.0
+
+	if use doc; then
+		cd ${S}/../pygtk2reference
+		dohtml -r *
+	fi
 }
 
 src_test() {
@@ -58,9 +67,9 @@ src_test() {
 pkg_postinst() {
 	python_version
 	python_mod_optimize /usr/share/pygtk/2.0/codegen /usr/lib/python${PYVER}/site-packages/gtk-2.0
-	alternatives_auto_makesym /usr/lib/python${PYVER}/site-packages/pygtk.py pygtk.py-[0-9].[0-9]
-	alternatives_auto_makesym /usr/lib/python${PYVER}/site-packages/pygtk.pth pygtk.pth-[0-9].[0-9]
-	python_mod_compile /usr/lib/python${PYVER}/site-packages/pygtk.py
+	alternatives_auto_makesym /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py pygtk.py-[0-9].[0-9]
+	alternatives_auto_makesym /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth pygtk.pth-[0-9].[0-9]
+	python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py
 }
 
 pkg_postrm() {

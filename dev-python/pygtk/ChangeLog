@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.73 2005/02/27 01:57:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.74 2005/03/08 13:39:50 liquidx Exp $
+
+*pygtk-2.6.0 (08 Mar 2005)
+
+  08 Mar 2005; Alastair Tse <liquidx@gentoo.org> -pygtk-2.4.0.ebuild,
+  +pygtk-2.6.0.ebuild:
+  version bump, now requires gtk+-2.6. fix get_libdir in pkg_postinst and
+  pkg_postrm. (#76791)
 
   26 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> pygtk-2.4.1.ebuild:
   Multilib fixes.

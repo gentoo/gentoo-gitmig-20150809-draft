@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.4.1.ebuild,v 1.11 2005/02/27 01:57:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.4.1.ebuild,v 1.12 2005/03/08 13:39:50 liquidx Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -80,3 +80,4 @@ pkg_postrm() {
 	alternatives_auto_makesym /usr/lib/python${PYVER}/site-packages/pygtk.py pygtk.py-[0-9].[0-9]
 	alternatives_auto_makesym /usr/lib/python${PYVER}/site-packages/pygtk.pth pygtk.pth-[0-9].[0-9]
 }
+
