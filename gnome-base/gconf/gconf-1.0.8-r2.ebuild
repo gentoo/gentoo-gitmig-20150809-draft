@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r2.ebuild,v 1.3 2002/04/04 13:16:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r2.ebuild,v 1.4 2002/04/13 10:53:22 azarah Exp $
 
 S=${WORKDIR}/GConf-${PV}
 DESCRIPTION="Gconf"
@@ -48,5 +48,10 @@ pkg_postinst() {
 	# has already been merged with incorrect permissions.
 	# We can remove this fix after gconf 1.0.8 is an ancient
 	# version.
+	if [ ! -e ${ROOT}/etc/gconf/gconf.xml.mandatory ]
+	then
+		#unmerge of older revisions nuke this one
+		mkdir -p ${ROOT}/etc/gconf/gconf.xml.mandatory
+	fi
 	chmod 0755 ${ROOT}/etc/gconf/gconf.xml.mandatory
 }
