@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MD5
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MD5/ChangeLog,v 1.7 2003/02/12 06:20:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MD5/ChangeLog,v 1.8 2003/05/31 21:10:04 mcummings Exp $
+
+*MD5-2.02-r1 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org> MD5-2.02-r1.ebuild:
+  Added missing DEPEND for Digest::MD5
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
