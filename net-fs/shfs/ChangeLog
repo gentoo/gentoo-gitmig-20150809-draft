@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.14 2004/06/24 22:44:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.15 2004/06/26 21:55:47 stuart Exp $
+
+*shfs-0.35 (26 Jun 2004)
+
+  26 Jun 2004; Stuart Herbert <stuart@gentoo.org> +shfs-0.35.ebuild:
+  Version bump; closes bug #52711
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> shfs-0.31-r1.ebuild,
   shfs-0.31.ebuild, shfs-0.32-r1.ebuild, shfs-0.32.ebuild, shfs-0.34.ebuild:
