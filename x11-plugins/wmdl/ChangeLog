@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/wmdl
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/ChangeLog,v 1.1 2002/10/04 15:15:52 raker Exp $
+
+*wmdl-1.4.1 (04 Oct 2002)
+
+  04 Oct 2002; Nick Hadaway <raker@gentoo.org> wmdl-1.4.1.ebuild,
+  files/digest-wmdl-1.4.1, files/makefile.diff :
+  Initial add of ebuild to portage.  Again, no homepage.  This time I
+  got the tarball from a .src.rpm :)  I have copied the tarball to the
+  ibiblio mirror directory.
