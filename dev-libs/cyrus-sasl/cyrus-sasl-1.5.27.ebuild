@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27.ebuild,v 1.1 2002/02/19 00:36:20 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27.ebuild,v 1.2 2002/02/20 04:16:40 woodchip Exp $
 
 DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/"
@@ -51,7 +51,7 @@ src_compile() {
 		--with-dblib=berkeley \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
-	emake || die "compile problem"
+	make || die "compile problem"
 }
 
 src_install () {
