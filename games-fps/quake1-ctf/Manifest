@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 585d8b5787cde5f5017a0de41a6b9e4e ChangeLog 339
+MD5 4c19503fc5a7217f92852491dca8880f quake1-ctf-4.0.ebuild 1793
+MD5 6fb1e30cf4e6748d6fffe992ecd7906c files/digest-quake1-ctf-4.0 406
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB6vrkroRuSHgZdywRAj9SAJ0bCQO9O1xCy+wY3F8v6R07rGwNXACdEXS0
+nEdosL5fVo3vRsYNe+xKBOE=
+=++Cg
+-----END PGP SIGNATURE-----
