@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.10 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.11 2004/09/06 01:09:02 pebenito Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the policy
 
+inherit eutils
 ECLASS="selinux-policy"
 INHERITED="$INHERITED $ECLASS"
 
@@ -87,15 +88,8 @@ selinux-policy_pkg_postinst() {
 		einfo "\"loadpolicy\" to the FEATURES in make.conf."
 		echo
 		echo
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		sleep 4
+		ebeep 4
+		epause 4
 	fi
 }
 
