@@ -1,0 +1,11 @@
+--- php-5.0.0/sapi/apache/mod_php5.c	2004-07-10 09:46:09.000000000 +0200
++++ php-5.0.0.1/sapi/apache/mod_php5.c	2004-08-08 11:32:52.824203512 +0200
+@@ -485,7 +485,7 @@
+ 		tmp = uudecode(r->pool, authorization);
+ 		SG(request_info).auth_user = NULL;
+ 		tmp_user = getword_nulls_nc(r->pool, &tmp, ':');
+-		if (SG(request_info).auth_user) {
++		if (tmp_user) {
+ 			r->connection->user = pstrdup(r->connection->pool, tmp_user);
+ 			r->connection->ap_auth_type = "Basic";
+ 			SG(request_info).auth_user = estrdup(tmp_user);
