@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-1.1.ebuild,v 1.10 2004/03/19 13:16:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-1.1.ebuild,v 1.11 2004/04/26 02:41:35 agriffis Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 src_compile() {
 	./bootstrap
-	econf
+	econf || die "econf failed"
 	cd frontend
 	cp Makefile Makefile.orig
 	sed -e "s:CCLD = \$(CC):CCLD = \$(CXX):" Makefile.orig > Makefile
