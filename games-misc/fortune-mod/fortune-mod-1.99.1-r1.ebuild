@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1-r1.ebuild,v 1.1 2005/02/01 21:55:21 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1-r1.ebuild,v 1.2 2005/02/03 23:18:34 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="The notorious fortune program"
 HOMEPAGE="http://www.redellipse.net/code/fortune"
@@ -10,7 +10,7 @@ SRC_URI="http://www.redellipse.net/code/downloads/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~ppc-macos"
+KEYWORDS="alpha amd64 hppa mips ppc ppc-macos sparc x86"
 IUSE="offensive"
 
 DEPEND="virtual/libc
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	sed -i \
 		-e 's:/games::' \
@@ -47,8 +47,10 @@ src_unpack() {
 
 src_compile() {
 	emake \
+		CC=$(tc-getCC) \
 		REGEXDEFS='-DHAVE_REGEX_H -DPOSIX_REGEX'
 		E_CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
 		OFFENSIVE="${off}" \
 		|| die "emake failed"
 }

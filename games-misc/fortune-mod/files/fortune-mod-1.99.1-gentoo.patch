@@ -65,7 +65,6 @@ diff -uNr fortune-mod-1.99.1/fortune/fortune.c fortune-mod-1.99.1-new/fortune/fo
      crequest = malloc(strlen(ctype) + 7 + 1);
      sprintf(crequest, "UTF-8..%s", ctype);
      recode_scan_request (request, crequest);
-Binary files fortune-mod-1.99.1/fortune/fortune.o and fortune-mod-1.99.1-new/fortune/fortune.o differ
 diff -uNr fortune-mod-1.99.1/util/rot.c fortune-mod-1.99.1-new/util/rot.c
 --- fortune-mod-1.99.1/util/rot.c	Fri Mar  5 07:29:57 2004
 +++ fortune-mod-1.99.1-new/util/rot.c	Tue Feb  1 15:29:51 2005
