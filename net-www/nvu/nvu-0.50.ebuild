@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/nvu-0.50.ebuild,v 1.1 2004/10/14 23:17:00 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/nvu-0.50.ebuild,v 1.2 2004/10/15 05:05:29 chriswhite Exp $
 
 inherit eutils mozilla flag-o-matic
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~x86"
-IUSE="kde gnome"
+IUSE=""
 DEPEND="sys-apps/gawk
 		dev-lang/perl
 		app-doc/doxygen"
@@ -39,17 +39,7 @@ src_compile() {
 src_install() {
 	make -f client.mk DESTDIR=${D} install || die
 
-	#menu entry for gnome
-	if use gnome
-	then
-		insinto /usr/share/gnome/apps/Applications
-		doins ${FILESDIR}/nvu.desktop
-	fi
-
-	#menu entry for kde
-	if use kde
-	then
-		insinto /usr/share/applnk/Development
-		doins ${FILESDIR}/nvu.desktop
-	fi
+	#menu entry for gnome/kde
+	insinto /usr/share/applications
+	doins ${FILESDIR}/nvu.desktop
 }
