@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.11-r2.ebuild,v 1.2 2003/04/22 02:34:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.11-r3.ebuild,v 1.1 2003/04/22 02:34:45 drobbins Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -22,16 +22,6 @@ SLOT="0"
 
 DEPEND="virtual/glibc"
 PROVIDE="virtual/modutils"
-
-pkg_setup() {
-	check_KV
-
-	if [ ! -f /lib/modules/${KV}/modules.dep ]
-	then
-		eerror "Please compile and install a kernel first."
-		die "Please compile and install a kernel first."
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -100,13 +90,21 @@ src_install () {
 	# with kernels <= 2.4; new versions will execve() the .old version if
 	# a 2.4 kernel is running...
 	# This code was borrowed from the module-init-tools Makefile
-	for f in lsmod modprobe rmmod depmod insmod
+	local runme
+	local f
+	for f in lsmod modprobe rmmod depmod insmod modinfo
 	do
 		if [ -L ${D}/sbin/${f} ]
 		then
-			ln -snf `ls -l ${D}/sbin/${f} | \
-				sed 's/.* -> //'`.old ${D}/sbin/${f};
-		fi;
+			einfo "Moving symlink $f to ${f}.old"
+			#runme = the target of the symlink with a .old tagged on.
+			runme=`ls -l ${D}/sbin/${f} | sed 's/.* -> //'`.old
+			[ ! -e ${D}/sbin/${runme} ] || einfo "${D}/sbin/${runme} not found"
+			ln -snf $runme ${D}/sbin/${f} || die
+		elif [ -e ${D}/sbin/${f} ]
+		then
+			einfo "Moving executable $f to ${f}.old"
+		fi
 		mv -f ${D}/sbin/${f} ${D}/sbin/${f}.old;
 	done
 	# Move the man pages as well.  We only do this for the man pages of the
@@ -120,7 +118,7 @@ src_install () {
 
 	# Install compat symlink
 	dosym ../bin/lsmod /sbin/lsmod
-	
+	dosym ../sbin/insmod.old /bin/lsmod.old
 	# Install the modules.conf2modprobe.conf tool, so we can update
 	# modprobe.conf.
 	into /
