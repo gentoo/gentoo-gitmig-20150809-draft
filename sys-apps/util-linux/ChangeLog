@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.85 2004/07/01 21:44:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.86 2004/09/03 18:05:46 azarah Exp $
+
+*util-linux-2.12b (03 Sep 2004)
+
+  03 Sep 2004; Martin Schlemmer <azarah@gentoo.org>
+  +files/util-linux-2.12b-fat-LABEL-support.patch,
+  +files/util-linux-2.12b-gcloop-with-crypt.patch,
+  +files/util-linux-2.12b-gcloop.patch, +files/util-linux-2.12b-pic.patch,
+  +util-linux-2.12b.ebuild:
+  Update version; also build partx. SELinux users should erify support, as it
+  seems it was merged upstream.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   util-linux-2.11z-r8.ebuild, util-linux-2.11z-r9.ebuild,
