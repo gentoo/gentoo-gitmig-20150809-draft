@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r2.ebuild,v 1.6 2004/06/26 22:15:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.ebuild,v 1.1 2004/06/26 22:15:24 agriffis Exp $
 
 inherit flag-o-matic eutils
 
-SV=1.4.16		# rc-scripts version
+SV=1.5.0 		# rc-scripts version
 SVREV=			# rc-scripts rev
 SVIV=2.84		# sysvinit version
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="bootstrap build livecd static selinux uclibc"
 
 DEPEND="virtual/os-headers
@@ -202,7 +202,6 @@ src_install() {
 	kdir /proc
 	kdir -m 0700 /root
 	kdir /sbin
-	kdir /sys			# needed for 2.6 kernels, fixes bug 52703
 	kdir /usr
 	kdir /usr/bin
 	kdir /usr/include
@@ -239,6 +238,8 @@ src_install() {
 	kdir /var/spool
 	kdir /var/state
 	kdir -m 1777 /var/tmp
+
+	use ppc64 && kdir /sys
 
 	dodir /etc/init.d		# .keep file might mess up init.d stuff
 	dodir /var/db/pkg		# .keep file messes up Portage when looking in /var/db/pkg
