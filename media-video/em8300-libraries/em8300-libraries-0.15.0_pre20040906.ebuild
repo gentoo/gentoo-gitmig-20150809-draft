@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.15.0_pre20040906.ebuild,v 1.2 2004/10/07 17:01:43 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.15.0_pre20040906.ebuild,v 1.3 2005/01/14 00:53:04 arj Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card libraries"
 HOMEPAGE="http://dxr3.sourceforge.net"
@@ -13,7 +15,7 @@ DEPEND="=media-video/em8300-modules-0.15*
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="gtk"
 
 S="${WORKDIR}/em8300-${PDATE}"
@@ -38,6 +40,8 @@ src_unpack () {
 }
 
 src_compile ()	{
+
+	use amd64 && append-flags -fPIC
 
 	local myconf
 	use gtk || myconf="${myconf} --disable-gtktest"

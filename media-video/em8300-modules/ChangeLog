@@ -1,6 +1,10 @@
 # ChangeLog for media-video/em8300-modules
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.14 2004/10/07 16:58:06 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.15 2005/01/14 00:49:06 arj Exp $
+
+  14 Jan 2005; Anders Rune Jensen <arj@gentoo.org>
+  em8300-modules-0.15.0_pre20040906-r1.ebuild:
+  works on amd64
 
 *em8300-modules-0.15.0_pre20040906-r1 (07 Oct 2004)
 
