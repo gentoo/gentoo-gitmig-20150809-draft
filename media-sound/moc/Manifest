@@ -1,3 +1,4 @@
+MD5 6b768ccc9c0fb0808572baa8b397a752 ChangeLog 491
+MD5 d9b8a9756c5645f87dc7529e243eeaac moc-1.1.0.ebuild 691
 MD5 a90f9e3223b6e3cb5a0bf42b862d130e files/digest-moc-1.1.0 61
-MD5 ee98d6e2abe6421b1188fa71916e872a moc-1.1.0.ebuild 615
-MD5 0793133d5e0fe28a37babe8ce4ad83de ChangeLog 353
+MD5 ffe585145e5d7dfe41d78a4b05a36802 files/moc-1.1.0-gcc3.patch 4196

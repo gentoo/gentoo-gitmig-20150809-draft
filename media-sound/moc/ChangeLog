@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.1 2003/06/26 15:21:29 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.2 2003/10/18 14:54:35 mholzer Exp $
+
+  19 Oct 2003; Martin Holzer <mholzer@gentoo.org> moc-1.1.0.ebuild,
+  files/moc-1.1.0-gcc3.patch:
+  Adding gcc3 patch. Closes #31399.
 
 *moc-1.1.0 (26 Jun 2003)
 

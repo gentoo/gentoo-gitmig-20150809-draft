@@ -16,6 +16,12 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc3.patch
+}
+
 src_compile() {
 	local myconf
 	use oggvorbis || myconf="--without-ogg"
