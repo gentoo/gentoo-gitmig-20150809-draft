@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r1.ebuild,v 1.6 2002/07/16 04:54:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r1.ebuild,v 1.7 2002/07/16 19:57:57 seemant Exp $
 
 MY_P=netkit-${P}
-S=${WORKDIR}/netkit-${MY_P}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Standard Linux FTP client"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${MY_P}.tar.gz"
 
