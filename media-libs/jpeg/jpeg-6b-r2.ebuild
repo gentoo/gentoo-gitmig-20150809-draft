@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r2.ebuild,v 1.6 2002/08/14 13:08:09 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r2.ebuild,v 1.7 2002/09/14 15:51:24 bjb Exp $
 
 MY_P=${PN}src.v${PV}
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ijg.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="virtual/glibc"
 

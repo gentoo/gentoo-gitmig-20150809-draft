@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1-r3.ebuild,v 1.5 2002/08/14 04:58:12 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1-r3.ebuild,v 1.6 2002/09/14 15:51:24 bjb Exp $
 
 # Make it more portable between straight releases
 # and _p? releases.
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 src_compile() {
 	local myconf

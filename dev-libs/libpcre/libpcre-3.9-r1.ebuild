@@ -9,7 +9,7 @@ HOMEPAGE="http://www.pcre.org/"
 
 SLOT="3"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="virtual/glibc"
 

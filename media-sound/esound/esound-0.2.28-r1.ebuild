@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.28-r1.ebuild,v 1.5 2002/08/14 13:04:21 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.28-r1.ebuild,v 1.6 2002/09/14 15:51:24 bjb Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ ftp://download.sourceforge.net/pub/mirrors/gnome/stable/sources/esound/${P}.tar.
 HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND=" >=media-libs/audiofile-0.1.9
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )

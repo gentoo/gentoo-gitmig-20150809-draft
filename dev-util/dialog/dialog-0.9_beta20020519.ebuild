@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-0.9_beta20020519.ebuild,v 1.6 2002/08/16 04:04:41 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-0.9_beta20020519.ebuild,v 1.7 2002/09/14 15:51:24 bjb Exp $
 
 MY_PV="0.9b-20020519"
 S=${WORKDIR}/dialog-${MY_PV}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.advancedresearch.org/dialog/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND=">=sys-apps/bash-2.04-r3
 	>=sys-libs/ncurses-5.2-r5"

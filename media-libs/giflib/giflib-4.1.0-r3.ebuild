@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.8 2002/08/14 13:08:09 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.9 2002/09/14 15:51:24 bjb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library to handle, display and manipulate GIF images"
@@ -12,7 +12,7 @@ DEPEND="X? ( virtual/x11 )"
 
 SLOT="0"
 LICENSE="as-is|BSD"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 src_compile() {
 

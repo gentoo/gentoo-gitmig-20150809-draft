@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.7-r1.ebuild,v 1.4 2002/08/14 13:08:10 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.7-r1.ebuild,v 1.5 2002/09/14 15:51:24 bjb Exp $
 
 MY_P=${P/tiff-/tiff-v}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ DEPEND=">=media-libs/jpeg-6b
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 src_unpack() {
 	unpack ${A}
