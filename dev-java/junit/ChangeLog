@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.7 2003/02/12 05:53:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.8 2003/03/14 05:32:00 absinthe Exp $
+
+*junit-3.7-r2 (14 Mar 2003)
+
+  14 Mar 2003; Dylan Carlson <absinthe@gentoo.org> junit-3.7-r2.ebuild,
+  files/junit-3.7-build.xml:
+  Fixed ant build problem reported in user forums, and got this process
+  to compile.  Closes #17284.
 
 *junit-3.8.1 (14 Oct 2002)
 
