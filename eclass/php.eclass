@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.57 2003/06/26 20:02:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.58 2003/06/26 20:12:57 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -96,7 +96,7 @@ DEPEND="${RDEPEND} ${DEPEND}
 #9libs causes a configure error
 DEPEND="${DEPEND} !dev-libs/9libs"
 #dev-libs/libiconv causes a compile failure
-DEPEND="${DEPEND} "!dev-libs/libiconv"
+DEPEND="${DEPEND} !dev-libs/libiconv"
 
 
 #Waiting for somebody to want this:
@@ -227,12 +227,26 @@ php_src_compile() {
 	use mcal && myconf="${myconf} --with-mcal=/usr"
 	use oci8 && [ -n "${ORACLE_HOME}" ] && myconf="${myconf} --with-oci8=${ORACLE_HOME}"
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
-	use pdflib && myconf="${myconf} --with-pdflib=/usr"
-	use png && myconf="${myconf} --with-png-dir=/usr" || myconf="${myconf} --without-png"
 	use postgres && myconf="${myconf} --with-pgsql=/usr" || myconf="${myconf} --without-pgsql"
 	use snmp && myconf="${myconf} --with-snmp --enable-ucd-snmp-hack"
 	use tiff && LDFLAGS="${LDFLAGS} -ltiff"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr" || myconf="${myconf} --without-tiff"
+	
+	# This chunk is intended for png, as there are several things that need it
+	REQUIREPNG=
+	use pdflib && myconf="${myconf} --with-pdflib=/usr --with-png-dir=/usr" 
+	use pdflib && REQUIREPNG=1 
+	if [ -n "`use gd-external`" ] ; then
+		myconf="${myconf} --with-gd=/usr"
+		REQUIREPNG=1
+	elif [ -n "`use gd`" ] ; then
+		myconf="${myconf} --with-gd"
+		REQUIREPNG=1
+	else
+		myconf="${myconf} --without-gd"
+	fi
+	use png || [ -n "${REQUIREPNG}" ] && myconf="${myconf} --with-png-dir=/usr" || myconf="${myconf} --without-png"
+	echo conf:${myconf}
 	
 	#use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
 	if [ -n "`use mysql`" ] ; then
@@ -260,13 +274,6 @@ php_src_compile() {
 	myconf="${myconf} `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable cjk mbstring` `use_enable cjk mbregex`"
 
-	if [ -n "`use gd-external`" ] ; then
-		myconf="${myconf} --with-gd=/usr"
-	elif [ -n "`use gd`" ] ; then
-		myconf="${myconf} --with-gd"
-	else
-		myconf="${myconf} --without-gd"
-	fi
 
 	#Waiting for somebody to want Cyrus support :-)
 	#myconf="${myconf} `use_with cyrus`"
