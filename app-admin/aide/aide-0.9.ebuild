@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.9.ebuild,v 1.14 2003/10/17 02:51:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.9.ebuild,v 1.15 2003/11/14 21:21:06 seemant Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE="nls postgres zlib crypt"
 
-DEPEND="sys-apps/gzip
+DEPEND="app-arch/gzip
 	sys-devel/bison
 	sys-devel/flex
 	app-crypt/mhash
