@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.4 2003/05/16 16:50:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.5 2003/05/21 00:09:37 weeve Exp $
+
+  20 May 2003; Jason Wever <weeve@gentoo.org> libgphoto2-2.1.1-r2.ebuild:
+  Added ~sparc to keywords.
 
   16 May 2003; Alastair Tse <liquidx@gentoo.org> libgphoto2-2.1.1-r2.ebuild:
   fix embedded path problems with install process
