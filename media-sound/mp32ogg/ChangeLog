@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mp32ogg
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/ChangeLog,v 1.1 2003/05/12 19:45:57 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/ChangeLog,v 1.2 2003/06/11 14:14:52 phosphan Exp $
+
+*mp32ogg-0.11-r1 (11 Jun 2003)
+
+  11 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> mp32ogg-0.11-r1.ebuild:
+  Fixing dependencies (bug 22612)
 
 *mp32ogg-0.11 (12 May 2003)
 
