@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/pcsx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/ChangeLog,v 1.4 2004/06/24 22:32:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/ChangeLog,v 1.5 2004/09/04 16:10:41 dholm Exp $
+
+  04 Sep 2004; David Holm <dholm@gentoo.org> pcsx-1.5-r1.ebuild:
+  ppc support is incomplete, masked
 
   13 Feb 2004; David Holm <dholm@gentoo.org> pcsx-1.5-r1.ebuild:
   Made some ppc-specific modifications and added to ~ppc.
