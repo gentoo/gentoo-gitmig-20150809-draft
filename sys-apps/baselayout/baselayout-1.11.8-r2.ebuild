@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.8-r2.ebuild,v 1.2 2005/01/15 13:41:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.8-r2.ebuild,v 1.3 2005/01/16 18:10:37 corsair Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc64"
 IUSE="bootstrap build livecd static uclibc"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
