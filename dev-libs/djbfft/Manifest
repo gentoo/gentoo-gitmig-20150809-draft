@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d819df359086f639c0e51e49559a5d52 ChangeLog 1370
-MD5 4f88ee6daeb561af01f924e8ee033607 djbfft-0.76.ebuild 1654
-MD5 927e1f57b0bbae197566f1d4ed3ee706 metadata.xml 175
+MD5 cb2c2c0ec686d8228477d79f8a31ec4a ChangeLog 1515
+MD5 31f11dcc087f65f9b435e7e7674aef35 djbfft-0.76.ebuild 1653
+MD5 2016f4d1bccc34822d1ab22ae53769ce metadata.xml 181
 MD5 b29c07feb993d4b8bec1813dbf1dc75a files/digest-djbfft-0.76 62
 MD5 5fbb1af38ac1b0acf9b9e0e08124e371 files/djbfft-0.76-gcc3.patch 1176
 MD5 1f0a753178eb680993ea0bcae7a7fbd2 files/djbfft-0.76-shared.patch 3691
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBi0a4ArHZZzCEUG0RAgqJAKCKAEHZrZRzGIxYuekDtyKAOXHQggCaAk1b
-UUU/ovxeV4OXRMIN0XAp1fg=
-=bLg8
+iD8DBQFBm8v5ArHZZzCEUG0RAgm8AJ96pXS1D7j+6EoiBNqiizjwk8UBfQCeNdyS
+BNUyIQZ0g/5fyU/T+7GDn5M=
+=8DFh
 -----END PGP SIGNATURE-----

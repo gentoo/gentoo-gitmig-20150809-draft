@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/djbfft
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/ChangeLog,v 1.9 2004/11/05 09:23:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/ChangeLog,v 1.10 2004/11/17 22:08:39 eradicator Exp $
+
+  17 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  djbfft-0.76.ebuild:
+  Stable amd64, sparc, x86.  Fixed metadata herd.
 
   05 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> djbfft-0.76.ebuild:
   Added to ~sparc.

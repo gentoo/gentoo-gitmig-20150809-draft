@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.11 2004/11/05 09:23:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.12 2004/11/17 22:08:39 eradicator Exp $
+
+IUSE="static"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,8 +12,7 @@ SRC_URI="http://cr.yp.to/djbfft/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="static"
+KEYWORDS="amd64 ~hppa ~ppc sparc x86"
 
 src_unpack() {
 	MY_PV="${PV:0:1}.${PV:2:1}.${PV:3:1}" # a.bc -> a.b.c
