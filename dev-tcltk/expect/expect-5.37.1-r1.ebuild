@@ -1,26 +1,22 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /home/cvsroot/gentoo-x86/skel.build,v 1.7 2001/08/25 21:15:08 chadh Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.1 2002/07/20 20:10:07 george Exp $
 
 #remove the trailing ".0" from the tarball version
-S=${WORKDIR}/${P%.0}
+S=${WORKDIR}/${P%.1}
 
 DESCRIPTION="Expect is a tool for automating interactive applications"
-
 SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
-
 HOMEPAGE="http://expect.nist.gov/"
 
-#tcl and tk really need to be broken out into their own ebuilds,
-#makes it hard to do conditional X? depends
+SLOT="0"
+KEYWORDS="x86"
+LICENSE="BSD"
+
 DEPEND=">=dev-lang/tcl-8.2
 		X? ( >=dev-lang/tk-8.2 )"
 
 RDEPEND="${DEPEND}"
-
-SLOT="0"
-LICENSE="as-is"
-KEYWORDS="*"
 
 src_compile() {
     
@@ -47,7 +43,7 @@ src_compile() {
 		myconf="$myconf --without-x"
 	fi
 
-	econf $myconf || die	
+	econf $myconf --enable-shared || die	
 	emake || die
 
 }
@@ -55,6 +51,9 @@ src_compile() {
 src_install () {
 	
 	einstall || die
+
+	#docs
+	dodoc Changelog FAQ HISTORY NEWS README
 	
 }
 

@@ -1,9 +1,14 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.2 2002/07/09 02:37:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.3 2002/07/20 20:10:07 george Exp $
 
 *expect-5.37.1 (08 July 2002)
 
+  20 Jul 2002; George Shapovalov <george@gentoo.org> epect-5.37.1-r1.ebuild :
+  
+  modified ebuild to install shared libraries (necessary for multixterm)
+  upping revision to force-update.
+    
   08 July 2002; George Shapovalov <george@gentoo.org> epect-5.37.1.ebuild :
 
   upped version, + some cleaning up.
