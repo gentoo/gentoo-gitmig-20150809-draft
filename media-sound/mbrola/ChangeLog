@@ -3,15 +3,19 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/mbrola/mbrola-3.0.1h.ebuild,v
 # 1.0 2002/05/07 03:58:19 naz Exp $
 
-*mbrola-3.0.1 (29 May 2002)
+*mbrola-3.0.1h-r1 (29 May 2002)
 
-  3 Jun 2002; Michael Nazaroff <naz@gentupdate fix's a incorrect intall path for
+  30 Dec 2002; Martin Holzer <mholzer@gentoo.org> mbrola-3.0.1h-r1.ebuild ChangeLog :
+  Added unzip dependency. Fixes #12929.
+
+  3 Jun 2002; Michael Nazaroff <naz@gentoo.org> mbrola-3.0.1h-r1.ebuild : 
+  update fix's a incorrect intall path for
   the previous ebuild version of mbrola.  Which made festial unable to detect
   the voices.
 
-*mbrola-3.0.1 (29 May 2002)
+*mbrola-3.0.1h (29 May 2002)
 
-  29 May 2002; Michael Nazaroff <naz@gentoo.org> mbrola-3.0.1h.ebuild: 
+  29 May 2002; Michael Nazaroff <naz@gentoo.org> mbrola-3.0.1h.ebuild : 
   This is initial release of this package which provides speech synthesizers for
   many diffirent languages. It depends on festival.
  

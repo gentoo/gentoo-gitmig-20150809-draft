@@ -12,7 +12,8 @@ ${URL}/dba/us2/us2-980812.zip
 ${URL}/dba/us3/us3-990208.zip"
 HOMEPAGE="http://tcts.fpms.ac.be/synthesis/mbrola.html"
 
-DEPEND=">=media-sound/festival-1.4.2"
+DEPEND=">=media-sound/festival-1.4.2
+	app-arch/unzip"
 
 SLOT="0"
 LICENSE="MBROLA"
