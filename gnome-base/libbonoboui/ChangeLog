@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libbonoboui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.27 2003/07/01 21:13:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.28 2003/07/30 10:02:28 foser Exp $
+
+*libbonoboui-2.2.3 (30 Jul 2003)
+
+  30 Jul 2003; foser <foser@gentoo.org> libbonoboui-2.2.3.ebuild :
+  New version
 
 *libonoboui-2.2.2 (19 May 2003)
 
