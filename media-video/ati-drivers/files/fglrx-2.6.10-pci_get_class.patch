@@ -1,0 +1,18 @@
+diff -ruN build_mod.orig/agpgart_be.c build_mod/agpgart_be.c
+--- build_mod.orig/agpgart_be.c	2004-11-11 23:39:17.983856616 +0100
++++ build_mod/agpgart_be.c	2004-11-11 23:41:27.212210920 +0100
+@@ -116,7 +116,14 @@
+ #include <linux/pagemap.h>
+ #include <linux/miscdevice.h>
+ #include <linux/pm.h>
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,9)
++#define pci_find_class pci_get_class
+ 
++
++
++
++
++#endif
+ #if (LINUX_VERSION_CODE >= 0x020400)
+ #define FGL_PM_PRESENT
+ #else
