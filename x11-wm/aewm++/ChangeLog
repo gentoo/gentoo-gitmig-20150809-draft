@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/aewm++
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.4 2004/01/08 02:00:44 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.5 2004/05/07 21:06:23 tseng Exp $
+
+  07 May 2004; Brandon Hale <tseng@gentoo.org> aewm++-1.0.24.ebuild:
+  Add IUSE=
 
   07 Jan 2004; Jon Portnoy <avenj@gentoo.org> aewm++-1.0.24.ebuild :
   AMD64 keywords.
