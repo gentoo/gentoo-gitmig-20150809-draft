@@ -1,6 +1,7 @@
 MD5 b01c408b0da4bcb933633ef4957395cb cyrus-imapd-2.1.13.ebuild 6876
 MD5 b02d78daa9e8077f9cb1545011fa74d8 cyrus-imapd-2.1.15.ebuild 6984
 MD5 8137607660547cbe261c7efcae936491 cyrus-imapd-2.1.12.ebuild 6848
+MD5 66bfc553631bdd5c3a675efe42040989 cyrus-imapd-2.1.15-r1.ebuild 7038
 MD5 0fc20824009e6d624507789570c22e88 cyrus-imapd-2.1.11-r1.ebuild 6270
 MD5 55a3646a96dbe9e7659d543f46a1b5f0 cyrus-imapd-2.1.14.ebuild 7002
 MD5 0e8b342343b4e626e97c386ba46545e5 ChangeLog 6332
@@ -10,6 +11,7 @@ MD5 e2c00049c69e3eca58d5a635dd3fd6dc files/configure.diff 6285
 MD5 8ef2ff8ab18c79ca0fc96e0ec58e084a files/cyrus_2.conf 1340
 MD5 419f3372b21d1eea29593634a57bc134 files/cyrus-imapd-2.1.12-includepath.patch 2721
 MD5 074362acae4027842361a769407b8645 files/digest-cyrus-imapd-2.1.11-r1 71
+MD5 1bf166e9ac57420dc010bddacd3dfe98 files/digest-cyrus-imapd-2.1.15-r1 155
 MD5 49f1642ca5d96db10f40a7c37a52dbd8 files/cyrus.rc6_2 631
 MD5 a26c1601811d0fd0cc3da0bae6d76693 files/imap-overflow.diff 871
 MD5 75e1eaf365d192b2992bac8d61595a79 files/2.1.15-db4.patch 2759
