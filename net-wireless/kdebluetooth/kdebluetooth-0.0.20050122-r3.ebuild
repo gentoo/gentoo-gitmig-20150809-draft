@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20050122-r3.ebuild,v 1.2 2005/02/02 20:20:23 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20050122-r3.ebuild,v 1.3 2005/02/07 20:24:51 centic Exp $
 
 inherit kde eutils
 
@@ -25,7 +25,9 @@ need-kde 3
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-compile.patch
+	# look at http://forums.gentoo.org/viewtopic.php?p=2066750#2066750 
+	# and Bug 77980, the patch is only required starting with bluez-libs-2.14
+	has_version '>=net-wireless/bluez-libs-2.14' && epatch ${FILESDIR}/${P}-compile.patch
 }
 
 src_compile() {
