@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.16 2005/01/01 11:00:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.17 2005/03/02 15:06:43 foser Exp $
+
+*gamin-0.0.25 (02 Mar 2005)
+
+  02 Mar 2005; foser <foser@gentoo.org> gamin-0.0.25.ebuild :
+  New release, add debug api options & install docs
 
 *gamin-0.0.19 (10 Dec 2004)
 
