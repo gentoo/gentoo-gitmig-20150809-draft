@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/mserver
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/ChangeLog,v 1.1 2002/12/12 17:50:20 phoenix Exp $
+
+*mserver-0.5.5-r1 (12 Dec 2002)
+
+  12 Dec 2002; phoen][x <phoenix@gentoo.org> ChangeLog, mserver-0.5.5-r1.ebuild,
+  files/digest-mserver-0.5.5-r1 :
+  Initial import. Ebuild contributed by Dewet Diener <gentoobugzilla@dewet.org>.
+  This closes bug #9982.
