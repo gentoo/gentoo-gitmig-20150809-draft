@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/streamtuner-local
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.1 2003/03/22 14:22:21 jje Exp $
+
+*streamtuner-local-0.2.1 (22 Mar 2003)
+
+  22 Mar 2003; jje <jje@gentoo.org> streamtuner-local-0.2.1.ebuild:
+  Initial revision.
+  
+  Submitted by: Ulli Ivens
+
