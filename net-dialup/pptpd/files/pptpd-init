@@ -1,7 +1,7 @@
 #!/sbin/runscript
 
 depend() {
-	net
+	need net
 }
 
 start() {
