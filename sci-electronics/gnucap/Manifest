@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8a674debc472571898d4720aa3ea36f2 gnucap-0.34.ebuild 848
-MD5 3e7ad435e25a99dc177dec4e762531aa ChangeLog 1270
+MD5 18f69f562edd6dba1605beb98c74342f ChangeLog 1386
 MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
+MD5 d4e7ce1ed9bb612d27d24ae6db488290 gnucap-20050220.ebuild 814
+MD5 fe17950abb356e561295539d8a7fa827 gnucap-0.34.ebuild 830
+MD5 f09632390e8c869dd1850966edf9693e files/digest-gnucap-20050220 70
 MD5 422d28bb9715c39495a5df8a4b5f8410 files/digest-gnucap-0.34 64
 MD5 cfff235a3e29ee1da31b2cf30d18d014 files/gnucap-0.34-gcc-3.4.patch 9178
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCBSmbntT9W3vfTuoRAh0ZAKCdD/GNdZVTztYS423wuWqE/5GzVgCeK29A
-2qasxb/812Gfd1hDUE27Udc=
-=hxge
------END PGP SIGNATURE-----
