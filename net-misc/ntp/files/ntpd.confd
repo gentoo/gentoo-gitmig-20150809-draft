@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.confd,v 1.9 2003/01/12 22:06:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.confd,v 1.10 2003/01/12 22:20:12 vapier Exp $
 
 # NOTES:
 #  - NTPDATE variables below are used if you wish to set your
@@ -34,3 +34,8 @@ NTPDATE_WARN="y"
 # and
 # * http://www.eecis.udel.edu/~mills/ntp/clock2.html
 ##
+
+# Options to pass to the ntpd process that will *always* be run
+# Most people should not uncomment this line ...
+# however, if you know what you're doing, feel free to tweak
+#NTPD_OPTS=""
