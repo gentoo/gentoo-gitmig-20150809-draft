@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/motif-config
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/ChangeLog,v 1.5 2005/02/27 19:28:34 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/ChangeLog,v 1.6 2005/03/02 23:11:33 j4rg0n Exp $
+
+*motif-config-0.3 (02 Mar 2005)
+
+  02 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> motif-config-0.2-r1.ebuild,
+  motif-config-0.3.ebuild:
+  Removed ppc-macos once again. Please talk to myself or gongloo (we are
+  porting co-leads) before adding ppc-macos.
 
 *motif-config-0.2-r1 (27 Feb 2005)
 
