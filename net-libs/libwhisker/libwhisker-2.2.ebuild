@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/libwhisker-2.2.ebuild,v 1.1 2005/01/31 12:17:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/libwhisker-2.2.ebuild,v 1.2 2005/01/31 18:19:02 gustavoz Exp $
 
 MY_P="${PN}2-current"
 S="${WORKDIR}/${PN}2-${PV}"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.wiretrip.net/rfp/"
 SRC_URI="http://www.wiretrip.net/rfp/libwhisker/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 IUSE="ssl"
 
 DEPEND=">=dev-lang/perl-5.6.1
