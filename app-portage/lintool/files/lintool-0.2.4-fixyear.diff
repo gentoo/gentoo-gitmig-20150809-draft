@@ -1,0 +1,27 @@
+--- /usr/lib/python2.2/site-packages/lintool/ebuild.py.old	2003-03-29 15:44:42.000000000 -0800
++++ /usr/lib/python2.2/site-packages/lintool/ebuild.py	2003-03-29 15:58:07.000000000 -0800
+@@ -7,6 +7,7 @@
+ import os
+ import os.path
+ import string
++from time import gmtime, time, strftime
+ 
+ class TestSpaces(Test):
+ 
+@@ -56,12 +57,14 @@
+ 
+   def __init__(self, formatter, options):
+     Test.__init__(self,formatter, options)
++    # get current year
++    currentyear = strftime("%Y",gmtime(time()))
+     self.desc = "Testing for malformed headers"
+     self.want = [ [ 0, # count
+-                    re.compile("^(# Copyright .*2002.*)"), 
++                    re.compile("^(# Copyright .*"+currentyear+".*)"), 
+                     "Copyright statement" ],
+                   [ 0, # count
+-                    re.compile("^(# \$Header:.*\$)"),
++                    re.compile("^(# \$Header.*\$)"),
+                     "\$Header: \$" ],
+                   [ 0, # count
+                     re.compile("^(# Distributed under the terms of the GNU General Public License.*)"),
