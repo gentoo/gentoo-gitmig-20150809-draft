@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.67 2004/08/07 04:24:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.68 2004/08/08 21:07:21 lv Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -73,7 +73,7 @@ IUSE="${IUSE} debug"
 # C[XX]FLAGS that we allow in strip-flags
 setup-allowed-flags() {
 	if [ -z "${ALLOWED_FLAGS}" ] ; then
-		export ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -fno-unit-at-a-time -pipe -g"
+		export ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -fno-stack-protector -fno-pie -fno-unit-at-a-time -pipe -g"
 		case "${ARCH}" in
 			mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
 			amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC -m64" ;;
