@@ -9,5 +9,9 @@
 		La categoría app-accessibility contiene paquetes para ayudar con 
 		accesibilidad (por ejemplo, lectores de pantallas).
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-accessibility enthält Programme für barrierefreies
+		Arbeiten (Accessibility), wie beispielsweise Screenreader.
+	</longdescription>
 </catmetadata>
 
