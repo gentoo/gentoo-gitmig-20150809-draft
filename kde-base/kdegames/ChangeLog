@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.105 2005/01/03 23:20:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.106 2005/01/14 00:19:31 greg_g Exp $
+
+*kdegames-3.4.0_beta1 (13 Jan 2005)
+
+  13 Jan 2005; Gregorio Guidi <greg@gentoo.org> +kdegames-3.4.0_beta1.ebuild:
+  Introducing kde-3.4.0_beta1.
 
   04 Jan 2005; Guy Martin <gmsoft@gentoo.org> kdegames-3.3.2.ebuild:
   Stable on hppa.

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.95 2005/01/03 23:31:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.96 2005/01/14 00:19:30 greg_g Exp $
+
+*kde-3.4.0_beta1 (13 Jan 2005)
+
+  13 Jan 2005; Gregorio Guidi <greg@gentoo.org> +kde-3.4.0_beta1.ebuild:
+  Introducing kde-3.4.0_beta1. Removed kdewebdev from dependencies.
 
   04 Jan 2005; Guy Martin <gmsoft@gentoo.org> kde-3.3.2.ebuild:
   Stable on hppa.

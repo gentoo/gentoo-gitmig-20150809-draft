@@ -1,0 +1,121 @@
+--- startkde.orig	2005-01-04 00:36:08.000000000 +0100
++++ startkde	2005-01-12 14:28:00.938838000 +0100
+@@ -7,6 +7,104 @@
+ # because we still need to do some cleanup.
+ trap 'echo GOT SIGHUP' HUP
+ 
++# Gentoo init
++
++# Make sure this KDE is used by apps running from our env
++export PATH="/usr/kde/3.4/bin:${PATH}"
++unset KDEDIR
++
++# KDE stores dotfiles in ~/.kde. To support running different minor versions
++# (eg 3.3, 3.4, 4.0...) during gradual upgrades, we store each version's
++# dotfiles in ~/.kdeX.Y. We used to make ~/.kde a symlink to a ~/.kdeX.Y,
++# but some apps store the real name (with X.Y in it) inside their configfiles,
++# so when we upgrade (and copy .kdeX.Y to .kdeX.(Y+1)) these files break horribly 
++# (bug #40698). Therefore we have to move directories around.
++#
++# If a user runs two different KDE versions at the same time, mayhem will result.
++
++cd ~
++
++# Upgrading from the old scheme where .kde is a symlink
++if [ -h .kde ]; then
++	rm .kde
++fi
++
++# A kde died unexpectedly and couldn't move away its .kde.
++# The last running kde's version string is stored in ~/.kde-cur.
++if [ -d .kde ]; then
++	if [ ! -r .kde-cur ]; then
++		echo "!!! ~/.kde-cur does not exist or is not readable." 1>&2
++		echo "Cannot get rid of ~/.kde directory; abandoning kde configdir management." 1>&2
++	else
++		lastver="`cat .kde-cur`"
++		if [ -e ".kde$lastver" ]; then
++			echo "!!! ~/.kde$lastver already exists, can't move ~/.kde aside" 1>&2
++			counter=1
++			while [ -e ".kde$lastver.backup-$counter" ]; do
++				echo "!!! Backup dir ~/.kde$lastver.backup-$counter already exists." 1>&2
++				echo "Find out what's going wrong!" 1>&2
++				let counter++
++			done
++			mv .kde ".kde$lastver.backup-$counter"
++		fi
++		rm .kde-cur
++	fi
++fi
++
++# If we suceeded
++if [ ! -e .kde ]; then
++	
++	# If we have a configdir, activate it.
++	ourver=3.4
++	ourdir=.kde$ourver
++	if [ -e "$ourdir" ]; then
++		if [ ! -d "$ourdir" ]; then
++			echo "!!! Configdir $ourdir is not a directory. Something's _really_ wrong. Aborting." 1>&2
++		else
++			mv "$ourdir" .kde
++		fi
++	
++	# Otherwise (first run of this version), we copy over the most recent existing configdir.
++	else
++		for x in 3.3 3.2 3.1 3.0; do
++			if [ -d ".kde$x" ]; then
++				mostrecent=".kde$x"
++				break
++			fi
++		done
++		if [ -z "$mostrecent" ]; then
++			echo "No previous configdir found; starting with empty config" 1>&2
++		else
++			echo "Copying previous configdir from $mostrecent" 1>&2
++			cp -pr "$mostrecent" .kde
++			
++			# For the upgrade from kde 3.3, which still suffered from bug 40698, lots of little seds are needed.
++			if [ "$mostrecent" == ".kde3.3" ]; then
++				for file in share/apps/kdevdocumentation/search/htdig.conf \
++							share/apps/kalarmd/clients \
++							share/config/kdevdocumentationrc \
++							share/config/katesyntaxhighlightingrc \
++							share/config/ksmserverrc
++				do
++					sed -i -e "s:$HOME/.kde3.3:$HOME/.kde:g" -e 's:$HOME/.kde3.3:$HOME/.kde:g' ".kde/$file"
++				done
++			fi
++		fi
++	fi
++	
++	# Remember that we're running in case we die
++	echo 3.4 > .kde-cur
++fi
++
++# environment friendly
++unset lastver
++unset counter
++unset ourver
++unset ourdir
++unset mostrecent
++
++# Gentoo init ends
++
+ # Check if a KDE session already is running
+ if dcop kdesktop >/dev/null 2>&1; then
+ 	echo "KDE seems to be already running on this display."
+@@ -247,4 +345,13 @@
+   done
+ done
+ 
++
++# Gentoo exit
++
++# Move the configdir back
++mv .kde .kde3.4
++rm .kde-cur
++
++# Gentoo exit ends
++
+ echo 'startkde: Done.'  1>&2

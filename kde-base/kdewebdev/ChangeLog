@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.30 2005/01/03 23:29:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.31 2005/01/14 00:19:31 greg_g Exp $
+
+*kdewebdev-3.4.0_beta1 (13 Jan 2005)
+
+  13 Jan 2005; Gregorio Guidi <greg@gentoo.org> +kdewebdev-3.4.0_beta1.ebuild:
+  Introducing kde-3.4.0_beta1. Add blocker on app-editors/quanta.
 
   04 Jan 2005; Guy Martin <gmsoft@gentoo.org> kdewebdev-3.3.2.ebuild:
   Stable on hppa.

@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.170 2005/01/03 23:00:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.171 2005/01/14 00:19:31 greg_g Exp $
+
+*kdebase-3.4.0_beta1 (14 Jan 2005)
+
+  14 Jan 2005; Gregorio Guidi <greg@gentoo.org> files/agent-shutdown.sh,
+  files/agent-startup.sh, +files/3.4.0_beta1/kdmrc,
+  +files/3.4.0_beta1/startkde-gentoo.diff, +kdebase-3.4.0_beta1.ebuild:
+  Introducing kde-3.4.0_beta1. Added support for cyrus-sasl. Added support for
+  logitech-mouse plugin. Fix the kde script to handle the .kde3.3 .kde3.4
+  migration (#40698). Fix agents-startup and agents-shutdown scripts (#76719,
+  #76720). Use /usr/share/xsession to list available sessions in kdm. Set the
+  default kdm face icon.
 
   03 Jan 2005; Guy Martin <gmsoft@gentoo.org> kdebase-3.3.2-r1.ebuild:
   Stable on hppa.

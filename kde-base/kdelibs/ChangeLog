@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.181 2005/01/03 22:58:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.182 2005/01/14 00:19:31 greg_g Exp $
+
+*kdelibs-3.4.0_beta1 (14 Jan 2005)
+
+  14 Jan 2005; Gregorio Guidi <greg@gentoo.org>
+  +files/reference-list-rev-1.3.diff, +kdelibs-3.4.0_beta1.ebuild:
+  Introducing kde-3.4.0_beta1. Removed dependency on openldap: code moved to
+  kdebase. Added optional support for jpeg2000 and for openexr file format.
+  Dependencies cleanup. Remove the file that sets KDEDIR in /etc/env.d, since it
+  is obsoleted.
 
   03 Jan 2005; Guy Martin <gmsoft@gentoo.org> kdelibs-3.3.2-r2.ebuild:
   Stable on hppa.
