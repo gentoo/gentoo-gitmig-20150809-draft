@@ -1,5 +1,5 @@
-app-i18n
 app-admin 
+app-benchmarks
 app-arch 
 app-cdr 
 app-crypt 
@@ -7,6 +7,7 @@ app-doc
 app-editors 
 app-emulation 
 app-games 
+app-i18n
 app-misc 
 app-office
 app-sci
