@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.0.0.ebuild,v 1.5 2004/07/21 08:22:07 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.0.0.ebuild,v 1.6 2004/07/21 12:20:00 st_lim Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
 RDEPEND="virtual/cron
 		app-admin/logrotate"
 KEYWORDS="~x86 ~ppc"
-SLOT="3.0"
+SLOT="0"
 
 # some FHS-like structure
 HOMEDIR="/etc/mail/dspam"
@@ -109,6 +109,7 @@ src_install () {
 
 	# make install
 	make DESTDIR=${D} install || die
+	chmod 4755 /usr/bin/dspam
 
 	# documentation
 	dodoc CHANGELOG LICENSE README RELEASE.NOTES
