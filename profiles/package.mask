@@ -26,9 +26,9 @@ net-www/zope
 #implementations on the fly.  Need testing.
 #
 # -- Azarah (7 April 2002)
->=media-video/nvidia-kernel-1.0.2880
->=media-video/nvidia-glx-1.0.2880
->=x11-base/xfree-4.2.0-r9
+#>=media-video/nvidia-kernel-1.0.2880
+#>=media-video/nvidia-glx-1.0.2880
+#>=x11-base/xfree-4.2.0-r9
 
 #GNUCash-1.6* do not work with these
 # guile-1.5 changed function names of 1.4
