@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mono-wine/mono-wine-20030318.ebuild,v 1.3 2004/04/06 03:50:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mono-wine/mono-wine-20030318.ebuild,v 1.4 2004/04/25 13:42:29 scandium Exp $
 
 inherit eutils
 
@@ -14,6 +14,8 @@ SRC_URI="http://primates.ximian.com/~duncan/mono-wine/sources/Wine-${PV}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+
+IUSE=""
 
 DEPEND="virtual/x11"
 
