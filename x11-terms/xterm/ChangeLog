@@ -1,11 +1,12 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.59 2005/01/21 08:30:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.60 2005/01/21 08:36:53 spyderous Exp $
 
 *xterm-199 (21 Jan 2005)
 
   21 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>; +xterm-199.ebuild:
-  New version. Fixes #75604, #76453 and #69926.
+  New version. Fixes #75604, #76453 and #69926. Thanks to Seemant for updating
+  this and sending it to me.
 
   20 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>; xterm-197.ebuild:
   Unleash upon the x86 masses.
