@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4b71e6c8b53337932a92fa49bd8e79f ChangeLog 3991
 MD5 f26e4b0e8b41f52fe3f69634019e8888 latex2html-2002.2.ebuild 2134
+MD5 b5b8e4ba3bc4665920260684cbd9451a ChangeLog 4149
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 7cb45d13fdcd62ddc9870d305cacabb6 latex2html-2002.2.1_pre20041025.ebuild 2709
+MD5 88098ecb53ea9eaa26cb9da085619c35 latex2html-2002.2.1_pre20041025.ebuild 2770
 MD5 b4c0404c2535e091016053386676d0bc files/digest-latex2html-2002.2 70
 MD5 0eb4f31ba18d25c8fd3229a00e5aad2e files/digest-latex2html-2002.2.1_pre20041025 81
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCCyxvVWNWqTUmv+0RAsbzAKCrDMVATlMq9dLSX65DQLwkfC+2aQCeKxZw
-jZz1KGX0QFO7XjjwiWIPYJg=
-=k4x6
------END PGP SIGNATURE-----

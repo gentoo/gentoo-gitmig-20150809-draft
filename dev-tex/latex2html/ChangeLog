@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex2html
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.15 2005/02/10 09:51:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.16 2005/02/12 14:05:47 usata Exp $
+
+  12 Feb 2005; Mamoru KOMACHI <usata@gentoo.org>
+  latex2html-2002.2.1_pre20041025.ebuild:
+  Don't hardcode perl version to /usr/bin/latex2html; bug #80468.
 
   10 Feb 2005; Mamoru KOMACHI <usata@gentoo.org>
   -latex2html-2002.2.1_pre20040108.ebuild,

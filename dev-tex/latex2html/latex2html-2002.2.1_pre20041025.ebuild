@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025.ebuild,v 1.2 2005/02/10 09:51:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025.ebuild,v 1.3 2005/02/12 14:05:47 usata Exp $
 
 inherit eutils
 
@@ -40,6 +40,8 @@ DEPEND="virtual/ghostscript
 #}
 
 src_compile() {
+	sed -ie 's%@PERL@%/usr/bin/perl%g' wrapper/unix.pin || die
+
 	local myconf
 
 	use gif || use png || myconf="${myconf} --disable-images"
