@@ -1,28 +1,28 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.10.3_p3.ebuild,v 1.7 2004/06/28 20:14:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.10.3_p3.ebuild,v 1.8 2004/07/12 23:04:08 swegener Exp $
 
 inherit eutils
 
-MY_PV=irc${PV:0:6}${PV:7:2}
+MY_P=irc${PV/_/}
 
 DESCRIPTION="RFC compliant IRC server"
 HOMEPAGE="http://www.irc.org/"
-SRC_URI="ftp://ftp.irc.org/irc/server/${MY_PV}.tgz
-	ftp://ftp.funet.fi/pub/unix/irc/server/${MY_PV}.tgz"
+SRC_URI="ftp://ftp.irc.org/irc/server/${MY_P}.tgz"
 
 LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="zlib ipv6"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	sys-libs/ncurses
 	zlib? ( sys-libs/zlib )"
-RDEPEND="sys-apps/sed
+DEPEND="${RDEPEND}
+	sys-apps/sed
 	sys-apps/grep"
 
-S=${WORKDIR}/${MY_PV}
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
