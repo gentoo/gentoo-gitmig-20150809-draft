@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.4 2003/11/30 06:04:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.5 2004/01/08 13:47:57 vapier Exp $
 
 inherit games
 
@@ -54,23 +54,6 @@ src_install() {
 
 	insinto ${GAMES_DATADIR}/${PN}/ctf
 	doins ctf/*.{cfg,ico,pak} || die "couldnt grab ctf"
-
-	# install symlinks for all the packages that may utilize this ebuild
-	if has_version games-fps/quake2-icculus ; then
-		einfo "Creating symlinks for quake2-icculus"
-		for qdir in "" -qmax ; do
-			basedir=${GAMES_LIBDIR}/quake2-icculus${qdir}/baseq2
-			ctfdir=${GAMES_LIBDIR}/quake2-icculus${qdir}/ctf
-			dodir ${basedir}
-			for f in pak{0,1,2}.pak players ; do
-				[ -e ${basedir}/${f} ] && continue
-				dosym ${GAMES_DATADIR}/${PN}/baseq2/${f} ${basedir}/${f}
-			done
-			dodir ${ctfdir}
-			[ -e ${ctfdir}/pak0.pak ] || \
-			dosym ${GAMES_DATADIR}/${PN}/ctf/pak0.pak ${ctfdir}/pak0.pak
-		done
-	fi
 
 	prepgamesdirs
 }
