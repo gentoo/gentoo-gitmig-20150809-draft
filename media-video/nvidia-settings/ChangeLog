@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.9 2005/01/17 08:49:29 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.10 2005/03/12 19:31:40 azarah Exp $
+
+*nvidia-settings-1.0.7167 (12 Mar 2005)
+
+  12 Mar 2005; Martin Schlemmer <azarah@gentoo.org>
+  +nvidia-settings-1.0.7167.ebuild:
+  Update to latest version, thanks Zander. Fixup libXNVCtrl.a build, so that
+  it is done native (no need for tarball on 64bit machines, etc).
 
   17 Jan 2005; Andrew Bevitt <cyfred@gentoo.org>
   nvidia-settings-1.0.6629.ebuild:
