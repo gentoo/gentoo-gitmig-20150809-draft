@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.9 2004/06/25 18:21:12 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.10 2004/06/28 15:19:35 port001 Exp $
+
+  28 Jun 2004; Ian Leitch <port001@gentoo.org> porthole-0.3.1.ebuild:
+  Check pygtk was built with gnome support, #54889
 
 *porthole-0.3.1 (25 Jun 2004)
 
