@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.40 2004/05/27 03:20:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.41 2004/06/04 04:39:44 geoman Exp $
+
+  04 Jun 2004; Stephen P. Becker <geoman@gentoo.org> esound-0.2.34.ebuild:
+  Stable on mips.
 
   26 May 2004; Jason Wever <weeve@gentoo.org> esound-0.2.34.ebuild:
   And you, sparc'd me all night long...
