@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.4.0.ebuild,v 1.3 2004/02/29 09:18:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.4.0.ebuild,v 1.4 2004/03/10 14:22:32 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -49,4 +49,10 @@ src_install() {
 	cp -r wolf ${D}/${GAMES_PREFIX_OPT}/rtcw
 	dodir ${GAMES_DATADIR}
 	cp -r q2 ${D}/${GAMES_DATADIR}/quake2-data
+
+	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
 }
