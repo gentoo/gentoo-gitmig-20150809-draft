@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.117 2005/03/28 16:55:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.118 2005/03/29 12:50:19 pauldv Exp $
+
+*db-4.3.27 (29 Mar 2005)
+
+  29 Mar 2005; <pauldv@gentoo.org> +files/db-4.3-jarlocation.patch,
+  +files/db-4.3-libtool.patch, +files/db-4.3.27-fix-dep-link.patch,
+  db-3.2.9-r10.ebuild, +db-4.3.27.ebuild:
+  Fix silly cd error
 
   28 Mar 2005; Jason Wever <weeve@gentoo.org> db-3.2.9-r10.ebuild:
   Marked as ~sparc because this ebuild is brand new, improperly marked stable,
@@ -17,6 +24,13 @@
 
   19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> db-4.1.25_p1-r4.ebuild:
   Stable on alpha.
+
+*db-4.3.27 (02 Feb 2005)
+
+  02 Feb 2005; <pauldv@gentoo.org> +files/db-4.3-jarlocation.patch,
+  +files/db-4.3-libtool.patch, +files/db-4.3.27-fix-dep-link.patch,
+  +db-4.3.27.ebuild:
+  A new upstream version. The patches are updated to apply again.
 
   30 Jan 2005; Paul de Vrieze <pauldv@gentoo.org> db-1.85-r1.ebuild,
   db-1.85-r2.ebuild, db-3.2.9-r10.ebuild, db-3.2.9-r7.ebuild,

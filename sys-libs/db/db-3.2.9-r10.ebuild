@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.19 2005/03/28 16:55:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.20 2005/03/29 12:50:19 pauldv Exp $
 
 inherit gnuconfig libtool eutils db
 
@@ -55,9 +55,9 @@ src_unpack() {
 	rm -f config.guess
 	sed -i "s,\(-D_GNU_SOURCE\),\1 ${CFLAGS}," configure
 
+	cd ${S}
 	epatch ${FILESDIR}/${P}-jarlocation.patch
 	epatch ${FILESDIR}/db-3.2.9-java15.patch
-	cd ${S}
 	gnuconfig_update
 }
 
