@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.5.6-r1.ebuild,v 1.9 2004/09/15 19:27:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.5.6-r1.ebuild,v 1.10 2004/10/07 06:33:25 eradicator Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Make failed"
+	exeinto `xmms-config --input-plugin-dir`
+	doexe src/.libs/libxmmsmad.so || die
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
