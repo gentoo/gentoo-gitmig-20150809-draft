@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.5 2004/01/26 00:21:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.6 2004/01/30 05:45:49 drobbins Exp $
 
 inherit games eutils flag-o-matic
 
@@ -26,7 +26,8 @@ RDEPEND="virtual/glu
 	virtual/x11
 	=x11-libs/gtk+-1*"
 DEPEND="${RDEPEND}
-	dev-lang/perl"
+	dev-lang/perl
+	>=sys-devel/autoconf-2.58"
 
 S=${WORKDIR}/${P}-installer
 
