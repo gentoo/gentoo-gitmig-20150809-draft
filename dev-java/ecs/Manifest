@@ -1,4 +1,16 @@
-MD5 dd4226c2ccc568cca5cca1c03d6f271a ChangeLog 718
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 64dc74f5dcf252cb74cebe67f3463ea4 ecs-1.4.1-r1.ebuild 968
 MD5 b402ca0550e1676d7b89e9623f24b6ff ecs-1.4.1.ebuild 809
+MD5 5ab79341d541a7669551a45d919f55f1 ChangeLog 890
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 a9060f0311fe1863e9b4060dfda897f8 files/digest-ecs-1.4.1-r1 62
 MD5 a9060f0311fe1863e9b4060dfda897f8 files/digest-ecs-1.4.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfncP/rLF9B432nYRAqwlAKCQwFB4IpEUEGM3FzL01dieqBc+fACgx2c+
+IyMkvW64qI3bYP4kzZa1Wpc=
+=yHTD
+-----END PGP SIGNATURE-----
