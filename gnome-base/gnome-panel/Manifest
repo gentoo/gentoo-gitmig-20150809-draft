@@ -3,8 +3,8 @@ MD5 1272743bcce046b4520549f4e2c297f3 gnome-panel-2.2.1.ebuild 967
 MD5 623e3c1deaace4f7ecea86edb2de8e71 gnome-panel-2.0.9.ebuild 1264
 MD5 48542b12f7de0aa1d685b144b762a3ff gnome-panel-1.4.2-r2.ebuild 2016
 MD5 1c41d01742b08320a5080625b7862d11 gnome-panel-1.4.1.ebuild 1774
-MD5 c88c6aaab2b5a1d0617bcc17067ff03b gnome-panel-2.4.0-r1.ebuild 1600
-MD5 78ec3805c2588273b08828b486c0d259 ChangeLog 7143
+MD5 2aeb13795e9da911336deee872a9c407 gnome-panel-2.4.0-r1.ebuild 1615
+MD5 e3312cea67923527f2a4c7455f3cdcb0 ChangeLog 7284
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 95daeb28a4a553527a9b88656a058732 gnome-panel-2.2.2.ebuild 975
 MD5 4e1b795f852d1e379d50f668ea0e8a1e files/digest-gnome-panel-2.2.2.2 73
