@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Modified by $HOME/.maildir by Craig Joly <craig@taipan.mudshark.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r2.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r2.ebuild,v 1.3 2002/07/16 14:12:56 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -14,7 +14,12 @@ DEPEND="virtual/glibc
 src_compile() {
 
     cp Makefile Makefile.orig
-    sed -e "s:CFLAGS0 = -O:CFLAGS0 = ${CFLAGS}:" \
+# Added a -O2 at the end of CFLAGS to overcome what seems to be a 
+# gcc-3.1 strstr() bug with more aggressive optimization flags
+# The order of the flags matters as the last flag passed clobbers
+# the first flag.  i.e. if -O2 was placed before ${CFLAGS},
+# whatever optimization that is in ${CFLAGS} would clobber -O2    
+   sed -e "s:CFLAGS0 = -O:CFLAGS0 = ${CFLAGS} -O2:" \
         -e "s:LOCKINGTEST=__defaults__:#LOCKINGTEST=__defaults__:" \
         -e "s:#LOCKINGTEST=/tmp:LOCKINGTEST=/tmp:" Makefile.orig > Makefile
 
