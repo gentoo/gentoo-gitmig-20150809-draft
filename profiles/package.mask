@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3071 2004/08/17 17:53:29 foser Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3072 2004/08/17 22:35:12 squinky86 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <squinky86@gentoo.org> (17 Aug 2004)
+# Masked by request of upstream developers.
+>=net-p2p/mldonkey-2.5.17
+
 # <foser@gentoo.org> (17 Aug 2004)
 # Utopia stack for gnome for testing
 sys-apps/dbus
@@ -31,10 +35,6 @@ gnome-base/gnome-volume-manager
 # <cardoe@gentoo.org> (16 Aug 2004)
 # Masked for development purposes and testing
 =net-wireless/ndiswrapper-0.9
-
-# <squinky86@gentoo.org> (14 Aug 2004)
-# Masked for development purposes:
->=net-p2p/mldonkey-2.5.22
 
 # <seemant@gentoo.org> (13 Aug 2004)
 # Masked for TESTING by DEVS and ARCHES!
