@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/gpsim
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.4 2003/10/29 04:17:42 robbat2 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.5 2004/03/23 18:16:29 dragonheart Exp $
+
+  24 Mar 2004; Daniel Black <dragonheart@gentoo.org> gpsim-0.20.14-r1.ebuild,
+  gpsim-0.20.14.ebuild:
+  gpsim-0.20.14-r1 marked stable. Added missing IUSE statements
 
   28 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> gpsim-0.20.14-r1.ebuild,
   files/gpsim-0.20.14-gcc2_fix.patch:

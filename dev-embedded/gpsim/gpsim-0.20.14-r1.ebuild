@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.20.14-r1.ebuild,v 1.2 2003/10/29 04:17:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.20.14-r1.ebuild,v 1.3 2004/03/23 18:16:29 dragonheart Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -10,7 +10,8 @@ SRC_URI="http://www.dattalo.com/gnupic/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
+IUSE=""
 
 DEPEND="x11-libs/gtk+extra"
 RDEPEND=""
