@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.65 2004/06/24 22:32:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.66 2004/06/30 03:33:03 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> screen-4.0.2.ebuild:
+  stable on x86, alpha, ia64
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> screen-4.0.1-r2.ebuild,
   screen-4.0.2.ebuild, +metadata.xml:

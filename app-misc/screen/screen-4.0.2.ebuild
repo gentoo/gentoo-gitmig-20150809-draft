@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.9 2004/06/28 04:12:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.10 2004/06/30 03:33:03 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/screen/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 arm s390 ~sparc ~ppc ~hppa ~amd64 ~mips ~alpha ~ia64 ~ppc64"
+KEYWORDS="x86 arm s390 ~sparc ~ppc ~hppa ~amd64 ~mips alpha ia64 ~ppc64"
 IUSE="pam"
 
 RDEPEND=">=sys-libs/ncurses-5.2
