@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/divx4linux-20020418-r2.ebuild,v 1.1 2003/01/18 19:49:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/divx4linux-20020418-r2.ebuild,v 1.2 2003/01/19 18:23:54 azarah Exp $
 
 DXVER="501"
 DESCRIPTION="Binary release of DivX Codec 5.0.1"
@@ -22,7 +22,7 @@ src_install() {
 		dosym /usr/lib/${lib} /usr/lib/${lib}.0
 	done
 
-	# Fix bug #13756.
+	# Fix bug #13776.
 	dosed -e 's|c:\\trace_b.txt|/dev/null\x00\x00\x00\x00\x00|' \
 		/usr/lib/libdivxencore.so
 
