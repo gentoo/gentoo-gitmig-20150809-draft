@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.0-r6.ebuild,v 1.1 2003/01/16 09:11:50 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.0-r6.ebuild,v 1.2 2003/02/08 21:06:04 gmsoft Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 src_unpack() {
 	unpack ${A}
