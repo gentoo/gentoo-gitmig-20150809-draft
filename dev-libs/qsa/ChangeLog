@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/qsa
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/ChangeLog,v 1.6 2003/11/16 18:35:35 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/ChangeLog,v 1.7 2003/11/28 13:29:16 caleb Exp $
+
+*qsa-1.0.1 (28 Nov 2003)
+
+  28 Nov 2003; Caleb Tennis <caleb@gentoo.org> qsa-1.0.1.ebuild,
+  qsa-1.0_pre20030513.ebuild, files/qsa-1.0.1-no-examples.diff,
+  files/qsa-1.0.1-sandbox-fix.diff,
+  files/qsa-1.0_pre20030513-libdir-patch.diff:
+  Version bump
 
   16 Nov 2003; Brad House <brad_mssw@gentoo.org> qsa-1.0.0.ebuild:
   mark stable on amd64
