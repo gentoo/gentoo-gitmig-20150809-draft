@@ -2,6 +2,7 @@ MD5 ad0d04ca81dc52eeb46f32121b0c6b5c ChangeLog 2234
 MD5 4279b1b37a7f32c9136f03d4837290a1 mozilla-firebird-cvs-0.6.ebuild 4507
 MD5 2bea0c5675e0c3f1d99c3db366fca438 mozilla-firebird-cvs-0.6-r1.ebuild 4589
 MD5 98c3d349758f61eb7721c7c2123c8b92 mozilla-firebird-cvs-0.6-r2.ebuild 4664
+MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mozilla-firebird-cvs-0.6 0
 MD5 8c4939880225843b71f61395fc754e14 files/MozillaFirebird 757
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mozilla-firebird-cvs-0.6-r1 0
