@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.14 2005/01/15 16:07:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.15 2005/01/17 21:20:27 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -26,7 +26,7 @@ esac
 myP="$myPN-$myPV"
 
 # is this a kde-base ebuild, vs eg koffice
-case "$myPN" in kde-i18n|arts|kdeaccessibility|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdemultimedia|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils|kdewebdev|kdelibs-apidocs)
+case "$myPN" in kde-i18n|arts|kdeaccessibility|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdemultimedia|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils|kdewebdev)
 	debug-print "$ECLASS: KDEBASE ebuild recognized"
 	export KDEBASE="true"
 	;;
