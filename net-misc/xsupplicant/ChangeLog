@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/xsupplicant
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.4 2004/12/29 20:17:58 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.5 2005/01/09 14:46:01 brix Exp $
+
+*xsupplicant-1.0 (09 Jan 2005)
+
+  09 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/xsupplicant.conf.d, +files/xsupplicant.init.d,
+  +xsupplicant-1.0.1.ebuild, +xsupplicant-1.0.ebuild:
+  Version bump + development version. Fixes bug #44737 and bug #61981.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
