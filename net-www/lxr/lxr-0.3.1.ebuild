@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lxr/lxr-0.3.1.ebuild,v 1.2 2004/04/23 21:10:10 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lxr/lxr-0.3.1.ebuild,v 1.3 2004/04/23 21:51:05 stuart Exp $
 
 inherit webapp
 
@@ -26,7 +26,8 @@ src_compile() {
 }
 
 src_install() {
-	webapp_pkg_setup
+	# prepare ${D} for our arrival
+	webapp_src_preinst
 
 	# Install documentation
 	dodoc COPYING INSTALL README
