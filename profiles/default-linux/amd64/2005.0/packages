@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/packages,v 1.7 2005/01/14 21:44:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/packages,v 1.8 2005/01/17 20:05:49 eradicator Exp $
 
 # Use this one if binutils-config goes stable before 2005.0 snapshot.
 #*>=sys-devel/binutils-2.15.90.0.1.1-r4
@@ -9,7 +9,7 @@
 *>=sys-libs/glibc-2.3.4.20040808-r1
 
 # Make portage/toolchain honor ${ABI}
-*>=sys-apps/portage-2.0.51-r9
+*>=sys-apps/portage-2.0.51-r13
 *>=sys-devel/gcc-config-1.3.9
 >=sys-devel/distcc-2.18.3-r1
 
