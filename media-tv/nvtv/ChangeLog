@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/nvtv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/ChangeLog,v 1.5 2004/03/26 16:43:42 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/ChangeLog,v 1.6 2004/06/06 16:15:08 blauwers Exp $
+
+*nvtv-0.4.7 (06 Jun 2004)
+
+  06 Jun 2004; Bart Lauwers <blauwers@gentoo.org> nvtv-0.4.7.ebuild:
+  Version bump per request in Bug #49698
+
+  06 Jun 2004; Bart Lauwers <blauwers@gentoo.org> nvtv-0.4.5.ebuild, nvtv-0.4.6.ebuild:
+  Changed dep from Xfree to virtual/x11 per Bug #48959
 
 *nvtv-0.4.6 (26 Mar 2004)
 
