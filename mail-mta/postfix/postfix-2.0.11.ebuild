@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.11.ebuild,v 1.2 2004/06/07 20:54:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.11.ebuild,v 1.3 2004/06/11 07:44:56 eradicator Exp $
 
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox"
 
@@ -201,7 +201,7 @@ src_install () {
 	rm -f main.cf~
 	fperms 600 /etc/postfix/saslpass
 
-	exeinto /etc/init.d ; doexe ${FILESDIR}/postfix.rc6
+	exeinto /etc/init.d ; newexe "${FILESDIR}/postfix.rc6" postfix
 	insinto /etc/pam.d ; newins ${FILESDIR}/smtp.pam smtp
 
 	insinto /etc/sasl2

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.5 2004/06/07 20:54:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.6 2004/06/11 07:44:56 eradicator Exp $
+
+  11 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  postfix-2.0.11.ebuild:
+  Fixed init script to have proper name.
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   postfix-1.1.11.20020917-r1.ebuild, postfix-1.1.11.20020917.ebuild,
