@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libgadu
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.4 2004/10/22 23:25:07 blubb Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.5 2004/12/31 23:42:56 sekretarz Exp $
+
+*libgadu-20041230 (01 Jan 2005)
+
+  01 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +libgadu-20041230.ebuild:
+  Version bump, added threads use flag to enable pthread in resolver
 
   23 Oct 2004; Simon Stelling <blubb@gentoo.org> libgadu-20040820.ebuild:
   added ~amd64
