@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.0.1.ebuild,v 1.1 2003/06/03 22:29:28 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.0.1.ebuild,v 1.2 2003/06/05 23:38:29 bass Exp $
 
 IUSE="doc"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${MY_P}.rpm"
 
 SLOT="0"
 LICENSE="NeTraverse"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="app-arch/rpm2targz
 		virtual/winkernel"
@@ -36,7 +36,7 @@ src_install() {
     mv ${S}/opt ${D}
     mv ${S}/etc ${D}
     cp ${FILESDIR}/registerme.sh ${D}/opt/win4lin/
-	cp ${FILESDIR}/win4lin.initd ${D}/opt/win4lin/
+#	cp ${FILESDIR}/win4lin.initd ${D}/opt/win4lin/
 
 #    if [ -n "`use doc`" ]
 #    then
@@ -65,7 +65,7 @@ pkg_prerm() {
 
 pkg_config() {
     loadwindowsCD cddevice /dev/cdrom
-#    ln -s /etc/rc.d/init.d/Win4Lin /etc/init.d/Win4Lin
+    ln -s /etc/rc.d/init.d/Win4Lin /etc/init.d/Win4Lin
 	cp /opt/win4lin/win4lin.initd /etc/init.d/Win4Lin
     #put debugging stuff here
     if [ ${?} -eq "0" ]; then
