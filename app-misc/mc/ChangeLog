@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+*mc-4.6.0-r4 (11 Oct 2003)
+
+  11 Oct 2003; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r4.ebuild:
+  dynamic samba3 link, big thx to Michal 'Spock' Januszewski <spock@o2.pl>
+
 *mc-4.6.0-r3 (27 Sep 2003)
 
   27 Sep 2003; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r3.ebuild:
