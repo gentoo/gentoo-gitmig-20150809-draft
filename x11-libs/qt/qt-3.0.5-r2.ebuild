@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.14 2004/04/17 08:12:14 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.15 2004/04/27 20:39:05 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
