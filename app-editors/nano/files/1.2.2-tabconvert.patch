@@ -1,0 +1,96 @@
+diff -ur work.orig/nano-1.2.2/global.c work/nano-1.2.2/global.c
+--- work.orig/nano-1.2.2/global.c	2003-08-18 17:14:23.929963632 -0400
++++ work/nano-1.2.2/global.c	2003-08-18 17:31:03.396021696 -0400
+@@ -80,6 +80,7 @@
+ 
+ int tabsize = -1;		/* Our internal tabsize variable.  The
+ 				   default value 8 is set in main(). */
++int tabconvert = ' ';
+ 
+ char *hblank = NULL;		/* A horizontal blank line */
+ #ifndef DISABLE_HELP
+diff -ur work.orig/nano-1.2.2/nanorc.sample work/nano-1.2.2/nanorc.sample
+--- work.orig/nano-1.2.2/nanorc.sample	2003-08-18 17:14:23.931963328 -0400
++++ work/nano-1.2.2/nanorc.sample	2003-08-18 17:45:05.901941328 -0400
+@@ -86,6 +86,11 @@
+ ## Use this tab size instead of the default; it must be greater than 0
+ # set tabsize 8
+ 
++## Use this tab char instead of the default space; it can either be the
++## ascii value of the character you wish to see (refer to ascii(7)) or
++## it can be a single character.  183 and 186 seem to be 'nice' values.
++# set tabconvert 32
++
+ ## Save automatically on exit, don't prompt
+ # set tempfile
+ 
+diff -ur work.orig/nano-1.2.2/proto.h work/nano-1.2.2/proto.h
+--- work.orig/nano-1.2.2/proto.h	2003-08-18 17:14:23.930963480 -0400
++++ work/nano-1.2.2/proto.h	2003-08-18 17:39:44.442810544 -0400
+@@ -38,7 +38,7 @@
+ #endif
+ extern long totsize;
+ extern int temp_opt;
+-extern int wrap_at, flags, tabsize;
++extern int wrap_at, flags, tabsize, tabconvert;
+ extern int search_last_line;
+ extern int search_offscreen;
+ extern int currslen;
+diff -ur work.orig/nano-1.2.2/rcfile.c work/nano-1.2.2/rcfile.c
+--- work.orig/nano-1.2.2/rcfile.c	2003-08-18 17:14:23.930963480 -0400
++++ work/nano-1.2.2/rcfile.c	2003-08-18 17:56:59.475461664 -0400
+@@ -82,6 +82,7 @@
+ #endif
+     {"suspend", SUSPEND},
+     {"tabsize", 0},
++    {"tabconvert", ' '},
+     {"tempfile", TEMP_OPT},
+     {"view", VIEW_MODE},
+     {"historylog", HISTORYLOG},
+@@ -523,6 +524,7 @@
+ #endif
+ 		    if (set == 1) {
+ 			if (!strcasecmp(rcopts[i].name, "tabsize")
++				|| !strcasecmp(rcopts[i].name, "tabconvert")
+ #ifndef DISABLE_OPERATINGDIR
+ 				|| !strcasecmp(rcopts[i].name, "operatingdir")
+ #endif
+@@ -586,11 +588,21 @@
+ 				 * accept 0 while checking other
+ 				 * errors. */
+ 				j = (int)strtol(option, &first_error, 10);
+-				if (errno == ERANGE || *option == '\0' || *first_error != '\0')
+-				    rcfile_error(_("requested tab size %d invalid"),
+-						 j);
+-				else
+-				    tabsize = j;
++				if (!strcasecmp(rcopts[i].name, "tabconvert")) {
++					if (errno == ERANGE || *first_error != '\0') {
++						if (*option == '\0')
++							rcfile_error(_("requested tab convert is invalid"));
++						else
++							tabconvert = option[0];
++					} else
++						tabconvert = j;
++				} else {
++					if (errno == ERANGE || *option == '\0' || *first_error != '\0')
++					    rcfile_error(_("requested tab size %d invalid"),
++							 j);
++					else
++						tabsize = j;
++				}
+ 			    }
+ 			} else
+ 			    SET(rcopts[i].flag);
+diff -ur work.orig/nano-1.2.2/winio.c work/nano-1.2.2/winio.c
+--- work.orig/nano-1.2.2/winio.c	2003-08-18 17:14:23.930963480 -0400
++++ work/nano-1.2.2/winio.c	2003-08-18 17:34:23.341625344 -0400
+@@ -1069,7 +1069,7 @@
+     for (; *original != '\0'; original++) {
+ 	if (*original == '\t')
+ 	    do {
+-		converted[pos++] = ' ';
++		converted[pos++] = tabconvert;
+ 	    } while (pos % tabsize);
+ 	else if (is_cntrl_char(*original)) {
+ 	    converted[pos++] = '^';

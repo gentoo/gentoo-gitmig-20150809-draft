@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.2.ebuild,v 1.1 2003/08/18 21:11:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.2.ebuild,v 1.2 2003/08/18 22:18:03 vapier Exp $
+
+inherit eutils
 
 MY_P=${PN}-${PV/_}
 DESCRIPTION="GNU GPL'd Pico clone with more functionality"
@@ -18,6 +20,11 @@ DEPEND=">=sys-libs/ncurses-5.2
 PROVIDE="virtual/editor"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PV}-tabconvert.patch
+}
 
 src_compile() {
 	use build && myconf="${myconf} --disable-wrapping-as-root"
