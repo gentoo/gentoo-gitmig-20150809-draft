@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mod_auth_mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/ChangeLog,v 1.12 2005/01/22 04:19:38 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/ChangeLog,v 1.13 2005/02/02 05:11:17 vericgar Exp $
+
+*mod_auth_mysql-2.0.0_pre20030510 (01 Feb 2005)
+
+  01 Feb 2005; Michael Stewart <vericgar@gentoo.org>
+  +mod_auth_mysql-2.0.0_pre20030510.ebuild:
+  Copied 20030510-r2 to 2.0.0_pre2030510 to fix bug #79678
 
   22 Jan 2005; Christian Parpart <trapni@gentoo.org> 
   mod_auth_mysql-2.8.1.ebuild:
