@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/timemachine-0.2.4.ebuild,v 1.4 2004/06/25 00:26:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/timemachine-0.2.4.ebuild,v 1.5 2004/09/03 20:21:57 eradicator Exp $
 
 inherit flag-o-matic eutils
 DESCRIPTION="JACK client record button remembering the last 10 seconds when pressed."
@@ -8,7 +8,7 @@ HOMEPAGE="http://plugin.org.uk/timemachine/"
 SRC_URI="http://plugin.org.uk/timemachine/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 
 IUSE="ladcca"
 
