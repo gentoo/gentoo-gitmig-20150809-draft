@@ -37,7 +37,7 @@
 
 # <carpaski@gentoo.org> (15 Dec 2002)
 # Masking for prelink testing.
->sys-apps/portage-2.0.45-r5
+>sys-apps/portage-2.0.45-r6
 
 # <hannes@gentoo.org> (15 Dec 2002)
 # masking arts-1.0.4-r1, because it may be the solution to bug #10338,
