@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.6 2002/12/13 10:56:06 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.7 2003/01/09 04:52:06 mkennedy Exp $
+
+*scite-1.4.9 (08 Jan 2002)
+
+  08 Jan 2002; Matthew Kennedy <mkennedy@gentoo.org> scite-1.4.9.ebuild,
+  ChangeLog, files/digest-scite-1.4.9 :
+
+  Version bump and bug fix (resolves #13328)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
