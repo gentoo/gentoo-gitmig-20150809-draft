@@ -1,3 +1,5 @@
-MD5 fe77dda378dbc6d287a7f7ad31947187 ChangeLog 765
+MD5 d4864fda6b30d922091d9d8e502a8d44 ChangeLog 883
 MD5 e6f0f528a8a362d47a436777945e8e8b gperf-2.7.2.ebuild 549
+MD5 ffb6dbccbdbfe35a63a083780c9ac1f6 gperf-3.0.1.ebuild 555
 MD5 ec1cc9b13d8e32fc5d07f728b58f8fe9 files/digest-gperf-2.7.2 63
+MD5 748cbc76e71cf034e58e6eae1ad118e4 files/digest-gperf-3.0.1 63

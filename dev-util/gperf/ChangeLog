@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gperf
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.8 2003/11/15 23:33:56 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.9 2004/02/18 09:59:48 mholzer Exp $
+
+*gperf-3.0.1 (18 Feb 2004)
+
+  18 Feb 2004; Martin Holzer <mholzer@gentoo.org> gperf-3.0.1.ebuild:
+  Version bumped.
 
   29 Sep 2003; Aron Griffis <agriffis@gentoo.org> gperf-2.7.2.ebuild:
   Stable on alpha
