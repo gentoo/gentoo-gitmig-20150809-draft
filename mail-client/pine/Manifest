@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d8cde185d59fc9edbd42b8aac32a134f pine-4.58.ebuild 3336
 MD5 389917fa953f4231b68b745faffbfcbd pine-4.50-r4.ebuild 3516
 MD5 ecdb2d5a206bd289168e56f93343ad81 pine-4.61-r1.ebuild 4774
 MD5 30cc9ba9af4fe0125a599e79f0d0bab7 pine-4.58-r3.ebuild 4347
-MD5 e3f9d8c580dc60d80e8088cb74e2ff19 ChangeLog 10207
+MD5 74701905e2fa2833b29a0af8caeadbd8 ChangeLog 10287
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 4f6997a5f6343ab3cc1fdd452308a7ea pine-4.60.ebuild 4699
+MD5 05beba907ae3e93ca5d29250caac0261 pine-4.60.ebuild 4695
 MD5 de52689ee75160c695bf4659ee956845 files/imap-4.7c2-flock_4.60.patch 537
 MD5 c47b08cab6132957eef9c0d61862f951 files/digest-pine-4.50-r4 131
 MD5 21aa4bed99713a0b9c9971226fda0807 files/digest-pine-4.58-r3 429
@@ -27,10 +24,3 @@ MD5 b0aee0d39a268c8f0c85e774f7408509 files/pine-4.21-passwd.patch 448
 MD5 0493455a84ab45910a606f0f4f9f4dfd files/digest-pine-4.58 62
 MD5 74f43c70f061a3fb9378d7800b64ccaa files/digest-pine-4.60 136
 MD5 3eb735b51e3192ee78b7b556e83256b3 files/transparency.patch 447
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD4DBQFBFCi35FrxP71izLARAhSbAJjHFh7HGEJ2HTmhy/jOfHPAQ270AJ9HbgQe
-M+e+1nASFfQVRK3zciOfFg==
-=P5j1
------END PGP SIGNATURE-----
