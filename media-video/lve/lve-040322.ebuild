@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.1 2004/05/01 14:25:48 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.2 2004/05/01 17:31:57 agriffis Exp $
+
+inherit eutils
 
 # This is the version of ffmpeg lve must currently be compiled against
 FFMPEG="ffmpeg-0.4.8"
