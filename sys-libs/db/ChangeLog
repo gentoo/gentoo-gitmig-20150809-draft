@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.87 2004/04/15 20:40:15 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.88 2004/04/22 09:48:02 lv Exp $
+
+  22 Apr 2004; Travis Tilley <lv@gentoo.org> db-4.1.25_p1-r3.ebuild:
+  added fix for bug #48558
 
 *db-4.2.52_p2 (15 Apr 2004)
 
