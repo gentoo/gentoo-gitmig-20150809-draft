@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/packages,v 1.5 2004/09/15 05:13:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/packages,v 1.6 2004/09/22 16:06:50 vapier Exp $
 
 # This file extends the base packages file for the default profile that all
 # architectures will enjoy.  Please note that default is what most architectures
@@ -10,3 +10,5 @@
 *sys-apps/util-linux
 <sys-apps/shadow-5
 *sys-libs/pwdb
+
+*virtual/bootloader
