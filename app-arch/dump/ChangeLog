@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/dump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.5 2002/07/12 04:38:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.6 2002/07/27 16:57:07 raker Exp $
+
+*dump-0.4.30 (27 Jul 2002)
+
+  27 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  dump-0.4.30.ebuild, files/digest-dump-0.4.30
+
+  Version bump.
 
 *dump-0.4.29 (11 Jul 2002)
 
