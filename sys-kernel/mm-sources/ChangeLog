@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.84 2003/09/27 17:26:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.85 2003/09/29 04:15:36 kumba Exp $
+
+*mm-sources-2.6.0_beta6-r1 (29 Sep 2003)
+
+  29 Sep 2003; Joshua Kinard <kumba@gentoo.org> mm-sources-2.6.0_beta6-r1.ebuild:
+  Revision Bump, test6-mm1
+
+*mm-sources-2.6.0_beta5-r4 (22 Sep 2003)
 
   27 Sep 2003; Luca Barbato <lu_zero@gentoo.org>
   mm-sources-2.6.0_beta5-r4.ebuild:
@@ -26,8 +33,6 @@
   mm-sources-2.6.0_beta5-r4.ebuild:
   Some serious cleanups, added virtual provides for linux-sources and alsa, and
   included metadata.xml.
-
-*mm-sources-2.6.0_beta5-r4 (22 Sep 2003)
 
   22 Sep 2003; Brandon Hale <tseng@gentoo.org>
   mm-sources-2.6.0_beta5-r4.ebuild, files/2.6.0-test5-mm4-devfsd-fix:
