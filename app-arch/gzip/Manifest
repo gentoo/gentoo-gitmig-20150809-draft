@@ -1,10 +1,20 @@
-MD5 0f50023e3d5a3d8ed69a32251e03ae8f ChangeLog 5182
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a9dd7e219932d3fc92b7e95db5e43068 ChangeLog 5288
 MD5 c792b7221f6eba29a5a78f53e40e2a70 gzip-1.3.3-r4.ebuild 1780
-MD5 8cf232bd624a2032dadf55c7ca093ffd gzip-1.3.5-r1.ebuild 2029
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 0847907fd3b911fe4e3a5e01cf93e47f gzip-1.3.5-r2.ebuild 2089
+MD5 8cf232bd624a2032dadf55c7ca093ffd gzip-1.3.5-r1.ebuild 2029
+MD5 b27262f3956b4a6a7ee2b62c392e62da gzip-1.3.5-r2.ebuild 2088
+MD5 07e347c680d1ca49a2683aa6cb2b126a files/gzip-1.3.3-security.patch 2521
+MD5 f4727ba4030d08645aff9e1957453ecf files/gzip-1.3.5-zdiff-tempfile.patch 939
+MD5 a3bbaab6aec4b44161509caf1883e5d8 files/digest-gzip-1.3.5-r2 134
 MD5 2034712a3fa0de0258ee8a1598965ac5 files/digest-gzip-1.3.3-r4 62
 MD5 a3bbaab6aec4b44161509caf1883e5d8 files/digest-gzip-1.3.5-r1 134
-MD5 07e347c680d1ca49a2683aa6cb2b126a files/gzip-1.3.3-security.patch 2521
-MD5 a3bbaab6aec4b44161509caf1883e5d8 files/digest-gzip-1.3.5-r2 134
-MD5 f4727ba4030d08645aff9e1957453ecf files/gzip-1.3.5-zdiff-tempfile.patch 939
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBf3zbugEuf3OQ0akRAoCtAJsGpbULxUQSDl3o10xnccy6Wn1mFACfa8f+
+L0xGDleyZsZYUw5QffghVA4=
+=T2u5
+-----END PGP SIGNATURE-----
