@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-990821-r1.ebuild,v 1.18 2004/06/25 00:07:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-990821-r1.ebuild,v 1.19 2004/07/12 03:16:21 tgall Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/network/misc/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa ia64 amd64 ~mips"
+KEYWORDS="x86 ~ppc sparc alpha hppa ia64 amd64 ~mips ppc64"
 IUSE="ipv6"
 
 DEPEND=">=sys-apps/sed-4"
