@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-0.25.11.ebuild,v 1.1 2003/10/27 22:31:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-0.25.11.ebuild,v 1.2 2003/11/03 01:31:49 mr_bones_ Exp $
 
 inherit games
 
@@ -34,7 +34,6 @@ src_unpack() {
 
 src_install() {
 	dogamesbin neverball
-	dogamesbin mapc
 
 	rm -f data/Makefile*
 	dodir ${DATA}
