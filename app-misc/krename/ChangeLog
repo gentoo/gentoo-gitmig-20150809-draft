@@ -1,8 +1,13 @@
 # ChangeLog for app-misc/krename
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.5 2002/10/17 21:47:16 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.6 2002/10/30 18:55:08 hannes Exp $
 
-#krename-2.4 (17 Oct 2002)
+*krename-2.4.1 (30 Oct 2002)
+
+  30 Oct 2002; Hannes Mehnert <hannes@gentoo.org> krename-2.4.1.ebuild:
+  version bump, IUSE added to all ebuilds
+
+*krename-2.4 (17 Oct 2002)
 
   17 Oct 2002; Hannes Mehnert <hannes@gentoo.org> krename-2.4.ebuild:
   New upstream version.
