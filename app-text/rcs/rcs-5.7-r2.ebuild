@@ -1,31 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.13 2004/03/28 17:31:14 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.14 2004/04/07 23:53:26 vapier Exp $
 
 DESCRIPTION="Revision Control System"
-SRC_URI="ftp://ftp.gnu.org/gnu/rcs/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/rcs/"
-SLOT="0"
+SRC_URI="ftp://ftp.gnu.org/gnu/rcs/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64"
 
 DEPEND="virtual/glibc"
-
 RDEPEND="sys-apps/diffutils"
 
-KEYWORDS="x86 ppc sparc alpha ia64 amd64 ~hppa"
-
 src_compile() {
-	./configure \
-		--prefix=/usr \
-		--host=${CHOST} \
-		--with-diffutils || die
-
+	econf --with-diffutils || die
 	cp ${FILESDIR}/conf.sh src/conf.sh
-
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make \
 		prefix=${D}/usr \
 		man1dir=${D}/usr/share/man/man1 \
@@ -33,5 +27,5 @@ src_install () {
 		man5dir=${D}/usr/share/man/man5 \
 		install || die
 
-	dodoc ChangeLog COPYING CREDITS NEWS README REFS
+	dodoc ChangeLog CREDITS NEWS README REFS
 }
