@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617.ebuild,v 1.3 2004/12/10 13:33:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617.ebuild,v 1.4 2005/03/31 00:11:38 vapier Exp $
 
 inherit eutils
 
@@ -31,9 +31,9 @@ hax_bitkeeper() {
 	# the makefiles have support for bk ...
 	# basically we have to do this or bk will try to write
 	# to files in /opt/bitkeeper causing sandbox violations ;(
-	mkdir ${T}/fakebin
-	echo "#!/bin/sh"$'\n'"exit 1" > ${T}/fakebin/bk
-	chmod a+x ${T}/fakebin/bk
+	mkdir "${T}"/fakebin
+	echo "#!/bin/sh"$'\n'"exit 1" > "${T}"/fakebin/bk
+	chmod a+x "${T}"/fakebin/bk
 	export PATH="${T}/fakebin:${PATH}"
 }
 
@@ -44,10 +44,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/ntp-4.1.1b-syscall-libc.patch
-	epatch ${FILESDIR}/4.2.0-linux-config-phone.patch #13001
+	epatch "${FILESDIR}"/ntp-4.1.1b-syscall-libc.patch
+	epatch "${FILESDIR}"/4.2.0-linux-config-phone.patch #13001
 
 	sed -i \
 		-e 's:md5\.h:touch_not_my_md5:g' \
@@ -76,41 +76,48 @@ src_install() {
 	mv "${D}"/usr/bin/{ntpd,ntpdate} "${D}"/usr/sbin/ || die "move to sbin"
 
 	dodoc ChangeLog INSTALL NEWS README TODO WHERE-TO-START
-	doman ${WORKDIR}/man/*.1
+	doman "${WORKDIR}"/man/*.1
 	dohtml -r html/*
 
 	insinto /usr/share/ntp
-	doins ${FILESDIR}/ntp.conf
-	cp -r scripts/* ${D}/usr/share/ntp/
-	chmod -R go-w ${D}/usr/share/ntp
-	find ${D}/usr/share/ntp \
+	doins "${FILESDIR}"/ntp.conf
+	cp -r scripts/* "${D}"/usr/share/ntp/
+	chmod -R go-w "${D}"/usr/share/ntp
+	find "${D}"/usr/share/ntp \
 		'(' \
 		-name '*.in' -o \
 		-name 'Makefile*' -o \
 		-name 'rc[12]' -o \
 		-name support \
 		')' \
-		-exec rm -rf {} \;
+		-exec rm -r {} \;
 
-	[ ! -e ${ROOT}/etc/ntp.conf ] && insinto /etc && doins ${FILESDIR}/ntp.conf
-	newinitd ${FILESDIR}/ntpd.rc ntpd
-	newconfd ${FILESDIR}/ntpd.confd ntpd
-	newinitd ${FILESDIR}/ntp-client.rc ntp-client
-	newconfd ${FILESDIR}/ntp-client.confd ntp-client
+	insinto /etc
+	doins "${FILESDIR}"/ntp.conf
+	newinitd "${FILESDIR}"/ntpd.rc ntpd
+	newconfd "${FILESDIR}"/ntpd.confd ntpd
+	newinitd "${FILESDIR}"/ntp-client.rc ntp-client
+	newconfd "${FILESDIR}"/ntp-client.confd ntp-client
 	use nodroproot && dosed "s|-u ntp:ntp||" /etc/conf.d/ntpd
 	dosed "s:-Q::" /etc/conf.d/ntp-client # no longer needed
 	dosed "s:/usr/bin:/usr/sbin:" /etc/init.d/ntpd
 
 	dodir /var/lib/ntp
 	fowners ntp:ntp /var/lib/ntp
-	touch ${D}/var/lib/ntp/ntp.drift
+	touch "${D}"/var/lib/ntp/ntp.drift
 	fowners ntp:ntp /var/lib/ntp/ntp.drift
 
 	if use openntpd ; then
-		cd ${D}
+		cd "${D}"
 		rm usr/sbin/ntpd
 		rm -r var/lib
 		rm etc/{conf,init}.d/ntpd
+	fi
+}
+
+pkg_preinst() {
+	if [[ -e ${ROOT}/etc/ntp.conf ]] ; then
+		rm -f "${D}"/etc/ntp.conf
 	fi
 }
 
