@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r4.ebuild,v 1.4 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r4.ebuild,v 1.5 2002/07/16 05:51:11 seemant Exp $
 
 S=${WORKDIR}/flex-2.5.4
 DESCRIPTION="GNU lexical analyser generator"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/non-gnu/flex/flex-2.5.4a.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/flex/flex.html"
 LICENSE="FLEX"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc"

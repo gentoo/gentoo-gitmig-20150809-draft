@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r3.ebuild,v 1.5 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r3.ebuild,v 1.6 2002/07/16 05:51:11 seemant Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/make/${A}"
 HOMEPAGE="http://www.gnu.org/software/make/make.html"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"

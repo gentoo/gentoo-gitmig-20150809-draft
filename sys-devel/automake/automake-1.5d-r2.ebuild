@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5d-r2.ebuild,v 1.5 2002/07/11 06:30:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5d-r2.ebuild,v 1.6 2002/07/16 05:51:10 seemant Exp $
 
 OLD_PV=1.4-p5
 OLD_P=${PN}-${OLD_PV}
@@ -11,7 +11,7 @@ SRC_URI="ftp://sources.redhat.com/pub/${PN}/${P}.tar.bz2
 	ftp://ftp.gnu.org/gnu/${PN}/${OLD_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="sys-devel/perl
 	>=sys-devel/autoconf-2.52-r1"
