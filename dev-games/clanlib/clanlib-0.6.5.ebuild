@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5.ebuild,v 1.1 2003/07/13 03:13:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5.ebuild,v 1.2 2003/09/02 16:04:57 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="multi-platform game development library"
-SRC_URI="http://www.clanlib.org/download/files/ClanLib-${PV}-1.tar.gz"
 HOMEPAGE="http://www.clanlib.org/"
+SRC_URI="http://www.clanlib.org/download/files/ClanLib-${PV}-1.tar.gz"
 
-KEYWORDS="x86"
-SLOT="0"
 LICENSE="LGPL-2"
+SLOT="0"
+KEYWORDS="x86"
 IUSE="arts oss esd alsa png opengl truetype X oggvorbis mikmod jpeg directfb"
 
 DEPEND=">=media-libs/hermes-1.3.2
@@ -26,7 +26,8 @@ S=${WORKDIR}/ClanLib-${PV}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc3.patch
 }
 
 src_compile() {

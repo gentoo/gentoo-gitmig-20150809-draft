@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.2-r1.ebuild,v 1.1 2003/07/17 00:12:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.2-r1.ebuild,v 1.2 2003/09/02 16:04:57 vapier Exp $
 
 inherit flag-o-matic
 replace-flags -O? -O2
 
 DESCRIPTION="multi-platform game development library"
-SRC_URI="http://www.clanlib.org/~sphair/download/ClanLib-${PV}-1.tar.bz2"
 HOMEPAGE="http://www.clanlib.org/"
+SRC_URI="http://www.clanlib.org/~sphair/download/ClanLib-${PV}-1.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0.7"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="arts oss esd alsa png opengl truetype X oggvorbis mikmod jpeg directfb joystick"
 
 DEPEND=">=media-libs/hermes-1.3.2
@@ -24,6 +24,12 @@ DEPEND=">=media-libs/hermes-1.3.2
 	oggvorbis? ( media-libs/libvorbis )"
 
 S=${WORKDIR}/ClanLib-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc3.patch
+}
 
 src_compile() {
 	local myconf=""

@@ -1,0 +1,10 @@
+--- ClanLib-0.7.2/Sources/Core/IOData/Unix/directory_scanner_unix.cpp	2003-08-26 13:25:59.113908305 +0200
++++ ClanLib-0.7.2/Sources/Core/IOData/Unix/directory_scanner_unix.cpp	2003-08-26 13:26:10.402254445 +0200
+@@ -21,6 +21,7 @@
+ #include <fnmatch.h>
+ #include <unistd.h>
+ #include "directory_scanner_unix.h"
++#include <assert.h>
+ 
+ CL_DirectoryScanner_Unix::CL_DirectoryScanner_Unix ()
+ 	: dir_temp (NULL), entry (NULL)
