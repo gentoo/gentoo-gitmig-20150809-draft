@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001-r1.ebuild,v 1.4 2004/12/01 14:42:06 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001-r1.ebuild,v 1.5 2004/12/09 06:30:14 phosphan Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0.7"
 
 #-sparc: 0.7.41 - dsputil_init_vis undefined - eradicator
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 -sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 -sparc x86"
 IUSE="3dnow X alsa avi debug dvd esd mmx oggvorbis qt sdl sse static truetype xv zlib"
 
 DEPEND=">=media-libs/jpeg-6b
