@@ -1,6 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /home/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4.ebuild,v 
+1.3 2003$
 
 S=${WORKDIR}/pvm-${PV}
 DESCRIPTION="PVM: Parallel Virtual Machine"
