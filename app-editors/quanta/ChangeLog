@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/quanta
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.5 2002/09/16 16:23:48 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.6 2002/09/28 09:16:33 doctomoe Exp $
+
+*quanta-3.0_pre2 (28 Sept 2002) Olivier Reisch <doctomoe@gentoo.org>
+
+  Added ppc keyword
 
 *quanta-3.0_pre2 (16 Sept 2002) Bart Verwilst <verwilst@gentoo.org>
 
