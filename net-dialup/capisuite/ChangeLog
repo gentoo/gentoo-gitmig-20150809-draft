@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/capisuite
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.1 2003/11/27 15:42:44 brandy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.2 2004/02/12 20:53:21 lanius Exp $
+
+  12 Feb 2004; Heinrich Wendel <lanius@gentoo.org> capisuite-0.4.3.ebuild:
+  added missing deps
 
 *capisuite-0.4.3 (28 Nov 2003)
 

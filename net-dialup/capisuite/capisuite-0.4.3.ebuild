@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.3.ebuild,v 1.1 2003/11/27 15:42:44 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.3.ebuild,v 1.2 2004/02/12 20:53:21 lanius Exp $
 
 DESCRIPTION="patch management script"
 HOMEPAGE="http://www.capisuite.de/capisuite/"
@@ -13,7 +13,11 @@ IUSE=""
 
 DEPEND="net-dialup/capi4k-utils
 	dev-lang/python"
-RDEPEND="sys-devel/patch"
+
+RDEPEND="sys-devel/patch
+	media-sound/sox
+	media-libs/tiff
+	virtual/ghostscript"
 
 src_unpack() {
 
