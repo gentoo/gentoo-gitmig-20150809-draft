@@ -1,12 +1,15 @@
-MD5 fe7ddce838940ee5d8f4b101972b1898 gst-plugins-cdparanoia-0.8.7.ebuild 364
-MD5 325e8d2a9903043ee7c4e1c7fb3dd8e8 gst-plugins-cdparanoia-0.8.2.ebuild 357
-MD5 412588cbc772e0f03aaadd4efeef103e gst-plugins-cdparanoia-0.8.1.ebuild 360
-MD5 abbfa441abdcc51a649397ff36aa45a8 gst-plugins-cdparanoia-0.8.8.ebuild 365
-MD5 b9c441b704637b5b23014bdd35374bfa gst-plugins-cdparanoia-0.8.3.ebuild 359
-MD5 e1b77c8059da03f6ef5024004a7ea00d gst-plugins-cdparanoia-0.6.4.ebuild 359
-MD5 b7dc4c25c09d09a15cee10e635862417 gst-plugins-cdparanoia-0.8.5.ebuild 364
-MD5 81e35c7fbeb35d409993ce88ee31f09d ChangeLog 2658
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 767f350f9d764aa8d8c2acc31812f60c ChangeLog 2818
+MD5 bec4931a7523eb2bbfe4a0c2a4ee6f1e gst-plugins-cdparanoia-0.6.4.ebuild 359
+MD5 85580c7d17321c347f84284e6929be69 gst-plugins-cdparanoia-0.8.1.ebuild 360
+MD5 0c8c718071395fb7288ba207abcff3c9 gst-plugins-cdparanoia-0.8.2.ebuild 357
+MD5 839f21d111af0328036f963314ece95a gst-plugins-cdparanoia-0.8.3.ebuild 362
+MD5 86cd09925e85033cdd39eb416073afda gst-plugins-cdparanoia-0.8.5.ebuild 364
+MD5 a743a2d6eead177a9eab81b5bc6de829 gst-plugins-cdparanoia-0.8.7.ebuild 366
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+MD5 abbfa441abdcc51a649397ff36aa45a8 gst-plugins-cdparanoia-0.8.8.ebuild 365
 MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-cdparanoia-0.6.4 71
 MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-cdparanoia-0.8.1 71
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-cdparanoia-0.8.2 71
@@ -14,3 +17,10 @@ MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-cdparanoia-0.8.3 7
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-cdparanoia-0.8.5 71
 MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-cdparanoia-0.8.7 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-cdparanoia-0.8.8 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCL6vIKRy60XGEcJIRAmDbAJ9k5m/0ilZi4JC84mgXRK7yvRd/iwCfYN2E
+H//6FarSZYotPV5HDEscG4c=
+=K7K1
+-----END PGP SIGNATURE-----
