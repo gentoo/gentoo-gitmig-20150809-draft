@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (24 Dec 2002)
+# Fixups testing.
+>=sys-apps/portage-2.0.46-r3
+# Testing for UserPriv compile
+>=sys-apps/portage-2.0.47_pre1
+
 # <blizzy@gentoo.org> (23 Dec 2002)
 # needs quite some testing (especially with sasl 1+2)
 =net-mail/postfix-2.0.0
@@ -28,10 +34,6 @@
 # <danarmak@gentoo.org> (22 Dec 2002)
 # until bug #12538 can be resolved
 =x11-libs/qt-3.1.1
-
-# <carpaski@gentoo.org> (21 Dec 2002)
-# Testing for UserPriv compile
->=sys-apps/portage-2.0.47_pre1
 
 # <aliz@gentoo.org> (20 Dec 2002)
 # Masked until lordvan takes a look
