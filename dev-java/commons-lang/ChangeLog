@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.20 2004/08/19 18:59:41 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.21 2004/09/18 10:36:49 axxo Exp $
+
+  18 Sep 2004; Thomas Matthijs <axxo@gentoo.org> commons-lang-2.0-r1.ebuild:
+  dropped jikes support, since it cannot pass the junit tests then, bug 64483
 
   19 Aug 2004; Travis Tilley <lv@gentoo.org> commons-lang-2.0-r1.ebuild:
   stable on amd64
