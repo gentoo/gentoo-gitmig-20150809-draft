@@ -12,7 +12,7 @@ MD5 ae3b151766a02d7436deafba47388330 db-3.2.9-r6.ebuild 4317
 MD5 5c921197970cd970a8fbb4cad2d7df7b metadata.xml 1457
 MD5 81e5afb0d021de3bcaff3ec14d6d8f57 db-4.0.14-r2.ebuild 2296
 MD5 a5023bcd14650bfbb18ad9ec92783ed5 db-4.1.25_p1-r1.ebuild 1880
-MD5 5e893a4c38c6194b23ffb0a5cc6e9c0f db-3.2.9-r9.ebuild 3664
+MD5 39653a8dc5cf4393fb4e1c615b22f738 db-3.2.9-r9.ebuild 3669
 MD5 ecd81fa9868ec49c61306444144d44a9 files/db.1.85.patch 55584
 MD5 3057fcc117c33a02bd4c092586a58e49 files/digest-db-1.85-r1 59
 MD5 44c6041ae9527bfa8a4ff4cec7cf4a9a files/digest-db-3.2.9-r7 61
