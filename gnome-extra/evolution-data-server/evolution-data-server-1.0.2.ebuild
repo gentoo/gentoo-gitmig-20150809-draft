@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.0.2.ebuild,v 1.1 2004/10/16 19:12:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.0.2.ebuild,v 1.2 2004/10/17 14:45:35 liquidx Exp $
 
 inherit gnome2
 
@@ -31,6 +31,11 @@ G2CONF="${G2CONF} `use_with ldap openldap`"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 USE_DESTDIR=1
+
+src_unpack() {
+	unpack ${A}
+	use amd64 && rm ${S}/libdb/dbinc/mutex.h
+}
 
 src_compile() {
 	cd ${S}/libdb/dist
