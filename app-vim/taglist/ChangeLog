@@ -1,0 +1,12 @@
+# ChangeLog for app-vim/taglist
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.1 2003/07/31 13:01:12 agriffis Exp $
+
+*taglist-2.6 (31 Jul 2003)
+
+  31 Jul 2003; Aron Griffis <agriffis@gentoo.org> taglist-2.6.ebuild:
+  First vim plugin added to app-vim! Verified license by writing to the author,
+  Yegappan Lakshmanan. His response: "Feel free to include the Vim plugins in
+  the Gentoo Linux ebuilds. You can use the license used by Vim for the Vim
+  plugins also."
+
