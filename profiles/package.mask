@@ -708,11 +708,6 @@ sys-apps/mkisofs
 # stuff with deps that are missing; ebuilds have problems so I'm masking them
 net-mail/exmh
 
-# <karltk@gentoo.org> (01 Aug 2002)
-# JAXP is dead, but some packages don't know
-# that.
-=dev-db/postgresql-7.1-r1
-
 #azarah@gentoo.org (03 Jul 2002)
 #this one moves a lot of stuff around, and have a search dir
 #order fix that is very experimental
