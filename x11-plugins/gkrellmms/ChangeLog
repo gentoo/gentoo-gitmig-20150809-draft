@@ -1,8 +1,11 @@
 # ChangeLog for x11-plugins/gkrellmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.10 2003/02/12 09:37:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.11 2003/02/19 21:55:07 mholzer Exp $
 
 *gkrellmms-2.1.6 (16 Jan 2003)
+
+  19 Feb 2003; Martin Holzer <mholzer@gentoo.org> gkrellmms-2.1.6.ebuild :
+  Marking as stable.
 
   16 Jan 2003; Seemant Kulleen <seemant@gentoo.org> gkrellmms-2.1.6.ebuild
   files/digest-gkrellmms-2.1.6 :
