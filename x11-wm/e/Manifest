@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 acd2ae572746c4c09760801f94220c44 ChangeLog 305
+MD5 e1d40a3143895acd24b7ec68d959090f e-9999.ebuild 454
+MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-e-9999 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBu4FdroRuSHgZdywRAmaSAJ4sU4PkNZHJRhN9hVv7nUEMfGiNpQCgkv0n
+wX955giZ6nKmc+KfuTopXUo=
+=kDAV
+-----END PGP SIGNATURE-----
