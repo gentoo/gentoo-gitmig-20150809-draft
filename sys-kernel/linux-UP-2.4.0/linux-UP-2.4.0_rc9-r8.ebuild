@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.4.0/linux-UP-2.4.0_rc9-r7.ebuild,v 1.1 2000/09/28 04:29:39 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.4.0/linux-UP-2.4.0_rc9-r8.ebuild,v 1.1 2000/11/02 03:57:15 drobbins Exp $
 
 P=linux-UP-2.4.0_rc9-r7
 A="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test8-reiserfs-3.6.16-patch.gz
 	ide.2.4.0-t9-6.task.0923.patch.gz test9-pre7.gz
-	i2c-2.5.2.tar.gz lm_sensors-2.5.2.tar.gz"
+	i2c-2.5.2.tar.gz lm_sensors-2.5.2.tar.gz jfs-0.0.16-patch.tar.gz"
 #   pppoed0.47.tgz
 #   linux-2.2.17pre13-nfsv3-0.22.3.dif.bz2 kernel-nfs-dhiggen_merge-3.0.tar.gz"
 
@@ -18,7 +18,8 @@ SRC_URI="ftp://ftp.uk.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2
 	 ftp://ftp.kernel.org/pub/linux/kernel/people/hedrick/ide.2.4.0-t9/ide.2.4.0-t9-6.task.0923.patch.gz
 	 ftp://ftp.kernel.org/pub/linux/kernel/testing/test9-pre7.gz
   	 http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.2.tar.gz
-	 http://www.netroedge.com/~lm78/archive/i2c-2.5.2.tar.gz"
+	 http://www.netroedge.com/~lm78/archive/i2c-2.5.2.tar.gz
+	 http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.0.16-patch.tar.gz"
 #	 http://www.davin.ottawa.on.ca/pppoe/pppoed0.47.tgz
 
 HOMEPAGE="http://www.kernel.org/
@@ -37,6 +38,8 @@ src_compile() {
     try make
     cd ${S}/lm_sensors-2.5.2
     try make
+	cd ${S}/fs/jfs/utils
+	try make
 }
 
 src_unpack() {
@@ -73,6 +76,14 @@ src_unpack() {
     cd ${S}
     echo "Applying lm_sensors-patch..."
     patch -p1 < sensors.patch
+
+	echo "Applying IBM JFS patch..."
+	unpack jfs-0.0.16-patch.tar.gz
+	cd ${S}
+	patch -p1 < ../jfs-common-v0.0.16-patch 
+	patch -p1 < ../jfs-2.4.0-test9-v0.0.16-patch 
+	#fix fs/Makefile problem
+	cp ${FILESDIR}/fs/Makefile ${S}/fs/Makefile
 
     echo "Prepare for compilation..."
     cd ${S}/arch/i386
@@ -119,13 +130,18 @@ src_install() {
     try make INSTALL_MOD_PATH=${D} modules_install
     #dosym /lib/modules/2.2.17pre13-RAID current
     into /
-    cd ${S}/fs/reiserfs/utils/bin
+    cd ${S}/fs/jfs/utils/output
+	dosbin *
+	into /usr
+	cd ..
+	doman `find -iname *.1`
+	cd ${S}/fs/reiserfs/utils/bin
     dosbin mkreiserfs resize_reiserfs reiserfsck dumpreiserfs
     cd ..
     into /usr
     doman fsck/reiserfsck.8 
     doman mkreiserfs/mkreiserfs.8
-    cp dumpreiserfs/README README.dumpreiserfs
+	cp dumpreiserfs/README README.dumpreiserfs
     cp README README.reiserfs
     dodoc README.reiserfs README.dumpreiserfs
 
