@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.184 2005/03/02 23:35:23 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.185 2005/03/03 19:57:32 corsair Exp $
+
+  03 Mar 2005; Markus Rothe <corsair@gentoo.org>
+  gentoo-dev-sources-2.6.11.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   02 Mar 2005; Daniel Drake <dsd@gentoo.org> gentoo-dev-sources-2.6.11.ebuild:
   Marked testing on amd64
