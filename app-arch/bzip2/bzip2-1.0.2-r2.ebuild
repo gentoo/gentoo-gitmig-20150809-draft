@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r2.ebuild,v 1.1 2003/11/14 20:00:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r2.ebuild,v 1.2 2003/11/30 05:33:07 vapier Exp $
 
 DESCRIPTION="A high-quality data compressor used extensively by Gentoo Linux"
 HOMEPAGE="http://sources.redhat.com/bzip2/"
@@ -57,9 +57,7 @@ src_install() {
 	else
 		into /
 		dobin bzip2
-		newbin bzip2 bzcat
-
-		cd ${D}/bin
-		ln -s bzip2 bunzip2
+		dosym bzip2 /bin/bzcat
+		dosym bzip2 /bin/bunzip2
 	fi
 }
