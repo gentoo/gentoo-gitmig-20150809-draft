@@ -1,6 +1,14 @@
-MD5 1e5f20f0ba37e874b25c3b988bb9aba1 unfonts-0.0.20040526.ebuild 828
-MD5 05493fc02e57177f2329bf98f4bb8425 ChangeLog 785
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d0dad19cea041da8c78c32836e38f5cf ChangeLog 919
 MD5 9c69ff3ce8108c99baa12b2b38780494 metadata.xml 175
-MD5 99489cbc68b8ac8992faca70da215831 unfonts-1.0.ebuild 546
-MD5 1e928650bb62c17ccc9cb7ac749fcdbd files/digest-unfonts-0.0.20040526 756
+MD5 aa2066593ab0ed6a3db6504e908cace8 unfonts-1.0.ebuild 543
 MD5 fa8f680cdfb92e9263fe083822116e2a files/digest-unfonts-1.0 144
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBWltwVWNWqTUmv+0RAsQ4AJwPyx5Wu8NqNkJRTpPjsxOaWiTqoQCggeor
+cQ1Dh45j+JSKQD8lxF1IThA=
+=XBfz
+-----END PGP SIGNATURE-----

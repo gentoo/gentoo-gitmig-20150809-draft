@@ -1,6 +1,16 @@
-MD5 674b1efeaee3cadb53564031b61b3985 ChangeLog 1177
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ce97c84c5c13a22bb9536add39d88014 ChangeLog 1283
 MD5 0a7802bf7c4d83f29e9edd130dd529e9 x11fonts-jmk-3.0.ebuild 687
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
-MD5 e1a7c845f4317495fdc4e3bfd2bd25e4 x11fonts-jmk-3.0-r1.ebuild 727
+MD5 bc427d7db1b8e489fc5dc4fcf52faa51 x11fonts-jmk-3.0-r1.ebuild 732
 MD5 55def5813a5ef8bd6ce0a466a5b12b67 files/digest-x11fonts-jmk-3.0 69
 MD5 55def5813a5ef8bd6ce0a466a5b12b67 files/digest-x11fonts-jmk-3.0-r1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBWl0PVWNWqTUmv+0RAqMqAJ40I6viDkrY2OTHe4UvaAYg+DX5YgCgoast
+QPR1aTvTpnHhNXNqEctoHs8=
+=WpxJ
+-----END PGP SIGNATURE-----
