@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.86 2003/10/26 09:41:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.87 2003/10/26 21:01:05 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
@@ -204,6 +204,8 @@ php_src_unpack() {
 
 php_src_compile() {
 	[ -x "/usr/sbin/sendmail" ] || die "You need a virtual/mta that provides /usr/sbin/sendmail!"
+
+	[ -f "/proc/self/stat" ] || die "You need /proc mounted for configure to complete correctly!"
 
 	use java && php_check_java_config
 
