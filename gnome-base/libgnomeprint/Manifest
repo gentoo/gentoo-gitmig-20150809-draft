@@ -2,10 +2,10 @@ MD5 b07b69811ff5b203e1d643c940be24c9 libgnomeprint-2.6.2.ebuild 924
 MD5 fd736ae2c8421f4d7325fc2cd0ee3724 libgnomeprint-2.8.0.ebuild 955
 MD5 f16ad1847d1a0c4fd6b708822e9bbd61 libgnomeprint-2.6.1.ebuild 924
 MD5 99812402b110710d7cca2dc9cd38bdc6 libgnomeprint-1.116.1.ebuild 1503
-MD5 42fa10af38efc88f5f8a3301aa5a0776 libgnomeprint-2.8.2.ebuild 939
+MD5 73b87ee13c8ae1bbf9aa767a2a211cbe libgnomeprint-2.8.2.ebuild 958
 MD5 35f27942547d1cbc2e2a284ab54b5c3a libgnomeprint-2.4.2.ebuild 978
 MD5 80f5cf7736663fa4ff76fff46a22790b libgnomeprint-2.6.0.ebuild 883
-MD5 d5b08a3f4c01410cf65b006ffb9920a9 ChangeLog 8798
+MD5 ef9b20169a5040028e8ee99efb8893a0 ChangeLog 8822
 MD5 d74451a25c47da66e84bb2d034ed3710 libgnomeprint-1.116.0.ebuild 1556
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 4e492d19083053bffe69a3f63c85d8c6 libgnomeprint-2.8.1.ebuild 937
