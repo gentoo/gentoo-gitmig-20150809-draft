@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.32 2004/09/15 19:21:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.33 2004/10/07 02:06:57 eradicator Exp $
+
+  06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/openal-20040817-destdir.patch:
+  Added correct multilib support.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   openal-20040817.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040817.ebuild,v 1.2 2004/09/15 19:21:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040817.ebuild,v 1.3 2004/10/07 02:06:57 eradicator Exp $
 
 inherit eutils
 
@@ -34,8 +34,10 @@ src_compile() {
 
 	cd ${S}/linux
 	use alsa && epatch ${FILESDIR}/${P}-alsa_capture.diff
+	epatch ${FILESDIR}/${P}-destdir.patch
+
 	WANT_AUTOCONF=2.5 ./autogen.sh || die
-	./configure  --prefix=/usr ${myconf} --enable-paranoid-locks \
+	econf ${myconf} --enable-paranoid-locks \
 		--enable-capture --enable-optimize || die
 	emake all || die
 }
@@ -43,7 +45,7 @@ src_compile() {
 src_install() {
 	cd ${S}/linux
 
-	make install DESTDIR=${D}/usr/|| die
+	make install DESTDIR="${D}" || die
 
 	dodoc CREDITS ChangeLog INSTALL NOTES PLATFORM TODO
 	dodoc ${FILESDIR}/openalrc
