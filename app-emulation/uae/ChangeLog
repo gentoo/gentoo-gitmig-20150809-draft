@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.4 2002/10/17 17:55:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.5 2002/11/02 23:56:35 gerk Exp $
 
 *uae-0.8.22 (9 Oct 2002)
+
+  02 Nov 2002; Mark Guertin <gerk@gentoo.org> uae-0.8.22.ebuild :
+  added ~ppc to keywords
 
   17 Oct 2002; Seemant Kulleen <seemant@gentoo.org> uae-0.8.22.ebuild :
 
