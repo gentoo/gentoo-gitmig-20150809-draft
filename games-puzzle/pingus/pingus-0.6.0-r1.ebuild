@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.11 2005/01/16 18:22:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.12 2005/03/02 02:38:15 vapier Exp $
 
 inherit eutils flag-o-matic games
 
@@ -20,14 +20,14 @@ DEPEND=">=media-libs/hermes-1.3.2-r2
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-gcc3.patch
-	epatch "${FILESDIR}"/${PV}-gcc34.patch #63773
-	autoconf || die
+	epatch "${FILESDIR}"/${P}-gcc3.patch #28281
+	epatch "${FILESDIR}"/${P}-gcc34.patch #63773
+	autoconf || die "failed to update configure file in order to respect CFLAGS/LDFLAGS"
 }
 
 src_compile() {
-	append-flags -I${ROOT}/usr/include/clanlib-0.6.5
-	append-ldflags -L${ROOT}/usr/lib/clanlib-0.6.5
+	append-flags $(clanlib0.6-config --cflags)
+	append-ldflags $(clanlib0.6-config --libs)
 	replace-flags -Os -O2
 	egamesconf \
 		--with-bindir="${GAMES_BINDIR}" \
