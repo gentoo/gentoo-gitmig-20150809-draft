@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.03.ebuild,v 1.2 2003/12/13 17:00:01 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.03.ebuild,v 1.3 2004/01/10 18:26:14 strider Exp $
 
 IUSE="doc gnome kde mozilla"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://java.sun.com/j2se/1.4.2/download.html"
 SRC_URI=${At}
 SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
+KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
 RESTRICT="fetch"
 
 DEPEND=">=dev-java/java-config-1.1.5
