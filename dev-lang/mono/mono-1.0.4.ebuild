@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.0.4.ebuild,v 1.1 2005/03/11 03:14:01 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.0.4.ebuild,v 1.2 2005/03/15 00:45:45 latexer Exp $
 
 inherit eutils mono flag-o-matic debug
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.go-mono.com/archive/${PV}/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-2 X11)"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc

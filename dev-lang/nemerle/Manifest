@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0cd69449199218d9014ca103fa7f86d3 nemerle-0.2.1-r2.ebuild 1048
-MD5 184250a31ea8d8c179fd3df0b2bf17c4 nemerle-0.2.1-r1.ebuild 876
-MD5 70eac78edb4f46945de9d5ba97434168 ChangeLog 1472
+MD5 2178106d55a3e6cd17d24ad1ac4166d5 nemerle-0.2.1-r2.ebuild 1047
+MD5 0d0f825c69296c9e98211cd10a99bc59 nemerle-0.2.1-r1.ebuild 875
+MD5 59ab6f5b2e68074ef91b49d9607a8a62 ChangeLog 1597
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 4274209a3c36a732036a5d15656c1e57 files/digest-nemerle-0.2.1-r1 66
 MD5 4274209a3c36a732036a5d15656c1e57 files/digest-nemerle-0.2.1-r2 66
 MD5 4ec77da51ae7d4412fcdb9f276f45b94 files/nemerle-0.2.1-ncc-fix.diff 1172
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCMTQ1I1lqEGTUzyQRAt02AKCrGeJt68q+ITSIjC4u0p7Y2wz7dQCghNIa
-dpT9GhYJMKoEGlf9XlxpJRo=
-=8ThH
------END PGP SIGNATURE-----

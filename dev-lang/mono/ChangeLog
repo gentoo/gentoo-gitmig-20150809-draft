@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.32 2005/03/14 23:51:05 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.33 2005/03/15 00:45:45 latexer Exp $
+
+  14 Mar 2005; Peter Johanson <latexer@gentoo.org> mono-1.0.4.ebuild:
+  Mark a 1.0.4 mono stable too.
 
   14 Mar 2005; Peter Johanson <latexer@gentoo.org> -files/mono-1.0-segv.diff,
   -mono-0.28.ebuild, -mono-1.0.2-r1.ebuild, -mono-1.0.2.ebuild,
