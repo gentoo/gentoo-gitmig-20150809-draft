@@ -1,6 +1,20 @@
 # ChangeLog for media-radio/tlf
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.5 2004/08/04 23:15:10 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.6 2004/12/09 01:11:39 killsoft Exp $
+
+  08 Dec 2004; Robb Romans <killsoft@gentoo.org> :
+  Changes:
+  (0.9.21)
+  * The cw sidetone setting (TONE) in logcfg.dat has become CWTONE=
+  * A new parameter LOWBANDS_DOUBLE has been introduced
+  * A new parameter CLUSTER_LOG has been intgroduced. When set
+    the cluster messages are written to a 'clusterlog' file... this can be tailed
+    to a terminal window (tail -f clusterlog) for people who are on a dead band,
+    so they can watch the game.
+  * The initial exchange function now also recognises embedded
+    calls (CT3/PA0R/QRP)
+  * The logcfg.dat template has been updated to version 0.9.21.
+  * The manpage has been updated to version 0.9.21.
 
   04 Aug 2004; Robb Romans <killsoft@gentoo.org> tlf-0.9.19.ebuild:
   Mark stable on x86.
