@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sary-ruby
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.10 2004/12/11 10:50:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.11 2004/12/13 15:34:57 usata Exp $
+
+*sary-ruby-1.1.0.1 (14 Dec 2004)
+
+  14 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> +sary-ruby-1.1.0.1.ebuild:
+  Version bumped.
 
 *sary-ruby-1.1.0 (11 Dec 2004)
 
