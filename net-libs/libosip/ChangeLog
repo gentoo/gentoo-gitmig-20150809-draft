@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libosip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.12 2004/07/01 22:26:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.13 2004/08/08 15:32:55 stkn Exp $
+
+  08 Aug 2004; <stkn@gentoo.org> libosip-0.9.7.ebuild:
+  Shortened description and changed HOMEPAGE, stable on x86
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libosip-0.8.8-r1.ebuild, libosip-0.8.8.ebuild, libosip-0.9.6.ebuild,
