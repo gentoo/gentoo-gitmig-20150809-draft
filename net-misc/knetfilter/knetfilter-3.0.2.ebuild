@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetfilter/knetfilter-3.0.2.ebuild,v 1.2 2002/08/14 12:08:08 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetfilter/knetfilter-3.0.2.ebuild,v 1.3 2002/08/31 11:37:15 danarmak Exp $
 inherit kde-base
 
 need-kde 3
@@ -16,4 +16,7 @@ newdepend ">=sys-apps/iptables-1.2.5"
 src_unpack() {
     base_src_unpack
     kde_sandbox_patch ${S}/src
+    cd $S
+    make distclean
 }
+
