@@ -7,7 +7,7 @@ depend() {
 checkconfig() {
     if [ ! -e /etc/ssh/sshd_config ] ; then
 	eerror "You need an /etc/ssh/sshd_config file to run sshd"
-	eerror "There is a sample file in /usr/share/docs/openssh"
+	eerror "There is a sample file in  /usr/share/doc/openssh"
 	return 1
     fi
 }
