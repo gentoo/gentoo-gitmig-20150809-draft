@@ -1,12 +1,20 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.53 2003/11/11 01:19:18 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.54 2003/11/11 02:46:56 seemant Exp $
 
 *sylpheed-claws-0.9.6-r2 (10 Nov 2003)
 
   10 Nov 2003; Greg Fitzgerald <gregf@gentoo.org>
   sylpheed-claws-0.9.6-r2.ebuild:
   fixed gettext version
+
+  10 Nov 2003; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.9.4-r1.ebuild, sylpheed-claws-0.9.4.ebuild,
+  sylpheed-claws-0.9.6-r1.ebuild:
+  Fix ghostviewer plugin compile process to compile against the unpacked sources
+  rather than an already installed instance of sylpheed-claws -- which will
+  break if compiling -claws for the first time. Closes bug #32503 by Steve
+  Arnold <nerdboy@gentoo.org>
 
 *sylpheed-claws-0.9.6-r1 (28 Oct 2003)
   28 Oct 2003; Seemant Kulleen <seemant@gentoo.org> :
