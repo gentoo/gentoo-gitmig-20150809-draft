@@ -10,3 +10,45 @@
    if((fp = fopen(dupefile, "r")) == NULL)
      return 0;
  
+--- bin/sources/dirlogclean.c.orig	2002-11-24 08:52:14.000000000 -0500
++++ bin/sources/dirlogclean.c	2004-10-06 20:49:02.357541216 -0400
+@@ -99,14 +99,16 @@
+     if (argv[x][0] != '-') { } else {
+       switch ( argv[x][1] ) {
+         case 'r':
+-	        strcpy(config_file, argv[x+1]);
++	        strncpy(config_file, argv[x+1], sizeof(config_file) - 1);
++		config_file[ sizeof(config_file) - 1 ] = '\0';
+ 	        break;
+       }
+     }
+     x++;
+    }
+   
+-   strcpy(cleanname, argv[argc-1]);
++   strncpy(cleanname, argv[argc-1], sizeof(cleanname) - 1);
++   cleanname[ sizeof(cleanname) - 1 ] = '\0';
+    printf("CLEANING: %s\n", cleanname);
+ 
+    read_conf_datapath(datapath, config_file);
+--- bin/sources/formateduser.c.orig	2002-11-24 08:52:14.000000000 -0500
++++ bin/sources/formateduser.c	2004-10-06 20:51:35.995184744 -0400
+@@ -238,7 +238,8 @@
+     if (argv[x][0] != '-') { } else {
+       switch ( argv[x][1] ) {
+         case 'r':
+-	        strcpy(config_file, argv[x+1]);
++	        strncpy(config_file, argv[x+1], sizeof(config_file) - 1);
++		config_file[ sizeof(config_file) - 1 ] = '\0';
+ 	        break;
+       }
+     }
+@@ -246,7 +247,7 @@
+    }
+    
+    read_conf_datapath(datapath, config_file);
+-   sprintf(userfile, "%s/users/%s", datapath, argv[argc-1]);
++   snprintf(userfile, sizeof(userfile), "%s/users/%s", datapath, argv[argc-1]);
+    
+ 
+    if((fp = fopen(userfile, "r")) == NULL)

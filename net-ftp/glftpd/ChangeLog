@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/glftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.10 2004/09/21 01:59:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.11 2004/10/07 04:52:05 vapier Exp $
+
+*glftpd-1.32-r2 (07 Oct 2004)
+
+  07 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  files/1.32-stack-overflow.patch, -glftpd-1.32-r1.ebuild,
+  +glftpd-1.32-r2.ebuild:
+  More stack overflow fixes #66495.
 
 *glftpd-1.32-r1 (20 Sep 2004)
 
