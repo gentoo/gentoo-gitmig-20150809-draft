@@ -1,0 +1,25 @@
+--- vdr-1.2.6/dvbdevice.c.orig	2005-01-24 14:33:57.478927267 +0100
++++ vdr-1.2.6/dvbdevice.c	2005-01-24 14:37:04.732811047 +0100
+@@ -505,8 +505,10 @@
+               Quality = 255; //XXX is this 'best'???
+ 
+            isyslog("grabbing to %s (%s %d %d %d)", FileName, Jpeg ? "JPEG" : "PNM", Quality, vm.width, vm.height);
+-           FILE *f = fopen(FileName, "wb");
+-           if (f) {
++           int fd = open(FileName, O_CREAT | O_EXCL | O_TRUNC | O_RDWR, 0600);
++           if (fd > -1) {
++             FILE *f = fdopen(fd, "wb");
++             if (f) {
+               if (Jpeg) {
+                  // write JPEG file:
+                  struct jpeg_compress_struct cinfo;
+@@ -540,7 +542,8 @@
+                     }
+                  }
+               fclose(f);
+-              }
++            }
++	   }
+            else {
+               LOG_ERROR_STR(FileName);
+               result |= 1;

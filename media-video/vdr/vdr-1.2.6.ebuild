@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.2.6.ebuild,v 1.4 2004/10/27 08:12:07 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.2.6.ebuild,v 1.5 2005/01/25 16:15:33 luckyduck Exp $
 
 inherit eutils check-kernel
 
@@ -30,6 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}_CAN-2005-0071.patch
 }
 
 src_compile() {
