@@ -1,4 +1,4 @@
-MD5 f67ab33037d0fd7d710613180a2fb122 perlmagick-5.5.5.3.ebuild 1043
 MD5 5e4180db48b24174b188a1ddba2076b4 ChangeLog 685
-MD5 d08eb4ca4088e689ab173851be380613 files/digest-perlmagick-5.5.5.3 73
+MD5 f67ab33037d0fd7d710613180a2fb122 perlmagick-5.5.5.3.ebuild 1043
+MD5 6252ff2f2887808d8dc6ea0178ef2829 files/digest-perlmagick-5.5.5.3 72
 MD5 edbc2be86318f2676c55ce64e47ea2f6 files/perlpatch.diff 1598
