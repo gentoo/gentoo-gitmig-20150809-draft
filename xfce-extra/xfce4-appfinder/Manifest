@@ -1,4 +1,14 @@
-MD5 23e437f69a85298de408bd03808d0bd7 xfce4-appfinder-4.2.0.ebuild 409
-MD5 f0ac3ef39089820dd6d5ecf65f474379 ChangeLog 1775
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bf251f41586ed111005e4e3b1b16f8ea ChangeLog 1880
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 9ef0e786571c88dd27883e39030726ed xfce4-appfinder-4.2.0.ebuild 408
 MD5 d7d11e06640cff428e402ceac7f7a9fe files/digest-xfce4-appfinder-4.2.0 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCCVIBugEuf3OQ0akRAk3KAJ47LPyOr1+3zE3Jw/o+G7g5xAU7OACgpHSc
+hWEy1dhzUxYaHpTooh8RIs8=
+=OGmn
+-----END PGP SIGNATURE-----
