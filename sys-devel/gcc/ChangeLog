@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.290 2004/07/22 12:33:26 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.291 2004/07/22 13:11:14 pappy Exp $
+
+  22 Jul 2004; Alexander Gabert <pappy@gentoo.org> gcc-3.3.4-r1.ebuild:
+  fire up hardened changes for sparc and hppa, though still leaving keyworded on
+  sparc
 
   22 Jul 2004; Alexander Gabert <pappy@gentoo.org> gcc-3.4.1.ebuild:
   added hppa logic and note for glibc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.4 2004/07/20 18:33:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.5 2004/07/22 13:11:32 pappy Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -94,8 +94,9 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 ## SpanKY says hppa is a no go with any 3.3.x
-# desire ~sparc
-KEYWORDS="-hppa ~x86 ~amd64 ~mips ~arm"
+
+KEYWORDS="-hppa ~x86 ~amd64 ~mips ~arm" # weeve: mark "~sparc" as you wish
+
 IUSE="static nls bootstrap build X multilib gcj f77 objc pic hardened uclibc debug"
 
 # Ok, this is a hairy one again, but lets assume that we
@@ -382,9 +383,7 @@ src_unpack() {
 
 	[ -n "${PIE_VER}" ] && release_version="${release_version}, pie-${PIE_VER}"
 
-	# if use hardened && ( use x86 || use sparc || use amd64 )
-	# the use hardened && use sparc part breaks glibc compiling - pappy
-	if use hardened && ( use x86 || use amd64 )
+	if use hardened && ( use x86 || use amd64 || use sparc || use hppa )
 	then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
 		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
@@ -399,9 +398,6 @@ src_unpack() {
 
 	version_patch ${FILESDIR}/3.3.4/gcc334-gentoo-branding.patch \
 		"${BRANCH_UPDATE} (${release_version})" || die "Failed Branding"
-
-	# TODO: on arches where we lack a Scrt1.o (like parisc) we still need unpack, compile and install logic
-	# TODO: for the crt1Snocsu.o provided by a custom gcc-pie-ssp.tgz which can also be included in SRC_URI
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
