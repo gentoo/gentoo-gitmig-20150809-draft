@@ -1,4 +1,6 @@
 MD5 05c254c803d7feb04deaafb92962837a ruby-gnomevfs-0.10.0.ebuild 533
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 f82dd1cf5d7f9da0f6520d621098c2bd ChangeLog 368
+MD5 05c254c803d7feb04deaafb92962837a ruby-gnomevfs-0.10.1.ebuild 533
 MD5 4fe091b4867f53feaabe2c7fcfdfcaef files/digest-ruby-gnomevfs-0.10.0 74
+MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gnomevfs-0.10.1 74
