@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/XML-DTDParser
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DTDParser/ChangeLog,v 1.1 2004/12/05 03:30:17 mcummings Exp $
+
+*XML-DTDParser-2.01 (04 Dec 2004)
+
+  04 Dec 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +XML-DTDParser-2.01.ebuild:
+  New dep for XML-DT
+
