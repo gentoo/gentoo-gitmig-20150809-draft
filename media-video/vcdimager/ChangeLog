@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vcdimager
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.26 2005/03/21 21:03:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.27 2005/04/01 00:26:11 luckyduck Exp $
+
+  01 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  vcdimager-0.7.20-r2.ebuild:
+  pkgconfig not any longer in RDEPEND, fixes #87400
 
   21 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> -vcdimager-0.7.17.ebuild,
   vcdimager-0.7.19.ebuild, vcdimager-0.7.20-r1.ebuild,

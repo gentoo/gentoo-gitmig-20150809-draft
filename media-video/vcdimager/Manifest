@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 1ad0ccd0e9a95c19fc950bb8d6bf2412 vcdimager-0.7.20-r1.ebuild 1208
-MD5 3c1feb11c4f6cdc8865216bf5d0a964e vcdimager-0.7.20-r2.ebuild 1178
+MD5 27cbc814bdf5c11fb3a60bba13e48e98 vcdimager-0.7.20-r2.ebuild 1199
 MD5 ef8fe2d47f9624d2c9bb0d3065c4120a vcdimager-0.7.19.ebuild 1138
-MD5 83ef16c38d69034786724d3027e2079d ChangeLog 4064
+MD5 3de7973c7ea3ccb22836779564568ea4 ChangeLog 4199
 MD5 d83b673153218cfde2f334a5c10284b4 vcdimager-0.7.20.ebuild 1128
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 c048409383703da86edcf956543bf4a7 files/vcdimager-0.7.20-libvcd.patch 3981
@@ -16,7 +16,7 @@ MD5 5e0c78969e48bd4c779ccda811e163e3 files/digest-vcdimager-0.7.20-r2 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCPzar06ebR+OMO78RAm2VAJ4uZ5MQMdhbJA/pufjsKmjgrUCIWQCfSWIY
-mIlH6Ccrsy8K7qaupNbkmWA=
-=4yHx
+iD8DBQFCTJUv06ebR+OMO78RAuK+AJ9IbthQsg5rN2hL0VOf/hJ3DpClAACfZ2yA
+o/aM9OjsJZIZLdGBIWx1Huk=
+=tXxx
 -----END PGP SIGNATURE-----

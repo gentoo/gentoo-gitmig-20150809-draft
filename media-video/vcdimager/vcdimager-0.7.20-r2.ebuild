@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r2.ebuild,v 1.6 2005/03/21 21:03:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r2.ebuild,v 1.7 2005/04/01 00:26:11 luckyduck Exp $
 
 IUSE="xml2"
 
@@ -14,9 +14,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~ia64 ~ppc ~sparc x86 ~ppc64"
 
-DEPEND=">=dev-libs/libcdio-0.66
-	dev-util/pkgconfig
+RDEPEND=">=dev-libs/libcdio-0.66
 	xml2? ( >=dev-libs/libxml2-2.5.11 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
