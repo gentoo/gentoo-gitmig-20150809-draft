@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.3.0.ebuild,v 1.7 2004/06/28 22:55:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.3.0.ebuild,v 1.8 2004/07/15 01:07:11 agriffis Exp $
 
 inherit gnuconfig
 
@@ -19,12 +19,10 @@ DEPEND=">=sys-apps/gawk-3
 	>=sys-apps/sed-4"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${P}
-
 src_unpack() {
 	unpack ${A}
 	sed -i 's#$(bindir)/wm-icons-config#true#g' ${S}/Makefile.in
-	use alpha && gnuconfig_update
+	gnuconfig_update
 }
 
 src_compile() {
