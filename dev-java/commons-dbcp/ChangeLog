@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.4 2003/02/12 05:50:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.5 2003/04/06 07:58:02 absinthe Exp $
+
+*commons-dbcp-1.0-r2 (06 Apr 2003)
+
+  06 Apr 2003; Dylan Carlson <absinthe@gentoo.org> commons-dbcp-1.0-r1.ebuild,
+  commons-dbcp-1.0-r1.ebuild, commons-dbcp-1.0-r2.ebuild,
+  commons-dbcp-1.0.ebuild, commons-dbcp-1.0.ebuild:
+  x86 ppc sparc moved to stable.  removed older versions.
 
 *commons-dbcp-1.0-r1 (24 Nov 2002)
 
