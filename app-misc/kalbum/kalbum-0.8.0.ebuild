@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kalbum/kalbum-0.8.0.ebuild,v 1.8 2004/06/24 22:18:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kalbum/kalbum-0.8.0.ebuild,v 1.9 2004/10/23 21:18:41 weeve Exp $
 
 inherit kde
 
@@ -9,7 +9,7 @@ DESCRIPTION="A photo album generator for KDE 3.x"
 SRC_URI="http://www.paldandy.com/kalbum/data/${P}/${P}.tar.bz2"
 HOMEPAGE="http://www.paldandy.com/kalbum/"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 need-kde 3
 
