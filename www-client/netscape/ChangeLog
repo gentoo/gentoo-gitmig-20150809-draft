@@ -1,0 +1,10 @@
+# ChangeLog for www-client/netscape
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/netscape/ChangeLog,v 1.1 2005/02/05 05:03:30 usata Exp $
+
+*netscape-7.2 (05 Feb 2005)
+
+  05 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +netscape-7.2.ebuild:
+  Initial import. Ebuild submitted by fn_x@hotmail.com. This closes bug #58410.
+
