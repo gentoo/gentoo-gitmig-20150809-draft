@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r7.ebuild,v 1.4 2002/10/13 11:57:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r7.ebuild,v 1.5 2002/10/17 16:34:48 bjb Exp $
 
 IUSE="berkdb gdbm"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${P}.tar.gz"
 HOMEPAGE="http://www.perl.org"
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 RDEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	berkdb? ( >=sys-libs/db-3.2.3h-r3
@@ -20,6 +20,11 @@ DEPEND="sys-apps/groff
 	${RDEPEND}"
 
 src_compile() {
+
+    if [ "${ARCH}" = "alpha" ]; then
+        CFLAGS="${CFLAGS} -fPIC"
+        CXXFLAGS="${CXXFLAGS} -fPIC"
+    fi  
 
     local myconf
     if [ "`use gdbm`" ]

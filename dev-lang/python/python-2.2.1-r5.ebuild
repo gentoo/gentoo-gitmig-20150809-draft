@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r5.ebuild,v 1.4 2002/10/15 19:50:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r5.ebuild,v 1.5 2002/10/17 16:34:48 bjb Exp $
 
 IUSE="readline tcltk berkdb bootstrap"
 
@@ -41,6 +41,11 @@ src_unpack() {
 
 src_compile() {
         filter-flags -malign-double
+
+	if [ "${ARCH}" = "alpha" ]; then
+		CFLAGS="${CFLAGS} -fPIC"
+		CXXFLAGS="${CXXFLAGS} -fPIC"
+	fi
 	export OPT="$CFLAGS"
 
 	# adjust makefile to install pydoc into ${D} correctly
