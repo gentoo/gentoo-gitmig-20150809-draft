@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/net2ftp-0.81.ebuild,v 1.2 2005/02/15 11:13:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/net2ftp-0.82.ebuild,v 1.1 2005/02/28 12:33:07 uberlord Exp $
 
 inherit eutils webapp
 
@@ -40,18 +40,23 @@ src_unpack() {
 src_install() {
 	webapp_src_preinst
 
-	local docs="CREDITS INSTALL CHANGES" doc
+	local docs="CREDITS INSTALL CHANGES TODO" doc
 
 	dodoc ${docs} LICENSE
 	for doc in ${docs}; do
 		rm -f ${doc}
 	done
 
+	rm -f temp/chmod_this_dir_to_777.txt
+
 	insinto ${MY_HTDOCSDIR}
 	doins -r *
 
+	webapp_serverowned ${MY_HTDOCSDIR}/temp
+
 	webapp_configfile ${MY_HTDOCSDIR}/settings.inc.php
 	webapp_configfile ${MY_HTDOCSDIR}/settings_authorizations.inc.php
+	webapp_configfile ${MY_HTDOCSDIR}/settings_screens.inc.php
 
 	webapp_sqlscript mysql create_tables.sql
 
