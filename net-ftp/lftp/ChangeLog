@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.25 2003/05/06 11:34:40 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.26 2003/06/28 00:01:25 taviso Exp $
+
+  28 Jun 2003; Tavis Ormandy <taviso@gentoo.org> lftp-2.6.5.ebuild:
+  2.6.5 stable on alpha.
 
   06 May 2003; Tavis Ormandy <taviso@gentoo.org> lftp-2.6.5.ebuild:
   Adding extra check while linking if on Alpha, should fix compilation 
