@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.164 2005/01/12 20:41:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.165 2005/01/20 17:22:19 chainsaw Exp $
+
+*development-sources-2.6.5 (20 Jan 2005)
+
+  20 Jan 2005; Tony Vroon <chainsaw@gentoo.org>
+  +development-sources-2.6.5.ebuild:
+  Readding s390 stable kernel 2.6.5 that got overlooked in ebuild purge.
 
   12 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
   development-sources-2.6.10-r1.ebuild:
