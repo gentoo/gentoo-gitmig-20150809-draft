@@ -1,6 +1,9 @@
 # ChangeLog for net-news/inn
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.6 2003/12/06 02:52:34 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.7 2003/12/08 05:48:57 mr_bones_ Exp $
+
+  07 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> inn-2.3.5.ebuild:
+  chown x.y -> chown x:y (bug 35127)
 
   05 Dec 2003; Chuck Short <zul@gentoo.org> inn-2.3.5.ebuild:
   Chown fixes

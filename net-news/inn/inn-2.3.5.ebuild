@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.3.5.ebuild,v 1.7 2003/12/06 02:52:34 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.3.5.ebuild,v 1.8 2003/12/08 05:48:57 mr_bones_ Exp $
 
 IUSE="ssl tcltk"
 
@@ -104,7 +104,7 @@ pkg_postinst() {
 	chown news:news ${ROOT}/etc/news/send-uucp.cf
 	chown news:news ${ROOT}/usr/lib/news/bin/send-uucp.pl
 	chown -R news:news ${ROOT}/var/spool/news
-	chown -R news.news ${ROOT}/var/log/news/
+	chown -R news:news ${ROOT}/var/log/news/
 
 	einfo 'Do not forget to update your cron entries, and also run'
 	einfo 'makedbz if you need to.  If this is a first-time installation'
