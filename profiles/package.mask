@@ -23,7 +23,7 @@
 
 # <strider@gentoo.org> (10 Jan 2004)
 # Masking since its a beta release.
->=dev-java/sun-jdk-1.5
+>=dev-java/sun-jdk-1.4.99
 
 # <nakano@gentoo.org> (09 Jan 2004)
 # masking bincimap-1.2.4 because the author has announced it's unstable.
