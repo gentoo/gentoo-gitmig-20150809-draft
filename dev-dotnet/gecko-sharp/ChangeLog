@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gecko-sharp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.5 2004/05/06 15:09:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.6 2004/05/06 22:02:45 latexer Exp $
+
+  06 May 2004; Peter Johanson <latexer@gentoo.org> gecko-sharp-0.3.ebuild:
+  Adding ~ppc as dholm wants me to keep ppc keywords around for him.
 
 *gecko-sharp-0.3 (06 May 2004)
 
