@@ -1,13 +1,19 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.2 2005/03/08 01:00:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.3 2005/03/23 14:02:51 spock Exp $
 
-  08 Mar 2005; Michael Januszewski <spock@gentoo.org> fbida-2.03.ebuild:
+*fbida-2.03-r1 (23 Mar 2005)
+
+  23 Mar 2005; Michał Januszewski <spock@gentoo.org> +fbida-2.03-r1.ebuild:
+  Removed dependency on libungif. Added a dependency on libexif. Closes #80414
+  and #85358.
+
+  08 Mar 2005; Michał Januszewski <spock@gentoo.org> fbida-2.03.ebuild:
   Added a block on media-gfx/fbi (bug #84417). Marked stable on x86.
 
 *fbida-2.03 (06 Feb 2005)
 
-  06 Feb 2005; Michael Januszewski <spock@gentoo.org> +metadata.xml,
+  06 Feb 2005; Michał Januszewski <spock@gentoo.org> +metadata.xml,
   +fbida-2.03.ebuild:
   Initial commit. Closes #80415.
 
