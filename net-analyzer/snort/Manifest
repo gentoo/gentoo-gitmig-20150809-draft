@@ -26,5 +26,5 @@ MD5 006245d824acd3b53cdc0976edfb94dd snort-2.0.0.ebuild 3007
 MD5 6b7060c54c68911a8d7d3ecfb3c5283e snort-1.9.1-r2.ebuild 2824
 MD5 15408a678cbad1f26faa4878550ddbd9 metadata.xml 956
 MD5 c4b7ac7dd54b0bc475986d44ec7c3f7e snort-2.0.1.ebuild 3304
-MD5 a437b5d8667cf4e4b92527df753f37d7 snort-1.9.1-r3.ebuild 2292
-MD5 08e601e9e7c3524cae8a488fab6a0ce2 snort-2.0.1-r1.ebuild 2736
+MD5 337c60c7422b5432678e19eac4389156 snort-1.9.1-r3.ebuild 2292
+MD5 cf9dddda5eee993eb577755e8fd6c834 snort-2.0.1-r1.ebuild 2736

@@ -3,4 +3,4 @@ MD5 5e2378564ab6bc44916bc53b430dc1d2 files/0.4b-libnet-1.0.patch 518
 MD5 2e59247b348d1067a433e5787b585f20 files/digest-angst-0.4b-r1 61
 MD5 0d92941b2493363740da436c70af580a ChangeLog 641
 MD5 125f98b903de5a25de3770d72efc9649 angst-0.4b.ebuild 731
-MD5 714c0dd589eb9426bb0b2383245c1280 angst-0.4b-r1.ebuild 798
+MD5 cb6f95fd201eb6771d5f464a6cec76aa angst-0.4b-r1.ebuild 797
