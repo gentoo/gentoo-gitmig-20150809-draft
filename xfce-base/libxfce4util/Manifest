@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 36b47c0cde09fc5f1cf19a699e6b10c3 libxfce4util-4.2.0.ebuild 461
+MD5 78ec411ad9c5255b2b32d8acb68806fa libxfce4util-4.0.6.ebuild 732
 MD5 7b568bb4c47d196959eca599d98bfe09 ChangeLog 5762
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 8d43b3491b9f1fb3cab47ac70cf78be5 libxfce4util-4.2.0.ebuild 402
-MD5 78ec411ad9c5255b2b32d8acb68806fa libxfce4util-4.0.6.ebuild 732
-MD5 767623de028b6ecae2141c3c5d2478c0 files/digest-libxfce4util-4.2.0 71
 MD5 71f8db52c0e0da0e1ee4a70c35c0edd6 files/digest-libxfce4util-4.0.6 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCCUvDugEuf3OQ0akRAtxTAJ9P9r1PmtJ6an8upFXDksDZZhPtmACfZSO6
-AGw/CKGaLjZ2fxEhfbay7+Y=
-=js/j
------END PGP SIGNATURE-----
+MD5 767623de028b6ecae2141c3c5d2478c0 files/digest-libxfce4util-4.2.0 71
