@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.4 2004/06/30 23:01:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.5 2004/07/22 00:07:12 lv Exp $
+
+  21 Jul 2004; Travis Tilley <lv@gentoo.org> paxctl-0.2.ebuild:
+  stable on amd64
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> paxctl-0.2.ebuild:
   sync IUSE (missing), glibc -> libc
