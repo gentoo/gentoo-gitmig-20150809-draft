@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/physfs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/physfs/ChangeLog,v 1.4 2003/04/18 15:14:17 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/physfs/ChangeLog,v 1.5 2003/04/24 23:15:21 sunflare Exp $
+
+*physfs-0.1.8 (24 Apr 2003)
+
+  24 Apr 2003; Phil Bordelon <sunflare@gentoo.org> physfs-0.1.8.ebuild:
+  Version bump.  Marked for testing.
 
 *physfs-0.1.7 (12 Dec 2002)
 
