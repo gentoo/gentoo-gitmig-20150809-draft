@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.30 2004/09/21 13:38:55 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.31 2004/09/23 02:12:55 gustavoz Exp $
+
+  22 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> slang-1.4.9-r1.ebuild:
+  Stable on sparc
 
   21 Sep 2004; Heinrich Wendel <lanius@gentoo.org> slang-1.4.9-r1.ebuild:
   mark slang-1.4.9-r1 stable on x86

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.7 2004/09/21 14:41:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.8 2004/09/23 02:11:22 gustavoz Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="5"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha arm hppa ~amd64 ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ~ppc sparc ~mips ~alpha arm hppa ~amd64 ia64 ~ppc64 ~s390"
 IUSE="build bootstrap debug doc uclibc unicode"
 
 DEPEND="virtual/libc"
