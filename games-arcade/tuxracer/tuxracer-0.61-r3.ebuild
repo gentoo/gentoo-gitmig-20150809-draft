@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.5 2004/01/12 03:43:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.6 2004/02/05 14:16:45 agriffis Exp $
 
-inherit games eutils gcc
+inherit games eutils gcc flag-o-matic
 
 DESCRIPTION="take on the role of Tux, the Linux Penguin, as he races down steep, snow-covered mountains"
 HOMEPAGE="http://tuxracer.sourceforge.net/"
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64 ~alpha"
 IUSE="stencil-buffer"
 
 DEPEND="virtual/opengl
@@ -33,6 +33,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# alpha needs -mieee for this game to avoid FPE
+	use alpha && append-flags -mieee
+
 	egamesconf \
 		`use_enable stencil-buffer` \
 		--with-data-dir=${GAMES_DATADIR}/${PN} \
