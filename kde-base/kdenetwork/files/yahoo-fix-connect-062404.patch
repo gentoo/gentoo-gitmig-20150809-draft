@@ -1,12 +1,5 @@
-? yahoo-fix-connect-062404.patch
-Index: libyahoo2.c
-===================================================================
-RCS file: /home/kde/kdenetwork/kopete/protocols/yahoo/libyahoo2/libyahoo2.c,v
-retrieving revision 1.18
-retrieving revision 1.18.2.3
-diff -u -p -r1.18 -r1.18.2.3
---- libyahoo2.c	14 Jan 2004 02:07:29 -0000	1.18
-+++ libyahoo2.c	26 Jun 2004 00:37:08 -0000	1.18.2.3
+--- kopete/protocols/yahoo/libyahoo2/libyahoo2.c	14 Jan 2004 02:07:29 -0000	1.18
++++ kopete/protocols/yahoo/libyahoo2/libyahoo2.c	26 Jun 2004 00:37:08 -0000	1.18.2.3
 @@ -1816,6 +1816,8 @@ static void yahoo_process_auth_0x0b(stru
  	 * challenge. */
  
@@ -25,14 +18,8 @@ diff -u -p -r1.18 -r1.18.2.3
  	shaUpdate(&ctx1, magic_key_char, 4);
  	shaFinal(&ctx1, digest1);
  
-Index: yahoo_fn.c
-===================================================================
-RCS file: /home/kde/kdenetwork/kopete/protocols/yahoo/libyahoo2/Attic/yahoo_fn.c,v
-retrieving revision 1.1.2.1
-retrieving revision 1.1.2.3
-diff -u -p -r1.1.2.1 -r1.1.2.3
---- yahoo_fn.c	18 Jan 2004 20:03:39 -0000	1.1.2.1
-+++ yahoo_fn.c	26 Jun 2004 00:37:08 -0000	1.1.2.3
+--- kopete/protocols/yahoo/libyahoo2/yahoo_fn.c	14 Jan 2004 02:07:29 -0000	1.18
++++ kopete/protocols/yahoo/libyahoo2/yahoo_fn.c	26 Jun 2004 00:37:08 -0000	1.18.2.3
 @@ -4386,7 +4386,7 @@ struct yahoo_fn yahoo_fntable[5][96] = 
       { XOR, 0x77D64B90, 0 },
       { BITFLD, (long)table_103, 0 },
