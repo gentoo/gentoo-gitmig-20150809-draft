@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.12 2004/09/13 03:32:24 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.13 2004/09/14 17:47:07 geoman Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -119,7 +119,7 @@ cflag_setup() {
 	ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O1 -O2 -O3 -pipe -fomit-frame-pointer -g -gstabs+ -gstabs -ggdb"
 	# arch-specific section added by popular demand
 	case "${ARCH}" in
-		mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
+		mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mtune -mips1 -mips2 -mips3 -mips4 -mabi" ;;
 		# -fomit-frame-pointer known to break things and is pointless
 		# according to ciaranm
 		sparc)	filter-flags "-fomit-frame-pointer" ;;
