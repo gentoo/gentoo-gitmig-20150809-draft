@@ -1,0 +1,11 @@
+# ChangeLog for media-video/tvtime
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header
+
+*tvtime-0.9.5 (6 Nov 2002)
+  
+  6 Nov 2002; Matt Keadle <mkeadle@gentoo.org> tvtime-0.9.5.ebuild
+  ChangeLog files/digest-tvtime-0.9.5:
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way.
