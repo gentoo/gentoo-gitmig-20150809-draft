@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc-cvs/sdcc-cvs-2.4.0.ebuild,v 1.1 2004/09/28 07:29:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc-cvs/sdcc-cvs-2.4.0.ebuild,v 1.2 2004/12/16 11:31:31 dragonheart Exp $
 
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/sdcc"
@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "Make install failed"
+	emake DESTDIR=${D} install || die "Make install failed"
 	dodoc ChangeLog doc/README.txt doc/libdoc.txt doc/INSTALL.txt
 	use doc && emake -C doc docdir=${D}/usr/share/doc/${PF} install
 }
