@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.12 2004/08/30 19:32:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.13 2004/08/31 19:07:43 chainsaw Exp $
+
+  31 Aug 2004; Tony Vroon <chainsaw@gentoo.org>
+  beep-media-player-0.9.7_rc2-r1.ebuild:
+  Adding missing depend on libglade. Reported by both Tim Gurr (bug #62154) and
+  Stefan Tittel (bug #61211).
 
 *beep-media-player-0.9.7_rc2-r1 (30 Aug 2004)
 

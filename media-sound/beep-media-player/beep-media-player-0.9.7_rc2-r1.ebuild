@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r1.ebuild,v 1.1 2004/08/30 19:32:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r1.ebuild,v 1.2 2004/08/31 19:07:43 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -21,6 +21,7 @@ RDEPEND="app-arch/unzip
 	>=x11-libs/gtk+-2.2
 	>=x11-libs/pango-1.2
 	>=dev-libs/libxml-1.8.15
+	>=gnome-base/libglade-2.0.1
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	esd? ( >=media-sound/esound-0.2.29 )
 	opengl? ( virtual/opengl )
