@@ -1,5 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips64-1.4/use.mask,v 1.8 2004/09/01 03:20:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips64-1.4/use.mask,v 1.9 2004/10/08 14:18:23 ciaranm Exp $
 
+# Ciaran McCreesh <ciaranm@gentoo.org>
+# not even slightly reliable, bug #65216
+mzscheme
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
