@@ -1,0 +1,28 @@
+#!/bin/bash
+
+BUILDTYPE=$1
+CONFIGURED="false"
+
+echo Configuring for $BUILDTYPE
+
+case "$BUILDTYPE" in
+	"jahshaka")
+		echo build jahshaka
+		cp -vf jahshakaSettings.pro Settings.pro
+		qmake jahshaka.pro
+		CONFIGURED="true"
+	;;
+	"jahplayer")
+		echo build jahplayer
+		cp -vf jahplayerSettings.pro Settings.pro
+		qmake jahplayer.pro
+		CONFIGURED="true"
+	;;
+	* )
+		echo nothing entered or invalid entry
+		echo build jahshaka
+		cp -vf jahshakaSettings.pro Settings.pro
+		qmake jahshaka.pro
+		CONFIGURED="true"
+	;;
+esac

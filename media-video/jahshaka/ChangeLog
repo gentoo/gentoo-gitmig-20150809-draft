@@ -1,6 +1,10 @@
 # ChangeLog for media-video/jahshaka
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.4 2004/11/27 16:18:08 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.5 2004/11/28 04:58:01 chriswhite Exp $
+
+  28 Nov 2004; Chris White <chriswhite@gentoo.org> +files/configure,
+  jahshaka-1.9_alpha90.ebuild:
+  Added a bash configure script instead of tcsh since bash is more avaliable.
 
 *jahshaka-1.9_alpha90 (28 Nov 2004)
 

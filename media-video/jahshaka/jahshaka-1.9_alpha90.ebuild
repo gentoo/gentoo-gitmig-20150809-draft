@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-1.9_alpha90.ebuild,v 1.1 2004/11/27 16:18:08 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-1.9_alpha90.ebuild,v 1.2 2004/11/28 04:58:01 chriswhite Exp $
 
 inherit eutils
 
@@ -28,6 +28,8 @@ src_unpack() {
 	unpack ${A}
 	einfo "Patching plugins.pro"
 	sed -e '/jitplugins/a csplugins \\' -i ${S}/plugins/plugins.pro
+
+	cp ${FILESDIR}/configure ${S}/configure
 }
 
 cflags_replacement() {
