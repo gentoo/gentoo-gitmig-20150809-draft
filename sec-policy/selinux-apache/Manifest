@@ -5,12 +5,12 @@ MD5 dabe431d12e68a468eecd7b28f46601e ChangeLog 1158
 MD5 b8068a5f43a13e057dfc0628697eeda6 metadata.xml 518
 MD5 f0bd38e90d227d8e64b40a7ac80033ea selinux-apache-20050211.ebuild 422
 MD5 252a271ed6e834eb62c02b620a7c70e6 selinux-apache-20040925.ebuild 471
-MD5 2072a64b83d173da74e6883e72d8cb59 files/digest-selinux-apache-20050211 74
+MD5 456292da171365053e78d79a85bb858c files/digest-selinux-apache-20050211 74
 MD5 4e8912251b197ed8b38a6a26741a01c2 files/digest-selinux-apache-20040925 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCDQeiGSBEIeh4AEYRAvfIAJ0avU4pXx+IBbVIqBLTtTxJqkvVQgCfWQ6Y
-50ZR+84PObL5lVqbZA+5lk0=
-=SKg6
+iD8DBQFCDQkaGSBEIeh4AEYRAuhEAJ0Sxo1E36gCYoGtswWdQJOu8j77agCgjXJT
+iEHX1v5s/Y9QKFiW2QjC7aI=
+=L+Fc
 -----END PGP SIGNATURE-----
