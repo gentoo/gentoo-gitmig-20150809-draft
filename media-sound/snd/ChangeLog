@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/snd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.17 2004/09/15 19:41:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.18 2004/12/28 20:30:54 ribosome Exp $
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> snd-7.1.ebuild:
+  Dependency update: dev-libs/gsl -> sci-libs/gsl.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> snd-7.4.ebuild:
   Stable sparc.
