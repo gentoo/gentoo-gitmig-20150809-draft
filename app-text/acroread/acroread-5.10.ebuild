@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.010.ebuild,v 1.1 2004/12/15 15:02:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.10.ebuild,v 1.1 2004/12/16 12:48:18 lanius Exp $
 
 inherit nsplugins eutils
 
-MY_P=linux-${PV/./}
+MY_P=linux-5010
 DESCRIPTION="Adobe's PDF reader"
 HOMEPAGE="http://www.adobe.com/products/acrobat/"
 SRC_URI="ftp://ftp.adobe.com/pub/adobe/acrobatreader/unix/5.x/${MY_P}.tar.gz"
