@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/MIME-Base64-2.11.ebuild,v 1.7 2001/09/10 15:45:04 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/MIME-Base64-2.12.ebuild,v 1.1 2001/09/10 15:45:04 g2boojum Exp $
 
-P=MIME-Base64-2.11
+P=MIME-Base64-2.12
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 CATEGORY="dev-perl"
