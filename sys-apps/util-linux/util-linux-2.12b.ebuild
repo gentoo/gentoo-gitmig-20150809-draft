@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12b.ebuild,v 1.4 2004/09/15 19:15:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12b.ebuild,v 1.5 2004/09/20 13:45:47 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,6 +23,8 @@ DEPEND="virtual/libc
 	selinux? ( sys-libs/libselinux )
 	pam? ( sys-apps/pam-login )
 	crypt? ( app-crypt/hashalot )"
+# We need perl because one script ( chkdupexe ) is
+# written in frickin perl; otherwise we dont need it ...
 RDEPEND="${DEPEND}
 	dev-lang/perl
 	nls? ( sys-devel/gettext )"
