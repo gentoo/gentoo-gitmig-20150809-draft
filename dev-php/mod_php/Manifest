@@ -10,8 +10,8 @@ MD5 f3da06c0bb470ad2782dfe207ce75e4e mod_php-4.3.8.ebuild 5916
 MD5 3b4db25bfe82d2967bc9c607cccdb12c mod_php-5.0.0-r1.ebuild 4179
 MD5 ab16ea4659012c51daf410c110d92895 mod_php-4.3.9_rc1.ebuild 6025
 MD5 8dcccea239186458cae823a2b62b80d0 mod_php-5.0.1.ebuild 4244
-MD5 d9bbf0ea064e76f7bb6f104b0e2bf664 mod_php-5.0.3-r1.ebuild 4237
-MD5 2c646a221fa67ab4a32d2e17359b9173 ChangeLog 35687
+MD5 a2dd9e1b3d57a9b37b0e369a772d56c8 mod_php-5.0.3-r1.ebuild 4244
+MD5 b0da7eb2fbbaf7aa987dbbaa39da1424 ChangeLog 35869
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 bf17d109788ccc5953b97a47d0b693bf mod_php-4.3.10.ebuild 6090
 MD5 af7473ef5d3920861bd3e501e8d26882 mod_php-5.0.3.ebuild 4324
@@ -40,7 +40,7 @@ MD5 158cb07377a3e2a0028947b0aeb505cb files/4.3.10-r1/70_mod_php.conf 1017
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB9qJantT9W3vfTuoRApj7AJwLI7qcgLjRMtDBg7so5bY5fCOlFgCgph3/
-yU1ZdnePlAZ+uAHidDk+yFM=
-=LtTj
+iD8DBQFB/6WFntT9W3vfTuoRAvZNAJ9wYtqlpDiMQeKYFul6oNt9jraz5wCfZC3S
+kWP4PmTQC0mlW6rqg3fXP+c=
+=1q4s
 -----END PGP SIGNATURE-----
