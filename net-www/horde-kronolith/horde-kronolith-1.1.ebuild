@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.9 2004/01/19 06:39:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.10 2004/01/19 06:45:49 vapier Exp $
 
 inherit webapp-apache
 
 MY_P=${P/horde-/}
 DESCRIPTION="Kronolith is the Horde calendar application"
-HOMEPAGE="http://www.horde.org/"
+HOMEPAGE="http://www.horde.org/kronolith/"
 SRC_URI="ftp://ftp.horde.org/pub/kronolith/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"

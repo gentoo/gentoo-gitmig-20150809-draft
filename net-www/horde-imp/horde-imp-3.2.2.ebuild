@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2.2.ebuild,v 1.8 2004/01/19 06:39:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2.2.ebuild,v 1.9 2004/01/19 06:45:34 vapier Exp $
 
 inherit webapp-apache
 
 MY_P=${P/horde-/}
 DESCRIPTION="Horde IMP provides webmail access to IMAP/POP3 mailboxes"
-HOMEPAGE="http://www.horde.org/"
+HOMEPAGE="http://www.horde.org/imp/"
 SRC_URI="ftp://ftp.horde.org/pub/imp/tarballs/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"

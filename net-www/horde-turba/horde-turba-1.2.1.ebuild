@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/horde-turba-1.2.1.ebuild,v 1.7 2004/01/19 06:38:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/horde-turba-1.2.1.ebuild,v 1.8 2004/01/19 06:46:09 vapier Exp $
 
 inherit webapp-apache
 
 MY_P=${P/horde-/}
 DESCRIPTION="Turba is the Horde address book / contact management program"
-HOMEPAGE="http://www.horde.org/"
+HOMEPAGE="http://www.horde.org/turba/"
 SRC_URI="ftp://ftp.horde.org/pub/turba/tarballs/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
