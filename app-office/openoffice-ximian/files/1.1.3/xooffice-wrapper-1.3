@@ -108,7 +108,7 @@ if [ -z "$OOHOME" ] ; then
       fi
 
       echo "running openoffice.org setup..."
-      if ! /opt/Ximian-OpenOffice/program/setup ${UPDATEFLAG} -R:/etc/ximian-openoffice/autoresponse-<pv>.conf >& /dev/null; then
+      if ! /opt/Ximian-OpenOffice/program/setup -R:/etc/ximian-openoffice/autoresponse-<pv>.conf >& /dev/null; then
         echo "setup failed.. abort"
         exit 1
       fi
