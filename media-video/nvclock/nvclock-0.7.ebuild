@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.7.ebuild,v 1.1 2003/10/30 15:38:00 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.7.ebuild,v 1.2 2003/11/05 15:18:25 malverian Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ DEPEND="virtual/glibc
 	qt? ( x11-libs/qt )"
 
 src_compile() {
+	epatch ${FILESDIR}/configure.in.diff || die
 	./autogen.sh || die
 
 	export QTDIR=/usr/qt/3
