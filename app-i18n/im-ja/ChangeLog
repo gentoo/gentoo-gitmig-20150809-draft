@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.7 2003/09/05 02:52:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.8 2003/09/08 10:28:16 yakina Exp $
+
+*im-ja-0.8 (08 Sep 2003)
+
+  08 Sep 2003; YAMAKURA Makoto <yakina@gentoo.org> im-ja-0.8.ebuild:
+  Version bump
 
 *im-ja-0.7_p2 (20 Aug 2003)
 
