@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.10 2004/11/22 21:45:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.11 2004/11/24 20:16:06 eradicator Exp $
 
 IUSE="oss doc"
 
@@ -88,6 +88,7 @@ src_compile() {
 
 	econf `use_with oss` \
 		--with-kernel="${KER_DIR}" \
+		--with-build="${KER_DIR}" \
 		--with-isapnp=yes \
 		--with-sequencer=yes \
 		--with-cards="${ALSA_CARDS}" || die "econf failed"
