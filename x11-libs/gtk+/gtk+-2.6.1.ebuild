@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.1.ebuild,v 1.1 2005/01/12 16:56:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.1.ebuild,v 1.2 2005/01/14 02:25:26 kingtaco Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2
 	mirror://gentoo/gtk+-2.6-smoothscroll-r2.patch
-	amd64? ( http://dev.gentoo.org/~lv/gtk+-2.4.1-lib64.patch.bz2 )"
+	amd64? ( http://dev.gentoo.org/~kingtaco/gtk+-2.6.1-lib64.patch.bz2 )"
 
 LICENSE="LGPL-2"
 SLOT="2"
@@ -46,10 +46,10 @@ src_unpack() {
 
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
-	use amd64 && epatch ${DISTDIR}/gtk+-2.4.1-lib64.patch.bz2
+	use amd64 && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
 	# and this line is just here to make building emul-linux-x86-gtklibs a bit
 	# easier, so even this should be amd64 specific.
-	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch ${DISTDIR}/gtk+-2.4.1-lib64.patch.bz2
+	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
 	# patch for ppc64 (#64359)
 	use ppc64 && epatch ${FILESDIR}/${PN}-2.4.9-ppc64.patch
 
