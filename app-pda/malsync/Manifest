@@ -1,4 +1,4 @@
-MD5 6d43c258d4d770da64622cc0ef0f27db ChangeLog 443
-MD5 dbac471d5f952504fdf7035d737bf40e malsync-2.2.0.ebuild 708
 MD5 79de07eaf8aef5d2365c2b808a2c41f1 files/Makefile-pilot-link.diff 766
 MD5 b15026dbb7b12d3419c2fd6e9c9845c1 files/digest-malsync-2.2.0 69
+MD5 6d43c258d4d770da64622cc0ef0f27db ChangeLog 443
+MD5 bf81a56459ac6dfc8f772c7f10789d0b malsync-2.2.0.ebuild 727
