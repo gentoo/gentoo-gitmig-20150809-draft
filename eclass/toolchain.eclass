@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.86 2005/01/16 13:33:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.87 2005/01/18 01:54:22 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -10,7 +10,7 @@ inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig
 
 ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile pkg_preinst src_install pkg_postinst
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile pkg_preinst src_install pkg_postinst pkg_prerm pkg_postrm
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
 FEATURES=${FEATURES/multilib-strict/}
@@ -32,6 +32,12 @@ toolchain_src_install() {
 }
 toolchain_pkg_postinst() {
 	${ETYPE}_pkg_postinst
+}
+toolchain_pkg_prerm() {
+	${ETYPE}_pkg_prerm
+}
+toolchain_pkg_postrm() {
+	${ETYPE}_pkg_prerm
 }
 #----<< eclass stuff >>----
 
@@ -657,42 +663,66 @@ gcc_pkg_setup() {
 }
 
 gcc-compiler_pkg_preinst() {
-	chk_gcc_version
-
+	:
 	# wtf is this for !?
-	export LD_LIBRARY_PATH=${LIBPATH}:${LD_LIBRARY_PATH}
-	"${ROOT}"/sbin/ldconfig
+	#export LD_LIBRARY_PATH=${LIBPATH}:${LD_LIBRARY_PATH}
+	#"${ROOT}"/sbin/ldconfig
 }
 
 gcc-compiler_pkg_postinst() {
 	export LD_LIBRARY_PATH=${LIBPATH}:${LD_LIBRARY_PATH}
 	do_gcc_config
 
-	# Update libtool linker scripts to reference new gcc version ...
+	echo
+	einfo "If you have issues with packages unable to locate libstdc++.la,"
+	einfo "then try running 'fix_libtool_files.sh' on the old gcc versions."
+	echo
+
+	# Now we have to figure out if all the little libtool linker scripts
+	# need updating to our new gcc version.  Basically we only want to 
+	# do this if the old gcc version is being cleaned out due to this 
+	# new version.
+
+	# USE=multislot ... no compilers get cleaned out during an upgrade
 	use multislot && return 0
 
-	if [[ ${ROOT} == "/" ]] && \
-	   [[ -f ${WORKDIR}/.oldgccversion || -f ${WORKDIR}/.oldgccchost ]]
-	then
-		local OLD_GCC_VERSION=
-		local OLD_GCC_CHOST=
+	# libtool files aren't affected by cross compilers
+	[[ ${CTARGET} != ${CHOST} ]] && return 0
 
-		if [[ -f ${WORKDIR}/.oldgccversion ]] && \
-		   [[ -n $(<"${WORKDIR}/.oldgccversion") ]]
-		then
-			OLD_GCC_VERSION=$(<"${WORKDIR}/.oldgccversion")
-		else
-			OLD_GCC_VERSION=${GCC_CONFIG_VER}
-		fi
+	# Now check to see if we already have a version installed in this 
+	# SLOT ... if we do, then bail if it's a minor upgrade (like we 
+	# go from 3.3.4 to 3.3.4-r1 vs 3.3.4 to 3.3.5)
+	local old_gcc_release=$(portageq match =sys-devel/gcc-${GCC_RELEASE_VER}*)
+	[[ -n ${old_gcc_release} ]] && return 0
+	local old_gcc_branch=$(portageq match =sys-devel/gcc-${GCC_BRANCH_VER}*)
+	[[ -z ${old_gcc_branch} ]] && return 0
+	local old_gcc_ver=${old_gcc_branch%%-*}
 
-		if [[ -f ${WORKDIR}/.oldgccchost ]] && \
-		   [[ -n $(<"${WORKDIR}/.oldgccchost") ]]
-		then
-			OLD_GCC_CHOST="--oldarch $(cat "${WORKDIR}/.oldgccchost")"
-		fi
+	/sbin/fix_libtool_files.sh ${old_gcc_ver}
+}
 
-		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION} ${OLD_GCC_CHOST}
-	fi
+gcc-compiler_pkg_prerm() {
+	# TODO: flesh this out when I care
+	return 0
+
+	# When unmerging a compiler, we need to make sure that 
+	# we don't leave any of configuration stuff stranded.  
+	# After all, we can't assume the user won't shoot themselves 
+	# in the foot.
+
+	# First handle gcc-config matters
+	#if [[ $(gcc-config -c 2>&1) == "${CTARGET}-${PV}" ]] ; then
+	#	gcc-config 
+	#fi
+
+	# libtool files aren't affected by cross compilers
+	#[[ ${CTARGET} != ${CHOST} ]] && return 0
+
+	#/sbin/fix_libtool_files.sh ${PV}
+}
+
+gcc-compiler_pkg_postrm() {
+	:
 }
 
 #---->> pkg_* <<----
@@ -1459,29 +1489,6 @@ gcc_do_filter_flags() {
 	export GCJFLAGS="${CFLAGS}"
 }
 
-chk_gcc_version() {
-	[[ -f ${WORKDIR}/.chkgccversion ]] && return 0
-
-	mkdir -p "${WORKDIR}"
-
-	# This next bit is for updating libtool linker scripts ...
-	local OLD_GCC_VERSION=$(gcc-fullversion)
-	local OLD_GCC_CHOST="$(gcc -v 2>&1 | egrep '^Reading specs' |\
-	                       sed -e 's:^.*/gcc[^/]*/\([^/]*\)/[0-9]\+.*$:\1:')"
-
-	[[ ${OLD_GCC_VERSION} != ${GCC_CONFIG_VER} ]] \
-		&& echo "${OLD_GCC_VERSION}" > "${WORKDIR}"/.oldgccversion
-
-	if [[ -n ${OLD_GCC_CHOST} ]] ; then
-		if [[ ${CHOST} == ${CTARGET} ]] && [[ ${OLD_GCC_CHOST} != ${CHOST} ]] ; then
-			echo "${OLD_GCC_CHOST}" > "${WORKDIR}"/.oldgccchost
-		fi
-	fi
-
-	# Did we check the version ?
-	touch "${WORKDIR}"/.chkgccversion
-}
-
 # gcc_quick_unpack will unpack the gcc tarball and patches in a way that is
 # consistant with the behavior of get_gcc_src_uri. The only patch it applies
 # itself is the branch update if present.
@@ -1671,51 +1678,40 @@ should_we_gcc_config() {
 	use multislot && return 1
 
 	# if the current config is invalid, we definitely want a new one
-	gcc-config -c >&/dev/null || return 0
+	env -i gcc-config -c >&/dev/null || return 0
 
-	# if the previously selected config has the same major.minor as the
-	# version we are installing, then it will probably be uninstalled
-	# for being in the same SLOT. we cannot rely on the previous check
-	# to handle this, since postinst sometimes happens BEFORE the
-	# previous version is removed. :|
-	# ... skip this check if the current version is -exactly- the same
-	local c_gcc_conf_ver=$(gcc-config -c | awk -F - '{ print $5 }')
-	local c_majmin=$(get_version_component_range 1-2 ${c_gcc_conf_ver})
-	if [ "${c_gcc_conf_ver}" != "${GCC_CONFIG_VER}" ] ; then
-		if [ "${c_majmin}" == "${GCC_BRANCH_VER}" ] ;then
-			return 0
-		else
-			# if we're installing a genuinely different compiler version,
-			# we should probably tell the user -how- to switch to the new
-			# gcc version, since we're not going to do it for him/her.
-			einfo "The current gcc config appears valid, so it will not be"
-			einfo "automatically switched for you. If you would like to"
-			einfo "switch to the newly installed gcc version, do the"
-			einfo "following:"
-			echo
-			einfo "gcc-config ${CTARGET}-${GCC_CONFIG_VER}"
-			einfo "source /etc/profile"
-			echo
-			ebeep
-			return 1
-		fi
-	else
-		# since we are re-merging the same gcc version, it's safe to re-run
-		# gcc-config and update any new wrappers, etc.
+	# if the previously selected config has the same major.minor (branch) as 
+	# the version we are installing, then it will probably be uninstalled
+	# for being in the same SLOT, make sure we run gcc-config.
+	local curr_config_ver=$(env -i gcc-config -c | awk -F - '{ print $5 }')
+	local curr_branch_ver=$(get_version_component_range 1-2 ${curr_config_ver})
+	if [[ ${curr_branch_ver} == ${GCC_BRANCH_VER} ]] ; then
 		return 0
+	else
+		# if we're installing a genuinely different compiler version,
+		# we should probably tell the user -how- to switch to the new
+		# gcc version, since we're not going to do it for him/her.  
+		# We don't want to switch from say gcc-3.3 to gcc-3.4 right in 
+		# the middle of an emerge operation (like an 'emerge -e world' 
+		# which could install multiple gcc versions).
+		einfo "The current gcc config appears valid, so it will not be"
+		einfo "automatically switched for you.  If you would like to"
+		einfo "switch to the newly installed gcc version, do the"
+		einfo "following:"
+		echo
+		einfo "gcc-config ${CTARGET}-${GCC_CONFIG_VER}"
+		einfo "source /etc/profile"
+		echo
+		ebeep
+		return 1
 	fi
-
-	# default to -not- switching gcc configs. this is to prevent an
-	# annoying bug where doing an emerge world -e with multiple slotted
-	# compilers will compile some apps with one and others with another.
-	return 1
 }
 
 do_gcc_config() {
 	should_we_gcc_config || return 0
 
 	# the grep -v is in there to filter out informational messages >_<
-	local current_gcc_config=$(gcc-config -c ${CTARGET} | grep -v ^\ )
+	local current_gcc_config=$(env -i gcc-config -c ${CTARGET} | grep -v ^\ )
 
 	# figure out which specs-specific config is active. yes, this works
 	# even if the current config is invalid.
