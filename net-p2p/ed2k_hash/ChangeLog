@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ed2k_hash
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.4 2004/04/30 14:17:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.5 2004/06/02 13:51:46 squinky86 Exp $
+
+  02 Jun 2004; Jon Hood <squinky86@gentoo.org> -ed2k_hash-0.3.3.ebuild,
+  ed2k_hash-0.4.0.ebuild:
+  stable on x86; cleanups
 
   30 Apr 2004; David Holm <dholm@gentoo.org> ed2k_hash-0.4.0.ebuild:
   Added to ~ppc.
