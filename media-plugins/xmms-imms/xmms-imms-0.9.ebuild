@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-0.9.ebuild,v 1.4 2004/01/26 00:40:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-0.9.ebuild,v 1.5 2004/01/30 06:03:35 drobbins Exp $
 
 MY_P=${P/xmms-/}
 
@@ -12,10 +12,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND="dev-db/sqlite
+RDEPEND="dev-db/sqlite
 	media-libs/id3lib
 	media-sound/xmms
 	oggvorbis? ( media-libs/libvorbis )"
+
+DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 S=${WORKDIR}/${MY_P}
 
