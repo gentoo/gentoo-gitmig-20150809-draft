@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.5 2003/02/12 08:11:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.6 2003/05/12 01:43:13 avenj Exp $
+
+*getmail-3.1.1 (11 May 2003)
+
+  11 May 2003; Jon Portnoy <avenj@gentoo.org> getmail-3.1.3.ebuild :
+  Version bump, submitted by Alex F and webmaster@quantumz.net in 
+  bug 16204.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
