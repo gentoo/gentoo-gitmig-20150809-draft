@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.87 2004/08/23 23:37:29 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.88 2004/08/25 21:38:46 kugelfang Exp $
+
+  25 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> courier-imap-3.0.7.ebuild:
+  Marked stable on amd64.
 
   23 Aug 2004; Tuan Van <langthang@gentoo.org> courier-imap-3.0.7.ebuild:
   add dohtml, remove *.html from dodoc.
