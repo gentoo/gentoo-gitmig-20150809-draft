@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.14 2004/08/03 05:49:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.15 2004/09/05 20:57:19 robbat2 Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -73,6 +73,7 @@ php-ext-base_buildinilist () {
 }
 
 php-ext-base_src_install() {
+	addpredict /usr/share/snmp/mibs/.index
 	php-ext-base_buildinilist
 	if [ "$PHP_EXT_INI" = "yes" ] ; then
 		php-ext-base_addextension "${PHP_EXT_NAME}.so"

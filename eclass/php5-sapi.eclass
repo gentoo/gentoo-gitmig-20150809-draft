@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.26 2004/08/22 00:49:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.27 2004/09/05 20:57:19 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -167,6 +167,7 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_enable		"dbx"	"dbx"		1
 	fi
 
+	enable_extension_with 	"jpeg-dir" 		"jpeg" 		0 "/usr"
 	if useq gd-external ; then
 		enable_extension_with 	"gd" 			"gd-external" 1 "/usr"
 		enable_extension_enable	"gd-jis-conf"	"nls" 		0
@@ -176,7 +177,6 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_with	"t1lib"			"truetype"	0 "/usr"
 		enable_extension_enable	"gd-jis-conf"	"nls"		0
 		enable_extension_enable	"gd-native-ttf"	"truetype"	0
-		enable_extension_with 	"jpeg-dir" 		"jpeg" 		0 "/usr"
 		enable_extension_with 	"png-dir" 		"png" 		0 "/usr"
 		enable_extension_with 	"tiff-dir" 		"tiff" 		0 "/usr"
 		enable_extension_with 	"xpm-dir" 		"xpm" 		0 "/usr/X11R6/lib"
@@ -184,7 +184,7 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_with 	"gd" 			"gd" 		0
 	fi
 
-	confutils_use_depend_any "jpeg" "gd" "gd-external"
+	confutils_use_depend_any "jpeg" "gd" "gd-external" "cpdflib"
 	confutils_use_depend_any "png"  "gd" "gd-external"
 	confutils_use_depend_any "tiff" "gd" "gd-external"
 	confutils_use_depend_any "xpm"  "gd" "gd-external"
@@ -340,8 +340,7 @@ php5-sapi_src_compile () {
 	enable_extension_enable		"bcmath"		"bcmath"		1
 	enable_extension_with		"bz2"			"bzlib"			1
 	enable_extension_enable		"calendar"		"calendar"		1
-	enable_extension_with		"jpeg-dir" 		"cpdflib" 		0 "/usr"
-	enable_extension_with		"cpdflib"		"cpdflib"		1
+	enable_extension_with		"cpdflib"		"cpdflib"		1 # depends on jpeg
 	enable_extension_disable	"ctype"			"ctype"			0
 	enable_extension_with		"curl"			"curl"			1
 	enable_extension_with		"curlwrappers"	"curlwrappers"	1
@@ -365,7 +364,6 @@ php5-sapi_src_compile () {
 	enable_extension_disable	"libxml"		"xml2"			0
 	enable_extension_enable		"mbstring"		"nls"			1
 	enable_extension_with		"mcrypt"		"crypt"			1
-	enable_extension_with		"openssl-dir"	"mcve"			0 "/usr"
 	enable_extension_with		"mcve"			"mcve"			1
 	enable_extension_enable		"memory-limit"	"memlimit"		0
 	enable_extension_with		"mhash"			"mhash"			1
@@ -378,6 +376,7 @@ php5-sapi_src_compile () {
 	enable_extension_with		"oci8"			"oci8"			1
 	enable_extension_with		"oracle"		"oracle7"		1
 	enable_extension_with		"openssl"		"ssl"			1
+	enable_extension_with		"openssl-dir"	"ssl"			0 "/usr"
 	enable_extension_with		"ovrimos"		"ovrimos"		1
 	enable_extension_enable		"pcntl" 		"pcntl" 		1
 	enable_extension_without	"pcre-regx"		"pcre"			1
@@ -497,3 +496,4 @@ php5-sapi_pkg_postinst() {
 	mkdir -p ${PEAR_CACHE}
 	chmod 1777 ${PEAR_CACHE}
 }
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.6 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.7 2004/09/05 20:57:19 robbat2 Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -60,6 +60,7 @@ php-ext_buildinilist () {
 }
 
 php-ext_src_compile() {
+	addpredict /usr/share/snmp/mibs/.index
 	#phpize creates configure out of config.m4
 	phpize
 	econf $myconf

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.8 2004/07/06 22:24:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.9 2004/09/05 20:57:19 robbat2 Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -36,6 +36,7 @@ RDEPEND="${RDEPEND}
 		virtual/php"
 
 php-ext-source_src_compile() {
+	addpredict /usr/share/snmp/mibs/.index
 	#phpize creates configure out of config.m4
 	phpize
 	econf $myconf
@@ -43,6 +44,7 @@ php-ext-source_src_compile() {
 }
 
 php-ext-source_src_install() {
+	addpredict /usr/share/snmp/mibs/.index
 	chmod +x build/shtool
 	insinto $EXT_DIR
 	doins modules/$PHP_EXT_NAME.so
