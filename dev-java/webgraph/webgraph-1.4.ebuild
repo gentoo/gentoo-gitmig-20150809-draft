@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/webgraph-1.4.ebuild,v 1.1 2004/12/04 13:53:41 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/webgraph-1.4.ebuild,v 1.2 2005/01/20 19:42:10 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -13,7 +13,8 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/jal-20031117"
+	>=dev-java/jal-20031117
+	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/java-getopt-1.0*
 	=dev-java/fastutil-4.3*
