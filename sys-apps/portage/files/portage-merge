@@ -24,21 +24,25 @@ def prepare_db():
     if not os.path.isdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage):
 	os.mkdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
 
+def isfifo(x):
+	mymode=os.stat(x)[ST_MODE]
+	return S_ISFIFO(mymode)
+
 def movefile(src,dest):
     mystat=os.stat(src)
     mymode=mystat[ST_MODE]
     myperms=S_IMODE(mymode)
     if S_ISCHR(mymode):
-	mydev=commands.getstatusoutput("/bin/ls -l "+src)[1][34:42]
+	mydev=getstatusoutput("/bin/ls -l "+src)[1][34:42]
 	mymajor=mydev[:3]
 	myminor=mydev[4:]
-	myout=commands.getstatusoutput("/bin/mknod "+dest+" c "+mymajor+" "+myminor)
+	myout=getstatusoutput("/bin/mknod "+dest+" c "+mymajor+" "+myminor)
 	#character device
     elif S_ISBLK(mymode):
-	mydev=commands.getstatusoutput("/bin/ls -l "+src)[1][34:42]
+	mydev=getstatusoutput("/bin/ls -l "+src)[1][34:42]
 	mymajor=mydev[:3]
 	myminor=mydev[4:]
-	myout=commands.getstatusoutput("/bin/mknod "+dest+" b "+mymajor+" "+myminor)
+	myout=getstatusoutput("/bin/mknod "+dest+" b "+mymajor+" "+myminor)
 	#block device
     elif S_ISLNK(mymode):
 	pointsto=os.readlink(src)
@@ -108,16 +112,6 @@ def mergefiles():
 		outfile.write("sym "+floc[1]+" -> "+myto+" "+getmtime(floc[0])+"\n")
             except:
 		print "!!!",floc[0],"->",myto
-	elif os.path.isfile(x):
-	    mymd5=md5digest(mycurpath+"/"+x)
-            if movefile(x,pathstrip(mycurpath)[0]+"/"+x):
-		zing="<<<"
-	    else:
-		zing="!!!"
-
-	    print zing+" "+floc[0]
-	    print "md5",mymd5
-	    outfile.write("obj "+floc[1]+" "+mymd5+" "+getmtime(floc[0])+"\n")
 	elif os.path.isdir(x):
 	    mystat=os.stat(x)
 	    if not os.path.exists(floc[0]):
@@ -133,7 +127,35 @@ def mergefiles():
 	    os.chdir(x)
 	    mergefiles()
 	    os.chdir(mywd)
+	elif os.path.isfile(x):
+	    mymd5=md5digest(mycurpath+"/"+x)
+            if movefile(x,pathstrip(mycurpath)[0]+"/"+x):
+		zing="<<<"
+	    else:
+		zing="!!!"
 
+	    print zing+" "+floc[0]
+	    print "md5",mymd5
+	    outfile.write("obj "+floc[1]+" "+mymd5+" "+getmtime(floc[0])+"\n")
+	elif isfifo(x):
+	    zing="!!!"
+	    if not os.path.exists(pathstrip(mycurpath)[0]+"/"+x):	
+            	if movefile(x,pathstrip(mycurpath)[0]+"/"+x):
+			zing="<<<"
+	    elif isfifo(pathstrip(mycurpath)[0]+"/"+x):
+		os.unlink(pathstrip(mycurpath)[0]+"/"+x)
+            	if movefile(x,pathstrip(mycurpath)[0]+"/"+x):
+			zing="<<<"
+	    print zing+" "+floc[0]
+	    outfile.write("fif "+floc[1]+"\n")
+	else:
+            if movefile(x,pathstrip(mycurpath)[0]+"/"+x):
+		zing="<<<"
+	    else:
+		zing="!!!"
+	    print zing+" "+floc[0]
+	    outfile.write("dev "+floc[1]+"\n")
+	
 
 prepare_db()
 outfile=open(myroot+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS","w")

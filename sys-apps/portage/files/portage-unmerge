@@ -3,10 +3,19 @@
 
 import sys
 import os
+from stat import *
 norm=os.path.normpath
 import string
 from commands import *
 category=os.environ["CATEGORY"]
+
+def isfifo(x):
+	mymode=os.stat(x)[ST_MODE]
+	return S_ISFIFO(mymode)
+
+def isdev(x):
+	mymode=os.stat(x)[ST_MODE]
+	return ( S_ISCHR(mymode) or S_ISBLK(mymode))
 
 def pkgscript(x):
 	myresult=getstatusoutput("/usr/bin/ebuild "+myebuildfile+" "+x)
@@ -60,6 +69,12 @@ for pkgname in sys.argv[1:]:
 		elif mydat[0]=="sym":
 			#format: type, mtime, dest
 			pkgfiles[mydat[1]]=[mydat[0], mydat[4], mydat[3]]
+		elif mydat[0]=="dev":
+			#format: type
+			pkgfiles[mydat[1]]=[mydat[0] ]
+		elif mydat[0]=="fif":
+			#format: type
+			pkgfiles[mydat[1]]=[mydat[0]]
 		else:
 			print "Error -- CONTENTS file for", pkgname, "is corrupt."
 			print ">>> "+line
@@ -84,7 +99,7 @@ for pkgname in sys.argv[1:]:
 			if not os.path.exists(obj):
 				print "--- !found", pkgfiles[obj][0], obj
 				continue
-			if (pkgfiles[obj][0]!="dir") and (getmtime(obj) != pkgfiles[obj][1]):
+			if (pkgfiles[obj][0] not in ("dir","fif","dev")) and (getmtime(obj) != pkgfiles[obj][1]):
 				print "--- !mtime", pkgfiles[obj][0], obj
 				continue
 		if pkgfiles[obj][0]=="dir":
@@ -117,6 +132,19 @@ for pkgname in sys.argv[1:]:
 				continue
 			os.unlink(obj)
 			print "<<<       ","obj",obj
+		elif pkgfiles[obj][0]=="fif":
+			if not isfifo(obj):
+				print "--- !fif  ","fif", obj
+				continue
+			os.unlink(obj)
+			print "<<<       ","fif",obj
+		elif pkgfiles[obj][0]=="dev":
+			if not isdev(obj):
+				print "--- !dev  ","dev", obj
+				continue
+			os.unlink(obj)
+			print "<<<       ","dev",obj
+
 	#postrm script
 	pkgscript("postrm")	
 	#recursive cleanup
