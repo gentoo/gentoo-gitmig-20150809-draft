@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.2 2002/03/10 11:24:23 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.3 2002/03/30 13:48:47 seemant Exp $
+
+*xchat-1.8.8-r1 ( 30 Mar 2002)
+
+  30 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xchat-1.8.8-r1.ebuild :
+
+  Separated out gdk-pixbuf from gnome USE.  Also, the CFLAGS for ORBit is 
+  dependent on the gnome USE toggle.
 
 *xchat-1.8.8 (10 Mar 2002)
 
