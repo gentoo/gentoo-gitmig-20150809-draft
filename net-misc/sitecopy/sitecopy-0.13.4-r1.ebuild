@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.13.4-r1.ebuild,v 1.1 2003/10/19 11:15:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.13.4-r1.ebuild,v 1.2 2003/10/19 15:56:14 lanius Exp $
 
 IUSE="ssl xml xml2 gnome"
 
@@ -37,6 +37,9 @@ src_compile() {
 	use ssl \
 		&& myconf="${myconf} --with-ssl" \
 		|| myconf="${myconf} --without-ssl"
+	use nls \
+		&& myconf="${myconf} --enable-nls" \
+		|| myconf="${myconf} --disable-nls"
 	use gnome \
 		&& myconf="${myconf} --with-gnomefe"
 
@@ -47,6 +50,9 @@ src_compile() {
 	sed -i -e "s:VERSION:PACKAGE_VERSION:" gnome/main.c
 	echo "int fe_accept_cert(const ne_ssl_certificate *cert, int failures) { return 0; }" >> gnome/gcommon.c
 	sed -i -e "s:-lglib:-lglib -lgthread:" Makefile
+	sed -i -e "s:TARGET = xsitecopy:TARGET = xsitecopy sitecopy:" Makefile
+	sed -i -e 's:$(INSTALL_PROGRAM) $(TARGET) $(DESTDIR)$(bindir)/$(TARGET):$(INSTALL_PROGRAM) $(TARGET) $(DESTDIR)$(bindir)/:' Makefile
+	sed -i -e 's:install\: $(TARGET) install-xsitecopy:install\: $(TARGET) install-xsitecopy install-sitecopy:' Makefile
 
 	emake || die "emake failed"
 }
