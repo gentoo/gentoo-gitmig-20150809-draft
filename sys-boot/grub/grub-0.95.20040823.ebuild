@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.2 2004/08/24 07:13:29 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.3 2004/08/26 20:52:02 robmoss Exp $
 
 inherit mount-boot eutils flag-o-matic gcc gnuconfig
 
@@ -23,6 +23,8 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
+
+	gnuconfig_update
 
 	epatch ${WORKDIR}/${P}-splash.patch
 	#epatch ${FILESDIR}/${P}-gcc3.4.patch
@@ -49,8 +51,6 @@ src_compile() {
 
 	has_pie && CC="${CC} `test_flag -fno-pic` `test_flag -nopie`"
 	has_ssp && CC="${CC} `test_flag -fno-stack-protector`"
-
-	gnuconfig_update
 
 	autoconf || die
 	aclocal || die

@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.22 2004/08/24 07:13:29 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.23 2004/08/26 20:52:02 robmoss Exp $
+
+  26 Aug 2004; <rmoss@gentoo.org> grub-0.95.20040823.ebuild:
+  gnuconfig belongs in src_unpack, not src_compile. Thanks tigger :-)
 
   24 Aug 2004; <rmoss@gentoo.org> grub-0.95.20040823.ebuild:
   Marking ~x86 after some overnight testing.
