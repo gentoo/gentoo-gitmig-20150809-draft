@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.3.ebuild,v 1.1 2003/11/18 04:30:48 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.3.ebuild,v 1.2 2004/02/12 03:55:05 weeve Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program to interactively take a 'snapshot' of a region of
@@ -10,7 +10,7 @@ HOMEPAGE="ftp://ftp.ac-grenoble.fr/ge/Xutils/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~sparc"
 
 DEPEND="virtual/x11"
 

@@ -1,4 +1,4 @@
-MD5 8935756ffcda63188f1df02d678f8cb5 files/digest-xsnap-1.3 57
-MD5 13348fcf249e0beda8fbc136066b9ea8 xsnap-1.3.ebuild 658
-MD5 77ef1f13f17899a3658e11af643fe666 ChangeLog 908
+MD5 0eb2bfd8fa8243066b84b8bffa897bf7 ChangeLog 1028
 MD5 6b2f8ecd3ad0e55432fa394deb816e86 metadata.xml 174
+MD5 3a5cbf5adfc4df414eb40bf76110078b xsnap-1.3.ebuild 663
+MD5 8935756ffcda63188f1df02d678f8cb5 files/digest-xsnap-1.3 57
