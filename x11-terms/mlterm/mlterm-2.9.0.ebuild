@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.0.ebuild,v 1.2 2004/11/30 09:33:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.0.ebuild,v 1.3 2005/01/12 18:39:52 gmsoft Exp $
 
 IUSE="truetype gtk imlib bidi nls uim"
 #IUSE="${IUSE} m17n-lib iiimf"
@@ -10,7 +10,7 @@ HOMEPAGE="http://mlterm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mlterm/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ~amd64 ppc"
+KEYWORDS="x86 ~amd64 ppc hppa"
 LICENSE="BSD"
 
 DEPEND="gtk? ( >=x11-libs/gtk+-2 )
