@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.18 2005/01/25 23:17:18 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.19 2005/03/15 18:25:23 vapier Exp $
 
-inherit flag-o-matic eutils kde
+inherit flag-o-matic eutils
 
 MY_P=${PN}_${PV}
 S=${WORKDIR}/${MY_P}
