@@ -1,18 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.38.14-r1.ebuild,v 1.12 2002/08/14 12:05:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.38.14-r1.ebuild,v 1.13 2002/09/05 15:18:39 raker Exp $
+
+S=${WORKDIR}/${P}
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
-LICENSE="GPL-2"
+SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/system/mail/mta/${P}.tar.gz"
+
 DEPEND="virtual/glibc"
 RDEPEND="!virtual/mta net-mail/mailbase"
 PROVIDE="virtual/mta"
 
-SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/system/mail/mta/${P}.tar.gz"
-S=${WORKDIR}/${P}
-
 SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64"
+LICENSE="GPL-2"
 
 src_compile() {						   
 	make clean || die
@@ -25,7 +26,9 @@ src_install() {
 	chmod 755 ${D}/usr/sbin/ssmtp
 	dosym /usr/sbin/ssmtp /usr/bin/mailq
 	dosym /usr/sbin/ssmtp /usr/bin/newaliases
-	dosym /usr/sbin/ssmtp /usr/bin/mail
+	# Removed symlink due to conflict with mailx
+	# See bug #7448
+	#dosym /usr/sbin/ssmtp /usr/bin/mail
 	dosym /usr/sbin/ssmtp /usr/sbin/sendmail
 	dosym /usr/sbin/ssmtp /usr/lib/sendmail
 	doman ssmtp.8
