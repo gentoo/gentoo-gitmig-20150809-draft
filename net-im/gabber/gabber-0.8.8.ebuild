@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.16 2004/06/24 22:51:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.17 2005/03/30 07:23:45 luckyduck Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -32,10 +32,7 @@ src_unpack() {
 	cd ${S}/omf-install
 	sed -i -e "s/-scrollkeeper-update.*//" Makefile.in
 
-	if [ "`gcc-major-version`" -eq 3 -a "`gcc-minor-version`" -ge 3 ]
-	then
-		cd ${S}; epatch ${FILESDIR}/${P}-gcc33.patch
-	fi
+	cd ${S}; epatch ${FILESDIR}/${P}-gcc.patch
 }
 
 src_compile() {

@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6b476e552c536cff900ff20638e35ab9 ChangeLog 4317
-MD5 d1d2978c04ce02f23b59ff15222c78cd gabber-0.8.7-r3.ebuild 1492
-MD5 b43b5e1a32c27165e22c09432ba34261 gabber-0.8.7.12.ebuild 1433
-MD5 30ff0b3fbb7ca23b02edd62cd7613129 gabber-0.8.8.ebuild 1562
-MD5 bae038d85f83d6b7ac099c1d1ca84e68 gabber-1.9.3.ebuild 1232
+MD5 71db522040274cce9041860848d7e568 gabber-0.8.7-r3.ebuild 1493
+MD5 99501cfd09e29bd760554fa03a6a5c08 gabber-1.9.4.ebuild 1233
+MD5 85dcc650f6d9f754e2f09b9bb124c841 gabber-0.8.8.ebuild 1483
+MD5 f76d1b14954bb772f6ccf4d471cd8738 gabber-0.8.7.12.ebuild 1434
+MD5 7c52a192f2bf224286426302c452cc1d gabber-1.9.3.ebuild 1233
+MD5 6d99e52ac1bfe7e48c2769b6f9354fb0 ChangeLog 4574
 MD5 e70c297e90595ae6039448e27b7cada3 metadata.xml 434
-MD5 e3cfd61d77da9b2c60a7fc5d68b35908 gabber-1.9.4.ebuild 1232
-MD5 3c26fdd6bd493036699f43145aad0613 files/TCPtransmitter.cc-gcc3-gentoo.patch 584
-MD5 13fd2ef7cc09c0d0e358f639c31f687e files/digest-gabber-0.8.7-r3 65
+MD5 385ac29899eadd0b8da4bebf2455efae files/gabber-0.8.8-gcc.patch 3732
 MD5 2305451d3c724090f81f2cf91551a581 files/digest-gabber-0.8.7.12 68
+MD5 13fd2ef7cc09c0d0e358f639c31f687e files/digest-gabber-0.8.7-r3 65
+MD5 3c26fdd6bd493036699f43145aad0613 files/TCPtransmitter.cc-gcc3-gentoo.patch 584
 MD5 0a38010d37d90d61bd8189dc33986ffa files/digest-gabber-0.8.8 65
 MD5 7b501a37a16efd3cbc0903c924105f30 files/digest-gabber-1.9.3 64
-MD5 3bd1e42ac50363c50d3184e3b8607df1 files/gabber-0.8.8-gcc33.patch 964
 MD5 b78005cf0d1a439bbe1d94ef54eb4712 files/digest-gabber-1.9.4 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBZwa4KSoOBZY9iUIRAjadAJwOadyUMu4Gyh8w8+YtjuhHZ3TSnACgi9pm
-lWDXlHqRbQRXObXzHRBRjb8=
-=aWFp
+iD8DBQFCSlQT06ebR+OMO78RAnnZAJ0Zeytb5Baigo7lrz67prKt6wRXjgCglmMO
+qAoQ3uBfcUte2+P03c8XotY=
+=FT9L
 -----END PGP SIGNATURE-----

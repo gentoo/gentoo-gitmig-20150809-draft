@@ -1,0 +1,69 @@
+diff -uprN src.orig/GabberWin.cc src/GabberWin.cc
+--- src.orig/GabberWin.cc	2005-03-30 08:56:09.798050368 +0200
++++ src/GabberWin.cc	2005-03-30 09:16:24.030458984 +0200
+@@ -291,19 +291,19 @@ void GabberWin::init_menus()
+      _menuToolbar = static_cast<Gtk::Menu*>(_baseTB->get_this_widget());
+      _menuToolbar->accelerate(*_thisWindow);
+      // * MENUBAR *
+-     _mtb_Menubar = _baseTB->template getWidget<Gtk::CheckMenuItem>("Toolbar_Menubar_item");
++     _mtb_Menubar = _baseTB->getWidget<Gtk::CheckMenuItem>("Toolbar_Menubar_item");
+      _mtb_Menubar->set_active(G_App->getCfg().toolbars.menubar);
+      _mtb_Menubar->activate.connect(slot(this, &GabberWin::on_Toolbar_activate));
+      // * TOOLBAR *
+-     _mtb_Toolbar = _baseTB->template getWidget<Gtk::CheckMenuItem>("Toolbar_Toolbar_item");
++     _mtb_Toolbar = _baseTB->getWidget<Gtk::CheckMenuItem>("Toolbar_Toolbar_item");
+      _mtb_Toolbar->set_active(G_App->getCfg().toolbars.toolbar);
+      _mtb_Toolbar->activate.connect(slot(this, &GabberWin::on_Toolbar_activate));
+      // * PRESENCE BAR *
+-     _mtb_Presence = _baseTB->template getWidget<Gtk::CheckMenuItem>("Toolbar_Presence_item");
++     _mtb_Presence = _baseTB->getWidget<Gtk::CheckMenuItem>("Toolbar_Presence_item");
+      _mtb_Presence->set_active(G_App->getCfg().toolbars.presence);
+      _mtb_Presence->activate.connect(slot(this, &GabberWin::on_Toolbar_activate));
+      // * MESSAGE QUEUE *
+-     _mtb_Status = _baseTB->template getWidget<Gtk::CheckMenuItem>("Toolbar_Status_item");
++     _mtb_Status = _baseTB->getWidget<Gtk::CheckMenuItem>("Toolbar_Status_item");
+      _mtb_Status->set_active(G_App->getCfg().toolbars.status);
+      _mtb_Status->activate.connect(slot(this, &GabberWin::on_Toolbar_activate));
+ 
+diff -uprN src.orig/GladeHelper.hh src/GladeHelper.hh
+--- src.orig/GladeHelper.hh	2005-03-30 08:56:09.850042464 +0200
++++ src/GladeHelper.hh	2005-03-30 09:09:02.134637360 +0200
+@@ -25,12 +25,14 @@
+ #include <gtk/gtkobject.h>
+ #include <gtk--/base.h>
+ 
++#include <iostream>
++
+ template<class T> T* getWidgetPtr(GladeXML* g, const char* name)
+ {
+      T* result = static_cast<T*>(Gtk::wrap_auto((GtkObject*)glade_xml_get_widget(g, name)));
+      if (result == NULL)
+      {
+-	  cerr << "** ERROR **: unable to load widget: " << name << endl;
++	  std::cerr << "** ERROR **: unable to load widget: " << name << std::endl;
+ 	  g_assert(result != NULL);
+      }
+      return result;
+@@ -41,7 +43,7 @@ template<class T> T* getWidgetPtr_GTK(Gl
+      T* result = (T*)glade_xml_get_widget(g, name);
+      if (result == NULL)
+      {
+-	  cerr << "** ERROR **: unable to load widget: " << name << endl;
++	  std::cerr << "** ERROR **: unable to load widget: " << name << std::endl;
+ 	  g_assert(result != NULL);
+      }
+      return result;     
+diff -uprN src.orig/GroupsInterface.cc src/GroupsInterface.cc
+--- src.orig/GroupsInterface.cc	2005-03-30 08:56:09.792051280 +0200
++++ src/GroupsInterface.cc	2005-03-30 09:16:49.369606848 +0200
+@@ -44,8 +44,8 @@ GroupsEditor::GroupsEditor(BaseGabberWin
+ {
+       // Grab pointers
+      _entName        = _base->getEntry(string(base_string + "_NewGroup_ent").c_str());
+-     _clCurrent      = _base->template getWidget<Gtk::CList>(string(base_string + "_Current_clist").c_str());
+-     _clAvailable    = _base->template getWidget<Gtk::CList>(string(base_string + "_Available_clist").c_str());
++     _clCurrent      = _base->getWidget<Gtk::CList>(string(base_string + "_Current_clist").c_str());
++     _clAvailable    = _base->getWidget<Gtk::CList>(string(base_string + "_Available_clist").c_str());
+ 
+      // Connect buttons
+      _base->getButton(string(base_string + "_Add_btn").c_str())->clicked.connect(slot(this, &GroupsEditor::on_add_clicked));
