@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0.ebuild,v 1.2 2005/03/13 23:23:23 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0.ebuild,v 1.3 2005/03/14 21:11:40 greg_g Exp $
 
 inherit kde eutils
 set-kdedir 3.4
@@ -11,7 +11,7 @@ SRC_URI="mirror://kde/stable/3.4/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.4"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~sparc"
 IUSE="alsa arts cups doc jpeg2k kerberos openexr spell ssl tiff zeroconf"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
@@ -46,6 +46,13 @@ DEPEND="${RDEPEND}
 # No longer needed; the bindings that required this (kdejava?) may need a patch
 # from branch to work without this patch
 #PATCHES="${FILESDIR}/${PN}-3.4.0_beta2-export-kio-symbols.diff"
+
+src_unpack() {
+	kde_src_unpack
+
+	# Fix freezing in web forms (kde bug 100963). Applied in CVS.
+	epatch "${FILESDIR}/${P}-form-freeze.patch"
+}
 
 src_compile() {
 	myconf="--with-distribution=Gentoo --enable-libfam --enable-dnotify"
