@@ -1,8 +1,14 @@
 # ChangeLog for dev-python/optik
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.2 2002/04/28 17:18:22 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.3 2002/07/30 00:03:16 george Exp $
 
 *optik-1.3 (28 Apr 2002)
+
+  29 Jul 2002; George Shapovalov <george@gentoo.org> optik-1.2.ebuild, optik-1.3.ebuild :
+
+  Added KEYWORDS,SLOT,LICENSE
+  headers clean-up
+  field removed from header: Ollie Rutherfurd <oliver@rutherfurd.net>
 
   28 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog option-1.3.ebuild
   

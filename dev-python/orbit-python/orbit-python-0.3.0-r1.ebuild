@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/orbit-python-0.3.0-r1.ebuild,v 1.5 2002/07/11 06:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/orbit-python-0.3.0-r1.ebuild,v 1.6 2002/07/30 00:03:16 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ORBit bindings for Python"
@@ -10,6 +10,11 @@ HOMEPAGE="http://orbit-python.sault.org/"
 DEPEND="=dev-libs/glib-1.2*
 	>=gnome-base/ORBit-0.5.10-r1
 	virtual/python"
+RDEPEND="${DEPEND}"
+
+SLOT="0"
+KEYWORDS="x86"
+LICENSE="GPL-2"
 
 src_compile() {
 	CFLAGS="$CFLAGS `gnome-config --cflags libIDL`"
