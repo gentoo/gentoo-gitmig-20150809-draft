@@ -1,9 +1,19 @@
-MD5 001e5a89255d6a07c1799a85a3e8b51f maxima-5.9.0-r3.ebuild 2502
-MD5 7d41c1c45bc7a97912d8cf7d39f5a7b8 maxima-5.9.0-r2.ebuild 2382
-MD5 054be4828cc1164cb094f65221743053 ChangeLog 2015
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e854eafb58d3fc65300bd984dfa13275 ChangeLog 2180
+MD5 780474ef22cbaff6cd18228747a7fd83 maxima-5.9.0-r2.ebuild 2357
+MD5 870604232354646e69c57d16da1a6af8 maxima-5.9.0-r3.ebuild 2477
+MD5 b91d1554583fba944bc04476c4af394e maxima-5.9.0.ebuild 778
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 f631a3c65646fa76dca994fe54383c83 maxima-5.9.0.ebuild 786
+MD5 aaa91ea4812a84a1054b82e69d3fe05b files/digest-maxima-5.9.0 65
 MD5 aaa91ea4812a84a1054b82e69d3fe05b files/digest-maxima-5.9.0-r2 65
 MD5 aaa91ea4812a84a1054b82e69d3fe05b files/digest-maxima-5.9.0-r3 65
-MD5 aaa91ea4812a84a1054b82e69d3fe05b files/digest-maxima-5.9.0 65
 MD5 55d928e715074355a442baf0934487de files/maxima-emacs.patch 826
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBK/Y5I1lqEGTUzyQRAls4AJ9JNzR8xQmMFP2ikZqkuqZiH3/jdwCgxH/U
+98HP5ulHo57n70u8CNJkHjM=
+=CaHj
+-----END PGP SIGNATURE-----

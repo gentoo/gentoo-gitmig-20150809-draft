@@ -1,8 +1,18 @@
-MD5 38d456feac3aa6130d12aa6ce3665aa1 nco-2.7.1.ebuild 719
-MD5 e2eca34384ccf6fc5d0d1a77e6f4596c nco-2.2.0.ebuild 577
-MD5 998f9fc1664decec28bbfa27d4eb8baf nco-2.9.1.ebuild 689
-MD5 b7d5720182dc092ecfb0a22d39541272 ChangeLog 915
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 66f3eaf246d85c65c4a2744be14145c9 ChangeLog 1047
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 6a34a79b48ac810ec07e96019712eed3 nco-2.2.0.ebuild 554
+MD5 116081de1229d3f2ed993c90c8cbac68 nco-2.7.1.ebuild 696
+MD5 998f9fc1664decec28bbfa27d4eb8baf nco-2.9.1.ebuild 689
 MD5 8b8fada579ac75153a5e3a3339d294db files/digest-nco-2.2.0 61
 MD5 16bb63404b630464bf4ca80d03b822a2 files/digest-nco-2.7.1 61
 MD5 1a80d642c58e5b7b3d56b69b5b1465e6 files/digest-nco-2.9.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBK/WGI1lqEGTUzyQRAvizAKCXqVw5y1UC9XQFVu8FojXk+vs+KQCfXXqb
+YUzCMMrcs/OZj3akIkbpRsU=
+=uL+1
+-----END PGP SIGNATURE-----
