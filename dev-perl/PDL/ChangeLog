@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.26 2004/09/06 19:21:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.27 2004/09/09 17:24:05 gmsoft Exp $
+
+  09 Sep 2004; Guy Martin <gmsoft@gentoo.org> PDL-2.4.0-r2.ebuild:
+  Reapplying unconditional -fPIC stuff (#55238). Stable on hppa.
 
   06 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> PDL-2.4.0-r2.ebuild:
   Stable on sparc

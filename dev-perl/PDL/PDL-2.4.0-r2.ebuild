@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r2.ebuild,v 1.4 2004/09/06 19:21:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r2.ebuild,v 1.5 2004/09/09 17:24:05 gmsoft Exp $
 
 IUSE="opengl"
 
@@ -11,7 +11,7 @@ SRC_URI="http://cpan.valueclick.com/modules/by-module/PDL/${P}.tar.gz"
 HOMEPAGE="http://cpan.valueclick.com/modules/by-module/PDL/${P}.readme"
 SLOT="0"
 LICENSE="Artistic as-is"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~mips amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa ~mips amd64"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	dev-perl/Filter
@@ -46,10 +46,10 @@ src_unpack() {
 		sed -e "s:WITH_3D => undef:WITH_3D => 0:" \
 			${FILESDIR}/perldl.conf > ${S}/perldl.conf
 	fi
-	if use hppa || use amd64; then
-		cd ${S}/Lib/Slatec
-		sed -i -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" Makefile.PL
-	fi
+
+	# Unconditional -fPIC for the lib (#55238)
+	sed -i -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" ${S}/Lib/Slatec/Makefile.PL
+
 	# The below patch was supplied by Karl Steddom <k-steddom@tamu.edu>
 	# in bug 33936 to correct PDL's inability to detect GSL libraries
 	# correctly. 
