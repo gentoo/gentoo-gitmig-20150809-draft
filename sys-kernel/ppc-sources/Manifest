@@ -1,4 +1,5 @@
 MD5 869910ff0e263db50eea794283e77719 ChangeLog 3994
+MD5 fe945af4911b04acd2c0f473c7c64f35 metadata.xml 267
 MD5 e74741ec6446fe954bf50acfd7871c96 ppc-sources-2.4.19-r3.ebuild 3291
 MD5 8b019c5990ca00c3c515f3e7907fa7f4 ppc-sources-2.4.19-r4.ebuild 3447
 MD5 2f9514fd92974ccf6c18250f45a2aec8 ppc-sources-2.4.19-r5.ebuild 3290
@@ -10,7 +11,7 @@ MD5 3d81bfeac0d20d5b04b7f56a6df55e8a ppc-sources-2.4.20-r3.ebuild 1590
 MD5 0373230a993d38e0b1905a1849797b89 ppc-sources-2.4.20-r4.ebuild 1599
 MD5 7b6f8d717fad005d7e522309aa90b487 ppc-sources-2.4.21-r1.ebuild 2035
 MD5 b047c2e83ea3c71f655d0a2955bf9fb8 ppc-sources-2.4.21-r2.ebuild 2034
-MD5 fe945af4911b04acd2c0f473c7c64f35 metadata.xml 267
+MD5 8051f8a6a3bcee1d4b83682d5d75c962 ppc-sources-2.4.22-r1.ebuild 1288
 MD5 88a216bd55a77f58510b9a1c5c3767ce files/digest-ppc-sources-2.4.19 149
 MD5 6b15a062d96482772f860647c0088358 files/digest-ppc-sources-2.4.19-r3 149
 MD5 9cab1e75f8fcaef7441998de95c9b452 files/digest-ppc-sources-2.4.19-r4 149
@@ -22,3 +23,4 @@ MD5 572d02461dd09102519308d7b8fb8985 files/digest-ppc-sources-2.4.20-r3 142
 MD5 33266b958177d39523bed77568596744 files/digest-ppc-sources-2.4.20-r4 142
 MD5 7e495d102909604f1af87a10949ee8ae files/digest-ppc-sources-2.4.21-r1 142
 MD5 a54eec24338bcac38c8801d23c526db0 files/digest-ppc-sources-2.4.21-r2 141
+MD5 d401640feba334b89b7426dc145901ee files/digest-ppc-sources-2.4.22-r1 133
