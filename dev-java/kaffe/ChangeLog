@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.25 2004/11/12 12:19:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.26 2004/12/22 13:52:26 karltk Exp $
+
+*kaffe-1.1.4_p20041220 (22 Dec 2004)
+
+  22 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +files/kaffe-1.1.4_p20041220, +kaffe-1.1.4_p20041220.ebuild:
+  Snapshot of upstream development. They don't release early, nor often, but
+  work frantically. A lot of Java 1.4 stuff works a lot better with this 
+  snapshot than the 1.1.4 release, but it contains unresolved deadlocks in
+  the gc.
 
   12 Nov 2004; Thomas Matthijs <axxo@gentoo.org> kaffe-1.1.4.ebuild:
   follow ewarn/einfo policy #70872
