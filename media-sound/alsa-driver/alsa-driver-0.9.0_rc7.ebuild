@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc7.ebuild,v 1.1 2003/02/04 20:24:44 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc7.ebuild,v 1.2 2003/02/04 21:02:15 agenkin Exp $
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -63,7 +63,7 @@ src_compile() {
 }
 
 
-src_install () {
+src_install() {
 	dodir /usr/include/sound
 	dodir /etc/init.d
 	make DESTDIR=${D} install || die
@@ -76,7 +76,7 @@ src_install () {
 	doexe ${FILESDIR}/alsasound
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	if [ "${ROOT}" = / ]
 	then
 		[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
@@ -89,4 +89,8 @@ pkg_postinst () {
 	einfo "If you are going to be using the 'alsasound' init script, make sure"
 	einfo "that you add it to the 'boot' runlevel (not 'default')."
 	einfo
+	einfo "Also, remember that all mixer channels will be MUTED by default."
+	einfo "Use 'alsamixer' program to unmute them."
+	einfo
 }
+
