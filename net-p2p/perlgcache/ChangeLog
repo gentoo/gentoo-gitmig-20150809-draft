@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/perlgcache
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/perlgcache/ChangeLog,v 1.1 2004/09/17 16:51:49 squinky86 Exp $
+
+*perlgcache-0.7.9 (17 Sep 2004)
+
+  17 Sep 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +files/postinstall-en.txt, +perlgcache-0.7.9.ebuild:
+  Initial import, #64188.
+
