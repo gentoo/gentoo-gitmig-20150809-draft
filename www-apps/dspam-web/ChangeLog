@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/dspam-web
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.6 2004/10/21 03:34:51 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.7 2004/11/04 17:37:58 st_lim Exp $
+
+  05 Nov 2004; Lim Swee Tat <st_lim@gentoo.org> :
+  Version bump
 
   21 Oct 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-web-3.2_rc3.ebuild:
   Need to make to get configure.pl
