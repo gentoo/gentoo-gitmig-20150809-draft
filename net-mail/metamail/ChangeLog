@@ -1,7 +1,10 @@
 # ChangeLog for net-mail/metamail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.15 2004/05/21 01:29:56 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.16 2004/05/21 14:10:15 lu_zero Exp $
+
+  21 May 2004; Luca Barbato <lu_zero@gentoo.org> metamail-2.7.45.3.ebuild:
+  Marked ppc
 
   20 May 2004; Michael McCabe <randy@gentoo.org> metamail-2.7.45.3.ebuild:
   Stable on s390
