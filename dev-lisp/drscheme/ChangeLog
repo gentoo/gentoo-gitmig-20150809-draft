@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/drscheme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/ChangeLog,v 1.5 2003/05/26 13:47:16 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/ChangeLog,v 1.6 2003/09/06 17:10:58 karltk Exp $
+
+*drscheme-205 (06 Sep 2003)
+
+  06 May 2003; Karl Trygve Kalleberg <karltk@gentoo.org> drscheme-205.ebuild:
+  version bump, fixed digests. Fixes #27178.
 
 *drscheme-204 (26 May 2003)
 
