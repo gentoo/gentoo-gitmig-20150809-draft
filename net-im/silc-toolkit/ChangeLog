@@ -1,6 +1,9 @@
 # ChangeLog for net-im/silc-toolkit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.7 2004/04/19 22:15:11 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.8 2004/04/19 22:17:19 zul Exp $
+
+  19 Apr 2004; Chuck Short <zul@gentoo.org> silc-toolkit-0.9.11.ebuild:
+  marked stable for x86.
 
   19 Apr 2004; Chuck Short <zul@gentoo.org> silc-toolkit-0.9.11-r1.ebuild:
   Marked stable for x86.

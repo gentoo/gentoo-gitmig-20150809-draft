@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11.ebuild,v 1.4 2004/03/19 08:13:08 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11.ebuild,v 1.5 2004/04/19 22:17:19 zul Exp $
 
 IUSE="client server debug ipv6"
 
 DESCRIPTION="Software development toolkit which provides full SILC protocol implementation for application developers."
 HOMEPAGE="http://silcnet.org"
 SRC_URI="http://silcnet.org/download/toolkit/sources/silc-toolkit-${PV}.tar.bz2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 LICENSE="GPL-2"
 
 SLOT="0"
