@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.0-r1.ebuild,v 1.1 2002/03/12 13:42:56 seemant Exp
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.3.3.ebuild,v 1.8 2003/06/12 22:03:44 msterret Exp $
 
 IUSE="ssl tcltk"
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-news/inn
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.4 2003/04/16 23:03:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.5 2003/06/12 22:03:44 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> inn-2.3.3.ebuild, inn-2.3.5.ebuild:
+  add Header
 
 *inn-2.3.5 (17 Apr 2003)
 
