@@ -4,8 +4,8 @@ MD5 b597ebd00e4193693bb8e668f2bbace5 ghostscript-7.05.6.ebuild 2709
 MD5 eb3a70a293200230d06cba8edd75981f ghostscript-7.07.1-r4.ebuild 3616
 MD5 db21908249808fd2b73656f18801180a ghostscript-7.07.1-r6.ebuild 3613
 MD5 5c8154bc4b0d22262f9b9cd6e8e8381f ghostscript-7.07.1-r1.ebuild 3159
-MD5 00f575c4849524d14905f8b1b6dd56a9 ChangeLog 11508
-MD5 aa7ccd3be66e1c2731f33b65a136264b ghostscript-7.05.6-r1.ebuild 2707
+MD5 0fdd41563b9c298b65afbc1b7a6ffc2c ChangeLog 11508
+MD5 4fcd0d9ffc383e67ba2ce172396a598e ghostscript-7.05.6-r1.ebuild 2707
 MD5 f9da560c48806e555dd58c239497ea30 ghostscript-7.07.1-r3.ebuild 3415
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 343b6a60e15e35d0c5f825b4f361fd29 files/gs7.05.6-cjk.diff.bz2 3287
