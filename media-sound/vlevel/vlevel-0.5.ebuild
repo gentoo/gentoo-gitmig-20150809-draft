@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/vlevel-0.5.ebuild,v 1.2 2004/10/06 19:41:23 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/vlevel-0.5.ebuild,v 1.3 2004/10/06 19:42:59 trapni Exp $
 
 DESCRIPTION="VLevel is a dynamic compressor which amplifies the quiet parts of music. It's currently a LADSPA plugin and a command-line filter."
 HOMEPAGE="http://vlevel.sourceforge.net/"
@@ -16,6 +16,7 @@ DEPEND="
 	media-libs/ladspa-sdk
 	app-arch/gzip
 "
+RDEPEND="media-libs/ladspa-sdk"
 
 src_compile() {
 	emake CXXFLAGS="$CXXFLAGS -fPIC -DPIC" || die "emake failed"
