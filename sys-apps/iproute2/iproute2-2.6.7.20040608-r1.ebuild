@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.7.20040608-r1.ebuild,v 1.3 2004/09/25 05:16:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.7.20040608-r1.ebuild,v 1.4 2004/09/25 06:20:35 vapier Exp $
 
 inherit eutils gcc
 
@@ -12,7 +12,7 @@ SRC_URI="http://developer.osdl.org/dev/iproute2/download/${PN}-${MY_PV}-ss${SNAP
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="atm minimal"
 
 RDEPEND="virtual/libc
