@@ -1,13 +1,18 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.2 2002/04/12 22:24:31 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.3 2002/04/14 07:17:37 woodchip Exp $
 
+*mrtg-2.9.17 (14 Apr 2002)
 
+  14 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Update to latest release + fix html docs + add the contrib section to the docs.
 
 *mrtg-2.9.7-r1 (11 Apr 2002)
-  11 Apr 2002; Spider <spider@gentoo.org> 
-  Update libpng dependency
 
+  11 Apr 2002; Spider <spider@gentoo.org> :
+
+  Update libpng dependancy.
 
 *mrtg-2.9.7 (1 Feb 2002)
 
