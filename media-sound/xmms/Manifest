@@ -2,7 +2,7 @@ MD5 67719e9afde51fc778b8882f48bebfc2 xmms-1.2.7-r23.ebuild 5233
 MD5 1f4fb5fbbf7591ead0b68071825b2de3 xmms-1.2.7-r25.ebuild 5652
 MD5 5013cb7f0010b3daa8efd1548cbe83b4 xmms-1.2.7-r20.ebuild 4923
 MD5 bdb2a69ceb759457ae32a3e2ec86146d ChangeLog 15314
-MD5 ec346b949d7eafb64f1da696ead7bbb3 xmms-1.2.8-r3.ebuild 4816
+MD5 3bdbfdcbf455263942cc2fb3ce80227a xmms-1.2.8-r3.ebuild 4816
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 e7e0c91780b115aaad1a1ed534bf7ae8 files/xmms-ipv6-20020408-mmx.patch 9210
 MD5 7ab233f0953be4760d3e5b784cc0bba4 files/xmms-fhs-skinsdir.patch 372
