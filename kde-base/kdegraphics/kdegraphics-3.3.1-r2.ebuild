@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.0-r1.ebuild,v 1.5 2004/11/03 17:35:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.1-r2.ebuild,v 1.1 2004/11/03 17:35:58 carlo Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE graphics-related apps"
 
-KEYWORDS="x86 amd64 ~ppc64 sparc ppc ~hppa"
+KEYWORDS="~x86 ~amd64 ~ppc64 ~sparc ~ppc ~hppa"
 IUSE="gphoto2 imlib jpeg2k opengl povray scanner tetex"
 
 DEPEND="~kde-base/kdebase-${PV}
@@ -20,8 +20,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	x86? ( scanner? sys-libs/libieee1284 )
 	povray? ( x86? ( media-gfx/povray ) )
 	jpeg2k? ( x86? ( media-libs/jasper ) )
-	!media-gfx/kolourpaint
-	!x11-misc/kgamma"
+	!media-gfx/kolourpaint"
 RDEPEND="${DEPEND}
 	app-text/xpdf
 	tetex? (
@@ -33,7 +32,7 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	kde_src_unpack
-	epatch ${FILESDIR}/xpdf-3.3.0-kdegraphics.diff
+	epatch ${FILESDIR}/post-3.3.1-kdegraphics_2.diff
 }
 
 src_compile() {

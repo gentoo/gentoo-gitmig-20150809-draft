@@ -1,39 +1,31 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.0-r1.ebuild,v 1.5 2004/11/03 17:35:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.2.3-r2.ebuild,v 1.1 2004/11/03 17:35:58 carlo Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE graphics-related apps"
 
-KEYWORDS="x86 amd64 ~ppc64 sparc ppc ~hppa"
-IUSE="gphoto2 imlib jpeg2k opengl povray scanner tetex"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+IUSE="gphoto2 tetex scanner opengl"
 
 DEPEND="~kde-base/kdebase-${PV}
 	gphoto2? ( media-gfx/gphoto2 )
 	scanner? ( media-gfx/sane-backends )
+	tetex? ( virtual/tetex )
 	dev-libs/fribidi
 	opengl? ( virtual/glut virtual/opengl )
-	imlib? ( media-libs/imlib )
+	media-libs/imlib
 	virtual/ghostscript
 	media-libs/tiff
-	x86? ( scanner? sys-libs/libieee1284 )
-	povray? ( x86? ( media-gfx/povray ) )
-	jpeg2k? ( x86? ( media-libs/jasper ) )
-	!media-gfx/kolourpaint
-	!x11-misc/kgamma"
+	x86? ( scanner? sys-libs/libieee1284 )"
 RDEPEND="${DEPEND}
-	app-text/xpdf
-	tetex? (
-	|| ( >=app-text/tetex-2
-	app-text/ptex
-	app-text/cstetex
-	app-text/dvipdfm )
-	)"
+	app-text/xpdf"
 
 src_unpack() {
 	kde_src_unpack
-	epatch ${FILESDIR}/xpdf-3.3.0-kdegraphics.diff
+	epatch ${FILESDIR}/${P}-gcc34-compile.patch
+	epatch ${FILESDIR}/post-3.2.3-kdegraphics_2.diff
 }
 
 src_compile() {
@@ -48,9 +40,6 @@ src_compile() {
 
 	use scanner	|| DO_NOT_COMPILE="$DO_NOT_COMPILE kooka libkscan"
 
-	use imlib \
-		&& myconf="$myconf --with-imlib --with-imlib-config=/usr/bin" \
-		|| myconf="$myconf --without-imlib"
-
+	myconf="$myconf --with-imlib --with-imlib-config=/usr/bin"
 	kde_src_compile
 }
