@@ -1,17 +1,31 @@
 #!/sbin/runscript
 
-depend() {
-    need clock
+SERVICE=atd
+EXE=/usr/sbin/atd
+PIDFILE=/var/run/atd.pid
+opts="start stop restart"
+
+# See how we were called.
+
+start() {
+
+	ebegin "Starting ${SERVICE}..."
+	start-stop-daemon --start --quiet --exec ${EXE}
+	eend $?
+
 }
 
-function start() {
-    ebegin "Starting atd"
-    start-stop-daemon --start --quiet --exec /usr/sbin/atd
-    eend $?
+stop() {
+
+	ebegin "Shutting down ${SERVICE}..."
+	start-stop-daemon --stop --quiet --pidfile ${PIDFILE} 
+	eend $?
+
 }
 
-function stop() {
-    ebegin "Shutting down atd"
-    start-stop-daemon --stop --quiet --pidfile /var/run/atd.pid
-    eend $?
+restart () {
+
+	stop
+	start
+
 }
