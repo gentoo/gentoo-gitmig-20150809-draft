@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.10 2004/08/03 13:59:53 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.11 2004/08/06 21:35:36 fafhrd Exp $
 
 ECLASS=gnustep-old
 INHERITED="$INHERITED $ECLASS"
@@ -42,9 +42,6 @@ egnustepmake() {
 	addpredict /root/GNUstep	
 
 	cd ${S}
-
-	unset CFLAGS
-	unset CC
 
 	if [ -f /usr/GNUstep/System/Makefiles/GNUstep.sh ] ; then
 		. /usr/GNUstep/System/Makefiles/GNUstep.sh
