@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r2.ebuild,v 1.11 2004/07/02 08:51:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r2.ebuild,v 1.12 2004/07/22 05:06:07 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,6 +25,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-build-fPIC.patch
 	# Only export global symbols, bug #32764
 	epatch ${FILESDIR}/${P}-mapfile.patch
+	# The configure script can be kind of dumb #55434
+	epatch ${FILESDIR}/${P}-configure.patch
 }
 
 src_compile() {

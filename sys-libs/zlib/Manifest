@@ -1,17 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5764e89606274d38a636c4d347ae7b0d ChangeLog 4264
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 21411ec00c027eb4c0faf5d244543206 zlib-1.1.4-r2.ebuild 1081
 MD5 0fc6b64cfdab17fda10f1944612a94b0 zlib-1.1.4-r3.ebuild 1243
 MD5 147679491a9dee122c073bd34242dbf4 zlib-1.1.4-r4.ebuild 1325
-MD5 1c7ab96db359ad47abab4758106db097 zlib-1.2.1-r1.ebuild 1323
-MD5 26b467980337e5a0e164c670f5360971 zlib-1.2.1-r2.ebuild 1599
 MD5 d453cd7d8ad003acd508671e76c690e1 zlib-1.2.1.ebuild 1278
+MD5 1c7ab96db359ad47abab4758106db097 zlib-1.2.1-r1.ebuild 1323
+MD5 7843f99760379dbd2951c560e58c4b0f zlib-1.2.1-r2.ebuild 1687
 MD5 dd55b8f72a824c16a4d544b624c9eda1 files/digest-zlib-1.1.4-r2 63
 MD5 dd55b8f72a824c16a4d544b624c9eda1 files/digest-zlib-1.1.4-r3 63
 MD5 dd55b8f72a824c16a4d544b624c9eda1 files/digest-zlib-1.1.4-r4 63
 MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1 63
-MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1-r1 63
-MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1-r2 63
 MD5 a99957dc7ed74f72f833af10fd786352 files/zlib-1.1.4-build-fPIC.patch 2157
 MD5 c8c569db61c8c3d4c6b0a781c188a2c8 files/zlib-1.1.4-gentoo.security.patch 10190
 MD5 72490e2d8f00f11cd3d70f8352b2c9ad files/zlib-1.1.4-glibc.patch 323
@@ -20,4 +21,13 @@ MD5 58b797a8da0e12e6cebaa0140f6493df files/zlib-1.1.4-mapfile.patch 1876
 MD5 9c2321cdb61e2d58b41a0d61a98d293b files/zlib-1.2.1-build-fPIC.patch 2252
 MD5 f84d68bd9a614ad5495a369cb258cf8d files/zlib-1.2.1-glibc.patch 395
 MD5 f59140383ca357e19d6d16d79ce78c97 files/zlib-1.2.1-mapfile.patch 2131
+MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1-r1 63
+MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1-r2 63
 MD5 9d3fdd73e1997aa5c823fc210f29919d files/zlib-1.2.1-configure.patch 3149
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA/0tGHTu7gpaalycRAlS1AJ9l/LnC0EyhMt82ovx0+ovs5MbyPgCfTqlj
+0fv+G75gCjuqAalW1yQM8Pg=
+=cHAG
+-----END PGP SIGNATURE-----
