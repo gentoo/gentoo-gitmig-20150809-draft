@@ -1,11 +1,13 @@
 # ChangeLog for sys-apps/pmud 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: ChangeLog,v 1.4 2002/07/14 19:20:19 aliz Exp $
+# $Id: ChangeLog,v 1.5 2002/07/17 14:50:44 gerk Exp $
 
 *pmud-0.10.1-r2.ebuild (14 July 2002)
 
-  14 Jul 2002; phoen][x <phoenix@gentoo.org> pmud-0.10.1.ebuild :
-  Added LICENSE, KEYWORDS, SLOT.
+  17 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Fixed keywords (please be sure you know what programs are before you set
+  keywords, this will _not_ run on x86).  Fixed typo in makefile-x.diff
+  (was CLAGS now is CFLAGS)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> pmud-0.10.1-r2.ebuild :
   Added LICENSE, KEYWORDS, SLOT.

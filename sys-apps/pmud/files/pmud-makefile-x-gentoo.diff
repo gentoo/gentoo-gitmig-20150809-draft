@@ -6,7 +6,7 @@
  xmouse: xmouse.c
 -	$(CC) $(CLAGS) -o xmouse xmouse.c -L/usr/X11R6/lib -lX11
 +	(test -e /usr/X11R6/include/X11/Xlib.hh && \
-+	$(CC) $(CLAGS) -o xmouse xmouse.c -L/usr/X11R6/lib -lX11; true)
++	$(CC) $(CFLAGS) -o xmouse xmouse.c -L/usr/X11R6/lib -lX11; true)
  
  tcp.o: tcp.c tcp.h
  	$(CC) $(CFLAGS) -c tcp.c
