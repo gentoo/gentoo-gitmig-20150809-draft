@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netboot-base/netboot-base-20041006.ebuild,v 1.2 2004/10/06 21:19:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netboot-base/netboot-base-20041007.ebuild,v 1.1 2004/10/07 21:00:08 vapier Exp $
+
+inherit gcc
 
 DESCRIPTION="Baselayout for netboot systems"
 HOMEPAGE="http://www.gentoo.org/"
@@ -20,8 +22,14 @@ pkg_setup() {
 	[ "${ROOT}" == "/" ] && die "refusing to emerge to /"
 }
 
+src_compile() {
+	$(gcc-getCC) ${CFLAGS} src/consoletype.c -o sbin/consoletype || die
+	strip --strip-unneeded sbin/consoletype
+}
+
 src_install() {
 	[ "${ROOT}" == "/" ] && die "refusing to install to /"
+	rm -r src
 	cp -r * ${D}/
 }
 
@@ -30,4 +38,5 @@ pkg_postinst() {
 	mkdir -p bin dev etc lib mnt proc sbin var
 	mkdir -p var/log
 	mkdir -p mnt/gentoo
+	ln -s . usr
 }
