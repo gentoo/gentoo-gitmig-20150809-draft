@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ion.eclass,v 1.2 2003/07/18 18:22:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ion.eclass,v 1.3 2003/07/18 20:17:44 vapier Exp $
 
 ECLASS=ion
 INHERITED="${INHERITED} ${ECLASS}"
@@ -8,7 +8,7 @@ INHERITED="${INHERITED} ${ECLASS}"
 IUSE="${IUSE} truetype"
 SRC_URI="${SRC_URI} http://modeemi.cs.tut.fi/~tuomov/dl/ion-devel-${ION_VERSION}.tar.gz"
 DEPEND="${DEPEND}
-	>=virtual/glibc
+	virtual/glibc
 	virtual/x11
 	truetype? ( virtual/xft )"
 
