@@ -3,6 +3,10 @@
 
 *ted-2.12 (24 Dec 2002)
 
+  29 Mar 2003; Alastair Tse <liquidx@gentoo.org> ted-2.11.ebuild,
+  ted-2.12.ebuild:
+  replace openmotif with virtual/motif
+
   12 Mar 2003; Martin Holzer <mholzer@gentoo.org> ted-2.11.ebuild
   ted-2.12.ebuild:
   added cd ${S}. Closes #17344
