@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.887 2005/01/22 21:11:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.888 2005/01/22 22:58:04 dragonheart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -22,7 +22,6 @@ app-cdr/k3b:monkey - Enable support for Monkey's audio codec
 app-crypt/gnupg:bzip2 - use transparent bzip2 compression
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/gnupg:smartcard - Enables smartcard support
-app-crypt/gpg-agent:threads - Enable thread support via libpth
 app-crypt/gpgme:smime - Add smime support
 app-crypt/gringotts:suid - Install the binary suid, acknowledging the usual risks
 app-crypt/johntheripper:ntlm - enables john to crack Windows NT/2000 MD4 (case-sensitive) password hashes
@@ -122,7 +121,6 @@ dev-db/octopus:source - Zip the sources and install them
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
 dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgresql:pg-vacuumdelay - Adds in the vacuum inter-page delay feature.
-dev-db/postgresql:threads - enable thread support
 dev-db/rekall:xbase - Support for the Xbase db family, covering dBase, Clipper, FoxPro, Visual dBase/Objects/FoxPro plus some older products.
 dev-db/sqlite:nothreadsafe - turn off thread safe operation of sqlite
 dev-db/tora:oracle - Enable oracle support
@@ -192,11 +190,7 @@ dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
 dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
-dev-lang/ruby-cvs:threads - Enable pthread support.
-dev-lang/ruby:threads - Enable pthread support.
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
-dev-lang/tcl:threads - Enable threads as some packages require it.
-dev-lang/tk:threads - Enable threads as some packages require it.
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/boehm-gc:c++ - Adds support for C++
 dev-libs/cyrus-sasl:authdaemond - Enable Courier-IMAP authdaemond's unix socket support.
@@ -209,14 +203,11 @@ dev-libs/gmime:mono - Build mono bindings
 dev-libs/libcdio:cddb - use libcddb for CD database lookups
 dev-libs/libmix:no-net2 - disable libpcap and libnet support
 dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
-dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
 dev-libs/log4cxx:smtp - offer SMTP support via libsmtp
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
 dev-libs/qsa:examples - build the examples that come with qsa
 dev-libs/qsa:ide - enable the qsa ide
-dev-libs/qsa:threads	- enable thread support
-dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
 dev-lisp/gcl-cvs:custreloc - build a GCL which uses custom GCL code for linking
 dev-lisp/gcl-cvs:dlopen - build a GCL which uses dlopen for linking
 dev-lisp/gcl-cvs:gprof - build a GCL with profiling support
@@ -227,7 +218,6 @@ dev-lisp/gcl:gprof - build a GCL with profiling support
 dev-lisp/sbcl:ldb - include support for the SBCL low level debugger
 dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
 dev-lisp/sbcl:unicode - build SBCL with support for Unicode
-dev-lisp/sbcl:threads - build SBCL with support for native threads (x86 only)
 dev-ml/lablgl:glut - Enable glut support.
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/ocamlsdl:noimage - Disable sdl-image support
@@ -246,7 +236,6 @@ dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
 dev-scheme/bigloo-lib:expat - enable expat support
 dev-scheme/bigloo-lib:ipcs - enable ipcs support
 dev-scheme/gauche-gtk:glgd - enable GL graph draw
-dev-tcltk/tkzinc:threads - enable the use of threads
 dev-tex/preview-latex:xemacs - Adds support for XEmacs
 dev-util/catalyst:ccache - Enables ccache support
 dev-util/eric:idl - Enable omniorb support
@@ -399,7 +388,6 @@ media-libs/libsdl:novideo - Allow users to disable video support completely (at 
 media-libs/libvorbis:aotuv - Allow users to enable aoTuV encoder enhancements
 media-libs/openvrml:javascript - Script node JavaScript support
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
-media-libs/sdif:threads  - Enables posix thread support
 media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/tiff:lzw-tiff - Enable external lzw compression support
 media-libs/tiff:private - Install additional "private" headers
@@ -579,7 +567,6 @@ net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a 
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
 net-libs/gecko-sdk:moznoxft - Disable XFT support
-net-libs/libgadu:threads - Enables pthread in resolver
 net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
@@ -617,7 +604,6 @@ net-misc/openssh:chroot - Enable chrooting support.
 net-misc/openssh:sftplogging - Enables sftplogging patch
 net-misc/openssh:skey - Enable S/Key (Single use password) authentication support
 net-misc/openssh:smartcard - Enables smartcard support
-net-misc/openvpn:pthreads - Enable threading support for better performance of tls
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessing the OSPF link state database
 net-misc/quagga:tcpmd5 - Enable TCP MD5 checksumming
@@ -653,7 +639,6 @@ net-www/apache:mpm-metux - Adds support for the metux Apache MPM
 net-www/apache:mpm-peruser - Adds support for the peruser Apache MPM
 net-www/apache:no-suexec - Don't install suexec with apache
 net-www/apache:static-modules - Build modules into apache instead of having them load at run time
-net-www/apache:threads - Enable thread support
 net-www/elinks:lua - enable lua support
 net-www/kazehakase:estraier - enable estraier support for full-text search in history.
 net-www/kazehakase:migemo - enable migemo support for Japanese incremental search.
