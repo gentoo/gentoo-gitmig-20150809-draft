@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2_rc2.ebuild,v 1.3 2003/02/01 23:08:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2_rc2.ebuild,v 1.4 2003/02/03 13:10:26 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
@@ -78,6 +78,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-themes/gnome-themes-1
 	>=app-arch/file-roller-2.2.1
 	>=gnome-extra/nautilus-media-0.2.0
+	>=gnome-extra/acme-2.0.1
 	>=gnome-extra/gnome-system-monitor-1.0.4-r1"
 # g-s-m 1.0.4-r1 has a gnome 2.2+ only patch
 #	>=x11-libs/libzvt-2.0.1
