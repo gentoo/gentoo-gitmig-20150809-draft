@@ -28,8 +28,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack_makeself wolf-linux-1.4-full.x86.run
-	unpack_makeself wolf-linux-update-${PV}.x86.run
+	unpack_makeself ${A}
 }
 
 src_install() {
