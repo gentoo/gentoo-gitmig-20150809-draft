@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.60 2004/11/30 04:01:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.61 2004/12/11 22:46:01 vapier Exp $
+
+*libtool-1.5.10-r1 (11 Dec 2004)
+
+  11 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/1.5.10/libtool-1.5.10-version-checking.patch,
+  -files/1.5.6/libtool-1.5.6-libtool_m4-shared_ext.patch,
+  +libtool-1.5.10-r1.ebuild:
+  Rather than guess at variable name changes, perform version sanity checks to
+  make sure that the libtool version being used by configure (via
+  aclocal.m4/libtool.m4) matches that of the local ltmain.sh/libtool files.
 
   29 Nov 2004; Mike Frysinger <vapier@gentoo.org>
   +files/1.5.10/libtool-1.5.10-locking.patch, libtool-1.5.10.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.10.ebuild,v 1.5 2004/11/30 04:01:32 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.10-r1.ebuild,v 1.1 2004/12/11 22:46:01 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -90,11 +90,11 @@ src_unpack() {
 	# <azarah@gentoo.org> - (07 April 2002)
 	epatch ${FILESDIR}/1.4.3/${PN}-1.4.2-portage.patch
 	# If a package use an older libtool, and libtool.m4 for that
-	# package is updated, but not libtool, then we run into an
-	# issue where $shared_ext is not set.  This results in libraries
-	# being built without '.so' extension, bug #40901
-	# <azarah@gentoo.org> - (11 Feb 2004)
-	epatch ${FILESDIR}/1.5.6/${PN}-1.5.6-libtool_m4-shared_ext.patch
+	# package is updated, but not libtool, then we may run into an
+	# issue where internal variables are named differently.  Often 
+	# this shows up as libs being built without '.so' extension #73140
+	epatch ${FILESDIR}/1.5.10/${PN}-1.5.10-version-checking.patch
+	sed -i "s:@_LT_VERSION@:${PV}:" libtool.m4 || die "sed libtool.m4"
 	# For older autoconf setups's that do not support libtool.m4,
 	# $max_cmd_len are never set, causing all tests against it to
 	# fail, resulting in 'integer expression expected' errors and
@@ -118,6 +118,7 @@ src_unpack() {
 
 	uclibctoolize
 	gnuconfig_update ${WORKDIR}
+	epunt_cxx
 }
 
 src_compile() {
