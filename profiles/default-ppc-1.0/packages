@@ -150,7 +150,6 @@ net-misc/rsync
 *sys-libs/pam     
 *sys-libs/pwdb      
 *sys-libs/readline  
-*sys-libs/slang
 *sys-libs/zlib
 >=sys-libs/gpm-1.19.3-r5
 >=sys-apps/isapnptools-1.23-r6

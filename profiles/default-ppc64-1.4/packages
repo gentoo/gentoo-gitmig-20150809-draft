@@ -98,7 +98,6 @@ sys-fs/reiserfsprogs
 *>=sys-libs/pam-0.75-r9
 *sys-libs/pwdb      
 *sys-libs/readline  
-*sys-libs/slang
 *sys-libs/zlib
 
 >=net-analyzer/ucd-snmp-4.1.2-r6
