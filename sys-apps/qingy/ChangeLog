@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/qingy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.1 2003/10/17 20:24:09 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.2 2003/10/17 20:25:34 avenj Exp $
+
+*qingy-0.2.2 (17 Oct 2003)
+
+  17 Oct 2003; Jon Portnoy <avenj@gentoo.org> qingy-0.2.2.ebuild :
+  Version bump + moved to sys-apps, bugs 29903 and 29594.
 
 *qingy-0.2.1 (06 Sep 2003)
 
