@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.40 2003/10/22 12:03:12 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.41 2003/10/24 09:17:43 obz Exp $
+
+*gnome-games-2.4.1 (24 Oct 2003)
+
+  24 Oct 2003; Mike Gardiner <obz@gentoo.org> gnome-games-2.4.1.ebuild:
+  New version
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org>
   gnome-games-2.4.0.ebuild:
