@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.15 2004/12/11 23:20:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.16 2004/12/12 01:09:40 dragonheart Exp $
+
+  12 Dec 2004; Daniel Black <dragonheart@gentoo.org> -balsa-2.0.15-r1.ebuild:
+  remove balsa-2.0.15-r1 in order to remove old gpgme dependancies. bug #72620
+  refers
 
   12 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> balsa-2.0.15-r2.ebuild:
   Stable on alpha.
