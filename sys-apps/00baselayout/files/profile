@@ -1,0 +1,55 @@
+eval `dircolors -b`
+alias d="ls --color"
+
+PATH=/bin:/usr/bin:/usr/X11R6/bin:/usr/local/bin
+
+for DIR in /opt/kde/bin \
+	   /opt/gnome/bin \
+	   /usr/lib/qt-2.1.1/bin \
+	   /usr/X11R6/enlightenment/bin \
+	   /opt/java/bin ; do
+   test -d $DIR && PATH=$PATH:$DIR
+done	
+
+if [ `/usr/bin/whoami` == 'root' ] ; then
+	export PS1='\[\033[01;32;40m\]\u \[\033[01;34;40m\]\W > \[\033[00m\]'
+	export PATH=/sbin:/usr/sbin:$PATH
+else
+	export PS1='\[\033[01;34;40m\]\W > \[\033[00m\]'
+	export PATH=$PATH
+fi
+
+# Set CLASSPATH for JAVA
+	
+if [ -d /opt/java/lib ] ; then
+  export JAVA_HOME=/opt/java
+  export CLASSPATH=/opt/java/src.jar:/opt/java/lib/tools.jar
+fi
+
+# Set Var for the Tomcat-Servlet Engine
+
+if [ -d /opt/jakarta/tomcat ] ; then
+  export TOMCAT_HOME=/opt/jakarta/tomcat
+fi
+
+if [ -d /usr/lib/qt-2.1.1 ] ; then
+  export QTDIR="/usr/lib/qt-2.1.1"
+fi
+
+if [ -d /opt/kde ] ; then
+  export KDEDIR="/opt/kde"
+fi
+
+if [ -d /opt/gnome ] ; then
+  export GNOMEDIR="/opt/gnome"
+fi
+
+export PAGER="/usr/bin/most"
+
+export MANPATH=$MANPATH:/usr/gcc/man
+export INFODIR=/usr/info:/usr/X11R6/info:/opt/gnome/info
+export INFOPATH=/usr/info:/usr/X11R6/info:/opt/gnome/info
+
+export CVS_RSH=ssh
+
+
