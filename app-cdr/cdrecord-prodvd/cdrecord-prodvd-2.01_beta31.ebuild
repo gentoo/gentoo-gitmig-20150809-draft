@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/cdrecord-prodvd-2.01_beta31.ebuild,v 1.2 2004/10/08 22:03:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/cdrecord-prodvd-2.01_beta31.ebuild,v 1.3 2004/10/22 03:29:32 pylon Exp $
 
 X86_FILENAME="cdrecord-prodvd-2.01b31-i686-pc-linux-gnu"
 
@@ -11,14 +11,16 @@ SRC_URI="x86? ( ftp://ftp.berlios.de/pub/cdrecord/ProDVD/${X86_FILENAME} )
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
-IUSE=""
+KEYWORDS="~x86 ~amd64 -ppc -sparc -mips -alpha"
+IUSE="uclibc"
 
-DEPEND=">=app-cdr/cdrtools-2.01_alpha24"
+DEPEND=">=app-cdr/cdrtools-2.01_alpha24
+	!uclibc? ( sys-libs/glibc )"
 
 S=${WORKDIR}
 
 src_unpack() {
+	use uclibc && die "binary package not compatible with uclibc"
 	cp ${DISTDIR}/${A} ${WORKDIR}/
 }
 
