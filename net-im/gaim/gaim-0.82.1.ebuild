@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.82.1.ebuild,v 1.9 2004/09/13 15:08:03 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.82.1.ebuild,v 1.10 2004/09/16 21:07:59 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc ~mips ~alpha hppa amd64 ~ia64"
-IUSE="nls perl spell nas crypt cjk gnutls silc evo"
+IUSE="nls perl spell nas crypt cjk gnutls silc evo debug"
 
 DEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
@@ -74,6 +74,7 @@ src_compile() {
 	[ "`gcc-version`" == "3.2" ] && filter-flags -msse2
 
 	local myconf
+	use debug && myconf="${myconf} --enable-debug"
 	use perl || myconf="${myconf} --disable-perl"
 	use spell || myconf="${myconf} --disable-gtkspell"
 	use nls  || myconf="${myconf} --disable-nls"
