@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r1.ebuild,v 1.1 2001/11/06 13:28:29 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r1.ebuild,v 1.2 2001/11/06 13:30:22 achim Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -27,7 +27,7 @@ src_install () {
     try make INSTALL_PREFIX="${D}/usr/" install
     insinto /usr/include/pbm
     doins pnm/{pam,pnm}.h ppm/{ppm,pgm,pbm}.h
-    doins pbmplus.h 
+    doins pbmplus.h shopt/shopt.h
     dodoc COPYRIGHT.PATENT GPL_LICENSE.txt HISTORY \
           Netpbm.programming README README.CONFOCAL README.DJGPP \
           README.JPEG README.VMS netpbm.lsm
