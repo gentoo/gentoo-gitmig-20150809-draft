@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk-perl-glade
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/ChangeLog,v 1.10 2003/07/12 10:49:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/ChangeLog,v 1.11 2003/12/22 21:54:29 rac Exp $
+
+*gtk-perl-glade-0.7008-r1 (22 Dec 2003)
+
+  22 Dec 2003; <rac@gentoo.org> gtk-perl-glade-0.7008-r1.ebuild:
+  Install into vendor directories, address bug 30615
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
