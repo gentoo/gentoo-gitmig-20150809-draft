@@ -2,7 +2,7 @@ MD5 2d27613515f71488174585119b19ab5b ChangeLog 1994
 MD5 16156f09b66d2965972f429c740f3f87 gkrellmitime-0.4.ebuild 648
 MD5 99285115ecea8f31b252de5e17ffa268 gkrellmitime-0.5.1.ebuild 723
 MD5 0409c94dfe243f4d58b3894b10b9eb27 gkrellmitime-1.0.1.ebuild 649
-MD5 17026dc20fe9079a8305e09e1fbb3908 gkrellmitime-1.0.ebuild 635
+MD5 0ee43c88b735b194a8f6bbd00cec2ab1 gkrellmitime-1.0.ebuild 639
 MD5 503a4f552ef762dc99302f2cd842717c files/digest-gkrellmitime-0.4 67
 MD5 efa4b3b7158eaf277dad14da3b096826 files/digest-gkrellmitime-0.5.1 69
 MD5 4d00717aa575f50036b0129992917506 files/digest-gkrellmitime-1.0 67
