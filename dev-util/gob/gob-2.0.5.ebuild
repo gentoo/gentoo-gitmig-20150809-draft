@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.5.ebuild,v 1.5 2004/06/25 02:34:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.5.ebuild,v 1.6 2004/07/14 23:40:11 agriffis Exp $
 
 MY_P=${PN}2-${PV}
 S=${WORKDIR}/${MY_P}
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.5z.com/jirka/gob.html"
 SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc"
+IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.0*
 	dev-libs/popt"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4.ebuild,v 1.8 2004/06/25 02:35:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4.ebuild,v 1.9 2004/07/14 23:44:23 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 # NOTE: in README-PACKAGERS, guile recommends different versions be installed
 #       in parallel. They're talking about LIBRARY MAJOR versions and not
 #       the actual guile version that was used in the past.
-#     
+#
 #       So I'm slotting this as 12 beacuse of the library major version
 
 SLOT="12"
