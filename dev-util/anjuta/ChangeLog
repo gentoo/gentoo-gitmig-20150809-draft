@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.2 2002/02/16 03:23:37 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.3 2002/08/19 01:23:14 stroke Exp $
+
+*anjuta-0.9.99 (19 Aug 2002)
+
+  19 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> anjuta-0.9.99.ebuild:
+  
+  New version, this is the Anjuta 1.0-beta1 (preview).
+  Changed SRC_URI to use the mirror://sourceforge eclass
 
 *anjuta-0.1.9 (15 Feb 2002)
 
