@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.4 2002/07/14 19:20:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.5 2002/07/25 15:28:29 gerk Exp $
 
 *xinetd-2.3.5 (20 Jun 2002)
+
+  25 Jul 2002; Mark Guertin <gerk@gentoo.org> xinetd-2.3.5.ebuild :
+  Added ppc to keywords
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> xinetd-2.3.5.ebuild :
   Added LICENSE, KEYWORDS, SLOT.

@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.9 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.10 2002/07/25 15:32:59 gerk Exp $
 
 *util-linux-2.11r-r1 (9 Jul 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> util-linux-2.11r-r1.ebuild :
   Added LICENSE, KEYWORDS.
