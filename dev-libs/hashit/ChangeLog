@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/hashit
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/ChangeLog,v 1.5 2004/11/06 10:30:19 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/ChangeLog,v 1.6 2004/11/07 10:32:13 pyrania Exp $
+
+  07 Nov 2004; <pyrania@gentoo.org> hashit-0.9.3.ebuild:
+  Added --enable-REENTRANT.
 
   06 Nov 2004; <pyrania@gentoo.org> -hashit-0.9.1.ebuild,
   hashit-0.9.3.ebuild:
