@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/unace
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.14 2004/04/15 18:04:19 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.15 2004/04/27 16:23:50 aliz Exp $
+
+  27 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> unace-1.2b.ebuild,
+  unace-2.2.ebuild:
+  Update SRC_URI, added IUSE.
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> unace-2.2.ebuild:
   adding s390 to keywords
