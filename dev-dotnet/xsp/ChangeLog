@@ -1,24 +1,30 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.15 2004/11/04 02:02:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.16 2004/12/13 19:55:05 latexer Exp $
 
-  03 Nov 2004; <peter@gentoo.org> -xsp-0.13.ebuild, -xsp-0.14.ebuild,
-  -xsp-0.15.ebuild, -xsp-0.16.ebuild, -xsp-1.0.1.ebuild, -xsp-1.0.ebuild:
+*xsp-1.0.5 (13 Dec 2004)
+
+  13 Dec 2004; Peter Johanson <latexer@gentoo.org> +xsp-1.0.5.ebuild:
+  Bump.
+
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> -xsp-0.13.ebuild,
+  -xsp-0.14.ebuild, -xsp-0.15.ebuild, -xsp-0.16.ebuild, -xsp-1.0.1.ebuild,
+  -xsp-1.0.ebuild:
   Clean out some older ebuilds.
 
 *xsp-1.0.4 (03 Nov 2004)
 
-  03 Nov 2004; <peter@gentoo.org> +xsp-1.0.4.ebuild:
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> +xsp-1.0.4.ebuild:
   Bump.
 
 *xsp-1.0.2 (22 Sep 2004)
 
-  22 Sep 2004; <peter@gentoo.org> +xsp-1.0.2.ebuild:
+  22 Sep 2004; Peter Johanson <latexer@gentoo.org> +xsp-1.0.2.ebuild:
   Bump.
 
 *xsp-1.0.1 (21 Sep 2004)
 
-  21 Sep 2004; <peter@gentoo.org> +xsp-1.0.1.ebuild:
+  21 Sep 2004; Peter Johanson <latexer@gentoo.org> +xsp-1.0.1.ebuild:
   Bump.
 
   02 Aug 2004; Peter Johanson <latexer@gentoo.org> xsp-0.13.ebuild,
