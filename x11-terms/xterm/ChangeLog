@@ -1,6 +1,16 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.65 2005/03/10 14:38:14 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.66 2005/03/10 18:27:14 seemant Exp $
+
+*xterm-200 (10 Mar 2005)
+
+  10 Mar 2005; Seemant Kulleen <seemant@gentoo.org> +xterm-200.ebuild:
+  Version bump. This fixes bug #80016 by Joe Wells <sllewbj@blueyonder.co.uk>
+  with the toolbar local USE flag. It also fixes bug #75943 by dobz
+  <abusenospam@free.fr> by removing the dependency on utempter. As for bug
+  #79112, the x11 team will review whether we want to move to a virtual/term
+  type layout (with xterm, of course, being the default satisfier for that
+  virtual
 
   10 Mar 2005; Stephen P. Becker <geoman@gentoo.org> xterm-199.ebuild:
   stable on mips
