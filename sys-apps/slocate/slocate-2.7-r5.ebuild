@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.5 2004/01/17 14:43:43 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.6 2004/03/01 20:05:40 tgall Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc sparc alpha hppa ~mips ia64 ppc64"
 
 DEPEND="sys-apps/shadow
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	ppc64? ( sys-devel/automake )"
 
 src_compile() {
 	filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
