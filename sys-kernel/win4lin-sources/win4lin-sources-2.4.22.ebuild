@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.22.ebuild,v 1.2 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.22.ebuild,v 1.3 2003/12/01 19:12:27 plasmaroo Exp $
 
 IUSE="build"
 
@@ -29,10 +29,10 @@ src_unpack() {
 	unpack linux-${OKV}.tar.bz2
 	mv linux-${OKV} linux-${KV} || die
 
-	cd linux-${KV}
+	epatch ${DISTDIR}/Kernel-Win4Lin3-${OKV}.patch || die "Error: Win4Lin3 patch failed!"
 
-	epatch ${DISTDIR}/mki-adapter.patch || die "-mki-adapter patch failed"
-	epatch ${DISTDIR}/Kernel-Win4Lin3-${OKV}.patch || die "-Win4Lin3 patch failed"
+	cd linux-${KV}
+	cat ${DISTDIR}/mki-adapter.patch | patch -p1 &> /dev/null || die "Error: mki-adapter patch failed!"
 
 	kernel_universal_unpack
 
