@@ -1,4 +1,4 @@
-MD5 8680cf8cfb0489c2af2f994c1f6a4722 ChangeLog 23456
+MD5 086ff7c9d793fd93de98e42ebeda862a ChangeLog 23557
 MD5 b3099588e509bea5bf8c12f2b3882f58 linux-headers-2.2.26.ebuild 2509
 MD5 c2c4eec01b604c30d0826e73ac02cac4 linux-headers-2.4.23.ebuild 3482
 MD5 608fe99985244b0445f76cee44c9ae14 metadata.xml 290
@@ -29,7 +29,7 @@ MD5 602f7309c0163c018627f06b5f1ace3a files/linux-headers-2.6.8.1-arm-float.patch
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21-r1 67
 MD5 9101139b0720280f338a1823c281ee84 files/linux-headers-2.6.8.1-parisc-syscall.patch 413
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21 67
-MD5 7f46bd50185da35b81ec1db450173114 files/linux-headers-2.6.10-appCompat.patch 70002
+MD5 0a329bca0065812009f3963adf5d371c files/linux-headers-2.6.10-appCompat.patch 70294
 MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
 MD5 14c583e9ea29b2a3fc88349685cce2f4 files/linux-headers-soundcard-ppc64.patch 722
 MD5 fb33a0ba21375f190137b9f478ad9799 files/digest-linux-headers-2.6.8.1-r2 146
