@@ -1,0 +1,8 @@
+# ChangeLog for net-p2p/giftui
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.1 2003/04/26 23:51:37 lostlogic Exp $
+
+*giftui-0.0.1 (26 Apr 2003)
+
+  Initial version of giFTui, have fun!
+
