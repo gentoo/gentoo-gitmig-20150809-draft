@@ -1,5 +1,5 @@
-MD5 c1df0323347d3c17e3e3c2c07ca0a167 ChangeLog 1528
+MD5 f2a818c09de47336ab86bc6bc246a026 ChangeLog 1619
 MD5 48c2286c29295dae8b1d80b36049b7d3 gpa-0.4.3.ebuild 739
-MD5 803066f598d0de01bc5a1c34b9894570 gpa-0.6.1.ebuild 732
+MD5 a111c057fdcabcb2e25b4cdda42fdb2a gpa-0.6.1.ebuild 731
 MD5 178f78c8b49adb68b6cb9495907bad79 files/digest-gpa-0.4.3 61
 MD5 bf5fa46860f865ec7e86be8036c68e35 files/digest-gpa-0.6.1 61
