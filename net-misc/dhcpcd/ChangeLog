@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.25 2003/10/19 09:26:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.26 2003/11/04 01:02:54 vapier Exp $
+
+*dhcpcd-1.3.22_p4-r2 (03 Nov 2003)
+
+  03 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Fix ntp drift file location (for now) #32490.
+
+*dhcpcd-1.3.22_p4-r1 (06 Sep 2003)
 
   19 Oct 2003; Martin Holzer <mholzer@gentoo.org> dhcpcd-1.3.22_p4-r1.ebuild:
   adding DEPEND="virtual/glibc" Closes #31478.
@@ -10,8 +17,6 @@
 
   03 Oct 2003; Alexander Gabert <pappy@gentoo.org> dhcpcd-1.3.22_p4-r1.ebuild:
   added -static -lc for propolice
-
-*dhcpcd-1.3.22_p4-r1 (06 Sep 2003)
 
   02 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
   USE=static support #29207.

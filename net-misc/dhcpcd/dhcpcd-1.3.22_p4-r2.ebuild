@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.10 2003/10/19 09:26:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r2.ebuild,v 1.1 2003/11/04 01:03:01 vapier Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -38,6 +38,7 @@ src_unpack() {
 	epatch ${DISTDIR}/${P}-keepCacheAndResolv.diff.bz2
 	#remove hard-coded arch stuff (drobbins, 06 Sep 2003)
 	sed -i "s/ -march=i.86//g" configure
+	sed -i 's:/etc/ntp\.drift:/var/lib/ntp/ntp.drift:' dhcpconfig.c
 }
 
 src_compile() {
