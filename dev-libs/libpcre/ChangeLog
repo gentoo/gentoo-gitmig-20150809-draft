@@ -1,8 +1,13 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.4 2002/03/27 11:16:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.5 2002/07/21 21:22:08 owen Exp $
 
 *libpcre-3.9-r1
+
+  21 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS and License
+
 
   27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> libpcre-3.9-r1.ebuild :
 

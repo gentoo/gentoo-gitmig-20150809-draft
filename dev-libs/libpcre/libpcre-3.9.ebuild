@@ -6,9 +6,11 @@ S=${WORKDIR}/pcre-${PV}
 DESCRIPTION="Perl-compitable regular expression library"
 SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-${PV}.tar.bz2"
 HOMEPAGE="http://www.pcre.org/"
-
+LICENSE="as-is"
 DEPEND="virtual/glibc"
 SLOT="3"
+
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	./configure \
