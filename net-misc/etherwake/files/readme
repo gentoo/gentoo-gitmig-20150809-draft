@@ -1,0 +1,31 @@
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/etherwake/files/readme,v 1.1 2003/04/26 16:27:30 mholzer Exp $
+
+	This program generates and transmits a Wake-On-LAN (WOL) "Magic Packet",
+	used for restarting machines that have been soft-powered-down
+	(ACPI D3-warm state).  It currently generates the standard AMD Magic Packet
+	format, with an optional password appended.
+
+	This software may be used and distributed according to the terms
+	of the GNU Public License, incorporated herein by reference.
+	Contact the author for use under other terms.
+
+	This source file was originally part of the network tricks package, and
+	is now distributed to support the Scyld Beowulf system.
+	Copyright 1999-2003 Donald Becker and Scyld Computing Corporation.
+
+	The author may be reached as becker@scyld, or C/O
+	 Scyld Computing Corporation
+	 410 Severn Ave., Suite 210
+	 Annapolis MD 21403
+
+  Notes:
+  On some systems dropping root capability allows the process to be
+  dumped, traced or debugged.
+  If someone traces this program, they get control of a raw socket.
+  Linux handles this safely, but beware when porting this program.
+
+  An alternative to needing 'root' is using a UDP broadcast socket, however
+  doing so only works with adapters configured for unicast+broadcast Rx
+  filter.  That configuration consumes more power.
+
