@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.28 2005/01/18 20:09:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.29 2005/03/14 21:43:25 swegener Exp $
+
+*unrealircd-3.2.3 (14 Mar 2005)
+
+  14 Mar 2005; Sven Wegener <swegener@gentoo.org> +unrealircd-3.2.3.ebuild:
+  Version bump.
 
   18 Jan 2005; Sven Wegener <swegener@gentoo.org>
   -unrealircd-3.2.1-r1.ebuild, -unrealircd-3.2.2.ebuild:
