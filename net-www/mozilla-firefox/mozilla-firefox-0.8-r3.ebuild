@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.1 2004/04/26 04:11:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.2 2004/04/26 04:40:40 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -174,6 +174,7 @@ src_compile() {
 	esac
 
 	# Crashes on start when compiled with -fomit-frame-pointer
+	filter-flags -fstack-protector	# see bug 45671
 	filter-flags -fomit-frame-pointer -mpowerpc-gfxopt
 	filter-flags -ffast-math
 	append-flags -s -fforce-addr
