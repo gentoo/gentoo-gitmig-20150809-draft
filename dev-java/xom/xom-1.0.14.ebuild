@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0.14.ebuild,v 1.1 2003/05/26 08:48:48 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0.14.ebuild,v 1.2 2003/05/26 08:49:16 absinthe Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ DEPEND=">=dev-java/ant-1.4"
 RDEPEND=">=virtual/jdk-1.2"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc sparc alpha"
 IUSE="doc"
 
 src_compile() {
