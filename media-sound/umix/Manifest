@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 78fbbfacc91cb7cc7c41ff35c36f0b69 ChangeLog 2249
+MD5 9a4e57d0479e17784d14786da8338693 umix-1.0.2.ebuild 735
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 d6a1703f6a5cb5b21c5df0fa62894f77 umix-0.9.1-r1.ebuild 849
-MD5 89ae66349d4b6d1943e187782fd122ea umix-1.0.2.ebuild 735
-MD5 059cebee0c10a6b8e95afdbd5842a5cf files/digest-umix-0.9.1-r1 62
+MD5 8b2edd78e589e2f0e1045c6121556ed0 ChangeLog 2336
+MD5 4bb8f0a77c57661ef83167ddb42676a9 umix-0.9.1-r1.ebuild 848
 MD5 6a29455aae519841f1c9c4a9682a94e6 files/digest-umix-1.0.2 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdfn2ArHZZzCEUG0RAkr2AJwPqwObs/gmS3vh65763Waz5CUO2gCeJUOv
-3lPSbFIdP/lY17D+6Qz7lPA=
-=XFX6
------END PGP SIGNATURE-----
+MD5 059cebee0c10a6b8e95afdbd5842a5cf files/digest-umix-0.9.1-r1 62
