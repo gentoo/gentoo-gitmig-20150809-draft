@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2-r1.ebuild,v 1.1 2004/01/22 01:58:32 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2-r1.ebuild,v 1.2 2004/06/03 03:10:04 agriffis Exp $
 
 inherit java-pkg
 
@@ -19,7 +19,7 @@ IUSE="jikes doc"
 src_compile() {
 	local myc
 
-	if [ -n "`use jikes`" ] ; then
+	if use jikes ; then
 		myc="${myc} -Dbuild.compiler=jikes"
 	fi
 	cd ${S}
@@ -32,7 +32,7 @@ src_install () {
 	mv servletapi/lib/servlet.jar servletapi/lib/${PN}-${PV}.jar
 	java-pkg_dojar servletapi/lib/${PN}-${PV}.jar || die "Unable to install"
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		dohtml -r servletapi/docs/*
 	fi
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/datavision
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/ChangeLog,v 1.1 2004/02/25 09:18:24 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/ChangeLog,v 1.2 2004/06/03 03:14:40 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> datavision-0.8.1.ebuild:
+  Fix use invocation
 
 *datavision-0.8.1 (25 Feb 2004)
 

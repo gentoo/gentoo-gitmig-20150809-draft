@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.0.ebuild,v 1.7 2004/02/19 03:52:47 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.0.ebuild,v 1.8 2004/06/03 03:12:33 agriffis Exp $
 
 inherit java-pkg eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	addpredict /dev/random
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		sh build.sh jars sampjar javadocs || die "Compile failed."
 	else
 		sh build.sh jars sampjar || die "Compile failed."
@@ -38,7 +38,7 @@ src_install() {
 	dodoc TODO STATUS README LICENSE ISSUES
 	dohtml Readme.html
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		dodir /usr/share/doc/${P}
 		cp -a samples ${D}/usr/share/doc/${P}
 		dohtml -r build/docs/javadocs
@@ -46,7 +46,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		einfo "                                                          "
 		einfo " API Documentation is in /usr/share/doc/${PN}-${PV}.      "
 		einfo "                                                          "

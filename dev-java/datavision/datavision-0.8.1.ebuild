@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.1.ebuild,v 1.1 2004/02/25 09:18:24 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.1.ebuild,v 1.2 2004/06/03 03:14:40 agriffis Exp $
 
 
 DESCRIPTION="DataVision is an Open Source reporting tool similar to Crystal Reports"
@@ -38,14 +38,14 @@ pkg_postinst() {
 	einfo "You must then create a database. Run ${DATAVISION_HOME}/datavision.sh"
 	einfo "and fill the connection dialog box with your database details."
 
-	if [ "`use mysql`" ]; then
+	if use mysql; then
 	echo " "
 	echo "MySQL example:"
 	eerror "Driver class name: com.mysql.jdbc.Drive"
 	eerror "Connection: jdbc:mysql://localhost/database"
 	fi
 
-	if [ "`use postgres`" ]; then
+	if use postgres; then
 	echo " "
 	echo "PostgreSQL example:"
 	eerror "Driver class name:org.postgresql.Driver"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme-classpath/kissme-classpath-0.19.ebuild,v 1.11 2004/04/06 02:06:52 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme-classpath/kissme-classpath-0.19.ebuild,v 1.12 2004/06/03 03:16:03 agriffis Exp $
 
 DESCRIPTION="GNU Classpath specifically tailored to kissme"
 SRC_URI="mirror://sourceforge/kissme/${P}.tar.gz"
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 IUSE="jikes"
 
 src_compile() {
-	if [ -z "`use jikes`" ] ; then
+	if ! use jikes ; then
 		cp Makefile Makefile.orig
 		sed 's!jikes +U!javac!' < Makefile.orig > Makefile
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4.ebuild,v 1.8 2004/05/05 16:44:20 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4.ebuild,v 1.9 2004/06/03 03:10:04 agriffis Exp $
 
 inherit java-pkg
 
@@ -29,7 +29,7 @@ src_compile() {
 src_install () {
 	mv jsr{154,152}/dist/lib/*.jar ${S}
 
-	if [ `use doc` ] ; then
+	if use doc ; then
 		mkdir docs
 		cd ${S}/jsr154/dist
 		mv docs ${S}/docs/servlet
