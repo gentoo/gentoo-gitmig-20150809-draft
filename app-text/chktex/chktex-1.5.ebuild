@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/chktex-1.5.ebuild,v 1.1 2001/07/31 21:38:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/chktex-1.5.ebuild,v 1.2 2001/08/01 18:04:02 danarmak Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://www.ibiblio.org/pub/linux/distributions/gentoo/${P}.tar.gz"
@@ -32,3 +32,12 @@ src_install () {
 
 }
 
+pkg_postinst () {
+    
+    echo "
+    If you're using ChkTeX with LyX, rerun the lyx configure script
+    (available as Edit -> Reconfigure in the lyx menus), and restart
+    lyx.
+    "
+    
+}
