@@ -1,0 +1,16 @@
+# ChangeLog for app-admin/tripwire
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.1 2003/07/18 13:11:48 taviso Exp $
+
+*tripwire-2.3.1.2 (18 Jul 2003)
+
+  18 Jul 2003; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2.ebuild,
+  files/tripwire-2.3.0-50-rfc822.patch.bz2,
+  files/tripwire-2.3.1-2-fhs.patch.bz2,
+  files/tripwire-2.3.1-2-gcc-3.3.patch.bz2,
+  files/tripwire-2.3.1-gcc3.patch.bz2, files/tripwire-jbj.patch.bz2,
+  files/tripwire-mkstemp.patch.bz2, files/tripwire.cron, files/tripwire.gif,
+  files/tripwire.txt, files/twcfg.txt, files/twinstall.sh, files/twpol.txt:
+  initial import, marked ~x86 (soon to be ~alpha, as soon as portability patches
+  apply)
+
