@@ -1,11 +1,14 @@
 # ChangeLog for x11-misc/accessx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Maintainer: George Shapovalov <george@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.1 2002/02/20 02:58:37 agriffis Exp
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.6 2003/05/16 18:51:36 utx Exp $
 
 *accessx-950-r1 (24 Jul 2002)
+
+  16 May 2003; Stanislav Brabec <utx@gentoo.org> accessx-0950-r1.ebuild:
+  Added runtime dependence on dev-lang/tk (bug #19585).
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   24 Jul 2002; Matthew Kennedy <mkennedy@gentoo.org>
   accessx-0950-r1.ebuild, files/accessx-0950-gcc3-gentoo.patch,
