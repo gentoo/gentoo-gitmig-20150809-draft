@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.54 2004/07/17 21:32:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.55 2004/08/01 13:19:08 suka Exp $
+
+  01 Aug 2004; suka@gentoo.org +files/1.1.2/curlfix.patch,
+  openoffice-ximian-1.1.60.ebuild:
+  Fix compile with curl-7.12.0, this closes bug #58983
 
   17 Jul 2004; suka@gentoo.org openoffice-ximian-1.1.55.ebuild,
   openoffice-ximian-1.1.59.ebuild, openoffice-ximian-1.1.60.ebuild:

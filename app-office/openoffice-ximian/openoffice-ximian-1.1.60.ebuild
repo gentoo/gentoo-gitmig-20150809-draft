@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.60.ebuild,v 1.7 2004/07/17 21:32:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.60.ebuild,v 1.8 2004/08/01 13:19:08 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -228,6 +228,9 @@ src_unpack() {
 	#Fix Sandbox problems with scale-icons script
 	cd ${PATCHDIR}
 	epatch ${FILESDIR}/${OO_VER}/fixscale.patch
+
+	#Fix problems with newer curl versions
+	epatch ${FILESDIR}/${OO_VER}/curlfix.patch
 
 	#Exchange faulty patch
 	rm patches/OOO_1_1/print-fontconfig.diff || die
