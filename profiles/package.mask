@@ -29,6 +29,7 @@ app-admin/va-systemimager-client
 >=sys-apps/texinfo-4.0c
 >=media-libs/pdflib-4.0.0
 >=berlin-base/berlin-0.2.2
+net-mail/nail
 
 # broken
 app-editors/gtk-xemacs
