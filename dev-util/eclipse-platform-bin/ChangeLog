@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eclipse-platform-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-platform-bin/ChangeLog,v 1.6 2003/02/12 06:41:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-platform-bin/ChangeLog,v 1.7 2003/04/05 00:23:30 latexer Exp $
+
+*eclipse-platform-bin-2.1 (05 Apr 2003)
+
+  05 Apr 2003; Peter Johanson <latexer@gentoo.org> eclipse-platform-bin-2.1.ebuild:
+  Version bump
 
 *eclipse-platform-bin-2.0.2 (26 Dec 2002)
 
