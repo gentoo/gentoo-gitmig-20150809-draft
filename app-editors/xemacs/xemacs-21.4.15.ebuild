@@ -1,101 +1,71 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.15.ebuild,v 1.8 2004/08/10 22:05:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.15.ebuild,v 1.9 2004/08/19 22:15:05 pvdabeel Exp $
 
 inherit eutils
 
+# this is just TEMPORARY until we can get to the core of the problem
+SANDBOX_DISABLED="1"
+
+EFS=1.29
+BASE=1.68
+MULE=1.42
 DESCRIPTION="highly customizable open source text editor and application development system"
 HOMEPAGE="http://www.xemacs.org/"
 SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${P}.tar.gz
-	http://www.malfunction.de/afterstep/files/NeXT_XEmacs.tar.gz"
+	http://ftp.xemacs.org/packages/efs-${EFS}-pkg.tar.gz
+	http://ftp.xemacs.org/packages/xemacs-base-${BASE}-pkg.tar.gz
+	mule? ( http://ftp.xemacs.org/packages/mule-base-${MULE}-pkg.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ppc64"
-IUSE="gpm postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna  athena neXt Xaw3d berkdb"
+KEYWORDS="ppc"
+IUSE="gpm esd postgres xface nas X jpeg tiff png mule"
 
-# esound is know to cause problems in XEmacs
-#esd? ( media-sound/esound )
 RDEPEND="virtual/libc
 	!virtual/xemacs
 
-	berkdb? ( =sys-libs/db-1* >=sys-libs/gdbm-1.8.0 )
+	>=sys-libs/gdbm-1.8.0
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/openssl-0.9.6
 	>=media-libs/audiofile-0.2.3
 
 	gpm? ( >=sys-libs/gpm-1.19.6 )
-
 	postgres? ( >=dev-db/postgresql-7.2 )
-	ldap? ( net-nds/openldap )
 
 	nas? ( media-libs/nas )
+	esd? ( media-sound/esound )
 
-	dnd? ( x11-libs/dnd )
-
-	X? ( virtual/x11 )
-	motif? ( >=x11-libs/openmotif-2.1.30 )
-	athena? ( virtual/x11 )
-	Xaw3d? ( x11-libs/Xaw3d )
-	neXt? ( x11-libs/neXtaw )
+	X? ( virtual/x11 >=x11-libs/openmotif-2.1.30 )
 	xface? ( media-libs/compface )
 	tiff? ( media-libs/tiff )
 	png? ( =media-libs/libpng-1.2* )
-	jpeg? ( media-libs/jpeg )
-
-	canna? ( app-i18n/canna )
-	!amd64? ( freewnn? ( app-i18n/freewnn ) )"
+	jpeg? ( media-libs/jpeg )"
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
-PDEPEND="app-xemacs/xemacs-base
-	mule? app-xemacs/mule-base"
 PROVIDE="virtual/xemacs virtual/editor"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	unpack NeXT_XEmacs.tar.gz
 
 	cd ${S}
-	epatch ${FILESDIR}/emodules.info-21.4.8-gentoo.patch
+	epatch ${FILESDIR}/emodules.info-21.4.8-gentoo.patch || die
+	cp configure configure.orig
+	sed -e "s/test \"\$machine\$opsys\" = \"powerpclinux\" \&\& start_flags=\"-T \$srcdir\/src\/ppc.ldscript\"//g" configure.orig > configure
 
-	epatch ${FILESDIR}/quick-fix.patch
-	# copy Next_XEmacs icons into toolbar dir
-	cp ${WORKDIR}/NeXT.XEmacs/xemacs-icons/* ${S}/etc/toolbar/
+
 }
 
 src_compile() {
 	local myconf=""
 
-	if use X; then
-
-		myconf="--with-widgets=lucid"
-		myconf="${myconf} --with-dialogs=lucid"
-		myconf="${myconf} --with-scrollbars=lucid"
-		myconf="${myconf} --with-menubars=lucid"
-		if use motif ; then
-			myconf="--with-widgets=motif"
-			myconf="${myconf} --with-dialogs=motif"
-			myconf="${myconf} --with-scrollbars=motif"
-			myconf="${myconf} --with-menubars=lucid"
-		fi
-		if use athena ; then
-			myconf="--with-widgets=athena"
-			if use Xaw3d ; then
-				myconf="${myconf} --with-athena=xaw3d"
-			elif use neXt ; then
-				myconf="${myconf} --with-athena=next"
-			else
-				myconf="${myconf} --with-athena=3d"
-			fi
-			myconf="${myconf} --with-dialogs=athena"
-			myconf="${myconf} --with-scrollbars=lucid"
-			myconf="${myconf} --with-menubars=lucid"
-		fi
-
+	if use X;
+	then
 		myconf="${myconf}
+			--with-x
+			--with-xpm
+			--with-dragndrop
 			--with-gif=no"
-
-		use dnd && myconf="${myconf} --with-dragndrop --with-offix"
 
 		use tiff && myconf="${myconf} --with-tiff" ||
 			myconf="${myconf} --without-tiff"
@@ -106,6 +76,10 @@ src_compile() {
 		use xface && myconf="${myconf} --with-xface" ||
 			myconf="${myconf} --without-xface"
 
+		myconf="${myconf} --with-dialogs=lucid"
+		myconf="${myconf} --with-widgets=lucid"
+		myconf="${myconf} --with-scrollbars=lucid"
+		myconf="${myconf} --with-menubars=lucid"
 	else
 		myconf="${myconf}
 			--without-x
@@ -118,45 +92,24 @@ src_compile() {
 		myconf="${myconf} --without-gpm"
 	use postgres && myconf="${myconf} --with-postgresql" ||
 		myconf="${myconf} --without-postgresql"
-	use ldap && myconf="${myconf} --with-ldap" ||
-		myconf="${myconf} --without-ldap"
-
-	if use mule ; then
-		myconf="${myconf} --with-mule"
-		use motif && myconf="${myconf} --with-xim=motif" ||
-			myconf="${myconf} --with-xim=xlib"
-	        use canna && myconf="${myconf} --with-canna" ||
-	                myconf="${myconf} --without-canna"
-		use freewnn && myconf="${myconf} --with-wnn" ||
-	                myconf="${myconf} --without-wnn"
-	fi
+	use mule && myconf="${myconf} --with-mule" ||
+		myconf="${myconf} --without-mule"
 
 	local soundconf="native"
 
 	use nas	&& soundconf="${soundconf},nas"
+	use esd	&& soundconf="${soundconf},esd"
 
 	myconf="${myconf} --with-sound=${soundconf}"
 
-	local dbconf="gnudbm"
-	if use berkdb; then
-		myconf="${myconf} --with-database=${dbconf}"
-	else
-		myconf="${myconf} --without-database"
-	fi
-
-	# fixes #21264
-	use alpha && myconf="${myconf} --with-system-malloc"
-
-	use ppc64 && myconf="${myconf} --with-system-malloc"
-
 	./configure ${myconf} \
 		--prefix=/usr \
+		--with-database=gnudbm \
 		--with-pop \
 		--with-ncurses \
-		--with-msw=no \
-		--mail-locking=flock \
 		--with-site-lisp=yes \
-		--with-site-modules=yes \
+		--package-path=/usr/lib/xemacs/xemacs-packages/ \
+		--with-msw=no \
 		|| die
 
 	# emake dont work on faster boxes it seems
@@ -170,15 +123,17 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		install gzip-el || die
 
-	# install base packages directories
+	# install base packages
 	dodir /usr/lib/xemacs/xemacs-packages/
-	dodir /usr/lib/xemacs/site-packages/
-	dodir /usr/lib/xemacs/site-modules/
-	dodir /usr/lib/xemacs/site-lisp/
-
+	cd ${D}/usr/lib/xemacs/xemacs-packages/
+	unpack efs-${EFS}-pkg.tar.gz
+	unpack xemacs-base-${BASE}-pkg.tar.gz
+	# (optionally) install mule base package
 	if use mule;
 	then
 		dodir /usr/lib/xemacs/mule-packages
+		cd ${D}/usr/lib/xemacs/mule-packages/
+		unpack mule-base-${MULE}-pkg.tar.gz
 	fi
 
 	# remove extraneous files
