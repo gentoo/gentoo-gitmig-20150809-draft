@@ -844,6 +844,7 @@ sys-apps/texinfo
 # patch to support gcc3.1 -- masked until someone tests this with
 # gcc2.95.3 etc.
 =net-www/galeon-1.2.1-r2
+=net-www/galeon-1.2.2
 
 # mkennedy@gentoo.org 22 May 2002 
 # patch to support gcc3.1 and version bump -- masked until someone
