@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3781 2005/04/01 18:41:51 chriswhite Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3782 2005/04/02 00:57:58 latexer Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,21 @@
 ##
 ##   End example
 ##
+
+# Peter Johanson <latexer@gentoo.org> (31 Mar 2005)
+# Masking all 1.9* gtk-sharp release, which is the preview
+# of the gtk-sharp-2.0 stuff.
+=dev-dotnet/art-sharp-1.9*
+=dev-dotnet/gconf-sharp-1.9*
+=dev-dotnet/gda-sharp-1.9*
+=dev-dotnet/glade-sharp-1.9*
+=dev-dotnet/gnomedb-sharp-1.9*
+=dev-dotnet/gnome-sharp-1.9*
+=dev-dotnet/gnomevfs-sharp-1.9*
+=dev-dotnet/gtkhtml-sharp-1.9*
+=dev-dotnet/gtk-sharp-1.9*
+=dev-dotnet/rsvg-sharp-1.9*
+=dev-dotnet/vte-sharp-1.9*
 
 # Peter Johanson <latexer@gentoo.org> (31 Mar 2005)
 # Masking all 1.1* releases of mono and libgdiplus.
