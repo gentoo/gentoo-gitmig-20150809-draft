@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.9 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.10 2002/11/17 21:24:54 cretin Exp $
 
 MY_P="tcp_wrappers_${PV}"
 PATCH0="${MY_P}.dif"
@@ -24,12 +24,9 @@ src_unpack() {
 	patch -p0 < ${FILESDIR}/${PATCH2} || die
 	
 	cp Makefile Makefile.orig
-	sed -e "s/-O2/${CFLAGS}/" \
+	sed -e "s/-O2/${CFLAGS} -fPIC/" \
 		-e "s:AUX_OBJ=.*:AUX_OBJ= \\\:" Makefile.orig > Makefile
 
-	if [ ${ARCH} == "alpha" ]; then
-		patch -p1 < ${FILESDIR}/tcp_wrappers_7.6-alpha-fpic-fix.patch
-	fi
 }
 
 src_compile() {
