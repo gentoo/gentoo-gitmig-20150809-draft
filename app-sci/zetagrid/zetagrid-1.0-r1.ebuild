@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.0-r1.ebuild,v 1.4 2003/01/13 00:11:38 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.0-r1.ebuild,v 1.5 2003/01/13 00:13:42 tantive Exp $
 
 S=${WORKDIR}/zetagrid-${PV}
 DESCRIPTION="An open source and platform independent grid system"
@@ -14,7 +14,7 @@ RDEPEND="virtual/jre
 
 SLOT="0"
 LICENSE="unknown"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack zeta_base.zip zeta_linux_x86.zip zeta_progress.zip
