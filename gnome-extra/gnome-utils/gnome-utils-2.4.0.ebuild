@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.4.0.ebuild,v 1.9 2003/11/15 03:14:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.4.0.ebuild,v 1.10 2003/12/13 00:37:34 gmsoft Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE="ipv6"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc alpha sparc ~hppa amd64 ia64"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64"
 
 RDEPEND=">=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2.2
