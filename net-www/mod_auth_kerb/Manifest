@@ -1,5 +1,5 @@
-MD5 9d2bf83e6e2a73d3d7d6b10527a413b0 ChangeLog 344
-MD5 301aa0a984130d756c62b5766cfc46b1 mod_auth_kerb-4.11.ebuild 1074
 MD5 c9bbfd002811a674505b3844837a63ee files/11_mod_auth_kerb.conf 180
 MD5 7e465f540fb90976cd1c7959ae94e6ab files/digest-mod_auth_kerb-4.11 69
 MD5 05d525e36b7e86f564e3a15608eca8e4 files/mod_auth_kerb_register.patch 782
+MD5 a663df576b749c8790c6ac778db03067 mod_auth_kerb-4.11.ebuild 1081
+MD5 9d2bf83e6e2a73d3d7d6b10527a413b0 ChangeLog 344
