@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.16 2004/04/04 22:13:08 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.17 2004/04/09 00:17:07 lv Exp $
+
+*expect-5.40.0 (08 Apr 2004)
+
+  08 Apr 2004; Travis Tilley <lv@gentoo.org> expect-5.40.0.ebuild:
+  marked 5.40.0 as stable on amd64. it is required to fix a problem with the gcc
+  testsuite.
 
   04 Apr 2004; Chris Aniszczyk <zx@gentoo.org> expect-5.33.0.ebuild,
   expect-5.37.1.ebuild:
