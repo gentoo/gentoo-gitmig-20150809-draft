@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/bacula
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.4 2003/03/28 09:18:02 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.5 2003/06/12 03:54:00 woodchip Exp $
+
+*bacula-1.31 (11 Jun 2003)
+
+  11 Jun 2003; Donny Davies <woodchip@gentoo.org> bacula-1.31.ebuild,
+  files/bacula-init:
+  Update to latest release.  Thanks to Rob de Beir <wakunga@hotmail.com>
+  for fixing various bugs, including: #17059, #21607.
 
 *bacula-1.29 (29 Jan 2003)
 
