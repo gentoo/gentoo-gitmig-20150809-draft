@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P="SPE-0.5.1.d-wx2.4.2.4.-bl2.31"
 DESCRIPTION="Python IDE with Blender support"
