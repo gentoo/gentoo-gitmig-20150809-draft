@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 39bf16a3ad2b7ab26882c7e9cf1812e2 ChangeLog 2299
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3354c61c05b19a623a8412787cd6c8c6 pmud-0.10.1-r2.ebuild 1132
-MD5 fb5a8ae39f3ad79001ad22db75cf26f0 pmud-0.10.1-r3.ebuild 1191
-MD5 95db76bd46a8c38cbf64b5b1ec7b784a ChangeLog 2297
+MD5 6b3df3f114695ba9a40bf64bf5552c78 pmud-0.10.1-r2.ebuild 1134
+MD5 5fb762201efb8fdbc37dd5e8471a4939 pmud-0.10.1-r3.ebuild 1199
 MD5 48fb4abe41c2ce763a6de3b0f51621bc files/0.10.1-deb-fcntl.patch 855
 MD5 a57669b9dcce4c8408ff2843ae91d7b6 files/digest-pmud-0.10.1-r2 62
 MD5 a57669b9dcce4c8408ff2843ae91d7b6 files/digest-pmud-0.10.1-r3 62
@@ -14,10 +11,3 @@ MD5 a2e9444ece62d46547d95b5eb6631cfd files/pmud.start 567
 MD5 0b3d50c84748990675bd8da75fefa048 files/power.conf 1611
 MD5 e0fbd0593a8efc1b7ac0c9f542528a09 files/pwrctl 8421
 MD5 24099ac729124ead2fc05c6f280299d0 files/pwrctl-local 2733
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW0TtI1lqEGTUzyQRAiIhAJ9OLj5LghW2JGWxrY/wtrJ5tsD/awCg22w+
-EcZcukLXGbrCSlDdzLqDHjg=
-=tgYv
------END PGP SIGNATURE-----

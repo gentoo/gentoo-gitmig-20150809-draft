@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9e51f76e782c39f095f6495a2623c3d5 ChangeLog 1351
-MD5 af644724075c15da97a580f72d867602 lphdisk-0.9.1-r1.ebuild 935
-MD5 38cfd00e6a0e1d0380e53a518ab9df7b lphdisk-0.9.1.ebuild 822
+MD5 222ea5e5207833646122d4eadabfe20f ChangeLog 1353
+MD5 d88e37d9cc48ea0cc1b4f98a0682bf15 lphdisk-0.9.1-r1.ebuild 937
+MD5 0d53e21844e2e2b11d7a6354342348e5 lphdisk-0.9.1.ebuild 824
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 b2e9b7b29c9d01766a62fb786f08e03f files/digest-lphdisk-0.9.1 65
 MD5 b2e9b7b29c9d01766a62fb786f08e03f files/digest-lphdisk-0.9.1-r1 65
 MD5 7c50f50ecfb1e5fc612363f9dff0929e files/lphdisk-0.9.1-gcc3.patch 1564
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOqrVI1lqEGTUzyQRAtYPAJ9PphkPOgAfnafdf8hMQlikF/9BjACg2nfK
-s3lLMbDep+obuWVM41xSl5c=
-=9ovg
------END PGP SIGNATURE-----
