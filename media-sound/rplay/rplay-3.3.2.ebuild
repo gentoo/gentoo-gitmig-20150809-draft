@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2.ebuild,v 1.4 2003/09/07 00:06:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2.ebuild,v 1.5 2003/12/26 16:38:35 taviso Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Play sounds on remote Unix systems, without sending audio data over the network."
 HOMEPAGE="http://rplay.doit.org/"
@@ -22,19 +24,17 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${P}.tar.gz
-	epatch ${DISTDIR}/rplay_3.3.2-8.diff.gz
+	unpack ${A}
+	epatch ${WORKDIR}/rplay_3.3.2-8.diff
 }
 
 src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		--sysconfdir=/etc \
-		--enable-rplayd-user="rplayd" \
-		--enable-rplayd-group="rplayd" || die "./configure failed"
+
+	# fixing #36527
+	append-flags -include errno.h
+
+	econf	--enable-rplayd-user="rplayd" \
+			--enable-rplayd-group="rplayd" || die "./configure failed"
 
 	emake || die
 }
