@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.111 2005/02/03 15:38:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.112 2005/02/06 07:38:17 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -49,9 +49,6 @@ kde_src_unpack() {
 		debug-print "$FUNCNAME: touching .ui files..."
 		touch $UIFILES
 	fi
-
-	# shorthand for removing specified subdirectories fom the build process
-	[ -n "$KDE_REMOVE_DIR" ] && kde_remove_dir $KDE_REMOVE_DIR
 
 	# temp fix for bug #78720, until the real bug in gcc gets fixed
 	# briefly, -fvisibility-inlines-hidden is broken on amd64
