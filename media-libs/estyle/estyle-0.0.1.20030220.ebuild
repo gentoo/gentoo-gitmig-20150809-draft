@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/estyle/estyle-0.0.1.20030220.ebuild,v 1.3 2003/02/28 21:25:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/estyle/estyle-0.0.1.20030220.ebuild,v 1.4 2003/02/28 21:44:44 vapier Exp $
 
 DESCRIPTION="simple API for adding text to an evas with a stylized effect"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -14,8 +14,12 @@ IUSE="pic"
 
 DEPEND="virtual/glibc
 	sys-devel/gcc
+	>=media-libs/ebits-1.0.1.2003*
+	>=dev-db/edb-1.0.3.2003*
+	>=x11-libs/ecore-0.0.2.2003*
+	>=x11-libs/evas-1.0.0.2003*
 	>=dev-libs/ewd-0.0.1.2003*
-	>=x11-libs/evas-1.0.0.2003*"
+	>=media-libs/imlib2-1.0.6.2003*"
 
 S=${WORKDIR}/${PN}
 
