@@ -2,4 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>text-markup</herd>
+<maintainer>
+  <name>Jaromir Malenko</name>
+  <email>malenko@email.cz</email>
+  <description>This package is maintained by text-markup herd but
+  He helps us maintain the software. Without his knowledge of
+  Czech/Slovak, we couldn't keep cstetex in Portage ;-)</description>
+</maintainer>
 </pkgmetadata>

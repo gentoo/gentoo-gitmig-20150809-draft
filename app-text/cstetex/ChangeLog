@@ -1,6 +1,10 @@
 # ChangeLog for app-text/cstetex
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/ChangeLog,v 1.1 2003/11/12 19:51:41 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/ChangeLog,v 1.2 2004/02/01 15:31:07 usata Exp $
+
+  02 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> cstetex-2.0.2.ebuild,
+  metadata.xml:
+  Marked stable on x86
 
 *cstetex-2.0.2 (13 Nov 2003)
 
