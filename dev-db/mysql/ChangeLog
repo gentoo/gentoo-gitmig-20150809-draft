@@ -1,13 +1,20 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.47 2003/05/05 14:47:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.48 2003/05/10 01:16:27 robbat2 Exp $
 
+*mysql-4.0.12 (22 Mar 2003)
+
+  09 May 2003; Robin Johnson <robbat2@gentoo.org> mysql-4.0.12.ebuild,
+  file/rebuilder.sh:
+  Some users still complaining about rebuilder.sh not working. Adding
+  gentoolkit to DEPEND now.
+  rebuilder.sh has been modified to be significently faster and more accurate
+  now.
+  
   05 May 2003; Caleb Tennis <caleb@gentoo.org> files/rebuilder.sh:
   Fix bug #17723 by posting a note to the user that they need to have
   gentoolkit emerged before running this script.  Also fix bug #18605 by
   having the script scan the qt directory too.
-
-*mysql-4.0.12 (22 Mar 2003)
 
   22 Apr 2003; Robin Johnson <robbat2@gentoo.org> files/mysql-4.0.rc6,
   files/mysql.init:

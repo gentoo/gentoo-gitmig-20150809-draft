@@ -11,16 +11,15 @@ rm -f /tmp/${LINKED_WITH}.*
 echo "This might take a while ..."
 (
 	cd /
-	for i in `find . -regex './bin.*' \
-		-or -regex './lib.*' \
-		-or -regex './sbin.*' \
-		-or -regex './usr/bin.*' \
-		-or -regex './usr/sbin.*' \
-		-or -regex './usr/lib.*' \
-		-or -regex './usr/kde.*' \
-		-or -regex './usr/qt.*'`
+    # this is the list of locations to search
+    LIST="/bin /sbin /lib /var/qmail /var/vpopmail /usr/X11R6/bin /usr/X11R6/lib /usr/bin /usr/sbin /usr/lib /usr/local/bin /usr/local/sbin /usr/local/lib /usr/qt /usr/libexec /usr/e17 /usr/kde /usr/qt /usr/libexec"
+    # this is the list of limitations to apply to trim the input
+    LIMITS="-type f ! -fstype proc ! -fstype tmpfs ! -fstype devfs ! -fstype usbdevfs ! -fstype ramfs ! -fstype smbfs ! -fstype devpts ! -path tmp "
+    # this if any of these are true, then we want this file
+    WANTED="-perm +111 -or -name '*.so' -or -name '*.so.*' -or -name '*.a' -or -name '*.a.*'"
+   
+	for i in ` find $LIST \(  $WANTED \) $LIMITS 2>/dev/null | sort | uniq `
 	do
-	[ -x $i -a -f $i ] && {
 		ldd $i 2>/dev/null | grep ${LINKED_WITH} >/dev/null 2>&1
 		[ $? -eq 0 ] && {
 			qpkg -nc -f `echo $i | sed -e 's|^\.||'` >>/tmp/${LINKED_WITH}.pkgs
@@ -29,10 +28,9 @@ echo "This might take a while ..."
 			echo "---"
 			echo ""
 		}
-	}
 	done
 ) | sed -e "s|\(.*\)\(${LINKED_WITH}\)\(.*\)\(=>\)|-->\1\2\3\4|" >>/tmp/${LINKED_WITH}.hits
-
+    
 cat /tmp/${LINKED_WITH}.pkgs | sort | uniq | sed 's:\(.*/.*\)-[0-9]\+.*:\1:g' \
 	>>/tmp/${LINKED_WITH}.rebuildme
 
