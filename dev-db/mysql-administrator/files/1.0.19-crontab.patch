@@ -1,0 +1,12 @@
+diff -Nur mysql-administrator-1.0.19.orig/mysql-gui-common/source/linux/MCrontab.cc mysql-administrator-1.0.19/mysql-gui-common/source/linux/MCrontab.cc
+--- mysql-administrator-1.0.19.orig/mysql-gui-common/source/linux/MCrontab.cc	2005-01-11 20:02:31.429772354 +0100
++++ mysql-administrator-1.0.19/mysql-gui-common/source/linux/MCrontab.cc	2005-01-11 20:03:31.148873681 +0100
+@@ -222,7 +222,7 @@
+   if (!g_spawn_command_line_sync(cmdline, &stdout_text, &stderr_text, &exit_status,
+                                  &error) || exit_status != 0)
+   {
+-    if (!strstr(stderr_text, "no crontab"))
++    if (!stderr_text || !strstr(stderr_text, "no crontab"))
+     {
+       got_error= true;
+ 

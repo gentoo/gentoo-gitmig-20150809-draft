@@ -3,14 +3,17 @@ Hash: SHA1
 
 MD5 cdac1910ca6b13eb3840810c3d4e9120 mysql-administrator-1.0.19.ebuild 1254
 MD5 0fa8e25f3497c5ba30a37a02cb5e62fa mysql-administrator-1.0.18.ebuild 1256
-MD5 bc5475c3a54e42b82e623a1349f85439 ChangeLog 2790
+MD5 acc3aa3fddc85e728dc3e9aafae27e4f mysql-administrator-1.0.19-r1.ebuild 1345
+MD5 31921ad4c13fb1265ab6fb0a0ce87714 ChangeLog 3050
 MD5 970601ab1b0fc8165fea73976d248ead metadata.xml 739
+MD5 a45443f1ee23ab02f823a69b7e224154 files/1.0.19-crontab.patch 688
+MD5 4605762cb4c229f1c9b575bc0078a780 files/digest-mysql-administrator-1.0.19-r1 79
 MD5 1b5b12a185f5b22cc643375391eafb37 files/digest-mysql-administrator-1.0.18 79
 MD5 4605762cb4c229f1c9b575bc0078a780 files/digest-mysql-administrator-1.0.19 79
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB46HdI1lqEGTUzyQRAlXkAJ9lWfqj2+9Vg54zu2xQO4qGNvonmwCeJnE4
-UKArIisAIS29sKpt7XWFkgg=
-=oOC0
+iD8DBQFB5CkzI1lqEGTUzyQRAqRLAJ4hrsuW40efD0jApyfVg9AsHKOYhACdHWwg
+DqfY5/pDKUYK10615f5ZUG8=
+=poWS
 -----END PGP SIGNATURE-----
