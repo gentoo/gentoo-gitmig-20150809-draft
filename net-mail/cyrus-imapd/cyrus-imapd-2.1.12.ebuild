@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.12.ebuild,v 1.1 2003/02/07 20:06:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.12.ebuild,v 1.2 2003/02/07 20:08:23 raker Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	kerberos? ( virtual/krb5 )
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
-	>=dev-libs/cyrus-sasl-2.1.2
+	>=dev-libs/cyrus-sasl-2.1.12
 	>=sys-apps/tcp-wrappers-7.6
 	net-mail/mailbase"
 
