@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.8-r1.ebuild,v 1.5 2000/10/23 11:27:17 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.8-r1.ebuild,v 1.6 2000/10/28 04:17:42 drobbins Exp $
 
 P=gtk+-1.2.8
 A=${P}.tar.gz
@@ -12,8 +12,7 @@ HOMEPAGE="http://www.gtk.org"
 
 src_compile() {
   cd ${S}                           
-  try ./configure --host=${CHOST} --prefix=/usr/X11R6 --sysconfdir=/etx/X11 \
-		--with-xinput=xfree --with-catgets --with-x
+  try ./configure --host=${CHOST} --prefix=/usr/X11R6 --infodir=/usr/info --sysconfdir=/etc/X11 --with-xinput=xfree --with-catgets --with-x
   try make
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-0.32.ebuild,v 1.1 2000/10/28 03:56:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-0.32.ebuild,v 1.2 2000/10/28 04:17:42 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -18,11 +18,12 @@ src_compile() {
   	cd ${S}
  	if [ -n "`use gnome`" ]
 	then
-  		try ./configure --host=${CHOST} --prefix=/usr/X11R6 --with-audiofile --with-esd --with-gnome-prefix=/opt/gnome
+  		try ./configure --host=${CHOST} --prefix=/usr/X11R6 --infodir=/usr/info --with-audiofile --with-esd --with-gnome-prefix=/opt/gnome
 	else
-		try ./configure --host=${CHOST} --prefix=/usr/X11R6 --with-audiofile --with-esd 
+		try ./configure --host=${CHOST} --prefix=/usr/X11R6 --infodir=/usr/info --with-audiofile --with-esd 
 	fi	
-	try pmake
+	#pmake doesn't work, stick with make
+	try make
 }
 
 src_install() {                               
