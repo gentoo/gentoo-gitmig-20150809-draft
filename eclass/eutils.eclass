@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.115 2004/10/06 06:20:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.116 2004/10/07 06:02:39 eradicator Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1526,5 +1526,6 @@ preserve_old_lib_notify() {
 		einfo "  revdep-rebuild --soname ${SONAME}"
 		einfo
 		einfo "After doing that, you can safely remove ${LIB}"
+		einfo "Note: 'emerge gentoolkit' to get revdep-rebuild"
         fi
 }
