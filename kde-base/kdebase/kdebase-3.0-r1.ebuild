@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0-r1.ebuild,v 1.1 2002/04/09 08:50:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0-r1.ebuild,v 1.2 2002/04/12 13:31:28 seemant Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist
 
@@ -12,7 +12,7 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	pam? ( >=sys-libs/pam-0.73 )
 	motif? ( >=x11-libs/openmotif-2.1.30 )
 	lame? ( >=media-sound/lame-3.89b )
-	vorbis? ( >=media-libs/libvorbis-1.0_beta1 )
+	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )
 	cups? ( net-print/cups )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	media-sound/cdparanoia
@@ -36,7 +36,7 @@ src_compile() {
     use motif	&& myconf="$myconf --with-motif"	|| myconf="$myconf --without-motif"
     use lame	&& myconf="$myconf --with-lame"		|| myconf="$myconf --without-lame"
     use cups	&& myconf="$myconf --with-cups"		|| myconf="$myconf --disable-cups"
-    use vorbis	&& myconf="$myconf --with-vorbis"	|| myconf="$myconf --without-vorbis"
+    use oggvorbis && myconf="$myconf --with-vorbis"	|| myconf="$myconf --without-vorbis"
     use opengl	&& myconf="$myconf --with-gl"		|| myconf="$myconf --without-gl"
     use ssl	&& myconf="$myconf --with-ssl"		|| myconf="$myconf --without-ssl"
     use pam	&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"

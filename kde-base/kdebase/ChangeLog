@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.5 2002/04/09 08:50:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.6 2002/04/12 13:31:28 seemant Exp $
+
+*kdebase-3.0-r1 (12 Apr 2002)
+
+  12 Apr 2002;  Seemant Kulleen <seemant@gentoo.org> kdebase-3.0-r1.ebuild
+  kdebase-3.0.ebuild kdebase-2.2.2-r2.ebuild :
+
+  Changed the vorbis USE flag to oggvorbis.
 
 *kdebase-3.0-r1 (9 Apr 2002)
 
