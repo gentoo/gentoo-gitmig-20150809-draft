@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.1.ebuild,v 1.6 2003/02/25 15:58:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.1.ebuild,v 1.7 2003/03/13 19:24:11 doctomoe Exp $
 
 inherit libtool
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gtk.org/"
 
 SLOT="2"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc ~sparc alpha arm hppa"
+KEYWORDS="x86 ppc ~sparc alpha arm hppa"
 
 DEPEND=">=dev-util/pkgconfig-0.14.0
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
