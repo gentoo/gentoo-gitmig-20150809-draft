@@ -1,0 +1,17 @@
+# a cut down version of /etc/termcap: terminal capability database.
+# Just define linux console
+
+linux|console|con80x25|dumb:\
+	:do=^J:co#80:li#25:cl=\E[H\E[J:sf=\ED:sb=\EM:\
+	:le=^H:bs:am:cm=\E[%i%d;%dH:nd=\E[C:up=\E[A:\
+	:ce=\E[K:cd=\E[J:so=\E[7m:se=\E[27m:us=\E[4m:ue=\E[m:\
+	:md=\E[1m:mr=\E[7m:mb=\E[5m:me=\E[m:is=\E[1;25r\E[25;1H:\
+	:ll=\E[1;25r\E[25;1H:al=\E[L:dc=\E[P:dl=\E[M:\
+	:it#8:ku=\E[A:kd=\E[B:kr=\E[C:kl=\E[D:kb=^H:ti=\E[r\E[H:\
+	:ho=\E[H:kP=\E[5~:kN=\E[6~:kH=\E[4~:kh=\E[1~:kD=\E[3~:kI=\E[2~:\
+	:k1=\E[[A:k2=\E[[B:k3=\E[[C:k4=\E[[D:k5=\E[[E:k6=\E[17~:\
+	:k7=\E[18~:k8=\E[19~:k9=\E[20~:k0=\E[21~:K1=\E[1~:K2=\E[5~:\
+	:K4=\E[4~:K5=\E[6~:\
+	:pt:sr=\EM:vt#3:xn:km:bl=^G:vi=\E[?25l:ve=\E[?25h:vs=\E[?25h:\
+	:sc=\E7:rc=\E8:cs=\E[%i%d;%dr:\
+	:r1=\Ec:r2=\Ec:r3=\Ec:
