@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.2.0.ebuild,v 1.13 2004/10/01 20:36:57 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.2.0.ebuild,v 1.14 2005/01/03 09:36:16 corsair Exp $
 
 DESCRIPTION="The RDF Parser Toolkit"
 HOMEPAGE="http://www.redland.opensource.ac.uk/raptor/"

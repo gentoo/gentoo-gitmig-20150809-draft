@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblrdf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.17 2004/10/01 20:45:30 kito Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.18 2005/01/03 09:37:06 corsair Exp $
+
+  03 Jan 2005; Markus Rothe <corsair@gentoo.org> liblrdf-0.3.7.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   01 Oct 2004; kito@gentoo.org liblrdf-0.3.7.ebuild:
   added ~ppc-macos
