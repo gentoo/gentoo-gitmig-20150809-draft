@@ -1,6 +1,13 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.1 2002/02/01 21:53:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.2 2002/03/13 09:48:44 seemant Exp $
+
+*sablotron-0.90 (12 Mar 2002)
+
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sablotron-0.90.ebuild :
+
+  Upgraded version from 0.81.  Updated the copyright info, changed try blocks to
+  death blocks, added documentation and removed unnecessary dodir statements.  
 
 *sablotron-0.81 (1 Feb 2002)
 
