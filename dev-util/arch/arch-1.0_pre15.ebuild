@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/dev-util/arch/arch-1.0_pre15.ebuild,v 1.3 2002/07/23 10:38:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/arch/arch-1.0_pre15.ebuild,v 1.4 2002/08/16 04:04:41 murphy Exp $
 
 MY_P="${P//_/}"
 S="${WORKDIR}/${MY_P}/src/=build"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.regexps.com/arch.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="sys-apps/diffutils
 	sys-apps/fileutils

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.5.3.ebuild,v 1.8 2002/07/27 10:44:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.5.3.ebuild,v 1.9 2002/08/16 04:04:42 murphy Exp $
 
 # 1.2.5 version links against KDE3
 MY_PV=1.2.5
@@ -21,6 +21,6 @@ export LIBQTMT="-lqt-mt"
 
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 RDEPEND=">=sys-devel/gdb-5.0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/sel-0.08.2.ebuild,v 1.6 2002/07/23 13:28:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/sel-0.08.2.ebuild,v 1.7 2002/08/16 04:04:42 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A filemanager for shell scripts"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.rhein-neckar.de/~darkstar/sel.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=sys-libs/ncurses-5.1"
 

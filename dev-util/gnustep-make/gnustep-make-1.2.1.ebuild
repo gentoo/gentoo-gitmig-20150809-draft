@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.2.1.ebuild,v 1.4 2002/07/25 13:58:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.2.1.ebuild,v 1.5 2002/08/16 04:04:41 murphy Exp $
 
 DESCRIPTION="GNUstep makefile package (stable)"
 HOMEPAGE="http://www.gnustep.org"
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 	>=x11-wm/WindowMaker-0.80.1"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	./configure \

@@ -9,7 +9,7 @@ HOMEPAGE="http://www.theleaf.be/projects/qtunit"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="=x11-libs/qt-3*"
 	

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.8 2002/08/13 11:57:45 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.9 2002/08/16 04:04:42 murphy Exp $
 
 inherit kde-base
 need-kde 3
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 
 DEPEND="$DEPEND

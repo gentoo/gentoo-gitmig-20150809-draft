@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-0.9.90.ebuild,v 1.2 2002/07/23 13:28:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-0.9.90.ebuild,v 1.3 2002/08/16 04:04:42 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Graphical CVS Client"
@@ -8,7 +8,7 @@ SRC_URI="http://ppprs1.phy.tu-dresden.de/~trogisch/${PN}/download/LINCVS/${P}/${
 HOMEPAGE="http://www.lincvs.org"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 LICENSE="GPL-2"
 
 DEPEND="kde? ( =kde-base/kdelibs-2* )

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/sashxb-1.0.2.ebuild,v 1.2 2002/07/23 13:28:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/sashxb-1.0.2.ebuild,v 1.3 2002/08/16 04:04:42 murphy Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -10,7 +10,7 @@ SRC_URI="http://oss.software.ibm.com/developerworks/opensource/sashxb/download/r
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 RDEPEND=">=net-www/mozilla-1.0
 	>=dev-libs/gdome2-0.7

@@ -6,7 +6,7 @@ HOMEPAGE="http://www.ardiri.com/index.php?redir=palm&cat=pilrc"
 SRC_URI="http://www.ardiri.com/download/files/palm/pilrc_src.tgz"
 SLOT="0"
 LICENSE="GPL"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	cd ${S}
