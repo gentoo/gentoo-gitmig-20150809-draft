@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r2.ebuild,v 1.10 2002/12/09 04:17:36 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r2.ebuild,v 1.11 2002/12/17 21:20:03 vapier Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
@@ -16,9 +16,6 @@ DEPEND="=sys-libs/db-1*
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2
 	>=media-libs/libgd-1.8.3"
-
-APACHE_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
-[ -z "${APACHE_ROOT}" ] && APACHE_ROOT="/home/httpd/htdocs"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -44,9 +41,8 @@ src_install() {
 	newins ${FILESDIR}/webalizer-${PV}.conf webalizer.conf
 	insinto /etc/apache/conf/addon-modules
 	doins ${FILESDIR}/apache.webalizer
-	dosed "s:/home/httpd/htdocs:${APACHE_ROOT}:" /etc/apache/conf/addon-modules/apache.webalizer
 	dodoc README* CHANGES COPYING Copyright sample.conf
-	dodir ${APACHE_ROOT}/webalizer
+	dodir /home/httpd/htdocs/webalizer
 }
 
 pkg_postinst() {
