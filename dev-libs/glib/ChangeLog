@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.115 2004/12/22 01:27:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.116 2004/12/23 20:08:56 gmsoft Exp $
+
+  23 Dec 2004; Guy Martin <gmsoft@gentoo.org> glib-2.4.8.ebuild:
+  Stable on hppa.
 
   21 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> glib-2.4.8.ebuild:
   Stable on sparc
