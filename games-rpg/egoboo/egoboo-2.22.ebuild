@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.11 2004/07/01 11:22:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.12 2004/09/25 07:41:11 vapier Exp $
 
 inherit eutils flag-o-matic games gcc
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}
 
 src_unpack() {
-	replace-cpu-flags i686 'athlon*' pentium4
+	replace-cpu-flags 'athlon*' pentium4 i686
 
 	unpack ${A}
 	cd ${S}
