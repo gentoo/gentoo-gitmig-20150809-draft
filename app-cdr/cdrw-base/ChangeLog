@@ -1,0 +1,9 @@
+# ChangeLog for app-cdr/cdrw-base
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrw-base/ChangeLog,v 1.1 2003/09/22 21:04:50 spider Exp $
+
+*cdrw-base-0.1 (22 Sep 2003)
+  22 Sep 2003; Spider <spider@gentoo.org> *
+  initial build to make system configurations that allow users who are members of the group
+  cdrw access cd recording devices
+
