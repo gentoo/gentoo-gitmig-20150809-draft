@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.6 2004/06/30 17:09:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.7 2004/07/03 00:21:35 lu_zero Exp $
 
-inherit eutils
+inherit eutils libtool
 
 MY_P="hfsplus_${PV}"
 DESCRIPTION="HFS+ Filesystem Access Utilities (a PPC filesystem)"
@@ -17,23 +17,29 @@ IUSE=""
 DEPEND="sys-devel/autoconf
 	sys-devel/automake
 	app-arch/bzip2"
-RDEPEND=""
+RDEPEND="virtual/libc"
 
 S=${WORKDIR}/hfsplus-${PV}
-
-MAKEOPTS='PREFIX=/usr MANDIR=/usr/share/man'
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/hfsplusutils-1.0.4-glob.patch
 	epatch ${FILESDIR}/hfsplusutils-1.0.4-errno.patch
+	#let's avoid the Makefile.cvs since isn't working for us
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.6
+	aclocal
+	autoconf
+	autoheader
+	automake -a
+	libtoolize
+	elibtoolize
 }
 
 src_compile() {
-	# This does a autoconf, automake, etc.
 	export WANT_AUTOCONF=2.5
-	emake -f Makefile.cvs all || die
+	export WANT_AUTOMAKE=1.6
 	econf || die
 	emake || die
 }
