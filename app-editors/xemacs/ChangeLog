@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.5 2002/04/15 07:42:02 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.6 2002/04/16 05:21:16 mkennedy Exp $
+
+*xemacs-21.4.6-r3 (15 Apr 2002)
+
+  15 Apr 2002: Matthew Kennedy <mkennedy@gentoo.org>
+  xemacs-21.4.6-r3.ebuild, ChangeLog files/digest-xemacs-21.4.6-r3,
+  files/emodules.info-gentoo.patch :
+
+  Fixes annoying emodules.info not having a place in the info dir
+  (resolves bug #1792).
 
 *xemacs-21.4.6-r2 (15 Apr 2002)
 
