@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.4.ebuild,v 1.3 2004/05/10 04:17:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.4.ebuild,v 1.4 2004/05/30 19:15:35 g2boojum Exp $
 
-IUSE="debug ipv6 ldap maildir pam postgres sasl ssl vpopmail nopop3d"
+IUSE="debug gnutls ipv6 ldap maildir pam postgres sasl ssl vpopmail nopop3d"
 
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
 HOMEPAGE="http://dovecot.procontrol.fi/"
@@ -103,14 +103,14 @@ src_install () {
 	newexe ${FILESDIR}/dovecot.init dovecot
 
 	# PAM
-	if [ "`use pam`" ]; then
+	if use pam ; then
 		dodir /etc/pam.d
 		insinto /etc/pam.d
 		newins ${FILESDIR}/dovecot.pam dovecot
 	fi
 
 	# Create SSL certificates
-	if [ "`use ssl`" || "`use gnutls`" ]; then
+	if  use ssl || use gnutls ; then
 		cd ${S}/doc
 		dodir /etc/ssl/certs
 		dodir /etc/ssl/private
@@ -127,7 +127,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	if [ "`use pam`" ]; then
+	if use pam ; then
 		ewarn "If you are upgrading from Dovecot prior to 0.99.10, be aware"
 		ewarn "that the PAM profile was changed from 'imap' to 'dovecot'."
 		einfo "Please review /etc/pam.d/dovecot."
