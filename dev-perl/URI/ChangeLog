@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.21 2004/05/12 04:54:28 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.22 2004/06/10 19:58:27 mcummings Exp $
+
+*URI-1.30 (10 Jun 2004)
+
+  10 Jun 2004; Michael Cummings <mcummings@gentoo.org> URI-1.30.ebuild:
+  new version on cpan
 
   12 May 2004; Michael McCabe <randy@gentoo.org> URI-1.28.ebuild:
   Added s390 keywords
