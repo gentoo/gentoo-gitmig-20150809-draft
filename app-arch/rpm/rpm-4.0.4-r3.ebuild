@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r3.ebuild,v 1.4 2002/09/16 00:42:32 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r3.ebuild,v 1.5 2002/09/16 16:05:48 bjb Exp $
 
 # note to self: check for java deps
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.rpm.org/"
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 RDEPEND="=sys-libs/db-3.2*
 	>=sys-libs/zlib-1.1.3

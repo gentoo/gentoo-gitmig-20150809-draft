@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r12.ebuild,v 1.1 2002/09/14 12:42:59 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r12.ebuild,v 1.2 2002/09/16 16:05:48 bjb Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -63,7 +63,7 @@ HOMEPAGE="http://www.vim.org/"
 
 SLOT="0"
 LICENSE="vim"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="=app-editors/vim-core-6.1
 	dev-util/cscope
