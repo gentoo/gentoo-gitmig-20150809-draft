@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/goats
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/goats/ChangeLog,v 1.9 2004/06/24 22:20:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/goats/ChangeLog,v 1.10 2004/08/23 10:02:20 foser Exp $
+
+  23 Aug 2004; foser <foser@gentoo.org> goats-2.2.ebuild :
+  Fix gtk+-2.4 issue (#61303)
 
   20 Jun 2004; Ian Leitch <port001@gentoo.org> goats-2.0.ebuild,
   goats-2.2.ebuild:

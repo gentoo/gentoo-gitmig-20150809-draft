@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/goats/goats-2.2.ebuild,v 1.8 2004/06/24 22:20:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/goats/goats-2.2.ebuild,v 1.9 2004/08/23 10:02:20 foser Exp $
 
 inherit gnome2
 
@@ -24,3 +24,5 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21"
 
 DOCS="ABOUT-NLS AUTHORS BUGS ChangeLog NEWS COPYING README TODO"
+
+CFLAGS="${CFLAGS} -UGTK_DISABLE_DEPRECATED -UGNOME_DISABLE_DEPRECATED"
