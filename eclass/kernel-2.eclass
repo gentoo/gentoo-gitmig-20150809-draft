@@ -1,11 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.92 2005/02/07 23:19:33 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.93 2005/02/08 19:41:42 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
 #
 # Maintainer: John Mylchreest <johnm@gentoo.org>
+# Copyright 2005 Gentoo Linux
 #
 # Please direct your bugs to the current eclass maintainer :)
 
@@ -15,6 +16,10 @@
 # A Couple of env vars are available to effect usage of this eclass
 # These are as follows:
 #
+# K_USEPV				- When setting the EXTRAVERSION variable, it should
+#						  add PV to the end.
+#						  this is useful for thigns like wolk. IE:
+#						  EXTRAVERSION would be something like : -wolk-4.19-r1
 # K_NOSETEXTRAVERSION	- if this is set then EXTRAVERSION will not be
 #						  automatically set within the kernel Makefile
 # K_NOUSENAME			- if this is set then EXTRAVERSION will not include the
@@ -22,7 +27,7 @@
 # K_PREPATCHED			- if the patchset is prepatched (ie: mm-sources,
 #						  ck-sources, ac-sources) it will use PR (ie: -r5) as
 #						  the patchset version for
-#						- and not use it as a true package revision
+#						  and not use it as a true package revision
 # K_EXTRAEINFO			- this is a new-line seperated list of einfo displays in
 #						  postinst and can be used to carry additional postinst
 #						  messages
@@ -46,7 +51,8 @@
 inherit toolchain-funcs versionator multilib
 ECLASS="kernel-2"
 INHERITED="$INHERITED $ECLASS"
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install \
+	pkg_preinst pkg_postinst
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
@@ -59,71 +65,41 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 
 # set LINUX_HOSTCFLAGS if not already set
-[ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
+[ -z "$LINUX_HOSTCFLAGS" ] && \
+	LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
 
 #Eclass functions only from here onwards ...
 #==============================================================
 kernel_is() {
-	# And lets add a sanity check
-	[ -z "${KV_FULL}" ] && return 1	
+	[[ -z ${KV_FULL} ]] && return 1	
+	local operator test value x=0 y=0 z=0
 
-        local RESULT operator test value i len
-        RESULT=0
+	case ${1} in
+	  lt) operator="-lt"; shift;;
+	  gt) operator="-gt"; shift;;
+	  le) operator="-le"; shift;;
+	  ge) operator="-ge"; shift;;
+	  eq) operator="-eq"; shift;;
+	   *) operator="-eq";;
+	esac
 
-        operator="="
-        if [ "${1}" == "lt" ]
-        then
-                operator="-lt"
-                shift
-        elif [ "${1}" == "gt" ]
-        then
-                operator="-gt"
-                shift
-        elif [ "${1}" == "le" ]
-        then
-                operator="-le"
-                shift
-        elif [ "${1}" == "ge" ]
-        then
-                operator="-ge"
-                shift
-        fi
+	for x in ${@}; do
+		for((y=0; y<$((3 - ${#x})); y++)); do value="${value}0"; done
+		value="${value}${x}"
+		z=$((${z} + 1))
+		
+		case ${z} in
+		  1) for((y=0; y<$((3 - ${#KV_MAJOR})); y++)); do test="${test}0"; done;
+			 test="${test}${KV_MAJOR}";;
+		  2) for((y=0; y<$((3 - ${#KV_MINOR})); y++)); do test="${test}0"; done;
+			 test="${test}${KV_MINOR}";;
+		  3) for((y=0; y<$((3 - ${#KV_PATCH})); y++)); do test="${test}0"; done;
+			 test="${test}${KV_PATCH}";;
+		  *) die "Error in kernel-2_kernel_is(): Too many parameters.";;
+		esac
+	done
 
-        if [ -n "${1}" ]
-        then
-                value="${value}${1}"
-                test="${test}${KV_MAJOR}"
-        fi
-        if [ -n "${2}" ]
-        then
-                len=$[ 3 - ${#2} ]
-                for((i=0; i<$len; i++)); do
-                        value="${value}0"
-                done
-                value="${value}${2}"
-
-                len=$[ 3 - ${#KV_MINOR} ]
-                for((i=0; i<$len; i++)); do
-                        test="${test}0"
-                done
-                test="${test}${KV_MINOR}"
-        fi
-        if [ -n "${3}" ]
-        then
-                len=$[ 3 - ${#3} ]
-                for((i=0; i<$len; i++)); do
-                        value="${value}0"
-                done
-                value="${value}${3}"
-
-                len=$[ 3 - ${#KV_PATCH} ]
-                for((i=0; i<$len; i++)); do
-                        test="${test}0"
-                done
-                test="${test}${KV_PATCH}"
-        fi
-
-        [ ${test} ${operator} ${value} ] && return 0 || return 1
+	[ ${test} ${operator} ${value} ] && return 0 || return 1
 }
 
 
@@ -144,25 +120,21 @@ kernel_header_destdir() {
 }
 
 # Capture the sources type and set DEPENDs
-if [ "${ETYPE}" == "sources" ]
+if [[ ${ETYPE} == sources ]]
 then
-	# binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
-		>=sys-devel/binutils-2.11.90.0.31 )
-		doc? ( app-text/docbook-sgml-utils )"
+					  >=sys-devel/binutils-2.11.90.0.31 )
+			doc? ( app-text/docbook-sgml-utils )"
 	RDEPEND="${DEPEND}
-		!build? ( >=sys-libs/ncurses-5.2
-		dev-lang/perl
-		virtual/modutils
-		sys-devel/make )"
+			!build? ( >=sys-libs/ncurses-5.2
+					  sys-devel/make )"
 
 	PROVIDE="virtual/linux-sources"
 	kernel_is gt 2 4 && PROVIDE="${PROVIDE} virtual/alsa"
-		
 	SLOT="${PVR}"
 	DESCRIPTION="Sources for the Linux kernel"
 	IUSE="${IUSE} symlink build doc"
-elif [ "${ETYPE}" == "headers" ]
+elif [[ ${ETYPE} == headers ]]
 then
 	DESCRIPTION="Linux system headers"
 	IUSE="${IUSE}"
@@ -177,7 +149,7 @@ then
 	fi
 else
 	eerror "Unknown ETYPE=\"${ETYPE}\", must be \"sources\" or \"headers\""
-	die
+	die "Unknown ETYPE=\"${ETYPE}\", must be \"sources\" or \"headers\""
 fi
 
 # Unpack functions
@@ -192,15 +164,10 @@ unpack_2_4() {
 }
 
 universal_unpack() {
-	[ -z "${OKV}" ] && OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
-
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
-	if [ "${OKV}" != "${KV_FULL}" ]
-	then
-		mv linux-${OKV} linux-${KV_FULL} \
+	[[ ${OKV} != ${KV_FULL} ]] && mv linux-${OKV} linux-${KV_FULL} \
 			|| die "Unable to move source tree to ${KV_FULL}."
-	fi
 	cd ${S}
 
 	# change incorrect install path
@@ -209,22 +176,22 @@ universal_unpack() {
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2> /dev/null
 
-	if [ -d "${S}/Documentation/DocBook" ]
-	then
+	if [[ -d ${S}/Documentation/DocBook ]]; then
 		cd ${S}/Documentation/DocBook
-		sed -e "s:db2:docbook2:g" Makefile > Makefile.new \
-			&& mv Makefile.new Makefile
-		cd ${S}
+		sed -ie "s:db2:docbook2:g" Makefile
+		cd ${OLDPWD}
 	fi
+
 	# fix a problem on ppc where TOUT writes to /usr/src/linux breaking sandbox
 	use ppc && \
-	sed -ie 's|TOUT	:= .tmp_gas_check|TOUT	:= $(T).tmp_gas_check|' \
-	${S}/arch/ppc/Makefile
+		sed -ie 's|TOUT	:= .tmp_gas_check|TOUT	:= $(T).tmp_gas_check|' \
+		${S}/arch/ppc/Makefile
 }
 
 unpack_set_extraversion() {
 	cd ${S}
 	sed -ie "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" Makefile
+	cd ${OLDPWD}
 }
 
 # Compile Functions
@@ -241,13 +208,13 @@ compile_headers() {
 	# When cross-compiling, we need to set the ARCH/CROSS_COMPILE 
 	# variables properly or bad things happen !
 	local xmakeopts="ARCH=${KARCH}"
-	if [[ ${CTARGET} != ${CHOST} ]] ; then
+	if [[ ${CTARGET} != ${CHOST} ]]; then
 		xmakeopts="${xmakeopts} CROSS_COMPILE=${CTARGET}-"
 	elif type -p ${CHOST}-ar ; then
 		xmakeopts="${xmakeopts} CROSS_COMPILE=${CHOST}-"
 	fi
 
-	if kernel_is 2 4 ; then
+	if kernel_is 2 4; then
 		yes "" | make oldconfig ${xmakeopts}
 		echo ">>> make oldconfig complete"
 		use sparc && make dep ${xmakeopts}
@@ -280,6 +247,7 @@ install_universal() {
 	cd ${WORKDIR}
 	chown -R root:root *
 	chmod -R a+r-w+X,u+w *
+	cd ${OLDPWD}
 }
 
 install_headers() {
@@ -291,7 +259,7 @@ install_headers() {
 	rm -rf ${D}/${ddir}/linux/modules
 	dodir ${ddir}/asm
 
-	if [[ $(tc-arch-kernel) == "sparc64" ]] ; then
+	if [[ $(tc-arch-kernel) == "sparc64" ]]; then
 		rm -Rf ${D}/${ddir}/asm
 		dodir ${ddir}/asm-sparc
 		dodir ${ddir}/asm-sparc64
@@ -299,7 +267,7 @@ install_headers() {
 		cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
 		#generate_sparc_asm ${D}/usr/include
 		create_ml_includes /usr/include/asm __sparc__:/usr/include/asm-sparc __sparc64__:/usr/include/asm-sparc64
-	elif [[ $(tc-arch-kernel) == "x86_64" ]] ; then
+	elif [[ $(tc-arch-kernel) == "x86_64" ]]; then
 		rm -Rf ${D}/${ddir}/asm
 		dodir ${ddir}/asm-i386
 		dodir ${ddir}/asm-x86_64
@@ -311,26 +279,24 @@ install_headers() {
 		cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
 	fi
 
-	if kernel_is 2 6 ; then
+	if kernel_is 2 6; then
 		dodir ${ddir}/asm-generic
 		cp -ax ${S}/include/asm-generic/* ${D}/${ddir}/asm-generic
 	fi
+	cd ${OLDPWD}
 }
 
 install_sources() {
-	local doc
-	local docs
-	local file
+	local doc docs file
 
 	cd ${S}
 	dodir /usr/src
 	echo ">>> Copying sources ..."
+
 	file="$(find ${WORKDIR} -iname "docs" -type d)"
-	if [ -n "${file}" ]
-	then
-		for file in $(find ${file} -type f)
-		do
-			echo "${file/*docs\//}" >> ${S}/patches.txt
+	if [[ -n ${file} ]]; then
+		for file in $(find ${file} -type f); do
+			echo "${file//*docs\/}" >> ${S}/patches.txt
 			echo "===================================================" >> ${S}/patches.txt
 			cat ${file} >> ${S}/patches.txt
 			echo "===================================================" >> ${S}/patches.txt
@@ -338,24 +304,25 @@ install_sources() {
 		done
 	fi
 
-	if [ ! -f ${S}/patches.txt ]
-	then
+	if [[ ! -f ${S}/patches.txt ]]; then
 		# patches.txt is empty so lets use our ChangeLog
-		[ -f ${FILESDIR}/../ChangeLog ] && echo "Please check the ebuild ChangeLog for more details." > ${S}/patches.txt
+		[[ -f ${FILESDIR}/../ChangeLog ]] && \
+			echo "Please check the ebuild ChangeLog for more details." \
+			> ${S}/patches.txt
 	fi
 
-	for doc in ${UNIPATCH_DOCS}
-	do
-		[ -f ${doc} ] && docs="${docs} ${doc}"
+	for doc in ${UNIPATCH_DOCS}; do
+		[[ -f ${doc} ]] && docs="${docs} ${doc}"
 	done
 
-	if [ -f ${S}/patches.txt ]; then
+	if [[ -f ${S}/patches.txt ]]; then
 		docs="${docs} ${S}/patches.txt"
 	fi
 
-	if use doc && ! use arm && ! use s390; then
+	use doc && \
+	! use arm && \
+	! use s390 && \
 		install_manpages
-	fi
 	
 	dodoc ${docs}
 	mv ${WORKDIR}/linux* ${D}/usr/src
@@ -386,7 +353,7 @@ postinst_sources() {
 	use symlink && K_SYMLINK=1
 
 	# if we are to forcably symlink, delete it if it already exists first.
-	if [[ -n ${K_SYMLINK} ]] ; then
+	if [[ -n ${K_SYMLINK} ]]; then
 		[[ -h ${ROOT}usr/src/linux ]] && rm ${ROOT}usr/src/linux
 		MAKELINK=1
 	fi
@@ -394,15 +361,15 @@ postinst_sources() {
 	# if the link doesnt exist, lets create it
 	[[ ! -h ${ROOT}usr/src/linux ]] && MAKELINK=1
 	
-	if [[ ${MAKELINK} == 1 ]]
-	then
+	if [[ ${MAKELINK} == 1 ]]; then
 		cd ${ROOT}usr/src
 		ln -sf linux-${KV_FULL} linux
 		cd ${OLDPWD}
 	fi
 
 	# Don't forget to make directory for sysfs
-	[ ! -d "${ROOT}/sys" -a kernel_is_2_6 ] && mkdir /sys
+	[[ ! -d ${ROOT}sys ]] && \
+		kernel_is 2 6 && mkdir /sys
 
 	echo
 	einfo "After installing a new kernel of any version, it is important"
@@ -419,30 +386,16 @@ postinst_sources() {
 		while read -s ELINE ; do
 			einfo "${ELINE}"
 		done
-
-		echo
-	fi
-
-	# Show policy version, if this kernel has SELinux ...
-	local secfile
-	secfile="${ROOT}usr/src/linux-${KV_FULL}/security/selinux/include/security.h"
-	if use selinux && [ -f "$secfile" ]
-	then
-		local polver=$(awk '/POLICYDB_VERSION /{print $3}' $secfile)
-		einfo "The SELinux policy version of this kernel is $polver."
-		echo
 	fi
 
 	# if K_EXTRAEWARN is set then lets display it now
-	if [ -n "${K_EXTRAEWARN}" ]
+	if [[ -n ${K_EXTRAEWARN} ]]
 	then
 		echo ${K_EXTRAEWARN} | fmt |
 		while read -s ELINE
 		do
 			ewarn "${ELINE}"
 		done
-
-		echo
 	fi
 }
 
@@ -462,7 +415,7 @@ setup_headers() {
 		[[ $(tc-arch) == "${i}" ]] && H_ACCEPT_ARCH="yes"
 	done
 
-	if [[ ${H_ACCEPT_ARCH} != "yes" ]] ; then
+	if [[ ${H_ACCEPT_ARCH} != "yes" ]]; then
 		echo
 		eerror "This version of ${PN} does not support ${ARCH}."
 		eerror "Please merge the appropriate sources, in most cases"
@@ -662,14 +615,9 @@ unipatch() {
 # pulled from linux-info
 
 getfilevar() {
-local	ERROR workingdir basefname basedname xarch
-	ERROR=0
+	local workingdir basefname basedname xarch=$(tc-arch-kernel)
 
-	[ -z "${1}" ] && ERROR=1
-	[ ! -f "${2}" ] && ERROR=1
-
-	if [ "${ERROR}" = 1 ]
-	then
+	if [[ -z ${1} ]] && [[ ! -f ${2} ]]; then
 		ebeep
 		echo -e "\n"
 		eerror "getfilevar requires 2 variables, with the second a valid file."
@@ -678,7 +626,6 @@ local	ERROR workingdir basefname basedname xarch
 		workingdir=${PWD}
 		basefname=$(basename ${2})
 		basedname=$(dirname ${2})
-		xarch=$(tc-arch-kernel)
 		unset ARCH
 		
 		cd ${basedname}
@@ -696,8 +643,7 @@ detect_version() {
 	# - KV: Kernel Version (2.6.0-gentoo/2.6.0-test11-gentoo-r1)
 	# - EXTRAVERSION: The additional version appended to OKV (-gentoo/-gentoo-r1)
 
-	if [ -n "${KV_FULL}" ] ;
-	then
+	if [[ -n ${KV_FULL} ]]; then
 		# we will set this for backwards compatibility.
 		KV=${KV_FULL}
 
@@ -706,82 +652,87 @@ detect_version() {
 		return
 	fi
 
+	# CKV is used as a comparison kernel version, which is used when
+	# PV doesnt reflect the genuine kernel version.
+	# this gets set to the portage style versioning. ie:
+	#   CKV=2.6.11_rc4
 	CKV=${CKV:-${PV}}
-	if [ -z "${OKV}" ]
-	then
-		OKV=${CKV/_beta/-test}
-		OKV=${OKV/_rc/-rc}
-		OKV=${OKV/_p*/}
-		OKV=${OKV/-r*/}
-	fi
+	OKV=${OKV:-${CKV}}
+	OKV=${OKV/_beta/-test}
+	OKV=${OKV/_rc*}
+	OKV=${OKV/_pre*}
 
 	KV_MAJOR=$(get_version_component_range 1 ${OKV})
 	KV_MINOR=$(get_version_component_range 2 ${OKV})
 	KV_PATCH=$(get_version_component_range 3- ${OKV})
-	KV_PATCH=${KV_PATCH/[-_]*/}
+	KV_PATCH=${KV_PATCH/[-_]*}
 
 	KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 
-	RELEASE=${CKV/${OKV}/}
-	RELEASE=${RELEASE/_beta/}
+	RELEASE=${CKV/${OKV}}
+	RELEASE=${RELEASE/_beta}
 	RELEASE=${RELEASE/_rc/-rc}
-	if [ $(kernel_is_2_4) $? == 0 ]
-	then
-		RELEASE=${RELEASE/_pre/-pre}
-	else
-		RELEASE=${RELEASE/_pre/-bk}
-	fi
-	RELEASETYPE=${RELEASE//[0-9]/}
+	RELEASE=${RELEASE/_pre/-pre}
+	kernel_is_2_6 && RELEASE=${RELEASE/-pre/-bk}
+	RELEASETYPE=${RELEASE//[0-9]}
+
+	# Now we know that RELEASE is the -rc/-bk
+	# and RELEASETYPE is the same but with its numerics stripped
+	# we can work on better sorting EXTRAVERSION.
+	# first of all, we add the release
 	EXTRAVERSION="${RELEASE}"
 
-	if [ -n "${K_PREPATCHED}" ]
+	if [[ -n ${K_PREPATCHED} ]]; then
+		EXTRAVERSION="${EXTRAVERSION}-${PN/-*}${PR/r}"
+	elif [[ "${ETYPE}" = "sources" ]]
 	then
-		EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}${PR/r/}"
-	elif [ ${ETYPE} != "headers" ]
-	then
-		[ -z "${K_NOUSENAME}" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
-		[ "${PN/-*/}" == "wolk" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}-${PV}"
-		[ "${PN/-*/}" == "vserver" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}-${PV}"
-		[ "${PR}" != "r0" ] 	&& EXTRAVERSION="${EXTRAVERSION}-${PR}"
+		# For some sources we want to use the PV in the extra version
+		# This is because upstream releases with a completely different
+		# versioning scheme.
+		case ${PN/-*} in
+		     wolk) K_USEPV=1;;
+		  vserver) K_USEPV=1;;
+		esac
+
+		[[ -z ${K_NOUSENAME} ]] && \
+			EXTRAVERSION="${EXTRAVERSION}-${PN/-*}"
+		[[ -n ${K_USEPV} ]] && \
+			EXTRAVERSION="${EXTRAVERSION}-${PV//_/-}"
+		[[ -n ${PR//r0} ]] && \
+			EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
 
 	KV_FULL=${OKV}${EXTRAVERSION}
 
-	# -rc-bk pulls can be achieve by specifying CKV
+	# -rc-bk pulls can be achieved by specifying CKV
 	# for example:
 	#   CKV="2.6.11_rc3_pre2"
 	# will pull:
-	#   linux-2.6.11-rc3.tbz & patch-2.6.11-rc3-bk2.bz2
+	#   linux-2.6.10.tar.bz2 & patch-2.6.11-rc3.bz2 & patch-2.6.11-rc3-bk2.bz2
 
-	if [ "${RELEASETYPE}" == "-rc" -o "${RELEASETYPE}" == "-pre" ]
-	then
-		OKV="${KV_MAJOR}.${KV_MINOR}.$([ $((${KV_PATCH} - 1)) -lt 0 ] && echo ${KV_PATCH} || echo $((${KV_PATCH} - 1)))"
+	if [[ ${RELEASETYPE} == -rc ]] || [[ ${RELEASETYPE} == -pre ]] ; then
+		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${CKV//_/-}.bz2
-			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV//_/-}.bz2"
 	fi
 
-	if [ "${RELEASETYPE}" == "-bk" ]
-	then
-		OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
-		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
-			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
+	if [[ ${RELEASETYPE} == -bk ]] ; then
+		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${OKV}${RELEASE}.bz2
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${OKV}${RELEASE}.bz2"
 	fi
 
-	if [ "${RELEASETYPE}" == "-rc-bk" ]
-	then
-		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))-${RELEASE/-bk*}"
-		EXTRAVERSION="${RELEASE/*-bk/-bk}$([ -n "${K_USENAME}" ] && echo -${PN/-*/})$([ ! "${PR}" == "r0" ] && echo -${PR})"
-
+	if [[ ${RELEASETYPE} == -rc-bk ]] ; then
+		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
-			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
+					UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
 	fi
 
-
-	S=${WORKDIR}/linux-${KV_FULL}
 	# we will set this for backwards compatibility.
+	S=${WORKDIR}/linux-${KV_FULL}
 	KV=${KV_FULL}
 }
 
@@ -790,10 +741,7 @@ detect_arch() {
 	# with the neccessary info for the arch sepecific compatibility
 	# patchsets.
 
-	local ALL_ARCH
-	local LOOP_ARCH
-	local COMPAT_URI
-	local i
+	local ALL_ARCH LOOP_ARCH COMPAT_URI i
 
 	# COMPAT_URI is the contents of ${ARCH}_URI
 	# ARCH_URI is the URI for all the ${ARCH}_URI patches
@@ -811,10 +759,8 @@ detect_arch() {
 		[[ -n ${COMPAT_URI} ]] && \
 			ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr '[:upper:]' '[:lower:]')? ( ${COMPAT_URI} )"
 
-		if [[ ${LOOP_ARCH} == "$(echo $(tc-arch-kernel) | tr '[:lower:]' '[:upper:]')" ]]
-		then
-			for i in ${COMPAT_URI}
-			do
+		if [[ ${LOOP_ARCH} == "$(echo $(tc-arch-kernel) | tr '[:lower:]' '[:upper:]')" ]]; 	then
+			for i in ${COMPAT_URI}; do
 				ARCH_PATCH="${ARCH_PATCH} ${DISTDIR}/${i/*\//}"
 			done
 		fi
@@ -899,10 +845,9 @@ headers___fix() {
 # common functions
 #==============================================================
 kernel-2_src_unpack() {
-	detect_version
 	universal_unpack
 
-	[ -n "${UNIPATCH_LIST}" -o -n "${UNIPATCH_LIST_DEFAULT}" ] && \
+	[[ -n ${UNIPATCH_LIST} ]] || [[ -n ${UNIPATCH_LIST_DEFAULT} ]] && \
 		unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST}"
 
 	[ -z "${K_NOSETEXTRAVERSION}" ] && \
@@ -913,29 +858,27 @@ kernel-2_src_unpack() {
 
 kernel-2_src_compile() {
 	cd ${S}
-	[ "${ETYPE}" == "headers" ] && compile_headers
-	[ "${ETYPE}" == "sources" ] && \
+	[[ ${ETYPE} == headers ]] && compile_headers
+	[[ ${ETYPE} == sources ]] && \
 		use doc && ! use arm && ! use s390 && compile_manpages
 }
 
 kernel-2_pkg_preinst() {
-	[ "${ETYPE}" == "headers" ] && preinst_headers
+	[[ ${ETYPE} == headers ]] && preinst_headers
 }
 
 kernel-2_src_install() {
 	install_universal
-	[ "${ETYPE}" == "headers" ] && install_headers
-	[ "${ETYPE}" == "sources" ] && install_sources
+	[[ ${ETYPE} == headers ]] && install_headers
+	[[ ${ETYPE} == sources ]] && install_sources
 }
 
 kernel-2_pkg_postinst() {
-	[ "${ETYPE}" == "headers" ] && postinst_headers
-	[ "${ETYPE}" == "sources" ] && postinst_sources
+	[[ ${ETYPE} == headers ]] && postinst_headers
+	[[ ${ETYPE} == sources ]] && postinst_sources
 }
 
 kernel-2_pkg_setup() {
-	[ "${ETYPE}" == "headers" ] && setup_headers
-
-	# This is to fix some weird portage bug? in stable versions of portage.
-	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to unpack ..."
+	[[ ${ETYPE} == headers ]] && setup_headers
+	[[ ${ETYPE} == sources ]] && echo ">>> Preparing to unpack ..."
 }
