@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.24.ebuild,v 1.2 2004/01/14 08:49:04 trance Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.24.ebuild,v 1.3 2004/01/15 09:20:12 trance Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -18,7 +18,7 @@ S=${WORKDIR}/linux-${KV}
 inherit eutils
 
 
-DESCRIPTION="Full sources for the linux kernel 2.6 with benh's patchset"
+DESCRIPTION="Full sources for the linux kernel 2.4.24 with benh's patchset"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 		mirror://gentoo/patch-${KV}.bz2
 		http://dev.gentoo.org/~trance/stuff/patch-${KV}.bz2"
@@ -36,7 +36,7 @@ src_unpack() {
 
 	mv linux-${OKV} ${PF}
 	cd ${PF}
-	bzcat ${DISTDIR}/patches-${KV}.bz2 | patch -p1 || die "patch failed"
+	bzcat ${DISTDIR}/patch-${KV}.bz2 | patch -p1 || die "patch failed"
 	find . -iname "*~" | xargs rm 2> /dev/null
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
