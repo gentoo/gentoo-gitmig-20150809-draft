@@ -1,7 +1,17 @@
-MD5 24542aaa997ed4eba6b17d8f13c07299 ChangeLog 1021
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b018c4cc76757021a2b63d2d9cbacbf2 ChangeLog 1136
 MD5 b5393a27b5b3d74649028c3befaf49fe metadata.xml 226
-MD5 172624e6e39acd9c3c01c344ca7ca86e qca-1.0-r1.ebuild 895
-MD5 ee67866da62be848ac44be999531aea1 qca-1.0.ebuild 895
+MD5 9786cd0239468238562bef94619233c5 qca-1.0-r1.ebuild 981
+MD5 ccc1d8642da78631eda5aecfb399cc13 qca-1.0.ebuild 980
 MD5 79ff5b8052703491612213e47cdb6947 files/digest-qca-1.0 59
 MD5 79ff5b8052703491612213e47cdb6947 files/digest-qca-1.0-r1 59
 MD5 ee5764e49e4425fb387e29a7d8e2fec0 files/qca-pathfix.patch 267
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB3JWtArHZZzCEUG0RAqzCAJ0QxKMfifwBE5BTnb4MFglV0qWGgwCfXKii
+wAEgbQE5bs0I8KFI6O8pxas=
+=ZN8m
+-----END PGP SIGNATURE-----
