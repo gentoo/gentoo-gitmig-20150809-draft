@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.4 2004/05/05 11:41:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.5 2004/06/03 23:40:50 mr_bones_ Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -71,7 +71,7 @@ src_install() {
 		cannadic-install $f
 	done 2>/dev/null
 
-	if [ -n "`use canna`" ] ; then
+	if use canna ; then
 		dicsdir-install || die
 	fi
 
@@ -116,7 +116,7 @@ update-cannadic-dir() {
 #
 pkg_postinst() {
 
-	if [ -n "`use canna`" ] ; then
+	if use canna ; then
 		update-cannadic-dir
 		einfo
 		einfo "Please restart cannaserver to fit the changes."
@@ -140,7 +140,7 @@ pkg_postinst() {
 #
 pkg_postrm() {
 
-	if [ -n "`use canna`" ] ; then
+	if use canna ; then
 		update-cannadic-dir
 		einfo
 		einfo "Please restart cannaserver to fit changes."
