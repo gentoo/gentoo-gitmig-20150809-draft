@@ -13,7 +13,7 @@ SLOT="0"
 DEPEND="virtual/glibc
 	>=x11-libs/qt-3.1.0
 	media-sound/mad
-	dev-libs/fftw
+	=dev-libs/fftw-2.1.5
 	media-libs/libogg
 	media-libs/libvorbis
 	dev-lang/perl
