@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.0.4.ebuild,v 1.9 2005/03/13 22:41:48 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.0.4.ebuild,v 1.10 2005/03/21 20:20:31 gmsoft Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.imagemagick.org/pub/${MY_PN}/${MY_P2}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 # PLEASE BUMP AND UPDATE KEYWORDS OF dev-perl/perlmagick TO MATCH THIS. THANK YOU.
-KEYWORDS="alpha amd64 ~hppa ~ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~ia64 mips ppc ppc64 sparc x86"
 IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf jbig perl graphviz fpx"
 
 DEPEND=">=sys-apps/sed-4
