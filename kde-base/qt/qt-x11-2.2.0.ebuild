@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-x11-2.2.0.ebuild,v 1.3 2000/10/05 18:22:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-x11-2.2.0.ebuild,v 1.4 2000/10/06 01:12:13 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/qt-2.2.0
@@ -40,10 +40,18 @@ src_install() {
 	into /usr/lib/${P}
 	dobin bin/*
 	dolib.so lib/libqt.so.2.2.0
+	dolib.so lib/libqt-mt.so.2.2.0
+	dolib.so lib/libqutil.so.1.0.0
 	cd ${S}/lib
 	dosym	libqt.so.2.2.0 /usr/lib/${P}/lib/libqt.so.2.2
 	dosym	libqt.so.2.2.0 /usr/lib/${P}/lib/libqt.so.2
 	dosym	libqt.so.2.2.0 /usr/lib/${P}/lib/libqt.so
+	dosym   libqt-mt.so.2.2.0 /usr/lib/${P}/lib/libqt-mt.so.2.2
+	dosym   libqt-mt.so.2.2.0 /usr/lib/${P}/lib/libqt-mt.so.2
+	dosym   libqt-mt.so.2.2.0 /usr/lib/${P}/lib/libqt-mt.so.2
+	dosym   libqutil.so.1.0.0 /usr/lib/${P}/lib/libqutil.so.1.0
+	dosym   libqutil.so.1.0.0 /usr/lib/${P}/lib/libqutil.so.1
+	dosym   libqutil.so.1.0.0 /usr/lib/${P}/lib/libqutil.so
 	cd ${D}/usr/lib
  	ln -sf  qt-x11-2.2.0 qt
 	cd ${S}

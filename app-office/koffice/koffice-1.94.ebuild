@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.94.ebuild,v 1.2 2000/09/21 04:21:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.94.ebuild,v 1.3 2000/10/06 01:12:13 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE 2 Final Beta - KOffice"
-SRC_URI="http://download.sourceforge.net/mirrors/kde/unstable/distribution/2.0Beta5/tar/src/"${A}
+SRC_URI="ftp://ftp.kde.org/pub/kde/unstable/distribution/2.0Beta5/tar/src/${A}
+	 http://download.sourceforge.net/mirrors/kde/unstable/distribution/2.0Beta5/tar/src/${A}"
 HOMEPAGE="http://www.kde.org/"
 
 src_compile() {
