@@ -1,12 +1,12 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/pymol-0.82.ebuild,v 1.5 2002/10/20 18:40:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/pymol-0.82.ebuild,v 1.6 2002/11/17 06:37:33 vapier Exp $
 
 MY_PV=${PV/./_}
-S="$WORKDIR/${P}"
 DESCRIPTION="A Python-extensible molecular graphics system."
 SRC_URI="mirror://sourceforge/pymol/${PN}-${MY_PV}-src.tgz"
 HOMEPAGE="http://pymol.sf.net"
+
 LICENSE="PSF-2.2"
 SLOT="0"
 KEYWORDS="x86"
@@ -31,12 +31,11 @@ src_compile() {
 	make || die
 }
 
-
 src_install() {
 	local PYMOL_PATH=/usr/lib/pymol/${PV}
-	mkdir -p ${D}/usr/lib/pymol/${PV}
+	dodir /usr/lib/pymol/${PV}
 	cp -a modules ${D}/usr/lib/pymol/${PV}
-	mkdir -p ${D}/usr/bin
+	dodir /usr/bin
 	cat <<-EOF > ${D}/usr/bin/pymol-${PV}
 	#!/bin/sh
 	export PYMOL_PATH=/usr/lib/pymol/${PV}
@@ -46,8 +45,5 @@ src_install() {
 	EOF
 	chmod 755 ${D}/usr/bin/pymol-${PV}
 	dodoc README DEVELOPERS CHANGES
-	cd ${D}/usr/bin
-	ln -fs pymol-${PV} pymol
+	dosym /usr/bin/pymol-${PV} /usr/bin/pymol
 }
-
-

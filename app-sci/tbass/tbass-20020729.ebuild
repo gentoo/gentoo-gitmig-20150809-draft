@@ -1,15 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20020729.ebuild,v 1.1 2002/10/30 08:32:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20020729.ebuild,v 1.2 2002/11/17 06:47:26 vapier Exp $
 
 Name="balsa"
 
 DESCRIPTION="Balsa is both a framework for synthesising asynchronous hardware systems and the language for describing such systems"
 HOMEPAGE="http://www.cs.man.ac.uk/amulet/projects/balsa/"
-SRC_URI="ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/snapshots/${Name}-${PV}.tar.gz ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/docs/balsa-manual.pdf
-ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/examples/dma-example.tar.gz ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/examples/examples.tar.gz
-ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/snapshots/${Name}-tech-ams-20020402.tar.gz
-ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/snapshots/${Name}-tech-verilog-${PV}.tar.gz"
+SRC_URI="ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/snapshots/${Name}-${PV}.tar.gz
+	ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/docs/balsa-manual.pdf
+	ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/examples/dma-example.tar.gz
+	ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/examples/examples.tar.gz
+	ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/snapshots/${Name}-tech-ams-20020402.tar.gz
+	ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/snapshots/${Name}-tech-verilog-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,21 +23,20 @@ DEPEND="virtual/glibc
 	dev-libs/gmp 
 	sys-devel/perl 
 	x11-libs/gtk+"
+
 RDEPEND="${DEPEND} 
 	dev-util/guile 
 	media-gfx/graphviz"
+
 S=${WORKDIR}/${Name}-${PV}
 
 src_unpack() {
-	
 	unpack ${Name}-${PV}.tar.gz dma-example.tar.gz examples.tar.gz ${Name}-tech-ams-20020402.tar.gz ${Name}-tech-verilog-${PV}.tar.gz
 }
 
 src_compile() {
-
-	cd ${S}
 	# compile balsa
-	econf || die "./configure failed"
+	econf
 	
 	cd bin
 	sed -e "s: \$(bindir): \$(DESTDIR)\$(bindir):g" Makefile > Makefile.1
@@ -44,40 +45,30 @@ src_compile() {
 
 	# configure tech paths
 	cd ${WORKDIR}/balsa-tech-ams-1.0
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-	|| die "./configure of balsa-tech-ams-1.0 failed"
+	econf
 
 	cd ${WORKDIR}/balsa-tech-verilog-1.0
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-	|| die "./configure balsa-tech-verilog-1.0 failed"
-
+	econf
 }
 
-src_install () {
-	
+src_install() {
 	# install balsa
-	make DESTDIR=${D}/ install
-	
+	make DESTDIR=${D} install || die "make install failed"
+
 	# move the docs to the right directory
 	dodoc ${D}/usr/doc/*
 	rm -rf ${D}/usr/doc
-	
+
 	# install manual and examples
-	mkdir -p ${D}/usr/share/doc/${P}/examples/dma-example
+	dodir /usr/share/doc/${P}/examples/dma-example
 	cp -R ${WORKDIR}/dma-example ${D}/usr/share/doc/${P}/examples
 	cp -R ${WORKDIR}/examples/* ${D}/usr/share/doc/${P}/examples
 	dodoc ${DISTDIR}/balsa-manual.pdf
-	
+
 	# install tech
         cd ${WORKDIR}/balsa-tech-ams-1.0
-	make DESTDIR=${D} install
-        
+	make DESTDIR=${D} install || die "make install failed"
+
 	cd ${WORKDIR}/balsa-tech-verilog-1.0
-	make DESTDIR=${D} install
- }
+	make DESTDIR=${D} install || die "make install failed"
+}

@@ -1,22 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.1.ebuild,v 1.1 2002/10/18 05:59:47 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.1.ebuild,v 1.2 2002/11/17 06:42:00 vapier Exp $
 
-S=${WORKDIR}/predict-2.2.1
 HOMEPAGE="http://www.qsl.net/kd2bd/predict.html"
 DESCRIPTION="Satellite tracking and orbital prediction."
-SRC_URI="http://www.amsat.org/amsat/ftp/software/Linux/predict-${PV}.tar.gz"
+SRC_URI="http://www.amsat.org/amsat/ftp/software/Linux/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL"
 KEYWORDS="~x86"
 
 DEPEND="sys-libs/ncurses
-		gtk? ( =x11-libs/gtk+-1.2* )
-		xforms? ( x11-libs/xforms )"
+	gtk? ( =x11-libs/gtk+-1.2* )
+	xforms? ( x11-libs/xforms )"
 
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )
-		xforms? ( x11-libs/xforms )"
+	xforms? ( x11-libs/xforms )"
 
 if [ -x /usr/bin/xearth ]; then
 	EARTHTRACKOK="yes"
@@ -33,7 +32,6 @@ src_compile() {
 	COMPILER="cc ${CFLAGS} -fomit-frame-pointer"
 
 	# write predict.h 
-	cd ${S}
 	echo "char *predictpath=\"/usr/share/predict/\";" > predict.h 
 	echo "char soundcard=1;" >> predict.h
 	echo "char *version=\"${PV}\";" >> predict.h
@@ -153,7 +151,7 @@ src_install() {
 	if [ "`use gtk`" ]; then
 		# the install seems broken so do manually...
 		cd ${S}/clients/gsat-1.0.0
-		mkdir -p ${D}/usr/lib/gsat/plugins
+		dodir /usr/lib/gsat/plugins
 		touch ${D}/usr/lib/gsat/plugins/.keep
 		cd src
 		dobin gsat
