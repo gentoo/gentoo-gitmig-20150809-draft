@@ -3,18 +3,14 @@ Hash: SHA1
 
 MD5 ad5c6b832c14726384b6f8b3e9b715d4 ChangeLog 2234
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 6ac4bbe7633cd861bbadea08576ee31f microcode-ctl-1.10.ebuild 1167
-MD5 d5930a9778eef40bbc256aa4eb83d9d3 microcode-ctl-1.08.ebuild 1187
-MD5 4686103e408ff3507574fa6ddbdd2639 microcode-ctl-1.09.ebuild 1180
+MD5 e4ab99afa45409c6a78939cf632c10e4 microcode-ctl-1.10.ebuild 1165
 MD5 1df04769a594a38cffc1f8a077fc3fa9 files/digest-microcode-ctl-1.10 70
-MD5 640b043c1686437b589af2fe46960383 files/digest-microcode-ctl-1.08 70
 MD5 7fdce1504a1132239d2dbc1fbce08d66 files/microcode_ctl.rc 439
-MD5 15cf8d97045e49370846a22c5d5a7c22 files/digest-microcode-ctl-1.09 70
 MD5 cf9bec50cc6330e817b856deb0cf00f5 files/microcode_ctl.conf.d 263
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhBiAHTu7gpaalycRAlwsAKDl0E/KNMDRDMLDUTfIR5Ie9Rk0QwCfZ+l3
-Md9I3gO6+1O2p7LBKGhQSUI=
-=evtt
+iD8DBQFBlvzwHTu7gpaalycRApuxAJ4gjMCmBc+1+viYBCJ9W39jIIlCPgCgl3St
+hcq9CpotMyKVfVv+/a+re/o=
+=fh1j
 -----END PGP SIGNATURE-----
