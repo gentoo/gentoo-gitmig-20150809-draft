@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/wmnet-1.06.ebuild,v 1.14 2004/06/24 23:14:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/wmnet-1.06.ebuild,v 1.15 2004/07/16 23:53:20 s4t4n Exp $
 
 inherit eutils
 
 IUSE=""
 DESCRIPTION="WMnet is a dock.app network monitor"
 SRC_URI="http://www.digitalkaos.net/linux/wmnet/download/${P}.tar.gz"
-HOMEPAGE="http://http://www.digitalkaos.net/linux/wmnet/"
+HOMEPAGE="http://www.digitalkaos.net/linux/wmnet/"
 
 DEPEND="virtual/x11"
 
