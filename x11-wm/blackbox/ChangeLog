@@ -1,13 +1,14 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.11 2002/07/03 04:53:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.12 2002/07/15 05:52:05 seemant Exp $
 
-*blackbox-0.65.0.20020702 (02 Jul 2002)
 
-  02 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
-  blackbox-0.65.0.20020702.ebuild files/digest-blackbox-0.65.0.20020702 :
+*blackbox-0.62.1-r3 (14 Jul 2002)
 
-  New version from CVS, which contains Xft support.
+  14 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  blackbox-0.62.1-r3.ebuild files/digest-blackbox-0.62.1-r3 :
+
+  eclassed.
 
 *blackbox-0.65.0_alpha8 (17 Jun 2002)
   17 Jun 2002; Spider <spider@gentoo.org> blackbox-0.65.0_alpha8.ebuild: 
