@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-nvidia
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/ChangeLog,v 1.10 2004/11/07 02:00:59 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/ChangeLog,v 1.11 2004/11/30 01:34:51 cyfred Exp $
+
+  30 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
+  -emul-linux-x86-nvidia-1.0.6106-r1.ebuild:
+  Removing all masked (deprecated) versions to match the nvidia-kernel removal.
 
   07 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
   emul-linux-x86-nvidia-1.0.6106-r1.ebuild:
