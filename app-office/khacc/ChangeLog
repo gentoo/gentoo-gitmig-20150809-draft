@@ -1,6 +1,11 @@
 # ChangeLog for app-office/khacc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.15 2004/10/31 21:45:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.16 2004/12/23 23:38:33 carlo Exp $
+
+*khacc-3.2.3 (24 Dec 2004)
+
+  24 Dec 2004; Carsten Lohrke <carlo@gentoo.org> +khacc-3.2.3.ebuild:
+  version bump
 
   31 Oct 2004; Carsten Lohrke <carlo@gentoo.org> -khacc-1.7.2.ebuild,
   -khacc-1.7.8.ebuild, -khacc-1.7.9.ebuild:
