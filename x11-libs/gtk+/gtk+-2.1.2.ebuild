@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.1.2.ebuild,v 1.4 2002/11/29 05:15:37 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.1.2.ebuild,v 1.5 2002/11/30 13:37:34 foser Exp $
 
 IUSE="tiff doc jpeg directfb"
 
@@ -17,7 +17,7 @@ LICENSE="LGPL-2.1"
 
 RDEPEND="virtual/x11
 	>=dev-libs/glib-2.0.6-r1
-	=dev-libs/atk-1.1*
+	>=dev-libs/atk-1.0.1
 	=x11-libs/pango-1.1*
 	>=media-libs/libpng-1.2.1
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
