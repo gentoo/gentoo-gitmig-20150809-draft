@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.22 2004/09/29 10:23:24 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.23 2004/09/29 15:33:04 lanius Exp $
+
+  29 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
+  ghostscript-afpl-8.15.ebuild:
+  fix search path
 
 *ghostscript-afpl-8.15 (29 Sep 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.15.ebuild,v 1.1 2004/09/29 10:23:24 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.15.ebuild,v 1.2 2004/09/29 15:33:04 lanius Exp $
 
 inherit eutils
 
@@ -77,9 +77,9 @@ src_compile() {
 	fi
 
 	# search path fix
-	sed -i -e 's:$(gsdatadir)/lib:/usr/share/ghostscript/8.14/lib:' Makefile
+	sed -i -e 's:$(gsdatadir)/lib:/usr/share/ghostscript/8.15/lib:' Makefile
 	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' Makefile
-	sed -i -e 's:$(gsdatadir)/Resource:/usr/share/ghostscript/8.14/Resource:' Makefile
+	sed -i -e 's:$(gsdatadir)/Resource:/usr/share/ghostscript/8.15/Resource:' Makefile
 
 	make || die "make failed"
 	make so || die "make so failed"
