@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.30 2004/10/10 02:27:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.31 2004/10/26 09:13:03 eradicator Exp $
+
+  26 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  amarok-1.1.1.ebuild:
+  Changing dep to =libvisual-0.1.6 to close bug #68731.
 
 *amarok-1.1.1 (09 Oct 2004)
 
