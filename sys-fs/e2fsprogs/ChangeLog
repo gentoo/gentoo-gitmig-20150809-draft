@@ -1,6 +1,6 @@
 # ChangeLog for sys-fs/e2fsprogs
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.26 2004/06/24 15:45:01 mholzer Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.27 2004/06/24 22:50:41 agriffis Exp $
 
   24 Jun 2004; Martin Holzer <mholzer@gentoo.org> e2fsprogs-1.35.ebuild:
   x86 stable

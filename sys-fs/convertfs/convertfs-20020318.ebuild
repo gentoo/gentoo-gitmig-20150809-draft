@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/convertfs-20020318.ebuild,v 1.2 2004/03/06 17:35:33 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/convertfs-20020318.ebuild,v 1.3 2004/06/24 22:49:47 agriffis Exp $
 
 DESCRIPTION="A tool to convert filesystems in-place"
 HOMEPAGE="http://tzukanov.narod.ru/convertfs/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.4-r1.ebuild,v 1.6 2004/02/21 22:44:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.4-r1.ebuild,v 1.7 2004/06/24 22:54:41 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs dump/restore utilities"

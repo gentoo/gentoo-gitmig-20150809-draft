@@ -1,6 +1,6 @@
 # ChangeLog for sys-fs/hfsplusutils
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.1 2003/09/15 17:46:25 seemant Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.2 2004/06/24 22:51:14 agriffis Exp $
 
 *hfsplusutils-1.0.4 (15 Sep 2003)
 

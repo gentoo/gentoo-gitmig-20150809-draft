@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-027.ebuild,v 1.1 2004/06/14 20:51:08 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-027.ebuild,v 1.2 2004/06/24 22:54:19 agriffis Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-1.3.ebuild,v 1.1 2004/06/04 07:30:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-1.3.ebuild,v 1.2 2004/06/24 22:53:34 agriffis Exp $
 
 MY_PV="1.3r3"
 DESCRIPTION="Tool for creating compressed filesystem type squashfs"

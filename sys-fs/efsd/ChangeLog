@@ -1,6 +1,6 @@
 # ChangeLog for sys-fs/efsd
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/efsd/ChangeLog,v 1.3 2003/12/07 23:51:14 foser Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/efsd/ChangeLog,v 1.4 2004/06/24 22:50:52 agriffis Exp $
 
 *efsd-0.0.1.20031013 (13 Oct 2003)
 

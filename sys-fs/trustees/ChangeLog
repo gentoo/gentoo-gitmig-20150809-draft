@@ -1,6 +1,6 @@
 # ChangeLog for sys-fs/trustees
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/ChangeLog,v 1.5 2004/03/10 18:16:50 max Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/ChangeLog,v 1.6 2004/06/24 22:54:07 agriffis Exp $
 
   10 Mar 2004; Max Kalika <max@gentoo.org> trustees-2.10.ebuild:
   Ditch sed dependency.
