@@ -71,15 +71,17 @@ nxserver_src_install() {
 	insinto /etc/env.d
 	doins ${FILESDIR}/${PVR}/50nxserver
 
-	fowners nx.root /usr/NX/etc/passwd
 	fperms 0600 /usr/NX/etc/passwd
-	fowners nx:root /usr/NX/nxhome
-	fowners nx:root /usr/NX/var/sessions
 }
 
 nxserver_pkg_postinst() {
 	einfo "Adding user 'nx' for the NX server"
 	enewuser nx -1 /usr/NX/bin/nxserver /usr/NX/nxhome
+
+	einfo "Changing permissions for files under /usr/NX"
+	chown nx.root /usr/NX/etc/passwd
+	chown -R nx.root /usr/NX/nxhome
+	chown -R nx.root /usr/NX/var/sessions
 
 	einfo "Generating SSH keys for the 'nx' user"
 	if [ ! -f /usr/NX/etc/users.id_dsa ]; then
