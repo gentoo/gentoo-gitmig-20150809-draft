@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.5 2005/01/02 03:54:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.6 2005/01/02 09:59:54 gmsoft Exp $
 
 inherit eutils
 
@@ -135,8 +135,9 @@ src_install() {
 	into /
 	dobin busybox
 	if use netboot ; then
-		dosym busybox /bin/sh
-		dosym busybox /sbin/init
+		dosym /bin/busybox /bin/sh
+		dodir /sbin
+		dosym /bin/busybox /sbin/init
 		return 0
 	fi
 	if use make-busybox-symlinks ; then
