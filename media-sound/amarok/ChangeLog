@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.3 2003/10/30 17:52:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.4 2003/11/15 20:57:49 lanius Exp $
+
+  15 Nov 2003; Heinrich Wendel <lanius@gentoo.org> :
+  bump
 
 *amarok-0.6.91 (30 Oct 2003)
 
