@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.51 2002/05/05 01:29:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.52 2002/05/15 17:08:42 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -20,11 +20,15 @@ src_unpack() {
 		echo "Beware -- maintainers only."
 	fi
 	cd ${WORKDIR}/${P}
-	if [ "`hostname`" = "inventor.gentoo.org" ]
+	local myhost
+	myhost=`hostname`
+	if [ "$myhost" = "inventor.gentoo.org" ]
 	then
 		ln -s /home/drobbins/gentoo-src gentoo-src
-	else
+	elif [ "$myhost" = "chiba.3jane.net" ]
 		cvs -d /home/cvsroot co gentoo-src
+	else
+		die "This ebuild has not been tweaked for your system."
 	fi
 }
 
@@ -132,5 +136,13 @@ pkg_preinst() {
 	if [ -d ${WEBROOT} ]
 	then
 		cp -ax ${WEBROOT} ${WEBROOT}.bak
+	fi
+}
+
+pkg_postinst() {
+	if [ "`hostname`" = "chiba.3jane.net" ]
+	then
+		echo '>>> Syncing up images to ibiblio...'
+		su - drobbins rsync -ave ssh ${WEBROOT}/images drobbins@login.ibiblio.org:gentoo/images/
 	fi
 }
