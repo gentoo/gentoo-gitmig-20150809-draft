@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.0.7.ebuild,v 1.1 2003/09/19 07:41:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.0.7.ebuild,v 1.2 2003/10/04 20:28:13 usata Exp $
 
 IUSE="gtk nls debug"
 
@@ -10,17 +10,13 @@ SRC_URI="mirror://sourceforge.jp/anthy/5989/${P}.tar.gz"
 
 LICENSE="GPL-2 | BSD"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 S="${WORKDIR}/${P}"
 
-DEPEND="virtual/glibc
-	gtk? ( >=x11-libs/gtk+-2 )
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
-#	>=dev-libs/glib-2
-DEPEND="virtual/glibc
-	gtk? ( >=x11-libs/gtk+-2 )"
-#	>=dev-libs/glib-2
+RDEPEND="gtk? ( >=x11-libs/gtk+-2 )"
 use debug && RESTRICT="nostrip"
 
 GTK_IMMODULES=/etc/gtk-2.0/gtk.immodules

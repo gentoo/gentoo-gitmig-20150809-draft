@@ -1,23 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.0.4.ebuild,v 1.3 2003/10/04 20:28:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.0.9.ebuild,v 1.1 2003/10/04 20:28:13 usata Exp $
 
-IUSE="gtk nls"
+IUSE="gtk nls debug"
 
 DESCRIPTION="UIM is a simple, secure and flexible input method library"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/anthy/5848/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/6232/${P}.tar.gz"
 
 LICENSE="GPL-2 | BSD"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="~x86 ~sparc"
 
 S="${WORKDIR}/${P}"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
-RDEPEND=">=dev-libs/glib-2
-	gtk? ( >=x11-libs/gtk+-2 )"
+RDEPEND="gtk? ( >=x11-libs/gtk+-2 )"
+
+# for debugging use
+use debug && RESTRICT="nostrip"
 
 GTK_IMMODULES=/etc/gtk-2.0/gtk.immodules
 
@@ -32,6 +34,7 @@ src_compile() {
 		sed -i -e "/^SUBDIRS/s/gtk//" Makefile.in
 	fi
 
+	use debug && export CFLAGS="${CFLAGS} -g"
 	econf `use_enable nls` || die
 	emake || die
 }
