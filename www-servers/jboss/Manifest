@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 7db5b810c1424494c173770e084640e7 jboss-3.2.3.ebuild 3228
-MD5 3c9124f9f403398da92acf45384ee79b jboss-3.2.5.ebuild 3259
-MD5 b227e6ca56d31fd1e499b31dbe1b127b ChangeLog 6130
+MD5 88f55f929052b320910e6cf07f92da02 jboss-3.2.5.ebuild 3307
+MD5 5660d5bde5f5b63ab1c0f168fd346cd2 ChangeLog 6238
 MD5 d3dc023c899ddec4c1dd2f4cb3c0cd36 metadata.xml 438
 MD5 83b6857488b5fca7fbe0b9f5cc841237 files/README.gentoo 1319
 MD5 8aecde4804a622cc5743b0644efc482b files/digest-jboss-3.2.3 70
@@ -24,7 +24,7 @@ MD5 1ccecf224290517bd1b68ce0b046426d files/3.2.5/init.d/jboss 863
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBRFNf/rLF9B432nYRAmHDAKCy4Vg26tT2/ShkW8xFhyxpnKuffgCdGdES
-KsJ95ctHgL7frQyemYDOsp0=
-=5V+Z
+iD8DBQFBT+Xq/rLF9B432nYRAtMgAJ9U4Rosnb8nRBPEQ/0XDnt/lHvtZACffqum
+KEKp2ajUHBGkIkMwvA45MAk=
+=Eao+
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.5.ebuild,v 1.2 2004/09/06 08:09:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.5.ebuild,v 1.3 2004/09/21 08:26:54 axxo Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_install() {
 	dodir ${INSTALL_DIR}/bin
 
 	for f in run.sh shutdown.sh run.jar shutdown.jar; do
-		cp build/output/${PN}-${PV}/bin/${f} ${D}/${INSTALL_DIR}/bin
+		cp build/output/${PN}-${PV}/bin/${f} ${D}/${INSTALL_DIR}/bin || die "failed"
 	done
 
 	exeinto /etc/init.d
@@ -57,13 +57,13 @@ src_install() {
 		build/output/${PN}-${PV}/lib \
 		build/output/${PN}-${PV}/client
 	do
-		cp -a $i ${D}/${INSTALL_DIR}/
+		cp -a $i ${D}/${INSTALL_DIR}/ || die "failed"
 	done
 
 	dodir /var/lib/jboss
 	mv ${D}/${INSTALL_DIR}/server/{all,default,minimal} ${D}/var/lib/jboss
 	for server in all default minimal; do
-		cp ${FILESDIR}/${PV}/log4j.xml ${D}/var/lib/jboss/${server}/conf/
+		cp ${FILESDIR}/${PV}/log4j.xml ${D}/var/lib/jboss/${server}/conf/ || die "failed"
 	done
 	rmdir ${D}/${INSTALL_DIR}/server
 
