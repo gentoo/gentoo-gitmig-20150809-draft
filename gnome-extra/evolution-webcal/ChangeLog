@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/evolution-webcal
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/ChangeLog,v 1.1 2004/09/19 12:17:20 foser Exp $
+
+*evolution-webcal-2.0.0 (19 Sep 2004)
+
+  19 Sep 2004; foser <foser@gentoo.org> evolution-webcal-2.0.0.ebuild :
+  Gnome 2.8 & initial commit of this package
+  Provides a GNOME URL handler for ical links, to use with eds based applications
+  Added to the gnome herd
