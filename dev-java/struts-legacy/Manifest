@@ -1,4 +1,4 @@
-MD5 55271911772504e72d8d48435ed66750 struts-legacy-1.0.ebuild 1212
-MD5 1e973c7acf930e4ce67e07e97f4dd5a9 ChangeLog 401
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 2459923e54f157c4320980a9c75c49e1 files/digest-struts-legacy-1.0 72
+MD5 c4ad546ed9c87a4f1c00deec9bb02152 ChangeLog 402
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 4b067fca397ddec9969bfb5bebf0a70f struts-legacy-1.0.ebuild 1213

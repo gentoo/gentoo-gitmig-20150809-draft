@@ -1,4 +1,4 @@
-MD5 dadcb6933a71c907150a4af07d6a3089 lucene-1.3.ebuild 980
-MD5 fbeb19529588ef2e1e15fc7fc64b358a ChangeLog 468
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 549b80eb695d78b55dea8a631a0459a8 files/digest-lucene-1.3 72
+MD5 ad06dd7c5feab0899bafe264e1da1a7d ChangeLog 469
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 5a9f981c5d0b8d11b0cf3e414b5bf2d7 lucene-1.3.ebuild 981

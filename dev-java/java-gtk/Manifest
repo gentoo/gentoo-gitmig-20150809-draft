@@ -1,4 +1,4 @@
-MD5 39f090b26b8d317edccd30b839950ac4 java-gtk-0.8.3.ebuild 1172
-MD5 45c71754486fb064d32378d62761e795 ChangeLog 1418
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 7c8fe2614a6b8c52d5c6c0591694d5cf files/digest-java-gtk-0.8.3 70
+MD5 745602bbecc57577a657ffa6ac720d88 ChangeLog 1419
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 7817b6329cc0c533d850e8ad12341342 java-gtk-0.8.3.ebuild 1173

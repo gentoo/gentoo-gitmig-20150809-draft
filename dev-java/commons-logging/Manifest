@@ -1,4 +1,4 @@
-MD5 69ceef79159f2251618cf67e2b8c510d commons-logging-1.0.3-r1.ebuild 1444
-MD5 4695bb62ae49ba0ec7853aac9048f3f9 ChangeLog 2178
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 3d6fb50b9453c1e9c219a22a23345e23 files/digest-commons-logging-1.0.3-r1 76
+MD5 9254dcbf45b2f1ec6108a3bf13d91a71 ChangeLog 2179
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 f07a9da034fc77c09545f3dabdc2cfeb commons-logging-1.0.3-r1.ebuild 1445
