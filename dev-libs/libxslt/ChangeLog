@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.26 2003/03/19 19:38:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.27 2003/03/27 18:47:08 drobbins Exp $
+
+*libxslt-1.0.28 (27 Mar 2003)
+
+  27 Mar 2003; Daniel Robbins <drobbins@gentoo.org> libxslt-1.0.28.ebuild:
+  New libxslt bumped into unstable x86.
 
 *libxslt-1.0.27 (03 Mar 2003)
 
