@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/MailTools-1.51.ebuild,v 1.8 2004/07/14 18:55:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/MailTools-1.51.ebuild,v 1.9 2005/01/04 12:00:14 mcummings Exp $
 
 inherit perl-module
 
