@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0.ebuild,v 1.2 2004/11/22 12:04:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0.ebuild,v 1.3 2004/11/29 12:50:56 lanius Exp $
 
 inherit eutils kernel-mod
 
@@ -57,7 +57,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use streamzap && epatch ${FILESDIR}/lirc-0.7.0-streamzap.patch.bz2
-	epatch ${FILESDIR}/${P}-configure.in.patch
+	#epatch ${FILESDIR}/${P}-configure.in.patch
 	sed	-i -e "s:-O2 -g:${CFLAGS}:" configure configure.in
 
 	kernel-mod_getversion
