@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.52 2003/09/15 15:03:09 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.53 2003/09/20 14:04:35 tseng Exp $
+
+  20 Sep 2003; Brandon Hale <tseng@gentoo.org> openbox-3.0_beta1.ebuild,
+  openbox-3.0_beta2.ebuild, openbox-3.0_beta3.ebuild:
+  add missing dependency on libxml2, closes #29104
 
 *openbox-3.0_beta3 (15 Sep 2003)
 
