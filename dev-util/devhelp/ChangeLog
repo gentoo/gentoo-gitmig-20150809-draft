@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.17 2004/02/26 03:52:14 bazik Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.18 2004/04/18 18:49:51 leonardop Exp $
+
+  18 Apr 2004; L. Boshell <leonardop@gentoo.org> devhelp-0.8.1.ebuild:
+  Marked stable on x86.
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> devhelp-0.7.ebuild:
   Stable on sparc.
