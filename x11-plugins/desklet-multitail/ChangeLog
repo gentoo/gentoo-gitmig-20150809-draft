@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/desklet-multitail
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-multitail/ChangeLog,v 1.4 2004/06/24 22:50:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-multitail/ChangeLog,v 1.5 2004/07/13 02:43:01 obz Exp $
+
+*desklet-multitail-0.3.1 (13 Jul 2004)
+
+  13 Jul 2004; Mike Gardiner <obz@gentoo.org> +desklet-multitail-0.3.1.ebuild:
+  New version as requested in bug #51036
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   desklet-multitail-0.2.2.ebuild:
