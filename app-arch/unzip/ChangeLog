@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.20 2004/03/17 05:02:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.21 2004/03/17 05:11:21 mr_bones_ Exp $
+
+  16 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> unzip-5.50-r2.ebuild:
+  tighten DEPEND (bug #44817); sed in src_unpack, not src_compile; use emake
 
   16 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> unzip-5.42-r1.ebuild,
   unzip-5.50-r1.ebuild, unzip-5.50.ebuild:
