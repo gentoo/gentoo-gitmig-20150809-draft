@@ -2,16 +2,16 @@
 Hash: SHA1
 
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
-MD5 debeb1287c40e5295252ea3e0e219d45 tigcc-0.95_beta19-r1.ebuild 6460
-MD5 adb4de247a168cd11cdf8031a2c783ad ChangeLog 781
-MD5 1904a56aa03ea5122ddae890881dd802 tigcc-0.95-r2.ebuild 6460
+MD5 430a97e3eaefd4c5e72de853943e08b2 ChangeLog 1055
+MD5 81f859ee984d009d32edc8b962952e64 tigcc-0.95-r2.ebuild 6459
+MD5 eba824f8c1c3f3959ad2fd96f90c94e9 tigcc-0.95_p3.ebuild 6457
 MD5 75b1dd6ba9dd67df855f5d0a3165fd06 files/digest-tigcc-0.95-r2 315
-MD5 a10a653d920682c632466905a53be915 files/digest-tigcc-0.95_beta19-r1 322
 MD5 627b7e86641edb82ffa0702ff65de4c1 files/a68k-fix.patch 625
+MD5 1ea537485d88f982402fa3bf8930fd64 files/digest-tigcc-0.95_p3 315
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBha05mdTrptrqvGERAptGAJ959OzIYGEJJJyVmQK8FI4RbSRIVgCfX0zC
-0fs+0p/7kyY0V4/7rFZ62fI=
-=BcxG
+iD8DBQFBsNcamdTrptrqvGERAg9bAJ0SJMmtxKCiZJk+iE7Tnk5bggsKagCdEIi6
+PsQUuBTtFWxGVZsHjq9i3g4=
+=MOoC
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.95_beta19-r1.ebuild,v 1.4 2004/10/18 12:19:04 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.95_p3.ebuild,v 1.1 2004/12/03 21:13:56 dragonheart Exp $
 
 inherit eutils
 
@@ -13,13 +13,13 @@ DESCRIPTION="Cross compiler for Texas Instruments TI-89, TI-92(+) and V200 calcu
 HOMEPAGE="http://tigcc.ticalc.org"
 
 
-# mirror://gentoo/${PF}.tar.bz2 comes from http://www.angelfire.com/linux/ifs/${PF}.tar.bz2
+# mirror://gentoo/${P}.tar.bz2 comes from http://tigcc.ticalc.org/linux/tigcc_src.tar.bz2
 # which isn't that reliable
 
 #All kernel mirrors in gentoo didn't have 2.14
 #	mirror://kernel/linux/devel/binutils/binutils-${BASE_BINUTILS}.tar.bz2
 
-SRC_URI="mirror://gentoo/${PF}.tar.bz2
+SRC_URI="mirror://gentoo/${P}.tar.bz2
 	mirror://gnu/gcc/releases/gcc-${BASE_GCC}/gcc-core-${BASE_GCC}.tar.bz2
 	http://cdn.mirror.garr.it/mirrors/gnuftp/binutils/binutils-${BASE_BINUTILS}.tar.bz2
 	http://members.chello.at/gerhard.kofler/kevin/ti89prog/libfargo.zip
@@ -28,7 +28,7 @@ SRC_URI="mirror://gentoo/${PF}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 #KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 

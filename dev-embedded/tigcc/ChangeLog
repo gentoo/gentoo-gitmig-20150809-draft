@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/tigcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.4 2004/11/01 03:27:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.5 2004/12/03 21:13:56 dragonheart Exp $
+
+*tigcc-0.95_p3 (04 Dec 2004)
+
+  04 Dec 2004; Daniel Black <dragonheart@gentoo.org> tigcc-0.95-r2.ebuild,
+  -tigcc-0.95_beta19-r1.ebuild, +tigcc-0.95_p3.ebuild:
+  version bump as per bug #73169. Thanks Robert Führicht
+  <the_master_of_disaster@gmx.at> for the notification.
 
 *tigcc-0.95-r2 (01 Nov 2004)
 
