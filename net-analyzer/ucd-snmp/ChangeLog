@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ucd-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.9 2003/02/12 07:51:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.10 2003/02/18 19:47:52 raker Exp $
+
+  18 Feb 2003; Nick Hadaway <raker@gentoo.org> files/snmpd.rc6 :
+  Updated the location of the example configuration.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
