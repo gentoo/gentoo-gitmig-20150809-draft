@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.22 2004/07/02 04:52:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.23 2004/07/07 18:35:07 lv Exp $
+
+  07 Jul 2004; Travis Tilley <lv@gentoo.org> nspr-4.4.1.ebuild:
+  stable on amd64
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> nspr-4.1.2.ebuild,
   nspr-4.3.ebuild, nspr-4.4.1.ebuild:
