@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-4.3.0-r6.ebuild,v 1.1 2004/08/29 08:11:06 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-4.3.0-r6.ebuild,v 1.2 2004/10/29 06:34:29 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -10,7 +10,7 @@
 IUSE="3dfx gamma i8x0 matrox rage128 radeon sis"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis"
 
-inherit eutils xfree
+inherit eutils x11
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...

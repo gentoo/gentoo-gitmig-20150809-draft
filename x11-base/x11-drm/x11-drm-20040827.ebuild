@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.3 2004/09/02 01:28:22 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.4 2004/10/29 06:34:29 spyderous Exp $
 
-inherit eutils xfree kmod
+inherit eutils x11 kmod
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx ffb i810 i830 i915 mach64 matrox rage128 radeon savage sis via"
