@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.99.ebuild,v 1.2 2003/07/11 18:00:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.99.ebuild,v 1.3 2003/07/18 21:55:44 tester Exp $
 
 IUSE="sdl gtk xv"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://libdv.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha amd64"
 
 DEPEND=" dev-libs/popt
 	gtk? ( =x11-libs/gtk+-1.2* )

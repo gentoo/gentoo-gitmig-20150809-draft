@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.13 2003/05/11 17:45:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.14 2003/07/18 21:55:44 tester Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ijg.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha hppa arm"
+KEYWORDS="x86 ppc sparc alpha hppa arm amd64"
 
 DEPEND="virtual/glibc"
 
@@ -28,6 +28,7 @@ src_unpack() {
 	sed 's/ltconfig.*/& $CHOST/' configure.orig > configure
 	use alpha && gnuconfig_update
 	use hppa && gnuconfig_update
+	use amd64 && gnuconfig_update
 }
 
 src_compile() {

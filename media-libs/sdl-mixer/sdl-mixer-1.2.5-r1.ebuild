@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.1 2003/03/25 00:26:17 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.2 2003/07/18 21:55:45 tester Exp $
 
 IUSE="mpeg mikmod oggvorbis"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.libsdl.org/projects/SDL_mixer/index.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~alpha"
+KEYWORDS="x86 ppc sparc ~alpha amd64"
 
 DEPEND=">=media-libs/libsdl-1.2.5
 	>=media-libs/smpeg-0.4.4-r1

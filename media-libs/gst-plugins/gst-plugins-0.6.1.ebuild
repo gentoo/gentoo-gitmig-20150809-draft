@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.1.ebuild,v 1.5 2003/06/27 15:45:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.1.ebuild,v 1.6 2003/07/18 21:55:44 tester Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.bz2"
 
 SLOT=${PV_MAJ_MIN}
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~sparc ppc"
+KEYWORDS="x86 ~sparc ppc amd64"
 
 # required packages
 # there are many many optional libraries. features are compiled if the libraries
@@ -40,7 +40,7 @@ RDEPEND="=media-libs/gstreamer-${PV}*
 	gnome? ( >=gnome-base/gnome-vfs-2.0.1 )
 	mikmod? ( media-libs/libmikmod )
 	sdl? ( media-libs/libsdl )
-	jpeg? ( mmx? ( media-video/mjpegtools ) )
+	jpeg? ( x86? ( mmx? ( media-video/mjpegtools ) ) )
 	jpeg? ( media-libs/jpeg )
 	png? ( >=media-libs/libpng-1.2.3 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )

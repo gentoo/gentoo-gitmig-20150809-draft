@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-0.1.9.ebuild,v 1.2 2003/07/12 18:05:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-0.1.9.ebuild,v 1.3 2003/07/18 21:55:44 tester Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library for DVD navigation tools."
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/dvd/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha amd64"
 
 DEPEND="media-libs/libdvdread"
 

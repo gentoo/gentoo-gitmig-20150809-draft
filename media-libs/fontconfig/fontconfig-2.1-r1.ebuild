@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.15 2003/06/11 22:47:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.16 2003/07/18 21:55:44 tester Exp $
 
 inherit debug eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fontconfig.org/"
 
 LICENSE="fontconfig"
 SLOT="1.0"
-KEYWORDS="x86 alpha ppc sparc mips hppa arm"
+KEYWORDS="x86 alpha ppc sparc mips hppa arm amd64"
 
 # Seems like patches in freetype-2.1.2-r2 fixes bug #10028
 DEPEND=">=media-libs/freetype-2.1.2-r2

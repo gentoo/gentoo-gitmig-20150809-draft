@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6-r1.ebuild,v 1.12 2003/03/09 14:30:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6-r1.ebuild,v 1.13 2003/07/18 21:55:44 tester Exp $
 
 inherit libtool flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa amd64"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/giflib-4.1.0

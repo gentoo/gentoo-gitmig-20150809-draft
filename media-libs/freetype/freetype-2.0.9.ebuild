@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.0.9.ebuild,v 1.10 2003/02/13 12:43:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.0.9.ebuild,v 1.11 2003/07/18 21:55:44 tester Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A high-quality and portable font engine"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.freetype.org/"
 
 SLOT="2"
 LICENSE="FTL | GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND="virtual/glibc"
 
