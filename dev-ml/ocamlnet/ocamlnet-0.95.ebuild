@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-0.95.ebuild,v 1.5 2004/03/23 01:10:35 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-0.95.ebuild,v 1.6 2004/06/25 00:02:30 agriffis Exp $
 
 DESCRIPTION="Modules for O'Caml application-level Internet protocols"
 HOMEPAGE="http://ocamlnet.sourceforge.net"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/pomap-2.9.1.ebuild,v 1.3 2004/03/13 19:51:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/pomap-2.9.1.ebuild,v 1.4 2004/06/25 00:03:30 agriffis Exp $
 
 DESCRIPTION="Partially Ordered Map ADT for O'Caml"
 HOMEPAGE="http://www.ai.univie.ac.at/~markus/home/ocaml_sources.html"

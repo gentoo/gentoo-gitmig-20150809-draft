@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/pxp-1.1.5.ebuild,v 1.6 2004/03/13 19:51:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/pxp-1.1.5.ebuild,v 1.7 2004/06/25 00:03:46 agriffis Exp $
 
 DESCRIPTION="validating XML parser library for O'Caml"
 HOMEPAGE="http://www.ocaml-programming.de/packages/documentation/pxp/index_dev.html"

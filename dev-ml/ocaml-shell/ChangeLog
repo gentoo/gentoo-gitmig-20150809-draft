@@ -1,6 +1,6 @@
 # ChangeLog for dev-ml/ocaml-shell
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-shell/ChangeLog,v 1.2 2004/03/01 12:20:27 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-shell/ChangeLog,v 1.3 2004/06/25 00:02:51 agriffis Exp $
 
 *ocaml-shell-0.2.3-r1 (23 Feb 2003)
 
