@@ -1,4 +1,6 @@
+MD5 fe948c598bc4062a7109b7ea23f9b625 gst-plugins-colorspace-0.6.4.ebuild 404
 MD5 b45555f56e5fec7191328730993087b3 gst-plugins-colorspace-0.6.3.ebuild 403
-MD5 c6a7b28227f70077efe5d81f832119a7 ChangeLog 545
+MD5 8047c558adb16aa487679da980386bab ChangeLog 683
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ad7d13e5c42638d153311159e0c64028 files/digest-gst-plugins-colorspace-0.6.3 71
+MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-colorspace-0.6.4 71
