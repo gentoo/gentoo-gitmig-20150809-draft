@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/eventwatcher
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/ChangeLog,v 1.1 2004/03/13 21:08:51 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/ChangeLog,v 1.2 2004/03/14 02:41:01 weeve Exp $
+
+  13 Mar 2004; Jason Wever <weeve@gentoo.org> eventwatcher-0.2.1.ebuild:
+  Added ~sparc keyword.
 
 *eventwatcher-0.2.1 (13 Mar 2004)
 
