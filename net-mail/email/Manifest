@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7c2ab2acd071ecf3d671f323952ab0c6 ChangeLog 860
-MD5 850ad3e7c3a77515ca7545c20870b45f metadata.xml 326
-MD5 c6330de1c7e9a7d720669ddb5e8adcc0 email-2.3.2.ebuild 931
+MD5 76e7d4ec68dbe4634a8972778e01a025 ChangeLog 945
 MD5 8eedf4de603f1b16bdc17cb77aa834f0 email-2.3.0.ebuild 962
-MD5 d8ffee20e1c04fcca266bed7dd3546ad files/digest-email-2.3.2 64
+MD5 850ad3e7c3a77515ca7545c20870b45f metadata.xml 326
+MD5 933f4f979bd47e48c0e6990d21dc6418 email-2.3.2.ebuild 938
 MD5 7d522f333c5db99952f0d5e4a7d3796e files/digest-email-2.3.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB6VbPQlM6RnzZP+IRAl9PAJ9jzddhe3bRgQbgBWxOuuicUeCPHgCfUREh
-QPPJrcxMrE9TtMOrPnDZFQ8=
-=S2XI
------END PGP SIGNATURE-----
+MD5 d8ffee20e1c04fcca266bed7dd3546ad files/digest-email-2.3.2 64
