@@ -1,0 +1,26 @@
+# ChangeLog for dev-lisp/bigloo-lib
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo-lib/ChangeLog,v 1.1 2004/02/11 22:49:41 jake Exp $
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*bigloo-lib-0.17 (13 Apr 2002)
+
+  02 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> bigloo-lib-0.17.ebuild :
+  Fixed USE flags, unmasked and marked for testing.  
+
+  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> bigloo-lib-0.17.ebuild :
+  Added LICENSE, SLOT and KEYWORDS (apparently Seemant had a finger in this).
+
+  13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> bigloo-lib-0.17.ebuild files/digest-bigloo-lib-0.17 :
+
+  Bigloo-lib is a set of libraries for Bigloo, the Scheme programming language
+  compiler (http://kaolin.unice.fr/bigloo/). Most of the libraries are 
+  ready-to-use interfaces for various C-based packages, such as C runtime 
+  library, Gtk++, LDAP client API or XML parser API. Other are done entirely 
+  in `pure Scheme', such as HTTP library and NODE library.
+
+  Besides, the bigloo-lib provides a comfortable framework to configure, 
+  compile, install and deploy Bigloo (in particular, system-dependent) 
+  libraries, so it is quite a good place to put code created by other Bigloo
+  developers. 
