@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/jargon
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/jargon/ChangeLog,v 1.1 2004/02/06 02:05:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/jargon/ChangeLog,v 1.2 2004/02/22 21:22:30 g2boojum Exp $
+
+  22 Feb 2004; Grant Goodyear <g2boojum@gentoo.org> jargon-4.4.7.ebuild:
+  Removing spurious x86obsd keyword
 
 *jargon-4.4.7 (05 Feb 2004)
 
