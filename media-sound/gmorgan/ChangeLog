@@ -1,0 +1,8 @@
+# ChangeLog for media-sound/gmorgan
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.1 2003/08/15 02:50:33 g2boojum Exp $
+
+*gmorgan-0.12 (14 Aug 2003)
+
+  14 Aug 2003; Nick Hadaway <raker@gentoo.org> gmorgan-0.12.ebuild:
+  New ebuild as submitted on bug #24898 with minor changes.
