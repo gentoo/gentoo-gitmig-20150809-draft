@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r1.ebuild,v 1.6 2004/06/24 22:25:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r1.ebuild,v 1.7 2004/07/14 22:40:27 agriffis Exp $
 
 # You need SLIP in your kernel to run diald.
 
 DESCRIPTION="Daemon that provides on demand IP links via SLIP or PPP"
 HOMEPAGE="http://diald.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-S=${WORKDIR}/${P}
 
 DEPEND="sys-libs/pam
 	sys-apps/tcp-wrappers"
@@ -16,6 +15,7 @@ RDEPEND="net-dialup/ppp"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86"
+IUSE=""
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
