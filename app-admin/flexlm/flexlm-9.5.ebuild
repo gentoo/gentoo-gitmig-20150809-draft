@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5.ebuild,v 1.2 2005/03/10 11:35:51 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5.ebuild,v 1.3 2005/03/10 18:49:40 chrb Exp $
 
 DESCRIPTION="Macrovision FLEXlm license manager and utils"
 HOMEPAGE="http://www.macrovision.com/services/support/flexlm/lmgrd.shtml"
@@ -46,7 +46,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	id &>/dev/null flexlm || useradd -g nogroup -d /opt/flexlm -c "FlexLM server user" -s /bin/bash flexlm
+	enewuser flexlm -1 /bin/bash /opt/flexlm nogroup "FlexLM server user"
 	einfo "FlexLM installed. Config is in /etc/conf.d/flexlm"
 	einfo "Default location for license file is /etc/flexlm/license.dat"
 }
