@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50-r2.ebuild,v 1.16 2004/10/26 13:14:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50-r2.ebuild,v 1.17 2004/10/27 00:15:26 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 	sed -i \
 		-e "s:-O3:${CFLAGS}:" \
-		-e "s:CC=gcc LD=gcc:CC=$(tc-getCC) LD=$(tc-getLD):" \
+		-e "s:CC=gcc LD=gcc:CC=$(tc-getCC) LD=$(tc-getCC):" \
 		-e "s:-O :${CFLAGS} :" \
 		unix/Makefile \
 		|| die "sed unix/Makefile failed"
