@@ -1,0 +1,87 @@
+# ChangeLog for net-www/screem
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/ChangeLog,v 1.1 2004/08/15 17:32:52 stuart Exp $
+
+*screem-0.6.2 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/Makefile.in, +files/screem-0.8.1-makefile-fix.patch,
+  +screem-0.10.2.ebuild, +screem-0.4.1-r2.ebuild, +screem-0.6.0.ebuild,
+  +screem-0.6.2.ebuild, +screem-0.8.1.ebuild:
+  Moved from net-www/screem to dev-util/screem.
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org> screem-0.4.1-r2.ebuild:
+  QA - fix use invocation
+
+  08 Jun 2004; Yi Qiang <khai@gentoo.org> screem-0.10.2.ebuild:
+  Added libcroco dependency, as pointed out by #53317
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> screem-0.8.1.ebuild:
+  Add inherit eutils
+
+*screem-0.10.2 (23 Apr 2004)
+
+  23 Apr 2004; <khai@gentoo.org> +screem-0.10.2.ebuild:
+  Version bump. This version fixes the gtk deprecation problems.
+
+  23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> screem-0.8.1.ebuild:
+  Stable on sparc. Thanks to Lars Weiler <pylon@gentoo.org> for testing!
+
+*screem-0.8.1 (16 Sep 2003)
+
+  16 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> screem-0.8.1.ebuild,
+  files/screem-0.8.1-makefile-fix.patch:
+  version bump to new stable version, ebuild rewritten to use gnome2 eclass
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> screem-0.6.0.ebuild,
+  screem-0.6.2.ebuild:
+  addde scrollkeeper and pkgconfig deps
+
+  09 Jul 2003; Bartosch Pixa <darkspecter@gentoo.org> screem-0.4.1-r2.ebuild:
+  DEPEND fix
+
+  09 Jul 2003; Bartosch Pixa <darkspecter@gentoo.org> screem-0.6.2.ebuild:
+  marked stable on x86 and ppc
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> screem-0.6.0.ebuild,
+  screem-0.6.2.ebuild:
+  fixing libgtkhtml deps
+
+  14 May 2003; Bartosch Pixa <darkspecter@gentoo.org> screem-0.6.0.ebuild,
+  screem-0.6.2.ebuild:
+  DEPEND cleanups
+
+*screem-0.6.2 (20 Apr 2003)
+
+  20 Apr 2003; Bartosch Pixa <darkspecter@gentoo.org> screem-0.6.2.ebuild:
+  revision bump, should fix occasional scrollkeeper issues on merge. added einfo
+  about neon being needed for http/WebDAV support and set to ~ppc
+
+*screem-0.6.0 (11 Mar 2003)
+
+  11 Mar 2003; Seth Chandler <sethbc@gentoo.org>; screem-0.6.0.ebuild:
+  added screem 0.6.0 to portage, courtesy of Mike Javorski
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+screem-0.4.1-r2 (8 Apr 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> screem-0.4.1-r2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  8 Apr 2002; M.Schlemmer <azarah@gentoo.org> screem-0.4.1-r2.ebuild :
+
+  Compile && sandbox fixes.
+
+*screem-0.4.1-r1 (1 Feb 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> screem-0.4.1-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
