@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.27.ebuild,v 1.4 2004/03/25 07:58:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.27.ebuild,v 1.5 2004/03/25 07:59:09 mr_bones_ Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 DEPEND="${DEPEND}
 	berkdb? ( >=sys-libs/db-4.1.25_p1-r3 )
 	!berkdb? (
-		gdbm? ( >=sys-libs/gdbm-1.8.0 ) 
+		gdbm? ( >=sys-libs/gdbm-1.8.0 )
 		!gdbm? ( >=sys-libs/db-4.1.25_p1-r3 )
 	)"
 
