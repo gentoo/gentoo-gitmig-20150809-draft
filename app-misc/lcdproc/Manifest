@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 47a592c9b829c87173db5ae19f39fb79 ChangeLog 3379
-MD5 b3eced0f8eeb5164fc128ef3686165df lcdproc-0.4.4-r1.ebuild 2664
 MD5 c798747d2b2527de1f89bcb29e3a2b0f lcdproc-0.4.5.ebuild 2611
-MD5 f5bde3b5dcf57c75ae292e68cd842413 files/LCDd 554
-MD5 92a88b8b646fbd62d09e04cb1c2a325f files/lcdproc 518
+MD5 8e7b7910901432a7bcd2ea1d2fa53aef lcdproc-0.4.4-r1.ebuild 2672
+MD5 6c014ab5dae760b1ce111a3c37ca487d ChangeLog 3476
+MD5 771f0b39b94d1acd788ecddcdac2f3e5 files/LCDd 553
+MD5 11bba326bb8118d54f08908734f2c070 files/lcdproc 517
+MD5 9e973338e7d705258bb4694f0dba0044 files/digest-lcdproc-0.4.5 66
 MD5 6230f34f250e4f4c7026702e31047d27 files/lcdproc-0.4.3-gentoo.diff 2801
-MD5 041467af40c15c7a566f4c56bb369676 files/lcdproc.confd 331
 MD5 2f153440be0f08cd266c618d4f0e9d95 files/digest-lcdproc-0.4.4-r1 66
 MD5 93bc2139ae4ea5fdb0cc9cda7cdf1ec8 files/lcdproc-0.4.4-security.patch 372
-MD5 9e973338e7d705258bb4694f0dba0044 files/digest-lcdproc-0.4.5 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35YnHTu7gpaalycRArrcAKD1iuEs1jDzd4d3vu4z6gHLESHvWQCgr5UJ
-eadh7ZuCLTPQuu+vQs+678Q=
-=FiRq
------END PGP SIGNATURE-----
+MD5 041467af40c15c7a566f4c56bb369676 files/lcdproc.confd 331

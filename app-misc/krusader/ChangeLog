@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/krusader
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.24 2004/06/28 16:08:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.25 2004/07/01 11:58:30 agriffis Exp $
+
+  01 Jul 2004; Aron Griffis <agriffis@gentoo.org> krusader-1.30.ebuild,
+  krusader-1.40_beta1-r1.ebuild, krusader-1.40_beta1.ebuild,
+  krusader-1.40_beta2.ebuild:
+  inherit eutils, inherit flag-o-matic, trim trailing whitespace
 
 *krusader-1.40_beta2 (28 Jun 2004)
 
