@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.ebuild,v 1.3 2004/04/07 03:47:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.ebuild,v 1.4 2004/05/05 08:16:32 usata Exp $
 
 IUSE=""
 
@@ -19,8 +19,6 @@ DEPEND="virtual/xft
 	>=gnome-base/libghttp-1.0.9
 	sys-libs/zlib
 	sys-devel/gettext"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.1.ebuild,v 1.1 2004/04/12 19:52:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.1.ebuild,v 1.2 2004/05/05 08:16:32 usata Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/9051/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/xft
 	>=x11-libs/gtk+-2.2.4
@@ -19,8 +19,6 @@ DEPEND="virtual/xft
 	>=gnome-base/libghttp-1.0.9
 	sys-libs/zlib
 	sys-devel/gettext"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 
