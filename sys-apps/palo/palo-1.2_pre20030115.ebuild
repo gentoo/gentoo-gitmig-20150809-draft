@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/palo/palo-1.2_pre20030115.ebuild,v 1.2 2003/02/06 03:26:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/palo/palo-1.2_pre20030115.ebuild,v 1.3 2003/02/09 01:31:11 gmsoft Exp $
 
 DESCRIPTION="PALO : PArisc Linux Loader"
 HOMEPAGE="http://parisc-linux.org/"
@@ -11,7 +11,7 @@ SLOT="0"
 S=${WORKDIR}/palo
 
 #Compile only on hppa stations
-KEYWORDS="hppa -x86 -ppc -sparc -alpha"
+KEYWORDS="hppa -x86 -ppc -sparc -alpha -mips"
 IUSE=""
 
 PROVIDE="virtual/bootloader"
