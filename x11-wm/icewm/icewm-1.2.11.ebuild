@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.11.ebuild,v 1.1 2003/08/20 13:52:34 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.11.ebuild,v 1.2 2003/08/20 13:58:31 hanno Exp $
 
 DESCRIPTION="Ice Window Manager"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -35,7 +35,7 @@ src_compile(){
 		|| myconf="${myconf} --disable-GtkSpell"
 
 	use truetype \
-		&& myconf="${myconf} --enable-gradients --with-antialias" \
+		&& myconf="${myconf} --enable-gradients" \
 		|| myconf="${myconf} --disable-xfreetype"
 
 	use x86 \
@@ -43,11 +43,11 @@ src_compile(){
 		|| myconf="${myconf} --disable-x86-asm"
 
 	use gnome \
-		&& myconf="${myconf} --enable-menus-gnome" \
-		|| myconf="${myconf} --disable-menus-gnome"
+		&& myconf="${myconf} --enable-menus-gnome2" \
+		|| myconf="${myconf} --disable-menus-gnome2"
 
 	CXXFLAGS="${CXXFLAGS}" econf \
-		--with-xpm \
+        	--enable-wm-sessions \
 		--with-libdir=/usr/share/icewm \
 		--with-cfgdir=/etc/icewm \
 		--with-docdir=/usr/share/doc/${PF}/html \
