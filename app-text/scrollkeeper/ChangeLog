@@ -1,6 +1,15 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.9 2002/07/10 20:21:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.10 2002/07/12 15:57:42 seemant Exp $
+
+*scrollkeeper-0.3.10 (12 Jul 2002)
+
+  12 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  scrollkeeper-0.3.10-r1.ebuild files/digest-scrollkeeper-0.3.10-r1 :
+
+  Blah.  changed einstall to make install, because otherwise stuff was
+  getting merged into ${D}.  Silly silly seemant.  Closes bug #4880 by
+  koto@mynetix.de (Andreas Kotowicz)
 
 *scrollkeeper-0.3.10 (10 Jul 2002)
 

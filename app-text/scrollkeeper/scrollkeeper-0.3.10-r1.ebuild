@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.10.ebuild,v 1.1 2002/07/10 20:21:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.10-r1.ebuild,v 1.1 2002/07/12 15:57:42 seemant Exp $
 
 inherit libtool
 
@@ -41,8 +41,6 @@ src_unpack() {
 }
 	
 src_compile() {
-	autoconf
-	automake
 	elibtoolize
 
 	local myconf=""
@@ -62,7 +60,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall DESTDIR=${D} || die
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS INSTALL TODO COPYING* ChangeLog README NEWS
 }
