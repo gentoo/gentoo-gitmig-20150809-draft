@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/tmda
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.6 2004/09/22 08:56:24 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.7 2004/09/22 09:06:12 ticho Exp $
+
+  22 Sep 2004; Andrej Kacian <ticho@gentoo.org> tmda-0.92.ebuild,
+  tmda-1.0.3-r1.ebuild, tmda-1.0.3.ebuild, tmda-1.0.ebuild:
+  Fixed SRC_URI
 
 *tmda-1.0.3-r1 (22 Sep 2004)
 
