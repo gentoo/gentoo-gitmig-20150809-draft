@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.174 2004/07/27 02:42:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.175 2004/07/28 07:35:50 stuart Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -155,6 +155,7 @@ mcve - Support for the MCVE credit card payment system
 memlimit - Adds memory usage limiting in supporting programs
 mhash - Adds support for the mhash library
 mikmod - Adds libmikmod support to allow playing of SoundTracker-style music files
+mime - Adds MIME support
 ming - Adds support for ming library for creating flash format files
 mmap - Adds mmap support
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
