@@ -1,6 +1,6 @@
 # ChangeLog for net-fs/coda-server
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-server/ChangeLog,v 1.4 2004/04/26 00:45:52 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-server/ChangeLog,v 1.5 2004/06/24 22:43:02 agriffis Exp $
 
   26 Apr 2004; Daniel Black <dragonheart@gentoo.org>
   coda-server-5.3.19.ebuild:

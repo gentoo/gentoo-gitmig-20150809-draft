@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.3.ebuild,v 1.3 2004/05/12 00:55:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.3.ebuild,v 1.4 2004/06/24 22:42:31 agriffis Exp $
 
 inherit eutils
 

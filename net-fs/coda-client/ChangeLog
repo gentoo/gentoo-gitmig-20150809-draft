@@ -1,6 +1,6 @@
 # ChangeLog for net-fs/coda-client
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/ChangeLog,v 1.6 2004/04/26 00:43:05 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/ChangeLog,v 1.7 2004/06/24 22:42:42 agriffis Exp $
 
   26 Apr 2004; Daniel Black <dragonheart@gentoo.org>
   coda-client-5.3.19.ebuild:

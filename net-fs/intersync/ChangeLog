@@ -1,6 +1,6 @@
 # ChangeLog for net-fs/intersync	
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/intersync/ChangeLog,v 1.7 2004/01/05 06:39:00 zhen Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/intersync/ChangeLog,v 1.8 2004/06/24 22:43:14 agriffis Exp $
 
   05 Jan 2004; zhen <zhen@gentoo.org> metadata.xml:
   metadata for net-fs herd
