@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Shachar Goldin <aldarsior@yahoo.com>, Maintainer Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.5.0.ebuild,v 1.1 2002/01/26 23:17:03 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.5.0.ebuild,v 1.2 2002/01/26 23:17:46 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A ncurses ICQ/Yahoo!/MSN Client"
@@ -15,7 +15,6 @@ DEPEND="virtual/glibc
 src_unpack() {
 
     unpack ${P}.tar.gz
-    #patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
     cd ${S}
     echo "CFLAGS += ${CFLAGS}" >> Makefile.rules
 
@@ -30,8 +29,6 @@ src_compile() {
 src_install () {
 	
     make DESTDIR=${D} install || die
-    #dobin src/centericq
-    #dodoc README FAQ
 
 }
 
