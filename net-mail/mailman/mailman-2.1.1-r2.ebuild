@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.1-r2.ebuild,v 1.1 2003/04/30 01:02:38 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.1-r2.ebuild,v 1.2 2003/05/20 01:58:24 tberman Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Mailman, the mailing list server with webinterface"
@@ -49,7 +49,7 @@ src_install () {
         chmod 2775 ${ID}
         make prefix=${ID} var_prefix=${ID} doinstall || die
 	insinto /etc/apache/conf/addon-modules
-	doins ${FILESDIR}/mailman.conf
+	newins ${FILESDIR}/mailman.2.1.1-r2.conf mailman.conf
 	
 	dodoc ${FILESDIR}/README.gentoo
 	dodoc ACK* BUGS FAQ NEWS README* TODO UPGRADING

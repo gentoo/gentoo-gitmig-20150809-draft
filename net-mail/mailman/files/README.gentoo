@@ -4,7 +4,7 @@ submitted by Joby Walker (YOU RULE!)
 
 Please view the documentation on Mailman at: http://www.list.org/
 
-I have configured Mailman to install in /home/mailman by default, to change
+I have configured Mailman to install in /usr/local/mailman by default, to change
 this you will need to modify the INSTALLDIR variable in the ebuild and the
 locations in the mailman.conf(.apache) file.
 
@@ -42,6 +42,6 @@ Remember:
 
 Do everything as user "mailman".  If root you will cause mailman to fail,
 but it is correctable by running "bin/check_perms -f" from the root
-mailman directory (/home/mailman).
+mailman directory (/usr/local/mailman).
 
 NOTE TO ORIGINAL AUTHOR: Once again thanks for the submission, you rule!
