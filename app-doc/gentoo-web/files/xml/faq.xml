@@ -234,7 +234,7 @@ command:</p>
 <p>Or, alternatively, if you want to "tail" the log:</p>
 
 <pre>
-# <i>cat /var/log/syslog.d/current | tai64nlocal | tail -f</i>
+# <i>tail -f /var/log/syslog.d/current | tai64nlocal</i>
 </pre>
 
 </body>
