@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.2 2003/09/09 23:44:19 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.3 2003/10/05 02:42:53 vapier Exp $
 
 inherit games eutils
 
@@ -22,6 +22,7 @@ DEPEND="X? ( virtual/x11 )
 S=${WORKDIR}
 
 pkg_setup() {
+	check_license
 	games_get_cd System/
 	games_verify_cd ${PN}
 	games_pkg_setup

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r2.ebuild,v 1.1 2003/09/09 18:10:15 vapier Exp $.
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r2.ebuild,v 1.2 2003/10/05 02:42:05 vapier Exp $.
 
 inherit games
 
@@ -17,8 +17,13 @@ DEPEND="virtual/opengl"
 
 S=${WORKDIR}
 
+pkg_setup() {
+	check_license
+	games_pkg_setup
+}
+
 src_unpack() {
-	tail +266 ${DISTDIR}/${A} | tar xf - || die
+	unpack_makeself
 	tar -zxf setupstuff.tar.gz || die
 }
 
