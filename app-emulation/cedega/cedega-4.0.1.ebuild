@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.0.1.ebuild,v 1.5 2004/08/16 17:30:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.0.1.ebuild,v 1.6 2004/08/18 16:55:57 vapier Exp $
 
 MY_P="cedega_${PV}-1.i386"
 DESCRIPTION="Cedega replaces WineX, a distribution of Wine with enhanced DirectX for gaming"
@@ -26,14 +26,6 @@ pkg_nofetch() {
 	einfo "from ${HOMEPAGE} (requires a Transgaming subscription)"
 	einfo
 	einfo "Then put the file in ${DISTDIR}"
-	einfo
-	ewarn "Please note that for some stupid reason Transgaming has"
-	ewarn "started watermarking their downloads."
-	ewarn "http://transgaming.org/forum/viewtopic.php?t=660"
-	ewarn
-	ewarn "To remove the simple watermark and verify the"
-	ewarn "authenticity of your download, just do this:"
-	ewarn "sh /usr/portage/app-emulation/${PN}/files/remove-watermark.sh ${DISTDIR}/${MY_P}.tgz"
 }
 
 src_install() {
