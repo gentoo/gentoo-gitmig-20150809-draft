@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.3.ebuild,v 1.5 2004/03/14 21:02:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.3.ebuild,v 1.6 2004/04/08 22:56:07 vapier Exp $
 
 PTEX_TEXMF_PV=2.1
 TETEX_PV=2.0.2
 
-inherit tetex
+inherit tetex eutils
 
 DESCRIPTION="The ASCII publishing TeX distribution"
 HOMEPAGE="http://www.ascii.co.jp/pb/ptex/"
@@ -19,14 +19,13 @@ SRC_URI="${SRC_URI}
 	${SRC_PATH_PTEX}/tetex/${PTEX_TEXMF}
 	${SRC_PATH_PTEX}/dvips/dvipsk-jpatch-p1.6.tar.gz"
 
-KEYWORDS="x86 alpha amd64 ~sparc"
-SLOT="0"
 LICENSE="GPL-2 BSD"
+SLOT="0"
+KEYWORDS="x86 alpha amd64 ~sparc"
 
 PDEPEND="app-text/xdvik"
 
 src_unpack() {
-
 	tetex_src_unpack
 
 	einfo "Unpacking pTeX sources..."
@@ -42,7 +41,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	tetex_src_compile
 
 	cat >>${S}/texk/web2c/fmtutil.cnf<<-EOF
@@ -65,7 +63,6 @@ src_compile() {
 }
 
 src_install() {
-
 	tetex_src_install
 
 	einfo "Installing pTeX..."

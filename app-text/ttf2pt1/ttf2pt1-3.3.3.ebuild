@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.3.3.ebuild,v 1.17 2004/03/12 09:18:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.3.3.ebuild,v 1.18 2004/04/08 22:59:57 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Converts True Type to Type 1 fonts"
 HOMEPAGE="http://ttf2pt1.sourceforge.net/"

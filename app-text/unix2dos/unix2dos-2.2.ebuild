@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.8 2004/03/10 20:18:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.9 2004/04/08 23:00:32 vapier Exp $
 
-DESCRIPTION="unix2dos - UNIX to DOS text file format converter"
+inherit gcc eutils
+
+DESCRIPTION="UNIX to DOS text file format converter"
 HOMEPAGE=""
 SRC_URI="mirror://gentoo/${P}.src.tar.gz"
 
@@ -23,10 +25,10 @@ src_unpack() {
 }
 
 src_compile() {
-	gcc ${CFLAGS} -o unix2dos unix2dos.c || die
+	$(gcc-getCC) ${CFLAGS} -o unix2dos unix2dos.c || die
 }
 
 src_install() {
-	dobin unix2dos
+	dobin unix2dos || die
 	doman unix2dos.1
 }

@@ -1,14 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.25-r1.ebuild,v 1.8 2004/03/12 09:18:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.25-r1.ebuild,v 1.9 2004/04/08 22:54:20 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="high-level language for document formatting"
 HOMEPAGE="http://snark.ptc.spbu.ru/~uwe/lout/"
 SRC_URI="http://www.tex.ac.uk/tex-archive/support/lout/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc"
 SLOT="0"
+KEYWORDS="x86 sparc"
 
 DEPEND=">=sys-libs/zlib-1.1.4"
 RDEPEND=""

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r1.ebuild,v 1.1 2004/03/14 13:30:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r1.ebuild,v 1.2 2004/04/08 23:01:40 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="An X Viewer for PDF Files"
 HOMEPAGE="http://www.foolabs.com/xpdf/"
@@ -30,7 +32,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	prepallman
-	dodoc README ANNOUNCE CHANGES COPYING
+	dodoc README ANNOUNCE CHANGES
 	insinto /etc
 	doins ${FILESDIR}/xpdfrc
 }

@@ -1,24 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.14 2004/03/21 07:58:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.15 2004/04/08 22:55:20 vapier Exp $
 
-inherit libtool sgml-catalog
+inherit libtool sgml-catalog eutils
 
-S=${WORKDIR}/${P}
-IUSE=""
 DESCRIPTION="Jade is an implemetation of DSSSL - an ISO standard for formatting SGML and XML documents"
-SRC_URI="mirror://sourceforge/openjade/${P}.tar.gz"
 HOMEPAGE="http://openjade.sourceforge.net"
-SLOT="0"
+SRC_URI="mirror://sourceforge/openjade/${P}.tar.gz"
+
 LICENSE="as-is"
+SLOT="0"
+KEYWORDS="ia64 x86 amd64 hppa ~ppc alpha sparc mips"
+IUSE=""
 
 RDEPEND="app-text/sgml-common
 	>=app-text/opensp-1.5-r1"
-
 DEPEND="dev-lang/perl
 	${RDEPEND}"
-
-KEYWORDS="ia64 x86 amd64 hppa ~ppc alpha sparc mips"
 
 src_unpack() {
 	unpack ${A}
@@ -57,7 +55,6 @@ src_compile() {
 }
 
 src_install() {
-
 	dodir /usr
 	dodir /usr/lib
 	make prefix=${D}/usr \

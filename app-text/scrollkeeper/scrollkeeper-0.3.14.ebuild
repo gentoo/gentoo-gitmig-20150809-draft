@@ -1,26 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14.ebuild,v 1.9 2004/03/14 18:05:08 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14.ebuild,v 1.10 2004/04/08 22:57:08 vapier Exp $
 
-IUSE="nls"
+inherit libtool eutils
 
-inherit libtool
-
-S=${WORKDIR}/${P}
 DESCRIPTION="ScrollKeeper is a cataloging system for documentation on open systems."
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://scrollkeeper.sourceforge.net"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="FDL-1.1 LGPL-2.1"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ia64 ~mips"
+IUSE="nls"
 
 RDEPEND=">=dev-libs/libxml2-2.4.19
 	>=dev-libs/libxslt-1.0.14
 	>=sys-libs/zlib-1.1.3
 	=app-text/docbook-xml-dtd-4.1.2*
 	>=app-text/docbook-sgml-utils-0.6.6"
-
 DEPEND="${RDEPEND}
 	 >=dev-util/intltool-0.29
 	nls? ( sys-devel/gettext )"
@@ -29,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	patch -p0< ${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 }
 

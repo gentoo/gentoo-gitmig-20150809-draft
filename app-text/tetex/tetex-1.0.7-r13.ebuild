@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.8 2004/02/21 12:17:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.9 2004/04/08 22:58:31 vapier Exp $
+
+inherit eutils flag-o-matic
 
 TEXMFSRC="teTeX-texmf-gg-1.0.3.tar.bz2"
 S=${WORKDIR}/teTeX-1.0
 
 DESCRIPTION="a complete TeX distribution"
+HOMEPAGE="http://tug.org/teTeX/"
 SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-src-${PV}.tar.gz
 	 ftp://ftp.dante.de/pub/tex/systems/unix/teTeX/1.0/contrib/ghibo/${TEXMFSRC}
 	 mirror://gentoo/ec-ready-mf-tfm.tar.gz
 	 mirror://teTeX-french.tar.gz"
-HOMEPAGE="http://tug.org/teTeX/"
 
 KEYWORDS="x86 ppc sparc alpha hppa"
 SLOT="0"
@@ -81,8 +83,7 @@ src_unpack() {
 }
 
 src_compile() {
-
-	filter-flags "-fstack-protector"
+	filter-flags -fstack-protector
 
 	local myconf=""
 	use X \
@@ -113,7 +114,6 @@ src_compile() {
 }
 
 src_install() {
-
 	dodir /usr/share/
 	# Install texmf files
 	einfo "Installing texmf..."
@@ -163,7 +163,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	if [ $ROOT = "/" ]
 	then
 		einfo "Configuring teTeX..."
@@ -186,4 +185,3 @@ pkg_postinst() {
 		echo
 	fi
 }
-

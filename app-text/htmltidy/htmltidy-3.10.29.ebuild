@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.7 2004/02/27 21:19:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.8 2004/04/08 22:53:45 vapier Exp $
+
+inherit eutils
 
 # Convert gentoo version number x.y.z to date xyz for
 # tidy's source numbering by date
@@ -14,14 +16,13 @@ HOMEPAGE="http://tidy.sourceforge.net/"
 SRC_URI="http://tidy.sourceforge.net/src/old/${MY_P}.tgz
 		 http://tidy.sourceforge.net/docs/tidy_docs.tgz
 		 xml? ( http://www.cise.ufl.edu/~ppadala/tidy/html2db.tar.gz )"
-LICENSE="GPL-2"
 
-IUSE="debug doc xml"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha ~amd64"
+IUSE="debug doc xml"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	# Required to setup the source dist for autotools
@@ -32,7 +33,7 @@ src_unpack() {
 	# Stop tidy from appending -O2 to our CFLAGS
 	sed -i -e "/save_cflags/s/\ \-O2//" configure.in
 
-	if [ `use xml` ]; then
+	if use xml ; then
 		# Apply the docbook patch to tidy sources
 		epatch ${FILESDIR}/03-${PN}-docbook.patch
 
@@ -44,26 +45,21 @@ src_unpack() {
 		sed -i -e "/TIDYDIR\=/s:\.\.:${S}:" \
 			   -e "/LIBDIR\=/s:lib:src\/\.libs\/:" \
 			   ${WORKDIR}/html2db/Makefile
-
 	fi
-
 }
 
 src_compile() {
-
 	export WANT_AUTOMAKE=1.5 WANT_AUTOCONF=2.5
 	econf `use_enable debug` || die
 	emake || die
 
-	if [ `use xml` ]; then
+	if use xml ; then
 		cd ${WORKDIR}/html2db
 		make || die
 	fi
-
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 	use xml && dobin ${WORKDIR}/html2db/html2db
 
@@ -79,6 +75,4 @@ src_install() {
 	# If use 'doc' is set, then we also want to install the
 	# api documentation
 	use doc && dohtml -r api
-
 }
-
