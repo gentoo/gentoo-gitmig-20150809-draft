@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/knapster2
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/net-p2p/knapster2/ChangeLog,v 1.0
+2002/07/17 17:53:00 cybersystem
+
+*knapster2-0.4 (17 July 2002)
+
+  17 July 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, knapster2-0.4.ebuild, files/digest-knapster2-0.4 :
+
+  Initial version in Portage now..
+
