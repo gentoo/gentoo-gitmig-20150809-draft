@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.5 2004/09/12 10:07:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.6 2004/09/13 10:47:16 aliz Exp $
 
-inherit myth flag-o-matic
+inherit myth flag-o-matic eutils
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org/"
@@ -141,6 +141,8 @@ src_unpack() {
 	filter-flags -fforce-addr -fPIC
 
 	myth_src_unpack
+
+	epatch ${FILESDIR}/${P}-cx88.patch
 }
 
 

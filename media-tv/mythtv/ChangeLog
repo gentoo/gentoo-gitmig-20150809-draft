@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.35 2004/09/12 10:07:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.36 2004/09/13 10:47:16 aliz Exp $
+
+  13 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythtv-0.16.ebuild:
+  Added patch from CVS to fix cx88 related crashes.
 
   12 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythtv-0.16.ebuild:
   Make compilation distcc friendly, closing #63672.

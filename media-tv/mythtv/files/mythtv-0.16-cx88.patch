@@ -1,0 +1,16 @@
+===================================================================
+RCS file: /var/lib/mythcvs/mythtv/libs/libmythtv/NuppelVideoRecorder.cpp,v
+retrieving revision 1.178
+retrieving revision 1.179
+diff -u -r1.178 -r1.179
+--- mythtv/libs/libmythtv/NuppelVideoRecorder.cpp	2004/08/19 02:02:19	1.178
++++ mythtv/libs/libmythtv/NuppelVideoRecorder.cpp	2004/09/12 19:05:49	1.179
+@@ -1300,7 +1300,7 @@
+ 
+                 uint8_t *y_plane = conversion_buffer;
+                 uint8_t *cb_plane = y_plane + w * h;
+-                uint8_t *cr_plane = cr_plane + w * h / 4;
++                uint8_t *cr_plane = cb_plane + w * h / 4;
+ 
+                 uint8_t *src = buffers[frame];
+ 
