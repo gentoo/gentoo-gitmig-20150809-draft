@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/eject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.10 2003/03/03 10:06:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.11 2003/03/03 10:52:31 aliz Exp $
+
+  03 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  This update should not be classified as a security update. The advisory says that eject is only
+  vulnerable if it is install setuid root and in Gentoo it is not. However if someone decides to
+  make it setuid root the patch in -r1 will make it safer.
 
 *eject-2.0.12-r1 (03 Mar 2003)
 
