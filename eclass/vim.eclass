@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.89 2005/01/13 21:59:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.90 2005/01/15 11:57:57 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -41,7 +41,7 @@ fi
 
 ECLASS=vim
 INHERITED="$INHERITED $ECLASS"
-EXPORT_FUNCTIONS src_unpack
+EXPORT_FUNCTIONS src_unpack pkg_setup
 
 IUSE="$IUSE selinux ncurses nls acl"
 
@@ -175,6 +175,15 @@ apply_vim_patches() {
 	ebegin "Applying filtered vim patches ..."
 	TMPDIR=${T} patch -f -s -p0 < ${p}
 	eend 0
+}
+
+vim_pkg_setup() {
+	if ! version_is_at_least "6.3-r2" ; then
+		eerror "${PF} is no longer supported by vim.eclass. Maybe you need to"
+		eerror "re-run 'emerge sync', or maybe you need to check your overlay"
+		eerror "and /etc/portage/package.* files."
+		die "${PF} not supported."
+	fi
 }
 
 vim_src_unpack() {
@@ -341,59 +350,44 @@ src_compile() {
 		elif [[ "${MY_PN}" == "gvim" ]] ; then
 			myconf="${myconf} --with-vim-name=gvim --with-x"
 
-			# prior to gvim 6.3-r1 we do things a bit strangely
-			if version_is_at_least "6.3-r1" ; then
-				echo ; echo
-				if [[ $(get_major_version ) -ge 7 ]] && use aqua ; then
-					einfo "Building gvim with the Carbon GUI"
-					myconf="${myconf} --enable-gui=carbon"
-				elif use gtk ; then
-					if use gtk2 ; then
-						myconf="${myconf} --enable-gtk2-check"
-						if use gnome ; then
-							einfo "Building gvim with the Gnome 2 GUI"
-							myconf="${myconf} --enable-gui=gnome2"
-						else
-							einfo "Building gvim with the gtk+-2 GUI"
-							myconf="${myconf} --enable-gui=gtk2"
-						fi
+			echo ; echo
+			if [[ $(get_major_version ) -ge 7 ]] && use aqua ; then
+				einfo "Building gvim with the Carbon GUI"
+				myconf="${myconf} --enable-gui=carbon"
+			elif use gtk ; then
+				if use gtk2 ; then
+					myconf="${myconf} --enable-gtk2-check"
+					if use gnome ; then
+						einfo "Building gvim with the Gnome 2 GUI"
+						myconf="${myconf} --enable-gui=gnome2"
 					else
-						if use gnome ; then
-							einfo "Building gvim with the Gnome 1 GUI"
-							myconf="${myconf} --enable-gui=gnome"
-						else
-							einfo "Building gvim with the gtk+-1.2 GUI"
-							myconf="${myconf} --enable-gui=gtk"
-						fi
+						einfo "Building gvim with the gtk+-2 GUI"
+						myconf="${myconf} --enable-gui=gtk2"
 					fi
-				elif [[ $(get_major_version ) -ge 7 ]] && use qt ; then
-					einfo "Building gvim with the Qt GUI"
-					myconf="${myconf} --enable-gui=kde --enable-kde-toolbar"
-				elif use motif ; then
-					einfo "Building gvim with the MOTIF GUI"
-					myconf="${myconf} --enable-gui=motif"
-				elif [[ $(get_major_version ) -ge 7 ]] && use nextaw ; then
-					einfo "Building gvim with the neXtaw GUI"
-					myconf="${myconf} --enable-gui=nextaw"
 				else
-					einfo "Building gvim with the Athena GUI"
-					myconf="${myconf} --enable-gui=athena"
+					if use gnome ; then
+						einfo "Building gvim with the Gnome 1 GUI"
+						myconf="${myconf} --enable-gui=gnome"
+					else
+						einfo "Building gvim with the gtk+-1.2 GUI"
+						myconf="${myconf} --enable-gui=gtk"
+					fi
 				fi
-				echo ; echo
-
+			elif [[ $(get_major_version ) -ge 7 ]] && use qt ; then
+				einfo "Building gvim with the Qt GUI"
+				myconf="${myconf} --enable-gui=kde --enable-kde-toolbar"
+			elif use motif ; then
+				einfo "Building gvim with the MOTIF GUI"
+				myconf="${myconf} --enable-gui=motif"
+			elif [[ $(get_major_version ) -ge 7 ]] && use nextaw ; then
+				einfo "Building gvim with the neXtaw GUI"
+				myconf="${myconf} --enable-gui=nextaw"
 			else
-				if use gtk && use gtk2 ; then
-					myconf="${myconf} --enable-gui=gtk2 --enable-gtk2-check"
-				elif use gnome ; then
-					myconf="${myconf} --enable-gui=gnome"
-				elif use gtk ; then
-					myconf="${myconf} --enable-gui=gtk"
-				elif use motif ; then
-					myconf="${myconf} --enable-gui=motif"
-				else
-					myconf="${myconf} --enable-gui=athena"
-				fi
+				einfo "Building gvim with the Athena GUI"
+				myconf="${myconf} --enable-gui=athena"
 			fi
+			echo ; echo
+
 		else
 			die "vim.eclass doesn't understand MY_PN=${MY_PN}"
 		fi
@@ -511,13 +505,12 @@ src_install() {
 		insinto /etc/vim
 		doins ${FILESDIR}/gvimrc
 
-		# as of 6.3-r1, we install a desktop entry. bug #44633.
-		if version_is_at_least "6.3-r1" ; then
-			insinto /usr/share/applications
-			doins ${FILESDIR}/gvim.desktop
-			insinto /usr/share/pixmaps
-			doins ${FILESDIR}/gvim.xpm
-		fi
+		# as of 6.3-r1, we install a desktop entry. bug #44633, and bug #68622
+		# for the nicer updated version.
+		insinto /usr/share/applications
+		doins ${FILESDIR}/gvim.desktop
+		insinto /usr/share/pixmaps
+		doins ${FILESDIR}/gvim.xpm
 
 	else
 		dobin src/vim
