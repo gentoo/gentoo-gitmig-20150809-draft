@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the term of the GNU General Public License v2
 # Author: Zachary T Welch
-# $Header: /var/cvsroot/gentoo-x86/eclass/crosscompile.eclass,v 1.4 2003/05/08 01:03:51 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/crosscompile.eclass,v 1.5 2003/07/18 20:11:22 tester Exp $
 
 ECLASS=crosscompile
 INHERITED="$INHERITED $ECLASS"
@@ -31,6 +31,8 @@ extract-arch() {
 		echo "sparc"
 	elif  [ ${ISSPARC} -eq 7 ]; then
 		echo "sparc64"
+	elif [  $(expr "${1}" : x86_64) -eq 5 ]; then
+		echo "x86_64"
 	else
 		echo "unknown"
 	fi
