@@ -873,11 +873,8 @@ fi
 #auto-generate ${A} based on ${SRC_URI} if ${A} isn't defined...
 if [ "${A}" = "" ]
 then
-	A=""
-	for x in $SRC_URI
-	do
-		A="${A} "`basename $x`
-	done
+	export SRC_URI
+	eval `dopython portage.gen_archnames`
 fi
 
 

@@ -74,6 +74,15 @@ categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-e
 			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
 			"x11-terms", "x11-wm")
 
+def gen_archnames():
+	"generate archive names from URL list"
+	myurls=os.environ["SRC_URI"]
+	a=string.split(myurls)
+	returnme=""
+	for x in a:
+		returnme=returnme+" "+string.split(x,"/")[-1]
+	print "A='"+returnme[1:]+"'"
+
 def doebuild(myebuild,mydo):
 	a=getstatusoutput("/usr/bin/ebuild "+myebuild+" "+mydo)
 	print a[1]
