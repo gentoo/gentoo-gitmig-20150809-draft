@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash-completion-config
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.6 2004/11/03 14:55:43 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.7 2004/11/04 09:45:56 kumba Exp $
+
+  04 Nov 2004; Joshua Kinard <kumba@gentoo.org>
+  bash-completion-config-0.2.ebuild, bash-completion-config-0.3.ebuild,
+  bash-completion-config-0.4.ebuild:
+  Marked unstable on mips and sparc.
 
 *bash-completion-config-0.4 (03 Nov 2004)
 
