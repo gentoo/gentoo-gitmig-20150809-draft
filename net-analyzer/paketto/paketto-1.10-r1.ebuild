@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10-r1.ebuild,v 1.4 2004/02/27 20:14:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10-r1.ebuild,v 1.5 2004/02/27 20:15:03 vapier Exp $
 
 inherit eutils
 
@@ -11,11 +11,11 @@ SRC_URI="http://www.doxpara.com/paketto/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
 
 #paketto comes with local copies of these ...
-#DEPEND="net-libs/libpcap
-#	net-libs/libnet
+DEPEND="<net-libs/libnet-1.1
+	>=net-libs/libnet-1.0.2a-r3"
+#	net-libs/libpcap
 #	dev-libs/libtomcrypt"
 
 src_unpack() {
@@ -23,12 +23,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gcc3.patch
 	epatch ${FILESDIR}/${PV}-libnet-1.0.patch
-}
-
-src_compile() {
-	# --with-libnet-bin=/usr --with-pcap-lib=/usr --with-pcap-inc=/usr --with-tm-inc=/usr"
-	econf || die
-	emake || die
 }
 
 src_install() {
