@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/rtl8180
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.2 2005/03/08 21:49:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.3 2005/03/23 06:23:19 genstef Exp $
+
+  23 Mar 2005; Stefan Schweizer <genstef@gentoo.org> rtl8180-0.19.ebuild,
+  rtl8180-0.20.2.ebuild:
+  New crypto-depends thanks to Christoph M <golloza@web.de> and Henrik Brix
+  Andersen <brix@gentoo.org> in bug 86252
 
 *rtl8180-0.20.2 (08 Mar 2005)
 
