@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.4 2004/12/10 23:17:11 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.5 2005/01/22 00:02:08 langthang Exp $
 #
 # Author John Mylchreest <johnm@gentoo.org>
 
@@ -18,9 +18,9 @@ DEPEND="${DEPEND} >=sys-apps/sed-4"
 
 do_sed_fix() {
 	sed -i \
-		-e 's/head -\(.*\)/head -n \1/' \
-		-e 's/tail \([-+]\)\(.*\)c/tail -c \1\2/' \
-		-e 's/tail \([-+]\)\(.*\)/tail -n \1\2/' ${1} || \
+		-e 's/head \+-\([0-9]\)/head -n \1/g' \
+		-e 's/tail \+\([-+][0-9]\+\)c/tail -c \1/g' \
+		-e 's/tail \+\([-+][0-9]\)/tail -n \1/g' ${1} || \
 			die "sed ${1} failed"
 }
 
