@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4_rc4.ebuild,v 1.4 2003/11/17 03:40:42 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4.ebuild,v 1.1 2003/12/03 08:10:29 max Exp $
 
 inherit distutils
 
@@ -36,14 +36,14 @@ src_compile() {
 	local myconf
 
 	if [ "`/bin/ls -l /etc/localtime | grep Europe`" ] ; then
-		myconf="$myconf --tv=pal"
+		myconf="${myconf} --tv=pal"
 	fi
 	if [ "`use matrox`" ] ; then
-		myconf="--geometry=768x576 --display=mga"
+		myconf="${myconf} --geometry=768x576 --display=mga"
 	elif [ "`use X`" ] ; then
-		myconf="--geometry=800x600 --display=x11"
+		myconf="${myconf} --geometry=800x600 --display=x11"
 	else
-		myconf="--geometry=800x600 --display=fbdev"
+		myconf="${myconf} --geometry=800x600 --display=fbdev"
 	fi
 
 	sed -e "s:/etc/freevo/freevo.conf:${T}/freevo.conf:" \
