@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.29 2003/04/26 19:18:47 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.30 2003/05/11 17:53:17 tberman Exp $
+
+  11 May 2003; <tberman@gentoo.org> sendmail-8.12.8.ebuild,
+  sendmail-8.12.9-r1.ebuild, sendmail-8.12.9-r2.ebuild,
+  sendmail-8.12.9.ebuild:
+  Fixed bug #20792
 
 *sendmail-8.12.9-r2 (26 Apr 2003)
 
