@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc., Okrain Genady (^Mafteah), and Luke-Jr
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.6.1.ebuild,v 1.5 2003/09/08 07:05:03 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.7.6.ebuild,v 1.1 2003/09/11 22:50:52 luke-jr Exp $
 
 inherit distutils
 
@@ -12,12 +12,13 @@ SLOT="0"
 LICENSE="MIT"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 
-IUSE="X"
+IUSE="X psyco nopsyco"
 
 RDEPEND="X? ( >=dev-python/wxPython-2.2 )
 	>=dev-lang/python-2.1
 	!net-p2p/bittorrent
-	!virtual/bittorrent"
+	!virtual/bittorrent
+	psyco? ( dev-python/psyco )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4.0.5"
 
@@ -30,7 +31,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	for f in *.txt *.py; do
-		tr -d '\r' < "$f"  > "$f".new
+		tr -d '\r' < "$f" |
+			sed "s/PSYCO.psyco/$((`use nopsyco&&echo -1`+1))/g" |
+			grep -v 'import PSYCO' > "$f".new
 		mv "$f".new "$f"
 	done
 }
