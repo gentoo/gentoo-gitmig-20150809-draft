@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/psmisc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.30 2004/03/24 16:30:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.31 2004/03/24 22:58:34 mholzer Exp $
+
+  25 Mar 2004; Martin Holzer <mholzer@gentoo.org> psmisc-21.4.ebuild,
+  files/psmisc-21.4-selinux.diff.bz2:
+  adding selinux patch.
 
 *psmisc-21.4 (24 Mar 2004)
 

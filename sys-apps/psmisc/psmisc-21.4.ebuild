@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.1 2004/03/24 16:30:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.2 2004/03/24 22:58:34 mholzer Exp $
 
 inherit eutils gnuconfig
 
-SELINUX_PATCH="psmisc-21.2-selinux.diff.bz2"
+SELINUX_PATCH="${P}-selinux.diff.bz2"
 
 DESCRIPTION="A set of tools that use the proc filesystem"
 HOMEPAGE="http://psmisc.sourceforge.net/"
@@ -23,10 +23,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-#	if use selinux; then
+	if use selinux; then
 		# Necessary selinux patch
-#		epatch ${FILESDIR}/${SELINUX_PATCH}
-#	fi
+		epatch ${FILESDIR}/${SELINUX_PATCH}
+	fi
 }
 
 src_compile() {
