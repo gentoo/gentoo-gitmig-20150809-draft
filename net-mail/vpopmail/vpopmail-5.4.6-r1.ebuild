@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.6-r1.ebuild,v 1.2 2004/08/22 04:19:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.6-r1.ebuild,v 1.3 2004/08/23 00:02:08 langthang Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -59,7 +59,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/vpopmail-5.2.1-showall.patch || die "failed to patch."
-
+	epatch ${FILESDIR}/${P}-access.violation.patch || die "failed to patch."
 	sed -i \
 		's|Maildir|.maildir|g' \
 		vchkpw.c vconvert.c vdelivermail.c \
@@ -72,6 +72,7 @@ src_unpack() {
 		|| die "failed to remove vpopmail advertisement"
 
 	gnuconfig_update
+	autoconf || die "reconfigure failed."
 	ht_fix_file ${S}/cdb/Makefile || die "failed to fix file"
 }
 
@@ -124,7 +125,7 @@ src_compile() {
 	#--enable-roaming-users=y --enable-relay-clear-minutes=60 \
 	#--disable-rebuild-tcpserver-file \
 
-	emake || die "Make failed."
+	make || die "Make failed."
 }
 
 src_install() {
