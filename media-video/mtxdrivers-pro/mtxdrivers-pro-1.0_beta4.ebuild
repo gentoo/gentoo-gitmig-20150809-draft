@@ -1,12 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/mtxdrivers-pro-1.0_beta4.ebuild,v 1.6 2003/08/07 04:21:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/mtxdrivers-pro-1.0_beta4.ebuild,v 1.7 2004/03/12 19:42:27 seemant Exp $
 
 At="mtxdrivers-pro-rh9.0-beta4.tar.gz"
 S="${WORKDIR}/mtxdrivers-pro-RH9.0-beta4"
 DESCRIPTION="Drviers for the Matrox Parhelia and Millenium P650/P750 cards with GL suport."
 HOMEPAGE="http://www.matrox.com/mga/products/parhelia/home.cfm"
-SRC_URI="${At}"
+SRC_URI="${At}
+	mirror://gentoo/${P}-glext.tar.bz2"
 
 LICENSE="Matrox"
 SLOT="0"
@@ -65,7 +66,7 @@ src_install() {
 	install -m 755 ${S}/xfree86/${Xversion}/libglx.a ${D}/usr/lib/opengl/mtx/extensions
 	install -m 644 ${S}/include/GL/gl.h ${D}/usr/lib/opengl/mtx/include
 	install -m 644 ${S}/include/GL/glx.h ${D}/usr/lib/opengl/mtx/include
-	install -m 644 ${FILESDIR}/glext.h ${D}/usr/include/GL
+	install -m 644 ${WORKDIR}/glext.h ${D}/usr/include/GL
 	install -m 755 ${S}/lib/libGL.so.${GLversion} ${D}/usr/lib/opengl/mtx/lib
 	cd ${D}/usr/lib/opengl/mtx/lib
 	ln -s libGL.so.${GLversion} libGL.so.1
