@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.106 2005/01/01 12:10:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.107 2005/01/02 19:15:39 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *cdrtools-2.01.01_alpha01 (03 Dec 2004)
 
@@ -33,7 +36,7 @@
   18 Sep 2004; Joshua Kinard <kumba@gentoo.org> cdrtools-2.01.ebuild:
   Marked stable on mips.
 
-  17 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> cdrtools-2.01.ebuild:
+  17 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> cdrtools-2.01.ebuild:
   Stable on alpha.
 
   14 Sep 2004; Guy Martin <gmsoft@gentoo.org> cdrtools-2.01.ebuild:
@@ -84,7 +87,7 @@
   13 Jul 2004; Lars Weiler <pylon@gentoo.org> +cdrtools-2.01_alpha33.ebuild:
   Version bump.
 
-  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  09 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   cdrtools-2.01_alpha28-r1.ebuild:
   Stable on alpha.
 
