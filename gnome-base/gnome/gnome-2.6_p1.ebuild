@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.6 2004/04/23 17:43:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.7 2004/04/24 17:30:30 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -25,7 +25,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 RDEPEND="!gnome-base/gnome-core
 
 	>=dev-libs/glib-2.4
-	>=dev-libs/atk-1.6
+	>=dev-libs/atk-1.6.1
 	>=x11-libs/gtk+-2.4.0-r1
 	>=x11-libs/pango-1.4
 
@@ -39,7 +39,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-libs/libart_lgpl-2.3.16
 
 	>=dev-libs/libIDL-0.8.3
-	>=gnome-base/ORBit2-2.10
+	>=gnome-base/ORBit2-2.10.1
 
 	>=gnome-base/gconf-2.6.1
 	>=gnome-base/gnome-keyring-0.2.1
@@ -103,7 +103,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=x11-libs/startup-notification-0.5
 
-	>=gnome-extra/yelp-2.6
+	>=gnome-extra/yelp-2.6.1
 	>=x11-libs/vte-0.11.10-r1
 	>=gnome-extra/zenity-2.6.0
 	>=net-analyzer/gnome-netstatus-2.6.0.1
