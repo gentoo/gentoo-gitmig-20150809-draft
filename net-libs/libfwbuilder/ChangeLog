@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.5 2002/08/05 09:10:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.6 2002/08/26 23:58:05 mkennedy Exp $
+
+*libfwbuilder-0.10.8-r1 (26 Aug 2002)
+
+  26 Aug 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  libfwbuilder-0.10.8-r1.ebuild, files/digest-libfwbuilder-0.10.8-r1,
+  files/FWReference.cc-gcc3-gentoo.patch, ChangeLog : :
+
+  Created patch to fix broken C++ code (shows up on gcc3.2). Resolves
+  bug #6926.
 
 *libfwbuilder-0.10.8 (05 July 2002)
 
