@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/chipcard-client/chipcard-client-1.9.5_beta.ebuild,v 1.1 2005/01/05 12:05:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/chipcard-client/chipcard-client-1.9.5_beta.ebuild,v 1.2 2005/02/01 12:56:46 hanno Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="2nd generation of the chipcard-reader-utility (client)"
 HOMEPAGE="http://www.libchipcard.de"
 SRC_URI="mirror://sourceforge/libchipcard/chipcard2_client-${PV/_/}.tar.gz"
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="2"
 KEYWORDS="~x86 ~sparc ~alpha ~ppc"
 
 IUSE="debug ssl"
