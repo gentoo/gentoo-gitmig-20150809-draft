@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.6 2003/09/08 02:06:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.7 2003/09/17 01:40:06 weeve Exp $
+
+  16 Sep 2003; Jason Wever <weeve@gentoo.org> libmal-0.31.ebuild:
+  Marked stable for sparc.
 
   07 Sep 2003; Caleb Tennis <caleb@gentoo.org> libmal-0.31.ebuild:
   x86 stable
