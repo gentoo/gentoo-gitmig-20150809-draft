@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.2 2003/05/31 07:37:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.3 2003/10/19 00:37:12 bazik Exp $
+
+  19 Oct 2003; Sven Blumenstein <bazik@gentoo.org> xterm-179.ebuild:
+  Added sparc keyword.
 
   31 May 2003; Seemant Kulleen <seemant@gentoo.org> xterm-179.ebuild:
   Added utempter as a DEPEND and also enabled 256-color. The latter should solve
