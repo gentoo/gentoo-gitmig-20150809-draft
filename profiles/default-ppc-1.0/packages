@@ -191,6 +191,7 @@ net-misc/rsync
 *sys-apps/setserial
 *sys-apps/sh-utils
 *<sys-apps/shadow-5
+*sys-apps/pam-login
 *sys-apps/sharutils
 *sys-apps/tar
 *sys-apps/textutils

@@ -89,6 +89,7 @@
 *sys-apps/setserial
 *sys-apps/sh-utils
 *<sys-apps/shadow-5
+*sys-apps/pam-login
 *sys-apps/sharutils
 *sys-apps/tar
 #only needed by xinetd, and it's out.  So tcp-wrappers is out too
@@ -168,7 +169,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.18 2002/07/17 04:19:42 jtegart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.19 2002/07/25 08:18:39 azarah Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
