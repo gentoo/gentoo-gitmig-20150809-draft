@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.17 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.18 2004/08/01 20:00:07 bass Exp $
 #
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
 # Mantainer José Alberto Suárez López <bass@gentoo.org>
@@ -36,6 +36,8 @@ KEYWORDS="x86 ppc ~amd64"
 #  NOVERSION: if it's not empty, then, remove -${EBOOKVERSION} from all
 #          vars...
 #  DEVHELPROOT: usually usr/share/devhelp
+#  EBOOKFROMDIR: you can set the from dir, usually ${S}.
+
 if [ "${NOVERSION}" = "" ]; then
 	_src="${EBOOKNAME}-${EBOOKVERSION}"
 else
@@ -77,6 +79,9 @@ fi
 if [ "${EBOOKDEVHELPFILE}" = "" ]; then
 	EBOOKDEVHELPFILE=${_ebookdevhelpfile}".devhelp"
 fi
+if [ "${EBOOKFROMDIR}" = "" ]; then
+	EBOOKFROMDIR=${S}
+fi
 
 S=${WORKDIR}
 ebook_src_unpack() {
@@ -85,13 +90,14 @@ ebook_src_unpack() {
 }
 
 ebook_src_install() {
+
 	debug-print-function $FUNCNAME $*
 	
 	dodir ${DEVHELPROOT}/books
 	dodir ${DEVHELPROOT}/books/${EBOOKDESTDIR}
 	echo EBOOKSRCDIR= ${EBOOKSRCDIR}
-	cp ${S}/book.devhelp ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}/${EBOOKDEVHELPFILE}
-	cp -R ${S}/book/* ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}
+	cp ${EBOOKFROMDIR}/book.devhelp ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}/${EBOOKDEVHELPFILE}
+	cp -R ${EBOOKFROMDIR}/book/* ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}
 }
 
 EXPORT_FUNCTIONS src_unpack src_install
