@@ -1,5 +1,5 @@
 MD5 7d170bbe3ead601978afd0cb50155879 ChangeLog 619
-MD5 9a82aad694906bc661ee0f1bad08cfc2 vc-1.33.ebuild 455
-MD5 717a1ecba6de4043fc0080cc3ef36f42 vc-1.35.ebuild 459
+MD5 f3440f9a11523cea679564de9318e56e vc-1.33.ebuild 454
+MD5 210020bf556ca66b8ce6103ba0ea5cd3 vc-1.35.ebuild 459
 MD5 9df785d6d0dfae59bcb8ea8382ffe396 files/digest-vc-1.33 61
 MD5 5fd63aabe09c904c56927de289b75851 files/digest-vc-1.35 61

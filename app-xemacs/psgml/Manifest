@@ -1,5 +1,5 @@
 MD5 2a330d921dc9e705306d2dc157959228 ChangeLog 643
-MD5 f51108e56d5c0c584e16c94db6947f2c psgml-1.35.ebuild 546
-MD5 e742042f8f84e71af9166fe20dcd19aa psgml-1.38.ebuild 563
+MD5 5ac3f6f171e376ee25398a0c5252e0cc psgml-1.35.ebuild 545
+MD5 f1f8843b0da32cd5280137b86346897a psgml-1.38.ebuild 564
 MD5 dfa2541820ace9f07c3512d5efdc56bf files/digest-psgml-1.35 65
 MD5 b4576c80ad7942823c7e8dd6d1c7073e files/digest-psgml-1.38 66

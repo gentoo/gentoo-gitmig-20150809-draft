@@ -1,5 +1,5 @@
 MD5 86cc82595688cda130c4be4cc4b0f4e7 ChangeLog 651
-MD5 d212803c85a40dbc92256f93048700eb edebug-1.14.ebuild 399
-MD5 5ec8b5e4e4b63ee0cc707fd2f0b81684 edebug-1.15.ebuild 403
+MD5 f87b2b258a793148d52dd54b31dd9b70 edebug-1.14.ebuild 397
+MD5 a401f241ab6484aa77f5cc392f6ab2c2 edebug-1.15.ebuild 402
 MD5 99fcf3f45325f9c1dbb6c8c7879c9528 files/digest-edebug-1.14 66
 MD5 120705d092744cdd2be4810ae87e53e7 files/digest-edebug-1.15 66

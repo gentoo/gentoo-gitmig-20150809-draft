@@ -1,5 +1,5 @@
 MD5 74f495d49c79f934e10a44e6bc3cd78f ChangeLog 669
-MD5 af55e96f52f0ed897f04a9748df84c08 ediff-1.44.ebuild 491
-MD5 cb655680d879937a40cbcdaa5edef5dc ediff-1.46.ebuild 495
+MD5 88821f58d56f2253f5c3de5c3f4368e3 ediff-1.44.ebuild 489
+MD5 4cbba8352e9e4b332b90390cd8d4f136 ediff-1.46.ebuild 494
 MD5 c31ecfa212f62af9698c2874dad6d3a3 files/digest-ediff-1.44 65
 MD5 d62e231ab48b4d84cb2311c339115dd3 files/digest-ediff-1.46 65

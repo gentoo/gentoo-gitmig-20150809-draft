@@ -1,5 +1,5 @@
 MD5 5a67fca7e2deea94ee188277dad6f1ec ChangeLog 683
-MD5 2d5f576605dab4729182d5fd05c348a9 fsf-compat-1.11.ebuild 414
-MD5 05222da1257a75602bc91b4f16a638c1 fsf-compat-1.12.ebuild 418
+MD5 ea341302fad8b4afb6d5bf2fc7c9f0a5 fsf-compat-1.11.ebuild 412
+MD5 081aa35ed9c53ef856eda57e8022ea4a fsf-compat-1.12.ebuild 417
 MD5 15806c6a539e3c16e7e97c6311ce501e files/digest-fsf-compat-1.11 69
 MD5 8d91bb59184b9161508ba4e3f29d8ecc files/digest-fsf-compat-1.12 69

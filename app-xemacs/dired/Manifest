@@ -1,5 +1,5 @@
 MD5 5de8d1bb68a195ba6a32019978e28e56 ChangeLog 771
-MD5 61511a7e2e20d8180c99855773c93c0f dired-1.12.ebuild 416
-MD5 1ef5ba5768bcba65d84ba21a521d748a dired-1.13.ebuild 420
+MD5 aa451c758ee75c54e51b2fee7d496016 dired-1.12.ebuild 414
+MD5 af2a7a3fa0c0fcfff64f0466db05054c dired-1.13.ebuild 419
 MD5 104215ca71116137bd5f2157c284c57f files/digest-dired-1.12 65
 MD5 f6ef61d4f5b90bd1fb0cac3359b9e942 files/digest-dired-1.13 65

@@ -1,5 +1,5 @@
 MD5 eaa291cebb3c2b49407c7089aa881564 ChangeLog 659
-MD5 166846342cd99ca31a9499f3aaa08c74 cc-mode-1.31.ebuild 431
-MD5 29296ce48b7d37ea5f06e2ac49b2aba7 cc-mode-1.32.ebuild 435
+MD5 70dd366834f835d5da30d24631251d26 cc-mode-1.31.ebuild 429
+MD5 8880d06445f375e1ef2d06b6a1a1486f cc-mode-1.32.ebuild 434
 MD5 7173f9f05d150ef005d4364169493117 files/digest-cc-mode-1.31 67
 MD5 e0a39c59e95418f259dc261d55a0deab files/digest-cc-mode-1.32 67

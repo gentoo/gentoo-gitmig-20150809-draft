@@ -1,5 +1,5 @@
 MD5 390c4dff2281a7cf420b219120291be5 ChangeLog 667
-MD5 4b92022a3ef007d2b15b631775247e73 textools-1.13.ebuild 406
-MD5 0e57bc4e39944719ccce99a1566c9029 textools-1.14.ebuild 403
+MD5 501ecf7cf926e4da83fef0af001e83f4 textools-1.13.ebuild 405
+MD5 3fc534cbe0f77f60ac4d33960a076ebd textools-1.14.ebuild 404
 MD5 ab5156bc8c1f311c3a818a8a0359528d files/digest-textools-1.13 67
 MD5 2af2dfc9d5e5aa09ea396ba6f9759c69 files/digest-textools-1.14 67
