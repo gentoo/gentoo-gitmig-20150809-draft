@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.94.0.ebuild,v 1.3 2004/02/07 22:28:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.94.0.ebuild,v 1.4 2004/02/17 20:28:54 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~alpha ~ia64"
 IUSE="doc debug jack-tmpfs jack-caps"
 
 DEPEND=">=media-libs/alsa-lib-0.9.1
