@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-util/bcpp
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bcpp/ChangeLog,v 1.1 2003/08/10 14:10:13 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bcpp/ChangeLog,v 1.2 2003/08/16 05:33:08 vapier Exp $
 
 *bcpp-20030423 (10 Aug 2003)
 
