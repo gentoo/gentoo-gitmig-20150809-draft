@@ -1,0 +1,66 @@
+diff -ru linux-2.6.10-ck3.orig/drivers/char/drm/i915_dma.c linux-2.6.10-ck3/drivers/char/drm/i915_dma.c
+--- linux-2.6.10-ck3.orig/drivers/char/drm/i915_dma.c	2004-12-24 13:34:31.000000000 -0800
++++ linux-2.6.10-ck3/drivers/char/drm/i915_dma.c	2005-01-11 20:16:49.245435707 -0800
+@@ -545,10 +545,7 @@
+ {
+ 	DRM_DEVICE;
+ 
+-	if (!_DRM_LOCK_IS_HELD(dev->lock.hw_lock->lock)) {
+-		DRM_ERROR("i915_flush_ioctl called without lock held\n");
+-		return DRM_ERR(EINVAL);
+-	}
++	LOCK_TEST_WITH_RETURN( dev, filp );
+ 
+ 	return i915_quiescent(dev);
+ }
+@@ -574,10 +571,7 @@
+ 	DRM_DEBUG("i915 batchbuffer, start %x used %d cliprects %d\n",
+ 		  batch.start, batch.used, batch.num_cliprects);
+ 
+-	if (!_DRM_LOCK_IS_HELD(dev->lock.hw_lock->lock)) {
+-		DRM_ERROR("i915_batchbuffer called without lock held\n");
+-		return DRM_ERR(EINVAL);
+-	}
++	LOCK_TEST_WITH_RETURN( dev, filp );
+ 
+ 	if (batch.num_cliprects && DRM_VERIFYAREA_READ(batch.cliprects,
+ 						       batch.num_cliprects *
+@@ -606,10 +600,7 @@
+ 	DRM_DEBUG("i915 cmdbuffer, buf %p sz %d cliprects %d\n",
+ 		  cmdbuf.buf, cmdbuf.sz, cmdbuf.num_cliprects);
+ 
+-	if (!_DRM_LOCK_IS_HELD(dev->lock.hw_lock->lock)) {
+-		DRM_ERROR("i915_cmdbuffer called without lock held\n");
+-		return DRM_ERR(EINVAL);
+-	}
++	LOCK_TEST_WITH_RETURN( dev, filp );
+ 
+ 	if (cmdbuf.num_cliprects &&
+ 	    DRM_VERIFYAREA_READ(cmdbuf.cliprects,
+@@ -645,10 +636,7 @@
+ 	DRM_DEVICE;
+ 
+ 	DRM_DEBUG("%s\n", __FUNCTION__);
+-	if (!_DRM_LOCK_IS_HELD(dev->lock.hw_lock->lock)) {
+-		DRM_ERROR("i915_flip_buf called without lock held\n");
+-		return DRM_ERR(EINVAL);
+-	}
++	LOCK_TEST_WITH_RETURN( dev, filp );
+ 
+ 	return i915_dispatch_flip(dev);
+ }
+diff -ru linux-2.6.10-ck3.orig/drivers/char/drm/i915_irq.c linux-2.6.10-ck3/drivers/char/drm/i915_irq.c
+--- linux-2.6.10-ck3.orig/drivers/char/drm/i915_irq.c	2004-12-24 13:34:31.000000000 -0800
++++ linux-2.6.10-ck3/drivers/char/drm/i915_irq.c	2005-01-11 20:16:49.246435564 -0800
+@@ -92,10 +92,7 @@
+ 	drm_i915_irq_emit_t emit;
+ 	int result;
+ 
+-	if (!_DRM_LOCK_IS_HELD(dev->lock.hw_lock->lock)) {
+-		DRM_ERROR("i915_irq_emit called without lock held\n");
+-		return DRM_ERR(EINVAL);
+-	}
++	LOCK_TEST_WITH_RETURN( dev, filp );
+ 
+ 	if (!dev_priv) {
+ 		DRM_ERROR("%s called with no initialization\n", __FUNCTION__);
