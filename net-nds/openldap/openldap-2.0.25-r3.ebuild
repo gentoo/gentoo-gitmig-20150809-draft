@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r3.ebuild,v 1.9 2003/09/10 04:51:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r3.ebuild,v 1.10 2003/11/06 20:23:32 robbat2 Exp $
 
 inherit eutils
 
@@ -189,7 +189,7 @@ pkg_postinst() {
 		cd /etc/openldap/ssl
 		yes "" | sh gencert.sh
 		chmod 640 ldap.pem
-		chown root.ldap ldap.pem
+		chown root:ldap ldap.pem
 	fi
 
 	# Since moving to running openldap as user ldap there are some

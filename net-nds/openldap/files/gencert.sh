@@ -132,7 +132,7 @@ chmod 400 /tmp/tmpssl-$$/*
 
 echo "Certificate creation done!"
 cp /tmp/tmpssl-$$/ldap.* .
-chown ldap.ldap ldap.*
+chown ldap:ldap ldap.*
 
 rm -rf /tmp/tmpssl-$$
 
