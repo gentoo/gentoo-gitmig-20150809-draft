@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.95 2004/01/08 07:13:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.96 2004/01/08 07:23:53 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This eclass is the old style of php, that was used before php-core was
@@ -61,7 +61,7 @@ RDEPEND="
    X? ( virtual/x11 )
    crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
    curl? ( >=net-ftp/curl-7.10.2 )
-   firebird? ( >=dev-db/firebird-1.0 )
+   x86? ( firebird? ( >=dev-db/firebird-1.0 ) )
    freetds? ( >=dev-db/freetds-0.53 )
    gd-external? ( media-libs/libgd >=media-libs/jpeg-6b 
                   >=media-libs/libpng-1.2.5 )
@@ -231,7 +231,7 @@ php_src_compile() {
 	fi
 
 	use crypt && myconf="${myconf} --with-mcrypt=/usr --with-mhash=/usr"
-	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
+	use firebird && use x86 && myconf="${myconf} --with-interbase=/opt/interbase"
 	use flash && myconf="${myconf} --with-ming=/usr"
 	use flash && use x86 && myconf="${myconf} --with-swf=/usr"
 	use freetds && myconf="${myconf} --with-sybase=/usr"

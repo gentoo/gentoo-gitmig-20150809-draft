@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.2 2004/01/08 07:13:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.3 2004/01/08 07:23:53 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -55,7 +55,7 @@ RDEPEND="
    X? ( virtual/x11 )
    crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
    curl? ( >=net-ftp/curl-7.10.2 )
-   firebird? ( >=dev-db/firebird-1.0 )
+   x86? ( firebird? ( >=dev-db/firebird-1.0 ) )
    freetds? ( >=dev-db/freetds-0.53 )
    gd-external? ( media-libs/libgd >=media-libs/jpeg-6b 
                   >=media-libs/libpng-1.2.5 )
@@ -247,7 +247,7 @@ php-sapi_src_compile() {
 	fi
 
 	myconf="${myconf} `use_with crypt mcrypt /usr` `use_with crypt mhash /usr`"
-	myconf="${myconf} `use_with firebird interbase /opt/interbase`"
+	use x86 && myconf="${myconf} `use_with firebird interbase /opt/interbase`"
 	myconf="${myconf} `use_with flash ming /usr`"
 	use x86 && myconf="${myconf} `use_with flash swf /usr`"
 	myconf="${myconf} `use_with freetds sybase /usr`"
