@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r1.ebuild,v 1.1 2004/03/17 18:29:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r1.ebuild,v 1.2 2004/03/17 18:33:39 aliz Exp $
 
 inherit eutils
 
@@ -53,7 +53,8 @@ src_install () {
 	# Make sure we link to /lib/libtermcap.so, not /usr/lib/libtermcap.a,
 	# bug #4411.
 	gen_usr_ldscript libtermcap.so
-	dosym libtermcap.so.${PV} /lib/libtermcap.so
+	dosym libtermcap.so.2 /lib/libtermcap.so
+	dosym libtermcap.so.${PV} /lib/libtermcap.so.2
 
 	insinto /etc
 	doins ${WORKDIR}/termcap
