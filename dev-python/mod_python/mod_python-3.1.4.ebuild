@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.4.ebuild,v 1.3 2005/02/27 11:16:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.4.ebuild,v 1.4 2005/02/27 11:18:51 kloeri Exp $
 
 inherit python eutils apache-module
 
@@ -40,8 +40,6 @@ src_compile() {
 }
 
 src_install() {
-	#dodir ${APACHE2_MODULESDIR}
-	#make install DESTDIR=${D} LIBEXECDIR=/usr/lib/apache2-extramodules || die
 	emake DESTDIR=${D} install || die
 
 	dohtml doc-html/*
@@ -49,8 +47,6 @@ src_install() {
 	doins doc-html/icons/*
 
 	apache-module_src_install
-	einfo ${APACHE2_MODULES_CONFDIR}
-	einfo ${FILESDIR}/16_${PN}-r1.conf
 	insinto ${APACHE2_MODULES_CONFDIR}
 	newins ${FILESDIR}/16_${PN}-r1.conf 16_${PN}.conf
 }
