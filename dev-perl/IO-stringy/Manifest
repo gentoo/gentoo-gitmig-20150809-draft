@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d25387acbd5812bd94c999c85a170f5b ChangeLog 1052
-MD5 c3618dc97c1d9d5e83cf4b92890ce734 IO-stringy-2.108-r1.ebuild 547
-MD5 1947d304e16ad2901d3ac6829b0b4726 IO-stringy-2.108.ebuild 539
-MD5 d2739b0e8618371936d779cf4078abd4 IO-stringy-2.109.ebuild 570
+MD5 29c3c9a50ace8b30c4bc941f0c72e901 ChangeLog 1158
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 af8c7a0ba9ed51a4d59ad52a5dd2adb9 files/digest-IO-stringy-2.108 67
+MD5 97818ff0c86a2e8f7c73172b11714ba8 IO-stringy-2.108-r1.ebuild 548
+MD5 65e312fc216479a6f82d6923dc6588b9 IO-stringy-2.108.ebuild 540
+MD5 556321b5f31cde72a7f02cd2ec31ecb2 IO-stringy-2.109.ebuild 572
 MD5 af8c7a0ba9ed51a4d59ad52a5dd2adb9 files/digest-IO-stringy-2.108-r1 67
+MD5 af8c7a0ba9ed51a4d59ad52a5dd2adb9 files/digest-IO-stringy-2.108 67
 MD5 b01f8130636d97d57bc1367f495be90e files/digest-IO-stringy-2.109 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFByvAe60LfUIagIAkRAn69AKC4oNJaxwhLIU+24VRrquoGMZmJ5gCgiABp
-eO49kCAgDbBCazgXeLyj3bY=
-=Mxi9
+iD4DBQFB8pNntG5z4I8BtQoRAoNPAJ9aDhwsN0h8GmVSffsL6Tw4tLDTLgCYiun6
+Gc6jzoWLGeBmySYBmCBKuA==
+=c+0c
 -----END PGP SIGNATURE-----
