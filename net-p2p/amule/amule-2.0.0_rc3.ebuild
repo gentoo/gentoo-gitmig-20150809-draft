@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc3.ebuild,v 1.4 2004/06/29 00:41:44 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc3.ebuild,v 1.5 2004/06/30 18:33:27 vapier Exp $
 
 MY_P=${P/m/M}
 MY_P=${MY_P/_/}
@@ -9,16 +9,17 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="aNOTHER wxWindows based eMule P2P Client"
 HOMEPAGE="http://www.amule.org"
 SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.bz2"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="debug nls stats remote"
+RESTRICT="nomirror"
+
 EXTRA_ECONF="--disable-optimise"
 
 # optimizations disabled for better stability
-# new USE "noamulestats" disables aMule GUI statistics (wxCas) (require libgd)
+# new USE "noamulestats" disables aMule GUI statistics (wxCas) (require gd)
 # new USE "noamuleremote" disables remote control utilities: webserver, 
 # web client, amulecmd text client
 
@@ -27,7 +28,7 @@ DEPEND=">=x11-libs/wxGTK-2.4.2
 	>=net-misc/curl-7.11.0
 	>=dev-libs/crypto++-5.1
 	>=sys-libs/zlib-1.2.1
-	stats? ( >=media-libs/libgd-2.0.22 )"
+	stats? ( >=media-libs/gd-2.0.22 )"
 
 pkg_setup() {
 
