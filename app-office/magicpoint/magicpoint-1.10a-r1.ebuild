@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.2 2004/01/13 05:28:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.3 2004/04/10 09:47:00 mr_bones_ Exp $
 
 inherit elisp-common eutils
-
-IUSE="cjk emacs truetype gif nls imlib"
 
 DESCRIPTION="an X11 based presentation tool"
 SRC_URI="ftp://ftp.mew.org/pub/MagicPoint/${P}.tar.gz"
 HOMEPAGE="http://www.mew.org/mgp/"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="x86 alpha ~sparc ~ppc"
+IUSE="cjk emacs truetype gif nls imlib"
 
 DEPEND="virtual/x11
 	gif? ( >=media-libs/libungif-4.0.1 )
@@ -23,18 +22,15 @@ RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )
 	truetype? ( cjk? ( media-fonts/kochi-substitute ) )"
 
-S=${WORKDIR}/${P}
 SITELISP=/usr/share/emacs/site-lisp
 SITEFILE=50mgp-mode-gentoo.el
 
 src_unpack() {
-
 	unpack ${A}
 	epatch ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {
-
 	econf \
 		`use_enable gif` \
 		`use_enable imlib` \
@@ -50,7 +46,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make \
 		DESTDIR=${D} \
 		BINDIR=/usr/bin \
@@ -84,11 +79,9 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	use emacs && elisp-site-regen
 }
 
 pkg_postrm() {
-
 	use emacs && elisp-site-regen
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.3 2004/03/24 22:09:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.4 2004/04/10 09:47:00 mr_bones_ Exp $
+
+  10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  magicpoint-1.10a-r1.ebuild:
+  don't assign default to S; tidy
 
   24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   magicpoint-1.09a-r1.ebuild, magicpoint-1.10a.ebuild:
