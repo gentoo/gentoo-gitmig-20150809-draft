@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.ebuild,v 1.6 2005/01/01 17:58:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.ebuild,v 1.7 2005/01/07 02:04:57 vapier Exp $
 
 inherit eutils
 
@@ -64,5 +64,5 @@ src_install() {
 
 	dodir /etc/env.d
 	echo "CRYSTAL=\"${CRYSTAL_PREFIX}\"" > 90crystalspace
-	doconfd 90crystalspace
+	doenvd 90crystalspace
 }

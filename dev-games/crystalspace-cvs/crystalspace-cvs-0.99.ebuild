@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.99.ebuild,v 1.3 2005/01/01 17:58:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.99.ebuild,v 1.4 2005/01/07 02:05:21 vapier Exp $
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/crystal"
 ECVS_MODULE="CS"
@@ -60,5 +60,5 @@ src_install() {
 
 	dodir /etc/env.d
 	echo "CRYSTAL=\"${CRYSTAL_PREFIX}\"" > 90crystalspace
-	doconfd 90crystalspace
+	doenvd 90crystalspace
 }
