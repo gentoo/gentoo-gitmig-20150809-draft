@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.8.ebuild,v 1.2 2004/09/27 08:15:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.8.ebuild,v 1.3 2004/10/02 06:19:03 usata Exp $
 
 IUSE="ssl socks5 nls"
 
@@ -45,11 +45,6 @@ src_compile() {
 
 	use socks5 && myconf="${myconf} --with-socksdante=/usr" \
 		|| myconf="${myconf} --without-socksdante"
-
-	if [ "${ARCH}" = "macosx" ];
-	then
-		myconf="${myconf} --use-included-readline"
-	fi
 
 	econf \
 		--sysconfdir=/etc/lftp \
