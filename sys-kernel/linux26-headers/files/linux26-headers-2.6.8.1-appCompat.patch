@@ -1671,3 +1671,27 @@ diff -ur linux-2.6.8.1/include/asm-sparc/signal.h linux-2.6.8.1-gentoo/include/a
  
  typedef struct {
  	unsigned long	sig[_NSIG_WORDS];
+diff -ur linux-2.6.8.1/include/asm-ia64/fpu.h linux-2.6.8.1-gentoo/include/asm-ia64/fpu.h
+--- linux-2.6.8.1/include/asm-ia64/fpu.h	2004-10-31 14:20:01.000000000 -0700
++++ linux-2.6.8.1-gentoo/include/asm-ia64/fpu.h	2004-11-01 12:04:54.202369190 -0700
+@@ -53,13 +53,20 @@
+ 			 | FPSR_S3 (FPSF_DEFAULT | FPSF_TD))
+ 
+ # ifndef __ASSEMBLY__
++#   ifndef __KERNEL__
++#     include <dlfcn.h>
++      /* Versioning, newer glibc's declare ia64_fpreg without telling us
++           -- plasmaroo */
++#   endif
+ 
++#   if !defined(RTLD_DEEPBIND) || !defined(_BITS_SIGCONTEXT_H) || defined(__KERNEL__)
+ struct ia64_fpreg {
+ 	union {
+ 		unsigned long bits[2];
+ 		long double __dummy;	/* force 16-byte alignment */
+ 	} u;
+ };
++#   endif
+ 
+ # endif /* __ASSEMBLY__ */
+ 

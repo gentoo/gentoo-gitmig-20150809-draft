@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.5 2004/10/31 04:17:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.6 2004/11/07 15:49:33 plasmaroo Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -62,6 +62,7 @@ src_unpack() {
 	# Fixes
 	case "${ARCH}" in
 		*)
+			headers___fix ${S}/include/asm-ia64/*
 			headers___fix ${S}/include/asm-ppc64/*
 			headers___fix ${S}/include/asm-ppc64/iSeries/*
 		;;

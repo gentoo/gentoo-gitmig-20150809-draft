@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.33 2004/10/27 03:03:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.34 2004/11/07 15:49:33 plasmaroo Exp $
+
+  07 Nov 2004; <plasmaroo@gentoo.org> linux26-headers-2.6.8.1-r1.ebuild,
+  files/linux26-headers-2.6.8.1-appCompat.patch:
+  Fix for XOrg for IA64; bug #63478.
 
   26 Oct 2004; Tom Gall <tgall@gentoo.org> linux26-headers-2.6.8.1-r1.ebuild:
   stable on ppc64, used for 2004.3
