@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1-r1.ebuild,v 1.2 2004/10/09 21:34:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1-r1.ebuild,v 1.3 2004/11/23 22:20:04 tgall Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -54,7 +54,7 @@ HOMEPAGE="http://gcc.gnu.org/"
 
 LICENSE="libffi"
 
-KEYWORDS="-* ~x86 ~ppc"
+KEYWORDS="-* ~x86 ~ppc ~ppc64"
 IUSE="nls"
 
 SLOT="0"
@@ -113,6 +113,7 @@ src_compile() {
 	fi
 
 	use amd64 && myconf="${myconf} --disable-multilib"
+	use ppc64 && myconf="${myconf} --disable-multilib"
 
 	do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
