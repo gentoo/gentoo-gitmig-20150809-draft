@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnofin/gnofin-0.8.4.ebuild,v 1.14 2004/06/24 22:39:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnofin/gnofin-0.8.4.ebuild,v 1.15 2004/11/23 19:07:24 jhuebel Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://gnofin.sourceforge.net/pub/gnofin/stable/source/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
