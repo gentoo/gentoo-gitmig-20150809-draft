@@ -1,12 +1,15 @@
 # ChangeLog for sys-cluster/mosix-user
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mosix-user/ChangeLog,v 1.3 2003/02/12 09:12:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mosix-user/ChangeLog,v 1.4 2003/03/03 12:55:39 vladimir Exp $
 
 
   04 Nov 2002; Michael Imhof <tantive@gentoo.org>
   Moved to sys-cluster/mosix-user
 
-*mosix-user-1.8.0.ebuild (13 Oct 2002)
+*mosix-user-1.8.0 (13 Oct 2002)
+
+  03 Mar 2003; <vladimir@gentoo.org> mosix-user-1.8.0.ebuild:
+  Removed -spar64 from KEYWORDS
 
   13 Oct 2002; Michael Imhof <tantive@gentoo.org>
   version bumped, corrected source uri.
