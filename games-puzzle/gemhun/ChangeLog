@@ -1,0 +1,9 @@
+# ChangeLog for games-puzzle/gemhun
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/ChangeLog,v 1.1 2003/11/08 17:13:04 vapier Exp $
+
+*gemhun-20031016 (08 Nov 2003)
+
+  08 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Matija Suklje (hook) <matija.suklje@rutka.net>,
+  Mr. Bones., and myself #31571.
