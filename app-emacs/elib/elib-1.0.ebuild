@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0.ebuild,v 1.8 2004/06/24 22:09:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elib/elib-1.0.ebuild,v 1.9 2004/10/05 10:31:51 pvdabeel Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://jdee.sunsite.dk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE=""
 
 DEPEND="virtual/emacs"
