@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.14-r2.ebuild,v 1.8 2004/03/06 01:27:51 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.14-r2.ebuild,v 1.9 2004/04/15 23:20:48 randy Exp $
 
 inherit gcc fixheadtails
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha hppa ~mips ia64 ppc64"
+KEYWORDS="x86 ppc sparc ~alpha hppa ~mips ia64 ppc64 s390"
 IUSE="tcpd debug"
 
 RDEPEND="virtual/glibc

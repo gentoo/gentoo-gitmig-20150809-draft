@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.23 2004/03/06 01:27:51 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.24 2004/04/15 23:20:48 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> dante-1.1.14-r2.ebuild:
+  adding s390 keywords
 
   05 Mar 2004; Tom Gall <tgall@gentoo.org> dante-1.1.14-r2.ebuild:
   Marked stable on ppc64
