@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.9 2004/06/03 15:23:45 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.10 2004/06/03 16:13:04 tseng Exp $
+
+*fbpanel-3.8 (03 Jun 2004)
+
+  03 Jun 2004; Brandon Hale <tseng@gentoo.org> +fbpanel-3.8.ebuild:
+  Version bump, closes #52878.
 
   03 Jun 2004; Brandon Hale <tseng@gentoo.org> -fbpanel-1.0.ebuild,
   -fbpanel-2.2.ebuild:
