@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qpage
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qpage/ChangeLog,v 1.1 2003/08/08 18:05:35 agriffis Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qpage/ChangeLog,v 1.2 2004/03/24 04:33:45 mr_bones_ Exp $
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> qpage-3.3.ebuild:
+  don't use deprecated ?: use syntax
 
 *qpage-3.3 (08 Aug 2003)
 
