@@ -1,8 +1,11 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.44 2003/05/15 21:31:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.45 2003/05/26 21:10:35 robbat2 Exp $
  
 *php-4.3.1-r2 (22 Apr 2003)
+
+  26 May 2003; Robin H. Johnson <robbat2@gentoo.org> php-4.3.1-r2.ebuild:
+  Added DB4 fix in eclass.
 
   15 May 2003; Robin H. Johnson <robbat2@gentoo.org> php-4.3.1-r2.ebuild:
   Released to all archs on unstable.

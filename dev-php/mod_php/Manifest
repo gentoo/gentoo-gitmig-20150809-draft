@@ -3,7 +3,7 @@ MD5 ec77ebae880bd19afa8027c4dc90a8a2 mod_php-4.3.1.ebuild 8929
 MD5 c99a00bf82ec9a082399ab1dd931c415 mod_php-4.3.1-r2.ebuild 9241
 MD5 6de98d80b82a71ed8845884b0bd5676e mod_php-4.2.3-r2.ebuild 8071
 MD5 dfc6bd16160024127fa9b0c242fc8ab5 mod_php-4.3.0-r2.ebuild 8634
-MD5 f29af94214e3a09623533ab419b01ec3 ChangeLog 15777
+MD5 657837f1847b4552a30938f85ef795a2 ChangeLog 15883
 MD5 c585d6d5154fe64839f25db957301433 mod_php-4.3.1-r1.ebuild 9135
 MD5 cceddd5c262e0ffef31d45b7da269851 files/mod_php.conf 148
 MD5 77023a54f39bae40733118d5cabd8f7f files/70_mod_php.conf 853

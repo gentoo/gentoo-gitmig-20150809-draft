@@ -1,8 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.71 2003/05/23 03:54:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.72 2003/05/26 21:10:23 robbat2 Exp $
 
 *mod_php-4.3.1-r3 (23 Apr 2003)
+
+  26 May 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.1-r3.ebuild:
+  Added DB4 fix in eclass.
 
   17 May 2003; Robin H. Johnson <robbat2@gentoo.org> files/70_mod_php.conf:
   Fixed bug #18445 properly. Apache2 doesn't like shell wildcarding in it's
