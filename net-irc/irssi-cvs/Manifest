@@ -1,4 +1,4 @@
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-irssi-cvs-0.2 0
 MD5 5736df13fc0281880f94bec8a01973b2 ChangeLog 746
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 662680373b041286e52a225d8ba05709 irssi-cvs-0.2.ebuild 2127
+MD5 b9f42de33116b8f60a0ee9b5437b311d irssi-cvs-0.2.ebuild 2157
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-irssi-cvs-0.2 0

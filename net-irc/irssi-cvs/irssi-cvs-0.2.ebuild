@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.2 2004/01/26 00:59:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.3 2004/01/30 06:57:59 drobbins Exp $
 
 ECVS_SERVER="cvs.irssi.org:/home/cvs"
 ECVS_MODULE="irssi"
@@ -18,7 +18,8 @@ IUSE="nls ipv6 perl ssl"
 DEPEND=">=dev-libs/glib-2.2.1
 		sys-libs/ncurses
 		perl? ( dev-lang/perl )
-		!net-irc/irssi"
+		!net-irc/irssi
+		>=sys-devel/autoconf-2.58"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${ECVS_MODULE}
