@@ -2,9 +2,9 @@ MD5 3067653193e7ab170ca0755c174e627c gnome-applets-1.4.0.5.ebuild 1028
 MD5 1414026ee188a601daeb6b2afb0e2cb1 gnome-applets-2.4.0.ebuild 1379
 MD5 58bb8d5b0d9cc5c38d31c89add35bbbe gnome-applets-2.4.1-r2.ebuild 1650
 MD5 c96112b5aef8652390decd20d7b6bdbc gnome-applets-2.4.2.ebuild 1368
-MD5 c11c2c74a1e6947d6a89dec200727d70 gnome-applets-2.6.0-r1.ebuild 1748
+MD5 c21c424c19978f91c50b305acfc20f7b gnome-applets-2.6.0-r1.ebuild 1745
 MD5 e1a61502e7ca3235560c6481a79cd3e7 gnome-applets-2.4.1-r1.ebuild 1585
-MD5 095e4b6b80d40c6f9a531797904c6e61 ChangeLog 10064
+MD5 529cd68cfe451b94548461be22769a1c ChangeLog 10167
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ae737a9ee078ab2fd5e577bfe297ca7f files/digest-gnome-applets-2.4.0 73
 MD5 de598f4caa39888e1ac75adb7fea28be files/digest-gnome-applets-2.4.2 73
