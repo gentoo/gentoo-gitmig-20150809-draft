@@ -11,6 +11,6 @@ MD5 ae2d9d9ca26d8cd07432890ecf5fe206 files/digest-gambas-0.72 65
 MD5 2116ae384517062671a599bd0969c9ea files/digest-gambas-0.82 65
 MD5 6e0b2d5e08673c175eaedb6a73e9f1f9 files/digest-gambas-0.90 65
 MD5 6ec007ea84b18c31ebad9e5403ad3835 files/Makefile.am-0.82 1242
-MD5 d123037347229af8a5f9c69ebd3f9325 files/Makefile.am-0.90 1362
+MD5 f3c3628e90e0187fa4bc20b93f498012 files/Makefile.am-0.90 1370
 MD5 6e0b2d5e08673c175eaedb6a73e9f1f9 files/digest-gambas-0.90-r1 65
 MD5 7823ef6207c12562fe6e3b0069fce980 files/non-symlink-0.72.patch 1631

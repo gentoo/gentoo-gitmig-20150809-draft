@@ -12,7 +12,7 @@ install-exec-local:
 	@rm -f $(libdir)/lib.gb.qt.kde*.component
 	@echo
 	@echo "Creating the library info files..."
-	@$(INSTALL) -d $(libdir)/info
+	@$(INSTALL) -d $(libdir)/info/gambas/
 	@$(bindir)/gbi -a
 	@rm -f $(libdir)/lib.gb.la
 	@rm -f $(libdir)/lib.gb.so*
