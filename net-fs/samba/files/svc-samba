@@ -10,6 +10,8 @@ start() {
 	ebegin "Starting $SERVICE"
 	ln -sf ../services/smbd ${SVCDIR}/control/smbd
 	ln -sf ../services/nmbd ${SVCDIR}/control/nmbd
+	/usr/bin/svc -u ${SVCDIR}/control/smbd
+	/usr/bin/svc -u ${SVCDIR}/control/nmbd
 	eend $?
 }
 

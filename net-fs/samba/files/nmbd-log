@@ -1,3 +1,7 @@
 #!/bin/bash
-test -p logfifo || mknod logfifo p
+if [ ! -p logfifo ]
+then
+	rm -f logfifo
+	mknod logfifo p
+fi
 exec multilog t ./nmbd-log < logfifo
