@@ -1,32 +1,32 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.17 2003/12/02 00:32:24 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.18 2003/12/04 23:15:58 plasmaroo Exp $
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org> vanilla-sources-2.2.22.ebuild,
   vanilla-sources-2.4.20.ebuild, vanilla-sources-2.4.21.ebuild,
   vanilla-sources-2.4.22.ebuild, files/do_brk_fix.patch:
-  fix do_brk vuln
+  Fix 'do_brk' vulnerability.
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   vanilla-sources-2.4.20.ebuild, vanilla-sources-2.4.21.ebuild,
   vanilla-sources-2.4.22.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
   18 Nov 2003; Brian Jackson <iggy@gentoo.org> vanilla-sources-2.4.20.ebuild,
   vanilla-sources-2.4.21.ebuild, vanilla-sources-2.4.22.ebuild:
-  added a space to extraversion to hack around all the problems with
-  kernel.eclass
+  Added a space to extraversion to hack around all the problems with
+  kernel.eclass...
 
 *vanilla-sources-2.2.25 (26 Aug 2003)
 
   26 Aug 2003; Daniel Ahlberg <aliz@gentoo.org> vanilla-sources-2.2.25.ebuild:
-  Version bump
+  Version bump.
 
 *vanilla-sources-2.4.22 (26 Aug 2003)
 
   26 Aug 2003; Daniel Ahlberg <aliz@gentoo.org> vanilla-sources-2.4.22.ebuild:
-  Version bump
+  Version bump.
 
   25 Jun 2003; Martin Holzer <mholzer@gentoo.org>
   vanilla-sources-2.0.39.ebuild, vanilla-sources-2.2.22.ebuild,
@@ -42,7 +42,7 @@
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : Changed sparc ~sparc keywords
  
 *vanilla-sources-2.4.20 (29 Nov 2002)
 
@@ -69,9 +69,9 @@
 *vanilla-sources-2.2.22 (17 Nov 2002)
 
   17 Nov 2002; Mike Frysinger <vapier@gentoo.org>
-  Some people like old school kernels
+  Some people like old school kernels.
 
 *vanilla-sources-2.0.39 (17 Nov 2002)
 
   17 Nov 2002; Mike Frysinger <vapier@gentoo.org>
-  Some people like old school kernels
+  Some people like old school kernels.

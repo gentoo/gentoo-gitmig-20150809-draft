@@ -1,19 +1,18 @@
 # ChangeLog for sys-kernel/ia64-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.5 2003/12/02 07:38:02 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.6 2003/12/04 23:06:34 plasmaroo Exp $
 
 *ia64-sources-2.4.22-r1 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org> ia64-sources-2.4.22-r1.ebuild:
-  version bump for do_brk vuln
+  Version bump for the 'do_brk' vulnerability.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org> ia64-sources-2.4.22.ebuild,
-  files/do_brk_fix.patch:
-  fix do_brk vuln
+  files/do_brk_fix.patch: Fix the 'do_brk' vulnerability.
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org> ia64-sources-2.4.22.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
   02 Oct 2003; Jon Portnoy <avenj@gentoo.org>
   ia64-sources-2.4.22.ebuild :

@@ -1,53 +1,53 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.17 2003/12/02 23:14:31 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.18 2003/12/04 23:04:03 plasmaroo Exp $
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org>
-  hardened-sources-2.4.22-r1.ebuild:
-  fix up a little booboo from earlier
+  hardened-sources-2.4.22-r1.ebuild: Fix up a little booboo from earlier.
 
 *hardened-sources-2.4.22-r1 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org>
-  hardened-sources-2.4.22-r1.ebuild:
-  version bump for do_brk vuln
+  hardened-sources-2.4.22-r1.ebuild: 
+  Version bump for the 'do_brk' vulnerability.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org>
   hardened-sources-2.4.20-r2.ebuild, hardened-sources-2.4.20-r3.ebuild,
   hardened-sources-2.4.20-r4.ebuild, hardened-sources-2.4.21.ebuild,
   hardened-sources-2.4.22.ebuild, files/do_brk_fix.patch:
-  fix do_brk vuln
+  Fix the 'do_brk' vulnerability.
 
   03 Nov 2003; Matthew Rickard <frogger@gentoo.org>
   hardened-sources-2.4.22.ebuild:
-  -Removed the src_install() portion for SELinux flask
-   components.  These are no longer handled in the kernel
-   so this code was not necessary.
+  - Removed the src_install() portion for SELinux flask
+    components.  These are no longer handled in the kernel
+    so this code was not necessary.
 
   29 Oct 2003; Matthew Rickard <frogger@gentoo.org> hardened-sources-2.4.22.ebuild:
   New 2.4.22 based hardened-sources thanks to
   Phil West <p.west@computer.org>.
   
   These sources include:
-  	-New SELinux API
-  	-Updated CK-base
-  	-Updated GRSec
-  	-Systrace
-  	-SuperFreeS/WAN 1.99.8
-  	-Propolice kernel build support
-  	-EVMS
-  	-Other various security related patches
+  	- New SELinux API
+  	- Updated CK-base
+  	- Updated GRSec
+  	- Systrace
+  	- SuperFreeS/WAN 1.99.8
+  	- Propolice kernel build support
+  	- EVMS
+  	- Other various security related patches
 
 *hardened-sources-2.4.21 (14 Sep 2003)
 
   14 Sep 2003; Matthew Rickard <frogger@gentoo.org> hardened-sources-2.4.21.ebuild:
   Updated hardened-sources based on the 2.4.21 Linux kernel.
   This includes updates to most major components such as:
-    -ck-base-0306300059
-    -selinux-2.4-2003071106
-    -grsecurity-2.0-rc1
-    -Updated IPTables patch-o-matic
-    -Updated SuperFreeS/WAN
+    - ck-base-0306300059
+    - selinux-2.4-2003071106
+    - grsecurity-2.0-rc1
+    - Updated IPTables patch-o-matic
+    - Updated SuperFreeS/WAN
+
   Thanks to Phil West <pwest@computer.org> for his work in getting this
   updated patch set ready for the 2.4.21 based kernel.
   
@@ -56,8 +56,10 @@
   includes only a few changes, but one of these is an important
   security fix.  It is recommended all users of hardened-sources
   upgrade to this release.
+
   	- ioperm bug fix
   	- fixed compilation failure when building without GRSec
+
   SAL (Secure Auditing for Linux) is NOT included in this revision
   due to time constraints, but is planned for inclusion in the near
   future.
@@ -66,7 +68,7 @@
 
   12 Jun 2003; <msterret@gentoo.org> hardened-sources-2.4.20-r2.ebuild,
   hardened-sources-2.4.20-r3.ebuild:
-  add Header
+  Add Header...
 
   08 Jun 2003; Matthew Rickard <frogger@gentoo.org>
   hardened-sources-2.4.20-r3.ebuild:
@@ -78,6 +80,7 @@
   08 Jun 2003; Matthew Rickard <frogger@gentoo.org>
   hardened-sources-2.4.20-r3.ebuild:
   New revision.  Includes the following changes over -r2:
+
   - ck7-base (O(1), preempt, low latency)
   - Super FreeS/WAN 1.99.7rc2
   - PaX for the LSM/SELinux branch
@@ -98,6 +101,7 @@
   LSM/SELinux if "selinux" is in USE, otherwise it
   will patch in GRSecurity.  The following patches
   are included in this revision:
+
     - O(1) Scheduler, Low Latency, and Preempt
   	(pulled from the base CK patch)
     - ptrace exploit patch for the LSM kernel
@@ -115,7 +119,7 @@
 
   12 Apr 2003; Matthew Rickard <frogger@gentoo.org>
   hardened-sources-2.4.20-r1.ebuild, manifest:
-  Updated to install flask components correctly for selinux
+  Updated to install flask components correctly for selinux.
 
   12 Apr 2003; Matthew Rickard <frogger@gentoo.org>
   hardened-sources-2.4.20-r1.ebuild:
@@ -125,15 +129,15 @@
 
   09 Apr 2003; Matthew Rickard <frogger@gentoo.org>
   hardened-sources-2.4.20-r1.ebuild, hardened-sources-2.4.20.ebuild, manifest:
-  Revision bump for new sources
+  Revision bump for new sources.
   
   09 Apr 2003; Matthew Rickard <frogger@gentoo.org>
   hardened-sources-2.4.20-r1.ebuild:
-  Now includes LSM1, GRSec-2.0-pre1, and systrace-v1.2
+  Now includes LSM1, GRSec-2.0-pre1, and systrace-v1.2.
 
 *hardened-sources-2.4.20 (30 Mar 2003)
   
   30 Mar 2003; Joshua Brindle <method@gentoo.org>
   hardened-sources-2.4.20.ebuild:
-  initial import, only has systrace support
+  Initial import, only has systrace support.
 

@@ -1,36 +1,35 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.27 2003/12/02 07:09:02 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.28 2003/12/04 23:01:31 plasmaroo Exp $
 
 *gs-sources-2.4.23_pre8-r1 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org>
   gs-sources-2.4.23_pre8-r1.ebuild:
-  version bump for do_brk vuln
+  Version bump for the 'do_brk' vulnerability.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org> gs-sources-2.4.22_pre2.ebuild,
-  files/do_brk_fix.patch:
-  fix do_brk vuln
+  files/do_brk_fix.patch: Fix for the 'do_brk' vulnerability.
 
 *gs-sources-2.4.23_pre8 (26 Oct 2003)
   26 Oct 2003; Bob Johnson <livewire@gentoo.org>
- 	- bumped to pre8
-	- bumped freeswan to 2.03
-	- added v4l2
+ 	- Bumped to pre8.
+	- Bumped freeswan to 2.03.
+	- Added v4l2.
  	
 *gs-sources-2.4.23_pre7 (14 Oct 2003)
   14 Oct 2003; Bob Johnson <livewire@gentoo.org>
-        - bumped to pre7
-	- win4lin compile fix
+        - Bumped to pre7.
+	- Win4Lin compile fix added.
 
 *gs-sources-2.4.23_pre6-r1 (04 Oct 2003)
   04 Oct; Bob Johnson <livewire@gentoo.org>
-	- added misc finishing touches
+	- Added miscellaneous finishing touches.
 
 *gs-sources-2.4.23_pre6 (04 Oct 2003)
 
   04 Oct; Bob Johnson <livewire@gentoo.org>
-	- new patchset to get rolling again
+	- New patchset to get rolling again...
 	- freeswan-2.02,evms,3.5-useraddress,preempt,xfs,ecc,bootsplash,win4lin
 
 gs-sources-2.4.22_pre2 (29 June 2003)
@@ -45,156 +44,134 @@ gs-sources-2.4.22_pre2 (29 June 2003)
   SRC now uses mirror://kernel
 
   29 June 2003; Bob Johnson <livewire@gentoo.org>
-
-	- bumped to 2.4.22_pre2
-	- updated xfs to 2.4.21 stable
+	- Bumped to 2.4.22_pre2.
+	- Updated xfs to 2.4.21 stable.
 	
 gs-sources-2.4.21_rc8 (11 June 2003)
 
   11 June 2003; Bob Johnson <livewire@gentoo.org>
-
-	- updated to SuperFreeswan 1.99.7.3
-        - updated to 2.4.21-rc8
-        - updated xfs-snapshot to 2003-06-10
-        - updated acpi to 20030523
-	- added cpu-freq back
-	- 3.5 useraddress added
+	- Updated to SuperFreeswan 1.99.7.3.
+        - Updated to 2.4.21-rc8.
+        - Updated xfs-snapshot to 2003-06-10.
+        - Updated acpi to 20030523.
+	- Added cpu-freq back.
+	- 3.5 useraddress added.
 
 gs-sources-2.4.21_rc6 (01 June 2003)
 
   01 June 2003; Bob Johnson <livewire@gentoo.org>
-
-	- updated to 2.4.21-rc6
-	- updated mki-adapter
-	- updated Win4lin
-	- updated SuperFreeswan 1.99.7
-	- removed highmem vesa fix (breaks bootsplash silent)
+	- Updated to 2.4.21-rc6.
+	- Updated mki-adapter.
+	- Updated Win4lin.
+	- Updated SuperFreeswan 1.99.7.
+	- Removed highmem vesa fix (breaks bootsplash silent).
 
 gs-sources-2.4.21_rc2 (15 May 2003)
 
   15 May 2003; Bob Johnson <livewire@gentoo.org>
-
-	- updated to rc2
-	- added 5-13-2003 XFS (may be temporary addition)
-	- updated acpi 20030512
-	- updated ecc 20030225
-	- updated vl42-api-2.4.20
-	- updated super-freeswan 1.99.7
-	- added nforce2 agp patch
-	- added lm_sensors 2.7.0
-	- added highmem vesa framebuffer fix
-	- removed proconfig until i can fix vanilla's broken xconfig
+	- Updated to -rc2.
+	- Added 5-13-2003 XFS (may be temporary addition).
+	- Updated ACPI 20030512.
+	- Updated ecc 20030225.
+	- Updated vl42-api-2.4.20.
+	- Updated super-freeswan 1.99.7.
+	- Added nforce2 agp patch.
+	- Added lm_sensors 2.7.0.
+	- Added highmem vesa framebuffer fix.
+	- Removed proconfig until I can fix vanilla's broken xconfig.
 
 gs-sources-2.4.21_rc1 (01 May 2003)
 
   01 May 2003; Bob Johnson <livewire@gentoo.org>
-	
-	- added cset-1.1122-to-1.1141.patch
-	- added gcc_optimizations (fixed pfeifer)
-	- added cpu_frequency patch
-	- added genkernel kernel_config
+	- Added cset-1.1122-to-1.1141.patch.
+	- Added gcc_optimizations (fixed pfeifer).
+	- Added cpu_frequency patch.
+	- Added genkernel kernel_config.
 
 *gs-sources-2.4.21_rc1 (21 April 2003)
 
   21 Apr 2003; Bob Johnson <livewire@gentoo.org>
-
-        - bumped to rc1
+        - Bumped to -rc1.
 
 *gs-sources-2.4.21_pre7-r1 (19 April 2003)
 
   19 Apr 2003; Bob Johnson <livewire@gentoo.org> 
-
-	- added latest cset from bkbits (many fixes)
-	- bumped bootsplash to 3.0.7
+	- Added latest cset from bkbits (many fixes).
+	- Bumped bootsplash to 3.0.7.
 
 *gs-sources-2.4.21_pre7 (05 April 2003)
 
   05 Apr 2003; Bob Johnson <livewire@gentoo.org> 
-	
-	- bumped to 2.4.21_pre7
-  	- pulled Aic79xx (now in vanilla)
+	- Bumped to 2.4.21_pre7.
+  	- Pulled aic79xx (now in vanilla)
 
 *gs-sources-2.4.21_pre6 (05 May 2003)
  
   29 March 2003: Bob Johnson <livewire@gentoo.org>
-
-	- updated to 2.4.21_pre6
-	- updated acpi to acpi-20030328-2.4.21-pre6
-	- updated aic79xx-linux-2.4-20030318
+	- Updated to 2.4.21_pre6.
+	- Updated acpi to acpi-20030328-2.4.21-pre6.
+	- Updated aic79xx-linux-2.4-20030318.
 
 *gs-sources-2.4.21_pre5-r1    (18 March 2003)
 
   18 March 2003: Bob Johnson <livewire@gentoo.org>
-
-	- updated acpi to acpi-20030228-2.4.21-pre4
-	- updated Aic79xx to aic79xx-linux-2.4-20030318
-	- ptrace exploit patch 
-
-  27 Feb 2003: Bob Johnson <livewire@gentoo.org>
-
-        - bumped to 2.4.21_pre5
-
-*gs-sources-2.4.21_pre5    (27 Feb 2003)
+	- Updated acpi to acpi-20030228-2.4.21-pre4.
+	- Updated Aic79xx to aic79xx-linux-2.4-20030318.
+	- Ptrace exploit patch .
 
   27 Feb 2003: Bob Johnson <livewire@gentoo.org>
-
-	- bumped to 2.4.21_pre5
+        - Bumped to 2.4.21_pre5.
 	
 *gs-sources-2.4.21_pre4    (18 Feb 2003)
 
   18 Feb 2003: Bob Johnson <livewire@gentoo.org>
-	
-	- bumped to 2.4.21_pre4
+	- Bumped to 2.4.21_pre4
 
 *gs-sources-2.4.21_pre3-r3 (24 Jan 2003)
   
   24 Jan 2003: Bob Johnson <livewire@gentoo.org>
-
-	- updated acpi (Jan 23, 2003) with compile fixes
-	- updated aic79xx (Jan 22, 2003)
-	- bcm4400 nic drivers added
-	- bcm5700 nic drivers added
-	- Thinkpad support added
-	- experimental hpt370 fix
-	- Sim710 compile fixes
+	- Updated acpi (Jan 23, 2003) with compile fixes.
+	- Updated aic79xx (Jan 22, 2003).
+	- bcm4400 nic drivers added.
+	- bcm5700 nic drivers added.
+	- Thinkpad support added.
+	- Experimental hpt370 fix.
+	- Sim710 compile fixes.
 
 *gs-sources-2.4.21_pre3-r2 (18 Jan 2003)
 
   18 Jan 2003: Bob Johnson <livewire@gentoo.org>
-
-	- Newer Nforce2 patch, fixes 80wire detection
-	- Preempt added
-	- Low Latency added
-	- bkbits cset 1.884.1.87 to 1.903 (many many fixes)
-	- pdc202xx ide patches 
+	- Newer Nforce2 patch, fixes 80wire detection.
+	- Preemptible Kernel Support added.
+	- Low Latency Support added.
+	- bkbits cset 1.884.1.87 to 1.903 (many many fixes).
+	- PDC202xx ide patches.
 
 *gs-sources-2.4.21_pre3-r1 (16 Jan 2003)
 
   16 Jan 2003; Bob Johnson <livewire@gentoo.org>
-
-	- Nforce2 support finally (only to ATA100)
-	- asus 3c59x fix
+	- Nforce2 support finally (only to ATA100).
+	- ASUS 3c59x fix.
 
 *gs-sources-2.4.21_pre3 (15 Jan 2003)
   
   15 Jan 2003; Bob Johnson <livewire@gentoo.org>:
   Initial Release Gentoo Stable Sources -gss
-  
- 	- 2.4.20 patched up to 2.4.21pre3
-	- 3.5G address-space
-	- acpi pre3
- 	- evms 1.2.1
-	- proconfig 9.7
-	- ntfs 2.10a
-	- few Nvidia nforce bitkeeper patches
-	- win4lin
-	- futexes
-	- imon
-	- i2c-2.7.0
-	- new aic79xx drivers
-	- ecc-20020904
-	- v4l2-api
-	- super freeswan 1.99
-	- gcc31 compile opts
-	- gentoo framebuffer 
-	- 3c59x fix for asus/nforce2?
+ 	- 2.4.20 patched up to 2.4.21pre3.
+	- 3.5G address-space.
+	- ACPI pre3.
+ 	- EVMS 1.2.1.
+	- proconfig 9.7.
+	- NTFS 2.10a.
+	- A few Nvidia nforce bitkeeper patches.
+	- Win4Lin.
+	- Futexes.
+	- Imon.
+	- I2C-2.7.0.
+	- New aic79xx drivers.
+	- ecc-20020904.
+	- v4l2-api.
+	- Super freeswan 1.99.
+	- GCC31 compile opts.
+	- Gentoo framebuffer.
+	- 3c59x fix for asus/nforce2?.

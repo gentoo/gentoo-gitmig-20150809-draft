@@ -1,23 +1,23 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.32 2003/11/29 04:45:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.33 2003/12/04 23:10:54 plasmaroo Exp $
 
 *linux-headers-2.4.23 (28 Nov 2003)
 
   28 Nov 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.23.ebuild:
-  revision bump for 2.4.23 kernel. Keyword masked until it can be tested. With
+  Revision bump for 2.4.23 kernel. Keyword masked until it can be tested. With
   the newer iputils package available, these should work fine.
 
 *linux-headers-2.4.21-r1 (16 Nov 2003)
 
   24 Nov 2003; Aron Griffis <agriffis@gentoo.org> linux-headers-2.4.21.ebuild:
-  Add ~alpha
+  Add '~alpha'.
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   linux-headers-2.4.21-r1.ebuild, linux-headers-2.4.21.ebuild,
   linux-headers-2.4.22.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
   16 Nov 2003; Joshua Kinard <kumba@gentoo.org>
   linux-headers-2.4.21-r1.ebuild, linux-headers-2.4.21.ebuild,
@@ -33,7 +33,7 @@
   linux-headers-2.4.21-r1.ebuild, linux-headers-2.4.21.ebuild,
   linux-headers-2.4.22.ebuild, files/linux-headers-strict-ansi-fix.patch:
   Changed the ordering of some variables to adjust to new kernel.eclass behavior.
-  Added a patch that fixes an issue regarding the use of gcc's -ansi flag.  Closes Bug #32246
+  Added a patch that fixes an issue regarding the use of gcc's -ansi flag.
 
 *linux-headers-2.4.22 (21 Sep 2003)
 
@@ -61,7 +61,7 @@
 
   21 Oct 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.21.ebuild:
   Added ~x86 to KEYWORDS
-  Removed +x mode that somehow got set on all ebuilds
+  Removed +x mode that somehow got set on all ebuilds.
 
   01 Oct 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.21.ebuild,
   linux-headers-2.4.22.ebuild:
@@ -75,7 +75,7 @@
   linux-headers-2.4.18-r2.ebuild, linux-headers-2.4.18.ebuild,
   linux-headers-2.4.19-r1.ebuild, linux-headers-2.4.19.ebuild,
   linux-headers-2.4.21.ebuild, linux-headers-2.4.22.ebuild:
-  now uses mirror://kernel.
+  Now uses mirror://kernel.
 
   21 Sep 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.22.ebuild:
   Created ebuild for linux-headers-2.4.22; set KEYWORDS to "-*" to mask it 
@@ -89,7 +89,7 @@
   kernel.eclass from appending "-linux-r0" to the version string.
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org> linux-headers-2.4.21.ebuild:
-  ia64 keywords.
+  Added 'ia64' keywords.
 
   12 Sep 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.21.ebuild,
   files/bigendian-byteorder-fix.patch, files/generate-asm-sparc:
@@ -97,8 +97,8 @@
   needed fix for sparc systems. Only usable with the gcc33-sparc64-1.4 testing
   profile right now.  Should not affect amd64; if it does, Yell.
 
-  21 Jun 2003; Daniel Robbins <drobbins@gentoo.org> new linux-headers-2.4.21 (stock)
-  to be used for amd64.
+  21 Jun 2003; Daniel Robbins <drobbins@gentoo.org> 
+  New linux-headers-2.4.21 (stock) to be used for amd64.
 
 *linux-headers-2.4.17-r4 (11 Mar 2003)
 
@@ -110,8 +110,7 @@
   linux-headers-2.4.18-r2.ebuild, linux-headers-2.4.18.ebuild,
   linux-headers-2.4.19-r1.ebuild, linux-headers-2.4.19.ebuild,
   linux-headers-2.4.20.ebuild:
-  add virtual/os-headers PROVIDE
-
+  Add virtual/os-headers "PROVIDE".
 
 *linux-headers-2.4.20 (06 Feb 2003)
 
@@ -134,21 +133,19 @@
 
   24 Mar 2003; Christian Birchinger <joker@gentoo.org>
   linux-headers-2.4.19-r1.ebuild:
-  Added a sparc64 detection fix
+  Added a sparc64 detection fix.
 
   19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
-  Added mips to keywords
+  Added 'mips' to keywords.
 
   18 Dec 2002; Dean Bailey <alron@gentoo.org> : 
   Fixed the lack of sparc64 instances in the file which were accidently wiped during an earlier fix.
-  Set to r1 as this was a large enough change
+  Set to r1 as this was a large enough change.
 
- 17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
+  17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-See the sys-kernel/linux-sources ChangeLog for general changes.
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : Changed sparc ~sparc keywords.
 
 *linux-headers-2.4.19 (02 Sept 2002)
 
@@ -156,5 +153,8 @@ See the sys-kernel/linux-sources ChangeLog for general changes.
 
   Fixed the
 	  mv: cannot move `linux-2.4.19' to a subdirectory of itself
-	error with a $OKV!=$KV check.
-	Added comments to the die statements.		
+          error with a $OKV!=$KV check.
+
+  Added comments to the die statements.		
+
+*** See the sys-kernel/linux-sources ChangeLog for general changes. ***
