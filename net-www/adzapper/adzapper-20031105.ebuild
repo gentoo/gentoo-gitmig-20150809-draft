@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20031105.ebuild,v 1.2 2004/01/19 21:17:14 blkdeath Exp $
-
-inherit webapp-apache
+# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20031105.ebuild,v 1.3 2004/01/19 21:33:07 blkdeath Exp $
 
 DESCRIPTION="redirector for squid that intercepts advertising, page counters and some web bugs"
 HOMEPAGE="http://adzapper.sourceforge.net/"
@@ -18,14 +16,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="net-www/squid"
-
-webapp-detect || NO_WEBSERVER=1
-
-
-pkg_setup() {
-	webapp-pkg_setup "${NO_WEBSERVER}"
-	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
-}
 
 src_unpack() {
 	unpack ${A}
@@ -48,11 +38,6 @@ src_unpack() {
 }
 
 src_install() {
-	webapp-mkdirs
-
-	local DocumentRoot=${HTTPD_ROOT}
-	local destdir=${DocumentRoot}/
-
 	cd ${S}/scripts
 	exeinto /etc/adzapper
 	doexe wrapzap zapchain squid_redirect
