@@ -1,0 +1,476 @@
+Originally from ftp://ftp.redhat.com/pub/redhat/linux/7.2/en/os/i386/SRPMS/ntp-4.1.0-4.src.rpm
+See <https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=35653> for details.
+--- ntp-4.0.99m-rc2/html/ntpd.htm.droproot	Thu May 24 08:04:57 2001
++++ ntp-4.0.99m-rc2/html/ntpd.htm	Thu Aug 30 12:29:04 2001
+@@ -22,7 +22,7 @@
+ driftfile</i> ] [ -g ] [ -k <i>keyfile</i> ] [ -l <i>logfile</i> ]
+ [ -N high ] [ -p <i>pidfile</i> ] [ -r <i>broadcastdelay</i> ] [ -s
+ <i>statsdir</i> ] [ -t <i>key</i> ] [ -v <i>variable</i> ] [ -V <i>
+-variable</i> ] [ -x ]</tt> 
++variable</i> ] [ -T <i>chroot_dir</i> ] [ -U <i>server_user</i> ] [ -x ]</tt> 
+ 
+ <h4>Description</h4>
+ 
+@@ -379,6 +379,19 @@
+ 
+ <dd>Add a system variable listed by default.</dd>
+ 
++
++<DT><TT>-T <I>chroot_dir</I></TT></DT>
++<DD>Chroot the ntpd server process into <I>chroot_dir</I>. To use this
++option you have to copy all the files that ntpd process needs into the
++chroot directory. This option adds security only if the server also drops
++root privileges (see -U option).</DD>
++
++<DT><TT>-U <I>server_user</I></TT></DT>
++<DD>Ntpd process drops root privileges and changes user ID to
++<I>server_user</I> and group ID to the primary group of <I>server_user</I>.
++To use this option you need libcap-library.
++</DD>
++
+ <dt><tt>-x</tt></dt>
+ 
+ <dd>Normally, the time is slewed if the offset is less than the
+--- ntp-4.0.99m-rc2/html/ntpdate.htm.droproot	Tue Apr  3 05:43:05 2001
++++ ntp-4.0.99m-rc2/html/ntpdate.htm	Thu Aug 30 12:29:04 2001
+@@ -26,6 +26,7 @@
+ 
+ <tt>ntpdate [ -bBdoqsuv ] [ -a <i>key</i> ] [ -e <i>authdelay</i> ]
+ [ -k <i>keyfile</i> ] [ -o <i>version</i> ] [ -p <i>samples</i> ] [
++-U <i>user_name</i> ] [
+ -t <i>timeout</i> ] <i>server</i> [ ... ]</tt> 
+ 
+ <h4>Description</h4>
+@@ -161,6 +162,12 @@
+ 
+ <dd>Be verbose. This option will cause <tt>ntpdate</tt>'s version
+ identification string to be logged.</dd>
++
++<dt><tt>-U <i>user_name</i></tt></dt>
++
++<dd>ntpdate process drops root privileges and changes user ID to
++<i>user_name</i> and group ID to the primary group of <i>server_user</i>.
++To use this option you need libcap-library.</dd>
+ </dl>
+ 
+ <h4>Files</h4>
+--- ntp-4.1.2/ntpd/Makefile.am.orig	2003-08-06 02:12:03.000000000 -0400
++++ ntp-4.1.2/ntpd/Makefile.am	2003-08-06 02:12:10.000000000 -0400
+@@ -9,7 +9,7 @@
+ # sqrt                                ntp_control.o
+ # floor                               refclock_wwv.o
+ # which are (usually) provided by -lm.
+-ntpd_LDADD = $(LDADD) -lm
++ntpd_LDADD = $(LDADD) -lm -lcap
+ DISTCLEANFILES = .version version.c
+ #EXTRA_DIST = ntpd.mak
+ ETAGS_ARGS = Makefile.am
+--- ntp-4.0.99m-rc2/ntpd/ntpd.c.droproot	Sat Apr 21 09:23:40 2001
++++ ntp-4.0.99m-rc2/ntpd/ntpd.c	Thu Aug 30 12:32:54 2001
+@@ -6,6 +6,11 @@
+ # include <config.h>
+ #endif
+ 
++#include <sys/capability.h>
++#include <sys/prctl.h>
++#include <pwd.h>
++#include <grp.h>
++
+ #include "ntp_machine.h"
+ #include "ntpd.h"
+ #include "ntp_io.h"
+@@ -96,6 +101,11 @@
+ #include "ntp_crypto.h"
+ #endif /* PUBKEY */
+ 
++/* Username to run as */
++char *server_user=0;
++/* Chroot to this dir */
++char *chroot_dir=0;
++
+ /*
+  * Signals we catch for debugging.	If not debugging we ignore them.
+  */
+@@ -188,10 +198,60 @@
+ 	char *argv[]
+ 	)
+ {
++  server_user = NULL;
++  chroot_dir = NULL;
+ 	return ntpdmain(argc, argv);
+ }
+ #endif
+ 
++/* This patch is adapted (copied) from Chris Wings drop root patch
++ * for xntpd.
++ */
++void drop_root(uid_t server_uid, gid_t server_gid)
++{
++  cap_t caps;
++
++  if (prctl(PR_SET_KEEPCAPS, 1)) {
++    msyslog(LOG_ERR, "prctl(PR_SET_KEEPCAPS, 1) failed");
++    exit(1);
++  }
++
++  if ( setgroups(0, NULL) == -1 ) {
++    msyslog(LOG_ERR, "setgroups failed.");
++    exit(1);
++  }
++
++  if ( setegid(server_gid) == -1 || seteuid(server_uid) == -1 ) {
++    msyslog(LOG_ERR, "setegid/seteuid to uid=%d/gid=%d failed.", server_uid,
++            server_gid);
++    exit(1);
++  }
++
++  caps = cap_from_text("cap_sys_time=epi");
++  if (caps == NULL) {
++    msyslog(LOG_ERR, "cap_from_text failed.");
++    exit(1);
++  }
++
++  if (cap_set_proc(caps) == -1) {
++    msyslog(LOG_ERR, "cap_set_proc failed.");
++    exit(1);
++  }
++  
++  /* Try to free the memory from cap_from_text */
++  cap_free( caps );
++
++  if ( setregid(server_gid, server_gid) == -1 ||
++       setreuid(server_uid, server_uid) == -1 ) {
++    msyslog(LOG_ERR, "setregid/setreuid to uid=%d/gid=%d failed.", server_uid,
++            server_gid);
++    exit(1);
++  }
++
++  msyslog(LOG_DEBUG, "running as uid(%d)/gid(%d) euid(%d)/egid(%d).",
++          getuid(), getgid(), geteuid(), getegid());
++}
++
+ #ifdef _AIX
+ /*
+  * OK. AIX is different than solaris in how it implements plock().
+@@ -337,6 +397,9 @@
+ #ifdef _AIX			/* HMS: ifdef SIGDANGER? */
+ 	struct sigaction sa;
+ #endif
++	struct passwd *pwd = NULL;
++	uid_t server_uid;
++	gid_t server_gid;
+ 
+ 	initializing = 1;		/* mark that we are initializing */
+ 	debug = 0;			/* no debugging by default */
+@@ -377,6 +440,29 @@
+ #endif
+ 	getstartup(argc, argv); /* startup configuration, may set debug */
+ 
++  /* Lookup server_user uid/gid before chroot/chdir */
++  if ( server_user ) {
++    pwd = getpwnam( server_user );
++    if ( pwd == NULL ) {
++      msyslog(LOG_ERR, "Failed to lookup user '%s'.", server_user);
++      exit(1);
++    }
++    server_uid = pwd->pw_uid;
++    server_gid = pwd->pw_gid;
++  }
++
++  /* Try to chroot to chroot_dir. This probably makes sense only if
++   * the server drops root privileges.
++   */
++  if ( chroot_dir ) {
++    if ( chroot(chroot_dir) == -1 || chdir("/") == -1 ) {
++      msyslog(LOG_ERR, "chroot/chdir to '%s' failed.", chroot_dir);
++      exit(1);
++    }
++    /* Close /dev/log */
++    closelog();
++  }
++	
+ 	/*
+ 	 * Initialize random generator and public key pair
+ 	 */
+@@ -745,6 +831,10 @@
+ #endif /* AUTOKEY */
+ 	initializing = 0;
+ 
++  if ( server_user ) {
++    drop_root( server_uid, server_gid );
++  }
++
+ #if defined(SYS_WINNT) && !defined(NODETACH)
+ # if defined(DEBUG)
+ 	if(!debug)
+--- ntp-4.0.99m-rc2/ntpd/cmd_args.c.droproot	Fri Apr 20 00:50:01 2001
++++ ntp-4.0.99m-rc2/ntpd/cmd_args.c	Thu Aug 30 12:34:33 2001
+@@ -15,7 +15,15 @@
+ extern char const *progname;
+ int	listen_to_virtual_ips = 0;
+ 
++static const char *ntp_options = "aAbc:dD:f:gk:l:LmnN:p:P:qr:s:t:v:V:x-:U:T:";
++
++/* Drop root patch */
++extern char *server_user;
++extern char *chroot_dir;
++
++/*
+ static const char *ntp_options = "aAbc:dD:f:gk:l:LmnN:p:P:qr:s:t:v:V:x-:";
++*/
+ 
+ #ifdef HAVE_NETINFO
+ extern int	check_netinfo;
+@@ -114,7 +122,31 @@
+ 		    ++errflg;
+ 		    break;
+ 
+-		default:
++		 case 'U':
++			if ( !ntp_optarg ) {
++			  fprintf(stderr, "Error: Need username with 'U' option\n");
++			  exit(1);
++			}
++			else {
++			  if ( !server_user ) {
++				 server_user = strdup(ntp_optarg);
++			  }
++			}
++			break;
++			
++		 case 'T':
++			if ( !ntp_optarg ) {
++			  fprintf(stderr, "Error: Need directory with 'T' option\n");
++			  exit(1);
++			}
++			else {
++			  if ( !chroot_dir ) {
++				 chroot_dir = strdup(ntp_optarg);
++			  }
++			}
++			break;
++
++		 default:
+ 			break;
+ 		}
+ 
+@@ -123,6 +155,7 @@
+ 		(void) fprintf(stderr, "\t\t[ -f freq_file ] [ -k key_file ] [ -l log_file ]\n");
+ 		(void) fprintf(stderr, "\t\t[ -p pid_file ] [ -r broad_delay ] [ -s statdir ]\n");
+ 		(void) fprintf(stderr, "\t\t[ -t trust_key ] [ -v sys_var ] [ -V default_sysvar ]\n");
++		(void) fprintf(stderr, "\t\t[ -T chroot_dir ] [ -U server_user ]\n");
+ #if defined(HAVE_SCHED_SETSCHEDULER)
+ 		(void) fprintf(stderr, "\t\t[ -P fixed_process_priority ]\n");
+ #endif
+@@ -293,6 +326,10 @@
+ 			allow_step = FALSE;
+ 			break;
+ 
++		    case 'U': 	/* already done at pre-scan */
++		    case 'T':	/* already done at pre-scan */
++			break;
++
+ 		    default:
+ 			errflg++;
+ 			break;
+@@ -304,6 +341,7 @@
+ 		(void) fprintf(stderr, "\t\t[ -f freq_file ] [ -k key_file ] [ -l log_file ]\n");
+ 		(void) fprintf(stderr, "\t\t[ -p pid_file ] [ -r broad_delay ] [ -s statdir ]\n");
+ 		(void) fprintf(stderr, "\t\t[ -t trust_key ] [ -v sys_var ] [ -V default_sysvar ]\n");
++		(void) fprintf(stderr, "\t\t[ -T chroot_dir ] [ -U server_user ]\n");
+ #if defined(HAVE_SCHED_SETSCHEDULER)
+ 		(void) fprintf(stderr, "\t\t[ -P fixed_process_priority ]\n");
+ #endif
+--- ntp-4.1.2/ntpdate/Makefile.am.orig	2003-08-06 02:12:54.000000000 -0400
++++ ntp-4.1.2/ntpdate/Makefile.am	2003-08-06 02:13:59.000000000 -0400
+@@ -5,6 +5,7 @@
+ INCLUDES = -I$(top_srcdir)/include
+ # LDADD might need RESLIB and ADJLIB
+ LDADD =	version.o ../libntp/libntp.a @LIBRSAREF@
++ntpdate_LDADD = $(LDADD) -lcap
+ DISTCLEANFILES = .version version.c stamp-v
+ noinst_HEADERS = ntpdate.h
+ #EXTRA_DIST = ntpdate.mak
+--- ntp-4.0.99m-rc2/ntpdate/ntpdate.c.droproot	Sun Apr 22 11:42:48 2001
++++ ntp-4.0.99m-rc2/ntpdate/ntpdate.c	Thu Aug 30 12:29:04 2001
+@@ -41,6 +41,12 @@
+ # include <sys/resource.h>
+ #endif /* HAVE_SYS_RESOURCE_H */
+ 
++/* Linux capabilities */
++#include <sys/capability.h>
++#include <sys/prctl.h>
++#include <pwd.h>
++#include <grp.h>
++
+ #ifdef SYS_VXWORKS
+ # include "ioLib.h"
+ # include "sockLib.h"
+@@ -127,6 +133,11 @@
+ int rate = 0;
+ 
+ /*
++ * Use capabilities to drop privileges and switch uids
++ */
++char *server_user;
++
++/*
+  * Program name.
+  */
+ char *progname;
+@@ -273,6 +284,88 @@
+ static ni_namelist *getnetinfoservers P((void));
+ #endif
+ 
++/* This patch is adapted (copied) from Chris Wings drop root patch
++ * for xntpd.
++ */
++void drop_root(uid_t server_uid, gid_t server_gid)
++{
++  cap_t caps;
++
++  if (prctl(PR_SET_KEEPCAPS, 1)) {
++		if (syslogit) {
++			msyslog(LOG_ERR, "prctl(PR_SET_KEEPCAPS, 1) failed");
++		}
++		else {
++			fprintf(stderr, "prctl(PR_SET_KEEPCAPS, 1) failed.\n");
++		}
++    exit(1);
++  }
++
++  if ( setgroups(0, NULL) == -1 ) {
++		if (syslogit) {
++			msyslog(LOG_ERR, "setgroups failed.");
++		}
++		else {
++			fprintf(stderr, "setgroups failed.\n");
++		}
++    exit(1);
++  }
++
++  if ( setegid(server_gid) == -1 || seteuid(server_uid) == -1 ) {
++		if (syslogit) {
++			msyslog(LOG_ERR, "setegid/seteuid to uid=%d/gid=%d failed.", server_uid,
++							server_gid);
++		}
++		else {
++			fprintf(stderr, "setegid/seteuid to uid=%d/gid=%d failed.\n", server_uid,
++							server_gid);
++		}
++    exit(1);
++  }
++
++  caps = cap_from_text("cap_sys_time=epi");
++  if (caps == NULL) {
++		if (syslogit) {
++			msyslog(LOG_ERR, "cap_from_text failed.");
++		}
++		else {
++			fprintf(stderr, "cap_from_text failed.\n");
++		}
++    exit(1);
++  }
++
++  if (cap_set_proc(caps) == -1) {
++		if (syslogit) {
++			msyslog(LOG_ERR, "cap_set_proc failed.");
++		}
++		else {
++			fprintf(stderr, "cap_set_proc failed.\n");
++		}
++    exit(1);
++  }
++  
++  /* Try to free the memory from cap_from_text */
++  cap_free( caps );
++
++  if ( setregid(server_gid, server_gid) == -1 ||
++       setreuid(server_uid, server_uid) == -1 ) {
++		if (syslogit) {
++			msyslog(LOG_ERR, "setregid/setreuid to uid=%d/gid=%d failed.",
++							server_uid, server_gid);
++		}
++		else {
++			fprintf(stderr, "setregid/setreuid to uid=%d/gid=%d failed.\n",
++							server_uid, server_gid);
++		}
++    exit(1);
++  }
++
++	if (syslogit) {
++		msyslog(LOG_DEBUG, "running as uid(%d)/gid(%d) euid(%d)/egid(%d).",
++						getuid(), getgid(), geteuid(), getegid());
++	}
++}
++
+ /*
+  * Main program.  Initialize us and loop waiting for I/O and/or
+  * timer expiries.
+@@ -323,7 +416,7 @@
+ #ifdef NO_MAIN_ALLOWED
+ 	clear_globals();
+ #endif
+-
++	server_user = NULL;
+ 	errflg = 0;
+ 	progname = argv[0];
+ 	syslogit = 0;
+@@ -331,7 +424,7 @@
+ 	/*
+ 	 * Decode argument list
+ 	 */
+-	while ((c = ntp_getopt(argc, argv, "a:bBde:k:o:p:qr:st:uv")) != EOF)
++	while ((c = ntp_getopt(argc, argv, "a:bBde:k:o:p:qr:st:uvU:")) != EOF)
+ 		switch (c)
+ 		{
+ 		case 'a':
+@@ -417,13 +510,22 @@
+ 		case '?':
+ 			++errflg;
+ 			break;
++		case 'U':
++			if (ntp_optarg) {
++				server_user = strdup(ntp_optarg);
++			}
++			else {
++				++errflg;
++			}
++			break;
++
+ 		default:
+ 			break;
+ 	    }
+ 	
+ 	if (errflg) {
+ 		(void) fprintf(stderr,
+-				   "usage: %s [-bBdqsuv] [-a key#] [-e delay] [-k file] [-p samples] [-o version#] [-r rate] [-t timeo] server ...\n",
++				   "usage: %s [-bBdqsuv] [-a key#] [-e delay] [-k file] [-p samples] [-o version#] [-r rate] [-t timeo] [-U username] server ...\n",
+ 				   progname);
+ 		exit(2);
+ 	}
+@@ -536,6 +638,24 @@
+ 	initializing = 0;
+ 
+ 	was_alarmed = 0;
++
++	if (server_user) {
++		struct passwd *pwd = NULL;
++
++		/* Lookup server_user uid/gid before chroot/chdir */
++		pwd = getpwnam( server_user );
++		if ( pwd == NULL ) {
++			if (syslogit) {
++				msyslog(LOG_ERR, "Failed to lookup user '%s'.", server_user);
++			}
++			else {
++				fprintf(stderr, "Failed to lookup user '%s'.\n", server_user);
++			}
++			exit(1);
++		}
++		drop_root(pwd->pw_uid, pwd->pw_gid);
++	}
++
+ 	rbuflist = (struct recvbuf *)0;
+ 	while (complete_servers < sys_numservers) {
+ #ifdef HAVE_POLL_H

@@ -1,0 +1,31 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2         
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.rc,v 1.1 2003/08/06 07:42:24 vapier Exp $
+
+depend() {
+	need net
+	use dns logger
+}
+
+checkconfig() {
+	if [ ! -x "`which ${NTPCLIENT_CMD} 2>/dev/null`" ] ; then
+		eerror "Please edit /etc/conf.d/ntp-client"
+		eerror "Unable to locate the client command ${NTPCLIENT_CMD}!"
+		return 1
+	fi
+	if [ -z "${NTPCLIENT_OPTS}" ] ; then
+		eerror "Please edit /etc/conf.d/ntp-client"
+		eerror "I need to know what server/options to use!"
+		return 1
+	fi
+	return 0
+}
+
+start() {
+	checkconfig || return $?
+
+	ebegin "Setting clock via the ntp client '${NTPCLIENT_CMD}'"
+	${NTPCLIENT_CMD} >/dev/null ${NTPCLIENT_OPTS}
+	eend $? "Failed to set clock"
+}

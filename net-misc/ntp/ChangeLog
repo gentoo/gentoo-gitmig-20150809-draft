@@ -1,7 +1,14 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.29 2003/06/20 02:40:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.30 2003/08/06 07:42:24 vapier Exp $
 
+*ntp-4.1.2 (06 Aug 2003)
+
+  06 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump (omg about time) #26023.
+  Add redhat drop root patch #21444.
+  Add broadcast bug fix #17336.
+  Split ntp init script into server and client scripts #21017.
 
 *ntp-4.1.1b-r6 (16 Jun 2003)
 
