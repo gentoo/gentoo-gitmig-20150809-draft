@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.35 2003/04/11 17:02:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.36 2003/04/19 17:24:56 danarmak Exp $
+
+*kdenetwork-3.1.1-r1 (19 Apr 2003)
+
+  19 Apr 2003; Dan Armak <danarmak@gentoo.org> Manifest,
+  kdenetwork-3.1.1-r1.ebuild, files/kdenetwork-3.1.1-kmail-sig.diff:
+  Added patch from kde cvs that fixes the kmail issue that caused gpg signatures
+  of messages with attachements to be broken.
 
 *kdenetwork-3.0.5b (08 Apr 2003)
 
