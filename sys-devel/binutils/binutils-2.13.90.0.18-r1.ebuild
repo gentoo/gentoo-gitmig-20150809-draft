@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18-r1.ebuild,v 1.4 2003/03/28 07:39:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18-r1.ebuild,v 1.5 2003/03/31 00:28:25 joker Exp $
 
 IUSE="nls bootstrap build"
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="~x86 ~ppc ~alpha -sparc ~mips ~hppa ~arm"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~mips ~hppa ~arm"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.21
@@ -47,7 +47,8 @@ src_unpack() {
 	# Various patches from Redhat/Mandrake...
 	epatch ${DISTDIR}/${PN}-2.13.90.0.18-20030206.patch.bz2
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-glibc21.patch
-	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-sparc-nonpic.patch
+	# Compilation fails on sparc because of this patch.
+	# epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-sparc-nonpic.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-ia64-brl.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-eh-frame-ro.patch
 	use x86 &> /dev/null \
