@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r2.ebuild,v 1.3 2004/02/04 00:07:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r2.ebuild,v 1.4 2004/03/17 02:58:37 dragonheart Exp $
 
 inherit flag-o-matic
 
@@ -12,11 +12,16 @@ HOMEPAGE="http://www.busybox.net"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64 -alpha"
-IUSE="static uclibc diet"
+IUSE="static uclibc diet devfs"
 
 DEPEND="virtual/glibc
-	diet? ( dev-libs/dietlibc )"
-RDEPEND="!static? ${DEPEND}"
+	diet? ( dev-libs/dietlibc )
+	>=sys-apps/sed-4"
+
+RDEPEND="!static? (
+		!diet? ( virtual/glibc )
+		diet? ( dev-libs/dietlibc )
+	)"
 
 src_unpack() {
 	unpack ${A}
@@ -24,15 +29,20 @@ src_unpack() {
 	# I did not include the msh patch since I don't know if it will
 	# break stuff, I compile ash anyway, and it's in CVS
 
+	if [ `use devfs` ]; then
+		einfo "Disabling devfs in busybox"
+		sed -i -e "s:#define.*BB_FEATURE_DEVFS://#define BB_FEATURE_DEVFS:g" \
+			 ${S}/Config.h
+	fi
+
 	# Add support for dietlibc - solar@gentoo.org
-	if [ "`use diet`" != "" ]; then
+	if [ `use diet` ]; then
 		[ "${PV}" == "0.60.5" ] &&
-		sed \
+		sed -i \
 			-e "s://#define.*BB_TTY:#define BB_TTY:g" \
 			-e "s://#define.*BB_WATCH:#define BB_WATCH:g" \
 			-e "s:BB_TRACEROUTE:BB_TRACEROUTE_${RANDOM}:g" \
-			< ${S}/Config.h > ${S}/Config.h.new &&
-			mv ${S}/Config.h{.new,}
+			${S}/Config.h
 		[ -f ${FILESDIR}/${PN}-${PV}-dietlibc.diff ] &&
 			epatch ${FILESDIR}/${PN}-${PV}-dietlibc.diff ||
 			ewarn "No dietlibc patch found for ${PN}-${PV}"
@@ -50,7 +60,7 @@ src_compile() {
 		unset CFLAGS
 	fi
 
-	if [ "`use diet`" != "" ] ; then
+	if [ `use diet` ] ; then
 		append-flags -D_BSD_SOURCE
 		emake CC="diet ${CC}" CLFAGS="${CFLAGS}" ${myconf} ||
 			die "Failed to make diet ${PN}"
