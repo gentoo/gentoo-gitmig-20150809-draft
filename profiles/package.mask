@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <george@gentoo.org> (original mask 27 Oct 2003; renamed 01 Feb 2004)
+# masking work in progress (multiple blas related packages will have to be unmasked
+# sinchronously)
+app-sci/blas-reference
+
 # <karltk@gentoo.org> (01 Feb 2004)
 # does not work, will not maintain atm.
 app-portage/porthole
@@ -258,11 +263,6 @@ dev-util/mono-debugger
 >=net-mail/cyrus-imapd-2.2
 >=net-mail/cyrus-imap-admin-2.2
 >=dev-libs/cyrus-imap-dev-2.2
-
-# <george@gentoo.org> (27 Oct 2003)
-# masking work in progress (multiple blas related packages will have to be unmasked
-# sinchronously)
-=app-sci/blas-19940131
 
 # <robbat2@gentoo.org> (20 Oct 2003)
 # needs gcc3.3/tcl8.4 fixing
