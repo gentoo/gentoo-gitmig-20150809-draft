@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.16 2003/10/11 19:01:53 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.17 2003/10/18 23:02:41 scandium Exp $
+
+  19 Oct 2003; Rainer Groesslinger <scandium@gentoo.org>
+  xmule-1.6.0a-r1.ebuild, xmule-1.6.0a.ebuild, xmule-1.6.1.ebuild:
+  Add a check if wxGTK is compiled with unicode
 
 *xmule-1.6.1 (11 Oct 2003)
 

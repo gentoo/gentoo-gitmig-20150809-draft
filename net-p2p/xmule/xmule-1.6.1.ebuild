@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.6.1.ebuild,v 1.2 2003/10/18 17:18:00 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.6.1.ebuild,v 1.3 2003/10/18 23:02:41 scandium Exp $
 
 MY_P=${P//a}
 S=${WORKDIR}/${MY_P}
@@ -17,6 +17,18 @@ IUSE=""
 
 DEPEND=">=x11-libs/wxGTK-2.4.1
 	>=sys-libs/zlib-1.1.4"
+
+pkg_setup() {
+	# FIXME: Is this really how we want to do this ?
+	GREP=`grep ' unicode' /var/db/pkg/x11-libs/wxGTK*/USE`
+	if [ "${GREP}" != "" ]; then
+		eerror "This package doesn't work with wxGTK"
+		eerror "compiled with gtk2 and unicode in USE"
+		eerror "Please re-compile wxGTK with -unicode"
+		eerror "or with -gtk2"
+		die "aborting..."
+	fi
+}
 
 src_compile () {
 	aclocal
