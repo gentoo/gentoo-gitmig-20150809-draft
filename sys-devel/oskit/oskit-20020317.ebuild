@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/oskit/oskit-20020317.ebuild,v 1.1 2003/03/15 22:23:35 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/oskit/oskit-20020317.ebuild,v 1.2 2003/03/26 21:44:28 avenj Exp $
 inherit flag-o-matic
 
 DESCRIPTION="Building blocks for a x86 operating system."
@@ -12,11 +12,11 @@ SLOT="0"
 KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa"
 DEPEND="doc? ( app-text/tetex )"
 S=${WORKDIR}/${P}
-IUSE="oskit-debug oskit-profiling oskit-noassert doc oskit-nobuild oskit-noconf"
+IUSE="debug oskit-profiling oskit-noassert doc oskit-nobuild oskit-noconf"
 
 src_compile() {
 	local myconf
-	if [ -n "$(use oskit-debug && use oskit-noassert)" ] ; then
+	if [ -n "$(use debug && use oskit-noassert)" ] ; then
 		ewarn "Configuring for debugging without assertions!"
 		echo -e '\a' 1>&2
 		sleep 5
@@ -25,7 +25,7 @@ src_compile() {
 	#	eerror "Building but not configuring"
 	#	die
 	#fi
-	use oskit-debug && myconf="${myconf} --enable-debug"
+	use debug && myconf="${myconf} --enable-debug"
 	use oskit-profiling && myconf="${myconf} --enable-profiling"
 	use oskit-noassert && myconf="${myconf} --disable-asserts"
 	use doc && myconf="${myconf} --enable-doc"
