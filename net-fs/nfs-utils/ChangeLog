@@ -1,8 +1,11 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.5 2002/10/13 09:36:07 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.6 2002/12/07 06:49:56 jmorgan Exp $
 
 *nfs-utils-1.0.1 (13 Oct 2002)
+ 
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> nfs-utils-1.0.1.ebuild :
+  Changed ~sparc64 to ~sparc keyword
 
   13 Oct 2002; Brad Cowan <bcowan@gentoo.org> nfs-utils-1.0.1.ebuild,
   files/digest-nfs-utils-1.0.1 :
