@@ -90,10 +90,6 @@ net-misc/radvd
 # Bumped to new version - masked for testing
 >=app-emulation/bochs-1.4.1
 
-# <owen@gentoo.org> (22 Jul 2002)
-# masked for testing.
-=dev-libs/pilot-link-0.11.1
-
 # <seemant@gentoo.org> (21 Jul 2002)
 # masked for testing
 =sys-devel/gettext-0.11.3
