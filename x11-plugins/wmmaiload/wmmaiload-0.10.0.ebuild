@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-0.10.0.ebuild,v 1.2 2004/03/22 14:58:55 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-0.10.0.ebuild,v 1.3 2004/04/13 18:20:20 rizzo Exp $
 
 S=${WORKDIR}/${P}
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 LICENSE="GPL-2"
 
-DEPEND="x11-base/xfree"
+DEPEND="virtual/x11"
 IUSE=""
 
 src_compile() {
