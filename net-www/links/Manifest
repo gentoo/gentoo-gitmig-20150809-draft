@@ -4,6 +4,7 @@ MD5 529b2dcf6e5e100a0f6120cf7ac35a60 links-2.1_pre9.ebuild 3154
 MD5 1165fadfdfad4adbb952b621e4ebed0b links-2.1_pre11.ebuild 3356
 MD5 0027d6a4148348f27d54e4bddeb6bff0 ChangeLog 7422
 MD5 8b00dcb2c13e809f531b430e3f95fef6 links-2.1_pre13.ebuild 3358
+MD5 56d78ea6a5d49e31ea36cdc98b0b48ad metadata.xml 352
 MD5 52bed2c64a669feed86577cb52f8cbb5 files/links-0.96-r2-gentoo.patch 1400
 MD5 e8eedeca8d9b94ce7cc0e5f919500740 files/digest-links-2.1_pre9 67
 MD5 71861032c7ce183e3427e4e205748323 files/digest-links-2.1_pre11 68
