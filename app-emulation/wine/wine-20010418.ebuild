@@ -1,14 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20010418.ebuild,v 1.2 2001/06/03 22:39:52 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20010418.ebuild,v 1.3 2001/06/03 22:42:30 blutgens Exp $
 
 WSV=0.5.1b
 A="Wine-${PV}.tar.gz winesetuptk-${WSV}.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="Wine is a free implementation of Windows on Unix."
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/ALPHA/wine/development/${A}
-	 http://wine.codeweavers.com/~mpilka/winesetuptk/winesetuptk-${WSV}.tar.gz"
+	 http://twine.codeweavers.com/~mpilka/winesetuptk/winesetuptk-${WSV}.tar.gz"
 HOMEPAGE="http://www.winehq.com/
 	  http://wine.codeweavers.com/winesetuptk.shtml"
 
