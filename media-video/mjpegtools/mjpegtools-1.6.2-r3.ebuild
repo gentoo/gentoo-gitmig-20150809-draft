@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.3 2004/08/05 10:29:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.4 2004/09/25 14:57:16 lanius Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="gtk avi dv quicktime sdl X yv12 3dnow mmx sse"
 
 DEPEND="media-libs/jpeg
@@ -36,6 +36,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fPIC.patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
 	epatch ${FILESDIR}/${P}-gcc34-altivec.patch
+
+	# remove checks for gtk in configure in
+	use gtk || epatch ${FILESDIR}/${P}-nogtk.patch
 
 	# Fix an error in the detection of the altivec-support
 	# in the compiler
@@ -70,6 +73,7 @@ src_compile() {
 	if use x86; then
 		if use mmx || use 3dnow || use sse; then
 			myconf="${myconf} --enable-simd-accel"
+			strip-flags -fstack-protector
 		fi
 		if use mmx; then
 			myconf="${myconf} --with-jpeg-mmx=/usr/include/jpeg-mmx"

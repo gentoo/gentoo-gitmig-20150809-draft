@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.69 2004/08/05 10:29:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.70 2004/09/25 14:57:16 lanius Exp $
+
+  25 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
+  +files/mjpegtools-1.6.2-nogtk.patch, mjpegtools-1.6.2-r3.ebuild:
+  mark x86
+
+  25 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
+  +files/mjpegtools-1.6.2-nogtk.patch, mjpegtools-1.6.2-r3.ebuild:
+  strip -fstack-protector if compiled with mmx|3dnow|sse, bug #37972
 
   05 Aug 2004; Luca Barbato <lu_zero@gentoo.org>
   +files/mjpegtools-1.6.2-gcc34-altivec.patch, mjpegtools-1.6.2-r3.ebuild:
