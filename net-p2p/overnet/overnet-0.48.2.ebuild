@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-0.48.2.ebuild,v 1.3 2003/09/07 00:17:35 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-0.48.2.ebuild,v 1.4 2004/03/01 06:26:59 eradicator Exp $
 
 MY_P="${P/-/}"
 S="${WORKDIR}"
