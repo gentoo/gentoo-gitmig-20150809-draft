@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/xmbmon
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/ChangeLog,v 1.1 2003/06/01 04:50:44 lostlogic Exp $
+
+*xmbmon-2.0.1 (31 May 2003)
+
+  31 May 2003; Brandon Low <lostlogic@gentoo.org> xmbmon-2.0.1.ebuild:
+  Add new package to portage, thanks to Damjan (Bug 19622 for the ebuild
+
