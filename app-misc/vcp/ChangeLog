@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/vcp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/ChangeLog,v 1.1 2003/09/02 23:41:45 vapier Exp $
+
+*vcp-1.6.2 (02 Sep 2003)
+
+  02 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by alex f <acid.punk@gmx.net> #27787.
