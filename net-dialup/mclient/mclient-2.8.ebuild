@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mclient/mclient-2.8.ebuild,v 1.1 2003/11/22 20:57:01 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mclient/mclient-2.8.ebuild,v 1.2 2004/06/24 22:29:17 agriffis Exp $
 
 DESCRIPTION="Simple command line Masqdialer client"
 HOMEPAGE="http://cpwright.com/mserver/"

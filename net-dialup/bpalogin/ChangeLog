@@ -1,6 +1,6 @@
 # ChangeLog for net-dialup/bpalogin
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bpalogin/ChangeLog,v 1.1 2003/11/23 09:22:46 lanius Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bpalogin/ChangeLog,v 1.2 2004/06/24 22:24:33 agriffis Exp $
 
 *bpalogin-2.0.2 (23 Nov 2003)
 

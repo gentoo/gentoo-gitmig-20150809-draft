@@ -1,6 +1,6 @@
 # ChangeLog for net-dialup/freeradius
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.15 2004/06/18 16:22:45 blauwers Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.16 2004/06/24 22:26:13 agriffis Exp $
 
   18 Jun 2004; Bart Lauwers <blauwers@gentoo.org> freeradius-0.9.3-r1.ebuild,
   freeradius-0.9.3.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/pppconfig-2.0.8.ebuild,v 1.9 2003/10/27 09:54:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/pppconfig-2.0.8.ebuild,v 1.10 2004/06/24 22:31:01 agriffis Exp $
 
 S=${WORKDIR}/pppconfig-2.1
 DESCRIPTION="A text menu based utility for configuring ppp."

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-0.99.03042703.ebuild,v 1.1 2003/05/26 11:37:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-0.99.03042703.ebuild,v 1.2 2004/06/24 22:27:45 agriffis Exp $
 
 MY_PV=0.99lnxtbeta03042703ppc
 MY_P=${PN}-${MY_PV}

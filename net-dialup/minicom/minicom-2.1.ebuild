@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1.ebuild,v 1.6 2004/03/24 05:59:37 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1.ebuild,v 1.7 2004/06/24 22:30:05 agriffis Exp $
 
 DESCRIPTION="Serial Communication Program"
 SRC_URI="http://alioth.debian.org/download.php/123/${P}.tar.gz"

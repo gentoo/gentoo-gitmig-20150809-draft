@@ -1,6 +1,6 @@
 # ChangeLog for net-dialup/l2tpd
-# Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/ChangeLog,v 1.6 2004/04/27 21:38:37 agriffis Exp $
+# Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/ChangeLog,v 1.7 2004/06/24 22:28:55 agriffis Exp $
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> l2tpd-0.69-r1.ebuild,
   l2tpd-0.69.ebuild:
