@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/esmall/esmall-0.0.1.20030220.ebuild,v 1.2 2003/03/03 14:47:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/esmall/esmall-0.0.1.20030220.ebuild,v 1.3 2003/03/03 14:51:35 vapier Exp $
 
 DESCRIPTION="scripting language for use internally in enlightenment"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -17,6 +17,13 @@ DEPEND="virtual/glibc
 S=${WORKDIR}/${PN}
 
 src_compile() {
+	if [ "${ARCH}" == "ppc" ] ; then
+		for f in `grep sys/io src/* -l` ; do
+			cp ${f}{,.old}
+			sed -e 's:sys/io:asm/io:' ${f}.old > ${f}
+		done
+	fi
+
 	cp autogen.sh{,.old}
 	sed -e 's:.*configure.*::' autogen.sh.old > autogen.sh
 	env WANT_AUTOCONF_2_5=1 ./autogen.sh || die "could not autogen"
