@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3582 2005/02/09 19:55:48 taviso Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3583 2005/02/10 08:38:21 mkennedy Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Matthew Kennedy <mkennedy@gentoo.org> (10 Feb 2005)
+# Masked while waiting on apache module refresh
+dev-lisp/tbnl
 
 # Tavis Ormandy <taviso@gentoo.org> (9 Feb 2005)
 # Masked for security audit.
