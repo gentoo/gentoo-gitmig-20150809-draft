@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19.ebuild,v 1.2 2004/07/21 23:56:52 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19.ebuild,v 1.3 2004/07/26 16:27:25 langthang Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -32,19 +32,23 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	if use gdbm && use berkdb; then
 		echo
-		eerror "You have both \"gdbm\" and \"berkdb\" in your USE flags."
-		eerror "please choose only one for your SASLdb database backend."
+		ewarn "You have both \"gdbm\" and \"berkdb\" in your USE flags."
+		ewarn "Will default to GNU DB as your SASLdb database backend."
+		ewarn "If you want to build with Berkeley DB support; hit Control-C now."
+		ewarn "Change your USE flag -gdbm and emerge again."
 		echo
-
 		has_version ">=sys-apps/portage-2.0.50" && (
 		einfo "It would be best practice to add the set of USE flags that you use for this"
 		einfo "package to the file: /etc/portage/package.use. Example:"
-		einfo "\`echo \"dev-libs/cyrus-sasl gdbm -berkdb\" >> /etc/portage/package.use\`"
-		einfo "to build cyrus-sasl with GNU database as your SASLdb backend."
+		einfo "\`echo \"dev-libs/cyrus-sasl -gdbm berkdb\" >> /etc/portage/package.use\`"
+		einfo "to build cyrus-sasl with Berkeley database as your SASLdb backend."
 		)
-
-		exit 1
+		echo
+		ewarn "Waiting 30 seconds before starting..."
+		ewarn "(Control-C to abort)..."
+		sleep 30
 	fi
+
 	echo
 	einfo "This version include a "-r" option for saslauthd to instruct it to reassemble"
 	einfo "realm and username into a username of "user@realm" form."
@@ -109,7 +113,11 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-sql"
 	fi
-	if use gdbm ; then
+
+	if use gdbm && use berkdb; then
+		einfo "build with GNU DB as database backend for your SASLdb."
+		myconf="${myconf} --with-dblib=gdbm"
+	elif use gdbm ; then
 		einfo "build with GNU DB as database backend for your SASLdb."
 		myconf="${myconf} --with-dblib=gdbm"
 	elif use berkdb ; then
