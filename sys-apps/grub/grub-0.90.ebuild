@@ -52,7 +52,7 @@ src_install() {
         	dodir /boot/grub
 		cd ${D}/usr/share/grub/i386-pc
 		cp stage1 stage2 *stage1_5 ${D}/boot/grub
-                cp ${FILESDIR}/${P}/splash.xpm.gz ${D}/boot/boot/grub
+                cp ${FILESDIR}/${P}/splash.xpm.gz ${D}/boot/grub
 		
         	cd ${S}
 		dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
