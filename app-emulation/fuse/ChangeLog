@@ -1,14 +1,19 @@
 # ChangeLog for app-emulation/fuse
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.4 2003/12/24 18:15:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.5 2004/02/28 07:49:32 vapier Exp $
+
+*fuse-0.6.2.1 (28 Feb 2004)
+
+  28 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to work with new libspectrum #39904
+
+*fuse-0.6.1.1 (20 Nov 2003)
 
   24 Dec 2003; David Holm <dholm@gentoo.org> fuse-0.6.1.1.ebuild:
   Added to ~ppc.
 
   27 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> fuse-0.6.0.1.ebuild:
   clean old version of ebuild
-
-*fuse-0.6.1.1 (20 Nov 2003)
 
   20 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump + DEPEND fixups #31215 #27711.
