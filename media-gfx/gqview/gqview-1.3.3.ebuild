@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.3.3.ebuild,v 1.2 2003/10/25 01:21:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.3.3.ebuild,v 1.3 2003/10/30 18:21:25 avenj Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://gqview.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc sparc amd64"
+KEYWORDS="x86 ~ppc sparc amd64"
 
 DEPEND="media-libs/libpng
 	>=x11-libs/gtk+-2.2.0"
