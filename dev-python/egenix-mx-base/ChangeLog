@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.24 2004/06/25 03:16:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.25 2004/10/19 08:22:21 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  egenix-mx-base-2.0.5.ebuild:
+  Stable on amd64.
 
   01 Jun 2004; Tom Gall <tgall@gentoo.org> egenix-mx-base-2.0.5.ebuild:
   stable on ppc64, bug #52709
