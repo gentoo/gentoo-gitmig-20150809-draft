@@ -1,0 +1,25 @@
+#!/sbin/runscript
+#
+# Startup script for the edna mp3 mini server 
+#
+# description: edna is a mini mp3 webserver
+# processname: python
+# pidfile: /var/run/ednad.pid
+# config: 
+
+depend() {
+        need local
+}
+
+start() {
+    ebegin "Starting ednad mp3 server"
+    start-stop-daemon -b -m --quiet --start --exec /usr/bin/ednad \
+	--pidfile /var/run/ednad.pid
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping ednad"
+    start-stop-daemon -o --quiet --stop --pidfile /var/run/ednad.pid
+    eend $?
+}
