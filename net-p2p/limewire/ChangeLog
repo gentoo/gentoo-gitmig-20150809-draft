@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.1 2004/08/08 03:18:48 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.2 2004/08/19 03:10:58 squinky86 Exp $
+
+*limewire-4.1.4 (18 Aug 2004)
+
+  18 Aug 2004; Jon Hood <squinky86@gentoo.org> limewire-4.0.8.ebuild,
+  -limewire-4.1.3.ebuild, +limewire-4.1.4.ebuild:
+  Version bump. I'm going to _try_ to keep up with the stable and unstable
+  branches correctly now, so 4.0.8 is stable on x86.
 
 *limewire-4.1.3 (07 Aug 2004)
 
