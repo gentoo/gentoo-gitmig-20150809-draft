@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/startup-notification
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/ChangeLog,v 1.26 2004/08/08 11:27:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/ChangeLog,v 1.27 2004/08/22 23:12:54 kloeri Exp $
+
+  23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  startup-notification-0.6.ebuild:
+  Stable on alpha.
 
   08 Aug 2004; David Holm <dholm@gentoo.org> startup-notification-0.7.ebuild:
   What happened to ~ppc!?
