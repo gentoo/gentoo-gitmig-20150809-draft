@@ -4,6 +4,7 @@
 3dnow
 afs
 alsa
+fdftk
 mmx
 pic
 sse
