@@ -7,7 +7,7 @@ MD5 688745cdf10527823bdd0c2b71a6e33a bacula-1.32f.ebuild 3862
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 90bb2459c037add7da9680e2d858a64c bacula-1.32f-r5.ebuild 3844
 MD5 b7afa1ce2b52c103bd93d453a636cb45 bacula-1.34.1.ebuild 3602
-MD5 9ee8beeb59237e2f79092ab8fa73eca5 bacula-1.34.4.ebuild 4236
+MD5 86a94177d19b5e67aea59d73a89d64b7 bacula-1.34.4.ebuild 4242
 MD5 d12f73af10ee40c23d29afc62f9a02b2 files/bacula-init 1916
 MD5 8e55a5f04a3cd9e096e9a5dfb46f1de7 files/digest-bacula-1.34.5 66
 MD5 68cdbb97c1064de4654b8db6160442ca files/digest-bacula-1.32f 268
@@ -19,7 +19,7 @@ MD5 13dd37747df7f32ec471e6bdf7eadec2 files/1.32f/1.32f-2-eom-nextvol.patch 9992
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBdrBhHTu7gpaalycRApaWAJ9bxVozWaPrDPinV/ION16AOke6fACdEOQA
-WophgoRHfeXq5qXDkI8fIhw=
-=L6R9
+iD8DBQFBdrCIHTu7gpaalycRAp43AKDke1yWz9seLK6xHv7u0IexItxJFgCg5TPe
+n9rg+t5orGBqHvoU2LTp9Ac=
+=3t+e
 -----END PGP SIGNATURE-----
