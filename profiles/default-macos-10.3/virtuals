@@ -27,3 +27,5 @@ virtual/semi		app-emacs/semi
 virtual/w3m		net-www/w3m
 virtual/ruby		dev-lang/ruby
 virtual/blackbox	x11-wm/fluxbox
+virtual/opengl 		sys-darwin/X11
+
