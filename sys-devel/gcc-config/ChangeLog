@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.81 2005/02/19 10:04:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.82 2005/03/04 12:22:21 eradicator Exp $
+
+  04 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/fake-ctarget.sh, files/gcc-config-1.4.0, gcc-config-1.4.0.ebuild:
+  Cleaned up 1.4.0 a bit. Got rid of the stupid fake-ctarget.sh stuff and
+  added smarter logic for that into the gcc-config script. Still in
+  package.mask as it hits a sandbox bug.
 
 *gcc-config-1.4.0 (19 Feb 2005)
 

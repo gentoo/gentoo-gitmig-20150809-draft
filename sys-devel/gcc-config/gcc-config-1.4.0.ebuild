@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.4.0.ebuild,v 1.1 2005/02/19 10:04:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.4.0.ebuild,v 1.2 2005/03/04 12:22:21 eradicator Exp $
 
 inherit toolchain-funcs
 
@@ -13,8 +13,8 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+#KEYWORDS="-*"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 #KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
@@ -24,7 +24,7 @@ DEPEND="virtual/libc
 S=${WORKDIR}
 
 src_compile() {
-	$(tc-getCC) -O2 -Wall -o wrapper \
+	$(tc-getCC) -O2 -Wall -o gcc-config-wrapper \
 		${FILESDIR}/wrapper-${W_VER}.c || die "compile wrapper"
 }
 
@@ -32,9 +32,8 @@ src_install() {
 	newbin ${FILESDIR}/${PN}-${PV} ${PN} || die "install gcc-config"
 	dosed "s:PORTAGE-VERSION:${PVR}:" /usr/bin/${PN}
 
-	exeinto /usr/lib/misc/gcc-config
-	doexe wrapper || die "install wrapper"
-	doexe ${FILESDIR}/fake-ctarget.sh || die "install wrapper"
+	exeinto /usr/lib/misc
+	doexe gcc-config-wrapper || die "install wrapper"
 }
 
 pkg_postinst() {
