@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.45 2004/06/25 03:07:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.46 2004/07/23 19:47:59 tgall Exp $
+
+  23 Jul 2004; Tom Gall <tgall@gentoo.org> netpbm-10.20.ebuild:
+  stable on ppc64, bug #57657
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> netpbm-10.11.14.ebuild,
   netpbm-10.11.15.ebuild, netpbm-10.11.5-r3.ebuild, netpbm-10.18.7.ebuild,
