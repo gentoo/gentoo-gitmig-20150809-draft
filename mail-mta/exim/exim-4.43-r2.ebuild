@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.43-r2.ebuild,v 1.3 2005/01/10 20:05:39 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.43-r2.ebuild,v 1.4 2005/01/12 20:25:35 peitolm Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc hppa ~alpha amd64 ~ia64"
+KEYWORDS="x86 sparc hppa alpha amd64 ppc"
 
 PROVIDE="virtual/mta"
 DEPEND=">=sys-apps/sed-4.0.5
