@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/cphplib-0.46.ebuild,v 1.1 2004/07/31 18:07:45 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/cphplib/cphplib-0.46.ebuild,v 1.2 2004/10/03 21:23:16 swegener Exp $
 
 inherit php-lib
 
