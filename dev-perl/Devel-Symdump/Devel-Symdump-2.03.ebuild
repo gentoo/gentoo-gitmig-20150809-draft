@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/Devel-Symdump-2.03.ebuild,v 1.6 2004/10/03 15:47:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/Devel-Symdump-2.03.ebuild,v 1.7 2004/10/10 16:32:15 kloeri Exp $
 
 inherit perl-module
 
@@ -13,5 +13,5 @@ SRC_URI="mirror://cpan/authors/id/A/AN/ANDK/${P}.tar.gz"
 SRC_TEST="do"
 LICENSE="Artistic | GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ~ppc sparc ~alpha"
 IUSE=""
