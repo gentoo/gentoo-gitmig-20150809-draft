@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/festival-gaim-0.77.ebuild,v 1.1 2004/04/27 18:23:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/festival-gaim-0.77.ebuild,v 1.2 2004/04/28 16:31:04 dholm Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=app-accessibility/festival-1.4.3
 	 >=net-im/gaim-0.77"
