@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/lsdvd-0.6.ebuild,v 1.2 2003/07/12 21:12:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/lsdvd-0.6.ebuild,v 1.3 2003/11/18 17:31:09 mholzer Exp $
 
 DESCRIPTION="Utility for getting info out of DVDs"
 HOMEPAGE="http://acidrip.thirtythreeandathird.net"
 SRC_URI="mirror://sourceforge/acidrip/${P}.tar.gz"
+RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc x86"
