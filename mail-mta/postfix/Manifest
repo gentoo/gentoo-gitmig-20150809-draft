@@ -1,12 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a11673c026772efc69311184a214670b postfix-2.1.3.ebuild 7347
 MD5 7eeba195836ed8cf5ba8496b7efb1355 postfix-2.0.18.ebuild 6664
 MD5 77eb50bf3e6553a05a20d268f18b3647 postfix-2.0.19-r2.ebuild 6183
 MD5 027297ac3ac33bb8d1264de5a8d63b18 postfix-1.1.11.20020917-r1.ebuild 4559
 MD5 17e728ea0c2bc977a8ee7c96a9650da4 postfix-2.0.16-r1.ebuild 6663
 MD5 5234b870293b81f57c41d8934ff58278 postfix-2.0.19-r4.ebuild 6670
+MD5 0300c360ff0a8e011eb79823797e9070 postfix-2.1.4.ebuild 7359
 MD5 a37e17b30106fd73993b70a6ec3db9af postfix-2.0.19.ebuild 6715
 MD5 30e7081167c25d6676a36269ef267f9b postfix-2.0.19-r1.ebuild 5974
-MD5 573452360acf22e6d1fb55b6ec579d49 ChangeLog 26159
+MD5 ffcd316dd8059a7a50e20f76a8a00df5 ChangeLog 26297
 MD5 2386a353b9c43ced5e3ff8b0fd494feb postfix-2.1.1.ebuild 6598
 MD5 86c229fe394877d2c6a26aa5367bc697 metadata.xml 253
 MD5 4577956f452db4899d32fe1a0798761e postfix-2.0.20.ebuild 7760
@@ -28,6 +32,7 @@ MD5 e91728e4c6af081ddfd1b656375612e8 files/master.cf 4423
 MD5 6775371821db3139dd2470c794a1e01f files/digest-postfix-1.1.11.20020917 166
 MD5 bbaf5265ce09b79fded4d429f420ea23 files/digest-postfix-2.1.1 422
 MD5 7923292c13473118323ceff84e770a1d files/digest-postfix-2.1.3 357
+MD5 67cca01f2695ef43df3c5f99db45f12f files/digest-postfix-2.1.4 363
 MD5 78c16ededccb206774194bfe05475a99 files/mailer.conf 1547
 MD5 502e444ec6b9d6fb9bbef3bb0f5e284a files/smtp.pam 254
 MD5 8b504ee0538fd73b921421395d56c293 files/digest-postfix-2.0.16-r1 447
@@ -36,3 +41,10 @@ MD5 ee0429eb6f0245518f984c5086191ed5 files/digest-postfix-2.0.19-r2 511
 MD5 ee0429eb6f0245518f984c5086191ed5 files/digest-postfix-2.0.19-r3 511
 MD5 ee0429eb6f0245518f984c5086191ed5 files/digest-postfix-2.0.19-r4 511
 MD5 803eb5ffc166aaaf2f3b78ddf71fe73d files/postfix-2.0.0/main.cf.diff 2382
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBKorP5FrxP71izLARAqcfAKCrb35pk+OwmG/EozQZwhKISJl40ACdEo+/
+KL/FjNVRFFGte9+d4J6mJ4A=
+=8nXn
+-----END PGP SIGNATURE-----
