@@ -1,3 +1,6 @@
 MD5 d26bcb7cd24c53d2f24ad461daa79df3 ChangeLog 315
-MD5 19dc21becba9cb720683794637bd4b04 cl-sdl-0.2.1.ebuild 2256
+MD5 f97a6a3d7b67d304b456c99471937535 cl-sdl-0.2.1.ebuild 2255
+MD5 c872a5fd324ba9c486fb475d8245a7c8 cl-sdl-0.2.1-r1.ebuild 2264
+MD5 f97a6a3d7b67d304b456c99471937535 cl-sdl-0.2.1-r1.ebuild~ 2255
 MD5 3fb703d7848492c86eb70264442ebed4 files/digest-cl-sdl-0.2.1 64
+MD5 3fb703d7848492c86eb70264442ebed4 files/digest-cl-sdl-0.2.1-r1 64
