@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.629 2004/09/19 05:15:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.630 2004/09/19 07:10:27 kumba Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -530,7 +530,7 @@ sys-devel/gcc:f77 - Build support for the f77 language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
 sys-devel/gcc:n32 - Enable n32 ABI support on mips
-sys-devel/gcc:n64 - Enable n64 support on mips
+sys-devel/gcc:n64 - Enable n64 ABI support on mips
 sys-devel/gcc:nomultilib - Disables multilib support in gcc
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gdb:objc - Build support for the Objective C code language
@@ -556,6 +556,8 @@ sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:makecheck - makes glibc perform a 'make check' before merging and prevents it from installing unless all the tests pass
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
+sys-libs/glibc:n32 - Enable n32 ABI support on mips
+sys-libs/glibc:n64 - Enable n64 ABI support on mips
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/nut:cgi - Add CGI script support
