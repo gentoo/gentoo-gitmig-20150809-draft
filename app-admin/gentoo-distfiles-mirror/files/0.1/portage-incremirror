@@ -206,7 +206,7 @@ else
             case $line in
               [Cc]ontent-[Ll]ength:*)
 		len=$(echo "$line" | sed -r -e 's/.*[Cc]ontent-[Ll]ength:[ ]*([0-9]+).*$/\1/');
-                dsf=$(df -B1 "${O_DISTFILES}" | head -n2 | tail -n1 | awk '{ print $4 }');
+		dsf=$(df -P -B1 "${O_DISTFILES}" | tail -n1 | awk '{ print $4 }');
                 if [ "$(($dsf - $len))" -lt "${O_MINFREE}" ]; then
                   log err "Not enough free disk space for file: ${P_FILE} requested by ${P_REMOTE}"
                   httpredirect "${O_MIRROR}/${P_FILE}"
