@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.17 2003/04/03 21:55:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.18 2003/06/10 12:18:52 taviso Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -105,8 +105,11 @@ src_unpack() {
 	#
 	# Azarah - 30 Jun 2002
 	#
-	epatch ${FILESDIR}/${P}-new-atexit.diff
-
+	if ! use alpha >/dev/null ;then 
+		epatch ${FILESDIR}/${P}-new-atexit.diff
+	else
+		epatch ${FILESDIR}/${P}-alpha.diff
+	fi
 	# Currently if any path is changed via the configure script, it breaks
 	# installing into ${D}.  We should not patch it in src_install() with
 	# absolute paths, as some modules then gets rebuild with the wrong
