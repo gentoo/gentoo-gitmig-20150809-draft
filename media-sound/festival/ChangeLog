@@ -3,6 +3,12 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
+*festivial-1.4.2-r1 (14 Nov 2002)
+
+	John P. Davis <zhen@gentoo.org>
+	I changed emake to make in the top of the src_compile function. (it is commented)
+	This change is made to force festival to use -jX where X <=2.
+
 *festival-1.4.2-r1 (23 Oct 2002)
 
   23 Oct 2002; Matt Keadle <mkeadle@gentoo.org> festival-1.4.2-r1.ebuild

@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r1.ebuild,v 1.2 2002/11/06 15:28:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r1.ebuild,v 1.3 2002/11/14 13:39:04 zhen Exp $
 
 S=${WORKDIR}/${PN}
 T=${WORKDIR}/speech_tools
 DESCRIPTION="Festival Text to Speech engine"
 GCCPV=`cc -dumpversion` 
+IUSE=""
 HOMEPAGE="http://www.cstr.ed.ac.uk/"
 SITE="http://www.speech.cs.cmu.edu/${PN}/cstr/${PN}/${PV}"
 
@@ -61,7 +62,10 @@ src_compile() {
 	pushd
 	
 	# emake worked for me on SMP
-	emake || die
+	#emake did not work for me because I had -j5. If there is anything greater than
+	#-j2, emake dies.
+	#zhen@gentoo.org
+	make || die
 
 	cd ${S}
 	econf
