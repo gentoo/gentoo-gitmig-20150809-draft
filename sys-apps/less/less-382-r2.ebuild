@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-382-r2.ebuild,v 1.1 2004/06/17 00:03:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-382-r2.ebuild,v 1.2 2004/06/25 03:08:02 agriffis Exp $
 
 DESCRIPTION="Excellent text file viewer"
 HOMEPAGE="http://www.greenwoodsoftware.com/"

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/rsbac-admin
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.4 2004/06/15 20:03:45 kang Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.5 2004/06/25 03:08:35 agriffis Exp $
 
 *rsbac-admin-1.2.3_pre5 (15 Jun 2004)
 
