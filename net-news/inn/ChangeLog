@@ -1,6 +1,9 @@
 # ChangeLog for net-news/inn
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.9 2004/03/15 09:37:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.10 2004/06/19 00:44:34 swegener Exp $
+
+  19 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml:
+  Added metadata.xml
 
   15 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> inn-2.3.5.ebuild:
   don't unset/assign P; (bug #44712); use CFLAGS/CXXFLAGS; use use_with; don't
