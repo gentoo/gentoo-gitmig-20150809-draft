@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.25 2003/03/24 23:34:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.26 2003/05/30 01:52:40 kain Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
 # with error handling contributions by gerk, and small fixes by zwelch
+# small naming fix by kain
 
 ECLASS=kernel
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
@@ -12,7 +13,7 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 EXTRAVERSION="`echo ${PN}-${PV}-${PR} | \
-	sed -e 's:^\(.*\)-sources-[0-9]\+\.[0-9]\+\.[0-9]\+.r*\([0-9]\+\)\(_[^-_]\+\)\?\(-r[0-9]\+\)\?$:-\1-r\2\3:'`"
+	sed -e 's:^\(.*\)-\(.*\)-[0-9]\+\.[0-9]\+\.[0-9]\+.r*\([0-9]\+\)\(_[^-_]\+\)\?\(-r[0-9]\+\)\?$:-\1-r\3\4:'`"
 KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
