@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.0.1.ebuild,v 1.8 2004/07/03 22:43:38 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.0.1.ebuild,v 1.9 2004/07/06 06:32:02 eradicator Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ DEPEND="x11-libs/qt
 	virtual/tetex"
 
 RDEPEND="${DEPEND}
+	 media-sound/alsamixergui
 	 virtual/mpg123"
 
 src_unpack() {
