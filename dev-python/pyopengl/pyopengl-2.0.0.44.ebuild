@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.2 2004/07/30 03:37:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.3 2004/08/14 03:22:20 liquidx Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -51,7 +51,7 @@ pkg_setup () {
 		VOID=$(cat /etc/env.d/09opengl | grep ${X11_IMPLEM})
 
 		USING_X11=$?
-		if [ ${USING_X11} -eq 1 ]
+		if [ "${USING_X11}" -eq "1" ]
 		then
 			GL_IMPLEM=$(cat /etc/env.d/09opengl | cut -f5 -d/)
 			opengl-update ${X11_IMPLEM}
@@ -62,7 +62,7 @@ pkg_setup () {
 }
 
 pkg_postinst () {
-	if [ ${USING_X11} -eq 1 ]
+	if [ "${USING_X11}" -eq "1" ]
 	then
 		opengl-update ${GL_IMPLEM}
 	fi
