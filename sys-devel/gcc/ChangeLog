@@ -1,8 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.16 2002/06/09 23:04:39 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.17 2002/06/10 17:51:47 azarah Exp $
 
 *gcc-3.1-r6 (10 June 2002)
+
+  11 June 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.1-r6.ebuild :
+
+  Update version checking.
 
   10 June 2002; Bart Verwilst <verwilst@gentoo.org> Changelog:
  

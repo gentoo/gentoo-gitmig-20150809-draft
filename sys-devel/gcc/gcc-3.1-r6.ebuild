@@ -26,26 +26,24 @@ RDEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.4"
 if [ -z "`use build`" ]
 then
-	DEPEND="$DEPEND 
-		nls? ( sys-devel/gettext ) 
+	DEPEND="${DEPEND}
+		nls? ( sys-devel/gettext )
 		>=sys-libs/ncurses-5.2-r2"
-	RDEPEND="$RDEPEND 
+	RDEPEND="${RDEPEND}
 		>=sys-libs/ncurses-5.2-r2"
 fi
-
-# necessary because gcc-3.1 does gcc --version different. really
-# different
-gcc_version() {
-	gcc -v 2>&1 |tail -1 |cut -d\  -f3-3
-}
 
 build_multiple() {
 	#try to make sure that we should build multiple
 	#versions of gcc (dual install of gcc2 and gcc3)
 	profile="`readlink /etc/make.profile`"
+	# [ "`gcc -dumpversion | cut -d. -f1,2`" != "`echo ${PV} | cut -d. -f1,2`" ]
+	#
+	# Check the major and minor versions only, and drop the micro version.
+	# This is done, as compadibility only differ when major and minor differ.
 	if [ -z "`use build`" ] && \
 	   [ -z "`use bootstrap`" ] && \
-	   [ "`gcc_version | cut -f1 -d.`" -ne 3 ] && \
+	   [ "`gcc -dumpversion | cut -d. -f1,2`" != "`echo ${PV} | cut -d. -f1,2`" ] && \
 	   [ "${profile/gcc3}" = "${profile}" ] && \
 	   [ "${GCCBUILD}" != "default" ]
 	then
@@ -300,7 +298,7 @@ src_install() {
 	ln -sf libgcc_s-${PV}.so.1 libgcc_s.so.1
 	ln -sf libgcc_s.so.1 libgcc_s.so
 	rm -f ${D}${LOC}/lib/libgcc_s.so*
-	rm -f ${D}
+	
 	cd ${S}
     if [ -z "`use build`" ]
     then
@@ -343,9 +341,7 @@ src_install() {
 	fi
 
     # Fix ncurses b0rking
-    cd ${D}
-    rm -f `find ${D} -name "curses.h"`
-
+    find ${D}/ -name '*curses.h' -exec rm -f {} \;
 }
 
 pkg_postrm() {
