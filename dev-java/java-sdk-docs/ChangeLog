@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.24 2004/06/02 21:05:05 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.25 2004/06/06 15:30:39 karltk Exp $
+
+  06 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  files/digest-java-sdk-docs-1.4.1:
+  Neither can I, obviously... Fixes #53131 and #53044.
 
   02 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
   files/digest-java-sdk-docs-1.4.1:
