@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.1 2004/07/20 20:56:20 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.2 2004/07/23 16:01:23 squinky86 Exp $
 
 DESCRIPTION="Maximum likelihood analysis for nucleotide, amino acid, and two-state data."
 HOMEPAGE="http://www.tree-puzzle.de"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="mpi"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	mpi? ( sys-cluster/lam-mpi )"
 
 pkg_setup () {

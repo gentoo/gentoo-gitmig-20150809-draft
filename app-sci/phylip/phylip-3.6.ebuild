@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.6.ebuild,v 1.2 2004/07/21 07:43:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.6.ebuild,v 1.3 2004/07/23 16:03:01 squinky86 Exp $
 
 DESCRIPTION="PHYLIP - The PHYLogeny Inference Package"
 HOMEPAGE="http://evolution.genetics.washington.edu/${PN}.html"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11"
 
 S=${WORKDIR}/${P}/src

@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/tree-puzzle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tree-puzzle/ChangeLog,v 1.4 2004/07/20 20:56:20 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tree-puzzle/ChangeLog,v 1.5 2004/07/23 16:01:23 squinky86 Exp $
+
+  23 Jul 2004; Jon Hood <squinky86@gentoo.org> tree-puzzle-5.2.ebuild:
+  Change virtual/glibc -> virtual/libc.
 
 *tree-puzzle-5.2 (20 Jul 2004)
 
