@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/ipython
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.1 2003/06/13 22:56:28 liquidx Exp $
+
+*ipython-0.4.0 (13 Jun 2003)
+
+  13 Jun 2003; Alastair Tse <liquidx@gentoo.org> ipython-0.4.0.ebuild:
+  New Package. Ebuild Submitted by John Landahl <john@landahl.org>.
+
