@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mirrorselect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mirrorselect/ChangeLog,v 1.15 2003/05/15 18:29:24 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mirrorselect/ChangeLog,v 1.16 2003/05/18 22:37:50 johnm Exp $
+
+  18 May 2003; John Mylchreest <johnm@gentoo.org>; mirrorselect-0.5.ebuild:
+  moved 0.5 to stable to prevent problems im 0.3 surfacing
 
   15 May 2003; John Mylchreest <johnm@gentoo.org>; :
   removed debug echo
