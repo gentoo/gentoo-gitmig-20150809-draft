@@ -1,24 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6.ebuild,v 1.4 2003/02/13 13:52:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6.ebuild,v 1.5 2003/02/19 05:24:42 raker Exp $
 
 IUSE="ssl ipv6 tcpd"
-
 S=${WORKDIR}/${P}
 DESCRIPTION="Software for generating and retrieving SNMP data"
 SRC_URI="mirror://sourceforge/net-snmp/${P}.tar.gz"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
-
 DEPEND="<sys-libs/db-2
 	>=sys-libs/zlib-1.1.4
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
-
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc ~ppc"
 
 src_compile() {
+	export SNMPCONFPATH="/etc/ucd-snmp"
 	local myconf
 	use ssl || myconf="${myconf} --enable-internal-md5 --with-openssl=no"
 	use tcpd && myconf="${myconf} --with-libwrap"
@@ -50,4 +48,8 @@ src_install () {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/snmpd.rc6 snmpd
+
+	dodir /etc/ucd-snmp
+	insinto /etc/ucd-snmp
+	newins EXAMPLE.conf snmpd.conf.dist
 }

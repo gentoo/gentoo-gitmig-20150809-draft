@@ -1,16 +1,16 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/files/snmpd.rc6,v 1.5 2003/02/18 19:47:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/files/snmpd.rc6,v 1.6 2003/02/19 05:24:42 raker Exp $
 
 depend() {
 	need net
 }
 
 checkconfig() {
-	if [ ! -e /usr/share/snmp/snmpd.conf ] ; then
-		eerror "You need an /usr/share/snmp/snmpd.conf to run ucd-snmpd"
-		eerror "There is an example config in /usr/share/docs/ucd-snmp-4.2.6/EXAMPLE.conf"
+	if [ ! -e /etc/ucd-snmp/snmpd.conf ] ; then
+		eerror "You need an /etc/ucd-snmp/snmpd.conf to run ucd-snmpd"
+		eerror "There is an example config in /etc/ucd-snmp/snmpd.conf.dist"
 		return 1
 	fi
 }
