@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2-r1.ebuild,v 1.1 2004/07/23 13:44:58 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2-r1.ebuild,v 1.2 2004/07/31 03:55:37 spider Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -13,7 +13,7 @@ SLOT="2.0"
 IUSE="accessibility cdr dvdr"
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~amd64 ~mips ~alpha"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop,
