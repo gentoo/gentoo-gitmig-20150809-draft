@@ -1,13 +1,16 @@
 # ChangeLog for net-www/phoenix-cvs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/ChangeLog,v 1.2 2003/03/30 13:41:09 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/ChangeLog,v 1.3 2003/04/18 01:42:07 foser Exp $
 
 *phoenix-cvs-0.5-r1 (30 Mar 2003)
+
+  18 Apr 2003; foser <foser@gentoo.org phoenix-cvs-0.5-r{1,2}.ebuild :
+  Fixed xft dep to be virtual
 
   30 Mar 2003; phoen][x <phoenix@gentoo.org>; phoenix-cvs-0.5-r2.ebuild,
   files/digest-phoenix-cvs-0.5-r2, files/phoenix:
   Seth asked me to take a look into -r1. I cleaned up a few things:
-  - Added the missing $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/ChangeLog,v 1.2 2003/03/30 13:41:09 phoenix Exp $
+  - Added the missing $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/ChangeLog,v 1.3 2003/04/18 01:42:07 foser Exp $
   - made ebuild use flag-o-matic over ${CFLAGS//}
   - made ebuild use nsplugins.eclass for easy plugin integration
   TODO:

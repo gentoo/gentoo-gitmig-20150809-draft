@@ -22,7 +22,7 @@ IUSE="java gtk2 ipv6"
 RDEPEND="virtual/x11
    >=dev-libs/libIDL-0.8.0
    >=gnome-base/ORBit-0.5.10-r1
-   >=x11-libs/xft-2.0
+   virtual/xft
    >=sys-libs/zlib-1.1.4
    >=media-libs/jpeg-6b
    >=media-libs/libmng-1.0.0

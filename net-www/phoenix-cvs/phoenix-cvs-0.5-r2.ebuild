@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/phoenix-cvs-0.5-r2.ebuild,v 1.4 2003/04/02 08:27:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/phoenix-cvs-0.5-r2.ebuild,v 1.5 2003/04/18 01:42:07 foser Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -22,7 +22,7 @@ IUSE="java gtk2 ipv6"
 RDEPEND="virtual/x11
    >=dev-libs/libIDL-0.8.0
    >=gnome-base/ORBit-0.5.10-r1
-   >=x11-libs/xft-2.0
+   virtual/xft
    >=sys-libs/zlib-1.1.4
    >=media-libs/jpeg-6b
    >=media-libs/libmng-1.0.0

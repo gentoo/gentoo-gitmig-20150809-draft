@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r1.ebuild,v 1.4 2003/04/10 20:36:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r1.ebuild,v 1.5 2003/04/18 01:43:58 foser Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -68,7 +68,7 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	>=dev-libs/libIDL-0.8.0
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/fontconfig-2.1
-	>=x11-libs/xft-2.0.1
+	virtual/xft
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	>=sys-apps/portage-2.0.14
