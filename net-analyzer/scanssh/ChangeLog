@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/scanssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/ChangeLog,v 1.3 2003/02/15 07:47:49 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/ChangeLog,v 1.4 2003/03/18 03:20:53 weeve Exp $
 
 *scanssh-1.6b (1 Dec 2002)
+
+  17 Mar 2003; Jason Wever <weeve@gentoo.org> scanssh-1.6b.ebuild:
+  Added ~sparc to keywords.
 
   15 Feb 2003; Mark Guertin <gerk@gentoo.org> scanssh-1.6b.ebuild :
   set ~ppc in keywords
