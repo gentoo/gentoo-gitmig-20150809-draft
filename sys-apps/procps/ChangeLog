@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.62 2004/03/09 23:38:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.63 2004/03/22 04:18:12 vapier Exp $
+
+  21 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add custom LDFLAGS to the makefile as well as remove the --strip from
+  the install command (let portage handle that).  Also, dont install COPYING
+  files since they're just $LICENSE.
 
   09 Mar 2004; <agriffis@gentoo.org> procps-3.1.15.ebuild:
   stable on alpha and ia64

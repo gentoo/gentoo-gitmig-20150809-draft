@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.0.ebuild,v 1.2 2004/02/24 15:37:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.0.ebuild,v 1.3 2004/03/22 04:18:12 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
-DESCRIPTION="Standard informational utilities and process-handling tools -ps top tload snice vmstat free w watch uptime pmap skill pkill kill pgrep sysctl"
+DESCRIPTION="Standard informational utilities and process-handling tools"
 HOMEPAGE="http://procps.sourceforge.net/"
 SRC_URI="http://${PN}.sf.net/${P}.tar.gz"
 
@@ -22,10 +22,12 @@ src_unpack() {
 	epatch ${FILESDIR}/procps-3.2.0-selinux-Z.diff
 
 	# Use the CFLAGS from /etc/make.conf.
-	replace-flags "-O3" "-O2"
-	for file in `find . -iname "Makefile"`;do
-		sed -i "s:-O2:${CFLAGS}:" ${file}
-	done
+	replace-flags -O3 -O2
+	sed -i \
+		-e "s:-O2:${CFLAGS}:" \
+		-e "/^LDFLAGS/s:$: ${LDFLAGS}:" \
+		-e "/install/s: --strip : :" \
+		Makefile
 }
 
 src_compile() {
@@ -34,12 +36,7 @@ src_compile() {
 
 src_install() {
 	einstall DESTDIR="${D}"|| die
-
-	dodoc BUGS COPYING COPYING.LIB NEWS TODO
-	docinto proc
-	dodoc proc/COPYING
-	docinto ps
-	dodoc ps/COPYING ps/HACKING
+	dodoc BUGS NEWS TODO pc/HACKING
 }
 
 pkg_postinst() {
