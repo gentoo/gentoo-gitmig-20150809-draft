@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/mod_watch-4.03.ebuild,v 1.3 2004/09/03 23:24:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/mod_watch-4.03.ebuild,v 1.4 2004/09/14 12:53:59 stuart Exp $
 
 DESCRIPTION="Bandwidth graphing for Apache with MRTG"
 HOMEPAGE="http://www.snert.com/Software/mod_watch/"
-KEYWORDS="~x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
 MY_V="`echo ${PV} | sed -e 's:\.::g'`"
 S=${WORKDIR}/${P}
@@ -37,20 +37,4 @@ src_install() {
 
 	insinto /etc/apache2/conf/addon-modules
 	doins ${FILESDIR}/mod_watch.conf
-}
-
-pkg_postinst() {
-	einfo
-	einfo "Execute \"ebuild /usr/portage/net-www/${PF}/${PF}.ebuild config\""
-	einfo "to have your apache.conf auto-updated for use with this module."
-	einfo "You should then edit your /etc/conf.d/apache file to suit."
-	einfo
-}
-
-pkg_config() {
-	${ROOT}/usr/sbin/apacheaddmod \
-		${ROOT}/etc/apache/conf/apache.conf \
-		extramodules/mod_watch.so mod_watch.c watch_module \
-		define=WATCH addconf=conf/addon-modules/mod_watch.conf
-	:;
 }
