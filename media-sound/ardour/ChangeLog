@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/ardour
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.1 2003/06/27 09:45:21 robh Exp $
+
+*ardour-0.9_beta1 (27 Jun 2003)
+
+  27 Jun 2003; robh <robh@gentoo.org> ardour-0.9_beta1.ebuild:
+  Initial version.
+
