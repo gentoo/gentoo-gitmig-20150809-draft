@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/visual-regexp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/ChangeLog,v 1.4 2004/08/07 22:38:13 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/ChangeLog,v 1.5 2004/10/10 13:27:06 slarti Exp $
+
+  10 Oct 2004; Tom Martin <slarti@gentoo.org> visual-regexp-3.0.ebuild:
+  Marked ~amd64.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> visual-regexp-3.0.ebuild:
   Typo in DESCRIPTION: yoy ty -> you to. Bug 59717.
