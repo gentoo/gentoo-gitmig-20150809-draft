@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901.ebuild,v 1.13 2005/01/06 05:52:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901.ebuild,v 1.14 2005/01/07 22:27:12 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -557,6 +557,12 @@ check_use_combos() {
 	if use xv && ! use opengl; then
 		eerror "See http://bugs.gentoo.org/show_bug.cgi?id=67996"
 		eerror "The xv USE flag currently requires the opengl flag."
+		die "This is a known bug. Do not report it."
+	fi
+
+	if use opengl && ! use xv; then
+		eerror "See http://bugs.gentoo.org/show_bug.cgi?id=76936"
+		eerror "The opengl USE flag currently requires the xv flag."
 		die "This is a known bug. Do not report it."
 	fi
 }
