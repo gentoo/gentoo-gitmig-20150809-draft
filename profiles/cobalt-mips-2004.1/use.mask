@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/cobalt-mips-2004.1/use.mask,v 1.2 2004/06/01 23:50:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/cobalt-mips-2004.1/use.mask,v 1.3 2004/06/11 08:57:18 kumba Exp $
 
 
 # Chris PeBenito <pebenito@gentoo.org>
@@ -15,6 +15,8 @@ java
 # complaining
 acl
 
+# no nptl on mips yet
+nptl
 
 # Flags which aren't applicable to mips (Mostly copied from sparc)
 3dfx
