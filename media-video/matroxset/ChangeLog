@@ -1,6 +1,11 @@
 # ChangeLog for media-video/matroxset
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/ChangeLog,v 1.7 2004/09/11 15:11:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/ChangeLog,v 1.8 2004/09/29 21:08:05 kanaka Exp $
+
+*matroxset-0.4 (29 Sep 2004)
+
+  29 Sep 2004; Joel Martin <kanaka@gentoo.org> +matroxset-0.4.ebuild:
+  Bumped version, added ncurses dependency
 
   11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> matroxset-0.3.ebuild:
   Added amd64 keyword.
