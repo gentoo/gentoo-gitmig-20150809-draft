@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.72 2003/08/11 07:50:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.73 2003/08/11 17:00:31 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -161,9 +161,6 @@ if [ -z "${PHPSAPI}" ]; then
 fi
 PHPINIDIRECTORY="/etc/php/${PHPSAPI}-php${PHPMAJORVER}"
 PHPINIFILENAME="php.ini"
-
-#fixes bug #14067
-replace-flags "-march=k6*" "-march=i586"
 
 php_check_java_config() {
 	JDKHOME="`java-config --jdk-home`"
@@ -383,6 +380,16 @@ php_src_compile() {
 		--enable-trans-sid \
 		--enable-versioning \
 		--with-config-file-path=${PHPINIDIRECTORY}" 
+
+	#fixes bug #24373 
+	filter-flags "-D_FILE_OFFSET_BITS=64"
+	filter-flags "-D_FILE_OFFSET_BITS=32"
+	filter-flags "-D_LARGEFILE_SOURCE=1"
+	filter-flags "-D_LARGEFILE_SOURCE"
+	#fixes bug #14067
+	replace-flags "-march=k6" "-march=i586"
+	replace-flags "-march=k6-2" "-march=i586"
+	replace-flags "-march=k6-3" "-march=i586"
 
 	LIBS="${LIBS}" econf \
 		${myconf} || die "bad ./configure"
