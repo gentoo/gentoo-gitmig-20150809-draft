@@ -1,3 +1,13 @@
-MD5 50e070fe7e0b84f5748cc53cc16f9867 birthday-1.5.ebuild 575
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 725636e92d9d24b338e2a09d131725f3 ChangeLog 696
+MD5 34de02e71451451f80d277956f2182f1 birthday-1.5.ebuild 572
 MD5 78f5c1b68b06ee8cbe85495137be4170 files/digest-birthday-1.5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA35GMHTu7gpaalycRAhOxAKCcRoHRQn131CGgt3V3cS6RarHtqQCeLFIV
+R23Lak0g01bIPg0cM4ba0tE=
+=2zgc
+-----END PGP SIGNATURE-----
