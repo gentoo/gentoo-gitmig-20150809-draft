@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.9 2004/06/19 12:47:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.10 2004/06/24 16:27:56 agriffis Exp $
+
+  24 Jun 2004; Aron Griffis <agriffis@gentoo.org> digikam-0.6.2.ebuild:
+  add newline at eof
 
 *digikam-0.6.2 (19 Jun 2004)
 
