@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.44 2003/05/27 23:07:38 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.45 2003/05/30 09:23:56 zwelch Exp $
+
+*distcc-2.5-r1 (30 May 2003)
+
+  30 May 2003; Zach Welch <zwelch@gentoo.org> distcc-2.5-r1.ebuild,
+  files/2.3/distcc-config:
+  update to fix problems with DISTCC_HOSTS when upgrading from earlier versions
 
 *distcc-2.5 (27 May 2003)
 
