@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.28 2005/01/23 10:17:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.29 2005/01/27 18:55:06 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2
 LICENSE="GPL-2 idea? ( IDEA )"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
-IUSE="X ldap nls static caps idea"
+IUSE="X ldap nls static caps idea selinux"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
 		caps? ( sys-libs/libcap )
@@ -21,10 +21,9 @@ RDEPEND="!static? ( ldap? ( net-nds/openldap )
 	X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
 	nls? ( sys-devel/gettext )
 	virtual/libc
-	dev-lang/perl"
-# XXX: libpcap earlier than 1.10-r3 did not provide libcap.a
-#	DEPEND="caps? ( static? ( >=sys-libs/libcap-1.10-r3 )
-#				!static? ( sys-libs/libcap ) )
+	dev-lang/perl
+	selinux? ( sec-policy/selinux-gnupg )"
+
 DEPEND="caps? ( sys-libs/libcap )
 	ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )

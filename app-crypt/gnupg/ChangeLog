@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.99 2005/01/23 10:17:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.100 2005/01/27 18:55:06 dragonheart Exp $
+
+  28 Jan 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.2.4.ebuild,
+  gnupg-1.2.6.ebuild, -gnupg-1.9.10.ebuild, gnupg-1.9.14.ebuild,
+  gnupg-1.9.15.ebuild:
+  Added selinux RDEPENDS as per bug #79746. Removed version 1.9.10.
 
 *gnupg-1.4.0-r2 (23 Jan 2005)
 *gnupg-1.9.15 (23 Jan 2005)

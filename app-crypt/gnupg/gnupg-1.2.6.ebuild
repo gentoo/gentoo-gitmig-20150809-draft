@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.22 2005/01/15 01:08:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.23 2005/01/27 18:55:06 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,23 +12,24 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2
 LICENSE="GPL-2 idea? ( IDEA )"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ppc ppc-macos s390 sparc x86 ~ia64 ~mips ppc64"
-IUSE="X ldap nls static idea"
+IUSE="X ldap nls static idea selinux"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
 			app-arch/bzip2
 			sys-libs/zlib )
-		X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
-		nls? ( sys-devel/gettext )
-		dev-lang/perl
-		virtual/libc
-		virtual/mta"
+	X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
+	nls? ( sys-devel/gettext )
+	dev-lang/perl
+	virtual/libc
+	virtual/mta
+	selinux? ( sec-policy/selinux-gnupg )"
 
 DEPEND="ldap? ( net-nds/openldap )
-		nls? ( sys-devel/gettext )
-		!static? ( sys-libs/zlib )
-		app-arch/bzip2
-		dev-lang/perl
-		virtual/libc"
+	nls? ( sys-devel/gettext )
+	!static? ( sys-libs/zlib )
+	app-arch/bzip2
+	dev-lang/perl
+	virtual/libc"
 
 src_unpack() {
 	unpack ${A}
