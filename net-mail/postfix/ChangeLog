@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.98 2003/12/14 22:59:41 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.99 2003/12/20 15:03:50 azarah Exp $
+
+  20 Dec 2003; Martin Schlemmer <azarah@gentoo.org> files/smtp.pam:
+  Update pam.d file to use system-auth.
 
   14 Dec 2003; <spider@gentoo.org> postfix-1.1.11.20020917-r1.ebuild,
   postfix-1.1.11.20020917.ebuild:
