@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.6 2004/10/05 18:52:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.7 2004/10/07 03:12:55 eradicator Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -321,7 +321,7 @@ src_compile() {
 		einfo "Setting REALLIBDIR to /opt/RealPlayer8/Codecs..."
 		REALLIBDIR="/opt/RealPlayer8/Codecs"
 	else
-		REALLIBDIR="/usr/lib/real"
+		REALLIBDIR="/usr/$(get_libdir)/real"
 	fi
 
 	if [ -e /dev/.devfsd ]
@@ -384,7 +384,7 @@ src_install() {
 	einfo "Make install"
 	make prefix=${D}/usr \
 	     BINDIR=${D}/usr/bin \
-		 LIBDIR=${D}/usr/lib \
+		 LIBDIR=${D}/usr/$(get_libdir) \
 	     CONFDIR=${D}/usr/share/mplayer \
 	     DATADIR=${D}/usr/share/mplayer \
 	     MANDIR=${D}/usr/share/man \
@@ -393,7 +393,7 @@ src_install() {
 
 	if use matrox; then
 		cd ${S}/drivers
-		insinto /lib/modules/${KV}/kernel/drivers/char
+		insinto /$(get_libdir)/modules/${KV}/kernel/drivers/char
 		doins mga_vid.${KV_OBJ}
 	fi
 

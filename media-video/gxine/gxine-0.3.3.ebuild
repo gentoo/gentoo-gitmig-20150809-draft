@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.3.3.ebuild,v 1.14 2004/08/28 16:32:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.3.3.ebuild,v 1.15 2004/10/07 03:10:21 eradicator Exp $
 
 inherit nsplugins
 
@@ -42,5 +42,5 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 
-	inst_plugin /usr/lib/gxine/gxineplugin.so
+	inst_plugin /usr/$(get_libdir)/gxine/gxineplugin.so
 }
