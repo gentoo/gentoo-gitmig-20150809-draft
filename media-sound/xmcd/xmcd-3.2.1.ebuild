@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.2.1.ebuild,v 1.2 2004/03/07 20:00:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.2.1.ebuild,v 1.3 2004/04/08 07:55:47 eradicator Exp $
 
 IUSE="alsa encode oggvorbis"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ibiblio.org/tkan/download/${PN}/${PV}/src/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/x11
 	x11-libs/openmotif
