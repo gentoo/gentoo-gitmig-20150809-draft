@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.12 2003/12/09 15:06:15 caleb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.13 2004/02/15 00:03:20 weeve Exp $
+
+  14 Feb 2004; Jason Wever <weeve@gentoo.org> wv2-0.2.ebuild:
+  Added ~sparc keyword.
 
   09 Dec 2003; Caleb Tennis <caleb@gentoo.org> wv2-0.2.ebuild:
   Mark x86 stable, move ~ppc to latest version
