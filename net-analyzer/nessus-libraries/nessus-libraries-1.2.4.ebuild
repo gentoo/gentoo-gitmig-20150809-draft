@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-1.2.4.ebuild,v 1.2 2002/09/30 13:11:29 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-1.2.4.ebuild,v 1.3 2002/10/02 19:07:46 seemant Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nessus.org/"
 SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )"
-RDEPEND=${DEPEND}"
+RDEPEND=${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
