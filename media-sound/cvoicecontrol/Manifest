@@ -1,5 +1,15 @@
-MD5 f3c633a01989ed8c66fa729c2aee11f0 ChangeLog 995
-MD5 0e492614c305c5d9e61e511ded94b45b cvoicecontrol-0.9_alpha.ebuild 1337
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e82aa05f8ea0bedce53c519d9fd73bb9 ChangeLog 1110
+MD5 8f3d11cefcc8125c3ce3c38b41ce3684 cvoicecontrol-0.9_alpha.ebuild 1109
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 07de3af430261f9f254dfa78a2b4702a files/cvoicecontrol-0.9_alpha-gentoo.diff 442
 MD5 3618ff772e58c07e7505ccb582258dfe files/digest-cvoicecontrol-0.9_alpha 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlHNsArHZZzCEUG0RAjs6AJ42tWmeSxKfVlFHhYpjeANWIiff1ACfbf2S
+Ecywyt92SyD/0VX7/0brov0=
+=Tzzu
+-----END PGP SIGNATURE-----
