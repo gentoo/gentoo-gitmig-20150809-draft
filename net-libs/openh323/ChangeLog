@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.31 2004/03/12 01:44:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.32 2004/03/19 23:03:19 gustavoz Exp $
+
+  19 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  openh323-1.13.2-r1.ebuild:
+  ~sparc lovin
 
 *openh323-1.13.2-r1 (12 Mar 2004)
 

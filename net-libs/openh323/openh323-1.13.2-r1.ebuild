@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.1 2004/03/12 01:44:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.2 2004/03/19 23:03:19 gustavoz Exp $
 
 IUSE="ssl"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.gnomemeeting.org/admin/downloads/latest/sources/sources/${P}
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-libs/pwlib-1.6.3-r1
