@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.11.ebuild,v 1.2 2003/10/26 22:05:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.11.ebuild,v 1.3 2003/10/27 13:08:29 mholzer Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -47,8 +47,7 @@ src_unpack() {
 
 	# Fix CFLAGS for sysvinit stuff
 	cd ${S2}
-	cp Makefile Makefile.orig
-	sed -e "s:-O2:${CFLAGS}:" Makefile.orig >Makefile || die
+	sed -i "s:-O2:${CFLAGS}:" Makefile || die
 	if [ -n "`use build`" ]
 	then
 		# Do not build sulogin, as it needs libcrypt which is not in the
@@ -63,9 +62,7 @@ src_unpack() {
 	# Fix Sparc specific stuff
 	if [ "${ARCH}" = "sparc" ]
 	then
-		cp rc.conf rc.conf.orig
-		sed -e 's:KEYMAP="us":KEYMAP="sunkeymap":' rc.conf.orig >rc.conf || die
-		rm -f rc.conf.orig
+		sed -i 's:KEYMAP="us":KEYMAP="sunkeymap":' rc.conf || die
 	fi
 
 	# Add serial console ...
@@ -288,7 +285,7 @@ src_install() {
 	done
 	chmod go-rwx ${D}/etc/shadow
 	# We do not want to overwrite the user's settings
-	[ -f "${ROOT}/etc/hosts" ] && rm -f ${ROOT}/etc/hosts
+	[ -f "${ROOT}/etc/hosts" ] && rm -f ${D}/etc/hosts
 
 	keepdir_mount /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom

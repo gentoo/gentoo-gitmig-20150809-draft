@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.98 2003/10/14 21:24:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.99 2003/10/27 13:08:29 mholzer Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  27 Oct 2003; Martin Holzer <mholzer@gentoo.org> baselayout-1.8.6.11.ebuild:
+  removing new hosts. Closes #32094
 
 *baselayout-1.8.6.11 (14 Oct 2003)
 
