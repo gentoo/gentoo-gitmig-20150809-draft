@@ -40,6 +40,7 @@ LYNX="lynx -dump"
 # have one, then status and fullstatus will not work.
 STATUSURL="http://localhost/server-status"
 #
+HTTPD_OPTS="-DSSL"
 # --------------------                              --------------------
 # ||||||||||||||||||||   END CONFIGURATION SECTION  ||||||||||||||||||||
 
@@ -49,6 +50,9 @@ ARGV="$@"
 if [ "x$ARGV" = "x" ] ; then 
     ARGS="help"
 fi
+
+RUNNING=0
+check_pid() {
 
     # check for pidfile
     if [ -f $PIDFILE ] ; then
@@ -64,22 +68,24 @@ fi
 	STATUS="httpd (no pid file) not running"
 	RUNNING=0
     fi
+}
 
 SERVICE="Apache Webserver"
 opts="start stop restart status"
 
 start() {
+        check_pid
 	if [ $RUNNING -eq 1 ]; then
 	    echo "$0 $ARG: httpd (pid $PID) already running"
-	    continue
+	    break
 	fi
 	ebegin "Starting service $SERVICE..."
-	start-stop-daemon --quiet --start --exec $HTTPD 1>&2
+	start-stop-daemon --quiet --start --exec $HTTPD -- $HTTPD_OPTS 1>&2
 	eend $? "Error starting $SERVICE"
 }
 
 stop() {
-
+	check_pid
 	if [ $RUNNING -eq 0 ]; then
 	    echo "$0 $ARG: $STATUS"
 	fi
