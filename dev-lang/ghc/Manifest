@@ -1,20 +1,30 @@
-MD5 e1e47b7a9b20dd5bcf4dee09e3a6d3dd ChangeLog 8324
-MD5 e35decca36037ebe455af7d4b85eed2b ghc-6.0.1.ebuild 4716
-MD5 35d7e72e84a41d32f9db3f7e55a5e68e ghc-6.0.ebuild 4247
-MD5 b034d30de8feb383c637e892c62e32fb ghc-6.2-r1.ebuild 5190
-MD5 825f57822146f5c77b02dc305e7eedf0 ghc-6.2.1-r1.ebuild 5308
-MD5 d2defbb76070d9e233f89b352c4b5c56 ghc-6.2.1.ebuild 5219
-MD5 06908a4352ff33a324ce2615a00fcff7 ghc-6.2.ebuild 5002
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e100dc85d0c09c5cac28ad98f0389cc5 ChangeLog 8529
+MD5 700ce4a5a2ed7953404345f57ac8bbc7 ghc-6.2-r1.ebuild 5182
+MD5 cdc2c51fea57a0f87af76599f73c64f8 ghc-6.2.ebuild 5000
+MD5 1bab1224823b1bdf22fe21cbf40d8a56 ghc-6.0.1.ebuild 4709
+MD5 754b7638294504a7861ae485666b0283 ghc-6.0.ebuild 4239
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
-MD5 1b6997afc8940a5df3f780897d78ee0a files/digest-ghc-6.0 65
-MD5 d417c9e24a826959ad6d921247e43328 files/digest-ghc-6.0.1 67
+MD5 0776b8a3df0a597722c9c96a176f2cd4 ghc-6.2.1.ebuild 5211
+MD5 6949293bddaafba8901ff761db3aba6e ghc-6.2.1-r1.ebuild 5300
 MD5 2e1bd1157c6d47093864b670d6b51a64 files/digest-ghc-6.2 65
 MD5 2e1bd1157c6d47093864b670d6b51a64 files/digest-ghc-6.2-r1 65
-MD5 0cc23d312b60d64e20735768503db1c6 files/digest-ghc-6.2.1 67
-MD5 0cc23d312b60d64e20735768503db1c6 files/digest-ghc-6.2.1-r1 67
-MD5 d4a4184d5dcf525047332f9c68e522f7 files/ghc-5.04.3-r1.patch 2717
 MD5 9c15b50bf0b73b7d70a06fd47510a3ef files/ghc-6.0.1.haddock.patch 380
-MD5 627087e51858d514520531cedbd372f8 files/ghc-6.2.1-linker.patch.bz2 658
+MD5 1b6997afc8940a5df3f780897d78ee0a files/digest-ghc-6.0 65
+MD5 d417c9e24a826959ad6d921247e43328 files/digest-ghc-6.0.1 67
 MD5 9c184505ec441675c94d47a3110fa754 files/ghc-6.2.documentation.patch 721
 MD5 c2e63b1796b9c089a23a07b0eb6e76a7 files/ghc-6.2.hardened.patch.bz2 362
+MD5 d4a4184d5dcf525047332f9c68e522f7 files/ghc-5.04.3-r1.patch 2717
 MD5 9da9270be8ac4d92d6a5c23fd519cc3c files/lndir.c 8050
+MD5 0cc23d312b60d64e20735768503db1c6 files/digest-ghc-6.2.1 67
+MD5 0cc23d312b60d64e20735768503db1c6 files/digest-ghc-6.2.1-r1 67
+MD5 627087e51858d514520531cedbd372f8 files/ghc-6.2.1-linker.patch.bz2 658
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBc/JWVWNWqTUmv+0RAtnCAJ0TzG+tUZcJU8SFC0wmLG2HofXC/QCfRqa1
+bIUI8EQ3PwXSpq6ye048LrY=
+=DPte
+-----END PGP SIGNATURE-----

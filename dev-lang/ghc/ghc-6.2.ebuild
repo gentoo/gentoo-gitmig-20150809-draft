@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.ebuild,v 1.11 2004/09/24 20:47:49 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.ebuild,v 1.12 2004/10/18 16:47:48 usata Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -49,7 +49,7 @@ DEPEND="virtual/ghc
 	>=dev-libs/gmp-4.1
 	doc? ( >=app-text/openjade-1.3.1
 		>=app-text/sgml-common-0.6.3
-		=app-text/docbook-sgml-dtd-3.1-r1
+		~app-text/docbook-sgml-dtd-3.1
 		>=app-text/docbook-dsssl-stylesheets-1.64
 		>=dev-haskell/haddock-0.6-r2
 		tetex? ( virtual/tetex
