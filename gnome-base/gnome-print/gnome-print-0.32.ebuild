@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.31.ebuild,v 1.1 2001/10/16 23:41:30 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.32.ebuild,v 1.1 2001/11/10 13:06:22 hallski Exp $
 
 
 S=${WORKDIR}/${P}
@@ -22,9 +22,14 @@ src_unpack() {
 	
 	cd ${S}
 	# add missing DESTDIR to font installation
-	sed -e 's:install $(datadir):install $(DESTDIR)$(datadir):' \
+	sed 's:all \($(datadir).*\)\($(sysconfdir)\):all $(DESTDIR)\1$(DESTDIR)\2:'\
 		installer/Makefile.in > installer/Makefile.in.new
 	mv installer/Makefile.in.new installer/Makefile.in
+	# add --clean to gnome-font-install options so that currently-installed
+	# fontmaps will be ignored and new complete ones will be built
+	sed "s:'--dynamic',:& '--clean',:" \
+		run-gnome-font-install > run-gnome-font-install.new
+	mv run-gnome-font-install.new run-gnome-font-install
 }
 
 src_compile() {
@@ -45,11 +50,8 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
-	     install || die
+	make DESTDIR=${D} install || die
 
-	dosed /usr/share/fonts/fontmap
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dosed /etc/gnome/fonts/*
+	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
