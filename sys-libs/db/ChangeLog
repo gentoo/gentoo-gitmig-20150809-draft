@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.88 2004/04/22 09:48:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.89 2004/04/24 19:21:53 tgall Exp $
+
+  24 Apr 2004; Tom Gall <tgall@gentoo.org> db-3.2.9-r10.ebuild, 
+  db-4.2.52_p2.ebuild:
+  fix to update config for ppc64 in db-3.2.9-r10.ebuild and
+  db-4.2.52_p2.ebuild marked stable for ppc64
 
   22 Apr 2004; Travis Tilley <lv@gentoo.org> db-4.1.25_p1-r3.ebuild:
   added fix for bug #48558

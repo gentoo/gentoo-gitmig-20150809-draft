@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.5 2004/03/02 16:35:22 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.6 2004/04/24 19:21:53 tgall Exp $
 
 IUSE="doc java"
 
+inherit gnuconfig
 inherit libtool
 inherit eutils
 inherit db
@@ -66,6 +67,8 @@ src_compile() {
 	local conf=
 	local conf_shared=
 	local conf_static=
+
+	use ppc64 && gnuconfig_update
 
 	conf="${conf}
 		--host=${CHOST} \
