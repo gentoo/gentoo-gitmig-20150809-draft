@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.38.ebuild,v 1.5 2004/05/11 09:23:18 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.38.ebuild,v 1.6 2004/06/05 14:34:23 agriffis Exp $
 
 inherit eutils
 
@@ -17,31 +17,29 @@ DEPEND="!build? ( dev-lang/perl )
 	doc? ( virtual/ghostscript sys-apps/texinfo )
 	sys-devel/gcc"
 
-src_unpack() {
-	unpack ${A}
-
-	[ -z "`use doc`" ] && cd ${S} && epatch ${FILESDIR}/nasm-0.98.36-remove-doc-target.diff
-}
-
 src_compile() {
 	./configure --prefix=/usr || die
 
-	if [ `use build` ] ; then
-		make nasm
+	if use build; then
+		make nasm || die
 	else
-		make everything || die
+		make all rdf || die
+		if use doc; then
+			make doc || die
+		fi
 	fi
+
 }
 
 src_install() {
-	if [ `use build` ] ; then
+	if use build; then
 		dobin nasm
 	else
 		dobin nasm ndisasm rdoff/{ldrdf,rdf2bin,rdf2ihx,rdfdump,rdflib,rdx}
 		dosym /usr/bin/rdf2bin /usr/bin/rdf2com
 		doman nasm.1 ndisasm.1
 		dodoc AUTHORS CHANGES ChangeLog INSTALL README TODO
-		if [ `use doc` ] ; then
+		if use doc; then
 			doinfo doc/info/*
 			dohtml doc/html/*
 			dodoc doc/nasmdoc.*
