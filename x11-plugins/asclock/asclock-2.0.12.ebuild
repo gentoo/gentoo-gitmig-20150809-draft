@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12.ebuild,v 1.5 2004/03/26 23:10:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12.ebuild,v 1.6 2004/04/30 20:25:59 pvdabeel Exp $
 
 IUSE=""
 DESCRIPTION="Clock applet for AfterStep"
@@ -8,7 +8,7 @@ SRC_URI="http://www.tigr.net/afterstep/download/asclock/${P}.tar.gz"
 HOMEPAGE="http://www.tigr.net/afterstep/list.pl"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ppc"
 
 DEPEND="virtual/glibc virtual/x11"
 
