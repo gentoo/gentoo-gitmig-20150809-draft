@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.4.1-r3.ebuild,v 1.5 2002/08/24 13:21:28 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.4.1-r3.ebuild,v 1.6 2002/08/26 17:27:19 karltk Exp $
 
 S=${WORKDIR}/jakarta-ant-${PV}
 DESCRIPTION="Build system for Java"
@@ -11,6 +11,14 @@ LICENSE="Apache-1.1"
 KEYWORDS="x86 ppc"
 DEPEND="virtual/glibc
 	>=virtual/jdk-1.3"
+
+pkg_setup() {
+	if [ -z `java-config --java 2> /dev/null` ] ; then
+		eerror "You don't have a default system VM."
+		eerror "Use java-config to set one."
+		die
+	fi
+}
 
 src_compile() {
 	export JAVA_HOME=${JDK_HOME}

@@ -1,8 +1,13 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.6 2002/08/24 13:21:28 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.7 2002/08/26 17:27:19 karltk Exp $
 
 *ant-1.4.1-r3 (03 May 2002)
+
+  26 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild :
+  Added test in pkg_setup() to ensure that a proper system VM is installed. 
+  This is a special-case, we should not bother about adding similar tests to
+  all other java packages.
 
   24 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild :
   Added extra install-time test to verify that all files install properly. 
