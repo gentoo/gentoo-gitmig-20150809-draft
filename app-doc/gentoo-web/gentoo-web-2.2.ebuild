@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.3 2001/07/03 00:00:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.4 2001/07/03 17:34:16 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -23,7 +23,7 @@ src_install() {
 	insinto /usr/local/httpd/htdocs/doc
 	cd ${FILESDIR}
 	local x
-	for x in desktop xml-guide portage-user gentoo-howto faq nvidia_tsg
+	for x in build desktop xml-guide portage-user gentoo-howto faq nvidia_tsg
 	do
 		xsltproc xsl/guide-main.xsl xml/${x}.xml > ${D}/usr/local/httpd/htdocs/doc/${x}.html
 	done

@@ -12,12 +12,11 @@
 <uri>http://www.ibiblio.org/gentoo/releases/1.0_rc5</uri>.  Currently, our
 binary CD (620Mb) is built with i686 optimizations, meaning that you need a P6 core or
 greater to use it.  If you have a Pentium Pro/II/III/4 or
-Athlon/Duron, then you're all set.  You can find installation instructions
+Athlon/Duron, then you're all set.  You can find binary CD installation instructions
 below.  This install procedure has been independently
 tested and works.  We also have a 42Mb build image that will run on any type of
-processor (486 and up); however, we do not have installation instructions for it
-yet.  As soon as solid, tested install instructions are available, we'll post them
-here.  Enjoy Gentoo Linux 1.0_rc5 and if you have any questions, please post them
+processor (486 and up).  <e>You can find build CD install instructions <uri link="/doc/build.html">here</uri></e>.
+Enjoy Gentoo Linux 1.0_rc5 and if you have any questions, please post them
 to <mail link="gentoo-dev@gentoo.org">the gentoo-dev mailing list</mail> or stop by
 #gentoo on irc.openprojects.net.
 </body>
@@ -38,14 +37,19 @@ SCSI controllers: Adaptec (all), Buslogic (all), Initio, ICP Vortex, IBM ServeRA
 NCR, Symbios, Tekram and more.  Pretty much any modern SCSI controller should be
 supported.</p>
 
-<p>Right now, the best way to install Gentoo Linux is to use our i686-specific
-binary CD, which is around 620Mb in size and is available at <uri>
+<p>Right now, the easiest way to install Gentoo Linux is to use our
+i686-specific binary CD, which is around 620Mb in size and is available at
+<uri>
 http://www.ibiblio.org/gentoo/releases/1.0_rc5/isos/gentoo-i686-exclusive-bin-1.0_rc5-r3.iso</uri>.
 To use this CD, you'll need a system with a P6 or P6-compatible core, such as a
 Pentium Pro/II/III/4 or Athlon.  Our i586 binary CD will be available soon and
-will support the AMD K6 and Pentium Classic processors.  Assuming you have a P6 or
-P6-compatible core, you're ready to get Gentoo Linux 1.0_rc5 running on your 
-system.</p>
+will support the AMD K6 and Pentium Classic processors.  Assuming you have a P6
+or P6-compatible core, you're ready to get Gentoo Linux 1.0_rc5 running on your
+system.  Alternatively, we have <uri link="/doc/build.html">instructions for
+installing our minimal build CD</uri>, which will work on any type of x86
+processor.  It's an ideal installation method for those who prefer a "build
+from scratch" approach.  The instructions below will guide you through the i686
+binary CD install.</p>
 
 </body>
 </section>

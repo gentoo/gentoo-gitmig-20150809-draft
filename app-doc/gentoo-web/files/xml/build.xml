@@ -1,11 +1,16 @@
 <?xml version='1.0'?>
-<mainpage id="download">
-<title>Gentoo Linux 1.0_rc5 Installation</title>
+<guide link="/doc/build.html">
+<title>Gentoo Linux 1.0_rc5 Build CD Installation</title>
 <author title="Chief Architect"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 <author title="Editor"><mail link="thomasfl@gentoo.org">Thomas Flavel</mail></author>
 <author title="Author"><mail link="jerry@gentoo.org">Jerry Alexandratos</mail></author>
 <author title="Ghost"><mail link="g2boojum@gentoo.org">Grant Goodyear</mail></author>
-
+<abstract>
+These instructions step you through the process of installing Gentoo Linux 1.0_rc5 using
+our minimal build CD.  Using this method, the complete system is built from scratch using
+sources that are automatically downloaded from the Internet.  This build CD install method
+will work with any x86-compatible system.
+</abstract>
 
 <version>1.0</version>
 <date>2 July 2001</date>
@@ -22,16 +27,12 @@ SCSI controllers: Adaptec (all), Buslogic (all), Initio, ICP Vortex, IBM ServeRA
 NCR, Symbios, Tekram and more.  Pretty much any modern SCSI controller should be
 supported.</p>
 
-<p>Right now, the best, or at least simplest, way to install Gentoo Linux is to use our i686-specific
-binary CD, which is around 620Mb in size and is available at <uri>
-http://www.ibiblio.org/gentoo/releases/1.0_rc5/isos/gentoo-i686-exclusive-bin-1.0_rc5-r3.iso</uri>.
-To use this CD, you'll need a system with a P6 or P6-compatible core, such as a
-Pentium Pro/II/III/4 or Athlon.  Our i586 binary CD will be available soon and
-will support the AMD K6 and Pentium Classic processors.  Assuming you have a P6 or
-P6-compatible core, you're ready to get Gentoo Linux 1.0_rc5 running on your 
-system.  If you have an older processor, or you just want to tailor your
-own build, then obtain the build CD at
-<uri>http://www.ibiblio.org/gentoo/releases/1.0_rc5/isos/gentoo-ix86-build-1.0_rc5-r4.iso</uri>.  These directions are for you.
+<p>These instructions step you through the process of installing Gentoo Linux 1.0_rc5 using
+our minimal build CD.  Using this method, the complete system is built from scratch using
+sources that are automatically downloaded from the Internet.  This build CD install method
+will work with any x86-compatible system; to begin the install process, first grab the 42Mb
+build CD ISO image from
+<uri>http://www.ibiblio.org/gentoo/releases/1.0_rc5/isos/gentoo-ix86-build-1.0_rc5-r4.iso</uri>. 
 </p>
 
 </body>
@@ -587,4 +588,4 @@ consider joining our gentoo-dev mailing list (there's a "click to subscribe" lin
 </body>
 </section>
 </chapter>
-</mainpage>
+</guide>

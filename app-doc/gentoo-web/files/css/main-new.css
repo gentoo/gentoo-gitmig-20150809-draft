@@ -162,6 +162,12 @@ a.oldlink:active { color: #00ff00; text-decoration: underline; }
 	font-size: 0.9em;
 }
 
+.ntable {
+	padding: 0em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
 .ncontent {
 	/*content with no padding, for an ugly Netscape 4.7 compatibility hack*/
 	padding: 0em;

@@ -204,6 +204,8 @@
 
 						<p class="infosub">User Documentation:</p>
 						<p class="infolist"><font color="#ff0000"><b>New!</b></font><a href="/doc/desktop.html">Gentoo Linux Desktop Guide</a></p>
+						<p class="infolist"><font color="#ff0000"><b>New!</b></font><a href="/doc/build.html">Gentoo Linux 1.0_rc5 Build CD Install Guide</a></p>
+						<p>(you can find the i686 Binary CD Install Guide <a href="/index-download.html">here</a>)</p>
 						<p class="infolist"><a href="/doc/faq.html">Gentoo Linux FAQ</a></p>
 						<p class="infolist"><a href="/doc/portage-user.html">Portage User Guide</a></p>
 						<p class="infolist"><a href="/doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a></p>
@@ -396,7 +398,7 @@
 	<xsl:variable name="prenum"><xsl:number level="any" /></xsl:variable>
 	<xsl:variable name="preid">doc_pre<xsl:number level="any" /></xsl:variable>
 	<a name="{$preid}"/>
-	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<table class="ntable" width="100%" cellspacing="0" cellpadding="0" border="0">
 	<tr><td class="infohead" bgcolor="#7a5ada">
 	<p class="caption">
 	<xsl:choose>
@@ -446,7 +448,7 @@
 </xsl:template>
 
 <xsl:template match="table">
-	<table><xsl:apply-templates /></table>
+	<table class="ntable"><xsl:apply-templates /></table>
 </xsl:template>
 
 <xsl:template match="tr">
