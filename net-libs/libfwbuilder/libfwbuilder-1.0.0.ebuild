@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.0.ebuild,v 1.4 2003/09/06 22:04:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.0.ebuild,v 1.5 2003/09/10 04:55:33 msterret Exp $
 
 IUSE="ssl static"
 
@@ -15,9 +15,9 @@ SLOT="0"
 
 DEPEND="sys-devel/autoconf
 	=dev-libs/glib-1.2*
-        >=dev-libs/libxml2-2.4.19
-        !=dev-libs/libxml2-2.4.25
-        >=dev-libs/libxslt-1.0.15
+	>=dev-libs/libxml2-2.4.19
+	!=dev-libs/libxml2-2.4.25
+	>=dev-libs/libxslt-1.0.15
 	snmp? ( virtual/snmp )
 	ssl? ( dev-libs/openssl )"
 

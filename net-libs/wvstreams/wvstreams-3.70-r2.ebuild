@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.70-r2.ebuild,v 1.12 2003/07/28 15:52:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.70-r2.ebuild,v 1.13 2003/09/10 04:53:57 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A network programming library in C++"
@@ -19,9 +19,9 @@ src_unpack() {
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${P}-gentoo.patch || die "Patching failed"
 	if [ "${ARCH}" = "alpha" -o "${ARCH}" = "hppa" ]; then
-        sed "s:CXXOPTS += :CXXOPTS += -fPIC :" <Makefile >Makefile.sed
-        mv Makefile.sed Makefile
-    fi
+		sed "s:CXXOPTS += :CXXOPTS += -fPIC :" <Makefile >Makefile.sed
+		mv Makefile.sed Makefile
+	fi
 }
 
 src_compile() {
