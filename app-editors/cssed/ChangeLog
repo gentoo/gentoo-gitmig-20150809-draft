@@ -1,0 +1,10 @@
+# ChangeLog for app-editors/cssed
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/ChangeLog,v 1.1 2003/12/20 12:49:36 stuart Exp $
+
+*cssed-0.1.1_pre (20 Dec 2003)
+
+  20 Dec 2003; Stuart Herbert <stuart@gentoo.org> cssed-0.1.1_pre.ebuild:
+  Initial import; added the ebuild from bug #35581 by Jeremy Guarini
+  (j.g@logicdistributed.com)
+
