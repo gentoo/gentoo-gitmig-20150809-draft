@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3-r1.ebuild,v 1.1 2003/05/01 21:38:46 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3-r1.ebuild,v 1.2 2003/05/01 22:08:46 tantive Exp $
 
 S=${WORKDIR}/openmosix-tools-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
@@ -32,7 +32,7 @@ src_unpack() {
 
 	#make sure openmosix.config get's installed into /etc and not /etc/openmosix
 	mv Makefile Makefile.orig
-	sed -e 's:test -f $(SYSCONFDIR)/openmosix/openmosix.config:test -f $(SYSCONFDIR)/openmosix.config:' -e 's:.config $(SYSCONFDIR)/openmosix:.config $(SYSCONFDIR):' Makefile.orig >Makefile
+	sed -e 's:test -d $(SYSCONFDIR)/openmosix || mkdir -p $(SYSCONFDIR)/openmosix::' -e 's:test -f $(SYSCONFDIR)/openmosix/openmosix.config:test -f $(SYSCONFDIR)/openmosix.config:' -e 's:.config $(SYSCONFDIR)/openmosix:.config $(SYSCONFDIR):' Makefile.orig >Makefile
 	rm Makefile.orig
 
 	cat > configuration << EOF
