@@ -1,18 +1,15 @@
-# ChangeLog for x11-libs/xforms
+# ChangeLog for x11-libs/xforms-sparc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.2 2002/06/08 02:21:53 gerk Exp
 
 
-*xforms-089-r3 (21 Jul 2002)
+*xforms-sparc-089 (21 Jul 2002)
 
-  21 Jul 2002; Seemant Kulleen <seeamnt@gentoo.org> xforms-089-r3.ebuild
-  files/digest-xforms-089-r3 :
+  21 Jul 2002; Seemant Kulleen <seemant@gentoo.org> xforms-sparc-089.ebuild
+  files/digest-xforms-sparc-089 ChangeLog :
 
-  This package has now been split into: xforms-x86 xforms-ppc and
-  xforms-sparc (sparc64 as yet unknown).  Each of those contain KEYWORDS
-  masking and PROVIDEs a virtual/xforms (which plain xforms RDEPENDs on).
-  This should sort out a LOT of issues.
-
+  Added xforms build for sparc platform. Provides virtual/xforms, specific
+  to sparc.
 
 *xforms-089-r2 (19 June 2002)
 

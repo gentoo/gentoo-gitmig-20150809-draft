@@ -3,24 +3,19 @@
 # Header: $
 
 MY_P="bxform-${PV}-glibc2.1"
-MY_D="linux-i386/elf"
 
-# for unkown reasons ${ARCH} will just _not_ work here
-# even though it returns "ppc" (as does `arch`)
-if [ `arch` = "ppc" ] ; then
-	MY_D="linuxppc"
-	MY_P=${MY_P}"-ppc"
-fi
-
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${PN/-x86/}
 DESCRIPTION="A GUI Toolkit based on Xlib"
-SRC_URI="ftp://ncmir.ucsd.edu/pub/xforms/${MY_D}/${MY_P}.tgz"
+SRC_URI="ftp://ncmir.ucsd.edu/pub/xforms/linux-i386/elf/${MY_P}.tgz"
 HOMEPAGE="http://world.std.com/~xforms/"
+
 SLOT="0"
-DEPEND="virtual/x11"
-RDEPEND=""
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 -ppc -sparc -sparc64"
+
+PROVIDE="virtual/xforms"
+
+DEPEND="virtual/x11"
 
 src_compile() {
 	make || die
@@ -40,4 +35,3 @@ src_install () {
 	doman FORMS/xforms.5
         
 }
-
