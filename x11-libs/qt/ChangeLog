@@ -1,12 +1,15 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.115 2004/02/10 05:36:26 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.116 2004/02/10 13:29:04 caleb Exp $
 
   10 Feb 2004; Lars Weiler <pylon@gentoo.org> qt-3.2.3-r1.ebuild:
   Stable on ppc
 
   09 Feb 2004; Aron Griffis <agriffis@gentoo.org> qt-3.3.0.ebuild:
   add ~alpha now that firebird is use.masked for alpha
+
+  10 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.0.ebuild:
+  Add a warning about KDE plugins, and put ipv6 in the IUSE
 
   09 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.0.ebuild:
   Recommit the .la file
