@@ -8,7 +8,7 @@
 	list( $username ) = mysql_fetch_row( $username );
 
 ?>
-<p style="font-size:medium;font-weight:bold;"><?=$username;?>'s todos</p>
+<p style="font-size:medium;font-weight:bold;"><?=$username;?>'s uncompleted todos</p>
 <table width="95%" border=0 cellpadding=2 cellspacing=2>
 <?php if ( $uid == $devid ) { ?>
 <tr>
@@ -52,8 +52,43 @@
 		}
 ?>
 </table>
-<?php
-?>
 
+<p>&nbsp;</p>
+
+<p style="font-size:medium;font-weight:bold;"><?=$username;?>'s completed todos</p>
+<table width="95%" border=0 cellpadding=2 cellspacing=2>
+<?php if ( $uid == $devid ) { ?>
+<tr>
+	<td colspan=5 align="right">You're logged in. Clicking on a todo will take you to an edit page.<br>
+	or... <a href="single.php?action=new_todo">Create a new todo</a>.</td>
+</tr>
+<?php } ?>
+<tr>
+	<td bgcolor="#dddaec"><b>Date</b></td>
+	<td bgcolor="#dddaec"><b>Title</b></td>
+	<td bgcolor="#dddaec"><b>Followups</b></td>
+	<td bgcolor="#dddaec"><b>Existed</b></td>
+</tr>
+<?php
+		$result = mysql_query( "select * from todos where owner=$devid and priority=0 order by date" );
+		while ( $todo = mysql_fetch_array($result) ) {
+
+			$fupcount = mysql_query( 'select fid from followups where tid='.$todo['tid'] );
+			$fupcount = mysql_num_rows( $fupcount );
+
+			$flagimgs = '';
+			if ( $todo['public'] == 1 )
+				$flagimgs = '<img src="images/public.gif" width=16 height=16 alt="public">';
+?>
+<tr>
+	<td><?=date( "n/j/y", $todo['date'] );?></td>
+	<td><a href="single.php?tid=<?=$todo['tid'];?>"><?=$todo['title'];?></a></td>
+	<td><?=$fupcount;?></td>
+	<td><?=date( "n/j/y", $todo['date'] );?>-<?=date( "n/j/y", $todo['datecompleted'] );?></td>
+</tr>
+<?php 
+		}
+?>
+</table>
 
 <?php main_footer(); ?>
