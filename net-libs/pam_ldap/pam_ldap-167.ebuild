@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/pam_ldap-167.ebuild,v 1.4 2004/06/24 23:17:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/pam_ldap-167.ebuild,v 1.5 2004/07/15 01:27:30 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="PAM LDAP Module"
 HOMEPAGE="http://www.padl.com/OSS/pam_ldap.html"
 SRC_URI="http://www.padl.com/download/${P}.tar.gz"
