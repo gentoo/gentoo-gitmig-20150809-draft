@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r1.ebuild,v 1.3 2003/09/05 11:57:11 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r1.ebuild,v 1.4 2003/10/20 14:38:02 port001 Exp $
 
 inherit eutils flag-o-matic
 replace-flags -O? -O2
@@ -66,7 +66,7 @@ src_install() {
 		|| die
 	mv ${D}/usr/include/{ClanLib,${P}}
 	dobin ${FILESDIR}/clanlib-config
-	dodoc BUGS CODING_STYLE HARDWARE NEWS PATCHES PORTING README* ROADMAP
+	dodoc BUGS CODING_STYLE HARDWARE NEWS PATCHES PORTING README* ROADMAP INSTALL.linux
 }
 
 pkg_postinst() {

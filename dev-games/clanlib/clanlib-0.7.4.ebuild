@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.4.ebuild,v 1.2 2003/10/07 19:51:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.4.ebuild,v 1.3 2003/10/20 14:38:02 port001 Exp $
 
 inherit flag-o-matic
 replace-flags -O? -O2
@@ -57,7 +57,7 @@ src_install() {
 	mv ${D}/usr/include/{ClanLib-*/ClanLib,${P}}
 	rm -rf ${D}/usr/include/ClanLib-*
 	dobin ${FILESDIR}/clanlib-config
-	dodoc CODING_STYLE CREDITS NEWS PATCHES README*
+	dodoc CODING_STYLE CREDITS NEWS PATCHES README* INSTALL.linux
 }
 
 pkg_postinst() {
