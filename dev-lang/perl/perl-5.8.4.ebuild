@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.20 2004/08/28 06:20:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.21 2004/08/31 07:56:41 gmsoft Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -170,7 +170,7 @@ src_compile() {
 	# only get compiled with -fPIC, since they get linked into shared objects, they
 	# must be compiled with -fPIC.  Don't have time to parse through the build system
 	# at this time.
-	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
+#	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
 #	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 
 	sh Configure -des \

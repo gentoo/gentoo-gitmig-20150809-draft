@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.9 2004/08/19 02:13:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.10 2004/08/31 07:53:58 gmsoft Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -88,7 +88,6 @@ src_configure() {
 src_compile() {
 	filter-flags -malign-double
 
-	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
 	[ "${ARCH}" = "alpha" ] && append-flags -fPIC
 	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 
