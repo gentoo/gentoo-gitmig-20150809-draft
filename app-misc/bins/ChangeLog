@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/bins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.22 2004/09/27 10:11:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.23 2004/09/30 01:04:23 mcummings Exp $
+
+  29 Sep 2004; Michael Cummings <mcummings@gentoo.org>
+  files/bins-1.1.26-install.patch:
+  Updated bash-completion fixes for the patch; thanks go to CFuga
+  <cfuga@itam.mx> in bug 65837 for working on this
 
   27 Sep 2004; Michael Cummings <mcummings@gentoo.org> bins-1.1.26-r1.ebuild,
   -bins-1.1.26.ebuild:
