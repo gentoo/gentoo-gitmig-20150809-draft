@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook-xml-dtd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.12 2003/03/09 19:51:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.13 2003/09/06 19:25:57 obz Exp $
+
+*docbook-xml-dtd-4.1.2-r4 (07 Sep 2003)
+
+  07 Sep 2003; Mike Gardiner <obz@gentoo.org> docbook-xml-dtd-4.1.2-r4.ebuild:
+  Added new revision that catalogs the docbookx.dtd correctly in xml/catalog
 
   11 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
