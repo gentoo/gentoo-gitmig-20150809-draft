@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.12 2003/11/27 06:37:20 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.13 2003/12/15 20:23:27 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -53,6 +53,20 @@ function webapp-detect () {
 	return 0
 }
 
+function webapp-mkdirs () {
+	webapp-determine-htdocsdir
+    webapp-determine-cgibindir
+
+	keepdir "$HTTPD_ROOT"
+	fowners "$HTTPD_USER":"$HTTPD_GROUP" "$HTTPD_ROOT"
+	fperms 755 "$HTTPD_ROOT"
+
+	# explicit return here to ensure the return code
+	# from above isn't returned instead
+
+	return 0
+}
+
 function webapp-determine-htdocsdir ()
 {
 	webapp-determine-installowner
@@ -61,9 +75,6 @@ function webapp-determine-htdocsdir ()
 #    [ -z "${HTTPD_ROOT}" ] && HTTPD_ROOT="/home/httpd/htdocs/"
 	# temporary fix for webapps
 	HTTPD_ROOT="/var/www/localhost/htdocs/"
-	keepdir "$HTTPD_ROOT"
-	fowners "$HTTPD_USER":"$HTTPD_GROUP" "$HTTPD_ROOT"
-	fperms 755 "$HTTPD_ROOT"
 }
 
 function webapp-determine-cgibindir ()
