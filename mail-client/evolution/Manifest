@@ -1,14 +1,16 @@
-MD5 7a0c3910190600181bae203dc064c9ce ChangeLog 21850
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a09393786edefcbce5dcc93df1fb00b9 ChangeLog 22078
 MD5 f8967572708473b4e0c251f754929631 evolution-1.2.4.ebuild 6254
 MD5 0e26bab8ac570ce0deb481e2249e69f2 evolution-1.4.6.ebuild 5701
 MD5 38beda8b6f053d01b75341ea0c888322 evolution-2.0.2.ebuild 4054
 MD5 6ec9b6a7896b799d17a21c4edffd33c9 metadata.xml 272
 MD5 7c0483bef60bedff8559f3b9043d0f7e evolution-2.0.3.ebuild 3966
-MD5 a12d81c27d8df0675e47bfadcb1d961a evolution-2.0.2-r1.ebuild 4146
+MD5 a6d4bdc0eeac514c6107f2ce1051e810 evolution-2.0.2-r1.ebuild 4147
 MD5 959d577c112641133065713135c209eb evolution-2.0.3-r1.ebuild 4076
 MD5 5d430637760a0c93974ed91b72a16438 files/digest-evolution-1.2.4 131
 MD5 fe0cafc4040da525377526f4a1fa297f files/digest-evolution-1.4.6 132
-MD5 988789d67b6d0e09eea25ba441cda871 files/digest-evolution-2.0.3 70
 MD5 55cb14a4c3057ba1f6d91bea14ec28b6 files/digest-evolution-2.0.2 70
 MD5 c837abd50d990dea46fcea32b8a1b001 files/evolution-1.1.90-kde.patch 689
 MD5 8909b7f2d3483d55036f21ca2780e4a3 files/evolution-1.1.90-sharedldap.patch 370
@@ -19,7 +21,15 @@ MD5 dc2deff6647a30a151572ec5d6e11c77 files/evolution-2.0.1-camel.patch 457
 MD5 8a4178ab2571a9be24e1c27cfedf20bb files/evolution-2.0.2-camel_typo.patch 298
 MD5 8cc9e70dc9a35125fa2a37d58be5d139 files/evolution-2.0.2-gentoo_etc_services.patch 1712
 MD5 4df81c3442025403034c53975ba663b1 files/evolution-gcc34.patch 3044
+MD5 988789d67b6d0e09eea25ba441cda871 files/digest-evolution-2.0.3 70
 MD5 7b8c1cc2fd2428815184d471af4bb3bf files/evolution-2.0.3-gentoo_etc_services.patch 1662
 MD5 55cb14a4c3057ba1f6d91bea14ec28b6 files/digest-evolution-2.0.2-r1 70
 MD5 988789d67b6d0e09eea25ba441cda871 files/digest-evolution-2.0.3-r1 70
 MD5 015ecd719e11c1170e7f41b3490f52f7 files/evolution-2-CAN-2005-0102.patch 467
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB9RqIKRy60XGEcJIRAnADAJ9stUGd3MalQQ62k0ve49CqcbIRhgCgoP1a
+17bGBPKgt7jpA002Xv3egQc=
+=Nowr
+-----END PGP SIGNATURE-----
