@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.3 2005/02/05 11:39:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.4 2005/02/07 19:54:50 greg_g Exp $
+
+  07 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
+  -kdebase-pam-3.4.0_beta2.ebuild, kdebase-pam-4.ebuild:
+  Add the same keywords as kdebase, since these two files were previously
+  distributed with kdebase.
 
 *kdebase-pam-3.4.0_beta2 (05 Feb 2005)
 
