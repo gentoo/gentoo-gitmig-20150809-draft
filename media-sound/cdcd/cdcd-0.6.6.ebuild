@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.6.ebuild,v 1.3 2004/09/03 09:51:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.6.ebuild,v 1.4 2004/09/15 19:34:23 eradicator Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND="virtual/libc
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc ~sparc"
 
 src_unpack() {
 	unpack ${P}.tar.gz
