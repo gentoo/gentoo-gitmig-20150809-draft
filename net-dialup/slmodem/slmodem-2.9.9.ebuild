@@ -1,68 +1,78 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.8.ebuild,v 1.4 2004/07/14 23:10:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9.ebuild,v 1.1 2004/07/24 16:31:51 dragonheart Exp $
 
 inherit kmod eutils
 
 DESCRIPTION="Driver for Smart Link modem"
 HOMEPAGE="http://www.smlink.com/"
-SRC_URI="ftp://ftp.smlink.com/linux/unsupported/${P}.tar.gz"
+SRC_URI="http://www.smlink.com/main/down/${P}.tar.gz"
 LICENSE="Smart-Link"
-SLOT="0"
-KEYWORDS="-*"
+SLOT="${KV}"
+KEYWORDS="~x86"
 IUSE="alsa"
 
 DEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )
-	sys-kernel/config-kernel"
+	sys-kernel/linux-headers"
 
-RDEPEND="${DEPEND}"
+#	sys-kernel/config-kernel
 
-KMOD_SOURCES="${P}.tar.gz"
+RDEPEND="virtual/libc
+	alsa? ( media-libs/alsa-lib )"
+
+#KMOD_SOURCES="${P}.tar.gz"
+#KMOD_KOUTPUT_PATCH=""
 
 src_unpack() {
+	# Unpack and set some variables
 	kmod_src_unpack
+
 	cd ${S}
 	epatch ${FILESDIR}/${P}-makefile-fixup.patch
-	epatch ${FILESDIR}/${P}-udev.patch
 }
 
 src_compile() {
 
-	[ -d /lib/modules/${KERNEL_VER/linux-/}/build ] || die "Build kernel ${KERNEL_VER} first"
+	#[ -d ${KV_OUTPUT} ] || die "Build kernel ${KV_VERSION_FULL} first"
 
-	unset ARCH
+	export KERNEL_OUTPUT_DIR=${S}/workdir
 
+	if is_kernel 2 5 || is_kernel 2 6
+	then
+		unset ARCH
+	fi
+
+	if use alsa
+	then
+		export SUPPORT_ALSA=1
+	else
+		export SUPPORT_ALSA=0
+	fi
 
 	mkdir ${S}/workdir
+	#cd ${S}/workdir
+	#cp ${KV_OUTPUT}/.config .
 
-	emake MODVERDIR=${T}/.tmp_versions O=${S}/workdir \
-		KERNEL_VER=${KERNEL_VER/linux-/} \
-		drivers || die "Failed to compile driver"
-
-	cd modem;
-	if use alsa;
-	then
-		emake SUPPORT_ALSA=1 MODVERDIR=${T}/.tmp_versions O=${S}/workdir \
-			KERNEL_VER=${KERNEL_VER/linux-/} \
-			|| die 'Alsa support failed, try USE="-alsa"'
-	else
-		emake MODVERDIR=${T}/.tmp_versions O=${S}/workdir \
-			KERNEL_VER=${KERNEL_VER/linux-/} \
-			 || die "Could not compile"
-	fi
-}
-
-src_test() {
-	cd modem
-	emake modem_test
-	./modem_test || die "failed modem test"
+	emake -C ${S} \
+		KERNEL_VER=${KV_VERSION_FULL} \
+		KERNEL_DIR=${KV_OUTPUT} \
+		KERNEL_INCLUDES=/usr/include/linux \
+		all || die "Failed to compile driver"
 
 }
+
+#src_test() {
+#	cd modem
+#	emake modem_test
+#	./modem_test || die "failed modem test"
+#}
 
 src_install() {
 	unset ARCH
-	emake DESTDIR=${D} KERNEL_VER=${KERNEL_VER/linux-/} install-drivers \
+	emake DESTDIR=${D} \
+		KERNEL_VER=${KV_VERSION_FULL} \
+		install-drivers \
 		|| die "driver install failed"
 
 	dosbin modem/slmodemd
@@ -91,31 +101,36 @@ src_install() {
 		echo 'slamr*:root:dialout:0660' > \
 			${D}/etc/udev/permissions.d/55-${PN}.permissions
 	else
-	# simple raw devs
-		dodir /dev
-		cd ${D}/dev
-		ebegin "Creating /dev/slamr* devices"
-		local C="0"
-		while [ "${C}" -lt "4" ]
-		do
-			if [ ! -c ${ROOT}/dev/slamr${C} ]
-			then
-				mknod ${D}/dev/slamr${C} c 212 ${C}
-			#	doco suggests that the slmodemd creates these
-			#	ln -s slamr${C} ttySL${C}
-			fi
-			if [ ! -c ${ROOT}/dev/slamr${C} ]
-			then
-				mknod ${D}/dev/slusb${C} c 213 ${C}
-			#TODO usb or slamr (AMR/CNR/PCI) version for symlinks???
-			#	ln -s sl${C} ttySL${C}
-			fi
-
-			C="`expr $C + 1`"
-		done
-		eend 0
-		ln -s ttySL0 modem
+		make -C drivers DESTDIR=${D} KERNELRELEASE=1 KERNEL_VER=${KV_VERSION_FULL} install-devices
 	fi
+
+	#if 1
+	#then
+	# simple raw devs
+	#	dodir /dev
+	#	ebegin "Creating /dev/slamr* devices"
+	#	local C="0"
+	#	while [ "${C}" -lt "4" ]
+	#	do
+	#		if [ ! -c ${ROOT}/dev/slamr${C} ]
+	#		then
+	#			mknod ${D}/dev/slamr${C} c 212 ${C}
+	#		#	doco suggests that the slmodemd creates these
+	#		#	ln -s slamr${C} ttySL${C}
+	#		fi
+	#		if [ ! -c ${ROOT}/dev/slamr${C} ]
+	#		then
+	#			mknod ${D}/dev/slusb${C} c 213 ${C}
+	#		#TODO usb or slamr (AMR/CNR/PCI) version for symlinks???
+	#		#	ln -s sl${C} ttySL${C}
+	#		fi
+
+	#		C="`expr $C + 1`"
+	#	done
+	#	eend 0
+	#	cd ${D}/dev
+	#	ln -s ttySL0 modem
+	#fi
 
 }
 
