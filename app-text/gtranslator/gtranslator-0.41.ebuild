@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Leonardo Boshell <p@kapcoweb.com>
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.41.ebuild,v 1.3 2002/05/23 06:50:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.41.ebuild,v 1.4 2002/07/11 06:30:18 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A gettext po file editor for GNOME"

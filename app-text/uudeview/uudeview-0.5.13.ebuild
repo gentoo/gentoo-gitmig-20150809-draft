@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.13.ebuild,v 1.1 2002/06/06 08:27:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.13.ebuild,v 1.2 2002/07/11 06:30:19 drobbins Exp $
 
 
 S="${WORKDIR}/${P}"

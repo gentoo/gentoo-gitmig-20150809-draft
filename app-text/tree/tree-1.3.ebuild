@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author First Last <flast@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.3.ebuild,v 1.1 2002/01/30 19:03:57 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.3.ebuild,v 1.2 2002/07/11 06:30:19 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lists directories recursively, and produces an indented listing of files."

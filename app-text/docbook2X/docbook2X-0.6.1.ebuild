@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.6 2002/04/27 08:50:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.7 2002/07/11 06:30:18 drobbins Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Tolls to convert docbook to man and info"

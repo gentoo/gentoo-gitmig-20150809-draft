@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r9.ebuild,v 1.2 2002/04/25 07:12:02 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r9.ebuild,v 1.3 2002/07/11 06:30:19 drobbins Exp $
 
 TEXMFSRC="teTeX-texmf-gg-1.0.3.tar.bz2"
 

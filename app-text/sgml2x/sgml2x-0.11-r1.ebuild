@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/sgml2x-0.11-r1.ebuild,v 1.9 2002/04/27 09:32:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/sgml2x-0.11-r1.ebuild,v 1.10 2002/07/11 06:30:19 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Frontend for jade and jadetex"

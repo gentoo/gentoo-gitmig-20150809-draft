@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r1.ebuild,v 1.1 2002/06/29 23:16:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r1.ebuild,v 1.2 2002/07/11 06:30:19 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Base ISO character entities and utilities for SGML"

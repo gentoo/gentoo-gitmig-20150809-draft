@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Nicholas Jones <carpaski@twobit.net>
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.5.6.ebuild,v 1.1 2002/05/02 23:38:06 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.5.6.ebuild,v 1.2 2002/07/11 06:30:18 drobbins Exp $
 
 DESCRIPTION="Man page editor using XML tags"
 HOMEPAGE="http://wolfpack.twu.net/ManEdit"

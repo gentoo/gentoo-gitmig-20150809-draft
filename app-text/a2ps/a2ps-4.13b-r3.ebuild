@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r3.ebuild,v 1.4 2002/04/27 08:19:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r3.ebuild,v 1.5 2002/07/11 06:30:18 drobbins Exp $
 
 S=${WORKDIR}/${P/b/}
 DESCRIPTION="a2ps is an Any to PostScript filter"

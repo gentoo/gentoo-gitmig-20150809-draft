@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Chouser <chouser@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/remem/remem-2.11.ebuild,v 1.1 2002/01/13 23:12:19 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/remem/remem-2.11.ebuild,v 1.2 2002/07/11 06:30:19 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="MIT's Remembrance Agent"

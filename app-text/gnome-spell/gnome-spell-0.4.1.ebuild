@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Jesse <jesse@dowellcompany.com>
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-0.4.1.ebuild,v 1.1 2002/04/03 00:00:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-0.4.1.ebuild,v 1.2 2002/07/11 06:30:18 drobbins Exp $
 
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}

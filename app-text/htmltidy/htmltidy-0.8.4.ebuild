@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Chouser <chouser@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-0.8.4.ebuild,v 1.3 2002/05/27 17:27:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-0.8.4.ebuild,v 1.4 2002/07/11 06:30:18 drobbins Exp $
 
 # convert from normalized gentoo version number to htmltidy's wacky date thing
 month=(dmy jan feb mar apr may jun jul aug sep oct nov dec)

@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-3.1.ebuild,v 1.4 2002/04/28 03:59:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-3.1.ebuild,v 1.5 2002/07/11 06:30:18 drobbins Exp $
 
 MY_P="docbk31"
 S=${WORKDIR}/${P}

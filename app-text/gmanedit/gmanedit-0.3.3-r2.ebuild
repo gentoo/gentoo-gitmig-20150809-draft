@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Tools Team <tools@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-text/gmanedit/gmanedit-0.3.3-r2.ebuild,v 1.1 2002/04/30 08:29:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gmanedit/gmanedit-0.3.3-r2.ebuild,v 1.2 2002/07/11 06:30:18 drobbins Exp $
 
 S=${WORKDIR}/${P}.orig
 DESCRIPTION="Gnome based manpage editor"

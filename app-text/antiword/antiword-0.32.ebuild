@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.32.ebuild,v 1.1 2002/01/23 18:17:34 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.32.ebuild,v 1.2 2002/07/11 06:30:18 drobbins Exp $
 
 S=${WORKDIR}/${PN}.0.32
 DESCRIPTION="Antiword is a free MS Word reader for Linux and RISC OS"

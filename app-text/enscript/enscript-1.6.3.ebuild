@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.3.ebuild,v 1.2 2002/06/17 14:05:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.3.ebuild,v 1.3 2002/07/11 06:30:18 drobbins Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://www.iki.fi/mtr/genscript/${P}.tar.gz"

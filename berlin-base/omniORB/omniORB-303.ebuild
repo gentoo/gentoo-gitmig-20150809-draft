@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.8 2002/04/28 04:03:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.9 2002/07/11 06:30:19 drobbins Exp $
 
 S=${WORKDIR}/omni
 DESCRIPTION="a robust, high-performance CORBA 2 ORB"

@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.2-r1.ebuild,v 1.5 2002/07/08 08:03:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.2-r1.ebuild,v 1.6 2002/07/11 06:30:19 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Enlightment Data Base"

@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Laurent Mouillart <laurent.mouillart@free.fr>
-# Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/dvipdfm-0.13.2c.ebuild,v 1.1 2002/04/24 06:24:50 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/dvipdfm-0.13.2c.ebuild,v 1.2 2002/07/11 06:30:18 drobbins Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Dvipdfm is a DVI to PDF translator."

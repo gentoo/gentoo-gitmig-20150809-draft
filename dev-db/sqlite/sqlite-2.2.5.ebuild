@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.2.5.ebuild,v 1.1 2002/01/28 21:49:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.2.5.ebuild,v 1.2 2002/07/11 06:30:19 drobbins Exp $
 
 S=${WORKDIR}/sqlite
 DESCRIPTION="SQLite: An SQL Database Engine in a C Library."
