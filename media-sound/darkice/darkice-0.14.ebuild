@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.14.ebuild,v 1.4 2004/04/08 07:28:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.14.ebuild,v 1.5 2004/06/08 00:34:49 agriffis Exp $
 
 IUSE="encode oggvorbis alsa"
 
@@ -18,7 +18,7 @@ DEPEND="encode?	( >=media-sound/lame-1.89 )
 	alsa? ( >=media-libs/alsa-lib-1.0.0 )"
 
 src_compile() {
-	if [ ! "`use encode`" ] && [ ! "`use oggvorbis`" ]
+	if ! use encode && ! use oggvorbis
 	then
 
 		eerror "You need support for mp3 or Ogg Vorbis enconding for this"
