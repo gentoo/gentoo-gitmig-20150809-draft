@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.1 2003/03/21 09:58:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.2 2003/03/25 08:19:10 aliz Exp $
 
 IUSE="nls pic build"
 
@@ -44,8 +44,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${PV}.tar.gz
 	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-#KEYWORDS="~x86 ~ppc sparc ~alpha ~mips ~hppa"
-KEYWORDS="-*"
+KEYWORDS="x86 ppc sparc alpha mips hppa"
 # Is 99% compadible, just some .a's bork
 SLOT="2.2"
 LICENSE="GPL-2"
@@ -81,6 +80,10 @@ src_unpack() {
 	cd ${S}
 	unpack glibc-linuxthreads-${PV}.tar.gz || die
 	
+	# Security
+        # Fix for http://www.cert.org/advisories/CA-2003-10.html
+	epatch ${FILESDIR}/${PN}-xdr_security.patch
+
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
 	cd ${S}/io; epatch ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
 
@@ -158,8 +161,6 @@ src_unpack() {
         epatch ${FILESDIR}/${PV}/glibc23-08-hppa-configure.dpatch
         epatch ${FILESDIR}/${PV}/glibc23-hppa-shmlba.dpatch
     fi
-
-	epatch ${FILESDIR}/${PN}-xdr_security.patch
 
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r8.ebuild,v 1.5 2003/03/21 09:58:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r8.ebuild,v 1.6 2003/03/25 08:19:10 aliz Exp $
 
 IUSE="nls pic build"
 
@@ -36,8 +36,7 @@ SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-#KEYWORDS="x86 ppc sparc alpha arm"
-KEYWORDS="-*"
+KEYWORDS="x86 ppc sparc alpha arm"
 SLOT="2.2"
 LICENSE="GPL-2"
 
@@ -60,7 +59,11 @@ src_unpack() {
 	unpack glibc-${PV}.tar.bz2 || die
 	cd ${S}
 
-	patch -p1 < ${FILESDIR}/glibc-xdr_security.patch
+	# Security
+	# Fix for http://www.cert.org/advisories/CA-2003-10.html
+	einfo "Applying glibc-xdr_security.patch"
+	patch -p1 < ${FILESDIR}/glibc-xdr_security.patch > /dev/null || die
+
 	#extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir man; cd man
 	tar xjf ${FILESDIR}/glibc-manpages-${PV}.tar.bz2 > /dev/null || die
