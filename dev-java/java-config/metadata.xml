@@ -17,5 +17,10 @@
     <name>Adrian Almenar</name>
     <description>Maintainer</description>
   </maintainer>
-  <longdescription>Java enviroment configuration tool</longdescription>
+  <longdescription>
+  java-config is used to configure the Java subsystem on your Gentoo 
+  installation. In particular, it can be used to configure system-wide and
+  per-user default JVMs, construct classpath env vars from installed java
+  packages and be used to query for the path to various JDK tools.
+  </longdescription>
 </pkgmetadata>
