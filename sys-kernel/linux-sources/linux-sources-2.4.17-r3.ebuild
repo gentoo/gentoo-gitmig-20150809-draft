@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.17-r3.ebuild,v 1.1 2002/01/29 06:44:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.17-r3.ebuild,v 1.2 2002/02/10 04:14:48 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -27,7 +27,7 @@ S2=${WORKDIR}/linux-${KV}-extras
 # REMOVED from 2.4.17-r3:
 #      readahead patch from akpm (really slowed things down; was mistakenly recommended to me before it was ready)
 
-DESCRIPTION="Linux kernel version ${KV} - full sources"
+DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.de.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
 PROVIDE="virtual/kernel"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
