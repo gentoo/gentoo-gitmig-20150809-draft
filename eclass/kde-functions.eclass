@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.28 2002/08/29 15:03:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.29 2002/09/07 20:09:57 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -87,21 +87,32 @@ need-kde() {
 
 set-kdedir() {
 
-	# NOTE: version 5 (no minor version or revision)
-	# are the new cvs ebuilds; these go into /usr/kde/cvs
-
 	debug-print-function $FUNCNAME $*
+
+	# is this a kde-base ebuid?
+	if [ "${INHERITED//kde-dist}" != "$INHERITED" ] || [ "$PN" == kdelibs ] || [ "$PN" == arts ]; then
+		export KDEBASE="true"
+	fi
 
 	case "$1" in
 	    2*)	
-	    need-autoconf 2.1
-	    need-automake 1.4
-	    ;;
+		need-autoconf 2.1
+		need-automake 1.4
+		;;
+	    3.0*)
+		if [ -n "$KDEBASE" ]; then
+		    # used by 3.0.x kdebase stuff, not by 3rd party apps
+		    need-autoconf 2.1
+		else
+		    need-autoconf 2.5
+		fi
+		need-automake 1.4
+		;;
 	    3*)	
-	    need-autoconf 2.5
-	    need-automake 1.4
-	    ;;
-		5*)
+		need-autoconf 2.5
+		need-automake 1.4
+		;;
+	    5*)
 		need-autoconf 2.5
 		need-automake 1.4
 		;;
@@ -140,10 +151,6 @@ set-kdedir() {
 	IFS="$IFSBACKUP"
 	debug-print "$FUNCNAME: version breakup: KDEMAJORVER=$KDEMAJORVER KDEMINORVER=$KDEMINORVER KDEREVISION=$KDEREVISION"
 		
-	# is this a kde-base ebuid?
-	if [ "${INHERITED//kde-dist}" != "$INHERITED" ] || [ "$PN" == kdelibs ] || [ "$PN" == arts ]; then
-		export KDEBASE="true"
-	fi
 	
 
 	# install prefix
@@ -332,3 +339,36 @@ kde_remove_flag() {
     cd $OLDPWD
     
 }
+
+# disable a subdir of a module from building.
+# used by kdemultimedia et al
+# autorun from kde_src_compile:configure if $KDE_REMOVE_DIR is set;
+# $KDE_REMOVE_DIR is then passed as parameter
+kde_remove_dir(){
+
+    debug-print-function $FUNCNAME $*
+    
+    cd ${S}
+    
+    while [ -n "$1" ]; do
+	for dir in $1; do
+	
+	    debug-print "$FUNCNAME: removing subdirectory $dir"
+	
+	    rm -rf $dir
+	    
+	    if [ -f subdirs ]; then
+		mv subdirs subdirs.orig
+		grep -v $dir subdirs.orig > subdirs
+	    fi
+	    
+	    rm -f configure configure.in
+	    
+	    export DO_NOT_COMPILE="$DO_NOT_COMPILE $dir"
+	
+	done
+	shift
+    done
+
+}
+
