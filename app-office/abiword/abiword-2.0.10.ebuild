@@ -1,20 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.2.ebuild,v 1.7 2004/07/01 13:08:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.10.ebuild,v 1.1 2004/08/18 22:14:22 foser Exp $
 
 inherit eutils
 
-IUSE="debug gnome jpeg spell xml2"
+IUSE="gnome jpeg spell xml2"
 
+S_P=${S}/${PN}-plugins
+S_D=${S}/${PN}-docs
 S=${WORKDIR}/${P}/abi
-S_P=${WORKDIR}/${P}/${PN}-plugins
 
 DESCRIPTION="Fully featured yet light and fast cross platform word processor"
 HOMEPAGE="http://www.abisource.com"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-KEYWORDS="x86 sparc hppa ~alpha ~ppc"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ~hppa"
 LICENSE="GPL-2"
 SLOT="2"
 
@@ -22,7 +23,7 @@ RDEPEND="virtual/x11
 	virtual/xft
 	>=media-libs/fontconfig-2.1
 	media-libs/libpng
-	>=x11-libs/gtk+-2
+	>=x11-libs/gtk+-2.2
 	>=gnome-base/libglade-2
 	>=app-text/wv-1
 	>=dev-libs/fribidi-0.10.4
@@ -39,13 +40,7 @@ DEPEND="${RDEPEND}
 	sys-devel/automake
 	dev-util/pkgconfig"
 
-#	>=dev-libs/libole2-0.2.4-r1
-#	perl?  ( >=dev-lang/perl-5.6 )
-# perl seems broken
-
 src_compile() {
-
-#	./autogen.sh
 
 	# this is a hack since I don't want to go hack in the gnome-vfs headerfiles.
 	# The issue is about gnome-vfs containing "long long" which makes gcc 3.3.1 balk
@@ -62,6 +57,7 @@ src_compile() {
 		--enable-threads \
 		--without-ImageMagick \
 		--disable-scripting \
+		--disable-gucharmap \
 		--with-sys-wv || die
 
 	emake all-recursive || die
@@ -70,9 +66,8 @@ src_compile() {
 
 	cd ${S_P}
 
-#	./nextgen.sh
 	econf \
-		`use_enable debug` \
+		--disable-debug \
 		--enable-all \
 		--with-abiword=${S} \
 		--without-ImageMagick || die
@@ -85,7 +80,8 @@ src_install() {
 
 	dodir /usr/{bin,lib}
 
-	einstall PERLDEST=${D} || die
+	# einstall PERLDEST=${D} || die
+	make DESTDIR=${D} install || die
 
 	dosed "s:Exec=abiword:Exec=abiword-2.0:" /usr/share/applications/abiword.desktop
 
@@ -101,4 +97,13 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 
+	# install documentation
+
+	cd ${WORKDIR}/${P}/abiword-docs
+	sed -e 's:prefix = /usr/local:prefix = /usr:g' Makefile > Makefile.new
+	mv Makefile.new Makefile
+	make DESTDIR=${D} || die
+
 }
+
+USE_DESTDIR="1"
