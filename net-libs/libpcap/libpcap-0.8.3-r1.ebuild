@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.15 2004/11/02 15:11:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.16 2005/01/18 21:08:26 dragonheart Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="A system-independent library for user-level network packet capture"
 HOMEPAGE="http://www.tcpdump.org/"
@@ -35,9 +35,9 @@ src_install() {
 	einstall || die
 
 	insopts -m 755
-	insinto /usr/lib ; doins libpcap.so.${PV:0:3}
-	dosym /usr/lib/libpcap.so.${PV:0:3} /usr/lib/libpcap.so.0
-	dosym /usr/lib/libpcap.so.${PV:0:3} /usr/lib/libpcap.so
+	insinto /usr/$(get_libdir) ; doins libpcap.so.${PV:0:3}
+	dosym /usr/$(get_libdir)/libpcap.so.${PV:0:3} /usr/$(get_libdir)/libpcap.so.0
+	dosym /usr/$(get_libdir)/libpcap.so.${PV:0:3} /usr/$(get_libdir)/libpcap.so
 
 	dodoc CREDITS CHANGES FILES README* VERSION
 }

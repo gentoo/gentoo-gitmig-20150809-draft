@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7eb17b49804c23ebe33bbc612b28980b ChangeLog 4468
+MD5 a2e5d640e833bc7e6d834c3dd2aefb40 ChangeLog 4640
 MD5 42911d12a1077b959c1783c2ecee85bd libpcap-0.7.2.ebuild 1146
 MD5 0805cedb3f8e00dabe39a28211c50931 libpcap-0.8.1.ebuild 1139
 MD5 0e41daf00777e8e7db3c6654ffa20e30 libpcap-0.7.2-r1.ebuild 1148
 MD5 6376b9f557f0eef38c5a3166541e0b53 libpcap-0.8.1-r1.ebuild 1219
 MD5 50057505c6cef15415ae8f8ca7378d82 metadata.xml 261
-MD5 220f8820d468cce4d6e21a32ec69d4f8 libpcap-0.8.3-r1.ebuild 1184
+MD5 507592a8c22b843f5b803f31db10b2c3 libpcap-0.8.3-r1.ebuild 1248
 MD5 cc5de95dc506f6b4a0d50a39dd7ca161 libpcap-0.8.3.ebuild 1146
 MD5 6ccab63a4b33bed475b2c7215a55698d files/digest-libpcap-0.7.2 65
 MD5 a8a2dac67059729725555570b2e7ed9f files/digest-libpcap-0.8.1 65
@@ -17,9 +17,9 @@ MD5 a8a2dac67059729725555570b2e7ed9f files/digest-libpcap-0.8.1-r1 65
 MD5 aa690ff148a4b4bbb5a59276fbb583a8 files/digest-libpcap-0.8.3 65
 MD5 aa690ff148a4b4bbb5a59276fbb583a8 files/digest-libpcap-0.8.3-r1 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBh6O9HTu7gpaalycRAnOHAJ9R3tk5+13YTgqdJqUJ/ICmBM0K8gCfQg17
-zldukhWXF397Q4neHcQXEBU=
-=Oodg
+iD8DBQFB7XrQmdTrptrqvGERAub8AJ92qCwGs4v7qDyLKbh6EmfBYFUgpgCffj6v
+18iq6wlcQdhx3Jqj64AHCvg=
+=fXJc
 -----END PGP SIGNATURE-----
