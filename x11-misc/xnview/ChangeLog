@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xnview
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.1 2003/02/12 10:22:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.2 2003/06/18 13:22:27 phosphan Exp $
+
+  18 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> xnview-1.50.ebuild:
+  Fixed download locations (reported in bug 19968)
 
 *xnview-1.50 (12 Feb 2003)
 

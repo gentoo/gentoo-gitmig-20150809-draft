@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50.ebuild,v 1.3 2003/03/27 11:43:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50.ebuild,v 1.4 2003/06/18 13:22:27 phosphan Exp $
 
 MY_P=XnView-static
 S=${WORKDIR}/usr
 DESCRIPTION="XnView image viewer/converter"
 HOMEPAGE="http://www.xnview.com/"
-SRC_URI="x86?  http://perso.wanadoo.fr/pierre.g/download/viewer/${MY_P}.i386.rpm
-	ppc? http://perso.wanadoo.fr/pierre.g/download/viewer/${MY_P}.ppc.rpm"
+SRC_URI="x86? ftp://www.zoo-logique.org/xnview/download/${MY_P}.i386.rpm
+	ppc? ftp://www.zoo-logique.org/xnview/download/${MY_P}.ppc.rpm"
 
 SLOT="0"
 LICENSE="free-noncomm as-is"
