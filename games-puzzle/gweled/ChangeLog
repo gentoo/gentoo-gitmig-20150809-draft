@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/gweled
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/ChangeLog,v 1.1 2003/11/29 06:19:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/ChangeLog,v 1.2 2003/12/31 16:15:36 vapier Exp $
+
+*gweled-0.4 (31 Dec 2003)
+
+  31 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Remove games.eclass since this package is too gnome-ified #35119.
 
 *gweled-0.3 (28 Nov 2003)
 
