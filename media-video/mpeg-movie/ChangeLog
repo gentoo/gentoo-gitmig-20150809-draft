@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg-movie
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/ChangeLog,v 1.6 2004/06/25 00:45:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/ChangeLog,v 1.7 2004/08/12 20:46:10 chriswhite Exp $
+
+  13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Adding missing metadata.xml.
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> mpeg-movie-1.6.0-r1.ebuild:
   Fix use invocation
