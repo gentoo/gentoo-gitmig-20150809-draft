@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/apache.rc6,v 1.17 2004/03/29 20:03:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/apache.rc6,v 1.18 2004/04/04 22:15:53 zul Exp $
 
 opts="${opts} reload"
 
@@ -13,7 +13,7 @@ depend() {
 
 start() {
 	ebegin "Starting apache"
-	env -i PATH=$PATH /sbin/start-stop-daemon -o --quiet \
+	env -i PATH=$PATH PERL5LIB=PERL5LIB /sbin/start-stop-daemon -o --quiet \
 		--start --startas /usr/sbin/apache \
 		--pidfile /var/run/apache.pid -- ${APACHE_OPTS}
 	eend $?

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.116 2004/04/04 17:59:30 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.117 2004/04/04 22:15:53 zul Exp $
+
+  04 Apr 2004; Chuck Short <zul@gentoo.org> files/apache.confd,
+  files/apache.rc6:
+  Keep the $PERL5LIB sane when starting apache. Closes #34615.
 
   04 Apr 2004; Chuck Short <zul@gentoo.org> files/conf/apache.conf:
   Added LimitRequestBody directive, commented out ofcourse, since it 

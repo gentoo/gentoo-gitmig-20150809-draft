@@ -8,7 +8,7 @@ MD5 bab1a33028c74eb9d3f71294e8816126 apache-1.3.29-r1.ebuild 7413
 MD5 dcd66758c6c1536d6b0ad001be8d98de apache-2.0.48-r1.ebuild 11663
 MD5 316637e1a71f080e0f027db9ddf1683f apache-2.0.49.ebuild 12677
 MD5 0c605a3397eed2626b9170fa2d3c0662 apache-2.0.48-r3.ebuild 12061
-MD5 481c9d9cb6f0361c3c66ee74bfaeb563 ChangeLog 22014
+MD5 aff1a3c5c202b5cf79db39605ae19a43 ChangeLog 22162
 MD5 ec841d27e5613d0aae57ddf2083a7597 apache-1.3.28-r1.ebuild 7671
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
 MD5 b4580094775cde0d53605e4c036ec191 apache-2.0.47-r1.ebuild 10759
@@ -34,7 +34,7 @@ MD5 5dbbb01b1f4e39ff052a49389caa76ed files/apache-1.3.27_db4_gentoo.patch 956
 MD5 2c7dedfa1c3b2b815d733e90acfa06fc files/apache-2.0.48-export.diff 706
 MD5 43283cd264b5b1a6b3e5a4adba5ee2c1 files/apache-2.0.48-gentoo.diff 5905
 MD5 f2c60b199c12729b25716ed451a24e38 files/apache-2.0.44-gentoo.diff 4895
-MD5 bd1febd65fb7e4170aa2d9c5b0ff8ada files/apache.rc6 1059
+MD5 2672fba6aa4ef487ede4387f43972e2c files/apache.rc6 1073
 MD5 998b4b7df08eb15641e0b9132443b365 files/apache-1.3.27-apachectl.patch 1328
 MD5 8d790bf68c47c08951c761815cd66a1c files/apachelogserverstatus 4763
 MD5 df54361aa8754197cf3bafe99d32c7ec files/robots.txt 340
@@ -51,7 +51,7 @@ MD5 78ec0e944bbdb4246ed75478e6d8e52a files/digest-apache-2.0.47 65
 MD5 4cc91d25cf4117b8db0fec344bebec4d files/digest-apache-2.0.48 65
 MD5 3a7818b24f0952694c7b878ba3d8e79a files/digest-apache-2.0.49 65
 MD5 c8c70224d0f41de7f02387f13911e539 files/apache-2.0.46-gentoo.diff 3963
-MD5 158ae679067a535097854981105c6c06 files/apache.confd 1000
+MD5 17aee0f7a9de0f390fa046bc82436309 files/apache.confd 998
 MD5 a7f15bdba3786353deb7bfaf8de0efb9 files/conf/apache.conf 8115
 MD5 75e88ab5a3193fe8ff31c09f5bae2c09 files/conf/commonapache.conf 22175
 MD5 c774e0c7ddc6d55bddc164a9b5af0cb6 files/conf/VirtualHomePages.conf 907
