@@ -1,18 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.5 2003/02/13 10:01:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.6 2003/03/29 12:22:31 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A fast, reliable, simple package for creating and reading constant databases"
 SRC_URI="http://cr.yp.to/cdb/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/cdb.html"
+
 SLOT="0"
-# is this license correct?
 LICENSE="as-is"
 KEYWORDS="x86"
 
-DEPEND="sys-apps/tar sys-apps/gzip"
-RDEPEND="virtual/glibc"
+DEPEND=">=sys-apps/portage-2.0.47-r10
+	sys-apps/tar
+	sys-apps/gzip"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-errno.diff
+}
 
 src_compile() {                           
 	echo "gcc ${CFLAGS}" > conf-cc
