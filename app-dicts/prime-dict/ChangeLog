@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/prime-dict
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/prime-dict/ChangeLog,v 1.7 2004/02/29 18:19:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/prime-dict/ChangeLog,v 1.8 2004/03/01 11:17:46 dholm Exp $
+
+  01 Mar 2004; David Holm <dholm@gentoo.org> prime-dict-0.6.8.ebuild:
+  Added to ~ppc.
 
 *prime-dict-0.6.8 (01 Mar 2004)
 
