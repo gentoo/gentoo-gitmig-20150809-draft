@@ -1,11 +1,14 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.15 2002/11/23 12:58:59 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.16 2002/11/24 12:46:11 azarah Exp $
 
-  23 Nov 2002; Olivier Reisch <doctomoe@gentoo.org> automake-1.6.3.ebuild:
+  24 Nov 2002; Martin Schlemmer <azarah@gentoo.org> automake-1.6.3.ebuild :
+  Mark stable for rest of archs.
+
+  23 Nov 2002; Olivier Reisch <doctomoe@gentoo.org> automake-1.6.3.ebuild :
   Added ppc keyword. 1.6.3 will be needed for KDE 3.1
 
-automake-1.6.3 (20 Oct 2002)
+*automake-1.6.3 (20 Oct 2002)
 
   20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
   Update version.
@@ -15,32 +18,32 @@ automake-1.6.3 (20 Oct 2002)
   script by Guillaume Cottenceau (gc@mandrakesoft.com).  This release
   adds updates for automake-1.6 detection.
 
-automake-1.6.1-r6 (28 Jun 2002)
+*automake-1.6.1-r6 (28 Jun 2002)
 
   28 Jun 2002; Martin Schlemmer <azarah@gentoo.org> automake-1.6.1-r6.ebuild :
   Patch aclocal-1.4 to behave like 1.5 and 1.6, and not error our on duplicates.
   This should fix bug #4157 and others.
 
-automake-1.6.1-r5 (21 Jun 2002)
+*automake-1.6.1-r5 (21 Jun 2002)
 
   21 Jun 2002; Martin Schlemmer <azarah@gentoo.org> automake-1.6.1-r5.ebuild :
   Resolve bug #3985.
 
-automake-1.6.1-r4 (22 May 2002)
+*automake-1.6.1-r4 (22 May 2002)
 
   22 May 2002; M.Schlemmer <azarah@gentoo.org> automake-1.6.1-r4.ebuild :
 
   Remove duplicate macros in /usr/share/aclocal/ (old stale ones that is
   now in /usr/share/aclocal-1.4/.
 
-automake-1.6.1-r3 (22 May 2002)
+*automake-1.6.1-r3 (22 May 2002)
 
   22 May 2002; M.Schlemmer <azarah@gentoo.org> automake-1.6.1-r3.ebuild :
 
   Create /usr/share/automake as symlink to /usr/share/automake-1.4, as
   some packages needs it.  Resolves bug #2903.
 
-automake-1.6.1-r2 (20 May 2002)
+*automake-1.6.1-r2 (20 May 2002)
 
   20 May 2002; M.Schlemmer <azarah@gentoo.org> automake-1.6.1-r2.ebuild :
 
@@ -48,7 +51,7 @@ automake-1.6.1-r2 (20 May 2002)
   /usr/share/aclocal/ by default, so no need to fix it like we have to
   for 1.5 and 1.4.
 
-automake-1.6.1-r1 (19 May 2002)
+*automake-1.6.1-r1 (19 May 2002)
 
   19 May 2002; M.Schlemmer <azarah@gentoo.org> automake-1.6.1-r1.ebuild :
 
@@ -60,7 +63,7 @@ automake-1.6.1-r1 (19 May 2002)
   makes it possible for each version to use custom macros added by
   other programs to /usr/share/aclocal/.
 
-automake-1.6.1 (19 May 2002)
+*automake-1.6.1 (19 May 2002)
 
   19 May 2002; M.Schlemmer <azarah@gentoo.org> automake-1.6.1.ebuild,
                                                am-wrapper.pl-1.6 :
@@ -80,7 +83,7 @@ automake-1.6.1 (19 May 2002)
 
   Update so that it can work with AC_PREREQ([2.13]) as well as AC_PREREQ(2.13).
 	
-automake-1.5d-r2 (21 March 2002)
+*automake-1.5d-r2 (21 March 2002)
 
   7 April 2002; M.Schlemmer <azarah@gentoo.org> :
 
