@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.7 2003/11/20 02:29:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.8 2004/01/19 03:01:19 vapier Exp $
 
 At="mtxdrivers-rh9.0-0.3.0.run"
 DESCRIPTION="Drviers for the Matrox Parhelia and Millenium P650/P750 cards."
@@ -26,7 +26,7 @@ pkg_nofetch() {
 src_unpack() {
 	mkdir ${S}
 	cd ${S}
-	tail -4434 "${DISTDIR}/${At}" | tar -xvzf -
+	tail -n 4434 "${DISTDIR}/${At}" | tar -xvzf -
 }
 
 src_compile() {

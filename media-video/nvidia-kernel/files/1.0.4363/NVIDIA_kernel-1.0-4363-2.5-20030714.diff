@@ -325,7 +325,7 @@ diff -ruN NVIDIA_kernel-1.0-4363/Makefile.kbuild NVIDIA_kernel-1.0-4363-2.5/Make
 +	cp $(src)/$(RESMAN_CORE_OBJS) $(obj)/$(RESMAN_CORE_OBJS)
 +
 +$(obj)/$(VERSION_HEADER):
-+	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -1`\" > $@
++	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -n 1`\" > $@
 +
 +$(obj)/nv.o: $(obj)/$(VERSION_HEADER)
 +
@@ -570,7 +570,7 @@ diff -ruN NVIDIA_kernel-1.0-4363/Makefile.nvidia NVIDIA_kernel-1.0-4363-2.5/Make
 +	ld -d -r -o $@ $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE)
 +
 +$(VERSION_HDR): 
-+	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -1`\" > $@
++	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -n 1`\" > $@
 +
 +$(LINUX_MODULE): $(OBJECTS)
 +	ld -r -o $@ $(OBJECTS)
@@ -615,7 +615,7 @@ diff -ruN NVIDIA_kernel-1.0-4363/conftest.sh NVIDIA_kernel-1.0-4363-2.5/conftest
 +
 +        VERSION="^Linux version [^(]* (.*@.*) (\(.*\)) .*"
 +        KERNEL=$(cat /proc/version | sed "s/$VERSION/\1/" | cut -d ' ' -f 3)
-+        MODULE=$($* -v 2>&1 | tail -1 | cut -d ' ' -f 3)
++        MODULE=$($* -v 2>&1 | tail -n 1 | cut -d ' ' -f 3)
 +
 +        if test "$KERNEL" != "$MODULE"; then
 +          #
