@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Archive-Tar
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.30 2005/01/22 12:39:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.31 2005/01/25 21:00:12 mcummings Exp $
+
+  24 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  Archive-Tar-1.23.ebuild:
+  Added missing dep for IO-String, bug 73488
 
   22 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> Archive-Tar-1.23.ebuild:
   Stable on sparc
