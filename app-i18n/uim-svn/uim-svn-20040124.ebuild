@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040124.ebuild,v 1.1 2004/01/25 13:07:18 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040124.ebuild,v 1.2 2004/01/25 15:10:44 hattya Exp $
 
 inherit subversion
 
@@ -29,6 +29,8 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2 )"
 use debug && RESTRICT="nostrip"
 
 src_compile() {
+
+	epatch ${FILESDIR}/${PN}-gtk-query-immodules-gentoo.diff
 
 	if [ -n "`use gtk`" ] ; then
 		sed -i -e "s:@GTK2_TRUE@::g" -e "s:@GTK2_FALSE@:#:g" \
