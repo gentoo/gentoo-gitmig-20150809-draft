@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas-config
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.14 2004/10/31 21:11:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.15 2004/11/03 07:55:44 josejx Exp $
+
+  03 Nov 2004; Joseph Jezak <josejx@gentoo.org> blas-config-1.0.1.ebuild:
+  Marked ppc stable for bug #69766.
 
   31 Oct 2004; George Shapovalov <george@gentoo.org> blas-config-1.0.1.ebuild :
   marked stable on x86 and amd64, as 1.0.0 no longer works
