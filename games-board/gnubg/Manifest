@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 10a82b578c4354ca9a6f29ea010fc42f ChangeLog 2151
-MD5 7bc659276e35c74af2850c203e8e50c4 gnubg-0.13.0-r1.ebuild 2495
+MD5 dbca5948ecefeaff249bac3ce6f59656 ChangeLog 2276
+MD5 8e27b45779aadf3735711b2464d18887 gnubg-0.13.0-r1.ebuild 2496
+MD5 4c136f694b495bd178dee40e49e79d28 gnubg-0.14.2.ebuild 2905
 MD5 3f11aaf297b2fe67404a96cda13e9bfe metadata.xml 251
-MD5 ed86fe891d4c2ff074c5ee4db3394f66 gnubg-0.14.2.ebuild 2902
-MD5 0c7a8ec2862198de493c51ea97e3eed6 files/digest-gnubg-0.14.2 252
+MD5 8a2bcf34934e48370d279d0e450e9e73 gnubg-0.14.3.ebuild 2800
 MD5 14a8f9e2546292fc22c04fbea97287f7 files/digest-gnubg-0.13.0-r1 188
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0YQSroRuSHgZdywRAqfaAJ9S++UK96ZePpuqyjY0IW08xhmLUQCfahZk
-LgE2IT8jQznO7R2OdCPWsaM=
-=pTd9
------END PGP SIGNATURE-----
+MD5 0c7a8ec2862198de493c51ea97e3eed6 files/digest-gnubg-0.14.2 252
+MD5 b66b2af80cad13b367a5e7e86e10ee17 files/digest-gnubg-0.14.3 252
