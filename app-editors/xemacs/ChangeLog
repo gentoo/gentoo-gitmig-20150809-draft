@@ -1,7 +1,19 @@
+
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.24 2002/12/13 10:56:06 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.25 2002/12/15 23:52:17 rendhalver Exp $
 
+*xemacs-21.4.10-r1 (16 Dec 2002)
+
+  16 Dec 2002; Rendhalver [Peter Brown] <rendhalver@gentoo.org> :
+  Added new USE flags wnn dnd athena next xaw3d lucid
+  Removed esd USE flag as it is known to cause problems 
+  Added support for freewnn
+  Added support for Drag aNd Drop using Offix
+  Added options for compiling with athena widget set using next xaw3d or 3d
+  updated xemacs-base version to latest stable
+  fixed packages path resolving bugs #11933 and #11628
+  
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *xemacs-21.4.10 (03 Nov 2002)
