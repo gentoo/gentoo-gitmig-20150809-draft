@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mozilla-firefox-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/ChangeLog,v 1.8 2004/06/07 03:56:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/ChangeLog,v 1.9 2004/06/16 15:30:01 agriffis Exp $
+
+*mozilla-firefox-bin-0.9 (16 Jun 2004)
+
+  16 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-0.9.ebuild:
+  Depend on more recent mozilla-launcher that supports -a programname for -bin
+  releases
 
   06 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-bin-0.8-r1.ebuild:
