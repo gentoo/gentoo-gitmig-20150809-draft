@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.29 2003/07/18 22:02:29 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.30 2003/07/23 21:41:12 rac Exp $
+
+*perl-5.8.1_rc2 (23 Jul 2003)
+
+  23 Jul 2003; <rac@gentoo.org> perl-5.8.1_rc2.ebuild,
+  files/perl-5.8.1_rc2-reorder-INC.patch,
+  files/perl-5.8.1_rc2-sockatmark-should-__THROW.patch:
+  Add 5.8.1-rc2
 
   18 Jul 2003; <rac@gentoo.org> perl-5.8.0-r12.ebuild, perl-5.8.1_rc1.ebuild:
   Add blocker on Test-Simple versions that overwrite the core
