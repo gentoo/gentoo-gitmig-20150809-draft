@@ -1,3 +1,14 @@
-MD5 87af25b29da96f21a7da3ec9782a6177 jargon-1.0.0.ebuild 372
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ff7d6259e051052ea3dee5e82fb7d104 jargon-1.0.0.ebuild 496
+MD5 3f82863bb1adcc8a58291be07264f8a3 ChangeLog 344
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 fc75ad12eb6742f683fd90bfa1c325b9 files/digest-jargon-1.0.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNpOvaGfFFLhbXWkRAncTAJ9D0TPhwjyJI6Xb/CEnBTDJFlV9aQCePxn8
+X0Mp4Dn9VeUIdXpfgj3SqFw=
+=cgH+
+-----END PGP SIGNATURE-----
