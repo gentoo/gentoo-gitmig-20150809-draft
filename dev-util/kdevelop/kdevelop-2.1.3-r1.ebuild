@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.3-r1.ebuild,v 1.6 2002/12/17 21:48:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.3-r1.ebuild,v 1.7 2003/01/30 20:01:49 danarmak Exp $
 
 inherit kde-base
 need-kde 3
@@ -37,7 +37,7 @@ newdepend ">=kde-base/kdebase-3
 export MAKEOPTS="$MAKEOPTS -j1"
 
 src_unpack() {
-	base_src_unpack
+	kde_src_unpack
 	cd ${S}/kdevelop
 	for x in *.desktop; do
 		mv $x $x.2
