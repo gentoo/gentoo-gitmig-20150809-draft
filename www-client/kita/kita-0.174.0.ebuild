@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kita/kita-0.174.0.ebuild,v 1.4 2005/02/12 15:07:40 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kita/kita-0.174.0.ebuild,v 1.5 2005/03/19 14:28:45 kloeri Exp $
 
 inherit kde-functions
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge.jp/kita/12794/${P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ppc64 ~alpha ~amd64"
+KEYWORDS="x86 ppc ppc64 alpha ~amd64"
 
 RDEPEND="virtual/libc
 	>=kde-base/arts-1.1.4
