@@ -1,3 +1,4 @@
+virtual/gsasl			net-libs/libgsasl
 virtual/lpr				net-print/cups
 virtual/python			dev-lang/python
 virtual/mta				mail-mta/ssmtp
