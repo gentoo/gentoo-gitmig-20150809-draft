@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.2 2003/06/17 22:23:00 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.3 2003/06/18 07:53:23 wmertens Exp $
 
 DESCRIPTION="SFS (Self-certifying File System) client and server daemons"
 HOMEPAGE="http://www.fs.net/"
@@ -26,8 +26,8 @@ pkg_setup() {
 	# nfs-utils doesn't do it, sfs won't either
 
 	# add the sfs user and group if necessary
-	enewuser sfs
 	enewgroup sfs
+	enewuser sfs "" "" "" sfs
 }
 
 src_unpack() {
