@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.7.2-r1.ebuild,v 1.4 2004/07/01 22:26:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.7.2-r1.ebuild,v 1.5 2004/07/15 01:11:52 agriffis Exp $
 
 inherit eutils flag-o-matic
 
-S=${WORKDIR}/${P}
 DESCRIPTION="pcap-Library"
 SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 	http://www.jp.tcpdump.org/release/${P}.tar.gz"
