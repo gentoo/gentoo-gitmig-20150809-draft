@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.29 2004/11/13 09:44:29 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.30 2004/11/17 10:54:14 kloeri Exp $
+
+  17 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  sudo-1.6.7_p5-r2.ebuild:
+  Stable on alpha, bug 70838.
 
   13 Nov 2004; Tavis Ormandy <taviso@gentoo.org> files/sudoers:
   new release
