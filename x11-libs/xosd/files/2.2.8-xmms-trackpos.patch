@@ -1,0 +1,139 @@
+diff -rc xosd-2.2.8/src/xmms_plugin/dlg_config.c xosd-2.2.8.patch/src/xmms_plugin/dlg_config.c
+*** xosd-2.2.8/src/xmms_plugin/dlg_config.c	Fri Oct  3 02:09:32 2003
+--- xosd-2.2.8.patch/src/xmms_plugin/dlg_config.c	Thu Jul 22 19:53:58 2004
+***************
+*** 26,32 ****
+  
+  static GtkToggleButton
+    * vol_on, *bal_on,
+!   *pause_on, *trackname_on, *stop_on, *repeat_on, *shuffle_on;
+  static GtkWidget *configure_win;
+  static GtkObject *timeout_obj, *offset_obj, *h_offset_obj, *shadow_obj,
+    *outline_obj;
+--- 26,32 ----
+  
+  static GtkToggleButton
+    * vol_on, *bal_on,
+!   *pause_on, *trackname_on, *stop_on, *repeat_on, *shuffle_on, *listpos_on;
+  static GtkWidget *configure_win;
+  static GtkObject *timeout_obj, *offset_obj, *h_offset_obj, *shadow_obj,
+    *outline_obj;
+***************
+*** 58,64 ****
+    show.stop = isactive(stop_on);
+    show.repeat = isactive(repeat_on);
+    show.shuffle = isactive(shuffle_on);
+! 
+  
+    if (colour)
+      g_free(colour);
+--- 58,64 ----
+    show.stop = isactive(stop_on);
+    show.repeat = isactive(repeat_on);
+    show.shuffle = isactive(shuffle_on);
+!   show.listpos = isactive(listpos_on);
+  
+    if (colour)
+      g_free(colour);
+***************
+*** 532,542 ****
+    show_item(vbox2, "Balance", show.balance, &bal_on);
+    show_item(vbox2, "Pause", show.pause, &pause_on);
+    show_item(vbox2, "Track Name", show.trackname, &trackname_on);
+!   vbox2 = gtk_vbox_new(FALSE, 5);
+    gtk_box_pack_start(GTK_BOX(hbox2), vbox2, FALSE, FALSE, 0);
+    show_item(vbox2, "Stop", show.stop, &stop_on);
+    show_item(vbox2, "Repeat", show.repeat, &repeat_on);
+    show_item(vbox2, "Shuffle", show.shuffle, &shuffle_on);
+  
+    sep = gtk_hseparator_new();
+    gtk_box_pack_start(GTK_BOX(vbox), sep, FALSE, FALSE, 0);
+--- 532,543 ----
+    show_item(vbox2, "Balance", show.balance, &bal_on);
+    show_item(vbox2, "Pause", show.pause, &pause_on);
+    show_item(vbox2, "Track Name", show.trackname, &trackname_on);
+!   vbox2 = gtk_vbox_new(FALSE, 4);
+    gtk_box_pack_start(GTK_BOX(hbox2), vbox2, FALSE, FALSE, 0);
+    show_item(vbox2, "Stop", show.stop, &stop_on);
+    show_item(vbox2, "Repeat", show.repeat, &repeat_on);
+    show_item(vbox2, "Shuffle", show.shuffle, &shuffle_on);
++   show_item (vbox2, "Playlist Position", show.listpos, &listpos_on);
+  
+    sep = gtk_hseparator_new();
+    gtk_box_pack_start(GTK_BOX(vbox), sep, FALSE, FALSE, 0);
+diff -rc xosd-2.2.8/src/xmms_plugin/xmms_osd.c xosd-2.2.8.patch/src/xmms_plugin/xmms_osd.c
+*** xosd-2.2.8/src/xmms_plugin/xmms_osd.c	Fri Oct  3 02:09:31 2003
+--- xosd-2.2.8.patch/src/xmms_plugin/xmms_osd.c	Thu Jul 22 23:15:50 2004
+***************
+*** 170,175 ****
+--- 170,176 ----
+    show.stop = 1;
+    show.repeat = 1;
+    show.shuffle = 1;
++   show.listpos = 1;
+  
+    g_free(colour);
+    g_free(font);
+***************
+*** 201,206 ****
+--- 202,208 ----
+      xmms_cfg_read_int(cfgfile, "osd", "show_stop", &show.stop);
+      xmms_cfg_read_int(cfgfile, "osd", "show_repeat", &show.repeat);
+      xmms_cfg_read_int(cfgfile, "osd", "show_shuffle", &show.shuffle);
++     xmms_cfg_read_int(cfgfile, "osd", "show_listpos", &show.listpos);
+      xmms_cfg_free(cfgfile);
+    }
+  
+***************
+*** 242,247 ****
+--- 244,250 ----
+      xmms_cfg_write_int(cfgfile, "osd", "show_stop", show.stop);
+      xmms_cfg_write_int(cfgfile, "osd", "show_repeat", show.repeat);
+      xmms_cfg_write_int(cfgfile, "osd", "show_shuffle", show.shuffle);
++     xmms_cfg_write_int(cfgfile, "osd", "show_listpos", show.listpos);
+  
+      xmms_cfg_write_default_file(cfgfile);
+      xmms_cfg_free(cfgfile);
+***************
+*** 386,395 ****
+        title = malloc(len);
+        playlist_time =
+          withtime ? xmms_remote_get_output_time(gp.xmms_session) : 0;
+!       snprintf(title, len,
+                 withtime ? "%i/%i: %s (%i:%02i)" : "%i/%i: %s",
+                 current.pos + 1, playlist_length, current.title,
+                 playlist_time / 1000 / 60, playlist_time / 1000 % 60);
+        replace_hexcodes(title);
+        xosd_display(osd, 1, XOSD_string, title);
+        free(title);
+--- 389,405 ----
+        title = malloc(len);
+        playlist_time =
+          withtime ? xmms_remote_get_output_time(gp.xmms_session) : 0;
+!       if (show.listpos)
+!         snprintf(title, len,
+                 withtime ? "%i/%i: %s (%i:%02i)" : "%i/%i: %s",
+                 current.pos + 1, playlist_length, current.title,
+                 playlist_time / 1000 / 60, playlist_time / 1000 % 60);
++       else
++         snprintf(title, len,
++                withtime ? "%s (%i:%02i)" : "%s",
++                current.title,
++                playlist_time / 1000 / 60, playlist_time / 1000 % 60);
++ 
+        replace_hexcodes(title);
+        xosd_display(osd, 1, XOSD_string, title);
+        free(title);
+diff -rc xosd-2.2.8/src/xmms_plugin/xmms_osd.h xosd-2.2.8.patch/src/xmms_plugin/xmms_osd.h
+*** xosd-2.2.8/src/xmms_plugin/xmms_osd.h	Fri Oct  3 02:09:31 2003
+--- xosd-2.2.8.patch/src/xmms_plugin/xmms_osd.h	Thu Jul 22 20:02:01 2004
+***************
+*** 21,26 ****
+--- 21,27 ----
+    gboolean stop;
+    gboolean repeat;
+    gboolean shuffle;
++   gboolean listpos;
+  };
+  extern struct show show;
+  
