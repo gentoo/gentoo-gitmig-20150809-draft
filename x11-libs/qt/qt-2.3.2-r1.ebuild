@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.26 2004/01/07 00:04:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.27 2004/04/17 08:12:14 lv Exp $
 
 DESCRIPTION="QT ${PV}, an X11 widget set and general library used by KDE et al"
 HOMEPAGE="http://www.trolltech.com/"
