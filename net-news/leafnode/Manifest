@@ -5,7 +5,6 @@ MD5 2036e0cb9bd686a422ae8988b7a1dd48 leafnode-1.9.50.ebuild 1926
 MD5 3360d5b80945fa1c7922539daa11bced leafnode-2.0.0_alpha20030621.ebuild 2457
 MD5 6b703e81e58bf19b84669b258ce69275 leafnode-2.0.0_alpha20031028.ebuild 2464
 MD5 011640605f17cb6f5adef30cf9cae515 leafnode-2.0.0_alpha20040206.ebuild 2461
-MD5 63bd6e87942a25d48bd5365edd8246c0 metadata.xml 268
 MD5 d07ba6707cd78e8407f2c28c2e016ff9 files/digest-leafnode-1.9.42 72
 MD5 55746f46949f232f8cc02f902f807b08 files/digest-leafnode-1.9.49 72
 MD5 b6867235b6efd8bf05a2734ee5432667 files/digest-leafnode-1.9.50 72
