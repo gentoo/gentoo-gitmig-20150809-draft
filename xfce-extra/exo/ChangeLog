@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/exo
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.1 2004/12/02 00:33:50 bcowan Exp $
+
+*exo-0.2.0_pre2 (01 Dec 2004)
+
+  01 Dec 2004; Brad Cowan <bcowan@gentoo.org> +metadata.xml,
+  +exo-0.2.0_pre2.ebuild:
+  Initial import. Library of extensions for Xfce.
+
