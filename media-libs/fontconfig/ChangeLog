@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.30 2003/05/15 11:34:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.31 2003/05/16 12:06:54 foser Exp $
 
 *fontconfig-2.2.0-r2 (14 May 2003)
+
+  16 May 2003; foser <foser@gentoo.org> fontconfig-2.2.0-r2.ebuild :
+  Added MAKEOPTS to fix possible parallel make problems with docs building
 
   15 May 2003; foser <foser@gentoo.org> fontconfig-2.2-cvs_bugfixes.patch :
   Remove cvs Id stuff from patch (#12035)

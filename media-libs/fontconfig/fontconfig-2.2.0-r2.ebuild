@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.1 2003/05/14 23:30:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.2 2003/05/16 12:06:54 foser Exp $
 
 inherit eutils
 
@@ -16,6 +16,8 @@ KEYWORDS="~x86 ~alpha ~ppc ~sparc ~mips ~hppa ~arm"
 DEPEND=">=media-libs/freetype-2.1.4
 	>=dev-libs/expat-1.95.3
 	>=sys-apps/ed-0.2"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
