@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.1.ebuild,v 1.9 2004/06/25 19:54:12 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.1.ebuild,v 1.10 2004/08/08 00:00:43 slarti Exp $
 
 inherit eutils perl-module
 
 IUSE=""
 
-DESCRIPTION="Port Scannning Attack Detection daemon"
+DESCRIPTION="Port Scanning Attack Detection daemon"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://www.cipherdyne.org/psad"
 
