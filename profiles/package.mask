@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <azarah@gentoo.org> (25 Mar 2003)
+# Tempory mask gawk versions that do not have filefuncs.so module, as it
+# (new gawk version) breaks baselayout if its (baselayout) not remerged.
+=sys-apps/gawk-3.1.2
+=sys-apps/gawk-3.1.2-r1
+
 # <sethbc@gentoo.org> (23 Mar 2003)
 # masked due to weird borkage, bombing out at init
 =sys-apps/reiserfsprogs-3.6.5
