@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.3 2003/10/06 00:12:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.4 2003/10/28 13:53:50 dholm Exp $
 
 inherit gnat
 
@@ -8,7 +8,7 @@ DESCRIPTION="POSIX Ada Bindings"
 HOMEPAGE="http://www.cs.fsu.edu/~baker/florist.html"
 SRC_URI="ftp://cs.nyu.edu/pub/gnat/3.15p/florist-3.15p-src.tgz"
 
-DEPEND="dev-lang/gnat"
+DEPEND="<dev-lang/gnat-5.*"
 RDEPEND=""
 LICENSE="GMGPL"
 SLOT="0"
@@ -51,5 +51,20 @@ src_install() {
 	cd ${D}/usr/lib/ada/adalib/florist
 	ln -s libflorist-${PV}.so.1 libflorist.so
 	cd ${S}
+
+	#set up environment
+	dodir /etc/env.d
+	echo "ADA_OBJECTS_PATH=/usr/lib/ada/adalib/${PN}" \
+		> ${D}/etc/env.d/55florist
+	echo "ADA_INCLUDE_PATH=/usr/lib/ada/adainclude/${PN}" \
+		>> ${D}/etc/env.d/55florist
+}
+
+pkg_postinst() {
+	einfo "The envaironment has been set up to make gnat automatically find files for"
+	einfo "Florist. In order to immediately activate these settings please do:"
+	einfo "env-update"
+	einfo "source /etc/profile"
+	einfo "Otherwise the settings will become active next time you login"
 }
 
