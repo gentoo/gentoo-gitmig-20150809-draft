@@ -25,7 +25,7 @@ LICENSE="LGPL-2"
 DEPEND="mysql ( >=mysql-3.23.49 )"
 
 src_compile() {
-	patch -p1 < ${DISTFILES}/mysql++-gcc-3.0.patch || die
+	patch -p1 < ${DISTDIR}/mysql++-gcc-3.0.patch || die
 	patch -p1 < ${FILESDIR}/mysql++-gcc-3.2.patch || die
 	patch -p1 < ${FILESDIR}/mysql++-1.7.9_example.patch || die
 
