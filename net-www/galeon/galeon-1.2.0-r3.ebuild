@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.0-r3.ebuild,v 1.2 2002/03/31 10:14:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.0-r3.ebuild,v 1.3 2002/04/07 15:47:50 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small web-browser for gnome that uses mozillas render engine"
@@ -21,6 +21,14 @@ DEPEND="~net-www/mozilla-0.9.9
 	>=dev-util/intltool-0.11 )"
 
 	# bonobo? ( >=gnome-base/bonobo-1.0.19-r1 )
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	patch -p1 < ${FILESDIR}/galeon-1.2.0-gcc3.patch || die
+
+}
 
 src_compile() {
 
