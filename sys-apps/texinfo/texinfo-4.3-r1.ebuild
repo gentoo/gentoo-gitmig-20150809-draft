@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.3-r1.ebuild,v 1.2 2003/01/07 18:09:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.3-r1.ebuild,v 1.3 2003/01/08 23:25:44 jhhudso Exp $
 
 IUSE="nls build"
 
@@ -50,6 +50,7 @@ src_compile() {
 
 src_install() {
 	if [ "`use build`" ] ; then
+		mv util/ginstall-info util/install-info
 		dobin makeinfo/makeinfo util/{install-info,texi2dvi,texindex}
 	else
 		make DESTDIR=${D} \
