@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.692 2004/10/22 07:30:25 amir Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.693 2004/10/23 01:41:12 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -417,6 +417,8 @@ media-video/vlc:v4l - Enables video4linux support
 media-video/transcode:pvm Enables private virtual machine support
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/chaplin:vcdimager - Enables optional support for GNU VCDimager
+media-video/winki:css - Enables ripping of encrypted dvds
+media-video/winki:vcd - Enables creation of vcds
 net-analyzer/fprobe:messages - enable console messages
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
