@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.25 2005/01/31 17:58:10 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.26 2005/02/07 20:21:14 kang Exp $
+
+*rsbac-sources-2.6.10-r2 (07 Feb 2005)
+
+  07 Feb 2005; Guillaume Destuynder <kang@gentoo.org>
+  +rsbac-sources-2.6.10-r2.ebuild:
+  RSBAC 2.6 kernel is now based on -rsbacfixed which is based on -as. Contains
+  all security fixes and all RSBAC fixes, plus PaX and RSBAC, of course.
 
   29 Jan 2005; Guillaume Destuynder <kang@gentoo.org>
   -rsbac-sources-2.4.28-r2.ebuild, rsbac-sources-2.4.29.ebuild:
