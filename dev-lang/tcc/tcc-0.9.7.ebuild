@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.7.ebuild,v 1.8 2004/03/05 15:23:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.7.ebuild,v 1.9 2004/06/16 09:14:57 kloeri Exp $
 
 DESCRIPTION="A very small C compiler for ix86"
 HOMEPAGE="http://www.tinycc.org/"
 LICENSE="GPL-2"
 DEPEND=""
 SRC_URI="http://fabrice.bellard.free.fr/tcc/${P}.tar.gz"
-S=${WORKDIR}/${P}
 
 SLOT="0"
 KEYWORDS="x86 -sparc"
