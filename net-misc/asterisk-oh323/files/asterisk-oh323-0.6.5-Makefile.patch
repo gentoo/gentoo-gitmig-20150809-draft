@@ -1,0 +1,91 @@
+--- asterisk-oh323-0.6.5/Makefile.orig	2004-11-03 12:52:59.000000000 +0100
++++ asterisk-oh323-0.6.5/Makefile	2005-03-09 06:26:56.042637240 +0100
+@@ -49,7 +49,7 @@
+ # compile asterisk-oh323. Do not use the installed library of your
+ # distribution. It won't work.
+ #
+-PWLIBDIR=/root/src/oh323/pwlib
++PWLIBDIR=/usr/share/pwlib
+ 
+ #
+ # Set OPENH323LIBDIR variable to the directory containing the sources of
+@@ -59,13 +59,13 @@
+ # compile asterisk-oh323. Do not use the installed library of your
+ # distribution. It won't work.
+ #
+-OPENH323DIR=/root/src/oh323/openh323
++OPENH323DIR=/usr/share/openh323
+ 
+ #
+ # Set ASTERISKINCDIR variable to the directory containing the include files of
+ # Asterisk PBX.
+ #
+-ASTERISKINCDIR=/root/src/asterisk/include
++ASTERISKINCDIR=/usr/include
+ 
+ #
+ # Set ASTERISKMODDIR variable to the directory where ASTERISK's modules reside.
+@@ -91,7 +91,7 @@
+ #
+ # Note: This directory is created under $DESTDIR.
+ #
+-OH323WRAPLIBDIR=/usr/local/lib
++OH323WRAPLIBDIR=/usr/lib
+ 
+ #
+ # Set SSLINCDIR variable to the directory where ssl/crypto
+@@ -121,7 +121,7 @@
+ # With this flag on the channel driver is huge, in size, but Asterisk boots
+ # faster!
+ #
+-OH323STAT=1
++OH323STAT=0
+ 
+ #
+ # Define options that were used during Asterisk compilation
+@@ -137,7 +137,7 @@
+ #NOVIDEO=1
+ #NO_SPEEX=1
+ #NOAUDIOCODECS=1
+-#NOTRACE=1
++NOTRACE=1
+ #NO_IPv6=1
+ #P_PTHREADS=1
+ 
+@@ -165,13 +165,9 @@
+ AR=ar
+ STRIP=strip
+ STRIPFLAGS=
+-OH323WRAPINCLUDE= \
+-				 -I$(PWLIBDIR)/include/ptlib/unix \
+-				 -I$(PWLIBDIR)/include \
+-				 -I$(OPENH323DIR)/include \
+-				 -I$(OPENH323DIR)/include/openh323 \
+-				 -I../asterisk-driver
+-#				 -I$(SSLINCDIR)
++OH323WRAPINCLUDE=-I$(SSLINCDIR) \
++		 -I/usr/include/openh323 \
++		 -I../asterisk-driver
+ OPENH323USERFLAGS=
+ ifdef	NOVIDEO
+ OPENH323USERFLAGS += NOVIDEO=1
+@@ -192,7 +189,7 @@
+ OPENH323USERFLAGS += P_PTHREADS=1
+ endif
+ OPENH323FLAGS=$(shell make $(OPENH323USERFLAGS) --no-print-directory -s \
+-		-C $(OPENH323DIR) \
++		-C $(OPENH323DIR) -f openh323u.mak \
+ 		PWLIBDIR=$(PWLIBDIR) OPENH323DIR=$(OPENH323DIR) ccflags)
+ CPPFLAGS=$(OPENH323FLAGS) -Wall -x c++ -Os
+ ASTERISKINCLUDE=-I$(ASTERISKINCDIR) -I../wrapper
+--- asterisk-oh323-0.6.5/asterisk-driver/Makefile.orig	2004-10-04 13:52:09.000000000 +0200
++++ asterisk-oh323-0.6.5/asterisk-driver/Makefile	2005-03-09 06:28:39.092971208 +0100
+@@ -31,6 +31,8 @@
+ TARGET=chan_oh323.so
+ TARGET_OBJ=chan_oh323.o
+ 
++OPENH323DIR=/usr
++
+ ifndef SKIP_SUFFIX
+ 	ifeq ($(OH323STAT),1)
+ 		LIBPTPATH=$(word 1,$(shell ls $(PWLIBDIR)/lib/libpt*s.a))

@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk-oh323
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-oh323/ChangeLog,v 1.3 2004/06/24 23:35:05 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-oh323/ChangeLog,v 1.4 2005/03/10 01:44:19 stkn Exp $
+
+*asterisk-oh323-0.6.5 (10 Mar 2005)
+
+  10 Mar 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/asterisk-oh323-0.6.5-Makefile.patch, +asterisk-oh323-0.6.5.ebuild:
+  New version. Using openh323 and pwlib headers in /usr/include from now on.
+  Debug use-flag enables Wraptracing if needed.
 
 *asterisk-oh323-0.5.10 (12 Mar 2004)
 
