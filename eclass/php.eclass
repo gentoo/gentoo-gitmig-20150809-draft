@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.33 2003/06/02 21:27:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.34 2003/06/02 21:31:28 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -63,7 +63,7 @@ DEPEND="${DEPEND}
     png? ( >=media-libs/libpng-1.2.5 )
     postgres? ( >=dev-db/postgresql-7.1 )
     qt? ( >=x11-libs/qt-2.3.0 )
-    snmp? ( net-analyzer/net-snmp )
+    snmp? ( || ( >=net-analyzer/net-snmp-5.0.6-r1 net-analyzer/ucd-snmp ) )
     spell? ( app-text/aspell )
     ssl? ( >=dev-libs/openssl-0.9.5 )
     tiff? ( >=media-libs/tiff-3.5.5 )
