@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/spruce/spruce-0.7.6-r2.ebuild,v 1.3 2004/06/24 22:18:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/spruce/spruce-0.7.6-r2.ebuild,v 1.4 2004/07/14 16:26:45 agriffis Exp $
 
 IUSE="ssl nls gnome crypt"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Gtk email client"
 SRC_URI="ftp://spruce.sourceforge.net/pub/spruce/devel/${P}.tar.gz"
 HOMEPAGE="http://spruce.sourceforge.net/"
