@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kgraphspace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgraphspace/ChangeLog,v 1.2 2004/10/31 00:01:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgraphspace/ChangeLog,v 1.3 2004/11/06 17:30:44 weeve Exp $
+
+  06 Nov 2004; Jason Wever <weeve@gentoo.org> kgraphspace-0.3.0_pre1.ebuild:
+  Added ~sparc keyword.
 
 *kgraphspace-0.3.0_pre1 (30 Oct 2004)
 

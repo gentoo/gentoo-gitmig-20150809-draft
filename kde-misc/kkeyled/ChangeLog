@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kkeyled
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkeyled/ChangeLog,v 1.2 2004/10/31 00:01:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkeyled/ChangeLog,v 1.3 2004/11/06 17:34:13 weeve Exp $
+
+  06 Nov 2004; Jason Wever <weeve@gentoo.org> kkeyled-0.8.9.ebuild:
+  Added ~sparc keyword.
 
 *kkeyled-0.8.6 (30 Oct 2004)
 
