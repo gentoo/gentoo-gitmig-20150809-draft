@@ -1,8 +1,8 @@
 /*
- * Copyright 1999-2003 Gentoo Technologies, Inc.
+ * Copyright 1999-2004 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.1.c,v 1.4 2004/08/19 15:16:25 vapier Exp $
  * Author: Martin Schlemmer <azarah@gentoo.org>
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.1.c,v 1.3 2004/07/18 04:44:54 dragonheart Exp $
  */
 
 #define _REENTRANT
@@ -46,6 +46,7 @@ static const char *wrapper_strerror(int err, struct wrapper_data *data)
 static void wrapper_exit(char *msg, ...)
 {   
 	va_list args;
+	fprintf(stderr, "gcc-config error:");
 	va_start(args, msg);
 	vfprintf(stderr, msg, args);
 	va_end(args);
@@ -196,7 +197,7 @@ static void find_wrapper_target(struct wrapper_data *data)
 #endif
 	if (NULL == inpipe)
 		wrapper_exit(
-			"Could not open pipe for gcc-config: %s\n",
+			"Could not open pipe: %s\n",
 			wrapper_strerror(errno, data));
 
 	if (0 == fgets(str, MAXPATHLEN, inpipe))
@@ -246,7 +247,7 @@ static void modify_path(struct wrapper_data *data)
 
 	newpath = (char *)malloc(len);
 	if (NULL == newpath)
-		wrapper_exit("wrapper: out of memory\n");
+		wrapper_exit("out of memory\n");
 	memset(newpath, 0, len);
 
 	snprintf(newpath, len, "%s:%s", dname, data->path);
