@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/livetools
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
+
+*livetools-1.2.3 (22 Feb 2004)
+
+  22 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> livetools-1.2.3.ebuild:
+  Version bump. Found by Christian Gut <cycloon@is-root.org> in #42464.
 
 *livetools-1.1 (11 Dec 2002)
   
