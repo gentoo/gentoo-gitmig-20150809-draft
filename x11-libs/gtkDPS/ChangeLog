@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkDPS
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.15 2004/08/28 15:15:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.16 2004/11/02 01:42:04 spyderous Exp $
+
+  01 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  gtkDPS-0.3.3-r1.ebuild, gtkDPS-0.3.4.ebuild:
+  Change app-text/dgs dependency to that or virtual/x11, which provides the
+  same stuff.
 
   29 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> gtkDPS-0.3.4.ebuild:
   Stable on ppc to support autotrace.
