@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/duplicity
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/duplicity/ChangeLog,v 1.1 2003/05/14 20:00:47 mholzer Exp $
+
+*duplicity-0.4.0 (14 May 2003)
+
+  14 May 2003; Martin Holzer <mholzer@gentoo.org> duplicity-0.4.0.ebuild :
+  Initial Version submitted by rob holland <robh@gentoo.org> in #20693
