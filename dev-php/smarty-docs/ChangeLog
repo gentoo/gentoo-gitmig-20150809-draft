@@ -1,13 +1,13 @@
 # ChangeLog for dev-php/smarty-docs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.2 2003/12/22 19:14:34 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.3 2004/01/05 21:28:00 aliz Exp $
 
-*smarty-2.6.0 (22 Dec 2003)
+*smarty-docs-2.6.0 (22 Dec 2003)
 
   22 Dec 2003; Tom Payne <twp@gentoo.org> smarty-docs-2.5.0.ebuild, smarty-docs-2.6.0.ebuild :
   Version bump. Change DEPEND from virtual/php to dev-php/mod_php to satisfy repoman.
 
-*smarty-2.5.0 (28 Sep 2003)
+*smarty-docs-2.5.0 (28 Sep 2003)
 
   28 Sep 2003; Tom Payne <twp@gentoo.org> smarty-docs-2.5.0.ebuild :
   Initial version.

@@ -1,6 +1,6 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.112 2003/12/19 12:06:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.113 2004/01/05 21:28:00 aliz Exp $
 
   19 Dec 2003; Guy Martin <gmsoft@gentoo.org> mod_php-4.3.3-r3.ebuild:
   Marked stable on hppa.
@@ -81,11 +81,12 @@
   11 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r5.ebuild:
   Make mod_php actually depend on apache if it isn't installed...
 
-*mod-php-4.3.2-r5 (30 Jul 2003)
+*mod_php-4.3.2-r5 (30 Jul 2003)
+
   30 Jul 2003; Tal Peer <coredumb@gentoo.org> mod_php-4.3.2-r5.ebuild:
   Dropped cjk from IUSE. Now mbstring and mbregex are always enabled.
 
-*mod-php-4.3.2-r4 (21 Jul 2003)
+*mod_php-4.3.2-r4 (21 Jul 2003)
 
   04 Aug 2003; Guy Martin <gmsoft@gentoo.org> mod-php-4.3.2-r4.ebuild :
   Marked stable on hppa.
