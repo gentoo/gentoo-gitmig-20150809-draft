@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.8.ebuild,v 1.14 2003/09/08 11:31:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.8.ebuild,v 1.15 2003/10/15 01:26:10 weeve Exp $
 
 IUSE="nls libgda gb evo python bonobo guile perl"
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.0/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~sparc"
 
 #Eye Of Gnome (media-gfx/eog) is for image support.
 RDEPEND="=x11-libs/gtk+-1.2*
