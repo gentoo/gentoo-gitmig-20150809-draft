@@ -1,15 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.6 2003/09/07 00:23:28 msterret Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.7 2004/01/26 01:13:24 vapier Exp $
 
 inherit eutils
 
-S="${WORKDIR}/fcpackage.${PV/\.0\./_}/Xft"
 DESCRIPTION="X FreeType library, also known as Xft2.0"
-SRC_URI="http://fontconfig.org/release/fcpackage.${PV/\.0\./_}.tar.gz"
 HOMEPAGE="http://fontconfig.org/"
+SRC_URI="http://fontconfig.org/release/fcpackage.${PV/\.0\./_}.tar.gz"
 
 LICENSE="fontconfig"
 SLOT="0"
@@ -17,12 +14,12 @@ KEYWORDS="x86 ppc alpha sparc hppa arm ~amd64"
 
 RDEPEND="x11-base/xfree
 	>=media-libs/fontconfig-2.1-r1"
-
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.53a
 	!>=x11-base/xfree-4.3.0-r2"
-
 PROVIDE="virtual/xft"
+
+S="${WORKDIR}/fcpackage.${PV/\.0\./_}/Xft"
 
 src_unpack() {
 	unpack ${A}
@@ -33,7 +30,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-cvs-update-20021221.patch
 
 	einfo "Running autoconf..."
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	autoconf --force
 }
 
@@ -66,4 +63,3 @@ pkg_postinst() {
 	einfo "Your old Xft1.1 includes have been saved to /root/.Xft,"
 	einfo "if they were present ..."
 }
-
