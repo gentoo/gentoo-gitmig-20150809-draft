@@ -1,18 +1,28 @@
-MD5 2c8914d91e3e55fa6fc9eb338abc9129 ChangeLog 5103
-MD5 05c84bdffc226e3d7de1857943aafa47 nessus-2.0.10a.ebuild 557
-MD5 7cac50e27e5ebaaa24d38c52e963cfc0 nessus-2.0.7-r1.ebuild 553
-MD5 9a5c3581fe6d3c7081b658bd541abc4e nessus-2.0.7.ebuild 544
-MD5 6f61ba50902802a57808ce6f6d26b2bb nessus-2.0.8a.ebuild 551
-MD5 269d933b861a7f0645addd69c85f34df nessus-2.0.9.ebuild 547
-MD5 34584a1d914e5d8b669b988fbf594ece metadata.xml 230
-MD5 56bf05f0b3197fae181ad7444eb82bf4 nessus-2.1.0.ebuild 558
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 409047a4bfdd238a05fcfbe0621b8790 nessus-2.0.11.ebuild 559
-MD5 f046636d5e85f9dfaccd6e1553ebba5d nessus-2.0.12.ebuild 557
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.10a 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.7 0
+MD5 9a5c3581fe6d3c7081b658bd541abc4e nessus-2.0.7.ebuild 544
+MD5 efaede02d779063b3424c7c69b96b265 nessus-2.1.0.ebuild 547
+MD5 269d933b861a7f0645addd69c85f34df nessus-2.0.9.ebuild 547
+MD5 781d0481ac471cc22d5ce86ee9174d4e nessus-2.0.12.ebuild 546
+MD5 7cac50e27e5ebaaa24d38c52e963cfc0 nessus-2.0.7-r1.ebuild 553
+MD5 05c84bdffc226e3d7de1857943aafa47 nessus-2.0.10a.ebuild 557
+MD5 d85742b5d13a37623c8d621a96bfb951 ChangeLog 5225
+MD5 34584a1d914e5d8b669b988fbf594ece metadata.xml 230
+MD5 6f61ba50902802a57808ce6f6d26b2bb nessus-2.0.8a.ebuild 551
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.7-r1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.8a 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.7 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.9 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.1.0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.11 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.12 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.8a 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.10a 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBAkl9T+MN7JbqCpMRArNWAJ9qDhZwm0xaHiOndFx6/fgkTcY/DACeLTKh
+cUIbvL1P0ua1tEjbs7l821c=
+=b+he
+-----END PGP SIGNATURE-----
