@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.24 2004/10/05 12:19:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.25 2004/11/25 12:22:06 liquidx Exp $
+
+  25 Nov 2004; Alastair Tse <liquidx@gentoo.org> jed-0.99.16-r2.ebuild:
+  fix typo for -r2 with RDEPEND/DEPEND (#72396)
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   jed-0.99.16-r2.ebuild:
