@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypgsql
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.9 2004/12/30 23:55:19 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.10 2005/01/09 06:16:40 cryos Exp $
+
+  09 Jan 2005; Marcus Hanwell <cryos@gentoo.org> pypgsql-2.4.ebuild:
+  Marked stable on amd64, bug 59045.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

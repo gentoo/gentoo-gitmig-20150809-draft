@@ -1,6 +1,16 @@
-MD5 09d413b3768ededfc25a21f92dc62931 pypgsql-2.4.ebuild 640
-MD5 e24c8e7197832c0757368e6357ac27ca pypgsql-2.3.ebuild 706
-MD5 14346718258754755db7637fd9085a1e ChangeLog 976
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 259a1078f09f0eef8a558c226f1092fc ChangeLog 1082
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 f79f4562e29b9944f25fba025f19f482 pypgsql-2.3.ebuild 703
+MD5 ce4b4f95a90c153efbbd006ce9cbc30b pypgsql-2.4.ebuild 640
 MD5 8ba85a072c6fa7661c25fd47f134281c files/digest-pypgsql-2.3 63
 MD5 990f5f467539ed2c71f62a6eaa9fbe44 files/digest-pypgsql-2.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB4MxpntT9W3vfTuoRAttmAJ48DY8J/SDOHpfPlvfg8Hdh8Wkn7QCfVRnU
+VUOwQ+gRiv77NFf1Dy/8OI0=
+=Kl7i
+-----END PGP SIGNATURE-----
