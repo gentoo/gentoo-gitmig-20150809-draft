@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.8 2003/09/25 18:53:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.9 2003/10/30 15:22:25 usata Exp $
+
+*anthy-4700 (31 Oct 2003)
+
+  31 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> anthy-4300b.ebuild,
+  anthy-4700.ebuild:
+  New upstream release. Added ~alpha keyword.
 
   26 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> anthy-4507.ebuild,
   anthy-4515.ebuild, anthy-4519.ebuild:
