@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.4 2004/02/09 02:01:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.5 2004/02/10 02:31:58 vapier Exp $
 
-inherit libtool eutils
+inherit eutils
 
 MY_P=w3c-${P}
 DESCRIPTION="A general-purpose client side WEB API"
@@ -31,7 +31,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-config-liborder.patch
 	epatch ${WORKDIR}/${P}-debian-autoconf-2.5.patch
 
-	elibtoolize
+	libtoolize -c -f || die "libtoolize failed"
 	aclocal || die "aclocal failed"
 	autoconf || die "autoconf failed"
 }
