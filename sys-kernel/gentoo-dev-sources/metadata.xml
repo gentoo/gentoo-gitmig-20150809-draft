@@ -9,8 +9,8 @@
 <herd>sparc-kernel</herd>
 
 <maintainer>
-  <email>johnm@gentoo.org</email>
-  <name>John Mylchreest</name>
+  <email>gregkh@gentoo.org</email>
+  <name>Greg Kroah-Hartman</name>
 </maintainer>
 
 <longdescription>
