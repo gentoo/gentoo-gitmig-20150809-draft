@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.4 2004/09/02 17:05:16 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.5 2004/09/02 20:09:53 rl03 Exp $
+
+  02 Sep 2004; Renat Lumpau <rl03@gentoo.org> files/reconfig:
+  reconfig hook now clean up after itself.
 
   02 Sep 2004; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt,
   rt-3.2.1.ebuild:

@@ -19,6 +19,7 @@ if [ $1 = "start" -o $1 = "install" ]; then
 	echo "Don't forget to read the README for more details"
 	ls
 
-else
-	echo $1
+elif [ $1 = "clean" ]; then
+	rm -f /usr/bin/standalone_httpd /usr/bin/rt-crontool /usr/bin/webmux.pl /usr/lib/RT.pm /usr/bin/mason_handler.scgi /usr/bin/rt-mailgate
+	rm -rf /var/rt
 fi
