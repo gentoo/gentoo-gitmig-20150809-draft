@@ -3,6 +3,6 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 288e9264efbd44516cacbf1f5af19b87 soup-0.7.10.ebuild 1103
 MD5 1798061ad1815a998697dc66d38aeef9 soup-0.7.11.ebuild 1209
 MD5 0dbfc46e83ee0d40021e50732bf49f2d soup-0.7.4-r1.ebuild 1097
-MD5 f55a1da1657ca61048fb28258f3a4aef files/digest-soup-0.7.10 126
+MD5 a768d0192483fe394f059e4ec9c692f5 files/digest-soup-0.7.10 64
 MD5 37f9be1ab2386e2eed241a1d0ea33dfd files/digest-soup-0.7.11 64
 MD5 291975cff852179904f6f3d1db52aead files/digest-soup-0.7.4-r1 63
