@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.1.ebuild,v 1.6 2004/02/22 19:50:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.1.ebuild,v 1.7 2004/03/12 02:38:59 zx Exp $
 
 IUSE="doc"
 
@@ -21,7 +21,8 @@ KEYWORDS="x86 ppc -sparc -alpha -mips"
 
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5
-	doc? ( =dev-java/java-sdk-docs-1.4.1* )"
+	doc? ( =dev-java/java-sdk-docs-1.4.1* )
+	X? ( virtual/x11 )"
 
 RDEPEND="sys-libs/lib-compat"
 PROVIDE="virtual/jre-1.4.1
@@ -76,7 +77,7 @@ pkg_postinst() {
 
 	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this
 	#comment found on the sun-jdk 1.2.2 ebuild that he sent.
-	if [ !"`use X`" ] ; then
+	if [ !`use X` ] ; then
 		einfo "********************************************************"
 		eerror "You're not using X so its possible that you dont have"
 		eerror "a X server installed, please read the following warn: "
