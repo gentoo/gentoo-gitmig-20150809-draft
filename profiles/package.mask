@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <tantive@gentoo.org> (02 Sep 2002)
+# Masked for testing, fixed some compile errors with >2.99 
+=sys-kernel/openmosix-sources-2.4.19-r3
+
 # <azarah@gentoo.org> (02 Sep 2002)
 # This is just a bugfix release, but needs testing all the same.
 >=sys-apps/pam-login-3.7
