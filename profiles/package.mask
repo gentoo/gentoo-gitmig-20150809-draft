@@ -392,12 +392,6 @@ gnome-extra/gcalctool
 # gtkmm-addons is broken for gcc32
 x11-libs/gtkmm-addons
 
-# <raker@gentoo.org> (25 Sep 2002)
-# version bump.  ssl and other fixes
-=net-mail/courier-imap-1.5.3
-# added choosable maildir/mbox support
-=net-mail/uw-imap-2001a-r3
-
 # <danarmak@gentoo.org> (17 Sep 2002)
 # masked for testing of the gcc3 patch I added for this new version
 =media-gfx/kimagemapeditor-0.9.5.1
