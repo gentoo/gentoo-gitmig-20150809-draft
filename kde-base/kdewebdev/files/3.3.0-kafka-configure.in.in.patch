@@ -1,0 +1,13 @@
+--- quanta/parts/kafka/configure.in.in.orig	2004-08-30 12:33:30.510517920 -0500
++++ quanta/parts/kafka/configure.in.in	2004-08-30 12:34:10.569428040 -0500
+@@ -14,8 +14,10 @@
+ AC_MSG_RESULT("$KDE_VERSION")
+ if test "x`echo $KDE_VERSION | grep 3.1.9`" = "x"; then
+  if test "x`echo $KDE_VERSION | grep 3.2`" = "x"; then
++   if test "x`echo $KDE_VERSION | grep 3.3`" = "x"; then
+     echo "The KDE version is too old, WYSIWYG mode disabled!"
+     build_wysiwyg="no"
++   fi
+  fi    
+ fi
+ 
