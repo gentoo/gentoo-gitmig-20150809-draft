@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/nss_ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.38 2005/02/03 14:24:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.39 2005/02/05 11:05:19 hansmi Exp $
+
+  05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> nss_ldap-226.ebuild:
+  Stable on ppc.
 
   03 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> nss_ldap-226.ebuild:
   Stable on sparc
