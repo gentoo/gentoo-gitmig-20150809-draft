@@ -1,6 +1,6 @@
-diff -u orig/bdf2h.c new/bdf2h.c
---- orig/bdf2h.c	2003-10-03 06:05:53.573182320 +0200
-+++ new/bdf2h.c	2003-10-03 06:16:07.603835472 +0200
+diff -u src.orig/bdf2h.c src/bdf2h.c
+--- src.orig/bdf2h.c	2003-10-03 06:05:53.573182320 +0200
++++ src/bdf2h.c	2003-10-03 06:16:07.603835472 +0200
 @@ -45,14 +45,14 @@
   */
  printf("#ifndef DEFINED_STRUCT_FONTINFO_TAG\n");
@@ -24,9 +24,9 @@ diff -u orig/bdf2h.c new/bdf2h.c
  printf("#endif\n\n");
  
  /* generate font data */
-diff -u orig/font.c new/font.c
---- orig/font.c	2003-10-03 06:05:53.573182320 +0200
-+++ new/font.c	2003-10-03 06:06:10.775567160 +0200
+diff -u src.orig/font.c src/font.c
+--- src.orig/font.c	2003-10-03 06:05:53.573182320 +0200
++++ src/font.c	2003-10-03 06:06:10.775567160 +0200
 @@ -37,9 +37,9 @@
   * best have this:
   */
@@ -40,9 +40,9 @@ diff -u orig/font.c new/font.c
  
  
  /* prototypes */
-diff -u orig/install-info.c new/install-info.c
---- orig/install-info.c	2003-10-03 06:05:53.573182320 +0200
-+++ new/install-info.c	2003-10-03 06:06:10.775567160 +0200
+diff -u src.orig/install-info.c src/install-info.c
+--- src.orig/install-info.c	2003-10-03 06:05:53.573182320 +0200
++++ src/install-info.c	2003-10-03 06:06:10.775567160 +0200
 @@ -309,38 +309,38 @@
  void
  print_help ()

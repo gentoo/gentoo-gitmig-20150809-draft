@@ -1,11 +1,16 @@
 # ChangeLog for media-gfx/zgv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/ChangeLog,v 1.6 2003/10/07 06:49:29 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/ChangeLog,v 1.7 2004/01/23 04:51:13 vapier Exp $
+
+*zgv-5.7-r1 (22 Jan 2004)
+
+  22 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Remove setuid bit since you dont need them with svgalib-1.9.x.
+
+*zgv-5.7 (03 Oct 2003)
 
   07 Oct 2003; Brandy Westcott brandy@gentoo.org zgv-5.7.ebuild:
   Added sys-apps/gawk as a dependency
-
-*zgv-5.7 (03 Oct 2003)
 
   03 Oct 2003; Heinrich Wendel <lanius@gentoo.org> zgv-5.7.ebuild,
   files/zgv-5.7-gcc3.patch:
