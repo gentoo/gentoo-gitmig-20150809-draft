@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.14 2002/12/09 04:21:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.15 2002/12/17 21:48:19 vapier Exp $
 
 inherit kde-base
 need-kde 3
@@ -35,9 +35,6 @@ newdepend ">=kde-base/kdebase-3
 # -j2 and greater fails - see bug #6199
 export MAKEOPTS="$MAKEOPTS -j1"
 
-APACHE_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
-[ -z "${APACHE_ROOT}" ] && APACHE_ROOT="/home/httpd/htdocs"
-
 src_unpack() {
 	base_src_unpack
 	cd ${S}/kdevelop
@@ -53,7 +50,6 @@ src_install() {
 
 	# setup htdig for use with kdevelop out-of-the-box (sort of)
 	sed -e "s:_KDEDIR_:${PREFIX}:g" \
-	 -e "s:/home/httpd/htdocs:${APACHE_ROOT}:" \
 		${FILESDIR}/htdig.conf > ${D}/${PREFIX}/share/apps/kdevelop/tools/htdig.conf
 	dodir ${PREFIX}/share/apps/kdevelop/htdig/db
 
