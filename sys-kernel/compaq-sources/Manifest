@@ -1,5 +1,5 @@
-MD5 83cbf31c6b6f644bc0d7ccad42cc6579 compaq-sources-2.4.9.32.7-r7.ebuild 3538
-MD5 e94e3bf8aaa46eefe45725be1c146f53 ChangeLog 2691
+MD5 0ef54514351abbd4c0431c3e65885b03 compaq-sources-2.4.9.32.7-r7.ebuild 3553
+MD5 685db9a9e1359760d83428ce1963856a ChangeLog 2803
 MD5 fa89a9407fb524aa495fff27051ef881 metadata.xml 684
 MD5 2c8a6f5232ae153c016cd241881b0719 files/compaq-sources-2.4.9.32.7.rtc_fix.patch 2152
 MD5 174438d215b70cad5ffb00ca8123c062 files/compaq-sources-2.4.9.32.7.munmap.patch 837

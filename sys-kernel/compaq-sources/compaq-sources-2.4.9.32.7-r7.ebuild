@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r7.ebuild,v 1.2 2004/06/24 22:55:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r7.ebuild,v 1.3 2004/06/26 15:39:51 squinky86 Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -23,7 +23,7 @@ DEPEND="${DEPEND}
 REDPEND=""
 DESCRIPTION="Kernel from the Compaq Distribution of Red Hat Linux (ALPHA)."
 SRC_URI="ftp://ftp2.compaq.com/pub/linux/RedHat/7.2-alpha/updates/rpms/alpha/kernel-source-${KV}.alpha.rpm"
-HOMEPAGE="http://www.kernel.org/ http://www.redhat.com/ http://www.support.compaq.com/alpha-tools/redhat/"
+HOMEPAGE="http://www.kernel.org/ http://www.redhat.com/ http://h18000.www1.hp.com/products/software/alpha-tools/redhat/"
 KEYWORDS="-* ~alpha"
 SLOT="${KV}"
 
