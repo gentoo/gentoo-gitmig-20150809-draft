@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/jack
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/ChangeLog,v 1.1 2003/07/27 21:25:29 raker Exp $
+
+*jack-2.99.9 (28 Jul 2003)
+
+  28 Jul 2003; Nick Hadaway <raker@gentoo.org> jack-2.99.9.ebuild:
+  See bug #12654.  Thanks to Aleksandr Tarutin for suggesting this 
+  package.
