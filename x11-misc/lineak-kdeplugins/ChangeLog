@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/lineak-kdeplugins
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/ChangeLog,v 1.1 2004/11/29 20:09:08 genstef Exp $
+
+*lineak-kdeplugins-0.8.2 (29 Nov 2004)
+
+  29 Nov 2004; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +lineak-kdeplugins-0.8.2.ebuild:
+  Adding ebuild from bug 72659 thanks to Bernd Westermann
+  <Bernd.Westermann@it-west.de> and Petteri Räty <petteri.raty@welho.com>
+
