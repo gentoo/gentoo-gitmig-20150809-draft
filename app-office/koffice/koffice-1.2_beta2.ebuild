@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta2.ebuild,v 1.7 2002/09/15 09:43:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta2.ebuild,v 1.8 2002/10/27 11:16:07 danarmak Exp $
 inherit kde-base
 
 need-kde 3
@@ -27,7 +27,7 @@ need-autoconf 2.5
 
 src_compile() {
 
-    myconf="$myconf --enable-final"
+    set_enable_final
     kde_src_compile myconf configure
 
     #the dir kchar/kdchart cannot be compiled with the -fomit-frame-pointer flag present
