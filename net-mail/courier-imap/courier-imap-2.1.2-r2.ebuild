@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.3-r1.ebuild,v 1.5 2004/02/22 16:13:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-2.1.2-r2.ebuild,v 1.1 2004/04/20 02:15:21 robbat2 Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 RESTRICT="nomirror"
 HOMEPAGE="http://www.courier-mta.org/"
-KEYWORDS="x86 ppc ~sparc ~mips ~alpha ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ipv6 gdbm ldap berkdb mysql pam nls postgres"
+IUSE="gdbm ldap berkdb mysql pam nls postgres fam selinux"
 PROVIDE="virtual/imapd"
 # not compatible with >=sys-libs/db-4
 RDEPEND="virtual/glibc
@@ -20,27 +20,42 @@ RDEPEND="virtual/glibc
 	mysql? ( >=dev-db/mysql-3.23.36 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.2 )
-	>=dev-tcltk/expect-5.33.0"
+	>=dev-tcltk/expect-5.33.0
+	fam? ( app-admin/fam )
+	selinux? ( sec-policy/selinux-courier-imap )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	dev-lang/perl
 	sys-apps/procps"
 
 #userpriv breaks linking against vpopmail
-VPOPMAIL_DIR=`cat /etc/passwd | grep ^vpopmail | cut -d: -f6`
+RESTRICT="nouserpriv nomirror"
+
 VPOPMAIL_INSTALLED=
-VPOPMAIL_ERROR=
-[ -n "${VPOPMAIL_DIR}" ] && [ -f "${VPOPMAIL_DIR}/etc/lib_deps" ] && VPOPMAIL_INSTALLED=1
-if [ -n "${VPOPMAIL_INSTALLED}" ]; then
-	has userpriv "${FEATURES}" && VPOPMAIL_ERROR=1
-fi
+VPOPMAIL_DIR=
+export VPOPMAIL_INSTALLED VPOPMAIL_DIR
+
+vpopmail_setup() {
+	VPOPMAIL_DIR=`grep ^vpopmail /etc/passwd 2>/dev/null | cut -d: -f6`
+	VPOPMAIL_INSTALLED=
+	if has_version 'net-mail/vpopmail' && [ -n "${VPOPMAIL_DIR}" ] && [ -f "${VPOPMAIL_DIR}/etc/lib_deps" ]; then
+		VPOPMAIL_INSTALLED=1
+	else
+		VPOPMAIL_DIR=
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
 
+	# patch to fix db4.0 detection as db4.1
+	# bug #27517, patch needs to go upstream
+	EPATCH_OPTS="${EPATCH_OPTS} -p1 -d ${S}" \
+	epatch ${FILESDIR}/courier-imap-2.1.1-db40vs41.patch
+
+	cd ${S}
 	# explicitly use db3 over db4
-	if [ -n "`use berkdb`" ]; then
+	if use berkdb; then
 		sed -i -e 's,-ldb,-ldb-3.2,g' configure
 		sed -i -e 's,-ldb,-ldb-3.2,g' bdbobj/configure
 		sed -i -e 's#s,@CFLAGS@,$CFLAGS,#s,@CFLAGS@,-I/usr/include/db3 $CFLAGS,#' configure
@@ -49,28 +64,37 @@ src_unpack() {
 
 	# Fix a bug with where the password change module is installed. Upstream bug in configure file.
 	sed -i -e 's,--with-authchangepwdir=/var/tmp/dev/null,--with-authchangepwdir=$libexecdir/authlib,' configure
+
+	epatch ${FILESDIR}/${PN}-2.1.2-removerpm.patch
+	epatch ${FILESDIR}/${P}-res_query.patch
+	cd ${S}/authlib
+	aclocal
+	autoconf
 }
 
 src_compile() {
-	[ -n "${VPOPMAIL_ERROR}" ]  && die "FEATURES=\"userpriv\" breaks the compile with vpopmail. For the moment, the only workaround is 'FEATURES=\"-userpriv -usersandbox\" emerge ${PN}'"
+	vpopmail_setup
 
 	local myconf
 	myconf="${myconf} `use_with pam authpam`"
 	myconf="${myconf} `use_with ldap authldap`"
 	myconf="${myconf} `use_with mysql authmysql`"
 	myconf="${myconf} `use_with postgres authpostgresql`"
-	myconf="${myconf} `use_with ipv6`"
-	myconf="${myconf} "
+	# the --with-ipv6 is broken
+	#myconf="${myconf} --with-ipv6"
+	use ipv6 || myconf="${myconf} --without-ipv6"
 	use berkdb \
 		&& myconf="${myconf} --with-db=db" \
 		|| myconf="${myconf} --with-db=gdbm"
 
 	if [ -n "${VPOPMAIL_INSTALLED}" ]; then
+		einfo "vpopmail found"
 		myconf="${myconf} --with-authvchkpw"
 		tmpLDFLAGS="`cat ${VPOPMAIL_DIR}/etc/lib_deps`"
 		LDFLAGS="${LDFLAGS} ${tmpLDFLAGS}"
 		CFLAGS="${CFLAGS} `cat ${VPOPMAIL_DIR}/etc/inc_deps`"
 	else
+		einfo "vpopmail not found"
 		myconf="${myconf} --without-authvchkpw"
 	fi
 
@@ -82,7 +106,7 @@ src_compile() {
 		myconf="${myconf} --disable-unicode"
 	fi
 
-	myconf="${myconf} debug=true"
+	use debug && myconf="${myconf} debug=true"
 
 	local cachefile
 	cachefile=${WORKDIR}/config.cache
@@ -92,6 +116,20 @@ src_compile() {
 	CFLAGS=`echo ${CFLAGS} | xargs`
 	CXXFLAGS=`echo ${CXXFLAGS} | xargs`
 	LDFLAGS=`echo ${LDFLAGS} | xargs`
+
+	# fix for bug #27528
+	# they really should use a better way to detect redhat
+	myconf="${myconf} --without-redhat"
+
+	# bug #29879 - FAM support
+	if has_version 'app-admin/fam' && [ -z "`use fam`" ]; then
+		ewarn "FAM will be detected by the package and support will be enabled"
+		ewarn "The package presently provides no way to disable fam support if you don't want it"
+	fi
+
+	# fix for non-x86 platforms, bug #38606
+	# courier-imap doesn't respect just --host=$CHOST without --build
+	[ -z "${CBUILD}" ] && export CBUILD="${CHOST}"
 
 	# Do the actual build now
 	LDFLAGS="${LDFLAGS}" econf \
@@ -119,6 +157,8 @@ src_compile() {
 }
 
 src_install() {
+	vpopmail_setup
+
 	dodir /var/lib/courier-imap /etc/pam.d
 	make install DESTDIR=${D} || die
 
