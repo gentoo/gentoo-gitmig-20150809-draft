@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.7 2002/07/28 13:09:58 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.8 2002/07/28 14:45:48 cselkirk Exp $
 
 *mutt-1.4-r2 (28 Jul 2002) 
+
+  28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> mutt-1.4-r2.ebuild :
+
+  Tested the jp.patch on ppc
+  Added ppc to keywords.
 
   28 Jul 2002; Stuart Bouyer <stubear@gentoo.org> mutt-1.4-r2.ebuild :
 
