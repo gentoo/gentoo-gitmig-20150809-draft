@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.4.0.ebuild,v 1.3 2004/07/17 13:59:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.4.0.ebuild,v 1.4 2004/10/15 20:31:18 swegener Exp $
 
 inherit base
 
@@ -8,11 +8,9 @@ IUSE="kde gnome debug"
 DESCRIPTION="A simple but functional graphical IRC client"
 HOMEPAGE="http://lostirc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
-#KEYWORDS="~sparc"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 
 RDEPEND="=dev-cpp/gtkmm-2.4*
 	=dev-cpp/glibmm-2.4*
