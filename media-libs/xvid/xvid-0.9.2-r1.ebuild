@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.2-r1.ebuild,v 1.9 2004/10/05 19:07:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.2-r1.ebuild,v 1.10 2005/01/09 07:04:18 luckyduck Exp $
 
 inherit eutils
 
