@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3616 2005/02/13 14:23:58 solar Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3617 2005/02/13 18:46:42 genone Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,18 @@
 ##
 ##   End example
 ##
+
+# <genone@gentoo.org> (25 Aug 2004)
+# Version including CVS snapshots for gtk2 support, masked until
+# it proofs itself usable (modified 13 Feb 2005).
+=mail-client/sylpheed-claws-0.9.12a-r1
+=mail-client/sylpheed-claws-1.0.1.1
+# <genone@gentoo.org> (13 Feb 2005)
+# Plugins for gtk2 version.
+=mail-client/sylpheed-claws-pgpinline-0.5-r1
+=mail-client/sylpheed-claws-mailmbox-1.0-r1
+=mail-client/sylpheed-claws-cachesaver-0.5-r1
+=mail-client/sylpheed-claws-vcalendar-0.9-r1
 
 # Ned Ludd <security@gentoo> (13 Feb 2005)
 # Masked by request of the security team. bug 79704
@@ -958,12 +970,6 @@ net-misc/nxserver-enterprise
 # <chriswhite@gentoo.org> (25 Aug 2004)
 # alpha version, seems ok to ~arch, but just to be safe..
 media-video/jahshaka
-
-# <genone@gentoo.org> (25 Aug 2004)
-# Version including CVS snapshots for gtk2 support, masked until
-# it proofs itself usable (modified 13 Feb 2005).
-=mail-client/sylpheed-claws-0.9.12a-r1
-=mail-client/sylpheed-claws-1.0.1.1
 
 # <carlo@gentoo.org> (23 Aug 2004)
 # upstream development suspended
