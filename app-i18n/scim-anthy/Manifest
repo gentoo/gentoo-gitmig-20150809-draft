@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a094d7c9a0d4764723c5acc84be7c91b scim-anthy-0.2.0.ebuild 966
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 70d5e7490f090d51c300138039e99b66 ChangeLog 354
+MD5 29c5ca987a06294af02811e6634bafad files/digest-scim-anthy-0.2.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBrC+4VWNWqTUmv+0RAljNAJ9smZL4XIxdU3EqTv3DKLaWKJmOhgCgsJr7
+9NBq7p1GD9X1wWio+NYHpKk=
+=K8Qd
+-----END PGP SIGNATURE-----
