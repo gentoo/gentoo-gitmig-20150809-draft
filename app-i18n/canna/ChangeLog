@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.22 2003/09/22 20:47:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.23 2003/09/22 21:12:03 usata Exp $
+
+  23 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> canna-3.6-r1.ebuild,
+  canna-3.6.ebuild, canna-3.6_p1.ebuild, canna-3.6_p3-r1.ebuild,
+  canna-3.6_p3.ebuild, files/canna-3.6-gentoo.diff,
+  files/canna-3.6-r1-gentoo.diff, files/canna-3.6_p1-gentoo.diff,
+  files/canna-3.6_p3-gentoo.diff, files/canna-3.6_p3-r1-gentoo.diff:
+  Cleaned up old versions. Renamed canna-3.6-r1.ebuild to
+  canna-3.6_p1.ebuild (it had wrong name)
 
 *canna-3.6_p4 (23 Sep 2003)
 
