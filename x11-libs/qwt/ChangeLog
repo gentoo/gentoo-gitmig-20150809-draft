@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.15 2004/10/20 06:21:18 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.16 2004/10/21 06:41:49 phosphan Exp $
+
+*qwt-4.2.0_rc2-r2 (21 Oct 2004)
+
+  21 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> +qwt-4.2.0_rc2-r2.ebuild:
+  Fixing include path for the examples, no longer zipping them.
 
 *qwt-4.2.0_rc2-r1 (20 Oct 2004)
 
