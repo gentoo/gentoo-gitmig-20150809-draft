@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/e_utils/e_utils-9999.ebuild,v 1.2 2005/01/19 01:43:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/e_utils/e_utils-0.0.1.20050116.ebuild,v 1.1 2005/01/19 01:43:16 vapier Exp $
 
 inherit enlightenment
 
