@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.9 2004/02/18 13:55:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.10 2004/03/05 13:40:34 tgall Exp $
 
 inherit gnuconfig
 
@@ -13,7 +13,7 @@ SRC_URI="http://usb.cs.tum.edu/download/usbutils/${P}.tar.gz
 	mirror://gentoo/usb.ids-${USB_IDS_VER}.gz"
 HOMEPAGE="http://usb.cs.tum.edu/"
 
-KEYWORDS="x86 amd64 ppc sparc hppa alpha ia64"
+KEYWORDS="x86 amd64 ppc sparc hppa alpha ia64 ppc64"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
@@ -24,9 +24,12 @@ src_unpack() {
 	unpack ${A}
 	use amd64 && gnuconfig_update
 	use alpha && gnuconfig_update
+	use ppc64 && gnuconfig_update
 
 	# replace usb.ids with an updated version
 	mv ${WORKDIR}/usb.ids-${USB_IDS_VER} ${S}/usb.ids || die "unable to replace usb.ids"
+
+	use ppc64 && ( cd ${S}; epatch ${FILESDIR}/0.11/ppc64-usbutils-kheaderfix.patch )
 }
 
 src_compile() {
