@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.20 2004/08/03 14:30:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.21 2004/08/18 14:29:45 agriffis Exp $
+
+  18 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  linux26-headers-2.6.7-r4.ebuild:
+  add ~ia64
 
   03 Aug 2004; Luca Barbato <lu_zero@gentoo.org>
   files/linux26-headers-2.6.7-appCompat.patch,
