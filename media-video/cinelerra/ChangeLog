@@ -1,6 +1,13 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.7 2003/05/06 08:26:19 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.8 2003/05/13 17:59:55 lu_zero Exp $
+
+*cinelerra-1.1.6 (13 Mar 2003)
+
+  13 Mar 2003; Luca Barbato <lu_zero@gentoo.org> cinelerra-1.1.6.ebuild,
+  files/digest-cinelerra-1.1.6 files/compile-1.1.6.diff :
+  New ebuild. Should build correctly. Thanks to suka <suka@t0.or.at> and 
+  ndep8515@postoffice.uri.edu 
 
   06 May 2003; Bartosch Pixa <darkspecter@gentoo.org> cinelerra-1.1.5.ebuild:
   CFLAGS magic as everything above -O2 seems to break cinelerra
