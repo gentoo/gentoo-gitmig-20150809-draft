@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clean/clean-2.0.1.ebuild,v 1.2 2002/08/17 02:27:20 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clean/clean-2.0.1.ebuild,v 1.3 2002/10/20 18:41:38 vapier Exp $
 
 DESCRIPTION="Clean"
 HOMEPAGE="http://www.cs.kun.nl/~clean/"
@@ -11,7 +11,6 @@ SLOT="0"
 KEYWORDS="x86 -ppc -sparc -sparc64"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 S="${WORKDIR}/Clean 2.0.1 Sources"
 
 src_unpack() {

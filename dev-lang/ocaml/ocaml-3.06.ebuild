@@ -1,6 +1,6 @@
 # Copyright 20022 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.06.ebuild,v 1.3 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.06.ebuild,v 1.4 2002/10/20 18:41:38 vapier Exp $
 
 IUSE="tcltk"
 
@@ -11,7 +11,6 @@ HOMEPAGE="http://www.ocaml.org/"
 
 DEPEND="virtual/glibc
 	tcltk? ( >=dev-lang/tk-3.3.3 )"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="QPL-1.0 LGPL-2"

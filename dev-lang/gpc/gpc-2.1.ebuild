@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.7 2002/10/04 05:12:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.8 2002/10/20 18:41:38 vapier Exp $
 
 S="${WORKDIR}/gcc-2.95.3"
 
@@ -19,7 +19,6 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc
 		~sys-devel/gcc-2.95.3"
 
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack "${P}.tar.gz"

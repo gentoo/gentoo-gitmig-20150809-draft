@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-0.99.5.ebuild,v 1.2 2002/10/04 05:12:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-0.99.5.ebuild,v 1.3 2002/10/20 18:41:38 vapier Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,6 @@ HOMEPAGE="http://www.ferite.org/"
 DEPEND="virtual/glibc
 		dev-libs/libpcre
 		dev-libs/libxml2"
-RDEPEND="${DEPEND}"
 
 SLOT="1"
 LICENSE="as-is"

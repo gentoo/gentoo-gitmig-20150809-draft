@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.19 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.20 2002/10/20 18:41:38 vapier Exp $
 
 IUSE="sdl gnome ssl opengl python tcltk perl"
 
@@ -19,7 +19,6 @@ DEPEND=">=media-libs/imlib-1.9.10-r1
 	opengl? ( <x11-libs/gtkglarea-1.99.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="MIT"
