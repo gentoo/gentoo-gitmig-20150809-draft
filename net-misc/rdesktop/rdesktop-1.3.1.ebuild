@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.3.1.ebuild,v 1.7 2004/05/24 06:11:41 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.3.1.ebuild,v 1.8 2004/06/14 21:05:00 wolf31o2 Exp $
 
 DESCRIPTION="A Remote Desktop Protocol Client"
 HOMEPAGE="http://rdesktop.sourceforge.net/"
@@ -24,9 +24,7 @@ src_compile() {
 		&& myconf="--with-openssl=/usr/include/openssl" \
 		|| myconf="--without-openssl"
 
-	sed -e "s:-O2:${CFLAGS}:g" Makefile > Makefile.tmp
-	mv Makefile.tmp Makefile
-	echo "CFLAGS += ${CXXFLAGS}" >> Makeconf
+	sed -i -e '/-O2/c\' -e 'cflags="$cflags ${CFLAGS}"' configure
 
 	./configure \
 		--prefix=/usr \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.3.0-r1.ebuild,v 1.4 2004/04/27 21:46:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.3.0-r1.ebuild,v 1.5 2004/06/14 21:04:00 wolf31o2 Exp $
 
 inherit eutils
 
@@ -48,9 +48,7 @@ src_compile() {
 		&& myconf="--with-openssl=/usr/include/openssl" \
 		|| myconf="--without-openssl"
 
-	sed -e "s:-O2:${CFLAGS}:g" Makefile > Makefile.tmp
-	mv Makefile.tmp Makefile
-	echo "CFLAGS += ${CXXFLAGS}" >> Makeconf
+	sed -i -e '/-O2/c\' -e 'cflags="$cflags ${CFLAGS}"' configure
 
 	./configure \
 		--prefix=/usr \
