@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.23-r1.ebuild,v 1.1 2005/03/02 17:34:40 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.24.ebuild,v 1.1 2005/03/04 14:54:50 voxus Exp $
 
 inherit eutils
 
@@ -21,7 +21,15 @@ src_compile() {
 	local myconf
 
 	use ssl				&& myconf="${myconf} --with-http_ssl_module"
-	use threads			&& myconf="${myconf} --with-threads"
+
+	if use threads; then
+		einfo
+		ewarn "threads support is experimental at the moment"
+		ewarn "do not use it on production systems - you've been warned"
+		einfo
+		myconf="${myconf} --with-threads"
+	fi
+
 	use zlib			|| myconf="${myconf} --without-http_gzip_module"
 
 #	use charset-mod		|| myconf = "${myconf} --without-http_charset_module"
