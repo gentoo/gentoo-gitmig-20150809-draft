@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.51 2004/12/08 13:42:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.52 2004/12/11 14:15:53 solar Exp $
+
+*busybox-1.00-r1 (11 Dec 2004)
+
+  11 Dec 2004; <solar@gentoo.org> +files/1.00/busybox-read-timeout.patch,
+  +files/1.00/readlink-follow.patch, +busybox-1.00-r1.ebuild:
+  - CONFIG_FEATURE_READLINK_FOLLOW readlink -f patch from Colin Watson
+  <cjwatson@debian.org> on busybox mailing list 08/11/04. - Added ash -t timeout
+  patch from plasmaroo.
 
   08 Dec 2004; Daniel Black <dragonheart@gentoo.org> busybox-1.00.ebuild:
   ppc stable as per bug 73241

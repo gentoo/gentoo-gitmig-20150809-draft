@@ -1,31 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 de92a071726144028bc7cbbd9f9c51d5 ChangeLog 9846
-MD5 99fad2bf0042dc1141d3089e9f6baeb2 busybox-1.00_rc3.ebuild 6871
-MD5 f98f75be102af5709caff4cf84eaeb90 busybox-0.60.3-r1.ebuild 1091
 MD5 0e53f2aa3a8c8f426721a31ac9d978a5 busybox-1.00.ebuild 6822
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 bb58878c35f17f5bad4aa060f1dcc25e busybox-0.60.3-r2.ebuild 1183
+MD5 f5178c8fd8c1421ea0f6fa05918d1d4a busybox-1.00-r1.ebuild 7009
+MD5 f98f75be102af5709caff4cf84eaeb90 busybox-0.60.3-r1.ebuild 1091
+MD5 99fad2bf0042dc1141d3089e9f6baeb2 busybox-1.00_rc3.ebuild 6871
+MD5 e670b6cbe61335991795e8b9a777d3bb ChangeLog 10185
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 d9841a0171170d16bb121c696591e7ef files/config-netboot 9853
+MD5 335f1c2b99e52e880f3a490df9be39da files/digest-busybox-1.00-r1 66
+MD5 335f1c2b99e52e880f3a490df9be39da files/digest-busybox-1.00 66
 MD5 9ce965b12114a360496fe06e952139a8 files/Config.h 11695
 MD5 24ec3839ecb3e429bf29a819398b7753 files/Config.h-0.60.2-cd 13772
 MD5 af127cfced92352c0a43cbf63cde52bd files/Config.h-0.60.3-cd 14319
 MD5 1bce86c66f42d204c0780faee28004d6 files/Config.h-0.60.5-cd 14299
-MD5 9af76647376bd7228609763aaad090e8 files/busybox-0.60.5-dietlibc.diff 13526
-MD5 9167897ed0b558e714a92f7e2d2fe534 files/busybox-1.00-pre3.config 8804
-MD5 335f1c2b99e52e880f3a490df9be39da files/digest-busybox-1.00 66
-MD5 75d3d96c0d23ddd4ffae3daa59e0fb1e files/digest-busybox-1.00_rc3 70
-MD5 61ecae720ff226b1e543f7c1d0900043 files/digest-busybox-0.60.3-r1 66
-MD5 d9841a0171170d16bb121c696591e7ef files/config-netboot 9853
 MD5 9750d4004e6507d35f9aa67d2785fdd3 files/dodeps 2015
-MD5 3a4b93f7ec6f3aaade20029a81562b88 files/msh.diff 433
-MD5 61ecae720ff226b1e543f7c1d0900043 files/digest-busybox-0.60.3-r2 66
 MD5 4e80b04a6c57cb7341be774b55b7229c files/busybox-cmdedit-sparc.diff 568
+MD5 9167897ed0b558e714a92f7e2d2fe534 files/busybox-1.00-pre3.config 8804
 MD5 8eae5b311553ee77cda4524ab892468c files/busybox-1.00_rc3-amd64.patch 658
+MD5 61ecae720ff226b1e543f7c1d0900043 files/digest-busybox-0.60.3-r1 66
+MD5 61ecae720ff226b1e543f7c1d0900043 files/digest-busybox-0.60.3-r2 66
+MD5 9af76647376bd7228609763aaad090e8 files/busybox-0.60.5-dietlibc.diff 13526
+MD5 75d3d96c0d23ddd4ffae3daa59e0fb1e files/digest-busybox-1.00_rc3 70
+MD5 3a4b93f7ec6f3aaade20029a81562b88 files/msh.diff 433
+MD5 1587853e73bcbda7157048299fc659fe files/1.00/busybox-read-timeout.patch 1964
+MD5 f16657b6a3bf9602a65dbb5f431afbda files/1.00/readlink-follow.patch 2795
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBtwTbmdTrptrqvGERAmU9AJ9of4YsyLFXGMoQLzm6lbuDfmEIhACeI6Le
-tEa2jAm1zgzkqzujPtt71dQ=
-=BbPC
+iQCVAwUBQbsA+Z4WFLgrx1GWAQKgAgP/e4Ut5PeriHOWkKKqtWlhlLw4gQPQxWwj
+4Cf/UCQrmhHhGcUSeWCm7nQafYfab5JyLvGAkBKGWyqmUYVosKBxrTo1lY8qnu5m
+yaWWKCbOkgbTANRytNpjuPJFDQ5BmEAEzJZa4wwZ4DZWBGZmSt8MaXWFpOfGnQV5
+t9y1s45Eb68=
+=n469
 -----END PGP SIGNATURE-----
