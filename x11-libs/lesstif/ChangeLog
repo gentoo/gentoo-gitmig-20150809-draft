@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/lesstif
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.24 2004/01/12 11:14:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.25 2004/01/27 20:46:42 lanius Exp $
+
+  27 Jan 2004; Heinrich Wendel <lanius@gentoo.org> lesstif-0.93.36-r3.ebuild,
+  lesstif-0.93.36.ebuild, lesstif-0.93.40.ebuild, lesstif-0.93.91.ebuild:
+  remove old versions
 
   11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> lesstif-0.93.94.ebuild:
   stable bump, bug #29388
