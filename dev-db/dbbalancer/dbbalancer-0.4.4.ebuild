@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.7 2004/03/14 13:19:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.8 2004/03/16 08:01:46 mr_bones_ Exp $
 
 DESCRIPTION="Load balancing multithreaded PostgreSQL connection pool.
 Also has a replication mode to keep in sync the load balanced backend
 servers."
 HOMEPAGE="http://sourceforge.net/projects/dbbalancer"
-SRC_URI="http://easynews.dl.sourceforge.net/sourceforge/dbbalancer/dbbalancer-0.4.4.tar.gz"
+SRC_URI="mirror://sourceforge/dbbalancer/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
@@ -16,10 +17,8 @@ DEPEND=">=postgresql-7.2.3-r1
 	>=dev-libs/ace-5.2.4-r1
 	>=openjade-1.3.1-r5
 	=docbook-dsssl-stylesheets-1.77"
-RDEPEND="$DEPEND"
 
 S="${WORKDIR}/DBBalancer"
-A=${P}.tar.gz
 
 src_unpack() {
 	unpack ${A}
