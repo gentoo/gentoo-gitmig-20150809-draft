@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.lesstif.org/"
 LICENSE="LGPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-SLOT="1.2"
+SLOT="0"
 
 DEPEND="virtual/glibc
 	virtual/x11"
@@ -35,59 +35,59 @@ src_install() {
 
 
 	einfo "Fixing binaries"
+	dodir /usr/X11R6/bin/lesstif
 	for file in `ls ${D}/usr/bin`
 	do
-		mv ${D}/usr/bin/${file} ${D}/usr/bin/${file}-1.2
+		mv ${D}/usr/bin/${file} ${D}/usr/X11R6/bin/lesstif/${file}
 	done
+	rm -f ${D}/usr/X11R6/bin/lesstif/mxmkmf
+	rm -fR ${D}/usr/bin
 
 
 	einfo "Fixing docs"
 	dodir /usr/share/doc/
 	mv ${D}/usr/LessTif ${D}/usr/share/doc/${P}
+	rm -fR ${D}/usr/lib/LessTif
 
 
 	einfo "Fixing libraries"
-	dodir /usr/lib/motif/1.2
-	mv ${D}/usr/lib/lib* ${D}/usr/lib/motif/1.2
+	dodir /usr/X11R6/lib/lesstif
+	mv ${D}/usr/lib/lib* ${D}/usr/X11R6/lib/lesstif
 
 	for lib in libMrm.so.1 libMrm.so.1.0.2 \
 		libUil.so.1 libUil.so.1.0.2 \
 		libXm.so.1  libXm.so.1.0.2
 	do
-		dosym "/usr/lib/motif/1.2/${lib}"\
-			"/usr/lib/${lib}"
+		dosym "/usr/X11R6/lib/lesstif/${lib}"\
+			"/usr/X11R6/lib/${lib}"
 	done
+	rm -fR ${D}/usr/lib
 
 
 	einfo "Fixing includes"
-	dodir /usr/include/Mrm/1.2/Mrm
-	dodir /usr/include/Xm/1.2/Xm
-	dodir /usr/include/uil/1.2/uil
-
-	mv ${D}/usr/include/Mrm/*.h ${D}/usr/include/Mrm/1.2/Mrm
-	mv ${D}/usr/include/Xm/*.h ${D}/usr/include/Xm/1.2/Xm
-	mv ${D}/usr/include/uil/*.{h,uil} ${D}/usr/include/uil/1.2/uil
+	dodir /usr/X11R6/include/lesstif/
+	mv ${D}/usr/include/* ${D}/usr/X11R6/include/lesstif
+	rm -fR ${D}/usr/include
 
 
 	einfo "Fixing man pages"
+	dodir /usr/X11R6/share/man/{man1,man3,man5}
 	for file in `ls ${D}/usr/share/man/man1`
 	do
 		file=${file/.1/}
-		mv ${D}/usr/share/man/man1/${file}.1 ${D}/usr/share/man/man1/${file}-12.1
+		mv ${D}/usr/share/man/man1/${file}.1 ${D}/usr/X11R6/share/man/man1/${file}-12.1
 	done
 	for file in `ls ${D}/usr/share/man/man3`
 	do
 		file=${file/.3/}
-		mv ${D}/usr/share/man/man3/${file}.3 ${D}/usr/share/man/man3/${file}-12.3
+		mv ${D}/usr/share/man/man3/${file}.3 ${D}/usr/X11R6/share/man/man3/${file}-12.3
 	done
-	for file in `ls ${D}/usr/share/man/man5`
+	for file in `ls ${D}/usr/share/man/man6`
 	do
 		file=${file/.5/}
-		mv ${D}/usr/share/man/man5/${file}.5 ${D}/usr/share/man/man5/${file}-12.5
+		mv ${D}/usr/share/man/man3/${file}.5 ${D}/usr/X11R6/share/man/man3/${file}-12.5
 	done
+	rm -fR ${D}/usr/share/man
 
-	einfo "Cleaning up"
-	rm -fR ${D}/usr/lib/LessTif
-	rm -fR ${D}/usr/lib/X11
-	rm -f  ${D}/bin/mxmkmf-1.2
+	rm -fR ${D}/usr/share/aclocal
 }
