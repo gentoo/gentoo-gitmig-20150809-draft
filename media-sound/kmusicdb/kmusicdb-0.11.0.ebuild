@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmusicdb/kmusicdb-0.11.0.ebuild,v 1.4 2004/06/25 00:07:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmusicdb/kmusicdb-0.11.0.ebuild,v 1.5 2004/06/29 00:42:06 carlo Exp $
 
-inherit kde-base
-myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-pqdir=/usr/include/ --with-qtdir=/usr/qt/3/ --with-kdedir=/usr/kde/3/"
+inherit kde
+
+DESCRIPTION="KmusicdB is a music collection management software."
+HOMEPAGE="http://kmusicdb.sourceforge.net/"
+SRC_URI="mirror://sourceforge/kmusicdb/${P}.tar.gz"
+
+LICENSE="GPL-2"
+KEYWORDS="x86"
+IUSE=""
+
+DEPEND=">=media-libs/libdbmusic-0.7.0"
 need-kde 3
 
-IUSE=""
-LICENSE="GPL-2"
-DESCRIPTION="KmusicdB is a music collection management software."
-SRC_URI="mirror://sourceforge/kmusicdb/${P}.tar.gz"
-HOMEPAGE="http://kmusicdb.sourceforge.net/"
-KEYWORDS="x86"
-
-newdepend ">=media-libs/libdbmusic-0.7.0"
+myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-pqdir=/usr/include/ --with-qtdir=/usr/qt/3/ --with-kdedir=/usr/kde/3/"
