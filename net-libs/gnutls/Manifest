@@ -1,5 +1,5 @@
-MD5 f80c1c21b9ef3ddff9d49a8c83436fc4 ChangeLog 1457
-MD5 8e0daafdf039c7b160a98b515b6c056a gnutls-0.8.10.ebuild 1227
+MD5 520be38f5cd20909030b64a059fe9fd2 ChangeLog 1551
+MD5 d4043b45c5c95879c395d3bffc5dde29 gnutls-0.8.10.ebuild 1225
 MD5 2177b25232dce167873dccdc3694ed45 gnutls-0.8.12.ebuild 1289
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 b2ae83a3180a66ab61bdf08669f27399 files/digest-gnutls-0.8.10 66
