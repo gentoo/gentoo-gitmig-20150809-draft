@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.7.ebuild,v 1.5 2004/09/23 12:55:28 gustavoz Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.7.ebuild,v 1.6 2004/09/25 07:43:24 vapier Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -12,7 +10,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="1.2"
-KEYWORDS="x86 ~ppc sparc ~arm ~hppa amd64 ~alpha ~mips ~macos ~ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ~macos ~mips ~ppc ~ppc64 ~ppc-macos ~s390 sparc x86"
+IUSE=""
 
 DEPEND="sys-libs/zlib"
 
@@ -23,7 +22,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}-gentoo.diff"
 
 	if [ "$(gcc-version)" == "3.3" -o "$(gcc-version)" == "3.2" ] ; then
-		replace-cpu-flags i586 k6 k6-2 k6-3
+		replace-cpu-flags k6 k6-2 k6-3 i586
 	fi
 
 	if use macos || use ppc-macos ; then

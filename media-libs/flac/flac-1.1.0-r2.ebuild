@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r2.ebuild,v 1.7 2004/08/08 14:48:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r2.ebuild,v 1.8 2004/09/25 07:41:37 vapier Exp $
 
 inherit libtool eutils flag-o-matic gcc
 
@@ -35,7 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
-	use hppa && [ "`gcc-fullversion`" == "3.4.0" ] && replace-cpu-flags 1.0 2.0
+	use hppa && [ "`gcc-fullversion`" == "3.4.0" ] && replace-cpu-flags 2.0 1.0
 
 	econf \
 		--with-pic \

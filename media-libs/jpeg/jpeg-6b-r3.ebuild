@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.30 2004/09/22 20:09:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.31 2004/09/25 07:41:51 vapier Exp $
 
 inherit gnuconfig flag-o-matic libtool
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	replace-cpu-flags i586 k6 k6-2 k6-3
+	replace-cpu-flags k6 k6-2 k6-3 i586
 
 	econf --enable-shared --enable-static || die "econf failed"
 
