@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.8.3.ebuild,v 1.4 2004/01/18 14:51:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.8.3.ebuild,v 1.5 2004/01/29 04:46:19 agriffis Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2 LGPL-2"
 
 IUSE="doc ssl"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha sparc hppa amd64 ~ia64"
+KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ia64"
 
 #MAKEOPTS="${MAKEOPTS} -j1"
 
