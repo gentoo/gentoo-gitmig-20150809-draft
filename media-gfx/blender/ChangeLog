@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.18 2003/09/30 19:22:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.19 2003/10/10 22:41:14 blauwers Exp $
+
+  11 Oct 2003; Bart Lauwers <blauwers@gentoo.org> blender-2.28c.ebuild :
+  Version bump.
 
   30 Sep 2003; Michael Sterrett <mr_bones_@gentoo.org> blender-2.28.ebuild,
   blender-2.28a.ebuild:
