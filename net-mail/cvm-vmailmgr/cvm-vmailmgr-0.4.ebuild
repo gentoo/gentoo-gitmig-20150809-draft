@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/cvm-vmailmgr-0.4.ebuild,v 1.1 2003/05/09 18:08:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/cvm-vmailmgr-0.4.ebuild,v 1.2 2003/07/13 13:32:32 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="CVM modules for use with vmailmgr"
@@ -9,7 +9,7 @@ HOMEPAGE="http://untroubled.org/cvm-vmailmgr/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 DEPEND="virtual/glibc
 	>=dev-libs/bglibs-1.009"

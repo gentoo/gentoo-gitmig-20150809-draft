@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1.ebuild,v 1.1 2003/05/09 18:14:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1.ebuild,v 1.2 2003/07/13 13:32:32 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Rate-limited autoresponder for qmail."
@@ -9,7 +9,7 @@ HOMEPAGE="http://untroubled.org/qmail-autoresponder/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 
 DEPEND="virtual/glibc
 	dev-libs/bglibs"

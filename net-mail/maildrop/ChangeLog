@@ -1,11 +1,11 @@
 # ChangeLog for net-mail/maildrop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.21 2003/07/09 08:21:27 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.22 2003/07/13 13:32:32 aliz Exp $
 
 *maildrop-1.5.3 (09 Jul 2003)
   09 Jul 2003; Jared Hudson <jhhudso@gentoo.org> : Version bump.
 	
-*maildir-1.5.2 (14 Feb 2003)
+*maildrop-1.5.2 (14 Feb 2003)
 
   11 Jun 2003; Robin Johnson <robbat2@gentoo.org> maildrop-1.5.2.ebuild:
   While maildroprc goes into /etc, the mysql+ldap configs need to go

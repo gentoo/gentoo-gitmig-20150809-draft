@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/bogofilter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/ChangeLog,v 1.13 2003/07/09 18:55:13 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/ChangeLog,v 1.14 2003/07/13 13:32:32 aliz Exp $
 
 *bogofilter-0.13.7.2
 
@@ -43,6 +43,11 @@
 
   13 Mar 2003; Graham Forest <vladimir@gentoo.org> bogofilter-0.11.1.3.ebuild:
   Version bump, added ~ppc to keywords
+
+*bogofilter-0.11.2 (02 Jun 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *bogofilter-0.10.3 (15 Feb. 2003)
 
