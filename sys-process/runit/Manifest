@@ -1,6 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+- -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3f630824a3b06940d303e72f83c2ebaa ChangeLog 602
 MD5 a34208554795668166edac85b8292b86 runit-1.0.5.ebuild 1664
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
@@ -11,10 +14,17 @@ MD5 ca1dc1a0ccab2afbac7a8540c74bd612 files/finish.getty 30
 MD5 14c3375cd167d9c7b1b89febd8de64e6 files/3 377
 MD5 9f1dcf4c31a2d9df9336b8d1c9b13a83 files/ctrlaltdel 189
 MD5 3b574bfad17bf4d2d22e025289d2bad7 files/2 551
------BEGIN PGP SIGNATURE-----
+- -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
 iD8DBQFCJzZsLLFUmVNQ7rkRAqUsAJ9r2wXWIK+o80eVVMMGyE5+OzPd8ACfSYZO
 FFG7nQfAYCxNd5jah41WbK0=
 =CYE2
+- -----END PGP SIGNATURE-----
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJzaWLLFUmVNQ7rkRAuxOAKDN+FPkqCoDioQO2SvG8zK/wXtPEgCfWEui
+xAKI9UkIaVJrKQxuFXbsSmw=
+=IW2C
 -----END PGP SIGNATURE-----

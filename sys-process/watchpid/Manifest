@@ -1,4 +1,14 @@
-MD5 cb8ee76aa35571c40a8e9a49729e4643 watchpid-0.1-r1.ebuild 674
-MD5 a61bc36571259a07da43251ae93bbd5a ChangeLog 968
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe9fc35885e174c7b5137373e9d75fa3 ChangeLog 1151
+MD5 5503713e39aaa9ebe4db9be01ccc1e82 watchpid-0.1-r1.ebuild 675
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 88ee3424da7d0e827ee6bba7aa59c5cc files/digest-watchpid-0.1-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJzk0LLFUmVNQ7rkRAqbXAJ4yQCHqE0BjzrTgHvYkB5pxq9SmPQCfbzi1
+Mi6pS0bVmzTjexp+Gs6ZVc0=
+=4THz
+-----END PGP SIGNATURE-----
