@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2693 2004/02/12 22:18:17 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2694 2004/02/13 02:39:09 rizzo Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -737,4 +737,8 @@ app-misc/todo-manager-bronze
 # rphillips@gentoo.org 01 Dec 2003
 # mask arch in favor of tla
 dev-util/arch
+
+# rizzo@gentoo.org 12 Feb 2004
+# mask libsqlora8 until I can find an oracle 8i install
+dev-libs/libsqlora8
 
