@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxdash/tuxdash-0.8.ebuild,v 1.2 2004/10/18 12:22:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxdash/tuxdash-0.8.ebuild,v 1.3 2004/11/11 00:42:50 josejx Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tuxdash.de/ressources/downloads/${PN}_src_${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND="media-libs/libsdl

@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/supertux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/ChangeLog,v 1.14 2004/09/23 14:19:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/ChangeLog,v 1.15 2004/11/11 00:42:42 josejx Exp $
+
+  11 Nov 2004; Joseph Jezak <josejx@gentoo.org> supertux-0.1.2.ebuild:
+  Marked ppc stable.
 
   23 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> supertux-0.1.2.ebuild:
   Stable on sparc
