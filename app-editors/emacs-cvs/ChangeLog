@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.24 2004/11/25 03:26:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.25 2004/12/16 04:52:27 usata Exp $
+
+  16 Dec 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -emacs-cvs-21.3.50-r1.ebuild, emacs-cvs-21.3.50-r2.ebuild,
+  emacs-cvs-21.3.50.ebuild, emacs-cvs-22.0.0.ebuild:
+  Removed dependency to pexpect and gdbm; bug #74368.
 
 *emacs-cvs-21.3.50-r2 (25 Nov 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.25 2004/10/03 08:20:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.26 2004/12/16 04:52:27 usata Exp $
 
 ECVS_AUTH="ext"
 export CVS_RSH="ssh"
@@ -25,8 +25,6 @@ SANDBOX_DISABLED="1"
 RESTRICT="$RESTRICT nostrip"
 
 DEPEND=">=sys-libs/ncurses-5.3
-	sys-libs/gdbm
-	dev-python/pexpect
 	spell? ( || ( app-text/ispell app-text/aspell ) )
 	X? ( virtual/x11
 		gif? ( >=media-libs/libungif-4.1.0.1b )
