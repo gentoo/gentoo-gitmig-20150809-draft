@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>embedded</herd>
+<maintainer>
+  <email>embedded@gentoo.org</email>
+  <name>Primary Maintainer</name>
+</maintainer>
+<longdescription>reimplement libdjb - excellent libraries from Dan Bernstein</longdescription>
+</pkgmetadata>
