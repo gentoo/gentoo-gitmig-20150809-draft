@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.7.ebuild,v 1.5 2003/02/25 17:45:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.7.ebuild,v 1.6 2003/03/05 15:30:02 wwoods Exp $
 
 IUSE="ldap pam postgres mysql ssl tcpd"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.proftpd.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc hppa"
+KEYWORDS="x86 sparc hppa alpha"
 
 DEPEND="net-libs/libpcap
 	pam? ( >=sys-libs/pam-0.75 )
