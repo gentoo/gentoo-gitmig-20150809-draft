@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/ptrtd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ptrtd/ChangeLog,v 1.1 2003/05/31 19:34:44 latexer Exp $
+
+*ptrtd-0.5.2 (31 May 2003)
+
+  31 May 2003; Peter Johanson <latexer@gentoo.org> ptrtd-0.5.2.ebuild,
+  files/ptrtd.confd, files/ptrtd.initd:
+  Initial import. Useful app for doing 6to4 connections.
+
