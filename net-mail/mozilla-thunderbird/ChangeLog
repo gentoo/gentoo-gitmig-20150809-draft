@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.16 2003/12/07 16:35:53 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.17 2003/12/22 21:48:07 bazik Exp $
+
+  22 Dec 2003; Sven Blumenstein <bazik@gentoo.org>
+  mozilla-thunderbird-0.3.ebuild:
+  Marked stable on sparc.
 
 *mozilla-thunderbird-0.4 (07 Dec 2003)
 
