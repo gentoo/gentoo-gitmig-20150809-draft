@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.1.ebuild,v 1.9 2004/10/04 21:40:26 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.1.ebuild,v 1.10 2004/10/17 11:25:57 absinthe Exp $
 
 inherit eutils gnuconfig
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc64 ppc sparc mips alpha ~arm hppa ~amd64 ia64 ~s390"
+KEYWORDS="x86 ~ppc64 ppc sparc mips alpha ~arm hppa amd64 ia64 ~s390"
 IUSE="bootstrap nls"
 
 DEPEND="virtual/libc
