@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Find-Rule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/ChangeLog,v 1.11 2005/01/12 01:49:55 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/ChangeLog,v 1.12 2005/03/16 15:56:07 mcummings Exp $
+
+  16 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  File-Find-Rule-0.26.ebuild, File-Find-Rule-0.28.ebuild:
+  style cleanup
 
   12 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
   File-Find-Rule-0.28.ebuild:
