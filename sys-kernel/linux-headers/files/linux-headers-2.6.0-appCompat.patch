@@ -64,7 +64,7 @@ diff -Naur linux-2.6.0/include/linux/fs.h linux-2.6.0/include/linux.plasmaroo/fs
 -#include <linux/radix-tree.h>
 +
 +/* This should fix any ``sys-fs'' items getting spinlocks.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.4 2003/12/25 16:09:22 plasmaroo Exp $ 
++   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.5 2003/12/26 11:11:38 plasmaroo Exp $ 
 +*/
 +
 +#ifdef __KERNEL__
@@ -84,7 +84,7 @@ diff -Naur linux-2.6.0/include/linux/isdn.h linux-2.6.0/include/linux.plasmaroo/
 -#include <linux/isdn/fsm.h>
 +
 +/* This should sort out ``ligtop'' from getting spinlocks.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.4 2003/12/25 16:09:22 plasmaroo Exp $
++   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.5 2003/12/26 11:11:38 plasmaroo Exp $
 +*/
 +#ifdef __KERNEL__
 +	#include <linux/isdn/fsm.h>
@@ -102,7 +102,7 @@ diff -Naur linux-2.6.0/include/linux/msdos_fs.h linux-2.6.0/include/linux.plasma
 -#include <linux/buffer_head.h>
 +
 +/* This should sort out any problems with ``dosfstools''.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.4 2003/12/25 16:09:22 plasmaroo Exp $
++   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.5 2003/12/26 11:11:38 plasmaroo Exp $
 +*/
 +#ifdef __KERNEL__
 +	#include <linux/buffer_head.h>
@@ -220,7 +220,7 @@ diff -Naur linux-2.6.0/include/linux/videodev.h linux-2.6.0/include/linux.plasma
 -#include <linux/device.h>
 +
 +/* Should sort out ``DirectFB''.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.4 2003/12/25 16:09:22 plasmaroo Exp $
++   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.5 2003/12/26 11:11:38 plasmaroo Exp $
 +*/
 +#ifdef __KERNEL__
 +	#include <linux/device.h>
@@ -243,3 +243,16 @@ diff -Naur linux-2.6.0/include/linux/mod_devicetable.h linux-2.6.0/include/linux
  
  #define PCI_ANY_ID (~0)
  
+diff -Naur linux-2.6.0/include/linux/compiler-gcc2.h linux-2.6.0/include/linux.plasmaroo/compiler-gcc2.h
+--- linux-2.6.0/include/linux/compiler-gcc2.h	2003-12-26 11:00:33.000000000 +0000
++++ linux-2.6.0/include/linux.plasmaroo/compiler-gcc2.h	2003-12-26 10:35:10.000000000 +0000
+@@ -12,7 +12,9 @@
+ # define __builtin_expect(x, expected_value) (x)
+ #endif
+ 
++#ifndef __attribute_used__
+ #define __attribute_used__	__attribute__((__unused__))
++#endif
+ 
+ /*
+  * The attribute `pure' is not implemented in GCC versions earlier
