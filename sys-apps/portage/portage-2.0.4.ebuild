@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.4.ebuild,v 1.2 2002/06/23 21:40:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.4.ebuild,v 1.3 2002/06/23 21:41:46 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -145,6 +145,7 @@ pkg_postinst() {
 			cd $x
 			python2.2 ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL`
 			cd ..
+		done
 	fi
 
 	#fix cache (could contain staleness)
