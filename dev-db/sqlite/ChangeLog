@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.22 2004/02/29 16:13:57 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.23 2004/03/02 20:22:23 ciaranm Exp $
+
+  02 Mar 2004; Ciaran McCreesh <ciaranm@gentoo.org> sqlite-2.8.11.ebuild:
+  Stable on sparc
 
 *sqlite-2.8.12 (29 Feb 2004)
 
