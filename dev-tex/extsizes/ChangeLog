@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/extsizes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/extsizes/ChangeLog,v 1.5 2004/10/16 16:00:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/extsizes/ChangeLog,v 1.6 2004/10/19 14:14:51 usata Exp $
+
+  19 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> extsizes-1.0.ebuild:
+  Blocks >=tetex-2.
 
   17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> extsizes-1.0.ebuild:
   Changed DEPEND to tetex-1.

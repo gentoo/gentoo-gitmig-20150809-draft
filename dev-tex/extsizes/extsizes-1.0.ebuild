@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/extsizes/extsizes-1.0.ebuild,v 1.4 2004/10/16 16:00:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/extsizes/extsizes-1.0.ebuild,v 1.5 2004/10/19 14:14:51 usata Exp $
 
 inherit latex-package
 
@@ -14,7 +14,10 @@ KEYWORDS="x86 ppc alpha"
 
 # >=tetex-2 contains extsizes package
 DEPEND="app-arch/unzip
-	=app-text/tetex-1*"
+	=app-text/tetex-1*
+	!>=app-text/tetex-2
+	!app-text/ptex
+	!app-text/cstetex"
 IUSE=""
 
 S=${WORKDIR}/14PT
