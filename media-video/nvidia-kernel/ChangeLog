@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.30 2003/04/23 04:33:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.31 2003/04/26 13:14:20 azarah Exp $
+
+*nvidia-kernel-1.0.4363 (26 Apr 2003)
+
+  26 Apr 2003; Martin Schlemmer <azarah@gentoo.org> nvidia-kernel-1.0.4363.ebuild :
+  New version; updated patches for this version; fix kernel version checking code
+  to actually check the version of the kernel in /usr/src/linux, and NOT that of
+  the running one ...
 
   23 Apr 2003; Martin Schlemmer <azarah@gentoo.org> nvidia-kernel-1.0.4349-r2.ebuild :
   Fix the 2.5.68 patch to only apply if 'irqreturn_t' is defined in
