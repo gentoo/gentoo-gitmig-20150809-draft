@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2.ebuild,v 1.2 2002/02/13 16:07:58 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2.ebuild,v 1.3 2002/02/13 21:11:00 verwilst Exp $
 
 S="${WORKDIR}/jabber-${PV}"
 DESCRIPTION="Open Source Jabber Server & AIM,MSN,ICQ,Yahoo en conference transports"
@@ -76,9 +76,9 @@ src_install() {
 
         exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6 jabber
         exeinto /usr/sbin ; doexe ${FILESDIR}/jabber-server
-        mkdir -p ${D}/usr/jabber
-        cp -rf * ${D}/usr/jabber/
+        mkdir -p ${D}/usr/jabber-${PV}
+        cp -rf * ${D}/usr/jabber-${PV}/
 
-        chown -R jabber.jabber ${D}/usr/jabber
+        chown -R jabber.jabber ${D}/usr/jabber-${PV}
 
 }
