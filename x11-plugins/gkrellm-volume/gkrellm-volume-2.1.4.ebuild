@@ -9,7 +9,7 @@ DESCRIPTION="A mixer control plugin for gkrellm"
 SRC_URI="http://gkrellm.luon.net/files/${P}.tar.gz"
 HOMEPAGE="http://gkrellm.luon.net/volume.phtml"
 
-DEPEND="=app-admin/gkrellm-2.0*"
+DEPEND="=app-admin/gkrellm-2*"
 
 SLOT="2"
 LICENSE="GPL-2"
