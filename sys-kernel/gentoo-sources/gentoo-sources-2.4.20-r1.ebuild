@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r1.ebuild,v 1.2 2003/01/12 19:51:45 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r1.ebuild,v 1.3 2003/01/12 23:51:47 carpaski Exp $
 
 IUSE="build crypt xfs"
 
@@ -72,6 +72,8 @@ src_unpack() {
 	else
 		ewarn "Enabling XFS patch, are you sure you want this? (USE='xfs')"
 	fi
+
+	rm -f *3c509-fix
 
 	kernel_src_unpack
 }
