@@ -1,0 +1,72 @@
+diff -urN alsamixergui-0.9.0rc1-2/Makefile.am alsamixergui-0.9.0rc1-2-modified/Makefile.am
+--- alsamixergui-0.9.0rc1-2/Makefile.am	Fri Apr 26 05:16:23 2002
++++ alsamixergui-0.9.0rc1-2-modified/Makefile.am	Fri Sep 20 13:59:06 2002
+@@ -1,2 +1,2 @@
+-SUBDIRS=src 
++SUBDIRS = src 
+ DISTCLEANFILES = configure Makefile.in missing install-sh mkinstalldirs COPYING INSTALL
+diff -urN alsamixergui-0.9.0rc1-2/configure alsamixergui-0.9.0rc1-2-modified/configure
+--- alsamixergui-0.9.0rc1-2/configure	Fri May  3 04:40:38 2002
++++ alsamixergui-0.9.0rc1-2-modified/configure	Fri Sep 20 14:08:14 2002
+@@ -1469,8 +1469,8 @@
+ fi
+ 
+ 
+-echo $ac_n "checking for numericsort in -lfltk""... $ac_c" 1>&6
+-echo "configure:1474: checking for numericsort in -lfltk" >&5
++echo $ac_n "checking for fl_numericsort in -lfltk""... $ac_c" 1>&6
++echo "configure:1474: checking for fl_numericsort in -lfltk" >&5
+ ac_lib_var=`echo fltk'_'numericsort | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -1483,10 +1483,10 @@
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char numericsort();
++char fl_numericsort();
+ 
+ int main() {
+-numericsort()
++fl_numericsort()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:1493: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+diff -urN alsamixergui-0.9.0rc1-2/configure.in alsamixergui-0.9.0rc1-2-modified/configure.in
+--- alsamixergui-0.9.0rc1-2/configure.in	Fri May  3 04:40:21 2002
++++ alsamixergui-0.9.0rc1-2-modified/configure.in	Fri Sep 20 13:42:05 2002
+@@ -11,7 +11,7 @@
+ AC_PROG_LN_S
+ 
+ dnl Checks for libraries.
+-AC_CHECK_LIB(fltk,numericsort,,AC_MSG_ERROR("missing fltk"))
++AC_CHECK_LIB(fltk,fl_numericsort,,AC_MSG_ERROR("missing fltk"))
+ AM_PATH_ALSA(0.9.0)
+ 
+ dnl Checks for header files.
+diff -urN alsamixergui-0.9.0rc1-2/src/Fl_AM.cxx alsamixergui-0.9.0rc1-2-modified/src/Fl_AM.cxx
+--- alsamixergui-0.9.0rc1-2/src/Fl_AM.cxx	Fri May  3 04:37:27 2002
++++ alsamixergui-0.9.0rc1-2-modified/src/Fl_AM.cxx	Fri Sep 20 13:41:59 2002
+@@ -215,7 +215,7 @@
+ 	Fl::add_timeout(0.05,gui_idle_cb,0);
+ 	
+ #if FL_MAJOR_VERSION == 1 && FL_MINOR_VERSION >= 1
+-	Fl::visible_focus(0);
++//	Fl::visible_focus(0);
+ #endif
+ 
+ 	Fl::run();
+diff -urN alsamixergui-0.9.0rc1-2/src/Fl_Pixmap_Button.H alsamixergui-0.9.0rc1-2-modified/src/Fl_Pixmap_Button.H
+--- alsamixergui-0.9.0rc1-2/src/Fl_Pixmap_Button.H	Fri Apr 26 03:23:39 2002
++++ alsamixergui-0.9.0rc1-2-modified/src/Fl_Pixmap_Button.H	Fri Sep 20 13:42:07 2002
+@@ -48,8 +48,8 @@
+ #endif
+ 	
+ 	if (pw<0) {
+-#if FL_MAJOR_VERSION == 1 && FL_MINOR_VERSION == 0
+-		fl_measure_pixmap(p->data,pw,ph);
++#if FL_MAJOR_VERSION == 1 && FL_MINOR_VERSION >= 0
++		fl_measure_pixmap(p->data(),pw,ph);
+ #else
+ 		fl_measure_pixmap(p->data(),pw,ph);
+ #endif
