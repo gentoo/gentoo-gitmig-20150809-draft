@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rcs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.8 2003/03/14 21:22:13 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.9 2004/01/08 01:21:38 avenj Exp $
+
+  07 Jan 2004; Jon Portnoy <avenj@gentoo.org> rcs-5.7-r2.ebuild :
+  AMD64 keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
