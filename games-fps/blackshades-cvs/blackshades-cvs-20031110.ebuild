@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110.ebuild,v 1.2 2004/02/20 06:40:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110.ebuild,v 1.3 2004/04/10 18:31:27 wolf31o2 Exp $
 
 #ECVS_PASS="anonymous"
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
@@ -22,6 +22,7 @@ DEPEND="virtual/x11
 	media-libs/libvorbis
 	media-libs/openal
 	media-libs/libsdl
+	media-libs/glut
 	virtual/opengl"
 
 S=${WORKDIR}/${ECVS_MODULE}
