@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panotools/panotools-2.7.0.8.ebuild,v 1.2 2005/01/23 02:33:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panotools/panotools-2.7.0.8.ebuild,v 1.3 2005/02/23 17:40:28 lu_zero Exp $
 
 inherit eutils
 
@@ -26,4 +26,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+	dodoc README README.linux AUTHORS NEWS doc/*.txt
 }
