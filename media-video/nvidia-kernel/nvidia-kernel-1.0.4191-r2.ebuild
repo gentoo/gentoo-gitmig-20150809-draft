@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r2.ebuild,v 1.1 2003/03/05 01:12:41 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r2.ebuild,v 1.2 2003/03/13 17:32:04 mholzer Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ IUSE=""
 pkg_setup() {
 	if [ ! -f /proc/mtrr ]
 	then
-		eerror "This version needs MTRR support for most chisets!"
+		eerror "This version needs MTRR support for most chipsets!"
 		eerror "Please enable MTRR support in your kernel config, found at:"
 		eerror
 		eerror "  Processor type and features -> [*] MTRR (Memory Type Range Register) support"
