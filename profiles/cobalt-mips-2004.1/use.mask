@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/cobalt-mips-2004.1/use.mask,v 1.1 2004/04/28 21:24:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/cobalt-mips-2004.1/use.mask,v 1.2 2004/06/01 23:50:09 kumba Exp $
 
 
 # Chris PeBenito <pebenito@gentoo.org>
@@ -38,7 +38,7 @@ svga
 tcc
 trusted
 voodoo3
-
+smartcard
 
 # And arch keyword flags that don't work
 
