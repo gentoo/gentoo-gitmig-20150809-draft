@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/pfqueue
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pfqueue/ChangeLog,v 1.1 2005/01/05 19:24:27 ticho Exp $
+
+*pfqueue-0.2.0 (05 Jan 2005)
+
+  05 Jan 2005; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +pfqueue-0.2.0.ebuild:
+  Initial import, ebuild submitted by eGore <egore@gmx.de>. Closes #75173.
+
