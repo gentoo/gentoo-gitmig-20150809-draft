@@ -1,8 +1,11 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.29 2003/02/13 08:11:17 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.30 2003/03/21 14:30:34 weeve Exp $
 
 *openbox-2.3.0 (07 Feb 2003)
+
+  21 Mar 2003; Jason Wever <weeve@gentoo.org> openbox-2.3.0.ebuild:
+  Added sparc to keywords.
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> openbox-2.2.0-r1.ebuild 
   openbox-2.2.0.ebuild openbox-2.2.1-r1.ebuild openbox-2.2.1-r2.ebuild 
