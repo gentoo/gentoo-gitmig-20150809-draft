@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.02.ebuild,v 1.3 2003/03/25 22:00:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.02.ebuild,v 1.4 2003/03/25 22:00:42 seemant Exp $
 
 IUSE="motif"
 
@@ -30,14 +30,9 @@ src_compile() {
 
 
 src_install() {
-	# don't use builtin make install, as it doesn't compress manpages
 	make DESTDIR=${D} install || die
 	prepallman
-#	into /usr
 	dodoc README ANNOUNCE CHANGES
-#	doman doc/*.[1-8]
-#	dobin xpdf/pdfimages xpdf/pdfinfo xpdf/pdftopbm
-#	dobin xpdf/pdftops xpdf/pdftotext xpdf/xpdf
 	insinto /etc
 	doins ${FILESDIR}/xpdfrc
 }
