@@ -1,0 +1,11 @@
+--- m4/ac_check_java_version.m4.orig	2004-07-22 16:58:54.685070072 +0200
++++ m4/ac_check_java_version.m4	2004-07-22 16:59:02.856827776 +0200
+@@ -9,7 +9,7 @@
+ AC_CACHE_CHECK([if $JAVA version is good], ac_cv_check_java_version, [
+ 
+ if AC_TRY_COMMAND($JAVA -version) > /dev/null 2>&1; then
+-  java_version=`$JAVA -version 2>&1 | grep "version" | sed 's/java version//' | sed 's/\"//g' `
++  java_version=`$JAVA -version 2>&1 | grep "version" | sed 's/java version//' | sed 's/\"//g' | sed 's/-.*//' `
+   java_major_version=`echo $java_version | sed 's/\([[0-9]][[0-9]]*\)\..*/\1/'`
+   java_minor_version=`echo $java_version | sed 's/[[0-9]][[0-9]]*\.\([[0-9]][[0-9]]*\)\(\.[[0-9]][[0-9]]*\)*/\1/' | sed 's/_.*//g'`
+ 

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jmax
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.7 2004/07/09 02:38:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.8 2004/07/22 15:07:01 axxo Exp $
+
+  22 Jul 2004; Thomas Matthijs <axxo@gentoo.org>
+  +files/jmax-4.1.0-fix-java-check.patch, jmax-4.1.0.ebuild:
+  fix java checking 57691
 
 *jmax-4.1.0 (08 Jul 2004)
 

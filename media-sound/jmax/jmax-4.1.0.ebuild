@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/jmax-4.1.0.ebuild,v 1.2 2004/07/14 20:49:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/jmax-4.1.0.ebuild,v 1.3 2004/07/22 15:07:01 axxo Exp $
 
 IUSE="alsa jack doc"
 
@@ -33,6 +33,8 @@ src_unpack() {
 	unpack jmax-m4-1.0.tar.bz2
 	epatch ${FILESDIR}/${P}-otherArch.patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
+	# fixed 57691
+	epatch ${FILESDIR}/${P}-fix-java-check.patch
 
 	export WANT_AUTOMAKE=1.6
 	export WANT_AUTOCONF=2.5
