@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/xstroke-0.5.12-r1.ebuild,v 1.1 2003/03/11 08:06:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/xstroke-0.5.12-r1.ebuild,v 1.2 2004/04/05 14:02:06 zx Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.handhelds.org/pub/projects/${PN}/release-0.5/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ~ppc sparc ~alpha ~mips hppa"
 
 DEPEND=">=x11-base/xfree-4.1.0"
 
