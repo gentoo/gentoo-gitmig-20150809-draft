@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.6 2002/06/24 01:42:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.7 2002/09/12 01:51:01 raker Exp $
+
+*librep-0.16.1 (11 Sep 2002)
+
+  11 Sep 2002; Nick Hadaway <raker@gentoo.org> librep-0.16.1.ebuild,
+  files/digest-librep-0.16.1 :
+  Version bump.  This should work with gmp-4.1 now.
 
 *librep-0.16 (24 Jun 2002)
   24 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
