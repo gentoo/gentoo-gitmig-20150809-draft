@@ -1,8 +1,11 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.11 2002/09/16 00:26:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.12 2002/11/13 22:22:42 hannes Exp $
 
 *ppp-2.4.1-r11 (28 Aug 2002)
+
+  13 Nov 2002; Hannes Mehnert <hannes@gentoo.org> ppp-2.4.1-r11.ebuild :
+  added sample /etc/ppp/ip-up script submitted in bug #8609, added IUSE
 
   16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> ppp-2.4.1-r11.ebuild :
   Added sparc and sparc64 keywords. Revamped ChangeLog layout.

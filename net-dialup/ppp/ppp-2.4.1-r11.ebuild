@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r11.ebuild,v 1.4 2002/09/16 00:26:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r11.ebuild,v 1.5 2002/11/13 22:22:42 hannes Exp $
 
+IUSE="crypt ipv6"
 S=${WORKDIR}/${P}.pppoe4
 DESCRIPTION="Point-to-point protocol - patched for pppoe"
 SRC_URI="mirror://gentoo/${P}-pppoe4.tgz"
@@ -80,6 +81,8 @@ src_install() {
 	doins etc.ppp/pap-secrets etc.ppp/chap-secrets
 	insopts -m0644
 	doins etc.ppp/options
+	insopts -m0755
+	doins ${FILESDIR}/ip-up
 
 	dolib.so pppd/plugins/minconn.so
 	dolib.so pppd/plugins/passprompt.so
@@ -109,7 +112,7 @@ pkg_postinst() {
 	fi
 	if [ "$ROOT" = "/" ]
 	then
-		/usr/sbin/update-modules
+		/sbin/update-modules
 	fi
 	einfo "to enable kernel-pppoe read html/pppoe.html in the doc-directory"
 }
