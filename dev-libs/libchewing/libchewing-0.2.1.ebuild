@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.2.1.ebuild,v 1.1 2004/06/21 06:49:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.2.1.ebuild,v 1.2 2004/06/22 15:30:09 usata Exp $
+
+inherit flag-o-matic
 
 IUSE=""
 DESCRIPTION="Library for Chinese Phonetic input method"
@@ -13,7 +15,8 @@ KEYWORDS="~x86"
 DEPEND="virtual/glibc"
 
 src_compile() {
-	emake -j1 || die
+	append-flags -I./include
+	emake CFLAGS="${CFLAGS}" -j1 || die
 }
 
 src_install() {
