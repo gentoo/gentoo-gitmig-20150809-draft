@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 e6ab8e308b97839245e8a93dea436157 mythfrontend-0.15.1.ebuild 5270
-MD5 31247cce705afa71aca3b58989862205 mythfrontend-0.13.ebuild 2786
-MD5 e48aa0eb144fff0ca97d696a85f8af0c ChangeLog 3746
 MD5 718b0bd72f8bac27fbf6f687d128a4c6 mythfrontend-0.14-r1.ebuild 4228
-MD5 f08934a54c86d59e07139a18a8480147 mythfrontend-0.16.ebuild 5538
+MD5 fcfece31a716b13ed9e7d27cef9b5605 mythfrontend-0.16.ebuild 5602
+MD5 31247cce705afa71aca3b58989862205 mythfrontend-0.13.ebuild 2786
+MD5 ddbb8f8f2e303a7027ac7bd1145620da ChangeLog 3956
+MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 788cdcff1808794391bf5ef2e157b5fb files/digest-mythfrontend-0.15.1 67
-MD5 24ab1e90e64fb0be4704e74b633e96b1 files/digest-mythfrontend-0.14-r1 65
-MD5 fb4505fe7e8b832e115d777bf836d3bc files/digest-mythfrontend-0.16 66
 MD5 f34c79d00b235a08f18cf9f2107d6390 files/mythtv-0.15-directfb.patch 1185
-MD5 a01439b4ddf480862e31867fc4689698 files/digest-mythfrontend-0.13 65
 MD5 e7cc68f54ad1c6128aec944e105189e3 files/gcc-3.4-fix.patch 1773
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBT7MBFhz/XBeRBtARAhlcAJ9vRJciRmKwSbJVKg0Wgs7iURrsfQCgtEJR
-GVRn9z/4HSEXCqPgqJ9wtoc=
-=YBLR
------END PGP SIGNATURE-----
+MD5 a01439b4ddf480862e31867fc4689698 files/digest-mythfrontend-0.13 65
+MD5 fb4505fe7e8b832e115d777bf836d3bc files/digest-mythfrontend-0.16 66
+MD5 24ab1e90e64fb0be4704e74b633e96b1 files/digest-mythfrontend-0.14-r1 65
