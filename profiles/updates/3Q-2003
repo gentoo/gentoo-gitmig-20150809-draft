@@ -70,3 +70,4 @@ move net-ftp/atftp net-misc/atftp
 move dev-python/PyXML dev-python/pyxml
 move app-misc/linux_logo app-misc/linux-logo
 move dev-libs/coldsync app-pda/coldsync
+move app-misc/jpilot app-pda/jpilot
