@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0.ebuild,v 1.3 2004/06/29 00:25:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0.ebuild,v 1.4 2004/07/02 02:45:53 squinky86 Exp $
 
-inherit kde
+inherit kde eutils
 
 IUSE="kde"
 use kde && need-kde 3 || need-qt 3
@@ -16,6 +16,12 @@ LICENSE="GPL-2"
 #masking by keywords as there are known bugs and I don't want to put up with the reports yet
 KEYWORDS="~x86 ~ppc"
 export MAKEOPTS="$MAKEOPTS -j1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-nokde.patch
+}
 
 src_compile() {
 	kde_src_compile myconf

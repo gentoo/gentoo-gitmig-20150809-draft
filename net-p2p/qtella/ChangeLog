@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qtella
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.18 2004/06/29 00:25:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.19 2004/07/02 02:45:53 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> +files/0.7.0-nokde.patch,
+  -files/qtella-0.6.1-nokde.diff, qtella-0.7.0.ebuild:
+  add nokde patch, #55284
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> qtella-0.5.3-r2.ebuild,
   qtella-0.6.4.ebuild, qtella-0.7.0.ebuild:
