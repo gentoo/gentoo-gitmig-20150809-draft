@@ -1,0 +1,32 @@
+# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.5.ebuild,v 1.1 2000/10/06 22:03:49 achim Exp $
+
+A=${P}.tar.gz
+S=${WORKDIR}/${P}
+DESCRIPTION="WWW index and searching system"
+SRC_URI="http://www.htdig.org/files/${A}"
+HOMEPAGE="http://www.htdig.org"
+
+src_unpack() {
+  unpack ${A}
+  cp ${FILESDIR}/CONFIG ${S}
+}
+
+src_compile() {
+
+    cd ${S}
+    try ./configure --prefix=/usr --host=${CHOST}
+    cp ${FILESDIR}/CONFIG ${S}
+    try make
+
+}
+
+src_install () {
+
+    cd ${S}
+    try make DESTDIR=${D} install
+
+}
+
