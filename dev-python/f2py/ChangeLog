@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/f2py/ChangeLog,v 1.1 2003/04/05 03:26:37 g2boojum Exp $
+
+*f2py--2.32.225.1419 (4 Apr 2003)
+
+  04 Apr 2003; Grant Goodyear <g2boojum@gentoo.org> :
+  Initial import.  
+
