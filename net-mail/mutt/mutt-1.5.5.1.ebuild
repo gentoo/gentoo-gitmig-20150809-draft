@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.5.1.ebuild,v 1.2 2004/01/15 05:27:49 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.5.1.ebuild,v 1.3 2004/02/11 20:41:41 agriffis Exp $
 
 IUSE="ssl nls slang crypt imap mbox maildir"
 
@@ -12,7 +12,7 @@ S=$WORKDIR/${P}
 DESCRIPTION="a small but very powerful text-based mail client"
 SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
 	http://www.spinnaker.de/mutt/compressed/patch-${PV}.rr.compressed.1.gz
-	http://cedricduval.free.fr/download/mutt/${edit_threads}"
+	http://cedricduval.free.fr/mutt/patches/download/${edit_threads}"
 HOMEPAGE="http://www.mutt.org"
 
 DEPEND=">=sys-libs/ncurses-5.2

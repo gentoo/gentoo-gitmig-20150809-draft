@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.4.ebuild,v 1.9 2003/10/02 17:52:34 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.4.ebuild,v 1.10 2004/02/11 20:41:41 agriffis Exp $
 
 IUSE="ssl nls slang cjk crypt imap"
 
@@ -13,7 +13,7 @@ DESCRIPTION="a small but very powerful text-based mail client"
 SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
 	http://www.spinnaker.de/mutt/compressed/patch-${PV}.rr.compressed.1.gz
 	cjk? ( http://www.emaillab.org/mutt/1.5/${P}i-ja.1.tar.gz )
-	http://cedricduval.free.fr/download/mutt/${edit_threads}"
+	http://cedricduval.free.fr/mutt/patches/download/${edit_threads}"
 HOMEPAGE="http://www.mutt.org"
 
 DEPEND=">=sys-libs/ncurses-5.2
