@@ -1,0 +1,9 @@
+# ChangeLog for media-plugins/dumb-xmms
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-xmms/ChangeLog,v 1.1 2003/06/06 21:25:44 robh Exp $
+
+*dumb-xmms-0.1 (06 Jun 2003)
+
+  06 Jun 2003; robh <robh@gentoo.org> dumb-xmms-0.1.ebuild:
+  Initial version. Thanks to Ben Davis, closes #20938
+
