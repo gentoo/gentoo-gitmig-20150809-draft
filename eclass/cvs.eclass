@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.28 2002/11/30 19:44:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.29 2002/12/22 12:06:00 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -209,7 +209,7 @@ DIR=$DIR"
 	[ -n "$ECVS_BRANCH" ] && ECVS_CVS_OPTIONS="$ECVS_CVS_OPTIONS -r$ECVS_BRANCH"
 
 	# Chowning the directory
-	if [ "${ECVS_RUNAS}" != "root" ]; then
+	if [ "${ECVS_RUNAS}" != "`whoami`" ]; then
 		chown -R "$ECVS_RUNAS" "/$DIR"
 	fi
 
@@ -235,8 +235,12 @@ mypasswd  = "${ECVS_PASS}"
 myauth    = "${ECVS_AUTH}"
 mytimeout = 10
 
+if "${ECVS_RUNAS}" == "`whoami`":
+    mycommand = "${ECVS_CVS_COMMAND} update ${ECVS_CVS_OPTIONS}"
+else:
+    mycommand = "su ${ECVS_RUNAS} -c \"${ECVS_CVS_COMMAND} update ${ECVS_CVS_OPTIONS}\""
+
 if myauth == "ext":
-	mycommand = "su ${ECVS_RUNAS} -c \"${ECVS_CVS_COMMAND} update ${ECVS_CVS_OPTIONS}\""
 	child = pexpect.spawn(mycommand)
 
 	index = child.expect(['continue connecting','word:'], mytimeout)
@@ -259,7 +263,8 @@ elif myauth == "pserver":
 	child.expect(pexpect.EOF)
 
 	# Logged in - checking out
-	os.system("su ${ECVS_RUNAS} -c \"${ECVS_CVS_COMMAND} update ${ECVS_CVS_OPTIONS}\" &> /dev/null")
+	os.system(mycommand)
+	
 EndOfFile
 ########################### End of inline-python ##################################
 	else
@@ -268,7 +273,11 @@ EndOfFile
 	fi
 
 	# log out and restore ownership
-	su $ECVS_RUNAS -c "cvs logout" &> /dev/null
+	if [ "$ECVS_RUNAS" == "`whoami`" ]; then
+	    cvs logout &> /dev/null
+	else
+	    su $ECVS_RUNAS -c "cvs logout" &> /dev/null
+	fi
 	chown `whoami` "${T}/cvspass"
 }
 
