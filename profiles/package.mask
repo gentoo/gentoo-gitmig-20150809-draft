@@ -22,6 +22,14 @@
 ##   End example
 ##
 
+# <karltk@gentoo.org> (04 Jul 2002)
+# We're removing JAXP from our tree. It is just a repack of
+# the Apache project's Xalan and Xerces, with a nastier license
+# and a more erratic release schedule; only tomcat 3.2.2
+# depends on it, and 3.2.2 is old.
+dev-java/jaxp
+=net-www/tomcat-3.2.2
+
 #azarah@gentoo.org (03 Jul 2002)
 #this one moves a lot of stuff around, and have a search dir
 #order fix that is very experimental

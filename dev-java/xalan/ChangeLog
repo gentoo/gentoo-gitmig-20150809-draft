@@ -1,0 +1,17 @@
+# ChangeLog for dev-java/xalan
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.1 2002/07/03 23:04:56 karltk Exp $
+
+*xalan-2.4 (04 Jul 2002)
+
+  04 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> xalan-2.4.ebuild files/digest-xalan-2.4 : 
+
+  From Xalan's home page:
+
+  "Xalan-Java is an XSLT processor for transforming XML documents into
+  HTML, text, or other XML document types. It implements the W3C
+  Recommendations for XSL Transformations (XSLT) and the XML Path
+  Language (XPath). It can be used from the command line, in an applet
+  or a servlet, or as a module in other program."
+
+  Initial import.
