@@ -1,23 +1,26 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.6.ebuild,v 1.3 2002/05/23 06:50:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.8.ebuild,v 1.1 2002/06/30 18:33:39 azarah Exp $
 
 #provide Xmake and Xemake
 
-inherit virtualx
+inherit virtualx libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnumeric/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
+SLOT="0"
+LICENSE="GPL-2"
 
 #Eye Of Gnome (media-gfx/eog) is for image support.
 RDEPEND="=x11-libs/gtk+-1.2*
 	>=gnome-base/gnome-libs-1.4.1.2-r1
 	>=gnome-base/oaf-0.6.7
 	>=gnome-base/ORBit-0.5.12-r1
-	>=gnome-base/libglade-0.17
+	( >=gnome-base/libglade-0.17
+	  <gnome-base/libglade-0.99 )
 	>=gnome-base/gnome-print-0.31
 	>=gnome-extra/gal-0.18
 	>=dev-libs/libole2-0.2.4
@@ -46,19 +49,19 @@ src_unpack() {
 	unpack ${A}
 
 	#patch 'gnumeric-doc.make' to look for files in the correct place.
-	cd ${S}/doc
-	patch -p0 <${FILESDIR}/${P}-docbuild.patch || die
-	cd ${S}
+#	cd ${S}/doc
+#	patch -p0 <${FILESDIR}/${P}-docbuild.patch || die
+#	cd ${S}
 }
 
 src_compile() {
 
 	# fix the relink bug, and invalid paths in .ls files.
-	libtoolize --copy --force
+	elibtoolize
 
-	local myconf
+	local myconf=""
 	if [ -z "`use nls`" ] ; then
-		myconf="--disable-nls"
+		myconf="${myconf} --disable-nls"
 	fi
   	if [ -n "`use gb`" ]; then
     		myconf="${myconf} --with-gb"

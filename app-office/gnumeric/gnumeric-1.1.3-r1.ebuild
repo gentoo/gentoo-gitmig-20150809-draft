@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.3-r1.ebuild,v 1.1 2002/05/23 00:11:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.3-r1.ebuild,v 1.2 2002/06/30 18:33:39 azarah Exp $
 
 #provide Xmake and Xemake
 . /usr/portage/eclass/inherit.eclass
@@ -10,7 +10,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
-SLOT="1.2"
+SLOT="0"
 LICENSE="GPL-2"
 
 
