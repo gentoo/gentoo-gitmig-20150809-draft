@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/cpp2latex-2.3.ebuild,v 1.4 2004/06/25 02:12:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/cpp2latex-2.3.ebuild,v 1.5 2004/07/26 15:25:03 fmccor Exp $
 
 # eutils is in portage proper now, no need to inherit
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ppc amd64 ~sparc"
+KEYWORDS="x86 ppc amd64 sparc"
 
 # although it makes sense to have tex installed, it is
 # neither a compile or runtime dependency
