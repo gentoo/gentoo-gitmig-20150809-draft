@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/ChangeLog,v 1.9 2004/06/29 16:34:27 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/ChangeLog,v 1.10 2004/10/20 10:06:36 eradicator Exp $
+
+*xmms-lirc-1.4-r1 (20 Oct 2004)
+
+  20 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +xmms-lirc-1.4-r1.ebuild:
+  Support for the new xmms-plugins.eclass.
 
   29 Jun 2004; David Holm <dholm@gentoo.org> xmms-lirc-1.4.ebuild:
   Added to ~ppc.
