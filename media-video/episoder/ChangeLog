@@ -1,0 +1,9 @@
+# ChangeLog for media-video/episoder
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/episoder/ChangeLog,v 1.1 2005/01/21 13:40:14 kzimmerm Exp $
+
+*episoder-0.2.1 (21 Jan 2005)
+
+	21 Jan 2005;  Kai Zimmermann <kzimmerm@gentoo.org> :
+	Initial import into the tree.  Closes bug #78527.  Thanks to 
+	Terry Churchill <bugs@doc-linux.co.uk> for the ebuild submission.
