@@ -72,3 +72,4 @@ move dev-java/regexp dev-java/regexp-bin
 move dev-java/saxon dev-java/saxon-bin
 move dev-java/snipsnap dev-java/snipsnap-bin
 move dev-java/webgraph dev-java/webgraph-bin
+move dev-java/wsdl4j dev-java/wsdl4j-bin
