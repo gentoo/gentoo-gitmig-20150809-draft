@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.3 2003/02/03 03:08:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.4 2003/02/08 21:17:16 gerk Exp $
+
+*xfree-drm-4.2.99.4-r1 (07 Feb 2003)
+  07 Feb 2003; Mark Guertin <gerk@gentoo.org> xfree-drm-4.2.99.4.ebuild
+  files/xfree-drm-4.2.99.4-gentoo-ppc-Makefile-fixup.patch:
+  Major reworking of parts for ppc sections.  Using a drm tarball.
+  x86 not set at all as it's not tested yet (method stays same for 
+  x86). Set only as ~ppc
 
 *xfree-drm-4.2.99.4 (03 Feb 2003)
 
