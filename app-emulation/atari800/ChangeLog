@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/atari800
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/ChangeLog,v 1.9 2003/07/11 05:39:47 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/ChangeLog,v 1.10 2003/09/02 13:05:44 aliz Exp $
+
+*atari800-1.3.0-r1 (02 Sep 2003)
+
+  02 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> atari800-1.3.0-r1.ebuild :
+  Security update.
 
   10 Jul 2003; Michael Sterrett <msterret@gentoo.org> atari800-1.3.0.ebuild,
   files/1.3.0/atari800.cfg:
