@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer System Team <system@gentoo.org>
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.10.ebuild,v 1.1 2001/10/10 09:28:34 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.10.ebuild,v 1.2 2001/10/11 07:34:32 woodchip Exp $
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
@@ -49,7 +49,7 @@ src_install() {
 	# lets do it this way
 	make \
 	LOCALEDIR=${D}/usr/share/locale \
-	DOCDIR=${D}/usr/share/doc/${P} \
+	DOCDIR=${D}/usr/share/doc/${PF} \
 	REQUESTS=${D}/var/spool/cups \
 	SERVERBIN=${D}/usr/lib/cups \
 	DATADIR=${D}/usr/share/cups \
@@ -69,14 +69,14 @@ src_install() {
 
 	# add a few more docs; pdfs and html get inserted for us in DOCDIR above :)
 	dodoc {CHANGES,CREDITS,ENCRYPTION,LICENSE,README}.txt
-	insinto /usr/share/doc/${P} ; doins LICENSE.html
+	insinto /usr/share/doc/${PF} ; doins LICENSE.html
 
 	# cleanups and fixups
 	rm -rf ${D}/etc/init.d
 	rm -rf ${D}/etc/pam.d
 	rm -rf ${D}/etc/rc*
 	rm -rf ${D}/usr/share/man/cat*
-	dosed "s:#DocumentRoot /usr/share/doc/cups:DocumentRoot /usr/share/doc/${P}:" /etc/cups/cupsd.conf
+	dosed "s:#DocumentRoot /usr/share/doc/cups:DocumentRoot /usr/share/doc/${PF}:" /etc/cups/cupsd.conf
 	dosed "s:#SystemGroup sys:SystemGroup lp:" /etc/cups/cupsd.conf
 	dosed "s:#User lp:User lp:" /etc/cups/cupsd.conf
 	dosed "s:#Group sys:Group lp:" /etc/cups/cupsd.conf
