@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.10 2003/06/24 14:55:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.11 2003/07/03 00:48:09 mcummings Exp $
+
+*Inline-0.44-r1 (02 Jul 2003)
+
+  02 Jul 2003; Michael Cummings <mcummings@gentoo.org> Inline-0.44-r1.ebuild,
+  files/gtk2-patch.diff:
+  Addresses bug 17223, patch submitted by Kfir Ozer <ufk2k@yahoo.com>
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> Inline-0.44.ebuild:
   Mark stable on alpha
