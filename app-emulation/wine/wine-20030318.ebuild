@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030318.ebuild,v 1.1 2003/04/06 16:01:13 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030318.ebuild,v 1.2 2003/04/06 16:42:53 phoenix Exp $
+
+inherit eutils base
 
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/ALPHA/wine/development/Wine-${PV}.tar.gz"
@@ -24,6 +26,12 @@ DEPEND="sys-devel/gcc
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
 	opengl? ( virtual/opengl )"
+
+src_unpack() {
+	base_src_unpack
+	cd ${S}
+	epatch ${FILESDIR}/${P}-xopenfont.patch
+}
 
 src_compile() {	
 	cd ${S}
