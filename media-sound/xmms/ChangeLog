@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.78 2003/12/01 16:24:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.79 2003/12/01 16:38:20 seemant Exp $
+
+  01 Dec 2003; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r20.ebuild,
+  xmms-1.2.7-r23.ebuild, xmms-1.2.7-r25.ebuild,
+  files/xmms-1.2.7-mpg123j.patch, files/xmms-diskwriter-audio.patch,
+  files/xmms-fhs-skinsdir.patch, files/xmms-gettext-fix.patch,
+  files/xmms-ipv6-20020408-mmx.patch, files/xmms-ipv6-20020408-nommx.patch,
+  files/xmms-jump.patch, files/xmms-nptl.patch,
+  files/xmms-russian-charset.patch, files/xmms-sigterm.patch:
+  moved patches for 1.2.7 versions into tarball as well
 
   01 Dec 2003; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.8-r1.ebuild,
   xmms-1.2.8-r2.ebuild, xmms-1.2.8-r3.ebuild, xmms-1.2.8.ebuild,
