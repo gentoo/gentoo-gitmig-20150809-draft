@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.2 2003/11/19 20:26:57 vapier Exp $
 
 inherit games
 
@@ -16,19 +16,8 @@ KEYWORDS="x86"
 DEPEND=""
 RDEPEND="media-libs/sdl-mixer
 	media-libs/libsdl
-	media-libs/libvorbis
-	media-libs/libogg
-	media-libs/smpeg
-	dev-libs/DirectFB
-	media-libs/libggi
 	sys-libs/lib-compat
-	media-libs/libgii
-	media-sound/esound
-	media-libs/audiofile
-	virtual/x11
-	media-libs/svgalib
-	media-libs/aalib
-	sys-libs/ncurses"
+	virtual/glibc"
 
 S=${WORKDIR}/${MY_P}
 
