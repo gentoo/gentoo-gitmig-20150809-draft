@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/qt
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kpasman/ChangeLog,v 1.1 2003/05/29 03:02:43 caleb Exp $
+
+*kpasman-0.2 (28 May 2003)
+
+  28 May 2003; Caleb Tennis <caleb@gentoo.org> Manifest, kpasman-0.2.ebuid:
+  New ebuild, thanks to Markus Wagner.  Closes bug #11354
+
+
