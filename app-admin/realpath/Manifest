@@ -1,8 +1,18 @@
-MD5 086a6eac73187b6879c23536255a468b ChangeLog 1686
-MD5 90010f08b98a059b92949aa3dddda38a metadata.xml 426
-MD5 77b3658d53fbecfa53158666209a50cb realpath-1.9.10.ebuild 964
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e1b87e17f3a31e9addb3499fae9657bb realpath-1.9.16.ebuild 973
 MD5 87286ca1bb4f094eb738192d8b79a956 realpath-1.9.3.ebuild 654
-MD5 228cd538e274f95373d4a6143c1b007d realpath-1.9.16.ebuild 973
+MD5 77b3658d53fbecfa53158666209a50cb realpath-1.9.10.ebuild 964
+MD5 c1082b05021b621df66afbccbec8bb2b ChangeLog 1802
+MD5 90010f08b98a059b92949aa3dddda38a metadata.xml 426
+MD5 ad4ce8882c1d563642c89dcd344e6b4d files/digest-realpath-1.9.3 61
 MD5 71c6c08064dca9cfc27fb3f8c9292789 files/digest-realpath-1.9.10 62
 MD5 afa5ce8cb15a102949a793cac1934ab0 files/digest-realpath-1.9.16 62
-MD5 ad4ce8882c1d563642c89dcd344e6b4d files/digest-realpath-1.9.3 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB29YCLLFUmVNQ7rkRArwLAKCLwAsXEBktG4fu1rB1DmSLo6zSUACdFgsW
+sV1r5mRaoZgVz7qmLmwbS1g=
+=7XeW
+-----END PGP SIGNATURE-----
