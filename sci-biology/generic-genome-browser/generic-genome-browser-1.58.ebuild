@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.1 2004/12/23 22:23:31 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.2 2004/12/23 22:50:05 ribosome Exp $
 
 inherit perl-module
 
-CATEGORY="app-sci"
+CATEGORY="sci-biology"
 
 MY_PN="Generic-Genome-Browser"
 MY_P="${MY_PN}-${PV}"
