@@ -9,7 +9,7 @@ COMPILER="gcc3"
 # the ../default-sparc-1.0/scripts/build-rel.sh script and check the
 # changes that have occurred (cvs diff).
 #
-ARCH="sparc"
+ARCH="sparc64"
 CHOST=sparc-unknown-linux-gnu
 PLATFORM=sparc64-unknown-linux-gnu
 

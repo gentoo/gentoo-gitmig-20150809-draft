@@ -1,7 +1,10 @@
 #
-# $Id: make.defaults.sparc,v 1.5 2002/12/09 16:54:51 seemant Exp $
+# $Id: make.defaults.sparc,v 1.6 2002/12/09 17:12:12 seemant Exp $
 #
 # $Log: not supported by cvs2svn $
+# Revision 1.5  2002/12/09 16:54:51  seemant
+# replaced sparc64 KEYWORD with sparc
+#
 # Revision 1.4  2002/07/04 13:39:46  murphy
 # Fixing to use ACCEPT_KEYWORDS
 #
@@ -12,7 +15,7 @@
 # More changes
 #
 #
-ARCH="sparc"
+ARCH="sparc64"
 CHOST=sparc-unknown-linux-gnu
 PLATFORM=sparc64-unknown-linux-gnu
 

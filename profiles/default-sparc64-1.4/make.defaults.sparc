@@ -2,7 +2,7 @@
 # the ../default-sparc-1.0/scripts/build-rel.sh script and check the
 # changes that have occurred (cvs diff).
 #
-ARCH="sparc"
+ARCH="sparc64"
 CHOST=sparc-unknown-linux-gnu
 
 # Options passed to make during the build process

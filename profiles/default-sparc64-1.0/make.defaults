@@ -13,9 +13,12 @@ slang spell ssl svga tcpd truetype X xml2 xmms xv"
 
 # These lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
 #
-# $Id: make.defaults,v 1.15 2002/12/09 16:54:51 seemant Exp $
+# $Id: make.defaults,v 1.16 2002/12/09 17:12:02 seemant Exp $
 #
 # $Log: not supported by cvs2svn $
+# Revision 1.15  2002/12/09 16:54:51  seemant
+# replaced sparc64 KEYWORD with sparc
+#
 # Revision 1.14  2002/09/03 22:41:02  drobbins
 # adding "oss" to all profiles by default (yes, a good thing)
 #
@@ -36,7 +39,7 @@ slang spell ssl svga tcpd truetype X xml2 xmms xv"
 # More changes
 #
 #
-ARCH="sparc"
+ARCH="sparc64"
 CHOST=sparc-unknown-linux-gnu
 PLATFORM=sparc64-unknown-linux-gnu
 
