@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.10 2004/09/20 13:46:35 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.11 2004/09/30 19:36:21 geoman Exp $
+
+  30 Sep 2004; Stephen P. Becker <geoman@gentoo.org> howl-0.9.6-r1.ebuild:
+  added ~mips keyword
 
 *howl-0.9.6-r1 (20 Sep 2004)
 
