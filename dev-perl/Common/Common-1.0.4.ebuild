@@ -1,6 +1,6 @@
 # Copyright 2002 damien krotkine <dams@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Common/Common-1.0.4.ebuild,v 1.4 2002/12/15 10:44:12 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Common/Common-1.0.4.ebuild,v 1.5 2003/02/28 16:54:59 liquidx Exp $
 
 ECVS_ANON="no"
 ECVS_USER="anoncvs"
@@ -18,7 +18,7 @@ HOMEPAGE="http://cvs.mandrakesoft.com/cgi-bin/cvsweb.cgi/soft/perl-MDK-Common/"
 SRC_URI=""
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="dev-lang/ocaml

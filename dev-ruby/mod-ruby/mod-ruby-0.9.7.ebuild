@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.6 2003/02/13 11:40:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.7 2003/02/28 16:54:59 liquidx Exp $
 
 S=${WORKDIR}/mod_ruby-${PV}
 DESCRIPTION="A Ruby Module for Apache"
 SRC_URI="http://www.modruby.net/archive/mod_ruby-${PV}.tar.gz"
 HOMEPAGE="http://www.modruby.net"
-LICENSE="GPL-2/LGPL-2.1"
+LICENSE="GPL-2 | LGPL-2.1"
 KEYWORDS="x86"
 SLOT="0"
 

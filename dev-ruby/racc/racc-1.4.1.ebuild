@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.1.ebuild,v 1.4 2003/02/13 11:40:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.1.ebuild,v 1.5 2003/02/28 16:54:59 liquidx Exp $
 
 S=${WORKDIR}/${P}-all
 DESCRIPTION="LALR parser generator for Ruby"
 SRC_URI="http://www.loveruby.net/archive/racc/${P}-all.tar.gz"
 HOMEPAGE="http://www1.u-netsurf.ne.jp/~brew/mine/en/index.html"
-LICENSE="LGPL"
+LICENSE="LGPL-2.1"
 KEYWORDS="x86 alpha"
 SLOT="0"
 

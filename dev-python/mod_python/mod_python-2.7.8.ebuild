@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.5 2003/02/13 11:35:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.6 2003/02/28 16:54:59 liquidx Exp $
 
 DESCRIPTION="Python module for Apache"
 SRC_URI="http://www.modpython.org/dist/${P}.tgz"
 HOMEPAGE="http://www.modpython.org/"
 
-LICENSE="AS-IS"
+LICENSE="as-is"
 KEYWORDS="~x86"
 SLOT="0"
 
