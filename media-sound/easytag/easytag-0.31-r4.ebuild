@@ -1,37 +1,31 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31-r3.ebuild,v 1.1 2004/08/10 21:26:21 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31-r4.ebuild,v 1.1 2004/09/12 12:34:25 dsd Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 IUSE="nls oggvorbis flac"
 
-MY_P="${P}_gtk2.4_pre1"
-EXTRA_PATCH="${PN}-rollup-18_to_20.patch.bz2"
+MY_P="${P}_gtk2.4_pre2"
 DESCRIPTION="EasyTAG mp3/ogg ID3 tag editor"
 HOMEPAGE="http://easytag.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
-	http://www.reactivated.net/patches/easytag/0.31/extras/${EXTRA_PATCH}"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 RDEPEND=">=media-libs/id3lib-3.8.2
 	>=x11-libs/gtk+-2.4.1
-	flac? ( >=media-libs/flac-1.1.0 >=media-libs/libvorbis-1.0_beta4 )
-	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
-
-DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.59"
+	flac? ( >=media-libs/flac-1.1.0 >=media-libs/libvorbis-1.0 )
+	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ppc64"
 
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	cd ${S}
-	epatch ${DISTDIR}/${EXTRA_PATCH}
-	WANT_AUTOCONF="2.5" autoconf
+	use ppc64 && gnuconfig_update
 }
 
 src_compile() {
