@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.40 2004/02/12 12:53:22 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.41 2004/02/18 17:43:13 iggy Exp $
+
+*xfs-sources-2.4.24-r2 (18 Feb 2004)
+
+  18 Feb 2004; Brian Jackson <iggy@gentoo.org> xfs-sources-2.4.24-r2.ebuild:
+  add patch for the new munmap vuln
 
 *xfs-sources-2.4.24-r1 (12 Feb 2004)
 
