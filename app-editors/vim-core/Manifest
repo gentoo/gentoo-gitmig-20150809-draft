@@ -9,7 +9,7 @@ MD5 0a4d39df8ec05ce332dc00e85e419778 vim-core-6.2-r4.ebuild 786
 MD5 1a7aad2959919c78e95e022c271f1eff vim-core-6.3_beta2.ebuild 870
 MD5 6e3418258a9973a532d1703544411fa1 files/vimpatch.tar.bz2 3116
 MD5 1dfedf2c72f0cb1ad37344fc60af67c7 files/ebuild.patch 491
-MD5 d968d6cfc9521e6bcf910624facfd32a files/digest-vim-core-6.3_beta2 284
+MD5 348b6d29c1d9d24f5fa43219eea4f7cc files/digest-vim-core-6.3_beta2 350
 MD5 4d82bead5bc0d6ce0b007905c52a1816 files/digest-vim-core-6.2-r8 349
 MD5 dfdf1ae59e8699ca7927816aebf20c06 files/digest-vim-core-6.2-r7 349
 MD5 e92de6be4fb936ce511bfd13594c2cc5 files/digest-vim-core-6.2-r5 275
