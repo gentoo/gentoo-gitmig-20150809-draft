@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 11e6c3aa32287a04525d6ec4ba0e9641 ChangeLog 329
-MD5 22900ed7ede6b99715ad52fd92dae345 equate-0.0.4.20040710.ebuild 431
+MD5 d958d37ace5eaaa58390e2d523a5418b equate-0.0.4.20040828.ebuild 431
 MD5 a8d630633c20342ead6ddaae1cef9fcb metadata.xml 331
-MD5 6168ce1505248ebcf58a31b69c6e20c0 files/digest-equate-0.0.4.20040710 74
+MD5 99446357d2c5cc76d76729aa7655fbef files/digest-equate-0.0.4.20040828 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBGZezHTu7gpaalycRAl6PAKCJLDE4b8mC1wcQdnPls0BW0eZmywCfV/tR
-2Y8aix3tkxdy3mJRX4VRvaM=
-=lA0K
+iD8DBQFBNUNPHTu7gpaalycRAksYAJ9uT/4Td1LnjUt6pKKZUcwu0O2MAgCeM50B
+9kN/emgWk9qKbv71g9tPWSE=
+=iX4c
 -----END PGP SIGNATURE-----
