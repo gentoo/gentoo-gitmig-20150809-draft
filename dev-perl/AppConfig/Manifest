@@ -2,7 +2,7 @@ MD5 8da4af3c060062e9d2b28d94237aeb3f AppConfig-1.52-r1.ebuild 618
 MD5 db902ffb577ac2ec36bafa9400c351fe AppConfig-1.52.ebuild 615
 MD5 c742e7ec86ebad31e404904f09f6f0fd AppConfig-1.56-r1.ebuild 629
 MD5 9ac0d82b668a7b69618ab0a4d6e7e202 AppConfig-1.56-r2.ebuild 1093
-MD5 330c1c7dc5b696c3e8d5110858d98c77 ChangeLog 1814
+MD5 4148101eba59da8c66a53cbf0b0b0b2e ChangeLog 1804
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3ff95f843a1d73e04b9d80345b372343 files/AppConfig-1.52-gentoo.diff 2204
 MD5 7d66af0eceb608490f6fbc44a1c8407e files/blocksep.patch 3053
