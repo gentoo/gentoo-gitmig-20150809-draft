@@ -2,7 +2,7 @@ MD5 e4f879084acabd014a43e3c9f1a43459 ChangeLog 7720
 MD5 91179c84e3dc8dadcfdad16cabede343 linux26-headers-2.6.5.ebuild 4188
 MD5 89403525f4da5e8458fd7f720d6de6ee linux26-headers-2.6.6-r1.ebuild 4223
 MD5 b3d1c41a74dbe1041b4082288cacd3ca linux26-headers-2.6.7-r4.ebuild 4031
-MD5 926fe2dfdfca6e025dccb8f70be5e19f linux26-headers-2.6.8.1-r1.ebuild 4292
+MD5 c5f5b13b303d22ef6d1f9aefbbfb94f5 linux26-headers-2.6.8.1-r1.ebuild 4289
 MD5 58516a09eebcaa2239ea0b70f310484e linux26-headers-2.6.8.1.ebuild 3895
 MD5 21dcb669b4e8535f0a04f40ad2c4c9ff metadata.xml 224
 MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-linux26-headers-2.6.5 66

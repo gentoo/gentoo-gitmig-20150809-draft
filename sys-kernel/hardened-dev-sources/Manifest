@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 31cc5005e84f3662cd8f0564922001b2 hardened-dev-sources-2.6.7-r9.ebuild 1090
-MD5 82fb2e488cf74ed7bdb51f1f521c1fe4 hardened-dev-sources-2.6.7-r8.ebuild 1092
 MD5 daa20bf7db5ecf989bdc9af98c9865fe ChangeLog 6863
-MD5 73174f8e07b82c5df563b7196f87611c metadata.xml 299
 MD5 6ceac5877bbf8ffb6523d3d671031b73 hardened-dev-sources-2.6.7-r7.ebuild 1089
-MD5 8204afea1d572b49a4a80d8da4eef0c9 files/hardened-dev-sources-2.6.7.CAN-2004-0596.patch 1033
+MD5 82fb2e488cf74ed7bdb51f1f521c1fe4 hardened-dev-sources-2.6.7-r8.ebuild 1092
+MD5 acc96490301c95a056b351e566342103 hardened-dev-sources-2.6.7-r9.ebuild 1085
+MD5 73174f8e07b82c5df563b7196f87611c metadata.xml 299
 MD5 efbbfbed471c50333a8c2fd2f2b0b061 files/digest-hardened-dev-sources-2.6.7-r7 219
 MD5 0f763833ebbcbf0f2a8ac151454c3b29 files/digest-hardened-dev-sources-2.6.7-r8 219
 MD5 8add7d7ef69d9ff384b7d4f5a0356cc3 files/digest-hardened-dev-sources-2.6.7-r9 219
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBcXNCI9RrrOsOLvcRAmsTAJ417LvXGZZDFzzZiEN3y+hvVHJO3ACfUhe/
-vN+cBhYA+jAtg/VNxniw4FE=
-=NXku
------END PGP SIGNATURE-----
+MD5 8204afea1d572b49a4a80d8da4eef0c9 files/hardened-dev-sources-2.6.7.CAN-2004-0596.patch 1033
