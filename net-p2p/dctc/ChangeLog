@@ -1,12 +1,16 @@
 # ChangeLog for net-p2p/dctc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.5 2002/08/16 13:49:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.6 2002/10/10 08:12:26 vapier Exp $
+
+*dctc-0.83.5 (16 Aug 2002)
+
+  10 Oct 2002; Mike Frysinger <vapier@gentoo.org> dctc-0.83.5.ebuild :
+  Version Bump + fix dodoc statements + upped glib dependency to glib2
 
 *dctc-0.83.2 (16 Aug 2002)
 
- 16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> dctc-0.83.2.ebuild :
-
- Version bump thanks to: ewaling@ccitt5.net (Erik Waling) in bug #6293
+  16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> dctc-0.83.2.ebuild :
+  Version bump thanks to: ewaling@ccitt5.net (Erik Waling) in bug #6293
 
 *dctc-0.83.1 (5 Jul 2002)
 
