@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.1 2003/06/02 10:57:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.2 2003/06/07 01:36:32 liquidx Exp $
 
 inherit flag-o-matic
 
@@ -23,7 +23,8 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.7
 	crypt? ( >=app-crypt/gnupg-1.0.5 )
 	xmms? ( >=media-sound/xmms-1.2.7* )"
 
-DEPEND="${RDEPEND} 
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
