@@ -1,20 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.32.20030219.ebuild,v 1.3 2003/06/12 14:17:00 seemant Exp $
-
-IUSE="static truetype xv sdl dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd"
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.32.20030219.ebuild,v 1.4 2003/08/03 03:03:54 vapier Exp $
 
 MY_P="${P/.200/-200}"
 MY_S="${PN}0.7-0.7.32"
 S="${WORKDIR}/${MY_S}"
 
 DESCRIPTION="Library for AVI-Files"
-SRC_URI="http://avifile.sourceforge.net/${MY_P}.tgz"
 HOMEPAGE="http://avifile.sourceforge.net/"
+SRC_URI="http://avifile.sourceforge.net/${MY_P}.tgz"
 
-SLOT="0.7"
 LICENSE="GPL-2"
+SLOT="0.7"
 KEYWORDS="x86 ~sparc"
+IUSE="static truetype xv sdl dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd debug"
 
 DEPEND=">=media-libs/jpeg-6b
 	x86? ( >=media-libs/divx4linux-20020418
@@ -83,11 +82,9 @@ src_compile() {
 		myconf="${myconf} --enable-lame-bin"
 	fi
 
-	if [ ! -z $DEBUGBUILD ]; then
-		myconf="${myconf} --enable-loader-out"
-	else
-		myconf="${myconf} --enable-quiet"
-	fi
+	use debug \
+		&& myconf="${myconf} --enable-loader-out" \
+		|| myconf="${myconf} --enable-quiet"
 
 	( use mmx || use sse || use 3dnow ) && myconf="${myconf} --enable-x86opt"
 
@@ -138,7 +135,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	dodir /usr/lib /usr/bin
 	use avi && dodir /usr/lib/win32
 
