@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.13 2003/10/31 03:16:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.14 2003/11/01 23:36:30 seemant Exp $
+
+*gdbm-1.8.3 (01 Nov 2003)
+
+  01 Nov 2003; Seemant Kulleen <seemant@gentoo.org> gdbm-1.8.3.ebuild:
+  Version bump -- noticed this while fixing the bug mentioned below
 
   30 Oct 2003; Seemant Kulleen <seemant@gentoo.org> gdbm-1.8.0-r5.ebuild:
   Many many little fixes -- header fix to remove Chad Huneycutt's name (repoman
