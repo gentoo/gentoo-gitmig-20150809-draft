@@ -1,0 +1,14 @@
+# ChangeLog for sys-devel/gcc-sparc64
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.1 2003/11/17 02:02:33 kumba Exp $
+
+*gcc-sparc64-3.3.2 (16 Nov 2003)
+
+  16 Nov 2003; Joshua Kinard <kumba@gentoo.org> gcc-sparc64-3.2.3.ebuild,
+  gcc-sparc64-3.3.1.ebuild, gcc-sparc64-3.3.2.ebuild,
+  files/gcc-3.2.3-gentoo-branding.patch,
+  files/gcc-3.3.1-gentoo-branding.patch,
+  files/gcc-3.3.2-gentoo-branding.patch:
+  Initial revisions of minimal ebuilds which builds a kernel compiler for
+  sparc64 systems
+
