@@ -6,6 +6,13 @@ import os
 import xpak
 import string
 import commands
+import shutil
+
+def tempclean():
+	mytmp=portage.settings["BUILD_PREFIX"]
+	if os.path.isdir(mytmp):
+		print ">>> Cleaning temporary build directory..."
+		shutil.rmtree(mytmp)
 
 #build our package digraph
 
@@ -156,7 +163,7 @@ if len(sys.argv)>=2:
 		pretend=1
 		del sys.argv[1]
 	elif sys.argv[1]=="--help":
-		print "Usage: pkgmerge [--pretend] pkg1.tbz2 [pkg2.tbz2]..."
+		print "Usage: emerge [--pretend] pkg1.tbz2 [pkg2.tbz2]..."
 		sys.exit(1)
 	elif sys.argv[1]=="rsync":
 		if not os.path.exists("/usr/bin/rsync"):
@@ -198,6 +205,7 @@ if len(sys.argv)>=2:
 		if pretend:
 			mydepgraph.display(mydepgraph.altlist())
 		else:
+			tempclean()
 			mydepgraph.merge(mydepgraph.altlist())
 		sys.exit(0)
 
@@ -218,4 +226,5 @@ for mypkg in sys.argv[1:]:
 	if pretend:
 		mydepgraph.display(mydepgraph.altlist())
 	else:
+		tempclean()
 		mydepgraph.merge(mydepgraph.altlist())
