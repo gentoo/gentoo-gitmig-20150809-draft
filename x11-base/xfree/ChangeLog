@@ -1,12 +1,16 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.85 2003/01/23 00:31:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.86 2003/01/31 09:16:01 jmorgan Exp $
+
+*xfree-4.2.99.3-r2 (16 Jan 2003)
+
+  30 Jan 2003; Jack Morgan <jmorgan@gentoo.org> xfree-4.2.1-r*.ebuild
+  Added replace-flags "-mcpu=ultrasparc" "-mcpu=v8" as per bug #14126 
+  Changed -sparc to sparc
 
   22 Jan 2003; Jason Wever <weeve@gentoo.org> xfree-4.2.1-r1.ebuild
   Changed ~sparc keyword to -sparc as it introduces keymapping problems
   not present in xfree-4.2.1-r0.
-
-*xfree-4.2.99.3-r2 (16 Jan 2003)
 
   16 Jan 2002; Seemant Kulleen <seemant@gentoo.org> xfree-4.2.99.3-r2.ebuild
   files/digest-xfree-4.2.99.3-r2 files/4.2.99.3-r2/* :

@@ -1,12 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.13 2003/01/23 00:31:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.14 2003/01/31 09:16:01 jmorgan Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
 inherit flag-o-matic gcc
 
 filter-flags "-funroll-loops"
+
+# Sparc support ...                                                                                     
+replace-flags "-mcpu=ultrasparc" "-mcpu=v8"                                                             
+replace-flags "-mcpu=v9" "-mcpu=v8"        
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -85,7 +89,7 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
