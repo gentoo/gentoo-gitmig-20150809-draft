@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jahshaka
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.1 2004/08/26 02:43:44 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.2 2004/09/03 01:01:14 dholm Exp $
+
+  03 Sep 2004; David Holm <dholm@gentoo.org> jahshaka-1.9_alpha5.ebuild:
+  Added to ~ppc.
 
 *jahshaka-1.9_alpha5 (26 Aug 2004)
 

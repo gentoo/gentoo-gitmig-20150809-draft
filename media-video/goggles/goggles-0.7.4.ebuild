@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.7.4.ebuild,v 1.1 2004/08/26 05:14:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.7.4.ebuild,v 1.2 2004/09/03 00:59:00 dholm Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.fifthplanet.net/files/goggles-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=x11-libs/fox-1.2
