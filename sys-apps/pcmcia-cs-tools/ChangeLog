@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/ChangeLog,v 1.3 2003/03/05 00:53:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/ChangeLog,v 1.4 2003/06/11 01:26:07 msterret Exp $
+
+  10 Jun 2003; <msterret@gentoo.org> pcmcia-cs-tools-3.2.3.ebuild,
+  pcmcia-cs-tools-3.2.4.ebuild:
+  DEPEND on sed >= 4
 
 *pcmcia-cs-tools-3.2.4 (4 Mar 2003)
 

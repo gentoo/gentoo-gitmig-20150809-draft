@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.3.ebuild,v 1.3 2003/02/13 16:10:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.3.ebuild,v 1.4 2003/06/11 01:26:07 msterret Exp $
 
 P=${P/-tools/}
 S=${WORKDIR}/${P}
@@ -9,6 +9,7 @@ SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 DEPEND="sys-kernel/linux-headers
+	>=sys-apps/sed-4
 	gtk? ( =x11-libs/gtk+-1.2* )
 	X? ( x11-base/xfree )"
 RDEPEND=""
