@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.53 2004/03/09 00:10:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.54 2004/03/13 13:34:40 plasmaroo Exp $
+
+*linux-headers-2.6.4 (13 Mar 2004)
+
+  13 Mar 2004; <plasmaroo@gentoo.org> linux-headers-2.6.4.ebuild,
+  files/linux-headers-2.6.4-appCompat.patch:
+  Version bump; also fixes bugs #40419 and #44265.
 
   08 Mar 2004; Jason Wever <weeve@gentoo.org> linux-headers-2.4.23.ebuild:
   Added ~sparc keyword to help resolve bug #43233.
