@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.2.4.ebuild,v 1.1 2004/09/12 20:07:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.2.4.ebuild,v 1.2 2004/09/13 09:58:01 stuart Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 DEPEND="net-misc/nx-x11
 		<=net-misc/nxclient-1.3.99
 		dev-tcltk/expect
-		net-analyzer/netcat"
+		net-analyzer/gnu-netcat"
 
 S=${WORKDIR}/freenx-${PV}
 
