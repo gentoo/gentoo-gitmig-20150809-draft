@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.45 2004/10/19 09:45:57 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.46 2004/11/17 14:05:05 lanius Exp $
+
+*lirc-0.7.0 (17 Nov 2004)
+
+  17 Nov 2004; <heino@gentoo.org> +files/lirc-0.7.0-configure.in.patch,
+  +files/lirc-0.7.0-streamzap.patch.bz2, -lirc-0.6.6-r1.ebuild,
+  +lirc-0.7.0.ebuild, -lirc-0.7.0_pre4.ebuild:
+  - version bump, bug #68613
+  - move to kernel-mod eclass, bug #67431
+  - fix undefined AC_MACROS, bug #67433
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> lirc-0.7.0_pre7.ebuild:
   Stable on amd64.
