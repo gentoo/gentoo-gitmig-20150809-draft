@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/gnu-gs-fonts-other
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-other/ChangeLog,v 1.6 2004/09/29 10:03:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-other/ChangeLog,v 1.7 2004/10/27 19:14:20 kito Exp $
+
+  27 Oct 2004; Kito <kito@gentoo.org> gnu-gs-fonts-other-6.0.ebuild:
+  added ~ppc-macos
 
   29 Sep 2004; Heinrich Wendel <lanius@gentoo.org> +metadata.xml:
   add metadata.xml
