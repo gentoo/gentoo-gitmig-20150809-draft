@@ -8,8 +8,14 @@ opts="start stop"
 
 start() {
 	ebegin "Starting $SERVICE"
-	ln -sf ../services/smbd ${SVCDIR}/control/smbd
-	ln -sf ../services/nmbd ${SVCDIR}/control/nmbd
+	if [ ! -e ${SVCDIR}/control/smbd ]
+	then
+		ln -sf ../services/smbd ${SVCDIR}/control/smbd
+	fi
+	if [ ! -e ${SVCDIR}/control/nmbd ]
+	then
+		ln -sf ../services/nmbd ${SVCDIR}/control/nmbd
+	fi
 	/usr/bin/svc -u ${SVCDIR}/control/smbd
 	/usr/bin/svc -u ${SVCDIR}/control/nmbd
 	eend $?
