@@ -1,8 +1,14 @@
 # ChangeLog for app-misc/xosview
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xosview/ChangeLog,v 1.2 2002/07/12 20:20:50 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xosview/ChangeLog,v 1.3 2002/07/24 22:42:37 gerk Exp $
 
 *xosview-1.8.0 (12 Jul 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added set of ppc diffs (thanks mostly to mdk/ydl patches), but
+  also had to make workaround for the fact that /proc/stat on PPC
+  currently seems to have no EOF (?!?).  Will submit patches upstream.
+  Also added ppc to keywords.
 
   12 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
 
