@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.12 2003/09/06 22:45:53 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.13 2003/09/14 17:58:31 johnm Exp $
 
 inherit mount-boot eutils flag-o-matic
 
@@ -8,9 +8,11 @@ filter-flags "-fstack-protector"
 
 NEWP=${PN}-${PV%.*}
 S=${WORKDIR}/${NEWP}
-DESCRIPTION="GNU GRUB boot loader"
+
 SRC_URI="ftp://alpha.gnu.org/gnu/grub/${NEWP}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2"
+
+DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 KEYWORDS="x86 -amd64 -ppc -sparc -alpha -mips"
 SLOT="0"
@@ -31,6 +33,11 @@ src_unpack() {
 	# -configfile.patch
 	# -installcopyonly.patch
 	epatch ${DISTDIR}/${P}-gentoo.diff.bz2
+
+	# grub-0.93-gcc3.3.diff <johnm@gentoo.org> (14 Sep 2003)
+	# -fixes compile error with >=gcc-3.3
+	epatch ${FILESDIR}/grub-0.93-gcc3.3.diff
+
 	WANT_AUTOCONF_2_5=1 autoconf || die
 }
 
