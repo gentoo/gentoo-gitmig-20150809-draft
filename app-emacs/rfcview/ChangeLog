@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rfcview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rfcview/ChangeLog,v 1.2 2004/06/24 22:22:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rfcview/ChangeLog,v 1.3 2004/11/01 11:34:36 usata Exp $
+
+  01 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> rfcview-0.5.ebuild:
+  Stable on x86. Added to ~alpha and ~ppc-macos.
 
 *rfcview-0.5 (31 Oct 2003)
 
