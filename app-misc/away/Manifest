@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3137413842127fbabc65247a48a879dc ChangeLog 512
-MD5 6c9eddcb1ca2a03c553be804159e7138 away-0.9.5.ebuild 753
+MD5 0ab99c92e4bc67a54f6215f4194a8cb3 ChangeLog 603
+MD5 ac11c9ad860bcdc24dfd7ef5a07f16d5 away-0.9.5.ebuild 758
 MD5 7561594a1cbbeec050ca9171215ad65a metadata.xml 229
 MD5 0746c66b8f642e22f199bf6f83830e65 files/digest-away-0.9.5 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA34+QHTu7gpaalycRAiPeAJ0SSpbBaYXAI6wirKmPlNh3IaW1pwCeKLe2
-sWz2r3X4pCxo9EH6x91J9Hw=
-=ZrdF
------END PGP SIGNATURE-----
