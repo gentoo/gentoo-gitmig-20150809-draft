@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.0_rc1.ebuild,v 1.1 2003/12/02 18:25:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.1.ebuild,v 1.1 2004/01/10 14:51:53 mholzer Exp $
 
 IUSE=""
 
@@ -8,16 +8,16 @@ DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
 
 MY_P=${P/_rc/rc}
-SRC_URI="ftp://ftp.alsa-project.org/pub/tools/${MY_P}.tar.bz2"
-#SRC_URI="mirror://alsaproject/tools/${P}.tar.bz2"
-#RESTRICT="nomirror"
+#SRC_URI="ftp://ftp.alsa-project.org/pub/tools/${MY_P}.tar.bz2"
+SRC_URI="mirror://alsaproject/tools/${P}.tar.bz2"
+RESTRICT="nomirror"
 
 SLOT="0.9"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ppc64"
 LICENSE="GPL-2"
 S=${WORKDIR}/${MY_P}
 
-DEPEND=">=media-libs/alsa-lib-1.0.0_rc1
+DEPEND=">=media-libs/alsa-lib-1.0.1
 	virtual/alsa
 	=x11-libs/fltk-1.1*
 	=x11-libs/gtk+-1.2*"
@@ -25,8 +25,9 @@ DEPEND=">=media-libs/alsa-lib-1.0.0_rc1
 # This is a list of the tools in the package.
 # Some of the tools don't make proper use of CFLAGS, even though
 # all of them seem to use autoconf.  This needs to be fixed.
-ALSA_TOOLS="ac3dec as10k1 envy24control hdspmixer mixartloader rmedigicontrol \
-	sb16_csp seq/sbiload vxloader"
+ALSA_TOOLS="ac3dec as10k1 envy24control hdspconf hdsploader hdspmixer \
+	mixartloader rmedigicontrol sb16_csp seq/sbiload sscape_ctl \
+	us428control usx2yloader vxloader"
 # The below two tools do not compile with linux-headers from 2.4 kernels
 # as of alsa-tools-0.9.7, so I removed them from the list for now.
 # Bug reports have been sent to the alsa-devel mailing list.
