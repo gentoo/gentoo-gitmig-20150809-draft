@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.4.1.ebuild,v 1.5 2003/09/26 12:26:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.4.1.ebuild,v 1.6 2003/10/30 15:00:54 lanius Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="The HP Inkjet server for Ghostscript. Provides best output for HP Inkjet Printers and some LaserJets"
 HOMEPAGE="http://hpinkjet.sourceforge.net"
@@ -16,6 +18,8 @@ SLOT="0"
 IUSE="cups foomaticdb ppds"
 
 src_compile () {
+	use amd64 && gnuconfig_update
+
 	use ppds \
 		&& myconf="--enable-foomatic-install" \
 		|| myconf="--disable-foomatic-install"
