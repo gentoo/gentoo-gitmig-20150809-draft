@@ -63,6 +63,7 @@ gnome-base
 gnome-extra
 kde-base
 local
+mail-filter
 mail-mta
 mail-server
 mail-client
