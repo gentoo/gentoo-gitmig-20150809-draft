@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130-r1.ebuild,v 1.1 2005/03/19 00:46:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130-r1.ebuild,v 1.2 2005/03/22 02:56:38 vapier Exp $
 
 MAN_VER="3.3.5"
-PATCH_VER="1.3"
+PATCH_VER="1.4"
 UCLIBC_VER="1.0"
 PIE_VER="8.7.7.1"
 PIE_CORE="gcc-3.3.5-piepatches-v${PIE_VER}.tar.bz2"
@@ -86,8 +86,8 @@ src_unpack() {
 	# Anything useful and objc will require libffi. Seriously. Lets just force
 	# libffi to install with USE="objc", even though it normally only installs
 	# if you attempt to build gcj.
-	if ! ( ! use build && use objc && ! use gcj ) ; then
-		GENTOO_PATCH_EXCLUDE="42*"
+	if use !build && use objc && ! use gcj ; then
+		epatch ${FILESDIR}/3.3.4/libffi-without-libgcj.patch
 		#epatch ${FILESDIR}/3.4.3/libffi-nogcj-lib-path-fix.patch
 	fi
 }
