@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.14 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.15 2003/08/07 20:51:38 lisa Exp $
 
 inherit gnuconfig
 
@@ -20,7 +20,7 @@ KEYWORDS="x86 ppc sparc alpha amd64"
 src_compile() {
         gnuconfig_update
 	econf --with-x || die
-	make || die
+	emake || die
 }
 
 src_install() {

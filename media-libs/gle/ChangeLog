@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gle
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.7 2003/03/25 20:43:31 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.8 2003/08/07 20:51:38 lisa Exp $
+
+  07 Aug 2003; Lisa Seelye <lisa@gentoo.org> gle-3.0.1-r2.ebuild:
+  Changed make to emake for bug 26149
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
