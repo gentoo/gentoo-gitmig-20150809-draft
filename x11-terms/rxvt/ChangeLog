@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/rxvt
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.32 2004/12/29 17:08:40 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.33 2005/04/03 14:20:53 usata Exp $
+
+*rxvt-2.7.10-r2 (03 Apr 2005)
+
+  03 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> +rxvt-2.7.10-r2.ebuild:
+  Added linuxkeys to IUSE to define LINUX_KEYS; bug #22325.
+  Applied a patch for SCIM.
 
   30 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> rxvt-2.7.10-r1.ebuild:
   Step back to unstable; bug #74805 and bug #74262.
