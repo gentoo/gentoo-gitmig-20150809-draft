@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r1.ebuild,v 1.2 2002/12/23 02:31:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r1.ebuild,v 1.3 2003/01/12 20:00:54 azarah Exp $
 
 inherit eutils
 
@@ -60,22 +60,31 @@ src_unpack() {
 	then
 		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.5..." \
 		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl.diff
+	else
+		# This is a minor patch to make it work with rmap enabled kernels
+		EPATCH_SINGLE_MSG="Applying rmap compat patch for kernel 2.4..."
+		epatch ${FILESDIR}/${NV_PACKAGE}-rmap.diff
 	fi
-
-	# This is a minor patch to make it work with rmap enabled kernels
-	EPATCH_SINGLE_MSG="Applying rmap compat patch for kernel 2.4..."
-	epatch ${FILESDIR}/${NV_PACKAGE}-rmap.diff
 }
 
 src_compile() {
 	# Portage should determine the version of the kernel sources
 	check_KV
-	#IGNORE_CC_MISMATCH disables a sanity check that's needed when gcc has been
-	#updated but the running kernel is still compiled with an older gcc.  This is
-	#needed for chrooted building, where the sanity check detects the gcc of the
-	#kernel outside the chroot rather than within.
-	make IGNORE_CC_MISMATCH="yes" KERNDIR="/usr/src/linux" \
-		clean nvidia.o || die
+	# IGNORE_CC_MISMATCH disables a sanity check that's needed when gcc has been
+	# updated but the running kernel is still compiled with an older gcc.  This is
+	# needed for chrooted building, where the sanity check detects the gcc of the
+	# kernel outside the chroot rather than within.
+	if [ -d /usr/src/linux/include/asm-i386/mach-default -a \
+	     ! -d /usr/src/linux/include/asm-i386/mach-generic ]
+	then
+		make SYSINCLUDE="/usr/src/linux/include \
+			             -I/usr/src/linux/include/asm-i386/mach-default" \
+			IGNORE_CC_MISMATCH="yes" KERNDIR="/usr/src/linux" \
+			clean nvidia.o || die
+	else
+		make IGNORE_CC_MISMATCH="yes" KERNDIR="/usr/src/linux" \
+			clean nvidia.o || die
+	fi
 }
 
 src_install() {
