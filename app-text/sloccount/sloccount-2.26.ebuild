@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.26.ebuild,v 1.1 2005/02/20 21:07:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.26.ebuild,v 1.2 2005/02/21 16:52:03 mr_bones_ Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-libexec.patch
-	
+
 	sed -i \
 		-e "/^CC/ { s/$/ ${CFLAGS}/g }" \
 		-e "/^DOC_DIR/ { s/-\$(RPM_VERSION)//g }" \
