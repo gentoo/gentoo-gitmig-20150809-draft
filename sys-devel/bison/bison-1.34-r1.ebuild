@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.34-r1.ebuild,v 1.11 2003/09/06 08:09:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.34-r1.ebuild,v 1.12 2003/09/08 02:14:58 azarah Exp $
 
 IUSE="nls static build"
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="A yacc-compatible parser generator"
 SRC_URI="mirror://gnu/bison/${P}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/bison/bison.html"
@@ -16,11 +16,9 @@ DEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
 
-	local myconf
-	if [ -z "`use nls`" ]
-	then
-		myconf="--disable-nls"
-	fi
+	local myconf=
+	
+	use nls || myconf="--disable-nls"
 
 	./configure --prefix=/usr \
 		--datadir=/usr/share \

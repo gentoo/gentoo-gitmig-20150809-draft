@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.18 2003/09/06 22:31:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.19 2003/09/08 02:14:58 azarah Exp $
+
+  08 Sep 2003; Martin Schlemmer <azarah@gentoo.org> bison-1.34-r1.ebuild,
+  bison-1.35.ebuild, bison-1.75.ebuild, bison-1.875.ebuild:
+  Add m4 DEPEND (bug #28119), with some other cleanups to older
+  ebuilds than 1.875.
 
   07 Sep 2003; Martin Schlemmer <azarah@gentoo.org> bison-1.875.ebuild:
   Fix DEPEND for when we have 'build' in USE.

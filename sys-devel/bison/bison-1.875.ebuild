@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.2 2003/09/06 22:31:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.3 2003/09/08 02:14:58 azarah Exp $
 
 IUSE="nls static build" # icc"
 
@@ -14,7 +14,8 @@ SLOT="0"
 # do not compile xfree
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
-DEPEND="!build? ( nls? ( sys-devel/gettext ) )"
+DEPEND="sys-devel/m4
+	nls? ( sys-devel/gettext )"
 #	icc? ( dev-lang/icc )"
 
 
@@ -28,10 +29,10 @@ src_unpack() {
 
 src_compile() {
 
-#	use icc && CC="iccbin" CXX="iccbin" LD="iccbin"
 	local myconf=
 
 	use nls || myconf="--disable-nls"
+#	use icc && CC="iccbin" CXX="iccbin" LD="iccbin"
 
 	econf ${myconf} || die
 
@@ -57,13 +58,8 @@ src_install() {
 	# We do not need this.
 	rm -f ${D}/usr/lib/liby.a
 
-	if [ -z "`use build`" ]
-	then
-		dodoc COPYING AUTHORS NEWS ChangeLog README REFERENCES OChangeLog
-		docinto txt
-		dodoc doc/FAQ
-	else
-		rm -rf ${D}/usr/share/man ${D}/usr/share/info
-	fi
+	dodoc COPYING AUTHORS NEWS ChangeLog README REFERENCES OChangeLog
+	docinto txt
+	dodoc doc/FAQ
 }
 
