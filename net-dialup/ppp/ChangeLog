@@ -1,8 +1,8 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.53 2004/03/08 19:21:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.54 2004/03/08 19:22:17 lanius Exp $
 
-  08 Mar 2004; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2_beta3-r1.ebuild:
+  08 Mar 2004; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2-r1.ebuild:
   install pppoatm.so, not only build it
 
   06 Mar 2004; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2-r1.ebuild:

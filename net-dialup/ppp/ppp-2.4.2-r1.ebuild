@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.3 2004/03/06 16:12:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.4 2004/03/08 19:22:17 lanius Exp $
 
 DESCRIPTION="Point-to-point protocol - patched for PPPOE"
 HOMEPAGE="http://www.samba.org/ppp"
@@ -97,6 +97,10 @@ src_install() {
 	dolib.so pppd/plugins/rp-pppoe/rp-pppoe.so
 	dodir /usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 	mv ${D}/usr/lib/*.so ${D}/usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
+
+	if [ "`use atm`" -a "`use x86`" ]; then
+		dolib.so pppd/plugins/pppoatm.so
+	fi
 
 	insinto /etc/modules.d
 	insopts -m0644
