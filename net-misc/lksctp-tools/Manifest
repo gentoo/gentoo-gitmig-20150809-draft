@@ -1,4 +1,14 @@
-MD5 9caec52921bbf33d1e5b9d11d9b37255 lksctp-tools-1.0.1.ebuild 823
-MD5 925ee9f7e4796f0002381335a4e427fb ChangeLog 416
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7188b148bee3420a6d8789c96fd1bcea lksctp-tools-1.0.1.ebuild 859
+MD5 f634450459e23ddd38d4ee1dc34afafc ChangeLog 566
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 bfc154edf9f162d5dbb3bfff4034c354 files/digest-lksctp-tools-1.0.1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB5Ga4m/TpOlox+n8RAhrZAJ9qXu7+iHOzzrt7C5g60D8GVLPQsgCgxi0X
+taIzGAOSH/dGCOl8o0l6Bwo=
+=T0Go
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lksctp-tools
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.1 2004/11/24 01:35:05 robbat2 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.2 2005/01/11 23:51:56 johnm Exp $
+
+  11 Jan 2005; John Mylchreest <johnm@gentoo.org> lksctp-tools-1.0.1.ebuild:
+  fixing linux-headers DEPEND for 2005.0. can we get away with a virtual?
 
 *lksctp-tools-1.0.1 (23 Nov 2004)
 
