@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-find/xmms-find-0.4.7.ebuild,v 1.6 2004/04/20 17:51:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-find/xmms-find-0.4.7.ebuild,v 1.7 2004/04/27 19:56:31 pvdabeel Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xmmsfind/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND="media-sound/xmms"
 
