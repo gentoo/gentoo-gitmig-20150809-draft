@@ -1,9 +1,13 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.15 2003/08/11 16:25:30 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.16 2003/08/13 00:10:37 lu_zero Exp $
+
+  11 Aug 2003; Luca Barbato <lu_zero@gentoo.org> java-sdk-docs-1.4.1.ebuild:
+  Marked ~ppc again.
 
   11 Aug 2003; Adrian Almenar <strider@gentoo.org> java-sdk-docs-1.4.2.ebuild:
-  Needed to updated sun-jdk-1.4.2 to stable, also this ebuild works ok, and only install jdk docs.
+  Needed to updated sun-jdk-1.4.2 to stable, also this ebuild works ok, and 
+  only install jdk docs.
 
   08 Aug 2003; Adrian Almenar <strider@gentoo.org> java-sdk-docs-1.4.2.ebuild:
   Added more keywords to this ebuild
