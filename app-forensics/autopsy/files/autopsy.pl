@@ -16,6 +16,7 @@ $INSTALLDIR = '/usr/lib/autopsy';
 # System Utilities
 $STRINGS_EXE = '/usr/bin/strings';
 $GREP_EXE = '/bin/grep';
+$FILE_EXE = '/usr/bin/file';
 
 # Directories
 # Where sleuthkit is installed (leave this alone)
