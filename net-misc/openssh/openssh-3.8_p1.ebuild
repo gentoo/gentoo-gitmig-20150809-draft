@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8_p1.ebuild,v 1.8 2004/04/21 11:55:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8_p1.ebuild,v 1.9 2004/04/22 17:26:52 gmsoft Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://openssh/${PARCH}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips hppa amd64 ~ia64 ~ppc64 s390"
 IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
