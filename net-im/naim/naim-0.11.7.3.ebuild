@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.7.3.ebuild,v 1.1 2005/01/25 18:46:20 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.7.3.ebuild,v 1.2 2005/01/25 19:08:46 rizzo Exp $
 
 
 DESCRIPTION="An ncurses based AOL Instant Messenger"
@@ -14,6 +14,16 @@ IUSE="debug"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	app-misc/screen"
+
+src_unpack() {
+	unpack ${A}
+
+	# Alter makefile so firetalk-int.h is installed
+	cd ${S}
+	sed -i 's/include_HEADERS = firetalk.h/include_HEADERS = firetalk.h firetalk-int.h/' \
+		firetalk/Makefile.am \
+		firetalk/Makefile.in
+}
 
 src_compile() {
 	# --enable-profile
@@ -30,6 +40,7 @@ src_compile() {
 }
 
 src_install() {
+	cd ${S}
 	make DESTDIR=${D} install || die "make install failed"
 	dodoc AUTHORS FAQ BUGS README NEWS ChangeLog doc/*.hlp
 }

@@ -1,3 +1,4 @@
-MD5 b9b9b2d439324d0a4c41b40406a067fa naim-modules-0.0.11.6.1_pre20030923.ebuild 832
-MD5 38ee376eb669d4f99531cfdf37bb85bc ChangeLog 335
-MD5 d88d895bcf62ce99bbc4ced27c5875ee files/digest-naim-modules-0.0.11.6.1_pre20030923 91
+MD5 3aa82194fa565023ba706eb4992d2c7e ChangeLog 502
+MD5 8b9315e0eb39178622eff7b321b18517 metadata.xml 326
+MD5 31eb16ab3167732affb0076b50e41779 naim-modules-0.0.11.7.2.ebuild 818
+MD5 b5a0e77bb9063c9b1c0a145eb0eb1fd3 files/digest-naim-modules-0.0.11.7.2 92
