@@ -1,18 +1,25 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.50 2003/01/07 22:31:18 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.51 2003/01/09 14:38:59 mholzer Exp $
+
+*gentoolkit-0.1.17-r9 (08 Jan 2003)
+
+  08 Jan 2003; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r9.ebuild
+  files/digest-gentoolkit-0.1.17-r9 ChangeLog :
 
 *gentoolkit-0.1.17-r8 (07 Jan 2003)
 
   07 Jan 2003; Jan Seidel <tuxus@gentoo.org> gentoolkit-0.1.17-r8.ebuild :
   Added mips to keywords.
 
-  07 Jan 2003; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r8.ebuild files/digest-gentoolkit-0.1.17-r8 ChangeLog :
+  07 Jan 2003; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r8.ebuild
+  files/digest-gentoolkit-0.1.17-r8 ChangeLog :
   Updated mkebuild to meet skel.ebuild specs. This closes #13403. 
 
 *gentoolkit-0.1.17-r7 (04 Jan 2003)
 
-  04 Jan 2003; Martin Holzer <mholzer@gentoo.org gentoolkit-0.1.17-r7.ebuild files/digest-gentoolkit-0.1.17-r7 ChangeLog :
+  04 Jan 2003; Martin Holzer <mholzer@gentoo.org gentoolkit-0.1.17-r7.ebuild
+  files/digest-gentoolkit-0.1.17-r7 ChangeLog :
   since epm is now it's own package i removed it. Closes #13220. 
   Corrected qpkg help. Closes #5194.
 
