@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.229 2004/04/30 00:31:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.230 2004/05/01 03:51:58 tgall Exp $
+
+  30 Apr 2004; Tom Gall <tgall@gentoo.org> gcc-3.3.3_pre20040322.ebuild,
+  gcc-3.3.3_pre20040408-r1.ebuild, gcc-3.3.3_pre20040426.ebuild:
+  mark these as ~ppc64. DO NOT MARK stable for ppc64 without talking to me please.
 
   29 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.3.3-r3.ebuild,
   +files/3.3.3/gcc333-debian-arm-getoff.patch,
