@@ -1,0 +1,21 @@
+# ChangeLog for media-sound/flite
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+#
+
+*flite-1.0 (16 Mar 2004)
+
+  16 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  .#flite-1.0.ebuild.1.6, flite-1.0.ebuild, metadata.xml:
+  Moved from media-sound/flite to app-accessibility/flite.
+
+  12 Jun 2003; <msterret@gentoo.org> flite-1.0.ebuild:
+  fix Header
+
+*flite-1.0 (31 May 2002)
+
+  31 May 2002; Michael M Nazaroff <naz@gentoo.org> flite-1.0.ebuild : 
+  
+  This changelog is for the initial release of flite which is minimal
+  text-to-speach engine that is engineered to be small and resource friendly.
+  Flite is based of the festival engine. This ebuild was kindly submitted by
+  Matt Keadle <mkeadle@ecpi.edu>.
