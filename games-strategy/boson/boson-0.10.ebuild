@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation and Thomas Capricelli <orzel@kde.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.10.ebuild,v 1.4 2005/01/14 23:38:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.10.ebuild,v 1.5 2005/01/22 05:10:29 vapier Exp $
 
 inherit kde
 
@@ -15,16 +15,17 @@ IUSE="opengl"
 
 DEPEND="media-libs/lib3ds
 	>=media-libs/openal-20040303
+	kde-base/arts
 	opengl? ( virtual/opengl )"
 need-kde 3
 
-S="${WORKDIR}/${PN}-all-${PV}"
+S=${WORKDIR}/${PN}-all-${PV}
 
 src_compile() {
 	./configure \
 		--disable-debug \
 		--with-xinerama \
-		`use_with opengl gl` \
+		$(use_with opengl gl) \
 		--host=${CHOST} \
 		--prefix=${KDEDIR} \
 		|| die "./configure failed"
