@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.7.0.ebuild,v 1.4 2004/09/18 20:19:40 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.7.0.ebuild,v 1.5 2004/11/14 17:21:12 slarti Exp $
 
 DESCRIPTION="File searcher similar to grep but with fancy output"
 HOMEPAGE="http://glark.sourceforge.net/"
 SRC_URI="mirror://sourceforge/glark/${P}.tar.gz"
 
-KEYWORDS="x86 sparc ~ppc mips ~amd64"
+KEYWORDS="x86 sparc ~ppc mips amd64"
 SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE=""

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/glark
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.18 2004/10/15 23:51:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.19 2004/11/14 17:21:12 slarti Exp $
+
+  14 Nov 2004; Tom Martin <slarti@gentoo.org> glark-1.7.0.ebuild:
+  Stable on amd64.
 
   16 Oct 2004; Tom Martin <slarti@gentoo.org> metadata.xml:
   Added to the shell-tools herd for ciaranm.
