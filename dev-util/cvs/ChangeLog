@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.4 2002/05/04 04:28:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.5 2002/07/21 01:09:58 cardoe Exp $
 
 *cvs-1.11.2 (26 Apr 2002)
+ 
+  20 Jul 2002; Doug Goldstein <cardoe@gentoo.org> cvs-1.11.2.ebuild:
+  Added missing KEYWORDS, SLOT, LICENSE
 
   26 Apr 2002; Arcady Genkin <agenkin@thpoon.com> cvs-1.11.2.ebuild : Updated
   to version 1.11.2 Changed download URI to use HTTP instead of FTP, b/c the
