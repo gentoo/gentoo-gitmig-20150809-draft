@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r5.ebuild,v 1.3 2004/09/02 21:50:07 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r5.ebuild,v 1.4 2004/09/19 20:36:48 eradicator Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -61,6 +61,10 @@ src_unpack() {
 	# pxl dash patch
 	epatch ${FILESDIR}/gs7.05.6-gdevpx.patch
 
+	# Makefile.in fixes for DESTDIR support in libijs because
+	# einstall borks on multilib systems -- eradicator
+	epatch ${FILESDIR}/gs${PV}-ijsdestdir.patch
+
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.07/$(get_libdir):"\
 	Makefile.in || die "sed failed"
@@ -94,7 +98,7 @@ src_compile() {
 	make || die "make failed"
 
 	cd ijs
-	econf --prefix=${D}/usr || die "econf failed"
+	econf || die "econf failed"
 	make || die "make failed"
 	cd ..
 }
@@ -131,6 +135,7 @@ src_install() {
 	# This is broken - there are not even a 'install_prefix'
 	# anywhere in ${S}/ijs ...
 	#einstall install_prefix=${D}
-	einstall
-	dosed "s:^prefix=.*:prefix=/usr:" /usr/bin/ijs-config
+	#einstall
+	#dosed "s:^prefix=.*:prefix=/usr:" /usr/bin/ijs-config
+	make DESTDIR="${D}" install || die
 }

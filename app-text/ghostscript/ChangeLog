@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.68 2004/09/02 21:26:02 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.69 2004/09/19 20:36:48 eradicator Exp $
+
+  19 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/gs7.07.1-ijsdestdir.patch:
+  Fixed install process for ijs. The previous hack didn't work when we passed
+  --libdir to configure.
 
   02 Sep 2004; Danny van Dyk <kugelfang@gentoo.org>
   ghostscript-7.07.1-r1.ebuild, ghostscript-7.07.1-r2.ebuild,
