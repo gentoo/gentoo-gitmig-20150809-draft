@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/grdesktop
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.10 2004/02/21 01:14:51 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.11 2004/02/22 00:17:03 cyfred Exp $
+
+  22 Feb 2004; Andrew Bevitt <cyfred@gentoo.org>; grdesktop-0.22-r1.ebuild,
+  files/0010_all_0.22-remove-double-makefile-syntax.patch:
+  Fixing some more DEP/RDEP problems and adding patch to help with scrollkeeper
+  updates during compile.
 
   21 Feb 2004; Andrew Bevitt <cyfred@gentoo.org>; grdesktop-0.22.ebuild:
   Pulling bad dependency ebuild
