@@ -1,14 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.1-r1.ebuild,v 1.1 2002/01/08 01:21:45 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.1-r2.ebuild,v 1.1 2002/01/16 08:13:34 gbevin Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
 
 DESCRIPTION="QT version ${PV}"
 
-SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-free-${PV}.tar.gz"
+SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-free-${PV}.tar.gz
+		postgres? (ftp://ftp.easynet.be/postgresql/v7.1.3/postgresql-7.1.3.tar.gz)"
 HOMEPAGE="http://www.trolltech.com/"
 
 DEPEND=">=media-libs/libpng-1.0.9
@@ -16,6 +17,7 @@ DEPEND=">=media-libs/libpng-1.0.9
 	opengl? ( virtual/opengl virtual/glu )
 	nas? ( >=media-libs/nas-1.4.1 )
 	mysql? ( >=dev-db/mysql-3.2.10 )
+	postgres? ( =dev-db/postgresql-7.1.3 )
 	odbc? ( >=dev-db/unixODBC-2.0 )
 	virtual/x11"
 
@@ -25,6 +27,13 @@ export QTDIR=${S}
 src_unpack() {
 
     unpack ${A}
+
+	if [ "`use postgres`" ]
+	then
+		cd ${WORKDIR}/postgresql-7.1.3
+		./configure
+	fi
+	
     cd ${S}
     cp configure configure.orig
     sed -e "s:read acceptance:acceptance=yes:" configure.orig > configure
@@ -35,10 +44,11 @@ src_compile() {
 
 	export LDFLAGS="-ldl"
 
-	use nas		&& myconf="${myconf} -system-nas-sound"
-	use gif		&& myconf="${myconf} -qt-gif"
-	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
-	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
+	use nas			&& myconf="${myconf} -system-nas-sound"
+	use gif			&& myconf="${myconf} -qt-gif"
+	use mysql		&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
+	use postgres	&& myconf="${myconf} -plugin-sql-psql -I${WORKDIR}/postgresql-7.1.3/src/include -I${WORKDIR}/postgresql-7.1.3/src/interfaces/libpq -L/usr/lib"
+	use odbc		&& myconf="${myconf} -plugin-sql-odbc"
 	[ -n "$DEBUG" ]	&& myconf="${myconf} -debug" 		|| myconf="${myconf} -release -no-g++-exceptions"
 
 	./configure -sm -thread -stl -system-zlib -system-libjpeg ${myconf} \
