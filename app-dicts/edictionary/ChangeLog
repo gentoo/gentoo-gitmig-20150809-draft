@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/edictionary
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/edictionary/ChangeLog,v 1.1 2004/05/05 01:23:19 abhishek Exp $
+
+*edictionary-1.2 (04 May 2004)
+
+  04 May 2004; Abhishek Amit <abhishek@gentoo.org> +metadata.xml,
+  +edictionary-1.2.ebuild:
+  Inital import. Submitted by Jon Hood <squinky86@gentoo.org> in bug #30516
+
