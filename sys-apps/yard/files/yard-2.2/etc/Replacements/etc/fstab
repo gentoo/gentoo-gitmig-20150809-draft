@@ -1,4 +1,0 @@
-# DEVICE	MOUNTPOINT	TYPE	OPTIONS	DUMP	FSCKORDER
-#----------------------------------------------------------------
-/dev/ram0       /               ext2    defaults
-/proc           /proc           proc    defaults

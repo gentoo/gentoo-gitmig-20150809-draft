@@ -1,11 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.0-r1.ebuild,v 1.10 2002/07/24 07:45:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.0-r1.ebuild,v 1.11 2002/09/02 09:03:12 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Yard is a suite of Perl scripts for creating rescue disks (also
 called bootdisks) for Linux."
-SRC_URI="http://www.croftj.net/~fawcett/yard/${P}.tar.gz"
+SRC_URI="http://www.croftj.net/~fawcett/yard/${P}.tar.gz
+        http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${P}-extra.tar.bz2
+        http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/diet-utils.tar.bz2"
 HOMEPAGE="http://www.linuxlots.com/~fawcett/yard/"
 SLOT="0"
 LICENSE="GPL-2 Artistic"
@@ -14,6 +16,8 @@ DEPEND="sys-devel/perl"
 RDEPEND=""
 
 src_unpack() {
+	unpack ${P}-extra.tar.bz2
+	mv ${S} ${S}-extra
 	unpack ${P}.tar.gz
 	cd ${S}
 	cp ${FILESDIR}/configure .
@@ -24,11 +28,9 @@ src_unpack() {
 }
 
 src_compile() {
-
 	cd ${S}
 	./configure --prefix=/usr || die
 	make || die
-
 }
 
 src_install () {
@@ -52,7 +54,7 @@ src_install () {
 
 	# configure stuff
 
-	cd ${FILESDIR}/${P}
+	cd ${S}-extra
 	insinto /etc/yard
 	doins etc/Bootdisk* etc/Config.pl
 	insinto /etc/yard/Replacements/etc
@@ -81,6 +83,6 @@ src_install () {
 	cd ..
 	mkdir bin
 	cd bin
-	unpack diet-utils.tar.bz2
+	tar xjpf ${DISTDIR}/diet-utils.tar.bz2
 
 }

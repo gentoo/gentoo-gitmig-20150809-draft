@@ -1,8 +1,0 @@
-#  Simple pam.conf for rescue disk
-#  Be sure to include the libraries in the fourth column
-#  in Bootdisk_contents
-auth       optional	/lib/security/pam_permit.so
-auth       optional	/lib/security/pam_permit.so
-account    optional	/lib/security/pam_permit.so
-password   optional	/lib/security/pam_permit.so
-session    optional	/lib/security/pam_permit.so

@@ -1,8 +1,0 @@
-#!/bin/sh
-
-find /mnt/floppy -path *bin/* -type f -print | \
-  xargs mklibs.sh --verbose \
-  --dest-dir /mnt/floppy/lib \
-  /mnt/floppy/lib/libnss_files.so.2 \
-  /mnt/floppy/lib/security/pam_permit.so
-
