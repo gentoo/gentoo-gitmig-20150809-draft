@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22.ebuild,v 1.1 2004/08/17 17:40:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22.ebuild,v 1.2 2004/08/17 22:15:05 foser Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono
@@ -66,6 +66,9 @@ src_compile() {
 
 #		`use_enable doc doxygen-docs` \
 #		`use_enable doc xml-docs` \
+
+	# do not build the mono examples, they need gtk-sharp
+	touch ${S}/mono/example/echo-{server,client}.exe
 
 	emake || die
 
