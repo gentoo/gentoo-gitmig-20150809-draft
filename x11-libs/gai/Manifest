@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5c8acb7365bbf46482c2ca5ac6711c96 gai-0.5.2.ebuild 1448
 MD5 524355e0fa9636840e1e8a6a477abb47 gai-0.5.6.ebuild 1453
 MD5 c8bac1b5fcb8245900077ea052f8fd45 gai-0.5.3.ebuild 1448
 MD5 9897f57e494a8d1d352417482b4d1f6c ChangeLog 1723
-MD5 4de810beafe6af976494dfe29abd5c60 metadata.xml 405
+MD5 0b02f54e912487912d18ae699b0fec8e metadata.xml 258
 MD5 7d0da014157fc8aad1f9e2ae224df604 gai-0.5.5.ebuild 1454
 MD5 72db507aad739b6917552b17dac52b3c files/digest-gai-0.5.2 62
 MD5 1f1765cd80db536972ec0fbfccb73136 files/digest-gai-0.5.3 62
 MD5 b1b9fe26be39008ea87206a6cdf6414f files/digest-gai-0.5.5 62
 MD5 6c8e2086f432b1415f49005e79bdfe78 files/digest-gai-0.5.6 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw0b+I1lqEGTUzyQRAlzoAKDU9RReElUOg7P49UP5UX4ga4RfSwCcC/JL
+ut4jfErTihp15z1DxaMy1KA=
+=ApoY
+-----END PGP SIGNATURE-----

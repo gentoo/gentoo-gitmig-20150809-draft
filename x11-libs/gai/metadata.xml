@@ -6,7 +6,5 @@
 <maintainer>
   <email>lordvan@gentoo.org</email>
   <name>Thomas Raschbacher</name>
-<!--  <description>Description of the maintainership</description> -->
 </maintainer>
-<!-- <longdescription>Long description of the package</longdescription> -->
 </pkgmetadata>
