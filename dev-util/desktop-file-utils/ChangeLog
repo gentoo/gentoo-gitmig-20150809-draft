@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.9 2004/08/14 00:00:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.10 2004/09/02 23:00:11 gustavoz Exp $
+
+  02 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  desktop-file-utils-0.7.ebuild:
+  Keyworded ~sparc wrt #62665
 
   14 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> desktop-file-utils-0.7.ebuild:
   Fixed access violation with lispdir. This closes bug #59172.
