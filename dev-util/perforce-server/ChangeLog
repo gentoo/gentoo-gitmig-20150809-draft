@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/perforce-server
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-server/ChangeLog,v 1.1 2004/04/18 18:45:21 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-server/ChangeLog,v 1.2 2004/04/18 18:52:50 stuart Exp $
+
+  18 Apr 2004; Stuart Herbert <stuart@gentoo.org>
+  perforce-server-2003.2.ebuild, files/perforce-2003.2/50perforce,
+  files/perforce-2003.2/conf.d/perforce,
+  files/perforce-2003.2/init.d/perforce:
+  Added missing init.d and conf.d files
 
 *perforce-server-2003.2 (18 Apr 2004)
 

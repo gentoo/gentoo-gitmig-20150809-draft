@@ -15,7 +15,7 @@ DEPEND="virtual/glibc"
 #RDEPEND=""
 S=${WORKDIR}
 RESTRICT="nomirror nostrip"
-MY_FILES=$FILESDIR/perforce-2003.1/
+MY_FILES=$FILESDIR/perforce-2003.2/
 
 src_unpack ()
 {
