@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08.ebuild,v 1.1 2003/07/28 09:09:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08.ebuild,v 1.2 2003/07/28 13:38:48 azarah Exp $
 
 IUSE="nls"
 
@@ -50,7 +50,7 @@ src_install() {
 	dosym ../../bin/setfont /usr/bin/setfont
 
 	dodoc CHANGES CREDITS COPYING README
-	dodir /usr/share/doc/${P}/html
-	cp -dR doc/* ${D}/usr/share/doc/${P}/html/
+	dodir /usr/share/doc/${PF}/html
+	cp -dR doc/* ${D}/usr/share/doc/${PF}/html/
 }
 
