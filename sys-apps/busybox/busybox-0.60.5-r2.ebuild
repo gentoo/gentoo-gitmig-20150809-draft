@@ -1,23 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r2.ebuild,v 1.5 2004/04/27 21:02:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r2.ebuild,v 1.6 2004/05/25 01:36:52 vapier Exp $
 
 inherit flag-o-matic eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
+HOMEPAGE="http://www.busybox.net/"
 SRC_URI="http://www.busybox.net/downloads/${P}.tar.gz"
-HOMEPAGE="http://www.busybox.net"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 -alpha"
+SLOT="0"
+KEYWORDS="~x86 arm ~amd64 -alpha"
 IUSE="static uclibc diet devfs"
 
 DEPEND="virtual/glibc
 	diet? ( dev-libs/dietlibc )
 	>=sys-apps/sed-4"
-
 RDEPEND="!static? (
 		!diet? ( virtual/glibc )
 		diet? ( dev-libs/dietlibc )
