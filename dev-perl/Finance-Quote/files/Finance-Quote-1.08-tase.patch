@@ -1,0 +1,15 @@
+diff -ur Finance-Quote-1.08/lib/Finance/Quote/Yahoo/Base.pm Finance-Quote-1.08-tase/lib/Finance/Quote/Yahoo/Base.pm
+--- Finance-Quote-1.08/lib/Finance/Quote/Yahoo/Base.pm	2003-07-04 16:00:07.000000000 +0300
++++ Finance-Quote-1.08-tase/lib/Finance/Quote/Yahoo/Base.pm	2004-06-28 12:09:52.448751880 +0300
+@@ -227,9 +227,9 @@
+ 
+ 			# Convert prices (when needed). E.G. London sources
+ 			# return in pence. We'd like them to return in pounds
+-			# (divide by 100).
++			# (divide by 100). We'll do the same for Tel-Aviv.
+ 			if (defined($exchange)) {
+-			  if ($exchange eq "L") {
++			  if ($exchange eq "L" || $exchange eq "TA") {
+ 			    foreach my $field ($quoter->default_currency_fields) {
+ 			      next unless ($info{$symbol,$field});
+ 			      $info{$symbol,$field} =
