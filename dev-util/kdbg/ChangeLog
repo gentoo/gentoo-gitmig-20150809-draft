@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.7 2002/12/13 10:56:49 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.8 2003/02/03 15:10:40 hannes Exp $
+
+*kdbg-1.2.7 (03 Feb 2003)
+
+  03 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdbg-1.2.7.ebuild:
+  version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
