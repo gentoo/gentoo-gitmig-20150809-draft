@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 69e2652a4da167f2055e2582ec86969d ChangeLog 14014
+MD5 8f4403b2a29dd0c43d1647ea3543b0bf ChangeLog 14208
 MD5 08c58b0b5006c6f30adbbb6657e7188f pine-4.62-r1.ebuild 5198
 MD5 d3210060048b2a6df3bbb18110bec61e pine-4.61-r2.ebuild 4688
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
@@ -21,7 +21,7 @@ MD5 921f1e2837b3d3aaaff0ff9b78432e92 files/pine-4.30-ldap.patch 420
 MD5 c0d53400c157de12da7e429dd0f21185 files/imap-2000-time.patch 1646
 MD5 6fca405df4fd22a5708ddf83e8081716 files/pine-4.40-lockfile-perm.patch 932
 MD5 fa3a8604150ceb9b876b6c5f1f2309ab files/digest-pine-4.62 206
-MD5 599476895556ce91c067c6f39c7c3acc files/digest-pine-4.62-r1 139
+MD5 1d3052dda4b361277ca31ce465a29626 files/digest-pine-4.62-r1 139
 MD5 de52689ee75160c695bf4659ee956845 files/imap-4.7c2-flock_4.60.patch 537
 MD5 3803bda87f35ee20456ab2b363460db9 files/pine-4.31-segfix.patch 460
 MD5 dadc9e153e023ad3b24d8cefd4bf5a2b files/pine-4.56-passfile.patch 504
@@ -29,7 +29,7 @@ MD5 1057540bd7b50f92e88b3af6f8d69c99 files/pine-4.61-subjectlength.patch 2363
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCHoEnQlM6RnzZP+IRAph8AKDFaGO55Pn6SkCKPxiNhFRsqK9h7QCgkYNr
-vgZytnqaNYISs1e3J6/XxXU=
-=Gw0h
+iD8DBQFCHw2tQlM6RnzZP+IRAuboAKCpjnDbFBl8RkoiDxL9NUldIR/O6wCgqgPv
+2qxnj2iDlb73NLK9m5NtvBs=
+=GcDI
 -----END PGP SIGNATURE-----
