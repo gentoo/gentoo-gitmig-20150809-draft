@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/katoob
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.8 2004/06/24 21:57:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.9 2004/09/07 06:34:20 leonardop Exp $
+
+*katoob-0.3.8 (07 Sep 2003)
+
+  07 Sep 2003; L. Boshell <leonardop@gentoo.org> katoob-0.3.8.ebuild:
+  New release. Resolves bug #62414. Thanks to Ahmed Farid for his help on
+  this report.
 
   30 May 2004; L. Boshell <leonardop@gentoo.org> katoob-0.3.5.ebuild:
   Remove *_DISABLE_DEPRECATED macros. Resolves bug #52175.
