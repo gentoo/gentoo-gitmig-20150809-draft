@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2706 2004/02/17 22:21:12 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2707 2004/02/17 22:45:54 ciaranm Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -89,11 +89,6 @@ sys-devel/uclibc-buildroot
 # <media-video@gentoo.org> (31 Jan 2004)
 # sinek needs to be ported to newest xine api #28100
 media-video/sinek
-
-# <ciaranm@gentoo.org> (30 Jan 2004)
-# silo 1.4.x still has issues that need fixing. masking this until they're
-# straightened out, anyone that needs the new features can override locally
->=sys-boot/silo-1.4.0
 
 # <lanius@gentoo.org> (27 Jan 2004)
 # this is still in development
