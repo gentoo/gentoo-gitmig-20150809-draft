@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-3.0.0_rc3.ebuild,v 1.1 2005/03/14 21:53:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-3.0.0.ebuild,v 1.1 2005/03/19 20:33:46 swegener Exp $
 
 inherit eutils fixheadtails
 
@@ -13,12 +13,10 @@ HOMEPAGE="http://www.shadow-realm.org/"
 KEYWORDS="~x86 ~sparc ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="debug ssl"
+IUSE="ssl"
 
-RDEPEND="virtual/libc
+DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -42,8 +40,8 @@ src_compile() {
 
 src_install() {
 	dodir /etc/ultimateircd
-	keepdir /var/log/ultimateircd /var/run/ultimateircd
-	fowners nobody /var/log/ultimateircd /var/run/ultimateircd
+	keepdir /var/{lib,log,run}/ultimateircd
+	fowners nobody /var/{lib,log,run}/ultimateircd
 
 	einstall \
 		sysconfdir=${D}/etc/ultimateircd \
@@ -51,7 +49,9 @@ src_install() {
 		networksubdir=${D}/etc/ultimateircd/networks \
 		|| die "einstall failed"
 
-	rm -f ${D}/usr/{{ircd,kill,rehash},bin/{ircdchk,ssl-{cert,search}.sh}}
+	rm -rf ${D}/usr/{{ircd,kill,rehash},bin/{ircdchk,ssl-{cert,search}.sh}} ${D}/var/lib/ultimateircd/logs
+	dosym /var/log/ultimateircd /var/lib/ultimateircd/logs
+
 	mv ${D}/usr/bin/ircd ${D}/usr/bin/ultimateircd
 	mv ${D}/usr/bin/mkpasswd ${D}/usr/bin/ultimateircd-mkpasswd
 
