@@ -1,29 +1,33 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.1_pre4.ebuild,v 1.1 2002/11/01 18:30:37 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.1_pre4.ebuild,v 1.2 2002/11/01 20:53:21 blizzy Exp $
 
-S="${WORKDIR}/jEdit"
+MY_PV="41pre4"
+
 DESCRIPTION="Programmer's editor written in Java"
 HOMEPAGE="http://www.jedit.org"
-SRC_URI="mirror://sourceforge/jedit/jedit41pre4source.tar.gz"
+SRC_URI="mirror://sourceforge/jedit/jedit${MY_PV}source.tar.gz"
 LICENSE="GPL-2"
-SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+SLOT="0"
+IUSE="jikes"
+
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}
-	>=dev-java/ant-1.4.1"
-#	jikes? ( >=dev-java/jikes-1.15 )"
-IUSE=""
+	>=dev-java/ant-1.4.1
+	jikes? ( >=dev-java/jikes-1.17 )"
+
+S="${WORKDIR}/jEdit"
 
 src_compile() {
 	local antflags
 
 	antflags=""
-#	if [ `use jikes` ] ; then
-#		einfo "Please ignore the following compiler warnings."
-#		einfo "Jikes is just too pedantic..."
-#		antflags="${antflags} -Dbuild.compiler=jikes"
-#	fi
+	if [ `use jikes` ] ; then
+		einfo "Please ignore the following compiler warnings."
+		einfo "Jikes is just too pedantic..."
+		antflags="${antflags} -Dbuild.compiler=jikes"
+	fi
 
 	ant ${antflags} || die "compile problem"
 }
