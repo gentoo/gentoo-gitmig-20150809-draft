@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cryptlib
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.6 2004/11/04 09:53:08 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.7 2005/01/21 23:18:22 dragonheart Exp $
+
+  22 Jan 2005; Daniel Black <dragonheart@gentoo.org> cryptlib-3.1.ebuild,
+  cryptlib-3.1_beta05.ebuild:
+  3.1_beta05 no longer mirrored upstream. Changed to fetch the right
+  documentation as per bug #78971 by Alexander Rittler <alexr@upb.de>.
 
 *cryptlib-3.1 (04 Nov 2004)
 
