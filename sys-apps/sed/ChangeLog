@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.45 2004/04/17 06:02:53 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.46 2004/06/08 13:58:49 geoman Exp $
+
+  08 Jun 2004; Stephen P. Becker <geoman@gentoo.org> sed-4.0.7.ebuild:
+  Added inherit gnuconfig to sed-4.0.7 for mips.
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> sed-4.0.9.ebuild:
   stable on amd64

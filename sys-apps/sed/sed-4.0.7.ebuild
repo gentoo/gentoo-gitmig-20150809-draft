@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.7.ebuild,v 1.13 2004/02/23 00:51:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.7.ebuild,v 1.14 2004/06/08 13:58:49 geoman Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="Super-useful stream editor"
 SRC_URI="mirror://gnu/sed/${P}.tar.gz"
