@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/fame/fame-0.9.0.ebuild,v 1.8 2004/07/01 08:39:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/fame/fame-0.9.0.ebuild,v 1.9 2004/08/07 23:44:36 slarti Exp $
 
-DESCRIPTION="fame is a multimedia encoder, which captures video from a video4linux device, and optionnaly sound, for MPEG encoding."
+DESCRIPTION="fame is a multimedia encoder, which captures video from a video4linux device, and optionally sound, for MPEG encoding."
 HOMEPAGE="http://fame.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
