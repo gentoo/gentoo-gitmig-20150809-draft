@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.97.ebuild,v 1.1 2003/07/13 03:13:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.97.ebuild,v 1.2 2003/07/15 23:59:39 vapier Exp $
 
-inherit games cvs
+inherit cvs
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/crystal"
 ECVS_MODULE="CS"
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
@@ -31,7 +31,7 @@ DEPEND=">=media-libs/libpng-1.2.1
 	>=dev-lang/perl-5.6.1
 	!dev-libs/crystalspace"
 
-CRYSTAL_PREFIX=${GAMES_PREFIX_OPT}/crystal
+CRYSTAL_PREFIX=/opt/crystal
 
 src_compile() {
 	./configure --prefix=${CRYSTAL_PREFIX} || die
@@ -41,9 +41,6 @@ src_compile() {
 src_install() {
 	dodir ${CRYSTAL_PREFIX}
 	make INSTALL_DIR=${D}/${CRYSTAL_PREFIX} install || die
-
-	dodir ${GAMES_BINDIR}
-	dosym ${CRYSTAL_PREFIX}/bin/cs-config ${GAMES_BINDIR}/cs-config
-
-	prepgamesdirs
+	dodir /usr/bin
+	dosym ${CRYSTAL_PREFIX}/bin/cs-config /usr/bin/cs-config
 }

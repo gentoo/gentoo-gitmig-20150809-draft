@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-20030413-r2.ebuild,v 1.3 2003/07/13 04:59:38 vapier Exp $
-
-inherit games
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-20030413-r2.ebuild,v 1.4 2003/07/15 23:58:28 vapier Exp $
 
 DESCRIPTION="A game entity layer based on Crystal Space"
 HOMEPAGE="http://cel.sourceforge.net/"
@@ -18,8 +16,8 @@ DEPEND="dev-games/crystalspace
 
 S=${WORKDIR}/${PN}
 
-CEL_PREFIX=${GAMES_PREFIX_OPT}/crystal
-CS_PREFIX=${GAMES_PREFIX_OPT}/crystal
+CEL_PREFIX=/opt/crystal
+CS_PREFIX=/opt/crystal
 
 src_unpack() {
 	unpack ${A}
@@ -39,6 +37,5 @@ src_install() {
 	# attention don't put a / between ${D} and ${CEL_PREFIX} jam has a bug where
 	# it fails with 3 following slashes.
 	jam -sFILEMODE=0640 -sEXEMODE=0750 -sprefix=${D}${CEL_PREFIX} install || die
-	dogamesbin cel.cex
-	prepgamesdirs
+	dobin cel.cex
 }
