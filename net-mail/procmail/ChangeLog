@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/procmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.14 2002/12/15 01:09:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.15 2002/12/23 02:28:21 joker Exp $
 
 *procmail-3.22-r5 (28 Oct 2002)
+
+  22 Dec 2002; Christian Birchinger <joker@gentoo.org> :     
+  Removed sparc64 keyword.
 	
   28 Oct 2002; Grant Goodyear <g2boojum@gentoo.org> procmail-3.22-r5.ebuild :
 
