@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.5.0.ebuild,v 1.2 2004/03/19 09:15:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.5.0.ebuild,v 1.3 2004/04/17 18:19:00 eradicator Exp $
 
 inherit kde-functions kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://rnvs.informatik.tu-chemnitz.de/cgi-bin/nph-sendbin.cgi/~jan/${PN
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="arts"
 
 DEPEND="arts? ( kde-base/kdemultimedia )
