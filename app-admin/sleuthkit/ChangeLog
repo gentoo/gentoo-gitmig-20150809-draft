@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sleuthkit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/ChangeLog,v 1.10 2004/06/24 21:38:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/ChangeLog,v 1.11 2004/06/25 14:55:13 fmccor Exp $
+
+  25 Jun 2004; Ferris McCormick <fmccor@gentoo.org> sleuthkit-1.69.ebuild:
+  Mark stable on sparc.
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> sleuthkit-1.69.ebuild:
   x86 keyword
