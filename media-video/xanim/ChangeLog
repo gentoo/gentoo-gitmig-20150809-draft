@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xanim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.11 2003/03/04 02:34:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.12 2003/09/28 17:32:24 pyrania Exp $
+
+  28 Sep 2003; Markus Nigbur <pyrania@gentoo.org> xanim-2.80.1-r4.ebuild,
+  files/Makefile.amd64:
+  Added amd64 support. ebuild by brad@mainstreetsoftworks.com in bug #29802.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

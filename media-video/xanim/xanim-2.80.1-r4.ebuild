@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.15 2003/09/11 01:22:29 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.16 2003/09/28 17:32:24 pyrania Exp $
 
 inherit flag-o-matic
 
@@ -50,6 +50,10 @@ case $ARCH in
 			_XA_EXT=$_XA_PPC_EXT
 			_XA_UNCOMPRESS=uncompress
 			;;
+	amd64)
+			_XA_EXT=$_XA_I386_EXT
+			_XA_UNCOMPRESS=gunzip
+			;;
 	*)
 			_XA_CYUV=$_XA_CYUV_I386
 			_XA_CVID=$_XA_CVID_I386
@@ -87,25 +91,39 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
-	mkdir ${S}/mods
-	cd ${S}/mods
-	cp ${DISTDIR}/${_XA_CYUV}${_XA_EXT} .
-	$_XA_UNCOMPRESS ${_XA_CYUV}${_XA_EXT}
-	cp ${DISTDIR}/${_XA_CVID}${_XA_EXT} .
-	$_XA_UNCOMPRESS ${_XA_CVID}${_XA_EXT}
-	cp ${DISTDIR}/${_XA_IV32}${_XA_EXT} .
-	$_XA_UNCOMPRESS ${_XA_IV32}${_XA_EXT}
+	if [ "$ARCH" != "amd64" ]
+	then
+		mkdir ${S}/mods
+		cd ${S}/mods
+		cp ${DISTDIR}/${_XA_CYUV}${_XA_EXT} .
+		$_XA_UNCOMPRESS ${_XA_CYUV}${_XA_EXT}
+		cp ${DISTDIR}/${_XA_CVID}${_XA_EXT} .
+		$_XA_UNCOMPRESS ${_XA_CVID}${_XA_EXT}
+		cp ${DISTDIR}/${_XA_IV32}${_XA_EXT} .
+		$_XA_UNCOMPRESS ${_XA_IV32}${_XA_EXT}
+	fi
 
 	# -O higher than -O2 breaks for GCC3.1
 	filter-flags -finline-functions
 	filter-flags "-O?" "-O2"
 	#CFLAGS=${CFLAGS//-O[0-9]/-O2}
-	sed -e "s:-O2:${CFLAGS}:" ${FILESDIR}/Makefile > ${S}/Makefile
+	if [ "$ARCH" = "amd64" ]
+	then
+		sed -e "s:-O2:${CFLAGS}:" ${FILESDIR}/Makefile.amd64 > ${S}/Makefile
+	else
+		sed -e "s:-O2:${CFLAGS}:" ${FILESDIR}/Makefile > ${S}/Makefile
+	fi
+
 }
 
 src_compile() {
-	make XA_IV32_LIB=mods/${_XA_CYUV} XA_CVID_LIB=mods/${_XA_CVID} \
-		XA_CYUV_LIB=mods/${_XA_IV32} || die
+	if [ "$ARCH" = "amd64" ]
+	then
+		make || die
+	else
+		make XA_IV32_LIB=mods/${_XA_CYUV} XA_CVID_LIB=mods/${_XA_CVID} \
+			XA_CYUV_LIB=mods/${_XA_IV32} || die
+	fi
 }
 
 src_install () {
