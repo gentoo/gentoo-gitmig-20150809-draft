@@ -12,7 +12,7 @@ MD5 fd4b6e380aed0e58ae1f882c71d1de52 files/postfix.rc6 521
 MD5 569f1c46350b2718419b72bb9c443c3f files/saslpass 135
 MD5 460833c3a1ffc3a240c72f0537802b5c files/tls+ipv6-1.4-pf-1.1.11-20020917.patch.bz2 72150
 MD5 40a96d0b5dfb56714e11d1f379ddc5a7 files/main.cf 18376
-MD5 6d3de81e3dc3e4aeda6f9fc7c6967f51 files/digest-postfix-2.0.10 146
+MD5 f3d59acbe60510cbe3f3edda1f4ccfa1 files/digest-postfix-2.0.10 292
 MD5 e651e2015b6c6f1495ac84a37e4a8871 files/smtpd.conf 130
 MD5 e126c8295dad90d20bf2d6a47086ab0e files/digest-postfix-2.0.9-r1 220
 MD5 ff6584c14212d383b742fe5fc0aceed5 files/postfix-2.0.9-get-FQDN.patch 993
