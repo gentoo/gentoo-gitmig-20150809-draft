@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06.ebuild,v 1.11 2003/10/28 12:55:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06-r2.ebuild,v 1.1 2003/10/28 12:55:56 mholzer Exp $
+
+IUSE="nls"
 
 S=${WORKDIR}/quota-tools
 DESCRIPTION="Linux quota tools"
@@ -10,13 +12,14 @@ HOMEPAGE="http://sourceforge.net/projects/linuxquota/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc sparc alpha"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
-	sys-apps/tcp-wrappers"
+	tcpd? ( sys-apps/tcp-wrappers )"
 
 src_compile() {
-	econf || die "./configure failed"
+	sed -i -e "s:,LIBS=\"\$saved_LIBS=\":;LIBS=\"\$saved_LIBS\":" configure
+	econf || die
 	emake || die
 }
 
@@ -28,4 +31,10 @@ src_install() {
 	insopts -m0644
 	doins warnquota.conf quotatab
 	dodoc doc/*
+
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/quota.rc quota
+
+	# NLS bloat reduction
+	use nls || rm -rf ${D}/usr/share/locale
 }
