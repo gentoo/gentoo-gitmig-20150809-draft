@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/cssed-0.2.0.ebuild,v 1.1 2004/04/23 10:43:11 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/cssed-0.2.0.ebuild,v 1.2 2004/04/23 13:32:04 stuart Exp $
 
 DESCRIPTION="CSSED a GTK2 application to help create and maintain CSS style sheets for web developing"
 HOMEPAGE="http://cssed.sourceforge.net/"
@@ -40,7 +40,7 @@ DEPEND=">=x11-libs/gtk+-2
 S=${WORKDIR}/cssed-0.2.0
 
 src_compile() {
-	./autogen.sh
+	./autogen.sh --prefix=/usr
 	emake || die
 }
 
