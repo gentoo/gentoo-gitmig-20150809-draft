@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/openjms
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.1 2005/02/06 16:18:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.2 2005/03/23 18:40:58 gustavoz Exp $
+
+  23 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> openjms-0.7.6.1.ebuild:
+  Keyworded ~sparc wrt #84992
 
 *openjms-0.7.6.1 (06 Feb 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1.ebuild,v 1.1 2005/02/06 16:18:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1.ebuild,v 1.2 2005/03/23 18:40:58 gustavoz Exp $
 
 inherit java-pkg eutils
 
@@ -8,7 +8,7 @@ SLOT="0"
 LICENSE="GPL-2"
 DESCRIPTION="Open Java Messaging System"
 HOMEPAGE="http://openjms.sourceforge.net/"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~sparc"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz
 	mirror://gentoo/${P}-scripts.tar.gz"
 IUSE="doc jikes"
