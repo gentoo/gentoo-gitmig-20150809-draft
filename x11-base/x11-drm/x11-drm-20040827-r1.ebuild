@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827-r1.ebuild,v 1.3 2005/01/03 02:11:34 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827-r1.ebuild,v 1.4 2005/01/04 00:49:15 battousai Exp $
 
 inherit eutils x11 linux-mod
 
@@ -27,7 +27,7 @@ LICENSE="X11"
 
 # No more ppc until the ioremap thing gets sorted out
 #KEYWORDS="~x86 ~alpha ~ia64 ~ppc ~amd64" 
-KEYWORDS="~x86 ~alpha ~ia64 ~ppc ~amd64"
+KEYWORDS="~x86 ~alpha ~ia64 ~amd64"
 
 DEPEND="virtual/x11
 	virtual/linux-sources
