@@ -1,7 +1,14 @@
 # ChangeLog for dev-ml/lablgl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.9 2003/12/26 14:08:02 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.10 2004/02/03 01:22:40 mattam Exp $
 
+*lablgl-0.99-r1 (03 Feb 2004)
+
+  03 Feb 2004; Matthieu Sozeau <mattam@gentoo.org> lablgl-0.99-r1.ebuild,
+  metadata.xml:
+  Reworked ebuild so as to have tcltk as an optional dependancy.
+  Added metadata.xml for ml herd.
+	
   26 Dec 2003; Jason Wever <weeve@gentoo.org> lablgl-0.98.ebuild:
   Marked stable on sparc to fix broken net-misc/unison dependencies.
 
