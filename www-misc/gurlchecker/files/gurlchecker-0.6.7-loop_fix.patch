@@ -1,0 +1,18 @@
+diff -NurdB gurlchecker-0.6.7-orig/src/application.c gurlchecker-0.6.7/src/application.c
+--- gurlchecker-0.6.7-orig/src/application.c	2004-11-17 11:59:22.027903832 -0500
++++ gurlchecker-0.6.7/src/application.c	2004-11-17 12:00:33.947970320 -0500
+@@ -1311,8 +1311,13 @@
+ void
+ uc_application_update_ui (void)
+ {
+-  while (gtk_events_pending ())
++  /* Fixed limit of iterations to perform in order to avoid endless loops */
++  int i = 0;
++
++  while (i < 5 && gtk_events_pending ()) {
+     gtk_main_iteration ();
++    i++;
++  }
+ }
+ 
+ 

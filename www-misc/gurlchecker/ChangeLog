@@ -1,6 +1,17 @@
 # ChangeLog for www-misc/gurlchecker
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.3 2004/09/05 09:12:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.4 2004/11/17 17:40:19 leonardop Exp $
+
+  17 Nov 2004; Leonardo Boshell <leonardop@gentoo.org>
+  gurlchecker-0.6.7-r1.ebuild, files/gurlchecker-0.6.7-loop_fix.patch:
+  Added patch that avoids endless loops when updating the UI. Resolves bug
+  #62408.
+  
+*gurlchecker-0.6.7-r1 (12 Nov 2004)
+
+  12 Nov 2004; Leonardo Boshell <leonardop@gentoo.org>
+  gurlchecker-0.6.7-r1.ebuild:
+  Added dependency for gnome-base/control-center. Resolves bug #66061.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.

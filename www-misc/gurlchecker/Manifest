@@ -1,14 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 00d55301681aca82d7e0a460d5709890 ChangeLog 2630
 MD5 5129df7bb32a20864ece5255cfa6d2da gurlchecker-0.6.7.ebuild 702
 MD5 f2ffceb15194050aafbbdabb8b51507a metadata.xml 475
-MD5 474af572639eb769909fcc8a5c292f95 ChangeLog 2220
+MD5 6df6ede1b523abd242eb6b227637724c gurlchecker-0.6.7-r1.ebuild 951
 MD5 5f2b15ae6811070d74f37a99129c4f85 files/digest-gurlchecker-0.6.7 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOth2I1lqEGTUzyQRAoHlAKClq+O9adkhyr7g+hlcqJpx+WjO8gCgsUGf
-LHj/IM7NIrrEKWfZNtEuzWc=
-=rwaG
------END PGP SIGNATURE-----
+MD5 5f2b15ae6811070d74f37a99129c4f85 files/digest-gurlchecker-0.6.7-r1 69
+MD5 47c9c402297825f67de93d36d104d97d files/gurlchecker-0.6.7-loop_fix.patch 532
