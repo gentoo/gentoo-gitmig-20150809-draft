@@ -1,15 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b-r2.ebuild,v 1.1 2003/09/16 22:09:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b-r2.ebuild,v 1.2 2003/09/17 12:14:44 aliz Exp $
 
-inherit eutils
+inherit eutils flag-o-matic gcc
 
-OLD_096_PV="0.9.6j"
+if [ "$( gcc-fullversion )" == "3.3" ]; then
+	filter-flags "-fprefetch-loop-arrays"
+fi
+
+OLD_096_P="${PN}-0.9.6j"
 
 S=${WORKDIR}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
 SRC_URI="mirror://openssl/source/${P}.tar.gz
-	mirror://openssl/source/${PN}-${OLD_096_PV}.tar.gz"
+	mirror://openssl/source/${OLD_096_P}.tar.gz"
 HOMEPAGE="http://www.openssl.org/"
 
 RDEPEND="virtual/glibc"
@@ -27,7 +31,7 @@ src_unpack() {
 	# openssl-0.9.7
 	cd ${WORKDIR}/${P}
 
-	epatch ${FILESDIR}/${PN}-0.9.7a-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	if [ "${ARCH}" = "hppa" ]; then
 	sed -i -e \
@@ -46,9 +50,9 @@ src_unpack() {
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
-		cd ${WORKDIR}/${PN}-${OLD_096_PV}
+		cd ${WORKDIR}/${OLD_096_P}
 
-	        epatch ${FILESDIR}/openssl-0.9.6i-gentoo.diff
+	        epatch ${FILESDIR}/${OLD_096_P}-gentoo.diff
 
 		case ${ARCH} in
 		mips)
@@ -79,7 +83,7 @@ src_compile() {
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
-		cd ${WORKDIR}/${PN}-${OLD_096_PV}
+		cd ${WORKDIR}/${OLD_096_P}
 
 		if [ "$PROFILE_ARCH" = "sparc" -a "`uname -m`" = "sparc64" ]; then
 			SSH_TARGET="linux-sparcv8"
@@ -103,7 +107,7 @@ src_compile() {
 			./config --prefix=/usr --openssldir=/etc/ssl shared threads || die
 		fi
 
-		einfo "Compiling ${PN}-${OLD_096_PV}"
+		einfo "Compiling ${OLD_096_P}"
 		make all || die
 	}
 }
@@ -118,6 +122,13 @@ src_install() {
 	insinto /usr/share/emacs/site-lisp
 	doins doc/c-indentation.el
 
+	# create the certs directory.  Previous openssl builds
+	# would need to create /usr/lib/ssl/certs but this looks
+	# to be the more FHS compliant setup... -raker
+	insinto /etc/ssl/certs
+	doins certs/*.pem
+	OPENSSL=${D}/usr/bin/openssl /usr/bin/perl tools/c_rehash ${D}/etc/ssl/certs
+
 	# The man pages rand.3 and passwd.1 conflict with other packages
 	# Rename them to ssl-* and also make a symlink from openssl-* to ssl-*
 	cd ${D}/usr/share/man/man1
@@ -127,22 +138,19 @@ src_install() {
 	mv rand.3 ssl-rand.3
 	ln -sf ssl-rand.3 openssl-rand.3
 
-	# create the certs directory.  Previous openssl builds
-	# would need to create /usr/lib/ssl/certs but this looks
-	# to be the more FHS compliant setup... -raker
-	dodir /etc/ssl/certs
-
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
-		dolib.so ${WORKDIR}/${PN}-${OLD_096_PV}/libcrypto.so.0.9.6
-		dolib.so ${WORKDIR}/${PN}-${OLD_096_PV}/libssl.so.0.9.6
+		dolib.so ${WORKDIR}/${OLD_096_P}/libcrypto.so.0.9.6
+		dolib.so ${WORKDIR}/${OLD_096_P}/libssl.so.0.9.6
 	}
 }
 
 pkg_postinst() {
-	einfo "You can now re-compile all packages that are linked against"
-	einfo "OpenSSL 0.9.6 by using revdep-rebuild from gentoolkit:"
-	einfo "# revdep-rebuild --soname libssl.so.0.9.6"
-	einfo "# revdep-rebuild --soname libcrypto.so.0.9.6"
-	einfo "After this, you can delete /usr/lib/libssl.so.0.9.6 and /usr/lib/libcrypto.so.0.9.6"
+	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
+		einfo "You can now re-compile all packages that are linked against"
+		einfo "OpenSSL 0.9.6 by using revdep-rebuild from gentoolkit:"
+		einfo "# revdep-rebuild --soname libssl.so.0.9.6"
+		einfo "# revdep-rebuild --soname libcrypto.so.0.9.6"
+		einfo "After this, you can delete /usr/lib/libssl.so.0.9.6 and /usr/lib/libcrypto.so.0.9.6"
+	}
 }
