@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20030217.ebuild,v 1.3 2003/04/14 09:49:39 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20030217.ebuild,v 1.4 2003/04/14 11:31:22 cretin Exp $
 
 IUSE=""
 
@@ -32,11 +32,6 @@ src_compile() {
 	econf || die "Configure failed"
 
 	emake || die "Make Failed"
-
-	LD_PRELOAD_SAVE=${LD_PRELOAD}
-	unset LD_PRELOAD
-	make check || die "make check failed"
-	export LD_PRELOAD=${LD_PRELOAD_SAVE}
 }
 
 src_install() {
