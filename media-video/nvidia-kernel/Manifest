@@ -1,15 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 17e5291b91d1eef96d55e54a2cba6d81 nvidia-kernel-1.0.6629-r1.ebuild 4748
 MD5 bf8f040d6927016f9da24ab89262d346 nvidia-kernel-1.0.6629-r4.ebuild 4567
 MD5 4044ee9d937dbea272e4b4d3d1f887c4 ChangeLog 29422
+MD5 20b45e8fb133c942078814cb06bd5624 nvidia-kernel-1.0.7174.ebuild 3993
 MD5 625c9d6fe198029638080ad7548b0ec4 nvidia-kernel-1.0.7167-r1.ebuild 3947
+MD5 b64e157f4c2a603a067c23ee51ec7326 .nvidia-kernel-1.0.7174.ebuild.swp 16384
 MD5 c84a79e7d9b69a204003fb8c2dbaad01 metadata.xml 297
 MD5 6efd7d5ad3c7739f685111aa84466b68 nvidia-kernel-1.0.6111-r3.ebuild 4488
 MD5 d8fcf2021aa68584d4a4d9e96b671da0 files/nvidia 501
 MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629-r1 163
 MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629-r4 163
+MD5 4f87222b512b9ec8c33ae52a716878ab files/digest-nvidia-kernel-1.0.7174 163
 MD5 97b3ec5488fb7f7f6cdde31ee42e45af files/digest-nvidia-kernel-1.0.7167-r1 163
 MD5 ed1e098d85579c75542ef0a49ee4dd5c files/digest-nvidia-kernel-1.0.6111-r3 163
 MD5 14924b09123b075f910c73316baff848 files/1.0.6111/power-suspend-2.6.9-changes.patch 856
@@ -42,10 +42,3 @@ MD5 9df3fbed7af6fcb4ad13b1b5c3851381 files/1.0.7167/NVIDIA_kernel-1.0-7167-disab
 MD5 70bb10b2da2423a6be2a4c2bce38d807 files/1.0.7167/NVIDIA_kernel-1.0-7167-1233959.patch 490
 MD5 82d99e72fddbc1b0447708afd84dc8c5 files/1.0.7167/NVIDIA_kernel-1.0-7167-amd64-shutup-warnings.patch 770
 MD5 e2625e9e0a6679c38783b5d8985fdaf6 files/1.0.7167/NVIDIA_kernel-1.0-7167-1237815.patch 1100
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCMi4j1ZcsMnZjRyIRAhdGAJ99dw56s3xEMnisOI+s09IU0ZEdAwCgkoMF
-J1JBd+Q9TCmBD7XVBYCIW/g=
-=p15T
------END PGP SIGNATURE-----
