@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/yafc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.12 2004/06/24 22:48:39 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.13 2005/02/04 19:55:32 luckyduck Exp $
+
+  04 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> yafc-1.1.ebuild:
+  stable on amd64
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> yafc-1.1.ebuild:
   Marked ~arch for everyone since this was initially imported as stable for x86,
