@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.10 2004/12/23 19:45:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.11 2004/12/25 13:09:52 slarti Exp $
+
+*libgsasl-0.2.3 (25 Dec 2004)
+
+  25 Dec 2004; Tom Martin <slarti@gentoo.org> libgsasl-0.2.0.ebuild,
+  +libgsasl-0.2.3.ebuild:
+  Version bump, stabilise 0.2.0 on amd64.
 
   23 Dec 2004; Markus Rothe <corsair@gentoo.org> libgsasl-0.2.0.ebuild:
   Added ~ppc64 to KEYWORDS; bug #74100
