@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.7.ebuild,v 1.9 2004/01/26 00:08:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.7.ebuild,v 1.10 2004/03/16 17:26:39 vapier Exp $
 
 inherit libtool
 
@@ -14,11 +14,7 @@ KEYWORDS="x86 sparc ppc hppa alpha amd64 ia64"
 
 DEPEND=">=sys-devel/automake-1.6.1
 	>=sys-devel/libtool-1.4.1-r8"
-
-src_compile() {
-	econf || die "configure failure"
-	emake || die "make failure"
-}
+RDEPEND=""
 
 src_install() {
 	dodir /usr/{bin,include,lib}
