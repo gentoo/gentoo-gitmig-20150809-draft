@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.0b.ebuild,v 1.2 2003/07/19 06:14:38 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.0b.ebuild,v 1.3 2003/07/19 22:56:34 raker Exp $
 
 IUSE="debug nls alsa"
 
@@ -13,6 +13,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa"
 
 DEPEND="virtual/glibc
+	~media-libs/libmad-${PV}
+	~media-libs/libid3tag-${PV}
 	nls? ( >=sys-devel/gettext-0.11.2 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0 )"
 
