@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.15 2004/03/21 21:26:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.16 2004/03/24 17:31:42 usata Exp $
+
+*im-ja-1.0 (25 Mar 2004)
+
+  25 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> im-ja-1.0.ebuild:
+  Version bumped. Added anthy and skk local IUSE flags.
 
   22 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> im-ja-0.9-r1.ebuild,
   files/im-ja-0.9-gtk24-gentoo.diff:
