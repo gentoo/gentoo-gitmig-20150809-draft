@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.103 2004/09/17 10:37:58 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.104 2004/09/17 21:19:49 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1132,7 +1132,7 @@ check_license() {
 	# here is where we check for the licenses the user already
 	# accepted ... if we don't find a match, we make the user accept
 	local alic
-	for alic in "${ACCEPT_LICENSE}" ; do
+	for alic in ${ACCEPT_LICENSE} ; do
 		[ "${alic}" == "*" ] && return 0
 		[ "${alic}" == "${l}" ] && return 0
 	done
