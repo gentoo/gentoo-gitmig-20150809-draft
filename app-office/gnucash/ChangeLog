@@ -1,6 +1,14 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.14 2003/03/17 07:23:34 edolnx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.15 2003/03/17 22:37:13 edolnx Exp $
+
+*gnucash-1.8.1 (17 Mar 2003)
+
+  17 Mar 2003; Carl Perry <edolnx@gentoo.org> gnucash-1.8.1.ebuild, 
+  gnucash-1.6.8.ebuild: Fixed broken dependancy in 1.8.1 so it compiles 
+  now and modified g-wrap dependancy in 1.6.8 to require a version less 
+  than 1.3 - both compile cleanly on a virgin system or if the other was
+  already installed.
 
 *gnucash-1.8.1 (17 Mar 2003)
  

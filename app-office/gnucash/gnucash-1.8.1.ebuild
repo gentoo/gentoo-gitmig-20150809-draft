@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.1.ebuild,v 1.1 2003/03/17 07:23:34 edolnx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.1.ebuild,v 1.2 2003/03/17 22:37:13 edolnx Exp $
 
 inherit flag-o-matic
 inherit	libtool
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
 	>=dev-libs/slib-2.3.8
 	>=dev-lang/swig-1.3_alpha4
-	>=dev-libs/g-wrap-1.1.5
+	>=dev-libs/g-wrap-1.3.4
 	<gnome-base/libglade-2
 	media-libs/gdk-pixbuf
 	<dev-util/guile-1.4.1
