@@ -1,0 +1,8 @@
+# ChangeLog for app-sci/geda
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/geda/ChangeLog,v 1.1 2004/02/01 18:54:30 plasmaroo Exp $
+
+*geda-20040111 (01 Feb 2004)
+
+  01 Feb 2004; <plasmaroo@gentoo.org> geda-20040111.ebuild:
+  Initial commit. Thanks to all those who helped out with bug #21849!
