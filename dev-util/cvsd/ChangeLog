@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cvsd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.2 2003/10/12 09:45:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.3 2003/11/01 00:33:57 max Exp $
+
+*cvsd-1.0.0 (31 Oct 2003)
+
+  31 Oct 2003; Max Kalika <max@gentoo.org> cvsd-1.0.0.ebuild, metadata.xml,
+  files/cvsd.rc6:
+  Bump to version 1.0.0. Major cleanup.
 
   12 Oct 2003; Heinrich Wendel <lanius@gentoo.org> cvsd-0.9.19.ebuild:
   fixed typo, bug #30954
