@@ -1,5 +1,5 @@
-MD5 83c0757f2d4d3e86627701b9fe6b64c3 ChangeLog 526
-MD5 1c8be796344b02ff0801f6d391e9ba65 dovecot-0.99.10.4.ebuild 4059
+MD5 75149f06ce0bc445242e0b4ed7b4d5fa ChangeLog 619
+MD5 d139aa43b9cfee91c9a7666c22bc1ce2 dovecot-0.99.10.4.ebuild 4062
 MD5 61e0d05b1306513aede2838fa81b05b5 metadata.xml 225
 MD5 02900826bf90ce0fcbf43a3ebbfa31cf files/digest-dovecot-0.99.10.4 69
 MD5 0c6a3de53492ebf8796de67f1a5ecfe6 files/dovecot.init 526
