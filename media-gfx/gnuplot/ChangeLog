@@ -1,7 +1,14 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.2 2002/02/12 22:55:30 tod Exp $
 
+*gnuplot-3.7.1-r2 (12 Feb 2002)
+
+  12 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog, gnuplot-3.7.1-r2.ebuild :
+  
+  Added gnu plotutils support for gnuplot.  Dependency and configuration for
+  plotutils requires 'plotutils' to be in the USE variable.
+  
 *gnuplot-3.7.1-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
