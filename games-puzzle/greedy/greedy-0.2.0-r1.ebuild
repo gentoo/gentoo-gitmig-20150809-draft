@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/greedy-0.2.0-r1.ebuild,v 1.2 2004/02/20 06:53:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/greedy-0.2.0-r1.ebuild,v 1.3 2004/03/07 21:50:39 jhuebel Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="fun little ncurses puzzle game"
 HOMEPAGE="http://www.kotinet.com/juhamattin/linux/index.html"
 SRC_URI="http://www.kotinet.com/juhamattin/linux/download/${P}.tar.gz"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
