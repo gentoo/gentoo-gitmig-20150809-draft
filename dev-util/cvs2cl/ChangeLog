@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cvs2cl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2cl/ChangeLog,v 1.3 2004/06/25 02:25:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2cl/ChangeLog,v 1.4 2004/07/20 23:07:03 vapier Exp $
+
+*cvs2cl-2.57 (20 Jul 2004)
+
+  20 Jul 2004; Mike Frysinger <vapier@gentoo.org> +cvs2cl-2.57.ebuild:
+  Version bump #57461 by Sergey Borodich.
 
 *cvs2cl-2.50 (29 Nov 2003)
 
