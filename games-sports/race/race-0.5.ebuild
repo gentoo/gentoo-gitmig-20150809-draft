@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.1 2003/09/11 12:26:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.2 2003/10/22 23:27:24 mr_bones_ Exp $
 
 inherit games gcc eutils
 
@@ -12,11 +12,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -25,19 +27,20 @@ src_unpack() {
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:g" \
 		-e "s:GENTOO_CONFDIR:${GAMES_SYSCONFDIR}:g" \
-		*.c
+		*.c || die "sed failed"
+	find ${S}/data/ -type d -name .xvpics | xargs rm -rf \{\} \;
 }
 
 src_compile() {
-	emake CC="$(gcc-getCC) ${CFLAGS}" || die
+	emake CC="$(gcc-getCC) ${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	dogamesbin race
+	dogamesbin race                           || die "dogamesbin failed"
 	insinto ${GAMES_SYSCONFDIR}
-	newins config race.conf
-	dodir ${GAMES_DATADIR}/${PN}
-	mv data/* ${D}/${GAMES_DATADIR}/${PN}/
-	dodoc README
+	newins config race.conf                   || die "newins failed"
+	dodir ${GAMES_DATADIR}/${PN}              || die "dodir failed"
+	cp -r data/* ${D}/${GAMES_DATADIR}/${PN}/ || die "cp failed"
+	dodoc README                              || die "dodoc failed"
 	prepgamesdirs
 }
