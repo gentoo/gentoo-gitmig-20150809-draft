@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.3.ebuild,v 1.5 2004/11/11 22:40:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.3.ebuild,v 1.6 2005/01/30 04:47:19 squinky86 Exp $
 
 inherit kde
 
