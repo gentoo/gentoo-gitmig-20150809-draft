@@ -1,10 +1,17 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.6 2003/01/15 00:54:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.7 2003/01/21 22:32:37 george Exp $
 
-*graphviz-1.8.10-r1 (14 Jan 2003)
+*graphviz-1.8.10-r3 (21 Jan 2003)
 
-  14 jan 2003; George Shapovalov <george@gentoo.org> graphviz-1.8.10-r1.ebuild :
+  21 Jan 2003; George Shapovalov <george@gentoo.org> graphviz-1.8.10-r3.ebuild :
+  Another libpng-1.0 related fix. Now made sure all -lpng are replaced by lpng10, as quite often
+  gcc tries to link against libpng.so.3 instead of libpng.so.2. See #12433.
+  As the fixed problem tends to lead to silent failures, -r bumping the ebuild to force rebuild.
+
+*graphviz-1.8.10-r2 (14 Jan 2003)
+
+  14 Jan 2003; George Shapovalov <george@gentoo.org> graphviz-1.8.10-r2.ebuild :
 
   Following up on seemant's fix to libpng-1.0 series upated the graphviz ebuild to link against correct 
   version of libpng. Please see #10726 for more details.
