@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.904.ebuild,v 1.6 2004/09/06 20:59:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.904.ebuild,v 1.7 2004/09/07 18:56:07 mr_bones_ Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -300,7 +300,7 @@ host_def_setup() {
 #				einfo "Setting DoLoadable Server to YES."
 #			use_build dlloader MakeDllModules && \
 #				einfo "Setting MakeDllModules to YES."
-				
+
 		fi
 
 #		if use debug

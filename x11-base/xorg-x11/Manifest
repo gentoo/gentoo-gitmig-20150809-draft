@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d76a9679258330dc4cddb03e20b368c9 ChangeLog 25289
-MD5 07aebe7113492f714a1f2a88aa963c32 xorg-x11-6.7.99.903.ebuild 41120
-MD5 c525cb4363e44aacb13f6ea3fec9e3ce xorg-x11-6.7.0-r1.ebuild 41733
-MD5 51ddaacb1d67a9d3915ca33719edf8c7 xorg-x11-6.7.99.904.ebuild 41869
-MD5 e01fe16e6bdfd8cf45e246521621a7ae xorg-x11-6.7.0-r2.ebuild 37980
 MD5 36a69eed0e585f3dcf096cc82ac54575 metadata.xml 230
+MD5 e01fe16e6bdfd8cf45e246521621a7ae xorg-x11-6.7.0-r2.ebuild 37980
+MD5 c525cb4363e44aacb13f6ea3fec9e3ce xorg-x11-6.7.0-r1.ebuild 41733
 MD5 7a025fba9928b2f643aea2da070e52f5 xorg-x11-6.7.99.902.ebuild 39939
+MD5 07aebe7113492f714a1f2a88aa963c32 xorg-x11-6.7.99.903.ebuild 41120
+MD5 f84348ded5f814f1eae1f158e6c92686 xorg-x11-6.7.99.904.ebuild 41867
 MD5 51c9e80b73eced56c98721ff90648866 files/digest-xorg-x11-6.7.0-r2 904
 MD5 d2be7dc9989b9f7c3e2ccb84e5297eeb files/digest-xorg-x11-6.7.0-r1 906
+MD5 b8189a2f2288867fa7ebc39493946c95 files/digest-xorg-x11-6.7.99.902 516
 MD5 d64a77dbba4148d34f40f03c002c1122 files/digest-xorg-x11-6.7.99.903 516
 MD5 f8c7cefa19b8d2f20c88acceac920fe7 files/digest-xorg-x11-6.7.99.904 516
-MD5 b8189a2f2288867fa7ebc39493946c95 files/digest-xorg-x11-6.7.99.902 516
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBPM8mLLFUmVNQ7rkRAoUVAJ4+097q5dIyLJn+d+EPBrGqy9YTcwCfUjVT
-1yKShD88ncpFrqtQ5RnJ6lE=
-=kTYs
------END PGP SIGNATURE-----
