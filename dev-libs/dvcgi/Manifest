@@ -1,5 +1,5 @@
-MD5 a052cb355d2acf39ce23e1cd65aa3006 ChangeLog 564
+MD5 175714d2943bf1748578c167cf86ffa8 ChangeLog 568
 MD5 66f9720b5b416bb80844a79cf041e4f0 dvcgi-0.5.7.ebuild 658
-MD5 66f9720b5b416bb80844a79cf041e4f0 dvcgi-0.5.8.ebuild 658
+MD5 dc8e20c927a3b999029d4d98035b032c dvcgi-0.5.8.ebuild 658
 MD5 9cd8d8c669516a078af7121181c0e62e files/digest-dvcgi-0.5.7 63
 MD5 50db820e94b28f2d6cae4cc3bbd56d85 files/digest-dvcgi-0.5.8 63
