@@ -1,4 +1,4 @@
-MD5 2a543873f26c6acadebee048cc4033f5 files/digest-xsetleds-0.1.3 66
-MD5 e11afb8cf1f6c54a6ead65c57aab1d01 xsetleds-0.1.3.ebuild 637
 MD5 3a66c9152072d7fd20cfff9d745dccd9 ChangeLog 456
 MD5 68e1dc493fdd01842cfa2aaa74788668 metadata.xml 345
+MD5 95ea04842686f27a44fad7161eec8923 xsetleds-0.1.3.ebuild 635
+MD5 2a543873f26c6acadebee048cc4033f5 files/digest-xsetleds-0.1.3 66
