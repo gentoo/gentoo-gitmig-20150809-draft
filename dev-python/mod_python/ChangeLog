@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.9 2003/10/27 23:57:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.10 2003/12/12 02:44:23 kloeri Exp $
+
+*mod_python-2.7.9 (12 Dec 2003)
+
+  12 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org>
+  mod_python-2.7.9.ebuild, mod_python-3.0.0_beta4.ebuild,
+  mod_python-3.0.1.ebuild, mod_python-3.0.4.ebuild,
+  files/mod_python-3.0.0_beta4-destdir.diff:
+  Bump versions and remove some old versions.
 
   28 Oct 2003; Bryan Østergaard <kloeri@gentoo.org>
   mod_python-3.0.3.ebuild:
