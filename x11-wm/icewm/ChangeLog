@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.36 2003/09/30 04:17:35 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.37 2003/11/02 11:08:06 hanno Exp $
+
+*icewm-1.2.14_pre1 (02 Nov 2003)
+
+  02 Nov 2003; Hanno Boeck <hanno@gentoo.org> icewm-1.2.14_pre1.ebuild:
+  Version bump.
 
   30 Sep 2003; Brad Cowan <bcowan@gentoo.org> icewm-1.2.13.ebuild:
   Added session support from bug 29753 thanks to Daniel Goller.
