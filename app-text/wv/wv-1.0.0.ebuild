@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.0.0.ebuild,v 1.2 2003/09/14 08:26:33 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.0.0.ebuild,v 1.3 2003/09/28 13:06:56 foser Exp $
 
 DESCRIPTION="Tool for conversion of MSWord doc and rtf files to something readable"
 SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
 HOMEPAGE="http://www.wvware.com"
 
 IUSE="xml2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
