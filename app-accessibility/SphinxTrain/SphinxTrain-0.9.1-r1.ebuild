@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.1 2004/03/17 04:10:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.2 2004/03/17 22:54:26 dholm Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="SphinxTrain - Speech Recognition (Training Module)"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.speech.cs.cmu.edu/SphinxTrain/"
 SRC_URI="http://www.speech.cs.cmu.edu/${PN}/${P}-beta.tar.gz"
 SLOT="0"
 LICENSE="BSD as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/glibc
