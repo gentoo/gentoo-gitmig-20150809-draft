@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5.ebuild,v 1.16 2004/06/24 21:38:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5.ebuild,v 1.17 2004/07/31 04:56:31 solar Exp $
+
+inherit gnuconfig
 
 #
 # TODO: Fix support for krb4 and krb5
@@ -18,6 +20,11 @@ IUSE="pam"
 DEPEND="pam? ( >=sys-libs/pam-0.73-r1 )"
 
 S=${WORKDIR}/${P/_/}
+
+src_unpack() {
+	unpack ${A}
+	gnuconfig_update ${S}
+}
 
 src_compile() {
 	econf \
