@@ -1,7 +1,13 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.31 2002/12/20 14:00:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.32 2002/12/20 16:57:40 mcummings Exp $
 
+  20 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  perl-5.8.0-r6.ebuild:
+  
+  Finished what Lostlogic started - finished path corrections for
+  threading vs unthreaded perl 5.8
+  
   20 Dec 2002; Michael Cummings <mcummings@gentoo.org>
   perl-5.6.1-r10.ebuild:
 
