@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/hardware-monitor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.11 2005/01/29 06:57:15 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.12 2005/01/29 21:10:16 slarti Exp $
+
+  29 Jan 2005; Tom Martin <slarti@gentoo.org> hardware-monitor-1.2.ebuild:
+  Marked ~amd64, resolves bug 79967.
 
   29 Jan 2005; Mike Gardiner <obz@gentoo.org> hardware-monitor-1.2.ebuild:
   Added ~ppc to keywords
