@@ -1,6 +1,13 @@
 # ChangeLog for www-proxy/privoxy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/ChangeLog,v 1.7 2005/02/26 23:22:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/ChangeLog,v 1.8 2005/02/27 08:25:33 mrness Exp $
+
+*privoxy-3.0.3-r3 (27 Feb 2005)
+
+  27 Feb 2005; Alin Nastac <mrness@gentoo.org> -files/privoxy-3.0.3.2.patch,
+  -privoxy-3.0.3-r1.ebuild, -privoxy-3.0.3-r2.ebuild,
+  +privoxy-3.0.3-r3.ebuild:
+  Remove patch added from #83205. See #83278 for more info.
 
 *privoxy-3.0.3-r2 (27 Feb 2005)
 
