@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/lsof
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.14 2003/07/06 16:02:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.15 2003/07/16 11:32:57 tuxus Exp $
 
 *lsof-4.68 (30 Jun 2003)
 
@@ -21,6 +21,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *lsof-4.64 (29 Jun 2002)
+
+  16 Jul 2003; Jan Seidel <tuxus@gentoo.org> lsof-4.64.ebuild :
+  Marked stable on mips
 
   14 Apr 2003; Guy Martin <gmsoft@gentoo.org> lsof-4.64.ebuild :
   Added hppa to KEYWORDS.
