@@ -1,8 +1,12 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.8 2002/10/20 08:29:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.9 2002/10/25 23:23:03 azarah Exp $
 
 autoconf-2.54 (20 Oct 2002)
+
+  25 Oct 2002; Martin Schlemmer <azarah@gentoo.org> autoconf-2.54.ebuild :
+
+  Fix SRC_URI fir version 2.13 tarball.  Close bug #9495.
 
   20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.54.ebuild,v 1.1 2002/10/20 08:29:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.54.ebuild,v 1.2 2002/10/25 23:23:03 azarah Exp $
 
 OLD_PV=2.13
 OLD_P=${PN}-${OLD_PV}
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 OLD_S=${WORKDIR}/${OLD_P}
 DESCRIPTION="Used to create autoconfiguration files"
 SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.bz2
-	ftp://alpha.gnu.org/gnu/${PN}/${OLD_P}.tar.gz"
+	ftp://ftp.gnu.org/gnu/${PN}/${OLD_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 
 LICENSE="GPL-2"
