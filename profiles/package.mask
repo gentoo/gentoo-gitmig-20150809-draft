@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# old version isn't available, new version doesn't compile
+media-libs/nurbs++
+
 # Just masked until more testing can be done. (sandymac, 24 May 2002)
 =net-www/mozilla-1.0_rc3
 
