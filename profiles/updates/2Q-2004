@@ -31,3 +31,6 @@ move media-sound/mad media-sound/madplay
 move games-action/mutantstormdemo games-action/mutantstorm-demo
 move games-action/spacetripperdemo games-action/spacetripper-demo
 move x11-misc/culmus media-fonts/culmus
+move net-mail/clamav app-antivirus/clamav
+move net-mail/f-prot app-antivirus/f-prot 
+move net-mail/vlnx app-antivirus/vlnx
