@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ogmtools
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.8 2003/12/18 21:12:46 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.9 2004/02/23 13:03:32 eradicator Exp $
+
+  23 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ogmtools-1.0.3.ebuild, ogmtools-1.2.ebuild:
+  Stability in x86
 
 *ogmtools-1.2 (18 Dec 2003)
 
