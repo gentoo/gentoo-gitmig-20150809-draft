@@ -1,5 +1,5 @@
 diff -urN devtodo-0.1.18.orig/acconfig.h devtodo-0.1.18/acconfig.h
---- devtodo-0.1.18.orig/acconfig.h	2004-02-09 09:10:37.000000000 -0500
+--- devtodo-0.1.18.orig/acconfig.h	2004-12-17 10:21:09.168345388 -0500
 +++ devtodo-0.1.18/acconfig.h	1969-12-31 19:00:00.000000000 -0500
 @@ -1,6 +0,0 @@
 -/* System configuration directory */
@@ -9,8 +9,8 @@ diff -urN devtodo-0.1.18.orig/acconfig.h devtodo-0.1.18/acconfig.h
 -#undef USETERMCAP
 -@TOP@
 diff -urN devtodo-0.1.18.orig/configure.in devtodo-0.1.18/configure.in
---- devtodo-0.1.18.orig/configure.in	2004-08-29 22:09:57.000000000 -0400
-+++ devtodo-0.1.18/configure.in	2004-11-18 02:07:54.106856224 -0500
+--- devtodo-0.1.18.orig/configure.in	2004-12-17 10:21:09.166345721 -0500
++++ devtodo-0.1.18/configure.in	2004-12-17 10:21:34.049210408 -0500
 @@ -25,7 +25,7 @@
  # Don't use termcap to obtain window size
  AC_ARG_WITH(termcap, [  --without-termcap       don't use termcap to obtain terminal width])
@@ -30,8 +30,8 @@ diff -urN devtodo-0.1.18.orig/configure.in devtodo-0.1.18/configure.in
  
  AC_CHECK_PROG(HAVE_CRASH_CONFIG, crash-config, yes)
 diff -urN devtodo-0.1.18.orig/doc/devtodo.1.in devtodo-0.1.18/doc/devtodo.1.in
---- devtodo-0.1.18.orig/doc/devtodo.1.in	2004-08-29 06:02:00.000000000 -0400
-+++ devtodo-0.1.18/doc/devtodo.1.in	2004-11-18 02:07:38.040298712 -0500
+--- devtodo-0.1.18.orig/doc/devtodo.1.in	2004-12-17 10:21:09.135350872 -0500
++++ devtodo-0.1.18/doc/devtodo.1.in	2004-12-17 10:21:34.050210242 -0500
 @@ -20,9 +20,6 @@
  .TP 
  \fBtdd \fI<indices>\fP\fP
@@ -54,8 +54,8 @@ diff -urN devtodo-0.1.18.orig/doc/devtodo.1.in devtodo-0.1.18/doc/devtodo.1.in
  .LP 
  Alec Thomas \fI<alec@swapoff.org>\fR
 diff -urN devtodo-0.1.18.orig/doc/Makefile.am devtodo-0.1.18/doc/Makefile.am
---- devtodo-0.1.18.orig/doc/Makefile.am	2004-02-09 09:10:37.000000000 -0500
-+++ devtodo-0.1.18/doc/Makefile.am	2004-11-18 02:07:38.039298864 -0500
+--- devtodo-0.1.18.orig/doc/Makefile.am	2004-12-17 10:21:09.135350872 -0500
++++ devtodo-0.1.18/doc/Makefile.am	2004-12-17 10:21:34.050210242 -0500
 @@ -1,5 +1,5 @@
  man_MANS=devtodo.1
 -manlinks=tda tdr tdd tde tdl todo
@@ -64,8 +64,8 @@ diff -urN devtodo-0.1.18.orig/doc/Makefile.am devtodo-0.1.18/doc/Makefile.am
  install-data-local:
  	mkdir -p $(DESTDIR)$(mandir)/man1
 diff -urN devtodo-0.1.18.orig/src/Makefile.am devtodo-0.1.18/src/Makefile.am
---- devtodo-0.1.18.orig/src/Makefile.am	2004-08-29 06:08:26.000000000 -0400
-+++ devtodo-0.1.18/src/Makefile.am	2004-11-18 02:07:46.086075568 -0500
+--- devtodo-0.1.18.orig/src/Makefile.am	2004-12-17 10:21:09.154347715 -0500
++++ devtodo-0.1.18/src/Makefile.am	2004-12-17 10:21:34.053209744 -0500
 @@ -1,18 +1,12 @@
  bin_PROGRAMS=devtodo
  devtodo_SOURCES=Todo.cc Todo.h TodoDB.cc TodoDB.h support.cc support.h \
@@ -87,8 +87,8 @@ diff -urN devtodo-0.1.18.orig/src/Makefile.am devtodo-0.1.18/src/Makefile.am
  	cd $(DESTDIR)$(bindir); for i in $(binlinks); do $(LN_S) -f devtodo $$i; done
  
 diff -urN devtodo-0.1.18.orig/src/TodoDB.cc devtodo-0.1.18/src/TodoDB.cc
---- devtodo-0.1.18.orig/src/TodoDB.cc	2004-02-09 09:10:37.000000000 -0500
-+++ devtodo-0.1.18/src/TodoDB.cc	2004-11-18 02:07:38.042298408 -0500
+--- devtodo-0.1.18.orig/src/TodoDB.cc	2004-12-17 10:21:09.136350706 -0500
++++ devtodo-0.1.18/src/TodoDB.cc	2004-12-17 10:21:34.054209577 -0500
 @@ -750,7 +750,6 @@
  			if (options.verbose > 1)
  				cout << info << "todo: permanently removing item '" << (*j) << "'" << normal << endl;
@@ -110,3 +110,18 @@ diff -urN devtodo-0.1.18.orig/src/TodoDB.cc devtodo-0.1.18/src/TodoDB.cc
  	if (options.verbose > 1)
  		cout << "todo: generating using format '" << options.format["verbose-generated"] << "'" << endl;
  	filterView();
+diff -urN devtodo-0.1.18.orig/util/c_regex.h devtodo-0.1.18/util/c_regex.h
+--- devtodo-0.1.18.orig/util/c_regex.h	2004-12-17 10:21:09.157347216 -0500
++++ devtodo-0.1.18/util/c_regex.h	2004-12-17 10:25:41.026169344 -0500
+@@ -533,7 +533,10 @@
+ /* For now unconditionally define __restrict_arr to expand to nothing.
+    Ideally we would have a test for the compiler which allows defining
+    it to restrict.  */
+-#define __restrict_arr
++#ifdef __restrict_arr
++# undef __restrict_arr
++# define __restrict_arr
++#endif
+ 
+ /* POSIX compatibility.  */
+ extern int regcomp _RE_ARGS ((regex_t *__restrict __preg,

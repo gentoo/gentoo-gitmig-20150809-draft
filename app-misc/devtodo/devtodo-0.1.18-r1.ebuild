@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18-r1.ebuild,v 1.5 2004/12/11 16:34:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18-r1.ebuild,v 1.6 2004/12/17 15:45:24 ka0ttic Exp $
 
 inherit eutils gnuconfig bash-completion flag-o-matic
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	einfo "Running autoreconf"
-	autoreconf || die "autoreconf failed"
+	autoreconf -f -i || die "autoreconf failed"
 	replace-flags -O? -O1
 	econf --sysconfdir=/etc/devtodo || die "econf failed"
 	emake || die "emake failed"
