@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.ebuild,v 1.1 2003/04/26 15:12:25 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.ebuild,v 1.2 2003/05/19 20:30:07 g2boojum Exp $
 
 DESCRIPTION="Doxygen is a documentation system for C++, C, Java, IDL (Corba, Microsoft, and KDE-DCOP flavors) and to some extent PHP and C#."
 HOMEPAGE="http://www.doxygen.org"
@@ -26,6 +26,8 @@ src_unpack() {
 	# fix doxygen_manual.tex to work with latex-2.x
 	sed -i.orig "s:^\\\setlength\({\\\footrulewidth}\):\\\renewcommand\1:" \
 		doc/doxygen_manual.tex
+	# fix configure to work w/ install from either fileutils or coreutils
+	sed -ie "s/grep fileutils/egrep 'fileutils|coreutils'/" ${S}/configure
 }
 
 src_compile() {
