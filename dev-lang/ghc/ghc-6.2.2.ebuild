@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.10 2005/01/25 21:53:19 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.11 2005/02/19 18:52:45 weeve Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -25,7 +25,7 @@ SRC_URI="http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc -alpha ~amd64"
+KEYWORDS="x86 ~ppc -alpha ~amd64 -sparc"
 
 
 PROVIDE="virtual/ghc"
