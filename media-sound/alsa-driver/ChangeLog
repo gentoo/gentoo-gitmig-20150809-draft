@@ -1,8 +1,14 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.11 2002/05/24 01:10:35 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.12 2002/06/06 07:54:49 doctomoe Exp $
 
 *alsa-driver-0.9.0_rc1 (27 Apr 2002)
+
+  06 Jun 2002; Olivier Reisch <doctomoe@gentoo.org>
+	alsa-driver-0.9.0_rc1-r7.ebuild files/alsa-driver-0.9.0rc1-ppc.patch :
+
+  Added a small patch to fix ALSA up for PPC. keywest.c was missing a vital
+  header.
 
   23 May 2002; Arcady Genkin <agenkin@thpoon.com>
 	alsa-driver-0.9.0_rc1-r7.ebuild files/alsa-modules.conf :
