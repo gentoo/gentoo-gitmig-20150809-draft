@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.6-r1.ebuild,v 1.13 2004/06/24 23:18:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.6-r1.ebuild,v 1.14 2004/06/28 21:39:55 agriffis Exp $
 
 inherit eutils
 IUSE=""
@@ -13,7 +13,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc alpha amd64"
 
-DEPEND="virtual/x11"
+DEPEND="virtual/x11
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
