@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.19 2004/10/14 22:23:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.20 2004/10/22 03:24:24 fafhrd Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="EClass designed to facilitate building GNUstep Apps, Frameworks, and Bundles on Gentoo."
 
 IUSE="debug"
-DOC_DEPEND="doc? ( =app-text/tetex-2.0*
+DOC_DEPEND="doc? ( virtual/tetex
 		=dev-tex/latex2html-2002*
 		=app-text/texi2html-1.6* )"
 GNUSTEP_CORE_DEPEND="virtual/libc
