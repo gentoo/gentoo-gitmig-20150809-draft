@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /home/cvsroot/gentoo-x86/dev-lang
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.60.ebuild,v 1.2 2003/06/12 20:32:05 msterret Exp $
 
 DESCRIPTION="tinycobol - COBOL for linux."
 HOMEPAGE="http://tiny-cobol.sf.net"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.8 2003/03/29 19:07:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.9 2003/06/12 20:31:08 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> ifc-7.0.064-r1.ebuild:
+  fix Header
 
 *ifc-7.0.064-r1 (29 Mar 2003)
 

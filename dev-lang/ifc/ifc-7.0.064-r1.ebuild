@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.0.064-r1.ebuild,v 1.2 2003/06/12 20:31:08 msterret Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Intel Fortran Compiler - The Pentium optimized compiler for Linux"
