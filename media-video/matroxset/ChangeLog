@@ -1,6 +1,9 @@
 # ChangeLog for media-video/matroxset
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/ChangeLog,v 1.6 2004/07/01 08:40:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/ChangeLog,v 1.7 2004/09/11 15:11:26 aliz Exp $
+
+  11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> matroxset-0.3.ebuild:
+  Added amd64 keyword.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> matroxset-0.3.ebuild:
   virtual/glibc -> virtual/libc
