@@ -1,0 +1,10 @@
+--- arts/modules/common/Makefile.am	2003/08/26 08:43:25	1.7
++++ arts/modules/common/Makefile.am	2004/08/18 05:54:54	1.7.4.1
+@@ -19,6 +19,7 @@ libartsmodulescommon_la_SOURCES = artsmo
+ 	env_context_impl.cc env_effectrackitem_impl.cc \
+ 	env_instrumentitem_impl.cc env_item_impl.cc \
+ 	env_mixeritem_impl.cc
++libartsmodulescommon_la_COMPILE_FIRST = artsmodulescommon.h
+ 
+ libartsmodulescommon_la_LIBADD = \
+ 	$(top_builddir)/arts/gui/common/libartsgui_idl.la \
