@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.9.ebuild,v 1.7 2003/03/27 02:36:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.9.ebuild,v 1.8 2003/08/04 14:53:47 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Shared MIME-info Database specification."
@@ -9,7 +9,7 @@ SRC_URI="http://www.freedesktop.org/standards/shared-mime-info/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ~ppc sparc hppa"
 
 DEPEND=">=sys-apps/gawk-3.1.0
 	>=dev-libs/glib-2.0.4
