@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.7 2004/06/27 23:01:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.8 2004/07/10 18:25:48 lu_zero Exp $
 
 inherit eutils
 
@@ -12,13 +12,13 @@ SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc alpha ~sparc ~amd64"
-IUSE="sdl gtk readline"
+IUSE="sdl wxwindows readline"
 
 DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4
 	sdl? ( media-libs/libsdl )
-	gtk? ( x11-libs/wxGTK )
+	wxwindows? ( x11-libs/wxGTK )
 	readline? sys-libs/readline"
 
 src_unpack() {
@@ -38,7 +38,8 @@ src_compile() {
 	[ "$ARCH" == "x86" ] \
 		&& myconf="--enable-idle-hack --enable-fast-function-calls"
 	myconf="${myconf} `use_with sdl`"
-	myconf="${myconf} `use_with gtk wx`"
+	use wxwindows && myconf="${myconf} --with-gtk --with-wx"
+	use wxwindows || myconf="${myconf} --without-gtk --without-wx"
 	myconf="${myconf} `use_enable readline`"
 
 	./configure \
