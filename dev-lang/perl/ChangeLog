@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.70 2004/07/03 04:00:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.71 2004/07/23 22:38:54 rac Exp $
+
+  23 Jul 2004; Robert Coie <rac@gentoo.org> perl-5.8.4.ebuild:
+  keywording x86 and sparc
 
   02 Jul 2004; <solar@gentoo.org> perl-5.8.4.ebuild:
   don't call perl to install manfiles when FEATURES=noman is set. testing of the
