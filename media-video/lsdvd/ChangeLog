@@ -1,6 +1,11 @@
 # ChangeLog for media-video/lsdvd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.1 2003/03/05 22:54:54 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.2 2003/03/23 07:04:45 vladimir Exp $
+
+*lsdvd-0.7 (22 Mar 2003)
+
+  22 Mar 2003; Graham Forest <vladimir@gentoo.org> lsdvd-0.7.ebuild:
+  Version bump
 
 *lsdvd-0.6 (05 Mar 2003)
 
