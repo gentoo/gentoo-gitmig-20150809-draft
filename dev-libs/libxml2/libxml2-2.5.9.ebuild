@@ -1,14 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.2.ebuild,v 1.6 2003/04/09 03:01:30 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.9.ebuild,v 1.1 2003/08/10 10:45:55 foser Exp $
 
 inherit eutils libtool gnome.org
 
-IUSE="python readline"
+IUSE="python readline ipv6"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Version 2 of the library to manipulate XML files"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://www.xmlsoft.org/"
 
 DEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
@@ -16,24 +15,25 @@ DEPEND="sys-libs/zlib
  
 SLOT="2"
 LICENSE="MIT"
-KEYWORDS="x86 ~ppc sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 
 src_compile() {
-	# Fix .la files of python site packages
 	elibtoolize
 
-	local myconf=""
+        if [ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ]; then
+                # i think the author assumes __DECC is defined only on Tru64.
+                # quick fix in this patch. -taviso.
+                append-flags -ieee
+                epatch ${FILESDIR}/libxml2-2.5.7-dec-alpha-compiler.diff
+        fi
 
-	# This breaks gnome2 (libgnomeprint for instance fails to compile with
+	# USE zlib support breaks gnome2 (libgnomeprint for instance fails to compile with
 	# fresh install, and existing) - <azarah@gentoo.org> (22 Dec 2002).
-	#use zlib && myconf="--with-zlib" || myconf="--without-zlib"
 
-	use python && myconf="${myconf} --with-python" \
-		|| myconf="${myconf} --without-python" 
-	use readline && myconf="${myconf} --with-readline" \
-		|| myconf="${myconf} --without-readline"
-
-	econf --with-zlib ${myconf} || die
+	econf --with-zlib \
+		`use_with python` \
+		`use_with readline` \
+		`use_enable ipv6` || die
 	emake || die
 }
 
