@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Archive_Tar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/ChangeLog,v 1.5 2005/02/20 06:22:58 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/ChangeLog,v 1.6 2005/02/21 18:13:41 agriffis Exp $
+
+  20 Feb 2005; Aron Griffis <agriffis@gentoo.org> PEAR-Archive_Tar-1.2.ebuild:
+  stable on ia64
 
   20 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-Archive_Tar-1.2.ebuild:

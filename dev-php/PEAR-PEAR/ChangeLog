@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.6 2005/02/20 06:26:27 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.7 2005/02/21 18:12:03 agriffis Exp $
+
+  20 Feb 2005; Aron Griffis <agriffis@gentoo.org> PEAR-PEAR-1.3.5.ebuild:
+  stable on ia64
 
   20 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-PEAR-1.3.5.ebuild:
