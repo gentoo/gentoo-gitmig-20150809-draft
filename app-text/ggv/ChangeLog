@@ -1,11 +1,14 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.30 2003/07/15 13:13:22 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.31 2003/07/23 17:52:24 gmsoft Exp $
 
   15 Jul 2003; Todd Sunderlin <todd@gentoo.org> ggv-1.99.98.ebuild:
   Marked stable for sparc
 
 *ggv-2.0.1 (03 Jun 2003)
+
+  23 Jul 2003; Guy Martin <gmsoft@gentoo.org> ggv-2.0.1.ebuild :
+  Marked stable on hppa.
 
   03 Jul 2003; Guy Martin <gmsoft@gentoo.org> ggv-2.0.1.ebuild :
   Added ~hppa to KEYWORDS.
