@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.8 2004/02/23 00:42:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.9 2004/02/24 08:36:00 mr_bones_ Exp $
 
 IUSE="nls build afs selinux"
 
@@ -32,7 +32,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	[ "${ARCH}" = "ppc64" ] && libtoolize -c -f 
+	[ "${ARCH}" = "ppc64" ] && libtoolize -c -f
 
 	# Don't build or install locate because it conflicts with slocate,
 	# which is a secure version of locate.  See bug 18729
