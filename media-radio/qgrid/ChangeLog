@@ -1,0 +1,12 @@
+# ChangeLog for media-radio/qgrid
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qgrid/ChangeLog,v 1.1 2004/12/09 21:54:32 killsoft Exp $
+
+*qgrid-2.5 (09 Dec 2004)
+
+  09 Dec 2004; Robb Romans <killsoft@gentoo.org> +metadata.xml,
+  +qgrid-2.5.ebuild:
+  Qgrid is a X11-tool for converting between maidenhead grid squares and
+  latitude/longitude and calculating the distance and bearing between two
+  given points. Useful for amateur radio.
+
