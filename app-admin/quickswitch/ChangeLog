@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/quickswitch
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.2 2002/06/26 17:01:24 chadh Exp $
+
+*quickswitch-1.0_pre1.ebuild (26 June 2002)
+  26 June 2002; Chad Huneycutt <chadh@gentoo.org> quickswitch-1.0_pre1.ebuild :
+
+  updated to most recent version
 
 *quickswitch-0.10 (1 Feb 2002)
 
