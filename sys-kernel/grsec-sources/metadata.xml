@@ -7,8 +7,8 @@
 		<description>Primary Maintainer</description>
 	</maintainer>
 	<maintainer>
-		<email>pappy@gentoo.org</email>
-		<description>HPPA Maintainer</description>
+		<email>tocharian@tocharian.org</email>
+		<description>Backup Maintainer</description>
 	</maintainer>
 	<longdescription>Vanilla sources of the linux kernel with the grsecurity patch</longdescription>
 </pkgmetadata>

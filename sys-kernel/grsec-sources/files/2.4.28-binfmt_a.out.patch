@@ -1,0 +1,63 @@
+diff -Nru linux-2.4.28/fs/binfmt_aout.c linux-2.4.28-hardened/fs/binfmt_aout.c
+--- linux-2.4.28/fs/binfmt_aout.c	2004-11-28 15:44:03.000000000 -0500
++++ linux-2.4.28-hardened/fs/binfmt_aout.c	2004-11-28 16:05:16.000000000 -0500
+@@ -39,13 +39,18 @@
+ 	NULL, THIS_MODULE, load_aout_binary, load_aout_library, aout_core_dump, PAGE_SIZE
+ };
+ 
+-static void set_brk(unsigned long start, unsigned long end)
++#define BAD_ADDR(x)	((unsigned long)(x) >= TASK_SIZE)
++
++static int set_brk(unsigned long start, unsigned long end)
+ {
+ 	start = PAGE_ALIGN(start);
+ 	end = PAGE_ALIGN(end);
+-	if (end <= start)
+-		return;
+-	do_brk(start, end - start);
++	if (end > start) {
++		unsigned long addr = do_brk(start, end - start);
++		if (BAD_ADDR(addr))
++			return addr;
++	}
++	return 0;
+ }
+ 
+ /*
+@@ -429,7 +434,11 @@
+ beyond_if:
+ 	set_binfmt(&aout_format);
+ 
+-	set_brk(current->mm->start_brk, current->mm->brk);
++	retval = set_brk(current->mm->start_brk, current->mm->brk);
++	if (retval < 0) {
++		send_sig(SIGKILL, current, 0);
++		return retval;
++	}
+ 
+ 	retval = setup_arg_pages(bprm); 
+ 	if (retval < 0) { 
+diff -Nru linux-2.4.28/fs/exec.c linux-2.4.28-hardened/fs/exec.c
+--- linux-2.4.28/fs/exec.c	2004-11-28 15:44:03.000000000 -0500
++++ linux-2.4.28-hardened/fs/exec.c	2004-11-28 16:05:16.000000000 -0500
+@@ -387,6 +387,7 @@
+ 
+ 	down_write(&current->mm->mmap_sem);
+ 	{
++		struct vm_area_struct *vma;
+ 		mpnt->vm_mm = current->mm;
+ 		mpnt->vm_start = PAGE_MASK & (unsigned long) bprm->p;
+ 		mpnt->vm_end = STACK_TOP;
+@@ -401,6 +402,12 @@
+ 		mpnt->vm_pgoff = 0;
+ 		mpnt->vm_file = NULL;
+ 		mpnt->vm_private_data = (void *) 0;
++		vma = find_vma(current->mm, mpnt->vm_start);
++		if (vma) {
++			up_write(&current->mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, mpnt);
++			return -ENOMEM;
++		}
+ 		insert_vm_struct(current->mm, mpnt);
+ 		current->mm->total_vm = (mpnt->vm_end - mpnt->vm_start) >> PAGE_SHIFT;
+ 
