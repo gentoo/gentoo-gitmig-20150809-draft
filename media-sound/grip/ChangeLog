@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.46 2004/11/09 03:05:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.47 2004/11/29 06:19:32 eradicator Exp $
+
+  28 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> grip-3.2.0.ebuild:
+  Added -mno-sse to fix bug #69536.
 
   08 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> grip-3.2.0.ebuild:
   gnuconfig_update in src_unpack

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.12 2004/11/09 03:05:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.13 2004/11/29 06:19:32 eradicator Exp $
 
-inherit gnuconfig
+inherit gnuconfig flag-o-matic
 
 IUSE="nls oggvorbis"
 
@@ -36,6 +36,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# Bug #69536
+	use x86 && append-flags "-mno-sse"
+
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable nls) || die
