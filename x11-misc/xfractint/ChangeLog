@@ -1,0 +1,8 @@
+# ChangeLog for x11-misc/xfractint
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.1 2002/07/22 12:33:05 aliz Exp $
+
+*xfractint-20.2.04 (22 Jul 2002)
+
+  22 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xfractint-20.2.04 : 
+  Initial import. Ebuild submitted by jsm@rupture.net. 
