@@ -1,10 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0d31f933db829385acf5be9aaa1d9b05 ChangeLog 15282
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 a4ef29239ccf28cf039d13951c6b8c06 util-linux-2.11z-r8.ebuild 3135
 MD5 3c3a1ff0272a0ff8c192ac49031ec8cd util-linux-2.11z-r9.ebuild 3328
 MD5 3d7c72c204740c895976624e87fbe860 util-linux-2.12-r2.ebuild 3172
 MD5 210baaa6b9086d6dcb1cf73b8f35f8aa util-linux-2.12-r3.ebuild 3673
-MD5 4e4c418b8f543403231482afeae8e042 util-linux-2.12-r4.ebuild 4098
+MD5 956fda46dcf04bbb717ec282840edada util-linux-2.12-r4.ebuild 4101
 MD5 b1770169fdbfa0b28480dbebf67d3222 util-linux-2.12-r5.ebuild 4196
 MD5 4bb184b87ec90bdc579a71f53214f21a util-linux-2.12b-r1.ebuild 4983
 MD5 46b84caf300acc762451ca3631a2bb14 util-linux-2.12b.ebuild 4874
@@ -43,3 +46,10 @@ MD5 0be8df03dae23c81a0e929e58a4114e0 files/util-linux-2.11z-01-nfsv4.dif 13442
 MD5 a9bc06c292401d6f2d27e8e4ebf7e6ae files/util-linux-2.12i-fat-LABEL-support.patch 2304
 MD5 33ddd96078cf91030b80f73eb70f5371 files/util-linux-2.12i-swapon-check-symlinks.patch 875
 MD5 73c0cb6f9aa5fa84e701fc68d0478aac files/util-linux-2.12i-nfsv4.patch 12854
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBlt6HHTu7gpaalycRAp7aAKC4BvaYE7v8FFLYMlKkPuyksWv8EgCgrtnS
+qK0rXlCspuia/zZpIn8cF8k=
+=BTsU
+-----END PGP SIGNATURE-----
