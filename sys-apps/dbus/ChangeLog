@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.37 2005/02/27 19:22:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.38 2005/03/02 23:49:25 foser Exp $
+
+*dbus-0.23.2 (03 Mar 2005)
+
+  03 Mar 2005; foser <foser@gentoo.org> dbus-0.23.2.ebuild :
+  New release (#81794)
+  Add patch to work around mono lib versioning problem (#81794)
 
   27 Feb 2005; Jason Wever <weeve@gentoo.org> dbus-0.23-r3.ebuild:
   Added ~sparc keyword.

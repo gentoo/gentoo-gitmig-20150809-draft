@@ -1,0 +1,11 @@
+diff -uNr dbus-0.23/mono/AssemblyInfo.cs.in dbus-0.23.patched/mono/AssemblyInfo.cs.in
+--- dbus-0.23/mono/AssemblyInfo.cs.in	2004-09-20 13:24:38.000000000 +0200
++++ dbus-0.23.patched/mono/AssemblyInfo.cs.in	2005-02-15 23:06:29.650090128 +0100
+@@ -1,6 +1,6 @@
+ using System.Reflection;
+ using System.Runtime.CompilerServices;
+  
+-[assembly:AssemblyVersion("@VERSION@")]
++[assembly:AssemblyVersion("0.23")]
+ [assembly:AssemblyDelaySign(false)]
+ [assembly:AssemblyKeyFile("@srcdir@/dbus-sharp.snk")]

@@ -1,21 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22-r2.ebuild,v 1.6 2005/01/21 04:35:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23.2.ebuild,v 1.1 2005/03/02 23:49:25 foser Exp $
 
 # because of the experimental nature debug by default
-inherit debug eutils mono python
+inherit debug eutils mono python multilib
 
 # FIXME : fix docs
 #IUSE="X gtk qt python mono doc xml2"
-IUSE="X gtk python mono xml2"
+IUSE="X gtk qt python mono xml2"
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to eachother"
-HOMEPAGE="http://www.freedesktop.org/software/dbus/"
-SRC_URI="http://www.freedesktop.org/software/dbus/releases/${P}.tar.gz"
+HOMEPAGE="http://dbus.freedesktop.org/"
+SRC_URI="http://dbus.freedesktop.org/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
-KEYWORDS="~x86 ~ppc ~amd64 ppc64 ~ia64"
+KEYWORDS="~x86 ~ppc ~amd64 ~ppc64 ~ia64 ~sparc"
 
 RDEPEND=">=dev-libs/glib-2
 	xml2? ( >=dev-libs/libxml2-2.6 )
@@ -24,11 +24,11 @@ RDEPEND=">=dev-libs/glib-2
 	gtk? ( >=x11-libs/gtk+-2 )
 	python? ( >=dev-lang/python-2.2
 		>=dev-python/pyrex-0.9 )
+	qt? ( >=x11-libs/qt-3 )
 	!ppc64? (
 		mono? ( >=dev-dotnet/mono-0.95 )
 	)"
 
-#	qt? ( >=x11-libs/qt-3 )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -41,27 +41,23 @@ DEPEND="${RDEPEND}
 src_unpack() {
 
 	unpack ${A}
-
 	cd ${S}
-	epatch ${FILESDIR}/${P}-python_int64.patch
 
-	local cs
-	# a few cvs patches for beagle
-	cd ${S}/mono
-	for cs in *.cs; do
-		einfo "Removing CR from ${cs}"
-		sed -e "s/\r//" ${cs} > ${cs}.new
-		mv ${cs}.new ${cs}
-	done;
-	epatch ${FILESDIR}/${P}-mono_bindings.patch
-	cd ${S}/bus
-	epatch ${FILESDIR}/${P}-bus_driver_know_thyself.patch
-	cd ${S}
-	epatch ${FILESDIR}/${P}-mono_service_owner.patch
+	epatch ${FILESDIR}/${PN}-0.23-qt.patch
+	# add missing include (#78617)
+	epatch ${FILESDIR}/${PN}-0.23-fd_set.patch
+	# workaround mono lib versioning (#81794)
+	epatch ${FILESDIR}/${P}-version_fix.patch
 
-	cd ${S}
-	automake || die
+	# It stupidly tries to install python stuff to platform-independent
+	# libdir
+	epatch ${FILESDIR}/dbus-0.23-pyexecdir.patch
 
+	# Don't rerun auto*
+	sleep 1
+	touch ${S}/python/Makefile.in
+	sleep 1
+	touch ${S}/configure
 }
 
 src_compile() {
@@ -75,9 +71,9 @@ src_compile() {
 	fi
 
 	econf \
-		`use_enable X x` \
+		`use_with X x` \
 		`use_enable gtk` \
-		--disable-qt \
+		`use_enable qt` \
 		`use_enable python` \
 		`use_enable mono` \
 		--enable-glib \
@@ -93,12 +89,11 @@ src_compile() {
 		${myconf} \
 		|| die
 
-#		`use_enable qt` \
 #		`use_enable doc doxygen-docs` \
 #		`use_enable doc xml-docs` \
 
 	# do not build the mono examples, they need gtk-sharp
-	touch ${S}/mono/example/echo-{server,client}.exe
+	touch ${S}/mono/example/{bus-listener,echo-{server,client}}.exe
 
 	# this gets around a lib64 sandbox bug. note that this addpredict is
 	# added automatically by sandbox.c for lib.
@@ -122,6 +117,7 @@ src_install() {
 	keepdir /var/lib/dbus
 
 	keepdir /usr/lib/dbus-1.0/services
+	keepdir /usr/share/dbus-1/services
 
 	dodoc AUTHORS ChangeLog HACKING NEWS README doc/TODO doc/*html
 
