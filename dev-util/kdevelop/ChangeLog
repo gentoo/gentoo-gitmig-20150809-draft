@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.57 2004/07/19 10:25:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.58 2004/07/22 20:49:17 carlo Exp $
+
+*kdevelop-3.1_beta2 (22 Jul 2004)
+
+  22 Jul 2004; Carsten Lohrke <carlo@gentoo.org>
+  -files/kdevelop-3.1_beta1-amd64.patch, -kdevelop-3.0.1.ebuild,
+  -kdevelop-3.0.2.ebuild, -kdevelop-3.0.3.ebuild, -kdevelop-3.1_beta1.ebuild,
+  +kdevelop-3.1_beta2.ebuild:
+  version bump, ebuild clean up
 
   19 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> kdevelop-3.1_beta1.ebuild,
   files/kdevelop-3.1_beta1-amd64.patch,
