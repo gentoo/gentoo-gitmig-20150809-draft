@@ -290,3 +290,39 @@
  
  INSTALL = @INSTALL@
  INSTALL_DATA = @INSTALL_DATA@
+@@ -61,8 +61,33 @@
+ 	$(INSTALL_DATA) index.texi.html $(DESTDIR)$(htmldir)/index.html
+ 	-rm -rf $(DESTDIR)$(htmldir)/texi
+ 	$(INSTALL) -d $(DESTDIR)$(htmldir)/texi
+-	for f in `ls *.html | grep -v '^index'`; do \
+-	  $(INSTALL_DATA) $$f $(DESTDIR)$(htmldir)/texi/$$f; \
++	cd prc-tools; \
++	for f in `ls *.html`; do \
++		$(INSTALL_DATA) $$f $(DESTDIR)$(htmldir)/texi/$$f; \
++	done
++	cd gcc; \
++	for f in `ls *.html`; do \
++		$(INSTALL_DATA) $$f $(DESTDIR)$(htmldir)/texi/$$f; \
++	done
++	cd cpp; \
++	for f in `ls *.html`; do \
++		$(INSTALL_DATA) $$f $(DESTDIR)$(htmldir)/texi/$$f; \
++	done
++	cd gdb; \
++	for f in `ls *.html`; do \
++		$(INSTALL_DATA) $$f $(DESTDIR)$(htmldir)/texi/$$f; \
++	done
++	cd as; \
++	for f in `ls *.html`; do \
++		$(INSTALL_DATA) $$f $(DESTDIR)$(htmldir)/texi/$$f; \
++	done
++	cd ld; \
++	for f in `ls *.html`; do \
++		$(INSTALL_DATA) $$f $(DESTDIR)$(htmldir)/texi/$$f; \
++	done
++	cd binutils; \
++	for f in `ls *.html`; do \
++		$(INSTALL_DATA) $$f $(DESTDIR)$(htmldir)/texi/$$f; \
+ 	done
+ 
+ .PHONY: all info man html install install-info install-man install-html clean

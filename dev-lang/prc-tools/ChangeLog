@@ -1,9 +1,16 @@
 # ChangeLog for dev-lang/prc-tools
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.6 2004/06/24 22:54:23 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.7 2005/01/04 17:47:14 plasmaroo Exp $
+
+*prc-tools-2.3-r1 (04 Jan 2005)
+
+  04 Jan 2005; <plasmaroo@gentoo.org> +prc-tools-2.3-r1.ebuild,
+  files/prc-tools-2.3-compilefix.patch:
+  Adding multi-section debugging support; bug #72378. Fixing a Makefile so all
+  the HTML docs are also installed correctly.
 
   05 Nov 2003; <plasmaroo@gentoo.org> prc-tools-2.3.ebuild:
-  Added fix for thecompile error when not upgrading because of broken 
+  Added fix for the compile error when not upgrading because of broken 
   includes in prc-tools.
 
 *prc-tools-2.3 (29 Oct 2003)
