@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.18 2005/01/28 20:34:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.19 2005/02/05 13:53:16 luckyduck Exp $
+
+  05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  libdvdread-0.9.4-r1.ebuild:
+  renamed ifo_dump binary to ifo_dump_dvdread to avoid collision with the ogle
+  one. see #80837
 
 *libdvdread-0.9.4-r1 (28 Jan 2005)
 
