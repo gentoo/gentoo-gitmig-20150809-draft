@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/scli
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.1 2005/01/28 11:49:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.2 2005/01/28 14:15:41 ka0ttic Exp $
+
+  28 Jan 2005; Aaron Walker <ka0ttic@gentoo.org>
+  files/scli-0.2.12-fix-configure.diff:
+  Removed acconfig.h patch-out from fix-configure patch; seems to be causing
+  some funky weirdness.
 
 *scli-0.2.12 (28 Jan 2005)
 
