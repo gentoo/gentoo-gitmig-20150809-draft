@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.64 2004/08/03 18:28:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.65 2004/08/14 01:24:13 usata Exp $
+
+  14 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +uim-pinyin-big5-gentoo.diff,
+  uim-0.4.1.ebuild, uim-0.4.2.1.ebuild:
+  Force uim-default as default. Fixed bug #58656.
 
   04 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> uim-0.3.9-r1.ebuild,
   uim-0.4.1.ebuild:

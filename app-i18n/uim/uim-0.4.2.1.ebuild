@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.2.1.ebuild,v 1.1 2004/07/30 23:45:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.2.1.ebuild,v 1.2 2004/08/14 01:24:13 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,6 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-gtk-query-immodules-gentoo.diff
+	epatch ${FILESDIR}/${PN}-pinyin-big5-gentoo.diff
 	use X || sed -i -e '/^SUBDIRS/s/xim//' Makefile.in || die
 }
 
