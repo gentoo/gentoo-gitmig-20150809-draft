@@ -1,11 +1,16 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.15 2003/01/03 22:05:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.16 2003/01/31 21:54:37 rphillips Exp $
 
   03 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> files/afs.rc.rc6 :
   Fix bug #5634.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*openafs-1.2.8 (31 Jan 2003)
+
+  31 Jan 2003; Ryan Phillips <rphillips@gentoo.org> openafs-1.2.8.ebuild :
+  new version
  
 *openafs-1.2.6-r1 (1 Oct 2002)
 
