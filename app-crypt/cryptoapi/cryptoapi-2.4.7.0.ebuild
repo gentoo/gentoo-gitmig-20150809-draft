@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.18 2004/03/13 21:50:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.19 2004/04/25 21:51:34 agriffis Exp $
 
 inherit check-kernel
 
@@ -27,7 +27,7 @@ src_compile() {
 	# rphillips - Fixes #19006
 	# econf --enable-iv-mode-sector
 	econf
-	cd ${S}/api
+	cd ${S}/api || die "econf failed"
 	sed -i -e "s:-DMODVERSIONS:-DMODVERSIONS -DEXPORT_SYMTAB:g" \
 		Makefile
 	cd ..
