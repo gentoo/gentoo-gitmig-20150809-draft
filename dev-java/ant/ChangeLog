@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.77 2004/08/31 18:04:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.78 2004/09/01 20:43:24 axxo Exp $
+
+  01 Sep 2004; Thomas Matthijs <axxo@gentoo.org> files/1.6.2-r5/ant,
+  ant-1.6.2-r5.ebuild:
+  remove ant-optional from wrapper, move block on optional to tasks, add block
+  on older ant-tasks
 
   31 Aug 2004; Thomas Matthijs <axxo@gentoo.org> -files/1.6.2-r4/ant,
   -ant-1.6.2-r4.ebuild:

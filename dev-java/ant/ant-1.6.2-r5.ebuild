@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.2-r5.ebuild,v 1.1 2004/08/31 17:54:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.2-r5.ebuild,v 1.2 2004/09/01 20:43:24 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -15,7 +15,7 @@ IUSE="doc"
 
 DEPEND="virtual/libc
 	>=virtual/jdk-1.4
-	!dev-java/ant-optional
+	!<dev-java/ant-tasks-${PV}
 	>=dev-java/java-config-1.2"
 RDEPEND=">=virtual/jdk-1.4
 	app-shells/bash
