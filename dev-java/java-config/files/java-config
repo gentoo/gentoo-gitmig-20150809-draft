@@ -4,7 +4,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.9 2002/05/13 22:24:47 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.10 2002/05/21 19:49:12 karltk Exp $
 
 version=0.2.0
 all_params="$*"
@@ -35,7 +35,7 @@ elif  [ -f /etc/env.d/20java ] ; then
 	PATH=$oldpath:$PATH
 fi
 
-svm=`echo $1|egrep "\-\-set-(system|user)-vm"`
+svm=`echo $1|egrep "\-\-(set-(system|user)-vm|list-available-vms)"`
 if [ -z "$JAVA_HOME" ] && [ -z "$svm" ] && [ "$1" != "--help" ]; then
 	echo "!!! No Java installation found" > /dev/stderr
 	echo "!!! Use --set-system-vm to select default system JVM" > /dev/stderr

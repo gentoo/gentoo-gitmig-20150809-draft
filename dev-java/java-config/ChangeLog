@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.5 2002/05/13 22:24:47 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.6 2002/05/21 19:49:12 karltk Exp $
+
+*java-config-0.2.4 (21 May 2002)
+
+  21 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> java-config-0.2.4.ebuild files/java-config:
+
+  --list-available-vms is now allowed before JAVA_HOME is properly set (duh!).
+
+  Removed all previous versions.
 
 *java-config-0.2.3 (14 May 2002)
 
