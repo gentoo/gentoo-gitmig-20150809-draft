@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r3.ebuild,v 1.1 2003/10/18 10:29:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r3.ebuild,v 1.2 2003/11/06 10:46:10 pauldv Exp $
 
 IUSE="tcltk java doc"
 
@@ -30,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-
+	addwrite /proc/self/maps
 	# gnuconfig doesn't work if ${S} points to build_unix, so we
 	# change it temporarily
 	if use mips; then
