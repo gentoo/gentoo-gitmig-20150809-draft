@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.30 2003/06/01 20:15:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.31 2003/06/02 04:03:44 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -208,6 +208,8 @@ php_src_compile() {
 #	esac;
 
 	[ -x "/usr/sbin/sendmail" ] || die "You need a virtual/mta that provides /usr/sbin/sendmail!"
+
+	php_check_java_config
 
 	# BerkDB is disabled due to DB4 and changes in PHP4.3.2
 	myconf="${myconf} --without-db3 --without-db4 --without-db2"
