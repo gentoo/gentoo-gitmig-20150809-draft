@@ -1,5 +1,5 @@
-MD5 99dcecd948327d155f65d8cc14b9db11 ChangeLog 14560
-MD5 d3f1eef85d6ad7e32f53b3b600e5b9ba kdelibs-3.1.3-r1.ebuild 2487
+MD5 428129734c14bf10a3f0051c465bb334 ChangeLog 14763
+MD5 ddb6c82d86d0d23d9ac6e7d64bf46b00 kdelibs-3.1.3-r1.ebuild 2502
 MD5 ecb842ef67a00a4a3348c92a784cc3b7 kdelibs-2.2.2a-r2.ebuild 2570
 MD5 8a21daa4525f5d8edef9d9be0d4a3354 kdelibs-3.0.4-r1.ebuild 2303
 MD5 e907b234e307a34e574f3225b3f7d17b kdelibs-3.0.5b-r1.ebuild 1994
@@ -25,7 +25,7 @@ MD5 c087405ca3581f6493850d59c98dcefa files/kdelibs-3.1.2-khtml.patch 1486
 MD5 0783bde2d3df61818e8563b3a445742b files/digest-kdelibs-3.1.3-r1 68
 MD5 acd90863c0847e230aa37f3943d58176 files/kdelibs-3.0.5b-libxml2-2.5.2.diff 703
 MD5 41d30ba8cf8d36ad3caebeedb1ddfd0e files/kdelibs-3.1.3-kjs-alphaev6-gcc3-workaround.patch 477
-MD5 63986fe45e7c35c7b863d17a77504610 files/kdelibs-3.1.3-render_root.patch 1731
+MD5 36a366fd1a948f28712eab93b5be7e52 files/kdelibs-3.1.3-render_root.patch 896
 MD5 41d30ba8cf8d36ad3caebeedb1ddfd0e files/kdelibs-3.1.1a-kjs-alphaev6-gcc3-workaround.patch 477
 MD5 adfd3d17be1f45423f07f22cd0c73427 files/digest-kdelibs-3.1.2 68
 MD5 41d30ba8cf8d36ad3caebeedb1ddfd0e files/kdelibs-3.1.2-kjs-alphaev6-gcc3-workaround.patch 477
