@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.13 2005/03/08 23:55:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.14 2005/03/08 23:58:39 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
@@ -31,7 +31,7 @@
 <sys-apps/dbus-0.23-r2
 <sys-apps/iproute2-2.6.10.20050112
 <sys-devel/flex-2.5.4a-r6
-<sys-devel/libperl-5,8,6
+<sys-devel/libperl-5.8.6
 <sys-libs/pam-0.77-r7
 <sys-libs/pwdb-0.62-r1
 
