@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.21 2005/01/05 00:38:48 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4-r1.ebuild,v 1.1 2005/02/07 04:28:20 pythonhead Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -46,6 +46,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -ie 's/OpenBSD\/3.\[01234/OpenBSD\/3.\[012345/' configure || die "OpenBSD sed failed"
+	#Fixes security vulnerability in XML-RPC server - pythonhead (06 Feb 05)
+	#http://www.python.org/security/PSF-2005-001/
+	epatch ${FILESDIR}/${PN}-2.3-xmlrpc.patch
 	# adds /usr/lib/portage/pym to sys.path - liquidx (08 Oct 03)
 	# prepends /usr/lib/portage/pym to sys.path - liquidx (12 Apr 04)
 	epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path_take_2.patch

@@ -1,8 +1,19 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.125 2005/01/06 17:23:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.126 2005/02/07 04:28:20 pythonhead Exp $
 
-  06 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> python-2.4.ebuild:
+*python-2.2.3-r6 (06 Feb 2005)
+
+  06 Feb 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +files/python-2.2.3-xmlrpc.patch, +files/python-2.3-xmlrpc.patch,
+  +files/python-2.4-xmlrpc.patch, -python-2.2.3-r5.ebuild,
+  +python-2.2.3-r6.ebuild, -python-2.3.3-r1.ebuild, +python-2.3.3-r2.ebuild,
+  -python-2.3.3.ebuild, +python-2.3.4-r1.ebuild, -python-2.3.4.ebuild,
+  +python-2.4-r1.ebuild, -python-2.4.ebuild:
+  Patches and version bumps for security bug# 80592 Python bug# PSF-2005-001 xmlrpc
+  vulnerability. Removed obsolete versions.
+
+  06 Jan 2005; Bryan Ãstergaard <kloeri@gentoo.org> python-2.4.ebuild:
   Fix broken Manifest.
 
   05 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> python-2.4.ebuild:
@@ -74,7 +85,7 @@
   Made python-2.1 stable on ppc as there are still some ebuilds which require
   this version.
 
-  03 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> python-2.3.3-r1.ebuild:
+  03 Jul 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> python-2.3.3-r1.ebuild:
   Stable on alpha.
 
   03 Jul 2004; Grant Goodyear <g2boojum@gentoo.org> python-2.3.4.ebuild:
@@ -107,7 +118,7 @@
 
 *python-2.3.4 (04 Jun 2004)
 
-  04 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> +python-2.3.4.ebuild:
+  04 Jun 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> +python-2.3.4.ebuild:
   Bump version.
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> python-2.3.3-r1.ebuild:
@@ -161,7 +172,7 @@
   Removing portage version check again as it's preventing new installations.
   Bug #43036
 
-  25 Feb 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> python-2.3.3.ebuild:
+  25 Feb 2004; Bryan ÃÂstergaard,,, <kloeri@gentoo.org> python-2.3.3.ebuild:
   Reinstating portage version check as people keep upgrading python without
   upgrading portage.
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.25 2005/01/05 00:38:48 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r6.ebuild,v 1.1 2005/02/07 04:28:20 pythonhead Exp $
 
 inherit flag-o-matic eutils python
 
@@ -40,6 +40,9 @@ SLOT="2.2"
 
 src_unpack() {
 	unpack ${A}
+	#Fixes security vulnerability in XML-RPC server - pythonhead (06 Feb 05)
+	#http://www.python.org/security/PSF-2005-001/
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.2.3-xmlrpc.patch
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-db4.patch
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-disable_modules_and_ssl.patch
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path.patch

@@ -1,40 +1,38 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.24 2005/01/05 00:38:48 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4-r1.ebuild,v 1.1 2005/02/07 04:28:20 pythonhead Exp $
 
 # NOTE about python-portage interactions :
-# - Do not add a pkg_setup() check for a certain version of portage 
+# - Do not add a pkg_setup() check for a certain version of portage
 #   in dev-lang/python. It _WILL_ stop people installing from
 #   Gentoo 1.4 images.
 
 inherit eutils flag-o-matic python
 
-MY_PV=${PV/_rc/c}
 PYVER_MAJOR="`echo ${PV%_*} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV%_*} | cut -d '.' -f 2`"
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
-
-S="${WORKDIR}/Python-${MY_PV}"
+MY_P="Python-${PV}"
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="A really great language"
-SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${MY_PV}.tar.bz2"
+SRC_URI="http://www.python.org/ftp/python/${PYVER}/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.python.org"
 
-IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X uclibc"
+IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X"
 LICENSE="PSF-2.2"
-SLOT="2.3"
+SLOT="2.4"
 
-KEYWORDS="x86 ~ppc sparc arm hppa amd64 s390 alpha ~ia64 mips ppc64"
-# ~mips ~arm"
+KEYWORDS="~x86 ~ppc ~sparc ~arm ~hppa ~amd64 ~s390 ~alpha ~ia64 ~mips"
 
 DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3
 	!build? (
 		X? ( tcltk? ( >=dev-lang/tk-8.0 ) )
-		doc? ( =dev-python/python-docs-${PV}* )
 		ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
 		berkdb? ( >=sys-libs/db-3.1 )
 		gdbm? ( sys-libs/gdbm )
 		ssl? ( dev-libs/openssl )
+		doc? ( =dev-python/python-docs-${PV}* )
 		dev-libs/expat
 	)"
 
@@ -48,19 +46,20 @@ PROVIDE="virtual/python"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# adds /usr/lib/portage/pym to sys.path - liquidx (08 Oct 03)
-	# prepends /usr/lib/portage/pym to sys.path - liquidx (12 Apr 04)
-	epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path_take_2.patch
+	#Fixes security vulnerability in XML-RPC server - pythonhead (06 Feb 05)
+	#http://www.python.org/security/PSF-2005-001/
+	epatch ${FILESDIR}/${PN}-2.4-xmlrpc.patch
+	# prepends /usr/lib/portage/pym to sys.path
+	epatch ${FILESDIR}/${PN}-${PYVER}-add_portage_search_path.patch
 	# adds support for PYTHON_DONTCOMPILE shell environment to
 	# supress automatic generation of .pyc and .pyo files - liquidx (08 Oct 03)
-	epatch ${FILESDIR}/${PN}-2.3-gentoo_py_dontcompile.patch
-	epatch ${FILESDIR}/${PN}-2.3.2-disable_modules_and_ssl.patch
-	epatch ${FILESDIR}/${PN}-2.3-mimetypes_apache.patch
-	epatch ${FILESDIR}/${PN}-2.3-db4.2.patch
+	epatch ${FILESDIR}/${PN}-${PYVER}-gentoo_py_dontcompile.patch
+	epatch ${FILESDIR}/${PN}-${PYVER}-disable_modules_and_ssl.patch
+	epatch ${FILESDIR}/${PN}-${PYVER}-mimetypes_apache.patch
+	epatch ${FILESDIR}/${PN}-${PYVER}-db4.2.patch
 	# installs to lib64
-	[ "${CONF_LIBDIR}" == "lib64" ] && epatch ${FILESDIR}/python-2.3.4-lib64.patch
-	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
-	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
+	#This needs testing, lib64 people:
+	[ "${CONF_LIBDIR}" == "lib64" ] && epatch ${FILESDIR}/python-${PYVER}-lib64.patch
 }
 
 src_configure() {
@@ -75,8 +74,8 @@ src_configure() {
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm bsddb"
 		use readline \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} readline"
-		( use X && use tcltk ) \
-			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
+		( use !X || use !tcltk ) \
+			&& PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
 		use ncurses \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _curses _curses_panel"
 		use ssl \
@@ -89,7 +88,6 @@ src_configure() {
 src_compile() {
 	filter-flags -malign-double
 
-	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
 	[ "${ARCH}" = "alpha" ] && append-flags -fPIC
 	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 
@@ -144,7 +142,7 @@ src_install() {
 	if [ "${CONF_LIBDIR}" == "lib64" ] ;then
 		insinto /usr/lib64/python${PYVER}/config
 	else
-	insinto /usr/lib/python${PYVER}/config
+		insinto /usr/lib/python${PYVER}/config
 	fi
 	doins ${S}/Makefile.pre.in
 
@@ -152,27 +150,29 @@ src_install() {
 	# so that it doesn't have any opts listed in it. Prevents the problem
 	# with compiling things with conflicting opts later.
 	if [ "${CONF_LIBDIR}" == "lib64" ] ;then
-		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib64/python${PYVER}/config/Makefile
+		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' \
+				/usr/lib64/python${PYVER}/config/Makefile
 	else
-		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib/python${PYVER}/config/Makefile
+		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' \
+				/usr/lib/python${PYVER}/config/Makefile
 	fi
 
 	# install python-updater in /usr/sbin
 	dosbin ${FILESDIR}/python-updater
 
 	if use build ; then
-		rm -rf ${D}/usr/lib/python2.3/{test,encodings,email,lib-tk,bsddb/test}
+		rm -rf ${D}/usr/lib/python${PYVER}/{test,encodings,email,lib-tk,bsddb/test}
 	else
-		use uclibc && rm -rf ${D}/usr/lib/python2.3/{test,bsddb/test}
-		use berkdb || rm -rf ${D}/usr/lib/python2.3/bsddb
-		( use X && use tcltk ) || rm -rf ${D}/usr/lib/python2.3/lib-tk
+		use uclibc && rm -rf ${D}/usr/lib/python${PYVER}/{test,bsddb/test}
+		use berkdb || rm -rf ${D}/usr/lib/python${PYVER}/bsddb
+		( use !X || use !tcltk ) && rm -rf ${D}/usr/lib/python${PYVER}/lib-tk
 	fi
 }
 
 pkg_postrm() {
 	python_makesym
-	python_mod_cleanup /usr/lib/python2.3
-	[ "${CONF_LIBDIR}" == "lib64" ] && python_mod_cleanup /usr/lib64/python2.3
+	python_mod_cleanup /usr/lib/python${PYVER}
+	[ "${CONF_LIBDIR}" == "lib64" ] && python_mod_cleanup /usr/lib64/python${PYVER}
 }
 
 pkg_postinst() {
@@ -188,26 +188,26 @@ pkg_postinst() {
 
 	# workaround possible python-upgrade-breaks-portage situation
 	if [ ! -f ${myroot}/usr/lib/portage/pym/portage.py ]; then
-		if [ -f ${myroot}/usr/lib/python2.2/site-packages/portage.py ]; then
+		if [ -f ${myroot}/usr/lib/python2.3/site-packages/portage.py ]; then
 			einfo "Working around possible python-portage upgrade breakage"
 			mkdir -p ${myroot}/usr/lib/portage/pym
-			cp ${myroot}/usr/lib/python2.2/site-packages/{portage,xpak,output,cvstree,getbinpkg,emergehelp,dispatch_conf}.py ${myroot}/usr/lib/portage/pym
+			cp ${myroot}/usr/lib/python2.4/site-packages/{portage,xpak,output,cvstree,getbinpkg,emergehelp,dispatch_conf}.py ${myroot}/usr/lib/portage/pym
 			python_mod_optimize ${myroot}/usr/lib/portage/pym
 		fi
 	fi
 
 	echo
 	ewarn
-	ewarn "If you have just upgraded from python-2.2.x you will need to run:"
+	ewarn "If you have just upgraded from an older version of python you will need to run:"
 	ewarn
 	ewarn "/usr/sbin/python-updater"
 	ewarn
 	ewarn "This will automatically rebuild all the python dependent modules"
-	ewarn "to run with python-2.3."
+	ewarn "to run with python-${PYVER}."
 	ewarn
-	ewarn "Python 2.2 is still installed and can be accessed via /usr/bin/python2.2."
-	ewarn "Portage-2.0.49-r8 and below will continue to use python-2.2.x, so"
-	ewarn "think twice about uninstalling it, otherwise your system will break."
+	ewarn "Your original Python is still installed and can be accessed via"
+	ewarn "/usr/bin/python2.x."
 	ewarn
 	ebeep 5
 }
+
