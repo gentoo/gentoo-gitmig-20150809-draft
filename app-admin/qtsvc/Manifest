@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 293b98f50992037b87e3740d6c89b6d6 qtsvc-0.1-r1.ebuild 839
 MD5 47b756a02c499cf5f2d35ffd0dfcb76b ChangeLog 1603
 MD5 93ebec2a472b0e3e222aab9ad50e37ba qtsvc-0.2.ebuild 727
-MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 d1acb26dfe92d93227788c71c8da9a55 files/digest-qtsvc-0.2 61
 MD5 51950d81d264f778df8ec9ab2145f853 files/qtsvc-0.1.diff 2914
+MD5 d1acb26dfe92d93227788c71c8da9a55 files/digest-qtsvc-0.2 61
 MD5 dddef6718c96525ca39fcd489495d240 files/digest-qtsvc-0.1-r1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJ1QfLLFUmVNQ7rkRArDcAKCPTUKiN5jaafGu80JaY6v/7zFPuQCfTA3r
-AxzIkAyyS9rZdlhiV1BJ6DU=
-=wQ1I
------END PGP SIGNATURE-----
