@@ -4,8 +4,8 @@
  
  #ifndef lint
  static const char rcsid[] =
--    "@(#) $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/files/tcpdump-3.6.2-afsprinting.patch,v 1.1 2002/05/09 17:46:23 spider Exp $";
-+    "@(#) $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/files/tcpdump-3.6.2-afsprinting.patch,v 1.1 2002/05/09 17:46:23 spider Exp $";
+-    "@(#) $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/files/tcpdump-3.6.2-afsprinting.patch,v 1.2 2004/07/18 03:49:07 dragonheart Exp $";
++    "@(#) $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/files/tcpdump-3.6.2-afsprinting.patch,v 1.2 2004/07/18 03:49:07 dragonheart Exp $";
  #endif
  
  #ifdef HAVE_CONFIG_H
