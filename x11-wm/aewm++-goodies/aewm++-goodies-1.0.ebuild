@@ -1,15 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/aewm++-goodies-1.0.ebuild,v 1.5 2004/05/07 21:09:18 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/aewm++-goodies-1.0.ebuild,v 1.6 2004/05/28 15:41:04 vapier Exp $
 
-IUSE=""
+inherit eutils
 
-DESCRIPTION="Goodies for aewm++."
+DESCRIPTION="Goodies for aewm++"
 HOMEPAGE="http://sapphire.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sapphire/${P/-/_}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~amd64"
+IUSE=""
+
 DEPEND="virtual/x11"
 
 S="${WORKDIR}/${PN/-/_}"

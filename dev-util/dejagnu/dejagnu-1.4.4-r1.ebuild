@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/dejagnu-1.4.4-r1.ebuild,v 1.1 2004/05/07 12:38:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/dejagnu-1.4.4-r1.ebuild,v 1.2 2004/05/28 15:41:00 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="DejaGnu is a framework for testing other programs"
 HOMEPAGE="http://www.gnu.org/software/dejagnu/"
@@ -8,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips ~ppc amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips amd64"
 IUSE="doc"
 
 DEPEND="virtual/glibc

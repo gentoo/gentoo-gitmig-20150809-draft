@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.6.1.ebuild,v 1.3 2004/05/16 14:10:53 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.6.1.ebuild,v 1.4 2004/05/28 15:41:04 vapier Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Collection of games for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="GPL-2 FDL-1.1"
 
-IUSE="guile"
+LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64"
+IUSE="guile"
 
 RDEPEND=">=x11-libs/gtk+-2.3
 	>=gnome-base/gconf-1.2
@@ -19,17 +19,15 @@ RDEPEND=">=x11-libs/gtk+-2.3
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/librsvg-2
 	guile? ( dev-util/guile )"
-
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.29
 	>=sys-devel/gettext-0.10.40
 	>=app-text/scrollkeeper-0.3.8
 	${RDEPEND}"
 
-DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL MAINTAINERS NEWS README TODO"
+DOCS="AUTHORS ChangeLog HACKING INSTALL MAINTAINERS NEWS README TODO"
 
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${S}/aisleriot

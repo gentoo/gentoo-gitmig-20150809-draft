@@ -1,28 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/air/air-1.2.3_beta3.ebuild,v 1.4 2004/05/23 20:11:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/air/air-1.2.3_beta3.ebuild,v 1.5 2004/05/28 15:41:04 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A GUI front-end to dd/dcfldd"
 HOMEPAGE="http://air-imager.sourceforge.net/"
 MY_P=${P/_/-}
 SRC_URI="mirror://sourceforge/air-imager/${MY_P}.tar.gz"
-RESTRICT="nomirror"
+
 LICENSE="GPL-2"
 SLOT="0"
-
-# Only tested on x86
 KEYWORDS="~x86"
-
 IUSE=""
 
 DEPEND="dev-perl/perl-tk
 	app-arch/sharutils
 	>=sys-apps/sed-4"
-
 RDEPEND="app-arch/mt-st
 	dev-lang/perl"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	#The tarball doesn't have a directory

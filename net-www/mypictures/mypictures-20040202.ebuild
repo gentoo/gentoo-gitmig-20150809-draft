@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mypictures/mypictures-20040202.ebuild,v 1.2 2004/05/03 10:20:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mypictures/mypictures-20040202.ebuild,v 1.3 2004/05/28 15:41:04 vapier Exp $
 
-inherit webapp
+inherit webapp eutils
 
 DESCRIPTION="Simple photo-gallery for websites"
 HOMEPAGE="http://www.splitbrain.org/Programming/PHP/mypictures/index.php"
 SRC_URI="http://www.splitbrain.org/Programming/PHP/mypictures/mypictures.tgz"
+
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND="$DEPEND
-	sys-apps/sed"
-RDEPEND="$RDEPEND
-	media-gfx/imagemagick"
+
+DEPEND="sys-apps/sed"
+RDEPEND="media-gfx/imagemagick"
+
 S=${WORKDIR}/${PN}
 
 src_unpack () {
