@@ -46,7 +46,8 @@ if os.path.exists(portage.root+"etc/ld.so.conf"):
 			continue
 		oldld.append(x[:-1])
 	oldld.sort()
-	os.rename(portage.root+"etc/ld.so.conf",portage.root+"etc/ld.so.conf.bak")
+#	os.rename(portage.root+"etc/ld.so.conf",portage.root+"etc/ld.so.conf.bak")
+# Where is the new ld.so.conf generated? (achim)
 else:
 	oldld=None
 specials["LDPATH"].sort()
@@ -63,8 +64,6 @@ print ">>> Regenerating "+portage.root+"etc/ld.so.cache..."
 commands.getstatusoutput("/sbin/ldconfig -r "+portage.root)
 del specials["LDPATH"]
 
-if portage.root!="/":
-	sys.exit(0)
 
 outfile=open(portage.root+"/etc/profile.env","w")
 

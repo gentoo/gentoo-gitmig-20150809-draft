@@ -51,29 +51,20 @@ mkbootimg() {
         # *********** 1 ************
 
         echo "1. Creating basic dirs"
-        dodirs bin dev initrd lib sbin usr
+        dodirs bin dev initrd lib sbin usr proc
 
         # *********** 2 ************
 
         echo "2. Creating initdisk stuff in initrd first"
         cd ${BOOTIMG}/initrd
-        dodirs dev proc distcd etc root tmp var mnt
+        dodirs dev distcd etc root tmp var mnt
         cd mnt
         dodirs floppy gentoo ram boot
         ln -sf /initrd/distcd .
         cd ..
         ln -sf mnt/boot boot
 
-        # *********** 3 ************
 
-        echo "3. Creating /initrd devices"
-        cd ${BOOTIMG}/initrd/dev
-	mknod -m 666 tty c 5 0
-        mknod -m 600 tty1 c 4 1
-        mknod -m 600 tty2 c 4 2
-	mknod -m 400 initrd b 1 250
-        mkfifo -m 600 initctl
-        mkdir pts
 
         # *********** 4 ************
 
@@ -98,7 +89,7 @@ mkbootimg() {
 
         echo "6. Creating links to initrd"
         cd ${BOOTIMG}
-        for i in etc root tmp var mnt proc
+        for i in etc root tmp var mnt 
         do
             ln -s initrd/$i $i
         done
@@ -114,14 +105,18 @@ mkbootimg() {
 
         # *********** 8 ************
 
-        echo "8. Creating device links to initrd"
-	rm tty1 tty2
-        ln -s ../initrd/pts pts
-#        ln -sf ../initrd/dev/initctl .
-#        ln -sf ../initrd/dev/initrd .
-        ln -sf ../initrd/dev/tty .
-        ln -sf ../initrd/dev/tty1 .
-        ln -sf ../initrd/dev/tty2 .
+        echo "3. Creating /initrd devices"
+        cd ${BOOTIMG}/dev
+	for i in tty tty1 tty2 initrd pts log
+	do
+	  mv $i ../initrd/dev/$i
+	  ln -sf ../initrd/dev/$i $i
+	done
+
+
+# Hmm, shutdown needs write access to /dev/initctl
+# but symlinking it messes up initrd
+
 
 
         # *********** 9 ************
@@ -139,7 +134,7 @@ mkbootimg() {
         doexes agetty cfdisk depmod e2fsck fdisk grub halt ifconfig init insmod \
 	        ldconfig lilo ln lsmod mke2fs mkraid mkreiserfs mkswap portmap \
 	        raidstart reboot resize2fs reiserfsck \
-	        route sfdisk shutdown touch
+	        route sfdisk shutdown touch tcpd
 
         # portmap? removed; Ups added again
         # reiserfsck and resize_reiserfs does not exist in 2.4 so 
@@ -174,7 +169,7 @@ mkbootimg() {
         echo "13. Populating /usr/sbin"
         cd ${BOOTIMG}/usr/sbin
         cp /usr/sbin/rc-update .
-
+	cp ${BOOTDIR}/files/sbin/network .
         # *********** 14 ************
 
         echo "14. Populating /usr/share"
@@ -259,14 +254,14 @@ mkinitrd() {
         echo "3. Populating /dev"
         cd dev
         for i in console fd0 fd0u1440 hda hdb hdc hdd hde hdf hdg hdh loop0 ram0 \
-                scd0 scd1 scd2 scd3 scd4 scd5 scd6 scd7 initrd
+                scd0 scd1 scd2 scd3 scd4 scd5 scd6 scd7 log
         do
             cp -a ${BOOTIMG}/dev/$i .
         done
 	mknod -m 666 tty c 5 0
         mknod -m 600 tty1 c 4 1
         mknod -m 600 tty2 c 4 2
-        mkfifo -m 600 initctl
+	mknod -m 600 initrd b 1 250
         mkdir pts
 	# Just for testing
 	cp -a ${BOOTIMG}/dev/hda2 .
@@ -337,3 +332,4 @@ umount ${BROOT}/mnt
 gzip -9 initdisk
 echo
 
+                                                                                                                                                                                              
