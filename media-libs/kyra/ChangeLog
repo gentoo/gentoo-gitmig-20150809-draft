@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/kyra
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/kyra/ChangeLog,v 1.1 2003/04/01 15:12:44 malverian Exp $
+
+*kyra-2.0.3 (1 Apr 2003)
+
+  22 Jan 2003; Philip Walls <malverian@gentoo.org> kyra-2.0.3.ebuild :
+  Initial ebuild; Thanks to Stijn Vander Maelen <stijn@sunshine.rave.org>
+  for ebuild. Closes bug #14334
