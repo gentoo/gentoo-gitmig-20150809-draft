@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/f-prot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.14 2004/11/09 14:18:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.15 2004/11/12 14:27:15 ticho Exp $
+
+  12 Nov 2004; Andrej Kacian <ticho@gentoo.org> f-prot-4.4.7.ebuild:
+  Put in nomirror restrict, mirrors have incorrect version of 4.4.7 tarball.
 
   09 Nov 2004; Andrej Kacian <ticho@gentoo.org> :
   Recreated digest file for 4.4.7, due to virus definitions update in tarball
