@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r4.ebuild,v 1.4 2004/08/27 19:46:31 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r4.ebuild,v 1.5 2004/09/03 15:20:35 axxo Exp $
 
 DESCRIPTION="An implementation of Python written in Java"
 HOMEPAGE="http://www.jython.org"
@@ -25,7 +25,6 @@ src_unpack() {
 }
 
 compile_set() {
-
 	for x in $* ; do
 		if [ -d $x ] ; then
 			find $* -name "*.java"  | xargs ${javac} -source 1.3 -nowarn || die "Failed to compile"
