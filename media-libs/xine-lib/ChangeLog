@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.3 2002/03/28 22:58:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.4 2002/04/12 13:34:49 seemant Exp $
+
+*xine-lib-0.9.7-r2 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> xine-lib-0.9.7-r2.ebuild :
+
+  Made win32 support dependent upon the "avi" USE toggle. Made libdvdcss and
+  libdvdread optional dependencies based on the "dvd" USE toggle.
 
 *xine-lib-0.9.7-r1 (28 Mar 2002)
 
