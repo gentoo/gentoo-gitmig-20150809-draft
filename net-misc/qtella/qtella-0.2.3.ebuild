@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 
 src_compile() {
 
-    ./configure --prefix=${KDEDIR} --host=${CHOST} || die
+    ./configure --prefix=/usr --host=${CHOST} || die
     make || die "Make sure QT is built with 'qtmt' set in USE, QTella will not compile otherwise"
 
 }
