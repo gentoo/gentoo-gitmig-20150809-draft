@@ -1,5 +1,6 @@
 sys-apps/baselayout
 sys-libs/glibc
+sys-libs/ncurses
 sys-apps/texinfo
 app-shells/bash
 sys-apps/bzip2
