@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r1.ebuild,v 1.5 2001/09/05 07:15:20 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r1.ebuild,v 1.6 2001/09/05 07:16:38 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Highly configurable service monitoring daemon"
@@ -9,7 +9,8 @@ SRC_URI="ftp://ftp.kernel.org/pub/software/admin/mon/${P}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/software/mon/"
 
 DEPEND="virtual/glibc"
-RDEPEND="$DEPEND >=dev-perl/Mon-0.9"
+RDEPEND=">=dev-perl/Mon-0.9
+         >=dev-perl/Time-HiRes-01.20"
 
 src_compile() {
 
