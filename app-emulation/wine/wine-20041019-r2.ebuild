@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r2.ebuild,v 1.3 2004/11/01 03:43:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r2.ebuild,v 1.4 2004/11/01 03:44:46 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -57,7 +57,7 @@ config_cache() {
 	use ${1} && ans="yes"
 	shift
 	for h in "$@" ; do
-		export ac_cv_header_${h}=${ans}
+		export ac_cv_${h}=${ans}
 	done
 }
 
