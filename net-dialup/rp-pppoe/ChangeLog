@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.24 2004/06/09 20:57:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.25 2004/06/15 03:12:35 agriffis Exp $
+
+*rp-pppoe-3.5-r1 (14 Jun 2004)
+
+  14 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/rp-pppoe-3.5-pidfile.patch, +rp-pppoe-3.5-r1.ebuild:
+  Add pidfile override to enable net.eth0 changes to support adsl for bug 24975
+  (net.eth0 with support for bringing up adsl interfaces)
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> rp-pppoe-3.5.ebuild:
   Fix use invocation
