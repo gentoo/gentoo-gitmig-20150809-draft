@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/kbear
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/ChangeLog,v 1.9 2002/12/13 10:59:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/ChangeLog,v 1.10 2003/01/03 08:59:30 hannes Exp $
+
+*kdear-2.1 (03 Jan 2003)
+
+  03 Jan 2003; Hannes Mehnert <hannes@gentoo.org> kbear-2.1.ebuild:
+  version bump, thanks to sysop@heinospage.de (Heinrich Wendel) (bug #12779)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
