@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b4bdc60b7c680ca8f162e80ff7150fb ChangeLog 696
-MD5 c46e1dd545563e82d129c6308fe8a1be amiga-fdisk-0.04.ebuild 736
+MD5 b0162d60f0f143b64a6431908693ad1b amiga-fdisk-0.04.ebuild 730
+MD5 466cc8a52075f6ac2540c5f9c4dd8e7b ChangeLog 690
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 27778f5b7b1ca353113ce8b8c92db09a files/digest-amiga-fdisk-0.04 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAxbQeHTu7gpaalycRAv93AKCF2Hrfg6MULjMyQrx6OO0MrZtvTACgvcqk
-wHDRRTEFHDeVvOgG6WDRKoo=
-=cJ6s
------END PGP SIGNATURE-----
