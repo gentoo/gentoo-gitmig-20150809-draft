@@ -1,4 +1,14 @@
-MD5 4e09fc2ce57a282136b6011240d220cf gi-detect-0.1.ebuild 648
-MD5 6efa90c68a8eef5a3389aa463ddb4b0a ChangeLog 315
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 36d275a7d14f112b621bea6f19f0fb3e ChangeLog 410
+MD5 c7c78d56ff90008fc17a7b58c3d56d04 gi-detect-0.1.ebuild 656
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 87ca1c24ae679b39c8c300914f2e8c01 files/digest-gi-detect-0.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBKsDII1lqEGTUzyQRAqMmAKCQJstwmtBaNDj8xH0XH9fdWHfoRQCfdLtj
+kSMP7/qFBL0I1yH0XKx8T8w=
+=9M3x
+-----END PGP SIGNATURE-----
