@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/braincurses/braincurses-0.5a.ebuild,v 1.1 2004/12/02 10:03:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/braincurses/braincurses-0.5a.ebuild,v 1.2 2004/12/30 11:14:39 nigoro Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://uhaweb.hartford.edu/hyland/derr/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc64"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"

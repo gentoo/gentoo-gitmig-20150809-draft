@@ -1,4 +1,14 @@
-MD5 85b583168651aab2ae3e4ccfa921e7fe braincurses-0.5a.ebuild 629
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6a19aea70dd96d18ea4ae08a679fc3cf ChangeLog 504
+MD5 dfee7aa49442c49e52c8eaf3c06195f5 braincurses-0.5a.ebuild 633
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 9b5d3f3bc8911daea5fbb680ddf05592 ChangeLog 420
 MD5 6ad1ec9cc00c13976b1526061c449fd3 files/digest-braincurses-0.5a 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB0+Mz60LfUIagIAkRAoN2AJwK4VtD85JYzWNhcyLhKIK0yube9QCg69dq
+dPKxmqID2TPVd9qcDynFVOw=
+=WZHF
+-----END PGP SIGNATURE-----
