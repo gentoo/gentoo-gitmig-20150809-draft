@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r2.ebuild,v 1.1 2003/04/23 10:04:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r2.ebuild,v 1.2 2003/04/24 10:18:20 robbat2 Exp $
 
 inherit php eutils
 
@@ -33,9 +33,8 @@ src_compile() {
 
 
 src_install() {
+	installtargets="${installtargets} install-cli"
 	php_src_install
-
-	make INSTALL_ROOT=${D} install-cli install-pear install-headers install-programs install-modules install-build || die
 
 	# php executable is located in ./sapi/cli/
 	cp sapi/cli/php .

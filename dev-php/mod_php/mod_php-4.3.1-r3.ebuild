@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.1 2003/04/23 10:04:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.2 2003/04/24 10:17:57 robbat2 Exp $
 
 inherit php eutils
 
@@ -38,20 +38,15 @@ src_compile() {
 	#this is an extra item required with mcrypt (which is include in the eclass) when used with apache
 	use crypt && myconf="${myconf} --disable-posix-threads"
 
-	myconf="${myconf} \
-		--enable-discard-path \
-		--enable-force-cgi-redirect \
-		--enable-mime-magic \
-		--enable-safe-mode \
-		--with-iconv"
+	#php CGI stuff
+	#--enable-discard-path --enable-force-cgi-redirect
+
 	php_src_compile
 }
 
  
 src_install() {
 	php_src_install
-
- 	make INSTALL_ROOT=${D} install-pear install-headers install-programs install-build || die
 
 	cp php.ini-dist php.ini
 	insinto /etc/php4
