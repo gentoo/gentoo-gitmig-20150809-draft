@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.5.0_rc2.ebuild,v 1.1 2004/12/24 04:00:28 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.5.0_rc2.ebuild,v 1.2 2004/12/28 05:37:55 ribosome Exp $
 
 inherit base flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 	qt? ( >=x11-libs/qt-3.2 )
 	>=sys-libs/readline-4.2
 	mpi? ( sys-cluster/lam-mpi )
-	ginac? ( >=app-sci/ginac-1.1.1 )
+	ginac? ( >=sci-mathematics/ginac-1.1.1 )
 	gsl? ( dev-libs/gsl )
 	cln? ( dev-libs/cln )"
 
