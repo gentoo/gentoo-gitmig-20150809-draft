@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.80-r1.ebuild,v 1.2 2003/09/08 18:21:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.80-r1.ebuild,v 1.3 2003/09/15 11:34:03 msterret Exp $
 
 DESCRIPTION="Client to sync apps with WinCE or mobile devices"
 
-HOMEPAGE="http://wultisync.sourceforge.net/"
+HOMEPAGE="http://multisync.sourceforge.net/"
 
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
