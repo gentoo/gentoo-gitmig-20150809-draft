@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gnusound
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.1 2004/02/11 21:19:33 jake Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.2 2004/03/27 03:35:16 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gnusound-0.6.1.ebuild:
+  Stable in x86.  Fixed USE flags
 
 *gnusound-0.6.1 (11 Feb 2004)
 

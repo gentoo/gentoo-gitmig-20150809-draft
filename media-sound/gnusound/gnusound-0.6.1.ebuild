@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.6.1.ebuild,v 1.1 2004/02/11 21:19:33 jake Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.6.1.ebuild,v 1.2 2004/03/27 03:35:16 eradicator Exp $
 
 DESCRIPTION="GNUsound is a sound editor for Linux/x86"
 HOMEPAGE="http://gnusound.sourceforge.net/"
@@ -8,8 +8,8 @@ SRC_URI="http://gnusound.sourceforge.net/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE=""
+KEYWORDS="x86"
+IUSE="libsamplerate"
 
 DEPEND=">=gnome-base/libglade-2.0.1
 	gnome-base/gnome-libs
@@ -26,14 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
-	myconf="${myconf} --enable-optimization"
-
-	if has_version media-libs/libsamplerate; then
-		myconf="${myconf} --with-libsamplerate"
-	fi
-	econf ${myconf} || die "Configure failure"
+	econf `use_with libsamplerate` --enable-optimization || die "Configure failure"
 
 	emake || die "Make failure"
 }
