@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gphoto/gphoto-0.4.3.ebuild,v 1.1 2001/05/06 18:24:16 aj Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gphoto/gphoto-0.4.3.ebuild,v 1.2 2001/05/06 18:29:28 aj Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -28,8 +28,3 @@ src_install() {
 	 README THANKS THEMES TODO
 }
 
-
-
-
-
-http://www.gphoto.net/dist/gphoto-0.4.3.tar.gz
