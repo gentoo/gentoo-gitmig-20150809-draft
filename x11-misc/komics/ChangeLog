@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/komics
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/ChangeLog,v 1.9 2004/06/04 15:54:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/ChangeLog,v 1.10 2004/06/20 18:13:59 port001 Exp $
+
+  20 Jun 2004; Ian Leitch <port001@gentoo.org> komics-1.2.ebuild:
+  arts missing from IUSE
 
   04 Jun 2004; Carsten Lohrke <carlo@gentoo.org> komics-1.0.ebuild,
   komics-1.2.ebuild, metadata.xml:

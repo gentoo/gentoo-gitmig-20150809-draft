@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/komics-1.2.ebuild,v 1.5 2004/06/04 15:54:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/komics-1.2.ebuild,v 1.6 2004/06/20 18:13:59 port001 Exp $
 
 inherit kde
 need-kde 3
@@ -12,7 +12,7 @@ SRC_URI="http://www.orson.it/~domine/komics/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE=""
+IUSE="arts"
 
 S=${WORKDIR}/komics
 
