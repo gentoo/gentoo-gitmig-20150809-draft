@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r5.ebuild,v 1.1 2001/12/05 02:33:04 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r6.ebuild,v 1.1 2001/12/07 17:55:16 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modern replacement for sendmail which uses maildirs"
@@ -18,10 +18,13 @@ SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
 DEPEND="virtual/glibc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
-	>=sys-apps/daemontools-0.76
-	>=net-mail/checkpassword-0.90
-	>=net-mail/fastforward-0.51
-	>=net-mail/dot-forward-0.71"
+	>=net-mail/checkpassword-0.90"
+
+RDEPEND="virtual/glibc
+	sys-apps/groff
+	>=sys-apps/ucspi-tcp-0.88
+	>=sys-apps/daemontools-0.76-r1
+	>=net-mail/checkpassword-0.90"
 
 PROVIDE="virtual/mta"
 
@@ -65,50 +68,66 @@ src_install() {
     cd ${S}
     diropts -m 755 -o root -g qmail
     dodir /var/qmail
+	touch ${D}/var/qmail/.keep
 
     for i in bin boot control users
     do
-        dodir /var/qmail/$i
+        dodir /var/qmail/${i}
+		touch ${D}/var/qmail/${i}/.keep
     done
 
     diropts -m 755 -o alias -g qmail
     dodir /var/qmail/alias
+	touch ${D}/var/qmail/alias/.keep
 
     diropts -m 750 -o qmailq -g qmail
     dodir /var/qmail/queue
     dodir /var/qmail/queue/todo
+	touch ${D}/var/qmail/queue/.keep
+	touch ${D}/var/qmail/queue/todo/.keep
 
     diropts -m 700 -o qmailq -g qmail
     dodir /var/qmail/queue/pid
+	touch ${D}/var/qmail/queue/pid/.keep
 
     diropts -m0700 -o qmails -g qmail
     dodir /var/qmail/queue/bounce
+	touch ${D}/var/qmail/queue/bounce/.keep
 
     diropts -m 750 -o qmailq -g qmail
     dodir /var/qmail/queue/mess
+	touch ${D}/var/qmail/queue/mess/.keep
 
     for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
     do
-        dodir /var/qmail/queue/mess/$i
-        dodir /var/qmail/queue/todo/$i
-        dodir /var/qmail/queue/intd/$i
+        dodir /var/qmail/queue/mess/${i}
+		touch ${D}/var/qmail/queue/mess/${i}/.keep
+        dodir /var/qmail/queue/todo/${i}
+		touch ${D}/var/qmail/queue/todo/${i}/.keep
+        dodir /var/qmail/queue/intd/${i}
+		touch ${D}/var/qmail/queue/intd/${i}/.keep
     done
 
     diropts -m 700 -o qmails -g qmail
     for i in info local remote
     do
-        dodir /var/qmail/queue/$i
+        dodir /var/qmail/queue/${i}
+		touch ${D}/var/qmail/queue/${i}/.keep
     done
 
     for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
     do
-        dodir /var/qmail/queue/info/$i
-        dodir /var/qmail/queue/local/$i
-        dodir /var/qmail/queue/remote/$i
+        dodir /var/qmail/queue/info/${i}
+		touch ${D}/var/qmail/queue/info/${i}/.keep
+        dodir /var/qmail/queue/local/${i}
+		touch ${D}/var/qmail/queue/local/${i}/.keep
+        dodir /var/qmail/queue/remote/${i}
+		touch ${D}/var/qmail/queue/remote/${i}/.keep
     done
 
     diropts -m 750 -o qmailq -g qmail 
     dodir /var/qmail/queue/lock
+	touch ${D}/var/qmail/queue/lock/.keep
 
     dd if=/dev/zero of=${D}/var/qmail/queue/lock/tcpto bs=1024 count=1
     fperms 644 /var/qmail/queue/lock/tcpto
@@ -195,18 +214,25 @@ src_install() {
     einfo "Setting up daemontools ..."
     insopts -o root -g root -m 755
     diropts -m 755 -o root -g root
-    dodir /service
     dodir /var/qmail/supervise
+    touch ${D}/var/qmail/supervise/.keep
     dodir /var/qmail/supervise/qmail-send
+    touch ${D}/var/qmail/supervise/qmail-send/.keep
     dodir /var/qmail/supervise/qmail-send/log
+    touch ${D}/var/qmail/supervise/qmail-send/.keep
     dodir /var/qmail/supervise/qmail-smtpd
+    touch ${D}/var/qmail/supervise/qmail-smtpd/.keep
     dodir /var/qmail/supervise/qmail-smtpd/log
+    touch ${D}/var/qmail/supervise/qmail-smtpd/.keep
     chmod +t ${D}/var/qmail/supervise/qmail-send
     chmod +t ${D}/var/qmail/supervise/qmail-smtpd
     diropts -m 755 -o qmaill
     dodir /var/log/qmail
+    touch ${D}/var/log/qmail/.keep
     dodir /var/log/qmail/qmail-send
+    touch ${D}/var/log/qmail/qmail-send/.keep
     dodir /var/log/qmail/qmail-smtpd
+    touch ${D}/var/log/qmail/qmail-smtpd/.keep
 
     insinto /var/qmail/supervise/qmail-send
     newins ${FILESDIR}/${PV}-${PR}/run-qmailsend run
@@ -216,8 +242,6 @@ src_install() {
     newins ${FILESDIR}/${PV}-${PR}/run-qmailsmtpd run                            
     insinto /var/qmail/supervise/qmail-smtpd/log
     newins ${FILESDIR}/${PV}-${PR}/run-qmailsmtpdlog run                            
-    dosym /var/qmail/supervise/qmail-send /service/qmail-send
-    dosym /var/qmail/supervise/qmail-smtpd /service/qmail-smtpd
 
     einfo "Installing the qmail control file ..."
     exeinto /var/qmail/bin
@@ -227,12 +251,20 @@ src_install() {
     insinto /var/qmail
     doins ${FILESDIR}/${PV}-${PR}/rc
 
-    echo -e "\033[1;42m\033[1;33m Please do not forget to run, the following syntax : \033[0m"
-    echo -e "\033[1;42m\033[1;33m ebuild /var/db/pkg/${CATEGORY}/${PN}-${PV}-${PR}/${PN}-${PV}-${PR}.ebuild config \033[0m"
-    echo -e "\033[1;42m\033[1;33m This will add the necessary post install config to your system. \033[0m"
-
 }
 
+pkg_postinst() {
+
+    echo -e "\e[32;01m Please do not forget to run, the following syntax :\033[0m"
+    echo -e "\e[32;01m ebuild /var/db/pkg/${CATEGORY}/${PN}-${PV}-${PR}/${PN}-${PV}-${PR}.ebuild config \033[0m"
+    echo -e "\e[32;01m This will setup qmail to run out-of-the-box on your system. \033[0m"
+    echo -e ""
+    echo -e "\e[32;01m To start qmail at boot you have to enable the /etc/init.d/svscan rc file \033[0m"
+    echo -e "\e[32;01m and create the following links : \033[0m"
+    echo -e "\e[32;01m ln -s /var/qmail/supervise/qmail-send /service/qmail-send \033[0m"
+    echo -e "\e[32;01m ln -s /var/qmail/supervise/qmail-smtpd /service/qmail-smtpd \033[0m"
+
+}
 
 pkg_config() {
 

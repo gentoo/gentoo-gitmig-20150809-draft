@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-pop3d/qmail-pop3d-1.03.ebuild,v 1.1 2001/12/05 09:56:19 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-pop3d/qmail-pop3d-1.03-r1.ebuild,v 1.1 2001/12/07 17:55:16 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Pop3 configuration for qmail which used the maildirs of the users"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.qmail.org"
 
 SRC_URI=""
 
-DEPEND=">=net-mail/qmail-1.03-r5"
+DEPEND=">=net-mail/qmail-1.03-r6"
 
 src_unpack() {
 
@@ -40,6 +40,13 @@ src_install() {
     newins ${FILESDIR}/run-qmailpop3d run
     insinto /var/qmail/supervise/qmail-pop3d/log
     newins ${FILESDIR}/run-qmailpop3dlog run                            
-    dosym /var/qmail/supervise/qmail-pop3d /service/qmail-pop3d
+
+}
+
+pkg_postinst() {
+
+    echo -e "\e[32;01m To start qmail-pop3d at boot you have to start /etc/init.d/svscan at boot \033[0m"
+    echo -e "\e[32;01m and create the following link : \033[0m"
+    echo -e "\e[32;01m ln -s /var/qmail/supervise/qmail-pop3d /service/qmail-pop3d \033[0m"
 
 }
