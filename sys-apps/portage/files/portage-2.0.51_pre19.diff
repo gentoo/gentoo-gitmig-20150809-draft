@@ -1,0 +1,50 @@
+Index: bin/emerge
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/portage/bin/emerge,v
+retrieving revision 1.318
+diff -u -r1.318 emerge
+--- bin/emerge	15 Aug 2004 23:14:34 -0000	1.318
++++ bin/emerge	16 Aug 2004 20:32:14 -0000
+@@ -12,6 +12,8 @@
+ from output import *
+ 
+ import portage
++import portage_util
++import portage_locks
+ import portage_exception
+ 
+ if (not sys.stdout.isatty()) or (portage.settings["NOCOLOR"] in ["yes","true"]):
+@@ -328,13 +330,13 @@
+ 		else:
+ 			mylogfile=open("/var/log/emerge.log", "a")
+ 
+-		l=portage.lockfile(mylogfile)
++		l=portage_locks.lockfile(mylogfile)
+ 		# seek because we may have gotten held up by the lock.
+ 		# if so, we may not be positioned at the end of the file.
+ 		mylogfile.seek(0,2)
+ 		mylogfile.write(str(time.time())[:10]+": "+mystr+"\n")
+ 		mylogfile.flush()
+-		portage.unlockfile(l)
++		portage_locks.unlockfile(l)
+ 		mylogfile.close()
+ 	except Exception, e:
+ 		if edebug:
+@@ -455,7 +457,7 @@
+ 	libcver=[]
+ 	libclist  = portage.vardbapi(portage.root).match("virtual/libc")
+ 	libclist += portage.vardbapi(portage.root).match("virtual/glibc")
+-	libclist  = portage.unique_array(libclist)
++	libclist  = portage_util.unique_array(libclist)
+ 	for x in libclist:
+ 		xs=portage.catpkgsplit(x)
+ 		if libcver:
+@@ -1419,7 +1421,7 @@
+ 							pass
+ 					iuse=""
+ 					now_use=self.applied_useflags[x[2]]
+-					for ebuild_iuse in portage.unique_array(iuse_split):
++					for ebuild_iuse in portage_util.unique_array(iuse_split):
+ 						usechange=""
+ 						if old_use:
+ 							if (old_use.count(ebuild_iuse) and not now_use.count(ebuild_iuse)) or (not old_use.count(ebuild_iuse) and now_use.count(ebuild_iuse)):
