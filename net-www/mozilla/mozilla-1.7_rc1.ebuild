@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_beta.ebuild,v 1.2 2004/03/30 05:18:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1.ebuild,v 1.1 2004/04/23 15:22:57 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -35,7 +35,7 @@ case "${ARCH}" in
 		;;
 	ppc)
 		# Fix to avoid gcc-3.3.x micompilation issues.
-		if [ "$(gcc-major-version).$(gcc-minor-version)" = "3.3" ]; then
+		if [[ $(gcc-major-version).$(gcc-minor-version) == 3.3 ]]; then
 			append-flags -fno-strict-aliasing
 		fi
 		;;
@@ -51,17 +51,18 @@ case "${ARCH}" in
 		;;
 esac
 
-EMVER="0.83.5"
+EMVER="0.83.6"
 IPCVER="1.0.5"
 
 PATCH_VER="1.0"
 
 # handle _rc versions
-MY_PV1="${PV/_}"
-MY_PV2="${MY_PV1/eta}"
+MY_PV=${PV/_alpha/a} 	# handle alpha
+MY_PV=${MY_PV/_beta/b}	# handle beta
+MY_PV=${MY_PV/_rc/rc}	# handle rc
 S="${WORKDIR}/mozilla"
 DESCRIPTION="The Mozilla Web Browser"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}-source.tar.bz2
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/src/${PN}-source-${MY_PV}.tar.bz2
 	crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 			 http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
@@ -92,7 +93,8 @@ RDEPEND="virtual/x11
 		>=gnome-base/ORBit-0.5.10-r1 )
 	java?  ( virtual/jre )
 	crypt? ( >=app-crypt/gnupg-1.2.1 )
-	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )"
+	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )
+	net-www/mozilla-launcher"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -101,9 +103,9 @@ DEPEND="${RDEPEND}
 
 
 moz_setup() {
-
 	# Set MAKEOPTS to have proper -j? option ..
 	get_number_of_jobs
+
 	# This should enable parallel builds, I hope
 	export MAKE="emake"
 
@@ -112,31 +114,25 @@ moz_setup() {
 	export BUILD_OFFICIAL=1
 
 	# make sure the nss module gets build (for NSS support)
-	if [ -n "`use ssl`" ]
-	then
+	if use ssl; then
 		export MOZ_PSM="1"
 	fi
-
 }
 
 src_unpack() {
-
 	moz_setup
 
 	unpack ${A}
 
-	cd ${S}
+	cd ${S} || die
 
-	if [ "$(gcc-major-version)" -eq "3" ]
-	then
+	if [[ $(gcc-major-version) -eq 3 ]]; then
 		# ABI Patch for alpha/xpcom for gcc-3.x
-		if [ "${ARCH}" = "alpha" ]
-		then
-			cd ${S}; epatch ${FILESDIR}/${PN}-alpha-xpcom-subs-fix.patch
+		if [[ ${ARCH} == alpha ]]; then
+			epatch ${FILESDIR}/${PN}-alpha-xpcom-subs-fix.patch
 		fi
-		if [ "${ARCH}" = "amd64" ]
-		then
-			cd ${S}; epatch ${FILESDIR}/${PN}-1.4-amd64.patch
+		if [[ ${ARCH} == amd64 ]]; then
+			epatch ${FILESDIR}/${PN}-1.4-amd64.patch
 		fi
 	fi
 
@@ -146,112 +142,87 @@ src_unpack() {
 	# <azarah@gentoo.org> (23 Feb 2003)
 	epatch ${FILESDIR}/1.3/${PN}-1.3-fix-RAW-target.patch
 
-	export WANT_AUTOCONF_2_1=1
-	autoconf &> /dev/null
-	unset WANT_AUTOCONF_2_1
+	WANT_AUTOCONF_2_1=1 autoconf &> /dev/null
 
 	# Unpack the enigmail plugin
-	if [ -n "`use crypt`" -a -z "`use moznomail`" ]
-	then
+	if use crypt && ! use moznomail; then
 		mv -f ${WORKDIR}/ipc ${S}/extensions/
 		mv -f ${WORKDIR}/enigmail ${S}/extensions/
 		cp ${FILESDIR}/enigmail/Makefile-enigmail ${S}/extensions/enigmail/Makefile
 		cp ${FILESDIR}/enigmail/Makefile-ipc ${S}/extensions/ipc/Makefile
 	fi
-
 }
 
 src_compile() {
-
 	moz_setup
 
-	local myconf=
+	local myconf
+
 	# NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
 	#       tested ok -- azarah
-	if [ -n "`use gtk2`" ]
-	then
-		myconf="${myconf} --enable-toolkit-gtk2 \
-		                  --enable-default-toolkit=gtk2 \
-		                  --disable-toolkit-qt \
-		                  --disable-toolkit-xlib \
-		                  --disable-toolkit-gtk"
+	if use gtk2; then
+		myconf="${myconf}
+			--enable-toolkit-gtk2 \
+			--enable-default-toolkit=gtk2 \
+			--disable-toolkit-qt \
+			--disable-toolkit-xlib \
+			--disable-toolkit-gtk"
 	else
-		myconf="${myconf} --enable-toolkit-gtk \
-			              --enable-default-toolkit=gtk \
-			              --disable-toolkit-qt \
-			              --disable-toolkit-xlib \
-			              --disable-toolkit-gtk2"
+		myconf="${myconf}
+			--enable-toolkit-gtk \
+			--enable-default-toolkit=gtk \
+			--disable-toolkit-qt \
+			--disable-toolkit-xlib \
+			--disable-toolkit-gtk2"
 	fi
 
-	if [ -z "`use ldap`" ]
-	then
-		myconf="${myconf} --disable-ldap"
-	fi
-
-	if [ -z "`use debug`" ]
-	then
-		myconf="${myconf} --enable-strip-libs \
-			              --disable-debug \
-			              --disable-tests \
-						  --enable-reorder \
-						  --enable-strip"
-#						  --enable-cpp-rtti"
+	if ! use debug; then
+		myconf="${myconf} \
+			--enable-strip-libs \
+			--disable-debug \
+			--disable-tests \
+			--enable-reorder \
+			--enable-strip"
+#			--enable-cpp-rtti"
 
 		# Currently --enable-elf-dynstr-gc only works for x86 and ppc,
 		# thanks to Jason Wever <weeve@gentoo.org> for the fix.
-		if [ -n "`use x86`" -o -n "`use ppc`" ]
-		then
+		if use x86 || use ppc; then
 			myconf="${myconf} --enable-elf-dynstr-gc"
 		fi
 	fi
 
 	# Check if we should enable Xft support ...
-	if [ -z "`use moznoxft`" ]
-	then
-		if [ -n "`use gtk2`" ]
-		then
+	if ! use moznoxft; then
+		if use gtk2; then
 			local pango_version=""
 
 			# We need Xft2.0 localy installed
-			if (test -x /usr/bin/pkg-config) && (pkg-config xft)
-			then
-				pango_version="`pkg-config --modversion pango | cut -d. -f1,2`"
-				pango_version="`echo ${pango_version} | sed -e 's:\.::g'`"
+			if [[ -x /usr/bin/pkg-config ]] && pkg-config xft; then
+				pango_version=$(pkg-config --modversion pango | cut -d. -f1,2)
 
 				# We also need pango-1.1, else Mozilla links to both
 				# Xft1.1 *and* Xft2.0, and segfault...
-				if [ "${pango_version}" -gt "10" ]
-				then
-					einfo "Building with Xft2.0 (Gtk+-2.0) support!"
+				if [[ ${pango_version//.} -gt 10 ]]; then
+					einfo "Building with Xft2.0 (Gtk+-2.0) support"
 					myconf="${myconf} --enable-xft --disable-freetype2"
 					touch ${WORKDIR}/.xft
 				else
-					ewarn "Building without Xft2.0 support!"
-					myconf="${myconf} --disable-xft `use_enable truetype freetype2`"
+					ewarn "Building without Xft2.0 support (bad pango)"
+					myconf="${myconf} --disable-xft $(use_enable truetype freetype2)"
 				fi
 			else
-				ewarn "Building without Xft2.0 support!"
-				myconf="${myconf} --disable-xft `use_enable truetype freetype2`"
+				ewarn "Building without Xft2.0 support (no pkg-config xft)"
+				myconf="${myconf} --disable-xft $(use_enable truetype freetype2)"
 			fi
 		else
-			einfo "Building with Xft2.0 (Gtk+-1.0) support!"
+			einfo "Building with Xft2.0 (Gtk+-1.0) support"
 			myconf="${myconf} --enable-xft --disable-freetype2"
 			touch ${WORKDIR}/.xft
 		fi
 	else
-		myconf="${myconf} --disable-xft `use_enable truetype freetype2`"
-	fi
-
-	if [ -n "`use ipv6`" ]
-	then
-		myconf="${myconf} --enable-ipv6"
-	fi
-
-	if [ -n "`use gnome`" ]
-	then
-		myconf="${myconf} --enable-gnomevfs"
-	else
-		myconf="${myconf} --disable-gnomevfs"
+		einfo "Building without Xft2.0 support (moznoxft)"
+		myconf="${myconf} --disable-xft $(use_enable truetype freetype2)"
 	fi
 
 	# NB!!:  Due to the fact that the non default extensions do not always
@@ -260,73 +231,55 @@ src_compile() {
 	#        do not know what you are doing!
 	#
 	# The defaults are:
-	# cookie wallet content-packs xml-rpc xmlextras help p3p pref transformiix 
-	# venkman inspector irc universalchardet typeaheadfind webservices 
+	# cookie wallet content-packs xml-rpc xmlextras help p3p pref transformiix
+	# venkman inspector irc universalchardet typeaheadfind webservices
 	# spellcheck
 	# Non-defaults are:
 	#     xmlterm access-builtin datetime finger cview
-	use mozxmlterm || use mozaccess && \
-		ewarn "" && \
-		ewarn "The use of the non-default extensions is considered unsupported, and these" && \
-		ewarn "may not always compile properly." && \
-		ewarn "Please do not use if you do not know what you're doing!" && \
-		ewarn "" && \
+	if use mozxmlterm || use mozaccess; then
+		ewarn ""
+		ewarn "The use of the non-default extensions is considered unsupported, and these"
+		ewarn "may not always compile properly."
+		ewarn "Please do not use if you do not know what you're doing!"
+		ewarn ""
 		sleep 3
+	fi
 
 	local myext="default"
-	if [ -n "`use mozxmlterm`" ]
-	then
-		myext="${myext},xmlterm"
-	fi
-	if [ -n "`use mozaccess`" ]
-	then
-		myext="${myext},access-builtin"
-	fi
-	if [ -n "`use moznoirc`" ]
-	then
-		myext="${myext},-irc"
-	fi
+	use mozxmlterm && myext="${myext},xmlterm"
+	use mozaccess  && myext="${myext},access-builtin"
+	use moznoirc   && myext="${myext},-irc"
 
 # Disable SVG until it's properly implemented
-#	if [ -n "`use mozsvg`" ]
-#	then
+#	if use mozsvg; then
 #		export MOZ_INTERNAL_LIBART_LGPL="1"
 #		myconf="${myconf} --enable-svg"
 #	else
 #		myconf="${myconf} --disable-svg"
 #	fi
-	if [ -n "`use mozcalendar`" ]
-	then
-		myconf="${myconf} --enable-calendar"
-	fi
 
-	if [ -n "`use moznomail`" ]
-	then
+	if use moznomail && ! use mozcalendar; then
 		myconf="${myconf} --disable-mailnews"
 	fi
-	if [ -n "`use moznocompose`" -a -n "`use moznomail`" ]
-	then
+	if use moznocompose && use moznomail; then
 		myconf="${myconf} --disable-composer"
 	fi
 
-	if [ "$(gcc-major-version)" -eq "3" ]
-	then
+	if [[ $(gcc-major-version) -eq 3 ]]; then
 		# Currently gcc-3.2 or older do not work well if we specify "-march"
 		# and other optimizations for pentium4.
-		if [ "$(gcc-minor-version)" -lt "3" ]; then
+		if [[ $(gcc-minor-version) -lt 3 ]]; then
 			replace-flags -march=pentium4 -march=pentium3
 			filter-flags -msse2
 		fi
 
 		# Enable us to use flash, etc plugins compiled with gcc-2.95.3
-		if [ "${ARCH}" = "x86" ]
-		then
+		if [[ ${ARCH} == x86 ]]; then
 			myconf="${myconf} --enable-old-abi-compat-wrappers"
 		fi
 	fi
 
-	if [ -n "`use alpha`" ]
-	then
+	if use alpha; then
 		# mozilla wont link with X11 on alpha, for some crazy reason.
 		# set it to link explicitly here.
 		sed -i 's/\(EXTRA_DSO_LDOPTS += $(MOZ_GTK_LDFLAGS).*$\)/\1 -L/usr/X11R6/lib -lX11/' \
@@ -334,7 +287,7 @@ src_compile() {
 	fi
 
 	# Check for xinerama - closes #19369
-	if [ -n "`use xinerama`" ] ; then
+	if use xinerama; then
 		myconf="${myconf} --enable-xinerama=yes"
 	else
 		myconf="${myconf} --enable-xinerama=no"
@@ -366,6 +319,10 @@ src_compile() {
 	cd ${S}
 	einfo "Configuring Mozilla..."
 	./configure --prefix=/usr/lib/mozilla \
+		$(use_enable gnome gnomevfs) \
+		$(use_enable ipv6) \
+		$(use_enable ldap) \
+		$(use_enable mozcalendar calendar) \
 		--disable-pedantic \
 		--disable-short-wchar \
 		--disable-xprint \
@@ -390,8 +347,7 @@ src_compile() {
 	# *********************************************************************
 
 	# Build the NSS/SSL support
-	if [ "`use ssl`" ]
-	then
+	if use ssl; then
 		einfo "Building Mozilla NSS..."
 		cd ${S}/security/coreconf
 
@@ -418,8 +374,7 @@ src_compile() {
 	# *********************************************************************
 
 	# Build the enigmail plugin
-	if [ -n "`use crypt`" -a -z "`use moznomail`" ]
-	then
+	if use crypt && ! use moznomail; then
 		einfo "Building Enigmail plugin..."
 		cd ${S}/extensions/ipc
 		make || die
@@ -430,7 +385,6 @@ src_compile() {
 }
 
 src_install() {
-
 	moz_setup
 
 	# Install, don't create tarball
@@ -453,8 +407,7 @@ src_install() {
 	mv ${D}/usr/lib/mozilla/{xpcshell,xpidl,xpt_dump,xpt_link} ${D}/usr/bin
 
 	# Install the NSS/SSL libs, headers and tools
-	if [ "`use ssl`" ]
-	then
+	if use ssl; then
 		einfo "Installing Mozilla NSS..."
 		# Install the headers ('make install' do not work for headers ...)
 		insinto /usr/lib/mozilla/include/nss
@@ -484,25 +437,23 @@ src_install() {
 
 	cd ${S}/build/unix
 	# Fix mozilla-config and install it
-	perl -pi -e "s:/lib/mozilla-${MY_PV2}::g" mozilla-config
-	perl -pi -e "s:/mozilla-${MY_PV2}::g" mozilla-config
+	perl -pi -e "s:/lib/mozilla-${MY_PV}::g" mozilla-config
+	perl -pi -e "s:/mozilla-${MY_PV}::g" mozilla-config
 	exeinto /usr/lib/mozilla
 	doexe mozilla-config
 	# Fix pkgconfig files and install them
 	insinto /usr/lib/pkgconfig
-	for x in *.pc
-	do
-		if [ -f ${x} ]
-		then
-			perl -pi -e "s:/lib/mozilla-${MY_PV2}::g" ${x}
-			perl -pi -e "s:/mozilla-${MY_PV2}::g" ${x}
+	for x in *.pc; do
+		if [[ -f ${x} ]]; then
+			perl -pi -e "s:/lib/mozilla-${MY_PV}::g" ${x}
+			perl -pi -e "s:/mozilla-${MY_PV}::g" ${x}
 			doins ${x}
 		fi
 	done
-
 	cd ${S}
-	exeinto /usr/bin
-	newexe ${FILESDIR}/mozilla.sh mozilla
+
+	dodir /usr/bin
+	dosym mozilla-launcher /usr/bin/mozilla
 	insinto /etc/env.d
 	doins ${FILESDIR}/10mozilla
 	dodoc LEGAL LICENSE README/mozilla/README*
@@ -518,8 +469,7 @@ src_install() {
 	insinto /usr/lib/mozilla/searchplugins
 	doins ${FILESDIR}/google.src
 
-	if [ -f "${WORKDIR}/.xft" ]
-	then
+	if [[ -f "${WORKDIR}/.xft" ]]; then
 		# We are using Xft, so change the default font
 		insinto /usr/lib/mozilla/defaults/pref
 		doins ${FILESDIR}/xft.js
@@ -531,8 +481,7 @@ src_install() {
 	doins ${S}/widget/src/gtk/mozicon50.xpm
 
 	# Install icon and .desktop for menu entry
-	if [ "`use gnome`" ]
-	then
+	if use gnome; then
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/icon/mozilla-icon.png
 
@@ -549,24 +498,12 @@ src_install() {
 
 pkg_preinst() {
 	# Stale components and chrome files break when unmerging old
-	if [ -d ${ROOT}/usr/lib/mozilla/components ]
-	then
-		rm -rf ${ROOT}/usr/lib/mozilla/components
-	fi
-	if [ -d ${ROOT}/usr/lib/mozilla/chrome ]
-	then
-		rm -rf ${ROOT}/usr/lib/mozilla/chrome
-	fi
+	rm -rf ${ROOT}/usr/lib/mozilla/components
+	rm -rf ${ROOT}/usr/lib/mozilla/chrome
 
 	# Remove stale component registry.
-	if [ -e ${ROOT}/usr/lib/mozilla/component.reg ]
-	then
-		rm -f ${ROOT}/usr/lib/mozilla/component.reg
-	fi
-	if [ -e ${ROOT}/usr/lib/mozilla/components/compreg.dat ]
-	then
-		rm -f ${ROOT}/usr/lib/mozilla/components/compreg.dat
-	fi
+	rm -f ${ROOT}/usr/lib/mozilla/component.reg
+	rm -f ${ROOT}/usr/lib/mozilla/components/compreg.dat
 
 	# Make sure these are removed.
 	rm -f ${ROOT}/usr/lib/mozilla/lib{Xft,Xrender}.so*
@@ -576,22 +513,24 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-
 	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
 
 	# Needed to update the run time bindings for REGXPCOM
 	# (do not remove next line!)
 	env-update
+
 	# Register Components and Chrome
 	einfo "Registering Components and Chrome..."
 	${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl
+
 	# Fix permissions of component registry
 	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
+
 	# Fix directory permissions
 	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 0755 {} \; || :
+
 	# Fix permissions on chrome files
 	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
-
 
 	echo
 	ewarn "Please unmerge old versions of mozilla, as the header"
@@ -601,14 +540,11 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-
 	# Regenerate component.reg in case some things changed
-	if [ -e ${ROOT}/usr/lib/mozilla/regxpcom ]
-	then
+	if [[ -e ${ROOT}/usr/lib/mozilla/regxpcom ]]; then
 		export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
 
-		if [ -x "${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl" ]
-		then
+		if [[ -x ${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl ]]; then
 			${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl
 			# Fix directory permissions
 			find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
