@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-find
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-find/ChangeLog,v 1.2 2005/01/03 21:04:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-find/ChangeLog,v 1.3 2005/03/26 23:17:36 marineam Exp $
+
+  26 Mar 2005; Micheal Marineau <marineam@gentoo.org> bmp-find-0.5.2.ebuild:
+  Mark stable on x86
 
   03 Jan 2005; Tony Vroon <chainsaw@gentoo.org> bmp-find-0.5.2.ebuild:
   Tidy ebuild. Dropped inherit of eutils and src_unpack.
