@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.94.ebuild,v 1.9 2004/07/02 05:13:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.94.ebuild,v 1.10 2004/07/15 00:11:43 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A usefull diagnostic, instructional, and debugging tool"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
