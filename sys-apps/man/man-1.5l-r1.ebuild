@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5l-r1.ebuild,v 1.1 2003/03/19 22:24:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5l-r1.ebuild,v 1.2 2003/03/27 01:04:28 zwelch Exp $
 
 IUSE=""
 
@@ -37,7 +37,6 @@ src_unpack() {
 		cp Makefile.in Makefile.in.orig
 		sed -e '/inst.sh/d' \
 			-e '/^CC =/c\' \
-			-e "CC = gcc" \
 			-e '/^CFLAGS =/c\' \
 			-e "CFLAGS = ${CFLAGS}" \
 			Makefile.in.orig > Makefile.in
@@ -45,7 +44,7 @@ src_unpack() {
 
 	cd ${S}/gencat
 	cp Makefile Makefile.orig
-	sed -e "s:cc -o:gcc -o:" Makefile.orig > Makefile
+	sed -e 's:cc -o:$(CC) -o:' Makefile.orig > Makefile
 
 	cd ${S}
 	# Fix search order in man.conf so that system installed manpages
@@ -80,7 +79,7 @@ src_compile() {
 		+sgid +fhs \
 		${myconf} || die
 		
-	make || die
+	make CC="${CC}" || die
 }
 
 src_install() {
