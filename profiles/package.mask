@@ -1189,3 +1189,7 @@ app-cdr/eroaster
 # masked for testing... should fix bug #2708
 =dev-php/mod_php-4.2.2-r1
 =dev-php/php-4.2.2-r1
+
+# stroke@gentoo.org 19 Aug 2002
+# Anjuta 1.0-beta1 (preview). masked for testing
+>=dev-util/anjuta-0.9.99
