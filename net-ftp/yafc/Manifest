@@ -1,3 +1,15 @@
-MD5 3ff9fe061cab00154196e5d6badccdd4 ChangeLog 1171
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f41d2518eeecc4640501b4fe9453181a ChangeLog 1309
 MD5 cfd9a1384c36da139e77fc9f36caedda yafc-1.0.ebuild 806
+MD5 cc1d477e68a6942a76d3e363e6036e31 yafc-1.1.ebuild 770
+MD5 17a81b5b4a16ec89dfe5963c885f96ab files/digest-yafc-1.1 61
 MD5 fc53f7d8ad4e855bf0cfa4139baae246 files/digest-yafc-1.0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA08MwHTu7gpaalycRAuGHAKDl28vhnfZ+AwLXfbTVL2Cp3Urv2QCdFCKk
+kHnT3g/+FZD/WQRUFtMhHg4=
+=OZ5r
+-----END PGP SIGNATURE-----
