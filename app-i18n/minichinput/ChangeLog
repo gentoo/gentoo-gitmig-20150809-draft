@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/minichinput
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/minichinput/ChangeLog,v 1.1 2003/08/31 02:22:00 liquidx Exp $
+
+*minichinput-0.1.9 (31 Aug 2003)
+
+  31 Aug 2003; Alastair Tse <liquidx@gentoo.org> minichinput-0.1.9.ebuild:
+  initial ebuild. adapted from Lim Swee Tat <st_lim@stlim.net> contribution
+  (#21820)
+
