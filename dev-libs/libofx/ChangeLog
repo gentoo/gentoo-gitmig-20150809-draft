@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.6 2003/09/13 22:12:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.7 2003/09/18 23:54:01 zul Exp $
+
+*libofx-0.6.5 (18 Sep 2003)
+
+  18 Sep 2003; Chuck Short <zul@gentoo.org> libofx-0.6.5.ebuild:
+  Version bump, closes bug #28974.
 
   14 Sep 2003; David Holm <dholm@gentoo.org> libofx-0.6.4-r1.ebuild:
   libofx-0.6.4-r1.ebuild:
