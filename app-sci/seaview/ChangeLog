@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/seaview
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/seaview/ChangeLog,v 1.1 2004/06/23 17:13:35 ribosome Exp $
+
+*seaview-1 (23 Jun 2004)
+
+  23 Jun 2004; Olivier Fisette <ribosome@gentoo.org>
+  seaview-1.ebuild, metadata.xml, files/29seaview :
+  Initial import.  Ebuild submitted by Olivier Fisette <ribosome@gentoo.org>.
+  Reference: Gentoo Bugzilla, bug #54055
+
