@@ -1,10 +1,13 @@
 # ChangeLog for media-sound/jack-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/ChangeLog,v 1.5 2003/03/06 13:23:52 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/ChangeLog,v 1.6 2003/03/09 01:49:33 jje Exp $
 
 *jack-cvs-0.44 (02 Jan 2003)
 
-  06 Mar 2003; root <root@gentoo.org> jack-cvs-0.44.ebuild:
+  09 Mar 2003; jje <jje@gentoo.org> jack-cvs-0.44.ebuild:
+  Fixed dependencies so that the cvs dependencies get resolved.
+
+  06 Mar 2003; jje <jje@gentoo.org> jack-cvs-0.44.ebuild:
   Fixed ECVS_TOP_DIR reference.
 
   12 Jan 2003; Nick Hadaway <raker@gentoo.org> jack-cvs-0.44.ebuild :
