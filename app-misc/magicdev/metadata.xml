@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>gnome</herd>
-<maintainer><email>leonardop@gentoo.org</email></maintainer>
+  <herd>gnome</herd>
+  <maintainer>
+    <email>leonardop@gentoo.org</email>
+    <name>Leonardo Boshell</name>
+  </maintainer>
+  <longdescription>
+    magicdev is a user-space device-watching daemon that runs within
+    the GNOME desktop. Some features include auto-mounting removeable
+    media on insertion and launching a given command when an audio CD
+    is inserted. magicdev is configured through a GNOME property
+    dialog.
+  </longdescription>
 </pkgmetadata>
