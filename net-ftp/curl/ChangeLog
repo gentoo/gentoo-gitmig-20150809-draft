@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/curl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.6 2002/12/13 10:59:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.7 2002/12/17 03:44:08 agriffis Exp $
+
+  17 Dec 2002; Aron Griffis <agriffis@gentoo.org> curl-7.10.2.ebuild :
+  Added ~alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
