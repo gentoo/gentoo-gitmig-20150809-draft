@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.23.ebuild,v 1.3 2004/06/25 01:13:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.23.ebuild,v 1.4 2004/06/26 22:27:53 liquidx Exp $
 
-inherit gnome2 python distutils
+inherit gnome2 python distutils virtualx
 
 DESCRIPTION="RSS/RDF News Aggregator"
 HOMEPAGE="http://www.nongnu.org/straw/"
@@ -23,12 +23,14 @@ RDEPEND="${DEPEND}
 	>=dev-python/bsddb3-3.4.0
 	>=dev-python/egenix-mx-base-2
 	!ppc? ( >=dev-python/adns-python-1.0.0 )"
+
 # REMIND : egenix-mx-base is only needed for the conversion of
 # pre 0.22 straw databases. It should be removed at some point.
 # foser <foser@gentoo.org> 18 Feb 2004
 
 pkg_setup() {
-	if ! python -c 'import gtk; import gtkhtml2'; then
+	export maketype="python"
+	if ! echo "import gtkhtml2" | virtualmake; then
 		eerror "The gnome-python gtkhtml2 module was not found."
 		eerror "Rebuild gnome-python using:"
 		eerror "  USE=\"gtkhtml\" emerge gnome-python"
@@ -36,13 +38,16 @@ pkg_setup() {
 	fi
 }
 
-src_install() {
+src_compile() {
+	return
+}
 
+src_install() {
+	# work around bug in straw's install script
 	distutils_src_install \
 		--prefix=/usr \
-		--sysconfdir=/etc \
+		--sysconfdir=${D}/etc \
 		--disable-schemas-install
-
 }
 
 pkg_postinst() {

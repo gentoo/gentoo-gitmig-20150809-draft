@@ -1,6 +1,11 @@
 # ChangeLog for net-www/straw
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.28 2004/06/25 01:13:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.29 2004/06/26 22:27:53 liquidx Exp $
+
+  26 Jun 2004; Alastair Tse <liquidx@gentoo.org> straw-0.22.1.ebuild,
+  straw-0.23.ebuild:
+  really fix the sandbox problem with 0.23, add fixes to gtkhtml2 detection via
+  virtualmake (#47879)
 
 *straw-0.23 (08 Jun 2004)
 

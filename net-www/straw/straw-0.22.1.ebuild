@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.22.1.ebuild,v 1.6 2004/06/25 01:13:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.22.1.ebuild,v 1.7 2004/06/26 22:27:53 liquidx Exp $
 
-inherit gnome2 python distutils
+inherit gnome2 python distutils virtualx
 
 DESCRIPTION="RSS/RDF News Aggregator"
 HOMEPAGE="http://www.nongnu.org/straw/"
@@ -28,7 +28,8 @@ RDEPEND="${DEPEND}
 # foser <foser@gentoo.org> 18 Feb 2004
 
 pkg_setup() {
-	if ! python -c 'import gtk; import gtkhtml2'; then
+	export maketype="python"
+	if ! echo "import gtkhtml2" | virtualmake; then
 		eerror "The gnome-python gtkhtml2 module was not found."
 		eerror "Rebuild gnome-python using:"
 		eerror "  USE=\"gtkhtml\" emerge gnome-python"
