@@ -19,9 +19,6 @@
 #a work in progress (drobbins, 10 Feb 2002)
 app-emulation/vmware-workstation
 
-#as of 7 Feb 2002, this ebuild still has an rc5 initscript. (drobbins)
-net-misc/djbdns
-
 #per jnelson's request (30 Jan 2002, drobbins)
 =net-www/boa-0.94.12_pre3
 
