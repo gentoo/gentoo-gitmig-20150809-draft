@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1.1.ebuild,v 1.6 2004/11/08 08:18:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1.1.ebuild,v 1.7 2004/11/12 11:22:36 eradicator Exp $
 
 IUSE="noamazon cjk xmms opengl xine arts gstreamer"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/amarok/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="=media-libs/libvisual-0.1.6
 	arts? ( >=kde-base/kdemultimedia-3.2 )
@@ -53,3 +53,8 @@ src_compile() {
 	kde_src_compile myconf configure make || die
 }
 
+pkg_postinst() {
+	if use gstreamer; then
+		ewarn "Gstreamer support in ${P} is known to be unstable (see bug #66902)"
+	fi
+}
