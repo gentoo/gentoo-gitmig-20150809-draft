@@ -1,11 +1,19 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.2 2002/04/12 21:05:14 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.3 2002/04/28 08:22:08 pvdabeel Exp $
 
+*emacs-21.2 (28 Apr 2002)
+  
+  28 Apr 2002; pvdabeel <pvdabeel@gentoo.org>
+  Version bump
 
 *emacs-21.1-r4 (11 Apr 2002)
+
   11 Apr 2002; Spider <spider@gentoo.org> 
   Update libpng dependency
+
+  28 Apr 2002; pvdabeel <pvdabeel@gentoo.org>
+  PPC fix (nocombreloc - fixes bug # 2104)
 
 *emacs-21.1-r3 (1 Feb 2002)
 

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Mikael Hallendal <micke@hallendal.net>
-# /space/gentoo/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.2 2002/04/12 22:39:21 seemant Exp
+# Modified by: Mark Yeun <mark@cs.columbia.edu>
 
 
 S=${WORKDIR}/${P}
@@ -26,39 +26,8 @@ DEPEND=">=sys-libs/ncurses-5.2
 
 PROVIDE="virtual/emacs"
 
-src_unpack() {
-
-	# Resolves bug 2104 # ppc fix
-
-	SYSTEM_ARCH=`echo $ARCH |\
-    sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
-	if [ -z "$SYSTEM_ARCH" ]
-	then
-	 SYSTEM_ARCH=`uname -m |\
-     sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
-	fi 
-
-	cd ${WORKDIR}
-	unpack ${P}.tar.gz
-	cd ${S}
-	
-	case $SYSTEM_ARCH in
-	 ppc)
-	  cat ${FILESDIR}/emacs-21.1-gentoo.diff | patch -p1 || die
-	  ;;
-	 i386)
-	  ;;
-	 sparc64)
-	  ;;
-	 arm)
-	  ;;
-    esac
-}
-
-
 src_compile() {
 	local myconf
-
 
 	use nls	\
 		|| myconf="${myconf} --disable-nls"
@@ -106,6 +75,6 @@ src_install () {
 	dodoc BUGS ChangeLog README
 
 	# Gives a warning if it doesn't exist
-	dodir /usr/share/emacs/21.1/leim
-	touch ${D}/usr/share/emacs/21.1/leim/.keep
+	dodir /usr/share/emacs/21.2/leim
+	touch ${D}/usr/share/emacs/21.2/leim/.keep
 }
