@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.1 2002/06/08 16:24:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.2 2002/06/09 16:57:32 azarah Exp $
 
 FT2_VER=2.0.9
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
@@ -165,10 +165,9 @@ src_install() {
 	# fix compile for gcc-3.1
 	if [ "`gcc -dumpversion`" = "3.1" ]
 	then
-		make install \
-			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \ 
-			CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
-			DESTDIR=${D} || die
+		CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \
+		CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
+		make install DESTDIR=${D} || die
 	else
 		make install DESTDIR=${D} || die
 	fi
