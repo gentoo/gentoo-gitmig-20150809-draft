@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.9 2004/04/24 09:20:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.10 2004/04/26 02:40:04 tgall Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	cd ${S}
 	# support for dec compiler.
 	[ "${CC}" == "ccc" ] && epatch ${FILESDIR}/${PN}-3.1.2-dec-alpha-compiler.diff
+	epatch ${FILESDIR}/64bitnumfile.patch
 }
 
 src_compile() {
