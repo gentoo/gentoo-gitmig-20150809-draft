@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mount-boot.eclass,v 1.5 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mount-boot.eclass,v 1.6 2002/11/13 04:59:31 woodchip Exp $
 
 ECLASS=mount-boot
 INHERITED="$INHERITED $ECLASS"
@@ -9,8 +9,8 @@ mount-boot_pkg_setup(){
 
 [ "${ROOT}" != "/" ] && return 0
 
-	local fstabstate="$(cat /etc/fstab | awk '!/^#|^[[:blank:]]+#|^\/dev\/BOOT/ {print $2}' | egrep "/boot" )"
-	local procstate="$(cat /proc/mounts | awk '{print $2}' | egrep "/boot" )"
+	local fstabstate="$(cat /etc/fstab | awk '!/^#|^[[:blank:]]+#|^\/dev\/BOOT/ {print $2}' | egrep "^/boot$" )"
+	local procstate="$(cat /proc/mounts | awk '{print $2}' | egrep "^/boot$" )"
 	local proc_ro="$(cat /proc/mounts | awk '{ print $2, $4 }' | sed -n '/\/boot/{ /[ ,]\?ro[ ,]\?/p }' )"
 
 	if [ -n "${fstabstate}" ] && [ -n "${procstate}" ]; then
