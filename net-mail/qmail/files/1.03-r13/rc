@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec env - PATH="/var/qmail/bin:$PATH" \
+	qmail-start "`grep -v '^#' /var/qmail/control/defaultdelivery`"
