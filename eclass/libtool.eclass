@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.33 2004/09/25 06:37:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.34 2004/09/25 19:59:51 rac Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -10,7 +10,15 @@
 ECLASS="libtool"
 INHERITED="${INHERITED} ${ECLASS}"
 
-DEPEND="!bootstrap? ( sys-devel/libtool )"
+# 2004.09.25 rac
+# i have verified that at least one package can use this eclass and
+# build properly even without libtool installed yet, probably using
+# the files in the distribution.  eliminating this dependency fixes
+# bug 65209, which is a showstopper for people doing installs using
+# stageballs <3.  if anybody decides to revert this, please attempt
+# to find an alternate way of resolving that bug at the same time.
+
+#DEPEND="!bootstrap? ( sys-devel/libtool )"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
