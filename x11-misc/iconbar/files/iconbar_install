@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /usr/share/iconbar
+cd /usr/share/iconbar/data
 
 mkdir -p ~/.e/iconbar/icons
 
