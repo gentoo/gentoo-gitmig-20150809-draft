@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/emu10k1
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/ChangeLog,v 1.16 2004/06/24 23:58:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/ChangeLog,v 1.17 2004/09/05 22:41:59 eradicator Exp $
+
+*emu10k1-0.20a-r6 (05 Sep 2004)
+
+  05 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +emu10k1-0.20a-r6.ebuild:
+  On 2.6 kernels, install the tools/scripts but no modules... closes bug #57539.
 
   17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   emu10k1-0.20a-r5.ebuild:
