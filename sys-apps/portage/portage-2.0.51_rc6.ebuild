@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc6.ebuild,v 1.2 2004/09/27 08:40:41 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc6.ebuild,v 1.3 2004/09/27 19:26:10 lv Exp $
 
-IUSE="build multilib selinux"
+IUSE="build selinux"
+inherit eutils flag-o-matic
 
 # If the old /lib/sandbox.so is in /etc/ld.so.preload, it can
 # cause everything to segfault !!
@@ -33,9 +34,7 @@ python_version() {
 }
 
 check_multilib() {
-	use !multilib && return
-	echo 'main() {}' > ./check-multilib.c
-	/usr/bin/gcc -m32 -o ./check-multilib ./check-multilib.c > /dev/null 2>&1
+	has_m32
 	if [ "$?" == 0 ]; then
 		einfo "Found valid multilib environment."
 		einfo "Building with multilib support."
