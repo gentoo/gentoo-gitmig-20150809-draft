@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bc12d807a51c9a4b8248d447378fbe66 ChangeLog 5385
+MD5 98f67a3de771602e3f28f19fdc0fa011 ChangeLog 5488
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 8f313a400d387b25b966fc29640d8310 pciutils-2.1.11-r1.ebuild 1663
-MD5 d5b0b25379fe5bf87667440fed97f49e pciutils-2.1.11-r3.ebuild 2107
-MD5 c6135ce795940ebf3777592d4e6f8049 files/pcimodules-pciutils-2.1.11.diff 11026
+MD5 9054e0be815fd422fdfcfdf629b992b4 pciutils-2.1.11-r3.ebuild 2108
 MD5 1532c4c74daf454495048467b2a8b04b files/2.1.11-sysfs.patch 10425
 MD5 be96d45f9e9ed5a1580bc6583f8c0023 files/digest-pciutils-2.1.11-r1 67
 MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r3 131
+MD5 c6135ce795940ebf3777592d4e6f8049 files/pcimodules-pciutils-2.1.11.diff 11026
 MD5 70f9f6cb767230245ac30ec658b3fd0a files/pciutils-2.1.11-fix-pci-ids-location-refs.patch 925
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB7+AeroRuSHgZdywRAjKUAJ9H9qpI+NFWDm8zSgsbJgjXaxoULgCeIyfB
-k6lvTt0E3bFl6TUN5niakH0=
-=F+sW
+iD8DBQFB8DSlKRy60XGEcJIRAnxVAJsHnjnCephfKi+7DN0xUch83VWT7QCgszvq
+IHNF/FrWSH2w79iRagFYL9Y=
+=ZLch
 -----END PGP SIGNATURE-----

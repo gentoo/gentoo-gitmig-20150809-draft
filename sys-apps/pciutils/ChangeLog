@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.39 2005/01/02 23:44:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.40 2005/01/20 22:45:54 gustavoz Exp $
+
+  20 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  pciutils-2.1.11-r3.ebuild:
+  Stable on sparc
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
