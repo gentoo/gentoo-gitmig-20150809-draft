@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 0c6a5732391626486733b0a6b697a423 xmms-cdaudio-1.2.10.ebuild 358
-MD5 54ace6fdfcf52ddf0a90193bd53b64a8 xmms-cdaudio-1.2.10-r1.ebuild 377
-MD5 159533f4b985dc3eb58fafc6f935f251 ChangeLog 355
+MD5 dbbc140b3310aface12aa484126b3be0 xmms-cdaudio-1.2.10.ebuild 477
+MD5 0d68fa803befb1c64dabd4bd88cbc7ab xmms-cdaudio-1.2.10-r1.ebuild 499
+MD5 b6a6214529f002be2ff93e55184fddfe ChangeLog 457
 MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-cdaudio-1.2.10 142
 MD5 ee4c50bc643c29df08e03dffa42613b8 files/digest-xmms-cdaudio-1.2.10-r1 227
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDWlHArHZZzCEUG0RArNEAJ0XZ5lveMKF87VIDYrGMOmmkkZUqgCfW2aO
+4j9OiWuJqM7p6kgYr5qj2h4=
+=IgKY
+-----END PGP SIGNATURE-----
