@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.182 2005/02/05 08:32:57 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.183 2005/03/02 16:27:55 dsd Exp $
+
+*gentoo-dev-sources-2.6.11 (02 Mar 2005)
+
+  02 Mar 2005; Daniel Drake <dsd@gentoo.org>
+  +gentoo-dev-sources-2.6.11.ebuild:
+  Initial 2.6.11 release. This release does not include speakup or
+  dm-bbr/multipath. They will return once we get them to work. New versions of
+  fbsplash and inotify are included.
 
 *gentoo-dev-sources-2.6.10-r7 (05 Feb 2005)
 
