@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cryptoapi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.7 2003/02/12 03:07:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.8 2003/12/01 20:29:53 rphillips Exp $
+
+  01 Dec 2003; <rphillips@gentoo.org> cryptoapi-2.4.7.0.ebuild:
+  Removed legacy -iv support. Fixes #19006
 
 *cryptoapi-2.4.7.0 (7 May 2002)
 

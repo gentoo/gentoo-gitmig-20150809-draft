@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.15 2003/10/01 09:39:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.16 2003/12/01 20:29:53 rphillips Exp $
 
 DESCRIPTION="Modules that add encryption ability at the kernel level."
 SRC_URI="mirror://sourceforge/cryptoapi/${P}.tar.gz"
@@ -16,7 +16,9 @@ DEPEND=">=sys-apps/util-linux-2.11o-r2
 
 src_compile() {
 	check_KV
-	econf --enable-iv-mode-sector
+	# rphillips - Fixes #19006
+	# econf --enable-iv-mode-sector
+	econf
 	cd ${S}/api
 	sed -i -e "s:-DMODVERSIONS:-DMODVERSIONS -DEXPORT_SYMTAB:g" \
 		Makefile
