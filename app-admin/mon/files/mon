@@ -1,0 +1,29 @@
+#!/bin/sh
+#RCUPDATE:3 4:99:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=mon
+EXE="/usr/sbin/mon"
+PID="/var/run/mon.pid"
+
+opts="start stop"
+
+start() {
+	ebegin "Starting ${SERVICE}..."
+	start-stop-daemon --start --quiet --exec $EXE -- -P $PID -f 1>&2
+	eend $?
+}
+
+stop() {
+	ebegin "Stoppig ${SERVICE}..."
+	start-stop-daemon --stop --quiet --pid $PID 1>&2
+	eend $? "Error stopping $SERVICE"
+}
+
+restart () {
+  stop
+  start
+}
+
+doservice ${@}
