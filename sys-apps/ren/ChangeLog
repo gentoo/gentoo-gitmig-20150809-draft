@@ -1,11 +1,15 @@
 # ChangeLog for sys-apps/ren
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ChangeLog,v 1.2 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ChangeLog,v 1.3 2002/07/21 20:37:52 gerk Exp $
 
 *ren-1.0 (30 May 2002)
 
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (ppc)
+
   14 Jul 2002; phoen][x <phoenix@gentoo.org> ren-1.0.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
+
   30 May 2002; Arcady Genkin <agenkin@thpoon.com> ren-1.0.ebuild :
 
   Initial version, submitted by elnix@yahoo.com (Austin Johnson).
