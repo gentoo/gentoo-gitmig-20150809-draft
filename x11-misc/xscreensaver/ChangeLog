@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.62 2004/09/05 23:52:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.63 2004/09/29 08:10:26 pyrania Exp $
+
+  29 Sep 2004; <pyrania@gentoo.org> xscreensaver-4.16.ebuild:
+  Stable on x86. Added icc, nls and kde to IUSE.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   xscreensaver-4.14-r2.ebuild, xscreensaver-4.15.ebuild,
