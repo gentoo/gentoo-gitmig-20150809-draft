@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.68 2004/04/14 22:01:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.69 2004/04/14 22:03:14 kumba Exp $
 
   14 Apr 2004; Joshua Kinard <kumba@gentoo.org>
   linux-headers-2.4.21-r1.ebuild, linux-headers-2.4.21.ebuild,
@@ -9,7 +9,7 @@
   linux-headers-2.6.3-r1.ebuild, linux-headers-2.6.4.ebuild,
   linux-headers-2.6.5.ebuild:
   Fixed up how the generate-asm-sparc script is handled. Instead of attempting
-  to chmod it in , we copy it to first and then chmod it, incase it loses it's
+  to chmod it in FILEDIR, we copy it to WORKDIR first and then chmod it, incase it loses it's
   permissions. This avoids sandbox violations.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
