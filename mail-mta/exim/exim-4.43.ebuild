@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.42.ebuild,v 1.4 2004/10/07 20:37:12 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.43.ebuild,v 1.1 2004/10/07 20:37:12 peitolm Exp $
 
 inherit eutils
 
 IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl wildlsearch dnsdb perl mbox X exiscan"
 
-EXISCANACL_VER=${PV}-27
+EXISCANACL_VER=${PV}-28
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.bz2
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~hppa ~alpha"
+KEYWORDS="~x86 ~sparc ~hppa ~alpha"
 
 PROVIDE="virtual/mta"
 DEPEND=">=sys-apps/sed-4.0.5
