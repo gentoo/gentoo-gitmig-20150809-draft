@@ -56,4 +56,9 @@ pkg_postinst() {
     einfo "gpg is installed SUID root to make use of protected memory space"
     einfo "This is needed in order to have a secure place to store your passphrases,"
     einfo "etc. at runtime but may make some sysadmins nervous"
+	echo  " "
+	einfo "Note: this version is not backwards compatible with gnupg-1.0.6."
+	einfo "      To update your keyrings run: gpg --rebuild-keydb-caches"
+	einfo "      To backup your keyrings run: gpg --export-ownertrust"
+	einfo "                              and copy the keyrings out of your ~/.gnupg directory."
 }
