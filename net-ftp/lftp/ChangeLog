@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.73 2005/01/22 18:30:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.74 2005/03/02 08:42:10 dragonheart Exp $
+
+*lftp-3.1.0 (02 Mar 2005)
+
+  02 Mar 2005; Daniel Black <dragonheart@gentoo.org> lftp-3.0.13.ebuild,
+  +lftp-3.1.0.ebuild:
+  version bump to 3.1.0 as per bug #83682. x86 keyword for lftp-3.0.13. Bug
+  thanks to Jeffrey Litvin <litvin.j@neu.edu>
 
   22 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> lftp-3.0.12-r1.ebuild:
   Stable on alpha, bug 78620.
