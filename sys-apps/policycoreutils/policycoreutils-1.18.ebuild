@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.18.ebuild,v 1.1 2004/11/14 19:09:35 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.18.ebuild,v 1.2 2004/11/15 20:47:39 pebenito Exp $
 
 IUSE="build"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND=">=sys-libs/libselinux-${PV}
-	sys-libs/libsepol
+	>=sys-libs/libsepol-1.2
 	sys-devel/gettext
 	!build? ( sys-libs/pam )"
 
