@@ -4,6 +4,6 @@ MD5 0a2b196776175574986fc5917f1b4fbb ChangeLog 2433
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r4 58
 MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r5 58
-MD5 562fdf577a5ef25a3ea0b210c049dca9 files/0.2-r5-mkstemp.patch 958
+MD5 23a8b5483bac37c6fcd9bbb73efaf502 files/0.2-r5-mkstemp.patch 981
 MD5 e7e2248f9baa76de3db8210298e0d79e files/0.2-mkstemp.patch 738
 MD5 549e2478edb18002261ae5dd055bcf5b files/0.2-info-dir.patch 373

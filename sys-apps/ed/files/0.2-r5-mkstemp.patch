@@ -9,6 +9,7 @@ Description: Use mkstemp instead of mktemp.
 However the original patch contained an error.
 mkstemp returns a file description, so when fopen ran, the file was opened twice.
 The correct change is to use fdopen with mkstemp.
+See gentoo bug #73858.
 diff -Naur ed-0.2/buf.c ed-0.2-2/buf.c
 --- ed-0.2/buf.c	Sat Nov 19 04:37:59 1994
 +++ ed-0.2-2/buf.c	Tue May 28 18:38:23 2002
