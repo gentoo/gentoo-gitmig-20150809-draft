@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/openbabel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/openbabel/ChangeLog,v 1.5 2004/04/01 08:50:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/openbabel/ChangeLog,v 1.6 2004/04/01 08:51:41 phosphan Exp $
+
+  01 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> openbabel-1.100.1.ebuild:
+  Cleanup
 
   01 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> openbabel-1.100.2.ebuild:
   Stable for ppc
