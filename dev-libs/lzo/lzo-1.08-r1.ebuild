@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-1.08-r1.ebuild,v 1.11 2004/06/24 23:27:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-1.08-r1.ebuild,v 1.12 2004/07/03 16:10:37 solar Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gcc3.patch
+	sed -i -e s,-O2,,g ${S}/aclocal.m4
 	autoconf
 }
 
