@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3260 2004/10/18 15:00:48 spyderous Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3261 2004/10/18 15:35:36 axxo Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -112,7 +112,7 @@ sys-fs/submount
 
 # <axxo@gentoo.org> (07 Oct 2004)
 # work in progress
-=dev-java/jmeter-2.0.1-r1
+=app-benchmarks/jmeter-2.0.1-r1
 
 # Patrick Kursawe <phosphan@gentoo.org> (04 Oct 2004)
 # necessary gcc version not yet there
