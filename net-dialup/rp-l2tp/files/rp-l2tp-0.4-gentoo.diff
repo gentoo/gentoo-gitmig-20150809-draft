@@ -1,6 +1,6 @@
-diff -ru rp-l2tp-0.4/Makefile.in rp-l2tp-0.4-gentoo/Makefile.in
---- rp-l2tp-0.4/Makefile.in	2004-07-01 17:17:11.000000000 +0200
-+++ rp-l2tp-0.4-gentoo/Makefile.in	2004-07-13 11:46:46.000000000 +0200
+diff -Nru rp-l2tp-0.4.orig/Makefile.in rp-l2tp-0.4/Makefile.in
+--- rp-l2tp-0.4.orig/Makefile.in	2004-07-01 18:17:11.000000000 +0300
++++ rp-l2tp-0.4/Makefile.in	2004-11-24 23:36:23.181183832 +0200
 @@ -81,13 +81,13 @@
  
  install: all
@@ -20,9 +20,9 @@ diff -ru rp-l2tp-0.4/Makefile.in rp-l2tp-0.4-gentoo/Makefile.in
  
  	$(MAKE) -C handlers install
  
-diff -ru rp-l2tp-0.4/handlers/Makefile.in rp-l2tp-0.4-gentoo/handlers/Makefile.in
---- rp-l2tp-0.4/handlers/Makefile.in	2002-09-30 21:45:00.000000000 +0200
-+++ rp-l2tp-0.4-gentoo/handlers/Makefile.in	2004-07-12 20:47:26.000000000 +0200
+diff -Nru rp-l2tp-0.4.orig/handlers/Makefile.in rp-l2tp-0.4/handlers/Makefile.in
+--- rp-l2tp-0.4.orig/handlers/Makefile.in	2002-09-30 22:45:00.000000000 +0300
++++ rp-l2tp-0.4/handlers/Makefile.in	2004-11-24 23:36:23.181183832 +0200
 @@ -39,7 +39,7 @@
  
  install: all
@@ -34,9 +34,9 @@ diff -ru rp-l2tp-0.4/handlers/Makefile.in rp-l2tp-0.4-gentoo/handlers/Makefile.i
 +	$(install) -m 755 -s l2tp-control $(RPM_INSTALL_ROOT)$(sbindir)/rp-l2tpd-control
 +	$(install) -m 755 $(HANDLERS) $(RPM_INSTALL_ROOT)$(prefix)/lib/rp-l2tpd/plugins
  distclean: clean
-diff -ru rp-l2tp-0.4/handlers/cmd-control.c rp-l2tp-0.4-gentoo/handlers/cmd-control.c
---- rp-l2tp-0.4/handlers/cmd-control.c	2002-09-30 21:45:00.000000000 +0200
-+++ rp-l2tp-0.4-gentoo/handlers/cmd-control.c	2004-07-12 20:42:44.000000000 +0200
+diff -Nru rp-l2tp-0.4.orig/handlers/cmd-control.c rp-l2tp-0.4/handlers/cmd-control.c
+--- rp-l2tp-0.4.orig/handlers/cmd-control.c	2002-09-30 22:45:00.000000000 +0300
++++ rp-l2tp-0.4/handlers/cmd-control.c	2004-11-24 23:36:23.182183680 +0200
 @@ -52,7 +52,7 @@
  
      memset(&addr, 0, sizeof(addr));
@@ -46,9 +46,9 @@ diff -ru rp-l2tp-0.4/handlers/cmd-control.c rp-l2tp-0.4-gentoo/handlers/cmd-cont
  
      fd = socket(AF_LOCAL, SOCK_STREAM, 0);
      if (fd < 0) {
-diff -ru rp-l2tp-0.4/handlers/cmd.c rp-l2tp-0.4-gentoo/handlers/cmd.c
---- rp-l2tp-0.4/handlers/cmd.c	2004-07-01 16:58:56.000000000 +0200
-+++ rp-l2tp-0.4-gentoo/handlers/cmd.c	2004-07-12 20:42:28.000000000 +0200
+diff -Nru rp-l2tp-0.4.orig/handlers/cmd.c rp-l2tp-0.4/handlers/cmd.c
+--- rp-l2tp-0.4.orig/handlers/cmd.c	2004-07-01 17:58:56.000000000 +0300
++++ rp-l2tp-0.4/handlers/cmd.c	2004-11-24 23:36:23.182183680 +0200
 @@ -162,7 +162,7 @@
  
      /* We have hit the end of our options.  Open command socket */
@@ -58,9 +58,9 @@ diff -ru rp-l2tp-0.4/handlers/cmd.c rp-l2tp-0.4-gentoo/handlers/cmd.c
      }
  
      (void) remove(sockname);
-diff -ru rp-l2tp-0.4/main.c rp-l2tp-0.4-gentoo/main.c
---- rp-l2tp-0.4/main.c	2002-09-30 21:45:00.000000000 +0200
-+++ rp-l2tp-0.4-gentoo/main.c	2004-07-13 11:44:50.000000000 +0200
+diff -Nru rp-l2tp-0.4.orig/main.c rp-l2tp-0.4/main.c
+--- rp-l2tp-0.4.orig/main.c	2002-09-30 22:45:00.000000000 +0300
++++ rp-l2tp-0.4/main.c	2004-11-24 23:36:23.183183528 +0200
 @@ -27,7 +27,7 @@
  static void
  usage(int argc, char *argv[], int exitcode)
@@ -79,12 +79,11 @@ diff -ru rp-l2tp-0.4/main.c rp-l2tp-0.4-gentoo/main.c
  	l2tp_die();
      }
  
-diff -ru rp-l2tp-0.4/man/l2tp.conf.5 rp-l2tp-0.4-gentoo/man/l2tp.conf.5
---- rp-l2tp-0.4/man/l2tp.conf.5	2004-07-01 16:58:56.000000000 +0200
-+++ rp-l2tp-0.4-gentoo/man/l2tp.conf.5	2004-07-12 20:51:58.000000000 +0200
+diff -Nru rp-l2tp-0.4.orig/man/l2tp.conf.5 rp-l2tp-0.4/man/l2tp.conf.5
+--- rp-l2tp-0.4.orig/man/l2tp.conf.5	2004-07-01 17:58:56.000000000 +0300
++++ rp-l2tp-0.4/man/l2tp.conf.5	2004-11-24 23:47:07.911169976 +0200
 @@ -1,13 +1,13 @@
--.\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.1 2004/11/20 10:16:54 mrness Exp $ 
-+.\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.1 2004/11/20 10:16:54 mrness Exp $ 
+ .\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.2 2004/11/24 21:52:37 mrness Exp $ 
  .\" LIC: GPL
 -.TH L2TP.CONF 5 "11 March 2002"
 +.TH RP-L2TPD.CONF 5 "11 March 2002"
@@ -92,12 +91,12 @@ diff -ru rp-l2tp-0.4/man/l2tp.conf.5 rp-l2tp-0.4-gentoo/man/l2tp.conf.5
  .UC 4
  .SH NAME
 -l2tp.conf \- L2TP configuration file
-+rp-l2tpd.conf \- RP-L2TPD configuration file
++rp-l2tpd.conf \- L2TP configuration file
  .SH DESCRIPTION
 -The \fBl2tp.conf\fP file contains the configuration for
 -the L2TP daemon \fBl2tpd\fP(8).
 +The \fBrp-l2tpd.conf\fP file contains the configuration for
-+the RP-L2TPD daemon \fBrp-l2tpd\fP(8).
++the L2TP daemon \fBrp-l2tpd\fP(8).
  Each line in the file takes one of the following forms:
  .\"
  .IP "# \fIcomment\fR"
@@ -113,12 +112,11 @@ diff -ru rp-l2tp-0.4/man/l2tp.conf.5 rp-l2tp-0.4-gentoo/man/l2tp.conf.5
  .SH AUTHORS
 -\fBl2tpd\fR was written by David F. Skoll <dfs@roaringpenguin.com>.
 +\fBrp-l2tpd\fR was written by David F. Skoll <dfs@roaringpenguin.com>.
-diff -ru rp-l2tp-0.4/man/l2tpd.8 rp-l2tp-0.4-gentoo/man/l2tpd.8
---- rp-l2tp-0.4/man/l2tpd.8	2002-09-30 21:45:00.000000000 +0200
-+++ rp-l2tp-0.4-gentoo/man/l2tpd.8	2004-07-13 11:45:52.000000000 +0200
+diff -Nru rp-l2tp-0.4.orig/man/l2tpd.8 rp-l2tp-0.4/man/l2tpd.8
+--- rp-l2tp-0.4.orig/man/l2tpd.8	2002-09-30 22:45:00.000000000 +0300
++++ rp-l2tp-0.4/man/l2tpd.8	2004-11-24 23:44:47.989441312 +0200
 @@ -1,14 +1,14 @@
--.\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.1 2004/11/20 10:16:54 mrness Exp $ 
-+.\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.1 2004/11/20 10:16:54 mrness Exp $ 
+ .\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.2 2004/11/24 21:52:37 mrness Exp $ 
  .\" LIC: GPL
 -.TH L2TPD 8 "11 March 2002"
 +.TH RP-L2TPD 8 "11 March 2002"
@@ -150,8 +148,7 @@ diff -ru rp-l2tp-0.4/man/l2tpd.8 rp-l2tp-0.4-gentoo/man/l2tpd.8
 +Do not fork.  Normally, \fBrp-l2tpd\fR forks and puts itself in the
  background.  This option causes it to stay running in the foreground.
  
--.SH L2TPD ARCHITECTURE
-+.SH RP-L2TPD ARCHITECTURE
+ .SH L2TPD ARCHITECTURE
  
 -The \fBl2tpd\fR program itself contains \fIonly\fR code necessary
 +The \fBrp-l2tpd\fR program itself contains \fIonly\fR code necessary
@@ -177,19 +174,18 @@ diff -ru rp-l2tp-0.4/man/l2tpd.8 rp-l2tp-0.4-gentoo/man/l2tpd.8
 +\fBrp-l2tpd\fR is a single-threaded, event-driven program.  It should be
  fairly lightweight and efficient.
  
--.SH L2TPD CONFIGURATION
+ .SH L2TPD CONFIGURATION
 -On startup, \fBl2tpd\fR reads the configuration file \fB/etc/l2tp/l2tp.conf\fR.
-+.SH RP-L2TPD CONFIGURATION
 +On startup, \fBrp-l2tpd\fR reads the configuration file \fB/etc/rp-l2tp/rp-l2tpd.conf\fR.
  This configuration file sets operating parameters, describes peers and loads
 -and configures handlers.  See \fBl2tp.conf\fR(5) for configuration
-+and configures handlers.  See \fBrp-l2tpd.conf\fR(5) for configuration
++and configures handlers.  See \fBrp-l2tp.conf\fR(5) for configuration
  file details.
  
  .SH FILES
  .TP
 -.B /etc/l2tp/l2tp.conf
-+.B /etc/rp-l2tp/rp-l2tpd.conf
++.B /etc/rp-l2tp/rp-l2tp.conf
  Main configuration file.
  .TP
 -.B /var/run/l2tpctrl
@@ -200,9 +196,9 @@ diff -ru rp-l2tp-0.4/man/l2tpd.8 rp-l2tp-0.4-gentoo/man/l2tpd.8
 -\fBl2tpd\fR was written by David F. Skoll <dfs@roaringpenguin.com>.
 +\fBrp-l2tpd\fR was written by David F. Skoll <dfs@roaringpenguin.com>.
  
-diff -ru rp-l2tp-0.4/utils.c rp-l2tp-0.4-gentoo/utils.c
---- rp-l2tp-0.4/utils.c	2002-09-30 21:45:00.000000000 +0200
-+++ rp-l2tp-0.4-gentoo/utils.c	2004-07-12 20:49:56.000000000 +0200
+diff -Nru rp-l2tp-0.4.orig/utils.c rp-l2tp-0.4/utils.c
+--- rp-l2tp-0.4.orig/utils.c	2002-09-30 22:45:00.000000000 +0300
++++ rp-l2tp-0.4/utils.c	2004-11-24 23:36:23.183183528 +0200
 @@ -196,7 +196,7 @@
      if (*fname == '/') {
  	handle = dlopen(fname, RTLD_NOW);
