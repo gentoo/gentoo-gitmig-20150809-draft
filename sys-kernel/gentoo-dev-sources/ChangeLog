@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.110 2004/10/22 03:28:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.111 2004/10/31 21:38:02 dsd Exp $
+
+*gentoo-dev-sources-2.6.9-r2 (01 Nov 2004)
+
+  01 Nov 2004; <dsd@gentoo.org> +gentoo-dev-sources-2.6.9-r2.ebuild:
+  vesafb-tng and fbsplash updates. parport/lp printing and kswapd/vm fixes.
 
   21 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   gentoo-dev-sources-2.6.9-r1.ebuild:
