@@ -1,6 +1,9 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.24 2004/07/01 22:40:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.25 2004/07/06 21:42:54 hardave Exp $
+
+  06 Jul 2004; Hardave Riar <hardave@gentoo.org> lprng-3.8.27.ebuild:
+  Added ~mips KEYWORD
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> lprng-3.8.22.ebuild,
   lprng-3.8.26.ebuild, lprng-3.8.27.ebuild:
