@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.22 2003/06/26 21:00:34 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.23 2003/06/26 23:34:41 rac Exp $
+
+  26 Jun 2003; <rac@gentoo.org> perl-5.8.0-r10.ebuild, perl-5.8.0-r11.ebuild,
+  perl-5.8.0-r12.ebuild:
+  Add -Dd_u32align on mips to work around a gcc 3.3 kernel compiling bug
 
   26 Jun 2003; <rac@gentoo.org> perl-5.8.0-r12.ebuild:
   Add block depends on ExtUtils-MakeMaker and File-Spec, because we need to get

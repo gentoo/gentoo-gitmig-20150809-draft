@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r11.ebuild,v 1.3 2003/06/18 20:28:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r11.ebuild,v 1.4 2003/06/26 23:34:41 rac Exp $
 
 inherit eutils flag-o-matic 
 
@@ -126,6 +126,13 @@ src_compile() {
 		myconf="${myconf} -Di_db -Di_ndbm"
 	else
 		myconf="${myconf} -Ui_db -Ui_ndbm"
+	fi
+	if [ "`use mips`" ]
+	then
+		# this is needed because gcc 3.3-compiled kernels will hang
+		# the machine trying to run this test - check with `Kumba
+		# <rac@gentoo.org> 2003.06.26
+		myconf="${myconf} -Dd_u32align"
 	fi
 	if [ "`use sparc`" ]
 	then
