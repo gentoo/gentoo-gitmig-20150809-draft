@@ -9,7 +9,7 @@
 # This is not (yet) an exhaustive test, so your ebuild might be broken even 
 # if lintool thinks it's okay.
 #
-# Usage: ebuildchecker.py /usr/portage/*/*/*.ebuild
+# Usage: lintool /usr/portage/*/*/*.ebuild
 # Options: 
 #  --no-summary     : Do not show total summary
 #  --show-separate  : Show short summary of tests for each ebuild checked
@@ -17,293 +17,455 @@
 #
 # TODO
 #
-# - New checks:
-#    - presence of all required env vars (HOMEPAGE, SRC_URI, S, DESCRIPTION)
 # - Make HTMLFormatter
-# - Sort errors into errors and warnings
+# - Check LICENSE against known licenses
 #
 #
 
 import sys
 import re
+import getopt
 
 class TextFormatter:
-    def section(self, s):
-        print "\n" + "-"*79
-        print " " + s + "\n"
-    def bullet(self, s):
-        print "* " + s
-    def sub(self, s):
-        print "- " + s
-    def subsub(self, s):
-        print " |" + s
-    def div(self, left, right):
-        l = len(left)
-        r = len(right)
-        print left + " " * (79-l-r) + right
+  def section(self, s):
+    print "\n" + "-"*79
+    print " " + s + "\n"
+  def bullet(self, s):
+    print "* " + s
+  def sub(self, s):
+    print "- " + s
+  def subsub(self, s):
+    print " |" + s
+  def div(self, left, right):
+    l = len(left)
+    r = len(right)
+    print left + " " * (79-l-r) + right
 
 class Test:
-    def __init__(self, formatter):
-        self.formatter = formatter
-    def reset(self):
-        self.lines = []
-    def isOK(self):
-        return len(self.lines) == 0
-    def getDesc(self):
-        return self.desc
-    def getStatus(self):
-        if self.isOK(): return "passed"
-        else: return "failed"
-        
+  def __init__(self, formatter):
+    self.formatter = formatter
+    self.errors = []
+    self.warnings = []
+  def reset(self):
+    self.errors = []
+    self.warnings = []
+  def hasWarnings(self):
+    return len(self.warnings)
+  def hasErrors(self):
+    return len(self.errors)
+  def getDesc(self):
+    return self.desc
+  def getStatus(self):
+    if self.hasErrors():
+      return "failed"
+    elif self.hasWarnings():
+      return "passed (with warnings)"
+    else:
+      return "passed"
+
 class TestSpaces(Test):
+  def __init__(self, formatter):
+    Test.__init__(self, formatter)
+    self.desc = "Testing for illegal space characters, weird backslash formatting"
+    self.re_spaces = re.compile("^([ ][ ]*)([a-zA-Z\.].*)")
+    self.re_backslash = re.compile("([^#]*\S)((\s\s+|\t))\\\\")
+    self.spaces = []
+    self.backslashes = []
+    
+  def checkLine(self, s):
+    k = self.re_spaces.match(s)
+    if k:
+      spcs = k.groups()[0]
+      rest = k.groups()[1]
+      self.spaces.append(spcs.replace(" ", "%") + rest)
+    else:
+      k = self.re_backslash.match(s)
+      if k:
+        head = k.group(1)
+        spcs = k.group(2)
+        tail = "\\"
+        self.backslashes.append(head + len(spcs) * "%" + tail)
 
-    def __init__(self, formatter):
-        Test.__init__(self, formatter)
-        self.desc = "Testing for illegal spaces at the start of the line"
-        self.re = re.compile("^([ ][ ]*)([a-zA-Z\.].*)")
-        self.lines = []
-
-    def checkLine(self, s):
-        k = self.re.match(s)
-        if k:
-            spcs = k.groups()[0]
-            rest = k.groups()[1]
-            self.lines.append(spcs.replace(" ", "%") + rest)
-
-    def report(self):
-        if len(self.lines):
-            self.formatter.sub("Has illegal spaces (marked by %):")
-            for i in self.lines:
-                self.formatter.subsub(i)
+  def hasErrors(self):
+    return len(self.spaces) + len(self.backslashes)
+  
+  def report(self):
+    if len(self.spaces):
+      self.formatter.sub("Has illegal space characters (marked by %):")
+      for i in self.spaces:
+        self.formatter.subsub(i)
+    if len(self.backslashes):
+      self.formatter.sub("Has illegal white space (marked by %), only one space character allowed:")
+      for i in self.backslashes:
+        self.formatter.subsub(i)
 
 class TestHeaders(Test):
 
-    def __init__(self, formatter):
-        Test.__init__(self,formatter)
-        self.desc = "Testing for malformed headers"
-        self.re = [ re.compile("^(# Copyright 1999-2000 Gentoo Technologies, Inc.)"),
-                    re.compile("^(# /home.*)") ]
-        self.lines = []
+  def __init__(self, formatter):
+    Test.__init__(self,formatter)
+    self.desc = "Testing for malformed headers"
+    self.re = [ (re.compile("^(# Copyright 1999-(2000|2001).*)"),
+                 "Suspect copyright year"), 
+                (re.compile("^(# /home.*)"),
+                 "Suspect path in header"),
+                (re.compile("^(# Authors:.*)"),
+                 "Should use two Author: lines instead"),
+                (re.compile("^(# Maintainerss:.*)"),
+                 "Should use two Maintainer: lines instead"),
+                (re.compile("^(# /space.*)"),
+                 "Suspect path in header")]
 
-    def checkLine(self, s):
-        for i in self.re:
-            k = i.match(s)
-            if k:
-                self.lines.append(k.groups()[0])
+  def checkLine(self, s):
+    for i in self.re:
+      k = i[0].match(s)
+      if k:
+        self.warnings.append(i[1] + ": " + k.groups()[0] )
 
-    def report(self):
-        if len(self.lines):
-            self.formatter.sub("Has illegal or suspect headers:")
-            for i in self.lines:
-                self.formatter.subsub(i)
+  def report(self):
+    if len(self.warnings):
+      self.formatter.sub("Has illegal or suspect headers:")
+      for i in self.warnings:
+        self.formatter.subsub(i)
 
 class TestTry(Test):
 
-    def __init__(self,formatter):
-        Test.__init__(self,formatter)
-        self.desc = "Testing for occurence of deprecated try"
-        self.re = [ re.compile("^([ \t][ \t]*try.*)"),
-                    re.compile("(.*=.* try .*)") ]
-        self.lines = []
+  def __init__(self,formatter):
+    Test.__init__(self,formatter)
+    self.desc = "Testing for occurence of deprecated try"
+    self.re = [ re.compile("^([ \t][ \t]*try.*)"),
+                re.compile("(.*=.* try .*)") ]
 
-    def checkLine(self, s):
-        for i in self.re:
-            k = i.match(s)
-            if k:
-                self.lines.append(k.groups()[0])
+  def checkLine(self, s):
+    for i in self.re:
+      k = i.match(s)
+      if k:
+        self.errors.append(k.groups()[0])
 
-    def report(self):
-        if len(self.lines):
-            self.formatter.sub("Uses try, which is deprecated")
-            for i in self.lines:
-                self.formatter.subsub(i)
+  def report(self):
+    if len(self.errors):
+      self.formatter.sub("Uses try, which is deprecated")
+      for i in self.errors:
+        self.formatter.subsub(i)
 
 class TestA(Test):
 
-    def __init__(self, formatter):
-        Test.__init__(self,formatter)
-        self.desc = "Testing for unnecessary A=${P}.tar.gz"
-        self.re = re.compile("(A=\$\{P\}.tar.gz)")
-        self.lines = []
+  def __init__(self, formatter):
+    Test.__init__(self,formatter)
+    self.desc = "Testing for superfluous A=${P}.tar.gz"
+    self.re = re.compile("(A=\$\{P\}.tar.gz)")
 
-    def checkLine(self, s):
-        k = self.re.match(s)
-        if k:
-            self.lines.append(k.groups()[0])
+  def checkLine(self, s):
+    k = self.re.match(s)
+    if k:
+      self.errors.append(k.groups()[0])
 
-    def report(self):
-        if len(self.lines):
-            self.formatter.sub("Contains unnecessary " + self.lines[0])
+  def report(self):
+    if len(self.errors):
+      self.formatter.sub("Contains superfluous " + self.lines[0])
         
 class TestDepend(Test):
 
-    def __init__(self, formatter):
-        Test.__init__(self,formatter)
-        self.desc = "Testing for empty DEPEND"
-        self.re = re.compile("DEPEND=\"\"")
-        self.lines = []
+  def __init__(self, formatter):
+    Test.__init__(self,formatter)
+    self.desc = "Testing for empty DEPEND"
+    self.re = re.compile("DEPEND=\"\"")
 
-    def checkLine(self, s):
-        k = self.re.match(s)
-        if k:
-            self.lines.append("")
+  def checkLine(self, s):
+    k = self.re.match(s)
+    if k:
+      self.warnings.append("")
 
-    def report(self):
-        if len(self.lines):
-            self.formatter.sub("Is DEPENDS supposed to be empty ?")
+  def report(self):
+    if len(self.warnings):
+      self.formatter.sub("DEPEND is suspiciously empty")
 
 class TestHomepage(Test):
 
-    def __init__(self, formatter):
-        Test.__init__(self,formatter)
-        self.desc = "Testing for empty HOMEPAGE"
-        self.re = re.compile("HOMEPAGE=\"\"")
-        self.lines = []
+  def __init__(self, formatter):
+    Test.__init__(self,formatter)
+    self.desc = "Testing for empty HOMEPAGE"
+    self.re = re.compile("HOMEPAGE=\"\"")
 
-    def checkLine(self, s):
-        k = self.re.match(s)
-        if k:
-            self.lines.append("")
+  def checkLine(self, s):
+    k = self.re.match(s)
+    if k:
+      self.warnings.append("")
 
-    def report(self):
-        if len(self.lines):
-            self.formatter.sub("Is HOMEPAGE really supposed to be empty ?")
+  def report(self):
+    if len(self.warnings):
+      self.formatter.sub("Is HOMEPAGE really supposed to be empty ?")
 
 class TestDescription(Test):
 
-    def __init__(self, formatter):
-        Test.__init__(self,formatter)
-        self.desc = "Testing for empty DESCRIPTION"
-        self.re = re.compile("DESCRIPTION=\"\"")
-        self.lines = []
+  def __init__(self, formatter):
+    Test.__init__(self,formatter)
+    self.desc = "Testing for empty DESCRIPTION"
+    self.re = re.compile("DESCRIPTION=\"\"")
 
-    def checkLine(self, s):
-        k = self.re.match(s)
-        if k:
-            self.lines.append("")
+  def checkLine(self, s):
+    k = self.re.match(s)
+    if k:
+      self.errors.append("")
 
-    def report(self):
-        if len(self.lines):
-            self.formatter.sub("DESCRIPTION is empty")
+  def report(self):
+    if len(self.errors):
+      self.formatter.sub("DESCRIPTION must not be empty")
 
 class TestEnvVarPresence(Test):
 
-   def __init__(self, formatter):
-      Test.__init__(self,formatter)
-      self.desc = "Testing for presence of SRC_URI, HOMEPAGE, .."
-      self.re = []
-      self.found = []
-      self.required = ["SRC_URI=", "DESCRIPTION=", "HOMEPAGE=" ]
-      self.desired = [ "# Author:", "# Maintainer:", "DEPEND=", "RDEPEND=", "S="]
+  def __init__(self, formatter):
+    Test.__init__(self,formatter)
+    self.desc = "Testing for presence of SRC_URI, HOMEPAGE, .."
+    self.re = []
+    self.found = []
+    self.required = [ "SRC_URI=",
+                      "DESCRIPTION=",
+                      "HOMEPAGE=",
+                      "DEPEND=",
+                      "RDEPEND=",
+                      "LICENSE="
+                      ]
+    self.desired = [ "# Author:",
+                     "# Maintainer:",
+                     "SLOT="
+                     "S="]
 
-      for i in self.required:
-          self.re.append(re.compile("^(" + i + ")"))
-      for i in self.desired:
-          self.re.append(re.compile("^(" + i + ")"))
+    for i in self.required:
+      self.re.append(re.compile("^(" + i + ")"))
+    for i in self.desired:
+      self.re.append(re.compile("^(" + i + ")"))
       
-   def checkLine(self, s):
-       for i in self.re:
-           k = i.match(s)
-           if k:
-               self.found.append(k.group(1))
+  def checkLine(self, s):
+    for i in self.re:
+      k = i.match(s)
+      if k:
+        self.found.append(k.group(1))
 
-   def report(self):
-       for i in self.required:
-           if i not in self.found:
-               self.formatter.sub("Missing " + i)
-       for i in self.desired:
-           if i not in self.found:
-               self.formatter.sub("Missing " + i)
+  def report(self):
+    for i in self.required:
+      if i not in self.found:
+        self.formatter.sub("Missing " + i)
+    for i in self.desired:
+      if i not in self.found:
+        self.formatter.sub("Missing " + i)
 
-   def isOK(self):
-       warn = error = 0
-       for i in self.required:
-           if i not in self.found:
-               error = 1
-       for i in self.desired:
-           if i not in self.found:
-               warn = 1
-       return (warn + error) == 0
-       
+  def hasWarnings(self):
+    for i in self.desired:
+      if i not in self.found:
+        return 1
+
+  def hasErrors(self):
+    for i in self.required:
+      if i not in self.found:
+        return 1
+
+class TestUseFlags(Test):
+  def __init__(self, formatter):
+    Test.__init__(self,formatter)
+    self.desc = "Testing for sane USE flag usage"
+    self.re = re.compile("[^#]*use ([a-z0-9]+).*")
+    self.useflags = self.loadUseFlags()
+
+  def loadUseFlags(self):
+    ins = open("/usr/portage/profiles/use.desc")
+    rex = re.compile("^([a-z0-9]+)[ \t]+-.*");
+    useflags = []
+    for i in ins.readlines():
+      k = rex.match(i)
+      if k:
+        useflags.append(k.group(1))
+    return useflags
+    
+  def checkLine(self, s):
+    k = self.re.match(s)
+    if k:
+      flag = k.group(1)
+      if flag not in self.useflags:
+        self.errors.append("Unknown USE flag '" + flag + "'")
+
+  def report(self):
+    for i in self.errors:
+      self.formatter.sub(i)
        
 def extractFilename(path):
-    return path
+  return path
 
-def runTests(ins):
+def runTests(tests,results,ins):
+  for j in tests:
+    j.reset()
+
+  for i in ins.readlines():
     for j in tests:
-        j.reset()
+      j.checkLine(i)
 
-    for i in ins.readlines():
-        for j in tests:
-            j.checkLine(i)
-
-    for j in xrange(len(tests)):
-        if not tests[j].isOK():
-            result[j] += 1
+  for j in xrange(len(tests)):
+    if tests[j].hasErrors():
+      results[j][0] += 1
+    if tests[j].hasWarnings():
+      results[j][1] += 1
         
-def showStatus(file):
-    if showFullStatus or showSeparate:
-        formatter.section("Status for " + file)
-        for j in tests:
-            if showSeparate:
-                l = len(j.getDesc())
-                formatter.bullet(j.getDesc() + " " * (70 - l) + ": " + j.getStatus())
-            if showFullStatus:
-                j.report()
+def showStatus(options,tests,formatter,file):
+  if options['showFullStatus'] or options['showSeparate']:
+    formatter.section("Status for " + file)
+    for j in tests:
+      if options['showSeparate']:
+        l = len(j.getDesc())
+        formatter.bullet(j.getDesc() + " " * (70 - l) + ": " + j.getStatus())
+        if options['showFullStatus']:
+          j.report()
+  elif options['showShort']:
+    allOK = 1
+    for j in tests:
+      if j.hasErrors():
+        allOK = 0
+        break
+    if allOK:
+      formatter.div(file, ": OK")
     else:
-        allOK = 1
-        for j in tests:
-            if not j.isOK():
-                allOK = 0
-                break
-        if allOK:
-            formatter.div(file, ": OK")
-        else:
-            formatter.div(file, ": Not OK")
+      formatter.div(file, ": Not OK")
+    # else fall through the bottom    
     
+def usage(opts):
+  print sys.argv[0], "[options] ebuild [ebuild ebuild ... ]"
+  print
 
-formatter = TextFormatter()
+  print "Where [options] include:"
+  for (short,long_,desc) in opts:
+    short_ = ''
+    for s in short:
+      short_ = short_ + '-' + s + ','
+    long_ = '--' + long_
+    opt = short_ + long_
+    opt = opt.rjust(18)
+    print opt + '  ' + desc
+  print
 
-tests = [ TestSpaces(formatter),
-          TestHeaders(formatter),
-          TestTry(formatter),
-          TestA(formatter),
-          TestDepend(formatter),
-          TestHomepage(formatter),
-          TestDescription(formatter),
-          TestEnvVarPresence(formatter) ]
+def parse_opts(argv):
+  options = { 'showSeparate': 0,
+              'showTotal': 1,
+              'showFullStatus': 0,
+              'showShort': 1,
+              'listTests': 0
+            }
 
-result = range(len(tests))
+  opts = (('', 'show-separate',
+           'Show short summary of tests for each ebuild checked'),
 
-showSeparate   = 0
-showTotal      = 1
-showFullStatus = 0
-showShort      = 1
+          ('', 'no-summary',
+           'Do not show total summary'),
 
-for i in xrange(len(result)): result[i] = 0
+          ('', 'show-details',
+           'Show full details of tests for each ebuild checked'),
 
+          ('', 'tests=',
+           'Specify which tests to run'),
 
-for i in sys.argv[1:]:
-    if len(i) > 2 and i[0:2] == "--":
-        if i == "--show-details":
-            showShort = 0
-            showFullStatus = 1
-        if i == "--show-separate":
-            showShort = 0
-            showSeparate = 1
-        if i == "--no-summary":
-            showTotal = 0
+          ('', 'list-tests',
+           'List available tests'),
+
+          ('', 'ebuilds=<file>',
+           'Read ebuilds from <file>'),
+          
+          ('?h', 'help',
+           'Show this help'),
+         )
+
+  short_options = ''
+  long_options = []
+  for (short,long_,desc) in opts:
+    short_options = short_options + short
+    if '=' in long_:
+      long_ = long_.split('=', 1)[0] + '='
+    long_options.append(long_)
+
+  try:
+    (option_list,args) = getopt.getopt(sys.argv[1:], short_options, long_options)
+  except getopt.GetoptError, details:
+    print 'Error parsing command line:',str(details)
+    sys.exit(1)
+
+  for (option,value) in option_list:
+    if option in [ '--show-details' ]:
+      options['showShort'] = 0
+      options['showFullStatus'] = 1
+    elif option in [ '--show-separate' ]:
+      options['showShort'] = 0
+      options['showSeparate'] = 1
+    elif option in [ '--no-summary']:
+      options['showTotal'] = 0
+    elif option in [ '--ebuilds' ]:
+      lines = open(value, 'r').readlines()
+      lines = [o.strip() for o in lines]
+      args = lines + args
+    elif option in [ '--tests' ]:
+      options['desiredTests'] = value.split(",")
+    elif option in [ '--listTests' ]:
+      options['listTests'] = 1
+    elif option in [ '-h', '-?', '--help' ]:
+      usage(opts)
+      sys.exit(0)
     else:
-        fn = extractFilename(i)
-        ins = open(i, "r")
-        runTests(ins)
-        if showSeparate or showFullStatus or showShort:
-            showStatus(fn)
+      # shouldn't ever happen. better to be safe
+      print "Unknown option - '%s'!" % (option)
+      sys.exit(1)
 
-if showTotal:
-    print "\n" + "-"*79
-    print " Summary for all ebuilds checked" + " " * 39 + "# fails"
-    print "-"*79
-    for i in xrange(len(tests)):
+  return (options,args)
+
+def main():
+    (options,args) = parse_opts(sys.argv[1:])
+
+    
+    formatter = TextFormatter()
+    available_tests = [ TestSpaces(formatter),
+                        TestHeaders(formatter),
+                        TestTry(formatter),
+                        TestA(formatter),
+                        TestDepend(formatter),
+                        TestHomepage(formatter),
+                        TestDescription(formatter),
+                        TestEnvVarPresence(formatter),
+                        TestUseFlags(formatter) ]
+    
+    if options['listTests']:
+      maxlen = 0
+      for i in available_tests:
+        maxlen = max(len(i.__class__.__name__), maxlen)
+      for i in available_tests:
+        n = i.__class__.__name__
+        print n + " " * (maxlen - len(n)) + " - " + i.getDesc()
+
+    if len(args) == 0:
+      sys.exit(1)
+      
+    tests = []
+    if options['desiredTests']:
+      for i in options['desiredTests']:
+        for j in available_tests:
+          if j.__class__.__name__ == i:
+            tests.append(j)
+    else:
+      tests = available_tests
+      
+    results = [[0, 0] for x in range(len(tests))]
+    
+    num_files = 0
+    for i in args:
+      fn = extractFilename(i)
+      ins = open(i, "r")
+      num_files += 1
+      runTests(tests,results,ins)
+      showStatus(options,tests,formatter,fn)
+    
+    if options['showTotal']:
+      print "\n" + "-"*79
+      s = " Summary for all " + str(num_files) + " ebuild(s) checked"
+      print s + " " * (65 - len(s)) + "# errors/warns"
+      print "-"*79
+      for i in xrange(len(tests)):
         l = len(tests[i].getDesc())
-        print tests[i].getDesc() + " " * (70 - l) + ": " + str(result[i])
+        print tests[i].getDesc() + " " * (66 - l) + ": " + \
+              str(results[i][0]) + " / " + str(results[i][1])
+        
+if __name__ == "__main__":
+  main()
+

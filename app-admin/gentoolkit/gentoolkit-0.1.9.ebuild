@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.6.ebuild,v 1.1 2002/03/23 00:09:07 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.9.ebuild,v 1.1 2002/04/29 22:58:58 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 SRC_URI=""
 HOMEPAGE="http://"
-
+SLOT="0"
 DEPEND=""
 RDEPEND=">=dev-lang/python-2.0
 	>=dev-util/dialog-0.7
@@ -19,14 +19,17 @@ src_install () {
 	insinto /usr/share/gentoolkit
 	doins ${FILESDIR}/portage-statistics/histogram.awk
 
-	dosbin ${FILESDIR}/portage-statistics/pst-total-coverage
-	dosbin ${FILESDIR}/portage-statistics/pst-author-coverage
-	dosbin ${FILESDIR}/portage-statistics/pst-package-count
-	docinto portage-statistics
-	dodoc ${FILESDIR}/portage-statistics/ChangeLog
+	dobin ${FILESDIR}/gentool/gentool-bump-revision
+	dobin ${FILESDIR}/gentool/gentool-total-coverage
+	dobin ${FILESDIR}/gentool/gentool-author-coverage
+	dobin ${FILESDIR}/gentool/gentool-package-count
+	docinto gentool
+	dodoc ${FILESDIR}/gentool/ChangeLog
 
-	dosbin ${FILESDIR}/scripts/qpkg
+	dobin ${FILESDIR}/scripts/qpkg
 	doman ${FILESDIR}/scripts/qpkg.1
+
+	dobin ${FILESDIR}/scripts/pkg-size
 
 	dosbin ${FILESDIR}/scripts/pkg-clean
 	dosbin ${FILESDIR}/scripts/mkebuild

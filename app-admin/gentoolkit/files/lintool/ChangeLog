@@ -1,2 +1,18 @@
+2002-04-30 Karl Trygve Kalleberg <karltk@gentoo.org>
+	* Added <jnelson@gentoo.org>'s cleanups
+	* Improved error reporting; now separates into errors and
+	warnings.
+	* Improved TestSpaces to check for non-conformant
+	line-continuations.
+	* Added TestUseFlags that checks that an ebuild only uses
+	sanctioned use flags (read from /usr/portage/profiles/use.desc)
+	* Added SLOT= to list desired env vars (warns if missing)
+	* Added LICENSE= to list of required env vars (errors if missing)
+	* Improved error messages
+	* Added --tests= option to allow the user to specify which tests
+	to run
+	* Added --list-tests option that lists available tests
+	* Updated man page.
+	
 2002-03-22 Karl Trygve Kalleberg <karltk@gentoo.org>
 	* Added this ChangeLog
