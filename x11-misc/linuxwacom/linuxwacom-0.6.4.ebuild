@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.4.ebuild,v 1.6 2005/01/01 01:52:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.4.ebuild,v 1.7 2005/02/09 03:06:11 battousai Exp $
 
 IUSE="gtk gtk2 tcltk sdk"
 
@@ -69,6 +69,7 @@ src_unpack() {
 		export WANT_AUTOMAKE=1.6
 		export WANT_AUTOCONF=2.5
 
+		libtoolize -c -f
 		aclocal
 		autoheader
 		automake -a -c -f
