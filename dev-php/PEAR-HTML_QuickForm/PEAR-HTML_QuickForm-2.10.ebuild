@@ -3,8 +3,8 @@
 # $Header:
 
 P=${PN/PEAR-//}-${PV}
-DESCRIPTION="Database abstraction layer for PHP"
-HOMEPAGE="http://pear.php.net/package-info.php?pacid=46"
+DESCRIPTION="The PEAR::HTML_QuickForm package provides methods for creating, validating, processing HTML forms."
+HOMEPAGE="http://pear.php.net/package-info.php?pacid=58"
 SRC_URI="http://pear.php.net/get/${P}.tgz"
 LICENSE="PHP"
 SLOT="0"
