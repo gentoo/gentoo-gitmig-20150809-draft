@@ -2,9 +2,11 @@ MD5 ca4c8ee044f2a6e9ff6a76c7ff28fd66 ChangeLog 934
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 cdaf5f001a0cfd486eac373d79c67520 ruby-glib2-0.5.0.ebuild 391
 MD5 fae567f9dc17c02b769c742568a29d29 ruby-glib2-0.7.0.ebuild 391
-MD5 418aff4badec40f279b7d97dc1bd34bf ruby-glib2-0.8.0.ebuild 391
+MD5 db5fb2031e05c338236e2a8243ade89a ruby-glib2-0.8.0.ebuild 394
 MD5 b834e0774d49aa9cf2e98f1fcdf8bac1 ruby-glib2-0.8.1.ebuild 393
+MD5 6b4b8efa44f54486e6bd1185b52c4fb3 ruby-glib2-0.9.1.ebuild 399
 MD5 09c1005bfdf294a6657070475a55b5ed files/digest-ruby-glib2-0.5.0 69
 MD5 4f9c7018ce4d7fed7f075d8ec562f13f files/digest-ruby-glib2-0.7.0 73
 MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-glib2-0.8.0 73
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-glib2-0.8.1 73
+MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-glib2-0.9.1 73

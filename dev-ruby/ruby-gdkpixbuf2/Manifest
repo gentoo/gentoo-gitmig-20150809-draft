@@ -2,9 +2,11 @@ MD5 cbdb390b5df5a08d2bad39f03f7a8824 ChangeLog 1223
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 746fc964b5f169f40f8778cbf026729a ruby-gdkpixbuf2-0.5.0.ebuild 439
 MD5 440d48ec3c35dd807417aa4753f833f0 ruby-gdkpixbuf2-0.7.0.ebuild 439
-MD5 4e6bd4a3c612bbe1b62464a438d421d0 ruby-gdkpixbuf2-0.8.0.ebuild 439
+MD5 0d748030285ae586484cb84004acf88f ruby-gdkpixbuf2-0.8.0.ebuild 442
 MD5 c3a143123558fb18f8d77e4d8f6eaa37 ruby-gdkpixbuf2-0.8.1.ebuild 444
+MD5 c1e323e7de9b0a44f767e9994f9028cd ruby-gdkpixbuf2-0.9.1.ebuild 450
 MD5 09c1005bfdf294a6657070475a55b5ed files/digest-ruby-gdkpixbuf2-0.5.0 69
 MD5 4f9c7018ce4d7fed7f075d8ec562f13f files/digest-ruby-gdkpixbuf2-0.7.0 73
 MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-gdkpixbuf2-0.8.0 73
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-gdkpixbuf2-0.8.1 73
+MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-gdkpixbuf2-0.9.1 73
