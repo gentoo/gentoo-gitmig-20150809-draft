@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.86 2004/09/02 03:20:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.87 2004/09/02 14:01:30 carlo Exp $
+
+  02 Sep 2004; Carsten Lohrke <carlo@gentoo.org> kdeedu-3.3.0.ebuild:
+  jfs compatibility fix, #62510
 
   01 Sep 2004; Tom Gall <tgall@gentoo.org> kdeedu-3.3.0.ebuild:
   stable on ppc64, bug #62165
