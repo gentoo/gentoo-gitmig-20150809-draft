@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.263 2004/03/06 08:38:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.264 2004/03/06 14:33:49 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -169,6 +169,7 @@ net-analyzer/snort:flexresp - Enable connection tearing (not recommended)
 net-dialup/gnokii:bluetooth - Enable Bluetooth Support
 net-dialup/gnokii:irda - Enable Infrared Support
 net-dialup/ppp:activefilter - enable activefilter support
+net-dialup/ppp:atm - enable support for pppoatm
 net-dns/pdnsd:isdn - enable isdn features
 net-fs/ftpfs:autofs - Adds support for autofs mounting
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
