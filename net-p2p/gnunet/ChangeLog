@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.26 2004/06/29 01:25:10 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.27 2004/08/09 02:58:22 squinky86 Exp $
+
+  08 Aug 2004; Jon Hood <squinky86@gentoo.org> -gnunet-0.6.2a.ebuild,
+  gnunet-0.6.2b.ebuild:
+  Stable on x86.
 
 *gnunet-0.6.2b (28 Jun 2004)
 
