@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r4.ebuild,v 1.6 2005/01/11 12:47:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r4.ebuild,v 1.7 2005/01/16 20:53:06 dragonheart Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -16,7 +16,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 # This just has updates for xbox over -r3
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND="virtual/modutils
 	 ~media-sound/alsa-headers-${PV}"
@@ -28,6 +28,9 @@ DEPEND="${RDEPEND}
 	sys-apps/debianutils"
 
 PROVIDE="virtual/alsa"
+
+
+
 
 pkg_setup() {
 	CONFIG_CHECK="SOUND !SND !SOUND_PRIME"
@@ -44,7 +47,24 @@ pkg_setup() {
 	#
 	#   env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
 	#
-	[ -z "${ALSA_CARDS}" ] && ALSA_CARDS=all
+	use ppc && export BAD_DRIVERS="interwave interwave-stb hdspm"
+
+	if [ -z "${ALSA_CARDS}" ]
+	then
+		ALSA_CARDS=all
+		if [ -n "${BAD_DRIVERS}" ]
+		then
+			ewarn "Drivers have been disabled"
+			ewarn "due to compile problems: ${BAD_DRIVERS}"
+		fi
+	else
+		for baddriver in ${BAD_DRIVERS}
+		do
+			# check for bad drivers in ALSA_CARDS
+			[ `expr match ${baddriver} "${ALSA_CARDS}"` -gt 0 ] && \
+				die "Driver ${baddriver} failes to compile."
+		done
+	fi
 }
 
 src_unpack() {
@@ -83,9 +103,16 @@ src_compile() {
 		--with-cards="${ALSA_CARDS}" || die "econf failed"
 
 	# linux-mod_src_compile doesn't work well with alsa
-	unset ARCH
+
+	local myconf
+	if [ -n "${BAD_DRIVERS}" ]
+	then
+		myconf=$(echo ${BAD_DRIVERS//-/_} | sed -e 's/[a-z_]*/CONFIG_SND_\U&\E=n/g')
+	fi
+
+	unset ARCH	
 	# -j1 : see bug #71028
-	emake -j1 || die "Parallel Make Failed"
+	emake -j1  ${myconf} || die "Make Failed"
 
 	if use doc;
 	then
@@ -102,7 +129,14 @@ src_compile() {
 
 src_install() {
 	dodir /usr/include/sound
-	make DESTDIR=${D} install || die
+
+	local myconf
+	if [ -n "${BAD_DRIVERS}" ]
+	then
+		myconf=$(echo ${BAD_DRIVERS//-/_} | sed -e 's/[a-z_]*/CONFIG_SND_\U&\E=n/g')
+	fi
+
+	make DESTDIR=${D} ${myconf} install || die
 
 	# Provided by alsa-headers now
 	rm -rf ${D}/usr/include/sound
@@ -137,6 +171,11 @@ pkg_postinst() {
 	einfo "Version 1.0.3 and above should work with version 2.6 kernels."
 	einfo "If you experience problems, please report bugs to http://bugs.gentoo.org."
 	einfo
+
+	if use ppc
+	then
+		einfo "some drivers haven't been built due to compile problems: ${BAD_DRIVERS}"
+	fi
 
 	linux-mod_pkg_postinst
 
