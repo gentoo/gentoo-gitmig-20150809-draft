@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.21 2004/07/27 00:21:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.22 2004/08/02 20:40:56 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -46,6 +46,7 @@ LICENSE="LGPL-2"
 SLOT="2.2"
 KEYWORDS="-* ~x86 ~mips ~amd64 ~hppa"
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
+RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
 # We also need linux26-headers if using NPTL. Including kernel headers is
@@ -625,6 +626,9 @@ src_install() {
 	make PARALLELMFLAGS="${MAKEOPTS}" \
 		install_root=${D} \
 		install || die
+	# now, strip everything but the thread libs #46186
+	RESTRICT="" prepallstrip
+	cp `find -maxdepth 2 -name 'libpthread.so' -o -name 'libthread_db.so'` ${D}/lib/
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/lib/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
@@ -649,17 +653,19 @@ EOF
 	if ! use build; then
 		cd ${WORKDIR}/build
 
-		einfo "Installing Info pages..."
-		make PARALLELMFLAGS="${MAKEOPTS}" \
-			install_root=${D} \
-			info -i
+		if ! has noinfo ${FEATURES} ; then
+			einfo "Installing Info pages..."
+			make PARALLELMFLAGS="${MAKEOPTS}" \
+				install_root=${D} \
+				info -i
+		fi
 
 		setup_locales
 
 		einfo "Installing man pages and docs..."
 		# Install linuxthreads man pages even if nptl is enabled
-			dodir /usr/share/man/man3
-			doman ${S}/man/*.3thr
+		dodir /usr/share/man/man3
+		doman ${S}/man/*.3thr
 
 		# Install nscd config file
 		insinto /etc

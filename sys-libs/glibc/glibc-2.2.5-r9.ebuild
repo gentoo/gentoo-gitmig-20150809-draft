@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r9.ebuild,v 1.8 2004/07/09 09:44:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r9.ebuild,v 1.9 2004/08/02 20:40:56 vapier Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -47,6 +47,7 @@ LICENSE="LGPL-2"
 SLOT="2.2"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE="nls pic build debug"
+RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
 # Portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 # drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
@@ -256,6 +257,9 @@ src_install() {
 	make PARALLELMFLAGS="${MAKEOPTS}" \
 		install_root=${D} \
 		install -C buildhere || die
+	# now, strip everything but the thread libs #46186
+	RESTRICT="" prepallstrip
+	cp `find -maxdepth 2 -name 'libpthread.so' -o -name 'libthread_db.so'` ${D}/lib/
 
 	if ! use build
 	then

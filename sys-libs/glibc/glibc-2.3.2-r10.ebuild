@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.19 2004/07/19 23:21:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.20 2004/08/02 20:40:56 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -31,6 +31,7 @@ LICENSE="LGPL-2"
 SLOT="2.2"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 s390"
 IUSE="nls pic build nptl debug"
+RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
 DEPEND=">=sys-devel/gcc-3.2.3-r1
@@ -549,6 +550,9 @@ src_install() {
 	make PARALLELMFLAGS="${MAKEOPTS}" \
 		install_root=${D} \
 		install -C ${buildtarget} || die
+	# now, strip everything but the thread libs #46186
+	RESTRICT="" prepallstrip
+	cp `find -maxdepth 2 -name 'libpthread.so' -o -name 'libthread_db.so'` ${D}/lib/
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/lib/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]
@@ -574,10 +578,12 @@ EOF
 
 	if ! use build
 	then
-		einfo "Installing Info pages..."
-		make PARALLELMFLAGS="${MAKEOPTS}" \
-			install_root=${D} \
-			info -C ${buildtarget} || die
+		if ! has noinfo ${FEATURES} ; then
+			einfo "Installing Info pages..."
+			make PARALLELMFLAGS="${MAKEOPTS}" \
+				install_root=${D} \
+				info -C ${buildtarget} || die
+		fi
 
 		einfo "Installing Locale data..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
