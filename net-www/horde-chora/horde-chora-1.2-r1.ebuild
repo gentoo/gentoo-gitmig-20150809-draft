@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2-r1.ebuild,v 1.5 2003/10/18 19:00:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2-r1.ebuild,v 1.6 2003/12/08 01:56:15 mholzer Exp $
+
+inherit webapp-apache
 
 DESCRIPTION="Chora ${PV} is the Horde CVS viewer."
 HOMEPAGE="http://www.horde.org"
@@ -10,45 +12,40 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 DEPEND=""
-RDEPEND=">=net-www/horde-2.2.1
+RDEPEND=">=net-www/horde-2.2.4
 	>=app-text/rcs-5.7-r1
 	>=dev-util/cvs-1.11.2"
 IUSE=""
 S=${WORKDIR}/${MY_P}
 
-find_http_root() {
-	HTTPD_ROOT=`grep apache /etc/passwd | cut -d: -f6`/htdocs
-	if [ -z "${HTTPD_ROOT}" ]; then
-		eerror "HTTPD_ROOT is null! Using defaults."
-		eerror "You probably want to check /etc/passwd"
-		HTTPD_ROOT="/home/httpd/htdocs"
-	fi
+webapp-detect || NO_WEBSERVER=1
 
-	REGISTRY=${HTTPD_ROOT}/horde/config/registry.php
+pkg_setup() {
+	webapp-pkg_setup "${NO_WEBSERVER}"
+	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
+
+	export REGISTRY=${HTTPD_ROOT}/horde/config/registry.php
 	[ -f ${REGISTRY} ] || REGISTRY=${HTTPD_ROOT}/horde/config/registry.php.dist
+	[ -f ${REGISTRY} ] || die "${REGISTRY} not found"
 }
 
 src_install () {
-	find_http_root
-
-	# detecting apache usergroup
-	GID=`grep apache /etc/group |cut -d: -f3`
-	if [ -z "${GID}" ]; then
-		einfo "Using default GID of 81 for Apache"
-		GID=81
-	fi
+	local DocumentRoot=${HTTPD_ROOT}
+	local destdir=${DocumentRoot}/horde/chora
 
 	dodoc COPYING README docs/*
 	rm -rf COPYING README docs
-	dodir ${HTTPD_ROOT}/horde/chora
-	cp -r . ${D}/${HTTPD_ROOT}/horde/chora
+
+	dodir ${destdir}
+	cp -r . ${D}${destdir}
+	cd ${D}/${HTTPD_ROOT}/horde
 
 	# protecting files
-	chown -R root.${GID} ${D}/${HTTPD_ROOT}/horde/chora
-	find ${D}/${HTTPD_ROOT}/horde/chora/ -type f -exec chmod 0640 {} \;
-	find ${D}/${HTTPD_ROOT}/horde/chora/ -type d -exec chmod 0750 {} \;
+	chown -R ${HTTPD_USER}:${HTTPD_GROUP} chora
+	find ${D}/${destdir} -type f -exec chmod 0640 {} \;
+	find ${D}/${destdir} -type d -exec chmod 0750 {} \;
 }
+
 pkg_postinst() {
-	find_http_root
 	einfo "Please read /usr/share/doc/${PF}/INSTALL.gz"
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/horde-chora
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/ChangeLog,v 1.9 2003/10/18 18:54:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/ChangeLog,v 1.10 2003/12/08 01:56:15 mholzer Exp $
+
+  08 Dec 2003; Martin Holzer <mholzer@gentoo.org> horde-chora-1.2-r1.ebuild:
+  adding webapps-apache. Closes #35183
 
   19 Oct 2003; Martin Holzer <mholzer@gentoo.org> horde-chora-1.2-r1.ebuild:
   marked x86 stable.
