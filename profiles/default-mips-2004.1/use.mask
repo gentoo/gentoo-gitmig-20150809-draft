@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-2004.1/use.mask,v 1.6 2004/06/26 23:29:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-2004.1/use.mask,v 1.7 2004/07/31 01:09:41 geoman Exp $
+
+# Stephen P. Becker <geoman@gentoo.org>
+# mask evolution use flag until it can be properly tested
+evo
 
 # Ilya A. Volynets-Evenbach
 # no nptl on mips yet
