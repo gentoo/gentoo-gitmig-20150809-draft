@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.182 2005/01/14 00:19:31 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.183 2005/01/18 14:28:36 greg_g Exp $
+
+  18 Jan 2005; Gregorio Guidi <greg@gentoo.org> kdelibs-3.4.0_beta1.ebuild:
+  Added optional support for spellcheckers.
 
 *kdelibs-3.4.0_beta1 (14 Jan 2005)
 
