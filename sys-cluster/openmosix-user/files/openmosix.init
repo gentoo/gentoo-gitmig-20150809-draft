@@ -2,7 +2,7 @@
 #
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/files/openmosix.init,v 1.4 2003/04/13 19:11:46 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/files/openmosix.init,v 1.5 2003/05/02 09:41:06 tantive Exp $
 
 depend() {
 	need net
@@ -50,9 +50,9 @@ if [ $AUTODISC -eq 0 ]; then
     fi
 fi
 
-# Source the configuration from /etc/openmosix.config
+# Source the configuration from /etc/openmosix/openmosix.config
 # This file would be a good place to force autodiscovery by setting AUTODISC=1
-[ -f /etc/openmosix.config ] && . /etc/openmosix.config
+[ -f /etc/openmosix/openmosix.config ] && . /etc/openmosix/openmosix.config
 
 # Make sure we have omdiscd installed
 if [ $AUTODISC -eq 1  ]; then
@@ -66,7 +66,7 @@ fi
 
 	ebegin "Initializing openMosix"
         # The variables $OVERHEADS, $MFSCOSTS, $MYOMID, $MOSGATES and $AUTODISCIF
-        # can be set to desired values in /etc/openmosix.config
+        # can be set to desired values in /etc/openmosix/openmosix.config
         [ $OVERHEADS ] && echo $OVERHEADS > /proc/hpc/admin/overheads
         [ $MFSCOSTS  ] && echo $MFSCOSTS  > /proc/hpc/admin/mfscosts
     
