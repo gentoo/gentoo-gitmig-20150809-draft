@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.8 2004/12/21 17:00:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.9 2005/01/27 21:14:06 eradicator Exp $
 
-inherit flag-o-matic libtool eutils
+inherit flag-o-matic libtool eutils multilib
 
 DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
 SRC_URI="mirror://gnu/gmp/${P}.tar.gz"
@@ -30,13 +30,24 @@ src_unpack () {
 	# to remove the use of the '.' form in ppc64 assembler
 	if use ppc64 ; then
 		epatch ${FILESDIR}/ppc64-gmp-acinclude.patch
-		autoreconf || die
 	fi
 
 	# fix problems for -O3 or higher; bug #66780
-	use amd64 && epatch ${FILESDIR}/amd64.patch
+	if use amd64; then
+		epatch ${FILESDIR}/amd64.patch
+	fi
 
-	elibtoolize
+	if has_multilib_profile; then
+		epatch ${FILESDIR}/${PN}-4.1.4-multilib.patch
+	fi
+
+	if use ppc64 || has_multilib_profile; then
+		export WANT_AUTOCONF=2.5
+		libtoolize --copy --force
+		autoreconf || die
+	else
+		elibtoolize
+	fi
 }
 
 src_compile() {
