@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.5.1.ebuild,v 1.9 2004/06/25 20:12:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.5.1.ebuild,v 1.10 2004/07/01 22:51:50 eradicator Exp $
 
 S=${WORKDIR}/Zope-${PV}-src
 DESCRIPTION="Zope is web application platform used for building high-performance, dynamic web sites."
@@ -8,7 +8,7 @@ SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz
 	http://www.zope.org/Products/ZEO/ZEO-1.0.tgz"
 HOMEPAGE="http://www.zope.org"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	=dev-lang/python-2.1.3*"
 SLOT="${PV}"
 LICENSE="as-is"

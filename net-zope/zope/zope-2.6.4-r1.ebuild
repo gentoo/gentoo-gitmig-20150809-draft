@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.7 2004/06/25 01:26:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.8 2004/07/01 22:51:50 eradicator Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ RDEPEND="${RDEPEND}
 !net-zope/verbosesecurity"
 
 DEPEND="${RDEPEND}
-virtual/glibc
+virtual/libc
 >=sys-apps/sed-4.0.5
 >=app-admin/zope-config-0.3"
 
