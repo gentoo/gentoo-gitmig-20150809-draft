@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.46 2005/02/17 03:16:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.47 2005/02/28 23:56:33 swegener Exp $
+
+  01 Mar 2005; Sven Wegener <swegener@gentoo.org> epic4-2.0-r1.ebuild,
+  epic4-2.2.ebuild:
+  Added some built_with_use magic to make sure perl has been compiled with
+  USE="-ithreads".
 
 *epic4-2.2 (17 Feb 2005)
 

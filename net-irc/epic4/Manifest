@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 376ff6e71b409b556e9333df1669362d epic4-2.0-r1.ebuild 2125
+MD5 340ee8d56cb0eb4ec9b5054fea84c675 epic4-2.0-r1.ebuild 2321
 MD5 f7c12be41b15e9674f48d07ea84c953f epic4-1.1.16-r1.ebuild 2071
-MD5 304a6925427b4dd9b3ae52af83821bd3 epic4-2.2.ebuild 1957
-MD5 572b36f3c2854ea239af1951c799975e ChangeLog 8251
+MD5 30c0fde83d9db34f189bdc2d134a6913 epic4-2.2.ebuild 2153
+MD5 f5eaf2b652370cbb582ca041c6fc7ec2 ChangeLog 8437
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 a0a06abf43f925f0472c026573bf622f files/epic-defaultserver.patch 620
 MD5 8989f4be2d37fd43a69718f476986247 files/digest-epic4-2.2 133
@@ -15,7 +15,7 @@ MD5 cbb9caa10a6573474c6e18ca5e01b85e files/digest-epic4-2.0-r1 133
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCFAx8I1lqEGTUzyQRArlgAJwNoW+veNO1+3/iK2C24kn84vOYogCgiT4Y
-Y8uQuFXR3gKbWceGIF6Apd4=
-=A5sd
+iD8DBQFCI6+3I1lqEGTUzyQRAhIjAJ0fCFWVsxCIC7ybSeyuzUyV9D1bEgCbBlL6
+0mo3TN4dXzDH14ao4PPBSRM=
+=2dbk
 -----END PGP SIGNATURE-----
