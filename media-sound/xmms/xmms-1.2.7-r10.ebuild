@@ -117,12 +117,13 @@ src_install() {
 	insinto /etc/X11/wmconfig
 	donewins xmms/xmms.wmconfig xmms
 
-	if [ "`use gnome`" ]
-	then
+	use gnome && ( \
 		insinto /usr/share/gnome/apps/Multimedia
 		doins xmms/xmms.desktop
 		dosed "s:xmms_mini.xpm:mini/xmms_mini.xpm:" \
 			/usr/share/gnome/apps/Multimedia/xmms.desktop
-	fi
+	) || ( \
+		rm ${D}/usr/share/man/man1/gnomexmms*
+	)
 }
 
