@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-2013.ebuild,v 1.2 2003/08/20 12:33:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-2013.ebuild,v 1.3 2003/08/25 17:44:41 usata Exp $
 
 IUSE="gtk canna"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge.jp/anthy/5495/${P}.tar.gz"
 
 LICENSE="GPL-2 | BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	gtk? ( >=x11-libs/gtk+-2.2.1 )
