@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ganttproject-1.9.11.ebuild,v 1.1 2004/08/04 10:15:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ganttproject-1.9.11.ebuild,v 1.2 2004/08/24 03:10:36 zx Exp $
 
-inherit java-pkg
+inherit eutils java-pkg
 
 IUSE="doc gnome"
 
