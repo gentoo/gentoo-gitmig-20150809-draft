@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9-r1.ebuild,v 1.4 2004/06/17 00:47:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9-r1.ebuild,v 1.5 2004/06/17 13:32:08 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
@@ -52,7 +52,6 @@ src_unpack() {
 	# alpha stubs patch from lfs project.
 	# <taviso@gentoo.org> (26 Jun 2003)
 	use alpha && epatch ${FILESDIR}/mozilla-1.3-alpha-stubs.patch
-	use amd64 && epatch ${FILESDIR}/mozilla-firebird-amd64.patch
 }
 
 src_compile() {
