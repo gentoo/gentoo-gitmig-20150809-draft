@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.17 2004/07/17 22:08:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.18 2004/07/29 18:20:49 agriffis Exp $
+
+  29 Jul 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-thunderbird-0.7.1.ebuild:
+  stable on x86 and ia64
 
   14 Jul 2004; Brad Laue <brad@gentoo.org> mozilla-thunderbird-0.7.1.ebuild:
   No longer leaving the option to install a menu icon as exclusive to GNOME. As
