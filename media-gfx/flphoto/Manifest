@@ -1,3 +1,5 @@
-MD5 4d4167c51036cd42faff1b0ffe67d54d ChangeLog 541
-MD5 d6db80b6a4574eefca5abe72ad4b7035 flphoto-1.0.ebuild 641
+MD5 bc881ded088e84469e05da72c5a0f7ba ChangeLog 542
+MD5 21ad2907ffef2dbc76df6591d5ad84da flphoto-1.0.ebuild 642
+MD5 cddabe1eadab61fae4f779d8a6682bfc flphoto-1.1.ebuild 644
 MD5 d2cce79971c117bfb53d0f8745c2ef9f files/digest-flphoto-1.0 70
+MD5 22c544189770b1200b0e69dc23adbb80 files/digest-flphoto-1.1 70
