@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/nss_ldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.2 2002/04/18 16:30:27 seemant Exp $
+
+*nss_ldap-174-r1 (18 Apr 2002)
+
+  18 Apr 2002; Seemant Kulleen <seemant@gentoo.org> nss_ldap-174-r1.ebuild
+  files/digest-nss_ldap-174-r1 :
+
+  david@guerizec.net (David Guerizec) in bug #1905 submitted a patch to
+  resolve the sandbox violations.
 
 *nss_ldap-174 (1 Feb 2002)
 
