@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.1.2.ebuild,v 1.4 2004/01/26 01:02:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.1.2.ebuild,v 1.5 2004/01/30 07:13:20 drobbins Exp $
 
 MY_P=${P/m/M}
 S=${WORKDIR}/${MY_P}
@@ -16,8 +16,10 @@ KEYWORDS="~x86 ~amd64"
 
 IUSE=""
 
-DEPEND=">=x11-libs/wxGTK-2.4.1
+RDEPEND=">=x11-libs/wxGTK-2.4.1
 	>=sys-libs/zlib-1.1.4"
+DEPEND="$RDEPEND
+	>=sys-devel/autoconf-2.58"
 
 pkg_setup() {
 	# FIXME: Is this really how we want to do this ?
