@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r1.ebuild,v 1.1 2003/06/05 00:32:11 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r1.ebuild,v 1.2 2003/06/12 22:28:38 seemant Exp $
 
 IUSE="gif nls png kde oss jpeg gnome"
 
@@ -28,7 +28,7 @@ KEYWORDS="x86 ppc sparc alpha"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PN}-0.80.1-gentoo.patch
+	epatch ${FILESDIR}/${PN}-0.80.1-gentoo.patch
 }
 
 src_compile() {
@@ -136,9 +136,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You need to emerge media-libs/xpm to get transparent globes or"
-	einfo "other transparent elements."
-	einfo
 	einfo "/usr/share/GNUstep/ has moved to /usr/lib/GNUstep/"
 	einfo "this means the WPrefs app has moved. If you have"
 	einfo "entries for this in your menus, please correct them"
