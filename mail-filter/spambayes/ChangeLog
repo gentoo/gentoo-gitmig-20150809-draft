@@ -1,0 +1,24 @@
+# ChangeLog for net-mail/spambayes
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/ChangeLog,v 1.1 2004/06/03 07:31:37 seemant Exp $
+
+*spambayes-1.0_beta1 (03 Jun 2004)
+
+  03 Jun 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +spambayes-1.0_alpha9.ebuild, +spambayes-1.0_beta1.ebuild:
+  Moved from net-mail/spambayes to mail-filter/spambayes.
+
+*spambayes-1.0_beta1 (09 May 2004)
+
+  09 May 2004; Thomas Raschbacher <lordvan@gentoo.org>
+  spambayes-1.0_beta1.ebuild:
+
+  New spambayes package release. More standard documentation included when
+  installed. Fixes Bug #48083; Thanks to Harry Jensen <harry.mj@mail.dk>
+
+*spambayes-1.0_alpha9 (17 Feb 2004)
+
+  17 Feb 2004; Thomas Raschbacher <lordvan@gentoo.org>
+  spambayes-1.0-alpha9.ebuild:
+
+  initial release
