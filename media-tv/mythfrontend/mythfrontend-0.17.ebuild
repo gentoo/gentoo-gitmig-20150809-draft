@@ -1,23 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.20050115.ebuild,v 1.2 2005/02/08 03:29:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.17.ebuild,v 1.1 2005/02/11 16:28:35 cardoe Exp $
 
-inherit myth flag-o-matic
+inherit myth flag-o-matic eutils
 
 DESCRIPTION="Homebrew PVR project frontend."
 HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="mirror://gentoo/mythtv-${PV}.tar.bz2"
+SRC_URI="http://www.mythtv.org/mc/mythtv-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X xv oss mmx"
+IUSE="alsa arts dvb lcd lirc nvidia cle266 opengl xv mmx ieee1394"
 
 
 DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
-	X? ( >=x11-libs/qt-3.1 )
-	directfb? ( dev-libs/DirectFB >=x11-libs/qt-embedded-3.1 )
+	>=x11-libs/qt-3.1
 	dev-db/mysql
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	>=sys-apps/sed-4
@@ -30,37 +29,18 @@ DEPEND=">=media-libs/freetype-2.0
 RDEPEND="${DEPEND}
 	!media-tv/mythtv"
 
-S="${WORKDIR}/mythtv"
-
 pkg_setup() {
-	if use X; then
-		QTP=x11-libs/qt
-	elif use directfb; then
-		QTP=x11-libs/qt-embedded
-	else
-		eerror "You must have either X or directfb in USE"
-		die "No QT library selected"
-	fi
-	local qt_use="$(</var/db/pkg/`best_version ${QTP}`/USE)"
+	local qt_use="$(</var/db/pkg/`best_version x11-libs/qt`/USE)"
 	if ! has mysql ${qt_use} ; then
 		eerror "Qt is missing MySQL support. Please add"
 		eerror "'mysql' to your USE flags, and re-emerge Qt."
 		die "Qt needs MySQL support"
 	fi
 
-	if ! use oss && ! use alsa && ! use arts ; then
-		eerror "You must have one of oss alsa or arts enabled"
-		die "No audio selected"
-	fi
 	return 0
 }
 
 setup_pro() {
-	sed -e 's:EXTRA_LIBS += -L/usr/X11R6/lib -lXinerama -lXv -lX11 -lXext -lXxf86vm:EXTRA_LIBS += -lXinerama -lXv -lX11 -lXext -lXxf86vm:' \
-		-i 'settings.pro' || die "failed to remove extra library path"
-
-	sed -e 's:LIBVERSION = 0.16:LIBVERSION = 0.16.20050115:' \
-		-i 'settings.pro' || die "failed to correct library version"
 
 	sed -e "s:CONFIG  += linux backend:CONFIG  += linux:" \
 		-i 'settings.pro' || die "Removal of mythbackend failed"
@@ -70,26 +50,15 @@ setup_pro() {
 			-i 'settings.pro' || "Removal of MMX failed"
 	fi
 
-	if ! use X ; then
-		sed -e 's:CONFIG += using_x11:#CONFIG += using_x11:' \
-			-i 'settings.pro' || die "disable x11 failed"
-	fi
-
 	if ! use xv ; then
 		sed -e 's:CONFIG += using_xv:#CONFIG += using_xv:' \
-			-e 's:EXTRA_LIBS += -L/usr/X11:#EXTRA_LIBS += -L/usr/X11:' \
+			-e 's:EXTRA_LIBS += -L/usr/X11R6/lib:#EXTRA_LIBS += -L/usr/X11R6/lib:' \
 			-i 'settings.pro' || die "disable xv failed"
 	fi
 
 	if use lcd ; then
 		sed -e 's:#DEFINES += LCD_DEVICE:DEFINES += LCD_DEVICE:' \
 			-i 'settings.pro' || die "enable lcd sed failed"
-	fi
-
-	if ! use oss ; then
-		sed -e 's:CONFIG += using_oss:#CONFIG += using_oss:' \
-			-e 's:DEFINES += USING_OSS:#DEFINES += USING_OSS:' \
-			-i 'settings.pro' || die "disable oss failed"
 	fi
 
 	if use alsa ; then
@@ -111,7 +80,7 @@ setup_pro() {
 	if use dvb ; then
 		sed -e 's:#CONFIG += using_dvb:CONFIG += using_dvb:' \
 			-e 's:#DEFINES += USING_DVB:DEFINES += USING_DVB:' \
-			-e 's:#INCLUDEPATH += /usr/src/.*:INCLUDEPATH += /usr/include:' \
+			-e 's:#INCLUDEPATH += /usr/src/.*:INCLUDEPATH += /usr/include/linux/dvb:' \
 			-i 'settings.pro' || die "enable dvb sed failed"
 	fi
 
@@ -128,30 +97,36 @@ setup_pro() {
 			-i 'settings.pro' || die "enable nvidia xvmc sed failed"
 	fi
 
+	if use nvidia && use cle266; then
+		die "You can not have USE="cle266" and USE="nvidia" at the same time. Must disable one or the other."
+	fi
+
 	if use cle266 ; then
-		sed -e 's:#CONFIG += using_viahwslice:CONFIG += using_viahwslice:' \
-			-e 's:#DEFINES += USING_VIASLICE:DEFINES += USING_VIASLICE:' \
-			-e 's:#EXTRA_LIBS += -lddmpeg:EXTRA_LIBS += -lddmpeg:' \
+		sed -e 's:#CONFIG += using_xvmc using_xvmc_vld:CONFIG += using_xvmc using_xvmc_vld:' \
+			-e 's:#DEFINES += USING_XVMC USING_XVMC_VLD:DEFINES += USING_XVMC USING_XVMC_VLD:' \
+			-e 's:#EXTRA_LIBS += -lviaXvMC -lXvMC:EXTRA_LIBS += -lviaXvMC -lXvMC:' \
 			-i 'settings.pro' || die "enable cle266 sed failed"
 	fi
 
-	if ! use cle266 ; then
+	if ! use cle266 ; then # needed because nvidia and cle266 are not compatible
 		sed -e 's:CONFIG += using_xvmc using_xvmc_vld:#CONFIG += using_xvmc using_xvmc_vld:' \
 			-e 's:DEFINES += USING_XVMC USING_XVMC_VLD:#DEFINES += USING_XVMC USING_XVMC_VLD:' \
+			-e 's:EXTRA_LIBS += -lviaXvMC -lXvMC:#EXTRA_LIBS += -lviaXvMC -lXvMC:' \
 			-i 'settings.pro' || die "disable VLD XvMC sed failed"
 	fi
 
-	if use directfb ; then
-		sed -e 's:#CONFIG += using_directfb:CONFIG += using_directfb:' \
-			-e 's:#EXTRA_LIBS += `directfb:EXTRA_LIBS += `directfb:' \
-			-e 's:#QMAKE_CXXFLAGS += `directfb:QMAKE_CXXFLAGS += `directfb:' \
-			-i 'settings.pro' || die "enable directfb sed failed"
-	fi
 	if use opengl ; then
 		sed -e 's:#DEFINES += USING_OPENGL_VSYNC:DEFINES += USING_OPENGL_VSYNC:' \
 			-e 's:#EXTRA_LIBS += -lGL:EXTRA_LIBS += -lGL:' \
 			-e 's:#CONFIG += using_opengl:CONFIG += using_opengl:' \
 			-i 'settings.pro' || die "enable opengl sed failed"
+	fi
+
+	if use ieee1394 ; then
+		sed -e 's:#CONFIG += using_firewire:CONFIG += using_firewire:' \
+			-e 's:#DEFINES += USING_FIREWIRE:DEFINES += USING_FIREWIRE:' \
+			-e 's:#EXTRA_LIBS += -lraw1394 -liec61883:EXTRA_LIBS += -lraw1394 -liec61883:' \
+			-i 'settings.pro' || die "failed to enable firewire support"
 	fi
 
 	#Gentoo X ebuilds always have XrandrX
@@ -167,7 +142,7 @@ src_unpack() {
 	# fix bug 67832, fix can be removed for 0.17 when its released
 	is-flag "-march=pentium4" && replace-flags "-O3" "-O2"
 
-	myth_src_unpack
+	myth_src_unpack || die "unpack failed"
 }
 
 src_compile() {
@@ -182,6 +157,7 @@ src_compile() {
 	emake -C libs/libavformat || die
 	emake -C libs/libmythsamplerate || die
 	emake -C libs/libmythsoundtouch || die
+	emake -C libs/libmythmpeg2 || die
 	emake -C libs/libmyth || die
 	emake -C libs/libmythtv || die
 	emake -C libs || die
@@ -189,7 +165,7 @@ src_compile() {
 }
 
 src_install() {
-	myth_src_install
+	myth_src_install || die "install failed"
 
 	dodir /etc/mythtv
 	mv "${D}/usr/share/mythtv/mysql.txt" "${D}/etc/mythtv"
