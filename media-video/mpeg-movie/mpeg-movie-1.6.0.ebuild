@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0.ebuild,v 1.8 2001/05/01 18:29:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0.ebuild,v 1.9 2001/05/15 15:41:32 achim Exp $
 
 P=mpeg-movie-1.6.0
 A=mpeg_movie-1.6.0.tar.gz
@@ -53,10 +53,13 @@ src_unpack() {
   cd ${S}/audio_out
   cp GNUmake GNUmake.orig
   sed -e "s:SDL_DIR += /usr/local:SDL_DIR += /usr:" GNUmake.orig > GNUmake
+  if [ "`use nas`" ] ; then
+	cp GNUmake GNUmake.orig
+	sed -e "s#^SDLLIB := -L#SDLLIB := -L/usr/X11R6/lib -lXt -L#" GNUmake.orig > GNUmake
+  fi
+  
 }
 src_compile() {
-
-    cd ${S}
     try make
 
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.53.5.ebuild,v 1.2 2001/02/13 04:58:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.53.5.ebuild,v 1.3 2001/05/15 15:41:32 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library for AVI-Files"
@@ -16,14 +16,13 @@ RDEPEND=">=x11-libs/qt-x11-2.2.2
 	 >=x11-libs/gtk+-1.2.8
 	 >=media-sound/esound-0.2.19"
 	
-src_unpack () {
-    unpack ${P}.tar.gz
-    cd ${S}
-}
 
 src_compile() {
-    cd ${S}
-    try ./configure --prefix=/usr/X11R6 --host=${CHOST} --disable-tsc
+    if [ "`use nas`" ] ; then
+	LDFLAGS="-L/usr/X11R6/lib -lXt"
+    fi
+    export CFLAGS=${CFLAGS/-O?/-O2}
+    try LDFLAGS=\"$LDFLAGS\" ./configure --prefix=/usr/X11R6 --host=${CHOST} --disable-tsc
     cp Makefile Makefile.orig
     sed -e "s:/usr/lib/win32:${D}/usr/lib/win32:" \
 	Makefile.orig > Makefile
@@ -38,7 +37,6 @@ src_compile() {
 
 src_install () {
 
-    cd ${S}
     dodir /usr/X11R6/lib /usr/X11R6/bin
     dodir /usr/lib/win32
 

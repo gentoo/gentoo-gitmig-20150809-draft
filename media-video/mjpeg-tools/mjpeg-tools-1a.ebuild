@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpeg-tools/mjpeg-tools-1a.ebuild,v 1.6 2001/04/29 22:44:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpeg-tools/mjpeg-tools-1a.ebuild,v 1.7 2001/05/15 15:41:32 achim Exp $
 
 P=mjpeg-tools-1a
 A="mjpeg_beta_1a.tar.gz quicktime4linux-1.1.9.tar.gz"
@@ -26,6 +26,11 @@ src_unpack() {
     cp Makefile Makefile.orig
     sed -e "s:^#USE_ALSA:USE_ALSA:" Makefile.orig > Makefile
   fi
+  if [ "`use nas`" ] ; then
+    cp Makefile Makefile.orig
+    sed -e "s:^L_FLAGS =:L_FLAGS = -L/usr/X11R6/lib -lXt:" Makefile.orig > Makefile
+  fi
+  
   cd aenc
   cp Makefile Makefile.orig
   sed -e "s:\.\./jpeg-6b-mmx/libjpeg\.a:-ljpeg:" Makefile.orig > Makefile
