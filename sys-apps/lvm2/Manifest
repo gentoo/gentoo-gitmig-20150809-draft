@@ -1,3 +1,4 @@
-MD5 dbdf5661a6898c9f1e79c286475364ad lvm2-2.00.05.ebuild 769
-MD5 3af76c7e38fa4cf88dea62550a449f62 ChangeLog 1424
-MD5 db1ecb2c039fe00bd339bd0bbc5a5875 files/digest-lvm2-2.00.05 61
+MD5 982f71cd832db1e84cfd3ad47637b15a lvm2-2.00.06.ebuild 769
+MD5 59991ab36b299feb9071bd4e363e8e29 ChangeLog 1582
+MD5 cf07c5ad664583bdb7b92e754205f5a5 metadata.xml 247
+MD5 8c3382128e49f3ef18e3dd27e3a9dc3e files/digest-lvm2-2.00.06 61

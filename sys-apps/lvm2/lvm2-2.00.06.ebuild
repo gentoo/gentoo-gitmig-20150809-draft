@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm2/lvm2-2.00.05.ebuild,v 1.1 2003/09/02 20:47:37 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm2/lvm2-2.00.06.ebuild,v 1.1 2003/09/03 14:04:56 max Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://www.sistina.com/products_lvm.htm"
