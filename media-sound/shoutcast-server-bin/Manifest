@@ -1,17 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 792ceacf0378b75570aaeb16b88f79d9 ChangeLog 1536
 MD5 dbafe0153b3ee5f599d5dbeac4aa3210 metadata.xml 224
-MD5 23fd804d07217367c1370c717647e0cb shoutcast-server-bin-1.9.4-r1.ebuild 2310
-MD5 253bb0bed7255e0afeecdc6f53117afe shoutcast-server-bin-1.9.5.ebuild 2308
-MD5 2b2d3020957f2bffc04141a0f2135693 files/digest-shoutcast-server-bin-1.9.4-r1 80
-MD5 572233fa66d4a99eea2c5e1e578fc357 files/shoutcast 853
+MD5 25b9da985059844e96c9b6be7e431667 ChangeLog 1716
+MD5 940fa71bd1caacd890f4816d01725ad8 shoutcast-server-bin-1.9.5.ebuild 2307
 MD5 2f2025093cdbc0f677b2235e95172158 files/digest-shoutcast-server-bin-1.9.5 79
+MD5 572233fa66d4a99eea2c5e1e578fc357 files/shoutcast 853
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB2bHTFdQwWVoAgN4RApJEAKCowdTHS7O0n7DUkrMfeU2+wOJXtQCfQPrZ
-J2tVmJvNtMPYFkaaSKjKZhs=
-=uj7B
+iD8DBQFB2pEiArHZZzCEUG0RAoxDAJ9Muz30uRZwohqcrOY8xLQU8L67kACdHOPB
+xuzAa2rKvS8nRp6v0OYfUXQ=
+=/hFl
 -----END PGP SIGNATURE-----
