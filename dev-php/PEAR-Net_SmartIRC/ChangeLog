@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_SmartIRC
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SmartIRC/ChangeLog,v 1.6 2004/08/03 17:07:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SmartIRC/ChangeLog,v 1.7 2004/10/23 14:33:36 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org>
+  PEAR-Net_SmartIRC-0.5.5_p1.ebuild:
+  Stable on sparc.
 
   03 Aug 2004; <agriffis@gentoo.org> PEAR-Net_SmartIRC-0.5.5_p1.ebuild:
   add ia64 keywords #56295
