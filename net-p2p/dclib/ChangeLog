@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.52 2005/03/19 15:19:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.53 2005/04/01 16:45:27 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> dclib-0.3.3-r1.ebuild:
+  stable on ia64
 
   19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> dclib-0.3.3-r1.ebuild:
   Stable on alpha.
