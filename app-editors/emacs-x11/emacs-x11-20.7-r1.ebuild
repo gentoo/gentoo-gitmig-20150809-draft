@@ -26,8 +26,8 @@ src_compile() {
 
 src_install () {
     cd ${S}
-    try make prefix=${D}/usr/X11R6 libexecdir=${D}/usr/X11R6/lib install
+    try make prefix=${D}/usr libexecdir=${D}/usr/lib install
     dodoc BUGS ChangeLog README
-    gzip -9 ${D}/usr/X11R6/info/*
+    gzip -9 ${D}/usr/info/*
 }
 
