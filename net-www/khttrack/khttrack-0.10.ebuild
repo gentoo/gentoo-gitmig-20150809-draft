@@ -14,7 +14,6 @@ IUSE=""
 need-kde 3
 
 DEPEND=">=kde-base/kdelibs-3
-        net-www/httrack"
+	net-www/httrack"
 RDEPEND=">=kde-base/kdelibs-3
-         net-www/httrack"
-
+		net-www/httrack"

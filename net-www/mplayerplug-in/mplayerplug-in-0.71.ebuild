@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-0.71.ebuild,v 1.2 2003/06/05 05:11:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-0.71.ebuild,v 1.3 2003/09/06 01:54:09 msterret Exp $
 
 IUSE=""
 
@@ -26,7 +26,7 @@ src_compile() {
 src_install() {
 	exeinto /opt/netscape/plugins
 	doexe mplayerplug-in.so
-	
+
 	inst_plugin /opt/netscape/plugins/mplayerplug-in.so
 
 	insinto /usr/share/mplayer/Skin/mini

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.11.ebuild,v 1.3 2003/08/22 14:57:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.11.ebuild,v 1.4 2003/09/06 01:54:08 msterret Exp $
 
 IUSE="nls"
 
@@ -107,7 +107,7 @@ pkg_postinst() {
 	galeon-config-tool --fix-gconf-permissions
 	galeon-config-tool --pkg-install-schemas
 	scrollkeeper-update
-	
+
 	if [ -z "`use gnome`" ]
 	then
 		einfo "Please make sure libglade was built with gnome support, or"

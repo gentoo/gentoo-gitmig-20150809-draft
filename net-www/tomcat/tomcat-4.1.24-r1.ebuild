@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24-r1.ebuild,v 1.1 2003/05/27 04:36:16 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24-r1.ebuild,v 1.2 2003/09/06 01:54:09 msterret Exp $
 
 S=${WORKDIR}/jakarta-${P}
 At="jakarta-tomcat-${PV}.tar.gz"
@@ -33,7 +33,7 @@ src_install() {
 	TOMCAT_HOME="/opt/tomcat"
 	INSTALLING="yes"
 	DIROPTIONS="--mode=0750 --owner=tomcat --group=tomcat"
-	
+
 	# Create directories
 	dodir ${TOMCAT_HOME}
 	dodir /var/log/${PN}
@@ -48,7 +48,7 @@ src_install() {
 	cd ${S}
 
 	# INIT SCRIPTS AND ENV
-	
+
 	cp -a ${FILESDIR}/${PV}/tomcat.init ${S}/tomcat
 	insinto /etc/init.d
 	insopts -m0750
@@ -58,7 +58,7 @@ src_install() {
 	insinto /etc/conf.d
 	insopts -m0750
 	doins ${S}/tomcat
-	
+
 	cp -a ${FILESDIR}/${PV}/21tomcat ${S}/21tomcat
 	insinto /etc/env.d
 	insopts -m0750
@@ -74,13 +74,13 @@ src_install() {
 	done
 
 	dodoc RELEASE-NOTES-* README.txt RUNNING.txt LICENSE RELEASE-PLAN-4.1.txt
-	
+
 	chown -R tomcat.tomcat ${S}
 	DIROPTIONS="--mode=0750 --owner=tomcat --group=tomcat"
 	dodir ${TOMCAT_HOME}/common
 	dodir ${TOMCAT_HOME}/common/classes
 	dodir ${TOMCAT_HOME}/webapps
-	
+
 	cp -Rdp \
 		bin \
 		conf \
@@ -89,11 +89,11 @@ src_install() {
 		webapps \
 		work \
 		${D}${TOMCAT_HOME}
-	
+
 	dosym /usr/share/tomcat/package.env ${TOMCAT_HOME}/common/package.env
 	dosym /usr/share/tomcat/lib ${TOMCAT_HOME}/common/endorsed
 	dosym /usr/share/tomcat/lib ${TOMCAT_HOME}/common/lib
-	
+
 }
 
 pkg_postinst() {
@@ -129,8 +129,7 @@ pkg_postinst() {
 	einfo " may not get seen.  Thank you."
 	einfo " "
 	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-        sleep 10
-
+	sleep 10
 }
 
 pkg_postrm() {

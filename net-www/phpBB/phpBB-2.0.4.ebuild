@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tim Raedisch <tim.raedisch@udo.edu>
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.4.ebuild,v 1.4 2003/08/04 01:11:40 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.4.ebuild,v 1.5 2003/09/06 01:54:09 msterret Exp $
 
 S=${WORKDIR}/${PN}2
 DESCRIPTION="phpBB is a high powered, fully scalable, and highly customisable open-source bulletin board package."
@@ -32,9 +32,9 @@ pkg_setup() {
 	einfo "Installing for ${WEBAPP_SERVER}"
 }
 
-src_compile() {            
+src_compile() {
 	#we need to have this empty function ... default compile hangs
-	echo "Nothing to compile" 
+	echo "Nothing to compile"
 }
 
 src_install() {

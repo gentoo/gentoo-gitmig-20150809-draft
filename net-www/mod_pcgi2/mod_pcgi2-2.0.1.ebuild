@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.2 2003/08/15 06:25:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.3 2003/09/06 01:54:08 msterret Exp $
 
 apachedir='1'
 apache=''
@@ -26,7 +26,7 @@ src_compile() {
 		apxs2 \
 		-n pcgi2  \
 		-DUNIX -DAPACHE2 -DMOD_PCGI2 \
-		-c mod_pcgi2.c pcgi-wrapper.c parseinfo.c 
+		-c mod_pcgi2.c pcgi-wrapper.c parseinfo.c
 		#-o mod_pcgi.so \
 	else
 		apxs \
@@ -35,7 +35,7 @@ src_compile() {
 		-Wc,-DHAVE_UNION_SEMUN  \
 		-I./  \
 		-o mod_pcgi2.so \
-		-c mod_pcgi2.c parseinfo.c pcgi-wrapper.c 
+		-c mod_pcgi2.c parseinfo.c pcgi-wrapper.c
 	fi
 }
 

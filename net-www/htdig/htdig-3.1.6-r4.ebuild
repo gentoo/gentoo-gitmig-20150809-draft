@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r4.ebuild,v 1.10 2003/03/29 19:36:41 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r4.ebuild,v 1.11 2003/09/06 01:54:08 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTTP/HTML indexing and searching system"
@@ -45,17 +45,17 @@ src_install () {
 		DEFAULT_CONFIG_FILE=${D}/etc/${PN}/${PN}.conf \
 		exec_prefix=${D}/usr \
 		install || die
-	
+
 	dodoc ChangeLog COPYING README
 	dohtml -r htdoc
-	
+
 	insinto /etc/conf.d
 	doins installdir/htdig.conf
-	
+
 	dosed /etc/htdig/htdig.conf
 	dosed /usr/bin/rundig
 
-	touch ${D}/var/htdig/db/word2root.db 
+	touch ${D}/var/htdig/db/word2root.db
 	touch ${D}/var/htdig/db/root2word.db
 
 }

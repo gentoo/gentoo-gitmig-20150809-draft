@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r5.ebuild,v 1.10 2003/08/03 04:23:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r5.ebuild,v 1.11 2003/09/06 01:54:08 msterret Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -157,7 +157,7 @@ moz_setup() {
 src_unpack() {
 
 	moz_setup
-	
+
 	unpack ${A}
 
 	if [ "$(gcc-major-version)" -eq "3" ]
@@ -203,7 +203,7 @@ src_unpack() {
 			# Get mozilla to link to Xft2.0 that we install in tmp directory
 			# <azarah@gentoo.org> (18 Nov 2002)
 			epatch ${FILESDIR}/${PV%\.*}/${P%\.*}b-Xft-includes.patch.bz2
-			
+
 			# Fix include problem in Xrender if the updated one is not installed
 			# system wide ... bug #12223.
 			cd ${FC_S}/../Xrender
@@ -214,7 +214,7 @@ src_unpack() {
 		# Update Gtk+2 bits from CVS
 		epatch ${FILESDIR}/${PV%\.*}/${P%\.*}b-gtk2.patch.bz2
 	fi
-	
+
 	cd ${S}
 	export WANT_AUTOCONF_2_1=1
 	autoconf &> /dev/null
@@ -327,7 +327,7 @@ src_compile() {
 
 	# NB!!:  Due to the fact that the non default extensions do not always
 	#        compile properly, using them is considered unsupported, and
-	#        is just here for completeness.  Please do not use if you 
+	#        is just here for completeness.  Please do not use if you
 	#        do not know what you are doing!
 	#
 	# The defaults are (as of 1.2, according to configure (line ~11445)):
@@ -370,7 +370,7 @@ src_compile() {
 #	then
 #		myconf="${myconf} --enable-calendar"
 #	fi
-	
+
 	if [ -n "`use moznomail`" ]
 	then
 		myconf="${myconf} --disable-mailnews"
@@ -379,7 +379,7 @@ src_compile() {
 	then
 		myconf="${myconf} --disable-composer"
 	fi
-	
+
 	if [ "$(gcc-major-version)" -eq "3" ]
 	then
 		# Currently gcc-3.2 or older do not work well if we specify "-march"
@@ -418,19 +418,19 @@ src_compile() {
 		# Create the libXrender.so to our _moz version so that Xft will
 		# link to the correct library ...
 		ln -snf libXrender_moz.so.? libXrender.so
-		
+
 		einfo "Configuring Xft2.0..."
 		cd ${FC_S}
 		./configure --prefix=${WORKDIR}/Xft \
 			--sysconfdir=/etc \
 			--x-includes=${WORKDIR}/Xft/include \
 			--x-libraries=${WORKDIR}/Xft/lib || die
-	
+
 		einfo "Building Xft2.0..."
 		# Use install as libXft_moz.so so that it do not conflict with
 		# system wide libs ...
 		emake LIBBASE="libXft_moz.so" || die
-	
+
 		einfo "Installing Xft2.0 in temp directory..."
 		make prefix=${WORKDIR}/Xft \
 			confdir=${WORKDIR}/Xft/etc/fonts \
@@ -451,10 +451,10 @@ src_compile() {
 	#  Configure and build Mozilla
 	#
 	# *********************************************************************
-	
+
 	export BUILD_MODULES=all
 	export BUILD_OPT=1
-	
+
 	# Get it to work without warnings on gcc3
 	export CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 
@@ -493,7 +493,7 @@ src_compile() {
 	then
 		einfo "Building Mozilla NSS..."
 		cd ${S}/security/coreconf
-		
+
 		# Fix #include problem
 		cp headers.mk headers.mk.orig
 		echo 'INCLUDES += -I$(DIST)/include/nspr -I$(DIST)/include/dbm'\
@@ -503,7 +503,7 @@ src_compile() {
 		make MAKE="make" || die
 
 		cd ${S}/security/nss
-		
+
 		# Disable jobserver here ...
 		make MAKE="make" moz_import || die
 		make MAKE="make" || die
@@ -658,7 +658,7 @@ pkg_preinst() {
 	fi
 
 	# Remove stale component registry.
-    if [ -e ${ROOT}/usr/lib/component.reg ]
+	if [ -e ${ROOT}/usr/lib/component.reg ]
 	then
 		rm -f ${ROOT}/usr/lib/component.reg
 	fi
@@ -683,7 +683,7 @@ pkg_postinst() {
 			if [ -e "`java-config --full-browser-plugin-path=mozilla`" ]
 			then
 				ln -snf `java-config --full-browser-plugin-path=mozilla` \
-					${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` 
+					${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla`
 			fi
 		fi
 	fi
@@ -698,7 +698,7 @@ pkg_postinst() {
 
 	umask 022
 
-	# Needed to update the run time bindings for REGXPCOM 
+	# Needed to update the run time bindings for REGXPCOM
 	# (do not remove next line!)
 	env-update
 	# Register components, setup Chrome .rdf files and fix file permissions
@@ -732,7 +732,7 @@ pkg_postrm() {
 	if [ -e ${ROOT}/usr/lib/mozilla/regxpcom ]
 	then
 		export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
-	
+
 		if [ -e ${MOZILLA_FIVE_HOME}/component.reg ]
 		then
 			rm -f ${MOZILLA_FIVE_HOME}/component.reg

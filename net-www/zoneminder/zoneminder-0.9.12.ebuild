@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/zoneminder/zoneminder-0.9.12.ebuild,v 1.1 2003/06/20 20:14:08 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zoneminder/zoneminder-0.9.12.ebuild,v 1.2 2003/09/06 01:54:09 msterret Exp $
 
 DESCRIPTION="ZoneMinder allows you to capture, analyse, record and monitor any cameras attached to your system."
 HOMEPAGE="http://www.zoneminder.com/"
@@ -30,7 +30,7 @@ src_compile() {
 
 	# Apache is flexible, so we should follow suit
 	local datadir=`grep ^apache: /etc/passwd | cut -d: -f6`
-	if [ -z "$datadir" ] 
+	if [ -z "$datadir" ]
 	then
 		datadir="/home/httpd"
 		eerror ":: Cannot find the apache user on your system! ::"

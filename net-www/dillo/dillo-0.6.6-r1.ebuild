@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.6.6-r1.ebuild,v 1.4 2003/02/13 15:32:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.6.6-r1.ebuild,v 1.5 2003/09/06 01:54:08 msterret Exp $
 
 S=${WORKDIR}/${P}
 S2=${WORKDIR}/${PN}-gentoo-extra
@@ -34,7 +34,7 @@ src_unpack() {
 	then
 		cp ${S2}/pixmaps.ximian.h ${S}/src/pixmaps.h
 	fi
-	
+
 }
 
 src_compile() {
@@ -58,7 +58,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	
+
 	einfo "This ebuild for dillo comes with different toolbar icons"
 	einfo "If you want mozilla style icons then try"
 	einfo "	USE=\"-kde -gnome mozilla\" emerge dillo"

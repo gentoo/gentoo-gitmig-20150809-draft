@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-www/plb/plb-0.3.ebuild,v 1.2 2003/07/13 21:44:10 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/plb/plb-0.3.ebuild,v 1.3 2003/09/06 01:54:09 msterret Exp $
 
 DESCRIPTION="A free high-performance HTTP load balancer"
 SRC_URI="http://plb.sunsite.dk/files/${P}.tar.gz"
@@ -14,7 +14,7 @@ IUSE=""
 DEPEND="virtual/glibc
 	>=dev-libs/libevent-0.6"
 
-src_compile() {	
+src_compile() {
 	econf || die
 	emake || die "compile problem"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cvsweb/cvsweb-1.112.ebuild,v 1.9 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cvsweb/cvsweb-1.112.ebuild,v 1.10 2003/09/06 01:54:08 msterret Exp $
 
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
@@ -24,12 +24,11 @@ src_unpack() {
 }
 
 src_install() {
-    cd ${S}
-    insinto /etc/apache/conf
-    doins cvsweb.conf
-    insinto /home/httpd/cgi-bin
-    insopts -m755
-    doins cvsweb.cgi
-    dodoc README TODO
+	cd ${S}
+	insinto /etc/apache/conf
+	doins cvsweb.conf
+	insinto /home/httpd/cgi-bin
+	insopts -m755
+	doins cvsweb.cgi
+	dodoc README TODO
 }
-

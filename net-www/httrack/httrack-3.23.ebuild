@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/httrack/httrack-3.23.ebuild,v 1.2 2003/07/13 21:44:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/httrack/httrack-3.23.ebuild,v 1.3 2003/09/06 01:54:08 msterret Exp $
 
 DESCRIPTION="HTTrack Website Copier, Open Source Offline Browser"
 HOMEPAGE="http://www.httrack.com/"
@@ -39,7 +39,7 @@ src_install() {
 	cd ${D}/usr/share/doc/
 	mv httrack ${P}
 	cd ${S}
-	dodoc AUTHORS COPYING INSTALL NEWS README ChangeLog 
+	dodoc AUTHORS COPYING INSTALL NEWS README ChangeLog
 	dodoc greetings.txt history.txt
 	dohtml httrack-doc.html
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12_beta1.ebuild,v 1.3 2003/08/24 16:21:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12_beta1.ebuild,v 1.4 2003/09/06 01:54:09 msterret Exp $
 
 # Based on original Gentoo Techonologies opera ebuild
 # Modified by Gustavo Zacarias <gustavo at zacarias.com.ar> for sparc
@@ -73,7 +73,7 @@ src_install() {
 	insinto /usr/share/icons /etc/X11/wmconfig /etc/X11/applnk/Internet \
 		/usr/share/pixmaps
 	doins images/opera.xpm
-	
+
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
 	dosym /opt/opera/bin/opera /usr/bin/opera

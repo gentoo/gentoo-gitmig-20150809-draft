@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/mozilla-firebird-bin-0.6.1.ebuild,v 1.4 2003/08/13 13:20:14 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/mozilla-firebird-bin-0.6.1.ebuild,v 1.5 2003/09/06 01:54:09 msterret Exp $
 
 inherit nsplugins eutils
 
@@ -19,7 +19,7 @@ LICENSE="MPL-1.1 NPL-1.1"
 
 DEPEND="virtual/glibc"
 RDEPEND=">=sys-libs/lib-compat-1.0-r2
-	=x11-libs/gtk+-1.2* 
+	=x11-libs/gtk+-1.2*
 	virtual/x11
 	!net-www/mozilla-firebird
 	!net-www/mozilla-firebird-cvs"
@@ -52,7 +52,7 @@ src_install() {
 	then
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/icon/mozilla-icon.png
-		
+
 		insinto /usr/share/gnome/apps/Internet
 		doins ${FILESDIR}/icon/mozillafirebird.desktop
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pcgi/pcgi-2.0_alpha5.ebuild,v 1.1 2003/08/15 06:13:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/pcgi/pcgi-2.0_alpha5.ebuild,v 1.2 2003/09/06 01:54:09 msterret Exp $
 
 # this package is ONLY available inside the Zope tarball!!!
 ZOPE_PV=2.6.1
@@ -26,8 +26,8 @@ IUSE=""
 DEPEND="${DEPEND}
 		virtual/glibc"
 RDEPEND="${RDEPEND}
-		 virtual/glibc
-  		 virtual/python"
+	virtual/glibc
+	virtual/python"
 
 src_compile() {
 	econf || die "econf failed"
@@ -42,8 +42,8 @@ src_install() {
 	dosym /usr/bin/pcgi-wrapper${MY_PV} /usr/bin/pcgi-wrapper
 	dodoc MrCreosote/README.MrCreosote README Test/README.parseinfo
 	newdoc Util/README README.Util
-	dobin MrCreosote/pcgi-creosote MrCreosote/creosote.py 
-	dobin Util/killpcgi.py Util/pcgifile.py 
+	dobin MrCreosote/pcgi-creosote MrCreosote/creosote.py
+	dobin Util/killpcgi.py Util/pcgifile.py
 	dobin pcgi_publisher.py
 	newbin Test/parseinfo pcgi-parseinfo
 	cp -ra Example ${D}/usr/share/doc/${PF}/

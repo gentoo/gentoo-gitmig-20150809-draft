@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.13 2003/02/13 15:40:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.14 2003/09/06 01:54:09 msterret Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://zipper.paco.net/~igor/oops/oops-1.5.6.tar.gz"
@@ -11,8 +11,8 @@ LICENSE="GPL-2"
 DESCRIPTION="An advanced multithreaded caching web proxy"
 
 DEPEND="virtual/glibc sys-devel/gcc
-        dev-libs/libpcre
-        sys-devel/flex"
+	dev-libs/libpcre
+	sys-devel/flex"
 
 RDEPEND="virtual/glibc sys-devel/gcc"
 
@@ -25,8 +25,8 @@ src_unpack() {
 }
 
 src_compile() {
-    try ./configure --prefix=/usr --libdir=/usr/lib/oops --enable-oops-user=squid \
-    --sysconfdir=/etc/oops --sbindir=/usr/sbin --with-regexp=pcre --localstatedir=/var/run/oops
+	try ./configure --prefix=/usr --libdir=/usr/lib/oops --enable-oops-user=squid \
+		--sysconfdir=/etc/oops --sbindir=/usr/sbin --with-regexp=pcre --localstatedir=/var/run/oops
 	cd src
 	cp config.h.in config.h.in.orig
 	sed -e '/STRERROR_R/d' config.h.in.orig > config.h.in
@@ -37,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-    dodir /usr/sbin
+	dodir /usr/sbin
 	chown squid.squid ${D}
 	try make DESTDIR=${D} install
 	chmod -R g+srw ${D}/etc/oops

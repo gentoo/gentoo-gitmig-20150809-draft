@@ -1,3 +1,6 @@
+MD5 021a84d4179b2f5b7e81d26905562162 ChangeLog 3911
+MD5 23e3312058fbdd7661ff20bb234dedcd squid-2.4.7.ebuild 3503
+MD5 4c07223b8c83f25398383f3757db0411 squid-2.5.3.ebuild 4921
 MD5 bb029026a8d6bd24efd9086a2f3e959e files/digest-squid-2.4.7 74
 MD5 626914d5b07105602773bf8a1534a3ae files/squid-2.4.7-debian.diff 12078
 MD5 60b9ab4d53c4485a214baa7c8f9a2cc0 files/squid-2.4.7-gentoo.diff 1828
@@ -7,6 +10,3 @@ MD5 c91a09e06237e673a07ec28364f3e0e1 files/squid.pam 506
 MD5 cdb6c071e42e7f98cc28972c9629b83f files/squid.rc6 1868
 MD5 6658bb10c03cd2940380d3358c2d8eef files/digest-squid-2.5.3 71
 MD5 0c7867dce4b8bef078a93bf717196b0e files/squid-2.5.3-gentoo.diff 11534
-MD5 23e3312058fbdd7661ff20bb234dedcd squid-2.4.7.ebuild 3503
-MD5 021a84d4179b2f5b7e81d26905562162 ChangeLog 3911
-MD5 2ef424001cce3bc792a2ee733096ca6d squid-2.5.3.ebuild 4920

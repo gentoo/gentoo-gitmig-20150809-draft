@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.3.ebuild,v 1.6 2003/08/03 04:26:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.3.ebuild,v 1.7 2003/09/06 01:54:09 msterret Exp $
 
 IUSE="pam ldap ssl sasl snmp debug"
 
@@ -113,7 +113,7 @@ src_compile() {
 	mv include/autoconf.h include/autoconf.h.orig
 	sed -e "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 4096:" \
 		include/autoconf.h.orig > include/autoconf.h
-	
+
 	if [ "${ARCH}" = "hppa" ]
 	then
 		mv include/autoconf.h include/autoconf.h.orig

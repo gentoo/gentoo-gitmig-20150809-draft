@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/mythweb-0.10.ebuild,v 1.1 2003/07/09 00:10:36 johnm Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/mythweb-0.10.ebuild,v 1.2 2003/09/06 01:54:09 msterret Exp $
 
 IUSE="apache2"
 DESCRIPTION="PHP scripts intended to manage MythTV from a web browser."
@@ -26,7 +26,7 @@ src_install() {
 	elif [ -e "/etc/apache/conf/apache.conf" ] ; then
 		HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d' ' -f2`"
 	else
-        HTTPD_ROOT="/home/httpd/htdocs"
+		HTTPD_ROOT="/home/httpd/htdocs"
 		ewarn
 		ewarn "No apache config file found in /etc, assuming DocumentRoot /home/httpd/htdocs"
 		ewarn

@@ -24,8 +24,8 @@ HTTPD_USER="apache"
 HTTPD_GROUP="apache"
 
 
-src_compile() {            
-	echo "Nothing to compile" 
+src_compile() {
+	echo "Nothing to compile"
 }
 
 src_install() {

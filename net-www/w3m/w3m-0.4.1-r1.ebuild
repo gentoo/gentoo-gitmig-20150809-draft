@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.1-r1.ebuild,v 1.2 2003/06/24 08:24:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.1-r1.ebuild,v 1.3 2003/09/06 01:54:09 msterret Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ src_compile() {
 	else
 		myuse="${myuse} use_ssl=n"
 	fi
-	
+
 	if use gpm &>/dev/null; then
 		myuse="${myuse} use_mouse=y"
 	else
@@ -70,12 +70,12 @@ src_compile() {
 	grep -q "dcc='gcc'" config.param || \
 		die "configure out of sync; ebuild needs an update"
 
-	# binary executables come prebuilt for 80386! 
+	# binary executables come prebuilt for 80386!
 	# clean it up and be sure to remake for ANY arch
 	cd ${S}/gc
 	make clean
 	cd -
-	
+
 	emake || die "emake failed"
 }
 

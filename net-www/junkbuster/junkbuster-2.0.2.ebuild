@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/junkbuster/junkbuster-2.0.2.ebuild,v 1.9 2003/02/13 15:35:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/junkbuster/junkbuster-2.0.2.ebuild,v 1.10 2003/09/06 01:54:08 msterret Exp $
 
 S=${WORKDIR}/ijb20
 DESCRIPTION="Filtering HTTP proxy"
@@ -29,11 +29,11 @@ src_install () {
 	dodir /etc/junkbuster
 	insinto /etc/junkbuster
 	doins blocklist config cookiefile forward imagelist
-	
+
 	dohtml gpl.html ijbman.html ijbfaq.html
 	dodoc README README.TOO README.WIN squid.txt
-	
+
 	doman junkbuster.1
-	
+
 	dodir /var/log/junkbuster
 }

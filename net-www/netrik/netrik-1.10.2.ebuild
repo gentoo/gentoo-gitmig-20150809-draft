@@ -12,18 +12,17 @@ DEPENDS=">=sys-libs/ncurses-5.1
 		 nls? ( sys-devel/gettext )"
 
 src_unpack() {
- unpack ${A} || die
- }
+	unpack ${A} || die
+}
 
 src_compile() {
- local myconf
- econf \
- 	--prefix=/usr || die "Configure failed"
-	emake || die "Compile problem"
+	local myconf
+	econf \
+		--prefix=/usr || die "Configure failed"
+		emake || die "Compile problem"
 }
 
 src_install() {
 	make prefix=${D}/usr datadir=${D}/usr/share mandir=${D}/usr/share/man libdir=${D} install \
 	|| die "Unablr to do install"
 }
-	

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.1-r1.ebuild,v 1.1 2003/07/11 04:25:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.1-r1.ebuild,v 1.2 2003/09/06 01:54:08 msterret Exp $
 
 MY_P="${P}-src"
 
@@ -58,11 +58,11 @@ src_install() {
 	# We probably should not do this, because a wide variety of tools
 	# assume everything under a common JBoss file system.
 
- 	einfo ">>> Installing client libraries..."
- 	local dirs="build/output/${PN}-${PV}/client/*"
- 	for i in $dirs ; do
- 		dojar $i
- 	done
+	einfo ">>> Installing client libraries..."
+	local dirs="build/output/${PN}-${PV}/client/*"
+	for i in $dirs ; do
+		dojar $i
+	done
 
 	einfo ">>> Setting up documentation..."
 	dodoc server/src/docs/LICENSE.txt ${FILESDIR}/README.gentoo

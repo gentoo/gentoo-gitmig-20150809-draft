@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.8 2003/04/06 08:52:22 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.9 2003/09/06 01:54:09 msterret Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -40,7 +40,7 @@ pkg_setup() {
 }
 
 src_install() {
-	
+
 	# CREATE DIRECTORIES
 	DIROPTIONS="--mode=0775 --owner=orion --group=orion"
 	dodir /opt/${PN}
@@ -55,7 +55,7 @@ src_install() {
 	insopts -o orion -g orion -m0750
 	doins ${FILESDIR}/${PV}/start_orion.sh
 	doins ${FILESDIR}/${PV}/stop_orion.sh
-	
+
 	cp -a ${FILESDIR}/${PV}/orion.init ${S}/orion
 	insinto /etc/init.d
 	insopts -m0750
@@ -80,7 +80,7 @@ src_install() {
 		cp -a ${i} ${D}/opt/${PN}/
 		chown -R orion.orion ${D}/opt/${PN}/${i}
 	done
-	
+
 	# INSTALL APP CONFIG
 	cd ${S}/config
 	local dirs="application.xml data-sources.xml database-schemas default-web-site.xml global-web-application.xml jms.xml mime.types principals.xml rmi.xml server.xml"
@@ -88,16 +88,16 @@ src_install() {
 		cp -a ${i} ${D}/opt/${PN}/config
 		chown -R orion.orion ${D}/opt/${PN}/config/${i}
 	done
-	
+
 	# INSTALL JARS
 	cd ${S}
 	for i in `ls *.jar` ; do
 		dojar $i
 	done
-	
+
 	# LINK IN SDK TOOLS.JAR
 	ln -s ${JAVA_HOME}/lib/tools.jar ${D}/usr/share/${PN}/lib/tools.jar
-	
+
 	# INSTALL DOCS
 	dodoc Readme.txt changes.txt
 }
@@ -144,6 +144,5 @@ pkg_postinst() {
 	einfo " may not get seen.  Thank you."
 	einfo " "
 	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-        sleep 10
-
+	sleep 10
 }

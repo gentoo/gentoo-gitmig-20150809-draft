@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12.ebuild,v 1.2 2003/06/08 05:21:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12.ebuild,v 1.3 2003/09/06 01:54:09 msterret Exp $
 #
 # 1. static       # Statically linked libraries, default.
 # 2. shared-2.95  # Dynamically linked libaries, compiled with gcc 2.95.
@@ -97,7 +97,7 @@ src_install() {
 	insinto /usr/share/icons /etc/X11/wmconfig /etc/X11/applnk/Internet \
 		/usr/share/pixmaps
 	doins images/opera.xpm
-	
+
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
 	dosym /opt/opera/bin/opera /usr/bin/opera

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4.1c.ebuild,v 1.9 2003/02/13 15:36:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4.1c.ebuild,v 1.10 2003/09/06 01:54:08 msterret Exp $
 
 IUSE="ssl nls ipv6"
 
@@ -72,7 +72,7 @@ src_install() {
 	docinto lynx_help
 	dodoc lynx_help/*.txt
 	dohtml -r lynx_help
-	
+
 	# small little manpage glitch
 	rm ${D}/usr/share/man/lynx.1
 	newman lynx.man lynx.1

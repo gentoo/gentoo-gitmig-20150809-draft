@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/resin/resin-2.1.9.ebuild,v 1.4 2003/07/13 21:44:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/resin/resin-2.1.9.ebuild,v 1.5 2003/09/06 01:54:09 msterret Exp $
 
 inherit java-pkg
 
@@ -25,44 +25,44 @@ pkg_setup() {
 
 src_compile() {
 	epatch ${FILESDIR}/${PV}/${PN}.diff
-} 
+}
 
 src_install() {
 	cd ${S}
 	RESIN_HOME="/opt/resin"
 	INSTALLING="yes"
 	DIROPTIONS="--mode=0775 --owner=resin --group=resin"
-	
+
 	# Create directories
 	dodir ${RESIN_HOME}
 	dodir /var/log/${PN}
 	dosym /var/log/${PN} ${RESIN_HOME}/logs
 	touch ${D}/var/log/${PN}/.keep
-	
+
 	# INIT SCRIPTS AND ENV
-	
+
 	cp -a ${FILESDIR}/${PV}/resin.init ${S}/resin
 	insinto /etc/init.d
 	insopts -m0750
 	doins ${S}/resin
-	
+
 	cp -a ${FILESDIR}/${PV}/resin.conf ${S}/resin
 	insinto /etc/conf.d
 	insopts -m0755
 	doins ${S}/resin
-	
+
 	cp -a ${FILESDIR}/${PV}/21resin ${S}/21resin
 	insinto /etc/env.d
 	insopts -m0755
 	doins ${S}/21resin
-	
+
 	chown -R resin.resin ${S}
-	
+
 	dodir /opt/resin || die
 	dodoc LICENSE readme.txt
-	
+
 	java-pkg_dojar lib/*.jar
-	
+
 	cp -Rdp \
 		bin \
 		doc \
@@ -70,9 +70,9 @@ src_install() {
 		contrib \
 		webapps \
 		xsl \
-	${D}${RESIN_HOME} || die  
+	${D}${RESIN_HOME} || die
 	dosym /usr/share/${PN}/lib ${RESIN_HOME}/lib
-	
+
 	dodir /etc/env.d
 	insinto /etc/env.d
 	doins ${FILESDIR}/${PV}/21resin
@@ -116,8 +116,7 @@ pkg_postinst() {
 	einfo " may not get seen.  Thank you."
 	einfo " "
 	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-        sleep 10
-
+	sleep 10
 }
 
 pkg_postrm() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.0.6.ebuild,v 1.2 2003/03/26 12:24:10 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.0.6.ebuild,v 1.3 2003/09/06 01:54:08 msterret Exp $
 
 MY_P="jboss-3.0.6-src"
 S=${WORKDIR}/${MY_P}
@@ -62,7 +62,7 @@ src_install() {
 	local dirs="build/output/${PN}-${PV}/server build/output/${PN}-${PV}/lib"
 	for i in $dirs ; do
 	 	cp -a $i ${D}/${INSTALL_DIR}/
-        done
+	done
 	cp ${FILESDIR}/log4j.xml ${D}/${INSTALL_DIR}/server/all/conf
 	cp ${FILESDIR}/log4j.xml ${D}/${INSTALL_DIR}/server/default/conf
 	cp ${FILESDIR}/log4j.xml ${D}/${INSTALL_DIR}/server/minimal/conf
@@ -75,7 +75,7 @@ src_install() {
 
 	einfo ">>> Setting up documentation..."
 	dodoc build/output/${PN}-${PV}/docs/LICENSE.txt ${FILESDIR}/README.gentoo
-	if [ -n "`use doc`" ] ; then	
+	if [ -n "`use doc`" ] ; then
 		dohtml -a html,htm,png,gif,css,java -r build/output/${PN}-${PV}/docs/
 	fi
 

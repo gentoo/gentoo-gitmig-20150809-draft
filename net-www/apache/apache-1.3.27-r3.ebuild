@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r3.ebuild,v 1.5 2003/08/25 19:16:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r3.ebuild,v 1.6 2003/09/06 01:54:08 msterret Exp $
 
 mod_ssl_ver=2.8.14-${PV}
 
@@ -172,16 +172,15 @@ src_install() {
 	insinto /etc/apache/conf
 	doins ${FILESDIR}/conf/commonapache.conf
 	doins ${FILESDIR}/conf/apache.conf
-	
-        # Added by Jason Wever <weeve@gentoo.org>
-        # A little sedfu to fix bug #7172 for sparc64s
-        if [ ${ARCH} = "sparc" ]
-        then
-                sed -i -e '15a\AcceptMutex fcntl' \
-                        ${D}/etc/apache/conf/apache.conf
-        fi
-	
-			
+
+	# Added by Jason Wever <weeve@gentoo.org>
+	# A little sedfu to fix bug #7172 for sparc64s
+	if [ ${ARCH} = "sparc" ]
+	then
+		sed -i -e '15a\AcceptMutex fcntl' \
+			${D}/etc/apache/conf/apache.conf
+	fi
+
 	insinto /etc/apache/conf/vhosts
 	doins ${FILESDIR}/conf/VirtualHomePages.conf
 	doins ${FILESDIR}/conf/DynamicVhosts.conf

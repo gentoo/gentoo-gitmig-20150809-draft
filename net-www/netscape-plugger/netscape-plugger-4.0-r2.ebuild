@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-4.0-r2.ebuild,v 1.4 2003/07/13 21:44:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-4.0-r2.ebuild,v 1.5 2003/09/06 01:54:09 msterret Exp $
 
 inherit nsplugins
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc"
 IUSE=""
 
-src_install() {                               
+src_install() {
 	cd ${S}
 	dodir /opt/netscape/plugins /etc
 	insinto /opt/netscape/plugins
@@ -29,6 +29,6 @@ src_install() {
 	dosym plugger-4.0 /usr/bin/plugger
 
 	inst_plugin /opt/netscape/plugins/plugger.so
- 	
+
 	dodoc README
 }

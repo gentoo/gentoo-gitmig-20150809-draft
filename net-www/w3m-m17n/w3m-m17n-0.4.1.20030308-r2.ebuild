@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.1.20030308-r2.ebuild,v 1.1 2003/08/21 17:56:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.1.20030308-r2.ebuild,v 1.2 2003/09/06 01:54:09 msterret Exp $
 
 IUSE="gpm imlib ssl"
 
@@ -55,7 +55,7 @@ src_compile() {
 	else
 		myuse="${myuse} use_ssl=no"
 	fi
-	
+
 	if [ -n "`use gpm`" ] ; then
 		myuse="${myuse} use_mouse=y"
 	else

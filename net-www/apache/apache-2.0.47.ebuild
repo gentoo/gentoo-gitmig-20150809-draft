@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.47.ebuild,v 1.7 2003/08/25 19:16:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.47.ebuild,v 1.8 2003/09/06 01:54:08 msterret Exp $
 
 inherit flag-o-matic
 has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -282,14 +282,13 @@ src_install () {
 	doins ${FILESDIR}/2.0.40/dynamic-vhosts.conf
 	doins ${FILESDIR}/2.0.40/vhosts.conf
 
-        # Added by Jason Wever <weeve@gentoo.org>
-        # A little sedfu to fix bug #7172 for sparc64s
-        if [ ${ARCH} = "sparc" ]
-        then
-                sed -i -e '13a\AcceptMutex fcntl' \
-                        ${D}/etc/apache2/conf/apache2.conf
-        fi
-
+	# Added by Jason Wever <weeve@gentoo.org>
+	# A little sedfu to fix bug #7172 for sparc64s
+	if [ ${ARCH} = "sparc" ]
+	then
+		sed -i -e '13a\AcceptMutex fcntl' \
+			${D}/etc/apache2/conf/apache2.conf
+	fi
 }
 
 parse_modules_config() {

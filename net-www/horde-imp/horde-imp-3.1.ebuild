@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.1.ebuild,v 1.4 2003/02/13 15:34:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.1.ebuild,v 1.5 2003/09/06 01:54:08 msterret Exp $
 
 DESCRIPTION="IMP provides webmail access"
 HOMEPAGE="http://www.horde.org"
@@ -43,7 +43,7 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	# detecting apache usergroup
 	# FIXME: With time, apache's GID should be static
 	GID=`grep apache /etc/group |cut -d: -f3`

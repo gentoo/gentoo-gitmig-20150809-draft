@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3-r6.ebuild,v 1.8 2003/02/13 15:45:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3-r6.ebuild,v 1.9 2003/09/06 01:54:09 msterret Exp $
 
 IUSE="gpm cjk imlib ssl"
 
@@ -45,24 +45,24 @@ src_compile() {
 		# Do you want to use Lynx-like key binding?
 		echo n
 		# Let's do some configurations. Choose config option among the list.
-		# 
+		#
 		# 1 - Baby model    (no color, no menu, no mouse, no cookie, no SSL)
 		# 2 - Little model  (color, menu, no mouse, no cookie, no SSL)
 		# 3 - Mouse model   (color, menu, mouse, no cookie, no SSL)
 		# 4 - Cookie model  (color, menu, mouse, cookie, no SSL)
 		# 5 - Monster model (with everything; you need openSSL library)
 		# 6 - Customize
-		# 
+		#
 		# Which?
 		echo 6
 		# Do you want color ESC sequence for Kterm/pxvt
 		echo y
-		# Use mouse (requires xterm/kterm/gpm/sysmouse) 
+		# Use mouse (requires xterm/kterm/gpm/sysmouse)
 		echo y
 		# Use popup menu
 		echo y
-		# Use cookie 
-		echo y		
+		# Use cookie
+		echo y
 		# Do you want SSL verification support?
 		# (Your SSL library must be version 0.8 or later)
 		use ssl &>/dev/null && echo y || echo n
@@ -70,24 +70,24 @@ src_compile() {
 		use ssl &>/dev/null && echo n
 		# (ssl) Digest Auth support [y]?
 		use ssl &>/dev/null && echo y
-		# Inline image support (you need Imlib library) [n]? 
+		# Inline image support (you need Imlib library) [n]?
 		use imlib &>/dev/null && echo y || echo n
-		# ANSI color escape sequences support [n]? 
+		# ANSI color escape sequences support [n]?
 		echo y
 		# Use Migemo (Roma-ji search; Please see
-		# http://migemo.namazu.org/) [n]? 
+		# http://migemo.namazu.org/) [n]?
 		echo n
-		# External URI loader support [y]? 
+		# External URI loader support [y]?
 		echo y
-		# Use w3mmail.cgi [y]? 
+		# Use w3mmail.cgi [y]?
 		echo y
-		# NNTP support [y]? 
+		# NNTP support [y]?
 		echo n
-		# Gopher support [y]? 
+		# Gopher support [y]?
 		echo n
-		# Use alarm support code [y]? 
+		# Use alarm support code [y]?
 		echo y
-		# Use mark operation [y]? 
+		# Use mark operation [y]?
 		echo y
 		# Input your favorite editor program.
 		echo /usr/bin/vi
@@ -102,17 +102,17 @@ src_compile() {
 		echo
 		#printf "%s\n" "-lncurses"
 		# Input additional LD flags other than listed above, if any:
-		# (default: -lncurses) : 
+		# (default: -lncurses) :
 		echo
 	) | ./configure || die "configure failed"
 
-	# binary executables come prebuilt for 80386! 
+	# binary executables come prebuilt for 80386!
 	# clean it up and be sure to remake for ANY arch
 
 	cd ${S}/gc
 	make clean
 	cd -
-	
+
 	emake || die "emake failed"
 }
 

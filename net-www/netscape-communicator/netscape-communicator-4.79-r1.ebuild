@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/netscape-communicator-4.79-r1.ebuild,v 1.10 2003/03/02 04:33:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/netscape-communicator-4.79-r1.ebuild,v 1.11 2003/09/06 01:54:09 msterret Exp $
 
 S=${WORKDIR}/communicator-v479.x86-unknown-linux2.2
 DESCRIPTION="Netscape Communicator 4.79"
@@ -21,17 +21,17 @@ src_install() {
 	dodir /usr/X11R6/bin
 	dodoc README.install
 	cd ${D}/opt/netscape
-	
+
 	tar xz --no-same-owner -f ${S}/netscape-v479.nif
 	tar xz --no-same-owner -f ${S}/nethelp-v479.nif
 	tar xz --no-same-owner -f ${S}/spellchk-v479.nif
-	
+
 	cp ${S}/*.jar ${D}/opt/netscape/java/classes
 	cp ${FILESDIR}/netscape ${D}/usr/X11R6/bin/netscape
 	rm ${D}/opt/netscape/netscape-dynMotif
 	rm ${D}/opt/netscape/libnullplugin-dynMotif.so
 	rm ${D}/opt/netscape/plugins/libflashplayer.so
 	insinto /usr/X11R6/bin
-	doins ${FILESDIR}/netscape 
+	doins ${FILESDIR}/netscape
 	chmod +x ${D}/usr/X11R6/bin/netscape
 }

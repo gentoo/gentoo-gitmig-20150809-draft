@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r3.ebuild,v 1.9 2003/08/03 04:23:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r3.ebuild,v 1.10 2003/09/06 01:54:08 msterret Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg debug"
 
@@ -88,7 +88,7 @@ export BUILD_OFFICIAL=1
 
 
 src_unpack() {
-	
+
 	unpack ${A}
 
 	if [ "$(gcc-version)" != "2.95" ] ; then
@@ -130,8 +130,8 @@ src_unpack() {
 	# can break compiles (has done for ).  See:
 	# http://bugzilla.mozilla.org/show_bug.cgi?id=174143
 	cd ${S}; epatch ${FILESDIR}/${P}-platform.patch
-	
-	# Do bulk patches included in ${P}-patches-${PATCH_VER}.tar.bz2 
+
+	# Do bulk patches included in ${P}-patches-${PATCH_VER}.tar.bz2
 	cd ${S}; epatch ${WORKDIR}/patch
 
 	# Unpack the enigmail plugin
@@ -192,7 +192,7 @@ src_compile() {
 
 	# NB!!:  Due to the fact that the non default extensions do not always
 	#        compile properly, using them is considered unsupported, and
-	#        is just here for completeness.  Please do not use if you 
+	#        is just here for completeness.  Please do not use if you
 	#        do not know what you are doing!
 	#
 	# The defaults are (as of 1.0rc1, according to configure (line ~10799)):
@@ -222,13 +222,13 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-svg"
 	fi
-	
+
 	if [ -n "`use moznomail`" ] || \
 	   [ "${NO_MAIL}" = "YES" -o "${NO_MAIL}" = "yes" ]
 	then
 		myconf="${myconf} --disable-mailnews"
 	fi
-	
+
 	export BUILD_MODULES=all
 	export BUILD_OPT=1
 
@@ -246,10 +246,10 @@ src_compile() {
 
 	export WANT_AUTOCONF_2_1=1
 	autoconf
-	
+
 	#This should enable parallel builds, I hope
 	export MAKE="emake"
-	
+
 	# Get it to work without warnings on gcc3
 	CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 
@@ -277,7 +277,7 @@ src_compile() {
 	# Build the NSS/SSL support
 	if [ "`use ssl`" ] ; then
 		cd ${S}/security/coreconf
-		
+
 		# Fix #include problem
 		cp headers.mk headers.mk.orig
 		echo 'INCLUDES += -I$(DIST)/include/nspr -I$(DIST)/include/dbm'\
@@ -287,7 +287,7 @@ src_compile() {
 		make MAKE="make" || die
 
 		cd ${S}/security/nss
-		
+
 		# Disable jobserver here ...
 		make MAKE="make" moz_import || die
 		make MAKE="make" || die
@@ -417,7 +417,7 @@ pkg_preinst() {
 	fi
 
 	# Remove stale component registry.
-    if [ -e ${ROOT}/usr/lib/component.reg ] ; then
+	if [ -e ${ROOT}/usr/lib/component.reg ] ; then
 		rm -f ${ROOT}/usr/lib/component.reg
 	fi
 
@@ -436,7 +436,7 @@ pkg_postinst() {
 		if [ -e `java-config --full-browser-plugin-path=mozilla` ]
 		then
 			ln -snf `java-config --full-browser-plugin-path=mozilla` \
-				${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` 
+				${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla`
 		fi
 	fi
 
@@ -462,7 +462,7 @@ pkg_postinst() {
 		rm -f ${MOZILLA_FIVE_HOME}/components/libtimer_gtk.so
 	fi
 
-	# Needed to update the run time bindings for REGXPCOM 
+	# Needed to update the run time bindings for REGXPCOM
 	# (do not remove next line!)
 	env-update
 	# Register components, setup Chrome .rdf files and fix file permissions
@@ -493,9 +493,9 @@ pkg_postrm() {
 
 	# Regenerate component.reg in case some things changed
 	if [ -e ${ROOT}/usr/lib/mozilla/regxpcom ] ; then
-	
+
 		export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
-	
+
 		if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
 			rm -f ${MOZILLA_FIVE_HOME}/component.reg
 		fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.0.1_rc1.ebuild,v 1.5 2003/02/28 16:55:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.0.1_rc1.ebuild,v 1.6 2003/09/06 01:54:08 msterret Exp $
 
 MY_P="jboss-3.0.1RC1-src"
 S=${WORKDIR}/${MY_P}
@@ -55,7 +55,7 @@ src_install() {
 	local dirs="build/output/jboss-3.0.1RC1/server build/output/jboss-3.0.1RC1/lib"
 	for i in $dirs ; do
 	 	cp -a $i ${D}/${INSTALL_DIR}/
-        done
+	done
 	cp ${FILESDIR}/log4j.xml ${D}/${INSTALL_DIR}/server/all/conf
 	cp ${FILESDIR}/log4j.xml ${D}/${INSTALL_DIR}/server/default/conf
 	cp ${FILESDIR}/log4j.xml ${D}/${INSTALL_DIR}/server/minimal/conf

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r1.ebuild,v 1.4 2003/08/03 04:23:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r1.ebuild,v 1.5 2003/09/06 01:54:08 msterret Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -117,7 +117,7 @@ moz_setup() {
 src_unpack() {
 
 	moz_setup
-	
+
 	unpack ${A}
 
 	cd ${S}
@@ -244,7 +244,7 @@ src_compile() {
 
 	# NB!!:  Due to the fact that the non default extensions do not always
 	#        compile properly, using them is considered unsupported, and
-	#        is just here for completeness.  Please do not use if you 
+	#        is just here for completeness.  Please do not use if you
 	#        do not know what you are doing!
 	#
 	# The defaults are (as of 1.2, according to configure (line ~11445)):
@@ -282,7 +282,7 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-calendar"
 	fi
-	
+
 	if [ -n "`use moznomail`" ]
 	then
 		myconf="${myconf} --disable-mailnews"
@@ -291,7 +291,7 @@ src_compile() {
 	then
 		myconf="${myconf} --disable-composer"
 	fi
-	
+
 	if [ "$(gcc-major-version)" -eq "3" ]
 	then
 		# Currently gcc-3.2 or older do not work well if we specify "-march"
@@ -300,7 +300,7 @@ src_compile() {
 			replace-flags -march=pentium4 -march=pentium3
 			filter-flags -msse2
 		fi
-								
+
 		# Enable us to use flash, etc plugins compiled with gcc-2.95.3
 		if [ "${ARCH}" = "x86" ]
 		then
@@ -320,10 +320,10 @@ src_compile() {
 	#  Configure and build Mozilla
 	#
 	# *********************************************************************
-	
+
 	export BUILD_MODULES=all
 	export BUILD_OPT=1
-	
+
 	# Get it to work without warnings on gcc3
 	export CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 
@@ -358,7 +358,7 @@ src_compile() {
 	then
 		einfo "Building Mozilla NSS..."
 		cd ${S}/security/coreconf
-		
+
 		# Fix #include problem
 		cp headers.mk headers.mk.orig
 		echo 'INCLUDES += -I$(DIST)/include/nspr -I$(DIST)/include/dbm'\
@@ -368,7 +368,7 @@ src_compile() {
 		make MAKE="make" || die
 
 		cd ${S}/security/nss
-		
+
 		# Disable jobserver here ...
 		make MAKE="make" moz_import || die
 		make MAKE="make" || die
@@ -530,7 +530,7 @@ pkg_preinst() {
 	fi
 
 	# Remove stale component registry.
-    if [ -e ${ROOT}/usr/lib/mozilla/component.reg ]
+	if [ -e ${ROOT}/usr/lib/mozilla/component.reg ]
 	then
 		rm -f ${ROOT}/usr/lib/mozilla/component.reg
 	fi
@@ -550,7 +550,7 @@ pkg_postinst() {
 
 	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
 
-	# Needed to update the run time bindings for REGXPCOM 
+	# Needed to update the run time bindings for REGXPCOM
 	# (do not remove next line!)
 	env-update
 	# Register Components and Chrome
@@ -577,7 +577,7 @@ pkg_postrm() {
 	if [ -e ${ROOT}/usr/lib/mozilla/regxpcom ]
 	then
 		export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
-	
+
 		if [ -x "${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl" ]
 		then
 			${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl

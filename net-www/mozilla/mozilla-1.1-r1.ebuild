@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.18 2003/08/03 04:23:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.19 2003/09/06 01:54:08 msterret Exp $
 
 IUSE="moznomail java mozp3p crypt ldap gtk2 mozinterfaceinfo ssl mozaccess mozxmlterm mozctl gnome mozsvg debug"
 
@@ -83,7 +83,7 @@ export BUILD_OFFICIAL=1
 
 
 src_unpack() {
-	
+
 	unpack ${A}
 
 	cd ${S}
@@ -163,7 +163,7 @@ src_compile() {
 
 	# NB!!:  Due to the fact that the non default extensions do not always
 	#        compile properly, using them is considered unsupported, and
-	#        is just here for completeness.  Please do not use if you 
+	#        is just here for completeness.  Please do not use if you
 	#        do not know what you are doing!
 	#
 	# The defaults are (as of 1.0rc1, according to configure (line ~10799)):
@@ -193,13 +193,13 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-svg"
 	fi
-	
+
 	if [ -n "`use moznomail`" ] || \
 	   [ "${NO_MAIL}" = "YES" ] || [ "${NO_MAIL}" = "yes" ]
 	then
 		myconf="${myconf} --disable-mailnews"
 	fi
-	
+
 	export BUILD_MODULES=all
 	export BUILD_OPT=1
 
@@ -213,10 +213,10 @@ src_compile() {
 		# Enable us to use flash, etc plugins compiled with gcc-2.95.3
 		myconf="${myconf} --enable-old-abi-compat-wrappers"
 	fi
-	
+
 	#This should enable parallel builds, I hope
 	export MAKE="emake"
-		
+
 	# Crashes on start when compiled with -fomit-frame-pointer
 	CFLAGS="${CFLAGS/-fomit-frame-pointer}"
 	CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer} -Wno-deprecated"
@@ -245,7 +245,7 @@ src_compile() {
 	# Build the NSS/SSL support
 	if [ "`use ssl`" ] ; then
 		cd ${S}/security/coreconf
-		
+
 		# Fix #include problem
 		cp headers.mk headers.mk.orig
 		echo 'INCLUDES += -I$(DIST)/include/nspr -I$(DIST)/include/dbm'\
@@ -254,7 +254,7 @@ src_compile() {
 		make || die
 
 		cd ${S}/security/nss
-		
+
 		make moz_import || die
 		make || die
 		cd ${S}
@@ -388,7 +388,7 @@ pkg_preinst() {
 	fi
 
 	# Remove stale component registry.
-    if [ -e ${ROOT}/usr/lib/component.reg ] ; then
+	if [ -e ${ROOT}/usr/lib/component.reg ] ; then
 		rm -f ${ROOT}/usr/lib/component.reg
 	fi
 
@@ -414,7 +414,7 @@ pkg_postinst() {
 		if [ -e `java-config --full-browser-plugin-path=mozilla` ]
 		then
 			ln -sf `java-config --full-browser-plugin-path=mozilla` \
-				${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` 
+				${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla`
 		fi
 	fi
 
@@ -441,7 +441,7 @@ pkg_postinst() {
 		rm -f ${MOZILLA_FIVE_HOME}/components/libtimer_gtk.so
 	fi
 
-	# Needed to update the run time bindings for REGXPCOM 
+	# Needed to update the run time bindings for REGXPCOM
 	# (do not remove next line!)
 	env-update
 	# Register components, setup Chrome .rdf files and fix file permissions
@@ -476,9 +476,9 @@ pkg_postrm() {
 
 	# Regenerate component.reg in case some things changed
 	if [ -e ${ROOT}/usr/lib/mozilla/regxpcom ] ; then
-	
+
 		export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
-	
+
 		if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
 			rm -f ${MOZILLA_FIVE_HOME}/component.reg
 		fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/viewcvs-0.9.2_p20030430.ebuild,v 1.3 2003/07/13 21:44:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/viewcvs-0.9.2_p20030430.ebuild,v 1.4 2003/09/06 01:54:09 msterret Exp $
 
 SLOT="0"
 KEYWORDS="x86"
@@ -36,14 +36,14 @@ doinstall() {
 		s,\(<VIEWCVS_INSTALL_DIRECTORY>\),${WWW},; \
 		s,\(^LIBRARY_DIR\)\(.*\$\),\1 = \"${WWW}/lib\",; \
 		s,\(^CONF_PATHNAME\)\(.*\$\),\1 = \"${CONFFILE}\",}" ${1} >${1}.cpy
-	
+
 		install -o root -m $3 ${1}.cpy ${D}/$2
 		rm ${1}.cpy
 	fi
-}	
+}
 
 src_install() {
-        cd ${S}
+	cd ${S}
 	install -o root -d ${D}/${WWW}/cgi
 
 	doinstall cgi/viewcvs.cgi ${WWW}/cgi/viewcvs.cgi 755

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.4.1.ebuild,v 1.6 2003/07/13 21:44:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.4.1.ebuild,v 1.7 2003/09/06 01:54:08 msterret Exp $
 
 DESCRIPTION="Advanced and well-established text-mode web browser"
 HOMEPAGE="http://elinks.or.cz"
@@ -51,7 +51,7 @@ src_compile() {
 		`use_enable ipv6` \
 		`use_with lua` \
 		--enable-leds || die "configure problem"
-		
+
 	emake || die "compile problem"
 }
 
@@ -63,7 +63,7 @@ src_install() {
 	doins ${WORKDIR}/elinks.conf
 	newins contrib/keybind-full.conf keybind-full.sample
 	newins contrib/keybind.conf keybind.conf.sample
-	
+
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SITES THANKS TODO doc/*.*
 	docinto contrib ; dodoc contrib/{README,completion.tcsh,colws.diff,elinks[-.]vim*}
 	docinto contrib/lua ; dodoc contrib/lua/{*.lua,elinks-remote}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-1.8.1.ebuild,v 1.2 2003/07/26 05:28:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-1.8.1.ebuild,v 1.3 2003/09/06 01:54:08 msterret Exp $
 
 inherit eutils
 
@@ -30,10 +30,10 @@ src_compile() {
 	local myconf=""
 	MAKEOPTS="-j1"
 
-	cd ${S}	
+	cd ${S}
 	for opt in ${IUSE}; do
-		use ${opt} && 
-			myconf="${myconf} --enable-${opt}" || 
+		use ${opt} &&
+			myconf="${myconf} --enable-${opt}" ||
 			myconf="$myconf --disable-${opt}"
 	done
 
@@ -60,7 +60,7 @@ src_install() {
 #	enewuser mman 8080
 #}
 
-pkg_postinst() { 
+pkg_postinst() {
 	#einfo "A mman user has been added to your system if one did not already exist"
 	einfo "-"
 	einfo "Note: init/conf scripts and a sample config has been provided for you."

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-4.0-r1.ebuild,v 1.11 2003/02/13 15:40:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-4.0-r1.ebuild,v 1.12 2003/09/06 01:54:09 msterret Exp $
 
 MYP=${P#netscape-}-linux-x86-glibc
 S=${WORKDIR}/plugger-4.0
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 -ppc sparc "
 LICENSE="GPL-2"
 
-src_install() {                               
+src_install() {
 	cd ${S}
 	dodir /opt/netscape/plugins /etc
 	insinto /opt/netscape/plugins
@@ -29,6 +29,6 @@ src_install() {
 		dosym /opt/netscape/plugins/plugger.so \
 			/usr/lib/mozilla/plugins/plugger.so
 	fi
- 	
+
 	dodoc README
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.ebuild,v 1.5 2003/03/30 21:53:11 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.ebuild,v 1.6 2003/09/06 01:54:09 msterret Exp $
 
 inherit eutils
 
@@ -63,24 +63,24 @@ src_compile() {
 		# Use Lynx-like key binding as default [n]?
 		echo n
 		# Let's do some configurations. Choose config option among the list.
-		# 
+		#
 		# 1 - Baby model    (no color, no menu, no mouse, no cookie, no SSL)
 		# 2 - Little model  (color, menu, no mouse, no cookie, no SSL)
 		# 3 - Mouse model   (color, menu, mouse, no cookie, no SSL)
 		# 4 - Cookie model  (color, menu, mouse, cookie, no SSL)
 		# 5 - Monster model (with everything; you need openSSL library)
 		# 6 - Customize
-		# 
+		#
 		# Which?
 		echo 6
 		# Do you want color ESC sequence for Kterm/pxvt
 		echo y
-		# Use mouse (requires xterm/kterm/gpm/sysmouse) 
+		# Use mouse (requires xterm/kterm/gpm/sysmouse)
 		use gpm &>/dev/null && echo y || echo n
 		# Use popup menu
 		echo y
-		# Use cookie 
-		echo y		
+		# Use cookie
+		echo y
 		# Do you want SSL verification support?
 		# (Your SSL library must be version 0.8 or later)
 		if use ssl &>/dev/null; then
@@ -96,32 +96,32 @@ src_compile() {
 		if use imlib &>/dev/null; then
 			echo y
 			# X11 inline image support (you need Imlib, Imlib2 or
-			# GdkPixbuf library) [y]? 
+			# GdkPixbuf library) [y]?
 			echo y
 			# Linux Framebuffer inline image support (you need Imlib2
-			# or GdkPixbuf) [n]? 
+			# or GdkPixbuf) [n]?
 			echo y
-			# setuid w3mimgdisplay to open /dev/fb0? [y]? 
+			# setuid w3mimgdisplay to open /dev/fb0? [y]?
 			echo n
 		else
 			echo n
 		fi
-		# ANSI color escape sequences support [n]? 
+		# ANSI color escape sequences support [n]?
 		echo y
 		# Use Migemo (Roma-ji search; Please see
-		# http://migemo.namazu.org/) [n]? 
+		# http://migemo.namazu.org/) [n]?
 		echo n
-		# External URI loader support [y]? 
+		# External URI loader support [y]?
 		echo y
-		# Use w3mmail.cgi [y]? 
+		# Use w3mmail.cgi [y]?
 		echo y
-		# NNTP support [y]? 
+		# NNTP support [y]?
 		echo n
-		# Gopher support [y]? 
+		# Gopher support [y]?
 		echo n
-		# Use alarm support code [y]? 
+		# Use alarm support code [y]?
 		echo y
-		# Use mark operation [y]? 
+		# Use mark operation [y]?
 		echo y
 		if use imlib &>/dev/null; then
 			# X-Face support (you need uncompface) [n]?
@@ -140,7 +140,7 @@ src_compile() {
 		echo
 		#printf "%s\n" "-lncurses"
 		# Input additional LD flags other than listed above, if any:
-		# (default: -lncurses) : 
+		# (default: -lncurses) :
 		echo
 	) | ./configure || die "configure failed"
 
@@ -148,12 +148,12 @@ src_compile() {
 	grep -q "dcc='gcc'" config.param || \
 		die "configure out of sync; ebuild needs an update"
 
-	# binary executables come prebuilt for 80386! 
+	# binary executables come prebuilt for 80386!
 	# clean it up and be sure to remake for ANY arch
 	cd ${S}/gc
 	make clean
 	cd -
-	
+
 	emake || die "emake failed"
 }
 

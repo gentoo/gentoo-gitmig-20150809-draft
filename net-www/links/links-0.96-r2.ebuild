@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-0.96-r2.ebuild,v 1.9 2003/02/13 15:36:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-0.96-r2.ebuild,v 1.10 2003/09/06 01:54:08 msterret Exp $
 
 IUSE="gpm ssl"
 
@@ -50,6 +50,6 @@ src_compile() {
 
 
 src_install() {
-    einstall
+	einstall
 	dodoc README SITES NEWS AUTHORS COPYING BUGS TODO Changelog
 }

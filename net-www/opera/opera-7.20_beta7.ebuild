@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.20_beta7.ebuild,v 1.1 2003/08/29 09:52:13 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.20_beta7.ebuild,v 1.2 2003/09/06 01:54:09 msterret Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
@@ -90,7 +90,7 @@ src_install() {
 	insinto /usr/share/icons /etc/X11/wmconfig /etc/X11/applnk/Internet \
 		/usr/share/pixmaps
 	doins images/opera.xpm
-	
+
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
 	dosym /opt/opera/bin/opera /usr/bin/opera

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r1.ebuild,v 1.1 2003/08/08 01:32:34 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r1.ebuild,v 1.2 2003/09/06 01:54:08 msterret Exp $
 
 inherit flag-o-matic
 
@@ -28,7 +28,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	
+
 	if [ "${DILLO_ICONSET}" = "kde" ]
 	then
 		ebegin "Using Konqueror style icon set"
@@ -68,11 +68,11 @@ src_compile() {
 src_install() {
 	dodir /etc  /usr/share/icons/${PN}
 	einstall
-	
+
 	dodoc AUTHORS COPYING ChangeLog* INSTALL README NEWS
 	docinto doc
 	dodoc doc/*.txt doc/README
-	
+
 	cp ${S2}/icons/*.png ${D}/usr/share/icons/${PN}
 }
 

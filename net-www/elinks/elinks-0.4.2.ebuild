@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.4.2.ebuild,v 1.3 2003/06/27 21:36:19 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.4.2.ebuild,v 1.4 2003/09/06 01:54:08 msterret Exp $
 
 IUSE="gpm zlib ssl ipv6 X nls lua"
 
@@ -36,7 +36,7 @@ RDEPEND="virtual/glibc
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
-	
+
 	mv ${P}.conf ${PN}.conf
 	if ! use nls; then
 		# Build with only english support
@@ -58,7 +58,7 @@ src_compile() {
 		`use_with X x` \
 		`use_enable ipv6` \
 		`use_with lua`
-		
+
 	emake || die "compile problem"
 }
 
@@ -70,7 +70,7 @@ src_install() {
 	doins ${WORKDIR}/elinks.conf
 	newins contrib/keybind-full.conf keybind-full.sample
 	newins contrib/keybind.conf keybind.conf.sample
-	
+
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SITES THANKS TODO doc/*.*
 	docinto contrib ; dodoc contrib/{README,completion.tcsh,colws.diff,elinks[-.]vim*}
 	docinto contrib/lua ; dodoc contrib/lua/{*.lua,elinks-remote}

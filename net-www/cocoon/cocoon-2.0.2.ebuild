@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.0.2.ebuild,v 1.10 2003/07/13 21:44:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.0.2.ebuild,v 1.11 2003/09/06 01:54:08 msterret Exp $
 
 A=cocoon-${PV}-src.tar.gz
 S=${WORKDIR}/${P}
@@ -64,7 +64,7 @@ src_compile() {
 		|| die
 }
 
-src_install() {                  
+src_install() {
 	dodir ${CATALINA_HOME}/webapps
 	insinto ${CATALINA_HOME}/webapps
 	doins ${S}/build/cocoon/cocoon.war
