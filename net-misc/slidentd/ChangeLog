@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/slidentd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.9 2004/05/13 14:31:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.10 2004/06/06 09:35:00 dragonheart Exp $
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> slidentd-1.0.0.ebuild:
+  QA - IUSE S=
 
   13 May 2004; David Holm <dholm@gentoo.org> slidentd-1.0.0.ebuild:
   Added to ~ppc.
