@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/files/shoutcast,v 1.2 2004/08/14 13:38:23 swegener Exp $
 
 depend() {
         need localmount
