@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/wml
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.10 2004/04/15 21:34:13 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.11 2004/04/19 15:24:06 dragonheart Exp $
+
+  20 Apr 2004; Daniel Black <dragonheart@gentoo.org> wml-2.0.9.ebuild:
+  QA - removed runtime dependance on autoconf and added number other dependancies
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> wml-2.0.9.ebuild:
   adding s390 keywords
