@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-3.8.ebuild,v 1.1 2002/12/09 19:04:04 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-3.8.ebuild,v 1.2 2002/12/14 07:17:29 lostlogic Exp $
 
 IUSE="build"
 
@@ -25,7 +25,7 @@ src_unpack() {
 	mv linux linux-${KV} || die
 
 	unpack linux-${KV}-patchset.tar.bz2
-	cd ${KV}-patchset
+	cd linux-${KV}-patchset
 
 	kernel_src_unpack
 
