@@ -69,3 +69,5 @@ mono
 
 # need to wait for it jrockit to go stable
 java
+
+emboss

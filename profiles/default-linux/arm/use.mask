@@ -52,3 +52,5 @@ howl
 lirc
 jack
 afs
+
+emboss
