@@ -26,7 +26,7 @@
 dev-python/pycrypto
 
 # <lostlogic@gentoo.org> (03 Sep 2002)
-# New xfs-sources, please test.
+# New gentoo-sources, please test.
 =sys-kernel/gentoo-sources-2.4.19-r9
 
 # <george@gentoo.org> (03 Sep 2002)
