@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.10.ebuild,v 1.4 2004/08/12 12:54:18 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.10.ebuild,v 1.5 2004/08/30 19:10:36 kugelfang Exp $
 
 inherit flag-o-matic
 
@@ -17,11 +17,14 @@ DEPEND="virtual/libc
 	dev-libs/gmp
 	!<dev-libs/lsh-1.4.3-r1"
 
-src_compile() {
-	use amd64 && append-flags -fPIC
-	econf || die
-	emake || die
-}
+#src_compile() {
+	# Not necessary anymore
+	# BUG #55238
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/08/30
+	# use amd64 && append-flags -fPIC
+	# econf || die
+	# emake || die
+#}
 
 
 src_install() {
