@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/jfbterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.16 2004/05/05 13:31:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.17 2004/05/30 06:16:48 usata Exp $
+
+*jfbterm-0.4.6 (30 May 2004)
+
+  30 May 2004; Mamoru KOMACHI <usata@gentoo.org> jfbterm-0.4.5.ebuild,
+  jfbterm-0.4.6.ebuild:
+  Version bumped. Marked 0.4.5 stable on ppc
 
   05 May 2004; Mamoru KOMACHI <usata@gentoo.org> jfbterm-0.3.12.ebuild,
   jfbterm-0.3.16.ebuild, files/jfbterm.conf.extra, files/jfbterm.conf.xfree:
