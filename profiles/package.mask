@@ -1,6 +1,7 @@
 >=sys-apps/bash-2.05
 >=sys-devel/gcc-2.96
 >=sys-libs/readline-4.2
+>=sys-libs/glibc-2.2.3
 >sys-devel/automake-1.4-r2
 app-admin/powertweak
 app-admin/va-systemimager-server
