@@ -1,6 +1,7 @@
 MD5 648a541494aceee26dbcfd76164f37ea metadata.xml 157
 MD5 55fee7b83f4be8f4c3eda525b2f4614b lablgl-0.97.ebuild 1100
 MD5 72fa591c7d3106356f08d13730c4ea05 ChangeLog 2455
+MD5 56830e6ef23cdf12790c7cac22c3c183 lablgl-1.00.ebuild 1936
 MD5 1b082f4db0678bfb9b1b54cfe41470e2 lablgl-0.98.ebuild 1757
 MD5 c43d56bd957cec6f22e4a01d27e98f06 lablgl-0.99.ebuild 1853
 MD5 56830e6ef23cdf12790c7cac22c3c183 lablgl-0.99-r1.ebuild 1936
@@ -11,4 +12,5 @@ MD5 e3f4fb9b86db4b15b2a117e604d4c43e files/digest-lablgl-0.99 210
 MD5 904f1e50c4866c5810ed0ddfe6eacb16 files/digest-lablgl-0.98 63
 MD5 7b95aa62137ce4a457a8603803892bcd files/LablGL-0.97-Makefile.config 1422
 MD5 7b95aa62137ce4a457a8603803892bcd files/LablGL-0.98-Makefile.config 1422
+MD5 e70e3957c7832b0cce13db8cd8b33272 files/digest-lablgl-1.00 210
 MD5 e3f4fb9b86db4b15b2a117e604d4c43e files/digest-lablgl-0.99-r1 210

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.10 2004/02/03 01:22:40 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.11 2004/02/06 03:33:08 mattam Exp $
+
+*lablgl-1.00 (06 Feb 2004)
+
+  06 Feb 2004; Matthieu Sozeau <mattam@gentoo.org> lablgl-1.00.ebuild,
+  files/lablgl-1.00-Makefile.config:
+  Version bump, added local glut use flag and optional documentation (examples).
 
 *lablgl-0.99-r1 (03 Feb 2004)
 
