@@ -1,27 +1,34 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.2 2003/02/13 13:14:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.3 2003/03/10 11:53:20 seemant Exp $
+
+inherit flag-o-matic
 
 IUSE="gtk"
 DESCRIPTION="LAME Ain't an Mp3 Encoder"
-SRC_URI="mirror://sourceforge/lame/${P}.tar.gz"
 HOMEPAGE="http://www.mp3dev.org/mp3/"
-DEPEND="virtual/glibc
-	x86? ( dev-lang/nasm )
-	>=sys-libs/ncurses-5.2
-	gtk? ( =x11-libs/gtk+-1.2* )"
-# this release completely removed oggvorbis support as it was too outdated.
-RDEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2
-	gtk? ( =x11-libs/gtk+-1.2* )"
-LICENSE="LGPL-2.1"
+SRC_URI="mirror://sourceforge/lame/${P}.tar.gz"
+
 SLOT="0"
+LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~ppc sparc alpha"
 
+RDEPEND=">=sys-libs/ncurses-5.2
+	gtk? ( =x11-libs/gtk+-1.2* )"
+
+DEPEND="${RDEPEND}
+	x86? ( dev-lang/nasm )"
+
+# this release completely removed oggvorbis support as it was too outdated.
 src_compile() {
 	# fix gtk detection
 	cp configure configure.orig
 	sed -e "s:gtk12-config:gtk-config:" < configure.orig > configure
+
+	# take out -fomit-frame-pointer from CFLAGS if k6-2
+	is-flag "-march=k6-3" && strip-flags "-fomit-frame-pointer"
+	is-flag "-march=k6-2" && strip-flags "-fomit-frame-pointer"
+	is-flag "-march=k6" && strip-flags "-fomit-frame-pointer"
 
 	local myconf=""
 	if [ "`use gtk`" ] ; then
@@ -33,8 +40,7 @@ src_compile() {
 		myconf="${myconf} --enable-debug=no"
 	fi
 	
-	./configure --prefix=/usr \
-		--mandir=/usr/share/man \
+	econf \
 		--enable-shared \
 		--enable-nasm \
 		--enable-mp3rtp \
@@ -46,10 +52,8 @@ src_compile() {
 
 src_install () {
 
-	make prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		pkghtmldir=${D}/usr/share/doc/${PF}/html \
-		install || die
+	einstall \
+		pkghtmldir=${D}/usr/share/doc/${PF}/html || die
 
 	dodoc API COPYING HACKING PRESETS.draft LICENSE README* TODO USAGE
 	dohtml -r ./

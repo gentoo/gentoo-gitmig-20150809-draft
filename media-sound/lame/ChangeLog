@@ -1,8 +1,14 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.18 2003/02/12 07:30:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.19 2003/03/10 11:53:20 seemant Exp $
 
 *lame-3.93.1-r1 (28 Jan 2003)
+
+  10 Mar 2003; Seemant Kulleen <seemant@gentoo.org> lame-3.93.0.ebuild,
+  lame-3.93.0.ebuild, lame-3.93.1-r1.ebuild, lame-3.93.1.ebuild,
+  lame-3.93.1.ebuild:
+  filter out -fomit-frame-pointer for k6 based cpu's. Thanks to: sinterklaas
+  <jerroose@xs4all.nl> in bug #15559
 
   28 Jan 2003; Nick Hadaway <raker@gentoo.org> lame-3.93.1-r1.ebuild,
   files/digest-lame-3.93.1-r1 :
