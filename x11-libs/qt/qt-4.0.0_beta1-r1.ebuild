@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.5 2004/12/29 17:46:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.6 2004/12/29 21:07:33 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -114,8 +114,9 @@ src_compile() {
 		-docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR} -plugindir ${QTPLUGINDIR} \
 		-sysconfdir ${QTSYSCONFDIR} -translationdir ${QTTRANSDIR} ${myconf} || die
 
-	emake sub-tools-all-ordered sub-demos-all-ordered sub-examples-all-ordered || die
-	use doc && emake sub-tutorial-all-ordered
+	emake sub-tools-all-ordered || die
+	# emake sub-demos sub-examples || die
+	# use doc && emake sub-tutorial
 }
 
 src_install() {
@@ -130,15 +131,24 @@ src_install() {
 	export PATH="${S}/bin:${PATH}"
 	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
 
-	make INSTALL_ROOT=${D} sub-src-install_subtargets-ordered sub-tools-install_subtargets-ordered || die
-	make INSTALL_ROOT=${D} sub-demos-install_subtargets-ordered sub-examples-install_subtargets-ordered || die
-	use doc && make INSTALL_ROOT=${D} install_htmldocs sub-tutorial-install_subtargets-ordered
+	make INSTALL_ROOT=${D} install_qmake sub-tools-install_subtargets || die
+	# make INSTALL_ROOT=${D} sub-demos-install_subtargets-ordered sub-examples-install_subtargets-ordered || die
+
+	use doc && make INSTALL_ROOT=${D} install_htmldocs 
+
+	# sub-tutorial-install_subtargets-ordered
 
 	dodir /usr/lib/qt4/mkspecs
 	cp -a ${S}/mkspecs/linux-g++ ${D}/usr/lib/qt4/mkspecs/linux-g++
 	cp -a ${S}/mkspecs/features ${D}/usr/lib/qt4/mkspecs/features
 	cp -a ${S}/mkspecs/default ${D}/usr/lib/qt4/mkspecs/default
+	cp -a ${S}/mkspecs/.qt.config ${D}/usr/lib/qt4/mkspecs/.qt.config
 
+	cd ${S}/lib
+	sed -i -e "s:${D}:/usr/lib/qt4/:" *.la
+	cd ${S}/lib/pkgconfig
+	sed -i -e "s:${D}:/usr/lib/qt4/:" *.pc
+	
 	insinto /etc/env.d
 	doins ${FILESDIR}/44qt4
 }
