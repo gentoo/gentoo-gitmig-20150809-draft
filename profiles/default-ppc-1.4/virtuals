@@ -11,8 +11,8 @@ virtual/glu	     x11-base/xfree
 virtual/glut	    media-libs/glut
 virtual/imapUW	  net-mail/uw-imap
 x11-libs/xaw	    x11-libs/Xaw3d
-virtual/jdk	     dev-java/blackdown-jdk dev-java/ibm-jdk
-virtual/jre	     dev-java/blackdown-jre dev-java/ibm-jre
+virtual/jdk	     dev-java/blackdown-jdk
+virtual/jre	     dev-java/blackdown-jre
 virtual/imapd	   net-mail/courier-imap
 sys-apps/console-tools  sys-apps/kbd
 virtual/blackbox	x11-wm/blackbox
