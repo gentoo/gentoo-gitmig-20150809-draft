@@ -17,12 +17,12 @@ MD5 8146e2077293da51342d5f6d09cec37a files/fvwm-crystal-fvwm-version-check.diff 
 MD5 acbef73f565db20ec2daccc52564315e files/digest-fvwm-crystal-2.20040723 73
 MD5 acbef73f565db20ec2daccc52564315e files/digest-fvwm-crystal-2.20040723-r1 73
 MD5 4168b1b88ed4ce9f1e9c71b75d153235 files/digest-fvwm-crystal-2.20040903 72
-MD5 b9c4f959a104e243776e14b7aa673dca files/digest-fvwm-crystal-2.20041128 73
+MD5 c0d5410eb95b09d2b26a581ddc9e14d6 files/digest-fvwm-crystal-2.20041128 73
 MD5 009926fc5e4f6ce064a6daa097bfaa3a files/digest-fvwm-crystal-2.20040929 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBsNTk2jLqHNfbg2URAq1OAJ91v6oGkIkNRxOMUq/9i1XyuUTmNQCfYZhi
-GzefVjy5BgmSE4cBOAiVHqc=
-=pusy
+iD8DBQFBsO5p2jLqHNfbg2URAmEpAJ9FMyv/5RI1xBAkKiplE7Sk5VJoXgCdEOZa
+PnXf7DT3N+lzo3GdVI31VAY=
+=FncX
 -----END PGP SIGNATURE-----
