@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.2 2003/09/08 00:35:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.3 2003/09/08 00:36:58 msterret Exp $
 
 inherit gnuconfig
 
@@ -21,7 +21,7 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc"
 
 src_unpack() {
- 	unpack ${A}
+	unpack ${A}
 	use amd64 && gnuconfig_update
 	use alpha && gnuconfig_update
 
