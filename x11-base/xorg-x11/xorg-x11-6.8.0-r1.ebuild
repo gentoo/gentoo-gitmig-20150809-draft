@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.15 2004/10/11 07:47:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.16 2004/10/11 07:53:23 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -204,7 +204,7 @@ pkg_setup() {
 	[ "${CONF_LIBDIR}" == "lib32" ] && get_libdir_override lib
 
 
-	# Echo a message to the user about xprint and bitmap-fonts
+	# Echo a message to the user about bitmap-fonts
 	if ! use bitmap-fonts
 	then
 		ewarn "Please emerge this with USE=\"bitmap-fonts\" to enable"
@@ -212,14 +212,7 @@ pkg_setup() {
 		ewarn "screwy otherwise"
 	fi
 
-	if ! use xprint
-	then
-		ewarn "Please emerge thie with USE=\"xprint\" to enable"
-		ewarn "the Xprint extenstion -- Motif and motif apps will break"
-		ewarn "without it."
-	fi
-
-	if ! use bitmap-fonts || ! use xprint
+	if ! use bitmap-fonts
 	then
 		ebeep 5
 		epause 10
@@ -496,6 +489,11 @@ host_def_setup() {
 
 		# Make xprint optional
 		use_build xprint BuildXprint
+		# Build libXp even when xprint is off. It's just for clients, server
+		if use xprint
+		then
+			echo "#define BuildXprintLib YES" >> ${HOSTCONF}
+		fi
 
 	# End the host.def definitions here
 	eend 0

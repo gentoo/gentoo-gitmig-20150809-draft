@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.135 2004/10/11 07:47:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.136 2004/10/11 07:53:23 spyderous Exp $
+
+  11 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r1.ebuild:
+  Build libXp even when USE=-xprint, at ajax's suggestion. RH does the same.
+  USE=-xprint now disables the Xprt server and clients. This means we can remove
+  xprint from make.defaults.
 
   11 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r1.ebuild:
