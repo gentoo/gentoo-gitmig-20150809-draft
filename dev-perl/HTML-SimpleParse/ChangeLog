@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-SimpleParse
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-SimpleParse/ChangeLog,v 1.6 2003/07/09 19:14:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-SimpleParse/ChangeLog,v 1.7 2003/12/27 21:29:55 mcummings Exp $
+
+  27 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  HTML-SimpleParse-0.10.ebuild:
+  No longer available
 
 *HTML-SimpleParse-0.12 (09 Jul 2003)
 
