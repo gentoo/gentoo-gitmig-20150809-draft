@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>seemant@gentoo.org</email>
+  <name>Seemant Kulleen</name>
+  <description>Temporary Maintainer</description>
+</maintainer>
+<maintainer>
+  <email>pacopablo@pacopablo.com</email>
+  <name>John Hampton</name>
+  <description>Consider him the user-maintainer of this package, and please
+  CC him on bug reports (if he's not the reporter).</description>
+</maintainer>
+</pkgmetadata>
