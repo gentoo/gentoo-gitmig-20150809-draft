@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/iptables
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.7 2002/08/29 22:11:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.8 2002/09/02 07:54:59 aliz Exp $
 
 *iptables-1.2.6a-r2 (29 Aug 2002)
 
@@ -9,7 +9,14 @@
   http://luxik.cdi.cz/~patrick/imq/ for more information.
 
 *iptables-1.2.7a (27 Aug 2002)
-  
+
+  01 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a.ebuild : 
+  Added better handling of stopping iptables as described in #6949. 
+  Suggested and submitted by Frederic Jolliton <fred@jolliton.com>.
+
+  30 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a.ebuild : 
+  Added the IMQ patch to 1.2.7a.
+
   27 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a.ebuild : New
   upstream version to fix the bugs introduced in 1.2.7.
 
