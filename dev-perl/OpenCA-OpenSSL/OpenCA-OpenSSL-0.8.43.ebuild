@@ -1,6 +1,6 @@
-# ChangeLog for home/OpenCA-OpenSSL-0.8.43.ebuild
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/OpenCA-OpenSSL-0.8.43.ebuild,v 1.5 2002/08/14 04:32:33 murphy Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/OpenCA-OpenSSL-0.8.43.ebuild,v 1.6 2002/10/04 20:54:35 vapier Exp $
 
 inherit perl-module
 
