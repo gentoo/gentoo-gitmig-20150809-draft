@@ -1,0 +1,29 @@
+diff -ru mod_perl-1.27+ipv6/src/modules/perl/Connection.xs mod_perl-1.27/src/modules/perl/Connection.xs
+--- mod_perl-1.27/src/modules/perl/Connection.xs	Fri Sep 29 16:41:30 2000
++++ mod_perl-1.27+ipv6/src/modules/perl/Connection.xs	Sun Aug 25 23:02:42 2002
+@@ -78,13 +78,14 @@
+     RETVAL = newSVpv((char *)&conn->remote_addr,
+                       sizeof conn->remote_addr);
+     if(sv_addr) {
+-        struct sockaddr_in addr; 
++        struct sockaddr_storage addr; 
+         STRLEN sockaddrlen; 
+         char * new_addr = SvPV(sv_addr,sockaddrlen); 
+         if (sockaddrlen != sizeof(addr)) { 
+             croak("Bad arg length for remote_addr, length is %d, should be %d", 		  sockaddrlen, sizeof(addr)); 
+         } 
+-        Copy(new_addr, &addr, sizeof addr, char); 
++	memset(&addr, 0, sizeof addr);
++        Copy(new_addr, &addr, sizeof new_addr, char); 
+         conn->remote_addr = addr;
+     }
+ 
+@@ -106,7 +107,7 @@
+ #else
+         conn->remote_ip = pstrdup(conn->pool, (char *)SvPV(ST(1),na));
+ #endif
+-        conn->remote_addr.sin_addr.s_addr = inet_addr(conn->remote_ip);
++	((struct sockaddr_in *) &conn->remote_addr)->sin_addr.s_addr = inet_addr(conn->remote_ip);
+     }
+ 
+     OUTPUT:
