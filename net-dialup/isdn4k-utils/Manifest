@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 5ac26c33ae078e5d81656cb6b14bcb16 ChangeLog 7383
 MD5 9f4187355b91c0dabfca1b251589f527 isdn4k-utils-3.2_p1-r2.ebuild 2808
 MD5 bab835f739889e139f5acaf397d3d875 metadata.xml 215
-MD5 e31251b709b455442ed665298683484c isdn4k-utils-3.5_pre20041110.ebuild 6575
+MD5 ab55b35f75859d25e605693339575a25 isdn4k-utils-3.5_pre20041110.ebuild 6589
 MD5 e2cc85397eb8ff285f383213ab00cdad files/digest-isdn4k-utils-3.2_p1-r2 73
 MD5 2dbc97316fbe5d721b9701347464e22c files/gcc33-multiline.patch 1977
 MD5 8de88f6cf872f012abe1e320b3fb4336 files/digest-isdn4k-utils-3.5_pre20041110 81
@@ -31,7 +31,7 @@ MD5 02118ba89fc41144086224482bff7422 files/3.5_pre20041110/options.ippp0 685
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBokiXjtv59x0+BrURAgduAJ4+7lNUbEN7aVWPdCuPY+Pq/Ic3VQCdHmVu
-IscTATZZXSo7fVJOQ+VVT8k=
-=eD+x
+iD8DBQFBolKEjtv59x0+BrURAtWuAKCM2ybuC7R8c1Dx4w39ghIBy54EHwCfeE62
+NUcxY0zApJFJTcuITXFrFNM=
+=ghaA
 -----END PGP SIGNATURE-----
