@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.5 2004/04/24 08:22:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.6 2004/04/24 09:19:56 vapier Exp $
 
 IUSE="nls pic build nptl"
 
@@ -63,7 +63,7 @@ LICENSE="LGPL-2"
 # We need new cleanup attribute support from gcc for NPTL among things ...
 DEPEND=">=sys-devel/gcc-3.2.3-r1
 	x86? ( nptl? ( >=sys-devel/gcc-3.3.1-r1 ) )
-	>=sys-devel/binutils-2.14.90.0.6-r1
+	!arm? ( >=sys-devel/binutils-2.14.90.0.6-r1 )
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/os-headers
