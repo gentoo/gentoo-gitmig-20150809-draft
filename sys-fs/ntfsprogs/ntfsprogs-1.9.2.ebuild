@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.9.1.ebuild,v 1.4 2004/07/17 09:27:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.9.2.ebuild,v 1.1 2004/07/17 09:27:34 robbat2 Exp $
 
 DESCRIPTION="User tools for NTFS filesystems -- includes: ntsresize, mkntfs,
 ntfsfix, ntfsdefrag"
@@ -13,7 +13,7 @@ DEPEND=">sys-devel/gcc-2.95
 		>=gnome-base/gnome-vfs-2.0 )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 src_compile() {
 	sed -i 's:head -1:head -n 1:g' getgccver

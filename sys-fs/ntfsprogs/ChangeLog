@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.12 2004/06/24 22:52:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.13 2004/07/17 09:27:34 robbat2 Exp $
+
+*ntfsprogs-1.9.2 (17 Jul 2004)
+
+  17 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> ntfsprogs-1.9.1.ebuild,
+  ntfsprogs-1.9.2.ebuild:
+  version bump and stabilize 1.9.1 on x86 for usage with testdisk.
 
   18 May 2004; Daniel Black <dragonheart@gentoo.org> ntfsprogs-1.8.5.ebuild,
   ntfsprogs-1.9.0.ebuild, ntfsprogs-1.9.1.ebuild:
