@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.0.8-r1.ebuild,v 1.1 2005/02/08 13:44:50 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.0.8-r1.ebuild,v 1.2 2005/03/09 13:11:50 satya Exp $
 
-inherit eutils linux-mod check-kernel
+inherit eutils linux-mod
 
 DESCRIPTION="Stackable unification file system, which can appear to merge the contents of several directories"
 HOMEPAGE="http://www.fsl.cs.sunysb.edu/project-unionfs.html"
@@ -22,7 +22,7 @@ src_unpack() {
 	#------------------------------------------------------------------------
 	unpack ${A}
 	cd ${S}
-	if is_2_4_kernel && use vserver; then
+	if kernel_is 2 4 && use vserver; then
 		epatch ${FILESDIR}/${P}-vserver.patch || die
 	fi
 	if ! use debug; then
