@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.101 2003/12/30 22:48:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.102 2004/01/04 02:45:06 caleb Exp $
+
+  03 Jan 2004; Caleb Tennis <caleb@gentoo.org> qt-3.2.3.ebuild,
+  qt-3.3.0_beta1.ebuild:
+  Add -sysconfdir to the configure
+  Move SYSCONF to ${D} so there should be no more errors during emerge
 
   28 Dec 2003; Caleb Tennis <caleb@gentoo.org> qt-3.3.0_beta1.ebuild:
   Make qt-cvs and qt-3.3 look the same
