@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.18 2003/10/08 20:43:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.19 2003/10/19 22:42:37 joker Exp $
+
+  20 Oct 2003; Christian Birchinger <joker@gentoo.org> slang-1.4.9.ebuild:
+  Added sparc stable keyword
 
   08 Oct 2003; Alastair Tse <liquidx@gentoo.org> slang-1.4.9.ebuild:
   stable bump for x86

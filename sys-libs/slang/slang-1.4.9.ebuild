@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9.ebuild,v 1.7 2003/10/08 20:43:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9.ebuild,v 1.8 2003/10/19 22:42:37 joker Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://space.mit.edu/~davis/slang/"
 SRC_URI="ftp://ftp.jedsoft.org/pub/davis/slang/v1.4/${P}.tar.bz2"
 
 LICENSE="GPL-2 | Artistic"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ia64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~mips ~hppa ~arm ~amd64 ia64"
 SLOT="0"
 IUSE="cjk"
 
