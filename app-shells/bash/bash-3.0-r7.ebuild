@@ -1,18 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r5.ebuild,v 1.9 2004/10/12 02:31:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r7.ebuild,v 1.1 2004/10/14 00:11:18 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig gcc
 
-# Official patches
-PLEVEL=""
+# Official patchlevel
+# See ftp://ftp.cwru.edu/pub/bash/bash-3.0-patches/
+PLEVEL=13
 
 DESCRIPTION="The standard GNU Bourne again shell"
 HOMEPAGE="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"
-SRC_URI="ftp://ftp.cwru.edu/pub/bash/${P}.tar.gz
-	mirror://gnu/bash/${P}.tar.gz
+# Hit the GNU mirrors before hitting Chet's site
+SRC_URI="mirror://gnu/bash/${P}.tar.gz
+	ftp://ftp.cwru.edu/pub/bash/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2
-	${PLEVEL//x/mirror://gnu/bash/bash-${PV}-patches/bash${PV/\.}-}"
+	$(for ((i=1; i<=PLEVEL; i++)); do
+		printf 'ftp://ftp.cwru.edu/pub/bash/bash-%s-patches/bash%s-%03d\n' \
+			${PV} ${PV/\.} ${i}
+		printf 'mirror://gnu/bash/bash-%s-patches/bash%s-%03d\n' \
+			${PV} ${PV/\.} ${i}
+	done)"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,6 +31,8 @@ DEPEND=">=sys-libs/ncurses-5.2-r2"
 RDEPEND=""
 
 src_unpack() {
+	local i
+
 	unpack ${P}.tar.gz
 
 	cd ${S}
@@ -32,48 +41,19 @@ src_unpack() {
 	# Remove autoconf dependency
 	sed -i -e "/&& autoconf/d" Makefile.in
 
-	# Readline is slow with multibyte locale, bug #19762
-	# (No longer applies to bash-3.0)
-	#epatch ${FILESDIR}/${P}-multibyte-locale.patch
+	# Include official patches
+	for ((i=1; i<=PLEVEL; i++)); do
+		epatch ${DISTDIR}/${PN}${PV/\.}-$(printf '%03d' ${i})
+	done
 
-	# Segfault on empty herestring
-	# (Fixed in bash-3.0 with STRLEN instead of strlen)
-	#epatch ${FILESDIR}/${P}-empty-herestring.patch
-
-	# Fix broken rbash functionality
-	# (Fixed in bash-3.0)
-	#epatch ${FILESDIR}/${P}-rbash.patch
-
-	# Fix parallel make, bug #41002.
-	# (Added to bash-3.0-gentoo.diff.bz2)
-	#epatch ${FILESDIR}/${P}-parallel-build.patch
-
-	# Revert trap behavior for the sake of autoconf-generated configure scripts.
-	# The problem here is that bash -c 'trap 0' works, but sh -c 'trap 0'
-	# doesn't work because the bash developers are trying to adhere to POSIX in
-	# that case.  Since all the configure scripts are #!/bin/sh, this breaks
-	# them
-	epatch ${FILESDIR}/${P}-posixtrap.patch
-
-	# Patch display.c so that only invisible characters actually on the first
-	# line are counted in it.  (This patch doesn't fix everything and Chet says
-	# he has a better patch... so watch for it in bash-3.0.1)
-	epatch ${FILESDIR}/${P}-invisible.patch
+	# This is another "official" patch that hasn't gotten on the ftp site yet
+	epatch ${FILESDIR}/bash30-014
 
 	# Patch readline's bind.c so that /etc/inputrc is read as a last resort
 	# following ~/.inputrc.  This is better than putting INPUTRC in
 	# the environment because INPUTRC will override even after the
 	# user creates a ~/.inputrc
 	epatch ${FILESDIR}/${P}-etc-inputrc.patch
-
-	# Chet Ramey (upstream maintainer) provided this patch in
-	# http://news.gmane.org/gmane.comp.shells.bash.bugs/cutoff=4115
-	# to fix bug 58961 (segfault on local arrays)
-	epatch ${FILESDIR}/${P}-local-array.patch
-
-	# Chet Ramey (upstream maintainer) provided this patch to solve
-	# bug 60127 (bash 3 breaks array stripping)
-	epatch ${FILESDIR}/${P}-array-stripping.patch
 
 	# Fix using bash with post-20040808 glibc ebuilds (from fedora)
 	epatch ${FILESDIR}/${P}-jobs.patch
