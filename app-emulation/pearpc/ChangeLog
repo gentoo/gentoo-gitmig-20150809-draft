@@ -1,0 +1,9 @@
+# ChangeLog for app-emulation/pearpc
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.1 2004/06/18 16:16:37 port001 Exp $
+
+*pearpc-0.2.0 (18 Jun 2004)
+
+  18 Jun 2004; Ian Leitch <port001@gentoo.org> +pearpc-0.2.0.ebuild:
+  Initial commit, thanks to those in #50624 for their work on the ebuild
+
