@@ -1,4 +1,6 @@
+MD5 953a356ab14880639ca26b37ac810ffc prefsmodule-1.1.1_pre20040927.ebuild 898
 MD5 3cc1263fcc6203ba4313fe7a0d7838fe prefsmodule-1.1.1_pre20040909.ebuild 647
 MD5 18d110d7fef6fdfee6c7836a858361ef ChangeLog 378
 MD5 0d5e4e2305b33e597335263b69e35791 metadata.xml 271
 MD5 9dda3e46a1414641b5b327cc8be44455 files/digest-prefsmodule-1.1.1_pre20040909 73
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-prefsmodule-1.1.1_pre20040927 0
