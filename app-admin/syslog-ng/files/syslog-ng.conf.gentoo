@@ -1,8 +1,7 @@
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo,v 1.2 2003/03/11 13:37:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo,v 1.3 2003/05/12 22:43:48 msterret Exp $
 #
 # Syslog-ng default configuration file for Gentoo Linux
 # contributed by Michael Sterrett
-#
 
 options { 
 	long_hostnames(off); 
@@ -18,7 +17,13 @@ options {
 source src { unix-stream("/dev/log"); internal(); pipe("/proc/kmsg"); };
 
 destination messages { file("/var/log/messages"); };
+
+# By default messages are logged to tty12...
 destination console_all { file("/dev/tty12"); };
+# ...if you intend to use /dev/console for programs like xconsole
+# you can comment out the destination line above that references /dev/tty12
+# and uncomment the line below.
+#destination console_all { file("/dev/console"); };
 
 log { source(src); destination(messages); };
 log { source(src); destination(console_all); };
