@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junitperf
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.1 2004/11/14 14:05:51 axxo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.2 2005/02/03 17:36:44 luckyduck Exp $
+
+  03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> junitperf-1.9.1.ebuild:
+  stable on amd64 and x86.
 
 *junitperf-1.9.1 (14 Nov 2004)
 
