@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24-r4.ebuild,v 1.2 2004/04/25 15:25:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24-r4.ebuild,v 1.3 2004/04/26 09:31:07 dholm Exp $
 
 inherit alternatives eutils
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://pub.ks-and-ks.ne.jp/prog/w3mmee/"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="x86 -alpha ~sparc"
+KEYWORDS="x86 -alpha ~sparc ~ppc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
