@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/lcrzo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/ChangeLog,v 1.5 2002/04/03 09:42:56 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/ChangeLog,v 1.6 2002/04/16 17:17:07 woodchip Exp $
+
+*lcrzo-4.08 (16 Apr 2002)
+
+  16 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Updated to latest release.
 
 *lcrzo-4.07 (3 Apr 2002)
 
