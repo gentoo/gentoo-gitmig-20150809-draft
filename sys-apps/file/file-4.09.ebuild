@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.09.ebuild,v 1.12 2004/07/28 16:12:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.09.ebuild,v 1.13 2004/08/12 03:46:43 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils distutils
 
@@ -36,6 +36,9 @@ src_unpack() {
 
 	# make sure python links against the current libmagic #54401
 	sed -i "/library_dirs/s:'\.\./src':'../src/.libs':" python/setup.py
+
+	# dont let python README kill main README #60043
+	mv python/README{,.python}
 }
 
 src_compile() {
