@@ -1,0 +1,8 @@
+# ChangeLog for sys-devel/odinmp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/odinmp/ChangeLog,v 1.1 2003/06/03 13:00:05 tantive Exp $
+
+*odinmp-0.167.2 (03 Jun 2003)
+
+  03 Jun 2003; Olivier Crete <tester@tester.ca>; odin-0.167.2 :
+  Original version of OdinMP OpenMP compiler
