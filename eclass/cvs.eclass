@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.47 2003/09/28 17:08:35 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.48 2003/09/28 17:19:43 coredumb Exp $
 #
 # Current Maintainer: Tal Peer <coredumb@gentoo.org>
 # Original Author:    Dan Armak <danarmak@gentoo.org>
@@ -81,6 +81,8 @@ INHERITED="$INHERITED $ECLASS"
 # deprecated - do not use
 [ -n "$ECVS_SUBDIR" ] && die "ERROR: deprecated ECVS_SUBDIR defined. Please fix this ebuild."
 
+# ECVS_CLEAN: set this to something to get a clean copy when updating (passes the -C option to cvs update)
+
 # --- end ebuild-configurable settings ---
 
 # add cvs to deps
@@ -124,6 +126,10 @@ cvs_fetch() {
 		# the option to cvs on which this is based. note this isn't the same as the 
 		# global -d option to cvs, which specifies the cvs server. ugh @ cvs syntax.
 		ECVS_CO_OPTS="$ECVS_CO_OPTS -d $ECVS_LOCALNAME"
+	fi
+
+	if [ -n "$ECVS_CLEAN" ]; then
+		ECVS_UP_OPTS="$ECVS_UP_OPTS -C"
 	fi
 
 	# it's easiest to always be in "run-as mode", logic-wise
