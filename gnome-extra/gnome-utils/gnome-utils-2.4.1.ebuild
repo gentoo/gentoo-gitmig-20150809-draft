@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.4.1.ebuild,v 1.6 2004/03/02 13:09:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.4.1.ebuild,v 1.7 2004/03/02 13:10:32 agriffis Exp $
 
 inherit gnome2
 
@@ -34,7 +34,7 @@ DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS"
 
 src_compile() {
 	gnome2_src_configure
-	
+
 	# This fixes compilation on ia64.  I wish I knew the "right"
 	# solution but this will have to do for now.
 	# (01 Mar 2004 agriffis)
