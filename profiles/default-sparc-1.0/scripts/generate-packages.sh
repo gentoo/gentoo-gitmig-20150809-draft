@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/generate-packages.sh,v 1.5 2002/04/19 23:30:02 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/generate-packages.sh,v 1.6 2002/04/20 17:00:41 murphy Exp $
 #
 # New packages file
 NEWPACKAGESBUILD=packages.build
@@ -34,6 +34,7 @@ echo "" >> $NEWPACKAGES
 sed -e 's:.*sys-apps/grub:#*sys-apps/grub:' \
 	-e 's:.*sys-devel/bin86:#*sys-devel/bin86:' \
 	-e 's:.*sys-apps/lilo:#*sys-apps/lilo:' \
+	-e 's:=linux-headers-2.4.18:~linux-headers-2.4.18:' \
 	${from_dir}/packages >> $NEWPACKAGES
 cat >> $NEWPACKAGES <<_EOF_
 
