@@ -1,6 +1,8 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.2 2002/05/09 21:10:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.3 2002/05/13 22:10:07 azarah Exp $
+
+*gal-0.19.2 (13 May 2002)
 
 *gal-0.19.1 (9 May 2002)
 
