@@ -357,9 +357,7 @@ app-misc/ldapbrowser
 # <jayskwak@gentoo.org> (25 Jul 2002)
 # masked for korean input testing
 # <agenkin@gentoo.org> (15 Aug 2002)
-# Unmasking since this is the only version of QT > 3.0 in the Portage,
-# and some apps depend on it.
-# =x11-libs/qt-3.0.5-r1
+=x11-libs/qt-3.0.5-r1
 
 # <azarah@gentoo.org> (25 Jul 2002)
 # gawk is very flexible and can be used instead
