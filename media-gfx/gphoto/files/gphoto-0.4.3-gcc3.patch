@@ -1,0 +1,544 @@
+diff -ur gphoto-0.4.3.old/directory/directory.c gphoto-0.4.3/directory/directory.c
+--- gphoto-0.4.3.old/directory/directory.c	1999-07-02 00:11:05.000000000 +0100
++++ gphoto-0.4.3/directory/directory.c	2004-06-15 17:34:53.000000000 +0100
+@@ -206,14 +206,13 @@
+ static char *dir_description() {
+ 
+ 	return(
+-"Browse Directory\nScott Fritzinger <scottf@unr.edu>
+-Allows the user to \"open\" a directory of
+-images and all gPhoto functions will work
+-on those images (HTML Gallery, etc...)\n
+-This will not work in command-line mode,
+-due to the high amount of input needed
+-to set it up.");
+-
++"Browse Directory\nScott Fritzinger <scottf@unr.edu>\n"
++"Allows the user to \"open\" a directory of\n"
++"images and all gPhoto functions will work\n"
++"on those images (HTML Gallery, etc...)\n\n"
++"This will not work in command-line mode,\n"
++"due to the high amount of input needed\n"
++"to set it up.");
+ }
+ 
+ struct _Camera directory = {dir_initialize,
+diff -ur gphoto-0.4.3.old/fuji/fujilib.c gphoto-0.4.3/fuji/fujilib.c
+--- gphoto-0.4.3.old/fuji/fujilib.c	2000-01-11 02:13:33.000000000 +0000
++++ gphoto-0.4.3/fuji/fujilib.c	2004-06-15 17:36:23.000000000 +0100
+@@ -1157,14 +1157,14 @@
+ 
+ char *fuji_description() {
+ 	return(
+-"Generic Fuji
+-Matthew G. Martin
+-Based on fujiplay by
+-Thierry Bousch<bousch@topo.math.u-psud.fr>
+-
+-Known to work with Fuji DS-7 and DX-5,7,10 and MX-500,600,700,2700
+-, Apple QuickTake 200,Samsung Kenox SSC-350N cameras, 
+-but may support other Fuji cams as well.");
++"Generic Fuji\n"
++"Matthew G. Martin\n"
++"Based on fujiplay by\n"
++"Thierry Bousch<bousch@topo.math.u-psud.fr>\n"
++"\n"
++"Known to work with Fuji DS-7 and DX-5,7,10 and MX-500,600,700,2700\n"
++", Apple QuickTake 200,Samsung Kenox SSC-350N cameras, \n"
++"but may support other Fuji cams as well.");
+ }
+ 
+ struct _Camera fuji = {fuji_initialize,
+diff -ur gphoto-0.4.3.old/kodak/dc21x/main.c gphoto-0.4.3/kodak/dc21x/main.c
+--- gphoto-0.4.3.old/kodak/dc21x/main.c	2000-01-20 21:42:18.000000000 +0000
++++ gphoto-0.4.3/kodak/dc21x/main.c	2004-06-15 17:38:05.000000000 +0100
+@@ -54,30 +54,30 @@
+ 
+ void usage(void)
+ {
+-   printf ("Kodak DC21x Digital Camera utility by timecop [timecop@japan.co.jp]
+-
+-	Usage:
+-	-s n		Use /dev/ttySn for camera port
+-	-q		Minimum messages to console [script use]
+-	
+-	-i [n]		Display Camera [ or picture n ] information
+-	-n		Display number of pictures in camera
+-	-d n		Delete image number n from camera
+-	-D		Delete all images from camera
+-	-t [filename]	Take a picture, save to filename
+-	-r [n] [fname]	Retrieve picture n, save as fname
+-	-R		Retrieve all pictures, save as imageNNN.jpg
+-
+-	-z 1|0		Set resolution to [1:High,0:Low]
+-	-Q 1-3		Set JPEG quality. [1:Best,2:Better,3:Good]
+-	-Z 0..4 | 5	Set zoom. [0:58mm,1:51mm,2:41mm,3:34mm,4:29mm,5:Macro]
+-	-f 0-4		Flash setting. [0:Auto,1:Flash,2:NoFlash]
+-				       [3:RedEyeAuto,4:RedEyeFlash]
+-	
+-	Some options can be combined, for example:
+-	cam -s 2 -z 0 -q -f 1 -t webcam.jpg
+-
+-");
++   printf ("Kodak DC21x Digital Camera utility by timecop [timecop@japan.co.jp]\n"
++"\n"
++"	Usage:\n"
++"	-s n		Use /dev/ttySn for camera port\n"
++"	-q		Minimum messages to console [script use]\n"
++"	\n"
++"	-i [n]		Display Camera [ or picture n ] information\n"
++"	-n		Display number of pictures in camera\n"
++"	-d n		Delete image number n from camera\n"
++"	-D		Delete all images from camera\n"
++"	-t [filename]	Take a picture, save to filename\n"
++"	-r [n] [fname]	Retrieve picture n, save as fname\n"
++"	-R		Retrieve all pictures, save as imageNNN.jpg\n"
++"\n"
++"	-z 1|0		Set resolution to [1:High,0:Low]\n"
++"	-Q 1-3		Set JPEG quality. [1:Best,2:Better,3:Good]\n"
++"	-Z 0..4 | 5	Set zoom. [0:58mm,1:51mm,2:41mm,3:34mm,4:29mm,5:Macro]\n"
++"	-f 0-4		Flash setting. [0:Auto,1:Flash,2:NoFlash]\n"
++"				       [3:RedEyeAuto,4:RedEyeFlash]\n"
++"	\n"
++"	Some options can be combined, for example:\n"
++"	cam -s 2 -z 0 -q -f 1 -t webcam.jpg\n"
++"\n"
++);
+ }
+ 
+ int main(int argc, char *argv[])
+diff -ur gphoto-0.4.3.old/kodak/kodak_dc210.c gphoto-0.4.3/kodak/kodak_dc210.c
+--- gphoto-0.4.3.old/kodak/kodak_dc210.c	2000-01-20 21:42:17.000000000 +0000
++++ gphoto-0.4.3/kodak/kodak_dc210.c	2004-06-15 17:38:53.000000000 +0100
+@@ -789,13 +789,12 @@
+ char *kodak_dc210_description() 
+ {
+ 
+-  return("Enhanced Kodak DC210 support
+-by TimeCop <timecop@japan.co.jp>
+-http://www.ne.jp/asahi/linux/timecop
+-based on original code
+-by Brian Hirt <bhirt@mobygames.com> 
+-http://www.mobygames.com");
+-
++  return("Enhanced Kodak DC210 support\n"
++"by TimeCop <timecop@japan.co.jp>\n"
++"http://www.ne.jp/asahi/linux/timecop\n"
++"based on original code\n"
++"by Brian Hirt <bhirt@mobygames.com> \n"
++"http://www.mobygames.com");
+ }
+ 
+ /* define function pointers for the dc210 camera */
+diff -ur gphoto-0.4.3.old/kodak/kodak_dc2x.c gphoto-0.4.3/kodak/kodak_dc2x.c
+--- gphoto-0.4.3.old/kodak/kodak_dc2x.c	1999-12-05 18:48:53.000000000 +0000
++++ gphoto-0.4.3/kodak/kodak_dc2x.c	2004-06-15 17:39:39.000000000 +0100
+@@ -357,16 +357,16 @@
+ char *kodak_dc2x_description() {
+ 
+ 	return(
+-"Kodak DC25 and DC20 support 
+-by Del Simmons <del@freespeech.com>. 
+-This code is working on my DC25 but 
+-I know it will have some problems with 
+-the DC20. If you have a DC20, please 
+-give it a shot and let me know all 
+-the places it fails. If compiling for
+-the DC20, please try removng the -DDC25
+-flag from the Makefile in the kodak 
+-directory. Thanks!");
++"Kodak DC25 and DC20 support \n"
++"by Del Simmons <del@freespeech.com>. \n"
++"This code is working on my DC25 but \n"
++"I know it will have some problems with \n"
++"the DC20. If you have a DC20, please \n"
++"give it a shot and let me know all \n"
++"the places it fails. If compiling for\n"
++"the DC20, please try removng the -DDC25\n"
++"flag from the Makefile in the kodak \n"
++"directory. Thanks!");
+ }
+ 
+ /* Declare the camera function pointers */
+diff -ur gphoto-0.4.3.old/philips/philips.h gphoto-0.4.3/philips/philips.h
+--- gphoto-0.4.3.old/philips/philips.h	1999-11-20 16:28:41.000000000 +0000
++++ gphoto-0.4.3/philips/philips.h	2004-06-15 17:44:41.000000000 +0100
+@@ -86,39 +86,39 @@
+ 
+ 
+ static char *philips_description_string = 
+-"Philips/Ricoh gPhoto Library
+-Bob Paauwe <bpaauwe@bobsplace.com>
+-http://www.bobsplace.com/philips/
+-
+-The following cameras are known to work:
+-Philips ESP60
+-Philips ESP80
+-Ricoh RDC-300
+-Ricoh RDC-300Z
+-Ricoh RDC-4200
+-Ricoh RDC-4300
+-Ricoh RDC-5000
+-
+-Should work with other Ricoh and Philips
+-models but I need the identifier number for
+-them. If you have a:
+-
+-  RDC-1, RDC-2, RDC-2E, RDC-100G, ESP50, 
+-  ESP60, or ESP2 
+-
+-please bring up the configuration dialog
+-box and send me the number that appears in
+-the status bar as Unkown model nnnn.
+-
+-Known Issues as of 8/25/1999:
+-  1) Thumbnails are only displayed
+-  in black & white. (except RDC-5000)
+-  2) philips_get_preview function only
+-  works for Philips ESP80/Ricoh 4x00
+-  cameras.
+-  3) Every other thumbnail times out 
+-  with RDC-5000.
+-";
++"Philips/Ricoh gPhoto Library\n"
++"Bob Paauwe <bpaauwe@bobsplace.com>\n"
++"http://www.bobsplace.com/philips/\n"
++"\n"
++"The following cameras are known to work:\n"
++"Philips ESP60\n"
++"Philips ESP80\n"
++"Ricoh RDC-300\n"
++"Ricoh RDC-300Z\n"
++"Ricoh RDC-4200\n"
++"Ricoh RDC-4300\n"
++"Ricoh RDC-5000\n"
++"\n"
++"Should work with other Ricoh and Philips\n"
++"models but I need the identifier number for\n"
++"them. If you have a:\n"
++"\n"
++"  RDC-1, RDC-2, RDC-2E, RDC-100G, ESP50, \n"
++"  ESP60, or ESP2 \n"
++"\n"
++"please bring up the configuration dialog\n"
++"box and send me the number that appears in\n"
++"the status bar as Unkown model nnnn.\n"
++"\n"
++"Known Issues as of 8/25/1999:\n"
++"  1) Thumbnails are only displayed\n"
++"  in black & white. (except RDC-5000)\n"
++"  2) philips_get_preview function only\n"
++"  works for Philips ESP80/Ricoh 4x00\n"
++"  cameras.\n"
++"  3) Every other thumbnail times out \n"
++"  with RDC-5000.\n"
++;
+ 
+ 
+ #define _(x)	x  /* try to remove GNOMEisms in Glade output */
+diff -ur gphoto-0.4.3.old/photopc/olympus.c gphoto-0.4.3/photopc/olympus.c
+--- gphoto-0.4.3.old/photopc/olympus.c	1999-06-25 01:25:46.000000000 +0100
++++ gphoto-0.4.3/photopc/olympus.c	2004-06-15 17:46:11.000000000 +0100
+@@ -594,11 +594,11 @@
+ char *oly_description() {
+ 
+ 	return(
+-"Olympus/PhotoPC Digital Camera Support
+-Scott Fritzinger <scottf@unr.edu>
+-using the photoPC library by
+-Eugene Crosser <crosser@average.org>
+-http://www.average.org/digicam");
++"Olympus/PhotoPC Digital Camera Support\n"
++"Scott Fritzinger <scottf@unr.edu>\n"
++"using the photoPC library by\n"
++"Eugene Crosser <crosser@average.org>\n"
++"http://www.average.org/digicam");
+ }
+ 
+ /* Declare the camera function pointers */
+diff -ur gphoto-0.4.3.old/ricoh/ricoh_300z.c gphoto-0.4.3/ricoh/ricoh_300z.c
+--- gphoto-0.4.3.old/ricoh/ricoh_300z.c	1999-10-03 00:41:37.000000000 +0100
++++ gphoto-0.4.3/ricoh/ricoh_300z.c	2004-06-15 17:46:59.000000000 +0100
+@@ -914,13 +914,13 @@
+ char *ricoh_300z_description() {
+ 
+ 	return(
+-"Ricoh 300Z
+-Clifford Wright <cliff@snipe444.org>
+-
+-*The Ricoh 300Z does not support thumbnail
+-previewing, so the thumbnails that appear
+-are place holders until the actual images
+-are downloaded.");
++"Ricoh 300Z\n"
++"Clifford Wright <cliff@snipe444.org>\n"
++"\n"
++"*The Ricoh 300Z does not support thumbnail\n"
++"previewing, so the thumbnails that appear\n"
++"are place holders until the actual images\n"
++"are downloaded.");
+ }
+ 
+ struct JPEG_error_mgr
+diff -ur gphoto-0.4.3.old/sony/dsc_f1.c gphoto-0.4.3/sony/dsc_f1.c
+--- gphoto-0.4.3.old/sony/dsc_f1.c	1999-05-27 19:32:06.000000000 +0100
++++ gphoto-0.4.3/sony/dsc_f1.c	2004-06-15 17:50:40.000000000 +0100
+@@ -166,11 +166,11 @@
+ 
+ char *dsc_f1_description () {
+     return(
+-    	"Sony DSC-F1 Digital Camera Support\n
+-	M. Adam Kendall <joker@penguinpub.com>\n\n
+-	Based on the chotplay CLI interface from\n
+-	Ken-ichi Hayashi\n\n
+-	This lib may not work. YMMV\n");
++    	"Sony DSC-F1 Digital Camera Support\n"
++	"M. Adam Kendall <joker@penguinpub.com>\n\n"
++	"Based on the chotplay CLI interface from\n"
++	"Ken-ichi Hayashi\n\n"
++	"This lib may not work. YMMV\n");
+ }
+ 
+ char *dsc_f1_summary () {
+diff -ur gphoto-0.4.3.old/sony/dscf55/rsony.c gphoto-0.4.3/sony/dscf55/rsony.c
+--- gphoto-0.4.3.old/sony/dscf55/rsony.c	2000-01-26 14:36:22.000000000 +0000
++++ gphoto-0.4.3/sony/dscf55/rsony.c	2004-06-15 17:49:44.000000000 +0100
+@@ -378,27 +378,25 @@
+ */
+ char *sony_dscf55_description()
+ {
+-	return "Sony DSC F55/505 gPhoto Library
+-Mark Davies <mdavies@dial.pipex.com>
+-Sony DSC F55 and DSC F505 cameras.
+-Still image support.
+-* Mpegs are downloadable in standalone
+-  version only.
+-";
++	return "Sony DSC F55/505 gPhoto Library\n"
++"Mark Davies <mdavies@dial.pipex.com>\n"
++"Sony DSC F55 and DSC F505 cameras.\n"
++"Still image support.\n"
++"* Mpegs are downloadable in standalone\n"
++"  version only.\n";
+ }
+ 
+ 
+ char *sony_msac_sr1_description()
+ {
+-        return "Sony DSC F55/505 gPhoto Library
+-Mark Davies <mdavies@dial.pipex.com>
+-Sony MSAC-SR1 and Memory Stick used
+-by DCR-PC100.
+-Still image support. Patches by
+-Bernd Seemann <bernd@seebaer.ruhr.de>
+-* Mpegs are downloadable in
+-standalone version only.
+-";
++        return "Sony DSC F55/505 gPhoto Library\n"
++"Mark Davies <mdavies@dial.pipex.com>\n"
++"Sony MSAC-SR1 and Memory Stick used\n"
++"by DCR-PC100.\n"
++"Still image support. Patches by\n"
++"Bernd Seemann <bernd@seebaer.ruhr.de>\n"
++"* Mpegs are downloadable in\n"
++"standalone version only.\n";
+ }
+ 
+ 
+diff -ur gphoto-0.4.3.old/src/callbacks.c gphoto-0.4.3/src/callbacks.c
+--- gphoto-0.4.3.old/src/callbacks.c	2000-03-06 21:23:06.000000000 +0000
++++ gphoto-0.4.3/src/callbacks.c	2004-06-15 17:56:23.000000000 +0100
+@@ -790,19 +790,19 @@
+ void version_dialog() {
+     char msg[1024];
+ 
+-	sprintf(msg, "
+-Version Information
+--------------------
+-
+-Current Version: %s
+-
+-New features all over the place. Please see
+-the ChangeLog for more information.
+-
+-As always, report bugs gphoto-devel@gphoto.org
+-
+-Thanx much.
+-", VERSION);
++	sprintf(msg, "\n"
++"Version Information\n"
++"-------------------\n"
++"\n"
++"Current Version: %s\n"
++"\n"
++"New features all over the place. Please see\n"
++"the ChangeLog for more information.\n"
++"\n"
++"As always, report bugs gphoto-devel@gphoto.org\n"
++"\n"
++"'Thanx much.\n"
++, VERSION);
+ 
+ 	error_dialog(msg);
+ }
+@@ -865,28 +865,28 @@
+ 
+ void faq_dialog() {
+    error_dialog(
+-"Please visit http://www.gphoto.org/help.php3 
+-for the current FAQ list.");
++"Please visit http://www.gphoto.org/help.php3\n" 
++"for the current FAQ list.");
+ }
+   
+ void show_license() {
+    
+-  error_dialog("
+-This program is free software; you can redistribute it and/or modify
+-it under the terms of the GNU General Public License as published by
+-the Free Software Foundation; either version 2 of the License, or
+-(at your option) any later version.
+-
+-This program is distributed in the hope that it will be useful,
+-but WITHOUT ANY WARRANTY; without even the implied warranty of
+-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-GNU General Public License for more details.
+-
+-You should have received a copy of the GNU General Public License
+-along with this program; if not, write to the Free Software
+-Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+-
+-See http://www.gnu.org for more details on the GNU project."); 
++  error_dialog("\n"
++"This program is free software; you can redistribute it and/or modify\n"
++"it under the terms of the GNU General Public License as published by\n"
++"the Free Software Foundation; either version 2 of the License, or\n"
++"(at your option) any later version.\n"
++"\n"
++"This program is distributed in the hope that it will be useful,\n"
++"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
++"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
++"GNU General Public License for more details.\n"
++"\n"
++"You should have received a copy of the GNU General Public License\n"
++"along with this program; if not, write to the Free Software\n"
++"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"
++"\n"
++"See http://www.gnu.org for more details on the GNU project.");
+ }
+ 
+ /* used until callback is implemented */
+@@ -1238,10 +1238,10 @@
+ 	
+ 	if (gdk_imlib_save_image(node->imlibimage,filename, NULL) == 0) {
+ 		error_dialog(
+-		"Could not save image. Please make
+-		sure that you typed the image
+-		extension and that permissions for
+-		the directory are correct.");
++		"Could not save image. Please make\n"
++		"sure that you typed the image\n"
++		"extension and that permissions for\n"
++		"the directory are correct.");
+ 		return;
+ 	}
+ }
+@@ -1370,12 +1370,12 @@
+         gtk_box_pack_end_defaults(GTK_BOX(hbox),entry); 
+ 
+ 	label = gtk_label_new(
+-"* The filename is appended to the end
+-   of the command.
+-* The \"-r\" flag is needed to delete 
+-  the temporary file. If not used, a 
+-  temporary file will be in your $HOME/.gphoto
+-  directory.");
++"* The filename is appended to the end\n"
++"   of the command.\n"
++"* The \"-r\" flag is needed to delete \n"
++"  the temporary file. If not used, a \n"
++"  temporary file will be in your $HOME/.gphoto\n"
++"  directory.");
+         gtk_widget_show(label);
+         gtk_label_set_justify(GTK_LABEL(label), GTK_JUSTIFY_LEFT);
+         gtk_box_pack_start_defaults(GTK_BOX(GTK_DIALOG(dialog)->vbox),
+@@ -1814,10 +1814,10 @@
+ 		FALSE, FALSE, 0);
+ 
+ 	label = gtk_label_new(
+-"
+-Note: gPhoto will replace \"%s\" in the script command-line
+-with the full path to the selected image. See the User's Manual
+-in the Help menu for more information. ");
++"\n"
++"Note: gPhoto will replace \"%s\" in the script command-line\n"
++"with the full path to the selected image. See the User's Manual\n"
++"in the Help menu for more information. ");
+ 	gtk_widget_show(label);
+ 	gtk_label_set_justify(GTK_LABEL(label), GTK_JUSTIFY_LEFT);
+ 	gtk_box_pack_start(GTK_BOX(GTK_DIALOG(dialog)->vbox), label,
+@@ -1832,9 +1832,9 @@
+ 	if ((strstr(gtk_entry_get_text(GTK_ENTRY(script)), "%s") == NULL)
+ 	   && GTK_TOGGLE_BUTTON(pp)->active) {
+ 		error_dialog(
+-"Missing \"%s\" in the post-processing entry.
+-This is required so the post-processing program
+-knows where the image is located.");
++"Missing \"%s\" in the post-processing entry.\n"
++"This is required so the post-processing program\n"
++"knows where the image is located.");
+ 		return;
+ 	}
+ 
+diff -ur gphoto-0.4.3.old/src/gallery.c gphoto-0.4.3/src/gallery.c
+--- gphoto-0.4.3.old/src/gallery.c	2000-03-06 21:23:06.000000000 +0000
++++ gphoto-0.4.3/src/gallery.c	2004-06-15 17:51:38.000000000 +0100
+@@ -271,10 +271,10 @@
+ 
+ 	if (Thumbnails.next == NULL) {
+ 		error_dialog(
+-"Please retrieve the index first,
+-and select the images to include
+-in the gallery by clicking on them.
+-Then, re-run the HTML Gallery.");
++"Please retrieve the index first,\n"
++"and select the images to include\n"
++"in the gallery by clicking on them.\n"
++"Then, re-run the HTML Gallery.");
+ 		return;
+ 	}
+ 
+diff -ur gphoto-0.4.3.old/src/main.c gphoto-0.4.3/src/main.c
+--- gphoto-0.4.3.old/src/main.c	2000-03-06 21:23:06.000000000 +0000
++++ gphoto-0.4.3/src/main.c	2004-06-15 17:51:14.000000000 +0100
+@@ -277,11 +277,11 @@
+ 		/* put anything here to do on the first run */
+ 	  developer_dialog_create();
+ 	  error_dialog(
+-"Could not load config file.
+-Resetting to defaults.
+-Click on \"Select Port-Camera Model\"
+-in the Configure menu to set your
+-camera model and serial port");
++"Could not load config file.\n"
++"Resetting to defaults.\n"
++"Click on \"Select Port-Camera Model\"\n"
++"in the Configure menu to set your\n"
++"camera model and serial port");
+ 	}
+ 	gtk_main();
+ 	return(0);
+diff -ur gphoto-0.4.3.old/src/util.c gphoto-0.4.3/src/util.c
+--- gphoto-0.4.3.old/src/util.c	2000-03-06 21:23:06.000000000 +0000
++++ gphoto-0.4.3/src/util.c	2004-06-15 17:56:54.000000000 +0100
+@@ -257,8 +257,8 @@
+ 	else
+ 	{
+ 		snprintf(errormsg,1024,
+-"The image couldn't be saved to %s because of the following error: 
+- %s",filename,sys_errlist[errno]);
++"The image couldn't be saved to %s because of the following error:\n" 
++" %s",filename,sys_errlist[errno]);
+ 		error_dialog(errormsg);
+ 	}
+ }

@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gphoto
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/ChangeLog,v 1.9 2004/06/24 22:40:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/ChangeLog,v 1.10 2004/10/16 19:52:34 liquidx Exp $
+
+  16 Oct 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/gphoto-0.4.3-gcc3.patch, gphoto-0.4.3-r2.ebuild:
+  added gcc3.2 compat patch (#53992) and using eutils and epatch now. Note
+  that we are deprecating this. Please use gphoto2.
 
 *gphoto-0.4.3-r2 (12 June 2002)
 
