@@ -66,7 +66,7 @@ src_unpack() {
 	-e 's:^#termios:termios:' -e 's:^#resource:resource:' \
 	Setup.in > Setup
 	echo "fchksum fchksum.c md5_2.c" >> Setup
-        mylibs="$mylibs -lz -lutil"
+        mylibs="-lpython2.0 $mylibs -lz -lutil"
 	cd ${S}/Modules
 
 	if [ "`use berkdb`" ]
