@@ -1,10 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.4.ebuild,v 1.2 2002/12/28 00:05:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.4.ebuild,v 1.3 2003/01/25 05:24:02 vapier Exp $
 
-IUSE=""
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="jam (Just Another Make) - advanced make replacement"
 SRC_URI="ftp://ftp.perforce.com/pub/jam/${P}.zip"
 HOMEPAGE="http://www.perforce.com/jam/jam.html"
@@ -13,7 +10,8 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="dev-util/yacc"
+DEPEND="dev-util/yacc
+	app-arch/unzip"
 
 src_compile() {
 	# The bootstrap makefile assumes ${S} is in the path
