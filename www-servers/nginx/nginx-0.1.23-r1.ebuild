@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.23.ebuild,v 1.1 2005/03/02 17:05:53 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.23-r1.ebuild,v 1.1 2005/03/02 17:34:40 voxus Exp $
 
 inherit eutils
 
@@ -54,9 +54,16 @@ src_install() {
 
 	dodir /var/log/${PN}
 	dodir /var/tmp/${PN}
+
 	dodir /var/tmp/${PN}/client
+	keepdir /var/tmp/${PN}/client
+
 	dodir /var/tmp/${PN}/proxy
+	keepdir /var/tmp/${PN}/proxy
+
 	dodir /var/tmp/${PN}/fastcgi
+	keepdir /var/tmp/${PN}/fastcgi
+
 	dodir /etc/${PN}
 
 	dosbin objs/nginx
@@ -66,4 +73,6 @@ src_install() {
 	rm conf/nginx.conf
 	doins -r conf
 	doins ${FILESDIR}/nginx.conf
+
+	dodoc CHANGES{,.ru} LICENSE README
 }

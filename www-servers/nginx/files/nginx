@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/files/nginx,v 1.1 2005/03/02 17:05:53 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/files/nginx,v 1.2 2005/03/02 17:34:40 voxus Exp $
+
+opts="${opts} reload configtest"
 
 depend() {
 	need net
@@ -26,4 +28,10 @@ reload() {
 	ebegin "Refreshing nginx' configuration"
 	kill -HUP `cat /var/run/nginx.pid` &>/dev/null
 	eend $? "Failed to reload nginx"
+}
+
+configtest() {
+	ebegin "Checking nginx' configuration"
+	/usr/sbin/nginx -c /etc/nginx/nginx.conf -t
+	eend $? "failed, please correct errors above"
 }
