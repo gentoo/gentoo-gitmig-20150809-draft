@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0-r1.ebuild,v 1.2 2002/11/21 22:18:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0-r1.ebuild,v 1.3 2002/11/25 16:08:07 foser Exp $
 
 PROVIDE="virtual/xft"
 DESCRIPTION="Xft2"
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --x-includes=/usr/X11R6/includes \
+	econf --x-includes=/usr/X11R6/include \
 		--x-libraries=/usr/X11R6/lib \
 		|| die "Xft2 config failed"
 	emake || die "Xft2 make failed"  
