@@ -37,7 +37,7 @@ src_compile() {
 		--with-mozilla-include-place=$MOZILLA/include"
     export MOZILLA_FIVE_HOME=$MOZILLA
     export LD_LIBRARY_PATH=$MOZILLA_FIVE_HOME
-    export CXXFLAGS="$CXXFLAGS -fno-exceptions -fno-rtti"
+#    export CXXFLAGS="$CXXFLAGS -fno-exceptions -fno-rtti"
   else
     myconf="${myconf} --disable-mozilla-component"
   fi
