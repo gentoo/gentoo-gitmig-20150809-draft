@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.6.ebuild,v 1.1 2001/07/05 03:48:03 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.6.ebuild,v 1.2 2001/07/07 17:53:18 lamer Exp $
 
 #P=
 #A=${P}.tar.gz
@@ -36,9 +36,12 @@ src_install () {
 
 # Am disabling this untill I can figure out how to make the daemon write a
 # pid file
-#    doexe ${FILESDIR}/svc-oftpd
-#    exeinto /var/lib/supervise/services/oftpd
-#	 doexe ${FILESDIR}/oftpd-run
+    doexe ${FILESDIR}/svc-oftpd
+    exeinto /var/lib/supervise/services/oftpd
+	 newexe ${FILESDIR}/oftpd-run run
+    dodir /var/lib/supervise/control
+    dosym /var/lib/supervise/services/oftpd \
+	 /var/lib/supervise/control/oftpd
 	 dodir /home/ftp
 }
 

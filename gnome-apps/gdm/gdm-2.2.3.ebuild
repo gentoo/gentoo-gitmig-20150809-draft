@@ -75,7 +75,7 @@ src_install() {
       
   rm Sessions/*
   exeinto /etc/X11/gdm/Sessions
-  doexe ${FILESDIR}/wm/{afterstep,blackbox,enlightenment,fvwm,gnome,icewm,kde,pwm,windowmaker,xfce}
+  doexe ${FILESDIR}/wm/{afterstep,blackbox,enlightenment,fvwm,gnome,icewm,kde,pwm,windowmaker,xfce,xsession}
   cd ${S}
   dodoc AUTHORS COPYING ChangeLog NEWS README* RELEASENOTES TODO
 }
