@@ -17,6 +17,7 @@ doexes() {
   for i in $@
   do
     cp `which $i` $i
+    strip $i
   done
 }
 
@@ -147,10 +148,12 @@ do
       if [ -f /lib/$i ]
       then
           cp /lib/$i ${ROOT}/lib/$i
+	  strip ${ROOT}/lib/$i
       else
           if [ -f /usr/lib/$i ]
           then
               cp /usr/lib/$i ${ROOT}/usr/lib/$i
+	      strip ${ROOT}/usr/lib/$i
           else
               echo "$i not found !"
           fi
