@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/f-prot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.9 2004/09/25 17:34:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.10 2004/10/06 22:08:11 ticho Exp $
+
+*f-prot-4.4.7 (07 Oct 2004)
+
+  07 Oct 2004; Andrej Kacian <ticho@gentoo.org> metadata.xml,
+  +f-prot-4.4.7.ebuild:
+  Version bump. Closes #64993, reported by Michael Cramer
+  <bigmichi1@bigmichi1.dyndns.org>. Set myself as maintainer in metadata.xml.
 
   25 Sep 2004; Andrej Kacian <ticho@gentoo.org> f-prot-4.4.2.ebuild:
   Stable on x86.
