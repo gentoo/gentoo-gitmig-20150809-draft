@@ -111,7 +111,7 @@ class depgraph:
 	def match(self,mydep):
 		myeb=self.db[portage.root]["porttree"].dep_bestmatch(mydep)
 		if not myeb:
-			print "\n!!! Error: couldn't find match for",myline,"\n"
+			print "\n!!! Error: couldn't find match for",mydep,"\n"
 			sys.exit(1)
 		if "--usepkg" in self.myopts:
 			mypk=self.db[portage.root]["bintree"].dep_bestmatch(mydep)
