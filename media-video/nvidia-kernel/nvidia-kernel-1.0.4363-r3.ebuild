@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r3.ebuild,v 1.1 2003/07/14 11:54:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r3.ebuild,v 1.2 2003/07/14 22:10:42 azarah Exp $
 
 inherit eutils
 
@@ -75,6 +75,17 @@ is_2_5_kernel() {
 	fi
 }
 
+is_2_6_kernel() {
+	get_KV_info
+
+	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 6 ]
+	then
+		return 0
+	else
+		return 1
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 
@@ -91,16 +102,10 @@ src_unpack() {
 	cd ${S}
 	einfo "Linux kernel ${KV_major}.${KV_minor}.${KV_micro}"
 	
-	if is_2_5_kernel
+	if is_2_5_kernel || is_2_6_kernel
 	then
-		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.5..." \
-		epatch ${FILESDIR}/${PV}/${NV_PACKAGE}-2.5-20030713.diff
-
-		# As Andrew Morton pointed out, it is not good practice to
-		# unmap something and then use a copy of the structure that
-		# was unmapped.
-		EPATCH_SINGLE_MSG="Applying highpmd cleanup patch..." \
-		epatch ${FILESDIR}/${PV}/${NV_PACKAGE}-highpmd-20030713.diff
+		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.[56]..." \
+		epatch ${FILESDIR}/${PV}/${NV_PACKAGE}-2.5-20030714.diff
 
 		# Kbuild have issues currently (sandbox related).
 		ln -snf Makefile.nvidia Makefile
