@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.50 2004/12/18 11:36:19 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.51 2004/12/18 13:30:49 weeve Exp $
+
+  18 Dec 2004; Jason Wever <weeve@gentoo.org> kismet-2.8.1-r1.ebuild:
+  Masked on sparc wrt security bug #74443 because it's unknown if this
+  application even works on SPARC.
 
   18 Dec 2004; Henrik Brix Andersen <brix@gentoo.org>
   -files/kismet_amd64.patch, -files/kismet_gcc34.gz, -files/rc-conf-3,
