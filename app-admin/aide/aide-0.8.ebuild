@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.8.ebuild,v 1.6 2002/07/22 09:20:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.8.ebuild,v 1.7 2002/07/25 12:57:04 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="AIDE (Advanced Intrusion Detection Environment) is a free replacement for Tripwire"
@@ -17,8 +17,6 @@ DEPEND="sys-apps/gzip
 	dev-libs/libgcrypt
 	app-crypt/mhash
 	postgres? ( dev-db/postgresql )"
-
-RDEPEND=""
 
 src_compile() {
 

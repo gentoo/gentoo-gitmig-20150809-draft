@@ -1,20 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.15-r1.ebuild,v 1.2 2002/07/22 16:16:34 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.15-r1.ebuild,v 1.3 2002/07/25 12:57:04 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 SRC_URI=""
-SLOT="0"
 HOMEPAGE="http://www.gentoo.org/~karltk/projects/gentoolkit/"
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc sparc64"
+
 DEPEND=">=dev-lang/python-2.0
 	>=dev-util/dialog-0.7
 	>=sys-devel/perl-5.6"
-RDEPEND="$DEPEND"
-LICENSE="GPL-2"
-
-KEYWORDS="x86 ppc sparc sparc64"
 
 src_install () {
 	dodir /usr/share/gentoolkit

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.6 2002/07/22 04:52:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.7 2002/07/25 12:57:05 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Logfile Analyzer"
@@ -14,15 +14,14 @@ KEYWORDS="x86"
 DEPEND="virtual/x11
 	dev-libs/libxml
 	dev-libs/libxml2
-	=media-libs/freetype-1.3*
-	>=media-libs/jpeg-6b
+	media-libs/jpeg
 	media-libs/libpng
+	=media-libs/freetype-1.3*
 	>=dev-libs/libpcre-3.2
 	>=net-libs/adns-1.0
 	mysql? ( >=dev-db/mysql-3.23.26 )"
 
 RDEPEND="nls? ( sys-devel/gettext )"
-	
 
 src_compile() {
 	cd ${S}/../gd-1.8.1
@@ -35,23 +34,19 @@ src_compile() {
 	ln -s libgd.so.0.0.0 libgd.so
 
 	local myconf
-	use mysql	\
-		 && myconf="--with-mysql=/usr"	\
+	use mysql \
+		 && myconf="--with-mysql=/usr" \
 		 || myconf="--without-mysql"
 	
-	use nls	\
-		|| myconf="${myconf} --disable-nls"
+	use nls || myconf="${myconf} --disable-nls"
 
-cd ${S}
-	./configure 	\
-		--host=${CHOST}	\
-		--prefix=/usr \
+	cd ${S}
+	econf \
 		--enable-plugins \
-		--mandir=/usr/share/man \
-		--sysconfdir=/etc/modlogan	\
-		--libdir=/usr/lib/modlogan	\
+		--sysconfdir=/etc/modlogan \
+		--libdir=/usr/lib/modlogan \
 		--with-gd=${WORKDIR}/gd-1.8.1/ \
-		--disable-check-dynamic	\
+		--disable-check-dynamic \
 		${myconf} || die
 
 	make || die
@@ -62,11 +57,11 @@ src_install() {
 	into /usr
 	dolib libgd.so.0.0.0
 	cd ${S}
-	make 	\
-		prefix=${D}/usr	\
-		mandir=${D}/usr/share/man	\
+	make \
+		prefix=${D}/usr \
+		mandir=${D}/usr/share/man \
 		sysconfdir=${D}/etc/modlogan \
-		libdir=${D}/usr/lib/modlogan 	\
+		libdir=${D}/usr/lib/modlogan \
 		install || die
 
 	insinto /etc/modlogan

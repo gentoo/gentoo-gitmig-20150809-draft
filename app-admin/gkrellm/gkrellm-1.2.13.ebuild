@@ -1,24 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.13.ebuild,v 1.5 2002/07/17 20:43:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.13.ebuild,v 1.6 2002/07/25 12:57:04 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Single process stack of various system monitors"
 SRC_URI="http://web.wt.net/~billw/${PN}/${P}.tar.bz2"
-SLOT="0"
+HOMEPAGE="http://www.gkrellm.net/"
 
-KEYWORDS="x86 ppc"
 SLOT="1"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
-DEPEND="virtual/glibc
-	nls? ( sys-devel/gettext )
-	=x11-libs/gtk+-1.2*
+DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1"
 
-RDEPEND="virtual/glibc
-	=x11-libs/gtk+-1.2*
-	>=media-libs/imlib-1.9.10-r1"
+RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
 	use nls || ln -sf Makefile.top Makefile
@@ -36,7 +32,5 @@ src_install () {
 		LOCALEDIR=${D}/usr/share/locale
 
 	dodoc COPYRIGHT README Changelog
-	dohtml Changelog-plugins.html Changelog-themes.html Themes.html
+	dohtml *.html
 }
-
-
