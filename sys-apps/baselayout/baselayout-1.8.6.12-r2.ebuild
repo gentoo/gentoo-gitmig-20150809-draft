@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.2 2003/11/30 09:57:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.3 2003/12/10 21:02:36 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -544,8 +544,9 @@ pkg_postinst() {
 	if [ "${altmerge}" -eq "0" -a ! -e "${ROOT}/dev/.udev" -a \
 	     -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]
 	then
-		if [ -z "$(use selinux)" -a \
-		     -z "$(use build)" -a -z "$(use bootstrap)" ]
+		if [ -z "$(use build)" -a -z "$(use bootstrap)" ] || \
+		   ([ -n "$(use selinux)" ] && \
+		    [ -n "$(use build)" -o -n "$(use bootstrap)" ])
 		then
 			einfo "Populating /dev with device nodes..."
 			tar -jxpf "${ROOT}/lib/udev-state/devices.tar.bz2" \
