@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.6.1_p2.ebuild,v 1.3 2003/05/02 08:55:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.6.1_p2.ebuild,v 1.4 2003/06/06 23:58:22 rphillips Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${PARCH}.tar.gz
 # This new rev will use the new openssl.
 RDEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.73 >=sys-apps/shadow-4.0.2-r2 )
-	kerberos? ( app-crypt/krb5 )
+	kerberos? ( app-crypt/mit-krb5 )
 	selinux? ( sys-apps/selinux-small )
 	>=dev-libs/openssl-0.9.6d
 	sys-libs/zlib"
@@ -52,7 +52,7 @@ src_compile() {
 	use pam  && myconf="${myconf} --with-pam"
 	use ipv6 || myconf="${myconf} --with-ipv4-default"
 
-	# app-crypt/krb5
+	# app-crypt/mit-krb5
 	use kerberos && myconf="${myconf} --with-kerberos5"
 
 	# app-crypt/kth-krb

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.1 2003/05/28 20:12:09 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.2 2003/06/06 23:58:22 rphillips Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	ssl?	  ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/readline-4.1 )
 	gdbm?     ( >=sys-libs/gdbm-1.8.0 )
-	kerberos? ( >=app-crypt/krb5-1.2.6 )
+	kerberos? ( >=app-crypt/mit-krb5-1.2.6 )
 	odbc?     ( dev-db/unixODBC )"
 
 RDEPEND="virtual/glibc

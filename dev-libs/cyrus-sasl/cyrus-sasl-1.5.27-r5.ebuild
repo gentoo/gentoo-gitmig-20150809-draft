@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r5.ebuild,v 1.5 2003/02/13 10:36:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r5.ebuild,v 1.6 2003/06/06 23:58:22 rphillips Exp $
 
 IUSE="kerberos"
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 sparc "
 RDEPEND="virtual/glibc
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
-	kerberos? ( >=app-crypt/krb5-1.2.5 )"
+	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.6.1-r2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.10.ebuild,v 1.1 2003/05/29 20:35:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.10.ebuild,v 1.2 2003/06/06 23:58:22 rphillips Exp $
 
 IUSE="pam kerberos gtk gtk2 gnome opengl jpeg xinerama"
 
@@ -36,7 +36,7 @@ RDEPEND="media-libs/netpbm
 	!gtk? ( virtual/motif
 		>=media-libs/gdk-pixbuf-0.18 )
 	pam? ( sys-libs/pam )
-	kerberos? ( >=app-crypt/krb5-1.2.5 )
+	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )
 	jpeg? ( media-libs/jpeg )
 	opengl? ( virtual/opengl
 	          >=media-libs/gle-3.0.1 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.20.ebuild,v 1.2 2003/05/28 15:43:47 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.20.ebuild,v 1.3 2003/06/06 23:58:22 rphillips Exp $
 
 IUSE="ssl tcpd readline ipv6 gdbm sasl kerberos odbc perl slp"
 
@@ -21,7 +21,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	readline? ( >=sys-libs/readline-4.1 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.7-r3 )
-	kerberos? ( >=app-crypt/krb5-1.2.6 )
+	kerberos? ( >=app-crypt/mit-krb5-1.2.6 )
 	odbc? ( dev-db/unixODBC )
 	slp? ( >=net-libs/openslp-1.0 )
 	perl? ( >=dev-lang/perl-5.6 )"

@@ -24,3 +24,4 @@ move app-text/sharefonts media-fonts/sharefonts
 move net-www/phoenix-bin net-www/mozilla-firebird-bin
 move x11-wm/WindowMaker x11-wm/windowmaker
 move net-www/phoenix-cvs net-www/mozilla-firebird-cvs
+move app-crypt/krb5 app-crypt/mit-krb5

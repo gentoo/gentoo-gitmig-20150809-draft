@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.3.ebuild,v 1.2 2003/05/09 22:52:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.3.ebuild,v 1.3 2003/06/06 23:58:22 rphillips Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -43,7 +43,7 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.0.3
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
 	ssl? ( mozilla? ( >=net-www/mozilla-0.9.9 ) : ( >=dev-libs/openssl-0.9.5 ) )
 	ldap?    ( >=net-nds/openldap-2.0 )
-    kerberos? ( >=app-crypt/krb5-1.2.5 )"
+    kerberos? ( >=app-crypt/mit-krb5-1.2.5 )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.4.1-r1

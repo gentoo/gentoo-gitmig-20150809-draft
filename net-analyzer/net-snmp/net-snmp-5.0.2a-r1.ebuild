@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.2a-r1.ebuild,v 1.7 2003/02/13 13:46:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.2a-r1.ebuild,v 1.8 2003/06/06 23:58:22 rphillips Exp $
 
 IUSE="ssl kerberos ipv6 tcpd"
 
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc <sys-libs/db-2
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
-	kerberos? ( >=app-crypt/krb5-1.2.5 )"
+	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )"
 	
 SLOT="0"
 LICENSE="as-is"
