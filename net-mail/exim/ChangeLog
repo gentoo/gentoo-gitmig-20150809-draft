@@ -1,6 +1,19 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.51 2004/03/29 23:56:47 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.52 2004/04/24 13:03:45 peitolm Exp $
+
+*exim-4.32 (24 Apr 2004)
+
+  24 Apr 2004; Colin Morey <peitolm@gentoo.org> exim-4.31.ebuild,
+  exim-4.32.ebuild, metadata.xml:
+  Version bump, also fixes the following :
+    # Includes Typo fix for bug 47106
+    # enable optional exim_monitor support via X use flag bug #46778
+    # To fix bug 41196 (ipv6 breakage)
+
+  24 Apr 2004; Colin Morey <peitolm@gentoo.org> exim-4.31.ebuild,
+  metadata.xml:
+  Bumping exim-4.31 to stable
 
 *exim-4.30-r1 (30 Mar 2004)
 

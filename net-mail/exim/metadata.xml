@@ -3,6 +3,12 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <maintainer>
+  <!-- Primary maintainer -->
+  <email>peitolm@gentoo.org</email>
+  <name>Colin Morey</name>
+</maintainer>
+<maintainer>
+  <!--secondary maintainer, please bug peitolm first.. -->
   <email>pfeifer@gentoo.org</email>
   <name>Jay Pfeifer</name>
 <!--  <description>Description of the maintainership</description> -->

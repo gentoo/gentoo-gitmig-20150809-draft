@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.31.ebuild,v 1.2 2004/04/24 13:03:45 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.32.ebuild,v 1.1 2004/04/24 13:03:45 peitolm Exp $
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl maildir lmtp ipv6 sasl wildlsearch dnsdb"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl maildir lmtp ipv6 sasl wildlsearch dnsdb perl mbox X"
 
-EXISCANACL_VER=${PV}-16
+EXISCANACL_VER=${PV}-18
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.gz
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc"
+KEYWORDS="~x86 ~sparc"
 
 PROVIDE="virtual/mta"
 DEPEND=">=sys-apps/sed-4.0.5
@@ -52,7 +52,7 @@ src_unpack() {
 		einfo "Patching exican-acl support into exim ${PV}.."
 		epatch ${DISTDIR}/exiscan-acl-${EXISCANACL_VER}.patch
 	fi
-
+	# Includes Typo fix for bug 47106
 	sed -e "48i\CFLAGS=${CFLAGS}" \
 		-e "s:# AUTH_CRAM_MD5=yes:AUTH_CRAM_MD5=yes:" \
 		-e "s:# AUTH_PLAINTEXT=yes:AUTH_PLAINTEXT=yes:" \
@@ -61,19 +61,30 @@ src_unpack() {
 		-e "s:ZCAT_COMMAND=/opt/gnu/bin/zcat:ZCAT_COMMAND=/usr/bin/zcat:" \
 		-e "s:CONFIGURE_FILE=/usr/exim/configure:CONFIGURE_FILE=/etc/exim/exim.conf:" \
 		-e "s:EXIM_MONITOR=eximon.bin:# EXIM_MONITOR=eximon.bin:" \
-		-e "s:# EXIM_PERL=perl.o:EXIM_PERL=perl.o:" \
 		-e "s:# INFO_DIRECTORY=/usr/local/info:INFO_DIRECTORY=/usr/share/info:" \
 		-e "s:# LOG_FILE_PATH=/var/log/exim_%slog:LOG_FILE_PATH=/var/log/exim/exim_%s.log:" \
 		-e "s:# PID_FILE_PATH=/var/lock/exim.pid:PID_FILE_PATH=/var/run/exim.pid:" \
 		-e "s:# SPOOL_DIRECTORY=/var/spool/exim:SPOOL_DIRECTORY=/var/spool/exim:" \
 		-e "s:# SUPPORT_MAILDIR=yes:SUPPORT_MAILDIR=yes:" \
-		-e "s:# SUPPORT_MAILSTOR=yes:SUPPORT_MAILSTORE=yes:" \
-		-e "s:# SUPPORT_MBX=yes:SUPPORT_MBX=yes:" \
+		-e "s:# SUPPORT_MAILSTORE=yes:SUPPORT_MAILSTORE=yes:" \
 		-e "s:EXIM_USER=:EXIM_USER=mail:" \
 		-e "s:# AUTH_SPA=yes:AUTH_SPA=yes:" \
 		src/EDITME > Local/Makefile
 
 	cd Local
+	# enable optional exim_monitor support via X use flag bug #46778
+	if use X; then
+		einfo "Configuring eximon"
+		cp ../exim_monitor/EDITME eximon.conf
+		sed -i "s:# EXIM_MONITOR=eximon.bin:EXIM_MONITOR=eximon.bin:" Makefile
+	fi
+	#These next two should resolve 37964
+	if use perl; then
+		sed -i "s:# EXIM_PERL=perl.o:EXIM_PERL=perl.o:" Makefile
+	fi
+	if use mbox; then
+		sed -i "s:# SUPPORT_MBX=yes:SUPPORT_MBX=yes:" Makefile
+	fi
 	if use pam; then
 		sed -i "s:# \(SUPPORT_PAM=yes\):\1:" Makefile
 		myconf="${myconf} -lpam"
@@ -92,6 +103,8 @@ src_unpack() {
 	fi
 	if use ipv6; then
 		echo "HAVE_IPV6=YES" >> Makefile
+		#To fix bug 41196
+		echo "IPV6_USE_INET_PTON=yes" >> Makefile
 	fi
 
 	if [ -n "$myconf" ] ; then
