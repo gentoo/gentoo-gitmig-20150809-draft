@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-8.0-r3.ebuild,v 1.1 2004/12/12 16:36:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-8.0-r3.ebuild,v 1.2 2004/12/14 08:39:05 mr_bones_ Exp $
 
 DESCRIPTION="ICA Client"
 HOMEPAGE="http://www.citrix.com/download/unix-downloads.asp"
@@ -76,5 +76,5 @@ src_install() {
 	if [ use gnome ]; then
 		insinto /usr/share/applications
 		doins lib/ICAClient/desktop/*.desktop
-	fi	
+	fi
 }
