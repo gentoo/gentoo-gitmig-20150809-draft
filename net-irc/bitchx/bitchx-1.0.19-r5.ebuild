@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.4 2003/06/16 20:50:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.5 2003/07/05 21:39:25 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -87,8 +87,12 @@ src_compile() {
 		${S}/include/config.h.orig > \
 		${S}/include/config.h 
 	#ugly workaround
-	use gtk && use gnome && CFLAGS="${CFLAGS} -I/usr/include/gnome-1.0"
-	
+	use gtk && use gnome && ( \
+		CFLAGS="${CFLAGS} -I/usr/include/gnome-1.0"
+		einfo "gtkBitchX will be built, if you want BitchX please issue"
+		einfo "USE="-gtk" emerge bitchx" 
+		sleep 10
+		)
 	econf CFLAGS="${CFLAGS}" \
 		--enable-cdrom \
 		--with-plugins \
@@ -104,13 +108,12 @@ src_install () {
 	rm ${D}/usr/share/man/man1/BitchX*
 	doman doc/BitchX.1
 
-	use gnome && ( \
+	use gnome && use gtk && ( \
 		exeinto /usr/bin
-		newexe ${S}/source/BitchX BitchX-1.0c19
+	#	newexe ${S}/source/BitchX BitchX-1.0c19
 		dosym gtkBitchX-1.0c19 /usr/bin/gtkBitchX
-	)
-
-	dosym BitchX-1.0c19 /usr/bin/BitchX
+		einfo "Installed gtkBitchX"
+	) || dosym BitchX-1.0c19 /usr/bin/BitchX
 
 	chmod -x ${D}/usr/lib/bx/plugins/BitchX.hints
 
