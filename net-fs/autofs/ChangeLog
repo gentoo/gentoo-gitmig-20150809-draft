@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.20 2003/09/24 17:16:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.21 2003/10/28 00:33:07 rphillips Exp $
+
+*autofs-4.0.0 (27 Oct 2003)
+
+  27 Oct 2003; Ryan Phillips <rphillips@gentoo.org> autofs-4.0.0.ebuild:
+  version bump.  added as unstable. Thanks to Gregory Shimansky
 
 *autofs-3.1.7-r6 (25 Sep 2003)
 
