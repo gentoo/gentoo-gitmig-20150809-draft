@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.23 2004/07/19 13:04:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.24 2004/08/12 16:07:12 aliz Exp $
+
+  12 Aug 2004; Daniel Ahlberg <aliz@gentoo.org> ulogd-1.02.ebuild:
+  Added postgresql support, closing #60013.
 
   19 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> ulogd-1.01.ebuild,
   ulogd-1.02.ebuild:
