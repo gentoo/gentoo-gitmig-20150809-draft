@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/linuxfromscratch-html
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/ChangeLog,v 1.7 2003/09/30 08:16:29 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/ChangeLog,v 1.8 2004/04/18 02:00:21 randy Exp $
+
+  17 Apr 2004; Michael McCabe <randy@gentoo.org>
+  linuxfromscratch-html-4.0.ebuild:
+  added s390 keywords
 
 *linuxfromscratch-html-4.0 (15 may 2003)
 
