@@ -24,3 +24,4 @@ move net-misc/rp-l2tp net-dialup/rp-l2tp
 move app-misc/gtodo x11-misc/gtodo
 move app-misc/xearth x11-misc/xearth
 move app-misc/xsnap x11-misc/xsnap 
+move app-misc/xtrlock x11-misc/xtrlock
