@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-0.8.ebuild,v 1.1 2003/02/20 07:39:39 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-0.8.ebuild,v 1.2 2003/04/29 10:41:25 darkspecter Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Libchipcard is a library for easy access to chip cards via chip card readers (terminals)."
@@ -20,6 +20,7 @@ DEPEND="virtual/glibc
 src_compile() {
 
 	local myconf
+	myconf="--with-pid-dir=/var/run/ --with-log-dir=/var/log/"
 	use qt  || myconf="${myconf} --disable-qtapps"
 	use kde || myconf="${myconf} --disable-kdeapps"
 	use ssl || myconf="${myconf} --disable-ssl"
