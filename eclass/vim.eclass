@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.32 2003/07/22 00:34:02 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.33 2003/07/29 20:50:27 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -12,7 +12,29 @@ EXPORT_FUNCTIONS src_unpack
 
 inherit eutils
 
-IUSE="gnome gpm gtk gtk2 ncurses nls perl python ruby vim-with-x X"
+IUSE="$IUSE ncurses nls"
+if [ ${PN} != vim-core ]; then
+	IUSE="$IUSE cscope gpm perl python ruby"
+	newdepend "
+		cscope?  ( dev-util/cscope )
+		gpm?     ( >=sys-libs/gpm-1.19.3 )
+		perl?    ( dev-lang/perl )
+		python?  ( dev-lang/python )"
+	# Vim versions after 6.2d should work with Ruby 1.8 because of a local
+	# Gentoo patch; working on putting it upstream (22 May 2003 agriffis)
+	if [[ "$PV" < 6.2 || ( "$PV" == 6.2_pre* && "${PV#*pre}" -lt 4 ) ]]; then
+		newdepend "ruby? ( =dev-lang/ruby-1.6* )" # 1.8 doesn't work
+	else
+		newdepend "ruby? ( dev-lang/ruby )"
+	fi
+
+	if [ ${PN} = vim ]; then
+		IUSE="$IUSE vim-with-x"
+		newdepend "vim-with-x? ( virtual/x11 )"
+	elif [ ${PN} = gvim ]; then
+		IUSE="$IUSE gnome gtk gtk2 motif"
+	fi
+fi
 
 HOMEPAGE="http://www.vim.org/"
 SLOT="0"
@@ -23,20 +45,8 @@ newdepend "
 	>=sys-apps/portage-2.0.45-r3
 	>=sys-apps/sed-4
 	sys-devel/autoconf
-	dev-util/cscope
-	vim-with-x? ( virtual/x11 )
-	gpm?     ( >=sys-libs/gpm-1.19.3 )
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )
-	perl?    ( dev-lang/perl )
-	python?  ( dev-lang/python )"
-
-# Vim versions after 6.2d should work with Ruby 1.8 because of a local
-# Gentoo patch; working on putting it upstream (22 May 2003 agriffis)
-if [[ "$PV" < 6.2 || ( "$PV" == 6.2_pre* && "${PV#*pre}" -lt 4 ) ]]; then
-	newdepend "ruby? ( =dev-lang/ruby-1.6* )" # 1.8 doesn't work
-else
-	newdepend "ruby? ( dev-lang/ruby )"
-fi
+	"
 
 apply_vim_patches() {
 	local p
@@ -142,8 +152,8 @@ src_compile() {
 			--disable-gpm"
 	else
 		myconf="--with-features=huge \
-			--enable-cscope \
 			--enable-multibyte"
+		myconf="${myconf} `use_enable cscope`"
 		myconf="${myconf} `use_enable gpm`"
 		myconf="${myconf} `use_enable perl perlinterp`"
 		myconf="${myconf} `use_enable python pythoninterp`"
