@@ -1,4 +1,14 @@
-MD5 7e1e52bd4784b8dce8d2de3f302221cb ChangeLog 557
-MD5 9367fbfe415281ca2bb0b31ec22bb036 aop-0.6.ebuild 772
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8ce46fcb9eb6a60377ab21992dea46cb aop-0.6.ebuild 783
+MD5 041b014f8a726e2d2e2bdbeb8b0a4586 ChangeLog 667
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 6a167f4c9b66b497b9c2bf5431c89033 files/digest-aop-0.6 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCLz3g06ebR+OMO78RAjvOAJ9v6XTMK+xA2LJRfMqZNr+bk3rsoQCffZ7h
+1+bK2i93MOsDIOMi8MMDXPE=
+=S96t
+-----END PGP SIGNATURE-----

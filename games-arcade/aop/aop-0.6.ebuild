@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/aop/aop-0.6.ebuild,v 1.3 2005/01/17 02:44:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/aop/aop-0.6.ebuild,v 1.4 2005/03/09 18:17:46 luckyduck Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.raffi.at/code/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
