@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.23 2004/08/25 13:55:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.24 2004/08/28 16:16:45 solar Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -182,7 +182,7 @@ RDEPEND="virtual/libc
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 PDEPEND="sys-devel/gcc-config
-	sys-libs/libstdc++-v3"
+	!uclibc? ( sys-libs/libstdc++-v3 )"
 
 has_lib64() {
 	use amd64 && return 0

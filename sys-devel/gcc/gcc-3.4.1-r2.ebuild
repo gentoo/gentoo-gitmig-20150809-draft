@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.13 2004/08/26 03:45:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.14 2004/08/28 16:16:45 solar Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -45,7 +45,7 @@ RDEPEND="virtual/libc
 
 PDEPEND="sys-devel/gcc-config"
 [ "${ABI}" != "n32" ] && [ "${ABI}" != "n64" ] && PDEPEND="${PDEPEND}
-	!n32? ( !n64? ( sys-libs/libstdc++-v3 ) )"
+	!n32? ( !n64? ( !uclibc? ( sys-libs/libstdc++-v3 ) ) )"
 
 
 # <<--------------------SRC_URI variables-------------------->>
