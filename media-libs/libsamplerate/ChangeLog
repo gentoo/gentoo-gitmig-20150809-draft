@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsamplerate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.6 2003/10/22 17:04:06 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.7 2003/11/04 23:23:41 mr_bones_ Exp $
+
+  04 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  libsamplerate-0.0.14.ebuild:
+  tidy; more docs
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org>
   libsamplerate-0.0.14.ebuild:

@@ -1,5 +1,5 @@
-MD5 dd11dd9a3b74b0b212d84b26c8b73461 ChangeLog 936
+MD5 ef55023cae40239367130dc9c1ae8513 ChangeLog 1039
 MD5 414a518a4f0ec34b64c0ef3ace682580 libsamplerate-0.0.13.ebuild 726
-MD5 d4319650983dea9fd2f009204420f884 libsamplerate-0.0.14.ebuild 742
+MD5 5b9d331aeb4fd9b4856d545e567ce1f6 libsamplerate-0.0.14.ebuild 660
 MD5 b2fe0b9855edeeb58bba567b290008e7 files/digest-libsamplerate-0.0.13 72
 MD5 1e3bfde9755ffa6264c7c0c8027766b2 files/digest-libsamplerate-0.0.14 142
