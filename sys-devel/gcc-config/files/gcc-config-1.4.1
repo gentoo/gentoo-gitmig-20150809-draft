@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.4.1,v 1.4 2004/07/15 00:59:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.4.1,v 1.5 2004/10/02 12:21:18 lv Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Cross-compiling toolchain contributions by: 
 #   Zach Welch <zwelch@gentoo.org> and James Boddington <aiken@gentoo.org>
@@ -582,8 +582,8 @@ if [ "${DOIT}" != "install_toolchain" -a \
      \( ! -d "${ROOT}usr/lib/gcc-lib/${CC_COMP%-*}/${CC_COMP##*-}" -o \
         ! -f "${ROOT}etc/env.d/gcc/${CC_COMP}" \) ]
 then
-	eerror "$0: Profile does not exist!"
-	exit 1
+	eerror "$0: Profile does not exist or invalid setting for /etc/env.d/gcc/${CC_COMP}"
+	#exit 1
 fi
 
 if [ "${CHECK_CHOST}" = "yes" ]
