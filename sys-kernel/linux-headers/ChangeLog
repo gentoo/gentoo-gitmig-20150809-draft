@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.69 2004/04/14 22:03:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.70 2004/04/22 17:11:01 kumba Exp $
+
+*linux-headers-2.4.26 (22 Apr 2004)
+
+  22 Apr 2004; Joshua Kinard <kumba@gentoo.org> +linux-headers-2.4.26.ebuild:
+  Version Bump.
 
   14 Apr 2004; Joshua Kinard <kumba@gentoo.org>
   linux-headers-2.4.21-r1.ebuild, linux-headers-2.4.21.ebuild,
