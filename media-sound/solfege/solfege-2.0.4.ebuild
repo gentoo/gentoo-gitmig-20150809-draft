@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.4.ebuild,v 1.1 2004/02/10 09:20:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.4.ebuild,v 1.2 2004/02/10 09:58:18 eradicator Exp $
 
 inherit python
 
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	sys-apps/texinfo
 	dev-libs/libxslt
+	sys-apps/sed
 	=app-text/docbook-xsl-stylesheets-1.62*"
 
 S=${WORKDIR}/${P}
@@ -46,7 +47,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	mv Makefile.in Makefile.in.orig
-	sed -e 's:links:#links: ; s:gnome/apps/Applications:applications:' \
+	sed -e 's:gnome/apps/Applications:applications:' \
 		< Makefile.in.orig > Makefile.in
 
 	echo 'Categories=Application;AudioVideo;' >> solfege.desktop
