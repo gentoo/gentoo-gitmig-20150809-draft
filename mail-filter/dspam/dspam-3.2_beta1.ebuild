@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2_beta1.ebuild,v 1.4 2004/10/24 15:08:56 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2_beta1.ebuild,v 1.5 2004/10/28 14:40:36 st_lim Exp $
 
 inherit eutils
 
@@ -395,19 +395,4 @@ pkg_config () {
 		[[ -f ${CONFIGDIR}/oracle.data ]] && mv -f ${CONFIGDIR}/oracle.data ${HOMEDIR}
 	fi
 
-	echo -ne "\n\n\n\n"
-
-	einfo "If you want to train your DSPAM with some SPAM/HAM data, then download"
-	einfo "the SA-Training-Corpus from DSPAM's website:"
-	einfo
-	einfo "  cd /tmp"
-	einfo "  wget http://www.nuclearelephant.com/projects/dspam/SA-Corpus.tar.gz"
-	einfo "  tar zxvf SA-Corpus.tar.gz"
-	einfo "  cd ./SA-Corpus"
-	einfo "  perl train.pl user@example.com"
-	einfo
-	einfo "The current ebuild has installed a group called \"globaluser\". If you want"
-	einfo "you could train the \"globaluser\" instead of a valid email address:"
-	einfo "  perl train.pl globaluser"
-	einfo
 }
