@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc-bin
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.11 2004/03/02 09:25:00 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.12 2004/03/23 00:29:48 mattam Exp $
+
+  23 Mar 2004; Matthieu Sozeau <mattam@gentoo.org> ghc-bin-5.04.3.ebuild:
+  Add ppc keyword.
 
 *ghc-bin-6.2 (17 Dec 2003)
 
