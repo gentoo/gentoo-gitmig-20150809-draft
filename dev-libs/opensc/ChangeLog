@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/opensc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.10 2004/11/02 14:34:49 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.11 2005/01/23 11:16:48 corsair Exp $
+
+  23 Jan 2005; Markus Rothe <corsair@gentoo.org> opensc-0.8.1-r1.ebuild,
+  opensc-0.9.4.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *opensc-0.9.4 (02 Nov 2004)
 

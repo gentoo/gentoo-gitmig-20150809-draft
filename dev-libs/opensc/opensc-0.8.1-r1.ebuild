@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.8.1-r1.ebuild,v 1.1 2004/10/13 12:56:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.8.1-r1.ebuild,v 1.2 2005/01/23 11:16:48 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.opensc.org/files/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~ppc64"
 IUSE="ldap pam pcsc-lite X"
 
 RDEPEND="ldap? ( net-nds/openldap )
