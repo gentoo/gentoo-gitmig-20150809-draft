@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.6 2003/02/12 06:12:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.7 2003/07/08 21:36:33 mholzer Exp $
+
+*lablgl-0.99 (08 Jul 2003)
+
+  08 Jul 2003; Martin Holzer <mholzer@gentoo.org> lablgl-0.99.ebuild:
+  Version bumped. Closes #24701.
 
 *lablgl-0.98.ebuild (03 Sep 2002)
 
