@@ -1,0 +1,11 @@
+--- kdeui/ksconfig.cpp	15 Nov 2004 19:26:56 -0000	1.88
++++ kdeui/ksconfig.cpp	24 Jan 2005 12:29:53 -0000
+@@ -496,6 +496,8 @@
+   // FIXME: use "aspell dump config" to find out the dict-dir
+   QFileInfo dir ("/usr/lib/aspell");
+   if (!dir.exists() || !dir.isDir())
++    dir.setFile ("/usr/lib/aspell-0.60");
++  if (!dir.exists() || !dir.isDir())
+     dir.setFile ("/usr/local/lib/aspell");
+   if (!dir.exists() || !dir.isDir())
+     dir.setFile ("/usr/share/aspell");

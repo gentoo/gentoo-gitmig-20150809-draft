@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.189 2005/02/05 11:39:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.190 2005/02/07 20:07:22 greg_g Exp $
+
+*kdelibs-3.3.2-r3 (07 Feb 2005)
+
+  07 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdelibs-3.3.2-anchor-fix.patch,
+  +files/kdelibs-3.3.2-aspell-dir.patch, +kdelibs-3.3.2-r3.ebuild:
+  Remove KDEDIR from the environment (#33079). Add optional dependency on
+  aspell/ispell. Add patch for aspell dictionary support (#67748). Add patch to
+  fix konqueror anchor bug (#77127).
 
 *kdelibs-3.4.0_beta2 (05 Feb 2005)
 
