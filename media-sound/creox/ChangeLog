@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/creox
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/creox/ChangeLog,v 1.1 2004/05/04 01:36:58 eradicator Exp $
+
+*creox-0.2.2_rc2 (03 May 2004)
+
+  03 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  creox-0.2.2_rc2.ebuild, metadata.xml:
+  Ebuild submitted in bug #36575 by Mark Dierolf <smark@3e0.com>.
+
