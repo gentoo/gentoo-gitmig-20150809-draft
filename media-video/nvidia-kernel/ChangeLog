@@ -1,7 +1,23 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.6 2002/08/16 14:59:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.7 2002/08/16 23:55:31 drobbins Exp $
 
+*nvidia-kernel-1.0.2960-r1 (16 Aug 2002)
+
+  17 Aug 2002; Gustavo Felisberto <gustavo@felisberto.net>: Changed a small
+  line in the ebuild so that the kernel module gets installed in
+  /lib/modules/${KV}/video this way a "make modules_install" in /usr/src/linux
+  will not erase the nvidia module. (added by drobbins) This closes bug #5572.
+  
+  16 Aug 2002; Daniel Robbins <drobbins@gentoo.org>: set SLOT to $KV, removed
+  module removal and modprobing from pkg_postinst(). The module stuff had to be
+  removed because NVdriver compiles for the kernel in /usr/src/linux, not
+  necessarily the currently-running kernel. It's also a violation of Gentoo
+  Linux policy to automatically mess with someone's modules. SLOT being set to
+  $KV allows multiple sets of NVdriver modules to be installed for differing
+  kernel versions. Doesn't work 100% yet because we don't yet support differing
+  SLOTs for the exact same version of a package, but will soon.
+  
   16 Aug 2002; Daniel Robbins <drobbins@gentoo.org>: Added the
   IGNORE_CC_MISMATCH make flag; in some cases, the NVIDIA build process tries
   to be too smart and intentionally aborts when it shouldn't. This is a

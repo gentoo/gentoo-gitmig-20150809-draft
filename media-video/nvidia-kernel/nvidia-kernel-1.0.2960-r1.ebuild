@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2960.ebuild,v 1.6 2002/08/16 14:59:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2960-r1.ebuild,v 1.1 2002/08/16 23:55:31 drobbins Exp $
 
 DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
 HOMEPAGE="http://www.nvidia.com/"
@@ -19,7 +19,8 @@ DEPEND="virtual/linux-sources
 DEBUG="yes"
 RESTRICT="nostrip"
 
-SLOT="0"
+#The slow needs to be set to $KV to prevent unmerges of modules for other kernels.
+SLOT="$KV"
 LICENSE="NVIDIA"
 KEYWORDS="x86 -ppc -sparc -sparc64"
 
@@ -36,7 +37,7 @@ src_compile() {
 
 src_install () {
 	# The driver goes into the standard modules location
-	insinto "/lib/modules/${KV}/kernel/video"
+	insinto "/lib/modules/${KV}/video"
 	doins NVdriver
     
 	# Add the aliases
@@ -54,24 +55,16 @@ src_install () {
 pkg_postinst() {
 	if [ "${ROOT}" = "/" ]
 	then
-		# Get any stale module unloaded
-		[ -x /sbin/rmmod ]              && /sbin/rmmod NVdriver
 		# Update module dependency
 		[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
-		# Load the module again
-		[ -x /sbin/modprobe ]           && /sbin/modprobe NVdriver
 		if [ ! -e /dev/.devfsd ] && [ -x /sbin/NVmakedevices.sh ]
 		then
 			/sbin/NVmakedevices.sh >/dev/null 2>&1
 		fi
 	fi
 
-	einfo
-	einfo "If you are not using devfs, you might want to create nvidia"
-	einfo "device nodes by running /sbin/NVmakedevices.sh"
-	einfo
 	einfo "If you are not using devfs, loading the module automatically at"
-	einfo "boot up, you need to add \"NVdriver\" to your /etc/modules.autoload:"
+	einfo "boot up, you need to add \"NVdriver\" to your /etc/modules.autoload."
 	einfo
 }
 
