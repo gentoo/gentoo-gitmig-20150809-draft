@@ -1,12 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/dhcp-agent-0.41.ebuild,v 1.2 2005/01/29 21:21:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/dhcp-agent-0.41.ebuild,v 1.3 2005/03/31 14:21:21 ka0ttic Exp $
+
+inherit eutils
 
 DESCRIPTION="dhcp-agent is a portable UNIX Dynamic Host Configuration suite"
 HOMEPAGE="http://dhcp-agent.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dhcp-agent/${P}.tar.gz"
-SLOT="0"
+
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="~x86 ~sparc"
 IUSE="doc"
 
@@ -17,19 +20,22 @@ DEPEND=">=dev-libs/libdnet-1.7
 
 src_unpack() {
 	unpack ${A}
-	#sed -i -e "s:LDADD = -ldhcputil:LDADD = -L${S}/src/.libs -ldhcputil:g" ${S}/src/Makefile.in
-	sed -i -e "s:LDADD = -ldhcputil:LDADD = -L${S}/src/.libs/ libdhcputil.la:g" \
-		-e 's:${dhcplocalstate:$(DESTDIR)${dhcplocalstate:g' ${S}/src/Makefile.in
-
+	cd ${S}
+	sed -i -e "s:\(LDADD = \)-ldhcputil:\1-L${S}/src/.libs/ libdhcputil.la:g" \
+		-e 's:\(mkdir -p \).*\$\(.*\)\$\(.*\)\$\(.*\):\1\$(DESTDIR)\$\2\$(DESTDIR)\$\3\$(DESTDIR)\$\4:' \
+		src/Makefile.am || die "sed Makefile.am failed"
+	sed -i "s:^\(dhcpdocdir=\).*$:\"\1/share/doc/${PF}\":" configure.ac || \
+		die "sed configure.ac failed"
+	epatch ${FILESDIR}/${P}-bpf.diff
 }
 
 src_compile() {
-	econf `use_enable doc htmldoc` || die
-	emake -j1 || die
-	sed -i -e "s:/usr/doc/dhcp-agent:/usr/share/doc/${PF}:" ${S}/man/dhcp-*.1
+	autoreconf -fi || die "autoreconf failed"
+	econf $(use_enable doc htmldoc) || die "econf failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR=${D} dhcpdocdir=/share/doc/${PF} install || die
+	make DESTDIR=${D} install || die "make install failed"
 	dodoc README THANKS TODO UPGRADING CAVEATS
 }

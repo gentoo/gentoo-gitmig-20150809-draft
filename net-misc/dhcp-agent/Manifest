@@ -1,15 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2a8b31f2f519f91d4ccd324d5b74db2d ChangeLog 869
-MD5 d710cd7d4c2d5eb29de10b953e1cacaf dhcp-agent-0.37.ebuild 610
-MD5 257700228404d741cee8864a4d8a1385 dhcp-agent-0.41.ebuild 1125
+MD5 06561d0daffbe44b1b27e1c72b1e2c19 dhcp-agent-0.41.ebuild 1256
+MD5 c7715166b618a3574ed2b5fe5f2041b4 dhcp-agent-0.37.ebuild 733
+MD5 a3a24a443ff37f65c91fd5e8bbc385ce ChangeLog 1074
+MD5 266ccfbf119159edc8620b24330a991d files/dhcp-agent-0.41-bpf.diff 970
 MD5 0f4db3ad1136755fd8a72247359cb188 files/digest-dhcp-agent-0.37 67
 MD5 474707d9c00ab92458a152206b997060 files/digest-dhcp-agent-0.41 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB+/56mdTrptrqvGERAvEdAJ0XuCI3U0UhxXSB9UXcJaa8GwyqkgCffT60
-6Iq9NKzob0Jbef9LXxM2crE=
-=yL3l
+iD8DBQFCTAd4EZCkKN40op4RAs6MAKC4yfPmJTl8g/70McePQtRNVOQiMwCgnxcP
+4IMspN7Pbl+gXRAc2ULEV+c=
+=8PNX
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcp-agent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/ChangeLog,v 1.7 2005/01/29 21:21:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/ChangeLog,v 1.8 2005/03/31 14:21:21 ka0ttic Exp $
+
+  31 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/dhcp-agent-0.41-bpf.diff, dhcp-agent-0.37.ebuild,
+  dhcp-agent-0.41.ebuild:
+  Use pcap_bpf.h since pcap doesn't provide net/bpf.h anymore; bug 75356.
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> dhcp-agent-0.37.ebuild,
   dhcp-agent-0.41.ebuild:

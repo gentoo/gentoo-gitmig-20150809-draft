@@ -1,0 +1,27 @@
+diff --exclude='*~' -urN dhcp-agent-0.41.orig/configure.ac dhcp-agent-0.41/configure.ac
+--- dhcp-agent-0.41.orig/configure.ac	2005-03-31 00:34:41.000000000 -0500
++++ dhcp-agent-0.41/configure.ac	2005-03-31 00:40:21.000000000 -0500
+@@ -58,7 +58,7 @@
+ dnl check header files we should have
+ 
+ AC_HEADER_STDC
+-AC_CHECK_HEADERS(inttypes.h signal.h varargs.h stdarg.h sys/utsname.h getopt.h)
++AC_CHECK_HEADERS(inttypes.h signal.h varargs.h stdarg.h sys/utsname.h getopt.h net/bpf.h)
+ 
+ dnl
+ dnl check for types
+diff --exclude='*~' -urN dhcp-agent-0.41.orig/src/dhcp-local.h dhcp-agent-0.41/src/dhcp-local.h
+--- dhcp-agent-0.41.orig/src/dhcp-local.h	2005-03-31 00:34:41.000000000 -0500
++++ dhcp-agent-0.41/src/dhcp-local.h	2005-03-31 00:41:16.000000000 -0500
+@@ -81,7 +81,11 @@
+ #include <time.h>
+ #include <ctype.h>
+ 
++#ifdef HAVE_NET_BPH_H
+ #include <net/bpf.h>
++#define PCAP_DONT_INCLUDE_PCAP_BPF_H
++#endif				/* HAVE_NET_BPH_H */
++
+ #include <dnet.h>
+ #include <pcap.h>
+ 
