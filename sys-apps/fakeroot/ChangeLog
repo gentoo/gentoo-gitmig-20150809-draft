@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.7 2003/10/03 15:37:20 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.8 2004/04/02 18:38:26 avenj Exp $
+
+  02 Apr 2004; Jon Portnoy <avenj@gentoo.org> fakeroot-0.4.4-r1.ebuild :
+  Use gnuconfig_update for all archs.
 
   03 Oct 2003; Aron Griffis <agriffis@gentoo.org> fakeroot-0.4.4-r1.ebuild:
   Use gnuconfig_update and mark stable on alpha
@@ -8,7 +11,6 @@
   12 Aug 2003; Alexander Gabert <pappy@gentoo.org> fakeroot-0.4.4.ebuild:
   tested and compiled on hppa
 
-*fakeroot-0.4.4-r1 (29 Sep 2002)
   20 Jan 2003; Jon Nall <nall@gentoo.org fakeroot-0.4.4-r1.ebuild :
   added ~ppc
 
