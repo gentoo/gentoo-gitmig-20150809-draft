@@ -1,8 +1,11 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.7 2002/08/26 16:49:25 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.8 2002/08/28 13:22:21 karltk Exp $
 
 *blackdown-jre-1.3.1-r7 (16 Jul 2002) 
+
+  28 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jre-1.3.1-r7 :
+  Added sparc platform support, not entirely tested.
 
   26 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jre-1.3.1-r7 :
   Now provides the jre-1.3.1 virtual package.
@@ -13,32 +16,23 @@
   16 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/blackdown-jre-1.3.1 :
   Added MANPATH to the the environment file.
 
-  27 Apr 2002; pvdabeel <pvdabeel@gentoo.org>
+  27 Apr 2002; pvdabeel <pvdabeel@gentoo.org> blackdown-jre-1.3.1-r7 :
   PPC(/sparc) compatible ebuild
 
 *blackdown-jre-1.3.1-r6 (09 Apr 2002)
 
   09 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jre-1.3.1-r6.ebuild files/digest-blackdown-jre-1.3.1-r6 files/blackdown-jre-1.3.1 :
-
   Fixed JRE_HOME env var in the environment script (#1593), fixed erroneous
   font specs in font.properties (#1533).
-
   Old revisions removed.
 
 *blackdown-jre-1.3.1-r5 (18 Mar 2002)
 
   18 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jre-1.3.1-r5.ebuild files/digest-blackdown-jre-1.3.1-r5 files/blackdown-jre-1.3.1 :
-
   Added support for JVM switching.
-
   Removed old revisions.
 
 *blackdown-jre-1.3.1-r4 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  Added initial ChangeLog.
