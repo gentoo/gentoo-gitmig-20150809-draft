@@ -293,9 +293,6 @@ net-im/licq-console
 # 23 Mar, m0rpheus: bind 8 keeps having serious problems.
 <net-misc/bind-9.0.0 
 
-# 
-net-mail/vlnx
-
 # bug #468
 net-www/zope
 
