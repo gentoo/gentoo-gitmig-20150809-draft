@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r5.ebuild,v 1.5 2003/12/11 03:06:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r5.ebuild,v 1.6 2003/12/11 05:33:12 seemant Exp $
 
 inherit eutils
 
@@ -55,7 +55,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	aclocal -I ${S}/m4 || die
 	autoconf || die
 	automake || die
