@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/mtx
+# ChangeLog for sys-block/mtx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mtx/ChangeLog,v 1.1 2005/03/15 19:48:09 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mtx/ChangeLog,v 1.2 2005/03/16 19:14:24 swegener Exp $
 
 *mtx-1.2.18 (15 Mar 2005)
 *mtx-1.2.17 (15 Mar 2005)
