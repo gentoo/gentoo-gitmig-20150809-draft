@@ -1,12 +1,11 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r2.ebuild,v 1.1 2002/04/12 21:48:29 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r2.ebuild,v 1.2 2002/04/12 23:48:53 seemant Exp $
 
-A=${P}.tgz
 S=${WORKDIR}/${P}
 DESCRIPTION="a set of utilities for converting to/from the netpbm (and related) formats"
-SRC_URI="http://download.sourceforge.net/netpbm/${A}"
+SRC_URI="http://download.sourceforge.net/netpbm/${P}.tar.gz"
 HOMEPAGE="http://netpbm.sourceforge.net/"
 
 DEPEND=">=media-libs/jpeg-6b
@@ -20,11 +19,11 @@ src_unpack() {
 }
 
 src_compile() {
-    try make CFLAGS="${CFLAGS}"
+    make || die
 }
 
 src_install () {
-    try make INSTALL_PREFIX="${D}/usr/" install
+    make INSTALL_PREFIX="${D}/usr/" install || die
     insinto /usr/include/pbm
     doins pnm/{pam,pnm}.h ppm/{ppm,pgm,pbm}.h
     doins pbmplus.h shopt/shopt.h
