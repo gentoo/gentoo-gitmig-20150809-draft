@@ -1,6 +1,6 @@
 # ChangeLog for net-irc/bnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.11 2004/07/01 22:20:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.12 2004/07/17 22:14:51 aliz Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> bnc-2.6.4.ebuild,
   bnc-2.8.6-r1.ebuild, bnc-2.8.6.ebuild:
@@ -9,6 +9,8 @@
   22 Jun 2004; Sven Wegener <swegener@gentoo.org>
   files/bnc-2.8.6-gotofail-labelfix.patch, bnc-2.8.6-r1.ebuild:
   Modified the gcc34 patch to not change functionality. Made CFLAGS aware.
+
+*bnc-2.8.6-r1 (22 Jun 2004)
 
   22 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> +bnc-2.8.6-r1.ebuild files/bncsetup.patch:
   Add patch to bncsetup, thanks to redeeman and GurliGebis.
