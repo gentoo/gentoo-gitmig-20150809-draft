@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/irc-server
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/ChangeLog,v 1.1 2003/10/04 00:52:26 gregf Exp $
+
+*irc-server-2.10.3_p3 (03 Oct 2003)
+
+  03 Oct 2003; Greg Fitzgerald <gregf@gentoo.org> irc-server-2.10.3_p3.ebuild,
+  files/ircd.rc:
+  Initial Release
+
