@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.5_rc1.ebuild,v 1.1 2005/01/11 03:11:01 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.5_rc1.ebuild,v 1.2 2005/01/11 23:48:30 johnm Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 IUSE="ipv6 selinux"
 S=${WORKDIR}/${MY_P}
 DEPEND="virtual/libc
-	sys-kernel/linux26-headers
+	|| ( >=sys-kernel/linux-headers-2.6 sys-kernel/linux26-headers )
 	>=dev-libs/openssl-0.9.6"
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-ipsec-tools )"

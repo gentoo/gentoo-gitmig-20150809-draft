@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.17 2005/01/11 03:11:01 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.18 2005/01/11 23:48:30 johnm Exp $
+
+  11 Jan 2005; John Mylchreest <johnm@gentoo.org>
+  ipsec-tools-0.5_rc1.ebuild:
+  fixing linux-headers DEPEND for 2005.0. can we get away with a virtual?
 
 *ipsec-tools-0.5_rc1 (10 Jan 2005)
 
