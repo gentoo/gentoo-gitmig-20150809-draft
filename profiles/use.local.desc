@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.954 2005/02/17 18:26:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.955 2005/02/18 01:28:07 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -65,10 +65,10 @@ app-i18n/scim-cvs:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/scim-cvs:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-i18n/scim:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/scim:immqt-bc - Enable immodule for Qt support (binary compatible)
-app-i18n/uim:immqt - Enable immodule for Qt support (binary incompatible)
-app-i18n/uim:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-i18n/uim-svn:dict - Build uim-dict (a dictionary utility for uim)
 app-i18n/uim-svn:fep - Build uim-fep
+app-i18n/uim:immqt - Enable immodule for Qt support (binary incompatible)
+app-i18n/uim:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-misc/lirc:streamzap - add the streamzap driver to lirc
 app-misc/screen:nethack - Express error messages in nethack style
@@ -110,8 +110,8 @@ dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY'
 dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgresql:pg-vacuumdelay - Adds in the vacuum inter-page delay feature.
 dev-db/rekall:xbase - Support for the Xbase db family, covering dBase, Clipper, FoxPro, Visual dBase/Objects/FoxPro plus some older products.
-dev-db/sqlite:utf8 - Enable UTF8 encoding
 dev-db/sqlite:nothreadsafe - turn off thread safe operation of sqlite
+dev-db/sqlite:utf8 - Enable UTF8 encoding
 dev-dotnet/gtk-sharp:gnomedb - Enable gnomedb support
 dev-games/clanlib:clanJavaScript - Enables javascript support in clanlib
 dev-games/clanlib:clanVoice - Enables voice support in clanlib
@@ -163,9 +163,9 @@ dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used f
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/boehm-gc:c++ - Adds support for C++
 dev-libs/cyrus-sasl:authdaemond - Enable Courier-IMAP authdaemond's unix socket support.
+dev-libs/cyrus-sasl:ntlm_unsupported_patch - Adds NTLM samba NOT supported patch
 dev-libs/cyrus-sasl:pam-mysql - Switch to deprecated pam_mysql authentication method
 dev-libs/cyrus-sasl:sample - Build sample client and server
-dev-libs/cyrus-sasl:ntlm_unsupported_patch - Adds NTLM samba NOT supported patch
 dev-libs/cyrus-sasl:srp - Enables SRP in cyrus-sasl
 dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/gdal:fits - enables support for NASA's cfitsio library
@@ -211,9 +211,6 @@ dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/global:vim - vim funny stuff for global
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
-games-strategy/uqm:music - download and install music files (large)
-games-strategy/uqm:voice - download and install voice files (large)
-games-strategy/uqm:remix - download and install music remix files (large)
 games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
@@ -221,6 +218,7 @@ games-emulation/mupen64:asm - Enable use of asm routines to improve performance
 games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
 games-engines/exult:timidity - Add sound support (timidity)
+games-fps/alephone:lua - Enable Lua scripting support
 games-fps/doom3:cdinstall - Copies files from the CDROM rather than leaving it for the user
 games-fps/duke3d:nophysfs - Disables support for physfs
 games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
@@ -240,9 +238,12 @@ games-strategy/freecraft-fcmp:music - Installs optional music data
 games-strategy/heroes3:maps - Installs optional map data
 games-strategy/heroes3:music - Installs optional music data
 games-strategy/heroes3:sounds - Installs optional sound data
+games-strategy/uqm:music - download and install music files (large)
+games-strategy/uqm:remix - download and install music remix files (large)
+games-strategy/uqm:voice - download and install voice files (large)
 games-strategy/wesnoth:editor - Enable compilation editor
-games-strategy/wesnoth:nomusic - Lite install
 games-strategy/wesnoth:lite - Lite install
+games-strategy/wesnoth:nomusic - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
 games-util/xqf:bzip2 - use bzip2 for data compression
@@ -442,10 +443,10 @@ net-analyzer/echoping:ttcp - enable support for T/TCP protocol.
 net-analyzer/fprobe:messages - enable console messages
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
+net-analyzer/nagios-plugins:nagios-game - installs deps for monitoring games-util/qstat
 net-analyzer/nagios-plugins:nagios-ntp - installs deps for ntp monitoring
 net-analyzer/nagios-plugins:nagios-ping - installs deps for fancy ping monitoring
 net-analyzer/nagios-plugins:nagios-ssh - installs deps for monitoring ssh
-net-analyzer/nagios-plugins:nagios-game - installs deps for monitoring games-util/qstat
 net-analyzer/nagios-plugins:ups - installs deps for monitoring Network-UPS (www-apps/nut)
 net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some sytems
 net-analyzer/net-snmp:rpm - Enable the rpm snmp probing
@@ -469,6 +470,8 @@ net-dialup/ppp:activefilter - enable activefilter support
 net-dialup/ppp:atm - enable support for pppoatm
 net-dialup/ppp:dhcp - enable the dhcp plugin
 net-dialup/ppp:mppe-mppc - enable support for mppe-mppc
+net-dns/bind:bind-mysql - enables mysql support for bind
+net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
 net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
 net-dns/djbdns:cnamefix - changes the CNAME behavior of dnscache
 net-dns/djbdns:fwdzone - enables forward zone patch
@@ -476,8 +479,6 @@ net-dns/djbdns:ipv6arpa - enables ipv6 arpa patch
 net-dns/djbdns:multipleip - enables multi-IP patch
 net-dns/djbdns:roundrobin - enables round robin patch
 net-dns/djbdns:semanticfix - makes tinydns-data handle more semantic errors
-net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
-net-dns/bind:bind-mysql - enables mysql support for bind
 net-dns/pdnsd:isdn - enable isdn features
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
 net-fs/nfs-utils:nfsv4 - Enable support for NFSv4
