@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.16 2003/11/02 22:32:59 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.17 2003/11/24 10:23:37 mholzer Exp $
+
+  24 Nov 2003; Martin Holzer <mholzer@gentoo.org> webalizer-2.01.10-r4.ebuild:
+  adding some little notes to update apache.conf
 
 *webalizer-2.01.10-r4 (02 Nov 2003)
 
