@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12.ebuild,v 1.1 2004/05/30 03:09:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12.ebuild,v 1.2 2004/05/30 09:22:03 robbat2 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="debug"
 
 DEPEND="virtual/glibc
 	sys-libs/db
-	>=net-mail/sendmail-8.9"
+	>=mail-mta/sendmail-8.9"
 
 S=${WORKDIR}
 
