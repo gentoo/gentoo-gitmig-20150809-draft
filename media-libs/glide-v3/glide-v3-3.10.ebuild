@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Travis Tilley <lordviram@nesit.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10.ebuild,v 1.3 2002/01/29 09:29:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10.ebuild,v 1.4 2002/01/29 17:36:32 azarah Exp $
 
 S=${WORKDIR}/${PN/-v3/3x}
-DESCRIPTION="Hardware support for the voodoo3"
+DESCRIPTION="Hardware support for the voodoo3, voodoo4 and voodoo5"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/glide3x-${PV}.tar.gz
 	http://www.ibiblio.org/gentoo/distfiles/swlibs-${PV}.tar.gz"
 # check for future updates here
