@@ -1,6 +1,11 @@
 # ChangeLog for net-news/nget
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/nget/ChangeLog,v 1.7 2003/11/21 17:12:55 rphillips Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/nget/ChangeLog,v 1.8 2004/02/25 18:33:35 rphillips Exp $
+
+*nget-0.26 (25 Feb 2004)
+
+  25 Feb 2004; Ryan Phillips <rphillips@gentoo.org> nget-0.26.ebuild:
+  added Florian Loitsch's version bumped and mirror fixed ebuild
 
 *nget-0.25 (21 Nov 2003)
 
