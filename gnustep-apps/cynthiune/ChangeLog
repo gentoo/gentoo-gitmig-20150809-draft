@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/cynthiune
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.1 2005/03/18 07:01:35 fafhrd Exp $
+
+*cynthiune-0.9.4 (18 Mar 2005)
+
+  18 Mar 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  +cynthiune-0.9.4.ebuild:
+  Orignal package import -- a gnustep built media player, yay
+
