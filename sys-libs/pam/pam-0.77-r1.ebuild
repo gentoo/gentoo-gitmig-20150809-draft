@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r1.ebuild,v 1.9 2004/08/13 09:05:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r1.ebuild,v 1.10 2004/09/01 12:47:25 lv Exp $
 
 PATCH_LEVEL="1.2"
 BDB_VER="4.1.25"
@@ -74,9 +74,9 @@ pkg_setup() {
 
 	if use pwdb; then
 		for x in libpwdb.a libcrack.a; do
-			if [ ! -f "${ROOT}/usr/lib/${x}" ]; then
-				eerror "Could not find /usr/lib/${x} needed to build Linux-PAM!"
-				die "Could not find /usr/lib/${x} needed to build Linux-PAM!"
+			if [ ! -f "${ROOT}/usr/$(get_libdir)/${x}" ]; then
+				eerror "Could not find /usr/$(get_libdir)/${x} needed to build Linux-PAM!"
+				die "Could not find /usr/$(get_libdir)/${x} needed to build Linux-PAM!"
 			fi
 		done
 	fi
@@ -170,10 +170,10 @@ src_compile() {
 	einfo "Building Linux-PAM ${PV}..."
 	cd ${S}
 	./configure \
-		--libdir=/lib \
+		--libdir=/$(get_libdir) \
 		--enable-static-libpam \
 		--enable-fakeroot=${D} \
-		--enable-isadir=/lib/security \
+		--enable-isadir=/$(get_libdir)/security \
 		--host=${CHOST} || die
 
 	# Python stuff in docs gives sandbox problems
@@ -230,7 +230,7 @@ src_install() {
 		if [ -d ${x} ]
 		then
 			# Its OK if the module failed when we didnt ask for it anyway
-			if ! ls -1 ${D}/lib/security/$(basename ${x})*.so &> /dev/null
+			if ! ls -1 ${D}/$(get_libdir)/security/$(basename ${x})*.so &> /dev/null
 			then
 				if ! use berkdb && [ "$(basename ${x})" = "pam_userdb" ]
 				then
@@ -250,28 +250,28 @@ src_install() {
 			# Remove the ones we didnt want if it ended up building ok anyways
 				if ! use berkdb && [ "$(basename ${x})" = "pam_userdb" ]
 				then
-					rm -f ${D}/lib/security/pam_userdb*
+					rm -f ${D}/$(get_libdir)/security/pam_userdb*
 				fi
 				if ! use pwdb && [ "$(basename ${x})" = "pam_pwdb" ]
 				then
-					rm -f ${D}/lib/security/pam_pwdb*
+					rm -f ${D}/$(get_libdir)/security/pam_pwdb*
 				fi
 				if ! use pwdb && [ "$(basename ${x})" = "pam_radius" ]
 				then
-					rm -f ${D}/lib/security/pam_radius*
+					rm -f ${D}/$(get_libdir)/security/pam_radius*
 				fi
 			fi
 		fi
 	done
 
-	dodir /usr/lib
-	cd ${D}/lib
+	dodir /usr/$(get_libdir)
+	cd ${D}/$(get_libdir)
 	for x in pam pamc pam_misc
 	do
 		rm lib${x}.so
 		ln -s lib${x}.so.${PV} lib${x}.so
 		ln -s lib${x}.so.${PV} lib${x}.so.0
-		mv lib${x}.a ${D}/usr/lib
+		mv lib${x}.a ${D}/usr/$(get_libdir)
 		# See bug #4411
 		gen_usr_ldscript lib${x}.so
 	done
