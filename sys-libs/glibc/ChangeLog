@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.52 2003/04/06 02:58:19 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.53 2003/04/06 03:08:14 joker Exp $
 
   30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2.ebuild :
   Update NPTL version to 0.29.  As it is not used by many (or I cannot
@@ -30,6 +30,9 @@
   bug #16504, thanks to Tri D. Hoang <tdhoang@ultramain.com> for reporting.
 
 *glibc-2.3.2 (05 March 2003)
+
+  06 Apr 2003; Christian Birchinger <joker@gentoo.org> glibc-2.3.2.ebuild:
+  Changed replace-flags for sparc
 
   11 Mar 2003; Zach Welch <zwelch@gentoo.org> glibc-2.2.5-r7.ebuild,
   glibc-2.3.1-r2.ebuild, glibc-2.3.1-r3.ebuild, glibc-2.3.2.ebuild:

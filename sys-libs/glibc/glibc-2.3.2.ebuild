@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2.ebuild,v 1.3 2003/03/30 17:04:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2.ebuild,v 1.4 2003/04/06 03:08:14 joker Exp $
 
 IUSE="nls pic build nptl"
 
@@ -283,8 +283,8 @@ setup_flags() {
 	use ppc || append-flags "-freorder-blocks"
 
 	# Sparc support ...
-	replace-flags "-mcpu=ultrasparc" "-mcpu=v8"
-	replace-flags "-mcpu=v9" "-mcpu=v8"
+	replace-flags "-mcpu=ultrasparc" "-mcpu=v8 -mtune=ultrasparc"
+	replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
 
 	# -mvis for sparc64 (should this be always, or only with 64bit userspace ?
 	[ "${PROFILE_ARCH}" = "sparc64" ] && append-flags "-mvis"
