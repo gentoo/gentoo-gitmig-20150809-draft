@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Test-Exception
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.1 2004/03/29 10:46:30 mcummings Exp $
+
+*Test-Exception-0.15 (29 Mar 2004)
+
+  29 Mar 2004; Michael Cummings <mcummings@gentoo.org>
+  Test-Exception-0.15.ebuild, metadata.xml:
+  dep for a dep of bricolage, bug 21549
+
