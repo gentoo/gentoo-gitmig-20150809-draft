@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.4-r1.ebuild,v 1.5 2004/07/23 08:41:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.4-r1.ebuild,v 1.6 2004/09/01 08:11:40 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,7 +22,9 @@ DEPEND="virtual/libc
 
 src_compile() {
 	# Bug #54856
-	filter-flags "-fstack-protector"
+	# filter-flags "-fstack-protector"
+	replace-flags -O3 -O2
+	replace-flags -Os -O2
 
 	local excluded_interfaces=""
 	use ncurses || excluded_interfaces="--disable-text-mode"
