@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/quadros
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadros/ChangeLog,v 1.1 2005/01/24 19:10:33 mr_bones_ Exp $
+
+*quadros-0.1 (24 Jan 2005)
+
+  24 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +quadros-0.1.ebuild:
+  initial commit - ebuild submitted by MaratIK via bug #63212
+
