@@ -345,7 +345,7 @@ def parse_opts(argv):
               'showTotal': 1,
               'showFullStatus': 0,
               'showShort': 1,
-              'listTests': 0
+              'listTests': 0,
 	      'desiredTests': 0
             }
 
