@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r3.ebuild,v 1.2 2003/12/31 15:18:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r3.ebuild,v 1.3 2003/12/31 15:19:50 weeve Exp $
 
 inherit flag-o-matic eutils
 
@@ -49,7 +49,7 @@ src_unpack() {
 
 	# Make sure we're in ${S} or the below patch for k3 bwill fail.
 	# Fixes bug #36420.
-	cd ${S}	
+	cd ${S}
 
 	# Add '-gentoo' to version, so that k3b, etc can detect that we have
 	# a special version that includes scglib support.
