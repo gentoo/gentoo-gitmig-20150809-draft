@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/glame
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.13 2004/01/21 18:42:53 raker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.14 2004/03/27 03:14:00 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> glame-0.6.3.ebuild,
+  glame-0.6.4.ebuild, glame-1.0.1.ebuild, glame-1.0.2.ebuild:
+  1.0.2 stable on x86.  Cleaned up all ebuilds.  Fixed DEPs.
 
 *glame-1.0.2 (21 Jan 2004)
 

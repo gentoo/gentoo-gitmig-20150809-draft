@@ -1,29 +1,33 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.3 2004/01/30 06:39:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.4 2004/03/27 03:14:00 eradicator Exp $
 
 DESCRIPTION="an audio file editing utility"
 HOMEPAGE="http://glame.sourceforge.net/"
 SRC_URI="mirror://sourceforge/glame/${P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE="nls gnome oggvorbis debug alsa"
 
-DEPEND=">=dev-util/guile-1.4-r3
+RDEPEND=">=dev-util/guile-1.4-r3
 	>=dev-libs/libxml-1.8.0
 	>=dev-libs/libxml2-2.0.0
 	>=media-sound/esound-0.2
 	>=media-libs/audiofile-0.2.2
-	>=sys-devel/autoconf-2.58
 	=dev-libs/fftw-2*
 	media-sound/mad
 	media-libs/ladspa-sdk
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
 	gnome? ( <gnome-base/libglade-2 gnome-base/gnome-libs )
 	alsa? ( media-libs/alsa-lib )"
-RDEPEND="nls? ( >=sys-devel/gettext-0.11.3 )"
+
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.58
+	nls? ( >=sys-devel/gettext-0.11.3 )"
+
 
 src_unpack() {
 	unpack ${A}
