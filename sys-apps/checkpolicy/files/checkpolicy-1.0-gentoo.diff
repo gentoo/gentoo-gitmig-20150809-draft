@@ -1,0 +1,20 @@
+diff -urN checkpolicy-1.0.orig/Makefile checkpolicy-1.0/Makefile
+--- checkpolicy-1.0.orig/Makefile	2003-07-07 07:52:08.000000000 -0500
++++ checkpolicy-1.0/Makefile	2003-08-03 20:36:52.000000000 -0500
+@@ -4,13 +4,15 @@
+ PREFIX ?= ${DESTDIR}/usr
+ BINDIR ?= $(PREFIX)/bin
+ 
+-CFLAGS = -g -Wall -O2 -pipe
++CFLAGS = -Wall $(EXTRA_CFLAGS)
+ override CFLAGS += -include global.h -I. -Iinclude
+ 
+ OBJS = ebitmap.o hashtab.o symtab.o sidtab.o avtab.o policydb.o services.o y.tab.o lex.yy.o queue.o write.o checkpolicy.o
+ 
+ LIBS=-lfl
+ 
++YACC=bison -y
++
+ all:  checkpolicy
+ 
+ checkpolicy: $(OBJS)
