@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Sean Mitchell <sean@arawak.tzo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04.ebuild,v 1.4 2002/06/10 13:30:56 daybird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04-r1.ebuild,v 1.1 2002/06/24 20:54:02 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Objective Caml is a fast modern type-inferring functional programming language descended from the ML (Meta Language) family."
@@ -47,6 +47,9 @@ src_install ()
 		MANDIR=${D}/usr/man/man1 \
 		install || die
 
+	dodir /etc/env.d
+	echo LDPATH=/usr/lib/ocaml:/usr/lib/ocaml/labltk \
+		> ${D}/etc/env.d/30ocaml
 	dodoc Changes INSTALL LICENSE README Upgrading
 
 }

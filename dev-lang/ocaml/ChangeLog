@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.2 2002/06/09 02:17:18 daybird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.3 2002/06/24 20:54:02 karltk Exp $
+
+*ocaml-3.04-r1 (24 Jun 2002)
+
+  24 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ocaml-3.04-r1.ebuild files/digest-ocaml-3.04-r1:
+
+  ocaml library paths are now properly added to /etc/ld.so.conf.
+
+  Removed ocaml-3.04.ebuild files/digest-ocaml-3.04
 
 *ocaml-3.04 ( 7 Feb 2002 )
 
