@@ -7,7 +7,7 @@ depend() {
 }
 
 start() {
-	IFS=""
+	IFS=$'\n'
 	for line in `grep -v '^[[:space:]]*#' /etc/vtund-start.conf | grep -v '^[[:space:]]*$'`
 	do
 		echo $line | 
