@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.5.ebuild,v 1.3 2005/01/11 14:50:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.5.ebuild,v 1.4 2005/01/11 15:52:49 gmsoft Exp $
 
 inherit gnuconfig
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://apr.apache.org/"
 SRC_URI="mirror://apache/apr/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
-KEYWORDS="~x86 ~sparc ~ppc64"
+KEYWORDS="~x86 ~sparc ~ppc64 ~hppa"
 SLOT="0"
 
 IUSE="berkdb gdbm ldap"

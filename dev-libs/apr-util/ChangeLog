@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.3 2005/01/11 14:50:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.4 2005/01/11 15:52:49 gmsoft Exp $
+
+  11 Jan 2005; Guy Martin <gmsoft@gentoo.org> apr-util-0.9.5.ebuild:
+  Added ~hppa to KEYWORDS.
 
   11 Jan 2005; Markus Rothe <corsair@gentoo.org> apr-util-0.9.5.ebuild:
   Added ~ppc64 to KEYWORDS
