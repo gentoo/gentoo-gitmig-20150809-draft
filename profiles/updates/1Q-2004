@@ -14,3 +14,4 @@ move app-benchmarks/volcanomark app-benchmarks/volanomark
 move net-www/mozilla-firebird-bin net-www/mozilla-firefox-bin
 move games-fps/d1x games-action/d1x
 move games-fps/descent1-maps games-action/descent1-maps
+move net-im/jabber-server net-im/jabberd
