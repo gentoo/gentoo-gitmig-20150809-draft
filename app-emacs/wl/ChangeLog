@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/wl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/ChangeLog,v 1.12 2003/08/07 15:20:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/ChangeLog,v 1.13 2003/08/13 06:23:22 usata Exp $
+
+*wl-2.11.7.20030812 (13 Aug 2003)
+
+  13 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> wl-2.11.7.20030812.ebuild:
+  Version bump
 
 *wl-2.11.6.20030807 (08 Aug 2003)
 
@@ -10,7 +15,7 @@
 *wl-2.11.4.20030728 (29 Jul 2003)
 
   29 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> wl-2.11.4.20030728.ebuild:
-  New beta version.
+  New beta version (This branch, 2.11.x, shouldn't be marked as stable).
 
 *wl-2.10.1-r1 (09 Jul 2003)
 
