@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gdk-pixbuf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.2 2002/02/17 20:23:43 azarah Exp $
+
+  17 Feb 2002; M.Schlemmer <azarah@gentoo.org> gdk-pixbuf-0.16.0-r4.ebuild :
+
+  Fix the build to do the libraries in /usr/lib/gdk-pixbuf/loaders/ properly the
+  first time.  This is hackish at the moment, but seems to be a upstream
+  problem.  This should resolve the need to remerge gdk-pixbuf twice to get
+  mentioned libraries.
 
 *gdk-pixbuf-0.16.0-r1 (1 Feb 2002)
 
