@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.0.ebuild,v 1.2 2003/11/20 07:00:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.2.ebuild,v 1.1 2003/12/20 14:09:27 foser Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="oggvorbis mad xine flac"
+IUSE="oggvorbis mad xine flac faad"
 
 RDEPEND=">=x11-libs/gtk+-2.2.2
 	>=gnome-base/libgnomeui-2
@@ -18,9 +18,10 @@ RDEPEND=">=x11-libs/gtk+-2.2.2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libbonobo-2
 	>=media-libs/musicbrainz-2
+	faad? ( >=media-libs/faad2-2.0_rc3 )
 	flac? ( >=media-libs/flac-1 )
 	oggvorbis? ( >=media-libs/libvorbis-1 )
-	mad? ( >=media-libs/libid3tag-0.15 )
+	mad? ( >=media-libs/libid3tag-0.15.0b )
 	!xine? ( >=media-libs/gstreamer-0.6.3
 		>=media-libs/gst-plugins-0.6.3
 		>=media-plugins/gst-plugins-gnomevfs-0.6.3
@@ -28,7 +29,7 @@ RDEPEND=">=x11-libs/gtk+-2.2.2
 		mad? ( >=media-plugins/gst-plugins-mad-0.6.3 )
 		oggvorbis? ( >=media-plugins/gst-plugins-vorbis-0.6.3 )
 		)
-	xine? ( >=media-libs/xine-lib-1_rc0 )"
+	xine? ( >=media-libs/xine-lib-1_rc3 )"
 
 # REMIND : should we really force flac ?
 # I want to drop flac deps when rb get proper gst only/non monkey-media
@@ -47,6 +48,9 @@ use flac && G2CONF="${G2CONF} --enable-flac"
 G2CONF="${G2CONF} \
 	$(use_enable oggvorbis vorbis) \
 	$(use_enable mad mp3) \
+	$(use_enable faad mp4 ) \
+	--enable-mmkeys \
+	--enable-audiocd \
 	--disable-schemas-install"
 
 src_unpack( ) {
