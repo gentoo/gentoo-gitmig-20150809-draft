@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22-r2.ebuild,v 1.2 2004/11/08 19:38:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22-r2.ebuild,v 1.3 2004/11/11 11:57:16 obz Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono python
@@ -24,7 +24,9 @@ RDEPEND=">=dev-libs/glib-2
 	gtk? ( >=x11-libs/gtk+-2 )
 	python? ( >=dev-lang/python-2.2
 		>=dev-python/pyrex-0.9 )
-	mono? ( >=dev-dotnet/mono-0.95 )"
+	!ppc64? (
+		mono? ( >=dev-dotnet/mono-0.95 )
+	)"
 
 #	qt? ( >=x11-libs/qt-3 )
 
