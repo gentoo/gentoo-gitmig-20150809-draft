@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.8 2004/12/05 08:10:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.9 2004/12/05 21:07:43 vapier Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 trap ":" INT QUIT TSTP
@@ -162,6 +162,7 @@ switch_profile() {
 	unset GCC_SPECS
 	source "${GCC_ENV_D}/${CC_COMP}"
 	OLD_CC_COMP=$(get_current_profile)
+	CTARGET="${CTARGET:-${REAL_CHOST}}"
 
 	# What kind of env.d entry are we going to generate ?
 	if is_cross_compiler
@@ -224,10 +225,13 @@ switch_profile() {
 		fi
 	done
 	# Only install cpp if the toolchain supports C++
-	if ! is_cross_compiler && [ -x "${ROOT}/usr/bin/${REAL_CHOST}-g++" ]
+	if ! is_cross_compiler
 	then
 		${RM} -f "${ROOT}/lib/cpp"
-		${CP} -f "${ROOT}/usr/lib/gcc-config/wrapper" "${ROOT}/lib/cpp"
+		if [ -x "${ROOT}/usr/bin/${REAL_CHOST}-g++" ]
+		then
+			${CP} -f "${ROOT}/usr/lib/gcc-config/wrapper" "${ROOT}/lib/cpp"
+		fi
 	fi
 
 	if [ "${ROOT}" = "/" ] && [ "${OLD_CC_COMP}" != "${CC_COMP}" ]
