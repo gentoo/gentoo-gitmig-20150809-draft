@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.4.ebuild,v 1.1 2002/07/09 21:25:47 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.4.ebuild,v 1.2 2002/07/26 05:04:29 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="mutella is a text-mode gnutella client."
@@ -8,7 +8,7 @@ SRC_URI="http://telia.dl.sourceforge.net/sourceforge/mutella/${P}.tar.gz"
 HOMEPAGE="http://mutella.sourceforge.net"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/glibc
 	>=sys-libs/readline-4.2"

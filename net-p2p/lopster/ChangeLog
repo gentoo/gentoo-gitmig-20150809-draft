@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/lopster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.4 2002/07/02 13:10:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.5 2002/07/26 05:09:02 gerk Exp $
 
 *lopster-1.0.1.20020702 (02 Jul 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   02 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
   lopster-1.0.1-20020702.ebuild files/digest-lopster-1.0.1.20020702 :

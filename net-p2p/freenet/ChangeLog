@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.4 2002/07/16 19:25:35 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.5 2002/07/26 05:10:54 gerk Exp $
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   26 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
 

@@ -1,5 +1,5 @@
 # Copyright (c) 2002, Per Wigren <wigren@home.se>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.3 2002/07/16 19:25:35 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.4 2002/07/26 05:10:54 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Freenet server"
@@ -8,7 +8,7 @@ HOMEPAGE="http://freenetproject.org"
 DEPEND="virtual/jdk"
 RDEPEND="${DEPEND}"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 LICENSE="GPL"
 
 src_compile () {

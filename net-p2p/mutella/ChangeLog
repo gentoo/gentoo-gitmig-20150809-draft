@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/mutella
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/ChangeLog,v 1.3 2002/07/09 21:25:47 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/ChangeLog,v 1.4 2002/07/26 05:04:29 gerk Exp $
 
 *mutella-0.4 (09 Jul 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   09 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mutella-0.4.ebuild :
 

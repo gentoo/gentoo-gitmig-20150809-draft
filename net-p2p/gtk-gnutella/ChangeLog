@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.5 2002/07/08 10:20:14 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.6 2002/07/26 05:01:15 gerk Exp $
 
 *gtk-gnutella-0.90-r2 (08 Jul 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   08 Jul 2002; Brandon Low <lostlogic@gentoo.org> gtk-gnutella-0.90-r2.ebuild :
 

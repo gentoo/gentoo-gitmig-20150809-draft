@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.4 2002/07/17 02:25:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.5 2002/07/26 05:11:53 gerk Exp $
 
 MY_P=TekNap-${PV}
 S=${WORKDIR}/TekNap
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.teknap.com/pub/TekNap/${MY_P}.tar.gz"
 HOMEPAGE="http://www.TekNap.com/"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 LICENSE="as-is"
 
 DEPEND="virtual/glibc >=sys-libs/ncurses-5.2
