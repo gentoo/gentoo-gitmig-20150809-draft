@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.24 2003/01/05 13:09:43 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.25 2003/01/07 00:08:01 weeve Exp $
 
 *kdegraphics-3.1_rc6 (05 Jan 2003)
 
@@ -8,6 +8,9 @@
   version bump
 
 *kdegraphics-3.0.5a (21 Dec 2002)
+
+  06 Jan 2003; Jason Wever <weeve@gentoo.org> kdegraphics-3.0.5a.ebuild:
+  Added ~sparc keyword
 
   21 Dec 2002; Hannes Mehnert <hannes@gentoo.org> kdegraphics-3.0.5a.ebuild:
   version bump

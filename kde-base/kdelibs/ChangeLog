@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.40 2003/01/06 08:39:07 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.41 2003/01/07 00:08:01 weeve Exp $
 
   06 Jan 2003; Hannes Mehnert <hannes@gentoo.org> *.ebuild:
   fixed alsa dependency, added media-sound/alsa-driver if alsa is in use.
@@ -17,6 +17,9 @@
   don't compile with debug and most users don't use the "Home" button.
 
 *kdelibs-3.0.5a (21 Dec 2002)
+
+  06 Jan 2003; Jason Wever <weeve@gentoo.org> kdelibs-3.0.5a.ebuild:
+  Added ~sparc keyword
 
   21 Dec 2002; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.0.5a.ebuild:
   version bump

@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.47 2003/01/05 13:09:43 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.48 2003/01/07 00:08:01 weeve Exp $
 
 *kdebase-3.1_rc6 (05 Jan 2003)
 
@@ -23,6 +23,9 @@
 
 *kdebase-3.0.5a-r1 (24 Dec 2002)
 
+  06 Jan 2003; Jason Wever <weeve@gentoo.org> kdebase-3.0.5a-r1.ebuild:
+  Added ~sparc keyword
+
   24 Dec 2002; Martin Schlemmer <azarah@gentoo.org> kdebase-3.0.5a-r1.ebuild,
                                                     kdebase-3.0.5a-xft2.0-fix.diff :
 
@@ -32,6 +35,9 @@
   I can get this fixed.  This should close bug #9423 again.
 
 *kdebase-3.0.5a (21 Dec 2002)
+
+  06 Jan 2003; Jason Wever <weeve@gentoo.org> kdebase-3.0.5a.ebuild:
+  Added ~sparc keyword
 
   21 Dec 2002; Hannes Mehnert <hannes@gentoo.org> kdebase-3.0.5a.ebuild:
   version bump
