@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2-r2.ebuild,v 1.2 2004/02/16 05:01:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2-r2.ebuild,v 1.3 2004/02/19 01:23:41 kloeri Exp $
 
 inherit libtool distutils
 
@@ -22,6 +22,9 @@ S=${WORKDIR}/lib${P}
 
 src_compile() {
 	econf --enable-cpp-headers || die "configure failed"
+	if [ `use python` ] ; then
+		epatch ${FILESDIR}/${P}.patch
+	fi
 	emake || die "emake failed"
 }
 
@@ -35,6 +38,6 @@ src_install() {
 		distutils_src_install
 
 		dodir /usr/share/doc/${PF}/python/examples/
-		cp -r ${S}/python/examples ${D}/usr/share/doc/${PF}/python
+		cp -r examples ${D}/usr/share/doc/${PF}/python
 	fi
 }
