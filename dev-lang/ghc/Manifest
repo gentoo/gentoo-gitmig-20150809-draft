@@ -4,6 +4,7 @@ MD5 d1ee334700eb465393538865978531b5 ghc-5.04.ebuild 6950
 MD5 b6e8ef3b1bab47650ac6a3134e931375 ghc-6.0.ebuild 4262
 MD5 4e310a2cb7f0093cd85d9a366f2337cc ghc-5.04.2.ebuild 4536
 MD5 42b857369c2e24507f00520e99fdaf5a ghc-5.02.3.ebuild 7646
+MD5 b6e8ef3b1bab47650ac6a3134e931375 ghc-6.0.1.ebuild 4262
 MD5 563ac6caa663695b8b28da0328016cc2 ChangeLog 4870
 MD5 9da9270be8ac4d92d6a5c23fd519cc3c files/lndir.c 8050
 MD5 cc8947705ec2b2a685edb4eefddeebc2 files/ghc-5.02.3-gentoo.patch.bz2 14489
@@ -11,6 +12,7 @@ MD5 1c126024044290a2f7e501c0f4415169 files/ghc-5.04-gentoo.patch.bz2 68891
 MD5 d4a4184d5dcf525047332f9c68e522f7 files/ghc-5.04.3-r1.patch 2717
 MD5 b5a1b76b1e1f437dcf7b9aa4b1545f40 files/ghc-4.08.2-gentoo.patch.bz2 640
 MD5 a20f2d9eabadd7ed4890784b905f857c files/digest-ghc-5.04.3-r1 68
+MD5 d417c9e24a826959ad6d921247e43328 files/digest-ghc-6.0.1 67
 MD5 2891bd736d41f4aeea530385ef426d6d files/digest-ghc-5.02.3 207
 MD5 7bf7dff845836a99f4b08d8b230d916f files/digest-ghc-5.04.2 68
 MD5 a20f2d9eabadd7ed4890784b905f857c files/digest-ghc-5.04.3 68
