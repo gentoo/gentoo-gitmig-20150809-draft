@@ -1,16 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.7.1.ebuild,v 1.1 2003/07/13 20:58:34 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.7.1.ebuild,v 1.2 2003/07/26 08:51:52 raker Exp $
+
+IUSE=""
 
 inherit gnustep
 
 DESCRIPTION="GNUstep base package"
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 -ppc ~sparc"
-IUSE=""
+KEYWORDS="-x86 -ppc -sparc"
+
 DEPEND="=dev-util/gnustep-make-${PV}*
 	>=dev-libs/libxml2-2.4.24"
 

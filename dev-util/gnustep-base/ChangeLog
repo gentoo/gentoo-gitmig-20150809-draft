@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gnustep-base
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/ChangeLog,v 1.15 2003/07/13 20:58:34 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/ChangeLog,v 1.16 2003/07/26 08:51:52 raker Exp $
+
+  26 Jul 2003; Nick Hadaway <raker@gentoo.org> gnustep-base-1.7.1.ebuild:
+  Marked the build - for all arches as it breaks most apps.
 
 *gnustep-base-1.7.1 (13 Jul 2003)
 
