@@ -1,6 +1,13 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.6 2002/05/16 19:11:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.7 2002/05/26 18:16:55 azarah Exp $
+
+*transcode-0.6.0_pre5-r1 (26 May 2002)
+
+  26 May 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Libtoolize to fix invalid paths in plugin .la's.  Add more configure
+  options according to USE flags.
 
 *transcode-0.6.0_pre5 (16 May 2002)
 

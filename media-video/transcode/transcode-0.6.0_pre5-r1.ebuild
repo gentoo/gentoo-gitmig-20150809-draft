@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0_pre4-r1.ebuild,v 1.3 2002/04/30 12:21:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0_pre5-r1.ebuild,v 1.1 2002/05/26 18:16:55 azarah Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -16,16 +16,49 @@ HOMEPAGE="http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode"
 DEPEND=">=media-libs/a52dec-0.7.3
 	media-libs/libdv
 	media-libs/libsdl
+	dev-lang/nasm
 	=x11-libs/gtk+-1.2*
-	>=media-video/avifile-0.6
+	X? ( virtual/x11 )
+	avi? ( >=media-video/avifile-0.7.4 )
 	dvd? ( media-libs/libdvdread )
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.89 )
 	quicktime? ( media-libs/quicktime4linux )"
 
+src_unpack() {
+	unpack ${A}
+
+	[ -z "${CC}" ] && CC="gcc"
+	if [ "`${CC} --version | cut -f1 -d.`" = "3" ];
+	then
+		patch -p0 < ${FILESDIR}/${P}.diff || die
+	fi
+}
+
 src_compile() {
 
-	local myconf
+	# fix invalid paths in .la files of plugins
+	libtoolize --copy --force
+
+	local myconf=""
+
+	use mmx \
+		&& myconf="${myconf} --enable-mmx"
+	use mmx || ( use 3dnow || use sse ) \
+		|| myconf="${myconf} --disable-mmx"
+	# Dont disable mmx if 3dnow or sse are requested.
+
+	use sse \
+		&& myconf="${myconf} --enable-sse" \
+		|| myconf="${myconf} --disable-sse"
+
+	use avi \
+		&& myconf="${myconf} --enable-avifile6" \
+		|| myconf="${myconf} --disable-avifile6"
+
+	use dvd \
+		&& myconf="${myconf} --enable-dvdread" \
+		|| myconf="${myconf} --disable-dvdread"
 	
 	use encode \
 		&& myconf="${myconf} --with-lame" \
@@ -34,6 +67,13 @@ src_compile() {
 	use mpeg \
 		&& myconf="${myconf} --with-libmpeg3" \
 		|| myconf="${myconf} --without-libmpeg3"
+
+	use quicktime \
+		|| myconf="${myconf} --without-qt --without-openqt"
+
+	use X \
+		&& myconf="${myconf} --enable-x" \
+		|| myconf="${myconf} --disable-x"
 	
 	econf ${myconf} || die
 
@@ -47,3 +87,4 @@ src_install () {
 		DESTDIR=${D} \
 		install || die
 }
+
