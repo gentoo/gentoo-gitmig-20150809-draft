@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9.ebuild,v 1.2 2004/01/29 19:10:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9.ebuild,v 1.3 2004/01/29 19:50:51 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -17,9 +17,7 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
-KEYWORDS="-*"
-
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
 DEPEND=">=sys-devel/automake-1.7.8
@@ -47,7 +45,7 @@ src_unpack() {
 	epatch ${PATCHDIR}/${P}-dtd.patch
 
 	# Fix ansi C fubar so that it compiles with less-forgiving gcc2
-	epatch ${PATCHDIR}/${P}-id3v2edit.patch
+#	epatch ${PATCHDIR}/${P}-id3v2edit.patch
 
 	# Patch to allow external programmes to have the "jump to" dialog box
 	epatch ${PATCHDIR}/${P}-jump.patch
