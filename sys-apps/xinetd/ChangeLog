@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.19 2003/04/06 20:15:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.20 2003/04/16 16:58:20 mholzer Exp $
+
+*xinetd-2.3.11 (16 Apr 2003)
+
+  16 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  xinetd-2.3.11.ebuild:
+  Version bumped.
 
 *xinetd-2.3.10 (26 Mar 2003)
 
