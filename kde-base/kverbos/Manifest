@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 6a83cedf128cb122da798a24432b4a6d kverbos-3.4.0_beta2.ebuild 386
-MD5 c477186930cb32d88e70c99bbb5916b2 kverbos-3.4.0.ebuild 384
+MD5 4d3d650dba531d9b71ca70b11f4dbc91 kverbos-3.4.0.ebuild 387
 MD5 8c2b344660e6f993a28a0bdc15db84aa kverbos-3.4.0_beta1.ebuild 386
 MD5 07e28ec4d5b8308fb76daba7a3b27c60 kverbos-3.4.0_rc1.ebuild 388
-MD5 0f7a6b6f5d45d537877d7667223f296b ChangeLog 968
+MD5 a99195d9ac3e599874e512e8bbd9905d ChangeLog 1137
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 521fc13bde64ce3aa9c5fc4213337476 files/digest-kverbos-3.4.0_beta1 212
 MD5 e85be272b39feb70aaa3d06189cc222a files/digest-kverbos-3.4.0_beta2 289
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-kverbos-3.4.0 67
 MD5 e86b3031f18fffbe826fe58a427e65ba files/digest-kverbos-3.4.0_rc1 371
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCM53rntT9W3vfTuoRAvxuAKCPbF5eQ1qfptKoqpiwU2nkx2H3EwCggTaS
-O0OkhZg50qah4tO90a6UV0c=
-=PaFF
------END PGP SIGNATURE-----

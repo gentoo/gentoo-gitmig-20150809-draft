@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c6ad836cc78317d71736e38dbd194307 kdesdk-kfile-plugins-3.4.0_beta1.ebuild 447
-MD5 6d350f1c9c877a26d85f4b54976ff62c ChangeLog 1116
+MD5 2607f619be902c7f28b83e2885f92f2d kdesdk-kfile-plugins-3.4.0.ebuild 448
+MD5 2d61af74e7340fb5394d280060e9f0f3 ChangeLog 1300
 MD5 1e490e1dc7f8aa0124b343a3a8e0ccf5 kdesdk-kfile-plugins-3.4.0_beta2.ebuild 447
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 1edc82d3239945dbeac8639fd224fcb4 kdesdk-kfile-plugins-3.4.0_rc1.ebuild 449
 MD5 a859d7dcb2c41d449cdccedc9f23f561 files/digest-kdesdk-kfile-plugins-3.4.0_beta1 210
 MD5 3a1058263e62b136df882e4c300efb20 files/digest-kdesdk-kfile-plugins-3.4.0_beta2 286
 MD5 5278998b3d2ca1313a1cd967b9c51b58 files/digest-kdesdk-kfile-plugins-3.4.0_rc1 368
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNCbUntT9W3vfTuoRAgDeAKChJoEdl2wKIBCbb4yO2Vgg21aRVQCdFwed
-Hy4FQ0kzV/RozyCSpS9Shp4=
-=s2JR
------END PGP SIGNATURE-----
+MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-kdesdk-kfile-plugins-3.4.0 66

@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 730acd1c7bc9313c71667a5ac4420880 umbrello-3.4.0_beta1.ebuild 401
 MD5 1137c7d0476a60a7616dda14b34f9ae9 umbrello-3.4.0_beta2.ebuild 375
+MD5 68f33b4c09f1421f67f7a974067eab38 umbrello-3.4.0.ebuild 378
 MD5 9a0747a65bf1afac1fde0a30d47d694e umbrello-3.4.0_rc1.ebuild 379
-MD5 9d37084c2dfb7831a14fbc2783a40de8 ChangeLog 976
+MD5 5c38af2017af4ddd60949d1800f89686 ChangeLog 1146
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-umbrello-3.4.0 66
 MD5 a859d7dcb2c41d449cdccedc9f23f561 files/digest-umbrello-3.4.0_beta1 210
 MD5 3a1058263e62b136df882e4c300efb20 files/digest-umbrello-3.4.0_beta2 286
 MD5 5278998b3d2ca1313a1cd967b9c51b58 files/digest-umbrello-3.4.0_rc1 368
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNCeFntT9W3vfTuoRApMEAJ4mo9a4w/D0e57A7O12QPdbVGGKKQCeLkRx
-E+G8C8Ye2ruGkqvAzd2/3c8=
-=buyI
------END PGP SIGNATURE-----

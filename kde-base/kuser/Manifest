@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b0cb07c5981f9eb31dbf64fa5e8576c4 kuser-3.4.0_beta2.ebuild 420
+MD5 351ee3b9ba1169c18084943b21a567ed kuser-3.4.0.ebuild 421
 MD5 5623eed4cd46b238e27e630517ac45d6 kuser-3.4.0_beta1.ebuild 420
 MD5 0faa3fa4814505744f0c5628265f3d07 kuser-3.4.0_rc1.ebuild 422
-MD5 6dee984af314e37c94498c4fb0b82647 ChangeLog 952
+MD5 3ddd33e738f22b76f89545091a58f709 ChangeLog 1119
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 361b4361884418de6b9a13b860ed6a67 files/digest-kuser-3.4.0_rc1 376
 MD5 06d8b082374f502eb28cb4e5681f0bf7 files/digest-kuser-3.4.0_beta1 215
 MD5 a9fea6bcd37c5357c2d83088b0fcd969 files/digest-kuser-3.4.0_beta2 293
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCM6P3ntT9W3vfTuoRAiWcAKCInT5nnQhBBmMIpuVhLAfNzMGc0gCcDyxO
-6XSWMXWksu4816uc1IlhDeI=
-=5Hkf
------END PGP SIGNATURE-----
+MD5 dff739018360a0997224c39ad20e83fb files/digest-kuser-3.4.0 68

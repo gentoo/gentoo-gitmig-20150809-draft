@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a1af298874321a317d6f1781225a3585 libkcddb-3.4.0_rc1.ebuild 379
 MD5 ccc9d6b0d51483e2419f25fe1b668f69 libkcddb-3.4.0_beta1.ebuild 377
-MD5 3f4192fd42cdeb298e2d2a7565b3e250 ChangeLog 976
+MD5 520cdcd04648ee4f4f468076e595bc23 libkcddb-3.4.0.ebuild 371
+MD5 06718034ac6a7fe60cacc18ea3fc3e9a ChangeLog 1146
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 b976ff62ce385f3d59ed36d4f3dea1d7 libkcddb-3.4.0_beta2.ebuild 377
+MD5 1b6b47988f359abcece7b1f1f5b98377 files/digest-libkcddb-3.4.0 73
 MD5 d68ff14d4ed5a746d4def9f2706bb705 files/digest-libkcddb-3.4.0_rc1 403
 MD5 43e784a2028b42eff11cfacd5dc9e845 files/digest-libkcddb-3.4.0_beta1 231
 MD5 c43e1f638e3c583d4d696aad7f994232 files/digest-libkcddb-3.4.0_beta2 314
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNFEzntT9W3vfTuoRAovMAKCP+A5yEyVOzXAdE/ns92/71tKnlACdFgrH
-aGjP3N9Qw8OSbYzs96TXiM4=
-=Xjeu
------END PGP SIGNATURE-----

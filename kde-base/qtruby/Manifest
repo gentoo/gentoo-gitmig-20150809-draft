@@ -5,8 +5,8 @@ MD5 d726d0ab5a06b201497157110618591a qtruby-3.3.1.ebuild 637
 MD5 be26cdd957034d7ce73c2e29cc490b1a qtruby-3.4.0_beta1.ebuild 648
 MD5 cf20d415951d2ded6f20a14bf2adabca qtruby-3.4.0_rc1.ebuild 916
 MD5 9ff9bb125639c7d192ea6463d13ca77b qtruby-3.3.2.ebuild 633
-MD5 cf20d415951d2ded6f20a14bf2adabca qtruby-3.4.0.ebuild 916
-MD5 27d6cd314ccaddb227463730084f2474 ChangeLog 1703
+MD5 c2b2c5024ed958b5c3b854a77f4f9904 qtruby-3.4.0.ebuild 912
+MD5 112cd0afa2746853288a9c61025d0145 ChangeLog 1868
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 5df0d0efdefb5dedceecfbda5539c7ce files/digest-qtruby-3.4.0_beta2-r1 307
 MD5 3946152f4855210898ab9178271cf802 files/digest-qtruby-3.4.0_rc1 394

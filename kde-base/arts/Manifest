@@ -2,11 +2,11 @@ MD5 d15a428fdda97fd72524efb8e7bc95bb arts-3.4.0_beta2.ebuild 2558
 MD5 07cd89a1f6dc0185f2be1e585b4a7f02 arts-1.3.2.ebuild 3184
 MD5 2cdffe6e6a9af469625098fbbf1600b2 arts-1.3.2-r1.ebuild 3065
 MD5 7e92d9daeb0796b6ef5b5800d4fad4ba arts-3.4.0_beta1.ebuild 2554
-MD5 6d503e0cb25fef1d7e3b932544950aaa arts-3.4.0.ebuild 2536
+MD5 3201d47aad2ab26c31d678d0f9ad14c6 arts-3.4.0.ebuild 2535
 MD5 75e0ac21d8f15a07268c3236aad6bba9 arts-1.2.3.ebuild 2821
 MD5 c25003196b1e637da0af085a153cc712 arts-3.4.0_rc1.ebuild 2563
 MD5 64ce055b52934b0ac53381e0fd606a00 arts-1.3.1.ebuild 3033
-MD5 9b43f493b8d3cd1048dc2a1f351985cb ChangeLog 19045
+MD5 3fa9d024641cf79d8ae99fcd6f453831 ChangeLog 19211
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 22eaa23f91c114995e7b8ae286c3ac2c files/arts-1.3.1-alsa-bigendian.patch 571
 MD5 216be85b7d9c13193a25db1064fa291c files/digest-arts-3.4.0_rc1 68

@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 73e71a0b888a1d8a4dff5fb7cd769117 kmtrace-3.4.0.ebuild 509
 MD5 52331c85b64a1f8537b2fdeeca28aa78 kmtrace-3.4.0_beta2.ebuild 518
 MD5 bd4ea5a0162c62a2d65f18528418e1b1 kmtrace-3.4.0_beta1.ebuild 545
-MD5 a05262a56a52fcc08bc4dff27c37d4f5 ChangeLog 890
+MD5 edc2ce3e39b83c7ce20395b228359cc0 ChangeLog 1059
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-kmtrace-3.4.0 66
 MD5 a859d7dcb2c41d449cdccedc9f23f561 files/digest-kmtrace-3.4.0_beta1 210
 MD5 3a1058263e62b136df882e4c300efb20 files/digest-kmtrace-3.4.0_beta2 286
 MD5 e7464365b16610b1c4062a72eff0db18 files/liberty-link.diff 383
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNCZsntT9W3vfTuoRAne+AKCU6GFeRnfny6yEGpg4Kh2Ry80lkQCdFaUK
-mweCI90aqmRmsd4QKdWj1xY=
-=hNYT
------END PGP SIGNATURE-----

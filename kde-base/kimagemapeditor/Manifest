@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4020dc25976c6d4373d47bfd64a7df58 kimagemapeditor-3.4.0_rc1.ebuild 390
+MD5 35b36231ecfd15d63ea5e6aac1f9bbb3 kimagemapeditor-3.4.0.ebuild 389
 MD5 a0bc547924c0dc044f817ed84e0861f4 kimagemapeditor-3.4.0_beta1.ebuild 386
 MD5 4ad1898ade5b9f1fb564aa858a878d96 kimagemapeditor-3.4.0_beta2.ebuild 386
-MD5 2fca779d94170b64a77b0b021ce48d19 ChangeLog 1036
+MD5 19c34872fa6bd1c3b84a108299d3feaa ChangeLog 1213
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 a6863fd743a5d77407c2de68efec9b90 files/digest-kimagemapeditor-3.4.0 69
 MD5 b9287fbfc22241b1445471e806713f17 files/digest-kimagemapeditor-3.4.0_rc1 384
 MD5 07dc9f44e293d1ac9c7b66b68f28492f files/digest-kimagemapeditor-3.4.0_beta1 219
 MD5 1c27cb8542ca5141b74a04fd72dbb0d4 files/digest-kimagemapeditor-3.4.0_beta2 299
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCMGXIntT9W3vfTuoRArZvAJ9ucRLgVWpbuy3lSTT6K9G/GZSwFACfYgZ9
-Oy61EGOPQR6byVTigLlfzY0=
-=BtFi
------END PGP SIGNATURE-----

@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0f784c39f71d853eb732514a4919be2c kbabel-3.4.0_rc1.ebuild 408
 MD5 ea0300ed1e2ea193aa16d9c2da3b03d7 kbabel-3.4.0_beta1.ebuild 406
-MD5 5e59191f743b828cf5ff4b4c16f89238 ChangeLog 984
+MD5 dd76480350f08e3a6f42e892bb6f28c9 kbabel-3.4.0.ebuild 407
+MD5 1f7c2f4630169c259d52ac9bea3e5ae4 ChangeLog 1152
 MD5 c7ac50712c35bfc46e311a261a312bf2 kbabel-3.4.0_beta2.ebuild 406
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 a859d7dcb2c41d449cdccedc9f23f561 files/digest-kbabel-3.4.0_beta1 210
 MD5 3a1058263e62b136df882e4c300efb20 files/digest-kbabel-3.4.0_beta2 286
 MD5 5278998b3d2ca1313a1cd967b9c51b58 files/digest-kbabel-3.4.0_rc1 368
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNCURntT9W3vfTuoRAseGAJ9B01T4f+lvMfJyhRFIVOoFkV9JmACeMgg1
-fsy1v7FMhnBXHr4E8OGArOo=
-=Cx8h
------END PGP SIGNATURE-----
+MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-kbabel-3.4.0 66
