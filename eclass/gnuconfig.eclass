@@ -1,8 +1,7 @@
-#!/bin/bash
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Will Woods <wwoods@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.2 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.3 2002/10/25 19:57:51 vapier Exp $
 # This eclass updates config.guess and config.sub. This is useful if 
 # configure dies from misguessing your canonical system name (CHOST).
 

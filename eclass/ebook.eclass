@@ -1,10 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
-# Manteiner José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.7 2002/10/25 19:55:52 vapier Exp $
+# Mantainer José Alberto Suárez López <bass@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.8 2002/10/25 19:57:51 vapier Exp $
 # The ebook eclass defines some default functions and variables to 
 # install ebooks. 
+
 ECLASS=ebook
 INHERITED="$INHERITED $ECLASS"
 HOMEPAGE="http://lidn.sourceforge.net"

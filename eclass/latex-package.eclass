@@ -1,4 +1,7 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
 # Author Matthew Turk <satai@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.10 2002/10/25 19:57:51 vapier Exp $
 #
 # This eClass is designed to be easy to use and implement.  The vast majority of
 # LaTeX packages will only need to define SRC_URI (and sometimes S) for a
