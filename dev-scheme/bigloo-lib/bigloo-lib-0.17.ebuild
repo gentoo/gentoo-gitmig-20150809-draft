@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo-lib/bigloo-lib-0.17.ebuild,v 1.3 2004/06/30 17:21:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo-lib/bigloo-lib-0.17.ebuild,v 1.4 2004/07/14 22:26:31 agriffis Exp $
 
 DESCRIPTION="Bigloo support libraries"
 HOMEPAGE="http://bigloo-lib.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/bigloo-lib/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc"
-IUSE="nls gtk postgres mysql gtk2 ipcs gd ldap X gdbm expat"
+IUSE="X gd gdbm gtk gtk2 ldap mysql nls postgres"
 
 DEPEND=">=dev-scheme/bigloo-2.4
 	X? ( virtual/x11 )
@@ -24,7 +24,7 @@ DEPEND=">=dev-scheme/bigloo-2.4
 src_compile() {
 	local myconf
 	# readline support is flaky
-#	myconf="--with-commandline"	
+#	myconf="--with-commandline"
 	use gd && \
 		myconf="${myconf} --with-gd" \
 		|| myconf="${myconf} --without-gd"
