@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d8e76e712483b59a65e4307507d497c0 nessus-2.0.12.ebuild 552
+MD5 f41050badd609ef5845537c41da31173 nessus-2.0.12.ebuild 552
 MD5 27c7e59693c3f2a2b8f9f43cf23e290a nessus-2.0.10a.ebuild 538
-MD5 794f90dd3af9a4a58cec2041441b9ee3 ChangeLog 5928
+MD5 96f5838e2cb808b9416b60c2ada32ee0 ChangeLog 6034
 MD5 830963e3cb2a36111ca1c1ac0cc58416 nessus-2.1.1.ebuild 547
 MD5 34584a1d914e5d8b669b988fbf594ece metadata.xml 230
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.1.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.12 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nessus-2.0.10a 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBG8/UT+MN7JbqCpMRAirQAKCMa91Gp/NGPpuTKDGgikEKabOrAwCfV6Dx
-Rzng2CKLVlaZFHaR6EgQrPg=
-=rdtQ
------END PGP SIGNATURE-----
