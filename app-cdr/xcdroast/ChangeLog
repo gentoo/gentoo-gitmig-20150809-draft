@@ -1,8 +1,15 @@
 # ChangeLog for app-cdr/xcdroast
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp $
+# /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
-*xcdroast-0.98_alpha10 (23 Apr 2002)
+*xcdroast-0.98_alpha10 (16 Jun 2002)
+  
+  16 Jun 2002; Doug Goldstein (Cardoe) <dougg@ufl.edu> xcdroast-0.98_alpha10-r2.ebuild:
+  
+  Changed the depends to the new version of cdrtools because of bugs reports and because
+  the xcdroast site says there are bugs unless you use the latest version.
+
+  Fixed lintool errors too. :)
 
   4 Jun 2002; Brandon Low <lostlogic@gentoo.org>  xcdroast-0.98_alpha10-r1.ebuild:
 
