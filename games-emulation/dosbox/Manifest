@@ -1,5 +1,7 @@
 MD5 a4f2ca26601f36ed0a11e1c357bacb59 ChangeLog 954
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 6cd126f45a12b91aafe36d620496ca2f dosbox-0.60.ebuild 898
+MD5 e9bb3ad81080126471efb8fb8a375e61 dosbox-0.61.ebuild 867
+MD5 6c3131692034dda3f27046c037aabc58 files/digest-dosbox-0.61 63
 MD5 a15acc3d9f2a2d55bde29cf697f86297 files/digest-dosbox-0.60 63
 MD5 f4257165581f9c2cb8e2a428f2ebeaae files/0.60-alsa-1.0.0.patch 721

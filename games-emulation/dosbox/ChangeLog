@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/dosbox
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.5 2003/12/12 06:08:34 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.6 2004/02/03 23:25:55 mr_bones_ Exp $
+
+*dosbox-0.61 (03 Feb 2004)
+
+  03 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.61.ebuild:
+  version bump
 
 *dosbox-0.60 (16 Oct 2003)
 
