@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.68 2004/06/26 16:00:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.69 2004/07/05 23:53:39 mr_bones_ Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -60,7 +60,7 @@ egamesinstall() {
 		    localstatedir=${D}${GAMES_STATEDIR} \
 		    "$@" install || die "einstall failed"
 	else
-		die "no Makefile found" 
+		die "no Makefile found"
 	fi
 }
 
@@ -136,9 +136,7 @@ games_pkg_postinst() {
 # $1: directory or file to unpack
 games_ut_unpack() {
 	local ut_unpack="$1"
-	#export UT_DATA_PATH="${Ddir}/System"
-	#cd "${UT_DATA_PATH}"
-	#LD_LIBRARY_PATH=.:${UT2003_DATA_PATH}:${LD_LIBRARY_PATH}
+
 	if [ -z "${ut_unpack}" ]; then
 		die "You must provide an argument to games_ut_unpack"
 	fi
