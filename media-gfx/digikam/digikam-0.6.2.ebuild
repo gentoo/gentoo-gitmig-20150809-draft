@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.6.2.ebuild,v 1.3 2004/06/24 22:34:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.6.2.ebuild,v 1.4 2004/07/20 15:35:14 carlo Exp $
 
 inherit kde
 
@@ -22,6 +22,8 @@ IUSE=""
 # known upstream bug, that should be fixed in the final
 # * still in 0.6.2
 DEPEND="kde-base/kdesdk
-	>=media-gfx/gphoto2-2.0-r1"
-
+	>=media-gfx/gphoto2-2.0-r1
+	media-libs/imlib"
+RDEPEND=">=media-gfx/gphoto2-2.0-r1
+	media-libs/imlib"
 need-kde 3
