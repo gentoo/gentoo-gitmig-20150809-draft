@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.32 2004/03/06 16:06:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.33 2004/03/06 17:30:29 foser Exp $
+
+  06 Mar 2004; foser <foser@gentoo.org> rhythmbox-0.6.8.ebuild :
+  Fixed flac switch, so it now actually works the way it should
+  Had to fix deps & configure switch usage accordingly
 
 *rhythmbox-0.6.8 (06 Mar 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.8.ebuild,v 1.2 2004/03/06 16:06:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.8.ebuild,v 1.3 2004/03/06 17:30:29 foser Exp $
 
 inherit gnome2
 
@@ -19,7 +19,8 @@ RDEPEND=">=x11-libs/gtk+-2.2.2
 	>=gnome-base/libbonobo-2
 	>=media-libs/musicbrainz-2
 	faad? ( >=media-libs/faad2-2.0_rc3 )
-	flac? ( >=media-libs/flac-1 )
+	flac? ( >=media-libs/flac-1
+		>=media-libs/libid3tag-0.15.0b )
 	oggvorbis? ( >=media-libs/libvorbis-1 )
 	mad? ( >=media-libs/libid3tag-0.15.0b )
 	!xine? ( >=media-libs/gstreamer-0.6.3
@@ -43,13 +44,16 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 
 use xine && G2CONF="${G2CONF} --enable-xine"
-use flac && G2CONF="${G2CONF} --enable-flac"
+
+# flac support needs both flac & mp3 support enabled
+use flac || use mad \
+	&& G2CONF="${G2CONF} --enable-mp3" \
+	|| G2CONF="${G2CONF} --disable-mp3"
 
 G2CONF="${G2CONF} \
-	$(use_enable flac) \
 	$(use_enable oggvorbis vorbis) \
-	$(use_enable mad mp3) \
 	$(use_enable faad mp4 ) \
+	$(use_enable flac) \
 	--enable-mmkeys \
 	--enable-audiocd \
 	--disable-schemas-install"
@@ -64,6 +68,13 @@ src_unpack( ) {
 
 	epatch ${FILESDIR}/${PN}-0.6.5-gcc2_fix.patch
 	epatch ${FILESDIR}/${PN}-0.6.8-amd64.patch
+
+	# fix configure.ac to make flac switch work correctly
+	epatch ${FILESDIR}/${PN}-0.6-fix_flac_test.patch
+
+	# rerun autoconf for the flac fix
+	autoconf || die
+
 }
 
 DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
