@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.23_p4-r1.ebuild,v 1.1 2003/12/28 02:18:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.23_p4-r1.ebuild,v 1.2 2003/12/31 15:09:10 gmsoft Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -42,6 +42,10 @@ src_unpack() {
 	done
 
 	use xfs && epatch ${DISTDIR}/xfs-${PV}-hppa.patch.bz2
+
+	#Fix Rule.make
+	sed -i Rules.make \
+		-e '/LD.*-r.*$/s/-r/$(LINKFLAGS) -r/'
 
 	DEFCONFIG="${S}/arch/parisc/defconfig"
 
