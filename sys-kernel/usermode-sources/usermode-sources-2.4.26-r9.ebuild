@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r8.ebuild,v 1.1 2004/11/12 20:23:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r9.ebuild,v 1.1 2004/11/20 15:54:02 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -45,6 +45,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.4.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
 	epatch ${FILESDIR}/${PN}-2.4.XDRWrapFix.patch || die "Failed to apply the kNFSd XDR patch!"
 	epatch ${FILESDIR}/${PN}-2.4.binfmt_elf.patch || die "Failed to apply the binfmt_elf patch!"
+	epatch ${FILESDIR}/${PN}-2.4.smbfs.patch || die "Failed to apply the SMBFS patch!"
+
 	kernel_universal_unpack
 }
 

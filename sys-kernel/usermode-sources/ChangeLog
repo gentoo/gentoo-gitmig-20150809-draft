@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.50 2004/11/12 20:23:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.51 2004/11/20 15:54:02 plasmaroo Exp $
+
+*usermode-sources-2.4.26-r9 (20 Nov 2004)
+
+  20 Nov 2004; <plasmaroo@gentoo.org> -usermode-sources-2.4.26-r8.ebuild,
+  +usermode-sources-2.4.26-r9.ebuild, -usermode-sources-2.6.8.1-r3.ebuild,
+  +usermode-sources-2.6.8.1-r4.ebuild,
+  files/usermode-sources-2.4.binfmt_elf.patch,
+  +files/usermode-sources-2.4.smbfs.patch,
+  files/usermode-sources-2.6.binfmt_elf.patch,
+  +files/usermode-sources-2.6.smbfs.patch:
+  Version bump; updates binfmt_elf patch (bug #70681) and adds the smbfs
+  security patch (bug #65877).
 
 *usermode-sources-2.6.8.1-r3 (12 Nov 2004)
 
