@@ -1,14 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.5.55-r7.ebuild,v 1.2 2003/02/13 09:06:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.5.55-r7.ebuild,v 1.3 2003/03/29 11:13:01 seemant Exp $
 
 IUSE="gpm nls samba ncurses X pam slang"
 
 S=${WORKDIR}/${P}
+DESCRIPTION="GNU Midnight Commander"
+HOMEPAGE="http://www.ibiblio.org/mc/"
+SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/${P}.tar.gz"
 
-DESCRIPTION="GNOME Midnight Commander"
-SRC_URI="http://www.gnome.org/projects/${PN}/${P}.tar.gz"
-HOMEPAGE="http://www.gnome.org/projects/mc/"
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND=">=sys-apps/e2fsprogs-1.19
 	=dev-libs/glib-1.2*
@@ -20,10 +23,6 @@ DEPEND=">=sys-apps/e2fsprogs-1.19
 	nls? ( sys-devel/gettext )
 	samba? ( >=net-fs/samba-2.2.3a-r1 )
 	X? ( virtual/x11 )"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
 
 src_compile() {                           
 	
