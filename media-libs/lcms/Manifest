@@ -1,3 +1,5 @@
-MD5 a0a5f71922298554bca59bd76bcf08ee lcms-1.09.ebuild 1244
-MD5 c2861cab24c93548f9ae30e699ac5b8c ChangeLog 1397
+MD5 8901924dfe32c34e4ceabe6dac71b164 ChangeLog 1511
+MD5 c5f852cddb43c13fc8ec88de40f8fb00 lcms-1.09.ebuild 1245
+MD5 bde24bb7ff0f17541de6c49b4f11ec1f lcms-1.11.ebuild 1251
+MD5 ec46b226970ad1597b5be73ec187ef6e files/digest-lcms-1.11 61
 MD5 1146ce39fd2134ce3378c4ec350912c2 files/digest-lcms-1.09 61
