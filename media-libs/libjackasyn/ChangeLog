@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/libjackasyn
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/ChangeLog,v 1.1 2003/06/06 22:06:30 robh Exp $
+
+*libjackasyn-0.8 (06 Jun 2003)
+
+  06 Jun 2003; robh <robh@gentoo.org> libjackasyn-0.8.ebuild:
+  Inital version. Thanks to Jonathan Kraut, closes #22221
+
