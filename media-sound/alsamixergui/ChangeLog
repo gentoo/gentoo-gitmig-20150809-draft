@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsamixergui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.4 2002/09/21 18:20:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.5 2003/01/03 01:39:46 raker Exp $
+
+*alsamixergui-0.9.0.1.2-r2 (02 Jan 2002)
+
+  02 Jan 2002; Nick Hadaway <raker@gentoo.org>
+  alsamixergui-0.9.0.1.2-r2.ebuild,
+  files/digest-alsamixergui-0.9.0.1.2-r2,
+  files/gentoo.diff :
+  New ebuild.  Another attempt at getting configure right.
 
 *alsamixergui-0.9.0.1.2-r1 (21 Sep 2002)
 
