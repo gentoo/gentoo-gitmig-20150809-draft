@@ -2,7 +2,7 @@ MD5 39af6a10e2cbf9767cc96055a7596172 gnome-panel-2.6.1.ebuild 1694
 MD5 834ea6d28ef4a708fd38be328d2501d3 gnome-panel-2.4.2.ebuild 1748
 MD5 6499644087aaf06e1d8c9a428d2c040f gnome-panel-1.4.2-r2.ebuild 2024
 MD5 c74e4abdc06344fc7adbe9beccc58568 gnome-panel-1.4.1.ebuild 1768
-MD5 294bb599d9f24b1766d6de5aa6bc657f gnome-panel-2.6.0.ebuild 1692
+MD5 a6c44395e1b8ee278cac99be103a329e gnome-panel-2.6.0.ebuild 1691
 MD5 a679027471ba58558f1c787558bf965e ChangeLog 11502
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 1b4289df33228cb2b0a0a97db36e781f files/gnome-panel-2.6-parallel_install.patch 946

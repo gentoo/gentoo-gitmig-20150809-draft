@@ -1,6 +1,6 @@
 MD5 85ff450d3120c154848b3eafe22a386b libbonoboui-2.4.3.ebuild 781
 MD5 9e5f543b39db5fd2d5c093e0c16b10f7 libbonoboui-2.4.0.ebuild 781
-MD5 37a4e6c8e18ca4cea4b36ad09cbfdadb libbonoboui-2.6.0.ebuild 839
+MD5 e62e1303f8bf018d2c755d75977cacb1 libbonoboui-2.6.0.ebuild 838
 MD5 9d927dd7ee8bc0f856cea91f14679534 ChangeLog 6220
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 7dd4d8064f9c7aa453ede86b8fb2cd1c files/digest-libbonoboui-2.4.0 70
