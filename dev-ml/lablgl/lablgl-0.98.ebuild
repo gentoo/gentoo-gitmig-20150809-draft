@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-0.98.ebuild,v 1.9 2003/09/08 02:59:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-0.98.ebuild,v 1.10 2003/11/25 01:07:51 weeve Exp $
 
 IUSE="opengl"
 
@@ -14,7 +14,7 @@ DEPEND=">=dev-lang/ocaml-3.05
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
 S=${WORKDIR}/lablGL-${PV}
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 #need to do some mangling to keep ebuild name lowercase
 #(anyway package uses mixture of upper and lower case letters)
