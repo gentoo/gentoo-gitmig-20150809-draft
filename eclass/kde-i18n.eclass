@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.20 2002/07/13 16:13:46 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.21 2002/08/01 18:57:25 danarmak Exp $
 inherit kde kde-i18n.org 
 ECLASS=kde-i18n
 INHERITED="$INHERITED $ECLASS"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 myconf="$myconf --enable-final"
 
