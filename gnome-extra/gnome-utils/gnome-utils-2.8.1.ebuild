@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.6.0.ebuild,v 1.8 2004/07/04 12:34:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.8.1.ebuild,v 1.1 2004/11/25 02:58:31 obz Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Utilities for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 IUSE="ipv6"
 SLOT="0"
-KEYWORDS="x86 ppc alpha ~sparc hppa amd64 ~ia64 mips"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
 
 RDEPEND=">=x11-libs/gtk+-2.3.2
 	>=gnome-base/libgnome-2.5
@@ -31,4 +31,13 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} $(use_enable ipv6)"
 
-DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS"
+DOCS="AUTHORS ChangeLog NEWS README THANKS"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	# fix gfloppy compile problem
+	epatch ${FILESDIR}/${PN}-2.6.2-gfloppymajor.patch
+
+}
