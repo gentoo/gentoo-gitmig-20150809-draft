@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.11 2004/11/06 15:02:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.12 2004/11/09 03:05:45 mr_bones_ Exp $
 
 inherit gnuconfig
 
@@ -29,14 +29,20 @@ RDEPEND=">=x11-libs/gtk+-2.2
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	gnuconfig_update
+}
+
 src_compile() {
-	use ppc64 && gnuconfig_update
-	econf --disable-dependency-tracking `use_enable nls` || die
+	econf \
+		--disable-dependency-tracking \
+		$(use_enable nls) || die
 	emake || die "emake failed"
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die
-
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS CREDITS ChangeLog README TODO
 }
