@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.4.20030311.ebuild,v 1.1 2003/03/17 00:34:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.4_pre20030311.ebuild,v 1.1 2003/04/16 15:01:59 mholzer Exp $
 
 inherit libtool flag-o-matic
 
@@ -10,10 +10,12 @@ filter-flags -fPic
 
 filter-flags "-maltivec -mabi=altivec"
 
+MY_P="${P/_pre/.}"
+S=${WORKDIR}/${MY_P}
 IUSE="sdl mmx mpeg sse encode X quicktime avi altivec"
 DESCRIPTION="video stream processing tool"
-SRC_URI="http://www.zebra.fh-weingarten.de/~transcode/pre/${P}.tar.gz"
-HOMEPAGE="http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode"
+SRC_URI="http://www.zebra.fh-weingarten.de/~transcode/pre/${MY_P}.tar.gz"
+HOMEPAGE="http://zebra.fh-weingarten.de/~transcode/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
@@ -22,7 +24,7 @@ DEPEND=">=media-libs/a52dec-0.7.3
 	x86? ( >=dev-lang/nasm-0.98.34 )
 	>=media-libs/libdvdread-0.9.0
 	>=media-video/mplayer-0.90_pre10
-	>=media-video/ffmpeg-0.4.0
+	>=media-video/ffmpeg-0.4.6
 	>=media-libs/xvid-0.9.0
 	>=media-video/mjpegtools-1.6.0
 	>=dev-libs/lzo-1.08
