@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.16 2004/07/01 22:10:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.17 2004/07/14 23:22:53 agriffis Exp $
 
 DESCRIPTION="Excellent high-performance DNS services"
 SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
@@ -15,8 +15,6 @@ DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	>=sys-apps/daemontools-0.70
 	sys-apps/ucspi-tcp"
-
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${P}.tar.gz
