@@ -668,10 +668,11 @@ dev-lang/tcl-tk
 # (gnome-2 that is ;)
 >=x11-libs/gtk+-2.0.0
 >=gnome-base/libglade-1.99.10-r1
->=x11-libs/rep-gtk-20020419
->=dev-libs/librep-20020201
 >=app-text/scrollkeeper-0.3.0
 
+>=x11-wm/sawfish-20020419
+>=x11-libs/rep-gtk-20020419
+>=dev-libs/librep-20020201
 
 
 # spider@gentoo.org ; 18 Apr 2002
