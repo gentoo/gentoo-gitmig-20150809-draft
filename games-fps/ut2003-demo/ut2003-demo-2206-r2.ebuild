@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r2.ebuild,v 1.5 2004/01/15 03:25:23 wolf31o2 Exp $.
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r2.ebuild,v 1.6 2004/02/27 16:49:42 wolf31o2 Exp $.
 
 inherit games
 
@@ -64,8 +64,8 @@ src_install() {
 
 	# create menu entry (closes bug #27594)
 	insinto /usr/share/applications
-	newins ${D}/opt/ut2003-demo/Unreal.xpm UT2003-demo.xpm
-	make_desktop_entry ut2003-demo "UT2003 Demo" UT2003-demo.xpm
+	newins ${S}/opt/ut2003-demo/Unreal.xpm UT2003-demo.xpm
+	make_desktop_entry ut2003-demo "Unreal Tournament 2003 (Demo)" UT2003-demo.xpm
 
 	prepgamesdirs
 }
