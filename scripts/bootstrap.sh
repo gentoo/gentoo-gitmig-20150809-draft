@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.62 2004/11/23 13:44:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.63 2004/11/24 13:57:06 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -41,7 +41,7 @@ for opt in "$@" ; do
 			STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -f"
 			unset STRAP_RUN;;
 		--help|-h)
-			echo -e "Usage: ${HILITE}bootstrap-cascade.sh${NORMAL} ${GOOD}[options]${NORMAL}"
+			echo -e "Usage: ${HILITE}${0##*/}${NORMAL} ${GOOD}[options]${NORMAL}"
 			echo -e "  ${GOOD}--debug (-d)${NORMAL}     Run with debug information turned on"
 			echo -e "  ${GOOD}--fetchonly (-f)${NORMAL} Just download all the source files"
 			echo -e "  ${GOOD}--info (-i)${NORMAL}      Show system related information"
