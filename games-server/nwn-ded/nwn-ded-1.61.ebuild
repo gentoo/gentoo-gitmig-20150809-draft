@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.30.ebuild,v 1.2 2004/01/29 08:53:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.61.ebuild,v 1.1 2004/01/29 08:53:40 vapier Exp $
 
 inherit games
 
@@ -11,6 +11,7 @@ SRC_URI="http://nwdownloads.bioware.com/neverwinternights/standaloneserver/NWNDe
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-* x86"
+RESTRICT="nomirror"
 
 S=${WORKDIR}
 
