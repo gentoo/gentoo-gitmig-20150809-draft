@@ -1,0 +1,11 @@
+# ChangeLog for dev-lang/fpcsrc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpcsrc/ChangeLog,v 1.1 2004/10/31 04:20:05 chriswhite Exp $
+
+*fpcsrc-1.9.4 (31 Oct 2004)
+
+  31 Oct 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +fpcsrc-1.9.4.ebuild:
+  Initial import to the tree closing bug #69336.  Thanks to  
+  samx <gentoo@die-genossen.de> for the ebuild.
+
