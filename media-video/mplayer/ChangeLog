@@ -1,6 +1,16 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.8 2002/04/14 13:30:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.9 2002/04/17 11:33:33 seemant Exp $
+
+*mplayer-0.60-r6 (17 Apr 2002)
+
+  17 Apr 2002; Seemant Kulleen <seemant@gentoo.org> mplayer-0.60-r6.ebuild
+  files/digest-mplayer-0.60-r6 :
+
+  This is an upgrade in a way, because it is now fetching the cvs snapshot
+  from the site.  The actual 0.60 sources have been removed from the
+  SRC_URI, and they are replaced with a weekly snapshot.  This is fine
+  because it offers much better performance than the old "stable" version.
 
 *mplayer-0.60-r5 (14 Apr 2002)
 
