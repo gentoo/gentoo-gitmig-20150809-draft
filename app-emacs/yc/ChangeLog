@@ -1,15 +1,18 @@
 # ChangeLog for app-emacs/yc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.8 2003/06/02 17:51:43 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.9 2003/06/16 18:35:07 nakano Exp $
 
 *yc-3.5.8 (02 Jun 2003)
+
+  16 Jun 2003; Masatomo Nakano <nakano@gentoo.org> yc-3.5.8.ebuild:
+  Marked as stable.
 
   02 Jun 2003; Masatomo Nakano <nakano@gentoo.org> yc-3.5.8.ebuild:
   Version bump as unstable.
 
 *yc-3.5.7 (11 May 2003)
 
-  18 May 2003; <masatomo@gentoo.org> yc-3.5.7.ebuild:
+  18 May 2003; <nakano@gentoo.org> yc-3.5.7.ebuild:
   Marked as stable.
 
   11 May 2003; Masatomo Nakano <nakano@gentoo.org> ChangeLog, yc-3.5.7.ebuild,
