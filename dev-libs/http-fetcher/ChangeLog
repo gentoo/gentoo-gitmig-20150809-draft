@@ -1,6 +1,9 @@
 # ChangeLog for net-www/http-fetcher
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/ChangeLog,v 1.1 2003/06/23 07:01:17 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/ChangeLog,v 1.2 2003/06/23 07:02:57 phosphan Exp $
+
+  23 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> :
+  Moving from net-www to dev-libs as requested by package author
 
 *http-fetcher-1.0.2 (18 Jun 2003)
 

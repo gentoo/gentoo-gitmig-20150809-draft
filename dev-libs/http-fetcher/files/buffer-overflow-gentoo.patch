@@ -1,0 +1,35 @@
+--- http_fetcher.c	Tue Jul 31 03:47:15 2001
++++ http_fetcher.patch.c	Thu Jan  2 22:24:48 2003
+@@ -94,7 +94,7 @@
+ 		 *	request */ 
+ 		sprintf(requestBuf, "GET / %s\n", HTTP_VERSION);
+ 	else
+-		sprintf(requestBuf, "GET %s %s\n", charIndex, HTTP_VERSION);
++		snprintf(requestBuf, sizeof(requestBuf)/4-1,"GET %s %s\n", charIndex, HTTP_VERSION);
+ 
+ 	/* Null out the end of the hostname if need be */
+ 	if(charIndex != NULL)
+@@ -102,13 +102,13 @@
+ 	/* Use Host: even though 1.0 doesn't specify it.  Some servers
+ 	 *	won't play nice if we don't send Host, and it shouldn't hurt anything */
+ 	strcat(requestBuf, "Host: ");
+-	strcat(requestBuf, host);
++	strncat(requestBuf, host, sizeof(requestBuf)/4-1);
+ 	strcat(requestBuf, "\n");
+ 
+ 	if(!hideReferer && referer != NULL)	/* NO default referer */
+ 		{
+ 		strcat(requestBuf, "Referer: ");
+-		strcat(requestBuf, referer);
++		strncat(requestBuf, referer, sizeof(requestBuf)/4-1);
+ 		strcat(requestBuf, "\n");
+ 		}
+ 
+@@ -123,7 +123,7 @@
+ 	else if(!hideUserAgent)
+ 		{
+ 		strcat(requestBuf, "User-Agent: ");
+-		strcat(requestBuf, userAgent);
++		strncat(requestBuf, userAgent, sizeof(requestBuf)/4-1);
+ 		strcat(requestBuf, "\n");
+ 		}
