@@ -1,35 +1,41 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.0.ebuild,v 1.1 2003/09/10 17:46:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.0-r1.ebuild,v 1.1 2003/10/02 05:18:37 vapier Exp $
 
 inherit games gnome2
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Risk Clone"
+HOMEPAGE="http://teg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/teg/${P}.tar.bz2"
-HOMEPAGE="http://teg.sourceforge.net"
 
-KEYWORDS="x86 sparc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/glibc
 	virtual/x11
 	dev-libs/glib
 	gnome-base/libgnomeui
-	gnome-base/libgnome"
+	gnome-base/libgnome
+	readline? ( sys-libs/readline )"
+RDEPEND="${DEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	egamesconf `use_enable nls` || die
+	econf \
+		`use_enable nls` \
+		--bindir=${GAMES_BINDIR} \
+		|| die
 	emake || die
 }
 
 src_install() {
-#	make DESTDIR=${D} install || die
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
-	egamesinstall " sScrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ ${1}"
+	make \
+		DESTDIR=${D} install \
+		" sScrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ ${1}"\
+		|| die
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-#	egamesinstall
 	prepgamesdirs
 }
 
