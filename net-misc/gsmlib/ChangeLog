@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gsmlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/ChangeLog,v 1.3 2003/02/12 08:22:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/ChangeLog,v 1.4 2003/09/24 22:26:13 liquidx Exp $
+
+*gsmlib-1.11_pre030826 (24 Sep 2003)
+
+  24 Sep 2003; Alastair Tse <liquidx@gentoo.org> gsmlib-1.11_pre030826.ebuild,
+  metadata.xml:
+  added metadata.xml. bumped to latest snapshot release due to compile problems
+  with gcc 3.x
 
 *gsmlib-1.10 (14 Dec 2002)
 
