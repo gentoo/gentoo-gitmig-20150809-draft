@@ -25,10 +25,6 @@
 # Masked to force lynx-2.8.4.1c
 =net-www/lynx-2.8.4a-r4
 
-# <aliz@gentoo.org> (26 Aug 2002)
-# Masked for testing
-=dev-db/postgresql-7.2.2
-
 # <aliz@gentoo.org> (25 Aug 2002)
 # Masked for testing
 =sys-apps/yard-2.2
