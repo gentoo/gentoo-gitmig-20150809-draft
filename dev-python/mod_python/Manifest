@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 19c5d014ef01ffef8f4e55360e14b8ad metadata.xml 546
-MD5 e342308b34955a66cc6530d4367f877b mod_python-2.7.11.ebuild 1493
+MD5 3cd9a71487590f5789bcb43c74698602 mod_python-2.7.11.ebuild 1712
 MD5 67997ffb188bf18507f6a2ac093227a6 mod_python-2.7.10.ebuild 2466
 MD5 56e0e23014de3fcd64cd488154dc0c14 mod_python-2.7.10-r1.ebuild 2670
 MD5 7a9f8809160500edcc3f6adfee451a0a mod_python-3.1.3-r1.ebuild 1881
-MD5 3d5deac78b5bc3ea0bc0bd4c94c3557b ChangeLog 4594
-MD5 447e33446bf4411594dda17d6e934d58 mod_python-3.1.4.ebuild 1549
+MD5 309bd5e3c99651af8951a2cc1bb463ba ChangeLog 4761
+MD5 e1f9909b6a1be646d18d2e8a3154c016 mod_python-3.1.4.ebuild 1707
 MD5 eeb4d18110c623dfed18a9c097b39a97 mod_python-3.1.3.ebuild 1879
 MD5 01ce560a5062d990e685e78b756fa5ba files/mod_python.conf 70
 MD5 eedde8a8dd90829d24fdb18cc86054f6 files/digest-mod_python-2.7.10-r1 66
@@ -15,13 +15,14 @@ MD5 c4619f17df8352dc648c0f89b61e17b6 files/digest-mod_python-3.1.4 65
 MD5 67e42121ddce856c5d7021b3eca7abdb files/digest-mod_python-3.1.3 65
 MD5 0779383c65d90a5161e7a11ab5bbbbec files/publisher-2.diff 1383
 MD5 05bbbfafd26dcf70f83fcc2b015751dc files/16_mod_python.conf 1106
+MD5 fc933df167083c6c8abc4d2e28c6274d files/16_mod_python-r1.conf 1101
 MD5 eedde8a8dd90829d24fdb18cc86054f6 files/digest-mod_python-2.7.10 66
 MD5 67e42121ddce856c5d7021b3eca7abdb files/digest-mod_python-3.1.3-r1 65
 MD5 f9aea2b5454c22f2e134e3698099f890 files/digest-mod_python-2.7.11 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCIGyhugEuf3OQ0akRApj+AJ42kqLGJfb5h2XPln9wtcv2BJvoLwCfbjth
-uZBqtHGQaMrEXQuyKIT6Td8=
-=svI+
+iD8DBQFCITGEugEuf3OQ0akRAskqAJ40+nxmC/97ORDrhSUD8wZHxu3uuwCdFMqW
+me6iAFzt9vMbWtYgGfWx4u0=
+=lGRZ
 -----END PGP SIGNATURE-----
