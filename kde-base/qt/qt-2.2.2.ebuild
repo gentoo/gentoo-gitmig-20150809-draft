@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-2.2.2.ebuild,v 1.2 2000/12/09 14:33:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-2.2.2.ebuild,v 1.3 2000/12/09 14:35:00 drobbins Exp $
 
 QP=${PN}-x11-${PV}
 A=${QP}.tar.gz
@@ -53,7 +53,7 @@ src_install() {
 	dolib.so lib/libqt-mt.so.${PV}
 	dolib.so lib/libqutil.so.1.0.0
 	preplib /usr/lib/${QP}
-	dosym	libqt.so.${PV} /usr/lib//lib/libqt.so
+	dosym	libqt.so.${PV} /usr/lib/${QP}/lib/libqt.so
 	dosym   libqt-mt.so.${PV} /usr/lib/${QP}/lib/libqt-mt.so
 	dosym   libqutil.so.1.0.0 /usr/lib/${QP}/lib/libqutil.so
 	cd ${D}/usr/lib
