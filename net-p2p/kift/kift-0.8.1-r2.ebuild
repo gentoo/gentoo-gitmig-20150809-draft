@@ -1,6 +1,5 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Bart Verwilst <verwilst@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/net-misc/kift/kift-0.8.1.ebuild,v 1.1 2002/05/30 20:48:01 verwilst Exp
 
 inherit kde-base || die

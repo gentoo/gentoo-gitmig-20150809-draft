@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7b.ebuild,v 1.1 2002/06/02 21:40:57 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7b.ebuild,v 1.2 2002/07/11 06:30:49 drobbins Exp $
 
 S=${WORKDIR}/${P}
 

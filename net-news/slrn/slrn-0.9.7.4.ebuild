@@ -1,7 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer Ben Lutgens <lamer@gentoo.org>
-# Maintainer Terry Chan <tchan@enteract.com>
 # Added ssl support and new patches
 # $Header $
  

@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/raccess-0.6.ebuild,v 1.3 2002/07/09 10:40:01 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/raccess-0.6.ebuild,v 1.4 2002/07/11 06:30:48 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Remote Access Session is a security tool to analyze the integrity of systems using a library of publically available (and proven to work) exploits"

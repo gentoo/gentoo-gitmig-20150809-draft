@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.0.3.ebuild,v 1.1 2002/06/03 22:55:52 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.0.3.ebuild,v 1.2 2002/07/11 06:30:49 drobbins Exp $
 
 S=${WORKDIR}/jakarta-${P}
 DESCRIPTION="Apache Servlet Engine"

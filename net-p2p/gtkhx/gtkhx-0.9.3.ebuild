@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author Michael M Nazaroff <naz@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtkhx/gtkhx-0.9.3.ebuild,v 1.2 2002/06/25 11:12:27 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtkhx/gtkhx-0.9.3.ebuild,v 1.3 2002/07/11 06:30:49 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a GTK+ Hotline Client based off of Hx"

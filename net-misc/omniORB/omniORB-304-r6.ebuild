@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Holger Brueckner <darks@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304-r6.ebuild,v 1.2 2002/07/09 10:28:30 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304-r6.ebuild,v 1.3 2002/07/11 06:30:48 drobbins Exp $
 
 A="${PN}_${PV}.tar.gz omniORBpy_1_4.tar.gz omniNotify11b1.tar.gz"
 S=${WORKDIR}/omni

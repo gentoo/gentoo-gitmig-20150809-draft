@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Jo Ryden <jo@our-own.net>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.1.0-r1.ebuild,v 1.3 2002/07/09 10:44:31 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.1.0-r1.ebuild,v 1.4 2002/07/11 06:30:48 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Remote Desktop Protocol Client"

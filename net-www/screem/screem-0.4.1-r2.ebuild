@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Craig Joly <joly@ee.ualberta.ca>
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.4.1-r2.ebuild,v 1.2 2002/04/08 16:17:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.4.1-r2.ebuild,v 1.3 2002/07/11 06:30:49 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SCREEM (Site CReating and Editing EnvironmenMent) is an

@@ -1,8 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer:  Desktop Team <desktop@cvs.gentoo.org>
-# Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11.ebuild,v 1.3 2002/07/07 07:27:26 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11.ebuild,v 1.4 2002/07/11 06:30:48 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTM - a transfer manager"

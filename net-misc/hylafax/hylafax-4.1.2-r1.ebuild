@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.2-r1.ebuild,v 1.2 2002/07/07 08:06:20 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.2-r1.ebuild,v 1.3 2002/07/11 06:30:48 drobbins Exp $
 
 S=${WORKDIR}/${P}
 MYSED=sed-3.02

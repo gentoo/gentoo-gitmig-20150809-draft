@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Pieter Van den Abeele <pvdabeel@gentoo.org>
-# $Id: gplflash-0.4.10-r1.ebuild,v 1.2 2002/07/09 19:36:44 azarah Exp $
+# $Id: gplflash-0.4.10-r1.ebuild,v 1.3 2002/07/11 06:30:49 drobbins Exp $
 
 S=${WORKDIR}/flash-0.4.10
 DESCRIPTION="GPL Shockwave Flash Player/Plugin"

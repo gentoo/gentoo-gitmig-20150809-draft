@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Holger Brueckner <darks@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.4.0-r6.ebuild,v 1.3 2002/07/08 23:37:04 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.4.0-r6.ebuild,v 1.4 2002/07/11 06:30:49 drobbins Exp $
 
 A="Zope-${PV}-src.tgz ZEO-1.0b3.tgz"
 S=${WORKDIR}/Zope-${PV}-src

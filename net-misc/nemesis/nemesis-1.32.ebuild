@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Alexander Gretencord <arutha@gmx.de>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.32.ebuild,v 1.2 2002/07/08 18:29:17 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.32.ebuild,v 1.3 2002/07/11 06:30:48 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A commandline-based, portable human IP stack for UNIX/Linux"

@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kmago/kmago-1.1.2.ebuild,v 1.6 2002/07/08 17:56:40 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kmago/kmago-1.1.2.ebuild,v 1.7 2002/07/11 06:30:48 drobbins Exp $
 
 
 A=${P}.tar.gz

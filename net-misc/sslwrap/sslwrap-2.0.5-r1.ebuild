@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.5-r1.ebuild,v 1.8 2002/07/09 11:06:44 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.5-r1.ebuild,v 1.9 2002/07/11 06:30:49 drobbins Exp $
 
 S=${WORKDIR}/${PN}${PV/.0./0}
 DESCRIPTION="TSL/SSL - Port Wrapper"

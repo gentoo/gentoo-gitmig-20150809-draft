@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/roundup/roundup-0.4.2.ebuild,v 1.3 2002/07/06 05:39:52 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/roundup/roundup-0.4.2.ebuild,v 1.4 2002/07/11 06:30:49 drobbins Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Simple-to-use and -install issue-tracking system with command-line, web, and e-mail interfaces."

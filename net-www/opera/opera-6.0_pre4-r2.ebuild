@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0_pre4-r2.ebuild,v 1.2 2002/05/03 00:39:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0_pre4-r2.ebuild,v 1.3 2002/07/11 06:30:49 drobbins Exp $
 
 NV=6.0-20020110.2-shared_qt.i386
 S=${WORKDIR}/opera-${NV}

@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
 
 A=plugger-4.0-linux-x86-glibc.tar.gz
 S=${WORKDIR}/plugger-4.0

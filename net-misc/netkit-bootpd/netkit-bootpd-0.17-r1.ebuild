@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/netkit-bootpd-0.17-r1.ebuild,v 1.7 2002/07/09 09:37:21 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/netkit-bootpd-0.17-r1.ebuild,v 1.8 2002/07/11 06:30:48 drobbins Exp $
 
 MY_PN=${PN/pd/paramd}
 S=${WORKDIR}/${MY_PN}-${PV}

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-2.01.ebuild,v 1.2 2002/07/09 10:05:47 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-2.01.ebuild,v 1.3 2002/07/11 06:30:48 drobbins Exp $
 
 #name of tarball changed
 MY_P="${P/nt/d4x}"

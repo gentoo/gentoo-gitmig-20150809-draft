@@ -1,7 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/openag/openag-1.1.1.ebuild,v 1.2 2002/06/25 11:12:27 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/openag/openag-1.1.1.ebuild,v 1.3 2002/07/11 06:30:49 drobbins Exp $
 
 MY_P=OpenAG-${PV}
 S=${WORKDIR}/${MY_P}

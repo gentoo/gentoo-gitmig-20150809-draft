@@ -1,8 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Aaron Blew <moath@oddbox.org>
 # /home/cvsroot/gentoo-x86/net-misc/rdate,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-990821.ebuild,v 1.4 2002/07/09 10:43:46 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-990821.ebuild,v 1.5 2002/07/11 06:30:48 drobbins Exp $
 
 
 A=${P}.tar.gz

@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.7.2.ebuild,v 1.1 2001/08/29 04:30:29 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.7.2.ebuild,v 1.2 2002/07/11 06:30:49 drobbins Exp $
 A="${P}.tar.gz ${P}-readactive.diff ${P}-forceauth.diff"
 S=${WORKDIR}/${P}
 DESCRIPTION="s-lang read news"

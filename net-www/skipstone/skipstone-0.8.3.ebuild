@@ -1,7 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Damon Conway <damon@3jane.net> 
-# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.8.3.ebuild,v 1.1 2002/06/25 19:48:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.8.3.ebuild,v 1.2 2002/07/11 06:30:49 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ based web browser based on the Mozilla engine"

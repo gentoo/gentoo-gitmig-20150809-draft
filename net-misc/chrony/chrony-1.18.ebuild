@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Bardur Arantsson <bardur@imada.sdu.dk>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.18.ebuild,v 1.3 2002/07/06 07:34:02 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.18.ebuild,v 1.4 2002/07/11 06:30:48 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NTP client and server programs"

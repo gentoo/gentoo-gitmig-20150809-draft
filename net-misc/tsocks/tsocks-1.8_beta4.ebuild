@@ -1,7 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Ben Lutgens <lamer@gentoo.org>
-# Author: Bardur Arantsson <bardur-gta@odense.kollegienet.dk>
 
 DESCRIPTION="Transparent SOCKS v4 proxying library."
 HOMEPAGE="http://tsocks.sourceforge.net/"

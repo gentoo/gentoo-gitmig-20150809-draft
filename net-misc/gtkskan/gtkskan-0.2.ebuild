@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Tools Team <tools@gentoo.org>
-# Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkskan/gtkskan-0.2.ebuild,v 1.5 2002/07/07 07:23:02 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkskan/gtkskan-0.2.ebuild,v 1.6 2002/07/11 06:30:48 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+-based ESSID scanner"

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r3.ebuild,v 1.1 2002/05/22 22:51:24 seemant Exp ${PN}/${PN}-3.1.5-r2.ebuild,v 1.2 2002/03/15 12:10:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r3.ebuild,v 1.2 2002/07/11 06:30:49 drobbins Exp ${PN}/${PN}-3.1.5-r2.ebuild,v 1.2 2002/03/15 12:10:18 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTTP/HTML indexing and searching system"

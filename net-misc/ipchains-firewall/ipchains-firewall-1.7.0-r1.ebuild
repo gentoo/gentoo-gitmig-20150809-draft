@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipchains-firewall/ipchains-firewall-1.7.0-r1.ebuild,v 1.6 2002/07/07 08:18:32 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipchains-firewall/ipchains-firewall-1.7.0-r1.ebuild,v 1.7 2002/07/11 06:30:48 drobbins Exp $
 
 S=${WORKDIR}/ipchains-firewall-1.7
 DESCRIPTION="IP-Chains Firewall Script "

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-4.1-r1.ebuild,v 1.2 2002/04/27 21:28:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-4.1-r1.ebuild,v 1.3 2002/07/11 06:30:49 drobbins Exp $
 
 S=${WORKDIR}/Amaya/LINUX-ELF
 DESCRIPTION="The W3C Web-Browser"

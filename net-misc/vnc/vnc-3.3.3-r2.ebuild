@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Grant Goodyear <g2boojum@hotmail.com>
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r2.ebuild,v 1.8 2002/07/09 11:32:31 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r2.ebuild,v 1.9 2002/07/11 06:30:49 drobbins Exp $
 
 MY_P="vnc-3.3.3r2_unixsrc"
 S=${WORKDIR}/vnc_unixsrc
