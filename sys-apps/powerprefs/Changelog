@@ -1,0 +1,6 @@
+# ChangeLog for sys-apps/powerprefs
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerprefs/Changelog,v 1.1 2002/06/08 17:13:25 gerk Exp $
+
+* powerprefs-0.2.1 (first Changelog entry) - Sat Jun  8 11:58:08 EST 2002
+	Updated build for new vendor release - Gerk
