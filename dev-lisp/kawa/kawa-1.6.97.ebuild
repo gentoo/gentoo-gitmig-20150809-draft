@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/kawa/kawa-1.6.97.ebuild,v 1.6 2003/09/06 22:35:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/kawa/kawa-1.6.97.ebuild,v 1.7 2004/03/14 01:31:12 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Scheme compiler for JVM"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/kawa/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/kawa/"
