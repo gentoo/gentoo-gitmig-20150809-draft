@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.232 2005/03/27 18:45:24 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.233 2005/03/29 04:01:14 chriswhite Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -25,7 +25,7 @@ apm - Adds APM (Advanced Power Management) support
 arts - Adds support for aRts: the KDE sound daemon
 atlas - Adds support for atlas instead of blas in dev-lang/R
 audiofile - Adds support for libaudiofile where applicable
-avi - Adds Win32 AVI support and also adds avifile (Library for avi) support
+avi - Adds avifile (Library for avi) support
 bash-completion - Enable bash-completion support
 bcmath - Adds support for libbcmath
 berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
@@ -357,4 +357,5 @@ ppc-macos - indicates that platform is Mac OS (Jaguar, Panther or Tiger)
 s390 - indicates that architecture is zSeries/s390
 sh - indicates that architecture is SuperH
 sparc - indicates that architecture is (32-bit) Sparc
+win32codecs - use win32codecs package for dll avi decoding support (wmv and what not)
 x86 - indicates that architecture is x86
