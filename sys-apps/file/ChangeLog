@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.5 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.6 2002/12/20 21:16:44 tuxus Exp $
+
+*file-3.37 (20 Dec 2002)
+
+  20 Dec 2002; Jan Seidel <tuxus@gentoo.org> file-3.37.ebuild :
+  Added mips to keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
