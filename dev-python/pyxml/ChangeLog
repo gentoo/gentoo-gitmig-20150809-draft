@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyxml
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.13 2004/05/14 01:34:58 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.14 2004/06/17 21:39:22 lucass Exp $
+
+*pyxml-0.8.3-r1 (17 Jun 2004)
+
+  17 Jun 2004; Lukasz Strzygowski <lucass@gentoo.org> pyxml-0.8.3-r1.ebuild:
+  Fixing bug 54174. Thanks for Roger Luethi. Now it install also 
+  tests, demos, all docs and man pages. Marking testing on all archs.
 
   13 May 2004; Stephen P. Becker <geoman@gentoo.org> pyxml-0.8.3.ebuild:
   Stable on mips.
