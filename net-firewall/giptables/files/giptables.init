@@ -1,0 +1,88 @@
+#!/sbin/runscript
+
+opts="start stop restart panic"
+
+GIPTABLES_HOME_DIR="/lib/giptables"
+GIPTABLES_CONF_FILE="/etc/giptables.conf"
+GIPTABLES_BLOCKED_FILE="/etc/conf.d/giptables.blocked"
+GIPTABLES_CUSTOM_FILE="/etc/conf.d/giptables.custom"
+GIPTABLES_LIB_FILE="$GIPTABLES_HOME_DIR/giptables-main"
+
+ROOT_UID=0         # Root has $UID 0
+
+EX_ERROR=1
+
+depend() {
+	before net
+	use logger
+	provide firewall
+}
+
+checkconfig() {
+	# Check to see if we are root
+	if [ "$UID" -ne "$ROOT_UID" ]; then
+    		eerror "`basename $0`: You need to be root in order to start or stop the firewall"
+    		exit $EX_ERROR
+	fi
+	
+	# Check the availability of the iptables package
+	if [ ! -x /sbin/iptables ]; then
+		eerror "`basename $0`: iptables package not available"
+		exit $EX_ERROR
+	fi
+
+	# Check the kernel version
+	KERNEL_MAJ=`uname -r | sed -e 's,\..*,,'`
+	KERNEL_MIN=`uname -r | sed -e 's,[^\.]*\.,,' -e 's,\..*,,'`
+	if [ "$KERNEL_MAJ" -lt 2 ] || [ "$KERNEL_MAJ" -eq 2 -a "$KERNEL_MIN" -lt 4 ]; then
+		eerror "`basename $0`: Wrong kernel version"
+		exit $EX_ERROR
+	fi
+
+	# Ipchains module should not be loaded
+	[ -x /sbin/lsmod ] && \
+	if /sbin/lsmod 2>/dev/null | grep -q ipchains; then
+		eerror "`basename $0`: ipchains module should not be loaded"
+		exit $EX_ERROR
+	fi
+
+	# Loading main configuration file
+	if [ ! -f "$GIPTABLES_CONF_FILE" ]; then
+		eerror "`basename $0`: Main configuration file ($GIPTABLES_CONF_FILE) not found"
+		exit $EX_ERROR
+	fi	
+
+	# Loading main library file
+	if [ ! -f "$GIPTABLES_LIB_FILE" ]; then
+		eerror "`basename $0`: Main library file ($GIPTABLES_LIB_FILE) not found"
+		exit $EX_ERROR
+	fi	
+}
+
+source $GIPTABLES_CONF_FILE
+source $GIPTABLES_LIB_FILE
+
+start() {
+	ebegin "Starting up GIPTables Firewall"
+	checkconfig || return $EX_ERROR
+	start_giptables_firewall
+	eend $?
+}
+
+stop() {
+	ebegin "Shutting down GIPTables Firewall"
+	stop_giptables_firewall
+	eend $?
+}
+
+restart() {
+	svc_stop
+	svc_start
+}
+
+panic() {
+	ewarn "Panic GIPTables Firewall, DROP everything"
+	panic_giptables_firewall
+	eend $?
+}
+
