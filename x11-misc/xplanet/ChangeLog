@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xplanet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.39 2004/08/06 20:05:13 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.40 2004/08/09 17:16:55 gmsoft Exp $
+
+  09 Aug 2004; Guy Martin <gmsoft@gentoo.org> xplanet-1.1.1.ebuild:
+  Stable on hppa.
 
   06 Aug 2004; Don Seiler <rizzo@gentoo.org> xplanet-1.1.1.ebuild:
   Putting ~hppa back in.
