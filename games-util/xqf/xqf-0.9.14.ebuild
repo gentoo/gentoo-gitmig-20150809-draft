@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.13.ebuild,v 1.10 2004/03/28 07:01:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.14.ebuild,v 1.1 2004/03/28 07:01:39 mr_bones_ Exp $
 
 inherit games
 
@@ -29,6 +29,7 @@ RDEPEND="${DEPEND}
 
 src_compile() {
 	egamesconf \
+		--disable-dependency-tracking \
 		`use_enable gtk2` \
 		`use_enable nls` \
 		`use_enable geoip` \
@@ -38,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	egamesinstall || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 	prepgamesdirs
 }

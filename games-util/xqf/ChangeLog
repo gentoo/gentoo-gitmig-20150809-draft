@@ -1,6 +1,12 @@
 # ChangeLog for games-util/xqf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.5 2004/03/21 06:34:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.6 2004/03/28 07:01:39 mr_bones_ Exp $
+
+*xqf-0.9.14 (27 Mar 2004)
+
+  27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> xqf-0.9.13.ebuild,
+  xqf-0.9.14.ebuild:
+  version bump (bug #45388)
 
   20 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> xqf-0.9.13.ebuild:
   stop using deprecated ?: use syntax
@@ -56,7 +62,7 @@
   fix sourceforge mirroring.
 	  
   13 April 2002; Bart Verwilst <verwilst@gentoo.org>: just added a 
-  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.5 2004/03/21 06:34:01 mr_bones_ Exp $
+  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.6 2004/03/28 07:01:39 mr_bones_ Exp $
 
 *xqf-0.9.8 (6 Apr 2002)
 
