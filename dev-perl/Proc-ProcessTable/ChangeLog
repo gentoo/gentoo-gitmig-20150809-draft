@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Proc-ProcessTable
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/ChangeLog,v 1.1 2003/06/02 20:33:38 mcummings Exp $
+
+*Proc-ProcessTable-0.38 (02 Jun 2003)
+
+  02 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Proc-ProcessTable-0.38.ebuild:
+  Bugs 21791, 19194 now filled
+
