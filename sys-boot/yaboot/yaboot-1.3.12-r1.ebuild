@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.12-r1.ebuild,v 1.1 2004/05/23 18:03:58 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.12-r1.ebuild,v 1.2 2004/05/23 18:09:41 dostrow Exp $
 
 inherit eutils
 
@@ -40,3 +40,8 @@ src_install() {
 	make ROOT=${D} ${MAKEOPTS} install || die
 }
 
+pkg_postinst() {
+	ewarn "Please note if you are running a 2.6 kernel the verison"
+	ewarn "of ofpath included in this revision of yaboot requires"
+	ewarn "that you run a kernel >= 2.6.3 Prior versions are unsupported."
+}
