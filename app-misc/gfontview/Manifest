@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b6a1a0e1c4c391c0444f1d043ad61672 ChangeLog 2077
-MD5 8d203e2f9e2f109672690af64e683945 gfontview-0.5.0-r6.ebuild 1016
+MD5 eb82619cb6c125b2f94b57bcd3528b09 gfontview-0.5.0-r6.ebuild 1021
+MD5 2e7fa2efc56e3860b816d21c1f2deab8 ChangeLog 2189
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 927b81b882e5aa05b1b8976735108f62 files/01_all_gcc33.patch.bz2 5912
 MD5 ab9124c16b16b227853c24d105999d3e files/digest-gfontview-0.5.0-r6 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35JzHTu7gpaalycRAvA1AJ94xN9kiYEOUqZV9r1j4hXgTjw0VwCeKA/O
-4RlBw81+8dgRr7W2RkU0zUs=
-=Lq7d
------END PGP SIGNATURE-----
+MD5 927b81b882e5aa05b1b8976735108f62 files/01_all_gcc33.patch.bz2 5912
