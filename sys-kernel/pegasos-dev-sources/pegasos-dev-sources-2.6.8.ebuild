@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/pegasos-dev-sources-2.6.8.ebuild,v 1.1 2004/08/14 15:19:01 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/pegasos-dev-sources-2.6.8.ebuild,v 1.2 2004/08/14 17:36:52 dholm Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -28,8 +28,5 @@ pkg_postinst() {
 	ewarn "result you are now required to compile this support into"
 	ewarn "the kernel. You can do so by enabling the following option:"
 	ewarn "    Device Drivers -> Character devices -> Legacy (BSD) PTY Support."
-	echo
-	ewarn "If you choose to use UCL/gcloop please ensure you compile gcloop"
-	ewarn "without -fstack-protector."
 	echo
 }
