@@ -1,10 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27.ebuild,v 1.1 2002/11/26 03:33:01 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27.ebuild,v 1.2 2002/12/06 16:20:29 vapier Exp $
 
-IUSE="ssl tcpd readline ipv6 gdbm ldap kerberos odbc"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
 SRC_URI="ftp://ftp.OpenLDAP.org/pub/OpenLDAP/openldap-release/${P}.tgz"
 HOMEPAGE="http://www.OpenLDAP.org/"
@@ -12,6 +9,7 @@ HOMEPAGE="http://www.OpenLDAP.org/"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 LICENSE="OPENLDAP"
+IUSE="ssl tcpd readline ipv6 gdbm ldap kerberos odbc"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
@@ -22,7 +20,7 @@ DEPEND="virtual/glibc
 	readline? ( >=sys-libs/readline-4.1 )
 	gdbm?     ( >=sys-libs/gdbm-1.8.0 )
 	kerberos? ( >=app-crypt/krb5-1.2.6 )
-	odbc?     ( >=dev-db/unixODBC )"
+	odbc?     ( dev-db/unixODBC )"
 
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
