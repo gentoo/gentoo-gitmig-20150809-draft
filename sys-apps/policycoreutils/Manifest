@@ -6,5 +6,4 @@ MD5 ccb12f13bb6145ad3a95ae9264067926 files/digest-policycoreutils-1.4 67
 MD5 1f231a1da642997577ac4567ee9867ac files/rlpkg 2317
 MD5 7821fa9efa9de78861110c8bd21bf714 files/newrole 326
 MD5 7821fa9efa9de78861110c8bd21bf714 files/run_init 326
-MD5 7d5ff0bb4eb573840072c4a8a420cd2a files/avc_enforcing 141
 MD5 74b72f384af4ff8868c145ae98e6adaf files/avc_toggle 195

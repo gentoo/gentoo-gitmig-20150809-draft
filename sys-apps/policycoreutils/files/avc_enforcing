@@ -1,9 +1,0 @@
-#!/bin/sh
-
-[ -f /selinux/enforce ] || exit 1;
-
-if [ "`cat /selinux/enforce | grep "1"`" ]; then
-	echo "enforcing"
-else
-	echo "permissive"
-fi
