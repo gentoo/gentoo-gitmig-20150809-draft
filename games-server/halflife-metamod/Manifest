@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fa032b4d52d485f579fb9326aa195f64 ChangeLog 790
-MD5 fec17d7af0ac0a85abfba7e34850ae8c halflife-metamod-1.17-r1.ebuild 1299
+MD5 5b30c6a5581792068977a8bf8d6c4043 halflife-metamod-1.17-r1.ebuild 1293
+MD5 ad93eb045e41b0ec7e6e5956ba49420d ChangeLog 783
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 36758113c4489b63b40b5d2f54313d94 files/digest-halflife-metamod-1.17-r1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA161kHTu7gpaalycRAjNwAJwImUKILHU2gKPTaCqAh0GEpmBSUgCg8GH9
-bkol5+bFGI+Dq+8n08yGLf4=
-=VebA
------END PGP SIGNATURE-----
