@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/sun-one-studio
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sun-one-studio/ChangeLog,v 1.1 2003/04/28 20:36:31 tberman Exp $
+
+*sun-one-studio-4.1 (28 Apr 2003)
+
+  28 Apr 2003; Todd Berman <tberman@gentoo.org> sun-one-studio-4.1.ebuild:
+  Initial import.
+
