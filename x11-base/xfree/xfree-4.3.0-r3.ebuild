@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.82 2003/11/05 00:10:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.83 2003/11/09 18:38:43 pappy Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -346,7 +346,10 @@ src_unpack() {
 	fi
 
 	if has_version ">=sys-devel/hardened-gcc-1.2"; then
-		einfo "setting DoLoadableServer to NO for PaX"
+		einfo "setting DoLoadableServer to NO for PaX and compiler for etdyn building"
+		# this is needed for ./configure and runtime linking and building not to fall into falsely believing
+		# that there are some headers and functions for builtin video drivers or font libraries present
+		export CC="${CC} -yet_exec"
 		sleep 10s
 		echo "#define DoLoadableServer  NO" >>config/cf/host.def
 	fi
