@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.104 2005/01/26 18:30:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.105 2005/01/27 13:01:22 mcummings Exp $
+
+  27 Jan 2005; Michael Cummings <mcummings@gentoo.org> files/perl-cleaner:
+  Code cleanup thanks to Mr.B. *MAJOR* typo in the filename for the prelist of
+  ebuilds to re-emerge resulted in no ebuilds getting re-emerged...
 
   26 Jan 2005; Michael Cummings <mcummings@gentoo.org> files/perl-cleaner:
   tmpdir fix - thanks Mr. B.

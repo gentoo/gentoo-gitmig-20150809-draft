@@ -1,82 +1,77 @@
 #!/bin/bash
 
 # First and foremost - make sure we have a perl to work with...
-PERL=`which perl`
+PERL=$(which perl)
 if [ "${PERL}x" == "x" ]; then
    echo "NO PERL INSTALLED!! (at least not in your path)"
    exit
 fi
-eval `perl '-V:version'`
+eval $(perl '-V:version')
 PERL_VERSION=${version}
-
 
 TMPDIR=${TMPDIR:-/tmp}
 
-PKGDIR="/var/db/pkg"
-DATESTAMP=`date +"%Y%m%d%H%M%S"`
+PKGDIR=$(/usr/bin/portageq vdb_path)
+DATESTAMP=$(date +"%Y%m%d%H%M%S")
 LOG="${TMPDIR}/perl-cleaner.log.$DATESTAMP"
 
+PAGER=${PAGER:-more}
 ASK=""
 
 if [ ! -z $2 ]; then
-   ASK=Y
+   ASK="--ask"
 fi
 
 # Set up our temporary files
 
 function cleanrun() {
-for FILE in modules.list ebuilds.preinstall ebuilds.ordered ebuilds.reinstall ; do
+   for FILE in modules.list ebuilds.preinstall ebuilds.ordered ebuilds.reinstall ; do
 
-if [ -f $TMPDIR/$FILE ]; then
-   cp /dev/null $TMPDIR/$FILE
-else
-   touch $TMPDIR/$FILE
-fi
+      if [ -f ${TMPDIR}/$FILE ]; then
+         cp /dev/null ${TMPDIR}/$FILE
+      fi
 
-done
+   done
 }
 
 function postclean {
-for FILE in modules.list ebuilds.preinstall ebuilds.ordered ebuilds.reinstall; do
+   for FILE in modules.list ebuilds.preinstall ebuilds.ordered ebuilds.reinstall; do
 
-if [ -f $TMPDIR/$FILE ]; then
-   rm -f $TMPDIR/$FILE
-fi
+      if [ -f ${TMPDIR}/$FILE ]; then
+         rm -f ${TMPDIR}/$FILE
+      fi
 
-done
+   done
 
-echo ""
-echo "For a complete log, please read ${TMPDIR}/perl-cleaner.log.DATESTAMP"
-echo ""
+   echo
+   echo "For a complete log, please read ${TMPDIR}/perl-cleaner.log.DATESTAMP"
+   echo
 }
 
 # This is to clean out the old .ph files generated in our last perl install
 function ph_clean() {
-echo "`date` : Beginning a clean up of .ph files"
-echo "`date` : Beginning a clean up of .ph files">>$LOG
+   echo "$(date) : Beginning a clean up of .ph files" | tee -a $LOG
 
-INC=`perl -e 'foreach $line (@INC) { next if $line eq "."; next if $line =~ m/'${PERL_VERSION}'/; print "$line\n" }'`
+   INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${PERL_VERSION}'/; print "$line\n" }')
 
-echo "Locating ph files for removal"
-for DIR in $INC; do
-   if [ -d $DIR ]; then
-      for file in `find $DIR -name "*.ph" -type f`; do
-         if [ ! `echo "$file"|grep $PERL_VERSION` ]; then
-         echo "`date` : Removing old ph file: $file"
-         echo "`date` : Removing old ph file: $file">>$LOG
-         rm $file
-         fi
-      done
-   fi
-done
+   echo "Locating ph files for removal"
+   for DIR in $INC; do
+      if [ -d $DIR ]; then
+         for file in $(find $DIR -name "*.ph" -type f); do
+            if [ ! $(echo "$file"|grep $PERL_VERSION) ]; then
+               echo "$(date) : Removing old ph file: $file" | tee -a $LOG
+               rm $file
+            fi
+         done
+      fi
+   done
 }
 
 # Generate ph files; this is useful if we've upgraded packages with headers so that perl knows the new info
 function ph_update() {
-   echo "`date` : Updating ph files"
-   echo "`date` : Updating ph files">>$LOG
-		cd /usr/include; h2ph * sys/* arpa/* netinet/* bits/* security/* asm/* gnu/* linux/*>>$LOG
-		cd /usr/include/linux; h2ph * >>$LOG
+   echo "$(date) : Updating ph files" | tee -a $LOG
+   cd /usr/include; h2ph * sys/* arpa/* netinet/* bits/* security/* asm/* gnu/* linux/*>>$LOG
+   cd /usr/include/linux; h2ph * >>$LOG
 }
 
 # Build a list of modules installed under older perls - only valid if the module was an ebuild :)
@@ -84,17 +79,16 @@ function module_list() {
 # Reset INC - INC is dynamically generated, and if we removed any ph 
 # files - and they were the only thing left in a dir - then there's 
 # no sense in revisiting that dir
-echo "`date` : Building list of modules for reinstall"
-echo "`date` : Building list of modules for reinstall">>$LOG
-INC=`perl -e 'foreach $line (@INC) { next if $line eq "."; next if $line =~ m/'${PERL_VERSION}'/; print "$line\n" }'`
-echo "Locating modules for reinstall"
-for DIR in $INC; do
-   if [ -d $DIR ]; then
-      for file in `find $DIR -iname "*.pm" -type f|grep -v "${PERL_VERSION}"`; do
-         grep -l $file $PKGDIR/*/*/CONTENTS >>$TMPDIR/modules.list
-      done
-   fi
-done
+   echo "$(date) : Building list of modules for reinstall" | tee -a $LOG
+   INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${PERL_VERSION}'/; print "$line\n" }')
+   echo "Locating modules for reinstall"
+   for DIR in $INC; do
+      if [ -d $DIR ]; then
+         for file in $(find $DIR -iname "*.pm" -type f|grep -v "${PERL_VERSION}"); do
+            grep -l $file $PKGDIR/*/*/CONTENTS >>${TMPDIR}/modules.list
+         done
+      fi
+   done
 }
 
 # The meat of it - rebuilding the ebuilds
@@ -104,103 +98,90 @@ done
 
 function ebuild_rebuild() {
 
-echo "`date` : Rebuilding modules: Building list of ebuilds"
-echo "`date` : Rebuilding modules: Building list of ebuilds">>$LOG
-if [ -s $TMPDIR/modules.list ]; then
-   for line in `cat $TMPDIR/modules.list|sort -u`; do
-      echo "$line"|sed -e 's|.*pkg/||' | sed -e 's|/CONTENTS||'|grep -v "dev-lang/perl" >>$TMPDIR/ebuilds.preinstall
-   done
-fi
+   echo "$(date) : Rebuilding modules: Building list of ebuilds" | tee -a $LOG
+   if [ -s ${TMPDIR}/modules.list ]; then
+      for line in $(sort -u ${TMPDIR}/modules.list); do
+         echo "$line"|sed -e 's|.*pkg/||' -e 's|/CONTENTS||'|grep -v "dev-lang/perl" >>${TMPDIR}/ebuilds.preinstall
+      done
+   fi
 
 
 # If they asked for interactive, let them see what will be reinstalled
-if [ -s $TMPDIR/ebuild.preinstall ]; then
+   if [ -s ${TMPDIR}/ebuilds.preinstall ]; then
   
-  if [ ! -z $ASK ]; then
-     echo "Press Enter to see the list of ebuilds we'll be avaluating"
-     read key
-     if [ ! -z $PAGER ]; then
-        $PAGER $TMPDIR/ebuilds.preinstall
-     else
-        more $TMPDIR/ebuilds.preinstall
-     fi
-     printf "Continue? (Y/N) "
-     read ANSWER
-     if [ `echo "${ANSWER}" | egrep -e "^n|N" ` ]; then
-        echo "`date` : USER ABORTED REBUILD">>$LOG
-        exit
-     fi
-  fi
-  
-  for EBUILD in `cat $TMPDIR/ebuilds.preinstall`; do
-  if emerge --oneshot -p "=$EBUILD"|egrep -q ".*ebuilds.*satisfy"; then
-     if emerge --oneshot -p ">=$EBUILD"|egrep -q ".*ebuilds.*satisfy"; then
-        echo "`date` : There are no unmasked ebuilds to satisfy $EBUILD. Skipping"
-        echo "`date` : There are no unmasked ebuilds to satisfy $EBUILD. Skipping">>$LOG
-        sleep 2
-     else
-        if [ ! -z $ASK ]; then
-        printf "${EBUILD} isn't available, but a new version is. Install? (Y/N) "
+     if [ ! -z $ASK ]; then
+        echo "Press Enter to see the list of ebuilds we'll be avaluating"
+        read key
+        $PAGER ${TMPDIR}/ebuilds.preinstall
+        printf "Continue? (Y/N) "
         read ANSWER
-           if [ `echo "${ANSWER}" | egrep -e "^y|Y" ` ]; then
-              echo ">=$EBUILD" >> $TMPDIR/ebuilds.ordered
-	      echo "`date` : User chose to install >=${EBUILD}">>$LOG
-           fi
-        else
-           echo ">=$EBUILD" >>$TMPDIR/ebuilds.ordered
+        if [ $(echo "${ANSWER}" | egrep -e "^n|N" ) ]; then
+           echo "$(date) : USER ABORTED REBUILD">>$LOG
+           exit
         fi
      fi
-  else
-     echo "=$EBUILD">>$TMPDIR/ebuilds.ordered
-
-  fi
-  done
-
- if [ -s $TMPDIR/ebuilds.ordered ]; then
-  if [ ! -z $ASK ]; then
-     echo "Press Enter to see the final list of ebuilds to install"
-     read key
-     if [ ! -z $PAGER ]; then
-        $PAGER $TMPDIR/ebuilds.ordered
+  
+     for EBUILD in $(cat ${TMPDIR}/ebuilds.preinstall); do
+        if emerge --oneshot -p "=$EBUILD"|egrep -q ".*ebuilds.*satisfy"; then
+           if emerge --oneshot -p ">=$EBUILD"|egrep -q ".*ebuilds.*satisfy"; then
+              echo "$(date) : There are no unmasked ebuilds to satisfy $EBUILD. Skipping" | tee -a $LOG
+              sleep 2
+           else
+              if [ ! -z $ASK ]; then
+                 printf "${EBUILD} isn't available, but a new version is. Install? (Y/N) "
+                 read ANSWER
+                 if [ $(echo "${ANSWER}" | egrep -e "^y|Y" ) ]; then
+                    echo ">=$EBUILD" >> ${TMPDIR}/ebuilds.ordered
+	            echo "$(date) : User chose to install >=${EBUILD}">>$LOG
+                 fi
+              else
+                 echo ">=$EBUILD" >>${TMPDIR}/ebuilds.ordered
+              fi
+           fi
      else
-        more $TMPDIR/ebuilds.ordered
+        echo "=$EBUILD">>${TMPDIR}/ebuilds.ordered
      fi
-     printf "Continue? (Y/N) "
-     read ANSWER
-     if [ `echo "${ANSWER}" | egrep -e "^n|N" ` ]; then
-        echo "`date` : USER ABORTED REBUILD">>$LOG
-        exit
+     done
+
+    if [ -s ${TMPDIR}/ebuilds.ordered ]; then
+     if [ ! -z $ASK ]; then
+        echo "Press Enter to see the final list of ebuilds to install"
+        read key
+        $PAGER ${TMPDIR}/ebuilds.ordered
+        printf "Continue? (Y/N) "
+        read ANSWER
+        if [ $(echo "${ANSWER}" | egrep -e "^n|N" ) ]; then
+           echo "$(date) : USER ABORTED REBUILD">>$LOG
+           exit
+        fi
      fi
-  fi
 
 # Cut down to one line so portage can handle ordering these appropriately
-  emerge -p --oneshot `cat $TMPDIR/ebuilds.ordered` | grep ebuild | sed 's:\([^ ]\+\):=\1:g' | sed 's:.*\] \([^ ]*\) .*:\1:'>>$TMPDIR/ebuilds.reinstall
+     emerge -p --oneshot $(cat ${TMPDIR}/ebuilds.ordered) | grep ebuild | sed -e 's:\([^ ]\+\):=\1:g' -e 's:.*\] \([^ ]*\) .*:\1:'>>${TMPDIR}/ebuilds.reinstall
 
-  echo "Reinstalling ebuilds"
-  echo "`date` : Ebuilds to reinstall: ">>$LOG
-  cat $TMPDIR/ebuilds.reinstall>>$LOG
-  echo "" >>$LOG
+     echo "Reinstalling ebuilds"
+     echo "$(date) : Ebuilds to reinstall: ">>$LOG
+     cat ${TMPDIR}/ebuilds.reinstall>>$LOG
+     echo >>$LOG
 
 # Now that we have them in the right order, emerge them one at a time
 # This is to avoid problems if one doesn't emerge correctly
 
-  for EBUILD in `cat $TMPDIR/ebuilds.reinstall`; do
-    if [ ! -z $ASK ]; then
-     emerge --oneshot --ask "$EBUILD"
+     for EBUILD in $(cat ${TMPDIR}/ebuilds.reinstall); do
+       if [ ! -z $ASK ]; then
+        emerge --oneshot ${ASK} "$EBUILD"
+       fi
+     done
     else
-     emerge --oneshot "$EBUILD"
+	   echo
+	   echo "Nothing to reinstall!"
+	   echo
     fi
-  done
- else
-	echo ""
-	echo "Nothing to reinstall!"
-	echo ""
- fi
-else
-	echo ""
-	echo "Nothing to reinstall!"
-	echo ""
-fi
+   else
+	   echo
+	   echo "Nothing to reinstall!"
+	   echo
+   fi
 
 }
 
@@ -209,39 +190,34 @@ fi
 # after our last install of libperl, which should cut out the false positives.
 
 function libperl_list() {
-echo "`date` : Locating ebuilds linked against libperl"
-echo "`date` : Locating ebuilds linked against libperl">>$LOG
-for i in $(find $(egrep -v ^# /etc/ld.so.conf) -type f -name '*.so*' ! -newer /usr/lib/libperl.so ) \
-      $(find $(echo $PATH | sed 's/:/ /g') -type f -perm +0111 ! -newer /usr/lib/libperl.so ) ;
-do
-  if [ -f ${i} ]; then
-     ldd ${i} 2>&1 | grep "libperl" - >/dev/null && grep -l $i $PKGDIR/*/*/CONTENTS>>$TMPDIR/modules.list;
-  fi
-done 
+   echo "$(date) : Locating ebuilds linked against libperl" | tee -a $LOG
+   for i in $(find $(egrep -v ^# /etc/ld.so.conf) -type f -name '*.so*' ! -newer /usr/lib/libperl.so ) \
+         $(find $(echo $PATH | sed 's/:/ /g') -type f -perm +0111 ! -newer /usr/lib/libperl.so ) ;
+   do
+     if [ -f ${i} ]; then
+        ldd ${i} 2>&1 | grep "libperl" - >/dev/null && grep -l $i $PKGDIR/*/*/CONTENTS>>${TMPDIR}/modules.list;
+     fi
+   done 
 
 }
 
 # Assuming a successful module run, look to see whats left over
 function leftovers() {
-echo "`date` : Finding left over modules"
-echo "`date` : Finding left over modules">>$LOG
+   echo "$(date) : Finding left over modules" | tee -a $LOG
 
-echo "`date` : The following files remain. These were either installed by hand"
-echo "`date` : or edited. This script cannot deal with them."
-echo ""
+   echo "$(date) : The following files remain. These were either installed by hand" | tee -a $LOG
+   echo "$(date) : or edited. This script cannot deal with them." | tee -a $LOG
+   echo | tee -a $LOG
 
-echo "`date` : The following files remain. These were either installed by hand">>$LOG
-echo "`date` : or edited. This script cannot deal with them.">>$LOG
-echo "">>$LOG
 
-INC=`perl -e 'foreach $line (@INC) { next if $line eq "."; next if $line =~ m/'${PERL_VERSION}'/; print "$line\n" }'`
-for DIR in $INC; do
-   if [ -d $DIR ]; then
-      for file in `find $DIR -type f |grep -v  "${PERL_VERSION}" ` ; do
-         echo "`date` : ${file}">>$LOG
-      done
-   fi
-done
+   INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${PERL_VERSION}'/; print "$line\n" }')
+   for DIR in $INC; do
+      if [ -d $DIR ]; then
+         for file in $(find $DIR -type f |grep -v  "${PERL_VERSION}" ) ; do
+            echo "$(date) : ${file}" | tee -a $LOG
+         done
+      fi
+   done
 }
 
 cleanrun
