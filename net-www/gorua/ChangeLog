@@ -1,6 +1,12 @@
 # ChangeLog for net-www/gorua
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/ChangeLog,v 1.5 2003/12/26 21:49:00 weeve Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/ChangeLog,v 1.6 2004/04/11 17:10:29 usata Exp $
+
+*gorua-0.17 (12 Apr 2004)
+
+  12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> gorua-0.16-r2.ebuild,
+  gorua-0.17.ebuild:
+  Version bumped. virtual/ruby fix
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> gorua-0.16-r1.ebuild:
   Changed sparc keyword to ~sparc as ruby-gtk has been masked until a few hours
