@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.6 2004/12/01 23:26:43 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.7 2004/12/05 12:46:58 johnm Exp $
 #
 # This eclass provides functions for querying the installed kernel
 # source version, selected kernel options etc.
@@ -13,6 +13,25 @@ INHERITED="$INHERITED $ECLASS"
 # ---------------------------------------
 KERNEL_DIR="${KERNEL_DIR:-/usr/src/linux}"
 
+
+# Pulled from eutils as it might be more useful only being here since
+# very few ebuilds which dont use this eclass will ever ever use these functions
+set_arch_to_kernel() {
+	export PORTAGE_ARCH="${ARCH}"
+	case ${ARCH} in
+		x86)	export ARCH="i386";;
+		amd64)	export ARCH="x86_64";;
+		hppa)	export ARCH="parisc";;
+		mips)	export ARCH="mips";;
+		*)	export ARCH="${ARCH}";;
+	esac
+}
+
+# set's ARCH back to what portage expects
+set_arch_to_portage() {
+	export ARCH="${PORTAGE_ARCH}"
+}
+
 # File Functions
 # ---------------------------------------
 
@@ -20,7 +39,7 @@ KERNEL_DIR="${KERNEL_DIR:-/usr/src/linux}"
 # getfilevar <VARIABLE> <CONFIGFILE>
 
 getfilevar() {
-local	ERROR workingdir basefname basedname arch
+local	ERROR workingdir basefname basedname xarch
 	ERROR=0
 	
 	[ -z "${1}" ] && ERROR=1
@@ -36,33 +55,38 @@ local	ERROR workingdir basefname basedname arch
 		workingdir=${PWD}
 		basefname=$(basename ${2})
 		basedname=$(dirname ${2})
-		arch=${ARCH}
+		xarch=${ARCH}
 		unset ARCH
 		
 		cd ${basedname}
-		echo -e "include ${basefname}\ne:\n\t@echo \$(${1})" | make -f - e
+		echo -e "include ${basefname}\ne:\n\t@echo \$(${1})" | \
+			make -f - e 2>/dev/null
 		cd ${workingdir}
 		 
-		ARCH=${arch}
+		ARCH=${xarch}
 	fi
 }
 
-getfilevar_isset() {
+linux_chkconfig_present() {
 local	RESULT
-	RESULT="$(getfilevar ${1} ${2})"
+	RESULT="$(getfilevar CONFIG_${1} ${KV_OUT_DIR}/.config)"
 	[ "${RESULT}" = "m" -o "${RESULT}" = "y" ] && return 0 || return 1
 }
 
-getfilevar_ismodule() {
+linux_chkconfig_module() {
 local	RESULT
-	RESULT="$(getfilevar ${1} ${2})"
+	RESULT="$(getfilevar CONFIG_${1} ${KV_OUT_DIR}/.config)"
 	[ "${RESULT}" = "m" ] && return 0 || return 1
 }
 
-getfilevar_isbuiltin() {
+linux_chkconfig_builtin() {
 local	RESULT
-	RESULT="$(getfilevar ${1} ${2})"
+	RESULT="$(getfilevar CONFIG_${1} ${KV_OUT_DIR}/.config)"
 	[ "${RESULT}" = "y" ] && return 0 || return 1
+}
+
+linux_chkconfig_string() {
+	getfilevar "CONFIG_${1}" "${KV_OUT_DIR}/.config"
 }
 
 # Versioning Functions
@@ -124,7 +148,32 @@ get_version() {
 	if [ -z "${KV_DIR}" ]
 	then
 		eerror "Unable to find kernel sources at ${KERNEL_DIR}"
-		die
+		einfo "This package requires Linux sources."
+		if [ "${KERNEL_DIR}" == "/usr/src/linux" ] ; then
+			einfo "Please make sure that ${KERNEL_DIR} points at your running kernel, "
+			einfo "(or the kernel you wish to build against)."
+			einfo "Alternatively, set the KERNEL_DIR environment variable to the kernel sources location"
+		else
+			einfo "Please ensure that the KERNEL_DIR environment variable points at full Linux sources of the kernel you wish to compile against."
+		fi
+		die "Cannot locate Linux sources at ${KERNEL_DIR}"
+	fi
+
+	einfo "Found kernel source directory:"
+	einfo "    ${KV_DIR}"
+
+	if [ ! -s "${KV_DIR}/Makefile" ]
+	then
+		eerror "Could not find a Makefile in the kernel source directory."
+		eerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
+		die "Makefile not found in ${KV_DIR}"
+	fi
+
+	if [ ! -s "${KV_DIR}/.config" ]
+	then
+		eerror "Could not find a usable .config in the kernel source directory."
+		eerror "Please ensure that ${KERNEL_DIR} points to a configured set of Linux sources"
+		die ".config not found in ${KV_DIR}"
 	fi
 	
 	# OK so now we know our sources directory, but they might be using
@@ -145,12 +194,19 @@ get_version() {
 	KV_PATCH="$(getfilevar SUBLEVEL ${KV_DIR}/Makefile)"
 	KV_EXTRA="$(getfilevar EXTRAVERSION ${KV_DIR}/Makefile)"
 	
+	if [ -z "${KV_MAJOR}" -o -z "${KV_MINOR}" -o -z "${KV_PATCH}" ]
+	then
+		eerror "Could not detect kernel version."
+		eerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
+		die "Could not parse version info from ${KV_DIR}/Makefile"
+	fi
+	
 	# and in newer versions we can also pull LOCALVERSION if it is set.
 	# but before we do this, we need to find if we use a different object directory.
 	# This *WILL* break if the user is using localversions, but we assume it was
 	# caught before this if they are.
 	[ "${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.${KV_EXTRA}" == "$(uname -r)" ] && \
-		OUTPUT_DIR="/lib/modules/${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.${KV_EXTRA}/build"
+		OUTPUT_DIR="${OUTPUT_DIR:-/lib/modules/${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.${KV_EXTRA}/build}"
 
 	[ -h "${OUTPUT_DIR}" ] && KV_OUT_DIR="$(readlink -f ${OUTPUT_DIR})"
 	[ -d "${OUTPUT_DIR}" ] && KV_OUT_DIR="${OUTPUT_DIR}"
@@ -165,22 +221,14 @@ get_version() {
 	KV_OUT_DIR="${KV_OUT_DIR:-${KV_DIR}}"
 	
 	KV_LOCAL="${KV_LOCAL}$(cat ${KV_DIR}/localversion* 2>/dev/null)"
-	KV_LOCAL="${KV_LOCAL}$(getfilevar CONFIG_LOCALVERSION ${KV_OUT_DIR}/.config | sed 's:"::g')"
+	KV_LOCAL="${KV_LOCAL}$(linux_chkconfig_string LOCALVERSION)"
+	KV_LOCAL="${KV_LOCAL//\"/}"
 	
 	# And we should set KV_FULL to the full expanded version
 	KV_FULL="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${KV_EXTRA}${KV_LOCAL}"
 	
-	if [ -z "${KV_FULL}" ]
-	then
-		eerror "We are unable to find a usable kernel source tree in ${KV_DIR}"
-		eerror "Please check a kernel source exists in this directory."
-		die
-	else
-		einfo "Found kernel source directory:"
-		einfo "    ${KV_DIR}"
-		einfo "with sources for kernel version:"
-		einfo "    ${KV_FULL}"
-	fi
+	einfo "Found sources for kernel version:"
+	einfo "    ${KV_FULL}"
 }
 
 
@@ -212,18 +260,17 @@ check_modules_supported() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
 	
-	getfilevar_isset CONFIG_MODULES ${KV_OUT_DIR}/.config
-	if [ "$?" != 0 ]
+	if ! linux_chkconfig_builtin "MODULES"
 	then
 		eerror "These sources do not support loading external modules."
 		eerror "to be able to use this module please enable \"Loadable modules support\""
 		eerror "in your kernel, recompile and then try merging this module again."
-		die No support for external modules in ${KV_FULL} config
+		die "No support for external modules in ${KV_FULL} config"
 	fi
 }
 
 check_extra_config() {
-local	config negate error
+local	config negate error local_error
 
 	# if we haven't determined the version yet, we need too.
 	get_version;
@@ -235,15 +282,21 @@ local	config negate error
 		if [ "${negate}" == "!" ];
 		then
 			config="${config:1}"
-			if getfilevar_isset ${config} ${KV_OUT_DIR}/.config ;
+			if linux_chkconfig_present ${config}
 			then
-				eerror "  ${config}:\tshould not be set in the kernel configuration, but it is."
+				local_error="${config}_ERROR"
+				local_error="${!local_error}"
+				[ -n "${local_error}" ] && eerror "  ${local_error}" || \
+					eerror "  CONFIG_${config}:\tshould not be set in the kernel configuration, but it is."
 				error=1
 			fi
 		else
-			if ! getfilevar_isset ${config} ${KV_OUT_DIR}/.config ;
+			if ! linux_chkconfig_present ${config}
 			then
-				eerror "  ${config}:\tshould be set in the kernel configuration, but isn't"
+				local_error="${config}_ERROR"
+				local_error="${!local_error}"
+				[ -n "${local_error}" ] && eerror "  ${local_error}" || \
+					eerror "  CONFIG_${config}:\tshould be set in the kernel configuration, but isn't"
 				error=1
 			fi
 		fi
@@ -254,7 +307,7 @@ local	config negate error
 		eerror "Please check to make sure these options are set correctly."
 		eerror "Once you have satisfied these options, please try merging"
 		eerror "this package again."
-		die Incorrect kernel configuration options
+		die "Incorrect kernel configuration options"
 	fi
 }
 
