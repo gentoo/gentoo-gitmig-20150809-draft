@@ -5,5 +5,9 @@
 		The dev-php category contains libraries and utilities relevant to the
 		PHP programming language.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-php enthält Bibliotheken und Werkzeuge für die
+		Programmiersprache PHP.
+	</longdescription>
 </catmetadata>
 
