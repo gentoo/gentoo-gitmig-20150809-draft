@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/sather
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.1 2002/03/20 19:19:43 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.2 2002/03/22 08:18:46 gbevin Exp $
+
+*firebird-1.0-r1 (22 Mar 2002)
+
+  22 Mar 2002; G.Bevin <gbevin@gentoo.org> firebird-1.0-r1.ebuild
+  files/firebird-1.0-r1 files/firebird-1.0-gentoo.patch:
+  
+  Fixes for compilation with gcc3 and setting of make.conf CFLAGS.
 
 *firebird-1.0 (20 Mar 2002)
 

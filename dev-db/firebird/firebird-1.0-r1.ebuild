@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.0.ebuild,v 1.2 2002/03/21 12:09:39 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.0-r1.ebuild,v 1.1 2002/03/22 08:18:47 gbevin Exp $
 
 S=${WORKDIR}/firebird-1.0.0.796
 
@@ -23,9 +23,7 @@ src_unpack() {
 	tar xzf buildroot.tar.gz
 
 	cd ${S}
-	cp builds/original/build_kit builds/original/build_kit_orig
-	sed "s#LD_LIBRARY_PATH=\$CURDIR/jrd:\$CURDIR/interbase/lib#LD_LIBRARY_PATH=\$CURDIR/jrd:\$CURDIR/interbase/lib:\$INTERBASE/lib#" \
-		builds/original/build_kit_orig > builds/original/build_kit
+	patch -p1 < ${FILESDIR}/firebird-1.0-gentoo.patch
 }
 
 src_compile() {
@@ -33,6 +31,7 @@ src_compile() {
 	export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$INTERBASE/lib"
 	export FIREBIRD_64_BIT_IO="1"
 	export NOPROMPT_SETUP="1"
+	export GENTOO_CFLAGS=$CFLAGS
 	./Configure.sh PROD || die
 	cd ${S}/interbase/lib
 	ln -s gds.so libgds.so
