@@ -1,6 +1,6 @@
-# ChangeLog for dev-util/lintool
+# ChangeLog for app-portage/lintool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/lintool/ChangeLog,v 1.1 2003/08/15 13:22:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/lintool/ChangeLog,v 1.2 2003/08/16 05:37:29 vapier Exp $
 
 *lintool-0.2.4 (15 Aug 2003)
 
