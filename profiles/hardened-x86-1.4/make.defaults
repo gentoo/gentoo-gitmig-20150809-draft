@@ -1,4 +1,7 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-1.4/make.defaults,v 1.9 2003/12/15 14:32:15 zhen Exp $
+
 # System-wide defaults for the gcc 3.2.3 Portage system
 
 GRP_STAGE23_USE="x86 berkdb crypt readline nls ssl tcpd zlib pam"
@@ -32,3 +35,4 @@ ACCEPT_KEYWORDS="x86"
 
 FEATURES="sandbox sfperms strict"
 #FEATURES="sandbox sfperms strict userpriv usersandbox"
+
