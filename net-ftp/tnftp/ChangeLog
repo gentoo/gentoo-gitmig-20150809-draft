@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tnftp
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.4 2003/12/05 17:04:51 g2boojum Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.5 2004/01/06 03:07:25 avenj Exp $
+
+  05 Jan 2004; Jon Portnoy <avenj@gentoo.org> tnftp-20030825.ebuild :
+  AMD64 keywords.
 
   05 Dec 2003; Grant Goodyear <g2boojum@gentoo.org> tnftp-20030825.ebuild:
   Whoops, not yet tested on ppc.
