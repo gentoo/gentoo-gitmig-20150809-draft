@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2_beta3-r1.ebuild,v 1.5 2004/01/18 00:42:38 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2_beta3-r1.ebuild,v 1.6 2004/03/08 19:21:21 lanius Exp $
 
 MY_PV=${PV/_beta/b}
 MY_P=${PN}-${MY_PV}
@@ -91,6 +91,10 @@ src_install() {
 	dolib.so pppd/plugins/rp-pppoe/rp-pppoe.so
 	dodir /usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 	mv ${D}/usr/lib/*.so ${D}/usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
+
+	if [ "`use atm`" -a "`use x86`" ]; then 
+		dolib.so pppd/plugins/pppoatm.so 
+	fi 
 
 	insinto /etc/modules.d
 	insopts -m0644
