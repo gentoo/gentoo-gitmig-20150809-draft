@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.1.ebuild,v 1.3 2003/10/18 22:54:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.4.ebuild,v 1.1 2003/10/23 21:09:50 foser Exp $
 
 inherit gnome2
 
@@ -9,12 +9,12 @@ HOMEPAGE="http://epiphany.mozdev.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 IUSE="gnome"
 
 RDEPEND=">=gnome-base/gconf-1.2
 	>=x11-libs/gtk+-2
-	>=dev-libs/libxml2-2
+	>=dev-libs/libxml2-2.5.9
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
 	>=gnome-base/libbonoboui-2.2
@@ -25,8 +25,8 @@ RDEPEND=">=gnome-base/gconf-1.2
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
-	sys-devel/autoconf
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	dev-util/intltool"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
 
@@ -40,15 +40,7 @@ pkg_setup () {
 	then
 		eerror "you need mozilla-1.4+ compiled against gtk+-2"
 		eerror "export USE=\"gtk2\" ;emerge mozilla -p "
-		die "Need Mozilla compiled with gtk+-2.0!!"
+		die "Need Mozilla compiled with gtk+-2.0!"
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# fixing --server related session_get_windows(session) problems
-	# http://bugzilla.gnome.org/show_bug.cgi?id=124042
-	epatch ${FILESDIR}/${P}-session_get_windows-session.patch
-}
