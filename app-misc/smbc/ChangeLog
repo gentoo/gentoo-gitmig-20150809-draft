@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/smbc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/smbc/ChangeLog,v 1.2 2004/06/24 22:33:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/smbc/ChangeLog,v 1.3 2004/11/30 21:19:11 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> smbc-0.8.0.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *smbc-0.8.0 (18 Jun 2004)
 

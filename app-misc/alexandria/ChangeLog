@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.1 2004/11/08 21:54:38 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.2 2004/11/30 21:16:54 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> alexandria-0.4.0.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *alexandria-0.4.0 (08 Nov 2004)
 
