@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/sinek/sinek-0.7.ebuild,v 1.1 2002/07/24 03:57:46 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sinek/sinek-0.7.ebuild,v 1.2 2002/07/24 04:02:14 agenkin Exp $
 
 DESCRIPTION="GTK interface for xine"
 HOMEPAGE="http://sinek.soureforge.net"
@@ -33,6 +33,8 @@ src_install(){
 	make \
 		prefix=${D}/usr \
 		install || die
+
+        dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README
 	
 	if use gnome
 	then
