@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/ntop
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.31 2004/10/27 08:41:14 eldad Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.32 2005/01/16 04:23:21 dragonheart Exp $
+
+*ntop-3.1 (16 Jan 2005)
+
+  16 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/gd-1.8.3-fpic.patch, -files/gdchart0.94c-fpic.patch,
+  +files/globals-core.c.diff, -files/libpng-1.2.4-fpic.patch,
+  -files/tcpwrap.patch, -files/zlib-1.1.4-build-fPIC.patch,
+  -files/zlib-1.1.4-build-static-with-fpic.patch,
+  -files/zlib-1.1.4-glibc.patch, -files/zlib-1.1.4-gzprintf.patch,
+  -files/zlib-1.1.4-mapfile.patch, -ntop-2.2c.ebuild, +ntop-3.1.ebuild:
+  Cleanout and Version bump as per bug #75812
 
   27 Oct 2004; Eldad Zack <eldad@gentoo.org> ntop-3.0.ebuild:
   Removed dep on ncurses since intop was removed at 3.0.
