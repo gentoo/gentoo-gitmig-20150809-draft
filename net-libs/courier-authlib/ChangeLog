@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.10 2004/12/05 04:56:56 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.11 2004/12/10 06:16:03 swtaylor Exp $
+
+*courier-authlib-0.51_pre (09 Dec 2004)
+
+  09 Dec 2004; Scott W Taylor <swtaylor@gentoo.org>
+  +courier-authlib-0.51_pre.ebuild:
+  bump
 
 *courier-authlib-0.50.20041203 (04 Dec 2004)
 
