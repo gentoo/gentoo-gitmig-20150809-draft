@@ -1,7 +1,7 @@
-#!/bin/sh
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+#!/bin/bash
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.38 2003/01/23 15:41:01 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.39 2003/02/24 21:14:51 azarah Exp $
 
 # IMPORTANT NOTE:
 # This script now accepts an optional argument.
@@ -27,6 +27,68 @@ else
 	PYTHON="/usr/bin/python"
 fi
 
+if [ -e /etc/init.d/functions.sh ]
+then
+	source /etc/init.d/functions.sh
+
+	# Use our own custom script, else logger cause things to
+	# 'freeze' if we do not have a system logger running
+	esyslog() {
+		echo &> /dev/null
+	}
+fi
+if [ -e /etc/profile ]
+then
+	source /etc/profile
+fi
+
+echo
+echo -e "${GOOD}Gentoo Linux${GENTOO_VERS}; \e[34;01mhttp://www.gentoo.org/${NORMAL}"
+echo -e " Copyright 2001-2003 Gentoo Technologies, Inc.; Distributed under the GPL"
+echo
+einfo "Starting Bootstrap of base system ..."
+echo
+echo
+
+# This should not be set to get glibc to build properly. See bug #7652.
+LD_LIBRARY_PATH=""
+
+# We do not want stray $TMP, $TMPDIR or $TEMP settings
+unset TMP TMPDIR TEMP
+
+cleanup() {
+	if [ -f /etc/make.conf.build ]
+	then
+		mv -f /etc/make.conf.build /etc/make.conf
+	fi
+
+	exit $1
+}
+
+# Trap ctrl-c and stuff.  This should fix the users make.conf
+# not being restored.
+trap "cleanup" TERM KILL INT QUIT ABRT
+#TSTP messes ^Z of bootstrap up, so we don't trap it anymore.
+
+# USE may be set from the environment so we back it up for later.
+export ORIGUSE="`${PYTHON} -c 'import portage; print portage.settings["USE"];'`"
+
+# Check for 'build' or 'bootstrap' in USE ...
+INVALID_USE="`gawk -v ORIGUSE="${ORIGUSE}" '
+	BEGIN { 
+		if (ORIGUSE ~ /[[:space:]]*(build|bootstrap)[[:space:]]*/)
+			print "yes"
+	}'`"
+
+if [ "${INVALID_USE}" = "yes" ]
+then
+	echo
+	eerror "You have 'build' or 'bootstrap' in your USE flags!  Please"
+	eerror "remove it before trying to continue ..."
+	echo
+	cleanup 1
+fi
+
 # We really need to upgrade baselayout now that it's possible:
 myBASELAYOUT=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-apps/baselayout | sed 's:^\*::'`
 myPORTAGE=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-apps/portage | sed 's:^\*::'`
@@ -47,28 +109,8 @@ echo "Using ${myGLIBC}"
 echo "Using ${myTEXINFO}"
 echo "Using ${myZLIB}"
 echo "Using ${myNCURSES}"
+echo
 
-# This should not be set to get glibc to build properly. See bug #7652.
-LD_LIBRARY_PATH=""
-
-# We do not want stray $TMP or $TMPDIR settings
-unset TMP TMPDIR
-
-cleanup() {
-	if [ -f /etc/make.conf.build ]
-	then
-		mv -f /etc/make.conf.build /etc/make.conf
-	fi
-	exit $1
-}
-
-# Trap ctrl-c and stuff.  This should fix the users make.conf
-# not being restored.
-trap "cleanup" INT QUIT
-#TSTP messes ^Z of bootstrap up, so we don't trap it anymore.
-
-# USE may be set from the environment so we back it up for later.
-export ORIGUSE="`${PYTHON} -c 'import portage; print portage.settings["USE"];'`"
 export GENTOO_MIRRORS="`${PYTHON} -c 'import portage; print portage.settings["GENTOO_MIRRORS"];'`"
 
 export PORTDIR="`${PYTHON} -c 'import portage; print portage.settings["PORTDIR"];'`"
@@ -111,38 +153,48 @@ export CONFIG_PROTECT="-*"
 
 if [ "$1" = "" ] || [ "$1" = "1.5" ]
 then
-export USE="-* build bootstrap"
-#
-# First stage of bootstrap (aka build stage)
-#
-cd /usr/portage
-# Separate, so that the next command uses the *new* emerge
-emerge ${myPORTAGE} || cleanup 1
-emerge ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} || cleanup 1
-# make.conf has been overwritten, so we explicitly export our original settings
+	#
+	# First stage of bootstrap (aka build stage)
+	#
+	cd /usr/portage
+	export USE="-* build bootstrap"
+	# Separate, so that the next command uses the *new* emerge
+	emerge ${myPORTAGE} || cleanup 1
+	emerge ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} || cleanup 1
+	# make.conf has been overwritten, so we explicitly export our original settings
+fi
+
+if [ -x /usr/bin/gcc-config ]
+then
+	GCC_CONFIG="/usr/bin/gcc-config"
+	
+elif [ -x /usr/sbin/gcc-config ]
+then
+	GCC_CONFIG="/usr/sbin/gcc-config"
 fi
 
 # Basic support for gcc multi version/arch scheme ...
-if test -f /usr/sbin/gcc-config &> /dev/null && \
-   /usr/sbin/gcc-config --get-current-profile &> /dev/null
+if test -x ${GCC_CONFIG} &> /dev/null && \
+   ${GCC_CONFIG} --get-current-profile &> /dev/null
 then
 	# Make sure we get the old gcc unmerged ...
 	emerge clean || cleanup 1
 	# Make sure the profile and /lib/cpp and /usr/bin/cc are valid ...
-	/usr/sbin/gcc-config "`/usr/sbin/gcc-config --get-current-profile`" &> /dev/null
+	${GCC_CONFIG} "`${GCC_CONFIG} --get-current-profile`" &> /dev/null
 fi
 
 if [ "$1" = "" ] || [ "$1" = "2" ]
 then
-#
-# Second stage of boostrap
-#
-export USE="${ORIGUSE} bootstrap"
-emerge ${myGLIBC} ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myZLIB} ${myBINUTILS} ${myGCC} || cleanup 1
-# ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
-export USE="${ORIGUSE}"
-emerge ${myNCURSES} || cleanup 1
+	#
+	# Second stage of boostrap
+	#
+	export USE="${ORIGUSE} bootstrap"
+	emerge ${myGLIBC} ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myZLIB} ${myBINUTILS} ${myGCC} || cleanup 1
+	# ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
+	export USE="${ORIGUSE}"
+	emerge ${myNCURSES} || cleanup 1
 fi
+
 # Restore original make.conf
 cleanup 0
 
