@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r1.ebuild,v 1.2 2002/07/08 14:04:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r1.ebuild,v 1.3 2002/10/19 23:20:15 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Some nice themes for sawfish"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.themes.org"
 DEPEND=">=x11-wm/sawfish-1.0"
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_install() {
 	version="`sawfish --version |sed -e 's/sawfish version //'`"
