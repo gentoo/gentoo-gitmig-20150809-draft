@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.214 2004/04/25 20:20:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.215 2004/04/25 21:53:10 azarah Exp $
+
+*gcc-3.3.3-r3 (25 Apr 2004)
+
+  25 Apr 2004; Martin Schlemmer <azarah@gentoo.org> +gcc-3.3.3-r3.ebuild:
+  Update snapshot. Fix objc doc install. Do not build ada until we resolve if we
+  should or not.
 
   24 Apr 2004; Joshua Kinard <kumba@gentoo.org> gcc-3.3.3.ebuild:
   Marking gcc-3.3.3 stable on mips, as stages and GRPs are built with it, and
