@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ecletex-0.0.3.ebuild,v 1.1 2004/08/22 13:03:57 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ecletex-0.0.3.ebuild,v 1.2 2004/08/23 00:15:49 mr_bones_ Exp $
 
 DESCRIPTION="LaTeX plugin for Eclipse 3.0 and newer"
 HOMEPAGE="http://etex.sf.net"
@@ -18,9 +18,9 @@ src_unpack() {
 	unpack ${A}
 
 	cd plugins/ish.ecletex_${PV}
-	
+
 	rm ecletex.jar ecletexsrc.zip
-	
+
 	ln -s /usr/lib/eclipse-3/plugins ext
 	echo "temp.folder=dist" > build.properties || die "Failed to create build.propertes"
 
