@@ -1,11 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.3.ebuild,v 1.6 2003/09/10 04:41:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.3.ebuild,v 1.7 2004/03/15 02:39:26 latexer Exp $
 
-P=${P/-drivers/}
-S=${WORKDIR}/${P}
+MY_P=${P/-drivers/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="pcmcia-cs drivers"
-SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
+SRC_URI="mirror://sourceforge/pcmcia-cs/${MY_P}.tar.gz
 	http://ozlabs.org/people/dgibson/dldwd/orinoco-0.13a.tar.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
@@ -28,13 +28,13 @@ fi
 # the kernel directory that pcmcia-cs should use for configuration.
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${MY_P}.tar.gz
 
 	unpack orinoco-0.13a.tar.gz
 	mv orinoco-0.13a/hermes*.{c,h} \
 	   orinoco-0.13a/orinoco*.{c,h} \
 	   orinoco-0.13a/ieee802_11.h \
-	   ${P}/wireless/
+	   ${MY_P}/wireless/
 
 	cd ${S}
 	cp Configure Configure.orig
