@@ -7,9 +7,10 @@ USE_ORDER="env:conf:auto:defaults"
 #HTTP_PROXY=
 #FTP_PROXY=
 GENTOO_MIRRORS="http://www.ibiblio.org/gentoo"
-SYNC="rsync://cvs.gentoo.org/gentoo-x86-portage"
+SYNC="rsync://rsync.gentoo.org/gentoo-portage"
 # Host-type
-CHOST=i686-pc-linux-gnu
+CHOST="powerpc-unknown-linux-gnu"
+
 
 #PORTAGE_TMPDIR=${ROOT}/var/tmp
 PORTAGE_TMPDIR=/var/tmp
@@ -34,8 +35,7 @@ MAKEOPTS="-j2"
 FETCHCOMMAND='/usr/bin/wget -t 5 --passive-ftp ${URI} -P ${DISTDIR}'
 RESUMECOMMAND='/usr/bin/wget -c -t 5 --passive-ftp ${URI} -P ${DISTDIR}'
 
-CFLAGS="-O2 -mcpu=i686 -pipe"
-
+CFLAGS=" -O2 -pipe -mmultiple -mstring "
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
