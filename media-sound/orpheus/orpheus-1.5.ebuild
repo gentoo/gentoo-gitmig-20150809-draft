@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.5.ebuild,v 1.8 2004/09/28 20:20:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.5.ebuild,v 1.9 2004/10/20 05:49:30 eradicator Exp $
+
+IUSE="oggvorbis"
 
 inherit eutils
 
@@ -9,9 +11,8 @@ HOMEPAGE="http://konst.org.ua/en/orpheus"
 SRC_URI="http://konst.org.ua/download/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 sparc amd64"
 LICENSE="GPL-2"
-IUSE="oggvorbis"
+KEYWORDS="~alpha amd64 ~ppc sparc x86"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )
@@ -47,6 +48,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }

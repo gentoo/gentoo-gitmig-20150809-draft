@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mpc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.22 2004/09/03 17:03:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.23 2004/10/20 05:51:08 eradicator Exp $
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> -mpc-0.10.3.ebuild,
+  -mpc-0.11.0.ebuild:
+  Removing old versions.
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> -mpc-0.10.3.ebuild,
+  -mpc-0.11.0.ebuild, -mpc-0.9.2.ebuild:
+  Removing old versions.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> mpc-0.11.1.ebuild:
   Stable amd64, sparc, x86.

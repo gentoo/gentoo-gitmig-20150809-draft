@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.24 2004/10/20 04:01:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.25 2004/10/20 05:53:46 eradicator Exp $
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -mixxx-1.3.2.ebuild, -mixxx-1.4.ebuild:
+  Removing old versions.
 
 *mixxx-1.4.1 (19 Oct 2004)
 

@@ -1,10 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.10.0_beta.ebuild,v 1.2 2004/09/22 22:41:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.10.0_beta.ebuild,v 1.3 2004/10/20 05:47:04 eradicator Exp $
+
+IUSE="oggvorbis jack nls oss portaudio flac soundtouch"
 
 inherit eutils
 
 MY_P="${P/_/}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Sound editor and recorder"
 HOMEPAGE="http://rezound.sourceforge.net"
@@ -12,9 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
-
-IUSE="oggvorbis jack nls oss portaudio flac soundtouch"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="virtual/x11
 	=dev-libs/fftw-2*
@@ -39,11 +40,7 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
-S="${WORKDIR}/${MY_P}"
-
-
 src_compile() {
-
 	local myconf=""
 
 	# enforce minimum defaults
@@ -65,7 +62,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
+
 	# remove wrong doc directory
 	rm -rf ${D}/usr/doc/${PN}
 	# install docs manually, but don't install
