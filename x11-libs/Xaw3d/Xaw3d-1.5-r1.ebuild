@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.12 2003/09/07 00:23:27 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.13 2003/11/11 13:14:09 vapier Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -15,16 +15,15 @@
 #
 # Azarah.
 
-
-IUSE=""
+inherit eutils
 
 S=${WORKDIR}/xc/lib/Xaw3d
-DESCRIPTION="the Xaw3d is a drop-in 3D replacement of the Xaw widget set
-	     which comes with X. It is used e.g. by gv the ghostcript frontend."
+DESCRIPTION="drop-in 3D replacement of the Xaw widget set which comes with X"
 # All full ftp.x.org mirrors can be added here.
 SRC_URI="ftp://ftp.x.org/contrib/widgets/Xaw3d/R6.3/${P}.tar.gz
-	 http://ibiblio.org/pub/X11/contrib/widgets/Xaw3d/R6.3/${P}.tar.gz"
+	http://ibiblio.org/pub/X11/contrib/widgets/Xaw3d/R6.3/${P}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/xaw3d/"
+
 LICENSE="X11"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
@@ -38,8 +37,8 @@ src_unpack() {
 
 	# For some reason it isn't automatically patched.
 	# That's why I manually override the source_unpack function.
-	patch -p0 <${FILESDIR}/Xaw3d-xfree86.diff || die
-	patch -p0 <${FILESDIR}/Xaw3d-out-of-tree.diff || die
+	epatch ${FILESDIR}/Xaw3d-xfree86.diff
+	epatch ${FILESDIR}/Xaw3d-out-of-tree.diff
 
 	# This adds more familiar scroll-bar look and feel for Emacs and
 	# others <mkennedy@gentoo.org>
@@ -63,4 +62,3 @@ src_install() {
 
 	dodoc README.XAW3D
 }
-
