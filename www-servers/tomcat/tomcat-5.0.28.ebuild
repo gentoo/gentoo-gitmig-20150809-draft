@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28.ebuild,v 1.6 2005/02/07 23:43:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28.ebuild,v 1.7 2005/02/09 18:21:17 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -9,34 +9,35 @@ DESCRIPTION="Apache Servlet-2.4/JSP-2.0 Container"
 SLOT="${PV/.*}"
 SRC_URI="mirror://apache/jakarta/tomcat-${SLOT}/v${PV}/src/jakarta-${P}-src.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/tomcat"
-KEYWORDS="~x86 ~ppc64"
+KEYWORDS="~x86 ~ppc64 ~amd64"
 LICENSE="Apache-2.0"
 DEPEND="sys-apps/sed
 	   >=virtual/jdk-1.4
+	   jikes? ( dev-java/jikes )"
+RDEPEND=">=virtual/jdk-1.4
 	   >=dev-java/commons-beanutils-1.7.0
 	   >=dev-java/commons-collections-3.1
 	   >=dev-java/commons-daemon-1.0
-	   >=dev-java/commons-digester-1.5
-	   >=dev-java/commons-logging-1.0.4
-	   >=dev-java/commons-el-1.0
-	   >=dev-java/regexp-1.3
-	   >=dev-java/xerces-2.6.2-r1
-	   >=dev-java/log4j-1.2.8
 	   >=dev-java/commons-dbcp-1.2.1
-	   >=dev-java/commons-httpclient-2.0
-	   >=dev-java/commons-pool-1.2
+	   >=dev-java/commons-digester-1.5
 	   >=dev-java/commons-fileupload-1.0
-	   >=dev-java/commons-modeler-1.1
+	   >=dev-java/commons-httpclient-2.0
+	   >=dev-java/commons-el-1.0
 	   >=dev-java/commons-launcher-0.9
+	   >=dev-java/commons-logging-1.0.4
+	   >=dev-java/commons-modeler-1.1
+	   >=dev-java/commons-pool-1.2
+	   ~dev-java/jaxen-1.0
 	   >=dev-java/junit-3.8.1
 	   dev-java/jmx
+	   >=dev-java/log4j-1.2.8
+	   >=dev-java/regexp-1.3
 	   =dev-java/struts-1.1-r2
 	   >=dev-java/saxpath-1.0
-	   >=dev-java/jaxen-1.0
-	   jikes? ( dev-java/jikes )"
-RDEPEND=">=virtual/jdk-1.4
+	   >=dev-java/xerces-2.6.2-r1
 		jikes? ( dev-java/jikes )"
 IUSE="doc jikes"
+
 S=${WORKDIR}/jakarta-${P}-src
 
 TOMCAT_HOME="/opt/${PN}${SLOT}"
@@ -54,6 +55,7 @@ src_unpack() {
 	java-pkg_jar-from jaxen
 	java-pkg_jar-from jmx
 	java-pkg_jar-from commons-beanutils
+	java-pkg_jar-from servletapi-2.4
 
 	cd ${S}
 
@@ -62,51 +64,44 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/build.xml-02.patch
 
 	epatch ${FILESDIR}/${PV}/gentoo.diff
-	use jikes && epatch ${FILESDIR}/${PV}/jikes.diff
+	#epatch ${FILESDIR}/${PV}/jikes.diff
 
 }
 
 src_compile(){
 	local antflags="-Dbase.path=${T}"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	antflags="${antflags} -Dcommons-beanutils.jar=${T}/lib/commons-beanutils.jar"
+	antflags="${antflags} -Dactivation.jar=$(java-config -p sun-jaf-bin)"
 	antflags="${antflags} -Dcommons-collections.jar=$(java-config -p commons-collections)"
 	antflags="${antflags} -Dcommons-daemon.jar=$(java-config -p commons-daemon)"
 	antflags="${antflags} -Dcommons-digester.jar=$(java-config -p commons-digester)"
-	antflags="${antflags} -Dcommons-el.jar=$(java-config -p commons-el)"
-
-	#
-	# Work around for the fact that java-config is unable to return a
-	# particular jar from a package.
-	#
-	antflags="${antflags} -Dcommons-logging.jar=${T}/lib/commons-logging.jar"
-	antflags="${antflags} -Dcommons-logging-api.jar=${T}/lib/commons-logging-api.jar"
-	antflags="${antflags} -Dregexp.jar=$(java-config -p regexp)"
-
-	#
-	# Same work around again
-	#
-	antflags="${antflags} -DxercesImpl.jar=${T}/lib/xercesImpl.jar"
-	antflags="${antflags} -Dxml-apis.jar=${T}/lib/xml-apis.jar"
-	antflags="${antflags} -Dlog4j.jar=$(java-config -p log4j)"
 	antflags="${antflags} -Dcommons-dbcp.jar=$(java-config -p commons-dbcp)"
+	antflags="${antflags} -Dcommons-el.jar=$(java-config -p commons-el)"
 	antflags="${antflags} -Dcommons-httpclient.jar=$(java-config -p commons-httpclient)"
 	antflags="${antflags} -Dcommons-pool.jar=$(java-config -p commons-pool)"
 	antflags="${antflags} -Dcommons-fileupload.jar=$(java-config -p commons-fileupload)"
+	antflags="${antflags} -Dcommons-launcher.jar=$(java-config -p commons-launcher)"
+	antflags="${antflags} -Dcommons-modeler.jar=$(java-config -p commons-modeler)"
 	antflags="${antflags} -Djunit.jar=$(java-config -p junit)"
-	antflags="${antflags} -Dstruts.jar=${T}/lib/struts.jar"
+	antflags="${antflags} -Dlog4j.jar=$(java-config -p log4j)"
+	antflags="${antflags} -Dregexp.jar=$(java-config -p regexp)"
 
+	antflags="${antflags} -Dstruts.jar=${T}/lib/struts.jar"
+	antflags="${antflags} -Dcommons-beanutils.jar=${T}/lib/commons-beanutils.jar"
+	antflags="${antflags} -Dcommons-logging.jar=${T}/lib/commons-logging.jar"
+	antflags="${antflags} -Dcommons-logging-api.jar=${T}/lib/commons-logging-api.jar"
+	antflags="${antflags} -Djaxen.jar=${T}/lib/jaxen-full.jar"
 	antflags="${antflags} -Djmx.jar=${T}/lib/jmxri.jar"
 	antflags="${antflags} -Djmx-tools.jar=${T}/lib/jmxtools.jar"
-	antflags="${antflags} -Dcommons-launcher.jar=$(java-config -p commons-launcher)"
-	#`
-	# This is used to reference the tld files in /usr/share/struts/lib
-	#
-	antflags="${antflags} -Dstruts.home=/usr/share/struts"
-	antflags="${antflags} -Dcommons-modeler.jar=$(java-config -p commons-modeler)"
-	antflags="${antflags} -Dstruts.jar=${T}/lib/struts.jar"
-	antflags="${antflags} -Djaxen.jar=${T}/lib/jaxen-full.jar"
+	antflags="${antflags} -Djsp-api.jar=${T}/lib/jsp-api.jar"
 	antflags="${antflags} -Dsaxpath.jar=${T}/lib/saxpath.jar"
+	antflags="${antflags} -Dservlet-api.jar=${T}/lib/servlet-api.jar"
+	antflags="${antflags} -Dstruts.jar=${T}/lib/struts.jar"
+	antflags="${antflags} -DxercesImpl.jar=${T}/lib/xercesImpl.jar"
+	antflags="${antflags} -Dxml-apis.jar=${T}/lib/xml-apis.jar"
+
+	antflags="${antflags} -Dstruts.home=/usr/share/struts"
+	antflags="${antflags} -Dlog4j.home=/usr/share/log4j"
 
 	ant ${antflags} || die "compile failed"
 
@@ -114,14 +109,17 @@ src_compile(){
 src_install() {
 	cd ${S}/jakarta-tomcat-5/build
 
-	# INIT SCRIPTS AND ENV
+	# init.d, env.d, conf.d
 	insinto /etc/init.d
 	insopts -m0750
-	newins ${FILESDIR}/${PV}/tomcat.init ${TOMCAT_NAME}
+	newins ${FILESDIR}/${PV}/${PN}.init ${TOMCAT_NAME}
+
+	insinto /etc/env.d/
+	newins ${FILESDIR}/${PV}/${PN}.env 21${PN}
 
 	insinto /etc/conf.d
 	insopts -m0644
-	newins ${FILESDIR}/${PV}/tomcat.conf ${TOMCAT_NAME}
+	newins ${FILESDIR}/${PV}/${PN}.conf ${TOMCAT_NAME}
 	use jikes && sed -e "\cCATALINA_OPTScaCATALINA_OPTS=\"-Dbuild.compiler.emacs=true\"" -i ${D}/etc/conf.d/${TOMCAT_NAME}
 
 	diropts -m750

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r4.ebuild,v 1.5 2005/02/07 23:43:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r4.ebuild,v 1.6 2005/02/09 18:21:17 luckyduck Exp $
 
 inherit eutils
 
@@ -31,14 +31,17 @@ src_unpack() {
 src_install() {
 	dodoc RELEASE* RUNNING.txt LICENSE
 
-	# INIT SCRIPTS AND ENV
+	# init.d, conf.d , env.d
 	insinto /etc/init.d
 	insopts -m0750
-	newins ${FILESDIR}/${PV}/tomcat.init ${TOMCAT_NAME}
+	newins ${FILESDIR}/${PV}/${PN}.init ${TOMCAT_NAME}
+
+	insinto /etc/env.d/
+	newins ${FILESDIR}/${PV}/${PN}.env 21${PN}
 
 	insinto /etc/conf.d
 	insopts -m0644
-	newins ${FILESDIR}/${PV}/tomcat.conf ${TOMCAT_NAME}
+	newins ${FILESDIR}/${PV}/${PN}.conf ${TOMCAT_NAME}
 	use jikes && sed -e "\cCATALINA_OPTScaCATALINA_OPTS=\"-Dbuild.compiler.emacs=true\"" -i ${D}/etc/conf.d/${TOMCAT_NAME}
 
 	diropts -m750
