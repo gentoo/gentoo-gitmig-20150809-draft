@@ -35,7 +35,8 @@ export MAKEOPTS="`spython -c 'import portage; print portage.settings["MAKEOPTS"]
 export CONFIG_PROTECT=""
 #above allows portage to overwrite stuff
 cd /usr/portage
-emerge --pretend $myPORTAGE $myBINUTILS $myGCC $myGETTEXT || exit
+emerge $myPORTAGE #separate, so that the next command uses the *new* emerge
+emerge $myBINUTILS $myGCC $myGETTEXT || exit
 if [ "$use_unset" = "yes" ]
 then
 	unset USE
@@ -44,6 +45,6 @@ else
 fi
 # This line should no longer be required
 #export USE="`spython -c 'import portage; print portage.settings["USE"];'` bootstrap"
-emerge --pretend $myGLIBC $myGETTEXT $myBINUTILS $myGCC || exit
+emerge $myGLIBC $myGETTEXT $myBINUTILS $myGCC || exit
 #restore settings
 cp /etc/make.conf.build /etc/make.conf
