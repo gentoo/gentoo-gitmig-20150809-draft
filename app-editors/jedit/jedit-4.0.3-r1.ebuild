@@ -1,27 +1,38 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author: Maik Schreiber <bZ@iq-computing.de>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.0.3-r1.ebuild,v 1.1 2002/07/12 16:30:43 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.0.3-r1.ebuild,v 1.2 2002/07/12 20:03:35 rphillips Exp $
 
 S="${WORKDIR}/jEdit"
 DESCRIPTION="Programmer's editor written in Java"
 HOMEPAGE="http://www.jedit.org"
-LICENSE="GPL-2"
-DEPEND=">=dev-java/ant-1.4.1 >=dev-java/jikes-1.15"
-RDEPEND=">=virtual/jdk-1.3"
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/jedit/jedit403source.tar.gz"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="*"
+
+RDEPEND=">=virtual/jdk-1.3"
+DEPEND="${RDEPEND}
+	>=dev-java/ant-1.4.1
+	jikes? ( >=dev-java/jikes-1.15 )"
 
 src_compile() {
-	einfo "Please ignore the following compiler warnings."
-	einfo "Jikes is just too pedantic..."
-	ant -Dbuild.compiler=jikes || die "compile problem"
+	local antflags
+
+	antflags=""
+	if [ `use jikes` ] ; then
+		einfo "Please ignore the following compiler warnings."
+		einfo "Jikes is just too pedantic..."
+		antflags="${antflags} -Dbuild.compiler=jikes"
+	fi
+
+	ant ${antflags} || die "compile problem"
 }
 
 src_install () {
 	mkdir -m 755 -p ${D}/usr/share/jedit
 	mkdir -m 755 ${D}/usr/bin
 
-	cp -R jedit.jar jars macros doc modes properties startup ${D}/usr/share/jedit
+	cp -R jedit.jar jars doc macros modes properties startup ${D}/usr/share/jedit
 	cd ${D}/usr/share/jedit
 	chmod -R u+rw,ug-s,go+u,go-w \
 		jedit.jar jars macros modes properties startup
