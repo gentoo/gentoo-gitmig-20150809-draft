@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.0.5.ebuild,v 1.1 2003/06/20 14:54:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.0.5.ebuild,v 1.2 2003/06/29 13:09:39 azarah Exp $
 
 inherit gnome2 eutils
 
@@ -29,6 +29,9 @@ DOCS="AUTHORS ChangeLog COPYING HACKING README INSTALL NEWS TODO"
 
 src_unpack() {
 	unpack ${A}
+
+	# Fix a crash at startup - <azarah@gentoo.org> 29 Jun 2003
+	cd ${S}; epatch ${FILESDIR}/${P}-fix-startup-crash.patch
 }
 
 # fix some possible problem patchrelated

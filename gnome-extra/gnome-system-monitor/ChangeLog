@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.20 2003/06/20 14:56:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.21 2003/06/29 13:09:39 azarah Exp $
+
+  29 Jun 2003; Martin Schlemmer <azarah@gentoo.org>
+  gnome-system-monitor-2.0.5.ebuild,
+  files/gnome-system-monitor-2.0.5-fix-startup-crash.patch:
+  Fix crash at startup in some cases.
 
 *gnome-system-monitor-2.0.5 (20 Jun 2003)
 

@@ -1,0 +1,12 @@
+--- gnome-system-monitor-2.0.5/src/procman.c.orig	2003-06-29 14:17:58.000000000 +0200
++++ gnome-system-monitor-2.0.5/src/procman.c	2003-06-29 14:38:07.000000000 +0200
+@@ -389,7 +389,8 @@
+ 			visible = gconf_client_get_bool (client, key, NULL);
+ 			g_free (key);
+ 		
+-			column = gtk_tree_view_get_column (GTK_TREE_VIEW (tree), i);
++			if (NULL == (column = gtk_tree_view_get_column (GTK_TREE_VIEW (tree), i)))
++				column = (gtk_tree_view_get_columns (GTK_TREE_VIEW (tree)))->data;
+ 			gtk_tree_view_column_set_visible (column, visible);
+ 			if (width > 0)
+ 				gtk_tree_view_column_set_fixed_width (column, width);
