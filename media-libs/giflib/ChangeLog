@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giflib
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.17 2004/11/23 11:32:36 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.18 2005/01/30 10:07:11 lanius Exp $
+
+  30 Jan 2005; lanius@gentoo.org giflib-4.1.3.ebuild:
+  mark amd64
 
   23 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> giflib-4.1.0-r3.ebuild:
   Disables make check if xv is not installed. This closes bug #71895.

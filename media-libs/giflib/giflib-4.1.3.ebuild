@@ -1,16 +1,16 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.3.ebuild,v 1.1 2004/09/30 09:44:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.3.ebuild,v 1.2 2005/01/30 10:07:12 lanius Exp $
 
 inherit gnuconfig
 
 DESCRIPTION="Library to handle, display and manipulate GIF images"
-HOMEPAGE="http://sourceforge.net/project/libungif/"
+HOMEPAGE="http://sourceforge.net/projects/libungif/"
 SRC_URI="mirror://sourceforge/libungif/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~ppc-macos"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~ppc-macos"
 IUSE="X gif"
 
 DEPEND="X? ( virtual/x11 )"
