@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.39 2004/09/02 13:41:12 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.40 2004/09/22 18:19:34 kito Exp $
+
+*jack-audio-connection-kit-0.99.0 (22 Sep 2004)
+
+  22 Sep 2004; kito@gentoo.org +jack-audio-connection-kit-0.99.0.ebuild:
+  Version Bump. Initial support for ppc-macos native coreaudio driver
 
   02 Sep 2004; Tom Gall <tgall@gentoo.org> 
   jack-audio-connection-kit-0.98.1-r1.ebuild:
