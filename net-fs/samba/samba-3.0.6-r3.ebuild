@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r3.ebuild,v 1.1 2004/09/01 09:36:26 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r3.ebuild,v 1.2 2004/09/01 13:10:36 gustavoz Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,7 +45,7 @@ RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}"
 # some archs are removed due to dependency tree integrity for ldap and
 #   dev-perl/Crypt-SmbHash flags
 #   should be: KEYWORDS="~arm ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="~arm ~mips ~sparc ~x86"
+KEYWORDS="~arm ~mips sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
