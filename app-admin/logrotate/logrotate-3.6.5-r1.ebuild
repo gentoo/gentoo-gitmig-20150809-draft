@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.16 2004/11/18 12:28:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.17 2004/12/09 17:32:38 sergey Exp $
 
 inherit eutils
 
@@ -32,6 +32,10 @@ src_unpack() {
 		-e "s:CFLAGS += -g:CFLAGS += -g ${CFLAGS}:" \
 		-e "/CVSROOT =/d" \
 		${S}/Makefile || die "sed failed"
+
+	#small fix for a tipo in man page
+	sed -i -e "s:logrotate/status:logrotate.status:" ${S}/logrotate.8 || die \
+		"sed failed!"
 }
 
 src_compile() {

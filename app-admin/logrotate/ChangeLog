@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.29 2004/11/18 12:28:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.30 2004/12/09 17:32:38 sergey Exp $
+
+  09 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org>
+  logrotate-3.6.5-r1.ebuild:
+  Fixed a small typo in man page. (Bug #73843)
 
   18 Nov 2004; Lars Weiler <pylon@gentoo.org> logrotate-3.6.5-r1.ebuild:
   Added hppa to keywords.
