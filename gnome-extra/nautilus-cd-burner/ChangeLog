@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/nautilus-cd-burner
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.8 2003/07/01 15:05:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.9 2003/09/12 23:22:00 spider Exp $
+
+*nautilus-cd-burner-0.5.3 (13 Sep 2003)
+
+  13 Sep 2003; <spider@gentoo.org> nautilus-cd-burner-0.5.3.ebuild:
+  Dependency fixes, update for gnome 2.4 version, documentation and others.
 
 *nautilus-cd-burner-0.4.2 (01 Jul 2003)
 
