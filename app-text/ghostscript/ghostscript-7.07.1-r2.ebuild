@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.1 2004/04/26 10:15:09 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.2 2004/04/26 16:25:27 agriffis Exp $
 
 inherit eutils
 
@@ -73,11 +73,11 @@ src_compile() {
 	use cups && myconf="${myconf} --enable-cups" \
 		|| myconf="${myconf} --disable-cups"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	make || die "make failed"
 
 	cd ijs
-	econf --prefix=${D}/usr
+	econf --prefix=${D}/usr || die "econf failed"
 	make || die "make failed"
 	cd ..
 }

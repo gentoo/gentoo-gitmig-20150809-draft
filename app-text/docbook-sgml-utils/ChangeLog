@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.22 2004/04/15 02:59:43 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.23 2004/04/26 16:23:17 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  docbook-sgml-utils-0.6.11-r2.ebuild:
+  Add die following econf for bug 48950
 
   14 Apr 2004; Stephen P. Becker <geoman@gentoo.org>
   docbook-sgml-utils-0.6.12-r2.ebuild:
