@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r2.ebuild,v 1.2 2001/09/01 04:08:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r2.ebuild,v 1.3 2001/09/01 05:22:17 drobbins Exp $
 
 A="X410src-1.tgz X410src-2.tgz X410src-3.tgz truetype.tar.gz"
 S=${WORKDIR}/xc
@@ -49,8 +49,14 @@ src_install() {
     doins ${FILESDIR}/${PVF}/XftConfig
     cd ${D}/usr/X11R6/lib/X11/fonts
     tar -xz --no-same-owner -f ${DISTDIR}/truetype.tar.gz
-    dosym /usr/X11R6/lib/libGL.so.1.2 /usr/lib/libMesaGL.so
-    
+    dosym /usr/X11R6/lib/libGL.so.1.2 /usr/X11R6/lib/libMesaGL.so
+	
+	#X installs some /usr/lib/libGL symlinks, pointing to the libGL's in /usr/X11R6/lib.
+	#I don't see the point in this.  Yes, according to LSB, the correct location for libGL is
+	#in /usr/lib, but this is so closely integrated with X itself that /usr/X11R6/lib seems
+	#like the right place.
+	rm -rf ${D}/usr/lib    
+	
 	#dosym /usr/X11R6/lib/libGLU.so.1.3 /usr/lib/libMesaGLU.so
 	#We're no longer including libGLU from here.  Packaged separately, from separate sources.
 	
