@@ -5,16 +5,16 @@ mysed="s:${D}::"
 
 for x in "$@"
 do
-    if [ -a "${x}" ]
+    y=${D}${x}
+    if [ -a "${y}" ]
     then
-        echo ${x}
-	if [ -f "${x}" ]
+	if [ -f "${y}" ]
 	then
-	    mysrc=${T}/`/usr/bin/basename ${x}`
-	    cp ${x} ${mysrc}
-	    sed -e "${mysed}" ${mysrc} > ${x}
+	    mysrc=${T}/`/usr/bin/basename ${y}`
+	    cp ${y} ${mysrc}
+	    sed -e "${mysed}" ${mysrc} > ${y}
 	else
-	    echo "${x} is not a regular file!"
+	    echo "${y} is not a regular file!"
 	    return
 	fi
     else
