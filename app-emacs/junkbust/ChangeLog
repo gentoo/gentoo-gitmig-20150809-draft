@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/junkbust
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/junkbust/ChangeLog,v 1.3 2004/06/24 22:16:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/junkbust/ChangeLog,v 1.4 2004/08/16 17:58:07 mr_bones_ Exp $
+
+  16 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> junkbust-0.8.ebuild:
+  net-www/junkbuster -> www-proxy/junkbuster
 
 *junkbust-0.8 (31 Oct 2002)
 
