@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a.ebuild,v 1.1 2001/08/16 04:15:22 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a.ebuild,v 1.2 2002/05/11 01:30:51 wmertens Exp $
 
 S=${WORKDIR}/Libnet-1.0.2a
 DESCRIPTION="library to provide an API for commonly used low-level network
@@ -24,11 +24,14 @@ src_install () {
 	
 	# try make prefix=${D}/usr install
 
-    try make DESTDIR=${D} MAN_DIR=${D}/usr/share/man install
-	 dodoc VERSION doc/{README,TODO*,CHANGELOG*,COPYING}
-	 newdoc README README.1st
-	 dodoc example/libnet*
-	 docinto Ancillary
-	 dodoc doc/Ancillary/*
+	try make DESTDIR=${D} MAN_DIR=${D}/usr/share/man install
+	dodoc VERSION doc/{README,TODO*,CHANGELOG*,COPYING}
+	newdoc README README.1st
+	dodoc example/libnet*
+	docinto Ancillary
+	dodoc doc/Ancillary/*
+
+	# The makefile should really do this...
+	dobin libnet-config
 }
 
