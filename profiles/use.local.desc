@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.413 2004/06/04 03:40:45 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.414 2004/06/04 08:52:10 dragonheart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -15,6 +15,7 @@ app-antivirus/clamav:milter - Build sendmail mail filter (milter) support
 app-cdr/k3b:monkey - Enable support for Monkey's audio codec
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/johntheripper:ntlm - enables john to crack Windows NT/2000 MD4 (case-sensitive) password hashes
+app-crypt/johntheripper:skey - Enable S/Key (Single use password) authentication cracking support
 app-editors/nano:justify - Toggle the justify option ...
 app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nano:wsconvert - Turn on whitespace highlighting feature
