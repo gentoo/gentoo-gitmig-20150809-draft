@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.19 2004/11/16 12:17:36 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.20 2004/11/18 17:16:02 axxo Exp $
 
 ECLASS=java-pkg
 INHERITED="${INHERITED} ${ECLASS}"
@@ -15,7 +15,7 @@ java-pkg_doclass()
 	java-pkg_dojar $*
 }
 
-java-pkg_do_init_() 
+java-pkg_do_init_()
 {
 	debug-print-function ${FUNCNAME} $*
 
@@ -53,7 +53,7 @@ java-pkg_do_init_()
 	debug-print "package_env=${package_env}"
 }
 
-java-pkg_do_write_() 
+java-pkg_do_write_()
 {
 	# Create directory for package.env
 	if [ ! -d "${D}${shareroot}" ] ; then
@@ -77,7 +77,7 @@ java-pkg_do_write_()
 	sed -e "s/=:/=/" -e "s/:$//" -i "${package_env}"
 }
 
-java-pkg_do_getsrc_() 
+java-pkg_do_getsrc_()
 {
 	# Check for symlink
 	if [ -L "${i}" ] ; then
@@ -274,7 +274,7 @@ java-pkg_jar-from()
 		fi
 		_record-jar ${pkg} ${x}
 		if [ -z "${jar}" ] ; then
-			ln -sf ${x} ${x}
+			ln -sf ${x} $(basename ${x})
 		elif [ "`basename ${x}`" == "${jar}" ] ; then
 			ln -sf ${x} ${destjar}
 			return 0
@@ -287,10 +287,10 @@ java-pkg_jar-from()
 	fi
 }
 
-java-pkg_getjar() 
+java-pkg_getjar()
 {
-	
-	debug-print-function ${FUNCNAME} $*	
+
+	debug-print-function ${FUNCNAME} $*
 
 	local pkg=$1
 	local jar=$2
@@ -311,23 +311,23 @@ java-pkg_getjar()
 	die "Could not find $2 in $1"
 }
 
-java-pkg_getjars() 
+java-pkg_getjars()
 {
 	java-config --classpath=$1
 }
 
 
-java-pkg_dohtml() 
+java-pkg_dohtml()
 {
 	dohtml -f package-list $@
 }
 
-java-pkg_jarinto() 
+java-pkg_jarinto()
 {
-	jardest=$1	
+	jardest=$1
 }
 
-java-pkg_sointo() 
+java-pkg_sointo()
 {
 	sodest=$1
 }
