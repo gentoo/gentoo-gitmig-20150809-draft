@@ -1,0 +1,105 @@
+diff -uNr fluxbox-0.1.14-orig/src/FbTk/XftFontImp.cc fluxbox-0.1.14/src/FbTk/XftFontImp.cc
+--- fluxbox-0.1.14-orig/src/FbTk/XftFontImp.cc	2002-11-27 01:01:27.000000000 +0900
++++ fluxbox-0.1.14/src/FbTk/XftFontImp.cc	2002-12-10 08:56:04.000000000 +0900
+@@ -24,11 +24,46 @@
+ #include "XftFontImp.hh"
+ #include "App.hh"
+ 
++#include <langinfo.h>  
++#include <iconv.h>
++#include <errno.h>
++
+ #ifdef HAVE_CONFIG_H
+ #include "config.h"
+ #endif //HAVE_CONFIG_H
+ namespace FbTk {
+ 
++extern "C" {
++
++static char * locale_to_utf8 (const char *text)
++{      
++	char *loc;
++	char *utf_str, *from, *to;
++	static iconv_t conv = (iconv_t)-1;
++	size_t from_len, to_len;
++	size_t r;
++	if (conv == (iconv_t)-1) {
++		loc = (char *)strdup (nl_langinfo (CODESET));
++		conv = iconv_open ("UTF-8", loc);
++		free (loc);
++	}
++	from = (char *)text;
++	from_len = strlen (text);
++	to_len = from_len * 6 + 1;
++	utf_str = to = (char *)malloc ((sizeof (char)) * from_len * 6 + 1);
++	r = iconv (conv, &from, &from_len, &to, &to_len);
++	// success or incomplete sequence
++	if (r != (size_t)-1 || errno == EINVAL) {
++		*to = '\0';
++		utf_str = (char *)realloc (utf_str, strlen (utf_str) + 1);
++		return utf_str;
++	}
++	free (utf_str);
++	return strdup (text);
++}
++
++}
++
+ XftFontImp::XftFontImp(const char *name, bool utf8):m_xftfont(0),
+ m_utf8mode(utf8) {
+ 	if (name != 0)
+@@ -99,7 +134,17 @@
+ 			x, y,
+ 			(XftChar8 *)(text), len);
+ 	} else 
+-#endif // HAVE_XFT_UTF8_STRING
++	{
++		char *utf_str = locale_to_utf8 (text);
++		size_t utf_len = strlen (utf_str);
++		XftDrawStringUtf8(draw,
++			&xftcolor,
++			m_xftfont,
++			x, y,
++			(XftChar8 *)(utf_str), utf_len);
++			free (utf_str);
++	}
++#else
+ 	{
+ 		XftDrawString8(draw,
+ 			&xftcolor,
+@@ -107,6 +152,7 @@
+ 			x, y,
+ 			(XftChar8 *)(text), len);
+ 	}
++#endif // HAVE_XFT_UTF8_STRING
+ 
+ 	XftColorFree(disp, DefaultVisual(disp, screen), 
+ 		DefaultColormap(disp, screen), &xftcolor);
+@@ -124,13 +170,26 @@
+ 			(XftChar8 *)text, len,
+ 			&ginfo);
+ 	} else 
+-#endif  //HAVE_XFT_UTF8_STRING
++	{
++		char *tmp = strdup(text);
++		tmp[len] = '\0';
++		char *utf_str = locale_to_utf8 (tmp);
++		size_t utf_len = strlen (utf_str);
++		XftTextExtentsUtf8(App::instance()->display(),
++			m_xftfont,
++			(XftChar8 *)utf_str, utf_len,
++			&ginfo);
++			free (utf_str);
++			free (tmp);
++	}
++#else
+ 	{
+ 		XftTextExtents8(App::instance()->display(),
+ 			m_xftfont,
+ 			(XftChar8 *)text, len,
+ 			&ginfo);
+ 	}
++#endif  //HAVE_XFT_UTF8_STRING
+ 	return ginfo.xOff;
+ }
+ 

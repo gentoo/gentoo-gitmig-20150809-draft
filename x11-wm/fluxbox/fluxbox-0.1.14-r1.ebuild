@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r1.ebuild,v 1.7 2003/06/03 20:53:52 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r1.ebuild,v 1.8 2003/06/24 21:36:01 nakano Exp $
 
-IUSE="kde gnome nls xinerama truetype"
+IUSE="kde gnome nls xinerama truetype cjk"
 
 inherit commonbox flag-o-matic eutils
 
@@ -35,6 +35,9 @@ src_unpack() {
 	# Vano menu destroy patch
 	epatch ${FILESDIR}/${PN}-vano-gentoo.patch
 
+	if [ `use cjk` ]; then
+		epatch ${FILESDIR}/${P}-ja.patch
+	fi
 }
 
 src_compile() {
