@@ -1,8 +1,18 @@
-MD5 aacb9834d9d0e1179440e8921fdf42c1 Parse-RecDescent-1.94.ebuild 661
-MD5 a7670fa6009651b120ab1f903e881916 Parse-RecDescent-1.80-r3.ebuild 619
-MD5 2f2d3af27816130b0779ae0197f4c5f2 ChangeLog 2209
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b1818c143c3010e19678ff07fb7c8f50 ChangeLog 2299
 MD5 9c3e128cd1e7e6f8ba86be57e87f9c71 Parse-RecDescent-1.80-r2.ebuild 577
+MD5 a7670fa6009651b120ab1f903e881916 Parse-RecDescent-1.80-r3.ebuild 619
+MD5 7ae99c1ca6c932668972ba6e5d03b34f Parse-RecDescent-1.94.ebuild 666
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 0e2e78f7d2b283b86e41f21b0fc8196b files/digest-Parse-RecDescent-1.80-r2 73
 MD5 0e2e78f7d2b283b86e41f21b0fc8196b files/digest-Parse-RecDescent-1.80-r3 73
 MD5 0167d354ecd27049afa5da0c98d4ab18 files/digest-Parse-RecDescent-1.94 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFByu5+60LfUIagIAkRAuXOAJ4g2LDXYYrujm2efn3cLs8L/mGvOQCfZJv7
+kks8MrB1fQpFUq3HefHXSsI=
+=XZe1
+-----END PGP SIGNATURE-----

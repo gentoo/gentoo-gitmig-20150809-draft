@@ -1,4 +1,14 @@
-MD5 91807f3711ea909032b0e414bc2ace7c ChangeLog 373
-MD5 fa42a80068db5af2814d733e15f896a4 Regexp-Shellish-0.93.ebuild 487
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8e085450e22bda8b4279177b622dca03 ChangeLog 462
+MD5 3efac6a4c1dc9455f30673b9e55cf195 Regexp-Shellish-0.93.ebuild 491
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 7c5798b7428197d4f0e35c48649d6dd1 files/digest-Regexp-Shellish-0.93 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFByvHR60LfUIagIAkRAoHvAJ0b7pcXZB/U6QK8hw2Rr1lcj4KJGgCgjTUO
+RrbxpoWInghGupx4NxM5ng0=
+=oKKF
+-----END PGP SIGNATURE-----

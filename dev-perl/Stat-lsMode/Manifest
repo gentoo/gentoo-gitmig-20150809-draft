@@ -1,4 +1,14 @@
-MD5 c5dab48561a68a8db64ad94357516dc2 ChangeLog 947
-MD5 f46cd81c63e8dd47240e5789d1bd8e99 Stat-lsMode-0.50.ebuild 510
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ef7fbe691a3418f3b1f7fc92c434e572 ChangeLog 1035
+MD5 05f4db01d8d95a9b64f8bfaada618d46 Stat-lsMode-0.50.ebuild 518
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 02b91088a4fa08bde363227de3d0eebf files/digest-Stat-lsMode-0.50 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFByvKx60LfUIagIAkRAuRPAJ4vTkhDFh9oiOoR3TSagTVCFq13QQCfa+E9
+f1Yt7nJ5VCLA7S0i7ymVz8Q=
+=Q7xA
+-----END PGP SIGNATURE-----
