@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/kissme
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/ChangeLog,v 1.4 2003/02/12 05:53:38 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/ChangeLog,v 1.5 2004/04/06 02:03:22 zx Exp $
+
+*kissme-0.0.32 (05 Apr 2004)
+
+  05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> kissme-0.0.32.ebuild,
+  kissme-0.19.ebuild, files/kissme.sh:
+  Version bump.
 
 *kissme-0.19 (1 Feb 2002)
 

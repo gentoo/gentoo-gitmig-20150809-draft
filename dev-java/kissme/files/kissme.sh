@@ -7,7 +7,7 @@ else
 fi
 
 if [ -z "$*" ] ; then 
-	/usr/bin/kissme-bin
+	/usr/bin/kissmebin
 else
-	/usr/bin/kissme-bin -cp ${CLASSPATH} $*
+	/usr/bin/kissmebin -cp ${CLASSPATH} $*
 fi
