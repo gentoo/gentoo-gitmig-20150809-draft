@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.19 2004/09/25 21:05:24 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.20 2004/09/30 16:18:56 slarti Exp $
+
+  30 Sep 2004; Tom Martin <slarti@gentoo.org> unison-2.10.2.ebuild:
+  Readded ~amd64 keyword, resolves bug 65926. Thanks to Neil Bothwick
+  <neil@digimed.co.uk> for reporting.
 
 *unison-2.10.2 (25 Sep 2004)
 
