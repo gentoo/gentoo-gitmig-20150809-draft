@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12.ebuild,v 1.3 2003/09/06 01:54:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12.ebuild,v 1.4 2003/10/04 17:21:24 lanius Exp $
 #
 # 1. static       # Statically linked libraries, default.
 # 2. shared-2.95  # Dynamically linked libaries, compiled with gcc 2.95.
@@ -15,7 +15,8 @@ HOMEPAGE="http://www.opera.com/linux/"
 IUSE="gnome kde"
 
 # Dependencies may be augmented later (see below).
-RDEPEND="virtual/x11"
+RDEPEND="virtual/x11
+	>=x11-libs/lesstif-0.93.40" #lesstif resolves Bug 25767
 
 SLOT="0"
 LICENSE="OPERA"
