@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c78b1938d6f6d249981f06ea73430168 ChangeLog 763
+MD5 3557cd19e3a0d76d83966a0db3fad464 ChangeLog 868
 MD5 56eae5ba4845d57ce1994e0e21947ffa adplug-1.4.1.ebuild 607
 MD5 71b09a1721c4dd0557be0abe8dd46315 metadata.xml 219
-MD5 e6a9e6cc19f18c87ff987ce0c5cd52ea adplug-1.5.ebuild 608
+MD5 21048d3cc85411ddd697e39ce8e92163 adplug-1.5.ebuild 605
 MD5 7699ab702c89c8eeab111374751b9947 files/digest-adplug-1.4.1 65
 MD5 6c6db84a68cc1bd1357a7949ea7dac51 files/digest-adplug-1.5 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYa5BArHZZzCEUG0RAvf2AJ9nwZF9c/BRQycaoEeSzQjM9+OoUACcCga6
-/sg63pxcO3+TUXRw5erxxiM=
-=l4NG
+iD8DBQFBkzopArHZZzCEUG0RAoDwAJ0YSmckikFEI3nPIGKLPpm8xLD5eACcDw9j
+BPtBMy986+w7+FZxgXFrMfI=
+=bCvD
 -----END PGP SIGNATURE-----
