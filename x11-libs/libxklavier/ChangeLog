@@ -1,11 +1,11 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.8 2004/04/17 09:10:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.9 2004/04/17 21:24:51 aliz Exp $
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> libxklavier-1.00.ebuild:
   stable on amd64
 
-*libklavier-1.02 (15 Apr 2004)
+*libxklavier-1.02 (15 Apr 2004)
 
   15 Apr 2004; foser <foser@gentoo.org> libxklavier-1.02.ebuild :
   New release, should fix issues with xorg release (#47131)
