@@ -2,29 +2,30 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: 
 
-S=${WORKDIR}
-
 DESCRIPTION="Roger Wilco base station"
 HOMEPAGE="http://rogerwilco.gamespy.com/"
 SRC_URI="http://games.gci.net/pub/VoiceOverIP/RogerWilco/rwbs_Linux_0_27.tar.gz"
+
 KEYWORDS="~x86"
+SLOT="0"
+
 # Everything is statically linked
 DEPEND=""
-IUSE=""
 
-src_install () {
-	cd ${WORKDIR}
+S=${WORKDIR}
+
+src_install() {
 	dodoc README.TXT CHANGES.TXT LICENSE.TXT
 
 	dobin ${S}/rwbs ${S}/run_rwbs
 	rm -f ${S}/rwbs ${S}/run_rwbs
 
 	# Put distribution into /usr/share/rwbs
-	mkdir -p ${D}/usr/share/rwbs/
+	dodir /usr/share/rwbs/
 	mv * ${D}/usr/share/rwbs/
 
 	# Do conf script
-	mkdir -p ${D}/etc/conf.d/
+	dodir /etc/conf.d/
 	cat > ${D}/etc/conf.d/rwbs <<EOF
 # Roger Wilco base station configuration
 #
@@ -50,7 +51,7 @@ RWBS_OPTS='-n "Gentoo Linux"'
 EOF
 
 	# do init script
-	mkdir -p ${D}/etc/init.d/
+	dodir /etc/init.d/
 	cat > ${D}/etc/init.d/rwbs <<EOF
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.

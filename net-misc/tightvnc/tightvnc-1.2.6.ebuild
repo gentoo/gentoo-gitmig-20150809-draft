@@ -1,20 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.6.ebuild,v 1.2 2002/10/09 21:52:10 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.6.ebuild,v 1.3 2002/11/30 21:01:11 vapier Exp $
 
 S="${WORKDIR}/vnc_unixsrc"
 DESCRIPTION="A great client/server software package allowing remote network access to graphical desktops."
 SRC_URI="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2"
-HOMEPAGE="http://www.tightvnc.com"
+HOMEPAGE="http://www.tightvnc.com/"
+
 KEYWORDS="x86 ppc alpha"
 LICENSE="GPL-2"
 SLOT="0"
+
 DEPEND="virtual/x11
 	sys-devel/perl
 	~media-libs/jpeg-6b
 	sys-libs/zlib"
-
-RDEPEND=$DEPEND
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -27,26 +27,21 @@ src_unpack() {
 }
 
 src_compile() {
-
-	cd ${S}
 	xmkmf || die
 	make World || die
 	cd Xvnc
 	./configure || die
 	make || die
-
 }
 
 src_install() {
-
-	cd ${S}
-	mkdir -p ${D}/usr/man
-	mkdir -p ${D}/usr/man/man1
-	mkdir -p ${D}/usr/bin
+	dodir /usr/man
+	dodir /usr/man/man1
+	dodir /usr/bin
 
 	# fix the web based interface, it needs the java class files
-	mkdir -p ${D}/usr/share/tightvnc
-	mkdir -p ${D}/usr/share/tightvnc/classes
+	dodir /usr/share/tightvnc
+	dodir /usr/share/tightvnc/classes
 	insinto /usr/share/tightvnc/classes ; doins classes/*
 
 	# and then patch vncserver to point to /usr/share/tightvnc/classes
