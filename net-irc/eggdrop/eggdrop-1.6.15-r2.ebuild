@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15-r2.ebuild,v 1.2 2004/02/04 03:16:26 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15-r2.ebuild,v 1.3 2004/04/15 16:27:31 avenj Exp $
 
 inherit fixheadtails
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.eggheads.org/"
 SRC_URI="ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/eggdrop${PV}.tar.gz
 http://gentoo.mirror.at.stealer.net/files/${P}-STEALER.net.patch.bz2
 		http://www.egghelp.org/files/patches/eggdrop${PV}-ssl.fixed.diff.gz"
-KEYWORDS="~x86 ~sparc ~mips ~ia64"
+KEYWORDS="~x86 ~sparc ~mips ~ia64 ~amd64"
 
 LICENSE="GPL-2"
 SLOT="0"
