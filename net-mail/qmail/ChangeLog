@@ -1,10 +1,22 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.5 2002/06/10 20:14:43 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.6 2002/09/11 21:25:53 raker Exp $
+
+*qmail-1.03-r9 (11 Sep 2002)
+
+  11 Sep 2002; Nick Hadaway <raker@gentoo.org> qmail-1.03-r9.ebuild,
+  files/digest-qmail-1.03-r9,
+  files/1.03-r9/qmail-1.03-starttls-smtp-auth.patch :
+  New qmail ebuild. Added ldap support, and tls+auth support.  The
+  patches both cannot be applied at the same time as they conflict.
+  Please test!
+
+*qmail-1.03-r8 (10 Jun 2002)
 
   10 June 2002; Grant Goodyear <bangert@gentoo.org> qmail-1.03-r8.ebuild :
-  
   Added qmail-queue patch for qmail-scanner, closing bug #3416.
+
+*qmail-1.03-r7 (1 Feb 2002)
 
   12 May 2002; Thilo Bangert <bangert@gentoo.org> qmail-1.03-r7.ebuild :
   fixed location for dns patch. added new digest to reflect the change
@@ -15,10 +27,7 @@
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> qmail-1.03-r7.ebuild :
   Prevent qmail from being installed alongside another mta.
 
-*qmail-1.03-r7 (1 Feb 2002)
-
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
