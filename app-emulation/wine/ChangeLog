@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.50 2003/08/15 16:20:47 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.51 2003/08/27 09:51:29 coronalvr Exp $
+
+  27 Aug 2003; Alex Veber <coronalvr@gentoo.org> wine-20030813.ebuild:
+  move to stable
 
 *wine-20030813 (15 Aug 2003)
 
