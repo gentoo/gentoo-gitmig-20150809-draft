@@ -1,8 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.24 2004/02/17 23:17:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.25 2004/02/17 23:22:53 agriffis Exp $
 
-  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> gpgme-0.4.0.ebuild:
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> gpgme-0.3.12.ebuild,
+  gpgme-0.3.13.ebuild, gpgme-0.3.14.ebuild, gpgme-0.4.0.ebuild:
   stable on alpha and ia64
 
   07 Feb 2004; Lars Weiler <pylon@gentoo.org> gpgme-0.4.0.ebuild:
