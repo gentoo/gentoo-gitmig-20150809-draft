@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Auth_SASL
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth_SASL/ChangeLog,v 1.2 2005/02/19 07:01:43 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth_SASL/ChangeLog,v 1.3 2005/03/09 06:13:11 sebastian Exp $
+
+  09 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-Auth_SASL-1.0.1.ebuild:
+  This package was previously bundled with www-apps/horde-pear. Mark unstable
+  for ARCHes that www-apps/horde-pear-r2 is marked stable for.
 
   19 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-Auth_SASL-1.0.1.ebuild:

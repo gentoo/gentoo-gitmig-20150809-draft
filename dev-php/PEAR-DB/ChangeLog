@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.18 2005/03/08 16:31:42 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.19 2005/03/09 06:17:03 sebastian Exp $
+
+  09 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-DB-1.6.8.ebuild:
+  This package was previously bundled with www-apps/horde-pear. Mark unstable
+  for ARCHes that www-apps/horde-pear-r2 is marked stable for.
 
   08 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
   -PEAR-DB-1.3.ebuild, -PEAR-DB-1.5.0_rc2.ebuild, -PEAR-DB-1.6.1.ebuild,
