@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.36 2004/11/22 10:52:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.37 2004/12/09 12:18:35 mr_bones_ Exp $
+
+*allegro-4.1.17 (09 Dec 2004)
+
+  09 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +allegro-4.1.17.ebuild:
+  version bump
 
   22 Nov 2004; Joseph Jezak <josejx@gentoo.org> allegro-4.1.14.ebuild:
   Marked ppc stable again.
