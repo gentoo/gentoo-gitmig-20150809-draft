@@ -19,13 +19,13 @@ src_compile() {
      myconf="--disable-nls"
   fi
   try ./configure --host=${CHOST} --prefix=/usr/X11R6 \
-        --mandir=/usr/X11R6/share/man ${myconf}
+        --mandir=/usr/X11R6/man ${myconf}
   try make
 }
 
 src_install() {
 
-  try make prefix=${D}/usr/X11R6 mandir=${D}/usr/X11R6/share/man install
+  try make prefix=${D}/usr/X11R6 mandir=${D}/usr/X11R6/man install
 
   dodoc COPYING ChangeLog README* THANKS TODO
   dodoc docs/USERS-GUIDE

@@ -7,13 +7,14 @@ DESCRIPTION="gtk+licq"
 SRC_URI="http://gtk.licq.org/download/${A}"
 HOMEPAGE="http://gtk.licq.org"
 
-DEPEND=">=net-im/licq-1.0.2
+DEPEND="virtual/glibc sys-devel/perl
+        >=net-im/licq-1.0.2
 	>=x11-libs/gtk+-1.2.0"
 
-src_unpack() {
-  unpack ${A}
-  cd ${S}
-}
+RDEPEND="virtual/glibc >=net-im/licq-1.0.2
+	>=x11-libs/gtk+-1.2.0
+        gnome? ( gnome-base/gnome-core )"
+
 
 src_compile() {                           
   local myconf

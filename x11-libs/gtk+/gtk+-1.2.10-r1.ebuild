@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r1.ebuild,v 1.2 2001/06/03 09:54:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r1.ebuild,v 1.3 2001/06/04 00:16:12 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -25,7 +25,7 @@ src_compile() {
 	fi
 	
   	try ./configure --host=${CHOST} --prefix=/usr/X11R6 ${myconf} \
-	--infodir=/usr/X11R6/share/info --mandir=/usr/X11R6/share/man --sysconfdir=/etc/X11 \
+	--infodir=/usr/X11R6/info --mandir=/usr/X11R6/man --sysconfdir=/etc/X11 \
 	--with-xinput=xfree --with-x
 	try make
 }

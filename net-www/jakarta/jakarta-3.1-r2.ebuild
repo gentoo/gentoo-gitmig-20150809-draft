@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r2.ebuild,v 1.2 2001/01/19 22:07:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r2.ebuild,v 1.3 2001/06/04 00:16:12 achim Exp $
 
 P=jakarta-3.1
 A="jakarta-tomcat.tar.gz jakarta-ant.tar.gz"
@@ -11,8 +11,10 @@ SRC_URI="http://jakarta.apache.org/builds/tomcat/release/v3.1/src/jakarta-tomcat
 	 http://jakarta.apache.org/builds/tomcat/release/v3.1/src/jakarta-ant.tar.gz"
 HOMEPAGE="http://jakarta.apache.org"
 
-DEPEND=">=sys-apps/bash-2.04
-	>=sys-libs/glibc-2.1.3
+DEPEND="virtual/glibc sys-apps/which sys-devel/perl
+	>=dev-lang/jdk-1.2
+	>=net-www/apache-ssl-1.3"
+RDEPEND="virtual/glibc
 	>=dev-lang/jdk-1.2
 	>=net-www/apache-ssl-1.3"
 
@@ -22,7 +24,7 @@ src_unpack() {
 
 src_compile() {      
   export CLASSPATH=/opt/java/src.jar:/opt/java/lib/tools.jar                     
- 
+
   echo "Building ant..."
   cd ${S}/jakarta-ant
   ./bootstrap.sh
