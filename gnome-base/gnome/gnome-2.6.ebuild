@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.ebuild,v 1.2 2004/04/20 16:18:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.ebuild,v 1.3 2004/05/20 23:53:33 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -59,7 +59,6 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-libs/gstreamer-0.8
 	>=media-libs/gst-plugins-0.8-r1
 	>=gnome-extra/gnome-media-2.6
-	>=gnome-extra/nautilus-media-0.8
 
 	>=media-gfx/eog-2.6
 	>=net-www/epiphany-1.2.2
@@ -74,7 +73,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=gnome-base/gnome-session-2.6
 	>=gnome-base/gnome-desktop-2.6.0.1
-	>=gnome-base/gnome-applets-2.6
+	>=gnome-base/gnome-applets-2.6.0-r1
 	>=gnome-base/gnome-panel-2.6
 
 	>=x11-themes/gnome-icon-theme-1.2

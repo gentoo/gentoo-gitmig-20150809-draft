@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.14 2004/05/14 18:12:23 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.15 2004/05/20 23:53:33 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -76,7 +76,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=gnome-base/gnome-session-2.6.1
 	>=gnome-base/gnome-desktop-2.6.1
-	>=gnome-base/gnome-applets-2.6
+	>=gnome-base/gnome-applets-2.6.0-r1
 	>=gnome-base/gnome-panel-2.6.1
 
 	>=x11-themes/gnome-icon-theme-1.2.1
@@ -101,7 +101,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-libs/libwnck-2.6.1
 	>=x11-wm/metacity-2.8.1
 
-	>=x11-libs/startup-notification-0.5
+	>=x11-libs/startup-notification-0.6
 
 	>=gnome-extra/yelp-2.6.1
 	>=x11-libs/vte-0.11.10-r1
