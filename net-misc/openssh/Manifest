@@ -1,6 +1,6 @@
-MD5 77eb318ff9ab480d9e46c313a25c6d17 ChangeLog 18829
+MD5 518c655bf660c4661db553658a32b23a ChangeLog 19016
 MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
-MD5 4539b1270a768f6c0c05fee8ada03fdb openssh-3.9_p1-r1.ebuild 4378
+MD5 8b5e10442d4eeb104dcedc2da68be0b8 openssh-3.9_p1-r1.ebuild 4274
 MD5 d1055a8536e068dc46b4c99f5bc8be04 openssh-3.8.1_p1-r1.ebuild 4239
 MD5 7c16095191b5dc9d653dcb658650c88c files/digest-openssh-3.8.1_p1-r1 141
 MD5 2cce94a742ab0721d87b1ff63c32d0f9 files/digest-openssh-3.9_p1-r1 136
@@ -23,6 +23,7 @@ MD5 7205b89215b9dc72e3958c662065b529 files/openssh-3.9_p1-largekey.patch.bz2 126
 MD5 ba87dbfc3be0ab9d70fe24278d9deb02 files/openssh-3.9_p1-infoleak.patch 2496
 MD5 328a5f063659ddb400d21201feb92170 files/openssh-3.9_p1-opensc.patch.bz2 1381
 MD5 73f3b46d27bd413eb79350a2ce412bf6 files/openssh-3.9_p1-pamfix.patch.bz2 1125
+MD5 7937a17eb31fc6139ef42fa04521de27 files/openssh-3.9_p1-configure-openct.patch 995
 MD5 93d19c0ef91091a730510c46ab8e811e files/openssh-3.9_p1-selinux.diff.bz2 1307
 MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
 MD5 0a1428803057b7d25e624c6b297980d8 files/sshd.rc6 1281

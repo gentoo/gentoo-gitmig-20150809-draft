@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r1.ebuild,v 1.12 2005/03/13 10:18:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r1.ebuild,v 1.13 2005/03/13 10:32:51 vapier Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -24,9 +24,9 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509 ldap smartcard nocxx sftplogging"
 
 RDEPEND="pam? ( >=sys-libs/pam-0.73 >=sys-apps/shadow-4.0.2-r2 )
-	!mips? ( kerberos? ( virtual/krb5 ) )
+	kerberos? ( virtual/krb5 )
 	selinux? ( sys-libs/libselinux )
-	!ppc64? ( skey? ( >=app-admin/skey-1.1.5-r1 ) )
+	skey? ( >=app-admin/skey-1.1.5-r1 )
 	>=dev-libs/openssl-0.9.6d
 	>=sys-libs/zlib-1.1.4
 	smartcard? ( dev-libs/opensc )
@@ -46,6 +46,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fix_suid.patch.bz2
 	epatch ${FILESDIR}/${P}-infoleak.patch #59361
 	epatch ${FILESDIR}/${P}-terminal_restore.patch.bz2
+	epatch ${FILESDIR}/${P}-configure-openct.patch #78730
 
 	use sftplogging && epatch ${FILESDIR}/${P}-sftplogging-1.2-gentoo.patch.bz2
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch.bz2
@@ -69,17 +70,12 @@ src_compile() {
 	use ldap && filter-flags -funroll-loops
 	use selinux && append-flags "-DWITH_SELINUX"
 
-	if use static; then
+	if use static ; then
 		append-ldflags -static
-		export LDFLAGS
-		if use pam; then
-			ewarn "Disabling pam support becuse of static flag."
-			myconf="${myconf} --without-pam"
-		else
-			myconf="${myconf} --without-pam"
-		fi
+		use pam && ewarn "Disabling pam support becuse of static flag"
+		myconf="${myconf} --without-pam"
 	else
-		myconf="${myconf} `use_with pam`"
+		myconf="${myconf} $(use_with pam)"
 	fi
 
 	use ipv6 || myconf="${myconf} --with-ipv4-default"
@@ -103,11 +99,11 @@ src_compile() {
 }
 
 src_install() {
-	make install-files DESTDIR=${D} || die
-	chmod 600 ${D}/etc/ssh/sshd_config
+	make install-files DESTDIR="${D}" || die
+	fperms 600 /etc/ssh/sshd_config
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
-	use pam && ( insinto /etc/pam.d  ; newins ${FILESDIR}/sshd.pam sshd )
-	exeinto /etc/init.d ; newexe ${FILESDIR}/sshd.rc6 sshd
+	newpamd "${FILESDIR}"/sshd.pam sshd 
+	newinitd "${FILESDIR}"/sshd.rc6 sshd
 	keepdir /var/empty
 	dosed "/^#Protocol /s:.*:Protocol 2:" /etc/ssh/sshd_config
 	use pam \
@@ -130,9 +126,9 @@ pkg_postinst() {
 	einfo "new one with UID 22.  If you have any scripts or programs that"
 	einfo "that referenced the old UID directly, you will need to update them."
 	einfo
-	use pam >/dev/null 2>&1 && {
+	if use pam ; then
 		einfo "Please be aware users need a valid shell in /etc/passwd"
 		einfo "in order to be allowed to login."
 		einfo
-	}
+	fi
 }
