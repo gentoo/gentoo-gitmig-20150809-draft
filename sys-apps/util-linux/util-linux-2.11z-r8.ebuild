@@ -1,19 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r7.ebuild,v 1.5 2003/09/20 05:14:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r8.ebuild,v 1.1 2003/12/08 11:52:46 seemant Exp $
 
 IUSE="crypt nls static pam"
 
 inherit eutils flag-o-matic
 
 ## see below for details on pic.patch
-case ${ARCH} in
-	"x86"|"hppa"|"sparc64"|"ppc"|"mips")
-		;;
-	*)
-		filter-flags -fPIC
-		;;
-esac
+# Added back for now until other archs can be tested.
+filter-flags -fPIC
 
 S="${WORKDIR}/${P}"
 CRYPT_PATCH_P="${P}-crypt-gentoo"
@@ -22,7 +17,7 @@ SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.bz2
 	crypt? ( mirror://gentoo/${CRYPT_PATCH_P}.patch.bz2 )"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~arm mips ~hppa"
+KEYWORDS="x86 amd64 ppc sparc alpha arm mips hppa"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -61,13 +56,6 @@ src_unpack() {
 	# <azarah@gentoo.og> (17 Jul 2003)
 	epatch ${FILESDIR}/${P}-agetty-domainname-option.patch
 
-	# Add NFS4 support (kernel 2.5/2.6).
-	if [ ! -z "`use crypt`" ] ; then
-		epatch ${FILESDIR}/${P}-01-nfsv4-crypt.dif
-	else
-		epatch ${FILESDIR}/${P}-01-nfsv4.dif
-	fi
-
 	# <kumba@gentoo.org> (22 Apr 2003)
 	# Fix fdisk so it works on SGI Disk Labels and lets the user
 	# Actually select a partition, rather than automatically
@@ -100,11 +88,15 @@ src_unpack() {
 		sed -i -e 's/DISABLE_NLS=no/DISABLE_NLS=yes/' MCONFIG ||
 			die "MCONFIG nls sed"
 	fi
+
+	# /bin/kill will come from procps only
+	epatch ${FILESDIR}/${PN}-no-kill.patch
 }
 
 src_compile() {
+
 	if [ "`use static`" ] ; then
-		export LDFLAGS=-static
+		append-ldflags "-static"
 	fi
 
 	econf || die "configure failed"

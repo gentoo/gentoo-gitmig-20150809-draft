@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.61 2003/12/03 00:36:41 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.62 2003/12/08 11:52:46 seemant Exp $
+
+*util-linux-2.11z-r9 (06 Dec 2003)
+
+  06 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
+  util-linux-2.11z-r6.ebuild, util-linux-2.11z-r7.ebuild,
+  util-linux-2.11z-r8.ebuild, util-linux-2.11z-r9.ebuild,
+  util-linux-2.12-r1.ebuild, util-linux-2.12-r2.ebuild,
+  util-linux-2.12-r3.ebuild, util-linux-2.12.ebuild,
+  files/util-linux-no-kill.patch:
+  /bin/kill used to be part of this package. procps will now be the only one
+  providing that
 
 *util-linux-2.12-r1 (02 Dec 2003)
 
