@@ -1,5 +1,8 @@
 # ChangeLog for media-libs/allegttf
 
+  30 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> allegttf-2.0.ebuild:
+  use sed -i; more error checking/messages
+
 *allegttf-2.0 (13 Feb 2003)
  
   12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :

@@ -1,38 +1,46 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegttf/allegttf-2.0.ebuild,v 1.4 2003/09/11 01:17:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegttf/allegttf-2.0.ebuild,v 1.5 2004/01/31 00:22:52 mr_bones_ Exp $
 
 DESCRIPTION="Anti-aliased text output and font loading routines for Allegro"
 HOMEPAGE="http://huizen.dds.nl/~deleveld/allegttf.htm"
 SRC_URI="http://huizen.dds.nl/~deleveld/${P}.tar.gz"
+
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
 IUSE=""
-DEPEND=">=media-libs/allegro-4.0.0"
-RDEPEND="${DEPEND}"
-S="${WORKDIR}/${P}"
+
+RDEPEND=">=media-libs/allegro-4.0.0"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
+src_unpack() {
+	unpack ${A}
+
+	sed -i \
+		-e 's/make/$(MAKE)/' ${S}/Makefile \
+			|| die "sed Makefile failed"
+}
 
 src_compile() {
-	emake || die
-	emake examples || die
+	emake || die "emake failed"
+	emake examples || die "emake failed (examples)"
 }
 
 src_install() {
-	dodir /usr/include
-	dodir /usr/lib
-
 	cd ${S}/source
-	mv makefile.lnx makefile.lnx_orig
 	# hardcoded install paths in makefile
-	sed s/'\/usr\/local'/'${D}\/usr'/ makefile.lnx_orig > makefile.lnx
+	sed -i \
+		-e s/'\/usr\/local'/'${D}\/usr'/ makefile.lnx \
+			|| die "sed failed"
 
 	cd ${S}
-	dodoc docs/*.txt *.txt
-	dohtml docs/allegttf.htm
-
+	dodir /usr/include
+	dodir /usr/lib
+	make install || die "make install failed"
+	dodoc docs/*.txt *.txt || die "dodoc failed"
+	dohtml docs/allegttf.htm || die "dohtml failed"
 	insinto /usr/share/doc/${P}/examples
-	doins examples/*
-
-	make install || die
+	doins examples/* || die "doins failed"
 }
