@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.6.0_pre1-r2.ebuild,v 1.1 2002/10/30 01:40:59 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.6.0_pre1-r2.ebuild,v 1.2 2002/11/03 02:27:25 bcowan Exp $
 
 IUSE="gpm nls samba ncurses X slang"
 
@@ -11,7 +11,7 @@ DESCRIPTION="GNU Midnight Commander cli-based file manager"
 
 HOMEPAGE="http://www.ibiblio.org/mc/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${MY_P}.tar.gz
-	mirror://gentoo/${MY_P}-2002-10-29-22.diff.bz2"
+	http://www.gentoo.org/~bcowan/${MY_P}-2002-11-02-18.diff.bz2"
 
 
 DEPEND=">=sys-apps/e2fsprogs-1.19
@@ -31,7 +31,7 @@ KEYWORDS="~x86"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -E -p1 < ${WORKDIR}/${MY_P}-2002-10-29-22.diff
+	patch -E -p1 < ${WORKDIR}/${MY_P}-2002-11-02-18.diff
 }	
 
 src_compile() {                           
