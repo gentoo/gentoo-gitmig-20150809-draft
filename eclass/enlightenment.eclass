@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.37 2004/12/09 16:05:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.38 2004/12/27 14:23:14 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -10,10 +10,10 @@ INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 
 ECVS_STATE="release"
-if [ "${PV/9999}" != "${PV}" ] ; then
-	if [ -z "${ECVS_MODULE}" ] ; then
+if [[ ${PV/9999} != ${PV} ]] ; then
+	if [[ -z ${ECVS_MODULE} ]] ; then
 		ECVS_MODULE="${PN}"
-		if [ "${CATEGORY/libs}" != "${CATEGORY}" ] ; then
+		if [[ ${CATEGORY/libs} != ${CATEGORY} ]] ; then
 			ECVS_MODULE="e17/libs/${PN}"
 		else
 			ECVS_MODULE="e17/apps/${PN}"
@@ -22,7 +22,7 @@ if [ "${PV/9999}" != "${PV}" ] ; then
 	ECVS_SERVER="${ECVS_SERVER:-cvs.sourceforge.net:/cvsroot/enlightenment}"
 	ECVS_STATE="live"
 	inherit cvs
-elif [ "${PV/.200?????/}" != "${PV}" ] || [ "${PV/2003????}" != "${PV}" ] ; then
+elif [[ ${PV/.200?????/} != ${PV} ]] || [[ ${PV/2003????} != ${PV} ]] ; then
 	ECVS_STATE="snap"
 fi
 
@@ -78,13 +78,13 @@ enlightenment_pkg_setup() {
 # the stupid gettextize script prevents non-interactive mode, so we hax it
 gettext_modify() {
 	use nls || return 0
-	cp `which gettextize` ${T} || die "could not copy gettextize"
+	cp $(which gettextize) ${T} || die "could not copy gettextize"
 	cp ${T}/gettextize ${T}/gettextize.old
 	sed -e 's:read dummy < /dev/tty::' ${T}/gettextize.old > ${T}/gettextize
 }
 
 enlightenment_src_unpack() {
-	if [ "${ECVS_STATE}" == "live" ] ; then
+	if [[ ${ECVS_STATE} == "live" ]] ; then
 		cvs_src_unpack
 	else
 		unpack ${A}
@@ -93,8 +93,8 @@ enlightenment_src_unpack() {
 }
 
 enlightenment_src_compile() {
-	if [ "${ECVS_STATE}" != "release" ] ; then
-		[ ! -z "${EHACKAUTOGEN}" ] && sed -i 's:.*configure.*::' autogen.sh
+	if [[ ${ECVS_STATE} != "release" ]] ; then
+		[[ ! -z ${EHACKAUTOGEN} ]] && sed -i 's:.*configure.*::' autogen.sh
 		export WANT_AUTOMAKE="${EAUTOMAKE:-1.8}"
 		env \
 			PATH="${T}:${PATH}" \
@@ -102,7 +102,7 @@ enlightenment_src_compile() {
 			USER=blah \
 			./autogen.sh \
 			|| enlightenment_die "autogen failed"
-		if [ ! -z "${EHACKLIBLTDL}" ] ; then
+		if [[ ! -z ${EHACKLIBLTDL} ]] ; then
 			cd libltdl
 			autoconf || enlightenment_die "autogen in libltdl failed"
 			cd ..
@@ -110,14 +110,14 @@ enlightenment_src_compile() {
 	fi
 	econf ${MY_ECONF} || enlightenment_die "econf failed"
 	emake || enlightenment_die "emake failed"
-	use doc && [ -x ./gendoc ] && { ./gendoc || enlightenment_die "gendoc failed" ; }
+	use doc && [[ -x ./gendoc ]] && { ./gendoc || enlightenment_die "gendoc failed" ; }
 }
 
 enlightenment_src_install() {
 	make install DESTDIR=${D} || enlightenment_die
 	find ${D} -name CVS -type d -exec rm -rf '{}' \; 2>/dev/null
 	dodoc AUTHORS ChangeLog NEWS README TODO ${EDOCS}
-	use doc && [ -d doc ] && dohtml -r doc/*
+	use doc && [[ -d doc ]] && dohtml -r doc/*
 }
 
 enlightenment_pkg_postinst() {
