@@ -222,13 +222,14 @@ sys-apps/mkisofs
 >=app-office/lyx-1.2.0.20020705
 
 # drobbins@gentoo.org (15 Jul 2002)
-#bad versions:
+#bad/old versions:
 =sys-apps/portage-2.0.14
 =sys-apps/portage-2.0.15
 =sys-apps/portage-2.0.16
 =sys-apps/portage-2.0.17
-#versions for testing:
 =sys-apps/portage-2.0.18
+#versions for testing:
+=sys-apps/portage-2.0.19
 
 # lamer@gentoo.org (15 Jul 2002)
 # Needs socks testing
