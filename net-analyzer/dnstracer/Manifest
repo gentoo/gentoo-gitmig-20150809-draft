@@ -1,6 +1,6 @@
 MD5 8bbb6a185d4c92e7c3fc662660445c4c ChangeLog 1949
 MD5 5985c7fa2d1b4a5688caeb33e5e9bb8b dnstracer-1.7.ebuild 654
-MD5 17113f95ee4b43b3fd03c2f0b5d2361f dnstracer-1.8.ebuild 763
+MD5 2bab51d73255d2042fa9e0badd610df4 dnstracer-1.8.ebuild 753
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 85ea998a3a721e755b24dedd7354e029 files/digest-dnstracer-1.7 64
 MD5 f670baae28c6927de7c4a92d12bf3369 files/digest-dnstracer-1.8 65
