@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/startup-notification-0.5.ebuild,v 1.9 2003/07/01 17:50:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/startup-notification-0.5.ebuild,v 1.10 2003/07/19 23:36:01 tester Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa"
+KEYWORDS="x86 ppc alpha sparc hppa amd64"
 IUSE=""
 DEPEND="virtual/x11"
 
