@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.1.7568.ebuild,v 1.3 2004/04/28 20:40:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.1.7568.ebuild,v 1.4 2004/05/30 14:51:26 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -23,6 +23,7 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
 	ftp://vmware.wespe.de/pub/software/wkst/${NP}.tar.gz"
 
 LICENSE="vmware"
+IUSE=""
 SLOT="0"
 KEYWORDS="-* x86 -amd64"
 # VMWare is broken on amd64.  Please do not file any bugs on it, as we will
