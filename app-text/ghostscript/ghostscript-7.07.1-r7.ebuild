@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.10 2004/10/17 04:38:14 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.11 2004/10/25 13:17:38 lu_zero Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips -ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="X cups cjk emacs truetype"
 
 RDEPEND="virtual/libc
@@ -73,6 +73,9 @@ src_unpack() {
 	# krgb support
 	cd src
 	epatch ${FILESDIR}/gs7.07.1-krgb.patch.gz
+
+	# Fix the garbage collector on ia64 and ppc
+	epatch ${FILESDIR}/gs-fix-gc.patch
 }
 
 src_compile() {
