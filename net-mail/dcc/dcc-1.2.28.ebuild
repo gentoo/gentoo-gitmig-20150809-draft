@@ -1,22 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dcc/dcc-1.2.28.ebuild,v 1.1 2004/01/20 09:28:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dcc/dcc-1.2.28.ebuild,v 1.2 2004/03/29 01:12:51 vapier Exp $
 
 DESCRIPTION="Distributed Checksum Clearinghouse"
 HOMEPAGE="http://www.rhyolite.com/anti-spam/dcc/"
 MY_P="dcc-dccd-${PV}"
 SRC_URI="${HOMEPAGE}/source/${MY_P}.tar.Z"
+
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+
 RDEPEND="dev-lang/perl
-		net-mail/procmail
-		|| ( net-misc/wget  net-www/fetch net-ftp/curl net-ftp/ftp )
-		virtual/glibc"
+	net-mail/procmail
+	|| ( net-misc/wget net-www/fetch net-misc/curl net-ftp/ftp )
+	virtual/glibc"
 DEPEND="sys-apps/sed
-		sys-devel/gcc
-		${RDEPEND}"
+	sys-devel/gcc
+	${RDEPEND}"
+
 S=${WORKDIR}/${MY_P}
 
 dcc_cgibin=/var/www/localhost/cgi-bin/dcc
