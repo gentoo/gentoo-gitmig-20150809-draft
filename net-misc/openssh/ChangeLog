@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.8 2002/06/04 23:20:50 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.9 2002/06/23 01:35:06 woodchip Exp $
+
+*openssh-3.3_p1 (22 June 2002)
+
+  22 June 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Chase latest release.  Starting with this version sshd uses a new privelaged
+  process separation scheme.  See the docs for more info.
 
 *openssh-3.2.3_p1-1 (5 June 2002)
 
