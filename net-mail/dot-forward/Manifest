@@ -1,5 +1,5 @@
-MD5 fd91f9a2adb0a34769817b4984308b66 ChangeLog 1237
-MD5 8401122d7354599866e23bd9aa4120d0 dot-forward-0.71-r1.ebuild 945
+MD5 33dbf872567ccf699f734327ded8ea43 ChangeLog 1398
+MD5 fe259e85ee6de3c574e25f99065fe2f6 dot-forward-0.71-r1.ebuild 951
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 170b78e7a24cf34fa1256bc6b1e4f469 files/0.71-errno.patch 243
 MD5 ec78dbd60b8f7aa9ddcbee4685688fe8 files/0.71-head-1.patch 589
