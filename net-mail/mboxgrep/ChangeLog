@@ -1,0 +1,13 @@
+# ChangeLog for net-mail/mboxgrep
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/ChangeLog,v 1.1 2002/02/10 22:01:59 karltk Exp $
+
+*mboxgrep-0.7.3 ( 10 Feb 2002 )
+
+  10 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog mboxgrep-0.7.3 files/digest-mboxgrep-0.7.3:
+  
+  mboxgrep is a small utility that scans a mailbox for messages matching a 
+  regular expression. Found messages can be either displayed on standard 
+  output, counted, deleted, piped to a shell command or written to another 
+  mailbox.
+
