@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Net-Kismet
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/ChangeLog,v 1.1 2003/04/09 16:58:16 latexer Exp $
+
+*Net-Kismet-0.04 (10 Apr 2003)
+
+  10 Apr 2003; Peter Johanson <latexer@gentoo.org> Net-Kismet-0.04.ebuild:
+  Initial import
+
