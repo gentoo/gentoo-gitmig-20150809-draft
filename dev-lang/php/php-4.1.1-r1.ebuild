@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.1-r1.ebuild,v 1.1 2002/02/06 17:00:46 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.1-r1.ebuild,v 1.2 2002/02/06 17:05:18 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -161,8 +161,6 @@ src_install() {
 }
 
 pkg_config() {
-
-  . ${ROOT}/etc/rc.d/config/functions
 
   if [ -f "${ROOT}/etc/httpd/httpd.conf" ]
   then
