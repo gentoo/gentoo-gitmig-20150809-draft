@@ -94,3 +94,5 @@ move dev-perl/Mail-SpamAssassin mail-filter/spamassassin
 move sys-apps/squashfs-tools sys-fs/squashfs-tools
 move app-admin/fwanalog net-firewall/fwanalog
 move app-misc/lphdisk app-laptop/lphdisk
+move app-misc/proxyper net-misc/proxyper
+
