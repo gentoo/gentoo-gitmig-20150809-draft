@@ -1,0 +1,76 @@
+#!/sbin/runscript
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/files/atalknew-rc6,v 1.1 2003/07/01 21:39:46 mholzer Exp $
+
+# AppleTalk daemons. Make sure not to start atalkd in the background:
+# its data structures must have time to stablize before running the
+# other processes.
+
+depend() {
+	need net
+}
+
+start () {
+	. /etc/netatalk/netatalk.conf
+
+	if [ "${ATALKD_RUN}" != "no" ]; then
+		ebegin "Starting atalkd"
+		start-stop-daemon --start --quiet --exec /usr/sbin/atalkd
+		eend $?
+
+		for reg in \
+			"${ATALK_NAME}:Workstation${ATALK_ZONE}" \
+			"${ATALK_NAME}:netatalk${ATALK_ZONE}"
+		do
+			ebegin "  Registering $reg"
+			/usr/bin/nbprgstr "$reg"
+			eend $?
+		done
+
+		if [ "${PAPD_RUN}" = "yes" ]; then
+			ebegin "  Starting papd"
+			start-stop-daemon --start --quiet --exec /usr/sbin/papd
+			eend $?
+		fi
+
+	fi
+
+	if [ "${AFPD_RUN}" = "yes" ]; then
+		ebegin "Starting afpd"
+		start-stop-daemon --start --quiet --exec /usr/sbin/afpd -- \
+			${AFPD_UAMLIST} -g ${AFPD_GUEST} -c ${AFPD_MAX_CLIENTS} \
+			-n "${ATALK_NAME}${ATALK_ZONE}"
+		eend $?
+	fi
+}
+
+
+stop () {
+	. /etc/netatalk/netatalk.conf
+
+	if [ "${ATALKD_RUN}" != "no" ]; then
+		if [ "${PAPD_RUN}" = "yes" ]; then
+			ebegin "Stopping papd"
+			start-stop-daemon --stop --quiet --exec /usr/sbin/papd
+			eend $?
+		fi
+
+		for reg in \
+			"${ATALK_NAME}:Workstation${ATALK_ZONE}" \
+			"${ATALK_NAME}:netatalk${ATALK_ZONE}"
+		do
+			ebegin "Unregistering $reg"
+			/usr/bin/nbpunrgstr "$reg"
+			eend $?
+		done
+
+		ebegin "Stopping atalkd"
+		start-stop-daemon --stop --quiet --exec /usr/sbin/atalkd
+		eend $?
+	fi
+
+	if [ "${AFPD_RUN}" = "yes" ]; then
+		ebegin "Stopping afpd"
+		start-stop-daemon --stop --quiet --exec /usr/sbin/afpd
+		eend $?
+	fi
+}
