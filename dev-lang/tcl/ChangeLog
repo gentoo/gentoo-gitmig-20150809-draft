@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.25 2004/03/03 02:04:01 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.26 2004/03/04 18:17:42 mholzer Exp $
+
+*tcl-8.4.6 (04 Mar 2004)
+
+  04 Mar 2004; Martin Holzer <mholzer@gentoo.org> tcl-8.4.6.ebuild:
+  Version bumped.
 
   02 Mar 2004; Brian Jackson <iggy@gentoo.org> tcl-8.4.5.ebuild:
   added s390 to keywords
