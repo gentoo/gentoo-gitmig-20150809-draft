@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SSLeay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.24 2004/06/25 00:50:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.25 2004/07/21 22:15:33 tgall Exp $
+
+  21 Jul 2004; Tom Gall <tgall@gentoo.org> Net-SSLeay-1.23.ebuild:
+  stable on ppc64, bug #57585
 
   14 Apr 2004; Michael McCabe <randy@gentoo.org> Net-SSLeay-1.23.ebuild:
   adding s390 keywords
