@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.11 2004/10/03 08:07:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.12 2004/10/29 22:13:21 vapier Exp $
 
 aalib				media-libs/aalib
 adns				net-libs/adns
@@ -66,7 +66,7 @@ samba				net-fs/samba
 scanner				media-gfx/sane-backends
 sdl					media-libs/libsdl
 slang				sys-libs/slang
-snmp				net-analyzer/ucd-snmp
+snmp				net-analyzer/net-snmp
 speex				media-libs/speex
 sqlite				dev-db/sqlite
 ssl					dev-libs/openssl
