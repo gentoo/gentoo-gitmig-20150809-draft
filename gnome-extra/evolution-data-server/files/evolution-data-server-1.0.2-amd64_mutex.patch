@@ -1,0 +1,34 @@
+--- evolution-data-server-1.0.2/libdb/dbinc/mutex.h.old	2004-10-17 17:56:45.286185136 +0100
++++ evolution-data-server-1.0.2/libdb/dbinc/mutex.h	2004-10-17 17:57:11.438209424 +0100
+@@ -754,31 +754,6 @@
+ #endif
+ 
+ /*********************************************************************
+- * x86_64/gcc assembly.
+- *********************************************************************/
+-#ifdef HAVE_MUTEX_X86_64_GCC_ASSEMBLY
+-typedef unsigned char tsl_t;
+-
+-#ifdef LOAD_ACTUAL_MUTEX_CODE
+-/*
+- * For gcc/x86-64, 0 is clear, 1 is set.
+- */
+-#define	MUTEX_SET(tsl) ({						\
+-	register tsl_t *__l = (tsl);					\
+-	int __r;							\
+-	asm volatile("movq $1,%%rax; lock; xchgb %1,%%al; xorq $1,%%rax"\
+-	    : "=&a" (__r), "=m" (*__l)					\
+-	    : "1" (*__l)						\
+-	    );								\
+-	__r & 1;							\
+-})
+-
+-#define	MUTEX_UNSET(tsl)	(*(tsl) = 0)
+-#define	MUTEX_INIT(tsl)		MUTEX_UNSET(tsl)
+-#endif
+-#endif
+-
+-/*********************************************************************
+  * alphalinux/gcc assembly.
+  *********************************************************************/
+ #ifdef HAVE_MUTEX_ALPHA_LINUX_ASSEMBLY

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.0.2.ebuild,v 1.2 2004/10/17 14:45:35 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.0.2.ebuild,v 1.3 2004/10/17 17:11:37 liquidx Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Evolution groupware backend"
 HOMEPAGE="http://www.ximian.com/"
@@ -34,7 +34,8 @@ USE_DESTDIR=1
 
 src_unpack() {
 	unpack ${A}
-	use amd64 && rm ${S}/libdb/dbinc/mutex.h
+	cd ${S}
+	epatch ${FILESDIR}/${P}-amd64_mutex.patch
 }
 
 src_compile() {
