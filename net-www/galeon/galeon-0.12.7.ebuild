@@ -1,14 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.12.5-r3.ebuild,v 1.1 2001/10/25 08:09:39 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.12.7.ebuild,v 1.1 2001/11/10 13:04:49 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small webbrowser for gnome that uses mozillas render engine"
-SRC_URI="http://prdownloads.sourceforge.net/${PN}/${P}.tar.gz"
+SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
+	 http://prdownloads.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://galeon.sourceforge.net"
 
-DEPEND=">=dev-libs/libxml-1.8.15
+DEPEND=">=dev-libs/libxml-1.8.16
         >=dev-util/intltool-0.11
 	>=net-www/mozilla-0.9.5-r1
 	>=gnome-base/libglade-0.17-r1
@@ -17,6 +18,7 @@ DEPEND=">=dev-libs/libxml-1.8.15
 	>=gnome-base/gconf-1.0.4-r2
 	>=gnome-base/oaf-0.6.6-r1
 	nls? ( sys-devel/gettext )"
+
 
 src_compile() {
 
@@ -39,7 +41,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 
 	gconftool --shutdown
 
