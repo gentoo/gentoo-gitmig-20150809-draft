@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/javamail
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.1 2004/04/28 01:57:44 karltk Exp $
+
+*gnu-javamail-20030331 (01 Apr 2004)
+
+  01 Apr 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  javamail-20030331.ebuild: Initial import. Ebuild submitted by myself.
+  No joke.
