@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/regionset
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/regionset/ChangeLog,v 1.3 2004/06/24 22:30:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/regionset/ChangeLog,v 1.4 2004/07/03 09:06:30 kugelfang Exp $
+
+  03 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> regionset-0.1.ebuild:
+  Marked ~amd64.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   regionset-0.1.ebuild:
