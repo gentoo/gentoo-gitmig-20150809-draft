@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.24.ebuild,v 1.7 2004/07/19 06:18:58 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.24.ebuild,v 1.8 2004/07/22 05:46:52 chriswhite Exp $
 
 inherit eutils flag-o-matic
 
@@ -62,7 +62,7 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug=full"
 	use nls || myconf="${myconf} --disable-nls"
 
-	filter-flags -funroll-loops
+	filter-flags -funroll-loops -funroll-all-loops
 	filter-flags -maltivec -mabi=altivec
 
 	econf ${myconf} || die "configure failed"

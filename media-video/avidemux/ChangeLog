@@ -1,6 +1,12 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.45 2004/07/19 06:18:58 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.46 2004/07/22 05:46:52 chriswhite Exp $
+
+  22 Jul 2004; Chris White <chriswhite@gentoo.org> metadata.xml,
+  avidemux-2.0.24.ebuild:
+  Added myself to metadata.xml as package maintainer. Added -funroll-all-loops
+  to the filter-flags list. It appears that both -funroll-loops and
+  -funroll-all-loops both kill the build.
 
   19 Jul 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.24.ebuild:
   Added dependency for automake-1.8.3, fixes bug #57328
