@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.3.ebuild,v 1.3 2004/10/22 11:44:45 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.3.ebuild,v 1.4 2005/02/07 08:33:56 corsair Exp $
 
 inherit eutils
 

@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/jboss
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/ChangeLog,v 1.8 2004/10/22 11:44:45 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/ChangeLog,v 1.9 2005/02/07 08:33:56 corsair Exp $
+
+  07 Feb 2005; Markus Rothe <corsair@gentoo.org> jboss-3.2.5.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jboss-3.2.3.ebuild,
   jboss-3.2.5.ebuild:
