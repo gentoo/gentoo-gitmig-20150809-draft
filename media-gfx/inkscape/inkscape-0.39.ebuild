@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.39.ebuild,v 1.2 2004/07/19 05:53:53 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.39.ebuild,v 1.3 2005/02/28 18:05:17 corsair Exp $
 
 inherit gnome2 eutils
 

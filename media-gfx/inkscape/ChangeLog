@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.13 2005/01/19 20:31:13 zypher Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.14 2005/02/28 18:05:17 corsair Exp $
+
+  28 Feb 2005; Markus Rothe <corsair@gentoo.org> inkscape-0.40-r1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   19 Jan 2005; Marc Hildebrand <zypher@gentoo.org> inkscape-0.40-r1.ebuild:
   Added Radial-patch, closes bug #78592. Thanks to Jens Ansorg for
