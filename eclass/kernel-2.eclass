@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.105 2005/02/27 03:27:52 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.106 2005/03/02 18:54:26 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -418,10 +418,10 @@ setup_headers() {
 
 	if [[ ${H_ACCEPT_ARCH} != "yes" ]]; then
 		echo
-		eerror "This version of ${PN} does not support ${ARCH}."
+		eerror "This version of ${PN} does not support $(tc-arch)."
 		eerror "Please merge the appropriate sources, in most cases"
-		eerror "(but not all) this will be called ${ARCH}-headers."
-		die "Package unsupported for ${ARCH}"
+		eerror "(but not all) this will be called $(tc-arch)-headers."
+		die "Package unsupported for $(tc-arch)"
 	fi
 }
 
