@@ -1,6 +1,10 @@
 # ChangeLog for games-board/xscrabble
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/ChangeLog,v 1.2 2003/09/10 20:22:06 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/ChangeLog,v 1.3 2004/04/13 09:51:28 mr_bones_ Exp $
+
+  13 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> xscrabble-2.10.ebuild:
+  games eclass already inherits eutils; depend on sed >= 4; error check sed; use
+  flag tidy
 
 *xscrabble-2.10 (15 Jul 2003)
 
