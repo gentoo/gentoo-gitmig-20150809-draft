@@ -1,6 +1,9 @@
 # ChangeLog for net-news/gnewspost
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/ChangeLog,v 1.3 2003/08/02 14:52:22 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/ChangeLog,v 1.4 2003/08/14 20:02:19 lisa Exp $
+
+  14 Aug 2003; Lisa Seelye <lisa@gentoo.org> gnewspost-0.6.ebuild:
+  i blame the gremlins for this fix. (silly pwd prob)
 
 *gnewspost-0.6 (07 Dec 2002)
 

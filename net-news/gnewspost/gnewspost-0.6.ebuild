@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/gnewspost-0.6.ebuild,v 1.3 2003/08/02 14:52:22 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/gnewspost-0.6.ebuild,v 1.4 2003/08/14 20:02:19 lisa Exp $
 
 DESCRIPTION="A graphical frontend for newspost, a binary news poster"
 HOMEPAGE="http://www.vectorstar.net/~ash/gnewspost.html"
@@ -21,6 +21,7 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}/src
 	epatch ${FILESDIR}/session.c-fix_errno.patch.gz
 }
 
