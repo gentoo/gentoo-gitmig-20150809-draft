@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.10.ebuild,v 1.6 2004/10/01 10:39:48 kugelfang Exp $
-
-inherit flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.10.ebuild,v 1.7 2004/10/01 10:46:55 scandium Exp $
 
 DESCRIPTION="cryptographic library that is designed to fit easily in any context"
 HOMEPAGE="http://www.lysator.liu.se/~nisse/nettle/"
@@ -20,7 +18,7 @@ DEPEND="virtual/libc
 src_compile() {
 	# BUG #55238 is valid. We need a shared library as well.
 	# Danny van Dyk <kugelfang@gentoo.org> 2004/10/01
-	econf --enable-shared ||die
+	econf --enable-shared || die
 	emake || die
 }
 
