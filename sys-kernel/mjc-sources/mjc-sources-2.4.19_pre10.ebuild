@@ -21,7 +21,7 @@ ETYPE="sources"
 # XXX: FILL THIS STUFF IN =)
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  ftp://ohdarn.net/gentoo/${P}-ac2-mjc.tbz2"
+SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  ftp://ohdarn.net/gentoo/${P}-ac2-mjc3.tar.bz2"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 
@@ -42,7 +42,7 @@ src_unpack() {
 
 # Now we need to deal with the tarball of patches.
 
-    unpack ${P}-ac2-mjc.tbz2
+    unpack ${P}-ac2-mjc3.tar.bz2
 	addpatches gentoo-patches linux-${KV}
 
 	cd linux-${KV}
