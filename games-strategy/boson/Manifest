@@ -1,4 +1,4 @@
-MD5 08ba6c059fefbd7643a9c2a985e740ca files/digest-boson-0.9.1 70
 MD5 6e2be5c616db0fb122713cdc2ad1d760 ChangeLog 1362
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
-MD5 d4219e38ced7ee963a6644ade38d9c51 boson-0.9.1.ebuild 1014
+MD5 150fcd69c38a74f9dbd0f18587e6203d boson-0.9.1.ebuild 1017
+MD5 08ba6c059fefbd7643a9c2a985e740ca files/digest-boson-0.9.1 70
