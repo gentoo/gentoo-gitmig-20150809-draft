@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.34 2003/05/24 06:35:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.35 2003/06/14 00:30:51 weeve Exp $
+
+  13 Jun 2003; Jason Wever <weeve@gentoo.org> files/digest-blackdown-jdk-1.4.1: 
+  Updated digest for sparc.
 
   24 May 2003; Dylan Carlson <absinthe@gentoo.org>
   blackdown-jdk-1.3.1-r10.ebuild, blackdown-jdk-1.3.1-r7.ebuild,
