@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.3.0.ebuild,v 1.4 2004/02/27 13:38:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.3.0.ebuild,v 1.5 2004/03/11 11:18:24 dholm Exp $
 
 MY_P="${PN}-1.3.0-48"
 DESCRIPTION="X11 protocol compression library"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.nomachine.com/"
 SRC_URI="http://www.nomachine.com/download/nxsources/nxcomp/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 DEPEND=">=media-libs/jpeg-6b-r3
 >=media-libs/libpng-1.2.5-r4
 >=sys-devel/gcc-3.2.3-r2
