@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1_alpha1.ebuild,v 1.3 2002/07/25 17:53:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1_alpha1.ebuild,v 1.4 2002/07/26 15:40:20 danarmak Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - base packages: the desktop, panel, window manager, konqueror..."
@@ -32,6 +32,15 @@ use oggvorbis 	&& myconf="$myconf --with-vorbis"	|| myconf="$myconf --without-vo
 use opengl	&& myconf="$myconf --with-gl"		|| myconf="$myconf --without-gl"
 use ssl		&& myconf="$myconf --with-ssl"		|| myconf="$myconf --without-ssl"
 use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"
+
+
+src_compile() {
+
+    kde_src_compile myconf configure
+    kde_remove_flag kdm/kfrontend -fomit-frame-pointer
+    kde_src_compile make
+
+}
 
 src_install() {
 
