@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.27.ebuild,v 1.1 2004/08/09 12:38:08 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.27.ebuild,v 1.2 2004/08/23 05:13:51 voxus Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -19,10 +19,13 @@ S=${WORKDIR}/linux-${KV}
 #   ${OKV}, plus:
 #   ${OKV}  openmosix-migshm-${OKV}-${TIMESTAMP} by voxus
 
-DESCRIPTION="Full sources for the Gentoo openMosix Linux kernel"
-SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://dev.gentoo.org/~voxus/om/patch-${OKV}-om-migshm-${TIMESTAMP}.bz2"
+DESCRIPTION="Full sources for the Gentoo openMosix Linux kernel, including shared memory migration patch (migshm)"
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+		http://dev.gentoo.org/~voxus/om/patch-${OKV}-om-migshm-${TIMESTAMP}.bz2"
 PROVIDE="virtual/linux-sources"
-HOMEPAGE="http://www.kernel.org/ http://www.openmosix.org/ http://dev.gentoo.org/~voxus/om/"
+HOMEPAGE="http://www.kernel.org/
+		http://www.openmosix.org/
+		http://dev.gentoo.org/~voxus/om/"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="-*"
