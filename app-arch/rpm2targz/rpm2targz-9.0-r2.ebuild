@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0-r2.ebuild,v 1.1 2003/10/15 08:27:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0-r2.ebuild,v 1.2 2003/11/15 03:21:24 seemant Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="ia64 x86 sparc ppc alpha hppa amd64 ~mips"
 # NOTE: rpm2targz autodetects rpm2cpio at runtime, and uses it if available,
 #       so we don't explicitly set it as a dependency.
 DEPEND="virtual/glibc
-	sys-apps/cpio
+	app-arch/cpio
 	sys-apps/file"
 
 RDEPEND="$DEPEND sys-apps/util-linux sys-apps/which"
