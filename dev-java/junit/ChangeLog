@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.8 2003/03/14 05:32:00 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.9 2003/04/06 08:48:15 absinthe Exp $
 
 *junit-3.7-r2 (14 Mar 2003)
 
@@ -10,6 +10,9 @@
   to compile.  Closes #17284.
 
 *junit-3.8.1 (14 Oct 2002)
+
+  06 Apr 2003; Dylan Carlson <absinthe@gentoo.org> junit-3.8.1.ebuild:
+  x86 ppc sparc moved to stable.
 
   28 Nov 2002; Adrian Almenar <strider@gentoo.org> junit-3.8.1.ebuild:
   Added app-arch/unzip a dependency. Fixes #11229.
