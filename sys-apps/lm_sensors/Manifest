@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2e3ee0c696d15381a5a28d85ad655d22 lm_sensors-2.8.7.ebuild 5048
-MD5 6ae85617f624374afc8c1c9ca02a7875 ChangeLog 12434
+MD5 10d02598027e3c452d8a3866c0941227 ChangeLog 12614
+MD5 62a0e0181b13d4b79f5c613e23a06447 lm_sensors-2.8.7.ebuild 5061
+MD5 23e4717f0c825c802e5c32190a29065c lm_sensors-2.9.0.ebuild 4810
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
-MD5 b4baf66d920ee32d8acd45dd8572f598 lm_sensors-2.9.0.ebuild 4795
-MD5 6caf3a2ef7bd1503aac7e3c8129c88a8 files/rc 2332
-MD5 62d5eaa6c0f7bec20849a635b32616b6 files/lm_sensors-2.8.8-sensors-detect-gentoo.diff 4843
-MD5 596bd3e0fc473e83d13e6c194e50a3f2 files/lm_sensors-2.8.7-sensors-detect-gentoo.diff 4815
 MD5 311fc2ac49c876ff12c485cb2a53d9ac files/digest-lm_sensors-2.8.7 68
 MD5 7f118aec7c81c482c292c7d228c80119 files/digest-lm_sensors-2.9.0 68
+MD5 596bd3e0fc473e83d13e6c194e50a3f2 files/lm_sensors-2.8.7-sensors-detect-gentoo.diff 4815
+MD5 62d5eaa6c0f7bec20849a635b32616b6 files/lm_sensors-2.8.8-sensors-detect-gentoo.diff 4843
+MD5 6caf3a2ef7bd1503aac7e3c8129c88a8 files/rc 2332
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCId/jI1lqEGTUzyQRAnzGAJsEMGCUvsEuIa/3l4vE/2oRPO+hvwCePDG1
-VMIh4M/gPSHw8e8D+K/Mk9Y=
-=Ly7c
+iD8DBQFCJMyWArHZZzCEUG0RApiUAJ9jqREtszDm+nOwZ4ZVgmrBh8wD6QCfZ8vW
+PplbSgTJyhRWdXVJ2TPJyu0=
+=uwFN
 -----END PGP SIGNATURE-----

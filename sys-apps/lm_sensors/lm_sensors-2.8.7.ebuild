@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.8.7.ebuild,v 1.3 2005/02/27 12:33:54 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.8.7.ebuild,v 1.4 2005/03/01 20:11:55 eradicator Exp $
 
-inherit flag-o-matic eutils toolchain-funcs
+inherit flag-o-matic eutils toolchain-funcs multilib
 
 MYI2C="${WORKDIR}/i2c-headers"
 
@@ -102,14 +102,13 @@ src_compile()  {
 }
 
 src_install() {
-	mkdir -p ${D}/usr/bin
-	mkdir -p ${D}/usr/sbin
+	dodir /usr/bin
+	dodir /usr/sbin
 	if [ ${UserModeOnly} == true ]; then
-		emake DESTDIR=${D} PREFIX=${D}/usr MANDIR=${D}/usr/share/man user_install || die "Install failed!"
+		emake DESTDIR=${D} LIBDIR=/usr/$(get_libdir) PREFIX=/usr MANDIR=/usr/share/man user_install || die "Install failed!"
 	else
-		emake LINUX=$LINUX DESTDIR=${D} PREFIX=${D}/usr MANDIR=${D}/usr/share/man install || die "Install failed!"
+		emake LINUX=$LINUX DESTDIR=${D} LIBDIR=/usr/$(get_libdir) PREFIX=/usr MANDIR=/usr/share/man install || die "Install failed!"
 	fi
-	cp ${D}/${D}* ${D} -Rf
 	rm ${D}/var -Rf
 
 	exeinto /etc/init.d
