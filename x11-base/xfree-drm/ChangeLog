@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.65 2004/04/08 23:08:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.66 2004/04/08 23:09:54 spyderous Exp $
+
+  08 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-drm-4.3.0-r8.ebuild:
+  Change KEYWORDS to ~x86 only, at genone's request.
 
   08 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-drm-4.3.0-r8.ebuild:
