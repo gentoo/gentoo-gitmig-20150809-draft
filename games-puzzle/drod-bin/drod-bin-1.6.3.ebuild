@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.3.ebuild,v 1.1 2003/11/19 08:54:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.3.ebuild,v 1.2 2003/11/19 20:31:41 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,7 +14,8 @@ LICENSE="MPL-1.1"
 SLOT="0"
 IUSE=""
 
-RDEPEND="virtual/x11"
+RDEPEND="virtual/x11
+	>=media-libs/sdl-ttf-2.0.6"
 
 src_unpack() {
 	unpack_makeself ${A}
