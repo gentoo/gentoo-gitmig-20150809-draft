@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.21.4.10.8.ebuild,v 1.4 2004/11/22 17:40:42 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.21.4.10.8.ebuild,v 1.5 2004/12/11 15:49:41 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://fy.chalmers.se/~appro/linux/DVD+RW/tools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~hppa ~amd64 ~alpha ~ia64"
+KEYWORDS="x86 ppc sparc ~hppa ~amd64 alpha ~ia64"
 IUSE=""
 
 DEPEND="virtual/libc
