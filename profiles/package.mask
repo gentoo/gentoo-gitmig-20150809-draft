@@ -117,6 +117,9 @@ x11-themes/gtk-xfce-engine
 >=net-libs/linc-0.5.2
 >=gnome-base/ORBit2-2.4.1
 
+# Gabriele Giorgetti <stroke@gentoo.org> (05 Aug 2002)
+# other gnome2 packages masked for testing
+>=gnome-base/gdm-2.4.0.5
 
 # Donny Davies <woodchip@gentoo.org> (03 Aug 2002)
 # Needs to wait for the next baselayout release.
