@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.38 2004/06/29 17:28:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.39 2004/06/30 18:10:28 plasmaroo Exp $
+
+*usermode-sources-2.6.6-r2 (30 Jun 2004)
+
+  30 Jun 2004; <plasmaroo@gentoo.org> -usermode-sources-2.6.6-r1.ebuild,
+  +usermode-sources-2.6.6-r2.ebuild,
+  +files/usermode-sources-2.6.IPTables-RDoS.patch:
+  Version bump for the 2.6 IPTables RDoS vulnerability; bug #55694.
 
 *usermode-sources-2.4.24-r5 (29 Jun 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.6-r1.ebuild,v 1.2 2004/06/24 23:01:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.6-r2.ebuild,v 1.1 2004/06/30 18:10:28 plasmaroo Exp $
 
 K_NOUSENAME="yes"
 ETYPE="sources"
@@ -13,7 +13,7 @@ KV="${OKV}${EXTRAVERSION}"
 S="${WORKDIR}/linux-${KV}"
 IUSE=""
 
-UNIPATCH_LIST="${DISTDIR}/${UML_PATCH}.bz2 ${FILESDIR}/${P}.FPULockup-53804.patch"
+UNIPATCH_LIST="${DISTDIR}/${UML_PATCH}.bz2 ${FILESDIR}/${P}.FPULockup-53804.patch ${FILESDIR}/${PN}-2.6.IPTables-RDoS.patch"
 
 DESCRIPTION="Full (vanilla) sources for the User Mode Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${PV}.tar.bz2
