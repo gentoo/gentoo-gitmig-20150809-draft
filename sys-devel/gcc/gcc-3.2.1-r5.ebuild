@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r5.ebuild,v 1.4 2002/11/30 21:53:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r5.ebuild,v 1.5 2002/12/03 10:26:18 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -274,12 +274,15 @@ src_install() {
 	
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
-	echo "PATH=${BINPATH}" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "ROOTPATH=${BINPATH}" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "LDPATH=${LIBPATH}" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "MANPATH=${DATAPATH}/man" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "INFOPATH=${DATAPATH}/info" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "STDCXX_INCDIR=${STDCXX_INCDIR##*/}" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	# Also set CC and CXX
+	echo "CC=\"gcc\"" >> ${D}/etc/env.d/05gcc
+	echo "CXX=\"g++\"" >> ${D}/etc/env.d/05gcc
 	
 	# Dummies to get CONTENTS right .. will handle with gcc-config
 	touch ${D}/lib/cpp

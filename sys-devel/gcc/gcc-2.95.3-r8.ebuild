@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.2 2002/11/21 20:48:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.3 2002/12/03 10:26:18 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -88,7 +88,7 @@ pkg_setup() {
 	eerror "This is a very alpha ebuild and changes in here"
 	eerror "are not yet set in stone!  Please do NOT merge"
 	eerror "this if you are not a developer!"
-	die
+#	die
 }
 
 src_unpack() {
@@ -229,12 +229,15 @@ src_install() {
 	
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
-	echo "PATH=${BINPATH}" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "ROOTPATH=${BINPATH}" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "LDPATH=${LIBPATH}" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "MANPATH=${DATAPATH}/man" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "INFOPATH=${DATAPATH}/info" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "STDCXX_INCDIR=${STDCXX_INCDIR##*/}" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	# Also set CC and CXX
+	echo "CC=\"gcc\"" >> ${D}/etc/env.d/05gcc
+	echo "CXX=\"gcc\"" >> ${D}/etc/env.d/05gcc
 	
 	# Dummies to get CONTENTS right .. will handle with gcc-config
 	touch ${D}/lib/cpp

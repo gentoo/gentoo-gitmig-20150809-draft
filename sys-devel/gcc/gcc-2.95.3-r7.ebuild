@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.12 2002/10/05 05:39:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.13 2002/12/03 10:26:18 azarah Exp $
 
 IUSE="nls static build"
 
@@ -126,8 +126,11 @@ src_install() {
 	dosym g++ /usr/bin/${CHOST}-g++
 	dosym g++ /usr/bin/${CHOST}-c++
 	dodir /etc/env.d
-	echo "LDPATH=${LOC}/lib/gcc-lib/${CHOST}/${PV}" > \
+	echo "LDPATH=\"${LOC}/lib/gcc-lib/${CHOST}/${PV}\"" > \
 		${D}/etc/env.d/05gcc
+	# Also set CC and CXX
+	echo "CC=\"gcc\"" >> ${D}/etc/env.d/05gcc
+	echo "CXX=\"gcc\"" >> ${D}/etc/env.d/05gcc
 	
 	cd ${S}
     if [ -z "`use build`" ]

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r1.ebuild,v 1.6 2002/10/13 01:25:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r1.ebuild,v 1.7 2002/12/03 10:26:18 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -248,7 +248,11 @@ src_install() {
 	cd ${FULLPATH_D}
 	dodir /lib
 	dodir /etc/env.d
-	echo "LDPATH=${FULLPATH}" > ${D}/etc/env.d/05gcc${GCC_SUFFIX}
+	echo "LDPATH=\"${FULLPATH}\"" > ${D}/etc/env.d/05gcc${GCC_SUFFIX}
+	# Also set CC and CXX
+	echo "CC=\"gcc\"" >> ${D}/etc/env.d/05gcc
+	echo "CXX=\"g++\"" >> ${D}/etc/env.d/05gcc
+	
 	if ! build_multiple
 	then
 		dosym /usr/bin/cpp /lib/cpp

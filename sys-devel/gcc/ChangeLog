@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.44 2002/12/01 14:41:16 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.45 2002/12/03 10:26:18 azarah Exp $
+
+  03 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Also set CC and CXX in /etc/env.d/05gcc.
 
   01 Dec 2002; Olivier Reisch <doctomoe@gentoo.org> gcc-3.2-r4.ebuild :
   Definitely fine now, marking it ppc stable. Moving on to 3.2.1 :)
