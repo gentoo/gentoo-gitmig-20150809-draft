@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.4.ebuild,v 1.1 2004/04/04 18:59:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.4.ebuild,v 1.2 2004/04/17 07:20:25 eradicator Exp $
+
+inherit eutils
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -17,6 +19,13 @@ RESTRICT="nomirror"
 S=${WORKDIR}/${MY_P}
 
 IUSE=""
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-alsaconf.patch
+}
 
 src_install() {
 	local ALSA_UTILS_DOCS="COPYING ChangeLog README TODO
