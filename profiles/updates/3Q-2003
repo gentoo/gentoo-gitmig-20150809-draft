@@ -36,3 +36,7 @@ move dev-lisp/apel app-emacs/apel
 move dev-lisp/flim app-emacs/flim
 move dev-lisp/semi app-emacs/semi
 move dev-lang/mono dev-dotnet/mono
+move dev-lang/pnet dev-dotnet/pnet
+move dev-libs/pnetlib dev-dotnet/pnetlib
+move dev-libs/pnetc dev-dotnet/pnetc
+move dev-libs/ml-pnet dev-dotnet/ml-pnet
