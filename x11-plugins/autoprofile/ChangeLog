@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/autoprofile
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.10 2004/08/08 01:00:02 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.11 2004/09/01 21:01:23 rizzo Exp $
+
+*autoprofile-2.08 (01 Sep 2004)
+
+  01 Sep 2004; Don Seiler <rizzo@gentoo.org> +autoprofile-2.08.ebuild:
+  Version bump
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> autoprofile-2.07.ebuild:
   Typo in DESCRIPTION: messanger -> messenger. Bug 59717.
