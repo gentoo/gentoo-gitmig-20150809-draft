@@ -9,6 +9,7 @@ MD5 b2bbec5436bdde9d96fadb226094240b uim-0.0.4.ebuild 1257
 MD5 1351331f2dbb566ce29a72cece58f98e uim-0.0.5.1.ebuild 1260
 MD5 7e653cc15b5e2e74274901f7c65f2006 uim-0.0.9.ebuild 1341
 MD5 993ce087e3eaf2af9cd5353f08b8cf4b uim-0.1.0.ebuild 1341
+MD5 e2d9d90f89eddd77205db5692acba037 uim-0.1.1.ebuild 1341
 MD5 ce0790ea47ad3e6fa7f278280347bdc8 files/digest-uim-0.0.6 61
 MD5 abb84a3c6eeedff4d27a3b19140bfdd0 files/digest-uim-0.0.7 61
 MD5 a88b71d0947ba7b154e4cb9a81f0d021 files/digest-uim-0.0.8 61
@@ -18,3 +19,4 @@ MD5 9754fdb90fd0f136a56c840d8a7e36b0 files/digest-uim-0.0.4 61
 MD5 9ea167a765d129111df2e5651e919c24 files/digest-uim-0.0.5.1 63
 MD5 ee50bd30fd77342fe2dcb2293c3a55ed files/digest-uim-0.0.9 61
 MD5 f87c14b6862a5a17ad3b0fdeeba4f500 files/digest-uim-0.1.0 61
+MD5 1e76da65b5bbccc28af72d11210500e2 files/digest-uim-0.1.1 61
