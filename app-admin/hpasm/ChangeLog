@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hpasm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/ChangeLog,v 1.8 2004/06/29 19:38:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/ChangeLog,v 1.9 2004/12/10 22:09:25 ticho Exp $
+
+  10 Dec 2004; Andrej Kacian <ticho@gentoo.org> hpasm-6.30.0.12-r1.ebuild:
+  mail-client/mailx -> virtual/mailx
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> hpasm-6.30.0.12-r1.ebuild:
   sync IUSE (+snmp)

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.14 2004/06/29 19:38:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.15 2004/12/10 22:09:25 ticho Exp $
 
 inherit rpm
 
@@ -18,7 +18,7 @@ RDEPEND="snmp? ( net-analyzer/net-snmp )"
 
 DEPEND="${RDEPEND}
 	virtual/linux-sources
-	mail-client/mailx
+	virtual/mailx
 	app-arch/rpm2targz"
 
 src_unpack() {
