@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.18 2002/09/23 17:59:12 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.19 2002/09/30 15:36:31 agenkin Exp $
+
+*cdrtools-1.11.35 (30 Sep 2002)
+
+  30 Sep 2002; Arcady Genkin <agenkin@thpoon.com> cdtrools-1.11.35.ebuild :
+
+  Version bump to 1.11a35.
 
 *cdrtools-1.11.34 (23 Sep 2002)
 
