@@ -9,7 +9,7 @@ cd ${D}
 for i in opt/*/lib lib usr/lib usr/X11R6/lib
 do
 	[ -d $i ] && continue
-	for j in `ls $i/*.so.* $i/*.so`
+	for j in $i/*.so.* $i/*.so
 	do
 		[ -L $j ] && continue
 		chmod +x $j

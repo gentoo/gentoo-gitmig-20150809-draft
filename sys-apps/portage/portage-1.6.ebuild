@@ -1,33 +1,27 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.4.ebuild,v 1.4 2001/08/26 04:45:43 drobbins Exp $
+# Author: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.6.ebuild,v 1.1 2001/08/26 04:45:43 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
-SRC_URI=""
+SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 #debianutils is for "readlink"
 RDEPEND="sys-devel/spython sys-apps/debianutils"
-PPV=1.5
-
-src_unpack() {
-	mkdir ${S}
-	cp ${FILESDIR}/${PPV}/src/*.c ${S}
-}
 
 src_compile() {                           
-	gcc ${CFLAGS} tbz2tool.c -o tbz2tool
+	cd ${S}/src; gcc ${CFLAGS} tbz2tool.c -o tbz2tool
 }
 
 src_install() {
 	#config files
-	cd ${FILESDIR}/${PPV}/cnf
+	cd ${S}/cnf
 	insinto /etc
 	doins make.globals make.conf
 
 	#python modules
-	cd ${FILESDIR}/${PPV}/pym
+	cd ${S}/pym
 	insinto /usr/lib/portage/pym
 	doins xpak.py portage.py
 	dodir /usr/lib/python2.0/site-packages
@@ -41,11 +35,11 @@ src_install() {
 	
 	#binaries and scripts
 	dodir /usr/lib/portage/bin
-	cd ${FILESDIR}/${PPV}/bin
+	cd ${S}/bin
 	exeinto /usr/lib/portage/bin
 	doexe *
 	dosym emake /usr/lib/portage/bin/pmake
-	doexe ${S}/tbz2tool
+	doexe ${S}/src/tbz2tool
 
 	#symlinks
 	dodir /usr/bin /usr/sbin
@@ -62,11 +56,11 @@ src_install() {
     if [ -z "`use build`" ] && [ -z "`use bootcd`" ]
     then
 	  #man pages
-	  doman ${FILESDIR}/${PPV}/man/*.[15]
+	  doman ${S}/man/*.[15]
 
 	  #docs
-	  dodoc ${FILESDIR}/${PPV}/doc/*
-   fi
+	  dodoc ${S}/doc/*
+	fi
 	dodir /var/tmp
 	chmod 1777 ${D}/var/tmp
 }
@@ -75,7 +69,7 @@ pkg_postinst() {
 	if [ ! -e ${ROOT}/etc/make.profile ]
 	then
 		cd ${ROOT}/etc
-		ln -s /usr/portage/profiles/default make.profile
+		ln -s ../usr/portage/profiles/default make.profile
 	fi
 	local x
 	for x in portage xpak
