@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r6.ebuild,v 1.3 2004/04/26 17:24:41 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r6.ebuild,v 1.4 2004/05/20 16:29:53 carpaski Exp $
 
-IUSE="build"
+IUSE="build multilib"
 
 # If the old /lib/sandbox.so is in /etc/ld.so.preload, it can
 # cause everything to segfault !!
@@ -39,11 +39,18 @@ src_unpack() {
 src_compile() {
 	cd ${S}/src; ${CC:-gcc} ${CFLAGS} tbz2tool.c -o tbz2tool
 	cd ${S}/src/sandbox-1.1
-	if [ "${ARCH}" = "x86" ]; then
+	case ${ARCH} in
+		"x86")
 		make CFLAGS="-march=i386 -O1 -pipe" || die
-	else
+			;;
+		"amd64") 
+			use multilib && einfo "Building with multilib support on amd64"
+			make CFLAGS="-O2 -pipe" HAVE_64BIT_ARCH="`use multilib`" || die
+			;;
+		*)
 		make || die
-	fi
+			;;
+	esac
 	cd ${S}/bin
 }
 
@@ -112,7 +119,9 @@ src_install() {
 	#install sandbox
 	cd ${S}/src/sandbox-1.1
 	make clean
-	make DESTDIR=${D} install || die "Failed to compile sandbox"
+	make DESTDIR=${D} \
+		HAVE_64BIT_ARCH="`use amd64 && use multilib`" \
+		install || die "Failed to compile sandbox"
 
 	#symlinks
 	dodir /usr/bin /usr/sbin
