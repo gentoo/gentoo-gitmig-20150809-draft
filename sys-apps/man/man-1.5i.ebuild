@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5.1h-r2.ebuild,v 1.2 2001/04/06 20:16:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i.ebuild,v 1.1 2001/05/08 01:30:15 achim Exp $
 
-P=man-1.5h1 
+P=man-1.5i
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard commands to read man pages"
