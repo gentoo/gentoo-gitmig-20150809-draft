@@ -828,7 +828,6 @@ app-admin/va-systemimager-client
 >=berlin-base/berlin-0.2.2
 
 # broken
->=net-dialup/isdn4k-utils-3.1_p1-r2
 >=net-news/knews-1.0.1b
 >=net-www/konqueror-embedded-20010207
 =sys-apps/vcron-3.0_p1-r2
