@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The net-fs category contains network filesystem packages.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie net-fs enthält Netzwerkdateisysteme.
+	</longdescription>
 </catmetadata>
 
