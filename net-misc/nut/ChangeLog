@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.19 2003/10/17 16:00:53 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.20 2003/10/20 10:37:12 robbat2 Exp $
+
+*nut-1.5.6-r1 (20 Oct 2003)
+*nut-1.4.0-r2 (20 Oct 2003)
+
+  20 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> nut-1.4.0-r2.ebuild,
+  nut-1.5.6-r1.ebuild, files/upsd.rc6, files/upsdrv.rc6, files/upsmon.rc6:
+  add seperate upsdrv init script, make sure it gets called properly, fixes bug
+  #31572
 
 *nut-1.5.6 (17 Oct 2003)
 
