@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.10-r1.ebuild,v 1.1 2004/11/20 01:02:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.10-r1.ebuild,v 1.2 2004/12/02 20:51:02 dragonheart Exp $
 
 inherit eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 	cd ${S}
 	### comment out the docs with this patch to minimize depenencies
 	useq doc || epatch ${FILESDIR}/${P}-nodocs.patch
+	epatch ${FILESDIR}/log4c-1.0.11-function.patch  || die "failed to patch"
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4c
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/ChangeLog,v 1.20 2004/11/21 08:58:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/ChangeLog,v 1.21 2004/12/02 20:51:02 dragonheart Exp $
+
+  03 Dec 2004; Daniel Black <dragonheart@gentoo.org> log4c-1.0.10-r1.ebuild:
+  patched to fix selftest failure - bug #70529. Thanks Lee and Aaron
 
   21 Nov 2004; Daniel Black <dragonheart@gentoo.org>
   +files/log4c-1.0.11-function.patch, +files/log4c-1.0.12-function.patch,
