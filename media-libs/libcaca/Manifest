@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c58c81dcba3f1a86cce17a8ed17a7e13 ChangeLog 1770
-MD5 b952b4f3a51703bbd1e503811ee80f97 libcaca-0.9-r1.ebuild 1307
-MD5 5803deb24638705484736c09a13790bb libcaca-0.9.ebuild 1070
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+MD5 5803deb24638705484736c09a13790bb libcaca-0.9.ebuild 1070
+MD5 7e5062b31484e2e20f1c0360c75c31a6 libcaca-0.9-r1.ebuild 1375
+MD5 b74aa05e5d6b2a7d9b7108a84d6b82d7 files/digest-libcaca-0.9 63
 MD5 b74aa05e5d6b2a7d9b7108a84d6b82d7 files/digest-libcaca-0.9-r1 63
 MD5 8f10a784d1326f49c14a32fb0bcdc430 files/libcaca-0.9-libtool.patch 4596
-MD5 b74aa05e5d6b2a7d9b7108a84d6b82d7 files/digest-libcaca-0.9 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBjENHHTu7gpaalycRAkAYAKDEHJdjpib6QEMWcCTEg2dUTECDugCgujI8
+TRzgWm3ueLSFtOcbDhp3TDA=
+=h3eg
+-----END PGP SIGNATURE-----
