@@ -1,8 +1,11 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.14 2003/02/18 10:06:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.15 2003/03/03 16:02:35 weeve Exp $
 
 *dillo-0.7.0 (18 Feb 2003)
+
+  03 Mar 2003; Jason Wever <weeve@gentoo.org> dillo-0.7.0.ebuild:
+  Marked stable for sparc.
 
   18 Feb 2003;  <seemant@gentoo.org> dillo-0.7.0.ebuild files/digest-dillo-0.7.0 :
   version bump, thanks to Rach
