@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-1.4.1.ebuild,v 1.7 2001/11/10 12:45:09 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-1.4.1.ebuild,v 1.8 2001/11/15 05:35:14 achim Exp $
 
 
 S=${WORKDIR}/${P}
@@ -14,6 +14,12 @@ HOMEPAGE="http://www.kde.org/"
 DEPEND=">=kde-base/kdelibs-${PV} sys-devel/flex sys-devel/perl"
 RDEPEND=">=kde-base/kdelibs-${PV}"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+}
+
 src_compile() {
     local myconf
     if [ "`use qtmt`" ]
@@ -23,7 +29,8 @@ src_compile() {
       myconf="$myconf --enable-mitshm"
     ./configure --host=${CHOST} \
 		$myconf || die
-    make || die
+    
+    make LIBS=-lfl || die
 
 }
 

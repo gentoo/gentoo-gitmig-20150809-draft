@@ -1,0 +1,22 @@
+--- kdevelop/dbg/vartree.cpp~	Wed Feb  7 22:42:18 2001
++++ kdevelop/dbg/vartree.cpp	Thu Nov 15 05:40:29 2001
+@@ -493,7 +493,7 @@
+ QString VarItem::fullName() const
+ {
+   QString itemName(getName());
+-  ASSERT (itemName);
++  ASSERT (!itemName.isEmpty());
+   QString vPath = varPath();
+   if (itemName[0] == '<')
+     return vPath;
+--- kdevelop/dbg/disassemble.cpp~	Thu Feb  8 08:33:55 2001
++++ kdevelop/dbg/disassemble.cpp	Thu Nov 15 05:42:45 2001
+@@ -142,7 +142,7 @@
+ {
+   if (address_)
+   {
+-    ASSERT(currentAddress_);
++    ASSERT(!currentAddress_.isEmpty());
+ 
+     // restrict this to a managable size - some functions are _big_
+     QString endAddress;
