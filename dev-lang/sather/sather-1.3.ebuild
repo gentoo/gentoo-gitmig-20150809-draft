@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@uwyn.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.2 2002/03/19 14:50:52 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.3 2002/03/19 14:58:09 gbevin Exp $
 
 S="${WORKDIR}/Sather-1.3"
 DESCRIPTION="Sather is an object oriented language designed to be simple, efficient, safe, flexible and non-proprietary."
@@ -50,7 +50,12 @@ src_install () {
 	cp -a ${WORKDIR}/Sather-1.3 ${D}/usr/sather
 	rm -rf ${D}/usr/sather/bin/sacomp.code
 	rm -rf ${D}/usr/sather/bin/sacomp-boot.code
+	rm -rf ${D}/usr/sather/sacomp
+	rm -rf ${D}/usr/sather/sacomp-boot
 	rm -rf ${D}/usr/sather/system
+	mkdir ${D}/usr/sather/system
+	cp ${WORKDIR}/Sather-1.3/system/CONFIG ${D}/usr/sather/system
+	cp ${WORKDIR}/Sather-1.3/system/FORBID ${D}/usr/sather/system
 	
 	cd ${WORKDIR}
 	dodoc doc/sather-specification-000328.ps.gz doc/sather-tutorial-000328.ps.gz doc/satish-thatte.ps.gz doc/Descript.ps.gz
