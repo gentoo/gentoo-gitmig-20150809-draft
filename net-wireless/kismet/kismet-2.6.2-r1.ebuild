@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.6.2-r1.ebuild,v 1.8 2003/07/19 20:52:37 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.6.2-r1.ebuild,v 1.9 2003/09/07 00:19:18 msterret Exp $
 
 DESCRIPTION="Kismet is a 802.11b wireless network sniffer."
 HOMEPAGE="http://www.kismetwireless.net/"
@@ -22,7 +22,7 @@ src_compile() {
 	use acpi && myconf="${myconf} --enable-acpi"
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 	use gps || myconf="${myconf} --disable-gps"
-	
+
 	cd ${WORKDIR}/ethereal-0.9.7
 	econf
 
@@ -47,7 +47,7 @@ src_compile() {
 	sed -e "s/\/usr\/local/\/usr/g" kismet_ui.conf.orig > kismet_ui.conf
 	rm -f kismet.conf.orig kismet_ui.conf.orig
 
-	cd ${S} 
+	cd ${S}
 	make dep || die "make dep for kismet failed"
 	emake || die "compile of kismet failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre1.ebuild,v 1.1 2003/04/09 21:02:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre1.ebuild,v 1.2 2003/09/07 00:19:18 msterret Exp $
 
 
 inherit eutils
@@ -16,7 +16,7 @@ MY_P=${PN}-${PV/_/-}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="The linux-wlan Project"
-SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${MY_P}.tar.gz 
+SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${MY_P}.tar.gz
 		mirror://gentoo/${PN}-gentoo-init.gz
 		pcmcia?	( mirror://sourceforge/pcmcia-cs/${PCMCIA_CS}.tar.gz )
 		pcmcia? ( mirror://gentoo/${PATCH_3_2_2} )
@@ -39,10 +39,10 @@ else
 	MY_ARCH="ppc"
 fi
 
-# Note: To use this ebuild, you should have the usr/src/linux symlink to 
+# Note: To use this ebuild, you should have the usr/src/linux symlink to
 # the kernel directory that linux-wlan-ng should use for configuration.
 #
-# linux-wlan-ng requires a configured pcmcia-cs source tree.  
+# linux-wlan-ng requires a configured pcmcia-cs source tree.
 # unpack/configure it in WORKDIR.  No need to compile it though.
 
 src_unpack() {
@@ -94,9 +94,9 @@ src_compile() {
 
 	#
 	# configure pcmcia-cs - we need this for wlan to compile
-	# use same USE flags that the pcmcia-cs ebuild does.  
+	# use same USE flags that the pcmcia-cs ebuild does.
 	# no need to actually compile pcmcia-cs...
-	# * This is actually only used if pcmcia_cs is NOT compiled into 
+	# * This is actually only used if pcmcia_cs is NOT compiled into
 	# the kernel tree.
 	#
 
@@ -120,14 +120,14 @@ src_compile() {
 		else
 			myconf="$myconf --nopnp"
 		fi
-		
+
 		if [ -n "`use nocardbus`" ] ; then
 			myconf="$myconf --nocardbus"
 		else
 			myconf="$myconf --cardbus"
 		fi
 
-		#use $CFLAGS for user tools, but standard kernel optimizations for 
+		#use $CFLAGS for user tools, but standard kernel optimizations for
 		#the kernel modules (for compatibility)
 		./Configure -n \
 			--target=${D} \
@@ -156,7 +156,7 @@ src_compile() {
 		config.in > default.config
 	fi
 	mv default.config config.in
-	
+
 	if [ -n "`use usb`" ]; then
 		sed -e 's:PRISM2_USB=n:PRISM2_USB=y:' \
 			config.in > default.config

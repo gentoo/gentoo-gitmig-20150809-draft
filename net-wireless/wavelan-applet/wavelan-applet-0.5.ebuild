@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Authour: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavelan-applet/wavelan-applet-0.5.ebuild,v 1.5 2003/08/31 02:03:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavelan-applet/wavelan-applet-0.5.ebuild,v 1.6 2003/09/07 00:19:18 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Panel applet that shows the strength of a wavelan connection"
@@ -24,7 +24,7 @@ src_unpack() {
 	cd ${S}
 	patch -p1 < ${FILESDIR}/wavelan-0.5-nosegfault.patch
 }
-	
+
 
 src_compile() {
   	./configure --host=${CHOST} \

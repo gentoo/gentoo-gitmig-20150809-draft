@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-0.0.4.ebuild,v 1.1 2003/07/28 16:29:54 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-0.0.4.ebuild,v 1.2 2003/09/07 00:19:18 msterret Exp $
 
 inherit eutils
 
@@ -52,13 +52,13 @@ src_unpack() {
 		-e "s:-O2:${CFLAGS}:" \
 		-e "s:\$(EXTRA_CFLAGS):\$(EXTRA_CFLAGS) -DPRISM2_HOSTAPD:" \
 		${T}/Makefile > Makefile
-	
+
 	if [ -n "`use pcmcia`" ] || [[ "${HOSTAP_DRIVERS}" == *pccard* ]]; then
 		mv Makefile ${T}
 		sed -e "s:^PCMCIA_PATH=:PCMCIA_PATH=${WORKDIR}/${MY_PCMCIA}:" \
 			${T}/Makefile > Makefile
 	fi
-	
+
 	cd ${S}/hostapd
 	mv Makefile ${T}
 	sed -e "s:gcc:${CC}:" \
@@ -69,7 +69,7 @@ src_unpack() {
 src_compile() {
 
 	local mydrivers
-	
+
 	use pcmcia && mydrivers="${mydrivers} pccard"
 	use hostap-nopci || mydrivers="${mydrivers} pci"
 	use hostap-noplx || mydrivers="${mydrivers} plx"
