@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.48 2003/07/25 21:08:44 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.49 2003/07/27 14:46:02 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -28,8 +28,8 @@ perl-module_src_prep() {
 	if [ "${style}" == "builder" ]; then
 		perl ${S}/Build.PL installdirs=vendor destdir=${D}
 	else
-		perl Makefile.PL INSTALLDIRS=vendor ${myconf} \
-		PREFIX=${D}/usr
+		perl Makefile.PL ${myconf} \
+		PREFIX=${D}/usr INSTALLDIRS=vendor 
 	fi
 
 }
