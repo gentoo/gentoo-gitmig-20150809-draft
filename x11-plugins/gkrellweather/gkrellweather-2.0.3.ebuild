@@ -20,13 +20,18 @@ DEPEND="=app-admin/gkrellm-2*
 RDEPEND="${DEPEND}
 	>=sys-devel/perl-5.6.1"
 
-src_compile() {
-	
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
 	ssed -i \
-		-e "s:/usr/local/bin:/usr/bin:g" \
+		-e "s:/usr/local/bin:/usr/share/gkrellm:g" \
 		-e "s:GrabWeather:GrabWeather2:g" \
 		gkrellweather.c
 
+}
+
+src_compile() {
 	emake || die
 }
 
