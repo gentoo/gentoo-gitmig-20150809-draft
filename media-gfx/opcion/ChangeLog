@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/opcion
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/ChangeLog,v 1.1 2004/10/02 07:01:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/ChangeLog,v 1.2 2004/10/16 23:11:21 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> opcion-1.1.1.ebuild:
+  dojar --> java-pkg_dojar
 
 *opcion-1.1.1 (02 Oct 2004)
 
