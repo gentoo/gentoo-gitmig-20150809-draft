@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ruby-gtk-0.34-r1.ebuild,v 1.1 2003/12/11 17:16:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ruby-gtk-0.34-r1.ebuild,v 1.2 2003/12/26 16:56:39 weeve Exp $
 
 inherit ruby-gnome2 ruby
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ruby-gnome/ruby-gnome-all-${PV}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
 USE_RUBY="ruby16 ruby18"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~x86 ~alpha ~sparc"
 
 DEPEND=">=dev-lang/ruby-1.6.8-r2
 	=x11-libs/gtk+-1.2*"
