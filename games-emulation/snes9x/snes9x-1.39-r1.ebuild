@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-139-r1.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.39-r1.ebuild,v 1.1 2003/10/03 20:48:05 vapier Exp $
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://www.snes9x.com/"
-SRC_URI="http://www.snes9x.com/zips/s9xs${PV}.zip"
+SRC_URI="http://www.snes9x.com/zips/s9xs${PV/.}.zip"
 
 LICENSE="as-is"
 KEYWORDS="x86 ~ppc"

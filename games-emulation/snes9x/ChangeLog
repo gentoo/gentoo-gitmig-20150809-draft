@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.2 2003/09/10 16:03:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.3 2003/10/03 20:48:05 vapier Exp $
+
+*snes9x-1.41.1 (03 Oct 2003)
+
+  03 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage #25935.
 
 *snes9x-139-r1 (20 Feb 2003)
 
