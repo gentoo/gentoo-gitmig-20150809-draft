@@ -49,4 +49,3 @@ virtual/mpg123		media-sound/mpg123
 virtual/dhcpc		net-misc/dhcpcd
 virtual/ruby		dev-lang/ruby
 virtual/squeak-image	dev-lang/squeak-fullimage
-virtual/linux-sources	virtual/ppc-sources
