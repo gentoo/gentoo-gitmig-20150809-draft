@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfpx
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/ChangeLog,v 1.10 2004/11/04 15:23:52 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/ChangeLog,v 1.11 2004/11/06 14:16:09 corsair Exp $
+
+  06 Nov 2004; Markus Rothe <corsair@gentoo.org> libfpx-1.2.0.9.ebuild:
+  Stable on ppc64; dependency of bug #69825
 
   04 Nov 2004; Olivier Crete <tester@gentoo.org> libfpx-1.2.0.9.ebuild:
   Stable on x86 wrt #69825
