@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gens
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.5 2003/09/29 06:09:22 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.6 2004/03/24 06:47:34 mr_bones_ Exp $
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gens-2.12a.ebuild:
+  don't rdepend on sed, nasm and unzip
 
   28 Sep 2003; Michael Sterrett <mr_bones_@gentoo.org> gens-2.12a.ebuild:
   don't use emake for install; add error message
