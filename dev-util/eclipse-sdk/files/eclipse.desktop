@@ -1,8 +1,9 @@
 [Desktop Entry]
 Name=Eclipse
 Comment=A Java Development Environment
-Icon=/opt/eclipse/icon.xpm
-Exec=/opt/eclipse/eclipse
+Icon=/usr/lib/eclipse/icon.xpm
+Exec=/usr/bin/eclipse
 Terminal=false
 Type=Application
-StartupNotify=false
+Categories=GNOME;Application;Development
+StartupNotify=true
