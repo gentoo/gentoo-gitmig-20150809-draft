@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.52 2005/02/01 14:23:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.53 2005/02/04 22:41:53 kloeri Exp $
+
+  04 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
+  vixie-cron-4.1-r4.ebuild:
+  Stable on alpha, bug 80271.
 
   01 Feb 2005; Markus Rothe <corsair@gentoo.org> vixie-cron-4.1-r4.ebuild:
   Stable on ppc64; bug #80271
