@@ -1,40 +1,40 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jai-bin/jai-bin-1.1.2-r3.ebuild,v 1.6 2004/10/17 10:42:08 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jai-bin/jai-bin-1.1.2.01.ebuild,v 1.1 2004/10/17 10:42:08 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="JAI is a class library for managing images."
 HOMEPAGE="http://java.sun.com/products/java-media/jai/"
-SRC_URI="jai-1_1_2-lib-linux-i586-jdk.bin"
+SRC_URI="jai-${PV//./_}-lib-linux-i586.tar.gz"
 LICENSE="sun-bcla-jai"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
-DEPEND=""
+KEYWORDS="~x86 ~sparc"
+DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jdk-1.3"
 IUSE=""
 RESTRICT="fetch"
 
-S="${WORKDIR}"
+S=${WORKDIR}/jai-${PV//./_}/
+
 pkg_nofetch() {
 	einfo "Please download ${SRC_URI} from ${HOMEPAGE} and place it in ${DISTDIR}"
 }
 
-src_unpack() {
-	unzip ${DISTDIR}/${SRC_URI}
-}
 src_compile() { :; }
 
 src_install() {
-	dodoc COPYRIGHT-jai.txt README-jai.txt
+	dodoc *.txt
 
-	java-pkg_dojar jre/lib/ext/*.jar
-	use x86 && java-pkg_doso jre/lib/i386/*.so
+	cd lib
+	java-pkg_dojar *.jar
+	use x86 && java-pkg_doso *.so
 }
 
 pkg_postinst() {
 	einfo "This ebuild now installs into /opt/${PN} and /usr/share/${PN}"
 	einfo 'To use you need to pass the following to java'
-	einfo '-Djava.library.path=$(java-config -i jai-bin) -classpath $(java-config -p jai-bin)'
+	use x86 && einfo '-Djava.library.path=$(java-config -i jai-bin)'
+	einfo '-classpath $(java-config -p jai-bin)'
 }
 
