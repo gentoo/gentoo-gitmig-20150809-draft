@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-0.9.0_rc1.ebuild,v 1.6 2002/07/22 14:37:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-0.9.0_rc1.ebuild,v 1.7 2002/07/23 20:41:41 aliz Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 	>=media-libs/alsa-lib-0.9.0_rc1"
 
 src_compile() {				  
-	conf || die "./configure failed"
+	econf || die "./configure failed"
 	emake || die "Parallel Make Failed"
 }
 
