@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/bluez-bluefw-0.9-r1.ebuild,v 1.1 2003/10/12 01:29:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/bluez-bluefw-0.9-r1.ebuild,v 1.2 2003/10/12 01:39:58 liquidx Exp $
 
 DESCRIPTION="Bluetooth USB Firmware Downloader"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -26,4 +26,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+	dodoc README AUTHORS ChangeLog
 }

@@ -1,5 +1,5 @@
-MD5 03f690f9d4c9324a32c47eadf29b4bd3 ChangeLog 988
-MD5 a7e9e40adff0368b25d58eee6827d1c2 bluez-bluefw-0.9-r1.ebuild 676
+MD5 c5a20f4ea193a8abb4863856886c35db ChangeLog 1077
+MD5 3140425deb9dd3981068fdfccc178761 bluez-bluefw-0.9-r1.ebuild 708
 MD5 c4cc2040059eac30caf6a1095e7a1c47 bluez-bluefw-0.9.ebuild 1050
 MD5 23d1ee94cc2fb13eb6dcae0a51b061fa metadata.xml 237
 MD5 239854dc1a42d656443060be79432e2e files/bluez-bluefw-0.9-kernel2.6.patch 261
