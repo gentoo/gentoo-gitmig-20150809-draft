@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <mcummings@gentoo.org> (16 Aug 2002)
+# Masked for testing
+dev-perl/ExtUtils-MakeMaker
+
 # <styx@gentoo.org> /16 Aug 2002)
 # Masked for testing
 >=sys-apps/quota-3.04
