@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.9.ebuild,v 1.5 2004/05/21 17:14:20 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.9.ebuild,v 1.6 2004/05/21 17:29:50 lv Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ PROVIDE="virtual/blackbox"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~x86 ~ppc sparc ~amd64 ~alpha ~hppa ~ia64 mips"
+KEYWORDS="~x86 ~ppc sparc amd64 ~alpha ~hppa ~ia64 mips"
 
 src_unpack() {
 	unpack ${A}
