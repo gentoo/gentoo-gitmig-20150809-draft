@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/gaim-encryption-2.21.ebuild,v 1.11 2004/04/14 09:35:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/gaim-encryption-2.21.ebuild,v 1.12 2004/04/24 04:06:16 vapier Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="GAIM Encryption PlugIn"
 HOMEPAGE="http://gaim-encryption.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-IUSE=""
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc amd64 ppc alpha ia64 hppa ~mips"
+IUSE=""
 
 DEPEND=">=net-im/gaim-0.75-r3
 	|| ( dev-libs/nss net-www/mozilla )"
@@ -33,7 +34,7 @@ src_compile() {
 	einfo "Replacing -Os CFLAG with -O2"
 	replace-flags -Os -O2
 
-	emake || MAKEOPTS="${MAKEOPTS} -j1" emake || die "Make failed"
+	emake || emake -j1 || die "Make failed"
 }
 
 src_install() {
