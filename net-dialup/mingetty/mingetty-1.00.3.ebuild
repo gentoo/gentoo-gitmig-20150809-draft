@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.00.3.ebuild,v 1.7 2003/10/20 00:18:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.00.3.ebuild,v 1.8 2003/12/19 08:51:57 seemant Exp $
+
+inherit rpm eutils
 
 RHP=${PN}-1.00
 S=${WORKDIR}/${RHP}
@@ -13,15 +15,11 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc hppa amd64 alpha ~sparc"
 
-DEPEND="app-arch/rpm2targz"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
-	cd ${WORKDIR}
-	rpm2targz ${DISTDIR}/${MYP}.src.rpm || die
-	tar zxf ${WORKDIR}/${MYP}.src.tar.gz || die
-	tar zxf ${WORKDIR}/${RHP}.tar.gz || die
-	patch -p0 < ${FILESDIR}/mingetty-1.00-autologin.patch || die
+	rpm_src_unpack
+	epatch ${FILESDIR}/mingetty-1.00-autologin.patch
 }
 
 src_compile() {

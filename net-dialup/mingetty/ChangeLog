@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mingetty
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.8 2003/11/19 14:43:26 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.9 2003/12/19 08:51:57 seemant Exp $
+
+  19 Dec 2003; Seemant Kulleen <seemant@gentoo.org> mingetty-1.00.3.ebuild:
+  move to rpm eclass and eutils eclass to use rpm_src_unpack magic and epatch,
+  respectively
 
   19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
   metadata.xml
