@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/apollo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/ChangeLog,v 1.2 2002/08/26 13:56:16 seemant Exp $
 
 *apollo-1.1.1-r1 (1 Feb 2002)
+
+  26 Aug 2002; Seemant Kulleen <seemant@gentoo.org> apollo-1.1.1-r1 :
+
+  Changed dodir usr/bin to dodir /usr/bin. Thanks to: senor@lucidsoft.org
+  (Kevin Duffy) in bug #6669.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

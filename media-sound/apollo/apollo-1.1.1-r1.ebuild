@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1-r1.ebuild,v 1.11 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1-r1.ebuild,v 1.12 2002/08/26 13:56:16 seemant Exp $
  
 use kde && inherit kde-base
 
@@ -38,7 +38,7 @@ src_install () {
 
 	use kde && myconf="${myconf} --with-kde=${D}/${KDEDIR}"
 	
-	dodir usr/bin
+	dodir /usr/bin
 	echo `pwd`
 	sh install.sh --prefix=${D}/usr ${myconf}
 	
