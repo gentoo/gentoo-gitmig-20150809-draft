@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/gtk-engines-mist-0.10.ebuild,v 1.2 2003/10/04 18:27:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/gtk-engines-mist-0.10.ebuild,v 1.3 2003/10/06 04:46:26 mr_bones_ Exp $
 
 inherit gtk-engines2
 
@@ -32,13 +32,13 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-gtk-1"
 	fi
-	
+
 	if [ -n "${HAS_GTK2}" ]; then
 		myconf="${myconf} --enable-gtk-2"
 	else
 		myconf="${myconf} --disable-gtk-2"
 	fi
-	
+
 	econf ${myconf} || die "configure failed"
 	emake || die "make failed"
 }
