@@ -1,7 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 63f7139b7596fbbf4f7c4ee29dfe3af8 ChangeLog 10800
+MD5 491471a315f161b29332493073516fea grsec-sources-2.4.29.2.1.3.ebuild 1840
+MD5 7235d75ed54028ffe82395810967c77f ChangeLog 10979
 MD5 0b2ea9b53b5d526e39afbdc5040ff07a metadata.xml 487
 MD5 06a21789396d1b9fd46fb7f32355d000 grsec-sources-2.4.28.2.1.0-r3.ebuild 1902
 MD5 0adbefda5e0d752b23dd2f930e6f6bbf files/linux-2.4.28-random-poolsize.patch 452
@@ -16,14 +17,15 @@ MD5 b293289df61d6f42ff54e4e0ceae53cf files/2.4.24-x86.config 2397
 MD5 4a0215139f9aebfe2cc2747743763f08 files/2.4.28-binfmt_a.out.patch 1887
 MD5 8c7a1adf3e5ca3b4cfd6a75f5704d2fc files/digest-grsec-sources-2.4.28.2.1.0-r3 231
 MD5 b1f723b1661a3fcbe79e921ddfe40584 files/2.4.28-grsec-2.1.0-pax-mmap-pgtables.patch 1202
+MD5 a0c6a4f388d0481b6e25bb12f71da868 files/digest-grsec-sources-2.4.29.2.1.3 231
 MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/CAN-2004-1016.patch 2835
 MD5 d1ccc2047be533c992f67270a150a210 files/2.4.27-cmdline-race.patch 388
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iQCVAwUBQioOXZ4WFLgrx1GWAQJzlgP/Zv/1wgiP1i2XyjUi1asV/aGjWc51ug4N
-2EiDJBpIKdtwtlfd3AH19Y4Dg9GV2FJL2VxSGBcwiMdNfVUhZJxeJognRW9FkQRK
-tiz5OQUKZIyrETiQ5tE7KyUqRxHWiQpajw5mGiRKA8nCJnK3M7jVQyvh/FtSzR2w
-8hvt3YgMvYY=
-=DtH7
+iQCVAwUBQi0UhZ4WFLgrx1GWAQLzFwQApKzP3QPWniunSK7N+xV+/GNvx69cOknH
+zGkV1sBQ/8iHDOwHDYMlI5rcEYHLJYAmMQ4bxyKyl++NpMCGUjNBW7F6cMMdLF1m
+xIW3b/xL9YKXVlTySelRSDD2KWafcHwA1atBPBdmKQClUUUMPUGspSXeUmTV9+6n
+UbIEGynYu8w=
+=MYPd
 -----END PGP SIGNATURE-----

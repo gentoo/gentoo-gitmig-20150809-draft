@@ -2318,3 +2318,14 @@ diff -urp linux-2.6.10/include/linux/if_ppp.h linux-2.6.10-gentoo/include/linux/
 -#endif /* __KERNEL__ */
 -
  #endif /* _ASM_THREAD_INFO_H */
+--- linux-2.6.10/include/asm-sparc/fbio.h.orig	2005-03-07 18:29:59.719149292 -0800
++++ linux-2.6.10/include/asm-sparc/fbio.h	2005-03-07 18:30:39.958067643 -0800
+@@ -1,6 +1,8 @@
+ #ifndef __LINUX_FBIO_H
+ #define __LINUX_FBIO_H
+ 
++#include <linux/compiler.h>
++
+ /* Constants used for fbio SunOS compatibility */
+ /* (C) 1996 Miguel de Icaza */
+ 
