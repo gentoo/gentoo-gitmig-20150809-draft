@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.0b.ebuild,v 1.1 2003/07/17 09:54:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.0b.ebuild,v 1.2 2003/07/17 10:28:27 raker Exp $
 
 IUSE="debug"
 
@@ -35,4 +35,8 @@ src_install() {
 	einstall || die
 
 	dodoc CHANGES COPYRIGHT CREDITS README TODO VERSION
+
+	dodir /usr/lib/pkgconfig
+	insinto /usr/lib/pkgconfig
+	doins ${FILESDIR}/id3tag.pc
 }
