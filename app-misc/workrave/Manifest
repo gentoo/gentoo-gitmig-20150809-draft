@@ -1,5 +1,5 @@
 MD5 eee2df47107a2d3cb227075415706c59 files/digest-workrave-1.0.0 66
 MD5 5c5d367dc02b77f1af5c9fe0b0bddf6f files/digest-workrave-1.2.2 66
-MD5 b4926f88b0215bbd5c7ce48ee5aa4b22 workrave-1.0.0.ebuild 1012
+MD5 d372a61d8cc2e55bfa9f6f3b74aaed59 workrave-1.0.0.ebuild 1011
 MD5 d46fffaedc9ebc94dd4b6a412772bc20 ChangeLog 530
-MD5 f0c4ac7cf87ff079898f9584296ecd4e workrave-1.2.2.ebuild 1322
+MD5 4b91c54f7770e39d2cc8855e784eeb70 workrave-1.2.2.ebuild 1321
