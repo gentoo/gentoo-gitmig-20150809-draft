@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.17a.ebuild,v 1.3 2004/04/26 04:44:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.17a.ebuild,v 1.4 2004/06/09 22:17:56 agriffis Exp $
 
 IUSE="pam mysql postgres ldap ssl"
 
@@ -58,7 +58,7 @@ src_install() {
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/pure-ftpd.xinetd pure-ftpd
 
-	if [ `use ldap` ]; then
+	if use ldap; then
 		dodir /etc/openldap/schema
 		insinto /etc/openldap/schema
 		doins pureftpd.schema
