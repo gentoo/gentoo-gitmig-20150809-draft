@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.000.ebuild,v 1.5 2002/10/05 05:39:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.020-r1.ebuild,v 1.1 2002/10/31 17:14:57 seemant Exp $
 
 IUSE="ssl"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.webmin.com/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="~x86"
 
 DEPEND="sys-devel/perl
 	ssl? ( dev-perl/Net-SSLeay )"
@@ -22,13 +22,19 @@ src_install() {
 	rm -f mount/openbsd-mounts*
 	rm -f mount/macos-mounts*
 	(find . -name '*.cgi' ; find . -name '*.pl') | perl perlpath.pl /usr/bin/perl -
-	mkdir -p ${D}/usr/libexec/webmin
-	mkdir -p ${D}/etc/init.d
-	mkdir -p ${D}/var
-	mkdir -p ${D}/etc/pam.d
+	dodir /usr/libexec/webmin
+	dodir /etc/init.d
+	dodir /var
+	dodir /etc/pam.d
 	cp -rp * ${D}/usr/libexec/webmin
-	cp webmin-gentoo-init ${D}/etc/init.d/webmin
-	cp webmin-pam ${D}/etc/pam.d/webmin
+	mv ${D}/usr/libexec/webmin/openslp/config \
+		${D}/usr/libexec/webmin/openslp/config-gentoo-linux
+	
+	insinto /etc/init.d
+	newins webmin-gentoo-init webmin
+
+	insinto /etc/pam.d/
+	newins webmin-pam webmin
 	echo gentoo > ${D}/usr/libexec/webmin/install-type
 
 	exeinto /etc/webmin

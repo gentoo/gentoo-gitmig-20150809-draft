@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.4 2002/10/13 01:55:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.5 2002/10/31 17:14:57 seemant Exp $
+
+*webmin-1.020 (31 Oct 2002)
+
+  31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> webmin-1.020-r1.ebuild
+  files/digest-webmin-1.020-r1 :
+
+  Ebuild cleanup and OpenSLP module's config file renamed to
+  config-gentoo-linux so that the OpenSLP module works.  Thanks to:
+  pauls@globaliqx.com (Paul Slinski) in bug #9656 for the fix.
 
 *webmin-1.020 (12 Oct 2002)
 
