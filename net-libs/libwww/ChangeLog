@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.23 2004/03/09 23:32:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.24 2004/03/12 16:34:55 usata Exp $
+
+  13 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> libwww-5.4.0-r2.ebuild,
+  files/libwww-5.4.0-autoconf-gentoo.diff:
+  Fixed compile error when stratego is installed. See bug #44037
 
   09 Mar 2004; <agriffis@gentoo.org> libwww-5.4.0-r2.ebuild:
   stable on alpha and ia64
