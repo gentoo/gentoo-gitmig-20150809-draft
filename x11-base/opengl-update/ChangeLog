@@ -1,6 +1,17 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.70 2005/02/08 10:44:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.71 2005/02/09 08:46:21 eradicator Exp $
+
+*opengl-update-2.1.0 (09 Feb 2005)
+
+  09 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/opengl-update-1.5, +files/opengl-update-2.1.0,
+  -files/opengl-update-2.1_pre4, -files/opengl-update-2.1_pre6,
+  -files/opengl-update-2.1_pre7, -opengl-update-1.5.ebuild,
+  +opengl-update-2.1.0.ebuild, -opengl-update-2.1_pre4.ebuild,
+  -opengl-update-2.1_pre6.ebuild, -opengl-update-2.1_pre7.ebuild:
+  Version bump to fix bug #81199 where header symlinks might point to nowhere
+  if the profile dir and global dir didn't have them.
 
   08 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   opengl-update-2.1_pre7.ebuild:

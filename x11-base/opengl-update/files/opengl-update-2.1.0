@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1_pre7,v 1.2 2005/02/08 10:38:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1.0,v 1.1 2005/02/09 08:46:21 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -265,8 +265,6 @@ set-new-implementation() {
 			fi
 
 			# Setup the includes
-			# Hack until /usr/X11R6 is gone...
-			[[ ${DST_PREFIX} == "/usr" ]] && DST_PREFIX="/usr/X11R6"
 			mkdir -p ${DST_PREFIX}/include/GL
 			pushd ${DST_PREFIX}/include/GL &> /dev/null
 				for file in gl.h glx.h glxtokens.h glext.h glxext.h glxmd.h glxproto.h; do
@@ -278,12 +276,11 @@ set-new-implementation() {
 					# then it should be installed to ${GL_IMPLEM}/include
 
 					if [[ -e ${PREFIX}/${LIBDIR}/opengl/${GL_IMPLEM}/include/${file} ]]; then
-						if [[ -e ${PREFIX}/${LIBDIR}/opengl/global/include/${file} ]]; then
-							ewarn "Profile-specific header file is being used for ${file} instead of the global version provided."
-						fi
 						ln -s ${PREFIX}/${LIBDIR}/opengl/${GL_IMPLEM}/include/${file}
 					elif [[ -e ${PREFIX}/${LIBDIR}/opengl/global/include/${file} ]]; then
 						ln -s ${PREFIX}/${LIBDIR}/opengl/global/include/${file}
+					elif [[ -e ${PREFIX}/${LIBDIR}/opengl/xorg-x11/include/${file} ]]; then
+						ln -s ${PREFIX}/${LIBDIR}/opengl/xorg-x11/include/${file}
 					fi
 				done
 			popd &> /dev/null
