@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r4.ebuild,v 1.2 2004/02/28 22:41:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r4.ebuild,v 1.3 2004/03/14 23:02:32 mkennedy Exp $
 
 inherit common-lisp-common
 
@@ -16,7 +16,7 @@ DEPEND="dev-lisp/common-lisp-controller
 	!lesstif? ( x11-libs/openmotif )"
 IUSE="doc lesstif"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cmucl/cmucl_${PV}-${DEB_PV}.tar.gz
 	http://cmucl.cons.org/ftp-area/cmucl/release/18e/cmucl-${PV}-x86-linux.tar.bz2"
 
