@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.3.ebuild,v 1.1 2005/02/03 04:18:25 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.3.ebuild,v 1.2 2005/02/10 01:19:05 cryos Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -86,19 +86,27 @@ src_compile() {
 	if use hardened; then
 		ewarn "hardened use flag suppressing mmx use flag"
 		HARDENED_SUPPRESS_MMX="--disable-mmx"
-	else
+	elif use x86; then
 		HARDENED_SUPPRESS_MMX="`use_enable mmx`"
+	elif use amd64; then
+		HARDENED_SUPPRESS_MMX="--enable-mmx"
 	fi
 
 	local myconf
 	use doc || myconf="${myconf} --disable-devel-docs"
+
+	# Hard enable SIMD assembler code for AMD64.
+	if use x86; then
+		myconf="${myconf} `use_enable sse`"
+	elif use amd64; then
+		myconf="${myconf} --enable-sse"
+	fi
 
 	econf \
 		--disable-default-binary \
 		--with-x \
 		"${HARDENED_SUPPRESS_MMX}" \
 		${myconf} \
-		`use_enable sse` \
 		`use_enable altivec` \
 		`use_enable doc gtk-doc` \
 		`use_enable python` \
