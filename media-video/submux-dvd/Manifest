@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f10bec0a6c565b3cd999ca08dbf89531 submux-dvd-0.5.ebuild 806
-MD5 6f4b2c08db640f78836a529185698268 ChangeLog 643
+MD5 53c23f80408a76e8137974feab4c9f16 ChangeLog 702
 MD5 3ba625acf04e8d0d32263c38d31a715f metadata.xml 221
-MD5 52fd9d363499583243fa51164bd848aa files/submux-dvd-0.5.patch 302
+MD5 f10bec0a6c565b3cd999ca08dbf89531 submux-dvd-0.5.ebuild 806
 MD5 d998aa0b57ed5c6a402f4a9d9d8a6c28 files/digest-submux-dvd-0.5 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBF90+CHk4+ZoBpvsRAnC6AKCEZ6phQUDXJ9Z8n7bH+lU6NUa/BACeJLy/
-QMJwl5o4zwfvYJaEJJWeMLw=
-=XkUd
------END PGP SIGNATURE-----
+MD5 52fd9d363499583243fa51164bd848aa files/submux-dvd-0.5.patch 302
