@@ -1,9 +1,9 @@
-MD5 3ca78b2863ace837b3a8e033f4d27243 ChangeLog 7140
+MD5 a4a04af05af4e6444c28411e1d146350 ChangeLog 7332
 MD5 b1e9974990d241c05f9cd91942d7a6ef cyrus-sasl-1.5.27-r4.ebuild 2540
 MD5 45aef0e2226751668e546b334e90ae44 cyrus-sasl-1.5.27-r5.ebuild 2692
 MD5 3f81216b8fbe549b9c885473bfab579d cyrus-sasl-1.5.27-r6.ebuild 2774
 MD5 5bcfd89895270267a066c1d3a9b28923 cyrus-sasl-2.1.10-r1.ebuild 3208
-MD5 d78a79a5a68744d17bbd6fc13cb679ee cyrus-sasl-2.1.10-r2.ebuild 3301
+MD5 31f2a2b7b535b476a9ba801e9b4198b7 cyrus-sasl-2.1.10-r3.ebuild 3369
 MD5 99dd77b1e254cd23ba82c875ff69b40b cyrus-sasl-2.1.10.ebuild 3123
 MD5 72f59bb22937f65913dc0e50e80ad541 cyrus-sasl-2.1.12.ebuild 3268
 MD5 1db741b5018ea1107a49eeae3f245814 cyrus-sasl-2.1.5-r2.ebuild 2037
@@ -13,6 +13,7 @@ MD5 174169b4da3b9e7f87c15faeca7079ab cyrus-sasl-2.1.7-r3.ebuild 2994
 MD5 5f916ae424e35bdd452b0c81f12a6426 cyrus-sasl-2.1.7.ebuild 1976
 MD5 ddebad3ab49453cdec1b900bb7af4788 cyrus-sasl-2.1.9-r1.ebuild 3126
 MD5 4f59f3c881888f97cd442cda2362391e cyrus-sasl-2.1.9.ebuild 2796
+MD5 d78a79a5a68744d17bbd6fc13cb679ee cyrus-sasl-2.1.10-r2.ebuild 3301
 MD5 b688f52b3c129bd50da0140b5d732e74 files/crypt.diff 529
 MD5 4c6ffed2ba584f75a0c948250f7a11b7 files/cyrus-sasl-1.5.21-des.patch 242
 MD5 5d8f83e453b4f7dff5eeee74335de870 files/cyrus-sasl-1.5.24-rpath.patch 448
@@ -46,3 +47,5 @@ MD5 5cae6fb7465603cab6243e14d0382543 files/saslauthd.confd 909
 MD5 0ab944570bf61ce0ee9e907d7b1f9657 files/saslauthd.rc6 536
 MD5 a715288937fdb0b62beff17dfa5bd3d4 files/saslauthd2.rc6 536
 MD5 a302e1b2ed33b7965de1a307cd25a32d files/cyrus-sasl-2.1.12-db4.patch 1902
+MD5 2bdbac1797e21ecbd4f8f95475470e80 files/cyrus-sasl-2.1.10-db4.patch 1375
+MD5 85390378a069cb37e50f662926f5fc99 files/digest-cyrus-sasl-2.1.10-r3 70
