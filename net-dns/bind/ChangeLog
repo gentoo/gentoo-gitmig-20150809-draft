@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.44 2004/06/24 22:33:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.45 2004/07/06 14:15:39 jforman Exp $
+
+  06 Jul 2004; Jeffrey Forman <jforman@gentoo.org> bind-9.2.2_rc1-r2.ebuild:
+  Removing stale _rc1-r2 ebuild, later stable ones
 
   23 June 2004; Jeffrey Forman <jforman@gentoo.org> bind-9.2.2-r4.ebuild:
   add mysql functionality into bind. 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.3.ebuild,v 1.12 2004/06/24 22:33:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.3.ebuild,v 1.13 2004/07/06 14:15:39 jforman Exp $
 
-IUSE="ssl ipv6 doc"
+IUSE="ssl ipv6 doc caps"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz"
@@ -36,6 +36,7 @@ src_compile() {
 
 	use ssl && myconf="${myconf} --with-openssl"
 	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --enable-ipv6=no"
+	use -caps && myconf="${myconf} --disable-linux-caps"
 
 	econf 	--sysconfdir=/etc/bind \
 		--localstatedir=/var \
@@ -173,4 +174,3 @@ pkg_config() {
 		einfo
 	fi
 }
-
