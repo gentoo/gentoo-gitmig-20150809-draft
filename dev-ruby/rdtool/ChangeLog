@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.5 2003/06/11 00:00:03 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.6 2003/07/12 13:03:10 aliz Exp $
+
+*rdtool-0.6.11-r1 (11 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   10 Jun 2003; Tom Payne <twp@gentoo.org> rdtool-0.6.11-r1.ebuild :
   Tidied ebuild. Removed ruby-1.6 hardcode.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/optparse/optparse-0.10.1.ebuild,v 1.3 2003/02/13 11:40:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/optparse/optparse-0.10.1.ebuild,v 1.4 2003/07/12 13:03:10 aliz Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ DESCRIPTION="Yet another option parser for Ruby"
 SRC_URI=" http://member.nifty.ne.jp/nokada/archive/${P}.tar.gz"
 HOMEPAGE=" http://member.nifty.ne.jp/nokada/ruby.html"
 LICENSE="Ruby"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 
 DEPEND=">=dev-lang/ruby-1.6.1"
