@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.41 2003/10/15 00:10:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.42 2003/10/16 17:00:01 spyderous Exp $
+
+  16 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-drm-4.3.0-r6.ebuild:
+  Making 2.6 kernel warning more verbose.
 
   14 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-drm-4.3.0-r6.ebuild:

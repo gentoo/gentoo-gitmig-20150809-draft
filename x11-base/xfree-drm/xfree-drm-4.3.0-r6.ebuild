@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.11 2003/10/15 00:10:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.12 2003/10/16 17:00:01 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -85,7 +85,7 @@ vcards i830 && VIDCARDS="${VIDCARDS} i830.o"
 src_unpack() {
 	# 2.6 kernels are broken for now
 	is_kernel "2" "6" && \
-		die "Please link /usr/src/linux to 2.4 kernel sources."
+		die "Please link /usr/src/linux to 2.4 kernel sources. xfree-drm is not yet working with 2.6 kernels, use the DRM in the kernel."
 
 	# Is this necessary with the fixed Makefile?
 	if [ ! -f /usr/src/linux/include/config/MARKER ] ; then
