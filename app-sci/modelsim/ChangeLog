@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/modelsim
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/modelsim/ChangeLog,v 1.1 2003/07/10 19:26:56 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/modelsim/ChangeLog,v 1.2 2004/04/19 11:40:01 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> modelsim-5.7d.ebuild:
+  Adding IUSE
 
 *modelsim-5.7d (09 Jul 2003)
 
