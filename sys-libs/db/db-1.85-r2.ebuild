@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.6 2002/05/08 19:25:23 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r2.ebuild,v 1.1 2002/05/08 19:25:23 bass Exp $
 
 S=${WORKDIR}/db.${PV}
 DESCRIPTION="db 1.85 -- required for RPM 4.0 to compile; that's about it."
