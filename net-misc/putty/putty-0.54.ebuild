@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.54.ebuild,v 1.1 2004/06/01 21:33:54 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.54.ebuild,v 1.2 2004/06/01 21:42:55 taviso Exp $
 
 inherit eutils
 
@@ -40,8 +40,8 @@ src_compile() {
 src_install() {
 	cd ${S}/unix
 
-	doman plink.1 pterm.1 putty.1 puttytel.1
-	dobin plink pterm putty puttytel psftp pscp
+	doman plink.1 pterm.1 putty.1 puttytel.1 puttygen.1
+	dobin plink pterm putty puttytel psftp pscp puttygen
 
 	cd ${S}
 
