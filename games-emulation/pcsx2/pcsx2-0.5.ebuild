@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.5.ebuild,v 1.4 2004/02/20 06:26:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.5.ebuild,v 1.5 2004/05/27 01:28:48 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="Playstation2 emulator"
 HOMEPAGE="http://www.pcsx2.net/"
@@ -11,6 +11,7 @@ SRC_URI="http://www.pcsx2.net/download/${PV:0:3}release/Pcsx2Src-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 RDEPEND="virtual/x11
 	=x11-libs/gtk+-1*

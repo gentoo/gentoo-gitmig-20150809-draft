@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-dev9null/ps2emu-dev9null-0.1.ebuild,v 1.2 2004/02/20 06:26:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-dev9null/ps2emu-dev9null-0.1.ebuild,v 1.3 2004/05/27 01:36:59 mr_bones_ Exp $
 
 inherit games
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.pcsx2.net/download/0.5release/dev9null${PV}.zip"
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="=x11-libs/gtk+-1*"
 
