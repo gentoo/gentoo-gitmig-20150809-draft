@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.56 2004/02/10 14:34:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.57 2004/02/15 17:16:31 weeve Exp $
+
+  15 Feb 2004; Jason Wever <weeve@gentoo.org> kde-3.2.0.ebuild:
+  Marked stable on sparc.
 
   10 Feb 2004; Caleb Tennis <caleb@gentoo.org> kde-3.2.0.ebuild:
   x86 stable

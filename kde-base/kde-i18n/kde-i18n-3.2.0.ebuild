@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.2.0.ebuild,v 1.6 2004/02/10 14:19:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.2.0.ebuild,v 1.7 2004/02/15 17:16:04 weeve Exp $
 
 inherit kde
 need-kde ${PV}
@@ -10,7 +10,7 @@ IUSE=""
 DESCRIPTION="KDE ${PV} - i18n: ${PN}"
 HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~amd64 ppc"
+KEYWORDS="x86 sparc ~amd64 ppc"
 SLOT="$KDEMAJORVER.$KDEMINORVER"
 RESTRICT="nomirror"
 DEPEND="~kde-base/kdebase-${PV}
