@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.9 2003/01/18 19:17:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.10 2003/01/21 23:20:06 foser Exp $
+
+*gtk-doc-1.0 (21 Jan 2003)
+
+  21 Jan 2003; foser <foser@gentoo.org> gtk-doc-1.0.ebuild :
+  New version, fixed deps
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
