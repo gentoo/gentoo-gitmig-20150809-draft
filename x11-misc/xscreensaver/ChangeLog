@@ -1,138 +1,121 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.9 2002/10/26 17:03:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.10 2002/10/26 18:03:02 blizzy Exp $
 
-xscreensaver-4.06-r2 (26 Oct 2002)
+  26 Oct 2002; Maik Schreiber <blizzy@gentoo.org> xscreensaver-4.06-r2.ebuild:
+  Remove /usr/share/control-center/capplets/screensaver-properties.desktop.
 
-  26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xscreensaver-4.06-r2.ebuild :
+*xscreensaver-4.06-r2 (26 Oct 2002)
 
+  26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xscreensaver-4.06-r2.ebuild:
   Redo the whole thing not to depend on gtk+-2.0 by default, and enable
   --with-gnome theoretically for gnome-1.4.
 
-xscreensaver-4.06-r1 (26 Oct 2002)
+*xscreensaver-4.06-r1 (26 Oct 2002)
 
-  26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xscreensaver-4.06-r1.ebuild :
-
+  26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xscreensaver-4.06-r1.ebuild:
   Change "xml" flag to "xml2".  Remove "gnome" USE flag.  Change "gtk" in USE
   to depend on gtk+2, and also add libglade2.  If gtk+ is not in USE, make it
   depend on gdk-pixbuf.  This should close bug #9619.
 
-xscreensaver-4.06 (24 Oct 2002)
+*xscreensaver-4.06 (24 Oct 2002)
 
-  24 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xscreensaver-4.06.ebuild :
-
+  24 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xscreensaver-4.06.ebuild:
   Fix the libxml hack to actually work.
 
-  24 Oct 2002; Seemant Kulleen <seemant@gentoo.org> xscreensaver-4.06.ebuild
-  files/digest-xscreensaver-4.06 :
+  24 Oct 2002; Seemant Kulleen <seemant@gentoo.org> xscreensaver-4.06.ebuild,
+  files/digest-xscreensaver-4.06: Version bump.
 
-  Version bump.
-
-xscreensaver-4.05-r3 (21 Jul 2002)
+*xscreensaver-4.05-r3 (21 Jul 2002)
   
-  19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> xscreensaver-4.05-r3.ebuild :
-
+  19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> xscreensaver-4.05-r3.ebuild:
   Added ppc to KEYWORDS.
 
-  29 Sep 2002; Martin Schlemmer <azarah@gentoo.org> pam.d/xscreensaver :
-  Update pam.d file to use system-auth.  Bug #5953.
+  29 Sep 2002; Martin Schlemmer <azarah@gentoo.org> pam.d/xscreensaver: Update
+  pam.d file to use system-auth.  Bug #5953.
   
-  21 Jul 2002; Spider <spider@gentoo.org> xscreensaver-4.05-r3.ebuild :
-  Dep change solves bug 4743
+  21 Jul 2002; Spider <spider@gentoo.org> xscreensaver-4.05-r3.ebuild: Dep
+  change solves bug 4743
 
 *xscreensaver-4.05-r3 (07 July 2002)
   
-  07 Jul 2002; phoen][x <phoenix@gentoo.org>
-  xscreensaver-4.05-r3.ebuild files/digest-xscreensaver-4.05-r3 :
-
-  Version bump - old source was not available anymore.
-  Added KEYWORDS, LICENSE, SLOT.
+  07 Jul 2002; phoen][x <phoenix@gentoo.org> xscreensaver-4.05-r3.ebuild,
+  files/digest-xscreensaver-4.05-r3: Version bump - old source was not
+  available anymore. Added KEYWORDS, LICENSE, SLOT.
 
 *xscreensaver-4.05-r2 (29 Jun 2002)
 
   29 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
-  xscreensaver-4.05-r2.ebuild files/digest-xscreensaver-4.05-r2 ChangeLog
-  files/pam.d/xscreensaver :
-
-  Relocated from app-misc to x11-misc.
+  xscreensaver-4.05-r2.ebuild, files/digest-xscreensaver-4.05-r2, ChangeLog,
+  files/pam.d/xscreensaver: Relocated from app-misc to x11-misc.
 
 *xscreensaver-4.05-r2 (29 Jun 2002)
 
-  29 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
-  Add /usr/share/pixmaps/xscreensaver.xpm if gnome in USE ... fixes no icon in
+  29 Jun 2002; Martin Schlemmer <azarah@gentoo.org> : Add
+  /usr/share/pixmaps/xscreensaver.xpm if gnome in USE ... fixes no icon in
   control-center for gnome2.
 
 *xscreensaver-4.05 (22 Jun 2002)
-  22 Jun 2002; Spider <spider@gentoo.org> xscreensaver-4.05-r1.ebuild :
-  since I can't find how the .desktop is installed properly, I hacked around it with a use gnome () statement.  works.
+  22 Jun 2002; Spider <spider@gentoo.org> xscreensaver-4.05-r1.ebuild:
+  since I can't find how the .desktop is installed properly, I hacked around
+  it with a use gnome () statement.  works.
   
 *xscreensaver-4.05 (11 Jun 2002)
 
-  11 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
-  xscreensaver-4.05.ebuild files/digest-xscreensaver-4.05 :
-
+  11 Jun 2002; Seemant Kulleen <seemant@gentoo.org> xscreensaver-4.05.ebuild:
   Version bump, which is supposed to fix the GTK2 configure stage errors, as
   reported in bug #3506 by erichey2@attbi.com (kde123)
 
-*xscreensaver-4.04.2-r2 (9 Jun 2002)
+*xscreensaver-4.04.2-r2 (09 Jun 2002)
 
-  9 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
-  xscreensaver-4.04.2-r2.ebuild files/digest-xscreensaver-4.04.2-r2 :
+  09 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  xscreensaver-4.04.2-r2.ebuild: There was a typo in the last revision which
+  caused GL screenhacks to fail. This closes bug #3479 by phil@lsu.edu
+  (Phil Bordelon)
 
-  There was a typo in the last revision which caused GL screenhacks to fail.
-  This closes bug #3479 by phil@lsu.edu (Phil Bordelon)
+*xscreensaver-4.04.2-r1 (06 Jun 2002)
 
-*xscreensaver-4.04.2-r1 (6 Jun 2002)
+  06 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  xscreensaver-4.04.2-r1.ebuild: NLS fixes.  It'll now compile :)
 
-  6 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
-  xscreensaver-4.04.2-r1.ebuild files/digest-xscreensaver-4.04.2-r1 :
+*xscreensaver-4.04.2 (04 Jun 2002)
 
-  NLS fixes.  It'll now compile :)
+  04 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  xscreensaver-4.04.2.ebuild: Version bump.
 
-*xscreensaver-4.04.2 (4 Jun 2002)
+*xscreensaver-4.02-r3 (02 Jun 2002)
 
-  4 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
-  xscreensaver-4.04.2.ebuild files/digest-xscreensaver-4.04.2 :
-  
-  Version bump.
-
-*xscreensaver-4.02-r3 (02 June 2002)
-
-  2 June 2002; Martin Schlemmer <azarah@gentoo.org> :
-
-  Should resolve bugs #1800, #3206, #3299. Thanks to A. Lucien Meyers for
-  bringing it to my attention, and Ryan Shaw for the fix and related bugs.
+  02 Jun 2002; Martin Schlemmer <azarah@gentoo.org> : Should resolve bugs
+  #1800, #3206, #3299. Thanks to A. Lucien Meyers for bringing it to my
+  attention, and Ryan Shaw for the fix and related bugs.
 
 *xscreensaver-4.02-r2 (01 June 2002)
 
-  01 June 2002; Martin Schlemmer <azarah@gentoo.org> :
+  01 June 2002; Martin Schlemmer <azarah@gentoo.org> : Just some general
+  cleanups and USE flag additions.
 
-  Just some general cleanups and USE flag additions.
-
-  07 Apr 2002; Dan Armak <danarmak@gentoo.org> removed obsolete kde-env dep, fixes bug #1581.
+  07 Apr 2002; Dan Armak <danarmak@gentoo.org> : removed obsolete kde-env
+  dep, fixes bug #1581.
 
 *xscreensaver-4.02-r1 (29 May 2002)
-  29 May 2002;  Spider <spider@gentoo.org> xscreensaver-4.02-r1.ebuild :
+
+  29 May 2002; Spider <spider@gentoo.org> xscreensaver-4.02-r1.ebuild:
   finally solved a xml include bug .
 
 *xscreensaver-4.02 (19 Mar 2002)
 
-  19 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xscreensaver-4.0.2.ebuild :
-
+  19 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xscreensaver-4.0.2.ebuild:
   Copied over the 4.01-r1 ebuild to bump version.
  
-*screensaver-4.01-r1 (4 Mar 2002)
+*screensaver-4.01-r1 (04 Mar 2002)
 
-  4 March 2002; M.Schlemmer <azarah@gentoo.org> xscreensaver-4.01-r1,
-                                                ${FILESDIR}/pam.d/xscreensaver
+  04 Mar 2002; M.Schlemmer <azarah@gentoo.org> xscreensaver-4.01-r1,
+  files/pam.d/xscreensaver: Updated the pam support a bit to use the shadow
+  passwords Gentoo use by default.
 
-  Updated the pam support a bit to use the shadow passwords Gentoo use by
-  default.
+*xscreensaver-4.01-r1 (03 Mar 2002)
 
-*xscreensaver-4.01-r1 (3 Mar 2002)
-
-  3 Mar 2002; Arcady Genkin <agenkin@thpoon.com> xscreensaver-4.01-r1 :
-
+  03 Mar 2002; Arcady Genkin <agenkin@thpoon.com> xscreensaver-4.01-r1:
   Fixed xscreensaver's complaint about missing /etc/pam.d entry.
 
 *xscreensaver-4.01 (26 Feb 2002)

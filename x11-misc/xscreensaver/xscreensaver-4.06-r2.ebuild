@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.06-r2.ebuild,v 1.2 2002/10/26 17:31:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.06-r2.ebuild,v 1.3 2002/10/26 18:03:02 blizzy Exp $
 
 IUSE="pam kerberos gtk motif gnome opengl jpeg xml"
 
@@ -37,7 +37,6 @@ RDEPEND="${DEPEND}
 	media-libs/netpbm"
 
 src_unpack() {
-
 	unpack ${A}
 	
 	cd ${S}
@@ -47,7 +46,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf=""
 	
 	# gtk is the more stable one, so enable it by default.
@@ -117,7 +115,6 @@ src_compile() {
 }
 
 src_install() {
-
 	[ -n "${KDEDIR}" ] && dodir ${KDEDIR}/bin
 	
 	make install_prefix="${D}" install || die
@@ -126,6 +123,7 @@ src_install() {
 		dodir /usr/share/gnome/capplets
 		insinto /usr/share/gnome/capplets
 		doins driver/screensaver-properties.desktop
+		rm -f ${D}/usr/share/control-center/capplets/screensaver-properties.desktop
 	)
 
 	use gnome && ( \
@@ -138,4 +136,3 @@ src_install() {
 		doins ${FILESDIR}/pam.d/xscreensaver
 	)
 }
-
