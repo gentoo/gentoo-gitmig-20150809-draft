@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jsch
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.16 2004/09/10 19:48:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.17 2004/09/28 15:29:01 axxo Exp $
+
+*jsch-0.1.17 (28 Sep 2004)
+
+  28 Sep 2004; Thomas Matthijs <axxo@gentoo.org> jsch-0.1.15.ebuild,
+  jsch-0.1.16.ebuild, +jsch-0.1.17.ebuild:
+  version bump + removed restrict nomirror
 
 *jsch-0.1.16 (10 Sep 2004)
 
