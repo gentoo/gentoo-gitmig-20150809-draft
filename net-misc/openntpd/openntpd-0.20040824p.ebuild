@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-0.20040824p.ebuild,v 1.1 2004/11/04 03:12:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-0.20040824p.ebuild,v 1.2 2004/11/04 16:39:05 vapier Exp $
 
 inherit eutils
 
-MY_P="${P}-${PV/0.}"
+MY_P="${PN}-${PV/0.}"
 DESCRIPTION="Lightweight NTP server ported from OpenBSD"
 HOMEPAGE="http://www.openntpd.org/"
 SRC_URI="http://www.openntpd.org/dist/portable/${MY_P}.tar.gz"
