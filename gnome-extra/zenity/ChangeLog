@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.35 2004/09/17 15:18:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.36 2004/10/01 15:27:10 geoman Exp $
+
+  01 Oct 2004; Stephen P. Becker <geoman@gentoo.org> zenity-2.6.2.ebuild:
+  stable on mips
 
 *zenity-2.8.0 (17 Sep 2004)
 
