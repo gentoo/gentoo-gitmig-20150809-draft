@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.14 2004/09/29 09:01:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.15 2004/10/19 12:31:59 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> curl-7.11.1.ebuild:
+  Stable on amd64.
 
   29 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   curl-7.12.0-r2.ebuild:
