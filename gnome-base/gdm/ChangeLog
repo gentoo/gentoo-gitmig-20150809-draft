@@ -1,7 +1,11 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.18 2002/09/06 03:30:42 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.19 2002/11/07 09:11:09 azarah Exp $
 
+
+*gdm-2.4.0.11-r1 (07 Nov 2002)
+  07 Nov 2002; Martin Schlemmer <azarah@gentoo.org> gdm-2.4.0.11-r1.ebuild :
+  Fix /etc/X11/startDM.sh to source /etc/profile to fix bug #10190.  
 
 *gdm-2.4.0.11 (06 Sep 2002)
   06 Sep 2002; Spider <spider@gentoo.org> gdm-2.4.0.11.ebuild :
