@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.19 2004/06/16 02:23:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.20 2004/06/16 03:11:51 dragonheart Exp $
 
 inherit gcc flag-o-matic eutils
 
@@ -35,7 +35,8 @@ src_compile() {
 	# Bug 29017 says that bison has compile-time issues with
 	# -march=k6* prior to 3.4CVS.  Use -march=i586 instead 
 	# (04 Feb 2004 agriffis)
-	if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -lt "4" ] ; then
+	#
+	if (( $(gcc-major-version) == 3 && $(gcc-minor-version) < 4 )) ; then
 		replace-cpu-flags i586 k6 k6-1 k6-2
 	fi
 
