@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-025-r1.ebuild,v 1.1 2004/04/21 23:57:04 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-025-r1.ebuild,v 1.2 2004/04/24 04:42:59 vapier Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -14,6 +14,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~mips ~alpha"
+IUSE=""
 
 DEPEND="virtual/glibc
 	sys-apps/hotplug-base"
