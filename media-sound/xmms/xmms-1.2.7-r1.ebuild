@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.6-r2.ebuild,v 1.1 2002/02/28 07:25:37 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r1.ebuild,v 1.1 2002/03/19 09:48:26 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X MultiMedia System"
-SRC_URI="ftp://ftp.xmms.org/xmms/1.2.x/${P}.tar.gz"
+SRC_URI="ftp://ftp.xmms.org/xmms/1.2.x/${P}.tar.gz http://www.openface.ca/~nephtes/plover-xmms127.tar.gz"
 HOMEPAGE="http://www.xmms.org/"
 
 DEPEND="gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
@@ -15,7 +15,8 @@ DEPEND="gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
 	opengl? ( virtual/opengl )
 	nls? ( dev-util/intltool )
-	>=x11-libs/gtk+-1.2.10-r4"
+	>=x11-libs/gtk+-1.2.10-r4
+	>=media-video/avifile-0.6"
 
 RDEPEND="gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
 	>=dev-libs/libxml-1.8.15
@@ -26,11 +27,15 @@ RDEPEND="gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
 	>=x11-libs/gtk+-1.2.10-r4"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 
 	cd ${S}
 	cp configure configure.orig
 	sed -e "s:-m486::" configure.orig > configure
+	
+	unpack plover-xmms127.tar.gz
+	patch -p1 < plover-xmms127.diff
+	touch stamp-h1.in xmms/stamp-h2.in
 }
 
 src_compile() {
