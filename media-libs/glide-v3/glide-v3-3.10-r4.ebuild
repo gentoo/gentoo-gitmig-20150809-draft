@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r4.ebuild,v 1.3 2004/06/14 09:04:27 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r4.ebuild,v 1.4 2004/06/14 15:28:55 vapier Exp $
 
 # NOTE:  Do NOT build this with optimizations, as it will make this package
 #        unstable!!!!
@@ -40,7 +40,7 @@ src_unpack() {
 	ln -fs gsst.c.dri gsst.c ; ln -fs glfb.c.dri glfb.c
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-fixes.patch.bz2
+	epatch ${WORKDIR}/${P}-fixes.patch
 	export WANT_AUTOMAKE="1.4" WANT_AUTOCONF="2.5"
 	libtoolize -f && aclocal && automake && autoconf
 }
