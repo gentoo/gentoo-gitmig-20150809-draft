@@ -1,15 +1,13 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.7 2005/03/07 19:42:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-old.sh,v 1.1 2005/03/28 01:03:31 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
 # (solar, Jul 2004)
 # (vapier, Aug 2004)
 # (compnerd, Nov 2004)
-# (wolf31o2, Jan 2005)
-# (azarah, Mar 2005)
 
 if [ -e /etc/init.d/functions.sh ] ; then
 	source /etc/init.d/functions.sh
@@ -23,11 +21,10 @@ else
 	eerror() { echo "!!! $*"; }
 	einfo() { echo "* $*"; }
 fi
-
 show_status() {
 	local num=$1
 	shift
-	echo "  [[ ($num/3) $* ]]"
+	echo "  [[ ($num/6) $* ]]"
 }
 
 # Track progress of the bootstrap process to allow for
@@ -35,7 +32,6 @@ show_status() {
 progressfile=/var/run/bootstrap-progress
 [[ -e ${progressfile} ]] && source ${progressfile}
 export BOOTSTRAP_STAGE=${BOOTSTRAP_STAGE:-1}
-
 set_bootstrap_stage() {
 	[[ -z ${STRAP_RUN} ]] && return 0
 	export BOOTSTRAP_STAGE=$1
@@ -79,7 +75,7 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.7 2005/03/07 19:42:54 wolf31o2 Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-old.sh,v 1.1 2005/03/28 01:03:31 wolf31o2 Exp $"
 			cvsver=${cvsver##*,v }
 			einfo "Gentoo ${GENTOO_VERS} bootstrap ${cvsver%%Exp*}"
 			exit 0
@@ -91,9 +87,8 @@ for opt in "$@" ; do
 	esac
 done
 
-RESUME=0
 if [[ -n ${STRAP_RUN} ]]  ; then
-	if [ ${BOOTSTRAP_STAGE} -ge 3 ] ; then
+	if [ ${BOOTSTRAP_STAGE} -ge 6 ] ; then
 		echo
 		einfo "System has been bootstrapped already!"
 		einfo "If you re-bootstrap the system, you must complete the entire bootstrap process"
@@ -103,7 +98,6 @@ if [[ -n ${STRAP_RUN} ]]  ; then
 		set_bootstrap_stage 1
 	elif [ ${BOOTSTRAP_STAGE} -gt 1 ] ; then
 		einfo "Resuming bootstrap at internal stage #${BOOTSTRAP_STAGE} ..."
-		RESUME=1
 	fi
 else
 	export BOOTSTRAP_STAGE=0
@@ -142,11 +136,6 @@ cleanup() {
 		if [[ -f /etc/make.conf.build ]] ; then
 			mv -f /etc/make.conf.build /etc/make.conf
 		fi
-		if [ ${BOOTSTRAP_STAGE} -le 2 ] ; then
-			cp -f /var/cache/edb/mtimedb /var/run/bootstrap-mtimedb
-		else
-			rm -f /var/run/bootstrap-mtimedb
-		fi
 	fi
 	exit $1
 }
@@ -160,26 +149,18 @@ pycmd() {
 # not being restored.
 [[ -n ${STRAP_RUN} ]] && cp -f /etc/make.conf /etc/make.conf.build
 
-# TSTP messes ^Z of bootstrap up, so we don't trap it anymore.
+#TSTP messes ^Z of bootstrap up, so we don't trap it anymore.
 trap "cleanup" TERM KILL INT QUIT ABRT
-
-# Bug #50158 (don't use `which` in a bootstrap).
-if ! type -path portageq &>/dev/null ; then
-	echo -------------------------------------------------------------------------------
-	eerror "Your portage version is too old.  Please use a newer stage1 image."
-	echo
-	cleanup 1
-fi
 
 # USE may be set from the environment so we back it up for later.
 export ORIGUSE=$(portageq envvar USE)
 
 # Check for 'build' or 'bootstrap' in USE ...
-INVALID_USE=$(gawk -v ORIGUSE="${ORIGUSE}" '
+INVALID_USE="`gawk -v ORIGUSE="${ORIGUSE}" '
 	BEGIN { 
 		if (ORIGUSE ~ /[[:space:]]*(build|bootstrap)[[:space:]]*/)
 			print "yes"
-	}')
+	}'`"
 
 # Do not do the check for stage build scripts ...
 if [[ ${INVALID_USE} = "yes" ]] ; then
@@ -192,30 +173,32 @@ if [[ ${INVALID_USE} = "yes" ]] ; then
 	cleanup 1
 fi
 
+# bug #50158 (don't use `which` in a bootstrap).
+if ! type -path portageq &>/dev/null ; then
+	echo
+	eerror "Your portage version is too old.  Please use a newer stage1 image."
+	echo
+	cleanup 1
+fi
+
 # gettext should only be needed when used with nls
 for opt in ${ORIGUSE} ; do
 	case "${opt}" in
-		nls)
-			USE_NLS=1
-			STAGE1_USE="${STAGE1_USE} nls"
-			;;
+		nls) myGETTEXT="gettext";;
 		nptl)
-			if [[ -z $(portageq best_visible / '>=sys-kernel/linux-headers-2.6.0') ]] ; then
-				eerror "You need to have >=sys-kernel/linux-headers-2.6.0 unmasked!"
-				eerror "Please edit the latest >=sys-kernel/linux-headers-2.6.0 package,"
-				eerror "and add your ARCH to KEYWORDS or change your make.profile link"
-				eerror "to a profile which does not have 2.6 headers masked."
+			if [[ -z $(portageq best_visible / '>=sys-kernel/linux26-headers-2.6.0') ]] ; then
+				eerror "You need to have >=sys-kernel/linux26-headers-2.6.0 unmasked!"
+				eerror "Please edit the latest >=sys-kernel/linux26-headers-2.6.0 package,"
+				eerror "and add your ARCH to KEYWORDS."
 				echo
 				cleanup 1
 			fi
+			if [[ -n $(portageq best_version / sys-kernel/linux-headers) ]] ; then
+				emerge -C sys-kernel/linux-headers
+				emerge --nodeps --oneshot sys-kernel/linux26-headers
+			fi
 			USE_NPTL=1
-			;;
-		nptlonly)
-			USE_NPTLONLY=1
-			;;
-		multilib)
-			STAGE1_USE="${STAGE1_USE} multilib"
-			;;
+		;;
 	esac
 done
 
@@ -229,27 +212,21 @@ eval $(pycmd 'import portage; print portage.settings.packages;' |
 sed 's/[][,]//g; s/ /\n/g; s/\*//g' | while read p; do n=${p##*/}; n=${n%\'};
 n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
-# This stuff should never fail but will if not enough is installed.
-[[ -z ${myBASELAYOUT} ]] && myBASELAYOUT="$(portageq best_version / virtual/baselayout)"
+# this stuff should never fail but will if not enough is installed.
+#[[ -z ${myBASELAYOUT} ]] && myBASELAYOUT="$(portageq best_version / virtual/baselayout)"
+[[ -z ${myBASELAYOUT} ]] && myBASELAYOUT="baselayout"
 [[ -z ${myPORTAGE}    ]] && myPORTAGE="portage"
 [[ -z ${myBINUTILS}   ]] && myBINUTILS="binutils"
 [[ -z ${myGCC}        ]] && myGCC="gcc"
-[[ -z ${myGETTEXT}    ]] && myGETTEXT="gettext"
 [[ -z ${myLIBC}       ]] && myLIBC="virtual/libc"
 [[ -z ${myTEXINFO}    ]] && myTEXINFO="sys-apps/texinfo"
 [[ -z ${myZLIB}       ]] && myZLIB="zlib"
 [[ -z ${myNCURSES}    ]] && myNCURSES="ncurses"
 
-# Do we really want gettext/nls?
-[[ ${USE_NLS} != 1 ]] && myGETTEXT=
-
 # Do we really have no 2.4.x nptl kernels in portage?
 if [[ ${USE_NPTL} = "1" ]] ; then
-	myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux-headers-2.6.0')"
+	myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux26-headers-2.6.0')"
 	[[ -n ${myOS_HEADERS} ]] && myOS_HEADERS=">=${myOS_HEADERS}"
-	STAGE1_USE="${STAGE1_USE} nptl"
-	# Should we build with nptl only?
-	[[ ${USE_NPTLONLY} = "1" ]] && STAGE1_USE="${STAGE1_USE} nptlonly"
 fi
 [[ -z ${myOS_HEADERS} ]] && myOS_HEADERS="virtual/os-headers"
 
@@ -258,7 +235,7 @@ einfo "Using portage    : ${myPORTAGE}"
 einfo "Using os-headers : ${myOS_HEADERS}"
 einfo "Using binutils   : ${myBINUTILS}"
 einfo "Using gcc        : ${myGCC}"
-[[ ${USE_NLS} = "1" ]] && einfo "Using gettext    : ${myGETTEXT}"
+[[ -n ${myGETTEXT} ]] && einfo "Using gettext    : ${myGETTEXT}"
 einfo "Using libc       : ${myLIBC}"
 einfo "Using texinfo    : ${myTEXINFO}"
 einfo "Using zlib       : ${myZLIB}"
@@ -285,9 +262,8 @@ echo ---------------------------------------------------------------------------
 [[ -x /usr/sbin/gcc-config ]] && GCC_CONFIG="/usr/sbin/gcc-config"
 [[ -x /usr/bin/gcc-config  ]] && GCC_CONFIG="/usr/bin/gcc-config"
 
-# Make sure we automatically clean old instances, else we may run
-# into issues, bug #32140.
-export AUTOCLEAN="yes"
+# Disable autoclean, or it b0rks
+export AUTOCLEAN="no"
 
 # Allow portage to overwrite stuff
 export CONFIG_PROTECT="-*"
@@ -301,26 +277,53 @@ if [ ${BOOTSTRAP_STAGE} -le 1 ] ; then
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 2
 fi
-export USE="-* bootstrap ${STAGE1_USE}"
+export USE="${ORIGUSE} bootstrap ${STAGE1_USE}"
 
 # We can't unmerge headers which may or may not exist yet. If your
 # trying to use nptl, it may be needed to flush out any old headers
 # before fully bootstrapping. 
 if [ ${BOOTSTRAP_STAGE} -le 2 ] ; then
-	show_status 3 Emerging packages
-	if [[ ${RESUME} -eq 1 ]] ; then
-		STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --resume"
-		cp /var/run/bootstrap-mtimedb /var/cache/edb
-	else
-		# Why do we need this?  It will pull in python that needs g++
-		# among others, and add a few IMHO unneeded deps ...
-		#STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -e"
-		:
-	fi
-	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} \
-		${myGCC} ${myLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
+	show_status 3 Emerging headers/binutils
+	#emerge ${STRAP_EMERGE_OPTS} -C virtual/os-headers || cleanup 1
+	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} || cleanup 1
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 3
+fi
+
+# If say both gcc and binutils were built for i486, and we then merge
+# binutils for i686 without removing the i486 version (Note that this is
+# _only_ when its exactly the same version of binutils ... if we have say
+# 2.14.90.0.6 build for i486, and bootstrap then merge 2.14.90.0.7 for i686,
+# we will not have issues.  More below ...), gcc's search path will
+# still have
+#
+#   /usr/lib/gcc-lib/i486-pc-linux-gnu/<gcc_version>/../../../../i486-pc-linux-gnu/bin/
+#
+# before /usr/bin, and thus it will use the i486 versions of binutils binaries
+# which causes issues.  The reason for this issues is that when bootstrap merge
+# exactly the same version for i686, both will have installed the same files to
+# /usr/lib, and thus also USE the same libraries, cause as/ld to fail with
+# unresolved symbols during compiling/linking.
+#
+# More info on this can be found by looking at bug #32140:
+#
+#   http://bugs.gentoo.org/show_bug.cgi?id=32140
+#
+# We now thus run an 'emerge clean' just after merging binutils ...
+#
+# NB: thanks to <rac@gentoo.org> for bringing me on the right track
+#     (http://forums.gentoo.org/viewtopic.php?t=100263)
+#
+# <azarah@gentoo.org> (1 Nov 2003)
+if [[ -n ${STRAP_RUN} ]] ; then
+    emerge clean || cleanup 1
+fi
+
+if [ ${BOOTSTRAP_STAGE} -le 3 ] ; then
+	show_status 4 Emerging gcc
+	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myGCC} || cleanup 1
+	echo -------------------------------------------------------------------------------
+	set_bootstrap_stage 4
 fi
 
 # Basic support for gcc multi version/arch scheme ...
@@ -334,12 +337,20 @@ if [[ -n ${STRAP_RUN} ]] ; then
 	fi
 fi
 
-if [[ -n ${STRAP_RUN} ]] ; then
+if [ ${BOOTSTRAP_STAGE} -le 4 ] ; then
+	show_status 5 Emerging libc/baselayout
+	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
 	echo -------------------------------------------------------------------------------
-	einfo "Please note that you should now add the '-e' option for emerge system:"
-	echo
-	einfo "  # emerge -e system"
-	echo
+	set_bootstrap_stage 5
+fi
+
+# ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
+export USE="${ORIGUSE}"
+if [ ${BOOTSTRAP_STAGE} -le 5 ] ; then
+	show_status 6 Re-Emerging C++ apps
+	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myNCURSES} || cleanup 1
+	echo -------------------------------------------------------------------------------
+	set_bootstrap_stage 6
 fi
 
 # Restore original make.conf
