@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.4.ebuild,v 1.4 2003/03/05 13:30:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.4.ebuild,v 1.5 2003/04/06 04:07:02 weeve Exp $
 
 IUSE="spell"
 
@@ -9,7 +9,7 @@ SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/SOURCE/${P}.tar.bz2"
 HOMEPAGE="http://pan.rebelbase.com"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc sparc"
 SLOT="0"
 
 RDEPEND=">=dev-libs/glib-2.0.4
