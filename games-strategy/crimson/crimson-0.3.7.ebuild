@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/crimson-0.3.7.ebuild,v 1.2 2003/12/12 09:56:42 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/crimson-0.3.7.ebuild,v 1.3 2003/12/12 09:57:42 avenj Exp $
 
 inherit games
 
@@ -36,6 +36,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
+
 	echo
 	ewarn "Crimson Fields ${PV} is not save-game compatible with previous versions."
 	echo
