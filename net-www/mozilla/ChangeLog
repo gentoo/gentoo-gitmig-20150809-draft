@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.137 2003/12/14 20:27:09 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.138 2003/12/29 15:15:59 weeve Exp $
+
+  29 Dec 2003; Jason Wever <weeve@gentoo.org> :
+  removed stray digest file.
 
 *mozilla-1.6b (14 Dec 2003)
 
