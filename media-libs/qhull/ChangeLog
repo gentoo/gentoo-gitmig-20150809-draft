@@ -1,0 +1,19 @@
+# ChangeLog for media-libs/qhull
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.1 2002/02/10 22:06:36 karltk Exp $
+
+*qhull-3.1 ( 10 Feb 2002 )
+
+  10 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog files/digest-qhull-3.1 qhull-3.1.ebuild:
+
+  Qhull computes convex hulls, Delaunay triangulations, halfspace 
+  intersections about a point, Voronoi diagrams, furthest-site Delaunay 
+  triangulations, and furthest-site Voronoi diagrams. It runs in 2-d, 3-d, 
+  4-d, and higher dimensions. It implements the Quickhull algorithm for 
+  computing the convex hull. Qhull handles roundoff errors from floating 
+  point arithmetic. It computes volumes, surface areas, and approximations to
+  the convex hull.
+
+  Qhull does not support constrained Delaunay triangulations, triangulation of
+  non-convex surfaces, mesh generation of non-convex objects, or medium-sized 
+  inputs in 9-D and higher.
