@@ -1,6 +1,6 @@
 MD5 4989bc9ece0842dd664bf2d1325ce877 ChangeLog 428
 MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
 MD5 f96c73fe7301521fcfa71fb5171b7b55 obconf-1.0.ebuild 684
-MD5 6abcc3d564daaebb067d23a4aa4449cd obconf-1.1.ebuild 684
+MD5 e735ac6ec005504bed062d0db645f1a7 obconf-1.1.ebuild 684
 MD5 80ba7628e30ad5a71c7aab7a3f697f90 files/digest-obconf-1.0 62
 MD5 39571f2acdf8caaf1129e4c5bcc2116e files/digest-obconf-1.1 62
