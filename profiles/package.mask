@@ -794,11 +794,6 @@ net-mail/courier
 # should be updated to 4.2 
 sys-apps/texinfo
 
-# mkennedy@gentoo.org 22 May 2002 
-# patch to support gcc3.1 and version bump -- masked until someone
-# tests this with gcc2.95.3 and 3.0.4 
-=media-sound/alsaplayer-0.99.70
-
 # mkennedy@gentoo.org 27 May 2002
 # -Wno-deprecated in CPPFLAGS to support gcc3.1 --masked until someone
 # tests this with gcc-2.95.3
