@@ -1,6 +1,9 @@
 # ChangeLog for net-www/liferea
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.12 2004/09/03 23:24:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.13 2004/09/05 06:48:36 khai Exp $
+
+  05 Sep 2004; Yi Qiang <khai@gentoo.org> :
+  Version bump, 0.5.3c fixes a huge memory leak
 
   04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   liferea-0.5.3b.ebuild:
