@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/wxchecksums
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/wxchecksums/ChangeLog,v 1.1 2004/07/22 17:34:53 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/wxchecksums/ChangeLog,v 1.2 2004/07/22 23:40:25 dholm Exp $
+
+  23 Jul 2004; David Holm <dholm@gentoo.org> wxchecksums-1.1.2.ebuild:
+  Added to ~ppc.
 
 *wxchecksums-1.1.2 (22 Jul 2004)
 
