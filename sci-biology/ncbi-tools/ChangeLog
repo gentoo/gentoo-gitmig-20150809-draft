@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.4 2005/01/03 02:10:22 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.5 2005/01/19 00:16:44 ribosome Exp $
+
+*ncbi-tools-20041020 (18 Jan 2005)
+
+  18 Jan 2005; Olivier Fisette <ribosome@gentoo.org>
+  +ncbi-tools-20041020.ebuild:
+  New version.
 
   02 Jan 2005; Olivier Fisette <ribosome@gentoo.org> :
   Added to x86. Use toolchain-funcs rather than gcc eclass.
