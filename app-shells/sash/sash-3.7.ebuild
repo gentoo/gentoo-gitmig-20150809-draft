@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.17 2004/12/08 01:09:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.18 2004/12/08 01:58:06 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -26,12 +26,10 @@ src_unpack() {
 	epatch ${FILESDIR}/sash-3.7-builtin.patch
 	use readline && epatch ${FILESDIR}/sash-3.6-readline.patch
 
-	# this indicates broken header files but don't know what to do
-	# about it yet.  (03 Mar 2004 agriffis)
-	use ia64 && append-flags -Du64=__u64 -Du32=__u32 -Ds64=__s64 -Ds32=__s32
-
-	# use our CFLAGS in the Makefile
-	sed -e "s:-O3:${CFLAGS}:" -i Makefile
+	sed -i \
+		-e "s:-O3:${CFLAGS}:" \
+		-e "/^LDFLAGS /s:$:${LDFLAGS}:" \
+		Makefile || die "sed failed"
 }
 
 src_compile() {
