@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7.ebuild,v 1.6 2002/09/14 03:07:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7.ebuild,v 1.7 2002/09/15 15:31:40 mcummings Exp $
 
 inherit libtool
 inherit perl-module
@@ -75,6 +75,8 @@ src_install() {
 
 	mydoc="*.txt"
 
+	cd ${S}
+	make ${myinst} install || die
 	cd ${S}
 	cd ${S}/PerlMagick
 	perl-module_src_install
