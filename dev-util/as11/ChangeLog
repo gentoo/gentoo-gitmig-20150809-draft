@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/as11
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/as11/ChangeLog,v 1.1 2003/09/23 03:02:31 zul Exp $
+
+*as11-1.0 (22 Sep 2003)
+
+  22 Sep 2003; Chuck Short <zul@gentoo.org> as11-1.0.ebuild:
+  Initial version, closes bug #28997. Ebuild contributed by 
+  Mark Lopes <_0o7_@yahoo.com>.
+
