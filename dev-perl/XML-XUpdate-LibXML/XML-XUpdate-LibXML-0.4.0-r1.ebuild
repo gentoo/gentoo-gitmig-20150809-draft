@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/XML-XUpdate-LibXML-0.4.0.ebuild,v 1.2 2003/06/17 12:05:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/XML-XUpdate-LibXML-0.4.0-r1.ebuild,v 1.1 2003/06/17 12:05:57 mcummings Exp $
 
 IUSE=""
 inherit perl-module
