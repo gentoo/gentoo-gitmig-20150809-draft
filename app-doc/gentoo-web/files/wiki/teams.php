@@ -125,7 +125,7 @@
 		print "<li> <a href=\"mailto:$email\">$handle</a>\n";
 	}
 	if ($tmp) print '</ul>';
-	else print "<p>Team $team is unleaded!</p>";
+	else print "<p>The $team team doesn't have a leader.</p>";
 	?>
 		</td>
 	</tr>
