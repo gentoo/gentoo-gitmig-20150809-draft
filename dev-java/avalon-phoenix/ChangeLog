@@ -1,9 +1,0 @@
-# ChangeLog for dev-java/avalon-phoenix
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-phoenix/ChangeLog,v 1.1 2003/04/25 21:53:03 tberman Exp $
-
-*avalon-phoenix-4.0.4 (25 Apr 2003)
-
-  25 Apr 2003; tberman <tberman@gentoo.org> avalon-phoenix-4.0.4.ebuild:
-  Initial import.
-
