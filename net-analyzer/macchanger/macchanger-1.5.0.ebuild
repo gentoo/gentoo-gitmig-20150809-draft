@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/macchanger-1.5.0.ebuild,v 1.3 2004/08/28 14:38:07 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/macchanger-1.5.0.ebuild,v 1.4 2004/09/07 17:20:35 gustavoz Exp $
 
 DESCRIPTION="Utility for viewing/manipulating the MAC address of network interfaces"
 HOMEPAGE="http://www.alobbs.com/macchanger"
 LICENSE="GPL-2"
 
 SRC_URI="ftp://ftp.gnu.org/gnu/macchanger/${P}.tar.gz"
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc sparc ~amd64"
 IUSE=""
 SLOT="0"
 
