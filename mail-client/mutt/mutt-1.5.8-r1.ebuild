@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.8-r1.ebuild,v 1.2 2005/02/20 00:49:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.8-r1.ebuild,v 1.3 2005/02/20 21:16:41 agriffis Exp $
 
 inherit eutils flag-o-matic
 IUSE="cjk ssl nls slang crypt imap mbox nntp sasl vanilla"
@@ -76,6 +76,7 @@ src_compile() {
 		$(use_enable crypt smime) \
 		$(use_enable cjk default-japanese) \
 		$(use_with sasl sasl2) \
+		--enable-compressed \
 		--with-mixmaster \
 		--sysconfdir=/etc/mutt \
 		--with-docdir=/usr/share/doc/mutt-${PVR} \
