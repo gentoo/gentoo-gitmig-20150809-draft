@@ -17,7 +17,8 @@ use mmx || use 3dnow \
 SRC_URI="${SOURCE_HTTP}"
 HOMEPAGE="http://www.xmms.org/"
 
-RDEPEND="=x11-libs/gtk+-1.2*
+RDEPEND="app-arch/unzip
+	=x11-libs/gtk+-1.2*
 	>=media-libs/libmikmod-3.1.9
 	avi? ( >=media-video/avifile-0.7.4.20020426-r2 )
 	esd? ( >=media-sound/esound-0.2.22 )
