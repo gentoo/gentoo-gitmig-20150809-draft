@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-cdt-bin
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/ChangeLog,v 1.10 2004/06/04 22:01:18 karltk Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/ChangeLog,v 1.11 2004/06/05 01:06:20 weeve Exp $
+
+  04 Jun 2004; Jason Wever <weeve@gentoo.org> eclipse-cdt-bin-1.2.0.ebuild:
+  Added ~sparc keywords to help resolve bug #53019.
 
   05 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-cdt-bin-1.2.0.ebuild: Changed to correct dep. Removed
