@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.10 2002/02/12 09:36:25 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.11 2002/02/22 05:15:54 drobbins Exp $
+
+*portage-1.8.9_pre9 (21 Feb 2002)
+
+  21 Feb 2002; Daniel Robbins <drobbins@gentoo.org> : many fixes and
+  improvements too numerous to list here.  See the gentoo-src Portage ChangeLog
+  (rather than this ebuild ChangeLog) for more info.  The major ebuild-related
+  changed was the transition from spython back to python.
 
 *portage-1.8.9_pre8 (12 Feb 2002) 
 
