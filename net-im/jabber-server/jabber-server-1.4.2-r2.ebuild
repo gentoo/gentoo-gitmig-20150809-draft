@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.4 2002/11/13 12:56:03 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.5 2002/11/13 18:04:28 verwilst Exp $
 
 IUSE="ssl"
 
@@ -27,7 +27,6 @@ src_unpack() {
 	unpack jabber-${PV}.tar.gz
 	cd ${S}
 	patch -p0 < ${FILESDIR}/mio_ssl.c.patch
-	tar -xjf ${FILESDIR}/config-1.4.2.tar.bz2
 	unpack msn-transport-stable-20011217.tar.gz
 	unpack aim-transport-stable-20021112.tar.gz
 	unpack yahoo-t-2.1.1.tar.gz
@@ -74,10 +73,12 @@ src_install() {
         cd ${S}
 	touch error.log
 	touch record.log
-        exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6 jabber
+        exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6-r1 jabber
         mkdir -p ${D}/usr/sbin
 	mkdir -p ${D}/etc/jabber
 	mkdir -p ${D}/usr/lib/jabber
+	mkdir -p ${D}/var/log/jabber
+	mkdir -p ${D}/var/run
 	cp ${S}/jabberd/jabberd ${D}/usr/sbin/
 	cp ${S}/aim-transport/src/aimtrans.so ${D}/usr/lib/jabber/
 	cp ${S}/aim-transport/Install_AIM_3.5.1670.exe ${D}/usr/lib/jabber/

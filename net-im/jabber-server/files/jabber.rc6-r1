@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/files/jabber.rc6-r1,v 1.1 2002/11/13 12:56:03 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/files/jabber.rc6-r1,v 1.2 2002/11/13 18:04:28 verwilst Exp $
 depend() {
         need net
 }
@@ -9,12 +9,12 @@ depend() {
 start() {
         ebegin "Starting Jabber Server"
 
-        /usr/sbin/jabberd -c multiple.xml &
-        /usr/sbin/jabberd -c aimtrans.xml &
-        /usr/sbin/jabberd -c msntrans.xml &
-        /usr/sbin/jabberd -c yahootrans.xml &
-        /usr/sbin/jabberd -c muctrans.xml &
-        /usr/sbin/jabberd -c icqtrans.xml &
+        /usr/sbin/jabberd -c /etc/jabber/multiple.xml &
+        /usr/sbin/jabberd -c /etc/jabber/aimtrans.xml &
+        /usr/sbin/jabberd -c /etc/jabber/msntrans.xml &
+        /usr/sbin/jabberd -c /etc/jabber/yahootrans.xml &
+        /usr/sbin/jabberd -c /etc/jabber/muctrans.xml &
+        /usr/sbin/jabberd -c /etc/jabber/icqtrans.xml &
 
         eend $?
 }
