@@ -1,11 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/PEAR-Net_Sieve-0.8.1-r1.ebuild,v 1.5 2005/02/12 15:45:55 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/PEAR-Net_Sieve-1.1.1.ebuild,v 1.1 2005/02/12 15:45:55 sebastian Exp $
 
 inherit php-pear
 
 DESCRIPTION="Provides an API to talk to the timsieved server that comes with Cyrus IMAPd. Can be used to install, remove, mark active etc sieve scripts."
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~ia64 ~amd64"
 IUSE=""
+RDEPEND=">=dev-php/PEAR-Net_Socket-1.0.0"
