@@ -1,10 +1,16 @@
-MD5 aa5180a1aa46f023172d9bf1a5633582 ChangeLog 2163
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c3004f97c3a4e21f4faee5e23cb7ee2b ChangeLog 2398
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 66a03f713d1c8216296d87afaa3514b9 xmms-scrobbler-0.3.1.ebuild 639
-MD5 56945b51bb33e2da5c42a7a5406dd0a7 xmms-scrobbler-0.3.2.ebuild 638
 MD5 c22a6830f12adddb5d5fc79a954f10d2 xmms-scrobbler-0.3.3.ebuild 660
-MD5 c3eba54f02977de1bb7da85c3a71f475 xmms-scrobbler-0.3.4.ebuild 658
-MD5 c7215593200ae19c5420ed069875a3ce files/digest-xmms-scrobbler-0.3.1 73
-MD5 40f9a55ab4c5260671cb70a23e140ba7 files/digest-xmms-scrobbler-0.3.2 73
+MD5 fd2e949e6fc6e73f24887d9082f55a48 xmms-scrobbler-0.3.5.ebuild 658
 MD5 b2eedc3c7ec9a28806f928fed900e2c1 files/digest-xmms-scrobbler-0.3.3 73
-MD5 fbae2b7fbb3a8405a4e81db9449aa0e8 files/digest-xmms-scrobbler-0.3.4 73
+MD5 42622bef171de6fad52ada3997fecb2c files/digest-xmms-scrobbler-0.3.5 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXJpHArHZZzCEUG0RAp9wAJwKM3kDuAcOC3FGZKpYJFFMZcvurgCfYIDp
+kDjGQR085msSzo2OlJepeng=
+=9Ard
+-----END PGP SIGNATURE-----

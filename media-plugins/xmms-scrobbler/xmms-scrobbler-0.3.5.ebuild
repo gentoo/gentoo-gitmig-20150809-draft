@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/xmms-scrobbler-0.3.1.ebuild,v 1.8 2004/07/06 09:29:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/xmms-scrobbler-0.3.5.ebuild,v 1.1 2004/09/30 23:43:30 eradicator Exp $
 
 IUSE=""
 
-DESCRIPTION="Audioscrobbler plugin for XMMS"
+DESCRIPTION="Audioscrobbler music-profiling plugin for XMMS"
 HOMEPAGE="http://www.audioscrobbler.com/"
-SRC_URI="http://static.audioscrobbler.com:8000/plugins/${P}.tar.bz2"
+SRC_URI="http://static.audioscrobbler.com/plugins/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 
 DEPEND="media-sound/xmms
 	net-misc/curl
