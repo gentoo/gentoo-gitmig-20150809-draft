@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20040522.ebuild,v 1.3 2004/08/16 10:09:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20040522.ebuild,v 1.4 2004/08/17 06:20:35 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -54,7 +54,7 @@ src_unpack() {
 
 src_compile() {
 	cd source/enet
-	econf ||
+	econf || die
 	emake || die "emake failed"
 	cd ../src
 	einfo "Compiling in $(pwd)"
@@ -77,7 +77,8 @@ src_install() {
 	sed -i \
 		-e "s:GENTOO_DATADIR:${CUBE_DATADIR}:" \
 		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/${PN}:" \
-		"${D}/${GAMES_BINDIR}/cube_"{client,server}-bin
+		"${D}/${GAMES_BINDIR}/cube_"{client,server}-bin \
+		|| die "sed failed"
 
 	dodir "${CUBE_DATADIR}"
 	cp -r *.cfg data packages "${D}/${CUBE_DATADIR}" \
