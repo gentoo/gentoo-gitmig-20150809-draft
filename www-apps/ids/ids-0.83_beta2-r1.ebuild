@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ids-0.83_beta2-r1.ebuild,v 1.1 2004/08/18 17:31:21 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ids-0.83_beta2-r1.ebuild,v 1.2 2004/08/30 13:30:17 dholm Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://ids.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 IUSE=""
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 DEPEND="$DEPEND"
 RDEPEND="net-www/apache
 	>=dev-lang/perl-5.6.1
