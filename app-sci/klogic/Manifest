@@ -1,3 +1,4 @@
-MD5 7833a2568878d3a8278ca098ebe81891 files/digest-klogic-1.5 63
-MD5 f1cf3d3ab3757ae62798ebb122e5c7d1 klogic-1.5.ebuild 481
 MD5 ec7995c5839fdad2147a2462c5abae5b ChangeLog 371
+MD5 f1cf3d3ab3757ae62798ebb122e5c7d1 klogic-1.5.ebuild 481
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 7833a2568878d3a8278ca098ebe81891 files/digest-klogic-1.5 63
