@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.70 2004/10/13 20:42:10 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.71 2004/10/25 19:20:54 gustavoz Exp $
+
+  25 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> gnumeric-1.2.13.ebuild:
+  Stable on sparc
 
   13 Oct 2004; Tom Martin <slarti@gentoo.org> gnumeric-1.2.12.ebuild:
   Stable on amd64, bug 67183.
