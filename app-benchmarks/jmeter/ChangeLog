@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.11 2004/08/23 22:03:33 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.12 2004/09/12 19:31:41 axxo Exp $
+
+*jmeter-2.0.1-r1 (12 Sep 2004)
+
+  12 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +jmeter-2.0.1-r1.ebuild:
+  changes to stop using packed jars, work in progress, see bug 63309 for more
+  information
 
   23 Aug 2004; Chris Aniszczyk <zx@gentoo.org>
   -files/jmeter-1.8.1-gentoo.diff, -jmeter-1.8.1.ebuild:
