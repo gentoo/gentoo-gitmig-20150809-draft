@@ -1,15 +1,15 @@
 # ChangeLog for media-plugins/xmms-blursk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-blursk/ChangeLog,v 1.4 2003/02/12 07:20:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-blursk/ChangeLog,v 1.5 2004/03/19 09:32:32 aliz Exp $
 
-*xmms-blursk-1.3.ebuild (04 Nov 2002)
+*xmms-blursk-1.3 (04 Nov 2002)
 
   04 Nov 2002; Seemant Kulleen <seemant@gentoo.org> xmms-blursk-1.3.ebuild
   files/digest-xmms-blursk-1.3 :
 
   Version bump thanks to: autobot@midsouth.rr.com (AutoBot) in bug #10080.
 
-*xmms-blursk-1.2.ebuild (18 Jun 2002)
+*xmms-blursk-1.2 (18 Jun 2002)
   
   25 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> xmms-blursk-1.2.ebuild :
 

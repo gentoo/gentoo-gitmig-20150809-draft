@@ -1,6 +1,6 @@
 # ChangeLog for media-plugins/gst-plugins-gnomevfs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.14 2004/03/16 02:35:17 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.15 2004/03/19 09:32:32 aliz Exp $
 
   15 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
   gst-plugins-gnomevfs-0.6.4.ebuild:
@@ -25,7 +25,7 @@
   gst-plugins-gnomevfs-0.6.3.ebuild:
   added sparc keyword
 
-*gst-plugins-gnomevfs-0.6.4.ebuild (23 Oct 2003)
+*gst-plugins-gnomevfs-0.6.4 (23 Oct 2003)
 
   23 Oct 2003; foser <foser@gentoo.org> gst-plugins-gnomevfs-0.6.4.ebuild :
   New version
