@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p1-r1.ebuild,v 1.1 2003/09/18 14:46:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p1-r1.ebuild,v 1.2 2003/09/19 13:27:25 aliz Exp $
 
 inherit eutils flag-o-matic ccc
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -43,14 +43,14 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ~ia64"
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
 
+#	use selinux && epatch ${DISTDIR}/openssh_3.6p1-5.se1.diff.bz2
+	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
+	use X509 && epatch ${DISTDIR}/${X509_PATCH}
+
 	epatch ${FILESDIR}/${P}-connect-timeout.patch
 	epatch ${FILESDIR}/${P}-double-free.patch
 	epatch ${FILESDIR}/${P}-memory-leak.patch
 	epatch ${FILESDIR}/${P}-memory-bugs.patch
-
-	use selinux && epatch ${DISTDIR}/openssh_3.6p1-5.se1.diff.bz2
-	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
-	use X509 && epatch ${DISTDIR}/${X509_PATCH}
 
 	use skey && {
 		# prevent the conftest from violating the sandbox
