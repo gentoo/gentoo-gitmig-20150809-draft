@@ -1,6 +1,14 @@
 # ChangeLog for net-www/adzapper
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/ChangeLog,v 1.7 2003/06/05 22:32:54 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/ChangeLog,v 1.8 2003/06/11 16:55:06 brad Exp $
+
+*adzapper-20030611 (11 Jun 2003)
+
+  11 Jun 2003; Brad Laue <brad@gentoo.org> adzapper-20030611.ebuild:
+  Submitted by Stewart <bugsubmit@snerk.org>
+  
+  Update to 20030611 snapshot, add stable keywords for all platforms supported
+  by squid.
 
   05 Jun 2003; Brad Laue <brad@gentoo.org> adzapper-20030525.ebuild:
   Marking stable on x86.
