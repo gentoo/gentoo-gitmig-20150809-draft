@@ -1,6 +1,7 @@
 MD5 3dd0c04fad6f832997949ec70e4d1864 jswat-1.7.1.ebuild 862
 MD5 b1c8a15e1db16087ee58efa203d756c1 jswat-2.17-r1.ebuild 1400
 MD5 cfee037d09cf83c5a3ee000fefc31f32 ChangeLog 1770
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 cd73b809ca54bfad49d364a277bcf1ae files/jswat 1420
 MD5 c52b5e917a5ec237a0b62111506885ca files/jswat2 1258
 MD5 b7b3e490432793c593c9694f882a2163 files/digest-jswat-1.7.1 64

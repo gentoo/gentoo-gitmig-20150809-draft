@@ -1,3 +1,4 @@
-MD5 d1415a7310e102f6f2f3765abe372ed4 files/digest-jmbus-1.0.7 63
-MD5 80ee3528359d8054bccb283ec75ba78c ChangeLog 326
 MD5 4e210c533197755ed62630467ff30374 jmbus-1.0.7.ebuild 872
+MD5 80ee3528359d8054bccb283ec75ba78c ChangeLog 326
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 d1415a7310e102f6f2f3765abe372ed4 files/digest-jmbus-1.0.7 63

@@ -1,5 +1,6 @@
 MD5 e0254f8ff35475d5c61a8ade3e64ac2a makeme-0.02-r2.ebuild 904
 MD5 39b7b45872157c2d65f97dec6d9b22f8 ChangeLog 1127
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 daf51d865c22c406d6069ca8980a42aa files/makeme.sh 830
 MD5 ca96d8806318e98767f9637b1720bb11 files/digest-makeme-0.02-r2 62
 MD5 a737fb4370c5313cf1e58c0a8ddd80c7 files/makeme-0.02-r2-gentoo.diff 899

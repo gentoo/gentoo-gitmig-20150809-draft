@@ -1,3 +1,4 @@
-MD5 31f12a51c7b3f5563a0385b96cefe9a9 files/digest-fop-bin-0.20.4 67
 MD5 ceb1f7f33666e2c9b2396a92da6376cc fop-bin-0.20.4.ebuild 798
 MD5 2bbe1f9a00a883cf7b613eccca0debe3 ChangeLog 360
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 31f12a51c7b3f5563a0385b96cefe9a9 files/digest-fop-bin-0.20.4 67

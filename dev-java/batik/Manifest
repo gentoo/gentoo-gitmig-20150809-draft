@@ -1,3 +1,4 @@
-MD5 685865b8912d441af280a79904e061c8 files/digest-batik-1.1.1 65
-MD5 c71c9d5feba821198bb212d1f3c923f1 ChangeLog 468
 MD5 a66edbf8b317086eaa2a1784b42c4a80 batik-1.1.1.ebuild 919
+MD5 c71c9d5feba821198bb212d1f3c923f1 ChangeLog 468
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 685865b8912d441af280a79904e061c8 files/digest-batik-1.1.1 65

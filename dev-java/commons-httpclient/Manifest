@@ -1,3 +1,4 @@
-MD5 db843fa6f23a0dea629c7b17517612dd files/digest-commons-httpclient-2.0_alpha3 159
-MD5 40c817c8d6c0428d226c77d16272d312 ChangeLog 659
 MD5 cb904e99a7e7db25182f90e200bdf6eb commons-httpclient-2.0_alpha3.ebuild 1052
+MD5 40c817c8d6c0428d226c77d16272d312 ChangeLog 659
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 db843fa6f23a0dea629c7b17517612dd files/digest-commons-httpclient-2.0_alpha3 159

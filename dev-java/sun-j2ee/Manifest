@@ -1,5 +1,6 @@
 MD5 d5a2a74fd5f6062e3f67bf3edbea91d7 sun-j2ee-1.3.1.ebuild 1122
 MD5 af72bce1838402fa4c8208aae645745c sun-j2ee-1.3.1-r1.ebuild 1190
 MD5 01ce69bbae5f223d26e9b3f0b0d1fe0a ChangeLog 1446
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sun-j2ee-1.3.1-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sun-j2ee-1.3.1 0

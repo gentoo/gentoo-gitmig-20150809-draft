@@ -1,6 +1,7 @@
 MD5 1c5e230d8f40d149069d7d830511f94b xerces-2.3.0.ebuild 979
 MD5 0d507175afd89b7b3eaf24f378a0bf27 xerces-2.3.0-r1.ebuild 1213
 MD5 6959daa48ed6f5ffad5b8e4a520a2ce6 ChangeLog 2029
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 0ed5652de5f404a3fefb774b2b1a8538 files/digest-xerces-2.3.0-r1 144
 MD5 0aecf5f2232e04fb4067f5f67b41d810 files/xerces-2.3.0-gentoo.diff 1418
 MD5 292bf76be10447bbda6f482a0b2101ea files/digest-xerces-2.3.0 206

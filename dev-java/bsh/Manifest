@@ -1,5 +1,6 @@
 MD5 67b5fc72dcf13423381cc4376f4696bf bsh-1.2-r7.ebuild 880
 MD5 ed42ffa4558b2f3be717b1746b4f14d7 ChangeLog 368
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 64611ab902f6d0eb7f3ce51222b1b1cd files/bsh.Console 816
 MD5 e70fbaf743f0eff828aaefbe4bfdebe4 files/bsh.Interpreter 831
 MD5 21e5032685b7867cb02451abb400ffb3 files/digest-bsh-1.2-r7 58
