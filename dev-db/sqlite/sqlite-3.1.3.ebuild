@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.1.3.ebuild,v 1.1 2005/03/02 18:23:47 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.1.3.ebuild,v 1.2 2005/03/04 20:56:42 kito Exp $
 
 inherit eutils
 
@@ -14,12 +14,12 @@ HOMEPAGE="http://www.sqlite.org"
 #   if all virtual/libc's provide POSIX threads (pthread.h)
 #   - 20041203, Armando Di Cianno <fafhrd@gentoo.org>
 DEPEND="virtual/libc
-	!nothreadsafe? ( sys-libs/glibc )
+	!nothreadsafe? ( !ppc-macos? ( sys-libs/glibc ) )
 	dev-lang/tcl"
 SLOT="3"
 LICENSE="as-is"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~sparc ~x86"
 
 src_compile() {
 	# sqlite includes a doc directory making it impossible to generate docs, 
