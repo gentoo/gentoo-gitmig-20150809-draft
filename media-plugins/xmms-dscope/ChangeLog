@@ -1,9 +1,13 @@
 # ChangeLog for media-plugins/xmms-dscope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dscope/ChangeLog,v 1.3 2003/02/12 07:20:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dscope/ChangeLog,v 1.4 2003/03/29 03:55:29 seemant Exp $
 
 
 *dscope-1.2,  (22 May 2002)
+
+  28 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xmms-dscope-1.2.ebuild :
+
+  HOMEPAGE fix by Frantz Dhin <tragedy_rm@hotmail.com> in bug #18299
 
   25 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> xmms-dscope-1.2.ebuild :
 
