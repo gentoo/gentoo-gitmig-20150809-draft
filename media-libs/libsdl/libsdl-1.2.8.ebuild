@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8.ebuild,v 1.8 2005/01/03 02:19:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8.ebuild,v 1.9 2005/01/09 21:03:31 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils gnuconfig
 
@@ -50,6 +50,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-libcaca.patch #40224
 	epatch "${FILESDIR}"/${PV}-gcc2.patch #75392
 	epatch "${FILESDIR}"/${PV}-keyrepeat.patch #76448
+	epatch "${FILESDIR}"/${PV}-linux26.patch #74608
 	[[ $(gcc-major-version) -eq 2 ]] && \
 		epatch "${FILESDIR}"/${PV}-gcc2-asm.patch #75392
 
