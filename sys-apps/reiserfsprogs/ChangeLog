@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/reiserfsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/ChangeLog,v 1.18 2003/05/02 13:35:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/ChangeLog,v 1.19 2003/05/04 04:12:25 vladimir Exp $
 
 *reiserfsprogs-3.6.7 (02 May 2003)
 
@@ -39,6 +39,10 @@
   Many bugfixes, one critical fix, upgrade recommended.
 
 *reiserfsprogs-3.6.4-r1 (02 Nov 2002)
+
+  03 May 2003; Graham Forest <vladimir@gentoo.org>
+  reiserfsprogs-3.6.4-r1.ebuild:
+  set ppc in keywords
 
   10 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
   reiserfsprogs-3.6.4-r1.ebuild:
