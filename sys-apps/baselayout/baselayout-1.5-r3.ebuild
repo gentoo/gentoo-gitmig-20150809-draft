@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.7 2001/05/18 19:19:23 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.8 2001/05/23 23:01:43 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -121,7 +121,10 @@ src_install()
         MAKEDEV scd
         MAKEDEV rtc 
 		MAKEDEV audio
-
+		MAKEDEV hde
+		MAKEDEV hdf
+		MAKEDEV hdg
+		MAKEDEV hdh
 	cd ${D}/etc/rc.d/config
 	cp runlevels runlevels.orig
 	sed -e 's:##OSNAME##:Gentoo Linux:g' -e "s:##ARCH##:${CHOST%%-*}:g" runlevels.orig > runlevels
