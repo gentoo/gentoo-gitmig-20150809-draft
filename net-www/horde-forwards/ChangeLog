@@ -1,6 +1,9 @@
 # ChangeLog for net-www/horde-forwards
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-forwards/ChangeLog,v 1.2 2004/03/07 21:18:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-forwards/ChangeLog,v 1.3 2004/03/29 01:30:46 zx Exp $
+
+  01 Apr 2004; Chris Aniszczyk <zx@gentoo.org> horde-forwards-2.2.ebuild:
+  Marking ~hppa
 
 *horde-forwards-2.2 (07 Mar 2004)
 

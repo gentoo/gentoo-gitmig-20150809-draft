@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-mnemo/horde-mnemo-1.1.1.ebuild,v 1.2 2004/03/19 01:28:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-mnemo/horde-mnemo-1.1.1.ebuild,v 1.3 2004/03/29 01:37:44 zx Exp $
 
 inherit horde
 
 DESCRIPTION="Mnemo is the Horde note manager"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
 
 DEPEND=""
 RDEPEND=">=net-www/horde-2.2.5"
