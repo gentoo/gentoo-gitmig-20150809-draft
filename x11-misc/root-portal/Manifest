@@ -1,7 +1,17 @@
-MD5 4ed34c2f54847853bc8792dacd837b09 ChangeLog 1746
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cde9beabcbd7befce769fdd9803abd8d ChangeLog 1849
 MD5 d97f919dcbe1752eec2ffaf9a85bd9ad root-portal-0.4.11.ebuild 1853
-MD5 b67c2f235a5a056f742342798c93d75a root-portal-0.5.0.ebuild 768
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 08faa266c44fd5199f2330396e469dbe root-portal-0.5.0.ebuild 784
 MD5 8a6d14539df2b912f17d1f78a54a1e4b files/0.4.11-gcc3.patch 2455
 MD5 c2474198f20ec00a050dd0b6adcac40e files/digest-root-portal-0.4.11 70
 MD5 f9d2acb2ede1a736f915ef1ed10020e2 files/digest-root-portal-0.5.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjhxVI7fK2cqeyXkRAhcFAKDly7SBQ13mrxFoD/x8puy5+Yg70QCgjwCo
+cI5654ou0PaMzal5yBwi4aw=
+=FFXY
+-----END PGP SIGNATURE-----

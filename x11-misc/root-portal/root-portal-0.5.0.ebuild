@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.0.ebuild,v 1.8 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.0.ebuild,v 1.9 2004/11/07 13:00:01 pyrania Exp $
 
 inherit gnome2 debug
 
@@ -13,6 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 DOC="PACKAGING README NEWS ChangeLog BUGS AUTHORS README.help TODO"
+
+USE_DESTDIR="1"
 
 RDEPEND="virtual/x11
 	>=x11-libs/gtk+-2
