@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.21 2003/04/01 21:34:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.22 2003/05/07 22:44:07 joker Exp $
+
+  08 May 2003; Christian Birchinger <joker@gentoo.org>
+  java-config-0.2.8.ebuild:
+  Added stable sparc keyword
 
   01 Apr 2003; Daniel Robbins <drobbins@gentoo.org>: files/0.2.8/java-config:
   minor cosmetic fixes to allow closing of bug #17696, unmasking for x86.
