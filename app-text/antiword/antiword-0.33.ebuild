@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.33.ebuild,v 1.7 2003/03/01 04:12:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.33.ebuild,v 1.8 2003/03/09 14:54:43 seemant Exp $
 
 DESCRIPTION="free MS Word reader for Linux and RISC OS"
 SRC_URI="http://www.winfield.demon.nl/linux/${P}.tar.gz"
@@ -17,8 +17,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	sed -e '/pedantic/d' -e 's/$(CFLAGS)/$(CFLAGS) -D$(DB)/' \
-		Makefile.Linux > Makefile
+	sed -i \
+		-e 's/-pedantic//' \
+		-e 's/$(CFLAGS)/$(CFLAGS) -D$(DB)/' \
+		Makefile.Linux
 }
 
 src_compile() {
