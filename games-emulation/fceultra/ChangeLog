@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/fceultra
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.7 2004/06/05 07:34:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.8 2004/06/05 07:36:48 mr_bones_ Exp $
+
+*fceultra-0.93 (05 Jun 2004)
+
+  05 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  fceultra-0.81-r1.ebuild, fceultra-0.93.ebuild, fceultra-0.97.4.ebuild,
+  files/0.97.4-joystick.patch, files/0.97.4-stereo.patch:
+  clean out old ebuilds and files
 
   05 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   fceultra-0.98.10.ebuild:
