@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/latex2html
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.8 2004/04/17 16:36:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.9 2004/04/23 16:47:34 usata Exp $
+
+*latex2html-2002.2.1_pre20040108 (24 Apr 2004)
+
+  24 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> latex2html-2002.2.1.ebuild,
+  latex2html-2002.2.1_pre20040108.ebuild:
+  Changed ebuild's name to reflect the date of snapshot.
+  Should fix bug #48682
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> latex2html-2002.2.1.ebuild:
   Added amd64 keyword.

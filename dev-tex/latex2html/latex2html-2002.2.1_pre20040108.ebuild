@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1.ebuild,v 1.3 2004/04/17 16:36:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20040108.ebuild,v 1.1 2004/04/23 16:47:34 usata Exp $
 
 MY_P=${P//./-}
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${MY_P/_*/}
 DESCRIPTION="LATEX2HTML is a convertor written in Perl that converts LATEX documents to HTML."
 SRC_URI="http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/${MY_P}.tar.gz"
 HOMEPAGE="http://www.latex2html.org/"
