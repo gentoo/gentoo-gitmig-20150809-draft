@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.13.ebuild,v 1.3 2004/04/26 18:16:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.13.ebuild,v 1.4 2004/06/08 00:33:45 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -39,11 +39,11 @@ src_compile() {
 
 	qmake -o "Makefile" "${PN}.pro"
 
-	if [ "`use alsa`" ] ; then
+	if use alsa ; then
 		echo "CONFIG += using_alsa" >> settings.pro
 		echo "EXTRA_LIBS += -lasound" >> settings.pro
 	fi
-	if [ "`use lirc`" ] ; then
+	if use lirc ; then
 		sed -e "s:#CONFIG += using_lirc:CONFIG += using_lirc:" \
 			-e "s:#EXTRA_LIBS += -llirc_client:EXTRA_LIBS += -llirc_client:" \
 			-i "settings.pro" || die "enable lirc sed failed"
