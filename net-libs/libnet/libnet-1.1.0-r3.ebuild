@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.0-r3.ebuild,v 1.2 2003/09/04 19:22:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.0-r3.ebuild,v 1.3 2003/10/09 02:32:39 hillster Exp $
 
 DESCRIPTION="library to provide an API for commonly used low-level network functions (mainly packet injection)"
 HOMEPAGE="http://www.packetfactory.net/libnet/"
@@ -8,12 +8,12 @@ SRC_URI="http://www.packetfactory.net/libnet/dist/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="1.1"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 ~alpha"
 
 S=${WORKDIR}/Libnet-latest
 
 src_compile(){
-	econf || die
+	econf || die "Failed to configure"
 	emake || die "Failed to compile"
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.18 2003/08/21 04:17:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.19 2003/10/09 02:32:39 hillster Exp $
+
+  08 Oct 2003; Joel Hill <hillster@gentoo.org> libnet-1.1.0-r3.ebuild:
+  marking stable.
 
 *libnet-1.1.0-r3 (21 Aug 2003)
 
