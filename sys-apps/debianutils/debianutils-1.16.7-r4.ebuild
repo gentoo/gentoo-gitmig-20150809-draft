@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.5 2004/04/24 08:00:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.6 2004/04/26 04:13:13 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="A selection of tools from Debian"
 HOMEPAGE="http://packages.debian.org/unstable/base/debianutils.html"
