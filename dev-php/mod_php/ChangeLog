@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.162 2004/07/14 02:49:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.163 2004/07/14 09:53:34 stuart Exp $
+
+  14 Jul 2004; Stuart Herbert <stuart@gentoo.org> mod_php-5.0.0.ebuild:
+  Updated to use PHP 5 final release.
 
 *mod_php-4.3.8 (13 Jul 2004)
 

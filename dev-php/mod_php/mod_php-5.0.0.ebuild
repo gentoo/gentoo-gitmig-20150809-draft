@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.0.ebuild,v 1.1 2004/07/10 16:28:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.0.ebuild,v 1.2 2004/07/14 09:53:34 stuart Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -43,7 +43,7 @@ SLOT="5${APACHEVER}"
 [ "${APACHEVER}" -eq '2' ] && USE_APACHE2='2' || USE_APACHE2=''
 
 PHPSAPI="apache${APACHEVER}"
-MY_P="php-${PV}RC3"
+MY_P="php-${PV}"
 
 # BIG FAT WARNING!
 # the php eclass requires the PHPSAPI setting!
