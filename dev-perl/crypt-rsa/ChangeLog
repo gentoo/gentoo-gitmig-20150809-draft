@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-rsa
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/ChangeLog,v 1.1 2003/06/24 00:52:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/ChangeLog,v 1.2 2003/07/03 00:36:56 mcummings Exp $
+
+  02 Jul 2003; Michael Cummings <mcummings@gentoo.org> crypt-rsa-1.50.ebuild:
+  Fixed a bad dep for data-dumper
 
 *crypt-rsa-1.50 (23 Jun 2003)
 
