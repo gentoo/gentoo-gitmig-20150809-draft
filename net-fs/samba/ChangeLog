@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.141 2005/01/09 11:24:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.142 2005/01/14 21:07:51 corsair Exp $
+
+  14 Jan 2005; Markus Rothe <corsair@gentoo.org> samba-3.0.10.ebuild:
+  Stable on ppc64; bug #77734
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org> samba-3.0.10.ebuild,
   samba-3.0.6-r3.ebuild, samba-3.0.6-r4.ebuild, samba-3.0.7-r1.ebuild,
