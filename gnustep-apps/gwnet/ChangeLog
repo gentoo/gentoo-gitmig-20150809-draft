@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gwnet
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gwnet/ChangeLog,v 1.1 2004/10/05 16:27:18 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gwnet/ChangeLog,v 1.2 2004/10/17 09:41:51 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> gwnet-0.1_pre20040928.ebuild:
+  Added to ~ppc.
 
 *gwnet-0.1_pre20040928 (05 Oct 2004)
 

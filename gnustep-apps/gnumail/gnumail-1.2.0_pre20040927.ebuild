@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre20040927.ebuild,v 1.2 2004/10/04 01:18:00 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre20040927.ebuild,v 1.3 2004/10/17 09:39:18 dholm Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="Sophos.ca:/opt/cvsroot"
@@ -18,7 +18,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="A fully featured mail application for GNUstep"
 HOMEPAGE="http://www.collaboration-world.com/gnumail/"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 

@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gridlock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.4 2004/09/25 19:16:18 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.5 2004/10/17 09:38:10 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> gridlock-1.9.ebuild:
+  Added to ~ppc.
 
 *gridlock-1.9 (25 Sep 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/gnumail
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.6 2004/10/04 01:18:00 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.7 2004/10/17 09:39:18 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org>
+  gnumail-1.2.0_pre20040927.ebuild:
+  Added to ~ppc.
 
 *gnumail-1.2.0_pre20040916 (03 Oct 2004)
 
