@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.11 2003/06/29 00:47:17 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.12 2003/07/22 02:09:27 msterret Exp $
 #
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
 # Mantainer José Alberto Suárez López <bass@gentoo.org>
@@ -37,13 +37,13 @@ KEYWORDS="x86 ppc"
 #          vars...
 #  DEVHELPROOT: usually usr/share/devhelp
 if [ "${NOVERSION}" = "" ]; then
-    _src="${EBOOKNAME}-${EBOOKVERSION}"
+	_src="${EBOOKNAME}-${EBOOKVERSION}"
 else
-    _src="${EBOOKNAME}"
+	_src="${EBOOKNAME}"
 fi
-    _ebookdestdir="${_src}"
-    _ebooksrcdir="${_src}"
-    _ebookdevhelpfile="${_src}"    
+_ebookdestdir="${_src}"
+_ebooksrcdir="${_src}"
+_ebookdevhelpfile="${_src}"    
 
 if [ "${EBOOKEXT}" = "" ]; then
 	ext="tar.gz"
@@ -52,30 +52,32 @@ else
 fi
 
 if [ "${SRC}" = "" ]; then
-    SRC="${_src}"
+	SRC="${_src}"
 fi
 if [ "${SRC_URI}" = "" ]; then
-    SRC_URI="http://lidn.sourceforge.net/books_download/${SRC}.${ext}"
+	SRC_URI="http://lidn.sourceforge.net/books_download/${SRC}.${ext}"
 fi    
     
 # Default directory to install de ebook devhelped book
 if [ "${DEVHELPROOT}" = "" ]; then
-    DEVHELPROOT="usr/share/devhelp"
+	DEVHELPROOT="usr/share/devhelp"
 fi
 if [ "${RDEPEND}" = "" ]; then
-    RDEPEND=">=dev-util/devhelp-0.6"
+	# FIXME: newdepend sets both DEPEND and RDEPEND
+	# this should be changed to newrdepend, but that doesn't exist right now.
+	newdepend ">=dev-util/devhelp-0.6"
 fi
 if [ "${DESCRIPTION}" = "" ]; then
-    DESCRIPTION="${P} ebook based in $ECLASS eclass"
+	DESCRIPTION="${P} ebook based in $ECLASS eclass"
 fi
 if [ "${EBOOKDESTDIR}" = "" ]; then
-    EBOOKDESTDIR=${_ebookdestdir}
+	EBOOKDESTDIR=${_ebookdestdir}
 fi
 if [ "${EBOOKSRCDIR}" = "" ]; then
-    EBOOKSRCDIR=${_ebooksrcdir}
+	EBOOKSRCDIR=${_ebooksrcdir}
 fi
 if [ "${EBOOKDEVHELPFILE}" = "" ]; then
-    EBOOKDEVHELPFILE=${_ebookdevhelpfile}".devhelp"
+	EBOOKDEVHELPFILE=${_ebookdevhelpfile}".devhelp"
 fi
 
 S=${WORKDIR}
@@ -87,14 +89,11 @@ ebook_src_unpack() {
 ebook_src_install() {
 	debug-print-function $FUNCNAME $*
 	
-#dodir ${DEVHELPROOT}/specs
 	dodir ${DEVHELPROOT}/books
 	dodir ${DEVHELPROOT}/books/${EBOOKDESTDIR}
 	echo EBOOKSRCDIR= ${EBOOKSRCDIR}
-#	cp ${S}/book.devhelp ${D}${DEVHELPROOT}/specs/${EBOOKDEVHELPFILE}
 	cp ${S}/book.devhelp ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}/${EBOOKDEVHELPFILE}
 	cp -R ${S}/book/* ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}
 }
 
 EXPORT_FUNCTIONS src_unpack src_install
-
