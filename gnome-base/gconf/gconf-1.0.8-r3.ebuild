@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r3.ebuild,v 1.11 2003/02/13 12:05:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r3.ebuild,v 1.12 2003/06/27 14:15:24 foser Exp $
 
 IUSE="nls"
 
@@ -13,8 +13,7 @@ SLOT="1"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc sparc "
 
-RDEPEND=">=sys-libs/db-3.2.3h 
-	nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( sys-devel/gettext )"
 
 DEPEND="${RDEPEND} 
 	>=dev-util/guile-1.4

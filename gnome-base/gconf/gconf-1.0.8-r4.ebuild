@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r4.ebuild,v 1.7 2003/03/27 01:23:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r4.ebuild,v 1.8 2003/06/27 14:15:24 foser Exp $
 
 IUSE="nls"
 
@@ -16,8 +16,7 @@ KEYWORDS="~x86 ~ppc ~sparc alpha"
 inherit libtool
 
 
-RDEPEND=">=sys-libs/db-3.2.3h 
-	nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( sys-devel/gettext )"
 
 DEPEND="${RDEPEND} 
 	>=dev-util/guile-1.4

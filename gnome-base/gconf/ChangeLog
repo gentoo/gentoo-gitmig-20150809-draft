@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.38 2003/06/20 00:25:00 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.39 2003/06/27 14:15:24 foser Exp $
+
+  27 Jun 2003; foser <foser@gentoo.org> gconf-1.0.8-r{3,4,5}.ebuild :
+  Removed db dep (#23582) 
+  removed guile dep as well in r5 and fixed R(DEP) order
 
 *gconf-1.0.8-r5 (20 Jun 2003)
 

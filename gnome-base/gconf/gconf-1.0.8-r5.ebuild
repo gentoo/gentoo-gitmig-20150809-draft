@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r5.ebuild,v 1.1 2003/06/20 00:25:00 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r5.ebuild,v 1.2 2003/06/27 14:15:24 foser Exp $
+
+inherit libtool
 
 IUSE="nls"
 
@@ -11,22 +13,17 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 ~ppc ~sparc alpha"
 
-inherit libtool
-
-
-RDEPEND=">=sys-libs/db-3.2.3h 
-	nls? ( sys-devel/gettext )"
-
-DEPEND="${RDEPEND} 
-	>=dev-util/guile-1.4
-	dev-util/indent
+DEPEND="dev-util/indent
 	=dev-libs/glib-1.2*
 	dev-libs/libxml
 	dev-libs/popt
 	gnome-base/oaf
 	gnome-base/ORBit"
+
+RDEPEND="${DEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack () {
 	unpack ${A}
@@ -53,14 +50,15 @@ src_compile() {
 }
 
 src_install() {
+
 	make prefix=${D}/usr \
 	     sysconfdir=${D}/etc \
 	     localstatedir=${D}/var/lib \
 	     install || die
 	# gconf 1.0.8 seems to gets the perms wrong on this dir.
 	chmod 0755 ${D}/etc/gconf/gconf.xml.mandatory
-    # keep this mandatory dir
-    touch ${D}/etc/gconf/gconf.xml.mandatory/.keep${SLOT}
+    	# keep this mandatory dir
+    	touch ${D}/etc/gconf/gconf.xml.mandatory/.keep${SLOT}
 	# this fix closes bug #803
 	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
 
