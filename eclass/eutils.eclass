@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.61 2003/09/26 17:01:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.62 2003/10/05 02:42:24 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -963,7 +963,9 @@ unpack_makeself() {
 
 	# we do this because otherwise a failure in gzip will cause 0 bytes to be sent
 	# to tar which will make tar not extract anything and exit with 0
-	tail -n +${skip} ${src} | gzip -cd | tar -x --no-same-owner -f - 2>/dev/null
+	tail -n +${skip} ${src} 2>/dev/null \
+		| gzip -cd 2>/dev/null \
+		| tar -x --no-same-owner -f - 2>/dev/null
 	local pipestatus="${PIPESTATUS[*]}"
 	pipestatus="${pipestatus// }"
 	if [ "${pipestatus//0}" != "" ]
