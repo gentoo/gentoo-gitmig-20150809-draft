@@ -58,6 +58,12 @@ trap "cleanup" INT QUIT TSTP
 export ORIGUSE="`$PYTHON -c 'import portage; print portage.settings["USE"];'`"
 export GENTOO_MIRRORS="`$PYTHON -c 'import portage; print portage.settings["GENTOO_MIRRORS"];'`"
 export USE="-* build bootstrap"
+
+export PORTDIR="`$PYTHON -c 'import portage; print portage.settings["PORTDIR"];'`"
+export DISTDIR="`$PYTHON -c 'import portage; print portage.settings["DISTDIR"];'`"
+export PKGDIR="`$PYTHON -c 'import portage; print portage.settings["PKGDIR"];'`"
+export PORTAGE_TMPDIR="`$PYTHON -c 'import portage; print portage.settings["PORTAGE_TMPDIR"];'`"
+
 #get correct CFLAGS, CHOST, CXXFLAGS, MAKEOPTS since make.conf will be
 #overwritten
 cp /etc/make.conf /etc/make.conf.build
