@@ -401,3 +401,8 @@ dev-lang/tcl-tk
 
 #security update
 <sys-libs/zlib-1.1.4
+
+#seemant@gentoo.org 19 Mar 2002
+# Masking avi-xmms because it will not compile against avifile-0.6, instead
+# xmms has a hacked native support in it now for avi playing against avifile-0.6
+<media-video/avifile-0.6
