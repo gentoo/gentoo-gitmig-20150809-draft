@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.10.ebuild,v 1.3 2003/04/06 20:15:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.10.ebuild,v 1.4 2003/05/19 08:48:38 aliz Exp $
 
 
 #SPV=the directory in files/ to grab the goodies from
@@ -12,7 +12,7 @@ SRC_URI="http://www.xinetd.org/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~hppa"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 DEPEND="virtual/glibc 
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
