@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.8.ebuild,v 1.6 2005/03/20 03:24:48 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.8.ebuild,v 1.7 2005/03/23 09:51:32 eradicator Exp $
 
 IUSE="jack doc"
 
@@ -38,7 +38,7 @@ src_compile() {
 	# needed to avoid gcc looping internaly
 	use hppa && export CFLAGS="-O1 -pipe"
 
-	econf --enable-static=yes --enable-shared=yes || die
+	econf --enable-static --enable-shared || die
 	emake || die
 
 	if use doc; then

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.107 2005/03/20 03:24:48 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.108 2005/03/23 09:51:32 eradicator Exp $
+
+  23 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-lib-1.0.8.ebuild:
+  Deleting =yes on --enable-{static,shared} as it sometimes borks... see bug
+  #86333.
 
   20 Mar 2005; Lars Weiler <pylon@gentoo.org> alsa-lib-1.0.8.ebuild:
   Readded ppc to a 1.x version.
