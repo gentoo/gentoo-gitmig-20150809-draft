@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e3f340fff51c7b5deda9b8409854e5a9 ChangeLog 3049
-MD5 fd3f94ce63fb686caa5e488dc82bb611 freetds-0.61-r1.ebuild 739
-MD5 cc6be1444fc5ce5f9fcbc8606adae005 freetds-0.62.1.ebuild 816
-MD5 f3a5c93461f2da0454e4d60ab7eee219 freetds-0.62.3.ebuild 911
+MD5 33a942bbac27284792776f5eedeb2091 freetds-0.61-r1.ebuild 732
+MD5 82e50de995f6d168ac283f9834a51da4 freetds-0.62.1.ebuild 807
+MD5 f66bc82100faabb2dae61c7c3b9380eb ChangeLog 3042
 MD5 328087fb5b0786dd8a0f27de74cf023d metadata.xml 220
-MD5 4d7f9bc13bc7adba2de9083a7090ba50 files/digest-freetds-0.61-r1 61
+MD5 68113805c5e173703c9219edbc6fda55 freetds-0.62.3.ebuild 904
 MD5 ec951e4b36deea921446e7af76b38aaa files/digest-freetds-0.62.1 67
 MD5 278063aa59256a04662b39fa771f7325 files/digest-freetds-0.62.3 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAvjYAHTu7gpaalycRAvhZAJ9lu7MYd3DGKdLiVtMMRgf9pDv4CgCg8F5b
-//v5tKF3lL8SpHTDXL3Vimk=
-=2e3M
------END PGP SIGNATURE-----
+MD5 4d7f9bc13bc7adba2de9083a7090ba50 files/digest-freetds-0.61-r1 61
