@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.ebuild,v 1.6 2001/08/19 05:03:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.ebuild,v 1.7 2001/08/19 06:12:28 drobbins Exp $
 
 SV=1.1.1
 S=${WORKDIR}/rc-scripts-${SV}
@@ -44,13 +44,13 @@ src_install()
 	
 	if [ -z "`use bootcd`" ]
 	then
-		#new boot partition layout
-		dodir /boot 
+		#new boot partition layout: boot partition should now be mounted at /mnt/boot
 		dodir /mnt/boot
 		#this next line adds easy detection for when /mnt/boot isn't mounted
 		touch ${D}/mnt/boot/boot
 		dosym mnt/boot/boot /boot
-		
+		#with the symlink, kernel can be found at /boot/bzImage, grub at /boot/grub.
+
 		dodir /home
 		dodir /usr/include /usr/src /usr/portage /usr/X11R6/include/GL
 		dosym ../X11R6/include/X11 /usr/include/X11
