@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.1.4.ebuild,v 1.3 2003/04/08 12:13:17 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.1.4.ebuild,v 1.4 2003/04/08 12:57:48 foser Exp $
 
 inherit eutils
 
@@ -45,9 +45,6 @@ src_unpack() {
 	# April 1st 2003 <foser@gentoo.org>
 	cd ${S}
 	epatch ${FILESDIR}/${P}-wv_configure_fooling.patch
-
-	cd ${S}/src/af/ev/
-	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 }
 
 src_compile() {
@@ -61,9 +58,9 @@ src_compile() {
 		&& myconf="${myconf} --enable-gnome" \
 		|| myconf="${myconf} --disable-gnome" 
 		
-	CFLAGS="${CFLAGS} `glib-config --cflags`" econf ${myconf} --with-sys-wv || die  
+	econf ${myconf} --with-sys-wv || die  
 
-	CFLAGS="${CFLAGS} `glib-config --cflags`" emake all-recursive || die
+	emake all-recursive || die
 }
 
 src_install() {  
