@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.16.0-r7.ebuild,v 1.4 2002/04/04 02:01:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.16.0-r7.ebuild,v 1.5 2002/04/05 23:13:02 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Image Library"
@@ -46,7 +46,8 @@ src_compile() {
 	# Mandrake's hack to allow compiling without the X display
 	XDISPLAY=$(i=0; while [ -f /tmp/.X${i}-lock ] ; do i=$((${i}+1));done; echo ${i})
 	/usr/X11R6/bin/Xvfb :${XDISPLAY} >& /dev/null &
-	DISPLAY=:${XDISPLAY} emake || die
+	export DISPLAY=:${XDISPLAY}
+	emake || die
 
 	kill $(cat /tmp/.X${XDISPLAY}-lock)
 	
