@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/licq-themes/licq-themes-0.0.1.ebuild,v 1.11 2004/06/24 23:34:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/licq-themes/licq-themes-0.0.1.ebuild,v 1.12 2004/08/28 11:11:19 blubb Exp $
 
 DESCRIPTION="Collection of licq themes"
 HOMEPAGE="http://www.licq.org"
@@ -67,7 +67,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha ~amd64"
 IUSE=""
 
 RDEPEND="net-im/licq"
