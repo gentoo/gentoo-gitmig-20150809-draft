@@ -1,25 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.5.1.ebuild,v 1.4 2004/02/11 20:48:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.5.1.ebuild,v 1.5 2004/02/17 15:37:20 agriffis Exp $
 
-IUSE="ssl nls slang crypt imap mbox maildir"
+IUSE="ssl nls slang crypt imap mbox"
 
 inherit eutils
 
-edit_threads="patch-1.5.3.cd.edit_threads.9.5"
+edit_threads_patch="patch-1.5.3.cd.edit_threads.9.5"
+compressed_patch="patch-${PV}.rr.compressed.1.gz"
 
-S=$WORKDIR/${P}
 DESCRIPTION="a small but very powerful text-based mail client"
-SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
-	http://www.spinnaker.de/mutt/compressed/patch-${PV}.rr.compressed.1.gz
-	http://cedricduval.free.fr/mutt/patches/download/${edit_threads}"
 HOMEPAGE="http://www.mutt.org"
-
-DEPEND=">=sys-libs/ncurses-5.2
-	ssl? ( >=dev-libs/openssl-0.9.6 )
-	slang? ( >=sys-libs/slang-1.4.2 )"
+SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
+	http://cedricduval.free.fr/mutt/patches/download/${edit_threads_patch}
+	http://www.spinnaker.de/mutt/compressed/${compressed_patch}"
 
 RDEPEND="nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+	>=sys-libs/ncurses-5.2
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	slang? ( >=sys-libs/slang-1.4.2 )
+	>=sys-apps/sed-4"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -27,12 +28,22 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64"
 
 inherit flag-o-matic
 
+pkg_setup() {
+	if ! use imap; then
+		echo
+		einfo
+		einfo "NOTE: The USE variable 'imap' is not in your USE flags."
+		einfo "For imap support in mutt, you will need to restart the build with USE=imap"
+		echo
+	fi
+}
+
 src_unpack() {
 	unpack ${P}i.tar.gz
 
 	cd ${S}
 	epatch ${DISTDIR}/patch-${PV}.rr.compressed.1.gz
-	epatch ${DISTDIR}/${edit_threads}
+	epatch ${DISTDIR}/${edit_threads_patch}
 
 }
 
@@ -90,7 +101,8 @@ src_install() {
 
 	dodoc BEWARE COPYRIGHT ChangeLog NEWS OPS* PATCHES README* TODO VERSION
 }
+
 pkg_postinst() {
 	einfo "The USE variable 'imap' is not set by default on most architectures."
-	einfo "To enable imap support in mutt, make sure you have 'imap' set."
+	einfo "To enable imap support in mutt, make sure you have USE=imap"
 }

@@ -1,39 +1,33 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6.ebuild,v 1.4 2004/02/17 15:37:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4.2.1.ebuild,v 1.1 2004/02/17 15:37:20 agriffis Exp $
 
-IUSE="ssl nls slang crypt imap mbox nntp vanilla"
+IUSE="ssl nls slang mbox cjk vanilla"
 
-inherit eutils
+inherit eutils flag-o-matic
 
-edit_threads_patch="patch-1.5.5.1.cd.edit_threads.9.5-gentoo.bz2"
-compressed_patch="patch-${PV}.rr.compressed.gz"
-nntp_patch="patch-${PV}.vvv.nntp-gentoo.bz2"
-mbox_hook_patch="patch-${PV}.dw.mbox-hook.1"
+edit_threads_patch="patch-1.4.0.cd.edit_threads.9.5"
+compressed_patch="patch-1.4.2.rr.compressed.1-gentoo.bz2"
+cjk_patch="mutt-${PV}i-ja.1.tar.gz"
 
 DESCRIPTION="a small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org"
-SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
-	mirror://gentoo/${edit_threads_patch}
-	http://mutt.kiev.ua/download/${P}/${compressed_patch}
-	http://www.woolridge.ca/mutt/patches/${mbox_hook_patch}
-	nntp? ( mirror://gentoo/${nntp_patch} )"
-#	nntp? ( http://mutt.kiev.ua/download/${P}/${nntp_patch} )
-#	http://cedricduval.free.fr/mutt/patches/download/${edit_threads_patch}
+SRC_URI="ftp://ftp.mutt.org/mutt/mutt-${PV}i.tar.gz
+	mirror://gentoo/${compressed_patch}
+	http://cedricduval.free.fr/mutt/patches/download/${edit_threads_patch}
+	cjk? ( http://www.emaillab.org/mutt/1.4/${cjk_patch} )"
+#	http://www.spinnaker.de/mutt/compressed/${compressed_patch}
 
 RDEPEND="nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	slang? ( >=sys-libs/slang-1.4.2 )
-	>=sys-apps/sed-4
-	!vanilla? ( nntp? ( sys-devel/automake sys-devel/autoconf ) )"
+	>=sys-apps/sed-4"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64"
-
-inherit flag-o-matic
+KEYWORDS="x86 ppc sparc alpha hppa ~mips"
 
 pkg_setup() {
 	if ! use imap; then
@@ -48,20 +42,13 @@ pkg_setup() {
 src_unpack() {
 	unpack ${P}i.tar.gz && cd ${S} || die "unpack failed"
 	if ! use vanilla; then
-		epatch ${DISTDIR}/${compressed_patch}
-		epatch ${DISTDIR}/${edit_threads_patch}
-		epatch ${DISTDIR}/${mbox_hook_patch}
-		use slang && epatch ${FILESDIR}/slang.patch
-		if use nntp; then
-			epatch ${DISTDIR}/${nntp_patch}
-			# I don't know how much of this is truly necessary, but it
-			# was all in the ebuild proposed in bug 23196
-			aclocal -I m4					|| die "aclocal failed"
-			autoheader						|| die "autoheader failed"
-			make -C m4 -f Makefile.am.in	|| die "make in m4 failed"
-			automake --foreign				|| die "automake failed"
-			autoconf						|| die "autoconf failed"
-		fi
+		epatch ${DISTDIR}/${compressed_patch} || die
+		epatch ${DISTDIR}/${edit_threads_patch} || die
+	fi
+	if use cjk; then
+		cd ${WORKDIR}
+		unpack ${cjk_patch} && cd ${S} || die "unpack cjk failed"
+		epatch ${WORKDIR}/${cjk_patch%.t*}/patch-${PV}.tt.ja.1 || die
 	fi
 }
 
@@ -70,7 +57,6 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_with ssl) \
 		$(use_enable imap) \
-		$(use_enable crypt pgp) \
 		$(use_enable cjk default-japanese) \
 		--sysconfdir=/etc/mutt \
 		--with-docdir=/usr/share/doc/mutt-${PVR} \
@@ -102,31 +88,28 @@ src_compile() {
 		myconf="${myconf} --with-homespool=Maildir"
 	fi
 
+
 	if ! use vanilla; then
 		# imap part of edit_threads patch
 		myconf="${myconf} $(use_enable imap imap-edit-threads)"
 
 		# rr.compressed patch
 		myconf="${myconf} --enable-compressed"
-
-		# nntp patch
-		myconf="${myconf} $(use_enable nntp)"
 	fi
-
 	econf ${myconf} || die
-	sed -i -e 's/README.UPGRADE//' doc/Makefile || die "sed failed"
+	sed -i 's/README.UPGRADE//' doc/Makefile || die "sed failed"
 	make || die "make failed (myconf=${myconf})"
 }
 
-src_install() {
+src_install () {
 	make DESTDIR=${D} install || die
-	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
-	if use mbox; then
-		einfo "Not installing an /etc/Muttrc as mbox is default configuration"
-		einfo "with mutt"
+	find ${D}/usr/share/doc -type f | grep -v html | xargs gzip
+	if [ "`use mbox`" ]; then
+		echo "Not installing an /etc/Muttrc as mbox is default configuration"
+		echo "with mutt"
 	else
 		insinto /etc/mutt
-		doins ${FILESDIR}/Muttrc
+		doins $FILESDIR/Muttrc
 	fi
 
 	dodoc BEWARE COPYRIGHT ChangeLog NEWS OPS* PATCHES README* TODO VERSION
