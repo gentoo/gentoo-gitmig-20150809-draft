@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/nullmailer-1.00_rc7-r2.ebuild,v 1.1 2004/04/19 19:27:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/nullmailer-1.00_rc7-r2.ebuild,v 1.2 2004/04/20 00:56:40 dholm Exp $
 
 MY_P="${P/_rc/RC}"
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://untroubled.org/${PN}/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/glibc
 		sys-apps/groff"
