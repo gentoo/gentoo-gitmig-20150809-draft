@@ -1,24 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r3.ebuild,v 1.2 2004/02/19 14:54:24 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r3.ebuild,v 1.3 2004/04/16 05:33:16 vapier Exp $
 
-IUSE="ev6"
+inherit eutils rpm
 
 HOMEPAGE="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/downloads.html"
 DESCRIPTION="Compaq Linux optimized math library for Alpha/Linux/GNU"
 SRC_URI="ev6? ( ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/cpml_ev6-5.2.0-1.alpha.rpm )
 	!ev6? ( ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/cpml_ev5-5.2.0-1.alpha.rpm )"
 
-DEPEND="virtual/glibc sys-devel/binutils dev-libs/libots sys-apps/findutils"
-RDEPEND="virtual/glibc dev-libs/libots"
 LICENSE="compaq-sdla"
 SLOT="5.2.01"
-
 KEYWORDS="-* ~alpha"
-
+IUSE="ev6"
 RESTRICT="fetch nostrip nomirror"
 
-inherit eutils rpm
+DEPEND="virtual/glibc
+	sys-devel/binutils
+	dev-libs/libots
+	sys-apps/findutils"
+RDEPEND="virtual/glibc
+	dev-libs/libots"
 
 S=${WORKDIR}/usr
 
@@ -34,7 +36,7 @@ src_compile () {
 		-whole-archive libcpml_${EV}.a -no-whole-archive -lots
 }
 
-src_install () {
+src_install() {
 	local EV; use ev6 && EV=ev6 || EV=ev5
 
 	mv ${WORKDIR}/usr ${D}
