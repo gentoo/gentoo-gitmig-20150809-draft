@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.4.ebuild,v 1.10 2002/10/24 05:07:41 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.4.ebuild,v 1.11 2002/11/10 10:15:16 george Exp $
+
+inherit flag-o-matic
 
 IUSE="gtk gnome"
 
@@ -30,6 +32,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
+	filter-flags "-funroll-loops -frerun-loop-opt"
 
 	# currently celestia's "gtk support" requires gnome
 	use gtk || myconf="--without-gtk"
