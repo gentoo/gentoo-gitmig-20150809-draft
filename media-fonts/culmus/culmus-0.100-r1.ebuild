@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.100-r1.ebuild,v 1.4 2004/09/29 06:11:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.100-r1.ebuild,v 1.5 2004/11/09 22:20:24 mr_bones_ Exp $
 
 DESCRIPTION="Hebrew Type1 fonts"
 SRC_URI="mirror://sourceforge/culmus/${P}.tar.gz
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/culmus/${P}.tar.gz
 HOMEPAGE="http://culmus.sourceforge.net/"
 KEYWORDS="x86 ppc ~amd64 alpha"
 SLOT="0"
-LICENSE="GPL-2 | LICENSE-BITSTREAM"
+LICENSE="|| ( GPL-2 LICENSE-BITSTREAM )"
 IUSE=""
 
 FONTPATH="/usr/share/fonts/${PN}"
