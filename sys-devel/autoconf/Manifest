@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6789c1d757d10e7b7ca50fc8d5967709 ChangeLog 9367
-MD5 d9b40fab520bab6a794aac56892fd954 autoconf-2.13.ebuild 1544
+MD5 05ec1120a8688f02f25e0bf839c50603 autoconf-2.13.ebuild 1545
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 3f7d28e3baa69a67279c1651a63a51fd autoconf-2.59-r5.ebuild 3431
-MD5 53a7c1a6ba72a1549c080c4699b12f40 autoconf-2.59-r6.ebuild 1147
+MD5 27ddb9cb2c3d55c08e0847dc1713d2bb autoconf-2.59-r6.ebuild 1148
 MD5 c07cd3cad0342c7c9ccafdb4f0ae8b03 files/ac-wrapper.pl 2785
 MD5 12f8fb67eaf50f87ed7825356503e8d7 files/autoconf-2.13-configure-gentoo.diff 958
 MD5 f935499520b964a1fcfc23b68d8c8558 files/autoconf-2.13-configure.in-gentoo.diff 443
@@ -12,3 +15,10 @@ MD5 b310d32d1d5c26cb84206bfda473da1c files/digest-autoconf-2.59-r5 131
 MD5 dee8e039dbcfd6a6543e28688615ee17 files/autoconf-2.13-destdir.patch 677
 MD5 edfa347b2a6e2c0de846cabda899b429 files/autoconf-2.13-gentoo.patch 898
 MD5 ed1c29020cbdfc79d6a1ece183afd936 files/digest-autoconf-2.59-r6 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrWmDroRuSHgZdywRAlU8AJ4kZYYunUOTm5Yqc/DQE/8QhBbdqQCfS2ka
+REUFrywTe18quB4lj0rNNBQ=
+=WA37
+-----END PGP SIGNATURE-----
