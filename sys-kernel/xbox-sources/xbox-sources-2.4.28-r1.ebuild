@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.4.28.ebuild,v 1.1 2004/11/24 14:13:57 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.4.28-r1.ebuild,v 1.1 2004/11/27 18:08:56 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -18,4 +18,5 @@ KEYWORDS="x86 -*"
 
 UNIPATCH_LIST="
 	${DISTDIR}/${XBOX_PATCH}
-	${DISTDIR}/${P}.squashfs.patch.bz2"
+	${DISTDIR}/${P}.squashfs.patch.bz2
+	${FILESDIR}/${P}.binfmt_a.out.patch"

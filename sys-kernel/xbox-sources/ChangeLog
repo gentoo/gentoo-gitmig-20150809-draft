@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/xbox-sources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.19 2004/11/24 14:13:57 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.20 2004/11/27 18:08:56 plasmaroo Exp $
+
+*xbox-sources-2.4.28-r1 (27 Nov 2004)
+
+  27 Nov 2004; <plasmaroo@gentoo.org> -xbox-sources-2.4.27-r5.ebuild,
+  +xbox-sources-2.4.28-r1.ebuild, -xbox-sources-2.4.28.ebuild,
+  -xbox-sources-2.6.8.1-r4.ebuild, +xbox-sources-2.6.8.1-r5.ebuild,
+  +files/xbox-sources-2.4.28.binfmt_a.out.patch,
+  +files/xbox-sources-2.6.8.1.binfmt_a.out.patch,
+  +files/xbox-sources.AF_UNIX.patch:
+  Version bump for the AF_UNIX and a.out security vulnerabilities; bugs #72452
+  and #72317.
 
 *xbox-sources-2.4.28 (24 Nov 2004)
 
