@@ -1,37 +1,41 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.0.ebuild,v 1.3 2004/04/03 22:54:57 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.0.ebuild,v 1.4 2004/04/08 23:07:09 vapier Exp $
 
-DESCRIPTION="A relational database offering many ANSI SQL-92 features"
+inherit flag-o-matic eutils
+
 extra_ver="4290"
-SRC_URI="mirror://sourceforge/${PN}/${P}.${extra_ver}.tar.bz2"
-S=${WORKDIR}/${P}.${extra_ver}
+DESCRIPTION="A relational database offering many ANSI SQL-92 features"
 HOMEPAGE="http://firebird.sourceforge.net/"
-SLOT="0"
+SRC_URI="mirror://sourceforge/${PN}/${P}.${extra_ver}.tar.bz2"
+
 LICENSE="MPL-1.1"
+SLOT="0"
 KEYWORDS="~x86"
 IUSE="inetd"
+RESTRICT="nouserpriv"
+
 DEPEND="virtual/glibc
 	inetd? ( virtual/inetd )"
-RESTRICT="nouserpriv"
-inherit flag-o-matic
 
-# fix bug #33584
-strip-flags "-funroll-loops"
-
-src_compile() {
-	local myconf
-
-	myconf="${myconf} --prefix=/opt/firebird"
-	myconf="${myconf} --with-editline"
-	[ -z "`use inetd`" ] && myconf="${myconf} --enable-superserver"
-	./autogen.sh ${myconf} || die "couldn't run autogen.sh"
-	make || die "error during make"
-}
+S=${WORKDIR}/${P}.${extra_ver}
 
 pkg_setup() {
 	enewgroup firebird 450
 	enewuser firebird 450 /bin/bash /opt/firebird firebird
+}
+
+src_compile() {
+	# fix bug #33584
+	strip-flags -funroll-loops
+
+	local myconf
+
+	myconf="${myconf} --prefix=/opt/firebird"
+	myconf="${myconf} --with-editline"
+	use inetd || myconf="${myconf} --enable-superserver"
+	./autogen.sh ${myconf} || die "couldn't run autogen.sh"
+	make || die "error during make"
 }
 
 src_install() {
@@ -49,7 +53,7 @@ src_install() {
 	rm -r ${D}/opt/firebird/{README,WhatsNew,doc,misc}
 	rm -r ${D}/opt/firebird/examples
 
-	if [ -n "`use inetd`" ]; then
+	if use inetd ; then
 		insinto /etc/xinetd.d ; newins ${FILESDIR}/${P}.xinetd firebird
 	else
 		exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}.init.d firebird
@@ -75,7 +79,7 @@ src_install() {
 	chmod a=rx isql
 	chmod a=rx qli
 
-	[ -n "`use inetd`" ] && chmod ug=rxs,o= ${D}/opt/firebird/bin/{fb_lock_mgr,gds_drop,fb_inet_server}
+	use inetd && chmod ug=rxs,o= ${D}/opt/firebird/bin/{fb_lock_mgr,gds_drop,fb_inet_server}
 	chmod u=rw,go=r ${D}/opt/firebird/{aliases.conf,firebird.conf}
 	chmod ug=rw,o= ${D}/opt/firebird/{security.fdb,help/help.fdb}
 
@@ -107,7 +111,7 @@ pkg_postinst() {
 	einfo "   already have (if any)."
 	einfo
 
-	if [ -z "`use inetd`" ]
+	if ! use inetd
 	then
 		einfo "3. You've built the stand alone deamon version,"
 		einfo "   SuperServer. If you were using pre 1.5.0 ebuilds"

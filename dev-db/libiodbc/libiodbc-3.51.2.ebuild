@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.51.2.ebuild,v 1.1 2004/03/04 13:18:59 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.51.2.ebuild,v 1.2 2004/04/08 23:07:47 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.iodbc.org/"
@@ -20,14 +22,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/libiodbc-3.51.2_install_symlink.diff
-	cd ${S}
 }
 
 src_compile() {
 	local myconf
 	myconf="--with-layout=gentoo"
 
-	if [ "`use gtk`" ]
+	if use gtk
 	then
 		myconf="$myconf --enable-gui=yes"
 	else
@@ -41,7 +42,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	#dodoc AUTHORS COPYING ChangeLog NEWS README*
+	#dodoc AUTHORS ChangeLog NEWS README*
 	#find doc/ -name "Makefile*" -exec rm '{}' \;
 	#dohtml doc/*
 	#prepalldocs
