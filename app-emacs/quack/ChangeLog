@@ -1,0 +1,9 @@
+# ChangeLog for app-emacs/quack
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quack/ChangeLog,v 1.1 2003/10/31 23:04:10 mkennedy Exp $
+
+*quack-0.22 (31 Oct 2003)
+
+  31 Oct 2003; <mkennedy@gentoo.org> metadata.xml, quack-0.22.ebuild:
+  initial import. ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

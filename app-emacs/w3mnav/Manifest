@@ -1,3 +1,5 @@
-MD5 5bd6f2bf3037fa6e580e0ef32ebd4aec w3mnav-0.5.ebuild 872
+MD5 aabacb85e0195689b119b7f266e26cdb w3mnav-0.5.ebuild 879
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 1977cf33b3115d9b17ae2ebcaa920396 ChangeLog 406
 MD5 dde575842b08b6d622a34cccc0f08df0 files/60w3mnav-gentoo.el 97
 MD5 2fa9019e34366d1458cda201d879719d files/digest-w3mnav-0.5 60
