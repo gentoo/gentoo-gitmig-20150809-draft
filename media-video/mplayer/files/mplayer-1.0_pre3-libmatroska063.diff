@@ -1,0 +1,21 @@
+--- libmpdemux/demux_mkv.cpp	2004-03-16 21:43:06.000000000 +0100
++++ libmpdemux/demux_mkv.cpp.fixed	2004-03-16 21:44:30.000000000 +0100
+@@ -1226,7 +1226,6 @@
+   KaxCueClusterPosition *ccpos;
+   KaxCueTrack *ctrack;
+   KaxCueTrackPositions *ctrackpos;
+-  KaxCueReference *cref;
+   int upper_lvl_el, i, k;
+   uint64_t tc_scale, filepos = 0, timecode = 0;
+   uint32_t tnum = 0;
+@@ -1300,9 +1299,7 @@
+       mp_msg(MSGT_DEMUX, MSGL_DBG2, "[mkv] |   + found cue cluster "
+              "position: %llu\n", filepos);
+ 
+-      cref = FINDFIRST(ctrackpos, KaxCueReference);
+-      add_index_entry(mkv_d, tnum, filepos, timecode,
+-                      cref == NULL ? 1 : 0);
++      add_index_entry(mkv_d, tnum, filepos, timecode, 1);
+      
+       ctrackpos = FINDNEXT(cpoint, KaxCueTrackPositions, ctrackpos);
+     }
