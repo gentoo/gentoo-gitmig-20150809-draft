@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/openwrt-cvs/openwrt-cvs-20040705.ebuild,v 1.1 2004/08/04 06:56:16 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/openwrt-cvs/openwrt-cvs-20040705.ebuild,v 1.2 2004/08/07 20:43:24 solar Exp $
 
 ECVS_SERVER="openwrt.ksilebo.net:/openwrt"
 ECVS_PASS="anonymous"
@@ -23,7 +23,8 @@ BINUTILS_VERSION=2.14.90.0.7
 SRC_URI="mirror://gnu/gcc-${GCC_VERSION}/gcc-${GCC_VERSION}.tar.bz2
 	mirror://gentoo/binutils-${BINUTILS_VERSION}.tar.bz2
 	http://www.uclibc.org/downloads/snapshots/uClibc-${SNAPSHOT}.tar.bz2
-	http://www.linksys.com/support/opensourcecode/wrt54gs/${LINKSYS_REVISION}/wrt54gs.${LINKSYS_REVISION}.tgz"
+	mirror://gentoo/wrt54gs.${LINKSYS_REVISION}.tgz"
+#	http://www.linksys.com/support/opensourcecode/wrt54gs/${LINKSYS_REVISION}/wrt54gs.${LINKSYS_REVISION}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -73,6 +74,44 @@ src_install() {
 	cp openwrt-{g{,s}-code.bin,linux.trx,kmodules.tar.gz} \
 		${D}/usr/share/${PN}/$(date -u +%Y%m%d)/
 	dodoc *README*
+
+	return 0
+
+	# install the mipsel cross-compiler for later use.
+	local TARGET_ARCH=mipsel
+	[ -e "${ROOT}/usr/${TARGET_ARCH}-linux-uclibc" ] && return 0
+
+	dodir /usr/lib/gcc-lib/
+	cp -a ${S}/build_${TARGET_ARCH}/staging_dir/lib/gcc-lib/${TARGET_ARCH}-linux-uclibc ${D}/usr/lib/gcc-lib/
+
+	dodir /usr/${TARGET_ARCH}-linux-uclibc/gcc-bin/
+	cp -a ${S}/build_${TARGET_ARCH}/staging_dir/bin/* ${D}/usr/${TARGET_ARCH}-linux-uclibc/gcc-bin/${GCC_VERSION:0:3}/
+
+	cd ${D}/usr/${TARGET_ARCH}-linux-uclibc/gcc-bin/${GCC_VERSION:0:3}/
+	for f in gcc g++ c++ ; do ln -s ${TARGET_ARCH}-linux-uclibc-$f $f ; done
+
+	dodir /usr/${TARGET_ARCH}-linux-uclibc/bin/
+	cd ${D}/usr/${TARGET_ARCH}-linux-uclibc/bin/
+	for f in addr2line ar as c++filt gprof ld nm objcopy objdump \
+		ranlib readelf size strings strip; do
+		ln -s ../gcc-bin/3.3/${TARGET_ARCH}-linux-uclibc-$f $f
+	done
+
+	dodir /etc/env.d/${TARGET_ARCH}-linux-uclibc-${GCC_VERSION}
+	cat <<__EOF__>> ${D}/etc/env.d/mipsel-linux-uclibc-${GCC_VERSION}
+CROSS_ARCH=${TARGET_ARCH}
+CROSS_LIBC=uclibc
+CBUILD=\${CROSS_ARCH}-linux-\${CROSS_LIBC}
+CROSS_PREFIX=\${CROSS_TARGET}-
+PATH="/usr/\${CROSS_ARCH}-linux-\${CROSS_LIBC}/gcc-bin/${GCC_VERSION:0:3}"
+ROOTPATH="/usr/\${CROSS_ARCH}-linux-\${CROSS_LIBC}/gcc-bin/${GCC_VERSION:0:3}"
+LDPATH="/usr/lib/gcc-lib/\${CROSS_ARCH}-linux-\${CROSS_LIBC}/${GCC_VERSION}"
+MANPATH="/usr/share/gcc-data/\${CROSS_ARCH}-linux-\${CROSS_LIBC}/${GCC_VERSION:0:3}/man"
+INFOPATH="/usr/share/gcc-data/\${CROSS_ARCH}-linux-\${CROSS_LIBC}/${GCC_VERSION:0:3}/info"
+STDCXX_INCDIR="g++-v${GCC_VERSION:0:1}"
+CC="\${CROSS_PREFIX}gcc"
+CXX="\${CROSS_PREFIX}g++"
+__EOF__
 }
 
 pkg_postinst() {
