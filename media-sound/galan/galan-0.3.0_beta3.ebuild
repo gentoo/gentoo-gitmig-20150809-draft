@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta3.ebuild,v 1.1 2004/02/04 13:04:42 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta3.ebuild,v 1.2 2004/02/06 18:44:58 eradicator Exp $
 
 DESCRIPTION="gAlan - Graphical Audio Language"
 SRC_URI="mirror://sourceforge/galan/${P}.tar.gz"
@@ -23,10 +23,12 @@ DEPEND=">=x11-libs/gtk+-2.0
 	media-libs/liblrdf
 	media-libs/ladspa-sdk
 	media-libs/audiofile
-	media-libs/libsndfile"
+	media-libs/libsndfile
+	=dev-libs/fftw-2*"
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 }
 
 src_compile() {

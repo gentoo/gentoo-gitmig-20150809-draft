@@ -1,0 +1,20 @@
+diff -Naur galan-0.3.0_beta3.orig/plugins/filerequester.la.c galan-0.3.0_beta3/plugins/filerequester.la.c
+--- galan-0.3.0_beta3.orig/plugins/filerequester.la.c	2004-01-22 10:02:36.000000000 -0500
++++ galan-0.3.0_beta3/plugins/filerequester.la.c	2004-02-05 13:01:26.000000000 -0500
+@@ -69,6 +69,7 @@
+ 
+ PRIVATE gpointer req_thread( Generator *g ) {
+ 
++    GtkWidget *fs;
+     Data *data = g->data;
+ 
+     while( 1 ) {
+@@ -79,7 +80,7 @@
+ 
+ 	    gdk_threads_enter();
+ 	    
+-	    GtkWidget *fs = gtk_file_selection_new("Select File");
++	    fs = gtk_file_selection_new("Select File");
+ 
+ 	    gtk_object_set_data(GTK_OBJECT(fs), "Generator", g);
+ 	    gtk_signal_connect(GTK_OBJECT(GTK_FILE_SELECTION(fs)->ok_button), "clicked",
