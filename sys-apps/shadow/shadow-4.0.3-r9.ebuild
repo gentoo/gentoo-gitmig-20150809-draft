@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r9.ebuild,v 1.4 2003/12/11 05:53:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r9.ebuild,v 1.5 2003/12/15 04:32:08 azarah Exp $
 
 IUSE="pam selinux"
 
 inherit eutils libtool gnuconfig
 
-FORCE_SYSTEMAUTH_UPDATE="yes"
+FORCE_SYSTEMAUTH_UPDATE="no"
 
 SELINUX_PATCH="shadow-4.0.3-selinux.diff"
 
@@ -128,6 +128,8 @@ src_install() {
 			[ -f ${x} ] && doins ${x}
 		done
 		cd ${FILESDIR}/pam.d
+		# Make sure /etc/pam.d/system-auth is the new version ..
+		mv ${D}/etc/pam.d/system-auth-1.1 ${D}/etc/pam.d/system-auth
 		newins system-auth-1.1 system-auth.new || die
 		newins shadow chage
 		newins shadow chsh
