@@ -4,7 +4,7 @@ MD5 f9271dbd0e4dfd88c98b72dca6b0c80b straw-0.19.2.ebuild 1382
 MD5 1d1fadf80a9aec3e7f20df2925f05d73 straw-0.21.2.ebuild 2165
 MD5 3d59a12e072314585044c6c617189e3d straw-0.22.1.ebuild 1534
 MD5 6c9702e53e851991d789348dae938fbc straw-0.22.ebuild 1253
-MD5 1e8571039e13fd749221df72cb3a12d2 straw-0.23.ebuild 1536
+MD5 81ee3684ccf5dcca29659b507b8ad79f straw-0.23.ebuild 1528
 MD5 4de4ce496f2607dd3a9b38d2f30a856e files/digest-straw-0.19.2 64
 MD5 02c585d463b5069559098bf5946589d7 files/digest-straw-0.21.2 65
 MD5 62022aa3104ffda5eefb9d703602acb1 files/digest-straw-0.22 63

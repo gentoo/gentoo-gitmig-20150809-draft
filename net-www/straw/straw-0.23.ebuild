@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.23.ebuild,v 1.1 2004/06/08 19:43:43 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.23.ebuild,v 1.2 2004/06/17 18:41:38 pylon Exp $
 
 inherit gnome2 python distutils
 
@@ -39,8 +39,8 @@ pkg_setup() {
 src_install() {
 
 	distutils_src_install \
-		--prefix=${D}/usr \
-		--sysconfdir=${D}/etc \
+		--prefix=/usr \
+		--sysconfdir=/etc \
 		--disable-schemas-install
 
 }
