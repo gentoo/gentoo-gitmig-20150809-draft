@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ical
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.7 2004/06/06 20:07:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.8 2004/06/19 05:44:16 mr_bones_ Exp $
+
+  18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> ical-2.2.1.ebuild:
+  IUSE; error check sed; tidy
 
   06 Jun 2004; Seemant Kulleen <seemant@gentoo.org> ical-2.2.1.ebuild:
   Fix compile error reported by Daniel Webert <daniel_webert@web.de> in bug

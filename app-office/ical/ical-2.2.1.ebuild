@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.8 2004/06/06 20:07:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.9 2004/06/19 05:44:16 mr_bones_ Exp $
 
 inherit eutils
 
 PATCH_VER="0.1"
 MY_P=${P}a
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="Tk-based Calendar program"
 HOMEPAGE="http://www.fnal.gov/docs/products/tktools/ical.html"
 SRC_URI="http://helios.dii.utk.edu/ftp/pub/tcl/apps/ical/${MY_P}.tar.bz2
@@ -15,12 +14,15 @@ SRC_URI="http://helios.dii.utk.edu/ftp/pub/tcl/apps/ical/${MY_P}.tar.bz2
 LICENSE="as-is GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 RDEPEND="dev-lang/tcl
 	dev-lang/tk"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	sys-devel/autoconf"
+
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +36,8 @@ src_unpack() {
 	sed -i \
 		-e "s: \@TCL_LIBS\@::" \
 		-e "s:mkdir:mkdir -p:" \
-		${S}/Makefile.in
+		${S}/Makefile.in \
+		|| die "sed Makefile.in failed"
 
 	has_version '=dev-lang/tcl-8.4*' && epatch ${MY_P}-tcl8.4.patch
 }
@@ -47,5 +50,5 @@ src_compile() {
 
 src_install() {
 	einstall \
-		MANDIR=${D}/usr/share/man || die "install failed"
+		MANDIR="${D}/usr/share/man" || die "install failed"
 }
