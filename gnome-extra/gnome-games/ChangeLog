@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.80 2004/10/25 22:32:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.81 2004/11/12 03:17:26 gustavoz Exp $
+
+  12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-games-2.8.1.ebuild:
+  Stable on sparc
 
   27 Oct 2004; Aron Griffis <agriffis@gentoo.org> gnome-games-2.8.1.ebuild:
   add ~ia64
