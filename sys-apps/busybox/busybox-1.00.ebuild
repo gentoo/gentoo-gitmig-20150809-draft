@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00.ebuild,v 1.7 2004/12/13 02:13:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00.ebuild,v 1.8 2004/12/14 03:49:33 vapier Exp $
 
 inherit eutils
 
@@ -133,7 +133,7 @@ src_unpack() {
 }
 
 busybox_set_cross_compiler() {
-	type -p ${CHOST}-gcc && export CROSS=${CHOST}-
+	type -p ${CHOST}-ar && export CROSS=${CHOST}-
 }
 
 src_compile() {
