@@ -25,7 +25,7 @@ start()	{
 		einfo "Starting ${SERVICE}.."
 		if [ "${USE_SYSLOG}" = "yes" ]
 		then
-		  su - ${PGUSER} -c "${EXE} ${PGOPTS} -p ${PGPORT} 2>&1" | logger -p ${FACILITY}.notice 1>&2 & 	
+		  sudo -u ${PGUSER} "${EXE} ${PGOPTS} -p ${PGPORT} 2>&1" | logger -p ${FACILITY}.notice 1>&2 & 	
 		fi
 		eend $? "Error starting ${SERVICE}."
 }
@@ -42,5 +42,4 @@ restart() {
 }
 
 doservice ${@}
-
 
