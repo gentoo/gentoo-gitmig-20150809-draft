@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.83 2004/12/28 22:01:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.84 2005/03/06 22:31:33 foser Exp $
+
+*pango-1.8.1 (06 Mar 2005)
+
+  06 Mar 2005; foser <foser@gentoo.org> pango-1.8.1.ebuild :
+  New release
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
