@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.17 2004/02/10 06:53:29 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.18 2004/02/19 03:52:47 strider Exp $
+
+  18 Feb 2004; Adrian Almenar <strider@gentoo.org> xerces-2.6.0.ebuild,
+  xerces-2.6.1.ebuild:
+  Added addpredict /dev/random, cause of violation errors while building 
+  with sandbox and jdk 1.5. Closes #41994
 
 *xerces-2.6.1 (10 Feb 2004)
 
