@@ -1,5 +1,7 @@
+# Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jules Gagnon <eonwe@users.sourceforge.net>
+# Author Donny Davies <woodchip@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.3-r2.ebuild,v 1.4 2001/08/30 06:54:39 woodchip Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
