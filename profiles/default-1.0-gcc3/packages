@@ -40,7 +40,7 @@
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
 
->=x11-base/xfree-4.1.0-r9
+>=x11-base/xfree-4.1.0-r10
 
 # sash - static shell for system recovery
 *app-shells/sash
