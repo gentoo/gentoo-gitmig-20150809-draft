@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/kmyfirewall
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kmyfirewall/ChangeLog,v 1.1 2002/06/04 08:24:57 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kmyfirewall/ChangeLog,v 1.2 2002/06/07 10:36:03 danarmak Exp $
+
+*kmyfirewall-0.4.4-r1.ebuild (07 Jun 2002)
+
+  07 Jun 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  
+  Removed redundant source inherit.eclass and SLOT="0" statements.
+  New revision since the slot changed.
 
 *kmyfirewall-0.4.4.ebuild (03 Jun 2002)
 
