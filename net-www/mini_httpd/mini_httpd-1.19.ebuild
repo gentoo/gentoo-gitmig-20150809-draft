@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mini_httpd/mini_httpd-1.19.ebuild,v 1.2 2004/06/25 00:59:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mini_httpd/mini_httpd-1.19.ebuild,v 1.3 2004/06/28 03:37:20 agriffis Exp $
 
 DESCRIPTION="Small forking webserver with optional ssl and ipv6 support"
 HOMEPAGE="http://www.acme.com/software/mini_httpd/"
@@ -26,7 +26,7 @@ src_compile() {
 	rm -f Makefile.org
 
 	## for ssl-support we need another Makefile-patch:
-	if [ "$(use ssl)" ]; then
+	if use ssl; then
 		mv Makefile Makefile.org
 		cat Makefile.org | sed -e "s@^#\(SSL_TREE.*=\)\(.*$\)@\1 /usr@; \
 			s@^#\(SSL_DEFS.*$\)@\1@; \
@@ -38,7 +38,7 @@ src_compile() {
 
 	## ipv6-support: normally this is auto-detected at compile time ... so we
 	## need to force a bit ;)
-	if [ ! "$(use ipv6)" ]; then
+	if ! use ipv6; then
 		sed -i 's@#define USE_IPV6@#undef USE_IPV6@' mini_httpd.c
 	fi
 	emake || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pound/pound-1.6.ebuild,v 1.2 2004/06/25 01:09:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/pound/pound-1.6.ebuild,v 1.3 2004/06/28 03:38:10 agriffis Exp $
 
 MY_P=${P/p/P}
 
@@ -22,7 +22,7 @@ src_compile() {
 	local myconf
 
 	## check for ssl-support:
-	if [ "$(use ssl)" ]; then
+	if use ssl; then
 		myconf="${myconf} --with-ssl"
 	else
 		myconf="${myconf} --without-ssl"
@@ -30,7 +30,7 @@ src_compile() {
 
 	## TODO: how to handle the missing "syslog" USE-flag?
 	## check for syslog-support:
-	#if [ "$(use syslog)" ]; then
+	#if use syslog; then
 	#	myconf="${myconf} --with-log="
 	#else
 	#	myconf="${myconf} --without-log"

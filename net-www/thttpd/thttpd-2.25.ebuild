@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/thttpd/thttpd-2.25.ebuild,v 1.3 2004/06/25 01:13:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/thttpd/thttpd-2.25.ebuild,v 1.4 2004/06/28 03:40:38 agriffis Exp $
 
 MY_P="${P}b"
 
@@ -19,7 +19,7 @@ S="${WORKDIR}/${MY_P}"
 src_compile() {
 	## TODO: what to do with IPv6?
 	econf || die
-#	if [ "$(use ipv6)" ]; then
+#	if use ipv6; then
 #		:
 #	fi
 	emake || die

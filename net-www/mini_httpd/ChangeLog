@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mini_httpd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mini_httpd/ChangeLog,v 1.5 2004/06/25 00:59:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mini_httpd/ChangeLog,v 1.6 2004/06/28 03:37:20 agriffis Exp $
+
+  27 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  mini_httpd-1.17_beta1.ebuild, mini_httpd-1.19.ebuild:
+  QA - fix use invocation
 
   23 Apr 2004; Stuart Herbert <stuart@gentoo.org>
   files/mini_httpd.conf.sample-1.19:
