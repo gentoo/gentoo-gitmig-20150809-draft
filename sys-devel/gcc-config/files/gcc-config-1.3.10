@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.10,v 1.6 2005/03/19 20:30:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.10,v 1.7 2005/04/01 23:56:47 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -115,7 +115,7 @@ switch_profile() {
 		# compilers for default CHOST will be used to compile stuff,
 		# and thus we want all their lib paths in /etc/ld.so.conf ...
 		get_real_chost
-		GCC_PROFILES="$(${FIND} "${GCC_ENV_D}" -name "${REAL_CHOST}-*" -a ! -name "${CC_COMP}")"
+		GCC_PROFILES="$(${FIND} "${GCC_ENV_D}" -name "${REAL_CHOST}-*" -a ! -name "${CC_COMP}" -a -prune)"
 		GCC_PROFILES="${GCC_ENV_D}/${CC_COMP} ${GCC_PROFILES}"
 
 		# Extract all LDPATH's for our CHOST
