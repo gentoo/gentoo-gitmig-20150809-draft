@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.12 2004/10/30 18:20:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.13 2004/11/01 12:58:37 usata Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -101,11 +101,11 @@ src_compile() {
 
 	autoconf
 	econf ${myconf} || die "econf failed"
-	emake -j1 || die "make failed"
+	emake -j1 || emake -j1 || die "make failed"
 
 	cd ijs
 	econf || die "econf failed"
-	emake -j1 || die "make failed"
+	emake -j1 || emake -j1 || die "make failed"
 	cd ..
 }
 
