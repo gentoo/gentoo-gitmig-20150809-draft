@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r7.ebuild,v 1.5 2003/11/19 02:56:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r7.ebuild,v 1.6 2003/11/19 04:39:09 gmsoft Exp $
 
 IUSE="nls pic build nptl"
 
@@ -351,7 +351,7 @@ src_unpack() {
 		cd ${WORKDIR}
 		unpack ${P}-hppa-patches-p1.tar.bz2
 		cd ${S}
-		EPATCH_EXCLUDE="010_hppa_misc.patch 030_hppa_sysdep1.patch 040_hppa_sysdep2.patch 050_hppa_sysdep3.patch"
+		EPATCH_EXCLUDE="010* 030* 040* 050*"
 		#EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${P}-hppa-patches/
 		#Small workaround for bug 33636
 		for i in $EPATCH_EXCLUDE

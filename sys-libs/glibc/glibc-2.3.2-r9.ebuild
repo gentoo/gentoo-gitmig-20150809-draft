@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.2 2003/11/18 22:32:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.3 2003/11/19 04:39:09 gmsoft Exp $
 
 IUSE="nls pic build nptl"
 
@@ -50,10 +50,11 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/glibc/snapshots/glibc-${MY_PV}.tar.bz2
 	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${MY_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/glibc/snapshots/glibc-linuxthreads-${MY_PV}.tar.bz2
-	mirror://gentoo/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+	mirror://gentoo/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2
+	hppa? ( mirror://gentoo/${P}-hppa-patches-p1.tar.bz2 )"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="~x86 ~sparc ~amd64 -hppa ~alpha"
+KEYWORDS="~x86 ~sparc ~amd64 ~hppa ~alpha"
 SLOT="2.2"
 LICENSE="LGPL-2"
 
@@ -373,6 +374,24 @@ src_unpack() {
 		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-ia64-LOAD_ARGS-fixup.patch
 	fi
 
+	if [ "${ARCH}" = "hppa" ]
+	then
+		cd ${WORKDIR}
+		unpack ${P}-hppa-patches-p1.tar.bz2
+		cd ${S}
+		EPATCH_EXCLUDE="010* 020* 030* 040* 050* 055*"
+		for i in ${EPATCH_EXCLUDE}
+		do
+			rm -f ${WORKDIR}/${P}-hppa-patches/$i
+		done
+		for i in ${WORKDIR}/${P}-hppa-patches/*
+		do
+			einfo Applying `basename $i`...
+			patch -p1 < $i
+		done
+		einfo Applying glibc23-07-hppa-atomicity.dpatch...
+		patch -p 1 < ${FILESDIR}/2.3.1/glibc23-07-hppa-atomicity.dpatch
+	fi
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
