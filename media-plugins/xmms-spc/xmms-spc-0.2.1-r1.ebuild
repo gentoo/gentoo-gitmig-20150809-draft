@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1-r1.ebuild,v 1.1 2004/07/07 08:52:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1-r1.ebuild,v 1.2 2004/09/03 09:00:41 eradicator Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.self-core.org/~kaoru-k/pub/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 #-sparc: 0.2.1-r1: audio does not play
-KEYWORDS="~x86 ~amd64 -sparc"
+KEYWORDS="x86 amd64 -sparc"
 
 RDEPEND="media-sound/xmms"
 DEPEND="${RDEPEND}
