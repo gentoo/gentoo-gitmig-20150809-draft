@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-devils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-devils/ChangeLog,v 1.11 2005/02/27 11:15:15 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-devils/ChangeLog,v 1.12 2005/04/01 14:35:18 nigoro Exp $
+
+  01 Apr 2005; Yuta SATOH <nigoro@gentoo.org> dictd-devils-0-r1.ebuild:
+  Stable on ppc64
 
   27 Feb 2005; Yuta SATOH <nigoro@gentoo.org> dictd-devils-0-r1.ebuild:
   added ~ppc64

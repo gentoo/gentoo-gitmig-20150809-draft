@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
-MD5 8ee85e175a735a08a315f2fa55513b75 ChangeLog 1445
-MD5 ec47efa5a1f4008052c2fc678f0f59c3 dictd-devils-0-r1.ebuild 589
+MD5 0cd40dc105c86fb3a13008ab62edba19 ChangeLog 1536
+MD5 4e344ca2c7d2b149412e3955b9028ce9 dictd-devils-0-r1.ebuild 588
 MD5 2c4787d6066af566cc3ccb091497b973 files/digest-dictd-devils-0-r1 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCIavY60LfUIagIAkRAqEmAKD8dfC0jcPPj0SvIZOXhDhHUDz5fgCggVJG
-bxPVE7e4I2hN0ffoTjmxrjs=
-=0V5z
+iD8DBQFCTVxF60LfUIagIAkRApTUAJ90axxH/MIattY0pOxpIdfBNjDmlwCg6Nw8
+I7Cy4mooa/4e9G4i92Nrmyo=
+=RJO0
 -----END PGP SIGNATURE-----
