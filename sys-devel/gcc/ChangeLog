@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.4 2002/04/15 23:07:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.5 2002/04/17 18:30:19 azarah Exp $
+
+  17 Apr 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.0.4-r3 :
+
+  Move .la files to gcc internal dir to fix gcc2+libtool problems
+  of trying to link /usr/lib/libstdc++.so.
 
 *gcc-3.0.4-r3 (16 Apr 2002)
 

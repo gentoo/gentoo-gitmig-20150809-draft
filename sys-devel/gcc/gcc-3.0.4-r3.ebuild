@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Grant Goodyear <g2boojum@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r3.ebuild,v 1.1 2002/04/15 23:07:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r3.ebuild,v 1.2 2002/04/17 18:30:19 azarah Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -191,7 +191,10 @@ src_install() {
 		dispatch_libs libobjc_gc 1.0.0
 		#do not always get created.
 		[ ! -e libobjc_gc.so ] && rm -f libobjc_gc.so
-		
+
+		#move libtool .la files to $FULLPATH till I figure
+		#what to do with them.
+		mv ${D}${LOC}/lib/*.la ${FULLPATH_D}
 
 		#move Java headers to compiler-specific dir
 		mv ${D}${LOC}/include/j*.h ${FULLPATH_D}/include/
