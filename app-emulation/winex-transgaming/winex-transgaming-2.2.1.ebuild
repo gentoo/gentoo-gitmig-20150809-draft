@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/winex-transgaming-2.2.1.ebuild,v 1.8 2004/06/27 23:10:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/winex-transgaming-2.2.1.ebuild,v 1.9 2004/11/30 20:41:37 vapier Exp $
 
-MY_P="winex-${PV}"
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
 HOMEPAGE="http://www.transgaming.com/"
-SRC_URI="winex-${PV}"
+SRC_URI="winex-${PV}.tgz"
 
 LICENSE="Aladdin"
 SLOT="2.2.1"
@@ -21,7 +20,7 @@ RDEPEND="virtual/x11
 	!app-emulation/winex"
 
 pkg_nofetch() {
-	einfo "Please download the appropriate WineX archive (${MY_P}.tgz)"
+	einfo "Please download the appropriate WineX archive (winex-${PV}.tgz)"
 	einfo "from: ${HOMEPAGE} (requires a Transgaming subscription)."
 	einfo "The archive should be placed into ${DISTDIR}."
 }

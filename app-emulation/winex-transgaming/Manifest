@@ -3,22 +3,22 @@ Hash: SHA1
 
 MD5 c7775374d3fa3165525a8fb56cfe07c3 ChangeLog 2471
 MD5 6e817c3f6b82338028366853fddccf5f metadata.xml 157
-MD5 34a7b450380e570be260e8105207be19 winex-transgaming-2.2.1.ebuild 1897
+MD5 7edccf57909030edd83be203a5f5c522 winex-transgaming-2.2.1.ebuild 1886
 MD5 d200b62df56b5bfbe941d5227b0906d4 winex-transgaming-3.2.1.ebuild 1892
 MD5 5494df2da4030059ab0949cd70c4788f winex-transgaming-3.2.ebuild 1890
 MD5 a450ea3ef1048d69bfb61b68a33b9256 winex-transgaming-3.3.ebuild 1890
 MD5 96ff71be297823de8025167e8aab6892 winex-transgaming-3.3.1.ebuild 1892
 MD5 d6be039f02bdc0525c1365085c738d08 winex-transgaming-3.3.2.ebuild 1892
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-winex-transgaming-2.2.1 0
+MD5 93a58801baa3625ef005f55a3f774ae0 files/digest-winex-transgaming-2.2.1 61
 MD5 43d8d1b59eb0488c57fb15120b0dba70 files/digest-winex-transgaming-3.2 67
 MD5 d26b8a8318a326544866ff2eb7eaee93 files/digest-winex-transgaming-3.2.1 69
 MD5 1645affc907869aec8754a8cceb508f8 files/digest-winex-transgaming-3.3 67
 MD5 82daebfaaaf20a44b6d4b5c072022653 files/digest-winex-transgaming-3.3.1 69
 MD5 ac7212402024483b80ba6983f7cf0afb files/digest-winex-transgaming-3.3.2 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFA31PmHTu7gpaalycRAoVaAKDM4cQPxC8uroaX0h/OJW8SJfgjhgCgxlCx
-LvwHuxRyApQ9eCJ8D32Itg4=
-=LeIe
+iD8DBQFBrNsXroRuSHgZdywRAnzmAJkBzAZqsskv2OGyZerX6UL1C0hFVgCdGikw
+3D9BuIM+lQXPlFLESfJfPWE=
+=BQND
 -----END PGP SIGNATURE-----
