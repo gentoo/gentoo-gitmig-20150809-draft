@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>, Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.33-r1.ebuild,v 1.1 2002/03/19 05:14:44 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.33-r1.ebuild,v 1.2 2002/03/19 05:15:19 chadh Exp $
 
 # This ebuild installs ${FILESDIR}/hermes.conf, which you can get from
 # http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/hermes.conf
@@ -46,9 +46,9 @@ src_compile() {
 	fi
 	
 	if [ -z "`use nocardbus`" ] ; then
-		myconf="$myconf --nocardbus"
-	else
 		myconf="$myconf --cardbus"
+	else
+		myconf="$myconf --nocardbus"
 	fi
 
 	#use $CFLAGS for user tools, but standard kernel optimizations for the kernel modules (for compatibility)

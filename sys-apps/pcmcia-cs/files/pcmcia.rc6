@@ -40,7 +40,7 @@ start() {
 	fi
 
 	ebegin "Starting pcmcia"
-	start-stop-daemon --start --quiet --exec /sbin/cardmgr -- -f -s ${RUN}/stab ${CARDMGR_OPTS}
+	start-stop-daemon --start --quiet --exec /sbin/cardmgr -- -s ${RUN}/stab ${CARDMGR_OPTS}
 	code=$?	
 	if [ $code -gt 0 -a $modules_loaded -eq 0 ] ; then
 		einfo "cardmgr failed to start.  Make sure that you have PCMCIA"
