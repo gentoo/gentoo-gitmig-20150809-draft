@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/squid-graph
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.12 2004/07/10 11:27:36 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.13 2004/11/22 21:58:37 mr_bones_ Exp $
+
+  22 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  -squid-graph-3.0.ebuild:
+  digest fix; clean older version
 
   10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   squid-graph-3.0.ebuild, squid-graph-3.1.ebuild:
