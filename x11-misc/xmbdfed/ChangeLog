@@ -1,0 +1,16 @@
+# ChangeLog for x11-misc/xmbdfed
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
+
+*xmbdfed-4.5 (24 Oct 2002)
+
+  24 Oct 2002; Seemant Kulleen <seemant@gentoo.org> xmbdfed-4.5.ebuild
+  ChangeLog files/digest-xmbdfed-4.5 :
+ 
+  Package submission by: Rob McMullen <robm@flipturn.org> in bug #661.  He
+  waited a LOOOOOOOOOOOOOOONG time for this :/
+  
+  Xmbdfed is a raster based font editor for X11 non-scalable (BDF) fonts
+  and Linux console (PSF) fonts.  It can import fonts from a variety of
+  sources, including True Type and Windoze fonts, by rasterizing them to
+  a specified font width.
