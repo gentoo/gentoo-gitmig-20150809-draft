@@ -1,0 +1,7 @@
+MD5 dd4775f4d546cb80f3f4ea1cba03371c jabberd-1.4.3.ebuild 3510
+MD5 ea9fd33274bbf4cc48afe34d0921fba9 files/xdb-ldap.xml 963
+MD5 bc605a772d428ee0977b948ecdae26d3 files/mio_ssl.c.patch 874
+MD5 80f43fc0899830f2741b92fd271e011c files/multiple.xml 4901
+MD5 c0945b1bc206e13be453cd2c1bb7e3f1 files/digest-jabberd-1.4.3 129
+MD5 e05ff7b611c3c638bbd5b9f15a6cd9b0 files/self-cert.sh 409
+MD5 ca9fa3d865453ede2b7d678ee3d56d1d files/jabber.rc6-r5 796
