@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/portmon-2.0.ebuild,v 1.1 2004/04/27 15:02:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/portmon-2.0.ebuild,v 1.2 2004/04/28 16:31:53 dholm Exp $
 
 DESCRIPTION="Portmon is a netwok service monitoring daemon."
 SRC_URI="http://aboleo.net/software/portmon/downloads/${P}.tar.gz"
 HOMEPAGE="http://aboleo.net/software/portmon/"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
