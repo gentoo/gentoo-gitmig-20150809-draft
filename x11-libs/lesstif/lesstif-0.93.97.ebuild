@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.97.ebuild,v 1.2 2004/10/07 17:40:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.97.ebuild,v 1.3 2004/10/07 22:02:10 eradicator Exp $
 
 inherit libtool
 
@@ -8,7 +8,7 @@ DESCRIPTION="An OSF/Motif(R) clone"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.lesstif.org/"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ~ppc sparc ~amd64 ~ppc64 ~hppa"
+KEYWORDS="x86 ~ppc sparc amd64 ~ppc64 ~hppa"
 SLOT="0"
 IUSE=""
 DEPEND="virtual/libc
