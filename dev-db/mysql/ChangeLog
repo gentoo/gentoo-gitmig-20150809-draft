@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.175 2005/02/14 21:08:25 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.176 2005/02/21 17:08:22 agriffis Exp $
+
+  20 Feb 2005; Aron Griffis <agriffis@gentoo.org> mysql-4.0.22-r2.ebuild,
+  mysql-4.1.8-r1.ebuild:
+  4.0.22-r2 stable on ia64 #77805.  Add ~ia64 to 4.1.8-r1
 
   14 Feb 2005; Guy Martin <gmsoft@gentoo.org> mysql-4.0.22-r2.ebuild:
   Stable on hppa.
