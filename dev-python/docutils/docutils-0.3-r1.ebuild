@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3-r1.ebuild,v 1.4 2003/09/20 15:34:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3-r1.ebuild,v 1.5 2004/03/27 10:37:52 dholm Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/docutils/${P}.tar.gz"
 
 LICENSE="public-domain PYTHON BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.1"
