@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.4 2002/07/09 15:41:28 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.5 2002/07/11 13:32:59 blizzy Exp $
+
+*ntop-2.9.99_rc2-r2 (11 Jul 2002)
+
+  11 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :
+
+  Applied tcp-wrappers patch from Markus Krainer
+  <markus-krainer@chello.at>, closes bugs #4774, #4772
+  and #4832.
 
 *ntop-2.0.99_rc2-r1 (09 Jul 2002)
 
