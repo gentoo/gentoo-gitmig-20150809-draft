@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r2.ebuild,v 1.8 2004/09/25 07:41:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r2.ebuild,v 1.9 2004/10/02 09:53:39 eradicator Exp $
 
 inherit libtool eutils flag-o-matic gcc
 
@@ -28,8 +28,8 @@ src_unpack() {
 		sed -e '/^@FLaC__HAS_XMMS_TRUE/d' src/Makefile.in.orig > src/Makefile.in || die
 	fi
 
-	epatch ${FILESDIR}/flac-1.1.0-m4.patch
-	epatch ${FILESDIR}/flac-1.1.0-libtool.patch
+	epatch ${FILESDIR}/${P}-m4.patch
+	epatch ${FILESDIR}/${P}-libtool.patch
 
 	elibtoolize --reverse-deps
 }
