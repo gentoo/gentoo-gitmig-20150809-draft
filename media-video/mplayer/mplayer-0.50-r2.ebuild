@@ -97,6 +97,7 @@ src_install() {
 	# Install the rest of the documentation
 	dodir /usr/share/doc/${PF}
 	cp -a DOCS/* ${D}/usr/share/doc/${PF}
+	doalldocs
 
 	# Install the default Skin
 	if [ "`use gtk`" ] ; then
