@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.22-r2.ebuild,v 1.1 2004/01/05 18:28:54 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.22-r2.ebuild,v 1.2 2004/01/05 19:36:35 scox Exp $
 
 IUSE="build selinux"
 
@@ -49,6 +49,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 	epatch ${FILESDIR}/mremap-CAN-2003-0985.patch || die "failed to patch for mremap vuln"
+	epatch ${FILESDIR}/rtc_fix.patch || die "failed to patch for rtc vuln"
 }
 
 pkg_postinst() {
