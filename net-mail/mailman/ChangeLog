@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.10 2003/04/18 22:44:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.11 2003/04/30 01:02:38 tberman Exp $
+
+*mailman-2.1.1-r2 (29 Apr 2003)
+
+  29 Apr 2003; Todd Berman <tberman@gentoo.org> mailman-2.1.1-r2.ebuild:
+  Changed mailman's gid to daemon to fix bug #19257.
 
 *mailman-2.1.1-r1 (18 Apr 2003)
 
