@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3.ebuild,v 1.1 2003/09/21 07:21:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3.ebuild,v 1.2 2004/01/06 04:07:02 brad_mssw Exp $
 
 if [ `use perl` ] ; then
 	inherit perl-module
@@ -12,7 +12,7 @@ SRC_URI="http://chasen.aist-nara.ac.jp/stable/chasen/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="perl"
 
 DEPEND="${DEPEND}
