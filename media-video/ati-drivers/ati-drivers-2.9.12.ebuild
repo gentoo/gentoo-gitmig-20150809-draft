@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.12.ebuild,v 1.1 2003/05/19 15:42:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.12.ebuild,v 1.2 2003/05/19 21:57:09 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -22,7 +22,7 @@ RESTRICT="nostrip"
 
 src_unpack() {
     cd ${WORKDIR}
-	tar zxf fglrx-glc22-4.3.0-${PV}.i586.tar.gz || die
+	tar zxf ${DISTDIR}/fglrx-glc22-4.3.0-${PV}.i586.tar.gz || die
 	mkdir ${WORKDIR}/fglrxgears
 	cd ${WORKDIR}/fglrxgears
 	tar zxf ${WORKDIR}/usr/src/fglrx_sample_source.tgz || die
