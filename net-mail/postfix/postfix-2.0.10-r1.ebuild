@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.10-r1.ebuild,v 1.1 2003/06/01 03:50:51 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.10-r1.ebuild,v 1.2 2003/06/10 00:48:39 msterret Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ KEYWORDS="~x86 ~sparc ~ppc"
 PROVIDE="virtual/mta
 	 virtual/mda"
 DEPEND=">=sys-libs/db-3.2
+	>=sys-apps/sed-4
 	>=dev-libs/libpcre-3.4
 	ldap? ( >=net-nds/openldap-1.2 )
 	mysql? ( >=dev-db/mysql-3.23.51 )

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.67 2003/06/01 03:50:51 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.68 2003/06/10 00:48:39 msterret Exp $
+
+  09 Jun 2003; <msterret@gentoo.org> postfix-2.0.10-r1.ebuild:
+  DEPEND on sed >= 4
 
 *postfix-2.0.10-r1 (31 May 2003)
 
@@ -110,7 +113,7 @@
   "use dns" to depend().
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *postfix-1.1.11.20020917-r1 (14 Nov 2002)
 
   14 Nov 2002; Nick Hadaway <raker@gentoo.org>
@@ -257,7 +260,7 @@
   Updated to latest postfix + tls patch.
 
 *postfix-1.1.7-r4 (3 May 2002)
-  
+
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
   Added LICENSE, SLOT, $Headers.
 
@@ -266,14 +269,14 @@
   19 Apr 2002; Ryan Phillips <rphillips@gentoo.org> postfix-1.1.7-r3.ebuild,
   files/digest-postfix-1.1.7-r3 :
   Added INSTALL to dodoc statement.  Closes #1923
-  
+
 *postfix-1.1.7-r2 (15 Apr 2002)
 
   15 Apr 2002; Seemant Kulleen <seemant@gentoo.org> postfix-1.1.7-r2.ebuild,
   files/digest-postfix-1.1.7-r2 :
   Changed the USE flags from mta-ldap, mta-tls, and mta-mysql to ldap, ssl, and
   mysql respectively.  Also, changed the checks to the official use foo &&
-  syntax.  This has the added advantage of showing the USE flags being used 
+  syntax.  This has the added advantage of showing the USE flags being used
   during the emerge process.
 
   11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> files/digest-postfix-1.1.7-r1 :
@@ -282,12 +285,12 @@
 
 *postfix-1.1.7-r1 (8 Apr 2002)
 
-  9 Apr 2002; Jon Nelson <jnelson@gentoo.org> postfix-1.1.7-r1.ebuild:  
+  9 Apr 2002; Jon Nelson <jnelson@gentoo.org> postfix-1.1.7-r1.ebuild:
   Clean up some tabbing and use official form of 'if use foo' constructs
 
 *postfix-1.1.7 (8 Apr 2002)
 
-  9 Apr 2002; Jon Nelson <jnelson@gentoo.org> postfix-1.1.7.ebuild:  
+  9 Apr 2002; Jon Nelson <jnelson@gentoo.org> postfix-1.1.7.ebuild:
   Updated to postfix 1.1.7, and altered how the 'if use foo' constructs
   are used. Closes #1612
 
