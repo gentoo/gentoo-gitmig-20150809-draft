@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 f7ccf447ef7110a72f7c987c517942bd metadata.xml 689
-MD5 4d6d3d2d3da3b29949b638b15a2729ab ChangeLog 836
-MD5 a87e8a8bf3c232d129f820b0ed92fb12 quickplot-0.8.5.ebuild 866
+MD5 edaab44c837941768a1144c993276047 ChangeLog 971
+MD5 df914cfa7c95511e362188dddb96306f quickplot-0.8.5.ebuild 1105
 MD5 161b412e414642dbef003cb31c9584b0 files/digest-quickplot-0.8.5 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB3O0hntT9W3vfTuoRAsV8AKCHgwZa1bpzUqWP4/19WScRGSGyKwCcDnqB
-G/oVqo9mpEDeWeyBT2VDhHQ=
-=DJv/
+iD8DBQFB3gepntT9W3vfTuoRAoa1AJ9qPXC9oUYjKsYxSPRT6QGNvTBTjQCgsXgH
+v2Czbha29tPAzseCm9SNqUA=
+=eBfp
 -----END PGP SIGNATURE-----
