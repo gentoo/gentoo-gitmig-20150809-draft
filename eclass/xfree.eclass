@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.4 2003/07/18 16:08:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.5 2003/09/16 07:45:10 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -18,7 +18,7 @@ EXPORT_FUNCTIONS vcards
 
 vcards() {
 	
-	has "$1" "${VIDEO_CARDS}" && return 0
+	has "$1" ${VIDEO_CARDS} && return 0
 	return 1
 }
 
