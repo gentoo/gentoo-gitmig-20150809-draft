@@ -1,4 +1,6 @@
-MD5 873985df84f9b01ffe63e3dade349c7b ChangeLog 364
 MD5 de0b3728df7a643fe2cb1f3ea4436e02 libnjb-0.9.1b.ebuild 885
+MD5 de0b3728df7a643fe2cb1f3ea4436e02 libnjb-1.0.ebuild 885
+MD5 873985df84f9b01ffe63e3dade349c7b ChangeLog 364
 MD5 15cb72213fd1fb3cf4a1eb6a0fa955a6 files/digest-libnjb-0.9.1b 65
+MD5 3d4fc3559e7760ed7935b9ab57b9dd5d files/digest-libnjb-1.0 62
 MD5 eccde352d9d2ac120ddcaa4183003577 files/libnjb-errno.patch 278
