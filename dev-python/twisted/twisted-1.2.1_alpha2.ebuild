@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.2.0.ebuild,v 1.5 2004/05/06 17:50:37 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.2.1_alpha2.ebuild,v 1.1 2004/05/06 17:50:37 lordvan Exp $
 
 inherit distutils
 
+# for alphas,..
+MY_PV="${PV/_alpha/alpha}"
 DESCRIPTION="collection of servers and clients, which can be used either by developers of new applications or directly. Documentation included."
 HOMEPAGE="http://www.twistedmatrix.com/"
-SRC_URI="http://twisted.sourceforge.net/Twisted_NoDocs-${PV}.tar.bz2"
+SRC_URI="http://twisted.sourceforge.net/Twisted_NoDocs-${MY_PV}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc ~alpha"
+KEYWORDS="~x86 ~amd64 ~ppc ~alpha"
 IUSE="gtk gtk2 doc"
 
 DEPEND=">=dev-lang/python-2.2
@@ -20,7 +22,7 @@ DEPEND=">=dev-lang/python-2.2
 	gtk? ( gtk2? ( >=dev-python/pygtk-1.99* ) !gtk2? ( =dev-python/pygtk-0.6* ) )
 	doc? ( =dev-python/twisted-docs-${PV} )"
 
-S=${WORKDIR}/Twisted-${PV}
+S=${WORKDIR}/Twisted-${MY_PV}
 
 src_install() {
 	distutils_src_install
