@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.27 2002/12/10 19:10:59 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.28 2002/12/13 10:56:43 blizzy Exp $
 
 *mod_php-4.2.3-r1 (10 Dec 2002)
 
@@ -10,7 +10,7 @@
   restart apache2.  You're done :)
   
   Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   02 Sep 2002; Daniel Robbins <drobbins@gentoo.org> mod_php-4.2.2-r1.ebuild :
   rphillips' gmp fix broke the ebuild, fixing... (no rev bump)
