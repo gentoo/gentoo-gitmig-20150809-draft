@@ -1,10 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.13 2002/09/16 00:44:56 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.14 2002/09/17 15:35:56 spider Exp $
 
 
 *libxml2-2.4.24 (06 Sep 2002)
-
+  17 Sep 2002; Spider <spider@gentoo.org> libxml2-2.4.24.ebuild:
+  ppc keyword added 
   16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> libxml2-2.4.24.ebuild ChangeLog :
   Adding sparc/sparc64 keywords. Revamping ChangeLog layout.
 
