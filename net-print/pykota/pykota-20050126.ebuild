@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-20041105.ebuild,v 1.2 2005/01/26 17:50:12 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-20050126.ebuild,v 1.1 2005/01/26 17:50:12 satya Exp $
 
 inherit python eutils distutils
 
@@ -32,7 +32,7 @@ src_unpack() {
 	sed -e "s|DEBIAN_BUILD_PACKAGE = 0|DEBIAN_BUILD_PACKAGE = 1|;\
 		s|ETC_DIR = \"./debian/tmp/etc/pykota/\"|ETC_DIR = \"${D}/etc/${PN}\"|" \
 		setup.py.ORIG > setup.py
-	find . -iname CVS -type d -exec rm -fr {} ';'
+	rm -rf `find . -iname CVS -type d` 2>/dev/null
 }
 src_install() {
 	mkdir -p ${D}/etc/${PN}
@@ -42,7 +42,7 @@ src_install() {
 	mkdir -p ${D}/usr/lib/cups/backend
 	dosym /usr/share/pykota/cupspykota /usr/lib/cups/backend/cupspykota
 	#extra docs: inits -----------------------------------------
-	init_dir=/usr/share/doc/${PF}/initscripts
+	init_dir=/usr/share/doc/${PN}/initscripts
 	insinto ${init_dir}
 	cp -a initscripts/* ${D}/${init_dir}
 }
