@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-1.3.2-r1.ebuild,v 1.1 2004/10/20 19:08:18 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-1.3.2-r1.ebuild,v 1.2 2004/11/15 21:20:54 citizen428 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://elmo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 
 RDEPEND="ssl? ( >=dev-libs/openssl )
