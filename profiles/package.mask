@@ -338,5 +338,8 @@ dev-lang/tcl-tk
 # [aeoo] testing
 >dev-python/egenix-mx-base-2.0.2
 
-# [aeoo] testing
->=dev-python/psycopg-1.0.1
+# Bevin <gbevin@gentoo.org> - new grub release, splashimage path should
+# be updated in the docs to be "splashimage=(hd0,0)/grub/splash.xpm.gz"
+# instead. Also, this release hasn't been tested with xfs yet, only with
+# reiserfs
+>=sys-apps/grub-0.91
