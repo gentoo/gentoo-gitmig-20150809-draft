@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.19 2005/01/10 02:41:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.20 2005/01/11 01:07:49 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -88,13 +88,14 @@ tc-is-cross-compiler() {
 }
 
 
-# Translate a CBUILD/CHOST/CTARGET into the kernel/portage
-# equivalent of $ARCH
-ninja_magic_to_arch() {
+# Parse information from CBUILD/CHOST/CTARGET rather than 
+# use external variables from the profile.
+tc-ninja_magic_to_arch() {
 ninj() { [[ ${type} = "kern" ]] && echo $1 || echo $2 ; }
 
 	local type=$1
 	local host=$2
+	[[ -z ${host} ]] && arg=${CHOST}
 
 	case ${host} in
 		alpha*)		echo alpha;;
@@ -114,13 +115,35 @@ ninj() { [[ ${type} = "kern" ]] && echo $1 || echo $2 ; }
 		*)			echo wtf;;
 	esac
 }
-host_to_arch_kernel() {
-	ninja_magic_to_arch kern $@
+tc-arch-kernel() {
+	tc-ninja_magic_to_arch kern $@
 }
-host_to_arch_portage() {
-	ninja_magic_to_arch portage $@
+tc-arch() {
+	tc-ninja_magic_to_arch portage $@
 }
+tc-endian() {
+	local host=$1
+	[[ -z ${host} ]] && host=${CHOST}
 
+	case ${host} in
+		alpha*)		echo big;;
+		x86_64*)	echo little;;
+		arm*eb-*)	echo big;;
+		arm*)		echo little;;
+		hppa*)		echo big;;
+		ia64*)		echo little;;
+		m68k*)		echo big;;
+		mips*el-*)	echo little;;
+		mips*)		echo big;;
+		powerpc*)	echo big;;
+		sparc*)		echo big;;
+		s390*)		echo big;;
+		sh*el-)		echo little;;
+		sh*)		echo big;;
+		i?86*)		echo little;;
+		*)			echo wtf;;
+	esac
+}
 
 # Returns the version as by `$CC -dumpversion`
 gcc-fullversion() {
