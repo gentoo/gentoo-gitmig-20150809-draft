@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.3.ebuild,v 1.2 2005/02/04 14:08:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.4.ebuild,v 1.1 2005/02/04 14:08:14 phosphan Exp $
 
 inherit eutils kde-functions
 
@@ -10,11 +10,14 @@ SRC_URI="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
-IUSE="gnome kde nls"
+KEYWORDS="~x86 ~amd64"
+IUSE="gtk2 gnome kde nls"
 
 DEPEND=">=media-gfx/transfig-3.2.3d
-	    =x11-libs/gtk+-1*
+	    || 	(
+			gtk2? ( =x11-libs/gtk+-2* )
+			=x11-libs/gtk+-1*
+			)
 		x86? ( >=media-libs/libemf-1.0 )"
 
 src_compile() {
@@ -29,6 +32,10 @@ src_compile() {
 	if [ ${ARCH} = "x86"  ]; then
 		config_opts="--enable-emf"
 		mycppflags="${mycppflags} -I /usr/include/libEMF"
+	fi
+
+	if ! use gtk2; then
+		config_opts="${config_opts} --enable-gtk1"
 	fi
 
 	sed -e "s:\(^CPPFLAGS.*\):\1 ${mycppflags}:" -i Makefile.in || \
