@@ -1,12 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r3.ebuild,v 1.11 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r3.ebuild,v 1.12 2003/03/24 03:21:11 method Exp $
 
-IUSE="nls static build"
+inherit eutils 
+
+IUSE="nls static build selinux"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Use this to try make tarballs :)"
-SRC_URI="ftp://alpha.gnu.org/gnu/tar/${P}.tar.gz"
+SRC_URI="ftp://alpha.gnu.org/gnu/tar/${P}.tar.gz
+	selinux? mirror://gentoo/${P}-2003011510-selinux.patch.bz2"
 HOMEPAGE="http://www.gnu.org/software/tar/"
 
 SLOT="0"
@@ -15,14 +18,16 @@ KEYWORDS="x86 alpha mips hppa arm"
 
 DEPEND="sys-apps/gzip
 	sys-apps/bzip2
-	app-arch/ncompress"
+	app-arch/ncompress
+	selinux? ( sys-apps/selinux-small )"
 
 RDEPEND="nls? ( >=sys-devel/gettext-0.10.35 )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PF}.gentoo.diff
+	use selinux && epatch ${DISTDIR}/${P}-2003011510-selinux.patch.bz2
+	epatch ${FILESDIR}/${PF}.gentoo.diff
 }
 
 src_compile() {

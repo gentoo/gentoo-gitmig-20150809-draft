@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r3.ebuild,v 1.6 2003/02/22 02:18:35 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r3.ebuild,v 1.7 2003/03/24 03:18:55 method Exp $
 
-IUSE=""
+IUSE="selinux"
 
 inherit eutils libtool
 
@@ -11,7 +11,8 @@ FORCE_SYSTEMAUTH_UPDATE="no"
 S="${WORKDIR}/${P}"
 HOMEPAGE="http://shadow.pld.org.pl/"
 DESCRIPTION="Utilities to deal with user accounts"
-SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
+SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz
+    selinux? mirror://gentoo/${P}-selinux.patch.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -19,29 +20,39 @@ KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3
-	sys-devel/gettext"
+	sys-devel/gettext
+	selinux? ( sys-apps/selinux-small )"
 	
 RDEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3"
 
 
-pkg_preinst() { 
-	rm -f ${ROOT}/etc/pam.d/system-auth.new
+pkg_preinst() {
+  	if [ -z "`use selinux`" ]
+	then 
+	     rm -f ${ROOT}/etc/pam.d/system-auth.new
+	fi
 }
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 
 	# Get su to call pam_open_session(), and also set DISPLAY and XAUTHORITY,
 	# else the session entries in /etc/pam.d/su never get executed, and
 	# pam_xauth for one, is then never used.  This should close bug #8831.
 	#
 	# <azarah@gentoo.org> (19 Oct 2002)
-	cd ${S}; epatch ${FILESDIR}/${P}-su-pam_open_session.patch-v2
+	# (selinux doesn't like this patch. may fix later.)
+	use selinux || epatch ${FILESDIR}/${P}-su-pam_open_session.patch-v2
 
 	# Patch the useradd manpage to be a bit more clear, closing bug #13203.
 	# Thanks to Guy <guycad@mindspring.com>.
-	cd ${S}; epatch ${FILESDIR}/${P}-useradd-manpage-update.patch
+	epatch ${FILESDIR}/${P}-useradd-manpage-update.patch
+
+	#necessary selinux patch
+	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
+
 }
 
 src_compile() {
@@ -74,7 +85,8 @@ src_install() {
 	# Do not install this login, but rather the one from
 	# pam-login, as this one have a serious root exploit
 	# with pam_limits in use.
-	rm ${D}/bin/login
+	# (selinux will use this login for now at least)
+	use selinux || rm ${D}/bin/login
 
 	mv ${D}/lib ${D}/usr
 	dosed "s:/lib':/usr/lib':g" /usr/lib/libshadow.la
@@ -100,19 +112,22 @@ src_install() {
 	doins ${FILESDIR}/default/useradd
 
 # From sys-apps/pam-login now
-#	insopts -m0644 ; doins ${FILESDIR}/login.defs
-	insinto /etc/pam.d ; insopts -m0644
-	cd ${FILESDIR}/pam.d
-	for x in *
-	do
-		[ -f ${x} ] && doins ${x}
-	done
-	newins system-auth system-auth.new
-	newins shadow chage
-	newins shadow chsh
-	newins shadow chfn
-	newins shadow useradd
-	newins shadow groupadd
+  	if [ -z "`use selinux`" ]
+	then
+ #	insopts -m0644 ; doins ${FILESDIR}/login.defs
+	    insinto /etc/pam.d ; insopts -m0644
+	    cd ${FILESDIR}/pam.d
+	    for x in *              
+	      do
+	      [ -f ${x} ] && doins ${x}
+	    done
+	    newins system-auth system-auth.new
+	    newins shadow chage
+	    newins shadow chsh
+	    newins shadow chfn
+	    newins shadow useradd
+	    newins shadow groupadd
+	fi
 	cd ${S}
 
 	# The manpage install is beyond my comprehension, and
@@ -128,7 +143,8 @@ src_install() {
 	
 	# Dont install the manpage, since we dont use
 	# login with shadow
-	rm -f ${D}/usr/share/man/man1/login.*
+	#(selinux does, so we install the man pages in that case)
+	use selinux || rm -f ${D}/usr/share/man/man1/login.*
 	# We use pam, so this is not applicable.
 	rm -f ${D}/usr/share/man/man5/suauth.*
 	
@@ -147,7 +163,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	
+    if [ -z "`use selinux`" ]
+    then	
 	local CHECK1="$(md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1)"
 	local CHECK2="$(md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1)"
 
@@ -168,5 +185,6 @@ pkg_postinst() {
 	else
 		rm -f ${ROOT}/etc/pam.d/system-auth.new
 	fi
+    fi
 }
 

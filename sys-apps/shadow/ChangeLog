@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.29 2003/02/24 14:24:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.30 2003/03/24 03:18:55 method Exp $
 
 *shadow-4.0.3-r4 (23 Feb 2003)
 
@@ -28,6 +28,9 @@
 
 
 *shadow-4.0.3-r3 (25 Dec 2002)
+
+  23 Mar 2003; Joshua Brindle <method@gentoo.org> shadow-4.0.3-r3.ebuild:
+  added selinux support, thanks sindian
 
   18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
 
