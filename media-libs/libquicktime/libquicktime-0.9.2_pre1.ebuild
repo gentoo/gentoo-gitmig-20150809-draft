@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.7 2003/04/01 16:41:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.8 2003/06/13 23:15:08 seemant Exp $
 
 inherit libtool eutils
 
@@ -21,7 +21,8 @@ DEPEND=">=sys-apps/sed-4.0.5
 	=x11-libs/gtk+-1.2*
 	png? ( media-libs/libpng )
 	jpeg ( media-libs/jpeg )
-	oggvorbis? ( media-libs/libvorbis )"
+	oggvorbis? ( media-libs/libvorbis )
+	!virtual/quicktim"
 
 PROVIDE="virtual/quicktime"
 
