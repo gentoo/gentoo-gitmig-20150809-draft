@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.25 2002/09/23 16:08:41 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.26 2002/10/20 00:12:06 spider Exp $
 
 inherit libtool gnome.org
 
@@ -19,7 +19,7 @@ INHERITED="$INHERITED $ECLASS"
 G2CONF=""
 
 if [ -n "$DEBUG" ]; then
-  G2CONF="${G2CONF} --enable-debug=yes"
+	G2CONF="${G2CONF} --enable-debug=yes"
 fi
 
 ELTCONF=""
