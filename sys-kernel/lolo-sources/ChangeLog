@@ -1,6 +1,35 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.4 2002/09/03 02:14:33 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.5 2002/09/19 07:39:39 lostlogic Exp $
+
+*lolo-sources-2.4.19.10_pre1 (19 Sep 2002)
+
+  19 Sep 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.19.10_pre1.ebuild:
+
+  Fix kernel version to not confuse mozilla any more, this kernel's
+  designation is officially linux-2.4.19-r10-lolo_pre1, and no I don't
+  care if you hate my naming scheme... it clearly attaches my 
+  pre-release kernels to their appropriate gentoo-sources releases, etc.
+
+  Updated all patches with known updates to their latest
+  (JFS, preempt, rmap, nfs, nfs-over-tcp)
+
+  Add xattr and acl patches and include the JFS patches for them.
+
+  Add supermount patches.
+
+  Incorportate the small fixes done to gentoo-sources-2.4.19-r9 into
+  the main patchball.
+
+  Coming before gentoo-sources-2.4.19-r10:
+  - updated grsecurity, pending upstream release
+  - updated defconfig patch with better defaults for i386
+  - updated and improved patches.txt documentation
+  - backports for AMD74xx, radeonfb, and HPT366 driverd from -ac
+    done by Michael Cohen <mjc@gentoo.org>
+  - incorporate ACPI from acpi.sourceforge.net
+  - Possibly other, depending on stability, timing, and how much I get
+    harrassed about things :)
 
 *lolo-sources-2.4.19.9_rc2 (02 Sep 2002)
 
