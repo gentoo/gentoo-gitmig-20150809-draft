@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gnut
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/ChangeLog,v 1.8 2004/04/26 12:47:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/ChangeLog,v 1.9 2004/04/27 21:59:24 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gnut-0.4.28-r1.ebuild:
+  Add inherit eutils
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> gnut-0.4.28-r1.ebuild:
   Add die following econf for bug 48950
