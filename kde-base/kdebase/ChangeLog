@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.70 2003/04/08 19:58:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.71 2003/04/11 00:31:56 hannes Exp $
+
+*kdebase-2.2.2-r5 (11 Apr 2003)
+
+  11 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdebase-2.2.2-r5.ebuild,
+  files/2.2.2-r5/startkde-2.2.2-r5-gentoo:
+  security fix
 
 *kdebase-3.0.5b (08 Apr 2003)
 

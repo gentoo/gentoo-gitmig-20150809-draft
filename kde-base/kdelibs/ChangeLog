@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.72 2003/04/08 19:58:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.73 2003/04/11 00:30:17 hannes Exp $
+
+*kdelibs-2.2.2a-r2 (11 Apr 2003)
+
+  11 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-2.2.2a-r2.ebuild:
+  security fix
 
 *kdelibs-3.0.5b (08 Apr 2003)
 

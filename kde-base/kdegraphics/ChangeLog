@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.38 2003/04/08 19:58:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.39 2003/04/11 00:35:01 hannes Exp $
+
+*kdegraphics-2.2.2-r2 (11 Apr 2003)
+
+  11 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdegraphics-2.2.2-r2.ebuild:
+  security fix
 
 *kdegraphics-3.0.5b (08 Apr 2003)
 
