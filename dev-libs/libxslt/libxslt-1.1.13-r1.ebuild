@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.13-r1.ebuild,v 1.1 2005/03/25 02:00:53 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.13-r1.ebuild,v 1.2 2005/03/26 15:27:38 kugelfang Exp $
 
 inherit libtool gnome.org eutils python
 
@@ -37,6 +37,17 @@ src_compile() {
 		$(use_with python) \
 		$(use_with crypt crypto) \
 		|| die "configure failed"
+
+	# Patching the Makefiles to respect get_libdir
+	# Fixes BUG #86756, please keep this.
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
+	has_multilib_profile && for x in $(find ${S} -name "Makefile") ; do
+		sed \
+			-e "s|^\(PYTHON_SITE_PACKAGES\ =\ \/usr\/\).*\(\/python.*\)|\1$(get_libdir)\2|g" \
+			-i ${x} \
+			|| die "sed failed"
+	done
+
 	emake || die "make failed"
 }
 
