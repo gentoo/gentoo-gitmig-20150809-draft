@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2_p1.ebuild,v 1.6 2004/03/28 23:25:06 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2_p1.ebuild,v 1.7 2004/03/31 23:07:55 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -61,7 +61,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=gnome-base/eel-2.4.2
 	>=gnome-base/nautilus-2.4.2
-	>=gnome-extra/nautilus-media-0.3.3.1
+	>=gnome-extra/nautilus-media-0.3.4
 
 	!hppa? ( >=net-www/epiphany-1.0.7 )
 
