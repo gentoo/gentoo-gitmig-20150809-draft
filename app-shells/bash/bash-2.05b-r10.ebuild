@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r8.ebuild,v 1.7 2004/06/29 03:51:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r10.ebuild,v 1.1 2004/07/22 02:30:30 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -15,8 +15,8 @@ SRC_URI="mirror://gnu/bash/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ppc64"
-IUSE="nls build"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+IUSE="nls build uclibc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
 
@@ -38,21 +38,35 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-multibyte-locale.patch
 	# Segfault on empty herestring
 	epatch ${FILESDIR}/${P}-empty-herestring.patch
-	# fix broken rbash functionality
+	# Fix broken rbash functionality
 	epatch ${FILESDIR}/${P}-rbash.patch
+	# Fix parallel make, bug #41002.
+	epatch ${FILESDIR}/${P}-parallel-build.patch
 
-	# enable SSH_SOURCE_BASHRC (#24762)
-	sed -i "87s:^.*$:#define SSH_SOURCE_BASHRC:g" config-top.h
+	# Enable SSH_SOURCE_BASHRC (#24762)
+	echo '#define SSH_SOURCE_BASHRC' >> config-top.h
+
+	# Enable system-wide bashrc (#26952)
+	echo '#define SYS_BASHRC "/etc/bash/bashrc"' >> config-top.h
+
+	# Force pgrp synchronization
+	# (https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=81653)
+	#
+	# The session will hang cases where you 'su' (not 'su -') and
+	# then run a piped command in emacs.
+	# This problem seem to happen due to scheduler changes kernel
+	# side - although reproduceble with later 2.4 kernels, it is
+	# especially easy with 2.6 kernels.
+	echo '#define PGRP_PIPE 1' >> config-bot.h
 }
 
 src_compile() {
-
 	# If running mips64, we need updated configure data
 	use mips && gnuconfig_update
 
 	filter-flags -malign-double
 
-	local myconf=""
+	local myconf=
 
 	# Always use the buildin readline, else if we update readline
 	# bash gets borked as readline is usually not binary compadible
@@ -60,6 +74,10 @@ src_compile() {
 	#
 	# Martin Schlemmer <azarah@gentoo.org> (1 Sep 2002)
 	#use readline && myconf="--with-installed-readline"
+
+	# Don't even think about building this statically without
+	# reading Bug 7714 first.  If you still build it statically,
+	# don't come crying to use with bugs ;).
 	#use static && export LDFLAGS="${LDFLAGS} -static"
 	use nls || myconf="${myconf} --disable-nls"
 
@@ -80,15 +98,18 @@ src_install() {
 	dosym bash /bin/sh
 	dosym bash /bin/rbash
 
-	use build \
-		&& rm -rf ${D}/usr \
-		|| ( \
-			doman doc/*.1
-			dodoc README NEWS AUTHORS CHANGES COMPAT Y2K
-			dodoc doc/FAQ doc/INTRO
+	use uclibc && rm -f ${D}/usr/bin/bashbug ${D}/usr/share/man*/bashbug*
 
-			ebegin "creating info symlink"
-			dosym bash.info.gz /usr/share/info/bashref.info.gz
-			eend $?
-	)
+	insinto /etc/bash
+	doins ${FILESDIR}/bashrc
+
+	if use build; then
+		rm -rf ${D}/usr
+	else
+		doman doc/*.1
+		dodoc README NEWS AUTHORS CHANGES COMPAT Y2K
+		dodoc doc/FAQ doc/INTRO
+
+		dosym bash.info.gz /usr/share/info/bashref.info.gz
+	fi
 }

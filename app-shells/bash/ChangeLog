@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.37 2004/06/24 22:22:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.38 2004/07/22 02:30:30 agriffis Exp $
+
+*bash-2.05b-r10 (21 Jul 2004)
+
+  21 Jul 2004; Aron Griffis <agriffis@gentoo.org> +files/bashrc,
+  +bash-2.05b-r10.ebuild, -bash-2.05b-r5.ebuild, -bash-2.05b-r7.ebuild,
+  -bash-2.05b-r8.ebuild:
+  Install and use /etc/bash/bashrc; half of fix for bug 26952. Thanks to Toby
+  Dickenson for the dircolors tip
 
   15 Jun 2004; <solar@gentoo.org> bash-2.05b-r9.ebuild:
   remove *bashbug* when using uclibc
