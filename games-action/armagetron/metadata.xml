@@ -6,9 +6,5 @@
   <email>games@gentoo.org</email>
   <name>Games Team</name>
 </maintainer>
-<maintainer>
-  <email>luke-jr@gentoo.org</email>
-  <name>Luke-Jr</name>
-</maintainer>
 <longdescription>ArmageTRON is a 3D light cycle game featuring the ability to play against others online</longdescription>
 </pkgmetadata>
