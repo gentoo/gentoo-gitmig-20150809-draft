@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.8 2004/07/02 04:20:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.9 2004/07/08 19:10:32 sejo Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ibm-jdk-bin-1.4.1-r1.ebuild, ibm-jdk-bin-1.4.1-r2.ebuild,
@@ -9,6 +9,9 @@
 
   30 Jun 2004; Tom Gall <tgall@gentoo.org> ibm-jdk-bin-1.4.1-r2.ebuild:
   stable on ppc64, bug #55597
+
+  11 Jun 2004; <SeJo@gentoo.org> :
+  added rc2 to fix bug 52366
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> ibm-jdk-bin-1.4.1-r1.ebuild,
   ibm-jdk-bin-1.4.1.ebuild:
