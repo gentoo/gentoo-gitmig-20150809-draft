@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.133 2004/08/18 19:58:51 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.134 2004/08/19 21:25:17 pvdabeel Exp $
+
+  20 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  development-sources-2.6.8(.1).ebuild:
+  Masking on ppc until we get the /dev/null bug sorted out
 
   18 Aug 2004; Michal Januszewski <spock@gentoo.org>
   development-sources-2.6.8.1.ebuild:
