@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.5 2004/11/04 21:29:43 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.6 2004/12/07 05:12:12 battousai Exp $
 
-inherit eutils x11 kernel-mod
+inherit eutils x11 linux-mod
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx ffb i810 i830 i915 mach64 matrox rage128 radeon savage sis via"
@@ -24,7 +24,7 @@ SRC_URI="mirror://gentoo/${PF}-gentoo-${PATCHVER}.tar.bz2
 
 SLOT="${KV}"
 LICENSE="X11"
-KEYWORDS="~x86 ~alpha ~ia64 ~ppc"
+KEYWORDS="~x86 ~alpha ~ia64 ~ppc ~amd64"
 
 DEPEND="virtual/x11
 	virtual/linux-sources
@@ -33,8 +33,6 @@ DEPEND="virtual/x11
 PROVIDE="virtual/drm"
 
 pkg_setup() {
-	get_kernel_info
-
 	# Require at least one video card
 	if [ -z "${VIDEO_CARDS}" ]
 	then
@@ -53,7 +51,7 @@ pkg_setup() {
 		then
 			die "Remove gatos from your USE flags. It does not work with cards other than radeon and rage128."
 		fi
-		kernel-mod_is_2_6_kernel && die "GATOS does not work with 2.6 kernels. Only 2.4 is supported at this time."
+		kernel_is 2 6 && die "GATOS does not work with 2.6 kernels. Only 2.4 is supported at this time."
 	fi
 
 	ewarn "Using koutput kernels is now deprecated. If you use a koutput kernel, please"
@@ -148,22 +146,14 @@ pkg_postinst() {
 	fi
 
 	einfo "Checking kernel module dependencies"
-	test -r "${ROOT}/usr/src/linux/System.map" && \
-		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
+	update_modules
+	update_depmod
 }
 
 # Functions used above are defined below:
 
 set_vidcards() {
-	if kernel-mod_is_2_6_kernel
-	then
-		KV_OBJ="ko"
-	else
-		KV_OBJ="o"
-	fi
-
-	# To get the kernel module extension
-#	get_kernel_info
+	set_kvobj
 
 	VIDCARDS=""
 
@@ -200,8 +190,8 @@ patch_prepare() {
 	#     GATOS (2xx*) vs. Standard trees (1xx*)
 	#     2.4 vs. 2.6 kernels
 
-	kernel-mod_is_2_4_kernel && mv -f ${PATCHDIR}/*kernel-2.6* ${EXCLUDED}
-	kernel-mod_is_2_6_kernel && mv -f ${PATCHDIR}/*kernel-2.4* ${EXCLUDED}
+	kernel_is 2 4 && mv -f ${PATCHDIR}/*kernel-2.6* ${EXCLUDED}
+	kernel_is 2 6 && mv -f ${PATCHDIR}/*kernel-2.4* ${EXCLUDED}
 
 	if use gatos
 	then
