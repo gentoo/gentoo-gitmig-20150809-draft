@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.3.4.ebuild,v 1.3 2004/03/01 14:33:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.3.4.ebuild,v 1.4 2004/05/27 01:26:49 mr_bones_ Exp $
 
 inherit games flag-o-matic
 
@@ -11,14 +11,17 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
+IUSE=""
 
-DEPEND="dev-libs/libxml2
+RDEPEND="dev-libs/libxml2
 	media-libs/libpng
 	sys-libs/zlib
 	media-libs/sdl-image
 	media-libs/libsdl
 	virtual/x11
 	virtual/opengl"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
