@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.12 2002/07/31 02:51:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.13 2002/08/18 05:34:15 seemant Exp $
+
+*sylpheed-claws-0.8.1-r1 (17 Aug 2002)
+
+  17 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.8.1-r1.ebuild files/digest-sylpheed-claws-0.8.1-r1 :
+
+  Jared Hudson (jhhudso@gentoo.org) fixed up the
+  embeddable-dillo-within-sylpheed patch from
+  http://melvin.hadasht.free.fr/home/dillo/sylpheed/ so that it actually
+  works now.  In order to see HTML in e-mails, emerge sylpheed-claws with
+  the "gtkhtml" USE flag enabled.  Also, this release has a patch by me to
+  make it work with aspell-0.50*
 
 *sylpheed-claws-0.8.1 (30 Jul 2002)
 
