@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Safe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe/ChangeLog,v 1.8 2004/06/25 00:57:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe/ChangeLog,v 1.9 2004/07/30 16:08:48 mcummings Exp $
+
+*Safe-2.11 (30 Jul 2004)
+
+  30 Jul 2004; Michael Cummings <mcummings@gentoo.org> +Safe-2.11.ebuild:
+  New version on CPAN
 
   08 Jun 2003; <rac@gentoo.org> Safe-2.09.ebuild:
   Add IUSE, fix header
