@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.5.ebuild,v 1.4 2004/06/24 22:15:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.5.ebuild,v 1.5 2004/07/14 16:17:34 agriffis Exp $
 
 # kde before gnome2, otherwise kde_src_install will override gnome2_src_install
 use kde && inherit kde
@@ -10,7 +10,6 @@ inherit flag-o-matic virtualx gnome2 eutils
 replace-flags -O3 -O2
 
 DB3="db-3.1.17"
-S="${WORKDIR}/${P}"
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
 SRC_URI="${SRC_URI} http://www.sleepycat.com/update/snapshot/${DB3}.tar.gz"
 HOMEPAGE="http://www.ximian.com"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.2.4.ebuild,v 1.3 2004/06/24 22:15:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.2.4.ebuild,v 1.4 2004/07/14 16:17:34 agriffis Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde crypt"
 
@@ -9,7 +9,6 @@ IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde crypt"
 inherit eutils flag-o-matic gnome.org libtool virtualx
 
 DB3="db-3.1.17"
-S="${WORKDIR}/${P}"
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
 SRC_URI="ftp://ftp.ximian.com/pub/ximian-evolution/source/${P}.tar.gz
 	http://www.sleepycat.com/update/snapshot/${DB3}.tar.gz"
@@ -234,4 +233,3 @@ pkg_postrm() {
 	echo ">>> Updating Scrollkeeper database..."
 	scrollkeeper-update >/dev/null 2>&1
 }
-
