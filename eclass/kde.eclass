@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.18 2001/12/11 20:41:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.19 2001/12/18 19:50:56 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base depend || die
 ECLASS=kde
@@ -48,11 +48,12 @@ kde_src_compile() {
 	case $1 in
 		myconf)
 			debug-print-section myconf
-			myconf="${myconf} --host=${CHOST} --with-x --enable-mitshm --with-xinerama --prefix=/usr --with-qt-dir=${QTDIR}"
+			myconf="$myconf --host=${CHOST} --with-x --enable-mitshm --with-xinerama --prefix=/usr --with-qt-dir=${QTDIR}"
 			use qtmt 	&& myconf="$myconf --enable-mt"
 			use objprelink	&& myconf="$myconf --enable-objprelink" || myconf="$myconf --disable-objprelink"
 			set-kdedir $kde_version
 			set-qtdir $qt_version
+			debug-print "kde_src_compile: myconf: set to ${myconf}"
 			;;
 		configure)
 			debug-print-section configure
