@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/superadduser
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.27 2004/10/26 22:47:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.28 2004/10/28 00:29:19 weeve Exp $
+
+  27 Oct 2004; Jason Wever <weeve@gentoo.org> superadduser-1.0.9.ebuild:
+  Stable on sparc.
 
   26 Oct 2004; Seemant Kulleen <seemant@gentoo.org>
   superadduser-1.0.9.ebuild:
