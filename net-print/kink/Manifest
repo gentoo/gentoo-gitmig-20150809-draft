@@ -1,5 +1,15 @@
-MD5 fa8491696b5d2685cc437621902b53cc ChangeLog 374
-MD5 6cae974f0eff3e500f9369c98a683d48 kink-0.2.1.ebuild 565
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 87a4935062e8b1fc3b49f9df2855ecb2 ChangeLog 459
+MD5 d5271e89584a9c10cef2888c8fa65bf7 kink-0.2.1.ebuild 571
 MD5 96a4184e1e3325923219a5f96a5511a5 metadata.xml 163
 MD5 211d67758e5494b8b5b5b67c2eb6a6ad files/digest-kink-0.2.1 63
 MD5 e42a0101174b97b644ed99bda4e4cceb files/kink-0.2.1-compilefix.diff 652
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB12EHntT9W3vfTuoRAr5DAKClHX7RaUA/narz9cPOVnKLT7nInACgofGX
+7l0nyWwOmfe6+iFdTDGaa3w=
+=zIyo
+-----END PGP SIGNATURE-----

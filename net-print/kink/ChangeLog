@@ -1,6 +1,9 @@
 # ChangeLog for net-print/kink
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/kink/ChangeLog,v 1.1 2004/07/04 17:06:32 centic Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/kink/ChangeLog,v 1.2 2005/01/02 02:43:51 cryos Exp $
+
+  02 Jan 2005; Marcus Hanwell <cryos@gentoo.org> kink-0.2.1.ebuild:
+  Marked ~amd64.
 
 *kink-0.2.1 (04 Jul 2004)
 
