@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.13 2004/06/24 23:32:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.14 2004/06/26 08:03:14 seemant Exp $
+
+*yosucker-59 (26 Jun 2004)
+
+  26 Jun 2004; Seemant Kulleen <seemant@gentoo.org> +yosucker-59.ebuild:
+  version bump, as requested by: Daniel Webert <daniel_webert@web.de> in bug
+  #54577. Note that abhishek had this to say: on't worry about the thing about
+  needing a bump to work because 55+that patch works fine. So if you can't bump
+  it its not a big deal.
 
   23 Jun 2004; Abhishek Amit <abhishek@gentoo.org> -yosucker-51a.ebuild,
   -yosucker-53-r1.ebuild, -yosucker-53.ebuild, yosucker-55.ebuild:
