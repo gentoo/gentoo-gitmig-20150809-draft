@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.28 2004/04/03 03:41:24 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.29 2004/04/03 09:31:23 gmsoft Exp $
+
+  03 Apr 2004; Guy Martin <gmsoft@gentoo.org> gmp-4.1.2.ebuild:
+  Marked stable on hppa. CHOST forced to hppa-unknown-linux-gnu to fix detection
+  of ABI.
 
   03 Apr 2004; Lars Weiler <pylon@gentoo.org> gmp-4.1.2.ebuild:
   stable on ppc
