@@ -5,18 +5,19 @@ depend() {
 }
 
 autoconfig() {
-	if [ ! -e /etc/xinetd.conf ] ; then
-		if [ ! -e /etc/inetd.conf ] ; then
-			eerror "You need an /etc/xinetd.conf file to run xinetd"
-			eerror "There are samples in docs/xinetd, docs/netkit-base"
-			return 1
-		else
-			einfo "Auto-creating xinetd.conf from your inetd.conf.."
-			/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
-
-		fi
+if [ ! -e /etc/xinetd.conf ] ; then
+	if [ ! -e /etc/inetd.conf ] ; then
+		eerror "You need an /etc/xinetd.conf file to run xinetd"
+		eerror "There are samples in docs/xinetd, docs/netkit-base"
+		return 1
+	else
+		einfo "Auto-creating xinetd.conf from your inetd.conf.."
+		/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
+		return 0
 	fi
-	return # sneaky?
+else
+	return 0
+fi
 }
 
 start() {
@@ -48,12 +49,27 @@ stop() {
 	#    is run against it (see autoconfig() above)
 	# 2. if xinetd is terminated behind the dependency engines
 	#    back. ie, killall xinetd.
-	# ~woodchip
 	#
-	if [ $? -eq 1 ] ; then
+	# It might be better to just patch xinetd so that it exits
+	# with a specific error code when starting with an "only
+	# defaults section" config file. Then we can check that and
+	# delete the mess in here. It might already do this, but I
+	# havn't actually checked ;) ~woodchip
+	#
+	if [ $? -ne 0 ] ; then
 		if [ -e /dev/shm/.init.d/started/xinetd ] ; then
+		# this will basically reset the depencency engine
+		# into a working state.  i am doing this in order
+		# to maintain some sanity. if you are finding the
+		# need to change this initscript, i would like to
+		# know about it, and will incorporate your fixes.
 			eend 0
+		else
+		# im not sure how we can arrive here, so keep an
+		# eye out and report if you discover such a case
+			eend 1
 		fi
+	else
+		eend 0
 	fi
-	eend $? 
 }
