@@ -1,9 +1,19 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.18 2003/02/12 05:52:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.19 2003/03/22 20:21:53 strider Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
+*java-config-0.2.8 (21 Mar 2003)
+  21 Mar 2003; Adrian Almenar <strider@gentoo.org> java-config-0.2.8.ebuild files/digest-java-config-0.2.8 files/0.2.8/java-config files/0.2.8/java-config.1 files/0.2.8/30java-finalclasspath :
+  Make some cosmetic changes. Indicate which VM are you using when --list-available-vms
+  command is used (Bug #17696).
+  Raise a message of instructions when a VM is configured.
+  Updated man page to explain how to set a VM.
+  Updated home page cause the older wasnt working.
+  Updated description of the package to be more simpler.
+  Marked as testing ~arch.
+ 
 *java-config-0.2.7 (09 Dec 2002)
 
   15 Dec 2002; Adrian Almenar <strider@gentoo.org> java-config-0.2.7.ebuild:
