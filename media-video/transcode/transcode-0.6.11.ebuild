@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.1 2003/11/06 20:30:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.2 2003/12/26 15:32:26 mholzer Exp $
 
 inherit libtool flag-o-matic eutils
 # Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
@@ -16,7 +16,7 @@ SRC_URI="http://www.zebra.fh-weingarten.de/~transcode/pre/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="sdl mmx mpeg sse 3dnow encode X quicktime avi altivec"
 
 DEPEND=">=media-libs/a52dec-0.7.4
