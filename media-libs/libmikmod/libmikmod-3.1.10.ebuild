@@ -1,6 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10.ebuild,v 1.12 2003/02/13 12:49:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10.ebuild,v 1.13 2003/02/28 15:59:16 wwoods Exp $
+inherit gnuconfig
 
 IUSE="oss esd alsa"
 
@@ -25,6 +26,8 @@ src_compile() {
 	[ -z `use esd` ]  || myconf="${myconf} --enable-esd"
 	[ -z `use alsa` ] || myconf="${myconf} --enable-alsa"
 	[ -z `use oss` ]  || myconf="${myconf} --enable-oss"
+
+	use alpha && gnuconfig_update
 
 	econf ${myconf} || die
 	emake || die
