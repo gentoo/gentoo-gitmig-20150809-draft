@@ -5,7 +5,12 @@
 # description: edna is a mini mp3 webserver
 # processname: python
 # pidfile: /var/run/ednad.pid
-# config: 
+# config:
+
+export PYTHONPATH=/usr/lib/edna
+EDNA=/usr/bin/edna
+EDNACONF=/etc/edna/edna.conf
+PIDFILE=/var/run/edna.pid
 
 depend() {
         need local
@@ -13,13 +18,13 @@ depend() {
 
 start() {
     ebegin "Starting ednad mp3 server"
-    start-stop-daemon -m --quiet --pidfile /var/run/ednad.pid --start --exec \
-	/usr/bin/edna -- --daemon /etc/edna/edna.conf
+    start-stop-daemon -m -b --start --quiet --pidfile $PIDFILE \
+    --exec $EDNA -- $EDNACONF
     eend $?
 }
 
 stop() {
     ebegin "Stopping ednad"
-    start-stop-daemon -o --quiet --stop --pidfile /var/run/ednad.pid
+    start-stop-daemon -o --quiet --stop --pidfile $PIDFILE
     eend $?
 }
