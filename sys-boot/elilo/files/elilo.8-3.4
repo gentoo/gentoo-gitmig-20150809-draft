@@ -1,0 +1,113 @@
+.TH ELILO 8 "18 Mar 2002"
+.SH NAME
+elilo \- install EFI boot loader
+.SH SYNOPSIS
+.B elilo
+.RI [ options ]
+.SH DESCRIPTION
+This manual page documents briefly the
+.B elilo
+command, which was written specifically for the Debian distribution to
+simplify configuring and using the elilo.efi bootloader.  The command works
+equally on Gentoo Linux.
+.sp
+There are two parts to elilo, the bootloader itself and this utility which
+installs or updates a bootload configuration.
+.sp
+The primary function of elilo is to copy files necessary for booting
+Gentoo Linux from the main filesystem to a subdirectory /EFI/gentoo
+on the boot partition.  These include elilo.efi, elilo.conf, and the kernel
+and ramdisk images referenced by elilo.conf.  
+.sp
+In addition, elilo can create a default
+configuration file, /etc/elilo.conf, and can invoke efibootmgr to create
+an entry in the EFI Boot Manager menu such that a system will autoboot
+in to Gentoo Linux on power up.
+.sp
+.B elilo 
+requires a couple of extra parameters in elilo.conf that elio.efi does
+not currently support. 
+These are needed so that a normal run of elilo with no parameters can find 
+the elilo.efi binary and boot partition in order to rebuild it.
+They are:
+.sp
+install=<path to elilo.efi>
+.br
+boot=<boot partition>
+.sp
+.SH OPTIONS
+This program follows the usual GNU command line syntax, with long
+options starting with two dashes (`-').
+.TP
+.B \-b, \-\-boot
+set bootstrap partition device [ -b /dev/sda1 ]
+.TP
+.B \-i, \-\-install
+pathname to the actual bootloader binary,
+default: /usr/{local/}lib/elilo/elilo.efi
+.TP
+.B \-C, \-\-config
+use alternate configuration file [ -C config_file ]
+.TP
+.B \-\-autoconf
+auto-generate a /etc/elilo.conf.  Typically only used during system
+installation.  In normal use, an elilo.conf file already exists and will not
+be modified by elilo.
+.TP
+.B \-\-efiboot
+elilo auto configuration: create an efi boot manager entry for elilo.  This
+option requires that the 
+.B efibootmgr
+package also be installed.
+.TP
+.B \-\-timeout
+elilo auto configuration: sets the time elilo
+will wait for user input before booting default
+image default: 20 (2 seconds)
+.TP
+.B \-\-image
+elilo auto configuration: sets the path to the
+kernel image. default: /vmlinuz
+.TP
+.B \-\-label
+elilo auto configuration: sets the image label
+default: Linux
+.TP
+.B \-\-root
+elilo auto configuration: sets the root device default: /dev/sda3
+.TP
+.B \-\-format
+create a new FAT filesystem on the boot partition.  Use this cautiously if
+you have more than one operating system installed, and they may be sharing
+the same EFI partition!
+.TP
+.B \-v, \-\-verbose
+make elilo more verbose
+.TP
+.B \-\-debug
+print boring junk only useful for debugging
+.TP
+.B \-h, \-\-help
+display this help and exit
+.TP
+.B \-V, \-\-version
+output version information and exit
+.SH FILES
+.I /etc/elilo.conf	
+.br
+.I /usr/lib/elilo/elilo.efi 
+.SH SEE ALSO
+.BR efibootmgr (8)
+.sp
+Additional information about 
+.B elilo
+is available in the /usr/share/doc/elilo directory.
+.SH AUTHOR
+The
+.B elilo
+program and this manual page were written by 
+Richard Hirst <rhirst@linuxcare.com> and Bdale Garbee <bdale@gag.com> 
+as additions to the 
+.B elilo
+bootloader package from Stephane Eranian <eranian@hpl.hp.com>
+for the Debian GNU/Linux system (but may be used by others).  

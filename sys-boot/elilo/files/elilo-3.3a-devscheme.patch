@@ -1,0 +1,124 @@
+--- elilo-3.3a/devschemes/simple.c.devscheme	2002-09-16 20:51:52.000000000 +0200
++++ elilo-3.3a/devschemes/simple.c	2003-05-26 15:05:13.000000000 +0200
+@@ -38,52 +38,50 @@ typedef struct {
+ } devices_types_t;
+ 
+ 
+-static UINT32 atapi_count, scsi_count, net_count;
++static UINT32 cdrom_count, hd_count, net_count;
+ 
+ static INTN
+-atapi_device(device_t *dev, EFI_DEVICE_PATH *dp)
++network_device(device_t *dev, EFI_DEVICE_PATH *dp)
+ {
+-	//ATAPI_DEVICE_PATH *atapi = (ATAPI_DEVICE_PATH *)dp;
++	//MAC_ADDR_DEVICE_PATH *mac = (MAC_ADDR_DEVICE_PATH *)dp;
+ 
+-	dev->name[0] = L'a';
+-	dev->name[1] = L't';
+-	dev->name[2] = L'a';
+-	dev->name[3] = L'p';
+-	dev->name[4] = L'i';
++	dev->name[0] = L'n';
++	dev->name[1] = L'e';
++	dev->name[2] = L't';
+ 
+-	SPrint(dev->name+5,FILEOPS_DEVNAME_MAXLEN-5-1,  L"%d", atapi_count);
+-	atapi_count++;
++	SPrint(dev->name+3,FILEOPS_DEVNAME_MAXLEN-3-1,  L"%d", net_count);
++	net_count++;
+ 
+ 	return 0;
+ }
+ 
+ static INTN
+-scsi_device(device_t *dev, EFI_DEVICE_PATH *dp)
++harddrive_device(device_t *dev, EFI_DEVICE_PATH *dp)
+ {
+ 	//SCSI_DEVICE_PATH *scsi = (SCSI_DEVICE_PATH *)dp;
+ 
+-	dev->name[0]   = L's';
+-	dev->name[1]   = L'c';
+-	dev->name[2]   = L's';
+-	dev->name[3]   = L'i';
++	dev->name[0]   = L'h';
++	dev->name[1]   = L'd';
+ 
+-	SPrint(dev->name+4, FILEOPS_DEVNAME_MAXLEN-4-1, L"%d", scsi_count);
+-	scsi_count++;
++	SPrint(dev->name+2, FILEOPS_DEVNAME_MAXLEN-2-1, L"%d", hd_count);
++	hd_count++;
+ 
+ 	return 0;
+ }
+ 
+ static INTN
+-network_device(device_t *dev, EFI_DEVICE_PATH *dp)
++cdrom_device(device_t *dev, EFI_DEVICE_PATH *dp)
+ {
+ 	//MAC_ADDR_DEVICE_PATH *mac = (MAC_ADDR_DEVICE_PATH *)dp;
+ 
+-	dev->name[0] = L'n';
+-	dev->name[1] = L'e';
+-	dev->name[2] = L't';
++	dev->name[0] = L'c';
++	dev->name[1] = L'd';
++	dev->name[2] = L'r';
++	dev->name[3] = L'o';
++	dev->name[4] = L'm';
+ 
+-	SPrint(dev->name+3, FILEOPS_DEVNAME_MAXLEN-3-1, L"%d", net_count);
+-	net_count++;
++	SPrint(dev->name+5, FILEOPS_DEVNAME_MAXLEN-5-1, L"%d", cdrom_count);
++	cdrom_count++;
+ 
+ 	return 0;
+ }
+@@ -92,9 +90,12 @@ network_device(device_t *dev, EFI_DEVICE
+  * what we are looking for in the device path
+  */
+ static devices_types_t dev_types[]={
+-	{ MESSAGING_DEVICE_PATH, MSG_ATAPI_DP, atapi_device},
+-	{ MESSAGING_DEVICE_PATH, MSG_SCSI_DP, scsi_device},
++  //	{ MESSAGING_DEVICE_PATH, MSG_ATAPI_DP, atapi_device},
++  //	{ MESSAGING_DEVICE_PATH, MSG_SCSI_DP, scsi_device},
+ 	{ MESSAGING_DEVICE_PATH, MSG_MAC_ADDR_DP, network_device},
++	{ MEDIA_DEVICE_PATH, MEDIA_HARDDRIVE_DP, harddrive_device},
++	{ MEDIA_DEVICE_PATH, MEDIA_CDROM_DP, cdrom_device},
++	//	{ MEDIA_DEVICE_PATH, MEDIA_PROTOCOL_DP, network_device},
+ 	{ 0, 0 , NULL}
+ };
+ 
+@@ -121,6 +122,7 @@ simple_scheme(device_t *tab, UINTN n)
+ 
+ 	for(i=0; i < n; i++) {
+ 		dp = DevicePathFromHandle(tab[i].dev);
++		Print(L"New Dev :");
+ 		if (dp == NULL) {
+ 			ERR_PRT((L"cannot get device path for device %d", i));
+ 			continue;
+@@ -128,6 +130,7 @@ simple_scheme(device_t *tab, UINTN n)
+ 		dp1 = dp = UnpackDevicePath(dp);
+ 
+ 		while (!IsDevicePathEnd(dp)) {
++		  Print(L"(%d,%d) ",DevicePathType(dp),DevicePathSubType(dp) );
+ 			p = dev_types;
+ 			while (p->type) {
+ 				if (   p->type == DevicePathType(dp) 
+@@ -135,6 +138,8 @@ simple_scheme(device_t *tab, UINTN n)
+ 					(*p->device_func)(tab+i, dp);
+ 				        goto done;
+ 				}
++				//				if (DevicePathType(dp) == MEDIA_DEVICE_PATH) Print(L"Unknown : %d : %d\n", DevicePathType(dp) , DevicePathSubType(dp) );
++
+ 
+ 				p++;
+ 			}
+@@ -142,6 +147,7 @@ simple_scheme(device_t *tab, UINTN n)
+ 		}
+ done:
+        		FreePool(dp1); 
++		Print(L"\n");
+ 	}
+ 	return 0;
+ }

@@ -1,0 +1,8 @@
+--- elilo-3.4/Make.defaults.makefile	2002-10-08 20:50:27.000000000 +0200
++++ elilo-3.4/Make.defaults	2003-05-26 14:59:04.000000000 +0200
+@@ -123,3 +121,5 @@
+   OBJCOPY	= $(prefix)objcopy
+  endif
+ endif
++
++CFLAGS += $(shell if $(CC) -fno-merge-constants -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-fno-merge-constants"; fi)

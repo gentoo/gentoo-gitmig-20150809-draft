@@ -1,4 +1,5 @@
-MD5 cda6670281bd5d3ba667d35e1edd3049 elilo-3.4.ebuild 1762
+MD5 170751d8049b2c371326f017bea65442 elilo-3.4.ebuild 1750
+MD5 783b45fdac0028728f23e9f1b8ffea8b ChangeLog 478
 MD5 2b2d58955c4ad612fee3bcf9b977bc41 files/elilo-3.4-makefile.patch 338
 MD5 85650d47a2950be23774d73205b19e97 files/digest-elilo-3.4 61
 MD5 c41337651da1c5b597609856146438ec files/elilo-3.4 22707
