@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.56 2004/06/15 04:36:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.57 2004/06/16 04:23:09 usata Exp $
+
+*uim-0.3.9-r2 (16 Jun 2004)
+
+  16 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> -uim-0.3.6.ebuild,
+  +uim-0.3.9-r2.ebuild:
+  Added m17n-lib IUSE flag. Removed old version.
 
   15 Jun 2004; <matsuu@gentoo.org> uim-0.3.9-r1.ebuild:
   Added ~sparc to KEYWORDS.
