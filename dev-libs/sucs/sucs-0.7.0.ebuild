@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/sucs-0.7.0.ebuild,v 1.1 2002/10/23 16:03:30 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/sucs-0.7.0.ebuild,v 1.2 2003/02/13 10:51:35 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Simple Utility Classes are C++ libraries of common C-based algorithms and libraries."

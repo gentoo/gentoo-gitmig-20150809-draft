@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/publib/publib-0.31.ebuild,v 1.6 2002/12/09 04:21:04 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/publib/publib-0.31.ebuild,v 1.7 2003/02/13 10:50:38 vapier Exp $
 
 DESCRIPTION="C library of misc utility functions (parsing, data structs, etc.)"
 SRC_URI="http://liw.iki.fi/liw/programs/debian/publib_${PV}.tar.gz"

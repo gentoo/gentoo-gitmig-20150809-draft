@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.7.ebuild,v 1.11 2003/01/04 01:09:10 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.7.ebuild,v 1.12 2003/02/13 10:43:09 vapier Exp $
 
 DESCRIPTION="This is a fork of the glibc iconv implementation that is incompatible. it may break things."
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/libiconv/${P}.tar.gz"
