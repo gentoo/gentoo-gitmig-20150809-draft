@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.10 2005/01/02 10:40:53 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.11 2005/02/19 10:18:31 stuart Exp $
+
+*nxserver-freenx-0.2.8 (19 Feb 2005)
+
+  19 Feb 2005; Stuart Herbert <stuart@gentoo.org> +files/fixes.diff,
+  +nxserver-freenx-0.2.8.ebuild:
+  Version bump; Bug 76449: shell script loop patch; Neil Wilson
+  <neil@aldur.co.uk> Bug 76449: support for session names with spaces; Neil
+  Wilson <neil@aldur.co.uk> New USE flag 'commercial' if you want to use freenx
+  w/ NoMachine's nxclient
+  stable on x86
 
   02 Jan 2005; Stuart Herbert <stuart@gentoo.org>
   -nxserver-freenx-0.2.1.ebuild, -nxserver-freenx-0.2.2.ebuild,

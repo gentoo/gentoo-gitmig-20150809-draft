@@ -1,0 +1,26 @@
+diff -u --recursive freenx-0.2.8-orig/nxclient freenx-0.2.8/nxclient
+--- freenx-0.2.8-orig/nxclient	2005-02-17 20:03:15.000000000 +0000
++++ freenx-0.2.8/nxclient	2005-02-18 18:59:20.843775240 +0000
+@@ -8,7 +8,9 @@
+ #       it does check it someday.
+ 
+ # First check if the commercial nxclient is available and use it
+-[ -x /usr/NX/bin/nxclient ] && exec /usr/NX/bin/nxclient "$@"
++# but check that it isn't this script to prevent a loop!
++NXCLIENT="/usr/NX/bin/nxclient"
++[ -x ${NXCLIENT} -a "`file -bi ${NXCLIENT}`" != 'application/x-shellscript' ] && exec ${NXCLIENT} "$@"
+ 
+ TEMP=`getopt -a -o d: --long local,noautokill,dialog:,caption:,message:,display: -n $(basename $0) -- "$@"`
+ 
+diff -u --recursive freenx-0.2.8-orig/nxserver freenx-0.2.8/nxserver
+--- freenx-0.2.8-orig/nxserver	2005-02-17 20:03:15.000000000 +0000
++++ freenx-0.2.8/nxserver	2005-02-18 19:01:54.465015048 +0000
+@@ -495,7 +495,7 @@
+ 
+ server_nxnode_start_wait()
+ {
+-	server_nxnode_start $@ | while read CMD
++	server_nxnode_start "$@" | while read CMD
+ 	do
+ 		case "$CMD" in 
+ 			"NX> 1006"*|"NX> 1005"*)
