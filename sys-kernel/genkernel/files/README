@@ -1,0 +1,12 @@
+kernel and initrd will be cp'ed to /
+kernel-VERSION-SOURCES
+initrd-VERSION-SOURCES
+
+To use with lilo add the following to lilo.conf
+
+image = /boot/kernel-KERNEL-SOURCES
+root = /dev/XXX
+label = "MY_KERNEL_NAME"
+initrd = /boot/initrd-KERNEL-SOURCES
+append = "root=/dev/ram0 init=/linuxrc"
+
