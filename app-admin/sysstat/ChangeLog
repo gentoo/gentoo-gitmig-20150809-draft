@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.13 2004/03/06 19:58:25 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.14 2004/03/23 22:52:36 plasmaroo Exp $
+
+*sysstat-5.0.2 (23 Mar 2004)
+
+  23 Mar 2004; <plasmaroo@gentoo.org> sysstat-5.0.2.ebuild:
+  Version bump; closes bug #45159.
 
 *sysstat-5.0.1 (01 Mar 2004)
 
