@@ -1,8 +1,13 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.5 2002/12/13 10:56:26 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.6 2003/02/07 21:59:51 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*lua-4.0.1 (07 Feb 2003)
+
+  07 Feb 2003; Ryan Phillips <rphillips@gentoo.org> lua-4.0.1.ebuild :
+  new version
  
 *lua-4.0 (09 June 2002)
   
