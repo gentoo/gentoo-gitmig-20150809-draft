@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-console
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-console/ChangeLog,v 1.8 2003/07/16 16:42:13 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-console/ChangeLog,v 1.9 2004/01/15 22:41:09 agriffis Exp $
+
+  15 Jan 2004; Aron Griffis <agriffis@gentoo.org>
+  gkrellm-console-0.1.2.ebuild:
+  stable on alpha
 
   17 Jul 2003; Martin Holzer <mholzer@gentoo.org>
   gkrellm-console-0.1.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellaclock
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/ChangeLog,v 1.5 2003/10/06 06:51:59 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/ChangeLog,v 1.6 2004/01/15 22:39:53 agriffis Exp $
+
+  15 Jan 2004; Aron Griffis <agriffis@gentoo.org> gkrellaclock-0.3.2.ebuild:
+  stable on alpha
 
   07 Oct 2003; Martin Holzer <mholzer@gentoo.org> gkrellaclock-0.2.1.ebuild:
   Changed depend to gkrellm fixed version. Closes #27060.
