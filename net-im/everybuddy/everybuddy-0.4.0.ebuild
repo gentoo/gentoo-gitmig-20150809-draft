@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
 # Maintainer Bart Verwilst <verwilst@gentoo.org>, Author Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.2.1-r3.ebuild,v 1.2 2002/04/04 11:01:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.4.0.ebuild,v 1.1 2002/05/13 18:24:41 verwilst Exp $
 
-S=${WORKDIR}/everybuddy-0.2.1beta6
+S=${WORKDIR}/${P}
 DESCRIPTION="Universal Instant Messaging Client"
-SRC_URI="http://www.everybuddy.com/files/everybuddy-0.2.1beta6.tar.gz"
+SRC_URI="http://www.everybuddy.com/files/${P}.tar.gz"
 HOMEPAGE="http://www.everybuddy.com/"
 SLOT="0"
 DEPEND="virtual/glibc 
