@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.14.ebuild,v 1.4 2004/06/25 00:51:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.14.ebuild,v 1.5 2004/07/14 22:16:38 agriffis Exp $
 
 IUSE="xml2"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU VCDimager"
 SRC_URI="http://www.vcdimager.org/pub/vcdimager/vcdimager-0.7_UNSTABLE/${P}.tar.gz"
 HOMEPAGE="http://www.vcdimager.org/"
