@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2.ebuild,v 1.1 2003/07/03 16:41:32 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2.ebuild,v 1.2 2003/07/03 21:38:12 taviso Exp $
 
 DESCRIPTION="Play sounds on remote Unix systems, without sending audio data over the network."
 HOMEPAGE="http://rplay.doit.org/"
@@ -9,7 +9,7 @@ SRC_URI="http://rplay.doit.org/dist/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~x86 ~alpha ~sparc ~ppc"
 IUSE=""
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"
