@@ -83,48 +83,15 @@ def isfifo(x):
 	return S_ISFIFO(mymode)
 
 def movefile(src,dest):
-    if os.path.exists(dest):
-	os.unlink(dest)
-    mystat=os.stat(src)
-    mymode=mystat[ST_MODE]
-    myperms=S_IMODE(mymode)
-    if S_ISCHR(mymode):
-	mydev=getstatusoutput("/bin/ls -l "+src)[1][34:42]
-	mymajor=mydev[:3]
-	myminor=mydev[4:]
-	myout=getstatusoutput("/bin/mknod "+dest+" c "+mymajor+" "+myminor)
-	#character device
-    elif S_ISBLK(mymode):
-	mydev=getstatusoutput("/bin/ls -l "+src)[1][34:42]
-	mymajor=mydev[:3]
-	myminor=mydev[4:]
-	myout=getstatusoutput("/bin/mknod "+dest+" b "+mymajor+" "+myminor)
-	#block device
-    elif S_ISLNK(mymode):
-	pointsto=os.readlink(src)
-	os.symlink(pointsto,dest)
-	#symbolic link
-    elif S_ISREG(mymode):
-	mybuffer=""
-	myin=open(src,"r")
-	myout=open(dest,"w")
-	while (1):
-        	#do 256K reads for enhanced performance
-        	mybuffer=myin.read(262144)
-        	if mybuffer=="":
-            		break
-		myout.write(mybuffer)
-    	myin.close()
-	myout.close()
- 	#regular file
-    elif S_ISFIFO(mymode): 
-	os.mkfifo(dest)
-	#fifo
-    #set permissions/ownership
-    os.chmod(dest,myperms)
-    os.chown(dest,mystat[ST_UID],mystat[ST_GID])
-    #unlink src
-    return 1
+	"""moves a file from src to dest, preserving all permissions and attributes."""
+	if os.path.exists(dest):
+		os.unlink(dest)
+	a=getstatusoutput("cp -a "+"'"+src+"' '"+dest+"'")	
+	os.unlink(src)
+	if a[0]==0:
+		return 1
+	else:
+		return 0
 
 def getmtime(x):
 	 return `os.lstat(x)[-2]`
