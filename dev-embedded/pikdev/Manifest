@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 332da3c9faac737f1d35da5dd414d909 ChangeLog 3197
-MD5 a0dba2e9f48960a31c0e5a25095e06f6 metadata.xml 426
-MD5 b552eb398d6e4ccc5608d3c49ea09fc7 pikdev-0.6.5b.ebuild 803
 MD5 3c3fa2c804185b61bb5b917adab4c941 pikdev-0.6.6a.ebuild 1594
-MD5 204ebe37bf2d6ed5c9b02713d12f6a2d files/digest-pikdev-0.6.6a 65
+MD5 b552eb398d6e4ccc5608d3c49ea09fc7 pikdev-0.6.5b.ebuild 803
+MD5 9370b010ec48005519ccaa21926d859b pikdev-0.7.1.ebuild 1599
+MD5 12e4ec42330035ac55a0acab0391ade3 ChangeLog 3313
+MD5 a0dba2e9f48960a31c0e5a25095e06f6 metadata.xml 426
+MD5 7efd0e0b7109cda86c1168e939828309 files/digest-pikdev-0.7.1 65
 MD5 151bd9a45a61454fb9fb1a3ceeed21e8 files/digest-pikdev-0.6.5b 66
+MD5 204ebe37bf2d6ed5c9b02713d12f6a2d files/digest-pikdev-0.6.6a 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFBUtq8mdTrptrqvGERAt/jAJ0chygR4JG1Z5HDurFnJUGXeVgTwACfYP4P
-YOud4T4rHQ1eXOcVUHvkRE0=
-=6Vi6
+iD8DBQFBmbyKPpIsIjIzwiwRAv0xAKCMqiRL0IC1sR5NkxMNuiDBHGhd1gCfVGk8
++v5u27eEZfnHURt0fwQi2D4=
+=ncUF
 -----END PGP SIGNATURE-----
