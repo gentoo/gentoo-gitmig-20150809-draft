@@ -1,8 +1,13 @@
 # ChangeLog for dev-libs/libtommath
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.6 2003/10/11 18:07:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.7 2003/12/25 17:41:34 vapier Exp $
 
-*libtommath-0.26 (11 Oct 2003)
+*libtommath-0.28 (25 Dec 2003)
+
+  25 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*libtommath-0.27 (11 Oct 2003)
 
   11 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump.

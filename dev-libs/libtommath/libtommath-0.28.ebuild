@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.26.ebuild,v 1.1 2003/09/09 13:21:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.28.ebuild,v 1.1 2003/12/25 17:41:34 vapier Exp $
 
 DESCRIPTION="highly optimized and portable routines for integer based number theoretic applications"
 HOMEPAGE="http://math.libtomcrypt.org/"
