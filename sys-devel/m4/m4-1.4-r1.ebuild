@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4-r1.ebuild,v 1.6 2004/02/23 00:22:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4-r1.ebuild,v 1.7 2004/03/02 16:11:10 iggy Exp $
 
 IUSE="nls"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha ~mips hppa ia64 amd64 ppc64"
+KEYWORDS="x86 ppc sparc alpha ~mips hppa ia64 amd64 ppc64 s390"
 
 DEPEND="virtual/glibc
 	!bootstrap? ( >=sys-devel/libtool-1.3.5-r2 )
