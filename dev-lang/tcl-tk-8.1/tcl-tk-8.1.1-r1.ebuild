@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk-8.1/tcl-tk-8.1.1-r1.ebuild,v 1.3 2000/09/15 20:08:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk-8.1/tcl-tk-8.1.1-r1.ebuild,v 1.4 2000/10/23 11:27:13 achim Exp $
 
 P=tcl-tk-8.1.1
 
@@ -46,13 +46,10 @@ src_install() {
 	try make INSTALL_ROOT=${D} install
 	cd ${S2}/unix
 	try make INSTALL_ROOT=${D} install
-	strip ${D}/usr/bin/*
 	ln -sf wish8.1 ${D}/usr/bin/wish
 	ln -sf tclsh8.1 ${D}/usr/bin/tclsh
 	cd ${S1}
 	dodoc README changes license.terms
-	prepman
-
 
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.1.1.ebuild,v 1.2 2000/09/15 20:08:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.1.1.ebuild,v 1.3 2000/10/23 11:27:13 achim Exp $
 
 P=PDL-2.1.1
 A=${P}.tar.gz
@@ -29,7 +29,6 @@ src_install () {
 
     cd ${S}
     try make install
-    prepman
     dodoc COPYING Changes DEPENDENCIES DEVELOPMENT README MANIFEST*
     dodoc Release_Notes TODO 
 }

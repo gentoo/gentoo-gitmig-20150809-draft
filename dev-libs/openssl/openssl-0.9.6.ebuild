@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6.ebuild,v 1.1 2000/09/26 17:13:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6.ebuild,v 1.2 2000/10/23 11:27:13 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -20,7 +20,6 @@ src_compile() {
 src_install() {                               
     try make INSTALL_PREFIX=${D} install
     mv ${D}/usr/ssl/man ${D}/usr
-    prepman
     dodoc CHANGES* FAQ LICENSE NEWS README
     dodoc doc/*.txt
     docinto html
