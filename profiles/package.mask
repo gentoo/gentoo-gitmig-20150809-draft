@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (19 Oct 2002)
+# 1.16 breaks jEdit, better use >=1.17
+=dev-java/jikes-1.16
+
 # <jhhudso@gentoo.org> (18 Oct 2002)
 # Masking pending an unfreeze.
 >=net-dns/djbdns-1.05-r4
