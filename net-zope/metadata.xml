@@ -2,7 +2,7 @@
 <!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <catmetadata>
 	<longdescription lang="en">
-		The net-zope category contains Zope software.
+		The net-zope category contains all Zope (zope.org) related software including third party products and tools.
 	</longdescription>
 </catmetadata>
 
