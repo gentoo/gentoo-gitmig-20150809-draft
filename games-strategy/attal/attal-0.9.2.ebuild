@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.9.2.ebuild,v 1.1 2005/01/03 22:56:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.9.2.ebuild,v 1.2 2005/03/14 23:08:33 vapier Exp $
 
 inherit games eutils flag-o-matic
 
@@ -27,7 +27,7 @@ src_unpack() {
 		"s:\./themes/:${GAMES_DATADIR}/${PN}/themes/:" \
 		`grep -Rl '\./themes/' *` \
 		|| die "fixing theme loc"
-	find "${WORKDIR}"/themes-${PV} -name .cvsignore | xargs rm -f
+	find "${WORKDIR}"/themes-${PV} -name .cvsignore -print0 | xargs -0 rm -f
 }
 
 src_compile() {
