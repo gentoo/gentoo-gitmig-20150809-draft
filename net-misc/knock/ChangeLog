@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.15 2004/10/26 15:25:27 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.16 2004/10/27 16:33:58 pyrania Exp $
+
+  27 Oct 2004; <pyrania@gentoo.org> knock-0.3.1.ebuild:
+  Removed nonblock patch for 0.3.1.
 
 *knock-0.3.1 (26 Oct 2004)
 
