@@ -1,0 +1,7 @@
+# ChangeLog for x11-misc/metacity-setup
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/metacity-setup/ChangeLog,v 1.1 2002/05/28 16:20:16 spider Exp $
+
+*metacity-setup-0.3.1 (28 May 2002)
+  28 May 2002; Spider <spider@gentoo.org> ChangeLog metacity-setup-0.3.1.ebuild :
+  here you go, initial release
