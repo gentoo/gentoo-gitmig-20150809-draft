@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.18 2003/07/07 18:31:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.19 2003/07/19 19:59:43 raker Exp $
+
+*k3b-0.9 (19 Jul 2003)
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org> k3b-0.9.ebuild:
+  Version bump.  Changed mad dependancy.
 
   07 Jul 2003; Caleb Tennis <caleb@gentoo.org> k3b-0.8.1-r1.ebuild, k3b-0.9_pre2.ebuild:
   Added runtime dependency on media-sound/normalize.  This closes #23259.
