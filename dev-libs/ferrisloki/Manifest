@@ -1,6 +1,14 @@
-MD5 cf8cd71a72332ce1e97ddef377d32adc ChangeLog 576
-MD5 ece2c25d82ad41d13787b9abefdcfdd4 ferrisloki-2.0.3.ebuild 572
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e278aab9096d59677b60b477be54fec4 metadata.xml 287
-MD5 a71a74c0effa548dbf72ca208eaa5c98 ferrisloki-2.0.4.ebuild 585
-MD5 46b7f76d71d0244ec190ea32be3c04f8 files/digest-ferrisloki-2.0.3 69
+MD5 cf8cd71a72332ce1e97ddef377d32adc ChangeLog 576
+MD5 f09025eacea0cdd0d2976561e47d9e8d ferrisloki-2.0.4.ebuild 584
 MD5 30f5804d9efbc74e08457e79f98500dc files/digest-ferrisloki-2.0.4 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA9JSHHTu7gpaalycRAtixAKD3RblJnhrTj/2TTsWADATxtCt+TQCgu00T
+Q7aAZbDVsmXdQI6CXYq6P54=
+=mQEB
+-----END PGP SIGNATURE-----
