@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation; acid DOT punk AT gmx DOT net
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.6.0.ebuild,v 1.4 2004/06/25 01:55:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.6.0.ebuild,v 1.5 2004/08/17 15:00:41 usata Exp $
 
 DESCRIPTION="Ruby Browser for modules/classes hierarchy and their constants and methods"
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/hiki.cgi?rbbr"
@@ -20,11 +20,13 @@ DEPEND="|| ( >=dev-lang/ruby-1.8.0 dev-lang/ruby-cvs )
 S="${WORKDIR}/${P}-withapi"
 
 src_compile() {
+	# bug #59125
+	rm lib/rbbr/doc/ri2.rb || die "failed to remove ri2.rb"
+
 	ruby install.rb config || die "install.rb config failed"
 	ruby install.rb setup || die "install.rb setup failed"
 }
 
 src_install() {
 	ruby install.rb install --prefix=${D} || die "install.rb install failed"
-	dosed "/LIB_DIR/s%/[0-9]\.[0-9]%%" /usr/lib/ruby/site_ruby/*/rbbr/config.rb
 }

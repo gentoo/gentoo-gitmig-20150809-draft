@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rbbr
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/ChangeLog,v 1.7 2004/06/25 01:55:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/ChangeLog,v 1.8 2004/08/17 15:00:41 usata Exp $
+
+  17 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> rbbr-0.6.0.ebuild:
+  Fixed function description bug. See bug #59125.
 
   25 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> rbbr-0.4.0.ebuild,
   rbbr-0.5.1.ebuild, rbbr-0.6.0.ebuild:
