@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.20.ebuild,v 1.1 2005/03/17 23:10:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.20.ebuild,v 1.2 2005/03/18 01:38:43 vapier Exp $
 
-inherit eutils flag-o-matic gnuconfig toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 SELINUX_PATCH="findutils-4.2.20-selinux.diff"
 
@@ -13,22 +13,17 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls build afs selinux static"
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4
-	nls? ( sys-devel/gettext )
-	afs? ( net-fs/openafs )
+RDEPEND="afs? ( net-fs/openafs )
 	selinux? ( sys-libs/libselinux )"
-RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
-	# Detect new systems properly
-	gnuconfig_update
+	cd "${S}"
 
 	# Don't build or install locate because it conflicts with slocate,
 	# which is a secure version of locate.  See bug 18729
