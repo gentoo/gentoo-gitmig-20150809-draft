@@ -11,19 +11,19 @@ DEPEND="virtual/python"
 RDEPEND="$DEPEND"
 KEYWORDS="x86"
 
-src_compile() {
-        python setup.py build || die
-}
+inherit distutils
 
 src_install() {
-        python setup.py install --root=${D} --prefix=/usr || die
-        # next few lines will install docs: 9.4 megs! 
-        dodir /usr/share/doc/${PF}
-        # of course it's documentation!
-        cd doc
-        cp -r . ${D}/usr/share/doc/${PF}
-        cd ../
-        rm -rf doc/man  # don't dupe the man pages
-        doman doc/man/*
-        dodoc README TODO CREDITS
+	distutils_src_install
+	
+	# next few lines will install docs: 9.4 megs! 
+	dodir /usr/share/doc/${PF}
+	# of course it's documentation!
+	doman doc/man/*
+	rm -rf doc/man	# don't dupe the man pages
+	cd doc
+	cp -r . ${D}/usr/share/doc/${PF}
+	cd ../
+# should be taken care of by the distutils install
+#	 dodoc README TODO CREDITS
 }
