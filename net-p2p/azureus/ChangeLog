@@ -1,0 +1,7 @@
+# ChangeLog for net-p2p/azureus
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.1 2004/11/15 10:29:24 sejo Exp $
+
+  15 Nov 2004; <SeJo@gentoo.org> :
+  initial add of ebuild
+
