@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-config/lapack-config-1.0.0.ebuild,v 1.4 2004/06/24 22:07:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-config/lapack-config-1.0.0.ebuild,v 1.5 2004/07/04 22:12:11 kugelfang Exp $
 
 DESCRIPTION="Utility to change the default LAPACK library"
 HOMEPAGE="http://www.gentoo.org/"
@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE=""
 
 DEPEND=""
