@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0.ebuild,v 1.3 2004/06/27 16:50:19 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0.ebuild,v 1.4 2004/07/14 01:47:52 agriffis Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://cvs.apache.org/dist/jakarta/bsf/v2.3.0rc1/src/bsf-src-2.3.0.tar.
 LICENSE="Apache-1.1"
 SLOT="2.3"
 KEYWORDS="~x86"
-IUSE="doc jikes"
+IUSE="doc"
 # karltk: Is this really an RDEPEND, or just a CDEPEND?
 RDEPEND="=net-www/tomcat-5*"
 DEPEND="${REPEND}
