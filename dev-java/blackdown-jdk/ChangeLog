@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.60 2004/10/12 21:34:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.61 2004/11/24 20:50:02 axxo Exp $
+
+*blackdown-jdk-1.4.2.01 (24 Nov 2004)
+
+  24 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
+  +files/blackdown-jdk-1.4.2.01, +blackdown-jdk-1.4.2.01.ebuild:
+  security version bump #72221, keyword x86
 
   12 Oct 2004; Thomas Matthijs <axxo@gentoo.org> blackdown-jdk-1.4.2.ebuild:
   DEPEND on fixed java-config, see bug #66969
