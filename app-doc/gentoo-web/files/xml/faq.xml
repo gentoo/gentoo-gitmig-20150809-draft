@@ -41,7 +41,7 @@ link="/index-download.html">Download/Install page</uri> for updates.</p>
 	</section>
 
 	<section>
-		<title>I have a Sony Super-Slim VAIO laptop, and the Gentoo Linux CD is having problems finding my PCMCIA ATAPI CD-ROM.</tile>
+		<title>I have a Sony Super-Slim VAIO laptop, and the Gentoo Linux CD is having problems finding my PCMCIA ATAPI CD-ROM.</title>
 		<body>
 		<p>Make sure the second IDE port is set to CDROM (it unsets itself if the device isn't attached on boot) then do the following at the isolinux <c>boot:</c> prompt:</p>
 <pre>
