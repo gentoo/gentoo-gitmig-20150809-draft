@@ -1,111 +1,49 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r6.ebuild,v 1.4 2005/01/12 16:25:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.8-r1.ebuild,v 1.1 2005/01/12 16:25:03 agriffis Exp $
 
-inherit flag-o-matic eutils toolchain-funcs
+inherit flag-o-matic eutils toolchain-funcs multilib
 
-SV=1.4.16		# rc-scripts version
+SV=1.6.8		# rc-scripts version
 SVREV=			# rc-scripts rev
-SVIV=2.84		# sysvinit version
 
 S="${WORKDIR}/rc-scripts-${SV}${SVREV}"
-S2="${WORKDIR}/sysvinit-${SVIV}"
-DESCRIPTION="Base layout for Gentoo Linux (incl. initscripts and sysvinit)"
+DESCRIPTION="Filesystem baselayout and init scripts"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.gz
-	ftp://sunsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz
-	mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2"
+SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2
+	http://dev.gentoo.org/~vapier/dist/rc-scripts-${SV}${SVREV}.tar.bz2"
+#	http://dev.gentoo.org/~agriffis/rc-scripts/rc-scripts-${SV}${SVREV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ppc sparc mips alpha arm hppa ia64 ppc64 s390 sh"
-IUSE="bootstrap build livecd static selinux uclibc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="bootstrap build livecd static uclibc"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
-RDEPEND="!sys-apps/sysvinit
+RDEPEND=">=sys-apps/sysvinit-2.84
 	!build? ( !bootstrap? (
-		>=sys-apps/gawk-3.1.1-r2
-		>=sys-apps/util-linux-2.11z-r6
-	) )
-	selinux? ( sys-libs/libselinux )"
-DEPEND="virtual/os-headers
-	selinux? ( sys-libs/libselinux )"
+		>=sys-libs/readline-5.0-r1
+		>=app-shells/bash-3.0-r7
+	) )"
+DEPEND="virtual/os-headers"
 
 src_unpack() {
 	unpack ${A}
-
-	# Let glibc handle nscd #43076
-	rm ${S}/init.d/nscd
-
-	# Patch rc-scripts to bring splash stuff up to snuff until 1.11.x is
-	# available (not soon enough for 2004.3)
 	cd ${S}
-	epatch ${FILESDIR}/rc-scripts-1.4.16-splash.patch
-	epatch ${FILESDIR}/rc-scripts-1.4.16-livecd.patch
-
-	#
-	# Baselayout setup
-	#
-	cd ${S}/etc
 
 	# Fix Sparc specific stuff
-	if [[ ${ARCH} == sparc ]]; then
-		sed -i -e 's:KEYMAP="us":KEYMAP="sunkeymap":' rc.conf || die
-	fi
-
-	# Add serial console for arches that typically have it
-	case ${ARCH} in
-		sparc|mips|hppa|alpha|ia64)
-			sed -i -e \
-				's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100\n\n# TERMINALS"' \
-				inittab || die
-			;;
-	esac
-
-	#
-	# sysvinit setup
-	#
-	if ! use build; then
-		cd ${S2}/src
-
-		# Selinux patch for sysvinit
-		if use selinux; then
-			if has_version '>=sys-libs/libselinux-1.6'; then
-				epatch ${FILESDIR}/sysvinit-${SVIV}-selinux1.patch
-			else
-				epatch ${FILESDIR}/sysvinit-${SVIV}-selinux.patch
-			fi
-		fi
+	if [[ ${ARCH} == sparc ]] ; then
+		sed -i -e 's:KEYMAP="us":KEYMAP="sunkeymap":' ${S}/etc/rc.conf || die
 	fi
 }
 
 src_compile() {
 	use static && append-ldflags -static
 
-	echo "${ROOT}" > ${T}/ROOT
-
-	einfo "Building utilities..."
 	make -C ${S}/src CC="$(tc-getCC)" LD="$(tc-getCC) ${LDFLAGS}" \
-		CFLAGS="${CFLAGS}" || die "problem compiling utilities"
-
-	if ! use build; then
-		einfo "Building sysvinit..."
-		# Note: The LCRYPT define below overrides the test in
-		# sysvinit's Makefile.  This is because sulogin must be linked
-		# to libcrypt in any case, but when building stage2 in
-		# catalyst, /usr/lib/libcrypt.a isn't available.  In truth
-		# this doesn't change how sulogin is built since ld would use
-		# the shared obj by default anyway!  The other option is to
-		# refrain from building sulogin, but that isn't a good option.
-		# (09 Jul 2004 agriffis)
-		emake -C ${S2}/src CC="$(tc-getCC)" LD="$(tc-getCC)" \
-			LDFLAGS="${LDFLAGS}" CFLAGS="${CFLAGS} -D_GNU_SOURCE" \
-			LCRYPT="-lcrypt" || die "problem compiling sysvinit"
-	else
-		einfo "Not building sysvinit because USE=build"
-	fi
+		CFLAGS="${CFLAGS}" || die
 }
 
 # ${PATH} should include where to get MAKEDEV when calling this
@@ -116,15 +54,17 @@ create_dev_nodes() {
 		# a generic option at this time, and the default 'generic' ends
 		# up erroring out, because MAKEDEV internally doesn't know what
 		# to use
-		amd64)	suffix=-i386 ;;
-		x86)	suffix=-i386 ;;
-		ppc*)	suffix=-powerpc ;;
-		alpha)	suffix=-alpha ;;
-		ia64)	suffix=-ia64 ;;
-		sparc*)	suffix=-sparc ;;
-		mips)	suffix=-mips ;;
 		arm)	suffix=-arm ;;
+		alpha)	suffix=-alpha ;;
+		amd64)	suffix=-i386 ;;
 		hppa)	suffix=-hppa ;;
+		ia64)	suffix=-ia64 ;;
+		m68k)	suffix=-m68k ;;
+		mips)	suffix=-mips ;;
+		ppc*)	suffix=-powerpc ;;
+		s390)	suffix=-s390 ;;
+		sparc*)	suffix=-sparc ;;
+		x86)	suffix=-i386 ;;
 	esac
 
 	einfo "Using generic${suffix} to make ${ARCH} device nodes..."
@@ -170,22 +110,16 @@ unkdir() {
 }
 
 src_install() {
-	local foo bar
-
-	# ROOT is purged from the environment prior to calling
-	# src_install.  Good thing we saved it in a temporary file.
-	# Otherwise ROOT will be NULL, which hopefully is correct!
-	# (I don't know why it was in the environment in the first
-	# place... could have just used a shell variable?)
-	if [[ -f ${T}/ROOT ]]; then
-		ROOT=$(cat ${T}/ROOT)
-	fi
+	local dir libdirs libdirs_env
 
 	# This directory is to stash away things that will be used in
-	# pkg_postinst
+	# pkg_postinst; it's needed first for kdir to function
 	dodir /usr/share/baselayout
 
 	einfo "Creating directories..."
+	kdir /usr
+	kdir /usr/local
+	kdir /usr/X11R6/
 	kdir /boot
 	kdir /dev
 	kdir /dev/pts
@@ -196,31 +130,32 @@ src_install() {
 	kdir /etc/cron.monthly
 	kdir /etc/cron.weekly
 	kdir /etc/env.d
+	dodir /etc/init.d			# .keep file might mess up init.d stuff
 	kdir /etc/modules.autoload.d
 	kdir /etc/modules.d
 	kdir /etc/opt
 	kdir /home
-	kdir /lib
 	kdir /lib/dev-state
 	kdir /lib/udev-state
+	kdir /lib/rcscripts/awk
+	kdir /lib/rcscripts/sh
+	dodir /lib/rcscripts/net.modules.d	# .keep file messes up net.lo
+	dodir /lib/rcscripts/net.modules.d/helpers.d
 	kdir /mnt
 	kdir -m 0700 /mnt/cdrom
 	kdir -m 0700 /mnt/floppy
 	kdir /opt
-	kdir -o root -g uucp -m0775 /var/lock
+	kdir -o root -g uucp -m0755 /var/lock
 	kdir /proc
 	kdir -m 0700 /root
 	kdir /sbin
-	kdir /sys			# needed for 2.6 kernels, fixes bug 52703
-	kdir /usr
+	kdir /sys	# for 2.6 kernels
 	kdir /usr/bin
 	kdir /usr/include
 	kdir /usr/include/asm
 	kdir /usr/include/linux
-	kdir /usr/lib
 	kdir /usr/local/bin
 	kdir /usr/local/games
-	kdir /usr/local/lib
 	kdir /usr/local/sbin
 	kdir /usr/local/share
 	kdir /usr/local/share/doc
@@ -235,12 +170,11 @@ src_install() {
 	kdir /usr/src
 	kdir /usr/X11R6/include/GL
 	kdir /usr/X11R6/include/X11
-	kdir /usr/X11R6/lib
-	kdir /usr/X11R6/lib
 	kdir /usr/X11R6/man
 	kdir /usr/X11R6/share
 	kdir -m 1777 /tmp
 	kdir /var
+	dodir /var/db/pkg			# .keep file messes up Portage
 	kdir /var/lib/misc
 	kdir /var/lock/subsys
 	kdir /var/log/news
@@ -249,28 +183,34 @@ src_install() {
 	kdir /var/state
 	kdir -m 1777 /var/tmp
 
-	dodir /etc/init.d		# .keep file might mess up init.d stuff
-	dodir /var/db/pkg		# .keep file messes up Portage when looking in /var/db/pkg
-
-	# Symlinks so that LSB compliant apps work
-	# /lib64 is especially required since its the default place for ld.so
-	if [[ ${ARCH} == amd64 || ${ARCH} == ppc64 ]]; then
-		dosym lib /lib64
-		dosym lib /usr/lib64
-		dosym lib /usr/X11R6/lib64
-	fi
+	# Jeremy Huddleston <eradicator@gentoo.org>
+	# For multilib, we want to make sure that all our multilibdirs exist
+	# and make lib even if it's not listed as one (like on amd64/ppc64
+	# which sometimes has lib32/lib64 instead of lib/lib64).
+	# lib should NOT be a symlink to one of the other libdirs.
+	# Old systems with symlinks won't be affected by this change, as the
+	# symlinks already exist and won't get removed, but new systems will
+	# be setup properly.
+	#
+	# I'll be making a script to convert existing systems from symlink to
+	# nosymlink and putting it in /usr/portage/scripts.
+	libdirs=$(get_all_libdirs)
+	: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
+	for dir in libdirs; do
+		kdir /${dir}
+		kdir /usr/${dir}
+		kdir /usr/local/${dir}
+		kdir /usr/X11R6/${dir}
+		libdirs_env="${libdirs_env:+$libdirs_env:}/${dir}:/usr/${dir}:/usr/local/${dir}"
+	done
 
 	# FHS compatibility symlinks stuff
-	dosym ../var/tmp /usr/tmp
-	dosym share/man /usr/man
-	dosym share/doc /usr/doc
-	dosym share/info /usr/info
+	dosym /var/tmp /usr/tmp
 	dosym ../../share/info	/usr/X11R6/share/info
-	dosym ../X11R6/include/X11 /usr/include/X11
-	dosym ../X11R6/include/GL /usr/include/GL
-	dosym ../X11R6/lib/X11 /usr/lib/X11
+	dosym /usr/X11R6/include/X11 /usr/include/X11
+	dosym /usr/X11R6/include/GL /usr/include/GL
+	dosym /usr/X11R6/lib/X11 /usr/lib/X11
 	dosym share/man /usr/local/man
-	dosym share/doc	/usr/local/doc
 
 	#
 	# Setup files in /etc
@@ -281,10 +221,15 @@ src_install() {
 	insinto /etc
 	find ${S}/etc -type f -maxdepth 1 -print0 | xargs --null doins
 
+	# Install some files to /usr/share/baselayout instead of /etc to keep from
+	# (1) overwriting the user's settings, (2) screwing things up when
+	# attempting to merge files, (3) accidentally packaging up personal files
+	# with quickpkg
 	fperms 0600 /etc/shadow
+	mv ${D}/etc/{passwd,shadow,group,fstab,hosts,issue.devfix} ${D}/usr/share/baselayout
 
-	exeinto /etc/init.d
-	doexe ${S}/init.d/*
+	cp -P ${S}/init.d/* ${D}/etc/init.d
+	chmod a+x ${D}/etc/init.d/*
 	insinto /etc/conf.d
 	doins ${S}/etc/conf.d/*
 	insinto /etc/env.d
@@ -296,22 +241,18 @@ src_install() {
 	insinto /etc/skel
 	find ${S}/etc/skel -type f -maxdepth 1 -print0 | xargs --null doins
 
-	rm -f ${D}/etc/{conf,init}.d/net.ppp*	# now ships with net-dialup/ppp
+	# List all the multilib libdirs in /etc/env/04multilib
+	echo "LDPATH=\"${libdirs_env}\"" > ${D}/etc/env.d/04multilib
 
-	# Set up default runlevel symlinks
-	if [[ ${ROOT} != / ]]; then
-		for foo in default boot nonetwork single; do
-			kdir /etc/runlevels/${foo}
-			for bar in $(cat ${S}/rc-lists/${foo}); do
-				[[ -e ${S}/init.d/${bar} ]] && \
-					dosym /etc/init.d/${bar} /etc/runlevels/${foo}/${bar}
-			done
-		done
-	fi
+	# As of baselayout-1.10-1-r1, sysvinit is its own package again, and
+	# provides the inittab itself
+	rm -f ${D}/etc/inittab
 
-	# We do not want to overwrite the user's settings during
-	# bootstrap;  put this somewhere for safekeeping until pkg_postinst
-	mv ${D}/etc/hosts ${D}/usr/share/baselayout
+	# Stash the rc-lists for use during pkg_postinst
+	cp -r ${S}/rc-lists ${D}/usr/share/baselayout
+
+	# uclibc doesn't need nsswitch.conf... added by solar
+	use uclibc && rm -f ${D}/etc/nsswitch.conf
 
 	# rc-scripts version for testing of features that *should* be present
 	echo "Gentoo Base System version ${SV}" > ${D}/etc/gentoo-release
@@ -323,22 +264,6 @@ src_install() {
 	dosbin ${S}/sbin/MAKEDEV
 	dosym ../../sbin/MAKEDEV /usr/sbin/MAKEDEV
 	dosym ../sbin/MAKEDEV /dev/MAKEDEV
-
-	if use build || use bootstrap || \
-			[[ ! -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]]; then
-		# Ok, create temp device nodes
-		mkdir -p "${T}/udev-$$"
-		cd "${T}/udev-$$"
-		echo
-		einfo "Making device nodes (this could take a minute or so...)"
-		PATH="${D}/sbin:${PATH}" create_dev_nodes
-
-		# Now create tarball that can also be used for udev.
-		# Need GNU tar for -j so call it by absolute path.
-		/bin/tar -cjlpf "${T}/devices-$$.tar.bz2" *
-		insinto /lib/udev-state
-		newins "${T}/devices-$$.tar.bz2" devices.tar.bz2
-	fi
 
 	#
 	# Setup files in /bin
@@ -373,7 +298,9 @@ src_install() {
 	dosym ../../sbin/functions.sh /etc/init.d/functions.sh
 
 	#
-	# Setup files in /lib/rcsripts/sh
+	# Setup files in /lib/rcscripts
+	# These are support files for other things in baselayout that needn't be
+	# under CONFIG_PROTECTed /etc
 	#
 	cd ${S}/sbin
 	exeinto /lib/rcscripts/sh
@@ -394,6 +321,11 @@ src_install() {
 		doins ${S}/src/awk/*.awk
 	fi
 
+	# Original design had these in /etc/net.modules.d but that is too
+	# problematic with CONFIG_PROTECT
+	dodir /lib/rcscripts
+	cp -a ${S}/lib/rcscripts/net.modules.d ${D}/lib/rcscripts
+
 	#
 	# Install baselayout documentation
 	#
@@ -408,33 +340,7 @@ src_install() {
 	# Install baselayout utilities
 	#
 	cd ${S}/src
-	einfo "Installing utilities..."
-	make DESTDIR="${D}" install || die "problem installing utilities"
-
-	#
-	# Install sysvinit
-	#
-	if ! use build; then
-		cd ${S2}/src
-		einfo "Installing sysvinit..."
-		into /
-		dosbin init halt killall5 runlevel shutdown sulogin
-		dosym init /sbin/telinit
-		dobin last mesg utmpdump wall
-		dosym killall5 /sbin/pidof
-		dosym halt /sbin/reboot
-		dosym halt /sbin/poweroff
-		dosym last /bin/lastb
-		insinto /usr/include
-		doins initreq.h
-		# sysvinit docs
-		cd ${S2}
-		doman man/*.[1-9]
-		docinto sysvinit-${SVIV}
-		dodoc COPYRIGHT README doc/*
-	fi
-
-	use uclibc && rm -f ${D}/etc/nsswitch.conf
+	make DESTDIR="${D}" install || die
 
 	# Hack to fix bug 9849, continued in pkg_postinst
 	unkdir
@@ -448,16 +354,10 @@ pkg_preinst() {
 			${ROOT}/etc/modules.autoload.d/kernel-2.4
 		ln -snf modules.autoload.d/kernel-2.4 ${ROOT}/etc/modules.autoload
 	fi
-
-	if [[ -f "${ROOT}/lib/udev-state/devices.tar.bz2" &&
-			-e "${ROOT}/dev/.udev" ]]; then
-		mv -f "${ROOT}/lib/udev-state/devices.tar.bz2" \
-			"${ROOT}/lib/udev-state/devices.tar.bz2.current"
-	fi
 }
 
 pkg_postinst() {
-	local x
+	local x y
 
 	# Reincarnate dirs from kdir/unkdir (hack for bug 9849)
 	einfo "Creating directories and .keep files."
@@ -465,15 +365,31 @@ pkg_postinst() {
 	einfo "filesystems, for example /dev or /proc.  That's okay!"
 	source ${ROOT}/usr/share/baselayout/mkdirs.sh
 
-	if [[ -f "${ROOT}/lib/udev-state/devices.tar.bz2.current" ]]; then
-		# Rather use our current device tarball ... this was saved off
-		# in pkg_preinst
-		mv -f "${ROOT}/lib/udev-state/devices.tar.bz2.current" \
-			"${ROOT}/lib/udev-state/devices.tar.bz2"
-	else
-		# Make sure our tarball does not get removed; update the
-		# timestamp so that it doesn't match CONTENTS
-		touch "${ROOT}/lib/udev-state/devices.tar.bz2"
+	# This could be done in src_install, which would have the benefit of
+	# (1) devices.tar.bz2 would show up in CONTENTS
+	# (2) binary installations would be faster... just untar the devices tarball
+	#     instead of needing to run MAKEDEV
+	# However the most common cases are that people are either updating
+	# baselayout or installing from scratch.  In the installation case, it's no
+	# different to have here instead of src_install.  In the update case, we
+	# save a couple minutes time by refraining from building the unnecessary
+	# tarball.
+	if [[ ! -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]]; then
+		# Create a directory in which to work
+		x=$(emktemp -d ${ROOT}/tmp/devnodes.XXXXXXXXX) \
+			&& cd "${x}" || die 'mktemp failed'
+
+		# Create temp device nodes
+		echo
+		einfo "Making device node tarball (this could take a couple minutes)"
+		PATH="${ROOT}/sbin:${PATH}" create_dev_nodes
+
+		# Now create tarball that can also be used for udev.
+		# Need GNU tar for -j so call it by absolute path.
+		/bin/tar cjlpf "${ROOT}/lib/udev-state/devices.tar.bz2" *
+		rm -r *
+		cd ..
+		rmdir "${x}"
 	fi
 
 	# We don't want to create devices if this is not a bootstrap and devfs
@@ -481,13 +397,8 @@ pkg_postinst() {
 	if use build || use bootstrap; then
 		if [[ ! -e "${ROOT}/dev/.devfsd" && ! -e "${ROOT}/dev/.udev" ]]; then
 			einfo "Populating /dev with device nodes..."
-			cd ${ROOT}/dev
-			if [ -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]; then
-				tar -jxpf "${ROOT}/lib/udev-state/devices.tar.bz2" || die
-			else
-				# devices.tar.bz2 will not exist with binary packages ...
-				PATH="${ROOT}/sbin:${PATH}" create_dev_nodes
-			fi
+			cd ${ROOT}/dev || die
+			/bin/tar xjpf "${ROOT}/lib/udev-state/devices.tar.bz2" || die
 		fi
 	fi
 
@@ -499,11 +410,40 @@ pkg_postinst() {
 	# (05 May 2004 agriffis)
 	ln -sn . ${ROOT}/boot/boot 2>/dev/null
 
+	# Set up default runlevel symlinks
+	# This used to be done in src_install but required knowledge of ${ROOT},
+	# which meant that it was effectively broken for binary installs.
+	if [[ -z $(/bin/ls ${ROOT}/etc/runlevels 2>/dev/null) ]]; then
+		for x in boot default nonetwork single; do
+			einfo "Creating default runlevel symlinks for ${x}"
+			mkdir -p ${ROOT}/etc/runlevels/${x}
+			for y in $(<${ROOT}/usr/share/baselayout/rc-lists/${x}); do
+				if [[ ! -e ${ROOT}/etc/init.d/${y} ]]; then
+					ewarn "init.d/${y} not found -- ignoring"
+				else
+					ln -sfn ${ROOT}/etc/init.d/${y} \
+						${ROOT}/etc/runlevels/${x}/${y}
+				fi
+			done
+		done
+	fi
+
 	# Create /etc/hosts in pkg_postinst so we don't overwrite an
 	# existing file during bootstrap
 	if [[ ! -e ${ROOT}/etc/hosts ]]; then
 		cp ${ROOT}/usr/share/baselayout/hosts ${ROOT}/etc
 	fi
+
+	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
+	# new users do not update them properly...  see src_install() for why they
+	# are in /usr/share/baselayout/
+	for x in passwd shadow group fstab ; do
+		if [[ -e ${ROOT}/etc/${x} ]] ; then
+			touch "${ROOT}/etc/${x}"
+		else
+			cp "${ROOT}/usr/share/baselayout/${x}" "${ROOT}/etc/${x}"
+		fi
+	done
 
 	# Under what circumstances would mtab be a symlink?  It would be
 	# nice if there were an explanatory comment here
@@ -524,21 +464,10 @@ pkg_postinst() {
 	[[ -e ${ROOT}/var/log/wtmp ]] || \
 		install -m 0664 -g utmp /dev/null "${ROOT}/var/log/wtmp"
 
-	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
-	# new users do not update them properly.  thus remove all ._cfg files if
-	# we are not busy with a bootstrap.
-	if ! use build && ! use bootstrap; then
-		einfo "Removing invalid backup copies of critical config files..."
-		rm -f "${ROOT}"/etc/._cfg????_{passwd,shadow}
-	fi
-
 	# Reload init to fix unmounting problems of / on next reboot.
 	# This is really needed, as without the new version of init cause init
 	# not to quit properly on reboot, and causes a fsck of / on next reboot.
 	if [[ ${ROOT} == / ]] && ! use build && ! use bootstrap; then
-		# Do not return an error if this fails
-		/sbin/init U &>/dev/null
-
 		# Regenerate init.d dependency tree
 		/sbin/depscan.sh &>/dev/null
 
@@ -577,4 +506,17 @@ pkg_postinst() {
 	einfo
 	einfo "  # etc-update"
 	echo
+
+	for f in /etc/init.d/net.eth*; do
+		[[ -L ${f} ]] && continue
+		echo
+		einfo "WARNING: You have older net.eth* files in ${ROOT}/etc/init.d/"
+		einfo "They need to be converted to symlinks to net.lo.  If you haven't"
+		einfo "made personal changes to those files, you can update with the"
+		einfo "following command:"
+		einfo
+		einfo "  # /bin/ls /etc/init.d/net.eth* | xargs -n1 ln -sfvn net.lo"
+		echo
+		break
+	done
 }
