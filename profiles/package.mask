@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+
+# <tantive@gentoo.org> (10 Sep 2002)
+# Version bumped, masked due to freeze
+=sys-kernel/usermode-sources-2.4.19-r2
+=sys-kernel/usermode-sources-2.4.19-r1
+
 # <seemant@gentoo.org> (10 Sep 2002)
 # masked coz all our packages only use the old version
 >=net-libs/libnet-1.1.0
