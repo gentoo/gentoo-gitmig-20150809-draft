@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6208c71296e871f63093462eeb65a490 cscope-15.4-r1.ebuild 1256
-MD5 95b5480f9bc3d9c7c3c88cdcc14c78c8 ChangeLog 3516
-MD5 79094d1585cb050b3855fbfe440f22b9 metadata.xml 790
-MD5 865735af0d1ac091410044a723655e9a cscope-15.5.ebuild 1417
+MD5 c904f160cc524819ecb753b8b4ad82a3 ChangeLog 3593
 MD5 ead17de1adabd6d6f1a2857cdde5751d cscope-15.3.ebuild 793
+MD5 6208c71296e871f63093462eeb65a490 cscope-15.4-r1.ebuild 1256
 MD5 0e1fb615b73acdaf069936e3779ec01f cscope-15.4.ebuild 1355
+MD5 62031f9defc34174ed22eedb4831a804 cscope-15.5.ebuild 1422
+MD5 79094d1585cb050b3855fbfe440f22b9 metadata.xml 790
+MD5 28ddc553966bf7045758be324600f5c8 files/50xcscope-gentoo.el 95
 MD5 326b4f2785a741e10f370a6accfd1c28 files/digest-cscope-15.3 63
+MD5 ae33cee910261c162094e95a82523f6c files/digest-cscope-15.4 63
 MD5 ae33cee910261c162094e95a82523f6c files/digest-cscope-15.4-r1 63
 MD5 25ad9fe446a7cabf4c482bbe150c7eaa files/digest-cscope-15.5 63
-MD5 ae33cee910261c162094e95a82523f6c files/digest-cscope-15.4 63
-MD5 28ddc553966bf7045758be324600f5c8 files/50xcscope-gentoo.el 95
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBNUEPLLFUmVNQ7rkRAp7tAKCmzXtiHYSOkBPZIE93C7w7T2JOvACfTByp
-WVtRElJwMvDrmDF2q+DPDA4=
-=pwpT
------END PGP SIGNATURE-----
