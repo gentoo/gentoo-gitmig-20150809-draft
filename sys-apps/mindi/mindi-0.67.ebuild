@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.67.ebuild,v 1.1 2002/10/22 18:59:44 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.67.ebuild,v 1.2 2002/11/03 18:34:55 lostlogic Exp $
 
 S=${WORKDIR}/${P}_20021020
 DESCRIPTION="Mindi builds boot/root disk images using your existing kernel, modules, tools and libraries"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.microwerks.net/~hugo/mindi/"
 SRC_URI="http://www.microwerks.net/~hugo/download/daily/${P}_20021020.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=sys-apps/bzip2-1.0.1
 	>=app-cdr/cdrtools-1.11
