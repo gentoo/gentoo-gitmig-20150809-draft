@@ -1,12 +1,15 @@
 # ChangeLog for x11-misc/ttmkfdir
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.18 2003/07/21 21:46:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.19 2003/08/04 22:43:35 gmsoft Exp $
 
   21 Jul 2003; Martin Schlemmer <azarah@gentoo.org> ttmkfdir-3.0.4.ebuild,
   ttmkfdir-3.0.9.ebuild, files/ttmkfdir-3.0.9-gcc33.patch:
   Fix issues with gcc-3.3.
 
 *ttmkfdir-3.0.9 (16 Mar 2003)
+
+  05 Aug 2003; Guy Martin <gmsoft@gentoo.org> ttmkfdir-3.0.9.ebuild :
+  Added hppa to KEYWORDS.
 
   08 Apr 2003; Todd Sunderlin <todd@gentoo.org> ttmkfdir-3.0.9.ebuild:
   Marked stable for sparc
