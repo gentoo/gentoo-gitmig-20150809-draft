@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Simple
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.11 2003/07/19 08:05:33 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.12 2003/07/25 18:10:36 rac Exp $
+
+  25 Jul 2003; <rac@gentoo.org> Test-Simple-0.47-r1.ebuild:
+  Remove ~arch protection on all but hppa and arm
 
 *Test-Simple-0.47-r1 (19 Jul 2003)
 
