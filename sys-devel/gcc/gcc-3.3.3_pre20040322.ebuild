@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3_pre20040322.ebuild,v 1.2 2004/03/24 00:04:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3_pre20040322.ebuild,v 1.3 2004/03/25 15:16:15 lu_zero Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -108,7 +108,7 @@ LICENSE="GPL-2 LGPL-2.1"
 # It is working fine on ppc too
 #
 
-KEYWORDS="-* ppc64"
+KEYWORDS="-* ppc64 ~ppc"
 #KEYWORDS="-*  ~x86 ~mips ~sparc ~amd64 -hppa ~alpha ~ia64"
 
 # Ok, this is a hairy one again, but lets assume that we
@@ -376,9 +376,12 @@ src_compile() {
 
 	# In general gcc does not like optimization, and add -O2 where
 	# it is safe.  This is especially true for gcc-3.3 ...
-	export CFLAGS="${CFLAGS/-O?/-O2}"
-	export CXXFLAGS="${CXXFLAGS/-O?/-O2}"
-	export GCJFLAGS="${CFLAGS/-O?/-O2}"
+	# gcc-3.3.3-hammer sports a _nice_ scheduler that gives you 100% 
+	# certain of miscompiling type punned expressions.
+	# just to play the safe side.
+	export CFLAGS="${CFLAGS/-O?/-O2 -fno-strict-aliasing}"
+	export CXXFLAGS="${CXXFLAGS/-O?/-O2 -fno-strict-aliasing}"
+	export GCJFLAGS="${CFLAGS/-O?/-O2 -fno-strict-aliasing}"
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
@@ -733,5 +736,15 @@ pkg_postinst() {
 	then
 		[ "${ROOT}" = "/" ] && hardened-gcc -A
 	fi
+
+	ewarn
+	ewarn
+	ewarn
+	ewarn "Make SURE you have -fno-strict-aliasing in your CFLAGS "
+	ewarn "This version of gcc doesn't optimize ill type-punned   "
+	ewarn "expressions. Expect problems if you ignore that warning"
+	ewarn
+	ewarn
+	ewarn
 }
 
