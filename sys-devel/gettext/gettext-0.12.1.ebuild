@@ -1,23 +1,33 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.4 2003/09/19 04:22:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.5 2003/11/10 23:12:46 seemant Exp $
+
+inherit eutils
+
+IUSE="nls"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
-IUSE="nls"
-DEPEND="virtual/glibc"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
+
 SLOT="0"
 LICENSE="GPL-2"
-#testing this on ia64 (drobbins, 18 Sep 2003)
-KEYWORDS="-* ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ia64"
+
+DEPEND="virtual/glibc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use bootstrap && epatch ${FILESDIR}/${P}-bootstrap.patch
+}
 
 src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
 
-	econf \
+	CXX=${CC} econf \
 		--disable-shared \
 		--with-included-gettext \
 		${myconf} || die
