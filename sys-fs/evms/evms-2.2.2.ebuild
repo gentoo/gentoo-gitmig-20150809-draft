@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.2.2.ebuild,v 1.3 2004/02/23 00:12:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.2.2.ebuild,v 1.4 2004/02/25 20:12:42 iggy Exp $
 
 IUSE="ncurses gtk"
 
@@ -52,14 +52,6 @@ src_install() {
 			gen_usr_ldscript ${lib/\.a/\.so}
 		fi
 	done
-
-	# realize these symlinks now so they get included
-	cd ${D}/lib
-	rm -f libdlist.so libevms.so
-	ln -sf libevms-${PV}.so libevms.so.1
-	ln -sf libevms.so.1 libevms.so
-	ln -sf libdlist-1.0.so libdlist.so.1
-	ln -sf libdlist.so.1 libdlist.so
 
 	# the gtk+ frontend should live in /usr/sbin
 	if [ -n "`use gtk`" ]
