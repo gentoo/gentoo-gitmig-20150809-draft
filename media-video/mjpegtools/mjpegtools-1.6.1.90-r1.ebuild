@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r1.ebuild,v 1.10 2004/04/27 20:58:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r1.ebuild,v 1.11 2004/05/12 12:40:14 pappy Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -35,6 +35,8 @@ src_unpack() {
 src_compile() {
 	local myconf
 
+	filter-flags -fPIC
+
 	[ `use x86` ] && [ `gcc-major-version` -eq 3 ] && append-flags -mno-sse2
 
 	myconf="${myconf} `use_with X x`"
@@ -52,15 +54,6 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die "econf failed"
-
-	if has_version 'sys-devel/hardened-gcc' ; then
-		for i in `find "${S}" -name "Makefile"` ; do
-			sed -e "s:CC = gcc:CC = gcc -yet_exec:g" \
-				-e "s:CXX = gcc:CXX = g++ -yet_exec:g" \
-				-e "s:CXXCPP = gcc -E:CXX = g++ -E -yet_exec:g" \
-				-i "${i}" || die "sed failed"
-		done
-	fi
 
 	emake || die "compile problem"
 }
