@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 c2f4d54b5e00765874ba216692db12c6 ChangeLog 4772
 MD5 d24403622d172658c4e564baec674de9 metadata.xml 281
-MD5 669cc071226583ff25e3c2f24f78bc4c slang-1.4.9-r1.ebuild 1856
+MD5 e20aa44d520325e2e208a5c6483ca5ea slang-1.4.9-r1.ebuild 1641
 MD5 074ddbf39cb8b9708ca9de2b1fb24366 files/digest-slang-1.4.9-r1 64
 MD5 5617c722a455c1aa405c699ff361bd58 files/slang-1.4.9.dif 1808
 MD5 11daf6d137e1d6ec0e3475e55522cd06 files/slang-1.4.9-autoconf.dif 4143
@@ -14,7 +14,7 @@ MD5 4be647282e8c01060db9d1707098bd1d files/slang-utf8-fix.patch 855
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBitqMHTu7gpaalycRAn0BAKCbagzurPA2PXfX9v6Y1gFYZqsLTQCeM8A3
-zDFBB7gNDqOej/sdzdC8LUY=
-=csuF
+iD8DBQFBits/HTu7gpaalycRAoZCAJ4jUPaMpUc6Mg5V5oAHpXiHol/DVgCeJaFs
+xcIT+PSP9+oq1gmJg4sNtx4=
+=zRXn
 -----END PGP SIGNATURE-----
