@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0_alpha22.ebuild,v 1.1 2003/03/11 05:12:59 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0_alpha22.ebuild,v 1.2 2003/03/29 05:12:08 woodchip Exp $
 
 inherit eutils
 
@@ -23,12 +23,12 @@ SRC_URI="oav? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz
 DEPEND="sys-devel/autoconf dev-libs/popt
 	readline? sys-libs/readline
 	kerberos? app-crypt/mit-krb5
-	mysql? ( =dev-db/mysql-3* sys-libs/zlib )
+	mysql? ( dev-db/mysql sys-libs/zlib )
 	xml? ( dev-libs/libxml2 sys-libs/zlib )
 	acl? sys-apps/acl
 	cups? net-print/cups
-	ldap? =net-nds/openldap-2*
-	pam? >=sys-libs/pam-0.72
+	ldap? net-nds/openldap
+	pam? sys-libs/pam
 	python? dev-lang/python"
 
 KEYWORDS="~x86"
