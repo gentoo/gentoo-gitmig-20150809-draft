@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r1.ebuild,v 1.1 2000/11/22 21:25:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r1.ebuild,v 1.2 2000/11/23 03:40:12 drobbins Exp $
 
-A="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
+BA="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
 	patch-2.4.0-test9.bz2 patch-2.4.0-test10.bz2
 	i2c-2.5.4.tar.gz lm_sensors-2.5.4.tar.gz jfs-0.0.18-patch.tar.gz
-	alsa-driver-0.5.9d.tar.bz2 NVIDIA_kernel-0.9-5.tar.gz"
+	alsa-driver-0.5.9d.tar.bz2 NVIDIA_kernel-0.9-5.tar.gz lvm_0.9.tar.gz"
 
 S=${WORKDIR}/linux
 DESCRIPTION="Linux kernel sources package.  Everything you need to build a kernel (no kernel included, just sources)"
@@ -18,7 +18,8 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2
 	 	http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz
 	 	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.0.18-patch.tar.gz
 		ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.9d.tar.bz2
-		ftp://ftp1.detonator.nvidia.com/pub/drivers/english/XFree86_40/0.9-5/NVIDIA_kernel-0.9-5.tar.gz"
+		ftp://ftp1.detonator.nvidia.com/pub/drivers/english/XFree86_40/0.9-5/NVIDIA_kernel-0.9-5.tar.gz
+		ftp://ftp.sistina.com/pub/LVM/0.9/lvm_0.9.tar.gz"
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
@@ -36,7 +37,12 @@ src_compile() {
 		cd ${S}
 		try make bzImage
 		try make modules
+		cd ${S}/extras/NVIDIA_kernel-0.9-5
+		make NVdriver
 	fi
+	cd ${S}/extras/LVM/0.9
+	try ./configure --prefix=/
+	try make
 }
 
 src_unpack() {
@@ -82,6 +88,12 @@ src_unpack() {
 #		cd ${S}
 #		patch -p1 < ${x}-patch
 	done
+	cd ${S}/extras
+	echo "Applying LVM 0.9 patch..."
+	unpack lvm_0.9.tar.gz
+	cd LVM/0.9/PATCHES
+	cat linux-2.4.0-test10-VFS-lock.patch | ( cd ${S}; patch -p1 -f)
+	cat lvm-0.9-2.4.0-test10.patch | ( cd ${S}; patch -p1 -f)
 	echo "Preparing for compilation..."
 	cd ${S}
 	#this is the configuration for the bootdisk/cd
@@ -111,6 +123,8 @@ src_install() {
 	do
 		doman $x
 	done
+	cd ${S}/extras/JFS/0.9
+	make install prefix=${D}
 	dodir /usr/src
 	if [ "$PN" = "linux" ]
 	then
@@ -132,6 +146,11 @@ src_install() {
 		doins arch/i386/boot/bzImage
 		#grab modules
 		try make INSTALL_MOD_PATH=${D} modules_install
+		#install nvidia driver
+		cd ${S}/extras/NVIDIA_kernel-0.9-5
+		insinto ${D}/lib/modules/2.4.0-test10/video
+		doins NVdriver
+		#fix symlink
 		cd ${D}/lib/modules/2.4.0-test10
 		rm build
 		ln -sf /usr/src/linux-2.4.0-test10 build

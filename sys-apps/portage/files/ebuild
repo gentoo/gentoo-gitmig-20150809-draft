@@ -870,6 +870,17 @@ then
 	source ${PEBUILD}
 fi
 
+#auto-generate ${A} based on ${SRC_URI} if ${A} isn't defined...
+if [ "${A}" = "" ]
+then
+	A=""
+	for x in $SRC_URI
+	do
+		A="${A} "`basename $x`
+	done
+fi
+
+
 if [ ! -z ${BUILD_PREFIX} ]
 then
     export BUILDDIR=${BUILD_PREFIX}/${PF}
