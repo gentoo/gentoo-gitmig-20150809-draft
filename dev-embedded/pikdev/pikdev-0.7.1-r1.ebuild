@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r1.ebuild,v 1.4 2005/01/25 15:35:44 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r1.ebuild,v 1.5 2005/01/25 15:48:51 greg_g Exp $
 
 inherit kde
 
@@ -17,6 +17,7 @@ RESTRICT="nomirror"
 
 DEPEND="dev-embedded/gputils
 	kde-base/arts"
+RDEPEND="${DEPEND}"
 
 need-kde 3
 
