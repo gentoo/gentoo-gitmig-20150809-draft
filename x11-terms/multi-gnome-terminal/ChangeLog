@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/multi-gnome-terminal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.10 2002/07/12 17:52:32 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.11 2002/07/29 16:11:33 stroke Exp $
+
+*multi-gnome-terminal-1.5.2 (29 Jul 2002)
+
+  29 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> multi-gnome-terminal-1.5.2.ebuild :
+
+  New version. (Closes bug #5627). Thanks to Leonardo Boshell <gentoo@kapcoweb.com>
+  for this new ebuild.
 
 *multi-gnome-terminal-1.5.1 (12 Jul 2002)
 
