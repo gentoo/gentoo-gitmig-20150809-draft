@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.164 2005/02/28 10:55:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.165 2005/03/14 00:36:09 eradicator Exp $
+
+  13 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r13.ebuild:
+  Stable sparc, x86. Included more .m4s so it can work with older gettext
+  versions properly.
 
   28 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-1.2.10-r13.ebuild, -xmms-1.2.10-r12.ebuild:
