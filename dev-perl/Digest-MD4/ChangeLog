@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-MD4
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.3 2004/02/27 13:31:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.4 2004/03/23 09:45:55 kumba Exp $
+
+  23 Mar 2004; Joshua Kinard <kumba@gentoo.org> Digest-MD4-1.1.ebuild:
+  Added ~mips to KEYWORDS
 
   27 Feb 2004; Michael Cummings <mcummings@gentoo.org> Digest-MD4-1.1.ebuild:
   Masked for 198 days. Unorphaning.

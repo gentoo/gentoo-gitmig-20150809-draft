@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/Digest-MD4-1.1.ebuild,v 1.3 2004/02/27 13:31:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/Digest-MD4-1.1.ebuild,v 1.4 2004/03/23 09:45:55 kumba Exp $
 
 inherit perl-module
 
@@ -12,5 +12,5 @@ HOMEPAGE="${BASE_URI}/${P}.readme"
 SRC_URI="${BASE_URI}/${P}.tar.gz"
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~sparc ~hppa"
+KEYWORDS="x86 ~sparc ~hppa ~mips"
 mydoc="README Changes"
