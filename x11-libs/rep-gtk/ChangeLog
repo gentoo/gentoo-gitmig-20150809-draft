@@ -1,7 +1,13 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.5 2002/06/24 01:50:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.6 2002/09/03 23:13:46 spider Exp $
 
+rep-gtk-0.15-r3 (3 Sep 2002)
+  3 Sep 2002; Spider <spider@gentoo.org> rep-gtk-0.15-r3.ebuild :
+  I did not add this ebuild, but I can't find a changelog for it either.
+  modified the libglade dep some to use the old version (correct version)
+  
+  
 *rep-gtk-0.16 (24 Jun 2002)
   24 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
   Latest gtk-2.0 version.  Slotified all the ebuilds, as 0.15 is gtk-1.2, where
