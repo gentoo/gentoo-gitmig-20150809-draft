@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-clx-sbcl
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx-sbcl/ChangeLog,v 1.1 2004/02/01 17:53:47 mkennedy Exp $
+
+*cl-clx-sbcl-0.5.4 (01 Feb 2004)
+
+  01 Feb 2004; <mkennedy@gentoo.org> cl-clx-sbcl-0.5.4.ebuild, metadata.xml,
+  files/0.5.4-gentoo.patch:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
