@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.1 2003/09/25 18:27:46 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.2 2003/11/04 00:08:13 max Exp $
 
-inherit eutils
+inherit eutils ssl-cert
 
 TLS_P="pfixtls-0.8.16-2.0.16-0.9.7b"
 IPV6="1.18a"
@@ -180,13 +180,10 @@ src_install () {
 		newins "${FILESDIR}/smtp.pam" smtp
 	fi
 	if [ "`use ssl`" ] ; then
-		einfo "Generating self-signed test certificate."
-		(yes "" | "${FILESDIR}/gentestcrt.sh") &>/dev/null
-		(cat server.key && echo && cat server.crt) > server.pem
-		insinto /etc/ssl/postfix
-		doins server.{key,crt,pem}
-		fowners mail:root /etc/ssl/postfix/server.{key,crt,pem}
-		fperms 0400 /etc/ssl/postfix/server.{key,crt,pem}
+		SSL_ORGANIZATION="Postfix SMTP Server"
+		insinto /etc/ssl/cyrus
+		docert server
+		fowners postfix:mail /etc/ssl/cyrus/server.{key,pem}
 	fi
 	if [ "`use sasl`" ] ; then
 		insinto /etc/sasl2
