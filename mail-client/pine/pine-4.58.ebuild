@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.58.ebuild,v 1.1 2004/05/30 02:56:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.58.ebuild,v 1.2 2004/05/30 11:17:58 robbat2 Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="virtual/glibc
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
-	!net-mail/pine-maildir"
+	!mail-client/pine-maildir"
 
 S=${WORKDIR}/${PN}${PV}
 
