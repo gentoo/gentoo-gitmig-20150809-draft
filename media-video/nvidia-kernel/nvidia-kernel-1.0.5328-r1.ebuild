@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5328-r1.ebuild,v 1.1 2004/01/05 20:42:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5328-r1.ebuild,v 1.2 2004/01/10 01:29:54 mholzer Exp $
 
 PKG_V="pkg1"
 NV_V="${PV/1.0./1.0-}"
@@ -10,7 +10,7 @@ DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
 HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}-${PKG_V}.run"
 
-# The slow needs to be set to $KV to prevent unmerges of modules for other kernels.
+# The slot needs to be set to $KV to prevent unmerges of modules for other kernels.
 LICENSE="NVIDIA"
 SLOT="${KV}"
 KEYWORDS="-* ~x86"
