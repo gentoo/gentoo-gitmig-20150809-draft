@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.3.4_rc1.ebuild,v 1.1 2004/05/14 14:56:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.3.4_rc1.ebuild,v 1.2 2004/05/15 14:04:51 weeve Exp $
 
 MY_PV=${PV/_rc/c}
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.python.org/ftp/python/doc/${MY_PV}/html-${MY_PV}.tar.bz2"
 
 LICENSE="PSF-2.2"
 SLOT="2.3"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~x86 ~alpha ~sparc"
 IUSE=""
 
 DEPEND=""
