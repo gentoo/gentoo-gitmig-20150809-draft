@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.11 2004/07/01 07:59:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.12 2004/07/09 22:32:52 hansmi Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -30,6 +30,9 @@ src_unpack() {
 	sed -i \
 		-e 's:OPT_CFLAGS=\"$CFLAGS -mcpu=.*\":OPT_CFLAGS=\"$CFLAGS\":g' \
 			configure || die "sed configure failed"
+
+	# Fix a compilation-error with gcc 3.4. Bug #51964.
+	( cd "${S}" && epatch "${FILESDIR}/gcc34-inline-fix-${PV}.diff" )
 
 	epatch "${FILESDIR}/altivec-fix-${PV}.diff"
 	autoreconf

@@ -1,0 +1,11 @@
+--- libmpeg2/cpu_accel.c.orig	2004-07-10 00:25:35.477608630 +0200
++++ libmpeg2/cpu_accel.c	2004-07-10 00:25:56.794588961 +0200
+@@ -127,7 +127,7 @@
+ }
+ 
+ #ifdef ARCH_PPC
+-static inline uint32_t arch_accel (void)
++static uint32_t arch_accel (void)
+ {
+     static RETSIGTYPE (* oldsig) (int);
+ 
