@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBIx-ContextualFetch
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-ContextualFetch/ChangeLog,v 1.1 2004/03/31 12:00:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-ContextualFetch/ChangeLog,v 1.2 2004/05/06 17:49:56 ciaranm Exp $
+
+  06 May 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  DBIx-ContextualFetch-1.01.ebuild:
+  Added ~sparc, #50268
 
 *DBIx-ContextualFetch-1.01 (31 Mar 2004)
 
