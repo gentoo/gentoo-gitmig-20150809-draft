@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.28 2004/05/28 21:34:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.29 2004/05/29 23:57:31 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -305,8 +305,8 @@ php-sapi_src_compile() {
 	myconf="${myconf} `use_with snmp snmp /usr`"
 	use snmp && myconf="${myconf} --enable-ucd-snmp-hack"
 	use X && myconf="${myconf} --with-xpm-dir=/usr/X11R6" LDFLAGS="${LDFLAGS} -L/usr/X11R6/lib"
-	use gmp && myconf="${myconf} --with-gmp"
-	use mssql && myconf="${myconf} --with-mssql"
+	myconf="${myconf} `use_with gmp`"
+	myconf="${myconf} `use_with mssql mssql /usr`"
 	
 	# This chunk is intended for png/tiff/jpg, as there are several things that need them, indepentandly!
 	REQUIREPNG=
@@ -392,8 +392,8 @@ php-sapi_src_compile() {
 	#Waiting for somebody to want Cyrus support :-)
 	#myconf="${myconf} `use_with cyrus`"
 
-	# dbx AT LEAST one of mysql/odbc/postgres/oci8
-	use mysql || use odbc || use postgres || use oci8 \
+	# dbx AT LEAST one of mysql/odbc/postgres/oci8/mssql
+	use mysql || use odbc || use postgres || use oci8 || use mssql \
 		&& myconf="${myconf} --enable-dbx" \
 		|| myconf="${myconf} --disable-dbx"
 
