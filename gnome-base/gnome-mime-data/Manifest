@@ -1,6 +1,16 @@
-MD5 fc84ea5da2bd3178c784f03f0659c25a ChangeLog 5055
-MD5 531bad72f4a1e927f14bc468465361ab gnome-mime-data-2.4.1.ebuild 539
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d30cd9ab276d1a2039f26e445624d7f2 ChangeLog 5160
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 1695dacc52cb2cdc62a8bba05f2c860e gnome-mime-data-2.4.2.ebuild 531
-MD5 8cd851428ab2fd521769fa298df2e89b files/digest-gnome-mime-data-2.4.2 74
+MD5 531bad72f4a1e927f14bc468465361ab gnome-mime-data-2.4.1.ebuild 539
+MD5 ac99a3a0810875ead70a0001da1cb44a gnome-mime-data-2.4.2.ebuild 530
 MD5 715e04d5223b3bb1558a0612bbe69a41 files/digest-gnome-mime-data-2.4.1 74
+MD5 8cd851428ab2fd521769fa298df2e89b files/digest-gnome-mime-data-2.4.2 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBy2UDugEuf3OQ0akRAg3xAJ4tBZ0CZk/S/OXNGz1/npd5bAAqTACgiDT9
+GeWQXybY8D9MJ5HRU2LxRdA=
+=dpqQ
+-----END PGP SIGNATURE-----
