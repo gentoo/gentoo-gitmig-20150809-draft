@@ -1,6 +1,10 @@
 # ChangeLog for net-im/msnlib
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.6 2003/10/08 10:27:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.7 2003/11/24 03:52:38 mr_bones_ Exp $
+
+  23 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> msnlib-2.0.ebuild,
+  msnlib-3.2.ebuild:
+  Specify which OSL license.
 
   08 Oct 2003; Alastair Tse <liquidx@gentoo.org> msnlib-2.1.ebuild,
   msnlib-3.2.ebuild:
