@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.2.4.ebuild,v 1.1 2004/10/11 16:46:21 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.2.4.ebuild,v 1.2 2004/12/03 17:55:40 slarti Exp $
 
 DESCRIPTION="An SMTP client and SMTP plugin for mail user agents such as Mutt"
 HOMEPAGE="http://msmtp.sourceforge.net/"
@@ -38,7 +38,7 @@ src_compile () {
 }
 
 src_install () {
-	einstall || die "install failed"
+	make DESTDIR=${D} install || die "install failed"
 
 	dodoc AUTHORS ChangeLog NEWS README THANKS \
 		doc/msmtprc.example doc/Mutt+msmtp.txt || die "dodoc failed"
