@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a-r2.ebuild,v 1.10 2002/08/14 03:52:37 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a-r2.ebuild,v 1.11 2002/08/30 12:06:17 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The standard GNU Bourne again shell"
@@ -10,7 +10,8 @@ KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND=">=sys-libs/ncurses-5.2-r2 readline? ( >=sys-libs/readline-4.1-r2 )"
+DEPEND=">=sys-libs/ncurses-5.2-r2 
+	readline? ( >=sys-libs/readline-4.1-r2 )"
 RDEPEND="virtual/glibc"
 
 src_unpack() {

@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b.ebuild,v 1.3 2002/08/30 12:06:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b-r1.ebuild,v 1.1 2002/08/30 12:06:17 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The standard GNU Bourne again shell"
-SRC_URI="ftp://ftp.gnu.org/gnu/bash/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnu.org/gnu/bash/${P}.tar.gz
+	mirror://gentoo/${P}-gentoo.diff.bz2"
 HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 
 SLOT="0"
@@ -16,10 +17,7 @@ DEPEND=">=sys-libs/ncurses-5.2-r2
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	#enable non-interactive login shells; this patch allows your prompt 
-	#to be preserved when you start X and closes bug #1579.
-#	cat ${FILESDIR}/config-top.h.diff | patch -p0 -l || die
+	patch -p0 < ${P}-gentoo.diff
 }
 
 src_compile() {
