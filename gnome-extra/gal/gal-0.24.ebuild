@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.13 2004/04/27 21:14:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.14 2004/06/03 22:56:56 agriffis Exp $
 
 inherit gnome.org libtool eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
 
-	if [ -n "`use doc`" ]; then
+	if use doc; then
 		myconf="${myconf} --enable-gtk-doc"
 	else
 		myconf="${myconf} --disable-gtk-doc"

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/guppi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.13 2004/03/02 15:39:51 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.14 2004/06/03 23:01:53 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> guppi-0.40.3-r1.ebuild,
+  guppi-0.40.3-r2.ebuild:
+  Fix use invocation
 
   02 Mar 2004; <augustus@gentoo.org> guppi-0.40.3-r2.ebuild:
   Added ~amd64 keyword.
