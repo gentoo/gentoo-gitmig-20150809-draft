@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.30.ebuild,v 1.2 2004/03/30 20:58:13 spyderous Exp $
-
-IUSE="X threads"
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.30.ebuild,v 1.3 2004/05/10 17:39:35 vapier Exp $
 
 DESCRIPTION="A portable, bytecode-compiled implementation of Common Lisp"
 HOMEPAGE="http://clisp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/clisp/${P}.tar.bz2"
-S=${WORKDIR}/${P}
-DEPEND="X? ( virtual/x11 )"
-RDEPEND="$DEPEND"
+
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc"
+IUSE="X threads"
+
+DEPEND="X? ( virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
