@@ -1,14 +1,19 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.19 2003/02/22 07:27:44 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.20 2003/02/22 22:41:09 vapier Exp $
+
+*rsync-2.5.6-r1 (22 Feb 2003)
+
+  22 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add init.d and conf.d files
+
+*rsync-2.5.6 (28 Jan 2003)
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
-
-*rsync-2.5.6 (28 Jan 2003)
 
   28 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
   Updated to the official 2.5.6.
