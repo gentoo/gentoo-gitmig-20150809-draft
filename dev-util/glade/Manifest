@@ -1,16 +1,26 @@
-MD5 1fea94dcb5009c782224628fd0784992 glade-0.6.4.ebuild 994
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 327eb455169e2977a4daffcaa9d10d87 glade-2.0.0-r1.ebuild 1522
 MD5 4797b5125d8cc7785653ac0da873bec8 glade-2.0.1.ebuild 1563
+MD5 1fea94dcb5009c782224628fd0784992 glade-0.6.4.ebuild 994
+MD5 77b624ddd8dad802a242a6aaabeb3ed3 ChangeLog 4155
+MD5 878c5c1070d4c586afe02fda003d1872 glade-2.6.8.ebuild 1118
 MD5 bfacfd79854f2d22ef23e55b05bf6739 glade-2.6.7.ebuild 1071
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 130c4713d2640dd1ff7ce99caf1f927c ChangeLog 4058
 MD5 8add42801cf069b013847f184449aa21 glade-2.6.0.ebuild 1594
-MD5 0190e0f1563d84540099b7161a96e2f1 glade-2.6.8.ebuild 1115
-MD5 b947cc014b4212b215eaaa95590ef136 files/digest-glade-0.6.4 64
-MD5 50067e4babaab978522bedc50c41258c files/digest-glade-2.0.0-r1 65
-MD5 586cc933cce3a4d1a505e94094908b0a files/digest-glade-2.0.1 65
-MD5 83ae3a0bfcaa3facf31dc3a5c0428f82 files/digest-glade-2.6.0 65
 MD5 17d8efe19b102587befe386f30a1cda9 files/digest-glade-2.6.7 65
+MD5 83ae3a0bfcaa3facf31dc3a5c0428f82 files/digest-glade-2.6.0 65
 MD5 2dded5c0f37d35bf9726e4c0d8cd76f9 files/glade-0.6.4-autogen.sh.patch 1935
+MD5 50067e4babaab978522bedc50c41258c files/digest-glade-2.0.0-r1 65
+MD5 b947cc014b4212b215eaaa95590ef136 files/digest-glade-0.6.4 64
+MD5 586cc933cce3a4d1a505e94094908b0a files/digest-glade-2.0.1 65
 MD5 5a2537a4609ee178e84e4e7472ee93a6 files/glade-2.0.0-scrollkeeper.patch 490
 MD5 bdb747f97ecaff8678cd803113e17bf0 files/digest-glade-2.6.8 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB/ks4KRy60XGEcJIRAllDAKCCa3ORcFZ5eqc1tPLwKz3N8zWe8wCghnw4
+OiM8+E8c6ZtG94Vpx2aTObA=
+=38D1
+-----END PGP SIGNATURE-----
