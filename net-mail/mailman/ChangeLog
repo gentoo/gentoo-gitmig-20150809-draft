@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.16 2003/07/09 20:50:48 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.17 2003/07/16 08:11:04 raker Exp $
+
+  16 Jul 2003; Nick Hadaway <raker@gentoo.org> mailman-2.1.2.ebuild:
+  Added apache and apache2 to IUSE and made pkg_config procedure
+  compatible with both installations types.
 
   09 Jul 2003; Nick Hadaway <raker@gentoo.org> files/README.gentoo:
   Updated the readme to be a little more explicit and complete.
