@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.9 2004/08/27 23:06:43 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.10 2004/09/28 05:32:26 usata Exp $
+
+*latex2rtf-1.9.15-r2 (28 Sep 2004)
+
+  28 Sep 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/latex2rtf-1.9.15-definitions.c.diff, +latex2rtf-1.9.15-r2.ebuild:
+  Added a security fix extracted from Debian's patch. See bug #64947.
 
   28 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
   latex2rtf-1.9.15-r1.ebuild:
