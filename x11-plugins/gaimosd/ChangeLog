@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gaimosd
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaimosd/ChangeLog,v 1.1 2004/09/20 15:52:10 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaimosd/ChangeLog,v 1.2 2004/12/08 19:03:04 hansmi Exp $
+
+  08 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> gaimosd-1.0.0.ebuild:
+  Added to ~ppc.
 
 *gaimosd-1.0.0 (20 Sep 2004)
 
