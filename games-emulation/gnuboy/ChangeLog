@@ -1,5 +1,8 @@
 # ChangeLog for games-emulation/gnuboy
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+  02 Mar 2004; David Holm <dholm@gentoo.org> gnuboy-1.0.3.ebuild:
+  Added to ~ppc.
 
 *gnuboy-1.0.3 (01 Mar 2003)
 
