@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/nullmailer
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/ChangeLog,v 1.6 2003/11/06 20:12:13 robbat2 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/ChangeLog,v 1.7 2004/04/19 19:27:41 robbat2 Exp $
+
+*nullmailer-1.00_rc7-r2 (19 Apr 2004)
+
+  19 Apr 2004; Robin H. Johnson <robbat2@gentoo.org>
+  nullmailer-1.00_rc7-r2.ebuild, files/mailer.conf:
+  add in urgent support for mailwrapper
 
   06 Nov 2003; Robin H. Johnson <robbat2@gentoo.org>
   nullmailer-1.00_rc7-r1.ebuild, nullmailer-1.00_rc7.ebuild:
