@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword-pam/checkpassword-pam-0.97.ebuild,v 1.1 2003/08/14 08:07:21 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword-pam/checkpassword-pam-0.97.ebuild,v 1.2 2003/09/11 20:54:31 mholzer Exp $
 
 IUSE=""
 
 DESCRIPTION="checkpassword-compatible authentication program w/pam support"
 HOMEPAGE="http://checkpasswd-pam.sourceforge.net/"
-SRC_URI="http://switch.dl.sourceforge.net/sourceforge/checkpasswd-pam/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/checkpasswd-pam/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
