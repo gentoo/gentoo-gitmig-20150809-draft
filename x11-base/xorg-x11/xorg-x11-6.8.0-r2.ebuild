@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.26 2004/10/19 08:49:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.27 2004/10/20 02:43:42 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -222,6 +222,10 @@ pkg_setup() {
 
 	if use dmx && use doc; then
 		die "The dmx and doc USE flags are temporarily incompatible and result in a dead build."
+	fi
+
+	if use dri && ! use glx; then
+		die "The dri USE flag requires the glx flag."
 	fi
 
 	# on amd64 we need /usr/lib64/X11/locale/lib to be a symlink
