@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.4.ebuild,v 1.6 2004/08/19 20:28:47 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.4.ebuild,v 1.7 2004/08/22 22:01:47 lv Exp $
 
 inherit libtool flag-o-matic eutils
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2
+	amd64? ( http://dev.gentoo.org/~lv/gtk+-2.4.1-lib64.patch.bz2 )"
 
 LICENSE="LGPL-2"
 SLOT="2"
@@ -40,8 +41,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# define a sensible default icon theme
 	epatch ${FILESDIR}/${PN}-2.4.1-define_sensible_icon_theme.patch
+	# use an arch-specific config directory so that 32bit and 64bit versions
+	# dont clash on multilib systems
+	use amd64 && epatch ${DISTDIR}/gtk+-2.4.1-lib64.patch.bz2
 
 	autoconf || die
+	automake || die
 
 }
 
@@ -69,6 +74,7 @@ src_compile() {
 src_install() {
 
 	dodir /etc/gtk-2.0
+	use amd64 && dodir /etc/gtk-2.0/${CHOST}
 
 	make DESTDIR=${D} install || die
 
@@ -82,8 +88,11 @@ src_install() {
 
 pkg_postinst() {
 
-	gtk-query-immodules-2.0 >	/etc/gtk-2.0/gtk.immodules
-	gdk-pixbuf-query-loaders >	/etc/gtk-2.0/gdk-pixbuf.loaders
+	use amd64 && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+
+	gtk-query-immodules-2.0 >	/${GTK2_CONFDIR}/gtk.immodules
+	gdk-pixbuf-query-loaders >	/${GTK2_CONFDIR}/gdk-pixbuf.loaders
 
 	einfo "For gtk themes to work correctly after an update, you might have to rebuild your theme engines."
 	einfo "Executing 'qpkg -f -nc /usr/lib/gtk-2.0/2.2.0/engines | xargs emerge' should do the trick if"

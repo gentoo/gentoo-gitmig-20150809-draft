@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.113 2004/08/19 13:13:48 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.114 2004/08/22 22:01:47 lv Exp $
+
+  22 Aug 2004; Travis Tilley <lv@gentoo.org> gtk+-2.4.4.ebuild,
+  gtk+-2.4.7.ebuild:
+  added a patch that puts the config files for gtk in an arch specific directory
+  on amd64 so that the 32bit and 64bit versions dont clash
 
 *gtk+-2.4.7 (19 Aug 2004)
 
