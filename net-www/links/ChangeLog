@@ -1,6 +1,13 @@
 # ChangeLog for net-www/links
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.35 2003/10/29 09:59:18 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.36 2003/10/29 17:49:17 seemant Exp $
+
+*links-2.1_pre13 (29 Oct 2003)
+
+  29 Oct 2003; Seemant Kulleen <seemant@gentoo.org> links-2.1_pre13.ebuild:
+  I took so much time with the last update, that pre13 got released in the
+  meantime, so here it is. Thanks again to Ingo -LaSombra- Hoffmann
+  <las0mbra@ig.com.br> in bug #29575
 
   29 Oct 2003; Brandy Westcott brandy@gentoo.org links-2.1_pre11.ebuild,
   links-2.1_pre12.ebuild, links-2.1_pre9.ebuild:
