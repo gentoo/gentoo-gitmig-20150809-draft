@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r2.ebuild,v 1.7 2004/11/13 12:02:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.3.ebuild,v 1.1 2004/11/13 12:02:22 usata Exp $
 
 inherit ruby eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.unixuser.org/~ysjj/rskkserv/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ~ppc"
+KEYWORDS="x86 ~alpha ~ppc"
 IUSE=""
 
 DEPEND="dev-ruby/ruby-tcpwrap"
@@ -19,18 +19,14 @@ RDEPEND="${DEPEND}
 PROVIDE="virtual/skkserv"
 USE_RUBY="ruby16 ruby18 ruby19"
 
-S=${WORKDIR}/${PN}-cvs
-
 src_unpack() {
 	unpack ${P}.tar.gz
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-conf-gentoo.diff
 
-	sed -i -e "s%with_RUBY%with_ruby%g" configure
-	sed -i -e "s%@datadir@%/usr/share%g" rskkserv.conf.in
-	sed -i -e "s%@VERSION@%${PV}%g" doc/*.in
+	#sed -i -e "s%with_RUBY%with_ruby%g" configure
+	#sed -i -e "s%@datadir@%/usr/share%g" rskkserv.conf.in
+	#sed -i -e "s%@VERSION@%${PV}%g" doc/*.in
 }
 
 src_compile() {
