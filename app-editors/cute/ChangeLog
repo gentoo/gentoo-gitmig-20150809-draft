@@ -1,8 +1,9 @@
 # ChangeLog for app-editors/cute
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/ChangeLog,v 1.10 2005/02/22 18:16:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/ChangeLog,v 1.11 2005/02/22 18:45:38 blubb Exp $
 
-  22 Feb 2005; Simon Stelling <blubb@gentoo.org> cute-0.2.9.ebuild:
+  22 Feb 2005; Simon Stelling <blubb@gentoo.org> cute-0.2.9-r1.ebuild,
+  cute-0.2.9.ebuild:
   added ~amd64
 
 *cute-0.2.9-r1 (22 Feb 2005)

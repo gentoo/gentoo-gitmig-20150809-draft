@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/cute-0.2.9-r1.ebuild,v 1.1 2005/02/22 18:13:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/cute-0.2.9-r1.ebuild,v 1.2 2005/02/22 18:45:38 blubb Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cute/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 
 DEPEND="sys-apps/sed
