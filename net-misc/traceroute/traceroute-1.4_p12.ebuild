@@ -1,28 +1,21 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/traceroute/traceroute-1.4_p12.ebuild,v 1.1 2001/01/11 21:00:26 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/traceroute/traceroute-1.4_p12.ebuild,v 1.2 2002/04/27 21:11:47 seemant Exp $
 
-P=traceroute-1.4a12
-A=${P}.tar.gz
-S=${WORKDIR}/${P}
+MY_P=${PN}-1.4a12
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Utility to trace the route of ip packets"
-SRC_URI="ftp://ee.lbl.gov/${A}"
+SRC_URI="ftp://ee.lbl.gov/${MY_P}.tar.gz"
 HOMEPAGE="http://ee.lbl.gov/"
 
 DEPEND=">=sys-libs/glibc-2.1.3"
 
-src_compile() {
-    cd ${S}
-    try ./configure --prefix=/usr --host=${CHOST}
-    try make
-}
-
 src_install () {
-    cd ${S}
-    dodir /usr/sbin
-    try make prefix=${D}/usr install
+	cd ${S}
+	dodir /usr/sbin
+	make prefix=${D}/usr install || die
 
-    doman traceroute.8
-    dodoc CHANGES INSTALL
+	doman traceroute.8
+	dodoc CHANGES INSTALL
 }
