@@ -1,14 +1,24 @@
-MD5 4ae1dad5070a83413d3967ffb9be4b47 ChangeLog 11521
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0d003aadae22453bcc8685ce0a08a9f6 ChangeLog 11661
 MD5 f5659d73ef347dcb529d867d6d5b4272 metadata.xml 642
 MD5 5a4fbf4918657d0e207cd88205d38c56 uim-0.4.3.ebuild 1798
+MD5 d1a304da3eb167084dd577207b7f5ffa uim-0.4.5.ebuild 2271
 MD5 8026dc67094188dfa01c4d6b271b9b9e uim-0.3.4.2.ebuild 1629
 MD5 c3186a24334df6fa9495cd94f60df007 uim-0.4.1.ebuild 1780
 MD5 5a56dd3c78e339ef2608e735fe86c2c0 uim-0.4.2.1.ebuild 1790
-MD5 575f55ddb75a97c19ab19bfddfcaa2f1 uim-0.4.5_beta1.ebuild 2318
 MD5 fa5a87de1925035e60313e0a0a37c68f files/digest-uim-0.4.3 61
+MD5 fc4ac83ce1c4a273be674bbcdb3dea5b files/digest-uim-0.4.5 62
 MD5 b9c8399a56165f6cfe164b17a273ea2a files/digest-uim-0.3.4.2 63
-MD5 1b2ef68296b356d1f656738f37d967bf files/digest-uim-0.4.5_beta1 68
 MD5 43709db248e2be1d40952ce99d3cae00 files/uim-gtk-query-immodules-gentoo.diff 552
 MD5 bb951055d72fd152ee21f5f8cfc9140f files/digest-uim-0.4.1 61
 MD5 00537e2c63ca679a4889917d52b74a60 files/digest-uim-0.4.2.1 63
 MD5 8441b16a6e27ce2428f377da2a8eb07e files/uim-pinyin-big5-gentoo.diff 275
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBd49mVWNWqTUmv+0RAuiMAJ41ik6PR+uFrbLGmyOsunKJOp5NsgCdHRyC
+6YjgRDI9dsvQ1DxER0bGkg4=
+=4Fo4
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.5_beta1.ebuild,v 1.1 2004/10/15 05:55:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.5.ebuild,v 1.1 2004/10/21 10:34:49 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -60,16 +60,15 @@ pkg_postinst() {
 	einfo "To use uim-prime you should emerge >=app-i18n/prime-0.8."
 	einfo
 
-	#ewarn
-	#ewarn "New input method switcher has been introduced. Uim-0.4.4 afterwards,"
-	#ewarn "You need to set"
-	#ewarn
-	#ewarn "% GTK_IM_MODULE=uim ; export GTK_IM_MODULE"
-	#ewarn "% XMODIFIERS=@im=uim ; export XMODIFIERS"
-	#ewarn
-	#ewarn "If you would like to use uim-anthy as default input method, put"
-	#ewarn "(define default-im-name 'anthy)"
-	#ewarn "to your ~/.uim."
+	ewarn
+	ewarn "New input method switcher has been introduced. You need to set"
+	ewarn
+	ewarn "% GTK_IM_MODULE=uim ; export GTK_IM_MODULE"
+	ewarn "% XMODIFIERS=@im=uim ; export XMODIFIERS"
+	ewarn
+	ewarn "If you would like to use uim-anthy as default input method, put"
+	ewarn "(define default-im-name 'anthy)"
+	ewarn "to your ~/.uim."
 	ewarn
 	ewarn "Available input methods can be found by running uim-im-switcher."
 	ewarn
