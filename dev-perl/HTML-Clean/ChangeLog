@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Clean
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Clean/ChangeLog,v 1.8 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Clean/ChangeLog,v 1.9 2004/04/15 21:17:03 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> HTML-Clean-0.8-r1.ebuild:
+  added s390 to keywords
 
 *HTML-Clean-0.8-r1 (21 Jun 2003)
  
