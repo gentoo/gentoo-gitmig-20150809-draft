@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.5 2004/06/26 15:58:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.6 2004/06/26 16:11:07 wolf31o2 Exp $
 
 inherit games
 
@@ -118,8 +118,6 @@ src_install() {
 
 	dogamesbin ${FILESDIR}/ut2003
 	sed -i "s:GENTOO_DIR:${dir}:" ${D}/${GAMES_BINDIR}/ut2003
-
-	rm ${Ddir}/System/{UT2003,User}.ini || die "deleting ini files"
 
 	# this brings our install up to the newest version
 	cd ${S}
