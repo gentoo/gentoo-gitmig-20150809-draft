@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.7 2004/07/03 23:40:40 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.8 2004/08/15 05:59:53 lv Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -56,6 +56,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.3.2-disable_modules_and_ssl.patch
 	epatch ${FILESDIR}/${PN}-2.3-mimetypes_apache.patch
 	epatch ${FILESDIR}/${PN}-2.3-db4.2.patch
+	# installs to lib64
+	[ "${CONF_LIBDIR}" == "lib64" ] && epatch ${FILESDIR}/python-2.3.4-lib64.patch
 	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
 	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
 }
@@ -132,13 +134,21 @@ src_install() {
 
 	# seems like the build do not install Makefile.pre.in anymore
 	# it probably shouldn't - use DistUtils, people!
-	insinto /usr/lib/python${PYVER}/config
+	if [ "${CONF_LIBDIR}" == "lib64" ] ;then
+		insinto /usr/lib64/python${PYVER}/config
+	else
+		insinto /usr/lib/python${PYVER}/config
+	fi
 	doins ${S}/Makefile.pre.in
 
 	# While we're working on the config stuff... Let's fix the OPT var
 	# so that it doesn't have any opts listed in it. Prevents the problem
 	# with compiling things with conflicting opts later.
-	dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib/python${PYVER}/config/Makefile
+	if [ "${CONF_LIBDIR}" == "lib64" ] ;then
+		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib64/python${PYVER}/config/Makefile
+	else
+		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib/python${PYVER}/config/Makefile
+	fi
 
 	# install python-updater in /usr/sbin
 	dosbin ${FILESDIR}/python-updater
@@ -147,6 +157,7 @@ src_install() {
 pkg_postrm() {
 	python_makesym
 	python_mod_cleanup /usr/lib/python2.3
+	[ "${CONF_LIBDIR}" == "lib64" ] && python_mod_cleanup /usr/lib64/python2.3
 }
 
 pkg_postinst() {
@@ -157,6 +168,8 @@ pkg_postinst() {
 	python_makesym
 	python_mod_optimize
 	python_mod_optimize -x site-packages -x test ${myroot}/usr/lib/python${PYVER}
+	[ "${CONF_LIBDIR}" == "lib64" ] && \
+		python_mod_optimize -x site-packages -x test ${myroot}/usr/lib64/python${PYVER}
 
 	# workaround possible python-upgrade-breaks-portage situation
 	if [ ! -f ${myroot}/usr/lib/portage/pym/portage.py ]; then
