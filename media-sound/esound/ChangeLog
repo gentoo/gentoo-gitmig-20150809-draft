@@ -1,10 +1,19 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.17 2003/02/12 07:27:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.18 2003/05/29 22:36:51 utx Exp $
+
+*esound-0.2.29-r1 (30 May 2003)
+
+  30 May 2003; Stanislav Brabec <utx@gentoo.org> esound-0.2.29-r1.ebuild,
+  files/esound-0.2.29-alsa-period.diff, files/esound.conf.d,
+  files/esound.init.d:
+  Added init scripts for remote sound access. Fixed ALSA maximum periods (CVS
+  fix from Takashi Iwai <tiwai@suse.de>).
+
+*esound-0.2.29 (06 Sep 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*esound-0.2.29 (06 Sep 2002)
+
   17 Sep 2002; Spider <spider@gentoo.org> esound-0.2.29.ebuild :
   added ppc keyword 
   
