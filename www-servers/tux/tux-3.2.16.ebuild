@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/tux-3.2.16.ebuild,v 1.1 2004/08/08 19:03:31 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/tux-3.2.16.ebuild,v 1.2 2004/08/30 23:42:14 dholm Exp $
 
 DESCRIPTION="kernel level httpd"
 HOMEPAGE="http://people.redhat.com/mingo/TUX-patches/"
@@ -8,7 +8,7 @@ SRC_URI="http://people.redhat.com/mingo/TUX-patches/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="doc"
 
 RDEPEND="dev-libs/glib
