@@ -1,24 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.85-r1.ebuild,v 1.2 2003/09/05 22:01:48 msterret Exp $
-
-DESCRIPTION="Server and client for DHCPv6"
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.85-r1.ebuild,v 1.3 2003/09/21 17:34:40 vapier Exp $
 
 MY_P=${P/dhcpv6/dhcp6}
+DESCRIPTION="Server and client for DHCPv6"
 HOMEPAGE="http://www.sourceforge.net/projects/dhcp6/"
 SRC_URI="mirror://sourceforge/dhcpv6/${MY_P}.tgz"
+
 LICENSE="GPL-2"
 SLOT="0"
-
 KEYWORDS="~x86"
-IUSE=""
+IUSE="static"
+
 DEPEND=""
+
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/patch-iaid-dhcp6-${PV}
+}
+
+src_compile() {
+	econf || die
+	use static && export LDFLAGS="${LDFLAGS} -static"
+	emake || die
 }
 
 src_install() {
@@ -33,6 +40,7 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/dhcp6s.rc dhcp6s
 }
+
 pkg_postinst() {
 	einfo "Sample dhcp6c.conf and dhcp6s.conf files are in"
 	einfo "/usr/share/doc/${P}/"
