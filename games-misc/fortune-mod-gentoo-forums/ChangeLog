@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-forums
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.4 2004/10/16 04:08:42 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.5 2004/10/18 07:58:39 hardave Exp $
+
+  18 Oct 2004; Hardave Riar <hardave@gentoo.org>
+  fortune-mod-gentoo-forums-20040922.ebuild:
+  Stable on mips, bug #67731.
 
   15 Oct 2004; Jon Hood <squinky86@gentoo.org>
   fortune-mod-gentoo-forums-20040922.ebuild:
