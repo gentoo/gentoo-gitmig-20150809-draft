@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-024-r1.ebuild,v 1.8 2004/06/30 18:43:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-024-r1.ebuild,v 1.9 2004/12/10 01:38:06 gregkh Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -141,6 +141,13 @@ pkg_preinst() {
 	     ! -f "${ROOT}/etc/udev/udev.rules" ]
 	then
 		mv -f ${ROOT}/etc/udev/udev.config ${ROOT}/etc/udev/udev.rules
+	fi
+
+	# Blow away any old 05-wait_for_sysfs.hotplug links,
+	# as the program is now gone.
+	if [ -f "${ROOT}/etc/hotplug.d/default/05-wait_for_sysfs.hotplug" ]
+	then
+		rm -f ${ROOT}/etc/hotplug.d/default/05-wait_for_sysfs.hotplug
 	fi
 }
 
