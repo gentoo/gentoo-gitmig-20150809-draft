@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r2.ebuild,v 1.5 2003/03/30 22:25:42 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r2.ebuild,v 1.6 2003/03/31 02:18:21 method Exp $
 
 DESCRIPTION="SELinux policy compiler and example policies"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -79,7 +79,7 @@ src_install() {
 	mv ${WORKDIR}/policy ${D}/etc/security/selinux/src
 
 	insinto /etc/security
-	doins ${S}/selinux/utils/appconfig/*
+	doins ${S}/utils/appconfig/*
 
 	insinto /usr/include
 	doins ${S}/libsecure/include/*.h
