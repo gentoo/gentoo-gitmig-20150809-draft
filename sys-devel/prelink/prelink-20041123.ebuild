@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20041123.ebuild,v 1.2 2005/02/12 22:33:10 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20041123.ebuild,v 1.3 2005/03/11 19:40:29 lanius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://people.redhat.com/jakub/prelink/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~alpha"
+KEYWORDS="x86 amd64 ~ppc ~alpha"
 IUSE=""
 
 DEPEND=">=dev-libs/elfutils-0.94
