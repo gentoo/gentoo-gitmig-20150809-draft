@@ -1,5 +1,4 @@
 MD5 b66406be8d578da0eaccc851890de68e tla-1.0.6.ebuild 681
-MD5 9094dd3f7078e8948216c9bb44c91e5f tla-20040113.ebuild 1224
 MD5 650f56a5f3c41cfdf9f0df48149cd6ee ChangeLog 987
 MD5 cc5094b0b12db335891dd2ebd76224ab tla-1.2_pre2.ebuild 1159
 MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
@@ -7,4 +6,3 @@ MD5 5edfbc061a48f72814f0e1c074b3b643 tla-1.1.ebuild 1147
 MD5 6301db02ae76fb7f3c7f8541d143498c files/digest-tla-1.2_pre2 64
 MD5 4b643d505f794a0b0eca53e21efb3074 files/digest-tla-1.0.6 62
 MD5 ed771c44099e7c67530910caaa54d279 files/digest-tla-1.1 60
-MD5 66669f0f78c14355a7941c246f0b289c files/digest-tla-20040113 70
