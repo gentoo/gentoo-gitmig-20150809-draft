@@ -1,12 +1,13 @@
 # ChangeLog for media-libs/paragui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.7 2003/01/14 16:40:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.8 2003/01/14 16:40:42 drobbins Exp $
 
 *paragui-1.0.3 (14 Jan 2003)
 
   14 Jan 2003; Daniel Robbins <drobbins@gentoo.org>: closes bug #13909; enabled
   internal physicFS since external lib is still masked, and this version
-  apparently fixes some build issues.
+  apparently fixes some build issues. Thanks to Guillaume Schmid for this bug
+  report.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
