@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/uf-view
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/uf-view/ChangeLog,v 1.1 2003/05/02 19:43:51 avenj Exp $
+
+*uf-view-2.2 (02 May 2003)
+
+  02 May 2003; Jon Portnoy <avenj@gentoo.org> uf-view-2.2.ebuild :
+  Initial import, ebuild submitted in bug #19491 by suka 
+  <suka@t0.or.at>.
