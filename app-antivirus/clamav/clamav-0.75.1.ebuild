@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.75.1.ebuild,v 1.7 2004/09/23 04:46:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.75.1.ebuild,v 1.8 2005/01/01 11:39:02 eradicator Exp $
 
 inherit eutils flag-o-matic
 
