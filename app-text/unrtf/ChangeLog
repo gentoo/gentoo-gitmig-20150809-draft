@@ -1,6 +1,9 @@
 # ChangeLog for app-text/unrtf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.16 2005/01/08 19:47:19 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.17 2005/03/19 17:05:21 weeve Exp $
+
+  19 Mar 2005; Jason Wever <weeve@gentoo.org> unrtf-0.19.3-r1.ebuild:
+  Added ~sparc keyword wrt bug #84791.
 
   08 Jan 2005; Lars Weiler <pylon@gentoo.org> unrtf-0.19.3-r1.ebuild:
   Stable on ppc; bug #74480.
