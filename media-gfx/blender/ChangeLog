@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.45 2004/11/16 10:40:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.46 2004/12/24 14:45:31 lu_zero Exp $
+
+*blender-2.34-r1 (24 Dec 2004)
+
+  24 Dec 2004; Luca Barbato <lu_zero@gentoo.org> +blender-2.34-r1.ebuild:
+  Added back plugins and scripts
 
   16 Nov 2004; Luca Barbato <lu_zero@gentoo.org> blender-2.35.ebuild:
   Fixed keywords
@@ -96,7 +101,7 @@
   04 Dec 2003; Luca Barbato <lu_zero@gentoo.org> blender-2.28c.ebuild,
   blender-2.31.ebuild, files/configure-fix-2.31.patch:
   new version, thanks to Bjarke Freund-Hansen <gentoo-bugzilla@rocekiller.dk>
-  and Tarmo Tänav <sn4ip3r@estprog.ee>
+  and Tarmo TÃ¤nav <sn4ip3r@estprog.ee>
 
   08 Nov 2003; Brad House <brad_mssw@gentoo.org> blender-2.30.ebuild:
   add ~amd64 flag
