@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.20020705.ebuild,v 1.7 2002/08/06 17:44:43 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.20020705.ebuild,v 1.8 2002/08/12 22:14:32 danarmak Exp $
 
 S=${WORKDIR}/lyx-devel
 DESCRIPTION="LyX is an WYSIWYM frontend for LaTeX"
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc"
 # The acompanying lyx-utils ebuild depends on lyx-base and on everything
 # else that lyx can use.
 DEPEND="virtual/x11
-	virtual/xforms
+	>=x11-libs/xforms-1.0_rc4
 	app-text/tetex 
 	>=sys-devel/perl-5
 	nls? ( sys-devel/gettext )
