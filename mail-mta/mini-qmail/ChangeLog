@@ -1,0 +1,19 @@
+# ChangeLog for net-mail/mini-qmail
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.1 2004/05/30 06:45:35 robbat2 Exp $
+
+*mini-qmail-1.05 (29 May 2004)
+
+  29 May 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  mini-qmail-1.05.ebuild, files/1.05-config-mini-help.patch, files/99qmail:
+  Moved from net-mail/mini-qmail to mail-mta/mini-qmail.
+
+*mini-qmail-1.05 (01 Mar 2004)
+
+  01 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump already :).
+
+*mini-qmail-1.04 (29 Feb 2004)
+
+  29 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
