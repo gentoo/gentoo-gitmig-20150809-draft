@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.5.93.ebuild,v 1.3 2004/08/28 01:30:10 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.0.ebuild,v 1.1 2004/09/17 13:58:53 foser Exp $
 
-inherit eutils virtualx gnome2 debug flag-o-matic
+inherit eutils virtualx gnome2 flag-o-matic
 
 # problems with -O3 on gcc-3.3.1
 replace-flags -O3 -O2
@@ -14,13 +14,12 @@ LICENSE="GPL-2"
 SLOT="2.0"
 KEYWORDS="~x86"
 IUSE="ssl mozilla ldap doc spell ipv6 kerberos crypt nntp debug pda"
-RESTRICT="nomirror"
 
 # Top stanza are ximian deps
-RDEPEND=">=gnome-extra/libgtkhtml-3.1.20
-	>=gnome-extra/gal-2.1.14
-	>=gnome-extra/evolution-data-server-0.0.98
-	>=net-libs/libsoup-2.1.13
+RDEPEND=">=gnome-extra/libgtkhtml-3.2.1
+	>=gnome-extra/gal-2.2.1
+	>=gnome-extra/evolution-data-server-1
+	>=net-libs/libsoup-2.2
 	>=dev-libs/glib-2
 	>=dev-libs/libxml2-2
 	>=gnome-base/gconf-2
@@ -35,13 +34,13 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.1.20
 	>=x11-themes/gnome-icon-theme-1.2
 	>=gnome-base/orbit-2.9.8
 	pda? ( >=app-pda/gnome-pilot-2.0.10
-			>=app-pda/gnome-pilot-conduits-2.0.10 )
+		>=app-pda/gnome-pilot-conduits-2.0.10 )
 	spell? ( >=app-text/gnome-spell-1.0.5 )
 	crypt? ( >=app-crypt/gnupg-1.2.2 )
 	ssl? ( mozilla? ( net-www/mozilla )
-		   !mozilla? ( >=dev-libs/nspr-4.3
-						>=dev-libs/nss-3.8 ) )
-	ldap? ( >=net-nds/openldap-2.0 )
+		!mozilla? ( >=dev-libs/nspr-4.3
+			>=dev-libs/nss-3.8 ) )
+	ldap? ( >=net-nds/openldap-2 )
 	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )"
 
 DEPEND="${RDEPEND}
@@ -51,15 +50,15 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.30
 	sys-devel/gettext
 	sys-devel/bison
-	doc? ( dev-util/gtk-doc
-		>=app-text/scrollkeeper-0.3.10-r1 )"
+	>=app-text/scrollkeeper-0.3.10-r1
+	doc? ( dev-util/gtk-doc )"
 
 G2CONF="--disable-default-binary \
-		$(use_enable ssl nss) \
-		$(use_enable ssl smime) \
-		$(use_enable ipv6) \
-		$(use_enable nntp) \
-		$(use_enable pda pilot-conduits)"
+	$(use_enable ssl nss) \
+	$(use_enable ssl smime) \
+	$(use_enable ipv6) \
+	$(use_enable nntp) \
+	$(use_enable pda pilot-conduits)"
 
 USE_DESTDIR="1"
 DOCS="AUTHORS COPYING* ChangeLog HACKING MAINTAINERS NEWS README"
@@ -124,11 +123,12 @@ src_compile() {
 }
 
 pkg_postinst() {
+
 	gnome2_gconf_install ${GCONFFILEPATH}
 	einfo "To change the default browser if you are not using GNOME, do:"
 	einfo "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'mozilla %s'"
 	einfo "gconftool-2 --set /desktop/gnome/url-handlers/https/command -t string 'mozilla %s'"
 	einfo ""
 	einfo "Replace 'mozilla %s' with which ever browser you use."
-}
 
+}

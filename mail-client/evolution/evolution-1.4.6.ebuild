@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.11 2004/08/22 05:09:37 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.12 2004/09/17 13:58:53 foser Exp $
 
 inherit flag-o-matic virtualx gnome2 eutils
 
@@ -18,9 +18,9 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc hppa alpha amd64 ia64"
 
 # Top stanza are ximian deps
-RDEPEND=">=gnome-extra/libgtkhtml-3.0.10
-	>=gnome-extra/gal-1.99.11
-	>=net-libs/libsoup-1.99.28
+RDEPEND="=gnome-extra/libgtkhtml-3.0*
+	=gnome-extra/gal-1.99*
+	=net-libs/libsoup-1.99*
 	>=gnome-extra/yelp-2.2
 	pda? ( >=app-pda/gnome-pilot-2.0.10-r1
 	       >=app-pda/pilot-link-0.11.8
