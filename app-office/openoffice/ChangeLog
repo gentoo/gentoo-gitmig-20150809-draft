@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.13 2002/12/02 14:36:18 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.14 2002/12/11 22:42:09 azarah Exp $
+
+*openoffice-1.0.1-r3 (12 Dec 2002)
+
+  12 Dec 2002; Martin Schlemmer <azarah@gentoo.org> openoffice-1.0.1.ebuild-r3 :
+  Fix to work with a gcc-config enabled gcc ...
 
   02 Dec 2002; Seth Chandler <sethbc@gentoo.org> openoffice-1.0.1-r2.ebuild:
   Add -r2 to portage.  I'm requiring jdk 1.4.0 becuase i'm not yet sure if 
