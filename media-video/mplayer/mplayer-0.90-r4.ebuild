@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90-r4.ebuild,v 1.1 2003/08/03 12:03:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90-r4.ebuild,v 1.2 2003/08/03 22:21:20 azarah Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2"
 
@@ -106,20 +106,21 @@ src_unpack() {
 		epatch ${FILESDIR}/default-skin.diff
 	fi
 
+	# Use gtk-2.x
 	cd ${S}; epatch ${FILESDIR}/${PN}-0.90_rc4-gtk2.patch
+
+	# Fix head/tail call for new coreutils
+	epatch ${FILESDIR}/${P}-coreutils-fixup.patch
 
 	if [ -n "`use ppc`" ]
 	then
 		# Fix mplayer to detect detect/use altivec on benh kernels,
 		# bug #18511.
-		cd ${S}; epatch ${FILESDIR}/${P}-ppc-benh.patch
+		cd ${S}; epatch ${FILESDIR}/${P}-ppc-benh-2.patch
 	fi
 
 	# Fix version, bug #19691
 	epatch ${FILESDIR}/${P}-fix-version.patch
-
-	# Fix head/tail call for new coreutils
-	epatch ${FILESDIR}/${P}-coreutils-fixup.patch
 
 	#Fixing divx 2003 API
 	if has_version  '>=media-libs/divx4linux-20030428'

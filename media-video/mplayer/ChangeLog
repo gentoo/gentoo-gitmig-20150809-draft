@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.69 2003/08/03 12:03:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.70 2003/08/03 22:21:20 azarah Exp $
+
+  04 Aug 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90-r4.ebuild,
+  files/mplayer-0.90-ppc-benh-2.patch:
+  Fix ppc-benh.patch to play nicely with coreutils-fixup.patch, bug #25833
 
 *mplayer-0.90-r4 (03 Aug 2003)
 
