@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmsensormon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.8 2004/11/06 11:58:18 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.9 2004/12/24 08:28:58 s4t4n Exp $
+
+*wmsensormon-1.2.1 (24 Dec 2004)
+
+  24 Dec 2004; Michele Noberasco <s4t4n@gentoo.org> +wmsensormon-1.2.1.ebuild:
+  Version bump. Closing bug #75452.
+  -wmsensormon-1.2_beta.ebuild:
+  Removed older version.
 
   06 Nov 2004; <pyrania@gentoo.org> wmsensormon-1.2.0.ebuild:
   Fixed bug #70141. Thanks to Matt Taylor <liverbugg@juno.com>.
