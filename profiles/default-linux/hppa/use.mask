@@ -1,0 +1,98 @@
+# 11 Aug 2004 Guy Martin <gmsoft@gentoo.org>
+# No nptl support yet
+nptl
+
+# 08 Aug 2004 Guy Martin <gmsoft@gentoo.org>
+# Wifi stuff not test yet because of lack of hardware
+wifi
+
+# 14 Jul 2004 Gustavo Zacarias <gustavoz@gentoo.org>
+# There's no oracle or informix port for linux/hppa
+oci8
+informix
+
+# 14 Jul 2004 Gustavo Zacarias <gustavoz@gentoo.org>
+# Adobe's FDFTK toolkit doesn't exist for linux/hppa
+fdftk
+
+# 26 Feb 2003 Guy Martin <gmsoft@gentoo.org>
+# No lirc support on hppa
+lirc
+
+# 22 Jul 2003 Guy Martin <gmsoft@gentoo.org>
+# Scanner and gphoto2 not yet tested
+gphoto2
+scanner
+
+# 21 Jul 2003 Guy Martin <gmsoft@gentoo.org>
+# Rpm is not working and foreign-package make kdeadmin depend on it
+foreign-package
+
+# 17 Jul 2003 Guy Martin <gmsoft@gentoo.org>
+# Avi support is far from 'supported'
+avi
+
+# 06 Jul 2003 Guy Martin <gmsoft@gentoo.org>
+# Mozilla is curently not working
+mozilla
+
+# 13 Apr 2003 Guy Martin <gmsoft@gentoo.org>
+# Selinux patches not tested on hppa and no kernel sources are emergeables with this patch.
+selinux
+
+# 07 Apr 2003 Guy Martin <gmsoft@gentoo.org>
+# I don't have the hardware to test usb support. So, this is disabled for now.
+usb
+
+# 20 Mar 2003 Guy Martin <gmsoft@gentoo.org>
+# Many java apps need java => 1.3 and hppa has only 1.1 right now
+java
+
+# 19 Mar 2003 Guy Martin <gmsoft@gentoo.org>
+# acl not tested yet
+acl
+
+# 14 Mar 2003 Guy Martin <gmsoft@gentoo.org>
+# USE flags not related to hppa
+3dnow
+acpi
+apm
+afs
+ev6
+icc
+icc-pgo
+mmx
+nocardbus
+pcmcia
+pda
+sse
+svga
+trusted
+wavelan
+x86
+firebird
+uclibc
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oracle7
+oci8
+pfpro
+solid
+sybase
+sybase-ct
