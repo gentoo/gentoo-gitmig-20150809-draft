@@ -1,2 +1,2 @@
 #!/bin/bash
-cm3 -ship $@
+exec cm3 -ship "$@"
