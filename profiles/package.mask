@@ -21,6 +21,12 @@
 ##
 ##   End example
 ##
+
+# phoen][x <phoenix@gentoo.org (04 Aug 2002)
+# Bumped to new version. Masked for testing.
+=net-libs/libicq2000-0.3.2
+=net-im/ickle-0.3.2
+
 # lamer <lamer@gentoo.org> (4 Aug 2002)
 # Firestarter won't compile with gnome2
 =net-misc/firestarter-0.8.2
@@ -130,7 +136,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1177 2002/08/04 14:01:06 lamer Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1178 2002/08/04 14:34:09 phoenix Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
