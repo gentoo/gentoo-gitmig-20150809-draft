@@ -1,0 +1,11 @@
+--- epan/Makefile.in.orig	2004-08-15 22:19:14.269149976 +0100
++++ epan/Makefile.in	2004-08-15 22:19:45.511400432 +0100
+@@ -510,7 +510,7 @@
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+ 	$(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
++LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) -fno-unroll-loops \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ DIST_SOURCES = $(libethereal_la_SOURCES) $(EXTRA_libethereal_la_SOURCES)
+ 
