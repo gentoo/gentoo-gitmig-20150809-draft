@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.26 2003/08/20 10:21:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.27 2003/08/27 19:11:53 usata Exp $
+
+*zsh-4.1.1-r1 (28 Aug 2003)
+
+  28 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.1.1-r1.ebuild,
+  files/zsh-4.1.1-gentoo.diff:
+  Compiles all zsh modules in when USE="static".  Added libcap to DEPEND.
+  See Bug #27392 comment #4
 
 *zsh-4.1.1 (24 Jul 2003)
 
