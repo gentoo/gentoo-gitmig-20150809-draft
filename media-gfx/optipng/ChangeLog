@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.13 2004/12/29 00:36:28 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.14 2004/12/29 15:22:54 slarti Exp $
+
+  29 Dec 2004; Tom Martin <slarti@gentoo.org> optipng-0.4.5.ebuild:
+  Marked ~amd64, resolves bug 73180.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
