@@ -1,7 +1,6 @@
-
-
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/File-Spec-0.82.ebuild,v 1.3 2003/06/01 02:19:27 mcummings Exp $
 
 inherit perl-module
 
