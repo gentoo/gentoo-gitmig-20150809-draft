@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.43 2003/11/03 05:47:12 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.44 2003/11/03 15:34:34 drobbins Exp $
 
+  03 Nov 2003; Daniel Robbins <drobbins@gentoo.org> all of 'em: added missing
+  RDEPEND so they don't default to DEPEND.
+  
   02 Nov 2003; Chris PeBenito <pebenito@gentoo.org> coreutils-5.0-r4.ebuild:
   Missed removing SELinux patch from 5.0-r4
 

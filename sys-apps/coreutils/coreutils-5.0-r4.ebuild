@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.13 2003/11/03 05:47:12 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.14 2003/11/03 15:34:34 drobbins Exp $
 
 inherit eutils
 
@@ -18,12 +18,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64 ppc ~sparc alpha hppa ~arm ~mips ia64"
 
-DEPEND="virtual/glibc
-	>=sys-apps/portage-2.0.49
+DEPEND=">=sys-apps/portage-2.0.49
 	sys-devel/automake
 	sys-devel/autoconf
 	nls? ( sys-devel/gettext )
 	acl? ( sys-apps/acl )"
+
+RDEPEND=""
 
 PATCHDIR=${WORKDIR}/patch
 

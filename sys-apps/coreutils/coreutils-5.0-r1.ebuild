@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r1.ebuild,v 1.11 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r1.ebuild,v 1.12 2003/11/03 15:34:34 drobbins Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ DEPEND=">=sys-apps/portage-2.0.48-r3
 	sys-devel/autoconf
 	nls? ( sys-devel/gettext )"
 
+RDEPEND=""
 # the sandbox code in portage-2.0.48 causes breakage
 export SANDBOX_DISABLED="1"
 

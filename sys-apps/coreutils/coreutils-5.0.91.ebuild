@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91.ebuild,v 1.5 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91.ebuild,v 1.6 2003/11/03 15:34:34 drobbins Exp $
 
 inherit eutils flag-o-matic
 
@@ -29,6 +29,8 @@ DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
 	acl? ( sys-apps/acl )
 	selinux? ( sys-libs/libselinux )"
+
+RDEPEND="selinux? ( sys-libs/libselinux )"
 
 src_unpack() {
 	unpack ${A}
