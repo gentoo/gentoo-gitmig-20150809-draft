@@ -72,35 +72,36 @@ libmpeg3 - Adds mpeg support to mplayer
 libwww - Adds libwww support (General purpose WEB API)
 mcrypt - Adds mcrypt support to php (contains several encryption algorithms)
 mga - Adds Matrox MGA support to mplayer
-mhash
-mitshm
+mhash - Adds mhash library support to php (library of hash algorithms)
+mikmod - 
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
-motif
-mozaccess-builtin
-mozctl
-mozilla
-mozirc
-mozxmlterm
-mta
-mysql
+motif - Adds motif support (Open Motif)
+mozaccess-builtin - Adds text-to-speech and eventually braille support mozilla
+mozctl - Adds Pango like module to mozilla (???)
+mozilla - Adds mozilla support
+mozirc - Adds IRC (Internet Relay Chat) module to mozilla
+mozxmlterm - Adds Xterm like terminal with XML support to mozilla
+mta-ldap - Adds openldap support to postfix or exim
+mta-tls - Adds openssl support to postfix or exim
+mta-mysql - Adds mysql support to postfix or exim
+mysql - Adds mySQL support
 nas - Adds support for network audio sound
-ncurses
+ncurses - Adds ncurses support (console display library)
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
-nocardbus
-objprelink
-odbc
+nocardbus - Disables cardbus support in pcmcia-cs
+odbc - Adds ODBC Support (Open DataBase Connectivity)
 oggvorbis - Adds support for the OggVorbis audio encoding
 opengl - Adds support for OpenGL
-oss
-pam
+oss - Adds support for OSS (Open Sound System)
+pam - Adds support PAM (Pluggable Authentication Modules)
 pcmcia - Adds support for PCMCIA slots/devices found on laptop computers
 pda - Adds support for portable devices.
-pdflib
+pdflib - Adds support for PDF (Portable Document Format)
 perl - Adds support/bindings for the Perl language.
-pic
-plotutils
+pic - Adds PIC support to gcc (???)
+plotutils - Adds plotutils support to gnuplot (library for 2-D vector graphics)
 png - Adds support for libpng (PNG images)
-pnp
+pnp - Adds support for PNP in pcmcia-cs (Plug-N-Play)
 postgres - Adds support for the postgresql database
 python - Adds support/bindings for the Python language
 qt - Adds support for the Qt library.
