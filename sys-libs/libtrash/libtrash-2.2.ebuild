@@ -1,14 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/libtrash-2.2.ebuild,v 1.2 2004/03/27 11:12:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/libtrash-2.2.ebuild,v 1.3 2004/04/27 23:42:09 vapier Exp $
+
+inherit eutils gcc
 
 DESCRIPTION="provides a trash can by intercepting certain calls to glibc"
 HOMEPAGE="http://www.m-arriaga.net/software/libtrash/"
 SRC_URI="http://www.m-arriaga.net/software/libtrash/${P}.tgz"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
-LICENSE="GPL-2"
 IUSE=""
 
 DEPEND=">=virtual/glibc-2.3.2
@@ -16,12 +18,11 @@ DEPEND=">=virtual/glibc-2.3.2
 
 src_unpack() {
 	unpack ${A}
-
 	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
-	make CC="${CC}" CFLAGS="${CFLAGS}" || die
+	make CC="$(gcc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
