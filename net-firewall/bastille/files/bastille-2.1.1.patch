@@ -1,0 +1,1811 @@
+diff -urN Bastille/Bastille/API.pm Bastille2/Bastille/API.pm
+--- Bastille/Bastille/API.pm	2003-05-05 06:42:25.000000000 -0400
++++ Bastille2/Bastille/API.pm	2003-08-02 05:02:58.000000000 -0400
+@@ -389,6 +389,13 @@
+ 	    }      
+ 	    close(REDHAT_RELEASE);   
+ 	}
++	elsif ( -e "/etc/gentoo-release" ) {
++	    open(*GENTOO_RELEASE,"/etc/gentoo-release");
++	    $release=<GENTOO_RELEASE>;
++	    if ($release =~ /^Gentoo Base System version */) {
++	        $distro="GE1.4";
++            }
++        }
+ 	elsif ( -e "/etc/debian_version" ) {
+ 	    $stable="3.0"; #Change this when Debian stable changes
+ 	    open(*DEBIAN_RELEASE,"/etc/debian_version");
+@@ -508,7 +515,7 @@
+            "MN6.0","MN6.1","MN7.0","MN7.1","MN7.2","MN8.0","MN8.1","MN8.2",
+            "HP-UX11.00","HP-UX11.11", "HP-UX11.22", "HP-UX11.23",
+            "SE7.2","SE7.3", "SE8.0","TB7.0", 
+-	   "OSX10.2.0","OSX10.2.1","OSX10.2.2","OSX10.2.3","OSX10.2.4");
++	   "OSX10.2.0","OSX10.2.1","OSX10.2.2","OSX10.2.3","OSX10.2.4","GE1.4");
+   return \@list;
+ }
+ 
+@@ -565,7 +572,7 @@
+ 
+     # Directories, as explained in Bastille directory structure...
+ 
+-    if ( ($actualDistro =~ "^RH" ) or ($actualDistro =~ "^MN") or ($actualDistro =~ "^DB") or ($actualDistro =~ "^SE") or ($actualDistro =~ "^TB")){
++    if ( ($actualDistro =~ "^RH" ) or ($actualDistro =~ "^MN") or ($actualDistro =~ "^DB") or ($actualDistro =~ "^SE") or ($actualDistro =~ "^TB") or ($actualDistro =~ "^GE")){
+ 	
+ 	$GLOBAL_BDIR{"home"}= "/root/Bastille";
+ 
+@@ -618,13 +625,13 @@
+     else { 
+ 	return 0;
+     }
+-    if ( ($distro =~ "^RH" ) or ($distro =~ "^MN") or ($distro =~ "^DB") or ($distro =~ "^SE") or ($distro =~ "^TB")){
++    if ( ($distro =~ "^RH" ) or ($distro =~ "^MN") or ($distro =~ "^DB") or ($distro =~ "^SE") or ($distro =~ "^TB") or ($distro =~ "^GE")){
+ 
+ 	#
+ 	# Set necessary binaries
+ 	#
+ 
+-	if (($distro =~ "^RH" ) or ($distro =~ "^MN") or ($distro =~ "^SE") or ($distro =~ "^TB") or ($distro =~ "^DB") ) {
++	if (($distro =~ "^RH" ) or ($distro =~ "^MN") or ($distro =~ "^SE") or ($distro =~ "^TB") or ($distro =~ "^DB") or ($distro =~ "^GE")) {
+ 	    $GLOBAL_BIN{"accton"} = "/usr/sbin/accton";
+ 	    $GLOBAL_FILE{"accton"} = "/usr/sbin/accton";
+ 	}
+@@ -713,7 +720,7 @@
+ 
+ 	$GLOBAL_DIR{"home"}="/home";
+ 	$GLOBAL_DIR{"initd"}="/etc/rc.d/init.d";
+-        if ( ($distro =~ /^DB/) or ($distro =~ /^SE/)) {
++        if ( ($distro =~ /^DB/) or ($distro =~ /^SE/) or ($distro =~ /^GE/)) {
+ 	         $GLOBAL_DIR{"initd"} = "/etc/init.d";
+ 	}
+         $GLOBAL_DIR{"log"}="/var/log";
+@@ -722,6 +729,9 @@
+ 	if ( $distro =~ /^DB/ ) {
+ 		$GLOBAL_DIR{"rcd"} = "/etc";
+ 	}
++        if ( $distro =~ /^GE/ ) {
++                $GLOBAL_DIR{"rcd"} = "/etc/runlevels/default";
++        }
+ 	$GLOBAL_DIR{"sbin"}="/sbin";
+ 
+ 
+@@ -759,7 +769,7 @@
+ 
+         $GLOBAL_FILE{"inittab"}="/etc/inittab";
+         $GLOBAL_FILE{"lilo.conf"}="/etc/lilo.conf";
+-	$GLOBAL_FILE{"grub.conf"}="/etc/grub.conf";
++	$GLOBAL_FILE{"grub.conf"}="/boot/grub/grub.conf";
+         $GLOBAL_FILE{"limits.conf"}="/etc/security/limits.conf";
+         $GLOBAL_FILE{"mtab"}="/etc/mtab";
+         $GLOBAL_FILE{"pam_access.conf"}="/etc/security/access.conf";
+@@ -806,8 +816,17 @@
+ #        $GLOBAL_FILE{"chkconfig_ypbind"}=&getGlobal('DIR', "rcd")."/rc3.d/S17ypbind";
+ #        $GLOBAL_FILE{"chkconfig_snmpd"}=&getGlobal('DIR', "rcd")."/rc3.d/S50snmpd";
+        }
+-
+-
++       if ( $distro =~ /^GE/) {
++         $GLOBAL_FILE{"chkconfig_apmd"}=&getGlobal('DIR', "rcd")."/apmd";
++         $GLOBAL_FILE{"chkconfig_nfs"}=&getGlobal('DIR', "rcd")."/nfs";
++         $GLOBAL_FILE{"chkconfig_pcmcia"}=&getGlobal('DIR', "rcd")."/pcmcia";
++         $GLOBAL_FILE{"chkconfig_dhcpd"}=&getGlobal('DIR', "rcd")."/dhcp";
++         $GLOBAL_FILE{"chkconfig_innd"}=&getGlobal('DIR', "rcd")."/innd";
++         $GLOBAL_FILE{"chkconfig_gated"}=&getGlobal('DIR', "rcd")."/gated";
++         $GLOBAL_FILE{"chkconfig_routed"}=&getGlobal('DIR', "rcd")."/routed";
++         $GLOBAL_FILE{"chkconfig_ypbind"}=&getGlobal('DIR', "rcd")."/ypbind";
++         $GLOBAL_FILE{"chkconfig_snmpd"}=&getGlobal('DIR', "rcd")."/snmpd";
++        }
+ 	$GLOBAL_FILE{"sendmail.cf"}="/etc/sendmail.cf"; 
+ 	$GLOBAL_FILE{"sysconfig_sendmail"}="/etc/sysconfig/sendmail";
+ 	$GLOBAL_FILE{"named"}="/usr/sbin/named";
+@@ -2683,6 +2702,12 @@
+ 	    }
+ 	    return $retval;
+     }
++    elsif (&GetDistro =~/^GE.*/) {
++            print "[chkconfig_on] Gentoo detected, using rc-update to run $startup_script on boot\n";
++	    $ci = system("/sbin/rc-update add $startup_script default");
++	    return 0;
++    }
++
+     # Run through the init script looking for the chkconfig line...
+     $retval = open CHKCONFIG,&getGlobal('DIR', "initd") . "/$startup_script";
+     unless ($retval) {
+@@ -2840,6 +2865,10 @@
+ 		    #}
+ 	    }
+     }
++    elsif ( &GetDistro =~/^GE.*/ ) {
++            $ci = system("/sbin/rc-update del $startup_script default");
++	    return $ci;
++    }
+     else {
+ 
+ 	    # Run through the init script looking for the chkconfig line...
+diff -urN Bastille/Bastille/FilePermissions.pm Bastille2/Bastille/FilePermissions.pm
+--- Bastille/Bastille/FilePermissions.pm	2003-04-07 06:03:08.000000000 -0400
++++ Bastille2/Bastille/FilePermissions.pm	2003-08-02 05:02:58.000000000 -0400
+@@ -43,7 +43,7 @@
+ 
+    if (&getGlobalConfig("FilePermissions","generalperms_1_1") eq "Y") {
+ 
+-   if ($distro =~ /^RH/ or $distro =~ /^MN/ or $distro =~ /^DB/ or $distro =~ /^SE/ or $distro =~ /^TB/) {
++   if ($distro =~ /^RH/ or $distro =~ /^MN/ or $distro =~ /^DB/ or $distro =~ /^SE/ or $distro =~ /^TB/ or $distro=~ /^GE/) {
+ 	   &B_chmod_if_exists(0700,"/bin/linuxconf");
+ 	   &B_chmod_if_exists(0750,"/bin/mt");
+ 	   &B_chmod_if_exists(0750,"/bin/setserial");
+diff -urN Bastille/Bastille/Firewall.pm Bastille2/Bastille/Firewall.pm
+--- Bastille/Bastille/Firewall.pm	2003-01-07 08:00:49.000000000 -0500
++++ Bastille2/Bastille/Firewall.pm	2003-08-02 05:02:58.000000000 -0400
+@@ -342,7 +342,7 @@
+ 	    B_replace_line (&getGlobal('DIR', "sbin") . "/bastille-firewall-reset",'^INITBASEDIR=/etc/rc.d/init.d',"INITBASEDIR=".&getGlobal('DIR', "initd")."\n");
+ 	}
+ 
+-	if ( (&GetDistro =~ /^RH/) || (&GetDistro =~ /^MN/) || (&GetDistro =~ /^SE/) || (&GetDistro =~ /^TB/)) {
++	if ( (&GetDistro =~ /^RH/) || (&GetDistro =~ /^MN/) || (&GetDistro =~ /^SE/) || (&GetDistro =~ /^TB/) || (&GetDistro =~ /^GE/)) {
+ 	
+ 	    my $ifup_file = &getGlobal('DIR', "sbin") . "/ifup-local";
+ 	    
+diff -urN Bastille/Bastille/IOLoader.pm Bastille2/Bastille/IOLoader.pm
+--- Bastille/Bastille/IOLoader.pm	2003-05-02 12:30:27.000000000 -0400
++++ Bastille2/Bastille/IOLoader.pm	2003-08-02 05:02:58.000000000 -0400
+@@ -267,6 +267,10 @@
+ 				my $supported_versions = 'RH6.0 RH6.1 RH6.2 RH7.0 RH7.1 RH7.2 RH7.3 RH8.0 RH9.0 RH9';
+ 				$data =~ s/\bRH\b/$supported_versions/;
+ 			    }
++			    if ($data =~ /\bGE\b/) {
++			        my $supported_versions = 'GE1.4';
++				$data =~ s/\bGE\b/$supported_versions/;
++			    }
+ 			    if ($data =~ /\bMN\b/) {
+ 				my $supported_versions = 'MN6.0 MN6.1 MN6.2 MN7.0 MN7.1 MN7.2 MN8.0 MN8.1 MN8.2';
+ 				$data =~ s/\bMN\b/$supported_versions/;
+diff -urN Bastille/Bastille/PSAD.pm Bastille2/Bastille/PSAD.pm
+--- Bastille/Bastille/PSAD.pm	2003-01-07 08:00:50.000000000 -0500
++++ Bastille2/Bastille/PSAD.pm	2003-08-02 05:02:58.000000000 -0400
+@@ -126,7 +126,7 @@
+     my $virgin_kmsgsd_daemon     = '/kmsgsd';
+     my $diskmond_daemon          = '/usr/sbin/diskmond';
+     my $virgin_diskmond_daemon   = '/diskmond';
+-    my $psad_init                = '/etc/rc.d/init.d/psad';
++    my $psad_init                = '/etc/init.d/psad';
+     my $pre_place_psad_init      = '/psad-init';
+     my $whois_psad               = '/usr/bin/whois.psad';
+     my $orig_whois_psad          = '/whois';
+diff -urN Bastille/Questions.txt Bastille2/Questions.txt
+--- Bastille/Questions.txt	2003-05-05 05:34:36.000000000 -0400
++++ Bastille2/Questions.txt	2003-08-02 05:02:58.000000000 -0400
+@@ -178,7 +178,7 @@
+ there's a chance it will inconvenience your users."
+ QUESTION: "Would you like to set more restrictive permissions on the
+ administration utilities? [N]"
+-REQUIRE_DISTRO: RH MN DB SE TB
++REQUIRE_DISTRO: RH MN DB SE TB GE
+ YN_TOGGLE: 1
+ YES_EXP:
+ NO_EXP:
+@@ -333,7 +333,7 @@
+ If you answer \"Yes\" and then realize later that you do need SUID permissions
+ on a specific program, you can always turn it back on later with chmod u+s <file name>."
+ QUESTION:
+-REQUIRE_DISTRO: LINUX DB SE TB OSX
++REQUIRE_DISTRO: LINUX DB SE TB OSX GE
+ YN_TOGGLE: 0
+ YES_EXP:
+ NO_EXP:
+@@ -348,7 +348,7 @@
+ still allow anyone with the root password to mount and unmount drives."
+ REQUIRE_IS_SUID: mount umount smbmnt
+ QUESTION: "Would you like to disable SUID status for mount/umount?"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ YN_TOGGLE: 1
+ DEFAULT_ANSWER: Y
+ REG_EXP: "^Y$|^N$"
+@@ -366,7 +366,7 @@
+ for networking the host, who normally has root access, we recommend
+ disabling SUID status for it."
+ QUESTION: "Would you like to disable SUID status for ping? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB OSX
++REQUIRE_DISTRO: LINUX DB SE TB OSX GE
+ REQUIRE_IS_SUID: ping
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -385,7 +385,7 @@
+ access granted by the administrator.  It's extremely unlikely that there will
+ be any problems with disabling SUID for dump and restore."
+ QUESTION: "Would you like to disable SUID status for dump and restore? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB OSX
++REQUIRE_DISTRO: LINUX DB SE TB OSX GE
+ REQUIRE_IS_SUID: dump restore
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -404,7 +404,7 @@
+ notebook computer, then you probably don't have any PCMCIA devices, and
+ you should definitely disable this."
+ QUESTION: "Would you like to disable SUID status for cardctl? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_IS_SUID: cardctl
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -422,7 +422,7 @@
+ can be found in cron (and removing cron is not practical) so there is
+ no need to retain privileged access for \"at\"."
+ QUESTION: "Would you like to disable SUID status for at? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB OSX
++REQUIRE_DISTRO: LINUX DB SE TB OSX GE
+ REQUIRE_IS_SUID: at
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -439,7 +439,7 @@
+ area of security problems.  We recommend that only root have access to
+ this type of application, unless your users have a pressing need for it."
+ QUESTION: "Would you like to disable SUID status for DOSEMU? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_IS_SUID: dos
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -455,7 +455,7 @@
+ server.  For this reason, we'd like to disable SUID status for the INN news
+ server tools inndstart and startinnfeed."
+ QUESTION: "Would you like to disable SUID status for news server tools? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_IS_SUID: inndstart startinnfeed
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -474,7 +474,7 @@
+ we'll ask about disabling printing entirely including stopping the print
+ scheduler."
+ QUESTION: "Would you like to disable SUID status for printing utilities? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_IS_SUID: lpr lpq lprm lpalt
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -529,7 +529,7 @@
+ them when needed.  This will disable the \"client\" side of these tools,
+ so that people cannot use them to connect to other machines."
+ QUESTION: "Would you like to disable the r-tools? [Y]"
+-REQUIRE_DISTRO:	LINUX DB SE TB OSX
++REQUIRE_DISTRO:	LINUX DB SE TB OSX GE
+ REQUIRE_IS_SUID: rcp rlogin rsh rdist rexec
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -545,7 +545,7 @@
+ network interfaces.  In general, there's no reason for anyone other than the
+ system administrator to control network interfaces."
+ QUESTION: "Would you like to disable SUID status for usernetctl? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_IS_SUID: usernetctl
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -563,7 +563,7 @@
+ debug network connections, you can leave the SUID bit on traceroute. 
+ Otherwise, you should disable it."
+ QUESTION: "Would you like to disable SUID status for traceroute? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB OSX
++REQUIRE_DISTRO: LINUX DB SE TB OSX GE
+ REQUIRE_IS_SUID: traceroute
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -583,7 +583,7 @@
+ safely answer yes is when this system will be running without a monitor of
+ any kind."
+ QUESTION: "Would you like to disable SUID status for Xwrapper? [N]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ REQUIRE_IS_SUID: Xwrapper
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -605,7 +605,7 @@
+ safely answer yes is when this system will be running without a monitor of
+ any kind."
+ QUESTION: "Would you like to disable SUID status for XFree86? [N]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ REQUIRE_IS_SUID: XFree86
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -647,7 +647,7 @@
+ crackers access to the machine.  This option will disable the use of those
+ r-tools both from your machine and as a means of logging into your machine."
+ QUESTION: "Should Bastille disable clear-text r-protocols that use IP-based authentication? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB OSX
++REQUIRE_DISTRO: LINUX DB SE TB OSX GE
+ REQUIRE_FILE_EXISTS: rsh
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -674,7 +674,7 @@
+ 180 days, if the password has not been changed, the account will be
+ temporarily disabled.  We would make this change in /etc/login.defs."
+ QUESTION: "Would you like to enforce password aging? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -704,7 +704,7 @@
+ allowed to use cron."
+ QUESTION: "Would you like to restrict the use of cron to administrative
+ accounts? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB OSX
++REQUIRE_DISTRO: LINUX DB SE TB OSX GE
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -724,7 +724,7 @@
+ is if you are sure that you have already set one."
+ QUESTION: "Do you want to set the default umask? [Y]"
+ DEFAULT_ANSWER: 077
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB OSX
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB OSX GE
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+ YES_EXP:
+@@ -769,7 +769,7 @@
+ will be overridden by the trusted system default umask, which is 077."
+ QUESTION: "What umask would you like to set for users on the system? [077]"
+ DEFAULT_ANSWER: 077
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB OSX
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB OSX GE
+ YN_TOGGLE: 0
+ YES_EXP:
+ NO_EXP:
+@@ -1263,7 +1263,7 @@
+ from logging in directly.  He has to steal a second account's password to
+ make use of the root password via the ttys."
+ QUESTION: "Should we disallow root login on tty's 1-6? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -1337,7 +1337,7 @@
+ Otherwise, this is strongly recommended for general use workstations and
+ servers which are not locked away in their own room."
+ QUESTION: "Would you like to password-protect the GRUB prompt? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: grub.conf
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -1356,7 +1356,7 @@
+ WARNING: Please do not make this the root password for this computer, as the
+          GRUB password will be stored unencrypted on the machine."
+ QUESTION: "Enter GRUB password, please.   []"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: grub.conf
+ DEFAULT_ANSWER:
+ YN_TOGGLE: 0
+@@ -1380,7 +1380,7 @@
+ Otherwise, this is strongly recommended for general use workstations and
+ servers which are not locked away in their own room."
+ QUESTION: "Would you like to password-protect the LILO prompt? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: lilo.conf
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -1399,7 +1399,7 @@
+ WARNING: Please do not make this the root password for this computer, as the
+          LILO password will be stored unencrypted on the machine."
+ QUESTION: "Enter LILO password, please.   []"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: lilo.conf
+ DEFAULT_ANSWER:
+ YN_TOGGLE: 0
+@@ -1415,7 +1415,7 @@
+ machines will allow an attacker to place keystrokes into the keyboard buffer
+ before he or she reaches the LILO prompt."
+ QUESTION: "Would you like to reduce the LILO delay time to zero? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: lilo.conf
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -1432,7 +1432,7 @@
+ Do you boot from your hard drive? That is, is LILO installed on your hard
+ drive?"
+ QUESTION: "Do you ever boot Linux from the hard drive? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: lilo.conf
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -1446,7 +1446,7 @@
+ LABEL: lilosub_floppy
+ SHORT_EXP: "If you have a Linux boot floppy, either for normal booting or for emergency use, you should also write these LILO changes to that floppy.  If you do not already have a customized Linux boot floppy, or if you did not choose to make any changes to your LILO configuration, you should answer \"no\" here."
+ QUESTION: "Would you like to write the LILO changes to a boot floppy? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: lilo.conf
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -1467,7 +1467,7 @@
+ 	    fd1          floppy drive
+ "
+ QUESTION: "Floppy drive device name: [fd0]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: lilo.conf
+ DEFAULT_ANSWER: fd0
+ YN_TOGGLE: 0
+@@ -1501,7 +1501,7 @@
+ here, since having to repair/ignore the damage and wait for file system
+ checks may slow the attacker down."
+ QUESTION: "Would you like to disable CTRL-ALT-DELETE rebooting? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -1526,7 +1526,7 @@
+ 
+ We HIGHLY recommend that you password protect single user mode."
+ QUESTION: "Would you like to password protect single-user mode? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB OSX
++REQUIRE_DISTRO: LINUX DB SE TB OSX GE
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -1597,7 +1597,7 @@
+ /etc/hosts.allow.  All other wrappers-based programs, like sshd, will
+ obey the default-deny."
+ QUESTION: "Would you like to set a default-deny on TCP Wrappers and xinetd? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB OSX
++REQUIRE_DISTRO: LINUX DB SE TB OSX GE
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -1633,7 +1633,7 @@
+ 
+ NOTE: Deactivating the telnetd service will not affect your telnet client."
+ QUESTION: "Should Bastille ensure the telnet service does not run on this system? [y]"
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB GE
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -1659,7 +1659,7 @@
+ NOTE: Answering \"yes\" to this question will also prevent the use of this
+ machine as an anonymous ftp server."
+ QUESTION: "Should Bastille ensure inetd's FTP service does not run on this system? [y]"
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB GE
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -1684,7 +1684,7 @@
+ Remote ignition, backup, etc. using Ignite-UX requires the remshd services
+ for remote execution of commands."
+ QUESTION: "Should Bastille ensure that the login, shell, and exec services do not run on this system?"
+-REQUIRE_DISTRO: HP-UX
++REQUIRE_DISTRO: HP-UX 
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -1925,7 +1925,7 @@
+ messages which you may then later edit.  This is sort of like an
+ \"anti-welcome mat\" for your computer."
+ QUESTION: "Would you like to display \"Authorized Use\" messages at log-in time? [Y]"
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB OSX
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB OSX GE
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -1956,7 +1956,7 @@
+ machine.  Please type in the name of the company, person, or other
+ organization who owns or is responsible for this machine."
+ QUESTION: "Who is responsible for granting authorization to use this machine?"
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB OSX
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB OSX GE
+ DEFAULT_ANSWER: "its owner"
+ YN_TOGGLE: 0
+ YES_CHILD: log_inetd
+@@ -2020,7 +2020,7 @@
+ users by disabling the compiler.  If you do chose to disable it, we'll do so by
+ only allowing root access to the compiler."
+ QUESTION: "Would you like to disable the gcc compiler? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB OSX
++REQUIRE_DISTRO: LINUX DB SE TB OSX GE
+ REQUIRE_FILE_EXISTS: gcc
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -2067,7 +2067,7 @@
+ 
+ All of these values can be edited later."
+ QUESTION: "Would you like to put limits on system resource usage? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB OSX
++REQUIRE_DISTRO: LINUX DB SE TB OSX GE
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -2084,7 +2084,7 @@
+ can disable this special access entirely, but a more flexible option is to
+ restrict console access to a small group of trusted user accounts."
+ QUESTION: "Should we restrict console access to a small group of user accounts? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -2099,7 +2099,7 @@
+ SHORT_EXP: "Please enter in the account names that should be able to login
+ via the console, placing a space between each name."
+ QUESTION: "Which accounts should be able to login at console? [root]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: root
+ YN_TOGGLE: 0
+ YES_CHILD: morelogging
+@@ -2118,7 +2118,7 @@
+ logging will not change the existing log files at all, so this is by no means
+ a \"risky\" move."
+ QUESTION: "Would you like to add additional logging? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -2141,7 +2141,7 @@
+ SHORT_EXP: "If you already have a remote logging host, we can set this
+ machine to log to it."
+ QUESTION: "Do you have a remote logging host? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -2161,7 +2161,7 @@
+       poisoning attacks on logging.  You may use a hostname, but it should be
+       added to your /etc/hosts file..."
+ QUESTION: "What is the IP address of the machine you want to log to? [127.0.0.1]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: 127.0.0.1
+ YN_TOGGLE: 0
+ YES_CHILD: pacct
+@@ -2179,7 +2179,7 @@
+ As this is rather disk and CPU intensive, please choose NO unless you have
+ carefully considered this option."
+ QUESTION: "Would you like to set up process accounting? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: accton
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -2206,7 +2206,7 @@
+ section will require careful attention, but if you have doubts, you should
+ be able to safely select the default value in most cases."
+ QUESTION:
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB OSX
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB OSX GE
+ YN_TOGGLE: 0
+ YES_EXP:
+ NO_EXP:
+@@ -2218,7 +2218,7 @@
+ SHORT_EXP: "apmd is used to monitor battery power and is used almost
+ exclusively by notebook/laptop computers."
+ QUESTION: "Would you like to disable apmd? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: chkconfig_apmd
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2246,7 +2246,7 @@
+ probably best to deactivate them until you can investigate whether or not
+ you need them and how to best secure them."
+ QUESTION: "Would you like to deactivate NFS and Samba? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: chkconfig_nfs
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2330,7 +2330,7 @@
+ devices.  If this machine has no PCMCIA ports, you should be able to disable
+ PCMCIA services without any problems."
+ QUESTION: "Would you like to disable PCMCIA services? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: chkconfig_pcmcia
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2348,7 +2348,7 @@
+ should deactivate the DHCP daemon.  Deactivating the daemon will not
+ prevent you from running DHCP as a client."
+ QUESTION: "Would you like to disable the DHCP daemon? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: chkconfig_dhcpd
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2364,7 +2364,7 @@
+ text mode. If you will be using this machine in console mode and will want
+ mouse support, leave GPM on."
+ QUESTION: "Would you like to disable GPM? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: chkconfig_gpm
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2384,7 +2384,7 @@
+ of disk space, processor power, bandwidth and maintenance.  In all but the
+ rarest of cases, you should disable the news server daemon."
+ QUESTION: "Would you like to disable the news server daemon? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: chkconfig_innd
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2408,7 +2408,7 @@
+ using routed, you should leave this on, then migrate to gated manually later.
+ (Bastille will not enable gated for you.)"
+ QUESTION: "Would you like to deactivate routed? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: chkconfig_routed
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2427,7 +2427,7 @@
+ disable routing protocols.  If this machine is acting as a router, then
+ you should leave gated on."
+ QUESTION: "Would you like to deactivate gated? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: chkconfig_gated
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2460,7 +2460,7 @@
+ We recommend that you deactivate NIS server programs. 
+ Alternatives include NIS+, LDAP, and Kerberos."
+ QUESTION: "Would you like to deactivate NIS server programs? [Y]"
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB GE
+ REQUIRE_FILE_EXISTS: ypserv
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2499,7 +2499,7 @@
+ We recommend that you deactivate NIS client programs. 
+ Alternatives include NIS+, LDAP, and Kerberos"
+ QUESTION: "Would you like to deactivate NIS client programs? [Y]"
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB GE
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -2530,7 +2530,7 @@
+ Network management software, such as HP Openview, which relies
+ on SNMP"
+ QUESTION: "Would you like to disable SNMPD? [Y]"
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB GE
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -2739,7 +2739,7 @@
+ POP/IMAP read  functionality.  The only reason to run sendmail in daemon
+ mode is if you are running a mail server."
+ QUESTION: "Do you want to stop sendmail from running in daemon mode? [Y]"
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB GE
+ REQUIRE_FILE_EXISTS: sysconfig_sendmail
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2766,7 +2766,7 @@
+ 
+ NOTE: The 15 minute interval can be easily changed later, see crontab(1)."
+ QUESTION: "Would you like to run sendmail via cron to process the queue? [N]"
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB GE
+ REQUIRE_FILE_EXISTS: sysconfig_sendmail
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2790,7 +2790,7 @@
+ (2) you are using them to debug your own mail server, or (3) the very small
+ chance that some software you use relies on this."
+ QUESTION: "Would you like to disable the VRFY and EXPN sendmail commands? [Y]"
+-REQUIRE_DISTRO: LINUX HP-UX DB SE TB
++REQUIRE_DISTRO: LINUX HP-UX DB SE TB GE
+ REQUIRE_FILE_EXISTS: sendmail.cf
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2851,7 +2851,7 @@
+ (MANUAL ACTION REQUIRED TO COMPLETE THIS CONFIGURATION,
+ see TODO list for details)"
+ QUESTION: "Would you like to chroot named and set it to run as a non-root user? [N]"
+-REQUIRE_DISTRO: LINUX HP-UX
++REQUIRE_DISTRO: LINUX HP-UX GE
+ REQUIRE_FILE_EXISTS: named
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -2893,7 +2893,7 @@
+ deactivate it for now until you get the configuration files setup.   You
+ can reactivate it then by typing, as root:     /sbin/chkconfig named on  "
+ QUESTION: "Would you like to deactivate named, at least for now? [Y]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ REQUIRE_FILE_EXISTS: chkconfig_named
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2933,7 +2933,7 @@
+       /sbin/chkconfig httpd on
+ "
+ QUESTION: "Would you like to deactivate the Apache web server? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: chkconfig_httpd
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -2969,7 +2969,7 @@
+ it doesn't represent as great a risk if it isn't set to allow
+ connections from the entire internet."
+ QUESTION: "Would you like to bind the web server to listen only to the localhost? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: httpd
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -2988,7 +2988,7 @@
+ web server.  This is highly recommended if you're building an internal-only
+ web server."
+ QUESTION: "Would you like to bind the web server to a particular interface? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: httpd
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -3008,7 +3008,7 @@
+  or
+      10.0.0.1:8080"
+ QUESTION: "Address to bind the web server to? [127.0.0.1]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: httpd
+ YN_TOGGLE: 0
+ DEFAULT_ANSWER: 127.0.0.1
+@@ -3030,7 +3030,7 @@
+   under which any user on the system can instruct the server to execute
+   arbitrary code for anyone who comes to the site, via CGI scripts."
+ QUESTION:
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: httpd
+ YN_TOGGLE: 0
+ YES_EXP:
+@@ -3053,7 +3053,7 @@
+ vulnerability in Apache could be exploited to alter world writeable files
+ on the system."
+ QUESTION: "Would you like to deactivate the following of symbolic links? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: httpd
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -3071,7 +3071,7 @@
+ web pages, but they represent a security risk you may not want to take until
+ you better understand the Apache web server."
+ QUESTION: "Would you like to deactivate server-side includes? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: httpd
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -3097,7 +3097,7 @@
+ dangerous, but they need to be very carefully controlled by people who
+ understand the dangers."
+ QUESTION: "Would you like to disable CGI scripts, at least for now? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: httpd
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 1
+@@ -3124,7 +3124,7 @@
+ breaking the most obvious rule of web site creation, \"don't put any sensitive
+ files in a web directory with world readable permissions!\" "
+ QUESTION: "Would you like to disable indexes? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: httpd
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -3222,7 +3222,7 @@
+ in the near future.  If you deactivate this, you might want to write
+ down the commands above in case you decide to re-enable printing later."
+ QUESTION: "Would you like to disable printing? [N]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ REQUIRE_FILE_EXISTS: lpd
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -3255,7 +3255,7 @@
+ in the near future.  If you deactivate this, you might want to write
+ down the commands above in case you decide to re-enable printing later."
+ QUESTION: "Would you like to disable printing? [N]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ REQUIRE_FILE_EXISTS: cupsd
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -3325,7 +3325,7 @@
+ "
+ REQUIRE_FILE_EXISTS: ftpaccess
+ QUESTION:
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ YN_TOGGLE: 0
+ YES_EXP:
+ NO_EXP:
+@@ -3362,7 +3362,7 @@
+ If this is a 3 account server, that kind of user education may be quite
+ possible."
+ QUESTION: "Would you like to disable user privileges on the FTP daemon? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: ftpaccess
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -3380,7 +3380,7 @@
+ secure Apache web server.  Any files that you want accessible to the world
+ can be placed on an easy-to-configure web server."
+ QUESTION: "Would you like to disable anonymous download? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ REQUIRE_FILE_EXISTS: ftpaccess
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -3933,7 +3933,7 @@
+ 
+ This script supports both kernel 2.2 (ipchains) and 2.4 (iptables if available, otherwise ipchains)."
+ QUESTION: "Would you like to run the packet filtering script? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: End_Screen
+ DEFAULT_ANSWER: N
+ YN_TOGGLE: 1
+@@ -3946,7 +3946,7 @@
+ 
+ LABEL: ip_detail_level_kludge
+ QUESTION:
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_exp_type
+ DEFAULT_ANSWER: Y
+ YN_TOGGLE: 0
+@@ -3975,7 +3975,7 @@
+ Unless you really understand networking, you should ask for more information on most
+ of the options in this script."
+ QUESTION:
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ YN_TOGGLE: 0
+ YES_EXP:
+ NO_EXP:
+@@ -3992,7 +3992,7 @@
+ If this is a server that deals with multiple interfaces or provides IP
+ Masquerading/NAT service, then you do need the advanced networking options."
+ QUESTION: "Do you need the advanced networking options?"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_dns
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+@@ -4027,7 +4027,7 @@
+ What you answer is important if you use kernel 2.2/ipchains, but makes no
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "DNS servers: [0.0.0.0/0]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_trustiface
+ DEFAULT_ANSWER: 0.0.0.0/0
+ CONFIRM_TEXT: " \nY"
+@@ -4051,7 +4051,7 @@
+ List the interface names of all interfaces you want to have unrestricted
+ access to this machine. You should at least trust \"lo\", the \"loopback\" interface."
+ QUESTION: "Trusted interface names: [lo]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_publiciface
+ DEFAULT_ANSWER: lo
+ CONFIRM_TEXT: " \nY"
+@@ -4073,7 +4073,7 @@
+ Using the \"+\" suffix allows you to configure more interfaces (for
+ instance, more PPP dialup entries) without having to modify the firewall script. "
+ QUESTION: "Public interfaces: [eth+ ppp+ slip+]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_internaliface
+ DEFAULT_ANSWER: eth+ ppp+ slip+
+ YN_TOGGLE: 0
+@@ -4097,7 +4097,7 @@
+ 
+ Normal workstations should leave this as the empty default. "
+ QUESTION: "Internal interfaces: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_tcpaudit
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4121,7 +4121,7 @@
+ attempts to several services, although you may not have them installed or enabled. "
+ QUESTION: "TCP services to audit: [telnet ftp imap pop3 finger sunrpc exec login
+ linuxconf ssh]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_udpaudit
+ DEFAULT_ANSWER: telnet ftp imap pop3 finger sunrpc exec login linuxconf ssh
+ CONFIRM_TEXT: " \nY"
+@@ -4145,7 +4145,7 @@
+ While attackers probing for Back Orifice may not pose a threat to your
+ Linux system, logging their attempts helps identify the \"bad guys\" "
+ QUESTION: "UDP services to audit: [31337]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_icmpaudit
+ DEFAULT_ANSWER: 31337
+ CONFIRM_TEXT: " \nY"
+@@ -4162,7 +4162,7 @@
+ as types, not numbers. One example is \"echo-request\" which is used by Microsoft ping
+ and tracert [sic] clients."
+ QUESTION: "ICMP services to audit: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_publictcp
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4195,7 +4195,7 @@
+ Not doing so means you will be able to access the service locally, but \"public\"
+ hosts will not."
+ QUESTION: "TCP service names or port numbers to allow on public interfaces:[ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_publicudp
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4212,7 +4212,7 @@
+ services  available, but if you're running caching or real DNS servers, you will need
+ to enable domain (port 53)."
+ QUESTION: "UDP service names or port numbers to allow on public interfaces:[ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_internaltcp
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4241,7 +4241,7 @@
+ case you would set this value to \"smtp imap\". This does not affect IP Masquerading's
+ ability to let masq'ed users access any services on outside/Internet hosts. "
+ QUESTION: "TCP service names or port numbers to allow on private interfaces: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_internaludp
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4263,7 +4263,7 @@
+ As with internal TCP. You do not need to enable domain service if the
+ internal clients are using IP Masq to query outside DNS servers. "
+ QUESTION: "UDP service names or port numbers to allow on private interfaces: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_passiveftp
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4298,7 +4298,7 @@
+ What you answer is important if you use kernel 2.2/ipchains, but makes no
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "Force passive mode? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: N
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 1
+@@ -4328,7 +4328,7 @@
+ What you answer is important if you use kernel 2.2/ipchains, but makes no
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "TCP services to block: [2049 2065:2090 6000:6020 7100]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_udpblock
+ DEFAULT_ANSWER: 2049 2065:2090 6000:6020 7100
+ CONFIRM_TEXT: " \nY"
+@@ -4349,7 +4349,7 @@
+ What you answer is important if you use kernel 2.2/ipchains, but makes no
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "UDP services to block: [2049 6770]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_icmpallowed
+ DEFAULT_ANSWER: 2049 6770
+ CONFIRM_TEXT: " \nY"
+@@ -4374,7 +4374,7 @@
+ able to use ping and traceroute to debug issues on the \"public\" networks. "
+ QUESTION: "ICMP allowed types: [destination-unreachable echo-reply time-exceeded]"
+ SKIP_CHILD: ip_s_srcaddr
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: destination-unreachable echo-reply time-exceeded
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 0
+@@ -4394,7 +4394,7 @@
+ 
+ This is a standard, and highly recommended, precaution. "
+ QUESTION: "Enable source address verification? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: Y
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 1
+@@ -4423,7 +4423,7 @@
+ Note this expects _network_ addresses (either with 0's on the end or with
+ explicit netmasks), _not_ interface names. "
+ QUESTION: "Masqueraded networks: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_kernelmasq
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4441,7 +4441,7 @@
+ name should have the usual prefix, e.g. \"raudio\" will cause the script to load the
+ \"ip_masq_raudio\" module."
+ QUESTION: "Kernel modules to masquerade: [ftp raudio vdolive]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_rejectmethod
+ DEFAULT_ANSWER: ftp raudio vdolive
+ CONFIRM_TEXT: " \nY"
+@@ -4468,7 +4468,7 @@
+ There's no definite right answer here. With DENY, your machine will be less
+ visible, especially if using kernel 2.4/iptables. "
+ QUESTION: "Reject method: [DENY]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_dhcpiface
+ DEFAULT_ANSWER: DENY
+ CONFIRM_TEXT: " \nY"
+@@ -4489,7 +4489,7 @@
+ What you answer is important if you use kernel 2.2/ipchains, but makes no
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "Interfaces for DHCP queries: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_ntpsrv
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4518,7 +4518,7 @@
+ What you answer is important if you use kernel 2.2/ipchains, but makes no
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "NTP servers to query: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_s_icmpout
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4540,7 +4540,7 @@
+ \"destination-unreachable\" is (ab)used by the traceroute program to check
+ routing to individual hosts. "
+ QUESTION: "ICMP types to disallow outbound: [destination-unreachable time-exceeded]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_enable_firewall
+ DEFAULT_ANSWER: destination-unreachable time-exceeded
+ CONFIRM_TEXT: " \nY"
+@@ -4583,7 +4583,7 @@
+ What you answer is important if you use kernel 2.2/ipchains, but makes no
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "DNS Servers: [0.0.0.0/0]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_trustiface
+ DEFAULT_ANSWER: 0.0.0.0/0
+ CONFIRM_TEXT: " \nY"
+@@ -4596,7 +4596,7 @@
+ 
+ LABEL: ip_b_trustiface
+ DEFAULT_ANSWER: lo
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_publiciface
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 0
+@@ -4617,7 +4617,7 @@
+ Using the \"+\" suffix allows you to configure more interfaces (for
+ instance, more PPP dialup entries) without having to modify the firewall script. "
+ QUESTION: "Public interfaces: [eth+ ppp+ slip+]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_internaliface
+ DEFAULT_ANSWER: eth+ ppp+ slip+
+ CONFIRM_TEXT: " \nY"
+@@ -4631,7 +4631,7 @@
+ LABEL: ip_b_internaliface
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_tcpaudit
+ YN_TOGGLE: 0
+ YES_EXP:
+@@ -4653,7 +4653,7 @@
+ attempts to several services, although you may not have them installed or enabled. "
+ QUESTION: "TCP services to audit: [telnet ftp imap pop3 finger sunrpc exec login
+ linuxconf ssh]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_udpaudit
+ DEFAULT_ANSWER: telnet ftp imap pop3 finger sunrpc exec login linuxconf ssh
+ CONFIRM_TEXT: " \nY"
+@@ -4677,7 +4677,7 @@
+ While attackers probing for Back Orifice may not pose a threat to your
+ Linux system, logging their attempts helps identify the \"bad guys\" "
+ QUESTION: "UDP services to audit: [31337]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_icmpaudit
+ DEFAULT_ANSWER: 31337
+ CONFIRM_TEXT: " \nY"
+@@ -4694,7 +4694,7 @@
+ as types, not numbers. One example is \"echo-request\" which is used by Microsoft ping
+ and tracert [sic] clients."
+ QUESTION: "ICMP services to audit: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_publictcp
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4727,7 +4727,7 @@
+ Not doing so means you will be able to access the service locally, but \"public\"
+ hosts will not."
+ QUESTION: "TCP service names or port numbers to allow on public interfaces: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_publicudp
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4744,7 +4744,7 @@
+ services  available, but if you're running caching or real DNS servers, you will need
+ to enable domain (port 53)."
+ QUESTION: "UDP service names or port numbers to allow on public interfaces: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_passiveftp
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -4758,7 +4758,7 @@
+ LABEL: ip_b_internaltcp
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_internaludp
+ YN_TOGGLE: 0
+ YES_EXP:
+@@ -4770,7 +4770,7 @@
+ LABEL: ip_b_internaludp
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_passiveftp
+ YN_TOGGLE: 0
+ YES_EXP:
+@@ -4806,7 +4806,7 @@
+ What you answer is important if you use kernel 2.2/ipchains, but makes no
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "Force passive mode? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: N
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 1
+@@ -4840,7 +4840,7 @@
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "TCP services to block: [2049 2065:2090 6000:6020 7100]"
+ DEFAULT_ANSWER: 2049 2065:2090 6000:6020 7100
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_udpblock
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 0
+@@ -4860,7 +4860,7 @@
+ What you answer is important if you use kernel 2.2/ipchains, but makes no
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "UDP services to block: [2049 6770]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_icmpallowed
+ DEFAULT_ANSWER: 2049 6770
+ CONFIRM_TEXT: " \nY"
+@@ -4884,7 +4884,7 @@
+ getting into. If you don't allow \"echo-reply\" and \"time-exceeded\", you won't be
+ able to use ping and traceroute to debug issues on the \"public\" networks. "
+ QUESTION: "ICMP allowed types: [destination-unreachable echo-reply time-exceeded]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_srcaddr
+ DEFAULT_ANSWER: destination-unreachable echo-reply time-exceeded
+ CONFIRM_TEXT: " \nY"
+@@ -4905,7 +4905,7 @@
+ 
+ This is a standard, and highly recommended, precaution. "
+ QUESTION: "Enable source address verification? [Y]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ DEFAULT_ANSWER: Y
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 1
+@@ -4918,7 +4918,7 @@
+ 
+ LABEL: ip_b_ipmasq
+ DEFAULT_ANSWER:
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_kernelmasq
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 0
+@@ -4930,7 +4930,7 @@
+ 
+ LABEL: ip_b_kernelmasq
+ DEFAULT_ANSWER: ftp raudio vdolive
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_rejectmethod
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 0
+@@ -4956,7 +4956,7 @@
+ _completely_ invisible, even if you choose \"DENY\", but with \"DENY\" and _no_ public
+ services, you will not be visible to casual probes. "
+ QUESTION: "Reject method: [DENY]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_dhcpiface
+ DEFAULT_ANSWER: DENY
+ CONFIRM_TEXT: " \nY"
+@@ -4977,7 +4977,7 @@
+ What you answer is important if you use kernel 2.2/ipchains, but makes no
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "Interfaces for DHCP queries: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_ntpsrv
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -5006,7 +5006,7 @@
+ What you answer is important if you use kernel 2.2/ipchains, but makes no
+ difference if you use kernel 2.4 and iptables."
+ QUESTION: "NTP servers to query: [ ]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_b_icmpout
+ DEFAULT_ANSWER:
+ CONFIRM_TEXT: " \nY"
+@@ -5028,7 +5028,7 @@
+ \"destination-unreachable\" is (ab)used by the traceroute program to check
+ routing to individual hosts. "
+ QUESTION: "ICMP types to disallow outbound: [destination-unreachable time-exceeded]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ SKIP_CHILD: ip_enable_firewall
+ DEFAULT_ANSWER: destination-unreachable time-exceeded
+ CONFIRM_TEXT: " \nY"
+@@ -5040,17 +5040,16 @@
+ PROPER_PARENT: ip_b_ntpsrv
+ 
+ LABEL: ip_enable_firewall
+-SHORT_EXP: "The firewall is controlled by /etc/rc.d/init.d/bastille-firewall.  The
++SHORT_EXP: "The firewall is controlled by /etc/init.d/bastille-firewall.  The
+ configuration file is /etc/Bastille/bastille-firewall.cfg, which you may modify.
+ After it has been installed, you can then test the firewall by using
+-      /etc/rc.d/init.d/bastille-firewall start
++      /etc/init.d/bastille-firewall start
+ and (to remove all firewall rules)
+-      /etc/rc.d/init.d/bastille-firewall stop
++      /etc/init.d/bastille-firewall stop
+ 
+  Once you have a configuration that will work on your system, you can make it
+  run at every normal boot-up by typing
+-     /sbin/chkconfig --add bastille-firewall
+-     /sbin/chkconfig bastille-firewall reset
++     rc-update add bastille-firewall default
+ 
+ If you are confident of your selections, Bastille can start the firewall
+ and configure it to run at boot time for you.
+@@ -5058,7 +5057,7 @@
+ ** It is strongly recommended that you answer N if you are not logged in to
+    the system's console, as your network access my be blocked by the firewall. **"
+ QUESTION: "Should Bastille run the firewall and enable it at boot time? [N]"
+-REQUIRE_DISTRO: LINUX DB SE TB
++REQUIRE_DISTRO: LINUX DB SE TB GE
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+ YES_EXP:
+@@ -5082,7 +5081,7 @@
+ 
+ NOTE: For psad to be effective, it is required that the firewall is active."
+ QUESTION: "Would you like to setup PSAD?"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+ DEFAULT_ANSWER: N
+@@ -5103,7 +5102,7 @@
+ alerts and utilize much of your systems resources if your machine is subjected to a
+ high-traffic scan."
+ QUESTION: "psad check interval: [15]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ DEFAULT_ANSWER: 15
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 0
+@@ -5125,7 +5124,7 @@
+ ignore the traffic. This also implies that multiple packets sent to the same port do
+ not qualify as a port scan."
+ QUESTION: "Port range scan threshold: [1]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ DEFAULT_ANSWER: 1
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 0
+@@ -5146,7 +5145,7 @@
+ The default is N since most scans are easily recognizable within a short time interval
+ which is configured in the next question box if you leave this value as N."
+ QUESTION: "Enable scan persistence?"
+-REQUIRE_DISTRO:  LINUX
++REQUIRE_DISTRO:  LINUX GE
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+ DEFAULT_ANSWER: N
+@@ -5165,7 +5164,7 @@
+ 
+ The default is 3600 seconds (one hour)."
+ QUESTION: "Scan timeout: [3600]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ DEFAULT_ANSWER: 3600
+ CONFIRM_TEXT: " \nY"
+ YN_TOGGLE: 0
+@@ -5186,7 +5185,7 @@
+ The default is N since the email record will already contain just the most recently
+ matched signatures."
+ QUESTION: "Show all scan signatures?"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+ DEFAULT_ANSWER: N
+@@ -5208,7 +5207,7 @@
+ Danger Level 4 = 5000 packets
+ Danger Level 5 = 10000 packets"
+ QUESTION: "Danger Levels: [5 50 1000 5000 10000]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ DEFAULT_ANSWER: 5 50 1000 5000 10000
+ YN_TOGGLE: 0
+ YES_EXP:
+@@ -5224,7 +5223,7 @@
+ 
+ The default email address is root@localhost."
+ QUESTION: "Email addresses: [root@localhost]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ DEFAULT_ANSWER: root@localhost
+ YN_TOGGLE: 0
+ YES_EXP:
+@@ -5241,7 +5240,7 @@
+ 
+ The default danger level is 1."
+ QUESTION: "Email alert danger level: [1]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ DEFAULT_ANSWER: 1
+ YN_TOGGLE: 0
+ YES_EXP:
+@@ -5258,7 +5257,7 @@
+ The default is Y since once a scan reaches the threshold assigned in the previous
+ section you will probably want as much information on it as psad can produce."
+ QUESTION: "Alert on all new packets?"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+ DEFAULT_ANSWER: Y
+@@ -5283,7 +5282,7 @@
+ feature and the next section will ask you to define a corresponding danger
+ threshold."
+ QUESTION: "Enable automatic blocking of scanning IPs?"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+ DEFAULT_ANSWER: N
+@@ -5302,7 +5301,7 @@
+ 
+ The default danger level is 5."
+ QUESTION: "Auto blocking danger level: [5]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ DEFAULT_ANSWER: 5
+ YN_TOGGLE: 0
+ YES_EXP:
+@@ -5313,15 +5312,15 @@
+ 
+ LABEL: psad_enable_at_boot
+ SHORT_EXP: "The Port Scan Attack Detector is controlled by a standard Sys V style
+-init script, /etc/rc.d/init.d/psad.  To start the psad daemons, simply execute
+-        /etc/rc.d/init.d/psad start
++init script, /etc/init.d/psad.  To start the psad daemons, simply execute
++        /etc/init.d/psad start
+ and to stop psad, execute
+-        /etc/rc.d/init.d/psad stop
++        /etc/init.d/psad stop
+ 
+ Bastille can configure your system to start psad at boot time by executing
+-        chkconfig psad on."
++        rc-update add psad default"
+ QUESTION: "Should Bastille enable psad at boot time? [N]"
+-REQUIRE_DISTRO: LINUX
++REQUIRE_DISTRO: LINUX GE
+ YN_TOGGLE: 1
+ REG_EXP: "^Y$|^N$"
+ YES_EXP:
+diff -urN Bastille/bastille-firewall Bastille2/bastille-firewall
+--- Bastille/bastille-firewall	2002-02-24 12:19:14.000000000 -0500
++++ Bastille2/bastille-firewall	2003-08-02 05:02:58.000000000 -0400
+@@ -26,8 +26,8 @@
+ #
+ # It should be run with a "start" argument
+ #	1) as an rc?.d "S" script, _before_ the "network" script
+-# [copy this to /etc/rc.d/init.d/bastille-firewall (or your equivalent of 
+-#  /etc/rc.d/init.d) and run 'chkconfig -add bastille-firewall' ]
++# [copy this to /etc/init.d/bastille-firewall (or your equivalent of 
++#  /etc/init.d) and run 'rc-update add bastille-firewall default' ]
+ #	2) any time an interface is brought up or changed, e.g.
+ #	   establishing a PPP conection or renewing a DHCP lease
+ # [copy 'bastille-firewall-reset', 'bastille-firewall-schedule'
+diff -urN Bastille/bastille-firewall-install.sh Bastille2/bastille-firewall-install.sh
+--- Bastille/bastille-firewall-install.sh	2002-01-24 23:44:26.000000000 -0500
++++ Bastille2/bastille-firewall-install.sh	2003-08-02 05:02:58.000000000 -0400
+@@ -76,10 +76,10 @@
+   exit 3
+ fi
+ 
+-initdbase=""
+-for t in /etc /etc/rc.d ; do
+-  [ -d ${t}/init.d ] && initdbase="${t}"
+-done
++initdbase="/etc"
++#for t in /etc /etc/rc.d ; do
++#  [ -d ${t}/init.d ] && initdbase="${t}"
++#done
+ if [ -z "${initdbase}" ]; then
+   echo "ERROR: Cannot find init.d directory; unable to install"
+   exit 1
+@@ -235,10 +235,11 @@
+ app_available chkconfig && chk=1
+ rcd=0
+ app_available update-rc.d && rcd=1
+-ci=`chkconfig --list bastille-firewall 2>/dev/null | grep :on`
+-dtest=`ls ${initdbase}/rc3.d/[SK]??bastille-firewall 2>/dev/null`
++#ci=`chkconfig --list bastille-firewall 2>/dev/null | grep :on`
++chk=1
++dtest=`ls /etc/runlevels/default/bastille-firewall 2>/dev/null`
+ if [ $c -eq 1 ]; then
+-  if [ \( $chk -eq 1 -a -z "${ci}" \) -o \( $rcd -eq 1 -a -z "${dtest}" \) ]; then
++  if [ \( $chk -eq 1 \) -o \( $rcd -eq 1 -a -z "${dtest}" \) ]; then
+     echo
+     echo "You may configure bastille-firewall to run automatically; we"
+     echo "recommend you examine $CFG"
+@@ -247,8 +248,7 @@
+     enable=$?
+     if [ $enable -eq 1 ]; then
+       if [ $chk -eq 1 ]; then
+-        chkconfig --add bastille-firewall
+-        chkconfig --level 2345 bastille-firewall on
++        rc-update add bastille-firewall default
+         rc=$?
+       else
+         update-rc.d -f bastille-firewall remove 2>/dev/null
+@@ -289,12 +289,12 @@
+   done
+ fi
+ 
+-echo
+-get_answer "Start/reload bastille-firewall rules?"
+-reload=$?
+-if [ $reload -eq 1 ]; then
+-  ${initdbase}/init.d/bastille-firewall start
+-fi
++#echo
++#get_answer "Start/reload bastille-firewall rules?"
++#reload=$?
++#if [ $reload -eq 1 ]; then
++#  ${initdbase}/init.d/bastille-firewall start
++#fi
+ 
+ echo
+ echo "Finished $what bastille-firewall"
+diff -urN Bastille/psad/install.pl Bastille2/psad/install.pl
+--- Bastille/psad/install.pl	2002-09-23 22:06:20.000000000 -0400
++++ Bastille2/psad/install.pl	2003-08-02 05:02:58.000000000 -0400
+@@ -54,7 +54,7 @@
+ #============== config ===============
+ my $INSTALL_LOG  = "${PSAD_DIR}/install.log";
+ my $PSAD_FIFO    = "${LIBDIR}/psadfifo";
+-my $INIT_DIR     = '/etc/rc.d/init.d';
++my $INIT_DIR     = '/etc/init.d';
+ my $SBIN_DIR     = '/usr/sbin';  ### consistent with FHS (Filesystem Hierarchy Standard)
+ my $CONF_ARCHIVE = "${PSAD_CONFDIR}/archive";
+ my @LOGR_FILES   = (*STDOUT, $INSTALL_LOG);
+@@ -62,7 +62,7 @@
+ my $WHOIS_PSAD   = '/usr/bin/whois.psad';
+ 
+ ### system binaries ###
+-my $chkconfigCmd = '/sbin/chkconfig';
++my $chkconfigCmd = '/sbin/rc-update';
+ my $mknodCmd     = '/bin/mknod';
+ my $makeCmd      = '/usr/bin/make';
+ my $findCmd      = '/usr/bin/find';
+@@ -411,6 +411,16 @@
+             &logr("@@@@@  The init script directory, \"${INIT_DIR}\" does not exist!.\n");
+             &logr("Edit the \$INIT_DIR variable in the config section to point to where the init scripts are.\n");
+         }
++    elsif ($distro =~ /gentoo/) {
++        if ( -d $INIT_DIR) {
++            &logr(" ... Gentoo found. Copying psad-init.generic -> ${INIT_DIR}/psad\n");
++            copy('psad-init.generic', "${INIT_DIR}/psad");
++            &perms_ownership("${INIT_DIR}/psad", 0744);
++            &enable_psad_at_boot($distro);
++        } else {
++            &logr("@@@@@  The init script directory, \"${INIT_DIR}\" does not exist!.\n");
++            &logr("Edit the \$INIT_DIR variable in the config section to point to where the init scripts are.\n");
++        }
+     } else {  ### psad is being installed on a non-redhat distribution
+         if (-d $INIT_DIR) {
+             &logr(" ... Copying psad-init.generic -> ${INIT_DIR}/psad\n");
+@@ -567,6 +577,8 @@
+         }
+         close ISSUE;
+         return 'NA';
++    } elsif (-e '/etc/gentoo-release') {
++        return 'gentoo';
+     } else {
+         return 'NA';
+     }
+@@ -740,7 +752,9 @@
+     if ($ans eq 'y') {
+         if ($distro =~ /redhat/) {
+             system "$Cmds{'chkconfig'} --add psad";
+-        } else {  ### it is a non-redhat distro, try to get the runlevel from /etc/inittab
++        } elsif ($distro =~ /gentoo/) {
++	    system "$Cmds{'chkconfigCmd'} add psad default";
++	} else {  ### it is a non-redhat distro, try to get the runlevel from /etc/inittab
+             if ($RUNLEVEL) {
+                 unless (-e "/etc/rc.d/rc${RUNLEVEL}.d/S99psad") {  ### the link already exists, so don't re-create it
+                     symlink '/etc/rc.d/init.d/psad', "/etc/rc.d/rc${RUNLEVEL}.d/S99psad";
+diff -urN Bastille/psad/psad Bastille2/psad/psad
+--- Bastille/psad/psad	2002-09-23 22:06:20.000000000 -0400
++++ Bastille2/psad/psad	2003-08-02 05:23:15.000000000 -0400
+@@ -228,7 +228,8 @@
+ 
+ ### disable whois lookups if for some reason the whois client that is 
+ ### bundled with psad can't be found
+-$whoislookups = 1 if ($Cmds{'whois.psad'} !~ /psad/);
++#$whoislookups = 1 if ($Cmds{'whois.psad'} !~ /psad/);
++$whoislookups = 0;
+ 
+ ### if psad is running on a syslog server, don't check the firewall 
+ ### rules since they may not be local.
+@@ -1611,20 +1612,20 @@
+     unless (-e $Config{'PSAD_FIFO'}) {
+         system "$Cmds{'mknod'} -m 600 $Config{'PSAD_FIFO'} p";
+     }
+-    copy('/etc/syslog.conf', '/etc/syslog.conf.orig') unless (-e '/etc/syslog.conf.orig');
+-    open RS, '< /etc/syslog.conf' or die " ... @@@  Unable to open /etc/syslog.conf: $!";
+-    my @slines = <RS>;
+-    close RS;
+-    open SYSLOG, '> /etc/syslog.conf' or die " ... @@@  Unable to open /etc/syslog.conf: $!";
+-    for my $l (@slines) {
+-        chomp $l;
+-        unless ($l =~ /psadfifo/) {
+-            print SYSLOG "$l\n";
+-        }
+-    }
+-    print SYSLOG "kern.info		|$Config{'PSAD_FIFO'}\n\n";  ### reinstate kernel logging to our named pipe
+-    close SYSLOG;
+-    system "$Cmds{'killall'} -HUP $Cmds{'syslogd'}";
++#    copy('/etc/syslog.conf', '/etc/syslog.conf.orig') unless (-e '/etc/syslog.conf.orig');
++#    open RS, '< /etc/syslog.conf' or die " ... @@@  Unable to open /etc/syslog.conf: $!";
++#    my @slines = <RS>;
++#    close RS;
++#    open SYSLOG, '> /etc/syslog.conf' or die " ... @@@  Unable to open /etc/syslog.conf: $!";
++#    for my $l (@slines) {
++#        chomp $l;
++#        unless ($l =~ /psadfifo/) {
++#            print SYSLOG "$l\n";
++#        }
++#    }
++#    print SYSLOG "kern.info		|$Config{'PSAD_FIFO'}\n\n";  ### reinstate kernel logging to our named pipe
++#    close SYSLOG;
++#    system "$Cmds{'killall'} -HUP $Cmds{'syslogd'}";
+     return;
+ }
+ sub check_config() {
+diff -urN Bastille/psad/psad-init Bastille2/psad/psad-init
+--- Bastille/psad/psad-init	2002-09-23 22:06:20.000000000 -0400
++++ Bastille2/psad/psad-init	2003-08-02 05:02:58.000000000 -0400
+@@ -8,10 +8,7 @@
+ # pidfile: /var/run/psad.pid
+ # config: /etc/psad/psad.conf
+ #
+-# $Id: bastille-2.1.1.patch,v 1.1 2003/08/02 10:13:47 seemant Exp $
+-
+-# Source function library.
+-. /etc/rc.d/init.d/functions
++# $Id: bastille-2.1.1.patch,v 1.1 2003/08/02 10:13:47 seemant Exp $
+ 
+ restart() {
+     $0 stop
+@@ -21,48 +18,18 @@
+ # See how we were called.
+ case "$1" in
+ start)
+-    if grep -q psadfifo /etc/syslog.conf; then
+-        echo -n "Starting the psad daemons: "
+-        daemon /usr/sbin/psad -s /etc/psad/psad_signatures -a /etc/psad/psad_auto_ips
+-        RETVAL=$?
+-        echo
+-        if [ $RETVAL -eq 0 ]; then
+-            touch /var/lock/subsys/psad
+-        fi
+-    else
+-        echo "Syslog has not been configured to send kern.info messages to"
+-        echo "/var/lib/psad/psadfifo.  Do you need to run the psad installer?"
+-    fi
++    /usr/sbin/psad -s /etc/psad/psad_signatures -a /etc/psad/psad_auto_ips
+     ;;
+ stop)
+-    echo -n "Shutting down the psadwatchd monitoring daemon: "
+-        killproc psadwatchd
+-        echo
+-        echo -n "Shutting down the psad daemon: "
+-        killproc psad
+-    RETVAL=$?
+-    [ $RETVAL -eq 0 ] && rm -f /var/lock/subsys/psad
+-    echo
+-    echo -n "Shutting down the kmsgs daemon: "
+-    killproc kmsgsd
+-    echo
+-    echo -n "Shutting down the disk monitoring daemon: "
+-    killproc diskmond
+-    echo
++    /usr/sbin/psad --Kill
+     ;;
+ status)
+-    status kmsgsd
+-    status psad 
+-    status psadwatchd
+-    status diskmond
++    /usr/sbin/psad --Status
+     ;;
+-restart|reload)
++restart)
+     restart
+     ;;
+-condrestart)
+-    [ -f /var/lock/subsys/psad ] && restart || :
+-    ;;
+ *)
+-    echo "Usage: psad {start|stop|status|restart|reload|condrestart}"
++    echo "Usage: psad {start|stop|status|restart}"
+     exit 1
+ esac
+diff -urN Bastille/psad/psad-init.redhat Bastille2/psad/psad-init.redhat
+--- Bastille/psad/psad-init.redhat	1969-12-31 19:00:00.000000000 -0500
++++ Bastille2/psad/psad-init.redhat	2003-08-02 05:02:58.000000000 -0400
+@@ -0,0 +1,68 @@
++#!/bin/sh
++#
++# Startup script for psad
++#
++# chkconfig: 345 99 05
++# description: The Port Scan Attack Detector (psad)
++# processname: psad
++# pidfile: /var/run/psad.pid
++# config: /etc/psad/psad.conf
++#
++# $Id: bastille-2.1.1.patch,v 1.1 2003/08/02 10:13:47 seemant Exp $
++
++# Source function library.
++. /etc/rc.d/init.d/functions
++
++restart() {
++    $0 stop
++    $0 start
++}
++
++# See how we were called.
++case "$1" in
++start)
++    if grep -q psadfifo /etc/syslog.conf; then
++        echo -n "Starting the psad daemons: "
++        daemon /usr/sbin/psad -s /etc/psad/psad_signatures -a /etc/psad/psad_auto_ips
++        RETVAL=$?
++        echo
++        if [ $RETVAL -eq 0 ]; then
++            touch /var/lock/subsys/psad
++        fi
++    else
++        echo "Syslog has not been configured to send kern.info messages to"
++        echo "/var/lib/psad/psadfifo.  Do you need to run the psad installer?"
++    fi
++    ;;
++stop)
++    echo -n "Shutting down the psadwatchd monitoring daemon: "
++        killproc psadwatchd
++        echo
++        echo -n "Shutting down the psad daemon: "
++        killproc psad
++    RETVAL=$?
++    [ $RETVAL -eq 0 ] && rm -f /var/lock/subsys/psad
++    echo
++    echo -n "Shutting down the kmsgs daemon: "
++    killproc kmsgsd
++    echo
++    echo -n "Shutting down the disk monitoring daemon: "
++    killproc diskmond
++    echo
++    ;;
++status)
++    status kmsgsd
++    status psad 
++    status psadwatchd
++    status diskmond
++    ;;
++restart|reload)
++    restart
++    ;;
++condrestart)
++    [ -f /var/lock/subsys/psad ] && restart || :
++    ;;
++*)
++    echo "Usage: psad {start|stop|status|restart|reload|condrestart}"
++    exit 1
++esac
+diff -urN Bastille/psad/psad.conf Bastille2/psad/psad.conf
+--- Bastille/psad/psad.conf	2002-09-23 22:06:20.000000000 -0400
++++ Bastille2/psad/psad.conf	2003-08-02 05:27:19.000000000 -0400
+@@ -103,11 +103,9 @@
+ mailCmd        /bin/mail;
+ ifconfigCmd    /sbin/ifconfig;
+ grepCmd        /bin/grep;
+-syslogdCmd     /sbin/syslogd;
+ killallCmd     /usr/bin/killall;
+ netstatCmd     /bin/netstat;
+ unameCmd       /bin/uname;
+-whoisCmd       /usr/bin/whois.psad;
+ psadwatchdCmd  /usr/sbin/psadwatchd;
+ kmsgsdCmd      /usr/sbin/kmsgsd;
+ diskmondCmd    /usr/sbin/diskmond;
+diff -urN Bastille/tools/bastille-firewall-convert.sh Bastille2/tools/bastille-firewall-convert.sh
+--- Bastille/tools/bastille-firewall-convert.sh	2001-09-02 10:13:35.000000000 -0400
++++ Bastille2/tools/bastille-firewall-convert.sh	2003-08-02 05:02:58.000000000 -0400
+@@ -5,7 +5,7 @@
+ # version 1.4
+ #
+ # script to pull the configuration settings
+-# of an existing, old-style, /etc/rc.d/init.d/bastille-firewall
++# of an existing, old-style, /etc/init.d/bastille-firewall
+ # script for the new-style /etc/Bastille/bastille-firewall.cfg
+ # configuration used by Bastille 1.2.0 and newer
+ #
+@@ -20,7 +20,7 @@
+ #    along with this program; if not, write to the Free Software
+ #    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ 
+-OLDFILE=/etc/rc.d/init.d/bastille-firewall
++OLDFILE=/etc/init.d/bastille-firewall
+ NEWCFGFILE=/etc/Bastille/bastille-firewall.cfg
+ LASTCFGNUMBER=14
+ 

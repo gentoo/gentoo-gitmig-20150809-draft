@@ -1,0 +1,11 @@
+# ChangeLog for net-firewall/bastille
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/ChangeLog,v 1.1 2003/08/02 10:13:47 seemant Exp $
+
+*bastille-2.1.1 (02 Aug 2003)
+
+  02 Aug 2003; Seemant Kulleen <seemant@gentoo.org> bastille-2.1.1.ebuild,
+  files/bastille-2.1.1.patch:
+  initial import. This was patched heavily to work with Gentoo (gentooficated)
+  by the venerable: Bryan Stine <admin@kentonet.net>
+
