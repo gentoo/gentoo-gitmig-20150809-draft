@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/labplot/labplot-1.2.3.ebuild,v 1.2 2004/05/02 13:40:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/labplot/labplot-1.2.3.ebuild,v 1.3 2004/05/16 20:26:13 centic Exp $
 
 inherit eutils kde
 need-kde 3.1
@@ -10,7 +10,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="LabPlot is a program for two- and three-dimensional graphical presentation of data sets and functions"
 HOMEPAGE="http://mitarbeiter.mbi-berlin.de/gerlach/Linux/LabPlot/"
-SRC_URI="${HOMEPAGE}src/${MY_P}.tar.gz"
+SRC_URI="http://mitarbeiter.mbi-berlin.de/gerlach/Linux/LabPlot/src/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
