@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.5.ebuild,v 1.5 2004/12/21 10:52:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.5.ebuild,v 1.6 2004/12/22 21:59:33 gmsoft Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit
@@ -23,7 +23,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/s
 		http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz
 	) )"
 
-KEYWORDS="x86 ~ppc sparc alpha amd64 ~ia64"
+KEYWORDS="x86 ~ppc sparc alpha amd64 ~ia64 ~hppa"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -58,6 +58,10 @@ src_unpack() {
 	# Fix logic error when using RAW target
 	# <azarah@gentoo.org> (23 Feb 2003)
 	epatch ${FILESDIR}/1.3/${PN}-1.3-fix-RAW-target.patch
+
+	# HPPA patches from Ivar <orskaug@stud.ntnu.no>
+	# <gmsoft@gentoo.org> (22 Dec 2004)
+	epatch ${FILESDIR}/mozilla-hppa.patch
 
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
