@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.4 2004/03/31 04:00:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.5 2004/04/19 11:46:47 mr_bones_ Exp $
 
 inherit eutils gcc games
 
@@ -23,8 +23,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	[ `gcc-major-version` == 3 ] && epatch ${FILESDIR}/${P}-gcc3.patch
-	epatch ${FILESDIR}/libpng-1.2.5.patch
+	[ $(gcc-major-version) == 3 ] && epatch "${FILESDIR}/${P}-gcc3.patch"
+	epatch "${FILESDIR}/libpng-1.2.5.patch"
 	sed -i \
 		-e 's:-pedantic::' config/vars.mk \
 			|| die "sed config/vars.mk failed"
@@ -35,15 +35,15 @@ src_unpack() {
 }
 
 src_compile() {
-	egamesconf `use_with svgalib` || die
+	egamesconf `use_with svga svgalib` || die
 	emake || die "emake failed"
 }
 
 src_install() {
 	egamesinstall || die
 	dodir /usr/share/pixmaps
-	mv ${D}/${GAMES_DATADIR}/pixmaps/quadra.xpm ${D}/usr/share/pixmaps
-	rm -rf ${D}/usr/share/games/pixmaps
+	mv "${D}/${GAMES_DATADIR}/pixmaps/quadra.xpm" "${D}/usr/share/pixmaps"
+	rm -rf "${D}/usr/share/games/pixmaps"
 
 	dodoc ChangeLog NEWS README
 	dohtml help/*
