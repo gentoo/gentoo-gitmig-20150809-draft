@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ttmkfdir
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.46 2004/11/04 04:30:18 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.47 2004/11/06 15:09:31 pylon Exp $
+
+  06 Nov 2004; Lars Weiler <pylon@gentoo.org> ttmkfdir-3.0.9-r2.ebuild:
+  Stable on ppc.
 
   03 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   ttmkfdir-3.0.9-r1.ebuild, ttmkfdir-3.0.9-r2.ebuild, ttmkfdir-3.0.9.ebuild:
