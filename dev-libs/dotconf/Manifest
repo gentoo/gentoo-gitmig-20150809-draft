@@ -1,4 +1,14 @@
-MD5 edcffb30b09947b00e031f0b81541ad8 ChangeLog 901
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4eed181102b132e7734e49045cb1ed1c dotconf-1.1.0.ebuild 576
-MD5 61f8b6ba1fe00db44396202886f8b0cd metadata.xml 376
+MD5 edcffb30b09947b00e031f0b81541ad8 ChangeLog 901
+MD5 66a11d04d48487b74a92e4c87a8be7eb metadata.xml 296
 MD5 904b9ba60d52d91cc5dc4d48601eea0a files/digest-dotconf-1.1.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw0qpI1lqEGTUzyQRApT7AJ0RAAgj9uPxEDPqDCaGZRQhhV84iACgoay8
+7uPKrFcw7hemvgAtwHas8hg=
+=2S5v
+-----END PGP SIGNATURE-----
