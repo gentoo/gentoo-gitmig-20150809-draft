@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.6.ebuild,v 1.2 2003/01/04 23:12:08 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.6-r1.ebuild,v 1.1 2003/01/04 23:12:08 method Exp $
 
 DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec."
 SRC_URI="mirror://sourceforge/ffmpeg/${P}.tar.gz"
@@ -41,7 +41,7 @@ src_compile() {
 		--prefix=/usr \
 		--enable-shared || die "./configure failed."
 	make || die "make failed."
-	use doc && make -C doc all || die "make all in ./doc failed."
+	use doc && make -C doc all 
 }
 
 src_install() {
