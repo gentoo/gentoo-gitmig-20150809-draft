@@ -5,7 +5,3 @@ nptl
 # Don't allow alsa in sparc32 because of missing drivers
 alsa
 ladcca
-
-# Jeremy Huddleston <eradicator@gentoo.org>
-# The multilib profile is sparc64-multilib
-multilib
