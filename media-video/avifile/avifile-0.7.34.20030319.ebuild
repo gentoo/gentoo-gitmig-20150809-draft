@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.34.20030319.ebuild,v 1.1 2003/04/21 23:58:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.34.20030319.ebuild,v 1.2 2003/06/12 14:17:00 seemant Exp $
 
 IUSE="static truetype xv sdl dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd"
 
@@ -45,7 +45,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-static" \
 		|| myconf="${myconf} --disable-static"
 
-	use freetype \
+	use truetype \
 		&& myconf="${myconf} --enable-freetype2" \
 		|| myconf="${myconf} --disable-freetype2"
 
