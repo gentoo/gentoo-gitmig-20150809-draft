@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+depend() {
+	need net
+}
+
+DAEMON=/usr/sbin/dwun
+PIDFILE=/var/run/dwun.pid
+
+start() {
+	ebegin "Starting dwun"
+	start-stop-daemon --start --pidfile ${PIDFILE} --startas ${DAEMON}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping dwun"
+	start-stop-daemon --stop --signal 1 --pidfile ${PIDFILE}
+	eend $?
+}

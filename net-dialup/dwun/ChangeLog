@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/dwun
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/ChangeLog,v 1.1 2003/11/28 00:16:26 brandy Exp $
+
+*dwun-0.96e (28 Nov 2003)
+
+  28 Nov 2003; Brandy Westcott brandy@gentoo.org dwun-0.96e.ebuild:
+  Initial import. Thanks to Jonathan Rogers <jonner@teegra.net> for the ebuild.
+  Closes bug #31868.
+
