@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.26 2005/01/24 15:53:44 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.27 2005/01/26 18:31:28 luckyduck Exp $
+
+  26 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> gnu-classpath-0.13.ebuild:
+  adopted the idea of Robert Schuster <theBohemian@gmx.net> to add support for
+  the xml2 keyword. fixes bug #79392.
 
   24 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   -gnu-classpath-0.10-r1.ebuild, -gnu-classpath-0.11.ebuild,
