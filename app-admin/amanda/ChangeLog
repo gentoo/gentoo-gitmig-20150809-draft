@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/amanda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.21 2004/07/05 00:07:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.22 2004/07/15 07:54:51 robbat2 Exp $
+
+*amanda-2.4.4_p2-r2 (15 Jul 2004)
+
+  15 Jul 2004; Robin H. Johnson <robbat2@gentoo.org>
+  amanda-2.4.4_p2-r2.ebuild:
+  fix bug #56931.
 
   04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org>
   amanda-2.4.4_p2-r1.ebuild, files/amanda-profile:
