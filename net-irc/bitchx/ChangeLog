@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.5 2002/04/23 13:40:46 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.6 2002/06/26 22:30:26 seemant Exp $
+
+*bitchx-1.0.19-r2 (26 Jun 2002)
+
+  26 Jun 2002; Seemant Kulleen <seemant@gentoo.org> bitchx-1.0.19-r1.ebuild
+  files/digest-bitchx-1.0.19-r2 :
+
+  LFH/man page fixes, SLOT, LICENSE
 
 *bitchx-1.0.19-r1 (23 April 2002)
 
