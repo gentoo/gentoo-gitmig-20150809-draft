@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.32 2003/06/02 20:12:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.33 2003/06/02 21:27:19 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -130,8 +130,9 @@ php_check_java_config() {
 }
 
 php_src_unpack() {
-	ewarn "This ebuild is intended for ~x86 testing presently. Heavy testing welcome."
-	ewarn "It should be stable for nearly systems."
+	ewarn "This ebuild should be very stable at this point."
+	use java && ewarn "Java support may be somewhat flakey, but it shouldn't break anything."
+	( use xml && use xml2 ) || ewarn "You must have BOTH xml and xml2 in your USE flags for PEAR"
 	
     unpack ${MY_P}.tar.bz2
     cd ${S}
