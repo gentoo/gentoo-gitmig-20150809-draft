@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.11.ebuild,v 1.1 2005/02/05 12:58:13 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.11.ebuild,v 1.2 2005/02/07 05:08:09 eradicator Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -116,8 +116,8 @@ my_configure() {
 	cd ${S}/source
 	econf \
 		--prefix=/usr \
-		--libdir=/usr/lib/samba \
-		--with-libdir=/usr/lib/samba \
+		--libdir=/usr/$(get_libdir)/samba \
+		--with-libdir=/usr/$(get_libdir)/samba \
 		--with-swatdir=/usr/share/doc/${PF}/swat \
 		--localstatedir=/var \
 		--with-piddir=/var/run/samba \
@@ -220,7 +220,7 @@ src_compile() {
 	# Build selected samba-vscan plugins -----------------------------------
 	if use oav; then
 		cd ${S}/examples/VFS/${PN}-vscan-${VSCAN_VER}
-		my_conf="--prefix=/usr --libdir=/usr/lib/samba"
+		my_conf="--prefix=/usr --libdir=/usr/$(get_libdir)/samba"
 		use libclamav && my_conf="${my_conf} --with-libclamav"
 		./configure ${my_conf}
 		assert "bad ${PN}-vscan-${VSCAN_VER} ./configure"
@@ -249,15 +249,15 @@ src_install() {
 		einfo "suid: ${i}"
 	done
 	# Nsswitch extensions. Make link for wins and winbind resolvers --------
-	exeinto /lib
+	exeinto /$(get_libdir)
 	doexe ${S}/source/nsswitch/libnss_wins.so
-	( cd ${D}/lib; ln -s libnss_wins.so libnss_wins.so.2 )
+	( cd ${D}/$(get_libdir); ln -s libnss_wins.so libnss_wins.so.2 )
 	if use winbind; then
 		doexe ${S}/source/nsswitch/libnss_winbind.so
-		( cd ${D}/lib; ln -s libnss_winbind.so libnss_winbind.so.2 )
-		exeinto /lib/security && doexe ${S}/source/nsswitch/pam_winbind.so
+		( cd ${D}/$(get_libdir); ln -s libnss_winbind.so libnss_winbind.so.2 )
+		exeinto /$(get_libdir)/security && doexe ${S}/source/nsswitch/pam_winbind.so
 	fi
-	exeinto /lib/security
+	exeinto /$(get_libdir)/security
 	use pam && doexe ${S}/source/bin/pam_smbpass.so
 	# mount backend --------------------------------------------------------
 	dodir /sbin
@@ -265,12 +265,12 @@ src_install() {
 	dosym ../usr/bin/mount.cifs /sbin/mount.cifs
 	# bug #46389: samba doesn't create symlink anymore
 	# beaviour seems to be changed in 3.0.6, see bug #61046 
-	dosym /usr/lib/samba/libsmbclient.so /usr/lib/libsmbclient.so.0
-	dosym /usr/lib/samba/libsmbclient.so /usr/lib/libsmbclient.so
+	dosym /usr/$(get_libdir)/samba/libsmbclient.so /usr/$(get_libdir)/libsmbclient.so.0
+	dosym /usr/$(get_libdir)/samba/libsmbclient.so /usr/$(get_libdir)/libsmbclient.so
 	# make the smb backend symlink for cups printing support..
 	if use cups; then
-		dodir /usr/lib/cups/backend
-		dosym /usr/bin/smbspool /usr/lib/cups/backend/smb
+		dodir /usr/$(get_libdir)/cups/backend
+		dosym /usr/bin/smbspool /usr/$(get_libdir)/cups/backend/smb
 	fi
 	# Install IDEALX scripts for LDAP backend administration ---------------
 	if use ldap; then
@@ -293,7 +293,7 @@ src_install() {
 	fi
 	# VFS plugin modules ---------------------------------------------------
 	if use oav; then
-		#exeinto /usr/lib/samba/vfs
+		#exeinto /usr/$(get_libdir)/samba/vfs
 		#doexe ${S}/examples/VFS/${PN}-vscan-${VSCAN_VER}/vscan-*.so
 		cd ${S}/examples/VFS/${PN}-vscan-${VSCAN_VER}
 		make install DESTDIR=${D} || die "VFS: vscan error"
