@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.111 2005/02/18 18:04:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.112 2005/03/01 01:46:24 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -171,13 +171,6 @@ gcc_get_s_dir() {
 # Other than the variables normally set by portage, this function's behavior
 # can be altered by setting the following:
 #
-#	GENTOO_TOOLCHAIN_BASE_URI
-#			This sets the base URI for all gentoo-specific patch files. Note
-#			that this variable is only important for a brief period of time,
-#			before your source files get picked up by mirrors. However, it is
-#			still highly suggested that you keep files in this location
-#			available.
-#
 #	SNAPSHOT
 #			If set, this variable signals that we should be using a snapshot
 #			of gcc from ftp://sources.redhat.com/pub/gcc/snapshots/. It is
@@ -234,18 +227,16 @@ gcc_get_s_dir() {
 #			If set to "none", this will prevent the downloading of manpages,
 #			which is useful for individual library targets.
 #
-# Travis Tilley <lv@gentoo.org> (02 Sep 2004)
-#
+gentoo_urls() {
+	local devspace="HTTP~lv/GCC/URI HTTP~eradicator/gcc/URI HTTP~vapier/dist/URI"
+	devspace=${devspace//HTTP/http:\/\/dev.gentoo.org\/}
+	echo mirror://gentoo/$1 ${devspace//URI/$1}
+}
 get_gcc_src_uri() {
-	# This variable should be set to the devspace of whoever is currently
-	# maintaining GCC. Please dont set this to mirror, that would just
-	# make the files unavailable until they get mirrored.
-	local devspace_uri="http://dev.gentoo.org/~lv/GCC/"
-	GENTOO_TOOLCHAIN_BASE_URI=${GENTOO_TOOLCHAIN_BASE_URI:-${devspace_uri}}
+	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
 
-	if [[ -n ${PIE_VER} ]] ; then
+	[[ -n ${PIE_VER} ]] && \
 		PIE_CORE=${PIE_CORE:-gcc-${GCC_RELEASE_VER}-piepatches-v${PIE_VER}.tar.bz2}
-	fi
 
 	# Set where to download gcc itself depending on whether we're using a
 	# prerelease, snapshot, or release tarball.
@@ -256,50 +247,41 @@ get_gcc_src_uri() {
 	else
 		GCC_SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/gcc-${GCC_RELEASE_VER}.tar.bz2"
 		# we want all branch updates to be against the main release
-		if [[ -n ${BRANCH_UPDATE} ]] ; then
-			GCC_SRC_URI="${GCC_SRC_URI}
-				mirror://gentoo/${PN}-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
-				${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2"
-		fi
+		[[ -n ${BRANCH_UPDATE} ]] && \
+			GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls ${PN}-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2)"
 	fi
 
 	# propolice aka stack smashing protection
-	if [[ -n ${PP_VER} ]] ; then
+	[[ -n ${PP_VER} ]] && \
 		GCC_SRC_URI="${GCC_SRC_URI}
 			http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz
-			mirror://gentoo/protector-${PP_FVER}.tar.gz"
-	fi
+			$(gentoo_urls protector-${PP_FVER}.tar.gz )"
+
+	# uclibc lovin
+	[[ -n ${UCLIBC_VER} ]] && \
+		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${PATCH_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2)"
 
 	# PERL cannot be present at bootstrap, and is used to build the man pages.
 	# So... lets include some pre-generated ones, shall we?
-	if [[ ${GCC_MANPAGE_VERSION} != "none" ]] ; then
-		GCC_SRC_URI="${GCC_SRC_URI}
-			mirror://gentoo/gcc-${GCC_MANPAGE_VERSION}-manpages.tar.bz2
-			${GENTOO_TOOLCHAIN_BASE_URI}/gcc-${GCC_MANPAGE_VERSION}-manpages.tar.bz2"
-	fi
+	[[ ${GCC_MANPAGE_VERSION} != "none" ]] && \
+		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${GCC_MANPAGE_VERSION}-manpages.tar.bz2)"
 
 	# various gentoo patches
-	if [[ -n ${PATCH_VER} ]] ; then
-		GCC_SRC_URI="${GCC_SRC_URI}
-			mirror://gentoo/${PN}-${PATCH_GCC_VER:-${GCC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
-			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${PATCH_GCC_VER:-${GCC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2"
-	fi
+	[[ -n ${PATCH_VER} ]] && \
+		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls ${PN}-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2)"
 
 	# strawberry pie, Cappuccino and a Gauloises (it's a good thing)
-	if [[ -n ${PIE_CORE} ]] ; then
-		GCC_SRC_URI="${GCC_SRC_URI}
-			mirror://gentoo/${PIE_CORE}
-			${GENTOO_TOOLCHAIN_BASE_URI}${PIE_CORE}"
-	fi
+	[[ -n ${PIE_CORE} ]] && \
+		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls ${PIE_CORE})"
 
 	# gcc bounds checking patch
 	if [[ -n ${HTB_VER} ]] ; then
 		local HTBFILE="bounds-checking-gcc-${HTB_GCC_VER:-${GCC_RELEASE_VER}}-${HTB_VER}.patch.bz2"
 		GCC_SRC_URI="${GCC_SRC_URI}
-			boundschecking? ( 
+			boundschecking? (
 				mirror://sourceforge/boundschecking/${HTBFILE}
 				http://web.inter.nl.net/hcc/Haj.Ten.Brugge/${HTBFILE}
-				${GENTOO_TOOLCHAIN_BASE_URI}/${HTBFILE}
+				$(gentoo_urls ${HTBFILE})
 			)"
 	fi
 
@@ -1460,44 +1442,40 @@ gcc_movelibs() {
 #
 gcc_quick_unpack() {
 	pushd ${WORKDIR} > /dev/null
+	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
 
-	if [ -n "${PRERELEASE}" ] ; then
+	if [[ -n ${PRERELEASE} ]] ; then
 		unpack gcc-${PRERELEASE}.tar.bz2
-	elif [ -n "${SNAPSHOT}" ] ; then
+	elif [[ -n ${SNAPSHOT} ]] ; then
 		unpack gcc-${SNAPSHOT}.tar.bz2
 	else
 		unpack gcc-${GCC_RELEASE_VER}.tar.bz2
 		# We want branch updates to be against a release tarball
-		if [ -n "${BRANCH_UPDATE}" ] ; then
+		if [[ -n ${BRANCH_UPDATE} ]] ; then
 			pushd ${S:-"$(gcc_get_s_dir)"} > /dev/null
 			epatch ${DISTDIR}/gcc-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
 			popd > /dev/null
 		fi
 	fi
 
-	if [ -n "${PATCH_VER}" ]
-	then
-		unpack ${PN}-${PATCH_GCC_VER:-${GCC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
-	fi
+	[[ -n ${PATCH_VER} ]] && \
+		unpack ${PN}-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2
 
-	if [ -n "${PP_VER}" ]
-	then
+	[[ -n ${UCLIBC_VER} ]] && \
+		unpack ${PN}-${PATCH_GCC_VER}-patches-${UCLIBC_VER}.tar.bz2
+
+	if [[ -n ${PP_VER} ]] ; then
 		# The gcc 3.4 propolice versions are meant to be unpacked to ${S}
-		pushd ${S:-"$(gcc_get_s_dir)"} > /dev/null
+		pushd ${S:-$(gcc_get_s_dir)} > /dev/null
 		unpack protector-${PP_FVER}.tar.gz
 		popd > /dev/null
 	fi
 
-	if [ -n "${PIE_VER}" ]
-	then
-		unpack ${PIE_CORE}
-	fi
+	[[ -n ${PIE_VER} ]] && unpack ${PIE_CORE}
 
 	# pappy@gentoo.org - Fri Oct  1 23:24:39 CEST 2004
-	if want_boundschecking
-	then
+	want_boundschecking && \
 		unpack "bounds-checking-${PN}-${HTB_GCC_VER:-${GCC_RELEASE_VER}}-${HTB_VER}.patch.bz2"
-	fi
 
 	popd > /dev/null
 }
