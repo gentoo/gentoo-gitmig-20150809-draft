@@ -21,6 +21,14 @@
 ##   End example
 ##
 
+# <rphillips@gentoo.org> (27 Oct 2002)
+# Tweaked vim ebuilds to use the vim eclass
+# makes it easier for me to maintain.
+# Masked for testing
+>=app-editors/vim-6.1-r16
+>=app-editors/gvim-6.1-r3
+>=app-editors/vim-core-6.1-r3
+
 # <azarah@gentoo.org> (28 Oct 2002)
 # Initial version that support alpha version of new multi version/arch
 # scheme.  Very ALPHA, so use at your own risk!!
