@@ -513,9 +513,4 @@ dev-lang/gpc
 
 # spider@gentoo.org ; 11 Apr 2002
 # Masked until we can solve the dependency issues =x11-libs/gtk+-1.2* doesn't work
-#  >=dev-libs/glib-2.0.0
-# keeping the rest for a while :)
-
->=dev-libs/atk-1.0.0
->=x11-libs/pango-1.0.0
 >=x11-libs/gtk+-2.0.0
