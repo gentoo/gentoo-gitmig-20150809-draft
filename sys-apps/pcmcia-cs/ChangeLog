@@ -1,8 +1,8 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.8 2002/03/28 14:57:14 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.9 2002/03/28 15:04:07 chadh Exp $
 
-*pcmcia-cs-3.1.33-r3 (28 Mar 2002)
+*pcmcia-cs-3.1.33-r3,pcmcia-cs-3.1.31-r7 (28 Mar 2002)
   28 Mar 2002; Chad Huneycutt <chadh@gentoo.org>
   changed doins to doexe for installing the network script executably
 
