@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.6.ebuild,v 1.2 2002/08/31 15:38:46 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.6.ebuild,v 1.3 2002/09/15 13:35:56 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A commercial-quality network protocol analyzer"
@@ -11,8 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-RDEPEND="virtual/glibc
-	>=sys-libs/zlib-1.1.4
+RDEPEND=">=sys-libs/zlib-1.1.4
 	=dev-libs/glib-1.2*
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.5 )
 	X? ( virtual/x11 =x11-libs/gtk+-1.2* )
@@ -43,8 +42,7 @@ src_compile() {
 	use snmp || myconf="${myconf} --without-ucdsnmp"
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 
-	./configure \
-		--prefix=/usr \
+	econf \
 		--enable-pcap \
 		--enable-zlib \
 		--enable-tethereal \
@@ -54,10 +52,9 @@ src_compile() {
 		--enable-idl2eth \
 		--enable-dftest \
 		--enable-randpkt \
-		--mandir=/usr/share/man \
 		--sysconfdir=/etc/ethereal \
 		--with-plugindir=/usr/lib/ethereal/plugins/${PV} \
-		--host=${CHOST} ${myconf} || die "bad ./configure"
+		${myconf} || die "bad ./configure"
 
                 #this was an old hack for gcc-3 compatibility
                 #--includedir="" \
@@ -68,9 +65,8 @@ src_compile() {
 src_install() {
 	dodir /usr/lib/ethereal/plugins/${PV}
 
-	make install \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
+	einstall \
+		datadir=${D}/usr/share \
 		sysconfdir=${D}/etc/ethereal \
 		plugindir=${D}/usr/lib/ethereal/plugins/${PV} || die
 
