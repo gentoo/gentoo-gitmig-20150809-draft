@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.4.ebuild,v 1.8 2003/03/31 02:24:44 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.4.ebuild,v 1.9 2003/07/09 20:13:09 msterret Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="JBIG-KIT implements a highly effective data compression algorithm for bi-level high-resolution images such as fax pages or scanned documents"
@@ -11,15 +11,20 @@ LICENSE="GPL-2"
 IUSE=""
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc alpha"
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	>=sys-apps/sed-4"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	sed -i \
+		-e "s:-O2 -W:${CFLAGS}:" Makefile || \
+			die "sed Makefile failed"
+}
 
 src_compile() {
-	cp Makefile Makefile.orig
-	sed -e "s:-O2 -W:${CFLAGS}:" \
-		< Makefile.orig > Makefile
-
 	make || die "make failed"
-
 	make test || die "tests failed"
 }
 
@@ -30,5 +35,5 @@ src_install() {
 	newins libjbig/jbig.h jbig.h
 
 	# Install documentation.
-	dodoc ANNOUNCE CHANGES COPYING INSTALL TODO
+	dodoc ANNOUNCE CHANGES INSTALL TODO
 }
