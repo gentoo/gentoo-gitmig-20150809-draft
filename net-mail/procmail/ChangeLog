@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/procmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.7 2002/09/06 04:29:57 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.8 2002/10/28 16:46:12 g2boojum Exp $
+
+*procmail-3.22-r5 (28 Oct 2002)
+	
+  28 Oct 2002; Grant Goodyear <g2boojum@gentoo.org> procmail-3.22-r5.ebuild :
+
+  It seems that _both_ the /etc/procmailrc entry and the patch are required
+  for procmail to deliver to ${HOME}/.maildir properly.  At least, w/o the
+  /etc/procmailrc entry my mail was being delivered to ~/.maildir but not
+  in maildir form (meaning messages were dumped into ~/.maildir instead of
+  ~/.maildir/new.  So, I restored the creation of /etc/procmailrc.
 
 *procmail-3.22-r4 (5 Sep 2002)
 	
