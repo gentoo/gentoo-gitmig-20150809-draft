@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.4.ebuild,v 1.2 2003/09/05 23:05:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.4.ebuild,v 1.3 2003/09/11 10:40:08 liquidx Exp $
 
 
 MY_PV=$(echo ${PV} | sed 's:\.::g')
@@ -32,8 +32,6 @@ src_unpack() {
 		-e "s#^CC =\(.*\)#CC = ${CXX}#" \
 		|| die "error patching makefile"
 
-	echo "Categories=Application;Development;" >> SciTE.desktop
-
 }
 
 src_compile() {
@@ -57,6 +55,11 @@ src_install () {
 	# we have to keep this because otherwise it'll break upgrading
 	mv ${D}/usr/bin/SciTE ${D}/usr/bin/scite
 	dosym /usr/bin/scite /usr/bin/SciTE
+
+	# replace .desktop file with our own working version
+	insinto /usr/share/applications
+	rm -f ${D}/usr/share/applications/SciTE.desktop
+	doins ${FILESDIR}/scite.desktop
 
 	doman ../doc/scite.1
 	dodoc ../License.txt ../README
