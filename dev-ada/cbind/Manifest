@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 90ba5a0902a7203fd793a186f3f6e030 ChangeLog 752
-MD5 3a26916373bfee2056217edb9b85cf0f cbind-6.ebuild 730
+MD5 9f78f821df10b5d133a0768aa2b00f72 ChangeLog 754
+MD5 de771bd575fb25bcf3fc383f36fbe1e4 cbind-6.ebuild 732
 MD5 b1a57b79797c5cfb1af44255bee44d06 metadata.xml 451
 MD5 aa4cf2876e3e245ad93133ff4deb78c5 files/cbind6.diff 5268
 MD5 54d17954817798fdfed5399cee7f0373 files/digest-cbind-6 55
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsdFI1lqEGTUzyQRAnwSAKDE5+jsX3qrc7DqO+ElxO2AJPo7hACgh5HH
-QLzwL9Tb4PX5SUmWMLDGlt0=
-=PMPK
------END PGP SIGNATURE-----

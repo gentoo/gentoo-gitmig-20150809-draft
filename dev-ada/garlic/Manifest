@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b0e27eeaa5480334aadd199368879add ChangeLog 864
-MD5 511eac0bc55e81b24b99bb3fc7724ab2 garlic-3.15p-r1.ebuild 2304
+MD5 bfd371557aa7dca0d9876dc8e44acb7c ChangeLog 866
+MD5 4940b4556e66039532b2ef5f9c75b95d garlic-3.15p-r1.ebuild 2306
 MD5 9d359eac0028d3eab4c11ab7ad9071ba metadata.xml 505
 MD5 c3d08801b20b2340914aaf73923b6762 files/digest-garlic-3.15p-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXse0I1lqEGTUzyQRAoLZAKCDmTL+hubA9O5mzpIdAuOdGlWkmACg1NM4
-jjkha/g6BDRdrZhRtHvygPA=
-=GZaz
------END PGP SIGNATURE-----

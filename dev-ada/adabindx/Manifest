@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c4a8786a7494ce2407ebed75e60cff6b ChangeLog 1232
-MD5 dfa322f0b454acc36dc4c850464d5835 adabindx-0.7.2.ebuild 1792
+MD5 9c16820060f7e7f5fffd53518b19762a ChangeLog 1234
+MD5 ec1f0439c3288378766fcc382a70a837 adabindx-0.7.2.ebuild 1795
 MD5 04fabdb277cc755e6cfb58b42eee6675 metadata.xml 384
 MD5 5850752cc78726ab7e19b4574c6b6b3c files/adabindx-0.7.2.diff.bz2 20067
 MD5 8c577abf12ed815ffdc1400d2aee29c8 files/digest-adabindx-0.7.2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsfvI1lqEGTUzyQRAnZBAKCvWJqwVGHIjVVwP+55AponUywEKACgi3Gn
-eQf4YDDDvQ67tXdJuCeKkaA=
-=xa2S
------END PGP SIGNATURE-----

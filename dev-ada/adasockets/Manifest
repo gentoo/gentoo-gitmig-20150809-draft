@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6a11c94c0ca80f08e037af23ed5ae8de ChangeLog 1258
-MD5 fce5c660ca12e0a0202af724af12a6d8 adasockets-1.7-r1.ebuild 2119
+MD5 da8251072eb19d5c4291a83b546d9c4c ChangeLog 1261
+MD5 65531686f4f275702494985d98291aa6 adasockets-1.7-r1.ebuild 2122
 MD5 7fbf01a68e8d81db063194cc634cf6b4 metadata.xml 646
 MD5 42f83eb514ebd3dea38e2b72889414b4 files/digest-adasockets-1.7-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsjDI1lqEGTUzyQRAqW+AJ92vEUSgc97nsaHa9KbfNGH9zlQhQCgsXTT
-Y9LFazhlQHZI2lAG9qLDsm4=
-=eAnG
------END PGP SIGNATURE-----

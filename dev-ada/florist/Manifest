@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7a53961ebb3e0dbafa52397424204f18 ChangeLog 1027
-MD5 1945f16ebd851dc87124e344119e4e69 florist-3.15p.ebuild 1849
+MD5 57fa436751939f785cd114135db95df2 ChangeLog 1029
+MD5 3d9f549d82a0cdf095fece61c2c78d26 florist-3.15p.ebuild 1851
 MD5 c89c1e4c2710f55d591d7ac9b73cb8a8 metadata.xml 589
 MD5 67ebef620f7ec165399f27a7ce523f74 files/digest-florist-3.15p 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsdtI1lqEGTUzyQRAidaAKDaHLWjDQLH3AT0B5PmQNGwFSRhjACguKvn
-pWimSKB+NEimS5AdvqvqiZY=
-=txTb
------END PGP SIGNATURE-----

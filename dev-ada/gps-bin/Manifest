@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e0781fb450f96316d23c802ac8eef21e ChangeLog 960
-MD5 5900016851ee6fac0faa8d1a75a1e53b gps-bin-1.2.2.ebuild 1462
-MD5 73658f4e83b006cdaade85c015acc143 gps-bin-1.4.0.ebuild 1459
+MD5 b6b3709b05c8e6ec8d649c43707c94de ChangeLog 963
+MD5 472f9bd2d9a34796be55d0a2c83a48be gps-bin-1.2.2.ebuild 1464
 MD5 61a97d12115c75f54376aa875a836afb metadata.xml 998
+MD5 ade4047fa14e74c4729c603eb7c768e1 gps-bin-1.4.0.ebuild 1464
 MD5 a31042ea1266ba5db83c74551c516082 files/10gps-bin 22
 MD5 ce39349e495c585ee2ec7836881eef61 files/digest-gps-bin-1.2.2 78
 MD5 acedcfc48fb88b85c67a47a21e7e3988 files/digest-gps-bin-1.4.0 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsiLI1lqEGTUzyQRAmG/AJoCGpXkAKLPXCSWOFEYWwq/q41jLACgtYmt
-xv2bBBaMQCBOgf8v+5jehYA=
-=sZLe
------END PGP SIGNATURE-----
