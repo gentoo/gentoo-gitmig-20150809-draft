@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sux
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.1 2003/04/28 14:35:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.2 2003/05/18 20:28:32 mholzer Exp $
+
+  18 May 2003; Martin Holzer <mholzer@gentoo.org> sux-1.0.ebuild:
+  Adding S. Closes #21181.
 
 *sux-1.0 (28 Apr 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/sux-1.0.ebuild,v 1.1 2003/04/28 14:35:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/sux-1.0.ebuild,v 1.2 2003/05/18 20:28:32 mholzer Exp $
 
 DESCRIPTION="\"su\" wrapper which transfers X credentials"
 HOMEPAGE="http://fgouget.free.fr/sux/sux-readme.shtml"
@@ -9,6 +9,7 @@ LICENSE="X11"
 SLOT="0"
 
 KEYWORDS="~x86"
+S=${WORKDIR}
 
 DEPEND="virtual/x11
 		sys-apps/debianutils"
