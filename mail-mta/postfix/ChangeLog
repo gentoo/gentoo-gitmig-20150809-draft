@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.36 2004/11/24 12:16:46 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.37 2004/12/22 18:49:23 langthang Exp $
+
+*postfix-2.2.20041221 (22 Dec 2004)
+
+  22 Dec 2004; Tuan Van <langthang@gentoo.org> +postfix-2.2.20041221.ebuild:
+  2.2 development release with TLS support.
+  add "nis" USE flag to support uclibc env. Bug #61509.
 
   24 Nov 2004; Hardave Riar <hardave@gentoo.org> postfix-2.1.5-r1.ebuild:
   Stable on mips, bug #56088.
