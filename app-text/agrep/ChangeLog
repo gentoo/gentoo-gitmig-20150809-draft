@@ -1,6 +1,9 @@
 # ChangeLog for app-text/agrep
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.10 2004/07/04 19:54:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.11 2004/09/08 02:13:08 tgall Exp $
+
+  07 Sep 2004; Tom Gall <tgall@gentoo.org> agrep-2.04.ebuild:
+  stable on ppc64, bug #63057
 
   04 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> agrep-2.04.ebuild:
   Stable on mips
