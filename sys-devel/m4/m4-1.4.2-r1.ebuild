@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.2.ebuild,v 1.2 2005/01/20 02:56:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.2-r1.ebuild,v 1.1 2005/01/20 16:27:53 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -19,7 +19,10 @@ DEPEND="virtual/libc
 RDEPEND="virtual/libc"
 
 src_compile() {
-	econf $(use_enable nls) || die
+	econf \
+		$(use_enable nls) \
+		--enable-changeword \
+		|| die
 	emake AR="$(tc-getAR)" || die
 }
 

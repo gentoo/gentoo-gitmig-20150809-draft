@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/m4
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.30 2005/01/12 18:33:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.31 2005/01/20 16:27:53 vapier Exp $
+
+*m4-1.4.2-r1 (20 Jan 2005)
+
+  20 Jan 2005; Mike Frysinger <vapier@gentoo.org> +m4-1.4.2-r1.ebuild,
+  -m4-1.4.2.ebuild:
+  Add back in changeword since it breaks some packages (should review later
+  again).
 
 *m4-1.4.2 (12 Jan 2005)
 
