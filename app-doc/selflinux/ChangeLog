@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/selflinux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.8 2003/06/29 17:33:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.9 2003/07/29 20:26:12 mholzer Exp $
+
+*selflinux-0.8.1 (30 Jul 2003)
+
+  30 Jul 2003; Martin Holzer <mholzer@gentoo.org> selflinux-0.1.ebuild,
+  selflinux-0.2.1.ebuild, selflinux-0.4.0.ebuild, selflinux-0.6.0.ebuild,
+  selflinux-0.8.1.ebuild:
+  Version bumped. Closes #23485
 
 *selflinux-0.6.0 (23 Mar 2003)
 
