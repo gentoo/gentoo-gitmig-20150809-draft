@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.11 2002/12/16 22:48:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.12 2003/02/04 22:06:10 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Version 1 of the library to manipulate XML files."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 
 SLOT="1"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ppc sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 RDEPEND=">=sys-libs/ncurses-5.2"
 
