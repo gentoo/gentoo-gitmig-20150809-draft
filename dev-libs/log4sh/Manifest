@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2e94ce3a2153d8b79885c710428707d2 log4sh-1.2.3.ebuild 689
-MD5 1de51405a61635d1aa192e92f03ad12b ChangeLog 457
+MD5 2150c99a8c9f8feb088cf0886c1ed771 log4sh-1.2.3.ebuild 688
+MD5 1688ee57d9c29faaedee271f255f32f6 ChangeLog 552
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 1f2ddbf635dd91fbfe56630fc247cdb3 log4sh-1.2.4.ebuild 690
 MD5 e8597f467e514478afef8142f68dd7a3 files/digest-log4sh-1.2.3 60
 MD5 36855d0dbead1b1087280cf8938eeec8 files/digest-log4sh-1.2.4 60
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB1WyJEZCkKN40op4RAkkNAJ9VH1hqLcCzNbreYPK4VzPHW9LSxgCfRvWy
-9kVVrBAVAIXJugw500A4FpY=
-=wkoX
+iD8DBQFB9l4NEZCkKN40op4RAosoAKCyMuK0f7sGk5tngJKDQ05cV++QkACgmB4/
+YEWZVbmoW40lCfujhK0WWdE=
+=vjeI
 -----END PGP SIGNATURE-----
