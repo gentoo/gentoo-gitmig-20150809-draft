@@ -1,4 +1,14 @@
-MD5 4f5c56986029eaf8dfe7f1a5cbfdf7fc klvemkdvd-0.4.ebuild 715
-MD5 a9e1ee125c2a8e7db080367f9d60d8f2 ChangeLog 595
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e95fe9ff361745f18b6ebb0d2db8bade ChangeLog 711
+MD5 dd346e09694a8ef608bc4b94e5c12cbc klvemkdvd-0.4.ebuild 691
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 ce8bb2eb80b388a41e45721f10c42c41 files/digest-klvemkdvd-0.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBK/zwI1lqEGTUzyQRAupHAKDfxtS3d2IWNVY/tK6OsXpaLXmIlACfQoII
+KJur9K5z6UdH/3I1bXC1++I=
+=1AAF
+-----END PGP SIGNATURE-----
