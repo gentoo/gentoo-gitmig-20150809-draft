@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.17.ebuild,v 1.5 2005/03/29 13:42:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.17.ebuild,v 1.6 2005/03/31 15:10:11 axxo Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-core-1.4
+	>=dev-java/ant-core-1.6
 	>=dev-java/jzlib-1.0.3
 	app-arch/unzip
 	jikes? ( >=dev-java/jikes-1.17 )
