@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.2.4.ebuild,v 1.1 2003/03/31 14:17:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.2.4.ebuild,v 1.2 2003/04/13 14:51:02 seemant Exp $
 
 IUSE="doc ssl"
 
@@ -23,9 +23,9 @@ RDEPEND=">=dev-libs/glib-2
 	ssl? ( >=dev-libs/openssl-0.9.5 )"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/gettext-0.10.40
-	>=dev-util/intltool-0.22
 	>=dev-util/pkgconfig-0.12.0
+	nls? ( >=sys-devel/gettext-0.10.40 )
+	nls? ( >=dev-util/intltool-0.22 )
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS README TODO"
