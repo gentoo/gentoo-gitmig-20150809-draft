@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0795f8b490d7e16ac63e0340c0f59632 ChangeLog 6292
+MD5 4a4be87267e17bb4516688934ddec78d ChangeLog 6477
 MD5 f694d40cf09e6c5511ae52f755a5ffe5 metadata.xml 998
 MD5 7fde305dfd21aeac12e0eb721e0f6a17 uclibc-0.9.21.ebuild 1096
 MD5 648448f5b143b6002812f0fb0a78c683 uclibc-0.9.26-r1.ebuild 2555
 MD5 ebf20118b3d6ced339721338685d97b0 uclibc-0.9.26-r2.ebuild 6191
 MD5 03b8de2ae5acc3aa78d72abe3f8edd7b uclibc-0.9.26-r3.ebuild 6337
 MD5 5db33bb13590ce0b1ac242639e60154e uclibc-0.9.26-r4.ebuild 7212
-MD5 df0798206db2720137ab14d08bf6d9f1 uclibc-0.9.26-r5.ebuild 7462
+MD5 83087f8ead787d9ee6c1aa3d56918cd2 uclibc-0.9.26-r5.ebuild 7578
 MD5 d16f404e56abc9f0ab5c372b88a6905d files/Makefile-cp-order-fix.patch 897
 MD5 799adc7fb6ec9ffd653831cea1d32dd5 files/digest-uclibc-0.9.21 67
 MD5 02ffb023d5b3be46c7e0c9aadf48d304 files/digest-uclibc-0.9.26-r2 231
@@ -30,10 +30,11 @@ MD5 d35beaf332590fed8c619483d4598dc6 files/0.9.26/uclibc-0.9.26-ssp-gcc34-after-
 MD5 f7c264d37687f1a32f1c6e31239f2276 files/0.9.26/uclibc-0.9.26-noexecstack.patch 15273
 MD5 6835449424e7a8a38e9c85ecf1b73577 files/0.9.26/arm-ucontext.patch 303
 MD5 efd96414f3be520f07eabd1c02be1ecb files/0.9.26/uclibc-0.9.26-resolve-segfault.patch 1227
+MD5 7157f784ba7672c9904d289712131a52 files/0.9.26/uclibc-0.9.26-ldso-cache.patch 410
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBF6AnHTu7gpaalycRAmS9AKDBa13SM6EILt4QNtmCl0u7q+r7jACdF6Od
-hWGu8R3JSFQnEGV6G9iWpxk=
-=GjXj
+iD8DBQFBF8xKHTu7gpaalycRAjDzAJ0VaIFUr4se8tkbFlWwtItKkFqgXwCdFHoc
+mURYjULotJku6+Zg/+EHxEI=
+=TrJG
 -----END PGP SIGNATURE-----
