@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-optional
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.3 2004/08/31 17:57:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.4 2004/08/31 18:06:33 axxo Exp $
+
+  31 Aug 2004; Thomas Matthijs <axxo@gentoo.org> -ant-tasks-1.6.2-r2.ebuild,
+  -ant-tasks-1.6.2-r3.ebuild:
+  remove broken versions
 
 *ant-tasks-1.6.2-r4 (31 Aug 2004)
 
