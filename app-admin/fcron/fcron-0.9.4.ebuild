@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fcron/fcron-0.9.4.ebuild,v 1.1 2001/01/02 18:50:03 achim Exp $
+# /home/cvsroot/gentoo-x86/app-admin/fcron/fcron-0.9.4.ebuild,v 1.1 2001/01/02 18:50:03 achim Exp
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A replacement for vcron"

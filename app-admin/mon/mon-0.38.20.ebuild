@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20.ebuild,v 1.2 2001/01/20 01:13:36 achim Exp $
+# /home/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20.ebuild,v 1.2 2001/01/20 01:13:36 achim Exp
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Highly configurable service monitoring daemon"
