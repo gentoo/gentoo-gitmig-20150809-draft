@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/extutils-parsexs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-parsexs/ChangeLog,v 1.6 2004/10/19 07:58:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-parsexs/ChangeLog,v 1.7 2004/10/22 16:57:45 mcummings Exp $
+
+  22 Oct 2004; Michael Cummings <mcummings@gentoo.org>
+  extutils-parsexs-2.08.ebuild:
+  marking stable on x86
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   extutils-parsexs-2.02.ebuild:
