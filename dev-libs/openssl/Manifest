@@ -1,13 +1,16 @@
-MD5 29022f1861c48e086e2141cb9fb23730 ChangeLog 17082
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 51828050065a100435fd6283041e6f66 ChangeLog 17200
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 2d5363922c0d09819338042c472ec25f openssl-0.9.6m.ebuild 3084
 MD5 e98d01c1e168506fb7f46cb15996ad93 openssl-0.9.7c-r1.ebuild 7017
 MD5 e84f6b47647c88da5d6ff5ae72e3e101 openssl-0.9.7c.ebuild 4957
-MD5 f244311f05df216907805cd866348fdc openssl-0.9.7d.ebuild 7797
 MD5 e971724cd8179a30348af2e5ef03b84f openssl-0.9.7d-r1.ebuild 8555
 MD5 44c649c88e2bf4d3c2e70e36171cb944 openssl-0.9.7d-r2.ebuild 9026
-MD5 6fbef3ea63279bd607e0c5cdb70dc62d openssl-0.9.7e-r1.ebuild 8215
+MD5 f244311f05df216907805cd866348fdc openssl-0.9.7d.ebuild 7797
 MD5 90964c60808c8401376467935e4ac34d openssl-0.9.7e.ebuild 8001
+MD5 50d7b6529e16e643f3febc6741fe5a06 openssl-0.9.7e-r1.ebuild 8253
 MD5 744b358cd3b68b2ca6561c214c541fc0 files/addppc64support.diff 1327
 MD5 2e6ed24d513a8f2b1b6f03709ab5ba18 files/digest-openssl-0.9.6m 67
 MD5 8ad6215b1b4c9d53c435ceff6b537e35 files/digest-openssl-0.9.7c 134
@@ -28,3 +31,10 @@ MD5 91854bcd6c83f040927d490b104bb5a0 files/openssl-0.9.7d-smime.patch 641
 MD5 f886f4a6a62eb4ec7bc718952d76900d files/openssl-0.9.7e-gentoo.patch 460
 MD5 acab4ad88a6c249a7cde0511a0961a2c files/digest-openssl-0.9.7e-r1 134
 MD5 53599279769faf50e5247b68d2907b10 files/openssl-0.9.7e-no-fips.patch 1344
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCP9bAArHZZzCEUG0RAhMhAJ0UD+s387aNNCjNc+j+jSRvfIqFdgCfd+d9
+XA/5uhQDHQQyROaxc6FYCPc=
+=VB4l
+-----END PGP SIGNATURE-----

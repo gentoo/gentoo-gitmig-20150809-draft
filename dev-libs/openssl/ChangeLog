@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.106 2005/03/13 10:07:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.107 2005/03/22 08:26:26 eradicator Exp $
+
+  22 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  openssl-0.9.7e-r1.ebuild:
+  Use correct toolchain CC.
 
   13 Mar 2005; Mike Frysinger <vapier@gentoo.org>
   +files/openssl-0.9.7e-no-fips.patch, openssl-0.9.7e-r1.ebuild:
