@@ -1,0 +1,7 @@
+# ChangeLog for app-cdr/k3b
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.1 2002/10/16 11:46:12 verwilst Exp $
+
+*kover-0.8.7 (16 Okt 2002) Bart Verwilst <verwilst@gentoo.org>:
+
+  Initial ebuild in Portage.
