@@ -1,11 +1,11 @@
 # ChangeLog for media-fonts/unfonts-extra
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts-extra/ChangeLog,v 1.1 2004/09/11 19:02:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts-extra/ChangeLog,v 1.2 2004/09/12 15:53:22 usata Exp $
 
 *unfonts-extra-1.0.1 (12 Sep 2004)
 
   12 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
   +unfonts-extra-1.0.1.ebuild:
-  Initial import. Ebuild submitted by Jun Tae-young <master@mytears.org>.
+  Initial import. Ebuild submitted by Jung Tae-young <master@mytears.org>.
   This closes bug #59761.
 
