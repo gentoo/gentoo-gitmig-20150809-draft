@@ -2,9 +2,9 @@ MD5 325e8d2a9903043ee7c4e1c7fb3dd8e8 gst-plugins-cdparanoia-0.8.2.ebuild 357
 MD5 412588cbc772e0f03aaadd4efeef103e gst-plugins-cdparanoia-0.8.1.ebuild 360
 MD5 b9c441b704637b5b23014bdd35374bfa gst-plugins-cdparanoia-0.8.3.ebuild 359
 MD5 e1b77c8059da03f6ef5024004a7ea00d gst-plugins-cdparanoia-0.6.4.ebuild 359
-MD5 65ae6f054ac74ba42cc8dd72efeb2343 gst-plugins-cdparanoia-0.8.5.ebuild 358
-MD5 1b3f49bdeb52e0f271c103d7b66fff29 ChangeLog 2013
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 54f6ba252920f0c6cfe481b481d44275 gst-plugins-cdparanoia-0.8.5.ebuild 358
+MD5 a82b8f7a30bc5bd7a9574a55a4ded87a ChangeLog 2012
+MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-cdparanoia-0.6.4 71
 MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-cdparanoia-0.8.1 71
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-cdparanoia-0.8.2 71
