@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.3-r1.ebuild,v 1.13 2003/08/05 15:15:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.3-r1.ebuild,v 1.14 2003/09/04 00:58:24 msterret Exp $
 
 DESCRIPTION="DOS Emulator"
 HOMEPAGE="http://www.dosemu.org/"
@@ -61,6 +61,5 @@ src_install () {
 
 	doman man/*.1
 	rm -rf ${D}/opt/dosemu/man/
-
 }
 

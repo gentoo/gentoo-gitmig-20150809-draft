@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/winex-transgaming-3.1.ebuild,v 1.1 2003/06/18 06:01:31 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/winex-transgaming-3.1.ebuild,v 1.2 2003/09/04 01:09:18 msterret Exp $
 
 IUSE="cups opengl"
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/x11
 	cups? ( net-print/cups )
 	>=media-libs/freetype-2.0.0
 	!app-emulation/winex"
-        
+
 
 src_unpack () {
 	if [ ! -e "${DISTDIR}/${MY_P}.tgz" ] ; then

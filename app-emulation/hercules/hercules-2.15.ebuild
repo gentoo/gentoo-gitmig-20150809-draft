@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-2.15.ebuild,v 1.8 2003/02/13 07:14:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-2.15.ebuild,v 1.9 2003/09/04 01:05:50 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hercules System/370, ESA/390 and zArchitecture Mainframe Emulator"
@@ -44,7 +44,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	einfo
 	einfo "Hercules System/370, ESA/390 and zArchitecture Mainframe"
 	einfo "Emulator has been installed. Some useful utility files have"
@@ -57,5 +56,4 @@ pkg_postinst() {
 	einfo "download several real mainframe operating systems such as"
 	einfo "OS/360, MVS 3.8J or VM370r6 from http://www.cbttape.org"
 	einfo
-
 }

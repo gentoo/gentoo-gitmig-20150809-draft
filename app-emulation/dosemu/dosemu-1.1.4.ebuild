@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.4.ebuild,v 1.5 2003/08/05 15:15:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.4.ebuild,v 1.6 2003/09/04 00:58:24 msterret Exp $
 
 DESCRIPTION="DOS Emulator"
 HOMEPAGE="http://www.dosemu.org/"
@@ -41,7 +41,7 @@ src_compile() {
 ### this is really a ./configure (honestly)
 	./base-configure \
 		${myflags} || die "DOSemu Base Configuration Failed"
-		
+
 ### Ok, the build tree is clean, lets make the executables, and 'dos' commands
 	emake -C src || die "DOSemu Make Failed!"
 	emake dosbin || die "DOSbin Make Failed"
@@ -62,6 +62,4 @@ src_install () {
 
 	doman man/*.1
 	rm -rf ${D}/opt/dosemu/man/
-
 }
-

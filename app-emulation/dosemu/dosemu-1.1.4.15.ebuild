@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.4.15.ebuild,v 1.3 2003/08/05 15:15:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.4.15.ebuild,v 1.4 2003/09/04 00:58:24 msterret Exp $
 
 MAJOR_PV=${PV%.[0-9]*}
 MINOR_PV=${PV##[0-9]*.}
@@ -61,11 +61,9 @@ src_install () {
 
 	doman man/*.1
 	rm -rf ${D}/opt/dosemu/man/
-	
+
 	mv ${D}/usr/share/doc/dosemu ${D}/usr/share/doc/${PF}
-	
+
 	# freedos tarball is needed in /usr/share/dosemu
 	cp ${DISTDIR}/${PN}-freedos-bin.tgz ${D}/usr/share/dosemu
-	
 }
-

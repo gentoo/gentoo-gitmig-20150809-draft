@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.1 2003/08/09 08:11:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.2 2003/09/04 01:17:49 msterret Exp $
 
 DESCRIPTION="DOS Emulator"
 HOMEPAGE="http://www.dosbox.sf.net"
@@ -13,12 +13,12 @@ SLOT="0"
 # don't install this package and the stable one at the same time.
 # they use the same binary names.
 DEPEND="sys-libs/ncurses
-   >=media-libs/libsdl-1.2.0
-   media-libs/libpng
-   sys-libs/zlib
-   media-libs/sdl-net
-   alsa? ( media-libs/alsa-lib )
-   !app-emulation/dosbox"
+	>=media-libs/libsdl-1.2.0
+	media-libs/libpng
+	sys-libs/zlib
+	media-libs/sdl-net
+	alsa? ( media-libs/alsa-lib )
+	!app-emulation/dosbox"
 
 inherit cvs debug flag-o-matic
 

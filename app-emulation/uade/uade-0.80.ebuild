@@ -1,9 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-0.80.ebuild,v 1.1 2003/08/27 08:51:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-0.80.ebuild,v 1.2 2003/09/04 01:19:04 msterret Exp $
 
-DESCRIPTION='Unix Amiga Delitracker Emulator - plays old Amiga tunes through UAE
- emulation and cloned m68k-assembler Eagleplayer API'
+DESCRIPTION='Unix Amiga Delitracker Emulator - plays old Amiga tunes through UAE emulation and cloned m68k-assembler Eagleplayer API'
 HOMEPAGE='http://ee.tut.fi/~heikki/uade.html'
 SRC_URI="http://ee.tut.fi/~heikki/uade/${P}.tar.bz2"
 
@@ -38,8 +37,8 @@ src_compile() {
 }
 
 src_install() {
-    make DESTDIR=${D} install || die 'make install failed'
-    dodoc BUGS ChangeLog.txt FIXED
+	make DESTDIR=${D} install || die 'make install failed'
+	dodoc BUGS ChangeLog.txt FIXED
 	rm -f ${D}/usr/share/doc/${P}/COPYING
 	find ${D}/usr/share/doc/${P}/ \
 		\( -name '*.readme'	-o \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.5-r1.ebuild,v 1.2 2003/08/05 15:15:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.5-r1.ebuild,v 1.3 2003/09/04 00:58:24 msterret Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="X? ( virtual/x11 )
 
 src_unpack() {
 	unpack ${P}.tgz
-        epatch ${FILESDIR}/dosemu-broken-links.diff
+	epatch ${FILESDIR}/dosemu-broken-links.diff
 	# extract freedos binary
 	cd ${S}/src
 	unpack ${P_FD}.tgz

@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.8 2003/02/13 07:19:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.9 2003/09/04 00:59:12 msterret Exp $
 
 DESCRIPTION="XTRS 4.9.0 - RadioShack TRS80 Emulator, inc. FreeWare ROM & LDOS Image"
 HOMEPAGE="http://www.tim-mann.org/trs80.html"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-SLOT="0" 
+SLOT="0"
 DEPEND="sys-libs/ncurses
-	sys-libs/readline 
+	sys-libs/readline
 	x11-base/xfree "
 SRC_URI="http://home.gwi.net/~plemon/sources/xtrs-4.9.tar.gz
 	 http://home.gwi.net/~plemon/support/disks/xtrs/ld4-631.tar.gz"

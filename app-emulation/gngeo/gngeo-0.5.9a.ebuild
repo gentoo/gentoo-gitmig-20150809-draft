@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gngeo/gngeo-0.5.9a.ebuild,v 1.1 2003/07/29 10:43:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gngeo/gngeo-0.5.9a.ebuild,v 1.2 2003/09/04 01:20:29 msterret Exp $
 
 DESCRIPTION="A NeoGeo emulator"
 HOMEPAGE="http://m.peponas.free.fr/gngeo/"
@@ -21,7 +21,7 @@ src_install() {
 }
 
 pkg_postinst() {
-    einfo
+	einfo
 	einfo "A licensed NeoGeo BIOS copy is required to run the emulator."
 	einfo
 }

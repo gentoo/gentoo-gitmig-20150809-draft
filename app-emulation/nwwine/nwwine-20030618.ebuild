@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20030618.ebuild,v 1.3 2003/08/05 15:15:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20030618.ebuild,v 1.4 2003/09/04 01:13:53 msterret Exp $
 
 inherit eutils
 
 DESCRIPTION="A special version of wine for the Never Winter Nights toolkit"
 HOMEPAGE="http://www.winehq.com/ http://republika.pl/nwnlinux/"
 SRC_URI="mirror://gentoo/${P}-misc.tar.bz2
-        ftp://128.173.184.249/Linux/nwwine/nwwine-based-on-${PV}.tar.gz
+	ftp://128.173.184.249/Linux/nwwine/nwwine-based-on-${PV}.tar.gz
 	mirror://gentoo/${P}-fake_windows.tar.bz2
 	mirror://gentoo/wine-nvidia-fix.patch.gz"
 
@@ -35,7 +35,7 @@ S=${WORKDIR}/nwwine-based-on-${PV}
 src_compile() {
 	cd ${S}/dlls/opengl32
 	epatch ${WORKDIR}/wine-nvidia-fix.patch
-	
+
 	cd ${S}
 	#fix the nwwine wrapper
 	mv nwwine.sh nwwine.old
@@ -80,7 +80,7 @@ src_install() {
 
 	# copy config
 	cp ${WORKDIR}/config .
-	
+
 	# put winedefault.reg into .data
 	cp ${S}/winedefault.reg .
 
