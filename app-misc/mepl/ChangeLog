@@ -1,6 +1,9 @@
-# ChangeLog for app-misc/mepl 
+# ChangeLog for app-misc/mepl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/ChangeLog,v 1.4 2004/06/24 22:24:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/ChangeLog,v 1.5 2004/09/05 07:01:50 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   20 Nov 2003; Patrick Kursawe <phosphan@gentoo.org> mepl-0.45.ebuild:
   Fixing access violation with /etc/mepl.conf
