@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.4.ebuild,v 1.1 2004/08/20 06:11:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.4.ebuild,v 1.2 2004/08/30 02:49:40 tgall Exp $
 
-inherit elisp
+inherit elisp gnuconfig
 
 IUSE=""
 
@@ -12,11 +12,17 @@ SRC_URI="mirror://sourceforge/navi2ch/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc macos"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc macos ~ppc64"
 
 DEPEND="virtual/emacs"
 
 SITEFILE=50navi2ch-gentoo.el
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	gnuconfig_update
+}
 
 src_compile() {
 	econf || die
