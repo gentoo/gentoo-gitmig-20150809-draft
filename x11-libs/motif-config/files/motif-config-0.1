@@ -126,17 +126,17 @@ switch_profile() {
 		exit 1
 	fi
 
-	_deactivate_profile
-
 	if [ -n "$1" ]; then
 		if [ ! -e ${PROFILE_PATH}/${1} ]; then
 			eerror "$0: no such profile ${1}"
 		else
+			_deactivate_profile
 			_activate_profile $1
 		fi
 	else
 		for x in `ls ${PROFILE_PATH}`; do
 			if [ "${x}" != "current" ]; then
+				_deactivate_profile
 				_activate_profile ${x}
 				break
 			fi
@@ -269,64 +269,74 @@ for x in "$@"; do
 		-c|--get-current-profile)
 			[[ $# -ne 1 ]] && usage 1
 			get_current_profile
+			exit $?
 		;;
 
 		-l|--list-profiles)
 			[[ $# -ne 1 ]] && usage 1
 			list_profiles
+			exit $?
 		;;
 
 		-s|--set-profile)
-			# switch profile 
 			[[ $# -ne 2 ]] && usage 1
 			switch_profile $2
+			exit $?
 		;;
 
 		-L|--get-lib-path)
 			[[ $# -gt 2 ]] && usage 1
 			get_lib_path $2
+			exit $?
 		;;
 
 		-I|--get-inc-path)
 			[[ $# -gt 2 ]] && usage 1
 			get_lib_path $2
+			exit $?
 		;;
 
 		--cflags)
 			[[ $# -gt 2 ]] && usage 1
 			get_cflags $2
+			exit $?
 		;;
 
 		--libs)
 			[[ $# -gt 2 ]] && usage 1
 			get_libs $2
+			exit $?
 		;;
 
 		--install)
 			[[ $# -ne 2 ]] && usage 1
 			install_profile $2
+			exit $?
 		;;
 
 		--uninstall)
 			[[ $# -ne 2 ]] && usage 1
 			uninstall_profile $2
+			exit $?
 		;;
 
 		-h|--help)
 			usage 0
+			exit $?
 		;;
 
 		-v|--version)
 			echo "motif-config-0.1"
+			exit $?
 		;;
 
 		-*)
 			usage 1
 		;;
 
-
 		*)
 			usage 1
 		;;
+
 	esac
 done
