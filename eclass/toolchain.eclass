@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.137 2005/03/25 21:50:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.138 2005/04/01 15:55:25 azarah Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -41,7 +41,7 @@ toolchain_pkg_prerm() {
 	${ETYPE}_pkg_prerm
 }
 toolchain_pkg_postrm() {
-	${ETYPE}_pkg_prerm
+	${ETYPE}_pkg_postrm
 }
 #----<< eclass stuff >>----
 
