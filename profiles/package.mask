@@ -1,4 +1,4 @@
-#####################################################################
+/#####################################################################
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -78,12 +78,6 @@ sys-apps/fakeroot
 # <raker@gentoo.org> (12 Aug 2002)
 # masked new build of hylafax.
 =net-misc/hylafax-4.1.3
-
-# <stubear@gentoo.org> (12 Aug 2002)
-# masked for testing
-=app-i18n/konfont-0.1
-=app-i18n/kon2-0.3.9b
-=x11-terms/kterm-6.2.0
 
 # <verwilst@gentoo.org> (11 Aug 2002)
 # masked for b0rk@ge + testing
@@ -276,10 +270,6 @@ app-office/ical
 # J. Alberto Suárez L. <bass@gentoo.org> (31 Jul 2002)
 # Beta version of firestarter for Gnome2
 =net-misc/firestarter-0.9.0
-
-# Stuart Bouyer <stubear@gentoo.org> (1 Aug 2002)
-# initial ebuild masked for testing
-=app-i18n/xcin-2.5.2.3
 
 # Daniel Robbins <drobbins@gentoo.org> (30 Jul 2002)
 # no corresponding PyQt on cvs to get this thing to compile
