@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Defresne Sylvain (keiichi) <kamisama@free.fr>
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.0.ebuild,v 1.1 2002/06/11 09:49:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.0.ebuild,v 1.2 2002/07/04 00:42:29 seemant Exp $
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
@@ -79,7 +79,13 @@ src_install ()
 		insinto /usr/share/pixmaps
 		doins graphics/links.xpm
 	)
-
+	
+	
+	# links needs to be setuid for it to work with svga
+	use svga && ( \
+		fperms 4644 /usr/bin/links
+	)
+	
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SITES TODO
 	dohtml doc/links_cal/*
 }
