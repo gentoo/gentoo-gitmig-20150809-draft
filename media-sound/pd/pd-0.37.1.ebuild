@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.7 2004/04/23 16:47:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.8 2004/05/10 17:24:05 eradicator Exp $
 
 inherit eutils
 
@@ -35,8 +35,15 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+
+	# --enable-alsa is bork
+	if ! use alsa; then
+		myconf="${myconf} --disable-alsa"
+	fi
+
 	econf \
-		`use_enable alsa` \
+		${myconf} \
 		`use_with X x` \
 		`use_enable debug` \
 		|| die "./configure failed"
