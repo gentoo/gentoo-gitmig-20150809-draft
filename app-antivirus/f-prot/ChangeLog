@@ -1,6 +1,14 @@
 # ChangeLog for app-antivirus/f-prot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.30 2005/02/24 22:01:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.31 2005/02/24 22:53:00 ticho Exp $
+
+*f-prot-4.5.4-r1 (24 Feb 2005)
+
+  24 Feb 2005; Andrej Kacian <ticho@gentoo.org> +f-prot-4.5.4-r1.ebuild,
+  f-prot-4.5.4.ebuild:
+  Install check-updates.pl to correct location, designed by upstream (tools/
+  from dir where f-prot binary is), so it works correctly. Also, keep dir
+  /var/tmp/f-prot.
 
 *f-prot-4.5.4 (24 Feb 2005)
 
