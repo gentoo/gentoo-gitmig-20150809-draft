@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc. and Tim Yamin <plasmaroo@gentoo.org> <plasmaroo@squirrelsoft.org.uk>
+# Copyright 1999-2004 Gentoo Technologies, Inc. and Tim Yamin <plasmaroo@gentoo.org> <plasmaroo@squirrelsoft.org.uk>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gerbv/gerbv-0.15.ebuild,v 1.1 2003/11/27 22:54:08 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gerbv/gerbv-0.15.ebuild,v 1.2 2004/03/30 19:23:33 spyderous Exp $
 
 S=${WORKDIR}/${P}
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 alpha sparc"
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=dev-libs/glib-1.2.10
 	>=x11-libs/gtk+-1.2.10
-	x11-base/xfree"
+	virtual/x11"
 
 src_compile() {
 

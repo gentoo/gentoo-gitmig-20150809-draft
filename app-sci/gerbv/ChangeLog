@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/gerbv
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gerbv/ChangeLog,v 1.1 2003/11/27 22:54:08 plasmaroo Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gerbv/ChangeLog,v 1.2 2004/03/30 19:23:33 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; gerbv-0.15.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
 *gerbv-0.15 (27 Nov 2003)
 
