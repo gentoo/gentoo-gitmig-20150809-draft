@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.18 2003/05/25 18:27:25 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.19 2003/05/25 18:49:13 pauldv Exp $
 
 IUSE="tcltk java"
 
@@ -70,13 +70,13 @@ src_install () {
 
 fix_so () {
 	cd /usr/lib
-	target=`find -type f -maxdepth 1 -name "libdb-*.so" |tail -n 1`
+	target=`find -type f -maxdepth 1 -name "libdb-*.so" |sort |tail -n 1`
 	[ ${target} ] && ln -sf ${target//.\//} libdb.so
-	target=`find -type f -maxdepth 1 -name "libdb_cxx*.so" |tail -n 1`
+	target=`find -type f -maxdepth 1 -name "libdb_cxx*.so" |sort |tail -n 1`
 	[ ${target} ] && ln -sf ${target//.\//} libdb_cxx.so
-	target=`find -type f -maxdepth 1 -name "libdb_tcl*.so" |tail -n 1`
+	target=`find -type f -maxdepth 1 -name "libdb_tcl*.so" |sort |tail -n 1`
 	[ ${target} ] && ln -sf ${target//.\//} libdb_tcl.so
-	target=`find -type f -maxdepth 1 -name "libdb_java*.so" |tail -n 1`
+	target=`find -type f -maxdepth 1 -name "libdb_java*.so" |sort |tail -n 1`
 	[ ${target} ] && ln -sf ${target//.\//} libdb_java.so
 	cd -
 	cd /usr/include
