@@ -1,6 +1,6 @@
-# ChangeLog for net-www/mozilla-firefox
+# ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.1 2005/03/18 19:47:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.2 2005/03/19 00:58:50 swegener Exp $
 
 *mozilla-firefox-1.0.1 (18 Mar 2005)
 *mozilla-firefox-1.0-r3 (18 Mar 2005)
