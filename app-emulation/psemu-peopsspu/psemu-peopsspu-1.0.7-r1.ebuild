@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7.ebuild,v 1.2 2003/07/16 07:23:57 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7-r1.ebuild,v 1.1 2003/08/14 06:28:48 vapier Exp $
 
-inherit eutils
+inherit games eutils
 
 DESCRIPTION="P.E.Op.S Sound Emulation (SPU) PSEmu Plugin"
 HOMEPAGE="http://peops.sourceforge.net/"
 SRC_URI="mirror://sourceforge/peops/PeopsSpu${PV//./}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc"
 SLOT="0"
+KEYWORDS="x86"
 IUSE="alsa oss"
 
 DEPEND="alsa? ( media-libs/alsa-lib )
@@ -51,11 +51,12 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/lib/psemu/plugins
+	exeinto ${GAMES_LIBDIR}/psemu/plugins
 	doexe libspu*
-	exeinto /usr/lib/psemu/cfg
+	exeinto ${GAMES_LIBDIR}/psemu/cfg
 	doexe src/linuxcfg/src/cfgPeopsOSS
-	insinto /usr/lib/psemu/cfg
+	insinto ${GAMES_LIBDIR}/psemu/cfg
 	doins spuPeopsOSS.cfg
 	dodoc src/*.txt *.txt
+	prepgamesdirs
 }
