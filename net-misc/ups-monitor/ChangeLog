@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ups-monitor
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ups-monitor/ChangeLog,v 1.1 2005/02/06 12:28:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ups-monitor/ChangeLog,v 1.2 2005/03/23 17:43:56 ka0ttic Exp $
+
+*ups-monitor-0.8.2 (23 Mar 2005)
+
+  23 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +ups-monitor-0.8.2.ebuild:
+  Version bump.
 
 *ups-monitor-0.8 (06 Feb 2005)
 
