@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.54 2002/12/01 23:39:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.55 2002/12/02 01:05:01 blizzy Exp $
+
+  02 Dec 2002; Maik Schreiber <blizzy@gentoo.org> files/digest-mozilla-1.2:
+  Fixed digest.
 
   02 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.ebuild :
 
