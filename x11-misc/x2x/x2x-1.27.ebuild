@@ -1,16 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27.ebuild,v 1.8 2004/03/14 00:40:09 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27.ebuild,v 1.9 2004/06/01 19:28:15 tseng Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="An utility to connect the Mouse and KeyBoard to another X"
 HOMEPAGE="http://www.the-labs.com/X11/#x2x"
 LICENSE="as-is"
 DEPEND="virtual/x11"
-RDEPEND="virtual/x11"
 SRC_URI="http://ftp.digital.com/pub/Digital/SRC/x2x/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="x86 sparc alpha amd64 ~mips"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
