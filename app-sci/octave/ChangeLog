@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/octave
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.38 2004/12/07 14:33:21 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.39 2004/12/15 13:10:35 phosphan Exp $
+
+  15 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> octave-2.1.64.ebuild:
+  Latest version does not like texi2html-1.70 (bug #74307)
 
 *octave-2.1.64 (07 Dec 2004)
 

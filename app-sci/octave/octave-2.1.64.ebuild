@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.64.ebuild,v 1.1 2004/12/07 14:33:21 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.64.ebuild,v 1.2 2004/12/15 13:10:35 phosphan Exp $
 
 inherit flag-o-matic
 
@@ -23,7 +23,8 @@ DEPEND="virtual/libc
 	hdf5? ( dev-libs/hdf5 )
 	tetex? ( virtual/tetex )
 	x86? ( ifc? ( dev-lang/ifc ) )
-	blas? ( virtual/blas )"
+	blas? ( virtual/blas )
+	!=app-text/texi2html-1.70"
 
 # NOTE: octave supports blas/lapack from intel but this is not open
 # source nor is it free (as in beer OR speech) Check out...
