@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cramfs/cramfs-1.1.ebuild,v 1.1 2002/10/26 11:29:04 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cramfs/cramfs-1.1.ebuild,v 1.2 2002/12/30 12:46:57 mholzer Exp $
 
 DESCRIPTION="Linux filesystem designed to be simple, small, and to compress things well"
 HOMEPAGE="http://sf.net/projects/cramfs/"
@@ -10,7 +10,7 @@ DEPEND="sys-libs/zlib
 KEYWORDS="~x86 ~ppc"
 
 SLOT="0"
-SRC_URI="http://dl.sf.net/cramfs/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 S=${WORKDIR}/${P}
 
