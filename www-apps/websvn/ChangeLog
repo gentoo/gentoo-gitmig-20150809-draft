@@ -1,0 +1,8 @@
+# ChangeLog for www-apps/websvn
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.1 2005/02/24 14:15:49 uberlord Exp $
+
+*webapps/websvn-1.61 (24 Feb 2005)
+
+  24 Feb 2005; Roy Marples <uberlord@gentoo.org> +websvn-1.61.ebuild:
+  Initial import.
