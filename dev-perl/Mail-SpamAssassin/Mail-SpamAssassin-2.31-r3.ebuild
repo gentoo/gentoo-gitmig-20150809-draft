@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.31-r3.ebuild,v 1.1 2002/07/07 04:04:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.31-r3.ebuild,v 1.2 2002/07/07 04:12:13 seemant Exp $
 
 inherit perl-module
 
@@ -17,10 +17,9 @@ SLOT="0"
 KEYWORDS="*"
 
 mydoc="License TODO Changes procmailrc.example sample-nonspam.txt sample-spam.txt"
+myinst="LOCAL_RULES_DIR=${D}/etc/mail/spamassassin"
 
 src_install () {
-
-	myinst="LOCAL_RULES_DIR=${D}/etc/mail/spamassassin"
 	
 	base_src_install
 	
