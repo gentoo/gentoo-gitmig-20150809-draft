@@ -1,3 +1,4 @@
-MD5 630e1f9cd1b3cc98d1cff25e105c8e59 Changelog 230
-MD5 cbcd2c15599e68b2305a09258aae1c41 nikto-1.31.ebuild 1412
+MD5 a9e0615ff2255ce481b0e66b8c8ad817 nikto-1.31.ebuild 1396
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 f280afc9387d2207ee1d4fb15b9f2ef4 ChangeLog 477
 MD5 4fd028ff30a713c4de5e0e295c8e09c8 files/digest-nikto-1.31 62
