@@ -1,7 +1,12 @@
 # ChangeLog for media-sound/mp3info
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.2 2002/05/18 19:37:56 spider Exp $
 
+*mp3info-0.8.4-r1 (18 May 2002) 
+  18 May 2002; Spider <spider@gentoo.org> :
+  fix the gtk+ dependencies so it actually works.
+
+   
 *mp3info-0.8.4 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
