@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r5.ebuild,v 1.2 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r5.ebuild,v 1.3 2003/12/29 03:40:10 kumba Exp $
 
 IUSE="nls build afs"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 # then we might want to redirect the link.  See bug 18729
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ppc sparc hppa ~arm alpha ia64"
+KEYWORDS="x86 amd64 ppc sparc hppa ~arm alpha ia64 mips"
 SLOT="0"
 LICENSE="GPL-2"
 

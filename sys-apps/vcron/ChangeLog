@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/vcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.28 2003/12/12 18:06:54 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.29 2003/12/29 03:51:21 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org> vcron-3.0.1-r3.ebuild:
+  Move to mips stable (~mips -> mips)
 
   12 Dec 2003; Chris PeBenito <pebenito@gentoo.org> files/crontab,
   files/crontab-3.0.1-r4:

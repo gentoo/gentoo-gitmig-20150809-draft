@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.23 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.24 2003/12/29 03:40:10 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org> findutils-4.1.7-r5.ebuild:
+  Move to mips stable (~mips -> mips)
 
   28 Oct 2003; Chris PeBenito <pebenito@gentoo.org>
   findutils-4.1.20-r1.ebuild, findutils-4.1.20.ebuild,

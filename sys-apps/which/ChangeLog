@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/which
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.15 2003/12/14 03:55:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.16 2003/12/29 03:54:53 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org> which-2.16.ebuild:
+  Move to mips stable (~mips -> mips)
 
   14 Dec 2003; Guy Martin <gmsoft@gentoo.org> which-2.16.ebuild:
   Marked stable on hppa.

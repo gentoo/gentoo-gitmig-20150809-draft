@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.25 2003/12/14 03:54:31 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.26 2003/12/29 03:45:19 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org> sh-utils-2.0.15-r1.ebuild:
+  Move to mips stable (~mips -> mips)
 
   14 Dec 2003; Guy Martin <gmsoft@gentoo.org> sh-utils-2.0.15-r1.ebuild:
   Marked stable on hppa.
