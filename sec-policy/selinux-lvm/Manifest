@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d9a7166b6246a5bc3b22f60d2344d7ea ChangeLog 368
+MD5 8a0bd1d41f0f9ff329ff416a18649ef8 metadata.xml 528
+MD5 717744e4843a561f9e3d436c191dac41 selinux-lvm-20050130.ebuild 397
+MD5 f4c19622ce3536adfaf5fde662bd4b75 files/digest-selinux-lvm-20050130 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCHwhwGSBEIeh4AEYRAroBAJ4/7T3ubg8za7v9JgSMAxzEvDAyFwCdFmkC
+EP5SwxTtjyqTqxgI0y6XDME=
+=5LIB
+-----END PGP SIGNATURE-----
