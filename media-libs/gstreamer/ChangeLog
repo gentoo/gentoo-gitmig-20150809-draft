@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.35 2003/09/12 20:23:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.36 2003/09/27 02:20:29 darkspecter Exp $
+
+  23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> gstreamer-0.6.2.ebuild:
+  set ppc in keywords
 
   12 Sep 2003; Aron Griffis <agriffis@gentoo.org> gstreamer-0.6.3.ebuild:
   Add hack to build on ~alpha

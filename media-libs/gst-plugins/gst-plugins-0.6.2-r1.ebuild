@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2-r1.ebuild,v 1.4 2003/09/11 21:40:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2-r1.ebuild,v 1.5 2003/09/27 02:18:52 darkspecter Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://gstreamer.sourceforge.net"
 
 LICENSE="LGPL-2.1"
 SLOT=${PV_MAJ_MIN}
-KEYWORDS="x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ppc ~amd64"
 IUSE="encode quicktime mpeg jpeg esd gnome mikmod sdl png alsa arts dvd aalib oggvorbis mmx"
 
 # required packages
