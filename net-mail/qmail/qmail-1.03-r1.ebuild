@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r1.ebuild,v 1.3 2000/09/05 18:01:11 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r1.ebuild,v 1.4 2000/09/15 20:09:11 drobbins Exp $
 
 P=qmail-1.03
 A="qmail-1.03.tar.gz checkpassword-0.81.tar.gz"
@@ -13,9 +13,9 @@ HOMEPAGE="http://www.qmail.org"
 
 src_compile() {
   cd ${S}
-  make it man
+  try make it man
   cd checkpassword-0.81
-  make it man
+  try make it man
 }
 
 src_unpack() {
@@ -118,7 +118,7 @@ src_install() {
 	qmail-qread qmail-qstat qmail-tcpto qmail-tcpok qmail-pop3d \
 	qmail-popup qmail-qmqpc qmail-qmqpd qmail-qmtpd qmail-smtpd \
 	sendmail tcp-env qreceipt qsmhook qbiff forward preline \
-	condredirect bouncesaying except maildirmake maildir2mbox \
+	condredirect bouncesaying except maildirtry make maildir2mbox \
 	maildirwatch qail elq pinq config-fast
 	do
 	  doins $i $i
@@ -131,7 +131,7 @@ src_install() {
 	  doman $i.5
 	done
 
-	for i in forward condredirect bouncesaying except maildirmake \
+	for i in forward condredirect bouncesaying except maildirtry make \
 	maildir2mbox maildirwatch mailsubj qreceipt qbiff preline tcp-env
 	do
 	  doman $i.1
@@ -169,7 +169,7 @@ pkg_postinst() {
     touch .qmail-root
 
     if [ ! -d ${ROOT}/var/qmail/alias/Maildir ] ; then
-	${ROOT}/var/qmail/bin/maildirmake Maildir
+	${ROOT}/var/qmail/bin/maildirtry make Maildir
     fi
     chown alias.qmail .qmail-*
     chown -R alias.qmail Maildir

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.21-r1.ebuild,v 1.2 2000/08/16 04:38:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.21-r1.ebuild,v 1.3 2000/09/15 20:09:11 drobbins Exp $
 
 P=pine-maildir-4.21
 A="pine4.21.tar.gz pine-4.20-maildir_3.patch"
@@ -17,12 +17,12 @@ src_unpack() {
   cd ${S}
   patch -p1 < ${DISTDIR}/pine-4.20-maildir_3.patch
   cd ${S}/pine
-  cp makefile.lnx makefile.orig
-  sed -e "s:-g -DDEBUG:${CFLAGS}:" makefile.orig > makefile.lnx
+  cp try makefile.lnx try makefile.orig
+  sed -e "s:-g -DDEBUG:${CFLAGS}:" try makefile.orig > try makefile.lnx
 
   cd ${S}/pico
-  cp makefile.lnx makefile.orig
-  sed -e "s:-g -DDEBUG:${CFLAGS}:" makefile.orig > makefile.lnx
+  cp try makefile.lnx try makefile.orig
+  sed -e "s:-g -DDEBUG:${CFLAGS}:" try makefile.orig > try makefile.lnx
   
 }
 

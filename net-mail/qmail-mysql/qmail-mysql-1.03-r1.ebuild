@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03-r1.ebuild,v 1.4 2000/08/28 03:01:53 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03-r1.ebuild,v 1.5 2000/09/15 20:09:11 drobbins Exp $
 
 P=qmail-mysql-1.03
 A="qmail-1.03.tar.gz checkpassword-0.81.tar.gz"
@@ -19,13 +19,13 @@ src_compile() {
   sed -e "s:MYSQL_LIBS=.*:MYSQL_LIBS=/usr/lib/mysql/libmysqlclient.a -lm:" \
       -e "s:MYSQL_INCLUDE=.*:MYSQL_INCLUDE=-I/usr/include/mysql:" 
 Makefile.orig > Makefile
-  make it man
+  try make it man
   cd checkpassword-0.81
   cp Makefile Makefile.orig
   sed -e "s:MYSQL_LIBS=.*:MYSQL_LIBS=/usr/lib/mysql/libmysqlclient.a -lm:" \
       -e "s:MYSQL_INCLUDE=.*:MYSQL_INCLUDE=-I/usr/include/mysql:" 
 Makefile.orig > Makefile
-  make it man
+  try make it man
 }
 
 src_unpack() {
