@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/aww
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.1 2004/07/28 12:01:33 mcummings Exp $
+
+*aww-0.33 (28 Jul 2004)
+
+  28 Jul 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +aww-0.33.ebuild:
+  Initial import. ebuild submitted by Michael Panhorst <Michael@untiefe.de> in
+  bug 47194.
+
