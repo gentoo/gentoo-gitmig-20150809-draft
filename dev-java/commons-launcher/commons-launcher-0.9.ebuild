@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-0.9.ebuild,v 1.2 2004/02/26 23:38:14 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-0.9.ebuild,v 1.3 2004/03/23 03:19:11 zx Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jakarta.apache.org/commons/launcher/"
 SRC_URI="ftp://ftp.ibiblio.org/pub/mirrors/apache/jakarta/commons/launcher/source/launcher-0.9-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE="jikes doc"
 DEPEND=">=virtual/jdk-1.4
 		>=dev-java/ant-1.4"
@@ -20,7 +20,7 @@ src_compile() {
 	local antflags="jar"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadoc"
-	ant ${antflags}
+	ant ${antflags} || die "compilation problem"
 }
 
 src_install () {
