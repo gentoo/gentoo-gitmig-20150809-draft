@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-0.0.15.ebuild,v 1.2 2002/04/27 21:46:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-0.0.15.ebuild,v 1.3 2002/04/29 08:41:56 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A secure, lightweight ident daemon."
@@ -30,7 +30,7 @@ src_install () {
 	make DESTDIR=${D} install || die
 
 	exeinto /var/lib/supervise/slidentd
-	newexe ${FILESDIR}/run run
+	newexe ${FILESDIR}/slidentd-run run
 }
 
 pkg_postinst() {
