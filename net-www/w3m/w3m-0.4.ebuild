@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.ebuild,v 1.2 2003/03/05 17:23:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.ebuild,v 1.3 2003/03/08 03:14:52 agriffis Exp $
 
 inherit eutils
 
@@ -77,7 +77,7 @@ src_compile() {
 		# Do you want color ESC sequence for Kterm/pxvt
 		echo y
 		# Use mouse (requires xterm/kterm/gpm/sysmouse) 
-		use gpm &>/dev/null && echo y
+		use gpm &>/dev/null && echo y || echo n
 		# Use popup menu
 		echo y
 		# Use cookie 

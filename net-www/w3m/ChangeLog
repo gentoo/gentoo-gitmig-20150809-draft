@@ -1,8 +1,11 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.19 2003/03/05 17:23:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.20 2003/03/08 03:14:52 agriffis Exp $
 
 *w3m-0.4 (05 Mar 2003)
+
+  07 Mar 2003; Aron Griffis <agriffis@gentoo.org> w3m-0.4.ebuild:
+  Fix bug #16946 for when USE=-gpm.  Thanks to Robert Gill for catching this one.
 
   05 Mar 2003; Aron Griffis <agriffis@gentoo.org> w3m-0.4.ebuild,
   files/w3m-0.4-alpha.patch:
