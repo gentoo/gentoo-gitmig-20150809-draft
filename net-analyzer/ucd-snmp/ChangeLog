@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ucd-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.12 2003/03/20 04:05:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.13 2003/05/26 08:30:43 aliz Exp $
+
+*ucd-snmp-4.2.6-r1 (26 May 2003)
+
+  26 May 2003; Daniel Ahlberg <aliz@gentoo.org> ucd-snmp-4.2.6-r1.ebuild :
+  Added virtual/snmp 
 
   18 Feb 2003; Nick Hadaway <raker@gentoo.org> files/snmpd.rc6 :
   Changed the location of snmpd.conf to /etc/ucd-snmp for FHS 
