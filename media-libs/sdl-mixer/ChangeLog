@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.19 2004/05/23 22:53:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.20 2004/05/27 16:32:46 jhuebel Exp $
+
+*sdl-mixer-1.2.5-r3 (27 May 2004)
+
+  27 May 2004; Jason Eric Huebel <jhuebel@gentoo.org> 
+  amd64 patches for mikmod.h and mikmod_internals.h, provided by Tyler Montbriand <tsm@accesscomm.ca>
 
 *sdl-mixer-1.2.5-r2 (23 May 2004)
 
