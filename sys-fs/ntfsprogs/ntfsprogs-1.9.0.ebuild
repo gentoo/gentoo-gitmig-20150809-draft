@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.9.0.ebuild,v 1.2 2004/04/25 11:49:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.9.0.ebuild,v 1.3 2004/05/18 06:16:33 dragonheart Exp $
 
 DESCRIPTION="User tools for NTFS filesystems -- includes: ntsresize, mkntfs,
 ntfsfix, ntfsdefrag"
 HOMEPAGE="http://linux-ntfs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/linux-ntfs/${P}.tar.gz"
-
+IUSE="gnome"
 DEPEND=">sys-devel/gcc-2.95
 	>=sys-apps/sed-4
 	gnome? ( >=dev-libs/glib-2.0
