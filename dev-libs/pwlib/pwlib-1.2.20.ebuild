@@ -1,13 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.1.ebuild,v 1.3 2002/07/03 21:30:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.2.20.ebuild,v 1.1 2002/07/03 21:30:09 drobbins Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="Libs needed for GnomeMeeting"
 SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 HOMEPAGE="http://www.openh323.org"
-SLOT="1.3"
 DEPEND="virtual/glibc >=sys-devel/bison-1.28 >=sys-devel/flex-2.5.4a"
+SLOT="1.2"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	patch -p1 < ${FILESDIR}/pwlib-1.2.20.diff || die
+}
 
 src_compile() {
 	cd ${S}
@@ -42,5 +48,5 @@ src_install() {
 	rm -rf ${D}/usr/share/pwlib/include/ptlib/unix/CVS
 	rm -rf ${D}/usr/share/pwlib/include/ptlib/CVS
 	cd ${D}/usr/lib
-	ln -sf libpt_linux_x86_r.so.${PV} libpt.so
+	ln -sf libpt.so.${PV} libpt.so
 }
