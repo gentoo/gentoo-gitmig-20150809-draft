@@ -1,0 +1,8 @@
+# ChangeLog for games-action/cylindrix
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/ChangeLog,v 1.1 2004/04/18 19:59:50 vapier Exp $
+
+*cylindrix-1.0 (18 Apr 2004)
+
+  18 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me/Mr Bones for #39315 by Matija Suklje (hook).
