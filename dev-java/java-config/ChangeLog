@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.59 2004/08/07 21:45:28 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.60 2004/08/24 04:21:51 zx Exp $
+
+  24 Aug 2004; Chris Aniszczyk <zx@gentoo.org> java-config-1.2.9.ebuild:
+  Marking x86
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> java-config-1.2.10.ebuild,
   java-config-1.2.6.ebuild, java-config-1.2.9.ebuild:
