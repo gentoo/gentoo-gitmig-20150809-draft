@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.1.ebuild,v 1.2 2003/12/18 21:38:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.1.ebuild,v 1.3 2003/12/19 18:58:33 mholzer Exp $
 
 DESCRIPTION="Digital DJ tool using QT 3.x"
 HOMEPAGE="http://mixxx.sourceforge.net"
 SRC_URI="mirror://sourceforge/mixxx/${P}.tar.gz"
 RESTRICT="nomirror"
-S="${WORKDIR}/${P}/src"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86"
@@ -21,19 +20,16 @@ DEPEND="virtual/glibc
 	dev-lang/perl
 	media-libs/audiofile"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
-
 src_compile() {
-	cd ${S}
+	cd ${S}/src
 	qmake mixxx.pro || die
+	sed -i -e "s/CFLAGS   = -pipe -w -O2/CFLAGS   = ${CFLAGS} -w/" Makefile
+	sed -i -e "s/CXXFLAGS   = -pipe -w -O2/CXXFLAGS   = ${CXXFLAGS} -w/" Makefile
 	make || die
 }
 
 src_install() {
-	cd ..
+	cd ${S}
 	sed -i -e "s#$BASE='/usr';#$BASE='${D}/usr';#" install.pl
 	./install.pl || die
 
@@ -41,7 +37,7 @@ src_install() {
 	einfo "Fixing permissions..."
 	einfo ""
 
-	chmod 644 ${D}/usr/share/doc/mixxx-1.0/*
+	chmod 644 ${D}/usr/share/doc/${PF}/*
 	chmod 644 ${D}/usr/share/mixxx/midi/*
 	chmod 644 ${D}/usr/share/mixxx/skins/outline/*
 	chmod 644 ${D}/usr/share/mixxx/skins/traditional/*
