@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/museseq
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.3 2003/12/05 15:48:15 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.4 2003/12/06 23:25:38 lanius Exp $
+
+  07 Dec 2003; Heinrich Wendel <lanius@gentoo.org> museseq-0.6.0.ebuild,
+  museseq-0.6.2.ebuild:
+  fixed alsa deps
 
   05 Dec 2003; <torbenh@gentoo.org> museseq-0.6.2.ebuild:
   added a fix for alsa-1.0
