@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.0.9.ebuild,v 1.8 2003/02/13 12:09:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.0.9.ebuild,v 1.9 2003/09/12 19:50:41 liquidx Exp $
 
 IUSE="doc"
 
@@ -27,7 +27,6 @@ RDEPEND=">=x11-libs/gtk+-2.0.6-r1
 	>=sys-libs/zlib-1.1.4
 	>=app-text/scrollkeeper-0.3.11
 	>=gnome-base/ORBit2-2.4.3
-	>=gnome-base/bonobo-activation-1.0.3
 	>=gnome-base/gconf-1.2.1
 	>=gnome-base/gnome-vfs-2.0.4
 	>=gnome-base/gnome-desktop-2.0.8

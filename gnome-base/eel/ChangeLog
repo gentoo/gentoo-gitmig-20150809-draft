@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/eel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.40 2003/09/09 16:42:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.41 2003/09/12 19:47:28 liquidx Exp $
+
+  12 Sep 2003; Alastair Tse <liquidx@gentoo.org> eel-2.0.7.ebuild:
+  removing bonobo-activation dep
 
 *eel-2.4.0 (09 Sep 2003)
 

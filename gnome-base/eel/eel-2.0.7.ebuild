@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.0.7.ebuild,v 1.7 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.0.7.ebuild,v 1.8 2003/09/12 19:47:28 liquidx Exp $
 
 inherit gnome2
 
@@ -21,7 +21,6 @@ RDEPEND=">=dev-libs/glib-2.0.6-r1
 	>=dev-libs/popt-1.6.3
 	>=gnome-base/libbonobo-2.0.0
 	>=gnome-base/libbonoboui-2.0.3
-	>=gnome-base/bonobo-activation-1.0.3
 	>=gnome-base/libgnome-2.0.5
 	>=gnome-base/libgnomeui-2.0.5
 	>=gnome-base/libgnomecanvas-2.0.4

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.2.3.ebuild,v 1.5 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.2.3.ebuild,v 1.6 2003/09/12 19:53:38 liquidx Exp $
 
 IUSE="doc ssl"
 
@@ -16,7 +16,6 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gconf-1.2.1
 	>=gnome-base/ORBit2-2.4
 	>=gnome-base/libbonobo-2
-	>=gnome-base/bonobo-activation-1
 	>=dev-libs/libxml2-2.2.8
 	>=gnome-base/gnome-mime-data-2
 	app-admin/fam-oss
