@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sablecc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.2 2004/03/23 03:10:26 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.3 2004/05/03 21:57:49 zx Exp $
+
+  08 May 2004; Chris Aniszczyk <zx@gentoo.org> +files/sablecc,
+  sablecc-2.18.2.ebuild:
+  Closes #49013.
+  Thanks to Arne Mejlholm <aaby@gentoo.org> for the bug fix.
 
   22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> sablecc-2.18.2.ebuild:
   Marking stable on x86. Fixes according to #45398
