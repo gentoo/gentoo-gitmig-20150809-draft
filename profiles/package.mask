@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2852 2004/05/11 15:36:34 klieber Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2853 2004/05/11 15:38:28 klieber Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -23,8 +23,9 @@
 ##
 
 # <klieber@gentoo.org> (11 May 2004)
-# The following packages contain a remotely-exploitable
-# security vulnerability and have been hard masked accordingly.
+# The following packages contain unpatched security vulnerabilities and
+# do not have active maintainers at the moment.  Consequently, they have been
+# hard masked.
 # 
 # Please see http://bugs.gentoo.org/show_bug.cgi?id=42133 and
 #            http://bugs.gentoo.org/show_bug.cgi?id=42963 for more info
