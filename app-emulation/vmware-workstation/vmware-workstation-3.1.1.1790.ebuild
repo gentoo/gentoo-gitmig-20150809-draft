@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.1.1.1790.ebuild,v 1.7 2002/08/06 18:40:13 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.1.1.1790.ebuild,v 1.8 2002/08/11 22:45:53 seemant Exp $
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators."
 S=${WORKDIR}/vmware-distrib
@@ -18,12 +18,12 @@ SRC_PATH5="http://vmware.wespe.de/software"
 SRC_PATH6="ftp://vmware.wespe.de/pub/software"
 
 SRC_URI="$SRC_PATH0/${NP}.tar.gz
-	 $SRC_PATH1/${NP}.tar.gz
-	 $SRC_PATH2/${NP}.tar.gz
-	 $SRC_PATH3/${NP}.tar.gz
-	 $SRC_PATH4/${NP}.tar.gz
-	 $SRC_PATH5/${NP}.tar.gz
-	 $SRC_PATH6/${NP}.tar.gz"
+	$SRC_PATH1/${NP}.tar.gz
+	$SRC_PATH2/${NP}.tar.gz
+	$SRC_PATH3/${NP}.tar.gz
+	$SRC_PATH4/${NP}.tar.gz
+	$SRC_PATH5/${NP}.tar.gz
+	$SRC_PATH6/${NP}.tar.gz"
 
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 SLOT="0"
