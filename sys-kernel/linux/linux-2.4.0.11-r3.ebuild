@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.2 2001/01/27 18:21:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.3 2001/01/28 12:24:28 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
@@ -48,10 +48,10 @@ src_unpack() {
 	cd ${S}/extras
     echo "Unpacking and applying LVM patch..."
     unpack lvm_${LVMV}.tar.gz
-	cd LVM/${LVMV}
+    cd LVM/${LVMV}
     try ./configure --prefix=/ --mandir=/usr/man
-	cd PATCHES
-	try make
+    cd PATCHES
+    	try make KERNEL_VERSION=2.4.0-ac11 KERNEL_DIR=${S}
 	cd ${S}
 	#the -l option allows this patch to apply cleanly (ignore whitespace changes)
 	try patch -l -p1 < ${S}/extras/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch
@@ -99,6 +99,7 @@ src_compile() {
 
     #LVM tools are included even in the linux-sources package
     cd ${S}/extras/LVM/${LVMV}
+    try ./configure --prefix=/ --mandir=/usr/share/man
     try make
 
     cd ${S}
@@ -130,7 +131,8 @@ src_install() {
 	dodir /usr/lib
 	cd ${S}/extras/LVM/${LVMV}
 	#I changed /usr/share/man back to /usr/man... was that a mistake?
-	make install prefix=${D} MAN8DIR=${D}/usr/man/man8 LIBDIR=${D}/lib
+	make install -e prefix=${D} mandir=${D}/usr/share/man \
+		sbindir=${D}/sbin libdir=${D}/lib
 	#no need for a static library in /lib
 	mv ${D}/lib/liblvm*.a ${D}/usr/lib
 
