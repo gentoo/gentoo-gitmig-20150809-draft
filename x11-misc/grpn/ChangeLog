@@ -1,11 +1,14 @@
 # ChangeLog for x11-misc/grpn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.4 2004/06/24 22:20:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.5 2004/12/28 22:06:21 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Jun 2004; <pyrania@gentoo.org> grpn-1.1.2.ebuild:
   Removed default ${S}, added IUSE.
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> grpn-1.1.2.ebuild:
+  12 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> grpn-1.1.2.ebuild:
   Stable on alpha.
 
 *grpn-1.1.2 (18 Jun 2003)

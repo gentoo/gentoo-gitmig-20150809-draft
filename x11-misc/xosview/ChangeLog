@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xosview
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.18 2004/12/16 10:10:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.19 2004/12/28 22:10:10 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> xosview-1.8.2.ebuild:
   Stable on ppc64
@@ -11,7 +14,7 @@
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xosview-1.8.2.ebuild:
   Stable on amd64.
 
-  03 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> xosview-1.8.2.ebuild:
+  03 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xosview-1.8.2.ebuild:
   Stable on alpha.
 
   06 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> xosview-1.8.2.ebuild:
@@ -32,7 +35,7 @@
   xosview-1.8.0.ebuild:
   Remove older ebuild.
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xosview-1.8.1.ebuild:
+  12 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xosview-1.8.1.ebuild:
   Stable on alpha.
 
   23 May 2004; <plasmaroo@gentoo.org> files/xosview-1.8.1-kernel-2.5+.diff:

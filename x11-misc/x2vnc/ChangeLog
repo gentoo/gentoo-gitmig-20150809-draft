@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2vnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.26 2004/10/19 09:05:44 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.27 2004/12/28 22:08:41 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> x2vnc-1.6.1.ebuild:
   Stable on amd64.
@@ -21,7 +24,7 @@
   x2vnc-1.6.ebuild:
   QA - fix use invocation
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> x2vnc-1.6.ebuild:
+  12 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> x2vnc-1.6.ebuild:
   Stable on alpha.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> x2vnc-1.5.1-r1.ebuild,

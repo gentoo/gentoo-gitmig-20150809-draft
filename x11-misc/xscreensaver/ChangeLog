@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.70 2004/12/17 06:38:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.71 2004/12/28 22:11:34 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Dec 2004; Luca Barbato <lu_zero@gentoo.org> xscreensaver-4.16.ebuild:
   Workaround for bug #73022
@@ -17,7 +20,7 @@
   09 Oct 2004; Guy Martin <gmsoft@gentoo.org> xscreensaver-4.16.ebuild:
   Marked stable on hppa.
 
-  03 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> xscreensaver-4.16.ebuild:
+  03 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xscreensaver-4.16.ebuild:
   Stable on alpha.
 
   29 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
@@ -67,7 +70,7 @@
   xscreensaver-4.15.ebuild:
   Added kde and nls to IUSE. Stable on x86.
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xscreensaver-4.15.ebuild:
+  12 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xscreensaver-4.15.ebuild:
   Stable on alpha.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> xscreensaver-4.14-r2.ebuild,

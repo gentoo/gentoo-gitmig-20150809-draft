@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/peksystray
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.5 2004/11/23 12:40:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.6 2004/12/28 22:06:57 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *peksystray-0.2.1 (23 Nov 2004)
 
@@ -11,7 +14,7 @@
   19 Jun 2004; <pyrania@gentoo.org> peksystray-0.2.ebuild:
   Removed default ${S}, added IUSE.
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> peksystray-0.2.ebuild:
+  12 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> peksystray-0.2.ebuild:
   Stable on alpha.
 
 *peksystray-0.2 (10 Jan 2004)
