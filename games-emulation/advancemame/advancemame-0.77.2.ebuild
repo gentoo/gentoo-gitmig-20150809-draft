@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.77.2.ebuild,v 1.2 2004/01/08 15:08:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.77.2.ebuild,v 1.3 2004/01/08 15:09:05 vapier Exp $
 
 inherit games eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/advancemame/${P}.tar.gz"
 
 LICENSE="GPL-2 xmame"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="debug static svga fbcon alsa oss slang"
 
 RDEPEND="virtual/glibc
