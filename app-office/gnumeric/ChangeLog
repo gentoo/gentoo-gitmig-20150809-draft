@@ -1,7 +1,10 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.13 2002/06/30 18:33:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.14 2002/07/29 06:08:32 spider Exp $
 
+*gnumeric-1.0.9 (29 Jul 2002)
+  29 Jul 2002; Spider <spider@gentoo.org> gnumeric-1.0.9.ebuild gnumeric-1.0.8.ebuild gnumeric-1.1.5.ebuild :
+  bump version, add KEYWORDS to all versions.
 
 *gnumeric-1.0.8 (30 Jun 2002)
   30 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.8.ebuild,v 1.4 2002/07/29 06:08:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.9.ebuild,v 1.1 2002/07/29 06:08:32 spider Exp $
 
 #provide Xmake and Xemake
 
@@ -12,8 +12,8 @@ DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnumeric/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 SLOT="0"
-LICENSE="GPL-2"
 KEYWORDS="x86"
+LICENSE="GPL-2"
 
 #Eye Of Gnome (media-gfx/eog) is for image support.
 RDEPEND="=x11-libs/gtk+-1.2*

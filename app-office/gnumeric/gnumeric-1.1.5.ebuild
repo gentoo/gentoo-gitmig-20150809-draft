@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.5.ebuild,v 1.3 2002/06/30 18:33:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.5.ebuild,v 1.4 2002/07/29 06:08:32 spider Exp $
 
 #provide Xmake and Xemake
 inherit virtualx
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 SLOT="0"
 LICENSE="GPL-2"
-
+KEYWORDS="x86"
 
 #Eye Of Gnome (media-gfx/eog) is for image support.
 RDEPEND="=x11-libs/gtk+-2.0*
