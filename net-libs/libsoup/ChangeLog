@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.43 2004/12/23 16:26:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.44 2004/12/29 03:20:41 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> libsoup-2.2.1.ebuild:
   Stable on hppa.
@@ -46,7 +49,7 @@
   27 Jul 2004; <agriffis@gentoo.org> libsoup-1.99.28.ebuild:
   stable on ia64
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libsoup-1.99.28.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libsoup-1.99.28.ebuild:
   Stable on alpha.
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> libsoup-1.99.28.ebuild:

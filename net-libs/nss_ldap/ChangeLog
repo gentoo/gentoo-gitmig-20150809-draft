@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/nss_ldap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.35 2004/12/27 18:18:02 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.36 2004/12/29 03:21:53 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Dec 2004; Guy Martin <gmsoft@gentoo.org> nss_ldap-220.ebuild:
   Stable on hppa.
@@ -21,7 +24,7 @@
   23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.
 
-  20 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> nss_ldap-220.ebuild:
+  20 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> nss_ldap-220.ebuild:
   Add ~alpha.
 
   03 Sep 2004; Caleb Tennis <caleb@gentoo.org> -nss_ldap-209.1.ebuild:
