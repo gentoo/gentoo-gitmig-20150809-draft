@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/zvbi
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.1 2002/07/16 21:49:36 stroke Exp $
+
+*zvbi-0.2.1 (16 Jul 2002)
+
+  16 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> zvbi-0.2.1.ebuild :
+  
+  Initial cvs import. 
+  Ebuild written by: Alastair Tse <altse@cse.unsw.edu.au>
+
