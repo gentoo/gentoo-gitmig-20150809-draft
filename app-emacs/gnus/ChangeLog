@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gnus
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.6 2004/03/12 00:59:51 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.7 2004/04/25 22:06:28 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> gnus-5.10.3.ebuild,
+  gnus-5.10.6.ebuild:
+  Add die following econf for bug 48950
 
   11 Mar 2004; Jeremy Maitin-Shepard <jbms@gentoo.org> gnus-5.10.6.ebuild:
   Marked stable on x86
