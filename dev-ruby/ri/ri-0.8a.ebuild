@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-0.8a.ebuild,v 1.7 2003/03/25 20:58:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-0.8a.ebuild,v 1.8 2003/09/08 02:23:08 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Ruby Interactive reference"
@@ -14,6 +14,6 @@ KEYWORDS="x86 alpha"
 DEPEND=">=dev-lang/ruby-1.6.2"
 
 src_install () {
-   dodoc COPYING ChangeLog README
-   DESTDIR=${D} ruby install.rb
+	dodoc COPYING ChangeLog README
+	DESTDIR=${D} ruby install.rb
 }

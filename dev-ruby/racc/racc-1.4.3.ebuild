@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.3.ebuild,v 1.5 2003/05/23 11:53:27 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.3.ebuild,v 1.6 2003/09/08 02:23:08 msterret Exp $
 
 S=${WORKDIR}/${P}-all
 DESCRIPTION="LALR parser generator for Ruby"
@@ -12,7 +12,7 @@ IUSE=""
 SLOT="0"
 
 DEPEND=">=dev-lang/ruby-1.6.1
-        >=dev-ruby/amstd-1.9.5"
+	>=dev-ruby/amstd-1.9.5"
 
 src_compile() {
 	ruby setup.rb config --without=amstd || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.8 2003/09/08 02:19:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.9 2003/09/08 02:23:08 msterret Exp $
 
 S=${WORKDIR}/mod_ruby-${PV}
 DESCRIPTION="A Ruby Module for Apache"
@@ -27,9 +27,9 @@ pkg_postinst() {
 }
 
 pkg_config() {
-        if [ -f "${ROOT}/etc/httpd/httpd.conf" ] ; then
-                einfo "Activating ruby interpretation for /ruby location"
-                cp ${ROOT}/etc/httpd/httpd.conf ${ROOT}/etc/httpd/httpd.conf.orig
+	if [ -f "${ROOT}/etc/httpd/httpd.conf" ] ; then
+		einfo "Activating ruby interpretation for /ruby location"
+		cp ${ROOT}/etc/httpd/httpd.conf ${ROOT}/etc/httpd/httpd.conf.orig
 		echo "
 <IfDefine RUBY>
 LoadModule ruby_module	      /usr/lib/apache/mod_ruby.so
