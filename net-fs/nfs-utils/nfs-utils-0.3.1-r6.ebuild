@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Originally written by Achim Gottinger <achim@gentoo.org>
 # Heavily updated for nfs-utils-0.3.1 by Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.1-r6.ebuild,v 1.1 2001/09/16 19:36:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.1-r6.ebuild,v 1.2 2001/09/16 19:39:34 agriffis Exp $
 
 A=$P.tar.gz
 S=$WORKDIR/$P
@@ -13,7 +13,8 @@ HOMEPAGE="http://nfs.sourceforge.net/"
 DEPEND="virtual/glibc
 	tcpd? ( sys-apps/tcp-wrappers )"
 
-RDEPEND="virtual/glibc net-nds/portmap"
+RDEPEND="virtual/glibc
+         >=net-nds/portmap-5b-r6"
 
 src_unpack() {
     unpack $A || die
