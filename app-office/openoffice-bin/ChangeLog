@@ -1,6 +1,16 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.15 2003/03/19 05:30:37 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.16 2003/04/19 19:55:45 sethbc Exp $
+
+*openoffice-bin-1.0.3 (Apr 07 2003)
+  07 Apr 2003; Seth Chandler <sethbc@gentoo.org>; openoffice-bin-1.0.3.ebuild:
+  added 1.0.3 to portage, but printing is broken, there should be a fix out 
+  shortly
+
+*openoffice-bin-1.1_Beta (Apr 03 2003)
+  03 Apr 2003; Seth Chandler <sethbc@gentoo.org>; openoffice-bin-1.1_beta.ebuild:
+  added 1.1_beta to portage, there are still a LOT of issues with 1.1_beta
+  some with the software itself, others with the ebuild, i'm working on them
 
 *openoffice-bin-1.0.2 (Jan 29 2003)
 
