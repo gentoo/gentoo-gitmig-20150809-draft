@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.3 2004/04/12 02:29:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.4 2004/06/02 02:54:45 spyderous Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -12,6 +12,8 @@
 IUSE="ipv6 xinerama fbdev speedo type1 cjk truetype freetype fs xv"
 
 # VIDEO_CARDS="savage trident sis530 trio ts300 mach64 i810 igs"
+
+inherit eutils flag-o-matic gcc xfree
 
 filter-flags "-funroll-loops"
 
@@ -66,10 +68,6 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	dev-lang/perl
 	media-libs/libpng
 	>=sys-apps/portage-2.0.49-r13"
-
-#inherit needs to happen *after* DEPEND has been defined to have "newdepend"
-#do the right thing. Otherwise RDEPEND doesn't get set properly.
-inherit eutils flag-o-matic gcc xfree
 
 DESCRIPTION="Xfree86: famous and free X server. Tiny version (KDrive)"
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.17 2004/04/12 02:29:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.18 2004/06/02 02:54:38 spyderous Exp $
+
+  01 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r5.ebuild:
+  Move inherit up, above uses of flag-o-matic.
 
   11 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r5.ebuild:
   xorg-x11 compatibility update.
