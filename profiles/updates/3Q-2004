@@ -101,3 +101,4 @@ move net-www/browser-config www-apps/browser-config
 move net-www/bugzilla www-apps/bugzilla
 move net-www/curator www-apps/curator
 move net-www/diaria www-apps/diaria
+move app-misc/gallery www-apps/gallery
