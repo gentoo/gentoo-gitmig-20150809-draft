@@ -3,10 +3,10 @@ MD5 5a5c4074fdf1a9aa22dbc8c886af323e mod_php-5.0.0.ebuild 4025
 MD5 fe620542393d33e74a2fc3c39c39b679 mod_php-4.3.6-r2.ebuild 5762
 MD5 dba287b9704eb93f2d53c237e65978a4 mod_php-4.3.7-r1.ebuild 5918
 MD5 21988ad06da36da4ffbd7415c946893c mod_php-4.3.6.ebuild 5737
-MD5 7850248dc263deb3cc532b437a6521c5 mod_php-4.3.8.ebuild 5919
+MD5 9ec7a6bba76c8e2c80869fd6957f68b8 mod_php-4.3.8.ebuild 5918
 MD5 477decdfa7b921810928b478c0101e58 mod_php-4.3.6-r1.ebuild 5743
 MD5 e322d1800900e6b8c76c0a3cd02e78ef mod_php-4.3.5.ebuild 5737
-MD5 8c6419fcf4d3b0fdd8f7492a655fdbf3 ChangeLog 30461
+MD5 da0543004a5ed1a8b9528a7e952f053d ChangeLog 30462
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 442a975588910dfa87c4cf9bf1dc0b52 mod_php-4.3.6_rc2.ebuild 5784
 MD5 c1070d3ccea0824a852244946e5c77ba mod_php-4.3.4-r4.ebuild 5382
