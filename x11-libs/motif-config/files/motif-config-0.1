@@ -268,10 +268,10 @@ uninstall_profile() {
 	# cache which profile was removed for upgrades
 	# little hack, because portage has no way
 	# to detect if a package was upgraded
-	echo "${1}" > "${PROFILE_PATH}/removed"
-
+	
 	# activate next profile if non is activated
 	if [ "`cat $CONFIG_FILE`" == "${1}" ]; then
+		echo "${1}" > "${PROFILE_PATH}/removed"
 		switch_profile
 	fi
 
