@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.2 2004/10/08 06:26:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.3 2004/10/12 14:58:10 suka Exp $
 
 # Notes:
 #
@@ -35,9 +35,9 @@ DESCRIPTION="OpenOffice.org, a full office productivity suite."
 SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}-1_source.tar.gz"
 HOMEPAGE="http://www.openoffice.org/"
 
-LICENSE="LGPL-2 | SISSL-1.1"
+LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND="!app-office/openoffice-bin
 	>=sys-libs/glibc-2.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r4.ebuild,v 1.8 2004/08/21 19:32:30 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r4.ebuild,v 1.9 2004/10/12 14:58:10 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -52,7 +52,7 @@ SRC_URI="mirror://openoffice/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
 	mirror://sourceforge/freetype/freetype-${FT_VER}.tar.bz2"
 HOMEPAGE="http://www.openoffice.org/"
 
-LICENSE="LGPL-2 | SISSL-1.1"
+LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
 KEYWORDS="x86 sparc"
 IUSE="gnome kde"
