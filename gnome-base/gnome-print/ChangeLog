@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-print
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.25 2004/05/21 02:51:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.26 2004/05/25 14:46:11 augustus Exp $
+
+  25 May 2004; <augustus@gentoo.org> gnome-print-0.37.ebuild:
+  Added amd64 keyword to gnome-print.
 
   21 May 2004; Luca Barbato <lu_zero@gentoo.org> gnome-print-0.37.ebuild:
   Marked ppc
