@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.41 2004/11/06 15:12:17 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.42 2004/11/22 16:29:35 corsair Exp $
+
+  22 Nov 2004; Markus Rothe <corsair@gentoo.org> xosd-2.2.12.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *xosd-2.2.12 (06 Nov 2004)
 
