@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/gcombust
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.8 2002/09/09 08:46:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.9 2002/10/27 22:31:02 agenkin Exp $
+
+*gcombust-0.1.53 (27 Oct 2002)
+
+  27 Oct 2002; Arcady Genkin <agenkin@gentoo.org> gcombust-0.1.53.ebuild :
+
+  Version bump.
 
 *gcombust-0.1.52 (08 Jul 2002)
 
