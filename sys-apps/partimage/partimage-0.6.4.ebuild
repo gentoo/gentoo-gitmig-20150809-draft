@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.4.ebuild,v 1.6 2004/06/24 22:20:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.4.ebuild,v 1.7 2004/06/30 22:39:49 agriffis Exp $
 
 inherit gnuconfig eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="ssl nologin"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/lzo-1.08
 	>=dev-libs/newt-0.50.35-r1
