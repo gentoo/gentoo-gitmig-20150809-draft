@@ -1,2 +1,5 @@
-MD5 55c745557ff35d96a60d6e4609248d0c fxpy-1.0.5.ebuild 834
+MD5 d1b6bc9fa8b49f01148dc4a626c6ae05 fxpy-1.0.5.ebuild 934
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 f8a7ef956b78624fb45330807f42171d ChangeLog 437
 MD5 4e32222847e02df6766794e0d55bc9d2 files/digest-fxpy-1.0.5 62
+MD5 ffa45c09d881621b0d98695f15f3d155 files/fxpy-1.0.5-gentoo.diff 462
