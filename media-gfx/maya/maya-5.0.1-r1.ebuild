@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.4 2004/05/05 03:09:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.5 2004/05/31 05:53:24 eradicator Exp $
 
 # Note that this ebuild requires you to set the MAYA_INSTALL_LOC environment
 # variable to the location of your maya RPMS and documentation:
@@ -36,7 +36,7 @@ MAYA5_0="5.0.1-135.i686"
 SLOT="5.0"
 
 LICENSE="maya-5.0 mayadoc-5.0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="app-arch/unzip"
 
