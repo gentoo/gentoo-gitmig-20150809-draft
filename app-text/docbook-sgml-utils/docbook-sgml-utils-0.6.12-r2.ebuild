@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12-r2.ebuild,v 1.2 2004/03/13 23:30:00 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12-r2.ebuild,v 1.3 2004/04/07 21:44:18 vapier Exp $
+
+inherit eutils
 
 MY_PN=${PN/-sgml/}
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Shell scripts to manage DocBook documents"
-SRC_URI="ftp://sources.redhat.com/pub/docbook-tools/new-trials/SOURCES/${MY_P}.tar.gz"
 HOMEPAGE="http://sources.redhat.com/docbook-tools/"
-LICENSE="GPL-2"
+SRC_URI="ftp://sources.redhat.com/pub/docbook-tools/new-trials/SOURCES/${MY_P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
 IUSE="tetex"
@@ -35,11 +37,11 @@ DEPEND=">=dev-lang/perl-5
 src_compile() {
 	epatch ${FILESDIR}/${PN}-frontend.patch
 	epatch ${FILESDIR}/${PN}-head-jw.patch
-	econf
+	econf || die
 	make || die
 }
 
 src_install() {
 	einstall htmldir=${D}/usr/share/doc/${PF}/html
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }

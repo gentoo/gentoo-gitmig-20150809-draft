@@ -1,26 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.8.0.ebuild,v 1.13 2004/03/07 14:07:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.8.0.ebuild,v 1.14 2004/04/07 21:43:54 vapier Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 HOMEPAGE="http://www.dict.org/"
 SRC_URI="ftp://ftp.dict.org/pub/dict/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc ~alpha ~hppa ~mips ia64 ppc64"
 
 DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}; epatch ${FILESDIR}/${P}-gcc33-multiline-string-fix.patch
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc33-multiline-string-fix.patch
 }
 
 src_compile() {
-
 	# Update config.sub and config.guess so dictd understands the sparc architecture
 	gnuconfig_update
 
@@ -44,7 +44,7 @@ src_install() {
 		install || die
 
 	# Install docs
-	dodoc README TODO COPYING ChangeLog ANNOUNCE
+	dodoc README TODO ChangeLog ANNOUNCE
 	dodoc doc/dicf.ms doc/rfc.ms doc/rfc.sh doc/rfc2229.txt
 	dodoc doc/security.doc doc/toc.ms
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-3.1.ebuild,v 1.8 2004/02/29 18:10:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-3.1.ebuild,v 1.9 2004/04/07 21:45:06 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Dos2unix converts DOS or MAC text files to UNIX format"
 HOMEPAGE=""
@@ -26,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin dos2unix
+	dobin dos2unix || die
 	dosym dos2unix /usr/bin/mac2unix
 
 	doman dos2unix.1

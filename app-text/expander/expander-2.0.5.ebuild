@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/expander/expander-2.0.5.ebuild,v 1.2 2004/03/12 09:18:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/expander/expander-2.0.5.ebuild,v 1.3 2004/04/07 21:49:19 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Expander is a utility that acts as a filter for text editors."
 HOMEPAGE="http://www.nedit.org"
@@ -9,7 +11,6 @@ SRC_URI="ftp://ftp.nedit.org/pub/contrib/misc/nedit_expander_kit_2.05.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-
 IUSE=""
 
 DEPEND=""
@@ -17,7 +18,6 @@ DEPEND=""
 S=${WORKDIR}/${PN}
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
@@ -25,15 +25,12 @@ src_unpack() {
 }
 
 src_compile() {
-
-	cd ${S}/src
+	cd src
 	make || die "make failed"
-
 }
 
 src_install() {
-
-	cd ${S}/src
+	cd src
 	dobin expander boxcomment align_columns align_comments where_is
 	dosym /usr/bin/boxcomment /usr/bin/unboxcomment
 
@@ -49,14 +46,11 @@ src_install() {
 
 	cd ${S}
 	dodoc ChangeLog INSTALL README USAGE
-
 }
 
 pkg_postinst() {
-
 	einfo
 	einfo "Instructions for using expander with NEdit are in /usr/share/doc/${P}/INSTALL"
 	einfo "Macro, definition and template files can be found in /usr/share/${P}"
 	einfo
-
 }

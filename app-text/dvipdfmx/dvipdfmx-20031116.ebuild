@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20031116.ebuild,v 1.1 2004/03/11 19:47:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20031116.ebuild,v 1.2 2004/04/07 21:48:07 vapier Exp $
 
-IUSE=""
+inherit eutils
 
 DESCRIPTION="DVI to PDF translator with multi-byte character support"
+HOMEPAGE="http://project.ktug.or.kr/dvipdfmx/"
 SRC_URI="http://project.ktug.or.kr/dvipdfmx/snapshot/release/${P}.tar.gz
 	http://project.ktug.or.kr/dvipdfmx/snapshot/patch/${P}.patch"
-HOMEPAGE="http://project.ktug.or.kr/dvipdfmx/"
 
-KEYWORDS="~x86 ~alpha"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~alpha"
 
 DEPEND="app-text/ptex
 	!app-text/tetex
@@ -21,8 +21,6 @@ DEPEND="app-text/ptex
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/openssl-0.9.6i"
 
-S=${WORKDIR}/${P}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -31,36 +29,26 @@ src_unpack() {
 	epatch ${DISTDIR}/${P}.patch
 }
 
-src_install () {
+src_install() {
 	einstall || die
-
-	dodoc BUGS COPYING ChangeLog FONTMAP INSTALL README TODO
+	dodoc BUGS ChangeLog FONTMAP INSTALL README TODO
 }
 
-pkg_postinst () {
-
-	einfo
-	einfo "Automatically adding CMAPINPUTS to /usr/share/texmf/web2c/texmf.cnf"
-	if [ ! `grep -q CMAPINPUTS /usr/share/texmf/web2c/texmf.cnf` ]; then
-		cat >>/usr/share/texmf/web2c/texmf.cnf<<-EOF
+pkg_postinst() {
+	if [ ! `grep -q CMAPINPUTS ${ROOT}/usr/share/texmf/web2c/texmf.cnf` ]; then
+		cat >>${ROOT}/usr/share/texmf/web2c/texmf.cnf<<-EOF
 		% automatically added by ${PF}.ebuild -- do not edit by hand!
 		CMAPINPUTS = .;/opt/Acrobat5/Resource/Font//;/usr/share/xpdf//
 		% done
 		EOF
 	fi
-
-	sleep 3
-	einfo "Done."
-	einfo
-
 	mktexlsr
 }
 
-pkg_postrm () {
-	if [ -e /usr/share/texmf/web2c/texmf.cnf ] ; then
+pkg_postrm() {
+	if [ -e ${ROOT}/usr/share/texmf/web2c/texmf.cnf ] ; then
 		sed -i -e "/${PF}\.ebuild/,+2d" \
-			/usr/share/texmf/web2c/texmf.cnf
+			${ROOT}/usr/share/texmf/web2c/texmf.cnf
 	fi
-
 	mktexlsr
 }
