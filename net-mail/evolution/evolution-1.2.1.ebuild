@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.1.ebuild,v 1.3 2003/02/13 14:28:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.1.ebuild,v 1.4 2003/02/17 22:02:51 foser Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6"
 
@@ -12,7 +12,7 @@ DB3="db-3.1.17"
 S="${WORKDIR}/${P}"
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
 SRC_URI="${SRC_URI}
-	http://www.sleepycat.com/update/3.1.17/${DB3}.tar.gz"
+	http://www.sleepycat.com/update/snapshot/${DB3}.tar.gz"
 HOMEPAGE="http://www.ximian.com"
 SLOT="0"
 LICENSE="GPL-2"

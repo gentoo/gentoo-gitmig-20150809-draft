@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.8-r2.ebuild,v 1.6 2003/02/13 14:28:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.8-r2.ebuild,v 1.7 2003/02/17 22:02:51 foser Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda"
 
@@ -14,7 +14,7 @@ DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz
 	ftp://ftp.ximian.com/pub/source/${PN}/${P}.tar.gz
 	http://people.codefactory.se/~micke/${PN}/${P}.tar.gz
-	http://www.sleepycat.com/update/3.1.17/${DB3}.tar.gz"
+	http://www.sleepycat.com/update/snapshot/${DB3}.tar.gz"
 HOMEPAGE="http://www.ximian.com"
 SLOT="0"
 LICENSE="GPL-2"
