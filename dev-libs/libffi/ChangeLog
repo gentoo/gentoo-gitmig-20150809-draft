@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.13 2004/08/27 20:21:47 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.14 2004/09/22 21:48:48 fafhrd Exp $
+
+*libffi-3.3.3-r1 (22 Sep 2004)
+
+  22 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  +files/libffi-soversion.dpatch, +files/libffi-without-libgcj.dpatch,
+  +libffi-3.3.3-r1.ebuild, +libffi-3.4.1-r1.ebuild:
+  Updated,new 3.3.3-r1 and 3.4.1-r1 for ~x86; 3.4.1-r1 now applies patches that
+  allow building without turning on libgcj as well.
 
 *libffi-3.3.3 (27 Aug 2004)
 
