@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.107 2004/02/09 23:58:53 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.108 2004/02/19 16:44:59 agriffis Exp $
+
+  19 Feb 2004; Aron Griffis <agriffis@gentoo.org> postfix-2.0.16-r1.ebuild,
+  postfix-2.0.18.ebuild:
+  Mark 2.0.16-r1 stable on alpha and ia64. Mark 2.0.18 testing on ~ia64 (it
+  already had ~alpha)
 
   09 Feb 2004; Max Kalika <max@gentoo.org> postfix-2.0.18.ebuild:
   Bump TLS patch to 2.0.18, IPV6+TLS patch to 1.21.
