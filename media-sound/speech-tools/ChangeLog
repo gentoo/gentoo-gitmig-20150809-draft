@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/speech-tools
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/ChangeLog,v 1.1 2003/07/20 03:55:36 jje Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/ChangeLog,v 1.2 2004/02/12 06:04:04 eradicator Exp $
+
+  11 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  speech-tools-1.2.3.ebuild:
+  Stable on x86
 
 *speech-tools-1.2.3 (20 Jul 2003)
 
