@@ -1,0 +1,1153 @@
+--- longrun-0.9.orig/Makefile
++++ longrun-0.9/Makefile
+@@ -1,10 +1,26 @@
+-all: longrun README
++include Makeconfig
++
++all: longrun README stamp-po
+ 
+ longrun: longrun.c
+-	gcc -g -O2 -W -Wall -o longrun longrun.c
++	gcc -DLOCALEDIR=\"$(LOCALEDIR)\" -g -O2 -W -Wall -o longrun longrun.c
+ 
+ README: longrun.1
+ 	groff -Tascii -man longrun.1 | col -bx > README
+ 
++stamp-po:
++	make -C po
++	touch stamp-po
++
++install: all
++	mkdir -p $(DESTDIR)$(BINDIR)
++	install -o root -g root -m 755 longrun $(DESTDIR)$(BINDIR)/longrun
++	mkdir -p $(DESTDIR)$(MANDIR)/man1
++	install -m 644 longrun.1 $(DESTDIR)$(MANDIR)/man1/longrun.1
++	mkdir -p $(DESTDIR)$(MANDIR)/ja/man1
++	install -m 644 longrun.1.ja $(DESTDIR)$(MANDIR)/ja/man1/longrun.1
++	make -C po install
++
+ clean:
+-	-rm -f longrun README
++	-rm -f longrun README stamp-po *~
++	make -C po clean
+--- longrun-0.9.orig/longrun.c
++++ longrun-0.9/longrun.c
+@@ -33,8 +33,12 @@
+ #include <sys/io.h>
+ #include <sys/sysmacros.h>
+ #define __USE_UNIX98	/* for pread/pwrite */
++#define __USE_FILE_OFFSET64 /* we should use 64 bit offset for pread/pwrite */
+ #include <unistd.h>
+ 
++#include <libintl.h>
++#define _(Text) gettext(Text)
++
+ #define MSR_DEVICE "/dev/cpu/0/msr"
+ #define MSR_TMx86_LONGRUN	0x80868010
+ #define MSR_TMx86_LONGRUN_FLAGS	0x80868011
+@@ -70,7 +74,7 @@
+ 	FILE *stream = status ? stderr : stdout;
+ 
+ 	fprintf(stream,
+-		"%s %s (%s)\n"
++		_("%s %s (%s)\n"
+ 		"usage: %s [-c device] [-m device] [-hlpv] [-f flag] [-s low high]\n"
+ 		" -c device     set CPUID device\n"
+ 		" -m device     set MSR device\n"
+@@ -83,7 +87,7 @@
+ 		"\n"
+ 		"supported flags:\n"
+ 		" economy       set economy mode (turn off performance mode)\n"
+-		" performance   set performance mode (turn off economy mode)\n",
++		" performance   set performance mode (turn off economy mode)\n"),
+ 		progname, VERSION, REVDATE, progname);
+ 
+ 	exit(status);
+@@ -126,32 +130,32 @@
+ 
+ 	nb = open(LR_NORTHBRIDGE, O_RDONLY);
+ 	if (nb < 0) {
+-		error_warn("error opening %s", LR_NORTHBRIDGE);
++		error_warn(_("error opening %s"), LR_NORTHBRIDGE);
+ 		if (errno == ENOENT) {
+-			fprintf(stderr, "make sure /proc is mounted\n");
++			fprintf(stderr, _("make sure /proc is mounted\n"));
+ 		}
+ 		exit(1);
+ 	}
+ 	if (pread(nb, atm, 1, ATM_ADDRESS) != 1) {
+-		error_die("error reading %s", LR_NORTHBRIDGE);
++		error_die(_("error reading %s"), LR_NORTHBRIDGE);
+ 	}
+ 	close(nb);
+ }
+ 
+ /* note: if an output is NULL, then don't set it */
+-void read_msr(long address, int *lower, int *upper)
++void read_msr(loff_t address, int *lower, int *upper)
+ {
+ 	uint32_t data[2];
+ 
+ 	if (pread(msr_fd, &data, 8, address) != 8) {
+-		error_die("error reading %s", msr_device);
++		error_die(_("error reading %s"), msr_device);
+ 	}
+ 
+ 	if (lower) *lower = data[0];
+ 	if (upper) *upper = data[1];
+ }
+ 
+-void write_msr(long address, int lower, int upper)
++void write_msr(loff_t address, int lower, int upper)
+ {
+ 	uint32_t data[2];
+ 
+@@ -159,17 +163,17 @@
+ 	data[1] = (uint32_t) upper;
+ 
+ 	if (pwrite(msr_fd, &data, 8, address) != 8) {
+-		error_die("error writing %s", msr_device);
++		error_die(_("error writing %s"), msr_device);
+ 	}
+ }
+ 
+ /* note: if an output is NULL, then don't set it */
+-void read_cpuid(long address, int *eax, int *ebx, int *ecx, int *edx)
++void read_cpuid(loff_t address, int *eax, int *ebx, int *ecx, int *edx)
+ {
+ 	uint32_t data[4];
+ 
+ 	if (pread(cpuid_fd, &data, 16, address) != 16) {
+-		error_die("error reading %s", cpuid_device);
++		error_die(_("error reading %s"), cpuid_device);
+ 	}
+ 
+ 	if (eax) *eax = data[0];
+@@ -185,14 +189,14 @@
+ 	/* test for "TransmetaCPU" */
+ 	read_cpuid(CPUID_TMx86_VENDOR_ID, &eax, &ebx, &ecx, &edx);
+ 	if (ebx != 0x6e617254 || ecx != 0x55504361 || edx != 0x74656d73) {
+-		fprintf(stderr, "%s: not a Transmeta x86 CPU\n", progname);
++		fprintf(stderr, _("%s: not a Transmeta x86 CPU\n"), progname);
+ 		exit(1);
+ 	}
+ 
+ 	/* test for LongRun feature flag */
+ 	read_cpuid(CPUID_TMx86_PROCESSOR_INFO, &eax, &ebx, &ecx, &edx);
+ 	if (!CPUID_TMx86_FEATURE_LONGRUN(edx)) {
+-		printf("LongRun: unsupported\n");
++		printf(_("LongRun: unsupported\n"));
+ 		exit(0);
+ 	}
+ }
+@@ -230,7 +234,7 @@
+ 			  LONGRUN_WRITE(save_upper, pct_in));
+ 		read_cpuid(CPUID_TMx86_LONGRUN_STATUS, &eax, &ebx, &ecx, 0);
+ 		if (opt_verbose)
+-			printf("# set %d, got %d\n", pct_in, ecx);
++			printf(_("# set %d, got %d\n"), pct_in, ecx);
+ 		if (pct_last < ecx) {
+ 			perf[i] = ecx;
+ 			mhz[i] = eax;
+@@ -247,11 +251,11 @@
+ 	power_max = mhz[i] * volts[i] * volts[i];
+ 
+ 	/* print results */
+-	printf("# %%   MHz  Volts  usage\n");
++	printf(_("# %%   MHz  Volts  usage\n"));
+ 	for (i = 0; i <= steps; i++) {
+ 		if (mhz[i]) {
+ 			power_ratio = mhz[i] * volts[i] * volts[i] / power_max;
+-			printf("%3d %5d %6.3f %6.3f\n",
++			printf(_("%3d %5d %6.3f %6.3f\n"),
+ 			       perf[i], mhz[i], volts[i] / 1000.0, power_ratio);
+ 		}
+ 	}
+@@ -280,7 +284,7 @@
+ 	write_msr(MSR_TMx86_LONGRUN, LONGRUN_WRITE(lower, low),
+ 		  LONGRUN_WRITE(upper, high));
+ 	if (opt_verbose) {
+-		printf("Setting performance window: %d to %d\n", low, high);
++		printf(_("Setting performance window: %d to %d\n"), low, high);
+ 	}
+ }
+ 
+@@ -292,14 +296,14 @@
+ 	if (!strcmp(flag, "economy")) {
+ 		write_msr(MSR_TMx86_LONGRUN_FLAGS, lower & 0xfffffffe, upper);
+ 		if (opt_verbose) {
+-			printf("Setting flag: economy\n");
++			printf(_("Setting flag: economy\n"));
+ 		}
+ 	}
+ 	else if (!strcmp(flag, "performance")) {
+ 		write_msr(MSR_TMx86_LONGRUN_FLAGS, (lower & 0xffffffff) | 0x1,
+ 			  upper);
+ 		if (opt_verbose) {
+-			printf("Setting flag: performance\n");
++			printf(_("Setting flag: performance\n"));
+ 		}
+ 	}
+ 	else {
+@@ -317,33 +321,33 @@
+ 
+ 	read_atm(&atm);
+ 
+-	printf("LongRun: %s\n", LR_EN(atm) ? "enabled" : "disabled");
+-	printf("LongRun Thermal Extensions (LTX): %s\n", ATM_EN(atm) ? "active" : "inactive");
++	printf(_("LongRun: %s\n"), LR_EN(atm) ? _("enabled") : _("disabled"));
++	printf(_("LongRun Thermal Extensions (LTX): %s\n"), ATM_EN(atm) ? _("active") : _("inactive"));
+ 	if (ATM_EN(atm)) {
+-		printf("LTX setting: ");
++		printf(_("LTX setting: "));
+ 		switch(ATM_LVL(atm)) {
+ 		case 0:
+ 		case 1:
+-			printf("reserved\n"); break;
++			printf(_("reserved\n")); break;
+ 		case 2:
+-			printf("75%% reduction\n"); break;
++			printf(_("75%% reduction\n")); break;
+ 		case 3:
+-			printf("62.5%% reduction\n"); break;
++			printf(_("62.5%% reduction\n")); break;
+ 		case 4:
+-			printf("50%% reduction\n"); break;
++			printf(_("50%% reduction\n")); break;
+ 		case 5:
+-			printf("37.5%% reduction\n"); break;
++			printf(_("37.5%% reduction\n")); break;
+ 		case 6:
+-			printf("25%% reduction\n"); break;
++			printf(_("25%% reduction\n")); break;
+ 		case 7:
+-			printf("12.5%% reduction\n"); break;
++			printf(_("12.5%% reduction\n")); break;
+ 		}
+ 	}
+ 	get_longrun(&lower, &upper);
+-	printf("Current performance window: %d to %d\n", lower, upper);
+-	printf("Current performance level: %d\n", percent);
++	printf(_("Current performance window: %d to %d\n"), lower, upper);
++	printf(_("Current performance level: %d\n"), percent);
+ 	read_msr(MSR_TMx86_LONGRUN_FLAGS, &lower, &upper);
+-	printf("LongRun flags: %s\n", (lower & 1) ? "performance" : "economy");
++	printf(_("LongRun flags: %s\n"), (lower & 1) ? _("performance") : _("economy"));
+ }
+ 
+ int main(int argc, char *argv[])
+@@ -360,6 +364,10 @@
+ 	else
+ 		progname = "longrun";
+ 
++	setlocale (LC_ALL, "");
++	bindtextdomain (progname, LOCALEDIR);
++	textdomain (progname);
++
+ 	msr_device = MSR_DEVICE;
+ 	cpuid_device = CPUID_DEVICE;
+ 
+@@ -400,22 +408,22 @@
+ 		usage(1);
+ 
+ 	if (geteuid()) {
+-		fprintf(stderr, "%s: must be run as root\n", progname);
++		fprintf(stderr, _("%s: must be run as root\n"), progname);
+ 		exit(1);
+ 	}
+ 
+ 	if ((cpuid_fd = open(cpuid_device, O_RDWR)) < 0) {
+-		error_warn("error opening %s", cpuid_device);
++		error_warn(_("error opening %s"), cpuid_device);
+ 		if (errno == ENODEV) {
+-			fprintf(stderr, "make sure your kernel was compiled with CONFIG_X86_CPUID=y\n");
++			fprintf(stderr, _("make sure your kernel was compiled with CONFIG_X86_CPUID=y\n"));
+ 		}
+ 		exit(1);
+ 	}
+ 
+ 	if ((msr_fd = open(msr_device, O_RDWR)) < 0) {
+-		error_warn("error opening %s", msr_device);
++		error_warn(_("error opening %s"), msr_device);
+ 		if (errno == ENODEV) {
+-			fprintf(stderr, "make sure your kernel was compiled with CONFIG_X86_MSR=y\n");
++			fprintf(stderr, _("make sure your kernel was compiled with CONFIG_X86_MSR=y\n"));
+ 		}
+ 		exit(1);
+ 	}
+--- longrun-0.9.orig/po/Makefile
++++ longrun-0.9/po/Makefile
+@@ -0,0 +1,46 @@
++include ../Makeconfig
++
++POFILES=ja.po
++GMOFILES=ja.gmo
++
++POTFILES=../longrun.c
++
++CATOBJEXT = .gmo
++INSTOBJEXT = .mo
++
++.SUFFIXES: .c .o .po .pox .gmo .mo
++
++all: $(GMOFILES)
++
++longrun.pot: ../longrun.c
++	xgettext -a -d longrun -k_ -o longrun.pot -s ../longrun.c
++
++.po.pox:
++	make longrun.pot
++	msgmerge $< longrun.pot -o $*.pox
++
++.po.mo:
++	msgfmt -o $@ $<
++
++.po.gmo:
++	file=`echo $* | sed 's,.*/,,'`.gmo \
++	  && rm -f $$file && msgfmt -o $$file $<
++
++install:
++	mkdir -p $(DESTDIR)$(LOCALEDIR)
++
++	@catalogs='$(GMOFILES)'; \
++	localedir='$(DESTDIR)$(LOCALEDIR)'; \
++	for cat in $$catalogs; do \
++	  cat=`basename $$cat`; \
++	  lang=`echo $$cat | sed 's/\$(CATOBJEXT)$$//'`; \
++	  dir=$$localedir/$$lang/LC_MESSAGES; \
++	  mkdir -p $$dir; \
++	  if test -r $$cat; then \
++	    install -m 644 $$cat $$dir/$(PACKAGE)$(INSTOBJEXT) || exit 1; \
++	    echo "installing $$cat as $$dir/$(PACKAGE)$(INSTOBJEXT)"; \
++	  fi \
++	done
++
++clean:
++	rm -f *.mo *.gmo
+--- longrun-0.9.orig/po/ja.po
++++ longrun-0.9/po/ja.po
+@@ -0,0 +1,203 @@
++# SOME DESCRIPTIVE TITLE.
++# Copyright (C) YEAR Free Software Foundation, Inc.
++# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
++#
++#: longrun.c:366
++#, fuzzy
++msgid ""
++msgstr ""
++"Project-Id-Version: longrun 0.9.1\n"
++"POT-Creation-Date: 2001-02-22 17:09+0900\n"
++"PO-Revision-Date: 2001-02-22 17:09+0900\n"
++"Last-Translator: ISHIKAWA Mutsumi <ishikawa@linux.or.jp>\n"
++"Language-Team: ISHIKAWA Mutsumi <ishikawa@linux.or.jp>\n"
++"MIME-Version: 1.0\n"
++"Content-Type: text/plain; charset=EUC-JP\n"
++"Content-Transfer-Encoding: 8bit\n"
++
++#: longrun.c:76
++#, c-format
++msgid ""
++"%s %s (%s)\n"
++"usage: %s [-c device] [-m device] [-hlpv] [-f flag] [-s low high]\n"
++" -c device     set CPUID device\n"
++" -m device     set MSR device\n"
++" -h            print this help\n"
++" -l            list LongRun information about available performance levels\n"
++" -p            print current LongRun settings and status\n"
++" -v            be more verbose\n"
++" -f [flag]     set a LongRun mode flag\n"
++" -s low high   set current LongRun performance window (0 to 100)\n"
++"\n"
++"supported flags:\n"
++" economy       set economy mode (turn off performance mode)\n"
++" performance   set performance mode (turn off economy mode)\n"
++msgstr ""
++"%s %s (%s)\n"
++"使用法: %s [-c デバイス] [-m デバイス] [-hlpv] [-f フラグ] [-s 下限 上限]\n"
++" -c デバイス   CPUID デバイスを設定\n"
++" -m デバイス   MSR デバイスを設定\n"
++" -h            このヘルプを表示\n"
++" -l            実現可能なパフォーマンスレベルに関する LongRun 情報を表示\n"
++" -p            現在の LongRun の設定と状況を表示\n"
++" -v            より多くの情報を表示(verbose モード)\n"
++" -f [フラグ]   LongRun モードフラグを設定\n"
++" -s 下限 上限  現在の LongRun パフォーマンスウィンドを設定 (0 から 100)\n"
++"\n"
++"サポートされているフラグは:\n"
++" economy       エコノミーモードに設定(パフォーマンスモードをオフにする)\n"
++" performance   パフォーマンスモードに設定(エコノミーモードをオフにする)\n"
++
++
++#: longrun.c:132 longrun.c:415 longrun.c:423
++#, c-format
++msgid "error opening %s"
++msgstr "操作エラー %s"
++
++#: longrun.c:134
++msgid "make sure /proc is mounted\n"
++msgstr "/proc がマウントされているか確認してください\n"
++
++#: longrun.c:139 longrun.c:150 longrun.c:175
++#, c-format
++msgid "error reading %s"
++msgstr "読み込みエラー %s"
++
++#: longrun.c:165
++#, c-format
++msgid "error writing %s"
++msgstr "書き込みエラー %s"
++
++#: longrun.c:191
++#, c-format
++msgid "%s: not a Transmeta x86 CPU\n"
++msgstr "%s: このマシンの CPU は Transmeta x86 CPU ではありません\n"
++
++#: longrun.c:198
++msgid "LongRun: unsupported\n"
++msgstr "LongRun がサポートされていません\n"
++
++#: longrun.c:236
++#, c-format
++msgid "# set %d, got %d\n"
++msgstr ""
++
++#: longrun.c:253
++msgid "# %%   MHz  Volts  usage\n"
++msgstr "# %%   MHz   電圧  使用率\n"
++
++#: longrun.c:257
++#, c-format
++msgid "%3d %5d %6.3f %6.3f\n"
++msgstr "%3d %5d %6.3f  %6.3f\n"
++
++#: longrun.c:286
++#, c-format
++msgid "Setting performance window: %d to %d\n"
++msgstr "パフォーマンスウインドを %d から %d に設定します\n"
++
++#: longrun.c:295 longrun.c:349
++msgid "economy"
++msgstr "エコノミー"
++
++#: longrun.c:298
++msgid "Setting flag: economy\n"
++msgstr "フラグをエコノミーに設定します\n"
++
++#: longrun.c:301 longrun.c:349
++msgid "performance"
++msgstr "パフォーマンス"
++
++#: longrun.c:305
++msgid "Setting flag: performance\n"
++msgstr "フラグをパフォーマンスに設定します\n"
++
++#: longrun.c:323
++#, c-format
++msgid "LongRun: %s\n"
++msgstr ""
++
++#: longrun.c:323
++msgid "enabled"
++msgstr "有効"
++
++#: longrun.c:323
++msgid "disabled"
++msgstr "無効"
++
++#: longrun.c:324
++#, c-format
++msgid "LongRun Thermal Extensions (LTX): %s\n"
++msgstr "LongRun 発熱低減拡張 (LTX): %s\n"
++
++#: longrun.c:324
++msgid "active"
++msgstr "活性"
++
++#: longrun.c:324
++msgid "inactive"
++msgstr "非活性"
++
++#: longrun.c:326
++msgid "LTX setting: "
++msgstr "LTX の設定: "
++
++#: longrun.c:330
++msgid "reserved\n"
++msgstr "予約\n"
++
++#: longrun.c:332
++msgid "75%% reduction\n"
++msgstr "75%% 低減\n"
++
++#: longrun.c:334
++msgid "62.5%% reduction\n"
++msgstr "62.5%% 低減\n"
++
++#: longrun.c:336
++msgid "50%% reduction\n"
++msgstr "50%% 低減\n"
++
++#: longrun.c:338
++msgid "37.5%% reduction\n"
++msgstr "37.5%% 低減\n"
++
++#: longrun.c:340
++msgid "25%% reduction\n"
++msgstr "25%% 低減\n"
++
++#: longrun.c:342
++msgid "12.5%% reduction\n"
++msgstr "12.5%% 低減\n"
++
++#: longrun.c:346
++#, c-format
++msgid "Current performance window: %d to %d\n"
++msgstr "現在のパフォーマンス ウインド: %d から %d\n"
++
++#: longrun.c:347
++#, c-format
++msgid "Current performance level: %d\n"
++msgstr "現在のパフォーマンスレベル: %d\n"
++
++#: longrun.c:349
++#, c-format
++msgid "LongRun flags: %s\n"
++msgstr "LongRun フラグ: %s\n"
++
++#: longrun.c:410
++#, c-format
++msgid "%s: must be run as root\n"
++msgstr "%s: root 権限で実行しなければなりません\n"
++
++#: longrun.c:417
++msgid "make sure your kernel was compiled with CONFIG_X86_CPUID=y\n"
++msgstr ""
++"CONFIG_X86_CPUID=y を設定して カーネルがコンパイルされているか"
++"確認してください\n"
++
++#: longrun.c:425
++msgid "make sure your kernel was compiled with CONFIG_X86_MSR=y\n"
++msgstr ""
++"CONFIG_X86_MSR=y を設定してカーネルがコンパイルされているか"
++"確認してください\n"
+--- longrun-0.9.orig/po/longrun.pot
++++ longrun-0.9/po/longrun.pot
+@@ -0,0 +1,202 @@
++# SOME DESCRIPTIVE TITLE.
++# Copyright (C) YEAR Free Software Foundation, Inc.
++# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
++#
++#: ../longrun.c:366
++#, fuzzy
++msgid ""
++msgstr ""
++"Project-Id-Version: PACKAGE VERSION\n"
++"POT-Creation-Date: 2001-02-27 21:41+0900\n"
++"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
++"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
++"Language-Team: LANGUAGE <LL@li.org>\n"
++"MIME-Version: 1.0\n"
++"Content-Type: text/plain; charset=CHARSET\n"
++"Content-Transfer-Encoding: ENCODING\n"
++
++#: ../longrun.c:253
++msgid "# %%   MHz  Volts  usage\n"
++msgstr ""
++
++#: ../longrun.c:236
++#, c-format
++msgid "# set %d, got %d\n"
++msgstr ""
++
++#: ../longrun.c:257
++#, c-format
++msgid "%3d %5d %6.3f %6.3f\n"
++msgstr ""
++
++#: ../longrun.c:76
++#, c-format
++msgid ""
++"%s %s (%s)\n"
++"usage: %s [-c device] [-m device] [-hlpv] [-f flag] [-s low high]\n"
++" -c device     set CPUID device\n"
++" -m device     set MSR device\n"
++" -h            print this help\n"
++" -l            list LongRun information about available performance levels\n"
++" -p            print current LongRun settings and status\n"
++" -v            be more verbose\n"
++" -f [flag]     set a LongRun mode flag\n"
++" -s low high   set current LongRun performance window (0 to 100)\n"
++"\n"
++"supported flags:\n"
++" economy       set economy mode (turn off performance mode)\n"
++" performance   set performance mode (turn off economy mode)\n"
++msgstr ""
++
++#: ../longrun.c:107 ../longrun.c:118
++#, c-format
++msgid "%s: "
++msgstr ""
++
++#: ../longrun.c:410
++#, c-format
++msgid "%s: must be run as root\n"
++msgstr ""
++
++#: ../longrun.c:191
++#, c-format
++msgid "%s: not a Transmeta x86 CPU\n"
++msgstr ""
++
++#: ../longrun.c:342
++msgid "12.5%% reduction\n"
++msgstr ""
++
++#: ../longrun.c:340
++msgid "25%% reduction\n"
++msgstr ""
++
++#: ../longrun.c:338
++msgid "37.5%% reduction\n"
++msgstr ""
++
++#: ../longrun.c:336
++msgid "50%% reduction\n"
++msgstr ""
++
++#: ../longrun.c:334
++msgid "62.5%% reduction\n"
++msgstr ""
++
++#: ../longrun.c:332
++msgid "75%% reduction\n"
++msgstr ""
++
++#: ../longrun.c:109 ../longrun.c:120
++#, c-format
++msgid ": %s\n"
++msgstr ""
++
++#: ../longrun.c:347
++#, c-format
++msgid "Current performance level: %d\n"
++msgstr ""
++
++#: ../longrun.c:346
++#, c-format
++msgid "Current performance window: %d to %d\n"
++msgstr ""
++
++#: ../longrun.c:326
++msgid "LTX setting: "
++msgstr ""
++
++#: ../longrun.c:324
++#, c-format
++msgid "LongRun Thermal Extensions (LTX): %s\n"
++msgstr ""
++
++#: ../longrun.c:349
++#, c-format
++msgid "LongRun flags: %s\n"
++msgstr ""
++
++#: ../longrun.c:323
++#, c-format
++msgid "LongRun: %s\n"
++msgstr ""
++
++#: ../longrun.c:198
++msgid "LongRun: unsupported\n"
++msgstr ""
++
++#: ../longrun.c:298
++msgid "Setting flag: economy\n"
++msgstr ""
++
++#: ../longrun.c:305
++msgid "Setting flag: performance\n"
++msgstr ""
++
++#: ../longrun.c:286
++#, c-format
++msgid "Setting performance window: %d to %d\n"
++msgstr ""
++
++#: ../longrun.c:324
++msgid "active"
++msgstr ""
++
++#: ../longrun.c:374
++msgid "c:f:m:hlpsv"
++msgstr ""
++
++#: ../longrun.c:323
++msgid "disabled"
++msgstr ""
++
++#: ../longrun.c:295 ../longrun.c:349
++msgid "economy"
++msgstr ""
++
++#: ../longrun.c:323
++msgid "enabled"
++msgstr ""
++
++#: ../longrun.c:132 ../longrun.c:415 ../longrun.c:423
++#, c-format
++msgid "error opening %s"
++msgstr ""
++
++#: ../longrun.c:139 ../longrun.c:150 ../longrun.c:175
++#, c-format
++msgid "error reading %s"
++msgstr ""
++
++#: ../longrun.c:165
++#, c-format
++msgid "error writing %s"
++msgstr ""
++
++#: ../longrun.c:324
++msgid "inactive"
++msgstr ""
++
++#: ../longrun.c:364
++msgid "longrun"
++msgstr ""
++
++#: ../longrun.c:134
++msgid "make sure /proc is mounted\n"
++msgstr ""
++
++#: ../longrun.c:417
++msgid "make sure your kernel was compiled with CONFIG_X86_CPUID=y\n"
++msgstr ""
++
++#: ../longrun.c:425
++msgid "make sure your kernel was compiled with CONFIG_X86_MSR=y\n"
++msgstr ""
++
++#: ../longrun.c:301 ../longrun.c:349
++msgid "performance"
++msgstr ""
++
++#: ../longrun.c:330
++msgid "reserved\n"
++msgstr ""
+--- longrun-0.9.orig/longrun.1.ja
++++ longrun-0.9/longrun.1.ja
+@@ -0,0 +1,188 @@
++.\" Copyright (C) 2001 Transmeta Corporation.  All rights reserved.
++.\"
++.\" The information contained in this document is provided solely for use in
++.\" connection with Transmeta products, and Transmeta reserves all rights in
++.\" and to such information and the products discussed herein.  This document
++.\" should not be construed as transferring or granting a license to any
++.\" intellectual property rights, whether express, implied, arising through
++.\" estoppel or otherwise.  Except as may be agreed in writing by Transmeta,
++.\" all Transmeta products are provided "as is" and without a warranty of any
++.\" kind, and Transmeta hereby disclaims all warranties, express or implied,
++.\" relating to Transmeta's products, including, but not limited to, the
++.\" implied warranties of merchantability, fitness for a particular purpose and
++.\" non-infringement of third party intellectual property.  Transmeta products
++.\" may contain design defects or errors which may cause the products to
++.\" deviate from published specifications, and Transmeta documents may contain
++.\" inaccurate information.  Transmeta makes no representations or warranties
++.\" with respect to the accuracy or completeness of the information contained
++.\" in this document, and Transmeta reserves the right to change product
++.\" descriptions and product specifications at any time, without notice.
++.\"
++.\" Transmeta products have not been designed, tested, or manufactured for use
++.\" in any application where failure, malfunction, or inaccuracy carries a risk
++.\" of death, bodily injury, or damage to tangible property, including, but not
++.\" limited to, use in factory control systems, medical devices or facilities,
++.\" nuclear facilities, aircraft, watercraft or automobile navigation or
++.\" communication, emergency systems, or other applications with a similar
++.\" degree of potential hazard.
++.\"
++.\" Transmeta reserves the right to discontinue any product or product document
++.\" at any time without notice, or to change any feature or function of any
++.\" Transmeta product or product document at any time without notice.
++.\"
++.\" Trademarks: Transmeta, the Transmeta logo, Crusoe, the Crusoe logo, Code
++.\" Morphing, LongRun and combinations thereof are trademarks of Transmeta
++.\" Corporation in the USA and other countries.  Other product names and brands
++.\" used in this document are for identification purposes only, and are the
++.\" property of their respective owners.
++.\"
++.\" Japanese Translated by ISHIKAWA Mutsumi <ishikawa@linux.or.jp>
++.\" Last Modified at Sun Feb 25 17:38:20 JST 2001
++.\"
++.\".TH LONGRUN 1 "February 14, 2001"
++.TH LONGRUN 1 "2001 年 2 月 14日"
++.nh
++.\" .SH NAME
++.SH 名前
++.\" Transmeta(TM) Crusoe(TM) LongRun(TM) utility
++Transmeta(TM) Crusoe(TM) LongRun(TM) ユーティリティ
++.\".SH SYNOPSIS
++.\" .B longrun [-c device] [-m device] [-hlpv] [-f flag] [-s low high]
++.SH 書式
++.B longrun [-c デバイス] [-m デバイス] [-hlpv] [-f フラグ] [-s 下限 上限]
++.\" .SH DESCRIPTION
++.SH 説明
++.\" The
++.\" .I longrun
++.\" utility is used to control and query LongRun settings on Transmeta
++.\" Crusoe processors.
++.I longrun
++ユーティリティは Transmeta Crusoe プロセッサの LongRun の設定のコントロールと
++問い合わせに利用される。
++.TP
++.\" -c device
++.\" Set the CPUID device.  The default CPUID device is
++.\" .BR /dev/cpu/0/cpuid .
++-c デバイス
++CPUID デバイスを指定する。ディフォルトの CPUID デバイスは
++.BR /dev/cpu/0/cpuid
++である。
++.TP
++.\" -m device
++.\" Set the MSR device.  The default MSR device is
++.\" .BR /dev/cpu/0/msr .
++-m デバイス
++MSR デバイスを指定する。ディフォルトの MSR デバイスは
++.BR /dev/cpu/0/msr .
++である。
++.TP
++.\" -h
++.\" Print help.
++-h
++ヘルプの表示
++.TP
++.\" -l
++.\" List LongRun information about available performance levels for
++.\" the CPU.
++-l
++CPU のパフォーマンスレベルに関する LongRun 情報を表示する。
++.RS 7
++.TP
++.\" The following values are reported on all Transmeta CPUs that \
++.\" implement LongRun.
++LongRun を実装している全ての Transmeta CPU では以下の値が報告される。
++.RS 3
++.TP
++%
++.\" An available performance level, expressed as a percentage of range of
++.\" available core CPU frequencies.  0 corresponds to the lowest available
++.\" frequency and 100 corresponds to the highest.
++その CPU が実現可能な(最大)CPU コアクロックに対する割合として表される
++平均パフォーマンスレベル。0 が実現可能なもっとも低い CPU クロックに
++対応し、100 がもっとも高い CPU クロックに対応する。
++.TP
++.\" MHz
++.\" The core CPU frequency at that level.
++MHz
++そのレベルの CPU コアクロック
++.TP
++.\" Volts
++.\" The core CPU voltage at that level.
++電圧
++そのレベルの CPU コア電圧
++.TP
++.\" usage
++.\" The power usage relative to the maximum performance level.
++使用率
++最大パフォーマンスレベルに対する電源使用の割合
++.RE
++.RE
++.TP
++.\" -p
++.\" Print current LongRun settings and status: whether LongRun is enabled,
++.\" whether LongRun Thermal Extensions are active, the current LongRun
++.\" performance window (expressed as a percentile range), the current
++.\" LongRun performance level (expressed as a percentile), and the current
++.\" LongRun flags.
++-p
++現在の LongRun 設定とステータスを表示する。LongRun が有効に
++なっているかどうか、LongRun Thermal Extension が有効になってるかどうか、
++(パーセンテージのレンジとして表される)現在の LongRun
++パフォーマンスウィンド、(パーセンテージとして表される)現在の
++LongRun パフォーマンスレベル、現在の LongRun フラグが示される。
++.TP
++.\" -v
++.\" Be more verbose.
++-v
++より多くの情報を出力する(verbose モード)
++.TP
++.\" -f flag
++.\" Set a LongRun mode flag.  Currently, the two supported flags are
++.\" .B performance
++.\" and
++.\" .BR economy .
++.\" This controls whether the processor is in "performance mode" or
++.\" "economy mode".
++-f フラグ
++LongRun モードフラグをセットする。現在は
++.B performance
++と
++.B economy
++の二つのフラグがサポートされている。
++これは、プロセッサが "パフォーマンスモード(performance mode)"で
++動作するか、"エコノミーモード(economy mode)"で動作するかを
++制御する。
++.TP
++.\" -s low high
++.\" Set the current LongRun performance window as a percentile range.  The
++.\" low number cannot be greater than the high number.  The minimum and
++.\" maximum performance values accepted by the CPU are 0 and 100,
++.\" respectively.
++-s 下限値(%) 上限値(%)
++現在の LongRun パフォーマンスウィンドをパーセンテージで表される領域に
++セットする。下限値は上限値を上回ってはいけない。CPU が受け付ける
++パフォーマンス値の上限および下限は 0(%) から 100(%) である。
++.\" .SH ENVIRONMENT
++.\" No environment variables are used.
++.SH 環境変数
++環境変数は参照しない。
++.\" .SH FILES
++.SH ファイル
++.\" This program requires that the Linux CPUID and MSR devices be compiled
++.\" into the kernel (or loaded as kernel modules), that the CPUID character
++.\" device be readable, and that the MSR character device be both readable
++.\" and writable.
++このプログラムは Linux CPUID デバイスと MSR デバイスが カーネルに
++組み込まれており(もしくは カーネルモジュールとしてロードされており)、
++CPUID キャラクタデバイスが読み込み可能、そして、MSR キャラクタデバイス
++が読み書き可能である必要がある。
++.\" .SH "SEE ALSO"
++.SH 関連項目
++.BR acpid (8),
++.BR apmd (8),
++.BR hdparm (8)
++.\" .SH AUTHOR
++.SH 著者
++Daniel Quinlan <quinlan@transmeta.com>
++
++(日本語訳 石川 睦 <ishikawa@linux.or.jp>)
+--- longrun-0.9.orig/debian/dirs
++++ longrun-0.9/debian/dirs
+@@ -0,0 +1,3 @@
++usr/bin
++usr/share/man/man1
++usr/share/man/ja/man1
+--- longrun-0.9.orig/debian/docs
++++ longrun-0.9/debian/docs
+@@ -0,0 +1 @@
++README
+--- longrun-0.9.orig/debian/changelog
++++ longrun-0.9/debian/changelog
+@@ -0,0 +1,49 @@
++longrun (0.9-7) unstable; urgency=low
++
++  * fix pread(),pwrite() offset problem, closes: #165781
++
++ -- ISHIKAWA Mutsumi <ishikawa@linux.or.jp>  Wed, 23 Oct 2002 02:24:54 +0900
++
++longrun (0.9-6) unstable; urgency=low
++
++  * add Build-Depends: gettext, closes: #133708
++  * cleanup postinst and debian/rules (lintian clean)
++
++ -- ISHIKAWA Mutsumi <ishikawa@linux.or.jp>  Fri, 15 Feb 2002 21:28:48 +0900
++
++longrun (0.9-5) unstable; urgency=low
++
++  * add Build-Depends: bsdmainutils, closes: #123711 
++
++ -- ISHIKAWA Mutsumi <ishikawa@linux.or.jp>  Thu, 13 Dec 2001 09:07:31 +0900
++
++longrun (0.9-4) unstable; urgency=low
++
++  * remove invalid file /usr/share/man/man1/longrun.1.ja.gz,
++    closes: #92216
++
++ -- ISHIKAWA Mutsumi <ishikawa@linux.or.jp>  Sat, 31 Mar 2001 02:23:08 +0900
++
++longrun (0.9-3) unstable; urgency=low
++
++  * gettextize and add japanese message file (patch is already sent to
++    upstream auther of cause :-)
++
++ -- ISHIKAWA Mutsumi <ishikawa@linux.or.jp>  Wed, 28 Feb 2001 00:53:43 +0900
++
++longrun (0.9-2) unstable; urgency=low
++
++  * add Japanese man page (already sent to upsream auther)
++  * rewrite description, closes: #87130
++
++ -- ISHIKAWA Mutsumi <ishikawa@linux.or.jp>  Sat, 24 Feb 2001 02:59:45 +0900
++
++longrun (0.9-1) unstable; urgency=low
++
++  * Initial Release.
++
++ -- ISHIKAWA Mutsumi <ishikawa@linux.or.jp>  Thu, 15 Feb 2001 01:43:45 +0900
++
++Local variables:
++mode: debian-changelog
++End:
+--- longrun-0.9.orig/debian/control
++++ longrun-0.9/debian/control
+@@ -0,0 +1,16 @@
++Source: longrun
++Section: utils
++Priority: optional
++Maintainer: ISHIKAWA Mutsumi <ishikawa@linux.or.jp>
++Build-Depends: debhelper (>> 2.0.0), groff, bsdmainutils, gettext
++Standards-Version: 3.2.1
++
++Package: longrun
++Architecture: i386
++Depends: ${shlibs:Depends}
++Description: Transmeta(TM) Crusoe(TM) LongRun(TM) utility
++ LongRun (power management mechanism of Transmeta's Crusoe CPU)
++ control utility. You can set/get LongRun status from command line.
++ .
++ This utility only works on the LongRun support Crusoe CPU, and
++ require the Linux CPUID and MSR device drivers.
+--- longrun-0.9.orig/debian/rules
++++ longrun-0.9/debian/rules
+@@ -0,0 +1,83 @@
++#!/usr/bin/make -f
++# Sample debian/rules that uses debhelper.
++# GNU copyright 1997 to 1999 by Joey Hess.
++
++# Uncomment this to turn on verbose mode.
++#export DH_VERBOSE=1
++
++# This is the debhelper compatability version to use.
++export DH_COMPAT=2
++
++configure: configure-stamp
++configure-stamp:
++	dh_testdir
++	# Add here commands to configure the package.
++
++	touch configure-stamp
++
++build: configure-stamp build-stamp
++build-stamp:
++	dh_testdir
++
++	# Add here commands to compile the package.
++	$(MAKE)
++	#/usr/bin/docbook-to-man debian/longrun.sgml > longrun.1
++
++	touch build-stamp
++
++clean:
++	dh_testdir
++	dh_testroot
++	rm -f build-stamp configure-stamp
++
++	# Add here commands to clean up after the build process.
++	-$(MAKE) clean
++
++	dh_clean
++
++install: build
++	dh_testdir
++	dh_testroot
++	dh_clean -k
++	dh_installdirs
++
++	# Add here commands to install the package into debian/longrun.
++	$(MAKE) install DESTDIR=$(CURDIR)/debian/longrun
++
++# Build architecture-independent files here.
++binary-indep: build install
++# We have nothing to do by default.
++
++# Build architecture-dependent files here.
++binary-arch: build install
++	dh_testdir
++	dh_testroot
++#	dh_installdebconf	
++	dh_installdocs
++	dh_installexamples
++	dh_installmenu
++#	dh_installemacsen
++#	dh_installpam
++#	dh_installinit
++	dh_installcron
++	dh_installmanpages
++	rm -f debian/longrun/usr/share/man/man1/longrun.1.ja*
++	dh_installinfo
++#	dh_undocumented
++	dh_installchangelogs 
++	dh_link
++	dh_strip
++	dh_compress
++	dh_fixperms
++	# You may want to make some executables suid here.
++#	dh_suidregister
++#	dh_makeshlibs
++	dh_installdeb
++#	dh_perl
++	dh_shlibdeps
++	dh_gencontrol
++	dh_md5sums
++	dh_builddeb
++
++binary: binary-indep binary-arch
++.PHONY: build clean binary-indep binary-arch binary install configure
+--- longrun-0.9.orig/debian/postinst
++++ longrun-0.9/debian/postinst
+@@ -0,0 +1,16 @@
++#!/bin/sh
++
++case "$1" in
++    configure)
++    if [ ! -e /dev/cpu/0/msr -o ! -e /dev/cpu/0/cpuid ] ; then
++	(cd /dev && ./MAKEDEV cpu)
++    fi
++        ;;
++    abort-upgrade|abort-remove|abort-deconfigure)
++        ;;
++    *)
++        echo "postinst called with unknown argument \`$1'" >&2
++        ;;
++esac
++
++#DEBHELPER#
+--- longrun-0.9.orig/debian/README.Debian
++++ longrun-0.9/debian/README.Debian
+@@ -0,0 +1,7 @@
++longrun for Debian
++------------------
++
++ longrun utility requires the Linux CPUID and MSR devices be compiled into
++the kernel or kernel loadable module. So, you should use kernel 2.4.0 or later.
++
++ -- ISHIKAWA Mutsumi <ishikawa@linux.or.jp>, Thu, 15 Feb 2001 01:43:45 +0900
+--- longrun-0.9.orig/debian/copyright
++++ longrun-0.9/debian/copyright
+@@ -0,0 +1,15 @@
++This package was debianized by ISHIKAWA Mutsumi <ishikawa@linux.or.jp> on
++Thu, 15 Feb 2001 01:43:45 +0900.
++
++It was downloaded from ftp://ftp.kernel.org/pub/linux/kernel/utils/cpu/crusoe/longrun-0.9.tar.bz2
++
++Upstream Author(s):  Daniel Quinlan <quinlan@transmeta.com> and Transmeta Inc.
++
++Copyright:
++This is a free software; you can redistribute it and/or modify it
++under the terms of the GNU General Public License as published by the
++Free Software Foundation; either version 2, or (at your option) any
++later version.
++
++On Debian GNU/Linux systems, the complete text of the GNU General
++Public License can be found in `/usr/share/common-licenses/GPL'.
+--- longrun-0.9.orig/Makeconfig
++++ longrun-0.9/Makeconfig
+@@ -0,0 +1,8 @@
++PACKAGE=longrun
++
++PREFIX=/usr
++BINDIR=$(PREFIX)/bin
++DATADIR=$(PREFIX)/share
++
++MANDIR=$(DATADIR)/man
++LOCALEDIR=$(DATADIR)/locale
