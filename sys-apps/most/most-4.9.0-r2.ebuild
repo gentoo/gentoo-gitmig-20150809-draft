@@ -1,0 +1,33 @@
+# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.9.0-r2.ebuild,v 1.1 2001/02/07 15:51:28 achim Exp $
+
+A=${P}.tar.gz
+S=${WORKDIR}/${P}
+DESCRIPTION="An extremely excellent text file reader"
+
+SRC_URI="ftp://space.mit.edu/pub/davis/most/${A}"
+
+DEPEND=">=sys-libs/slang-1.4.2
+        >=sys-libs/ncurses-5.2-r2"
+
+src_compile() {
+
+    try ./configure --host=${CHOST} --prefix=/usr
+	#*possible* (not definite) pmake problems, let's not risk it.
+	# do not use pmake recursive
+	try make  ${MAKEOPTS}
+}
+
+src_install() {
+
+	dobin src/objs/most
+	doman most.1
+
+	dodoc COPYING COPYRIGHT README changes.txt
+	docinto txt 
+	dodoc default.rc lesskeys.rc most-fun.txt
+}
+
+

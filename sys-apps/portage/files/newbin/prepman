@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ -z "$1" ] 
+then 
+	z=${D}usr/man 
+else 
+	z=${D}$1/man
+fi
+
+for x in ${z}/* 
+do
+	for y in ${x}/*
+	do
+		if [ -h ${y} ]
+	    	then
+			#symlink
+			linkto=`ls -l ${y} | sed -e "s:${D}::" | awk '{ printf ("%s.gz",$11) } '`
+	        	echo "$linkto $y.gz"
+			ln -sf ${linkto} ${y}.gz
+			rm ${y}
+	    	else
+			gzip -f -9 ${y}
+            	fi	
+	done
+done
+
+
+
