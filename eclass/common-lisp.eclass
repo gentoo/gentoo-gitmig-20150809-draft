@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.8 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.9 2005/02/10 09:08:28 mkennedy Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -32,8 +32,8 @@ common-lisp_pkg_postrm() {
 		for package in ${CLPACKAGE}; do
 			if [ ! -d ${CLSOURCEROOT}/${package} ]; then
 				einfo "Unregistering Common Lisp source for ${package}"
-				rm -rf ${CLFASLROOT}/*/${package}
-#				unregister-common-lisp-source ${package}
+#				rm -rf ${CLFASLROOT}/*/${package}
+				unregister-common-lisp-source ${package}
 			fi
 		done
 	fi
