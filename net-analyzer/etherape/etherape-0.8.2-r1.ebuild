@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2-r1.ebuild,v 1.9 2003/02/13 13:39:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2-r1.ebuild,v 1.10 2003/09/05 23:40:08 msterret Exp $
 
 IUSE="nls"
 DESCRIPTION="A graphical network monitor for Unix modeled after etherman"
@@ -19,7 +19,7 @@ KEYWORDS="x86 ppc sparc "
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} 
+	cd ${S}
 	patch -p1 < ${FILESDIR}/${P}-gcc3-gentoo.patch
 }
 
@@ -32,17 +32,17 @@ src_compile() {
 	# configure script not listening to libglade-config?
 	CFLAGS="${CFLAGS} `/usr/bin/libglade-config --cflags`"
 
-  	./configure --host=${CHOST}	\
-		    --prefix=/usr \
-		    --sysconfdir=/etc \
-		    ${myconf} || die
+	./configure --host=${CHOST}	\
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		${myconf} || die
 
 	emake
 }
 
 src_install() {
 
-  	make prefix=${D}/usr sysconfdir=${D}/etc install || die
+	make prefix=${D}/usr sysconfdir=${D}/etc install || die
 
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog FAQ INSTALL NEWS OVERVIEW
 	dodoc README README.bugs README.help README.thanks TODO

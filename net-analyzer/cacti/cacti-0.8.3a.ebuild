@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.3a.ebuild,v 1.1 2003/09/01 17:30:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.3a.ebuild,v 1.2 2003/09/05 23:40:08 msterret Exp $
 
 inherit eutils
 
@@ -64,7 +64,7 @@ pkg_postinst() {
 		einfo "4. Import the default cacti database:"
 		einfo "  shell> mysql cacti < ${INSTALL_DEST}/cacti.sql"
 		einfo "5. Edit ${INSTALL_DEST}/include/config.php."
-		einfo " + Modify the MySQL user, password and database for your" 
+		einfo " + Modify the MySQL user, password and database for your"
 		einfo "   cacti configuration."
 		einfo "		\$database_default = \"cacti\";"
 		einfo "		\$database_hostname = \"localhost\";"
@@ -97,7 +97,7 @@ pkg_postinst() {
 		einfo "  mysql> GRANT ALL ON cacti.* TO cactiuser@localhost IDENTIFIED BY 'somepassword';"
 		einfo "  mysql> flush privileges;"
 		einfo "4. Edit ${INSTALL_DEST}/include/config.php."
-		einfo " + Modify the MySQL user, password and database for your" 
+		einfo " + Modify the MySQL user, password and database for your"
 		einfo "   cacti configuration."
 		einfo "		\$database_default = \"cacti\";"
 		einfo "		\$database_hostname = \"localhost\";"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9.ebuild,v 1.1 2003/05/19 21:36:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9.ebuild,v 1.2 2003/09/05 23:40:10 msterret Exp $
 
 IUSE="ssl"
 
@@ -26,7 +26,7 @@ src_compile() {
 	emake || die
 }
 
-src_install() {															 
+src_install() {
 	into /usr
 	dosbin ssldump
 	doman ssldump.1

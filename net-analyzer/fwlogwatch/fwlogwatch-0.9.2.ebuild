@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-0.9.2.ebuild,v 1.2 2003/06/23 22:34:40 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-0.9.2.ebuild,v 1.3 2003/09/05 23:40:08 msterret Exp $
 
 DESCRIPTION="A packet filter and firewall log analyzer"
 HOMEPAGE="http://cert.uni-stuttgart.de/projects/fwlogwatch/"
@@ -13,7 +13,7 @@ RDEPEND=""
 src_compile() {
 	sed -e "s/^CFLAGS = /CFLAGS = ${CFLAGS} /g" Makefile > ${T}/Makefile.fwlogwatch
 	mv -f ${T}/Makefile.fwlogwatch Makefile
-	emake || die 
+	emake || die
 }
 
 src_install() {
@@ -27,7 +27,7 @@ src_install() {
 	doins contrib/fwlogwatch.php
 	doins contrib
 	insinto /etc
-	doins fwlogwatch.config fwlogwatch.template 
+	doins fwlogwatch.config fwlogwatch.template
 	dodoc AUTHORS ChangeLog CREDITS COPYING README
 	doman fwlogwatch.8
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.3 2003/08/06 14:36:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.4 2003/09/05 23:40:08 msterret Exp $
 
 MY_P=arpwatch-2.1a11
 S=${WORKDIR}/$MY_P
@@ -43,19 +43,19 @@ src_install () {
 
 	exeinto /var/arpwatch
 	doexe arp2ethers arpfetch bihourly massagevendor massagevendor-old
-	
+
 	insinto /var/arpwatch
 	doins d.awk duplicates.awk e.awk euppertolower.awk p.awk
 
 	insinto /usr/share/arpwatch
 	doins ethercodes.dat
-	
+
 	dodoc README CHANGES
-    exeinto /etc/init.d ; newexe ${FILESDIR}/arpwatch.init arpwatch
+	exeinto /etc/init.d ; newexe ${FILESDIR}/arpwatch.init arpwatch
 
 	insinto /etc/conf.d
 	newins ${FILESDIR}/arpwatch.confd arpwatch
-	
+
 }
 pkg_postinst() {
 	ewarn "NOTE: if you want to run arpwatch on boot then execute"

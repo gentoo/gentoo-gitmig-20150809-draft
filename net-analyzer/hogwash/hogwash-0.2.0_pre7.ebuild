@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/hogwash-0.2.0_pre7.ebuild,v 1.4 2003/07/13 11:30:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/hogwash-0.2.0_pre7.ebuild,v 1.5 2003/09/05 23:40:08 msterret Exp $
 
 TGZFILE=hogwash-0.2.0-pre7.tar.gz
 S=${WORKDIR}/devel-0.2
@@ -27,7 +27,7 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	dosbin hogwash
 	dodoc COPYRIGHT README ${FILESDIR}/Documentation.txt
 	dodir /var/log/snort

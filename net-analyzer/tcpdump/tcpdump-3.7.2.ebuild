@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.7.2.ebuild,v 1.4 2003/04/28 06:20:28 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.7.2.ebuild,v 1.5 2003/09/05 23:40:10 msterret Exp $
 
 IUSE="ssl"
 
@@ -28,7 +28,7 @@ src_compile() {
 	make CCOPT="$CFLAGS" || die
 }
 
-src_install() {															 
+src_install() {
 	into /usr
 	dosbin tcpdump
 	doman tcpdump.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/prelude-nagios-0.0.2.ebuild,v 1.1 2003/07/05 16:03:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/prelude-nagios-0.0.2.ebuild,v 1.2 2003/09/05 23:40:10 msterret Exp $
 
 DESCRIPTION="Plugin for Nagios to talk with Prelude"
 HOMEPAGE="http://www.exaprobe.com/labs/downloads/index.php3?DIR=/downloads/Nagios_Plugin"
@@ -18,13 +18,13 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 	# prelude-nagios-0.0.2.tar.gz is a POSIX tar archive from exaprobe
-	# In the future I think we should to try to avoid calling 
+	# In the future I think we should to try to avoid calling
 	# tar directly from ebuilds.
 
 	# Our possible solutions.
 	# 1) email exaprobe and inform them that the .tar.gz is only a .tar
 	# 2) Repackage the tarball as a .bz2 and put it on a gentoo mirror
-	
+
 	tar xvf ${DISTDIR}/${A} -C ${WORKDIR}
 	#unpack ${A}
 	epatch ${FILESDIR}/prelude-nagios-${PV}-001.patch

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.40-r1.ebuild,v 1.2 2003/09/01 13:51:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.40-r1.ebuild,v 1.3 2003/09/05 23:40:10 msterret Exp $
 
 inherit perl-module
 
@@ -21,13 +21,13 @@ RDEPEND="tcltk? ( dev-lang/tcl )"
 TCLVER=""
 
 pkg_setup() {
-        if [ "`use tcltk`" ]; then
-                TCLVER=`awk -F\' '/TCL_VERSION/ {print $2}' /usr/lib/tclConfig.sh`
-        fi
+	if [ "`use tcltk`" ]; then
+		TCLVER=`awk -F\' '/TCL_VERSION/ {print $2}' /usr/lib/tclConfig.sh`
+	fi
 
-        if [ "`use perl`" ]; then
-                perl-module_pkg_setup
-        fi
+	if [ "`use perl`" ]; then
+		perl-module_pkg_setup
+	fi
 }
 
 src_compile() {
@@ -35,7 +35,7 @@ src_compile() {
 	use tcltk \
 		&& myconf="${myconf} --with-tcllib=/usr/lib" \
 		|| myconf="${myconf} --without-tcllib"
-	
+
 	econf \
 		--datadir=/usr/share \
 		--enable-shared \
@@ -49,7 +49,7 @@ src_install() {
 	einstall || die
 
 	# this package completely ignores mandir settings
-	
+
 	doman doc/*.1
 	dohtml doc/*.html
 	dodoc doc/*.pod
@@ -92,7 +92,7 @@ pkg_postinst() {
 	use perl && perl-module_pkg_postinst
 }
 
-pkg_prerm() {	
+pkg_prerm() {
 	use perl && perl-module_pkg_prerm
 }
 

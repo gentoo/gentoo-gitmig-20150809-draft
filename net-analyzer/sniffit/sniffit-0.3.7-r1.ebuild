@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r1.ebuild,v 1.1 2003/07/28 15:43:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r1.ebuild,v 1.2 2003/09/05 23:40:10 msterret Exp $
 
 IUSE=
 
@@ -22,7 +22,7 @@ KEYWORDS="x86 ppc sparc "
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
-	
+
 	cd ${S}
 	epatch ${DISTDIR}/sniffit_0.3.7.beta-10.diff
 
@@ -39,7 +39,7 @@ src_compile() {
 
 src_install () {
 	dobin sniffit
-	
+
 	doman sniffit.5 sniffit.8
 	dodoc README* PLUGIN-HOWTO BETA* HISTORY LICENSE changelog
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/macchanger-1.3.0.ebuild,v 1.2 2003/07/13 11:30:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/macchanger-1.3.0.ebuild,v 1.3 2003/09/05 23:40:09 msterret Exp $
 
 DESCRIPTION="Utility for viewing/manipulating the MAC address of network interfaces"
 SRC_URI="http://savannah.nongnu.org/download/macc/${PN}.pkg/${PV}/${P}.tar.gz"
@@ -21,4 +21,4 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
-}			 
+}

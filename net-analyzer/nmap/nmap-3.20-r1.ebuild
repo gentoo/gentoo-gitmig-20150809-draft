@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.20-r1.ebuild,v 1.2 2003/07/19 20:04:57 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.20-r1.ebuild,v 1.3 2003/09/05 23:40:10 msterret Exp $
 
 inherit gcc eutils
 
@@ -26,7 +26,7 @@ src_compile() {
 		sed -e 's:char \*strcasestr://:' \
 			nbase/nbase.h.old > nbase/nbase.h
 	fi
-	
+
 	econf `use_with gtk nmapfe` || die
 	emake || die
 }

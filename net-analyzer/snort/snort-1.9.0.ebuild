@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.9.0.ebuild,v 1.7 2003/07/13 11:30:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.9.0.ebuild,v 1.8 2003/09/05 23:40:10 msterret Exp $
 
 IUSE="ssl postgres mysql snmp"
 
@@ -21,7 +21,7 @@ DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	snmp? ( >=net-analyzer/net-snmp-5.0 )"
 
-RDEPEND="virtual/glibc 
+RDEPEND="virtual/glibc
 	dev-lang/perl
 	>=net-libs/libpcap-0.6.2-r1
 	postgres? ( >=dev-db/postgresql-7.2 )
@@ -45,9 +45,8 @@ src_compile() {
 		|| myconf="${myconf} --without-mysql"
 	use ssl && myconf="${myconf} --with-openssl" \
 		|| myconf="${myconf} --without-openssl"
-       use snmp && myconf="${myconf} --with-snmp" \
-                || myconf="${myconf} --without-snmp"
-
+	use snmp && myconf="${myconf} --with-snmp" \
+		|| myconf="${myconf} --without-snmp"
 
 	./configure \
 		--prefix=/usr \

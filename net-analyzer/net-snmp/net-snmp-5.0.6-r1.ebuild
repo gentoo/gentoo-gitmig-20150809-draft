@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6-r1.ebuild,v 1.7 2003/07/31 20:26:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6-r1.ebuild,v 1.8 2003/09/05 23:40:10 msterret Exp $
 
 IUSE="ssl kerberos ipv6 tcpd"
 PROVIDE="virtual/snmp"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc <sys-libs/db-2
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )"
-	
+
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc arm hppa alpha"
@@ -41,7 +41,7 @@ src_compile() {
 	use tcpd && myconf="${myconf} --with-libwrap" || myconf="${myconf} --with-libwrap=no"
 	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --disable-ipv6"
 
-#	Doesn't seem that emerge passes the escaped double quotes properly 
+#	Doesn't seem that emerge passes the escaped double quotes properly
 #	use kerberos && myconf="--with-security-modules=usm ksm"
 
 econf \
@@ -76,7 +76,7 @@ src_install () {
 
 	cp ${FILESDIR}/net-snmpd.rc6 net-snmpd
 	sed -i "s:doc\/net-snmp:doc\/${PF}:" net-snmpd
-	
+
 	exeinto /etc/init.d
 	newexe net-snmpd net-snmpd
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.1-r1.ebuild,v 1.3 2003/07/31 18:21:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.1-r1.ebuild,v 1.4 2003/09/05 23:40:10 msterret Exp $
 
 DESCRIPTION="Prelude-IDS NIDS"
 HOMEPAGE="http://www.prelude-ids.org"
@@ -23,9 +23,9 @@ src_compile() {
 	export WANT_AUTOCONF_2_5="1"
 	export WANT_AUTOMAKE_1_6="1"
 	export MAKEOPTS=""	# Doesn't compile if you using make -j
-	
+
 	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --enable-gtk-doc=no"
-	
+
 	aclocal -I /usr/share/aclocal
 	autoconf
 	autoheader

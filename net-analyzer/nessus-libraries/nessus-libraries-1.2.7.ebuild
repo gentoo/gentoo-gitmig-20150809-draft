@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-1.2.7.ebuild,v 1.3 2003/02/13 13:45:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-1.2.7.ebuild,v 1.4 2003/09/05 23:40:10 msterret Exp $
 
 DESCRIPTION="A remote security scanner for Linux (nessus-libraries)"
 HOMEPAGE="http://www.nessus.org/"
@@ -15,7 +15,7 @@ S=${WORKDIR}/${PN}
 src_compile() {
 	local myconf=""
 	use ssl && myconf="--with-ssl=/usr/lib" \
-		|| myconf="--without-ssl" 
+		|| myconf="--without-ssl"
 	econf ${myconf}
 	emake || die "emake failed"
 }

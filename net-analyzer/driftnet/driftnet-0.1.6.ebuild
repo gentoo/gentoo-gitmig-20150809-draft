@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.6 2003/02/13 13:39:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.7 2003/09/05 23:40:08 msterret Exp $
 
 IUSE="gtk"
 
@@ -16,14 +16,14 @@ DEPEND="media-libs/jpeg
 		net-libs/libpcap
 		gtk? ( <x11-libs/gtk+-1.3.0 )"
 
-		
+
 RDEPEND="media-sound/mpg123"
 SRC_URI="http://www.ex-parrot.com/~chris/${PN}/${P}.tar.gz"
 
 S=${WORKDIR}/${P}
 
 src_compile() {
-	if [ `use gtk` ] 
+	if [ `use gtk` ]
 	then
 		emake || die "gtk+ build failed"
 		mv driftnet driftnet-gtk

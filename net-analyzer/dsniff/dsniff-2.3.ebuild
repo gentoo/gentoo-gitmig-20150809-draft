@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3.ebuild,v 1.5 2003/08/21 05:09:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3.ebuild,v 1.6 2003/09/05 23:40:08 msterret Exp $
 
-# dsniff needs to build it's own version of sys-libs/db, since the one 
+# dsniff needs to build it's own version of sys-libs/db, since the one
 # normally installed is for some reason unusable for dsniffs configure script.
 # The version is chosen as being the standard one around at the time i wrote
-# this ebuild, it's not set in stone. 
+# this ebuild, it's not set in stone.
 
 DB_VER="3.2.9"
 
@@ -40,14 +40,14 @@ src_unpack() {
 	unpack ${P}.tar.gz
 
 	# Making sure data files get correctly installed and that dsniff
-        # can find them
+	# can find them
 	# Working around dsniff b0rky config script
 	# Data stuff goes into /etc/dsniff
 	cd ${S}
 
 	mv configure configure.orig
 	sed "s:lib':':" configure.orig > configure
-	chmod +x configure 
+	chmod +x configure
 
 	mv Makefile.in Makefile.in.orig
 	sed 's:-DDSNIFF_LIBDIR=\\\"$(libdir)/\\\"::' Makefile.in.orig > Makefile.in

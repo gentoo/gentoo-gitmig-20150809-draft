@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.49-r1.ebuild,v 1.10 2003/02/13 19:31:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.49-r1.ebuild,v 1.11 2003/09/05 23:40:09 msterret Exp $
 
 IUSE="gtk"
 
@@ -34,6 +34,6 @@ src_install() {
 	# this binary is universal. ie: it does both console and gtk.
 
 	make prefix=${D}/usr mandir=${D}/usr/share/man sbindir=${D}/usr/bin install || die
-	
+
 	dodoc AUTHORS COPYING ChangeLog FORMATS NEWS README SECURITY TODO
 }

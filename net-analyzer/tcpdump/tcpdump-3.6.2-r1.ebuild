@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.6.2-r1.ebuild,v 1.13 2003/02/15 20:07:17 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.6.2-r1.ebuild,v 1.14 2003/09/05 23:40:10 msterret Exp $
 
 IUSE="ssl"
 
@@ -23,7 +23,7 @@ src_unpack() {
 	cd ${S}
 	# http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=49294
 	patch -p1 < ${FILESDIR}/${P}-afsprinting.patch
-	
+
 }
 src_compile() {
 	local myconf
@@ -35,7 +35,7 @@ src_compile() {
 	make CCOPT="$CFLAGS" || die
 }
 
-src_install() {															 
+src_install() {
 	into /usr
 	dosbin tcpdump
 	doman tcpdump.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3.ebuild,v 1.7 2003/02/13 13:39:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3.ebuild,v 1.8 2003/09/05 23:40:08 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Simple ncurses bandwidth monitor"
@@ -24,7 +24,7 @@ src_unpack() {
 	    -e "s:LDFLAGS =:LDFLAGS = -L/lib:" \
 	    src/Makefile > src/Makefile.hacked
 	mv src/Makefile.hacked src/Makefile
-	
+
 }
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.7.ebuild,v 1.9 2003/02/15 07:42:29 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.7.ebuild,v 1.10 2003/09/05 23:40:08 msterret Exp $
 
 IUSE="ssl"
 
@@ -27,7 +27,7 @@ src_compile() {
 	make CFLAG="${CFLAGS} -funroll-loops -fomit-frame-pointer -Wall" plug-ins || die
 }
 
-src_install() {                               
+src_install() {
 
 	make prefix=${D}/usr MANDIR=${D}/usr/share/man complete_install || die
 	rm ${D}/usr/share/doc/${P}/ettercap.fr.8.in.gz

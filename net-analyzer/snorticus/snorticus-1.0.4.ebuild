@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/snorticus-1.0.4.ebuild,v 1.2 2003/07/13 11:30:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/snorticus-1.0.4.ebuild,v 1.3 2003/09/05 23:40:10 msterret Exp $
 
 DESCRIPTION="Snorticus is a collection of shell scripts designed to allow easy
 managment of Snort sensors."
@@ -32,13 +32,13 @@ src_compile() {
 }
 
 src_install () {
-	dodoc COPYING 
+	dodoc COPYING
 	dohtml snorticus.html
 
 	dodir /etc/snort/addons/
 	dodir /usr/lib/snort/addons/snorticus/
 
-	insinto /usr/lib/snort/addons/snorticus	
+	insinto /usr/lib/snort/addons/snorticus
 	doins hourly_wrapup.sh push_rules.sh retrieve_wrapup.sh
 
 	dodir /home/httpd/htdocs/snorticus

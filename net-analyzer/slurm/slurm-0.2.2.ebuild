@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/slurm-0.2.2.ebuild,v 1.4 2003/07/13 11:30:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/slurm-0.2.2.ebuild,v 1.5 2003/09/05 23:40:10 msterret Exp $
 
 DESCRIPTION="Realtime network interface monitor based on FreeBSD's pppstatus"
 HOMEPAGE="http://www.raisdorf.net/slurm/"
@@ -18,21 +18,21 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-    # fixes some typos and color usage
-    epatch "${FILESDIR}/slurm-0.2.2-fix-gentoo.patch"
+	# fixes some typos and color usage
+	epatch "${FILESDIR}/slurm-0.2.2-fix-gentoo.patch"
 
-    # apply alternative color set (red & white)
-    use altcolors && epatch "${FILESDIR}/slurm-0.2.2-altcolors-gentoo.patch"
+	# apply alternative color set (red & white)
+	use altcolors && epatch "${FILESDIR}/slurm-0.2.2-altcolors-gentoo.patch"
 }
 
 
 src_compile() {
-    ./configure || die "configure failed"
-    emake || die "make failed"
+	./configure || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
-    dobin slurm
-    doman slurm.1
-    dodoc Changelog COPYRIGHT KEYS README THANKS TODO
+	dobin slurm
+	doman slurm.1
+	dodoc Changelog COPYRIGHT KEYS README THANKS TODO
 }

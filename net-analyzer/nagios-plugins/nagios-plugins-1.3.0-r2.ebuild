@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.0-r2.ebuild,v 1.1 2003/07/19 23:25:34 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.0-r2.ebuild,v 1.2 2003/09/05 23:40:10 msterret Exp $
 inherit eutils
 
 DESCRIPTION="Nagios $PV plugins - Pack of plugins to make Nagios work properly"
@@ -23,7 +23,7 @@ DEPEND=">=net-dns/bind-tools-9.2.2_rc1
 		mysql? ( >=dev-db/mysql-3.23.52-r1 )
 		postgres? ( >=dev-db/postgresql-7.2 )
 		ldap? ( >=net-nds/openldap-2.0.25 )"
-		
+
 S="${WORKDIR}/nagios-plugins-1.3.0"
 
 pkg_setup() {
@@ -31,11 +31,11 @@ pkg_setup() {
 	enewuser nagios -1 /bin/bash /dev/null nagios
 	}
 src_compile() {
-	local myconf 
+	local myconf
 	use mysql && myconf="${myconf} --with-mysql"
 	use postgres && myconf="${myconf} --with-pgsql"
-	use openssl && myconf="${myconf} --with-openssl" 
-	
+	use openssl && myconf="${myconf} --with-openssl"
+
 	./configure ${myconf} \
 		--host=${CHOST} \
 		--prefix=/usr/nagios \

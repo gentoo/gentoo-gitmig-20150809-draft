@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.4 2003/07/13 11:30:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.5 2003/09/05 23:40:10 msterret Exp $
 
 inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The BPF Traffic Collector"
-SRC_URI="ftp://ftp.riss-telecom.ru/pub/dev/trafd/${P}.tgz 
+SRC_URI="ftp://ftp.riss-telecom.ru/pub/dev/trafd/${P}.tgz
 	http://metalab.unc.edu/pub/Linux/system/network/management/tcpdump-richard-1.7.tar.gz
 	mirror://gentoo/${P}-gentoo.tar.bz2"
 HOMEPAGE="ftp://ftp.riss-telecom.ru/pub/dev/trafd/"
@@ -39,7 +39,7 @@ src_install () {
 }
 
 pkg_postinst() {
-    ewarn "NOTE: if you want to run trafd on boot then execute"
-    ewarn "rc-update add trafd default"
-    ewarn "change interfaces in /etc/conf.d/trafd (default is eth0)"
+	ewarn "NOTE: if you want to run trafd on boot then execute"
+	ewarn "rc-update add trafd default"
+	ewarn "change interfaces in /etc/conf.d/trafd (default is eth0)"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/hogwash-0.1d-r2.ebuild,v 1.9 2003/03/07 23:09:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/hogwash-0.1d-r2.ebuild,v 1.10 2003/09/05 23:40:08 msterret Exp $
 
 S=${WORKDIR}/devel
 DESCRIPTION="An invisible, layer2 network packet scrubber based on snort"
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	dosbin hogwash
 	dodoc COPYRIGHT README ${FILESDIR}/Documentation.txt
 	dodir /var/log/snort

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.0.ebuild,v 1.10 2003/08/01 17:20:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.0.ebuild,v 1.11 2003/09/05 23:40:10 msterret Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="neat graphical traceroute displaying route on the globe"
@@ -30,7 +30,7 @@ src_compile() {
 		--with-host=/usr/bin/hostx \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man || die "./configure failed"
-	
+
 	emake || die
 	#make || die
 }

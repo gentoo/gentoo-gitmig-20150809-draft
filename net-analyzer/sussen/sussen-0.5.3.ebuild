@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.5.3.ebuild,v 1.1 2003/08/20 12:42:51 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.5.3.ebuild,v 1.2 2003/09/05 23:40:10 msterret Exp $
 
 inherit gnome2 debug
 
@@ -34,7 +34,7 @@ pkg_postinst( ) {
 	gnome2_pkg_postinst
 
 	echo ""
-	einfo "Please ensure the nessus server has ssl support disabled " 
+	einfo "Please ensure the nessus server has ssl support disabled "
 	einfo "before using sussen, as ssl support is currently non-functional"
 	einfo "in sussen. More information is available by issuing:"
 	einfo ""

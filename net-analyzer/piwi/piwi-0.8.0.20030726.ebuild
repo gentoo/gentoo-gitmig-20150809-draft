@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20030726.ebuild,v 1.2 2003/07/27 00:53:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20030726.ebuild,v 1.3 2003/09/05 23:40:10 msterret Exp $
 
 DESCRIPTION="(Prelude|Perl) IDS Web Interface"
 HOMEPAGE="http://www.prelude-ids.org"
@@ -43,11 +43,11 @@ src_install() {
 	# Move files around and create symlinks to make sure configuration files
 	# are not being overwritten when you do upgrades...
 	mv ${D}/home/httpd/htdocs/piwi/generated/Filters ${D}/etc/piwi/Filters || die
-	dosym /etc/piwi/Filters /home/httpd/htdocs/piwi/generated/Filters 
+	dosym /etc/piwi/Filters /home/httpd/htdocs/piwi/generated/Filters
 
 	mv ${D}/home/httpd/htdocs/piwi/Profiles ${D}/etc/piwi/Profiles || die
 	dosym /etc/piwi/Profiles /home/httpd/htdocs/piwi/Profiles
-	
+
 	mv ${D}/home/httpd/htdocs/piwi/Functions/config.pl ${D}/etc/piwi/config.pl || die
 	dosym /etc/piwi/config.pl /home/httpd/htdocs/piwi/Functions/config.pl
 

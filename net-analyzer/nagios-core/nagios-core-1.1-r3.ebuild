@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r3.ebuild,v 1.2 2003/08/03 03:21:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r3.ebuild,v 1.3 2003/09/05 23:40:09 msterret Exp $
 
 inherit eutils
 
@@ -14,20 +14,20 @@ KEYWORDS="x86 ~sparc ~ppc"
 IUSE="gd apache2 perl"
 
 DEPEND=">=mailx-8.1
-	apache2? ( >=net-www/apache-2.0.43-r1 )  
-	gd? ( 
+	apache2? ( >=net-www/apache-2.0.43-r1 )
+	gd? (
 		>=jpeg-6b-r3
 		>=libpng-1.2.5-r4
-		>=libgd-1.8.3-r5 
-	) 
+		>=libgd-1.8.3-r5
+	)
 	perl? ( >=perl-5.6.1-r7 )
-	mysql? ( >=dev-db/mysql-3.23.56 ) 
+	mysql? ( >=dev-db/mysql-3.23.56 )
 	pgsql? ( >=dev-db/postgresql-7.3.2 )"
 
 S="${WORKDIR}/nagios-${PV}"
 
 pkg_setup() {
-	enewgroup nagios 
+	enewgroup nagios
 	enewuser nagios -1 /bin/bash /dev/null nagios
 }
 
@@ -40,15 +40,15 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-		
+
 	use mysql && myconf="${myconf} --with-mysql-xdata \
 	--with-mysql-status --with-mysql-comments --with-mysql-extinfo \
-	--with-mysql-retention --with-mysql-downtime" 
-	
+	--with-mysql-retention --with-mysql-downtime"
+
 	use pgsql && myconf="${myconf} --with-pgsql-xdata \
 	--with-pgsql-status --with-pgsql-comments --with-pgsql-extinfo \
 	--with-pgsql-retention --with-pgsql-downtime"
-	
+
 	use perl && myconf="${myconf} --enable-embedded-perl --with-perlcache"
 
 	use debug0 && myconf="${myconf} --enable-DEBUG0"
@@ -72,7 +72,7 @@ src_compile() {
 src_install() {
 	dodoc Changelog INSTALLING LEGAL LICENSE README UPGRADING
 	if [ -n "`use gd`" ]; then
-		make DESTDIR=${D} fullinstall install-config || die 
+		make DESTDIR=${D} fullinstall install-config || die
 		if [ -n "`use apache2`" ]; then
 			insinto /etc/apache2/conf/modules.d
 			doins ${FILESDIR}/99_nagios.conf
@@ -80,10 +80,10 @@ src_install() {
 			insinto /etc/apache/conf/addon-modules
 			doins ${FILESDIR}/nagios.conf
 		fi
-	else 
+	else
 		make DESTDIR=${D} fullinstall install-config || die
 		rm -rf ${D}/usr/nagios/{sbin,share}/*
-	fi 
+	fi
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/nagios
 	insinto /etc/nagios
@@ -92,7 +92,7 @@ src_install() {
 
 pkg_preinst() {
 	einfo "Sample config files installed by default will always"
-	einfo "include cgi.cfg" 
+	einfo "include cgi.cfg"
 	chown -R nagios:nagios ${D}/etc/nagios || die "Failed Chown of ${D}/etc/nagios"
 	touch ${D}/usr/nagios/share/ssi/.keep
 	chown -R nagios:nagios ${D}/usr/nagios || die "Failed Chown of ${D}/usr/nagios"
@@ -104,23 +104,23 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo 
+	einfo
 	einfo "Remember to edit the config files in /etc/nagios"
 	einfo "Also, if you want nagios to start at boot time"
 	einfo "remember to execute rc-update add nagios default"
 	einfo
 	if [ -n "`use gd`" ]; then
 		einfo "This does not include cgis that are perl-dependent"
-		einfo "Currently traceroute.cgi is perl-dependent" 
+		einfo "Currently traceroute.cgi is perl-dependent"
 		einfo "To have ministatus.cgi requires copying of ministatus.c"
-		einfo "to cgi directory for compiling" 
+		einfo "to cgi directory for compiling"
 		if [ -n "`use apache2`" ]; then
 			einfo "To have nagios visable on the web, please do the following:"
 			einfo "Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
 			einfo "The Apache2 config file for nagios will be in"
 			einfo "/etc/apache2/conf/modules.d with the name of"
 			einfo "99_nagios.conf."
-		else 
+		else
 			einfo "1. Execute the command:"
 			einfo " \"ebuild /var/db/pkg/net-analyzer/${PF}/${PF}.ebuild config\""
 			einfo " 2. Edit /etc/conf.d/apache and add \"-D NAGIOS\""
@@ -144,7 +144,7 @@ pkg_config() {
 	if [ "`use gd`" ]; then
 		if [ "`use apache2`" ]; then
 			einfo "Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
-		fi 
+		fi
 		echo "Include  conf/addon-modules/nagios.conf" >> ${ROOT}/etc/apache/conf/apache.conf
 		einfo
 		einfo "Remember to edit /etc/conf.d/apache and add \"-D NAGIOS\""
