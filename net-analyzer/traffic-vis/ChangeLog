@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traffic-vis
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.1 2003/10/30 00:17:12 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.2 2003/12/06 18:58:43 spider Exp $
+
+  06 Dec 2003; <spider@gentoo.org> traffic-vis-0.35.ebuild:
+  fixing bug #34576. Borked depends
 
 *traffic-vis-0.35 (29 Oct 2003)
 
