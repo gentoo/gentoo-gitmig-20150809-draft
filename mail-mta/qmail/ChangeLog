@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.13 2004/12/15 11:27:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.14 2004/12/15 22:15:45 hansmi Exp $
+
+  15 Dec 2004; Michael Hanselmann <hansmi@gentoo.org>
+  +files/1.03-r15/Makefile-relaymxlookup.patch, qmail-1.03-r15.ebuild:
+  Added my relaymxlookup-patch. See http://hansmi.ch/software/qmail and
+  README.relaymxlookup after unpacking.
 
   15 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03-r15.ebuild:
   Rediffed and integrated the moreipme-patch from Scott Gifford.
