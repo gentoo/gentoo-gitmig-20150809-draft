@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-business
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-business/ChangeLog,v 1.10 2004/07/20 08:58:44 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-business/ChangeLog,v 1.11 2004/08/08 16:48:25 stuart Exp $
+
+  08 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  nxserver-business-1.3.2-r1.ebuild:
+  Fixed ebuild using the wrong eclass
 
 *nxserver-business-1.3.2-r1 (20 Jul 2004)
 
