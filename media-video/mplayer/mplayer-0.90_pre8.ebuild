@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre8.ebuild,v 1.2 2002/09/23 19:55:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre8.ebuild,v 1.3 2002/09/26 11:19:43 trance Exp $
 
 # NOTE to myself:  Test this thing with and without dvd/gtk+ support,
 #                  as it seems the mplayer guys dont really care to
@@ -49,7 +49,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 
 src_unpack() {
