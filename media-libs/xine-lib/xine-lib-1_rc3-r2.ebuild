@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r2.ebuild,v 1.6 2004/03/22 03:24:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r2.ebuild,v 1.7 2004/03/30 15:40:04 jhuebel Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -88,6 +88,9 @@ src_compile() {
 
 	use sparc \
 		&& myconf="${myconf} --enable-vis"
+
+	use amd64 \
+		&& myconf="${myconf} --with-xv-path=/usr/X11R6/lib"
 
 	econf \
 		`use_enable X x11` \

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.98 2004/03/22 03:24:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.99 2004/03/30 15:40:04 jhuebel Exp $
+
+  30 Mar 2004; Jason Huebel,,, <jhuebel@gentoo.org> xine-lib-1_rc3-r2.ebuild:
+  fix for amd64 to allow building Xv support
 
   21 Mar 2004; Jason Wever <weeve@gentoo.org> xine-lib-1_rc3-r2.ebuild:
   Added ~sparc keyword.
