@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.9.ebuild,v 1.1 2002/12/01 05:24:01 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.9.ebuild,v 1.2 2003/01/06 08:54:49 mkeadle Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scanner Access Now Easy"
@@ -11,7 +11,7 @@ DEPEND=">=media-gfx/sane-backends-1.0.9"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 src_compile() {
