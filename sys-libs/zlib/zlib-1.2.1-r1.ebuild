@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r1.ebuild,v 1.4 2004/07/02 08:51:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r1.ebuild,v 1.5 2004/08/24 04:21:54 swegener Exp $
 
 inherit eutils flag-o-matic
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Standard (de)compression library"
 SRC_URI="http://www.gzip.org/zlib/${P}.tar.bz2"
 HOMEPAGE="http://www.gzip.org/zlib"
@@ -12,6 +11,7 @@ HOMEPAGE="http://www.gzip.org/zlib"
 LICENSE="ZLIB"
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~ppc64"
 SLOT="0"
+IUSE=""
 
 DEPEND="virtual/libc"
 
