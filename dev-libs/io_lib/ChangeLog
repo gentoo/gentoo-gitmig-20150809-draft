@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/io_lib
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/io_lib/ChangeLog,v 1.1 2004/09/18 18:53:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/io_lib/ChangeLog,v 1.2 2004/10/17 09:46:10 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> io_lib-1.8.12b.ebuild:
+  Added to ~ppc.
 
 *io_lib-1.8.12b (18 Sep 2004)
 
