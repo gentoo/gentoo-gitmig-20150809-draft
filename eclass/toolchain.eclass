@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.97 2005/01/31 02:08:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.98 2005/01/31 02:42:04 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1560,7 +1560,7 @@ exclude_gcc_patches() {
 do_gcc_HTB_boundschecking_patches() {
 	# modify the bounds checking patch with a regression patch
 	epatch "${WORKDIR}/bounds-checking-${PN}-${HTB_GCC_VER:-${GCC_RELEASE_VER}}-${HTB_VER}.patch"
-	release_version="${release_version}, HTB-${HTB_VER}"
+	release_version="${release_version}, HTB-${HTB_GCC_VER:-${GCC_RELEASE_VER}}-${HTB_VER}"
 }
 
 # patch in ProPolice Stack Smashing protection
