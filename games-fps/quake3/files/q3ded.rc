@@ -1,20 +1,20 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/files/q3ded.rc,v 1.4 2003/12/09 21:34:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/files/q3ded.rc,v 1.5 2003/12/09 21:40:05 vapier Exp $
 
 depend() {
 	need net
 }
 
 start() {
-	ebegin "Starting quake3 dedicated"
+	ebegin "Starting Quake3 dedicated server"
 	screen -A -m -d -S q3ded su - games-ded -c "/usr/games/bin/q3ded ${q3_OPTS}"
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping quake3 dedicated"
+	ebegin "Stopping Quake3 dedicated server"
 	local pid=`screen -list | grep q3ded | awk -F . '{print $1}' | sed -e s/.//`
 	if [ -z "${pid}" ] ; then
 		eend 1 "Lost screen session"
