@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/files/ipvsadm-init,v 1.1 2003/11/12 22:01:27 iggy Exp $
+
+depend() {
+        need net
+}
+
+checkconfig() {
+	if [ ! -f /var/lib/ipvsadm/rules-save ] ; then
+		eerror "Not starting iptables. First create some rules then run"
+		eerror "/etc/init.d/iptables save"
+		return 1
+	fi
+}
+
+start() {
+	ebegin "Starting ipvsadm"
+	einfo "Clearing previous rules"
+	ipvsadm -C
+	ipvsadm-restore < /var/lib/ipvsadm/rules-save
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ipvsadm"
+	eend $?
+}
+
+save() {
+	ebegin "Saving ipvsadm state"
+	ipvsadm-save > /var/lib/ipvsadm/rules-save
+	eend $?
+}
