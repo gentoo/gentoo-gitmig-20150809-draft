@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55-r1.ebuild,v 1.3 2004/05/12 09:02:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55-r1.ebuild,v 1.4 2004/05/12 09:15:46 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -89,6 +89,10 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 
 	ewarn "****************************************************************"
+	ewarn " This ebuild now also includes optional support for kde "
+	ewarn " integration. If you want to use it you will have to put "
+	ewarn " 'ooo-kde' into your USE FLAGS. "
+	ewarn
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
 	ewarn " been filtered out.  If you experience difficulty merging this  "
