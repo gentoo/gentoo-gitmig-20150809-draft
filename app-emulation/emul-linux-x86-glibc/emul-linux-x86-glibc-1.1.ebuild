@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/emul-linux-x86-glibc-1.1.ebuild,v 1.4 2004/08/29 03:45:50 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/emul-linux-x86-glibc-1.1.ebuild,v 1.5 2004/08/30 15:01:28 lv Exp $
 
 DESCRIPTION="GNU C Library for emulation of 32bit x86 on amd64"
 HOMEPAGE="http://www.gentoo.org/"
@@ -46,16 +46,3 @@ run_verbose() {
 	$@ || die "unable to $@"
 }
 
-pkg_postinst() {
-	# for some reason we have users with lib32 as a directory and not a symlink.
-	# my guess is a broken version of opengl-update somewhere... but since
-	# having lib32 as a directory is definately broken, lets fix that here.
-	if [ -d /usr/lib32 ] ; then
-		ewarn "/usr/lib32 is a directory and not a symlink... fixing"
-		run_verbose mv /usr/lib32 /usr/lib32-bork-bork-bork
-		run_verbose ln -sf /emul/linux/x86/usr/lib /usr/lib32
-		run_verbose mv -v /usr/lib32-bork-bork-bork/* /usr/lib32/
-		run_verbose rm -rf /usr/lib32-bork-bork-bork
-		einfo "fixed!"
-	fi
-}
