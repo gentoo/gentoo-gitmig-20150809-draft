@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002d.ebuild,v 1.1 2003/05/30 20:28:41 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002d.ebuild,v 1.2 2003/05/31 06:26:40 robbat2 Exp $
 
-S=${WORKDIR}/imap-2002d
+S=${WORKDIR}/imap-${PV}
 
 DESCRIPTION="UW server daemons for IMAP and POP network mail protocols."
-SRC_URI="ftp://ftp.cac.washington.edu/imap/imap-2002d.tar.Z"
+SRC_URI="ftp://ftp.cac.washington.edu/imap/imap-${PV}.tar.Z"
 HOMEPAGE="http://www.washington.edu/imap/"
 
 LICENSE="as-is"
