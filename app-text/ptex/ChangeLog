@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.7 2003/11/12 21:30:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.8 2003/12/22 15:46:47 usata Exp $
+
+  23 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> ptex-3.1.2-r1.ebuild,
+  ptex-3.1.3.ebuild:
+  Removed dvipdfmx from dependencies (circular dependency). Marked 3.1.3 stable
 
 *ptex-3.1.3 (13 Nov 2003)
 

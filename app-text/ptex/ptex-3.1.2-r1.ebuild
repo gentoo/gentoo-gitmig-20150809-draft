@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2-r1.ebuild,v 1.6 2003/11/12 21:30:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2-r1.ebuild,v 1.7 2003/12/22 15:46:47 usata Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -27,7 +27,7 @@ SRC_URI="${SRC_PATH_PTEX}/tetex/${PTEX_SRC}
 	${SRC_PATH_PTEX}/dvips/dvipsk-jpatch-p1.6.tar.gz"
 HOMEPAGE="http://www.ascii.co.jp/pb/ptex/"
 
-KEYWORDS="x86 alpha ppc sparc"
+KEYWORDS="x86 alpha ppc sparc ~amd64"
 SLOT="0"
 LICENSE="GPL-2 BSD"
 
@@ -42,8 +42,7 @@ DEPEND="!app-text/tetex
 RDEPEND="${DEPEND}
 	>=dev-lang/perl-5.2
 	dev-util/dialog"
-PDEPEND="app-text/xdvik
-	app-text/dvipdfmx"
+PDEPEND="app-text/xdvik"
 PROVIDE="virtual/tetex"
 
 src_unpack() {
