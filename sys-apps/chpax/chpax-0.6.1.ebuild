@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.6.1.ebuild,v 1.7 2004/04/27 18:52:16 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.6.1.ebuild,v 1.8 2004/06/01 20:31:48 solar Exp $
 
 inherit flag-o-matic
 
@@ -22,8 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# breaks with current ssp.
-	# use static && append-ldflags -static
+	# use static && append-ldflags -static	; # breaks with current ssp.
 
 	emake CC="${CC}" TARGET="chpax ${LDFLAGS:0}" || die "Parallel Make Failed"
 }
