@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5.ebuild,v 1.2 2003/07/11 20:35:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5.ebuild,v 1.3 2003/09/02 18:55:43 mholzer Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ IUSE=""
 S=${WORKDIR}/${P}
 DESCRIPTION="Create a diff disregarding formatting"
 HOMEPAGE="http://www.gnu.org/software/wdiff/"
-SRC_URI="ftp://ftp.gnu.org/gnu/wdiff/${P}.tar.gz
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2"
 
 SLOT="0"
