@@ -1,4 +1,6 @@
 MD5 00c8282d6033f8e77a2b6ebd5be1aed8 kiso-0.4.2.ebuild 745
-MD5 8308746edaf53fa62b268f92780ff44a ChangeLog 700
+MD5 116a73d605d59156ac7bffba1e5065e7 kiso-0.6.ebuild 747
+MD5 887b085c37e0c4be1187272f94611cf6 ChangeLog 809
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 1146e463558abf8eb666ec015a2ad454 files/digest-kiso-0.4.2 64
+MD5 5fe5fe02a1d07565631165e9d9396893 files/digest-kiso-0.6 61
