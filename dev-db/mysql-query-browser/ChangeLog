@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql-query-browser
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/ChangeLog,v 1.5 2004/11/21 23:45:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/ChangeLog,v 1.6 2004/12/01 20:04:57 swegener Exp $
+
+*mysql-query-browser-1.1.2 (01 Dec 2004)
+
+  01 Dec 2004; Sven Wegener <swegener@gentoo.org>
+  -files/mysql-query-browser, -mysql-query-browser-1.0.7a_beta.ebuild,
+  -mysql-query-browser-1.1.1.ebuild, +mysql-query-browser-1.1.2.ebuild:
+  Version bump. No more need to use our own wrapper script. Removed old beta
+  ebuilds.
 
 *mysql-query-browser-1.1.1 (22 Nov 2004)
 

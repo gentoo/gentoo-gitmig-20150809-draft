@@ -1,20 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.0.7a_beta.ebuild,v 1.4 2004/11/21 23:45:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.2.ebuild,v 1.1 2004/12/01 20:04:57 swegener Exp $
 
 inherit gnome2
 
-MY_P="${P/_/-}"
-
 DESCRIPTION="MySQL Query Browser"
 HOMEPAGE="http://www.mysql.com/"
-SRC_URI="mirror://mysql/Downloads/MySQLAdministrationSuite/${MY_P}.tar.gz"
+SRC_URI="mirror://mysql/Downloads/MySQLAdministrationSuite/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-RDEPEND="<dev-db/mysql-4.1
+RDEPEND=">=dev-db/mysql-4.1
 	>=dev-libs/libpcre-4.4
 	>=dev-libs/libxml2-2.6.2
 	>=gnome-base/libglade-2
@@ -25,8 +23,6 @@ RDEPEND="<dev-db/mysql-4.1
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=app-text/scrollkeeper-0.3.11"
-
-S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	cd ${S}/mysql-gui-common
@@ -47,8 +43,5 @@ src_install() {
 	cd ${S}/mysql-query-browser
 	gnome2_src_install || die "gnome2_src_install failed"
 
-	rm ${D}/usr/bin/mysql-query-browser
-	dobin ${FILESDIR}/mysql-query-browser || die "dobin failed"
-
-	dohtml -r ${S}/mysql-query-browser/doc/{images,mysqlquerybrowser.html,html.css} || die "dohtml failed"
+	dohtml -r ${S}/mysql-query-browser/doc/ || die "dohtml failed"
 }
