@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0_rc1.ebuild,v 1.4 2004/03/15 02:12:41 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0_rc1.ebuild,v 1.5 2004/03/30 05:32:42 weeve Exp $
 
 inherit elisp-common
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="emacs"
 S=${WORKDIR}/${MY_P}
 
-DEPEND="x11-base/xfree
+DEPEND="virtual/x11
 	emacs? ( virtual/emacs )"
 
 SITEFILE=50ratpoison-gentoo.el
