@@ -1,12 +1,13 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.31 2002/12/31 22:33:59 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.32 2002/12/31 23:13:09 lostlogic Exp $
 
   TODO before gentoo-sources-2.4.20-r1:
   * Documentation
   * Make sure hardware support is synched with xfs-sources
   * Test away
   * Possibly KT400 pci.ids
+  * USAGI patch from mattjf
   * Whatever else I'm forgetting
 
 *lolo-sources-2.4.20.1_rc1 (2002)
@@ -17,7 +18,7 @@
   * Drop the elevator.c change, it makes things worse in many situations
   * Add support for the ECC driver
   * Add TIOCGDEV support back in
-  * Add xfs+quota-v2+kdb support
+  * Add xfs+quota-v2+kdb support many thanks to dragon for this.
   * Fix 2 users of current->nice !works
 
 *lolo-sources-2.4.20.1_pre9 (30 Dec 2002)
