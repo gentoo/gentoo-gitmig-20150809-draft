@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d590bafca8f86b64d766df0af0944289 cryptix-jce-bin-20030217.ebuild 690
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 f9dac28d454217907c67ae63b6072121 cryptix-jce-bin-20030217.ebuild 677
 MD5 c731806a7fa95be73e36ece383ef2454 ChangeLog 440
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 0515613b608021675eb07a548e20d2fe files/digest-cryptix-jce-bin-20030217 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOrpLI1lqEGTUzyQRAv8xAJ9sF+4Ipk75q29Wokq2g6PaC7v1uwCfW0Sk
-BAacSoj7P4LWK4i3CZbnFvY=
-=ofNw
+iD8DBQFBPwh7/rLF9B432nYRAtmLAJ9xReHyTONvbXFA48x0mR7LD5asSgCgsa7s
+eZYcN3aWFIRobAP90lUyYJw=
+=HATQ
 -----END PGP SIGNATURE-----
