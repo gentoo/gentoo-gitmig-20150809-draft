@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3245 2004/10/13 08:50:59 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3246 2004/10/13 09:09:06 suka Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <suka@gentoo.org> (13 Oct 2004)
+# Masking until a new upstream package comes out, this has one has security problems
+app-office/openoffice-ximian-bin
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Testing for latest xmms cvs which incorporates many patches that were in
