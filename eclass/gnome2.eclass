@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.28 2003/02/24 23:23:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.29 2003/04/09 09:21:55 liquidx Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -31,13 +31,13 @@ gnome2_src_configure() {
 	# doc keyword for gtk-doc
 	use doc && G2CONF="${G2CONF} --enable-gtk-doc" || G2CONF="${G2CONF} --disable-gtk-doc"
 
-	econf ${1} ${G2CONF} || die "./configure failure"
+	econf ${@} ${G2CONF} || die "./configure failure"
 
 }
 
 gnome2_src_compile() {
 
-	gnome2_src_configure ${1}
+	gnome2_src_configure ${@}
 	emake || die "compile failure"
 
 }
