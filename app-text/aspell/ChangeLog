@@ -1,6 +1,15 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.13 2002/09/09 23:29:19 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.14 2002/10/05 20:19:30 seemant Exp $
+
+*aspell-0.50.2 (05 Oct 2002)
+
+  05 Oct 2002; Seemant Kulleen <seemant@gentoo.org> aspell-0.50.2.ebuild
+  files/digest-aspell-0.50.2 :
+
+  Version bump which fixes a LOT of bugs.  Kword and Kmail should now work
+  properly with this.  New ebuild notification by: arun@virginia.edu (Arun
+  Thomas) (sindian in #gentoo-dev) in bug #8786.
 
 *aspell-0.50.1 (03 Sep 2002)
 
