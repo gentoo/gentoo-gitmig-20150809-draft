@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r2.ebuild,v 1.1 2004/01/08 05:52:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r2.ebuild,v 1.2 2004/02/12 08:15:19 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -51,7 +51,7 @@ src_install() {
 	doins grx/*
 
 	dohtml doc/*.htm
-	rm doc/*.html doc/README.OS2 doc/Readme\ Win32.txt
+	rm doc/*.html doc/README.OS2 doc/Readme\ Win32.txt doc/COPYING
 	dodoc doc/*
 
 	prepgamesdirs
