@@ -1,4 +1,4 @@
-MD5 d948101249da4e92d3de61a6e9d46540 ChangeLog 471
-MD5 a418835e21c07fe61d4cf1fab4f380ec searchandrescue-0.8.1.ebuild 1440
-MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 fb2560ede2f6612695ebd7a69761fcf0 files/digest-searchandrescue-0.8.1 146
+MD5 d948101249da4e92d3de61a6e9d46540 ChangeLog 471
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 f3ffb818c88049f67492051da903a3ba searchandrescue-0.8.1.ebuild 1440
