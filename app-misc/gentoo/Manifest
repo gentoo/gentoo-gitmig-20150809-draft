@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d51665039115a2e4548b95f3e829a6ad ChangeLog 7096
-MD5 6a86590ba0eee8a4b4f7ee1191524945 gentoo-0.11.51.ebuild 1113
 MD5 8586dd4be9184736d6b03d802362c0af gentoo-0.11.45.ebuild 1112
-MD5 28c27820d168f916837834f711435591 metadata.xml 257
+MD5 ca13238be770476e2fac1a7d4192d8a9 gentoo-0.11.51.ebuild 1112
 MD5 812411ecb6fc6f31e7d6e143ba20daa3 gentoo-0.11.46.ebuild 1112
+MD5 429ac51f7638ff72856dcf3440d7d47a ChangeLog 7188
 MD5 ca5d673903f9b6cb723bc2ec2bd0aba5 gentoo-0.11.48.ebuild 1114
-MD5 938766b6b79e0c6c2000ce02879a70e0 files/digest-gentoo-0.11.51 67
-MD5 89164c90788f03d2f086a74f529540d9 files/digest-gentoo-0.11.46 67
+MD5 28c27820d168f916837834f711435591 metadata.xml 257
 MD5 04ccb49d40018a91c781f5c3c7daecb7 files/digest-gentoo-0.11.45 67
-MD5 5ce199fdf587f5572c2269660f3edf67 files/gentoo.desktop 142
+MD5 89164c90788f03d2f086a74f529540d9 files/digest-gentoo-0.11.46 67
 MD5 691e5dd0ad6c3e98f215edadcce43643 files/digest-gentoo-0.11.48 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35JhHTu7gpaalycRAmFKAJ4uipWKlWFbR52CfPp+MXgRmwldJwCg06Zp
-vGp48d1P/1cmlpLAhUYU0wk=
-=k1E4
------END PGP SIGNATURE-----
+MD5 938766b6b79e0c6c2000ce02879a70e0 files/digest-gentoo-0.11.51 67
+MD5 5ce199fdf587f5572c2269660f3edf67 files/gentoo.desktop 142
