@@ -50,13 +50,13 @@ if [ ! "${PN}" = "linux-extras" ] ; then
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	http://www.zip.com.au/~akpm/ext3-${EXT3V}.gz
 	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-1.0.0-patch.tar.gz
-	ftp://ftp.cs.huji.ac.il/users/mosix/MOSIX-${MOSV}.tar.gz
 	ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMV}.tar.gz
     http://www.knopper.net/download/knoppix/cloop_${CLOOPAV}.tar.gz"
 fi
 #	http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz
 #	http://www.netroedge.com/~lm78/archive/i2c-${SENV}.tar.gz
 #	http://prdownloads.sourceforge.net/pcmcia-cs/pcmcia-cs-${PCV}.tar.gz
+#	ftp://ftp.cs.huji.ac.il/users/mosix/MOSIX-${MOSV}.tar.gz
 	
 if [ "$PN" != "linux-extras" ]
 then
