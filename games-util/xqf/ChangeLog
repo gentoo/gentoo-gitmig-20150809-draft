@@ -1,6 +1,11 @@
 # ChangeLog for games-util/xqf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.14 2004/12/28 23:44:37 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.15 2005/04/06 00:20:50 vapier Exp $
+
+*xqf-1.0.3 (06 Apr 2005)
+
+  06 Apr 2005; Mike Frysinger <vapier@gentoo.org> +xqf-1.0.3.ebuild:
+  Version bump #88064 by Stephan.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -88,7 +93,7 @@
   fix sourceforge mirroring.
 	  
   13 April 2002; Bart Verwilst <verwilst@gentoo.org>: just added a 
-  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.14 2004/12/28 23:44:37 ciaranm Exp $
+  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.15 2005/04/06 00:20:50 vapier Exp $
 
 *xqf-0.9.8 (6 Apr 2002)
 
