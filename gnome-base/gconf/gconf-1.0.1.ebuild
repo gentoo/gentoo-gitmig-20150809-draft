@@ -19,7 +19,7 @@ DEPEND="nls? ( sys-devel/gettext )
 	>=gnome-base/gnome-libs-1.2.10
         >=dev-util/guile-1.4"
 
-DEPEND=">=sys-libs/db-3.2.3h
+RDEPEND=">=sys-libs/db-3.2.3h
 	>=gnome-base/gnome-env-1.0
         >=gnome-base/oaf-0.6.5
 	>=gnome-base/gnome-libs-1.2.10"

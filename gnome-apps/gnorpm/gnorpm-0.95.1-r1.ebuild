@@ -14,7 +14,7 @@ DEPEND="virtual/glibc nls? ( sys-devel/gettext )
 	>=gnome-base/libghttp-1.0.7
 	>=app-arch/rpm-3.0.5"
 
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc
         >=gnome-base/gnome-libs-1.2.4 >=sys-libs/db-3.2.3h
 	>=gnome-base/libghttp-1.0.7
 	>=app-arch/rpm-3.0.5"

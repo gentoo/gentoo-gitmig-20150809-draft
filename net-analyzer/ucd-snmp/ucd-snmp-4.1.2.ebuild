@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.1.2.ebuild,v 1.3 2001/06/01 14:00:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.1.2.ebuild,v 1.4 2001/06/09 14:11:57 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc <sys-libs/db-2
         ssl? ( >=dev-libs/openssl-0.9.6 )
         tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
-DEPEND="virtual/glibc <sys-libs/db-2
+RDEPEND="virtual/glibc <sys-libs/db-2
         ssl? ( >=dev-libs/openssl-0.9.6 )
         >=sys-libs/zlib-1.1.3"
 

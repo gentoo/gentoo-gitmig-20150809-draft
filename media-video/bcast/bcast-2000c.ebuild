@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/bcast/bcast-2000c.ebuild,v 1.2 2001/06/03 09:54:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bcast/bcast-2000c.ebuild,v 1.3 2001/06/09 14:11:57 achim Exp $
 
 A=${P}-src.tar.gz
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc dev-lang/nasm-0.98
 	>=media-libs/libpng-1.0.7
 	virtual/x11"
 
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc
 	>=sys-devel/gcc-2.95.2
         >=dev-libs/glib-1.2.10
 	>=media-libs/libpng-1.0.7

@@ -2,7 +2,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0j-r3.ebuild,v 1.1 2001/02/27 16:53:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0j-r3.ebuild,v 1.2 2001/06/09 14:11:57 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${A}"
 DEPEND="virtual/glibc
         nls? ( sys-devel/gettext )"
 
-DEPEND="virtual/glibc"
+RDEPEND="virtual/glibc"
 
 src_unpack() {
 
