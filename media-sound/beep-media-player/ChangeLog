@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.40 2005/02/05 22:20:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.41 2005/02/12 18:18:22 chainsaw Exp $
+
+*beep-media-player-0.9.7-r3 (12 Feb 2005)
+
+  12 Feb 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/0.9.7-desktop-icon.patch, +beep-media-player-0.9.7-r3.ebuild:
+  Depend on id3lib, closes bug #79608. Install icons differently, closes bug
+  #81050. Run elibtoolize to stop libtool panic in install stage.
 
   05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   beep-media-player-0.9.7-r2.ebuild:
