@@ -1,0 +1,5 @@
+MD5 75ec07f82a60cb8f54ec7f2f109fb038 tkmoo-0.3.32.ebuild 940
+MD5 4769888dd1572fc04923dfe717e8f427 ChangeLog 1544
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 2431fc3d11f33db62dc52628d9b9c8ad files/digest-tkmoo-0.3.32 69
+MD5 1a9eaa2f185e4ad7d0ec7228cbf13fba files/0.3.32-Makefile-noclean.patch 446
