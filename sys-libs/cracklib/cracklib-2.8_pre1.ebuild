@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8_pre1.ebuild,v 1.1 2005/02/11 06:06:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8_pre1.ebuild,v 1.2 2005/02/12 20:20:38 vapier Exp $
 
 inherit eutils
 
@@ -12,13 +12,14 @@ SRC_URI="mirror://sourceforge/cracklib/${MY_P}.tar.gz"
 LICENSE="CRACKLIB"
 SLOT="0"
 KEYWORDS="-*"
-IUSE=""
+IUSE="minimal"
 
 RDEPEND="sys-apps/miscfiles
 	>=sys-apps/portage-2.0.47-r10"
 DEPEND="${RDEPEND}
 	uclibc? ( app-arch/gzip )
 	sys-devel/gcc-config"
+PDEPEND="!minimal? ( sys-apps/cracklib-words )"
 
 S=${WORKDIR}/${MY_P}
 
