@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.3.ebuild,v 1.4 2003/11/05 04:58:10 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.3.ebuild,v 1.5 2003/11/05 05:44:26 blkdeath Exp $
 
 IUSE="ssl ipv6 doc"
 
@@ -39,6 +39,7 @@ src_compile() {
 		--localstatedir=/var \
 		--enable-threads \
 		--with-libtool \
+		--enable-libbind \
 		${myconf}
 
 	MAKEOPTS="${MAKEOPTS} -j1" emake || die "failed to compile bind"
@@ -80,7 +81,7 @@ src_install() {
 	dosym ../../var/bind/pri /etc/bind/pri
 	dosym ../../var/bind/sec /etc/bind/sec
 
-	# Fix lib dependancy craziness
+	# Fix lib dependancy craziness (Bug #32214)
 	cd ${D}/usr/lib
 	dosym libisc.so.7 /usr/lib/libisc.so.4
 	dosym libdns.so.11.0.2 /usr/lib/libdns.so.10
