@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.2.9-r1.ebuild,v 1.1 2002/08/09 18:32:11 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.2.9-r1.ebuild,v 1.2 2002/08/23 00:23:16 raker Exp $
 
 
 S=${WORKDIR}/${P}
@@ -69,22 +69,19 @@ src_compile() {
    	
 	#apply the patch to get compiled with GCC-3.1
 	gunzip < ${FILESDIR}/${P}.diff.gz | patch -p1
-	./configure --infodir=/usr/share/info \
-				--mandir=/usr/share/man \
-				--prefix=/usr \
-				--host=${CHOST} \
-				${myconf}|| die
+
+	CFLAGS="${CFLAGS} -DZEXPORT=''"
+	CXXFLAGS="${CXXFLAGS} -DZEXPORT=''"
+
+	econf ${myconf} || die "configuration failed"
 	
-	make || die
+	make || die "compilation failed"
 
 }
 
 src_install () {
 	
-	make infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-		prefix=${D}/usr \
-		install || die
+	einstall || die "installation failed"
 
 	dodoc  CHANGES.txt COPYING.LIB INSTALL.txt \
 		LICENCE.txt README.txt SYMBOLS.txt TODO.txt
