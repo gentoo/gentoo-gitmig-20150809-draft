@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3643 2005/02/20 00:26:13 nakano Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3644 2005/02/20 16:40:31 latexer Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -127,14 +127,6 @@ dev-lisp/tbnl
 # Tavis Ormandy <taviso@gentoo.org> (9 Feb 2005)
 # Masked pending security audit.
 www-client/prozilla
-
-# Peter Johanson <latexer@gentoo.org> (8 Feb 2005)
-# Ebuild revisions with added mono-1.1.x compatibility.
-# p.masked pending testing to confirm that changes don't break mono-1.0.x
-# compat.
-=dev-util/monodevelop-0.5.1-r3 
-=dev-dotnet/xsp-1.0.5-r1
-=media-sound/muine-0.6.3-r2
 
 # Matthew Kennedy <mkennedy@gentoo.org> (8 Feb 2005)
 # To many incorrect type assertions made to make the port viable for now.
