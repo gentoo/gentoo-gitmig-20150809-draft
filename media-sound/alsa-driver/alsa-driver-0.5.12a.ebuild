@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.19 2004/07/01 07:48:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.20 2004/07/24 05:44:34 eradicator Exp $
 
 IUSE=""
 
@@ -8,8 +8,8 @@ DESCRIPTION="Advanced Linux Sound Architecture modules"
 SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
 HOMEPAGE="http://www.alsa-project.org"
 
-#virtual/libc should depend on specific kernel headers
-DEPEND="sys-devel/autoconf virtual/libc"
+RDEPEND=""
+DEPEND="sys-devel/autoconf virtual/linux-sources"
 PROVIDE="virtual/alsa"
 
 SLOT="0.5"

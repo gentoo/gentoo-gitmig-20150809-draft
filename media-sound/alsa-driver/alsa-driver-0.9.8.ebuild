@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.8.ebuild,v 1.13 2004/07/21 16:24:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.8.ebuild,v 1.14 2004/07/24 05:44:34 eradicator Exp $
 
 inherit eutils
 
@@ -21,10 +21,9 @@ IUSE="oss"
 
 # Need the baselayout 1.7.9 or newer for the init script to work correctly.
 DEPEND="sys-devel/autoconf
-	virtual/libc
 	virtual/linux-sources
-	>=sys-apps/portage-1.9.10
-	>=sys-apps/baselayout-1.7.9"
+	>=sys-apps/portage-1.9.10"
+RDEPEND=">=sys-apps/baselayout-1.7.9"
 PROVIDE="virtual/alsa"
 
 SLOT="${KV}"
