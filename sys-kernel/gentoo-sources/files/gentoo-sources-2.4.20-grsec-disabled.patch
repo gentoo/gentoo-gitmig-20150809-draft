@@ -15,7 +15,7 @@
 +	if (oldval)
 +		mode |= GR_READ;
 +	if (newval)
-+		mode |= GR_WRITE
++		mode |= GR_WRITE;
 +
  	return mode;
  }
