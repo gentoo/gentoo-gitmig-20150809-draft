@@ -1,0 +1,10 @@
+--- src/Screen.cc.orig	2005-01-31 19:42:04.896674960 +0100
++++ src/Screen.cc	2005-01-31 19:42:39.719381104 +0100
+@@ -63,6 +63,7 @@
+ #include <sstream>
+ #include <iostream>
+ #include <iomanip>
++#include <cerrno>
+
+ using std::cout;
+ using std::cerr;

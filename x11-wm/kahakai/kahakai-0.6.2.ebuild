@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2.ebuild,v 1.5 2004/10/09 19:20:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2.ebuild,v 1.6 2005/02/20 10:46:29 usata Exp $
 
 IUSE="truetype xinerama"
 
