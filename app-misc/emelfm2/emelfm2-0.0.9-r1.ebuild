@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.0.9-r1.ebuild,v 1.3 2005/01/01 15:00:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.0.9-r1.ebuild,v 1.4 2005/02/01 18:18:57 brad Exp $
 
 inherit eutils
 
 DESCRIPTION="A file manager that implements the popular two-pane design based on gtk+-2"
-HOMEPAGE="http://dasui.prima.de/e2wiki/"
-SRC_URI="http://dasui.prima.de/~tooar/${P}.tar.gz"
+HOMEPAGE="http://emelfm2.org/"
+SRC_URI="http://emelfm2.org/rel/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
