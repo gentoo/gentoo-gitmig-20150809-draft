@@ -10,4 +10,4 @@ MD5 1ab85cee19ba581fa19d0f5129c9f3f6 files/pmud-file-locations.patch 373
 MD5 e0fbd0593a8efc1b7ac0c9f542528a09 files/pwrctl 8421
 MD5 48fb4abe41c2ce763a6de3b0f51621bc files/0.10.1-deb-fcntl.patch 855
 MD5 24099ac729124ead2fc05c6f280299d0 files/pwrctl-local 2733
-MD5 d95610dbf71957a4c6b00c5f4ff91fb0 files/pmud.start 575
+MD5 a2e9444ece62d46547d95b5eb6631cfd files/pmud.start 567

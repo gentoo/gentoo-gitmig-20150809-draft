@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 ec5d90c1c3c8ddee75b898e375da3458 tpctl-3.2.ebuild 1474
+MD5 d3c00f2bb36af286cfaabe33235271bb tpctl-4.4-r1.ebuild 1623
+MD5 0d1529169600581fc3902af3124f71ac tpctl-4.2.ebuild 1474
+MD5 b4ff2912e4761992757bc1a88671e1f6 tpctl-4.4.ebuild 1472
 MD5 3e03f801c8fc7863b39e37f4fbcaa52c ChangeLog 2039
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 ec5d90c1c3c8ddee75b898e375da3458 tpctl-3.2.ebuild 1474
-MD5 0d1529169600581fc3902af3124f71ac tpctl-4.2.ebuild 1474
-MD5 d3c00f2bb36af286cfaabe33235271bb tpctl-4.4-r1.ebuild 1623
-MD5 b4ff2912e4761992757bc1a88671e1f6 tpctl-4.4.ebuild 1472
 MD5 d1ead2e13e88669565107d8b97716565 tpctl-4.8.ebuild 1613
-MD5 087d3724807eac72a462c55e5becf728 files/apmiser.rc 568
 MD5 4a6eccb7b79fc6b89897fa42a9d63835 files/digest-tpctl-3.2 60
 MD5 603d662e5051a7e33e5c3cb5cae78962 files/digest-tpctl-4.2 60
 MD5 07d45c78b0ee95cb84c2fcdca379afc6 files/digest-tpctl-4.4 60
-MD5 07d45c78b0ee95cb84c2fcdca379afc6 files/digest-tpctl-4.4-r1 60
 MD5 7ea9886f5d9abae5110c5f584d5555fb files/digest-tpctl-4.8 60
 MD5 556f25877822405f7dfd77680d2f6e49 files/tpctlir-cli-4.4-r1.diff 770
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA34STHTu7gpaalycRAiMQAJ4/5w2zE+EUmKS+h7lHL4Koz1NaIgCgsKOM
-+gwZTZyRo5qqb9wnDiOxq4I=
-=2bBd
------END PGP SIGNATURE-----
+MD5 07d45c78b0ee95cb84c2fcdca379afc6 files/digest-tpctl-4.4-r1 60
+MD5 4b8b1c61ee0756b730105821afcae4e6 files/apmiser.rc 560
