@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.21 2004/08/13 15:03:32 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.22 2004/08/13 15:09:27 ciaranm Exp $
+
+  13 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> getmail-4.0.2-r1.ebuild:
+  Stable on sparc
 
   13 Aug 2004; Tom Martin <slarti@gentoo.org> getmail-4.0.2-r1.ebuild:
   Marked stable on amd64.
