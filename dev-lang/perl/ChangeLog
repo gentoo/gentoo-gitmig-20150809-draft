@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.74 2004/08/03 05:25:36 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.75 2004/08/07 06:41:44 rac Exp $
+
+*perl-5.8.5 (06 Aug 2004)
+
+  06 Aug 2004; Robert Coie <rac@gentoo.org> +files/perl-5.8.5-noksh.patch,
+  +files/perl-5.8.5-nonblock.patch, +files/perl-5.8.5-perldoc-emptydirs.patch,
+  +files/perl-5.8.5-picdl.patch, +files/perl-5.8.5-prelink-lpthread.patch,
+  +files/perl-5.8.5-reorder-INC.patch, +perl-5.8.5.ebuild:
+  5.8.5
 
   02 Aug 2004; Robert Coie <rac@gentoo.org> +files/perl-5.8.4-nonblock.patch,
   perl-5.8.4-r1.ebuild:
