@@ -1,8 +1,11 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.18 2003/02/20 16:54:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.19 2003/03/13 22:46:13 gmsoft Exp $
 
 *bitchx-1.0.19-r4 (20 Feb 2003)
+
+  13 Mar 2003; Guy Martin <gmsoft@gentoo.org> bitchx-1.0.19-r4.ebuild :
+  Added -fPIC to CFLAGS and added hppa to KEYWORDS.
 
   20 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Security update.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r4.ebuild,v 1.2 2003/02/20 17:26:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r4.ebuild,v 1.3 2003/03/13 22:46:13 gmsoft Exp $
 
 IUSE="ssl esd gnome xmms ncurses ipv6 gtk cjk"
 
@@ -23,6 +23,8 @@ replace-flags -O[3-9] -O2
 # This fixes bug 10932
 [ "${ARCH}" = "alpha" ] && append-flags "-fPIC"
 
+# hppa need -fPIC too
+[ "${ARCH}" = "hppa" ] && append-flags "-fPIC"
 
 DEPEND=">=sys-libs/ncurses-5.1 
 	ssl? ( >=dev-libs/openssl-0.9.6 )
