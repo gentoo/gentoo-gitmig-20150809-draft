@@ -1,0 +1,64 @@
+# ChangeLog for sys-apps/nbd
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.1 2005/03/06 00:59:29 ciaranm Exp $
+
+*nbd-2.7.1 (06 Mar 2005)
+
+  06 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +files/docbook2man.patch, +files/nbd-client.8, +files/nbd-server.1,
+  +nbd-2.6.0.ebuild, +nbd-2.7.1.ebuild, +nbd-2.7.2.ebuild:
+  Moved from sys-apps/nbd to sys-block/nbd.
+
+*nbd-2.7.2 (03 Nov 2004)
+
+  03 Nov 2004; Mike Frysinger <vapier@gentoo.org> +nbd-2.7.2.ebuild:
+  Version bump.
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> nbd-2.7.1.ebuild:
+  Masked nbd-2.7.1.ebuild stable for ppc
+
+  13 Aug 2004; Rob Holland <tigger@gentoo.org> nbd-2.7.1.ebuild:
+  Actually install the manual pages, not the output of docbook2man.
+
+  05 Jul 2004; Mike Frysinger <vapier@gentoo.org> nbd-2.7.1.ebuild:
+  Include the nbd.h file from linux-2.6.7 to work around older linux-headers
+  #56102 by Pieter De Wit.
+
+*nbd-2.7.1 (20 Jun 2004)
+
+  20 Jun 2004; Mike Frysinger <vapier@gentoo.org> +nbd-2.7.1.ebuild:
+  Version bump #54483 by Ryan Earl.
+
+*nbd-2.6.0 (02 May 2004)
+
+  02 May 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #49587 by Redeeman.
+
+*nbd-2.0-r1 (04 Apr 2004)
+
+  04 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Fix src_install() and install manpages.
+
+*nbd-2.0 (20 Apr 2003)
+
+  20 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
+  The project is now hosted at SF.
+
+*nbd-14 (18 Feb 2002)
+
+  02 Aug 2002; Seemant Kulleen <seemant@gentoo.org> nbd-14.ebuild :
+
+  Typo fix, submitted by: bm78ac@gmx.de (Ralf Miunske) in bug #5910.
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (-ppc), this relies on x86 kernel
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> nbd-14.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  18 Feb 2002; Chris Houser <chouser@gentoo.org> :
+  
+  This is the first ebuild for nbd, the Linux Network Block Device client and
+  server userland utilities.  To use these, you will need to have NBD compiled
+  into your kernel.
