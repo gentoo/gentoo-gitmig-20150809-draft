@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# <spider@gentoo.org> (20 Sep 2002)
+# masking for ppc / sparc64 testing
+=x11-wm/metacity-2.4.1
 
 # <satai@gentoo.org> (20 Sep 2002)
 # Too many problems.  Masking to fix.
