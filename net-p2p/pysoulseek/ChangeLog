@@ -1,12 +1,13 @@
 # ChangeLog for net-p2p/pysoulseek
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.10 2003/03/16 17:25:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.11 2003/03/16 17:31:00 liquidx Exp $
 
 *pysoulseek-1.0.0-r1 (16 Mar 2003)
 
   16 Mar 2003; Alastair Tse <liquidx@gentoo.org> pysoulseek-1.0.0-r1.ebuild,
   pysoulseek-1.0.0.ebuild, files/pysoulseek-1.0.0-hyriand-11.patch:
   added hyriand patch and changed wxPython and gtk dependencies.
+  Marked as stable because all the previous version are all 404s.
 
 *pysoulseek-1.0.0 (15 Mar 2003)
 
