@@ -1,12 +1,15 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.14 2003/03/20 17:21:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.15 2003/04/15 21:39:29 agriffis Exp $
 
   09 Feb 2003; Dean Bailey <alron@gentoo.org> uw-imap-2002b.ebuild, 
   uw-imap-2001a-r3.ebuild :
   Added !net-mail/vimap conflict.
   
 *uw-imap-2002b (12 Jan 2003)
+
+  15 Apr 2003; Aron Griffis <agriffis@gentoo.org> uw-imap-2002b.ebuild:
+  Add ~alpha to KEYWORDS
 
   20 Mar 2003; Guy Martin <gmsoft@gentoo.org> uw-imap-2002b.ebuild,
   uw-imap-2002a.ebuild :
