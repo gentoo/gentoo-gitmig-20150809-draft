@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.4 2005/01/15 19:03:16 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.5 2005/02/06 19:49:39 luckyduck Exp $
 
-inherit java-pkg
+inherit eutils java-pkg
 
 DESCRIPTION="Jakarta project for for XML bindings for java"
 HOMEPAGE="http://xml.apache.org/commons/"
@@ -18,6 +18,13 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/xml-commons-1.0.b2
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PV}-jdk15.patch
+}
 
 src_compile() {
 	local antflags="jar"

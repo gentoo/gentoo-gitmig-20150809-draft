@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-commons
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/ChangeLog,v 1.3 2005/01/15 19:03:16 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/ChangeLog,v 1.4 2005/02/06 19:49:39 luckyduck Exp $
+
+  06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/1.0_beta2-jdk15.patch, xml-commons-1.0_beta2.ebuild:
+  added a patch to make compiling against the jdk15 possible, fixes #81008
 
   15 Jan 2005; Saleem Abdulrasool <compnerd@gentoo.org> xml-commons-1.0_beta2.ebuild
   Resolves the error with javadoc; closes bug #78104
