@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.15.ebuild,v 1.3 2003/01/16 17:06:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.15.ebuild,v 1.4 2003/01/20 00:11:11 george Exp $
 
 inherit flag-o-matic eutils
 
@@ -38,7 +38,7 @@ src_compile() {
 src_install() {
 	dodir /usr/{include,lib}
 	make install prefix=${D}/usr || die
-	
+
 	newman libpngpf.3 libpngpf-10.3
 	newman libpng.3 libpng-10.3
 	newman png.5 png-10.5
@@ -48,6 +48,16 @@ src_install() {
 	rm ${D}/usr/lib/libpng.{a,so}
 	rm ${D}/usr/include/{png.h,pngconf.h,libpng}
 	rm -rf ${D}/usr/man
-	
+
 	dodoc ANNOUNCE CHANGES KNOWNBUG LICENSE README TODO Y2KINFO
+}
+
+pkg_postinst() {
+	einfo "Please note:"
+	einfo "previous versions of libpng-1.0 series were incorrectly overwriting png.h symlink"
+	einfo "from libpng-1.2.x installation."
+	einfo "This might cause removal of png.h by autoclean after you updated libpng-1.0 to 1.0.15"
+	einfo ""
+	einfo "If you experience problems compiling other packages with error message complaining"
+	einfo "about missing png.h, please remerge libpng-1.2.5 manually"
 }
