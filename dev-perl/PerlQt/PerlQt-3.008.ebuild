@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008.ebuild,v 1.1 2003/10/16 12:51:05 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008.ebuild,v 1.2 2003/10/17 15:34:15 caleb Exp $
 
 inherit perl-module
 
 #install pqtsh to this directory
 myinst="${myinst} INSTBINDIR=${D}/usr/bin"
-myconf="${myconf} --prefix=${D}/usr"
+myconf="${myconf} --prefix=${D}/usr --enable-smoke"
 mydoc="ChangeLog README TODO INSTALL COPYING AUTHORS"
 
 DESCRIPTION="Perl bindings for the Qt 3.x toolkit"
