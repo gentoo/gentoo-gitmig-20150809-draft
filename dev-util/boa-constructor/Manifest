@@ -1,9 +1,19 @@
-MD5 429e2282b41a4e76fbe921bfffa95fce boa-constructor-0.2.3_alpha.ebuild 1209
-MD5 a4544ba1bb059873482d635b0e655fd5 boa-constructor-0.1.0_alpha.ebuild 1226
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0b5b64b6db1a6d513a0512e7549b4c6c ChangeLog 1231
-MD5 7e8237fba7a4dfcc01d7501289d125ed metadata.xml 270
+MD5 a4544ba1bb059873482d635b0e655fd5 boa-constructor-0.1.0_alpha.ebuild 1226
+MD5 429e2282b41a4e76fbe921bfffa95fce boa-constructor-0.2.3_alpha.ebuild 1209
 MD5 7d2c5102ec2eba9abe0ee7544856861e boa-constructor-0.2.8_pre20040620.ebuild 1162
-MD5 30ac6035bc9a862af2ac160890b35a4b files/boa-constructor 383
-MD5 9ce8d0c471cb4659d5b5a0efea54f69e files/digest-boa-constructor-0.2.8_pre20040620 87
+MD5 7e8237fba7a4dfcc01d7501289d125ed metadata.xml 270
+MD5 023746a90d880f9f8c94118089d5d531 files/boa-constructor 387
 MD5 9c8b887e6848c9222fad7eb5c252f5db files/digest-boa-constructor-0.1.0_alpha 81
 MD5 e12855e2a10fb73665d3c7c2c11d66fa files/digest-boa-constructor-0.2.3_alpha 75
+MD5 9ce8d0c471cb4659d5b5a0efea54f69e files/digest-boa-constructor-0.2.8_pre20040620 87
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+ewimdTrptrqvGERAm38AJ9V2jRRi1P+uFYDL96eamCXzZQk4wCfRqHx
+TnPvenSogn+uniiWmligmV0=
+=/dIo
+-----END PGP SIGNATURE-----

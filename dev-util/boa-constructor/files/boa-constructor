@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/files/boa-constructor,v 1.1 2002/03/16 02:42:18 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/files/boa-constructor,v 1.2 2004/07/18 03:11:26 dragonheart Exp $
 
 # This is a bit of a kludge, but works.
 # If anyone can think of a better way to start Boa, feel free to
