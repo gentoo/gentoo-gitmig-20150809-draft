@@ -725,16 +725,6 @@ x11-libs/qt-embedded
 # in default Makefile
 =dev-perl/SGMLSpm-1.03-r2
 
-# Leonardo Boshell <leonardop@gentoo.org> (04 Aug 2002)
-# These packages have been replaced with the new gtk-engines-* form
-x11-themes/crux
-x11-themes/gtk-engines
-x11-themes/gtk-flat-theme
-x11-themes/gtk-thinice-engine
-x11-themes/gtk-thinice-theme
-x11-themes/gtk-xenophilia-engine
-x11-themes/gtk-xfce-engine
-
 # <carpaski@gentoo.org> (04 Aug 2002)
 # Testing...
 =net-ftp/kbear-2.0_beta1
