@@ -1,6 +1,9 @@
 # ChangeLog for app-office/scribus
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.27 2004/02/09 09:26:33 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.28 2004/02/09 22:03:48 hanno Exp $
+
+  09 Feb 2004; Hanno Boeck <hanno@gentoo.org> scribus-1.1.4.ebuild:
+  Mark x86 stable.
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> scribus-1.1.4.ebuild:
   added amd64 keyword.
