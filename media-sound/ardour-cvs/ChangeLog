@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ardour-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.10 2003/05/11 02:35:12 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.11 2003/05/13 10:20:42 jje Exp $
+
+  13 May 2003; jje <jje@gentoo.org> ardour-cvs-0.6.4.ebuild:
+  More clean ups and tweaks from robh.
 
   11 May 2003; jje <jje@gentoo.org> ardour-cvs-0.6.4.ebuild:
   Add --disable-dependency-tracking to try to speed things up a little.

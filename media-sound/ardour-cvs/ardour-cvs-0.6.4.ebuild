@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.3 2003/05/11 02:35:12 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.4 2003/05/13 10:20:46 jje Exp $
 
 IUSE="nls"
 
@@ -51,7 +51,7 @@ src_compile() {
 
 	# while troubleshooting upgrades to ardour-cvs-0.6 i changed from
 	# emake to make.  Can probably change back.  Need to test.
-	make || die "parallel make failed"
+	emake || die "parallel make failed"
 
 }
 
@@ -80,8 +80,10 @@ src_install() {
 	doins ${S}/ardour_system.rc
 	doins ${S}/ardour_ui.rc
 
-	dodoc ${S}/AUTHORS ${S}/INSTALL ${S}/README ${S}/NEWS ${S}/COPYING ${S}/ChangeLog ${S}/sample_ardour.rc
-
+	dodoc ${S}/AUTHORS ${S}/INSTALL ${S}/README ${S}/README.it \
+		${S}/NEWS ${S}/COPYING ${S}/ChangeLog ${S}/sample_ardour.rc \
+		${S}/ardour_faq.txt
+	doman ${S}/ardour.1 
 }
 
 pkg_postinst() {
@@ -92,7 +94,7 @@ pkg_postinst() {
 	einfo "as the development of both programs are closely linked."
 	einfo ""
 	einfo "to get ardour to run you will need to copy the file sample_ardour.rc"
-	einfo "from /usr/share/doc/ardour-0.6/sample_ardour.rc to your homedirectory"
+	einfo "from /usr/share/doc/${P}/sample_ardour.rc to your homedirectory"
 	einfo "and set two environment variables."
 	einfo "ARDOURRC should point to your where-ever you put your ardour.rc file"
 	einfo "ARDOUR_SYSTEM_RC should point to /usr/share/ardour/ardour_system.rc"
