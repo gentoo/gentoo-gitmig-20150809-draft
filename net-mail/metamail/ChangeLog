@@ -1,14 +1,15 @@
 # ChangeLog for net-mail/metamail
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.2 2003/02/11 09:40:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.3 2003/02/12 07:01:41 seemant Exp $
 
 *metamail-2.7.45 (22 Jul 2002)
 
   11 Feb 2003; Seemant Kulleen <seemant@gentoo.org> metamail-2.7.45.ebuild :
 
   Cleaned up KEYWORDS (put into ~x86 only pending other arch testing), use
-  eutils to call epatch, and removed src_compile, as it's unnecessary
+  eutils to call epatch, and removed src_compile, as it's unnecessary.
+  Later that night: moved to x86 and ppc
 
   22 Jul 2002; Nick Hadaway <raker@gentoo.org>
   metamail-2.7.45.ebuild, files/digest-metamail-2.7.45 :
