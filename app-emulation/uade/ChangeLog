@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/uade
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.18 2004/11/05 13:31:14 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.19 2004/11/06 14:16:24 spock Exp $
+
+  06 Nov 2004; Michal Januszewski <spock@gentoo.org> uade-1.00.ebuild:
+  Removed unnecessary DESTDIR option from make install. Closes #70209.
 
   05 Nov 2004; Michal Januszewski <spock@gentoo.org> uade-0.91-r1.ebuild:
   Removed beepmp support from the 0.91-rc1 ebuild, as this breaks on the

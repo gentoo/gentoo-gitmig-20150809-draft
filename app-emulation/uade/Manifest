@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 70908a3502ad1b7c3ba44a7398fb45c0 uade-1.00.ebuild 1619
+MD5 865741da710e6d0249cb6487955e5b0e uade-1.00.ebuild 1604
 MD5 7cbc51f320d1cdb336b071de886b25c8 uade-0.91-r1.ebuild 1534
 MD5 5e0e693bfb3862a705778fa4518184c1 uade-0.81.ebuild 1594
-MD5 5633de55c7eee8681a9fd16315ddeebd ChangeLog 2693
+MD5 cb48c6142f4398e52e764a6a1d839591 ChangeLog 2836
 MD5 a715d9de7a6423e88a804a562c2220a9 metadata.xml 219
 MD5 ef3c7fc767538fbeb54e89c600038bdd files/uade-0.91-bmp-fix.patch 1252
 MD5 4df754504fa84b727b0d21eccfcbf1c5 files/digest-uade-0.81 63
@@ -13,7 +13,7 @@ MD5 1f90b1c9ed54563fc4371e3976a2b4bb files/digest-uade-0.91-r1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBi5UOchej4aZK9/cRAuSqAJ9FkqjhPE8qB5JPnOPOMQPgyX9mtACfRGyV
-iJ31Lhisyt2731FwInN2r8w=
-=Ivum
+iD8DBQFBjNzJchej4aZK9/cRAmMjAJ9MfQtAG/Wd0bmuO+ZM5Ql7TI1mvgCfWepv
+3gNQeoYvFOKEqUo4h6eEE48=
+=WnCR
 -----END PGP SIGNATURE-----

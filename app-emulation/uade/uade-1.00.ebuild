@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-1.00.ebuild,v 1.1 2004/10/30 22:22:32 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-1.00.ebuild,v 1.2 2004/11/06 14:16:24 spock Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die 'make install failed'
+	make install || die 'make install failed'
 	dodoc BUGS ChangeLog.txt FIXED ANTIPLANS README PLANS TESTING docs/CREDITS
 
 	find "${D}/usr/share/doc/${PF}/" \
