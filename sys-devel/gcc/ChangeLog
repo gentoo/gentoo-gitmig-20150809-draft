@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.350 2004/11/18 22:23:43 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.351 2004/11/20 23:59:18 lv Exp $
+
+  20 Nov 2004; Travis Tilley <lv@gentoo.org> gcc-3.3.5.ebuild:
+  added in bounds checking support, fixed some multilib path oddities, and
+  made the ebuild use the newish should_we_gcc_config check for deciding
+  whether or not we should run gcc-config during postinst.
+  NOTE: at the moment 3.3.5 will not compile xgcc when using gcc 3.4
 
   18 Nov 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org> gcc-3.4.3.ebuild:
   We don't need no stinky libstdc++-v3 on MIPS. Not to mention that 3.4.3 can't

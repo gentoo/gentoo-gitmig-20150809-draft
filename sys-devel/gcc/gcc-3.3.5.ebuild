@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.ebuild,v 1.2 2004/11/18 12:19:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.ebuild,v 1.3 2004/11/20 23:59:18 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -45,9 +45,9 @@ PATCH_VER="1.0"
 #PIE_CORE="gcc-3.3.4-piepatches-v${PIE_VER}.tar.bz2"
 PP_VER="3_3_2"
 PP_FVER="${PP_VER//_/.}-3"
+HTB_VER="1.00"
 
 SRC_URI="$(get_gcc_src_uri)"
-S="$(gcc_get_s_dir)"
 
 ETYPE="gcc-compiler"
 
@@ -155,29 +155,19 @@ src_install() {
 		[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
 	fi
 
-	if [ "${SPLIT_SPECS}" == "true" ] ; then
-		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
-	fi
-
-	# Because GCC 3.4 installs into the gcc directory and not the gcc-lib
-	# directory, we will have to rename it in order to keep compatibility
-	# with our current libtool check and gcc-config (which would be a pain
-	# to fix compared to this simple mv and symlink).
-	mv ${D}/${PREFIX}/lib/gcc ${D}/${PREFIX}/lib/gcc-lib
-	ln -s gcc-lib ${D}/${PREFIX}/lib/gcc
-	#LIBPATH=${LIBPATH/lib\/gcc/lib\/gcc-lib}
-
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	create_gcc_env_entry
 
-	if [ "${SPLIT_SPECS}" == "true" ] && use !boundschecking ; then
+	if [ "${SPLIT_SPECS}" == "true" ] && [ -n "${PIE_CORE}" ] && use !boundschecking && hardened_gcc_works; then
 		if use hardened ; then
 			create_gcc_env_entry vanilla
 		else
 			create_gcc_env_entry hardened
 		fi
 		create_gcc_env_entry hardenednossp
+
+		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
 	fi
 
 	# Make sure we dont have stuff lying around that
@@ -325,17 +315,38 @@ src_install() {
 	fi
 
 	# we dont want these in freaky non-versioned paths that dont ever get used
-	if [ -d ${D}/${LIBPATH}/../$(get_libdir) ] ; then
-		mv ${D}/${LIBPATH}/../$(get_libdir)/* ${D}/${LIBPATH}/
-		rm -rf ${D}/${LIBPATH}/../$(get_libdir)/
-	fi
-	if [ -d ${D}/${LIBPATH}/../$(get_multilibdir) ] ; then
-		local multilibdir=$(get_multilibdir)
-		mv ${D}/${LIBPATH}/../$(get_multilibdir)/* \
-			${D}/${LIBPATH}/${multilibdir/lib}/
-		rm -rf ${D}/${LIBPATH}/../$(get_multilibdir)/
+	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 32
+	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 64
+	# and mips is just freaky in general ;p
+	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used o32
+	# and finally, the non-bitdepth-or-ABI-specific freaky path
+	if [ -d ${D}/${LIBPATH}/../lib ] ; then
+		mv ${D}/${LIBPATH}/../lib/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${LIBPATH}/../lib
 	fi
 }
+
+fix_freaky_non_versioned_library_paths_that_dont_ever_get_used() {
+	# first the multilib case
+	if [ -d ${D}/${LIBPATH}/../$1 -a -d ${D}/${LIBPATH}/$1 ] ; then
+		mv ${D}/${LIBPATH}/../$1/* ${D}/${LIBPATH}/$1/
+		rm -rf ${D}/${LIBPATH}/../$1
+	fi
+	if [ -d ${D}/${LIBPATH}/../lib$1 -a -d ${D}/${LIBPATH}/$1 ] ; then
+		mv ${D}/${LIBPATH}/../lib$1/* ${D}/${LIBPATH}/$1/
+		rm -rf ${D}/${LIBPATH}/../lib$1
+	fi
+	# and now to fix up the non-multilib case
+	if [ -d ${D}/${LIBPATH}/../$1 -a ! -d ${D}/${LIBPATH}/$1 ] ; then
+		mv ${D}/${LIBPATH}/../$1/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${LIBPATH}/../$1
+	fi
+	if [ -d ${D}/${LIBPATH}/../lib$1 -a ! -d ${D}/${LIBPATH}/$1 ] ; then
+		mv ${D}/${LIBPATH}/../lib$1/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${LIBPATH}/../lib$1
+	fi
+}
+
 
 pkg_preinst() {
 
@@ -357,6 +368,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	gcc_setup_static_vars
 
 	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
@@ -366,7 +378,7 @@ pkg_postinst() {
 		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
 	fi
 
-	do_gcc_config
+	should_we_gcc_config && do_gcc_config
 
 	# Update libtool linker scripts to reference new gcc version ...
 	if [ "${ROOT}" = "/" ] && \
