@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kid3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.4 2004/07/03 21:39:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.5 2004/07/14 10:40:03 eradicator Exp $
+
+  14 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/kid3-0.4-gcc34.patch:
+  gcc-3.4 fixes provided by Patrick Dawson <pkdawson@buffalo.edu> to close bug
+  #56070. Added to ~sparc and ~amd64.
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kid3-0.4.ebuild:
   QA: need-kde after R/DEPEND
