@@ -1,4 +1,14 @@
-MD5 af9daeea45beaaf879d2fafa4bde6f4e blowfishj-2.13.ebuild 1043
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 129ccffffe225864e3e6b29c9050e204 blowfishj-2.13.ebuild 985
 MD5 dd0403d9598657be41fe42344ecd1186 ChangeLog 553
 MD5 3a5af712fee8c17aaa3329c26c88b57e metadata.xml 526
 MD5 7bfd2e480f4f1da43f4139cda40cd384 files/digest-blowfishj-2.13 54
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCT/Lq/rLF9B432nYRAuURAJ9XWDW+Ff0Y++ILSfw9bFJkaI6hzACeKyj2
+TjsgrhkGdZkIKA0WKZSUtJU=
+=RrO/
+-----END PGP SIGNATURE-----
