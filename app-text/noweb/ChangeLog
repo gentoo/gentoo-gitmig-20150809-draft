@@ -1,6 +1,13 @@
 # ChangeLog for app-text/noweb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.1 2002/02/01 21:53:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.2 2002/03/21 10:36:07 danarmak Exp $
+
+*noweb-2.9-r1 (21 Mar 2002)
+
+  21 Mar 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  
+  Use awk not icon to compile. Icon package is in trouble and I don't want to depend on it right now.
+  Also some sandbox fixes.
 
 *noweb-2.9 (1 Feb 2002)
 
