@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.53 2003/11/20 02:45:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.54 2003/11/29 23:24:14 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> kdeadmin-3.1.4.ebuild:
+  mark stable on amd64
 
   20 Nov 2003; Luca Barbato <lu_zero@gentoo.org> kdeadmin-3.1.4.ebuild:
   Marked ppc
