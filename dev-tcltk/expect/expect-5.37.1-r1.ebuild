@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.11 2003/04/23 16:01:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.12 2003/09/06 23:48:22 msterret Exp $
 
 #remove the trailing ".0" from the tarball version
 S=${WORKDIR}/${P%.1}
@@ -30,7 +30,7 @@ src_compile() {
 
 	#configure needs to find the files tclConfig.sh and tclInt.h
 	myconf="--with-tcl=/usr/lib --with-tclinclude=/usr/lib/tcl$tclv/include/generic"
-	
+
 	if use X; then
 		#--with-x is enabled by default
 		#configure needs to find the file tkConfig.sh and tk.h
@@ -41,18 +41,18 @@ src_compile() {
 		myconf="$myconf --without-x"
 	fi
 
-	econf $myconf --enable-shared || die	
+	econf $myconf --enable-shared || die
 	emake || die
 
 }
 
 src_install () {
-	
+
 	einstall || die
 
 	#docs
 	dodoc Changelog FAQ HISTORY NEWS README
-	
+
 	#install examples if 'doc' is set
 	if use doc; then
 		cd ${S}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.7 2003/03/31 18:18:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.8 2003/09/06 23:48:22 msterret Exp $
 
 inherit flag-o-matic
 
@@ -8,8 +8,8 @@ IUSE="X"
 
 DESCRIPTION="A set of extensions to TCL"
 HOMEPAGE="http://www.neosoft.com/TclX/"
-SRC_URI="ftp://ftp.slackware.com/pub/slackware/slackware-8.1/source/tcl/tclx/${PN}${PV}.tar.gz 
-	ftp://ftp.scriptics.com/pub/tcl/tcl8_3/tcl8.3.3.tar.gz 
+SRC_URI="ftp://ftp.slackware.com/pub/slackware/slackware-8.1/source/tcl/tclx/${PN}${PV}.tar.gz
+	ftp://ftp.scriptics.com/pub/tcl/tcl8_3/tcl8.3.3.tar.gz
 	ftp://ftp.scriptics.com/pub/tcl/tcl8_3/tk8.3.3.tar.gz"
 
 LICENSE="BSD"
