@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 579a1b8db32b4d81bee43c7cd7c53a87 ChangeLog 2295
-MD5 794ebc36768edf5eaa629f3c63ec7bda id3v2-0.1.10.ebuild 1026
-MD5 11acad221e130e9d483209fbd3bc4c3d id3v2-0.1.7.ebuild 750
-MD5 d5533776c39f1cd516f320f202efc283 id3v2-0.1.9-r1.ebuild 941
+MD5 fb610a55ad2616cfad7888469c294bd9 id3v2-0.1.9-r1.ebuild 940
+MD5 7350e0ce92b6a02e06743e12a8ee4ba9 id3v2-0.1.10.ebuild 1024
+MD5 7fcf4f558b82fc2786d73df268446c9b id3v2-0.1.11.ebuild 916
+MD5 f0e8cd2b197984a317d455678018236e id3v2-0.1.7.ebuild 748
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 464f32a3432ccdbe037eb0bd20d83d07 id3v2-0.1.11.ebuild 921
-MD5 faa1968a6beab48f51e58bfc2cb66bf2 files/digest-id3v2-0.1.10 63
-MD5 d99b419340bbb9a9027cbf9a6f70c0ac files/digest-id3v2-0.1.7 62
-MD5 c6d37db10f48d3d1bd9a5ff283f8095d files/digest-id3v2-0.1.9-r1 62
+MD5 890b8a35912063bdd2b06b9d005dcab4 ChangeLog 2384
 MD5 d83139c5005dc921def0cf8550f53526 files/id3v2-0.1.10-noinline.patch 491
 MD5 735e277d7328b86d3b121b158473d939 files/id3v2-0.1.9-alpha.patch 679
-MD5 f9825612d1693530b1873e998cd9aaa4 files/digest-id3v2-0.1.11 63
+MD5 c6d37db10f48d3d1bd9a5ff283f8095d files/digest-id3v2-0.1.9-r1 62
 MD5 0c2b40f0a45bf5c1c8ff2b2953bef0c8 files/id3v2-0.1.11-alpha.patch 655
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdLFYArHZZzCEUG0RAnylAJ9aVkW6bzXd2HRyuICaxXqwqiPhmgCdF/fZ
-ITOA3DC+iSdCUsHMUgkyX7Q=
-=L6gA
------END PGP SIGNATURE-----
+MD5 f9825612d1693530b1873e998cd9aaa4 files/digest-id3v2-0.1.11 63
+MD5 faa1968a6beab48f51e58bfc2cb66bf2 files/digest-id3v2-0.1.10 63
+MD5 d99b419340bbb9a9027cbf9a6f70c0ac files/digest-id3v2-0.1.7 62
