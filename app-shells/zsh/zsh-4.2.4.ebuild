@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.4.ebuild,v 1.4 2005/03/28 11:55:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.4.ebuild,v 1.5 2005/03/28 14:23:28 gustavoz Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha ~arm hppa ~amd64 ~ia64 ~ppc-macos"
+KEYWORDS="x86 ppc sparc ~alpha ~arm hppa ~amd64 ~ia64 ~ppc-macos"
 IUSE="maildir ncurses static doc pcre cap"
 
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
