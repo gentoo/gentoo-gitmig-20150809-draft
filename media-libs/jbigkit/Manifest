@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c7eeae560bbd1e645bbe175741b403d7 ChangeLog 1364
-MD5 7212ea11348e8c99d367647cce819fb5 jbigkit-1.4.ebuild 1118
+MD5 c10f973aab0674933454962ac8f84300 jbigkit-1.4.ebuild 1124
 MD5 3b69012688770808e2d9ebaf7d43533e files/digest-jbigkit-1.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBPk03HTu7gpaalycRAlYTAJ9QJFPUvepkrQprga9GkMLhNbqEZACg2xZY
+C72LBwCwpU1/El8crFYzZzY=
+=kIWT
+-----END PGP SIGNATURE-----

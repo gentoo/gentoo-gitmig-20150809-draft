@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cde7c7db0ab24b5e60b3f82332f10591 ChangeLog 3374
-MD5 3cc59af293bcb352a183f5bc9a2f4614 libwmf-0.2.8.2.ebuild 1646
+MD5 02b3985b55795c1a5d59082310468992 libwmf-0.2.8.2.ebuild 1646
 MD5 3a6d7f14b41ff7bc9c5d4278f34168c8 libwmf-0.2.8.ebuild 1657
 MD5 61f2f3c6fe5cbadfdb746d5f03c5f578 files/digest-libwmf-0.2.8 65
 MD5 14afcb5bd6052022844997041dd5b26f files/digest-libwmf-0.2.8.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBPkw7HTu7gpaalycRAht8AJoDb2qWnNcWYbVTucfm3t95wHAuZgCeNQqU
+jVuS5dIysScX04YPNITHm3k=
+=jSon
+-----END PGP SIGNATURE-----
