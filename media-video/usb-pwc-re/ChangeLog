@@ -1,6 +1,10 @@
 # ChangeLog for media-video/usb-pwc-re
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/ChangeLog,v 1.4 2005/03/15 05:43:57 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/ChangeLog,v 1.5 2005/03/16 06:44:16 phosphan Exp $
+
+  16 Mar 2005; Patrick Kursawe <phosphan@gentoo.org>
+  usb-pwc-re-10.0.6a.ebuild:
+  My last fix broke the module installation path (bug #85238)
 
   14 Mar 2005; <hparker@gentoo.org> usb-pwc-re-10.0.6a.ebuild:
   Added ~amd64. Fixes #78734

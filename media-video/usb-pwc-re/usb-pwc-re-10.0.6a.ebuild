@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.6a.ebuild,v 1.4 2005/03/15 05:43:57 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.6a.ebuild,v 1.5 2005/03/16 06:44:16 phosphan Exp $
 
 
 inherit linux-info eutils
@@ -24,8 +24,8 @@ src_compile() {
 src_install() {
 
 	if kernel_is 2 6; then
-		einfo "Kernel ${KV_full} detected!"
-		insinto "/lib/modules/${KV_full}/kernel/drivers/usb/media/pwc"
+		einfo "Kernel ${KV_FULL} detected!"
+		insinto "/lib/modules/${KV_FULL}/kernel/drivers/usb/media/pwc"
 		doins pwc.ko
 		echo "post-install pwc /sbin/modprobe --force pwcx >& /dev/null 2>&1 || :" > usb-pwcx
 	else
