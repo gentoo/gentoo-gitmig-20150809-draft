@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/files/hotplug.rc,v 1.9 2004/07/15 00:43:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/files/hotplug.rc,v 1.10 2004/10/22 04:57:54 wolf31o2 Exp $
 
 depend() {
 	need modules
@@ -16,7 +16,9 @@ checkconfig() {
 
 start() {
 	checkconfig || return 1
-	
+	[ -e /usr/lib/hotplug/firmware.tar.bz2 ] && \
+	tar xjf /usr/lib/hotplug/firmware.tar.bz2 -C \
+	/usr/lib/hotplug/firmware
 	for RC in /etc/hotplug/*.rc
 	do
 		NAME=`basename $RC .rc`
