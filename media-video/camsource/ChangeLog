@@ -1,1 +1,8 @@
-Camsource Initial Commit by ZhEN <zhen@gentoo.org>
+# ChangeLog for media-video/camsource
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.2 2002/12/17 20:07:33 vapier Exp $
+
+*camsource-0.5.1 (26 Nov 2002)
+
+  26 Nov 2002; ZhEN <zhen@gentoo.org> :
+  Initial import.
