@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.5 2002/11/30 20:32:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.6 2002/12/09 04:17:37 manson Exp $
 
 PN0="john"
 S=${WORKDIR}/${PN0}-${PV}
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}/${PN0}-${PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 IUSE="mmx"
 
 DEPEND=">=sys-devel/binutils-2.8.1.0.15"

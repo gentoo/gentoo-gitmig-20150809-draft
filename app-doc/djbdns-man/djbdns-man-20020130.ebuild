@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/djbdns-man-20020130.ebuild,v 1.6 2002/10/17 13:09:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/djbdns-man-20020130.ebuild,v 1.7 2002/12/09 04:17:38 manson Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Man pages for djbdns"
@@ -9,7 +9,7 @@ HOMEPAGE="http://smarden.org/pape/djb/manpages/"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="sys-apps/tar sys-apps/gzip"
 RDEPEND="sys-apps/man"
