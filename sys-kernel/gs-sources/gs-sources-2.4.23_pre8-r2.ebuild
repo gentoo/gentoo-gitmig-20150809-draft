@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.23_pre8-r2.ebuild,v 1.1 2004/01/06 19:32:38 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.23_pre8-r2.ebuild,v 1.2 2004/01/06 23:59:52 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -20,8 +20,8 @@ ETYPE="sources"
 inherit kernel
 PROVIDE="virtual/linux-sources virtual/winkernel"
 OKV=2.4.22
-EXTRAVERSION=_pre8-gss
-KV=2.4.23_pre8-gss
+EXTRAVERSION=_pre8-gss-r2
+KV=2.4.23_pre8-gss-r2
 S=${WORKDIR}/linux-${KV}
 
 # Documentation on the patches contained in this kernel will be installed
