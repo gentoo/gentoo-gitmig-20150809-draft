@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/todo-manager-bronze/todo-manager-bronze-20020711.ebuild,v 1.2 2002/07/25 19:18:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/todo-manager-bronze/todo-manager-bronze-20020711.ebuild,v 1.3 2002/09/20 03:06:26 vapier Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="A task manager."
 SRC_URI="mirror://sourceforge/todo-manager/${P}.tar.gz"
-HOMEPAGE="todo-manager.sourceforge.net"
+HOMEPAGE="http://todo-manager.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
