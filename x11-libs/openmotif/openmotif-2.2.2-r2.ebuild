@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r2.ebuild,v 1.6 2003/09/08 02:43:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r2.ebuild,v 1.7 2003/11/13 13:24:25 lanius Exp $
 
 inherit libtool
 
@@ -114,7 +114,7 @@ src_compile() {
 		--with-gnu-ld \
 		--host=${CHOST} || die "configuration failed"
 
-	make || die "make failed"
+	make || die "make failed, if you have lesstif installed removed it, compile openmotif and recompile lesstif"
 }
 
 
