@@ -3,10 +3,10 @@ MD5 f3a6a89a4c30d44bcce0f76ac71b0256 vlc-0.4.4.ebuild 3851
 MD5 185be9f9dcdfa12776bd5295a1e23570 vlc-0.5.2.ebuild 3876
 MD5 6c597e964cfd0c0e082ffbcb64ef7b2d vlc-0.6.0.ebuild 5100
 MD5 f38f55232741d4faeb8946546ad42a39 vlc-0.5.2-r1.ebuild 4481
-MD5 c5a5268be3d56b1dc9c9a23fda67f52f vlc-0.6.2.ebuild 5999
+MD5 a5994af185866ec6d5c18275392a0958 vlc-0.6.2.ebuild 6104
 MD5 ecee6eaca98dfa911be0126c0c9fe3ec vlc-0.4.5.ebuild 3850
 MD5 9d740a9c8110a843c5f12f6685e17d4f vlc-0.6.1.ebuild 6167
-MD5 5c974e37d88a7c842981ef18f540d1ef ChangeLog 6540
+MD5 3f9c6fcc21888cdc4754aefaa3dce761 ChangeLog 6686
 MD5 6d7dd1d8477d38f85cc4d4ed59489b4f files/digest-vlc-0.5.2-r1 63
 MD5 5f5a12e2d124384eb5d129e60879202d files/digest-vlc-0.6.0-r1 63
 MD5 5cf5ab60ab2619db091501d7acc50284 files/mozplugin.patch 5995

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.1 2003/08/14 02:49:11 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.2 2003/08/16 01:56:10 g2boojum Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -68,6 +68,8 @@ if [ -n "`use kde`" -o -n "`use arts`" ]; then
     set-kdedir 3
     # $KDEDIR is now set to arts/kdelibs location
 fi
+
+inherit gcc
 
 src_unpack() {
 	unpack ${A}
@@ -190,6 +192,10 @@ src_compile(){
 	export WANT_AUTOMAKE_1_6=1
 
 	econf ${myconf} || die "configure of VLC failed"
+
+	if [ `gcc-major-version` -eq 2 ]; then
+		sed -i s:"-fomit-frame-pointer":: vlc-config
+	fi
 
 	MAKEOPTS="${MAKEOPTS} -j1"
         emake || die "make of VLC failed"
