@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-MDB
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB/ChangeLog,v 1.9 2004/08/03 17:06:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB/ChangeLog,v 1.10 2004/10/23 14:16:32 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> PEAR-MDB-1.2.ebuild:
+  Stable on sparc.
 
   03 Aug 2004; <agriffis@gentoo.org> PEAR-MDB-1.2.ebuild,
   PEAR-MDB-1.3.0.ebuild:
