@@ -1,4 +1,4 @@
-MD5 1327e8f8466bcc1119d7441704015826 ChangeLog 666
-MD5 ece160b8f0d5816e89421da069be8b81 xmmsctrl-1.6.ebuild 745
-MD5 8a895c8a1f15679dd525bd79ce8516f0 files/digest-xmmsctrl-1.6 62
+MD5 0d1c4e38ca7eedf26977f54c1a4d16d2 xmmsctrl-1.6.ebuild 777
+MD5 16640fe80237b01634233b42f27930f9 ChangeLog 801
 MD5 81df994f3cc643315bc3ce5f0b83e848 files/xmmsctrl-jump.patch 374
+MD5 8a895c8a1f15679dd525bd79ce8516f0 files/digest-xmmsctrl-1.6 62

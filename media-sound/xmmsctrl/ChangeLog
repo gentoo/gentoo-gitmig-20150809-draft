@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmmsctrl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/ChangeLog,v 1.3 2003/04/28 21:14:33 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/ChangeLog,v 1.4 2003/07/11 01:12:46 seemant Exp $
+
+  10 Jul 2003; Seemant Kulleen <seemant@gentoo.org> xmmsctrl-1.6.ebuild:
+  moved to stable on x86 and added other arches to testing
 
   28 Apr 2003; Lars Weiler <pylon@gentoo.org> xmmsctrl-1.6.ebuild:
   Works also on ppc, so keyworded ~ppc
