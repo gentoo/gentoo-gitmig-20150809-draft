@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.79 2004/02/15 17:03:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.80 2004/02/28 17:08:20 weeve Exp $
+
+  28 Feb 2004; Jason Wever <weeve@gentoo.org> arts-1.1.5.ebuild:
+  Marked stable on sparc.
 
   15 Feb 2004; Jason Wever <weeve@gentoo.org> arts-1.2.0.ebuild:
   Marked stable on sparc.
