@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/noia
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.5 2003/02/03 06:25:01 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.6 2003/02/09 08:30:28 satai Exp $
+
+  09 Feb 2003; Matthew Turk <satai@gentoo.org> :
+  Marked all as stable.
 
 *noia-030203 (03 Feb 03)
 

@@ -1,0 +1,9 @@
+# ChangeLog for x11-themes/noia
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia-warm/ChangeLog,v 1.1 2003/02/09 08:30:28 satai Exp $
+
+*noia-warm-090203 (09 Feb 03)
+
+  09 Feb 2003; Matthew Turk <satai@gentoo.org> :
+  Added noia-warm, an icon package derived from noia, but with more warm
+  colors.  Marked stable.
