@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.17 2004/08/19 17:58:13 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.18 2004/09/06 20:42:39 ciaranm Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -89,11 +89,8 @@ pkg_setup() {
 	einfo "or the environment, as the MPlayer guys then do not give support"
 	einfo "in case of bug reports!."
 	echo
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	sleep 3
+	ebeep 3
+	epause 5
 }
 
 src_unpack() {
