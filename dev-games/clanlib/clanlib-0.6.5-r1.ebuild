@@ -1,9 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r1.ebuild,v 1.4 2003/10/20 14:38:02 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r1.ebuild,v 1.5 2004/01/10 02:27:12 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
-replace-flags -O? -O2
 
 DESCRIPTION="multi-platform game development library"
 HOMEPAGE="http://www.clanlib.org/"
@@ -33,6 +32,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
+
+	replace-flags -O? -O2
+
 	use jpeg || myconf="${myconf} --enable-smalljpeg"
 	use alsa || use oss || use esd || use arts \
 		&& myconf="${myconf} --enable-clansound" \
@@ -56,17 +58,19 @@ src_compile() {
 		--enable-vidmode \
 		${myconf} || die
 
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
 	make install \
 		prefix=${D}/usr \
 		LIB_PREFIX=${D}/usr/lib/${P} \
-		|| die
+		|| die "make install failed"
 	mv ${D}/usr/include/{ClanLib,${P}}
-	dobin ${FILESDIR}/clanlib-config
-	dodoc BUGS CODING_STYLE HARDWARE NEWS PATCHES PORTING README* ROADMAP INSTALL.linux
+	dobin ${FILESDIR}/clanlib-config \
+		|| die "dobin failed"
+	dodoc BUGS CODING_STYLE HARDWARE NEWS PATCHES PORTING README* ROADMAP INSTALL.linux \
+		|| die "dodoc failed"
 }
 
 pkg_postinst() {
