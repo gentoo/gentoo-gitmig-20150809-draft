@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.99 2003/02/25 00:20:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.100 2003/02/25 00:43:02 seemant Exp $
 
 *xfree-4.2.99.902 (24 Feb 2003)
 
@@ -47,6 +47,9 @@
   and kdelibs.
 
 *xfree-4.2.99.4 (02 Feb 2003)
+
+  24 Feb 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.2.99.4.ebuild files/4.2.99.4-patches/4.2.99.4-enable-nv-on-ppc.patch :
+  moved nv-on-ppc patch to proper location
 
   23 Feb 2003; Aron Griffis <agriffis@gentoo.org> xfree-4.2.99.4.ebuild :
   Fix minor error in the ebuild where "die" could be called from within
