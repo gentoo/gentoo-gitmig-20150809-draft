@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r12.ebuild,v 1.1 2004/08/09 23:56:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r13.ebuild,v 1.1 2004/11/06 23:53:39 plasmaroo Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -32,12 +32,14 @@ if [ ${PRERC} ]; then
 	SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
 		mirror://kernel/linux/kernel/people/bero/2.4/${OURKERNEL}/patch-${KV/-}.bz2
 		mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2
-		http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch"
+		http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch
+		http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.patch"
 else
 	OURKERNEL="2.4.${OKVLAST}"
 	SRC_URI="mirror://kernel//linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
 		mirror://kernel/linux/kernel/people/bero/2.4/${OURKERNEL}/patch-${KV}.bz2
-		http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch"
+		http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch
+		http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.patch"
 fi
 
 
@@ -72,7 +74,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0685.patch || die "Failed to add the CAN-2004-0685 patch!"
+	epatch ${DISTDIR}/${P}-CAN-2004-0814.patch || die "Failed to add CAN-2004-0814 patch!"
 	epatch ${FILESDIR}/${PN}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	epatch ${FILESDIR}/${PN}.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
+	epatch ${FILESDIR}/${PN}.XDRWrapFix.patch || die "Failed to apply the kNFSd XDR patch!"
 	kernel_universal_unpack
 }
