@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.6 2002/06/21 12:37:25 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.7 2002/07/09 11:57:18 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a simple ntp client"
 SRC_URI="http://cr.yp.to/clockspeed/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/"
+KEYWORDS="x86"
+LICENSE="freeware"
+SLOT="0"
 
 DEPEND="virtual/glibc
 	sys-apps/groff"
