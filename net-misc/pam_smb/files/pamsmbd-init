@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pam_smb/files/pamsmbd-init,v 1.1 2002/11/02 07:35:23 woodchip Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting pamsmbd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/pamsmbd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping pamsmbd"
+	start-stop-daemon --stop --quiet --name pamsmbd
+	eend $?
+}
