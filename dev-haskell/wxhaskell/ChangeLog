@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/wxhaskell
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.1 2004/03/03 17:12:17 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.2 2004/03/03 22:21:39 kosmikus Exp $
+
+*wxhaskell-0.6-r1 (03 Mar 2004)
+
+  03 Mar 2004; Andres Loeh <kosmikus@gentoo.org> wxhaskell-0.6-r1.ebuild:
+  Fixed library placement bug.
 
 *wxhaskell-0.6 (03 Mar 2004)
 
