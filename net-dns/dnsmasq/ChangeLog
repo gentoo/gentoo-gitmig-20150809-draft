@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.23 2004/02/27 20:49:29 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.24 2004/03/09 19:39:54 avenj Exp $
+
+*dnsmasq-2.2-r1 (09 Mar 2004)
+
+  09 Mar 2004; Jon Portnoy <avenj@gentoo.org> dnsmasq-2.2-r1.ebuild,
+  files/dnsmasq-init :
+  init.d tweaks from Seemant (#43978) to make the DHCP daemon work
+  properly.
 
   27 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> dnsmasq-2.2.ebuild:
   Moving 2.x to stable on sparc, as 1.x is flaky on some boxes

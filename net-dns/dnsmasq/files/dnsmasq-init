@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/files/dnsmasq-init,v 1.4 2004/03/04 19:17:26 vapier Exp $
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/files/dnsmasq-init,v 1.5 2004/03/09 19:39:54 avenj Exp $
 
 depend() {
 	provide dns
@@ -10,8 +10,7 @@ depend() {
 
 start() {
 	ebegin "Starting dnsmasq"
-	start-stop-daemon --start --quiet --exec /usr/sbin/dnsmasq \
-		-- -x /var/run/dnsmasq.pid ${DNSMASQ_OPTS}
+	/usr/sbin/dnsmasq -x /var/run/dnsmasq.pid ${DNSMASQ_OPTS}
 	eend $?
 }
 
