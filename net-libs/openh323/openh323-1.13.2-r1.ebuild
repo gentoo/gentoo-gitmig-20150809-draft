@@ -1,26 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.5 2004/03/30 22:29:46 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.6 2004/04/06 03:12:17 vapier Exp $
 
-IUSE="ssl"
-
-inherit eutils
+inherit eutils flag-o-matic
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Open Source implementation of the ITU H.323 teleconferencing protocol"
 HOMEPAGE="http://www.openh323.org/"
 SRC_URI="http://www.gnomemeeting.org/admin/downloads/latest/sources/sources/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="MPL-1.1"
+SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+IUSE="ssl"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-libs/pwlib-1.6.3-r1
 	>=media-video/ffmpeg-0.4.7
 	ssl? ( dev-libs/openssl )"
-
-MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
 	# to prevent merge problems with broken makefiles from old
@@ -81,7 +78,7 @@ src_compile() {
 
 	use amd64 && append-flags -fPIC
 
-	emake ${makeopts} opt || die "make failed"
+	emake -j1 ${makeopts} opt || die "make failed"
 }
 
 src_install() {
