@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/libbonoboui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.5 2002/06/05 20:41:29 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.6 2002/07/23 21:29:07 gerk Exp $
 
 *libbonoboui-2.0.0 (05 Jun 2002)
+  23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
+
   05 Jun 2002; Spider <spider@gentoo.org> libbonoboui-2.0.0.ebuild :
   New, better than ever and eclassed ebuild.
 
