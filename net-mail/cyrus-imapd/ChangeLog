@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.63 2005/02/13 16:23:39 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.64 2005/02/17 22:06:55 langthang Exp $
+
+*cyrus-imapd-2.2.12 (17 Feb 2005)
+
+  17 Feb 2005; Tuấn Văn <langthang@gentoo.org>
+  +files/cyrus-imapd-2.2.12-drac.patch,
+  +files/cyrus-imapd-2.2.12-libwrap.patch, +cyrus-imapd-2.2.12.ebuild:
+  Version bump. Upstream ChangeLog URL:
+  http://asg.web.cmu.edu/cyrus/download/imapd/changes.html
 
 *cyrus-imapd-2.2.10-r1 (13 Feb 2005)
 
