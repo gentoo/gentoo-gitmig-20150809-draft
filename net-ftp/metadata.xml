@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The net-ftp contains FTP (File Transfer Protocol) software.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie net-ftp enthält Software für das File Transfer Protocol (FTP).
+	</longdescription>
 </catmetadata>
 
