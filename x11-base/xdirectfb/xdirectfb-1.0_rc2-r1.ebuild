@@ -21,6 +21,7 @@ SRC_URI="http://www.ibiblio.org/gentoo/gentoo-sources/${MY_V}-1.tar.bz2
 HOMEPAGE="http://www.directfb.org"
 LICENSE="X11"
 SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r6.ebuild,v 1.1 2001/12/19 03:53:59 kabau Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r6.ebuild,v 1.2 2002/07/09 11:46:53 aliz Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -19,6 +19,9 @@ SRC_URI="$SRC_PATH0/X${MY_V}src-1.tgz
        	 http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz"
 
 HOMEPAGE="http://www.xfree.org"
+LICENSE="X11"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=sys-libs/ncurses-5.1
         >=sys-libs/zlib-1.1.3-r2

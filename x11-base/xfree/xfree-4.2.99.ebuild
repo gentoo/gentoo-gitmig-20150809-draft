@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.ebuild,v 1.1 2002/06/19 21:24:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.ebuild,v 1.2 2002/07/09 11:46:53 aliz Exp $
 
 FT2_VER=2.0.9
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
@@ -35,6 +35,7 @@ SRC_URI="http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-1.tar.bz2
 HOMEPAGE="http://www.xfree.org"
 LICENSE="X11"
 SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/pam-0.75

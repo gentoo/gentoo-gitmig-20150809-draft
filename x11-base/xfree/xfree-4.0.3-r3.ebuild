@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r3.ebuild,v 1.8 2001/06/01 14:00:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r3.ebuild,v 1.9 2002/07/09 11:46:53 aliz Exp $
 
 A="X402src-1.tgz X402src-2.tgz X402src-3.tgz 4.0.2-4.0.3.diff.gz truetype.tar.gz"
 S=${WORKDIR}/xc
@@ -18,6 +18,9 @@ SRC_URI="$SRC_PATH0/X402src-1.tgz $SRC_PATH0/X402src-2.tgz $SRC_PATH0/X402src-3.
 
 HOMEPAGE="http://www.xfree.org
           http://www.linuxvideo.org/gatos/"
+LICENSE="X11"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
