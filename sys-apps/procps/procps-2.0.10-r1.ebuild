@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.10-r1.ebuild,v 1.3 2002/10/31 17:40:41 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.10-r1.ebuild,v 1.4 2002/10/31 17:48:16 bcowan Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
@@ -68,7 +68,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "NOTE: By default "ps" and "top" no longer"
+	einfo "NOTE: By default \"ps\" and \"top\" no longer"
 	einfo "show threads. You can use the '-m' flag"
 	einfo "in ps or the 'H' key in top to show them"
 }	
