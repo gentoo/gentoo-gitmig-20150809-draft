@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r8.ebuild,v 1.10 2004/06/24 22:34:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r8.ebuild,v 1.11 2005/01/09 11:13:57 swegener Exp $
 
 IUSE="ipv6 static"
 

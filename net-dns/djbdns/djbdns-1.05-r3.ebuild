@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.17 2004/07/14 23:22:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.18 2005/01/09 11:13:57 swegener Exp $
 
 DESCRIPTION="Excellent high-performance DNS services"
 SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
-	ipv6? http://www.fefe.de/dns/djbdns-1.05-test17.diff.bz2"
+	ipv6? ( http://www.fefe.de/dns/djbdns-1.05-test17.diff.bz2 )"
 HOMEPAGE="http://cr.yp.to/djbdns.html"
 LICENSE="as-is"
 KEYWORDS="x86 sparc "
