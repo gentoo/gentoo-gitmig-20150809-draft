@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.8 2004/02/15 01:43:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.9 2004/02/15 16:32:49 brad Exp $
+
+  15 Feb 2004; Brad Laue <brad@gentoo.org> files/firefox:
+  Switch the default new browser type to window, as this matches better with
+  firefox on other platforms. Tab mode is still available if placed in the
+  environment variable documented in /usr/bin/firebird.
 
   14 Feb 2004; Aron Griffis <agriffis@gentoo.org> files/firefox:
   Roll fix over from MozillaFirebird script for bug 41074
