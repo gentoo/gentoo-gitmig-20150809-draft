@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/atftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.1 2002/10/15 11:32:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.2 2002/10/29 14:13:31 aliz Exp $
+
+*atftp-0.6-r1 (29 Oct 2002)
+
+  29 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Updated ebuild with tcpd support. Ebuild contributed by Cory Visi <cory@visi.name> in #9797.
 
 *atftp-0.6 (16 Aug 2002)
 
