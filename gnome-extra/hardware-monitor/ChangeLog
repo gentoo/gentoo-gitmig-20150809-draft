@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/hardware-monitor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.8 2004/11/04 10:14:33 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.9 2004/12/21 13:16:31 joem Exp $
+
+*hardware-monitor-1.2 (21 Dec 2004)
+
+  21 Dec 2004; Joe McCann <joem@gentoo.org> +hardware-monitor-1.2.ebuild:
+  New version, updated to use 2.6 mm packages and intltool. Closes bug 74350
 
   05 Nov 2004; Mike Gardiner <obz@gentoo.org>
   +files/hardware-monitor-0.7-emptyconstructors.patch,
