@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r1.ebuild,v 1.4 2004/08/24 03:36:18 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r1.ebuild,v 1.5 2004/09/04 13:00:17 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -14,7 +14,7 @@ IUSE="doc jython rhino"
 # karltk: Is this really an RDEPEND, or just a CDEPEND?
 RDEPEND="=www-servers/tomcat-5*"
 DEPEND="${REPEND}
-	jython? ( >=dev-java/jython-2.1 )
+	jython? ( >=dev-java/jython-2.1-r5 )
 	rhino? ( >=dev-java/rhino-1.4 )
 	>=dev-java/ant-1.5.4"
 
