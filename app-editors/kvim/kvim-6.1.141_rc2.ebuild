@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141_rc2.ebuild,v 1.3 2002/10/05 05:39:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141_rc2.ebuild,v 1.4 2002/10/12 13:12:16 hannes Exp $
 
 IUSE="python gpm nls ruby perl"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.freehackers.org/${PN}/dl/${P//_}.tar.bz2"
 HOMEPAGE="http://www.freehackers.org/${PN}"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
-newdepend "=app-editors/vim-core-6.1
+newdepend ">=app-editors/vim-core-6.1
     dev-util/cscope
 	>=sys-libs/ncurses-5.2-r2
     gpm?    ( >=sys-libs/gpm-1.19.3 )

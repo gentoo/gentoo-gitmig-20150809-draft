@@ -1,7 +1,10 @@
 # ChangeLog for app-editors/kvim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.4 2002/10/12 09:40:47 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.5 2002/10/12 13:12:16 hannes Exp $
 
+  12 Oct 2002; Hannes Mehnert <hannes@gentoo.org> kvim-6.1.141_rc2.ebuild:
+  fixed dependency
+  
   12 Oct 2002; Hannes Mehnert <hannes@gentoo.org> kvim-6.1.141.ebuild:
   fixed dependency (bug #8981), thanks to alextxm@tin.it
 
