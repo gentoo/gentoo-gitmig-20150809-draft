@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.16 2002/12/16 21:17:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.17 2003/01/16 04:50:23 bcowan Exp $
+
+*distcc-1.0 (15 Jan 2003)
+
+  15 Jan 2003; Brad Cowan <bcowan@gentoo.org> distcc-1.0.ebuild,
+  files/digest-distcc-1.0:
+  
+  Bumped version. Added new init script thanks to Eric Andreson (Ndiin).
 
   16 Dec 2002; Aron Griffis <agriffis@gentoo.org> distcc-0.15.ebuild:
   Added ~alpha to KEYWORDS
