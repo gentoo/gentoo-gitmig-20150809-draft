@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.78 2004/11/02 06:03:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.79 2004/11/02 11:23:21 gustavoz Exp $
+
+  02 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> shadow-4.0.5.ebuild:
+  Stable on sparc wrt #69212
 
   02 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> shadow-4.0.5.ebuild:
   Stable on alpha, bug 69212.
