@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 74ccdb4763faa5dbeb48ccc25aab0e5a minibufexpl-6.3.1-r1.ebuild 907
-MD5 4b847e5f4a84c33a5ae2bc35cce89322 minibufexpl-6.2.6.ebuild 440
-MD5 813c553d6c064ead06d5628618dd9937 ChangeLog 1516
+MD5 c7f1fc0a3e2b258b846a0aee770f9de5 ChangeLog 1628
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 4b847e5f4a84c33a5ae2bc35cce89322 minibufexpl-6.2.6.ebuild 440
 MD5 2e598b8749063f7727180020458d5e24 minibufexpl-6.3.1.ebuild 445
-MD5 32c61863835ac319af932bbe475680cb files/digest-minibufexpl-6.3.1-r1 69
+MD5 763a23b0fe470b204ed4b18ab5256a66 minibufexpl-6.3.1-r1.ebuild 908
 MD5 c91c0f5625dd939dc121c5a068c0fa74 files/digest-minibufexpl-6.2.6 69
 MD5 32c61863835ac319af932bbe475680cb files/digest-minibufexpl-6.3.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBPOk3LLFUmVNQ7rkRArP6AJ0eHYznStITIO2oGub0zIN8JmUuugCfTG+S
-w6m4e7CaUmnbjmg5dFx6xaE=
-=esyX
------END PGP SIGNATURE-----
+MD5 32c61863835ac319af932bbe475680cb files/digest-minibufexpl-6.3.1-r1 69

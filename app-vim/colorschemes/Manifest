@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 8dab07e0abc55352b54db46af90d4438 ChangeLog 1477
 MD5 f12f85ba771bee6f05a25eaf91be83c8 colorschemes-20031113.ebuild 450
-MD5 363e99739154f2bd8c7595b499096ba4 ChangeLog 1364
-MD5 f3f5940cbc7a8e7caf3366418d2a5a6a colorschemes-20040821.ebuild 773
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 36fa16520b961e2db213c567f1d80d17 files/digest-colorschemes-20040821 73
+MD5 66c1c2f02a5d1e511c6ca80cba877954 colorschemes-20040821.ebuild 774
 MD5 d1e57af8c6fca0096d9d2aead6987488 files/digest-colorschemes-20031113 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBPOgnLLFUmVNQ7rkRAvatAKCm0Y5U0R+45crIMnghx3+H60kbRwCgmtb/
-nLx3kPrhrJ5OtRAalttezi8=
-=cqy2
------END PGP SIGNATURE-----
+MD5 36fa16520b961e2db213c567f1d80d17 files/digest-colorschemes-20040821 73
