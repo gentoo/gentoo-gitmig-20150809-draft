@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/annotations
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/annotations/ChangeLog,v 1.3 2004/10/14 20:43:12 radek Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/annotations/ChangeLog,v 1.4 2005/02/21 21:29:05 blubb Exp $
+
+  21 Feb 2005; Simon Stelling <blubb@gentoo.org> annotations-0.4.3.ebuild:
+  added ~amd64
 
 *annotations-0.4.3 (14 Oct 2004)
 

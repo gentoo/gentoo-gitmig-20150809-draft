@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/silvadocument
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/silvadocument/ChangeLog,v 1.2 2004/10/14 20:25:30 radek Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/silvadocument/ChangeLog,v 1.3 2005/02/21 21:33:56 blubb Exp $
+
+  21 Feb 2005; Simon Stelling <blubb@gentoo.org> silvadocument-1.1.ebuild:
+  added ~amd64
 
 *silvadocument-1.1 (14 Oct 2004)
 

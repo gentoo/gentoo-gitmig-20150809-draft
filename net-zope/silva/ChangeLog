@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/silva
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/silva/ChangeLog,v 1.8 2004/10/14 20:45:24 radek Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/silva/ChangeLog,v 1.9 2005/02/21 21:37:23 blubb Exp $
+
+  21 Feb 2005; Simon Stelling <blubb@gentoo.org> silva-1.1-r1.ebuild:
+  added ~amd64
 
 *silva-1.1-r1 (14 Oct 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/xmlwidgets
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/xmlwidgets/ChangeLog,v 1.8 2004/10/14 20:22:06 radek Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/xmlwidgets/ChangeLog,v 1.9 2005/02/21 21:35:52 blubb Exp $
+
+  21 Feb 2005; Simon Stelling <blubb@gentoo.org> xmlwidgets-0.10.3.ebuild:
+  added ~amd64
 
   14 Oct 2004; Radoslaw Stachowiak <radek@gentoo.org>
   xmlwidgets-0.10.3.ebuild:

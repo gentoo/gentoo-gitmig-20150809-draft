@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/formulator
-# Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/formulator/ChangeLog,v 1.11 2004/09/24 20:00:46 batlogg Exp $
+# Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/formulator/ChangeLog,v 1.12 2005/02/21 21:31:22 blubb Exp $
+
+  21 Feb 2005; Simon Stelling <blubb@gentoo.org> formulator-1.6.2.ebuild:
+  added ~amd64
 
   24 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>; formulator-1.6.2.ebuild:
   marking stable
