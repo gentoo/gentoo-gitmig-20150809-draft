@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.3-r2.ebuild,v 1.1 2004/02/12 05:46:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.3-r2.ebuild,v 1.2 2004/03/26 22:23:30 eradicator Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
 
 DESCRIPTION="simple utility to control XMMS externally"
 SRC_URI="mirror://sourceforge/xmms-shell/${P}.tar.gz"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.loganh.com/xmms-shell/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="readline"
 
 RDEPEND=">=media-sound/xmms-1.2.7
