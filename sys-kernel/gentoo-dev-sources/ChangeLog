@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.77 2004/07/28 02:54:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.78 2004/08/07 00:10:29 gregkh Exp $
+
+*gentoo-dev-sources-2.6.7-r12 (06 Aug 2004)
+
+  06 Aug 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +gentoo-dev-sources-2.6.7-r12.ebuild:
+  2 kernel security issues fixed: 59378 and 57826
 
   27 Jul 2004; <agriffis@gentoo.org> gentoo-dev-sources-2.6.7-r11.ebuild:
   Add ia64 keyword
