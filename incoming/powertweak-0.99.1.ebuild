@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/app-admin/powerteak/powertweak-0.99.1.ebuild
-# $Header: /var/cvsroot/gentoo-x86/incoming/powertweak-0.99.1.ebuild,v 1.5 2001/10/06 14:36:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/incoming/powertweak-0.99.1.ebuild,v 1.6 2001/10/06 17:22:51 azarah Exp $
 
 
 A=${P}.tar.bz2
@@ -16,7 +16,7 @@ DEPEND=">=x11-libs/gtk+-1.2.10-r4
 
 src_compile() {
 # fix minor bug in textmode/Makefile.am with no -L<path> to libxml.so
-  sed -e "s:GPML = -lgpm:GPML = -L/opt/gnome/lib -lgpm:" < src/textmode/Makefile.am > src/textmode/Makefile.am_fix
+  sed -e "s:GPML = -lgpm:GPML = -L/usr/lib -lgpm:" < src/textmode/Makefile.am > src/textmode/Makefile.am_fix
   mv src/textmode/Makefile.am_fix src/textmode/Makefile.am
   ./autogen.sh
 

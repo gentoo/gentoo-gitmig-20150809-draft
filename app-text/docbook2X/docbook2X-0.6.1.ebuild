@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.4 2001/05/30 18:24:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.5 2001/10/06 17:22:51 azarah Exp $
 
 #P=
 A=${P}.tar.gz
@@ -13,7 +13,7 @@ HOMEPAGE="http://docbook2x.sourceforge.net"
 RDEPEND=">=dev-perl/XML-Writer-0.4
         >=dev-perl/XML-XSLT-0.31
 	>=dev-perl/SGMLSpm-1.03"
-	#>=gnome-libs/libxslt-0.5.0"
+	#>=dev-libs/libxslt-0.5.0"
 
 src_install () {
 

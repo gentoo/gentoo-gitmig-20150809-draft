@@ -1,15 +1,22 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4.ebuild,v 1.6 2001/08/11 03:50:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4-r1.ebuild,v 1.1 2001/10/06 17:22:51 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="This output plugin allows xmms to work with arts, KDE's sound system"
 SRC_URI="http://home.earthlink.net/~bheath/xmms-arts/xmmsarts-0.4.tar.gz"
 HOMEPAGE="http://home.earthlink.net/~bheath/xmms-arts/"
 
-DEPEND="virtual/glibc >=media-sound/xmms-1.2.3 >=kde-base/kdelibs-2.1.1 sys-devel/autoconf"
-RDEPEND="virtual/glibc >=media-sound/xmms-1.2.3 >=kde-base/kdelibs-2.1.1"
+DEPEND="virtual/glibc
+	>=media-sound/xmms-1.2.5-r1
+	>=kde-base/kdelibs-2.1.1
+	sys-devel/autoconf"
+	
+RDEPEND="virtual/glibc
+	 >=media-sound/xmms-1.2.5-r1
+	 >=kde-base/kdelibs-2.1.1"
+	 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -19,14 +26,7 @@ src_unpack() {
 }
 
 src_compile() {     
-	local myconf
-	if [ "`use gnome`" ]
-	then
-	  myconf="--prefix=/opt/gnome"
-	else
-	  myconf="--prefix=/usr/X11R6"
-	fi
-	try CFLAGS="$CFLAGS -I/usr/X11R6/include -I/opt/gnome/include" ./configure $myconf --host=${CHOST}
+	try CFLAGS="$CFLAGS -I/usr/X11R6/include -I/usr/include" ./configure --prefix=/usr --host=${CHOST}
 	try make
 }
 

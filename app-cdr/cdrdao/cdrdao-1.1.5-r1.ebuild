@@ -1,7 +1,7 @@
 # Copyright 2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Peter Kadau <peter.kadau@web.de>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5.ebuild,v 1.1 2001/08/23 13:38:21 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.1 2001/10/06 17:22:51 azarah Exp $
 
 A=${P}.src.tar.gz
 S=${WORKDIR}/cdrdao-1.1.5
@@ -13,9 +13,9 @@ DEPEND=">=dev-util/pccts-1.33.24-r1"
 
 if [ "`use gnome`" ]
 then 
-	RDEPEND=">=gnome-base/gnome-libs-1.2.3
-         >=x11-libs/gtkmm-1.2.5
-         >=gnome-libs/gnomemm-1.1.17"
+	RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
+         >=x11-libs/gtkmm-1.2.5-r1
+         >=gnome-extra/gnomemm-1.1.17"
 else
 	RDEPEND=""
 fi
@@ -64,10 +64,10 @@ src_install() {
 	then
 
 		# binary
-		into /opt/gnome
+		into /usr
         	dobin xdao/gcdmaster
-		# pixmaps for gcdmaster in /opt/gnome/share/pixmaps/gcdmaster
-		insinto /opt/gnome/share/pixmaps/gcdmaster
+		# pixmaps for gcdmaster in /usr/share/pixmaps/gcdmaster
+		insinto /usr/share/pixmaps/gcdmaster
 		doins xdao/pixmap_copycd.png 
 		doins xdao/pixmap_audiocd.png
 		doins xdao/pixmap_datacd.png
@@ -78,11 +78,11 @@ src_install() {
 		doins xdao/pixmap_dumpcd.png
 		doins xdao/gcdmaster.png
 		# application links
-		# gcdmaster.desktop in /opt/gnome/share/gnome/apps/Applications
-		insinto /opt/gnome/share/gnome/apps/Applications
+		# gcdmaster.desktop in /usr/share/gnome/apps/Applications
+		insinto /usr/share/gnome/apps/Applications
 		doins xdao/gcdmaster.desktop
-		# xcdrdao.1 renamed to gcdmaster.1 in /opt/gnome/share/man/man1/
-		into /opt/gnome
+		# xcdrdao.1 renamed to gcdmaster.1 in /usr/share/man/man1/
+		into /usr
 		newman xdao/xcdrdao.man gcdmaster.1
 	fi
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/gphoto-0.4.3.ebuild,v 1.11 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/gphoto-0.4.3-r1.ebuild,v 1.1 2001/10/06 17:22:51 azarah Exp $
 
 
 A=${P}.tar.gz
@@ -11,7 +11,7 @@ SRC_URI="http://www.gphoto.net/dist/${A}"
 HOMEPAGE="http://www.gphoto.org"
 
 DEPEND="virtual/glibc
-	>=media-libs/imlib-1.8
+	>=media-libs/imlib-1.9.10-r1
 	>=media-gfx/imagemagick-4.1"
 	
 
@@ -19,13 +19,13 @@ src_compile() {
 
    # -pipe does no work
    CFLAGS="${CFLAGS/-pipe}"
-   try ./configure --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome
+   try ./configure --prefix=/usr --sysconfdir=/etc/gnome
    try make clean
    try pmake
 }
 
 src_install() {
-    try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome  install
+    try make prefix=${D}/usr sysconfdir=${D}/etc/gnome  install
     dodoc AUTHORS CONTACTS COPYING ChangeLog FAQ MANUAL NEWS* PROGRAMMERS \
 	 README THANKS THEMES TODO
 }

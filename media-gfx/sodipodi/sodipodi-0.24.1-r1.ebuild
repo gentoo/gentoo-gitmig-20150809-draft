@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.24.1.ebuild,v 1.1 2001/10/05 08:15:53 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.24.1-r1.ebuild,v 1.1 2001/10/06 17:22:51 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,9 +9,9 @@ DESCRIPTION="Vector illustrating application for GNOME"
 SRC_URI="http://prdownloads.sourceforge.net/${PN}/${A}"
 HOMEPAGE="http://sodipodi.sourceforge.net/"
 
-RDEPEND=">=gnome-base/gnome-print-0.21 
-         >=gnome-base/gal-0.4
-	 bonobo? ( >=gnome-base/bonobo-0.37 )"
+RDEPEND=">=gnome-base/gnome-print-0.30 
+         >=gnome-extra/gal-0.13-r1
+	 bonobo? ( >=gnome-base/bonobo-1.0.9-r1 )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
@@ -29,8 +29,8 @@ src_compile() {
 		myconf="$myconf --disable-nls"
 	fi
 
-	./configure --host=${CHOST} --prefix=/opt/gnome 		\
-	            --sysconfdir=/etc/opt/gnome 			\
+	./configure --host=${CHOST} --prefix=/usr 		\
+	            --sysconfdir=/etc/gnome 			\
 		    --enable-gnome --enable-gnome-print ${myconf} || die
 
 	emake || die

@@ -1,13 +1,13 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.19 2001/09/26 18:59:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.20 2001/10/06 17:22:51 azarah Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
 SRC_URI="http://www.red-bean.com/cvs2cl/cvs2cl.pl"
 HOMEPAGE="http://www.gentoo.org"
-RDEPEND="sys-devel/python gnome-libs/libxslt"
+RDEPEND="sys-devel/python dev-libs/libxslt"
 
 src_unpack() {
 	if [ "$MAINTAINER" != "yes" ]
