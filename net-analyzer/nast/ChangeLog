@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nast
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.2 2004/06/24 22:09:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.3 2004/07/10 11:58:49 eldad Exp $
+
+  10 Jul 2004; Eldad Zack <eldad@gentoo.org> nast-0.2.0.ebuild:
+  marked x86 stable
 
 *nast-0.2.0 (18 May 2004)
 
