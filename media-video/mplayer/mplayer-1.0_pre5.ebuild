@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5.ebuild,v 1.2 2004/07/15 02:39:24 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5.ebuild,v 1.3 2004/07/15 02:49:56 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -105,9 +105,6 @@ src_unpack() {
 	use gtk && unpack Blue-${BLUV}.tar.bz2
 
 	cd ${S}
-
-	# Fixes compile error with demux_mkv_old.cpp
-	epatch ${FILESDIR}/noenca.patch
 
 	# Fix head/tail call for new coreutils
 	epatch ${FILESDIR}/${PN}-0.90-coreutils-fixup.patch
