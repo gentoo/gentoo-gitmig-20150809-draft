@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<!-- $Id: gentoo-howto.xml,v 1.14 2001/05/23 01:27:41 drobbins Exp $ -->
+<!-- $Id: gentoo-howto.xml,v 1.15 2001/06/13 20:45:26 grant Exp $ -->
 
 <guide link="/doc/gentoo-howto.html">
 <title>Gentoo Linux Developers HOWTO</title>
@@ -64,9 +64,11 @@ yourself should be compressed.
 <tr><ti><path>app-admin</path></ti><ti>non-critical system administration utilities</ti></tr>
 <tr><ti><path>app-arch</path></ti><ti>non-critical archival/compression utilities </ti></tr>
 <tr><ti><path>app-cdr</path></ti><ti> CD recording utilities </ti></tr>
+<tr><ti><path>app-crypt</path></ti><ti> Cryptography related apps </ti></tr>
 <tr><ti><path>app-doc</path></ti><ti>application documentation </ti></tr>
 <tr><ti><path>app-editors</path></ti><ti>non-critical text editors </ti></tr>
 <tr><ti><path>app-emulation</path></ti><ti>packages for emulating other systems/OSes </ti></tr>
+<tr><ti><path>app-games</path></ti><ti>Games!!! 'Nough said </ti></tr>
 <tr><ti><path>app-misc</path></ti><ti>applications that don't fit anywhere else </ti></tr>
 <tr><ti><path>app-office</path></ti><ti>office-type (word processing, spreadsheet, etc.) packages </ti></tr>
 <tr><ti><path>app-shells</path></ti><ti>non-critical shells and command interpreters </ti></tr>
@@ -78,6 +80,7 @@ yourself should be compressed.
 <tr><ti><path>dev-perl</path></ti><ti>perl modules </ti></tr>
 <tr><ti><path>dev-python</path></ti><ti>python modules </ti></tr>
 <tr><ti><path>dev-ruby</path></ti><ti>ruby modules </ti></tr>
+<tr><ti><path>dev-tcltk</path></ti><ti>Tcl-Tk modules </ti></tr>
 <tr><ti><path>dev-util</path></ti><ti>various developers utilities </ti></tr>
 <tr><ti><path>gnome-apps</path></ti><ti>applications for GNOME </ti></tr>
 <tr><ti><path>gnome-base</path></ti><ti>base GNOME packages </ti></tr>
@@ -94,11 +97,13 @@ yourself should be compressed.
 <tr><ti><path>net-dialup</path></ti><ti>network dialup clients and servers such as pppd </ti></tr>
 <tr><ti><path>net-fs</path></ti><ti>network filesystems </ti></tr>
 <tr><ti><path>net-ftp</path></ti><ti>ftp servers and clients </ti></tr>
+<tr><ti><path>net-im</path></ti><ti>Instant Messaging servers and clients </ti></tr>
 <tr><ti><path>net-irc</path></ti><ti>irc servers and clients </ti></tr>
 <tr><ti><path>net-libs</path></ti><ti>networking-related libraries </ti></tr>
 <tr><ti><path>net-mail</path></ti><ti>MTAs and MUAs </ti></tr>
 <tr><ti><path>net-misc</path></ti><ti>miscellaneous servers, clients, firewalls, etc. </ti></tr>
 <tr><ti><path>net-nds</path></ti><ti>NIS/NIS+ and other network directory services </ti></tr>
+<tr><ti><path>net-news</path></ti><ti>Usenet servers and clients </ti></tr>
 <tr><ti><path>net-print</path></ti><ti>print servers and clients </ti></tr>
 <tr><ti><path>net-www</path></ti><ti>http/www servers and clients </ti></tr>
 <tr><ti><path>sys-apps</path></ti><ti>system-critical applications and utilities </ti></tr>
@@ -110,6 +115,10 @@ yourself should be compressed.
 <tr><ti><path>x11-terms</path></ti><ti>X-based terminal emulators </ti></tr>
 <tr><ti><path>x11-wm</path></ti><ti>X window managers </ti></tr>
 </table>
+<note>If a new category is created (please get permission first!), 
+then the category needs to be added to 
+<path>/usr/lib/python2.0/portage.py</path>.
+</note>
 </body>
 </section>
 
