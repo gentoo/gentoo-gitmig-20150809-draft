@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.103 2003/12/24 19:28:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.104 2003/12/24 21:09:51 caleb Exp $
+
+  24 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdelibs-3.1.4.ebuild,
+  kdelibs-3.2.0_beta2.ebuild:
+  Make alsa dependency < version 1.0.0 as kdelibs doesn't support it yet
 
   24 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdelibs-3.2.0_beta2.ebuild:
   minor cleanups

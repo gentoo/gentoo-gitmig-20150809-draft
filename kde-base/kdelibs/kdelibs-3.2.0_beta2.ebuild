@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.5 2003/12/24 19:28:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.6 2003/12/24 21:09:51 caleb Exp $
 inherit kde
 
 MY_PV=3.1.94
 S=${WORKDIR}/${PN}-${MY_PV}
 
-IUSE="alsa cups ipv6 ssl doc"
+IUSE="alsa cups ipv6 ssl doc ldap"
 DESCRIPTION="KDE libraries needed by all kde programs"
 KEYWORDS="~x86"
 HOMEPAGE="http//www.kde.org/"
@@ -23,6 +23,7 @@ DEPEND="dev-lang/perl
 	dev-libs/libxml2
 	ssl? ( dev-libs/openssl )
 	cups? ( net-print/cups )
+	ldap? ( net-nds/openldap )
 	media-libs/tiff
 	app-admin/fam
 	virtual/ghostscript
