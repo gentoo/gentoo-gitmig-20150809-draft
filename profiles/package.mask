@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3400 2004/12/19 01:39:19 trapni Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3401 2004/12/19 02:18:45 spyderous Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <spyderous@gentoo.org> (18 Dec 2004)
+# Development release series
+=x11-base/xorg-x11-6.8.1.9*
 
 # <trapni@gentoo.org> (18 Dec 2004)
 # Contains a security vulnerability. See #74272.
