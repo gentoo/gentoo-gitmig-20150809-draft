@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/iconvcodec
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.1 2003/06/27 23:49:04 liquidx Exp $
+
+*iconvcodec-1.1.1 (28 Jun 2003)
+
+  28 Jun 2003; Alastair Tse <liquidx@gentoo.org> iconvcodec-1.1.1.ebuild:
+  iconv codecs for python
+
