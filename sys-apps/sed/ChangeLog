@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.2 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.3 2002/08/23 11:14:10 seemant Exp $
+
+*sed-3.02.80-r3.ebuild (23 Aug 2002)
+
+  23 Aug 2002; Seemant Kulleen <seemant@gentoo.org> sed-3.02.80-r3.ebuild :
+
+  Forced upgrade, so that people who got clobbered by supersed, will now
+  install this again.
 
 *sed-3.02.80-r2.ebuild (14 July 2002)
 
