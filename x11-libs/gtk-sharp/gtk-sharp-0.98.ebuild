@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.98.ebuild,v 1.2 2004/06/24 22:03:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.98.ebuild,v 1.3 2004/08/21 17:18:15 spider Exp $
 
 inherit eutils mono
 
@@ -16,7 +16,7 @@ RDEPEND=">=sys-apps/sed-4.0
 	>=dev-dotnet/mono-0.96
 	>=x11-libs/gtk+-2.2
 	>=gnome-base/libglade-2
-	>=gnome-base/ORBit2-2.8.3
+	>=gnome-base/orbit-2.8.3
 	gnome? ( >=gnome-base/libgnomecanvas-2.2
 		>=gnome-base/libgnomeui-2.2
 		>=gnome-base/libgnomeprintui-2.2 )
