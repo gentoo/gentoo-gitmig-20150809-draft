@@ -477,10 +477,6 @@ app-emulation/winex-cvs
 # but with new portage "update" feature ....
 net-misc/nt
 
-# <cselkirk@gentoo.org> (31 Aug 2002)
-# masked for testing
-=net-libs/libpcap-0.7.1-r1
-
 # <prez@gentoo.org> (29 Aug 2002)
 # Does not build successfully in an ebuild (but builds just fine outside of one)
 # Needs more investigation as to why.
