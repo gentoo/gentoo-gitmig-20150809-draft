@@ -582,7 +582,7 @@ def revverify(myrev):
 # valid string in format: <v1>.<v2>...<vx>[a-z,_{endversion}[vy]]
 # ververify doesn't do package rev.
 
-def ververify(myorigval,silent=1):
+def ververify(myorigval,silent=1):	
 	if len(myorigval)==0:
 		if not silent:
 			print "!!! Name error: package contains empty \"-\" part."
@@ -592,74 +592,64 @@ def ververify(myorigval,silent=1):
 		if not silent:
 			print "!!! Name error: empty version string."
 		return 0
-	for x in myval[1:]:
-		x="."+x
+	#all but the last version must be a numeric
 	for x in myval[:-1]:
+		if not len(x):
+			if not silent:
+				print "!!! Name error in",myorigval+": two decimal points in a row"
+			return 0
 		try:
-			foo=string.atof(x)
+			foo=string.atoi(x)
 		except:
 			if not silent:
 				print "!!! Name error in",myorigval+": \""+x+"\" is not a valid version component."
 			return 0
+	if not len(myval[-1]):
+			if not silent:
+				print "!!! Name error in",myorigval+": two decimal points in a row"
+			return 0
 	try:
-		string.atof(myval[-1])
+		foo=string.atoi(myval[-1])
 		return 1
 	except:
-		if len(myval)==1:
-			#fail, our only version part did not pass
-			if not silent:
-				print "!!!",myval[0],"is not a valid version part."
-			return 0
 		pass
-	if len(myval[-1])==0:
-		if not silent:
-			print "!!! Name error in",myorigval+": empty \"-\" part."
-		return 0
-	if myval[-1][-1] in "abcdefghijklmnopqrstuvwxyz":
+	#ok, our last component is not a plain number or blank, let's continue
+	if myval[-1][-1] in string.lowercase:
 		try:
-			string.atof(myval[-1][:-1])
-			# if we got here, it's something like .02a
+			foo=string.atoi(myval[-1][:-1])
 			return 1
+			# 1a, 2.0b, etc.
 		except:
 			pass
-	splits=string.split(myval[-1],"_")
-	if len(splits)!=2:
-		#not a valid endversion, so fail
+	#ok, maybe we have a 1_alpha or 1_beta2; let's see
+	#ep="endpart"
+	ep=string.split(myval[-1],"_")
+	if len(ep)!=2:
 		if not silent:
-			print "!!! Name error in",myorigval+": Too many or too few \"_\" characters."
+			print "!!! Name error in",myorigval
 		return 0
 	try:
-		string.atof(splits[0])
+		foo=string.atoi(ep[0])
 	except:
-		#something like .asldfkj_alpha1 which is invalid :)
+		#this needs to be numeric, i.e. the "1" in "1_alpha"
 		if not silent:
-			print "!!! Name error in",myorigval+":",splits[0],"is not a valid integer."
+			print "!!! Name error in",myorigval+": characters before _ must be numeric"
 		return 0
-	ok=0
-	for x in endversion.keys():
-		if splits[1][0:len(x)]==x:
-			firpart=x
-			secpart=splits[1][len(x):]
-			ok=1
-	if not ok:
-		if not silent:
-			print "!!! Name error in",myorigval+": Did not find an",endversion.keys(),"after trailing _."
-		return 0
-	if len(secpart)==0:
-		if firpart=="p":
-			if not silent:
-				print "!!! Name error in",myorigval+": _p (patchlevel) requires a trailing integer."
-			return 0
-		else:
-			return 1
-	try:
-		string.atoi(secpart)
-		return 1
-		#the int after the endversion component was OK 
-	except:
-		if not silent:
-			print "!!! Name error in",myorigval+":",secpart,"is not a valid integer."
-		return 0
+	for mye in endversion.keys():
+		if ep[1][0:len(mye)]==mye:
+			if len(mye)==len(ep[1]):
+				#no trailing numeric; ok
+				return 1
+			else:
+				try:
+					foo=string.atoi(ep[1][len(mye):])
+					return 1
+				except:
+					#if no endversions work, *then* we return 0
+					pass	
+	if not silent:
+		print "!!! Name error in",myorigval
+	return 0
 
 def isjustname(mypkg):
 	myparts=string.split(mypkg,'-')
