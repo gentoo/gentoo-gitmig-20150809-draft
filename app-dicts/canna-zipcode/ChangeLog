@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/canna-zipcode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-zipcode/ChangeLog,v 1.7 2004/09/01 16:40:48 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-zipcode/ChangeLog,v 1.8 2004/10/09 18:55:17 usata Exp $
+
+  10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  canna-zipcode-20040803.ebuild:
+  Stable on x86, alpha and ppc.
 
   01 Sep 2004; Tom Gall <tgall@gentoo.org> canna-zipcode-20040803.ebuild:
   stable on ppc64, bug #61776
