@@ -1,0 +1,37 @@
+--- test/Makefile.mps	2003-10-18 11:20:27.000000000 +0100
++++ test/Makefile	2004-02-02 13:55:45.000000000 +0100
+@@ -22,19 +22,19 @@
+ .EXPORT_ALL_VARIABLES:
+ 
+ 
+-ALL_SUBDIRS = args assert ctype dlopen pwd_grp signal silly stdlib string unistd crypt #misc
++ALL_SUBDIRS = args assert ctype pwd_grp signal silly stdlib string unistd crypt #misc
+ DIRS = $(ALL_SUBDIRS)
+ #ifeq ($(TARGET_ARCH), $(HOST_ARCH))
+ #	DIRS = $(ALL_SUBDIRS)
+ #else
+ #	DIRS =
+ #endif
+-ifeq ($(strip $(HAVE_SHARED)),true)
+-  ifeq ($(strip $(DODYNAMIC)),true)
++ifeq ($(HAVE_SHARED),y)
++  ifeq ($(BUILD_UCLIBC_LDSO),y)
+ 	DIRS += dlopen
+   endif	
+ endif	
+-ifeq ($(strip $(INCLUDE_THREADS)),true)
++ifeq ($(UCLIBC_HAS_THREADS),y)
+     DIRS += pthread
+ endif	
+ 
+--- test/Rules.mak.mps	2004-01-03 00:10:37.000000000 +0100
++++ test/Rules.mak	2004-02-02 13:54:59.000000000 +0100
+@@ -44,7 +44,7 @@
+ CROSS=
+ CC= $(CROSS)gcc
+ STRIPTOOL=strip
+-LDD=../$(TESTDIR)ldso/util/ldd
++LDD=../$(TOPDIR)/utils/ldd
+ 
+ RM= rm -f
+ 

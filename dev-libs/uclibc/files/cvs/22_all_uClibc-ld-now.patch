@@ -1,0 +1,22 @@
+--- ./ldso/ldso/Makefile.mps	2004-04-23 09:11:48.000000000 +0200
++++ ./ldso/ldso/Makefile	2004-04-23 09:19:21.000000000 +0200
+@@ -43,7 +43,7 @@
+ 
+ XXFLAGS+=$(shell $(CC) -print-search-dirs | sed -ne "s/install: *\(.*\)/-I\1include/gp")
+ LDFLAGS=$(CPU_LDFLAGS-y) -shared --warn-common --export-dynamic --sort-common \
+-	-z combreloc --discard-locals --discard-all --no-undefined -z relro
++	-z combreloc --discard-locals --discard-all --no-undefined -z relro -z now
+ 
+ CSRC= ldso.c dl-startup.c
+ COBJS=$(patsubst %.c,%.o, $(CSRC))
+--- ./Rules.mak.mps	2004-04-23 09:02:37.000000000 +0200
++++ ./Rules.mak	2004-04-23 09:18:49.000000000 +0200
+@@ -218,7 +218,7 @@
+     LDFLAGS:= $(CPU_LDFLAGS-y) -shared --warn-common --warn-once -z combreloc
+     STRIPTOOL:= true -Since_we_are_debugging
+ else
+-    LDFLAGS := $(CPU_LDFLAGS-y) -s -shared --warn-common --warn-once -z combreloc -z relro
++    LDFLAGS := $(CPU_LDFLAGS-y) -s -shared --warn-common --warn-once -z combreloc -z relro -z now
+ endif
+ 
+ # Sigh, some stupid versions of gcc can't seem to cope with '-iwithprefix include'
