@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jpilot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.9 2003/03/20 03:49:12 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.10 2003/06/12 02:18:00 weeve Exp $
+
+  11 Jun 2003; Jason Wever <weeve@gentoo.org> jpilot-0.99.5.ebuild:
+  Added ~sparc to keywords.
 
 *jpilot-0.99.5 (19 Mar 2003)
 
