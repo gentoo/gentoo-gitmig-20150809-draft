@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.7.3-r1.ebuild,v 1.4 2004/05/26 20:04:26 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.7.3-r1.ebuild,v 1.5 2004/06/08 14:24:34 dholm Exp $
 
 inherit eutils python
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.bellz.org/treeline/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="spell"
 
 DEPEND="spell? ( || ( app-text/aspell app-text/ispell ) )
