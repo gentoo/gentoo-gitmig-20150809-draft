@@ -1,0 +1,27 @@
+diff -Naur jmax-4.1.0.orig/client/cpp/src/Hashtable.h jmax-4.1.0/client/cpp/src/Hashtable.h
+--- jmax-4.1.0.orig/client/cpp/src/Hashtable.h	2002-11-18 23:56:42.000000000 -0800
++++ jmax-4.1.0/client/cpp/src/Hashtable.h	2004-07-08 14:32:14.325244414 -0700
+@@ -7,6 +7,8 @@
+ 
+ #include <iostream>
+ 
++using namespace std;
++
+ namespace ircam {
+ namespace fts {
+ namespace client {
+diff -Naur jmax-4.1.0.orig/packages/dtd/c/src/dtd_thread.h jmax-4.1.0/packages/dtd/c/src/dtd_thread.h
+--- jmax-4.1.0.orig/packages/dtd/c/src/dtd_thread.h	2003-07-22 09:10:50.000000000 -0700
++++ jmax-4.1.0/packages/dtd/c/src/dtd_thread.h	2004-07-08 14:31:23.965610486 -0700
+@@ -41,9 +41,9 @@
+     dtd_buffer_t* com_buffer;
+ 
+     /* index of buffer write by FTS */
+-    const int* const buffer_index;
++    const int* buffer_index;
+     /* eof flags set by dtd_thread */
+-    const int* const is_eof;
++    int* is_eof;
+ 
+     /* delay for nanosleep (see fts_thread_manager) */
+     int delay_ms;

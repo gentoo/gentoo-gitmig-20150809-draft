@@ -1,0 +1,19 @@
+diff -Naur jmax-4.1.0.orig/configure.in jmax-4.1.0/configure.in
+--- jmax-4.1.0.orig/configure.in	2004-03-04 08:25:14.000000000 -0800
++++ jmax-4.1.0/configure.in	2004-07-08 12:57:16.460227401 -0700
+@@ -202,7 +202,7 @@
+ case "$host" in
+ 
+ dnl GNU/Linux on an Intel or compatible
+-i*86-*-linux*|powerpc-*-linux-gnu)
++*-linux*)
+ PLATFORM=linux
+ CFLAGS="$CFLAGS -Wall -Wno-unused"
+ if test "$with_debug" != "yes"
+@@ -738,6 +738,4 @@
+ echo
+ echo "jMax will be compiled without standard sound support (ALSA or Jack)."
+ echo Note that you can try to use the DEPRECATED oss packages at your own risk.
+-echo Are you really sure you want to continue ?
+-read
+ fi
