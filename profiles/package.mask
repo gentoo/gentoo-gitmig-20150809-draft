@@ -568,7 +568,7 @@ net-misc/nt
 # <prez@gentoo.org> (29 Aug 2002)
 # Does not build successfully in an ebuild (but builds just fine outside of one)
 # Needs more investigation as to why.
-=dev-java/sun-j2sdk-1.4.0
+<=dev-java/sun-j2sdk-1.4.0-r1
 
 # <mcummings@gentoo.org> (28 Jul 2002)
 # new version of perl - incompatible with 5.6 IO model
