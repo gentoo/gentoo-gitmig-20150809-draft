@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3_p84.ebuild,v 1.1 2004/12/16 16:08:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3_p84.ebuild,v 1.2 2004/12/21 00:29:22 swegener Exp $
 
 inherit eutils
 
@@ -8,7 +8,8 @@ MY_P=${P/_/-}
 
 DESCRIPTION="A complete set of services for IRCu 2.10.10+ and bahamut based networks"
 HOMEPAGE="http://www.srvx.net/"
-SRC_URI="http://www.macs.hw.ac.uk/~sa3/pub/srvx/${MY_P}.tar.bz2
+SRC_URI="http://www.blackhole.plus.com/simon/srvx/${MY_P}.tar.bz2
+	http://www.macs.hw.ac.uk/~sa3/pub/srvx/${MY_P}.tar.bz2
 	http://srvx.arlott.org/arch/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -32,7 +33,7 @@ src_compile() {
 		--with-protocol=$PROTOCOL \
 		--enable-modules=helpserv,memoserv,sockcheck \
 		|| die "econf failed"
-	emake -j1 || die "emake failed"
+	emake all-recursive || die "emake failed"
 }
 
 src_install() {
