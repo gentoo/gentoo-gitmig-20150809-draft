@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/scotty-2.1.11.ebuild,v 1.3 2003/09/05 01:25:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/scotty-2.1.11.ebuild,v 1.4 2003/10/17 03:27:00 agriffis Exp $
 
 DESCRIPTION="tcl network management extension"
 HOMEPAGE="http://wwwhome.cs.utwente.nl/~schoenw/scotty"
 SRC_URI="ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha"
+KEYWORDS="x86 alpha"
 
 DEPEND="virtual/glibc
 	sys-devel/flex
