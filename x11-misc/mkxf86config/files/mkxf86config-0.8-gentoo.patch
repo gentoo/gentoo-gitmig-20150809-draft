@@ -191,7 +191,7 @@ diff -urN xf86config-knoppix-0.8.old/mkxf86config.sh xf86config-knoppix-0.8/mkxf
 +	CHECK=$(cat /proc/bus/input/devices | grep -i synaptics | wc -l)
 +	if [ $CHECK -gt 0 ]; then
 +		modprobe evdev
-+		SYNDEV=/dev/input/$(cat /proc/bus/input/devices | grep -i -A 5 synaptics | grep Handlers | sed -r "s/.*(event[0-9]+).*/\1/g")
++		SYNDEV=/dev/input/$(cat /proc/bus/input/devices | egrep -i -A 5 "^N: .*synaptics.*" | grep Handlers | sed -r "s/.*(event[0-9]+).*/\1/g")
 +		SYNMOUSE=""
 +	else
 +		SYNMOUSE='s|^.*InputDevice.*"Synaptics".*$|#No Synaptics touchpad found|g;'

@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/mkxf86config
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.13 2004/12/31 15:43:18 wolf31o2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.14 2005/01/12 13:52:35 wolf31o2 Exp $
+
+  12 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/mkxf86config-0.8-gentoo.patch, -files/mkxf86config-gentoo.patch,
+  files/mkxf86config-init:
+  Modified Gentoo patch and init script and closing bug #77274.
 
   31 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   files/mkxf86config-0.8-gentoo.patch, -mkxf86config-0.8-r2.ebuild:

@@ -1,10 +1,11 @@
 #!/sbin/runscript
  
 depend() {
-    need
+    before local
 }
  
 start() {
-    ebegin "Create XF86Config"
+    ebegin "Creating X Configuration"
     /usr/sbin/mkxf86config.sh
+	eend $?
 }
