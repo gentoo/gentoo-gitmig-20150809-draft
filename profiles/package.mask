@@ -1,3 +1,6 @@
+#waiting for new portage dep format
+>=x11-libs/qt-x11-3
+
 #won't work yet because of crappy imake issues
 =net-misc/tightvnc-1.2.1
 
