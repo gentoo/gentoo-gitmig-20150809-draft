@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.35 2005/01/18 08:36:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.36 2005/01/18 09:04:05 eradicator Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -922,7 +922,7 @@ EOF
 	rm -f ${D}/etc/ld.so.cache
 
 	# Some things want this, notably ash.
-	dosym /usr/$(get_libdir)/libbsd-compat.a /usr/$(get_libdir)/libbsd.a
+	dosym libbsd-compat.a /usr/$(get_libdir)/libbsd.a
 
 	# Handle includes for different ABIs
 	prep_ml_includes

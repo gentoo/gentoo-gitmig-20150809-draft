@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.37 2005/01/18 06:34:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.38 2005/01/18 09:04:05 eradicator Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -842,7 +842,7 @@ EOF
 	rm -f ${D}/etc/localtime
 
 	# Some things want this, notably ash.
-	dosym /usr/$(get_libdir)/libbsd-compat.a /usr/$(get_libdir)/libbsd.a
+	dosym libbsd-compat.a /usr/$(get_libdir)/libbsd.a
 
 	# This is our new config file for building locales
 	insinto /etc

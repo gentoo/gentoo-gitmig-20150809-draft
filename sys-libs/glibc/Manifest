@@ -5,10 +5,10 @@ MD5 1a6f8cfe52c5ab95d7b9ed0fce880466 ChangeLog 64818
 MD5 5529417ce5503c488b1ccaaa2e781799 glibc-2.2.5-r9.ebuild 10915
 MD5 70c7b7dab01c53c28716fbcb3c8cf65f glibc-2.3.2-r12.ebuild 21952
 MD5 1dee5d2dea67ffe479a0005cc7da35ce glibc-2.3.3.20040420-r2.ebuild 21626
-MD5 781e44588c2d2c8c325f8da794a4c661 glibc-2.3.4.20040808-r1.ebuild 27269
+MD5 eee5d369ea4079665cc8bd002e104b7e glibc-2.3.4.20040808-r1.ebuild 27250
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 d1855ee7fb7495afeef15f59b83726d8 glibc-2.3.4.20040619-r2.ebuild 21048
-MD5 0fc07845c9cec61492492e7769948716 glibc-2.3.4.20041102.ebuild 32387
+MD5 c68edead276b6bcb74a0f2f8bd8573b6 glibc-2.3.4.20041102.ebuild 32368
 MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r9 143
 MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r12 312
 MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3.20040420-r2 312
@@ -139,7 +139,7 @@ MD5 b72e5aca6d834026a6f5fb87623e6fd3 files/2.3.4/host.conf 1302
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD4DBQFB7MqsArHZZzCEUG0RAvARAJUYWckR9b8biPykqaYQbsSKngrMAJ9EGoru
-ceqvbQx6b7SiMx0MzNVCzw==
-=fQ6z
+iD8DBQFB7NFQArHZZzCEUG0RAk1cAJ9jkghSkZ3PIZaUY/aaOjeghmkOqwCfWDN/
+iMu+9Qr5dAn0KPX6n31xSSo=
+=n3oi
 -----END PGP SIGNATURE-----
