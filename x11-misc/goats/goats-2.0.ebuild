@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/goats/goats-2.0.ebuild,v 1.5 2003/07/09 16:39:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/goats/goats-2.0.ebuild,v 1.6 2004/06/20 18:23:35 port001 Exp $
 
 inherit gnome2
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="Goats is a yellow post-it note applet for the Gnome2 Desktop"
 SRC_URI="http://www.menudo.freeserve.co.uk/${P}.tar.gz"
 HOMEPAGE="http://www.menudo.freeserve.co.uk/goats.html"
