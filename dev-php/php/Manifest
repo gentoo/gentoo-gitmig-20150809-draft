@@ -1,21 +1,31 @@
-MD5 cde166273dc8eca01947b0727c6c57bf ChangeLog 18102
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2f6cfc9a623ff03ca36534d43b3a0f95 ChangeLog 18248
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
-MD5 43e57e69f231376d10554cf9874e8d5d php-4.3.8.ebuild 1071
-MD5 7efc53f2d831c9205887379e0f79aed5 php-4.3.9.ebuild 1077
 MD5 159ad5dc930e19ed38c8377ef7a8eb06 php-4.3.9_rc1.ebuild 1137
 MD5 abf5f97a49422c509b77b8077d714153 php-5.0.0-r1.ebuild 540
-MD5 48aa6f4b37fb2c3cc4fa6ad0527f4378 php-5.0.0.ebuild 521
 MD5 0413eca1cec9d3896cfe3634fd3e6806 php-5.0.1.ebuild 540
-MD5 b1d22f7580671187dcbe6402766acdb3 php-5.0.2-r1.ebuild 605
+MD5 7efc53f2d831c9205887379e0f79aed5 php-4.3.9.ebuild 1077
 MD5 66457079ee99ec81625f60af44bcda9c php-5.0.2.ebuild 558
-MD5 ae48d9701424c6ba150e00304b5d84b1 files/digest-php-4.3.8 208
-MD5 b4787473c5b65d10113edd1635711e08 files/digest-php-4.3.9 131
+MD5 4a2d4a8397c2514cec55a8df4f62a778 php-5.0.2-r1.ebuild 600
+MD5 48aa6f4b37fb2c3cc4fa6ad0527f4378 php-5.0.0.ebuild 521
+MD5 43e57e69f231376d10554cf9874e8d5d php-4.3.8.ebuild 1071
 MD5 3d9b5ebf0a273b87c7a9355fa0d0676d files/digest-php-4.3.9_rc1 134
-MD5 11f305b98b753ee023da8503a360762a files/digest-php-5.0.0 63
 MD5 11f305b98b753ee023da8503a360762a files/digest-php-5.0.0-r1 63
 MD5 14d868f33e29b3c9a70b118e9da58dd0 files/digest-php-5.0.1 63
+MD5 cd07c33356df77acd61cd300f2869d19 files/php-5.0.0-httpauthfix.patch 518
+MD5 b4787473c5b65d10113edd1635711e08 files/digest-php-4.3.9 131
 MD5 4792b645fe6b66cd3f1b1ec88d4d20e8 files/digest-php-5.0.2 63
+MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
 MD5 4792b645fe6b66cd3f1b1ec88d4d20e8 files/digest-php-5.0.2-r1 63
 MD5 7515e9b1dc298a0fb1c12d35a58c265d files/php-4.3.4-amd64hack.diff 1028
-MD5 cd07c33356df77acd61cd300f2869d19 files/php-5.0.0-httpauthfix.patch 518
-MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
+MD5 11f305b98b753ee023da8503a360762a files/digest-php-5.0.0 63
+MD5 ae48d9701424c6ba150e00304b5d84b1 files/digest-php-4.3.8 208
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoUN3ArHZZzCEUG0RAmR0AJ9dxABqLYdG65otqh4togypvLi5ngCdHSTF
+yYnmiodDrZr+vQ44Y6o6FcU=
+=7vBm
+-----END PGP SIGNATURE-----
