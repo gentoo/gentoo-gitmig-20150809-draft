@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/timidity-shompatches-19960409-r2.ebuild,v 1.1 2004/09/24 18:41:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/timidity-shompatches-19960409-r3.ebuild,v 1.1 2004/09/26 22:10:10 eradicator Exp $
 
 IUSE=""
 
@@ -34,7 +34,7 @@ src_install() {
 
 	# Install patches from subdirectories
 	for d in `find . -type f -name \*.pat | sed 's,/[^/]*$,,' | sort -u`; do
-		insinto ${instdir}/shompatches/${d}
+		insinto /usr/share/timidity/shompatches/${d}
 		doins ${d}/*.pat
 	done
 }
