@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r8.ebuild,v 1.2 2004/12/07 06:09:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r8.ebuild,v 1.3 2004/12/08 02:36:01 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 # If the old /lib/sandbox.so is in /etc/ld.so.preload, it can
 # cause everything to segfault !!
@@ -58,6 +58,7 @@ src_unpack() {
 src_compile() {
 	cd ${S}/src; ${CC:-gcc} ${CFLAGS} tbz2tool.c -o tbz2tool
 	cd ${S}/src/sandbox-1.1
+	export CC="$(tc-getCC)"
 	case ${ARCH} in
 		"x86")
 			make CFLAGS="-march=i386 -O1 -pipe" || die

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.16 2004/11/28 12:47:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.17 2004/12/08 02:34:04 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A selection of tools from Debian"
 HOMEPAGE="http://packages.debian.org/unstable/base/debianutils.html"
@@ -14,8 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
 IUSE="static build"
 
 DEPEND="virtual/libc"
-RDEPEND="app-arch/bzip2
-	!ppc-macos? ( sys-apps/coreutils )"
+RDEPEND="app-arch/bzip2"
 
 src_unpack() {
 	unpack ${A}
@@ -35,12 +34,8 @@ src_unpack() {
 }
 
 src_compile() {
-	if use static
-	then
-		emake LDFLAGS=-static || die
-	else
-		emake || die
-	fi
+	use static && append-ldflags -static
+	emake CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
