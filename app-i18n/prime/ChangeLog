@@ -1,8 +1,12 @@
 # ChangeLog for app-i18n/prime
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.17 2004/03/02 19:51:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.18 2004/03/03 17:04:55 usata Exp $
 
 *prime-0.7a_p1 (03 Mar 2004)
+
+  04 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> prime-0.7a_p1.ebuild:
+  Withdrew prime-0.7a_p1 from CVS tree because portage doesn't accept
+  a single letter before any suffix yet
 
   03 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> prime-0.7.7.ebuild,
   prime-0.7a_p1.ebuild:
