@@ -1,0 +1,108 @@
+diff -ru sv7/Makefile sv7_nu/Makefile
+--- sv7/Makefile	2004-03-18 00:17:54.000000000 +0200
++++ sv7_nu/Makefile	2004-04-16 20:41:00.842641680 +0300
+@@ -12,7 +12,7 @@
+ 
+ # Select the compiler. Normally gcc is used.
+ 
+-CC       = cc   -pipe -L/lib
++CC       = gcc   -pipe -L/lib
+ CC3      = gcc3 -pipe -L/lib
+ 
+ 
+@@ -20,8 +20,7 @@
+ # If unset Intel 386 with optimization for Pentium is selected.
+ 
+ ifdef ARCH
+-else
+-ARCH     = -march=i586 -mcpu=i386
++ARCH     = #-march=i586 -mcpu=i386
+ endif
+ 
+ 
+@@ -80,7 +79,7 @@
+ # Name of libraries you need for linking
+ 
+ LDADD    = -lm
+-LDADD   += -lesd
++LDADD   += `esd-config --libs`
+ #LDADD  += -lossaudio
+ #LDADD  += -lrt
+ #LDADD  += -lsocket -lnsl
+@@ -100,7 +99,7 @@
+ # Warning options, unset if the compiler makes trouble because of unknown
+ # options
+ 
+-WARN  = \
++WARN  = #\
+ 	-Wall                   \
+ 	-pedantic               \
+ 	-W                      \
+@@ -143,7 +142,7 @@
+ 	-fstrength-reduce       \
+ 	-fexpensive-optimizations \
+ 	-funroll-all-loops -fmove-all-movables -fstrength-reduce \
+-	-mpreferred-stack-boundary=2 -malign-jumps=5 -malign-loops=0 -malign-functions=5
++	-mpreferred-stack-boundary=2 -falign-jumps=5 -falign-loops=0 -falign-functions=5
+ 
+ # -fcse-follow-jumps \
+ 
+@@ -156,7 +155,7 @@
+ 	-frerun-loop-opt        \
+ 	-fstrength-reduce       \
+ 	-fmove-all-movables -fstrength-reduce -fcse-follow-jumps \
+-	-mpreferred-stack-boundary=2 -malign-jumps=5 -malign-loops=0 -malign-functions=5
++	-mpreferred-stack-boundary=2 -falign-jumps=5 -falign-loops=0 -falign-functions=5
+ 
+ # Options to generate Assembly code for inspecting
+ 
+@@ -189,7 +188,7 @@
+ 
+ # Merge all options together for CFLAGS and CFLAG_SIZE
+ 
+-CFLAGS        = $(ARCH) $(FEATURE) $(WARN) $(PROFILE) $(DEBUG) -DMAKE_$(BITS)BIT -DMPPDEC_VERSION=\"$(MPPDEC_VERSION)\" -DMPPENC_VERSION=\"$(MPPENC_VERSION)\"
++CFLAGS       += $(ARCH) $(FEATURE) $(WARN) $(PROFILE) $(DEBUG) -DMAKE_$(BITS)BIT -DMPPDEC_VERSION=\"$(MPPDEC_VERSION)\" -DMPPENC_VERSION=\"$(MPPENC_VERSION)\"
+ CFLAGS       += -I$(XINCLDIR) -L$(XLIBDIR)
+ #CFLAGS      += $(ASSEM)
+ CFLAGS_SIZE   = $(CFLAGS) $(OPTIM_SIZE)
+@@ -275,10 +274,13 @@
+ 
+ 
+ $(MPPDEC_TARGET): $(MPPDEC_OBJ)
++ifndef BLDSTATIC
+ 	$(CC)         $(CFLAGS) $(MPPDEC_OBJ) -o $(MPPDEC_TARGET)        $(LDADD)
+ 	-$(STRIP)     $(STRIPOPT)                $(MPPDEC_TARGET)
+-	$(CC) -static $(CFLAGS) $(MPPDEC_OBJ) -o $(MPPDEC_TARGET)-static $(LDADD)
+-	-$(STRIP)     $(STRIPOPT)                $(MPPDEC_TARGET)-static
++else
++	$(CC) -static $(CFLAGS) $(MPPDEC_OBJ) -o $(MPPDEC_TARGET) $(LDADD)
++	-$(STRIP)     $(STRIPOPT)                $(MPPDEC_TARGET)
++endif
+ 
+ 
+ $(MPPDEC_TARGET)16: $(MPPDEC_OBJ)
+@@ -303,10 +305,13 @@
+ 
+ 
+ $(MPPENC_TARGET): $(MPPENC_OBJ)
++ifndef BLDSTATIC
+ 	$(CC)         $(CFLAGS) $(MPPENC_OBJ) -o $(MPPENC_TARGET)        $(LDADD)
+ 	-$(STRIP)     $(STRIPOPT)                $(MPPENC_TARGET)
+-	$(CC) -static $(CFLAGS) $(MPPENC_OBJ) -o $(MPPENC_TARGET)-static $(LDADD)
+-	-$(STRIP)     $(STRIPOPT)                $(MPPENC_TARGET)-static
++else
++	$(CC) -static $(CFLAGS) $(MPPENC_OBJ) -o $(MPPENC_TARGET) $(LDADD)
++	-$(STRIP)     $(STRIPOPT)                $(MPPENC_TARGET)
++endif
+ 
+ 
+ $(MPPDEC_TARGET)-profiling: $(MPPDEC_OBJ)
+@@ -344,7 +349,7 @@
+ 	-$(STRIP)     $(STRIPOPT)           $(TAGGER_TARGET)
+ 
+ 
+-$(CLIPSTAT_TARGET):
++$(CLIPSTAT_TARGET): $(CLIPSTAT_OBJ)
+ 	$(CC)         $(CFLAGS) $(CLIPSTAT_OBJ) -o $(CLIPSTAT_TARGET)  $(LDADD)
+ 	-$(STRIP)     $(STRIPOPT)           $(CLIPSTAT_TARGET)
+ 
