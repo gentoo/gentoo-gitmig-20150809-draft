@@ -5,6 +5,9 @@
 # george - Jun 8, 2002
 dev-lang/nhc98
 
+# masking as it's causing strange errors Gerk June 9 2002
+=x11-libs/xforms-089-r1
+
 # masking k3studio, somehow it escaped being masked before
 # ebuild incomplete
 media-gfx/k3studio
