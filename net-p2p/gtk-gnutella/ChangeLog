@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.8 2002/11/17 12:32:46 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.9 2002/11/28 03:12:07 lostlogic Exp $
+
+*gtk-gnutella-0.91.1 (27 Nov 2002)
+
+  27 Nov 2002; Brandon Low <lostlogic@gentoo.org> gtk-gnutella-0.91.1.ebuild :
+
+  New stable release of gtk-gnutella, party on.  This is mostly a bug
+  fix from the upstreamers, but there are some new features so I'll
+  leave it onstable for the moment.
 
   17 Nov 2002; Olivier Reisch <doctomoe@gentoo.org> gtk-gnutella-0.91.ebuild :
   Added ppc keyword
