@@ -1,10 +1,22 @@
-MD5 81d6df26370a1b27b8b48d478365f645 ruby-gtkglext-0.10.1.ebuild 516
-MD5 bbc829546d1f95c6321e74d51a33adb3 ruby-gtkglext-0.8.1.ebuild 458
-MD5 6433525f5320696e5aae86910f74b664 ruby-gtkglext-0.9.1.ebuild 515
-MD5 6ae8b7d648988ff3168e5df400005b3c ChangeLog 1510
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f170ba18f37490e2c489f9532a026111 ChangeLog 1735
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 821e7c443769dcf5a3afc42165c8c110 ruby-gtkglext-0.8.0.ebuild 489
-MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gtkglext-0.10.1 74
+MD5 6f048654a6d8d974cf11dd10a6f0d0c9 ruby-gtkglext-0.8.0.ebuild 485
+MD5 c53188e13645538a8ae096c73bd69e01 ruby-gtkglext-0.8.1.ebuild 454
+MD5 6433525f5320696e5aae86910f74b664 ruby-gtkglext-0.9.1.ebuild 515
+MD5 b75279a01a6d1b8c6405cb16a4ebdf4f ruby-gtkglext-0.11.0.ebuild 504
+MD5 81d6df26370a1b27b8b48d478365f645 ruby-gtkglext-0.10.1.ebuild 516
 MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-gtkglext-0.8.0 73
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-gtkglext-0.8.1 73
 MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-gtkglext-0.9.1 73
+MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gtkglext-0.11.0 75
+MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gtkglext-0.10.1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpV3ZVWNWqTUmv+0RAvmuAKCHftzCfP7wSGUL5wnzrpxzI+H5UgCff4l8
+Jt0kmRFW4TH8Me21EdOxj3w=
+=oXyV
+-----END PGP SIGNATURE-----
