@@ -1,6 +1,12 @@
 # ChangeLog for games-action/moon-buggy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.9 2004/06/24 21:57:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.10 2004/08/02 09:20:24 tomk Exp $
+
+*moon-buggy-0.5.53-r1 (02 Aug 2004)
+
+  02 Aug 2004; <tomk@gentoo.org> +moon-buggy-0.5.53-r1.ebuild,
+  moon-buggy-0.5.53.ebuild:
+  Added esd sound support, HOMEPAGE and SRC_URI have changed
 
   06 May 2004; Michael Sterrett <mr_bones_@gentoo.org>
   moon-buggy-0.5.1.ebuild:
