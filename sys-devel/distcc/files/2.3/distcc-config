@@ -8,7 +8,7 @@
 # This script developed by Zachary T Welch at Superlucidity Services, LLC
 #  based on ideas from irc discussion and the clear need for this support
 # 
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.3/distcc-config,v 1.1 2003/05/21 10:15:09 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.3/distcc-config,v 1.2 2003/05/30 09:23:56 zwelch Exp $
 
 
 [ -z "${ROOT}" ] && ROOT=/
@@ -36,8 +36,8 @@ dccc_exit() {
 
 # create the appropriate configuration directory 
 is_super_user && \
-	DCCC_HOSTS_FILE="/etc/distcc/hosts" || \
-	DCCC_HOSTS_FILE="${HOME}/.distcc/hosts"
+	DCCC_HOSTS_FILE="${ROOT}etc/distcc/hosts" || \
+	DCCC_HOSTS_FILE="${ROOT}${HOME#/}/.distcc/hosts"
 mkdir -p $(dirname ${DCCC_HOSTS_FILE}) || \
 	dccc_exit "unable to create configuration directory"
 
