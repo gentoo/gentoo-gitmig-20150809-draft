@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.91 2003/11/14 20:12:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.92 2003/11/24 06:19:09 carpaski Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
@@ -97,7 +97,11 @@ RDEPEND="
    >=app-text/sablotron-0.97
    dev-libs/expat
    sys-libs/zlib 
-   virtual/mta"
+   virtual/mta
+	 virtual/glibc"
+# virtual/glibc line added as a fix for an rsync issue regarding cache
+# regeneration. It's harmless, but it causes that particular issue to
+# disappear. (sys-apps -> app-arch move stuff)
 
 # libswf is ONLY available on x86
 RDEPEND="${RDEPEND} flash? ( 
