@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.8 2002/05/26 11:20:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.9 2002/07/08 15:52:23 stroke Exp $
+
+*libpng-1.2.4 (08 Jul 2002)
+
+  08 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> libpng-1.2.4.ebuild
+  files/digest-libpng-1.2.4 :
+
+  new version, I've been testing it for a while, but I'm leaving it masked 
+  untill someone wiser (Seemant ? :) than me decides it is ready to go live.
+ 
 
 *libpng-1.2.3 (26 May 2002)
 
