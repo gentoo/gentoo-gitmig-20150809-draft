@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-cdparanoia
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.19 2004/11/14 23:48:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.20 2004/12/04 20:38:48 corsair Exp $
+
+  04 Dec 2004; Markus Rothe <corsair@gentoo.org>
+  gst-plugins-cdparanoia-0.8.5.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #72460
 
   15 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   gst-plugins-cdparanoia-0.8.5.ebuild:
