@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cvsweb/cvsweb-1.112.ebuild,v 1.4 2002/10/04 06:19:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cvsweb/cvsweb-1.112.ebuild,v 1.5 2002/10/15 01:22:14 vapier Exp $
 
 SLOT="0"
 KEYWORDS="x86 sparc sparc64"
 LICENSE="BSD"
 DESCRIPTION="WWW interface to a CVS tree"
 SRC_URI="http://stud.fh-heilbronn.de/~zeller/download/${P}.tar.gz"
-HOMEPAGE="http://stud.fh-heilbronn.de/~zeller/cgi/cvsweg.cgi"
+HOMEPAGE="http://stud.fh-heilbronn.de/~zeller/cgi/cvsweb.cgi"
 
 S="${WORKDIR}/cvsweb"
 RDEPEND=">=sys-devel/perl-5 >=app-text/rcs-5.7"
