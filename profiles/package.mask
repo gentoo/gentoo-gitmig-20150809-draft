@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <george@gentoo.org>
+# masking omniORB-305 for testing
+=net-misc/omniORB-305
+
 # <raker@gentoo.org> 25 Jul 2002
 # masking net-misc/ices while waiting on python share library
 net-misc/ices
