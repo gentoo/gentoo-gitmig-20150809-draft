@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.1 2005/01/15 02:24:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.2 2005/01/17 15:31:05 danarmak Exp $
+
+  17 Jan 2005; Dan Armak <danarmak@gentoo.org> ksysguard-3.4.0_beta1.ebuild:
+  Added missing (optional) dep on lm_sensors. ksysguard can use lm_sensors as
+  an info source.
 
 *ksysguard-3.4.0_beta1 (15 Jan 2005)
 
