@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/tvision-2.0.2.ebuild,v 1.1 2004/07/24 05:31:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/tvision-2.0.2.ebuild,v 1.2 2004/08/16 05:39:06 vapier Exp $
 
 DESCRIPTION="Text User Interface that implements the well known CUA widgets"
 HOMEPAGE="http://tvision.sourceforge.net/"
@@ -19,11 +19,11 @@ src_compile() {
 		--fhs \
 		--no-intl \
 		|| die
-	emake || die	# emake fails
+	emake || die
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	einstall || die
 	dodoc readme.txt THANKS TODO
 	dohtml -r www-site
 }
