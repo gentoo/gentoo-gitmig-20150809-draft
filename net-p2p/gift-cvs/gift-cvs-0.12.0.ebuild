@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.11.0.ebuild,v 1.1 2003/06/01 04:02:52 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.12.0.ebuild,v 1.1 2003/06/02 00:40:05 lostlogic Exp $
 
 DESCRIPTION="A OpenFT, Gnutella and FastTrack p2p network client"
 HOMEPAGE="http://gift.sourceforge.net"
@@ -52,11 +52,14 @@ src_compile() {
 	./autogen.sh --prefix=/usr --enable-gnutella --host=${CHOST} || die "Bootstrap configure failed"
 	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die "Make failed"
 
-	# Compile the FastTrack plugin. Some paths are hardcoded into the Makefile,
-	# so we have to change them using sed.
+	# Compile the FastTrack plugin. The developers of this thing sure as hell don't like automated installs.
 	cd ${S}/FastTrack
 	sed -i -e "s:\$(HOME)/.giFT:${D}/etc/giFT:" \
-	       -e "s:/usr/local/lib/giFT:${D}/usr/lib/giFT:" Makefile
+	       -e "s:/usr/local/lib/giFT:${D}/usr/lib/giFT:" \
+	       -e "s:LIBGIFT_CFLAGS =:#LIBGIFT_CFLAGS =:" \
+	       -e "s:LIBGIFT_LDFLAGS =:#LIBGIFT_LDFLAGS =:" Makefile
+	sed -i -e "s:#include <libgift/proto/:#include <../plugin/:" \
+	       -e "s:#include <libgift/:#include <../lib/:" *.c *.h
 	emake || die "FastTrack plugin failed to build"
 
 }
