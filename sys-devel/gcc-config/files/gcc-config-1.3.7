@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.3 2004/10/26 03:14:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.4 2004/10/26 04:05:36 vapier Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 trap ":" INT QUIT TSTP
@@ -168,7 +168,7 @@ switch_profile() {
 	source "${GCC_ENV_D}/${CC_COMP}"
 
 	# Setup /etc/env.d/05gcc
-	${AWK} '!/^(STDCXX_INCDIR|LDPATH|CC|CXX)=/ {print $0}' \
+	${AWK} '!/^(STDCXX_INCDIR|LDPATH|CC|CXX|GCCBITS)=/ {print $0}' \
 		"${GCC_ENV_D}/${CC_COMP}" > "${ENV_D}/05gcc"
 
 	# Add our custom LDPATH
@@ -195,6 +195,8 @@ switch_profile() {
 	do
 		# Make sure we have no stale wrappers
 		${RM} -f "${ROOT}/usr/bin/${x}"
+		[ "${x:${#x}-3}" = "gcc" -o "${x:${#x}-3}" = "g++" ] \
+			&& ${RM} -f "${ROOT}/usr/bin/${x}"{32,64}
 
 		if [ -x "${ROOT}/${GCC_BIN_PATH}/${x}" -o \
 		     "${x}" = "c++" -o "${x}" = "${REAL_CHOST}-c++" -o \
@@ -207,6 +209,18 @@ switch_profile() {
 			if [ "${OLD_CC_COMP}" != "${CC_COMP}" ]
 			then
 				${TOUCH} -m "${ROOT}/usr/bin/${x}"
+			fi
+
+			# Install 32bit and 64bit wrappers if need be
+			# This should probably get folded back into the wrapper ...
+			if [ "${x:${#x}-3}" = "gcc" -o "${x:${#x}-3}" = "g++" ]
+			then
+				for bits in ${GCCBITS}
+				do
+					echo "#!/bin/sh"$'\n'"exec ${x} -m${bits} \"\$@\"" \
+						> "${ROOT}/usr/bin/${x}${bits}"
+					chmod 755 "${ROOT}/usr/bin/${x}${bits}"
+				done
 			fi
 		fi
 	done
