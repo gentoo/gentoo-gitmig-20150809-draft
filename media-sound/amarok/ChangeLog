@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.21 2004/07/05 23:11:47 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.22 2004/08/09 05:01:01 pkdawson Exp $
+
+  09 Aug 2004; Patrick Dawson <pkdawson@gentoo.org> amarok-1.0.2.ebuild:
+  Version bump, closes bug #59600. Added a xine USE flag.
+  Thanks to Andrew Cooks <andrew@expertron.co.za>
 
   06 Jul 2004; Frank van de Pol <fvdpol@gentoo.org> :
   Version bump, closes bug #55898.
