@@ -1,22 +1,22 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.6 2003/02/02 03:39:23 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.7 2003/02/07 22:11:03 raker Exp $
 
 *xvid-0.9.0 (02 Dec 2002)
 
-  02 Feb 2003; Mark Guertin <gerk@gentoo.org> xvid-0.9.0.build :
+  07 Feb 2003; Nick Hadaway <raker@gentoo.org> xvid-0.9.0.ebuild :
+  Marked stable for x86.
+
+  02 Feb 2003; Mark Guertin <gerk@gentoo.org> xvid-0.9.0.ebuild :
   Fixed SRC_URI
 
   19 Dec 2002; Rajiv Manglani <rajiv@gentoo.org> xvid-0.9.0.ebuild :
-
   fixed ppc src_compile(). now builds properly on ppc. see bug #12257.
 
   13 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xvid-0.9.0.ebuild :
-
   Fix to install with divx4linux installed.
 
   02 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
-
   Initial release, thanks to good work by Jacob Perkins <jap1@ionet.net>.
   Fixed the DEPEND .. we cannot depend on nasm for other archs than x86.
   Also do not install if media-libs/divx4linux is installed.  Fixed examples
