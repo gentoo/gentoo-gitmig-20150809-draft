@@ -1,12 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r3.ebuild,v 1.1 2004/09/19 23:01:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r3.ebuild,v 1.2 2004/09/20 01:09:34 vapier Exp $
 
 inherit virtualx libtool gnome.org gnuconfig eutils
 
-IUSE="doc mmx"
 DESCRIPTION="GNOME Image Library"
 HOMEPAGE="http://www.gtk.org/"
+
+LICENSE="GPL-2 LGPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa amd64 ~ia64 ~mips ~ppc64"
+IUSE="doc mmx"
 
 RDEPEND="media-libs/jpeg
 	media-libs/tiff
@@ -17,13 +21,8 @@ RDEPEND="media-libs/jpeg
 	>=gnome-base/gnome-libs-1.4.1.2-r1"
 # We need gnome-libs here, else gnome support do not get compiled into
 # gdk-pixbuf (the GnomeCanvasPixbuf library )
-
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
-
-SLOT="0"
-LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
 
 src_unpack() {
 

@@ -6,7 +6,7 @@ MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
 MD5 4cdef02cae2d28ec06e6fc752ff24602 libsdl-1.2.7-r1.ebuild 2750
 MD5 725053ce30b454e912aaab60c08caf10 libsdl-1.2.6-r3.ebuild 2854
 MD5 5074715fa2ad4fbd78e35864ff07248a libsdl-1.2.7.ebuild 2486
-MD5 22003e26c6f452f6fce9c2a7bc1e94b4 libsdl-1.2.7-r2.ebuild 3676
+MD5 19212f2e911b8e77fb6b6192366c4a5b libsdl-1.2.7-r2.ebuild 3670
 MD5 0c2020ec3ce37ea0612064c52d1014b1 files/1.2.6-alsa-1.0.0.patch 557
 MD5 2e9d99f7ab858b5a64d124abea4565b9 files/digest-libsdl-1.2.7-r1 62
 MD5 803844293dc7df2bb7d2323c03977b71 files/1.2.7-libcaca.patch 23266
@@ -23,7 +23,7 @@ MD5 71a857d2bbcc34c4807638eb5d710f2e files/1.2.7-26headers.patch 1017
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBTiwAHTu7gpaalycRAtybAKCacfS7bgIBPpYSrK7VRDVmpnruUACg2REW
-j9Sn/0xHXI6ZDlf+6iHj2kk=
-=J6aD
+iD8DBQFBTi5IHTu7gpaalycRAmvdAJ0c4SMdVYYkLH4SIIM2ccS/T55yGACg+o/f
+KKkS5zsB0B+OEQ42hqb3j8g=
+=vDGb
 -----END PGP SIGNATURE-----
