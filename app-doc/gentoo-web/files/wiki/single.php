@@ -128,7 +128,7 @@
 					}
 				?></select>
 				<?php } else {
-					print $priority;
+					print "$priority - <img src=\"images/$priority.gif\" width=16 height=16>";
 				} ?><br>
 				<b>Sharing:</b>
 				<?php if ( $theirs ) { ?>
@@ -140,8 +140,12 @@
 					}
 				?></select>
 				<?php } else {
-					print $public;
-				} ?>
+					print "$public - <img src=\"images/$public.gif\" width=16 height=16>";;
+				}
+
+				if ( $uid && $uid != $todo['owner'] && $public == 'public' ) { ?>
+					<br><a href="index.php?action=grab_todo&tid=<?=$tid;?>"><img src="images/grab.gif" border=0 width=109 height=15></a>
+				<?php } ?>
 			</p>
 		</tr>
 		</table>
@@ -162,8 +166,8 @@
 <?php if ( $theirs ) print '</form>'; ?>
 
 <?php if ( $action != 'new_todo' ) { ?>
-<div style="float:right;">
-	<p>&nbsp;</p>
+<table width="90%" border=0 cellpadding=0 cellspacing=0 align="center"><tr><td>
+<div style="float:right;padding:10px 0 5px 5px;">
 	<table width=200 border=0 cellpadding=3 cellspacing=0 bgcolor="#46357c"><tr><td>
 	<table width="100%" border=0 cellpadding=5 cellspacing=0 bgcolor="white"><tr><td>
 		<form method="post" action="single.php?action=post_followup&tid=<?=$tid;?>">
@@ -178,7 +182,6 @@
 </div>
 
 <?php
-#if ( $action != 'new_todo' 
 	// okay, now we get to spit out all the followups.
 	$result = mysql_query( "select * from followups where tid=$tid order by date" );
 	while ( $fup = mysql_fetch_array( $result ) ) {
@@ -190,6 +193,7 @@
 
 <?php
 	}
+?></tr></td></table><?php
 }
 
 main_footer(); ?>

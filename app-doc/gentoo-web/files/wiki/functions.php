@@ -1,9 +1,7 @@
 <?php
 	session_start();
-#	mysql_connect( 'localhost', '@@USER@@', '@@PASS@@' );
-#	mysql_select_db( '@@DB@@' );
-	mysql_connect( 'localhost', 'thread', 'twinkie09' );
-	mysql_select_db( 'wiki' );
+	mysql_connect( 'localhost', '@@USER@@', '@@PASS@@' );
+	mysql_select_db( '@@DB@@' );
 ?>
 
 <?php function main_header ( $title = 'Unknown' ) {
