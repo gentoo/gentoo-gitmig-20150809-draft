@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.105 2003/07/01 15:27:57 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.106 2003/07/02 01:33:19 lu_zero Exp $
+
+  01 Jul 2003; Luca Barbato <lu_zero@gentoo.org> gcc-3.2.3-r1.ebuild:
+  set stable on ppc
 
   01 Jul 2003; Todd Sunderlin <todd@gentoo.org> gcc-3.2.3-r1.ebuild:
   set stable on sparc
