@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.21 2004/07/01 11:59:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.22 2004/08/27 22:05:03 gustavoz Exp $
+
+  27 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> lcdproc-0.4.5.ebuild:
+  Keyworded ~sparc w00t!
 
   01 Jul 2004; Aron Griffis <agriffis@gentoo.org> lcdproc-0.4.4-r1.ebuild:
   sync IUSE (+samba)
