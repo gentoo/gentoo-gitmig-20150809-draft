@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.19 2002/12/18 19:16:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.20 2002/12/30 17:21:56 raker Exp $
 
 *wxGTK-2.3.4 (18 Dec 2002)
 
@@ -35,6 +35,9 @@
   OpenGL 
 
 *wxGTK-2.2.9-r1 (09 Aug 2002)
+
+  30 Dec 2002; Nick Hadaway <raker@gentoo.org> files/wxGTK-2.2.9.diff.gz :
+  Added missing joystick patch.
 
   18 Dec 2002; Seemant Kulleen <seemant@gentoo.org> wxGTK-2.2.9-r1.ebuild
   files/digest-wxGTK-2.2.9-r1 :
