@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r3.ebuild,v 1.1 2005/03/04 03:06:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r3.ebuild,v 1.2 2005/03/04 13:32:14 greg_g Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,9 @@ KEYWORDS="~x86 ~amd64 ~hppa ~mips ~ppc64 ~sparc ~ia64 ~ppc ~alpha"
 IUSE="cups debug doc firebird gif ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib immqt immqt-bc"
 
 DEPEND="virtual/x11 virtual/xft
-	media-libs/libpng media-libs/jpeg media-libs/libmng
+	media-libs/libpng
+	media-libs/jpeg
+	media-libs/libmng
 	>=media-libs/freetype-2
 	nas? ( >=media-libs/nas-1.5 )
 	odbc? ( dev-db/unixODBC )
@@ -35,7 +37,6 @@ DEPEND="virtual/x11 virtual/xft
 S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 
 QTBASE=/usr/qt/3
-export QTDIR=${S}
 
 pkg_setup() {
 	if use immqt ; then
@@ -46,11 +47,15 @@ pkg_setup() {
 		ewarn
 	fi
 
+	export QTDIR=${S}
+
 	if useq ppc-macos ; then
 		export PLATFORM=darwin-g++
 		export DYLD_LIBRARY_PATH="${QTDIR}/lib:/usr/X11R6/lib:${DYLD_LIBRARY_PATH}"
 		export INSTALL_ROOT=""
 	else
+		# probably this should be 'linux-g++-64' for 64bit archs
+		# in a fully multilib environment (no compatibility symlinks)
 		export PLATFORM=linux-g++
 	fi
 }
@@ -58,7 +63,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	export QTDIR=${S}
 	cd ${S}
 
 	cp configure configure.orig
@@ -99,13 +103,12 @@ src_unpack() {
 }
 
 src_compile() {
-	export QTDIR=${S}
 	export SYSCONF=${D}${QTBASE}/etc/settings
 
 	# Let's just allow writing to these directories during Qt emerge
 	# as it makes Qt much happier.
 	addwrite "${QTBASE}/etc/settings"
-	addwrite "$HOME/.qt"
+	addwrite "${HOME}/.qt"
 
 	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif" || myconf="${myconf} -no-gif"
@@ -138,18 +141,18 @@ src_compile() {
 		${PLATFORM} -xrender -prefix ${QTBASE} -libdir ${QTBASE}/$(get_libdir) \
 		-fast ${myconf} -dlopen-opengl || die
 
-	export QTDIR=${S}
-
 	emake src-qmake src-moc sub-src || die
 	DYLD_LIBRARY_PATH="${S}/lib:/usr/X11R6/lib:${DYLD_LIBRARY_PATH}" \
 	LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" emake sub-tools || die
+
+	if use doc; then
+		emake sub-tutorial sub-examples || die
+	fi
 }
 
 src_install() {
-	export QTDIR=${S}
-
 	# binaries
-	into $QTBASE
+	into ${QTBASE}
 	dobin bin/*
 
 	# libraries
