@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 0c27e7e2a567d6fb20e7097690e2101b sylpheed-claws-maildir-0.6.ebuild 749
-MD5 1a3a96db6f943d84188a0a14b8baa253 ChangeLog 827
+MD5 84b203adc98679d17b2e8be7a83253ea ChangeLog 995
+MD5 5cef1e6172b5a6cbbc9e222c8d933a38 sylpheed-claws-maildir-0.6.ebuild 864
 MD5 5b78cadb23f22fec45820a96e3e5ed27 files/digest-sylpheed-claws-maildir-0.6 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD4DBQFBdW60ugEuf3OQ0akRAkp3AJjYd+jBcikYWLc6iuVFL31ypXnLAJ0VCjOn
-VeKVyLT4d5sFGijBjulCsw==
-=Opbo
+iD8DBQFBiSxY6J2i8a8J4okRAkTGAJ0efeu0a2A7Xcv8FL6c+fy5JAPypwCgs687
+w6jIr7n1CZ+sue6FuFRiOyg=
+=epDG
 -----END PGP SIGNATURE-----

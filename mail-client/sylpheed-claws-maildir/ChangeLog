@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-maildir
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-maildir/ChangeLog,v 1.4 2004/10/19 19:44:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-maildir/ChangeLog,v 1.5 2004/11/03 19:06:52 genone Exp $
+
+  03 Nov 2004; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-maildir-0.6.ebuild:
+  fixed the problem where the plugin would install to the wrong location (#69951)
 
   19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   sylpheed-claws-maildir-0.6.ebuild:
