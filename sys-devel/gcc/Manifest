@@ -55,7 +55,7 @@ MD5 aa8e15a63d797df37bbd4e489ed0267f files/3.4.1/gcc-3.4.1-mips-n64only.patch 61
 MD5 3f6d070c2a4a899e7d879fdb55eecba4 files/3.4.3/libffi-nogcj-lib-path-fix.patch 1691
 MD5 007c62d92efd70fd44c4d2e6a326036b files/3.4.3/libffi-without-libgcj.patch 1658
 MD5 7434140298091f759eba5e9706264130 files/3.4.3/libssp.patch 2029
-MD5 7bc3b70eb3aa5717ab0fd6f5fcf8a449 files/3.4.3/gcc-3.4.3-cross-compile.patch 1453
+MD5 101c0dd49e0971cff1e23d8a1120ca40 files/3.4.3/gcc-3.4.3-cross-compile.patch 1883
 MD5 7c29f54dd8d50385ac42fae65459c744 files/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch 538
 MD5 184cb0a87ee2fa0197dec6f4902ef4c8 files/3.3.5/gcc-3.3.5-no-COPYING-cross-compile.patch 1192
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
