@@ -1,6 +1,13 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.3 2004/06/22 16:06:15 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.4 2004/06/24 13:59:24 humpback Exp $
+
+*skype-0.90.0.4 (24 Jun 2004)
+
+  24 Jun 2004; Gustavo Felisberto <humpback@gentoo.org>; -files/artsskype,
+  +files/sDaemonWrapper, -skype-0.90.0.3.ebuild, +skype-0.90.0.4.ebuild:
+  Removing version 0.90.0.3 and adding 0.90.0.4 report problems in bug
+  http://bugs.gentoo.org/show_bug.cgi?id=54665
 
   22 Jun 2004; Gustavo Felisberto <humpback@gentoo.org>;
   skype-0.90.0.3.ebuild, files/artsskype:

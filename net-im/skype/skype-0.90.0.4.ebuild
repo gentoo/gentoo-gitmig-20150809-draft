@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.90.0.3.ebuild,v 1.3 2004/06/22 16:06:15 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.90.0.4.ebuild,v 1.1 2004/06/24 13:59:24 humpback Exp $
 
-SVER="0_90_0_3"
+inherit eutils
+
+SVER=${PV//./_}
 RESTRICT="fetch"
 DESCRIPTION="${PN} is a P2P-VoiceIP client."
 HOMEPAGE="http://www.${PN}.com/"
@@ -48,7 +50,7 @@ src_install() {
 	if ( use arts  ||  use esd );
 	then
 		mv skype skype.bin
-		cp ${FILESDIR}/artsskype skype
+		cp ${FILESDIR}/sDaemonWrapper skype
 	fi
 
 	dodir /opt/skype
@@ -58,9 +60,7 @@ src_install() {
 	( use arts || use esd ) && doexe skype.bin
 	insinto /opt/skype
 	doins call_in.wav
-	dodir /usr/share/applnk/Internet
-	insinto /usr/share/applnk/Internet
-	doins skype.desktop
+	make_desktop_entry skype "Skype VoIP" ../icons/hicolor/48x48/apps/skype.png "Telephony"
 	for SIZE in 16 24 32 48
 	do
 		mkdir ${S}/icons/${SIZE}
