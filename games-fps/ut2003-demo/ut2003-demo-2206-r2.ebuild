@@ -1,13 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r2.ebuild,v 1.3 2004/01/05 20:15:34 wolf31o2 Exp $.
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r2.ebuild,v 1.4 2004/01/14 22:28:54 wolf31o2 Exp $.
 
 inherit games
 
 DESCRIPTION="Unreal Tournament 2003 Demo"
 HOMEPAGE="http://www.ut2003.com/"
-SRC_URI="http://unreal.epicgames.com/linux/ut2003/ut2003demo-lnx-${PV}.sh.bin
-	http://unreal.epicgames.com/files/IpDrv.so.bz2"
+SRC_URI="http://unreal.epicgames.com/linux/ut2003/ut2003demo-lnx-${PV}.sh.bin"
 
 LICENSE="ut2003-demo"
 SLOT="0"

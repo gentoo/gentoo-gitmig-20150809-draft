@@ -1,3 +1,6 @@
+MD5 dfbd06a834d3a72342b15cd5a92df715 ut2003-demo-2206-r2.ebuild 2594
+MD5 0d2bcf05af084e8d437f1c0507fad787 ChangeLog 4207
+MD5 d1603da79c3c68c905ab4524a4e2152d metadata.xml 607
 MD5 4605ca0fbc6b80d2980c183e00771be3 files/ut2003-demo 679
 MD5 fda26e9125bc82d968da4db95a839554 files/digest-ut2003-demo-2206-r2 131
 MD5 e3fbaa34b381bf635b9792339862c47a files/ut2003-demo.desktop 159
@@ -5,5 +8,3 @@ MD5 1a1e434e7d953a057cf4c388b848f463 files/misc.tar.bz2 31851
 MD5 65c92c0f20bdebbc7369012b63a17f52 files/benchmark 1130
 MD5 1cc2aecbe8968fa325a6e49b7f71f2ca files/results.py 1461
 MD5 b9b76d93d292d5f73481c37ff7c41454 files/results.sh 2103
-MD5 4e540d4b0665b1d66f39e1fe60b26c67 ut2003-demo-2206-r2.ebuild 2791
-MD5 6482cd960aa643e195b9012f879e3ec6 ChangeLog 4049
