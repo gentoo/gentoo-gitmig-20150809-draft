@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/kmuddy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.8 2004/12/01 03:53:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.9 2004/12/20 01:28:45 jhuebel Exp $
+
+  19 Dec 2004; Jason Huebel <jhuebel@gentoo.org> kmuddy-0.7.ebuild:
+  ~amd64, bug #67875
 
 *kmuddy-0.7 (30 Nov 2004)
 
