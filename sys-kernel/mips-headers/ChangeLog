@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/mips-headers
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.23 2004/10/01 23:16:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.24 2004/10/02 05:49:51 kumba Exp $
+
+  01 Oct 2004; Joshua Kinard <kumba@gentoo.org> mips-headers-2.6.8.1.ebuild:
+  Wrong keyword, move to ~mips.
 
   01 Oct 2004; Joshua Kinard <kumba@gentoo.org> mips-headers-2.6.8.1.ebuild:
   Forgot, 2.6.8.1 needs the 1.7 revision of the cobalt patches, not 1.4.
