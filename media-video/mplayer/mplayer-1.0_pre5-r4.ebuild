@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.21 2004/11/09 22:15:45 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.22 2004/11/11 02:25:22 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -139,11 +139,6 @@ src_unpack() {
 	#this patch enables true alsa output in
 	#gmplayer.  Fixes Bug #58619.
 	use alsa && epatch ${DISTDIR}/${P}-alsa-gui.patch.tar.bz2
-
-	#Setup the matrox makefile
-	if use matrox; then
-		epatch ${FILESDIR}/${P}-mga-kernel-2.6.patch
-	fi # end of matrox related stuff
 
 	# Fix hppa compilation
 	[ "${ARCH}" = "hppa" ] && sed -i -e "s/-O4/-O1/" "${S}/configure"
@@ -324,6 +319,7 @@ src_compile() {
 	if use matrox && use X; then
 		myconf="${myconf} $(use_enable matrox xmga)"
 	fi
+	myconf="${myconf} $(use_enable matrox mga)"
 	myconf="${myconf} $(use_enable opengl gl)"
 	myconf="${myconf} $(use_enable sdl)"
 
@@ -410,21 +406,7 @@ src_compile() {
 		myconf="${myconf} --enable-linux-devfs"
 	fi
 
-	# Build the matrox driver before mplayer configuration.
-	# That way the configure script sees it and builds the support
-	#build the matrox driver before the 
-	if use matrox ; then
-		if use x86 ; then
-			cd ${S}/drivers
-			unset ARCH
-			make all || die "Matrox build failed!  Your kernel may need to have `make mrproper` run on it before trying to use matrox support in this ebuild again."
-			cd ${S}
-		else
-			einfo "Not building matrox driver.  It doesn't seem to like other archs.  Please let me know at chriswhite@gentoo.org if you find out otherwise."
-		fi
-	fi
-
-	# leave this in place till the configure/compilation borkage is completely corrected back to pre4-r4 levels.
+	#leave this in place till the configure/compilation borkage is completely corrected back to pre4-r4 levels.
 	# it's intended for debugging so we can get the options we configure mplayer w/, rather then hunt about.
 	# it *will* be removed asap; in the meantime, doesn't hurt anything.
 	echo "${myconf}" > ${T}/configure-options
@@ -469,12 +451,6 @@ src_install() {
 	     MANDIR=${D}/usr/share/man \
 	     install || die "Failed to install MPlayer!"
 	einfo "Make install completed"
-
-	if use matrox; then
-		cd ${S}/drivers
-		insinto /$(get_libdir)/modules/${KV}/kernel/drivers/char
-		doins mga_vid.${KV_OBJ}
-	fi
 
 	dodoc AUTHORS ChangeLog README
 	# Install the documentation; DOCS is all mixed up not just html

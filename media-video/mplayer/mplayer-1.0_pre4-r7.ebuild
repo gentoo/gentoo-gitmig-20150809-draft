@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.24 2004/11/09 15:07:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.25 2004/11/11 02:25:22 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -15,7 +15,6 @@ S="${WORKDIR}/MPlayer-${MY_PV}"
 SRC_URI="mirror://mplayer/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
-	mirror://gentoo/${P}-mga-kernel2.6.patch.tar.bz2
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
 	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )"
 # Only install Skin if GUI should be build (gtk as USE flag)
@@ -132,11 +131,6 @@ src_unpack() {
 	#bug #58082.  Fixes LANGUAGE variable issues
 	epatch ${FILESDIR}/mplayer-1.0_pre5-r1-conf_locale.patch
 
-	#Setup the matrox makefile
-	if use matrox; then
-		epatch ${DISTDIR}/${P}-mga-kernel2.6.patch.tar.bz2
-	fi # end of matrox related stuff
-
 	# Fix hppa compilation
 	if use hppa; then
 		sed -i -e "s/-O4/-O1/" "${S}/configure" || die "failed to sed configure"
@@ -217,6 +211,7 @@ src_compile() {
 		myconf="${myconf} --disable-svga --disable-vidix"
 	fi
 
+	myconf="${myconf} $(use_enable matrox mga)"
 	myconf="${myconf} $(use_enable 3dnow)"
 	myconf="${myconf} $(use_enable 3dnowex)"
 	myconf="${myconf} $(use_enable sse)"
@@ -325,12 +320,6 @@ src_install() {
 	     DATADIR=${D}/usr/share/mplayer \
 	     MANDIR=${D}/usr/share/man \
 	     install || die "Failed to install MPlayer!"
-
-	if use matrox; then
-		cd ${S}/drivers
-		insinto "/lib/modules/${KV}/kernel/drivers/char"
-		doins "mga_vid.${KV_OBJ}"
-	fi
 
 	dodoc AUTHORS ChangeLog README
 
