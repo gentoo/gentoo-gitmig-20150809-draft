@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.21 2003/01/07 00:08:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.22 2003/01/08 21:45:57 gerk Exp $
+
+  08 Jan 2003; Mark Guertin <gerk@gentoo.org> kdeartwork-3.1_rc6.ebuild:
+  added ~ppc to keywords
 
 *kdeartwork-3.1_rc6 (05 Jan 2003)
 
