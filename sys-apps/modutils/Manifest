@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 96ca4debf81b77da140091684d1f43b6 ChangeLog 6987
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 579d1f1568fc686511456813987a8c43 modutils-2.4.25.ebuild 1344
+MD5 a040f4ad4d41092455ebe9b275d7af6e ChangeLog 7082
 MD5 f2e4385dd0e2e2bec8d1d7d34ba71502 modutils-2.4.26.ebuild 1358
-MD5 0534f1313d805a832719c3653c0f1e68 modutils-2.4.27.ebuild 1025
-MD5 15611447c25c4be74563a4808c96aa9e files/alias.h.diff 255
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 3e9a1f430f71a3e349f8546e189b43d2 modutils-2.4.27.ebuild 1022
 MD5 bd23ddb87317bad29c6d70b7f0bfcede files/digest-modutils-2.4.25 68
+MD5 d5504b6d6ed1ef697275b3a48a1e49e7 files/2.4.27-gcc34.patch 231
+MD5 15611447c25c4be74563a4808c96aa9e files/alias.h.diff 255
 MD5 d836ad11c092b2c55cc5b398c2af485b files/digest-modutils-2.4.26 68
 MD5 123430bcca454dfee74acef6f3525a17 files/digest-modutils-2.4.27 68
-MD5 d5504b6d6ed1ef697275b3a48a1e49e7 files/2.4.27-gcc34.patch 231
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCB7UUKRy60XGEcJIRAsGtAKCdYarINLQKGG33TnVvJ8ORumffSACgoHus
-Y0rkPAHcgFUbX+ha2e+pGPU=
-=ZDEh
+iD8DBQFCPAiXugEuf3OQ0akRAvSYAKCL1KR6TWM/VqeRccfXkhk/zDSBawCggZ2x
+F0Ka4KUeAw9DDFfQNq2G/CM=
+=dPsA
 -----END PGP SIGNATURE-----
