@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gtkextra/python-gtkextra-0.22.ebuild,v 1.2 2004/06/25 01:45:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gtkextra/python-gtkextra-0.22.ebuild,v 1.3 2004/10/22 03:54:00 pythonhead Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://python-gtkextra.sourceforge.net/"
 SRC_URI="mirror://sourceforge/python-gtkextra/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="=x11-libs/gtk+-1.2.10*
 	=dev-python/pygtk-0.6*
