@@ -1,10 +1,10 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.3 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.4 2003/01/03 23:05:12 seemant Exp $
+
+*jbigkit-1.4 (05 Nov 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*jbigkit-1.4 (05 Nov 2002)
-
   05 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by Marko Mikulicic <marko@seul.org>.
