@@ -1,4 +1,4 @@
-MD5 9100a23e745fc0a8c4f072f369fb4b94 arc-5.21j.ebuild 618
-MD5 b6750aaeec13836585e4b8bbf546eacf ChangeLog 1204
-MD5 12b115e43717df51d9b655c7ed456240 files/digest-arc-5.21j 60
+MD5 b0a284de57191e82041b000c8f0dfd71 ChangeLog 1287
+MD5 83f472b9af6b484361be1190c8a4bb15 arc-5.21j.ebuild 624
 MD5 11bcb6a067f0bdd2e47b77a6a444b376 files/arc-521e-timeh.patch 516
+MD5 12b115e43717df51d9b655c7ed456240 files/digest-arc-5.21j 60
