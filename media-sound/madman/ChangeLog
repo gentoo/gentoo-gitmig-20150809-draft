@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/madman
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.1 2003/07/19 06:56:18 jje Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.2 2004/02/11 20:28:57 caleb Exp $
+
+  11 Feb 2004; Caleb Tennis <caleb@gentoo.org> madman-0.91.1.ebuild:
+  addwrite $QTDIR/etc/settings for sandbox fixes
 
 *madman-0.91.1 (19 Jul 2003)
 
