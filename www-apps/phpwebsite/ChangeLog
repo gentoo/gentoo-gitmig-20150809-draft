@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.10 2004/11/17 15:53:41 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.11 2004/11/23 23:54:16 kloeri Exp $
+
+  24 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  phpwebsite-0.9.3_p4-r2.ebuild:
+  Stable on alpha, bug 71502.
+
+  24 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  phpwebsite-0.9.3_p4-r2.ebuild:
+  Stable on alpha, bug 71502.
 
 *phpwebsite-0.9.3_p4-r2 (17 Nov 2004)
 
