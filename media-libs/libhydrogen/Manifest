@@ -1,3 +1,5 @@
 MD5 a81f4b16f0cf3553e7a114498c018363 ChangeLog 1014
-MD5 c4dd155987765c402aa5f05d94c95856 libhydrogen-0.8.0.ebuild 818
+MD5 bd2e02d9290bb637758345d9af47fe17 libhydrogen-0.8.0.ebuild 967
+MD5 df4f4050dc77f4205ec8f697ae4f8d61 libhydrogen-0.8.1_beta5.ebuild 817
 MD5 c8d5fcd2ff12b8752743a46f73ed562e files/digest-libhydrogen-0.8.0 69
+MD5 d4d63074ccd3e776ac594ab6f11f8f47 files/digest-libhydrogen-0.8.1_beta5 74
