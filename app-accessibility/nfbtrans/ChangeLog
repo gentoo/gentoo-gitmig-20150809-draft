@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/nfbtrans
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/ChangeLog,v 1.8 2005/01/01 10:51:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/ChangeLog,v 1.9 2005/03/27 00:19:53 hansmi Exp $
+
+  27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> nfbtrans-7.74.ebuild:
+  Stable on ppc.
 
   30 Oct 2004; William Hubbs,,, <williamh@gentoo.org> nfbtrans-7.74.ebuild:
   Moved to stable x86.
