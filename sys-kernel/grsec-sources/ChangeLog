@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.17 2004/03/12 02:13:58 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.18 2004/04/18 07:56:37 solar Exp $
+
+*grsec-sources-2.4.26.2.0 (18 Apr 2004)
+
+  18 Apr 2004; <solar@gentoo.org> grsec-sources-2.4.24.1.9.13-r1.ebuild,
+  grsec-sources-2.4.24.1.9.13.ebuild, grsec-sources-2.4.25.1.9.14.ebuild,
+  grsec-sources-2.4.25.2.0_rc5.ebuild, grsec-sources-2.4.26.2.0.ebuild,
+  metadata.xml, files/do_brk_fix.patch,
+  files/grsec-sources-2.4.23.CAN-2003-0985.patch,
+  files/grsec-sources-2.4.23.rtc_fix.patch,
+  files/grsec-sources-2.4.24.1.9.13.munmap.patch:
+  grsec2 has gone stable upstream, removing old portage cruft from tree to make
+  life for security@gentoo easier.
 
   11 Mar 2004; <solar@gentoo.org> grsec-sources-2.4.24.1.9.13-r1.ebuild,
   grsec-sources-2.4.24.1.9.13.ebuild, grsec-sources-2.4.25.1.9.14.ebuild,

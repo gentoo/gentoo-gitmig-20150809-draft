@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.24.1.9.13.ebuild,v 1.2 2004/03/12 02:13:58 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.26.2.0.ebuild,v 1.1 2004/04/18 07:56:37 solar Exp $
 
 # We control what versions of what we download based on the KEYWORDS we
 # are using for the various arches. Thus if we want grsec1 stable we run
@@ -17,7 +17,7 @@ IUSE=""
 inherit eutils
 inherit kernel
 
-[ "$OKV" == "" ] && OKV="2.4.24"
+[ "$OKV" == "" ] && OKV="2.4.26"
 
 PATCH_BASE="${PV/${OKV}./}"
 PATCH_BASE="${PATCH_BASE/_/-}"
@@ -34,20 +34,24 @@ if [ "${ARCH}" == "hppa" ]; then
 	PARISC_KERNEL_VERSION="pa1"
 	KV="${OKV}-${PARISC_KERNEL_VERSION}${EXTRAVERSION}"
 	HPPA_PATCH_SRC_BASE="parisc-linux-${OKV}-${PARISC_KERNEL_VERSION}${EXTRAVERSION}.gz"
-	HPPA_SRC_URI="mirror://gentoo/${HPPA_PATCH_SRC_BASE} http://dev.gentoo.org/~pappy/gentoo-x86/sys-kernel/grsec-sources/${HPPA_PATCH_SRC__BASE}"
+	HPPA_SRC_URI="mirror://gentoo/${HPPA_PATCH_SRC_BASE} http://dev.gentoo.org/~pappy/gentoo-x86/sys-kernel/grsec-sources/${HPPA_PATCH_SRC_BASE}"
 	PATCH_SRC_BASE="${HPPA_PATCH_SRC_BASE}"
 fi
 
 DESCRIPTION="Vanilla sources of the linux kernel with the grsecurity ${PATCH_BASE} patch"
 
-SRC_URI="hppa? ( $HPPA_SRC_URI ) \
+DYSFUNCTIONAL_SRC_URI="hppa? ( $HPPA_SRC_URI ) \
 	!hppa? ( http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
 		http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.sign ) \
 	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 
+SRC_URI="http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
+	http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.sign  \
+	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
+
 HOMEPAGE="http://www.kernel.org/ http://www.grsecurity.net"
 
-[ ${PATCH_BASE/.*/} == 1 ] && KEYWORDS="x86 -hppa" || KEYWORDS="~x86 ~sparc ~ppc ~alpha -hppa"
+KEYWORDS="x86 sparc ppc alpha amd64 -hppa"
 
 SLOT="${KV}"
 S="${WORKDIR}/linux-${KV}"
@@ -59,8 +63,8 @@ src_unpack() {
 
 	[ -f "${DISTDIR}/${PATCH_SRC_BASE}" ] || die "File does not exist?"
 
-	# users are often confused by what settings should be set so
-	# here lets them an example of what a P4 desktop would look like.
+	# users are often confused by what settings should be set.
+	# so we provide an  example of what a P4 desktop would look like.
 	cp ${FILESDIR}/2.4.24-x86.config gentoo-grsec-custom-example-2.4.24-x86.config
 
 	ebegin "Patching the kernel with ${PATCH_SRC_BASE}"
@@ -75,7 +79,4 @@ src_unpack() {
 	touch docs/patches.txt
 	kernel_universal_unpack
 
-	# fixed in .24
-	#epatch ${FILESDIR}/${PN}-${OKV}.CAN-2003-0985.patch
-	#epatch ${FILESDIR}/${PN}-${OKV}.rtc_fix.patch
 }
