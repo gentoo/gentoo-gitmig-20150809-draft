@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Tod Neidt <tneidt@fidnet.com>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2.ebuild,v 1.2 2002/01/24 21:47:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2.ebuild,v 1.3 2002/05/23 06:50:19 seemant Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ SRC_URI="http://prdownloads.sourceforge.net/wxwindows/${P}.tar.bz2"
 
 HOMEPAGE="http://www.wxwindows.org/"
 
-DEPEND=">=x11-libs/gtk+-1.2.3
+DEPEND="=x11-libs/gtk+-1.2*
 	dev-libs/libunicode
 	media-libs/libpng
 	media-libs/jpeg

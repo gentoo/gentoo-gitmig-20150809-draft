@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.0-r1.ebuild,v 1.1 2002/03/23 22:38:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.0-r1.ebuild,v 1.2 2002/05/23 06:50:19 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small webbrowser for gnome that uses mozillas render engine"
@@ -19,7 +19,7 @@ DEPEND=">=dev-libs/libxml-1.8.16
 		>=gnome-base/oaf-0.6.7
 		>=media-libs/gdk-pixbuf-0.16.0-r1
 		>=gnome-base/ORBit-0.5.13
-		>=x11-libs/gtk+-1.2.10
+		=x11-libs/gtk+-1.2*
 		>=gnome-base/bonobo-1.0.19
 		nls? ( sys-devel/gettext )"
 

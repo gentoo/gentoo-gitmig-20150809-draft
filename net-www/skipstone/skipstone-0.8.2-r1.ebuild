@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Damon Conway <damon@3jane.net> 
-# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.8.2-r1.ebuild,v 1.2 2002/05/21 18:19:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.8.2-r1.ebuild,v 1.3 2002/05/23 06:50:19 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ based web browser based on the Mozilla engine"
@@ -9,7 +9,7 @@ SRC_URI="http://www.muhri.net/skipstone/${P}.tar.gz"
 HOMEPAGE="http://www.muhri.net/skipstone/"
 
 DEPEND=">=net-www/mozilla-0.9.9
-	>=x11-libs/gtk+-1.2.10"
+	=x11-libs/gtk+-1.2*"
 
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"

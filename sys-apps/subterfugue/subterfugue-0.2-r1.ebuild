@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2-r1.ebuild,v 1.1 2001/10/06 10:08:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2-r1.ebuild,v 1.2 2002/05/23 06:50:19 seemant Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,7 +12,7 @@ SRC_URI="http://prdownloads.sourceforge.net/subterfugue/subterfugue-0.2.tgz"
 HOMEPAGE="http://www.subterfugue.org"
 
 DEPEND=">=dev-lang/python-2.0
-        gtk? ( >=x11-libs/gtk+-1.2.10-r4 )"
+        gtk? ( =x11-libs/gtk+-1.2* )"
 
 src_unpack() {
 

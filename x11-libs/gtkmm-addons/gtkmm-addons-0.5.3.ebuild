@@ -8,7 +8,7 @@ DESCRIPTION="Gtk--Addons - a set of extensions to gtk[--]."
 SRC_URI="http://home.wtal.de/petig/Gtk/${MY_P}.tar.gz"
 HOMEPAGE="http://home.wtal.de/petig/Gtk/"
 
-DEPEND=">=x11-libs/gtk+-1.2.10-r4
+DEPEND="=x11-libs/gtk+-1.2*
 	>=x11-libs/gtkmm-1.2.5-r1"
 
 
