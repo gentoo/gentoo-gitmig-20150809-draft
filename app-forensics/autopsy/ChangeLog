@@ -1,6 +1,6 @@
 # ChangeLog for app-forensics/autopsy
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/ChangeLog,v 1.8 2004/12/25 16:42:39 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/ChangeLog,v 1.9 2005/01/01 14:22:21 eradicator Exp $
 
   25 Dec 2004; Jason Wever <weeve@gentoo.org> autopsy-2.03.ebuild:
   Stable on sparc.

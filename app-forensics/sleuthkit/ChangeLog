@@ -1,6 +1,6 @@
 # ChangeLog for app-forensics/sleuthkit
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.7 2004/12/25 16:39:57 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.8 2005/01/01 14:24:27 eradicator Exp $
 
   25 Dec 2004; Jason Wever <weeve@gentoo.org> sleuthkit-1.73.ebuild:
   Stable on sparc.

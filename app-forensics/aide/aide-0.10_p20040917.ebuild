@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917.ebuild,v 1.2 2004/09/18 16:25:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.10_p20040917.ebuild,v 1.3 2005/01/01 14:21:52 eradicator Exp $
 
 inherit eutils
 

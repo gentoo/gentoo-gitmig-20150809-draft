@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-1.73.ebuild,v 1.4 2004/12/25 16:39:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-1.73.ebuild,v 1.5 2005/01/01 14:24:27 eradicator Exp $
 
 inherit toolchain-funcs
 
