@@ -1,9 +1,14 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.13 2002/10/15 16:32:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.14 2002/10/19 23:19:19 cselkirk Exp $
 
 *sawfish-1.0.1-r6 (15 Oct 2002)
   
+  20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> sawfish-1.0.1-r5.ebuild 
+  sawfish-1.0.1-r6.ebuild :
+
+  Added ppc to KEYWORDS.
+
   15 Oct 2002; foser <foser@gentoo.org> sawfish-1.0.1-r6.ebuild :
   Added MAKEOPTS="-j1" (see bug #4728)
 
