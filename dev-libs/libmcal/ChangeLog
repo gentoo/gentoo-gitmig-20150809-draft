@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.1 2003/05/09 20:17:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.2 2003/07/24 11:23:54 gmsoft Exp $
+
+*libmcal-0.7-r1 (24 Jul 2003)
+
+  24 Jul 2003; Guy Martin <gmsoft@gentoo.org> libmcal-0.7-r1.ebuild :
+  Now use $CFLAGS. Fix needed for hppa to add -fPIC to CFLAGS.
+  Marked stable on hppa.
 
 *libmcal-0.7 (09 May 2003)
 

@@ -1,3 +1,5 @@
-MD5 0018652ee0ad6e2e58f3a3ecb71bcb1c libmcal-0.7.ebuild 742
 MD5 3838f2141949871eba80454450eab00b ChangeLog 411
+MD5 0018652ee0ad6e2e58f3a3ecb71bcb1c libmcal-0.7.ebuild 742
+MD5 6c56c26441b32e2bce64bce27de66740 libmcal-0.7-r1.ebuild 827
 MD5 33ec0e0ab40e02bedea5e6b2b8ec51bc files/digest-libmcal-0.7 62
+MD5 33ec0e0ab40e02bedea5e6b2b8ec51bc files/digest-libmcal-0.7-r1 62
