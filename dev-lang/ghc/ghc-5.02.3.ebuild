@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.7 2002/08/14 11:58:50 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.8 2002/08/14 15:48:13 murphy Exp $
 
 
 # ebuild for Glorious Glasgow Haskell
@@ -120,7 +120,7 @@ fi
 #	 - We need a set of HC files suitable for our architecture.
 
 # List of platforms for which registerised HC files are available.
-HC_PLATS="x86 sparc"
+HC_PLATS="x86"
 
 SRC_URI="http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-src.tar.bz2"
 if test x$boot_from_hc = xyes; then
