@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p2.ebuild,v 1.3 2004/05/30 01:31:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p2-r1.ebuild,v 1.1 2004/05/30 01:31:52 robbat2 Exp $
 
 inherit eutils
 
@@ -159,7 +159,7 @@ src_compile() {
 
 	# Extras
 	# Speed option
-	myconf="${myconf} --with-buffered-dump"
+	myconf="${myconf} --with-buffered-dump --with-qde"
 	# Debug
 	myconf="${myconf} `use_with debug debugging`"
 	# PIC
@@ -332,8 +332,10 @@ pkg_postinst() {
 	einfo "amanda user to the 'disk' group and uncomment following lines in"
 	einfo "your /etc/devfs.d/amanda:"
 	einfo "SCSI:"
-	einfo "REGISTER   ^scsi/host.*/bus.*/target.*/lun.*/part[0-9]    PERMISSIONS root.disk 660"
+	einfo "REGISTER   ^scsi/host.*/bus.*/target.*/lun.*/part[0-9]  PERMISSIONS root.disk 660"
 	einfo "IDE:"
-	einfo "REGISTER   ^ide/host.*/bus.*/target.*/lun.*/part[0-9]    PERMISSIONS root.disk 660"
-
+	einfo "REGISTER   ^ide/host.*/bus.*/target.*/lun.*/part[0-9]   PERMISSIONS root.disk 660"
+	echo
+	einfo "NOTICE: If you have a tape changer, also uncomment the following"
+	einfo "REGISTER   ^scsi/host.*/bus.*/target.*/lun.*/generic    PERMISSIONS root.disk 660"
 }

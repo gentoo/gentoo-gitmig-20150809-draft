@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/amanda
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.16 2004/04/19 14:57:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.17 2004/05/30 01:31:52 robbat2 Exp $
+
+*amanda-2.4.4_p2-r1 (29 May 2004)
+
+  29 May 2004; Robin H. Johnson <robbat2@gentoo.org>
+  amanda-2.4.4_p2-r1.ebuild, amanda-2.4.4_p2.ebuild, files/amanda-devfs:
+  add note for tape changer, and enable qde support.
 
   20 Apr 2004; Daniel Black <dragonheart@gentoo.org> amanda-2.4.4-r3.ebuild,
   amanda-2.4.4_p2.ebuild:
