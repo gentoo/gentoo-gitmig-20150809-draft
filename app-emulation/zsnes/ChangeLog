@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/zsnes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.4 2002/05/17 14:13:25 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.5 2002/07/06 18:06:04 sunflare Exp $
+
+*zsnes-1.35 (06 Jun 2002)
+
+  06 Jun 2002; Phil Bordelon <sunflare@gentoo.org> zsnes-1.35.ebuild :
+
+  Updated to the latest version.  Brought the ebuild up to current repoman
+  and lintool specs.  The patch in -r2 is no longer needed.  The Author in
+  the ebuild was Dan Armak.
 
 *zsnes-1.337-r2 (17 May 2002)
   
