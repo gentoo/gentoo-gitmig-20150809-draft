@@ -9,7 +9,7 @@ MD5 608d202bf0e75fcd128fab85401471cd util-linux-2.12-r2.ebuild 3198
 MD5 f3789fe0aec47dff68ad09c16afc1371 util-linux-2.12-r3.ebuild 3699
 MD5 b85a88cc0a5e6a7d2d10835b4a625511 util-linux-2.12-r4.ebuild 4120
 MD5 a7d560c1fbec607e50ddc90151460142 util-linux-2.12-r5.ebuild 4215
-MD5 b7ed1b9e07444a356bc1b8010ae66abb util-linux-2.12b.ebuild 4891
+MD5 63321b8400526dd47cf707bee73cf3e3 util-linux-2.12b.ebuild 4896
 MD5 02afa4d774f45ab0b9ef42ecc1748005 files/digest-util-linux-2.11z-r8 153
 MD5 02afa4d774f45ab0b9ef42ecc1748005 files/digest-util-linux-2.11z-r9 153
 MD5 830453d37b748b7e2ec454603e33b920 files/digest-util-linux-2.12-r2 151
@@ -39,7 +39,7 @@ MD5 07a3dfffc55bcc7ef2868e025beb853e files/util-linux-2.12b-pic.patch 2874
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBXE2KHTu7gpaalycRArRUAKCPb7jx74ebun63KXzpWLuNw5agggCgxjWZ
-EQX7fjijrdr57yQZGVw5OE4=
-=LQP7
+iD8DBQFBXVGHHTu7gpaalycRAjK+AJ9U9NsXeGP9Yd7t7xpK8JDVSL5NJwCfTDIT
+easmdmBm5R0vbq5lwctHPXc=
+=/W/R
 -----END PGP SIGNATURE-----
