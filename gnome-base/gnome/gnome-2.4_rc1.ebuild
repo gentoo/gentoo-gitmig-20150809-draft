@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4_rc1.ebuild,v 1.1 2003/09/07 23:31:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4_rc1.ebuild,v 1.2 2003/09/08 00:37:21 liquidx Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -10,7 +10,7 @@ SLOT="2.0"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop, 
