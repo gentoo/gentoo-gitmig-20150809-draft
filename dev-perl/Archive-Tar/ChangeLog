@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Tar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.23 2004/11/20 04:44:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.24 2004/11/21 21:34:23 hardave Exp $
+
+  21 Nov 2004; Hardave Riar <hardave@gentoo.org> Archive-Tar-1.09.ebuild:
+  Stable on mips, dep for bug #68570
 
   20 Nov 2004; Daniel Black <dragonheart@gentoo.org> Archive-Tar-1.10.ebuild:
   ppc stable to support bug #68570

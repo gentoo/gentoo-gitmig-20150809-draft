@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/Archive-Tar-1.09.ebuild,v 1.6 2004/10/31 09:01:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/Archive-Tar-1.09.ebuild,v 1.7 2004/11/21 21:34:23 hardave Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cpan.org/modules/by-module/Archive/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ~ppc sparc x86"
+KEYWORDS="alpha amd64 hppa mips ~ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/IO-Zlib
