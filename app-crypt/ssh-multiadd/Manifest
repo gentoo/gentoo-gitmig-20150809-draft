@@ -1,4 +1,4 @@
-MD5 fbec18fcdf6e6548d2c2363220ef51d2 ChangeLog 773
-MD5 673f269015b1de32a2a8239cfc58b656 ssh-multiadd-1.3.1.ebuild 1099
+MD5 e5162cf1e0e476fda858e6ff4c61ad82 ChangeLog 889
+MD5 b07dcbc6e220e2fbef1ecfc8545c50d0 ssh-multiadd-1.3.1.ebuild 1115
 MD5 7c1f87be35dca1f8d92794add0817643 files/digest-ssh-multiadd-1.3.1 69
 MD5 340fd5d0075d478c14bcb7ef897da818 files/ssh-multiadd-1.3.1.diff 293
