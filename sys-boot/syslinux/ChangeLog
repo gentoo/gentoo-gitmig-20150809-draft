@@ -1,0 +1,61 @@
+# ChangeLog for sys-apps/syslinux
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Id: ChangeLog,v 1.1 2003/12/09 08:28:31 seemant Exp $
+
+*syslinux-2.06 (08 Dec 2003)
+
+  08 Dec 2003; Seemant Kulleen <seemant@gentoo.org> metadata.xml,
+  syslinux-1.75.ebuild, syslinux-2.05.ebuild, syslinux-2.06.ebuild,
+  files/2.06-nasm.patch:
+  moved from sys-apps to sys-boot
+
+  16 Sep 2003; Seemant Kulleen <seemant@gentoo.org> syslinux-2.05.ebuild,
+  syslinux-2.06.ebuild:
+  dependency changed from app-admin/mtools to sys-fs/mtools
+
+*syslinux-2.06 (01 Sep 2003)
+
+  02 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add patch to compile against latest nasm #23481.
+  Patch made by bartron <bartron@gmx.net>.
+
+  01 Sep 2003; Martin Holzer <mholzer@gentoo.org> syslinux-2.06.ebuild:
+  Version bumped.
+
+*syslinux-2.05 (31 Aug 2003)
+
+  02 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add patch to compile against latest nasm #23481.
+  Patch made by bartron <bartron@gmx.net>.
+
+  31 Aug 2003; Martin Holzer <mholzer@gentoo.org> syslinux-2.05.ebuild:
+  Version bumped.
+
+*syslinux-2.04 (25 Jun 2003)
+
+  25 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
+
+  25 May 2003; Martin Holzer <mholzer@gentoo.org> syslinux-1.75.ebuild,
+  syslinux-2.01.ebuild, syslinux-2.02.ebuild:
+  now uses mirror://kernel
+
+*syslinux-2.02 (17 Feb 2003)
+
+  17 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
+
+*syslinux-2.01 (01 Feb 2003)
+
+  01 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump for ma floppy.
+
+*syslinux-1.75 (28 Jun 2002)
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (-ppc -sparc -sparc64)
+
+  28 Jun 2002; Bart Verwilst <verwilst@gentoo.org>  syslinux-1.75.ebuild
+  ChangeLog files/digest-syslinux-1.75 :
+
+  Initial package from an ebuild submitted by (whom?) in bug # (Which?)
