@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/doxygen-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/doxygen-syntax/ChangeLog,v 1.4 2005/02/18 18:53:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/doxygen-syntax/ChangeLog,v 1.5 2005/02/18 20:48:14 slarti Exp $
+
+  18 Feb 2005; Tom Martin <slarti@gentoo.org> doxygen-syntax-1.9.ebuild:
+  Marked ~amd64.
 
   18 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   doxygen-syntax-1.9.ebuild:

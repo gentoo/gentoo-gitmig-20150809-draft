@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/selinux-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/selinux-syntax/ChangeLog,v 1.6 2005/02/13 18:31:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/selinux-syntax/ChangeLog,v 1.7 2005/02/18 20:51:13 slarti Exp $
+
+  18 Feb 2005; Tom Martin <slarti@gentoo.org>
+  selinux-syntax-20040707.ebuild:
+  Marked ~amd64.
 
   13 Feb 2005; Markus Rothe <corsair@gentoo.org>
   selinux-syntax-20040707.ebuild:
