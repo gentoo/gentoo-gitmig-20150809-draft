@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.77.0.ebuild,v 1.1 2004/02/28 21:50:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.77.0.ebuild,v 1.2 2004/04/27 22:13:32 agriffis Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P=${P/s/S}
 

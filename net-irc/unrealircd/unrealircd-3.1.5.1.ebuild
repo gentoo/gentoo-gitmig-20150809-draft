@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.1.5.1.ebuild,v 1.6 2004/02/21 02:42:37 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.1.5.1.ebuild,v 1.7 2004/04/27 22:15:41 agriffis Exp $
+
+inherit eutils
 
 MY_P=Unreal${PV}-Valek
 DESCRIPTION="aimed to be an advanced, not an easy IRCd"

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.04_beta1.ebuild,v 1.2 2004/04/15 23:18:44 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.04_beta1.ebuild,v 1.3 2004/04/27 22:07:09 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Console vypress chat clone for *nix like systems."
 HOMEPAGE="http://deep.perm.ru/echat/"

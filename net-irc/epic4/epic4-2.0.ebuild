@@ -17,7 +17,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=dev-lang/perl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )"
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 replace-flags "-O?" "-O"
 
 src_compile() {

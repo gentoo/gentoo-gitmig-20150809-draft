@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.2.6.ebuild,v 1.1 2004/02/05 22:26:29 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.2.6.ebuild,v 1.2 2004/04/27 22:08:55 agriffis Exp $
 
 IUSE="ipv6 perl ssl tcltk"
 
@@ -18,7 +18,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	ssl? ( >=dev-libs/openssl-0.9.5 )
 	tcltk? ( dev-lang/tcl )"
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 replace-flags "-O?" "-O"
 
 src_compile() {

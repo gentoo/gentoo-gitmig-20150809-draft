@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.46 2004/04/12 23:39:27 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.47 2004/04/27 22:11:45 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> irssi-0.8.6-r5.ebuild,
+  irssi-0.8.6-r6.ebuild:
+  Add inherit eutils
 
   12 Apr 2004; <randy@gentoo.org> irssi-0.8.9.ebuild:
   Adding s390 keywords

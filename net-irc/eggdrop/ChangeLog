@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.14 2004/04/15 16:27:31 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.15 2004/04/27 22:07:59 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> eggdrop-1.6.15-r1.ebuild,
+  eggdrop-1.6.15-r2.ebuild, eggdrop-1.6.15.ebuild:
+  Add inherit eutils
 
   15 Apr 2004; Jon Portnoy <avenj@gentoo.org> eggdrop-1.6.15-r2.ebuild :
   AMD64 keywords.

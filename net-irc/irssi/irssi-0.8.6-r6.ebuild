@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r6.ebuild,v 1.1 2003/11/27 02:26:19 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r6.ebuild,v 1.2 2004/04/27 22:11:45 agriffis Exp $
 
 IUSE="nls ipv6 perl ssl"
 
-inherit perl-module
+inherit perl-module eutils
 
 DESCRIPTION="A modular textUI IRC client with IPv6 support."
 SRC_URI="http://irssi.org/files/${P}.tar.bz2"

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.50.ebuild,v 1.1 2004/01/19 01:14:35 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.50.ebuild,v 1.2 2004/04/27 22:12:37 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Perl IRC Statistics Generator"
 HOMEPAGE="http://pisg.sourceforge.net/"

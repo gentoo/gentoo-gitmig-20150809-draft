@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/supybot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.1 2004/02/28 21:50:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.2 2004/04/27 22:13:32 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> supybot-0.77.0.ebuild:
+  Add inherit eutils
 
 *supybot-0.77.0 (28 Feb 2004)
 

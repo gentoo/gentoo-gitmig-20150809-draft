@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/iip-1.1.0.ebuild,v 1.2 2004/01/19 01:32:48 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/iip-1.1.0.ebuild,v 1.3 2004/04/27 22:10:50 agriffis Exp $
+
+inherit eutils
 
 S="${WORKDIR}/${P}/src"
 DESCRIPTION="Proxy server for encrypted anonymous irc-like network"

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/pisg
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.4 2004/03/16 23:17:18 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.5 2004/04/27 22:12:37 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> pisg-0.50.ebuild:
+  Add inherit eutils
 
 *pisg-0.52 (16 Mar 2004)
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.1.ebuild,v 1.11 2004/04/05 15:04:17 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.1.ebuild,v 1.12 2004/04/27 22:17:41 agriffis Exp $
+
+inherit eutils
 
 IUSE="perl tcltk python ssl gtk mmx ipv6"
 
