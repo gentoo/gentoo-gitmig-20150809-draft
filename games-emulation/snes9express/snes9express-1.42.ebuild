@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/snes9express-1.42.ebuild,v 1.2 2004/04/05 08:35:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/snes9express-1.42.ebuild,v 1.3 2004/06/24 22:36:08 agriffis Exp $
 
 DESCRIPTION="A graphical interface for the X11 versions of snes9x"
 SRC_URI="mirror://sourceforge/snes9express/${P}.tar.gz"

@@ -1,6 +1,6 @@
 # ChangeLog for games-emulation/epsxe
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/ChangeLog,v 1.3 2003/09/10 15:58:43 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/ChangeLog,v 1.4 2004/06/24 22:26:08 agriffis Exp $
 
   09 Sep 2003; Michael Sterrett <msterret@gentoo.org> epsxe-1.6.0-r3.ebuild:
   moved packages from app-emulation to games-emulation

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/qmamecat/qmamecat-0.44.46.ebuild,v 1.1 2004/05/27 21:49:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/qmamecat/qmamecat-0.44.46.ebuild,v 1.2 2004/06/24 22:35:35 agriffis Exp $
 
 inherit kde
 

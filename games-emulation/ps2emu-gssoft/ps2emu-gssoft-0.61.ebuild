@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ps2emu-gssoft-0.61.ebuild,v 1.4 2004/05/27 01:37:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ps2emu-gssoft-0.61.ebuild,v 1.5 2004/06/24 22:33:06 agriffis Exp $
 
 inherit games
 

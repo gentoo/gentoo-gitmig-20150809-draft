@@ -1,6 +1,6 @@
 # ChangeLog for games-emulation/psemu-peopssoftgpu
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.4 2004/06/03 19:45:56 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.5 2004/06/24 22:34:59 agriffis Exp $
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   psemu-peopssoftgpu-1.15.ebuild:

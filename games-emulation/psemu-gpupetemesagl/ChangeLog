@@ -1,6 +1,6 @@
 # ChangeLog for games-emulation/psemu-gpupetemesagl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-gpupetemesagl/ChangeLog,v 1.3 2003/11/16 16:22:59 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-gpupetemesagl/ChangeLog,v 1.4 2004/06/24 22:34:13 agriffis Exp $
 
 *psemu-gpupetemesagl-1.75 (16 Nov 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.4.0.ebuild,v 1.2 2004/06/14 05:29:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.4.0.ebuild,v 1.3 2004/06/24 22:32:00 agriffis Exp $
 
 inherit flag-o-matic eutils games
 

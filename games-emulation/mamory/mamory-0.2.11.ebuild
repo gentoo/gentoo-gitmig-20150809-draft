@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/mamory-0.2.11.ebuild,v 1.4 2004/02/29 10:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/mamory-0.2.11.ebuild,v 1.5 2004/06/24 22:30:42 agriffis Exp $
 
 inherit games
 

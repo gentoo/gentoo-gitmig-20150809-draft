@@ -1,6 +1,6 @@
 # ChangeLog for games-emulation/ps2emu-gssoft
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ChangeLog,v 1.4 2004/03/21 20:02:18 dholm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ChangeLog,v 1.5 2004/06/24 22:33:06 agriffis Exp $
 
   21 Mar 2004; David Holm <dholm@gentoo.org> ps2emu-gssoft-0.61.ebuild:
   Added to ~ppc.

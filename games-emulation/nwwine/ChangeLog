@@ -1,6 +1,6 @@
 # ChangeLog for games-emulation/nwwine
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/ChangeLog,v 1.4 2004/03/04 09:58:18 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/ChangeLog,v 1.5 2004/06/24 22:31:49 agriffis Exp $
 
 *nwwine-20030911 (04 Mar 2004)
 

@@ -1,6 +1,6 @@
 # ChangeLog for games-emulation/gxmame
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.6 2004/04/15 16:56:53 kugelfang Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.7 2004/06/24 22:29:14 agriffis Exp $
 
   15 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> gxmame-0.34b.ebuild:
   marked ~amd64

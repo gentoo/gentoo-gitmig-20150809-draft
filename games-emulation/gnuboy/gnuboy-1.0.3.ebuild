@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/gnuboy-1.0.3.ebuild,v 1.6 2004/04/19 21:38:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/gnuboy-1.0.3.ebuild,v 1.7 2004/06/24 22:28:21 agriffis Exp $
 
 DESCRIPTION="Gameboy emulator with multiple renderers"
 HOMEPAGE="http://gnuboy.unix-fu.org/"

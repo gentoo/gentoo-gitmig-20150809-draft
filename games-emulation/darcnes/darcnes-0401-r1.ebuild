@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r1.ebuild,v 1.3 2004/06/07 03:45:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/darcnes-0401-r1.ebuild,v 1.4 2004/06/24 22:25:15 agriffis Exp $
 
 DESCRIPTION="A multi-system emulator"
 SRC_URI="http://www.dridus.com/~nyef/darcnes/download/dn9b${PV}.tgz"

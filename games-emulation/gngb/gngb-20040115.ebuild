@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngb/gngb-20040115.ebuild,v 1.2 2004/03/02 09:35:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngb/gngb-20040115.ebuild,v 1.3 2004/06/24 22:27:35 agriffis Exp $
 
 DESCRIPTION="Gameboy / Gameboy Color emulator"
 HOMEPAGE="http://m.peponas.free.fr/gngb/"

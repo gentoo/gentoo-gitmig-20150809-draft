@@ -1,6 +1,6 @@
 # ChangeLog for games-emulation/mupen64
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.4 2003/09/27 08:06:11 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.5 2004/06/24 22:31:04 agriffis Exp $
 
   27 Sep 2003; Michael Sterrett <msterret@gentoo.org> mupen64-0.3.ebuild,
   files/mupen64:
