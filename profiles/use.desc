@@ -66,6 +66,8 @@ libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
 libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric 
 libwww - Adds libwww support (General purpose WEB API)
 matrox - Adds Matrox MGA support to mplayer
+maildir - Adds support for maildir (~/.maildir) style mail spools
+mbox - Adds support for mbox (/var/spool/mail) style mail spools
 mikmod - Adds libmikmod support to allow playing of SoundTracker-style music files
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
 motif - Adds motif support (Open Motif)
