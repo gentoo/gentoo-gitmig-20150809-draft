@@ -10,6 +10,7 @@ directfb
 avi
 icc
 icc-pgo
+ifc
 krb4
 mmx
 mplayer
