@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.36 2003/02/22 04:36:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.37 2003/02/24 12:05:23 spider Exp $
+
+
+*gnome-pane-1.4.2-r2 (24 Feb 2003)
+  
+  24 Feb 2003; Spider <spider@gentoo.org> gnome-pane-1.4.2-r2.ebuild :
+  removed the screenshoter applet and the button for it, this will make it not
+  conflict with the gnome-panel 2.2 package anymore
 
 *gnome-panel-2.2.0.1-r1 (17 Feb 2003)
 
