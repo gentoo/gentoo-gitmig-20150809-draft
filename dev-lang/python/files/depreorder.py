@@ -37,7 +37,7 @@ for pkg in pkgs_to_reorder:
     # match() finds the versions of all those that are installed
     for dep in realdeps[1]:
         vardeps = vardeps + varapi.match(dep)
-        dep_cache[pkg] = ( 0, vardeps, slot )
+    dep_cache[pkg] = ( 0, vardeps, slot )
 
 # then we just naively append to a sorted list of deps using this rule.
 # if a dependency is going to be merged, we add it to the list like
