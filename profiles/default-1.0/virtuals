@@ -18,7 +18,6 @@ virtual/blackbox		x11-wm/blackbox
 virtual/emacs			app-editors/emacs
 virtual/cron			sys-apps/dcron
 virtual/xemacs			app-editors/xemacs
-virtual/pppd			net-dialup/ppp
 virtual/sylpheed		net-mail/sylpheed
 virtual/php				dev-php/mod_php
 virtual/textbrowser		net-www/links
