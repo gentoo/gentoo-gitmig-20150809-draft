@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/module-init-tools
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.47 2004/01/07 19:55:27 avenj Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.48 2004/01/15 13:23:19 agriffis Exp $
+
+  15 Jan 2004; <agriffis@gentoo.org> module-init-tools-0.9.15_pre4.ebuild:
+  stable on ia64
 
   07 Jan 2004; Jon Portnoy <avenj@gentoo.org> 
   module-init-tools-0.9.15_pre4.ebuild :
