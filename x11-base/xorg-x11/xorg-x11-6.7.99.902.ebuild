@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.902.ebuild,v 1.7 2004/08/29 03:53:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.902.ebuild,v 1.8 2004/09/06 20:59:59 ciaranm Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1262,13 +1262,8 @@ print_info() {
 	einfo "read XF86Config."
 
 	# Try to get people to read /usr/share/fonts move
-	for TICKER in 1 2 3 4 5
-	do
-		# Double beep here.
-		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-		echo -ne "\a" ; sleep 1
-	done
-	sleep 10
+	ebeep 5
+	epause 10
 }
 
 pkg_postinst() {

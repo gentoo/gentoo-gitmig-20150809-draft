@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.7 2004/08/02 19:42:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.8 2004/09/06 20:56:20 ciaranm Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -1315,13 +1315,8 @@ pkg_postinst() {
 	echo
 
 	# Try to get people to read /usr/share/fonts move
-	for TICKER in 1 2 3 4 5
-	do
-		# Double beep here.
-		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-		echo -ne "\a" ; sleep 1
-	done
-	sleep 10
+	ebeep 5
+	epause 10
 
 	if use 3dfx
 	then

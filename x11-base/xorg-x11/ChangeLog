@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.104 2004/09/04 17:25:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.105 2004/09/06 20:59:59 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> xorg-x11-6.7.0-r1.ebuild,
+  xorg-x11-6.7.0-r2.ebuild, xorg-x11-6.7.99.902.ebuild,
+  xorg-x11-6.7.99.903.ebuild, xorg-x11-6.7.99.904.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   04 Sep 2004; Seemant Kulleen <seemant@gentoo.org>
   xorg-x11-6.7.99.904.ebuild:
