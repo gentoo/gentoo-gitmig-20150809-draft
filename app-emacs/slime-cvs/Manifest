@@ -1,0 +1,7 @@
+MD5 b41b8160f604cc74ee92eaff8ae68ddc slime-cvs-0.ebuild~ 2064
+MD5 a4af13f5c0e60b461d7df36b92bd8d5d slime-cvs-0.ebuild 1155
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 9b253aa445c6c9f0a5583cfae4b471de files/50ilisp-gentoo.el 4832
+MD5 e364ba1a9e3718f3ea4725ee9dca96da files/50ilispclc-gentoo.el 165
+MD5 aac55295763243322ae93f42747c6271 files/swank.asd 656
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-slime-cvs-0 0
