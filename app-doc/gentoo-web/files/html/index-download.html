@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>Gentoo Linux</title>
+    <link title="new" rel="stylesheet" href="gentoo-new.css" type="text/css"></link>
+</head>
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff">
+</body>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="black">
+<tr><td height="168"width="30%" bgcolor="#45347b">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+	<tr><td class="logobg" valign="bottom" align="center" height="120"><img src="gtop.jpg"></td></tr>
+    <tr><td class="logobg" valign="bottom" align="center" height="48"><img src="gmid.gif"></td></tr>
+</table>
+</td><td valign="bottom">
+    <table cellspacing="3" cellpadding="0" border="0" height="100%" width="100%">
+		<!--	<tr>
+				<td class="menu" width="100%" valign="top" align="left">
+				</td>
+			</tr>
+		-->
+			<tr>
+				<td class="menu" width="100%" valign="bottom">
+					<a class="menulink" href="index.html">About Gentoo Linux</a>
+					| <a class="highlight" href="index-download.html">Download/Install</a>
+				</td>
+			</tr>
+		</table>
+</td></tr>
+<!--/table><table cellspacing="0" cellpadding="0" border="0" width="100%" height="80%" bgcolor="white"//-->
+<tr><td width="30%" height="100%" valign="top" bgcolor="#e7e6ea">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#e7e6ea">
+		<tr>
+			<td valign="top">
+                <table width="100%" cellspacing="0" cellpadding="5" border="0">
+					<tr>
+						<td align="center" class="infohead" bgcolor="#7a5ada">Important News</td>
+					</tr>
+					<tr valign="top" bgcolor="#e7e6ea">
+						<td class="infotext">
+			<p><font color="#ff0000">
+						We are working hard on a new release of Gentoo Linux, 
+						but right now, the 1.0_rc4_pre2 release on ibiblio.org
+						and its mirrors is a bit out of date.  If you're interested in installing Gentoo Linux,
+						we recommend you wait until the 1.0_rc5 release (coming soon to a mirror near you) or
+						install a <a
+						href="http://www.ibiblio.org/gentoo/gentoo-x86-distro/gentoo-1.0_rc4/packages/snapshots/">
+						system snapshot</a> rather than using the official 1.0_rc4_pre2 version.  You'll find installation READMEs at the above link, and you can also reach us on #gentoo or the gentoo-dev mailing list if you have any questions.  Please note that until
+						version 1.0 is released, Gentoo Linux is geared for developers only.  The distro is quite
+						refined at this point, but installation requires some skill.</font></p>
+ 
+						</td>
+					</tr>
+				</table>
+			   <table width="100%" cellspacing="0" cellpadding="5" border="0">
+					<tr>
+						<td align="center" class="infohead" bgcolor="#7a5ada">Gentoo Linux Installation Resources</td>
+					</tr>
+					<tr valign="top" bgcolor="#e7e6ea">
+						<td class="infotext">
+					<p class="infosub">Download sites:</p>
+				<p class="infolist"><a href="http://www.ibiblio.org/gentoo">ibiblio.org mirror</a></p>
+				<p class="infolist"><a href="http://download.sourceforge.net/pub/mirrors/metalab/Linux/distributions/gentoo/">SourceForge mirror</a></p>
+
+				<p class="infosub">Mailing lists:</p>
+				<p class="infolist"><a href="http://www.gentoo.org/mailman/listinfo/gentoo-dev">Developer discussion</a></p>
+				<p class="infolist"><a href="http://www.gentoo.org/mailman/listinfo/gentoo-announce">Announcements</a></p>
+				<p class="infolist"><a href="http://www.gentoo.org/mailman/listinfo/gentoo-cvs">Daily CVS log</a></p>
+
+				<p class="infosub">Other resources:</p>
+				<p class="infolist">Use <a href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> to browse our repository</p>
+				<p class="infolist">IRC: #gentoo on <a href="http://www.openprojects.net/">irc.openprojects.net</a></p>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</td><td bgcolor="white" valign="top" class="content"><!--contient area-->
+        <table cellpadding="5" cellspacing="0" border="0"><tr><td>
+		<p><br>
+        <img src="znr.gif">
+        </p>
+<p class="subhead">Installation Overview</p>
+
+<p>
+Currently, we have three different methods of installing Gentoo Linux,
+depending on your needs: the install CD method, the system snapshot method and the
+build image method.
+</p>
+
+
+<p>
+For every official Gentoo Linux release, we create a bootable ISO image that
+can be used to install Gentoo Linux.  The process works as follows: you burn
+the ISO image using a CD-R, and then boot the CD and are presented with a
+minimal CD-based Gentoo Linux system.  You then use this system to create
+partitions and set up filesystems as needed.  Once your filesystems are
+created, you mount them and extract the system-image ("sys.tbz2") tarball
+included on the CD, which contains a basic Gentoo Linux system.  After a few
+more configuration steps, you can umount your Gentoo Linux partitions and
+install a boot manager; Gentoo Linux is now ready to run.  Since our CD releases
+include precompiled packages for most applications, they're generally around
+600Mb in size.
+</p>
+
+
+<p>
+In-between our official Gentoo Linux ISO CD releases, we create up-to-date
+sys.tbz2 files, called "system snapshots".  These sys.tbz2 files are identical
+in design to the sys.tbz2 image included on our official CDs, except that they
+are more up-to-date and are used by our developers as we are refining a Gentoo
+Linux for the next official CD release.  A lot of the time, we'll recommend
+that you install a system snapshot rather than our latest official Gentoo Linux
+CD release, because our system snapshots are often the most stable and
+up-to-date version of Gentoo Linux available.  However, since system snapshots
+are for developers only, we don't provide an ISO image; instead, we provide the
+sys.tbz2 tarball only -- it's up to you to get the tarball extracted to a spare
+partition.  However, we will often include bootdisks to make this process
+easier, depending on whether or not the system snapshot is truly ready for
+prime-time use.  System images average around 70Mb in size.
+</p>
+
+
+<p>
+Our third, and possibly most interesting install method uses a "build image",
+or build.tbz2 file.  This build.tbz2 file contains a minimal chrootable Gentoo
+Linux environment; you use it by extracting build.tbz2 to a spare partition and
+then chrooting to it from an existing Linux system.  Then, you can build a
+complete Gentoo Linux system from scratch using Portage -- as well as your
+desired optimization settings and compile-time extensions enabled.  Using the
+"build image" approach, you can create a complete Gentoo Linux system from
+scratch that's set up just the way you want it.
+</p>
+
+
+<p>
+However, build image installation is a bit more labor intensive than the other
+approaches.  First, you must download the build.tbz2 file (typically about 17Mb
+in size), extract it to a spare partition, chroot to the build environment, configure
+networking, and use emerge to grab the latest version of our Portage tree using
+rsync.  Then, you can configure your /etc/make.conf with your desired system-wide
+compilation settings, and use a special bootstrap script to automatically rebuild
+the system to the point where it's the equivalent to a sys.tbz2 file.  At this
+point, your Gentoo Linux system is ready to boot on its own.
+</p>
+
+
+
+
+        </td></tr></table>
+		<br>
+</td></tr>
+<tr><td align="right" colspan="2" class="menu">Copyright 2001 Gentoo
+		Technologies, Inc.  Questions, Comments, Corrections?  Email <a class="menulink"
+		href="mailto:gentoo-dev@gentoo.org">gentoo-dev@gentoo.org</a>.</td></tr>
+</table>
+</html>
