@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/whitebox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/whitebox/ChangeLog,v 1.2 2003/10/30 16:12:54 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/whitebox/ChangeLog,v 1.3 2003/12/04 16:54:54 tseng Exp $
+
+  04 Dec 2003; Brandon Hale <tseng@gentoo.org> whitebox-0.5.ebuild:
+  fixing bad DEPEND
 
   30 Oct 2003; Brandon Hale <tseng@gentoo.org> metadata.xml:
   Added metadata.xml, marked 0.5 stable on x86.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/whitebox/whitebox-0.5.ebuild,v 1.3 2003/10/30 16:12:54 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/whitebox/whitebox-0.5.ebuild,v 1.4 2003/12/04 16:54:54 tseng Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND="=x11-libs/gtk+-1.2*
-	=media-libs/gdk-pixbuf-0.22*"
+	>=media-libs/gdk-pixbuf-0.22"
 
 RDEPEND="virtual/blackbox"
 
