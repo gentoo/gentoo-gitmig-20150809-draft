@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ad5c6b832c14726384b6f8b3e9b715d4 ChangeLog 2234
+MD5 f05cb94bafe3844a45c84eac3426d7ee ChangeLog 2435
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 465d692ac8702596ac216b3eb2320490 microcode-ctl-1.11.ebuild 1165
 MD5 e4ab99afa45409c6a78939cf632c10e4 microcode-ctl-1.10.ebuild 1165
 MD5 1df04769a594a38cffc1f8a077fc3fa9 files/digest-microcode-ctl-1.10 70
-MD5 7fdce1504a1132239d2dbc1fbce08d66 files/microcode_ctl.rc 439
+MD5 95e076b988c73349d2606d4ecd052a56 files/digest-microcode-ctl-1.11 70
+MD5 dba18ac7a7761ad3802e4c146bb25a6d files/microcode_ctl.rc 438
 MD5 cf9bec50cc6330e817b856deb0cf00f5 files/microcode_ctl.conf.d 263
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBlvzwHTu7gpaalycRApuxAJ4gjMCmBc+1+viYBCJ9W39jIIlCPgCgl3St
-hcq9CpotMyKVfVv+/a+re/o=
-=fh1j
+iD8DBQFBlv+mHTu7gpaalycRAkS6AJ95X1VTdYRbUM7OxbzQkTQRygJZWACgxF4h
+iMRVjOLjY5LpZ++rntKpv10=
+=wo+e
 -----END PGP SIGNATURE-----
