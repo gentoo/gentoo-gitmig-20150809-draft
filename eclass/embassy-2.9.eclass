@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/embassy-2.9.eclass,v 1.1 2005/03/22 22:07:40 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/embassy-2.9.eclass,v 1.2 2005/03/23 23:05:41 ribosome Exp $
 
 # Author Olivier Fisette <ribosome@gentoo.org>
 
@@ -33,6 +33,7 @@ SLOT="0"
 IUSE="X png"
 
 DEPEND="=sci-biology/emboss-${EBOV}*
+	!=sci-biology/emboss-2.10*
 	X? ( virtual/x11 )
 	png? ( sys-libs/zlib
 		media-libs/libpng
