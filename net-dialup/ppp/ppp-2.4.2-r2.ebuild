@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r2.ebuild,v 1.2 2004/04/27 21:42:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r2.ebuild,v 1.3 2004/04/28 11:20:58 lanius Exp $
 
 inherit eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 	if [ "`use atm`" -a "`use x86`" ]; then
 		einfo "Enabling PPPoATM support"
 		epatch ${FILESDIR}/${PV}/pppoatm-2.diff.gz
+		sed -i -e "s/^LIBS =/LIBS = -latm/" pppd/Makefile.linux || die
 	fi
 
 	use activefilter && {
