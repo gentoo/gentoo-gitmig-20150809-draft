@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/kenosis
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kenosis/ChangeLog,v 1.1 2005/01/11 21:55:03 pythonhead Exp $
+
+*kenosis-0.92 (11 Jan 2005)
+
+  11 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +kenosis-0.92.ebuild:
+  Initial commit.
+
