@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3382 2004/12/08 12:12:52 genone Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3383 2004/12/09 02:16:14 iggy Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <iggy@gentoo.org> (08 Dec 2004)
+# ivtv is broken, maybe in a few months it will be ready
+media-tv/ivtv
 
 # <genone@gentoo.org> (08 Dec 2004)
 # app-portage pre-christmas cleaning, these packages are unmaintained upstream
