@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r2.ebuild,v 1.8 2005/01/01 14:43:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r2.ebuild,v 1.9 2005/01/28 11:34:44 greg_g Exp $
 
-use kde && inherit kde
+inherit kde-functions eutils
 
 DESCRIPTION="A simple and fast GB and BIG5 Chinese XIM server"
 HOMEPAGE="http://developer.berlios.de/projects/xsim/"
@@ -20,8 +20,10 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
+
+	epatch ${FILESDIR}/${P}-compile-fix.patch
+
 	einfo "Patching ./configure to respect CFLAGS .."
 	sed -i -e "s/\(CFLAGS.*\)-O2/\1${CFLAGS}/" configure
 }
@@ -29,8 +31,14 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	use kde \
-		&& myconf="${myconf} --with-kde3=${KDEDIR} --with-qt3=${QTDIR} --enable-status-kde3"
+	if use kde; then
+		set-qtdir 3
+		set-kdedir 3
+		myconf="${myconf}
+			--with-kde3=${KDEDIR} \
+			--with-qt3=${QTDIR} \
+			--enable-status-kde3"
+	fi
 
 	econf ${myconf} || die "configure failed"
 	emake xsim_etcp=/etc || die "make failed"
