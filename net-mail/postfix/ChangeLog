@@ -1,8 +1,14 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.36 2002/09/19 19:09:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.37 2002/09/20 14:14:20 raker Exp $
 
 *postfix-1.1.11.20020917 (19 Sep 2002)
+
+  20 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  postfix-1.1.11.20020917.ebuild :
+  Updated postfix SRC_URI to the pfixtls site.  I have also copied files
+  to gentoo distfiles so it propagates across mirrors.  Postfix mirrors
+  appear to be too erratic with the "experimental builds"
 
   19 Sep 2002; Nick Hadaway <raker@gentoo.org>
   postfix-1.1.11.20020917.ebuild, files/digest-postfix-1.1.11.20020917,

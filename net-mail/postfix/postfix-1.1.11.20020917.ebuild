@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020917.ebuild,v 1.1 2002/09/19 19:09:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020917.ebuild,v 1.2 2002/09/20 14:14:21 raker Exp $
 
 PF_PV=1.1.11-20020917
 PF_P=postfix-${PF_PV}
@@ -10,7 +10,7 @@ IPV6_P=tls+ipv6-1.4-pf-${PF_PV}
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
-SRC_URI="http://archive.progeny.com/postfix/experimental/${PF_P}.tar.gz
+SRC_URI="ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/related/postfix/${PF_P}.tar.gz
 	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/${TLS_P}.tar.gz )"
 
 LICENSE="IPL-1"
