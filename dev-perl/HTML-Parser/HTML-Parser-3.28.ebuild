@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.28.ebuild,v 1.12 2004/07/14 17:52:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.28.ebuild,v 1.13 2005/01/04 13:03:11 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Parse <HEAD> section of HTML documents"
-SRC_URI="http://cpan.valueclick.com/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/HTML/${P}.tar.gz"
-HOMEPAGE="http://cpan.valueclick.com/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/HTML/${P}.readme"
+SRC_URI="mirror://cpan/authors/id/G/GA/GAAS/${P}.tar.gz"
+HOMEPAGE="http://searc.cpan.org/~gaas/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
