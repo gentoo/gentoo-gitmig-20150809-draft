@@ -1,6 +1,25 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.27 2003/07/31 11:21:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.28 2003/08/05 11:46:12 robbat2 Exp $
+
+*qmail-1.03-r11 (05 Aug 2003)
+
+  05 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r11.ebuild,
+  files/1.03-r11/99qmail, files/1.03-r11/conf-common,
+  files/1.03-r11/conf-qmqpd, files/1.03-r11/conf-qmtpd,
+  files/1.03-r11/conf-smtpd, files/1.03-r11/defaultdelivery,
+  files/1.03-r11/dot_qmail, files/1.03-r11/errno.patch,
+  files/1.03-r11/qmail-control, files/1.03-r11/rc,
+  files/1.03-r11/run-qmailpop3d, files/1.03-r11/run-qmailpop3dlog,
+  files/1.03-r11/run-qmailqmqpd, files/1.03-r11/run-qmailqmqpdlog,
+  files/1.03-r11/run-qmailqmtpd, files/1.03-r11/run-qmailqmtpdlog,
+  files/1.03-r11/run-qmailsend, files/1.03-r11/run-qmailsendlog,
+  files/1.03-r11/run-qmailsmtpd, files/1.03-r11/run-qmailsmtpdlog,
+  files/1.03-r11/smtp-auth-close3.patch, metadata.xml:
+  Prepare for new release of qmail, this is NOT ready for wide testing in
+  ~anything yet. /var/qmail/alias is now in CONFIG_PROTECT as well. Update
+  metadata.xml to say I'm handling it now. Added QMTP and QMQP support and
+  many more patches.
 
   31 Jul 2003; Seemant Kulleen <seemant@gentoo.org> qmail-1.03-r10.ebuild:
   changed epatch to patch, because the dry-run on tls.patch.bz2 seems to fail.
