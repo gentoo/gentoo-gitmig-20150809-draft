@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.2 2004/09/22 21:57:26 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.3 2004/10/03 06:53:52 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -11,12 +11,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm hppa amd64 ~ia64 ~ppc64 ~s390"
-IUSE="nls static"
+IUSE="nls static diet"
 
-DEPEND="virtual/libc
+RDEPEND="!diet? ( virtual/libc )
+	diet? ( dev-libs/dietlibc )"
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-apps/texinfo"
-RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
@@ -45,7 +46,8 @@ src_compile() {
 		|| myconf="${myconf} --enable-dynamic-e2fsck --enable-elf-shlibs"
 
 	econf \
-		`use_enable nls` \
+		$(use_enable nls) \
+		$(use_with diet diet-libc) \
 		${myconf} || die
 
 	# Parallel make sometimes fails
