@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.59 2004/12/03 19:18:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.60 2004/12/05 19:20:13 lv Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -101,7 +101,7 @@ else
 	fi
 	use multislot \
 		&& SLOT="${CTARGET}-${MY_PV_FULL}" \
-		|| SLOT="${CTARGET}-${MY_PV}"
+		|| SLOT="${MY_PV}"
 fi
 #----<< SLOT+IUSE logic >>----
 
