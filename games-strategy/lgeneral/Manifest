@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 74d21a875e3fd2754753a1d7669bb603 ChangeLog 2248
+MD5 d6137888912fb0ed900b87c6fd3e55df ChangeLog 2353
 MD5 9f2c06e23962f9d92d9ac3b676403681 lgeneral-1.2_beta2.ebuild 1485
-MD5 a8819c828f17d7f1859e5008843bca63 lgeneral-1.1.1-r1.ebuild 1116
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 77fda12a372abfd55040151b84dd2d7b files/1.1.1-netbsd-audio.patch 813
+MD5 3f4ef5e53b304a6e679ffd00e957b2e9 lgeneral-1.1.1-r1.ebuild 1119
 MD5 9bd18133cff27a13ac0c62fe2ebeba33 files/digest-lgeneral-1.1.1-r1 138
+MD5 77fda12a372abfd55040151b84dd2d7b files/1.1.1-netbsd-audio.patch 813
 MD5 a439ff98a9b35e8e232647449c5de2a0 files/digest-lgeneral-1.2_beta2 129
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB0rSMCHk4+ZoBpvsRAhJEAJ0bJ9ieUzL1aXD128B575BPT3pcTgCdH2U6
-hcQ6nKi3TgKNK6MIjidk/p8=
-=K9Pq
------END PGP SIGNATURE-----
