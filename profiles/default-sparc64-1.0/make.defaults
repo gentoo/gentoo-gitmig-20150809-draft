@@ -6,15 +6,18 @@
 USE="3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
 ipv6 java jpeg kde libg++ libwww mikmod mmx motif  mpeg ncurses nls
 oggvorbis opengl pam pdflib png python qt qtmt quicktime readline sdl
-slang  spell ssl svga tcltk tcpd truetype X xml2 xmms xv" 
+slang spell ssl svga tcpd truetype X xml2 xmms xv" 
 
 
 
 # These lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
 #
-# $Id: make.defaults,v 1.7 2002/05/08 01:12:44 murphy Exp $
+# $Id: make.defaults,v 1.8 2002/05/08 21:08:49 drobbins Exp $
 #
 # $Log: not supported by cvs2svn $
+# Revision 1.7  2002/05/08 01:12:44  murphy
+# Merging in changes from default tree, plus fixes for xfree and the CD stuff
+#
 # Revision 1.2  2002/04/18 21:06:28  murphy
 # More changes
 #
