@@ -689,7 +689,12 @@ src_menu() {
 	    dyn_unpack
 	    ;;
 	compile)
-            dyn_fetch
+        dopython portage.dep_frontend
+		if [ $? -ne 0 ]
+		then
+			exit $?
+		fi
+	            dyn_fetch
 	    dyn_unpack
 	    dyn_compile
             ;;
@@ -700,7 +705,12 @@ src_menu() {
 	    dyn_${MYfoo}
 	    ;;
 	package)
-	dyn_fetch
+        dopython portage.dep_frontend
+		if [ $? -ne 0 ]
+		then
+			exit $?
+		fi
+		dyn_fetch
 	local PNAME=${PF}.${PACKAGE}
 	if [ ! -d ${PKGDIR} ]
 	then
@@ -761,7 +771,12 @@ src_menu() {
             dyn_merge
 	    ;;
 	rpm)
-            dyn_fetch
+        dopython portage.dep_frontend
+		if [ $? -ne 0 ]
+		then
+			exit $?
+		fi
+	            dyn_fetch
 	    dyn_unpack
 	    dyn_compile
             dyn_install	
