@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/xsensors
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.1 2003/07/12 17:44:42 avenj Exp $
+
+*xsensors-0.20 (12 Jul 2003)
+
+  12 Jul 2003; Jon Portnoy <avenj@gentoo.org> xsensors-0.20.ebuild :
+  Initial import.  Ebuild submitted by David J. Grant <dgrant@ieee.org>
+  in bug 22878.
