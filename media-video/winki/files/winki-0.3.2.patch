@@ -1,0 +1,38 @@
+--- setup.py_old	2004-10-22 22:16:17.617454664 +0900
++++ setup.py	2004-10-22 22:45:41.163354936 +0900
+@@ -9,11 +9,6 @@
+ po = glob.glob(os.path.join('winki', 'po', '*po*'))
+ doc = glob.glob(os.path.join('winki', 'doc', '*html'))
+ 
+-try:
+-	os.rename('/etc/winkirc', '/etc/winkirc.old')
+-except:
+-	pass
+-
+ setup(	name = 'winki',
+ 	version = '0.3.2',
+ 	description = 'GTK frontend to mencoder, mplayer and lsdvd',
+@@ -25,17 +20,17 @@
+ 	classifiers = [ 'Development Status :: 5 - Alpha',
+ 			'Intended Audience :: End Users/Desktop'],
+ 	scripts = ['winki/WinkiRip'],
+-	data_files = [('/opt/winki/glade', png),
+-		      ('/opt/winki/glade', svg),
+-		      ('/opt/winki/glade', glade),
+-		      ('/opt/winki/doc', ['winki/AUTHORS',
++	data_files = [('/usr/share/winki/glade', png),
++		      ('/usr/share/winki/glade', svg),
++		      ('/usr/share/winki/glade', glade),
++		      ('/usr/share/winki/doc', ['winki/AUTHORS',
+ 		      			  'winki/GPL',
+ 		      			  'winki/INSTALL',
+ 					  'winki/README',
+ 					  'winki/CHANGELOG',
+ 					  'winki/TODO']),
+ 		      ('/etc', ['winki/example/winkirc']),
+-		      ('/opt/winki/po', po),
+-		      ('/opt/winki/doc', doc)],
++		      ('/usr/share/winki/po', po),
++		      ('/usr/share/winki/doc', doc)],
+ 	packages = ['winki'])
+ 
