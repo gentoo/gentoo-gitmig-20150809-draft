@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.60.ebuild,v 1.4 2004/07/15 08:36:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.60.ebuild,v 1.5 2004/07/15 08:45:42 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -237,7 +237,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${OO_VER}/gentoo-${PV}.patch
 
 	cd ${PATCHDIR}/patches/OOO_1_1/
-	epatch ${FILESDIR}/${OO_VER}/nativefix.patch
+	epatch ${FILESDIR}/${OO_VER}/nativefix.diff
 
 	#Still needed: The STLport patch
 	cd ${S}
