@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.8 2003/08/24 17:55:53 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.9 2003/09/23 16:15:31 darkspecter Exp $
+
+  23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org>
+  gtk-engines-2.2.0.ebuild:
+  set ppc in keywords
 
   18 Aug 2003; Aron Griffis <agriffis@gentoo.org> gtk-engines-2.2.0.ebuild:
   Add gnuconfig updates for Alpha EV67
