@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2c5269f05de9ddcdd5878a2ed3d7732 passepartout-0.5.ebuild 689
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 0f81b9be0304e9f9037981b28c77ab0d ChangeLog 428
+MD5 34ea5a29ae5e1101593e83dd9829cc79 files/digest-passepartout-0.5 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjmLcVWNWqTUmv+0RAu4OAJ9lR3uPD+XmhuwV/9Aedec4wxzCYwCfVacO
+pq2uqAU37UyohkMgsP45yNw=
+=K4ot
+-----END PGP SIGNATURE-----

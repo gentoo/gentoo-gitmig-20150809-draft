@@ -1,0 +1,11 @@
+# ChangeLog for app-office/passepartout
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.1 2004/11/07 18:07:21 usata Exp $
+
+*passepartout-0.5 (08 Nov 2004)
+
+  08 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +passepartout-0.5.ebuild:
+  Initial import. Ebuild submitted by Patrik Kullman <patrik@yes.nu>;
+  bug #59352.
+
