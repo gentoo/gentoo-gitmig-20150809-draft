@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.8.ebuild,v 1.11 2004/08/29 17:08:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.8.ebuild,v 1.12 2004/10/03 00:02:05 eradicator Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -13,6 +13,9 @@ IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/alsa-lib-0.9.8"
+
+RDEPEND="${DEPEND} 
+        sys-apps/pciutils"
 
 src_install() {
 	local ALSA_UTILS_DOCS="ChangeLog README TODO
