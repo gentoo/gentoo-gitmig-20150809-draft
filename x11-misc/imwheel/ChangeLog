@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/imwheel
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/ChangeLog,v 1.1 2002/11/13 07:08:28 raker Exp $
+
+*imwheel-1.0.0_pre2 (13 Nov 2002)
+
+  13 Nov 2002; Nick Hadaway <raker@gentoo.org>
+  imwheel-1.0.0_pre2.ebuild, files/digest-imwheel-1.0.0_pre2,
+  files/imwheel-1.0.0_pre2-gentoo.diff :
+  New ebuild.
+ 
