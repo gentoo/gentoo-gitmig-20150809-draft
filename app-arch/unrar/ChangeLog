@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/unrar
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.14 2004/01/02 19:31:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.15 2004/01/08 22:02:54 augustus Exp $
+
+*unrar-3.3.3-r1 (08 Jan 2004)
+
+  08 Jan 2004; <augustus@gentoo.org> unrar-3.3.3-r1.ebuild,
+  files/unrar-3.3.3-amd64.diff:
+  Added a patch for AMD64 platform that should fix decompression on some files.
+  Thanks to Ryan Gordan for this fix.
+  Bug #34872
 
 *unrar-3.3.3 (02 Jan 2004)
 
