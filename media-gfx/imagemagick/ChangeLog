@@ -1,8 +1,13 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.23 2002/11/05 07:07:25 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.24 2002/12/07 06:38:09 jmorgan Exp $
 
 *imagemagick-5.4.9.1 (05 Nov 2002)
+
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> imagemagick-5.4.7.4.ebuild,
+  imagemagick-5.4.9.1.ebuild, imagemagick-5.4.9.1-r1.ebuild:
+  Changed sparc64 to sparc keyword imagemagick-5.4.7.4.ebuild
+  Changed ~sparc64 to ~sparc keyword imagemagick-5.4.9.1[-r1].ebuild
 
   05 Nov 2002; Nick Hadaway <raker@gentoo.org>
   imagemagick-5.4.9.1-r1.ebuild, files/digest-imagemagick-5.4.9.1-r1 :
