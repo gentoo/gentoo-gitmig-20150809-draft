@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.48 2005/01/29 12:09:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.49 2005/02/01 14:20:05 lanius Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -49,6 +49,7 @@ virtual/m3					dev-lang/cm3
 virtual/mailx				mail-client/mailx
 virtual/mda					mail-filter/procmail
 virtual/modutils			sys-apps/module-init-tools
+virtual/motif				x11-libs/openmotif
 virtual/mpg123				media-sound/mpg123
 virtual/mta					mail-mta/ssmtp
 virtual/ooo				app-office/openoffice-bin
