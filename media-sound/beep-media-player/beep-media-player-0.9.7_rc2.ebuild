@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2.ebuild,v 1.1 2004/08/28 21:34:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2.ebuild,v 1.2 2004/08/30 15:38:43 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/beepmp/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 #-amd64: 0.9.6.1-r1: Segfault on startup; 0.9.7_rc2 not tested yet
-KEYWORDS="~x86 ~sparc -amd64"
+KEYWORDS="~x86 ~sparc -amd64 ~ppc"
 IUSE="nls esd gnome opengl oggvorbis mikmod alsa"
 
 RDEPEND="app-arch/unzip
