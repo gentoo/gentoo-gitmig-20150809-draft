@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0-r1.ebuild,v 1.2 2004/04/11 17:50:11 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0-r1.ebuild,v 1.3 2004/04/27 21:09:45 agriffis Exp $
+
+inherit eutils
 
 MY_P=${P/-/_}-6
 DESCRIPTION="A simplistic screen locking program for X"

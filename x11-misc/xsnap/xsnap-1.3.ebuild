@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.3.ebuild,v 1.4 2004/04/22 22:06:56 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.3.ebuild,v 1.5 2004/04/27 21:08:42 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Program to interactively take a 'snapshot' of a region of
 the screen"

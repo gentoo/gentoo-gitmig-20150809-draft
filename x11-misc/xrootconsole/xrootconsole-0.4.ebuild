@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4.ebuild,v 1.8 2003/09/10 05:37:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4.ebuild,v 1.9 2004/04/27 21:05:26 agriffis Exp $
 
 DESCRIPTION="An utillity that displays its input in a text box on your root window"
 HOMEPAGE="http://de-fac.to/bob/xrootconsole/"

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.15.ebuild,v 1.2 2004/04/05 14:00:22 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.15.ebuild,v 1.3 2004/04/27 21:07:23 agriffis Exp $
+
+inherit eutils
 
 IUSE="pam kerberos krb4 gtk gtk2 gnome opengl jpeg xinerama icc"
 
