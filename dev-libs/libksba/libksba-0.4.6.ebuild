@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-0.4.6.ebuild,v 1.1 2003/01/31 15:53:09 ykoehler Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-0.4.6.ebuild,v 1.2 2003/02/04 21:17:30 ykoehler Exp $
 
 S="${WORKDIR}/${P}"
-DESCRIPTION="Aegypten development library"
+DESCRIPTION="KSBA makes X.509 certificates and CMS easily accessible to applications"
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/aegypten/${P}.tar.gz"
 HOMEPAGE="http://www.gnupg.org"
 
