@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yaboot/yaboot-1.3.6-r1.ebuild,v 1.5 2002/07/20 19:25:39 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yaboot/yaboot-1.3.6-r1.ebuild,v 1.6 2002/09/04 15:15:12 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PPC Bootloader"
@@ -28,5 +28,8 @@ src_compile() {
 }
 
 src_install () {
+	cp etc/yaboot.conf etc/yaboot.conf.bak
+	sed -e 's/\/local//' etc/yaboot.conf >| etc/yaboot.conf.edit
+	mv -f etc/yaboot.conf.edit etc/yaboot.conf
 	make ROOT=${D} ${MAKEOPTS} install || die
 }
