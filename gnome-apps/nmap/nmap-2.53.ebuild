@@ -12,13 +12,13 @@ HOMEPAGE="http://www.insecure.org/nmap/"
 
 src_compile() {                           
   cd ${S}
-  ./configure --host=${CHOST} --prefix=/opt/gnome
-  make
+  try ./configure --host=${CHOST} --prefix=/opt/gnome
+  try make
 }
 
 src_install() {                               
   cd ${S}
-  make prefix=${D}/opt/gnome install
+  try make prefix=${D}/opt/gnome install
   prepman /opt/gnome
 
   dodoc CHANGELOG COPYING README

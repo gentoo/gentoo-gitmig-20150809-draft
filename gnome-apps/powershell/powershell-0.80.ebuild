@@ -16,13 +16,13 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  LDFLAGS="-L/opt/gnome/lib"  ./configure --host=${CHOST} --prefix=/opt/gnome
-  make
+  LDFLAGS="-L/opt/gnome/lib"  try ./configure --host=${CHOST} --prefix=/opt/gnome
+  try make
 }
 
 src_install() {                               
   cd ${S}
-  make prefix=${D}/opt/gnome install
+  try make prefix=${D}/opt/gnome install
 }
 
 
