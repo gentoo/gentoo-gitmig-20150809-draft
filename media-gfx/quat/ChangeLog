@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/quat
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/quat/ChangeLog,v 1.1 2003/09/12 04:16:31 vapier Exp $
+
+*quat-1.20 (30 Aug 2003)
+
+  30 Aug 2003; Gunnlaugur Thor Briem <gthb@hi.is>
+  Initial import.  Ebuild submitted by Gunnlaugur Thor Briem <gthb@hi.is>.
+  Quat is a 3D (quaternionic) fractal generator, written by Dirk Meyer of the
+  University of Stuttgart.
