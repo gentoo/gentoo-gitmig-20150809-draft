@@ -1,9 +1,15 @@
 # ChangeLog for app-arch/lzop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.2 2002/05/22 18:28:17 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.3 2002/07/26 05:05:10 george Exp $
 
 
 *lzop-1.00,  (03 May 2002)
 
+  25 Jul 2002; George Shapovalov <george@gentoo.org> lzop-1.00.ebuild :
+
+  fixed sandbox violaion
+
+  03 May 2002; George Shapovalov <george@gentoo.org> lzop-1.00.ebuild, files/digest-lzop-1.00 :
+  
   Initial release
 
