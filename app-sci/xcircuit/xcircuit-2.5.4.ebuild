@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-2.5.4.ebuild,v 1.12 2003/09/06 22:23:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-2.5.4.ebuild,v 1.13 2003/12/09 18:11:38 lanius Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/x11
 		dev-lang/python
-		app-text/ghostscript"
+		virtual/ghostscript"
 
 #looks like -O3 causes problems at times
 replace-flags -O3 -O2

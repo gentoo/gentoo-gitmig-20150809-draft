@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/glpk/glpk-4.2.ebuild,v 1.1 2003/11/20 20:26:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/glpk/glpk-4.2.ebuild,v 1.2 2003/12/09 18:10:46 lanius Exp $
 
 DESCRIPTION="GNU Linear Programming Kit"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 RDEPEND="java? ( >=virtual/jdk-1.4* )
 		 sys-libs/glibc"
 DEPEND=">=sys-devel/gcc-3.2* ${RDEPEND}
-		 doc? ( app-text/ghostscript )"
+		 doc? ( virtual/ghostscript )"
 
 src_compile() {
 	LIBS="${LIBS} -lm" econf --enable-shared || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-3.1.29.ebuild,v 1.1 2003/11/27 21:23:51 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-3.1.29.ebuild,v 1.2 2003/12/09 18:11:38 lanius Exp $
 
 S=${WORKDIR}/${P}
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/x11
-	app-text/ghostscript"
+	virtual/ghostscript"
 
 
 src_compile() {
