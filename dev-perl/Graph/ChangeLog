@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Graph
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.8 2004/06/25 00:34:18 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.9 2005/03/30 22:28:05 gustavoz Exp $
+
+  30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> Graph-0.20101.ebuild:
+  Stable on sparc
 
 *Graph-0.20105 (05 Jun 2004)
 
