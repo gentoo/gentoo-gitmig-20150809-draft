@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/apache-manual
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/ChangeLog,v 1.2 2004/04/28 17:28:27 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/ChangeLog,v 1.3 2004/04/28 17:37:27 zul Exp $
+
+  29 Apr 2004; Chuck Short <zul@gentoo.org> apache-manual-2.0.49-r1.ebuild:
+  Added ~alpha use flag.
 
 *apache-manual-2.0.49-r1 (29 Apr 2004)
 
