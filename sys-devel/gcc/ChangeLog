@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.171 2004/02/09 22:59:42 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.172 2004/02/10 21:51:16 seemant Exp $
+
+  10 Feb 2004; Seemant Kulleen <seemant@gentoo.org>
+  files/fix_libtool_files.sh:
+  spelling correction: Scannig to Scanning
 
   09 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> gcc-3.2.3-r4.ebuild:
   set ppc in keywords

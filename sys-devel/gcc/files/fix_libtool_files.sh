@@ -2,7 +2,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/fix_libtool_files.sh,v 1.8 2003/12/28 21:54:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/fix_libtool_files.sh,v 1.9 2004/02/10 21:51:16 seemant Exp $
 
 usage() {
 cat << "USAGE_END"
@@ -69,7 +69,7 @@ OLDVER="${ARGV1}"
 
 export OLDVER OLDCHOST
 
-einfo "Scannig libtool files for hardcoded gcc library paths..."
+einfo "Scanning libtool files for hardcoded gcc library paths..."
 /bin/gawk -f "${AWKDIR}/fixlafiles.awk"
 
 
