@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-IRC
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.9 2003/06/16 14:00:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.10 2003/06/29 02:07:43 mcummings Exp $
+
+*Net-IRC-0.74 (28 Jun 2003)
+
+  28 Jun 2003; Michael Cummings <mcummings@gentoo.org> Net-IRC-0.74.ebuild:
+  Bug 22704 closed. New version, new maintainer at CPAN. Thanks mute.
 
 *Net-IRC-0.73 (16 Jun 2003)
 
