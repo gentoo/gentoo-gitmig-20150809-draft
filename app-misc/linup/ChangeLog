@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.3 2003/07/01 21:44:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.4 2003/10/24 18:05:18 lisa Exp $
+
+  24 Oct 2003; Lisa Seelye <lisa@gentoo.org> linup-1.1.1.ebuild:
+  This has been ~x86 for so long, I think its safe to put in x86.
 
 *linup-1.1.1 (01 Jul 2003)
 

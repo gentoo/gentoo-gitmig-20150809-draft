@@ -1,5 +1,3 @@
-MD5 2177e9ab0960bcfee44442cede4a4dc8 ChangeLog 499
-MD5 d5767f176bb2960ce6f30fa156dd35d7 linup-1.1.1.ebuild 664
-MD5 9fbde9da07676b707f33d76be32e1775 linup-1.1.0.ebuild 660
-MD5 2e373ab021b6d443401a8a011a8c9e5f files/digest-linup-1.1.0 62
+MD5 3c4d5f4f086633c05d7ec64ea448efc8 ChangeLog 628
+MD5 375ccf8c960cdb71b5ff477faa4a6cc5 linup-1.1.1.ebuild 667
 MD5 edb03e1f886db92dc51695d05cbced61 files/digest-linup-1.1.1 62
