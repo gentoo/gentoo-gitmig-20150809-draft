@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Archive_Tar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/ChangeLog,v 1.10 2005/03/19 22:43:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/ChangeLog,v 1.11 2005/03/27 14:53:19 kloeri Exp $
+
+  27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  PEAR-Archive_Tar-1.2.ebuild:
+  Stable on alpha.
 
   19 Mar 2005; Jason Wever <weeve@gentoo.org> PEAR-Archive_Tar-1.2.ebuild:
   Stable on sparc wrt bug #82545.
