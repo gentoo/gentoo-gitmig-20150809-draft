@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-libvisual
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-libvisual/ChangeLog,v 1.1 2004/11/10 01:39:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-libvisual/ChangeLog,v 1.2 2004/12/24 18:01:39 chainsaw Exp $
+
+  24 Dec 2004; Tony Vroon <chainsaw@gentoo.org> bmp-libvisual-0.1.0.ebuild:
+  Added libvisual-plugins to DEPEND, closes bug #75349.
 
 *bmp-libvisual-0.1.0 (09 Nov 2004)
 

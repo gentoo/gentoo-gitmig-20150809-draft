@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 ca32b56820499770b9a48d411593edff bmp-libvisual-0.1.0.ebuild 928
+MD5 2772551602a3d59afe6ed6f4fe4aaf7b ChangeLog 595
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 99311e923c171a3732c8243b6b237a04 bmp-libvisual-0.1.0.ebuild 896
-MD5 41d8f08057af37b00fc59d3386a3c859 ChangeLog 464
 MD5 c5ea6d02c4f23dccde7d32a50f440cec files/digest-bmp-libvisual-0.1.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBkXFMArHZZzCEUG0RArugAKCC6+H6HSSt7kdaWiIHkkg3hq34RgCfRDae
-cEyIr0wwbCJHIteYv3JOyY4=
-=rQdj
------END PGP SIGNATURE-----
