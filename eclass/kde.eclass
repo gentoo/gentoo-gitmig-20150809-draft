@@ -4,7 +4,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>Xx
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.11 2001/10/05 11:46:29 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.12 2001/10/11 18:20:37 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base || die
 ECLASS=kde
@@ -19,7 +19,10 @@ RDEPEND="$RDEPEND kde-base/kdelibs"
 
 kde-objprelink-patch() {
 	debug-print-function kde-objprelink-patch $*
-	use objprelink && cd ${S} && patch -p0 < /usr/share/objprelink/kde-admin-acinclude.patch || die
+	if [ "`use objprelink`" ]; then
+	    cd ${S} && \
+	    patch -p0 < /usr/share/objprelink/kde-admin-acinclude.patch || die "died in kde-objprelink-patch"
+	fi    
 }
 
 kde_src_compile() {
