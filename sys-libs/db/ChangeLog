@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.59 2003/10/14 20:07:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.60 2003/10/15 17:50:39 brad_mssw Exp $
+
+  15 Oct 2003; Brad House <brad_mssw@gentoo.org> db-1.85-r1.ebuild,
+  db-3.2.9-r7.ebuild:
+  add amd64 flags to db-1.85-r1, and move db-3.2.9-r7 to stable
 
   14 Oct 2003; Aron Griffis <agriffis@gentoo.org> db-4.1.25_p1-r1.ebuild:
   Add ~alpha
