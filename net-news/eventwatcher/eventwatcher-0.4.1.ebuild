@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/eventwatcher-0.4.1.ebuild,v 1.4 2004/09/28 19:40:25 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/eventwatcher-0.4.1.ebuild,v 1.5 2005/01/15 00:12:01 danarmak Exp $
 
 inherit kde
 
@@ -15,5 +15,5 @@ KEYWORDS="x86 ~sparc ~ppc ~amd64"
 IUSE=""
 
 
-DEPEND="kde-base/kdenetwork"
+DEPEND="|| ( kde-base/kdenetwork-meta kde-base/kdenetwork )"
 need-kde 3
