@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/wmi
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/ChangeLog,v 1.1 2004/06/05 19:36:17 usata Exp $
+
+*wmi-7 (06 Jun 2004)
+
+  06 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +wmi-7.ebuild:
+  Initial import. Thanks to John Nilsson <john@milsson.nu> and
+  Michael Kohl <citizen428@cargal.org>, closing bug #51336
+
