@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.3.ebuild,v 1.6 2004/02/17 12:06:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.3.ebuild,v 1.7 2004/02/18 17:44:45 eradicator Exp $
 
 IUSE=""
 DESCRIPTION="Gnome 2 based ALSA Mixer"
@@ -20,7 +20,8 @@ src_install() {
 	# hack to prevent ugly filenames in /usr/share/applications
 	mv ${PN}.desktop ${PN}.desktop.gentoo
 
-	make DESTDIR=${D} || die
+	# borks make DESTDIR=${D} || die
+	einstall || die
 
 	# manuall install menu entry
 	insinto /usr/share/applications
