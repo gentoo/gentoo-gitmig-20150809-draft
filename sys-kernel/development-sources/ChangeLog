@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.90 2004/03/22 01:59:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.91 2004/03/28 10:00:37 spock Exp $
+
+  28 Mar 2004; Michal Januszewski <spock@gentoo.org>
+  development-sources-2.6.4.ebuild, development-sources-2.6.4_rc1.ebuild,
+  development-sources-2.6.4_rc2.ebuild, development-sources-2.6.5_rc1.ebuild,
+  development-sources-2.6.5_rc2.ebuild:
+  Updated the ewarn messages to fit the current kernel option naming. Moved
+  2.6.4 to stable on x86. This closes #45941 and #45559.
 
   22 Mar 2004; Luca Barbato <lu_zero@gentoo.org>
   development-sources-2.6.4.ebuild:

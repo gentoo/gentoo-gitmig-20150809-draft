@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.4.ebuild,v 1.3 2004/03/22 01:59:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.4.ebuild,v 1.4 2004/03/28 10:00:37 spock Exp $
 
 IUSE="ultra1"
 
@@ -18,7 +18,7 @@ UNIPATCH_LIST="${ARCH_PATCH}"
 
 use ultra1 || UNIPATCH_EXCLUDE="99_U1-hme-lockup"
 
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="x86 ~amd64 ~sparc ~ppc"
 
 pkg_postinst() {
 	postinst_sources
@@ -26,9 +26,8 @@ pkg_postinst() {
 	ewarn "IMPORTANT:"
 	ewarn "ptyfs support has now been dropped from devfs and as a"
 	ewarn "result you are now required to compile this support into"
-	ewarn "the kernel. You can do so by enabling the following options"
-	ewarn "    Device Drivers -> Character devices  -> Unix98 PTY Support"
-	ewarn "    File systems   -> Pseudo filesystems -> /dev/pts filesystem."
+	ewarn "the kernel. You can do so by enabling the following option:"
+	ewarn "    Device Drivers -> Character devices -> Legacy (BSD) PTY Support."
 	echo
 
 	if [ "${ARCH}" = "sparc" ]; then
