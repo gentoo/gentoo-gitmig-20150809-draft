@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-shell/ocaml-shell-0.2.3-r1.ebuild,v 1.1 2003/02/23 21:57:14 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-shell/ocaml-shell-0.2.3-r1.ebuild,v 1.2 2003/03/11 20:57:19 george Exp $
 
 DESCRIPTION="O'Caml modules for running shell commands and pipelines"
 HOMEPAGE="http://www.ocaml-programming.de/packages/documentation/shell/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.ocaml-programming.de/packages/shell-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-lang/ocaml-3.06
 	>=dev-ml/findlib-0.8"
