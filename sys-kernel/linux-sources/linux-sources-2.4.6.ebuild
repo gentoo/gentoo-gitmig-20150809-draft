@@ -43,7 +43,8 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
 	http://prdownloads.sourceforge.net/pcmcia-cs/pcmcia-cs-${PCV}.tar.gz
 	http://www.zip.com.au/~akpm/ext3-2.4-0.9.1-246.gz
-	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-1.0.0-patch.tar.gz"
+	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-1.0.0-patch.tar.gz
+	ftp://ftp.cs.huji.ac.il/users/mosix/MOSIX-1.0.5.tar.gz"
 fi
 #	http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz
 #	http://www.netroedge.com/~lm78/archive/i2c-${SENV}.tar.gz
@@ -107,10 +108,25 @@ src_unpack() {
 #			cat ${DISTDIR}/patch-2.4.6-xfs-${x}.bz2 | bzip2 -d | patch -p1
 #		done		
 		
+		mkdir ${S}/extras
+
+		if [ "`use mosix`" ]
+		then
+			echo "Applying MOSIX patch..."
+			cd ${S}/extras
+			mkdir MOSIX-1.0.5
+			cd MOSIX-1.0.5
+			unpack MOSIX-1.0.5.tar.gz
+			tar -x --no-same-owner -vf user.tar
+			rm user.tar
+			cd ${S}
+			try cat extras/MOSIX-1.0.5/patches.2.4.6 | patch -p0
+			tar -x --no-same-owner -vf extras/MOSIX-1.0.5/kernel.new.2.4.6.tar
+		fi
+		
+		cd ${S}
 		echo "Applying reiserfs-NFS fix..."
 		try cat ${FILESDIR}/2.4.6/linux-2.4.6-reiserfs-NFS.patch | patch -N -p1
-    
-		mkdir ${S}/extras
 				
 		if [ "`use lvm`" ]
 		then
@@ -180,23 +196,37 @@ src_unpack() {
 		#	patch -p0 < ${FILESDIR}/${KV}/pcmcia-cs-${PCV}-gentoo.diff
 		fi
 		
-		if [ "`use jfs`" ]
-		then
-			echo "Applying JFS patch..."
-			cd ${WORKDIR}
-			unpack jfs-${JFSV}-patch.tar.gz
-			cd ${S}
-			patch -p1 < ${WORKDIR}/jfs-common-v1.0.0-patch
-			patch -p1 < ${WORKDIR}/jfs-2.4.5-v1.0.0-patch
-		fi
+		#JFS patch works; commented out because it's not ready for production use
+		#if [ "`use jfs`" ]
+		#then
+		#	echo "Applying JFS patch..."
+		#	cd ${WORKDIR}
+		#	unpack jfs-${JFSV}-patch.tar.gz
+		#	cd ${S}
+		#	patch -p1 < ${WORKDIR}/jfs-common-v1.0.0-patch
+		#	patch -p1 < ${WORKDIR}/jfs-2.4.5-v1.0.0-patch
+		#fi
 		
 		if [ "`use ext3`" ]
 		then
 			echo "Applying ext3 patch..."
+			if [ "`use mosix`" ]
+			then
+				echo
+				echo "There will be one reject; we will fix it. (no worries)"
+				echo
+			fi
 			cd ${S}
 			gzip -dc ${DISTDIR}/ext3-2.4-0.9.1-246.gz | patch -l -p1
+			if [ "`use mosix`" ]
+			then
+				echo 
+				echo "Fixing reject in include/linux/sched.h..."
+				echo
+				cp ${FILESDIR}/${KV}/sched.h include/linux
+			fi
 		fi
-		
+			
 		#get sources ready for compilation or for sitting at /usr/src/linux
 		echo "Preparing for compilation..."
 		cd ${S}
@@ -258,15 +288,16 @@ src_compile() {
 		
 		cd ${S}
 		
-		if [ "`use jfs`" ]
-		then
-			cd ${S}/fs/jfs/utils
-			try make
-			cd output
-			into /
-			dosbin *
-			doman `find -iname *.8`
-		fi
+#		Works, just commented out because JFS isn't ready to be used by non-developers
+#		if [ "`use jfs`" ]
+#		then
+#			cd ${S}/fs/jfs/utils
+#			try make
+#			cd output
+#			into /
+#			dosbin *
+#			doman `find -iname *.8`
+#		fi
 			
 		if [ "$PN" == "linux" ]
 		then
