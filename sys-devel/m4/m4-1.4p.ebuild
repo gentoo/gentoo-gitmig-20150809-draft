@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4p.ebuild,v 1.14 2003/02/13 16:33:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4p.ebuild,v 1.15 2003/02/24 10:11:26 carpaski Exp $
 
 inherit gnuconfig
 
@@ -23,6 +23,10 @@ RDEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
+
+	cp ${S}/tests/mkconfig.sh ${S}/tests/mkconfig.sh.orig
+	sed '2s:^:#:' < ${S}/tests/mkconfig.sh.orig > ${S}/tests/mkconfig.sh
+
 	use alpha && gnuconfig_update
 }
 
@@ -58,5 +62,9 @@ src_install() {
 	dodoc modules/README modules/TODO
 	docinto html
 	dohtml examples/WWW/*.htm
+	
+	# mkconfig.sh creates this file in other revisions...
+	# It shouldn't be there, so we delete it.
+	rm -f /tmp/env
 }
 
