@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cplay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.11 2004/10/06 13:01:44 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.12 2004/10/19 03:08:57 tgall Exp $
+
+  18 Oct 2004; Tom Gall <tgall@gentoo.org> cplay-1.49.ebuild:
+  stable on ppc64, bug #64531
 
   06 Oct 2004; <SeJo@gentoo.org> cplay-1.49.ebuild:
   unstable on ppc
