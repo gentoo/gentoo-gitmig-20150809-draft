@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <satai@gentoo.org> (16 Aug 2002)
+# Masked for testing
+=app-text/docbook-xml-dtd-4.1.2-r3
+
 # <aliz@gentoo.org> (16 Aug 2002)
 # Masked for testing
 =app-admin/fam-oss-2.6.9
