@@ -1,0 +1,15 @@
+# ChangeLog for net-www/resin
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/resin/ChangeLog,v 1.1 2003/04/30 13:17:37 absinthe Exp $
+
+*resin-2.1.9 (30 Apr 2003)
+
+  30 Apr 2003; Dylan Carlson <absinthe@gentoo.org> resin-2.1.9.ebuild,
+  files/2.1.9/21resin, files/2.1.9/resin.conf, files/2.1.9/resin.diff,
+  files/2.1.9/resin.init:
+  Initial import -- also closes #11778.
+
+  This is a binary ebuild until the source dist is sane enough where this
+  can be changed.
+  
+  There are verbose post-installation comments; be sure to read them.
