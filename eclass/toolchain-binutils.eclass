@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.12 2004/12/07 00:24:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.13 2004/12/07 00:49:25 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -12,6 +12,11 @@ INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst pkg_prerm
 
 export CTARGET="${CTARGET:-${CHOST}}"
+if [[ ${CTARGET} = ${CHOST} ]] ; then
+	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
+		export CTARGET="${CATEGORY/cross-}"
+	fi
+fi
 
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
