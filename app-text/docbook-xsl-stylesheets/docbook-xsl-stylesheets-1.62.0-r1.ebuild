@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.62.0.ebuild,v 1.6 2003/10/26 10:33:34 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.62.0-r1.ebuild,v 1.1 2003/10/26 10:33:34 obz Exp $
 
 S=${WORKDIR}/docbook-xsl-${PV}
 DESCRIPTION="XSL Stylesheets for Docbook"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.oasis-open.org/docbook/"
 
 SLOT="0"
 LICENSE="as-is | BSD"
-KEYWORDS="x86 ia64 ~ppc ~hppa ~amd64"
+KEYWORDS="x86 ~ia64 ~ppc ~hppa ~amd64"
 IUSE=""
 
 DEPEND="dev-libs/libxml2"
@@ -27,7 +27,6 @@ src_install() {
 		cp -af ${i} ${D}/${DEST}
 		cd ${D}/${DEST}/${i}
 
-		# there's no LostLog anywhere in the source anymore
 		for j in ChangeLog README
 		do
 			if [ -e ${j} ]
