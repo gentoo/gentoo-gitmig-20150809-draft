@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta22.ebuild,v 1.1 2004/12/19 13:56:41 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta22.ebuild,v 1.2 2005/01/10 00:44:38 jnc Exp $
 
 inherit eutils
 
