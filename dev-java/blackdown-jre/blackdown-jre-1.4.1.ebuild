@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1.ebuild,v 1.4 2003/09/01 11:54:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1.ebuild,v 1.5 2003/09/06 12:13:12 hanno Exp $
 
 inherit java nsplugins gcc
 
@@ -28,7 +28,7 @@ LICENSE="sun-bcla-java-vm"
 KEYWORDS="x86 sparc"
 
 src_unpack () {
-	tail +461 ${DISTDIR}/${A} | tar xjf -
+	tail -n +461 ${DISTDIR}/${A} | tar xjf -
 }
 
 src_install () {

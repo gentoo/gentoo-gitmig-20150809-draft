@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r8.ebuild,v 1.6 2003/05/24 06:37:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r8.ebuild,v 1.7 2003/09/06 12:13:12 hanno Exp $
 
 inherit java nsplugins
 
@@ -21,7 +21,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 
 src_unpack () {
 	if (use ppc) || (use sparc) ; then 
-		tail +422 ${DISTDIR}/${A} | tar xjf -
+		tail -n +422 ${DISTDIR}/${A} | tar xjf -
 	else
 		unpack ${A}
 	fi
