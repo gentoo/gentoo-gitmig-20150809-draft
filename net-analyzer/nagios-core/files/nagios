@@ -9,7 +9,8 @@ depend() {
 
 start() {
 	ebegin "Starting nagios"
-	su - nagios -c "touch /var/nagios/nagios.log /var/nagios/status.sav"
+	touch /var/nagios/nagios.log /var/nagios/status.sav
+	chown nagios:nagios /var/nagios/nagios.log /var/nagios/status.sav
 	rm -f /var/nagios/rw/nagios.cmd
 	start-stop-daemon -o --quiet --start --startas /usr/nagios/bin/nagios \
 		--pidfile /var/nagios/nagios.lock -- -d /etc/nagios/nagios.cfg
