@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.776 2004/12/04 18:17:49 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.777 2004/12/05 16:48:51 twp Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -710,6 +710,7 @@ x11-base/xorg-x11:insecure-drivers - Builds insecure DRI stuff for via, mach64 a
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-base/xorg-x11:truetype-fonts - Build TrueType fonts
 x11-base/xorg-x11:type1-fonts - Build Type1 fonts
+x11-libs/cairo:glitz - Build with glitz support
 x11-libs/evas:cairo - Build the cairo graphical engine
 x11-libs/fox:freetype - Enable freetype support (allows for antialiased fonts)
 x11-libs/gtkmathview:t1lib - Enable t1lib support
