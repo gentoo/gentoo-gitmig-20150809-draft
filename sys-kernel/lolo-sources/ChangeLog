@@ -1,6 +1,50 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.13 2002/10/03 18:21:47 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.14 2002/10/17 17:58:29 lostlogic Exp $
+
+*lolo-sources-2.4.20.1_pre1 (16 Oct 2002)
+
+  16 Oct 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.11_pre1.ebuild:
+
+  The long awaited of the 2.4.20 series of stuff, this one is still missing stuff.
+
+  Changes from gentoo-sources-2.4.19-r10:
+  - Switch to a base of linux-2.4.20-pre10-ac2
+  - Update grsecurity, preempt, jiffies, acpi, etc.
+
+  Random known todo:
+  - Fix grsecurity VM_STACK_FLAGS stuff (per-arch VM_DATA_DEFAULT,
+    possibly upstreamable)
+
+  Patches added:
+  - 06_O_STREAMING-2.4.20-pre9-1
+  - 32_v4l2-api-2.4.20-pre2
+
+  Patches dropped, merged in mainline:
+  - 17_htb3.6_2.4.17
+  - 31_p4-xeon-detection
+
+  Patches dropped, merged in -ac:
+  - 06-vm-strict-overcommit-2.4.19-pre7-rmap-1
+  - 15_sis-740-961
+  - 27_jfs-1.0.23-xattr
+  - 28_jfs-1.0.23-acl
+  - 33_nfs-update
+  - 34_nfs-over-tcp
+  - 35_iptables-patch-o-matic
+  - 97_ide_taskfile_config
+
+  Patches waiting for merging:
+  - 03_xattr+acl-0.8.51
+  - 08_scheduler-hints
+  - 12_cdda-dma
+  - 24_smptimers
+  - 43_VIA-fixes
+  - 44_VIA-northbridge-fixup
+  - XFS
+  - 80_loop-jari
+  - 81_freeswan-1.98b
+  - 82_patch-int
 
 *lolo-sources-2.4.19.10_pre6 (03 Oct 2002)
 
