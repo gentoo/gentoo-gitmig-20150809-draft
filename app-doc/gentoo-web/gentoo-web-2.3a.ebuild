@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.2 2002/06/24 18:32:16 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.3 2002/07/03 15:52:28 drobbins Exp $
  
  
 S=${WORKDIR}/gentoo-src/gentoo-web
@@ -45,7 +45,7 @@ src_unpack() {
 }
 
 src_compile() {
-	python ${S}/python/gendevlistxml.py txt/devlist.txt xml/main-devlist.xml
+	python ${S}/python/gendevlistxml.py txt/devlist.txt xml/main-devlist.xml || die
 }
 
 src_install() {
