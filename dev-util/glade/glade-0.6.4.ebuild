@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.4.ebuild,v 1.18 2004/06/25 02:33:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.4.ebuild,v 1.19 2004/07/14 23:32:38 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://glade.gnome.org/"
 SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc amd64"
-IUSE="nls gnome bonobo"
+IUSE="bonobo debug gnome nls"
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
