@@ -1,21 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25-r3.ebuild,v 1.4 2005/02/01 02:44:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.7 2005/02/01 02:44:04 lu_zero Exp $
 
 IUSE=""
 
-inherit eutils rpm multilib linux-info linux-mod
+inherit eutils rpm linux-info linux-mod
 
 DESCRIPTION="Ati precompiled drivers for r350, r300, r250 and r200 chipsets"
 HOMEPAGE="http://www.ati.com"
-SRC_URI="x86? ( http://www2.ati.com/drivers/linux/fglrx_6_8_0-${PV}-1.i386.rpm )
-	 amd64? ( http://www2.ati.com/drivers/linux/fglrx64_6_8_0-${PV}-1.x86_64.rpm )"
+SRC_URI="http://www2.ati.com/drivers/linux/fglrx_6_8_0-${PV}-1.i386.rpm"
 
 LICENSE="ATI"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~x86"
 
 RDEPEND=">=x11-base/xorg-x11-6.8.0
-	 >=x11-base/opengl-update-2.1_pre1"
+		 x11-base/opengl-update"
 
 DEPEND=">=virtual/linux-sources-2.4
 	${RDEPEND}"
@@ -23,7 +22,7 @@ DEPEND=">=virtual/linux-sources-2.4
 PROVIDE="virtual/opengl"
 
 ATIBIN="${D}/opt/ati/bin"
-RESTRICT="nostrip multilib-pkg-force"
+RESTRICT="nostrip"
 
 pkg_setup(){
 	#check kernel and sets up KV_OBJ
@@ -104,26 +103,9 @@ src_install() {
 
 	local native_dir
 	use x86 && native_dir="lib"
-	use amd64 && native_dir="lib64"
 
 	# Install the libs
-	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
-	local MLTEST=$(type dyn_unpack)
-	if [ "${MLTEST/set_abi}" = "${MLTEST}" ] && has_multilib_profile; then
-		local OABI=${ABI}
-		for ABI in $(get_abi_order); do
-			src_install-libs
-		done
-		ABI=${OABI}
-		unset OABI
-	elif has_multilib_profile; then
-		src_install-libs
-	elif use amd64; then
-		src_install-libs lib $(get_multilibdir)
-		src_install-libs lib64 $(get_libdir)
-	else
-		src_install-libs
-	fi &> /dev/null
+	src_install-libs
 
 	#apps
 	insinto /etc/env.d
@@ -138,13 +120,6 @@ src_install() {
 src_install-libs() {
 	local pkglibdir=lib
 	local inslibdir=$(get_libdir)
-
-	if [ ${#} -eq 2 ]; then
-		pkglibdir=${1}
-		inslibdir=${2}
-	elif has_multilib_profile && [ "${ABI}" == "amd64" ]; then
-		pkglibdir=lib64
-	fi
 
 	einfo "${pkglibdir} -> ${inslibdir}"
 
@@ -185,7 +160,7 @@ src_install-libs() {
 	doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.a
 	cp -a ${WORKDIR}/usr/X11R6/${pkglibdir}/libfglrx_gamma.* \
 			${D}/${X11_LIB_DIR}
-	#Not the best place
+
 	insinto ${X11_DIR}/include/X11/extensions
 	doins ${WORKDIR}/usr/X11R6/include/X11/extensions/fglrx_gamma.h
 
