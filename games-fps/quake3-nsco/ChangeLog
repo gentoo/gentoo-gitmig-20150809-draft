@@ -1,8 +1,11 @@
 # ChangeLog for games-fps/quake3-nsco
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-nsco/ChangeLog,v 1.4 2003/10/05 02:30:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-nsco/ChangeLog,v 1.5 2003/10/27 19:35:46 malverian Exp $
 
 *quake3-nsco-1.45 (29 Nov 2002)
+
+  27 Oct 2003; Philip Walls <malverian@gentoo.org> :
+  Version bump
 
   02 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
   Tweaks/fixes for #20384 and games-q3mod.eclass support.
