@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/paxtest
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.12 2004/07/29 09:47:21 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.13 2004/07/29 19:09:08 lv Exp $
+
+  29 Jul 2004; Travis Tilley <lv@gentoo.org>
+  +files/paxtest-0.9.5-use-fPIE.patch, paxtest-0.9.5-r1.ebuild:
+  fixed up getheap2 and getmain2 tests for non-x86 archs
 
   29 Jul 2004; Travis Tilley <lv@gentoo.org> paxtest-0.9.5-r1.ebuild:
   added very preliminary support for non-x86 archs and added ~amd64 keyword
