@@ -10,5 +10,5 @@ MD5 c2510fe1891f5a9effb12c2196922206 files/xbox-sources-2.6.7.cmdlineLeak.patch 
 MD5 b9a94233e1457787352e5f85e3e3582d files/xbox-sources-2.4.28.binfmt_a.out.patch 2009
 MD5 530630d25910e6bd9376b63ea099655f files/xbox-sources-2.6.8.1.AF_UNIX.patch 469
 MD5 8165de5e2ab6e0d3263ea35ce856fd1b files/xbox-sources-2.6.8.1.smbfs.patch 3309
-MD5 367f8a1dad8e72496bbc76cd3df1e4a2 files/digest-xbox-sources-2.6.8.1-r6 230
+MD5 69563e7beea5b2c536e91459b2473692 files/digest-xbox-sources-2.6.8.1-r6 230
 MD5 e0d5b095eef177dd9cb377c1ba881066 files/digest-xbox-sources-2.4.28-r1 226

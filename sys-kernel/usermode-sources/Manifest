@@ -15,7 +15,7 @@ MD5 025c80544aef14ce3a49024d791c5596 files/usermode-sources-2.6.binfmt_a.out.pat
 MD5 a9991d6324d7404ed99e79be6e44e9de files/usermode-sources-2.6.binfmt_elf.patch 2348
 MD5 60d25ff310fc6abfdce39ec9e47345af files/usermode-sources-2.4.CAN-2004-0685.patch 2809
 MD5 0f66013f643c79c97fda489618a4e2fd files/usermode-sources-2.4.CAN-2004-0535.patch 476
-MD5 de879ebc4f35b1faca551b34d3278d3c files/digest-usermode-sources-2.6.8.1-r5 214
+MD5 8125bbaae1f32d24b3f76896edf67d93 files/digest-usermode-sources-2.6.8.1-r5 214
 MD5 8165de5e2ab6e0d3263ea35ce856fd1b files/usermode-sources-2.6.smbfs.patch 3309
 MD5 c2510fe1891f5a9effb12c2196922206 files/usermode-sources-2.6.cmdlineLeak.patch 281
 MD5 95708646470a95668e8789cd415844ed files/usermode-sources.CAN-2004-0497.patch 846
