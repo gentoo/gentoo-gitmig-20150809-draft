@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.6 2004/07/15 08:38:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.7 2004/08/22 04:45:28 obz Exp $
 
 inherit kde-functions eutils flag-o-matic
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.0.0
 	X? ( virtual/x11 )
 	esd? ( media-sound/esound )
 	gtk? ( >=x11-libs/gtk+-2.0.0 )
-	gnome? ( >=gnome-base/ORBit-0.5.0 )
+	gnome? ( =gnome-base/orbit-0* )
 	oggvorbis? ( media-libs/libvorbis )
 	alsa? ( >=media-libs/alsa-lib-0.9.8 )
 	arts? ( kde-base/arts )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.12 2004/06/25 00:30:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.13 2004/08/22 04:45:28 obz Exp $
 
 IUSE="debug esd X gtk oggvorbis gnome arts alsa nls"
 
@@ -20,7 +20,7 @@ RDEPEND="=dev-libs/glib-1.2*
 	X? ( virtual/x11 )
 	esd? ( media-sound/esound )
 	gtk? ( >=media-libs/gdk-pixbuf-0.8 )
-	gnome? ( gnome-base/ORBit )
+	gnome? ( =gnome-base/orbit-0* )
 	oggvorbis? ( media-libs/libvorbis )
 	alsa? ( >=media-libs/alsa-lib-0.9.8 )
 	arts? ( kde-base/arts )"
