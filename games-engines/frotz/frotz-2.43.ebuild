@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/frotz-2.43.ebuild,v 1.2 2004/02/03 00:59:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/frotz-2.43.ebuild,v 1.3 2004/04/15 18:22:59 augustus Exp $
 
 DESCRIPTION="Curses based interpreter for Z-code based text games"
 HOMEPAGE="http://www.cs.csubak.edu/~dgriffi/proj/frotz/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.ifarchive.org/if-archive/infocom/interpreters/frotz/${P}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE="oss alsa"
 
 DEPEND="sys-libs/ncurses
