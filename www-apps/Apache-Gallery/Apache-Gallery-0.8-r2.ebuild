@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.8-r1.ebuild,v 1.3 2005/03/07 13:57:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.8-r2.ebuild,v 1.1 2005/03/07 13:57:38 mcummings Exp $
 
 inherit perl-module webapp
 

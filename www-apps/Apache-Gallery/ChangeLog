@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/Apache-Gallery
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.5 2004/09/21 16:15:11 rl03 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.6 2005/03/07 13:57:38 mcummings Exp $
+
+  07 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  Apache-Gallery-0.8-r1.ebuild:
+  Modified what's installed from templates [ bug 71196 - thanks to Wayne Love
+  <wayne@wslove.org> ]. Also corrected default vs new ins's.
 
 *Apache-Gallery-0.8-r1 (21 Sep 2004)
 
