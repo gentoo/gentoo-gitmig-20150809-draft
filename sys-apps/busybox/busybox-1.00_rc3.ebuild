@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_rc3.ebuild,v 1.7 2004/09/28 13:30:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_rc3.ebuild,v 1.8 2004/10/07 01:13:14 vapier Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ src_unpack() {
 	if use savedconfig ; then
 		[ -r .config ] && rm .config
 		for conf in ${PN}-${PV}-${PR} ${PN}-${PV} ${PN}; do
-			configfile=/etc/${PN}/${CCHOST}/${conf}.config
+			configfile=/etc/${PN}/${CHOST}/${conf}.config
 			if [ -r ${configfile} ]; then
 				cp ${configfile} ${S}/.config
 				break;
@@ -216,9 +216,9 @@ src_install() {
 	fi
 
 	if use savedconfig ; then
-		einfo "Saving this build config to /etc/${PN}/${CCHOST}/${PN}-${PV}-${PR}.config"
+		einfo "Saving this build config to /etc/${PN}/${CHOST}/${PN}-${PV}-${PR}.config"
 		einfo "Read this ebuild for more info on how to take advantage of this option"
-		insinto /etc/${PN}/${CCHOST}/
+		insinto /etc/${PN}/${CHOST}/
 		newins ${S}/.config ${PN}-${PV}-${PR}.config
 	fi
 }
