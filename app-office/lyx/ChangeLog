@@ -1,8 +1,14 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.7 2002/09/03 02:09:19 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.8 2002/09/04 18:53:41 danarmak Exp $
+
+  04 Sep 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix bugs like #7323: make the dep on xforms =xforms-1*, so that the old
+  and broken xforms-089 package doesn't satisfy it anymore.
 
 *lyx-1.2.1 (22 Aug 2002)
+
   02 Sep 2002; Owen Stampflee <owen@gentoo.org> lyx-1.2.1.ebuild ChangeLog :
   
   Added PPC To KEYWORDS.
