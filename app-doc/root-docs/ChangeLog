@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/root-docs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.5 2004/06/24 21:50:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.6 2004/12/20 04:18:06 jhuebel Exp $
+
+  19 Dec 2004; Jason Huebel <jhuebel@gentoo.org> root-docs-3.03.04.ebuild:
+  amd64, just docs, no need for testing
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   root-docs-3.03.04.ebuild:
