@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.55 2004/09/24 02:40:17 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.56 2004/10/13 20:49:46 lv Exp $
+
+  13 Oct 2004; Travis Tilley <lv@gentoo.org> gdb-6.0-r1.ebuild:
+  another sandbox fix
 
   23 Sep 2004; Travis Tilley <lv@gentoo.org> gdb-6.2.1.ebuild:
   make CONF_LIBDIR aware again to fix a sandbox violation. lets hope nobody
