@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.17.ebuild,v 1.10 2005/03/05 00:37:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.17.ebuild,v 1.11 2005/04/03 15:41:57 hardave Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="An IRC bot extensible with C or Tcl."
 HOMEPAGE="http://www.eggheads.org/"
 SRC_URI="ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/${MY_P}.tar.gz
 	mirror://gentoo/${P}-patches-${PATCHSET_V}.tar.bz2"
-KEYWORDS="x86 sparc ~mips ia64 amd64 ppc alpha"
+KEYWORDS="x86 sparc mips ia64 amd64 ppc alpha"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug static mysql postgres ssl"
