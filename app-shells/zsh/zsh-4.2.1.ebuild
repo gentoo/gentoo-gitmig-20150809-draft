@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.1_alpha1.ebuild,v 1.1 2004/08/12 19:11:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.1.ebuild,v 1.1 2004/08/15 11:23:21 usata Exp $
 
 inherit eutils
 
@@ -10,9 +10,9 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
-SRC_URI="ftp://ftp.zsh.org/pub/development/${MY_P}.tar.bz2
+SRC_URI="ftp://ftp.zsh.org/pub/${MY_P}.tar.bz2
 	cjk? ( http://www.ono.org/software/dist/zsh-4.2.0-euc-0.2.patch.gz )
-	doc? ( ftp://ftp.zsh.org/pub/development/${MY_P}-doc.tar.bz2 )"
+	doc? ( ftp://ftp.zsh.org/pub/${MY_P}-doc.tar.bz2 )"
 
 LICENSE="ZSH"
 SLOT="0"

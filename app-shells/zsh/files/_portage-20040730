@@ -1,6 +1,6 @@
-#compdef emerge rc-update rc-status ebuild opengl-update rc
+#compdef emerge rc-update rc-status ebuild opengl-update rc quickpkg
 
-# $Id: _portage-20040730,v 1.1 2004/08/12 19:11:59 usata Exp $
+# $Id: _portage-20040730,v 1.2 2004/08/15 11:23:21 usata Exp $
 
 # ZSH completion function for Portage
 # Author: baptux <bapt@ifrance.com>
@@ -104,6 +104,23 @@ _rc-update () {
     fi
 }
 
+# Stuff for quickpkg
+
+_quickpkg () {
+	if compset -P '(\\|)[><][=]'; then
+	_arguments -s \
+    	    '*:installed pkgname with versions:_portage_unmerge_vers' && return 0
+	  elif compset -P '(\\|)[<=>]'; then
+		_arguments -s \
+		    '*:installed pkgname with versions:_portage_unmerge_vers' && return 0
+	  elif compset -P '(\\|)[/]'; then
+		_files -W / -/ && return 0
+	  else 
+		_arguments -s \
+		    '*:installed pkgname:_portage_quickpkg' && return 0
+	  fi
+}
+ 
 # Stuff for emerge
 
 _emerge () {
@@ -193,6 +210,13 @@ _portage_unmerge(){
     _path_files -/ -W "/var/db/pkg/"
 }
 
+#Function to show only installed packages -- no _path_files 
+_portage_quickpkg(){
+    installed_portage=(/var/db/pkg/*-*/*)
+    installed_pkgname=${(M)${${installed_portage##*/}%%-[0-9]*}}
+    _tags -s installed_pkgname && { compadd "$@" ${(kv)=installed_pkgname} }
+}
+
 #Function to show only installed packages -- cat/name-ver
 _portage_unmerge_vers(){
     installed_portage=(/var/db/pkg/*-*/*)
@@ -274,6 +298,7 @@ install_args=(
     '(-l --changelog)--oneshot[Do not add package to the world profile]'
     {'(--onlydeps --changelog -l)-o','(--changelog -o -l)--onlydeps'}'[Only merge (or pretend to merge) the dependencies]'
     {'(--quiet --changelog -l)-q','(-q --changelog -l)--quiet'}'[General outcome is a reduced or condensed output]'
+    {'(-l --changelog -t)--tree','(-l --changelog --tree)-t'}'[Show dependency tree]'
     {'(--update --changelog -l)-u','(-u --changelog -l)--update'}'[Updates packages to the most recent version available]'
     {'(--upgradeonly --changelog -l)-U','(-U --changelog -l)--upgradeonly'}'[Do not update packages to a lower version]'
     {'(--usepkg --changelog -l)-k','(-k --changelog -l)--usepkg'}'[Tells emerge to use binary packages if available]'
@@ -351,4 +376,8 @@ case "$service" in
 	rc)
 		_rc "$@" && return 0
 		;;
+	quickpkg)
+		_quickpkg "$@" && return 0
+		;;
+
 esac

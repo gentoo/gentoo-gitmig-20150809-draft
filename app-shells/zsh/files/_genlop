@@ -9,132 +9,111 @@
 # Adapted for genlop by oberyno <oberyno@gmail.com>
 
 _genlop () {
-    local state prev1="$words[CURRENT-1]"  prev2="$words[CURRENT-2]"
-    if (( CURRENT == 2 ));then
-        _arguments -s \
-            '*:*:->ebuilds' \
-            "$common_args[@]" "$general_args[@]" "$single_args[@]" && return 0
-    elif (( CURRENT > 2 ));then
-        case "$words[2]" in
-	    --unmerge|-u)
-		_arguments -s \
-		    '*:*:->install_portage' \
-		    "$common_args[@]" "$general_args[@]" && return 0
-		;;
-	    --current|-c)
-		_arguments -s \
-		    '*:only works when an emerge is in progress:' \
-		    "$common_args[@]" && return 0
-		;;
-      	    --pretend|-p)
-		_arguments -s \
-		    '*:needs a piped emerge; otherwise will do nothing:' \
-		    "$common_args[@]" && return 0
-		;;
-	    --date)
-		  if [[ ${prev2} == (january|february|march|april|may|june|july|august|september|october|november|december|monday|tuesday|wednesday|thursday|friday|saturday|sunday) ]]
-		  	then  _arguments -s \
-			'*:installed pkgname:_portage_installed' \
-			"$common_args[@]" "$general_args[@]" && return 0
-		  elif [[ ${prev1} == (1) ]]
-			then  _values  "date" 'day ago' 'month ago' 'year ago' 'week ago' && return 0
-		  elif [[ ${prev1} == ([2-9]|[1-9][0-9]*) ]]
-			then  _values  "date" 'days ago' 'months ago' 'years ago' 'weeks ago' && return 0
- 		  elif [[ ${prev1} == (last) ]]
-			then  _values  "date" month week
- 			_arguments '*:*:_days' && return 0
-		  elif [[ ${prev1} == (1st|2nd|3rd|4th|5th) ]]
-			then _arguments '*:*:_days' && return 0
-		  elif [[ ${prev1} == (january|february|march|april|may|june|july|august|september|october|november|december) ]]
-			then compadd {1..31} && return 0
-	  	  elif [[ ${prev2} == (1st|2nd|3rd|4th|5th) ]]
-			then  compadd in\ {january,february,march,april,may,june,july,august,september,october,november,december} && return 0
-		  elif [[ ${prev1} == --date ]] 
-		  	then _values "enter number for more options or use mm/dd/yyyy format" \
-		 	 last yesterday 1st 2nd 3rd 4th 5th 
-		 	 _alternative \
-		        '*:*:_days' '*:*:_months' && return 0
-		  else
-		  	 _arguments -s \
-			'*:installed pkgname:_portage_installed' \
-			"$common_args[@]" "$general_args[@]" && return 0
-		  fi
-		;;
+local prev1="$words[CURRENT-1]"  prev2="$words[CURRENT-2]" days months arg single state lstate
+days=(monday tuesday wednesday thursday friday saturday sunday)
+months=(january february march april may june july august september october november december)
+arg=( --current -c --time -t --gmt -g --info -i --file -f --rsync -r --unmerge -u --date --search -s --list -l )
+single=( --current -c --pretend -p --help -h --version -v )
 
-	    --rsync|-r|--list|-l)
-		_arguments -s \
-		    "$common_args[@]" "$general_args[@]" && return 0
-		;;
-	    --version|-v|--help|-h)
-	    	_arguments -s \
-		    "$common_args[@]" && return 0
-		;;
+	[[ ${prev2} == (1st|2nd|3rd|4th|5th) ]] &&
+		compadd in\ $months && return 0
+	[[ ${prev1} == ([2-9]|[1-9][0-9]*) && ${prev2} != \
+	(january|february|march|april|may|june|july|august|september|october|november|december) ]] &&
+		_values  '' 'days ago' 'months ago' 'years ago' 'weeks ago' && return 0
+	[[ ${prev1} == (1) && ${prev2} != \
+	(january|february|march|april|may|june|july|august|september|october|november|december) ]] &&
+		_values  '' 'day ago' 'month ago' 'year ago' 'week ago' && return 0
+
+    case "$prev1" in
+	    last)
+	        _values  '' month week
+		compadd $days && return 0
+	;;
+	    1st|2nd|3rd|4th|5th)
+		compadd $days && return 0
+	;;
+	    january|february|march|april|may|june|july|august|september|october|november|december)
+		compadd {1..31} && return 0
+	;;
+	    --date) 
+	        _message 'enter number for more options or use mm/dd/yyyy format'
+	        _values '' \
+		last yesterday 1st 2nd 3rd 4th 5th 
+		_alternative \
+		'*:*:_days' '*:*:_months' && return 0
+	;;
+	    --file|-f)
+	        _arguments '*:logfile:_files' && return 0
+	;;
 	    *)
-		_arguments -s \
-		'*:*:->ebuilds' \
-		    "$common_args[@]" "$general_args[@]" && return 0
-		;;
-        esac
-    fi
+		 _arguments \
+		"($single $arg *)"{--current,-c}"[display the current merge in action]" \
+		"($single)*--date[specify date of event]:date:->date" \
+		"($single)*-f[specify the logfile to use]:logfile:_files" \
+		"($single --gmt -g)"{--gmt,-g}"[display time in GMT/UTC format (default is local time)]" \
+		"($single $arg *)"{--help,-h}"[display help information]" \
+		"($single --info -i --list -l)"{--info,-i}"[print brief summary about installed ebuild]" \
+		"($single --search -s --info -i --list -l *)"{--list,-l}"[list merge history]" \
+		"(--nocolor -n)"{--nocolor,-n}"[disable colored output]" \
+		"($single $arg *)"{--pretend,-p}"[estimate build time of a piped emerge -p]" \
+		"($single --search -s --info -i --time -t --unmerge -u --rsync -r *)"{--rsync,-r}"[display rsync history]" \
+		"($single --rsync -r --search -s --list -l *)"{--search,-s}"[select ebuilds matching the provided regular expression]:pattern:" \
+		"($single --time -t)"{--time,-t}"[display merge time]" \
+		"($single --rsync -r --unmerge -u)"{--unmerge,-u}"[display when packages have been unmerged]" \
+		"($single $arg *)"{--version,-v}"[display version information]" \
+		"($single)*:package:_portage_pkglist"
+	;;
+    esac
+	
     while [[ -n "$state" ]]; do
         lstate=$state
         state=''
         case "$lstate" in
-	    ebuilds)
+	    date) _message 'enter number for more options or use mm/dd/yyyy format'
+	    _values '' \
+		last yesterday 1st 2nd 3rd 4th 5th 
 		_alternative \
-		    '*:installed packages:_portage_installed'
-		;;
-	    install_portage)
-		_alternative \
-		    '*:installed packages:_portage_pkglist'
-		;;
-        esac
-    done
+		':*:_days' ':*:_months' && return 0
+	    ;;
+	esac
+    done   
 }
 
-_portage_installed(){
-    installed_portage=(/var/db/pkg/*-*/*)
-    installed_pkgname=${(M)${${installed_portage##*/}%%-[0-9]*}}
-    _tags installed_pkgname && {  compadd "$@" ${(kv)=installed_pkgname} }
-    _path_files -/ -W /var/db/pkg/
-} 
 #Function to show all available portage names
 _portage_pkglist(){
     portage_pkglist="$portage_pkglist"
     _tags -s portage_pkglist && { compadd "$@" ${(kv)=portage_pkglist} }
     _path_files -/ -F "*CVSROOT" -F "*eclass" -F "*distfiles" -F "*licences" -F "*files" -W "${portdir}"
-    _path_files -g \*.ebuild
 }
-common_args=(
-    {'(-n)--nocolor','(--nocolor)-n'}'[disable colored output]'
-)
-
-general_args=(
-	{'(--time)-t','(-t)--time'}'[calculate merge time]'
-	{'(--gmt)-g','(-g)--gmt'}'[display time in GMT/UTC format (default is local time)]'
-	{'(--info)-i','(-i)--info'}'[prints brief summary about installed ebuild]'
-	{'(--file)-f','(-f)--file'}'[specify the logfile to use]:filename:_files'
-	{'(--rsync -r --unmerge)-u','(--rsync -r -u)--unmerge'}'[show when packages have been unmerged]'
-	'*--date[specify date of event]'
-	{'(--search -s --info -i --time -t --unmerge -u --rsync)-r','(--search -s --info -i --time -t --unmerge -u -r)--rsync'}'[looks for portage rsync/sync history]'
-	{'(--search -s --info -i --list)-l','(--search -s --info -i -l)--list'}'[list complete merge history]'
-	{'(--rsync -r --search)-s','(--rsync -r -s)--search'}'[select ebuilds matching the provided regular expression]:enter:_guard "^--*" search pattern'
-)
-
-single_args=(
-	{'(--current)-c','(-c)--current'}'[show the current merge in action]'
-	{'(--pretend)-p','(-p)--pretend'}'[take output from a piped emerge -p and calculate estimated build time]'
-	{'(--version)-v','(-v)--version'}'[output version information]'
-	{'(--help)-h','(-h)--help'}'[show help]'
-)
 
 _days() {
-    _values  "" \
-	monday tuesday wednesday thursday friday saturday sunday
+	local m="monday" t="tuesday" w="wednesday" T="thursday" f="friday" s="saturday" S="sunday"	
+	local day=$(date +%u)
+	if   [[ ${day} == 1 ]] then compadd $m
+	elif [[ ${day} == 2 ]] then compadd $m $t
+	elif [[ ${day} == 3 ]] then compadd $m $t $w	 
+	elif [[ ${day} == 4 ]] then compadd $m $t $w $T
+	elif [[ ${day} == 5 ]] then compadd $m $t $w $T $f
+	elif [[ ${day} == 6 ]] then compadd $m $t $w $T $f $s
+	elif [[ ${day} == 7 ]] then compadd $m $t $w $T $f $s $S
+	fi
 }
 _months() {
-    _values  "" \
-	january february march april may june july august september october november december
+	local j="january" f="february" m="march" a="april" M="may" ju="june" J="july" A="august" s="september" o="october" n="november" d="december"
+	local month=$(date +%m)
+	if   [[ ${month} == 01 ]] then compadd $j
+	elif [[ ${month} == 02 ]] then compadd $j $f
+	elif [[ ${month} == 03 ]] then compadd $j $f $m	 
+	elif [[ ${month} == 04 ]] then compadd $j $f $m $a
+	elif [[ ${month} == 05 ]] then compadd $j $f $m $a $M 
+	elif [[ ${month} == 06 ]] then compadd $j $f $m $a $M $ju
+	elif [[ ${month} == 07 ]] then compadd $j $f $m $a $M $ju $J
+	elif [[ ${month} == 08 ]] then compadd $j $f $m $a $M $ju $J $A
+	elif [[ ${month} == 09 ]] then compadd $j $f $m $a $M $ju $J $A $s
+	elif [[ ${month} == 10 ]] then compadd $j $f $m $a $M $ju $J $A $s $o
+	elif [[ ${month} == 11 ]] then compadd $j $f $m $a $M $ju $J $A $s $o $n
+	elif [[ ${month} == 12 ]] then compadd $j $f $m $a $M $ju $J $A $s $o $n $d
+	fi
 }
 
 #Reading informations from make.conf
@@ -142,5 +121,5 @@ portdir="$(portageq portdir)"
 #pkgdir="$(portageq pkgdir)"
 portdir_overlay="$(portageq portdir_overlay)"
 
-portage_pkglist=(${portdir}/*-*/* ${portdir_overlay}/*-*/*)
+portage_pkglist=(${portdir}/*-*/* ${=portdir_overlay}/*-*/*)
 portage_pkglist=(${portage_pkglist##*/})

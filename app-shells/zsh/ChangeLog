@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.56 2004/08/12 19:11:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.57 2004/08/15 11:23:21 usata Exp $
+
+*zsh-4.2.1 (15 Aug 2004)
+
+  15 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> files/_genlop,
+  files/_portage-20040730, +zsh-4.2.1.ebuild, -zsh-4.2.1_alpha1.ebuild:
+  Version bumped. Updated _genlop and added quickpkg completion
+  (Thanks to oberyno <oberyno@gmail.com>). This closes bug #60353.
 
 *zsh-4.2.1_alpha1 (13 Aug 2004)
 
