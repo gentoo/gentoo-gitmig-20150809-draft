@@ -398,11 +398,6 @@ sys-devel/spython
 # release candidate, should not be used generally
 =app-office/openoffice-1.1_rc3
 
-# <malverian@gentoo.org> 07 Jun 2003
-# Development version of Anjuta for Gnome2
-# Masked for testing
->=dev-util/anjuta-1.1.1
-
 # <robbat2@gentoo.org> 29 May 2003
 # ebuild was previously masked only in the ebuild
 # This is the correct place for it.
