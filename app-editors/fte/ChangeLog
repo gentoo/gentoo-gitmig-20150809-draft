@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/fte
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.5 2002/04/27 22:29:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.6 2002/05/08 08:43:22 spider Exp $
+
+*fte-20010819-r3 (7 May 2002)
+  7 May 2002; Spider <spider@gentoo.org> fte-20010819-r3.ebuild fte-20010819-r2.ebuild :
+  fix sourceforge mirroring.
 
 *fte-20010819-r3 (27 Apr 2002)
 

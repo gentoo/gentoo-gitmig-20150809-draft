@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.1 2002/04/27 22:29:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.2 2002/05/08 08:43:22 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lightweight text-mode editor"
-SRC_URI="http://prdownloads.sourceforge.net/fte/fte-20010819-src.zip
-  	 http://prdownloads.sourceforge.net/fte/fte-20010819-common.zip"
+SRC_URI="ftp://prdownloads.sourceforge.net/${PN}/${P}-src.zip
+  	 ftp://prdownloads.sourceforge.net/${PN}/${P}-common.zip"
 HOMEPAGE="http://fte.sourceforge.net"
 
 RDEPEND=">=sys-libs/ncurses-5.2

@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/quanta
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.1 2002/02/01 21:53:01 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.2 2002/05/08 08:43:22 spider Exp $
+
+*quanta-2.0.1 (7 May 2002)
+  7 May 2002; Spider <spider@gentoo.org> quanta-2.0.1.ebuild :
+  Fix sourceforge mirroring
+
 
 *quanta-2.0.1 (1 Feb 2002)
 
