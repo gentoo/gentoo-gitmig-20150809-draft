@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.4.0.ebuild,v 1.2 2003/09/08 18:19:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.4.0.ebuild,v 1.3 2003/09/21 17:17:24 foser Exp $
 
 inherit gnome2 eutils
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS README TODO"
 
-G2CONF="${G2CONF} $(use_enable ssl openssl)"
+G2CONF="${G2CONF} $(use_enable ssl openssl) --disable-schemas-install"
 
 src_install() {
 
