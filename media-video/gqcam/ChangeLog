@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gqcam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/ChangeLog,v 1.1 2002/07/09 12:16:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/ChangeLog,v 1.2 2002/11/27 01:03:13 foser Exp $
+
+  27 Nov 2002; foser <foser@gentoo.org> gqcam-0.9.ebuild :
+  Fix problems with libpng-1.2.5 (bug #9792)
 
 *gqcam-0.9 (7 May 2002)
 
