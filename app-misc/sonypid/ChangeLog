@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/sonypid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/ChangeLog,v 1.3 2002/11/02 20:46:48 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/ChangeLog,v 1.4 2002/11/17 22:04:54 hanno Exp $
+
+*sonypid-1.4 (17 Nov 2002)
+
+  17 Nov 2002; Hanno Boeck <hanno@gentoo.org> sonypid-1.4.ebuild :
+  New version.
 
 *sonypid-1.3 (02 Nov 2002)
 
