@@ -1,8 +1,20 @@
-MD5 53304a3fad82b3faaf2af07ac4b99d36 ChangeLog 3400
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 601a79d6e59bad75d27e444d3867bc34 ChangeLog 3560
 MD5 638c7b309821330f8041042b2b822ef1 catalyst-1.0.7.ebuild 1442
-MD5 dce06addecba84e0094cc27700804e39 catalyst-1.0.8.ebuild 1534
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 ba7dd4ba3437b62caa4124e8a1a550ec catalyst-1.0.8.1.ebuild 1588
-MD5 9d77a320f499c8a7ce5a4af1896e9f0b files/digest-catalyst-1.0.7 67
+MD5 655ea24dbb01f48480815472dbd890df catalyst-1.0.8.1-r1.ebuild 1800
+MD5 dce06addecba84e0094cc27700804e39 catalyst-1.0.8.ebuild 1534
 MD5 560d4b10b815647d3281dc0bef287916 files/digest-catalyst-1.0.8 67
 MD5 8b93639cf9ca506e429bc0669d77235f files/digest-catalyst-1.0.8.1 69
+MD5 fa63e0207d038fe77410c3f2992d4a40 files/digest-catalyst-1.0.8.1-r1 155
+MD5 9d77a320f499c8a7ce5a4af1896e9f0b files/digest-catalyst-1.0.7 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBCYUQHTu7gpaalycRApY7AKDyzvNX7YgCqjS9j1Q0sVvyQlYZJgCdHKey
+yAWFuRoLTJq0qDtlEhLqDnQ=
+=heY8
+-----END PGP SIGNATURE-----

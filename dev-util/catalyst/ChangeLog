@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.25 2004/07/18 15:07:26 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.26 2004/07/29 23:15:05 vapier Exp $
+
+*catalyst-1.0.8.1-r1 (29 Jul 2004)
+
+  29 Jul 2004; Mike Frysinger <vapier@gentoo.org> +catalyst-1.0.8.1-r1.ebuild:
+  Add a patch to support stacked profiles.
 
   18 Jul 2004; Tom Gall <tgall@gentoo.org> catalyst-1.0.8.1.ebuild:
   stable on ppc64, bug #57487
