@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tulip-devel/tulip-devel-1.1.8-r1.ebuild,v 1.2 2004/06/25 00:16:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tulip-devel/tulip-devel-1.1.8-r1.ebuild,v 1.3 2004/10/01 23:40:55 pyrania Exp $
+
+inherit eutils
 
 DESCRIPTION="Development version of the kernel driver for the Digital/Intel 21x4x ("Tulip") series of ethernet chips."
 MY_PN="tulip"
@@ -21,7 +23,7 @@ S=${WORKDIR}/${MY_P}/src
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch < ${FILESDIR}/${P}-${PR}-gentoo.patch
+	epatch ${FILESDIR}/${P}-${PR}-gentoo.patch || die "epatch failed."
 }
 
 src_compile() {
