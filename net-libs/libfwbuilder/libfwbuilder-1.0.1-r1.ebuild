@@ -1,15 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.1-r1.ebuild,v 1.6 2004/06/24 23:12:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.1-r1.ebuild,v 1.7 2004/07/15 00:51:08 agriffis Exp $
 
 inherit eutils
 
-IUSE="ssl static"
+IUSE="snmp ssl static"
 
 DESCRIPTION="A firewall GUI (library functions)"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 HOMEPAGE="http://www.fwbuilder.org/"
-S=${WORKDIR}/${P}
 
 KEYWORDS="x86 sparc ~amd64"
 LICENSE="GPL-2"
