@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.4 2004/02/27 17:01:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.5 2004/04/12 21:36:00 wolf31o2 Exp $
 
-inherit games eutils
+inherit games
 
 DESCRIPTION="Soldier of Fortune - First-person shooter based on the mercinary trade"
 HOMEPAGE="http://www.lokigames.com/products/sof/"
@@ -13,6 +13,7 @@ LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="x86"
 RESTRICT="nostrip"
+IUSE=""
 
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}
