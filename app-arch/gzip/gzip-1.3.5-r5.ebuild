@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r4.ebuild,v 1.10 2005/01/01 11:45:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r5.ebuild,v 1.1 2005/01/04 19:28:14 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,7 +25,6 @@ src_unpack() {
 	unpack gzip_${PV}.orig.tar.gz
 	cd ${S}
 	epatch ${DISTDIR}/${P}-deb.patch.bz2
-	epatch ${FILESDIR}/gzip-1.3.5-zdiff-tempfile-2.patch
 	epatch ${FILESDIR}/gzip-1.3.5-znew-tempfile-2.patch
 }
 
