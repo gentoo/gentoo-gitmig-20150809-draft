@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/grass
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/ChangeLog,v 1.6 2003/09/06 10:52:16 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/ChangeLog,v 1.7 2003/12/29 13:20:20 mholzer Exp $
+
+*grass-5.0.3 (29 Dec 2003)
+
+  29 Dec 2003; Martin Holzer <mholzer@gentoo.org> grass-5.0.3.ebuild:
+  Version bumped.
 
   06 Sep 2003; Heinrich Wendel <lanius@gentoo.org> grass-5.0.2.ebuild:
   fixed motif/truetype include path
