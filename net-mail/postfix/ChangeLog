@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.7 2002/03/30 16:06:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.8 2002/04/01 17:08:29 g2boojum Exp $
+
+*postfix-1.1.6-r1 (1 Apr 2002)
+
+  1 Apr 2002; Grant Goodyear <g2boojum@gentoo.org>  :
+
+  Modified the ebuild to link in -lcrypt, -lpam (if pam is in USE),
+  and -ldl.  Thanks to Jon Nelson.
 
 *postfix-1.1.6 (30 Mar 2002)
 
