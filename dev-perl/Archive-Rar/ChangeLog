@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Rar
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/ChangeLog,v 1.5 2003/02/12 06:13:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/ChangeLog,v 1.6 2003/06/09 07:12:22 rac Exp $
+
+  09 Jun 2003; <rac@gentoo.org> Archive-Rar-1.9.ebuild:
+  Fix header, add IUSE
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
