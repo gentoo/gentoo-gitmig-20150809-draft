@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# Stuart Bouyer <stubear@gentoo.org> (1 Aug 2002)
+# initial ebuild masked for testing
+=app-i18n/xcin-2.5.2.3
+
 # Brandon Low <lostlogic@gentoo.org> (31 Jul 2002)
 # masked for testing, hack out the arch specifications
 # in configure, please test.
@@ -29,7 +33,7 @@
 =media-libs/xine-lib-0.9.12-r2
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1139 2002/07/31 16:57:53 stroke Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1140 2002/07/31 17:42:56 stubear Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
@@ -158,10 +162,6 @@ net-misc/fakeidentd
 # <g2boojum@gentoo.org> (24 Jul 2002)
 # waiting on copyright 
 net-misc/radvd
-
-# <stubear@gentoo.org> (24 Jul 2002)
-# needs testing of new CJK stuff
-=dev-db/postgresql-7.2.1-r2
 
 # <aliz@gentoo.org> (24 Jul 2002)
 # needs some testing first
