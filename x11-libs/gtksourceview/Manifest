@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2a592ba90e8a7a2c469d81444fa93084 ChangeLog 5313
-MD5 4d0661c01318a8843cfd1594d5a58992 gtksourceview-0.7.0-r1.ebuild 977
-MD5 ea0595ea3aad24393463fe375794814c gtksourceview-0.7.1.ebuild 982
-MD5 c0b915b9401efcb6bfcd99e3819d2928 gtksourceview-1.0.0.ebuild 835
-MD5 1826865c181f30f7103f618ed60a8d9d gtksourceview-1.0.1.ebuild 842
-MD5 1d10b49723acf965b832d7737cd8413b gtksourceview-1.1.1.ebuild 826
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 5e7a9905f333212750e841a928d52370 gtksourceview-1.2.0.ebuild 845
-MD5 1402eb2fe2d5eccbb5213a7e3979480e files/digest-gtksourceview-0.7.0-r1 72
+MD5 1826865c181f30f7103f618ed60a8d9d gtksourceview-1.0.1.ebuild 842
+MD5 935304b2c386817edc46300fb58d2d92 gtksourceview-1.1.1.ebuild 825
+MD5 4d0661c01318a8843cfd1594d5a58992 gtksourceview-0.7.0-r1.ebuild 977
+MD5 c0b915b9401efcb6bfcd99e3819d2928 gtksourceview-1.0.0.ebuild 835
+MD5 901b90805a77e2a8e7e6a0a5512e47dd ChangeLog 5416
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 ea0595ea3aad24393463fe375794814c gtksourceview-0.7.1.ebuild 982
 MD5 3f99b9ed7d06d880a5a6d69bbfedeaf3 files/digest-gtksourceview-0.7.1 72
 MD5 d96e7965c49fc1e8a98018b071866068 files/digest-gtksourceview-1.0.0 72
 MD5 bfd0b18ff517fb76416ff001265d7e0e files/digest-gtksourceview-1.0.1 72
 MD5 4d60c9a0d819b861787adf1041c61e5d files/digest-gtksourceview-1.1.1 72
-MD5 886e09e6bf90b82fecec60f34e5a349d files/gtksourceview-0.6.0-border_fix.patch 479
 MD5 786a6b1c325885af1776c3b23add917a files/digest-gtksourceview-1.2.0 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCLowBXjcVihsel0ERAm7dAKCUveVCPbKJbux+juf3Ox7JTYYzVwCaA0NI
-HJRI16UA2LKwNidXUu17XAQ=
-=9tsa
------END PGP SIGNATURE-----
+MD5 886e09e6bf90b82fecec60f34e5a349d files/gtksourceview-0.6.0-border_fix.patch 479
+MD5 1402eb2fe2d5eccbb5213a7e3979480e files/digest-gtksourceview-0.7.0-r1 72
