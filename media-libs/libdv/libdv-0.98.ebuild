@@ -1,13 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.98.ebuild,v 1.10 2003/02/13 12:47:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.98.ebuild,v 1.11 2003/04/05 15:06:40 mholzer Exp $
 
 IUSE="sdl gtk xv"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="software codec for dv-format video (camcorders etc)"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-	http://belnet.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://libdv.sourceforge.net/"
 
 SLOT="0"
