@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r1.ebuild,v 1.6 2004/07/22 18:04:50 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r1.ebuild,v 1.7 2004/08/02 14:37:44 fmccor Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
 
 LICENSE="wxWinLL-3"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha arm amd64 ia64 hppa"
+KEYWORDS="x86 ppc sparc alpha arm amd64 ia64 hppa"
 IUSE="debug gtk2 odbc opengl unicode"
 
 RDEPEND="virtual/x11

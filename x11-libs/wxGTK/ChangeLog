@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.58 2004/07/22 18:04:50 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.59 2004/08/02 14:37:44 fmccor Exp $
+
+  02 Aug 2004; Ferris McCormick <fmccor@gentoo.org> wxGTK-2.4.2-r1.ebuild:
+  Stable for sparc.  Runs on sparc and is required for wxpython-2.4.2.4,
+  which is required because of some missing patches.
 
   22 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> wxGTK-2.4.2-r1.ebuild,
   wxGTK-2.4.2.ebuild, wxGTK-2.5.1.ebuild:
