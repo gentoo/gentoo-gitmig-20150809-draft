@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.16.ebuild,v 1.3 2003/09/05 02:26:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.16.ebuild,v 1.4 2003/12/26 13:45:20 weeve Exp $
 
 S=${WORKDIR}/${P}
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-lang/perl-5.6.1-r1
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 -sparc"
 
 src_compile () {
 	yes | PATH=${PATH}:/opt/f-prot ./configure \
