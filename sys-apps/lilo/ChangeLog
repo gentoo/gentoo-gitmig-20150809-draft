@@ -1,10 +1,17 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.10 2002/09/03 00:08:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.11 2002/09/22 21:48:31 woodchip Exp $
+
+*lilo-22.3.3-r1 (22 Sep 2002)
+
+  22 Sep 2002; Donny Davies <woodchip@gentoo.org> :
+  Now using mount-boot.eclass.  Added more docs, added the samples,
+  added the mkrescue and activate programs.  Created new patch for
+  boot animations; http://www.gamers.org/~quinet/lilo/index.html.
 
 *lilo-22.3.3 (3 Sep 2002)
 
-  3 Sep 2002; Martin Schlemmer <azarah@gentoo.org> lilo-22.3.3.ebuild :
+  3 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
   Updated version.
 
 *lilo-21.7.5-r2 (8 Apr 2002)
@@ -17,7 +24,6 @@
 
   8 Apr 2002; Donny Davies <woodchip@gentoo.org> lilo-21.7.5-r2.ebuild,
   lilo-21.7.5-r1.ebuild, lilo-22.1-r2.ebuild :
-
   Sync pkg_setup() with lilo-22.1-r3 and added the sample lilo.conf.
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> lilo-22.1-r3.ebuild :
@@ -27,19 +33,15 @@
 *lilo-22.1-r3 (5 Apr 2002)
 
   5 Apr 2002; M.Schlemmer <azarah@gentoo.org> lilo-22.1-r3.ebuild :
-
   Fix the /boot issue finally (hopefully :P).  Add $ROOT checking afterwards.
 
-  18 Feb 2002; Donny Davies <woodchip@gentoo.org> lilo-21.7.5-r1.ebuild :
-  
+  18 Feb 2002; Donny Davies <woodchip@gentoo.org> lilo-21.7.5-r1.ebuild :  
   ATTN Maintainers:  This lilo has the patches from SuSe for animated boot
-  logos.  Please dont delete it simply because it's older than the lilo-22.1
-  version in portage!
+  logos.
 
 *lilo-22.1-r2 (4 Feb 2002)
 
-  4 Feb 2002; G.Bevin <gbevin@gentoo.org> lilo-22.1-r2.ebuild :
-  
+  4 Feb 2002; G.Bevin <gbevin@gentoo.org> lilo-22.1-r2.ebuild :  
   Added new setup function which detects if /boot is mounted or not, in case
   it's not mounted it will try to do it automatically and in case of a failure
   exit with an error message.
@@ -47,14 +49,12 @@
 *lilo-21.7.5-r1 (2 Feb 2002)
 
   2 Feb 2002; Donny Davies <woodchip@gentoo.org> lilo-22.1-r1.ebuild:
-
   Added several patches from SuSE for animated boot logos.
   Get animations at: http://www.gamers.org/~quinet/lilo/index.html.
 
 *lilo-22.1-r1 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
