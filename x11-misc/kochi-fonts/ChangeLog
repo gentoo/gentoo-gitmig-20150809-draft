@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kochi-fonts/ChangeLog,v 1.1 2002/06/25 16:01:22 stubear Exp $
+
+*kochi-fonts-0.2.20020503 (25 June 2002)
+
+  25 June 2002; Stuart Bouyer <stubear@gentoo.org> 
+  kochi-fonts-0.2.20020503.ebuild: Added kochi-fonts ebuild
+
+
