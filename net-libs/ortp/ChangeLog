@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/ortp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.1 2005/03/21 01:00:11 stkn Exp $
+
+*ortp-0.7.0 (21 Mar 2005)
+
+  21 Mar 2005; Stefan Knoblich <stkn@gentoo.org> +metadata.xml,
+  +ortp-0.7.0.ebuild:
+  Initial import.
+
