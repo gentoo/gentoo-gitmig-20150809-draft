@@ -1,0 +1,18 @@
+# ChangeLog for sys-kernel/gentoo-test-sources
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-test-sources/ChangeLog,v 1.1 2003/10/12 23:11:16 iggy Exp $
+
+*gentoo-test-sources-2.4.22 (12 Oct 2003)
+
+  12 Oct 2003; <iggy@gentoo.org> gentoo-test-sources-2.4.22.ebuild:
+  move from pfeifer-sources
+  Includes the following:
+  -0(1), preempt, lowlat elevator
+  -xfs
+  -grsec
+  -libata
+  -some ide bacports from 2.6
+  -nvidia nf/nf2/nf3/sata ide
+  -drm update
+  -device mapper
+
