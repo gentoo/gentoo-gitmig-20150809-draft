@@ -235,6 +235,34 @@ the various configuration files is as follows (highest first):
 		an incorrect order.</p></body>
 	</section>
 
+
+	<section>
+		<title>When updating a package using <c>emerge</c> or <c>ebuild</c>, how do I avoid clobbering my config files?</title>
+		<body><p>
+		Portage now includes config file management support by default.  Type 
+		<c>emerge --help config</c> for more details.  The (overly) simple answer is that if
+		a package installs <path>foo</path> somewhere under <path>/etc</path>, and
+		another <path>foo</path> already exists there, then the new <path>foo</path> will
+		instead be renamed to <path>._cfgxxxx_foo</path> in that directory.
+		</p></body>
+	</section>
+
+	<section>
+		<title>I want to perform the <c>./configure</c> step myself.  Can I?</title>
+		<body><p>
+		Yes, but it is not trivial.  First do <c>man ebuild</c> followed by
+		<c>ebuild foo-x.y.z.ebuild unpack</c>.  Then <c>cd</c> to 
+		<path>/var/tmp/portage/foo-x.y.z/work</path>.  You can manually perform
+		the <c>./configure</c> and <c>make</c> steps yourself (you'll have to do
+		both, since Portage does not separate the configure and build steps).  To
+		have Portage finish the installation (so that you can easily remove it later,
+		should you desire to do so, and it will be registered in Portage as a possible
+		dependency) you first need to <c>touch /var/tmp/portage/foo-x.y.z/.compiled</c>
+		(tricking Portage into thinking that <c>ebuild foo-x.y.z.ebuild compile</c> has
+		completed), followed by <c>ebuild foo-x.y.z.ebuild merge</c>.
+		</p></body>
+	</section>
+
 	<section>
 		<title>What if rsync doesn't work for me?</title>
 		<body><p>If you're behind a firewall that doesn't permit

@@ -215,6 +215,12 @@ all times. If you had to unmerge first, then xchat wouldn't be available
 for a few minutes while the new version was being downloaded, compiled,
 installed and merged.</p>
 
+<impo>Portage now has a special feature called "config file protection".  The purpose of
+this feature is to prevent new package installs from clobbering existig
+configuration files.  By default, config file protection is turned on for /etc
+and the KDE configuration dirs; more may be added in the future.  Type 
+<c>emerge --help config</c> for more details.</impo>
+
 </body>
 </section>
 </chapter>

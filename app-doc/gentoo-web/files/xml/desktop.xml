@@ -764,4 +764,19 @@ for additional help.
 </section>
 </chapter>
 
+<chapter>
+<title>Apache and Squirrelmail webmail</title>
+<section>
+<title>Apache with SSL and PHP</title>
+<p>Coming soon!</p>
+</section>
+<section>
+<title>Courier IMAP</title>
+<p>Coming soon!</p>
+</section>
+<section>
+<title>Squirrelmail</title>
+<p>Coming soon!</p>
+</section>
+</chapter>
 </guide>

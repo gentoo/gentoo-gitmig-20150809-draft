@@ -402,10 +402,16 @@ Have a nice nap.
 optimizations for your system, it's time to build the rest
 of the base system:</p>
 <pre>
+# <i>export CONFIG_PROTECT=""</i>
 # <i>emerge --pretend system</i>
 	<comment>[lists the packages to be installed]</comment>
 # <i>emerge system</i>
 </pre>
+<note>The Gentoo init scripts have changed fairly radically for rc6, and
+the <c>export CONFIG_PROTECT=""</c> line ensures that the new scripts will
+overwrite the old scripts (stored in <path>sys-apps/baselayout</path>), despite
+Portage's new config file management support.  Type <c>emerge --help config</c>
+for more details.</note>
 <p>
 It's going to take a while to finish building the entire base
 system.  Your reward is that it will be thoroughly optimized for
