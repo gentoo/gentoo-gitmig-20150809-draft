@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.3 2002/06/05 23:41:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.4 2002/06/10 18:23:49 azarah Exp $
 # This eclass patches ltmain.sh distributed with libtoolized packages with the
 # relink and portage patch
 ECLASS=libtool
@@ -20,19 +20,39 @@ elibtoolize() {
 	local dorelink="yes"
 	local doportage="yes"
 	local portage="no"
+	local mylist=""
 
+	mylist="$(find_ltmain)"
 	# Only apply portage patch, and dont "libtoolize --copy --force"
 	# if all patches fail.
-	if [ "${1}" = "--portage" ]
-	then
-		portage="yes"
-	fi
+	for x in ${*}
+	do
+		if [ "${1}" = "--portage" ]
+		then
+			portage="yes"
+		fi
+		# Only patch the ltmain.sh in ${S}
+		if [ "${1}" = "--shallow" ]
+		then
+			if [ -f ${S}/ltmain.sh ]
+			then
+				mylist="${S}"
+			else
+				mylist=""
+			fi
+		else
+			mylist="$(find_ltmain)"
+		fi
+	done
 
-	for x in $(find_ltmain)
+	for x in ${mylist}
 	do
 		cd ${x}
 		einfo "Working directory: ${x}..."
 		dopatch="yes"
+		dotest="yes"
+		dorelink="yes"
+		doportage="yes"
 
 		for y in test_patch relink_patch portage_patch
 		do
