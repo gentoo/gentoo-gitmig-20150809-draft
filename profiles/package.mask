@@ -1227,3 +1227,7 @@ app-cdr/eroaster
 # python 2.2.1-r3, filters -malign-double via flag-o-matic
 =dev-lang/python-2.2.1-r3
 
+# jnelson@gentoo.org 6 Sep 2002
+# masking gramps-0.8.0 due to freeze
+=app-misc/gramps-0.8.0
+
