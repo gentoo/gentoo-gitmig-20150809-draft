@@ -1,6 +1,6 @@
  #Copyright 1999-2002 Gentoo Technologies, Inc.
  # Distributed under the terms of the GNU General Public License, v2 or later
- # $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/Locale-gettext-1.01-r1.ebuild,v 1.1 2002/10/30 07:20:39 seemant Exp $
+ # $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/Locale-gettext-1.01-r1.ebuild,v 1.2 2002/12/09 11:37:26 jmorgan Exp $
 
  inherit perl-module
 
@@ -13,7 +13,7 @@
 
  LICENSE="Artistic"
  SLOT="0"
- KEYWORDS="x86 sparc sparc64 ~ppc ~alpha"
+ KEYWORDS="x86 sparc ~ppc ~alpha"
 
  DEPEND="${DEPEND}
          sys-devel/gettext"
