@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.3 2005/02/24 13:51:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.4 2005/03/16 01:51:51 wolf31o2 Exp $
 
 inherit games
 
@@ -52,26 +52,33 @@ games-ut2k4mod_pkg_fetch() {
 }
 
 games-ut2k4mod_src_unpack() {
-	dodir ${dir}
-	unpack_makeself
+	[ -z "${MOD_TBZ2}" ] && die "what are we supposed to unpack ?"
+	[ -z "${MOD_NAME}" ] && die "what is the name of this ut2k4mod ?"
+
+	for makeself in ${A}
+	do
+		unpack_makeself ${makeself}
+	done
+
 	mkdir ${S}/unpack
-	if [ -e ${MOD_TBZ2}_${PV}-english.tar.bz2 ]
-	then
-		tar xjf ${MOD_TBZ2}_${PV}-english.tar.bz2 -C ${S}/unpack \
-			|| die "uncompressing tarball"
-	elif [ -e ${MOD_TBZ2}_${PV}.tar.bz2 ]
-	then
-		tar xjf ${MOD_TBZ2}_${PV}.tar.bz2 -C ${S}/unpack \
-			|| die "uncompressing tarball"
-	else
-		tar xjf ${MOD_TBZ2}.tar.bz2 -C ${S}/unpack \
-			|| die "uncompressing tarball"
-	fi
+	for tarball in ${MOD_TBZ2}
+	do
+		if [ -e "${tarball}_${PV}-english.tar.bz2" ]
+		then
+			tar xjf ${tarball}_${PV}-english.tar.bz2 -C ${S}/unpack \
+				|| die "uncompressing tarball"
+		elif [ -e "${tarball}_${PV}.tar.bz2" ]
+		then
+			tar xjf ${tarball}_${PV}.tar.bz2 -C ${S}/unpack \
+				|| die "uncompressing tarball"
+		else [ -e "${tarball}.tar.bz2" ]
+			tar xjf ${tarball}.tar.bz2 -C ${S}/unpack \
+				|| die "uncompressing tarball"
+		fi
+	done
 }
 
 games-ut2k4mod_src_install() {
-	[ -z "${MOD_NAME}" ] && die "what is the name of this ut2k4mod ?"
-
 	dodir ${dir}
 	cp -r ${S}/unpack/* ${Ddir}
 
@@ -79,24 +86,33 @@ games-ut2k4mod_src_install() {
 	then
 		dodoc README.${MOD_BINS} || die "dodoc failed"
 	else
-		dodoc README.${MOD_TBZ2} || die "dodoc failed"
+		for tbz2 in ${MOD_TBZ2}
+		do
+			if [ -e ${S}/README.${tbz2} ]
+			then
+				dodoc README.${tbz2} || die "dodoc failed"
+			fi
+		done
 	fi
-	exeinto ${dir}
-	doexe bin/${MOD_BINS} || die "doexe failed"
+	if [ -n "${MOD_BINS}" ]
+	then
+		exeinto ${dir}
+		doexe bin/${MOD_BINS} || die "doexe failed"
+		games_make_wrapper ${MOD_BINS} ./${MOD_BINS} ${dir}
+		make_desktop_entry ${MOD_BINS} "UT2004 - ${MOD_NAME}" ${MOD_ICON}
+	fi
 
-	games_make_wrapper ${MOD_BINS} ./${MOD_BINS} ${dir}
-
-	insinto /usr/share/pixmaps
-	[ -e ${MOD_ICON} ] && doins ${MOD_ICON}
+	[ -e ${MOD_ICON} ] && doicon ${MOD_ICON}
 
 	prepgamesdirs
-	make_desktop_entry ${MOD_BINS} "UT2004 - ${MOD_NAME}" ${MOD_ICON}
 }
 
 games-ut2k4mod_pkg_postinst() {
-
-	einfo "To play this mod run:"
-	einfo " ${MOD_BINS}"
+	if [ -n "${MOD_BINS}" ]
+	then
+		einfo "To play this mod run:"
+		einfo " ${MOD_BINS}"
+	fi
 
 	games_pkg_postinst
 }
