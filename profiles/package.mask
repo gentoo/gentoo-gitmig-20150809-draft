@@ -249,6 +249,13 @@ gnome-apps/gwcc
 gnome-apps/netleds_applet
 gnome-apps/gnapster
 
+# This puppy's header location changed, so there will be some gnome apps to fix.
+# also I am not sure it is 100% binary compadible with the old one (ldd gave me
+# a lot of unresolved libs), and will have to restart gnome first to test ;-)
+# Then there is the devel-doc issue .. I will have to talk to Hallski about it
+# ...
+>=gnome-base/gnome-libs-1.4.1.3
+
 # gdm doesn't want to start with this imlib, might be that you have to remerge 
 # parts of GNOME. 
 >=media-libs/imlib-1.9.11
@@ -270,7 +277,6 @@ dev-libs/libiconv
 =net-www/tomcat-3.2.1
 =net-www/tomcat-4.0.1
 =net-www/jakarta-3.1-r2
-=media-libs/pdflib-4.0.1
 =dev-java/ant-1.3
 =dev-java/ant-1.4
 =dev-java/fesi-1
