@@ -1,0 +1,38 @@
+#! /usr/bin/env python
+
+# Very simple program that searches the /usr/portage tree for 
+# ebuilds that match a key provided by the user.
+
+from os.path import splitext, walk, isdir
+import re
+
+installRoot = "/var/db/pkg"
+
+# inelegant routine to assemble the install directory that is associated
+# with a given portage directory
+def getinstalldir(portagedir):
+   path = portagedir.split('/')
+   installdir = path[4]
+   for dir in path[5:-1]:
+      installdir += "/" + dir
+   return installdir
+
+# workhorse routine: for each directory look for ebuild files and
+# interrogate each ebuild file to see if it matches the key and,
+# if it does, also check to see if it is installed.
+def visit(dummy, dirname, files):
+   for file in files:
+      (base, ext) = splitext(file)
+      if (ext == ".ebuild"):
+         installname = getinstalldir(dirname) + '/' + base
+         print installname
+
+
+if __name__ == '__main__':
+   import sys
+   if (len(sys.argv) != 1):
+      print "Usage: pkglist"
+      sys.exit(1)
+   dummy = "" # walk requires three arguments
+   walk(installRoot, visit, dummy)
+

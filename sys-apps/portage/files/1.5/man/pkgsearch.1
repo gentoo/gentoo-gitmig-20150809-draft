@@ -1,0 +1,28 @@
+.TH pkgsearch "1" "May 2001" "portage 1.5" 
+.SH NAME
+pkgsearch \- manual page for the pkgsearch program, a program to search the Portage tree for a desired package. 
+.SH SYNOPSIS
+.B pkgsearch
+\fIkey\fR 
+.SH DESCRIPTION
+The pkgsearch is a command-line program that searches the /usr/portage tree
+for .ebuild files that contain the \fIkey\fR.  For example, 
+.B pkgsearch
+\fIgcc\fR
+will search /usr/portage for all ebuilds that have "gcc" in the name.  The
+.B pkgsearch
+program also indicates if a given ebuild is already installed.
+Please take a look at the
+ebuild (1) manual also.
+.PP
+.SH OPTIONS 
+\fIkey\fR
+.TP
+Search key.  Note, the key is not case dependent.
+.TP
+.SH AUTHOR
+Grant Goodyear <grant@gentoo.org>
+.SH "SEE ALSO"
+ebuild(1) emerge(5)
+.TP
+The helper apps in \fI/usr/lib/portage/bin\fR.
