@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.5a.ebuild,v 1.1 2004/04/10 14:25:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.5a.ebuild,v 1.2 2004/04/19 07:36:57 mholzer Exp $
 
 inherit eutils webapp-apache
 
@@ -28,7 +28,6 @@ pkg_setup() {
 }
 
 src_install() {
-	webapp-detect || NO_WEBSERVER=1
 	webapp-mkdirs
 
 	local DocumentRoot=${HTTPD_ROOT}
