@@ -1,3 +1,5 @@
-MD5 9db1a089633eb69cad7103dbc4dd4050 bincimap-1.2.3.ebuild 1908
+MD5 6cb00c1d9bff12f05047a3df1e05b4cf metadata.xml 249
+MD5 711d2bf587faf0c7c0ea597e9acf7faa bincimap-1.2.3.ebuild 2022
+MD5 caf5d9b10f7c4ff0ece600df94775fbd ChangeLog 390
 MD5 7faa38e06bc7ca25b09ea04fedf1e941 files/digest-bincimap-1.2.3 67
 MD5 0292f9ed05ad50bdbdd139e6b62036cd files/bincimap-1.2.3-gentoo.diff 6482
