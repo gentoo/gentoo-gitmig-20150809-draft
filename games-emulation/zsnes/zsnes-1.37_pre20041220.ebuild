@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20041220.ebuild,v 1.2 2004/01/05 03:58:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20041220.ebuild,v 1.3 2004/01/15 17:32:31 vapier Exp $
 
 inherit games eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 		mv ${f} ${f/zsnes\\\\}
 	done
 	cd src
-	edos2unix config.{guess,sub}
+	edos2unix config.{guess,sub} effects/smoke.c zip/unzip.c
 	aclocal || die "aclocal failed"
 	env WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
 }
