@@ -22,7 +22,8 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA      
 
 # this string should be exactly as in ~/.sversionrc
-OOVERSION="OpenOffice.org <pv>"
+PV=<pv>
+OOVERSION="OpenOffice.org ${PV//_beta2}"
 
 ##
 ## Source system configuration file
@@ -38,7 +39,7 @@ OOVERSION="OpenOffice.org <pv>"
 ###         3 - ~/.sversionrc exists but no entry found
 get_settings_dir()
 {
-  [ -r ~/.sversionrc ] || exit 1
+  [ -r ${HOME}/.sversionrc ] || exit 1
   # warning, .sversionrc is DOS encoded so strip ^M
   settings_dir="`tr -d  '\r' < ~/.sversionrc | sed -n "/^$1=/s%^$1=file://\(.*\)$%\1%p"`"
   echo "$settings_dir"
@@ -126,13 +127,13 @@ if [ -z "$OOHOME" ] ; then
 
 #	Do not take old settings as migration results in broken behaviour
 #
-	UPDATEFLAG=""
-    if oldhome="`get_settings_dir "OpenOffice.org 1.0.3"`" ; then
+#	UPDATEFLAG=""
+#    if oldhome="`get_settings_dir "OpenOffice.org 1.0.3"`" ; then
 #      OOHOME="$oldhome"
-      echo "Using settings from 1.0.3: /${oldhome}"
+#      echo "Using settings from 1.0.3: /${oldhome}"
 #      /bin/echo -e "OpenOffice.org <pv>=file://$oldhome\r" >> ~/.sversionrc
-		UPDATEFLAG="-update:/$oldhome"
-    fi
+#		UPDATEFLAG="-update:/$oldhome"
+#    fi
       # first install
       OOHOME=`grep DESTINATIONPATH /etc/openoffice/autoresponse-<pv>.conf | \
              sed -e 's/DESTINATIONPATH=//' -e "s|<home>|$HOME|"`
@@ -182,21 +183,22 @@ fi
 ## Previous dead installation?
 [ -d $HOME/.openoffice/user ] && echo "Warning: you have a user settings directory from 1.0.0 in ~/.openoffice/user - this is no longer used"
 
+# There is no locale import file
 ## Change the ooLocale key in SETUPFILE acording to LOCALE
-TMPFILE=`mktemp -t oooLocale.XXXXXXXXXX` && {
-	cat >${TMPFILE} <<EOF
-<?xml version="1.0" encoding="UTF-8"?>
-<oor:node xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="Setup" oor:package="org.openoffice">
- <node oor:name="L10N">
-  <prop oor:name="ooLocale" oor:type="xs:string">
-   <value>$LOCALEOO</value>
-  </prop>
- </node>
-</oor:node>
-EOF
-	ooconfigimport $TMPFILE >dev/null
-	rm -f ${TMPFILE}
-}
+#TMPFILE=`mktemp -t oooLocale.XXXXXXXXXX` && {
+#	cat >${TMPFILE} <<EOF
+#<?xml version="1.0" encoding="UTF-8"?>
+#<oor:node xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="Setup" oor:package="org.openoffice">
+# <node oor:name="L10N">
+#  <prop oor:name="ooLocale" oor:type="xs:string">
+#   <value>$LOCALEOO</value>
+#  </prop>
+# </node>
+#</oor:node>
+#EOF
+#	ooconfigimport $TMPFILE >/dev/null
+#	rm -f ${TMPFILE}
+#}
 
 ##
 ## That's it. Launch the beast (with the given args)
