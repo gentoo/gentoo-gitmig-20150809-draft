@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.87 2005/01/24 23:19:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.88 2005/01/31 19:14:55 plasmaroo Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -877,12 +877,18 @@ echo "#ifdef __arch64__
 	return 0
 }
 
-headers___fix() {
+headers___fix()
+{
+	# Voodoo to partially fix broken upstream headers.
+	# Issues with this function should go to plasmaroo.
 	sed -i \
 		-e "s/\([ "$'\t'"]\)u8\([ "$'\t'"]\)/\1__u8\2/g;" \
 		-e "s/\([ "$'\t'"]\)u16\([ "$'\t'"]\)/\1__u16\2/g;" \
 		-e "s/\([ "$'\t'"]\)u32\([ "$'\t'"]\)/\1__u32\2/g;" \
 		-e "s/\([ "$'\t'"]\)u64\([ "$'\t'"]\)/\1__u64\2/g;" \
+		-e "s/\([ "$'\t'"]\)s64\([ "$'\t'"]\)/\1__s64\2/g;" \
+		-e 's/ \(u\|s\)\(8\|16\|32\|64\)$/ __\1\2/g' \
+		-e 's/\([(, ]\)\(u\|s\)64\([, )]\)/\1__\264\3/g' \
 		"$@"
 }
 
