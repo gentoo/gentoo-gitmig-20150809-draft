@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.234 2005/04/01 09:14:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.235 2005/04/03 05:44:27 lu_zero Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -227,7 +227,7 @@ odbc - Adds ODBC Support (Open DataBase Connectivity)
 offensive - Enables potentially offensive items in packages
 ofx - Enable support for importing (and exporting) OFX data files into gnucash and grisbi
 ogg - Adds support for the Ogg container format (commonly used by Vorbis, Theora and flac)
-oggvorbis - Adds support for the OggVorbis audio encoding
+oggvorbis - Adds support for the OggVorbis audio encoding - DEPRECATED useflag 
 openal - Adds support for the Open Audio Library
 opengl - Adds support for OpenGL
 oracle7 - Adds support for Oracle 7
@@ -320,6 +320,7 @@ vanilla - Do not add extra patches which change default behaviour
 vcd - Video CD support
 vhosts - Adds support for installing web-based applications into a virtual-hosting environment
 videos - Tells portage to install optional video files (used in some games)
+vorbis - Adds support for the OggVorbis audio codec
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.
 win32codecs - use win32codecs package for dll avi decoding support (wmv and what not)
 wavelan - Tells pcmcia-cs that you want to use the built-in wvlan drivers instead of the Orinoco drivers
