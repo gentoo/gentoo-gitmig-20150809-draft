@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.36 2003/08/23 01:23:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.37 2003/08/28 18:36:19 plasmaroo Exp $
+
+*development-sources-2.6.0_beta2-r* (28 Aug 2003)
+
+  28 Aug 2003; Tim Yamin <plasmaroo@gentoo.org>
+  Fix PATCH_URIs which were moved into a subdirectory.
 
 *development-sources-2.6.0_beta4 (22 Aug 2003)
 
