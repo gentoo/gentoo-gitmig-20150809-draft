@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7a21ef41f081008ed425b21abb99461f ChangeLog 2613
-MD5 1d9ce9036b7a44031cd75054faeb30b4 baekmuk-fonts-2.2.ebuild 1211
+MD5 c907a8022a3d30deb669ccbee2ce1401 ChangeLog 2717
 MD5 30be1f36e8ab94f37ce7556277032f01 baekmuk-fonts-2.1-r1.ebuild 1509
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
-MD5 117421a93602c1ac44a8e8286e8d072d files/digest-baekmuk-fonts-2.2 199
+MD5 5559a764e0116a8b06d5dd988907df0b baekmuk-fonts-2.2.ebuild 1213
 MD5 02b55c492446f336c5bb2f2ddbfc1cc7 files/digest-baekmuk-fonts-2.1-r1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBY81gVWNWqTUmv+0RAtpfAJ4rXu5lZ+s9DzKB/JKOj/SgmAMolQCeJ/4p
-hU3rLJ5niyg3QtTUfEFEXT0=
-=/M1U
------END PGP SIGNATURE-----
+MD5 117421a93602c1ac44a8e8286e8d072d files/digest-baekmuk-fonts-2.2 199
