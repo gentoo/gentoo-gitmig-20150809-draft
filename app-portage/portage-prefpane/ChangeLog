@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portage-prefpane
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-prefpane/ChangeLog,v 1.8 2005/02/01 22:05:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-prefpane/ChangeLog,v 1.9 2005/02/04 23:22:40 hansmi Exp $
+
+  05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
+  -portage-prefpane-0.2.ebuild:
+  Removed old version.
 
 *portage-prefpane-0.3.1 (01 Feb 2005)
 
