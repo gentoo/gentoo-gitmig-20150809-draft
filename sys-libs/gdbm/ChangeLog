@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.30 2004/12/04 20:15:41 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.31 2004/12/07 20:21:00 hardave Exp $
+
+  07 Dec 2004; Hardave Riar <hardave@gentoo.org> gdbm-1.8.3-r1.ebuild:
+  Stable on mips, dep for bug #66360
 
   04 Dec 2004; Robert Coie <rac@gentoo.org> gdbm-1.8.3-r1.ebuild:
   keywording ppc
