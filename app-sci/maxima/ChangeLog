@@ -1,8 +1,16 @@
 # ChangeLog for app-sci/maxima
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/ChangeLog,v 1.1 2003/04/19 20:16:51 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/ChangeLog,v 1.2 2003/08/07 05:40:32 george Exp $
 
-*maxima-5.9.0.ebuild (19 Apr 2003)
+*maxima-5.9.0-r1 (06 Aug 2003)
+
+  06 Aug 2003; George Shapovalov <george@gentoo.org> maxima-5.9.0-r1.ebuild :
+  expandedn the ebuild following the #16529. 
+  Now has 4 use flags (two of the local) and some emacs and tex related functionality.
+  Can be built with either clisp or cmucl
+  Thanks to  Cliff Yapp  and  Sourav Mandal for suggestions and additions
+
+*maxima-5.9.0 (19 Apr 2003)
 
   19 Apr 2003; George Shapovalov <george@gentoo.org> maxima-5.9.0.ebuild, files/{digest-maxima-5.9.0} :
   initial release (#16529)
