@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-it
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-it/ChangeLog,v 1.8 2005/01/01 12:54:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-it/ChangeLog,v 1.9 2005/02/21 21:14:40 blubb Exp $
+
+  21 Feb 2005; Simon Stelling <blubb@gentoo.org> ispell-it-2001.ebuild:
+  stable on amd64
 
   30 Jul 2004; Anders Rune Jensen <arj@gentoo.org> +metadata.xml:
   QA - IUSE fix and {add missing,correct} metatata.xml.
