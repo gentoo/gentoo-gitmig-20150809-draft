@@ -4,8 +4,8 @@ MD5 7b08a44d08561a7ff5ddb161bc661419 distcc-2.5-r1.ebuild 3176
 MD5 c958bfeb956960d4b15ebab2df7a6d86 distcc-2.5.ebuild 2702
 MD5 b1dfe93f71045eb226d74ceb93959c65 distcc-2.8-r1.ebuild 3613
 MD5 0b8da22979cd451f59bd17baabd4a121 distcc-2.7.ebuild 3451
-MD5 9336cf217fbc2b128538088637611912 distcc-2.7.1.ebuild 3862
-MD5 e9a27138e15e5379782f8c73f00834e4 ChangeLog 9812
+MD5 5089f38c43a4620203dd5c72e72571fc distcc-2.7.1.ebuild 3862
+MD5 f88d8aed85386df0fd46c1410281970e ChangeLog 9812
 MD5 e1ecfcc1aad7c385cf3c41966277cda7 files/digest-distcc-2.5 63
 MD5 5826ae3f83bd02bda94fa0e9343ef3fe files/digest-distcc-2.7 63
 MD5 56fd1ac60c1b8402e1632da62f32a890 files/digest-distcc-2.8 63
