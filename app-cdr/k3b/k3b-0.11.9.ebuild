@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.1 2004/04/06 12:26:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.2 2004/04/06 21:15:11 lanius Exp $
 
 inherit kde
 need-kde 3.1
@@ -114,6 +114,6 @@ src_install() {
 pkg_postinst() {
 	einfo "Note that k3b will report problems regarding the permissions of cdrecord"
 	einfo "and cdrdao, and will suggest some changes for your system. You are free"
-	einfo "to follow those devices, note nonetheless that on a default Gentoo install"
+	einfo "to follow those advices, note nonetheless that on a default Gentoo install"
 	einfo "k3b should run fine when you are in the cdrom and cdrw group."
 }
