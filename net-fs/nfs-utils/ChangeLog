@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.20 2003/07/19 08:43:16 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.21 2003/07/19 12:35:06 aliz Exp $
+
+  19 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> nfs-utils-1.0.5.ebuild :
+  Security update, unmasking.
 
 *nfs-utils-1.0.5 (19 Jul 2003)
 
