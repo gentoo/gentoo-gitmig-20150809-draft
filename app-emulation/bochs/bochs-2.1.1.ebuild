@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.2 2004/03/07 21:11:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.3 2004/03/09 03:45:37 jhuebel Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
 IUSE="sdl gtk readline"
 
 DEPEND=">=sys-libs/glibc-2.1.3
