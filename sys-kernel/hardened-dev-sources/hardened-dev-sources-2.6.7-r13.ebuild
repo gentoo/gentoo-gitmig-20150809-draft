@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.7-r12.ebuild,v 1.1 2004/11/13 20:39:38 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.7-r13.ebuild,v 1.1 2004/11/19 02:51:38 method Exp $
 
 IUSE=""
 ETYPE="sources"

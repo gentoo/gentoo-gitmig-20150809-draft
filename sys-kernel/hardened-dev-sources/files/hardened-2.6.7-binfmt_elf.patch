@@ -1,5 +1,5 @@
---- linux-2.6.7-hardened-r10/fs/binfmt_elf.c	2004-11-13 13:44:36.000000000 -0500
-+++ linux-2.6.7-hardened-r11/fs/binfmt_elf.c	2004-11-13 13:58:33.000000000 -0500
+--- linux-2.6.7-hardened-r10/fs/binfmt_elf.c	2004-11-14 16:41:45.000000000 -0500
++++ linux-2.6.7-hardened-r13/fs/binfmt_elf.c	2004-11-16 21:36:31.000000000 -0500
 @@ -347,9 +347,12 @@
  		goto out;
  
@@ -28,7 +28,17 @@
  
  	files = current->files;		/* Refcounted so ok */
  	retval = unshare_files();
-@@ -815,8 +821,14 @@
+@@ -805,7 +811,8 @@
+ 			 */
+ 
+ 			retval = -ENOMEM;
+-			if (elf_ppnt->p_filesz > PATH_MAX)
++			if (elf_ppnt->p_filesz > PATH_MAX || 
++			    elf_ppnt->p_filesz == 0)
+ 				goto out_free_file;
+ 			elf_interpreter = (char *) kmalloc(elf_ppnt->p_filesz,
+ 							   GFP_KERNEL);
+@@ -815,8 +822,16 @@
  			retval = kernel_read(bprm->file, elf_ppnt->p_offset,
  					   elf_interpreter,
  					   elf_ppnt->p_filesz);
@@ -36,15 +46,17 @@
 +			if (retval != elf_ppnt->p_filesz) {
 +				if (retval >= 0)
 +					retval = -EIO;
- 				goto out_free_interp;
++				goto out_free_interp;
 +			}
 +			/* make sure path is NULL terminated */
-+			elf_interpreter[elf_ppnt->p_filesz - 1] = '\0';
++			retval = -EINVAL;
++			if (elf_interpreter[elf_ppnt->p_filesz - 1] != '\0')
+ 				goto out_free_interp;
 +			
  			/* If the program interpreter is one of these two,
  			 * then assume an iBCS2 image. Otherwise assume
  			 * a native linux image.
-@@ -851,8 +863,11 @@
+@@ -851,8 +866,11 @@
  			if (IS_ERR(interpreter))
  				goto out_free_interp;
  			retval = kernel_read(interpreter, 0, bprm->buf, BINPRM_BUF_SIZE);
@@ -57,7 +69,7 @@
  
  			/* Get the exec headers */
  			interp_ex = *((struct exec *) bprm->buf);
-@@ -1105,8 +1120,10 @@
+@@ -1105,8 +1123,10 @@
  			}
  #endif
  

@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.42 2004/11/11 00:18:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.43 2004/11/19 02:51:38 method Exp $
+
+*hardened-dev-sources-2.6.7-r12 (18 Nov 2004)
+
+  18 Nov 2004; Joshua Brindle <method@gentoo.org>
+  hardened-dev-sources-2.6.7-r12.ebuild,
+  hardened-dev-sources-2.6.7-r13.ebuild,
+  files/hardened-2.6.7-binfmt_elf.patch:
+  replace binfmt_elf patch with a better one
 
 *hardened-dev-sources-2.6.7-r11 (10 Nov 2004)
 

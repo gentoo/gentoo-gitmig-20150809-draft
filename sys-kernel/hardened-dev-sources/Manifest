@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2f18d764749b5b821f127f9bc36e60f8 hardened-dev-sources-2.6.7-r12.ebuild 1329
 MD5 82fb2e488cf74ed7bdb51f1f521c1fe4 hardened-dev-sources-2.6.7-r8.ebuild 1092
+MD5 27da7aaedb8b53cb58b28a876e804428 hardened-dev-sources-2.6.7-r13.ebuild 1329
 MD5 0b8ab20736a2b68476718b12a797d7ff hardened-dev-sources-2.6.7-r10.ebuild 1163
-MD5 0af7a831541e6c25410ddabf057001e6 ChangeLog 7756
+MD5 0eaea1ae4c425845b3b55d67317ae1f7 ChangeLog 8026
 MD5 73174f8e07b82c5df563b7196f87611c metadata.xml 299
 MD5 6ceac5877bbf8ffb6523d3d671031b73 hardened-dev-sources-2.6.7-r7.ebuild 1089
 MD5 8add7d7ef69d9ff384b7d4f5a0356cc3 files/digest-hardened-dev-sources-2.6.7-r10 219
-MD5 8add7d7ef69d9ff384b7d4f5a0356cc3 files/digest-hardened-dev-sources-2.6.7-r12 219
+MD5 8add7d7ef69d9ff384b7d4f5a0356cc3 files/digest-hardened-dev-sources-2.6.7-r13 219
 MD5 bc48c226344f94535c3ba2e0ce55bf24 files/hardened-dev-sources-2.6.7.CAN-2004-0816.patch 1694
 MD5 8204afea1d572b49a4a80d8da4eef0c9 files/hardened-dev-sources-2.6.7.CAN-2004-0596.patch 1033
 MD5 7e3d1d44b244b238ff3e36bfe1f05c80 files/h-d-s-2.6.7-amd64-kill-vm_force_exec32.patch 871
 MD5 d7ed23c76699efe407ec668eeba30b1e files/hardened-2.6.7-binfmt_aout.patch 983
 MD5 efbbfbed471c50333a8c2fd2f2b0b061 files/digest-hardened-dev-sources-2.6.7-r7 219
 MD5 0f763833ebbcbf0f2a8ac151454c3b29 files/digest-hardened-dev-sources-2.6.7-r8 219
-MD5 8c8057d653a02bface4475a62e2debe0 files/hardened-2.6.7-binfmt_elf.patch 1917
+MD5 4dd5aa98c36db5a352be527634d6d9ea files/hardened-2.6.7-binfmt_elf.patch 2245
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBlm+yI9RrrOsOLvcRApEMAKC7now34Pg/Q/R8O3f0UOKJ9i8N1wCeK8Nb
-e4TtP//8YV7GYlFuo7Pgfgk=
-=1KKN
+iD8DBQFBnV4sI9RrrOsOLvcRAuCGAJ9c70yQQeXCP+31iEi3Td3P4koUTgCfaAPg
+E/uKCOfMDW7NMECfH87n44M=
+=px6t
 -----END PGP SIGNATURE-----
