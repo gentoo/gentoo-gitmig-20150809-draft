@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.91-r1.ebuild,v 1.4 2004/07/14 21:12:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.91-r1.ebuild,v 1.5 2004/07/18 10:46:27 mholzer Exp $
 
 inherit virtualx
 
@@ -10,8 +10,8 @@ MY_PATCH="xaw-deinterlace-3.76-0.1.1.diff.bz2"
 MY_FONT=tv-fonts-1.0
 DESCRIPTION="TV application for the bttv driver"
 HOMEPAGE="http://bytesex.org/xawtv/"
-SRC_URI="http://bytesex.org/xawtv/${PN}_${PV}.tar.gz
-	http://bytesex.org/xawtv/${MY_FONT}.tar.bz2
+SRC_URI="http://dl.bytesex.org/releases/xawtv/${PN}_${PV}.tar.gz
+	http://dl.bytesex.org/releases/tv-fonts/${MY_FONT}.tar.bz2
 	mirror://gentoo/${MY_PATCH}"
 
 SLOT="0"
