@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r1.ebuild,v 1.8 2004/10/24 05:31:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r1.ebuild,v 1.9 2004/11/09 20:07:59 usata Exp $
 
-inherit alternatives eutils
+inherit alternatives eutils flag-o-matic
 
 MY_P="${P/-/.}"
 S=${WORKDIR}/${MY_P}
@@ -13,14 +13,15 @@ SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86 ~ppc-macos"
 IUSE="tiff jpeg png"
 
-DEPEND=">=sys-apps/sed-4.0.5
-	virtual/x11
+RDEPEND="virtual/x11
 	tiff? ( media-libs/tiff )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4.0.5"
 
 src_unpack() {
 	unpack ${A}
@@ -32,9 +33,16 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-include-errno_h.patch
 
 	sed -i "s:OPT_FLAGS=:OPT_FLAGS=$CFLAGS:" Make.conf
+	sed -i "s:^#include <varargs.h>:#include <stdarg.h>:" ${S}/rlelib.c
+
+	if use ppc-macos ; then
+		sed -i 's,<malloc.h>,<malloc/malloc.h>,' vicar.c
+		for f in $(grep zopen * | cut -d':' -f1 | uniq);do
+			sed -i "s:zopen:zloadimage_zopen:g" $f
+		done
+	fi
 
 	chmod +x ${S}/configure
-	sed -i "s:^#include <varargs.h>:#include <stdarg.h>:" ${S}/rlelib.c
 }
 
 src_install() {
@@ -62,9 +70,9 @@ update_alternatives() {
 }
 
 pkg_postinst() {
-	update_alternatives
+	use ppc-macos || update_alternatives
 }
 
 pkg_postrm() {
-	update_alternatives
+	use ppc-macos || update_alternatives
 }

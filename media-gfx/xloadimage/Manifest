@@ -1,5 +1,15 @@
-MD5 7281b06925b80ba9dfdbf34675f6cf5e ChangeLog 2966
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 821c624d6b1e5d5395598b4daa10a2bf ChangeLog 3064
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 f8bee7ca17445a0a997eed7cca81b172 xloadimage-4.1-r1.ebuild 1724
+MD5 974248ce50a39e64d685df4f7cf8ade7 xloadimage-4.1-r1.ebuild 1985
 MD5 bad387ba03d0111a70dd7066ba97d5e5 files/digest-xloadimage-4.1-r1 140
 MD5 c411c977cc7ae79dd96aad933980dbb2 files/xloadimage-4.1-include-errno_h.patch 303
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (Darwin)
+
+iD8DBQFBkSOsVWNWqTUmv+0RAnpmAKCNXkVE7dOj7407V1fvWUy0QjWW2wCeKNu6
+9g8KKc0xSVT5ENQnQ7A6EMQ=
+=sy6w
+-----END PGP SIGNATURE-----
