@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/omniorbpy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.5 2004/11/17 13:23:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.6 2004/11/23 15:46:36 liquidx Exp $
+
+  23 Nov 2004; Alastair Tse <liquidx@gentoo.org> omniorbpy-2.5.ebuild:
+  changed install paths for CORBA.py and PortableServer.py will not collide
+  with pyorbit. Most (if not all) programs specifiy which CORBA implementation
+  to use anyway.
 
 *omniorbpy-2.5 (16 Nov 2004)
 
