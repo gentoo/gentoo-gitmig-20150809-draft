@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r1.ebuild,v 1.4 2004/08/18 12:28:43 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r1.ebuild,v 1.5 2004/08/31 18:46:17 gustavoz Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -32,7 +32,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 LICENSE="LGPL-2"
 SLOT="2.2"
 #KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 IUSE="nls pic build nptl erandom debug hardened"
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
