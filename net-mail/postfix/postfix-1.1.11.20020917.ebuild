@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020822.ebuild,v 1.5 2002/09/17 21:28:32 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020917.ebuild,v 1.1 2002/09/19 19:09:22 raker Exp $
 
-PF_PV=1.1.11-20020822
+PF_PV=1.1.11-20020917
 PF_P=postfix-${PF_PV}
 S=${WORKDIR}/${PF_P}
 TLS_P=pfixtls-0.8.11a-${PF_PV}-0.9.6g

@@ -1,6 +1,17 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.35 2002/09/17 21:28:32 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.36 2002/09/19 19:09:22 raker Exp $
+
+*postfix-1.1.11.20020917 (19 Sep 2002)
+
+  19 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  postfix-1.1.11.20020917.ebuild, files/digest-postfix-1.1.11.20020917,
+  files/tls+ipv6-1.4-pf-1.1.11-20020917.patch.bz2 :
+  Version bump.  Lots of bug fixes(+features)  from the 20020822
+  version.  Important fixes include ldap and berkdb related fixes.
+  See...
+  http://archive.progeny.com/postfix/experimental/postfix-1.1.11-20020918.HISTORY
+  for the changelog.
 
 *postfix-1.1.11.20020822 (11 Sep 2002)
 
