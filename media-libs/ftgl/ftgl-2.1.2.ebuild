@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2.ebuild,v 1.1 2004/12/17 11:29:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2.ebuild,v 1.2 2004/12/27 04:28:09 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="A free, open source library to enable developers to use arbitrary fonts in their OpenGL applications"
+DESCRIPTION="library to use arbitrary fonts in OpenGL applications"
 HOMEPAGE="http://homepages.paradise.net.nz/henryj/code/#FTGL"
 SRC_URI="http://opengl.geek.nz/ftgl/${P}.tar.gz"
 
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}-ftgl.pc.in.patch"
 	if ! has_version doxygen; then
 		cd FTGL/docs
-		tar xzf html.tar.gz
+		tar xzf html.tar.gz || die "unpack html.tar.gz"
 		ln -fs ../../docs/html "${S}/docs"
 	fi
 	sed -i \
