@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/cvs
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/ChangeLog,v 1.1 2002/02/18 19:23:51 danarmak Exp $
+
+*cvsup-16.1e (18 Feb 2002)
+
+  18 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog. Created package.
