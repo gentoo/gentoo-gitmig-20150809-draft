@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/octave-forge
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/ChangeLog,v 1.1 2003/06/09 21:53:15 george Exp $
+
+*octave-forge-2003.02.22.ebuild (09 Jun 2003)
+
+  09 Jun 2003; George Shapovalov <george@gentoo.org> Manifest, octave-forge-2003.02.22.ebuild, files/{digest-octave-forge-2003.02.22} :
+  initial release (#20087)
+  A collection of custom scripts, functions and extensions for GNU Octave
+  ebuild submitted by Brent Redeker <bredeker@cc.edu>
+  update submitted by Shaun Cloherty <s.cloherty@gsbme.unsw.edu.au>
