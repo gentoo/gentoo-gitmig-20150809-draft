@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2-r1.ebuild,v 1.6 2003/12/08 01:56:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2-r1.ebuild,v 1.7 2003/12/08 02:01:24 mholzer Exp $
 
 inherit webapp-apache
 
@@ -23,10 +23,6 @@ webapp-detect || NO_WEBSERVER=1
 pkg_setup() {
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
-
-	export REGISTRY=${HTTPD_ROOT}/horde/config/registry.php
-	[ -f ${REGISTRY} ] || REGISTRY=${HTTPD_ROOT}/horde/config/registry.php.dist
-	[ -f ${REGISTRY} ] || die "${REGISTRY} not found"
 }
 
 src_install () {
