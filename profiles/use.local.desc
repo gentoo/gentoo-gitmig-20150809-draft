@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.584 2004/08/30 20:22:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.585 2004/08/31 08:17:10 pyrania Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -439,6 +439,7 @@ net-misc/dropbear:multicall - Build all the programs as one little binary (to sa
 net-misc/gnugk:accounting - Enables call logging (accounting)
 net-misc/gnugk:radius - Enables radius support
 net-misc/hylafax:faxonly - Don't depend on mgetty-fax
+net-misc/ices:faad - Enables support for MP4 (AAC) transcoding using libfaad
 net-misc/knemo:wifi - wireless support
 net-misc/neon:expat - Use the expat xml library instead of libxml2
 net-misc/ntp:nodroproot - Disable support for running ntpd as a non-root user
