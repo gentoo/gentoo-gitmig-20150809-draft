@@ -1,6 +1,19 @@
 # ChangeLog for media-sound/emu10k1
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/ChangeLog,v 1.10 2003/03/07 15:35:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/ChangeLog,v 1.11 2003/03/08 04:28:47 drobbins Exp $
+
+*emu10k1-0.20a-r5 (07 Mar 2003)
+
+  07 Mar 2003; Daniel Robbins <drobbins@gentoo.org>: New rev with several
+  significant fixes.  Updated audigy-script to use great fixed version from
+  Jonathan Boler (tenpin22@blueyonder.co.uk), and found at
+  http://basic-rip.co.uk/tenpin/audigy-script (currently unreadable). Tone
+  controls now work with Audigy cards. Fixed up /usr/bin/emu-script to use
+  /etc/aumixrc rather than /etc/.aumixrc, and tweaked audigy-script and
+  emu-script to set tone controls to a neutral 50 rather than a tweaked 68 (I
+  care about that kind of stuff... :). Added a README.gentoo that contains a
+  copy of Jonathan Boler's very good Audigy FAQ (pulled from google cache since
+  it's now unavailable on the Web)
 
 *emu10k1-0.20a-r4 (07 Mar 2003)
 

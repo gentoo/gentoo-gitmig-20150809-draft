@@ -39,10 +39,10 @@ fi
 # if that failed, make the user tell us what it is
 case "`echo ${CARD_TYPE} | awk '{print toupper($1)}'`" in
 	AUDIGY)
-		audigy-script $@
+		/usr/bin/audigy-script $@
 		;;
 	EMU)
-		emu-script $@
+		/usr/bin/emu-script $@
 		;;
 	*)
 		eerror "I was unable to figure out whether you have an Audigy"
