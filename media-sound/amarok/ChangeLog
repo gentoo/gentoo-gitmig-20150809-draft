@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.43 2005/01/14 23:53:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.44 2005/01/30 21:39:05 luckyduck Exp $
+
+  30 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> amarok-1.1.1.ebuild:
+  added missing libsdl dependency. fixes #72395
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> amarok-1.0.2.ebuild,
   amarok-1.1.1.ebuild, amarok-1.2_beta2.ebuild, amarok-1.2_beta3.ebuild:
