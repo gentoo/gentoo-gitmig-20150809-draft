@@ -1,7 +1,11 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.12 2002/07/24 01:02:36 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.13 2002/07/29 03:30:09 spider Exp $
 
+*scrollkeeper-0.3.11 (29 Jul 2002)
+  29 Jul 2002; Spider <spider@gentoo.org> scrollkeeper-0.3.11.ebuild :
+  Update ebuild and patch
+  
 *scrollkeeper-0.3.10 (12 Jul 2002)
 
   20 Jul 2002; Mark Guertin <gerk@gentoo.org> :
