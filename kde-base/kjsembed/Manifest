@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 17c6a1918808e1b04219723b4abeeae2 kjsembed-3.3.1.ebuild 472
-MD5 b394e8fa6e3ee08164b908c2ce69146c ChangeLog 602
+MD5 19bb8a376b7494948e0974f1858a44c9 ChangeLog 687
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 5b4709a4940e69ed965855ca38b4ee56 files/no-gtk-glib-check.diff 596
 MD5 3e70b6aa96404dfefd5db12e217af523 files/digest-kjsembed-3.3.1 300
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpRkuI1lqEGTUzyQRAsl6AJ9D0u5m+WS4gse67ej8ejPODFPk0gCgqGr/
+eMrJ9L5xA+N7O0iHbtSQy4s=
+=YQkP
+-----END PGP SIGNATURE-----

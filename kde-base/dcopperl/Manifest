@@ -1,5 +1,15 @@
-MD5 a80e0f90bfeba5fbbc4f0a4cea9c4b73 ChangeLog 602
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e0c8a941ae39bd918efbc2201bdf647 ChangeLog 687
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 a7fff037a278427f07efa0419e9eef46 dcopperl-3.3.1.ebuild 388
 MD5 5b4709a4940e69ed965855ca38b4ee56 files/no-gtk-glib-check.diff 596
 MD5 df0918c1d7277a5bf2feca32bd2189ed files/digest-dcopperl-3.3.1 300
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpRg3I1lqEGTUzyQRApOvAJsHKZvtJUM+iIBPJF2wJhdpHjbDzgCgxMwO
+CrfL6VeA8HWcZtQMVmvgBdM=
+=1Jhj
+-----END PGP SIGNATURE-----

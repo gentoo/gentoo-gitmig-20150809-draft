@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3bffc87798d0654ee612ac96d836b122 qtsharp-3.3.1.ebuild 633
-MD5 0134bf72a390bff043e9609533ae3a3a ChangeLog 753
+MD5 b92dac98a9fb6542ec76919a991852de ChangeLog 838
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 d9688ce740d0fa4e5e39299816fa4df3 files/digest-qtsharp-3.3.1 299
 MD5 5b4709a4940e69ed965855ca38b4ee56 files/no-gtk-glib-check.diff 596
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpRpGI1lqEGTUzyQRAvm1AJoCbWNCm41rZPrvsYo6fY82GiABcQCgne17
+YXdMYXKSg3LWRcGTqBQT2Kw=
+=PWdV
+-----END PGP SIGNATURE-----
