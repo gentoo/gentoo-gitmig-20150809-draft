@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ecs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ChangeLog,v 1.10 2005/02/06 01:03:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ChangeLog,v 1.11 2005/03/27 17:36:54 luckyduck Exp $
+
+  27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> ecs-1.4.1-r1.ebuild:
+  moved from dev-java/regexp to dev-java/jakarta-regexp dependency. see #71336.
+  introduced support for the jikes and source useflag.
 
   06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> ecs-1.4.1-r1.ebuild,
   -ecs-1.4.1.ebuild:
