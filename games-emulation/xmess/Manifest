@@ -1,4 +1,5 @@
-MD5 b13cd9f4179475604c879f6d433789e6 ChangeLog 3688
+MD5 1ab254c04e01dd2196371c50d9df5192 ChangeLog 3806
+MD5 b4e3f51811e533d52319578b9bf8d232 xmess-0.95.ebuild 5638
 MD5 30c9b8b73945531fe1c8d554e29857db xmess-0.92.ebuild 5656
 MD5 f74c4ee109477b5f5e721400ff5cc6ac xmess-0.94.ebuild 5736
 MD5 0234d9024c471faf92bb1219242614ef metadata.xml 1566
@@ -15,6 +16,7 @@ MD5 0f77c568ca5f6a46b543e899c910d38a files/0.78.1-osd_die.patch 521
 MD5 13dc5b32bbff98dec74c41dd0c9b33a1 files/0.80.1-glx-fix.patch 597
 MD5 93b9c4a740015eb7262b223c7b8b7bbf files/0.80.1-icc.patch 584
 MD5 a956d1afa6724941d56732f2b91f42eb files/0.80.1-make.patch 1243
+MD5 4510ec28e6e4e66892e55b85cbe5ea0a files/digest-xmess-0.95 65
 MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.81.1-glx-fix.patch 386
 MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.82.1-glx-fix.patch 386
 MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.83.1-glx-fix.patch 386
