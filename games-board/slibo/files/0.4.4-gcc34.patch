@@ -1,0 +1,51 @@
+diff -r -U 2 /tmp/slibo-0.4.4/src/engine.cpp /var/tmp/portage/slibo-0.4.4/work/slibo-0.4.4/src/engine.cpp
+--- /tmp/slibo-0.4.4/src/engine.cpp	2003-08-31 18:23:45.000000000 +0200
++++ /var/tmp/portage/slibo-0.4.4/work/slibo-0.4.4/src/engine.cpp	2004-12-29 19:09:26.941957930 +0100
+@@ -18,4 +18,5 @@
+ #include <sys/types.h>
+ #include <signal.h>
++#include <errno.h>
+ 
+ #include <qmessagebox.h>
+@@ -80,5 +81,5 @@
+     //build argument list
+     int argc = (args.isEmpty()) ? 0 : args.contains(' ')+1;
+-    argv = new (char *)[argc+1];
++    argv = new char *[argc+1];
+     int i;
+     argv[0] = strdup(fname.latin1());
+diff -r -U 2 /tmp/slibo-0.4.4/src/sliboengine/search.c /var/tmp/portage/slibo-0.4.4/work/slibo-0.4.4/src/sliboengine/search.c
+--- /tmp/slibo-0.4.4/src/sliboengine/search.c	2003-08-30 01:45:00.000000000 +0200
++++ /var/tmp/portage/slibo-0.4.4/work/slibo-0.4.4/src/sliboengine/search.c	2004-12-29 19:07:47.439235741 +0100
+@@ -68,7 +68,7 @@
+ FILE *logfile = 0;
+ 
+-static float searchq1(Board *, float beta, float alpha, int) __attribute__ ((regparm(1)));
+-static float searchq(Board *, float beta, float alpha, int) __attribute__ ((regparm(1)));
+-float search(Board *, int nullMove, int verifyNull, float beta, float alpha, int) __attribute__ ((regparm(1)));
++__attribute__ ((regparm(1))) static float searchq1(Board *, float beta, float alpha, int);
++__attribute__ ((regparm(1))) static float searchq(Board *, float beta, float alpha, int);
++__attribute__ ((regparm(1))) float search(Board *, int nullMove, int verifyNull, float beta, float alpha, int);
+ 
+ //main search function.
+@@ -78,5 +78,5 @@
+ //returns the score of the position and the best line.
+ 
+-float search(Board *b, int nullMove, int verifyNull, float alpha, float beta, int ply) {
++__attribute__((regparm(1))) float search(Board *b, int nullMove, int verifyNull, float alpha, float beta, int ply) {
+     static unsigned int clockCounter = 0;
+ 
+@@ -648,5 +648,5 @@
+ //of a caller of opposite color it always returns a value less or equal
+ //the current postion, which allows some optimizations.
+-float searchq(Board * b, float alpha, float beta, int ply) {
++__attribute__ ((regparm(1))) float searchq(Board * b, float alpha, float beta, int ply) {
+     BEGIN_PROFILE(TIME_SEARCHQ);
+     float bestEval;
+@@ -816,5 +816,5 @@
+ //of a caller of opposite color it always returns a value less or equal
+ //the current postion, which allows some optimizations.
+-float searchq1(Board * b, float alpha, float beta, int ply) {
++__attribute__ ((regparm(1))) float searchq1(Board * b, float alpha, float beta, int ply) {
+     BEGIN_PROFILE(TIME_SEARCHQ);
+     float bestEval;
