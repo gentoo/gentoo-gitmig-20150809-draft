@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gcombust
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.16 2004/01/27 14:19:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.17 2004/02/11 00:01:11 pylon Exp $
+
+  11 Feb 2004; Lars Weiler <pylon@gentoo.org> gcombust-0.1.55.ebuild:
+  stable on ppc
 
   27 Jan 2004; <gustavoz@gentoo.org> gcombust-0.1.55.ebuild:
   keyworded sparc
