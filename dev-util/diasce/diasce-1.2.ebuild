@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.2.ebuild,v 1.3 2003/02/13 11:50:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.2.ebuild,v 1.4 2003/07/12 14:28:13 aliz Exp $
 
 P=${PN}2-${PV}
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ SRC_URI="http://diasce.es.gnome.org/downloads/${P}.tar.gz"
 HOMEPAGE="http://diasce.es.gnome.org"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="x86 ~sparc "
 
 RDEPEND=">=dev-libs/libxml2-2.4
 	>=x11-libs/gtk+-2

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Copyright 2003 Alex Holden <alex@alexholden.net>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gpsim/gpsim-0.20.14.ebuild,v 1.1 2003/06/25 04:15:40 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gpsim/gpsim-0.20.14.ebuild,v 1.2 2003/07/12 14:28:13 aliz Exp $
 
 S=${WORKDIR}/${P} 
 DESCRIPTION="A simulator for the Microchip PIC microcontrollers" 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.dattalo.com/gnupic/gpsim.html"
  
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="x11-libs/gtk+extra"
 

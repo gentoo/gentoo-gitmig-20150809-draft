@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/kprof-1.4.2.ebuild,v 1.1 2003/05/05 15:23:28 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/kprof-1.4.2.ebuild,v 1.2 2003/07/12 14:28:13 aliz Exp $
 
 inherit kde-base 
 need-kde 3 
@@ -10,7 +10,7 @@ DESCRIPTION="A KDE3 visual tool helping developers to analyze the profiling resu
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://kprof.sourceforge.net"
 LICENSE="GPL-2" 
-KEYWORDS="~x86" 
+KEYWORDS="x86" 
 
 src_unpack() {
 	base_src_unpack

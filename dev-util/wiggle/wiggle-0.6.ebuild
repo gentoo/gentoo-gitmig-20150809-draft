@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/wiggle-0.6.ebuild,v 1.2 2003/06/14 11:26:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/wiggle-0.6.ebuild,v 1.3 2003/07/12 14:28:13 aliz Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ SRC_URI="http://cgi.cse.unsw.edu.au/~neilb/source/wiggle/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 
 # The 'p' tool does support bitkeeper, but I'm against just dumping it in here due to it's size.
