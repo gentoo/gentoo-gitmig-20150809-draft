@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.11 2004/10/31 01:18:43 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.12 2004/11/04 05:16:51 morfic Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -26,18 +26,15 @@ DEPEND=">=dev-util/pccts-1.33.24-r1
 	>=sys-apps/sed-4"
 
 src_unpack() {
-	if ([ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ] && use gnome); then
-		eerror "xdao current will not compile using gcc 3.4. in order to compile"
-		eerror "and install cdrdao, you will have to USE="-gnome". a simple way"
-		eerror "to do this via portage is to:"
-		einfo "mkdir -p /etc/portage"
-		einfo "echo \"app-cdr/cdrdao -gnome\" >> /etc/portage/package.use"
-		die "xdao wont compile using gcc 3.4"
-	fi
 
 	unpack ${A}
-
 	cd ${S}
+
+	#apply patch to allow xdao to be compiled with gcc3.4
+	if ([ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ] && use gnome); then
+		epatch ${FILESDIR}/cdrdao-Project.h-gcc3.4.patch
+	fi
+
 	epatch ${FILESDIR}/${PV}-gcc34.patch
 
 	# Add gentoo to version

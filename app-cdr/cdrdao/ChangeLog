@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.52 2004/10/31 01:18:43 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.53 2004/11/04 05:16:51 morfic Exp $
+
+  03 Nov 2004; Daniel Goller <morfic@gentoo.org>
+  +files/cdrdao-Project.h-gcc3.4.patch, cdrdao-1.1.8-r1.ebuild,
+  cdrdao-1.1.9.ebuild:
+  Fixed 1.1.8-r1 and 1.1.9 for USE=gnome and gcc 3.4
 
   31 Oct 2004; Lars Weiler <pylon@gentoo.org> -cdrdao-1.1.5-r1.ebuild,
   -cdrdao-1.1.7-r2.ebuild, -cdrdao-1.1.7.ebuild, cdrdao-1.1.8-r1.ebuild,
