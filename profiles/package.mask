@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3700 2005/03/09 15:20:54 liquidx Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3701 2005/03/10 00:18:26 joem Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -72,6 +72,7 @@ media-video/qce-ga
 >=gnome-base/libgnomeprintui-2.10
 >=gnome-extra/gnome-utils-2.9.92
 >=gnome-extra/gnome-games-2.9.7
+>=gnome-extra/gnome-games-extra-data-2.10.0
 >=gnome-base/libgtop-2.9.92
 >=gnome-extra/libgnomesu-0.9.5
 >=gnome-extra/gnome-system-monitor-2.9.92
