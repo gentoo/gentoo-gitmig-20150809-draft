@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.6 2002/12/13 10:56:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.7 2002/12/20 10:13:33 jrray Exp $
+
+*python-docs-2.2.1-r1 (20 Dec 2002)
+
+  20 Dec 2002; J Robert Ray <jrray@gentoo.org> python-docs-2.2.1-r1.ebuild :
+  Create an env variable PYTHONDOCS pointing to the installation path of the
+  docs, fixing bug 12139.  Also, changed ${P} to ${PF} in the destination path,
+  to match the actual location created by docinto().
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
