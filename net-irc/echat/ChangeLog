@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/echat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/ChangeLog,v 1.7 2004/06/24 23:03:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/ChangeLog,v 1.8 2004/07/08 23:28:59 swegener Exp $
+
+  09 Jul 2004; Sven Wegener <swegener@gentoo.org> echat-0.02-r1.ebuild,
+  echat-0.04_beta1.ebuild:
+  Tidied the ebuilds.
 
   29 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   echat-0.04_beta1.ebuild:

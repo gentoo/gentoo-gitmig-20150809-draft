@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.04_beta1.ebuild,v 1.5 2004/06/24 23:03:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.04_beta1.ebuild,v 1.6 2004/07/08 23:28:59 swegener Exp $
 
 inherit eutils
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~x86 ~s390 ~ppc"
 IUSE=""
 
-DEPEND=">=sys-apps/sed-4
-		sys-libs/ncurses"
 RDEPEND="sys-libs/ncurses"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -50,6 +50,5 @@ src_install() {
 	insinto /etc
 	newins dot.echatrc.sample echatrc
 	doman *.1
-	exeinto /usr/bin/
-	doexe ec
+	dobin ec
 }

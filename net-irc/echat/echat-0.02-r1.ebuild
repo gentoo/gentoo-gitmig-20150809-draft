@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.02-r1.ebuild,v 1.4 2004/06/24 23:03:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.02-r1.ebuild,v 1.5 2004/07/08 23:28:59 swegener Exp $
 
 DESCRIPTION="Console vypress chat clone for *nix like systems."
 HOMEPAGE="http://deep.perm.ru/echat/"
@@ -10,9 +10,9 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=sys-apps/sed-4
-		sys-libs/ncurses"
 RDEPEND="sys-libs/ncurses"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 S=${WORKDIR}/${P}f2
 
