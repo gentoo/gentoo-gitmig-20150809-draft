@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsmixer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.6 2004/03/19 10:04:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.7 2004/04/12 04:45:07 weeve Exp $
+
+  11 Apr 2004; Jason Wever <weeve@gentoo.org> wmsmixer-0.5.ebuild:
+  Added ~sparc keyword.
 
   19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wmsmixer-0.5.ebuild:
   Inherit eutils.
