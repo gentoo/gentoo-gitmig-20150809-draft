@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.1.ebuild,v 1.1 2001/01/16 14:07:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.1.ebuild,v 1.2 2001/01/16 17:06:59 achim Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -64,15 +64,15 @@ pkg_preinst()
 {
   echo "Saving ld-linux and libc6"
 
-  cp ${ROOT}lib/ld-linux.so.2 ${ROOT}tmp
-  sln ${ROOT}tmp/ld-linux.so.2 ${ROOT}lib/ld-linux.so.2
-  cp ${ROOT}lib/libc.so.6 ${ROOT}tmp
-  sln ${ROOT}tmp/libc.so.6 ${ROOT}lib/libc.so.6
+  /bin/cp ${ROOT}lib/ld-linux.so.2 ${ROOT}tmp
+  /sbin/sln ${ROOT}tmp/ld-linux.so.2 ${ROOT}lib/ld-linux.so.2
+  /bin/cp ${ROOT}lib/libc.so.6 ${ROOT}tmp
+  /sbin/sln ${ROOT}tmp/libc.so.6 ${ROOT}lib/libc.so.6
 
 	if [ -e ${ROOT}etc/localtime ]
 	then
 		#keeping old timezone
-		rm ${D}/etc/localtime
+		/bin/rm ${D}/etc/localtime
 	else
 		echo "Please remember to set your timezone using the zic command."
 	fi
@@ -82,11 +82,11 @@ pkg_postinst()
 {
   echo "Setting ld-linux and libc6"
 
-  sln ${ROOT}lib/ld-2.2.so ${ROOT}lib/ld-linux.so.2
-  sln ${ROOT}lib/libc-2.2.so ${ROOT}lib/libc.so.6
-  rm  ${ROOT}tmp/ld-linux.so.2
-  rm  ${ROOT}tmp/libc.so.6
-  ldconfig -r ${ROOT}
+  /sbin/sln ${ROOT}lib/ld-2.2.so ${ROOT}lib/ld-linux.so.2
+  /sbin/sln ${ROOT}lib/libc-2.2.so ${ROOT}lib/libc.so.6
+  /bin/rm  ${ROOT}tmp/ld-linux.so.2
+  /bin/rm  ${ROOT}tmp/libc.so.6
+  /sbin/ldconfig -r ${ROOT}
 }
 
 
