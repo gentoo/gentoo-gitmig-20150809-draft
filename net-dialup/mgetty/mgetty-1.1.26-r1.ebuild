@@ -15,6 +15,9 @@ DEPEND="sys-libs/glibc
 	sys-devel/perl"
 
 src_compile() {
+	cd doc
+	patch -p0 < ${FILESDIR}/mgetty-${PV}-gentoo.diff
+	cd ..
 	sed -e 's/var\/log\/mgetty/var\/log\/mgetty\/mgetty/' policy.h-dist > policy.h
 	#doesn't compile using default i686 flags
 	#make -e CFLAGS="${CFLAGS}" || die
@@ -22,12 +25,6 @@ src_compile() {
 	cd voice
 	emake || die
 	cd ..
-	#emake (previously known as pmake) is a script that calls the standard
-	# GNU make with parallel
-	#building options for speedier builds on SMP systems.  Use emake first;
-	# it might not work.  If not, then replace the line above with:
-
-	#make || die
 }
 
 src_install () {
