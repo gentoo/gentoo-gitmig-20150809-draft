@@ -1,10 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.27 2004/03/11 21:35:07 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.28 2004/03/11 22:25:12 kanaka Exp $
 
 *ffmpeg-0.4.8.20040222 (11 Mar 2004)
 
-  11 Mar 2004; <joelm@gentoo.org> ffmpeg-0.4.8.20040222.ebuild:
+  11 Mar 2004; <kanaka@gentoo.org> ffmpeg-0.4.8.20040222.ebuild:
   Install libpostproc library. Update to newer snapshot. Bug 27051
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> ffmpeg-0.4.8.ebuild:
