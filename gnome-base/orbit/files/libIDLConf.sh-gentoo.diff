@@ -1,0 +1,11 @@
+--- libIDLConf.sh.old	Sat Nov 10 03:01:02 2001
++++ libIDLConf.sh	Sat Nov 10 03:00:07 2001
+@@ -1,7 +1,7 @@
+ #
+ # Configuration file for using the libIDL library in GNOME applications
+ #
+-LIBIDL_INCLUDEDIR="-I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/include"
++LIBIDL_INCLUDEDIR="-I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/include/libIDL-1.0"
+ LIBIDL_LIBDIR="-L/usr/lib"
+ LIBIDL_LIBS="-lIDL -L/usr/lib -lglib"
+ MODULE_VERSION="libIDL-0.6.8"
