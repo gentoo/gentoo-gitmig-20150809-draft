@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/qtools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/ChangeLog,v 1.1 2003/04/05 23:29:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/ChangeLog,v 1.2 2003/05/14 03:00:45 robbat2 Exp $
 
 *qtools-0.56 (23 Mar 2003)
+
+  13 May 2003; Robin Johnson <robbat2@gentoo.org> qtools-0.56.ebuild:
+  Slight fix for ${CC} instead of gcc, moved to x86 stable.
 
   23 Mar 2003; Robin Johnson <robbat2@orbis-terrarum.net> ChangeLog:
   Initial import. Ebuild submitted by Robin Johnson
