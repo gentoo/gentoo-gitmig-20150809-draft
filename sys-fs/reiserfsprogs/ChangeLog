@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.2 2003/09/17 01:48:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.3 2003/09/23 17:29:11 drobbins Exp $
+
+*reiserfsprogs-3.6.11-r1 (23 Sep 2003)
+
+  23 Sep 2003; Daniel Robbins <drobbins@gentoo.org>: 
+  reiserfsprogs-3.6.11-r1.ebuild: includes an important fix for IA-64 
+  systems that prevents reiserfsck errors. Thanks to Vitaly Fertman of the 
+  Namesys/ReiserFS team for this fix.
 
   16 Sep 2003; Jason Wever <weeve@gentoo.org> reiserfsprogs-3.6.8.ebuild:
   Marked stable for sparc.
