@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.6 2003/07/01 09:46:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.7 2003/07/07 23:39:10 liquidx Exp $
+
+*docutils-0.3-r1 (08 Jul 2003)
+
+  08 Jul 2003; Alastair Tse <liquidx@gentoo.org> docutils-0.3-r1.ebuild,
+  files/docutils-0.3-extramodules.patch, files/glep-0.3-r1/glep.py,
+  files/glep-0.3-r1/glep_htmlwrite.py, files/glep-0.3-r1/glepread.py,
+  files/glep-0.3-r1/glepstrans.py:
+  fixed glep scripts for docutils 0.3, changed install script for optparse.py
+  and textwrap.py.
 
 *docutils-0.3 (01 Jul 2003)
 

@@ -3,6 +3,7 @@ MD5 2196352ff09a0911d140c0c894967808 docutils-0.3_pre20030530.ebuild 716
 MD5 3b77f1541dc354b1155715d80f197bad docutils-0.3_pre20030530-r3.ebuild 1543
 MD5 4ecda915abc9c0f1242895c64464440e docutils-0.3.ebuild 1529
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 b84bbbc2ab319e4c4f8c3f7da8e52bc2 docutils-0.3-r1.ebuild 1623
 MD5 8c6d9ea3ddd2e36b369112ee20b660fb files/digest-docutils-0.3_pre20030530 73
 MD5 8c6d9ea3ddd2e36b369112ee20b660fb files/digest-docutils-0.3_pre20030530-r3 73
 MD5 4787b6c5e6678d3f211ec7f8ec71aa03 files/glep.py 699
@@ -10,3 +11,8 @@ MD5 e3fa7c72245aae7d90beef3bf411583b files/glep_htmlwrite.py 4162
 MD5 0a2c7c1478f8b72f97b3d12534b4159e files/glepread.py 1647
 MD5 fded948d9eac24154eab24b2b56d15d6 files/glepstrans.py 10420
 MD5 694b883b9a8f714dc375a547cdf62b1d files/digest-docutils-0.3 64
+MD5 694b883b9a8f714dc375a547cdf62b1d files/digest-docutils-0.3-r1 64
+MD5 ea99a173052fbcf2ca59d32803202932 files/glep-0.3-r1/glep_htmlwrite.py 4168
+MD5 4787b6c5e6678d3f211ec7f8ec71aa03 files/glep-0.3-r1/glep.py 699
+MD5 0a2c7c1478f8b72f97b3d12534b4159e files/glep-0.3-r1/glepread.py 1647
+MD5 fded948d9eac24154eab24b2b56d15d6 files/glep-0.3-r1/glepstrans.py 10420
