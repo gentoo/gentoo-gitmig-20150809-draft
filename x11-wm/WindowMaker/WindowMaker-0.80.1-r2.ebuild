@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.7 2002/08/12 04:48:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.8 2002/08/12 05:11:37 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -95,23 +95,18 @@ src_compile() {
   
   	# WindowMaker Extra
 	cd ../WindowMaker-extra-0.1
-	./configure --prefix=/usr \
-		    --mandir=/usr/share/man \
-		    --infodir=/usr/share/info || die
+	econf || die
 		    
 	make || die
 }
 
 src_install() {
 
-	make prefix=${D}/usr \
-	     mandir=${D}/usr/share/man \
-	     infodir=${D}/usr/share/info \
-	     sysconfdir=${D}/etc/X11 \
-	     wprefsdir=${D}/usr/share/GNUstep/WPrefs.app \
-	     wpdatadir=${D}/usr/share/GNUstep/WPrefs.app \
-	     wpexecbindir=${D}/usr/share/GNUstep/WPrefs.app \
-	     install || die
+	einstall \
+		sysconfdir=${D}/etc/X11 \
+		wprefsdir=${D}/usr/share/GNUstep/WPrefs.app \
+		wpdatadir=${D}/usr/share/GNUstep/WPrefs.app \
+		wpexecbindir=${D}/usr/share/GNUstep/WPrefs.app || die
 
 	cp -f WindowMaker/plmenu ${D}/etc/X11/WindowMaker/WMRootMenu
 
@@ -120,10 +115,7 @@ src_install() {
 
 	# WindowMaker Extra
 	cd ../WindowMaker-extra-0.1
-	make prefix=${D}/usr \
-	     mandir=${D}/usr/share/man \
-	     infodir=${D}/usr/share/info \
-	     install || die
+	einstall || die
 	
 	newdoc README README.extra
 
