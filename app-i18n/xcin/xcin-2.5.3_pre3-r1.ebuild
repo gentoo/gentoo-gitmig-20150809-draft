@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre3-r1.ebuild,v 1.1 2005/02/10 11:27:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre3-r1.ebuild,v 1.2 2005/03/22 07:21:10 usata Exp $
 
 inherit rpm eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://firefly.idv.tw/setfont-xft/Fedora/Core_1/SRPMS/${XCINRPMSRC}"
 
 LICENSE="XCIN"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="nls unicode"
 
 DEPEND="dev-libs/libchewing
