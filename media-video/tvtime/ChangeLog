@@ -2,6 +2,12 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+*tvtime-0.9.8.1 (07 May 2003)
+
+  07 May 2003; mkeadle <mkeadle@gentoo.org> tvtime-0.9.8.1.ebuild
+  Bump to latest release. Config files changing to XML so they need
+  to be looked at.
+
 *tvtime-0.9.7 (01 Mar 2003)
 
   01 Mar 2003; Matt Keadle <mkeadle@gentoo.org> tvtime-0.9.7.ebuild
