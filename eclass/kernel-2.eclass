@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.13 2004/01/23 18:08:48 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.14 2004/01/23 18:14:06 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -19,7 +19,7 @@
 #
 # K_NOSETEXTRAVERSION	- if this is set then EXTRAVERSION will not be automatically set within the kernel Makefile
 # K_NOUSENAME		- if this is set then EXTRAVERSION will not include the first part of ${PN} in EXTRAVERSION
-# K_PREPATCHED		- if the patchset is prepatched (ie: mm-sources, ck-sources, ac-sources) it will use PR (ie: -r5) as the patchset version for EXTRAVERSION
+# K_PREPATCHED		- if the patchset is prepatched (ie: mm-sources, ck-sources, ac-sources) it will use PR (ie: -r5) as the patchset version for 
 #			- and not use it as a true package revision
 # K_EXTRAEINFO		- this is a new-line seperated list of einfo displays in postinst and can be used to carry additional postinst messages
 # K_EXTRAEWARN		- same as K_EXTRAEINFO except ewarn's instead of einfo's
@@ -519,5 +519,5 @@ pkg_setup() {
 	[ "${ETYPE}" == "headers" ] && setup_headers
 
 	# this is to fix some weird portage bug? in stable versions of portage.
-	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to unpack..."
+	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to "
 }
