@@ -92,7 +92,7 @@ app-admin/webconfig
 >=app-doc/qt-docs-3
 # waiting for qt3 to become unmasked
 dev-util/qtunit
-
+=dev-python/PyQt-3.0
 #untested, author mentions an error
 media-libs/id3lib-docs
 
