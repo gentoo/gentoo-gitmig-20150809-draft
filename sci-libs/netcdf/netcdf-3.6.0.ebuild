@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.5.0-r3.ebuild,v 1.2 2005/02/07 09:29:49 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.0.ebuild,v 1.1 2005/02/07 09:29:49 cryos Exp $
 
 inherit eutils
 
@@ -11,27 +11,21 @@ HOMEPAGE="http://www.unidata.ucar.edu/packages/netcdf/"
 LICENSE="UCAR-Unidata"
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 sparc amd64 alpha ia64 ppc mips hppa"
+KEYWORDS="~x86 ~sparc ~amd64 ~alpha ~ia64 ~ppc ~mips ~hppa"
 
 S=${WORKDIR}/${P}/src
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# welcome to ANSI C++ coding with sed
-	sed \
-		-e 's/iostream\.h/iostream/g' \
-		-e 's/cout/std::cout/g' \
-		-e 's/^extern "C".*//g' -i configure || die
-
-	cd cxx && epatch ${FILESDIR}/gcc3-gentoo.patch
+	epatch ${FILESDIR}/fPIC.patch || die "fPIC patch failed"
 }
 
 src_compile() {
 	export CPPFLAGS=-Df2cFortran
 	econf || die "econf failed"
-	make || die
-	make test || die
+	make || die "make failed"
+	make test || die "make test failed"
 }
 
 src_install() {
