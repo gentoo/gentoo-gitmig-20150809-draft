@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 2f4594ac20783506db9ad8e4e8382cf6 binutils-2.14.90.0.8-r2.ebuild 448
-MD5 0edf0647341d040921271fe884e755fc ChangeLog 37940
+MD5 a5e157301c02f3620dc1a355c05e1c44 ChangeLog 38072
 MD5 1bb1dac74aec61b33248f85c53583a6e binutils-2.14.90.0.6-r7.ebuild 6738
 MD5 9e9aaba5c0f359d4fd788d985248f49e binutils-2.14.90.0.6-r8.ebuild 435
 MD5 87ca3fa1a3189445953eb76990dd07d2 binutils-2.14.90.0.7-r4.ebuild 6283
@@ -17,6 +17,7 @@ MD5 22e917537cad0e5ccf374be72e8bf0d3 binutils-2.15.92.0.2-r2.ebuild 560
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 5592af01b4edd8259ffab688578acdb0 binutils-2.15.94.0.1.ebuild 441
 MD5 4f6ea11b17fc6d7fdb7f78bf9bfaada2 binutils-2.15.ebuild 368
+MD5 3fa21f9986febe64ad38cf03a1805f50 binutils-2.15.94.0.2.ebuild 429
 MD5 e3effee7a8054f5e0344034c596cb6fc files/binutils-2.14.amd64-32bit-path-fix.patch 456
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r7 75
 MD5 bce6e94a306210a3a46ff8a78ad85df1 files/digest-binutils-2.14.90.0.6-r8 249
@@ -33,6 +34,7 @@ MD5 66df5567226338b7504bbd3c25cea92c files/libiberty-pic.patch 370
 MD5 8903d93c82472f0a22bfdcac81fda9fb files/digest-binutils-2.15.92.0.2-r2 249
 MD5 27d56922c88f9b37c495153ea251348d files/digest-binutils-2.15.94.0.1 249
 MD5 aed408762a54261cd9d1e3168c657bda files/digest-binutils-2.14.90.0.8-r2 249
+MD5 2a84b8cd9b3623b580267c93b90fa87b files/digest-binutils-2.15.94.0.2 249
 MD5 b811d65855a74369e0faccf7574b886b files/2.13/binutils-2.13.90.0.10-glibc21.patch 2931
 MD5 1841b2037b3da0e0dfddb0345a0526e8 files/2.13/binutils-2.13.90.0.10-x86_64-gotpcrel.patch 769
 MD5 cbf08de84154ca2dcf26e572f2892f00 files/2.13/binutils-2.13.90.0.10-x86_64-testsuite.patch 1205
@@ -87,7 +89,7 @@ MD5 bad6ba9f63eb3a86d7006191848a47b8 files/2.15/52_all_binutils-20040527-uclibc-
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBvv1BroRuSHgZdywRAm8vAJ43mMko5RqCUq/QpzxieuDFqrHWKgCfTrGc
-FSiPF+QTqbqciVQ/v+gwxRo=
-=4ydW
+iD8DBQFBx9C6roRuSHgZdywRAiMcAJ9yITMffnt7EGn+lNaWUnnkHj0XQQCcCZFU
+f4xlqIPRdIeRY5vnGlEz4l0=
+=av7B
 -----END PGP SIGNATURE-----
