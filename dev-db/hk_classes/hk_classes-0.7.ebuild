@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.ebuild,v 1.1 2004/07/13 12:37:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.ebuild,v 1.2 2004/08/05 23:22:03 arj Exp $
 
 MY_P=${P/_alpha/-test}
 S=${WORKDIR}/${MY_P}
@@ -20,7 +20,7 @@ IUSE="mysql postgres sqlite odbc doc"
 # At least one of the following is required
 DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
 	postgres? ( >=dev-db/postgresql-7.3 )
-	sqlite? ( dev-db/sqlite )
+	sqlite? ( =dev-db/sqlite-2* )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )"
 
 src_compile() {

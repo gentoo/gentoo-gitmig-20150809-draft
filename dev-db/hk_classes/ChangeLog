@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.19 2004/07/13 12:37:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.20 2004/08/05 23:22:03 arj Exp $
+
+  05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> hk_classes-0.7.ebuild:
+  Depend on version 2 of sqlite.
 
 *hk_classes-0.7 (13 Jul 2004)
 
