@@ -17,9 +17,11 @@
 # K_NOUSENAME		- if this is set then EXTRAVERSION will not include the first part of ${PN} in EXTRAVERSION
 # K_PREPATCHED		- if the patchset is prepatched (ie: mm-sources, ck-sources, ac-sources) it will use PR (ie: -r5) as the patchset version for EXTRAVERSION
 #			- and not use it as a true package revision
-#
 # K_EXTRAEINFO		- this is a new-line seperated list of einfo displays in postinst and can be used to carry additional postinst messages
 # K_EXTRAEWARN		- same as K_EXTRAEINFO except ewarn's instead of einfo's
+
+# H_SUPPORTEDARCH	- this should be a space separated list of ARCH's which can be supported by the headers ebuild
+
 # UNIPATCH_LIST		- space delimetered list of patches to be applied to the kernel
 # UNIPATCH_DOCS		- space delimemeted list of docs to be installed to the doc dir
 
@@ -132,6 +134,7 @@ install_universal() {
 
 install_headers() {
 	[ $(kernel_is_2_4) $? == 0 ] && unpack_2_4
+	[ $(kernel_is_2_6) $? == 0 ] && ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
 
 	cd ${S}
 	dodir /usr/include/linux
@@ -139,48 +142,54 @@ install_headers() {
 	rm -rf ${D}/usr/include/linux/modules
 	dodir /usr/include/asm
 	cp -ax ${S}/include/asm/* ${D}/usr/include/asm
+	
+	if [ $(kernel_is_2_6) $? == 0 ]
+	then
+		dodir /usr/include/asm-generic
+		cp -ax ${S}/include/asm-generic/* ${D}/usr/include/asm-generic
+	fi
 }
 
 install_sources() {
-		local doc
-		local docs
+	local doc
+	local docs
 
-		cd ${S}
-		dodir /usr/src
-		echo ">>> Copying sources..."
-		if [ -d "${WORKDIR}/${KV}/docs/" ]
-		then
-			for file in $(ls -1 ${WORKDIR}/${KV}/docs/)
-			do
-				echo "XX_${file}*" >> ${S}/patches.txt
-				cat ${WORKDIR}/${KV}/docs/${file} >> ${S}/patches.txt
-				echo "" >> ${S}/patches.txt
-			done
-		fi
-		
-		if [ ! -f ${S}/patches.txt ]
-		then
-			# patches.txt is empty so lets use our ChangeLog
-			[ -f ${FILESDIR}/../ChangeLog ] && echo "Please check the ebuild ChangeLog for more details." > ${S}/patches.txt
-		fi
-
-		for doc in ${UNIPATCH_DOCS}
+	cd ${S}
+	dodir /usr/src
+	echo ">>> Copying sources..."
+	if [ -d "${WORKDIR}/${KV}/docs/" ]
+	then
+		for file in $(ls -1 ${WORKDIR}/${KV}/docs/)
 		do
-			[ -f ${doc} ] && docs="${docs} ${doc}"
+			echo "XX_${file}*" >> ${S}/patches.txt
+			cat ${WORKDIR}/${KV}/docs/${file} >> ${S}/patches.txt
+			echo "" >> ${S}/patches.txt
 		done
+	fi
 
-		if [ -f ${S}/patches.txt ]; then
-			docs="${docs} ${S}/patches.txt"
-		fi
-		dodoc ${docs}
-		mv ${WORKDIR}/linux* ${D}/usr/src
+	if [ ! -f ${S}/patches.txt ]
+	then
+		# patches.txt is empty so lets use our ChangeLog
+		[ -f ${FILESDIR}/../ChangeLog ] && echo "Please check the ebuild ChangeLog for more details." > ${S}/patches.txt
+	fi
+
+	for doc in ${UNIPATCH_DOCS}
+	do
+		[ -f ${doc} ] && docs="${docs} ${doc}"
+	done
+
+	if [ -f ${S}/patches.txt ]; then
+		docs="${docs} ${S}/patches.txt"
+	fi
+	dodoc ${docs}
+	mv ${WORKDIR}/linux* ${D}/usr/src
 }
 
 # pkg_preinst functions
 #==============================================================
 preinst_headers() {
-		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
-		[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
+	[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
+	[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
 }
 
 # pkg_postinst functions
@@ -225,6 +234,39 @@ postinst_sources() {
 		done
 
 		echo
+	fi
+}
+
+postinst_headers() {
+	echo
+	einfo "Kernel headers are usually only used when recompiling glibc."
+	einfo "Following the installation of newer headers it is advised that"
+	einfo "you re-merge glibc as follows:"
+	einfo "# emerge glibc"
+	einfo "Failure to do so will cause glibc to not make use of newer"
+	einfo "features present in the updated kernelheaders."
+	echo
+}
+
+# pkg_setup functions
+#==============================================================
+setup_headers() {
+	ARCH=$(uname -m | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/)
+	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH="sparc64"
+	
+	[ -z "${H_SUPPORTEDARCH}" ] && H_SUPPORTEDARCH="${PN/-*/}"
+	for i in ${H_SUPPORTEDARCH}
+	do
+		[ "${ARCH}" == "${i}" ] && H_ACCEPT_ARCH="yes"
+	done
+	
+	if [ "${H_ACCEPT_ARCH}" != "yes" ]
+	then
+		echo
+		eerror "This version of ${PN} does not support ${ARCH}."
+		eerror "Please merge the appropriate sources, in most cases"
+		eerror "this will be ${ARCH}-headers."
+		die "incorrect headers"
 	fi
 }
 
@@ -401,7 +443,7 @@ detect_version() {
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${PV//_/-}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST="${DISTDIR}/patch-${PV//_/-}.bz2 ${UNIPATCH_LIST}"
-		KV=${PV/[-_]*/}${EXTRAVERSION}
+		[ -n "${K_PREPATCHED}" ] && KV="${PV/[-_]*/}${EXTRAVERSION}-${PN/-*/}${PR/r/}" || KV=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
 	if [ "${RELEASETYPE}" == "-bk" ]
@@ -410,7 +452,7 @@ detect_version() {
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2 ${UNIPATCH_LIST}"
-		KV=${PV/[-_]*/}${EXTRAVERSION}
+		[ -n "${K_PREPATCHED}" ] && KV="${PV/[-_]*/}${EXTRAVERSION}-${PN/-*/}${PR/r/}" || KV=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
 	if [ "${RELEASETYPE}" == "-rc-bk" ]
@@ -421,7 +463,7 @@ detect_version() {
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2 ${UNIPATCH_LIST}"
-		KV=${PV/[-_]*/}${EXTRAVERSION}
+		[ -n "${K_PREPATCHED}" ] && KV="${PV/[-_]*/}${EXTRAVERSION}-${PN/-*/}${PR/r/}" || KV=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
 	S=${WORKDIR}/linux-${KV}
@@ -463,5 +505,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	[ "${ETYPE}" == "headers" ] && postinst_headers
 	[ "${ETYPE}" == "sources" ] && postinst_sources
+}
+
+pkg_setup() {
+	[ "${ETYPE}" == "headers" ] && setup_headers
 }
