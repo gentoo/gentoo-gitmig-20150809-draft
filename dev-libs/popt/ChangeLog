@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/popt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.16 2003/03/28 06:27:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.17 2003/03/28 07:07:30 seemant Exp $
 
 *popt-1.7-r1 (20 Mar 2003)
+
+  27 Mar 2003; Seemant Kulleen <seemant@gentoo.org> popt-1.7-r1.ebuild:
+  ok, this one actually does disable nls and also has a mips fix
 
   27 Mar 2003; Seemant Kulleen <seemant@gentoo.org> popt-1.7-r1.ebuild:
   gettext is no longer a REQUIRED dependency, though it's a quirky way of
