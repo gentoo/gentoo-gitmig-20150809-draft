@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/makeme-0.02-r2.ebuild,v 1.5 2004/02/10 07:11:15 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/makeme-0.02-r2.ebuild,v 1.6 2004/06/03 02:44:24 agriffis Exp $
 
 inherit java-pkg
 
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ -z "`use jikes`" ] ; then
+	if ! use jikes ; then
 		cp Makefile Makefile.orig
 		einfo "Configuring build for Jikes"
 		sed 's!jikes!javac!' < Makefile.orig > Makefile
