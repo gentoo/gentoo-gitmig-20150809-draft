@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.6-r6.ebuild,v 1.1 2004/08/10 00:38:11 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.6-r6.ebuild,v 1.2 2004/10/20 21:21:48 hansmi Exp $
 
 K_NOUSENAME="yes"
 ETYPE="sources"
@@ -29,5 +29,5 @@ SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${PV}.tar.bz2
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
 HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 SLOT="${KV}"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 -ppc"
 RESTRICT="nomirror"

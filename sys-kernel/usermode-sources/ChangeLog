@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.46 2004/08/10 00:38:11 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.47 2004/10/20 21:21:48 hansmi Exp $
+
+  20 Oct 2004; Michael Hanselmann <hansmi@gentoo.org>
+  usermode-sources-2.6.6-r6.ebuild:
+  Marked -ppc, because it does not build. Support for ppc seems to be
+  discontinued since 2001 (http://www.nosreme.org/projects/umlppc/).
 
 *usermode-sources-2.4.24-r9 (10 Aug 2004)
 
