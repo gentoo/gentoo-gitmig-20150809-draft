@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.20.ebuild,v 1.1 2003/12/05 03:07:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.20.ebuild,v 1.2 2003/12/05 04:01:34 seemant Exp $
 
 IUSE="doc xml mono gtk X qt gtk python"
 
@@ -21,7 +21,7 @@ DEPEND="
 	qt? ( >=x11-libs/qt-3.2.3 )
 	doc? ( app-doc/doxygen
 		app-text/openjade
- 		xml? ( app-text/xmlto )
+		xml? ( app-text/xmlto )
 	)
 	gtk? ( >=x11-libs/gtk+-2.2.1
 	mono? ( dev-dotnet/mono )
@@ -79,6 +79,9 @@ src_compile() {
 src_install() {
 	einstall || die
 	keepdir /var/lib/run/dbus
+	keepdir /usr/lib/dbus-1.0/services
+
+	dosed "s:${T}:/tmp:" /etc/dbus-1/session.conf
 
 	dodoc AUTHORS ChangeLog HACKING NEWS README
 }
