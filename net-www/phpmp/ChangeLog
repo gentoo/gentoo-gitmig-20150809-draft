@@ -1,6 +1,9 @@
 # ChangeLog for net-www/phpmp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/ChangeLog,v 1.10 2004/02/23 19:27:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/ChangeLog,v 1.11 2004/03/03 15:27:52 mholzer Exp $
+
+  03 Mar 2004; Martin Holzer <mholzer@gentoo.org> phpmp-0.9.1.ebuild:
+  moving webapp-detect inside functions
 
   23 Feb 2004; Stuart Herbert <stuart@gentoo.org> phpmp-0.9.1.ebuild:
   Unmasked on x86; fixes bug #38891

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.9.1.ebuild,v 1.4 2004/02/23 19:27:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.9.1.ebuild,v 1.5 2004/03/03 15:27:52 mholzer Exp $
+
+inherit webapp-apache
 
 MY_PN="phpMp"
 MY_P="${MY_PN}-${PV}"
@@ -17,12 +19,10 @@ IUSE=""
 
 DEPEND=">=net-www/apache-1.3.27-r1 >=mod_php-4.2.3-r2"
 
-inherit webapp-apache
-webapp-detect || NO_WEBSERVER=1
-
 PHPMP_DIR="${HTTPD_ROOT}/${MY_PN}"
 
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
 }
 
@@ -32,7 +32,9 @@ src_compile() {
 }
 
 src_install() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-mkdirs
+
 	insinto "${PHPMP_DIR}"
 	doins *.php
 
