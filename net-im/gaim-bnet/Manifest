@@ -1,4 +1,6 @@
 MD5 046dbb65942618fef5528dbadfe1132d gaim-bnet-0.1.0.ebuild 636
-MD5 a4f9763165be2b7611bc4b674be82ebb ChangeLog 464
 MD5 a2cde0bdf1d687c8cfcafe500daa018e metadata.xml 473
+MD5 7638ddad585acd127f3a25bf4bad1e16 ChangeLog 578
+MD5 aa77f6e7cbe18f20de714e4f0fb8267b gaim-bnet-0.1.1.ebuild 632
 MD5 f29601d12415e4e113a2eaab7a6b3500 files/digest-gaim-bnet-0.1.0 67
+MD5 31d34175463e69d9bdf2dc47414b5567 files/digest-gaim-bnet-0.1.1 67
