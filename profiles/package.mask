@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# <verwilst@gentoo.org> (11 Aug 2002)
+# masked for b0rk@ge + testing
+=app-office/koffice-1.2_rc1
+
+
 # <george@gentoo.org> (09 Aug 2002)
 # masked for testing (issue fixed)
 =dev-lang/R-1.5.1
