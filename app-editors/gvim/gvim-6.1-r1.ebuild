@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r1.ebuild,v 1.2 2002/09/30 05:07:32 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r1.ebuild,v 1.3 2002/09/30 06:14:31 rphillips Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -115,7 +115,9 @@ src_unpack() {
 		*)
 			cd $S
 			for a in $patches; do
-				patch -p0 < $a
+				echo -n "Applying patch $a..."
+				patch -p0 < $a > /dev/null || die
+				echo "OK"
 			done
 			;;
 	esac
