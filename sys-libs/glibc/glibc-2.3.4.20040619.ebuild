@@ -1,11 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.16 2004/07/14 17:24:55 lv Exp $
-
-IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.17 2004/07/19 23:21:00 vapier Exp $
 
 inherit eutils flag-o-matic gcc
-
 
 # Branch update support.  Following will disable:
 #  BRANCH_UPDATE=
@@ -29,10 +26,6 @@ fi
 S="${WORKDIR}/${PN}-${BASE_PV}"
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://sources.redhat.com/glibc/"
-SLOT="2.2"
-LICENSE="LGPL-2"
-KEYWORDS="-* ~x86 ~mips ~amd64"
-
 
 SRC_URI="http://ftp.gnu.org/gnu/${PN}/${PN}-${BASE_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/${PN}/snapshots/${PN}-${BASE_PV}.tar.bz2
@@ -46,6 +39,10 @@ else
 		mirror://gentoo/${PN}-${NEW_PV}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 fi
 
+LICENSE="LGPL-2"
+SLOT="2.2"
+KEYWORDS="-* ~x86 ~mips ~amd64"
+IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
 # We also need linux26-headers if using NPTL. Including kernel headers is
@@ -86,7 +83,6 @@ setup_flags() {
 
 	# Sparc/Sparc64 support
 	if use sparc; then
-
 		# Both sparc and sparc64 can use -fcall-used-g6.  -g7 is bad, though.
 		filter-flags "-fcall-used-g7"
 		append-flags "-fcall-used-g6"
@@ -105,20 +101,17 @@ setup_flags() {
 		fi
 	fi
 
-
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
 		# broken in 3.4.x
 		replace-flags -march=pentium-m -mtune=pentium3
 	fi
 
-
 	# We don't want these flags for glibc
-	filter-flags "-fomit-frame-pointer -malign-double"
-	filter-ldflags "-pie"
+	filter-flags -fomit-frame-pointer -malign-double
+	filter-ldflags -pie
 
 	# Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
-	export CFLAGS="${CFLAGS//-O?} -O2"
-	export CXXFLAGS="${CFLAGS}"
+	append-flags -O2
 	export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 }
 

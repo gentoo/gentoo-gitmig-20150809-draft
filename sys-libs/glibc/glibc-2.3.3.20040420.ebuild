@@ -1,42 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.16 2004/07/14 17:24:55 lv Exp $
-
-IUSE="nls pic build nptl erandom debug"
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.17 2004/07/19 23:21:00 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
-filter-flags "-fomit-frame-pointer -malign-double"
-filter-ldflags "-pie"
-
-# Recently there has been a lot of stability problem in Gentoo-land.  Many
-# things can be the cause to this, but I believe that it is due to gcc3
-# still having issues with optimizations, or with it not filtering bad
-# combinations (protecting the user maybe from himeself) yet.
-#
-# This can clearly be seen in large builds like glibc, where too aggressive
-# CFLAGS cause the tests to fail miserbly.
-#
-# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
-# knows what he is talking about:
-#
-#   People really shouldn't force code-specific options on... It's a
-#   bad idea. The -march options aren't just to look pretty. They enable
-#   options that are sensible (and include sse,mmx,3dnow when apropriate).
-#
-# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
-# you do not like it, comment it, but do not bugreport if you run into
-# problems.
-#
-# <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
-
-# Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
-export CFLAGS="${CFLAGS//-O?} -O2"
-export CXXFLAGS="${CFLAGS}"
-export LDFLAGS="${LDFLAGS//-Wl,--relax}"
-
+# Branch update support.  Following will disable:
+#  BRANCH_UPDATE=
 BRANCH_UPDATE="20040420"
+
 
 # Minimum kernel version for --enable-kernel
 export MIN_KV="2.4.1"
@@ -50,19 +21,19 @@ MY_PV="2.3.2"
 #S="${WORKDIR}/${P%_*}"
 S="${WORKDIR}/${PN}-${MY_PV}"
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
+HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/glibc/snapshots/glibc-${MY_PV}.tar.bz2
 	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${MY_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/glibc/snapshots/glibc-linuxthreads-${MY_PV}.tar.bz2
 	mirror://gentoo/${PN}-2.3.3-branch-update-${BRANCH_UPDATE}.patch.bz2
 	hppa? ( mirror://gentoo/${PN}-${MY_PV}-hppa-patches-p1.tar.bz2 )"
-HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-#KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
-KEYWORDS="~amd64 ppc x86 mips"
-
-SLOT="2.2"
 LICENSE="LGPL-2"
+SLOT="2.2"
+#KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
+KEYWORDS="x86 ppc mips ~amd64"
+IUSE="nls pic build nptl erandom debug"
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
 DEPEND=">=sys-devel/gcc-3.2.3-r1
@@ -73,7 +44,6 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 RDEPEND="virtual/os-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )"
-
 PROVIDE="virtual/glibc virtual/libc"
 
 
@@ -236,6 +206,11 @@ pkg_setup() {
 			eerror "*******************************************************"
 			cat ${FILESDIR}/fix-sysctl_h.patch
 			eerror "*******************************************************"
+			echo
+			einfo "To fix, just do this:"
+			einfo "cd ${KERNEL_HEADERS}/linux/"
+			einfo "patch -p3 < ${FILESDIR}/fix-sysctl_h.patch"
+			echo
 			die "Broken linux/sysctl.h header included in kernel sources!"
 		else
 			echo "no"
@@ -474,6 +449,12 @@ src_unpack() {
 }
 
 setup_flags() {
+	# Over-zealous CFLAGS can often cause problems.  What may work for one person may not
+	# work for another.  To avoid a large influx of bugs relating to failed builds, we
+	# strip most CFLAGS out to ensure as few problems as possible.
+	strip-flags
+	strip-unsupported-flags
+
 	# -freorder-blocks for all but ia64 s390 s390x
 	use ppc || append-flags "-freorder-blocks"
 
@@ -507,6 +488,14 @@ setup_flags() {
 		# broken in 3.4.x
 		replace-flags -march=pentium-m -mtune=pentium3
 	fi
+
+	# We don't want these flags for glibc
+	filter-flags -fomit-frame-pointer -malign-double
+	filter-ldflags -pie
+
+	# Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
+	append-flags -O2
+	export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 }
 
 src_compile() {
