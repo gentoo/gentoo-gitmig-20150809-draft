@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.6.ebuild,v 1.4 2004/02/24 12:24:56 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.6.ebuild,v 1.5 2004/03/05 18:11:09 iggy Exp $
 
 inherit libtool gnome.org flag-o-matic
 
@@ -10,7 +10,7 @@ LICENSE="MIT"
 
 IUSE="python readline ipv6"
 SLOT="2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64 mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64 mips s390"
 
 DEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
