@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.35 2004/08/23 22:26:24 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.36 2004/08/30 03:28:45 tgall Exp $
+
+  29 Aug 2004; Tom Gall <tgall@gentoo.org> djbdns-1.05-r13.ebuild:
+  stable on ppc64, bug #61744
 
   23 Aug 2003; Jared Hudson <jhhudso@gentoo.org> : Fixed adduser bug in
   tinydns-setup (was adding dnscache user when it should have beeb adding
