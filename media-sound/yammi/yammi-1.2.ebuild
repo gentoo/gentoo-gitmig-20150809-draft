@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.1 2005/03/15 21:12:48 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.2 2005/03/20 11:27:34 greg_g Exp $
 
 inherit kde
 
@@ -32,14 +32,11 @@ RDEPEND="${DEPEND}
 need-kde 3
 
 pkg_setup() {
-	if ! use arts && ! use xmms; then
-		eerror "Yammi needs either aRts or Xmms to work,"
-		eerror "please try again with USE=\"arts\" or USE=\"xmms\"".
+	if ! use arts; then
+		eerror "${PN} can only be built with USE=\"arts\","
+		eerror "and with kde-base/kdelibs compiled with USE=\"arts\"."
 		die
 	fi
-
-	# check whether kdelibs was compiled with arts support
-	kde_pkg_setup
 }
 
 src_unpack() {
