@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cvsmenu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cvsmenu/ChangeLog,v 1.6 2004/06/24 23:01:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cvsmenu/ChangeLog,v 1.7 2004/09/03 01:49:37 ciaranm Exp $
+
+  03 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> cvsmenu-1.80.ebuild:
+  Help text, bug #62559
 
   16 Mar 2004; David Holm <dholm@gentoo.org> cvsmenu-1.80.ebuild:
   Added to ~ppc.

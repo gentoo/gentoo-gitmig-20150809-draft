@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cvscommand
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cvscommand/ChangeLog,v 1.9 2004/08/20 16:46:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cvscommand/ChangeLog,v 1.10 2004/09/03 01:48:27 ciaranm Exp $
+
+  03 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> cvscommand-1.65.ebuild:
+  Help text, bug #62559
 
   20 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> cvscommand-1.65.ebuild:
   Stable on x86, sparc
