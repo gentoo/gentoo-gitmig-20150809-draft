@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.2.ebuild,v 1.1 2004/08/17 22:33:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.2.ebuild,v 1.2 2004/08/18 17:49:22 mr_bones_ Exp $
 
 inherit font
 
@@ -14,7 +14,7 @@ DESCRIPTION="Korean Baekmuk Font"
 HOMEPAGE="http://kldp.net/projects/baekmuk/"
 SRC_URI="X? ( http://kldp.net/download.php/1429/${TTF_P}.tar.gz )
 	http://kldp.net/download.php/1428/${BDF_P}.tar.gz
-	unicode? ( http://chem.skku.ac.kr/~wkpark/baekmuk/iso10646/${UNI_P}.tar.bz2 )" 
+	unicode? ( http://chem.skku.ac.kr/~wkpark/baekmuk/iso10646/${UNI_P}.tar.bz2 )"
 
 LICENSE="BSD"
 KEYWORDS="~ia64 ~x86 ~alpha ~ppc ~sparc ~hppa ~amd64 ~mips ~ppc64"
