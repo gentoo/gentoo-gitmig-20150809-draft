@@ -1,8 +1,9 @@
 MD5 c2a56d354398d9255422286f7af425ee metadata.xml 351
-MD5 72ea9384b11c123331dc37767c1ecc07 ChangeLog 3233
+MD5 76165d7984541a52ec3f3202ae7270fd ChangeLog 3379
 MD5 01040ae00020d4f3a6fc2181e67bb334 xbox-sources-2.4.27-r1.ebuild 652
 MD5 82492461b3ed710c1e22bad2e0e6c7fd xbox-sources-2.6.7-r5.ebuild 1098
 MD5 fd11fe1df67c2eb0bc2e27a32fe3040a xbox-sources-2.4.27-r2.ebuild 723
+MD5 15a90266c0808e560cb092a2ee3a88ce xbox-sources-2.6.8.1.ebuild 1072
 MD5 e7618bb6ea7f4753aa322434f9afdbca files/digest-xbox-sources-2.4.27-r1 144
 MD5 e8473a36d7996787f7df82f8f9468b73 files/digest-xbox-sources-2.6.7-r5 221
 MD5 95708646470a95668e8789cd415844ed files/xbox-sources.CAN-2004-0497.patch 846
@@ -13,3 +14,4 @@ MD5 d1ccc2047be533c992f67270a150a210 files/xbox-sources-2.4.27.cmdlineLeak.patch
 MD5 c2510fe1891f5a9effb12c2196922206 files/xbox-sources-2.6.7.cmdlineLeak.patch 281
 MD5 e291b39007c54b281caede6bb6f6ca5a files/digest-xbox-sources-2.4.27-r2 226
 MD5 8204afea1d572b49a4a80d8da4eef0c9 files/xbox-sources-2.6.7.CAN-2004-0596.patch 1033
+MD5 c2c619a48a6efaad25875343ae2b68b0 files/digest-xbox-sources-2.6.8.1 149
