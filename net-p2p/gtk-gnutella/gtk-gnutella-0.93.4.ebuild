@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.93-r1.ebuild,v 1.6 2004/06/15 02:37:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.93.4.ebuild,v 1.1 2004/06/24 17:26:08 squinky86 Exp $
+
+inherit eutils
 
 IUSE="gnome gtk2 xml2 nls"
 
@@ -11,13 +13,19 @@ HOMEPAGE="http://gtk-gnutella.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND="xml2? ( dev-libs/libxml2 )
 	gtk2? ( =dev-libs/glib-2* =x11-libs/gtk+-2* )
 	!gtk2? ( =dev-libs/glib-1.2* =x11-libs/gtk+-1.2* )
 	dev-util/yacc
 	nls? ( >=sys-devel/gettext-0.11.5 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc34.patch
+}
 
 src_compile() {
 	local myconf
@@ -58,8 +66,8 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO
 
 	if use gnome; then
-		insinto /usr/share/gnome/apps/Internet || die
-		doins ${FILESDIR}/gtk-gnutella.desktop
+		insinto /usr/share/gnome/apps/Internet
+		doins ${FILESDIR}/gtk-gnutella.desktop || die
 	fi
 }
 
