@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.2.1.ebuild,v 1.1 2003/02/04 06:01:02 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.2.1.ebuild,v 1.2 2003/02/06 02:28:35 foser Exp $
 
 inherit eutils libtool
 
@@ -22,8 +22,7 @@ RDEPEND="virtual/x11
 	
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
-	doc? ( >=dev-util/gtk-doc-0.9
-		app-text/sgmltools-lite )"
+	doc? ( >=dev-util/gtk-doc-0.9 )"
 
 src_unpack() {
 	unpack ${A}
