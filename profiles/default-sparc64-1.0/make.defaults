@@ -4,6 +4,6 @@
 # System-wide defaults for the Portage system
 
 USE="xv slang readline gpm berkdb mmx 3dnow gdbm tcpd pam libwww ssl nls mitshm arts lame perl python esd gif imlib sdl oggvorbis gnome gtk X qt kde motif opengl avi png tiff gif"
-
+ARCH="sparc64"
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh -----------------------
 # End of lines added by ../default-sparc-1.0/scripts/generate-packages.sh ----------------------
