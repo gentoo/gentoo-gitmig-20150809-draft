@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r1.ebuild,v 1.4 2005/02/15 15:40:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r1.ebuild,v 1.5 2005/02/16 13:43:12 lanius Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.motifzone.net/om${PV}/src/${MY_P}.tar.gz"
 
 LICENSE="MOTIF"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -20,13 +20,11 @@ DEPEND="virtual/libc
 	>=sys-apps/sed-4
 	!ppc-macos? ( =sys-devel/automake-1.4* )
 	=sys-devel/autoconf-2.5*
-	x11-libs/motif-config"
+	!virtual/motif"
 RDEPEND="virtual/libc
 	virtual/x11
-	x11-libs/motif-config"
-
+	!virtual/motif"
 PROVIDE="virtual/motif"
-SLOT="2.2"
 
 pkg_setup() {
 	# multilib includes don't work right in this package...
@@ -40,7 +38,7 @@ src_unpack() {
 	# various patches
 	epatch ${FILESDIR}/${P}-mwm-configdir.patch
 	epatch ${FILESDIR}/${P}-CAN-2004-0687-0688.patch.bz2
-	epatch ${FILESDIR}/${P}-CAN-2004-0914.patch.bz2
+	epatch ${FILESDIR}/${P}-CAN-2004-0914-newer.patch.bz2
 	epatch ${FILESDIR}/${P}-CAN-2004-0914_sec8.patch
 	epatch ${FILESDIR}/${P}-char_not_supported.patch
 	epatch ${FILESDIR}/${P}-pixel_length.patch
@@ -87,10 +85,10 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	# cleanups
-	rm -fR ${D}/usr/$(get_libdir)/X11
-	rm -fR ${D}/usr/$(get_libdir)/X11/bindings
-	rm -fR ${D}/usr/include/X11/bitmaps/
+	# move system.mwmrc & create symlink & fix manpages
+	dodir "/etc/X11/mwm"
+	mv "${D}/usr/$(get_libdir)/X11/system.mwmrc" "${D}/etc/X11/mwm/system.mwmrc"
+	dosym "/etc/X11/mwm" "/usr/$(get_libdir)/X11/mwm"
 
 	list="/usr/share/man/man1/mwm.1 /usr/share/man/man4/mwmrc.4"
 	for f in $list; do
@@ -98,32 +96,13 @@ src_install() {
 		dosed 's:/usr/lib/X11/app-defaults:/etc/X11/app-defaults:g' "$f"
 	done
 
+	# app-defaults/Mwm isn't included anymore as of 2.2
+	insinto /etc/X11/app-defaults
+	newins ${FILESDIR}/${P}-Mwm.defaults Mwm
 
-	einfo "Fixing binaries"
-	for file in `ls ${D}/usr/bin`
-	do
-		mv ${D}/usr/bin/${file} ${D}/usr/bin/${file}-openmotif-2.2
-	done
-
-	einfo "Fixing libraries"
-	dodir /usr/$(get_libdir)/openmotif-2.2
-	mv ${D}/usr/$(get_libdir)/* ${D}/usr/$(get_libdir)/openmotif-2.2/
-
-	einfo "Fixing includes"
-	dodir /usr/include/openmotif-2.2/
-	mv ${D}/usr/include/* ${D}/usr/include/openmotif-2.2
-
-	einfo "Fixing man pages"
-	mans="1 3 4 5"
-	for man in $mans; do
-		dodir /usr/share/man/man${man}
-		for file in `ls ${D}/usr/share/man/man${man}`
-		do
-			file=${file/.${man}/}
-			mv ${D}/usr/share/man/man$man/${file}.${man} ${D}/usr/share/man/man${man}/${file}-openmotif-2.2.${man}
-		done
-	done
-
+	# remove unneeded files
+	rm -fR ${D}/usr/$(get_libdir)/X11/bindings
+	rm -fR ${D}/usr/include/X11/bitmaps/
 
 	# install docs
 	dodoc COPYRIGHT.MOTIF LICENSE
@@ -131,11 +110,7 @@ src_install() {
 	dodoc BUGREPORT TODO
 }
 
-# Profile stuff
 pkg_postinst() {
-	motif-config --install openmotif-2.2
-}
-
-pkg_prerm() {
-	motif-config --uninstall openmotif-2.2
+	ewarn "This breaks applications linked against libXm.so.2."
+	ewarn "You have to rebuild these applications with revdep-rebuild."
 }
