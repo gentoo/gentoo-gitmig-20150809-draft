@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_tcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/ChangeLog,v 1.4 2005/01/09 00:44:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/ChangeLog,v 1.5 2005/02/25 14:48:05 hollow Exp $
+
+  25 Feb 2005; Benedikt Boehm <hollow@gentoo.org> mod_tcl-1.0-r1.ebuild:
+  removed redundant code
 
 *mod_tcl-1.0-r1 (09 Jan 2005)
 
