@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.17 2002/12/13 10:59:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.18 2002/12/15 12:49:23 aliz Exp $
+
+*proftpd-1.2.7 (15 Dec 2002)
+
+  15 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> proftpd-1.2.7.ebuild :
+  Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
