@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.20.ebuild,v 1.3 2004/03/26 23:23:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.20.ebuild,v 1.4 2004/04/19 15:12:09 dragonheart Exp $
 
 IUSE="X tcltk debug"
 
@@ -12,7 +12,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~ppc"
 
-DEPEND="tcltk? ( dev-lang/tcl X? ( dev-lang/tk ) )
+RDEPEND="tcltk? ( dev-lang/tcl X? ( dev-lang/tk ) )"
+
+DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/uudeview
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.15 2004/03/26 23:23:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.16 2004/04/19 15:12:09 dragonheart Exp $
+
+  20 Apr 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  uudeview-0.5.20.ebuild:
+  QA - removed runtime dependance on autoconf
 
   27 Mar 2004; David Holm <dholm@gentoo.org> uudeview-0.5.20.ebuild:
   Added to ~ppc.
