@@ -1,7 +1,13 @@
 # ChangeLog for net-im/tkabber
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.4 2003/02/02 04:16:07 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.5 2003/02/03 01:45:08 agenkin Exp $
 
+*tkabber-0.9.3b-r1 (31 Jan 2003)
+
+  02 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Added dev-tcltk/tclxml-expat dependency.  This makes the ebuild utilize
+  all documented optional features of tkabber.
+	
 *tkabber-0.9.3b (31 Jan 2003)
 
   01 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :

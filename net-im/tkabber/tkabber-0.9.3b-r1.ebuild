@@ -1,12 +1,13 @@
 # Copyright 2003 Arcady Genkin <agenkin@gentoo.org>.
 # Distributed under the terms of the GNU General Public License v2.
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.3b.ebuild,v 1.6 2003/02/02 04:16:07 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.3b-r1.ebuild,v 1.1 2003/02/03 01:45:08 agenkin Exp $
 
 DESCRIPTION="Featurefull Jabber client for tcl/tk."
 HOMEPAGE="http://www.jabber.ru/projects/tkabber/index_en.html"
 
-DEPEND=">=dev-lang/tcl-8.3.3
-	>=dev-lang/tk-8.3.3
+DEPEND="=dev-lang/tcl-8.3*
+	=dev-lang/tk-8.3*
+	dev-tcltk/tclxml-expat
 	>=dev-tcltk/tclgpgme-1.0
 	>=dev-tcltk/tcllib-1.3
 	>=dev-tcltk/bwidget-1.3
