@@ -11,14 +11,16 @@ MD5 05e7bb2b00b720f2f80c9289b049a2fc gcc-3.3.2-r2.ebuild 17937
 MD5 e586ae3d1dfd608365379f735502944b gcc-3.3.3.ebuild 22203
 MD5 f3ebca152f27914897021eb0ddba2c35 gcc-3.3.1-r5.ebuild 17689
 MD5 7b9e1f5167f95ef12201d256c1540273 gcc-3.4.1.ebuild 30210
+MD5 d8600df093ce0565bb8500a30465e2f6 gcc-3.4.1-r3.ebuild 31211
 MD5 5dc2c1245f12b0870a32c2ac4d9f58d7 gcc-3.3.3-r6.ebuild 24863
 MD5 3f83a8d4f48a08c93928a74922eabaf0 gcc-3.3.2-r4.ebuild 20562
 MD5 2f2650284e244eafc0795b02a1bdadd2 gcc-2.95.3-r8.ebuild 8306
 MD5 192382b893da342324669e153371fd56 gcc-3.3.3-r3.ebuild 23575
 MD5 8dc61d014521e2c7e35e11b147a5be30 gcc-3.3.2-r1.ebuild 17783
-MD5 89eb6ab822f4734f08cd7e2665acc697 ChangeLog 67423
+MD5 b9d2bf3ee6f2242f777a750295dbf079 ChangeLog 452
 MD5 c874c9694587097d692fa64cd46be416 gcc-3.3.2.ebuild 17730
 MD5 c45538377c4cf95b5e05fe3f3eaecc97 gcc-3.3.3_pre20040426.ebuild 22454
+MD5 29101392d0713e27c3186bab17fa17c2 gcc-3.3.4-r2.ebuild 24802
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 dce0d569acbf0ba02b504d6d24ed1e8b gcc-3.4.1-r2.ebuild 31161
 MD5 fbdd9445945cd92c9f1791320f6f5f31 gcc-3.3.3-r5.ebuild 24223
@@ -39,7 +41,8 @@ MD5 5a9db19cd5ad6ad16b0f838d525d842a files/digest-gcc-3.3.3-r3 522
 MD5 3a68d40d170427ffbfcf181b5099d693 files/digest-gcc-3.3.3-r5 528
 MD5 3fd5a29d44b89f4fb220fccaa968fc05 files/digest-gcc-3.3.3-r6 442
 MD5 6df16eb92245a931ecfc4cbcc73c84cf files/digest-gcc-3.3.4-r1 442
-MD5 c6ea8a92bac6d2638c54c011f98bc5b8 files/digest-gcc-3.4.1-r2 442
+MD5 6df16eb92245a931ecfc4cbcc73c84cf files/digest-gcc-3.3.4-r2 442
+MD5 c6ea8a92bac6d2638c54c011f98bc5b8 files/digest-gcc-3.4.1-r3 442
 MD5 3e2ed05a6d6829b70d282af8aa1fce82 files/digest-gcc-3.4.2-r1 358
 MD5 8f56750ce25ca30ffebcbdb65de95a1f files/digest-gcc-3.3.3_pre20040426 138
 MD5 8baffb486c75efe253bd2daa88daa7d6 files/gcc331_use_multilib.amd64.patch 352
@@ -95,6 +98,7 @@ MD5 4b249bff27ab6328436e6289ac9f9cfc files/3.3.3/gcc333_pre20040215-gentoo-brand
 MD5 66df5567226338b7504bbd3c25cea92c files/3.3.3/gcc-3.3.3-libiberty-pic.patch 370
 MD5 3210d5fd70806c44d4426c3dceebd480 files/3.3.3/gcc333_pre20040408-stack-size.patch 653
 MD5 27120401d2355e5d959b8d2d55eba310 files/3.3.4/gcc334-gentoo-branding.patch 876
+MD5 bdb8caa319e9be11a73a0fc4f405cfbd files/3.3.4/gcc-3.3.4-spec-env.patch 785
 MD5 bae93db3186aa0fc25d659b7799ef499 files/3.4.0/gcc34-ppc64-m32-m64-multilib-only.patch 825
 MD5 17b3190d64e34ed7709d022b326d08ae files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
 MD5 c919e0a2cd429d0121b6133c1b4e41a6 files/3.4.0/gcc34-ice-hack.patch 8605
@@ -103,6 +107,7 @@ MD5 c7ed491e4bcee6cae89067d4e1c899a8 files/3.4.0/gcc34-ia64-lib64.patch 1395
 MD5 06580106a905e8fa2ff23aa190f9d82c files/3.4.0/gcc-3.4.0-r6-gentoo-branding.patch 781
 MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
 MD5 66edf32babf498517ca56fa44c901f26 files/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch 894
+MD5 3bc8c78533f4e995671cee8784ea82a6 files/3.4.1/gcc-3.4.1-spec-env.patch 754
 MD5 cd770c23ece7458db5e6c5067f262ce0 files/3.4.1/gcc-3.4.1-glibc-is-native.patch 760
 MD5 aa8e15a63d797df37bbd4e489ed0267f files/3.4.1/gcc-3.4.1-mips-n64only.patch 614
 MD5 7cb2138ac2df6f8674d19974e966a45b files/3.4.1/gcc-3.4.1-mips-n32only.patch 614
