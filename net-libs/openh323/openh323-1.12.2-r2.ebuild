@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2-r2.ebuild,v 1.8 2004/06/06 23:23:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2-r2.ebuild,v 1.9 2004/06/10 20:22:26 agriffis Exp $
 
 inherit eutils
 
@@ -70,7 +70,7 @@ src_compile() {
 	# setting LDFLAGS prevents openh323 from using the wrong libs
 	makeopts="${makeopts} ASNPARSER=/usr/bin/asnparser LDFLAGS=-L${S}/lib NOTRACE=1"
 
-	if [ "`use ssl`" ]; then
+	if use ssl; then
 		export OPENSSLFLAG=1
 		export OPENSSLDIR=/usr
 		export OPENSSLLIBS="-lssl -lcrypt"

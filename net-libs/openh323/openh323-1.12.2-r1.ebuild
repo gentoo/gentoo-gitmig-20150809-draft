@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2-r1.ebuild,v 1.2 2004/03/09 02:06:52 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2-r1.ebuild,v 1.3 2004/06/10 20:22:26 agriffis Exp $
 
 IUSE="ssl"
 
@@ -54,7 +54,7 @@ src_compile() {
 	makeopts="${makeopts} ASNPARSER=/usr/bin/asnparser NOTRACE=1"
 
 
-	if [ "`use ssl`" ]; then
+	if use ssl; then
 		export OPENSSLFLAG=1
 		export OPENSSLDIR=/usr
 		export OPENSSLLIBS="-lssl -lcrypt"

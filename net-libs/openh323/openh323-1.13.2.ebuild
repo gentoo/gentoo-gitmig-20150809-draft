@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2.ebuild,v 1.2 2004/03/12 01:44:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2.ebuild,v 1.3 2004/06/10 20:22:26 agriffis Exp $
 
 IUSE="ssl"
 
@@ -70,7 +70,7 @@ src_compile() {
 	# NOTRACE avoid compilation problems, we disable PTRACING using NOTRACE=1
 	makeopts="${makeopts} ASNPARSER=/usr/bin/asnparser LDFLAGS=-L${S}/lib NOTRACE=1"
 
-	if [ -n "`use ssl`" ]; then
+	if use ssl; then
 		export OPENSSLFLAG=1
 		export OPENSSLDIR=/usr
 		export OPENSSLLIBS="-lssl -lcrypt"
