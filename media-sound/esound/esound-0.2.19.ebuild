@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.19.ebuild,v 1.3 2000/09/15 20:06:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.19.ebuild,v 1.4 2000/09/15 20:09:04 drobbins Exp $
 
 P=esound-0.2.19
 A=${P}.tar.gz

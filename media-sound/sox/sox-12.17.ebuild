@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.ebuild,v 1.1 2000/09/10 15:17:29 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.ebuild,v 1.2 2000/09/15 20:09:05 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -13,9 +13,9 @@ HOMEPAGE="http://home.sprynet.com/~cgabwell/sox.html"
 src_compile() {
 
     cd ${S}
-    ./configure --prefix=/usr --host=${CHOST} \
+    try ./configure --prefix=/usr --host=${CHOST} \
 	 --enable-fast-ulaw --enable-fast-alaw --with-alsa-dsp
-    make
+    try make
 
 }
 
