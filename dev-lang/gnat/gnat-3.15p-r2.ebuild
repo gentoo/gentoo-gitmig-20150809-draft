@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r2.ebuild,v 1.3 2003/09/17 23:10:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r2.ebuild,v 1.4 2003/09/18 10:44:25 dholm Exp $
 
 DESCRIPTION="The GNU Ada Toolkit"
 DEPEND="x86? ( >=app-shells/tcsh-6.0 )"
@@ -66,6 +66,7 @@ src_compile() {
 	sed -i -e "s/@local_prefix@/@prefix@/" "${S}/Makefile.in"
 
 	# Configure gcc
+	local CFLAGS="-O0"
 	cd "${S}"
 	econf --libdir=/usr/lib/ada --program-prefix=gnat \
 		|| die "./configure failed"

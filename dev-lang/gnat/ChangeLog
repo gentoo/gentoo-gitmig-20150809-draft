@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.7 2003/09/17 23:09:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.8 2003/09/18 10:44:25 dholm Exp $
+
+  18 Sep 2003; David Holm <dholm@gentoo.org> gnat-3.15p-r2.ebuild:
+  I forgot to set the CFLAGS before running configure which would cause a
+  failure with unstripped flags in make.conf.
 
   18 Sep 2003; David Holm <dholm@gentoo.org> gnat-3.15p-r2.ebuild,
   files/gnat-3.15p-gentoo-nonx86.patch.bz2:
