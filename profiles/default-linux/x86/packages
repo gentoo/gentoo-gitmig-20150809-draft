@@ -1,6 +1,6 @@
 # Copyright 2001-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/packages,v 1.4 2004/09/12 11:13:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/packages,v 1.5 2004/09/15 05:13:10 vapier Exp $
 
 # For instructions on how this file works (as an inclusion mask, primarily),
 # please refer to ${PORTDIR}/profiles/base/packages
@@ -11,11 +11,8 @@
 # You can also add files to the base system itself if you prefix them with a
 # *
 
-
 *sys-devel/bin86
-*sys-libs/pwdb
 
 >=sys-devel/binutils-2.13.90.0.4
 >=sys-devel/libtool-1.4.1-r4
-<sys-apps/shadow-5
 virtual/x11

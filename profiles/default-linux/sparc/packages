@@ -17,7 +17,6 @@
 *sys-apps/hdparm
 *sys-apps/sparc-utils
 *sys-libs/gdbm  
-*sys-libs/pwdb      
 *sys-libs/slang
 
 # default-sparc-1.4 pkgs 
