@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.34 2004/02/01 01:15:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.35 2004/02/01 01:29:02 mholzer Exp $
+
+  01 Feb 2004; Martin Holzer <mholzer@gentoo.org> avidemux-2.0.18.ebuild,
+  files/alsa.patch:
+  adding alsa.patch Closes 38982
 
   01 Feb 2004; Martin Holzer <mholzer@gentoo.org> avidemux-2.0.18.ebuild,
   avidemux-2.0.20.ebuild:
