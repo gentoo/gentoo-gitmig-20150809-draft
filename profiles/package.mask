@@ -71,9 +71,9 @@ net-www/zope
 >=media-libs/mesa-3.5
 >=media-libs/mesa-glu-3.5
 
-# We are masking out the 4.x series shadow until we remove dependencies
-# on libshadow from other ebuilds.  (drobbins, 19 Jan 2002)
-<=sys-apps/shadow-5
+# We are masking out the shadow snapshots now, to coincide
+# with the new pam rollout. ( Woodchip - Mar 20 2002)
+>=sys-apps/shadow-5
 
 # mask older packages due to version change .. new one will be seen
 # by portage as older ....
@@ -402,9 +402,9 @@ dev-lang/tcl-tk
 #unstable version only for testing purposes
 >=dev-libs/glib-1.3.14
 
-#g2boojum@gentoo.org, 22 Feb 2002
-# masking PAM version that shouldn't be there anymore
->=sys-libs/pam-0.75-r3
+# We are masking out the older pams now, in order to get the
+# new one propogated into everybodys systems. ( Woodchip - Mar 20 2002)
+<sys-libs/pam-0.75-r4
 
 =dev-ruby/mod-ruby-0.9.7
 

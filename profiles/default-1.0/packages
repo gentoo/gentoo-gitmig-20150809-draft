@@ -87,7 +87,7 @@
 *sys-apps/sed
 *sys-apps/setserial
 *sys-apps/sh-utils
-*>sys-apps/shadow-5
+*<sys-apps/shadow-5
 *sys-apps/sharutils
 *sys-apps/tar
 #only needed by xinetd, and it's out.  So tcp-wrappers is out too
