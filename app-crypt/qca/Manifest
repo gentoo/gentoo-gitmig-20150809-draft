@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 646dbb8b398cf6d23341be2ffb7aa8bb qca-1.0-r1.ebuild 980
-MD5 1a0b6c4ae168282d133d6f13e1e626ee qca-1.0-r2.ebuild 998
-MD5 99a199bde767721a57a72fbe767cd5aa ChangeLog 1842
-MD5 ccc1d8642da78631eda5aecfb399cc13 qca-1.0.ebuild 980
+MD5 5c3d82b9a3cd4e60cc9733d64186ef02 ChangeLog 1931
 MD5 b5393a27b5b3d74649028c3befaf49fe metadata.xml 226
-MD5 79ff5b8052703491612213e47cdb6947 files/digest-qca-1.0 59
+MD5 646dbb8b398cf6d23341be2ffb7aa8bb qca-1.0-r1.ebuild 980
+MD5 ccc1d8642da78631eda5aecfb399cc13 qca-1.0.ebuild 980
+MD5 efaf95db4244f87a98dc2e8759591110 qca-1.0-r2.ebuild 994
 MD5 79ff5b8052703491612213e47cdb6947 files/digest-qca-1.0-r1 59
+MD5 79ff5b8052703491612213e47cdb6947 files/digest-qca-1.0 59
 MD5 79ff5b8052703491612213e47cdb6947 files/digest-qca-1.0-r2 59
 MD5 ee5764e49e4425fb387e29a7d8e2fec0 files/qca-pathfix.patch 267
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCQh6O06ebR+OMO78RAhR9AJwMTGjFcXEWF2lyZ49+73UHp992EgCeN7gP
-X2lvmWY/WropH+w95N5GDaI=
-=0mLN
+iD8DBQFCRb/JugEuf3OQ0akRAsQgAJ9w2jNX96RF0JzBLEwYXxS6U5BuAwCfXKVw
+ODYMCvRMHtUwA2aWvQyjY7Y=
+=E1eW
 -----END PGP SIGNATURE-----
