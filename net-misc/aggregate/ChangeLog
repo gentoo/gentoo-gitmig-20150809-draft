@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aggregate
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.1 2003/09/13 07:50:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.2 2003/09/13 08:10:56 robbat2 Exp $
+
+  13 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> aggregate-1.6.ebuild:
+  forgot perl rdepend
 
 *aggregate-1.6 (13 Sep 2003)
 
