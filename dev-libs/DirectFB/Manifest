@@ -1,7 +1,20 @@
-MD5 b67b52c9c8ea260a3340bf512ed677b8 ChangeLog 6851
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 54e6878a71bec17f13b960affdecfa03 ChangeLog 7034
 MD5 5569f2d9e310ea41182eac8a83cd65d1 DirectFB-0.9.20-r1.ebuild 3546
 MD5 b798773c0060701f402cec4cddc05f5d metadata.xml 754
-MD5 ba5b8492b20c817af4f669c914a4fe04 files/0.9.20-linux-2.6.patch 809
+MD5 cb7846f8d37abc3bc881c1cc639f0e27 DirectFB-0.9.21.ebuild 3052
 MD5 e9dedca8e82842a80fa7bd1507d5f1c6 files/DirectFB-0.9.20-64bit.diff 5060
+MD5 19ec05b9146f1b76d6bc46c937a14500 files/digest-DirectFB-0.9.21 68
+MD5 ba5b8492b20c817af4f669c914a4fe04 files/0.9.20-linux-2.6.patch 809
 MD5 cf391a4bf3d83146b5f6e5e93fdf779d files/DirectFB-0.9.20-simd-amd64.diff 6152
 MD5 938ad0cd729c90ede0f844b39cbeffa5 files/digest-DirectFB-0.9.20-r1 68
+MD5 51cf3c6f205c566235b00a488947f835 files/0.9.21-simd-amd64.patch 6156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBy+5nroRuSHgZdywRAvRrAJ45f1jBiyA7kzeSzrJ0BS7HYXLbNACfY9QS
+qT9qEWRSrlxTn69+POb3O5c=
+=FLu1
+-----END PGP SIGNATURE-----
