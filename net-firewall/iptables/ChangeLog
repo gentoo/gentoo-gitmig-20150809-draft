@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.13 2003/07/02 20:28:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.14 2003/09/19 13:54:29 aliz Exp $
+
+  19 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> files/ip6tables.init:
+  Closing #29087.
 
   06 May 2003; Christian Birchinger <joker@gentoo.org>
   iptables-1.2.8-r1.ebuild:
