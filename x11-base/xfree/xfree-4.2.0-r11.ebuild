@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r9.ebuild,v 1.6 2002/04/29 20:53:42 sandymac Exp
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r11.ebuild,v 1.4 2002/05/30 15:00:54 azarah Exp $
 
 FT2_VER=2.0.9
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
