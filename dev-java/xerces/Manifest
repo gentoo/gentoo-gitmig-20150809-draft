@@ -3,18 +3,16 @@ Hash: SHA1
 
 MD5 51c0ccc44bfa89f4ccfb3c43da58e21c xerces-2.3.0.ebuild 1117
 MD5 c5faba9898f318c48c423a29020c7ba8 xerces-1.3.1.ebuild 1067
-MD5 38055deb674223ccf6e1cad7b070efa0 xerces-2.6.2-r1.ebuild 1920
-MD5 1712b23758cbad448f8011d3f91eae80 ChangeLog 4568
+MD5 bb9a05782bc39ed854168dc584a11c2a xerces-2.6.2-r1.ebuild 1919
+MD5 503b4d31f362636698450758ec4f24db ChangeLog 4676
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 71ee0477cd8b925dbc98a2df6bb0fbe6 xerces-2.6.0.ebuild 1925
 MD5 202c6353e68e489ff4ca668a0999534d files/digest-xerces-2.6.2-r1 144
 MD5 ca42d91bb10182d3e1717d14894481c8 files/digest-xerces-1.3.1 143
 MD5 0ed5652de5f404a3fefb774b2b1a8538 files/digest-xerces-2.3.0 144
-MD5 1fcb1a39009fabe31915e46883eb55b9 files/digest-xerces-2.6.0 144
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBSs2Y/rLF9B432nYRAvG5AKDA/zaumDhmq9iYkzJQEDBGTOKawgCgr4B+
-dP9TGeWfJm+Bo0NJwm9wG4s=
-=+xkb
+iD8DBQFBUDdZ/rLF9B432nYRAtwpAKCYoRMnm3AQjL9TA2I0Va8Cex+nmwCfdMGs
+CAeFTpDxDg2qUBbfpu1jJ1g=
+=v2Jj
 -----END PGP SIGNATURE-----
