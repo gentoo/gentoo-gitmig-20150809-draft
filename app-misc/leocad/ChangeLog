@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/leocad
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/leocad/ChangeLog,v 1.1 2002/12/15 21:47:34 george Exp $
+
+*leocad-20021123.ebuild (15 ‰≈À 2002)
+
+  15 Dec 2002; George Shapovalov <george@gentoo.org> ChangeLog, leocad-20021123.ebuild, files/digest-leocad-20021123,leocad :
+  initial release
+  LeoCAD is a CAD program that uses bricks similar to those found in many toys
+  ebuild submitted by Dirk-Jan Heijs <heijs@phys.rug.nl>
