@@ -8,7 +8,6 @@
 # dynamic setup once the lists are in place to pull from
 
 MIRROR_LIST='
-http://distro.ibiblio.org/gentoo (USA)
 ftp://ftp.gtlib.cc.gatech.edu/pub/gentoo (USA)
 http://gentoo.oregonstate.edu (USA)
 ftp://ftp.oregonstate.edu/pub/gentoo (USA/ftp)
@@ -24,6 +23,7 @@ ftp://ftp.dale.ro/pub/mirrors/ftp.ibiblio.org/pub/Linux/distributions/gentoo/ (R
 http://ftp.snt.utwente.nl/pub/os/linux/gentoo/ (Netherlands)
 ftp://ftp.snt.utwente.nl/pub/os/linux/gentoo/ (Netherlands/ftp) 
 ftp://ftp.rez-gif.supelec.fr/pub/Linux/distrib/gentoo/ (France/ftp)
+http://distro.ibiblio.org/gentoo (USA)
 '
 
 # change "mirror (loc)" to "mirror(loc)" for bash loop below
