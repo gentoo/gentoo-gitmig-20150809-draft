@@ -1,40 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f881d3e35a8d3a9c27e1d29984b9d3fd openoffice-ximian-1.3.6.ebuild 16873
+MD5 26f1b4de2d99cba28eb2b09825c69475 openoffice-ximian-1.3.5-r1.ebuild 16129
+MD5 6ce2b68aeaee3f9662dcc36659a3e8f4 openoffice-ximian-1.3.7.ebuild 17096
 MD5 efd4b69c6a3044adc517e5be7b2062c7 ChangeLog 22512
 MD5 f3942f82433bf5ae16461240cbcc4984 metadata.xml 300
-MD5 26f1b4de2d99cba28eb2b09825c69475 openoffice-ximian-1.3.5-r1.ebuild 16129
-MD5 f881d3e35a8d3a9c27e1d29984b9d3fd openoffice-ximian-1.3.6.ebuild 16873
-MD5 6ce2b68aeaee3f9662dcc36659a3e8f4 openoffice-ximian-1.3.7.ebuild 17096
-MD5 0b59100689dae352eeac675e31a4cdec files/digest-openoffice-ximian-1.3.7 502
 MD5 b7a3ab0336f7e514b6641e5871c1bbbb files/digest-openoffice-ximian-1.3.5-r1 437
 MD5 2595967ac130a541e50bffc75e105041 files/digest-openoffice-ximian-1.3.6 502
-MD5 5c07103a16bd20651d16bb467e1bdb44 files/1.1.2/gentoo-1.3.5-r1.patch 597
-MD5 9abefd659e5b06ff9d9f515f312cdc4b files/1.1.2/gentoo-splash.diff 890
-MD5 ec45b66d175ad9662716a06e7c678cef files/1.1.2/newstlportfix.patch 10362
+MD5 0b59100689dae352eeac675e31a4cdec files/digest-openoffice-ximian-1.3.7 502
 MD5 6ecbfeab440a03f031dbfa0631404aa0 files/1.1.2/ximian-openoffice.applications 980
+MD5 9abefd659e5b06ff9d9f515f312cdc4b files/1.1.2/gentoo-splash.diff 890
 MD5 d1a499cfa276614323b547e013d5c6a0 files/1.1.2/ximian-openoffice.keys 6298
+MD5 5c07103a16bd20651d16bb467e1bdb44 files/1.1.2/gentoo-1.3.5-r1.patch 597
 MD5 e3c1dc0a3108091c8acfab788a5c9282 files/1.1.2/xooffice-wrapper-1.3 9336
-MD5 e93f28c8afacb22bf9ac351ebd8195d2 files/1.1.3/gcc34-gnome.patch 598
-MD5 6984d0675ce2c9de20b0939a2f0b5dcb files/1.1.3/gcc34-nojava-fix.patch 455
-MD5 bf7df7ebe1373f6e2e5bd1e0425657bd files/1.1.3/gcc34-nptl-fix.patch 618
+MD5 ec45b66d175ad9662716a06e7c678cef files/1.1.2/newstlportfix.patch 10362
+MD5 f9578015a434c209259917e9df3c0b27 files/1.1.3/gcc34_2.patch.bz2 33535
 MD5 04621a43bfeb4fac8077a770a8eba7e3 files/1.1.3/gcc34.patch.bz2 33661
 MD5 a5ef896f6a59b91fa3367c92de077769 files/1.1.3/gentoo-1.3.6.patch 597
-MD5 9abefd659e5b06ff9d9f515f312cdc4b files/1.1.3/gentoo-splash.diff 890
-MD5 a9233bc0091b925de38145108267b949 files/1.1.3/newstlportfix.patch 3638
 MD5 6ecbfeab440a03f031dbfa0631404aa0 files/1.1.3/ximian-openoffice.applications 980
+MD5 9abefd659e5b06ff9d9f515f312cdc4b files/1.1.3/gentoo-splash.diff 890
+MD5 e4adbb2e001da5c76155317984377284 files/1.1.3/javafix.patch 1582
 MD5 d1a499cfa276614323b547e013d5c6a0 files/1.1.3/ximian-openoffice.keys 6298
-MD5 d36ed3c83eb2dc4c5f52c2cd24f023cf files/1.1.3/xooffice-wrapper-1.3 9336
-MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.3/STLport-vector.patch 1472
-MD5 f43ca2544f6cd797bed8e5aad1e50a29 files/1.1.3/gcc34-sal-link-to-libsupc++.diff 405
-MD5 f9578015a434c209259917e9df3c0b27 files/1.1.3/gcc34_2.patch.bz2 33535
 MD5 03a4e552b53cb7fc9da8d844369ff647 files/1.1.3/gentoo-1.3.7.patch 995
-MD5 6144a4583b7cfd7116e10baba31054a0 files/1.1.3/javafix.patch 1590
+MD5 d36ed3c83eb2dc4c5f52c2cd24f023cf files/1.1.3/xooffice-wrapper-1.3 9336
+MD5 6984d0675ce2c9de20b0939a2f0b5dcb files/1.1.3/gcc34-nojava-fix.patch 455
+MD5 bf7df7ebe1373f6e2e5bd1e0425657bd files/1.1.3/gcc34-nptl-fix.patch 618
+MD5 e93f28c8afacb22bf9ac351ebd8195d2 files/1.1.3/gcc34-gnome.patch 598
+MD5 f43ca2544f6cd797bed8e5aad1e50a29 files/1.1.3/gcc34-sal-link-to-libsupc++.diff 405
+MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.3/STLport-vector.patch 1472
 MD5 dd3785621235368cc28f1f85101fcac7 files/1.1.3/nojvmfwk-fix.patch 6986
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB6DcBKRy60XGEcJIRAjtTAKCxSE6JPkeV2gL2WpOL42+WFMx/RgCdE876
-krD+JxLFL06IAbSwKZ4EUiE=
-=Otqu
------END PGP SIGNATURE-----
+MD5 a9233bc0091b925de38145108267b949 files/1.1.3/newstlportfix.patch 3638
