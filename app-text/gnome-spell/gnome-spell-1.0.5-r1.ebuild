@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r1.ebuild,v 1.7 2004/04/08 17:19:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r1.ebuild,v 1.8 2004/06/22 12:52:54 foser Exp $
 
 inherit gnome.org gnome2 libtool eutils
 
@@ -32,5 +32,5 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-enchant.patch
 
 	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
-	automake || die "automake failed"
+	WANT_AUTOMAKE=1.4 automake || die "automake failed"
 }

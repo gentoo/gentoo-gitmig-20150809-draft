@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r2.ebuild,v 1.4 2004/06/15 19:49:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r2.ebuild,v 1.5 2004/06/22 12:52:54 foser Exp $
 
 inherit gnome.org gnome2 libtool eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa amd64"
+KEYWORDS="x86 ~sparc ~ppc ~alpha ~hppa amd64"
 
 RDEPEND=">=gnome-base/libgnomeui-2.2
 	>=gnome-base/libbonoboui-2.0
@@ -27,11 +27,13 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 src_unpack() {
+
 	unpack ${A}
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-enchant.patch
 	epatch ${FILESDIR}/${P}-gtk24.patch
 	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
-	automake || die "automake failed"
+	WANT_AUTOMAKE=1.4 automake || die "automake failed"
+
 }
