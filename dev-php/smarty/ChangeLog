@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.5 2003/12/22 19:36:10 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.6 2003/12/24 22:33:55 twp Exp $
+
+  24 Dec 2003; Tom Payne <twp@gentoo.org> smarty-2.6.0.ebuild :
+  Install libs/core/*. Bug # 36412.
+  Don't install docs (use smarty-docs package instead).
 
 *smarty-2.6.0 (22 Dec 2003)
 
