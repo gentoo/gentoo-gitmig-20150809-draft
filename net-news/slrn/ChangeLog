@@ -1,6 +1,9 @@
 # ChangeLog for net-news/slrn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.33 2004/12/05 02:42:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.34 2004/12/07 14:39:56 gustavoz Exp $
+
+  07 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> slrn-0.9.8.1.ebuild:
+  Stable on sparc
 
   05 Dec 2004; Sven Wegener <swegener@gentoo.org> slrn-0.9.8.0-r1.ebuild,
   -slrn-0.9.8.0-r2.ebuild, slrn-0.9.8.0.ebuild, slrn-0.9.8.1.ebuild:
