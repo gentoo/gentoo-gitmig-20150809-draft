@@ -1,6 +1,6 @@
 # Config file for /etc/init.d/tux
 # modified from original to be Gentoo like
-# $Header: /var/cvsroot/gentoo-x86/net-www/tux/files/tux.conf.d,v 1.1 2003/06/16 19:54:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tux/files/tux.conf.d,v 1.2 2003/11/18 20:14:21 vapier Exp $
 
 # TUX_THREADS sets the number of kernel threads (and associated daemon
 # threads) that will be used.  $TUX_THREADS defaults to 1.
@@ -8,7 +8,7 @@
 
 # DOCROOT is the document root; it works the same way as other web
 # servers such as apache.  This must have only 1 trailing /.
-TUX_DOCROOT=/home/httpd/htdocs/
+TUX_DOCROOT=/var/www/localhost/htdocs/
 
 # LOGFILE is the file where tux logs information for each
 # request. Note that tux writes log files in a binary format and to
