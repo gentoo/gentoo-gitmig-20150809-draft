@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk-sharp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.13 2004/02/08 19:27:00 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.14 2004/02/13 19:30:03 tberman Exp $
+
+*gtk-sharp-0.15 (13 Feb 2004)
+
+  13 Feb 2004; Todd Berman <tberman@gentoo.org> gtk-sharp-0.14.ebuild,
+  gtk-sharp-0.15.ebuild:
+  removing 0.14, marking 0.15 stable on x86
 
 *gtk-sharp-0.16 (08 Feb 2004)
 
