@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/modplugbmp
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugbmp/ChangeLog,v 1.1 2004/12/16 16:11:56 chainsaw Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugbmp/ChangeLog,v 1.2 2005/03/21 20:42:38 luckyduck Exp $
+
+  21 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> modplugbmp-2.05.ebuild:
+  added ~amd64 to KEYWORDS, fixes #77293
 
 *modplugbmp-2.05 (16 Dec 2004)
 
