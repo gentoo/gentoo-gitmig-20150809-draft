@@ -1,5 +1,5 @@
-MD5 bcee164fd5aa4ec4d17fb6150fc9a452 ChangeLog 802
-MD5 e81e7adc02bf5d3bafc0da670f1b3eea amp-0.7.6.ebuild 600
+MD5 befc3bae3734623493256ffe83f44bfa ChangeLog 901
+MD5 b840332589aea6ee81ea711a5d072fc2 amp-0.7.6.ebuild 598
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 dfa9cfdfc2fdefe0a9a21f46d270707b files/digest-amp-0.7.6 61
 MD5 114cc11c329e1a2810dd61a99f5873af files/amp-0.7.6-gcc34.patch 338
