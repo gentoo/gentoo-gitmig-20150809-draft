@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.38 2002/10/31 20:47:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.39 2002/11/01 18:57:36 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 
 ECLASS=kde-functions
@@ -64,15 +64,6 @@ need-kde() {
 		else
 			newdepend "~kde-base/kdelibs-${KDEVER}"
 		fi
-	elif [ -n "$KDEAPPENDAGE" ]; then
-		# special status - installs into $KDEDIR not $PREFIX
-		# and needs an exact minor version of kde.
-		# this exists for stuff that is part of a kde-base package,
-		# but also has older standalone ebuilds which must then go
-		# into the older kde's directory and cannot work with the
-		# newer kde.
-		newdepend "=kde-base/kdelibs-${KDEVER}*"
-		export PREFIX="$KDEDIR"
 	else
 		# everything else only needs a minimum version	
 		if [ "$KDEMAJORVER" == "2" ]; then
@@ -262,8 +253,9 @@ qtver-from-kdever() {
 
 	case $1 in
 		2*)	ver=2.3.1;;
+		3.1*)	ver=3.1_pre20021024;;
 		3*)	ver=3.0.5;;
-		5)	ver=3.1;; # cvs version
+		5)	ver=3.1_pre20021024;; # cvs version
 		*)	echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
@@ -292,8 +284,9 @@ min-kde-ver() {
 		3.0)				selected_version="3.0";;
 		3.0.*)			selected_version="3.0";;
 		3.1_alpha1)		selected_version="3.1_alpha1";;
-		3.1_beta1)		selected_version="3.1_alpha1";;
-		3.1_beta2)		selected_version="3.1_alpha1";;
+		3.1_beta1)		selected_version="3.1_beta1";;
+		3.1_beta2)		selected_version="3.1_beta2";;
+		3.1_rc1)		selected_version="3.1_rc1";;
 		3.1.*)			selected_version="3.1";;
 		3*)				selected_version="3.0";;
 		5)					selected_version="5";;
