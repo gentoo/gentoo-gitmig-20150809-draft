@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r4.ebuild,v 1.3 2001/12/08 15:59:02 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r4.ebuild,v 1.4 2001/12/08 18:19:13 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -114,6 +114,9 @@ src_install() {
 	#killing things.
 	chmod 4755 ${D}/usr/lib/misc/pt_chown
 	rm -f ${D}/etc/ld.so.cache
+
+	#prevent overwriting of the /etc/localtime symlink.  We'll handle the
+	#creation of the "factory" symlink in pkg_postinst().
 }
 
 pkg_preinst()
@@ -135,8 +138,6 @@ pkg_preinst()
 			/sbin/sln ${ROOT}lib/old/${mytarget} ${ROOT}lib/${file}
 		fi
 	done
-    
-	[ ! -e ${ROOT}etc/localtime ] && echo "Please remember to set your timezone using the zic command."
 	return 0
 }
 
@@ -151,5 +152,12 @@ pkg_postinst()
 	#goes wrong with the new lib install.	It's just a nicer way of
 	#handling things, imho.
 	/sbin/ldconfig -r ${ROOT}
+	#we do the localtime symlink here so that we don't overwrite any
+	#existing one during merge.
+	if [ ! -e ${ROOT}etc/localtime ]
+	then
+		echo "Please remember to set your timezone using the zic command."
+		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime	
+	fi	
 	return 0
 }
