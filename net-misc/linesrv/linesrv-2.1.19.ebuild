@@ -1,37 +1,29 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.8.ebuild,v 1.4 2004/09/17 22:49:35 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.19.ebuild,v 1.1 2004/10/07 03:36:05 squinky86 Exp $
 
 inherit eutils
 
-IUSE="pam"
+IUSE="pam mysql"
 
 DESCRIPTION="Client/Server system to control the Internet link of a masquerading server"
-HOMEPAGE="http://linecontrol.sourceforge.net"
+HOMEPAGE="http://linecontrol.srf.ch/"
 
 S=${WORKDIR}/${PN}-2.1
-SRC_URI="mirror://sourceforge/linecontrol/${P}.src.tar.bz2"
-RESTRICT="nomirror"
-#windows client: http://people.ee.ethz.ch/~sfuchs/LineControl/down/wlc-122.zip
+SRC_URI="http://linecontrol.srf.ch/down/${P}.src.tar.bz2"
 
 DEPEND="virtual/libc
-	pam? ( >=sys-libs/pam-0.75 )"
+	pam? ( >=sys-libs/pam-0.75 )
+	mysql? ( >=dev-db/mysql-4 )"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc"
 
 [ -z "$HTTPD_ROOT" ] && HTTPD_ROOT=/var/www/localhost
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc34.patch
-}
-
 src_compile() {
-	local myconf
-	use pam || myconf="--disable-pamauth"
-	econf ${myconf} || die "bad configure"
+	econf `use_enable pam pamauth` \
+		`use_enable mysql` || die "bad configure"
 	emake || die
 }
 

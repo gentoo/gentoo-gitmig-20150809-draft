@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/files/linesrv.rc6,v 1.6 2004/07/15 00:02:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/files/linesrv.rc6,v 1.7 2004/10/07 03:36:05 squinky86 Exp $
 
 depend() {
-	need net
+	need net logger
+	use mysql dns
 }
 
 checkconfig() {
