@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.38 2004/04/17 11:54:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.39 2004/04/19 19:56:56 gmsoft Exp $
+
+  19 Apr 2004; Guy Martin <gmsoft@gentoo.org> gimp-print-4.2.6.ebuild:
+  Marked stable on hppa.
 
   15 Apr 2004; Stephen P. Becker <geoman@gentoo.org> gimp-print-4.2.6.ebuild:
   Added ~mips keyword.
