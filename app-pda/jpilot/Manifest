@@ -1,12 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c418d701cd6037d6b4dc3500ad5ba60d ChangeLog 4351
 MD5 c1dba0bafa6ab7cf5dbe77c1257ed6a7 jpilot-0.99.2-r1.ebuild 1821
 MD5 85d9d6fe43174cbbb6beb52c65642adb jpilot-0.99.5.ebuild 1925
-MD5 c05f90482ed692ef8f89e3b6acbd2ec6 jpilot-0.99.6-r1.ebuild 2270
-MD5 f886343c2668431ec2692200ac7e5f5b jpilot-0.99.7-r1.ebuild 1544
-MD5 eb98c3c7b10a070e8e255a0bf604642c jpilot-0.99.7.ebuild 2320
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+MD5 c05f90482ed692ef8f89e3b6acbd2ec6 jpilot-0.99.6-r1.ebuild 2270
+MD5 24a7d684d06430892c8ce85388c53c09 jpilot-0.99.7-r1.ebuild 1547
+MD5 eb98c3c7b10a070e8e255a0bf604642c jpilot-0.99.7.ebuild 2320
 MD5 772a9edf8c450460098e6af60fee716d files/digest-jpilot-0.99.2-r1 205
 MD5 fec9283977e434f78771d9dc3b05569f files/digest-jpilot-0.99.5 208
-MD5 3191fb2564846c9ad2faa29463b178a6 files/digest-jpilot-0.99.6-r1 208
 MD5 25502d8cc007a47634cfb80b10b6d0fd files/digest-jpilot-0.99.7 208
+MD5 3191fb2564846c9ad2faa29463b178a6 files/digest-jpilot-0.99.6-r1 208
 MD5 ac0b77783e7cf50e9f7f63397d19e774 files/digest-jpilot-0.99.7-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBdVqhHTu7gpaalycRAmsvAJ9+PcnQhe4oiYjTR5TvIsbqW1yn3wCghljI
+G0Y9XG/mha7shSLFONePv08=
+=I+Id
+-----END PGP SIGNATURE-----

@@ -6,7 +6,7 @@ MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 b73905861514b491883690aef061bd9b pilot-link-0.11.3.ebuild 1127
 MD5 f93bbd87447f6bca5a28e97a56a38fe4 pilot-link-0.11.5-r2.ebuild 2798
 MD5 2bf1ee7a53bd23f0849c2fbfeac1b2ee pilot-link-0.11.7-r1.ebuild 1792
-MD5 8b31910518ba856b8cce83c1633bc41c pilot-link-0.11.8.ebuild 1878
+MD5 5a3f16beda27f5f6960ab5058f6dcbd9 pilot-link-0.11.8.ebuild 1879
 MD5 18f8f277a9e6708c9c7100b1832e292c pilot-link-0.11.8-r1.ebuild 2040
 MD5 4ed5cde53dbd9e15bb794538763b55eb files/digest-pilot-link-0.11.3 70
 MD5 6d5485ccfa72ceeae0193839586e7252 files/digest-pilot-link-0.11.5-r2 70
@@ -20,7 +20,7 @@ MD5 cc5d291e67e5ebc1caa5cc3c401f3ced files/pilot-link-0.11.8-netsync.patch 4371
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBdVpgHTu7gpaalycRAtmFAJ9GyOZCwEpidZM2nyXMXi8+fXPtVACghV2y
-up7a4jMPlOdEGIg2tw6Aeak=
-=eyVb
+iD8DBQFBdVs/HTu7gpaalycRAuEAAKCKOIhEnnScfq3BV4BxoYKjFabMhQCgzeoS
+5s0X0AsgEzAksfFTYIwUGCw=
+=dp44
 -----END PGP SIGNATURE-----
