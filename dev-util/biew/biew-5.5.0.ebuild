@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.5.0.ebuild,v 1.5 2004/06/03 17:45:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.5.0.ebuild,v 1.6 2004/06/17 18:49:02 spock Exp $
 
 IUSE="slang ncurses"
 
@@ -26,6 +26,13 @@ src_unpack() {
 	sed -i "s/CFLAGS += -O2 -fomit-frame-pointer/CFLAGS +=/" makefile.inc
 	sed -i 's/bool/__bool/g' plugins/bin/ne.c
 #	sed -i "s/TARGET_OS=.*/TARGET_OS=linux/" makefile
+}
+
+pkg_setup() {
+	if [ -n "`/usr/bin/gcc --version | grep hardened`" ]; then
+		eerror "Currently biew doesn't work when GCC is compiled with the 'hardened' USE flag. Sorry."
+		die "Exiting"
+	fi
 }
 
 src_compile() {

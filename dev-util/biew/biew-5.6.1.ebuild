@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.1.ebuild,v 1.3 2004/06/17 18:47:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.1.ebuild,v 1.4 2004/06/17 18:49:02 spock Exp $
 
 IUSE="slang ncurses"
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 pkg_setup() {
-	if [ -n "`/usr/bin/gcc --version | grep hardened`" ]; then 
+	if [ -n "`/usr/bin/gcc --version | grep hardened`" ]; then
 		eerror "Currently biew doesn't work when GCC is compiled with the 'hardened' USE flag. Sorry."
 		die "Exiting"
 	fi
