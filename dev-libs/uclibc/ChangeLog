@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.5 2003/07/07 20:27:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.6 2003/09/10 04:31:14 solar Exp $
+
+*uclibc-0.9.21 (10 Sep 2003)
+
+  10 Sep 2003; <solar@gentoo.org> uclibc-0.9.21.ebuild:
+  andersee is pleased to announce the immediate availability of uClibc 0.9.21.
+  This release has been brewing for several months now, and provides quite a lot
+  of additional functionality as well as quite a few bug fixes. The biggest
+  thing in this release (and I do mean that literally) is that uClibc now has
+  full ANSI/ISO C99 locale support. The most interesting thing for uClinux are
+  the additional config options that will let you tune the library to be even
+  smaller, for example, by disabling all the strerror() messages.
 
 *uclibc-0.9.20 (09 Jul 2003)
 
