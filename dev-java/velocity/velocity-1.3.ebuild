@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.3.ebuild,v 1.8 2004/06/24 22:44:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.3.ebuild,v 1.9 2004/07/14 13:24:31 agriffis Exp $
 
 DESCRIPTION="A Java-based template engine that allows easy creation/rendering of documents that format and present data."
 HOMEPAGE="http://jakarta.apache.org/velocity/"
@@ -9,7 +9,7 @@ SRC_URI="http://jakarta.apache.org/builds/jakarta-${PN}/release/v${PV}/${PN}-${P
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="jikes doc"
+IUSE="doc j2ee jikes"
 
 DEPEND=">=dev-java/sun-jdk-1.3.1"
 RDEPEND=">=dev-java/sun-jdk-1.3.1
