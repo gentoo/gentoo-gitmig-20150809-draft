@@ -1,20 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.17 2004/07/29 20:17:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.18 2004/08/07 07:23:01 rac Exp $
 
 inherit eutils flag-o-matic gcc
 
 # The slot of this binary compat version of libperl.so
 PERLSLOT="1"
 
-SHORT_PV="`echo ${PV} | cut -d. -f1,2`"
+SHORT_PV="${PV%.*}"
+MY_P="perl-${PV/_rc/-RC}"
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
-SAFE_VERSION="2.09"
-MY_P="perl-`echo $PV | sed 's/_rc/-RC/'`"
 S="${WORKDIR}/${MY_P}"
 SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${MY_P}.tar.gz"
-#ftp://ftp.perl.org/pub/CPAN/modules/by-module/DB_File/DB_File-${DB_FILE_VERSION}.tar.gz
-#ftp://ftp.perl.org/pub/CPAN/modules/by-module/Safe/Safe-${SAFE_VERSION}.tar.gz"
 HOMEPAGE="http://www.perl.org/"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"

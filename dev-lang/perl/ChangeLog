@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.75 2004/08/07 06:41:44 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.76 2004/08/07 07:23:01 rac Exp $
+
+  07 Aug 2004; Robert Coie <rac@gentoo.org> perl-5.8.2-r1.ebuild,
+  perl-5.8.3.ebuild, perl-5.8.4-r1.ebuild, perl-5.8.4.ebuild:
+  convert SHORT_PV and MY_P to bash
 
 *perl-5.8.5 (06 Aug 2004)
 
