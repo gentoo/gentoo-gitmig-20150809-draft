@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4.ebuild,v 1.5 2004/07/10 15:40:48 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4.ebuild,v 1.6 2004/07/24 05:54:52 vapier Exp $
 
 DESCRIPTION="Console-based network traffic monitor that keeps statistics of network usage"
 HOMEPAGE="http://humdi.net/vnstat/"
@@ -21,7 +21,7 @@ src_install() {
 	keepdir /var/lib/vnstat
 
 	dobin src/vnstat || die
-	insinto /etc/cron.hourly
+	insinto /etc/cron.d
 	newins ${FILESDIR}/vnstat.cron vnstat
 	doman man/vnstat.1
 
@@ -41,4 +41,7 @@ pkg_postinst() {
 	einfo "Repeat the following command for every interface you"
 	einfo "wish to monitor (replace eth0):"
 	einfo "   vnstat -u -i eth0"
+
+	einfo "Note: if an interface transfers more than ~4GB in"
+	einfo "the time between cron runs, you may miss traffic"
 }
