@@ -1,15 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.1.ebuild,v 1.5 2004/08/07 23:27:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.1.ebuild,v 1.6 2004/10/15 09:53:23 eradicator Exp $
 
 IUSE=""
 
-MY_P=${P/x/X}
-S=${WORKDIR}/${MY_P}
+inherit eutils
+
+MY_P="${P/x/X}"
+S="${WORKDIR}/${MY_P}"
+
 DESCRIPTION="RipperX is a program to rip CD and encode mp3s"
 HOMEPAGE="http://ripperx.sf.net/"
 SRC_URI="mirror://sourceforge/ripperx/${MY_P}.tar.gz"
-RESTRICT="nomiror"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="~amd64 ~ppc x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	media-sound/lame
@@ -17,9 +23,11 @@ DEPEND="=x11-libs/gtk+-1.2*
 	media-libs/id3lib
 	media-libs/flac"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc34.patch
+}
 
 src_install () {
 	dodoc CHANGES COPYING FAQ INSTALL README* TODO
