@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
-  11 Jan 2004; Rob Cakebread <pythonhead@gentoo.org> eric-3.1.ebuild:
-  Changed dependency for PyQt <=3.8.1
+*eric-3.3.1 (17 Jan 2004)
+
+  17 Jan 2004; Rob Cakebread <pythonhead@gentoo.org> eric-3.2.ebuild,
+  eric-3.3.1.ebuild:
+  Version bump. Bug# 35199. Thanks Carlo <current@myrealbox.com>. Fixed dependency on PyQt.
 
   11 Jan 2004; Rob Cakebread <pythonhead@gentoo.org> eric-3.2.ebuild:
   Changed dependency for PyQt <=3.8.1
