@@ -49,12 +49,6 @@
 # version bumped, masked for testing
 =sys-libs/db-4.1.24
 
-# <tantive@gentoo.org> (08 Oct 2002)
-# Version bumped, masked for testing.
-=sys-kernel/usermode-sources-2.4.19-r10
-=sys-kernel/usermode-sources-2.4.19-r11
-=sys-kernel/usermode-sources-2.4.19-r12
-
 # <mkeadle@gentoo.org> (07 Oct 2002)
 # Masked for short testing of new Openbox
 =x11-wm/openbox-2.1.2
@@ -67,10 +61,6 @@
 # <tantive@gentoo.org> (05 Oct 2002)
 # Version bumped, masked for testing, supporting evms-1.2
 =sys-kernel/openmosix-sources-2.4.19-r6
-
-# <tantive@gentoo.org> (05 Oct 2002)
-# Version bumped, masked due to freeze
-=sys-kernel/usermode-sources-2.4.19-r9
 
 # <hannes@gentoo.org> (04 Oct 2002)
 # masking pending testing/freeze. look at #8649 for more information
@@ -95,15 +85,6 @@ dev-libs/commoncpp2
 # <aliz@gentoo.org> (3 Oct 2002)
 # Masked for testing
 =app-sci/magic-7.1-r1
-
-# <tantive@gentoo.org> (2 Oct 2002)
-# Version bumped, masked due to freeze
-=sys-kernel/usermode-sources-2.4.19-r8
-=sys-kernel/usermode-sources-2.4.19-r7
-=sys-kernel/usermode-sources-2.4.19-r6
-=sys-kernel/usermode-sources-2.4.19-r5
-=sys-kernel/usermode-sources-2.4.19-r4
-=sys-kernel/usermode-sources-2.4.19-r3
 
 # <agenkin@gentoo.org> (2 Oct 2002)
 # Masked pending unfreeze.
@@ -303,11 +284,6 @@ x11-terms/powershell
 # and this ebuild messes up hardcore and isn't tested
 =dev-php/mod_php-4.2.3
 =dev-php/php-4.2.3
-
-# <tantive@gentoo.org> (10 Sep 2002)
-# Version bumped, masked due to freeze
-=sys-kernel/usermode-sources-2.4.19-r2
-=sys-kernel/usermode-sources-2.4.19-r1
 
 # <seemant@gentoo.org> (10 Sep 2002)
 # masked coz all our packages only use the old version
@@ -705,10 +681,6 @@ net-misc/radvd
 # PLEASE make sure that this works for most people, or
 # that you have a definate fix!!!!
 >=sys-apps/groff-1.18
-
-# <seemant@gentoo.org> (23 Jul 2002)
-# Masked while g2boojum approves
-=sys-kernel/usermode-sources-2.4.18-r2
 
 # <owen@gentoo.org> (22 Jul 2002)
 # Broken against latest FLTK. Hopefully will be fixed with a new POSE.
