@@ -2,7 +2,7 @@ MD5 4b834d11084fe10c331a74d6faf20652 libperl-5.8.4-r1.ebuild 11120
 MD5 fd63817e7bb54cae4aa3e0bf2d5d0592 libperl-5.8.3.ebuild 10740
 MD5 9e2d851699c331b7d840d3866393c1c0 libperl-5.8.2.ebuild 10723
 MD5 91e94f49d358f9b7ead3a23a9c3f27ee libperl-5.8.2-r1.ebuild 10834
-MD5 552998dff79a430e94eac8368dae793b ChangeLog 4703
+MD5 178e5fe7c54bae80790098be30e9db5d ChangeLog 4731
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 10d6760027ee9b5386b125f521781908 libperl-5.8.4.ebuild 11005
 MD5 0bdca74363c218d91a0db4ad1ea55485 files/libperl-5.8.3-create-libperl-soname.patch 417
