@@ -32,3 +32,6 @@ Enhance /usr/sbin/ebuild so that it can recursively merge packages.  Base this
 on the digraph code in /usr/sbin/pkgmerge
    
 Add system profile support to the portage-maintain code                     
+
+Add /tmp/portage cleanup code, provide override functionality.
+
