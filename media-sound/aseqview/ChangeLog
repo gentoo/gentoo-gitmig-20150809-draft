@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aseqview
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/ChangeLog,v 1.7 2004/06/24 23:51:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/ChangeLog,v 1.8 2004/09/14 07:22:46 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  aseqview-0.2.1.ebuild:
+  Stable amd64.
 
   24 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> aseqview-0.2.1.ebuild:
   marked ~amd64

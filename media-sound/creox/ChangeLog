@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/creox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/creox/ChangeLog,v 1.7 2004/07/03 21:41:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/creox/ChangeLog,v 1.8 2004/09/14 07:27:17 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  creox-0.2.2_rc2.ebuild:
+  Stable amd64.
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> creox-0.2.2_rc2.ebuild:
   QA: need-kde after R/DEPEND
