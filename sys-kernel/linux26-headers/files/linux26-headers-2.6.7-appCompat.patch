@@ -1252,7 +1252,7 @@ diff -ur linux-2.6.7/include/linux/list.h linux-2.6.7-gentoo/include/linux/list.
  	(ptr)->next = (ptr); (ptr)->prev = (ptr); \
  } while (0)
  
-+#ifdef __KERNEL__
++#if defined(__KERNEL__) || defined(__LINUX_KEYBOARD_H)
 +
  /*
   * Insert a new entry between two known consecutive entries.
