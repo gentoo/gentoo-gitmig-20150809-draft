@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# /home/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.4.3.ebuild,v 1.1 2001/05/02 14:31:06 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.6-r2.ebuild,v 1.5 2001/08/07 02:01:14 pete Exp $
 
 #OKV=original kernel version, KV=patched kernel version
 
