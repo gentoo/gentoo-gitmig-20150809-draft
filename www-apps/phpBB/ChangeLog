@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpBB
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.6 2004/11/21 22:52:20 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.7 2004/11/24 04:14:47 klieber Exp $
+
+  24 Nov 2004; Kurt Lieber <klieber@gentoo.org> phpBB-2.0.11.ebuild:
+  mark stable on ppc, fixes 71681
 
 *phpBB-2.0.11 (21 Nov 2004)
 
