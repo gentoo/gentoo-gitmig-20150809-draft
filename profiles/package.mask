@@ -207,10 +207,6 @@ x11-terms/powershell
 # before full-scale deployment
 =sys-apps/silo-1.2.6
 
-# <woodchip@gentoo.org> (14 Sep 2002)
-# Chase latest stable release; added libreiserfs support.
-=sys-apps/parted-1.6.3
-
 # <lostlogic@gentoo.org> (13 Sep 2002)
 # Masking gaim-0.59.2 because it segfaults all the time
 =net-im/gaim-0.59.2
