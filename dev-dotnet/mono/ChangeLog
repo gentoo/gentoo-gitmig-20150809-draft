@@ -1,6 +1,14 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.32 2004/09/23 14:38:52 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.33 2004/10/29 17:08:48 latexer Exp $
+
+  29 Oct 2004; <peter@gentoo.org> mono-0.28.ebuild, mono-0.30.1.ebuild,
+  mono-0.30.ebuild, mono-0.31.ebuild, mono-0.91.ebuild, mono-0.95.ebuild,
+  mono-0.96.ebuild, mono-0.97.ebuild, mono-1.0.1-r1.ebuild,
+  mono-1.0.1-r2.ebuild, mono-1.0.1.ebuild, mono-1.0.2-r1.ebuild,
+  mono-1.0.2.ebuild, mono-1.0.ebuild:
+  Change the masked mono to include a fix for NPTL systems available for
+  gcc-3.4. Please test. Also fixed the LICENSE syntax.
 
   23 Sep 2004; <peter@gentoo.org> mono-1.0.2.ebuild:
   Fix a small typo.

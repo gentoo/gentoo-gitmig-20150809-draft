@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.2-r1.ebuild,v 1.1 2004/09/22 14:35:44 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.2-r1.ebuild,v 1.2 2004/10/29 17:08:48 latexer Exp $
 
-inherit eutils mono flag-o-matic debug
+inherit eutils mono flag-o-matic debug gcc
 
 DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
 HOMEPAGE="http://www.go-mono.com/"
 SRC_URI="http://www.go-mono.com/archive/${PV}/${P}.tar.gz"
 
-LICENSE="GPL-2 | LGPL-2 | X11"
+LICENSE="|| ( GPL-2 LGPL-2 X11)"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="nptl"
@@ -17,8 +17,12 @@ DEPEND="virtual/libc
 	>=dev-libs/glib-2.0
 	>=dev-libs/icu-2.6.1
 	!dev-dotnet/pnet
-	ppc? ( >=sys-devel/gcc-3.2.3-r4 )
-	ppc? ( >=sys-libs/glibc-2.3.3_pre20040420 )"
+	nptl? ( >=sys-devel/gcc-3.4 )
+	ppc? (
+		>=sys-devel/gcc-3.2.3-r4
+		>=sys-libs/glibc-2.3.3_pre20040420
+	)"
+
 RDEPEND="${DEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxml2"
@@ -29,11 +33,25 @@ src_compile() {
 	local myconf=""
 	if use nptl && have_NPTL
 	then
-		ewarn "You are using NPTL glibc, which is known to cause problems with"
-		ewarn "garbage collection in Mono. Please see bug #54603 on bug.gentoo.org"
-		ewarn "for details. You have been warned!"
-		myconf="${myconf} --with-tls=__thread"
+		# NPTL support only works with gcc-3.4 and higher currently. ):
+		if [ `gcc-minor-version` -lt 4 ]
+		then
+			echo
+			eerror "NPTL enabled mono requires gcc-3.4 or higher to function."
+			eerror "Please use gcc-config to select gcc-3.4 for the mono installation."
+			die "gcc version not high enough for NPTL support."
+		else
+			myconf="${myconf} --with-tls=__thread"
+			sed -i "s: -fexceptions::" ${S}/libgc/configure.host
+		fi
 	else
+		if have_NPTL
+		then
+			ewarn "NPTL glibc detected, but nptl USE flag is not set."
+			ewarn "This may cause some problems for mono as it will be"
+			ewarn "compiled with normal pthread support."
+		fi
+
 		myconf="${myconf} --with-tls=pthread"
 	fi
 
