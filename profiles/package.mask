@@ -1,14 +1,6 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
-#bangert@gentoo.org - 22 Apr 2oo2
-#this can probably be removed by 23 apr 2002
-#i'll leave it in for easy access
-#=sys-apps/vcron-3.0.1-r1
-#=sys-apps/fcron-2.0.0-r1
-#=sys-apps/dcron-2.7-r9
-
-
 #if you're not careful, you'll build yourself a rsync that depends on libpopt.so! <kainz, 18 Apr 2002>
 #this fixes that.  devlopers give it a shot
 =net-misc/rsync-2.5.4-r1
