@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.23 2005/01/10 16:22:38 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.24 2005/01/10 20:28:41 fafhrd Exp $
+
+  10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  gnustep-gui-0.9.4.ebuild:
+  Marking stable for x86
 
 *gnustep-gui-0.9.5_pre20050106 (10 Jan 2005)
 
