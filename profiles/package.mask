@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3780 2005/04/01 07:22:28 chriswhite Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3781 2005/04/01 18:41:51 chriswhite Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1030,10 +1030,6 @@ media-video/jahshaka
 # upstream development suspended
 # package can be removed in a few months
 dev-db/mysqlcc
-
-# <chriswhite@gentoo.org> (21 Aug 2004)
-# CVS snapshot source testing version
-dev-lang/fpc-source
 
 # <agriffis@gentoo.org> (19 Aug 2004)
 # Masking because this package is not ready for prime, but want it in
