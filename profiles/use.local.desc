@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.603 2004/09/07 14:24:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.604 2004/09/07 18:54:48 seemant Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -563,6 +563,7 @@ x11-base/xorg-x11:dlloader - USE WITH CARE: Enable dynamic module loader (result
 x11-base/xorg-x11:dmx - Build the DMX extension for Xorg
 x11-base/xorg-x11:insecure-drivers - Builds the insecure DRI development
 x11-base/xorg-x11:sdk - Builds the software development kit
+x11-base/xorg-x11:xprint - Builds the XPrint extension to X
 x11-libs/evas:cairo - Build the cairo graphical engine
 x11-libs/fltk:nptl - Enable support for NPTL
 x11-libs/fox:freetype - Enable freetype support (allows for antialiased fonts)
