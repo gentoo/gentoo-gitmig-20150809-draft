@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.76 2005/01/20 17:50:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.77 2005/01/20 18:13:03 tester Exp $
+
+  20 Jan 2005; Olivier Crête <tester@gentoo.org> tetex-2.0.2-r5.ebuild:
+  Stable on x86 bug 75801
 
   20 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> tetex-2.0.2-r5.ebuild:
   Stable on alpha, bug 75801.
