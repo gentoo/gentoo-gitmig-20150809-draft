@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.2.ebuild,v 1.4 2003/02/13 17:31:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.2.ebuild,v 1.5 2003/04/01 22:14:50 spider Exp $
 
 IUSE=""
 
@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/x11
-	media-libs/xpm
 	x11-libs/libdockapp"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/wmweather+-2.1.ebuild,v 1.3 2003/02/13 17:33:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/wmweather+-2.1.ebuild,v 1.4 2003/04/01 22:11:27 spider Exp $
 
 IUSE=""
 
@@ -15,7 +15,6 @@ KEYWORDS="x86"
 
 DEPEND="x11-wm/WindowMaker
 	dev-libs/libpcre
-	media-libs/xpm
 	net-libs/libwww"
 
 src_install() {

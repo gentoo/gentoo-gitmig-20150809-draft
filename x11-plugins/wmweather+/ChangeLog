@@ -1,14 +1,20 @@
 # ChangeLog for x11-plugins/wmweather+
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/ChangeLog,v 1.4 2003/02/12 09:44:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/ChangeLog,v 1.5 2003/04/01 22:11:27 spider Exp $
 
 *wmweather-2.3 (28 Jan 2003)
 
+  02 Apr 2003; Spider <spider@gentoo.org> wmweather+-2.3.ebuild
+  fixing xpm dep, bug 1446
+  
   28 Jan 2003; Nick Hadaway <raker@gentoo.org> wmweather+-2.3.ebuild,
   files/digest-wmweather+-2.3 :
   Version bump.
 
 *wmweather+-2.1 (02 Nov 2002)
+
+  02 Apr 2003; Spider <spider@gentoo.org> wmweather+-2.1.ebuild
+  fixing xpm dep, bug 1446
 
   18 Jan 2003; Seemant Kulleen <seemant@gentoo.org> wmweather+-2.1.ebuild :
 
