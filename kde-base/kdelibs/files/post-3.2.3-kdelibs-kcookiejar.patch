@@ -1,18 +1,3 @@
-Index: kioslave/http/kcookiejar/Makefile.am
-===================================================================
-RCS file: /home/kde/kdelibs/kioslave/http/kcookiejar/Makefile.am,v
-retrieving revision 1.21
-retrieving revision 1.22
-diff -u -p -r1.21 -r1.22
---- kioslave/http/kcookiejar/Makefile.am	29 Jun 2003 18:13:35 -0000	1.21
-+++ kioslave/http/kcookiejar/Makefile.am	20 Jul 2004 15:29:24 -0000	1.22
-@@ -26,3 +26,6 @@ kdeddir = $(kde_servicesdir)/kded
- update_DATA = kcookiescfg.upd
- updatedir = $(kde_datadir)/kconf_update
- 
-+cookie_DATA = domain_info
-+cookiedir = $(kde_datadir)/khtml
-+
 Index: kioslave/http/kcookiejar/kcookiejar.cpp
 ===================================================================
 RCS file: /home/kde/kdelibs/kioslave/http/kcookiejar/kcookiejar.cpp,v
@@ -25,9 +10,9 @@ diff -u -p -r1.116 -r1.117
      m_globalAdvice = KCookieDunno;
      m_configChanged = false;
      m_cookiesChanged = false;
-+    
-+    KConfig cfg("khtml/domain_info", true, false, "data");
-+    QStringList countries = cfg.readListEntry("twoLevelTLD");
++
++    QString twoLevelTLD="name,ai,au,bd,bh,ck,eg,et,fk,il,in,kh,kr,mk,mt,na,np,nz,pg,pk,qa,sa,sb,sg,sv,ua,ug,uk,uy,vn,za,zw";
++    QStringList countries = QStringList::split(',', twoLevelTLD);
 +    for(QStringList::ConstIterator it = countries.begin();
 +        it != countries.end(); ++it)
 +    {
@@ -153,11 +138,3 @@ diff -u -p -r1.50 -r1.51
        advice = mCookieJar->getDomainAdvice(domains[0]);
     }
     return KCookieJar::adviceToStr(advice);
-Index: kioslave/http/kcookiejar/domain_info
-===================================================================
-RCS file: domain_info
-diff -N domain_info
---- /dev/null	1 Jan 1970 00:00:00 -0000
-+++ kioslave/http/kcookiejar/domain_info	20 Jul 2004 15:29:24 -0000	1.1
-@@ -0,0 +1 @@
-+twoLevelTLD=name,ai,au,bd,bh,ck,eg,et,fk,il,in,kh,kr,mk,mt,na,np,nz,pg,pk,qa,sa,sb,sg,sv,ua,ug,uk,uy,vn,za,zw
