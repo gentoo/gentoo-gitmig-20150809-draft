@@ -1,8 +1,12 @@
 # ChangeLog for gnome-base/gnome-core
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/ChangeLog,v 1.9 2002/06/28 09:13:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/ChangeLog,v 1.10 2002/06/28 10:48:15 trance Exp $
 
 *gnome-core-1.4.0.8 (29 Apr 2002)
+
+  28 Jun 2002; Kevyn Shortell <trance@gentoo.org> gnome-core-1.4.0.8.ebuild :
+
+  update:  change libglade dep 
 
   03 Jun 2002; Bruce A. Locke <blocke@shivan.org> gnome-core-1.4.0.8.ebuild :
 
