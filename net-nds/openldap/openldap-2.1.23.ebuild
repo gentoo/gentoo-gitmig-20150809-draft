@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.23.ebuild,v 1.2 2003/11/06 20:23:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.23.ebuild,v 1.3 2003/12/05 21:25:27 robbat2 Exp $
 
 inherit eutils
 
@@ -31,7 +31,8 @@ DEPEND=">=sys-libs/ncurses-5.1
 #	pull in sys-libs/gdbm
 # else
 #	pull in sys-libs/db
-DEPEND="berkdb? ( >=sys-libs/db-4.1 ) : ( gdbm? ( >=sys-libs/gdbm-1.8.0 ) : ( >=sys-libs/db-4.1 ) )"
+DEPEND="${DEPEND}
+	berkdb? ( >=sys-libs/db-4.1.25_p1-r3 ) : ( gdbm? ( >=sys-libs/gdbm-1.8.0 ) : ( >=sys-libs/db-4.1.25_p1-r3 ) )"
 
 pkg_preinst() {
 	enewgroup ldap 439
