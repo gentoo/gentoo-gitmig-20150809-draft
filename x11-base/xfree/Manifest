@@ -6,7 +6,7 @@ MD5 b35f68907eb1c04375a133178e01d2a6 xfree-4.3.0-r1.ebuild 25121
 MD5 b5edffe4c64877f950e5b9cc9e6b6dd2 xfree-4.2.1-r2.ebuild 24184
 MD5 fa9dfb0716c04d8fed80b77c4efc8547 xfree-4.3.0-r3.ebuild 33887
 MD5 24cdcd01eb1136c73d605f2353336983 xfree-4.3.99.10.ebuild 31058
-MD5 76cfa2088ddbf451beedb73e7c5f34fc ChangeLog 38789
+MD5 f7e5d69ed7487ffc7cf23c9b6b26950b ChangeLog 38925
 MD5 e6ee387a2de6b2fea8e5a3573c48b667 metadata.xml 228
 MD5 c702fab31b9adac56477a9a5c16911c4 xfree-4.2.0-r12.ebuild 10302
 MD5 ab68703ef80727e333fd52ed5806df2d files/digest-xfree-4.1.0-r6 240
