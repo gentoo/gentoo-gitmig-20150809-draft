@@ -451,10 +451,6 @@ net-www/galeon-cvs
 # Get things ready for new xfree release.
 #=x11-base/xfree-4.2.1
 
-# <spider@gentoo.org> (05 Sep 2002)
-# masked for testing and recheck of ebuild by rphillips
-=net-irc/xchat-1.8.10
-
 # <aliz@gentoo.org> (05 Sep 2002)
 # Masked for testing
 =sys-apps/console-data-1999.08.29-r3
@@ -1061,9 +1057,6 @@ media-sound/rhythmbox
 >=dev-util/guile-1.5
 >=dev-libs/g-wrap-1.3
 
-# Snapshot, 1.9 is newer.
->=net-irc/xchat-20020519
-
 #seemant@gentoo.org, 14 Apr 2002
 # these are lower versions not higher
 =media-libs/libgii-20010313
@@ -1173,7 +1166,6 @@ app-cdr/eroaster
 # stroke@gentoo.org 19 Aug 2002
 # Anjuta 1.0-beta1 (preview). masked for testing
 >=dev-util/anjuta-0.9.99
-
 
 # jnelson@gentoo.org 24 Sep 2002
 # mask todo-manager because it's really busted
