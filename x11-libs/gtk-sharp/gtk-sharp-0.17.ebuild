@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.15.ebuild,v 1.2 2004/02/13 19:30:03 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.17.ebuild,v 1.1 2004/03/20 05:05:42 tberman Exp $
 
 # WARNING
 # All gst-sharp hacks done in this build are nonfunctional
@@ -31,7 +31,7 @@ RDEPEND=">=dev-dotnet/mono-0.24
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-KEYWORDS="x86 -ppc"
+KEYWORDS="~x86 -ppc"
 
 src_unpack() {
 	unpack ${A}
