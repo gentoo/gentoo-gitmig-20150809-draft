@@ -1,6 +1,11 @@
 # ChangeLog for media-video/lxdvdrip
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.10 2004/11/30 22:13:34 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.11 2005/01/27 20:15:30 luckyduck Exp $
+
+*lxdvdrip-1.41_p3 (27 Jan 2005)
+
+  27 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +lxdvdrip-1.41_p3.ebuild:
+  new upstream release. also added ~amd64 to KEYWORDS. fixes bug #70153
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> lxdvdrip-1.10_pre2.ebuild,
   lxdvdrip-1.10_pre5.ebuild, lxdvdrip-1.20_pre1-r1.ebuild,
