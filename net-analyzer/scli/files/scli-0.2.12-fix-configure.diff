@@ -1,0 +1,67 @@
+diff -urN scli-0.2.12.orig/acconfig.h scli-0.2.12/acconfig.h
+--- scli-0.2.12.orig/acconfig.h	2005-01-28 01:19:14.000000000 -0500
++++ scli-0.2.12/acconfig.h	1969-12-31 19:00:00.000000000 -0500
+@@ -1,27 +0,0 @@
+-/*
+- * acconfig.h --
+- *
+- *	autoheader configuration macros
+- *
+- * Copyright (C) 2001 Juergen Schoenwaelder
+- *
+- * This program is free software; you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation; either version 2, or (at your option)
+- * any later version.
+- *
+- * This program is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- *
+- * You should have received a copy of the GNU General Public License
+- * along with this program; if not, write to the Free Software Foundation,
+- * Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+- * 
+- * @(#) $Id: scli-0.2.12-fix-configure.diff,v 1.1 2005/01/28 11:49:51 ka0ttic Exp $
+- */
+-
+-/* The full pathname of the directory containing scli plugins. */
+-#define SCLI_PLUGIN_PATH "/usr/local/lib/scli"
+-
+diff -urN scli-0.2.12.orig/configure.in scli-0.2.12/configure.in
+--- scli-0.2.12.orig/configure.in	2005-01-28 01:19:14.000000000 -0500
++++ scli-0.2.12/configure.in	2005-01-28 01:47:53.743741424 -0500
+@@ -21,7 +21,7 @@
+ AC_CHECK_PROG(SMIDUMP, smidump, smidump)
+ AC_SUBST(SMIDUMP)
+ 
+-AC_DEFINE_UNQUOTED(SCLI_PLUGIN_PATH, "${exec_prefix}/lib/scli")
++AC_DEFINE_UNQUOTED(SCLI_PLUGIN_PATH, "${exec_prefix}/lib/scli", [Define loction of plugins])
+ 
+ AC_MSG_CHECKING([whether to enable -Wall])
+ AC_ARG_ENABLE(warnings,
+@@ -72,12 +72,17 @@
+ dnl Check for configure options
+ 
+ AC_ARG_ENABLE(dmalloc,
+-[  --enable-dmalloc        enable dmalloc debugging (www.dmalloc.com)],
+- [
+-  AC_CHECK_HEADERS(dmalloc.h)
+-  AC_CHECK_LIB(dmalloc, malloc) 
+- ]
+-)
++ [ --enable-dmalloc	    enable dmalloc debugging (www.dmalloc.com)],
++ [case "${enableval}" in
++    yes) ac_arg_enable_dmalloc=yes ;;
++    no)  ac_arg_enable_dmalloc=no  ;;
++    *) AC_MSG_ERROR(bad value ${enableval} for --enable-dmalloc) ;;
++  esac], [ac_arg_enable_dmalloc=no])
++
++if test x$ac_arg_enable_dmalloc = xyes ; then
++    AC_CHECK_HEADERS(dmalloc.h)
++    AC_CHECK_LIB(dmalloc, malloc)
++fi
+ 
+ dnl Create all the Makefiles we need and we are done.
+ 
