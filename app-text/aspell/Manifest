@@ -4,7 +4,7 @@ MD5 780597ce497c68cc471621d2e794cbe7 aspell-0.50.5-r2.ebuild 1864
 MD5 d40ff6a488da2fdffb038f21cea2aedf aspell-0.50.5-r4.ebuild 1888
 MD5 2873d490b83cdd6f76359be6735a3eae aspell-0.60.ebuild 1738
 MD5 83cdcd94e9c0e0eb8e7806dbcddffa2a aspell-0.60.1.1.ebuild 1737
-MD5 f61272b61cf1150e626b074667fefa06 aspell-0.60.2.ebuild 1751
+MD5 c80cb44776fc951ad669a37112e50f65 aspell-0.60.2.ebuild 1753
 MD5 4fa550930c5e5fb38177ac9f77619891 files/01-gcc3.3-assert.patch 309
 MD5 f956a4b48687a0823d0d5d7608b567e9 files/02-gcc3.3-constcast.patch 453
 MD5 02560c627d075d243720f1067bf45bcf files/aspell-buffer-fix.patch 1556
