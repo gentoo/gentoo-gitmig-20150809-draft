@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-1.2_beta1.ebuild,v 1.1 2004/07/25 07:49:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-1.2_beta1.ebuild,v 1.2 2004/08/30 18:22:06 zx Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ws.apache.org/xmlrpc/"
 SRC_URI="http://www.apache.org/dist/ws/xmlrpc/v${MY_PV}/${PN}-${MY_PV}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="jikes doc"
 DEPEND="dev-java/ant"
 
