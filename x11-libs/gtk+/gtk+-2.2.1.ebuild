@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.1.ebuild,v 1.10 2003/03/08 18:33:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.1.ebuild,v 1.11 2003/03/08 22:44:57 foser Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -37,7 +37,7 @@ src_unpack() {
 	# beautifying patch for disabled icons
 	epatch ${FILESDIR}/${P}-disable_icons_smooth_alpha.patch
 	# toolbar UI fix (http://bugzilla.gnome.org/show_bug.cgi?id=55393)
-	epatch ${FILESDIR}/${PN}-2.2-toolbar_improved_looks_fix.patch
+#	epatch ${FILESDIR}/${PN}-2.2-toolbar_improved_looks_fix.patch
 
 	if [ "${ARCH}" == "ppc" ]
 	then
