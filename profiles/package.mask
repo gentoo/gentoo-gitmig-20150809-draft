@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2748 2004/03/14 12:14:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2749 2004/03/14 14:30:55 puggy Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -782,3 +782,8 @@ dev-libs/libsqlora8
 # weeve@gentoo.org 02 Mar 2004
 # mask slib-3.1.1 until gnucash can get a fix for it
 =dev-libs/slib-3.1.1
+
+# puggy@gentoo.org 14 Mar 2004
+# mask pbbuttonsd-0.5.9 until kdeutils gets updated to reflect the new tags,
+# in favour of patched 0.5.9-r1
+=sys-apps/pbbuttonsd-0.5.9
