@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.740 2004/11/18 01:56:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.741 2004/11/18 05:54:55 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -251,7 +251,9 @@ games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
 games-emulation/advancemame:expat - Enable the use of dev-libs/expat
 games-emulation/advancemenu:expat - Enable the use of dev-libs/expat
+games-emulation/xmame:expat - Enable the use of dev-libs/expat
 games-emulation/xmame:net - Add network support
+games-emulation/xmess:expat - Enable the use of dev-libs/expat
 games-emulation/xmess:net - Add network support
 games-engines/exult:timidity - Add sound support (timidity)
 games-fps/doom3:cdinstall - Copies files from the CDROM rather than leaving it for the user
