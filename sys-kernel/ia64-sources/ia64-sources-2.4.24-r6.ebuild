@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.24-r4.ebuild,v 1.2 2004/06/24 22:58:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.24-r6.ebuild,v 1.1 2004/07/09 15:35:50 plasmaroo Exp $
 
 IUSE=""
 
@@ -40,7 +40,6 @@ KEYWORDS="-* ~ia64"
 SLOT="${KV}"
 
 src_unpack() {
-
 	unpack linux-${OKV}.tar.bz2
 	cd ${WORKDIR}
 	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
@@ -62,6 +61,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.CAN-2004-0181.patch || die "Failed to add the CAN-2004-0181 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	kernel_universal_unpack
 }
 
