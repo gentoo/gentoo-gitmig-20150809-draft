@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.4.ebuild,v 1.6 2005/01/27 21:20:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.6.ebuild,v 1.1 2005/01/27 21:20:45 wolf31o2 Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://sebdelestaing.free.fr/gweled/Release/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2
@@ -19,7 +19,11 @@ DEPEND=">=x11-libs/gtk+-2
 
 src_compile() {
 	filter-flags -fomit-frame-pointer
-	econf || die
+	econf || die "econf failed"
+
+	sed -e 's/\(\$(scoredir)\)/\$(DESTDIR)\/\1/g' \
+		-i Makefile || die "sed failed"
+
 	emake || die "emake failed"
 }
 
