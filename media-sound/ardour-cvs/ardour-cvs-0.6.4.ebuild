@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.1 2003/05/06 13:26:50 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.2 2003/05/09 10:59:30 jje Exp $
 
 IUSE="nls"
 
@@ -59,17 +59,19 @@ src_install() {
 
 	einstall || die "make install failed"
 
-	cd ${WORKDIR}
+	pushd ${WORKDIR}
 	mkdir pixmaps
 	cd pixmaps
 	unpack ${DISTFILES}/ardour-pixmaps-2.6.tar.bz2
 	dodir /usr/share/ardour/pixmaps
 	cp * ${D}/usr/share/ardour/pixmaps
+	popd
 
 	insinto /usr/share/ardour
 
         cp ardour.rc ardour.rc~
-	sed -e 's/\/usr\/local\/music\/src\/ardour\//\/usr\/local\/share\/ardour\//' ardour.rc~ > ardour.rc
+	sed -e 's/\/usr\/local\/music\/src\/ardour\//\/usr\/local\/share\/ardour\//' \
+	    -e 's/\/home\/paul\//\/usr\/local\/share\/ardour\//' ardour.rc~ > ardour.rc
 	cp ardour.rc sample_ardour.rc
 
 	cp ardour_system.rc ardour_system.rc~
