@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.34 2004/10/01 06:18:35 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.35 2004/11/15 16:55:15 corsair Exp $
+
+  15 Nov 2004; Markus Rothe <corsair@gentoo.org> gtksourceview-1.0.1.ebuild:
+  Marked ~ppc64; bug #71282
 
   01 Oct 2004; Stephen P. Becker <geoman@gentoo.org>
   gtksourceview-1.0.1.ebuild:

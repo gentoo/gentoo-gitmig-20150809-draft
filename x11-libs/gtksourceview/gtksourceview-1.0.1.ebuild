@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.0.1.ebuild,v 1.9 2004/10/01 06:18:35 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.0.1.ebuild,v 1.10 2004/11/15 16:55:15 corsair Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 mips"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 mips ~ppc64"
 IUSE="doc"
 
 RDEPEND=">=x11-libs/gtk+-2.2.4
