@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jamvm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.1 2004/12/23 00:34:32 karltk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.2 2005/01/07 18:38:16 luckyduck Exp $
+
+*jamvm-1.2.3 (07 Jan 2005)
+
+  07 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +jamvm-1.2.3.ebuild:
+  new version released. fixes bug #77035.
 
 *jamvm-1.2.2 (23 Dec 2004)
 
