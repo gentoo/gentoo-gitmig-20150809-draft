@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.9.ebuild,v 1.3 2003/08/12 01:53:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.9.ebuild,v 1.4 2003/08/12 19:14:03 caleb Exp $
 
 inherit kde-base
 need-kde 3.1
@@ -34,3 +34,12 @@ myconf="$myconf --enable-sso"
 	|| myconf="$myconf --disable-debugging --disable-profiling"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+pkg_postinst()
+{
+	einfo "The k3b setup program will offer to change some permissions and"
+	einfo "create a user group.  These changes are not necessary.  We recommend"
+	einfo "that you clear the two check boxes that let k3b make changes for"
+	einfo "cdrecord and cdrdao and let k3b make changes for the devices when"
+	einfo "running k3b setup."
+}
