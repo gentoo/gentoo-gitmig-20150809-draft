@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.3-r1.ebuild,v 1.12 2004/07/14 02:55:51 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.3-r1.ebuild,v 1.13 2004/07/15 01:11:59 aliz Exp $
 
 inherit eutils
 
@@ -28,9 +28,9 @@ src_unpack() {
 	tar -zxf ${MY_P}.tar.gz
 	cd ${S}
 	epatch ${FILESDIR}/${P}-res_search.patch
+	epatch ${FILESDIR}/${P}-autoheader.patch
 	cd ${S}/lib/krb5/os
 	epatch ${FILESDIR}/${P}-aname.patch
-	cd ${S}
 }
 
 src_compile() {

@@ -1,0 +1,13 @@
+--- src/include/Makefile.in	2004-07-15 00:53:34.096419331 +0000
++++ src/include/Makefile.in	2004-07-15 01:05:05.544231460 +0000
+@@ -28,7 +28,9 @@
+ 	(cd krb5; $(MAKE) autoconf.h)
+ $(srcdir)/krb5/autoconf.h.in: $(srcdir)/krb5/autoconf.stmp
+ $(srcdir)/krb5/autoconf.stmp: $(srcdir)/configure.in 
+-	cd $(srcdir) && $(AUTOHEADER) --localdir=$(CONFIG_RELTOPDIR) $(AUTOHEADERFLAGS)
++        cd $(srcdir) && \
++                ($(AUTOHEADER) --include=$(CONFIG_RELTOPDIR) $(AUTOHEADERFLAGS) || \
++                 $(AUTOHEADER) --localdir=$(CONFIG_RELTOPDIR) $(AUTOHEADERFLAGS))
+ 	touch $(srcdir)/krb5/autoconf.stmp
+ 
+ krb5.h: krb5/autoconf.h $(srcdir)/krb5.hin krb5_err.h kdb5_err.h kv5m_err.h krb524_err.h \

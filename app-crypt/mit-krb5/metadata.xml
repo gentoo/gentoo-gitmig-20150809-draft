@@ -8,5 +8,5 @@
 <maintainer>
  <email>rphillips@gentoo.org</email>
 </maintainer>
-<longdescription>Kerberos 5 implementation from KTH</longdescription>
+<longdescription>Kerberos 5 implementation from MIT</longdescription>
 </pkgmetadata>
