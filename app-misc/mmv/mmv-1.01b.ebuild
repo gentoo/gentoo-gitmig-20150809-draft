@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.9 2004/06/24 22:24:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.10 2004/09/17 03:34:54 morfic Exp $
 
-inherit eutils
+inherit eutils gcc
 
 DESCRIPTION="Move/copy/append/link multiple files according to a set of wildcard patterns."
 HOMEPAGE="http://packages.debian.org/unstable/utils/mmv.html"
@@ -23,6 +23,13 @@ S=${WORKDIR}/${P}.orig
 src_unpack() {
 	unpack ${P/-/_}.orig.tar.gz
 	epatch ${DISTDIR}/${P/-/_}-${PATCH_DEB_VER}.diff.gz
+
+	#apply both patches to compile with gcc-3.4 closing bug #62711
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	then
+		epatch ${FILESDIR}/mmv-gcc34.patch
+	fi
+
 }
 
 src_compile() {

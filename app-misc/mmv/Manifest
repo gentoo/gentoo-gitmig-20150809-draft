@@ -1,3 +1,4 @@
-MD5 746a4e6c1d48f63ed6a23bca88826f0c mmv-1.01b.ebuild 1220
-MD5 816be2e1e9419241f84732ca66149c9b ChangeLog 568
+MD5 b8195b71ba9b52f858c0d09055ce4f16 mmv-1.01b.ebuild 1407
+MD5 4627a328b7457ed56047eddbbc88eb1d ChangeLog 725
+MD5 f3f4a14317f74442417d8006bb412ffb files/mmv-gcc34.patch 340
 MD5 75caa5fcf10a949e8b60e4e87498694d files/digest-mmv-1.01b 128

@@ -1,0 +1,13 @@
+--- mmv-1.01b.orig/mmv.c.old	2004-09-16 19:54:13.775133568 -0700
++++ mmv-1.01b.orig/mmv.c	2004-09-16 19:56:34.161791552 -0700
+@@ -127,10 +127,6 @@
+ #include <sys/stat.h>
+ #include <sys/file.h>
+ 
+-extern char *getenv();
+-extern long lseek();
+-extern char *malloc();
+-
+ #ifdef HAS_DIRENT
+ #include <dirent.h>
+ typedef struct dirent DIRENTRY;
