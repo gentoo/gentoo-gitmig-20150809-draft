@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.6.ebuild,v 1.6 2004/10/03 19:37:12 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.6.ebuild,v 1.7 2004/10/05 20:00:07 griffon26 Exp $
 
 inherit eutils
 
@@ -157,6 +157,18 @@ pkg_config () {
 		exit 1
 	fi
 
+	# Ask for the location of (amongst other things) the vice partition
+	ewarn "This default configuration of coda will require 350MB of free space"
+	ewarn "for Recoverable Virtual Memory. Additional space is required for"
+	ewarn "the files that you store on your coda volume."
+	echo
+	einfon "Please specify where coda should store this data [${CODA_STORAGE_DIR}]: "
+	read new_storage_dir
+	if [ "x${new_storage_dir}" != "x" ]; then
+		CODA_STORAGE_DIR=${new_storage_dir}
+	fi
+	echo
+
 	# Check if an existing server.conf is in the way
 	conf=$(codaconfedit server.conf)
 	intheway=
@@ -164,7 +176,7 @@ pkg_config () {
 		intheway="${intheway} ${conf}"
 	fi
 
-	# Check if an existing /var/lib/vice is in the way
+	# Check if an existing vice root dir is in the way
 	if [ -e ${CODA_ROOT_DIR} ]; then
 		intheway="${intheway} ${CODA_ROOT_DIR}"
 	fi
@@ -183,17 +195,6 @@ pkg_config () {
 		exit 1
 	fi
 
-	ewarn "This default configuration of coda will require 350MB of free space"
-	ewarn "for Recoverable Virtual Memory. Additional space is required for"
-	ewarn "the files that you store on your coda volume."
-	echo
-	einfon "Please specify where coda should store this data [${CODA_STORAGE_DIR}]: "
-	read new_storage_dir
-	if [ "x${new_storage_dir}" != "x" ]; then
-		CODA_STORAGE_DIR=${new_storage_dir}
-	fi
-
-	echo
 	einfo "A default coda server and client configuration will be set up that consists of:"
 	einfo "- a coda SCM (System Control Machine)"
 	einfo "- a coda administrator '${CODA_ADMIN_NAME}' with coda uid ${CODA_ADMIN_UID} and password 'changeme'"
