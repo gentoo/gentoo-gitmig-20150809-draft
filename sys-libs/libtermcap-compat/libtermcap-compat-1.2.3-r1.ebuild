@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3-r1.ebuild,v 1.8 2004/02/22 12:36:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3-r1.ebuild,v 1.9 2004/03/26 22:57:31 avenj Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.debian.org/debian/dists/potato/main/source/oldlibs/${MY_PN}_
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 alpha sparc ppc hppa mips ia64 ~amd64 ~ppc64"
+KEYWORDS="x86 alpha sparc ppc hppa mips ia64 amd64 ~ppc64"
 
 DEPEND="virtual/glibc"
 
