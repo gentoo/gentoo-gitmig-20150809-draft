@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/cdlabelgen-2.4.0.ebuild,v 1.10 2004/06/13 21:54:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/cdlabelgen-2.4.0.ebuild,v 1.11 2004/06/24 21:31:31 agriffis Exp $
 
 DESCRIPTION="CD cover, tray card and envelope generator"
 HOMEPAGE="http://www.aczone.com/tools/cdinsert"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/burncdda-1.1.2.ebuild,v 1.12 2004/06/06 14:47:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/burncdda-1.1.2.ebuild,v 1.13 2004/06/24 21:30:11 agriffis Exp $
 
 DESCRIPTION="Console app for copying burning audio cds"
 SLOT="0"

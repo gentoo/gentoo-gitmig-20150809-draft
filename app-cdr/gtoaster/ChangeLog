@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/gtoaster
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/ChangeLog,v 1.13 2004/02/25 06:44:15 raker Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/ChangeLog,v 1.14 2004/06/24 21:34:10 agriffis Exp $
 
   25 Feb 2004; Nick Hadaway <raker@gentoo.org> gtoaster-1.0_beta6.ebuild:
   Sorry for breaking your gtoaster.  Thanks for fixing it. :)  Changed

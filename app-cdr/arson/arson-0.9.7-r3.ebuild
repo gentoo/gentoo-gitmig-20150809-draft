@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.10 2004/04/28 21:48:24 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.11 2004/06/24 21:29:17 agriffis Exp $
 
 inherit kde eutils
 need-kde 3

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/multicd-1.7.2.ebuild,v 1.5 2004/06/06 15:23:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/multicd-1.7.2.ebuild,v 1.6 2004/06/24 21:35:28 agriffis Exp $
 
 DESCRIPTION="Tool for making direct copies of your files to multiple cd's"
 HOMEPAGE="http://danborn.net/multicd/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/gtkcdlabel
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.10 2004/06/06 15:07:32 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.11 2004/06/24 21:33:59 agriffis Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org>
   gtkcdlabel-1.0_pre3.ebuild:

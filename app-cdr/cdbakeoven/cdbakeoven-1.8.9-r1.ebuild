@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-1.8.9-r1.ebuild,v 1.9 2004/06/06 14:50:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-1.8.9-r1.ebuild,v 1.10 2004/06/24 21:30:49 agriffis Exp $
 
 inherit eutils kde
 need-kde 3

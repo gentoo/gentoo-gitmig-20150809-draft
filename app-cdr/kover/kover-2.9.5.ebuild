@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/kover-2.9.5.ebuild,v 1.1 2004/06/06 15:20:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/kover-2.9.5.ebuild,v 1.2 2004/06/24 21:35:02 agriffis Exp $
 
 inherit kde
 need-kde 3

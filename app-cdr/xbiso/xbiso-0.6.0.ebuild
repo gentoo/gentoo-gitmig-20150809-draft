@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xbiso/xbiso-0.6.0.ebuild,v 1.1 2004/05/27 03:38:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xbiso/xbiso-0.6.0.ebuild,v 1.2 2004/06/24 21:36:25 agriffis Exp $
 
 
 DESCRIPTION="Xbox xdvdfs ISO extraction utility"

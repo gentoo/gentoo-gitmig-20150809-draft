@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.0.ebuild,v 1.1 2004/01/23 01:39:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.0.ebuild,v 1.2 2004/06/24 21:32:45 agriffis Exp $
 
 MY_P=${PN}-${PV/_/-}
 S="${WORKDIR}/${MY_P}"

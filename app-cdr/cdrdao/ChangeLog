@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/cdrdao
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.44 2004/06/13 06:59:00 lv Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.45 2004/06/24 21:31:47 agriffis Exp $
 
   12 Jun 2004; Travis Tilley <lv@gentoo.org> cdrdao-1.1.8-r1.ebuild,
   cdrdao-1.1.8.ebuild:

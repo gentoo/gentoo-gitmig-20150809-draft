@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.12 2004/06/01 23:09:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.13 2004/06/24 21:34:27 agriffis Exp $
 
 inherit kde
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/bin2iso
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bin2iso/ChangeLog,v 1.15 2004/04/03 15:01:18 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bin2iso/ChangeLog,v 1.16 2004/06/24 21:29:55 agriffis Exp $
 
   03 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> bin2iso-19b-r1.ebuild:
   Adding amd64 keyword, closing #46530.
