@@ -1,9 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 356f1bfe87834fda0ddd9803ea5ef634 cwirc-1.7.1.ebuild 847
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 ee046d058b8a6d49951926f7287b657e cwirc-1.8.3.ebuild 901
 MD5 af29f6e2fb99862a7c263484b42d499e cwirc-1.8.5.ebuild 901
-MD5 cb56ed4fef85d96dbca5465c2eb73efa ChangeLog 1151
+MD5 2a30795c876cbfef1e698717aab63d33 ChangeLog 1268
+MD5 9b9fb61699dddde9ac767a37c26b3e08 cwirc-1.8.6.ebuild 901
 MD5 7c240ef73cd9a53241026c38c5c8b36f files/cwirc-1.7.1-gentoo.patch 662
 MD5 42f9f7605e7754ec072bcd73b39df99d files/digest-cwirc-1.7.1 63
 MD5 c371ea97e5fa8c6867235cc5077aa666 files/digest-cwirc-1.8.3 63
 MD5 b0619874993203f29bfd4f67fb555050 files/digest-cwirc-1.8.5 63
+MD5 ff0d0e5bcb25dee09c93540011affcaa files/digest-cwirc-1.8.6 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA/xUYAXomK8S72HoRAuu2AJ9vGAwAANszHcEb1ZgYuNmo/RLQ+wCfQrED
+j2Ruzu1xFqhR2hQeQ/cEbH0=
+=SXds
+-----END PGP SIGNATURE-----

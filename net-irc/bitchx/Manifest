@@ -1,11 +1,19 @@
-MD5 5cc935fe7fc2840b913aaf0609eb512e bitchx-1.1.ebuild 3401
-MD5 1da7112f04980311569cca91bb2af34c ChangeLog 7653
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 3642d64c1b9efbd4b1577dbbbb982244 bitchx-1.1-r1.ebuild 3413
-MD5 9958cd92ed63cd29972e5c3465ab83aa files/digest-bitchx-1.1-r1 73
+MD5 e7af7fcf7d28007070669b300d579c9a ChangeLog 7746
 MD5 5d622c032159806be3bfc78640da3eb0 files/BitchX-64bit.patch 1135
-MD5 9958cd92ed63cd29972e5c3465ab83aa files/digest-bitchx-1.1 73
-MD5 95973485a5a745af87c7bdc9fb6ca0c6 files/1.1/bitchx-1.1-gcc34.patch 394
-MD5 9230369276af6c8a1cdd7a584927cd47 files/1.1/bitchx-1.1-hebrew.patch 477
-MD5 0028e0211e23f927b0c03e6dba3ee8fd files/1.1/bitchx-1.1-freenode.patch 976
+MD5 9958cd92ed63cd29972e5c3465ab83aa files/digest-bitchx-1.1-r1 73
 MD5 10a57b14bb58910e1f373fbc1b8b2197 files/1.1/bitchx-1.1-cjk.patch 7050
+MD5 0028e0211e23f927b0c03e6dba3ee8fd files/1.1/bitchx-1.1-freenode.patch 976
+MD5 9230369276af6c8a1cdd7a584927cd47 files/1.1/bitchx-1.1-hebrew.patch 477
+MD5 95973485a5a745af87c7bdc9fb6ca0c6 files/1.1/bitchx-1.1-gcc34.patch 394
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA/xYnAXomK8S72HoRAjP1AJ4iELI7azOow759sVGs82zxcoJF1gCfZd0L
+I1XIs0ZtrjIAw6K6cEtE/zQ=
+=pXSx
+-----END PGP SIGNATURE-----
