@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.4.ebuild,v 1.1 2003/12/07 16:35:53 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.4.ebuild,v 1.2 2003/12/08 06:15:30 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -65,8 +65,7 @@ pkg_setup() {
 
 src_unpack() {
 
-	cd ${WORKDIR}
-	tar zxf ${DISTDIR}/thunderbird-source-${PV}.tar.bz2
+	unpack thunderbird-source-${PV}.tar.bz2
 
 	# Unpack the enigmail plugin
 	if use crypt
