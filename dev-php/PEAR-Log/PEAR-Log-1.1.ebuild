@@ -1,7 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Authore: Tom von Schwerdtner <tvon@etria.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/PEAR-Log-1.1.ebuild,v 1.5 2003/09/11 17:03:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/PEAR-Log-1.1.ebuild,v 1.6 2004/01/10 00:06:21 coredumb Exp $
 
 MY_P=${PN/PEAR-//}-${PV}
 DESCRIPTION="The Log framework provides an abstracted logging system supporting logging to console, file, syslog, SQL, and mcal targets."
