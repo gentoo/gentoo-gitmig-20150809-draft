@@ -3,7 +3,7 @@
 
 . /etc/rc.d/config/functions
 
-SERVICE="svc-dnscache"
+SERVICE="dnscache"
 opts="setup start stop"
 
 #this service is designed to *only* run supervised
@@ -32,7 +32,7 @@ setup() {
 	echo $addrs
 	echo
 	read -p "enter IP> " myip
-	
+
 	if [ ! -e /var/lib/supervise/services/dnscache ]
 	then
 		einfo ">>> Setting up dnscache..."
@@ -50,11 +50,11 @@ setup() {
 		echo "Forwarding requests to $myforward"
 		echo $myforward > /var/lib/supervise/services/dnscache/root/servers/\@
 	fi
-	start	
+	start
 	if [ ! -e /var/log/${SERVICE}.d ]
 	then
 		einfo ">>> /var/log/${SERVICE}.d points to the dnscache log..."
-		ln -s ${SVCDIR}/log/main /var/log/${SERVICE}.d
+		ln -s ${SVCDIR}/services/dnscache/log/main /var/log/${SERVICE}.d
 	fi
 	if [ -e /etc/resolv.conf ]
 	then
@@ -71,13 +71,13 @@ setup() {
 }
 
 start() {
-    ebegin "Starting ${SERVICE}"
+    ebegin "Starting svc-${SERVICE}"
 	ln -sf ../services/${SERVICE} ${SVCDIR}/control/${SERVICE}
     eend $?
 }
 
 stop() {
-    ebegin "Stopping ${SERVICE}"
+    ebegin "Stopping svc-${SERVICE}"
    	if [ -e ${SVCDIR}/control/${SERVICE} ]
 	then
 		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}/log
