@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomemm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.8 2004/03/11 03:08:54 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.9 2004/03/19 10:09:17 aliz Exp $
+
+  19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> libgnomemm-2.0.0-r1.ebuild:
+  Inherit eutils.
 
   11 Mar 2004; Lars Weiler <pylon@gentoo.org> libgnomemm-2.0.1.ebuild:
   stable on ppc

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/libpqpp-4.0-r4.ebuild,v 1.2 2004/03/10 16:32:01 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/libpqpp-4.0-r4.ebuild,v 1.3 2004/03/19 10:09:17 aliz Exp $
+
+inherit eutils
 
 MY_P=${P/pp/++}
 DESCRIPTION="C++ wrapper for the libpq Postgresql library"

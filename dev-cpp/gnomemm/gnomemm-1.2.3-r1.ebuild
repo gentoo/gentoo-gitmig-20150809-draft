@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.10 2004/01/29 04:29:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.11 2004/03/19 10:09:17 aliz Exp $
 
-inherit gcc
+inherit gcc eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C++ binding for the GNOME libraries"
