@@ -18,7 +18,7 @@ This is FAR from complete in how to use pork, to find a full listing of commands
 
 $ find /usr/share/pork/help
 
-To get the usage info about a specific command simply cat it's file out of the listing generated above.
+To get the usage info about a specific command simply cat it's file out of the listing generated above, or use the /help command from inside pork.
 
 Things that I discovered: pork has a hard time syncing LARGE buddy lists on first connect.  If you find that not all of your buddy list is downloaded from the server, you can actually use gaim to sync your list, and then copy that list verbatim from ~/.gaim/[screenname].0.blist to ~/.pork/[screenname]/buddy_list and restart pork to get your whole buddy list.  Note that gaim uses all caps for the [screenname] and pork uses all lowercase.
 
