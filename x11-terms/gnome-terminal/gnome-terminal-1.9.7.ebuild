@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-1.9.7.ebuild,v 1.1 2002/06/03 13:42:09 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-1.9.7.ebuild,v 1.2 2002/06/03 13:45:31 stroke Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -9,16 +9,11 @@ RESTRICT="nostrip"
 CFLAGS="${CFLAGS} -g"
 CXXFLAGS="${CXXFLAGS} -g"
 
-
 S=${WORKDIR}/${P}
 DESCRIPTION="The Gnome Terminal"
 
-# I Had to had a second ftp site 'cause ftp.gnome.org was down at the moment
-# - stroke
-SRC_URI="ftp://archive.progeny.com/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
-
-# ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2
-#         ftp://archive.progeny.com/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2
+         ftp://archive.progeny.com/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
