@@ -1,6 +1,9 @@
 #!/bin/bash
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/files/mtp-target-bin.sh,v 1.2 2004/06/25 07:48:30 mr_bones_ Exp $
 
-cd /opt/mtp-target-bin
+cd GENTOODIR
 
 exe=""
 dir=""
