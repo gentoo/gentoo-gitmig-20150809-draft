@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.6 2004/04/26 18:47:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.7 2004/06/10 21:01:43 agriffis Exp $
 
 inherit eutils gnuconfig ssl-cert
 
@@ -75,7 +75,7 @@ src_install() {
 
 	keepdir /var/imsp{,/user}
 
-	if [ `use ssl` ] ; then
+	if use ssl ; then
 		insinto /etc/stunnel
 		newins "${FILESDIR}/stunnel.conf" imspd.conf
 
