@@ -1,0 +1,10 @@
+# ChangeLog for app-laptop/ibm-acpi
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.1 2004/09/02 16:50:21 brix Exp $
+
+*ibm-acpi-0.3 (02 Sep 2004)
+
+  02 Sep 2004; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
+  +ibm-acpi-0.3.ebuild:
+  Initial import. Fixes bug #62243. Ebuild by me.
+
