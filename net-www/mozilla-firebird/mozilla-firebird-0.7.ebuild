@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.7.ebuild,v 1.7 2003/11/18 00:40:27 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.7.ebuild,v 1.8 2003/11/18 01:15:56 lu_zero Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -160,7 +160,7 @@ src_compile() {
 	fi
 
 	# Crashes on start when compiled with -fomit-frame-pointer
-	filter-flags -fomit-frame-pointer
+	filter-flags -fomit-frame-pointer -mpowerpc-gfxopt
 	filter-flags -ffast-math
 	append-flags -s -fforce-addr
 
