@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.86 2004/06/01 21:33:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.87 2004/06/10 22:45:24 caleb Exp $
+
+*kdeaddons-3.2.3 (10 Jun 2004)
+
+  10 Jun 2004; Caleb Tennis <caleb@gentoo.org> +kdeaddons-3.2.3.ebuild:
+  Version bump
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> kdeaddons-3.2.2.ebuild:
   stable on amd64
