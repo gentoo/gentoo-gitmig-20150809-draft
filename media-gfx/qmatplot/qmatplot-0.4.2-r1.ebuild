@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qmatplot/qmatplot-0.4.2-r1.ebuild,v 1.1 2004/12/24 02:13:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qmatplot/qmatplot-0.4.2-r1.ebuild,v 1.2 2004/12/28 14:52:38 ribosome Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 SLOT="0"
 
 DEPEND=">=x11-libs/qt-3
-	>=app-sci/octave-2.1
+	>=sci-mathematics/octave-2.1
 	>=app-sci/scilab-2.6"
 
 src_unpack() {
