@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/drwright
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.9 2005/01/31 15:01:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.10 2005/02/24 19:30:24 gustavoz Exp $
+
+  24 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> drwright-0.17.ebuild:
+  Stable on sparc
 
   31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> drwright-0.17.ebuild:
   Keyworded ~sparc

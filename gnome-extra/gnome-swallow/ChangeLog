@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-swallow
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/ChangeLog,v 1.8 2005/01/31 15:10:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/ChangeLog,v 1.9 2005/02/24 19:24:01 gustavoz Exp $
+
+  24 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-swallow-1.2.ebuild:
+  Stable on sparc
 
   31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-swallow-1.2.ebuild:
