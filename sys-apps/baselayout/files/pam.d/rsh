@@ -1,0 +1,7 @@
+auth       requisite  pam_securetty.so
+auth       requisite  pam_nologin.so
+auth       sufficient pam_rhosts_auth.so
+auth       required   pam_pwdb.so
+account    required   pam_pwdb.so
+session    required   pam_pwdb.so
+session    required   pam_limits.so

@@ -1,0 +1,8 @@
+auth       requisite  pam_securetty.so
+auth       required   pam_pwdb.so
+auth       optional   pam_group.so
+account    requisite  pam_time.so
+account    required   pam_pwdb.so
+password   required   pam_cracklib.so retry=3
+password   required   pam_pwdb.so shadow
+session    required   pam_pwdb.so

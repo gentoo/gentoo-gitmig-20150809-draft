@@ -1,0 +1,8 @@
+auth	   required	pam_pwdb.so	nullok 
+auth	   required	pam_nologin.so
+auth	   required	pam_env.so
+account	   required	pam_pwdb.so
+password   required	pam_pwdb.so
+session	   required	pam_pwdb.so
+session	   required	pam_limits.so
+session	   required	pam_chroot.so

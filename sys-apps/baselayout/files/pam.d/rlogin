@@ -1,0 +1,8 @@
+auth       requisite  pam_securetty.so
+auth       requisite  pam_nologin.so
+auth       required   pam_rhosts_auth.so
+account    required   pam_pwdb.so
+password   required   pam_cracklib.so retry=3
+password   required   pam_pwdb.so shadow md5 use_authtok
+session    required   pam_pwdb.so
+session    required   pam_limits.so
