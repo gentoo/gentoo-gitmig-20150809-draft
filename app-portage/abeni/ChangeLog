@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/abeni
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/abeni/ChangeLog,v 1.16 2004/10/09 20:20:59 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/abeni/ChangeLog,v 1.17 2004/11/04 23:57:10 pythonhead Exp $
+
+*abeni-0.0.21 (04 Nov 2004)
+
+  04 Nov 2004; Rob Cakebread <pythonhead@gentoo.org> +abeni-0.0.21.ebuild:
+  Bump.
 
 *abeni-0.0.20-r1 (09 Oct 2004)
 
