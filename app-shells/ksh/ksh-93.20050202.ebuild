@@ -1,15 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20050202.ebuild,v 1.1 2005/03/27 09:45:16 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20050202.ebuild,v 1.2 2005/03/27 09:48:56 taviso Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 RELEASE="2005-02-02"
 DESCRIPTION="The Original Korn Shell, 1993 revision (ksh93)"
 HOMEPAGE="http://www.kornshell.com/"
-SRC_URI="http://www.research.att.com/~gsf/download/tgz/INIT.${RELEASE}.tgz
-	http://www.research.att.com/~gsf/download/tgz/ast-ksh.${RELEASE}.tgz
-	nls? ( http://www.research.att.com/~gsf/download/tgz/ast-ksh-locale.${RELEASE}.tgz )"
+#SRC_URI="http://www.research.att.com/~gsf/download/tgz/INIT.${RELEASE}.tgz
+#	http://www.research.att.com/~gsf/download/tgz/ast-ksh.${RELEASE}.tgz
+#	nls? ( http://www.research.att.com/~gsf/download/tgz/ast-ksh-locale.${RELEASE}.tgz )"
+SRC_URI="mirror://gentoo/INIT.${RELEASE}.tgz 
+	mirror://gentoo/ast-ksh.${RELEASE}.tgz 
+	nls? ( mirror://gentoo/ast-ksh-locale.${RELEASE}.tgz )"
 
 LICENSE="CPL-1.0"
 SLOT="0"
