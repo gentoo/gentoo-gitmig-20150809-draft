@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/locale-maketext
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext/ChangeLog,v 1.17 2004/12/30 19:00:57 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext/ChangeLog,v 1.18 2005/04/03 01:51:11 mcummings Exp $
+
+  02 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  locale-maketext-1.09.ebuild:
+  Marking stable for x86 and sparc
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
