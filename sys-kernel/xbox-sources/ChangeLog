@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/xbox-sources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.4 2004/07/19 12:51:42 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.5 2004/07/19 14:02:19 chrb Exp $
+
+  19 Jul 2004; Chris Bainbridge <chrb@gentoo.org>
+  xbox-sources-2.6.7-r2.ebuild:
+  Added warning about broken FATX driver
 
 *xbox-sources-2.4.26-r3 (19 Jul 2004)
 
