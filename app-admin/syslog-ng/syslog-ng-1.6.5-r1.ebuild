@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.5-r1.ebuild,v 1.8 2004/11/30 06:21:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.5-r1.ebuild,v 1.9 2004/12/02 06:33:35 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -22,7 +22,7 @@ PROVIDE="virtual/logger"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/doc/sgml
+	cd "${S}/doc/sgml"
 	tar xzf syslog-ng.html.tar.gz
 }
 
@@ -42,7 +42,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog INSTALL NEWS PORTS README \
 		doc/{syslog-ng.conf.sample,syslog-ng.conf.demo,stresstest.sh} \
 		doc/sgml/{syslog-ng.dvi,syslog-ng.ps,syslog-ng.sgml,syslog-ng.txt} \
-		contrib/syslog2ng
+		contrib/syslog2ng "${FILESDIR}/syslog-ng.conf.debian"
 	dohtml doc/sgml/syslog-ng.html/*
 
 	# Install default configuration
