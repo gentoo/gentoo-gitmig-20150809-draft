@@ -1,10 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.6 2003/07/28 07:08:12 azarah Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.7 2004/02/13 19:08:43 vapier Exp $
 
 # NB: Config is in /etc/conf.d/sysklogd
-
 
 depend() {
 	need clock hostname
@@ -12,7 +11,6 @@ depend() {
 }
 
 start() {
-
 	ebegin "Starting syslogd, klogd"
 	start-stop-daemon --start --quiet --background --exec /usr/sbin/syslogd \
 		-- ${SYSLOGD}
@@ -28,7 +26,6 @@ start() {
 }
 
 stop() {
-
 	ebegin "Stopping syslogd, klogd"
 	start-stop-daemon --stop --retry 1 --quiet --pidfile /var/run/syslogd.pid
 	retval=$?
@@ -36,4 +33,3 @@ stop() {
 	retval=$(( ${retval} + $? ))
 	eend ${retval} "Failed to stop klogd, syslogd"
 }
-
