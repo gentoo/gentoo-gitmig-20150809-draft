@@ -1,6 +1,12 @@
 # ChangeLog for net-im/centericq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.4 2002/04/29 14:42:45 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.5 2002/06/08 05:59:16 lostlogic Exp $
+
+*centericq-4.7.2 (7 Jun 2002)
+
+  8 Jun 2002; Brandon Low <lostlogic@gentoo.org> ChangeLog :
+
+  Updated to 4.7.2, added patch for gcc-3.1 compatibilty.
 
 *centericq-4.7.1 (29 April 2002)
 
@@ -29,3 +35,5 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
+  Author Shachar Goldin <aldarsior@yahoo.com>
