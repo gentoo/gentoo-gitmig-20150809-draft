@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r3.ebuild,v 1.10 2004/09/01 09:36:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r4.ebuild,v 1.1 2004/09/01 09:36:37 usata Exp $
 
 inherit eutils
 
@@ -12,12 +12,13 @@ LICENSE="freedist"
 DESCRIPTION="a literate programming tool, lighter than web"
 
 SLOT="0"
-IUSE=""
-KEYWORDS="x86 ppc sparc alpha amd64"
+IUSE="icon"
+KEYWORDS="~x86 ~sparc ~alpha ~amd64"	# will test ppc later
 
 DEPEND="sys-devel/gcc
 	virtual/tetex
-	sys-apps/gawk
+	icon? ( dev-lang/icon )
+	!icon? ( sys-apps/gawk )
 	sys-apps/debianutils"
 
 src_unpack() {
@@ -34,12 +35,16 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" LIBSRC="awk" || die
+	local libsrc
+	use icon && libsrc="icon" || libsrc="awk"
+	emake CFLAGS="${CFLAGS}" LIBSRC="$libsrc" || die
 }
 
 src_install () {
-	make DESTDIR=${D} LIBSRC="awk" install || die
-	[ -x /usr/bin/nawk ] || dosym /usr/bin/gawk /usr/bin/nawk
+	local libsrc
+	use icon && libsrc="icon" || libsrc="awk"
+	make DESTDIR=${D} LIBSRC="$libsrc" install || die
+	use icon || [ -x /usr/bin/nawk ] || dosym /usr/bin/gawk /usr/bin/nawk
 
 	# fix man pages to be LFH compliant
 	mv ${D}/usr/man ${D}/usr/share

@@ -9,7 +9,8 @@ diff -ur src-new/Makefile src/Makefile
 +#CFLAGS=
  # If you have Icon, you should use the Icon versions of the noweb pipeline.
  # Set LIBSRC=icon
- LIBSRC=awk
+-LIBSRC=awk
++#LIBSRC=awk
  # If you have no Icon compiler, but do have icont, make ICONC=icont
 -ICONC=iconc
 +ICONC=icont
