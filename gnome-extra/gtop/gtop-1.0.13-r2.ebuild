@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/gtop-1.0.13-r2.ebuild,v 1.8 2003/02/13 12:21:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/gtop-1.0.13-r2.ebuild,v 1.9 2003/09/08 05:22:59 msterret Exp $
 
 IUSE="nls"
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 sparc "
 DEPEND="( >=gnome-base/libgtop-1.0.12-r1
 	 <gnome-base/libgtop-2.0.0 )
 	>=gnome-base/gnome-libs-1.4.1.7
-        nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	local myconf

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10.ebuild,v 1.6 2003/09/06 23:52:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10.ebuild,v 1.7 2003/09/08 05:22:59 msterret Exp $
 
 IUSE="nls gnome"
 
@@ -58,14 +58,14 @@ src_compile() {
 	myconf="${myconf} --with-gconf"
 # Borks without gconf in most cases
 
-  	./configure \
+	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
 		${myconf} || die
 
-  	emake || die "Package building failed."
+	emake || die "Package building failed."
 }
 
 # This function converts a pkgconfig config type file to
@@ -100,7 +100,7 @@ conv_pkgconfig_confsh() {
 	source ${tmpfile}
 
 	# Ok, generate our Conf.sh file
-    cat > ${D}/usr/lib/${confsh_file} <<CONFSHEND
+	cat > ${D}/usr/lib/${confsh_file} <<CONFSHEND
 #
 # Configuration file for using the ${package_name} library in GNOME applications
 #

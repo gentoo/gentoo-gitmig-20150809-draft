@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.13.ebuild,v 1.9 2003/09/06 23:52:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.13.ebuild,v 1.10 2003/09/08 05:22:59 msterret Exp $
 
 IUSE="nls"
 
@@ -20,8 +20,8 @@ DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
- 	unpack battstat_applet-${PV}.tar.gz
-        cp ${DISTDIR}/acpi-linux.h battstat_applet-${PV}/src/
+	unpack battstat_applet-${PV}.tar.gz
+	cp ${DISTDIR}/acpi-linux.h battstat_applet-${PV}/src/
 	patch -p0 < ${FILESDIR}/battstat-acpi.diff
 }
 

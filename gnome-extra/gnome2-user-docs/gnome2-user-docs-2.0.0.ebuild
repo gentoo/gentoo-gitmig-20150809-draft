@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-2.0.0.ebuild,v 1.6 2003/09/06 23:52:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-2.0.0.ebuild,v 1.7 2003/09/08 05:22:59 msterret Exp $
 
 
 DESCRIPTION="end user documentation for Gnome2 "
@@ -25,5 +25,5 @@ src_install () {
 }
 
 pkg_postinst () {
-  scrollkeeper-update -p /var/lib/scrollkeeper
+	scrollkeeper-update -p /var/lib/scrollkeeper
 }

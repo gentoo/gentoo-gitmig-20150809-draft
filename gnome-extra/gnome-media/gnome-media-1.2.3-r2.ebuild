@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-1.2.3-r2.ebuild,v 1.9 2003/09/06 23:52:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-1.2.3-r2.ebuild,v 1.10 2003/09/08 05:22:59 msterret Exp $
 
 IUSE="nls alsa"
 
@@ -15,8 +15,8 @@ KEYWORDS="x86 ppc sparc "
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
 
 DEPEND="${RDEPEND}
-        >=app-text/scrollkeeper-0.2
-        nls? ( sys-devel/gettext )"
+	>=app-text/scrollkeeper-0.2
+	nls? ( sys-devel/gettext )"
 
 
 src_compile() {
