@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.14 2004/06/24 23:44:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.15 2004/06/28 02:54:34 agriffis Exp $
 
 NPV=20010309
 S=${WORKDIR}/pwm-${NPV}
@@ -47,7 +47,7 @@ src_install() {
 	     ETCDIR=${D}/etc/X11 \
 	     install || die
 
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/gnome/wm-properties
 		doins support/PWM.desktop

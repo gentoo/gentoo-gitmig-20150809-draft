@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.19 2004/06/24 23:46:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.20 2004/06/28 02:55:58 agriffis Exp $
 
 IUSE="arts gtk gnome nls"
 
@@ -24,8 +24,8 @@ src_compile() {
 
 	use gtk && myconf="--enable-imlib=no --enable-gdk-pixbuf=/usr"
 
-#	if [ "`use fooz`" ]
-	if [ "`use gnome`" ]
+#	if use fooz
+	if use gnome
 	then
 		myconf="${myconf} --enable-gdm"
 		myconf="${myconf} --enable-libxml2"
