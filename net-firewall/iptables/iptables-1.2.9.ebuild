@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.8 2004/03/09 16:01:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.9 2004/03/09 23:30:10 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha sparc hppa ~mips ~ia64 amd64"
+KEYWORDS="x86 ~ppc alpha sparc hppa ~mips ia64 amd64"
 IUSE="ipv6"
 
 # iptables is dependent on kernel sources.  Strange but true.
