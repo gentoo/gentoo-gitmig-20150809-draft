@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 124ec7fb76e80b3577fcd97069c3af9e ChangeLog 4916
+MD5 054b4e5061f46f9d30112c4a24cbec65 ChangeLog 5068
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 ba6fc705747c7844e3d931f0944cc794 texmacs-1.0.4.4.ebuild 1616
+MD5 f274b5514fd7fba3451ce470b7c80e9c texmacs-1.0.4.5.ebuild 1616
 MD5 46d7b75e973732b017f82f38b367702c texmacs-1.0.4-r1.ebuild 1476
-MD5 b2daba45c637c9329c72879f3ef05955 texmacs-1.0.4.3.ebuild 1542
 MD5 c4a7d1c9a093d6a8f2d9e8ad1edaf03d files/digest-texmacs-1.0.4.4 145
-MD5 6a01145afda09629a7954638b8383116 files/digest-texmacs-1.0.4.3 145
+MD5 33d23fd77a62ed391570b7bb28101907 files/digest-texmacs-1.0.4.5 145
 MD5 2d501a8fe39616f98bc65ec3f7343548 files/TeXmacs.desktop 266
 MD5 bf93b125609bba4a0caf22c50fd0c084 files/digest-texmacs-1.0.4-r1 146
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBmBxrVWNWqTUmv+0RAo4PAKCS0JKcFUwNcPBVeby+AUf/5uOrgwCdEodi
-7azL82aMvwn23DE/wqJs7ik=
-=vifs
+iD8DBQFBusqXVWNWqTUmv+0RAsxIAKCWGC1GK12SA19iseWCuA/2HxPMZACfYdOs
+fqO/cYNwA2LSliRczPNq5mA=
+=au5e
 -----END PGP SIGNATURE-----
