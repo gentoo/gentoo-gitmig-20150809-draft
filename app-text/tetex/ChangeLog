@@ -1,6 +1,13 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.7 2002/08/02 17:42:50 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.8 2002/08/23 02:46:24 satai Exp $
+
+*tetex-1.0.7-r11 (22 Aug 2002)
+
+  22 Aug 2002; satai <satai@gentoo.org> tetex-1.0.7-r11.ebuild :
+
+  Changed default behavior to fix numerous bugs - now font generation is, by
+  default, available for all users.
 
 *tetex-1.0.7-r10 (20 Jun 2002)
 
