@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.43 2004/11/30 15:02:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.44 2004/11/30 22:44:36 chriswhite Exp $
+
+*pdflib-5.0.4_p1 (01 Dec 2004)
+
+  01 Dec 2004; Chris White <chriswhite@gentoo.org> +pdflib-5.0.4_p1.ebuild:
+  Ok, so 6.0.0p1 was supposed to be a nice security bump for a now
+  non-confidential security bug. That didn't work out too well and caused php
+  stuff to not compile, so that's what happened below. Now then, 5.0.4 will be
+  the official stable marked pdflib and I've re-compiled everything that depends
+  on pdflib on a stable only chroot and it all compiles just fine. That said,
+  bumping to 5.0.4p1.
 
   01 Dec 2004; Chris White <chriswhite@gentoo.org> -pdflib-6.0.0_p1.ebuild:
   Removed from portage 6.0.0p1, explainations later. This will be brought back
