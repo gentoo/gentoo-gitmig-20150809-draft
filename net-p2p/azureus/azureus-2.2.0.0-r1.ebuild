@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.2.0.0-r1.ebuild,v 1.1 2004/12/20 16:41:26 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.2.0.0-r1.ebuild,v 1.2 2005/04/03 12:01:25 axxo Exp $
 
 DESCRIPTION="Azureus - Java BitTorrent Client"
 HOMEPAGE="http://azureus.sourceforge.net/"
@@ -12,7 +12,8 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="virtual/libc
 	>=dev-java/swt-3.0
-	>=app-arch/unzip-5.0"
+	>=app-arch/unzip-5.0
+	!net-p2p/azureus-bin"
 RDEPEND="virtual/libc
 	>=dev-java/swt-3.0-r2
 	>=dev-java/log4j-1.2.8
