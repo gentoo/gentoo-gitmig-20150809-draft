@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.0_beta1.ebuild,v 1.3 2003/11/17 13:45:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.0_beta1.ebuild,v 1.4 2003/11/17 19:05:16 caleb Exp $
 
 inherit kde-base
 need-kde 3
@@ -36,6 +36,12 @@ if [ "`use python`" ]; then
 else
 	myconf="$myconf --disable-scripting"
 fi
+
+src_unpack()
+{
+	kde_src_unpack
+	epatch ${FILESDIR}/${P}-compat.patch
+}
 
 pkg_postinst() {
 
