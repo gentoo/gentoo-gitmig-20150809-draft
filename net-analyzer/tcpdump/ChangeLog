@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.19 2004/01/15 14:18:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.20 2004/03/30 16:11:47 agriffis Exp $
+
+  30 Mar 2004; Aron Griffis <agriffis@gentoo.org> tcpdump-3.8.1.ebuild:
+  Stable on alpha and ia64 for bug 38206
 
   15 Jan 2004; <gustavoz@gentoo.org> tcpdump-3.8.1.ebuild:
   marked hppa and sparc, fixes #38206
