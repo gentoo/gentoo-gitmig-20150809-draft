@@ -1,8 +1,11 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.12 2003/07/13 11:36:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.13 2003/07/25 22:23:42 vapier Exp $
 
 *rp-pppoe-3.5 (23 May 2003)
+
+  25 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added sandbox predict to /dev/ppp to fix #24833.
   
   23 May 2003; Chuck Brewer <killian@gentoo.org>:
   Added manifest.
