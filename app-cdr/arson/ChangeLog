@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.14 2003/03/28 11:14:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.15 2003/04/12 06:29:10 jje Exp $
+
+*arson-0.9.7-r2 (12 Apr 2003)
+
+  12 Apr 2003; jje arson-0.9.7-r2.ebuild:
+  Added flac support, #18074.
 
   28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> : arson-0.9.7-r1.ebuild:
 
