@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/whoischk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/ChangeLog,v 1.2 2003/08/17 13:38:38 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/ChangeLog,v 1.3 2004/02/23 18:06:03 mholzer Exp $
+
+*whoischk-0.2.4 (23 Feb 2004)
+
+  23 Feb 2004; Martin Holzer <mholzer@gentoo.org> whoischk-0.2.4.ebuild:
+  Version bumped. Closes 42367
 
 *whoischk-0.2.3 (17 Aug 2003)
 
