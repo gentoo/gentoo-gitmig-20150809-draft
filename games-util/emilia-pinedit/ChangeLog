@@ -1,6 +1,10 @@
 # ChangeLog for games-util/emilia-pinedit
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/ChangeLog,v 1.1 2004/01/03 20:14:51 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/ChangeLog,v 1.2 2004/01/24 04:01:24 mr_bones_ Exp $
+
+  23 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  emilia-pinedit-0.3.1.ebuild:
+  more error checking/messages
 
 *emilia-pinedit-0.3.1 (03 Jan 2004)
 
