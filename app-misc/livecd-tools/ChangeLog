@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.37 2005/01/26 21:08:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.38 2005/01/26 21:38:57 wolf31o2 Exp $
+
+  26 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> :
+  Fixing digest
 
 *livecd-tools-1.0.11 (26 Jan 2005)
 
