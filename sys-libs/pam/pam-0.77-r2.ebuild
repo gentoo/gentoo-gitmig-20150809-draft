@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r1.ebuild,v 1.10 2004/09/01 12:47:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r2.ebuild,v 1.1 2004/10/31 16:08:21 azarah Exp $
 
-PATCH_LEVEL="1.2"
+PATCH_LEVEL="1.3"
 BDB_VER="4.1.25"
 PAM_REDHAT_VER="0.77-4"
 
@@ -41,11 +41,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
 DESCRIPTION="Pluggable Authentication Modules"
 
 S="${WORKDIR}/Linux-PAM-${PV}"
-#S2="${WORKDIR}/pam-${PVR}-patches"
-
-# Note that the patches for this revision are equal to the base version so we
-# don't create a new patch set. In bumps this might be necessary though
-S2="${WORKDIR}/pam-${PVR/-r1/}-patches"
+S2="${WORKDIR}/pam-${PV}-patches"
 SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz
 	mirror://gentoo/${P}-patches-${PATCH_LEVEL}.tar.bz2
 	berkdb? ( http://www.sleepycat.com/update/snapshot/db-${BDB_VER}.tar.gz )"
@@ -193,11 +189,11 @@ src_compile() {
 			-e "s:^HAVE_LIBDB=yes:HAVE_LIBDB=no:" \
 			Make.Rules
 
-			# Also edit the configuration file else the wrong include files
-			  get used
-			sed -i -e "s:^#define HAVE_NDBM_H.*$:/* #undef HAVE_NDBM_H */:" \
-			       -e "s:^#define HAVE_DB_H.*$:/* #undef HAVE_DB_H */:" \
-			       _pam_aconf.h
+		# Also edit the configuration file else the wrong include files
+		# get used
+		sed -i -e "s:^#define HAVE_NDBM_H.*$:/* #undef HAVE_NDBM_H */:" \
+		       -e "s:^#define HAVE_DB_H.*$:/* #undef HAVE_DB_H */:" \
+		       _pam_aconf.h
 
 	else
 		# Do not link pam_userdb.so to db-1.85 ...
@@ -206,7 +202,7 @@ src_compile() {
 			Make.Rules
 
 		# Also edit the configuration file else the wrong include files
-		  get used
+		# get used
 		sed -i -e "s:^#define HAVE_NDBM_H.*$:/* #undef HAVE_NDBM_H */:" _pam_aconf.h
 	fi
 

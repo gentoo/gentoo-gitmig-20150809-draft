@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.22 2004/06/28 02:22:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.23 2004/10/31 16:08:21 azarah Exp $
 
 PATCH_LEVEL="1.2"
 BDB_VER="4.1.25"
@@ -86,6 +86,10 @@ src_unpack() {
 	cd ${S} || die
 	tar -zxf ${S2}/pam-redhat-${PAM_REDHAT_VER}.tar.gz \
 		|| die "Couldn't unpack pam-redhat-${PAM_REDHAT_VER}.tar.gz"
+
+	# Fix pam_console_apply -r segfaulting if a group used in
+	# /etc/security/console.perms are missing, bug #50315
+	cp -f ${FILESDIR}/pam-0.77-console-reset.patch ${S2}/gentoo-patches/
 
 	apply_pam_patches
 

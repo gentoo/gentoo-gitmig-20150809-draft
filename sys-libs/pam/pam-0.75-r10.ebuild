@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.16 2004/06/28 02:22:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.17 2004/10/31 16:08:21 azarah Exp $
 
 IUSE="berkdb"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.ta
 	mirror://gentoo/pam-${PVR}${PATCH_LEVEL}-gentoo.tbz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
 
-LICENSE="BSD | GPL-2"
+LICENSE="PAM"
 KEYWORDS="x86 ppc sparc alpha"
 SLOT="0"
 
