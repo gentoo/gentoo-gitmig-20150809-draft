@@ -1,0 +1,39 @@
+# ChangeLog for app-games/foobillard
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.1 2003/09/11 12:26:35 vapier Exp $
+
+*foobillard-2.8 (17 Jul 2003)
+
+  17 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Removed bumpmaptest in favor of --enable-nvidia config option.
+
+*foobillard-2.7 (20 Jun 2003)
+
+  20 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumped + extended bumpmap check to include the USE_BALL_FRESNEL feature.
+
+*foobillard-2.4 (04 Mar 2003)
+
+  05 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added bumpmap checking #15503.
+
+  04 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #14885.
+
+*foobillard-2.2 (18 Dec 2002)
+
+  18 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #11876 + games eclass support.
+
+*foobillard-1.5 (21 Jun 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> foobillard-1.5.ebuild :
+  Added KEYWORDS, SLOT.
+
+  21 Jun 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

@@ -1,0 +1,31 @@
+--- src/app.cpp.orig	2003-07-21 22:20:18.000000000 -0400
++++ src/app.cpp	2003-07-21 22:21:43.000000000 -0400
+@@ -25,7 +25,7 @@
+ 	mGameStatsOn = true;
+ 	mNumScreenShots = 0;
+ 
+-	mRoot = new Root();
++	mRoot = new Root("GENTOO_CFGDIR/plugins.cfg");
+ 
+ 	setupResources();
+ 
+@@ -113,7 +113,7 @@
+ {
+ 	// Load resource paths from config file
+ 	ConfigFile cf;
+-	cf.load("resources.cfg");
++	cf.load("GENTOO_CFGDIR/resources.cfg");
+ 
+ 	// Go through all settings in the file
+ 	ConfigFile::SettingsIterator i = cf.getSettingsIterator();
+--- src/config.cpp.orig	2003-07-21 23:12:42.000000000 -0400
++++ src/config.cpp	2003-07-21 23:12:49.000000000 -0400
+@@ -21,7 +21,7 @@
+ 	save();
+ }
+ 
+-static const char* const cfgname = "soccar.cfg";
++static const char* const cfgname = "GENTOO_CFGDIR/soccar.cfg";
+ 
+ bool Config::load()
+ {

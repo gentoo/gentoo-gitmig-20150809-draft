@@ -1,0 +1,11 @@
+# ChangeLog for app-games/gracer
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/ChangeLog,v 1.1 2003/09/11 12:26:35 vapier Exp $
+
+  29 Jul 2003; Michael Sterrett <msterret@gentoo.org> gracer-0.1.5.ebuild:
+  depend on sed >=4
+
+*gracer-0.1.5 (30 Jul 2003)
+
+  30 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

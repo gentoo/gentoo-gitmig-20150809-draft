@@ -1,0 +1,35 @@
+# ChangeLog for app-games/torcs
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.1 2003/09/11 12:26:35 vapier Exp $
+
+*torcs-1.2.1 (16 Jul 2003)
+
+  16 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #24061 + games.eclass support.
+
+*torcs-1.0.0-r1 (7 May 2002)
+
+  11 Jul 2003; Michael Sterrett <msterret@gentoo.org> torcs-1.0.0-r1.ebuild:
+  fix DESCRIPTION
+
+  30 Jun 2003; Michael Sterrett <msterret@gentoo.org> torcs-1.0.0-r1.ebuild:
+  use sed -i; sed things in unpack instead of compile; tidy
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> torcs-1.0.0-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  7 May 2002; Spider <spider@gentoo.org> torcs-1.0.0-r1.ebuild :
+  fix sourceforge mirroring.
+      
+*torcs-1.0.0-r1 (29 Mar 2002)
+
+  29 Mar 2002; Bruce A. Locke <blocke@shivan.org> ChangeLog :
+
+  Moved from /usr/share/torcs to /opt/torcs (it really wants to be in /opt
+  based on its directory strucutre) and torcs script modified
+
+*torcs-1.0.0 (11 Feb 2002)
+
+  11 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  
+  Initial version, based on ebuild submission.

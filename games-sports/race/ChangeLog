@@ -1,0 +1,8 @@
+# ChangeLog for app-games/race
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/race/ChangeLog,v 1.1 2003/09/11 12:26:35 vapier Exp $
+
+*race-0.5 (30 Jul 2003)
+
+  30 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
