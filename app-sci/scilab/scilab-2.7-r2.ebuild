@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r2.ebuild,v 1.3 2003/10/06 23:29:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r2.ebuild,v 1.4 2003/10/06 23:37:41 george Exp $
 
 DESCRIPTION="Scientific software package for numerical computations, Matlab lookalike"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/${P}.src.tar.gz
@@ -15,7 +15,8 @@ IUSE="tcltk gtk"
 DEPEND="virtual/x11
 	x11-libs/Xaw3d
 	tcltk? ( dev-lang/tk )
-	gtk? ( =x11-libs/gtk+-1.2* )"
+	gtk? ( =x11-libs/gtk+-1.2*
+			>=gnome-base/gnome-libs-1.4.2 )"
 
 pkg_setup() {
 	local SCLB
