@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>cjk</herd>
 <maintainer>
-  <name>GentooJP Documentation Team</name>
   <email>gentoojp-docs@ml.gentoo.gr.jp</email>
+  <name>GentooJP Documentation Team</name>
   <description>Japanese translation of portage/gentoolkit manpages are
   contributed by Gentoo Linux User Group Japan and maintained by that
   mailing list. All questions and comments should be posted to that
