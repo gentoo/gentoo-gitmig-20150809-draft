@@ -1,0 +1,10 @@
+# ChangeLog for net-news/nzbget
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/nzbget/ChangeLog,v 1.1 2004/06/17 02:48:43 swegener Exp $
+
+*nzbget-0.1.1 (17 Jun 2004)
+
+  17 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +nzbget-0.1.1.ebuild:
+  Initial import, ebuild written by me.
+
