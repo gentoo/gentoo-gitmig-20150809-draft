@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r6.ebuild,v 1.4 2003/08/01 04:21:01 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r6.ebuild,v 1.5 2003/08/01 04:27:14 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -165,12 +165,15 @@ src_install() {
 
 		# Fix comment of menu entry
 		cd ${S}/build/package/rpm/SOURCES
-		perl -pi -e 's:Name=Mozilla:Name=Mozilla Firebird:' mozilla.desktop
-		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Firebird Web Browser:' mozilla.desktop
+		cp mozilla.desktop mozillafirebird.desktop
+		perl -pi -e 's:Name=Mozilla:Name=Mozilla Firebird:' mozillafirebird.desktop
+		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Firebird Web Browser:' mozillafirebird.desktop
+		perl -pi -e 's:Exec=/usr/bin/mozilla:Exec=/usr/bin/MozillaFirebird:' mozillafirebird.desktop
 		cd ${S}
 		insinto /usr/share/gnome/apps/Internet
-		doins ${S}/build/package/rpm/SOURCES/mozilla.desktop
+		doins ${S}/build/package/rpm/SOURCES/mozillafirebird.desktop
 	fi
+
 }
 
 pkg_preinst() {
