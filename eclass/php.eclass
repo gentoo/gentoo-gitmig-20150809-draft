@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.6 2003/04/24 10:19:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.7 2003/04/24 10:32:52 coredumb Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -238,7 +238,7 @@ php_src_install() {
 	# put make here
 
 	dodoc CODING_STANDARDS LICENSE EXTENSIONS 
-	dodoc RELEASE_PROCESS README.* TODO NEWS
+	dodoc RELEASE_PROCESS README.* TODO* NEWS
 	dodoc ChangeLog* *.txt
 
 	#install scripts
@@ -246,7 +246,6 @@ php_src_install() {
 	doexe ${S}/pear/scripts/phpize
 	doexe ${S}/pear/scripts/php-config
 	doexe ${S}/pear/scripts/phpextdist
-	doexe ${S}/ext/ext_skel
 	
 	# PHP module building stuff
 	mkdir ${D}/usr/lib/php/build
