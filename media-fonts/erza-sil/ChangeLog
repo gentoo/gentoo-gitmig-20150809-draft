@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/erza-sil
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/erza-sil/ChangeLog,v 1.1 2004/10/03 13:04:08 usata Exp $
+
+*erza-sil-2.0 (03 Oct 2004)
+
+  03 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +erza-sil-2.0.ebuild:
+  Initial import. Ebuild submitted by gna <gnagent2@yahoo.com.au>,
+  closing bug #66206.
+
