@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.62 2003/12/08 23:28:54 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.63 2003/12/17 19:42:29 gmsoft Exp $
 
   09 Dec 2003; <spider@gentoo.org> development-sources-2.6.0_beta7-r3.ebuild,
   development-sources-2.6.0_beta7-r5.ebuild,
@@ -8,6 +8,10 @@
   fixing chown issues, everything is johnm's fault.
 
 *development-sources-2.6.0_beta11 (26 Nov 2003)
+
+  17 Dec 2003; Guy Martin <gmsoft@gentoo.org>
+  development-sources-2.6.0_beta11.ebuild :
+  Bumped to -pa6, Marked hppa.
 
   2 Dec 2003; Guy Martin <gmsoft@gentoo.org>
   development-sources-2.6.0_beta11.ebuild :
