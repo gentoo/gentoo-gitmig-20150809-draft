@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r4.ebuild,v 1.2 2004/09/23 11:16:28 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r4.ebuild,v 1.3 2004/09/23 16:28:28 taviso Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -86,9 +86,12 @@ pkg_postinst() {
 	# do not include /etc/skey/skeykeys in the package, as quickpkg
 	# may package personal files.
 	# This also fixes the etc-update issue with #64974.
-	touch /etc/skey/skeykeys && chmod 0600 /etc/skey/skeykeys || {
-		ewarn "Please verify the permissions of /etc/skey/skeykeys are 0600."
-	}
+
+	# skeyinit will not function if this file is not present.
+	touch /etc/skey/skeykeys
+
+	# these permissions are applied by the skey system if missing.
+	chmod 0600 /etc/skey/skeykeys
 
 	einfo "For an instroduction into using s/key authentication, take"
 	einfo "a look at the EXAMPLES section from the skey(1) manpage."
