@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r3.ebuild,v 1.5 2002/12/23 20:18:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r3.ebuild,v 1.6 2002/12/25 22:15:50 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -82,6 +82,25 @@ DEPEND="${RDEPEND}
 	sys-devel/perl
 	java? ( >=dev-java/java-config-0.2.0 )"
 
+
+pkg_setup() {
+
+	if [ "${WANT_GTK2}" != "yes" ]
+	then
+		echo
+		eerror "Due to the many bugs related with gtk+-2.x support"
+		eerror "in mozilla, this ebuild will not build with gtk2 support,"
+		eerror "if you do not do:"
+		eerror
+		eerror "  # WANT_GTK2=\"yes\" emerge mozilla"
+		eerror
+		eerror "The alternative is to merge without gtk2 support, which"
+		eerror "is recommended:"
+		eerror
+		eerror "  # USE=\"-gtk2\" emerge mozilla"
+		die "Wont build gtk2 support without being forced!"
+	fi
+}
 
 moz_setup() {
 
