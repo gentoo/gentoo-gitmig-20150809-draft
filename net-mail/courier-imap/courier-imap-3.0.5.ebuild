@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.4-r1.ebuild,v 1.4 2004/06/26 23:30:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.5.ebuild,v 1.1 2004/06/26 23:30:58 robbat2 Exp $
 
 inherit eutils
 
@@ -10,14 +10,14 @@ HOMEPAGE="http://www.courier-mta.org/"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="gdbm ldap berkdb mysql pam nls postgres fam selinux"
+IUSE="ldap berkdb mysql pam nls postgres fam selinux"
 PROVIDE="virtual/imapd"
 # not compatible with >=sys-libs/db-4
 RDEPEND="virtual/glibc
 	>=dev-libs/openssl-0.9.6
 	pam? ( >=sys-libs/pam-0.75 )
 	berkdb? ( =sys-libs/db-3* )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	!berkdb? ( >=sys-libs/gdbm-1.8.0 )
 	mysql? ( >=dev-db/mysql-3.23.36 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.2 )
@@ -238,9 +238,9 @@ src_install() {
 	exeinto /etc/init.d
 		newexe ${FILESDIR}/authdaemond-3.0.4-r1 authdaemond
 		newexe ${FILESDIR}/courier-imapd.rc6 courier-imapd
-		newexe ${FILESDIR}/courier-imapd-ssl.rc6 courier-imapd-ssl
+		newexe ${FILESDIR}/courier-imapd-ssl.rc6-3.0.5 courier-imapd-ssl
 		newexe ${FILESDIR}/courier-pop3d.rc6 courier-pop3d
-		newexe ${FILESDIR}/courier-pop3d-ssl.rc6 courier-pop3d-ssl
+		newexe ${FILESDIR}/courier-pop3d-ssl.rc6-3.0.5 courier-pop3d-ssl
 
 	exeinto /usr/lib/courier-imap
 		newexe ${FILESDIR}/gentoo-imapd-1.7.3-r1.rc gentoo-imapd.rc
@@ -263,9 +263,17 @@ src_install() {
 	dodir /usr/bin
 	mv ${D}/usr/sbin/maildirmake ${D}/usr/bin/maildirmake
 
-	dodoc ${S}/imap/ChangeLog
 
 	keepdir /var/lib/courier-imap/authdaemon
+
+	# bug #42686, more docs
+	dodoc 00README.NOW.OR.SUFFER AUTHORS INSTALL NEWS NEWS.html README ChangeLog
+	docinto imap
+	dodoc ${S}/imap/{ChangeLog,BUGS,FAQ,FAQ.html,README,README.html,README.imapkeywords.html}
+	docinto maildir
+	dodoc ${S}/maildir/{AUTHORS,INSTALL,README.maildirfilter.html,README.maildirquota.txt,README.sharedfolders.txt}
+	docinto tcpd
+	dodoc ${S}/tcpd/README.couriertls
 
 }
 

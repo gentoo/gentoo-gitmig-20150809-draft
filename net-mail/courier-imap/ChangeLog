@@ -1,6 +1,19 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.74 2004/06/24 23:20:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.75 2004/06/26 23:30:58 robbat2 Exp $
+
+*courier-imap-3.0.5 (26 Jun 2004)
+
+  26 Jun 2004; Robin H. Johnson <robbat2@gentoo.org>
+  courier-imap-3.0.4-r1.ebuild, courier-imap-3.0.5.ebuild,
+  files/authdaemond-3.0.4-r1, files/authdaemond.conf,
+  files/authdaemond.conf-3.0.4-r1, files/authdaemond.rc6,
+  files/courier-imapd-ssl.rc6, files/courier-imapd-ssl.rc6-3.0.5,
+  files/courier-imapd.rc6, files/courier-pop3d-ssl.rc6,
+  files/courier-pop3d-ssl.rc6-3.0.5, files/courier-pop3d.rc6,
+  files/gentoo-imapd-1.7.3-r1.rc, files/gentoo-imapd-ssl-1.7.3-r1.rc,
+  files/gentoo-pop3d-1.7.3-r1.rc, files/gentoo-pop3d-ssl-1.7.3-r1.rc:
+  fix bugs 42686, 52496, 39653, 52174, 52658, new upstream version.
 
   17 Jun 2004; Robin H. Johnson <robbat2@gentoo.org>
   courier-imap-2.1.2-r1.ebuild:
