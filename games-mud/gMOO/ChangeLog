@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gMOO
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/ChangeLog,v 1.7 2004/11/05 05:20:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/ChangeLog,v 1.8 2004/12/21 11:50:16 absinthe Exp $
+
+  21 Dec 2004; Dylan Carlson <absinthe@gentoo.org> gMOO-0.4.8-r1.ebuild:
+  keywords ~amd64
 
   05 Nov 2004; Joseph Jezak <josejx@gentoo.org> gMOO-0.4.8-r1.ebuild:
   Added ~ppc.
