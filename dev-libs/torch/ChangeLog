@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/torch
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/torch/ChangeLog,v 1.1 2004/06/17 17:50:29 phosphan Exp $
+
+*torch-3 (17 Jun 2004)
+
+  17 Jun 2004; Patrick Kursawe <phosphan@gentoo.org> metadata.xml,
+  torch-3.ebuild:
+  Initial version.
+
