@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The app-xemacs category contains extensions for the XEmacs text editor.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-xemacs enthält Erweiterungen für den Texteditor XEmacs.
+	</longdescription>
 </catmetadata>
 
