@@ -10,15 +10,12 @@ virtual/opengl	   x11-base/xfree
 virtual/glu	      x11-base/xfree
 virtual/glut	     media-libs/glut
 virtual/imapUW	   net-mail/uw-imap
-x11-libs/xaw	     x11-libs/Xaw3d
-sys-apps/texinfo	 sys-devel/gcc    
 virtual/jdk	      dev-java/ibm-jdk-bin
 virtual/jre	      dev-java/ibm-jre-bin
 virtual/imapd	    net-mail/courier-imap
 virtual/x11-web-browser  net-www/mozilla
 virtual/blackbox	 x11-wm/blackbox
 virtual/emacs	    app-editors/emacs
-sys-apps/reiserfs-utils  sys-fs/reiserfsprogs
 virtual/sylpheed	 mail-client/sylpheed
 virtual/php	      dev-php/mod_php
 virtual/httpd-php				dev-php/mod_php
