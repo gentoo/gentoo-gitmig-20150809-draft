@@ -1,26 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre9.ebuild,v 1.4 2004/06/22 14:17:26 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_rc3.ebuild,v 1.1 2004/06/22 14:17:26 karltk Exp $
 
 inherit eutils
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
-SRC_URI="http://mirror.tiscali.dk/eclipse/downloads/drops/S-3.0M9-200405211200/eclipse-sourceBuild-srcIncluded-3.0M9.zip"
+SRC_URI="http://download2.eclipse.org/downloads/drops/S-3.0RC3-200406192000/eclipse-sourceBuild-srcIncluded-3.0RC3.zip"
 IUSE="gtk motif gnome kde mozilla jikes"
 SLOT="3"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86"
 
-# karltk: ours is not to question why, merely do and die..
-RDEPEND=" || ( >=virtual/jdk-1.4.2 =dev-java/blackdown-jdk-1.4.2* )
+RDEPEND="|| ( >=virtual/jdk-1.4.2 =dev-java/blackdown-jdk-1.4.2* )
 	|| (
 		gtk? ( >=x11-libs/gtk+-2.2.4 )
 		kde? ( kde-base/kdelibs x11-libs/openmotif )
 		motif? ( x11-libs/openmotif )
 		>=x11-libs/gtk+-2.2.4
 		)
-	gnome? ( =gnome-base/gnome-vfs-2* )
+	gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )
+	jikes? ( >=dev-java/jikes-1.19 )
 	"
 
 DEPEND="${RDEPEND}
@@ -43,10 +43,12 @@ pkg_setup() {
 	local patch=$(echo ${version} | sed -r "s/${ver_rx}/\3/")
 	local extra=$(echo ${version} | sed -r "s/${ver_rx}/\4/")
 
-	if [ ${major} -ge 1 ]  && [ ${minor} -ge 4 ] && [ ${patch} -ge 2 ] ; then
+	if [ ${major} -ge 1 ] && [ ${minor} -gt 4 ] ; then
+		einfo "Detected JDK is sufficient to compile Eclipse (${version} >= 1.4.2)"
+	elif [ ${major} -ge ] && [ ${minor} -ge 4 ] && [ ${patch} -ge 2 ] ; then
 		einfo "Detected JDK is sufficient to compile Eclipse (${version} >= 1.4.2)"
 	else
-		die "Detected JDK is too old to compile Eclipse, need at least 1.4.2!"
+		die "Detected JDK (${version}) is too old to compile Eclipse, need at least 1.4.2!"
 	fi
 }
 
@@ -81,13 +83,6 @@ src_unpack() {
 	mkdir ${S}
 	cd ${S}
 	unpack ${A}
-
-#	epatch ${FILESDIR}/01-distribute_ant_target-3.0.patch
-
-	# karltk: doesn't work, is it required anymore?
-#	if use kde ; then
-#		epatch ${FILESDIR}/02-konqueror_help_browser-3.0.patch
-#	fi
 
 	# Needed for the IBM JDK
 	addwrite "/proc/self/maps"
@@ -210,9 +205,10 @@ src_compile() {
 		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/rt.jar"
 	fi
 
-	if use jikes ; then
-		ant_extra_opts="${ant_extra_opts} -Dbuild.compiler=jikes"
-	fi
+	# karltk: jikes doesn't work as a compiler for Eclipse currently.
+#	if use jikes ; then
+#		ant_extra_opts="${ant_extra_opts} -Dbuild.compiler=jikes"
+#	fi
 
 	export ANT_OPTS=-Xmx768m
 
