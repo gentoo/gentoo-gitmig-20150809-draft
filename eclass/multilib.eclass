@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.16 2005/01/31 06:37:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.17 2005/02/03 05:29:07 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -25,8 +25,12 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # number_abis:
 # echo the number of ABIs we will be installing for
 
-# get_abi_order:
+# get_install_abis:
 # Return a list of the ABIs we want to install for with
+# the last one in the list being the default.
+
+# get_all_abis:
+# Return a list of the ABIs supported by this profile.
 # the last one in the list being the default.
 
 # get_all_libdirs:
@@ -184,6 +188,11 @@ get_abi_LIBDIR() { get_abi_var LIBDIR ${@}; }
 # Return a list of the ABIs we want to install for with 
 # the last one in the list being the default.
 get_abi_order() {
+	ewarn "Please update your ebuild to use get_install_abis instead of get_abi_order"
+	get_install_abis ${@}
+}
+
+get_install_abis() {
 	local order=""
 
 	if [ -z "${MULTILIB_ABIS}" ]; then
@@ -216,6 +225,27 @@ get_abi_order() {
 	if [ -z "${order}" ]; then
 		die "The ABI list is empty.  Are you using a proper multilib profile?  Perhaps your USE flags or MULTILIB_ABIS are too restrictive for this package."
 	fi
+
+	echo ${order}
+	return 0
+}
+
+# Return a list of the ABIs supported by this profile.
+# the last one in the list being the default.
+get_all_abis() {
+	local order=""
+
+	if [ -z "${MULTILIB_ABIS}" ]; then
+		echo "NOMULTILIB"
+		return 1
+	fi
+
+	for x in ${MULTILIB_ABIS}; do
+		if [ "${x}" != "${DEFAULT_ABI}" ]; then
+			order="${order:+${order }}${x}"
+		fi
+	done
+	order="${order:+${order} }${DEFAULT_ABI}"
 
 	echo ${order}
 	return 0
