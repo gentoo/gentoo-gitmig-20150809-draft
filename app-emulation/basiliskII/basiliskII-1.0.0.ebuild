@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0.ebuild,v 1.1 2003/07/29 02:22:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0.ebuild,v 1.2 2003/09/26 18:27:18 vapier Exp $
 
 IUSE="X gtk xv esd dga"
 
@@ -49,6 +49,7 @@ src_compile() {
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
+		--enable-jit-compiler \
 		${myflags} || die "./configure failed"
 
 	#hack to link against libstdc++ for gcc3.x compatibility
