@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.83 2004/08/15 02:15:47 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.84 2004/08/17 19:26:24 agriffis Exp $
+
+  17 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  gentoo-dev-sources-2.6.8.ebuild:
+  add ~alpha keyword #60071
 
 *gentoo-dev-sources-2.6.8 (14 Aug 2004)
 
