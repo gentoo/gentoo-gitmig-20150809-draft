@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chkrootkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.14 2003/10/05 11:02:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.15 2003/10/14 22:49:57 zul Exp $
+
+  14 Oct 2003; Chuck Short <zul@gentoo.org> chkrootkit-0.42b.ebuild:
+  Added ~ia64 to keywords.
 
 *chkrootkit-0.42b (06 Oct 2003)
 
