@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/gtk-cpuspeedy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/gtk-cpuspeedy/ChangeLog,v 1.2 2005/03/15 16:35:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/gtk-cpuspeedy/ChangeLog,v 1.3 2005/03/15 17:44:05 ciaranm Exp $
+
+  15 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  gtk-cpuspeedy-0.3.0.ebuild:
+  Dependency update: sys-apps/cpuspeedy -> sys-power/cpuspeedy.
 
 *gtk-cpuspeedy-0.3.0 (14 Mar 2005)
 
