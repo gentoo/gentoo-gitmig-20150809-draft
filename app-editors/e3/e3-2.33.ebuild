@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 #
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.33.ebuild,v 1.5 2002/09/21 23:28:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.33.ebuild,v 1.6 2002/09/25 20:09:16 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Super Tiny Editor with wordstar, vi, and emacs key bindings"
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.sax.de/~adlibit"
 DEPEND="dev-lang/nasm"
 RDEPEND="sys-apps/sed"
 
+RESTRICT="nostrip"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc -sparc -sparc64"
