@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 642011b0a08fb8702cb283697722040e wxchecksums-1.1.2.ebuild 1074
+MD5 d50f3c50c949725320e5589968ca9e36 ChangeLog 886
 MD5 4fca175f747a090fd2b7b8ce22fbc06d metadata.xml 162
-MD5 c052d1026e32c5cbdb6cddc588e02e8d ChangeLog 886
-MD5 be9238eb8944e5b0ad3d2f6cd66107ea wxchecksums-1.2.0.ebuild 1075
+MD5 c4acba2c51320e1b4741783c11810917 wxchecksums-1.1.2.ebuild 1074
+MD5 27b71951158ab5337bbc3e1d41b919be wxchecksums-1.2.0.ebuild 1075
 MD5 3ff5120527e3f2c0509b5f774b672040 files/digest-wxchecksums-1.1.2 74
 MD5 d4970c31367a081205a20a7ed4b9a636 files/digest-wxchecksums-1.2.0 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBwGf2z2gxt1z4IGYRAv4qAKDnpeKhpA99D7ek1sFkiYdA0v4bkwCfW19b
-U8CqdM/ftJ6tfcxWYVYO6h4=
-=x9DK
------END PGP SIGNATURE-----
