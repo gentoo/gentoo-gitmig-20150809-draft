@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.2 2004/01/25 03:15:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.3 2004/02/12 04:00:25 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -44,8 +44,8 @@ src_compile() {
 src_install () {
 	dodir /usr/sbin
 	make DESTDIR=${D} install || die
-	fperms 0755 /usr/sbin/traceroute
-	fowners root:root /usr/sbin/traceroute
+	fperms 4710 /usr/sbin/traceroute
+	fowners root:wheel /usr/sbin/traceroute
 
 	doman traceroute.8
 	dodoc CHANGES INSTALL
