@@ -15,7 +15,7 @@ src_compile() {
   try ./configure --prefix=/usr
 
   # pmake kept wanting to interpret ${CFLAGS} as params
-  try make CFLAGS=\"${CFLAGS} -Wall\" all
+  try make CFLAGS="${CFLAGS} -Wall" all
 
 }
 
