@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.196 2005/02/27 20:21:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.197 2005/02/27 22:48:45 greg_g Exp $
+
+*kdelibs-3.4.0_rc1-r1 (27 Feb 2005)
+
+  27 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +kdelibs-3.4.0_rc1-r1.ebuild, -kdelibs-3.4.0_rc1.ebuild:
+  Add support for zeroconf. Cleanup.
 
   27 Feb 2005; Dan Armak <danarmak@gentoo.org> :
   Ebuild for 3.4.0 RC1.
