@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.8.ebuild,v 1.3 2004/09/09 18:14:29 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.8.ebuild,v 1.4 2004/10/31 22:40:02 kito Exp $
 
 DESCRIPTION="Multiple Image Networkgraphics lib (animated png's)"
 HOMEPAGE="http://www.libmng.com/"
@@ -8,7 +8,7 @@ SRC_URI="http://download.sourceforge.net/libmng/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~ppc-macos"
 IUSE=""
 
 RDEPEND=">=media-libs/jpeg-6b
