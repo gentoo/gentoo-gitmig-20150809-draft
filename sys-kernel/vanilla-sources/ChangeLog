@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.32 2004/06/24 23:01:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.33 2004/08/08 13:33:32 plasmaroo Exp $
+
+*vanilla-sources-2.4.27 (08 Aug 2004)
+
+  08 Aug 2004; <plasmaroo@gentoo.org> +vanilla-sources-2.4.27.ebuild:
+  Version bump. Marked stable on 'x86' due to the security upgrades within.
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   vanilla-sources-2.0.40.ebuild, vanilla-sources-2.2.26.ebuild:
