@@ -1,0 +1,12 @@
+diff -ruN src/tilp_plugin.c src2/tilp_plugin.c
+--- src/tilp_plugin.c	2003-08-27 14:07:23.000000000 +0200
++++ src2/tilp_plugin.c	2004-03-24 20:56:40.000000000 +0100
+@@ -157,6 +157,8 @@
+ 			continue;
+ 		if (!strcmp(dirname, ".."))
+ 			continue;
++		if (!strcmp(dirname, ".keep"))
++			continue;
+ 
+ 		plugin_info = query_plugin(inst_paths.plugin_dir, dirname);
+ 		if (plugin_info == NULL)
