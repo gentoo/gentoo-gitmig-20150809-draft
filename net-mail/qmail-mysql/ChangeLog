@@ -1,6 +1,28 @@
 # ChangeLog for net-mail/qmail-mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/ChangeLog,v 1.2 2003/03/28 23:14:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/ChangeLog,v 1.3 2003/11/29 09:28:09 robbat2 Exp $
+
+*qmail-mysql-1.03-r13 (29 Nov 2003)
+
+  29 Nov 2003; Robin H. Johnson <robbat2@gentoo.org>
+  qmail-mysql-1.03-r13.ebuild, files/tcp.pop3.sample, files/tcp.qmqp.sample,
+  files/tcp.qmtp.sample, files/tcp.smtp.sample, files/1.03-r13/99qmail,
+  files/1.03-r13/conf-common, files/1.03-r13/conf-pop3d,
+  files/1.03-r13/conf-qmqpd, files/1.03-r13/conf-qmtpd,
+  files/1.03-r13/conf-smtpd, files/1.03-r13/config-sanity-check,
+  files/1.03-r13/dot_qmail, files/1.03-r13/errno.patch,
+  files/1.03-r13/maildir-quota-fix.patch, files/1.03-r13/mkservercert,
+  files/1.03-r13/qmail-control, files/1.03-r13/qmail-genrsacert.sh,
+  files/1.03-r13/qmail-smtpd-esmtp-size-gentoo.patch,
+  files/1.03-r13/qmail-smtpd-relay-reject.gentoo.patch, files/1.03-r13/rc,
+  files/1.03-r13/run-qmailpop3d, files/1.03-r13/run-qmailpop3dlog,
+  files/1.03-r13/run-qmailqmqpd, files/1.03-r13/run-qmailqmqpdlog,
+  files/1.03-r13/run-qmailqmtpd, files/1.03-r13/run-qmailqmtpdlog,
+  files/1.03-r13/run-qmailsend, files/1.03-r13/run-qmailsendlog,
+  files/1.03-r13/run-qmailsmtpd, files/1.03-r13/run-qmailsmtpdlog,
+  files/1.03-r13/servercert.cnf, files/1.03-r13/smtp-auth-close3.patch:
+  new revision, major changes. now integerates -r13 of main qmail package. bug
+  #20899 fixed. package hardmasked for more testing
 
 *qmail-mysql-1.03 (05 Feb 2003)
 
