@@ -693,7 +693,6 @@ dev-libs/libmrproject
 >=app-office/mrproject-0.5.91
 >=app-office/gnumeric-1.1.3
 
->=dev-libs/libsigc++-1.1.0
 >=dev-python/pygtk-1.99.0
 >=app-arch/file-roller-1.106
 >=net-irc/xchat-1.9.1
