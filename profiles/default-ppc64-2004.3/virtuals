@@ -59,4 +59,5 @@ virtual/mailx          	mail-client/mailx
 virtual/xemacs		app-editors/xemacs
 virtual/w3m		www-client/w3m
 virtual/mailx           mail-client/mailx
-virtual/pdfviewer		app-text/xpdf
+virtual/pdfviewer	app-text/xpdf
+virtual/fam             app-admin/fam

@@ -60,3 +60,4 @@ virtual/xemacs		app-editors/xemacs
 virtual/w3m		www-client/w3a
 virtual/mailx           mail-client/mailx
 virtual/pdfviewer		app-text/xpdf
+virtual/fam             app-admin/fam
