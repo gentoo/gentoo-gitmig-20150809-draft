@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.308 2004/04/22 03:03:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.309 2004/04/22 05:49:22 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -295,9 +295,10 @@ sys-apps/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-devel/gcc:hardened - automatically create default PIE (position independent executables) and SSP (stack smashing protector) executables and libraries using a Gentoo Hardened specs file
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
-sys-devel/gcc:nof77 - Do not build f77 language
-sys-devel/gcc:nogcj - Do not build gcj (java compiler included with gcc package)
-sys-devel/gdb:noobjc - Do not build Objective C code language
+sys-devel/gcc:ada - Build support for the ada language
+sys-devel/gcc:f77 - Build support for the f77 language
+sys-devel/gcc:gcj - Do not build gcj (java compiler included with gcc package)
+sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
 sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
 sys-devel/oskit:oskit-noconf - Unpack sources to /usr/src but don't configure OSKit
