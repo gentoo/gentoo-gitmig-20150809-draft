@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r3.ebuild,v 1.6 2002/12/25 22:15:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r3.ebuild,v 1.7 2002/12/26 01:41:34 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -85,7 +85,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 
-	if [ "${WANT_GTK2}" != "yes" ]
+	if [ "`use gtk2`" -a "${WANT_GTK2}" != "yes" ]
 	then
 		echo
 		eerror "Due to the many bugs related with gtk+-2.x support"
@@ -598,6 +598,10 @@ src_install() {
 
 	# Move plugins dir
 	src_mv_plugins usr/lib/mozilla/plugins
+
+	# Update Google search plugin to use UTF8 charset ...
+	insinto /usr/lib/mozilla/searchplugins
+	doins ${FILESDIR}/google.src
 
 	# Fix icons to look the same everywhere
 	insinto /usr/lib/mozilla/icons

@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.76 2002/12/25 22:15:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.77 2002/12/26 01:41:34 azarah Exp $
+
+  26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
+
+  Update google search plugin, closing bug #10605.
+
+  Fix my braindead stuff up with the "WANT_GTK2" fix of yesterday.
 
   25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
 
