@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.253 2004/10/05 22:05:52 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.254 2004/10/08 03:55:53 rizzo Exp $
+
+*gaim-1.0.1 (07 Oct 2004)
+
+  07 Oct 2004; Don Seiler <rizzo@gentoo.org> +gaim-1.0.1.ebuild:
+  Version bump
 
   05 Oct 2004; Philip Walls <malverian@gentoo.org> gaim-1.0.0.ebuild:
   Only block on <x11-plugins/gaim-rhythmbox-${PV}
