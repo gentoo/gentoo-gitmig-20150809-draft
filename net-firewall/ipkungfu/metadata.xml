@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>weeve@gentoo.org</email>
+  <name>Jason Wever</name>
+</maintainer>
+<longdescription>
+	ipkungfu is a nice iptables firewall script
+</longdescription>
+</pkgmetadata>
