@@ -8,4 +8,4 @@ svga tcpd truetype zlib"
 
 ARCH="arm"
 COMPILER="gcc3"
-ACCEPT_KEYWORDS="x86 ~x86 arm"
+ACCEPT_KEYWORDS="arm"

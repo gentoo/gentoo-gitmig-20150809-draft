@@ -33,8 +33,8 @@
 
 !dev-lang/gpc
 *>=sys-apps/baselayout-1.7.9-r1
-*>=sys-apps/portage-2.0.26-r11
-*>=sys-devel/binutils-2.13.90.0.4
+*>=sys-apps/portage-2.0.27-r3
+*>=sys-devel/binutils-2.13.90.0.18
 *>=sys-devel/gcc-3.2.2
 *=sys-libs/glibc-2.2.5-r7
 =sys-kernel/linux-headers-2.4.19-r1
