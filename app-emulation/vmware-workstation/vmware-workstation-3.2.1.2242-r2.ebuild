@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r2.ebuild,v 1.7 2005/01/05 15:38:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r2.ebuild,v 1.8 2005/01/11 16:37:45 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
@@ -9,7 +9,7 @@
 inherit gcc eutils
 
 S=${WORKDIR}/vmware-distrib
-N26KernSupport="vmware-any-any-update84"
+ANY_ANY="vmware-any-any-update84"
 NP="VMware-workstation-3.2.1-2242"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
@@ -20,10 +20,10 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
 	http://vmware-heva.www.conxion.com/software/${NP}.tar.gz
 	http://vmware.wespe.de/software/${NP}.tar.gz
 	ftp://vmware.wespe.de/pub/software/${NP}.tar.gz
-	http://ftp.cvut.cz/vmware/${N26KernSupport}.tar.gz
-	http://ftp.cvut.cz/vmware/obsolete/${N26KernSupport}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/${N26KernSupport}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${N26KernSupport}.tar.gz
+	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
+	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
 	mirror://gentoo/vmware.png"
 
 LICENSE="vmware"
@@ -41,8 +41,8 @@ src_unpack() {
 	check_KV
 	unpack ${NP}.tar.gz
 	if [ "${KV:0:3}" == "2.6" ] || [ "${KV:0:3}" == "2.5" ] ; then
-		unpack ${N26KernSupport}.tar.gz
-		mv ${N26KernSupport}/*.tar ${S}/lib/modules/source/
+		unpack ${ANY_ANY}.tar.gz
+		mv ${ANY_ANY}/*.tar ${S}/lib/modules/source/
 	fi
 }
 
@@ -109,11 +109,9 @@ src_install() {
 	keepdir /etc/vmware/init.d/rc{0,1,2,3,4,5,6}.d
 
 	# A simple icon I made
-	dodir /opt/vmware/lib/icon
 	insinto /opt/vmware/lib/icon
 	doins ${DISTDIR}/vmware.png || die
-	insinto /usr/share/pixmaps
-	doins ${DISTDIR}/vmware.png || die
+	doicon ${DISTDIR}/vmware.png || die
 
 	make_desktop_entry vmware "VMWare Workstation" vmware.png
 
