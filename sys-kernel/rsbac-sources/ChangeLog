@@ -1,0 +1,9 @@
+# ChangeLog for sys-kernel/rsbac-sources
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.8 2004/06/26 20:54:14 kang Exp $
+
+*rsbac-sources-2.4.26 (24 Jun 2004)
+
+  24 Jun 2004; Guillaume Destuynder <kang@gentoo.org>:
+  Initial import.  Ebuild submitted by zhware <zhware@gentoo.org>
+  Added 1.2.3-1 security bugfixe from rsbac.org
