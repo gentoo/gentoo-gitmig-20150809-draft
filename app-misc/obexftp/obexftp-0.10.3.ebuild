@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/obexftp-0.10.3.ebuild,v 1.7 2004/10/05 13:34:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/obexftp-0.10.3.ebuild,v 1.8 2004/11/01 21:13:08 ticho Exp $
 
-DESCRIPTION="File transfer over OBEX for Siemens mobile phones"
+DESCRIPTION="File transfer over OBEX for mobile phones"
 SRC_URI="mirror://sourceforge/openobex/${P}.tar.gz"
 HOMEPAGE="http://triq.net/obex"
 RESTRICT="nomirror"
