@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/dvd+rw-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.13 2004/03/10 16:31:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.14 2004/03/19 08:51:27 aliz Exp $
 
   10 Mar 2004; <agriffis@gentoo.org> dvd+rw-tools-5.17.4.8.6.ebuild:
   stable on alpha and ia64
@@ -26,6 +26,7 @@
   Version bump.
 
 *dvd+rw-tools-5.16.4.8.5 (18 Jan 2004)
+*dvd+rw-tools-5.14.4.7.4 (18 Jan 2004)
 
   18 Jan 2004; Chuck Short <zul@gentoo.org> dvd+rw-tools-5.12.4.7.4.ebuild,
   dvd+rw-tools-5.13.4.7.4.ebuild, dvd+rw-tools-5.14.4.7.4.ebuild,
