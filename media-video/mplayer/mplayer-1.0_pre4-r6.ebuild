@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r6.ebuild,v 1.1 2004/07/23 03:53:46 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r6.ebuild,v 1.2 2004/07/23 05:12:11 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="3dfx 3dnow aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd edl encode esd fbdev gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx mpeg mythtv nas network nls oggvorbis opengl oss rtc samba sdl sse svga tga theora truetype v4l v4l2 xinerama X xmms xvid"
+IUSE="3dfx 3dnow aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd edl encode esd fbdev gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx mpeg mythtv nas network nls oggvorbis opengl oss rtc samba sdl sse svga tga theora truetype v4l v4l2 xinerama X xmms xvid gnome"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -125,6 +125,9 @@ src_unpack() {
 
 	# GCC 3.4 fixes
 	epatch ${FILESDIR}/mplayer-1.0_pre4-alsa-gcc34.patch
+
+	# bug #55936, patch from eradicator- fix caching problems.
+	epatch ${FILESDIR}/cachefill.patch
 
 	#Setup the matrox makefile
 	if use matrox; then

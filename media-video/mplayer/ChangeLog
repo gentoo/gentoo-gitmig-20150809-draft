@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.168 2004/07/23 03:53:46 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.169 2004/07/23 05:12:11 ferringb Exp $
+
+  23 Jul 2004; Brian Harring <ferringb@gentoo.org> mplayer-1.0_pre4-r6.ebuild,
+  mplayer-1.0_pre5-r1.ebuild, files/cachefill.patch:
+  Slipping eradicators cachefill patch in, bug #55936
 
 *mplayer-1.0_pre5-r1 (23 Jul 2004)
 

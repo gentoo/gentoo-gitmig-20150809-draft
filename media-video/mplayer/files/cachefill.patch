@@ -1,0 +1,135 @@
+diff -Naur MPlayer-1.0pre4.orig/cfg-common.h MPlayer-1.0pre4/cfg-common.h
+--- MPlayer-1.0pre4.orig/cfg-common.h	2004-04-26 01:53:41.000000000 -0700
++++ MPlayer-1.0pre4/cfg-common.h	2004-07-03 03:32:15.000000000 -0700
+@@ -10,8 +10,10 @@
+ // ------------------------- stream options --------------------
+ 
+ #ifdef USE_STREAM_CACHE
+-	{"cache", &stream_cache_size, CONF_TYPE_INT, CONF_RANGE, 4, 65536, NULL},
++	{"cache", &stream_cache_size, CONF_TYPE_INT, CONF_RANGE, 32, 262144, NULL},
+ 	{"nocache", &stream_cache_size, CONF_TYPE_FLAG, 0, 1, 0, NULL},
++	{"cache-min", &stream_cache_min_percent, CONF_TYPE_FLOAT, CONF_RANGE, 0, 99, NULL},
++	{"cache-prefill", &stream_cache_prefill_percent, CONF_TYPE_FLOAT, CONF_RANGE, 0, 99, NULL},
+ #else
+ 	{"cache", "MPlayer was compiled WITHOUT cache2 support\n", CONF_TYPE_PRINT, CONF_NOCFG, 0, 0, NULL},
+ #endif
+diff -Naur MPlayer-1.0pre4.orig/etc/example.conf MPlayer-1.0pre4/etc/example.conf
+--- MPlayer-1.0pre4.orig/etc/example.conf	2004-01-13 01:55:40.000000000 -0800
++++ MPlayer-1.0pre4/etc/example.conf	2004-07-03 03:32:15.000000000 -0700
+@@ -116,6 +116,8 @@
+ 			# etc)
+ 
+ cache		= 8192	# use 8Mb input cache by default
++cache_min	= 20.0  # Prefill 20% of the cache before initially playing
++cache_prefill	= 5.0   # Prefill 5% of the cache before restarting playback if it empties
+ 
+ # slang		= en	# DVD : display english subtitles if available
+ # alang		= en	# DVD : play english audio tracks if available
+diff -Naur MPlayer-1.0pre4.orig/libmpdemux/cache2.c MPlayer-1.0pre4/libmpdemux/cache2.c
+--- MPlayer-1.0pre4.orig/libmpdemux/cache2.c	2003-06-09 05:15:45.000000000 -0700
++++ MPlayer-1.0pre4/libmpdemux/cache2.c	2004-07-05 14:49:03.441387677 -0700
+@@ -33,6 +33,8 @@
+ int stream_fill_buffer(stream_t *s);
+ int stream_seek_long(stream_t *s,off_t pos);
+ 
++extern float stream_cache_min_percent;
++extern float stream_cache_prefill_percent;
+ extern int mp_input_check_interrupt(int time);
+ 
+ typedef struct {
+@@ -207,7 +209,7 @@
+ #endif
+   s->fill_limit=8*sector;
+   s->back_size=size/2;
+-  s->prefill=size/20; // default: 5%
++  s->prefill=size * stream_cache_prefill_percent / 100.0;
+   return s;
+ }
+ 
+@@ -265,7 +267,26 @@
+     // wait until cache is filled at least prefill_init %
+     mp_msg(MSGT_CACHE,MSGL_V,"CACHE_PRE_INIT: %d [%d] %d  pre:%d  eof:%d  \n",
+ 	s->min_filepos,s->read_filepos,s->max_filepos,min,s->eof);
+-    while(s->read_filepos<s->min_filepos || s->max_filepos-s->read_filepos<min){
++
++    // The buffer is determined to be full in cache_fill() when this condition is true:
++    // s->buffer_size - (s->max_filepos - s->read_filepos) < s->fill_limit
++    // So we need to make sure that min does not go over s->buffer_size - s->fill_limit
++    // ie this needs to be always be true:
++    //     s->buffer_size - (data_in_buffer) >= s->fill_limit
++    // ==> data_in_buffer <= s->buffer_size - s->fill_limit
++    //
++    // So we need to make sure that our min is safe with this condition or else we
++    // will wait forever for cache_fill() to get to min.
++    if (min > s->buffer_size - s->fill_limit) {
++        min = s->buffer_size - s->fill_limit;
++    }
++
++    // Keep waiting for the buffer to fill while:
++    // We still want to read more: (s->max_filepos - s->read_filepos < min) || (s->read_filepos < s->min_filepos)
++    // There is data to read in the file: (!s->eof)
++    while( (s->max_filepos - s->read_filepos < min) || 
++           (s->read_filepos < s->min_filepos)) {
++
+ 	mp_msg(MSGT_CACHE,MSGL_STATUS,"\rCache fill: %5.2f%% (%d bytes)    ",
+ 	    100.0*(float)(s->max_filepos-s->read_filepos)/(float)(s->buffer_size),
+ 	    s->max_filepos-s->read_filepos
+diff -Naur MPlayer-1.0pre4.orig/libmpdemux/demuxer.c MPlayer-1.0pre4/libmpdemux/demuxer.c
+--- MPlayer-1.0pre4.orig/libmpdemux/demuxer.c	2004-04-17 09:46:40.000000000 -0700
++++ MPlayer-1.0pre4/libmpdemux/demuxer.c	2004-07-03 03:32:15.000000000 -0700
+@@ -1374,6 +1374,9 @@
+ 
+ extern int hr_mp3_seek;
+ 
++extern float stream_cache_min_percent;
++extern float stream_cache_prefill_percent;
++
+ demuxer_t* demux_open(stream_t *vs,int file_format,int audio_id,int video_id,int dvdsub_id,char* filename){
+   stream_t *as = NULL,*ss = NULL;
+   demuxer_t *vd,*ad = NULL,*sd = NULL;
+@@ -1386,8 +1389,8 @@
+       return NULL;
+     }
+     if(audio_stream_cache) {
+-      if(!stream_enable_cache(as,audio_stream_cache*1024,audio_stream_cache*1024/5,
+-			      audio_stream_cache*1024/20)) {
++      if(!stream_enable_cache(as,audio_stream_cache*1024,audio_stream_cache*1024*(stream_cache_min_percent / 100.0),
++			      audio_stream_cache*1024*(stream_cache_prefill_percent / 100.0))) {
+ 	free_stream(as);
+ 	mp_msg(MSGT_DEMUXER,MSGL_ERR,"Can't enable audio stream cache\n");
+ 	return NULL;
+diff -Naur MPlayer-1.0pre4.orig/mencoder.c MPlayer-1.0pre4/mencoder.c
+--- MPlayer-1.0pre4.orig/mencoder.c	2004-04-17 09:46:40.000000000 -0700
++++ MPlayer-1.0pre4/mencoder.c	2004-07-03 03:32:15.000000000 -0700
+@@ -100,6 +100,9 @@
+ int stream_cache_size=-1;
+ #ifdef USE_STREAM_CACHE
+ extern int cache_fill_status;
++
++float stream_cache_min_percent=20.0;
++float stream_cache_prefill_percent=5.0;
+ #else
+ #define cache_fill_status 0
+ #endif
+diff -Naur MPlayer-1.0pre4.orig/mplayer.c MPlayer-1.0pre4/mplayer.c
+--- MPlayer-1.0pre4.orig/mplayer.c	2004-04-26 14:15:13.000000000 -0700
++++ MPlayer-1.0pre4/mplayer.c	2004-07-03 03:32:15.000000000 -0700
+@@ -249,6 +249,9 @@
+        int stream_cache_size=-1;
+ #ifdef USE_STREAM_CACHE
+ extern int cache_fill_status;
++
++float stream_cache_min_percent=20.0;
++float stream_cache_prefill_percent=5.0;
+ #else
+ #define cache_fill_status 0
+ #endif
+@@ -1368,7 +1371,7 @@
+ #endif
+ if(stream_cache_size>0){
+   current_module="enable_cache";
+-  if(!stream_enable_cache(stream,stream_cache_size*1024,stream_cache_size*1024/5,stream_cache_size*1024/20))
++  if(!stream_enable_cache(stream,stream_cache_size*1024,stream_cache_size*1024*(stream_cache_min_percent / 100.0),stream_cache_size*1024*(stream_cache_prefill_percent / 100.0)))
+     if((eof = libmpdemux_was_interrupted(PT_NEXT_ENTRY))) goto goto_next_file;
+ }
+ 
