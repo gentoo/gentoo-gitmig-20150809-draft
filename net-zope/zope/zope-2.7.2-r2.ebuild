@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.2-r2.ebuild,v 1.4 2004/09/24 20:59:27 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.2-r2.ebuild,v 1.5 2004/09/26 09:51:15 radek Exp $
 
 inherit eutils
 
@@ -46,8 +46,7 @@ src_unpack() {
 }
 
 src_compile() {
-	#[cs] TODO: ZOPE_DIR should be something else....
-	./configure --ignore-largefile --prefix=${ZOPE_DIR} || die "Failed to configure."
+	./configure --ignore-largefile --prefix=. || die "Failed to configure."
 	emake || die "Failed to compile."
 }
 
@@ -81,10 +80,9 @@ src_install() {
 
 	make install PREFIX=${D}${ZSERVDIR}
 	rm -rf ${D}${ZSERVDIR}/doc
-	dosym ${DOCDESTTREE} ${D}${ZSERVDIR}/doc
+	dosym ../../share/doc/${PF} ${ZSERVDIR}/doc
 	# copy the init script skeleton to skel directory of our installation
 	skel=${D}${ZSERVDIR}/skel
-	dodir /etc/init.d
 	cp ${FILESDIR}/${PV}/zope.initd ${skel}/zope.initd
 }
 

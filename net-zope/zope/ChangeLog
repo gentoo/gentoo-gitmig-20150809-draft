@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.46 2004/09/24 20:59:27 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.47 2004/09/26 09:51:15 radek Exp $
+
+  26 Sep 2004; Radoslaw Stachowiak <radek@gentoo.org> zope-2.7.2-r2.ebuild:
+  fixed bug #65254, removed init.d dir creation, changed --prefix to .
 
   24 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>; zope-2.7.2-r2.ebuild:
   marked as stable on x86 and ppc
