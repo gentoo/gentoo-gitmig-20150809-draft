@@ -1,15 +1,20 @@
 # ChangeLog for net-www/liferea
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.23 2005/01/14 21:06:05 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.24 2005/01/20 20:46:06 citizen428 Exp $
 
- 03 Dec 2004; Sven Wegener <swegener@gentoo.org> :
-  Removed stray digests. Fixed broken Manifest.
+*liferea-0.9.0b (20 Jan 2005)
+
+  20 Jan 2005; Michael Kohl <citizen428@gentoo.org> +liferea-0.9.0b.ebuild:
+  Version bump; requested by Daniel Webert <rockoo@gmail.com> in bug #78032
 
 *liferea-0.9.0 (14 Jan 2005)
 
   14 Jan 2005; Michael Kohl <citizen428@gentoo.org> -liferea-0.6.1.ebuild,
   -liferea-0.6.2.ebuild, liferea-0.6.4b.ebuild, +liferea-0.9.0.ebuild:
   Version bump; marked 0.6.4b stable on x86; cleaned out older versions.
+
+  03 Dec 2004; Sven Wegener <swegener@gentoo.org> :
+  Removed stray digests. Fixed broken Manifest.
 
 *liferea-0.6.4b (02 Dec 2004)
 
