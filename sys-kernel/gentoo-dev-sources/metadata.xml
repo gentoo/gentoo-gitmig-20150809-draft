@@ -12,10 +12,6 @@
   <email>johnm@gentoo.org</email>
   <name>John Mylchreest</name>
 </maintainer>
-<maintainer>
-  <email>brad_mssw@gentoo.org</email>
-  <name>Brad House</name>
-</maintainer>
 
 <longdescription>
 These sources are the 2.6 release kernels patched for gentoo.
