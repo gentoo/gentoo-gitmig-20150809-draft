@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.3.ebuild,v 1.13 2004/09/27 11:33:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.1 2004/11/30 21:01:58 rac Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -52,12 +52,12 @@
 #
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
-IUSE="berkdb debug gdbm ithreads"
+IUSE="berkdb debug gdbm ithreads uclibc"
 
 inherit eutils flag-o-matic
 
 # Perl has problems compiling with -Os in your flags
-replace-flags "-Os" "-O2"
+use uclibc || replace-flags "-Os" "-O2"
 # This flag makes compiling crash in interesting ways
 filter-flags "-malign-double"
 
@@ -68,23 +68,24 @@ SHORT_PV="${PV%.*}"
 MY_P="perl-${PV/_rc/-RC}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
-SRC_URI="ftp://ftp.cpan.org/pub/CPAN/src/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.cpan.org/pub/CPAN/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.perl.org"
+SLOT="${PERLSLOT}"
+LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
+LICENSE="Artistic GPL-2"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~sh"
+
+# rac 2004.08.06
+
+# i am not kidding here. you will forkbomb yourself out of existence
+# because make check -n wants to make miniperl, which runs itself at
+# the very end to make sure it's working right. this behaves very
+# badly when you -n it, because it won't exist and will therefore try
+# to build itself again ad infinitum.
+
 RESTRICT="maketest"
 
-if [ "${PN}" = "libperl" ]
-then
-	SLOT="${PERLSLOT}"
-else
-	SLOT="0"
-fi
-
-LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
-
-LICENSE="Artistic GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 ~ppc64 s390"
-
-DEPEND="sys-apps/groff
+DEPEND="!uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-apps/portage-2.0.45-r4"
@@ -135,6 +136,15 @@ src_unpack() {
 	#   LIBPERL=libperl.so.${SLOT}.`echo ${PV} | cut -d. -f1,2`
 	#
 	cd ${S}; epatch ${FILESDIR}/${P}-create-libperl-soname.patch
+
+	# uclibc support - dragonheart 2004.06.16
+	cd ${S}; epatch ${FILESDIR}/${P}-uclibc.patch
+
+	# Configure makes an unwarranted assumption that /bin/ksh is a
+	# good shell. This patch makes it revert to using /bin/sh unless
+	# /bin/ksh really is executable. Should fix bug 42665.
+	# rac 2004.06.09
+	cd ${S}; epatch ${FILESDIR}/${P}-noksh.patch
 }
 
 src_compile() {
@@ -180,73 +190,31 @@ src_compile() {
 		myconf="${myconf} -Ud_longdbl"
 	fi
 
-	if [ "${PN}" = "libperl" ]
-	then
-		rm -f config.sh Policy.sh
+	rm -f config.sh Policy.sh
 
-		sh Configure -des \
-			-Darchname="${myarch}" \
-			-Dcccdlflags='-fPIC' \
-			-Dccdlflags='-rdynamic' \
-			-Dcc="${CC:-gcc}" \
-			-Dprefix='/usr' \
-			-Dvendorprefix='/usr' \
-			-Dsiteprefix='/usr' \
-			-Dlocincpth=' ' \
-			-Doptimize="${CFLAGS}" \
-			-Duselargefiles \
-			-Duseshrplib \
-			-Dman3ext='3pm' \
-			-Dlibperl="${LIBPERL}" \
-			-Dd_dosuid \
-			-Dd_semctl_semun \
-			-Dcf_by='Gentoo' \
-			-Ud_csh \
-			${myconf} || die
+	sh Configure -des \
+		-Darchname="${myarch}" \
+		-Dcccdlflags='-fPIC' \
+		-Dccdlflags='-rdynamic' \
+		-Dcc="${CC:-gcc}" \
+		-Dprefix='/usr' \
+		-Dvendorprefix='/usr' \
+		-Dsiteprefix='/usr' \
+		-Dlocincpth=' ' \
+		-Doptimize="${CFLAGS}" \
+		-Duselargefiles \
+		-Duseshrplib \
+		-Dman3ext='3pm' \
+		-Dlibperl="${LIBPERL}" \
+		-Dd_dosuid \
+		-Dd_semctl_semun \
+		-Dcf_by='Gentoo' \
+		-Ud_csh \
+		${myconf} || die
 
-		emake -f Makefile depend || die "Couldn't make libperl.so depends"
-		emake -f Makefile ${LIBPERL} || die "Unable to make libperl.so"
-		mv ${LIBPERL} ${WORKDIR}
-	else
-cat > config.over <<EOF
-installprefix=${D}/usr
-installarchlib=\`echo \$installarchlib | sed "s!\$prefix!\$installprefix!"\`
-installbin=\`echo \$installbin | sed "s!\$prefix!\$installprefix!"\`
-installman1dir=\`echo \$installman1dir | sed "s!\$prefix!\$installprefix!"\`
-installman3dir=\`echo \$installman3dir | sed "s!\$prefix!\$installprefix!"\`
-installman1dir=\`echo \$installman1dir | sed "s!/share/share/!/share/!"\`
-installman3dir=\`echo \$installman3dir | sed "s!/share/share/!/share/!"\`
-installman1dir=\`echo \$installman1dir | sed "s!/usr/man/!/usr/share/man/!"\`
-installman3dir=\`echo \$installman3dir | sed "s!/usr/man/!/usr/share/man/!"\`
-man1ext=1
-man3ext=3pm
-installprivlib=\`echo \$installprivlib | sed "s!\$prefix!\$installprefix!"\`
-installscript=\`echo \$installscript | sed "s!\$prefix!\$installprefix!"\`
-installsitelib=\`echo \$installsitelib | sed "s!\$prefix!\$installprefix!"\`
-installsitearch=\`echo \$installsitearch | sed "s!\$prefix!\$installprefix!"\`
-EOF
-sleep 10
-		sh Configure -des \
-			-Darchname="${myarch}" \
-			-Dcc="${CC:-gcc}" \
-			-Dprefix='/usr' \
-			-Dvendorprefix='/usr' \
-			-Dsiteprefix='/usr' \
-			-Dlocincpth=' ' \
-			-Doptimize="${CFLAGS}" \
-			-Duselargefiles \
-			-Dd_dosuid \
-			-Dd_semctl_semun \
-			-Dscriptdir=/usr/bin \
-			-Dman3ext='3pm' \
-			-Dcf_by='Gentoo' \
-			-Ud_csh \
-			${myconf} || die "Unable to configure"
-
-		MAKEOPTS="${MAKEOPTS} -j1" emake || die "Unable to make"
-
-		emake -i test CCDLFLAGS=
-	fi
+	emake -j1 -f Makefile depend || die "Couldn't make libperl.so depends"
+	emake -j1 -f Makefile ${LIBPERL} || die "Unable to make libperl.so"
+	mv ${LIBPERL} ${WORKDIR}
 }
 
 src_install() {
