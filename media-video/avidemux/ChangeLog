@@ -1,13 +1,21 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.6 2003/01/09 22:46:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.7 2003/01/20 22:19:39 mholzer Exp $
+
+*avidemux-0.9-pre30 (20 Jan 2003)
+
+  20 Jan 2003; Martin Holzer <mholzer@gentoo.org> avidemux-0.9_pre30.ebuild
+  files/digest-avidemux-0.9_pre30 files/ASM_vidDeintAsm.cpp.diff.gz 
+  files/gui_filter.diff.gz ChangeLog : 
+  Version bumped. Thx for ebuild to marc.hildebrand@t-online.de submitted in 
+  #14174.
 
 *avidemux-0.9-pre28 (09 Jan 2003)
 
   09 Jan 2003; Martin Holzer <mholzer@gentoo.org> avidemux-0.9_pre28.ebuild
   files/digest-avidemux-0.9_pre28 ChangeLog :
-  Version bumped. Thx for ebuild to marc.hildebrand@t-online.de submitted in #13300
-  Including now fix to compile with -O3
+  Version bumped. Thx for ebuild to marc.hildebrand@t-online.de submitted in
+  #13300. Including now fix to compile with -O3
 
 *avidemux-0.9-pre26 (08 Jan 2003)
 

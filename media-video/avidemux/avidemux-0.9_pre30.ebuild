@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9_pre26.ebuild,v 1.3 2003/01/20 22:19:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9_pre30.ebuild,v 1.1 2003/01/20 22:19:39 mholzer Exp $
 
 inherit eutils
 
@@ -11,25 +11,28 @@ SRC_URI="http://fixounet.free.fr/avidemux/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 S="${WORKDIR}/${MY_P}"
 
 DEPEND="virtual/x11
-	>=media-sound/mad-0.14.2b-r1
-	>=media-sound/lame-3.92
+	>=media-sound/mad-0.14.2b-r2
+	>=media-sound/lame-3.93.1
 	<=media-sound/esound-0.2.29
 	>=media-libs/libmpeg3-1.5-r1
 	>=media-libs/a52dec-0.7.4
-	>=media-libs/divx4linux-20020418
-	>=media-libs/freetype-2.1.2
-	>=x11-libs/gtk+-1.2.10-r8
-	>=media-video/mjpegtools-1.6.0-r3"
+	>=media-libs/divx4linux-20020418-r1
+	>=x11-libs/gtk+-1.2.10-r9
+	>=media-video/mjpegtools-1.6.0-r5"
 
 src_unpack() {
-	unpack ${A} 
+
+	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/ADM_vidFont.cpp.diff.gz
+	ls -la
+	epatch ${FILESDIR}/ASM_vidDeintAsm.cpp.diff.gz 
+	epatch ${FILESDIR}/gui_filter.diff.gz 
+
 }
 
 src_compile() {
@@ -37,9 +40,7 @@ src_compile() {
 	emake || die
 }
 
- src_install() {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog History README TODO
 }
-
-
