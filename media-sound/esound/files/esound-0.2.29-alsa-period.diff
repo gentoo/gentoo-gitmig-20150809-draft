@@ -1,0 +1,17 @@
+--- audio_alsa09.c-dist	2002-11-29 17:19:32.000000000 +0100
++++ audio_alsa09.c	2002-11-29 17:20:47.000000000 +0100
+@@ -168,6 +168,14 @@
+ 		return handle;
+ 	}
+   
++	periods = 64;
++	err = snd_pcm_hw_params_set_periods_max(handle, hwparams, &periods, 0);
++	if (err < 0) {
++		if (alsadbg)
++			fprintf(stderr, "%s\n", snd_strerror(err));
++		alsaerr = -1;
++		return handle;
++	}
+   
+ 	err = snd_pcm_hw_params_set_buffer_size_near(handle, hwparams, BUFFERSIZE); 
+ 	if (err < 0) { 
