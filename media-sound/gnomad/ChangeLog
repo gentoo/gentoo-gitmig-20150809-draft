@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnomad
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/ChangeLog,v 1.10 2004/06/25 00:01:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/ChangeLog,v 1.11 2004/07/14 06:54:52 eradicator Exp $
+
+  13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gnomad-2.4.4.ebuild:
+  -sparc
 
   24 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> gnomad-2.4.4.ebuild:
   Stable x86. Added ~amd64.
