@@ -4,6 +4,17 @@
 addwrite /usr/lib64/conftest
 addwrite /usr/lib64/cf
 
+# oh goodie, yet ANOTHER sandbox bug!!!! >:|
+# without portage 2.0.51 and the following entries, at least dbus will spew
+# sandbox violations like mad with python in lib64.
+addpredict /usr/lib64/python2.0/
+addpredict /usr/lib64/python2.1/
+addpredict /usr/lib64/python2.2/
+addpredict /usr/lib64/python2.3/
+addpredict /usr/lib64/python2.4/
+addpredict /usr/lib64/python2.5/
+addpredict /usr/lib64/python3.0/
+
 
 # currently theoretical multilib stuff only available if using portage 2.0.51
 CHOST32="i686-pc-linux-gnu"
