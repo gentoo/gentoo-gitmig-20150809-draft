@@ -1,13 +1,14 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.49 2003/10/16 04:11:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.50 2003/10/16 04:42:56 drobbins Exp $
 
 *nvidia-kernel-1.0.4499 (15 Oct 2003)
 
-  15 Oct 2003; Daniel Robbins <drobbins@gentoo.org>: nvidia-kernel-1.0.4499.ebuild:
-  New version of the ebuild for AMD64 systems. Thanks to Kris Kersey and others for
-  working on this. See bug #30799. This ebuild does need some testing; adding it so
-  that it can be tested.
+  15 Oct 2003; Daniel Robbins <drobbins@gentoo.org>:
+  nvidia-kernel-1.0.4499.ebuild: New version of the ebuild for AMD64 systems.
+  Thanks to Kris Kersey, James Jones and others for working on this. See bug
+  #30799. This ebuild does need some testing; adding it so that it can be
+  tested.
 
 20 Sep 2003; Martin Schlemmer <azarah@gentoo.org>
   nvidia-kernel-1.0.4496-r3.ebuild:
