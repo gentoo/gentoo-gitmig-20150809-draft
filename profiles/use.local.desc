@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.884 2005/01/22 18:28:11 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.885 2005/01/22 18:33:43 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -114,6 +114,7 @@ app-text/xpdf:nodrm - Disable the drm feature decoder.
 app-text/xpdf:nomotif - Disable motif in xpdf
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 dev-cpp/sptk:fltk - Enable FLTK support
+dev-db/c-jdbc:examples - Install example source code
 dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/hk_classes:sqlite3 - Enable sqlite3 plugin.
 dev-db/mysql:cluster - Add support for NDB clustering
