@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.348 2004/11/14 14:18:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.349 2004/11/17 15:26:34 vapier Exp $
+
+*gcc-3.3.5 (17 Nov 2004)
+
+  17 Nov 2004; Mike Frysinger <vapier@gentoo.org> +gcc-3.3.5.ebuild:
+  Version bump.
 
   14 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Added missing ? after !build in PDEPEND.

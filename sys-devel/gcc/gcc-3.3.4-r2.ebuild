@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r2.ebuild,v 1.5 2004/11/13 05:54:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r2.ebuild,v 1.6 2004/11/17 15:26:34 vapier Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -128,26 +128,19 @@ fi
 # else bootstap will break.
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
-DEPEND="virtual/libc
-	!uclibc? ( !nptl? ( >=sys-libs/glibc-2.3.2-r3 ) )
-	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.2-r9 ) )
-	( !sys-devel/hardened-gcc )
+RDEPEND="virtual/libc
+	>=sys-devel/gcc-config-1.3.6
+	>=sys-libs/zlib-1.1.4
+	!sys-devel/hardened-gcc
+	!uclibc? ( >=sys-libs/glibc-2.3.2-r9 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
-	>=sys-devel/gcc-config-1.3.6
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
 	sparc? ( hardened? ( >=sys-libs/glibc-2.3.3.20040420 ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
-
-RDEPEND="virtual/libc
-	!uclibc? ( !nptl? ( >=sys-libs/glibc-2.3.2-r3 ) )
-	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.2-r9 ) )
-	>=sys-devel/gcc-config-1.3.1
-	>=sys-libs/zlib-1.1.4
-	>=sys-apps/texinfo-4.2-r4
-	!build? ( >=sys-libs/ncurses-5.2-r2 )"
-
+DEPEND="${RDEPEND}
+	>=sys-apps/texinfo-4.2-r4"
 PDEPEND="sys-devel/gcc-config"
 
 
