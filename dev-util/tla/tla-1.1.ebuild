@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.1.ebuild,v 1.1 2004/01/12 18:02:45 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.1.ebuild,v 1.2 2004/02/21 01:08:17 mr_bones_ Exp $
 
 MY_P="${P/_/}"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://arch.quackerhead.com/~lord/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha ppc mips hppa sparc arm"
+KEYWORDS="x86 alpha ppc mips hppa sparc"
 
 DEPEND="sys-apps/coreutils
 	sys-apps/diffutils
