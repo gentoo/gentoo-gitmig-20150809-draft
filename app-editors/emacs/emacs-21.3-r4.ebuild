@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r4.ebuild,v 1.6 2004/09/29 15:41:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r4.ebuild,v 1.7 2004/10/03 11:52:20 usata Exp $
 
 inherit flag-o-matic eutils alternatives gcc
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/emacs/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="21"
 KEYWORDS="~x86 ~ppc ~sparc -alpha ~arm -hppa ~amd64 -ia64 ~s390 ppc64"
-IUSE="X nls motif leim gnome Xaw3d lesstif"
+IUSE="X Xaw3d gnome leim lesstif motif nls nosendmail"
 
 RDEPEND="sys-libs/ncurses
 	sys-libs/gdbm
@@ -30,14 +30,15 @@ RDEPEND="sys-libs/ncurses
 		)
 	)
 	nls? ( sys-devel/gettext )
-	!nosendmail ( virtual/mta )"
+	!nosendmail ( virtual/mta )
+	>=sys-apps/portage-2.0.51_rc1"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 
 PROVIDE="virtual/emacs virtual/editor"
 SANDBOX_DISABLED="1"
 
-DFILE=emacs.desktop
+DFILE=emacs-${SLOT}.desktop
 
 src_compile() {
 
@@ -52,6 +53,7 @@ src_compile() {
 	epatch ${FILESDIR}/${P}-amd64.patch
 	epatch ${FILESDIR}/${P}-hppa.patch
 	use ppc64 && epatch ${FILESDIR}/${P}-ppc64.patch
+	epatch ${FILESDIR}/emacs-subdirs-el-gentoo.diff
 
 	export WANT_AUTOCONF=2.1
 	autoconf
@@ -87,19 +89,26 @@ src_compile() {
 src_install() {
 	einstall || die
 	for i in ${D}/usr/bin/* ; do
-		mv ${i} ${i}-${PV}
+		mv ${i} ${i}-${SLOT}
 	done
-	mv ${D}/usr/bin/emacs-${PV}{-${PV},}
+	mv ${D}/usr/bin/emacs-{${PV}-,}${SLOT}
 
 	einfo "Fixing info documentation..."
-	rm -f ${D}/usr/share/info/dir
+	mkdir ${T}/emacs-${SLOT}
+	mv ${D}/usr/share/info/dir ${T}
 	for i in ${D}/usr/share/info/*
 	do
-		mv ${i%.info} $i.info
+		mv ${i} ${T}/emacs-${SLOT}/${i##*/}.info
+		gzip -9 ${T}/emacs-${SLOT}/${i##*/}.info
 	done
+	mv ${T}/emacs-${SLOT} ${D}/usr/share/info
+	mv ${T}/dir ${D}/usr/share/info/emacs-${SLOT}
 
+	newenvd ${FILESDIR}/60emacs-${SLOT}.envd 60emacs-${SLOT}
+
+	einfo "Fixing manpages..."
 	for m in ${D}/usr/share/man/man1/* ; do
-		mv ${m} ${m/.1/-${PV}.1}
+		mv ${m} ${m/.1/-${SLOT}.1}
 	done
 
 	einfo "Fixing permissions..."
@@ -119,7 +128,7 @@ src_install() {
 update-alternatives() {
 	for i in emacs emacsclient etags ctags b2m ebrowse \
 		rcs-checkin grep-changelog ; do
-		alternatives_auto_makesym "/usr/bin/$i" "/usr/bin/$i-21.*"
+		alternatives_auto_makesym "/usr/bin/$i" "/usr/bin/$i-21*"
 	done
 }
 
