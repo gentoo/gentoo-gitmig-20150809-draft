@@ -1,8 +1,9 @@
 MD5 979bed91d308223958ffe9c988d744ad uw-imap-2002e-r2.ebuild 3108
 MD5 7f6b3d166deb9a5536e6bb3ed0cdb03c uw-imap-2002e.ebuild 2932
 MD5 3c8b9095f4bd5afcd95c93a076635c56 uw-imap-2002e-r1.ebuild 3093
+MD5 dd0e6852e53192074d9defc73d5c6bba uw-imap-2002e-r3.ebuild 3353
 MD5 8dd3c14bf6b644035b66eb851612386e uw-imap-2002d-r1.ebuild 2935
-MD5 18887a3385fdb2eb801e7d3dd95677be ChangeLog 5164
+MD5 402b4278de8ab11ef2ff13ab0273e802 ChangeLog 5242
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 e4d5b81145aa085b4e36d86e6318dac1 uw-imap-2002d.ebuild 2586
 MD5 506e7347cac698714cf5cd60eca761ba files/uw-ipop2.xinetd 563
@@ -17,3 +18,4 @@ MD5 f9441b5a20dd2477f12e0b0f04e2748d files/uw-imap.pam 243
 MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-uw-imap-2002d-r1 62
 MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-uw-imap-2002e-r1 62
 MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-uw-imap-2002e-r2 62
+MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-uw-imap-2002e-r3 62

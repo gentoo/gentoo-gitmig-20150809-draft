@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.31 2004/07/01 22:36:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.32 2004/07/15 22:20:22 robbat2 Exp $
+
+  15 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> :
+  bug #56917, pic stuff.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   uw-imap-2002d-r1.ebuild, uw-imap-2002d.ebuild, uw-imap-2002e-r1.ebuild,
