@@ -1,6 +1,86 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.9 2003/03/08 21:09:35 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.10 2003/03/24 22:55:40 livewire Exp $
+
+*wolk-sources-4.0s-rc4
+
+  24 March 2003; Bob Johnson <livewire@gentoo.org>:
+
+	Changelog from v4.0s-rc3 -> v4.0s-rc4
+	-     "reallyquiet" boot option to shut up all console log level output
+	-     This is important!
+               		Use a sched_yield that scales well by default, this should
+               		help with JVM or applications with huge lock contention in 
+               		the current libpthread, but it will hurt interactivity
+              	 	of those apps if there's some background load. For OpenOffice
+              	       and/or KDE set the sysctl back to 0, you don't mind if
+              	   	sched_yield doesn't allow the colliding-workloads to scale
+        	       well. The scale-behaviour is also the preferred one for all
+        	       sched_yield usages in the kernel. Over time nothing should call
+       	       	       sched_yield() anymore, this is an hack for now.
+	-     "local users can obtain full privileges" exploit (CAN-2003-0127)
+	-      some rmap VM merge errors in v4.0s-pre releases
+	-      annoying bug where opening a new xterm/aterm/$whatever term will
+        	      pause a video playing for a second
+	-      annoying bug where calling "mailq from sendmail" will also pause
+        	      a video playing for a second
+	-      Error out for the case of a gcc-2.96 compiler with
+	              CONFIG_FRAME_POINTER set. It generates seriously incorrect code.
+	-      missing cli() in isdn_net.c
+	-      procfs memory leak
+	-      e100 network driver memory leak
+	-      Aironet 4500 Pcmcia driver memory leak
+	-      drivers/usb/hub.c memory leak
+	-      emu10k1 memory leak
+	-      Internet PhoneJACK driver memory leak
+	-      Windows Logical Disk Manager partition handler memory leak
+	-      Specialix SX series cards driver memory leak
+	-      ircomm_core memory leak
+	-      i2o_core.c memory leak
+	-      dpt_i2o.c fix for possibly memory corruption on reset timeout
+	-      Essential RoadRunner HIPPI board driver memory leak
+	-      drivers/scsi/cpqfcTSinit.c memory leak
+	-      802.1q vlan proc memory leak
+	-      IBM Hot Plug Controller Driver multiple memory leaks
+	-      UFS memory leak
+	-      rd_load_image() memory leak
+	-      bh_kmap_irq() breaks IDE with Preempt
+	-      another potential deadlock in ll_rw_block
+	-      gcc >= v3.3.1 inlining bugs
+	-      Toshiba keyboard sometimes send a key twice
+	-      reiserfs: Make balloc[] tails[] and hash[] in super.c static
+	-      reiserfs: gcc v3.3 compile fix
+	-      JFS: collision with blk-atomic
+	-      Ext2/3: noatime ignored for newly created inodes
+	-      anti-deadlock for the o1 scheduler that can otherwise send
+	              a cross IPI with irq disabled.
+	-      ACPI v2003-03-21
+	-      Systrace v1.1
+	-      rmap VM v15e
+                	- make reclaiming unused inodes more efficient
+                	- fix DRM memory leak
+                	- fix potential infinite loop in kswapd
+                	- clean up elevator.h (no IO scheduler in -rmap...)
+                	- page aging interval tuned on a per zone basis, better
+        	          wakeup mechanism for sudden memory pressure
+	-      CPU Frequency scaling v2.4.20-9
+	-      XFS v1.2-cvs as of 2003-03-19
+	-      kdb v4.0
+	-      Super FreeS/WAN v1.99.6 Final
+	-      grsecurity v1.99e Final
+	-      New Adaptec AIC7xxx/AIC79xx drivers v2003-03-18
+	-      ext3 htree code for 2.4.21-pre5 2nd update
+	-      Orlov ext2/ext3 block allocator code for 2.4.21-pre5 2nd update
+	-      from latest -AA: aio-18
+	-      from latest -AA: kgdb-7
+	-      Bonding v2.4.20-20030207
+	-      ALSA v0.9.0-rc4: because no one makes 0.9.1 Final patch, so ...
+	-      LowLatency: because after some extensive benchmarking I saw that
+        	      it is slower than the lowlatency fixes in -AA. LowLatency has
+        	      also a deadlock possibility for SMP machines, the fixes not!
+	-      remove  inode-highmem-2: because rmap has better/faster code now
+	-      removed iput_free(): because rmap has better/faster code now
+	-      replaced:LowLatency in favor of lowlatency fixes from latest -AA
 
 *wolk-sources-4.0s-rc2
 
