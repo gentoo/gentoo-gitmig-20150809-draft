@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-1.0.ebuild,v 1.1 2004/03/26 17:24:12 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-1.0.ebuild,v 1.2 2004/03/26 17:32:48 tantive Exp $
 
 DESCRIPTION="HPL - A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers"
 HOMEPAGE="http://www.netlib.org/benchmark/hpl/"
@@ -25,6 +25,9 @@ src_install() {
 	doman man/man3/*.3
 	dodoc INSTALL BUGS COPYRIGHT HISTORY README TUNING
 	dobin bin/gentoo_hpl_cblas_x86/xhpl
+	dohtml -r www/*
+	dolib lib/gentoo_hpl_cblas_x86/libhpl.a
+
 }
 
 pkg_postinstall() {

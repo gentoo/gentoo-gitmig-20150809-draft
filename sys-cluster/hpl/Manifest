@@ -1,5 +1,5 @@
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
 MD5 975b39e073039c95d3f67371a8dc90b5 ChangeLog 382
-MD5 4a57e8515dd4b399eb683caa4fe4e35f hpl-1.0.ebuild 1037
+MD5 3f9cc536177a0a4a511f438e87d95936 hpl-1.0.ebuild 1096
 MD5 56b70745bddaadc9125b94e1a92889e4 files/Make.gentoo_hpl_cblas_x86.diff.bz2 757
 MD5 6ba8acccaf6e3ca998fe7383c6765457 files/digest-hpl-1.0 52
