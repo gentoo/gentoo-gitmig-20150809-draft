@@ -1,0 +1,8 @@
+# ChangeLog for sci-electronics/gnetman
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.1 2005/01/02 02:15:06 plasmaroo Exp $
+
+*gnetman-0.0.1_pre20041222 (02 Jan 2005)
+
+  02 Jan 2005; <plasmaroo@gentoo.org> +gnetman-0.0.1_pre20041222.ebuild:
+  Initial commit.
