@@ -3,6 +3,7 @@ MD5 1b5d3ba04bfd349be5d290ce4acd84e5 arj-3.10g.ebuild 777
 MD5 72f807fdab35ab52d9f79b3cbacdaaa6 arj-3.10.18.ebuild 891
 MD5 3433beec3a8a3aaee764d90b4bbcdebd arj-3.10.21.ebuild 751
 MD5 456adf0cf466ca560f084a7431a20051 ChangeLog 1297
+MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 7c4c01b5654eb39a7be1799abaad4c2f files/digest-arj-3.10.18 63
 MD5 6c06d74438839e6880711dddb5efd036 files/digest-arj-3.10.20 63
 MD5 f51bf31b56b6e0f9191beb570b38502c files/digest-arj-3.10.21 63
