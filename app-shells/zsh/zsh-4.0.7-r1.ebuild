@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.7-r1.ebuild,v 1.1 2003/12/11 19:30:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.7-r1.ebuild,v 1.2 2004/01/03 18:22:36 usata Exp $
 
 inherit eutils
 
@@ -11,14 +11,14 @@ HOMEPAGE="http://www.zsh.org/"
 
 MYPATCH="${P/-/_}-18.diff"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.gz
-	 mirror://debian/pool/main/z/${PN}/${MYPATCH}.gz"
+	mirror://debian/pool/main/z/${PN}/${MYPATCH}.gz"
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ~ppc ~sparc"
 
-DEPEND="sys-apps/groff
-	ncurses? ( >=sys-libs/ncurses-5.1 )"
+DEPEND="${RDEPEND}
+	sys-apps/groff"
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.1 )"
 
 src_unpack() {

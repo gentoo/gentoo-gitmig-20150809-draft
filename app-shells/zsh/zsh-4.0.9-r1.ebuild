@@ -1,35 +1,29 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r1.ebuild,v 1.4 2003/12/17 09:23:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r1.ebuild,v 1.1 2004/01/03 18:22:36 usata Exp $
 
-inherit eutils
-
-IUSE="cjk maildir ncurses static"
+IUSE="maildir ncurses static doc cjk"
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
+	doc? ( ftp://ftp.zsh.org/pub/${P}-doc.tar.bz2 )
 	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.2.patch.gz )"
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="x86 alpha ppc sparc"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 
-DEPEND="sys-apps/groff
-	>=dev-libs/libpcre-3.9
-	>=sys-apps/sed-4
-	sys-libs/libcap
-	ncurses? ( >=sys-libs/ncurses-5.1 )"
-RDEPEND=">=dev-libs/libpcre-3.9
-	sys-libs/libcap
-	ncurses? ( >=sys-libs/ncurses-5.1 )"
+DEPEND="virtual/glibc
+	sys-apps/groff
+	${RDEPEND}"
+RDEPEND="ncurses? ( >=sys-libs/ncurses-5.1 )"
 
 src_unpack() {
-	unpack ${P}.tar.bz2
+	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	use cjk && epatch ${DISTDIR}/${P}-euc-0.2.patch.gz
+	use cjk && epatch ../${P}-euc-0.2.patch
 	cd ${S}/Doc
 	ln -sf . man1
 	# fix zshall problem with soelim
@@ -59,12 +53,6 @@ src_compile() {
 		--enable-function-subdirs \
 		--enable-ldflags="${LDFLAGS}" \
 		${myconf} || die "configure failed"
-
-	if [ -n "`use static`" ] ; then
-		sed -i -e "s/link=no/link=static/g" \
-			-e "s/load=no/load=yes/g" config.modules
-	fi
-
 	# emake still b0rks
 	make || die "make failed"
 	#make check || die "make check failed"
@@ -82,7 +70,17 @@ src_install() {
 	insinto /etc/zsh
 	doins ${FILESDIR}/zprofile
 
+	keepdir /usr/share/zsh/site-functions
+	insinto /usr/share/zsh/site-functions
+	doins ${FILESDIR}/_portage
+
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
+
+	if [ "`use doc`" ] ; then
+		dohtml Doc/*
+		insinto /usr/share/doc/${PF}
+		doins Doc/zsh{.dvi,_us.ps,_a4.ps}
+	fi
 
 	docinto StartupFiles
 	dodoc StartupFiles/z*
@@ -95,14 +93,4 @@ pkg_preinst() {
 	if [ -f /etc/zsh/zshenv -a ! -f /etc/zsh/zprofile ]; then
 		mv /etc/zsh/zshenv /etc/zsh/zprofile
 	fi
-}
-
-pkg_postinst() {
-
-	# see Bug 26776
-	ewarn
-	ewarn "If you are upgrading from zsh-4.0.x you may need to"
-	ewarn "remove all your old ~/.zcompdump files in order to use"
-	ewarn "completion.  For more info see zcompsys manpage."
-	ewarn
 }
