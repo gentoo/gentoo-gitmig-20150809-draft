@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-1.8.4-r2.ebuild,v 1.2 2004/10/26 14:02:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-1.8.4-r2.ebuild,v 1.3 2004/10/31 11:07:35 hansmi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="A graphics library for fast image creation"
 HOMEPAGE="http://www.boutell.com/gd/"
 SRC_URI="http://www.boutell.com/gd/http/${P}.tar.gz"
 
-LICENSE="as-is | BSD"
+LICENSE="|| ( as-is BSD )"
 SLOT="0"
 KEYWORDS="x86 ppc sparc hppa amd64 alpha ia64"
 IUSE="X truetype freetype-version-1 jpeg"

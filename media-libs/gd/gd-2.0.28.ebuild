@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.28.ebuild,v 1.3 2004/10/19 14:35:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.28.ebuild,v 1.4 2004/10/31 11:07:35 hansmi Exp $
 
 inherit gnuconfig
 
@@ -8,7 +8,7 @@ DESCRIPTION="A graphics library for fast image creation"
 HOMEPAGE="http://www.boutell.com/gd/"
 SRC_URI="http://www.boutell.com/gd/http/${P}.tar.gz"
 
-LICENSE="as-is | BSD"
+LICENSE="|| ( as-is BSD )"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="jpeg png X truetype"
