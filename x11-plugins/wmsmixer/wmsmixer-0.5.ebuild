@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/wmsmixer-0.5.ebuild,v 1.5 2003/10/18 01:41:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/wmsmixer-0.5.ebuild,v 1.6 2003/12/10 23:26:52 pyrania Exp $
 
 DESCRIPTION="fork of wmmixer adding scrollwheel support and other features"
 HOMEPAGE="http://www.hibernaculum.net/wmsmixer.html"
@@ -27,7 +27,7 @@ src_compile() {
 
 src_install() {
 	insinto /usr/X11R6/bin
+	insopts -m0655
 	doins wmsmixer
-
 	dodoc README README.wmmixer
 }
