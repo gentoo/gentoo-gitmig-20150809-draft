@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-mmap
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mmap/ChangeLog,v 1.3 2003/12/26 00:14:50 weeve Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mmap/ChangeLog,v 1.4 2004/02/24 01:49:42 pylon Exp $
+
+  24 Feb 2004; Lars Weiler <pylon@gentoo.org> ruby-mmap-0.2.2.ebuild:
+  The same what Weeve said about sparc is also true for ppc.  So it's ~ppc.
 
   25 Dec 2003; Jason Wever <weeve@gentoo.org> ruby-mmap-0.2.2.ebuild:
   Changed sparc keyword to ~sparc as rdoc dependency had NO sparc keywords.
