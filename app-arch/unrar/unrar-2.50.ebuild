@@ -16,12 +16,11 @@ src_compile() {
 # Many many warnings... but seems to work okay  
   cd src
   mv Makefile Makefile.orig
-  sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
+  sed -e "s:-O2:${CFLAGS}:" -e "s:-Wall::" Makefile.orig > Makefile
   try make
 }
 
-src_install() {  
-  cd ${S}
+src_install() {
   dobin src/unrar
   dodoc readme.txt license.txt
 }
