@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.6 2003/11/06 17:51:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.7 2003/11/12 21:39:29 taviso Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -24,25 +24,17 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${P}
 
 src_unpack() {
-
-	# ive ported some updates to this s/key implementation from NetBSD to Linux. 
-	# some other changes i've made include
-	# 	- replaced many of the uses of strcat/strcpy to strncat/strncpy.
-	# 	- removed a lot of multi-line string literals in preparation of gcc3.3.
-	# 	- removed some of the crazier syntax, like casting all function calls to
-	#		void, whats up with that? :)
-	#	- killing rmd160 support
-	#	- removed skeyaudit and replaced it with a simple shell script 
-	#	- providing a shared library, so dynamic linking should be possible.
-	#	- using manpages from NetBSD, which are of better quality.
-	#	- be a little bit more reasonable about password security..do we really have
-	#		to force people to have digits in there?
-	#	- hacked in support for shadow passwords.
-	#	- added friendly warnings from cracklib.
-	#	- some other misc. stuff.
-	# (05 Nov 2003) -taviso@gentoo.org
 	unpack ${A}
+
+	# porting some updates to this skey implementation from the
+	# NetBSD project, some other updates and fixes, and the addition
+	# of some new features like shadow password and cracklib support.
+	# 	(05 Nov 2003) -taviso@gentoo.org
 	cd ${S}; epatch ${FILESDIR}/skey-1.1.5-gentoo.diff.gz
+
+	# glibc 2.2.x does not define LOGIN_NAME_MAX #33315
+	# 	(12 Nov 2003) -taviso@gentoo.org
+	cd ${S}; epatch ${FILESDIR}/skey-login_name_max.diff
 }
 
 src_compile() {
