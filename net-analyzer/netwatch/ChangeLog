@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netwatch
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwatch/ChangeLog,v 1.4 2004/06/24 22:12:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwatch/ChangeLog,v 1.5 2004/07/13 07:45:10 eldad Exp $
+
+  13 Jul 2004; Eldad Zack <eldad@gentoo.org> metadata.xml:
+  Updated metadata: netmon herd
 
   15 Apr 2004; Marius Mauch <genone@gentoo.org> netwatch-1.0b_pre3.ebuild:
   Emergency removal, breaks stable portage versions (see bug 47847).
