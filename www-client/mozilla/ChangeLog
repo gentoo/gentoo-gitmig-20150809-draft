@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.5 2005/03/23 21:42:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.6 2005/03/23 22:41:20 agriffis Exp $
+
+  23 Mar 2005; Aron Griffis <agriffis@gentoo.org> mozilla-1.7.6-r1.ebuild:
+  Don't force CC, CXX, LD on the make cmdline so that we can build with
+  USE=ldap. Defining for the invocation of ./configure is sufficient.
 
   23 Mar 2005; Aron Griffis <agriffis@gentoo.org> mozilla-1.7.5.ebuild,
   mozilla-1.7.5-r1.ebuild, mozilla-1.7.6-r1.ebuild:
