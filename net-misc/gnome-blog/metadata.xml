@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>gnome</herd>
-<maintainer><email>leonardop@gentoo.org</email></maintainer>
+  <herd>gnome</herd>
+  <maintainer>
+    <email>leonardop@gentoo.org</email>
+    <name>Leonardo Boshell</name>
+  </maintainer>
+  <longdescription>
+    Blogger software that features a clean interface, support for many
+    different kinds of blogs, spell checking, drag and drop
+    capabilities and more.
+  </longdescription>
 </pkgmetadata>
