@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r3.ebuild,v 1.1 2004/11/15 20:34:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r3.ebuild,v 1.2 2004/11/15 23:14:34 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher
 
@@ -53,6 +53,9 @@ src_unpack() {
 	# freetype; this enables freetype-2.1.8+ compat.
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
 	epatch ${FILESDIR}/mozilla-firefox-1.0-4ft2.patch
+
+	# patch to fix separate character on euro keyboards, bug 68995
+	epatch ${FILESDIR}/mozilla-firefox-1.0-kp_separator.patch
 }
 
 src_compile() {

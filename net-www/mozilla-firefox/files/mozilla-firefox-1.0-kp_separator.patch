@@ -1,0 +1,11 @@
+--- mozilla/widget/src/gtk2/nsGtkKeyUtils.cpp.original	2004-10-03 20:16:19.884311832 +0200
++++ mozilla/widget/src/gtk2/nsGtkKeyUtils.cpp	2004-10-03 20:16:31.562536472 +0200
+@@ -280,7 +280,7 @@
+             case GDK_KP_Add:
+                 return '+';
+             case GDK_KP_Separator:
+-                return '|';
++                return ',';
+             case GDK_KP_Subtract:
+                 return '-';
+             case GDK_KP_Decimal:

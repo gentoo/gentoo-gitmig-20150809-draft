@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.80 2004/11/15 20:34:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.81 2004/11/15 23:14:34 agriffis Exp $
+
+  15 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/mozilla-firefox-1.0-kp_separator.patch,
+  mozilla-firefox-1.0-r3.ebuild:
+  Add patch to correct KP_SEPARATOR on European keyboards #68683
 
 *mozilla-firefox-1.0-r3 (15 Nov 2004)
 
