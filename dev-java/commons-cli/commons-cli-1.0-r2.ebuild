@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r2.ebuild,v 1.1 2003/03/17 21:06:09 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r2.ebuild,v 1.2 2003/03/18 22:40:23 absinthe Exp $
 
-inherit java-commons
+inherit jakarta-commons
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="The CLI library provides a simple and easy to use API for working with the command line arguments and options."
@@ -18,7 +18,7 @@ IUSE="doc jikes junit"
 
 src_compile() {
 	patch -d ${S} -p0 < ${FILESDIR}/${PN}-${PV}-gentoo.diff || die "Could not correct version in build.xml"
-	java-commons_src_compile myconf make 
-	use doc && java-commons_src_compile makedoc
+	jakarta-commons_src_compile myconf make 
+	use doc && jakarta-commons_src_compile makedoc
 }
 

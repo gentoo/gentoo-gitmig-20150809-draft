@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-2.1-r3.ebuild,v 1.1 2003/03/18 01:51:25 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-2.1-r3.ebuild,v 1.2 2003/03/18 22:42:12 absinthe Exp $
 
-inherit java-commons
+inherit jakarta-commons
 
 S=${WORKDIR}/${PN}-${PV}-src
 DESCRIPTION="Jakarta-Commons Collections Component"
@@ -19,7 +19,7 @@ KEYWORDS="~x86"
 IUSE="doc jikes junit"
 
 src_compile() {
-	java-commons_src_compile myconf make 
-	use doc && java-commons_src_compile makedoc
+	jakarta-commons_src_compile myconf make 
+	use doc && jakarta-commons_src_compile makedoc
 }
 
