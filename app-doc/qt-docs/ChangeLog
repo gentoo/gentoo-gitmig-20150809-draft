@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/qt-docs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/ChangeLog,v 1.5 2002/07/23 04:26:45 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/ChangeLog,v 1.6 2002/11/14 20:10:50 hannes Exp $
+
+*qt-docs-3.1.0 (14 Nov 2002)
+
+  14 Nov 2002; Hannes Mehnert <hannes@gentoo.org> qt-docs-3.1.0.ebuild:
+  version bump
 
   22 Jul 2002; Phil Bordelon <sunflare@gentoo.org> qt-docs-3.0.5.ebuild :
 
