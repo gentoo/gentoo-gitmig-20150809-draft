@@ -1,3 +1,5 @@
-MD5 3f25326b4a56d81f8683666a59dd54ef ChangeLog 372
-MD5 79fccba6fe2793e74aa3390a50ad3644 point2play-1.0.1.ebuild 1264
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-point2play-1.0.1 0
+MD5 6a380898d8f66db6f860302c36e42e92 files/digest-point2play-1.1 69
+MD5 c691b8ba57d1f25a164526ddf785b620 ChangeLog 479
+MD5 6fa5a6df7b58f55863250d0827ff2d9d point2play-1.0.1.ebuild 1261
+MD5 66b9f9d5fdb0630e0d5e0f1667fdc665 point2play-1.1.ebuild 826
