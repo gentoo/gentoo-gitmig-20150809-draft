@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.11.ebuild,v 1.5 2002/11/06 15:43:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.11.ebuild,v 1.6 2002/11/17 05:39:20 vapier Exp $
 
 DESCRIPTION="ted is an X-based rich text editor."
 HOMEPAGE="http://www.nllgg.nl/Ted"
@@ -11,11 +11,12 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND=">=x11-libs/openmotif-2.1.30
-		>=media-libs/tiff-3.5.7
-		>=media-libs/jpeg-6b
-		>=media-libs/libpng-1.2.3
-		>=media-libs/xpm-3.4k"
-S="${WORKDIR}/Ted-2.11"
+	>=media-libs/tiff-3.5.7
+	>=media-libs/jpeg-6b
+	>=media-libs/libpng-1.2.3
+	>=media-libs/xpm-3.4k"
+
+S="${WORKDIR}/Ted-${PV}"
 
 src_unpack() {
 	unpack ${A}
@@ -25,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S} || die "where are we?" $(pwd)
+	cd ${S} || die "where are we? `pwd`"
 
 	for dir in Ted tedPackage appFrame appUtil ind bitmap libreg; do
 		cd ${dir}
@@ -47,14 +48,14 @@ src_install() {
 	cd temp/pkg || die "Couldn't cd to package"
 	tar --use=gzip -xvf ../../work/Ted-2.11/tedPackage/Ted*.tar.gz || die "couldnt unpack tedPackage/Ted*.tar.gz"
 
-	mkdir -p ${D}/usr/share/Ted || die "mkdir Ted failed"
+	dodir /usr/share/Ted
 	cp -R temp/pkg/afm ${D}/usr/share/Ted/afm || die "couldnt cp temp/pkg/afm"
 	cp -R temp/pkg/ind ${D}/usr/share/Ted/ind || die "couldnt cp temp/pkg/ind"
 
 	exeinto /usr/bin
 	doexe temp/pkg/bin/* || die "couldnt doexe temp/pkg/bin/*"
 
-	mkdir -p ${D}/usr/share/doc/${P}
+	mkdir dodir /usr/share/doc/${P}
 	cp -R temp/pkg/Ted ${D}/usr/share/doc/${P} || die "couldnt cp temp/pkg/Ted"
 
 	rm -rf temp
