@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libctl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libctl/ChangeLog,v 1.5 2004/06/24 23:15:07 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libctl/ChangeLog,v 1.6 2004/09/30 00:16:45 swegener Exp $
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> libctl-2.2.ebuild:
   Adding IUSE

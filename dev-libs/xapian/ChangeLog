@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/xapian
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.7 2004/07/02 04:57:10 eradicator Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.8 2004/09/30 00:18:04 swegener Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> xapian-0.5.5.ebuild,
   xapian-0.7.5.ebuild:
