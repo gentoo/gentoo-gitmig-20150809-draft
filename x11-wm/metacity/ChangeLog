@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.47 2003/11/14 04:13:57 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.48 2003/11/15 03:06:26 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> metacity-2.6.2.ebuild:
+  Stable on ia64
 
   13 Nov 2003; Brad House <brad_mssw@gentoo.org> metacity-2.6.3.ebuild:
   fixes -fPIC bug it appears, marking stable on amd64
