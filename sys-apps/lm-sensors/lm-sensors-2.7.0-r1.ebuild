@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.7.0-r1.ebuild,v 1.7 2003/10/30 22:18:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.7.0-r1.ebuild,v 1.8 2003/11/21 16:56:49 mholzer Exp $
 
 inherit flag-o-matic
 
@@ -21,12 +21,7 @@ SLOT="${KV}"
 KEYWORDS="x86 amd64 -ppc -sparc"
 LICENSE="GPL-2"
 
-DEPEND="|| (
-	     >=sys-apps/i2c-2.7.0
-	     >=sys-kernel/gentoo-sources-2.4.20-r1
-	     >=sys-kernel/lolo-sources-2.4.20.1
-	     >=sys-kernel/xfs-sources-2.4.20_pre4
-	   )"
+DEPEND="~sys-apps/i2c-2.7.0"
 
 src_unpack() {
 	unpack ${A} || die
