@@ -1,7 +1,14 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.10 2002/06/14 13:43:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.11 2002/06/15 17:54:59 spider Exp $
 
+
+*wine-20020605-r2 (15 Jun 2002)
+  15 Jun 2002 ;Spider <spider@gentoo.org> wine-20020605-r2.ebuild :
+  the /etc/wine stuff wasn't installed so I fixed that (seems the source had moved into documentation/samples )
+
+
+  
 *wine-20020605-r1 (14 Jun 2002)
 
   14 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
