@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.11 2003/06/21 13:41:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.12 2003/06/25 23:48:54 liquidx Exp $
+
+*rpm2targz-9.0-r1 (26 Jun 2003)
+
+  26 Jun 2003; Alastair Tse <liquidx@gentoo.org> rpm2targz-9.0-r1.ebuild,
+  files/rpm2targz-9.0-bzip2.patch:
+  added patch to detect bzip2 files, thanks to Garen <garen@garen.net>.
+  (#23249)
 
   21 Jun 2003; Alastair Tse <liquidx@gentoo.org> rpm2targz-9.0.ebuild,
   files/rpm2targz-9.0-gentoo.patch:
