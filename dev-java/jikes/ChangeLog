@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.27 2004/10/06 14:43:56 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.28 2004/10/12 19:21:14 axxo Exp $
+
+*jikes-1.22-r1 (12 Oct 2004)
+
+  12 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +files/deprecated.patch,
+  +jikes-1.22-r1.ebuild:
+  upstream patch for
+  (http://oss.software.ibm.com/developerworks/bugs/?func=detailbug&bug_id=4058
+  &group_id=10) closes bug 66977,66840 (partly)
 
 *jikes-1.22 (06 Oct 2004)
 
