@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_ssh_agent/pam_ssh_agent-0.1.ebuild,v 1.1 2004/02/28 09:51:59 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_ssh_agent/pam_ssh_agent-0.1.ebuild,v 1.2 2004/03/01 08:14:48 mr_bones_ Exp $
 
 inherit gcc
 
