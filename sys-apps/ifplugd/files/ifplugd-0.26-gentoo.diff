@@ -18,7 +18,7 @@ diff -urN ifplugd-0.26.orig/src/ifplugd.c ifplugd-0.26/src/ifplugd.c
  
  char *interface = NULL;
 -char *run = SYSCONFDIR"/ifplugd/ifplugd.action";
-+char *run = SYSCONFDIR"/usr/sbin/ifplugd.action";
++char *run = "/usr/sbin/ifplugd.action";
  char *extra_arg = NULL;
  
  int polltime = 1,

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.13 2004/12/20 13:57:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.14 2004/12/22 11:36:13 ka0ttic Exp $
+
+  22 Dec 2004; Aaron Walker <ka0ttic@gentoo.org>
+  files/ifplugd-0.26-gentoo.diff:
+  Fix wrong path to ifplugd.action in gentoo patch; closes bug 75264.
 
 *ifplugd-0.26 (20 Dec 2004)
 
