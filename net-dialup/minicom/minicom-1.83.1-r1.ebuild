@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1-r1.ebuild,v 1.4 2002/07/17 22:16:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1-r1.ebuild,v 1.5 2002/07/17 22:16:52 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Serial Communication Program"
@@ -19,9 +19,9 @@ src_unpack() {
 	cd ${S}/src
 	cp Makefile Makefile.orig
 	sed -e "s:^FLAGS\t=.*$:FLAGS\t= -Wall -D_POSIX -D_SYSV -D_SELECT -pipe # -I/usr/include/ncurses ${CFLAGS}:" \
-		sed -e "s:^LFLAGS\t=.*$:LFLAGS\t= -s ${CFLAGS}:" \
-		sed -e "s:^CC\t=.*$:CC\t= gcc:" \
-		sed -e "s:^LIBDIR\t=.*$:LIBDIR\t= /etc/minicom:" \
+		-e "s:^LFLAGS\t=.*$:LFLAGS\t= -s ${CFLAGS}:" \
+		-e "s:^CC\t=.*$:CC\t= gcc:" \
+		-e "s:^LIBDIR\t=.*$:LIBDIR\t= /etc/minicom:" \
 			Makefile.orig > Makefile
 
 	cp dial.c dial.c.orig
