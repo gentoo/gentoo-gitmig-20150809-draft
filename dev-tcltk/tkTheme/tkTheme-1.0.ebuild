@@ -1,6 +1,6 @@
 # Copyright 2003 Arcady Genkin <agenkin@gentoo.org>.
 # Distributed under the terms of the GNU General Public License v2.
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0.ebuild,v 1.1 2003/02/01 22:17:08 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0.ebuild,v 1.2 2003/02/01 22:17:42 agenkin Exp $
 
 DESCRIPTION="Tcl/Tk Theming library."
 HOMEPAGE="http://www.xmission.com/~georgeps/Tk_Theme/other/"
@@ -17,10 +17,10 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 
-        unpack ${A}
-        cd ${S}
+	unpack ${A}
+	cd ${S}
 
-        patch -p 0 < ${FILESDIR}/${PV}-Makefile.in.diff || die
+	patch -p 0 < ${FILESDIR}/${PV}-Makefile.in.diff || die
 
 }
 
@@ -33,7 +33,7 @@ src_compile() {
 
 src_install() {
 
-        make DESTDIR=${D} install || die
-        dodoc AUTHORS ChangeLog INSTALL LICENSE README TODO
+	make DESTDIR=${D} install || die
+	dodoc AUTHORS ChangeLog INSTALL LICENSE README TODO
 
 }
