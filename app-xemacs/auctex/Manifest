@@ -1,0 +1,5 @@
+MD5 380903eda75c077105263947d119135f ChangeLog 564
+MD5 6ab2a495c3e91c7201151d53ba21a0cd auctex-1.32.ebuild 400
+MD5 208fe4b2258fb5a464edebbbf8b9d22f auctex-1.33.ebuild 400
+MD5 4774fb631eee5b5b2a09ffdd59737e39 files/digest-auctex-1.32 66
+MD5 dfce812b5812bba6949d3ddb54aa02e8 files/digest-auctex-1.33 66

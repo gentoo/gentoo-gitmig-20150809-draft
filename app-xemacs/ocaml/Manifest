@@ -1,0 +1,5 @@
+MD5 adf0612db87acaff8569cd9df842d6a2 ChangeLog 557
+MD5 8609448e6d065d5677d862a7e91a887e ocaml-0.03.ebuild 427
+MD5 abcc44c0806b9cfdd9f527b4e6ad57a4 ocaml-0.04.ebuild 427
+MD5 95f50e8b3df5134159be5c6d77564706 files/digest-ocaml-0.03 64
+MD5 5c1b647acc30700ab2a7a410ed868cb0 files/digest-ocaml-0.04 64

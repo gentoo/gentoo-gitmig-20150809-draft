@@ -1,0 +1,5 @@
+MD5 df88e9b4fa38de16369f39aae9cb9521 ChangeLog 557
+MD5 4b733b0de34daa7291cd0ba786aba376 sieve-1.10.ebuild 466
+MD5 9fdebf386e03f27698cd65fc481e0ac0 sieve-1.11.ebuild 466
+MD5 165ba78448c5a75f75469d5d32b9482a files/digest-sieve-1.10 64
+MD5 e6990d012b7921df526b3abdc1fad3ad files/digest-sieve-1.11 64

@@ -1,0 +1,5 @@
+MD5 db40494bbcec3dfed0f53a7c2a48244b ChangeLog 685
+MD5 61511a7e2e20d8180c99855773c93c0f dired-1.12.ebuild 416
+MD5 1293afe56600f26637b2b9cf41ff3bb2 dired-1.13.ebuild 416
+MD5 104215ca71116137bd5f2157c284c57f files/digest-dired-1.12 65
+MD5 f6ef61d4f5b90bd1fb0cac3359b9e942 files/digest-dired-1.13 65
