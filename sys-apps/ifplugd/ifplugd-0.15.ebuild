@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.15.ebuild,v 1.5 2004/06/30 17:24:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.15.ebuild,v 1.6 2004/07/15 01:47:49 agriffis Exp $
 
 DESCRIPTION="Brings up/down ethernet ports automatically with cable detection"
 HOMEPAGE="http://www.stud.uni-hamburg.de/users/lennart/projects/ifplugd"
@@ -10,8 +10,6 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 DEPEND="dev-libs/libdaemon"
-
-S=${WORKDIR}/${P}
 
 # Gentoo-provided scripts. Version is for the scripts, not ifplugd.
 INITSCRIPT=${FILESDIR}/gentoo-ifplugd-init-v2

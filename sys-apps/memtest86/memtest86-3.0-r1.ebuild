@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0-r1.ebuild,v 1.10 2004/06/30 20:49:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0-r1.ebuild,v 1.11 2004/07/15 01:49:00 agriffis Exp $
 
 inherit mount-boot
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A stand alone memory test for x86 computers"
 SRC_URI="http://www.memtest86.com/${P}.tar.gz"
 HOMEPAGE="http://www.memtest86.com/"

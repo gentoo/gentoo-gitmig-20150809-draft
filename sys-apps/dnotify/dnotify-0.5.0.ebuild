@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/dnotify-0.5.0.ebuild,v 1.14 2004/06/30 15:24:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/dnotify-0.5.0.ebuild,v 1.15 2004/07/15 01:44:26 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Execute a command when the contents of a directory change"
 SRC_URI="http://www.student.lu.se/~nbi98oli/src/dnotify-0.5.0.tar.gz"
 HOMEPAGE="http://www.student.lu.se/~nbi98oli/"

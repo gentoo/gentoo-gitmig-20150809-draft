@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-1.5-r1.ebuild,v 1.13 2004/06/30 15:07:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-1.5-r1.ebuild,v 1.14 2004/07/15 01:44:05 agriffis Exp $
 
 DESCRIPTION="Discover hardware and load the appropriate drivers for that hardware."
 HOMEPAGE="http://hackers.progeny.com/discover/"
@@ -11,8 +11,6 @@ KEYWORDS="x86 amd64 -sparc"
 IUSE=""
 DEPEND="app-arch/tar app-arch/gzip"
 RDEPEND="sys-apps/discover-data"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf --sbindir=/sbin || die "configure failed"

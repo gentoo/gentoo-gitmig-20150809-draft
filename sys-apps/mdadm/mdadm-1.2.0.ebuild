@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/mdadm-1.2.0.ebuild,v 1.7 2004/06/27 17:12:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/mdadm-1.2.0.ebuild,v 1.8 2004/07/15 01:48:38 agriffis Exp $
 
 DESCRIPTION="An extremely useful tool for running RAID systems - it can be used as a replacement for the raidtools, or as a supplement."
 HOMEPAGE="http://www.cse.unsw.edu.au/~neilb/source"
@@ -11,7 +11,6 @@ KEYWORDS="x86 amd64 alpha"
 IUSE="static"
 DEPEND=""
 RDEPEND=""
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${A}
