@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-ShinyMetal/etheme-ShinyMetal-0.16.7.ebuild,v 1.1 2004/05/11 07:14:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-ShinyMetal/etheme-ShinyMetal-0.16.7.ebuild,v 1.2 2004/05/11 18:43:25 mr_bones_ Exp $
 
 DESCRIPTION="${PN/etheme-} theme for Enlightenment 16.7"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND=">=x11-wm/enlightenment-0.16.7_pre1"
 
-S=${WORKDIR}/${PN}-0.16 
+S=${WORKDIR}/${PN}-0.16
 
 src_compile() {
 	econf --enable-fsstd || die
