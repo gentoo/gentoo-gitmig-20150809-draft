@@ -59,6 +59,7 @@
 >=gnome-base/nautilus-2.2.0.2
 >=x11-libs/libwnck-2.2.0
 >=dev-libs/libxml2-2.5.1
+>=dev-libs/libxslt-1.0.25
 >=gnome-extra/bug-buddy-2.2.101
 >=gnome-extra/gnome-games-2.2.0
 >=gnome-extra/gnome-media-2.2.0
