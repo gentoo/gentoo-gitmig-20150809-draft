@@ -1,3 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b0b7c50db68951f3987490360925edb4 Class-XPath-1.4.ebuild 380
+MD5 751131e209de11e395da22adaa3fe558 Class-XPath-1.4.ebuild 548
+MD5 0aa0aa13f330e3313c5491355492ffcd ChangeLog 366
 MD5 35f1e43e49921cdb93e4325daaaa786d files/digest-Class-XPath-1.4 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCBz8ltG5z4I8BtQoRAg4SAKCQTEKC1wlTAWvMyPsSS6uyD2hZxwCfXqTK
+U/xP/w3E2uW3abideRuMtAU=
+=v7PV
+-----END PGP SIGNATURE-----

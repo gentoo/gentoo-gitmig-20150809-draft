@@ -1,3 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 8e19818a0bd26f8f0069a6f9ae0747fb XML-Elemental-1.03.ebuild 455
+MD5 0334c40b505788694cefa939824d2278 XML-Elemental-1.03.ebuild 568
+MD5 109fc9adc258cd51aca536290861cb83 ChangeLog 376
 MD5 acc403df5b5d8d63f426807bd8f6e102 files/digest-XML-Elemental-1.03 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCBz+JtG5z4I8BtQoRAsINAJ9mr+VIWDIn3TvrF3dyshr969qP8wCfUGry
+EY9ANLBVbXPYiqD6ctjXhZ8=
+=XO8d
+-----END PGP SIGNATURE-----
