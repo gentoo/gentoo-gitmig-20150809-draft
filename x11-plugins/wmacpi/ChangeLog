@@ -1,8 +1,11 @@
 # ChangeLog for x11-plugins/wmacpi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.5 2003/02/23 21:39:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.6 2003/06/26 00:35:51 vapier Exp $
 
 *wmacpi-1.34 (23 Feb 2003)
+
+  25 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Unmasked because older version is broke with newer kernels #22973.
 
   23 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump for #15967.
