@@ -1,6 +1,17 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.25 2003/12/15 09:19:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.26 2003/12/27 21:36:59 azarah Exp $
+
+*bash-2.05b-r9 (27 Dec 2003)
+
+  27 Dec 2003; Martin Schlemmer <azarah@gentoo.org> bash-2.05b-r9.ebuild:
+  Force pgrp synchronization
+  (https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=81653)
+  
+  The session will hang cases where you 'su' (not 'su -') and then run a piped
+  command in emacs. This problem seem to happen due to scheduler changes kernel
+  side - although reproduceble with later 2.4 kernels, it is especially easy
+  with 2.6 kernels.
 
   13 Dec 2003; Guy Martin <gmsoft@gentoo.org> bash-2.05b-r7.ebuild:
   Marked stable on hppa.
