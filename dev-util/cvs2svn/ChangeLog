@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cvs2svn
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/ChangeLog,v 1.1 2004/11/05 21:12:36 agriffis Exp $
+
+*cvs2svn-1.1.0 (05 Nov 2004)
+
+  05 Nov 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +cvs2svn-1.1.0.ebuild:
+  New ebuild for cvs2svn
+
