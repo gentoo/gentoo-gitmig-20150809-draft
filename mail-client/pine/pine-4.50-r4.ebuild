@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.1 2004/05/30 02:56:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.2 2004/06/07 03:55:14 agriffis Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	unpack pine-4.50-maildir.patch.gz
 	cd ${S}
 
-	if [ "`use mbox`" ] ; then
+	if use mbox ; then
 		epatch ${FILESDIR}/imap-4.7c2-flock.patch
 	else
 		epatch ${FILESDIR}/pine-4.50-maildir.patch
@@ -43,7 +43,7 @@ src_unpack() {
 	# change /bin/passwd to /usr/bin/passwd
 	epatch ${FILESDIR}/pine-4.21-passwd.patch
 
-	if [ "`use ldap`" ] ; then
+	if use ldap ; then
 		# link to shared ldap libs instead of static
 		epatch ${FILESDIR}/pine-4.30-ldap.patch
 		mkdir ${S}/ldap
@@ -66,7 +66,7 @@ src_unpack() {
 	# gets rid of a call to stripwhitespace()
 	epatch ${FILESDIR}/pine-4.33-whitespace.patch
 
-	if [ `use debug` ]; then
+	if use debug; then
 		cd ${S}/pine
 		cp makefile.lnx makefile.orig
 		sed -e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS} -g -DDEBUG -DDEBUGJOURNAL:" \
@@ -89,7 +89,7 @@ src_unpack() {
 
 src_compile() {
 	BUILDOPTS=""
-	if [ "`use ssl`" ]
+	if use ssl
 	then
 		BUILDOPTS="${BUILDOPTS} SSLDIR=/usr SSLTYPE=unix SSLCERTS=/etc/ssl/certs"
 		cd ${S}/imap/src/osdep/unix
@@ -103,7 +103,7 @@ src_compile() {
 	else
 		BUILDOPTS="${BUILDOPTS} NOSSL"
 	fi
-	if [ "`use ldap`" ]
+	if use ldap
 	then
 		./contrib/ldap-setup lnp lnp
 		BUILDOPTS="${BUILDOPTS} LDAPCFLAGS=-DENABLE_LDAP"
