@@ -1,10 +1,13 @@
 # ChangeLog for net-misc/ltsp-core
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.9 2003/07/31 23:01:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.10 2003/08/15 00:20:00 lanius Exp $
+
+  15 Aug 2003; Heinrich Wendel <lanius@gentoo.org> :
+  initial ltsp-4 release
 
 *ltsp-core-3.0.9-r3 (01 Aug 2003)
 
-  01 Aug 2003; lanius@gentoo.org ltsp-core-3.0.7-r1.ebuild,
+  01 Aug 2003; Heinrich Wendel <lanius@gentoo.org> ltsp-core-3.0.7-r1.ebuild,
   ltsp-core-3.0.9-r1.ebuild, ltsp-core-3.0.9-r2.ebuild,
   ltsp-core-3.0.9-r3.ebuild, files/INSTALL.Gentoo:
   - added sandbox info
