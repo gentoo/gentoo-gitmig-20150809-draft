@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.73 2004/10/27 19:21:49 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.74 2004/10/30 23:24:18 ka0ttic Exp $
+
+  30 Oct 2004; Aaron Walker <ka0ttic@gentoo.org>
+  -files/gentoo.completion-20040526, -bash-completion-20040526.ebuild,
+  bash-completion-20040711.ebuild:
+  Marked 20040711 stable on x86; removed 20040526.
 
   27 Oct 2004; Kito <kito@gentoo.org> bash-completion-20041017.ebuild:
   added ~ppc-macos
