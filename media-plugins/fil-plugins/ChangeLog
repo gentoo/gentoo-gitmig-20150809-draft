@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/fil-plugins
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.3 2004/06/24 23:28:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.4 2004/09/01 17:35:46 eradicator Exp $
+
+  01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  fil-plugins-0.0.1.ebuild:
+  Stable amd64, x86.
 
 *fil-plugins-0.0.1 (18 Jun 2004)
 
