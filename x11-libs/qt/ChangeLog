@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.201 2005/03/03 17:18:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.202 2005/03/04 03:06:28 caleb Exp $
+
+*qt-3.3.4-r3 (03 Mar 2005)
+
+  03 Mar 2005; Caleb Tennis <caleb@gentoo.org>
+  +files/qt-3.3.4-0047-fix-kmenu-widget.diff,
+  +files/qt-3.3.4-0051-qtoolbar_77047.patch, +qt-3.3.4-r3.ebuild:
+  New version incorporating some KDE patches
 
 *qt-4.0.0_beta1-r4 (03 Mar 2005)
 
