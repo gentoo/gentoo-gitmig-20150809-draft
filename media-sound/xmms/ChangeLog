@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.8 2002/03/28 23:03:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.9 2002/04/12 05:15:45 seemant Exp $
+
+*xmms-1.2.7-r4 (11 Apr 2002)
+
+  11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r4.ebuild :
+  Svend Sorensen (SCube on #gentoo) pointed out that libxml is only an optional
+  dependency to retrieve cd track info from an alternate source, so that has
+  been made USE dependent.
 
 *xmms-1.2.7-r{3,4} (28 Mar 2002)
 

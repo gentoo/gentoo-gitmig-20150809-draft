@@ -1,24 +1,27 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r3.ebuild,v 1.2 2002/03/28 23:03:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r3.ebuild,v 1.3 2002/04/12 05:15:45 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X MultiMedia System"
 SRC_URI="ftp://ftp.xmms.org/xmms/1.2.x/${P}.tar.gz http://www.openface.ca/~nephtes/plover-xmms127.tar.gz"
 HOMEPAGE="http://www.xmms.org/"
 
-RDEPEND="gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
+DEPEND=">=x11-libs/gtk+-1.2.10-r4
 	>=dev-libs/libxml-1.8.15
 	>=media-libs/libmikmod-3.1.9
 	esd? ( >=media-sound/esound-0.2.22 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )
 	opengl? ( virtual/opengl )
 	avi? ( >=media-video/avifile-0.6 )
-	>=x11-libs/gtk+-1.2.10-r4"
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.4 )
+	sdl? ( media-libs/libsdl )"
+	
 
-DEPEND="${RDEPEND}
-	nls? ( dev-util/intltool )"
+RDEPEND="${DEPEND}
+	nls? ( dev-util/intltool
+		sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -27,56 +30,48 @@ src_unpack() {
 	cp configure configure.orig
 	sed -e "s:-m486::" configure.orig > configure
 	
-	if [ "`use avi`" ]
-	then
-		unpack plover-xmms127.tar.gz
-		patch -p1 < plover-xmms127.diff
-		touch stamp-h1.in xmms/stamp-h2.in
-	fi
+	use avi	\
+		&& unpack plover-xmms127.tar.gz	\
+		&& patch -p1 < plover-xmms127.diff	\
+		&& touch stamp-h1.in xmms/stamp-h2.in
 }
 
 src_compile() {
+
+	libtoolize --copy --force
+	aclocal
+
 	local myopts
 
-	if [ -n "`use gnome`" ]
-	then
-		myopts="${myopts} --with-gnome"
-	else
-		myopts="${myopts} --without-gnome"
-	fi
+	use gnome	\
+		&& myopts="${myopts} --with-gnome"	\
+		|| myopts="${myopts} --without-gnome"
 
-	if [ "`use 3dnow`" ] ; then
-		myopts="${myopts} --enable-3dnow"
-	else
-		myopts="${myopts} --disable-3dnow"
-	fi
+	use 3dnow	\
+		&& myopts="${myopts} --enable-3dnow"	\
+		|| myopts="${myopts} --disable-3dnow"
 
-	if [ "`use esd`" ] ; then
-		myopts="${myopts} --enable-esd"
-	else
-		myopts="${myopts} --disable-esd"
-	fi	
+	use esd	\
+		&& myopts="${myopts} --enable-esd"	\
+		|| myopts="${myopts} --disable-esd"
 
-	if [ "`use opengl`" ] ; then
-		myopts="${myopts} --enable-opengl"
-	else
-		myopts="${myopts} --disable-opengl"
-	fi
+	use opengl	\
+		&& myopts="${myopts} --enable-opengl"	\
+		|| myopts="${myopts} --disable-opengl"
 	
-	if [ "`use oggvorbis`" ] ; then
-		myopts="${myopts} --with-ogg --with-vorbis"
-	else
-		myopts="${myopts} --disable-ogg-test --disable-vorbis-test"
-	fi
+	use oggvorbis	\
+		&& myopts="${myopts} --with-ogg --with-vorbis"	\
+		|| myopts="${myopts} --disable-ogg-test --disable-vorbis-test"
 
-	if [ ! "`use nls`" ] ; then
-		myopts="${myopts} --disable-nls"
-	fi
+	use nls	\
+		|| myopts="${myopts} --disable-nls --without-libintl-prefix"
 
 	
-	./configure --host=${CHOST} \
+	./configure	\
+		--host=${CHOST} \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
+		--enable-one-plugin-dir	\
 		${myopts} || die
 
 	emake || die
@@ -101,11 +96,9 @@ src_install() {
 	insinto /etc/X11/wmconfig
 	donewins xmms/xmms.wmconfig xmms
 
-	if [ "`use gnome`" ]
-	then
-		insinto /usr/share/gnome/apps/Multimedia
-		doins xmms/xmms.desktop
-		dosed "s:xmms_mini.xpm:mini/xmms_mini.xpm:" \
+	use gnome	\
+		&& insinto /usr/share/gnome/apps/Multimedia	\
+		&& doins xmms/xmms.desktop	\
+		&& dosed "s:xmms_mini.xpm:mini/xmms_mini.xpm:" \
 			/usr/share/gnome/apps/Multimedia/xmms.desktop
-	fi
 }
