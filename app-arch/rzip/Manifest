@@ -1,6 +1,4 @@
 MD5 b1761cab619b4c2952f8e5e050c442d0 ChangeLog 1066
-MD5 b393401425399e54ef398b1f43fe10d2 metadata.xml 403
-MD5 5a3d08cffdefb75d63f4e9ab785737a4 rzip-2.0.ebuild 512
 MD5 14405bb729f7674c6cb7f1571411fe55 rzip-2.0-r1.ebuild 557
-MD5 08798457dd084bc7a3c20f9fe4c5e398 files/digest-rzip-2.0 59
+MD5 b393401425399e54ef398b1f43fe10d2 metadata.xml 403
 MD5 08798457dd084bc7a3c20f9fe4c5e398 files/digest-rzip-2.0-r1 59
