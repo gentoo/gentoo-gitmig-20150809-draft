@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.131 2004/09/30 03:58:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.132 2004/10/11 06:43:06 spyderous Exp $
+
+  10 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r1.ebuild:
+  Fix new installs with USE=debug. X tries to use makeg, which doesn't exist on
+  the system yet -- use the one within the source instead.
 
   29 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>;
   -xorg-x11-6.7.0-r1.ebuild, -xorg-x11-6.8.0.ebuild:

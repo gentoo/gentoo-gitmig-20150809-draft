@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.12 2004/10/01 13:42:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.13 2004/10/11 06:43:06 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -621,7 +621,8 @@ src_compile() {
 	einfo "Building xorg-x11..."
 	if use debug
 	then
-		FAST=1 makeg World WORLDOPTS="" || die
+		chmod u+x ${S}/config/util/makeg.sh
+		FAST=1 ${S}/config/util/makeg.sh World WORLDOPTS="" || die
 	else
 		FAST=1 emake World WORLDOPTS="" || die
 	fi
