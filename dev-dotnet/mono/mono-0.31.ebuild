@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.31.ebuild,v 1.1 2004/03/20 03:51:13 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.31.ebuild,v 1.2 2004/03/21 04:11:12 tberman Exp $
 
 inherit mono flag-o-matic
 
@@ -44,7 +44,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die
+	econf --with-nptl=no || die
 	MAKEOPTS="${MAKEOPTS} -j1" emake || die "MONO compilation failure"
 
 	ln -s ../runtime ${WORKDIR}/${P}/runtime/lib

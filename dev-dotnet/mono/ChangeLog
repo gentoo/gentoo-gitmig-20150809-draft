@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.9 2004/03/20 03:51:13 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.10 2004/03/21 04:11:12 tberman Exp $
+
+  20 Mar 2004; Todd Berman <tberman@gentoo.org> mono-0.31.ebuild:
+  adding --with-nptl=no
 
 *mono-0.31 (19 Mar 2004)
 
