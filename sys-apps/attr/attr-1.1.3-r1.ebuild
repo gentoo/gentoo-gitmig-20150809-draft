@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-1.1.3-r1.ebuild,v 1.1 2002/01/17 12:33:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-1.1.3-r1.ebuild,v 1.2 2002/01/17 12:39:49 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs extended attributes tools"
@@ -34,5 +34,5 @@ src_install() {
 	make DESTDIR=${D} install install-dev || die
 	dosym /usr/lib/libattr.a /lib/libattr.a
 	dosym /usr/lib/libattr.la /lib/libattr.la
-	dosym /lib/libattr.so /usr/lib/libattr.la
+	dosym /lib/libattr.so /usr/lib/libattr.so
 }
