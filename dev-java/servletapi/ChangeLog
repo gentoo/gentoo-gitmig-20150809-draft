@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.23 2005/02/04 14:52:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.24 2005/02/04 21:02:32 luckyduck Exp $
+
+  04 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> servletapi-2.4-r1.ebuild:
+  added missing eutils inherit. fixes #80773
 
 *servletapi-2.4-r1 (04 Feb 2005)
 
