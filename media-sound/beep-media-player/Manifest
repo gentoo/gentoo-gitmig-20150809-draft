@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a33c361b733751b3018bfd45f248c044 ChangeLog 4059
+MD5 e2e5a7be4dd149e535ef1a6ea6859c3a ChangeLog 4208
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 30579eb6280f92575df7c96569ce1b77 beep-media-player-0.9.7_rc2-r2.ebuild 2766
+MD5 b4cc9300744fdb0ac067a8173cb50347 beep-media-player-0.9.7_rc2-r2.ebuild 2808
+MD5 3e05152668a0fcdce073aa47702bd463 files/beep-media-player-0.9.7_rc2-includefix.patch 329
 MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
 MD5 27cf6516ed075a139579b1c439e9bd90 files/beep-media-player-0.9.7_rc2-mime.patch 587
 MD5 b7d99875975dc75e79760f82bbeaf790 files/digest-beep-media-player-0.9.7_rc2-r2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdf8yArHZZzCEUG0RAjPxAJ9Q/biqAI2z7Vv98FbgiLxtSL/cOwCfXU/K
-uNzdy/A7hkADEA9fgliJ4kI=
-=bb71
+iD8DBQFBdjgdArHZZzCEUG0RAorJAJ0YXD0p4R/e4qX94JFkMpInDF1DWgCfR43Z
+Nx1INtkRLngdRLCcg9/mJzo=
+=4hxU
 -----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.19 2004/10/20 06:01:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.20 2004/10/20 10:04:03 eradicator Exp $
+
+  20 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/beep-media-player-0.9.7_rc2-includefix.patch:
+  Fixed missing include in plugin.h
 
   19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   beep-media-player-0.9.7_rc2-r2.ebuild:

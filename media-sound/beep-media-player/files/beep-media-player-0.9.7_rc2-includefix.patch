@@ -1,0 +1,11 @@
+diff -Naur bmp-0.9.7rc2.orig/beep/plugin.h bmp-0.9.7rc2/beep/plugin.h
+--- bmp-0.9.7rc2.orig/beep/plugin.h	2004-07-04 04:54:25.000000000 -0700
++++ bmp-0.9.7rc2/beep/plugin.h	2004-10-20 03:02:16.080499393 -0700
+@@ -26,6 +26,7 @@
+ 
+ 
+ #include <glib.h>
++#include <glib/gmacros.h>
+ 
+ 
+ #define INPUT_PLUGIN(x)   ((InputPlugin *)(x))
