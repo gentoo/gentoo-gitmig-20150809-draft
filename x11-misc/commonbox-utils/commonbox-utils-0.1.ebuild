@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/commonbox-utils-0.1.ebuild,v 1.2 2002/07/15 04:02:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/commonbox-utils-0.1.ebuild,v 1.3 2002/07/15 04:06:00 seemant Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Common utilities for flux|black|open(box). Provides bsetroot, bsetbg, and commonbox-menugen."
@@ -26,6 +26,7 @@ src_install () {
 	doman bsetroot.1 bsetbg.1
 	
 	dodir /usr/share/commonbox
+	commonbox-menugen -kg -o ${D}/usr/share/commonbox/menu
 }
 
 
