@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ggz-gtk-games-0.0.5.ebuild,v 1.3 2004/02/29 10:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ggz-gtk-games-0.0.5.ebuild,v 1.4 2004/04/26 02:11:24 agriffis Exp $
 
 DESCRIPTION="These are the gtk versions of the games made by GGZ Gaming Zone"
 HOMEPAGE="http://ggz.sourceforge.net/"
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc"
 DEPEND="=games-board/ggz-gtk-client-0.0.5"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	# we need to remove some /usr-paths that ggz-config puts into in 
 	# the makefile.  ugly.  :/
 
