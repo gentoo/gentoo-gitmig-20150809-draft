@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.27 2005/03/29 14:15:38 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.28 2005/04/06 04:57:56 swegener Exp $
+
+  06 Apr 2005; Sven Wegener <swegener@gentoo.org> :
+  Fixed digests for KV_EXTRA suport in kernel-2.eclass.
 
 *vserver-sources-1.9.5 (29 Mar 2005)
 
