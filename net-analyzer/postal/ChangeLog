@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/postal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/ChangeLog,v 1.1 2005/01/08 00:35:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/ChangeLog,v 1.2 2005/01/08 10:10:55 swegener Exp $
+
+  08 Jan 2005; Sven Wegener <swegener@gentoo.org> postal-0.62.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *postal-0.62 (08 Jan 2005)
 
