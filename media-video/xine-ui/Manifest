@@ -7,7 +7,7 @@ MD5 eae093d61629b0d42b806e9e84814e79 files/xine-ui-gentoo.diff 5216
 MD5 fb4046f995f89e17ad6a5f09210509c8 files/digest-xine-ui-0.9.19 67
 MD5 bfbeeeb439fc717534686e390b84b9d3 files/digest-xine-ui-0.9.20 67
 MD5 a460b502d640488b1bdc95a4d10a45aa xine-ui-0.9.21.ebuild 1528
-MD5 855f49338d1e52624f7172851b794f49 xine-ui-0.9.13.ebuild 1648
+MD5 9cb38ccdd3a97a6462802528a3ca337b xine-ui-0.9.13.ebuild 1617
 MD5 3a561ca11bd3e0626db8768846a4694a xine-ui-0.9.17.ebuild 1596
 MD5 6956e1f404493353d0931902da33cea2 xine-ui-0.9.18.ebuild 1523
 MD5 e193985383c78e74f8ebe366eee6a03a ChangeLog 6043
