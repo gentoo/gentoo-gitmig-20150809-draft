@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2-r1.ebuild,v 1.6 2004/09/22 00:01:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2-r1.ebuild,v 1.7 2004/10/11 03:36:18 tgall Exp $
 
 MY_P="docbook-xml-4.2"
 DESCRIPTION="Docbook DTD for XML"
@@ -9,7 +9,7 @@ SRC_URI="http://www.oasis-open.org/docbook/xml/${PV}/${MY_P}.zip"
 
 LICENSE="X11"
 SLOT="4.2"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc s390 sparc x86"
+KEYWORDS="alpha arm amd64 hppa ia64 mips ppc s390 sparc x86 ppc64"
 IUSE=""
 
 DEPEND=">=app-arch/unzip-5.41
