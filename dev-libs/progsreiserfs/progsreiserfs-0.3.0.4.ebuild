@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/progsreiserfs/progsreiserfs-0.3.0.4.ebuild,v 1.2 2003/03/25 13:59:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/progsreiserfs/progsreiserfs-0.3.0.4.ebuild,v 1.3 2003/06/16 01:26:37 gmsoft Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://reiserfs.linux.kiev.ua/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc hppa"
 
 DEPEND="nls? ( sys-devel/gettext )"
 

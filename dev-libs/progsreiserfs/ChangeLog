@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/progsreiserfs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/progsreiserfs/ChangeLog,v 1.6 2003/03/25 13:59:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/progsreiserfs/ChangeLog,v 1.7 2003/06/16 01:26:37 gmsoft Exp $
 
 *progsreiserfs-0.3.0.4 (24 Feb 2003)
+
+  16 Jun 2003; Guy Martin <gmsoft@gentoo.org> .progsreiserfs-0.3.0.4.ebuild :
+  Added hppa to KEYWORDS.
 
   25 Mar 2003; Guy Martin <gmsoft@gentoo.org> progsreiserfs-0.3.0.4.ebuild :
   Added ~hppa to KEYWORDS.
