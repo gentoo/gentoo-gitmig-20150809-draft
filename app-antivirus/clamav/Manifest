@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f7ec491e7e697db9dce137383737c5b1 ChangeLog 11080
+MD5 986b36d1d8faa0e68d05f2dcde8d08c2 ChangeLog 11103
 MD5 9d62360a7a38f6147a6cfe97c777e035 clamav-0.80.ebuild 1790
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
 MD5 65bc9590f334749efa000a11a7d00d7c clamav-0.82-r1.ebuild 2075
@@ -22,7 +22,7 @@ MD5 ad7d45b1be51c06986cb42c53e733d19 files/clamav-milter.README.gentoo 1311
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCEAM2QlM6RnzZP+IRAqmvAKCE+3DEmQuo3dYpssoD1pKYHvQ7xgCdHZNh
-5N2Kfc1y9sfCEgn7Nar1YhY=
-=OSEv
+iD8DBQFCEARJQlM6RnzZP+IRApwUAJ0Xwt78L+aZugs9fRiztI3jHc5RngCcD6Oh
+JCj4tkIWNFZGQeqbRUI+KKw=
+=pCBV
 -----END PGP SIGNATURE-----
