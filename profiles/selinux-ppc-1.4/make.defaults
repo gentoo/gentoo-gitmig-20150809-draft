@@ -21,6 +21,7 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
 USE="ppc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
+GRP_STAGE23_USE="ppc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 
 # The following USE should _not_ bet set on ppc as they can cause breakage
 # in some pacakges (are mostly x86 only options)
