@@ -2,7 +2,7 @@ MD5 59f7db49916260858c6d8155b5cab07c easytag-0.30d.ebuild 1590
 MD5 8184a544c10155b6b7041f72eeef71fc easytag-0.31-r1.ebuild 1298
 MD5 46d6791df1bdb80df8456473f5324c6e easytag-0.31.ebuild 1650
 MD5 9a8e3b48615e2a2df22c80a293d1c842 easytag-0.31_pre2-r5.ebuild 1832
-MD5 96db5ce7994ca70af569fefc28cbaf8e ChangeLog 6607
+MD5 1bea7e4cdbc1146d4e8be19b256fbf3d ChangeLog 6751
 MD5 a46cf8baa21f01b073f90295ba23c2e8 metadata.xml 402
 MD5 e07d9ac1703bacdeed88217392f21208 easytag-0.31-r2.ebuild 1436
 MD5 25444660393147e2d06a5f1378a89ec4 files/easytag-0.31_pre2-gcc2.patch 2763
