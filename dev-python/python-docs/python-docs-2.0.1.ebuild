@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Karl Trygve Kalleberg <karltk@prosalg.no>
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.0.1.ebuild,v 1.2 2001/11/10 12:14:29 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.0.1.ebuild,v 1.3 2002/07/11 06:30:24 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML documentation for Python"

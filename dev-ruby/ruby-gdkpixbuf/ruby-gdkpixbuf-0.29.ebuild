@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ruby-gdkpixbuf-0.29.ebuild,v 1.2 2002/07/08 02:27:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ruby-gdkpixbuf-0.29.ebuild,v 1.3 2002/07/11 06:30:24 drobbins Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/gdkpixbuf
 DESCRIPTION="Ruby GdkPixbuf bindings"

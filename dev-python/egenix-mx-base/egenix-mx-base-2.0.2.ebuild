@@ -1,8 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ulrich Eck <ueck@net-labs.de>
 # §Header$
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.2.ebuild,v 1.4 2001/11/10 12:14:29 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.2.ebuild,v 1.5 2002/07/11 06:30:24 drobbins Exp $
 
 
 S=${WORKDIR}/${P}

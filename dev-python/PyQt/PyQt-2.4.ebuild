@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: tools@cvs.gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-2.4.ebuild,v 1.6 2002/02/03 21:47:53 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-2.4.ebuild,v 1.7 2002/07/11 06:30:24 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PyQt is a set of Python bindings for the Qt Toolkit."

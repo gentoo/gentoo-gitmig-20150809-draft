@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/XML-LibXSLT-1.31.ebuild,v 1.1 2002/04/28 04:21:53 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/XML-LibXSLT-1.31.ebuild,v 1.2 2002/07/11 06:30:23 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Perl module to parse XSL Transformational sheets using gnome's libXSLT"

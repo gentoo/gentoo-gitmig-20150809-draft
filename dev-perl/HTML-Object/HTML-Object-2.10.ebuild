@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/HTML-Object-2.10.ebuild,v 1.3 2002/05/27 17:27:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/HTML-Object-2.10.ebuild,v 1.4 2002/07/11 06:30:21 drobbins Exp $
 
 MY_P=html_object-${PV}
 S=${WORKDIR}/${MY_P}

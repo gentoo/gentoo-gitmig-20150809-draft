@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Gontran Zepeda  <gontran@gontran.net>
 
 # Inherit the perl-module.eclass functions
 . /usr/portage/eclass/inherit.eclass || die

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Geert Bevin <gbevin@uwyn.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.0.16.ebuild,v 1.1 2002/07/10 16:55:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.0.16.ebuild,v 1.2 2002/07/11 06:30:24 drobbins Exp $
 
 S=${WORKDIR}/ruby-dbi-all
 DESCRIPTION="Ruby/DBI - a database independent interface for accessing databases - similar to Perl's DBI"

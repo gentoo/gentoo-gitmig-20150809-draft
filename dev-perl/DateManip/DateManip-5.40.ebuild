@@ -1,7 +1,6 @@
 # Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License, v2
-# Author: Arcady Genkin <agenkin@thpoon.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-5.40.ebuild,v 1.1 2002/04/22 20:26:09 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-5.40.ebuild,v 1.2 2002/07/11 06:30:21 drobbins Exp $
 
 DESCRIPTION="Perl date manipulation routines."
 HOMEPAGE="http://www.perl.com/CPAN/authors/id/SBECK/${P}.readme"

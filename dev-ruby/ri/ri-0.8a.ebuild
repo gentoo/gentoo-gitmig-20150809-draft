@@ -1,8 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Richard Lowe <richlowe@richlowe.net>
-# Maintainer: Tools Team <tools@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-0.8a.ebuild,v 1.1 2002/07/08 01:57:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-0.8a.ebuild,v 1.2 2002/07/11 06:30:24 drobbins Exp $
 
 S="${WORKDIR}/ri"
 DESCRIPTION="Ruby Interactive reference"

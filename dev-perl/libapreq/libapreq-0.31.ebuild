@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/libapreq-0.31.ebuild,v 1.4 2001/06/01 14:00:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/libapreq-0.31.ebuild,v 1.5 2002/07/11 06:30:23 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

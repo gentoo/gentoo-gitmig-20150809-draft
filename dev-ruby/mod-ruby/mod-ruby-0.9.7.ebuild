@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Tools Team <tools@gentoo.org>
-# Author: Tuurlijk! <ebuilder@tuurlijk.eu.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.2 2002/07/08 01:52:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.3 2002/07/11 06:30:24 drobbins Exp $
 
 S=${WORKDIR}/mod_ruby-${PV}
 DESCRIPTION="A Ruby Module for Apache"

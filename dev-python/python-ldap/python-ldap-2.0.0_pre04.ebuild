@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.0_pre04.ebuild,v 1.2 2002/05/27 17:27:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.0_pre04.ebuild,v 1.3 2002/07/11 06:30:24 drobbins Exp $
 
 VERSION="2.0.0pre04"
 S=${WORKDIR}/${PN}-${VERSION}

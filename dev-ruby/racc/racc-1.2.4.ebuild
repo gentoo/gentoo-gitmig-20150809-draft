@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.2.4.ebuild,v 1.4 2002/07/08 02:33:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.2.4.ebuild,v 1.5 2002/07/11 06:30:24 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LALR parser generator for Ruby"
