@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha25.ebuild,v 1.7 2004/02/09 15:36:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha25.ebuild,v 1.8 2004/02/23 01:04:03 pylon Exp $
 
 
 inherit eutils
@@ -44,7 +44,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC=${CC} || die
+	emake CC="${CC} -D__attribute_const__=const" || die
 }
 
 src_install() {
