@@ -1,8 +1,19 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.12 2002/06/01 20:55:10 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.13 2002/06/04 09:48:08 blocke Exp $
+
+*nautilus-1.1.18-r1 (04 Jun 2002)
+
+  04 Jun 2002; Bruce A. Locke <blocke@shivan.org> nautilus-1.1.18-r1.ebuild:
+
+  Converted to gnome2 eclass
 
 *nautilus-1.0.6-r9 (26 May 2002)
+
+  04 Jun 2002; Bruce A. Locke <blocke@shivan.org> nautilus-1.0.6-r9.ebuild:
+
+  Hopefully gnome2 proof dependencies
+
   1 June 2002; Matthew Kennedy <mkennedy@gentoo.org> :
 
   Patch Nautilus to work with gcc3.1.

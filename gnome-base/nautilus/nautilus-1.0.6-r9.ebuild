@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.3 2002/06/01 20:55:10 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.4 2002/06/04 09:48:08 blocke Exp $
 
 
 S=${WORKDIR}/${P}
@@ -15,11 +15,11 @@ RDEPEND="mozilla? ( >=net-www/mozilla-1.0_rc3 )
 	>=app-admin/fam-oss-2.6.4
 	>=media-sound/cdparanoia-3.9.8
 	>=gnome-base/bonobo-1.0.9-r1
-	>=gnome-base/gnome-core-1.4.0.4-r1
+	=gnome-base/gnome-core-1.4*
 	>=gnome-base/libghttp-1.0.9-r1
-	>=gnome-base/gnome-vfs-1.0.3
+	=gnome-base/gnome-vfs-1.0*
 	>=gnome-base/librsvg-1.0.1
-	>=gnome-base/eel-1.0.2
+	=gnome-base/eel-1.0*
 	>=gnome-extra/medusa-0.5.1-r1"
 
 DEPEND="${RDEPEND}
