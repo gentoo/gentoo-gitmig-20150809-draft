@@ -3,6 +3,7 @@
 ##
 
 app-shells/zsh
+sys-devel/flex
 
 ##
 # end collision-protect
