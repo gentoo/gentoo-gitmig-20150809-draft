@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/autospeedstep
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/autospeedstep/ChangeLog,v 1.1 2003/06/17 23:38:28 twp Exp $
+
+*autospeedstep-0.2 (18 Jun 2003)
+
+  18 Jun 2003; Tom Payne <twp@gentoo.org> autospeedstep-0.2.ebuild :
+  Initial release. Bug # 18473. Ebuild independently contributed by Jean Michel Minati.
