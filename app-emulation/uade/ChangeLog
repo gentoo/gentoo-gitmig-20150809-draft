@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/uade
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.13 2004/09/01 06:07:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.14 2004/09/01 06:26:37 mr_bones_ Exp $
+
+  31 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> uade-0.91.ebuild:
+  tidy a bit
 
   31 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> -uade-0.91_pre3.ebuild:
   clean the pre ebuild
