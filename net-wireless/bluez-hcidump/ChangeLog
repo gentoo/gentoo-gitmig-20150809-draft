@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-hcidump
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.6 2004/02/12 18:42:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.7 2004/03/29 02:12:07 liquidx Exp $
+
+*bluez-hcidump-1.8 (29 Mar 2004)
+
+  29 Mar 2004; Alastair Tse <liquidx@gentoo.org> bluez-hcidump-1.8.ebuild:
+  version bump
 
   12 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> bluez-hcidump-1.5.ebuild:
   Adding ~sparc (works with some kernels, see bug #39710)
