@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdockapp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.15 2004/10/19 08:48:20 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.16 2004/10/23 16:20:38 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> libdockapp-0.5.0-r1.ebuild:
+  Stable on sparc.
 
 *libdockapp-0.5.0-r1 (19 Oct 2004)
 
