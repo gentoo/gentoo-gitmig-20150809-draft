@@ -1,16 +1,20 @@
 # ChangeLog for net-p2p/dc-gui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.7 2002/10/10 08:11:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.8 2002/10/29 16:17:02 vapier Exp $
+
+*dc-gui-0.62 (28 Oct 2002)
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> dc-gui-0.63.ebuild :
+  Version bump #9881 from Autobot <autobot@midsouth.rr.com>.
 
 *dc-gui-0.62 (10 Oct 2002)
 
-  10 Oct 2002; Mike Frysinger <vapier@gentoo.org> dc-gui-0.59.ebuild :
+  10 Oct 2002; Mike Frysinger <vapier@gentoo.org> dc-gui-0.62.ebuild :
   Version bump #8945
 
 *dc-gui-0.59 (16 Aug 2002)
 
   16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> dc-gui-0.59.ebuild :
-
   Version bump, thanks to: ewaling@ccitt5.net (Erik Waling) in bug #6294
 
 *dc-gui-0.58 (5 Jul 2002)
@@ -20,11 +24,9 @@
 
   5 Jul 2002; Seemant Kulleen <seemant@gentoo.org> dc-gui-0.58.ebuild
   files/digest-dc-gui-0.58 :
-
   Version bump thanks to autobot@midsouth.rr.com (AutoBot) in bug #4253.
 
   25 Jun 2002; Thilo Bangert <bangert@gentoo.org>:
-  
   moved to net-p2p; added SLOT="0" - fixed depandency: net-misc/dctc ->
   net-p2p/dctc
 
@@ -40,14 +42,12 @@
 
   24 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   dc-gui-0.54.ebuild :
-
   --without-gnome doesn't work. So made gnome a dependency.
 
 *dc-gui-0.54 (22 Apr 2002)
 
   22 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   dc-gui-0.54.ebuild :
-
   Very minor type-o fixup -- thanks to Jeffry Molanus <Gila@home.nl>
   for pointin it out!
 
@@ -55,5 +55,4 @@
 
   21 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   dc-gui-0.54.ebuild, ChangeLog, files/digest-dc-gui-0.54 :
-  
   New ebuild. Resolves bug #1958
