@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.49 2003/08/04 21:13:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.50 2003/10/01 16:06:39 mholzer Exp $
+
+*imagemagick-5.5.7-r2 (01 Oct 2003)
+
+  01 Oct 2003; Martin Holzer <mholzer@gentoo.org> imagemagick-5.5.7-r2.ebuild:
+  minor version bumped.
 
 *imagemagick-5.5.7-r1 (22 Jul 2003)
 
