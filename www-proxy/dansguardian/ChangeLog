@@ -1,6 +1,9 @@
 # ChangeLog for net-www/dansguardian
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/ChangeLog,v 1.1 2004/08/15 18:47:23 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/ChangeLog,v 1.2 2004/08/15 23:38:42 cyfred Exp $
+
+  16 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>; dansguardian-2.7.1.ebuild:
+  Changing net-www/squid to www-proxy/squid in 2.7.1 depends
 
 *dansguardian-2.7.1 (15 Aug 2004)
 
