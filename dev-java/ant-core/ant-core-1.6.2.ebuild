@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2.ebuild,v 1.10 2005/02/03 21:09:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2.ebuild,v 1.11 2005/02/04 20:17:55 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -50,6 +50,8 @@ src_compile() {
 	myc="${myc} -Djavac.target=1.4"
 	echo $CLASSPATH
 	CLASSPATH="." ./build.sh -Ddist.dir=${D}/usr/share/${PN} || die
+
+	use doc && ./build.sh dist_javadocs
 }
 
 src_install() {
@@ -73,4 +75,5 @@ src_install() {
 	dodoc LICENSE LICENSE.* README WHATSNEW KEYS
 	use doc && dohtml welcome.html
 	use doc && java-pkg_dohtml -r docs/*
+	use doc && java-pkg_dohtml -r dist/docs/manual/api/*
 }
