@@ -1,0 +1,8 @@
+# ChangeLog for x11-terms/pssh
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/ChangeLog,v 1.1 2004/08/21 16:59:34 voxus Exp $
+
+*pssh-1.0.0 (21 Jul 2004)
+
+  21 Jul 2004; Konstantin Arkhipov <voxus@gentoo.org> +clusterssh-2.16.ebuild:
+  Initial revision, closes #61161.
