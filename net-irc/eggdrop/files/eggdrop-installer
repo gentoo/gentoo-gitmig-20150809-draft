@@ -52,6 +52,7 @@ install_eggdrop()
       mkdir -p $HOME/.eggdrop/$bot_name/filesys 
       mkdir -p $HOME/.eggdrop/$bot_name/filesys/incoming 
       mkdir -p $HOME/.eggdrop/$bot_name/text 
+      mkdir -p $HOME/.eggdrop/$bot_name/tmp
       mkdir -p $HOME/.eggdrop/$bot_name/scripts
       # Added because of bug #3073
       mkdir -p $HOME/.eggdrop/$bot_name/var
