@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.74 2004/08/17 20:19:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.75 2004/08/19 14:48:26 lanius Exp $
+
+*ncurses-5.4-r4 (19 Aug 2004)
+
+  19 Aug 2004; Heinrich Wendel <lanius@gentoo.org> ncurses-5.4-r4.ebuild:
+  add utf-8 support, bug #20006, #27700
 
   17 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> ncurses-5.4-r3.ebuild:
   IUSE doc
