@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.35 2004/08/10 04:15:54 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.36 2004/08/23 00:00:55 weeve Exp $
+
+  22 Aug 2004; Jason Wever <weeve@gentoo.org> hylafax-4.1.8-r4.ebuild:
+  Stable on sparc.
 
 *hylafax-4.2.0_rc2 (09 Aug 2004)
 
