@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/silo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.17 2004/07/14 15:40:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.18 2004/07/27 20:42:05 ciaranm Exp $
+
+  27 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> silo-1.4.8.ebuild:
+  Stable on sparc. Ben claims that the problems that a few people have been
+  having with the 1.4.x series are now fixed.
 
 *silo-1.4.8 (14 Jul 2004)
 
