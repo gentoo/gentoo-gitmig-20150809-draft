@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r3.ebuild,v 1.1 2001/12/06 19:26:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r3.ebuild,v 1.2 2001/12/06 21:37:58 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -75,12 +75,12 @@ src_compile() {
 
 src_install() {
 	export LC_ALL=C
-	make install_root=${D} install -C buildhere || die
+	make PARALLELMFLAGS="${MAKEOPTS}" install_root=${D} install -C buildhere || die
 	if [ -z "`use build`" ] && [ -z "`use bootcd`" ]
 	then
 		dodir /etc/rc.d/init.d
-		make install_root=${D} info -C buildhere || die
-		make install_root=${D} localedata/install-locales -C buildhere || die
+		make PARALLELMFLAGS="${MAKEOPTS}" install_root=${D} info -C buildhere || die
+		make PARALLELMFLAGS="${MAKEOPTS}" install_root=${D} localedata/install-locales -C buildhere || die
 
 		# I commented out linuxthreads man pages because I don't want glibc to build depend on perl, but we really
 		# should fix this.
