@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-2.4.1.ebuild,v 1.4 2004/01/18 15:02:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-2.4.1.ebuild,v 1.5 2004/01/29 05:02:48 agriffis Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ LICENSE="LGPL-2.1 GPL-2"
 
 IUSE=""
 SLOT="1"
-KEYWORDS="x86 ~ppc ~alpha sparc hppa ~amd64"
+KEYWORDS="x86 ~ppc alpha sparc hppa ~amd64 ia64"
 
 # FIXME : seems only testapps need gnomevfs
 RDEPEND=">=x11-libs/gtk+-2
