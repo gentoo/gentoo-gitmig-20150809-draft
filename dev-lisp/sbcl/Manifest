@@ -2,7 +2,7 @@ MD5 93b7c03dd1e5952d45e61a1b9c31c7de sbcl-0.8.13.ebuild 3882
 MD5 bfec86129246e3243821520419058139 sbcl-0.8.12.ebuild 3823
 MD5 139b862b968e7e93728adc4635eb28ca sbcl-0.8.11.ebuild 3868
 MD5 452bd315ab639d1e2738c73c498be1ed sbcl-0.8.12-r1.ebuild 3878
-MD5 0c1474757c08a0a91a42aef1f4021211 sbcl-0.8.15.ebuild 3883
+MD5 bfbc78db3494e67387c1f7ef16c5e269 sbcl-0.8.15.ebuild 3882
 MD5 09ca7de40173206338891e2a9723c6f7 sbcl-0.8.7-r1.ebuild 4236
 MD5 88838d899eb117390ec723d3a00c5805 sbcl-0.8.9.ebuild 3569
 MD5 ac7500d912d63c8a62b0116b2948b995 sbcl-0.8.8.ebuild 3489
@@ -11,6 +11,7 @@ MD5 d2fdff94a4bf5f38a2aab37a8bde1c99 sbcl-0.8.14.ebuild 3882
 MD5 35329bbe93e1b1d0ac162f8ee2ea9914 sbcl-0.8.7.ebuild 4076
 MD5 14d94fc6ef42dfddf4d657aa864ec9d2 ChangeLog 10604
 MD5 c93195a12a4bb997ca623db927bb6676 metadata.xml 997
+MD5 0c1474757c08a0a91a42aef1f4021211 sbcl-0.8.16.ebuild 3883
 MD5 6e40a080b566cc78dfe522ae34eec0a7 files/install-clc.lisp 1338
 MD5 74f94f11c31e6e9395b26994ebc70aa7 files/digest-sbcl-0.8.15 469
 MD5 5bb7b04d0735d7a7bd968381fd1ea095 files/digest-sbcl-0.8.9 467
@@ -26,6 +27,7 @@ MD5 69afd15544b984478ca6de7cac998145 files/digest-sbcl-0.8.12 468
 MD5 3e968969b9da3f3637feb09076b819a2 files/sbcl.rc 640
 MD5 c79912580313a9a43b0b9fd2aa794ba2 files/digest-sbcl-0.8.14 468
 MD5 69afd15544b984478ca6de7cac998145 files/digest-sbcl-0.8.12-r1 468
+MD5 a621450046a89b58ac8f124228282bac files/digest-sbcl-0.8.16 222
 MD5 ab7a8d4c4cdc70154ab5aaec9cdacb6d files/0.8.10/install-clc.lisp 1463
 MD5 35e2f72a0d987cbc1e659368ad33827c files/0.8.10/README.Gentoo 696
 MD5 a0edd1aecd1416792590693e5a6d2cb3 files/0.8.10/customize-target-features.lisp.no-threads 577
@@ -98,3 +100,11 @@ MD5 6f05f494b80fa25732a658deec4133c8 files/0.8.15/customize-target-features.lisp
 MD5 071f286575536d58bd93efe2f77cd24c files/0.8.15/sbcl.sh 2168
 MD5 653f804ebcd167d167f8163756b7da17 files/0.8.15/sbclrc 639
 MD5 66c1d6e9283f69ec6c29831aff873535 files/0.8.15/sbcl-gentoo.patch 1172
+MD5 609c9b36f4cf130059aa63b41dfa9017 files/0.8.16/README.Gentoo 941
+MD5 6f05f494b80fa25732a658deec4133c8 files/0.8.16/customize-target-features.lisp 574
+MD5 a0edd1aecd1416792590693e5a6d2cb3 files/0.8.16/customize-target-features.lisp.no-threads 577
+MD5 a816917795a2edb435b9d3831646eef1 files/0.8.16/install-clc.lisp 1360
+MD5 476020b6b9b159a66445f36672d419ce files/0.8.16/sbcl-gentoo.patch 1172
+MD5 65ef367ba954a6980aeccb4c553fe4ca files/0.8.16/sbcl-no-tests-gentoo.patch 2609
+MD5 071f286575536d58bd93efe2f77cd24c files/0.8.16/sbcl.sh 2168
+MD5 653f804ebcd167d167f8163756b7da17 files/0.8.16/sbclrc 639

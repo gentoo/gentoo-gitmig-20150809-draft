@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-trivial-sockets
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-trivial-sockets/ChangeLog,v 1.1 2004/10/27 06:11:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-trivial-sockets/ChangeLog,v 1.2 2004/11/01 08:05:25 mkennedy Exp $
+
+*cl-trivial-sockets-0.2 (01 Nov 2004)
+
+  01 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org>
+  +files/0.2-asdf-depends-gentoo.patch, +cl-trivial-sockets-0.2.ebuild:
+  New upstream version.
 
 *cl-trivial-sockets-0.1 (27 Oct 2004)
 

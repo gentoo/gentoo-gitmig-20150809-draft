@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.15.ebuild,v 1.2 2004/11/01 08:07:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.16.ebuild,v 1.1 2004/11/01 08:07:25 mkennedy Exp $
 
 inherit common-lisp-common eutils
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~mips"
 IUSE="threads doc nosource"
 
 DEPEND=">=dev-lisp/common-lisp-controller-3.91
@@ -73,7 +73,7 @@ src_compile() {
 	# TODO: allow the user to chose between SBCL, CMUCL and CLISP for bootstrapping
 	# build with previous SBCL
 	PATH=${bindir}/src/runtime:${PATH} SBCL_HOME=${bindir}/output GNUMAKE=make \
-		./make.sh 'sbcl --sysinit /dev/null --userinit /dev/null --noprogrammer --core ${bindir}/output/sbcl.core' \
+		./make.sh 'sbcl --sysinit /dev/null --userinit /dev/null --no-debugger --core ${bindir}/output/sbcl.core' \
 		|| die
 
 	# build with CMUCL
