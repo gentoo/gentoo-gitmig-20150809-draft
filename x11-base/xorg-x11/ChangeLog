@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.177 2004/10/28 19:09:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.178 2004/10/28 19:15:49 spyderous Exp $
+
+  28 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r2.ebuild:
+  Change glx USE to opengl.
 
   28 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:

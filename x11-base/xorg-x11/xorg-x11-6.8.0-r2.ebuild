@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.32 2004/10/28 19:09:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.33 2004/10/28 19:15:49 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -34,9 +34,9 @@ inherit eutils flag-o-matic toolchain-funcs x11
 RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
-IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc dri font-server glx
-	hardened insecure-drivers ipv6 mmx nls pam sdk sse static truetype-fonts
-	type1-fonts uclibc xprint xv"
+IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc dri font-server
+	hardened insecure-drivers ipv6 mmx nls opengl pam sdk sse static
+	truetype-fonts type1-fonts uclibc xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.5"
@@ -94,7 +94,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=dev-libs/expat-1.95.3
 	>=media-libs/freetype-2.1.4
 	>=media-libs/fontconfig-2.1-r1
-	glx? ( >=x11-base/opengl-update-2* )
+	opengl? ( >=x11-base/opengl-update-2* )
 	>=x11-misc/ttmkfdir-3.0.9-r2
 	>=sys-apps/sed-4
 	sys-apps/util-linux
@@ -224,8 +224,8 @@ pkg_setup() {
 		die "The dmx and doc USE flags are temporarily incompatible and result in a dead build."
 	fi
 
-	if use dri && ! use glx; then
-		die "The dri USE flag requires the glx flag."
+	if use dri && ! use opengl; then
+		die "The dri USE flag requires the opengl flag."
 	fi
 
 	# on amd64 we need /usr/lib64/X11/locale/lib to be a symlink
@@ -419,8 +419,8 @@ host_def_setup() {
 
 		# Do we want the glx extension? This will turn off XF86DRI if it's off.
 		# DRI can't build if glx isn't built, so keep this below DRI define.
-		use_build glx BuildGlxExt
-		use_build glx BuildGLXLibrary
+		use_build opengl BuildGlxExt
+		use_build opengl BuildGLXLibrary
 
 		# Make xv optional for more minimal builds
 		use_build xv BuildXvLibrary
@@ -977,7 +977,7 @@ src_install() {
 	dosym ../X11R6/include/GL /usr/include/GL
 	dosym ../../usr/$(get_libdir)/X11/xkb /etc/X11/xkb
 
-	if use glx; then
+	if use opengl; then
 		fix_opengl_symlinks
 	fi
 
@@ -1027,7 +1027,7 @@ src_install() {
 	# We move libGLU to /usr/lib now
 	dosym libGLU.so.1.3 /usr/$(get_libdir)/libMesaGLU.so
 
-	if use glx; then
+	if use opengl; then
 		setup_dynamic_libgl
 	fi
 
@@ -1134,8 +1134,8 @@ pkg_preinst() {
 	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/$(get_libdir)/X11
 	fi
 
-	# Run this even for USE=-glx, to clean out old stuff from possible
-	# USE=glx build
+	# Run this even for USE=-opengl, to clean out old stuff from possible
+	# USE=opengl build
 	clean_dynamic_libgl
 }
 
@@ -1311,7 +1311,7 @@ pkg_postinst() {
 
 		font_setup
 
-		if use glx; then
+		if use opengl; then
 			switch_opengl_implem
 		fi
 	fi
@@ -1350,7 +1350,7 @@ pkg_postinst() {
 		ld -rpath ${ROOT}/usr/$(get_libdir)/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
 		ld -rpath ${ROOT}/usr/$(get_libdir)/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
 
-		if use glx; then
+		if use opengl; then
 			#The problem about DRI module and GLX module is fixed.
 			cd ${ROOT}/usr/$(get_libdir)/modules/extensions
 			mv libglx.so libglx.so.orig
@@ -1372,7 +1372,7 @@ pkg_prerm() {
 		mv ati_drv.so.orig ati_drv.so
 		mv nv_drv.so.orig nv_drv.so
 		cd ${ROOT}/usr/$(get_libdir)/modules/extensions
-		if use glx; then
+		if use opengl; then
 			mv libglx.so.orig libglx.so
 			mv libdri.so.orig libdri.so
 		fi
@@ -1386,7 +1386,7 @@ pkg_postrm() {
 		ln -snf ../X11R6/bin ${ROOT}/usr/bin/X11
 		ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
 		ln -snf ../X11R6/include/DPS ${ROOT}/usr/include/DPS
-		if use glx; then
+		if use opengl; then
 			ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
 		fi
 	fi
