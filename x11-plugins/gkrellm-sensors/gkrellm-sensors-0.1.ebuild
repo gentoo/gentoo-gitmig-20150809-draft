@@ -1,6 +1,6 @@
-# Copyright 2002 Robin Cull
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/gkrellm-sensors-0.1.ebuild,v 1.5 2003/09/06 05:45:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/gkrellm-sensors-0.1.ebuild,v 1.6 2003/09/29 21:49:47 mholzer Exp $
 
 MY_P=${P/gkrellm-/gklm}
 S=${WORKDIR}/gklmsensors
