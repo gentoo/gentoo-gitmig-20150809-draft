@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cmd5checkpw
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.6 2003/12/03 16:40:28 ciaranm Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.7 2004/01/29 03:25:23 avenj Exp $
+
+  28 Jan 2004; Jon Portnoy <avenj@gentoo.org> cmd5checkpw-0.22.ebuild :
+  AMD64 keywords.
 
   03 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> cmd5checkpw-0.22.ebuild:
   Moved to stable on sparc to unbreak qmail (bug 34978)

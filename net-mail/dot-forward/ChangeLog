@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dot-forward
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.7 2003/09/03 16:05:32 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.8 2004/01/29 03:24:22 avenj Exp $
+
+*dot-forward-0.71-r1 (28 Jan 2004)
+
+  28 Jan 2004; Jon Portnoy <avenj@gentoo.org> dot-forward-0.71-r1.ebuild :
+  AMD64 keywords.
 
 *dot-forward-0.71-r1 (05 Mar 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/checkpassword-0.90-r1.ebuild,v 1.6 2003/09/05 09:11:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/checkpassword-0.90-r1.ebuild,v 1.7 2004/01/29 03:28:06 avenj Exp $
 
 inherit eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://cr.yp.to/checkpwd/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 ppc sparc alpha ~mips ~hppa ~arm ~amd64"
 
 src_unpack() {
 	unpack ${A}

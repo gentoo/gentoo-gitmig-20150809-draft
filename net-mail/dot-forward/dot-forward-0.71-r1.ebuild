@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r1.ebuild,v 1.3 2003/09/03 16:05:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r1.ebuild,v 1.4 2004/01/29 03:24:22 avenj Exp $
 
 inherit eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha ~amd64"
 
 DEPEND="virtual/glibc
 	sys-apps/groff"
