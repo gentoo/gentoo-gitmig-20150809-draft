@@ -1,13 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.1 2003/04/08 13:36:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.2 2003/04/15 02:34:20 seemant Exp $
 
 IUSE=""
 
 inherit eutils
 
 S="${WORKDIR}/fcpackage.${PV/\.0\./_}/Xft"
-PROVIDE="virtual/xft"
 DESCRIPTION="X FreeType library, also known as Xft2.0"
 SRC_URI="http://fontconfig.org/release/fcpackage.${PV/\.0\./_}.tar.gz"     
 HOMEPAGE="http://fontconfig.org/"
@@ -21,6 +20,8 @@ RDEPEND="x11-base/xfree
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.53a"	
+
+PROVIDE="virtual/xft"
 
 src_unpack() {
 	unpack ${A}
