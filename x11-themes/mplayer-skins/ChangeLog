@@ -1,8 +1,11 @@
 # ChangeLog for x11-themes/mplayer-skins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.4 2003/04/07 22:42:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.5 2003/04/09 01:16:37 seemant Exp $
 
 *mplayer-skins-0.2 (07 Apr 2003)
+
+  08 Apr 2003; Seemant Kulleen <seemant@gentoo.org> mplayer-skins-0.2.ebuild:
+  changed the QPlayer skin version -- thanks to Luca
 
   07 Apr 2003; Alastair Tse <liquidx@gentoo.org> mplayer-skins-0.2.ebuild:
   more skins and ebuild cleanup. fixes #18925
