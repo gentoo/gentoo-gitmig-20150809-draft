@@ -2,22 +2,16 @@
 Hash: SHA1
 
 MD5 0832a09c6e30f1870c4ed711fced8c12 ChangeLog 6218
-MD5 1b2383e586b8af3daab4acd6c55b2bb0 attr-2.4.7-r1.ebuild 2132
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 2387a9fcacab65403f9dd2d27795a650 attr-2.4.8.ebuild 2011
 MD5 7fc784a0b4e961308d8258fc1105be6e attr-2.4.16.ebuild 1732
 MD5 34a3c27ea5df0b846eae58d3e26ef057 attr-2.4.19.ebuild 1490
-MD5 eb9d74131b80a3e1c465474ea5eb5d9e files/attr-2.2.0-gettext.diff 642
-MD5 74e751203db2d18c328b77951c4e5396 files/attr-2.4.1-gettext.diff 1208
 MD5 8c0ffc8078bf36ce6eb5c698e9df7e0f files/attr-no-man2pages.patch 398
-MD5 8420856a31d88f998b2e8fdc978f804a files/digest-attr-2.4.7-r1 65
-MD5 78f5f8f9257b34cff44d6229e27dfe97 files/digest-attr-2.4.8 65
 MD5 0ff138637c62baa5d93673c7ea95c977 files/digest-attr-2.4.16 67
 MD5 d01b727e21154dde86e3406dfa55fe13 files/digest-attr-2.4.19 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhHa0HTu7gpaalycRAoHtAJ9UePCdI9bM3zLvVAYWX1OaHuRcegCeI8RB
-5z6fhKYWXPcfCoFAUO+3S/4=
-=Lf/c
+iD8DBQFBhHbnHTu7gpaalycRAqk7AJwMdOpZeE/gERleShsRiGgi5ykHKwCaAo8d
+ka8uw9IzLL7xX3bk7FpC89M=
+=yNXf
 -----END PGP SIGNATURE-----
