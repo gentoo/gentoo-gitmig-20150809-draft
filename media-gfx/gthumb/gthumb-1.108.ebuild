@@ -1,17 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-1.106.ebuild,v 1.2 2002/12/18 13:07:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-1.108.ebuild,v 1.1 2003/01/07 13:21:41 foser Exp $
 
 inherit gnome2
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Image viewer and browser for Gnome"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gthumb.sourceforge.net/"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
