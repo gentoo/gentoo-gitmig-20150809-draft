@@ -50,3 +50,4 @@ move net-dialup/capi4k-firmware net-dialup/isdn-firmware
 move rox-extra/systemtray rox-base/systemtray
 move app-sci/qrna sci-biology/qrna
 move app-sci/sim4 sci-biology/sim4
+move app-sci/vienna-rna sci-biology/vienna-rna
