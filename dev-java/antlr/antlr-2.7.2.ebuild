@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.2.ebuild,v 1.2 2003/04/06 00:08:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.2.ebuild,v 1.3 2003/04/06 02:25:48 robbat2 Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A parser generator for Java and C++, written in Java"
@@ -19,16 +19,10 @@ src_unpack() {
 }
 
 src_compile() {
-
-	if [ ! -f antlrall.jar ] ; then 
-		./mkalljar
-	fi
-
 	export JAVAC=jikes
-
 	echo $CLASSPATH
 	econf || die	
-	make all || die
+	make antlr.jar antlr.debug.jar antlrall.jar all || die
 }
 
 src_install () {
