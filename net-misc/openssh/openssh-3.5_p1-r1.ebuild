@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.17 2003/09/26 06:05:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.18 2003/10/29 03:17:56 pebenito Exp $
 
 inherit eutils
 
@@ -10,20 +10,18 @@ PARCH=${P/_/}
 S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
-SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${PARCH}.tar.gz
-	selinux? ( http://www.coker.com.au/selinux/ssh/openssh_3.5p1-5.se1.diff.gz )"
+SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${PARCH}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc alpha mips ~hppa arm"
-IUSE="ipv6 static pam tcpd kerberos selinux"
+IUSE="ipv6 static pam tcpd kerberos"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.
 RDEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.73 >=sys-apps/shadow-4.0.2-r2 )
 	kerberos? ( app-crypt/mit-krb5 )
-	selinux? ( sys-apps/selinux-small )
 	>=dev-libs/openssl-0.9.6d
 	sys-libs/zlib"
 
@@ -36,7 +34,6 @@ PROVIDE="virtual/ssh"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use selinux && epatch ${DISTDIR}/openssh_3.5p1-5.se1.diff.gz
 
 	if [ `use alpha` ]; then
 		 epatch ${FILESDIR}/${P}-gentoo-sshd-gcc3.patch || die
@@ -61,8 +58,6 @@ src_compile() {
 		myconf="${myconf} --with-kerberos4=/usr/athena"
 	fi
 
-	use selinux && CFLAGS="${CFLAGS} -DWITH_SELINUX"
-
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc/ssh \
@@ -79,13 +74,6 @@ src_compile() {
 	then
 		# statically link to libcrypto -- good for the boot cd
 		perl -pi -e "s|-lcrypto|/usr/lib/libcrypto.a|g" Makefile
-	fi
-
-	if [ "`use selinux`" ]
-	then
-		#add -lsecure
-		sed "s:LIBS=\(.*\):LIBS=\1 -lsecure:" < Makefile > Makefile.new
-		mv Makefile.new Makefile
 	fi
 
 	emake || die "compile problem"

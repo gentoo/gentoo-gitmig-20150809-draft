@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2.ebuild,v 1.6 2003/09/30 17:49:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2.ebuild,v 1.7 2003/10/29 03:17:56 pebenito Exp $
 
 inherit eutils flag-o-matic ccc
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -10,13 +10,12 @@ inherit eutils flag-o-matic ccc
 PARCH=${P/_/}
 
 X509_PATCH="${PARCH}+x509g2.diff.gz"
-SELINUX_PATCH="openssh-3.7.1_p1-selinux.diff.bz2"
+SELINUX_PATCH="openssh-3.7.1_p1-selinux.diff"
 
 S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="mirror://openssh/${PARCH}.tar.gz
-	selinux? ( http://dev.gentoo.org/~pebenito/${SELINUX_PATCH} )
 	X509? ( http://roumenpetrov.info/openssh/x509g2/${X509_PATCH} )"
 
 LICENSE="as-is"
@@ -30,7 +29,7 @@ RDEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.73
 		>=sys-apps/shadow-4.0.2-r2 )
 	kerberos? ( app-crypt/mit-krb5 )
-	selinux? ( sys-apps/selinux-small )
+	selinux? ( sys-libs/libselinux )
 	skey? ( app-admin/skey )
 	>=dev-libs/openssl-0.9.6d
 	>=sys-libs/zlib-1.1.4
@@ -45,7 +44,7 @@ PROVIDE="virtual/ssh"
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
 
-	use selinux && epatch ${DISTDIR}/${SELINUX_PATCH}
+	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
 	use X509 && epatch ${DISTDIR}/${X509_PATCH}
 
@@ -91,11 +90,6 @@ src_compile() {
 	use static && {
 		# statically link to libcrypto -- good for the boot cd
 		sed -i "s:-lcrypto:/usr/lib/libcrypto.a:g" Makefile
-	}
-
-	use selinux && {
-		#add -lsecure
-		sed -i "s:LIBS=\(.*\):LIBS=\1 -lsecure:" Makefile
 	}
 
 	emake || die "compile problem"
