@@ -2,9 +2,10 @@
 Hash: SHA1
 
 MD5 24764b94c52b15c33321df855d74ef1a grsec-sources-2.4.28.2.0.2-r3.ebuild 1353
-MD5 a2d412151354ae3f174e237add371949 grsec-sources-2.4.28.2.1.0-r1.ebuild 1782
+MD5 bd4d0f14719409760a49a07584dc6092 grsec-sources-2.4.28.2.1.0-r2.ebuild 1844
+MD5 b7571a1a81fb316a051e6ab27daa6281 grsec-sources-2.4.28.2.1.0-r1.ebuild 1814
 MD5 de2ab50796577ef947a9cbe845a22dae grsec-sources-2.4.28.2.1.0.ebuild 1737
-MD5 419c1e1d4b1961883a823158be346e1b ChangeLog 10198
+MD5 a4569cdf4798b7bac0170faa363e9b94 ChangeLog 10417
 MD5 0b2ea9b53b5d526e39afbdc5040ff07a metadata.xml 487
 MD5 0adbefda5e0d752b23dd2f930e6f6bbf files/linux-2.4.28-random-poolsize.patch 452
 MD5 8c35751caf824a9dacb02e80d6189b2e files/gentoo-sources-2.4.CAN-2004-1137.patch 1764
@@ -13,19 +14,21 @@ MD5 757ee1239c3f14645ccea3640d551e11 files/CAN-2004-1056.patch 11249
 MD5 3dac23b6e285462a7cda41505cc698e1 files/2.4.26-CAN-2004-0394.patch 319
 MD5 1efe4024e443e60db5fd9b21b22fabd2 files/2.4.29-CAN-2005-0001.patch 1724
 MD5 29e531cdd3f2effce5e31a1f2afb5b5d files/2.4.28-uselib4pax.patch 8912
+MD5 9860d0e9e59d561a5573648f80547f7e files/CAN-2004-1335.patch 788
 MD5 b293289df61d6f42ff54e4e0ceae53cf files/2.4.24-x86.config 2397
 MD5 8c7a1adf3e5ca3b4cfd6a75f5704d2fc files/digest-grsec-sources-2.4.28.2.1.0 231
 MD5 4a0215139f9aebfe2cc2747743763f08 files/2.4.28-binfmt_a.out.patch 1887
 MD5 c829ff92477a5a9e4fcbc370303217f8 files/digest-grsec-sources-2.4.28.2.0.2-r3 144
 MD5 8c7a1adf3e5ca3b4cfd6a75f5704d2fc files/digest-grsec-sources-2.4.28.2.1.0-r1 231
+MD5 8c7a1adf3e5ca3b4cfd6a75f5704d2fc files/digest-grsec-sources-2.4.28.2.1.0-r2 231
 MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/CAN-2004-1016.patch 2835
 MD5 d1ccc2047be533c992f67270a150a210 files/2.4.27-cmdline-race.patch 388
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iQCVAwUBQe1IkZ4WFLgrx1GWAQJhEAQAuUkYzwwIHCmUrG3tx20SbCuUeYzf9ZAp
-wJruGpXFeOlah1X3mWnOgQk8KG4S1Z9eiJTJcCqaep86WdI0bs2/WH7oLyyDlKwt
-L25pco3WTVEMIJPrD2qTTsFqENvWLcs0wpQ67W1rtb8ocvTVQQhBe67knepQcoU5
-I8ahCkNoUME=
-=Ta7y
+iQCVAwUBQgOJ5J4WFLgrx1GWAQK/HAQAoSS1h6FKCv27yddewId/ryTsOMrGxbii
+Konc8XDV/PZTOdtFsBMB1jzRbrEp53U/5gHSBQcC2inuWNpWYYQ3vf46khgIkyeO
+YJDr+gu9kgWwJDzBPTdn72HiJLgnQiida0lWqewdrKY/hyGVChhL6lULEJfDsn04
+AaW52GD8cZo=
+=m5xE
 -----END PGP SIGNATURE-----
