@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.13.ebuild,v 1.1 2003/09/10 18:14:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.13.ebuild,v 1.2 2004/01/19 14:17:48 wolf31o2 Exp $
 
 inherit games
 
@@ -51,7 +51,7 @@ src_install() {
 	[ `build_game rogue` ] && fperms g+s ${GAMES_BINDIR}/rogue
 
 	# state files
-	[ `build_game hack` ] && dodir ${GAMES_STATEDIR}/hack && fperms ug+rw ${GAMES_STATEDIR}/hack
+	[ `build_game hack` ] && dodir ${GAMES_STATEDIR}/hack && chmod ug+rw ${GAMES_STATEDIR}/hack
 	[ `build_game rogue` ] && do_statefile rogue.scores
 
 	# extra docs
