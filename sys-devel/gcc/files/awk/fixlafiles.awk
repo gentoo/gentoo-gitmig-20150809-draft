@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.9 2003/12/28 21:54:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.10 2004/07/13 18:47:57 lv Exp $
 
 function printn(string)
 {
@@ -70,6 +70,7 @@ BEGIN {
 	}
 
 	LIBCOUNT = 0
+	HAVE_GCC34 = 0
 	# Add the two default library paths
 	DIRLIST[1] = "/lib"
 	DIRLIST[2] = "/usr/lib"
@@ -129,18 +130,31 @@ BEGIN {
 
 	LIBCOUNT += 2
 
-	# Get current gcc's CHOST
-	pipe = "gcc -v 2>&1 | egrep '^Reading specs' \
-	        | sed -e 's:^.*/gcc-lib/\\([^/]*\\)/[0-9]\\+.*$:\\1:' 2>/dev/null"
+	# Get line from gcc's output containing CHOST
+	pipe = "gcc -v 2>&1 | egrep '^Reading specs' 2>/dev/null"
 
-	# If we fail to get the CHOST, see if we can get the CHOST
-	# portage thinks we are using ...
-	if ((!((pipe) | getline CHOST)) || (CHOST == "")) {
+	if ((!((pipe) | getline TMP_CHOST)) || (TMP_CHOST == "")) {
 		close(pipe)
+
+		# If we fail to get the CHOST, see if we can get the CHOST
+		# portage thinks we are using ...
 		pipe = "/usr/bin/portageq envvar 'CHOST'"
 		assert(((pipe) | getline CHOST), "(" pipe ") | getline CHOST")
-	}
+	} else {
+		# Check pre gcc-3.4.x versions
+		CHOST = gensub("^.+lib/gcc-lib/([^/]+)/[0-9]+.+$", "\\1", 1, TMP_CHOST)
 
+		if (CHOST == TMP_CHOST || CHOST == "") {
+			# Check gcc-3.4.x or later
+			CHOST = gensub("^.+lib/gcc/([^/]+)/[0-9]+.+$", "\\1", 1, TMP_CHOST);
+
+			if (CHOST == TMP_CHOST || CHOST == "")
+				CHOST = ""
+			else
+				HAVE_GCC34 = 1
+		}
+	}
+	
 	close(pipe)
 
 	if (CHOST == "") {
@@ -152,10 +166,20 @@ BEGIN {
 		if (OLDCHOST == CHOST)
 			OLDCHOST = ""
 
-	GCCLIBPREFIX = "/usr/lib/gcc-lib/"
+	GCCLIBPREFIX_OLD = "/usr/lib/gcc-lib/"
+	GCCLIBPREFIX_NEW = "/usr/lib/gcc/"
+	
+	if (HAVE_GCC34)
+		GCCLIBPREFIX = GCCLIBPREFIX_NEW
+	else
+		GCCLIBPREFIX = GCCLIBPREFIX_OLD
+	
 	GCCLIB = GCCLIBPREFIX CHOST
-	if (OLDCHOST != "")
-		OLDGCCLIB = GCCLIBPREFIX OLDCHOST
+	
+	if (OLDCHOST != "") {
+		OLDGCCLIB1 = GCCLIBPREFIX_OLD OLDCHOST
+		OLDGCCLIB2 = GCCLIBPREFIX_NEW OLDCHOST
+	}
 
 	# Get current gcc's version
 	pipe = "gcc -dumpversion"
@@ -174,7 +198,9 @@ BEGIN {
 	for (x = 1;x <= LIBCOUNT;x++) {
 
 		# Do nothing if the target dir is gcc's internal library path
-		if (DIRLIST[x] ~ GCCLIBPREFIX) continue
+		if (DIRLIST[x] ~ GCCLIBPREFIX_OLD ||
+		    DIRLIST[x] ~ GCCLIBPREFIX_NEW)
+			continue
 
 		einfo("  Scanning " DIRLIST[x] "...")
 
@@ -182,7 +208,9 @@ BEGIN {
 		while (((pipe) | getline la_files) > 0) {
 
 			# Do nothing if the .la file is located in gcc's internal lib path
-			if (la_files ~ GCCLIBPREFIX) continue
+			if (la_files ~ GCCLIBPREFIX_OLD ||
+			    la_files ~ GCCLIBPREFIX_NEW)
+				continue
 
 			CHANGED = 0
 			CHOST_CHANGED = 0
@@ -192,8 +220,10 @@ BEGIN {
 
 				if (OLDCHOST != "") {
 				
-					if (gsub(OLDGCCLIB "[/[:space:]]+",
-					         GCCLIB, la_data) > 0) {
+					if ((gsub(OLDGCCLIB1 "[/[:space:]]+",
+					          GCCLIB, la_data) > 0) ||
+					    (gsub(OLDGCCLIB2 "[/[:space:]]+",
+					          GCCLIB, la_data) > 0)) {
 					
 						CHANGED = 1
 						CHOST_CHANGED = 1
@@ -202,8 +232,10 @@ BEGIN {
 
 				if (OLDVER != NEWVER) {
 				
-					if (gsub(GCCLIB "/" OLDVER "[/[:space:]]+",
-					         GCCLIB "/" NEWVER, la_data) > 0)
+					if ((gsub(GCCLIBPREFIX_OLD CHOST "/" OLDVER "[/[:space:]]*",
+					          GCCLIB "/" NEWVER, la_data) > 0) ||
+					    (gsub(GCCLIBPREFIX_NEW CHOST "/" OLDVER "[/[:space:]]*",
+						      GCCLIB "/" NEWVER, la_data) > 0))
 						CHANGED = 1
 				}
 			}
@@ -227,8 +259,10 @@ BEGIN {
 
 					if (OLDCHOST != "") {
 					
-						tmpstr = gensub(OLDGCCLIB "([/[:space:]]+)",
+						tmpstr = gensub(OLDGCCLIB1 "([/[:space:]]+)",
 						                GCCLIB "\\1", "g", la_data)
+						tmpstr = gensub(OLDGCCLIB2 "([/[:space:]]+)",
+						                GCCLIB "\\1", "g", tmpstr)
 						
 						if (la_data != tmpstr) {
 							printn("c")
@@ -258,10 +292,23 @@ BEGIN {
 
 					if (OLDVER != NEWVER) {
 					
-						tmpstr = gensub(GCCLIB "/" OLDVER "([/[:space:]]+)",
+						tmpstr = gensub(GCCLIBPREFIX_OLD CHOST "/" OLDVER "([/[:space:]]*)",
 						                GCCLIB "/" NEWVER "\\1", "g", la_data)
+						tmpstr = gensub(GCCLIBPREFIX_NEW CHOST "/" OLDVER "([/[:space:]]*)",
+						                GCCLIB "/" NEWVER "\\1", "g", tmpstr)
+						
 						
 						if (la_data != tmpstr) {
+							# Catch:
+							#
+							#  dependency_libs=' -L/usr/lib/gcc-lib/../../CHOST/lib'
+							#
+							# in cases where we have gcc34
+							tmpstr = gensub(GCCLIBPREFIX_OLD "(../../" CHOST "/lib)",
+							                GCCLIBPREFIX "\\1", "g", tmpstr)
+							tmpstr = gensub(GCCLIBPREFIX_NEW "(../../" CHOST "/lib)",
+							                GCCLIBPREFIX "\\1", "g", tmpstr)
+
 							printn("v")
 							la_data = tmpstr
 						}

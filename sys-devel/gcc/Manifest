@@ -25,7 +25,7 @@ MD5 85a0c8638cea68898c4a50919b13d547 gcc-2.95.3-r8.ebuild 9102
 MD5 4001f2bfb30873af446cc09bcb04aff9 gcc-3.3.3-r3.ebuild 24572
 MD5 f357f60ed2b1c343a0555b94de742cd1 gcc-3.3.2-r6.ebuild 21068
 MD5 d30becfe989175c3d30ff19e941c3822 gcc-3.3.2-r1.ebuild 17813
-MD5 12336511a2977175d8e5caaaa89d7b42 ChangeLog 59252
+MD5 a06ec67809bf8698322db900bdf3b602 ChangeLog 59405
 MD5 c2cdb224cdf888d8a95ae6c39804c893 gcc-3.3.2.ebuild 17760
 MD5 5c7b94106c929033ea8cac50d7a36d71 gcc-3.3.3_pre20040426.ebuild 22484
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
@@ -73,7 +73,7 @@ MD5 d047c78a9141b16915d8ec3f54d1e246 files/3.3/gcc33-coreutils-compat.patch.bz2 
 MD5 453122edf63d75cca3a6c56a6dac45b0 files/3.3/gcc33-propolice-version.patch 570
 MD5 088e0807e677010cafe4e590e8711be1 files/3.3/gcc33-no-multilib-amd64.patch 343
 MD5 d6ee829d1712436361f5f1daf7b14e83 files/3.3/gcc33-gentoo-branding.patch 890
-MD5 d622a08b045210fcb67eae879ede8cd2 files/awk/fixlafiles.awk 6284
+MD5 5adb32fa5b860e9afd415fc42c160aee files/awk/fixlafiles.awk 7755
 MD5 c7e8f50ba67fce8f0c91d293e03ccf1b files/awk/scanforssp.awk 5836
 MD5 51719a174883702ef1851fac4cc79398 files/3.2.1/gcc32-strip-dotdot.patch 2071
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
