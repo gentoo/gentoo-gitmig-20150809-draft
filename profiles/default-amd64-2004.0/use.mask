@@ -1,3 +1,5 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.2 2004/03/21 16:25:43 jhuebel Exp $
+
 # Anything that relies on vm86.h will not built on amd64
 # SVGAlib doesnt build
 svga
@@ -6,12 +8,6 @@ svga
 #java
 #jikes
 #junit
-
-# Update 10/02/03 Brad House <brad_mssw@gentoo.org> 
-#    arts patches are in, it builds now
-# KDE doesnt build
-# kde
-# arts
 
 # Too many packages assume that mmx/sse/sse2/3dnow are 86-32 only things to
 # make them useful on amd64. Anyway, all amd64 cpus have them, so they should
@@ -26,8 +22,10 @@ icc
 # Firebird doesnt build on amd64
 firebird
 
+# Updated 03/21/2004, Jason Huebel <jhuebel@gentoo.org>
+# DirectFB works now
 # DirectFB doesnt build on amd64
-directfb
+# directfb
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
