@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nikto
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.3 2004/03/14 11:56:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.4 2004/03/21 14:18:58 mboman Exp $
+
+  21 Mar 2004; Michael Boman <mboman@gentoo.org> nikto-1.31.ebuild:
+  QA: Unnecessary definition of S removed. Adding categories to dependencies.
+  See bug 45110 for details.
 
   14 Mar 2004; Michael Cummings <mcummings@gentoo.org> nikto-1.31.ebuild:
   swapping depend and rdepend, closing bug 44515
