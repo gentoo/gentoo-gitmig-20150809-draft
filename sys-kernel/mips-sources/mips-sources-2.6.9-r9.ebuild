@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.9-r8.ebuild,v 1.1 2005/01/06 05:20:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.9-r9.ebuild,v 1.1 2005/01/19 02:58:24 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20041022"			# Date of diff between kernel.org and lmo CVS
 COBALTPATCHVER="1.8"			# Tarball version for cobalt patches
-SECPATCHVER="1.9"			# Tarball version for security patches
+SECPATCHVER="1.10"			# Tarball version for security patches
 GENPATCHVER="1.4"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
@@ -140,10 +140,14 @@ src_unpack() {
 		epatch ${WORKDIR}/security/CAN-2004-1074-2.6-kernel_dos_aout.patch
 		epatch ${WORKDIR}/security/CAN-2004-1074-2.6.9-kernel_dos_vma.patch
 		epatch ${WORKDIR}/security/CAN-2004-1137-igmp_vuln.patch
-
+		epatch ${WORKDIR}/security/CAN-2004-1235-2.6-uselib_priv_escalation.patch
+		epatch ${WORKDIR}/security/CAN-2005-0001-2.6.9-prereq-grsec_mult_kern_adv.patch
+		epatch ${WORKDIR}/security/CAN-2005-0001-2.6.9-i386_smp_page_fault_handler.patch
 		epatch ${WORKDIR}/security/security-2.6.9-binfmt_elf-fixes.patch
 		epatch ${WORKDIR}/security/security-2.6.9-mips-ptrace.patch
 		epatch ${WORKDIR}/security/security-2.6.9-shm_unlock.patch
+		epatch ${WORKDIR}/security/security-2.6.10-lsm-local_priv_elevate_flaw.patch
+		epatch ${WORKDIR}/security/security-2.6-nfs-client-o_direct-error.patch
 	eend
 
 
