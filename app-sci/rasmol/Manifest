@@ -1,5 +1,5 @@
-MD5 d59f8c84973896e62700a506b2395e4c rasmol-2.7.2.1.1.ebuild 1353
-MD5 f3872db910e153ac0d2d1ccf61aa282f rasmol-2.7.1.1.ebuild 1382
+MD5 78d9882ea29c9f8ceb7fbaf3c4185249 rasmol-2.7.2.1.1.ebuild 1392
+MD5 9ad2efdcd451845c2c6fd08fc5628459 rasmol-2.7.1.1.ebuild 1421
 MD5 7efe29286508861a25d6a87a5cdc46ee ChangeLog 1676
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 d141a35d345c54bb3694ed83ba91b40a files/rasmol.sh.debian 830
