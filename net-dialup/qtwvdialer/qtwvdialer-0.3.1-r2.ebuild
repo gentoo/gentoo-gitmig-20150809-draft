@@ -1,20 +1,20 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.3.1-r2.ebuild,v 1.1 2001/12/29 17:41:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.3.1-r2.ebuild,v 1.2 2002/02/03 21:37:36 danarmak Exp $
 
 S=${WORKDIR}/QtWvDialer-${PV}
 DESCRIPTION="QT Frontend for wvdial"
 SRC_URI="http://private.addcom.de/toussaint/${P}.tgz"
 HOMEPAGE="http://private.addcom.de/toussaint/qtwvdialer.html"
 
-DEPEND=">=x11-libs/qt-2.2.2
+DEPEND="=x11-libs/qt-2.3*
 	>=dev-util/tmake-1.6
 	net-dialup/wvdial
         sys-apps/which
         sys-apps/modutils"
 
-RDEPEND=">=x11-libs/qt-2.2.2
+RDEPEND="=x11-libs/qt-2.3*
 	net-dialup/wvdial
 	sys-apps/which
 	sys-apps/modutils"
