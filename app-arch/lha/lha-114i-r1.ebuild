@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r1.ebuild,v 1.1 2003/07/15 18:43:39 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r1.ebuild,v 1.2 2003/09/05 01:26:31 msterret Exp $
 
 DESCRIPTION="Utility for creating and opening lzh archives."
 HOMEPAGE="http://sourceforge.jp/projects/lha/"
@@ -23,14 +23,14 @@ src_compile() {
 	use nls \
 		&& myconf="${myconf} --enable-multibyte-filename=auto" \
 		|| myconf="${myconf} --disable-multibyte-filename"
-		
+
 	./configure \
 		--prefix=/usr \
 		--mandir=/usr/share/man/ja \
 		${myconf} || die "./configure failed"
 
 	#make check || die "make check failed"
-	
+
 	emake || die
 
 }
