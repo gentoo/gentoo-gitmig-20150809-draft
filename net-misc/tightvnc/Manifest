@@ -1,7 +1,7 @@
 MD5 e3d97376c0f029056522d630552f86f6 tightvnc-1.2.8.ebuild 1614
 MD5 e08d2f58129095e93553ce233ba4556c tightvnc-1.2.9-r1.ebuild 1923
-MD5 835e43a852e75a7cadf5fa755fdadb7e tightvnc-4.0_beta20031113.ebuild 2617
-MD5 324642b197fd47433de7bc691ef43503 ChangeLog 4608
+MD5 faab5dfdb3056a55200f792089ce3e5d tightvnc-4.0_beta20031113.ebuild 2661
+MD5 01b0d2eac600d83ab2ce794a301f09a8 ChangeLog 4631
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 8a5968ab6bd3fdd835fe13c589e1cc4d files/digest-tightvnc-4.0_beta20031113 367
 MD5 11be6d47e594297c9a92c56056df2f73 files/digest-tightvnc-1.2.8 76
@@ -15,6 +15,7 @@ MD5 57e1cd8ec91d0e8abbea5b267a6f1fb6 files/tightvnc-1.2.9-gentoo.security.patch 
 MD5 e6b8161e8381fd5be315641819de6425 files/tightvnc-4.0_linux-headers.patch 1359
 MD5 e77df1134e59b0a9881ef1221eeffd37 files/tightvnc_cvs20031113.patch.bz2 19007
 MD5 68903d8d341d5f9a8d576dee0716f4b8 files/README.JavaViewer 18585
+MD5 30ed72145d7123d98a8687d1746cf087 files/tightvnc-4.0_gcc-3.4.patch 262
 MD5 db5ea3a3551303c5cd4362c657ba3a08 files/digest-tightvnc-1.2.9-r1 76
 MD5 eb14fedcc3608a1384ef1cba6dbbf103 files/tightvnc-1.2.8-gentoo.diff 657
 MD5 da10d05f6a76bdc27a59276c0acde9d9 files/4.0/0180_amd64_4.2.99.4-glx-nopic.patch 364

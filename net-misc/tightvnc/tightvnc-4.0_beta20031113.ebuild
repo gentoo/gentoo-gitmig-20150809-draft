@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-4.0_beta20031113.ebuild,v 1.5 2004/05/24 23:25:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-4.0_beta20031113.ebuild,v 1.6 2004/05/24 23:30:08 aliz Exp $
 
 inherit eutils
 IUSE="java tcpd"
@@ -51,9 +51,11 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/tightvnc_cvs${TIGHTVNC_CVS}.patch.bz2
+	epatch ${FILESDIR}/${PN}-4.0_gcc-3.4.patch
 
 	cd ${S}/xc
 	epatch ../xc.patch
+	epatch ${FILESDIR}/${PN}-4.0_linux-headers.patch
 	epatch ${FILESDIR}/4.0/0121_all_4.2.99.3-build-libs-with-pic.patch
 	epatch ${FILESDIR}/4.0/0160_all_4.2.99.4-IncludeSharedObjectInNormalLib.patch
 	epatch ${FILESDIR}/4.0/0180_amd64_4.2.99.4-glx-nopic.patch
@@ -70,7 +72,6 @@ src_unpack() {
 	sed -i 's:#include <rfb/TightEncoder.h>:#include <rfb/TightEncoder.h>\nextern "C" {\n#include <jpeglib.h>\n}:g' TightEncoder.cxx
 
 	cd ${S}/xc
-	epatch ${FILESDIR}/${PN}-4.0_linux-headers.patch
 }
 src_compile() {
 	autoconf
