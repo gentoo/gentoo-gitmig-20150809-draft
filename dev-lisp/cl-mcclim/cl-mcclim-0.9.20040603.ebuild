@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.20040603.ebuild,v 1.2 2004/06/24 23:46:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.20040603.ebuild,v 1.3 2004/06/26 13:30:15 dholm Exp $
 
 inherit common-lisp elisp eutils
 
@@ -17,7 +17,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-mcclim/cl-mcclim_${THEIR_PV
 	mirror://gentoo/cl-mcclim-${THEIR_PV}.gentoo-Spec.tar.gz" # additional sources from CVS for Gentoo
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="emacs doc"
 
 DEPEND="dev-lisp/common-lisp-controller
