@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/files/atd.rc6,v 1.1 2005/03/03 17:40:23 ciaranm Exp $
+
+depend() {
+	need clock logger
+}
+
+start() {
+	ebegin "Starting atd"
+	start-stop-daemon --start --quiet --pidfile /var/run/atd.pid \
+		--startas /usr/sbin/atd
+	eend $?
+}
+
+stop() {
+	ebegin "Shutting down atd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/atd.pid
+	eend $?
+}
