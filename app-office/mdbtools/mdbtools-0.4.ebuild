@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.4.ebuild,v 1.1 2002/11/20 18:53:36 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.4.ebuild,v 1.2 2002/11/20 21:43:26 woodchip Exp $
 
 DESCRIPTION="A set of libraries and utilities for reading Microsoft Access database (MDB) files"
 HOMEPAGE="http://sourceforge.net/projects/mdbtools/"
@@ -17,7 +17,7 @@ DEPEND=">=x11-libs/gtk+-1.2.0
 	>=sys-libs/libtermcap-compat-1.2.3
 	>=sys-devel/flex-2.5.0
 	>=sys-devel/bison-1.35
-	odbc? ( >= dev-db/unixODBC-2.0 )"
+	odbc? ( >=dev-db/unixODBC-2.0 )"
 
 src_unpack() {
 	unpack ${A} || die
