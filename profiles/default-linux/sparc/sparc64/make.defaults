@@ -1,0 +1,12 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/make.defaults,v 1.1 2004/12/31 10:29:28 eradicator Exp $
+
+ARCH="sparc"
+ACCEPT_KEYWORDS="${ARCH}"
+
+# Even though this is a 64bit kernel, we use a 32-bit userland (v9)
+CHOST="sparc-unknown-linux-gnu"
+
+# We need sparc64 binutils for linux-headers
+CTARGETS_BINUTILS="sparc-unknown-linux-gnu sparc64-unknown-linux-gnu"

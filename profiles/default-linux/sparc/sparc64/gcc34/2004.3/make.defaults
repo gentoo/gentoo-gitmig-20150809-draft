@@ -1,17 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/gcc34/2004.3/make.defaults,v 1.6 2004/12/30 22:05:57 eradicator Exp $
-
-ARCH="sparc"
-
-# Even though this is a 64bit kernel, we use a 32-bit userland (v9)
-CHOST="sparc-unknown-linux-gnu"
-
-# What ctargets do we want from binutils
-CTARGETS_BINUTILS="sparc-unknown-linux-gnu sparc64-unknown-linux-gnu"
-
-# Used in ebuilds for verifying sparc64 profile
-PROFILE_ARCH="sparc64"
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/gcc34/2004.3/make.defaults,v 1.7 2004/12/31 10:29:28 eradicator Exp $
 
 # Compiler flags
 CFLAGS="-O2 -pipe"
@@ -19,7 +8,6 @@ CXXFLAGS=${CFLAGS}
 
 # Misc
 FEATURES="sandbox ccache"
-ACCEPT_KEYWORDS="sparc"
 
 # USE settings
 USE="alsa arts avi berkdb bitmap-fonts crypt cups encode esd fortran f77 fbcon foomaticdb gdbm gcc64 gif gtk gtk2 gnome imlib jack jpeg kde libwww mad mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts X xv xml2 xmms zlib"
