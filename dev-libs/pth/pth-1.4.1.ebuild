@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.1.ebuild,v 1.8 2004/05/27 17:51:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.1.ebuild,v 1.9 2004/06/08 12:36:07 gmsoft Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/pth/pth-1.4.1.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="x86 ppc sparc ~amd64 hppa"
 
 DEPEND="virtual/glibc"
 
