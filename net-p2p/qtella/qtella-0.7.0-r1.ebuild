@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0-r1.ebuild,v 1.1 2005/01/29 23:37:27 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0-r1.ebuild,v 1.2 2005/02/27 22:30:19 weeve Exp $
 
 inherit eutils kde-functions
 
@@ -10,7 +10,7 @@ DESCRIPTION="Excellent QT/KDE Gnutella Client"
 
 LICENSE="GPL-2"
 IUSE="kde"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="3" # why??
 
 DEPEND=">=x11-libs/qt-3
