@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.12 2005/01/31 17:36:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.13 2005/02/01 14:23:07 corsair Exp $
 
 inherit eutils flag-o-matic toolchain-funcs debug
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc ~alpha mips hppa ~ia64 amd64 ~ppc64"
+KEYWORDS="x86 ppc sparc ~alpha mips hppa ~ia64 amd64 ppc64"
 IUSE="selinux pam debug"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
