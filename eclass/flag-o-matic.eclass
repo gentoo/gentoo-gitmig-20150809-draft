@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.38 2004/02/26 06:47:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.39 2004/03/12 05:14:45 solar Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -79,7 +79,7 @@ setup-allowed-flags() {
 filter-flags() {
 	for x in "$@" ; do
 		case "${x}" in
-			-fPIC|-fpic|-fPIE|-fpie) etexec-flags;;
+			-fPIC|-fpic|-fPIE|-fpie|-pie) etexec-flags;;
 			-fstack-protector|-fstack-protector-all) fstack-flags;;
 			*) ;;
 		esac
