@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.3 2005/03/12 15:33:00 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.4 2005/03/30 17:49:43 caleb Exp $
+
+*redcloth-3.0.3 (30 Mar 2005)
+
+  30 Mar 2005; Caleb Tennis <caleb@gentoo.org> +redcloth-3.0.3.ebuild:
+  version bump, use the gems eclass instead of the tarball
 
   12 Mar 2005; Michael Kohl <citizen428@gentoo.org> -redcloth-3.0.1.ebuild,
   redcloth-3.0.2.ebuild:
