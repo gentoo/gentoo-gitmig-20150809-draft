@@ -1,6 +1,17 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.265 2005/01/12 07:10:58 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.266 2005/01/13 06:20:37 spyderous Exp $
+
+*xorg-x11-6.8.1.901-r1 (12 Jan 2005)
+
+  12 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-6.8.1.901-r1.ebuild:
+  PATCH_VER 0.3.4. (#70712) Add 9865_all_add-nodeadkeys-to-gb.patch. Enable
+  deadkeys for gb keymap. They got lost sometime between XFree86 4.3.0 and
+  X.Org 6.8.0. (#76537, probably others) Also, do some work on the migration
+  function that should fix things up for amd64 users and anyone else with a
+  libdir != lib. (#76074) Install xprint scripts correctly, thanks to Stefan
+  Briesenick <sbriesen@gmx.de>.
 
   12 Jan 2005; Stephen P. Becker <geoman@gentoo.org>
   xorg-x11-6.8.0-r4.ebuild:
