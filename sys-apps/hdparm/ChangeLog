@@ -1,10 +1,14 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.15 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.16 2002/12/18 06:25:57 sethbc Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *hdparm-5.3-r1 (08 Dec 2002)
+
+  17 Dec 2002; Seth Chandler <sethbc@gentoo.org> : hdparm-5.3-r1.ebuild
+  masked ebuild for 5.3 and changed the distfiles location, corrupted
+  package on the metalab mirrors  
 
   08 Dec 2002; Seth Chandler <sethbc@gentoo.org> : hdparm-5.3-r1.ebuild
   bumped ebuild to 5.3 to fix some BIG_ENDIAN issues, -t for small drives, 
