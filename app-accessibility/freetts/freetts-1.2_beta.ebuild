@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/freetts-1.2_beta.ebuild,v 1.4 2004/03/26 10:28:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/freetts-1.2_beta.ebuild,v 1.5 2004/04/06 03:51:28 zx Exp $
 
 inherit java-pkg eutils
 
@@ -41,6 +41,10 @@ src_install() {
 	doins speech.properties
 	cp -R ${S}/demo ${D}/usr/share/${PN}
 	cp -R ${S}/tools ${D}/usr/share/${PN}
+	dodir ${JDK_HOME}/jre/lib
+	dosym \
+		/usr/share/${PN}/speech.properties \
+		${JDK_HOME}/jre/lib/speech.properties
 	dodoc README.txt RELEASE_NOTES acknowledgments.txt
 	use doc && cp -R ${S}/docs ${D}/usr/share/doc/${P} && cp -R ${S}/javadoc ${D}/usr/share/doc/${P}/api
 }
