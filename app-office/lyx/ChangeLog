@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.22 2003/04/05 21:47:30 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.23 2003/04/07 16:16:26 danarmak Exp $
+
+  07 Apr 2003; Dan Armak <danarmak@gentoo.org> lyx-1.3.1.ebuild:
+  Fetch the .tar.bz2 not the .tar.gz, as it is considerably smaller. Closes
+  #17853 - thanks to John Steele Scott for noticing.
 
   06 Apr 2003; Dan Armak <danarmak@gentoo.org> lyx-1.3.1.ebuild:
   Add stable x86 keyword.
