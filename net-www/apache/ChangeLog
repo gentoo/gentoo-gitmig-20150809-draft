@@ -1,10 +1,6 @@
 # ChangeLog for net-www/apache
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.9 2002/05/14 02:29:18 woodchip Exp $
-
-  13 May 2002; Donny Davies <woodchip@gentoo.org> :
-
-  Test better for existing user/group apache; closes #2313.
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.10 2002/05/14 03:27:31 woodchip Exp $
 
 *apache-1.3.24-r2 (4 May 2002)
 

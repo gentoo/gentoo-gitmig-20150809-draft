@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.24-r2.ebuild,v 1.2 2002/05/14 02:29:18 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.24-r2.ebuild,v 1.3 2002/05/14 03:27:31 woodchip Exp $
 
 mod_ssl_ver=2.8.8-${PV}
 HARD_SERVER_LIMIT=512
@@ -25,11 +25,11 @@ SLOT="1"
 
 pkg_setup() {
 	# these are in baselayout now; it will not hurt to leave them here though..
-	if ! id -g apache >/dev/null 2>&1 ; then
+	if ! grep -q ^apache: /etc/group ; then
 		groupadd -g 81 apache || die "problem adding group apache"
 	fi
 
-	if ! id -u apache >/dev/null 2>&1 ; then
+	if ! grep -q ^apache: /etc/passwd ; then
 		useradd -u 81 -g apache -s /bin/false -d /home/httpd -c "apache" apache
 		assert "problem adding user apache"
 	fi
