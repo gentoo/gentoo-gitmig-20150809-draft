@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r4.ebuild,v 1.6 2002/08/16 03:01:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r4.ebuild,v 1.7 2002/08/29 22:37:21 seemant Exp $
 
 S=${WORKDIR}/lynx2-8-4
 DESCRIPTION="An excellent console-based web browser with ssl support"
@@ -11,12 +11,12 @@ KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 
+DEPEND=">=sys-libs/ncurses-5.1
+	>=sys-libs/zlib-1.1.3
+	nls? ( sys-devel/gettext )
+	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
-DEPEND="virtual/glibc
-        >=sys-libs/ncurses-5.1
-        >=sys-libs/zlib-1.1.3
-        nls? ( sys-devel/gettext )
-        ssl? ( >=dev-libs/openssl-0.9.6 )"
+PROVIDE="virtual/textbrowser"
 
 src_unpack() {
 	unpack ${A}
@@ -38,12 +38,19 @@ src_compile() {
 
 	CFLAGS="${CFLAGS} -DANSI_VARARGS"
 
-	./configure --prefix=/usr --mandir=/usr/share/man --datadir=/usr/share \
-	--libdir=/etc/lynx --enable-cgi-links --enable-prettysrc \
-	--enable-nsl-fork --enable-file-upload --enable-read-eta \
-	--enable-libjs --enable-color-style --enable-scrollbar \
-	--enable-included-msgs --with-zlib --host=${CHOST} ${myconf}
-	assert
+	econf \
+		--libdir=/etc/lynx \
+		--enable-cgi-links \
+		--enable-prettysrc \
+		--enable-nsl-fork \
+		--enable-file-upload \
+		--enable-read-eta \
+		--enable-libjs \
+		--enable-color-style \
+		--enable-scrollbar \
+		--enable-included-msgs \
+		--with-zlib \
+		${myconf} || die
 
 	emake || die "compile problem"
 }
