@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-1.4.4b.ebuild,v 1.2 2003/06/12 21:20:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-1.4.4b.ebuild,v 1.3 2003/06/20 02:04:24 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Full state iptables firewall"
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 RDEPENR=${DEPEND}
 
 src_install () {
-	dodir /var/state
+	keepdir /var/lib/shorewall
 	PREFIX=${D} ./install.sh /etc/init.d || die
 
 	exeinto /etc/init.d
