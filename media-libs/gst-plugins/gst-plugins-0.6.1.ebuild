@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.0-r3.ebuild,v 1.1 2003/02/24 14:37:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.1.ebuild,v 1.1 2003/04/19 11:40:38 foser Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
@@ -13,6 +13,7 @@ IUSE="encode quicktime mpeg jpeg esd gnome mikmod sdl png alsa arts dvd aalib og
 S="${WORKDIR}/${P}"
 DESCRIPTION="Additional plugins for gstreamer - streaming media framework"
 HOMEPAGE="http://gstreamer.sourceforge.net"
+SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.bz2"
 
 SLOT=${PV_MAJ_MIN}
 LICENSE="LGPL-2.1"
@@ -28,6 +29,7 @@ RDEPEND="=media-libs/gstreamer-${PV}*
 
 	media-sound/mad
 	media-libs/hermes
+	media-sound/cdparanoia
 
 	oggvorbis? ( media-libs/libvorbis
 		media-libs/libogg )
@@ -52,7 +54,6 @@ RDEPEND="=media-libs/gstreamer-${PV}*
 #	virtual/jack 
 #	media-libs/ladspa-sdk" 
 #	>=media-libs/libdv-0.9.5
-#	media-sound/cdparanoia
 
 DEPEND="${RDEPEND}
 	>=gnome-base/gconf-1.2.0
@@ -60,12 +61,13 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	# ppc asm included in the resample plugin seems to be broken, 
+	# using a slower but working version for now
+	epatch ${FILESDIR}/noppcasm.patch
 
 	# ffmpeg libs fix
 	use oggvorbis && epatch ${FILESDIR}/${PN}-${PV_MAJ_MIN}-ffmpeg_ldflags.patch
-
-	# ogg with id3 tag detection fix by <foser@gentoo.org>
-	epatch ${FILESDIR}/${PN}-${PV_MAJ_MIN}-ogg_detection_fix.patch
 
 	# fix the scripts
 	cd ${S}/tools
@@ -88,9 +90,6 @@ src_compile() {
 	replace-flags "-O3" "-O2"
 
 	local myconf=""
-
-	# temp disable (#15989)
-	myconf="--disable-v4l --disable-v4l2"
 
 	# FIXME : do this for _all_ IUSE flags
 	use aalib \
@@ -152,15 +151,13 @@ src_compile() {
 	emake || make || die
 }
 
-src_install () {
-	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"		
-	make DESTDIR=${D} install || die
-	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-
-	dodoc AUTHORS COPYING INSTALL README RELEASE TODO 
-}
-
 pkg_postinst () {
 	gnome2_gconf_install
 	gst-register-${PV_MAJ_MIN}
 }
+
+USE_DESTDIR="1"
+SCROLLKEEPER_UPDATE="0"
+
+DOCS="AUTHORS COPYING INSTALL README RELEASE TODO"
+
