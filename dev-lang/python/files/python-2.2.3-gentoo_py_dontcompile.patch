@@ -1,0 +1,23 @@
+--- Python-2.2.3/Python/import.c	2003-03-23 14:32:56.000000000 +0000
++++ /tmp/import.c	2003-10-09 09:45:51.000000000 +0100
+@@ -719,6 +719,7 @@
+ write_compiled_module(PyCodeObject *co, char *cpathname, long mtime)
+ {
+ 	FILE *fp;
++   char *py_dontcompile;
+ 
+ 	if (CANT_WRITE(co->co_argcount) ||
+ 	    CANT_WRITE(co->co_nlocals) ||
+@@ -731,8 +732,10 @@
+ 				cpathname);
+ 		return;
+ 	}
+-
+-	fp = open_exclusive(cpathname);
++   if ((py_dontcompile = getenv("PYTHON_DONTCOMPILE")) != NULL)
++     fp = open_exclusive(cpathname);
++   else
++     fp = NULL;
+ 	if (fp == NULL) {
+ 		if (Py_VerboseFlag)
+ 			PySys_WriteStderr(

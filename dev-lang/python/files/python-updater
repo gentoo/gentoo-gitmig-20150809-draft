@@ -24,8 +24,9 @@
 OLD_PY_VER=2.2
 NEW_PY_VER=$(python -V 2>&1 | sed 's:Python ::' | cut -d. -f1-2)
 OLD_MODULES_DIR=/usr/lib/python${OLD_PY_VER}
+OLD_INCLUDE_DIR=/usr/include/python${OLD_PY_VER}
 
-PKGS_EXCEPTIONS="dev-lang/python"
+PKGS_EXCEPTIONS="dev-lang/python sys-apps/portage"
 PKGS_MANUAL="app-office/gnumeric app-office/dia x11-libs/vte"
 LOGFILE="/tmp/python-updater.log"
 
@@ -37,6 +38,7 @@ PORTDIR_OVERLAYS=`portageq portdir_overlay`
 PRETEND=0
 PKGS_TO_REMERGE=""
 PKGS_COUNT_REMERGE=0
+PORTAGE_PYTHON="/usr/bin/python"
 
 # load the gentoo-style info macros, but hack to get around
 # it thinking this is an rc script
@@ -68,6 +70,8 @@ elog() {
 	echo "${DATESTRING} - ${*}" >> ${LOGFILE}	
 }
 
+
+
 # 
 #
 # Command Line Parsing
@@ -88,6 +92,16 @@ if [ -n "$1" ]; then
 			;;
 	esac
 fi	
+
+#
+# Test where portage is, in python2.2 or somewhere else?
+#
+for py in /usr/bin/python /usr/bin/python${OLD_PY_VER} /usr/bin/python${NEW_PY_VER}; do
+	if ${py} -c "import portage"; then
+		PORTAGE_PYTHON=${py}
+		break;
+	fi
+done
 
 #
 #
@@ -120,6 +134,8 @@ for content in `find ${PKG_DBDIR} -name CONTENTS`; do
     if fgrep "${OLD_MODULES_DIR}" ${content} > /dev/null; then
        PKGS_TO_REMERGE="${PKGS_TO_REMERGE} ${CATPKGVER}"
 	   elogecho "Adding to list: ${CATPKGVER}"
+	elif fgrep "${OLD_INCLUDE_DIR}" ${content} > /dev/null; then
+		PKGS_TO_REMERGE="${PKGS_TO_REMERGE} ${CATPKGVER}"
     fi
 done    
 
@@ -150,19 +166,14 @@ for pkg in ${PKGS_TO_REMERGE}; do
 done      
 
 #
-# Check the actual order which these should be merged (probably doesn't work)
+# Use my super dumb package reordering algorithm that works most of the time
 #
 
 eloginfo "Re-ordering packages to merge .."
 
-PKGS_OK_SORTED_CMD="emerge -p " 
-for pkg in $PKGS_OK; do
-	PKGS_OK_SORTED_CMD="${PKGS_OK_SORTED_CMD} =$pkg"
-done
-PKGS_OK_SORTED_CMD="${PKGS_OK_SORTED_CMD}"
+PKGS_OK_SORTED="$(${PORTAGE_PYTHON} ${PORTDIR}/dev-lang/python/files/depreorder.py ${PKGS_OK} | xargs)"
 
 eloginfo "Preparing to merge these packages in this order:"
-PKGS_OK_SORTED="`${PKGS_OK_SORTED_CMD}  | grep ebuild | sed 's:\[ebuild.*\] ::'`"
 for pkg in $PKGS_OK_SORTED; do
 	elogecho "$pkg"
 done
