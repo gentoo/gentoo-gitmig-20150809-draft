@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/acpi4asus-0.27.ebuild,v 1.1 2004/03/08 05:14:59 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/acpi4asus-0.27.ebuild,v 1.2 2004/06/24 21:57:34 agriffis Exp $
 
 DESCRIPTION="Acpi daemon to control ASUS Laptop Hotkeys"
 HOMEPAGE="http://sourceforge.net/projects/acpi4asus"

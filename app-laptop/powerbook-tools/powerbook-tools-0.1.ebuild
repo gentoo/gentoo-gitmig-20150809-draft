@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerbook-tools/powerbook-tools-0.1.ebuild,v 1.2 2004/06/14 08:41:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerbook-tools/powerbook-tools-0.1.ebuild,v 1.3 2004/06/24 21:59:17 agriffis Exp $
 
 KEYWORDS="ppc -mips -x86 -amd64 -alpha -sparc "
 IUSE=""

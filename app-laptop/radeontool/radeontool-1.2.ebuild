@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/radeontool-1.2.ebuild,v 1.2 2004/06/14 08:39:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/radeontool-1.2.ebuild,v 1.3 2004/06/24 21:59:44 agriffis Exp $
 
 DESCRIPTION="Control the backlight and external video output of ATI Radeon Mobility graphics cards"
 HOMEPAGE="http://fdd.com/software/radeon/"

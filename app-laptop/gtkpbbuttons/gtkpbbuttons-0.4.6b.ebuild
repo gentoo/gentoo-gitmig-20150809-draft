@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/gtkpbbuttons/gtkpbbuttons-0.4.6b.ebuild,v 1.3 2004/06/14 08:42:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/gtkpbbuttons/gtkpbbuttons-0.4.6b.ebuild,v 1.4 2004/06/24 21:58:04 agriffis Exp $
 
 DESCRIPTION="PPC-only program to monitor special Powerbook/iBook keys in Linux"
 HOMEPAGE="http://www.cymes.de/members/joker/projects/pbbuttons/pbbuttons.html"
