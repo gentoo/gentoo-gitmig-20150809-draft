@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.8 2004/10/03 22:49:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.9 2004/10/09 21:28:08 foser Exp $
+
+*vino-2.8.0.1 (09 Oct 2004)
+
+  09 Oct 2004; foser <foser@gentoo.org> vino-2.8.0.1.ebuild :
+  New release
 
   04 Oct 2004; Guy Martin <gmsoft@gentoo.org> vino-2.8.0.ebuild:
   Added ~hppa to KEYWORDS.
