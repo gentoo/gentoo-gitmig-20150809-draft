@@ -1,6 +1,6 @@
 # ChangeLog for app-pda/synce-librapi2
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.14 2004/11/30 21:21:24 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.15 2005/01/01 15:48:59 eradicator Exp $
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> synce-librapi2-0.7.ebuild:
   Fixed invalid atoms in *DEPEND.

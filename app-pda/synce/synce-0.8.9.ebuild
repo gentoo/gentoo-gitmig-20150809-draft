@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce/synce-0.8.9.ebuild,v 1.2 2004/06/24 21:45:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce/synce-0.8.9.ebuild,v 1.3 2005/01/01 15:48:02 eradicator Exp $
 
 DESCRIPTION="Synchronize Windows CE devices with computers running GNU/Linux, like MS ActiveSync."
 HOMEPAGE="http://sourceforge.net/projects/synce/"

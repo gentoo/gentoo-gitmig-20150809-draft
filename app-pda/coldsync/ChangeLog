@@ -1,6 +1,6 @@
 # ChangeLog for app-pda/coldsync
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/ChangeLog,v 1.4 2004/07/02 19:00:36 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/ChangeLog,v 1.5 2005/01/01 15:42:39 eradicator Exp $
 
   02 Jul 2004; Aron Griffis <agriffis@gentoo.org> coldsync-2.2.5-r1.ebuild,
   coldsync-2.2.5.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/synce-librapi2-0.7.ebuild,v 1.8 2004/11/30 21:21:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/synce-librapi2-0.7.ebuild,v 1.9 2005/01/01 15:48:59 eradicator Exp $
 
 DESCRIPTION="Synchronize Windows CE devices with computers running GNU/Linux, like MS ActiveSync."
 HOMEPAGE="http://sourceforge.net/projects/synce/"

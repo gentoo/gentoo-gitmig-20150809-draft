@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/synce-librapi2-0.9.0.ebuild,v 1.2 2004/10/14 20:14:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/synce-librapi2-0.9.0.ebuild,v 1.3 2005/01/01 15:48:59 eradicator Exp $
 
 DESCRIPTION="Synchronize Windows CE devices with Linux. RAPI DLL emulation."
 HOMEPAGE="http://sourceforge.net/projects/synce/"

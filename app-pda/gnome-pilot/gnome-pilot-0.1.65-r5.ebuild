@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-0.1.65-r5.ebuild,v 1.6 2004/06/24 21:42:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-0.1.65-r5.ebuild,v 1.7 2005/01/01 15:43:12 eradicator Exp $
 
 DESCRIPTION="Gnome Pilot apps"
 SRC_URI="mirror://gnome/sources/gnome-pilot/${PV:0:3}/${P}.tar.bz2"

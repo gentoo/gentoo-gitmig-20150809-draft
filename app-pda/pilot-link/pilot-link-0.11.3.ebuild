@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.3.ebuild,v 1.10 2004/11/07 09:23:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.3.ebuild,v 1.11 2005/01/01 15:46:37 eradicator Exp $
 
 DESCRIPTION="A suite of tools contains a series of conduits for moving
 information to and from your Palm device and your desktop or workstation
