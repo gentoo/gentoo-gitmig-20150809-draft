@@ -1,0 +1,40 @@
+# ChangeLog for net-www/trac
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.1 2004/08/15 15:47:05 stuart Exp $
+
+*trac-0.7 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/0.7-postinst-en.txt, +files/0.7.1-postinst-en.txt,
+  +files/postinst-en.txt, +trac-0.6.1.ebuild, +trac-0.7.1.ebuild,
+  +trac-0.7.ebuild:
+  Moved from net-www/trac to www-apps/trac.
+
+  13 Aug 2004; Stuart Herbert <stuart@gentoo.org> trac-0.7.1.ebuild:
+  Fixed problem where webapp.eclass's pkg_postinst() wasn't getting
+  automatically called; thanks to ferringb@gentoo.org for the fix
+
+*trac-0.7.1 (09 Aug 2004)
+
+  09 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  +files/0.7.1-postinst-en.txt, +trac-0.7.1.ebuild:
+  Version bump; thanks to dju` <dju@elegiac.net>; see bug #52929
+
+  26 May 2004; Stuart Herbert <stuart@gentoo.org> trac-0.7.ebuild:
+  Added ~sparc
+
+*trac-0.7 (26 May 2004)
+
+  26 May 2004; Stuart Herbert <stuart@gentoo.org> trac-0.7.ebuild,
+  files/0.7-postinst-en.txt:
+  Version bump
+
+  29 Apr 2004; David Holm <dholm@gentoo.org> trac-0.6.1.ebuild:
+  Added to ~ppc.
+
+*trac-0.6.1 (28 Apr 2004)
+
+  28 Apr 2004; Stuart Herbert <stuart@gentoo.org> metadata.xml,
+  trac-0.6.1.ebuild, files/postinst-en.txt:
+  Initial import; thanks to dju` <dju@elegiac.net>; see bug #48818
+
