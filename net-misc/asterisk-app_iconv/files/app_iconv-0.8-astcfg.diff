@@ -21,7 +21,7 @@
 +	$(CC) -c $(CFLAGS) -o $@ $<
 +
 +app_iconv.so: app_iconv.o
-+	$(CC) $(SOLINK) $(LIBS) -o $@
++	$(CC) $(SOLINK) -o $@ $< $(LIBS)
 +
 +install:
 +	if [ ! -d $(DESTDIR)$(ASTMODDIR) ]; then mkdir -p $(DESTDIR)$(ASTMODDIR); fi

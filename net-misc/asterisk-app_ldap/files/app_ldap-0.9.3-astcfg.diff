@@ -22,7 +22,7 @@
 +	$(CC) -c $(CFLAGS) -o $@ $<
 +
 +app_ldap.so: app_ldap.o
-+	$(CC) $(SOLINK) $(LIBS) -o $@
++	$(CC) $(SOLINK) -o $@ $< $(LIBS)
 +
 +install:
 +	if [ ! -d $(DESTDIR)$(ASTMODDIR) ]; then mkdir -p $(DESTDIR)$(ASTMODDIR); fi
