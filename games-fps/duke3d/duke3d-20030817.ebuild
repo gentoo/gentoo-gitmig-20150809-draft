@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817.ebuild,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817.ebuild,v 1.2 2003/09/18 22:14:15 vapier Exp $
 
 ECVS_PASS="anonymous"
 ECVS_SERVER="icculus.org:/cvs/cvsroot"
@@ -20,6 +20,8 @@ DEPEND="virtual/x11
 	>=sys-apps/sed-4
 	media-libs/libsdl
 	media-libs/sdl-mixer
+	media-sound/timidity++
+	media-sound/timidity-eawpatches
 	opengl? ( virtual/opengl )
 	!nophysfs? ( dev-games/physfs )"
 
@@ -48,7 +50,7 @@ src_unpack() {
 		Makefile
 	[ `use x86` ] && sed -i 's:^#USE_ASM:USE_ASM:' Makefile
 	epatch ${FILESDIR}/${PV}-buildengine-makefile-cflags.patch
-	sed -i 's:/usr/lib/perl5/i386-linux/CORE/libperl.a:-lperl:' Makefile
+	sed -i 's:/usr/lib/perl5/i386-linux/CORE/libperl.a::' Makefile
 
 	# configure duke3d
 	cd ${S}/source
@@ -62,9 +64,9 @@ src_compile() {
 	# -O3 fails on athlon with gcc 3.2.3, maybe others.
 	replace-flags "-O3" "-O2"
 	cd source/buildengine
-	emake OPTFLAGS="${CFLAGS}" || die "emake failed"
+	emake OPTFLAGS="${CFLAGS}" || die "buildengine failed"
 	cd ..
-	emake OPTIMIZE="${CFLAGS}" || die "emake failed"
+	emake OPTIMIZE="${CFLAGS}" || die "duke3d failed"
 }
 
 src_install() {
@@ -79,6 +81,9 @@ src_install() {
 	newins defs.con DEFS.CON
 	newins game.con GAME.CON
 	newins user.con USER.CON
+	insinto ${GAMES_SYSCONFDIR}
+	doins ${FILESDIR}/duke3d.cfg
+	dosym ${GAMES_SYSCONFDIR}/duke3d.cfg ${GAMES_DATADIR}/${PN}/DUKE3D.CFG
 
 	prepgamesdirs
 }
