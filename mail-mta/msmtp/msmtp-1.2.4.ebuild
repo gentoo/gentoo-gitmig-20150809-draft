@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.2.4.ebuild,v 1.6 2005/01/03 23:33:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.2.4.ebuild,v 1.7 2005/01/03 23:44:26 ticho Exp $
 
 DESCRIPTION="An SMTP client and SMTP plugin for mail user agents such as Mutt"
 HOMEPAGE="http://msmtp.sourceforge.net/"
@@ -16,7 +16,7 @@ DEPEND="virtual/libc
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc amd64 ppc64"
+KEYWORDS="x86 ~ppc amd64 ppc64"
 
 src_compile () {
 	local myconf
