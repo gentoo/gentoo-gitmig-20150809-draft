@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/windowmaker
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.34 2004/11/30 02:09:03 kloeri Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.35 2005/01/10 04:19:23 augustus Exp $
+
+  09 Jan 2005; <augustus@gentoo.org> :
+  windowmaker-0.91.0-r2.ebuild:
+  Added fix to crash on app launch in windowmaker-0.91.0-r2.ebuild.
 
   30 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   windowmaker-0.91.0-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.90.0.ebuild,v 1.9 2004/11/15 06:26:29 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.90.0.ebuild,v 1.10 2005/01/10 04:19:23 augustus Exp $
 
 
 inherit eutils gnustep
