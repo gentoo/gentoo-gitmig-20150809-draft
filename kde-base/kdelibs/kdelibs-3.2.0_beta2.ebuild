@@ -1,7 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.6 2003/12/24 21:09:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.7 2003/12/28 03:37:41 caleb Exp $
 inherit kde
+
+need-autoconf 2.5
+set-kdedir ${PV}
 
 MY_PV=3.1.94
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -16,8 +19,7 @@ SRC_URI="mirror://kde/unstable/${MY_PV}/src/${PN}-${MY_PV}.tar.bz2"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
-DEPEND="dev-lang/perl
-	app-arch/bzip2
+DEPEND="app-arch/bzip2
 	dev-libs/libxslt
 	dev-libs/libpcre
 	dev-libs/libxml2
@@ -32,16 +34,11 @@ DEPEND="dev-lang/perl
 	~kde-base/arts-1.2.0_beta2
 	>=x11-libs/qt-3.2.0"
 
-newdepend "/autotools"
-
-RDEPEND="$RDEPEND
+RDEPEND="$DEPEND
 	app-text/sgml-common
 	cups? ( net-print/cups )
 	doc? ( app-doc/doxygen )
 	dev-lang/python"
-
-need-autoconf 2.5
-set-kdedir ${PV}
 
 src_unpack() {
 	kde_src_unpack

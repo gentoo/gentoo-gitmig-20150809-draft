@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.4.ebuild,v 1.12 2003/12/24 21:09:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.4.ebuild,v 1.13 2003/12/28 03:37:41 caleb Exp $
 inherit kde
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -12,13 +12,7 @@ SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"
 SRC_URI="mirror://kde/stable/$PV/src/${P}.tar.bz2"
 
-# kde.eclass has kdelibs in DEPEND, and we can't have that in here.
-# so we recreate the entire DEPEND from scratch.
-DEPEND=""
-RDEPEND="doc? ( ~app-doc/kdelibs-apidocs-$PV )"
-newdepend "dev-lang/perl
-	>=media-libs/audiofile-0.1.9
-	>=app-arch/bzip2-1.0.1
+DEPEND=">=app-arch/bzip2-1.0.1
 	>=dev-libs/libxslt-1.0.7
 	>=dev-libs/libpcre-3.5
 	>=dev-libs/libxml2-2.4.10
@@ -32,9 +26,8 @@ newdepend "dev-lang/perl
 	sys-devel/gettext
 	~kde-base/arts-1.1.4"
 
-newdepend "/autotools"
-
-RDEPEND="$RDEPEND
+RDEPEND="$DEPEND
+	doc? ( ~app-doc/kdelibs-apidocs-$PV )
 	app-text/sgml-common
 	cups? ( net-print/cups )
 	dev-lang/python"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta2.ebuild,v 1.3 2003/12/24 21:25:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta2.ebuild,v 1.4 2003/12/28 03:39:35 caleb Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode cups ssl opengl samba java"
@@ -21,7 +21,7 @@ DEPEND="media-sound/cdparanoia
 	>=media-libs/freetype-2
 	dev-util/pkgconfig"
 
-RDEPEND="sys-apps/eject"
+RDEPEND="$DEPEND sys-apps/eject"
 
 myconf="$myconf --with-dpms --with-cdparanoia"
 myconf="$myconf `use_with ldap` `use_with motif`"
@@ -34,6 +34,7 @@ use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$m
 PATCHES=""
 
 src_unpack() {
+	echo $RDEPEND
 	kde_src_unpack
 }
 
