@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/adzapper/adzapper-20040408.ebuild,v 1.1 2004/08/15 18:42:24 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/adzapper/adzapper-20040408.ebuild,v 1.2 2004/08/15 23:32:05 cyfred Exp $
 
 DESCRIPTION="redirector for squid that intercepts advertising, page counters and some web bugs"
 HOMEPAGE="http://adzapper.sourceforge.net/"
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc sparc alpha"
 IUSE=""
 
 DEPEND=""
-RDEPEND="net-www/squid"
+RDEPEND="www-proxy/squid"
 
 src_unpack() {
 	unpack ${A}
