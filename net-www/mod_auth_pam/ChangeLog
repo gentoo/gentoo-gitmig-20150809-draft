@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_pam
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/ChangeLog,v 1.4 2004/09/03 23:24:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/ChangeLog,v 1.5 2005/01/10 22:05:39 trapni Exp $
+
+  13 Oct 2004; Christian Parpart <trapni@gentoo.org> :
+  fixed bug, that prevented the modules to be installed; 
+  minor typo fix that caused apache2.pam not beeing installed
 
   04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   mod_auth_pam-1.1.1.ebuild:
