@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15.ebuild,v 1.7 2004/11/09 04:03:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15.ebuild,v 1.8 2004/11/09 04:06:50 eradicator Exp $
 
 DESCRIPTION="A virtual MIDI keyboard for X"
 HOMEPAGE="http://www.alsa-project.org/~iwai/alsa.html"
@@ -37,8 +37,6 @@ src_compile() {
 }
 
 src_install() {
-	TCL_VERSION=`echo 'puts [info tclversion]' | tclsh`
-
 	make DESTDIR=${D} TCL_VERSION=$TCL_VERSION PREFIX=/usr install || \
 		die "Installation Failed"
 	make DESTDIR=${D} TCL_VERSION=$TCL_VERSION PREFIX=/usr install-man || \
