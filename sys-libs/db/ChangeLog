@@ -1,12 +1,16 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.81 2004/02/09 21:18:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.82 2004/02/10 13:14:32 pauldv Exp $
 
   09 Feb 2004; <gustavoz@gentoo.org> db-4.1.25_p1-r3.ebuild:
   stable on sparc
 
   06 Feb 2004; Martin Schlemmer <azarah@gentoo.org> db-4.1.25_p1-r3.ebuild:
   Bump to stable for x86 (needed by pam-0.77).
+
+  10 Feb 2004; Paul de Vrieze <pauldv@gentoo.org> db-4.0.14-r3.ebuild,
+  db-4.1.25_p1-r3.ebuild, db-4.2.52_p1.ebuild:
+  Change the runtime dependency to a java runtime environment only
 
   22 Jan 2004; Luca Barbato <lu_zero@gentoo.org> db-4.0.14-r3.ebuild:
   Marked ppc
