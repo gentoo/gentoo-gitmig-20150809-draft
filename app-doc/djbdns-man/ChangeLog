@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/djbdns-man
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/ChangeLog,v 1.14 2005/01/01 13:05:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/ChangeLog,v 1.15 2005/02/07 02:33:47 kumba Exp $
+
+  06 Feb 2005; Joshua Kinard <kumba@gentoo.org> djbdns-man-20031023.ebuild:
+  Marked stable on mips.
 
   19 Dec 2004; Jason Huebel <jhuebel@gentoo.org> djbdns-man-20031023.ebuild:
   amd64, just docs, no need for testing
