@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/calc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/calc/ChangeLog,v 1.6 2004/11/04 12:18:42 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/calc/ChangeLog,v 1.7 2004/12/04 17:29:33 gongloo Exp $
+
+  04 Dec 2004; <gongloo@gentoo.org> calc-2.11.10.1.ebuild,
+  calc-2.11.9.3.ebuild:
+  Added ~ppc-macos.
 
 *calc-2.11.10.1 (04 Nov 2004)
 
