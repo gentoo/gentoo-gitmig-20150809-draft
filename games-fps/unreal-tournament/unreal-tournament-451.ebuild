@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.7 2004/03/28 06:21:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.8 2004/05/14 00:20:24 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="Futuristic FPS"
 HOMEPAGE="http://www.unrealtournament.com/ http://utpg.org/"
@@ -14,12 +14,14 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE="3dfx X opengl"
 
-DEPEND="app-arch/unzip
-	!games-fps/unreal-tournament-goty"
-DEPEND="X? ( virtual/x11 )
+RDEPEND="virtual/glibc
+	X? ( virtual/x11 )
 	opengl? ( virtual/opengl )"
+DEPEND="${RDEPEND}
+	app-arch/unzip
+	!games-fps/unreal-tournament-goty"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 pkg_setup() {
 	check_license
