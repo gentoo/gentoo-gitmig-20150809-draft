@@ -1,5 +1,5 @@
-MD5 40cb55fd6d2225f52d6006f64c4ce4b5 mod_security-1.7.6.ebuild 1318
-MD5 91cc490712c842098a3096cef33b09a6 ChangeLog 561
+MD5 7ef9d3a82da3e374c30564b13624f6de mod_security-1.7.6.ebuild 1312
+MD5 7de9d04725b5fdd713d2fa8dcffe8d49 ChangeLog 653
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
 MD5 4ff2b278a8aaff992f04347e4fda401b files/99_mod_security.conf 3671
 MD5 93b283b1aef242964a12edd89989d103 files/digest-mod_security-1.7.6 70
