@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/intel-536ep
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/ChangeLog,v 1.3 2005/03/15 17:15:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/ChangeLog,v 1.4 2005/03/24 15:26:00 mrness Exp $
+
+*intel-536ep-4.69-r1 (24 Mar 2005)
+
+  24 Mar 2005; Alin Nastac <mrness@gentoo.org>
+  +files/intel-536ep-4.69-kernel-2.6.10-tty.patch,
+  +intel-536ep-4.69-r1.ebuild:
+  Fix segfault on kernels >= 2.6.10 (#86331), thanks to Markus Gothe
+  <margo284@student.liu.se>.
 
   15 Mar 2005; Alin Nastac <mrness@gentoo.org>
   +files/intel-536ep-4.69-kernel-2.6.11-pm.patch, intel-536ep-4.69.ebuild:
