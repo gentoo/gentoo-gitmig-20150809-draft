@@ -11,7 +11,7 @@
  // it is best to leave hinting off
 -pref("font.FreeType2.autohinted", false);
 -pref("font.FreeType2.unhinted", true);
-+pref("font.FreeType2.autohinted", true);
++pref("font.FreeType2.autohinted", false);
 +pref("font.FreeType2.unhinted", false);
  // below a certian pixel size anti-aliased fonts produce poor results
  pref("font.antialias.min",        10);
