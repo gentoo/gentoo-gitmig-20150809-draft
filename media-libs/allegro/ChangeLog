@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.2 2002/04/14 17:43:00 seemant Exp $
+
+*allegro-4.0.1 (14 Apr 2002)
+
+  14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> allegro-4.0.1.ebuild
+  files/digest-allegro-4.0.1.ebuild :
+
+  Version bump, and changed the fbcon USE flag to just fb
 
 *allegro-3.9.37 (1 Feb 2002)
 
