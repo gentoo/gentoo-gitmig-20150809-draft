@@ -4,6 +4,10 @@
 
 inherit nxserver
 
+DEPEND="$DEPEND
+	   !net-misc/nxserver-personal
+	   !net-misc/nxserver-business"
+
 pkg_nofetch ()
 {
 	nxserver_pkg_nofetch enterprise
