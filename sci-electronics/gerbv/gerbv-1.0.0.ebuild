@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-1.0.0.ebuild,v 1.1 2005/01/02 02:01:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-1.0.0.ebuild,v 1.2 2005/02/17 23:29:03 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.geda.seul.org"
 IUSE="doc gtk2 png xinerama"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="gtk2? ( =x11-libs/gtk+-2* )
 	!gtk2? ( =x11-libs/gtk+-1* )
