@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.4.ebuild,v 1.2 2002/08/01 18:41:34 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.4-r1.ebuild,v 1.1 2002/09/21 18:39:15 karltk Exp $
 
 DESCRIPTION="XSLT processor"
 HOMEPAGE="http://xml.apache.org/xalan-j/index.html"
@@ -9,8 +9,8 @@ DEPEND=">=virtual/jdk-1.2
 	>=dev-java/ant-1.4.1
 	jikes? ( >=dev-java/jikes-1.15 )"
 RDEPEND="$DEPEND"
-SRC_URI="http://xml.apache.org/dist/xalan-j/${PN}-j_2_4_D1-src.tar.gz"
-S=${WORKDIR}/${PN}-j_2_4_D1
+SRC_URI="http://xml.apache.org/dist/xalan-j/${PN}-j_2_4_0-src.tar.gz"
+S=${WORKDIR}/${PN}-j_2_4_0
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86"
