@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/lazylist
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lazylist/ChangeLog,v 1.1 2004/03/20 19:59:16 kosmikus Exp $
+
+*lazylist-1.0a (20 Mar 2004)
+
+  20 Mar 2004; Andres Loeh <kosmikus@gentoo.org> lazylist-1.0a.ebuild,
+  metadata.xml:
+  Initial import.
+
