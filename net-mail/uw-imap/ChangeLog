@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.20 2003/06/20 17:52:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.21 2003/08/11 09:05:23 robbat2 Exp $
+
+*uw-imap-2002d-r1 (11 Aug 2003)
+
+  11 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> uw-imap-2002d-r1.ebuild:
+  fix bug #18529 and ensure uw-imap is built with -fPIC where appropriate
 
 *uw-imap-2002d (30 May 2003)
 
