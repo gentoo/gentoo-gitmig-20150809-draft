@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foomatic
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/ChangeLog,v 1.4 2003/01/05 08:57:45 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/ChangeLog,v 1.5 2003/01/08 14:31:02 agriffis Exp $
+
+  07 Jan 2003; Aron Griffis <agriffis@gentoo.org> foomatic-2.0.0.ebuild :
+  Add alpha to KEYWORDS
 
 *foomatic-2.0.0 (17 Oct 2002)
 
