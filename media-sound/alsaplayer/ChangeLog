@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.27 2004/12/04 00:10:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.28 2004/12/06 20:06:19 eradicator Exp $
+
+  06 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsaplayer-0.99.75-r1.ebuild, alsaplayer-0.99.76.ebuild:
+  Fixing gtk dep to close bug #73504.
 
   03 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsaplayer-0.99.75-r1.ebuild, alsaplayer-0.99.76.ebuild:

@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 aa8315063c08d5f24354f024cbeaba0b ChangeLog 4734
-MD5 11ed167b3aac1f355be58ec8a9ee7136 alsaplayer-0.99.75-r1.ebuild 2283
-MD5 5b050c10337df2a325dbf1a47fb9fc29 alsaplayer-0.99.76.ebuild 1459
+MD5 4c5c1f38bc069be847be865629c381ee ChangeLog 4889
+MD5 a6af8474bd495e470e636751fc7b428a alsaplayer-0.99.75-r1.ebuild 2288
+MD5 4ee94d720181866bf4b98dfe5b2a53f2 alsaplayer-0.99.76.ebuild 1463
 MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
 MD5 d7c5048a47693b7a9ba603a3fadd8cd1 files/digest-alsaplayer-0.99.75-r1 71
 MD5 53bd2804a0e111a7f5fd3e65e8ccd493 files/digest-alsaplayer-0.99.76 71
@@ -11,7 +11,7 @@ MD5 5c35a3140250067b9e24fea110bde6c4 files/gcc.patch 805
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBsQBsArHZZzCEUG0RAjXlAJwP99Tt2l+1p/o4Hy7k+R9DNTjWxwCfQ/Zt
-mYYmRHxwRLwmV5iOo/IBJ60=
-=NLOG
+iD8DBQFBtLvHArHZZzCEUG0RAobsAJ98K5g32B0FyGx/p+Z0DKA+bG29KACeKDrS
+QUAFYJBlMqw3TlU3ZC9rcEw=
+=cQoY
 -----END PGP SIGNATURE-----

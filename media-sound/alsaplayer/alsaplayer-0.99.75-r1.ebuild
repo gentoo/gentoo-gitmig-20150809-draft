@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.75-r1.ebuild,v 1.9 2004/12/04 00:10:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.75-r1.ebuild,v 1.10 2004/12/06 20:06:19 eradicator Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 ~ppc ~alpha ~amd64"
 RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	doc? ( app-doc/doxygen )
 	esd? ( media-sound/esound )
-	gtk? ( x11-libs/gtk+ )
+	gtk? ( =x11-libs/gtk+-1* )
 	nas? ( media-libs/nas )
 	opengl? ( virtual/opengl )
 	oggvorbis? ( media-libs/libvorbis )
