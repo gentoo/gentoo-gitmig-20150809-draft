@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.4 2004/07/14 16:22:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.5 2004/08/17 18:18:18 agriffis Exp $
 
 IUSE="cjk imap mbox nls slang ssl vanilla"
 
@@ -18,11 +18,11 @@ SRC_URI="ftp://ftp.mutt.org/mutt/mutt-${PV}i.tar.gz
 	cjk? ( http://www.emaillab.org/mutt/1.4/${cjk_patch} )"
 #	http://www.spinnaker.de/mutt/compressed/${compressed_patch}
 
-RDEPEND="nls? ( sys-devel/gettext )"
-DEPEND="${RDEPEND}
+RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	slang? ( >=sys-libs/slang-1.4.2 )
+	slang? ( >=sys-libs/slang-1.4.2 )"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 SLOT="0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6.ebuild,v 1.5 2004/07/13 00:29:51 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6.ebuild,v 1.6 2004/08/17 18:18:18 agriffis Exp $
 
 inherit eutils flag-o-matic
 IUSE="cjk ssl nls slang crypt imap mbox nntp vanilla"
@@ -20,13 +20,13 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
 #	nntp? ( http://mutt.kiev.ua/download/${P}/${nntp_patch} )
 #	http://cedricduval.free.fr/mutt/patches/download/${edit_threads_patch}
 
-RDEPEND="nls? ( sys-devel/gettext )"
-DEPEND="${RDEPEND}
+RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	slang? ( >=sys-libs/slang-1.4.2 )"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	net-mail/mailbase
-	ssl? ( >=dev-libs/openssl-0.9.6 )
-	slang? ( >=sys-libs/slang-1.4.2 )
 	!vanilla? ( nntp? ( sys-devel/automake sys-devel/autoconf ) )"
 
 SLOT="0"
