@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.9-r2.ebuild,v 1.1 2004/10/28 15:55:20 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.9-r3.ebuild,v 1.1 2004/11/08 22:17:11 dsd Exp $
 
 UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2"
 K_PREPATCHED="yes"
