@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.19 2002/12/16 21:39:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.20 2002/12/25 22:56:34 azarah Exp $
+
+*pam-0.75-r11 (25 Dec 2002)
+
+  25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> pam-0.75-r11.ebuild :
+
+  Add pam-0.75-pam_console_apply-use-correct-device.patch.bz2 to fix a
+  problem where pam_console_apply and co did not use the correct device
+  if devfsd was not used, closing bug #12207.  The patch was created by
+  Sam Yates <sam@quux.dropbear.id.au>.
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> pam-0.75-r10.ebuild :
 
