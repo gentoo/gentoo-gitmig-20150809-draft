@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.17.4.8.6.ebuild,v 1.6 2004/04/17 09:49:41 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.17.4.8.6.ebuild,v 1.7 2004/06/14 17:08:18 kloeri Exp $
 
 DESCRIPTION="A set of tools for DVD+RW/-RW drives."
 HOMEPAGE="http://fy.chalmers.se/~appro/linux/DVD+RW/"
@@ -14,8 +14,6 @@ IUSE=""
 
 DEPEND="virtual/glibc
 		app-cdr/cdrtools"
-
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	sed -i -e "s:^CFLAGS=\$(WARN).*:CFLAGS=${CFLAGS}:" \
