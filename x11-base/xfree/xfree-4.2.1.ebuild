@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.16 2002/10/20 07:00:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.17 2002/10/20 11:04:08 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -179,6 +179,8 @@ src_unpack() {
 	cd ${S}
 
 	# Various patches from all over
+	# bug #8144
+	rm -f ${WORKDIR}/018_all*.patch.bz2 ${WORKDIR}/019_all*.patch.bz2
 	einfo "Applying various patches (bugfixes/updates)..."
 	for x in ${WORKDIR}/*.patch.bz2 ${FILESDIR}/${PV}-patches/*.patch.bz2
 	do
