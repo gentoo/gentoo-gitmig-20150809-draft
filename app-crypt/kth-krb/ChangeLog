@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/kth-krb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.27 2004/06/24 21:34:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.28 2004/09/18 13:10:58 aliz Exp $
+
+  18 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> kth-krb-1.2.2-r2.ebuild,
+  files/kth-krb-1.2.2-no_libedit.patch:
+  Don't check for el_init in -ledit, thanks to Jason Wever <wever@gentoo.org> 
+  for finding the bug.
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> kth-krb-1.2.1.ebuild,
   kth-krb-1.2.2.ebuild, kth-krb-1.2.ebuild:

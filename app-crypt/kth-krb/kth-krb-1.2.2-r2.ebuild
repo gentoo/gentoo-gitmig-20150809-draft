@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r2.ebuild,v 1.5 2004/06/24 21:34:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r2.ebuild,v 1.6 2004/09/18 13:10:58 aliz Exp $
 
 inherit eutils
 
@@ -14,21 +14,25 @@ KEYWORDS="x86 ppc sparc alpha ia64 amd64 s390 hppa mips"
 IUSE="ssl afs"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )
-	!amd64? ( afs? ( >=net-fs/openafs-1.2.2-r7 ) )"
+	!amd64? ( afs? ( >=net-fs/openafs-1.2.2-r7 ) )
+	sys-devel/autoconf"
 
 S=${WORKDIR}/krb4-${PV}
 
-src_compile() {
-	local myconf=""
-	echo ${PORTAGE_TMPDIR}
+src_unpack() {
+	unpack ${A} ; cd ${S}
 
 	epatch ${FILESDIR}/kth-gentoo.patch
 	epatch ${FILESDIR}/kth-gentoo-ssl.patch
 	epatch ${FILESDIR}/${P}-berkdb.patch
 	epatch ${FILESDIR}/${P}-fPIC.patch
+	epatch ${FILESDIR}/${P}-no_libedit.patch
 
+	autoconf || die
+}
+
+src_compile() {
 	use ssl && myconf="${myconf} --with-openssl=/usr"
-
 	use afs || myconf="${myconf} --without-afs-support"
 
 	econf \
