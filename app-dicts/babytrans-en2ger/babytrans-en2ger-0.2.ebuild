@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ger/babytrans-en2ger-0.2.ebuild,v 1.1 2004/09/22 20:31:36 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ger/babytrans-en2ger-0.2.ebuild,v 1.2 2004/09/22 20:40:19 angusyoung Exp $
 
 MY_P="EngtoGer.dic.gz"
 MY_F="Engtoger.dic"
@@ -8,6 +8,7 @@ DESCRIPTION="English to German dictionary for Babytrans"
 HOMEPAGE="ftp://ftp.ac-grenoble.fr/ge/languages/babylon_dict/"
 SRC_URI="ftp://ftp.ac-grenoble.fr/ge/languages/babylon_dict/${MY_P}"
 
+# Needs checking
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
