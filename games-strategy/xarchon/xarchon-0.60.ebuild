@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/xarchon-0.60.ebuild,v 1.4 2004/04/13 10:25:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/xarchon-0.60.ebuild,v 1.5 2004/04/14 20:28:33 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="modelled after the golden oldie Archon game"
 HOMEPAGE="http://xarchon.seul.org/"
