@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.3_alpha8-r2.ebuild,v 1.1 2001/03/04 04:58:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.3_alpha8-r2.ebuild,v 1.2 2001/08/11 05:30:57 drobbins Exp $
 
 A=star-1.3a8.tar.gz
 S=${WORKDIR}/star-1.3
@@ -19,7 +19,7 @@ src_unpack() {
 }
 
 src_compile() {
-	try make COPTX=\"${CFLAGS}\"
+	try make COPTX="${CFLAGS}"
 }
 
 src_install() {

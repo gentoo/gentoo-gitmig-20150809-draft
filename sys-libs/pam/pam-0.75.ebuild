@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75.ebuild,v 1.3 2001/06/09 18:24:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75.ebuild,v 1.4 2001/08/11 05:30:57 drobbins Exp $
 
 P=pam-${PV}
 A=Linux-PAM-${PV}.tar.gz
@@ -44,7 +44,7 @@ src_compile() {
 
 src_install() {
 
- try make install MANDIR=\"/usr/share/man\"
+ try make install MANDIR="/usr/share/man"
  dodoc CHANGELOG Copyright README
  docinto modules
  dodoc modules/README

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vim-nogui/vim-nogui-5.8.ebuild,v 1.1 2001/06/01 19:43:31 grant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vim-nogui/vim-nogui-5.8.ebuild,v 1.2 2001/08/11 05:30:57 drobbins Exp $
 
 A="vim-5.8-src.tar.gz vim-5.8-rt.tar.gz"
 S=${WORKDIR}/vim-5.8
@@ -27,7 +27,7 @@ src_compile() {
 	 --enable-gui=no --with-cscope --without-x $myconf
     # Parallel make does not work
     if [ "`use build`" ] ; then
-        try make LDFLAGS=\"--static\"
+        try make LDFLAGS="--static"
     else
 	try make
     fi

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel robbins <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.78-r3.ebuild,v 1.1 2001/06/03 22:02:42 grant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.78-r3.ebuild,v 1.2 2001/08/11 05:30:57 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}/src
@@ -19,7 +19,7 @@ src_unpack() {
 
 src_compile() {
 
-	try pmake LDFLAGS=\"\"
+	try pmake LDFLAGS=""
 	cd ../contrib
 	try gcc ${CFLAGS} start-stop-daemon.c -o start-stop-daemon
 }

@@ -43,12 +43,12 @@ src_compile() {
     try make mrproper
     
     # create default config
-    try yes \"\" \| make config
+    try yes "" | make config
     echo "Ignore any errors from the yes command above."
     
     cd ${S}
     # try without the hostflags thing sometime and see what happens
-    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
+    try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep
     try make symlinks
 
 }
