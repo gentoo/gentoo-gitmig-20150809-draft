@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/python-gammu
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wammu/ChangeLog,v 1.1 2004/11/11 22:47:09 mrness Exp $
+
+*wammu-0.8 (12 Nov 2004)
+
+  12 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  +wammu-0.8.ebuild, +files/wammu.desktop, +files/wammu.png:
+  Initial import. Thanks goes to Przemyslaw Maciag <p_maciag@wp.pl>
+  and tove <bugs@veller.net>. Closing #61982.
+
