@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bombermaze/bombermaze-0.6.6.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bombermaze/bombermaze-0.6.6.ebuild,v 1.2 2004/02/03 00:10:21 mr_bones_ Exp $
 
 DESCRIPTION="Bomberman clone for GNOME"
 SRC_URI="http://freesoftware.fsf.org/download/bombermaze/${P}.tar.gz"
@@ -27,10 +27,10 @@ src_compile() {
 		--with-included-gettext \
 		`use_enable nls` || die "./configure failed"
 
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make prefix=${D}/usr install || die
-	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING INSTALL NEWS TODO
+	make prefix=${D}/usr install || die "make install failed"
+	dodoc AUTHORS ChangeLog NEWS TODO || die "dodoc failed"
 }
