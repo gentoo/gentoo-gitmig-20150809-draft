@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/spacehulk-1.4.99.ebuild,v 1.2 2004/02/20 07:38:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/spacehulk-1.4.99.ebuild,v 1.3 2004/04/13 10:20:44 mr_bones_ Exp $
 
 inherit games
 
@@ -21,13 +21,14 @@ DEPEND=">=x11-libs/qt-3
 	media-libs/nas"
 
 src_compile() {
-	egamesconf `use_with xinerama` || die
-	emake                          || die "emake failed"
+	egamesconf \
+		$(use_with xinerama) || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	egamesinstall                                       || die
-	cp -R ../themes/* ${D}${GAMES_DATADIR}/${PN}/themes || die "cp failed"
-	dodoc AUTHORS ChangeLog README TODO                 || die "dodoc failed"
+	egamesinstall || die
+	cp -R ../themes/* "${D}${GAMES_DATADIR}/${PN}/themes" || die "cp failed"
+	dodoc AUTHORS ChangeLog README TODO
 	prepgamesdirs
 }
