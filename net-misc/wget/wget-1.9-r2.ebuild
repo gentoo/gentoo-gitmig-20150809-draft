@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9-r2.ebuild,v 1.1 2003/11/10 22:51:43 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9-r2.ebuild,v 1.2 2003/11/11 01:33:44 lostlogic Exp $
 
 inherit gnuconfig
 
@@ -21,7 +21,7 @@ DEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	epatch ${DISTDIR}/${P}+ipvmisc.patch
+#	epatch ${DISTDIR}/${P}+ipvmisc.patch
 }
 
 src_compile() {
