@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.60 2002/11/07 09:13:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.61 2002/11/14 02:54:19 seemant Exp $
+
+
+*xfree-4.2.99.3 (13 Nov 2002)
+
+  13 Nov 2002; Seemant Kulleen <seemant@gentoo.org> xfree-4.2.99.3.ebuild
+  files/digest-xfree-4.2.9.3 :
+
+  New X snapshot from 20021113.  Not using the FT2 stuff externally, coz it
+  crashes.
 
   7 Nov 2002; Martin Schlemmer <azarah@gentoo.org> startDM.sh :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.1 2002/11/13 20:35:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.2 2002/11/14 02:54:19 seemant Exp $
 
 IUSE="3dfx"
 
@@ -18,17 +18,10 @@ X_PATCHES=""
 # Homepage:  http://people.mandrakesoft.com/~flepied/projects/wacom/
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz"
 
-#SRC_URI="${SRC_PATH0}/X${MY_V}src-1.tgz
-#	 ${SRC_PATH0}/X${MY_V}src-2.tgz
-#	 ${SRC_PATH0}/X${MY_V}src-3.tgz
-#	 ${SRC_PATH1}/X${MY_V}src-1.tgz
-#	 ${SRC_PATH1}/X${MY_V}src-2.tgz
-#	 ${SRC_PATH1}/X${MY_V}src-3.tgz
 SRC_URI="http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-1.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-2.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-3.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-4.tar.bz2
-	mirror://sourceforge/freetype/freetype-${FT2_VER}.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz
 	${X_PATCHES}
 	${X_DRIVERS}"
@@ -52,16 +45,6 @@ PROVIDE="virtual/x11
 	virtual/opengl
 	virtual/glu"
 
-pkg_setup() {
-
-	eerror
-	eerror "This is very experimental, and can break things horribly!!!!"
-	eerror "If you do decide to use it, please unmerge any older versions"
-	eerror "of XFree86, as changes to headers can cause problems."
-	eerror
-	die
-}
-
 src_unpack () {
 
 	unpack X${MY_V}-{1,2,3,4}.tar.bz2
@@ -69,14 +52,14 @@ src_unpack () {
 	# Deploy our custom freetype2.  We want it static for stability,
 	# and because some things in Gentoo depends the freetype2 that
 	# is distributed with XFree86.
-	unpack freetype-${FT2_VER}.tar.bz2
-	cd ${S}/extras/freetype2
-	rm -rf *
-	mv ${WORKDIR}/freetype-${FT2_VER}/* .
-	# Enable hinting for truetype fonts
+	#	unpack freetype-${FT2_VER}.tar.bz2
+	#	cd ${S}/extras/freetype2
+	#	rm -rf *
+	#	mv ${WORKDIR}/freetype-${FT2_VER}/* .
+	#	# Enable hinting for truetype fonts
 	cd ${S}/extras/freetype2/include/freetype/config
 	cp ftoption.h ftoption.h.orig
-	sed -e 's:#undef TT_CONFIG_OPTION_BYTECODE_INTERPRETER:#define TT_CONFIG_OPTION_BYTECODE_INTERPRETER:' \
+	sed -e 's:#undef \(TT_CONFIG_OPTION_BYTECODE_INTERPRETER\):#define \1:' \
 		ftoption.h.orig > ftoption.h
 
 	# Update Wacom Driver, hopefully resolving bug #1632
