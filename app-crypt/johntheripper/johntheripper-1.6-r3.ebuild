@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r3.ebuild,v 1.4 2004/06/27 21:31:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r3.ebuild,v 1.5 2004/06/29 20:05:48 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -26,14 +26,15 @@ SRC_URI="http://www.openwall.com/john/dl/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa"
-IUSE="mmx ntlm skey mysql"
+IUSE="kerberos mmx mysql ntlm skey"
 
 RDEPEND="virtual/libc
 	skey? ( app-admin/skey )
 	kerberos? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	sys-devel/binutils
-	sys-devel/gcc"
+	sys-devel/gcc
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}

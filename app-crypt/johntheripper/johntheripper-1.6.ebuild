@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.22 2004/06/24 21:33:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.23 2004/06/29 20:05:48 agriffis Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc ppc alpha ~mips hppa"
 IUSE="mmx"
 
-DEPEND=">=sys-devel/binutils-2.8.1.0.15"
+DEPEND=">=sys-devel/binutils-2.8.1.0.15
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}

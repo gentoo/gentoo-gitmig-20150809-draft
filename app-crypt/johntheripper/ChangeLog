@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.17 2004/06/24 21:33:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.18 2004/06/29 20:05:48 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> johntheripper-1.6-r1.ebuild,
+  johntheripper-1.6-r3.ebuild, johntheripper-1.6.ebuild:
+  sync IUSE (+kerberos, +mysql, -samba), add sed-4 dep
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> johntheripper-1.6-r1.ebuild,
   johntheripper-1.6.ebuild:
