@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/iiimsf
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimsf/ChangeLog,v 1.1 2003/09/14 00:31:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimsf/ChangeLog,v 1.2 2003/09/14 01:52:07 usata Exp $
 
 *iiimsf-11.4.1467 (14 Sep 2003)
 
@@ -8,5 +8,5 @@
   files/htt.conf, files/iiim.initd, files/iiimsf-11.4.1467-gentoo.diff:
   Initial import.  Basedd on the ebuild written by MATSUU Takuto 
   <matsuu@gentoo.org> and Ken Deeter <ktdeeter@alumni.princeton.edu>
-  at GentooJP BugTrack.
+  at GentooJP BugTrack. This closes Bug #28272
 
