@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.0-r1.ebuild,v 1.6 2004/02/09 18:03:23 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.0-r1.ebuild,v 1.7 2004/04/27 21:40:05 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="free good quality fonts gpl'd by URW++"
 HOMEPAGE=""

@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.4 2004/02/16 03:34:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.5 2004/04/27 21:40:05 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> urw-fonts-2.0-r1.ebuild:
+  Add inherit eutils
 
   15 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
   Adding metadata.xml.
