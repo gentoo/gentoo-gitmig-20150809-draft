@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.311 2005/02/02 16:31:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.312 2005/02/03 00:51:56 spyderous Exp $
+
+  02 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.903.ebuild:
+  Remove /usr/include/GL and /usr/include/X11 symlinks if needed, so migration
+  works properly. /usr/include/GL was particularly annoying, since the X build
+  created it, so set LinkGLToUsrInclude to NO. This should be turned into a
+  source patch that prevents the link if $(SYSTEMUSRINCDIR) = $(INCDIR) and
+  sent upstream. Also add ukr to G_FONTDIRS if USE=nls. Problems reported by
+  Daniel Ostrow <dostrow@gentoo.org> and Ferris McCormick <fmccor@gentoo.org>.
 
   02 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.903.ebuild:

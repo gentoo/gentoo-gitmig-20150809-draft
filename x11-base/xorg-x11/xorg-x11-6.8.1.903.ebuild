@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.903.ebuild,v 1.4 2005/02/02 16:31:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.903.ebuild,v 1.5 2005/02/03 00:51:56 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -241,10 +241,14 @@ pkg_preinst() {
 	# Do migration before anything else, so we do all the rest inside the
 	# symlink
 
-	# Get rid of "standard" symlink from <6.8.0-r2
+	# Get rid of "standard" symlinks
 	# We can't overwrite symlink with directory w/ $(mv -f)
 	[ -L ${ROOT}usr/$(get_libdir)/X11 ] \
 		&& rm ${ROOT}usr/$(get_libdir)/X11
+	[ -L ${ROOT}usr/include/X11 ] \
+		&& rm ${ROOT}usr/include/X11
+	[ -L ${ROOT}usr/include/GL ] \
+		&& rm ${ROOT}usr/include/GL
 
 	# No need to do this, if it's already been done
 	# Also, it'll overwrite a ton of stuff because it won't realize /usr/X11R6
@@ -518,6 +522,9 @@ host_def_setup() {
 		echo "#define FontDir /usr/share/fonts" >> ${HOSTCONF}
 		echo "#define BinDir /usr/bin" >> ${HOSTCONF}
 		echo "#define IncRoot /usr/include" >> ${HOSTCONF}
+		# This breaks the case when $(SYSTEMUSRINCDIR) = $(INCDIR)
+		# See xc/include/Imakefile
+		echo "#define LinkGLToUsrInclude NO" >> ${HOSTCONF}
 		# /usr/X11R6/lib/X11
 		echo "#define LibDir /usr/$(get_libdir)/X11" >> ${HOSTCONF}
 		# /usr/X11R6/lib with exception of /usr/X11R6/lib/X11
@@ -1632,7 +1639,7 @@ cleanup_fonts() {
 		G_FONTDIRS="${G_FONTDIRS} 75dpi 100dpi"
 	fi
 	if use nls; then
-		G_FONTDIRS="${G_FONTDIRS} cyrillic"
+		G_FONTDIRS="${G_FONTDIRS} cyrillic ukr"
 	fi
 
 	for G_FONTDIR in ${G_FONTDIRS}; do
