@@ -1,6 +1,12 @@
 # ChangeLog for net-www/ochusha
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ChangeLog,v 1.27 2004/05/07 16:39:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ChangeLog,v 1.28 2004/05/16 09:29:58 usata Exp $
+
+*ochusha-0.5.4.1 (16 May 2004)
+
+  16 May 2004; Mamoru KOMACHI <usata@gentoo.org> ochusha-0.5.1.ebuild,
+  ochusha-0.5.4.1.ebuild, ochusha-0.5.4.ebuild:
+  Version bumped. Removed ebuilds which don't work with gtk+-2.4.
 
 *ochusha-0.5.4 (08 May 2004)
 
