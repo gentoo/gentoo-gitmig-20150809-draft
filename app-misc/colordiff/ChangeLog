@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.14 2003/12/08 06:27:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.15 2004/01/04 16:22:23 spyderous Exp $
+
+*colordiff-1.0.4 (04 Jan 2004)
+
+  04 Jan 2004; Donnie Berkholz <spyderous@gentoo.org>; colordiff-1.0.3.ebuild,
+  colordiff-1.0.4.ebuild:
+  Version bump. Changed chown and chmod to fowners and fperms. Bumped copyright
+  year to 2004.
 
   07 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> colordiff-1.0.3.ebuild:
   chown x.y -> chown x:y (bug 35127)
