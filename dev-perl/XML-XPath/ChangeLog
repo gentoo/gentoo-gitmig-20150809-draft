@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/XML-XPath
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.2 2002/05/06 17:53:18 seemant Exp $
+
+*XML-XPath-1.12 (6 May 2002)
+
+  6 May 2002; Seemant Kulleen <seemant@gentoo.org> XML-XPath-1.12.ebuild
+  files/digest-XML-XPath-1.12 :
+
+  version bump
 
 *XML-XPath-1.04 (1 Feb 2002)
 
