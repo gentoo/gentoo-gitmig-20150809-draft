@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.0_rc2.ebuild,v 1.1 2004/08/10 20:46:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.0_rc2.ebuild,v 1.2 2004/08/17 20:35:51 carlo Exp $
 
 inherit python kde eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 	kde_src_unpack
 
 	if use amd64; then
-		epatch ${FILESDIR}/${P/rc?/beta1}-bdb-fPIC.patch
+		epatch ${FILESDIR}/${P/.0_rc?/_beta1}-bdb-fPIC.patch
 	fi
 }
 
@@ -55,7 +55,7 @@ einfo "dev-util/subversion		ditto for subversion."
 einfo ">=dev-util/ctags-5		faster and more powerful code browsing logic"
 einfo "dev-util/kdoc		tools to generate KDE-style documentation for your project"
 einfo "app-misc/glimpse		index and search your project's documentation"
-einfo "net-www/htdig		ditto. yet another supoprted indexing/searching backend"
+einfo "net-www/htdig		ditto. yet another supported indexing/searching backend"
 einfo "dev-util/kdbg		kde frontend to gdb"
 einfo "app-arch/rpm			supports creating RPMs of your project"
 einfo "kde-base/kdebase		embed konsole kpart in kdevelop ide"
