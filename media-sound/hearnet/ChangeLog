@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/hearnet
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.1 2004/02/15 08:10:48 eradicator Exp $
+
+*hearnet-0.0.2 (15 Feb 2004)
+
+  15 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> hearnet-0.0.2.ebuild:
+  Listen to your network... Ebuild submitted by Kasper Souren
+  <Kasper.Souren@ircam.fr> in bug #33688.
+
