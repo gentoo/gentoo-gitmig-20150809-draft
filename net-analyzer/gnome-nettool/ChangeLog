@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.6 2004/10/03 22:46:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.7 2004/10/25 21:23:07 agriffis Exp $
+
+  27 Oct 2004; Aron Griffis <agriffis@gentoo.org> gnome-nettool-0.99.3.ebuild:
+  add ~ia64
 
   04 Oct 2004; Guy Martin <gmsoft@gentoo.org> gnome-nettool-0.99.3.ebuild:
   Added ~hppa to KEYWORDS.
