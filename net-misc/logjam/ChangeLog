@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/logjam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.22 2004/07/23 09:23:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.23 2004/12/21 12:37:43 joem Exp $
+
+*logjam-4.4.0-r1 (21 Dec 2004)
+
+  21 Dec 2004; Joe McCann <joem@gentoo.org>
+  +files/logjam-4.4.0-offline-sync.patch, +logjam-4.4.0-r1.ebuild:
+  Adding patch to fix offline synchronization, closes bug 71252
 
   23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> logjam-4.4.0.ebuild:
   Added to stable amd64
