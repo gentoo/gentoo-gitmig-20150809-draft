@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.51 2005/03/13 10:46:01 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.52 2005/03/25 17:28:35 kugelfang Exp $
+
+  25 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
+  gnomemeeting-1.2.0.ebuild:
+  Readded ~amd64 keyword.
 
   13 Mar 2005; Stefan Knoblich <stkn@gentoo.org>
   +files/gnomemeeting-1.2.0-nosdl.patch, gnomemeeting-1.2.0.ebuild:

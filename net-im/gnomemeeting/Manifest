@@ -1,23 +1,33 @@
-MD5 2ed481fc81ae810b046beb1f532fd69b gnomemeeting-1.2.0.ebuild 2924
-MD5 2eca81a5c31cfef1cd02675db4e996c6 gnomemeeting-1.0.2-r1.ebuild 2288
-MD5 600e50cb52f072809c3f46a0fe8d02ed gnomemeeting-0.98.5-r1.ebuild 1860
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6e5ff20557c4f74e12531950a56b414e ChangeLog 8839
 MD5 a18bb24d09a6be5fa8b540529f82b02b gnomemeeting-0.94.1.ebuild 2006
-MD5 9adb1bf9d688e8be734b36bc0e54c110 gnomemeeting-1.0.2.ebuild 2286
-MD5 698cb54471981882511cf00e76533a54 gnomemeeting-0.98.5.ebuild 1855
 MD5 a90d873b38a939fba966f9b04e58ac42 gnomemeeting-0.98.0.ebuild 1687
-MD5 eed4f567de688fc863665054fba871e6 metadata.xml 722
-MD5 94ae0ff210d198db763ec571f738bc84 ChangeLog 8726
+MD5 600e50cb52f072809c3f46a0fe8d02ed gnomemeeting-0.98.5-r1.ebuild 1860
+MD5 698cb54471981882511cf00e76533a54 gnomemeeting-0.98.5.ebuild 1855
 MD5 5e442d151db50f960aa0ed3ef72c081a gnomemeeting-1.00.ebuild 2043
-MD5 967c15eee4dba436c91d06bda647a525 files/gnomemeeting-0.98.5-libxml_2.6.patch 406
-MD5 d7e3749e5f20f11f1d4b3dc54c8d9501 files/gnomemeeting-1.2.0-nosdl.patch 1647
-MD5 99311f0023ae8d29bca828f49a5bb750 files/digest-gnomemeeting-1.0.2 71
-MD5 0cc72cbb5df4cb6b2ac1e8d7953f79f0 files/gnomemeeting-1.00-gcc34.patch 892
+MD5 eed4f567de688fc863665054fba871e6 metadata.xml 722
+MD5 9adb1bf9d688e8be734b36bc0e54c110 gnomemeeting-1.0.2.ebuild 2286
+MD5 2eca81a5c31cfef1cd02675db4e996c6 gnomemeeting-1.0.2-r1.ebuild 2288
+MD5 a1b922bae41180d09a6d0ccf8dcaa9f2 gnomemeeting-1.2.0.ebuild 2936
 MD5 458cb44a30e47a07c5116219068ab5a3 files/digest-gnomemeeting-0.94.1 72
-MD5 1eeb16dcd662b2829936876613f02611 files/digest-gnomemeeting-0.98.5 73
-MD5 67fe9473695e53f1d3eb2093e925fa9b files/digest-gnomemeeting-1.00 70
-MD5 30d60925fde5aa7b9591fb163cfb4786 files/digest-gnomemeeting-1.2.0 71
-MD5 1eeb16dcd662b2829936876613f02611 files/digest-gnomemeeting-0.98.5-r1 73
-MD5 0c651ec46c87a73e45039d9ab14fddd0 files/gnomemeeting-1.0.2-configure.diff 1304
-MD5 c043ef3af6d65a83c7fc246114910237 files/gnomemeeting-1.2.0-gk-hang-fix.patch 806
 MD5 c91514d9a4bf338c62c4ef78ddb97553 files/digest-gnomemeeting-0.98.0 73
+MD5 1eeb16dcd662b2829936876613f02611 files/digest-gnomemeeting-0.98.5 73
+MD5 1eeb16dcd662b2829936876613f02611 files/digest-gnomemeeting-0.98.5-r1 73
+MD5 67fe9473695e53f1d3eb2093e925fa9b files/digest-gnomemeeting-1.00 70
+MD5 967c15eee4dba436c91d06bda647a525 files/gnomemeeting-0.98.5-libxml_2.6.patch 406
+MD5 99311f0023ae8d29bca828f49a5bb750 files/digest-gnomemeeting-1.0.2 71
+MD5 0c651ec46c87a73e45039d9ab14fddd0 files/gnomemeeting-1.0.2-configure.diff 1304
 MD5 99311f0023ae8d29bca828f49a5bb750 files/digest-gnomemeeting-1.0.2-r1 71
+MD5 30d60925fde5aa7b9591fb163cfb4786 files/digest-gnomemeeting-1.2.0 71
+MD5 0cc72cbb5df4cb6b2ac1e8d7953f79f0 files/gnomemeeting-1.00-gcc34.patch 892
+MD5 c043ef3af6d65a83c7fc246114910237 files/gnomemeeting-1.2.0-gk-hang-fix.patch 806
+MD5 d7e3749e5f20f11f1d4b3dc54c8d9501 files/gnomemeeting-1.2.0-nosdl.patch 1647
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCREqr5mJXAu5GbtIRAgPVAJ9Bl7mBHbTO0yz6cuv8Sts8OErMhACcDFov
+aThfVsZ7LS8ztivvumtdtDY=
+=qWLP
+-----END PGP SIGNATURE-----
