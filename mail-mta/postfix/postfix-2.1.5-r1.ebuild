@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r1.ebuild,v 1.6 2004/10/26 13:16:35 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r1.ebuild,v 1.7 2004/10/26 16:39:56 langthang Exp $
 
-inherit eutils ssl-cert
+inherit eutils ssl-cert toolchain-funcs
 
 VDA_P="${PN}-2.1.5-trash"
 TLS_P="pfixtls-0.8.18-2.1.3-0.9.7d"
@@ -141,7 +141,8 @@ src_compile() {
 	mycc="${mycc} -DDEF_MANPAGE_DIR=\\\"/usr/share/man\\\""
 	mycc="${mycc} -DDEF_README_DIR=\\\"/usr/share/doc/${PF}/readme\\\""
 
-	make CC="${CC:=gcc}" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" \
+	local my_cc=$(tc-getCC)
+	make CC="${my_cc:=gcc}" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" \
 		makefiles || die "configure problem"
 
 	emake || die "compile problem"
