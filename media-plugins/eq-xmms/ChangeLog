@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/eq-xmms
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.6 2004/06/29 16:52:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.7 2004/07/14 11:07:48 voxus Exp $
+
+*eq-xmms-0.6-r1 (14 Jul 2004)
+
+  14 Jul 2004; Konstantin Arkhipov <voxus@gentoo.org>:
+  +files/eq-xmms-0.6-shade_fix.patch,
+  +eq-xmms-0.6-r1.ebuild:
+  Dummy workaround for shade bug from upstream CVS.
 
   29 Jun 2004; David Holm <dholm@gentoo.org> eq-xmms-0.6.ebuild:
   Added to ~ppc.
