@@ -1,11 +1,14 @@
 # ChangeLog for dev-python/python-cdb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.4 2004/12/07 21:07:28 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.5 2004/12/31 00:02:54 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   07 Dec 2004; Dylan Carlson <absinthe@gentoo.org> python-cdb-0.32.ebuild:
   Keywords ~amd64.
 
-  11 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> python-cdb-0.32.ebuild:
+  11 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> python-cdb-0.32.ebuild:
   Fix header.
 
 *python-cdb-0.32 (12 Jul 2003)

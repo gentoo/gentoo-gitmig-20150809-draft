@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.17 2004/10/18 17:50:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.18 2004/12/31 00:14:18 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *pyxdg-0.7 (18 Oct 2004)
 
@@ -28,13 +31,13 @@
   29 Mar 2004; Heinrich Wendel <lanius@gentoo.org> pyxdg-0.5.ebuild:
   version bump
 
-  28 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> pyxdg-0.1.ebuild,
+  28 Mar 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pyxdg-0.1.ebuild,
   pyxdg-0.2.ebuild, pyxdg-0.3.ebuild:
   Update SRC_URI.
 
 *pyxdg-0.4 (15 Mar 2004)
 
-  15 Mar 2004; Bryan Østergaard,,, <kloeri@gentoo.org> pyxdg-0.4.ebuild:
+  15 Mar 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> pyxdg-0.4.ebuild:
   Version bump, bug #44715.
 
 *pyxdg-0.3 (13 Sep 2003)

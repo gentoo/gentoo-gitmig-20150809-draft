@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.5 2004/12/07 03:05:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.6 2004/12/30 23:52:46 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *pyparsing-1.2.2 (07 Dec 2004)
 
@@ -11,12 +14,12 @@
   02 Sep 2004; Travis Tilley <lv@gentoo.org> pyparsing-1.1.2.ebuild:
   added ~amd64 keyword
 
-  30 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> :
+  30 Mar 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> :
   Add missing Manifest.
 
 *pyparsing-1.1.2 (29 Mar 2004)
 
-  29 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> metadata.xml,
+  29 Mar 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> metadata.xml,
   pyparsing-1.1.2.ebuild:
   Initial import, ebuild submitted by Bardur Arantsson <gentoo@scientician.org>
 

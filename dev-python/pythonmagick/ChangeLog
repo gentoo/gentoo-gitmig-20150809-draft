@@ -1,10 +1,13 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.2 2004/06/25 01:46:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.3 2004/12/31 00:11:56 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *pythonmagick-0.5-r1 (06 Jun 2004)
 
-  06 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> +metadata.xml,
+  06 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +metadata.xml,
   +pythonmagick-0.5-r1.ebuild:
   Initial commit, bug #35279. Ebuild by Chris Mayo <mayo@clara.co.uk>.
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyreverse
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.6 2004/11/09 02:25:30 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.7 2004/12/30 23:56:37 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   08 Nov 2004; Rob Cakebread <pythonhead@gentoo.org>
   pyreverse-0.4.2-r1.ebuild, -pyreverse-0.4.2.ebuild:
@@ -15,11 +18,11 @@
   +pyreverse-0.4.2-r1.ebuild:
   Fixed dependencies, added description to metadata.xml.
 
-  07 May 2004; Bryan Østergaard <kloeri@gentoo.org> pyreverse-0.4.2.ebuild:
+  07 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pyreverse-0.4.2.ebuild:
   Add missing IUSE.
 
 *pyreverse-0.4.2 (17 Feb 2004)
 
-  17 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org> pyreverse-0.4.2.ebuild:
+  17 Feb 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> pyreverse-0.4.2.ebuild:
   Initial import.
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.44 2004/11/06 07:29:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.45 2004/12/31 00:03:50 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   06 Nov 2004; Joshua Kinard <kumba@gentoo.org> python-docs-2.3.4.ebuild:
   Marked stable on mips.
@@ -14,7 +17,7 @@
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> python-docs-2.3.4.ebuild:
   stable on amd64.
 
-  17 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> :
+  17 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> :
   Stable on alpha.
 
   16 Oct 2004; Carsten Lohrke <carlo@gentoo.org> python-docs-2.3.4.ebuild:
@@ -32,7 +35,7 @@
 
 *python-docs-2.3.4 (04 Jun 2004)
 
-  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> +python-docs-2.3.4.ebuild:
+  04 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +python-docs-2.3.4.ebuild:
   Bump version.
 
   30 May 2004; Guy Martin <gmsoft@gentoo.org> python-docs-2.3.4_rc1.ebuild:
@@ -53,18 +56,18 @@
 
 *python-docs-2.3.4_rc1 (14 May 2004)
 
-  14 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  14 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   +python-docs-2.3.4_rc1.ebuild:
   Bump version.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> python-docs-2.2.2.ebuild,
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> python-docs-2.2.2.ebuild,
   python-docs-2.2.3.ebuild, python-docs-2.3.3-r1.ebuild,
   python-docs-2.3.3.ebuild:
   Add missing IUSE.
 
 *python-docs-2.3.3-r1 (30 Mar 2004)
 
-  30 Mar 2004; Bryan Østergaard <kloeri@gentoo.org>
+  30 Mar 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   python-docs-2.3.3-r1.ebuild:
   Fix install path, bug #45753.
 

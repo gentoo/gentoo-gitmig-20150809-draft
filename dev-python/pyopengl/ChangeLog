@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.4 2004/09/05 07:28:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.5 2004/12/30 23:49:55 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
@@ -13,7 +16,7 @@
 
 *pyopengl-2.0.0.44 (20 Jul 2004)
 
-  20 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> +metadata.xml,
+  20 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +metadata.xml,
   +files/config.diff, +files/pyopengl-2.0.0.44-disable_togl.patch,
   +pyopengl-2.0.0.44.ebuild:
   Rename dev-python/PyOpenGL to dev-python/pyopengl.
@@ -21,7 +24,7 @@
   13 May 2004; Stephen P. Becker <geoman@gentoo.org> PyOpenGL-2.0.0.44.ebuild:
   Stable on mips.
 
-  07 May 2004; Bryan Østergaard <kloeri@gentoo.org> PyOpenGL-2.0.0.44.ebuild:
+  07 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> PyOpenGL-2.0.0.44.ebuild:
   Add missing IUSE.
 
   11 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;

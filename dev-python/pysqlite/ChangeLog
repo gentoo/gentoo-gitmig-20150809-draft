@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.25 2004/10/23 15:10:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.26 2004/12/30 23:59:58 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> pysqlite-1.0.ebuild:
   Added ~sparc keyword.
@@ -13,7 +16,7 @@
   10 Oct 2004; Anders Rune Jensen <arj@gentoo.org> pysqlite-1.0.ebuild:
   New version, minor changes.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pysqlite-0.5.1.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pysqlite-0.5.1.ebuild:
   Stable on alpha.
 
   03 Oct 2004; Anders Rune Jensen <arj@gentoo.org> pysqlite-0.5.1.ebuild:
@@ -42,10 +45,10 @@
   06 Jul 2004; Anders Rune Jensen <arj@gentoo.org> pysqlite-0.5.0.ebuild:
   Mark as stable
 
-  02 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
+  02 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
   Stable on alpha.
 
-  20 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
+  20 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
   Added ~alpha to keywords.
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> pysqlite-0.4.3.ebuild:
@@ -53,7 +56,7 @@
 
 *pysqlite-0.5.0 (30 Jan 2004)
 
-  30 Jan 2004; Bryan Østergaard,,, <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
+  30 Jan 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
   New version
 
 *pysqlite-0.4.3 (26 Jun 2003)

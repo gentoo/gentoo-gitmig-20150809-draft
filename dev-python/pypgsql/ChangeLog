@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypgsql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.8 2004/09/11 15:23:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.9 2004/12/30 23:55:19 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> pypgsql-2.4.ebuild:
   Added amd64 keyword, closing #63514.
@@ -8,7 +11,7 @@
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> pypgsql-2.3.ebuild:
   change virtual/glibc to virtual/libc
 
-  07 May 2004; Bryan Østergaard <kloeri@gentoo.org> pypgsql-2.3.ebuild:
+  07 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pypgsql-2.3.ebuild:
   Add missing IUSE.
 
   25 Jan 2004; Alastair Tse <liquidx@gentoo.org> pypgsql-2.4.ebuild:
