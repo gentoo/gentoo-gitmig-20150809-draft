@@ -80,11 +80,6 @@ dev-libs/libofx
 net-libs/openhbci
 >=app-office/gnucash-1.8.2-r1
 
-# <liquidx@gentoo.org> (28 Apr 2003)
-# needs testing - new openjade does cell division.
-#>=app-text/openjade-1.3.2
-#>=app-text/opensp-1.5
-
 # <fava@gentoo.org>, <robbat2@gentoo.org> (24 Apr 2003)
 # work in progress, broken ebuild
 >=app-admin/ufed-0.40
@@ -296,11 +291,6 @@ app-text/psgml
 # new package, in testing (me and azarah)
 sys-apps/utempter
 
-# <bcowan@gentoo.org> (25 Nov 2002)
-# masking until db-4* are unmasked
-# that way emerge -pu world works
-=net-nds/openldap-2.1.9
-
 # <phoenix@gentoo.org> (21 Nov 2002)
 # The huge nsplugins mask. These plugins use
 # the new layout (/usr/lib/nsbrowser/plugins)
@@ -424,7 +414,7 @@ x11-libs/gtkmm-addons
 # gcc 3.2 and kerberos v5 fixes for cyrus-sasl; still needs wider testing
 # also making sure cyrus-sasl can integrate with OpenLDAP, whose configure
 # scripts don't know how to find cyrus-sasl-2
-=net-nds/openldap-2.0.25-r3
+#=net-nds/openldap-2.0.25-r3
 =dev-libs/cyrus-sasl-1.5.27-r5
 =dev-libs/cyrus-sasl-2.1.7-r2
 
