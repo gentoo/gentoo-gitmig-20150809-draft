@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.3.ebuild,v 1.4 2004/01/24 14:09:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.3.ebuild,v 1.5 2004/02/10 13:05:40 mr_bones_ Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/sc2/${P}-3domusic.zip
 	mirror://sourceforge/sc2/${P}-voice.zip
 	mirror://sourceforge/sc2/${P}-source.tgz"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 IUSE="opengl"
 SLOT="0"
