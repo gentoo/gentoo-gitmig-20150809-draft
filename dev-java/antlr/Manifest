@@ -1,5 +1,5 @@
-MD5 7bd7487fbdd2db5930c0da08bef1aa10 antlr-2.7.2.ebuild 1015
-MD5 e9ef17192d3cedd8873c7425190febe3 ChangeLog 2942
+MD5 09365f99d79a536003a5afb1184cb22b antlr-2.7.2.ebuild 993
+MD5 7f0fc3a856367b3c647469fbd8a2c462 ChangeLog 2941
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 abd32014c7d5dc82f792f5e290b4527a files/antlr-2.7.2-gcc3-gentoo.patch 433
 MD5 aab6733e0c585de1db478492c41e94b9 files/digest-antlr-2.7.2 64

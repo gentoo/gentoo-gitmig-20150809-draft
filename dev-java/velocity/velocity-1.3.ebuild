@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.3.ebuild,v 1.5 2004/02/10 07:09:48 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.3.ebuild,v 1.6 2004/03/19 01:07:41 zx Exp $
 
 DESCRIPTION="A Java-based template engine that allows easy creation/rendering of documents that format and present data."
 HOMEPAGE="http://jakarta.apache.org/velocity/"
@@ -16,7 +16,7 @@ RDEPEND=">=dev-java/sun-jdk-1.3.1
 	>=dev-java/ant-1.5.1
 	>=dev-java/avalon-logkit-1.2
 	>=dev-java/oro-2.0.6
-	j2ee? ( =dev-java/sun-j2ee-1.3.1 )
+	j2ee? ( =dev-java/sun-j2ee-1.3.1* )
 	jikes? ( >=dev-java/jikes-1.17 )"
 
 src_compile () {
