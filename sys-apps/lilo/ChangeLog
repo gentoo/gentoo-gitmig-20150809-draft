@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.36 2003/11/06 21:20:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.37 2003/11/12 11:13:19 pappy Exp $
+
+  12 Nov 2003; Alexander Gabert <pappy@gentoo.org> lilo-22.5.8-r1.ebuild:
+  added hardened-gcc -yet_exec flags for gcc building lilo which has assembler
+  parts in it
 
 *lilo-22.5.8-r1 (06 Nov 2003)
 
