@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.1.ebuild,v 1.6 2004/11/28 02:08:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.1.ebuild,v 1.7 2005/02/22 17:26:43 ndimiduk Exp $
 
 inherit eutils
 
@@ -15,9 +15,12 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_compile() {
-	use ppc-macos && \
-		epatch ${FILESDIR}/libsigsegv-2.1-darwin-7.x.patch
-	econf --enable-shared || die
+	if use ppc-macos ; then
+		epatch ${FILESDIR}/libsigsegv-2.1-darwin-7.x.patch || die
+		./configure --enable-shared || die
+	else
+		econf --enable-shared || die
+	fi
 	emake || die
 }
 
