@@ -1,7 +1,7 @@
 /*
  * Copyright 1999-2004 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.2.c,v 1.4 2004/12/08 23:47:13 vapier Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.2.c,v 1.5 2004/12/09 01:46:23 vapier Exp $
  * Author: Martin Schlemmer <azarah@gentoo.org>
  */
 
@@ -157,7 +157,7 @@ static int find_target_in_envd(struct wrapper_data *data)
 				/* A bash variable may be unquoted, quoted with " or
 				 * quoted with ', so extract the value without those ..
 				 */
-				token = strtok(&strp, "\n\"\'");
+				token = strtok(strp, "\n\"\'");
 
 				while (NULL != token) {
 					
@@ -167,7 +167,7 @@ static int find_target_in_envd(struct wrapper_data *data)
 						return 1;
 					}
 
-					token = strtok(&strp, "\n\"\'");
+					token = strtok(NULL, "\n\"\'");
 				}
 			}
 			
