@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/xlockmore
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.4 2002/03/06 23:38:24 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.5 2002/03/27 21:32:33 seemant Exp $
+
+*xlockmore-5.03-r2 (27 Mar 2002)
+
+  27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xlockmore-5.03-r3.ebuild :
+
+  man page/LFH fix submitted by Matthew Kennedy.
 
 *xlockmore-5.03-r2 (6 March 2002)
 
