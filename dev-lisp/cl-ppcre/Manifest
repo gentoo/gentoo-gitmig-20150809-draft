@@ -3,7 +3,9 @@ MD5 9cbedbc90e2a3567914fc00197f50a3b cl-ppcre-0.5.4b.ebuild 851
 MD5 5a4b133dd5a632fbdcfb0a769c5df7f2 cl-ppcre-0.5.7.ebuild 746
 MD5 e4ce9d56b7778168e0513863cac7ebd9 cl-ppcre-0.5.8.ebuild 746
 MD5 f9248681e3ce050b8ca8b2cdbacdb3fd cl-ppcre-0.5.9.ebuild 746
+MD5 f9248681e3ce050b8ca8b2cdbacdb3fd cl-ppcre-0.6.0.ebuild 746
 MD5 268c98c99a8bb05591b4395926158048 files/digest-cl-ppcre-0.5.4b 72
 MD5 ce665068a9f3aceefa5e3f66a3231015 files/digest-cl-ppcre-0.5.7 66
 MD5 55b33a511f35b4e6c509af17f68476d3 files/digest-cl-ppcre-0.5.8 66
 MD5 633799acbd5495c2c287eef3bc31d2ce files/digest-cl-ppcre-0.5.9 66
+MD5 82be7e8cc79a71e9290519499b154ba0 files/digest-cl-ppcre-0.6.0 66
