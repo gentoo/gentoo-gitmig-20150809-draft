@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.2.0.ebuild,v 1.3 2004/02/10 14:29:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.2.0.ebuild,v 1.4 2004/02/13 18:13:27 vapier Exp $
 # TODO: add gnustep, objc bindings
 
-inherit kde-dist
+inherit kde-dist flag-o-matic
 
-IUSE="mozilla java python ruby gtk"
 DESCRIPTION="KDE library bindings for languages other than c++"
-KEYWORDS="x86 ~sparc ~amd64 ~ppc"
+
+KEYWORDS="x86 ~ppc ~sparc ~hppa ~amd64"
+IUSE="mozilla java python ruby gtk"
 
 newdepend "=kde-base/kdebase-${PV}
 	~kde-base/kdenetwork-${PV}
@@ -18,26 +19,10 @@ newdepend "=kde-base/kdebase-${PV}
 	ruby? ( dev-lang/ruby )
 	mozilla? ( net-www/mozilla )"
 
-use python	|| myconf="$myconf --without-python"
-use java	&& myconf="$myconf --with-java=`java-config --jdk-home`"	|| myconf="$myconf --without-java"
-use ruby	|| myconf="$myconf --without-ruby"
-
-# obj bindings are officially broken
-#myconf="$myconf --enable-objc"
-
-# we need to have csant (from pnet, from portable.NET) in portage for qtsharp
-export DO_NOT_COMPILE="$DO_NOT_COMPILE qtsharp"
-
-export LIBPYTHON="`python-config`"
-
-# fix bug #14756 fex. Doesn't compile well with -j2.
-export MAKEOPTS="$MAKEOPTS -j1"
-
-src_unpack()
-{
+src_unpack() {
 	kde_src_unpack
 
-	if [ -z "`use mozilla`" ]; then
+	if ! use mozilla ; then
 	# disable mozilla bindings/xpart, because configure doesn't seem to do so
 	# even when it doesn't detect the mozilla headers
 	cd ${S}/xparts
@@ -48,3 +33,23 @@ src_unpack()
 	cd ${S} && aclocal
 }
 
+src_compile() {
+	use python	|| myconf="$myconf --without-python"
+	use java	&& myconf="$myconf --with-java=`java-config --jdk-home`"	|| myconf="$myconf --without-java"
+	use ruby	|| myconf="$myconf --without-ruby"
+
+	# obj bindings are officially broken
+	#myconf="$myconf --enable-objc"
+
+	# we need to have csant (from pnet, from portable.NET) in portage for qtsharp
+	export DO_NOT_COMPILE="$DO_NOT_COMPILE qtsharp"
+
+	export LIBPYTHON="`python-config`"
+
+	# fix bug #14756 fex. Doesn't compile well with -j2.
+	export MAKEOPTS="$MAKEOPTS -j1"
+
+	use hppa && append-flags -ffunction-sections
+
+	kde_src_compile
+}
