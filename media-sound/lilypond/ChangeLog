@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.21 2004/04/20 17:25:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.22 2004/04/25 20:36:09 squinky86 Exp $
+
+  25 Apr 2004; Jon Hood <squinky86@gentoo.org> lilypond-1.6.6.ebuild:
+  added "die"
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   lilypond-1.5.15.ebuild, lilypond-1.6.9.ebuild:

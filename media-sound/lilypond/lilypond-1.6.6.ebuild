@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.6.ebuild,v 1.10 2004/03/01 05:37:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.6.ebuild,v 1.11 2004/04/25 20:36:09 squinky86 Exp $
 
 inherit gcc
 
@@ -69,7 +69,7 @@ src_compile() {
 			emake || die "emake failed"
 			;;
 	esac
-	#use doc && make web-doc || "make web-doc failed"
+	#use doc && make web-doc || die "make web-doc failed"
 }
 
 src_install () {
