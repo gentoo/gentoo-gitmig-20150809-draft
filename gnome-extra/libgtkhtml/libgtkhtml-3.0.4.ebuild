@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.4.ebuild,v 1.3 2003/09/06 23:52:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.4.ebuild,v 1.4 2003/09/12 09:22:50 spider Exp $
 
 inherit gnome2
 
@@ -25,7 +25,6 @@ RDEPEND=">=gnome-base/libgnomeui-2.2
 	>=gnome-base/libgnomeprint-2.2
 	>=gnome-base/libgnomeprintui-2.2.1
 	>=gnome-base/libbonoboui-2.0
-	>=gnome-base/bonobo-activation-2.0
 	>=gnome-base/libbonobo-2.0
 	>=gnome-extra/gal-1.99.6
 	>=gnome-base/ORBit2-2.5.6
