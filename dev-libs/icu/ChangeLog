@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.13 2004/03/27 01:16:44 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.14 2004/04/19 23:50:28 kloeri Exp $
+
+  20 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> icu-2.8.ebuild:
+  Added ~alpha to keywords.
 
   27 Mar 2004; Chuck Short <zul@gentoo.org> icu-2.6.ebuild:
   Stable on sparc.
