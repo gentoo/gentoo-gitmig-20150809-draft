@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 38e595116c5c8cc472efdd526104650b ChangeLog 6099
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 0d33525c9a23859b048f3537e3bb4a3d zlib-1.2.1-r3.ebuild 1989
-MD5 e6492f173c15ff8764f9a7c4ebd46520 zlib-1.2.2.ebuild 1986
+MD5 ce820774b9abec82a32e1ef97778e17f zlib-1.2.1-r3.ebuild 1992
+MD5 56a06576e3617c3115cfa6fd08c7e43b zlib-1.2.2.ebuild 1990
 MD5 3ccc7437df1921bba1a37d42a70e711f files/digest-zlib-1.2.2 63
 MD5 40634a4cbdcd9c795cfc34473c76038c files/zlib-1.2.2-mapfile.patch 2139
 MD5 9c2321cdb61e2d58b41a0d61a98d293b files/zlib-1.2.1-build-fPIC.patch 2252
@@ -14,10 +11,3 @@ MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1-r3 63
 MD5 9d3fdd73e1997aa5c823fc210f29919d files/zlib-1.2.1-configure.patch 3149
 MD5 9cdacd156a2ba9dff840c9ce7d8433db files/zlib-1.2.1-CAN-2004-0797.patch 786
 MD5 a337d1727a4f6f9ed8d29e43cde40e89 files/zlib-1.2.1-fPIC.patch 662
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiXeyHTu7gpaalycRAhSqAJwIVPK0bKjj5VLC9emunCB+KSpczACdEwmA
-OfNfrQhcUM+CsS8LEwqgyaE=
-=hye5
------END PGP SIGNATURE-----
