@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1.ebuild,v 1.17 2004/06/24 21:59:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1.ebuild,v 1.18 2004/07/03 14:00:17 pyrania Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ src_unpack() {
 	unpack dnd.1.1.tgz
 	cd ${S}
 	epatch ${FILESDIR}/${PF}-gentoo.diff || die
+	epatch ${FILESDIR}/Makefile-fix.patch || die
 }
 
 src_compile() {
