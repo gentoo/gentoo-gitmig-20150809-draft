@@ -3,7 +3,7 @@ MD5 3fe5e8c8ad4a371c9b0f7a8b268805d7 libmikmod-3.1.10-r1.ebuild 1102
 MD5 95f6b778cd53d6ab3e97218f6ae22a40 libmikmod-3.1.10.ebuild 1026
 MD5 fbacfd72b2a725f11ca968a2f36ee967 libmikmod-3.1.11.ebuild 1085
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 3c5ce759c60a863d10a9e2a4d864f966 libmikmod-3.1.11-r1.ebuild 1204
+MD5 f58d693ffc0cb8c87b68ddf4d618e033 libmikmod-3.1.11-r1.ebuild 1210
 MD5 7f535a03cca26048f67cdf9af61100e5 files/digest-libmikmod-3.1.10 68
 MD5 7f535a03cca26048f67cdf9af61100e5 files/digest-libmikmod-3.1.10-r1 68
 MD5 af03c756b29b31b7868d42c0c21d1952 files/digest-libmikmod-3.1.11 68
