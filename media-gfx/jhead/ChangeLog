@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/jhead
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.4 2003/04/05 02:19:50 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.5 2003/04/18 03:35:55 vladimir Exp $
 
 *jhead-1.9 (20 Feb 2003)
+
+  17 Apr 2003; Graham Forest <vladimir@gentoo.org> jhead-1.9.ebuild:
+  set ~ppc in keywords
 
   20 Feb 2003; Alastair Tse <liquidx@gentoo.org> ChangeLog, jhead-1.9.ebuild:
   Version bump and license correction. Resolves bug #11917
