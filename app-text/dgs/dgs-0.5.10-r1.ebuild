@@ -1,22 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.13 2002/12/09 04:17:43 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.14 2002/12/18 15:03:09 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A Ghostscript based DPS server"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/dgs/${P}.tar.gz"
-HOMEPAGE="http://www.aist-nara.ac.jp/~masata-y/dgs/index.html"
+HOMEPAGE="http://www.gyve.org/dgs/"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc"
 
 RDEPEND="=dev-libs/glib-1.2*
 	virtual/x11"
-
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	>=sys-apps/tcp-wrappers-7.6"
-
-KEYWORDS="x86 ppc sparc "
 
 src_unpack() {
 	unpack ${A}
@@ -25,15 +23,12 @@ src_unpack() {
 }
 
 src_compile() {
-
-	econf "--with-x" || die
+	econf --with-x
 	make || die
-
 }
 
-src_install () {
-
-	einstall || die
+src_install() {
+	einstall
 
 	rm -rf ${D}/usr/share/man/manm
 	newman ${S}/DPS/demos/xepsf/xepsf.man xepsf.1
