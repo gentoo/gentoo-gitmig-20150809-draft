@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-208.ebuild,v 1.1 2004/10/11 22:45:47 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-208.ebuild,v 1.2 2005/02/23 09:42:36 karltk Exp $
 
 DESCRIPTION="DrScheme programming environment.  Includes mzscheme."
 HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
@@ -8,7 +8,7 @@ SRC_URI="http://download.plt-scheme.org/bundles/${PV}/plt/plt-${PV}-src-unix.tgz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="opengl"
 
 DEPEND=">=sys-devel/gcc-2.95.3-r7

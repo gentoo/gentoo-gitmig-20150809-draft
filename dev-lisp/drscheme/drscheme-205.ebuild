@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-205.ebuild,v 1.6 2004/07/13 06:30:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-205.ebuild,v 1.7 2005/02/23 09:42:36 karltk Exp $
 
 DESCRIPTION="DrScheme programming environment.  Includes mzscheme."
 HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
