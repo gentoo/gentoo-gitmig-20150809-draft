@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.17.ebuild,v 1.22 2004/06/24 22:01:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.17.ebuild,v 1.23 2004/07/01 19:45:49 eradicator Exp $
 
 inherit gnome.org libtool gnuconfig
 
@@ -9,12 +9,12 @@ IUSE="nls"
 DESCRIPTION="A high-performance, lightweight CORBA ORB aiming for CORBA 2.2 compliance"
 HOMEPAGE="http://www.labs.redhat.com/orbit/"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
 	>=sys-apps/tcp-wrappers-7.6
 	=dev-libs/glib-1.2*"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	=dev-libs/glib-1.2*"
 
 SLOT="0"

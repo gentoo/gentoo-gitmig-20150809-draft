@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9-r4.ebuild,v 1.9 2004/06/24 21:59:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9-r4.ebuild,v 1.10 2004/07/01 19:46:04 eradicator Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit libtool gnome.org eutils
@@ -12,7 +12,7 @@ KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ia64 ~mips"
 
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 

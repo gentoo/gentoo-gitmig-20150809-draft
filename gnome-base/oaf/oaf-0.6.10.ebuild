@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.10.ebuild,v 1.15 2004/06/24 22:01:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.10.ebuild,v 1.16 2004/07/01 19:46:42 eradicator Exp $
 
 IUSE="nls"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=dev-libs/popt-1.5
 	>=gnome-base/ORBit-0.5.10-r1
 	>=dev-libs/libxml-1.8.15"
