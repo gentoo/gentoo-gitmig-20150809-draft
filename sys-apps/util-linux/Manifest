@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 a3f56e986ad54e19d33a6f2fcce56227 ChangeLog 14769
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e92a492381d2073f6f42d2f2e1e63a10 util-linux-2.11z-r8.ebuild 3161
-MD5 e012bcb53938d7147bd4eb55a2f21d41 util-linux-2.11z-r9.ebuild 3354
-MD5 608d202bf0e75fcd128fab85401471cd util-linux-2.12-r2.ebuild 3198
-MD5 f3789fe0aec47dff68ad09c16afc1371 util-linux-2.12-r3.ebuild 3699
-MD5 e564acb60788418bb22cd532f926b6ab util-linux-2.12-r4.ebuild 4122
-MD5 a7d560c1fbec607e50ddc90151460142 util-linux-2.12-r5.ebuild 4215
-MD5 63321b8400526dd47cf707bee73cf3e3 util-linux-2.12b.ebuild 4896
-MD5 cb511658ad2ce8c5ed95c61ed2b8d283 util-linux-2.12b-r1.ebuild 5005
+MD5 a4ef29239ccf28cf039d13951c6b8c06 util-linux-2.11z-r8.ebuild 3135
+MD5 3c3a1ff0272a0ff8c192ac49031ec8cd util-linux-2.11z-r9.ebuild 3328
+MD5 3d7c72c204740c895976624e87fbe860 util-linux-2.12-r2.ebuild 3172
+MD5 210baaa6b9086d6dcb1cf73b8f35f8aa util-linux-2.12-r3.ebuild 3673
+MD5 4e4c418b8f543403231482afeae8e042 util-linux-2.12-r4.ebuild 4098
+MD5 c8a2e3fb2cbc4ac144fe5dabfab0d639 util-linux-2.12-r5.ebuild 4193
+MD5 4bb184b87ec90bdc579a71f53214f21a util-linux-2.12b-r1.ebuild 4983
+MD5 46b84caf300acc762451ca3631a2bb14 util-linux-2.12b.ebuild 4874
 MD5 02afa4d774f45ab0b9ef42ecc1748005 files/digest-util-linux-2.11z-r8 153
 MD5 02afa4d774f45ab0b9ef42ecc1748005 files/digest-util-linux-2.11z-r9 153
 MD5 830453d37b748b7e2ec454603e33b920 files/digest-util-linux-2.12-r2 151
@@ -42,7 +42,7 @@ MD5 87912a793169fad4258077f2f6957616 files/digest-util-linux-2.12b-r1 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhAraHTu7gpaalycRAg6XAJwORRmBTdoIO6H3VWnsjfzAHNW9aACgi9JQ
-KNTUtLnSwfm16YePIDC50DQ=
-=uBA3
+iD8DBQFBhHdKHTu7gpaalycRAi5HAJ9iaNwIViW3yzQ3vlX9eFUE6+yxEwCfRh2h
+rTWlz/2mpa1KBV0UQIihMNE=
+=egjF
 -----END PGP SIGNATURE-----
