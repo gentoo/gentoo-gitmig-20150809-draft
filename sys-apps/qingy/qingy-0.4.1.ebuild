@@ -1,46 +1,42 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.4.1.ebuild,v 1.2 2004/07/31 20:43:29 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.4.1.ebuild,v 1.3 2004/08/14 17:11:14 vapier Exp $
 
-DESCRIPTION="Qingy is a DirectFB getty replacement."
+DESCRIPTION="a DirectFB getty replacement"
 HOMEPAGE="http://qingy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE="emacs gpm pam static"
+
 DEPEND=">=dev-libs/DirectFB-0.9.18
 	emacs? ( virtual/emacs )
 	pam?   ( >=sys-libs/pam-0.75-r11 )
 	>=dev-util/pkgconfig-0.12.0"
 
-src_compile()
-{
-	# override qingy self-calculated cflags, honour USE flags, set correct paths
-	econf                                  \
-		--sbindir=/sbin                    \
-		--disable-optimizations            \
-		`use_enable emacs`                 \
-		`use_enable pam`                   \
-		`use_enable static static-build`   \
-		`use_enable gpm gpm-lock`          \
+src_compile() {
+	econf \
+		--sbindir=/sbin \
+		--disable-optimizations \
+		`use_enable emacs` \
+		`use_enable pam` \
+		`use_enable static static-build` \
+		`use_enable gpm gpm-lock` \
 		|| die "Configuration failed"
-
-	# let's build it
 	emake || die "Compilation failed"
 }
 
-src_install()
-{
+src_install() {
 	# copy documentation manually as make install only installs info files
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO
 
 	# and finally install the program
 	make DESTDIR=${D} install || die "Installation failed"
 }
 
-pkg_postinst()
-{
+pkg_postinst() {
 	einfo "In order to use qingy you must first edit your /etc/inittab"
 	einfo "Check files INSTALL and README in /usr/share/doc/${P}"
 	einfo "for instructions on how to do that. Or issue an 'info qingy'."
@@ -55,4 +51,7 @@ pkg_postinst()
 	echo
 	einfo "You can safely remove /etc/directfbrc.qingy"
 	einfo "as it is no longer needed to get framebuffer resolution"
+	echo
+	ewarn "Also note that qingy doesn't seem to work with linux-2.6.7."
+	ewarn "See http://bugs.gentoo.org/show_bug.cgi?id=59340"
 }
