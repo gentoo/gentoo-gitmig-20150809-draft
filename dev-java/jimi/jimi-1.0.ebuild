@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jimi/jimi-1.0.ebuild,v 1.7 2004/10/17 18:37:48 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jimi/jimi-1.0.ebuild,v 1.8 2004/12/23 12:05:55 karltk Exp $
 
 inherit java-pkg
 
-DESCRIPTION="Jimi is a class library for managing images. Its primary function
-is image I/O. Jimi was formerly a product of Activated Intelligence. Sun is
-making it available for developers who have code with dependencies on Jimi or
-for those who need image I/O functionality in applications running under 1.1.x
-	versions of the Java Platform."
+# WARNING!!
+#
+# This ebuild has been deprecated. All new development should happen on dev-java/sun-jimi-bin
+#
+# -- karltk
 
+DESCRIPTION="Jimi is a class library for managing images."
 HOMEPAGE="http://java.sun.com/products/jimi/"
 SRC_URI="jimi1_0.zip"
 LICENSE="sun-bcla-jimi"
