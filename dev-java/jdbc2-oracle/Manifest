@@ -3,7 +3,7 @@ MD5 e5cd35b1827521c823c275001be9c4aa jdbc2-oracle-9.2.0.1.ebuild 2406
 MD5 517e95937ab5acf6a458737889b38b16 jdbc2-oracle-8.1.7.ebuild 2195
 MD5 7b25ece0cbb9d30b9b0b7ed56b0a3fda jdbc2-oracle-9.2.0.3.ebuild 2407
 MD5 42d69fdca024bf1289114c44e72b5d45 jdbc2-oracle-9.0.1.ebuild 2358
-MD5 11691d737a7464eebfe56c03906dad39 ChangeLog 1063
+MD5 9c801cd593b205a4b8894d7194d08109 ChangeLog 1094
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-jdbc2-oracle-8.1.7 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-jdbc2-oracle-9.0.1 0
