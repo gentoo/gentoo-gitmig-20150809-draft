@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.20.ebuild,v 1.6 2004/02/07 18:32:55 esammer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.25.ebuild,v 1.1 2004/02/07 18:32:55 esammer Exp $
 
 inherit perl-module
 
@@ -11,13 +11,13 @@ HOMEPAGE="http://www.masonhq.com/"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
 
 DEPEND="${DEPEND}
 	>=dev-perl/libapreq-1.0-r2
 	>=dev-perl/Params-Validate-0.24-r2
 	>=dev-perl/Class-Container-0.08
-	>=dev-perl/Exception-Class-1.07
+	>=dev-perl/Exception-Class-1.14
 	dev-perl/Scalar-List-Utils
 	dev-perl/CGI
 	|| ( dev-perl/File-Spec >=perl-5.8.0-r12 )
