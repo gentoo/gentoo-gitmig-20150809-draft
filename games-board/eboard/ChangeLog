@@ -1,6 +1,9 @@
 # ChangeLog for games-board/eboard
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.5 2004/01/03 03:38:55 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.6 2004/04/13 12:33:29 kugelfang Exp $
+
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> eboard-0.9.5.ebuild:
+  marked ~amd64
 
   02 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> eboard-0.8.0.ebuild,
   eboard-0.9.0.ebuild, eboard-0.9.5.ebuild:
