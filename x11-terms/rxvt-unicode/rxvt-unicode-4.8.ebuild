@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-4.8.ebuild,v 1.2 2005/02/27 00:08:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-4.8.ebuild,v 1.3 2005/02/27 00:13:26 latexer Exp $
 
 inherit 64-bit eutils
 
@@ -15,6 +15,8 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~mips ~amd64 ppc"
 
 DEPEND="virtual/libc
+	dev-util/pkgconfig
+	sys-devel/libtool
 	virtual/x11
 	dev-lang/perl"
 

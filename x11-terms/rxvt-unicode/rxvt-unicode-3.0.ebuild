@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-3.0.ebuild,v 1.10 2005/01/21 20:59:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-3.0.ebuild,v 1.11 2005/02/27 00:13:26 latexer Exp $
 
 IUSE="xgetdefault"
 
@@ -13,6 +13,8 @@ SLOT="0"
 KEYWORDS="x86 sparc amd64 ppc ppc64"
 
 DEPEND="virtual/libc
+	dev-util/pkgconfig
+	sys-devel/libtool
 	virtual/x11"
 
 src_compile() {
