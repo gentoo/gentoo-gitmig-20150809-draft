@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.44 2002/12/18 20:45:55 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.45 2003/01/06 09:06:56 hannes Exp $
+
+  06 Jan 2003; Hannes Mehnert <hannes@gentoo.org> qt-3.1.1.ebuild,
+  qt-3.1.0.ebuild, qt-3.1.0-r1.ebuild: added -xrender to configure, thanks
+  to faye@clara.net (Faye Pearson). fixes bug #12918
 
   18 Dec 2002; Hannes Mehnert <hannes@gentoo.org> qt-3.1.1.ebuild,
   qt-3.0.5-r2.ebuild, qt-3.1.0.ebuild, qt-3.1.0-r1.ebuild: fixed typo

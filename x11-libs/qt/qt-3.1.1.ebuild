@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1.ebuild,v 1.3 2002/12/18 20:45:55 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1.ebuild,v 1.4 2003/01/06 09:06:56 hannes Exp $
 
 IUSE="cups nas postgres opengl mysql odbc gif"
 
@@ -88,7 +88,7 @@ src_compile() {
 	./configure -sm -thread -stl -system-zlib -system-libjpeg -verbose \
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -ldl -lpthread -xft -platform linux-g++ -xplatform \
-		linux-g++ -prefix ${QTBASE} -fast ${myconf} || die
+		linux-g++ -xrender -prefix ${QTBASE} -fast ${myconf} || die
 
 	export QTDIR=${S}
 
