@@ -1,8 +1,11 @@
 # ChangeLog for sys-libs/libieee1284
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.1 2002/07/05 15:06:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.2 2002/07/21 03:02:15 gerk Exp $
 
 *libieee1284-0.1.6 (03 Jul 2002)
+
+  20 Jul 2002; mark Guertin <gerk@gentoo.org> libieee1284-0.1.6.ebuild
+  Adjusted keywords (-ppc)
 
   03 Jul 2002; Seemant Kulleen <seemant@gentoo.org> libieee1284-0.1.6.ebuild
   ChangeLog files/digest-libieee1284-0.1.6 :

@@ -7,7 +7,7 @@ DESCRIPTION="Library to query devices using IEEE1284"
 HOMEPAGE="http://cyberelk.net/tim/libieee1284/index.html"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 SLOT="0"
 
 DEPEND=">=app-text/docbook-sgml-utils-0.6.11
