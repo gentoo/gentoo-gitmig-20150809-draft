@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lufis
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufis/ChangeLog,v 1.3 2005/01/15 19:47:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufis/ChangeLog,v 1.4 2005/01/23 19:34:39 dholm Exp $
+
+  23 Jan 2005; <avatar@gentoo.org> :
+  Added to ~ppc.
 
   15 Jan 2005; Stefan Schweizer <genstef@gentoo.org> lufis-0.2.ebuild:
   Stable x86
