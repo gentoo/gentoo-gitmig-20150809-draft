@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.62 2005/03/31 10:07:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.63 2005/04/01 00:58:21 vanquirius Exp $
+
+  31 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> files/nessusd-r6:
+  Init script fix, bug 86664. Thanks to Eric Brown <bigwhitecow@hotmail.com> and
+  Marco Morales <soulse@gmail.com>.
 
   31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   nessus-core-2.2.0.ebuild:
