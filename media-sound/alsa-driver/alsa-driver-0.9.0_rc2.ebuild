@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc2.ebuild,v 1.14 2004/03/01 05:37:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc2.ebuild,v 1.15 2004/04/08 07:44:16 eradicator Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -14,8 +14,9 @@ HOMEPAGE="http://www.alsa-project.org/"
 #
 [ x"${ALSA_CARDS}" = x ] && ALSA_CARDS=all
 
-SRC_URI="ftp://ftp.alsa-project.org/pub/driver/${P/_rc/rc}.tar.bz2"
-S=${WORKDIR}/${P/_rc/rc}
+MY_P=${P/_rc/rc}
+SRC_URI="mirror://alsaproject/driver/${MY_P}.tar.bz2"
+S=${WORKDIR}/${MY_P}
 
 # Need the baselayout 1.7.9 or newer for the init script to work correctly.
 DEPEND="sys-devel/autoconf
@@ -36,10 +37,9 @@ src_unpack() {
 	# http://sourceforge.net/tracker/?func=detail&aid=551668&group_id=27464&atid=390601
 	unpack ${A}
 	cd ${S}
-	sed -e 's:/etc/rc.d/init.d:/etc/init.d:' < Makefile > Makefile.hacked
-	mv Makefile.hacked Makefile
-	if [ ${ARCH} = "ppc" ]
-		then patch -p1 < ${FILESDIR}/alsa-driver-0.9.0rc1-ppc.patch || die "Patching failed"
+	sed -i -e 's:/etc/rc.d/init.d:/etc/init.d:' Makefile
+	if use ppc; then 
+		epatch ${FILESDIR}/alsa-driver-0.9.0rc1-ppc.patch
 	fi
 }
 

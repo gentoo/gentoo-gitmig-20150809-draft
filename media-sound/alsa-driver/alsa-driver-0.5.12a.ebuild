@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.15 2004/03/01 05:37:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.16 2004/04/08 07:44:16 eradicator Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Linux Sound Architecture modules"
-SRC_URI="ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${PV}.tar.bz2"
+SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
 HOMEPAGE="http://www.alsa-project.org"
 
 #virtual/glibc should depend on specific kernel headers
