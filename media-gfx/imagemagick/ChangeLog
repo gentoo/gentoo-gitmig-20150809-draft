@@ -1,8 +1,13 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.42 2003/04/24 15:24:18 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.43 2003/04/28 16:51:46 mholzer Exp $
 
 *imagemagick-5.5.6 (24 Apr 2003)
+
+  28 Apr 2003; Martin Holzer <mholzer@gentoo.org>
+  imagemagick-5.4.7.4-r1.ebuild, imagemagick-5.5.3.2.ebuild,
+  imagemagick-5.5.4.4.ebuild, imagemagick-5.5.6.ebuild:
+  Changed SRC_URI to use mirror://sf.
 
   24 Apr 2003; Bartosch Pixa <darkspecter@gentoo.org>
   imagemagick-5.5.6.ebuild:
