@@ -19,7 +19,7 @@ categories=("app-admin", "app-arch", "app-cdr", "app-crypt", "app-doc", "app-edi
 			"app-office", "app-shells", "app-text", "dev-db", "dev-java", "dev-lang", "dev-libs", "dev-perl", 
 			"dev-python", "dev-ruby", "dev-util", "gnome-apps", "gnome-base", "gnome-libs", 
 			"gnome-office","kde-apps", "kde-base", "kde-libs", "media-gfx", "media-libs", "media-sound", "media-video", 
-			"net-analyzer", "net-dialup", "net-fs", "net-ftp", "net-irc", "net-im" , "net-libs", "net-mail", "net-misc", "net-news", "net-nds", 
+			"net-analyzer", "net-dialup", "net-fs", "net-ftp", "net-im", "net-irc", "net-libs", "net-mail", "net-misc", "net-news", "net-nds", 
 			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
 			"x11-terms", "x11-wm","virtual")
 
@@ -441,7 +441,7 @@ def doebuild(myebuild,mydo,checkdeps=1):
 		retval=spawn("/usr/sbin/ebuild.sh fetch")
 		if retval:
 			return retval
-		for x in ["","/"+settings["CATEGORY"]]:
+		for x in ["","/"+settings["CATEGORY"],"/All"]:
 			if not os.path.exists(settings["PKGDIR"]+x):
 				os.makedirs(settings["PKGDIR"]+x)
 		pkgloc=settings["PKGDIR"]+"/All/"+settings["PF"]+".tbz2"
