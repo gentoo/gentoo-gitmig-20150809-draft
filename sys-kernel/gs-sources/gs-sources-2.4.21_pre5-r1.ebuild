@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_pre5-r1.ebuild,v 1.2 2003/03/21 07:17:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_pre5-r1.ebuild,v 1.3 2003/03/27 23:28:12 livewire Exp $
 
 IUSE="build crypt"
 
@@ -19,7 +19,7 @@ ETYPE="sources"
 
 inherit kernel || die
 OKV=2.4.20
-EXTRAVERSION=-pre5-gss-r1
+EXTRAVERSION=_pre5-gss-r1
 KV=2.4.21_pre5-gss-r1
 S=${WORKDIR}/linux-${KV}
 
