@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gnustep-back
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/ChangeLog,v 1.14 2003/07/26 10:21:51 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/ChangeLog,v 1.15 2003/07/30 18:57:50 raker Exp $
+
+*gnustep-back-0.8.8 (30 Jul 2003)
+
+  30 Jul 2003; Nick Hadaway <raker@gentoo.org> gnustep-back-0.8.8.ebuild:
+  Version bump of the unstable series.
 
   26 Jul 2003; Nick Hadaway <raker@gentoo.org> *.ebuild:
   All arches marked - in 0.8.7 and windowmaker added as a requirement 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gnustep-make
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/ChangeLog,v 1.15 2003/07/26 08:49:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/ChangeLog,v 1.16 2003/07/30 18:57:50 raker Exp $
+
+*gnustep-make-1.7.2 (30 Jul 2003)
+
+  30 Jul 2003; Nick Hadaway <raker@gentoo.org> gnustep-make-1.7.2.ebuild:
+  Version bump in the unstable series.
 
   26 Jul 2003; Nick Hadaway <raker@gentoo.org> *.ebuild:
   Removed the references to windowmaker.  Closes bugs #25064
