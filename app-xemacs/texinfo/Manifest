@@ -1,5 +1,5 @@
 MD5 e0dda44c2812fa9b6e02f55012f4ed15 ChangeLog 659
 MD5 2998ad8b18c3bdf3c35c4928cf2112dc texinfo-1.21.ebuild 400
-MD5 1e79d77720ff9ad18bbda84f61ad1822 texinfo-1.23.ebuild 399
+MD5 b3d3f020d243c9cd2c6d691f296518f4 texinfo-1.23.ebuild 403
 MD5 192d54169604d47edb277b067d8516e7 files/digest-texinfo-1.21 67
 MD5 0cd76df9b467406165a86ab33035a965 files/digest-texinfo-1.23 67
