@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.11 2002/12/09 04:26:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.12 2003/02/05 19:37:57 seemant Exp $
 
 IUSE="X"
 
@@ -22,6 +22,13 @@ KEYWORDS="x86 ppc sparc "
 
 DEPEND="media-libs/libpng
 	X? ( virtual/x11 )"
+
+
+# Filter out k6 from the CFLAGS
+export CFLAGS="${CFLAGS/k6-3/i586}"
+export CFLAGS="${CFLAGS/k6-2/i586}"
+export CFLAGS="${CFLAGS/k6/i586}"
+export CXXFLAGS="${CFLAGS}"
 
 src_unpack() {
 

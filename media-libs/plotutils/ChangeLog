@@ -1,11 +1,18 @@
 # ChangeLog for media-libs/plotutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.7 2002/12/13 10:59:36 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.8 2003/02/05 19:37:57 seemant Exp $
+
+*plotutils-2.4.1-r2 (16 Jun 2002)
+
+  05 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  plotutils-2.4.1-r2.ebuild :
+
+  Filtered out k6, k6-2, and k6-3 flags to replace them with a generic
+  i586 flag.  Closes bug report #14488 by Jani-Matti H?tinen
+  <jannu.hatinen@mbnet.fi>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*plotutils-2.4.1-r2 (16 Jun 2002)
-
   7 Sep 2002; Owen Stampflee <owen@gentoo.org> :
   Added PPC to KEYWORDS.
 
