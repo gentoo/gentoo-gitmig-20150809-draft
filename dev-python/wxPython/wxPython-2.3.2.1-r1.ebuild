@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.3.2.1-r1.ebuild,v 1.3 2002/08/16 02:49:58 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.3.2.1-r1.ebuild,v 1.4 2002/08/22 19:35:19 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A blending of the wxWindows C++ class library with Python."
@@ -19,14 +19,14 @@ LICENSE="LGPL-2"
 KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
-	local myconf
-	myconf=""
-
-	if use opengl; then
-		myconf="${myconf} BUILD_GLCANVAS=1"
-	else
-		myconf="${myconf} BUILD_GLCANVAS=0"
-	fi
+#	local myconf
+#	myconf=""
+#
+#	if use opengl; then
+#		myconf="${myconf} BUILD_GLCANVAS=1"
+#	else
+#		myconf="${myconf} BUILD_GLCANVAS=0"
+#	fi
         
 #Other possible configuration variables are BUILD_OGL and BUILD_STC.
 #BUILD_OGL builds the Object Graphics Library extension module.
@@ -37,8 +37,15 @@ src_compile() {
 	# this doesn't work yet with opengl, thus,
 	# force the issue for now.
 	# It *builds* but sigsegs at runtime.
-	myconf="BUILD_GLCANVAS=0"
-	python setup.py build  ${myconf} || die
+	# myconf="BUILD_GLCANVAS=0"
+	cd ${S}
+	patch -p1 < ${FILESDIR}/noglcanvas.diff || die "patch failed"
+
+	# gizmos currently fails compiling on gcc3
+	# myconf="${myconf} BUILD_GIZMOS=0"
+	patch -p1 < ${FILESDIR}/nogizmos.diff || die "patch failed"
+
+	python setup.py build || die
 }
 
 src_install () {

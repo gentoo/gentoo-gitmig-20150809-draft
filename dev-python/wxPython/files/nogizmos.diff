@@ -1,0 +1,160 @@
+diff -urN wxPython-2.3.2.1/setup.py wxPython-2.3.2.1-modified/setup.py
+--- wxPython-2.3.2.1/setup.py	Thu Dec 20 11:33:42 2001
++++ wxPython-2.3.2.1-modified/setup.py	Thu Aug 22 14:07:18 2002
+@@ -32,8 +32,8 @@
+ BUILD_OGL = 1      # If true, build the contrib/ogl extension module
+ BUILD_STC = 1      # If true, build the contrib/stc extension module
+ BUILD_XRC = 1      # XML based resource system
+-BUILD_GIZMOS = 1   # Build a module for the gizmos contrib library
+-BUILD_DLLWIDGET = 1# Build a module for the gizmos contrib library
++BUILD_GIZMOS = 0   # Build a module for the gizmos contrib library
++BUILD_DLLWIDGET = 0# Build a module for the gizmos contrib library
+ 
+ BUILD_IEWIN = 0    # Internet Explorer wrapper (experimental)
+ 
+@@ -757,46 +757,46 @@
+ #----------------------------------------------------------------------
+ # Define the GIZMOS  extension module
+ #----------------------------------------------------------------------
+-
+-if not GL_ONLY and BUILD_GIZMOS:
+-    msg('Preparing GIZMOS...')
+-    location = 'contrib/gizmos'
+-    GIZMOLOC = opj(location, 'contrib/src/gizmos')
+-    GIZMOINC = opj(location, 'contrib/include')
+-
+-    swig_files = ['gizmos.i']
+-
+-    swig_sources = run_swig(swig_files, location, '', PKGDIR,
+-                            USE_SWIG, swig_force, swig_args)
+-
+-    gizmos_includes = includes[:]
+-    gizmos_includes.append(GIZMOINC)
+-
+-
+-    # make sure local copy of contrib files are up to date
+-    if IN_CVS_TREE:
+-        contrib_copy_tree(opj(CTRB_INC, 'gizmos'), opj(GIZMOINC, 'wx/gizmos'))
+-        contrib_copy_tree(opj(CTRB_SRC, 'gizmos'), GIZMOLOC)
+-
+-    ext = Extension('gizmosc', [
+-                                '%s/dynamicsash.cpp' % GIZMOLOC,
+-                                '%s/editlbox.cpp' % GIZMOLOC,
+-                                #'%s/multicell.cpp' % GIZMOLOC,
+-                                '%s/splittree.cpp' % GIZMOLOC,
+-                                '%s/ledctrl.cpp'   % GIZMOLOC,
+-                             ] + swig_sources,
+-
+-                    include_dirs =  gizmos_includes,
+-                    define_macros = defines,
+-
+-                    library_dirs = libdirs,
+-                    libraries = libs,
+-
+-                    extra_compile_args = cflags,
+-                    extra_link_args = lflags,
+-                    )
+-
+-    wxpExtensions.append(ext)
++#
++#if not GL_ONLY and BUILD_GIZMOS:
++#    msg('Preparing GIZMOS...')
++#    location = 'contrib/gizmos'
++#    GIZMOLOC = opj(location, 'contrib/src/gizmos')
++#    GIZMOINC = opj(location, 'contrib/include')
++#
++#    swig_files = ['gizmos.i']
++#
++#    swig_sources = run_swig(swig_files, location, '', PKGDIR,
++#                            USE_SWIG, swig_force, swig_args)
++#
++#    gizmos_includes = includes[:]
++#    gizmos_includes.append(GIZMOINC)
++#
++#
++#    # make sure local copy of contrib files are up to date
++#    if IN_CVS_TREE:
++#        contrib_copy_tree(opj(CTRB_INC, 'gizmos'), opj(GIZMOINC, 'wx/gizmos'))
++#        contrib_copy_tree(opj(CTRB_SRC, 'gizmos'), GIZMOLOC)
++#
++#    ext = Extension('gizmosc', [
++#                                '%s/dynamicsash.cpp' % GIZMOLOC,
++#                                '%s/editlbox.cpp' % GIZMOLOC,
++#                                #'%s/multicell.cpp' % GIZMOLOC,
++#                                '%s/splittree.cpp' % GIZMOLOC,
++#                                '%s/ledctrl.cpp'   % GIZMOLOC,
++#                             ] + swig_sources,
++#
++#                    include_dirs =  gizmos_includes,
++#                    define_macros = defines,
++#
++#                    library_dirs = libdirs,
++#                    libraries = libs,
++#
++#                    extra_compile_args = cflags,
++#                    extra_link_args = lflags,
++#                    )
++#
++#    wxpExtensions.append(ext)
+ 
+ 
+ 
+@@ -804,32 +804,32 @@
+ # Define the DLLWIDGET  extension module
+ #----------------------------------------------------------------------
+ 
+-if not GL_ONLY and BUILD_DLLWIDGET:
+-    msg('Preparing DLLWIDGET...')
+-    location = 'contrib/dllwidget'
+-    swig_files = ['dllwidget_.i']
+-
+-    swig_sources = run_swig(swig_files, location, '', PKGDIR,
+-                            USE_SWIG, swig_force, swig_args)
+-
+-    # copy a contrib project specific py module to the main package dir
+-    copy_file(opj(location, 'dllwidget.py'), PKGDIR, update=1, verbose=0)
+-
+-    ext = Extension('dllwidget_c', [
+-                                '%s/dllwidget.cpp' % location,
+-                             ] + swig_sources,
+-
+-                    include_dirs =  includes,
+-                    define_macros = defines,
+-
+-                    library_dirs = libdirs,
+-                    libraries = libs,
+-
+-                    extra_compile_args = cflags,
+-                    extra_link_args = lflags,
+-                    )
+-
+-    wxpExtensions.append(ext)
++#if not GL_ONLY and BUILD_DLLWIDGET:
++#    msg('Preparing DLLWIDGET...')
++#    location = 'contrib/dllwidget'
++#    swig_files = ['dllwidget_.i']
++#
++#    swig_sources = run_swig(swig_files, location, '', PKGDIR,
++#                            USE_SWIG, swig_force, swig_args)
++#
++#    # copy a contrib project specific py module to the main package dir
++#    copy_file(opj(location, 'dllwidget.py'), PKGDIR, update=1, verbose=0)
++#
++#    ext = Extension('dllwidget_c', [
++#                                '%s/dllwidget.cpp' % location,
++#                             ] + swig_sources,
++#
++#                    include_dirs =  includes,
++#                    define_macros = defines,
++#
++#                    library_dirs = libdirs,
++#                    libraries = libs,
++#
++#                    extra_compile_args = cflags,
++#                    extra_link_args = lflags,
++#                    )
++#
++#    wxpExtensions.append(ext)
+ 
+ 
+ #----------------------------------------------------------------------
