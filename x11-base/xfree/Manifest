@@ -6,7 +6,7 @@ MD5 841ad6ce6bc0dd92186fa29e6b813c34 xfree-4.3.99.15.ebuild 32675
 MD5 049549e84c67068017dcb7a4028fdec1 xfree-4.3.0-r2.ebuild 31516
 MD5 16b90182f78dd0b425424bc7f93f9b6a xfree-4.3.0-r3.ebuild 34202
 MD5 095515724692343cdef7b917bee9c10f xfree-4.3.99.14.ebuild 32062
-MD5 5d72f9c5719b4e6fd59d5dec483849c7 ChangeLog 52547
+MD5 197da8fea84c5e3cc6b1b45408820b8d ChangeLog 52589
 MD5 db524c4605805eef089fd8ddda1cb456 xfree-4.3.99.13.ebuild 32129
 MD5 a9371704cf72bcb8d1aa713ca4b27546 files/XFree86-4.2.1-Xft11-Imakefile.patch 341
 MD5 bc3aad4b056a41f47d427c036edcef9f files/XFree86-4.2.1-Xft11-hack.patch 1163
