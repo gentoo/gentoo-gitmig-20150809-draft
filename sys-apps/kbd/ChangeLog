@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.21 2003/11/04 04:14:47 azarah Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.22 2004/01/19 18:44:14 azarah Exp $
+
+  19 Jan 2004; Martin Schlemmer <azarah@gentoo.org> kbd-1.08-r4.ebuild:
+  Mark stable, as latest stable baselayout depends on it, bug #38585.
 
   04 Nov 2003; Martin Schlemmer <azarah@gentoo.org> kbd-1.08-r4.ebuild:
   Fix to compile on Sparc again, bug #25517.
