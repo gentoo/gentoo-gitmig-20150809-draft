@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/bonobo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/ChangeLog,v 1.14 2003/05/16 01:01:43 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/ChangeLog,v 1.15 2003/07/06 11:27:11 gmsoft Exp $
 
   16 May 2003; Lars Weiler <pylon@gentoo.org> bonobo-1.0.22.ebuild:
   Set ppc in KEYWORDS
@@ -12,6 +12,9 @@
   Added gdk-pixbuf dep (#13901)
 
 *bonobo-1.0.22 (23 Dec 2002)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> bonobo-1.0.22.ebuild :
+  Added hppa to KEYWORDS.
 
   21 Mar 2003; Jason Wever <weeve@gentoo.org> bonobo-1.0.22.ebuild:
   Changed ~sparc keyword to sparc.
