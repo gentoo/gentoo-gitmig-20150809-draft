@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.942 2005/02/10 08:50:28 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.943 2005/02/10 13:22:02 dragonheart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -203,6 +203,7 @@ dev-tex/preview-latex:xemacs - Adds support for XEmacs
 dev-util/catalyst:ccache - Enables ccache support
 dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
+dev-util/global:vim - vim funny stuff for global
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 games-strategy/uqm:music - download and install music files (large)
 games-strategy/uqm:voice - download and install voice files (large)
