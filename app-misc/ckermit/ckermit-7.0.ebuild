@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-7.0.ebuild,v 1.1 2001/04/25 18:50:01 michael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-7.0.ebuild,v 1.2 2001/04/27 04:59:41 achim Exp $
 
 #P=
 A=cku197.tar.gz
@@ -13,7 +13,17 @@ HOMEPAGE="http://www.kermit-project.org/"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2"
 
+src_unpack () {
+
+    unpack ${A}
+    cd ${S}
+    patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+    cp makefile makefile.orig
+    sed -e "s:-O:$CFLAGS:" makefile.orig > makefile
+}
+
 src_compile() {
+
     try make \"KFLAGS=-DCK_SHADOW\" linux
 }
 
