@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/golem-0.0.5-r1.ebuild,v 1.4 2004/04/06 03:18:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/golem-0.0.5-r1.ebuild,v 1.5 2004/04/27 17:11:22 pvdabeel Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~amd64"
+KEYWORDS="x86 ~sparc ~amd64 ppc"
 IUSE="nls xinerama esd"
 
 DEPEND="virtual/glibc
