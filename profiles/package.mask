@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3132 2004/09/06 14:05:59 suka Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3133 2004/09/06 20:24:23 arj Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -234,10 +234,6 @@ net-irc/epic5
 # <vapier@gentoo.org> (05 June 2004)
 # Horribly broken ... it just eat's filesystems #51773
 sys-fs/progsreiserfs
-
-# <klieber@gentoo.org> (01 June 2004)
-# security masked due to issue described in #51586
-=dev-util/tla-1.2.1_pre1
 
 # <games@gentoo.org> (26 May 2004)
 # Using system libmikmod breaks mod music #52064
