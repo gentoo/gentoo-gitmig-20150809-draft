@@ -1,8 +1,15 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.7 2002/09/27 13:23:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.8 2002/11/23 08:22:16 raker Exp $
 
 *qmail-1.03-r9 (11 Sep 2002)
+
+  23 Nov 2002; Nick Hadaway <raker@gentoo.org> qmail-1.03-r9.ebuild :
+  Cosmetic fix to only unpack ldap patch if ldap in USE.
+
+  19 Nov 2002; Nick Hadaway <raker@gentoo.org> qmail-1.03-r9.ebuild :
+  Added fix for ssl enabled builds as noted in bug #10961.  Thanks to 
+  Andrey Ulanov for noticing the problem.
 
   27 Sep 2002; Nick Hadaway <raker@gentoo.org> 
   files/1.03-r9/run-qmailsmtpd :

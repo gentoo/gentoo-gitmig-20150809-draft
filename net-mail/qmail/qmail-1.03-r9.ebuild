@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r9.ebuild,v 1.3 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r9.ebuild,v 1.4 2002/11/23 08:22:16 raker Exp $
 
 IUSE="ssl ldap"
 
@@ -42,7 +42,9 @@ KEYWORDS="x86 ppc sparc sparc64"
 src_unpack() {
 
 	unpack qmail-1.03.tar.gz
-	unpack qmail-ldap-1.03-20020901.patch.gz
+
+	use ldap && unpack qmail-ldap-1.03-20020901.patch.gz
+
 	cd ${S}
 
 	echo "Applying big-todo patch..."
@@ -68,7 +70,11 @@ src_unpack() {
 		use ssl && patch < ${FILESDIR}/${PV}-${PR}/qmail-1.03-starttls-smtp-auth.patch || die "tls+auth patch failed"
 	fi
 
-	echo "gcc ${CFLAGS}" > conf-cc
+	if [ `use ssl` ]; then
+		echo "gcc ${CFLAGS} -DTLS" > conf-cc
+	else
+		echo "gcc ${CFLAGS}" > conf-cc
+	fi
 	echo "gcc" > conf-ld
 	echo "500" > conf-spawn
 
