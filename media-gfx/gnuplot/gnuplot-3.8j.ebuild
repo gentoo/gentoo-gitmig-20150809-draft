@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j.ebuild,v 1.10 2004/07/31 03:26:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j.ebuild,v 1.11 2005/01/02 06:45:19 j4rg0n Exp $
 
 MY_P="${P}.0"
 S=${WORKDIR}/${MY_P}
