@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-xlib
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.3 2003/04/04 02:32:17 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.4 2004/02/17 23:25:07 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> python-xlib-0.12.ebuild:
+  stable on alpha and ia64
 
 *python-xlib-0.12 (17 Dec 2002)
 
