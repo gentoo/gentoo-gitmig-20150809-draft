@@ -1,8 +1,11 @@
 # ChangeLog for app-text/chktex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/ChangeLog,v 1.6 2002/09/14 03:12:44 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/ChangeLog,v 1.7 2002/10/19 05:19:27 satai Exp $
 
 *cktex-1.5-r2 (28 Jun 2002)
+
+  19 Oct 2002; Matthew Turk <satai@gentoo.org> chktex-1.5-r2.ebuild :
+  Quick change of the homepage.  #9264.
 
   13 Sep 2002; Donny Davies <woodchip@gentoo.org> cktex-1.5-r2.ebuild :
   sys-devel/ld.so is deprecated; #6476.
