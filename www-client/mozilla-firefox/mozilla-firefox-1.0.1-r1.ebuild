@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.1-r1.ebuild,v 1.1 2005/03/23 15:43:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.1-r1.ebuild,v 1.2 2005/03/23 20:05:30 seemant Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -24,7 +24,7 @@ RDEPEND="java? ( virtual/jre )
 		>=x11-base/xorg-x11-6.7.0-r2
 		x11-libs/cairo
 	)
-	>=net-www/mozilla-launcher-1.28"
+	>=www-client/mozilla-launcher-1.28"
 
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )"

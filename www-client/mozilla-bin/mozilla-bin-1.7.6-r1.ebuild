@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.6-r1.ebuild,v 1.2 2005/03/23 19:17:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.6-r1.ebuild,v 1.3 2005/03/23 20:04:48 seemant Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -35,7 +35,7 @@ RDEPEND="virtual/x11
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
 	)
 	virtual/x11
-	>=net-www/mozilla-launcher-1.28"
+	>=www-client/mozilla-launcher-1.28"
 
 src_install() {
 	# Install mozilla in /opt
