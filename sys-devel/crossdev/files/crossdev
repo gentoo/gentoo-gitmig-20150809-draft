@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.17 2005/04/03 17:44:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.18 2005/04/05 23:17:10 vapier Exp $
 
 if [[ ${ROOT:-/} != "/" ]] ; then
 	echo "Sorry, but crossdev does not support ROOT."
@@ -302,11 +302,13 @@ doemerge() {
 	ebegin "Emerging cross-${2:-$1}"
 	if [[ ${UOPTS/-v} != ${UOPTS} ]] ; then
 		emerge cross-${CTARGET}/$1 ${EOPTS} \
-			2>&1 | tee ${logfile} || die "$1 failed :("
+			2>&1 | tee ${logfile}
 	else
 		emerge cross-${CTARGET}/$1 ${EOPTS} \
-			>& ${logfile} || die "$1 failed :("
+			>& ${logfile}
 	fi
+	local _pipestatus=${PIPESTATUS[*]}
+	[[ "${_pipestatus// /}" -eq 0 ]] || die "$1 failed :("
 	eend 0
 }
 

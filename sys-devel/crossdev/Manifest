@@ -3,4 +3,4 @@ MD5 e91cdaf464f515f3528da02cf06e54a1 metadata.xml 222
 MD5 c0cf28d66474b3d795a4d574033be962 crossdev-0.9.5-r1.ebuild 557
 MD5 bbb032e270728ffb39276e95e5653b62 files/crossdev-0.4-fixes-one.patch 1675
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-crossdev-0.9.5-r1 0
-MD5 4af71136743d69b129fdf6e3261c0e40 files/crossdev 9770
+MD5 3684c986849054365b474d42e01282f8 files/crossdev 9818
