@@ -1,6 +1,20 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.18 2003/04/24 19:02:29 leahcim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.19 2003/06/14 09:01:24 seemant Exp $
+
+*xfree-drm-4.3.0-r3 (14 Jun 2003)
+
+  14 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xfree-drm-4.3.0-r1.ebuild,
+  xfree-drm-4.3.0-r2.ebuild, xfree-drm-4.3.0-r3.ebuild,
+  xfree-drm-4.3.0.ebuild, files/xfree-drm-4.3.0-gentoo-Makefile-fixup.patch,
+  files/xfree-drm-4.3.0-gentoo-ppc-Makefile-fixup.patch,
+  files/xfree-drm-4.3.0-r2-dristat.patch,
+  files/xfree-drm-4.3.0-r2-drm-ioremap.patch,
+  files/xfree-drm-4.3.0-r2-gentoo-Makefile-fixup.patch,
+  files/xfree-drm-4.3.0-r2-radeon-resume-v8.patch:
+  moved patches to mirrors. Also version bump to a more recent snapshot, with
+  daenzer's patches. This excellent work and the -r3 ebuild comes to you from
+  spyderous, who is Donnie Berkholz <donnie.berkholz@richmond.edu>
 
   24 Apr 2003; Michael Fitzpatrick <leahcim@gentoo.org>
   xfree-drm-4.3.0-r2.ebuild, files/xfree-drm-4.3.0-r2-dristat.patch: Add
