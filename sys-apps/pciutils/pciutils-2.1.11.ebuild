@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11.ebuild,v 1.9 2004/01/24 18:25:47 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11.ebuild,v 1.10 2004/01/25 05:00:21 brad_mssw Exp $
 
 inherit eutils
 
@@ -15,6 +15,8 @@ KEYWORDS="x86 amd64 ~ppc sparc alpha hppa ~arm ia64 ~ppc64"
 
 DEPEND="virtual/glibc
 	net-misc/wget"
+
+[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 
 src_unpack() {
 	unpack ${A}
