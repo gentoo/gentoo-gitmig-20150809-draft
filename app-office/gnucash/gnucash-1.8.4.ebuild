@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.4.ebuild,v 1.7 2003/07/24 18:43:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.4.ebuild,v 1.8 2003/09/05 08:58:49 liquidx Exp $
 
 inherit flag-o-matic libtool
 
@@ -41,7 +41,8 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	ofx? ( >=dev-libs/libofx-0.6.4 )
 	postgres? ( dev-db/postgresql )
 	doc? ( >=app-text/scrollkeeper-0.3.1
-		app-text/docbook-xsl-stylesheets )"
+		app-text/docbook-xsl-stylesheets
+		=app-text/docbook-xml-dtd-4.1.2* )"
 
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5

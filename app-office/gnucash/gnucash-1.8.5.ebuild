@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.5.ebuild,v 1.2 2003/09/03 14:46:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.5.ebuild,v 1.3 2003/09/05 08:58:49 liquidx Exp $
 
 inherit flag-o-matic libtool
 
@@ -37,6 +37,7 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=dev-libs/popt-1.5
 	>=app-text/scrollkeeper-0.3.1
 	app-text/docbook-xsl-stylesheets
+	=app-text/docbook-xml-dtd-4.1.2*
 	=sys-libs/db-1*
 	hbci? ( >=net-libs/openhbci-0.9.13 )
 	ofx? ( >=dev-libs/libofx-0.6.4 )

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.33 2003/09/03 14:46:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.34 2003/09/05 08:58:49 liquidx Exp $
+
+  05 Sep 2003; Alastair Tse <liquidx@gentoo.org> gnucash-1.8.4.ebuild,
+  gnucash-1.8.5.ebuild:
+  added docbook-xml-dtd-4.1.2 dep (#27932)
 
   03 Sep 2003; Alastair Tse <liquidx@gentoo.org> gnucash-1.8.5.ebuild:
   1.8.5 should dep on openhbci-0.9.13
