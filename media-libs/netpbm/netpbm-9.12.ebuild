@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12.ebuild,v 1.1 2001/03/30 01:16:15 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12.ebuild,v 1.2 2001/08/11 03:44:19 drobbins Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -20,11 +20,11 @@ src_unpack() {
 }
 
 src_compile() {
-    try make CFLAGS=\""${CFLAGS}"\"
+    try make CFLAGS="${CFLAGS}"
 }
 
 src_install () {
-    try make INSTALL_PREFIX=\""${D}/usr/"\" install
+    try make INSTALL_PREFIX="${D}/usr/" install
     dodoc COPYRIGHT.PATENT GPL_LICENSE.txt HISTORY \
           Netpbm.programming README README.CONFOCAL README.DJGPP \
           README.JPEG README.VMS netpbm.lsm

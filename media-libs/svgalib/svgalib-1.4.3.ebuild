@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3.ebuild,v 1.1 2001/06/28 18:31:19 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3.ebuild,v 1.2 2001/08/11 03:44:19 drobbins Exp $
 
 #P=
 A=${PN}-${PV}.tar.gz
@@ -20,20 +20,20 @@ src_unpack() {
 
 src_compile() {
 
-    try make OPTIMIZE=\""${CFLAGS}"\" static
-    try make OPTIMIZE=\""${CFLAGS}"\" shared
-    try make OPTIMIZE=\""${CFLAGS}"\" textutils
-    try make OPTIMIZE=\""${CFLAGS}"\" lrmi
-    try make OPTIMIZE=\""${CFLAGS}"\" utils
+    try make OPTIMIZE="${CFLAGS}" static
+    try make OPTIMIZE="${CFLAGS}" shared
+    try make OPTIMIZE="${CFLAGS}" textutils
+    try make OPTIMIZE="${CFLAGS}" lrmi
+    try make OPTIMIZE="${CFLAGS}" utils
     # Build the gl stuff tpp
-    try make OPTIMIZE=\""${CFLAGS}"\" -C gl
-    try make OPTIMIZE=\""${CFLAGS}"\" -C gl libvgagl.so.${PV}
+    try make OPTIMIZE="${CFLAGS}" -C gl
+    try make OPTIMIZE="${CFLAGS}" -C gl libvgagl.so.${PV}
 }
 
 src_install () {
 
     dodir /etc/svga /usr/{include,lib,bin,share/man}
-    try make TOPDIR=${D} OPTIMIZE=\""${CFLAGS}"\" install
+    try make TOPDIR=${D} OPTIMIZE="${CFLAGS}" install
     insinto /usr/include
     doins gl/vgagl.h
     dolib.a gl/libvgagl.a
