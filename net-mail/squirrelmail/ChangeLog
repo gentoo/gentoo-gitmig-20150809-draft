@@ -1,10 +1,10 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.5 2002/07/08 14:29:18 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.6 2002/07/08 20:45:51 blizzy Exp $
 
 *squirrelmail-1.2.7 (08 Jul 2002)
 
-  08 Jul 2002; Maik Schreiber <bZ@iq-computing.de> :
+  08 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :
 
   SquirrelMail will be installed into /home/httpd/htdocs/squirrelmail
   directly instead of into a version-dependant directory and
@@ -13,6 +13,8 @@
   Fixed SRC_URI.
 
   Removed dependency on net-www/apache and virtual/imapd.
+
+  Closes bug #4676.
 
 *squirrelmail-1.2.6-r1 (12 Jun 2002)
 
