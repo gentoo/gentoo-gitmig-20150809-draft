@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.6-r1.ebuild,v 1.11 2004/06/28 03:56:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.6-r1.ebuild,v 1.12 2004/07/14 01:33:05 agriffis Exp $
 
 inherit eutils
 
@@ -50,7 +50,6 @@ DEPEND="virtual/linux-sources"
 
 SRC_URI="mirror://sourceforge/lirc/${P}.tar.bz2"
 
-S=${WORKDIR}/${P}
 
 is_SMP() {
 	# We have a SMP enabled kernel?
