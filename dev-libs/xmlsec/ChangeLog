@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xmlsec
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.1 2004/01/04 11:33:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.2 2004/05/26 14:18:13 aliz Exp $
+
+*xmlsec-1.2.5 (26 May 2004)
+
+  26 May 2004; Daniel Ahlberg <aliz@gentoo.org> xmlsec-1.2.5.ebuild:
+  Version bump and gnutls use flag, closing #51270.
 
 *xmlsec-1.2.2 (04 Jan 2004)
 
