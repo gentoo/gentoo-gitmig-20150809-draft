@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/ipv6tools
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.1 2003/07/19 07:33:17 stuart Exp $
+
+*turck-mmcache-2.3.19 (11 07 2003)
+
+  11 07 2003; Stuart Herbert <stuart@gentoo.org> turck-mmcache-2.3.19.ebuild:
+  Initial add; contributed by Klavs Klavsen <kl@vsen.dk> (see bug #23360)
