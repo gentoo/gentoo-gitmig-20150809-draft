@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.1.ebuild,v 1.5 2004/02/22 22:33:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.1.ebuild,v 1.6 2004/03/24 02:21:53 geoman Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"
 SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 LICENSE="GPL-2"
 
 DEPEND=">=media-libs/libdvdcss-1.2.2
