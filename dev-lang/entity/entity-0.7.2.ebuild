@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.11 2002/06/11 18:19:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.12 2002/06/20 20:26:02 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An XML Framework"
@@ -15,8 +15,8 @@ DEPEND=">=media-libs/imlib-1.9.10-r1
 	python? ( >=dev-lang/python-2.0-r4 )
 	sdl? ( >=media-libs/libsdl-1.1.7 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-        opengl? ( >=x11-libs/gtkglarea-1.2.2 )
-	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )"
+	opengl? ( <x11-libs/gtkglarea-1.99.0 )
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 
 RDEPEND=">=media-libs/imlib-1.9.10-r1
 	>=dev-libs/libpcre-3.2
@@ -25,7 +25,7 @@ RDEPEND=">=media-libs/imlib-1.9.10-r1
 	python? ( >=dev-lang/python-2.0i-r4 )
 	sdl? ( >=media-libs/libsdl-1.1.7 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-        opengl? ( >=x11-libs/gtkglarea-1.2.2-r1 )
+	opengl? ( <x11-libs/gtkglarea-1.99.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 
 src_compile() {
