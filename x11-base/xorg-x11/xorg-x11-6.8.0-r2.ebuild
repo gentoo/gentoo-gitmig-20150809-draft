@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.42 2004/11/03 08:33:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.43 2004/11/03 09:13:26 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -34,9 +34,9 @@ inherit eutils flag-o-matic toolchain-funcs x11
 RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
-IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc dri font-server
-	hardened insecure-drivers ipv6 mmx nls opengl pam sdk sse static
-	truetype-fonts type1-fonts uclibc xprint xv"
+IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc font-server hardened
+	insecure-drivers ipv6 mmx nls opengl pam sdk sse static truetype-fonts
+	type1-fonts uclibc xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.6"
@@ -227,10 +227,6 @@ pkg_setup() {
 		die "The dmx and doc USE flags are temporarily incompatible and result in a dead build."
 	fi
 
-	if use dri && ! use opengl; then
-		die "The dri USE flag requires the opengl flag."
-	fi
-
 	if use xv && ! use opengl; then
 		eerror "See http://bugs.gentoo.org/show_bug.cgi?id=67996"
 		eerror "The xv USE flag currently requires the opengl flag."
@@ -416,20 +412,19 @@ host_def_setup() {
 			# echo "#define XF86ExtraCardDrivers via" >> ${HOSTCONF}
 		fi
 
+		# Do we want the glx extension? This will turn off XF86DRI if it's off.
+		# DRI can't build if glx isn't built, so keep this below DRI define.
+		# Do this before hppa so they can turn DRI off
+		use_build opengl BuildGlxExt
+		use_build opengl BuildGLXLibrary
+		use_build opengl BuildXF86DRI
+
 		if use hppa; then
 			echo "#define DoLoadableServer NO" >> ${HOSTCONF}
 			echo "#define BuildXF86DRI NO" >> config/cf/host.def
 			echo "#undef DriDrivers" >> config/cf/host.def
 			echo "#define XF86CardDrivers fbdev" >> config/cf/host.def
-		else
-			# Do we want direct rendering support in drivers?
-			use_build dri BuildXF86DRI
 		fi
-
-		# Do we want the glx extension? This will turn off XF86DRI if it's off.
-		# DRI can't build if glx isn't built, so keep this below DRI define.
-		use_build opengl BuildGlxExt
-		use_build opengl BuildGLXLibrary
 
 		# Make xv optional for more minimal builds
 		use_build xv BuildXvLibrary
