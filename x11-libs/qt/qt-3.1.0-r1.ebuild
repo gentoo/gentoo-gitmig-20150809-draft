@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0-r1.ebuild,v 1.3 2002/11/30 20:24:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0-r1.ebuild,v 1.4 2002/12/01 05:07:58 danarmak Exp $
 
 IUSE="cups nas postgres opengl mysql odbc gif"
 
@@ -62,8 +62,8 @@ src_unpack() {
 
 src_compile() {
     
-	# fix #11144; qt wants to create a lock file for qtrc in this dir
-	addwrite "$QTBASE/etc/settings/.qtrc.lock"
+	# fix #11144; qt wants to create lock files etc. in that directory
+	[ -d "$QTBASE/etc/settings" ] && addwrite "$QTBASE/etc/settings"
 
 	export QTDIR=${S}
 	
