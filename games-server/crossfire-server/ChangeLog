@@ -1,6 +1,6 @@
 # ChangeLog for games-server/crossfire-server
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.1 2004/05/30 10:22:50 vapier Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.2 2004/06/24 23:18:06 agriffis Exp $
 
 *crossfire-server-1.6.0 (30 May 2004)
 
