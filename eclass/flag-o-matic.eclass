@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.41 2004/03/16 21:37:09 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.42 2004/04/06 03:45:00 tseng Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -265,6 +265,29 @@ get-flag() {
 	return 1
 }
 
+has_pic() {
+	[ "${CFLAGS/-fPIC}" != "${CFLAGS}" ] && return 0
+	[ "${CFLAGS/-fpic}" != "${CFLAGS}" ] && return 0
+	[ has_version sys-devel/hardened-gcc ] && return 0
+	[ ! -z "`${CC/ .*/} --version| grep pie`" ] && return 0
+	return 1
+}
+
+has_pie() { 
+	[ "${CFLAGS/-fPIC}" != "${CFLAGS}" ] && return 0
+	[ "${CFLAGS/-fpic}" != "${CFLAGS}" ] && return 0
+	[ has_version sys-devel/hardened-gcc ] && return 0
+	[ ! -z "`${CC/ .*/} --version| grep pie`" ] && return 0
+	return 1
+}
+	
+has_ssp() {
+	[ "${CFLAGS/-fstack-protector}" != "${CFLAGS}" ] && return 0
+	[ has_version sys-devel/hardened-gcc ] && return 0
+	[ ! -z "`${CC/ .*/} --version| grep ssp`" ] && return 0
+	return 1
+}
+
 replace-sparc64-flags() {
 	local SPARC64_CPUS="ultrasparc v9"
 
@@ -312,23 +335,29 @@ filter-ldflags() {
 }
 
 etexec-flags() {
-	has_version sys-devel/hardened-gcc
+	has_pie || has_pic
 	if [ $? == 0 ] ; then
+		# strip -fPIC regardless if you've gotten this far
+		strip-flags -fPIC -fpic -fPIE -fpie -pie
 		if [ "`is-flag -yet_exec`" != "true" ]; then
-			debug-print ">>> appending flags -yet_exec"
-			append-flags -yet_exec
-			append-ldflags -yet_exec
+			# If our compile support -yet_exec, append it now
+			[ -z "`gcc -yet_exec -S -o /dev/null -xc /dev/null 2>&1`" ] \
+				&& ( debug-print ">>> appending flags -yet_exec" ; \
+					append-flags -yet_exec ; append-ldflags -yet_exec )
 		fi
 	fi
 }
 
 fstack-flags() {
-	has_version sys-devel/hardened-gcc
+	has_ssp
 	if [ $? == 0 ] ; then
+		# strip -fstack-protector regardless if you've gotten this far
+		strip-flags -fstack-protector -fstack-protector-all
 		if [ "`is-flag -yno_propolice`" != "true" ]; then
-			debug-print ">>> appending flags -yno_propolice"
-			append-flags -yno_propolice
-			append-ldflags -yno_propolice
+			# If our compile support -yno_propolice, append it now
+			[ -z "`gcc -yno_propolice -S -o /dev/null -xc /dev/null 2>&1`" ] \
+				&& ( debug-print ">>> appending flags -yno_propolice" ; \
+					append-flags -yno_propolice ; append-ldflags -yno_propolice )
 		fi
 	fi
 }
