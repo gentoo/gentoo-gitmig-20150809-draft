@@ -13,7 +13,7 @@ SRC_URI="http://e.scarywater.net/bt/download/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="X"
 
 RDEPEND="X? ( >=dev-python/wxPython-2.2 )
