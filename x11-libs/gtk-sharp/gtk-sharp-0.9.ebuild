@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.9.ebuild,v 1.2 2003/05/09 17:44:14 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.9.ebuild,v 1.3 2003/07/09 17:14:13 liquidx Exp $
 
 # WARNING 
 # All gst-sharp hacks done in this build are nonfunctional
@@ -20,12 +20,15 @@ SLOT="0"
 IUSE="gnome gnomedb"
 
 # since mono and gtk-sharp get released together, we follow the mono version
-DEPEND=">=dev-lang/mono-0.24
+RDEPEND=">=dev-lang/mono-0.24
 	>=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
 	gnome? ( >=gnome-base/libgnomecanvas-2
 		>=gnome-base/libgnomeui-2 )
 	gnomedb? ( >=gnome-extra/libgnomedb-0.11 )"
+	
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 KEYWORDS="~x86 -ppc"
 
