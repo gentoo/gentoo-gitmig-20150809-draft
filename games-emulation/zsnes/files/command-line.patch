@@ -1,0 +1,25 @@
+--- zsnes/src/linux/zloaderw.c	2003-10-22 20:10:08.000000000 -0700
++++ zsnes/src/linux/zloaderw.c.new	2004-10-27 15:32:30.000000000 -0700
+@@ -336,15 +336,14 @@
+ 	}
+ 
+ 	/* execute rom filename: file.x */
+-	if  (optopt == '?')
++	/* getopt permutates argv until all non options are at the end of argv.	*/
++	/* since we only expect one non option, it should be the last argument.	*/
++	if ( optind == argc - 1 && argv[optind] != NULL)
+ 	{
+-		if (argv[optind] != NULL)
+-		{
+-			fvar=&fname;
+-			fvar[0] = strlen(argv[optind]);
+-			strncpy(&fvar[1], argv[optind],127);
+-			makeextension();
+-		}
++		fvar=&fname;
++		fvar[0] = strlen(argv[optind]);
++		strncpy(&fvar[1], argv[optind],127);
++		makeextension();
+ 	}
+ 
+ 	zstart();
