@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/ppc-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.19 2003/02/12 09:17:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.20 2003/03/15 20:40:04 gerk Exp $
 
   11 Feb 2003; Bryon Roche <kain@kain.org> ppc-sources-2.4.20-r3.ebuild:
 
@@ -10,6 +10,9 @@
   orinoco-monitor mode patch, so kismet away!
 
 *ppc-sources-2.4.20-r3 (11 Feb 2003)
+
+  15 Mar 2003; Mark Guertin <gerk@gentoo.org> ppc-sources-2.4.20-r3.ebuild:
+  set ppc in keywords
 
   10 Feb 2003; Olivier Reisch <doctomoe@gentoo.org> ppc-sources-2.4.20-r2.ebuild:
   Added missing SLOT to ebuild.
