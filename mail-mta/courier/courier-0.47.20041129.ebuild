@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041129.ebuild,v 1.6 2004/12/07 01:16:58 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041129.ebuild,v 1.7 2004/12/08 01:13:58 swtaylor Exp $
 
 inherit eutils
 
@@ -30,7 +30,6 @@ DEPEND="virtual/libc
 	postgres? ( >=dev-db/postgresql-7.1.3 )
 	spell? ( virtual/aspell-dict )
 	!mailwrapper? ( !virtual/mta )
-	!virtual/mda
 	!virtual/imapd"
 
 RDEPEND="${DEPEND}

@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.36 2004/12/07 01:16:58 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.37 2004/12/08 01:13:58 swtaylor Exp $
+
+  07 Dec 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.47-r1.ebuild,
+  courier-0.47.20041129.ebuild:
+  remove virtual/mda block
 
   06 Dec 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.47-r1.ebuild,
   courier-0.47.20041129.ebuild:
