@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r4.ebuild,v 1.5 2002/09/18 13:21:24 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r4.ebuild,v 1.6 2002/09/19 20:57:24 vapier Exp $
 
 mod_ssl_ver=2.8.9-${PV}
 HARD_SERVER_LIMIT=512
@@ -72,7 +72,7 @@ src_compile() {
 
 	# Allow users to move the default data directory by setting the
 	# home directory of the 'apache' user elsewhere.
-	DATA_DIR=`grep apache /etc/passwd | cut -d: -f6`
+	DATA_DIR=`grep ^apache: /etc/passwd | cut -d: -f6`
 
 	if [ -z "$DATA_DIR" ]; then
 		DATA_DIR="/home/httpd"
@@ -136,7 +136,7 @@ src_compile() {
 src_install() {
 	# Allow users to move the default data directory by setting the
 	# home directory of the 'apache' user elsewhere.
-	DATA_DIR=`grep apache /etc/passwd | cut -d: -f6`
+	DATA_DIR=`grep ^apache: /etc/passwd | cut -d: -f6`
 
 	if [ -z "$DATA_DIR" ]; then
 		eerror "DATA_DIR is null! Using defaults."
@@ -144,7 +144,7 @@ src_install() {
 		DATA_DIR="/home/httpd"
 	fi
 
-	GID=`grep apache /etc/group |cut -d: -f3`
+	GID=`grep ^apache: /etc/group |cut -d: -f3`
 	if [ -z "${GID}" ]; then
 		einfo "Using default GID of 81 for Apache"
 		GID=81

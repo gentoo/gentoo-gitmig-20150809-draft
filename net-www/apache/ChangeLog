@@ -19,6 +19,10 @@ B
 
 *apache-1.3.26-r4 (3 Jul 2002)
 
+  19 Sep 2002; Michael Frysinger <vapier@gentoo.org> apache-1.3.26-r4.ebuild files/apache.rc6 :
+  Fixed the grep expressions for DATA_DIR and GID ... #8124
+  Fixed 'use named' (was already added to 2.0.x just not 1.3.x) ... #5556
+
   17 Sep 2002; Nicholas Jones <carpaski@gentoo.org> :
   Fixed the graceful restart... It wasn't paying heed to ${APACHE_OPTS}
 
@@ -43,6 +47,9 @@ B
   sanely in unmerge and clean operations.
 
 *apache-1.3.26-r3 (2 Jul 2002)
+
+  19 Sep 2002; Michael Frysinger <vapier@gentoo.org> apache-1.3.26-r3.ebuild :
+  Fixed the grep expressions for DATA_DIR ... #8124
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apache-1.3.26-r3.ebuild :
   Added KEYWORDS.

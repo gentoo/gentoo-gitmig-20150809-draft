@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r3.ebuild,v 1.4 2002/08/16 03:01:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r3.ebuild,v 1.5 2002/09/19 20:57:24 vapier Exp $
 
 mod_ssl_ver=2.8.9-${PV}
 HARD_SERVER_LIMIT=512
@@ -73,7 +73,7 @@ src_compile() {
 
 	# Allow users to move the default data directory by setting the
 	# home directory of the 'apache' user elsewhere.
-	DATA_DIR=`grep apache /etc/passwd | cut -d: -f6`
+	DATA_DIR=`grep ^apache: /etc/passwd | cut -d: -f6`
 
 	if [ -z "$DATA_DIR" ]; then
 		eerror "DATA_DIR is null! Using defaults."
@@ -137,7 +137,7 @@ src_compile() {
 src_install() {
 	# Allow users to move the default data directory by setting the
 	# home directory of the 'apache' user elsewhere.
-	DATA_DIR=`grep apache /etc/passwd | cut -d: -f6`
+	DATA_DIR=`grep ^apache: /etc/passwd | cut -d: -f6`
 
 	if [ -z "$DATA_DIR" ]; then
 		eerror "DATA_DIR is null! Using defaults."
