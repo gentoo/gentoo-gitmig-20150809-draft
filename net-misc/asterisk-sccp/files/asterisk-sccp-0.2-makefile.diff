@@ -1,0 +1,22 @@
+--- Makefile.orig	2004-02-19 01:04:10.727418600 +0100
++++ Makefile	2004-02-19 01:05:58.225076472 +0100
+@@ -1,4 +1,4 @@
+-ASTERISK_SOURCE=/usr/src/asterisk
++ASTERISK_SOURCE=/usr
+ AST_MODULES_DIR=/usr/lib/asterisk/modules
+ 
+ DEBUG=-g
+@@ -31,9 +31,10 @@
+ 	@$(CC) -I/usr/include/ $(CFLAGS) -I$(ASTERISK_SOURCE) $(DEFINE) -c $*.c -o .tmp/$*.o
+ 
+ install: chan_sccp.so
+-	rm -f $(AST_MODULES_DIR)/chan_sccp.so
+-	cp chan_sccp.so $(AST_MODULES_DIR)
+-	if ! [ -f /etc/asterisk/sccp.conf ]; then cp conf/sccp.conf /etc/asterisk/; fi
++	if ! [ -d $(DESTDIR)$(AST_MODULES_DIR) ]; then mkdir -p $(DESTDIR)$(AST_MODULES_DIR); fi
++	if ! [ -d $(DESTDIR)/etc/asterisk ]; then mkdir -p $(DESTDIR)/etc/asterisk; fi
++	cp chan_sccp.so $(DESTDIR)$(AST_MODULES_DIR)
++	if ! [ -f /etc/asterisk/sccp.conf ]; then cp conf/sccp.conf $(DESTDIR)/etc/asterisk/; fi
+ 
+ clean:
+ 	rm -rf chan_sccp.so .tmp

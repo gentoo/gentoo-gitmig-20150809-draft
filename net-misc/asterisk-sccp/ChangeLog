@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/asterisk-sccp
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sccp/ChangeLog,v 1.1 2004/02/19 00:17:46 stkn Exp $
+
+*asterisk-sccp-0.2 (19 Feb 2004)
+
+  19 Feb 2004; Stefan Knoblich <stkn@gentoo.org> asterisk-sccp-0.2.ebuild,
+  metadata.xml, files/asterisk-sccp-0.2-makefile.diff:
+  Initial import
+
