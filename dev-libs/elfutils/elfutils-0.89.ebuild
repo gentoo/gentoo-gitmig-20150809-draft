@@ -1,20 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.89.ebuild,v 1.2 2003/10/29 20:21:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.89.ebuild,v 1.3 2003/11/11 12:57:27 vapier Exp $
 
 inherit eutils
 
-IUSE="nls"
-
-S="${WORKDIR}/${P}"
-DESCRIPTION="Libraries and utilities to handle compiled objects.
-This should be a drop in replacement for libelf."
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+DESCRIPTION="Libraries/utilities to handle ELF objects (drop in replacement for libelf)"
 HOMEPAGE="http://www.redhat.com/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="OpenSoftware"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~mips"
+IUSE="nls"
 
 DEPEND=">=sys-libs/glibc-2.3.2
 	>=sys-devel/binutils-2.14.90.0.6
@@ -34,10 +31,11 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --program-prefix="eu-" \
+	econf \
+		--program-prefix="eu-" \
 		--enable-shared \
-		`use_enable nls` || die "./configure failed"
-
+		`use_enable nls` \
+		|| die "./configure failed"
 	emake || die
 }
 
