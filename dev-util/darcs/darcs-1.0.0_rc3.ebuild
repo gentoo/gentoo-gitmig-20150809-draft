@@ -1,28 +1,33 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-0.9.22.ebuild,v 1.2 2004/07/14 23:11:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.0_rc3.ebuild,v 1.1 2004/10/21 14:32:23 kosmikus Exp $
 
 DESCRIPTION="David's Advanced Revision Control System is yet another replacement for CVS"
 HOMEPAGE="http://abridgegame.org/darcs"
-SRC_URI="http://abridgegame.org/darcs/${P}.tar.gz"
+SRC_URI="http://abridgegame.org/darcs/${P/_rc/rc}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc wxwindows"
+IUSE="doc"
+# disabled wxwindows use flag for now, as I got build errors
 
 DEPEND=">=net-misc/curl-7.10.2
-	>=virtual/ghc-6.0
+	>=virtual/ghc-6.2
 	wxwindows?  ( dev-haskell/wxhaskell )
 	doc?  ( virtual/tetex
 		dev-tex/latex2html )"
 
-RDEPEND=">=net-misc/curl-7.10.2
-	wxwindows?  ( dev-haskell/wxhaskell )"
+RDEPEND=">=net-misc/curl-7.10.2"
+#	wxwindows?  ( dev-haskell/wxhaskell )"
+
+S=${WORKDIR}/${P/_rc/rc}
 
 src_compile() {
 	local myconf
-	myconf="`use_with wxwindows wx`"
+#	myconf="`use_with wxwindows wx`"
+	# distribution contains garbage files
+	make clean || die "make clean failed"
 	if use doc ; then
 		mv GNUmakefile GNUmakefile.orig
 		cat GNUmakefile.orig \
@@ -37,9 +42,9 @@ src_compile() {
 			> configure
 		chmod u+x configure
 	fi
-	econf ${myconf} || die
+	econf ${myconf} || die "configure failed"
 	echo 'INSTALLWHAT=installbin' >> autoconf.mk
-	make all || die
+	make all || die "make failed"
 }
 
 src_install() {

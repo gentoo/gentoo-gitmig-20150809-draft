@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4f78a6b05c86c07928ad74e620ea0542 ChangeLog 3339
-MD5 7b663b2265bbc9469311700deb008846 darcs-0.9.20.ebuild 1228
-MD5 4223a06301bd8de56a354b57a7c0fe7a darcs-0.9.22.ebuild 1229
-MD5 b292e8aafe963169ab0b1602332dedc2 darcs-0.9.23.ebuild 1248
-MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 5a5a01f5a9685044725842dd588ed950 darcs-1.0.0_rc1.ebuild 1430
+MD5 b292e8aafe963169ab0b1602332dedc2 darcs-0.9.23.ebuild 1248
+MD5 aaa4d353667087ded3090aa5b5f2bcb1 darcs-1.0.0_rc3.ebuild 1430
+MD5 7b663b2265bbc9469311700deb008846 darcs-0.9.20.ebuild 1228
+MD5 18a79d581a8bad0b7c17c00f43645e38 ChangeLog 3508
+MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 868e16ec8063da29e69b8ba9526a71b8 files/digest-darcs-0.9.20 64
-MD5 321bddd7ebc4d2fa6c718a522da33b80 files/digest-darcs-0.9.22 64
 MD5 b6085cce6994136cd791cdba3fdb99da files/digest-darcs-0.9.23 64
 MD5 630ffaec6c20e3c5e69ea68aecd26d9f files/digest-darcs-1.0.0_rc1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBcvw0I1lqEGTUzyQRAsFHAJ9XTt8VHCNVoI6L8Iw0XeHJwogmhACgoSZc
-G1iD4crHzofwqMV3dae+eyI=
-=yJvJ
------END PGP SIGNATURE-----
+MD5 636d115c1c24758a17e37ac1aa3daee8 files/digest-darcs-1.0.0_rc3 66

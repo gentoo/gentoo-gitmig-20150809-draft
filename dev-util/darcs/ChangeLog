@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.22 2004/09/24 20:44:53 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.23 2004/10/21 14:32:23 kosmikus Exp $
+
+*darcs-1.0.0_rc3 (21 Oct 2004)
+
+  21 Oct 2004; Andres Loeh <kosmikus@gentoo.org> darcs-0.9.22.ebuild,
+  darcs-1.0.0_rc3.ebuild:
+  Version bump, closing bug #68064.
 
   24 Sep 2004; <SeJo@gentoo.org> darcs-0.9.23.ebuild:
   stable bump due to bug 59753
