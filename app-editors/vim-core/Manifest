@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ed6ad4670a571b718fe223f6cde3e90c ChangeLog 14842
-MD5 5fd2352b70db145d1466c8908ab5c1ed vim-core-6.3-r2.ebuild 900
-MD5 60a51ae6b34ec44b49ceb95e90d1880d vim-core-6.3-r1.ebuild 933
-MD5 499954e45b02c8f3d488244c0a77223c vim-core-6.3-r3.ebuild 911
-MD5 3330011ebccdcc03224f5ebb1c7701fb vim-core-6.2-r9.ebuild 904
-MD5 fd90ca0b2689c29b666792cb078ac6b7 vim-core-7.0_alpha20041128.ebuild 775
+MD5 9075dd398804fd4d4453ced1ae7e738f ChangeLog 14932
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
+MD5 3330011ebccdcc03224f5ebb1c7701fb vim-core-6.2-r9.ebuild 904
+MD5 60a51ae6b34ec44b49ceb95e90d1880d vim-core-6.3-r1.ebuild 933
+MD5 5fd2352b70db145d1466c8908ab5c1ed vim-core-6.3-r2.ebuild 900
 MD5 6d745fb259963da4b34e1012fbba6820 vim-core-6.3.ebuild 933
-MD5 fb2a47a60e211fc9d75868f1f2b3103e files/digest-vim-core-7.0_alpha20041128 156
-MD5 fe3a85b7f303db551bfc5984738e1dfb files/digest-vim-core-6.3-r3 348
-MD5 dd881e7dd31d444d83fe00f6a8e9d992 files/vimrc 3654
-MD5 1c089e2955a0cc3a474e86a6ecfb0177 files/digest-vim-core-6.3-r2 348
-MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722
-MD5 f7046d975c3b2dd7a6e82e4287e6d3ab files/digest-vim-core-6.3 277
+MD5 fd90ca0b2689c29b666792cb078ac6b7 vim-core-7.0_alpha20041128.ebuild 775
+MD5 db5b335d6e74c884440495f00ccd56cc vim-core-6.3-r3.ebuild 908
 MD5 4de696416210fb1651b1835ebf8bd506 files/digest-vim-core-6.2-r9 349
+MD5 f7046d975c3b2dd7a6e82e4287e6d3ab files/digest-vim-core-6.3 277
 MD5 c8a344d069577df7e39c1f6592827642 files/digest-vim-core-6.3-r1 277
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBuKbyLLFUmVNQ7rkRAlbxAKC8q9tbp5/nOdpsklLHKflPud7H+gCfawBm
-o9thKWmiVhbsX+Fpo/r4SRo=
-=QQ6w
------END PGP SIGNATURE-----
+MD5 1c089e2955a0cc3a474e86a6ecfb0177 files/digest-vim-core-6.3-r2 348
+MD5 fb2a47a60e211fc9d75868f1f2b3103e files/digest-vim-core-7.0_alpha20041128 156
+MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722
+MD5 dd881e7dd31d444d83fe00f6a8e9d992 files/vimrc 3654
+MD5 fe3a85b7f303db551bfc5984738e1dfb files/digest-vim-core-6.3-r3 348
