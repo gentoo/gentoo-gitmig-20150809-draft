@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/tinyq
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# /space/gentoo/cvsroot/gentoo-x86/dev-libs/tinyqt/ChangeLog,v 1.1 2002/03/26 10:52:11 gbevin Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyq/ChangeLog,v 1.10 2004/09/30 00:11:48 swegener Exp $
 
   24 Mar 2004; Jason Wever <weeve@gentoo.org> tinyq-3.0.6.ebuild:
   Marked stable on sparc.
