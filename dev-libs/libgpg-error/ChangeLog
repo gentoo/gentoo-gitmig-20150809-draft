@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.15 2004/08/08 03:16:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.16 2004/08/09 16:48:01 gmsoft Exp $
+
+  09 Aug 2004; Guy Martin <gmsoft@gentoo.org> libgpg-error-0.7.ebuild:
+  Stable on hppa.
 
   07 Aug 2004; <agriffis@gentoo.org> libgpg-error-0.7.ebuild:
   stable on ia64 to fulfill dependency for gnutls security update #59231
