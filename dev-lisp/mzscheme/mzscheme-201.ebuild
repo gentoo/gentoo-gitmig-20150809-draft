@@ -38,7 +38,7 @@ src_install () {
 	# 2002-09-06: karltk
 	# Normally, one specifies the full path to the collects,
 	# so this should work, but it's not been tested properly.
-	mv ${D}/usr/install /usr/bin/mzscheme-install
+	mv ${D}/usr/install ${D}/usr/bin/mzscheme-install
 
 	dodir /usr/share/mzscheme
 	mv ${D}/usr/collects/ ${D}/usr/share/mzscheme/collects/
