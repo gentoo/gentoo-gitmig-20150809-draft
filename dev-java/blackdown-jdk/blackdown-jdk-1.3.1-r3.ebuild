@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r3.ebuild,v 1.1 2002/03/18 21:45:38 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r3.ebuild,v 1.2 2002/03/21 14:00:57 seemant Exp $
 
 A=j2sdk-1.3.1-FCS-linux-i386.tar.bz2
 S=${WORKDIR}/j2sdk1.3.1
@@ -25,7 +25,8 @@ src_install () {
 	dodir /opt/${P}/share/java
 	cp -R ${S}/{demo,src.jar} ${D}/opt/${P}/share
 	
-	dodoc COPYRIGHT LICENSE README INSTALL README.html
+	dodoc COPYRIGHT LICENSE README INSTALL
+	dohtml README.html
 
 	if [ "`use mozilla`" ] ; then
 		dodir /usr/lib/mozilla/plugins
