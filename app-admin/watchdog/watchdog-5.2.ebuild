@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: William A. McArthur <Leknor@Leknor.com>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.ebuild,v 1.1 2002/03/03 16:35:40 agenkin Exp $
+# Maintainer: William McArthur <sandymac@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/watchdog-5.2.ebuild,v 1.2 2002/04/19 05:43:52 sandymac Exp $
 
 DESCRIPTION="A software watchdog."
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/system/daemons/watchdog/"

@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>, William A. McArthur, Jr <leknor@leknor.com>
+# Author Achim Gottinger <achim@gentoo.org>, William McArthur <sandymac@gentoo.org>
 
 
 S=${WORKDIR}/${P}

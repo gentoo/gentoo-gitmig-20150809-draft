@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
-# Author: William McArthur <Leknor@Leknor.com>
-# $Header $
+# Author: William McArthur <sandymac@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.7.ebuild,v 1.3 2002/04/19 05:43:52 sandymac Exp $
 
 NP="junit3.7"
 S=${WORKDIR}/${NP}
