@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.8 2004/10/01 10:54:54 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.9 2004/11/04 03:12:18 vapier Exp $
+
+*openntpd-0.20040824p (03 Nov 2004)
+
+  03 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/3.6_p1-ntpd.8.patch, +openntpd-0.20040824p.ebuild,
+  -openntpd-20040824p.ebuild, +openntpd-3.6_p1.ebuild:
+  Version bump #69858 by Christian Gut.
 
   01 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> openntpd-20040824p.ebuild:
   Marked ~amd64.

@@ -1,0 +1,23 @@
+--- ntpd.8~	2004-07-15 12:16:28.000000000 +0200
++++ ntpd.8	2004-11-02 20:15:54.350917496 +0100
+@@ -37,20 +37,6 @@
+ and the Network Time Protocol version 3,
+ as described in RFC 1305.
+ .Pp
+-.Nm
+-is usually started at boot time, and can be enabled by
+-setting the following in
+-.Pa /etc/rc.conf.local :
+-.Pp
+-.Dl ntpd_flags=\&"\&"
+-.Pp
+-See
+-.Xr rc 8
+-and
+-.Xr rc.conf 8
+-for more information on the boot process
+-and enabling daemons.
+-.Pp
+ When
+ .Nm
+ starts up, it reads settings from a configuration file,
