@@ -1,6 +1,17 @@
 # ChangeLog for sys-block/partimage
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.4 2005/03/13 13:58:09 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.5 2005/03/31 20:57:46 xmerlin Exp $
+
+*partimage-0.6.4-r3 (31 Mar 2005)
+
+  31 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/partimage-0.6.4-LP64-fixes.patch,
+  +files/partimage-0.6.4-fflush-before-re-read-partition-table.patch,
+  +files/partimage-0.6.4-lib64.patch,
+  +files/partimage-0.6.4-save_all_and_rest_all_actions.patch,
+  +partimage-0.6.4-r3.ebuild:
+  backported some fixes from mdk (64-bit & lib64 fixes, fflush before re-read
+  partition table, added save all and rest all actions)
 
   13 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org>
   partimage-0.6.4-r2.ebuild:
