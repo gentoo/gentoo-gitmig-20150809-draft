@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 12f110d7394b55a5e9e0167ffe368a7d ChangeLog 3125
-MD5 51a07b90ea9880f50cd66f5782dd5d7e enhancedcommentify-2.1-r1.ebuild 573
-MD5 d20427527aa1c3be52378f0036b278f5 enhancedcommentify-2.1-r3.ebuild 843
-MD5 d56d989cba753f520c26289b03ca42c1 enhancedcommentify-2.1-r4.ebuild 776
+MD5 3f0c98e1ec74f75e8bc184e2e1a2554f ChangeLog 3233
 MD5 943f106c0e3d8d702cd75fb776e72404 metadata.xml 247
+MD5 51a07b90ea9880f50cd66f5782dd5d7e enhancedcommentify-2.1-r1.ebuild 573
+MD5 7682507ec56f8cecf2329cf2eea315db enhancedcommentify-2.1-r4.ebuild 774
+MD5 d20427527aa1c3be52378f0036b278f5 enhancedcommentify-2.1-r3.ebuild 843
+MD5 a7f84bad8ce3a8e9217114e1cf3449d8 files/enhancedcommentify-2.1-gentooisms.patch 809
+MD5 dc6810e2bc0248b2c6c4da46dbf3d276 files/digest-enhancedcommentify-2.1-r4 77
 MD5 dc6810e2bc0248b2c6c4da46dbf3d276 files/digest-enhancedcommentify-2.1-r1 77
 MD5 dc6810e2bc0248b2c6c4da46dbf3d276 files/digest-enhancedcommentify-2.1-r3 77
-MD5 dc6810e2bc0248b2c6c4da46dbf3d276 files/digest-enhancedcommentify-2.1-r4 77
 MD5 dd0734694fa4df5fae67151ea28c0bb4 files/enhancedcommentify-2.1-extra-ft-support.patch 666
-MD5 a7f84bad8ce3a8e9217114e1cf3449d8 files/enhancedcommentify-2.1-gentooisms.patch 809
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCSGYhLLFUmVNQ7rkRAvqwAJ9U55l/CGgV6DTs1ldEMpYTr/fxAQCcC7VU
-QCqj8LoPbautsBNm6pEbmLk=
-=p9zf
+iD8DBQFCTEycKf2g/qXtneoRAi21AJ4pq1mWfwU0eliCCJGabOp5a9ANmACfcUSi
+PXfOxwgM5sXyYGH955g56pM=
+=DXoe
 -----END PGP SIGNATURE-----

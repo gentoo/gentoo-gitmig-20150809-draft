@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ebd98f8309853c01cc0413a31eff2c6e ChangeLog 2353
-MD5 cbb409c6f2e4759d8939a77c70565105 colorschemes-20031113.ebuild 450
+MD5 93b8cbb88eaad8b6a14d10d5cb04b7d3 ChangeLog 2457
 MD5 a1e712cbfe4e3cbbe93e65bcaa7a916d colorschemes-20040821.ebuild 774
-MD5 88dbe3a3eb9222817055f95c49106751 colorschemes-20050321.ebuild 820
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 d1e57af8c6fca0096d9d2aead6987488 files/digest-colorschemes-20031113 73
+MD5 2c0f9015f8dc4fc669ab9aa9ef34b6b1 colorschemes-20050321.ebuild 818
+MD5 cbb409c6f2e4759d8939a77c70565105 colorschemes-20031113.ebuild 450
 MD5 36fa16520b961e2db213c567f1d80d17 files/digest-colorschemes-20040821 73
+MD5 d1e57af8c6fca0096d9d2aead6987488 files/digest-colorschemes-20031113 73
 MD5 f590a0f7174e8ad70a0a7f4e962169dd files/digest-colorschemes-20050321 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCSGaDLLFUmVNQ7rkRAoFiAKDO8R448fPgc2OOSFUoUgFBjDTXsgCfcVGr
-RHkPC9siRQ192J/94maNFwE=
-=Wk25
+iD8DBQFCTExlKf2g/qXtneoRAlybAJ4urSsoj/pvzOHG3LW4Pb+KDXsjxACfWp4a
+Yn7WyHU0cSVJNYNsmhnOxTY=
+=EZqi
 -----END PGP SIGNATURE-----
