@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.0.0.ebuild,v 1.11 2003/11/15 03:16:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.0.0.ebuild,v 1.12 2004/05/15 22:49:41 geoman Exp $
 
 inherit gnome2 eutils
 
