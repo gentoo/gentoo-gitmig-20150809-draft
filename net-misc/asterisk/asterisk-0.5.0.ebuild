@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.5.0.ebuild,v 1.4 2004/02/19 00:34:20 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.5.0.ebuild,v 1.5 2004/06/15 02:33:07 agriffis Exp $
 
 IUSE="doc alsa mysql gtk mmx nopri nozaptel noiax"
 
@@ -48,7 +48,7 @@ src_unpack() {
 	# set cflags & mmx optimization
 	sed -i -e "s:^\(OPTIMIZE=\).*:\1 ${CFLAGS}:" Makefile
 
-	if [ -n "`use mmx`" ]; then
+	if use mmx; then
 		einfo "enabling mmx optimization"
 		sed -i -e "s:^#\(K6OPT.*\):\1:" Makefile
 	fi
@@ -61,7 +61,7 @@ src_unpack() {
 	#
 
 #	# include h323 extension
-#	if [ -z "`use noh323`" ]; then
+#	if ! use noh323; then
 #		# i know, this is really hard ;)
 #		cd ${WORKDIR}/asterisk-oh323-${H323_VERSION}
 #		epatch ${FILESDIR}/${PV}/${P}-oh323-${H323_VERSION}.diff
@@ -77,7 +77,7 @@ src_compile() {
 
 	einfo "Building additional plugins..."
 #	# h323 extension
-#	if [ -z "`use noh323`" ]; then
+#	if ! use noh323; then
 #		cd ${WORKDIR}/asterisk-oh323-${H323_VERSION}
 #		emake -j1 || die "Building h323 extension failed"
 #	fi
@@ -123,7 +123,7 @@ src_install() {
 	einfo "Installing additional plugins..."
 
 #	# h323 extension
-#	if [ -z "`use noh323`" ]; then
+#	if ! use noh323; then
 #		cd ${WORKDIR}/asterisk-oh323-${H323_VERSION}
 #		emake -j1 DESTDIR=${D} install || die "h323 extension make install failed"
 #	fi
