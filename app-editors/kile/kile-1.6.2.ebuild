@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.6.2.ebuild,v 1.1 2004/04/07 23:01:20 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.6.2.ebuild,v 1.2 2004/04/09 14:30:19 dholm Exp $
 
 inherit kde
 need-kde 3.1
@@ -16,6 +16,6 @@ DEPEND="dev-lang/perl"
 RDEPEND="$RDEPEND virtual/tetex"
 
 # I cannot prove that amd64 or sparc work, but they were listed in 1.6.1 as well
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 LICENSE="GPL-2"
 
