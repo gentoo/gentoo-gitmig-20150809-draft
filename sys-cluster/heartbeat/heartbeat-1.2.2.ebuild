@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.2.ebuild,v 1.6 2005/01/22 14:57:07 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.2.ebuild,v 1.7 2005/01/22 15:03:21 xmerlin Exp $
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -12,7 +12,7 @@ KEYWORDS="x86 -mips ~ppc"
 IUSE="ldirectord"
 
 DEPEND="dev-libs/popt
-	dev-libs/glib
+	=dev-libs/glib-1.2*
 	net-libs/libnet
 	ldirectord? (	sys-cluster/ipvsadm
 			dev-perl/libwww-perl

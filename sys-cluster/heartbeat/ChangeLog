@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.29 2005/01/22 14:57:07 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.30 2005/01/22 15:03:21 xmerlin Exp $
+
+  22 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> heartbeat-1.2.2.ebuild,
+  heartbeat-1.2.3.ebuild:
+  fixed deps heartbeat works only with glib-1.2.*
 
   22 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> heartbeat-1.2.2.ebuild,
   heartbeat-1.2.3.ebuild:
