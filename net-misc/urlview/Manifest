@@ -1,4 +1,4 @@
-MD5 0c38564c522978f62295e15a6b69b1c5 urlview-0.9.ebuild 1234
 MD5 4ca0541fa5b50bb1fc60f816cc139012 ChangeLog 1475
-MD5 c3cd1ba7a6d71c5c30a75ef47d767eee files/no-trailing-newline.patch 527
+MD5 6c5a03cb18106a4bcabb5124a5e38e10 urlview-0.9.ebuild 1194
 MD5 593ad36c743cdc743a30217f4814febb files/digest-urlview-0.9 62
+MD5 c3cd1ba7a6d71c5c30a75ef47d767eee files/no-trailing-newline.patch 527
