@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dtach
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.1 2004/06/22 22:34:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.2 2004/06/23 20:53:23 dholm Exp $
+
+  23 Jun 2004; David Holm <dholm@gentoo.org> dtach-0.6.ebuild:
+  Added to ~ppc.
 
 *dtach-0.6 (23 Jun 2004)
 
