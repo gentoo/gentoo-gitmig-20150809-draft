@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.475 2004/07/10 09:54:34 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.476 2004/07/10 22:53:39 carlo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -344,6 +344,7 @@ net-misc/asterisk:nopri - Disable pri support
 net-misc/asterisk:nozaptel - Disable zaptel support
 net-misc/gnugk:accounting - Enables call logging (accounting)
 net-misc/gnugk:radius - Enables radius support
+net-misc/knemo:wifi - wireless support
 net-misc/neon:expat - Use the expat xml library instead of libxml2
 net-misc/ntp:nodroproot - Disable support for running ntpd as a non-root user
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
