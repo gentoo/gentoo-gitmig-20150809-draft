@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libticalcs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libticalcs/ChangeLog,v 1.9 2004/12/02 08:07:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libticalcs/ChangeLog,v 1.10 2004/12/02 10:15:29 pylon Exp $
+
+  02 Dec 2004; Lars Weiler <pylon@gentoo.org> libticalcs-4.5.5.ebuild:
+  Stable on ppc.  See bug #68712.
 
 *libticalcs-4.5.5 (02 Dec 2004)
 

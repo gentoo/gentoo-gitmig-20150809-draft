@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libticables
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libticables/ChangeLog,v 1.8 2004/09/03 01:07:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libticables/ChangeLog,v 1.9 2004/12/02 10:14:25 pylon Exp $
+
+  02 Dec 2004; Lars Weiler <pylon@gentoo.org> libticables-3.8.6.ebuild:
+  Stable on ppc.  See bug #68712.
 
   03 Sep 2004; David Holm <dholm@gentoo.org> libticables-3.8.6.ebuild:
   Added to ~ppc.
