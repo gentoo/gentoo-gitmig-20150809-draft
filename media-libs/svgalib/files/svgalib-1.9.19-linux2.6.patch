@@ -38,7 +38,7 @@ diff -urpN svgalib-1.9.18/kernel/svgalib_helper/kernel26compat.h svgalib-1.9.18.
  }
  #endif
  
-+#if defined(KERNEL_2_6) && !defined(CONFIG_DEVFS_FS)
++#if defined(KERNEL_2_6)
 +#  define SLH_SYSFS_REGISTER                                            \
 +     svgalib_helper_class = class_simple_create(THIS_MODULE, "svgalib_helper");
 +
@@ -75,7 +75,7 @@ diff -urpN svgalib-1.9.18/kernel/svgalib_helper/main.c svgalib-1.9.18.new/kernel
  static devfs_handle_t devfs_handle;
  #endif
  
-+#if defined(KERNEL_2_6) && !defined(CONFIG_DEVFS_FS)
++#if defined(KERNEL_2_6)
 +struct class_simple *svgalib_helper_class;
 +#endif
 +
