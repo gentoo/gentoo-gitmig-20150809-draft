@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# bass@gentoo.org> (08 Aug 2002)
+# beta version for gnome2
+=app-games/teg-0.11.0
+
 # <blizzy@gentoo.org> (08 Aug 2002)
 # masked since it's beta
 =dev-java/sun-jdk-1.4.1_beta
