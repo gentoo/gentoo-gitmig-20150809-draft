@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <rendhalver@gentoo.org> (02 Jan 2002)
+# new release candidate for XEmacs
+>=app-editors/xemacs-21.4.11_rc1
+
 # <azarah@gentoo.org> (27 Dec 2002)
 # Breaks things for now .. wait till new versions
 # of monkey-media, etc are out.
