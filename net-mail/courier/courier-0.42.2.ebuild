@@ -100,7 +100,7 @@ src_compile() {
 		--enable-workarounds-for-imap-client-bugs \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
-	emake || die "compile problem"
+	emake || die "Compile problem"
 }
 
 chg_cfg() {

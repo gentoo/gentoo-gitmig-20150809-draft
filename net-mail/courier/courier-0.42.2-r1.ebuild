@@ -43,7 +43,7 @@ src_unpack() {
 	unpack ${A} ; cd ${S}
 	#epatch ${FILESDIR}/${PF}-gentoo.diff.bz2
 	# I don't think this is necessary anymore, so I'm going to mask this and 
-	# have some people try it out.
+	# have some people try it out
 }
 
 src_compile() {
