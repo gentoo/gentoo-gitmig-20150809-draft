@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0.ebuild,v 1.3 2004/07/29 01:47:45 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r3.ebuild,v 1.1 2004/08/02 18:17:59 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.cwru.edu/pub/bash/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="~x86 ~ppc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~sparc"
 IUSE="nls build uclibc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -45,6 +45,23 @@ src_unpack() {
 	# Fix parallel make, bug #41002.
 	# (Added to bash-3.0-gentoo.diff.bz2)
 	#epatch ${FILESDIR}/${P}-parallel-build.patch
+
+	# Revert trap behavior for the sake of autoconf-generated configure scripts.
+	# The problem here is that bash -c 'trap 0' works, but sh -c 'trap 0'
+	# doesn't work because the bash developers are trying to adhere to POSIX in
+	# that case.  Since all the configure scripts are #!/bin/sh, this breaks
+	# them
+	epatch ${FILESDIR}/${P}-posixtrap.patch
+
+	# Patch display.c so that only invisible characters actually on the first
+	# line are counted in it
+	epatch ${FILESDIR}/${P}-invisible.patch
+
+	# Patch readline's bind.c so that /etc/inputrc is read as a last resort
+	# following ~/.inputrc.  This is better than putting INPUTRC in
+	# the environment because INPUTRC will override even after the
+	# user creates a ~/.inputrc
+	epatch ${FILESDIR}/${P}-etc-inputrc.patch
 
 	# Enable SSH_SOURCE_BASHRC (#24762)
 	echo '#define SSH_SOURCE_BASHRC' >> config-top.h
