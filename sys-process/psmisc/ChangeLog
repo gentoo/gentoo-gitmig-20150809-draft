@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.5 2005/03/19 13:04:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.6 2005/03/19 23:01:39 pebenito Exp $
+
+  19 Mar 2005; Chris PeBenito <pebenito@gentoo.org>
+  +files/psmisc-21.6-selinux.diff.bz2:
+  Add 21.6 SELinux patch.
 
   19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> psmisc-21.5.ebuild:
   Stable on alpha.
