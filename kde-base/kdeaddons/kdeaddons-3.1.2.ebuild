@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.1.2.ebuild,v 1.4 2003/06/19 14:30:35 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.1.2.ebuild,v 1.5 2003/07/07 08:50:39 brain Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="sdl svga xmms"
@@ -31,3 +31,16 @@ fi
 # in the orig kde 3.1 release and was reenabled soon after in cvs head
 PATCHES="$FILESDIR/$P-enable-crashes.diff"
 
+need-automake 1.7
+need-autoconf 2.5
+
+src_compile() {
+	AMVERSION="`automake --version | head -1 | cut -d " " -f4`"
+	if [ "$AMVERSION" != "1.7.2" ]; then
+		rm -f configure configure.in
+	fi
+
+	kde_src_compile configure
+	kde_src_compile make
+}
+						
