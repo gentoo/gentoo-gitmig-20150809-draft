@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/culmus-0.90-r1.ebuild,v 1.1 2003/09/11 20:30:01 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/culmus-0.90-r1.ebuild,v 1.2 2003/10/15 15:25:17 coronalvr Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hebrew Type1 fonts"
 SRC_URI="mirror://gentoo/culmus/${P}-1.tar.gz"
 HOMEPAGE="http://culmus.sourceforge.net/"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2 | LICENSE-BITSTREAM"
 
