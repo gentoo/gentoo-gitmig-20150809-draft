@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.3.ebuild,v 1.3 2003/12/09 10:23:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.3.ebuild,v 1.4 2003/12/09 18:33:07 mr_bones_ Exp $
 
 inherit games gnome2
 
@@ -45,7 +45,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	gnome2_gconf_install
+	gnome2_pkg_postinst
 	games_pkg_postinst
 	echo
 	einfo "For proper plugin operation, please create ~/.gnome-mud/plugins/"

@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/gnome-mud
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.7 2003/12/09 10:23:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.8 2003/12/09 18:33:07 mr_bones_ Exp $
+
+  09 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  gnome-mud-0.10.3.ebuild:
+  use gnome2_pkg_postinst instead of individual functions
 
   09 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
   gnome-mud-0.10.3.ebuild:
