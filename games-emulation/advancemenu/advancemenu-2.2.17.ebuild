@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.2.17.ebuild,v 1.2 2004/01/13 20:40:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.2.17.ebuild,v 1.3 2004/06/03 22:12:03 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/advancemame/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="debug static svga alsa oss slang sdl"
+IUSE="debug fbcon static svga alsa oss slang sdl"
 
 RDEPEND="virtual/glibc
 	games-emulation/advancemame
