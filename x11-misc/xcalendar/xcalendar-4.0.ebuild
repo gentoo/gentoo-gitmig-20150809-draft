@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.6 2004/02/06 03:46:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.7 2004/04/11 17:32:05 pyrania Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A simple interactive calendar program with a notebook capability"
@@ -17,7 +17,7 @@ DEPEND="virtual/x11
 src_compile() {
 	if use motif
 	then
-		patch -p1 < ${FILESDIR}/${P}-motif-gentoo.diff || die
+		epatch ${FILESDIR}/${P}-motif-gentoo.diff
 	fi
 	xmkmf -a
 	emake || die

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcalendar
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.6 2004/02/06 03:46:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.7 2004/04/11 17:32:05 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> xcalendar-4.0.ebuild:
+  Go epatch!
 
   05 Feb 2004; Aron Griffis <agriffis@gentoo.org> xcalendar-4.0.ebuild:
   stable on alpha and x86 for bug 40403.  Thanks to Allan Graves for testing
