@@ -1,12 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.73-r1.ebuild,v 1.1 2003/06/24 11:41:54 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta1-r1.ebuild,v 1.1 2003/07/16 12:14:53 latexer Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 inherit eutils 
 
-OKV=${PV}
-KV=${PVR/r/mm}
+MY_PV=${PV/_beta/-test}
+MY_PVR=${PVR/_beta/-test}
+OKV=${MY_PV}
+KV=${MY_PVR/r/mm}
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
 
@@ -16,8 +18,8 @@ ETYPE="sources"
 # The development branch of the linux kernel with Andrew Morton's patch
 
 DESCRIPTION="Full sources for the development linux kernel with Andrew Morton's patchset"
-SRC_URI="mirror://kernel/linux/kernel/v2.5/linux-${OKV}.tar.bz2 ${PATCH_URI}
-mirror://kernel/linux/kernel/people/akpm/patches/2.5/${PV}/${PVR/r/mm}/${PVR/r/mm}.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2 ${PATCH_URI}
+mirror://kernel/linux/kernel/people/akpm/patches/2.6/${MY_PV}/${MY_PVR/r/mm}/${MY_PVR/r/mm}.bz2"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
@@ -41,7 +43,7 @@ src_unpack() {
 
 	mv linux-${OKV} linux-${KV}
 	cd ${S}
-	bzcat ${DISTDIR}/${PVR/r/mm}.bz2 | patch -p1 || die "mm patch failed"
+	bzcat ${DISTDIR}/${MY_PVR/r/mm}.bz2 | patch -p1 || die "mm patch failed"
 	sed -i -e "s:^EXTRAVERSION.*$:EXTRAVERSION = -${PR/r/mm}:" Makefile
 
 	#sometimes we have icky kernel symbols; this seems to get rid of them
