@@ -1,13 +1,18 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.15 2004/11/04 01:58:43 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.16 2004/12/01 23:58:26 latexer Exp $
 
-  03 Nov 2004; <peter@gentoo.org> -monodevelop-0.3-r1.ebuild,
+*monodevelop-0.5.1-r2 (01 Dec 2004)
+
+  01 Dec 2004; Peter Johanson <latexer@gentoo.org> +monodevelop-0.5.1-r2.ebuild:
+  Revision bump with new split up gtk-sharp deps.
+
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> -monodevelop-0.3-r1.ebuild,
   -monodevelop-0.3.ebuild, -monodevelop-0.4-r1.ebuild,
   -monodevelop-0.4.ebuild:
   Clean out some old ebuilds.
 
-  26 Oct 2004; <peter@gentoo.org> monodevelop-0.3-r1.ebuild,
+  26 Oct 2004; Peter Johanson <latexer@gentoo.org> monodevelop-0.3-r1.ebuild,
   monodevelop-0.3.ebuild, monodevelop-0.4-r1.ebuild, monodevelop-0.4.ebuild,
   monodevelop-0.5.1-r1.ebuild, monodevelop-0.5.1.ebuild,
   monodevelop-0.5.ebuild:
@@ -15,14 +20,13 @@
 
 *monodevelop-0.5.1-r1 (10 Oct 2004)
 
-  10 Oct 2004; <peter@gentoo.org>
-  +files/monodevelop-0.5.1-nemerle-gtk-sharp.diff,
-  +monodevelop-0.5.1-r1.ebuild:
+  10 Oct 2004; Peter Johanson <latexer@gentoo.org>
+  +files/monodevelop-0.5.1-nemerle-gtk-sharp.diff, +monodevelop-0.5.1-r1.ebuild:
   Revision bump. Fix for missing file for nemerle addin.
 
 *monodevelop-0.5.1 (23 Sep 2004)
 
-  23 Sep 2004; <peter@gentoo.org> +monodevelop-0.5.1.ebuild:
+  23 Sep 2004; Peter Johanson <latexer@gentoo.org> +monodevelop-0.5.1.ebuild:
   Bump.
 
   09 Aug 2004; Peter Johanson <latexer@gentoo.org>
@@ -37,7 +41,7 @@
 
 *monodevelop-0.4-r1 (16 Jun 2004)
 
-  16 Jun 2004; Peter Johanson,,, <peter@gentoo.org> monodevelop-0.4-r1.ebuild:
+  16 Jun 2004; Peter Johanson <latexer@gentoo.org> monodevelop-0.4-r1.ebuild:
   Simple revision bump to ensure that MD gets rebuilt against newer gecko-sharp
   from beta3.
 

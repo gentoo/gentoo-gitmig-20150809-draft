@@ -1,30 +1,35 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.26 2004/11/04 02:08:49 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.27 2004/12/02 00:02:10 latexer Exp $
 
-  03 Nov 2004; <peter@gentoo.org> -monodoc-0.15.ebuild, -monodoc-0.16.ebuild,
-  -monodoc-0.17.ebuild, -monodoc-0.18.ebuild, -monodoc-1.0.1.ebuild,
-  -monodoc-1.0.ebuild:
+*monodoc-1.0.4-r1 (01 Dec 2004)
+
+  01 Dec 2004; Peter Johanson <latexer@gentoo.org> +monodoc-1.0.4-r1.ebuild:
+  Revision bump with new split up gtk-sharp deps.
+
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> -monodoc-0.15.ebuild,
+  -monodoc-0.16.ebuild, -monodoc-0.17.ebuild, -monodoc-0.18.ebuild,
+  -monodoc-1.0.1.ebuild, -monodoc-1.0.ebuild:
   Clean out some older ebuilds.
 
 *monodoc-1.0.4 (03 Nov 2004)
 
-  03 Nov 2004; <peter@gentoo.org> +monodoc-1.0.4.ebuild:
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> +monodoc-1.0.4.ebuild:
   Bump.
 
-  26 Oct 2004; <peter@gentoo.org> monodoc-0.15.ebuild, monodoc-0.16.ebuild,
-  monodoc-0.17.ebuild, monodoc-0.18.ebuild, monodoc-1.0.1.ebuild,
-  monodoc-1.0.2.ebuild, monodoc-1.0.ebuild:
+  26 Oct 2004; Peter Johanson <latexer@gentoo.org> monodoc-0.15.ebuild,
+  monodoc-0.16.ebuild, monodoc-0.17.ebuild, monodoc-0.18.ebuild,
+  monodoc-1.0.1.ebuild, monodoc-1.0.2.ebuild, monodoc-1.0.ebuild:
   Move gtk-sharp dep from x11-libs -> dev-dotnet
 
 *monodoc-1.0.2 (22 Sep 2004)
 
-  22 Sep 2004; <peter@gentoo.org> +monodoc-1.0.2.ebuild:
+  22 Sep 2004; Peter Johanson <latexer@gentoo.org> +monodoc-1.0.2.ebuild:
   Bump.
 
 *monodoc-1.0.1 (21 Sep 2004)
 
-  21 Sep 2004; <peter@gentoo.org> +monodoc-1.0.1.ebuild:
+  21 Sep 2004; Peter Johanson <latexer@gentoo.org> +monodoc-1.0.1.ebuild:
   Bump.
 
   04 Jul 2004; Peter Johanson <latexer@gentoo.org> monodoc-1.0.ebuild:
