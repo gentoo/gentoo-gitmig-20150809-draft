@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.2-r2.ebuild,v 1.3 2005/01/11 20:36:30 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.2-r2.ebuild,v 1.4 2005/01/16 00:03:51 brix Exp $
 
 inherit linux-mod eutils
 
 FW_VERSION="1.3"
-PATCH_2_4_VERSION="2"
+PATCH_2_4_VERSION="3"
 
 DESCRIPTION="Driver for the Intel PRO/Wireless 2100 3B miniPCI adapter"
 
