@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.10 2003/11/06 15:44:17 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.11 2003/11/12 19:26:24 tantive Exp $
 
 IUSE="doc snmp usb apache2"
 
@@ -9,7 +9,7 @@ DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
 SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz
 	ftp://ftp.apcupsd.com/pub/apcupsd/contrib/gd1.2.tar.gz"
 HOMEPAGE="http://www.sibbald.com/apcupsd/"
-KEYWORDS="~x86 ~amd64 ~ppc ~arm ~sparc"
+KEYWORDS="x86 ~amd64 ~ppc ~arm ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
