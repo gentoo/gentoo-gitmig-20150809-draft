@@ -1,0 +1,25 @@
+diff -urN log4cxx-0.9.7.post-gentoo-diff/src/odbcappender.cpp log4cxx-0.9.7/src/odbcappender.cpp
+--- log4cxx-0.9.7.post-gentoo-diff/src/odbcappender.cpp	2005-01-07 01:30:56.466447632 -0500
++++ log4cxx-0.9.7/src/odbcappender.cpp	2005-01-07 01:31:29.045494864 -0500
+@@ -111,7 +111,7 @@
+ 		ret = SQLExecDirect(stmt, (SQLTCHAR *)sql.c_str(), SQL_NTS);
+ #else
+ 		USES_CONVERSION;
+-		ret = SQLExecDirect(stmt, (SQLCHAR *)T2A(sql.c_str()), SQL_NTS);
++		ret = SQLExecDirect(stmt, (SQLWCHAR *)T2A(sql.c_str()), SQL_NTS);
+ #endif
+ 		if (ret < 0)
+ 		{
+@@ -182,9 +182,9 @@
+ 		std::string user = T2A(databaseUser.c_str());
+ 		std::string password = T2A(databasePassword.c_str());
+ 		ret = SQLConnect(connection,
+-			(SQLCHAR *)URL.c_str(), SQL_NTS,
+-			(SQLCHAR *)user.c_str(), SQL_NTS,
+-			(SQLCHAR *)password.c_str(), SQL_NTS);
++			(SQLWCHAR *)URL.c_str(), SQL_NTS,
++			(SQLWCHAR *)user.c_str(), SQL_NTS,
++			(SQLWCHAR *)password.c_str(), SQL_NTS);
+ #endif
+ 		if (ret < 0)
+ 		{

@@ -1,6 +1,17 @@
+diff -urN log4cxx-0.9.7.orig/src/msxml.cpp log4cxx-0.9.7/src/msxml.cpp
+--- log4cxx-0.9.7.orig/src/msxml.cpp	2004-05-10 08:37:45.000000000 -0400
++++ log4cxx-0.9.7/src/msxml.cpp	2005-01-07 01:29:54.013941856 -0500
+@@ -289,4 +289,5 @@
+ 	}
+ }
+ 
+-#endif
+\ No newline at end of file
++#endif
++
 diff -urN log4cxx-0.9.7.orig/src/smtpappender.cpp log4cxx-0.9.7/src/smtpappender.cpp
---- log4cxx-0.9.7.orig/src/smtpappender.cpp	2004-12-22 09:26:21.000000000 -0500
-+++ log4cxx-0.9.7/src/smtpappender.cpp	2004-12-22 09:59:25.247244129 -0500
+--- log4cxx-0.9.7.orig/src/smtpappender.cpp	2004-05-10 08:38:01.000000000 -0400
++++ log4cxx-0.9.7/src/smtpappender.cpp	2005-01-07 01:29:33.730025480 -0500
 @@ -134,7 +134,7 @@
  	for (i = recipients.begin(); i != recipients.end(); i++)
  	{

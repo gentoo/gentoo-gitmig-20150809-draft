@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7-r1.ebuild,v 1.2 2005/01/06 13:49:00 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7-r1.ebuild,v 1.3 2005/01/07 11:16:58 ka0ttic Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Library of C++ classes for flexible logging to files, syslog and other destinations"
 HOMEPAGE="http://logging.apache.org/log4cxx/"
@@ -24,7 +24,12 @@ src_unpack() {
 	cd ${S}
 	sed -i "s:\(htmldir = \).*\(/html\):\1\$(datadir)/doc/${PF}\2:" \
 		docs/Makefile.am || die "sed failed"
+
 	epatch ${FILESDIR}/${P}-gentoo.diff
+
+	if use unicode && use odbc ; then
+		epatch ${FILESDIR}/${P}-use-SQLWCHAR.diff
+	fi
 }
 
 src_compile() {
@@ -36,12 +41,17 @@ src_compile() {
 		--enable-html-docs --enable-latex-docs" || \
 		myconf="${myconf} --disable-doxygen --disable-dot --disable-html-docs"
 	use smtp && myconf="${myconf} --with-SMTP=libsmtp"
+	use odbc && myconf="${myconf} --with-ODBC=unixODBC"
 	# it's broken, so we must do this rather than use_enable
 	use unicode && myconf="${myconf} --enable-unicode"
 
-	econf \
-		$(use_with odbc ODBC) \
-		${myconf} || die "econf failed"
+	if use unicode && use odbc ; then
+		# fix some warnings as w/o it TCHAR gets typedef'd to signed short
+		# instead of wchar_t
+		append-flags -DSQL_WCHART_CONVERT
+	fi
+
+	econf ${myconf} || die "econf failed"
 	emake -j1 || die "emake failed"
 }
 
