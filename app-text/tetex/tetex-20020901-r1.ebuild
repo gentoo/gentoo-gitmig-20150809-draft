@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901.ebuild,v 1.5 2002/09/11 19:34:57 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901-r1.ebuild,v 1.1 2002/09/11 19:34:57 satai Exp $
 
 TEXMFSRC="teTeX-texmfsrc-beta-20020829.tar.gz"
 TEXMF="teTeX-texmf-beta-20020901.tar.gz"
@@ -44,9 +44,10 @@ src_unpack() {
 
 	cd ${S}
 	patch -p0 < ${FILESDIR}/tetex-20020901-fontmap.diff || die
-	cd texk/tetex
-	sed 's/tcdialog/dialog/g' texconfig > tc-gentoo ||die
-	mv tc-gentoo texconfig
+	use ncurses \
+		&& cd ${S}/texk/tetex \
+		&& sed 's/tcdialog/dialog/g' texconfig > tc-gentoo \
+		&& mv tc-gentoo texconfig
 
 }
 
