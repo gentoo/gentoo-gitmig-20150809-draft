@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.16 2003/05/24 12:18:37 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.17 2003/05/25 15:26:52 pauldv Exp $
 
 IUSE="tcltk java"
 
@@ -26,6 +26,11 @@ src_compile() {
 	use tcltk \
 		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/lib" \
 		|| myconf="${myconf} --disable-tcl"
+	
+	if [ -n "${JAVAC}" ]; then
+		export JAVAC=`basename ${JAVAC}`
+		export PATH=`dirname ${JAVAC}`:${PATH}
+	fi
 	
 	../dist/configure \
 		--prefix=/usr \
@@ -71,6 +76,8 @@ fix_so () {
 	[ ${target} ] && ln -sf ${target//.\//} libdb_cxx.so
 	target=`find -type f -maxdepth 1 -name "libdb_tcl*.so" |tail -n 1`
 	[ ${target} ] && ln -sf ${target//.\//} libdb_tcl.so
+	target=`find -type f -maxdepth 1 -name "libdb_java*.so" |tail -n 1`
+	[ ${target} ] && ln -sf ${target//.\//} libdb_java.so
 	cd -
 	cd /usr/include
 	target=`ls db? |tail -n 1`

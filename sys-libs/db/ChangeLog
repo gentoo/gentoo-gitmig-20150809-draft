@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.27 2003/05/24 11:48:05 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.28 2003/05/25 15:26:52 pauldv Exp $
+
+  25 May 2003; Paul de Vrieze <pauldv@gentoo.org> db-4.0.14.ebuild,
+  db-4.1.24.ebuild:
+  Make java work with db-4{0,1}
 
 *db-3.2.9-r5 (24 May 2003)
 
