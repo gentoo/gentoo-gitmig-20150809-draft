@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/silver-xcursors-0.4.ebuild,v 1.7 2004/04/27 21:02:47 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/silver-xcursors-0.4.ebuild,v 1.8 2004/06/09 01:48:23 swtaylor Exp $
 
 MY_P="5533-Silver-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -11,12 +11,16 @@ SLOT="0"
 KEYWORDS="x86 sparc amd64 ~alpha ppc"
 IUSE=""
 DEPEND=""
-RDEPEND=">=x11-base/xfree-4.3.0-r2"
-
+RDEPEND="virtual/x11"
 
 src_install() {
-	mkdir -p ${D}/usr/share/cursors/xfree/Silver/cursors/
-	cp -d  ${WORKDIR}/${MY_P:5}/Silver/cursors/* ${D}/usr/share/cursors/xfree/Silver/cursors/ || die
+    X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
+    X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+    X11_IMPLEM="${X11_IMPLEM##*\/}"
+    einfo "X11 implementation is ${X11_IMPLEM}."
+
+	mkdir -p ${D}/usr/share/cursors/${X11_IMPLEM}/Silver/cursors/
+	cp -d  ${WORKDIR}/${MY_P:5}/Silver/cursors/* ${D}/usr/share/cursors/${X11_IMPLEM}/Silver/cursors/ || die
 	dodoc ${WORKDIR}/${MY_P:5}/{COPYING,README}
 }
 
@@ -29,7 +33,7 @@ pkg_postinst() {
 	einfo "Xcursor.size: 48"
 	einfo ""
 	einfo "To globally use this set of mouse cursors edit the file:"
-	einfo "   /usr/share/cursors/xfree/default/index.theme"
+	einfo "   /usr/share/cursors/${X11_IMPLEM}/default/index.theme"
 	einfo "and change the line:"
 	einfo "   Inherits=[current setting]"
 	einfo "to"
@@ -38,5 +42,5 @@ pkg_postinst() {
 	einfo ""
 	ewarn "If you experience flickering, try setting the following line in"
 	ewarn "the Device section of your XF86Config:"
-	ewarn "Option  \"HWCursor\"  \"false\""
+	ewarn "Option \"HWCursor\" \"false\""
 }
