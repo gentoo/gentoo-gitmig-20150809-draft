@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.2.1.ebuild,v 1.5 2004/10/28 23:56:26 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.2.1.ebuild,v 1.6 2004/11/17 06:31:00 eradicator Exp $
 
 IUSE=""
 
@@ -12,17 +12,9 @@ SRC_URI="http://sky.prohosting.com/oparviai/soundtouch/soundtouch_v${PV}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos"
-
-# FIXME:
-#
-# I wanted to use 'static' and 'pic' USE flags, but anything
-# other than a static lib produces segfaults in soundstretch. :-(
-# So I let alone the '$myconf' option, so one can test options
-# easily with: myconf="--enable-foo" emerge libsoundtouch
+KEYWORDS="amd64 ~ppc x86 ~ppc-macos"
 
 RDEPEND="virtual/libc"
-
 DEPEND="app-arch/unzip"
 
 src_unpack() {
