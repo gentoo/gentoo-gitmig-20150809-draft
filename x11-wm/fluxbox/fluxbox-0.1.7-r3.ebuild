@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r3.ebuild,v 1.2 2002/03/16 16:36:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r3.ebuild,v 1.3 2002/03/21 02:48:58 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
@@ -10,8 +10,6 @@ HOMEPAGE="http://fluxbox.sf.net"
 
 DEPEND="virtual/x11
 	virtual/glibc
-	kde? ( >=kde-base/kdebase-2.1 )
-	gnome? ( >=gnome-base/gnome-1.4-r3 )
 	nls? ( >=sys-devel/gettext-0.10.38 ) "
 	
 RDEPEND="$DEPEND"
@@ -26,13 +24,13 @@ PROVIDE="virtual/blackbox"
 
 src_compile() {
 	local myconf
-	use nls && myconf="$myconf --enable-nls" \
-		|| myconf="$myconf --disable-nls"
-	use kde && myconf="$myconf --enable-kde" \
+	use nls && myconf="${myconf} --enable-nls" \
+		|| myconf="${myconf} --disable-nls"
+	use kde && myconf="${myconf} --enable-kde" \
 		&& export KDEDIR=/usr/kde/2 \
-		|| myconf="$myconf --disable-kde"
-	use gnome && myconf="$myconf --enable-gnome" \
-		|| myconf="$myconf --disable-gnome"
+		|| myconf="${myconf} --disable-kde"
+	use gnome && myconf="${myconf --enable-gnome" \
+		|| myconf="${myconf} --disable-gnome"
 	 
 	./configure \
 		--host=${CHOST} \

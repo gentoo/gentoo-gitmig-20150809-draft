@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.7 2002/03/16 16:36:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.8 2002/03/21 02:48:58 seemant Exp $
+
+*fluxbox-0.1.7-r3 (20 Mar 200)
+
+  20 Mar 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.7-r3.ebuild :
+
+  Removed gnome and kde from the deps, because they are NOT required in order
+  to compile support for them.  The KDE support is meaningless without KDE 
+  installed, but it is harmless and leads to less bloat if KDE wasn't intended
+  to be installed in the first place.
 
 *fluxbox-0.1.7-r3 (15 Mar 2002)
 
