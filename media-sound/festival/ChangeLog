@@ -3,6 +3,12 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
+  10 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.3.ebuild, metadata.xml, files/festival-1.4.3-asterisk.patch:
+  Added optional patch that adds a new command named tts_textasterisk that is
+  required by Asterisk to communicate with the Festival server. Submitted by Ray
+  Russell Reese III <anti@gentoo.org> in bug #30456.
+
   25 Jan 2004; <carpaski@gentoo.org> festival-1.4.2*: Fixed all references
 	to $T as that is a portage variable and yields AccessViolations when set
 	incorrectly.

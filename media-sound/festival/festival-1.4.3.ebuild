@@ -1,11 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.3.ebuild,v 1.3 2003/09/11 01:21:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.3.ebuild,v 1.4 2004/02/10 19:14:48 eradicator Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Festival Text to Speech engine"
-GCCPV=`cc -dumpversion`
-IUSE=""
+GCCPV=`gcc -dumpversion`
+IUSE="asterisk"
 HOMEPAGE="http://www.cstr.ed.ac.uk/"
 SITE="http://www.speech.cs.cmu.edu/${PN}/cstr/${PN}/${PV}"
 
@@ -50,6 +50,8 @@ src_unpack() {
 	unpack festvox_us2.tar.gz
 	unpack festvox_us3.tar.gz
 	epatch ${FILESDIR}/${PN}-gcc3.3.diff
+
+	use asterisk && epatch ${FILESDIR}/${P}-asterisk.patch
 }
 
 src_compile() {
