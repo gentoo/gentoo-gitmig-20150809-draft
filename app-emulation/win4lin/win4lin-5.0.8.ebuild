@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.0.8.ebuild,v 1.1 2003/10/25 14:57:09 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.0.8.ebuild,v 1.2 2003/11/29 23:45:46 vapier Exp $
 
 IUSE="doc"
 
@@ -80,7 +80,7 @@ pkg_config() {
 		einfo 'You can help Gentoo Linux and obatin a full license at a discont offer'
 		einfo 'for gentoo users in http://www.netraverse.com/gentoo.htm'
 		einfo 'Netraverse donate to Gentoo Linux a percent of each purchase.'
-		einfo 'Thanks Netaverse.'
+		einfo 'Thanks Netraverse.'
 		einfo
 		einfo 'Remember, you must do "/etc/init.d/Win4Lin start" before start w4l'
 		einfo 'Also you can add it to default boot "rc-update add Win4Lin default"'
