@@ -1,0 +1,66 @@
+--- goRua.rb.orig	2003-12-10 10:34:27.000000000 +0900
++++ goRua.rb	2003-11-08 08:28:35.000000000 +0900
+@@ -1486,7 +1457,16 @@
+   end
+ end
+ 
+-
++class ViewNotebook < Gtk::Notebook
++  def remove_page(num)
++    page = get_nth_page(num)
++    begin
++      page.get_thread.close_file
++    rescue NameError
++    end
++    super(num)
++  end
++end
+ 
+ #Threadの内容を見るBox
+ class ViewVBox < Gtk::VBox
+@@ -1617,7 +1606,8 @@
+ 
+ 
+     # ノートブック
+-    @notebook = Gtk::Notebook::new()
++#    @notebook = Gtk::Notebook::new()
++    @notebook = ViewNotebook::new()
+ 
+     @notebook.set_usize VIEW_WIDTH2, HEIGHT3
+ # ?  `requisition=': wrong # of arguments(1 for 2) (ArgumentError)
+@@ -2670,7 +2670,7 @@
+       self.set_subtree subtree
+ #      i=0
+       array.each{ |thread|
+-	thread_item = Gtk::ThreadTreeItem.new(thread,self,false)
++	thread_item = ThreadTreeItem.new(thread,self,false)
+ 	subtree.append thread_item
+ 	thread_item.show_all
+ #	i+=1
+@@ -2778,7 +2778,7 @@
+ 	    thread = ThreadShitaraba.new(unquote(title),url,thread,@board.get_dat)
+ 	  end
+ 	  @board.append_thread thread
+-	  thread_item = Gtk::ThreadTreeItem.new(thread,self)
++	  thread_item = ThreadTreeItem.new(thread,self)
+ 	  subtree.append thread_item
+ 	  thread_item.show
+ 	  while Gtk.events_pending
+@@ -3126,7 +3120,7 @@
+     hash.each{ |board|
+       @tree_size+=1
+ 
+-      item = Gtk::BoardTreeItem.new(board)
++      item = BoardTreeItem.new(board)
+       @tree.append item
+       array = board.get_thread_array
+       if array  != []
+@@ -3134,7 +3128,7 @@
+ 	item.set_subtree subtree
+ 	i=0
+ 	array.each{ |thread|
+-	  thread_item = Gtk::ThreadTreeItem.new(thread,item)
++	  thread_item = ThreadTreeItem.new(thread,item)
+ 	  subtree.append thread_item
+ 	  thread_item.show_all
+ 	  i+=1
