@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.2.ebuild,v 1.3 2003/09/07 00:08:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.2.ebuild,v 1.4 2003/10/05 04:14:46 kumba Exp $
 
 DESCRIPTION="Collection of tools for webcams and other video devices"
 HOMEPAGE="http://www.smcc.demon.nl/camstream/"
@@ -14,6 +14,15 @@ DEPEND="virtual/x11
 	virtual/glibc
 	>=x11-libs/qt-2.2.2*
 	"
+
+src_unpack() {
+	unpack ${A}
+
+	# Patch to fix an instance of a multi-line string which gcc-3.3.x dislikes greatly.
+	# Closes Bug #30292
+	epatch ${FILESDIR}/${P}-gcc33-multiline-string-fix.patch
+}
+
 src_install () {
 	dobin camstream/camstream camstream/caminfo camstream/ftpput
 	dodir /usr/share/${PN}/icons
