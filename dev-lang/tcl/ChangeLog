@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.42 2004/09/22 01:20:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.43 2004/10/19 17:45:19 kloeri Exp $
+
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> :
+  Stable on alpha.
 
   21 Sep 2004; Doug Goldstein <cardoe@gentoo.org> tcl-8.4.6-r1.ebuild:
   readding arches I removed accidently
