@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r9.ebuild,v 1.2 2003/03/11 20:50:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r9.ebuild,v 1.3 2003/03/13 09:24:45 carpaski Exp $
 
 IUSE="build"
 
@@ -32,9 +32,6 @@ src_unpack() {
 	echo tar xjf ${DISTDIR}/${PF}.tar.bz2
 	tar xjf ${DISTDIR}/${PF}.tar.bz2 || die "No portage tarball in distfiles."
 	#get_portver > ${WORKDIR}/previous-version
-	
-	cd ${S}/bin
-	patch < ${FILESDIR}/repoman-2.0.47-r8.diff &>/dev/null
 }
 
 src_compile() {
