@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0f85ba5eedcc0dce5da73cbb32c41f18 snmpmon-0.5.ebuild 1114
-MD5 a709b82f78abb35a77c50ecd8e906353 ChangeLog 405
+MD5 701d80b025a23e7ca8c57263e0123509 snmpmon-0.5.ebuild 1113
+MD5 5ee97d721a83c70d9f750f2a75f2e72a ChangeLog 484
 MD5 bfbc854701bf44b695955f18ceef3ca8 metadata.xml 343
 MD5 3a339c38bf11a7eac9bd3962a4d54108 files/digest-snmpmon-0.5 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD4DBQFBAloTT+MN7JbqCpMRAt3JAJinbrYYZhdBTdOM8jHBwWgfXl/SAJsHfWId
-FDlA5K5/l0ZNKluf4QvLTg==
-=NpKg
+iD8DBQFBMJn1T+MN7JbqCpMRAmgOAKCHST/mBsqDMfSlG0xT5RTDF5n2xACfRgZj
+lAf2ymABbW3soD68cpFOXVk=
+=8A0I
 -----END PGP SIGNATURE-----
