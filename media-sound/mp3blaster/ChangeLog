@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3blaster
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.13 2004/06/08 01:23:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.14 2004/06/24 06:42:25 eradicator Exp $
+
+  23 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mp3blaster-3.2.0.ebuild:
+  Stable amd64 and sparc.  Added USE=lirc support.
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> mp3blaster-3.1.3.ebuild,
   mp3blaster-3.2.0.ebuild:

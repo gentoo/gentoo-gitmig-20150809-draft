@@ -1,18 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.0.ebuild,v 1.4 2004/06/08 01:23:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.0.ebuild,v 1.5 2004/06/24 06:42:25 eradicator Exp $
 
 DESCRIPTION="Command line MP3 player."
 HOMEPAGE="http://www.stack.nl/~brama/mp3blaster/"
 SRC_URI="http://www.stack.nl/~brama/mp3blaster/src/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~alpha sparc amd64"
 LICENSE="GPL-2"
-IUSE="oggvorbis mysql"
+IUSE="oggvorbis mysql lirc"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	mysql? ( >=dev-db/mysql-3.23.36 )
+	lirc? ( app-misc/lirc )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )"
 #	nas? ( >=media-libs/nas-1.4.1 )
 
@@ -31,11 +32,11 @@ src_compile() {
 	local myconf
 	### Looks like NAS support is broken, at least with NAS 1.5 and
 	### mp3player 3.1.1 (Aug 13, agenkin@thpoon.com)
-	#use nas && myconf="${myconf} --with-nas"
-	#use nas || myconf="${myconf} --disable-nas"
-	myconf="${myconf} --disable-nas"
-	use mysql && myconf="${myconf} --with-mysql"
-	use oggvorbis || myconf="${myconf} --without-oggvorbis"
+	### Ditto nas-1.6c-r1, mp3blaster-3.2.0 (2004.06.23 - eradicator)
+	myconf="${myconf} --without-nas \
+	        `use_with lirc` \
+	        `use_with mysql` \
+	        `use_with oggvorbis`"
 
 	econf ${myconf} || die
 	make CC="gcc ${CFLAGS}" CXX="c++ ${CXXFLAGS}" || die
