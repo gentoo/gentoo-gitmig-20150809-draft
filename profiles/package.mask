@@ -54,7 +54,8 @@ dev-libs/libiconv
 
 #if you're not careful, you'll build yourself a rsync that depends on libpopt.so! <kainz, 18 Apr 2002>
 #this fixes that.  devlopers give it a shot
-=net-misc/rsync-2.5.4-r1
+#repeat for newer rsync
+=net-misc/rsync-2.5.5-r1
 
 # Since azarah is the opengl dude here, i'll mask this untill he looks at 
 # it... Won't compile.. <Verwilst, 17 April 2002>
