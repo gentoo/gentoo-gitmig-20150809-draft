@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.903.ebuild,v 1.1 2004/08/29 04:22:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.903.ebuild,v 1.2 2004/08/29 04:35:20 seemant Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -46,7 +46,7 @@ X_DRIVERS=""
 # Latest SIS drivers:  http://www.winischhofer.net/
 
 GENTOO_FILES="mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2
-	http://dev.gentoo.org/~seemant/${P}-files-${FILES_VER}.tar.bz2"
+	http://dev.gentoo.org/~seemant/distfiles/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
 	http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2
@@ -56,7 +56,7 @@ SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
 	${X_DRIVERS}
 	${X_PATCHES}
 	mirror://gentoo/${P}.tar.bz2
-	http://dev.gentoo.org/~seemant/${P}.tar.bz2"
+	http://dev.gentoo.org/~seemant/distfiles/${P}.tar.bz2"
 #	http://freedesktop.org/~xorg/X11R${PV}/src/X11R${PV}-src1.tar.gz
 #	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src2.tar.gz
 #	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src3.tar.gz
