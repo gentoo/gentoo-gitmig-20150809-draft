@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.14 2003/03/16 15:13:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.15 2003/08/03 12:32:01 azarah Exp $
+
+*svgalib-1.9.17-r2 (03 Aug 2003)
+
+  03 Aug 2003; Martin Schlemmer <azarah@gentoo.org> svgalib-1.9.17-r2.ebuild,
+  files/svgalib-1.9.17-gentoo.patch, files/svgalib-1.9.17-linux2.6.patch:
+  Patch svgalib_helper kernel module to work with linux-2.6 (note that I dropped
+  all support for 2.5 kernel). Add patch for lineart demo to compile with
+  gcc-3.3. Additional cleanups to the ebuild.
 
   31 Dec 2002; Martin Schlemmer <azarah@gentoo.org> svgalib-1.9.17-r1.ebuild :
   Ok, I should not be lazy, patch Makefile in svga_helper module, as my
