@@ -594,10 +594,6 @@ media-gfx/k3studio
 # old version isn't available, new version doesn't compile - danarmak
 media-libs/nurbs++
 
-# This is is _very_ experimental!
-# azarah - 19 Jun 2002
->=x11-base/xfree-4.2.99
-
 # this patch works for me on x86 and ppc but breaks other ppl :( (kain, 08 May 2002)
 =sys-devel/gdb-5.1.1-r1
 
