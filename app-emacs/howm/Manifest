@@ -1,8 +1,20 @@
-MD5 672aae9990c838594254f99f7c39b61a ChangeLog 913
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b5cdfad7f00b95fc2c556b643f7f1280 howm-1.2.ebuild 951
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 eb2a0015ce2afcddca1c6bf0a0828a6f howm-1.1.2.1-r1.ebuild 953
-MD5 b5cdfad7f00b95fc2c556b643f7f1280 howm-1.2.ebuild 951
+MD5 10f7ca9ab75f2775e8a4a79a6711c214 ChangeLog 1069
+MD5 2730e3b60c311b038b2bfc21cdb223c4 howm-1.2-r1.ebuild 856
 MD5 6e75d87dba271ed304aeab4ac589ed70 files/50howm-gentoo.el 95
-MD5 152c982878621d9c1f66367f959c285f files/digest-howm-1.1.2.1-r1 64
 MD5 9ee74453a5ba382bafbfe73d6d951cf6 files/55howm-gentoo.el 90
+MD5 152c982878621d9c1f66367f959c285f files/digest-howm-1.1.2.1-r1 64
 MD5 d206309ad0b409fcd28fd71d8a85b615 files/digest-howm-1.2 60
+MD5 d206309ad0b409fcd28fd71d8a85b615 files/digest-howm-1.2-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (Darwin)
+
+iD4DBQFBpajbVWNWqTUmv+0RArpwAJjHH2Qpw8nEfn2QP7g+5YMUz/frAJ474Fn2
+XthRP9t8y3xIy0L93acZ2w==
+=uehX
+-----END PGP SIGNATURE-----
