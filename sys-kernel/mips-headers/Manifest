@@ -1,4 +1,4 @@
-MD5 f3507b3f8fa7efcf6b7cbefb35b79cd3 ChangeLog 4882
+MD5 68f95264a5f8283e6ec9071bd7bf4a2a ChangeLog 5091
 MD5 a79e966514d7aa3b003e25a207766f97 metadata.xml 417
 MD5 bf75617f93eb72af2eadd739b7081093 mips-headers-2.4.21-r1.ebuild 1358
 MD5 10102cf5e4f84e50e4ee08f691607937 mips-headers-2.4.21-r2.ebuild 1260
@@ -7,6 +7,7 @@ MD5 9cab0c6fa541f55bca68b82dc516b1c1 mips-headers-2.4.22-r1.ebuild 1915
 MD5 155e3f184046841bd9d49c9986ec52c1 mips-headers-2.4.23.ebuild 1717
 MD5 cbe74c305e6226ff772c4d92cba7046a mips-headers-2.4.25.ebuild 1717
 MD5 c2c93c8e48a0000556f7199c02f47578 mips-headers-2.6.6-r1.ebuild 3674
+MD5 4d921bd7455591d147da952f0805feb5 mips-headers-2.6.8.1.ebuild 4911
 MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
 MD5 747353be86040c7e4c49b553f3467b7c files/digest-mips-headers-2.4.21-r1 160
 MD5 76b0e72e1a0025451c3fcf8d00faaf0a files/digest-mips-headers-2.4.21-r2 145
@@ -22,3 +23,4 @@ MD5 cb8280b584baf48a15e342e96099eeb9 files/mips-headers-2.6.6-appCompat.patch 26
 MD5 a9f74b71da391afa8399922824c8fc72 files/mips-headers-2.6.6-spaces_h-kernel.patch 498
 MD5 054c3c8e9c8804a13c79d01ec52793ed files/mips-patches-gcc-makefile-fix.patch 915
 MD5 3ec0bd6b14384ef98b64cb997030f3cc files/mipscvs-2.4.22-20030825-makefile-fix.patch 1344
+MD5 d3f8009328eba4f676b5c2bfe66fba4b files/digest-mips-headers-2.6.8.1 304

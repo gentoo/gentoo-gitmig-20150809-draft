@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mips-headers
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.21 2004/08/30 22:59:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.22 2004/10/01 23:12:31 kumba Exp $
+
+*mips-headers-2.6.8.1 (01 Oct 2004)
+
+  01 Oct 2004; Joshua Kinard <kumba@gentoo.org> +mips-headers-2.6.8.1.ebuild:
+  Added ebuild for 2.6.8.1 headers that includes some statfs fixes needed for
+  n32 testing.
 
 *mips-headers-2.6.6-r1 (30 Aug 2004)
 
