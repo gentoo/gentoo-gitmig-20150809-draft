@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3381 2004/12/07 01:58:44 g2boojum Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3382 2004/12/08 12:12:52 genone Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,12 @@
 ##
 ##   End example
 ##
+
+# <genone@gentoo.org> (08 Dec 2004)
+# app-portage pre-christmas cleaning, these packages are unmaintained upstream
+# and have open bugs
+app-portage/ebuilder
+app-portage/gentoo-stats
 
 # <g2boojum@gentoo.org> (04 Dec 2004)
 # Masking until lcars tests it
