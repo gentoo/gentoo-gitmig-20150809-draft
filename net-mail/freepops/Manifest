@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 63bea0bf794b06a15de73a03b64deb14 freepops-0.0.20.ebuild 1036
-MD5 ec7043fe31f16c18ae69c44eb190fe32 ChangeLog 1032
+MD5 b490665142aa4d42c429d1fadc33127e ChangeLog 1180
 MD5 21c9bd65b924f959e9ec675d33b6df27 metadata.xml 222
 MD5 60a44c6797577917c8e0fdf654b12904 freepops-0.0.19.ebuild 986
+MD5 61bd264904bde391590091d1a786cf24 freepops-0.0.21.ebuild 1036
+MD5 63bea0bf794b06a15de73a03b64deb14 freepops-0.0.20.ebuild 1036
 MD5 8d8a700087c64b24fdb5bb6b73de70d5 files/digest-freepops-0.0.20 68
+MD5 3e35fd445af9ca304d9c600839f712eb files/digest-freepops-0.0.21 68
 MD5 a984ec54d4e33b0cdd36ceb6d7d4452d files/digest-freepops-0.0.19 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBlvuvHTu7gpaalycRAvelAKDaQ++MJrPVsoIRiWnp4EMa8dprgQCfZgw7
-FUDsVEJ8TYm/g4ufDJ6ekqw=
-=mE6N
+iD8DBQFBoSU7HTu7gpaalycRAqwzAKC3jeaooLFYVxlpCBMy0ncf4Vkd6ACgxh/Z
+IkXzuStcV3cLJeRLQu8utck=
+=Qqtp
 -----END PGP SIGNATURE-----
