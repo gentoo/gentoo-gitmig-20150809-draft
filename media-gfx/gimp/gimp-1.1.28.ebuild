@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.1.27.ebuild,v 1.1 2000/10/06 20:46:49 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.1.28.ebuild,v 1.1 2000/10/28 15:47:20 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -20,15 +20,14 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/usr/X11R6
+  try ./configure --host=${CHOST} --prefix=/usr/X11R6 --sysconfdir=/etc
   try make 
 }
 
 src_install() {                               
   cd ${S}
-  try make prefix=${D}/usr/X11R6 install
-  prepman
-  prepman /usr/X11R6
+  try make prefix=${D}/usr/X11R6 sysconfdir=${D}/etc install
+  preplib /usr/X11R6
   dodoc AUTHORS COPYING ChangeLog* *MAINTAINERS README* TODO
   dodoc docs/*.txt docs/*.ps docs/Wilber* docs/quick_reference.tar.gz
   docinto html/libgimp
@@ -36,11 +35,6 @@ src_install() {
   docinto devel
   dodoc devel-docs/*.txt
 }
-
-
-
-
-
 
 
 
