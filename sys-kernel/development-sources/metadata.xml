@@ -7,8 +7,12 @@
   <email>johnm@gentoo.org</email>
   <name>John Mylchreest</name>
 </maintainer>
+<maintainer>
+  <email>spock@gentoo.org</email>
+  <name>Michal Januszewski</name>
+</maintainer>
 <longdescription>
-This is the vanilla test kernels.
+These are the vanilla test kernels.
 These keep up to date with the stable kernel releases, and the snapshot
 releases if used under a testing mask (eg: ~x86)
 </longdescription>
