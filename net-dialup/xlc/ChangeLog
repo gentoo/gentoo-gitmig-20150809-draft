@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/xlc
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xlc/ChangeLog,v 1.1 2004/11/28 10:44:06 mrness Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xlc/ChangeLog,v 1.2 2005/02/12 10:20:25 mrness Exp $
+
+  12 Feb 2005; Alin Nastac <mrness@gentoo.org> xlc-1.0.6.ebuild:
+  Mark as stable on x86.
 
 *xlc-1.0.6 (28 Nov 2004)
 
