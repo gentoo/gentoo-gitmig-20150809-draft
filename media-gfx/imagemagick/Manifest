@@ -5,11 +5,13 @@ MD5 89ec015fd0bde5a91ab0de0ddb87b5f2 imagemagick-5.5.4.4.ebuild 3188
 MD5 f61cba6b2a457a73f7fbcadb7b3c76f3 imagemagick-5.5.6-r1.ebuild 2487
 MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
 MD5 6e565c4848e9f56b3ca631b33ba11950 imagemagick-5.5.7.11.ebuild 2493
+MD5 0e47e0609cbb496794314c19fc6047e9 imagemagick-5.5.7.15.ebuild 2507
 MD5 8e4908a1f0dc81354fa5042ddb352cf9 imagemagick-5.5.7.14.ebuild 2513
 MD5 f83c498eca8fc6a0cbd227182619f38e files/digest-imagemagick-5.4.7.4-r1 72
 MD5 f9ff3fba47b4d61edd32eea1aee94731 files/digest-imagemagick-5.5.3.2 72
 MD5 69be221b82f76ec46d241c5e4bff0f12 files/digest-imagemagick-5.5.4.4 72
 MD5 4cd3e2742fa943129dca5d63d0109a42 files/digest-imagemagick-5.5.6-r1 71
+MD5 4909cde902edd90dd3725ba4369e782b files/digest-imagemagick-5.5.7.15 74
 MD5 edbc2be86318f2676c55ce64e47ea2f6 files/perlpatch.diff 1598
 MD5 6652b0907d2684cf7d30d203f78c15ec files/digest-imagemagick-5.5.7.11 74
 MD5 56bbd014ae82156d35b5af8b079eabeb files/digest-imagemagick-5.5.7.14 74
