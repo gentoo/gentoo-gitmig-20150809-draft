@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/wmakerconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.8 2003/02/12 09:32:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.9 2003/08/16 09:04:45 g2boojum Exp $
+
+  16 Aug 2003; Nick Hadaway <raker@gentoo.org> wmakerconf-2.9.ebuild:
+  Marked -* for all arches as it does not work.  Possibly due to the
+  non-usability of libwmfun currently.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
