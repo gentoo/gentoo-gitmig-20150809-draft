@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/orbital-eunuchs-sniper-1.29.ebuild,v 1.6 2004/02/16 09:35:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/orbital-eunuchs-sniper-1.29.ebuild,v 1.7 2004/02/16 09:43:36 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -12,6 +12,7 @@ SRC_URI="http://filesingularity.timedoctor.org/${MY_PN}-${PV}.tar.gz"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2.5-r1
 	>=media-libs/sdl-mixer-1.2.5-r1
@@ -48,6 +49,6 @@ src_install() {
 
 	games_make_wrapper snipe2d ./snipe2d.x86.dynamic "${GAMES_LIBDIR}/${PN}"
 
-	dodoc AUTHORS ChangeLog README TODO readme.txt
+	dodoc AUTHORS ChangeLog README TODO readme.txt || die "dodoc failed"
 	prepgamesdirs
 }
