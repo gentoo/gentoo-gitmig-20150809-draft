@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netdate
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netdate/ChangeLog,v 1.4 2004/07/01 21:31:18 squinky86 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netdate/ChangeLog,v 1.5 2005/01/07 03:57:58 robbat2 Exp $
+
+  06 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> netdate-1.2.ebuild:
+  Cleanup the ebuild, and add ~mips because I'm using this on the XXS1500.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> netdate-1.2.ebuild:
   change virtual/glibc to virtual/libc

@@ -1,4 +1,15 @@
-MD5 dd27955363f46c32e210e6bf659e9663 netdate-1.2.ebuild 582
-MD5 ea485787ff34ff58ac694194af4a0fd2 ChangeLog 504
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 af1e7696b50ea3996925a056f2259030 netdate-1.2.ebuild 565
+MD5 773e8763d5e0ccda8a4dea94605afa70 ChangeLog 651
 MD5 2c3158204cfb4b9c36b8bc78e8421b16 metadata.xml 223
 MD5 29edee867ca109ed22b4158b7be37109 files/digest-netdate-1.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFB3eOOPpIsIjIzwiwRAn7BAJoD9VRiMCsfLJG9LD4huHjf6fuwbwCg+UlG
+v3U9gqCFqcqMxYp4v1UJAM4=
+=9qk4
+-----END PGP SIGNATURE-----
