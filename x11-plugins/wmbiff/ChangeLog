@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.15 2004/10/19 08:51:22 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.16 2004/11/26 16:37:32 weeve Exp $
+
+  26 Nov 2004; Jason Wever <weeve@gentoo.org> wmbiff-0.4.25.ebuild:
+  Stable on sparc.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmbiff-0.4.25.ebuild:
   Stable on amd64.
