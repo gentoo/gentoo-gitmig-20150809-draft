@@ -14,7 +14,7 @@ HOMEPAGE="http://games.activision.com/games/wolfenstein/"
 LICENSE="RTCW"
 SLOT="0"
 KEYWORDS="x86"
-RESTRICT="nostrip"
+RESTRICT="nostrip nomirror"
 IUSE="opengl dedicated"
 
 DEPEND="virtual/glibc"

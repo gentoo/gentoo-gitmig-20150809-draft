@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/rtcw
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.4 2003/10/03 22:35:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.5 2003/12/06 22:13:58 wolf31o2 Exp $
+
+  06 Dec 2003; Chris Gianelloni <wolf31o2@gentoo.org> rtcw-1.41.ebuild:
+  Added RESTRICT=nomirror.  Closing Bug #35223.
 
 *rtcw-1.41 (03 Oct 2003)
 
