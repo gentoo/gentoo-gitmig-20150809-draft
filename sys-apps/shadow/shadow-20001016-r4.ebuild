@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r3.ebuild,v 1.3 2001/04/21 00:03:40 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r4.ebuild,v 1.1 2001/07/31 21:16:13 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -63,7 +63,10 @@ src_install() {
 	doins limits shells
 	insopts -m0600
 	doins login.access
-	doins ${S}/debian/securetty
+	#doins ${S}/debian/securetty
+	#Now using a new securetty with devfs device names added
+	#(compat names kept for non-devfs compatibility)
+	doins ${FILESDIR}/securetty
 
         cd pam.d
         insinto /etc/pam.d
