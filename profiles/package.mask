@@ -18,11 +18,6 @@ media-gfx/k3studio
 # Azarah - 5 June 2002
 =net-www/mozilla-1.0
 
-# masked galeon 1.2.5 for testing
-#
-# rphillips - 8 June 2002
-=net-www/galeon-1.2.5
-
 # X driver renaming *dont* work.
 # Azarah - 5 June 2002
 =media-video/ati-gatos-4.2.0.11-r1
