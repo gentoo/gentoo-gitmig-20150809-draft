@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.42 2003/08/03 01:33:51 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.43 2003/08/14 14:52:24 usata Exp $
+
+  14 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> tetex-1.0.7-r12.ebuild:
+  Added virtual/tetex PROVIDE
 
   02 Aug 2003; Todd Sunderlin <todd@gentoo.org> tetex-2.0.2.ebuild:
   Marked stable for sparc
