@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2988 2004/07/05 21:40:09 klieber Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2989 2004/07/05 21:44:55 mr_bones_ Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -277,10 +277,6 @@ games-fps/aaut
 # needs fixes troughout the tree
 # lot of testing needed !
 >=media-libs/freetype-2.1.6
-
-# <mr_bones_@gentoo.org> (24 Feb 2004)
-# bad depend
-=media-libs/SoQt-20010601-r1
 
 # <liquidx@gentoo.org> (19 Feb 2004)
 # possible symlink vunerability (#41253)
