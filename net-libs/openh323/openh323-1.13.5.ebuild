@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5.ebuild,v 1.2 2004/04/27 18:21:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5.ebuild,v 1.3 2004/05/09 14:15:22 dholm Exp $
 
 IUSE="ssl"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/openh323/${MY_P}-src.tar.gz"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-libs/pwlib-1.6.6
