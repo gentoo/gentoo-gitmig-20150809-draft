@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/album
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.3 2003/06/08 01:11:21 rac Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.4 2004/01/31 15:29:13 mholzer Exp $
+
+*album-2.52 (31 Jan 2004)
+
+  31 Jan 2004; Martin Holzer <mholzer@gentoo.org> album-2.52.ebuild,
+  metadata.xml:
+  Version bumped. Closes 39936.
 
   07 Jun 2003; <rac@gentoo.org> album-2.44.ebuild:
   Add IUSE
