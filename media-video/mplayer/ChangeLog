@@ -1,13 +1,19 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.31 2002/09/15 20:49:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.32 2002/09/16 15:03:46 doctomoe Exp $
 
-*mplayer-0.90_pre7 (15 Sep 2002)
+*mplayer-0.90_pre7 (16 Sep 2002)
+
+  16 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> mplayer-0.90_pre7 :
+  Removed ppc keyword. Audio does not work at all on PPC.
 
   15 Sep 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre7 :
   Update version.
 
 *mplayer-0.90_pre6-r3 (12 Aug 2002)
+
+  16 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> mplayer-0.90_pre6-r3 :
+  Removed ppc keyword. Audio does not work at all on PPC.
 
   Sep 11 2002; Mark Guertin <gerk@gentoo.org> mplayer-0.90_pre6-63.ebuild :
   Adjusted divx4linux as x86 only dep (it supplies x86 binary libs), goes along
