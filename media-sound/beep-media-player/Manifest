@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f4f2f6f94fc39c6dc3acddf92a477e91 beep-media-player-0.9.7-r1.ebuild 2275
-MD5 8ea8622198c203c1daea0d50bd93e50f beep-media-player-0.9.7-r3.ebuild 2441
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 ac66b2f1affa97ffc408b53daa8a5d2f beep-media-player-0.9.7.ebuild 2070
-MD5 a72c1bd12ff2c4440d2eeb74cdcf0d34 beep-media-player-0.9.7-r2.ebuild 2330
 MD5 f6a686e66444195fbe78c30e5b2d7bc4 ChangeLog 7803
-MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+MD5 f4f2f6f94fc39c6dc3acddf92a477e91 beep-media-player-0.9.7-r1.ebuild 2275
+MD5 a72c1bd12ff2c4440d2eeb74cdcf0d34 beep-media-player-0.9.7-r2.ebuild 2330
+MD5 8ea8622198c203c1daea0d50bd93e50f beep-media-player-0.9.7-r3.ebuild 2441
+MD5 d14dde91067c784f210c19e1e4024650 files/0.9.7-desktop-icon.patch 535
 MD5 bea6e241ce4dae7a01125836fda25fcc files/0.9.7-bigendian.patch 315
 MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r1 62
 MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r2 62
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r3 62
-MD5 d14dde91067c784f210c19e1e4024650 files/0.9.7-desktop-icon.patch 535
-MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
-MD5 533bcd69c3357e3b6dd5b3a49afbb6bf files/0.9.7-noclick-resize.patch 974
 MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7 62
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r3 62
+MD5 533bcd69c3357e3b6dd5b3a49afbb6bf files/0.9.7-noclick-resize.patch 974
+MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCD1fGI1lqEGTUzyQRAnrdAJ4mO71hQAr++FRHtfD6JwgQnl5TuACfXOYc
-zON/R6rZRHzM//p0CW951vM=
-=guXs
+iD8DBQFCGMo8p5vW4rUFj5oRAkcjAKCgE8FqvMRgE319k/W65zKel4bKtQCgqYa9
+zzQVeWjXfM+QQZWrBZKO5hM=
+=mqMC
 -----END PGP SIGNATURE-----
