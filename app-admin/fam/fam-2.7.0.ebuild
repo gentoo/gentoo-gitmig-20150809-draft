@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.11 2004/03/09 23:09:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.12 2004/03/13 19:28:26 geoman Exp $
 
-inherit libtool eutils
+inherit libtool eutils gnuconfig
 
 DESCRIPTION="FAM, the File Alteration Monitor"
 HOMEPAGE="http://oss.sgi.com/projects/fam/"
@@ -10,7 +10,7 @@ SRC_URI="ftp://oss.sgi.com/projects/fam/download/stable/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa ~amd64 ia64"
+KEYWORDS="x86 ppc alpha sparc hppa ~amd64 ia64 ~mips"
 
 DEPEND=">=net-nds/portmap-5b-r6"
 
@@ -23,6 +23,11 @@ src_unpack() {
 	# Please do not remove this again - fixes $S and $D in libtool linker
 	# scripts (.la files)
 	cd ${S}; elibtoolize
+}
+
+src_compile() {
+	use mips && gnuconfig_update
+	econf && emake
 }
 
 src_install() {
