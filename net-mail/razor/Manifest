@@ -4,7 +4,7 @@ MD5 189a2b8436bc73c2c6bb15deaf1f5cb2 razor-2.12.ebuild 663
 MD5 8306cb9f1b551f6d6e98053dd11610c6 razor-2.14.ebuild 665
 MD5 1ccd844b8a2554477822bf3cd98c2c77 razor-2.36-r1.ebuild 2845
 MD5 6c2c29e0c6c98f139bce5527e9cb88fe razor-2.20.ebuild 2655
-MD5 d6ae557132d9e41e6a236593cb0dea74 ChangeLog 1985
+MD5 9acc153cd6ba4c99799aad62a0dde6ff ChangeLog 2008
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 d3e9a49fe82b4c304cafaadb03eedb08 files/razor-taint.patch 2125
 MD5 eb86375c84c8a7db9512ca1943fd5a7a files/no-install-razor-agents.patch 292
