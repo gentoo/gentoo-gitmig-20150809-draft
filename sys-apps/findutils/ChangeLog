@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.10 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.11 2003/03/20 05:28:12 method Exp $
+
+*findutils-4.1.7-r3 (19 Mar 2003)
+
+  19 Mar 2003; Joshu Brindle <method@gentoo.org> findutils-4.1.7-r3.ebuild:
+  Added selinux use flag
+
+*findutils-4.1.7-r2 (29 Nov 2002)
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> findutils-4.1.7-r2.ebuild:
   Added arm to keywords.
@@ -9,8 +16,6 @@
   Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*findutils-4.1.7-r2 (29 Nov 2002)
 
   29 Nov 2002; Brad Cowan <bcowan@gentoo.org> findutils-4.1.7-r2.ebuild,
   files/digest-findutils-4.1.7-r2:
