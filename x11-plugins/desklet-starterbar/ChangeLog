@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/desklet-starterbar
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.4 2003/11/01 03:44:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.5 2003/11/02 10:27:40 obz Exp $
+
+*desklet-starterbar-0.21 (02 Nov 2003)
+
+  02 Nov 2003; Mike Gardiner <obz@gentoo.org> desklet-starterbar-0.12.ebuild,
+  desklet-starterbar-0.21.ebuild:
+  New version 0.21, removed (old) 0.12. This new version uses less CPU (finally)
+  and should have some fixes. Also includes previews (point nautilus at
+  /usr/share/gdesklets/Displays/Starterbar)
 
   01 Nov 2003; Luca Barbato <lu_zero@gentoo.org>
   desklet-starterbar-0.12.ebuild, desklet-starterbar-0.20.ebuild:
