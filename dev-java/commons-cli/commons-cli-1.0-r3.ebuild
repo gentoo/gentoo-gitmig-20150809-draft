@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r2.ebuild,v 1.7 2004/05/05 20:06:08 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r3.ebuild,v 1.1 2004/05/05 20:06:08 karltk Exp $
 
 inherit jakarta-commons
 
