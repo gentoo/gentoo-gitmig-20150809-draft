@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.22-r1.ebuild,v 1.2 2003/09/29 19:02:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.22-r1.ebuild,v 1.3 2003/10/26 13:27:49 dholm Exp $
 
 IUSE=""
 
@@ -28,6 +28,8 @@ src_unpack() {
 
 	cd ${PF}
 	patch -p1 < ${WORKDIR}/patch-${OKV}-${MY_R} || die "patch failed"
+	patch -p1 < ${FILESDIR}/ppc-sources-2.4.22-r1.via-pmu.diff \
+		|| die "patch failed"
 
 	use xfs && ( ewarn "XFS is no longer included in ppc-sources!" )
 }
