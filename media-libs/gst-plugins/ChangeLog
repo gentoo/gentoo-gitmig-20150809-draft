@@ -1,7 +1,12 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.69 2004/06/24 23:01:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.70 2004/06/29 16:04:11 foser Exp $
+
+*gst-plugins-0.8.2 (29 Jun 2004)
+
+  29 Jun 2004; foser <foser@gentoo.org> gst-plugins-0.8.2.ebuild :
+  New release, fix gstreamer dep so it works with the off versioning
 
   13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> :
   Getting rid of virtual/jack.
