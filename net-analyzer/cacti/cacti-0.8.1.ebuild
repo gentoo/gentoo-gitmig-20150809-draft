@@ -1,15 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.1.ebuild,v 1.3 2003/06/11 15:37:39 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.1.ebuild,v 1.4 2003/06/13 20:06:19 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Cacti is a complete frondend to rrdtool"
 HOMEPAGE="http://www.raxnet.net/products/cacti/"
 SRC_URI="http://www.raxnet.net/downloads/${P}.tar.gz"
 
-IUSE="snmp"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+IUSE="snmp"
 
 DEPEND=""
 RDEPEND="net-www/apache
@@ -19,12 +21,10 @@ RDEPEND="net-www/apache
 	dev-php/php
 	dev-php/mod_php"
 
-# Allow users to move the default data directory by setting the
-# home directory of the 'apache' user elsewhere.
-HTTPD_ROOT=`grep apache /etc/passwd | cut -d: -f6`/htdocs
-[ -z "${HTTPD_ROOT}" ] && HTTPD_ROOT="/home/httpd/htdocs"
-
-INSTALL_DEST="${HTTPD_ROOT}/cacti"
+export HTTPD_ROOT=/home/httpd/htdocs
+export HTTPD_USER=apache
+export HTTPD_GROUP=apache
+export INSTALL_DEST=${HTTPD_ROOT}/cacti
 
 src_install() {
 	dohtml docs/{INSTALL,UPGRADE}.htm
@@ -39,7 +39,8 @@ src_install() {
 	rm -fr docs
 
 	dodir ${INSTALL_DEST}
-	chown apache.apache * -R
+	edos2unix `find -type f -name '*.php'`
+	chown -R ${HTTPD_USER}.${HTTPD_GROUP} *
 	mv * ${D}/${INSTALL_DEST}/
 }
 
@@ -86,7 +87,7 @@ pkg_postinst() {
 		einfo "The cacti has been copied to ${INSTALL_DEST}"
 		einfo
 		einfo "Before cacti works you must:"
-        einfo "1. Create the new cacti database"
+		einfo "1. Create the new cacti database"
 		einfo "  shell> mysqladmin --user=root create cacti"
 		einfo "2. Import the default cacti database:"
 		einfo "  shell> mysql cacti < ${INSTALL_DEST}/cacti.sql"
