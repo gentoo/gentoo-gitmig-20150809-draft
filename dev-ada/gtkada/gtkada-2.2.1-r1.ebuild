@@ -1,22 +1,30 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.1_pre20031005.ebuild,v 1.4 2004/06/29 14:55:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.1-r1.ebuild,v 1.1 2004/08/02 11:17:17 dholm Exp $
 
-inherit gnat
+inherit gnat eutils
 
+Name="GtkAda"
 DESCRIPTION="Gtk+ bindings to the Ada language"
 HOMEPAGE="http://libre.act-europe.fr/GtkAda"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://libre.act-europe.fr/${Name}/${Name}-${PV}.tgz"
 
 LICENSE="GMGPL"
 SLOT="1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="nls opengl"
 
-DEPEND=">=dev-lang/gnat-3.14p
+DEPEND=">=dev-lang/gnat-3.4
 	>=x11-libs/gtk+-2.2.0
 	>=sys-apps/sed-4"
 RDEPEND=""
+
+S="${WORKDIR}/${Name}-${PV}"
+
+src_unpack() {
+	unpack ${A} ; cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.patch
+}
 
 src_compile() {
 	local myconf
@@ -45,8 +53,8 @@ src_install() {
 	dosym /usr/lib/ada/adalib/gtkada/libgtkada_glade-2.2.so.1 /usr/lib
 	dosym /usr/lib/ada/adalib/gtkada/libgtkada_gl-2.2.so.1 /usr/lib
 	dosym /usr/lib/ada/adalib/gtkada/libgnomeada-2.2.so.1 /usr/lib
-	dosym /usr/lib/ada/adalib/gtkada/libgtkada_glade.so /usr/lib
 	dosym /usr/lib/ada/adalib/gtkada/libgtkada-2.2.so.1 /usr/lib
+	dosym /usr/lib/ada/adalib/gtkada/libgtkada_glade.so /usr/lib
 	dosym /usr/lib/ada/adalib/gtkada/libgtkada_gl.so /usr/lib
 	dosym /usr/lib/ada/adalib/gtkada/libgnomeada.so /usr/lib
 	dosym /usr/lib/ada/adalib/gtkada/libgtkada.so /usr/lib

@@ -1,0 +1,152 @@
+diff -Naur GtkAda-2.2.1.orig/src/gtk-extra-combo_box.adb GtkAda-2.2.1/src/gtk-extra-combo_box.adb
+--- GtkAda-2.2.1.orig/src/gtk-extra-combo_box.adb	2004-08-02 10:45:17.027334488 +0200
++++ GtkAda-2.2.1/src/gtk-extra-combo_box.adb	2004-08-02 10:46:14.512595400 +0200
+@@ -66,52 +66,4 @@
+       Internal (Get_Object (Combobox));
+    end Hide_Popdown_Window;
+ 
+-   ----------------
+-   -- Get_Button --
+-   ----------------
+-
+-   function Get_Button (Combobox : access Gtk_Combo_Box_Record)
+-                       return Gtk.Button.Gtk_Button
+-   is
+-      function Internal (Combobox : System.Address)
+-                        return System.Address;
+-      pragma Import (C, Internal, "ada_gtk_combo_box_get_button");
+-      Stub : Gtk.Button.Gtk_Button_Record;
+-   begin
+-      return Gtk.Button.Gtk_Button
+-        (Get_User_Data (Internal (Get_Object (Combobox)), Stub));
+-   end Get_Button;
+-
+-   ---------------
+-   -- Get_Arrow --
+-   ---------------
+-
+-   function Get_Arrow (Combobox : access Gtk_Combo_Box_Record)
+-                      return Gtk.Arrow.Gtk_Arrow
+-   is
+-      function Internal (Combobox : System.Address)
+-                        return System.Address;
+-      pragma Import (C, Internal, "ada_gtk_combo_box_get_arrow");
+-      Stub : Gtk.Arrow.Gtk_Arrow_Record;
+-   begin
+-      return Gtk.Arrow.Gtk_Arrow
+-        (Get_User_Data (Internal (Get_Object (Combobox)), Stub));
+-   end Get_Arrow;
+-
+-   ---------------
+-   -- Get_Frame --
+-   ---------------
+-
+-   function Get_Frame (Combobox : access Gtk_Combo_Box_Record)
+-                      return Gtk.Frame.Gtk_Frame
+-   is
+-      function Internal (Combobox : System.Address)
+-                        return System.Address;
+-      pragma Import (C, Internal, "ada_gtk_combo_box_get_frame");
+-      Stub : Gtk.Frame.Gtk_Frame_Record;
+-   begin
+-      return Gtk.Frame.Gtk_Frame
+-        (Get_User_Data (Internal (Get_Object (Combobox)), Stub));
+-   end Get_Frame;
+-
+ end Gtk.Extra.Combo_Box;
+diff -Naur GtkAda-2.2.1.orig/src/gtk-extra-combo_box.ads GtkAda-2.2.1/src/gtk-extra-combo_box.ads
+--- GtkAda-2.2.1.orig/src/gtk-extra-combo_box.ads	2004-08-02 10:45:17.028334336 +0200
++++ GtkAda-2.2.1/src/gtk-extra-combo_box.ads	2004-08-02 10:46:40.092706632 +0200
+@@ -62,20 +62,6 @@
+    --  Hide the popup window, release the mouse grabs, and restore the
+    --  default aspect for the arrow.
+ 
+-   function Get_Button (Combobox : access Gtk_Combo_Box_Record)
+-                       return Gtk.Button.Gtk_Button;
+-   --  Return the button that shows the value of the combo.
+-
+-   function Get_Arrow (Combobox : access Gtk_Combo_Box_Record)
+-                      return Gtk.Arrow.Gtk_Arrow;
+-   --  Return the arrow button.
+-   --  The user has to click on it to open the popup window.
+-
+-   function Get_Frame (Combobox : access Gtk_Combo_Box_Record)
+-                      return Gtk.Frame.Gtk_Frame;
+-   --  The frame displayed in the popup window.
+-   --  You should add whatever value the popup window should display in it.
+-
+    -------------
+    -- Signals --
+    -------------
+diff -Naur GtkAda-2.2.1.orig/src/gtkada-config.in GtkAda-2.2.1/src/gtkada-config.in
+--- GtkAda-2.2.1.orig/src/gtkada-config.in	2004-08-02 10:45:17.503262136 +0200
++++ GtkAda-2.2.1/src/gtkada-config.in	2004-08-02 10:48:26.000000000 +0200
+@@ -4,8 +4,8 @@
+ prefix=@prefix@
+ 
+ gtk_libs="@GTK_LIBS@"
+-gtkada_libs="-L$prefix/include/gtkada -L$prefix/lib"
+-gtkada_cflags="-I$prefix/include/gtkada"
++gtkada_libs="-L$prefix/lib/ada/adalib/gtkada -L$prefix/lib"
++gtkada_cflags="-I$prefix/lib/ada/adainclude/gtkada"
+ gtkada_lflags="-lgtkada"
+ 
+ usage()
+diff -Naur GtkAda-2.2.1.orig/src/misc_extra.c GtkAda-2.2.1/src/misc_extra.c
+--- GtkAda-2.2.1.orig/src/misc_extra.c	2004-08-02 10:45:17.000000000 +0200
++++ GtkAda-2.2.1/src/misc_extra.c	2004-08-02 10:45:30.899225640 +0200
+@@ -156,27 +156,6 @@
+ 
+ /********************************************************************
+  **
+- **  Gtk_Combo_Box widget
+- **
+- ********************************************************************/
+-
+-GtkWidget*
+-ada_gtk_combo_box_get_button (GtkComboBox* combo) {
+-  return combo->button;
+-}
+-
+-GtkWidget*
+-ada_gtk_combo_box_get_arrow (GtkComboBox* combo) {
+-  return combo->arrow;
+-}
+-
+-GtkWidget*
+-ada_gtk_combo_box_get_frame (GtkComboBox* combo) {
+-  return combo->frame;
+-}
+-
+-/********************************************************************
+- **
+  **  Gtk_Color_Combo widget
+  **
+  ********************************************************************/
+diff -Naur GtkAda-2.2.1.orig/testgtk/create_sheet.adb GtkAda-2.2.1/testgtk/create_sheet.adb
+--- GtkAda-2.2.1.orig/testgtk/create_sheet.adb	2004-08-02 10:45:17.634242224 +0200
++++ GtkAda-2.2.1/testgtk/create_sheet.adb	2004-08-02 11:29:58.335713656 +0200
+@@ -1362,7 +1362,6 @@
+ 
+       Gtk_New (Border_Combo);
+       Append_Widget (Toolbar, Border_Combo, "border", "border");
+-      Set_Usize (Get_Button (Border_Combo), 32, 32);
+       Widget_Handler.Connect
+         (Border_Combo, "changed",
+          Widget_Handler.To_Marshaller (Change_Border'Access));
+@@ -1478,7 +1477,6 @@
+                          Gdk.Color.Null_Color,
+                          Paint);
+       Gtk_New (Bg_Pixmap, Pixmap, Mask);
+-      Add (Get_Button (Bg_Color_Combo), Bg_Pixmap);
+ 
+       Create_From_Xpm_D (Pixmap,
+                          Gdk.Window.Null_Window,
+@@ -1487,7 +1485,6 @@
+                          Gdk.Color.Null_Color,
+                          Font);
+       Gtk_New (Fg_Pixmap, Pixmap, Mask);
+-      Add (Get_Button (Fg_Color_Combo), Fg_Pixmap);
+ 
+       Show_All (Frame);
+    end Run;
