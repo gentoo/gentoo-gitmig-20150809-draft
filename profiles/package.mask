@@ -49,11 +49,6 @@
 # Masked because we're not sure how legal this is yet.
 media-video/realone
 
-# <carpaski@gentoo.org> (11 Nov 2002)
-# Testing fixups for rescue portage (so 1.2 can install)
-# Should be good, but report all weird output and any tracebacks.
-=sys-apps/portage-2.0.44
-
 # <chadh@gentoo.org> (11 Nov 2002)
 # masking b/c it won't compile
 =sys-apps/pcmcia-cs-3.2.2
