@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1-r2.ebuild,v 1.1 2003/10/02 21:18:08 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1-r2.ebuild,v 1.2 2003/10/14 23:51:08 rac Exp $
 
 inherit eutils flag-o-matic
 
@@ -121,7 +121,19 @@ src_compile() {
 	fi
 	if [ "`use berkdb`" ]
 	then
-		myconf="${myconf} -Di_db -Di_ndbm"
+		myconf="${myconf} -Di_db"
+
+		# ndbm.h is only provided by db1 (and perhaps by gdbm in
+		# error). an alternate approach here would be to check for the
+		# presence (or some string therein) of /usr/include/ndbm.h
+		# itself.
+
+		if has_version '=sys-libs/db-1*'
+		then
+			myconf="${myconf} -Di_ndbm"
+		else
+			myconf="${myconf} -Ui_ndbm"
+		fi
 	else
 		myconf="${myconf} -Ui_db -Ui_ndbm"
 	fi
