@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r3.ebuild,v 1.3 2003/02/13 14:08:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r3.ebuild,v 1.4 2003/03/03 18:37:26 mholzer Exp $
 
-IUSE="nls perl"
+IUSE="nls perl spell"
 
 DESCRIPTION="GTK Instant Messenger client - CVS ebuild."
 HOMEPAGE="http://gaim.sourceforge.net/"
