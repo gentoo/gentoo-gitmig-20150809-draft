@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.8.7.ebuild,v 1.1 2002/07/23 19:12:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.8.7.ebuild,v 1.2 2002/07/26 07:46:49 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
@@ -85,6 +85,6 @@ pkg_postinst() {
 	usermod -s "/dev/null" snort || die "usermod problem"
 	echo "ignore any message about CREATE_HOME above..."
 
-	chown root.snort /var/log/snort
+	chown snort.snort /var/log/snort
 	chmod 0770 /var/log/snort
 }
