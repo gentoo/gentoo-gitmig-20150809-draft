@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmmsg
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.1 2003/04/15 17:11:19 liquidx Exp $
+
+*wmmsg-1.0 (15 Apr 2003)
+
+  15 Apr 2003; Alastair Tse <liquidx@gentoo.org> Manifest, wmmsg-1.0.ebuild:
+  initial ebuild. contributed by Susie Edgeworth <arienadean@yahoo.com>
+
