@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 3e030bf27869b357742a6bbd9b361e70 ChangeLog 553
 MD5 485d810c5b4093650889f342e814a887 Tie-Array-Sorted-1.2.ebuild 484
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 0068a334d8ced5defe132704a7461d9f ChangeLog 406
+MD5 403be6ec51b482466ddaf000cab1dcad Tie-Array-Sorted-1.3.ebuild 482
 MD5 b7cd867025a37ca11f8e17a17a827684 files/digest-Tie-Array-Sorted-1.2 70
+MD5 159aa2422d0fdbca4d4c872bbad4ce58 files/digest-Tie-Array-Sorted-1.3 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBZH0rtG5z4I8BtQoRAn6MAJ917W/GlG1om2l/GYmHftYUFWSKCACfVWEE
-Dz9qP75cXx1akSNPD9K7A1w=
-=ThNd
+iD8DBQFBgNACtG5z4I8BtQoRAo6QAJ9/izXQxxMW6wVIGWXewarQiikLAwCfaFed
+DyegkuGTXdH+hKXJ3KI3IF8=
+=WRy/
 -----END PGP SIGNATURE-----
