@@ -22,6 +22,11 @@
 ##
 
 
+# <mcummings@gentoo.org> (14 Sep 2002)
+# These should *never* have made it out
+=media-libs/libgd-2.0.1
+=dev-perl/GD-2.01
+
 # <murphy@gentoo.org> (14 Sep 2002)
 # Bugfix release, may resolve some issues on sparc64 but needs further testing
 # before full-scale deployment
