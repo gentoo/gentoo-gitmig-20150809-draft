@@ -3,5 +3,5 @@ MD5 5f2a77576a337e0766db82dc9e2c492a posadis-0.60.2.ebuild 1096
 MD5 0eaeba4c549cb993787c3b4135804f8a ChangeLog 1010
 MD5 9958987a590a5ac0b9919f1d15ef001e metadata.xml 542
 MD5 0334a4171851e1cf5520d5ea45cc3ee7 files/digest-posadis-0.60.4_p1 68
-MD5 8041c0349ff3f00e8121b5af6f993932 files/posadis-init 787
+MD5 0a55582952cc97087a3c87dfcb4d4eb7 files/posadis-init 781
 MD5 cb21a826267c4909cdf65a356eab70d6 files/digest-posadis-0.60.2 66
