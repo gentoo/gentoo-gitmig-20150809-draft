@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ghostview
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ChangeLog,v 1.8 2003/12/09 17:43:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ChangeLog,v 1.9 2004/02/23 14:50:26 bazik Exp $
+
+  23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> ghostview-1.5-r1.ebuild:
+  Stable on sparc.
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> ghostview-1.5-r1.ebuild,
   ghostview-1.5.ebuild:
