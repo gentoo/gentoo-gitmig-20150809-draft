@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/urlview-0.9.ebuild,v 1.12 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/urlview-0.9.ebuild,v 1.13 2003/10/19 01:06:41 pyrania Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="extracts urls from text and will send them to another app"
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 src_compile() {
+	epatch ${FILESDIR}/no-trailing-newline.patch
 
 	./configure \
 		--infodir=/usr/share/info \
@@ -22,12 +23,9 @@ src_compile() {
 		--host=${CHOST} || die "Configure Failed"
 
 	 emake || die "Parallel Make Failed"
-
 }
 
 src_install () {
-
-
 	dodir /usr/share/man/man1
 
 	make infodir=${D}/usr/share/info \
@@ -38,7 +36,6 @@ src_install () {
 
 	dodoc README INSTALL ChangeLog AUTHORS COPYING sample.urlview
 	dobin url_handler.sh
-
 }
 
 pkg_postinst() {
