@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+          <email>jmglov@gentoo.org</email>
+          <name>Josh Glover</name>
+  </maintainer>
+  <longdescription>online-bookmarks is a Bookmark management system to store your Bookmarks, Favorites and Links right in the WWW where they actually belong to. It is meant for people who work often with different computers and browsers.</longdescription>
+</pkgmetadata>
