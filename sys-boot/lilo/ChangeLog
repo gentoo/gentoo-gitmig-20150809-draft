@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.21 2004/09/06 18:17:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.22 2004/10/02 12:01:52 chainsaw Exp $
+
+*lilo-22.6 (02 Oct 2004)
+
+  02 Oct 2004; Tony Vroon <chainsaw@gentoo.org>
+  +files/lilo-22.6-correct-usage-info.patch,
+  +files/lilo-22.6-create-install-dirs.patch,
+  +files/lilo-22.6-devmapper_gentoo.patch, +lilo-22.6.ebuild:
+  Version bump to 22.6, several patches have been merged upstream, they have
+  been dropped.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> lilo-22.5.9-r2.ebuild:
   Switch to use epause and ebeep, bug #62950
