@@ -1,0 +1,11 @@
+--- configure.in	2003-11-09 11:23:11.000000000 +0000
++++ configure.in	2004-01-14 10:25:22.496984960 +0000
+@@ -232,7 +232,7 @@
+ AM_CONDITIONAL(plugins_splash_SUBDIR_included, test "x$plugins_splash_SUBDIR_included" = xyes)
+ AM_CONDITIONAL(plugins_transparent_SUBDIR_included, test "x$plugins_transparent_SUBDIR_included" = xyes)
+ AM_CONDITIONAL(plugins_update_SUBDIR_included, test "x$plugins_update_SUBDIR_included" = xyes)
+-AC_CONFIG_FILES([ ./Makefile ])
++AC_CONFIG_FILES([ Makefile ])
+ AC_CONFIG_FILES([ plugins/__homedir/Makefile ])
+ AC_CONFIG_FILES([ plugins/__migrate/Makefile ])
+ AC_CONFIG_FILES([ plugins/_core/Makefile ])

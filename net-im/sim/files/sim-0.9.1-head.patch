@@ -1,0 +1,24 @@
+diff -u /tmp/sim-0.9.1/acinclude.m4 ./acinclude.m4
+--- acinclude.m4	2003-11-09 11:21:12.000000000 +0000
++++ acinclude.m4	2004-01-14 10:26:13.979614455 +0000
+@@ -9625,7 +9625,7 @@
+       # If the export-symbols file already is a .def file (1st line
+       # is EXPORTS), use it as is.
+       # If DATA tags from a recent dlltool are present, honour them!
+-      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='if test "x`head -1 $export_symbols`" = xEXPORTS; then
++      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='if test "x`head -n 1 $export_symbols`" = xEXPORTS; then
+ 	  cp $export_symbols $output_objdir/$soname-def;
+ 	else
+ 	  echo EXPORTS > $output_objdir/$soname-def;
+diff -u /tmp/sim-0.9.1/aclocal.m4 ./aclocal.m4
+--- aclocal.m4	2003-11-09 11:23:25.000000000 +0000
++++ aclocal.m4	2004-01-14 10:26:06.646386026 +0000
+@@ -9582,7 +9582,7 @@
+       # If the export-symbols file already is a .def file (1st line
+       # is EXPORTS), use it as is.
+       # If DATA tags from a recent dlltool are present, honour them!
+-      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='if test "x`head -1 $export_symbols`" = xEXPORTS; then
++      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='if test "x`head -n 1 $export_symbols`" = xEXPORTS; then
+ 	  cp $export_symbols $output_objdir/$soname-def;
+ 	else
+ 	  echo EXPORTS > $output_objdir/$soname-def;

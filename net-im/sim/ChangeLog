@@ -1,6 +1,14 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.21 2004/01/14 09:38:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.22 2004/01/14 10:38:41 aliz Exp $
+
+  14 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> sim-0.9.1.ebuild:
+  Make it work regardless of automake version installed. Also unmask.
+
+*sim-0.9.2 (14 Nov 2003)
+
+  14 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> sim-0.9.2.ebuild:
+  Version bump. Closing #36845.
 
   14 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> sim-0.9.ebuild, sim-0.9.1.ebuild :
   Mask 0.9.1 becuse of masked dependencies and unmask 0.9, closing #38145.

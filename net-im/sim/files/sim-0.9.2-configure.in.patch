@@ -1,0 +1,11 @@
+--- configure.in	2003-12-24 19:10:59.000000000 +0000
++++ configure.in	2004-01-14 10:09:56.155803265 +0000
+@@ -266,7 +266,7 @@
+ AM_CONDITIONAL(plugins_transparent_SUBDIR_included, test "x$plugins_transparent_SUBDIR_included" = xyes)
+ AM_CONDITIONAL(plugins_update_SUBDIR_included, test "x$plugins_update_SUBDIR_included" = xyes)
+ AM_CONDITIONAL(plugins_zodiak_SUBDIR_included, test "x$plugins_zodiak_SUBDIR_included" = xyes)
+-AC_CONFIG_FILES([ ./Makefile ])
++AC_CONFIG_FILES([ Makefile ])
+ AC_CONFIG_FILES([ plugins/__homedir/Makefile ])
+ AC_CONFIG_FILES([ plugins/__migrate/Makefile ])
+ AC_CONFIG_FILES([ plugins/_core/Makefile ])
