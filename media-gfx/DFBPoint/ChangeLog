@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/DFBPoint
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+  09 Oct 2003; Brandy Westcott brandy@gentoo.org DFBPoint-0.7.2.ebuild,
+  metadata.xml:
+  Changed virtual/x11 dependency to virtual/glibc. We don't need X for DFBPoint.
+
   12 Jun 2003; <msterret@gentoo.org> DFBPoint-0.7.2.ebuild:
   add Header
 
