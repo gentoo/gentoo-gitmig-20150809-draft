@@ -65,3 +65,4 @@ move dev-java/javahelp dev-java/javahelp-bin
 move dev-java/jess dev-java/jess-bin
 move dev-java/jmf dev-java/jmf-bin
 move dev-java/jump dev-java/jump-bin
+move dev-java/maven dev-java/maven-bin
