@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.2 2004/12/27 13:01:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.3 2004/12/28 02:32:12 eradicator Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -195,11 +195,11 @@ src_compile() {
 
 	if use xv; then
 		if [ -f "${ROOT}/usr/$(get_libdir)/libXv.so" ]; then
-			myconf="${myconf} --enable-shared-xv --with-xv-path=${ROOT}/usr/$(get_libdir)"
+			myconf="${myconf} --with-xv-path=${ROOT}/usr/$(get_libdir)"
 		elif [ -f "${ROOT}/usr/$(get_libdir)/libXv.a" ]; then
 			myconf="${myconf} --enable-static-xv --with-xv-path=${ROOT}/usr/$(get_libdir)"
 		elif [ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXv.so" ]; then
-			myconf="${myconf} --enable-shared-xv --with-xv-path=${ROOT}/usr/X11R6/$(get_libdir)"
+			myconf="${myconf} --with-xv-path=${ROOT}/usr/X11R6/$(get_libdir)"
 		elif [ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXv.a" ]; then
 			myconf="${myconf} --enable-static-xv --with-xv-path=${ROOT}/usr/X11R6/$(get_libdir)"
 		else
@@ -214,7 +214,7 @@ src_compile() {
 		$(use_enable vidix) \
 		$(use_enable dxr3) \
 		$(use_with esd) --disable-esdtest \
-		$(use_enable alsa) --disable-alsatest \
+		$(use_enable alsa) \
 		$(use_with arts) --disable-artstest \
 		$(use_with aalib) \
 		$(use_with oggvorbis ogg) $(use_with oggvorbis vorbis) \
@@ -233,14 +233,13 @@ src_compile() {
 }
 
 src_install() {
-	# portage 2.0.50's einstall is broken for handling libdir
-	make DESTDIR=${D} install || die "Install failed"
+	make DESTDIR="${D}" install || die "Install failed"
 
 	# Xine's makefiles install some file incorrectly. (Gentoo bug #8583, #16112).
 	dodir /usr/share/xine/libxine1/fonts
 	mv ${D}/usr/share/*.xinefont.gz ${D}/usr/share/xine/libxine1/fonts/
 
-	dodoc AUTHORS ChangeLog INSTALL README TODO
+	dodoc AUTHORS ChangeLog README TODO
 	cd ${S}/doc
 	dodoc dataflow.dia README*
 }
