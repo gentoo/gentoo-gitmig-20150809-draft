@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/clisp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.29 2004/11/30 21:47:44 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.30 2005/01/02 07:33:19 mkennedy Exp $
+
+  02 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> clisp-2.33.2-r1.ebuild:
+  Provide virtual/commonlisp; Resolves Bug #75014
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> clisp-2.33.2-r1.ebuild:
   Fixed invalid atoms in *DEPEND.
