@@ -1,9 +1,19 @@
-MD5 850b0273ddfba1add2035925078eaae6 ChangeLog 1381
-MD5 1f7dee0f0d26d5bcec9c2f8538053206 accessx-0950-r1.ebuild 786
-MD5 1d87853c080e6061507d2850aeccd3bd accessx-0950.ebuild 669
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 749634ff56f26c656d85da5b5d5dc19b ChangeLog 1510
+MD5 0c5b126dff1d336b3f22a3e84a13312a accessx-0950-r1.ebuild 741
+MD5 c0c2a99ce785ffdb4c15c7b6056a5c69 accessx-0950.ebuild 624
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 130f296a56098913af3b95b98b72f6c1 accessx-0951.ebuild 684
+MD5 691c9026930aa146fcc81e6903a2b30a accessx-0951.ebuild 639
 MD5 07c27dbfdef1d506b42ec5a0cc0bc40c files/digest-accessx-0950-r1 62
 MD5 fc200d62091d4d1c4bcee5a5805b8b26 files/digest-accessx-0951 62
 MD5 fb7ad94abfb681ca6ba8d09e740339b2 files/access-gcc3-gentoo.patch 355
 MD5 07c27dbfdef1d506b42ec5a0cc0bc40c files/digest-accessx-0950 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBWn4RI7fK2cqeyXkRAr7vAKC7Noi0dklxJMM87j076XeefwnphQCfRW1T
+DjIiiCG6suqJT7E7JScqjY0=
+=Y5XE
+-----END PGP SIGNATURE-----

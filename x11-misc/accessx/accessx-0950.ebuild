@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# John Stalker <stalker@math.princeton.edu>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/accessx-0950.ebuild,v 1.12 2004/07/15 00:49:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/accessx-0950.ebuild,v 1.13 2004/09/29 09:20:27 pyrania Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Interface to the XKEYBOARD extension in X11"
