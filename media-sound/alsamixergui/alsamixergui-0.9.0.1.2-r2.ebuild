@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r2.ebuild,v 1.1 2003/01/03 01:39:46 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r2.ebuild,v 1.2 2003/01/17 22:21:11 vapier Exp $
+
+inherit eutils
 
 NATIVE_VER=0.9.0rc1-2
 S=${WORKDIR}/${PN}-${NATIVE_VER}
@@ -18,31 +20,21 @@ SLOT="0"
 KEYWORDS="~x86"
 LICENSE="GPL-2"
 
-inherit eutils
-
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/gentoo.diff
-
 }
 
 src_compile() {
-
 	export LDFLAGS="-L/usr/lib/fltk-1.1"
 	export CPPFLAGS="-I/usr/include/fltk-1.1" 
 
 	econf || die "configure failed"
-
 	emake || die "make failed"
-
 }
 
-src_install () {
-
+src_install() {
 	einstall || die
-
 	dodoc COPYING README AUTHORS ChangeLog
-
 }
