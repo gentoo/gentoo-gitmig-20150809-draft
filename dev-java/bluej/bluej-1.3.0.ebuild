@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej/bluej-1.3.0.ebuild,v 1.1 2003/10/10 22:48:46 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej/bluej-1.3.0.ebuild,v 1.2 2003/10/31 13:44:13 lanius Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.bluej.org"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND=">=virtual/jdk-1.4*"
 
@@ -45,7 +45,8 @@ src_install()
 	dobin ${FILESDIR}/bluej
 
 	dodir /etc
-	dosym /usr/share/bluej/lib/bluej.defs /etc/bluej.defs
+	mv ${D}/usr/share/bluej/lib/bluej.defs ${D}/etc
+	dosym /etc/bluej.defs /usr/share/bluej/lib/bluej.defs
 
 	if [ "`use doc`" ]; then
 		dodoc tutorial.pdf manual.pdf
