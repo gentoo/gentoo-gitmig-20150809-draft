@@ -141,7 +141,7 @@ mod_gzip_keep_workfiles       No
 
 # ---------------------------------------------------------------------
 # minimum size (in bytes) for files to be compressed
-mod_gzip_minimum_file_size    200
+mod_gzip_minimum_file_size    500
 # (for very small files compression will produce only small absolute gains
 #  [you will still save about 50% of the content, but some additional
 #  500 bytes of HTTP and TCP headers will always remain uncompressed],
@@ -284,8 +284,7 @@ mod_gzip_dechunk              Yes
 
 # ---------------------------------------------------------------------
 # Extended log format (for testing the compression effect)
-LogFormat                     "%h %l %u %t \"%V %r\" %<s %b mod_gzip: %{mod_gzip_result}n In:%{mod_gzip_input_size}n -<
-Out:%{mod_gzip_output_size}n = %{mod_gzip_compression_ratio}n pct." common_with_mod_gzip_info2
+LogFormat                     "%h %l %u %t \"%V %r\" %<s %b mod_gzip: %{mod_gzip_result}n In:%{mod_gzip_input_size}n -< Out:%{mod_gzip_output_size}n = %{mod_gzip_compression_ratio}n pct." common_with_mod_gzip_info2
 # ---------------------------------------------------------------------
 # Create additional log file
 CustomLog                     logs/mod_gzip.log common_with_mod_gzip_info2
