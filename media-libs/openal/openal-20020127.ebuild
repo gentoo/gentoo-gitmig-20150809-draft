@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.5 2002/08/14 13:08:10 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.6 2002/09/11 20:44:44 gerk Exp $
 
 LIBVER="0.0.6"
 
@@ -15,14 +15,14 @@ KEYWORDS="x86 sparc sparc64"
 
 # documentation doesn't say which versions are required...
 
-DEPEND="dev-lang/nasm
+DEPEND="x86? ( dev-lang/nasm )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
 	sdl? ( media-libs/libsdl )
 	oggvorbis? ( media-libs/libvorbis )
 	smpeg? ( media-libs/smpeg )"
-	
+RDEPEND=""	
 
 
 src_compile() {

@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.1 2002/04/13 12:20:37 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.2 2002/09/11 20:44:44 gerk Exp $
 
 *openal-20020127 (13 Apr 2002)
+
+  11 Sep 2002; Mark Guertin <gerk@gentoo.org> :
+  set nasm as x86 only dependancy
 
   13 Apr 2002; Bruce A. Locke <blocke@shivan.org> openal-20020127.ebuild :
 
