@@ -1,9 +1,13 @@
 # ChangeLog for dev-util/bitkeeper
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/ChangeLog,v 1.24 2004/08/21 19:36:25 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/ChangeLog,v 1.25 2004/09/04 12:09:52 spock Exp $
 
 # README: bitkeeper only offers the latest version of bitkeeper for download,
 # so we need to be all over marking new versions stable
+
+  04 Sep 2004; Michal Januszewski <spock@gentoo.org> bitkeeper-3.2.3.ebuild:
+  Removed the advice to run bk regression, as this is no longer supported with
+  this version of BK. Closes bug #62785.
 
   21 Aug 2004; Michal Januszewski <spock@gentoo.org> bitkeeper-3.2.3.ebuild:
   Updated digests for all files to match those found on bitmover.com. Added s390

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.2.3.ebuild,v 1.2 2004/08/21 19:36:25 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.2.3.ebuild,v 1.3 2004/09/04 12:09:52 spock Exp $
 
 DESCRIPTION="A scalable configuration management system"
 HOMEPAGE="http://www.bitkeeper.com/"
@@ -34,7 +34,6 @@ pkg_nofetch() {
 	einfo " - Check your email and visit the download location"
 	einfo " - Download ${A} and place it in ${DISTDIR}"
 	einfo " - emerge this package again"
-	einfo "Run 'bk regression' to verify the installation. (Recommended)"
 }
 
 src_unpack() {
