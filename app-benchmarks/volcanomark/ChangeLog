@@ -1,0 +1,11 @@
+# ChangeLog for app-benchmarks/volcanomark
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volcanomark/ChangeLog,v 1.1 2004/02/09 02:50:40 dragonheart Exp $
+
+*volcanomark-2.5.0.9 (09 Feb 2004)
+
+  09 Feb 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  volcanomark-2.5.0.9.ebuild:
+  Initial import. Thanks to Chris Aniszczyk <zx@mea-culpa.net> for doing the
+  ebuild. bug #40790
+
