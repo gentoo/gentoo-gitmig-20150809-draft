@@ -1,9 +1,9 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.49 2005/02/15 09:01:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.50 2005/02/16 18:20:51 eradicator Exp $
 
   15 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> gmp-4.1.4.ebuild:
-  Fix bug #79662.
+  Fix bug #79662.  Always apply ${ABI} patch, and always rerun autoreconf.
 
   15 Feb 2005; Daniel Black <dragonheart@gentoo.org> -files/longlong.patch,
   -files/randraw.c.41.diff, -gmp-4.1.2.ebuild, -gmp-4.1.3.ebuild,
