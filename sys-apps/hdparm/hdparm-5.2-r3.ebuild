@@ -29,10 +29,3 @@ src_install() {
 	dodoc hdparm.lsm Changelog README.acoustic hdparm-sysconfig
 }
 
-pkg_postinst() {
-	if [ "${ROOT}" = "/" ]
-	then
-		# this could cause problems on some systems
-		/sbin/rc-update add hdparm default
-	fi
-}
