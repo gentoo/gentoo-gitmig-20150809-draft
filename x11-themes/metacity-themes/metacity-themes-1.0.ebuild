@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.0.ebuild,v 1.4 2003/09/06 07:28:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.0.ebuild,v 1.5 2003/09/08 10:51:19 todd Exp $
 
 DESCRIPTION="Some nice themes for MetaCity"
 S=${WORKDIR}
@@ -39,7 +39,7 @@ RDEPEND="x11-wm/metacity"
 
 SLOT="1"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
 src_unpack() {
