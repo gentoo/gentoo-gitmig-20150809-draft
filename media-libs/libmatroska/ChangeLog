@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.22 2004/04/27 18:16:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.23 2004/05/27 19:16:51 avenj Exp $
+
+  27 Apr 2004; Jon Portnoy <avenj@gentoo.org> libmatroska-0.7.0.ebuild :
+  Stable on AMD64.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> libmatroska-0.5.2.ebuild,
   libmatroska-0.6.2.ebuild, libmatroska-0.6.3.ebuild,
