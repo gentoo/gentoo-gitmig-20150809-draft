@@ -1,15 +1,14 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/gimp-freetype-0.2-r3.ebuild,v 1.5 2003/09/06 23:56:38 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/gimp-freetype-0.2-r3.ebuild,v 1.6 2004/04/18 19:41:03 leonardop Exp $
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GIMP freetype text plugin"
 SRC_URI="http://freetype.gimp.org/${P}.tar.gz"
 HOMEPAGE="http://freetype.gimp.org/"
 
-SLOT="0"
+SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
