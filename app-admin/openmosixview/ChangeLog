@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/openmosixview
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/ChangeLog,v 1.11 2003/06/29 15:24:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/ChangeLog,v 1.12 2003/07/24 17:33:45 tantive Exp $
+
+*openmosixview-1.5 (24 Jul 2003)
+
+  24 Jul 2003; Michael Imhof <tantive@gentoo.org>
+  Version bumped.
 
 *openmosixview-1.4-r1 (08 May 2003)
 
