@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.2 2002/04/01 07:50:18 seemant Exp $
+
+*gtkhtml-1.0.2 (1 Apr 2002)
+
+  1 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gtkhtml-1.0.2.ebuild :
+
+  Version bump, and dependency clean up.  Now bonobo and gconf support are
+  compiled in based on the bonobo and gnome USE flags, respectively
 
 *gtkhtml-1.0.1 (1 Feb 2002)
 
