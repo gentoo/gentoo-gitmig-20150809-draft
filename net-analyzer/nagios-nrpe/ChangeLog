@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.3 2003/01/15 19:57:36 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.4 2003/02/10 05:44:18 alron Exp $
+
+*nagios-nrpe-1.8
+  09 Feb 2003; Dean Bailey <alron@gentoo.org> nagios-nrpe-1.8 :
+  Version bump
 
   15 Jan 2003; Dean Bailey <alron@gentoo.org> nagios-nrpe-1.7 :
   Changed ~x86 to x86 and added ~sparc and ~ppc keywords
