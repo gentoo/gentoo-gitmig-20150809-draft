@@ -1,4 +1,14 @@
-MD5 fbc6cf4d6d3cdcbf22352ccd28398c5b ksimus-floatingpoint-0.3.6.ebuild 572
-MD5 f10b12612d937eb3dbad8bbdcea7d9d0 ChangeLog 843
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6669e0d581ba3954208ecbbb4f692c1c ksimus-floatingpoint-0.3.6.ebuild 580
+MD5 c055055cef0bb42c166585961867ba7f ChangeLog 1097
 MD5 c000c0728c9136f1b54cbc3a5fc07644 metadata.xml 220
 MD5 16a06645b5b19dfee76ddb72fa997fb3 files/digest-ksimus-floatingpoint-0.3.6 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0b+YI1lqEGTUzyQRAroUAJ9VjC3HOd08Jm2rpEVh4e/8MBqnawCgqBSO
+WNPCgM/gQzKNFG0KpmNn2VQ=
+=VQdu
+-----END PGP SIGNATURE-----

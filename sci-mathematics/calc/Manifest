@@ -1,6 +1,16 @@
-MD5 034b32ebc1301127ef29a19076550a2f ChangeLog 981
-MD5 6c88949bf12e51e5cda8882de4437f4b calc-2.11.9.3.ebuild 996
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 909067ce0e0b9afaaa6f7b8c9be6d9be calc-2.11.10.1.ebuild 1007
+MD5 fba6fa289a1a0a7dc83e0189f80514f3 ChangeLog 1198
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 272db5eaee620f89da0073476f156438 calc-2.11.10.1.ebuild 998
-MD5 aedaccd22126ab6a17ed25191a32325d files/digest-calc-2.11.9.3 65
+MD5 a5d9c391732b9ad93ee5bd7905175b4d calc-2.11.9.3.ebuild 1005
 MD5 b25b154cc59b2f742c8a23d1cee01783 files/digest-calc-2.11.10.1 66
+MD5 aedaccd22126ab6a17ed25191a32325d files/digest-calc-2.11.9.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0bxDI1lqEGTUzyQRAnD4AJ9pOQMXCgVA4OOrM6k3MKDHlYbAowCgocfK
+lu2hVaA9r1fW10jX2yRo9OA=
+=/NLq
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 1b22e4e4c8eacefafada315ca9c97676 ksimus-datarecorder-0.3.6.ebuild 564
-MD5 d2f2c4d1ecd20b4bd04e3c1cf9e0142c ChangeLog 835
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b27fd6f2f13fe118d9c4f713e9ecb889 ksimus-datarecorder-0.3.6.ebuild 572
+MD5 c4181d28973d3eff7a85a2c82074d3d8 ChangeLog 1083
 MD5 c000c0728c9136f1b54cbc3a5fc07644 metadata.xml 220
 MD5 2aba03df1bd1b4ffdd8e552a327de184 files/digest-ksimus-datarecorder-0.3.6 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0b7gI1lqEGTUzyQRApnBAKCGglNwXAg81tml0W5uMAVpeZSX6wCgnPUP
+LSIFkf7+8BjLd/x8CDeaR+4=
+=SH8Q
+-----END PGP SIGNATURE-----

@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f29f9b1ea2905311faca663de0e294e7 mathomatic-11.1c.ebuild 1107
+MD5 58e3f72eb4d43110a6dd46872f364803 ChangeLog 839
 MD5 3abf3c126ea8c41fa253de334525981d metadata.xml 454
-MD5 f9df943a5e3506e4401d16665e52313c ChangeLog 591
-MD5 eaa4e196d369426ec6a47f5e77514b9c mathomatic-11.1c.ebuild 1097
-MD5 29133f46e7d703ecfcbc9a083f272147 files/digest-mathomatic-11.1c 65
 MD5 f7d0b9c7af7201990a0beeadca7abf3f files/gentoo-mathomatic-11.1c.diff 957
+MD5 29133f46e7d703ecfcbc9a083f272147 files/digest-mathomatic-11.1c 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0cBaI1lqEGTUzyQRAmsmAJ9hBX2tfeQmBBFhy3l6eLtS+78TOACfXyMP
+fzlnnzMnOJpIYTvy1qjET5g=
+=becO
+-----END PGP SIGNATURE-----
