@@ -1190,16 +1190,17 @@ def init():
 		root="/"
 	elif root[-1]!="/":
 		root=root+"/"
-	if not os.path.exists(root[:-1]):
-		print "!!! Error: ROOT",root[:-1],"does not exist.  Please correct this."
-		print "!!! Exiting."
-		print
-		sys.exit(1)
-	elif not os.path.isdir(root[:-1]):
-		print "!!! Error: ROOT",root[:-1],"is not a directory.  Please correct this."
-		print "!!! Exiting."
-		print
-		sys.exit(1)
+	if root != "/":
+		if not os.path.exists(root[:-1]):
+			print "!!! Error: ROOT",root,"does not exist.  Please correct this."
+			print "!!! Exiting."
+			print
+			sys.exit(1)
+		elif not os.path.isdir(root[:-1]):
+			print "!!! Error: ROOT",root[:-1],"is not a directory.  Please correct this."
+			print "!!! Exiting."
+			print
+			sys.exit(1)
 	ERRPKG=""
 	ERRVER=""
 	installcache=None
