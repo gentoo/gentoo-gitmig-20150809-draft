@@ -2,5 +2,7 @@ MD5 a9505607a8f6c3c9d77a150a977369b4 ChangeLog 753
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 2aeb1a3868f0ba83128057b6426dc62e zoomwin-11.ebuild 869
 MD5 0558a5a9fad712eeb6be84b2a7428091 zoomwin-15.ebuild 969
+MD5 0ab95b2df0f330c6870a67fbfa475e23 zoomwin-16.ebuild 871
 MD5 60e0ddb30742beb199d86c4e508df128 files/digest-zoomwin-11 61
 MD5 8b592adf8037f426fce3e5bc603000d9 files/digest-zoomwin-15 61
+MD5 6747c0dd76fc64bdf172638ec10aeb2e files/digest-zoomwin-16 61

@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/zoomwin
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.4 2003/12/19 19:48:21 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.5 2003/12/23 16:43:44 ciaranm Exp $
+
+*zoomwin-16 (23 Dec 2003)
+
+  23 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> zoomwin-16.ebuild:
+  Version bump
 
 *zoomwin-15 (19 Dec 2003)
 
