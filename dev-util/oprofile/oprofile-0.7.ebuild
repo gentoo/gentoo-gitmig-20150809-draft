@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.7.ebuild,v 1.2 2003/10/24 05:10:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.7.ebuild,v 1.3 2003/11/12 19:32:08 cretin Exp $
 
 DESCRIPTION="A transparent low-overhead system-wide profiler"
 HOMEPAGE="http://oprofile.sourceforge.net"
@@ -21,6 +21,8 @@ src_compile() {
 	check_KV
 
 	local myconf=""
+
+	use qt ||  myconf="${myconf} --with-qt-dir=/void"
 
 	myconf="${myconf} --with-x"
 	# note: compilation has only been tested with a 2.4 kernel
