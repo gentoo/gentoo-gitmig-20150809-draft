@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/libevocosm
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevocosm/ChangeLog,v 1.1 2004/05/07 17:15:41 aliz Exp $
+
+*libevocosm-2.5.2 (07 May 2004)
+
+  07 May 2004; Daniel Ahlberg <aliz@gentoo.org> libevocosm-2.5.2.ebuild:
+  Initial import.
+
