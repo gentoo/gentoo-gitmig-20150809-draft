@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.8.1.ebuild,v 1.9 2005/01/08 23:35:00 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.8.1.ebuild,v 1.10 2005/01/22 07:17:19 vapier Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2.2"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 ~mips ~ppc64 ~arm"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 ~mips ~ppc64 arm"
 IUSE="doc"
 
 RDEPEND=">=x11-libs/gtk+-2.4
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-

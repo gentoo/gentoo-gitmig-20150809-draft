@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.8.0.ebuild,v 1.9 2005/01/08 23:35:38 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.8.0.ebuild,v 1.10 2005/01/22 07:19:12 vapier Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 ~mips ~ppc64 ~arm"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.3.2
