@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/pmake
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.6 2003/10/02 18:24:20 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.7 2004/01/15 05:20:23 avenj Exp $
+
+  15 Jan 2004; Jon Portnoy <avenj@gentoo.org> pmake-1.45-r2.ebuild :
+  Stable on AMD64.
 
   02 Oct 2003; Brad House <brad_mssw@gentoo.org> pmake-1.45-r2.ebuild:
   make pmake build on amd64. patch from russ@zerotech.net
