@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.11 2003/11/26 19:20:13 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.12 2003/11/27 06:37:20 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -62,7 +62,7 @@ function webapp-determine-htdocsdir ()
 	# temporary fix for webapps
 	HTTPD_ROOT="/var/www/localhost/htdocs/"
 	keepdir "$HTTPD_ROOT"
-	fowners "$HTTPD_USER"."$HTTPD_GROUP" "$HTTPD_ROOT"
+	fowners "$HTTPD_USER":"$HTTPD_GROUP" "$HTTPD_ROOT"
 	fperms 755 "$HTTPD_ROOT"
 }
 
