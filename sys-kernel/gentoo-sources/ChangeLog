@@ -1,6 +1,57 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.12 2002/12/18 00:12:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.13 2003/01/12 19:20:36 lostlogic Exp $
+
+*gentoo-sources-2.4.20-r1 (12 Jan 2003)
+
+  Ebuild Changes
+  * Drop gcc-3.1 patch if not on gcc3
+  * Also make prettier output for the USE var controlled
+    patches
+
+  Features of this kernel:
+  * Based heavily on ck-sources-2.4.20-r2 (linux-2.4.20-ck2)
+
+    From CK:
+  * O(1) Scheduler
+  * Low-latency scheduling
+  * Preempt
+  * Read-latency 2
+  * Reverse mapping VM
+  * Supermount
+  * ACPI update
+  * Variable HZ (automatically tuned afaik)
+
+    From elsewhere:
+  * 3.5G Address space
+  * xattr+acl support
+  * TIOCGDEV support
+  * Grsecurity-1.9.8-rc2
+  * ACLs for JFS
+  * Optimizations for GCC3 compilation
+  * EVMS 1.2.1
+  * Additional Tekram SCSI Support
+  * KT400 pci.ids thanks to viz
+  * NTFS-tng 2.10a
+  * Support for the ECC driver
+  * Video 4 Linux v2 API
+  * MPPE support
+  * i2c-2.7.0
+  * Inode Monitor support
+  * Support for kernel config on /proc/config
+  * Updated support for aic7xxx SCSI cards
+  * Ext3 data=journal fix.
+  * Fix for 3c509
+  * Synced with almost all of the iptables patch-o-matic base
+  * XFS optional useflag with a warning about JFS
+    xfs+quota-v2+kdb support many thanks to dragon
+  * Encrypted loopback support (loop-jari)
+  * CryptoAPI support from www.kerneli.org
+  * Super Free S/WAN
+  * Quick bugfixes
+  * Defconfig with some reasonable stuff for this kernel
+    on gentoo
+  * Gentoo fb-logos
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
