@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nam
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/ChangeLog,v 1.4 2004/07/11 10:25:18 eldad Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/ChangeLog,v 1.5 2005/02/13 22:27:04 robbat2 Exp $
+
+  13 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Add myself to metadata.
 
   11 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml, nam-1.10.ebuild:
   Tidy up, added debug to IUSE

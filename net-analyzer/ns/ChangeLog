@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ns
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.13 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.14 2005/02/13 22:25:49 robbat2 Exp $
+
+  13 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Add myself to metadata.
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> ns-2.27-r1.ebuild:
   changed net-libs/libpcap depend to virtual/libcap
