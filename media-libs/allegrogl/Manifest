@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 de758fb1c4a6b0693527aca5a768e794 allegrogl-0.2.4.ebuild 814
+MD5 4b4fb5af670073a845b06f9f6b1ab5ba allegrogl-0.2.4.ebuild 812
 MD5 53af262e4f37342eda46d02e0812d5d5 metadata.xml 177
-MD5 86e1b5d35f95f87e21fbb1626930107f ChangeLog 476
+MD5 b75b963ba9ec478912efb564623d2ca6 ChangeLog 581
 MD5 39449cb54f8d5aff983b9097e2d0814f files/digest-allegrogl-0.2.4 65
 MD5 dacf42be4a9438d5d2c300e36d07dbad files/allegrogl-0.2.4-destdir.patch 4903
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBb5tRArHZZzCEUG0RAunkAJoCVEsw0Nw0RPqGGkttOn4ioz/xCACffBIX
-RWN3Ew1NYQ9noBGyGZacraQ=
-=n2OL
+iD8DBQFBm87dArHZZzCEUG0RAvSuAKCDX1Tyg6K8ZuuL7SpFEGF3yAPC7wCfe8eV
+kecIKzc2TDahwNmeaHRUYtM=
+=WXyg
 -----END PGP SIGNATURE-----

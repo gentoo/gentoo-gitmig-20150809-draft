@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegrogl
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/ChangeLog,v 1.1 2004/10/15 09:40:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/ChangeLog,v 1.2 2004/11/17 22:21:07 eradicator Exp $
+
+  17 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  allegrogl-0.2.4.ebuild:
+  Stable amd64, x86.
 
 *allegrogl-0.2.4 (15 Oct 2004)
 
