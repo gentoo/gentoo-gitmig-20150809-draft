@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/wmtimer
+# Copyright 2001-2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wmtimer/ChangeLog,v 1.1 2002/08/12 09:02:38 cybersystem Exp $
+
+* wmtimer-2.4 (12 August 2002)
+
+  12 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, wmtimer-2.4.ebuild, files/digest-wmtimer-2.4 :
+ 
+  Initial version in Portage now..
+  Initial ebuild by Amit Pansare <amittp@yahoo.com>..
