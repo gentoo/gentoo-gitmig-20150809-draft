@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/exiftags
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/ChangeLog,v 1.2 2004/03/30 12:10:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/ChangeLog,v 1.3 2004/06/16 17:30:40 liquidx Exp $
+
+*exiftags-0.99.1 (16 Jun 2004)
+
+  16 Jun 2004; Alastair Tse <liquidx@gentoo.org> +exiftags-0.99.1.ebuild:
+  version bump, thanks to Scott Shawcroft <shux_linux@comcast.net> (#53153)
 
   30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> exiftags-0.97.ebuild:
   Adding amd64 keyword. Closing #45583.
