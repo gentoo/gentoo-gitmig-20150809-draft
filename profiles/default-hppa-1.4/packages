@@ -51,7 +51,6 @@
 *sys-apps/diffutils
 *sys-fs/e2fsprogs
 *sys-apps/ed
-*sys-apps/fbset
 *sys-apps/file
 *sys-apps/fileutils
 *sys-apps/findutils
@@ -61,7 +60,6 @@
 *sys-apps/groff
 *virtual/bootloader
 *app-arch/gzip
-*sys-apps/hdparm
 *sys-apps/less
 *sys-apps/man
 *sys-apps/man-pages
