@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.7 2004/12/01 05:55:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.8 2004/12/08 01:20:35 robbat2 Exp $
 
 inherit mount-boot eutils flag-o-matic gcc gnuconfig toolchain-funcs
 
@@ -53,8 +53,8 @@ src_compile() {
 	[ `gcc-major-version` -eq 3 ] && append-flags -minline-all-stringops
 	use static && append-ldflags -static
 
-	has_pie && CC="${tc-getCC} `test_flag -fno-pic` `test_flag -nopie`"
-	has_ssp && CC="${tc-getCC} `test_flag -fno-stack-protector`"
+	has_pie && CC="$(tc-getCC) `test_flag -fno-pic` `test_flag -nopie`"
+	has_ssp && CC="$(tc-getCC) `test_flag -fno-stack-protector`"
 
 	autoconf || die "autoconf failed"
 	aclocal || die "aclocal failed"
