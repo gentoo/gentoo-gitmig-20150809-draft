@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.17-r1.ebuild,v 1.1 2004/07/21 02:56:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.17-r1.ebuild,v 1.2 2004/07/21 15:54:32 robbat2 Exp $
 
 inherit eutils gnuconfig
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~s390"
 IUSE=""
 
-DEPEND=">=sys-libs/ncurses-5.2
-	>=sys-libs/readline-4.1"
+RDEPEND=">=sys-libs/ncurses-5.2 >=sys-libs/readline-4.1"
+DEPEND="${RDEPEND} sys-devel/automake"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.14 2004/07/21 02:56:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.15 2004/07/21 15:54:32 robbat2 Exp $
+
+  21 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> devtodo-0.1.17-r1.ebuild:
+  fix deps.
 
 *devtodo-0.1.17-r1 (20 Jul 2004)
 
