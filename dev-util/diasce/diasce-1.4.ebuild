@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.7 2004/08/13 11:44:23 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.8 2004/08/21 16:16:23 foser Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	has_version '>=ORBit2-2.8.0' && epatch ${FILESDIR}/${P}-linc.patch.tar.bz2
+	has_version '>=orbit/orbit-2.8.0' && epatch ${FILESDIR}/${P}-linc.patch.tar.bz2
 }
 
 src_compile() {
