@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/palo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.2 2003/04/04 10:46:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.3 2003/04/15 00:47:52 gmsoft Exp $
 
 *hppa-headers-2.4.20_p32 (03 Apr 2003)
+
+  15 Apr 2003; Guy Martin <gmsoft@gentoo.org> hppa-headers-2.4.20_p32.ebuild :
+  Removed inherit eutils since it cause patch to be in DEPEND and epatch was not used.
 
   04 Apr 2003; Guy Martin <gmsoft@gentoo.org> hppa-headers-2.4.20_p32.ebuild :
   Corrected EXTRAVERSION. Added regeneration of offset.h. Done some cleanup.
