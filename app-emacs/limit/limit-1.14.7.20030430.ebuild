@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.7.20030430.ebuild,v 1.1 2003/07/24 15:55:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.7.20030430.ebuild,v 1.2 2003/08/13 07:10:14 usata Exp $
 
 inherit elisp
 
@@ -8,17 +8,18 @@ IUSE=""
 
 DESCRIPTION="LIMIT - Library about Internet Message, for IT generation"
 HOMEPAGE="http://pure.fan.gr.jp/simm/?MyWorks"
-SRC_URI="http://dev.gentoo.org/~usata/distfiles/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	http://dev.gentoo.org/~usata/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~sparc ~ppc"
+KEYWORDS="x86 alpha ~sparc ~ppc"
 
 DEPEND="virtual/emacs
 	>=app-emacs/apel-10.3
 	!virtual/flim"
 
-PROVIDE="virtual/flim-1.14"
+PROVIDE="virtual/flim"
 
 S=${WORKDIR}/flim
 SITEFILE=60flim-gentoo.el
