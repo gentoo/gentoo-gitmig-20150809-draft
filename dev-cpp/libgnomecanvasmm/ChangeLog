@@ -1,8 +1,8 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.1 2003/06/20 23:44:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.2 2003/07/11 20:49:57 aliz Exp $
 
-*libgnomecanvas-2.0.0 (22 Dec 2002)
+*libgnomecanvasmm-2.0.0 (22 Dec 2002)
 
   22 Dec 2002; foser <foser@gentoo.org> libgnomecanvas-2.0.0.ebuild :
   new version, first stable gnome2 release
