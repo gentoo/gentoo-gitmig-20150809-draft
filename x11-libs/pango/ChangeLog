@@ -1,8 +1,8 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for x11-libs/pango
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.1 2002/04/12 16:39:17 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.2 2002/04/13 08:19:55 spider Exp $
 
-*pango-1.0.1-r1.ebuild ( 11 Apr 2002)
-  11 Apr 2002; Spider <spider@gentoo.org>
+*pango-1.0.1-r1 (11 Apr 2002)
+  11 Apr 2002; Spider <spider@gentoo.org>; pango-1.0.1-r1.ebuild
    adding pango 1.0.1 into portage
    USE="doc" will install extra documentation about the api's for your pleasure

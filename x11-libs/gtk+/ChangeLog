@@ -1,15 +1,21 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.7 2002/04/12 19:12:03 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.8 2002/04/13 08:18:39 spider Exp $
+
+*gtk+-2.0.2-r2 (12 Apr 2002)
+  12 Apr 2002; Spider <spider@gentoo.org>; gtk+-2.0.2-r2.ebuild: 
+  Update so a user can disable png, jpeg, tiff support for gtk+
+  This will so break things if they disable it though ;)
 
 
-  11 Apr 2002; Spider <spider@gentoo.org>
+gtk+-2.0.2-r1
+  11 Apr 2002; Spider <spider@gentoo.org>; gtk+-1.2.10-r4.ebuild gtk+-1.2.10-r5.ebuild gtk+-1.2.10-r6.ebuild gtk+-1.2.10-r7.ebuild gtk+-2.0.2-r1.ebuild :
   Update all glib dependencies to use glib-1.2*  in preparation of
 unmasking the glib-2.0.1 packages
 
 
 *gtk+-2.0.2 (11 Apr 2002)
-  11 Apr 2002; Spider <spider@gentoo.org> gtk+-2.0.2-r1.ebuild:
+  11 Apr 2002; Spider <spider@gentoo.org>; gtk+-2.0.2-r1.ebuild:
   New release with new api
   USE="doc" will build api documentation
   needs libpng 1.2.1 and is masked because of that.
