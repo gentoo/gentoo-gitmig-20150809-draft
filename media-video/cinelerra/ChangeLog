@@ -1,6 +1,12 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.5 2003/02/12 07:37:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.6 2003/05/04 14:15:59 lu_zero Exp $
+
+*cinelerra-1.1.5 (4 Mar 2003)
+
+  4 Mar 2003; Luca Barbato <lu_zero@gentoo.org> cinelerra-1.1.5.ebuild,
+  files/digest-cinelerra-1.1.5 files/compile-1.1.5.diff :
+  New ebuild. Builds for me.
 
 *cinelerra-110802 (25 Nov 2002)
 
