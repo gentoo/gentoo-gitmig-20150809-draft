@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.66 2004/11/03 20:42:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.67 2004/11/17 13:48:26 lanius Exp $
+
+*mc-4.6.0-r12 (17 Nov 2004)
+
+  17 Nov 2004; <heino@gentoo.org> -mc-4.5.55-r7.ebuild, -mc-4.6.0-r10.ebuild,
+  +mc-4.6.0-r12.ebuild, -mc-4.6.0-r5.ebuild, -mc-4.6.0-r7.ebuild,
+  -mc-4.6.0-r9.ebuild:
+  fix segfault if no TERM is given, bug #67530
 
   03 Nov 2004; Markus Rothe <corsair@gentoo.org> mc-4.6.0-r11.ebuild:
   Stable on ppc64

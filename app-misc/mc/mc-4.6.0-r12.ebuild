@@ -1,45 +1,52 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r7.ebuild,v 1.9 2004/09/23 04:42:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r12.ebuild,v 1.1 2004/11/17 13:48:26 lanius Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="GNU Midnight Commander cli-based file manager"
 HOMEPAGE="http://www.ibiblio.org/mc/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${P}.tar.gz
-	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib-3.0.0-r1.patch.bz2
-	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib.patch.bz2"
+	http://www.spock.mga.com.pl/public/gentoo/${P}-sambalib-3.0.0.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc sparc x86"
-IUSE="gpm nls samba ncurses X slang"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE="gpm nls samba ncurses X slang unicode"
+
+PROVIDE="virtual/editor"
 
 DEPEND=">=sys-fs/e2fsprogs-1.19
 	ncurses? ( >=sys-libs/ncurses-5.2-r5 )
 	=dev-libs/glib-2*
-	>=sys-libs/pam-0.72
+	pam? ( >=sys-libs/pam-0.72 )
 	gpm? ( >=sys-libs/gpm-1.19.3 )
-	slang? ( >=sys-libs/slang-1.4.2 )
-	samba? ( net-fs/samba )
+	slang? ( >=sys-libs/slang-1.4.9-r1 )
+	samba? ( >=net-fs/samba-3.0.0 )
+	unicode? ( >=sys-libs/slang-1.4.9-r1 )
 	X? ( virtual/x11 )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 
-	has_version '>=net-fs/samba-3.0.0' \
-		&& epatch ${DISTDIR}/${P}-sambalib-3.0.0-r1.patch.bz2
-	has_version '<net-fs/samba-3.0.0' \
-		&& epatch ${DISTDIR}/${P}-sambalib.patch.bz2
+	epatch ${DISTDIR}/${P}-sambalib-3.0.0.patch.bz2
 
 	epatch ${FILESDIR}/${P}-find.patch
 	epatch ${FILESDIR}/${P}-cpan-2003-1023.patch
 	epatch ${FILESDIR}/${P}-can-2004-0226-0231-0232.patch.bz2
 	epatch ${FILESDIR}/${P}-vfs.patch
+	epatch ${FILESDIR}/${P}-ftp.patch
+	epatch ${FILESDIR}/${P}-largefile.patch
+	epatch ${FILESDIR}/${P}-key.c.patch
+
+	if use unicode && use slang; then
+		epatch ${FILESDIR}/${P}-utf8.patch.bz2
+	fi
 }
 
 src_compile() {
+	append-flags -I/usr/include/gssapi
 	filter-flags -malign-double
 
 	local myconf=""
@@ -82,10 +89,18 @@ src_install() {
 
 	einstall || die
 
+	# install cons.saver setuid, to actually work
+	chmod u+s ${D}/usr/lib/mc/cons.saver
+
 	dodoc ChangeLog AUTHORS MAINTAINERS FAQ INSTALL* NEWS README*
 
 	insinto /usr/share/mc
 	doins ${FILESDIR}/mc.gentoo
+
+	insinto /usr/share/mc/syntax
+	doins ${FILESDIR}/ebuild.syntax
+	cd ${D}/usr/share/mc/syntax
+	epatch ${FILESDIR}/${P}-ebuild-syntax.patch
 }
 
 pkg_postinst() {
