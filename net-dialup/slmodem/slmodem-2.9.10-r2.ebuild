@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r2.ebuild,v 1.2 2004/12/14 18:21:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r2.ebuild,v 1.3 2004/12/14 19:03:02 mrness Exp $
 
 inherit eutils linux-info
 
@@ -65,6 +65,7 @@ src_install() {
 	dosbin modem/slmodemd
 	dodir /var/lib/slmodem
 	fowners root:dialout /var/lib/slmodem
+	keepdir /var/lib/slmodem
 
 	dodoc COPYING Changes README
 

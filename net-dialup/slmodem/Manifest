@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 df3112dbcbe0b01f1bdb850cbf766624 ChangeLog 7881
 MD5 93dd8a9d0c0f815e8445d9f0c1fc0910 metadata.xml 578
 MD5 af384e4b91c105bbdc4837764112e3d7 slmodem-2.9.10-r1.ebuild 3969
-MD5 2474f61ea743d5e8a59d8ce672631b0f slmodem-2.9.10-r2.ebuild 3869
+MD5 01f2c169679deeeb649a179a0bfba4f1 slmodem-2.9.10-r2.ebuild 3895
 MD5 ccc7e1460f0678c4e3e8b8c3747834a5 files/digest-slmodem-2.9.10-r1 66
 MD5 67543ad2e41e6dbc2150057340bb82b1 files/slmodem-2.9.conf 752
 MD5 c80ecf5c3d5605220e4b0055850260a5 files/slmodem-2.9.devfs 786
@@ -16,7 +16,7 @@ MD5 ccc7e1460f0678c4e3e8b8c3747834a5 files/digest-slmodem-2.9.10-r2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBvy8cjtv59x0+BrURAkBdAKDvvZkOojAIZmjixK1iNTm43jrBfACgx3Uw
-VGdjVUFyndwqcfp1vwjZDbA=
-=kC0y
+iD8DBQFBvzjvjtv59x0+BrURAnvoAKD2qbbkuQFeKMYMC0NysgqXN6RRRQCgq4+Z
+t+S+nhbAkBQJMKvFVo/oqZw=
+=agkB
 -----END PGP SIGNATURE-----
