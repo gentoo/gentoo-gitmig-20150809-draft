@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 54d81dd16e0c02c28e5421069078ff93 ChangeLog 16590
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b47c69f9c6bd04f1e45909a9795a8b43 util-linux-2.12i-r1.ebuild 3677
-MD5 a0be96a857d9199eaf630c2fa90acef9 util-linux-2.12p.ebuild 4312
+MD5 2cd295fed52bcfef7a27d58ef3910216 util-linux-2.12p.ebuild 4313
 MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
 MD5 6aa1c240dd789327ea92e36309052950 files/no-symlink-resolve.patch 316
 MD5 a43d2b8c70c5f40a195721dc536abace files/util-linux-2.12-swapon-unistd.patch 289
@@ -28,7 +28,7 @@ MD5 cfa3960fd97ca16c85b0d1b87e6ba226 files/digest-util-linux-2.12i-r1 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB5G5groRuSHgZdywRAsnLAJ9WNKT+L/slxelNRJynTT8L2xMQCgCfV2xO
-fMuZAcRFrhcH1pXGIeyyNAg=
-=Y07Z
+iD8DBQFB5oVProRuSHgZdywRArMoAJ9sGEwxYoUtmGOUH7esdZGZmoYI8gCfU3OO
+N3QXPtnjWoFGWiCILZBMGJI=
+=CUfy
 -----END PGP SIGNATURE-----
