@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/canna-cannadic-0.95a.ebuild,v 1.2 2003/11/10 14:15:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/canna-cannadic-0.95a.ebuild,v 1.3 2004/03/19 11:23:21 usata Exp $
 
 inherit cannadic
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 
-DEPEND="canna? ( >=canna-3.6_p3-r1 )"
+DEPEND="canna? ( >=app-i18n/canna-3.6_p3-r1 )"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/canna-cannadic
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.6 2003/11/10 14:15:34 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.7 2004/03/19 11:23:21 usata Exp $
+
+  19 Mar 2004; Mamoru KOMACHI,c10344,, <usata@gentoo.org>
+  canna-cannadic-0.94h.ebuild, canna-cannadic-0.95-r1.ebuild,
+  canna-cannadic-0.95.ebuild, canna-cannadic-0.95a.ebuild:
+  Fixed DEPEND. See bug #45110
 
 *canna-cannadic-0.95a (22 Sep 2003)
 
