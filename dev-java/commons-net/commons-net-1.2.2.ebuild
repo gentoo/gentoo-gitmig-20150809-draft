@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.2.2.ebuild,v 1.10 2004/10/16 17:08:56 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.2.2.ebuild,v 1.11 2005/01/01 18:19:04 eradicator Exp $
 
 inherit eutils java-pkg
 

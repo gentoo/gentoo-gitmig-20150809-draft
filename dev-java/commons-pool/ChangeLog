@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/commons-pool
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.19 2004/11/30 21:32:46 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.20 2005/01/01 18:19:18 eradicator Exp $
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> commons-pool-1.1.ebuild,
   commons-pool-1.2.ebuild:

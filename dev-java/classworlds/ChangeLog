@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/classworlds
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/ChangeLog,v 1.10 2004/10/19 20:46:24 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/ChangeLog,v 1.11 2005/01/01 18:13:35 eradicator Exp $
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   classworlds-1.0-r2.ebuild:

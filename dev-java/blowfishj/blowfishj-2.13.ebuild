@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.13.ebuild,v 1.1 2004/11/12 00:18:45 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.13.ebuild,v 1.2 2005/01/01 18:11:42 eradicator Exp $
 
 inherit java-pkg
 

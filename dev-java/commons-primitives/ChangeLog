@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/commons-primitives
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.7 2004/10/19 20:25:29 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.8 2005/01/01 18:19:34 eradicator Exp $
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   commons-primitives-1.0.ebuild:

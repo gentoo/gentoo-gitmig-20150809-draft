@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/gnu-classpath-inetlib
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.9 2004/10/20 07:01:40 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.10 2005/01/01 18:25:42 eradicator Exp $
 
 *gnu-classpath-inetlib-1.1 (20 Oct 2004)
 

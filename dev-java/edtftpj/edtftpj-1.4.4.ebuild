@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.4.4.ebuild,v 1.2 2004/10/29 12:47:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.4.4.ebuild,v 1.3 2005/01/01 18:23:41 eradicator Exp $
 
 inherit java-pkg
 

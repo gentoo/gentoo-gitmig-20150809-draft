@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.2-r6.ebuild,v 1.4 2004/12/18 09:37:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.2-r6.ebuild,v 1.5 2005/01/01 18:06:43 eradicator Exp $
 
 DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files."
 HOMEPAGE="http://ant.apache.org/"

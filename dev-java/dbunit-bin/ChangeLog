@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/dbunit-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit-bin/ChangeLog,v 1.6 2004/10/22 10:55:26 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit-bin/ChangeLog,v 1.7 2005/01/01 18:22:59 eradicator Exp $
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> dbunit-bin-2.0.ebuild,
   dbunit-bin-2.1.ebuild:

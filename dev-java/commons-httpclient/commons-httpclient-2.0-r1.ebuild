@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0-r1.ebuild,v 1.6 2004/12/24 22:54:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0-r1.ebuild,v 1.7 2005/01/01 18:17:33 eradicator Exp $
 
 inherit java-pkg eutils
 

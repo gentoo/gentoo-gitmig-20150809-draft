@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta1-r1.ebuild,v 1.3 2004/10/19 20:13:58 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta1-r1.ebuild,v 1.4 2005/01/01 18:06:55 eradicator Exp $
 
 inherit java-pkg
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/asm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.13 2004/12/21 17:37:37 karltk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.14 2005/01/01 18:08:22 eradicator Exp $
 
 *asm-1.5.2 (24 Nov 2004)
 

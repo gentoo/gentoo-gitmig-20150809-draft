@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/c3p0
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.9 2004/12/27 20:45:47 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.10 2005/01/01 18:12:38 eradicator Exp $
 
   27 Dec 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.

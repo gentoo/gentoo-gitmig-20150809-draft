@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/antlr
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.23 2004/12/18 09:17:20 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.24 2005/01/01 18:07:24 eradicator Exp $
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> antlr-2.7.4.ebuild:
   added ~ppc64 to KEYWORDS and gnuconfig_update

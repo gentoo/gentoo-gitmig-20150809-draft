@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/charva
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.7 2004/10/19 20:35:42 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.8 2005/01/01 18:13:22 eradicator Exp $
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> charva-1.0.1.ebuild:
   Keywords ~amd64.

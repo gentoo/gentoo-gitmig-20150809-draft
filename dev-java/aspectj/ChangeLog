@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/aspectj
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.9 2004/12/28 19:55:50 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.10 2005/01/01 18:08:34 eradicator Exp $
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> aspectj-1.2.ebuild:
   Stable on amd64.

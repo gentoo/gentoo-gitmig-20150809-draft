@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/bcel
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.23 2004/12/30 15:35:17 karltk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.24 2005/01/01 18:09:57 eradicator Exp $
 
   30 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   +files/bcel-5.1-gentoo-buildxml.diff, +files/bcel-5.1-gentoo-src.diff,

@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/dom4j
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.16 2004/10/17 08:59:46 axxo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.17 2005/01/01 18:23:15 eradicator Exp $
 
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> dom4j-1.5.ebuild:

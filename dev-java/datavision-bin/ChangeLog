@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/datavision-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision-bin/ChangeLog,v 1.4 2004/11/30 21:37:26 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision-bin/ChangeLog,v 1.5 2005/01/01 18:22:31 eradicator Exp $
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org>
   datavision-bin-0.8.1-r1.ebuild, datavision-bin-0.8.1.ebuild:

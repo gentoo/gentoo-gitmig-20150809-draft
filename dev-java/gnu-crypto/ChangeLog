@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/gnu-crypto
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.7 2004/10/20 07:02:13 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.8 2005/01/01 18:25:54 eradicator Exp $
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> gnu-crypto-2.0.1.ebuild:
   Keywords ~amd64.

@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/commons-beanutils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.16 2004/12/18 09:33:34 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.17 2005/01/01 18:14:25 eradicator Exp $
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org>
   commons-beanutils-1.7.0.ebuild:

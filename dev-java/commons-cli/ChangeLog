@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/commons-cli
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.15 2004/12/18 09:39:23 corsair Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.16 2005/01/01 18:14:39 eradicator Exp $
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> commons-cli-1.0-r4.ebuild:
   added ~ppc64 to KEYWORDS

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/connectorj/connectorj-3.0.15.ebuild,v 1.3 2004/10/22 10:54:04 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/connectorj/connectorj-3.0.15.ebuild,v 1.4 2005/01/01 18:20:50 eradicator Exp $
 
 inherit java-pkg
 

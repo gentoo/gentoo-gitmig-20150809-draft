@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cvslib-bin/cvslib-bin-3.6.ebuild,v 1.2 2004/10/16 17:10:32 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cvslib-bin/cvslib-bin-3.6.ebuild,v 1.3 2005/01/01 18:22:04 eradicator Exp $
 
 inherit java-pkg
 
