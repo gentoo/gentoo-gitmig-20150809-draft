@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.35 2003/07/14 15:24:50 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.36 2003/08/24 17:31:11 obz Exp $
+
+  25 Aug 2003; Mike Gardiner <obz@gentoo.org> file-roller-2.2.5.ebuild:
+  Moved to stable on x86
 
   14 Jul 2003; Todd Sunderlin <todd@gentoo.org> file-roller-2.2.2.ebuild:
   set stable on sparc
