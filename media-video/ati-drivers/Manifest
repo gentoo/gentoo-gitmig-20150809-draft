@@ -5,7 +5,7 @@ MD5 bbfbe3e9a6f59a6ea05794ebfef8d638 ati-drivers-8.10.19.ebuild 5648
 MD5 375a467b7a4e36edf6514421f8f64694 ati-drivers-3.11.1.ebuild 4772
 MD5 897d558fbabf5f0fb60c833a326eea6b ati-drivers-3.9.0.ebuild 4123
 MD5 d73ae47566be08fd04b3c11deba4261c ati-drivers-3.9.0-r1.ebuild 4511
-MD5 9893d58d5b2ae2addc6b37cef0c5758a ChangeLog 12891
+MD5 c8b31236ae33fc3758ebf99c737cbbd4 ChangeLog 13085
 MD5 a6f870cc41fb1a75a94e93539a8b8ff4 ati-drivers-3.14.1.ebuild 4346
 MD5 7d92c5a2ea96597e36804d1de46c831d ati-drivers-3.14.6.ebuild 4523
 MD5 3a2987cd761df4062f8427ae695f10db ati-drivers-8.8.25-r3.ebuild 5752
@@ -28,7 +28,7 @@ MD5 ca4e8654e3b880025b10ac15d2dbff41 files/fglrx-2.6-iminor.patch 847
 MD5 8dfc593069132b05be220d12a24697b4 files/fglrx-3.9.0-allocation.patch 946
 MD5 6ef03b4b2627a76f3893ce9a94d1ce56 files/fglrx-2.6-get-page.patch 1172
 MD5 0283465e3554a1316b63c1483abefdd6 files/fglrx-2.6-amd-adv-spec-fix.patch 1096
-MD5 e8a60db759c1f7acdd2b9559242ff7f7 files/fglrx-2.6-pagetable.patch 5027
+MD5 b79b5bec09b9f6951afc98e0d659fefe files/fglrx-2.6-pagetable.patch 5027
 MD5 918b182a2d40bf073127838d769e1fa5 files/digest-ati-drivers-3.9.0 72
 MD5 3c7b079f100d7796b44af7288f044730 files/digest-ati-drivers-8.8.25 75
 MD5 2a93df06be0a03b771e0e980b37f7d7a files/3.2.5-linux-2.6.0-test6-mm.patch 309

@@ -38,7 +38,7 @@
      }
      /*  locate medium level page table (x86 => nop) */
 +#if LINUX_VERSION_CODE > 0x02060a	/* KERNEL_VERSION(2,6,10) */
-+    pud_p = pud_offset(pgd,p, pte_linear);
++    pud_p = pud_offset(pgd_p, pte_linear);
 +    pmd_p = pmd_offset(pud_p, pte_linear);
 +#else
      pmd_p = pmd_offset(pgd_p, pte_linear);
