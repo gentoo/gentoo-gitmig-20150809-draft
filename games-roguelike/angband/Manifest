@@ -1,4 +1,4 @@
-MD5 f5ebb0577b16352805aac188d8b4afdf ChangeLog 832
-MD5 46ddc4dac30ab3c7f116401e89ff1ffd angband-3.0.3.ebuild 1110
-MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 166bf6a071476d096a14cc12f5c634f9 files/digest-angband-3.0.3 66
+MD5 0c95892c238fc439741cf7c5a232edb9 angband-3.0.3.ebuild 1102
+MD5 f5ebb0577b16352805aac188d8b4afdf ChangeLog 832
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
