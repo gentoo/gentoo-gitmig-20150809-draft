@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/tuareg-mode
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.6 2004/05/01 16:04:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.7 2004/05/02 13:29:51 mattam Exp $
+
+*tuareg-mode-1.41.5 (02 May 2004)
+
+  02 May 2004; Matthieu Sozeau <mattam@gentoo.org> tuareg-mode-1.40.5.ebuild,
+  tuareg-mode-1.41.2.ebuild, tuareg-mode-1.41.4-r1.ebuild,
+  tuareg-mode-1.41.4.ebuild, tuareg-mode-1.41.5.ebuild,
+  files/50tuareg-mode-gentoo.el, files/50tuareg-mode.el:
+  Remove old versions, move 1.41.4 to stable with bug #49684 fixed,
+  and add new version 1.41.5.
 
   01 May 2004; Jason Wever <weeve@gentoo.org> tuareg-mode-1.41.4.ebuild:
   Added ~sparc keyword to fix bug #49467.
