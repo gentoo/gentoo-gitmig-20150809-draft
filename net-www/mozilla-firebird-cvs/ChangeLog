@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firebird-cvs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/ChangeLog,v 1.4 2003/07/03 18:01:01 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/ChangeLog,v 1.5 2003/07/20 03:43:32 brad Exp $
+
+  19 Jul 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-cvs-0.6-r2.ebuild:
+  Dont build chatzilla and other bloat - also fix -ffast-math issues.
 
 *mozilla-firebird-cvs-0.6-r2 (03 Jul 2003)
 
@@ -36,7 +39,7 @@
   30 Mar 2003; phoen][x <phoenix@gentoo.org>; phoenix-cvs-0.5-r2.ebuild,
   files/digest-phoenix-cvs-0.5-r2, files/phoenix:
   Seth asked me to take a look into -r1. I cleaned up a few things:
-  - Added the missing $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/ChangeLog,v 1.4 2003/07/03 18:01:01 brad Exp $
+  - Added the missing $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/ChangeLog,v 1.5 2003/07/20 03:43:32 brad Exp $
   - made ebuild use flag-o-matic over ${CFLAGS//}
   - made ebuild use nsplugins.eclass for easy plugin integration
   TODO:

@@ -1,14 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/mozilla-firebird-cvs-0.6-r2.ebuild,v 1.1 2003/07/03 18:01:01 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/mozilla-firebird-cvs-0.6-r2.ebuild,v 1.2 2003/07/20 03:43:32 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
 # Added to get phoenix to compile on sparc.
 replace-sparc64-flags
-
-EMVER="0.65.2"
-IPCVER="1.0.0.1"
 
 MY_PN=${PN/-cvs/}
 MY_PV1=${PV/_}
@@ -101,7 +98,9 @@ src_compile() {
       --enable-xterm-updates \
       --disable-ldap \
       --disable-toolkit-qt \
-      --disable-toolkit-xlib"
+      --disable-toolkit-xlib \
+      --enable-extensions=default,-inspector,-irc,-venkman,-content-packs,-help"
+
 
     if [ -n "`use gtk2`" ] ; then
         myconf="${myconf} --enable-toolkit-gtk2 \
