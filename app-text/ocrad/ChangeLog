@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ocrad
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.1 2004/03/12 18:08:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.2 2004/03/18 15:48:08 dholm Exp $
+
+  18 Mar 2004; David Holm <dholm@gentoo.org> ocrad-0.7.ebuild:
+  Added to ~ppc.
 
 *ocrad-0.7 (13 Mar 2004)
 
