@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.0.ebuild,v 1.1 2001/04/20 20:17:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.0.ebuild,v 1.2 2001/04/27 23:03:01 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Samba :)"
@@ -31,7 +31,7 @@ src_compile() {
   try LDFLAGS="-lncurses" ./configure --prefix=/usr \
 	--sysconfdir=/etc/smb --localstatedir=/var/log --libdir=/etc/smb --sbindir=/usr/sbin \
 	--without-automount --with-utmp --without-sambabook --with-netatalk --with-smbmount \
-	--with-privatedir=/etc/smb/private --with-msdfs --with-vfs --with-spinlocks --with-lockdir=/var/lock --with-swatdir=/usr/share/swat \
+	--with-privatedir=/etc/smb/private --with-msdfs --with-vfs --with-spinlocks --with-lockdir=/var/run/smb --with-swatdir=/usr/share/swat \
 	--with-mandir=/usr/share/man ${myconf}
   try make
 }
@@ -43,7 +43,7 @@ src_install() {
 	dodir /usr/share/swat
 	dodir /usr/share/doc/${P}/html/book
 	dodir /var/log
-	dodir /var/lock
+	dodir /var/run/smb
 	try make install prefix=${D}/usr BASEDIR=${D}/usr LIBDIR=${D}/etc/smb VARDIR=${D}/var/log \
 		PRIVATEDIR=${D}/etc/smb/private SWATDIR=${D}/usr/share/swat \
 		LOCKDIR=${D}/var/lock SBINDIR=${D}/usr/sbin MANDIR=${D}/usr/share/man
