@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netscape-communicator/netscape-communicator-4.80.ebuild,v 1.1 2005/03/15 20:05:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netscape-communicator/netscape-communicator-4.80.ebuild,v 1.2 2005/03/15 20:09:45 seemant Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ LICENSE="NETSCAPE"
 
 DEPEND="virtual/libc"
 RDEPEND=">=sys-libs/lib-compat-1.0
-	!net-www/netscape-navigator"
+	!www-client/netscape-navigator"
 
 src_install() {
 	dodir /opt/netscape
