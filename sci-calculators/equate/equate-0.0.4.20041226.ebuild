@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/equate/equate-0.0.4.20041208.ebuild,v 1.1 2004/12/24 14:50:48 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/equate/equate-0.0.4.20041226.ebuild,v 1.1 2004/12/26 22:35:09 vapier Exp $
 
 inherit enlightenment
 
