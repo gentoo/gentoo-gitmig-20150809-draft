@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.147 2005/01/22 12:34:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.148 2005/01/22 23:46:20 kugelfang Exp $
+
+  22 Jan 2005; Danny van Dyk <kugelfang@gentoo.org>
+  kdegraphics-3.2.3-r4.ebuild:
+  Marked amd64 wrt Security BUG #78619.
 
   22 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
   kdegraphics-3.2.3-r4.ebuild:
