@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.2 2005/02/23 12:31:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.3 2005/02/24 13:51:36 wolf31o2 Exp $
 
 inherit games
 
@@ -31,7 +31,7 @@ check_dvd() {
 	# a DVD or from multiple CDs.  Anyone feel free to submit patches to this
 	# to bugs.gentoo.org as I know it is a very ugly hack.
 	USE_DVD=
-    USE_ECE_DVD=
+	USE_ECE_DVD=
 	if [ -n "${CD_ROOT}" ]
 	then
 		[ -d "${CD_ROOT}/CD1" ] && USE_DVD=1
