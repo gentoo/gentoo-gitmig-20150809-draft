@@ -3,4 +3,4 @@ MD5 84f0b1613e1e4b19d9bb87e1c91bdf57 /files/2.0/orion.conf 1488
 MD5 505b060a732a04db676a559e6cbe2b1f /files/2.0/orion.init 648
 MD5 e023a3294d09619cd929dc0fdf865956 /files/2.0/start_orion.sh 327
 MD5 abd7c855a9b9601253916624d6f0e782 /files/2.0/2.0-gentoo.patch 5301
-MD5 e8f06ebfe9adc610da09369d92dd1e97 /orion-2.0.ebuild 4136
+MD5 10d3477608dea99d75bb8b8c0b3698b3 /orion-2.0.ebuild 4145

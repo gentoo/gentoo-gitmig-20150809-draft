@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.7 2003/04/05 02:27:04 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.8 2003/04/06 08:52:22 absinthe Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -10,7 +10,7 @@ JAVA_HOME=`java-config --jdk-home`
 DESCRIPTION="Orion EJB/J2EE application webserver"
 SRC_URI=""
 HOMEPAGE="http://www.orionserver.com/"
-KEYWORDS="~x86"
+KEYWORDS="x86 ppc sparc"
 LICENSE="ORIONSERVER"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.3

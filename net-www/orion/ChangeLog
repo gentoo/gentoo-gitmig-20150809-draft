@@ -1,8 +1,11 @@
 # ChangeLog for net-www/orion
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.7 2003/04/05 02:01:29 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.8 2003/04/06 08:52:22 absinthe Exp $
 
 *orion-2.0 (21 Mar 2003)
+
+  06 Apr 2003; Dylan Carlson <absinthe@gentoo.org> orion-2.0.ebuild:
+  x86 ppc sparc moved to stable.
 
   03 Apr 2003; Dylan Carlson <absinthe@gentoo.org> files/2.0/orion.conf:
   Fix to orion.conf to automatically pull system JVM by default.
