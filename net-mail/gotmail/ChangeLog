@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/gotmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.11 2003/02/12 08:11:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.12 2003/03/14 01:28:32 g2boojum Exp $
+
+*gotmail-0.7.9 (13 Mar 2003)
+
+  13 Mar 2003; Grant Goodyear <g2boojum@gentoo.org> gotmail-0.7.4.ebuild,
+  gotmail-0.7.4.ebuild, gotmail-0.7.7.ebuild, gotmail-0.7.7.ebuild,
+  gotmail-0.7.9.ebuild:
+  New version because MS broke all old versions.  Removed old (now broken)
+  versions.
 
 *gotmail-0.7.7 (14 Jan 2003)
 
