@@ -15,7 +15,7 @@ MD5 66549f879e2d904a11e8e139b7dc0447 files/xmms-nptl.patch 1163
 MD5 3268d7f38e954fd7ab541fa9e6f385ca files/digest-xmms-1.2.7-r20 130
 MD5 3268d7f38e954fd7ab541fa9e6f385ca files/digest-xmms-1.2.7-r23 130
 MD5 3268d7f38e954fd7ab541fa9e6f385ca files/digest-xmms-1.2.7-r25 130
-MD5 44b34b658060aab9f3511f2568009589 files/xmms-1.2.8-russian-charset-csa20.patch 412787
+MD5 78e980a08fc7d0f3f41aa1382105fbfa files/xmms-1.2.8-russian-charset-csa20.patch 413464
 MD5 798b63afe378c0df771078a9b3fcc5c6 files/xmms-1.2.8-random.patch 1293
 MD5 6361ee5e5b5402155308b62a1d1fde9a files/xmms-sigterm.patch 1002
 MD5 2b20eda67dba56621f05441eaa0ffab8 files/xmms-jump.patch 3013
