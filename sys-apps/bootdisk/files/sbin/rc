@@ -5,9 +5,9 @@ cd /
 echo "Setting Hostname (gentoo-box)"
 /bin/hostname gentoo-box
 /bin/umount -n /initrd
-/bin/mount /initrd/proc
-/bin/mount /initrd/dev/pts
+/bin/mount /proc
 /bin/mount -o remount /
 /bin/mount -o remount /initrd
+/bin/mount /dev/pts
 
 

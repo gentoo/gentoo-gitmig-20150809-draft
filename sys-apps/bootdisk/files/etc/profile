@@ -1,0 +1,5 @@
+alias d="ls --color"
+alias ll="ls --color -l"
+
+export PS1='\[\033[01;34;40m\]\W > \[\033[00m\]'
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin
