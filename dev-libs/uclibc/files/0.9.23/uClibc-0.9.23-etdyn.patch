@@ -1,6 +1,6 @@
 diff -Nru uClibc-0.9.23/libc/misc/internals/Makefile uClibc-0.9.23-etdyn/libc/misc/internals/Makefile
 --- uClibc-0.9.23/libc/misc/internals/Makefile	2003-10-18 06:18:58.000000000 -0400
-+++ uClibc-0.9.23-etdyn/libc/misc/internals/Makefile	2003-11-15 18:56:41.000000000 -0500
++++ uClibc-0.9.23-etdyn/libc/misc/internals/Makefile	2003-11-21 00:51:26.000000000 -0500
 @@ -47,6 +47,7 @@
  interp.o: interp.c
  	$(CC) $(CFLAGS) -c $< -o $@
@@ -11,7 +11,7 @@ diff -Nru uClibc-0.9.23/libc/misc/internals/Makefile uClibc-0.9.23-etdyn/libc/mi
  	$(CC) $(CFLAGS) -c $< -o $@
 diff -Nru uClibc-0.9.23/libc/sysdeps/linux/i386/Makefile uClibc-0.9.23-etdyn/libc/sysdeps/linux/i386/Makefile
 --- uClibc-0.9.23/libc/sysdeps/linux/i386/Makefile	2003-11-08 16:21:19.000000000 -0500
-+++ uClibc-0.9.23-etdyn/libc/sysdeps/linux/i386/Makefile	2003-11-15 18:56:41.000000000 -0500
++++ uClibc-0.9.23-etdyn/libc/sysdeps/linux/i386/Makefile	2003-11-21 00:51:26.000000000 -0500
 @@ -25,6 +25,9 @@
  CRT0_DEPS=gmon-start.S
  CTOR_TARGETS=$(TOPDIR)lib/crti.o $(TOPDIR)lib/crtn.o
@@ -49,8 +49,8 @@ diff -Nru uClibc-0.9.23/libc/sysdeps/linux/i386/Makefile uClibc-0.9.23-etdyn/lib
  	$(STRIPTOOL) -x -R .note -R .comment $*.o
 diff -Nru uClibc-0.9.23/libc/sysdeps/linux/i386/crt0S.S uClibc-0.9.23-etdyn/libc/sysdeps/linux/i386/crt0S.S
 --- uClibc-0.9.23/libc/sysdeps/linux/i386/crt0S.S	1969-12-31 19:00:00.000000000 -0500
-+++ uClibc-0.9.23-etdyn/libc/sysdeps/linux/i386/crt0S.S	2003-11-15 19:01:04.000000000 -0500
-@@ -0,0 +1,116 @@
++++ uClibc-0.9.23-etdyn/libc/sysdeps/linux/i386/crt0S.S	2003-11-21 00:53:58.000000000 -0500
+@@ -0,0 +1,113 @@
 +/* Copyright (C) 1991, 1992 Free Software Foundation, Inc.
 +This file is part of the GNU C Library.
 +
@@ -71,7 +71,9 @@ diff -Nru uClibc-0.9.23/libc/sysdeps/linux/i386/crt0S.S uClibc-0.9.23-etdyn/libc
 +
 +
 +/*  Based on the code from GNU libc, but hacked up by John Beppu and Erik Andersen */
-+/*  crt0.S adapted by Pax Team for ET_DYN binaries */
++/*  crt0S.S adapted by the Pax Team, solar@gentoo,org, Peter S. Mazinger
++ *  for ET_DYN executable shared objects binaries 
++ */
 +
 +/*
 +    When we enter this piece of code, the program stack looks like this:
@@ -144,26 +146,21 @@ diff -Nru uClibc-0.9.23/libc/sysdeps/linux/i386/crt0S.S uClibc-0.9.23-etdyn/libc
 +	pushl %ecx	/* And the argument count */
 +
 +	/* Ok, now run uClibc's main() -- shouldn't return */
-+	pushl .hlt@GOT(%edx)
-+	pushl __uClibc_start_main@GOT(%edx)
-+	ret
++	call *__uClibc_start_main@GOT(%edx)
 +#else
-+	/* Push envp, argc, and argc arguments to __uClibc_start_main() on the stack */ 
++	/* Push envp, argc, and argc arguments to __uClibc_main() on the stack */
 +	pushl %eax	/* Environment pointer */
 +	pushl %ebx	/* Argument pointer */
 +	pushl %ecx	/* And the argument count */
 +
-+	pushl .hlt@GOT(%edx)
-+	pushl __uClibc_main@GOT(%edx)
-+	ret
++	call *__uClibc_main@GOT(%edx)
 +#endif
 +
 +	/* Crash if somehow `exit' returns anyways.  */
 +	hlt
 +.size _start,.-_start
 +
-+/* We disable profiling in crt0S.S, because it introduces text relocations.
-+#if defined L_gcrt1 && defined __UCLIBC_PROFILING__
++/* We disable profiling in crt0S.S, because it introduces text relocations. */
++#if 0 && defined L_gcrt1 && defined __UCLIBC_PROFILING__
 +# include "./gmon-start.S"
 +#endif
-+*/
