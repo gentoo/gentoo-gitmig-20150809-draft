@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r2.ebuild,v 1.1 2004/10/20 17:35:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r2.ebuild,v 1.2 2004/10/23 00:23:47 vapier Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -105,6 +105,8 @@ src_install() {
 		for x in * ; do
 			[ "${x/${CTARGET}}" != "${x}" ] && mv "${x}" "${x/${CTARGET}-}"
 		done
+
+		rm -rf "${D}"/usr/share/{locale,doc,man,info}
 
 		dodir /usr/include
 	else

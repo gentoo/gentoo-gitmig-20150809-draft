@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 f3472d881eb2f7607e6f0285f96b66d6 ChangeLog 36571
-MD5 734a6694cef96d6cd65fcf1e5689a2cd binutils-2.15.92.0.2-r2.ebuild 4473
+MD5 a787d70bd778e8d91ff88ba57952b21d binutils-2.15.92.0.2-r2.ebuild 4522
 MD5 f88f8dfe3428f94d7d0f159f25be6fce binutils-2.14.90.0.6-r6.ebuild 6574
 MD5 91dd2a38d81c3197b8d9b322c28b5172 binutils-2.14.90.0.6-r7.ebuild 6699
 MD5 bd18572159248b6accc7f931e72c2087 binutils-2.15.90.0.1.1-r1.ebuild 4716
@@ -87,7 +87,7 @@ MD5 8f619fc0c409a5ba768f126f172ee6bc files/2.15/05_all_binutils-2.15-elf32-arm-t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBdqIOHTu7gpaalycRAt+XAKC3IuYatqzOXu6CCtZ3CAxdjLv98QCgoQef
-1wrr+fBYIe+UlCEsorOpRbA=
-=iRBh
+iD8DBQFBeaSxHTu7gpaalycRAnWdAKDINnWTX2GJNqXmpEND2Y4jR/KWhgCg8bN3
+V28U+DTdIG5V8JVhUhBPaBk=
+=cLWY
 -----END PGP SIGNATURE-----
