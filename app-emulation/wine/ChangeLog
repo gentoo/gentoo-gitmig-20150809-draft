@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.73 2004/07/08 14:25:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.74 2004/07/08 14:33:53 mholzer Exp $
+
+  08 Jul 2004; Martin Holzer <mholzer@gentoo.org> wine-20040121.ebuild,
+  wine-20040213.ebuild, wine-20040309.ebuild, wine-20040408-r1.ebuild,
+  wine-20040408.ebuild, wine-20040505.ebuild, wine-20040615.ebuild:
+  changing license to lgpl-2.1 closes 55433
 
 *wine-20040615 (08 Jul 2004)
 
