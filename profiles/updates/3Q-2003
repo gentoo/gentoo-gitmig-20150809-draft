@@ -453,3 +453,11 @@ move app-games/xgalaga games-arcade/xgalaga
 move app-games/xkobo games-arcade/xkobo
 move app-games/xrick games-arcade/xrick
 move app-games/xtux games-arcade/xtux
+move app-games/billardgl games-sports/billardgl
+move app-games/foobillard games-sports/foobillard
+move app-games/gracer games-sports/gracer
+move app-games/race games-sports/race
+move app-games/racer-bin games-sports/racer-bin
+move app-games/soccar games-sports/soccar
+move app-games/torcs games-sports/torcs
+move app-games/trophy games-sports/trophy
