@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.ebuild,v 1.15 2005/01/23 05:17:54 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.ebuild,v 1.16 2005/02/03 18:10:52 solar Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 	# ccc binary in their PATH.  Bug #41908  (26 Jul 2004 agriffis)
 	epatch ${FILESDIR}/lame-3.96-ccc.patch
 	autoconf || die
+	epunt_cxx # embedded bug #74498
 }
 
 src_compile() {
