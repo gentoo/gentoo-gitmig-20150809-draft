@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/pyopenal-0.1.3.ebuild,v 1.1 2003/12/21 16:31:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/pyopenal-0.1.3.ebuild,v 1.2 2004/03/06 15:10:50 kloeri Exp $
 
 inherit distutils
 
@@ -24,3 +24,7 @@ DEPEND=">=dev-lang/python-2.2.2
 
 S=${WORKDIR}/${MY_P}
 
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/pyopenal-1.3.patch
+}

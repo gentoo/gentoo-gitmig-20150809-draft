@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopenal
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/ChangeLog,v 1.4 2003/12/21 16:31:23 kloeri Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/ChangeLog,v 1.5 2004/03/06 15:10:50 kloeri Exp $
+
+  06 Mar 2004; <kloeri@gentoo.org> pyopenal-0.1.3.ebuild,
+  files/pyopenal-1.3.patch:
+  Add patch for bug #43768.
 
 *pyopenal-0.1.3 (21 Dec 2003)
 
