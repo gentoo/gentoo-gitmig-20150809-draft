@@ -1,14 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r2.ebuild,v 1.5 2003/02/14 00:51:00 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r2.ebuild,v 1.6 2003/03/07 23:25:49 agenkin Exp $ 
 
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
 inherit libtool || die "I lost my inheritance"
 
 # this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
-inherit flag-o-matic  || die "I lost my inheritance"											   
+inherit flag-o-matic  || die "I lost my inheritance"
 filter-flags "-maltivec -mabi=altivec" 
+replace-flags k6-3 i686
+replace-flags k6-2 i686
+replace-flags k6   i686
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
