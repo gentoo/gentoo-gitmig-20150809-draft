@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5.ebuild,v 1.1 2004/05/31 16:35:27 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5.ebuild,v 1.2 2004/05/31 22:30:35 mholzer Exp $
 
 IUSE="apache2"
 
 DESCRIPTION="A python-based mailing list server with an extensive web interface"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
-RESTRICT="nomirror"
 HOMEPAGE="http://www.list.org/"
 
 SLOT="O"
 LICENSE="GPL-2"
-KEYWORDS="-x86"
+KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPEND=">=dev-lang/python-2.3
 	virtual/mta
@@ -42,9 +41,6 @@ src_compile() {
 	|| die "configure failed"
 
 	make || die "make failed"
-	sed -i -e 's:import japanese:#import japanese:' \
-		-e 's:import korean:#import korean:' \
-		-e 's:import korean.aliases:#import korean.aliases:' misc/paths.py
 }
 
 src_install () {
@@ -56,6 +52,9 @@ src_install () {
 	keepdir ${INSTALLDIR}/locks
 	keepdir ${INSTALLDIR}/spam
 	keepdir ${INSTALLDIR}/archives/public
+	keepdir ${INSTALLDIR}/archives/private
+	keepdir ${INSTALLDIR}/lists
+	keepdir ${INSTALLDIR}/qfiles
 
 	chown -R mailman:mailman ${ID}
 	chmod 2775 ${ID}

@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.4.ebuild,v 1.9 2004/05/14 14:18:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.4.ebuild,v 1.10 2004/05/31 22:30:35 mholzer Exp $
 
 IUSE="apache2"
 
 DESCRIPTION="A python-based mailing list server with an extensive web interface"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
-RESTRICT="nomirror"
 HOMEPAGE="http://www.list.org/"
 
 SLOT="O"
