@@ -1,0 +1,26 @@
+diff -Naur openafs-1.2.10-old/src/afs/LINUX/osi_groups.c openafs-1.2.10/src/afs/LINUX/osi_groups.c
+--- openafs-1.2.10-old/src/afs/LINUX/osi_groups.c	2003-05-22 00:08:03.000000000 -0400
++++ openafs-1.2.10/src/afs/LINUX/osi_groups.c	2004-02-19 17:24:45.000000000 -0500
+@@ -178,8 +178,8 @@
+ 
+ #if defined(AFS_SPARC64_LINUX20_ENV) || defined(AFS_AMD64_LINUX20_ENV)
+ /* Intercept the uid16 system call as used by 32bit programs. */
+-extern long (*sys32_setgroupsp)(int gidsetsize, old_gid_t *grouplist);
+-asmlinkage long afs32_xsetgroups(int gidsetsize, old_gid_t *grouplist)
++extern long (*sys32_setgroupsp)(int gidsetsize, u16 *grouplist);
++asmlinkage long afs32_xsetgroups(int gidsetsize, u16 *grouplist)
+ {
+     long code;
+     cred_t *cr = crref();
+diff -Naur openafs-1.2.10-old/src/afs/LINUX/osi_module.c openafs-1.2.10/src/afs/LINUX/osi_module.c
+--- openafs-1.2.10-old/src/afs/LINUX/osi_module.c	2003-07-28 22:01:02.000000000 -0400
++++ openafs-1.2.10/src/afs/LINUX/osi_module.c	2004-02-19 17:23:21.000000000 -0500
+@@ -88,7 +88,7 @@
+ #endif
+ 
+ static void *ia32_ni_syscall = 0;
+-asmlinkage long (*sys32_setgroupsp)(int gidsetsize, old_gid_t *grouplist);
++asmlinkage long (*sys32_setgroupsp)(int gidsetsize, u16 *grouplist);
+ #if defined(__NR_ia32_setgroups32)
+ asmlinkage long (*sys32_setgroups32p)(int gidsetsize, gid_t *grouplist);
+ #endif /* __NR_ia32_setgroups32 */

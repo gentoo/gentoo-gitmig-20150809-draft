@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.37 2004/02/18 05:45:35 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.38 2004/02/20 02:44:16 rphillips Exp $
+
+  19 Feb 2004; Ryan Phillips <rphillips@gentoo.org> openafs-1.2.10-r2.ebuild,
+  files/openafs-typechange.patch:
+  Added Jacob Joseph's old_gid_t -> u16 patch from bug #10952
 
 *openafs-1.2.11 (17 Feb 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r2.ebuild,v 1.3 2004/01/21 17:44:50 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r2.ebuild,v 1.4 2004/02/20 02:44:17 rphillips Exp $
 
 inherit check-kernel fixheadtails flag-o-matic
 
@@ -37,6 +37,9 @@ src_unpack() {
 	ht_fix_file "configure"
 	ht_fix_file "configure-libafs"
 	epatch ${FILESDIR}/openafs-pinstall-execve-1.2.10.patch
+	#added for bug #10952
+	#tested on x86, alpha, amd64 (rphillips)
+	epatch ${FILESDIR}/openafs-typechange.patch
 }
 
 src_compile() {
