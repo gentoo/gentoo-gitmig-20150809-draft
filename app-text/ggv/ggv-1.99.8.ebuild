@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.99.8.ebuild,v 1.1 2002/07/04 12:55:21 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.99.8.ebuild,v 1.2 2002/07/30 20:34:51 stroke Exp $
 
 inherit gnome2
 
@@ -10,6 +10,7 @@ SRC_URI="mirror://gnome/sources/ggv/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="1"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=x11-libs/gtk+-2.0.5
 	>=x11-libs/pango-1.0.3
