@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r6.ebuild,v 1.6 2004/02/23 00:38:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r6.ebuild,v 1.7 2004/03/06 03:46:33 seemant Exp $
 
 inherit eutils
 
@@ -24,8 +24,6 @@ DEPEND=">=sys-apps/portage-2.0.49
 	sys-devel/autoconf
 	nls? ( sys-devel/gettext )
 	acl? ( sys-apps/acl )"
-
-RDEPEND=""
 
 PATCHDIR=${WORKDIR}/patch
 

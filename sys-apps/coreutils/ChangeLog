@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.77 2004/03/01 19:59:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.78 2004/03/06 03:46:33 seemant Exp $
+
+*coreutils-5.2.0 (05 Mar 2004)
+
+  05 Mar 2004; Seemant Kulleen <seemant@gentoo.org> coreutils-5.0-r5.ebuild,
+  coreutils-5.0-r6.ebuild, coreutils-5.0.91-r2.ebuild,
+  coreutils-5.0.91-r3.ebuild, coreutils-5.0.91-r4.ebuild,
+  coreutils-5.2.0.ebuild:
+  version bump, should close bug #39632 by SpanKY <vapier@gentoo.org>, who came
+  up with the fixes anyway, and that bug is related to bug #36337 by Robin
+  Johnson <robbat2@gentoo.org>. Also, added attr to the explicit deps, per bug
+  #41641 by toon <toon@hout.vanvergehaald.nl>. Just in case, we're affected by:
+  bug #43655 by Rajiv Manglani <rajiv@gentoo.org>, this release should fix it.
 
   17 Feb 2004; Tom Gall <tgall@gentoo.org> 
   coreutils-5.0.91-r4.ebuild:
