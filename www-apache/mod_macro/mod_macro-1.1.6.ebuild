@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/mod_macro-1.1.6.ebuild,v 1.2 2005/02/17 16:08:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/mod_macro-1.1.6.ebuild,v 1.3 2005/02/25 12:22:51 hollow Exp $
 
 inherit eutils apache-module
 
@@ -14,6 +14,7 @@ SLOT="0"
 IUSE=""
 
 APACHE2_MOD_CONF="27_${PN}"
+APACHE2_MOD_DEFINE="MACRO"
 
 DOCFILES="CHANGES INSTALL README mod_macro.html"
 

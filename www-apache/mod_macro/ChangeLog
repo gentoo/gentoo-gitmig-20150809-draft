@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_macro
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.3 2005/02/17 16:08:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.4 2005/02/25 12:22:51 hollow Exp $
+
+  25 Feb 2005; Benedikt Boehm <hollow@gentoo.org> mod_macro-1.1.6.ebuild:
+  added MOD_DEFINE
 
   17 Feb 2005; Benedikt Boehm <hollow@gentoo.org> mod_macro-1.1.6.ebuild:
   cleanup
