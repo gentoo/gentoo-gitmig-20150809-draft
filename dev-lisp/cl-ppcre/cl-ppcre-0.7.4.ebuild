@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/cl-ppcre-0.7.4.ebuild,v 1.1 2004/02/17 18:32:08 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/cl-ppcre-0.7.4.ebuild,v 1.2 2004/03/30 22:14:42 mkennedy Exp $
 
 inherit common-lisp
 
@@ -16,7 +16,7 @@ SLOT="0"
 
 CLPACKAGE=cl-ppcre
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${P}
 
 src_install() {
 	common-lisp-install *.lisp *.asd

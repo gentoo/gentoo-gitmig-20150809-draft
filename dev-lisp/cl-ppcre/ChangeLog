@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-ppcre
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.14 2004/03/18 21:06:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.15 2004/03/30 22:14:42 mkennedy Exp $
+
+  30 Mar 2004; <mkennedy@gentoo.org> cl-ppcre-0.7.4.ebuild:
+  Corrected ${S}
 
 *cl-ppcre-0.7.4 (17 Feb 2004)
 
