@@ -1,0 +1,8 @@
+# ChangeLog for dev-ruby/yamlrb
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yamlrb/ChangeLog,v 1.1 2003/01/31 23:11:10 rphillips Exp $
+
+*yamlrb-0.47 (31 Jan 2003)
+
+  31 Jan 2003; Ryan Phillips <rphillips@gentoo.org> : new package. Submitted by Holden Glova.
+  Fixes #12833
