@@ -1,6 +1,6 @@
 MD5 458511872d14d7b16fbcaabdc0a1b335 ChangeLog 3441
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 ea3e4de8df930b86d227affc240ef047 patch-2.5.4-r5.ebuild 887
-MD5 e35d1547d37b43ebbb424baa94dc8c5f patch-2.5.9.ebuild 1439
+MD5 b65b158dc35ff3457c1d22419a652f1e patch-2.5.9.ebuild 1445
 MD5 d8308835b63cc0644a67523856ef2df8 files/digest-patch-2.5.4-r5 63
 MD5 7113f2413944cb06cecdd0c57ab54078 files/digest-patch-2.5.9 63
