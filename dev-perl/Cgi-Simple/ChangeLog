@@ -1,9 +1,10 @@
 # ChangeLog for dev-perl/Cgi-Simple
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.1 2003/06/21 01:37:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.2 2003/06/21 01:39:59 mcummings Exp $
 
 *Cgi-Simple-0.06 (20 Jun 2003)
 
   20 Jun 2003; Michael Cummings <mcummings@gentoo.org> Cgi-Simple-0.06.ebuild:
-  Initial import, fills bug 9992
+  Initial import, fills bug 9992. Ebuild submitted by Brandon Black
+  <ph_317@hotmail.com>
 
