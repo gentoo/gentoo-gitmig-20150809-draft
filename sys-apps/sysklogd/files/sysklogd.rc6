@@ -1,25 +1,27 @@
 #!/sbin/runscript
-klog="/usr/sbin/klogd"
-slog="/usr/sbin/syslogd"
+
+SYSLOGD="-m 0"
+# send warnings and above to the console
+KLOGD="-c 3 -2"
 
 depend() {
-	need hostname
+    need hostname
 }
 
 start() {
     ebegin "Starting syslogd, klogd"
-    start-stop-daemon --start --exec $slog -- $SYSLOGD 1>&2
+    start-stop-daemon --start --quiet --exec /usr/sbin/syslogd -- ${SYSLOGD}
     retval=$?
-    start-stop-daemon --start --exec $klog -- $KLOGD 1>&2
+    start-stop-daemon --start --quiet --exec /usr/sbin/klogd -- ${KLOGD}
     retval=$(( $retval + $? ))
     eend $retval 
 }
 
 stop() {
     ebegin "Stopping klogd, syslogd"
-    start-stop-daemon --stop --pidfile /var/run/klogd.pid 1>&2
+    start-stop-daemon --stop --quiet --pidfile /var/run/klogd.pid
     retval=$?
-    start-stop-daemon --stop --pidfile /var/run/syslogd.pid 1>&2
+    start-stop-daemon --stop --quiet --pidfile /var/run/syslogd.pid
     retval=$(( $retval + $? ))
     eend $retval 
 }

@@ -8,7 +8,7 @@
 #		stuff
 #
 #		Written by Martin Schulze <joey@debian.org>.
-#		$Id: syslog,v 1.1 2000/08/28 15:06:20 achim Exp $
+#		$Id: syslog-cron,v 1.1 2001/09/17 01:31:32 woodchip Exp $
 
 cd /var/log
 for LOG in `syslogd-listfiles -a`

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins <drobbins@gentoo.org>, Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysklogd/sysklogd-1.4-r3.ebuild,v 1.5 2001/09/17 01:31:32 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysklogd/sysklogd-1.4-r6.ebuild,v 1.1 2001/09/17 01:31:32 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard log daemons"
@@ -30,6 +30,6 @@ src_install() {
 	dodoc ${FILESDIR}/syslog.conf
 	insinto /etc
   	doins ${FILESDIR}/syslog.conf
-	exeinto /etc/rc.d/init.d
-	newexe ${FILESDIR}/sysklogd.rc5 sysklogd
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/sysklogd.rc6 sysklogd
 }
