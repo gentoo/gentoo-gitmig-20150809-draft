@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.32 2003/09/17 18:40:51 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.33 2003/09/19 19:47:43 joker Exp $
+
+  19 Sep 2003; Christian Birchinger <joker@gentoo.org>
+  coreutils-5.0-r3.ebuild:
+  Added sparc stable keyword
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org> coreutils-5.0-r4.ebuild :
   IA64 keywords. And don't believe Seemant - he really isn't an idiot. :)
