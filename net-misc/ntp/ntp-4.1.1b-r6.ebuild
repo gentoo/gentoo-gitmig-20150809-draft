@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r6.ebuild,v 1.9 2003/11/10 14:36:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r6.ebuild,v 1.10 2003/11/11 13:46:49 vapier Exp $
 
 inherit eutils
 
@@ -18,7 +18,10 @@ IUSE="parse-clocks selinux"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
-	dev-libs/elfutils"
+	|| (
+		dev-libs/elfutils
+		dev-libs/libelf
+	)"
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-ntp )
 	>=sys-apps/sed-4.0.5"
