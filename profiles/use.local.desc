@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.96 2003/08/31 07:01:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.97 2003/09/01 07:27:27 george Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -31,7 +31,9 @@ app-sci/gmt:gmthigh - Adds high resolution bathimetry database
 app-sci/gmt:gmtsuppl - Supplement functions for GMT;
 app-sci/gmt:gmttria - Non GNU triangulation method, more efficient;
 app-sci/maxima:auctex - enable auctex in maxima
-app-sci/maxima:cmucl - use cmucl instead of clisp for building maxima
+app-sci/maxima:cmucl - adds cmucl (lisp) support to maxima
+app-sci/maxima:clisp - adds clisp support to maxima
+app-sci/maxima:gcl   - adds gcl (lisp) support to maxima
 app-sci/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
 app-sci/octave-forge:ginac - Adds app-sci/ginac (symbolic math) support
 app-sci/octave-forge:qhull - Adds media-libs/qhull (geometric extentions) support
