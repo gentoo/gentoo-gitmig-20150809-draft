@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.18 2005/03/05 17:28:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.19 2005/03/08 04:52:40 jnc Exp $
+
+*libxmlpp-1.0.4-r1 (07 Mar 2005)
+
+  07 Mar 2005; Eric Shattow <jnc@gentoo.org> +libxmlpp-1.0.4-r1.ebuild:
+  Kill 'elibtoolize' statement which caused bogus lib filename output.
 
   05 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> libxmlpp-1.0.4.ebuild:
   Stable on sparc
