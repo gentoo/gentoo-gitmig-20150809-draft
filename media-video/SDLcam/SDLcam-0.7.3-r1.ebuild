@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3-r1.ebuild,v 1.2 2004/01/30 12:32:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3-r1.ebuild,v 1.3 2004/04/19 06:34:20 vapier Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://raph.darktech.org/SDLcam/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="dev-libs/libxml2
 	media-libs/libsdl
@@ -39,14 +40,14 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
-	dobin SDLcam
+src_install() {
+	dobin SDLcam || die
 	insinto /usr/share/SDLcam
-	doins LucidaSansRegular.ttf LucidaTypewriterRegular.ttf SDLcam.xml SDLcam.cfg
+	doins LucidaSansRegular.ttf LucidaTypewriterRegular.ttf SDLcam.xml SDLcam.cfg || die
 	insinto /usr/lib/SDLcam/filters
-	doins filter/*.so
+	doins filter/*.so || die
 	insinto /usr/lib/SDLcam/capture
-	doins capture/*.so
+	doins capture/*.so || die
 	insinto /usr/lib/SDLcam/sources
-	doins sources/*.so
+	doins sources/*.so || die
 }
