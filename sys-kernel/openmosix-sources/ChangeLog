@@ -1,6 +1,24 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.57 2004/07/22 12:10:12 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.58 2004/08/05 15:12:17 voxus Exp $
+
+*openmosix-sources-2.4.24-r2 (05 Aug 2004)
+
+  05 Aug 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  -files/openmosix-sources-2.4.20.munmap.patch,
+  -files/openmosix-sources-2.4.20.rtc_fix.patch,
+  -files/openmosix-sources-2.4.22.crypto_fix.patch,
+  -files/openmosix-sources-2.4.22.pipe_bug.patch,
+  -files/openmosix-sources-2.4.22.rtc_fix.patch,
+  -files/openmosix-sources-2.4.22.signal_fix.patch,
+  -files/openmosix-sources.CAN-2004-0394.patch,
+  -files/openmosix-sources.CAN-2004-0427.patch,
+  -files/do_brk_fix.patch,
+  -openmosix-sources-2.4.22-r11.ebuild,
+  -openmosix-sources-2.4.24-r1.ebuild,
+  +openmosix-sources-2.4.24-r2.ebuild:
+  Security update, closes bug #59378.
+  .22 tree finally dropped.
 
 *openmosix-sources-2.4.26-r5 (22 Jul 2004)
 
