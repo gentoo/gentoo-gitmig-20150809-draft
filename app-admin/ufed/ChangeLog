@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/ufed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ChangeLog,v 1.12 2003/03/25 05:20:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ChangeLog,v 1.13 2003/04/17 19:23:23 mholzer Exp $
 
 NOTE: This ChangeLog doesn't cover modifications to ufed itself.
 The real ChangeLog can be found at:
@@ -10,6 +10,10 @@ http://cvs.gentoo.org/cgi-bin/viewcvs.cgi/gentoo-src/ufed/ChangeLog?rev=HEAD
   Added hppa to keywords.
 
 *ufed-0.2 (29 Dec 2002)
+
+  17 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest, ufed-0.1.ebuild,
+  ufed-0.1.ebuild, ufed-0.2.ebuild:
+  Changed SRC_URI.
 
   25 Mar 2003; Aron Griffis <agriffis@gentoo.org> ufed-0.2.ebuild:
   Mark stable on alpha
