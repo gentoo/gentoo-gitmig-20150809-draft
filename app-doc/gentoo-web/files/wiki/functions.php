@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	mysql_connect( 'localhost', '##USER##', '##PASS##' );
-	mysql_select_db( '##DB##' );
+	mysql_connect( 'localhost', '@@USER@@', '@@PASS@@' );
+	mysql_select_db( '@@DB@@' );
 ?>
 
 <?php function main_header ( $title = 'Unknown' ) {
@@ -90,7 +90,7 @@ global $uid, $dbusername, $show_privates; ?>
 				<li><a href="index.php?list=by_developer&show_privates=<?=$show_privates;?>">List by developer</a>
 				<li><a href="completed.php">List completed</a>
 				<?php if ( $uid ) { ?>
-					<li><a href="editsingle.php?action=new_todo">Create a new todo</a>
+					<li><a href="single.php?action=new_todo">Create a new todo</a>
 				<?php } ?>
 			</ul>
 
@@ -152,11 +152,6 @@ global $uid, $dbusername, $show_privates; ?>
 		$tabcolor = '#fa9779';
 	}
 
-	if ( $owner == $uid )
-		$detailpage = 'editsingle.php';
-	else
-		$detailpage = 'single.php';
-
 	$followups = mysql_query( "select fid from followups where tid=$tid" );
 	$followups = mysql_num_rows( $followups );
 	if ( $followups == 1 )
@@ -175,7 +170,7 @@ global $uid, $dbusername, $show_privates; ?>
 	<tr>
 		<td bgcolor="white" colspan=2>
 			<p style="padding:0;margin:0;"><?=$longdesc;?></p>
-			<p align="right" style="padding:5px 0 0 0;margin:0;"><?php if ( $public ) print 'Posted'; else print 'Owned'; ?> by <a href="devtodo.php?devid=<?=$owner;?>"><b><?=$developer;?></b></a><br><?php if ($uid && $public == 1) { print "<a href=\"index.php?action=grab_todo&tid=$tid&list=$list\">I'll do it</a> | "; } ?><a href="<?=$detailpage;?>?tid=<?=$tid;?>">details</a> (<?=$followups;?>)</p>
+			<p align="right" style="padding:5px 0 0 0;margin:0;"><?php if ( $public ) print 'Posted'; else print 'Owned'; ?> by <a href="devtodo.php?devid=<?=$owner;?>"><b><?=$developer;?></b></a><br><?php if ($uid && $public == 1) { print "<a href=\"index.php?action=grab_todo&tid=$tid&list=$list\">I'll do it</a> | "; } ?><a href="single.php?tid=<?=$tid;?>">details</a> (<?=$followups;?>)</p>
 		</td>
 	</tr>
 	</table>

@@ -13,7 +13,7 @@
 <?php if ( $uid == $devid ) { ?>
 <tr>
 	<td colspan=5 align="right">You're logged in. Clicking on a todo will take you to an edit page.<br>
-	or... <a href="editsingle.php?action=new_todo">Create a new todo</a>.</td>
+	or... <a href="single.php?action=new_todo">Create a new todo</a>.</td>
 </tr>
 <?php } ?>
 <tr>
@@ -44,11 +44,7 @@
 <tr>
 	<td><img src="images/<?=$priority;?>.gif" alt="<?=$priority;?>"></td>
 	<td><?=date( "n/j/y", $todo['date'] );?></td>
-	<?php if ( $devid == $uid ) { ?>
-		<td><a href="editsingle.php?tid=<?=$todo['tid'];?>"><?=$todo['title'];?></a></td>
-	<?php } else { ?>
-		<td><a href="single.php?tid=<?=$todo['tid'];?>"><?=$todo['title'];?></a></td>
-	<?php } ?>
+	<td><a href="single.php?tid=<?=$todo['tid'];?>"><?=$todo['title'];?></a></td>
 	<td><?=$flagimgs;?></td>
 	<td><?=$fupcount;?></td>
 </tr>
