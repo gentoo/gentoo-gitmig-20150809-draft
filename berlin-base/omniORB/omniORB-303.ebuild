@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.2 2001/05/02 16:14:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.3 2001/05/02 18:59:33 achim Exp $
 
 A=${PN}_${PV}.tar.gz
 S=${WORKDIR}/omni
@@ -51,9 +51,9 @@ src_install () {
     doins idl/*.idl
     insinto ${T}/lib/idl/COS
     doins idl/COS/*.idl
-    cp -af include ${T}
+    cp -af include ${D}/${T}
     dolib lib/${PLT}/*.{a,so*}
-    exeinto ${D}/lib
+    exeinto ${T}/lib
     doexe lib/${PLT}/omnicpp
     dodir /usr/lib/python2.0
     cp -af lib/python/* ${D}/usr/lib/python2.0/
@@ -61,12 +61,11 @@ src_install () {
 
     dodoc CHANGES* COPYING* CREDITS PORTING README* ReleaseNote_omniORB_303 THIS_IS_omniORB_3_0_3
     cd doc
-    docinto ps
+    docinto print
     dodoc *.ps
-    docinto tex
     dodoc *.tex
-    docinto pdf
     dodoc *.pdf
+
     docinto html
     dodoc *.html
     docinto html/omniORB
