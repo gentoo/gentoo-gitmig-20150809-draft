@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.005.ebuild,v 1.1 2003/10/10 16:21:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.005.ebuild,v 1.2 2003/10/10 16:22:53 mholzer Exp $
 
 MY_P=eGroupWare-${PV}
 S=${WORKDIR}/${PN}
@@ -22,7 +22,7 @@ DEPEND="virtual/php
 pkg_setup() {
 	if [ -L ${HTTPD_ROOT}/${PN} ] ; then
 		ewarn "You need to unmerge your old egroupware version first."
-		ewarn "phpGroupWare will be installed into ${HTTPD_ROOT}/phpgroupware"
+		ewarn "egroupware will be installed into ${HTTPD_ROOT}/${PN}"
 		ewarn "directly instead of a version-dependant directory."
 		die "need to unmerge old version first"
 	fi
@@ -38,11 +38,11 @@ src_install() {
 	cd ${WORKDIR}
 	cp -r . ${D}/${HTTPD_ROOT}
 	cd ${D}/${HTTPD_ROOT}
-	chown -R ${HTTPD_USER}.${HTTPD_GROUP} egroupware 
+	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${PN} 
 	dohtml ${PN}/doc/en_US/html/admin/*.html
 }
 
 pkg_postinst() {
 	einfo "Follow the instructions at /usr/share/doc/${PF}/html/x62.html#AEN134 "
-	einfo "to complete the install.  You need to add MySQL users and configure phpGroupWare"
+	einfo "to complete the install.  You need to add MySQL users and configure egroupware" 
 }
