@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-cdb/skk-jisyo-cdb-200309.ebuild,v 1.8 2005/01/01 14:41:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-cdb/skk-jisyo-cdb-200501.ebuild,v 1.1 2005/01/05 10:12:56 usata Exp $
 
 DESCRIPTION="Dictionary files for the SKK Japanese-input software in CDB format"
 HOMEPAGE="http://openlab.ring.gr.jp/skk/dic.html"
@@ -9,11 +9,10 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ~ppc-macos"
 IUSE=""
 
-DEPEND="app-arch/gzip"
-RDEPEND=""
+DEPEND=""
 
 src_install() {
 	# install dictionaries
