@@ -1,0 +1,15 @@
+--- qc-usb-0.6.2/qc-memory.c-old	2005-02-24 19:40:37.000000000 -0500
++++ qc-usb-0.6.2/qc-memory.c	2005-02-24 19:41:12.000000000 -0500
+@@ -230,7 +230,11 @@
+ 	pos = (unsigned long)src;
+ 	while ((long)size > 0) {
+ 		physaddr = kvirt_to_pa(pos);
+-		if (remap_page_range(vma, start, physaddr, PAGE_SIZE, PAGE_SHARED))
++        if (remap_pfn_range(vma,
++ 					start,
++ 					physaddr >> PAGE_SHIFT,
++ 					PAGE_SIZE,
++ 					PAGE_SHARED))
+ 			return -EAGAIN;
+ 		start += PAGE_SIZE;
+ 		pos += PAGE_SIZE;

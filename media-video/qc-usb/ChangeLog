@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qc-usb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.8 2005/01/28 19:18:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.9 2005/03/09 15:10:55 liquidx Exp $
+
+  09 Mar 2005; Alastair Tse <liquidx@gentoo.org>
+  +files/0.6.2-linux-2.6.11.patch, qc-usb-0.6.2.ebuild:
+  patch for 2.6.11+ compatibility (#83299) migrated to use linux-mod.
 
   28 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> qc-usb-0.6.2.ebuild:
   Added to ~ppc, bug 79238.
