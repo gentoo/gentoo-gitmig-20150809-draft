@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/eclipse-pydev-bin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-pydev-bin/ChangeLog,v 1.1 2004/12/16 14:32:52 chrb Exp $
+
+*eclipse-pydev-bin-0.8.0 (16 Dec 2004)
+
+  16 Dec 2004; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
+  +eclipse-pydev-bin-0.8.0.ebuild:
+  New package
+
