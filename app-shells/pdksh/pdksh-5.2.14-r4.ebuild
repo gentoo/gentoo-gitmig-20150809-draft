@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.7 2002/10/04 05:02:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.8 2002/10/20 18:40:47 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Public Domain Korn Shell"
@@ -12,7 +12,6 @@ SLOT="0"
 LICENSE="as-is"
 
 DEPEND=">=sys-libs/glibc-2.1.3"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${P}.tar.gz

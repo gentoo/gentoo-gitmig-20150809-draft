@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ccsh/ccsh-0.0.4-r2.ebuild,v 1.8 2002/10/04 05:01:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ccsh/ccsh-0.0.4-r2.ebuild,v 1.9 2002/10/20 18:40:47 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="UNIX Shell for people already familiar with the C language"
@@ -11,7 +11,6 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	
