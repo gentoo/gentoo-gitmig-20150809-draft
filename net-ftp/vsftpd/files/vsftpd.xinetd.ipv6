@@ -1,6 +1,6 @@
 # default: off
 # description: Vsftpd is an FTP server, designed to be secure.
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.xinetd.ipv6,v 1.1 2003/04/06 20:22:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.xinetd.ipv6,v 1.2 2004/07/18 03:56:09 dragonheart Exp $
 
 service ftp
 {
