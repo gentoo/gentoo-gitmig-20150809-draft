@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2801 2004/04/05 14:07:39 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2802 2004/04/06 09:54:06 spider Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -404,7 +404,7 @@ app-portage/kportage
 =net-mail/sylpheed-0.9.5-r1
 =net-mail/sylpheed-0.9.8-r1
 =net-mail/sylpheed-0.9.8-r2
-
+=net-mail/sylpheed-0.9.9-r1
 
 # <solar@gentoo.org> (Dec 10 2003) 
 # masked for security reasons, see bug #30554 
