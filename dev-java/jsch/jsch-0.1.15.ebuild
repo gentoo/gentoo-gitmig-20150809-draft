@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.15.ebuild,v 1.7 2004/11/03 11:33:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.15.ebuild,v 1.8 2005/01/26 21:36:39 corsair Exp $
 
 inherit java-pkg
 
