@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r8.ebuild,v 1.1 2003/10/13 15:11:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r8.ebuild,v 1.2 2003/10/20 06:11:57 kumba Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gnuconfig
 
 # Official patches
 PLEVEL="x002 x003 x004 x005 x006 x007"
@@ -46,6 +46,9 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# If running mips64, we need updated configure data
+	use mips && gnuconfig_update
 
 	filter-flags -malign-double
 
