@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-RawIP
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/ChangeLog,v 1.7 2005/01/29 21:16:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/ChangeLog,v 1.8 2005/03/16 16:17:01 mcummings Exp $
+
+*Net-RawIP-0.2 (16 Mar 2005)
+
+  16 Mar 2005; Michael Cummings <mcummings@gentoo.org> +Net-RawIP-0.2.ebuild:
+  Version bump from cpan. bug me if it works for you so we can unmask
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> Net-RawIP-0.09d.ebuild,
   Net-RawIP-0.1.ebuild:
