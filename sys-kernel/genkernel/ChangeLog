@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.52 2004/07/28 10:55:18 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.53 2004/07/28 12:17:35 plasmaroo Exp $
+
+  28 Jul 2004; <plasmaroo@gentoo.org> genkernel-3.0.2c.ebuild,
+  genkernel-3.0.2d.ebuild, genkernel-3.0.2e.ebuild:
+  Added a local bootsplash USE flag; bug #37015.
 
 *genkernel-3.0.2e (28 Jul 2004)
 
