@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-selinux
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.3 2003/07/29 23:11:39 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.4 2003/07/30 01:20:51 method Exp $
+
+*python-selinux-1.2 (29 Jul 2003)
+
+  29 Jul 2003; Joshua Brindle <method@gentoo.org> python-selinux-1.2.ebuild:
+  new version that throws correct exception
 
 *python-selinux-1.1 (29 Jul 2003)
 
