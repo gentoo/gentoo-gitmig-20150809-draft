@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.25 2002/08/07 07:37:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.26 2002/08/07 20:34:32 azarah Exp $
+
+*mplayer-0.90_pre6-r2 (07 Aug 2002)
+
+  07 Aug 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre6-r2 :
+
+  Update DEPEND to block libdvdnav-0.1.3.  Change "emake" to "make", as
+  'make -j' fails in some cases.
 
 *mplayer-0.90_pre6-r1 (07 Aug 2002)
 

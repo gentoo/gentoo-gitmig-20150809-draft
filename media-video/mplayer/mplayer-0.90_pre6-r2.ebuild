@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre6-r1.ebuild,v 1.1 2002/08/07 07:37:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre6-r2.ebuild,v 1.1 2002/08/07 20:34:32 azarah Exp $
 
 # NOTE to myself:  Test this thing with and without dvd/gtk+ support,
 #                  as it seems the mplayer guys dont really care to
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 RDEPEND=">=media-libs/divx4linux-20020418
 	>=media-libs/win32codecs-0.60
 	dvd? ( media-libs/libdvdread
-	       media-libs/libdvdcss )
+		   !=media-libs/libdvdnav-0.1.3 )
 	gtk? ( =x11-libs/gtk+-1.2*
 	       media-libs/libpng )
 	esd? ( media-sound/esound )
@@ -136,9 +136,15 @@ src_compile() {
 		&& myconf="${myconf} --enable-mencoder --enable-tv" \
 		|| myconf="${myconf} --disable-mencoder"
 
+# Currently libdvdnav do not compile on gcc-3.1.1
+#	use dvd \
+#		&& myconf="${myconf} --enable-dvdread --enable-dvdnav" \
+#		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread \
+#       		             --disable-css --disable-dvdnav"
 	use dvd \
-		&& myconf="${myconf} --enable-dvdread --enable-css" \
-		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread --disable-css"
+		&& myconf="${myconf} --enable-dvdread" \
+		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread \
+		                     --disable-css --disable-dvdnav"
 
 	use matrox \
 		&& myconf="${myconf} --enable-mga" \
@@ -155,16 +161,16 @@ src_compile() {
 	unset CXXFLAGS
 	./configure --prefix=/usr \
 		--disable-runtime-cpudetection \
-		--disable-mp1e \
 		--enable-largefiles \
 		--enable-linux-devfs \
 		${myconf} || die
 
-	emake all || die
+	# emake borks on fast boxes - Azarah (07 Aug 2002)
+	make all || die
 	
 	use matrox && ( \
 		cd drivers 
-		emake all || die
+		make all || die
 	)
 }
 
@@ -273,5 +279,6 @@ pkg_postinst() {
 		|| echo '# NB: the GUI needs "gtk" as USE flag to build.                      #'
 	echo '######################################################################'
 	echo
-	depmod -a
+	depmod -a &>/dev/null || :
 }
+
