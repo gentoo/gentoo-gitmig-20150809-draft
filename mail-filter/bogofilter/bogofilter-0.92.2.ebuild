@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.92.2.ebuild,v 1.3 2004/10/03 02:47:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.92.2.ebuild,v 1.4 2004/10/14 21:13:26 ticho Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -45,10 +45,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The goal of the bogofilter 0.17 series was to clean out this excess code."
-	einfo "A number of features have been removed."
-	ewarn "Please read the RELEASE.NOTES-0.17 carefully!"
-	einfo ""
 	einfo "Contributed tools and documentation is in ${ROOT}usr/lib/${PN}/contrib"
 	einfo "beside documentation in ${ROOT}usr/share/doc/${PF}."
 }
