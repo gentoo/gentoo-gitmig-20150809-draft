@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-3.0.8.ebuild,v 1.2 2005/02/09 07:48:05 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-3.1.6.ebuild,v 1.1 2005/02/09 07:48:05 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://files.b9.com/clsql/clsql-${PV}.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="postgres mysql sqlite odbc"
+IUSE="postgres mysql sqlite sqlite3 odbc"
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
 	dev-lisp/cl-md5
@@ -20,6 +20,7 @@ DEPEND="dev-lisp/common-lisp-controller
 	postgres? ( dev-db/postgresql )
 	mysql? ( dev-db/mysql )
 	sqlite? ( =dev-db/sqlite-2* )
+	sqlite3? ( =dev-db/sqlite-3* )
 	odbc? ( dev-db/unixODBC )"
 
 S=${WORKDIR}/clsql-${PV}
@@ -27,11 +28,6 @@ S=${WORKDIR}/clsql-${PV}
 # Have to do this in a static manner, it seems.
 
 CLPACKAGE='clsql clsql-uffi clsql-postgresql clsql-postgresql-socket clsql-mysql clsql-odbc'
-
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/${PV}-no-shared-object-asdf-gentoo.patch || die
-}
 
 src_compile() {
 	make -C uffi || die
@@ -61,15 +57,15 @@ src_install() {
 	doins db-postgresql-socket/*.lisp
 	insinto $CLSOURCEROOT/clsql-postgresql-socket
 	doins clsql-postgresql-socket.asd
-	dosym $CLSOURCEROOT/clsql-postgresql/clsql-postgresql-socket.asd \
+	dosym $CLSOURCEROOT/clsql-postgresql-socket/clsql-postgresql-socket.asd \
 		$CLSYSTEMROOT/clsql-postgresql-socket.asd
 
 	if use mysql; then
-		insinto $CLSOURCEROOT/clsql-mysql/db-mysql; doins db-mysql/*.lisp
+		insinto $CLSOURCEROOT/clsql-mysql/db-mysql; doins db-mysql/*.lisp db-mysql/*.c
 		insinto $CLSOURCEROOT/clsql-mysql; doins clsql-mysql.asd
 		dosym $CLSOURCEROOT/clsql-mysql/clsql-mysql.asd $CLSYSTEMROOT/clsql-mysql.asd
+		exeinto /usr/lib/clsql/; doexe db-mysql/mysql.so
 	fi
-	exeinto /usr/lib/clsql/; doexe db-mysql/mysql.so
 
 	if use odbc; then
 		insinto $CLSOURCEROOT/clsql-odbc/db-odbc; doins db-odbc/*.lisp
@@ -81,6 +77,12 @@ src_install() {
 		insinto $CLSOURCEROOT/clsql-sqlite/db-sqlite; doins db-sqlite/*.lisp
 		insinto $CLSOURCEROOT/clsql-sqlite; doins clsql-sqlite.asd
 		dosym $CLSOURCEROOT/clsql-sqlite/clsql-sqlite.asd $CLSYSTEMROOT/clsql-sqlite.asd
+	fi
+
+	if use sqlite3; then
+		insinto $CLSOURCEROOT/clsql-sqlite3/db-sqlite3; doins db-sqlite3/*.lisp
+		insinto $CLSOURCEROOT/clsql-sqlite3; doins clsql-sqlite3.asd
+		dosym $CLSOURCEROOT/clsql-sqlite3/clsql-sqlite3.asd $CLSYSTEMROOT/clsql-sqlite3.asd
 	fi
 
 	dodoc BUGS CONTRIBUTORS COPYING* ChangeLog INSTALL LATEST-TEST-RESULTS NEWS README TODO
