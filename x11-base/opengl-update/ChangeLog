@@ -1,8 +1,20 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.8 2002/12/13 11:00:48 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.9 2002/12/31 21:19:20 azarah Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*opengl-update-1.5 (30 Dec 2002)
+
+  30 Dec 2002; Martin Schlemmer <azarah@gentoo.org> opengl-update-1.5.ebuild :
+
+  Change test to show usage to:
+
+    [ "$#" -ne 1 -a "$#" -ne 2 ] || [ "$#" -eq 2 -a "$1" != "--use-old" ]
+
+  This should close bug #12827.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  
+  Changed sparc ~sparc keywords.
  
 *opengl-update-1.4 (9 Sep 2002)
 
