@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/updatedd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/updatedd/ChangeLog,v 1.2 2005/01/31 16:06:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/updatedd/ChangeLog,v 1.3 2005/03/02 08:02:33 dragonheart Exp $
+
+*updatedd-2.4 (02 Mar 2005)
+
+  02 Mar 2005; Daniel Black <dragonheart@gentoo.org> +updatedd-2.4.ebuild:
+  Version bump as requested by author Philipp Benner <mail@philipp-benner.de>.
 
   31 Jan 2005; Simon Stelling <blubb@gentoo.org> updatedd-2.3.ebuild:
   added ~amd64
