@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/digest-base
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/ChangeLog,v 1.9 2004/03/23 09:43:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/ChangeLog,v 1.10 2004/05/12 04:58:38 randy Exp $
+
+  12 May 2004; Michael McCabe <randy@gentoo.org> digest-base-1.05.ebuild:
+  Added s390 keywords
 
   23 Mar 2004; Joshua Kinard <kumba@gentoo.org> digest-base-1.05.ebuild:
   Marked stable on mips.
