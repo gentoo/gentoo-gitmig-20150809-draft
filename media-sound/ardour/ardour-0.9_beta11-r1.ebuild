@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta11-r1.ebuild,v 1.5 2004/05/07 20:53:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta11-r1.ebuild,v 1.6 2004/05/10 10:41:44 eradicator Exp $
 
 MY_P="${P}.2"
 MY_PV="${PV}.2"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE="nls ardour-ksi"
 
-DEPEND="dev-util/pkgconfig
+RDEPEND="dev-util/pkgconfig
 	>=media-libs/liblrdf-0.3.1
 	virtual/jack
 	=dev-libs/glib-1.2*
@@ -26,13 +26,14 @@ DEPEND="dev-util/pkgconfig
 	>=media-libs/liblrdf-0.3.1
 	>=dev-libs/libxml2-2.5.7
 	=media-libs/libart_lgpl-2.3*"
-RDEPEND="nls? ( sys-devel/gettext )"
+
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${MY_P/_/}"
 
 src_compile() {
 	local myconf="--disable-dependency-tracking --enable-optimize"
-	local myarch
 
 	use nls || myconf="${myconf} --disable-nls"
 	use ardour-ksi || myconf="${myconf} --disable-ksi"
