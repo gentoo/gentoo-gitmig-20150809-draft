@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r1.ebuild,v 1.2 2002/08/14 17:46:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r1.ebuild,v 1.3 2002/08/15 22:14:59 seemant Exp $
 
 MY_P=linux-${PV/./}
 S=${WORKDIR}
@@ -36,7 +36,7 @@ src_install () {
 	
 
 	mv acroread acroread.sed
-	sed -e "s:\$PROG =.*:\$PROG = '${INSTALLDIR}/acroread.real'" \
+	sed -e "s:\$PROG =.*:\$PROG = '${INSTALLDIR}/acroread.real':" \
 		acroread.sed > acroread
 	
 	exeinto ${INSTALLDIR}
