@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.15 2004/02/21 04:50:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.16 2004/02/23 05:56:08 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -26,12 +26,17 @@ RDEPEND="nls? ( sys-devel/gettext )"
 S=${WORKDIR}/${PN}
 
 enlightenment_warning_msg() {
-	if [ "${PV/2003}" != "${PV}" ] ; then
+	if [ "${PV/200}" != "${PV}" ] ; then
 		ewarn "Please do not contact the E team about bugs in Gentoo."
 		ewarn "Only contact vapier@gentoo.org via e-mail or bugzilla."
 		ewarn "Remember, this stuff is CVS only code so dont cry when"
 		ewarn "I break you :)."
 	fi
+}
+
+enlightenment_die() {
+	enlightenment_warning_msg
+	die "$@"$'\n'"!!! SEND BUG REPORTS TO vapier@gentoo.org NOT THE E TEAM"
 }
 
 enlightenment_pkg_setup() {
@@ -59,19 +64,19 @@ enlightenment_src_compile() {
 		NOCONFIGURE=yes \
 		USER=blah \
 		./autogen.sh \
-		|| die "autogen failed"
+		|| enlightenment_die "autogen failed"
 	if [ ! -z "${EHACKLIBLTDL}" ] ; then
 		cd libltdl
-		env WANT_AUTOCONF_2_5=1 autoconf || die "autogen in libltdl failed"
+		env WANT_AUTOCONF_2_5=1 autoconf || enlightenment_die "autogen in libltdl failed"
 		cd ..
 	fi
-	econf ${MY_ECONF} || die "econf failed"
-	emake || die "emake failed"
-	[ `use doc` ] && [ -x ./gendoc ] && { ./gendoc || die "gendoc failed" ; }
+	econf ${MY_ECONF} || enlightenment_die "econf failed"
+	emake || enlightenment_die "emake failed"
+	[ `use doc` ] && [ -x ./gendoc ] && { ./gendoc || enlightenment_die "gendoc failed" ; }
 }
 
 enlightenment_src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR=${D} || enlightenment_die
 	find ${D} -name CVS -type d -exec rm -rf '{}' \; 2>/dev/null
 	dodoc AUTHORS ChangeLog NEWS README TODO ${EDOCS}
 	[ `use doc` ] && [ -d doc ] && dohtml -r doc/*
