@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.94.ebuild,v 1.5 2004/06/24 21:36:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.94.ebuild,v 1.6 2004/08/05 04:15:24 vapier Exp $
 
 inherit eutils gnuconfig
 
-DESCRIPTION="Use this to try make tarballs :)"
+DESCRIPTION="Use this to make tarballs :)"
 HOMEPAGE="http://www.gnu.org/software/tar/"
 SRC_URI="ftp://alpha.gnu.org/pub/pub/gnu/${PN}/${P}.tar.bz2"
 
