@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.64 2004/11/26 12:46:53 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.65 2004/11/27 12:24:05 axxo Exp $
+
+  27 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
+  -files/blackdown-jdk-1.4.2_rc1, -blackdown-jdk-1.4.2_rc1.ebuild:
+  remove older vulnerable versions
 
   26 Nov 2004; Travis Tilley <lv@gentoo.org> blackdown-jdk-1.4.2.01.ebuild:
   stable on amd64
@@ -15,7 +19,7 @@
   24 Nov 2004; Thomas Matthijs <axxo@gentoo.org> -files/blackdown-jdk-1.4.1,
   -files/blackdown-jdk-1.4.2, -blackdown-jdk-1.4.1.ebuild,
   -blackdown-jdk-1.4.2.ebuild, -blackdown-jdk-1.4.2_rc1-r1.ebuild:
-  remove older
+  remove older vulnerable versions
 
 *blackdown-jdk-1.4.2.01 (24 Nov 2004)
 
