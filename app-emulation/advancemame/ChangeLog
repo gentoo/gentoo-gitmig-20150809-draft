@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/advancemame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/ChangeLog,v 1.3 2002/11/20 11:12:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/ChangeLog,v 1.4 2002/11/28 18:45:05 gerk Exp $
+
+  28 Nov 2002; Mark Guertin <gerk@gentoo.org> advancemame-0.62.0.ebuild,
+  advancemame-0.61.1.ebuild:
+  set -ppc in keywords, uses x86 asm
 
 *advancemame-0.62.0 (20 Nov 2002)
 
