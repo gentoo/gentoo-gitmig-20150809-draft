@@ -1,4 +1,6 @@
 MD5 3f5638e5136ff563d22345bc4a71cfdd calcoo-1.3.13.ebuild 594
-MD5 f97e9e80e0d4f84294d83c66dd639bad ChangeLog 561
+MD5 97b8d126795de87d738915751c7cb105 calcoo-1.3.15.ebuild 653
+MD5 8d19da8bc631fa869afba63aaa41add0 ChangeLog 782
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 7da19e579fe3783d642705619de49cc2 files/digest-calcoo-1.3.13 64
+MD5 8be06989f127dc928ca35177dfef05a5 files/digest-calcoo-1.3.15 64
