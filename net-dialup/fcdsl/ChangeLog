@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/fcdsl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.10 2005/02/26 22:20:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.11 2005/03/04 13:09:49 genstef Exp $
+
+  04 Mar 2005; Stefan Schweizer <genstef@gentoo.org>
+  fcdsl-2.6.20.7-r4.ebuild:
+  2.6.20.7-r4 stable because of wolf31o2 for livecd and the severe problems
+  described in bug 76832
 
 *fcdsl-2.6.20.7-r4 (26 Feb 2005)
 
