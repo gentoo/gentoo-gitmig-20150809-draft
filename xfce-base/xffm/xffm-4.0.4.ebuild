@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/xffm-4.0.4.ebuild,v 1.3 2004/03/17 00:26:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/xffm-4.0.4.ebuild,v 1.4 2004/04/05 01:19:06 bcowan Exp $
 
 IUSE="samba"
 S=${WORKDIR}/${P}
@@ -21,7 +21,13 @@ DEPEND=">=x11-libs/gtk+-2.0.6
 	=xfce-base/libxfce4mcs-${PV}
 	=xfce-base/xfce-mcs-manager-${PV}
 	>=dev-libs/dbh-1.0.14"
-RDEPEND="samba? ( net-fs/samba )
+RDEPEND=">=x11-libs/gtk+-2.0.6
+	dev-libs/libxml2
+	=xfce-base/libxfce4util-${PV}
+	=xfce-base/libxfcegui4-${PV}
+	=xfce-base/libxfce4mcs-${PV}
+	=xfce-base/xfce-mcs-manager-${PV}
+	samba? ( net-fs/samba )
 	>=dev-libs/dbh-1.0.14"
 
 src_compile() {
