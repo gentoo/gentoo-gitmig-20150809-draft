@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.27 2003/10/27 14:21:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.28 2003/11/12 15:38:49 agriffis Exp $
+
+  12 Nov 2003; Aron Griffis <agriffis@gentoo.org> rpm-4.2.1.ebuild:
+  Add ~alpha now that beecrypt is building correctly for alpha.
+  Change dep to >=dev-libs/beecrypt-3.1.0-r1 since that is required for a good
+  alpha build.
 
   27 Oct 2003; Aron Griffis <agriffis@gentoo.org> rpm-4.2.1.ebuild:
   Remove ~alpha KEYWORD until bug 31200 is resolved

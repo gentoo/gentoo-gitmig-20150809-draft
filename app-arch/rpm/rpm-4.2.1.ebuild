@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.3 2003/10/27 14:21:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.4 2003/11/12 15:38:49 agriffis Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/rpm-4.2.1.tar.gz"
 HOMEPAGE="http://www.rpm.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE="nls python doc"
 RDEPEND="=sys-libs/db-3.2*
 	>=sys-libs/zlib-1.1.3
@@ -17,7 +17,7 @@ RDEPEND="=sys-libs/db-3.2*
 	>=dev-libs/popt-1.7
 	>=app-crypt/gnupg-1.2
 	dev-libs/elfutils
-	dev-libs/beecrypt
+	>=dev-libs/beecrypt-3.1.0-r1
 	nls? ( sys-devel/gettext )
 	python? ( =dev-lang/python-2.2* )
 	doc? ( app-doc/doxygen )"
