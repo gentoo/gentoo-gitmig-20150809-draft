@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.13.ebuild,v 1.1 2003/06/10 08:06:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.13.ebuild,v 1.2 2003/06/10 17:06:02 raker Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
 SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-imapd-${PV}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc "
 DEPEND="virtual/glibc
 	afs? ( >=net-fs/openafs-1.2.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
