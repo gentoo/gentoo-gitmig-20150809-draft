@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/asapm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/asapm/ChangeLog,v 1.1 2002/02/01 21:53:39 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/asapm/ChangeLog,v 1.2 2002/04/12 19:53:02 seemant Exp $
+
+*asapm-2.11 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> asapm-2.11.ebuild :
+
+  Version bump with USE dependent jpeg support
 
 *asapm-2.10 (1 Feb 2002)
 
