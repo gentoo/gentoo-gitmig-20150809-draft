@@ -1,0 +1,12 @@
+# ChangeLog for app-emulation/emul-linux-x86-nvidia
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/ChangeLog,v 1.1 2004/07/02 06:08:57 cyfred Exp $
+
+*emul-linux-x86-nvidia-1.0.6106 (02 Jul 2004)
+
+  02 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>; +metadata.xml,
+  +emul-linux-x86-nvidia-1.0.6106.ebuild:
+  New package app-emulation/emul-linux-x86-nvidia. This package installs
+  nvidia-glx 32 bit compatibility libraries for AMD64 nvidia-glx. This package
+  only is for use with nvidia-glx-1.0.6106 at this time.
+
