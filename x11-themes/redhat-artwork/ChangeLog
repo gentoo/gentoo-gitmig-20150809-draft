@@ -1,6 +1,15 @@
 # ChangeLog for x11-themes/redhat-artwork
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.44 2004/12/28 22:35:35 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.45 2005/01/15 00:23:48 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org>
+  redhat-artwork-0.120.1.2.ebuild, redhat-artwork-0.120.ebuild,
+  redhat-artwork-0.73.ebuild, redhat-artwork-0.95.ebuild,
+  redhat-artwork-0.96.ebuild:
+  Changed dep on a kde-base monolithic package to accept the equivalent split
+  or -meta package. KDE 3.4 has 'split' packages as well as monolithic, and
+  either alternative may provide the same files. This dep may have to be
+  narrowed down in the future to the precise split packages required.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

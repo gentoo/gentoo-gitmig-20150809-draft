@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/qinx-1.2.ebuild,v 1.2 2004/12/16 11:20:56 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/qinx-1.2.ebuild,v 1.3 2005/01/15 00:26:50 danarmak Exp $
 
 inherit kde eutils
 
@@ -13,8 +13,8 @@ LICENSE="as-is"
 KEYWORDS="x86 ~alpha -ppc ~sparc"
 IUSE=""
 
-DEPEND="kde-base/kdebase"
-RDEPEND="kde-base/kdebase"
+DEPEND="|| ( kde-base/kdebase-meta kde-base/kdebase )"
+RDEPEND="|| ( kde-base/kdebase-meta kde-base/kdebase )"
 need-kde 3.2
 
 src_unpack() {

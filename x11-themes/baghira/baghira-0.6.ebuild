@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.6.ebuild,v 1.2 2004/12/08 23:36:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.6.ebuild,v 1.3 2005/01/15 00:21:19 danarmak Exp $
 
 inherit kde eutils
 
@@ -13,8 +13,8 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~alpha"
 IUSE=""
 
-DEPEND=">=kde-base/kdebase-3.2"
-RDEPEND=">=kde-base/kdebase-3.2"
+DEPEND="|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.2 )"
+RDEPEND="|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.2 )"
 need-kde 3.2
 
 src_unpack() {

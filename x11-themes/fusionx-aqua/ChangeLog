@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/fusionx-aqua
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/ChangeLog,v 1.5 2004/07/03 20:11:39 carlo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/ChangeLog,v 1.6 2005/01/15 00:21:57 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> fusionx-aqua-1.1.ebuild:
+  Changed dep on a kde-base monolithic package to accept the equivalent split
+  or -meta package. KDE 3.4 has 'split' packages as well as monolithic, and
+  either alternative may provide the same files. This dep may have to be
+  narrowed down in the future to the precise split packages required.
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> fusionx-aqua-1.1.ebuild:
   QA: need-kde after R/DEPEND

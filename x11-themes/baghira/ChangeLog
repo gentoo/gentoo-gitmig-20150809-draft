@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.22 2005/01/10 14:01:37 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.23 2005/01/15 00:21:19 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> baghira-0.5a.ebuild,
+  baghira-0.5h-r1.ebuild, baghira-0.5h.ebuild, baghira-0.6.ebuild,
+  baghira-0.6a.ebuild:
+  Changed dep on a kde-base monolithic package to accept the equivalent split
+  or -meta package. KDE 3.4 has 'split' packages as well as monolithic, and
+  either alternative may provide the same files. This dep may have to be
+  narrowed down in the future to the precise split packages required.
 
 *baghira-0.6a (10 Jan 2005)
 

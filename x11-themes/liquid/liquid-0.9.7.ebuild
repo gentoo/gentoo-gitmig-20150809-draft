@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/liquid-0.9.7.ebuild,v 1.2 2004/10/11 23:26:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/liquid-0.9.7.ebuild,v 1.3 2005/01/15 00:22:34 danarmak Exp $
 
 inherit kde
 
@@ -13,6 +13,6 @@ LICENSE="BSD"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=kde-base/kdebase-3.2*"
-RDEPEND=">=kde-base/kdebase-3.2*"
+DEPEND="|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.2* )"
+RDEPEND="|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.2* )"
 need-kde 3.2
