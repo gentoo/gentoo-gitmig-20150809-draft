@@ -1,6 +1,13 @@
 # ChangeLog for app-text/aspell
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.28 2003/11/15 03:01:26 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.29 2004/02/18 09:18:33 liquidx Exp $
+
+*aspell-0.50.5 (18 Feb 2004)
+
+  18 Feb 2004; Alastair Tse <liquidx@gentoo.org> aspell-0.50.5.ebuild,
+  metadata.xml:
+  version bump. cleaned up src_install, installed compat scripts to
+  ispell-aspell and spell-aspell
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> aspell-0.50.4.1.ebuild:
   Stable on ia64
