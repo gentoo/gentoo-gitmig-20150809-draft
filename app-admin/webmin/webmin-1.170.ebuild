@@ -1,35 +1,36 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.150.ebuild,v 1.5 2004/06/24 21:42:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.170.ebuild,v 1.1 2004/11/17 23:17:10 eradicator Exp $
 
 inherit eutils
 
-IUSE="ssl apache2"
-
 DESCRIPTION="Webmin, a web-based system administration interface"
-SRC_URI="mirror://sourceforge/webadmin/${P}.tar.gz"
-RESTRICT="nomirror"
 HOMEPAGE="http://www.webmin.com/"
+SRC_URI="webmin-minimal? ( mirror://sourceforge/webadmin/${P}-minimal.tar.gz )
+	!webmin-minimal? ( mirror://sourceforge/webadmin/${P}.tar.gz )"
 
-SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc amd64 ~s390 hppa"
+SLOT="0"
+KEYWORDS="amd64 hppa ppc ppc64 s390 sparc x86 ~mips"
+IUSE="ssl apache2 webmin-minimal"
 
-DEPEND=""
-RDEPEND="dev-lang/perl
-	ssl? ( dev-perl/Net-SSLeay )
+DEPEND="dev-lang/perl"
+RDEPEND="ssl? ( dev-perl/Net-SSLeay )
 	dev-perl/XML-Generator"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	# Bug #47020
-	epatch ${FILESDIR}/${PN}-1.130-webalizer.patch
+	# in webmin-minimal webalizer and apache2 are not present
+	if ! use webmin-minimal ; then
+		cd ${S}
+		# Bug #47020
+		epatch ${FILESDIR}/${PN}-1.130-webalizer.patch
 
-	# Bug #50810, #51943
-	if use apache2; then
-		epatch ${FILESDIR}/${PN}-1.140-apache2.patch
+		# Bug #50810, #51943
+		if use apache2; then
+			epatch ${FILESDIR}/${PN}-1.140-apache2.patch
+		fi
 	fi
 }
 
@@ -43,14 +44,18 @@ src_install() {
 	dodir /var
 	dodir /etc/pam.d
 	cp -rp * ${D}/usr/libexec/webmin
-	mv ${D}/usr/libexec/webmin/openslp/config \
-		${D}/usr/libexec/webmin/openslp/config-gentoo-linux
+
+	# in webmin-minimal openslp is not present
+	if [ ! -f "${D}/usr/libexec/webmin/openslp/config-gentoo-linux" ] ; then
+		cp ${D}/usr/libexec/webmin/openslp/config \
+			${D}/usr/libexec/webmin/openslp/config-gentoo-linux
+	fi
 
 	exeinto /etc/init.d
-	newexe webmin-gentoo-init webmin
+	newexe ${FILESDIR}/init.d.webmin webmin
 
 	insinto /etc/pam.d/
-	newins webmin-pam webmin
+	newins ${FILESDIR}/webmin-pam webmin
 	echo gentoo > ${D}/usr/libexec/webmin/install-type
 
 	exeinto /etc/webmin
@@ -84,6 +89,8 @@ pkg_postinst() {
 		# Start if it was running before
 		/etc/init.d/webmin start
 	fi
+
+	sed -i 's:^pidfile=.*$:pidfile=/var/run/webmin.pid:' /etc/webmin/miniserv.conf
 
 	einfo "Add webmin to your boot-time services with 'rc-update add webmin'."
 	einfo "Point your web browser to http://localhost:10000 to use webmin."

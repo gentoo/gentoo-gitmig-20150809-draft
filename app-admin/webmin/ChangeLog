@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.63 2004/11/03 06:48:46 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.64 2004/11/17 23:17:10 eradicator Exp $
+
+*webmin-1.170 (17 Nov 2004)
+
+  17 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -webmin-1.150-r1.ebuild, -webmin-1.150-r2.ebuild, -webmin-1.150.ebuild,
+  +webmin-1.170.ebuild:
+  Version bump.
 
   03 Nov 2004; Bret Curtis <psi29a@gentoo.org> webmin-1.160.ebuild:
   added to ~mips for testing

@@ -1,16 +1,22 @@
-MD5 5b6bf720d2529a86a3af4370f761016a ChangeLog 9050
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b8b44bcc49f4b5b2cedc35976bd58120 ChangeLog 9255
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
-MD5 88429ab206c35a578872afe6abfe7cc4 webmin-1.150-r1.ebuild 2368
-MD5 7b3b67769e6852868948e4b380ede13e webmin-1.150-r2.ebuild 2689
-MD5 f19f7b11073df55b1c3db965dd6936ae webmin-1.150.ebuild 2265
+MD5 3c0b252ff735791f053724301d237e7b webmin-1.170.ebuild 2689
 MD5 a21a0a8a415d1e5a1764199b0b4eeed2 webmin-1.160.ebuild 2685
-MD5 03f188f36a9989ff035a883155a82e0b files/digest-webmin-1.150 65
-MD5 03f188f36a9989ff035a883155a82e0b files/digest-webmin-1.150-r1 65
-MD5 a947adc3399bbf729d969eb087a8d63c files/digest-webmin-1.150-r2 137
-MD5 17e9cccc95647ba080bd69785db85ac1 files/digest-webmin-1.160 137
-MD5 7be7bafd8b2e3d886fef0a055078b226 files/init.d.webmin 860
-MD5 bc8eb1c9de103599fc00b140b0ed1f9f files/uninstall.sh 260
-MD5 e7e3780c0bf03968b380535064c54213 files/webmin-gentoo-init 859
 MD5 7d80c86adbd36eeb8f220b9efdd30819 files/webmin-pam 101
+MD5 7be7bafd8b2e3d886fef0a055078b226 files/init.d.webmin 860
+MD5 58f9530c780e652271313555858ad909 files/digest-webmin-1.170 138
+MD5 17e9cccc95647ba080bd69785db85ac1 files/digest-webmin-1.160 137
+MD5 bc8eb1c9de103599fc00b140b0ed1f9f files/uninstall.sh 260
 MD5 bb2acab90ada721c723d91a5a97c193c files/webmin-1.130-webalizer.patch 615
 MD5 a01d77a867d5469c7211685bfd04f6f6 files/webmin-1.140-apache2.patch 1227
+MD5 e7e3780c0bf03968b380535064c54213 files/webmin-gentoo-init 859
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBm9xeArHZZzCEUG0RAoWbAJ4gfB4mso3l3zzus0Xiu3gwzJcgPACeMbBi
+ellInuq2Juy0CvbsCxwZ2xw=
+=2clM
+-----END PGP SIGNATURE-----
