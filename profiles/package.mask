@@ -303,10 +303,6 @@ x11-terms/powershell
 # Masking gaim-0.59.2 because it segfaults all the time
 =net-im/gaim-0.59.2
 
-# Hannes Mehnertk <hannes@gentoo.org> (13 sep 2002)
-# masked kvim
-app-editors/kvim
-
 # <carpaski@gentoo.org> (12 Sep 2002)
 # Masked for testing
 >=net-www/apache-2.0.0
