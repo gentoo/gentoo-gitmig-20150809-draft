@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.10.ebuild,v 1.5 2003/10/02 18:17:27 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.10.ebuild,v 1.6 2004/02/15 12:51:31 dholm Exp $
 
 S="${WORKDIR}/${PN}-$(echo ${PV} | sed 's/\.\([0-9]*\)$/-pl\1/')"
 DESCRIPTION="Lossy speech compression library and tool."
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.cs.tu-berlin.de/pub/local/kbs/tubmik/gsm/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="OSI-Approved"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 
 DEPEND="virtual/glibc"
 
