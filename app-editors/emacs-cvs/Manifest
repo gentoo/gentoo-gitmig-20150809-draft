@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f046fe3a7be4fb90c583c2fd4475e509 ChangeLog 4991
 MD5 3b1bff980356c4a65d57cc1b4cf3e0af emacs-cvs-21.3.50.ebuild 3039
-MD5 2984db2b0384630f7c569e7a66cdfa5d emacs-cvs-23.0.0.ebuild 4600
-MD5 9162c58e6a524f426877d847a3c32d62 ChangeLog 4884
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 eb3b67e3da7eae8bf8fa97a438a3a9ef emacs-cvs-22.0.50.ebuild 4583
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-21.3.50 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-22.0.50 0
-MD5 0d61f19c0e6fcdb6657ae1d4d9e69801 files/50emacs-22.0.50.envd 39
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-23.0.0 0
-MD5 8e50e760415e106cd168d8709d31b7dc files/emacs-22.0.50.desktop 206
-MD5 277b238c9263aabcc2ef92de1d6d68bb files/emacs-cvs-21.3.50-nofink.diff 1520
-MD5 5f423550e3d32b7c0511eccd93a94750 files/emacs-subdirs-el-gentoo.diff 1369
+MD5 2984db2b0384630f7c569e7a66cdfa5d emacs-cvs-23.0.0.ebuild 4600
+MD5 3d1710634d908a8f454fb0b82a6126d5 emacs-cvs-22.0.50.ebuild 4582
 MD5 04a64867694a98538309b433c80aaa62 files/40aspell-gentoo.el 80
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-21.3.50 0
 MD5 0e5a4a35651f5365c6191636a2c26eb7 files/emacs.desktop 190
-MD5 0b379e4c82898cbd3b9929d752b7bfab files/50emacs-23.0.0.envd 38
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-23.0.0 0
 MD5 86cca3ef7b8ceb7f9e666501bedcc76e files/emacs-23.0.0.desktop 204
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (Darwin)
-
-iD8DBQFCH0HhVWNWqTUmv+0RAvG1AJ9OwdRSaA50+NsfXaGHUQTzEW72XwCeKRLt
-mIXOCIA2hwsXrAv5Mg7trxI=
-=y2cE
------END PGP SIGNATURE-----
+MD5 0d61f19c0e6fcdb6657ae1d4d9e69801 files/50emacs-22.0.50.envd 39
+MD5 5f423550e3d32b7c0511eccd93a94750 files/emacs-subdirs-el-gentoo.diff 1369
+MD5 277b238c9263aabcc2ef92de1d6d68bb files/emacs-cvs-21.3.50-nofink.diff 1520
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-22.0.50 0
+MD5 8e50e760415e106cd168d8709d31b7dc files/emacs-22.0.50.desktop 206
+MD5 0b379e4c82898cbd3b9929d752b7bfab files/50emacs-23.0.0.envd 38
