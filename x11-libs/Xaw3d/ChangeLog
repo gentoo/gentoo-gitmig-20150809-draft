@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/Xaw3d
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.7 2003/03/10 22:39:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.8 2003/12/13 17:56:51 brad_mssw Exp $
+
+  13 Dec 2003; Brad House <brad_mssw@gentoo.org> Xaw3d-1.5-r1.ebuild:
+  mark stable on amd64
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
