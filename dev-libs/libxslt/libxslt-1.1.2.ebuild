@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.2.ebuild,v 1.4 2004/02/10 06:24:00 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.2.ebuild,v 1.5 2004/02/28 22:25:02 liquidx Exp $
 
 inherit libtool gnome.org
+[ -n "`use python`" ] && inherit python
 
 IUSE="python"
 DESCRIPTION="XSLT libraries and tools"
