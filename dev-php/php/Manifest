@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 4eafd10b6a1dc51ec4aa3e4d49c27bd3 ChangeLog 17678
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 43e57e69f231376d10554cf9874e8d5d php-4.3.8.ebuild 1071
-MD5 02779e9c5f35de0f34bdfd0f50e52fe6 php-4.3.9.ebuild 1067
+MD5 602b6f4385ff1aac359a56c90a090217 php-4.3.9.ebuild 1066
 MD5 159ad5dc930e19ed38c8377ef7a8eb06 php-4.3.9_rc1.ebuild 1137
 MD5 abf5f97a49422c509b77b8077d714153 php-5.0.0-r1.ebuild 540
 MD5 48aa6f4b37fb2c3cc4fa6ad0527f4378 php-5.0.0.ebuild 521
@@ -23,7 +23,7 @@ MD5 4792b645fe6b66cd3f1b1ec88d4d20e8 files/digest-php-5.0.2 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBWtzQHTu7gpaalycRAq0dAKCwqyZU6Bys7L43/oyLAxdkYgSYKwCgsKXx
-z701XCjagSywEjHCzNfSPbo=
-=bGj2
+iD8DBQFBXAVsHTu7gpaalycRAp3NAKDNFwFcGY1vpCKimB5sYADuX3pzNgCglPAg
+rt2OwQ5H8XTaMooizlZOHs0=
+=Brw/
 -----END PGP SIGNATURE-----
