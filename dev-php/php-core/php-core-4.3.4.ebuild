@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-core/php-core-4.3.4.ebuild,v 1.2 2003/11/29 23:43:26 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-core/php-core-4.3.4.ebuild,v 1.3 2003/12/16 11:00:39 robbat2 Exp $
 
 PHPSAPI="cli"
 inherit php-2 eutils
 
 IUSE="${IUSE} readline"
-
 DESCRIPTION="PHP core package"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~mips ~amd64"

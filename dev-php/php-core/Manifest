@@ -1,16 +1,5 @@
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-core/Manifest,v 1.5 2003/12/16 11:00:39 robbat2 Exp $
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 85e7da4423b9bea73aded9678aaa06f3 php-core-4.3.4.ebuild 1948
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-core/Manifest,v 1.6 2003/12/16 11:00:46 robbat2 Exp $
+MD5 15258229a95ccce482b4d2370ae48d83 php-core-4.3.4.ebuild 1945
 MD5 70fda8c6caea19a50e1e57b5e7780bb9 ChangeLog 468
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 5547bf31e6a425747226d5984cff04e9 files/digest-php-core-4.3.4 137
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.3 (GNU/Linux)
-Comment: dev-php/php-core - Tue Dec  9 07:21:51 UTC 2003
-
-iD8DBQE/1XgVsnuUTjSIToURAukLAJ4lk/yOcM4vkeQOvVoNuthZ6SiBkwCfZhB7
-ROYk52z0jjOYQcI43J/C8MY=
-=vBVr
------END PGP SIGNATURE-----
