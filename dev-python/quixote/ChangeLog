@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/quixote
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.6 2003/11/12 18:06:15 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.7 2003/12/05 16:01:52 g2boojum Exp $
+
+*quixote-0.7_alpha3 (05 Dec 2003)
+
+  05 Dec 2003; Grant Goodyear <g2boojum@gentoo.org> quixote-0.7_alpha3.ebuild:
+  New version
 
 *quixote-0.7_alpha2 (12 Nov 2003)
 
