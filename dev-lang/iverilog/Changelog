@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/icarus_verilog
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/iverilog/Changelog,v 1.1 2002/04/04 03:56:03 chadh Exp $
+
+*icarus_verilog-0.6.1 (4/3/2002)
+
+  3 Apr 2002; Chad Huneycutt <chadh@gentoo.org> icarus_verilog-0.6.1.ebuild :
+  
+  Ebuild created
