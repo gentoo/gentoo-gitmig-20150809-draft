@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/monafont
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.10 2003/12/08 14:51:05 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.11 2004/02/04 00:19:33 augustus Exp $
+
+  03 Feb 2004; <augustus@gentoo.org> monafont-2.90.ebuild:
+  Added ~amd64 keyword.
 
   08 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> monafont-2.90.ebuild:
   Fixed mkdirhier problem, bug #35332

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/aquafont-2.7.ebuild,v 1.4 2003/10/11 07:43:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/aquafont-2.7.ebuild,v 1.5 2004/02/04 00:19:33 augustus Exp $
 
 IUSE=""
 MY_P="${PN/font/}${PV/\./_}"
@@ -9,7 +9,7 @@ DESCRIPTION="Very pretty truetype font"
 HOMEPAGE="http://aquablue.milkcafe.to/"
 SRC_URI="http://aquablue.milkcafe.to/fnt/${MY_P}.lzh"
 
-KEYWORDS="x86 alpha sparc ppc"
+KEYWORDS="x86 alpha sparc ppc ~amd64"
 LICENSE="aquafont"
 SLOT=0
 

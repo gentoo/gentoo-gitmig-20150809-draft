@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-1.03.ebuild,v 1.2 2003/08/09 10:29:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-1.03.ebuild,v 1.3 2004/02/04 00:19:33 augustus Exp $
 
 IUSE="X"
 
@@ -22,7 +22,7 @@ SRC_URI="${SRC_BASE1}/jiskan16-2000-1.bdf.gz
 LICENSE="public-domain"
 SLOT="0"
 
-KEYWORDS="x86 ~alpha ~sparc ~ppc"
+KEYWORDS="x86 ~alpha ~sparc ~ppc ~amd64"
 
 DEPEND="virtual/x11"
 RDEPEND="X? ( virtual/x11 )"

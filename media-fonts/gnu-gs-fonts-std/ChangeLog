@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/gnu-gs-fonts-std
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-std/ChangeLog,v 1.3 2003/12/09 18:07:17 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-std/ChangeLog,v 1.4 2004/02/04 00:19:33 augustus Exp $
+
+  03 Feb 2004; <augustus@gentoo.org> gnu-gs-fonts-std-6.0.ebuild:
+  Added ~amd64 keyword.
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
   gnu-gs-fonts-std-6.0.ebuild:

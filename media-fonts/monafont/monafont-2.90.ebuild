@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90.ebuild,v 1.5 2003/12/08 14:51:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90.ebuild,v 1.6 2004/02/04 00:19:33 augustus Exp $
 
 IUSE="truetype"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	truetype? mirror://sourceforge/${PN}/${PN}-ttf-${PV}.zip"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 alpha ppc sparc"
+KEYWORDS="x86 alpha ppc sparc ~amd64"
 IUSE=""
 DEPEND="virtual/x11
 	dev-lang/perl
