@@ -1,8 +1,12 @@
 # ChangeLog for media-sound/bladeenc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.2 2002/08/14 08:47:00 pvdabeel Exp $
 
 *bladeenc-0.94.2 (1 Feb 2002)
+
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+
+  Added ppc keyword
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
