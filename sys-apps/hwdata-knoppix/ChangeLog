@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hwdata-knoppix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.18 2005/01/02 23:23:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.19 2005/03/29 18:41:57 corsair Exp $
+
+  29 Mar 2005; Markus Rothe <corsair@gentoo.org>
+  hwdata-knoppix-0.107-r1.ebuild:
+  Stable on ppc64
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
