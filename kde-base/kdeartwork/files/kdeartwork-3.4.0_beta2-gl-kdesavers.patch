@@ -1,0 +1,12 @@
+diff -uNr kdeartwork-3.3.92.orig/kscreensaver/configure.in.in kdeartwork-3.3.92/kscreensaver/configure.in.in
+--- kdeartwork-3.3.92.orig/kscreensaver/configure.in.in	2004-08-13 15:19:49.000000000 +0200
++++ kdeartwork-3.3.92/kscreensaver/configure.in.in	2005-02-19 14:10:21.233296888 +0100
+@@ -32,7 +32,7 @@
+ AC_HAVE_GL( have_gl=yes, have_gl=no )
+ 
+ AM_CONDITIONAL(COMPILE_GL_XSAVERS, test x$have_gl = xyes)
+-AM_CONDITIONAL(COMPILE_GL_KSAVERS, test x$ac_cv_kde_qt_has_opengl = xyes)
++AM_CONDITIONAL(COMPILE_GL_KSAVERS, test x$have_gl = xyes && test x$ac_cv_kde_qt_has_opengl = xyes)
+ AM_CONDITIONAL(COMPILE_X11_KSAVERS, test "x$ac_x_includes" != x && test "x$ac_x_libraries" != x)
+ AM_CONDITIONAL(COMPILE_ARTS_KSAVERS, test x$have_arts = xyes)
+ 
