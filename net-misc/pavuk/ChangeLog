@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.13 2004/11/10 03:56:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.14 2004/11/10 10:42:03 sejo Exp $
+
+  10 Nov 2004; <SeJo@gentoo.org> pavuk-0.9.31.ebuild:
+  stable on ppc gsla:70516
 
   09 Nov 2004; Jason Wever <weeve@gentoo.org> pavuk-0.9.31.ebuild:
   Stable on sparc wrt security bug #70516.
