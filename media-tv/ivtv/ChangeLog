@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.9 2004/08/26 03:41:39 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.10 2004/10/02 17:45:57 iggy Exp $
+
+*ivtv-0.1.9-r4 (02 Oct 2004)
+
+  02 Oct 2004; <iggy@gentoo.org> ivtv-0.1.9-r4.ebuild:
+  moving set_arch_ functions to eutils from kernel
 
   25 Aug 2004; <iggy@gentoo.org> -ivtv-0.1.9-r1.ebuild:
   new rev, based off of -ck71d, compiles on 2.6.8, have fun
