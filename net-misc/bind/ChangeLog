@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/bind
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/ChangeLog,v 1.4 2002/05/02 21:46:15 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/ChangeLog,v 1.5 2002/06/01 16:31:06 nitro Exp $
+
+*bind-9.2.1-r1 (2 May 2002)
+
+  1 June 2002; Kyle Manna <nitro@gentoo.org> bind-9.2.1-r1.ebuild:
+
+  *Alot* of bug fixes:
+  	+ We now have a man page for named.conf
+	+ Included a basic /etc/bind/named.conf
+	+ Will automatically create a /etc/bind/rndc.key if file doesn't exist
+	+ With the additon of rndc, we now have '/etc/init.d/named reload'
+	+ Chown /var/run/named and make sure it gets created, bug #2872
+	+ Moved root.cache to named.ca, it was annoying me ;)
+	+ Added multi-threading support to the default configure
+	+ Added support for 'use ssl' and 'use ipv6'
+	+ And other stuff
 
 *bind-9.2.1 (2 May 2002)
 

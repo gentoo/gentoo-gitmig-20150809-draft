@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/files/named.rc6,v 1.3 2002/02/09 01:08:04 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/files/named.rc6,v 1.4 2002/06/01 16:31:07 nitro Exp $
+
+opts="start stop reload restart"
 
 depend() {
 	need net
@@ -17,4 +19,17 @@ stop() {
 	ebegin "Stopping named"
 	start-stop-daemon --stop --quiet --pidfile /var/run/named/named.pid
 	eend $?
+}
+
+reload() {
+	if [ ! -f /var/run/named/named.pid ] ; then
+		/etc/init.d/named start
+		exit
+	fi
+	if [ -f /etc/bind/rndc.key ] ; then
+		ebegin "Reloading named"
+		rndc reconfig
+		eend $?
+	else /etc/init.d/named restart
+	fi
 }
