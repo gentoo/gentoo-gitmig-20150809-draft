@@ -2,6 +2,7 @@ MD5 054e8921cef230f2ad4dca8fa05ef169 ChangeLog 2256
 MD5 cdf4cdcbdf920dc9a3dbf4027549f326 ORBit-0.5.14-r2.ebuild 1559
 MD5 e2d2b1415bb7b91baad2ae0797f2bfa8 ORBit-0.5.16.ebuild 1560
 MD5 0d322c7fe2e5f4db4350e3690958c8ec ORBit-0.5.17.ebuild 1483
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 065f9b49e71102bb054f825206b824fe files/alloca.diff 334
 MD5 2a3acded1669a2b9de179a9229097e55 files/digest-ORBit-0.5.14-r2 65
 MD5 32d8c91c3a81fc3081891cb85734aad9 files/digest-ORBit-0.5.16 66
