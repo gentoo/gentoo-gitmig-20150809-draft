@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/linux_logo-4.02.ebuild,v 1.4 2002/09/23 18:23:23 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/linux_logo-4.02.ebuild,v 1.5 2002/10/04 20:32:27 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Displays an ansi or an ascii logo and some system information."
