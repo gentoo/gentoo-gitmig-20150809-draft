@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.57 2004/12/02 16:51:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.58 2004/12/02 21:13:13 vapier Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -395,17 +395,18 @@ libc_has_ssp() {
 	use ppc64 && libc_prefix="/lib64/"
 	libc_prefix="${libc_prefix:="/$(get_libdir)/"}"
 
-	use uclibc \
-		&& local libc_file="libc.so.0" \
-		|| local libc_file="libc.so.6"
+	echo 'int main(){}' > ${T}/libctest.c
+	gcc ${T}/libctest.c -lc -o libctest
+	local libc_file=$(readelf -d libctest | grep 'NEEDED.*\[libc\.so[0-9\.]*\]' | awk '{print $NF}')
+	libc_file="${libc_file:1:${#libc_file}-2}"
 
 	local my_libc=${ROOT}/${libc_prefix}/${libc_file}
 
 	# Check for the libc to have the __guard symbols
 	if  [ "$(readelf -s "${my_libc}" 2>/dev/null | \
-	         grep GLOBAL | grep OBJECT | grep '__guard')" ] && \
+	         grep 'OBJECT.*GLOBAL.*__guard')" ] && \
 	    [ "$(readelf -s "${my_libc}" 2>/dev/null | \
-	         grep GLOBAL | grep FUNC | grep '__stack_smash_handler')" ]
+	         grep 'FUNC.*GLOBAL.*__stack_smash_handler')" ]
 	then
 		return 0
 	else
