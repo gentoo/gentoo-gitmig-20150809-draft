@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3516 2005/01/21 21:56:32 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3517 2005/01/22 03:22:33 trapni Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,16 @@
 ##
 ##   End example
 ##
+
+# Christian Parpart <trapni@gentoo.org> (21 Jan 2005)
+# Masked for user testing. Meta bug #76457
+=net-www/mod_auth_mysql-2.8.1
+
+# Christian Parpart <trapni@gentoo.org> (21 Jan 2005)
+# mod_auth_mysql changes versioning scheme from YYMMDD to usual version numbers.
+=net-www/mod_auth_mysql-20030510
+=net-www/mod_auth_mysql-20030510-r1
+=net-www/mod_auth_mysql-20030510-r2
 
 # Jeremy Huddleston <eradicator@gentoo.org> (21 Jan 2005)
 # ICE problems found in this branch update.  See bug #78666
@@ -461,7 +471,7 @@ media-video/cinelerra
 # New, seemingly broken version. See bug #77369
 =net-firewall/ipsec-tools-0.5_rc1
 
-# <trapni@gentoo.org> (jan 11 2005)
+# <trapni@gentoo.org> (Jan 11 2005)
 # Apache herd package refresh
 # Masked for user testing. Meta-bug #76457
 =www-apache/mod_dav_svn-1.1.2
