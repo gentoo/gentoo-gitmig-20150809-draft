@@ -4,7 +4,7 @@
 # You can copy this file to .dir_colors in your $HOME directory to override
 # the system defaults.
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/files/DIR_COLORS,v 1.7 2004/10/10 07:02:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/files/DIR_COLORS,v 1.8 2004/10/15 20:54:20 vapier Exp $
 
 # COLOR needs one of these arguments: 'tty' colorizes output to ttys, but not
 # pipes. 'all' adds color characters to all output. 'none' shuts colorization
@@ -156,3 +156,5 @@ EXEC 01;32
 .midi 00;36
 .au 00;36
 .ogg 00;36
+.flac 00;36
+.aac 00;36
