@@ -1,5 +1,5 @@
 virtual/python			dev-lang/spython
-virtual/bash			sys-apps/bash
+virtual/bash			app-shells/bash
 #dummy
 virtual/kernel			sys-apps/baselayout
 virtual/glibc 			sys-libs/glibc

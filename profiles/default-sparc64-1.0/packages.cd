@@ -3,7 +3,7 @@ sys-apps/lvm-user
 sys-apps/e2fsprogs
 sys-apps/reiserfsprogs
 sys-apps/util-linux
-sys-apps/bash
+app-shells/bash
 sys-apps/fileutils
 sys-apps/net-tools
 sys-apps/modutils

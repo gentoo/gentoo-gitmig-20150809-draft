@@ -4,7 +4,7 @@ virtual/python			dev-lang/python
 virtual/x11-web-browser		net-www/netscape
 virtual/mta			net-mail/exim
 virtual/alsa			sys-kernel/linux
-virtual/bash			sys-apps/bash
+virtual/bash			app-shells/bash
 virtual/kernel			sys-kernel/linux
 virtual/glibc 			sys-libs/glibc
 virtual/x11			x11-base/xfree

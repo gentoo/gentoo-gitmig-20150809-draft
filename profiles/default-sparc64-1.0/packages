@@ -22,7 +22,7 @@
 *net-misc/netkit-telnetd
 *net-misc/rsync
 *net-misc/wget
-*sys-apps/bash
+*app-shells/bash
 *sys-apps/bzip2
 *sys-apps/kbd
 *sys-apps/cpio
@@ -136,7 +136,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.31 2003/03/11 22:28:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.32 2003/03/16 10:03:21 carpaski Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
