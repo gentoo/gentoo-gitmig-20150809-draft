@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.4.1.ebuild,v 1.4 2004/05/21 14:23:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.4.1.ebuild,v 1.5 2004/05/30 15:49:46 kugelfang Exp $
 
 inherit gnome2
 
@@ -23,8 +23,10 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS CHANGES ChangeLog HACKING PORTING NEWS README TODO"
 
 src_compile() {
-	aclocal -I scripts
-	automake
-	autoconf
+	if [ "${ARCH}" = "amd64" ]; then
+		aclocal -I scripts
+		automake
+		autoconf
+	fi
 	gnome2_src_compile
 }
