@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/howto-html-20010701.ebuild,v 1.5 2001/08/02 20:41:40 danarmak Exp $
 
 P="Linux-html-HOWTOs"
 S=${WORKDIR}/${P}
