@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.3 2004/04/01 11:51:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.4 2004/04/05 13:56:44 suka Exp $
 
 IUSE="kde gnome"
 
@@ -200,6 +200,12 @@ pkg_postinst() {
 	einfo " Also, for individual components, you can use any of:"
 	einfo
 	einfo "   oocalc, oodraw, ooimpress, oomath, ooweb or oowriter"
+	einfo
+	einfo "******************************************************************"
+	einfo
+	einfo "******************************************************************"
+	einfo " If you are upgrading from OpenOffice.org 1.1.0 you will have"
+	einfo " to redo your settings."
 	einfo
 	einfo "******************************************************************"
 }
