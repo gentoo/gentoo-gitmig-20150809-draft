@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.29 2004/07/02 16:42:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.30 2004/07/04 02:23:30 pebenito Exp $
+
+  03 Jul 2004; Chris PeBenito <pebenito@gentoo.org>
+  policycoreutils-1.14.ebuild:
+  Update extras.
 
 *policycoreutils-1.14 (02 Jul 2004)
 

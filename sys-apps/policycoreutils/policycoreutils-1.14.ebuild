@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.14.ebuild,v 1.1 2004/07/02 16:42:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.14.ebuild,v 1.2 2004/07/04 02:23:30 pebenito Exp $
 
 IUSE="build"
 
 inherit eutils
 
-EXTRAS_VER="1.5"
+EXTRAS_VER="1.6"
 
 DESCRIPTION="SELinux core utilites"
 HOMEPAGE="http://www.nsa.gov/selinux"
