@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/streamtuner
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.16 2004/07/22 06:28:29 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.17 2004/08/14 17:10:37 chriswhite Exp $
+
+*streamtuner-0.12.4 (15 Aug 2004)
+
+  15 Aug 2004; Chris White <chriswhite@gentoo.org> +streamtuner-0.12.4.ebuild:
+  Version bumping streamtuner to version 0.12.4.
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   streamtuner-0.12.3.ebuild:
