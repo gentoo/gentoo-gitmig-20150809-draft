@@ -1,4 +1,6 @@
 MD5 1ef840f6eee9c35f4ea2714853065e17 ethtool-1.7.ebuild 567
+MD5 a4d2316e5dd8876c6166be328a6d1b9a ChangeLog 911
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 548768dc62cc71ef092179192bb007ca ChangeLog 797
+MD5 e8bb7c8d788110cb393a3cf03c27d484 ethtool-1.8.ebuild 565
 MD5 41261135bb05dd390247493bd9c90d7f files/digest-ethtool-1.7 62
+MD5 a3bc02ee4d82e2319bade1d5505b67aa files/digest-ethtool-1.8 62
