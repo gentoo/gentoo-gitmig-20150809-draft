@@ -9,8 +9,8 @@
 # Additional code thanks to:
 #	      Josh Goebel <dreamer@firesedge.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.5 2003/10/16 18:18:42 mholzer Exp $
-ID='$Id: qpkg,v 1.5 2003/10/16 18:18:42 mholzer Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.6 2003/11/02 14:26:02 mholzer Exp $
+ID='$Id: qpkg,v 1.6 2003/11/02 14:26:02 mholzer Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -421,6 +421,9 @@ for p in ${ipak} ${upak} -;do
 		else
 			grep -R "${package}" /var/db/pkg/*/*/RDEPEND | \
 			cut -f5,6 -d"/" | sed -e "s:^:\t${color}:;s:$:${NO}:" | sort -u
+			if [[ $(grep -R "*${package}" /etc/make.profile/packages) != "" ]]; then
+				echo -e "\t${color}SYSTEM PROFILE${NO}"
+			fi
 		fi
 	fi
 
