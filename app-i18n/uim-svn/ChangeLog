@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/uim-svn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.6 2004/06/24 21:56:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.7 2004/07/09 11:56:29 hattya Exp $
+
+*uim-svn-20040709 (09 Jul 2004)
+
+  09 Jul 2004; Akinori Hattori <hattya@gentoo.org>
+  +files/uim-svn-qtkde-helper.diff, +uim-svn-20040709.ebuild:
+  build qtkde-helper and merged the changes of app-i18n/uim.
 
   07 Apr 2004; Akinori Hattori <hattya@gentoo.org> uim-svn-20040124.ebuild:
   inherit flag-o-matic.

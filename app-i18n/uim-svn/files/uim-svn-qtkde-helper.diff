@@ -1,0 +1,40 @@
+diff -ur uim.orig/qt/qtkde-helper/configure.in.in uim/qt/qtkde-helper/configure.in.in
+--- uim.orig/qt/qtkde-helper/configure.in.in	2004-06-20 00:17:30.000000000 +0900
++++ uim/qt/qtkde-helper/configure.in.in	2004-06-20 22:47:14.625513536 +0900
+@@ -4,17 +4,5 @@
+ AC_C_BIGENDIAN
+ AC_CHECK_KDEMAXPATHLEN
+ 
+-AC_CHECK_LIB(uim, uim_init, HAVE_UIM_LIB=yes, HAVE_UIM_LIB=no)
+-if test "x$HAVE_UIM_LIB" = "xyes"; then
+-  AC_CHECK_HEADER(uim/uim.h, HAVE_UIM_LIB=yes, HAVE_UIM_LIB=no)
+-  if test "x$HAVE_UIM_LIB" = "xyes"; then
+-    AC_DEFINE(HAVE_UIM_LIB, 1,
+-       [Define to 1 if you have uim library and header files])
+-    LIB_UIM="-luim"
+-  else
+-    AC_MSG_ERROR([You are missing uim headers.])
+-  fi
+-else
+-  AC_MSG_ERROR([You are missing uim. Please install uim first.])
+-fi
++LIB_UIM="../../../../uim/libuim.la"
+ AC_SUBST(LIB_UIM)
+diff -ur uim.orig/qt/qtkde-helper/src/candwin/uim-helper-candwin-qt.cpp uim/qt/qtkde-helper/src/candwin/uim-helper-candwin-qt.cpp
+--- uim.orig/qt/qtkde-helper/src/candwin/uim-helper-candwin-qt.cpp	2004-06-20 00:17:15.000000000 +0900
++++ uim/qt/qtkde-helper/src/candwin/uim-helper-candwin-qt.cpp	2004-07-03 20:52:41.495442296 +0900
+@@ -110,13 +110,12 @@
+     int y = list[2].toInt();
+ 
+     QPoint p1(x, y);
+-    QRect focusRect = QRect( QPoint(x, y + height()), frameSize() );
++    QRect focusRect = QRect( QPoint(x, y), frameSize() );
+     QRect screenRect = QRect(0, 0,
+                              QApplication::desktop()->screenGeometry().width(),
+                              QApplication::desktop()->screenGeometry().height());
+ 
+     QPoint p = forceInside(screenRect, focusRect);
+-    adjustCandidateWindowSize();
+     move(p);
+ }
+ 
