@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.370 2004/05/11 14:37:12 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.371 2004/05/11 15:31:59 pappy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -329,16 +329,13 @@ sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:uclibc - Compile with uclibc
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
-sys-devel/gcc-config:debug - activate verbose commandline output of the wrapper in gcc-config
-sys-devel/gcc-config:hardened - enable environment aware wrapper for comfortable PIE and SSP building
 sys-devel/gcc:f77 - Build support for the f77 language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
-sys-devel/gcc:hardened - improve PIE (position independent executables) and SSP (stack smashing protector) building of executables and libraries
+sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:uclibc - Enable uclibc specific patches for gcc
 sys-devel/gdb:objc - Build support for the Objective C code language
-sys-devel/hardened-gcc:debug - activate verbose commandline output of the default PIE SSP hardened-gcc wrapper
 sys-devel/libperl:threads - Enable Perl threads, has some compatibility problems
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
 sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
