@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7412191a42f8b7943870e42f6c496fa5 sylpheed-1.0.1.ebuild 1611
-MD5 b12d471c68e372e13a67a6bbeab1e6ec ChangeLog 20262
+MD5 f0e4b268ab2fd0f6d96733439b4cd589 ChangeLog 20372
 MD5 126ca8f672f0296d2f1e6830e6729a91 metadata.xml 231
-MD5 263018ffe58c91e9e1d5a61d922f51a7 sylpheed-1.0.0.ebuild 1677
-MD5 7c55aa20c9e62cfdbef9a0f65a64a6db sylpheed-0.9.99.ebuild 1679
-MD5 be77a46270c7b556dbfddd12c5fe20ce sylpheed-1.9.5.ebuild 1485
 MD5 3a6dcf54aaa913be4107d770d112f172 sylpheed-0.9.12-r3.ebuild 1686
+MD5 7c55aa20c9e62cfdbef9a0f65a64a6db sylpheed-0.9.99.ebuild 1679
+MD5 263018ffe58c91e9e1d5a61d922f51a7 sylpheed-1.0.0.ebuild 1677
+MD5 7412191a42f8b7943870e42f6c496fa5 sylpheed-1.0.1.ebuild 1611
 MD5 89774f24f18515ba70b7440070722c24 sylpheed-1.0.2.ebuild 1611
-MD5 66f4b1798408be9d3f19e389d4cb53a8 sylpheed-1.0.3.ebuild 1612
-MD5 f4242298cfab21456442bfe52505d2b8 files/sylpheed-procmime.diff 1119
-MD5 70e31bfd2cf86fe96c8d2a7154a47863 files/digest-sylpheed-1.0.0 68
-MD5 4cbec71671b7349c904f860a12fee5d9 files/sylpheed-namespace.diff 550
-MD5 be1f2c5362b7381526f481787259ce54 files/digest-sylpheed-1.0.1 68
-MD5 cdbd74d02e21e89ef0a94ee91dbab75c files/digest-sylpheed-1.0.3 68
-MD5 27f6f6d2b688f8a5a197eae7d319daa1 files/digest-sylpheed-1.9.5 68
+MD5 6c289a84b78dc01c091f4f7fa6ce832e sylpheed-1.0.3.ebuild 1611
+MD5 be77a46270c7b556dbfddd12c5fe20ce sylpheed-1.9.5.ebuild 1485
 MD5 54b7f8281a74665ddcd19c166763dda2 files/digest-sylpheed-0.9.12-r3 69
 MD5 a7aca32080e6fc10d7b2510e10e00912 files/digest-sylpheed-0.9.99 69
-MD5 28f6e562e3c547daedea86c235dd15a3 files/sylpheed-1.9.2-references.diff 6489
+MD5 70e31bfd2cf86fe96c8d2a7154a47863 files/digest-sylpheed-1.0.0 68
+MD5 be1f2c5362b7381526f481787259ce54 files/digest-sylpheed-1.0.1 68
 MD5 1036aed97efb76a047bb459d8a842a06 files/digest-sylpheed-1.0.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOXL+ugEuf3OQ0akRAgSrAJwJq7jd4tQnkl96hLIouiiUuBxL4wCgkiM4
-3TEaG4YHackCNOtSUgOyrmY=
-=E+Qv
------END PGP SIGNATURE-----
+MD5 cdbd74d02e21e89ef0a94ee91dbab75c files/digest-sylpheed-1.0.3 68
+MD5 27f6f6d2b688f8a5a197eae7d319daa1 files/digest-sylpheed-1.9.5 68
+MD5 28f6e562e3c547daedea86c235dd15a3 files/sylpheed-1.9.2-references.diff 6489
+MD5 4cbec71671b7349c904f860a12fee5d9 files/sylpheed-namespace.diff 550
+MD5 f4242298cfab21456442bfe52505d2b8 files/sylpheed-procmime.diff 1119
