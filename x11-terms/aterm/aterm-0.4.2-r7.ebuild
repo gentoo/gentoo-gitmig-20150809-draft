@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r7.ebuild,v 1.12 2004/10/22 06:39:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r7.ebuild,v 1.13 2004/11/04 22:38:43 vapier Exp $
 
-inherit eutils
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
-IUSE="cjk"
 DESCRIPTION="A terminal emulator with transparency support as well as rxvt backwards compatibility"
+HOMEPAGE="http://aterm.sourceforge.net"
 SRC_URI="mirror://sourceforge/aterm/${P}.tar.bz2
 	cjk? (http://dev.gentoo.org/~spock/portage/distfiles/aterm-0.4.2-ja.patch)"
-HOMEPAGE="http://aterm.sourceforge.net"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha ~amd64 mips"
+KEYWORDS="~alpha ~amd64 mips ppc ~sparc x86"
+IUSE="cjk"
 
 DEPEND="media-libs/jpeg
 	media-libs/libpng
