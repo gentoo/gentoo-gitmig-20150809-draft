@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/zetagrid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.18 2003/12/08 12:10:08 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.19 2003/12/11 19:15:44 tantive Exp $
+
+*zetagrid-1.8.6-r1 (11 Dec 2003)
+
+  11 Dec 2003; Michael Imhof <tantive@gentoo.org> zetagrid-1.8.6-r1.ebuild, files/zeta.sh,
+  files/zetagrid.init:
+  Changed scripts to new POSIX conform syntax. Closes #35595.
 
 *zetagrid-1.8.6 (08 Dec 2003)
 
