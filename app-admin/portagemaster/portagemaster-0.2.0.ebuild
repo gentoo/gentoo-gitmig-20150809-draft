@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/portagemaster-0.2.0.ebuild,v 1.1 2002/10/11 15:03:02 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/portagemaster-0.2.0.ebuild,v 1.2 2002/10/11 15:04:30 karltk Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A java portage browser and installer."
@@ -14,15 +14,16 @@ KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 DEPEND=">=dev-java/sun-jdk-1.4.0-r5
         >=dev-java/ant-1.4.1-r3
         >=dev-java/jikes-1.16"
+RDEPEND=">=dev-java/sun-jdk-1.4.0-r5"
 
 pkg_setup() {
-        local foo
-        foo=`java-config --java-version 2>&1 | grep "1.4."`
-        if [ -z "$foo" ] ; then
-                eerror "You have to set the 1.4.0 JDK as your system default to compile this package."
-		einfo "Use java-config --set-system-vm=sun-jdk-1.4.0 (or more recent) to set it."
-                exit 1
-        fi
+	local foo
+	foo=`java-config --java-version 2>&1 | grep "1.4."`
+	if [ -z "$foo" ] ; then
+		eerror "You have to set the 1.4.0 JDK as your system default to compile this package."
+		enfo "Use java-config --set-system-vm=sun-jdk-1.4.0 (or more recent) to set it."
+		exit 1
+	fi
 }
 
 src_unpack() {
