@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.18 2003/02/20 17:04:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.19 2003/04/05 15:09:26 pylon Exp $
 
 *bluefish-0.9 (18 Feb 2003)
+
+  05 Apr 2003; Lars Weiler <pylon@gentoo.org> bluefish-0.9.ebuild:
+  Set ppc in KEYWORDS
 
   20 Feb 2003; Luca Barbato <lu_zero@gentoo.org> bluefish-0.9.ebuild :
   Make it install the .desktop file
