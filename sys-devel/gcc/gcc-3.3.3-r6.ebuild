@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r4.ebuild,v 1.6 2004/05/27 11:54:30 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r6.ebuild,v 1.1 2004/05/27 11:54:30 pappy Exp $
 
-IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
+IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc debug"
 
 inherit eutils flag-o-matic libtool
 
@@ -29,19 +29,10 @@ inherit eutils flag-o-matic libtool
 # problems.
 #
 # <azarah@gentoo.org> (13 Oct 2002)
-do_filter_flags() {
-	strip-flags
+strip-flags
 
-	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.  This is especially true for gcc 3.3 + 3.4
-	replace-flags -O? -O2
-
-	# -mcpu is deprecated, and will actually break the gcc build on
-	# a few archs... use mtune instead
-	setting="`get-flag mcpu`"
-	[ ! -z "${setting}" ] && replace-flags -mcpu="${setting}" -mtune="${setting}"
-	export GCJFLAGS="${CFLAGS/-O?/-O2}"
-}
+# gcc produce unstable binaries if compiled with a different CHOST.
+[ "${ARCH}" = "hppa" ] && export CHOST="hppa-unknown-linux-gnu"
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
@@ -50,9 +41,7 @@ LOC="/usr"
 MY_PV="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
 MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
 
-# GCC 3.4 no longer uses gcc-lib. we'll rename this later for compatibility
-# reasons, as a few things would break without gcc-lib.
-LIBPATH="${LOC}/lib/gcc/${CCHOST}/${MY_PV_FULL}"
+LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${MY_PV_FULL}"
 BINPATH="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"
 DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 # Dont install in /usr/include/g++-v3/, but in gcc internal directory.
@@ -60,15 +49,15 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # PIE support
-PIE_VER="8.7.6.2"
+PIE_VER="8.7.6"
 
 # ProPolice version
-PP_VER="3_4"
-PP_FVER="${PP_VER//_/.}-1"
+PP_VER="3_3_2"
+PP_FVER="${PP_VER//_/.}-2"
 
 # Patch tarball support ...
 #PATCH_VER="1.0"
-PATCH_VER=
+PATCH_VER="1.3"
 
 # Snapshot support ...
 #SNAPSHOT="2002-08-12"
@@ -76,7 +65,9 @@ SNAPSHOT=
 
 # Branch update support ...
 MAIN_BRANCH="${PV}"  # Tarball, etc used ...
-BRANCH_UPDATE=20040519
+
+#BRANCH_UPDATE="20021208"
+BRANCH_UPDATE="20040412"
 
 if [ -z "${SNAPSHOT}" ]
 then
@@ -92,7 +83,7 @@ then
 	if [ -n "${BRANCH_UPDATE}" ]
 	then
 		SRC_URI="${SRC_URI}
-		         http://dev.gentoo.org/~lv/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+		         mirror://gentoo/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 	fi
 else
 	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
@@ -103,38 +94,36 @@ then
 	SRC_URI="${SRC_URI}
 		http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz"
 fi
-
-# PERL cannot be present at bootstrap, and is used to build the man pages. So..
-# lets include some pre-generated ones, shall we?
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-manpages.tar.bz2"
 
 # bug #6148 - the bounds checking patch interferes with gcc.c
-
-# just till the mirrors update...
-#PIE_BASE_URI="mirror://gentoo/"
-PIE_BASE_URI="http://dev.gentoo.org/~lv/"
-PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
+PIE_BASE_URI="mirror://gentoo/"
+PIE_CORE="gcc-3.3.3-piepatches-v${PIE_VER}.tar.bz2"
 SRC_URI="${SRC_URI} ${PIE_BASE_URI}${PIE_CORE}"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extentions"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-
-KEYWORDS="-* ~amd64"
-#KEYWORDS="amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
+## SpanKY says hppa is a no go with any 3.3.x
+## desired KEYWORDS="~sparc ~x86"
+## KEYWORDS="-* -hppa arm ~x86 ~sparc ~amd64"
+KEYWORDS="-*"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
 # $PV, as people upgrading to new gcc layout will not have
 # their old gcc unmerged ...
-# GCC 3.4 introduces a new version of libstdc++
 if [ "${CHOST}" == "${CCHOST}" ]
 then
-	SLOT="${MY_PV}"
+# GCC-3.3 is supposed to be binary compatible with 3.2..
+#	SLOT="${MY_PV}"
+	SLOT="3.2"
 else
-	SLOT="${CCHOST}-${MY_PV}"
+# GCC-3.3 is supposed to be binary compatible with 3.2..
+#	SLOT="${CCHOST}-${MY_PV}"
+	SLOT="${CCHOST}-3.2"
 fi
 
 # We need the later binutils for support of the new cleanup attribute.
@@ -148,11 +137,8 @@ fi
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 DEPEND="virtual/glibc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	>=sys-libs/glibc-2.3.3_pre20040207
-	hardened? ( >=sys-libs/glibc-2.3.3_pre20040420 )
 	( !sys-devel/hardened-gcc )
-	>=sys-devel/binutils-2.14.90.0.8-r1
-	!amd64? ( hardened? ( >=sys-devel/binutils-2.15.90.0.3 ) )
+	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
@@ -161,14 +147,13 @@ DEPEND="virtual/glibc
 
 RDEPEND="virtual/glibc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	>=sys-libs/glibc-2.3.3_pre20040207
-	hardened? ( >=sys-libs/glibc-2.3.3_pre20040420 )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 PDEPEND="sys-devel/gcc-config"
+
 
 chk_gcc_version() {
 	# This next bit is for updating libtool linker scripts ...
@@ -281,11 +266,6 @@ update_gcc_for_libc_ssp() {
 src_unpack() {
 	local release_version="Gentoo Linux ${PVR}"
 
-	ewarn "GCC 3.3 compatibility has been removed. It was always broken, and overall"
-	ewarn "a bad way to do things. I added it as a temporary fix until a real one"
-	ewarn "could be implemented, but it breaks on a number of archs."
-	ewarn "It would be a /very/ good idea to keep gcc 3.3.x or 3.2.x installed."
-
 	if [ -n "${PP_VER}" ] && [ "${ARCH}" != "hppa" ]
 	then
 		# the guard check should be very early in the unpack process
@@ -343,19 +323,10 @@ src_unpack() {
 
 		epatch ${WORKDIR}/patch
 		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-uclibc-3.3-loop.patch
-	elif [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
-	then
-		# We need this even if there isnt a patchset
-		epatch ${FILESDIR}/gcc331_use_multilib.amd64.patch
 	fi
 
 	if [ -n "${PIE_VER}" ]
 	then
-		mkdir ${WORKDIR}/piepatch/skip
-		if ! use uclibc
-		then
-			mv ${WORKDIR}/piepatch/upstream/04_* ${WORKDIR}/piepatch/skip
-		fi
 		# corrects startfile/endfile selection and shared/static/pie flag usage
 		epatch ${WORKDIR}/piepatch/upstream
 		# adds non-default pie support (for now only rs6000)
@@ -364,24 +335,38 @@ src_unpack() {
 		epatch ${WORKDIR}/piepatch/def
 	fi
 
+	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
+	then
+		epatch ${FILESDIR}/3.3.2/gcc332-altivec-fix.patch
+	fi
+
+	if [ "${ARCH}" = "arm" ]
+	then
+		epatch ${FILESDIR}/3.3.3/gcc333-debian-arm-getoff.patch
+		epatch ${FILESDIR}/3.3.3/gcc333-debian-arm-ldm.patch
+	fi
+
 	# non-default SSP support.
 	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a -n "${PP_VER}" ]
 	then
 		# ProPolice Stack Smashing protection
+		EPATCH_OPTS="${EPATCH_OPTS} ${WORKDIR}/protector.dif" \
+		epatch ${FILESDIR}/3.3.1/gcc331-pp-fixup.patch
+
+		EPATCH_OPTS="${EPATCH_OPTS} ${WORKDIR}/protector.dif" \
+		epatch ${FILESDIR}/3.3.3/gcc333-ssp-3.3.2_1-fixup.patch
+
 		epatch ${WORKDIR}/protector.dif
 
-		cp ${WORKDIR}/gcc/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
-		cp ${WORKDIR}/gcc/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
-		cp -R ${WORKDIR}/gcc/testsuite/* ${WORKDIR}/${P}/gcc/testsuite/ || die "testsuite not found"
-
-		epatch ${FILESDIR}/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch
+		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
+		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 
 		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
 
 		# we apply only the needed parts of protectonly.dif
-		sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector-all |' \
+		sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector -fno-stack-protector-all |' \
 			-i gcc/Makefile.in || die "Failed to update crtstuff!"
-		sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -fno-stack-protector-all|' \
+		sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -fno-stack-protector -fno-stack-protector-all|' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update libgcc!"
 
 		release_version="${release_version}, ssp-${PP_FVER}"
@@ -392,7 +377,7 @@ src_unpack() {
 	cd ${WORKDIR}/${P}
 
 	release_version="${release_version}, pie-${PIE_VER}"
-	if  ( use hardened && ( use x86 || use sparc || use amd64 ) )
+	if ( use hardened && ( use x86 || use sparc || use amd64 ) )
 	then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
 		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
@@ -405,25 +390,17 @@ src_unpack() {
 	# corrects text relocations in libiberty.a
 	(use pic || use hardened) && epatch ${FILESDIR}/3.4.0/gcc-3.4-libiberty-pic.patch
 
-	version_patch ${FILESDIR}/3.4.0/gcc-${PV}-r3-gentoo-branding.patch \
+	version_patch ${FILESDIR}/3.3.3/gcc333-gentoo-branding.patch \
 		"${BRANCH_UPDATE} (${release_version})" || die "Failed Branding"
 
 	# TODO: on arches where we lack a Scrt1.o (like parisc) we still need unpack, compile and install logic
 	# TODO: for the crt1Snocsu.o provided by a custom gcc-pie-ssp.tgz which can also be included in SRC_URI
 
-	# Install our pre generated manpages if we do not have perl ...
-	if [ ! -x /usr/bin/perl ]
-	then
-		cd ${S}; unpack ${P}-manpages.tar.bz2
-		mkdir -p ${WORKDIR}/build
-		cd ${WORKDIR}/build ; unpack ${P}-manpages.tar.bz2
-	fi
-
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 
 	# disable --as-needed from being compiled into gcc specs
-	# natively when using >=sys-devel/binutils-2.15.90.0.3 this is
+	# natively when using >=sys-devel/binutils-2.15.90.0.1 this is
 	# done to keep our gcc backwards compatible with binutils. 
 	# gcc 3.4.1 cvs has patches that need back porting.. 
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
@@ -495,25 +472,28 @@ src_compile() {
 	if ! use uclibc
 	then
 		# it's getting close to a time where we are going to need USE=glibc, uclibc, bsdlibc -solar
-		myconf="${myconf} --enable-__cxa_atexit --enable-clocale=gnu"
+		myconf="${myconf} --enable-__cxa_atexit --enable-clocale=generic"
 	else
-		myconf="${myconf} --disable-__cxa_atexit --enable-target-optspace --with-gnu-ld --enable-sjlj-exceptions --enable-clocale=ieee_1003.1-2001"
+		myconf="${myconf} --disable-__cxa_atexit --enable-target-optspace --with-gnu-ld --enable-sjlj-exceptions"
 	fi
 
-	# Default arch support disabled for now...
-	#use amd64 && myconf="${myconf} --with-arch=k8"
-	#use s390 && myconf="${myconf} --with-arch=nofreakingclue"
-	#use x86 && myconf="${myconf} --with-arch=i586"
-	#use mips && myconf="${myconf} --with-arch=mips3"
-
-	do_filter_flags
+	# In general gcc does not like optimization, and add -O2 where
+	export CFLAGS="$(echo "${CFLAGS}" | sed -e 's|-O[0-9s]\?|-O2|g')"
 	einfo "CFLAGS=\"${CFLAGS}\""
+	export CXXFLAGS="$(echo "${CXXFLAGS}" | sed -e 's|-O[0-9s]\?|-O2|g')"
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
+	export GCJFLAGS="$(echo "${GCJFLAGS}" | sed -e 's|-O[0-9s]\?|-O2|g')"
 	einfo "GCJFLAGS=\"${GCJFLAGS}\""
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
 	cd ${WORKDIR}/build
+
+	# Install our pre generated manpages if we do not have perl ...
+	if [ ! -x /usr/bin/perl ]
+	then
+		unpack ${P}-manpages.tar.bz2
+	fi
 
 	einfo "Configuring GCC..."
 	addwrite "/dev/zero"
@@ -536,7 +516,6 @@ src_compile() {
 		--enable-version-specific-runtime-libs \
 		--with-gxx-include-dir=${STDCXX_INCDIR} \
 		--with-local-prefix=${LOC}/local \
-		--disable-werror \
 		${myconf} || die
 
 	touch ${S}/gcc/c-gperf.h
@@ -544,7 +523,7 @@ src_compile() {
 	# Do not make manpages if we do not have perl ...
 	if [ ! -x /usr/bin/perl ]
 	then
-		find ${S} -name '*.[17]' -exec touch {} \; || :
+		find ${WORKDIR}/build -name '*.[17]' -exec touch {} \; || :
 	fi
 
 	# Setup -j in MAKEOPTS
@@ -565,7 +544,7 @@ src_compile() {
 	else
 		# Fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
-		emake profiledbootstrap \
+		emake bootstrap-lean \
 			LIBPATH="${LIBPATH}" \
 			BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
 
@@ -611,41 +590,24 @@ src_install() {
 
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
 
-	# Because GCC 3.4 installs into the gcc directory and not the gcc-lib
-	# directory, we will have to rename it in order to keep compatibility
-	# with our current libtool check and gcc-config (which would be a pain
-	# to fix compared to this simple mv and symlink).
-	mv ${D}/${LOC}/lib/gcc ${D}/${LOC}/lib/gcc-lib
-	ln -s gcc-lib ${D}/${LOC}/lib/gcc
-	LIBPATH=${LIBPATH/lib\/gcc/lib\/gcc-lib}
-
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-
-	# The LDPATH stuff is kinda iffy now that we need to provide compatibility
-	# with older versions of GCC for binary apps.
 	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
 	then
 		# amd64 is a bit unique because of multilib.  Add some other paths
-		LDPATH="${LIBPATH}:${LIBPATH}/32:${LIBPATH}/../lib64:${LIBPATH}/../lib32"
+		echo "LDPATH=\"${LIBPATH}:${LIBPATH}/32:${LIBPATH}/../lib64:${LIBPATH}/../lib32\"" >> \
+			${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	else
-		LDPATH="${LIBPATH}"
+		echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	fi
-	if [ "${BULIB}" != "" ]
-	then
-		LDPATH="${LDPATH}:${LOC}/lib/gcc-lib/${CCHOST}/${BULIB}"
-	fi
-	echo "LDPATH=\"${LDPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	# Also set CC and CXX
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-
 	# Make sure we do not check glibc for SSP again, as we did already
 	if glibc_have_ssp || \
 	   [ -f "${ROOT}/etc/env.d/99glibc_ssp" ]
@@ -655,7 +617,7 @@ src_install() {
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${D}${LIBPATH}
 
@@ -726,17 +688,10 @@ src_install() {
 	fi
 
 	# This one comes with binutils
-	if [ -f "${D}${LOC}/lib/libiberty.a" ]
-	then
-		rm -f ${D}${LOC}/lib/libiberty.a
-	fi
-	if [ -f "${D}${LIBPATH}/libiberty.a" ]
-	then
-		rm -f ${D}${LIBPATH}/libiberty.a
-	fi
+	[ -f "${D}${LOC}/lib/libiberty.a" ] && rm -f ${D}${LOC}/lib/libiberty.a
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		docinto /${CCHOST}
@@ -801,17 +756,14 @@ src_install() {
 	exeinto /sbin
 	doexe ${FILESDIR}/fix_libtool_files.sh
 
-	if [ "${ARCH}" = "amd64" ]
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
 	then
-		# GCC 3.4 tries to place libgcc_s in lib64, where it will never be
-		# found. When multilib is enabled, it also places the 32bit version in
-		# lib32. This problem could be handled by a symlink if you only plan on
-		# having one compiler installed at a time, but since these directories
-		# exist outside the versioned directories, versions from gcc 3.3 and
-		# 3.4 will overwrite each other. not good.
-		use multilib && \
-		cp -pfd ${D}/${LIBPATH}/../lib32/libgcc_s* ${D}/${LIBPATH}
-		cp -pfd ${D}/${LIBPATH}/../lib64/libgcc_s* ${D}/${LIBPATH}
+		# If using multilib, GCC has a bug, where it doesn't know where to find
+		# -lgcc_s when linking while compiling with g++ .  ${LIBPATH} is in
+		# it's path though, so ln the 64bit and 32bit versions of -lgcc_s
+		# to that directory.
+		ln -sf ${LIBPATH}/../lib64/libgcc_s.so ${D}/${LIBPATH}/libgcc_s.so
+		ln -sf ${LIBPATH}/../lib32/libgcc_s_32.so ${D}/${LIBPATH}/libgcc_s_32.so
 	fi
 }
 
