@@ -1,9 +1,12 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.23 2003/02/12 15:11:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.24 2003/02/18 12:37:35 raker Exp $
 
 *gst-plugins-0.6.0-r1 (06 Feb 2003)
+
+  18 Feb 2003; Nick Hadaway <raker@gentoo.org> gst-plugins-0.6.0-r1.ebuild :
+  Changed DEPEND to virtual/jack
 
   06 Feb 2003; foser <foser@gentoo.org> gst-plugins-0.6.0-r1.ebuild :
   bump to include an ffmpeg patch to link to vorbis libs
