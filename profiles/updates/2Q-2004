@@ -15,3 +15,4 @@ move gnome-extra/at-poke app-accessibility/at-poke
 move app-text/dasher app-accessibility/dasher
 move media-video/kyro-kernel media-video/kyro-drivers
 move net-ftp/curl net-misc/curl
+move games-puzzle/neverputt games-puzzle/neverball
