@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.4.ebuild,v 1.4 2004/05/06 19:41:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.4.ebuild,v 1.5 2004/05/12 21:44:29 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
 MY_PN=FlightGear
 MY_P=${MY_PN}-${PV}
-
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Open Source Flight Simulator"
 HOMEPAGE="http://www.flightgear.org/"
 SRC_URI="mirror://flightgear/Source/${MY_P}.tar.gz
@@ -38,14 +37,14 @@ src_compile() {
 		--with-network-olk \
 		--with-threads \
 		--with-x || die
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
 	egamesinstall || die
 
-	dodir ${GAMES_LIBDIR}/${MY_PN}
-	cp -a data/* ${D}/${GAMES_LIBDIR}/${MY_PN}
+	dodir "${GAMES_LIBDIR}/${MY_PN}"
+	cp -a data/* "${D}/${GAMES_LIBDIR}/${MY_PN}" || die "cp failed"
 
 	dodoc README* ChangeLog AUTHORS NEWS Thanks
 
