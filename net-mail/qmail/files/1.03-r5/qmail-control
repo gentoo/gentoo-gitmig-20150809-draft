@@ -1,0 +1,27 @@
+#!/sbin/runscript
+
+opts="start stop restart reload"
+
+start() {
+    ebegin "Starting qmail mta ..."
+    svc -u /var/qmail/supervise/*
+    eend $?
+    ebegin "Starting qmail mta logging ..."
+    svc -u /var/qmail/supervise/*/log
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping qmail mta ..."
+    svc -d /var/qmail/supervise/*
+    eend $?
+    ebegin "Stopping qmail mta logging ..."
+    svc -d /var/qmail/supervise/*/log
+    eend $?
+}
+
+reload() {
+    ebegin "Reloading 'locals' and 'virtualdomains' control files."
+    svc -h /var/qmail/supervise/qmail-send
+    eend $?
+}
