@@ -48,3 +48,4 @@ virtual/logger			app-admin/sysklogd
 virtual/ssh				net-misc/openssh
 virtual/gzip			app-arch/gzip
 virtual/ghostscript		app-text/ghostscript
+virtual/w3m			net-www/w3m

@@ -24,3 +24,4 @@ virtual/bittorrent	net-p2p/bittorrent
 virtual/logger		app-admin/sysklogd
 virtual/gzip		app-arch/gzip
 virtual/ghostscript	app-text/ghotscript
+virtual/w3m			net-www/w3m

@@ -37,3 +37,4 @@ virtual/bittorrent	net-p2p/bittorrent
 virtual/logger		app-admin/sysklogd
 virtual/mpg123		media-sound/mpg123
 virtual/gzip		app-arch/gzip
+virtual/w3m			net-www/w3m
