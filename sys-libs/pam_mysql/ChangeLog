@@ -1,0 +1,9 @@
+# ChangeLog for sys-libs/pam_mysql
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_mysql/ChangeLog,v 1.1 2002/11/13 06:02:00 woodchip Exp $
+
+*pam_mysql-0.4.7 (13 Nov 2002)
+
+  13 Nov 2002; Donny Davies <woodchip@gentoo.org> :
+  Initial import; reworked by me.  Thanks to mw@teamzone.de (Markus Wagner)
+  and henri.schomaecker@virtual-homes.de (Henri Schomaecker) for help.
