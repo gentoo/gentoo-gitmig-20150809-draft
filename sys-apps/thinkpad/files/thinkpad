@@ -1,0 +1,10 @@
+keep
+path[thinkpad]=/lib/modules/`uname -r`/thinkpad
+#options thinkpad enable_smapi=1 enable_superio=1 enable_rtcmosram=1 enable_thinkpadpm=1
+alias char-major-10-170 thinkpad
+alias /dev/thinkpad thinkpad
+alias /dev/thinkpad/thinkpad thinkpad
+alias /dev/thinkpad/smapi smapi
+alias /dev/thinkpad/superio superio
+alias /dev/thinkpad/rtcmosram rtcmosram
+alias /dev/thinkpad/thinkpadpm thinkpadpm
