@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rcenter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/ChangeLog,v 1.10 2004/09/15 17:22:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/ChangeLog,v 1.11 2004/11/23 05:59:01 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rcenter-0.6.2.ebuild:
+  -sparc.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> rcenter-0.6.2.ebuild:
   Stable amd64.

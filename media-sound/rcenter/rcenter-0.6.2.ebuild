@@ -1,15 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/rcenter-0.6.2.ebuild,v 1.9 2004/09/15 17:22:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/rcenter-0.6.2.ebuild,v 1.10 2004/11/23 05:59:01 eradicator Exp $
 
 IUSE=""
 
 DESCRIPTION="Rcenter - A program to control the EMU10K Remote Control"
 HOMEPAGE="http://rooster.stanford.edu/~ben/projects/rcenter.php"
 SRC_URI="http://rooster.stanford.edu/~ben/projects/${P}.tgz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+#-sparc: emu10k1 doesn't get recognized on sparc hardware
+KEYWORDS="amd64 -sparc x86"
+
 DEPEND="virtual/libc"
 
 src_compile() {
