@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/silo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.16 2004/06/28 01:50:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.17 2004/07/14 15:40:43 ciaranm Exp $
+
+*silo-1.4.8 (14 Jul 2004)
+
+  14 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> +silo-1.4.8.ebuild:
+  Bump. This one *should* fix the initrd issues.
 
   27 Jun 2004; Aron Griffis <agriffis@gentoo.org> silo-1.4.5.ebuild,
   silo-1.4.6.ebuild:
