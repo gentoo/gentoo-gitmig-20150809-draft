@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.42 2004/11/23 15:27:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.43 2004/11/27 02:45:46 weeve Exp $
+
+  26 Nov 2004; Jason Wever <weeve@gentoo.org> kile-1.7.1.ebuild:
+  Stable on sparc.
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> :
   stable on x86
