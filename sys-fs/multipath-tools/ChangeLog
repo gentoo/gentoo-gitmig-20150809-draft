@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.1 2005/02/21 15:03:24 azarah Exp $
+
+*multipath-tools-0.4.2 (21 Feb 2005)
+
+  21 Feb 2005; Martin Schlemmer <azarah@gentoo.org> +metadata.xml,
+  +files/rc-multipathd, +multipath-tools-0.4.2.ebuild:
+  Initial version.  Ebuild and scripts by Seemant.
+
