@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.31 2003/01/23 20:34:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.32 2003/01/29 23:13:09 raker Exp $
+
+*cyrus-sasl-2.1.10-r2 (29 Jan 2003)
+
+  29 Jan 2003; Nick Hadaway <raker@gentoo.org> cyrus-sasl-2.1.10-r2.ebuild,
+  files/digest-cyrus-sasl-2.1.10-r2, files/digestmd5.patch :
+  Legwork done by jfelice@cronosys.com on bug #13116.  This adds a patch
+  which should address a sendmail/sasl segfault.
 
 *cyrus-2.1.10-r1 (23 Jan 2003)
 
