@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/fahrenheit
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fahrenheit/ChangeLog,v 1.1 2004/06/30 20:51:45 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fahrenheit/ChangeLog,v 1.2 2004/07/01 11:51:57 dholm Exp $
+
+*fahrenheit-0.1 (01 Jul 2004)
+
+  01 Jul 2004; David Holm <dholm@gentoo.org> fahrenheit-0.1.ebuild:
+  Added to ~ppc.
 
   30 Jun 2004; Jason Eric Huebel <jhuebel@gentoo.org> :
   initial release. Theme created by Peter Clark <pc451@yahoo.com>
