@@ -1,5 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
+# Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/gentoo-x86/app-cdr/cdbkup-1.0.ebuild,v 1.0 2002/07/27 01:09:30 raker Exp 
 
 S=${WORKDIR}/${P}
