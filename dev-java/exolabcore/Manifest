@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 204cefe03b7331aca2f21eaa4de77575 exolabcore-0.3.7_p20050205.ebuild 1514
+MD5 e019f624e9a6e878efa0717aac8263e9 ChangeLog 753
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 0d3cb81648b328fa4f9981cea460fa3e ChangeLog 543
-MD5 c856904b9375cb5a8c9e92ad09ca4df2 exolabcore-0.3.7_p20050205.ebuild 1396
-MD5 1ec464487fcbdf1fa9d7b6d6f9a87bef files/digest-exolabcore-0.3.7_p20050205 72
 MD5 30283d4392dfcac346e8235a6d414a01 files/exolabcore-0.3.7_p20050205-buildfile.patch 1714
+MD5 1ec464487fcbdf1fa9d7b6d6f9a87bef files/digest-exolabcore-0.3.7_p20050205 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCQa2xKRy60XGEcJIRAg8YAJ96WUL9oAjltJwlb6zlMeMDmP6ICgCfS4/V
-dbMy8qLI/sdeGO3wFfqZcJQ=
-=kBRW
+iD8DBQFCSXf106ebR+OMO78RAiDcAJ4wg4fSZnm9Zq60j+xsOoI1JTTkcACdGCgY
+qGLm81aysGn2PSnJDZQ41l0=
+=HjSp
 -----END PGP SIGNATURE-----
