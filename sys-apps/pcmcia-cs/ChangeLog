@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.60 2004/02/08 02:45:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.61 2004/02/08 19:19:36 latexer Exp $
+
+  08 Feb 2004; Peter Johanson <latexer@gentoo.org> pcmcia-cs-3.2.5-r1.ebuild:
+  Marking stable on x86. Lots of fixes for module-init-tools, SMP, etc. and
+  3.2.5 has been in for ages.
 
   08 Feb 2004; Luca Barbato <lu_zero@gentoo.org> pcmcia-cs-3.2.7.ebuild:
   Marked ~ppc
