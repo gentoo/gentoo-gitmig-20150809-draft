@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.1.ebuild,v 1.1 2003/12/25 04:39:37 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.1.ebuild,v 1.2 2003/12/29 14:42:33 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 
@@ -28,7 +28,8 @@ DEPEND="virtual/glibc
 	tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
-	java? ( !amd64? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3 ) )
+	java? ( !amd64? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3
+		dev-java/java-config ) )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	nls? ( sys-devel/gettext )"
 # java dep workaround for portage bug
@@ -86,13 +87,17 @@ src_unpack() {
 src_compile() {
 	filter-flags -ffast-math
 
-	use java && check_java_config
+	if [ "`use java`" -a ! "`use amd64`" ]; then
+		check_java_config
+	fi
 
 	local myconf
 	use tcltk && myconf="--with-tcl"
 	use python && myconf="$myconf --with-python"
 	use perl && myconf="$myconf --with-perl"
-	use java && myconf="$myconf --with-java"
+	if [ "`use java`" -a ! "`use amd64`" ]; then
+		myconf="$myconf --with-java"
+	fi
 	use ssl && myconf="$myconf --with-openssl"
 	use nls && myconf="$myconf --enable-nls"
 	use libg++ && myconf="$myconf --with-CXX"
@@ -145,7 +150,7 @@ src_install() {
 
 	exeinto /usr/bin
 
-	if [ `use java` ]; then
+	if [ "`use java`" -a ! "`use amd64`" ]; then
 		dojar ${D}/usr/share/postgresql/java/postgresql.jar || die
 		rm ${D}/usr/share/postgresql/java/postgresql.jar
 	fi
