@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-5.0.ebuild,v 1.1 2005/02/04 17:57:07 karltk Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-5.0.ebuild,v 1.2 2005/02/13 02:40:53 vapier Exp $
 
 # WARNING: This is the default VM on ia64, so treat this ebuild
 # with proper care.
@@ -12,17 +10,19 @@ RESTRICT="nostrip fetch"
 
 inherit java
 
-SRC_URI="ia64? ( jrockit-jdk1.5.0-linux-ipf.bin )
-		x86? ( jrockit-jdk1.5.0-linux-ia32.bin )"
 DESCRIPTION="BEA WebLogic's J2SE Development Kit, version 5.0"
 HOMEPAGE="http://commerce.bea.com/downloads/weblogicjrockit/5.0/jr_50.jsp"
+SRC_URI="ia64? ( jrockit-jdk1.5.0-linux-ipf.bin )
+	x86? ( jrockit-jdk1.5.0-linux-ia32.bin )"
+
 LICENSE="jrockit"
 SLOT="1.5"
-KEYWORDS="~x86"
+KEYWORDS="~ia64 ~x86"
+IUSE=""
+
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
 	>=app-arch/unzip-5.50-r1"
-
 PROVIDE="virtual/jre-1.5
 	virtual/jdk-1.5
 	virtual/java-scheme-2"
