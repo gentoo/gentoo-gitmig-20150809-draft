@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.9.ebuild,v 1.3 2003/02/13 05:53:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.9.ebuild,v 1.4 2003/03/11 21:11:44 seemant Exp $
 
 S=${WORKDIR}/${P}
 IUSE=""
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~ppc"
 
 SLOT="0"
 
-RDEPEND=">=sys-devel/perl-5.6.0
+RDEPEND=">=dev-lang/perl-5.6.0
          >=sys-libs/ncurses-5.2-r7
          >=sys-libs/zlib-1.1.4" #app-text/sgmltools-lite?
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r3.ebuild,v 1.4 2003/02/24 22:23:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r3.ebuild,v 1.5 2003/03/11 21:11:44 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard log daemons"
@@ -10,7 +10,7 @@ KEYWORDS="x86 ppc sparc alpha hppa arm"
 SLOT="0"
 LICENSE="BSD"
 DEPEND="virtual/glibc"
-RDEPEND="sys-devel/perl sys-apps/debianutils"
+RDEPEND="dev-lang/perl sys-apps/debianutils"
 
 src_unpack() {
 	unpack ${A}

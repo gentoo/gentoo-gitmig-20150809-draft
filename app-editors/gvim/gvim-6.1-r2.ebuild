@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r2.ebuild,v 1.4 2003/02/13 06:40:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r2.ebuild,v 1.5 2003/03/11 21:11:44 seemant Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -72,7 +72,7 @@ DEPEND="dev-util/cscope
 	gpm?	( >=sys-libs/gpm-1.19.3 )
 	gnome?	( gnome-base/gnome-libs )
 	gtk?	( =x11-libs/gtk+-1.2* )
-	perl?	( sys-devel/perl )
+	perl?	( dev-lang/perl )
 	python? ( dev-lang/python )
 	ruby?	( >=dev-lang/ruby-1.6.4 )"
 #	tcltk?	( dev-lang/tcl )"

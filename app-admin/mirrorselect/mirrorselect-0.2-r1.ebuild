@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mirrorselect/mirrorselect-0.2-r1.ebuild,v 1.2 2003/02/28 22:21:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mirrorselect/mirrorselect-0.2-r1.ebuild,v 1.3 2003/03/11 21:11:43 seemant Exp $
 
 DESCRIPTION="Tool to help select distfiles mirrors for Gentoo"
 HOMEPAGE="http://www.gentoo.org/"
@@ -13,7 +13,7 @@ RDEPEND=">=dev-util/dialog-0.7
         sys-apps/grep
     	sys-apps/sed
 	net-analyzer/netselect
-        sys-devel/perl"
+        dev-lang/perl"
 
 src_install() {
 	dosbin ${FILESDIR}/mirrorselect

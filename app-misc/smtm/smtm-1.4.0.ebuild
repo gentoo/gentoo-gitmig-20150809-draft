@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/smtm-1.4.0.ebuild,v 1.6 2003/02/13 09:09:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/smtm-1.4.0.ebuild,v 1.7 2003/03/11 21:11:44 seemant Exp $
 
 DESCRIPTION="Stock ticker, profit/loss calculator and chart tool"
 HOMEPAGE="http://eddelbuettel.com/dirk/code/smtm.html"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
-DEPEND=">=sys-devel/perl-5
+DEPEND=">=dev-lang/perl-5
 	dev-perl/perl-tk
 	dev-perl/DateManip
 	dev-perl/libwww-perl"

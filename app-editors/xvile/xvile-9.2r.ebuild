@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.2r.ebuild,v 1.8 2003/02/13 07:02:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.2r.ebuild,v 1.9 2003/03/11 21:11:44 seemant Exp $
 
 IUSE="perl"
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://invisible-island.net/vile/"
 DEPEND="virtual/glibc
 	sys-devel/flex
 	virtual/x11
-	perl? ( sys-devel/perl )
+	perl? ( dev-lang/perl )
 	=app-editors/vile-9.2r"
 
 RDEPEND="virtual/glibc

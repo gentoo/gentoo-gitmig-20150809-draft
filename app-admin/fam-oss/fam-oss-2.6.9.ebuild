@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9.ebuild,v 1.13 2003/02/28 22:05:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9.ebuild,v 1.14 2003/03/11 21:11:42 seemant Exp $
 
 inherit libtool
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc alpha sparc "
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
-DEPEND=">=sys-devel/perl-5.6.1"
+DEPEND=">=dev-lang/perl-5.6.1"
 RDEPEND=">=net-nds/portmap-5b-r6"
 
 src_unpack() {

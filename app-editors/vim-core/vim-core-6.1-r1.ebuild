@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.1-r1.ebuild,v 1.8 2003/02/13 07:00:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.1-r1.ebuild,v 1.9 2003/03/11 21:11:44 seemant Exp $
 
 IUSE="python gpm nls ruby perl"
 
@@ -70,7 +70,7 @@ KEYWORDS="x86 -ppc sparc alpha"
 DEPEND="dev-util/cscope
 	>=sys-libs/ncurses-5.2-r2
 	gpm?	( >=sys-libs/gpm-1.19.3 )
-	perl?	( sys-devel/perl )
+	perl?	( dev-lang/perl )
 	python? ( dev-lang/python )
 	ruby?	( >=dev-lang/ruby-1.6.4 )"
 #	tcltk?	( dev-lang/tcl )"

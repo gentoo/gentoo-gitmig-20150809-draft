@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ufed-0.1.ebuild,v 1.6 2003/02/13 05:31:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ufed-0.1.ebuild,v 1.7 2003/03/11 21:11:44 seemant Exp $
 
 DESCRIPTION="Gentoo Linux USE flags editor"
 HOMEPAGE="http://www.gentoo.org"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-RDEPEND="sys-devel/perl
+RDEPEND="dev-lang/perl
 	dev-util/dialog
 	dev-perl/TermReadKey"
 DEPEND=""

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-0.970.ebuild,v 1.7 2003/02/13 05:32:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-0.970.ebuild,v 1.8 2003/03/11 21:11:44 seemant Exp $
 
 IUSE="ssl"
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86 sparc alpha ppc"
 
-DEPEND="sys-devel/perl
+DEPEND="dev-lang/perl
 	sys-apps/lsof
 	ssl? ( dev-perl/Net-SSLeay )
 	dev-perl/Authen-PAM"

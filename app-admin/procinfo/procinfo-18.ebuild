@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18.ebuild,v 1.13 2003/02/13 05:29:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18.ebuild,v 1.14 2003/03/11 21:11:43 seemant Exp $
 
 DESCRIPTION="A utility to prettyprint /proc/*"
 SRC_URI="ftp://ftp.cistron.nl/pub/people/svm/${P}.tar.gz"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="sys-libs/ncurses"
-RDEPEND="sys-devel/perl"
+RDEPEND="dev-lang/perl"
 
 src_compile() {
 	# -ltermcap is default and isn't available in gentoo

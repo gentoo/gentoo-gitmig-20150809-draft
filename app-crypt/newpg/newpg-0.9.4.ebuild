@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/newpg-0.9.4.ebuild,v 1.2 2003/03/05 04:40:15 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/newpg-0.9.4.ebuild,v 1.3 2003/03/11 21:11:44 seemant Exp $
 
 DESCRIPTION="NewPG is the S/MIME variant of GnuPG which does also include the gpg-agent, useful even for GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 IUSE="nls"
 
-DEPEND="sys-devel/perl
+DEPEND="dev-lang/perl
 	>=dev-libs/libksba-0.4.6
 	>=dev-libs/libgcrypt-1.1.8
 	dev-libs/pth"

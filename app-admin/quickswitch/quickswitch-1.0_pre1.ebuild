@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.0_pre1.ebuild,v 1.11 2003/02/13 05:29:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.0_pre1.ebuild,v 1.12 2003/03/11 21:11:44 seemant Exp $
 
 MY_PN="quickwitch"
 MY_P="${MY_PN}-${PV/_/}"
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc "
 
-DEPEND=">=sys-devel/perl-5.6.0"
+DEPEND=">=dev-lang/perl-5.6.0"
 
 src_install() {
 	dobin switchto

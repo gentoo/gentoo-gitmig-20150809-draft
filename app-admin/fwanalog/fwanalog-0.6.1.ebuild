@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/fwanalog-0.6.1.ebuild,v 1.3 2003/03/11 20:50:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/fwanalog-0.6.1.ebuild,v 1.4 2003/03/11 21:11:43 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Script to parse firewall logs and analyze them with Analog"
@@ -19,7 +19,7 @@ RDEPEND="app-shells/bash
 	sys-apps/sed
 	sys-apps/gzip
 	sys-apps/diffutils
-	sys-devel/perl
+	dev-lang/perl
 	>=app-admin/analog-5.03"
 
 src_install() {

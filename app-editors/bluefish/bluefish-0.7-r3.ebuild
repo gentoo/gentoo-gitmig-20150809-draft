@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.7-r3.ebuild,v 1.5 2003/02/13 06:38:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.7-r3.ebuild,v 1.6 2003/03/11 21:11:44 seemant Exp $
 
 DESCRIPTION="Bluefish is a GTK HTML editor for the experienced web designer or programmer."
 SRC_URI="http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/${P}.tar.bz2"
@@ -13,7 +13,7 @@ IUSE="gnome nls perl"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1
-	perl? ( sys-devel/perl )
+	perl? ( dev-lang/perl )
 	nls? ( sys-devel/gettext )"
 
 src_compile() {

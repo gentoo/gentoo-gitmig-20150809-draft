@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r19.ebuild,v 1.6 2003/02/24 21:12:25 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r19.ebuild,v 1.7 2003/03/11 21:11:44 seemant Exp $
 
 IUSE="nls perl python ruby tcltk gpm X"
 
@@ -14,7 +14,7 @@ DEPEND="app-editors/vim-core
 	dev-util/cscope
 	>=sys-libs/ncurses-5.2-r2
 	gpm?	( >=sys-libs/gpm-1.19.3 )
-	perl?	( sys-devel/perl )
+	perl?	( dev-lang/perl )
 	python? ( dev-lang/python )
 	ruby?	( >=dev-lang/ruby-1.6.4 )"
 #	tcltk?	( dev-lang/tcl )"

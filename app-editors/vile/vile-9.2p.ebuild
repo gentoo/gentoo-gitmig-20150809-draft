@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2p.ebuild,v 1.10 2003/02/13 06:59:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2p.ebuild,v 1.11 2003/03/11 21:11:44 seemant Exp $
 
 IUSE="perl"
 
@@ -27,7 +27,7 @@ HOMEPAGE="http://invisible-island.net/vile/"
 
 DEPEND="sys-devel/flex
 	>=sys-libs/ncurses-5.2
-	perl? ( sys-devel/perl )"
+	perl? ( dev-lang/perl )"
 
 PROVIDE="virtual/editor"
 

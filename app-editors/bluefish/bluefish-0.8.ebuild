@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.8.ebuild,v 1.4 2003/02/13 06:38:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.8.ebuild,v 1.5 2003/03/11 21:11:44 seemant Exp $
 
 MY_P=${PN}-gtk2-${PV}
 S=${WORKDIR}/${MY_P}
@@ -17,7 +17,7 @@ DEPEND=">=x11-libs/gtk+-2.0.5
 	>=media-libs/freetype-2.0.9
 	>=media-libs/gdk-pixbuf-0.18
 	dev-libs/libpcre
-	perl? ( sys-devel/perl )
+	perl? ( dev-lang/perl )
 	nls? ( sys-devel/gettext )"
 
 src_compile() {

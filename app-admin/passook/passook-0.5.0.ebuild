@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-0.5.0.ebuild,v 1.10 2003/02/13 05:28:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-0.5.0.ebuild,v 1.11 2003/03/11 21:11:43 seemant Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Password generator capable of generating pronounceable and/or secure passwords."
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc "
 
-DEPEND="sys-devel/perl
+DEPEND="dev-lang/perl
 	sys-apps/grep
 	sys-apps/miscfiles"
 
