@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chkrootkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.16 2003/10/17 02:59:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.17 2003/11/24 10:16:58 seemant Exp $
+
+  24 Nov 2003; Seemant Kulleen <seemant@gentoo.org> chkrootkit-0.42b.ebuild:
+  coreutils fix -- head -1 to head -n 1 syntax
 
   16 Oct 2003; Aron Griffis <agriffis@gentoo.org> chkrootkit-0.42b.ebuild:
   Stable on alpha
