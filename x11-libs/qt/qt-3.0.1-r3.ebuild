@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.1-r3.ebuild,v 1.4 2002/02/10 17:52:41 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.1-r3.ebuild,v 1.5 2002/02/17 19:16:44 danarmak Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -100,7 +100,4 @@ src_install() {
 	doins $x
     done
 
-    # misc
-    insinto /etc/env.d
-    doins ${FILESDIR}/49qt3
 }
