@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.32 2004/03/02 18:09:00 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.33 2004/03/07 09:43:42 kumba Exp $
+
+  07 Mar 2004; Joshua Kinard <kumba@gentoo.org> bash-2.05b-r9.ebuild:
+  Marked stable on mips.
 
   02 Mar 2004; Brian Jackson <iggy@gentoo.org> bash-2.05b-r9.ebuild:
   s390 keywords
