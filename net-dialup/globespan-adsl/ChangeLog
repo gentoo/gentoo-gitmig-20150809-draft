@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/globespan-adsl
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.4 2004/01/12 18:31:39 nerdboy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.5 2004/03/19 11:31:23 lanius Exp $
+
+  19 Mar 2004; Heinrich Wendel <lanius@gentoo.org>
+  globespan-adsl-0.8-r1.ebuild:
+  fix depend
 
   12 Jan 2004; <nerdboy@gentoo.org> metadata.xml:
   updated metadata and fixed bogus email address
