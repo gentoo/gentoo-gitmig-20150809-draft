@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.5.ebuild,v 1.1 2004/08/08 11:37:29 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.5.ebuild,v 1.2 2005/01/26 23:23:54 xmerlin Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.fefe.de/fnord/"
 KEYWORDS="x86 sparc"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE=""
 
 DEPEND="dev-libs/dietlibc"
 RDEPEND="sys-apps/daemontools"

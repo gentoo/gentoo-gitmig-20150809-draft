@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/fnord
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.5 2004/12/18 16:58:30 hansmi Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.6 2005/01/26 23:23:54 xmerlin Exp $
+
+  27 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> fnord-1.8.ebuild:
+  fixed bug #61251, now you can choose if you want to compile it with
+  dietlibc or something else, added some missing IUSE
 
   18 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> fnord-1.8.ebuild:
   Stable on sparc and added ucspi-tcp to RDEPEND.
