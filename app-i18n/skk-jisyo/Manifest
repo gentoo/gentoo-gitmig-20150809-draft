@@ -3,6 +3,8 @@ MD5 acdea705e816819ba5ef417f80d2894f skk-jisyo-200308.ebuild 671
 MD5 709e9d793306e1fb11707b4bf8adbf5c ChangeLog 3032
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 fe080fd9220fd87a7dd3f9be928b43f6 skk-jisyo-200309.ebuild 671
+MD5 86fdf8b60dd9285e435c875294e87564 skk-jisyo-200401.ebuild 671
 MD5 ad4fb843d3e1548fa313ecc8893ca2bc files/digest-skk-jisyo-200308 69
 MD5 12aaffa39551d203d40b90095013eac5 files/digest-skk-jisyo-200309 69
 MD5 67fdaea445c1f1cade918e971563af49 files/digest-skk-jisyo-200310 69
+MD5 48ae69ad446214d8f764ab529406eaea files/digest-skk-jisyo-200401 69
