@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmsensormon
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.9 2004/12/24 08:28:58 s4t4n Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.10 2005/01/28 23:39:56 s4t4n Exp $
+
+  29 Jan 2005; Michele Noberasco <s4t4n@gentoo.org> +wmsensormon-1.2.1.ebuild:
+  Stable for x86. Update copyright headers.
+  wmsensormon-1.2.0.ebuild:
+  Update copyright headers.
 
 *wmsensormon-1.2.1 (24 Dec 2004)
 
