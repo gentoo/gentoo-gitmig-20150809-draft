@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.13 2003/02/13 12:49:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.14 2003/03/09 13:40:45 seemant Exp $
 
 inherit flag-o-matic
 
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
 filter-flags -fPIC
+filter-flags -fno-common
 
 src_unpack() {
 
