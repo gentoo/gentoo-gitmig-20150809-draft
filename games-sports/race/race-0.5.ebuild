@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.6 2004/06/24 23:24:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.7 2004/06/28 17:25:29 jhuebel Exp $
 
 inherit games gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://users.freebsd.org.uk/pub/foobar2k/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 RDEPEND="virtual/opengl
