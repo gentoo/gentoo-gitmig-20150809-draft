@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.43 2003/10/23 18:57:41 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.44 2003/12/12 17:31:23 seemant Exp $
+
+*sylpheed-0.9.8 (12 Dec 2003)
+
+  12 Dec 2003; Seemant Kulleen <seemant@gentoo.org> sylpheed-0.8.11.ebuild,
+  sylpheed-0.9.4.ebuild, sylpheed-0.9.8.ebuild:
+  version bump to newest release -- gtk2 patch will be in 0.9.8-r1
 
   23 Oct 2003; Sven Blumenstein <bazik@gentoo.org> sylpheed-0.9.4.ebuild:
   Bumped to stable on sparc.

@@ -3,12 +3,14 @@ MD5 4fb520f688c17e8417d713c11df2f6b0 sylpheed-0.9.7.ebuild 1720
 MD5 f91eef3371f7971dfbeb95be07226a0c sylpheed-0.9.4.ebuild 1684
 MD5 c4302a6743c21639783c499aa00a5e99 sylpheed-0.9.4-r1.ebuild 2316
 MD5 0f1e92e49abecee6c964a729bf6f194d sylpheed-0.8.11.ebuild 1660
+MD5 4fb520f688c17e8417d713c11df2f6b0 sylpheed-0.9.8.ebuild 1720
 MD5 223cb2a38acd61344d540a1c66af728a ChangeLog 6842
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 418deb7215c86a6f07b378e3821bec4b files/digest-sylpheed-0.9.4-r1 149
 MD5 d02828752d567534c4fa0b6c7f757a39 files/digest-sylpheed-0.9.5-r1 149
 MD5 cae6de9566012ff2a026e2fdc0124c53 files/digest-sylpheed-0.9.4 68
 MD5 cd6d093a0935b35694616063e91a2bc1 files/digest-sylpheed-0.9.7 68
+MD5 dbd68b329d6860317fc8326b3dc9999e files/digest-sylpheed-0.9.8 68
 MD5 a4f9898914c340cfc6c32168e73868c4 files/digest-sylpheed-0.8.11 69
 MD5 f847bb1651a5b85decf13e2d8d01afe2 files/shared-mime.patch 649
 MD5 073edf4bf5c6725126ecd551cb6a8949 files/gtk2-patch-fix.patch 320
