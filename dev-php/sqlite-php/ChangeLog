@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/sqlite-php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/sqlite-php/ChangeLog,v 1.10 2004/07/06 23:02:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/sqlite-php/ChangeLog,v 1.11 2004/08/03 19:14:23 agriffis Exp $
+
+  03 Aug 2004; <agriffis@gentoo.org> sqlite-php-0.0.5.ebuild:
+  add ~ia64 #56295
 
   06 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> sqlite-php-0.0.5.ebuild:
   Unstable on ppc.
