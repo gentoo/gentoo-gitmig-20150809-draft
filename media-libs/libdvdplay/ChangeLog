@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdplay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/ChangeLog,v 1.11 2004/07/01 07:57:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/ChangeLog,v 1.12 2004/10/23 23:32:33 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> libdvdplay-1.0.1.ebuild:
+  Added ~sparc keyword.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libdvdplay-1.0.1.ebuild:
