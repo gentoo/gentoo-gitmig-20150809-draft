@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.2.20041112.ebuild,v 1.3 2005/01/12 21:19:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.2.20041112.ebuild,v 1.4 2005/01/14 15:36:16 luckyduck Exp $
 
 inherit mozilla-launcher
 
@@ -14,7 +14,7 @@ RESTRICT="nostrip nomirror"
 KEYWORDS="-* ~x86 ~amd64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
-IUSE="emul-linux-x86"
+IUSE=""
 S=${WORKDIR}/sunbird
 
 DEPEND="virtual/libc"
@@ -23,7 +23,7 @@ RDEPEND="virtual/x11
 		>=sys-libs/lib-compat-1.0-r2
 		>=x11-libs/gtk+-2.2
 	)
-	emul-linux-x86? (
+	amd64? (
 		>=app-emulation/emul-linux-x86-baselibs-1.0
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
 	)
