@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.32 2003/06/10 18:47:58 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.33 2003/06/22 20:49:58 kumba Exp $
+
 
 *man-1.5l-r6 (10 Jun 2003)
+
+  22 Jun 2003; Joshua Kinard <kumba@gentoo.org> man-1.5l-r6.ebuild:
+  Changed ~sparc & ~mips to sparc & mips in KEYWORDS
 
   10 Jun 2003; Tavis Ormandy <taviso@gentoo.org> :
   line length may be overridden by noff mandoc macros, applying 
