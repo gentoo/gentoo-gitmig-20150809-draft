@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/f2c
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.4 2004/07/01 14:09:20 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.5 2004/07/01 16:51:28 kugelfang Exp $
+
+  01 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> +metadata.xml,
+  f2c-20030320.ebuild:
+  Marked ~sparc on behalf of ciaranm.
 
   01 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> f2c-20030320.ebuild:
   Marked ~ppc
