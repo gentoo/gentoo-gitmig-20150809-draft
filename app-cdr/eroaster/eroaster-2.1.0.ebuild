@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.4 2002/08/02 05:01:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.5 2002/08/06 19:58:32 naz Exp $
 
 DESCRIPTION="A graphical frontend for cdrecord and mkisofs written in gnome-python"
 HOMEPAGE="http://eroaster.sourceforge.net"
@@ -13,8 +13,7 @@ SLOT="0"
 # cdrecord and mkisofs are needed or configure fails
 DEPEND=">=dev-lang/python-2.0
 	>=dev-python/gnome-python-1.4
-	app-cdr/cdrtools
-	sys-apps/mkisofs"
+	app-cdr/cdrtools"
 
 # xmms here is only used in runtime
 # not a bulild dep.
