@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.28-r8.ebuild,v 1.1 2005/03/07 00:28:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.28-r8.ebuild,v 1.2 2005/03/13 22:44:44 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -13,13 +13,13 @@ UNIPATCH_STRICTORDER='Y'
 UNIPATCH_LIST="${DISTDIR}/${PF/r8/r4}.tar.bz2
 	${DISTDIR}/ck-sources-${PV}-CAN-2004-0814.patch
 	${FILESDIR}/${PN}-2.4.cmdlineLeak.patch
+	${FILESDIR}/${PN}-2.4.binfmt_a.out.patch
 	${FILESDIR}/${PN}-2.4.vma.patch
 	${FILESDIR}/${PN}-2.4.CAN-2004-1016.patch
 	${FILESDIR}/${PN}-2.4.CAN-2004-1056.patch
 	${FILESDIR}/${PN}-2.4.CAN-2004-1137.patch
 	${FILESDIR}/${PN}-2.4.77094.patch
 	${FILESDIR}/${P}.brk-locked.patch
-	${FILESDIR}/${PN}-2.4.binfmt_a.out.patch
 	${FILESDIR}/${PN}-2.4.77666.patch
 	${FILESDIR}/${PN}-2.4.78362.patch
 	${FILESDIR}/${PN}-2.4.78363.patch
