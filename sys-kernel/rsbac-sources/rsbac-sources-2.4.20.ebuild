@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.20.ebuild,v 1.2 2003/02/13 16:43:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.20.ebuild,v 1.3 2003/02/25 21:12:53 lostlogic Exp $
 
 ETYPE="sources"
 
 OKV=${PV}
 KV=${PVR}
+SLOT="${KV}"
 
 # Kernel patch name
 KPATCH=patch-2.4.20-v1.2.1
