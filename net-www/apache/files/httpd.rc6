@@ -1,0 +1,26 @@
+#!/sbin/runscript
+
+depend() {
+    need net
+}
+
+checkconfig() {
+    if [ ! -e /etc/httpd/httpd.conf ] ; then
+        eerror "You need an /etc/httpd/httpd.conf  to run Apache"
+        eerror "There is a sample file in /usr/share/docs/apache"
+        return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    ebegin "Starting Apache"
+    start-stop-daemon --quiet --start --exec /usr/sbin/httpd
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping Apache"
+    start-stop-daemon --quiet --stop --pid /var/run/httpd.pid
+    eend $?
+}

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.20-r1.ebuild,v 1.1 2001/08/28 04:17:27 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.20-r1.ebuild,v 1.2 2001/09/06 08:00:57 woodchip Exp $
 
 AV="1.3.20"
 MSV="2.8.4"
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.apache.org http://www.modssl.org"
 DEPEND="virtual/glibc
 	>=sys-libs/db-3.2.3h-r3
 	=sys-libs/db-1.85-r1
-	nls? ( >=dev-libs/openssl-0.9.6b )"
+	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
 
 src_compile() {                           
@@ -66,9 +66,13 @@ if [ "`use ssl`" ];then
 fi
     dodoc ANNOUNCE CHANGES CREDITS INSTALL* LICENSE NEWS README*
     dodir /etc/rc.d/init.d
-    cp ${FILESDIR}/httpd.conf ${D}/etc/httpd
-    cp ${FILESDIR}/httpd ${D}/etc/rc.d/init.d
-	 dodir /etc/skel/public_html
+
+    insinto /etc/httpd
+    doins ${FILESDIR}/httpd.conf
+
+    exeinto /etc/rc.d/init.d
+    newexe ${FILESDIR}/httpd.rc5 httpd
+    dodir /etc/skel/public_html
 }
 
 pkg_config() {
