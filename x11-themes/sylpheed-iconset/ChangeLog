@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/sylpheed-iconset-0.8.3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/ChangeLog,v 1.6 2003/07/31 03:07:46 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/ChangeLog,v 1.7 2003/12/10 19:30:30 hanno Exp $
+
+*sylpheed-iconset-20031130 (10 Dec 2003)
+
+  10 Dec 2003; Hanno Boeck <hanno@gentoo.org>
+  sylpheed-iconset-20031130.ebuild:
+  Version bump. Fixed file permissions, removed INSTALL-file from themes-dir,
+  added symlink so the themes work in both sylpheed/sylpheed-claws.
 
 *sylpheed-iconset-20030712 (30 Jul 2003)
 
