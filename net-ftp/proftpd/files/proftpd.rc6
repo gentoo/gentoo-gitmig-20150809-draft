@@ -1,0 +1,22 @@
+#!/sbin/runscript
+
+checkconfig() {
+    if [ ! -e /etc/proftpd/proftpd.conf ] ; then
+	eerror "You need an /etc/proftpd/proftpd.conf file first"
+	eerror "There is a sample file in /usr/share/doc/proftpd"
+	return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    ebegin "Starting proftpd"
+    start-stop-daemon --start --quiet --exec /usr/sbin/proftpd -- -d -p /var/run/proftpd.pid
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping proftpd"
+    start-stop-daemon --stop --quiet --pidfile /var/run/proftpd.pid
+    eend $?
+}
