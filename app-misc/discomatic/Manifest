@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 1247b7876dbfccfb58b5a154974eec43 ChangeLog 400
 MD5 4d1e2f3f90f07d19be2b5f668462397b discomatic-0.3.ebuild 613
-MD5 8d1570261946cf9e7a95c1c45258dd99 metadata.xml 362
+MD5 fe971ab14199cfb606f7c557cdd10e14 metadata.xml 363
 MD5 0cec4b6a4f5fa4b20e56299aa4c25180 files/digest-discomatic-0.3 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFA35E/HTu7gpaalycRAvWBAJ4mzUIGTgKkK9WTDRiydWRrtBrsYwCcDcik
-6JUgqjjGSVoqvbUQTjx6SMQ=
-=upLD
+iD8DBQFBXFOzI1lqEGTUzyQRApIRAJ9usvpAX3VqE2rJ8Grqv36+AG87HgCcCPf8
+TwK4HM3PovHhDUMuV+6HTEc=
+=KZj2
 -----END PGP SIGNATURE-----
