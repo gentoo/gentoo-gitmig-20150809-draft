@@ -1,24 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/systrace-1.0-r2.ebuild,v 1.4 2003/06/26 23:21:23 natey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/systrace-1.0-r4.ebuild,v 1.1 2003/06/26 23:21:23 natey Exp $
 
 DESCRIPTION="Systrace userland binary"
 HOMEPAGE="http://www.systrace.org"
-SRC_URI="http://www.citi.umich.edu/u/provos/systrace/usr-systrace-2003-04-27.tar.gz
-	http://natey.com/gentoo/systrace/patches/systrace.c-no_x11-1.0.patch.gz"
+SRC_URI="http://www.citi.umich.edu/u/provos/systrace/usr-systrace-2003-06-23.tar.gz
+	http://cvs.gentoo.org/~natey/systrace/patches/systrace.c-no_x11-1.0.patch.gz"
 SLOT="0"
 LICENSE="GPL-2"
 PATCH1="systrace.c-no_x11-1.0.patch"
-INCLUDE0="/usr/src/linux/include/linux/systrace.h"
-INCLUDE1="/usr/include/linux/systrace.h"
+INCLUDE="/usr/include/linux/systrace.h"
 S="${WORKDIR}/${P}"
 
 KEYWORDS="~x86"
 IUSE="gtk"
-DEPEND="gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* )"
+DEPEND="dev-libs/libevent
+	=sys-devel/autoconf-2.57
+	gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* )"
 
 pkg_setup() {
-	if ! [ -f ${INCLUDE0} ] || ! [ -f ${INCLUDE1} ] ; 
+	if ! [ -f ${INCLUDE} ] ; 
 	then
 		einfo
 		einfo "ERROR: It does not look like you have a systrace capable kernel. If"
@@ -41,8 +42,9 @@ src_compile() {
 		einfo "function without the sys-apps/gtk-systrace package installed. Please" 
 		einfo "set the USE=\"-gtk\" to build the non-gui capable version of systrace." 
 		einfo
-		sleep 7 
-		./configure --host=${CHOST} || die
+		sleep 7
+		autoconf-2.57 
+		./configure || die
 	elif [ -z "`use gtk`" ]
 	then
 		einfo
@@ -52,7 +54,8 @@ src_compile() {
 		sleep 7 
 		cd ${S}
 		epatch ../${PATCH1} || die
-		./configure --host=${CHOST} || die
+		autoconf-2.57
+		./configure || die
 	fi 
 
 	emake || die
