@@ -2,7 +2,7 @@
 #
 # usb.rc	This brings the USB subsystem up and down safely.
 #
-# $Id: usb.rc,v 1.1 2002/02/25 02:13:12 blocke Exp $
+# $Id: usb.rc,v 1.2 2002/02/25 23:02:14 woodchip Exp $
 #
 # Best invoked via /etc/init.d/hotplug or equivalent, with
 # writable /tmp, /usr mounted, and syslogging active.
@@ -26,13 +26,11 @@ STATIC_MODULE_LIST=
 # USBD_ENABLE=true
 X11_USBMICE_HACK=false
 
-# Gentoo Linux use /etc/conf.d ???
 # override any of the defaults above?
 if [ -f /etc/conf.d/usb ]; then
     . /etc/conf.d/usb
     # e.g. USBD_ENABLE=false but STATIC_MODULE_LIST has your devices
 fi
-
 
 MOUSE_MODULES="mousedev input"
 

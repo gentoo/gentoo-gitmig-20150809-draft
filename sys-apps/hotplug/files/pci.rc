@@ -2,7 +2,7 @@
 #
 # pci.rc	mostly to recover lost boot-time pci hotplug events
 #
-# $Id: pci.rc,v 1.1 2002/02/25 02:13:12 blocke Exp $
+# $Id: pci.rc,v 1.2 2002/02/25 23:02:14 woodchip Exp $
 #
 # Modified for Gentoo Linux, sworley 2002-02-20
 
@@ -12,10 +12,9 @@ cd /etc/hotplug
 
 . hotplug.functions
 
-# Gentoo Linux use /etc/conf.d ???
 # # override any of the defaults?
-if [ -f /etc/conf.d/pci ]; then
-     . /etc/conf.d/pci
+if [ -f /etc/conf.d/pci ] ; then
+	. /etc/conf.d/pci
 fi
 
 pci_boot_events ()

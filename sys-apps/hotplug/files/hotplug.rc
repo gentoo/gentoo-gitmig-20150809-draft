@@ -1,12 +1,14 @@
 #!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/files/hotplug.rc,v 1.2 2002/02/25 23:02:14 woodchip Exp $
 
 depend() {
 	need modules
 }
 
 checkconfig() {
-	if [ ! -d /etc/hotplug ]
-	then
+	if [ ! -d /etc/hotplug ] ; then
 		eerror "USB Hotplug requires scripts & configs in /etc/hotplug !"
 		return 1
 	fi
@@ -15,37 +17,30 @@ checkconfig() {
 start() {
 	local error
 	checkconfig || return 1
-	ebegin "Starting USB Hotplug "
+	ebegin "Starting USB Hotplug"
 	for RC in /etc/hotplug/*.rc
 	do
 		$RC start
 		error=$?
-		if [ error ]
-		then
-			eend ${error} "hotplug script $RC failed at start "
+		if [ error ] ; then
+			eend ${error} "hotplug script $RC failed at start"
 			return 1
 		fi
 	done
-	touch /var/lock/subsys/hotplug
 	eend
 }
 
 stop() {
 	local error
-	checkconfig || return 1
 	ebegin "Stopping USB Hotplug "
 	for RC in /etc/hotplug/*.rc
 	do
 		$RC stop
 		error=$?
-		if [ error ]
-		then
-			eend ${error} "hot plug script $RC failed at stop "	
-			return 1					
+		if [ error ] ; then
+			eend ${error} "hot plug script $RC failed at stop"
+			return 1
 		fi
 	done
-	rm -f /var/lock/subsys/hotplug
 	eend
 }
-
-
