@@ -1,4 +1,4 @@
-MD5 60b0da746224657ddf769a0f07ff0cff ChangeLog 3010
+MD5 2e7f824ff9dfdffd1ab5819f4ae11b5f ChangeLog 3234
 MD5 f01c9a60cd26f4240e9a866b68e3abc5 gyach-0.7.5-r1.ebuild 912
 MD5 1d0cc0f302794128ecf8d5c6823556e0 gyach-0.7.5.ebuild 674
 MD5 58c35fbbc417bffe5df0a63b86f6a2be gyach-0.7.6.ebuild 950
@@ -11,7 +11,7 @@ MD5 916a3f96c703a8850a16906ad47bbe20 gyach-0.9.1.ebuild 947
 MD5 e2a45fc3f5fb20aa30f050735cef66b4 gyach-0.9.2.ebuild 954
 MD5 aa6fbdf4c6517ebf5ec2463677bc3d58 gyach-0.9.4.ebuild 949
 MD5 b89c1ccb88eec2e9e90dc536709ab99d gyach-0.9.4-r1.ebuild 1034
-MD5 f9203472e92040ffc61afb6f33fc1874 gyach-0.9.5.ebuild 1010
+MD5 0fe4256c20f4f9c383039ecc441fd452 gyach-0.9.5.ebuild 1010
 MD5 52415a7cdcc4713252d7977a8a8617fe files/digest-gyach-0.7.5 63
 MD5 52415a7cdcc4713252d7977a8a8617fe files/digest-gyach-0.7.5-r1 63
 MD5 df85c97e31ccc6a4fcf0538be8885926 files/digest-gyach-0.7.6 63
