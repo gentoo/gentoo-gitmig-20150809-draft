@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/gentoo-guide-xml-dtd/gentoo-guide-xml-dtd-2.1.ebuild,v 1.7 2002/08/16 02:42:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gentoo-guide-xml-dtd/gentoo-guide-xml-dtd-2.1.ebuild,v 1.8 2002/09/12 07:20:19 satai Exp $
 
 S=${WORKDIR}
 DESCRIPTION="DTD for Gentoo-Guide Style XML Files"
@@ -30,5 +30,8 @@ pkg_postinst() {
 }
 
 pkg_prerm() {
-    install-catalog --remove /etc/sgml/gentoo-guide.cat /usr/share/sgml/guide/catalog
+	if [ -e /etc/sgml/gentoo-guide.cat ]
+	then
+    	install-catalog --remove /etc/sgml/gentoo-guide.cat /usr/share/sgml/guide/catalog
+	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.7 2002/08/02 17:42:50 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.8 2002/09/12 07:20:19 satai Exp $
+
+*sgml-common-0.6.3-r2 (12 Sep 2002)
+  12 Sep 2002; satai <satai@gentoo.org> sgml-common-0.6.3-r2.ebuild :
+  Added more robust file checking.
 
 *sgml-common-0.6.3-r2 (12 Jul 2002)
 

@@ -101,8 +101,11 @@ pkg_postinst() {
 pkg_prerm() {
 	if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ]
 	then
-		install-catalog --remove \
-			/etc/sgml/sgml-lite.cat \
-			/usr/share/sgml/stylesheets/sgmltools/sgmltools.cat
+		if [ -e sgml-lite.cat ]
+		then
+			install-catalog --remove \
+				/etc/sgml/sgml-lite.cat \
+				/usr/share/sgml/stylesheets/sgmltools/sgmltools.cat
+		fi
 	fi
 }

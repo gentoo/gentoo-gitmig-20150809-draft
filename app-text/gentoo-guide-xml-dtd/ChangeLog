@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gentoo-guide-xml-dtd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/gentoo-guide-xml-dtd/ChangeLog,v 1.2 2002/08/02 17:42:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gentoo-guide-xml-dtd/ChangeLog,v 1.3 2002/09/12 07:20:19 satai Exp $
+
+*gentoo-guide-xml-dtd-2.1 (12 Sep 2002)
+
+  12 Sep 2002; satai <satai@gentoo.org> gentoo-guide-xml-dtd-2.1.ebuild:
+  Added more robust file checking.
 
 *gentoo-guide-xml-dtd-2.1 (1 Feb 2002)
 

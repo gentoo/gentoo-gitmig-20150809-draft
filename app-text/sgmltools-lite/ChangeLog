@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.9 2002/09/03 02:25:19 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.10 2002/09/12 07:20:19 satai Exp $
+
+*sgmltools-lite-3.0.3-r5 (12 Sep 2002)
+
+  12 Sep 2002; satai <satai@gentoo.org> sgmltools-lite-3.0.3-r5.ebuild :
+  Added more robust file checking.
 
 *sgmltools-lite-3.0.3-r5 (02 Sep 2002)
 
