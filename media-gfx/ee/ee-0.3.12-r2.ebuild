@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r2.ebuild,v 1.7 2002/10/20 19:52:35 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r2.ebuild,v 1.8 2002/11/30 23:25:48 nall Exp $
 
 IUSE="nls"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="=sys-libs/db-1*
 	>=gnome-base/gnome-libs-1.4.1.2-r1"
