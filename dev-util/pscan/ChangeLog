@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pscan
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/ChangeLog,v 1.1 2004/09/19 01:18:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/ChangeLog,v 1.2 2004/10/17 10:00:21 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> pscan-20000721.ebuild:
+  Added to ~ppc.
 
 *pscan-20000721 (18 Sep 2004)
 
