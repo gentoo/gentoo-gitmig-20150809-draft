@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.14 2004/02/07 23:13:58 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.15 2004/02/10 03:50:04 pebenito Exp $
+
+*selinux-base-policy-20040209 (09 Feb 2004)
+
+  09 Feb 2004; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20040209.ebuild:
+  Minor revision to add XFS labeling and policy for integrated
+  runscript-run_init.
 
   07 Feb 2004; Chris PeBenito <pebenito@gentoo.org>
   selinux-base-policy-20040202.ebuild:
