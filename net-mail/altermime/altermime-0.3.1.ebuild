@@ -5,7 +5,7 @@ HOMEPAGE="http://pldaniels.com/altermime/"
 
 SLOT="0"
 LICENSE="Sendmail"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 src_compile() {
 	emake || die
