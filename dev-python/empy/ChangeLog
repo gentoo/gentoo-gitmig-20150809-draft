@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/empy
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.1 2003/10/24 05:58:49 pythonhead Exp $
+
+*empy-3.2 (23 Oct 2003)
+
+  23 Oct 2003; Rob Cakebread <pythonhead@gentoo.org> empy-3.2.ebuild:
+  Initial commit. Thank you Chris Bainbridge <chrb@dcs.ed.ac.uk> (Bug #28274)
+
