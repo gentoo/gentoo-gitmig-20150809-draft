@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r1.ebuild,v 1.1 2002/05/30 03:11:35 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r1.ebuild,v 1.2 2002/05/30 03:20:23 jnelson Exp $
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -15,8 +15,10 @@ LICENSE="PSF-2.2"
 DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
 	berkdb? ( >=sys-libs/db-3 )
-	tcltk? ( >=dev-lang/tk-8.0 )        
-	!build? ( !bootstrap? ( dev-libs/expat ) )"
+	tcltk? ( >=dev-lang/tk-8.0 )"
+if [ -z "`use build`" -a -z "`use bootstrap`" ]; then
+	DEPEND="$DEPEND dev-libs/expat"
+fi
 RDEPEND="$DEPEND dev-python/python-fchksum"
 
 # The dev-python/python-fchksum RDEPEND is needed to that this python provides
