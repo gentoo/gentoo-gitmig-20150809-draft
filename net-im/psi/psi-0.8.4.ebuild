@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.4.ebuild,v 1.5 2002/03/06 18:55:22 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.4.ebuild,v 1.6 2002/03/07 15:07:23 gbevin Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://www.affinix.com/~justin/programs/psi/${P}.tar.bz2"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.affinix.com/~justin/programs/psi/"
 SLOT="0"
 DEPEND="virtual/glibc
 	=x11-libs/qt-3*
-	ssl? ( >=dev-libs/openssl-0.9c )"
+	ssl? ( >=dev-libs/openssl-0.9.6c )"
 
 src_compile() {
 	
