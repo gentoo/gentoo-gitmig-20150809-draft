@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.55 2004/03/17 00:23:16 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.56 2004/03/18 23:04:55 foser Exp $
+
+*metacity-2.7.1 (19 Mar 2004)
+
+  19 Mar 2004; foser <foser@gentoo.org> metacity-2.7.1.ebuild :
+  Gnome 2.6 RC1 commit, added xinerama USE
 
   16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> metacity-2.6.5.ebuild:
   Added ~mips keyword.
