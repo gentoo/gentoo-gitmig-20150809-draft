@@ -1,0 +1,21 @@
+# This is the configuration for the the common-lisp-controller build
+# daemon.  You would normally copy this file to /etc/xinet.d, make
+# changes to taste and then restart or reload the xinetd daemon.
+
+service clc-build-daemon
+{
+       id               = clc-build-daemon
+       type             = UNLISTED
+       port             = 8990
+       socket_type	= stream
+       protocol		= tcp
+       wait		= no
+       user		= root
+       server		= /usr/sbin/clc-build-daemon
+       server_args      = clc-build-daemon
+       instances        = 10
+       only_from	= localhost
+       log_on_success	= HOST PID
+       log_on_failure	= HOST
+       disable		= no
+}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.76.ebuild,v 1.2 2003/11/25 07:18:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.76-r1.ebuild,v 1.1 2003/11/25 07:18:12 mkennedy Exp $
 
 DESCRIPTION="Common Lisp Controller"
 HOMEPAGE="http://packages.debian.org/unstable/devel/common-lisp-controller.html"
@@ -12,25 +12,29 @@ KEYWORDS="x86 ~sparc"
 
 DEPEND="dev-lisp/cl-defsystem3
 	dev-lisp/cl-asdf
-	net-mail/mailx
 	app-admin/realpath
-	virtual/logger
-	virtual/inetd"
+	virtual/logger"
 
 S=${WORKDIR}/${PN}
 
-src_compile() {
-	make || die
-}
+# src_unpack() {
+# 	unpack ${A}
+# 	epatch ${FILESDIR}/clc-gentoo-${PV}.patch.gz || die
+# }
+
+# src_compile() {
+# 	make clc-build-daemon-standalone clc-send-command-standalone || die
+# }
 
 src_install() {
 	dobin clc-autobuild* \
 		clc-register-user-package \
-		clc-send-command \
 		clc-unregister-user-package
 
-	dosbin clc-build-daemon \
-		clc-reregister-all-impl \
+	dobin ${FILESDIR}/clc-send-command
+#	newsbin clc-build-daemon-standalone clc-build-daemon
+
+	dosbin 	clc-reregister-all-impl \
 		register-common-lisp-source \
 		register-common-lisp-implementation \
 		unregister-common-lisp-source \
@@ -52,7 +56,7 @@ src_install() {
 	touch ${D}/etc/common-lisp/autobuild # autobuild by default
 
 	dodoc *.txt README.*
-	doman man/*.1 man/*.8 man/old/*.1 man/old/*.8
+	doman man/*.1 man/*.8 man/old/*.1
 
 	einfo ">>> Creating /etc/lisp-config.lisp"
 	dodir /etc
@@ -61,26 +65,32 @@ src_install() {
 #+(or cmu scl) (setf system:*short-site-name* "Unknown" system:*long-site-name* "Unknown")
 #+sbcl (setf sb-sys:*short-site-name* "Unknown" sb-sys:*long-site-name* "Unknown")
 EOF
+
 	dodoc ${FILESDIR}/README.Gentoo
+	insinto /usr/share/doc/${PF}/inetd-examples
+	doins ${FILESDIR}/{inetd.conf-snippet,clc-build-daemon}
+
+	keepdir /usr/lib/common-lisp /usr/lib/common-lisp/bin
 }
 
 pkg_postinst() {
-	enewgroup cl-builder 407
+	enewgroup  cl-builder 407
 	enewuser cl-builder 407 /bin/sh /usr/lib/common-lisp cl-builder
+	chown root:root /usr/lib/common-lisp
 
 	for compiler in /usr/lib/common-lisp/bin/*.sh
 	do
 		if [ -f "${compiler}" -a -r "${compiler}" -a -x "${compiler}" ] ; then
 			i=${compiler##*/}
 			i=${i%.sh}
-		    einfo ">>> Reinstalling for $i"
 		    einfo ">>> Recompiling Common Lisp Controller for $i"
 			bash "$compiler" install-clc || true
-		    echo Done rebuilding
-			einfo ">>> Setting permissions for cl-builder in /usr/lib/common-lisp/${i}"
-			chown -R cl-builder.cl-builder /usr/lib/common-lisp/${i} >/dev/null || true
+		    einfo ">>> Done rebuilding"
+			chown -R cl-builder.cl-builder /usr/lib/common-lisp/${i} &>/dev/null || true
 		fi
 	done
+	echo
+	while read line; do einfo "${line}"; done <${FILESDIR}/README.Gentoo
 }
 
 # pkg_prerm() {

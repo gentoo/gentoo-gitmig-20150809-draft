@@ -1,0 +1,146 @@
+#!/bin/bash
+
+# {{{ Copyright
+
+# A shell version of the clc-send-command program.
+# Copyright (C) 2003  The Free Software Foundation
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+# USA
+
+# Authors: Matthew Kennedy <mkennedy@gentoo.org>
+
+# }}}
+# {{{ Commentary...
+
+# Traditionally, the controller consisted of two programs:
+# clc-send-command and clc-build-daemon, The former invokes the later
+# via an Internet super-server such as inetd and xinetd.
+#
+# Why the contoller requires a Internet super-sever is beyond my
+# comprehension, hence this program.
+#
+# This program works exactly like the original clc-send-command
+# program, however it bypasses clc-build-daemon to call the controller
+# implementation scripts (/usr/lib/common-lisp/bin/*.sh) directly.
+
+# }}}
+# {{{ Utility functions
+
+function error {
+    echo "Error: $1"
+    exit 255
+}
+
+function warning {
+    echo "Warning: $1"
+    exit 0
+}
+
+function is_valid_impl {
+    local impl=$1
+    for i in /usr/lib/common-lisp/bin/*.sh; do
+        i=$(basename ${i} .sh)
+        if [ "x${i}" == "x${impl}" ]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+function is_valid_package {
+    local impl=$1 package=$2
+    test -d /usr/lib/common-lisp/${impl}/${package}
+}
+
+function su-maybe {
+    if [ "x`whoami`" == "xroot" ]; then
+        su - cl-builder -c "$@"
+    else
+        $@
+    fi
+}
+
+function remove_package {
+    local impl=$1 package=$2
+#     su - cl-builder -c "/usr/lib/common-lisp/bin/${impl}.sh remove ${package}"
+    su-maybe "/usr/lib/common-lisp/bin/${impl}.sh remove ${package}"
+}
+
+function recompile_package {
+    local impl=$1 package=$2
+    su - cl-builder -c "/usr/lib/common-lisp/bin/${impl}.sh rebuild ${package}"
+}
+
+# }}}
+
+declare -a ARGS
+
+i=0; while [ ! -z "$1" ]; do
+    # collect the arguments we're interested in, discard all else
+    case $1 in
+        -d | --debug | -q | --quiet | -v | --verbose)
+            # ignore these for now
+            ;;
+        -? | --help | --usage)
+            cat <<EOF
+clc-send-command [OPTION...] recompile <package> <implementation>
+clc-send-command [OPTION...] remove <package> <implementation>
+EOF
+            exit 1
+            ;;
+        --verbose | -V)
+            # mimic the original clc-send-command program's output
+            echo 'version 1.0 for clc v3'
+            exit 1
+            ;;
+        *)
+            ARGS[$i]=$1 i=$[$i + 1]
+            ;;
+        esac
+    shift
+done
+
+if [ ${#ARGS[*]} -ne 3 ]; then
+    error 'Invalid number of arguments.'
+fi
+
+command=${ARGS[0]} package=${ARGS[1]} impl=${ARGS[2]}
+
+is_valid_impl ${impl} \
+    || error "Invalid implementaion: ${impl}"
+
+case ${command} in
+    remove)
+        is_valid_package ${impl} ${package} \
+            || warning "Package ${package} for implementation ${impl} does not exist or has not been compiled yet."
+        remove_package ${impl} ${package} \
+            || error "Cannot remove package: ${package} for implementation: ${impl}"
+        ;;
+    recompile)
+        recompile_package ${impl} ${package} \
+            || error "Cannot recompile package: ${package} for implementation: ${impl}"
+        ;;
+    *)
+        error "Unrecognized command: ${command}"
+        ;;
+esac
+
+exit 0
+
+# Local Variables: ***
+# mode: shell-script ***
+# indent-tabs-mode: nil ***
+# End: ***
