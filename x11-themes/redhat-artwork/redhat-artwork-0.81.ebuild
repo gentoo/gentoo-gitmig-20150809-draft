@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.81.ebuild,v 1.7 2004/06/24 23:37:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.81.ebuild,v 1.8 2004/06/28 23:20:04 mr_bones_ Exp $
 
 inherit eutils rpm
 
@@ -172,7 +172,7 @@ src_install () {
 	done
 
 	# remove xmms skin if unneeded
-	[ -n "`use xmms`" ] || rm -rf ${D}/usr/share/xmms
+	use xmms || rm -rf ${D}/usr/share/xmms
 
 	cd ${S}
 	dodoc AUTHORS NEWS README ChangeLog
