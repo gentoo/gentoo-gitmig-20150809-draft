@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.25 2004/10/29 15:19:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.26 2004/10/30 06:58:20 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -234,6 +234,12 @@ tetex_src_install() {
 			#fix for conflicting readlink binary:
 			rm -f ${D}/bin/readlink
 			rm -f ${D}/usr/bin/readlink
+
+			if [ "${TETEX_PV}" == "2.0.2" ] ; then
+				# --without-texi2html doesn't exist
+				rm -f ${D}/usr/bin/texi2html
+				rm -f ${D}/usr/share/man/man1/texi2html.1
+			fi
 
 			#add /var/cache/fonts directory
 			dodir /var/cache/fonts
