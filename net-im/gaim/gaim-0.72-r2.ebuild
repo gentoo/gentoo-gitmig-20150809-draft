@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.72-r2.ebuild,v 1.4 2003/11/21 15:11:19 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.72-r2.ebuild,v 1.5 2003/11/21 22:42:27 rizzo Exp $
 
-IUSE="nls perl spell nas ssl cjk"
+IUSE="nls perl spell nas ssl cjk mozilla"
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
@@ -24,10 +24,8 @@ DEPEND="=sys-libs/db-1*
 	>=media-libs/audiofile-0.2.0
 	perl? ( >=dev-lang/perl-5.6.1
 		>=sys-apps/sed-4.0.0 )
-	( || ( dev-libs/nss
-			( net-www/mozilla )
-		)
-	)
+	mozilla? ( net-www/mozilla )
+	!mozilla? ( dev-libs/nss )
 	spell? ( >=app-text/gtkspell-2.0.2 )"
 
 src_unpack() {
@@ -50,16 +48,12 @@ src_compile() {
 	use nls  || myconf="${myconf} --disable-nls"
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
 
-	if has_version "net-www/mozilla"; then
+	if [ `use mozilla` ]; then
 		NSS_LIB=/usr/lib/mozilla
 		NSS_INC=/usr/lib/mozilla/include
-	elif has_version "dev-libs/nspr"; then
+	else
 		NSS_LIB=/usr/lib
 		NSS_INC=/usr/include
-	else
-		# Not sure how this would happen with our current DEPEND setup
-		eerror "Neither net-www/mozilla nor dev-libs/nspr found."
-		die "Unexpected error. Unable to find nss/nspr"
 	fi
 
 	myconf="${myconf} --with-nspr-includes=${NSS_INC}/nspr"
