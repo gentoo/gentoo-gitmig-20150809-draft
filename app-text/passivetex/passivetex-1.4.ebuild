@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.4.ebuild,v 1.8 2002/12/09 04:17:44 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.4.ebuild,v 1.9 2002/12/30 04:30:47 satai Exp $
 
 S=${WORKDIR}/passivetex
 DESCRIPTION="A namespace-aware XML parser written in Tex"
@@ -10,10 +10,8 @@ KEYWORDS="x86 sparc "
 SLOT="0"
 LICENSE="freedist"
 
-DEPEND="app-text/tetex app-arch/unzip
-	app-text/xmltex"
-RDEPEND="app-text/tetex
-	app-text/xmltex"
+DEPEND="app-text/tetex app-arch/unzip"
+RDEPEND="app-text/tetex"
 
 src_unpack() {
 	mkdir ${S}

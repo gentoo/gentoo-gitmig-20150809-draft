@@ -1,6 +1,9 @@
 # ChangeLog for app-text/passivetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.4 2002/12/13 10:56:19 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.5 2002/12/30 04:30:47 satai Exp $
+
+  29 Dec 2002; Matthew Turk <satai@gentoo.org> : passivetex-1.4.ebuild :
+  Got rid of xmltex dep.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
