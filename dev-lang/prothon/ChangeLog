@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/prothon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prothon/ChangeLog,v 1.5 2004/07/02 04:30:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prothon/ChangeLog,v 1.6 2004/07/12 00:01:26 kloeri Exp $
+
+*prothon-0.1.2_p711 (12 Jul 2004)
+
+  12 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  -prothon-0.0.3_p282.ebuild, -prothon-0.0.4_p328.ebuild,
+  +prothon-0.1.2_p711.ebuild:
+  Bump version, remove old ebuilds.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   prothon-0.0.3_p282.ebuild, prothon-0.0.4_p328.ebuild,
