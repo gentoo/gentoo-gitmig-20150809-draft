@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.9 2004/09/22 11:35:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.10 2004/11/04 10:03:45 dragonheart Exp $
+
+  04 Nov 2004; Daniel Black <dragonheart@gentoo.org> crypto++-5.1-r1.ebuild,
+  crypto++-5.1.ebuild, crypto++-5.2-r1.ebuild, crypto++-5.2.1.ebuild,
+  crypto++-5.2.ebuild:
+  added app-arch/zip dependancy as per bug #69831
 
 *crypto++-5.2.1 (22 Sep 2004)
 
