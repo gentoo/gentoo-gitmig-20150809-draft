@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cpio
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.16 2003/03/28 02:15:56 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.17 2003/06/23 22:28:09 agriffis Exp $
+
+  23 Jun 2003; Aron Griffis <agriffis@gentoo.org> cpio-2.5.ebuild:
+  Mark stable on alpha
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords
