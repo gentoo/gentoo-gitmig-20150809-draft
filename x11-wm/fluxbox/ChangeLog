@@ -1,9 +1,14 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.22 2002/08/16 17:19:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.23 2002/08/28 04:49:18 naz Exp $
 
 *fluxbox-0.1.10 (14 Jul 2002)
 
+  27 Aug 2002; Michael Nazaroff <naz@gentoo.org> fluxbox-0.1.10.ebuild :
+  
+  Added the fluxbox default keys file into the ebuild. This takes care of bug
+  #6274. Thanx to: scottro@despammed.com (Scott Robbins) for the report.
+  
   16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.10.ebuild :
 
   Added Vano's patch to make the menu disappear on left click anywhere.
