@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.440 2004/06/18 16:17:37 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.441 2004/06/18 18:16:30 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -322,6 +322,7 @@ net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
 net-misc/zaptel:devfs26 - Devfs support for Linux-2.6
 net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
+net-news/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
 net-p2p/amule:remote - enable remote controlling of the client
 net-p2p/amule:stats - enable statistic reporting
 net-p2p/bittorrent-theshadow:nopsyco - Disable PSYCO usage even if psyco is installed
