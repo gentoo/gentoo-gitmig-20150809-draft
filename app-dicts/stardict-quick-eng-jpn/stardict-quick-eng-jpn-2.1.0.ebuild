@@ -1,10 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-quick-eng-jpn/stardict-quick-eng-jpn-2.1.0.ebuild,v 1.1 2003/07/06 17:49:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-quick-eng-jpn/stardict-quick-eng-jpn-2.1.0.ebuild,v 1.2 2004/05/31 18:24:58 vapier Exp $
 
 FROM_LANG="English"
 TO_LANG="Japanese Romaji"
 DICT_PREFIX="quick_"
 
 inherit stardict
-
