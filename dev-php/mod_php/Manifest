@@ -1,16 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 309b2e76d5d4951508c3376817f1c416 mod_php-5.0.0.ebuild 3997
 MD5 b88dcf659c6b7a84f49710bf3a90c4cb mod_php-4.3.8.ebuild 5912
 MD5 ee2192bcf2a49ea2faf6dc79b9b03099 mod_php-5.0.0-r1.ebuild 4181
 MD5 9e19b7f691662389947b59c9a1156935 mod_php-4.3.9_rc1.ebuild 6027
 MD5 f6c0b2da02a8c55fc260ae228e9cf2f4 mod_php-5.0.1.ebuild 4246
-MD5 b201dbd19dfa3470d3d04cded0583f4c ChangeLog 32835
+MD5 9b568fc36bb39edb96e6f24e9e07c5f7 ChangeLog 32983
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 7515e9b1dc298a0fb1c12d35a58c265d files/mod_php-4.3.4-amd64hack.diff 1028
 MD5 cceddd5c262e0ffef31d45b7da269851 files/mod_php.conf 148
-MD5 0c2e81f561985f3749c37cf525de7583 files/70_mod_php.conf 1364
+MD5 79ed63479c494aeb2ed0bc7f5c059fb9 files/70_mod_php.conf 1022
 MD5 11f305b98b753ee023da8503a360762a files/digest-mod_php-5.0.0-r1 63
 MD5 cd07c33356df77acd61cd300f2869d19 files/php-5.0.0-httpauthfix.patch 518
 MD5 390a659097a43447e44ab5bdd59378b5 files/digest-mod_php-4.3.8 282
@@ -19,12 +16,4 @@ MD5 14d868f33e29b3c9a70b118e9da58dd0 files/digest-mod_php-5.0.1 63
 MD5 3bf664b414787f8f3c1dcbda5750aef4 files/mod_php-4.3.5-apache1security.diff 425
 MD5 286ce4ea00fde75122c14fd35c3d4672 files/digest-mod_php-4.3.9_rc1 208
 MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
-MD5 9591544f5ec3e6302f69a9d82676273c files/70_mod_php5.conf 1003
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-Comment: .//Manifest 1095025281
-
-iD8DBQFBRMKIPpIsIjIzwiwRAlX2AKDyk+Y26FChCTAbupaMPLx+afiS3ACfUf4Q
-FdYhcsuoa+wk/wGp3FfbypQ=
-=yAms
------END PGP SIGNATURE-----
+MD5 80c45eef4f54629e893249f869cff5c6 files/70_mod_php5.conf 484
