@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libticables
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libticables/ChangeLog,v 1.6 2004/06/24 23:24:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libticables/ChangeLog,v 1.7 2004/08/22 17:39:43 ribosome Exp $
+
+*libticables-3.8.6 (22 Aug 2004)
+
+  22 Aug 2004; Olivier Fisette <ribosome@gentoo.org> -libticables-3.6.3.ebuild,
+  -libticables-3.7.2.ebuild, +libticables-3.8.6.ebuild:
+  Version bump (3.8.6). I made a gentoo package to include the "ticables-config"
+  script and its man page. Removed old ebuilds.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libticables-3.6.3.ebuild,
   libticables-3.7.2.ebuild, libticables-3.7.7.ebuild:
