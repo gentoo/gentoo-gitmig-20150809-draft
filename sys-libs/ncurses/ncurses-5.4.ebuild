@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4.ebuild,v 1.1 2004/02/29 21:57:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4.ebuild,v 1.2 2004/03/02 00:25:43 mr_bones_ Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 filter-flags -fno-exceptions
@@ -27,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=
-	
+
 	[ -n "`use debug`" ] || myconf="${myconf} --without-debug"
 
 	# Shared objects are compiled properly with -fPIC, but
