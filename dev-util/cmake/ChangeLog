@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.7 2004/08/10 18:23:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.8 2004/11/24 21:51:16 sekretarz Exp $
+
+  24 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> cmake-2.0.3.ebuild:
+  Added to ~amd64, bug #72299
 
 *cmake-2.0.3 (10 Aug 2004)
 
