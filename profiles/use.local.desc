@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.546 2004/08/10 04:12:27 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.547 2004/08/12 02:27:53 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -428,6 +428,7 @@ net-www/drupal:minimal - Disables installing the additional plugins
 net-www/elinks:lua - enable lua support
 net-www/kazehakase:migemo - enable migemo support for Japanese incremental search.
 net-www/kazehakase:estraier - enable estraier support for full-text search in history.
+net-www/horde-imp:clearpasswd - Enables cleartext password storage in the vpopmail files
 net-www/links:javascript - enable javascript support
 net-www/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 net-www/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
