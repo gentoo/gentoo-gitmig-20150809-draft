@@ -1,7 +1,11 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.5 2003/08/13 20:33:18 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.6 2003/09/02 10:12:31 lu_zero Exp $
 
+  02 Sep 2003; Luca Barbato <lu_zero@gentoo.org> lm-sensors-2.6.5.ebuild,
+  files/no-isadump-ppc.patch:
+  Fixes a ppc related bug
+  
 *lm-sensors-2.8.0 (13 Aug 2003)
 
   13 Aug 2003; Brandon Low <lostlogic@gentoo.org> lm-sensors-2.8.0.ebuild,

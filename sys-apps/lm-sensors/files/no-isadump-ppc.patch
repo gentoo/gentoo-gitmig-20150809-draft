@@ -1,0 +1,25 @@
+diff -ruN lm_sensors-2.6.5.orig/prog/dump/Module.mk lm_sensors-2.6.5/prog/dump/Module.mk
+--- lm_sensors-2.6.5.orig/prog/dump/Module.mk	2002-08-03 23:08:53.000000000 +0200
++++ lm_sensors-2.6.5/prog/dump/Module.mk	2003-09-02 11:57:31.000000000 +0200
+@@ -23,13 +23,14 @@
+ 
+ # Regrettably, even 'simply expanded variables' will not put their currently
+ # defined value verbatim into the command-list of rules...
+-PROGDUMPTARGETS := $(MODULE_DIR)/isadump $(MODULE_DIR)/i2cdump \
+-		   $(MODULE_DIR)/i2cset
+-PROGDUMPSOURCES := $(MODULE_DIR)/isadump.c  $(MODULE_DIR)/i2cdump.c \
+-		   $(MODULE_DIR)/i2cset.c
+-PROGDUMPBININSTALL := $(MODULE_DIR)/isadump $(MODULE_DIR)/i2cdump \
+-		   $(MODULE_DIR)/i2cset
+-
++PROGDUMPTARGETS := $(MODULE_DIR)/i2cdump $(MODULE_DIR)/i2cset
++PROGDUMPSOURCES := $(MODULE_DIR)/i2cdump.c $(MODULE_DIR)/i2cset.c
++PROGDUMPBININSTALL := $(MODULE_DIR)/i2cdump $(MODULE_DIR)/i2cset
++ifneq ($(MACHINE),ppc)
++PROGDUMPTARGETS += $(MODULE_DIR)/isadump 
++PROGDUMPSOURCES += $(MODULE_DIR)/isadump.c 
++PROGDUMPBININSTALL += $(MODULE_DIR)/isadump
++endif
+ # Include all dependency files. We use '.rd' to indicate this will create
+ # executables.
+ INCLUDEFILES += $(PROGDUMPSOURCES:.c=.rd)
