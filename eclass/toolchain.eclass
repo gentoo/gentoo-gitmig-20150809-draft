@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.48 2004/11/14 09:13:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.49 2004/11/14 23:13:52 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -541,60 +541,66 @@ split_out_specs_files() {
 }
 
 
-# This function will call gcc-config when appropriate, with the appropriate
-# arguments. It also -attempts- to not be invasive, keeping the current config
-# active if it -appears- to be valid. Cross-compilers will never be switched
-# to.
-#
-# Travis Tilley <lv@gentoo.org> (04 Oct 2004)
-#
-do_gcc_config() {
-	# sometimes MY_PV_FULL is set at this point, sometimes it isnt. I have no
-	# idea why, but it seems not to be set at bootstrap and that's bad.
-	gcc_setup_static_vars
-
+should_we_gcc_config() {
 	# we only want to switch compilers if installing to / and we're not
 	# building a cross-compiler.
-	! [ "${ROOT}" == "/" -a "${CHOST}" == "${CTARGET}" ] && return 0
+	! [ "${ROOT}" == "/" -a "${CHOST}" == "${CTARGET}" ] && return 1
 
+	# we always want to run gcc-config if we're bootstrapping, otherwise
+	# we might get stuck with the c-only stage1 compiler
+	use bootstrap && return 0
+	use build && return 0
+
+	# if the current config is invalid, we definately want a new one
+	[ "$(gcc-config -L | grep -v ^\ )" == "no-config" ] && return 0
+
+	# if the previously selected config has the same major.minor as the
+	# version we are installing, then it will probably be uninstalled
+	# for being in the same SLOT. we cannot rely on the previous check
+	# to handle this, since postinst sometimes happens BEFORE the
+	# previous version is removed. :|
+	# ...skip this check if the current version is -exactly- the same
+	local c_gcc_conf_ver=$(gcc-config -c | awk -F - '{ print $5 }')
+	local c_majmin=$(get_version_component_range 1-2 ${c_gcc_conf_ver})
+	if [ "${c_gcc_conf_ver}" != "${MY_PV_FULL}" ] ; then
+		if [ "${c_majmin}" == "${MY_PV}" ] ;then
+			return 0
+		else
+			# if we're installing a genuinely different compiler version,
+			# we should probably tell the user -how- to switch to the new
+			# gcc version, since we're now going to do it for him/her.
+			einfo "The current gcc config appears valid, so it will not be"
+			einfo "automatically switched for you. If you would like to"
+			einfo "switch to the newly installed gcc version, do the"
+			einfo "following:"
+			echo
+			einfo "gcc-config ${CTARGET}-${MY_PV_FULL}${use_specs}"
+			einfo "source /etc/profile"
+			echo
+			ebeep
+			return 1
+		fi
+	else
+		# since we are re-merging the same gcc version, it's safe to re-run
+		# gcc-config and update any new wrappers, etc.
+		return 0
+	fi
+
+	# default to -not- switching gcc configs. this is to prevent an
+	# annoying bug where doing an emerge world -e with multiple slotted
+	# compilers will compile some apps with one and others with another.
+	return 1
+}
+
+do_gcc_config() {
 	# the grep -v is in there to filter out informational messages >_<
 	local current_gcc_config="$(gcc-config -c | grep -v ^\ )"
+
+	# figure out which specs-specific config is active. yes, this works
+	# even if the current config is invalid.
 	local current_specs="$(echo ${current_gcc_config} | awk -F - '{ print $6 }')"
 	[ "${current_specs}" != "" ] && local use_specs="-${current_specs}"
 
-	# ...we also dont want to automatically switch the currently selected gcc
-	# config unless the old config is no longer valid. otherwise doing an
-	# emerge world -e with multiple slotted compilers installed will compile
-	# some packages with one compiler and others with another. besides, it's
-	# just plain rude. ;)
-	# ...unless we're bootstrapping and NEED a compiler with c++!
-	# ...and if the gcc-config -L result is no-config, lets just skip the
-	# rest of the exclusion logic altogether, since we certainly want to
-	# run gcc-config.
-	if use !bootstrap && use !build && [ "$(gcc-config -L | grep -v ^\ )" != "no-config" ] ; then
-		local current_gcc_libpath="$(gcc-config -L | grep -v ^\ )"
-		if [ -e ${ROOT}${current_gcc_libpath%:*}/specs -a -e ${ROOT}/etc/env.d/gcc/${current_gcc_config} ] ; then
-			local current_gcc_version="$(echo ${current_gcc_config} | awk -F - '{ print $5 }')"
-			if [ "${current_gcc_version}" != "${MY_PV_FULL}" ] ; then
-				# if we're installing a genuinely different compiler version, we
-				# should probably tell the user -how- to switch to the new gcc
-				# version if we're not going to do it for him/her.
-				einfo "The current gcc config appears valid, so it will not be"
-				einfo "automatically switched for you. If you would like to switch"
-				einfo "to the newly installed gcc version, do the following:"
-				echo
-				einfo "gcc-config ${CTARGET}-${MY_PV_FULL}${use_specs}"
-				einfo "source /etc/profile"
-				echo
-				ebeep
-				epause
-			else
-				einfo "The current gcc config appears to be valid, not running"
-				einfo "gcc-config ..."
-			fi
-			return 0
-		fi
-	fi
 
 	if [ -n "${use_specs}" -a ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${MY_PV_FULL}${use_specs} ] ; then
 		ewarn "The currently selected specs-specific gcc config,"
@@ -606,9 +612,10 @@ do_gcc_config() {
 		epause
 	fi
 
+
 	if [ -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${MY_PV_FULL}${use_specs} ] ; then
 		# we dont want to lose the current specs setting!
-		gcc-config --use-portage-chost ${CTARGET}-${MY_PV_FULL}${use_specs}
+		gcc-config ${CTARGET}-${MY_PV_FULL}${use_specs}
 	else
 		# ...unless of course the specs-specific entry doesnt exist :)
 		gcc-config --use-portage-chost ${CTARGET}-${MY_PV_FULL}
