@@ -131,3 +131,4 @@ move app-sci/elem sci-chemistry/elem
 move app-sci/ghemical sci-chemistry/ghemical
 move app-sci/gperiodic sci-chemistry/gperiodic
 move app-sci/gromacs sci-chemistry/gromacs
+move app-sci/kemistry sci-chemistry/kemistry
