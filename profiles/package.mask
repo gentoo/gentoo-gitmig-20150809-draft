@@ -23,6 +23,10 @@
 ##
 
 # <george@gentoo.org> (09 Aug 2002)
+# masked for testing (issue fixed)
+=dev-lang/R-1.5.1
+
+# <george@gentoo.org> (09 Aug 2002)
 # does not build
 =dev-tcltk/itcl-3.2-r2
 
