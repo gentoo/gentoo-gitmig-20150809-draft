@@ -1,0 +1,32 @@
+diff -Naur hdparm-5.4-orig/hdparm.c hdparm-5.4/hdparm.c
+--- hdparm-5.4-orig/hdparm.c	2003-04-18 20:29:38.000000000 +0000
++++ hdparm-5.4/hdparm.c	2004-02-09 00:47:01.190595128 +0000
+@@ -52,7 +52,7 @@
+ static int flagcount = 0, do_flush = 0, is_scsi_hd = 0, is_xt_hd = 0;
+ static int do_ctimings, do_timings = 0;
+ 
+-static unsigned long set_readahead= 0, get_readahead= 0, readahead= 0;     
++static unsigned long set_readahead= 0, get_readahead= 0, doreadahead= 0;
+ static unsigned long set_readonly = 0, get_readonly = 0, readonly = 0;
+ static unsigned long set_unmask   = 0, get_unmask   = 0, unmask   = 0;     
+ static unsigned long set_mult     = 0, get_mult     = 0, mult     = 0;     
+@@ -785,8 +785,8 @@
+ 
+ 	if (set_readahead) {
+ 		if (get_readahead)
+-			printf(" setting fs readahead to %ld\n", readahead);
+-		if (ioctl(fd, BLKRASET, readahead)) 
++			printf(" setting fs readahead to %ld\n", doreadahead);
++		if (ioctl(fd, BLKRASET, doreadahead)) 
+ 			perror(" BLKRASET failed");
+ 	}
+ #ifdef HDIO_UNREGISTER_HWIF
+@@ -1830,7 +1830,7 @@
+ 					case 'a':
+ 						get_readahead = noisy;
+ 						noisy = 1;
+-						GET_NUMBER(set_readahead,readahead);
++						GET_NUMBER(set_readahead,doreadahead);
+ 						break;
+ 					case 'B':
+ 						get_apmmode = noisy;

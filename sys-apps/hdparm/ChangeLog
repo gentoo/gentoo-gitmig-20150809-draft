@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.32 2004/01/09 19:50:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.33 2004/02/09 02:08:47 brad_mssw Exp $
+
+  08 Feb 2004; Brad House <brad_mssw@gentoo.org> hdparm-5.4.ebuild,
+  files/hdparm-5.4-readahead_rename.patch:
+  Patch provided by James Noble in Bug #40908 to work around glibc
+  2.3.3_pre20040117+ versions which define readahead internally in bits/fcntl.h
 
   09 Jan 2004; Aron Griffis <agriffis@gentoo.org> hdparm-5.4.ebuild:
   stable on alpha

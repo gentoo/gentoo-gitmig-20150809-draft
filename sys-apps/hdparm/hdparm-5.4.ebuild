@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.4.ebuild,v 1.10 2004/01/09 19:50:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.4.ebuild,v 1.11 2004/02/09 02:08:47 brad_mssw Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utility to change hard drive performance parameters"
@@ -19,6 +19,7 @@ src_compile() {
 	einfo "that you etc-update.  The script is much more configurable"
 	einfo "for details please see /etc/conf.d/hdparm"
 	einfo ""
+	epatch ${FILESDIR}/${P}-readahead_rename.patch
 	emake || die "compile error"
 }
 
