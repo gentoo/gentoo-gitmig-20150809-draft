@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/silo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.20 2005/03/28 13:35:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.21 2005/04/06 06:03:18 eradicator Exp $
+
+  06 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/silo-1.4.9-noglibc_time.patch, +files/silo-1.4.9-sparc_cpu.patch,
+  silo-1.4.9.ebuild:
+  Use kernel headers' enum sparc_cpu instead of promlib.h's enum arch to
+  prevent symbol collision. Prevent glibc's time.h from being brought in which
+  could cause symbol collision. This makes silo work on systems with 2.6
+  headers.
 
 *silo-1.4.9 (28 Mar 2005)
 
