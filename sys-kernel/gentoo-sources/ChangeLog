@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.84 2004/08/04 22:06:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.85 2004/08/05 19:59:25 plasmaroo Exp $
+
+  05 Aug 2004; <plasmaroo@gentoo.org> gentoo-sources-2.4.19-r20.ebuild,
+  +files/security.patch5:
+  Compile and ptrace fix for 2.4.19; bug #59500.
 
 *gentoo-sources-2.4.25-r7 (04 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r20.ebuild,v 1.1 2004/08/04 22:06:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r20.ebuild,v 1.2 2004/08/05 19:59:25 plasmaroo Exp $
 
 IUSE="acpi4linux crypt xfs"
 
@@ -67,6 +67,7 @@ src_unpack() {
 	epatch ${FILESDIR}/security.patch2
 	epatch ${FILESDIR}/security.patch3
 	epatch ${FILESDIR}/security.patch4
+	epatch ${FILESDIR}/security.patch5
 
 	epatch ${FILESDIR}/lcall-DoS.patch || die "lcall-DoS patch failed"
 	epatch ${FILESDIR}/i810_drm.patch || die "i810_drm patch failed"
