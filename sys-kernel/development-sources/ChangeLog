@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.56 2003/10/26 20:03:44 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.57 2003/11/02 18:18:00 brad_mssw Exp $
+
+  02 Nov 2003; Brad House <brad_mssw@gentoo.org>
+  development-sources-2.6.0_beta9.ebuild:
+  bring development-sources back to vanilla
 
   26 Oct 2003; Brad House <brad_mssw@gentoo.org>
   development-sources-2.6.0_beta9.ebuild:
