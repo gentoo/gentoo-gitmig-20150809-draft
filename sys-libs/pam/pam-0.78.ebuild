@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78.ebuild,v 1.2 2005/02/26 01:02:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78.ebuild,v 1.3 2005/02/26 01:32:35 azarah Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -109,6 +109,11 @@ src_unpack() {
 
 	apply_pam_patches
 
+	if use selinux; then
+		epatch ${S2}/gentoo-patches/pam-0.78-selinux.patch
+		use pwdb && epatch ${S2}/gentoo-patches/pam-pwdbselinux.patch
+	fi
+
 	# Check which extra modules should be built
 	# (Do this after apply_pam_patches(), else some may fail)
 	for x in pam_chroot pam_console pam_timestamp; do
@@ -120,11 +125,6 @@ src_unpack() {
 
 	# Fixup libdir for 64bit arches
 	sed -ie "s:@get_libdir:$(get_libdir):" ${S}/configure.in
-
-	if use selinux; then
-		epatch ${S2}/gentoo-patches/pam-078-selinux.patch
-		use pwdb && epatch ${S2}/gentoo-patches/pam-pwdbselinux.patch
-	fi
 
 	for readme in modules/pam_*/README ; do
 		cp -f "${readme}" doc/txts/README.$(dirname "${readme}" | \
