@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.3 2003/09/17 00:36:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.4 2003/09/19 04:22:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
@@ -10,7 +10,8 @@ IUSE="nls"
 DEPEND="virtual/glibc"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-*"
+#testing this on ia64 (drobbins, 18 Sep 2003)
+KEYWORDS="-* ia64"
 
 src_compile() {
 	local myconf=""
