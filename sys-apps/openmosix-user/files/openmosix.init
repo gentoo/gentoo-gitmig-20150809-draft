@@ -6,7 +6,7 @@ depend() {
 
 stop() {
 	ebegin "Stopping openMosix"
-	echo 0 > /proc/mosix/admin/mospe
+	setpe -off
 	rm -f /var/lock/subsys/mosix
 	eend
 }
