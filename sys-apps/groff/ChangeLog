@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.47 2004/11/01 19:08:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.48 2004/11/04 00:02:20 vapier Exp $
+
+*groff-1.19.1-r2 (03 Nov 2004)
+
+  03 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/groff-1.19.1-tmpfile.patch, +groff-1.19.1-r2.ebuild:
+  Add patch to resolve tempfile access issues #68404.
 
   01 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> groff-1.19.1-r1.ebuild:
   Stable on sparc
