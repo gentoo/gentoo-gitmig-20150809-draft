@@ -1,27 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.6 2003/10/21 15:07:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.7 2004/02/02 00:15:51 vapier Exp $
 
-IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
-inherit libtool
+inherit libtool flag-o-matic eutils gcc
 
-# this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
-inherit flag-o-matic
-filter-flags "-maltivec -mabi=altivec"
-replace-flags k6-3 i686
-replace-flags k6-2 i686
-replace-flags k6   i686
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
 HOMEPAGE="http://xine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
-RESTRICT="nomirror"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc"
+IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
+RESTRICT="nomirror"
 
 DEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
@@ -40,29 +32,28 @@ RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 
-	patch -p1 < ${FILESDIR}/xine-lib-configure.patch || \
-	    die "configure patch failed"
+	epatch ${FILESDIR}/xine-lib-configure.patch
 
 	# allows kxine to work; see bug #5412
-	patch -p1 < ${FILESDIR}/${P}-kxine.patch || \
-	    die "patching for kxine support failed"
+	epatch ${FILESDIR}/${P}-kxine.patch
 
-	if [ `use directfb` ]; then
-		patch -p0 < ${FILESDIR}/xineconfig.patch-${PV} || \
-		    die "dfb patch 1 failed"
-#		patch -p2 < ${FILESDIR}/${PF}-directfb.patch || \
-#		    die "dfb patch 2 failed"
+	if [ `use directfb` ] ; then
+		epatch ${FILESDIR}/xineconfig.patch-${PV}
 	else
-		patch -p1 < ${FILESDIR}/${PN}-disable-directfb.patch || \
-		    die "no dfb patch failed"
+		epatch ${FILESDIR}/${PN}-disable-directfb.patch
 	fi
 }
 
 src_compile() {
+	filter-flags -maltivec -mabi=altivec
+	if [ "`gcc-version`" == "3.2" ] ; then
+		replace-flags -march=k6-3 -march=i686
+		replace-flags -march=k6-2 -march=i686
+		replace-flags -march=k6 -march=i686
+	fi
 
 	elibtoolize
 
@@ -111,7 +102,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	# Xine's makefiles install some file incorrectly. (Bug #8583).
@@ -123,15 +113,12 @@ src_install() {
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 	cd ${S}/doc
 	dodoc dataflow.dia README*
-
 }
 
 pkg_postinst() {
-
 	einfo
 	einfo "Please note, a new version of xine-lib has been installed,"
 	einfo "for library consistency you need to unmerge old versions"
 	einfo "of xine-lib before merging xine-ui."
 	einfo
-
 }
