@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/pcsx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/ChangeLog,v 1.1 2002/06/03 02:53:20 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/ChangeLog,v 1.2 2002/07/27 15:32:53 stubear Exp $
+
+*pcsx-1.2 (27 Jul 2002
+
+  27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> pcsx-1.2.ebuild :
+ 
+  Added KEYWORDS="x86" and SLOT.
 
 *pcsx-1.2 (2 June 2002)
 
