@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.2.ebuild,v 1.6 2001/10/07 01:43:06 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.2.ebuild,v 1.7 2001/10/22 10:05:15 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ RDEPEND=">=x11-libs/gtk+-1.2.10-r4
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-        >=dev-util/xml-i18n-tools-0.8.4
+        >=dev-util/intltool-0.11
         >=app-text/scrollkeeper-0.2"
 
 
