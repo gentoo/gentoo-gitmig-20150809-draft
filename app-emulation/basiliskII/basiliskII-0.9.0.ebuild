@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.10 2003/02/13 07:12:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.11 2003/03/16 22:22:11 mholzer Exp $
 
 IUSE="X gtk xv esd dga"
 
@@ -32,7 +32,7 @@ SRC_URI="http://iphcip1.physik.uni-mainz.de/~cbauer/BasiliskII_src_31052001.tar.
 src_compile() {
 
 	#fpu_x86 doesnt compile properly if -O3 or greater :(
-	replace-flags "-O*" "-O2"
+	replace-flags -O[3-9] -O2
 
 	local myflags
 
