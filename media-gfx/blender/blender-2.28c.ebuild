@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.28c.ebuild,v 1.1 2003/10/10 22:41:14 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.28c.ebuild,v 1.2 2003/10/11 17:28:26 lu_zero Exp $
 
 inherit flag-o-matic
 replace-flags -march=pentium4 -march=pentium3
 
-IUSE=""
+IUSE="sdl jpeg png mozilla truetype static"
+#IUSE="${IUSE} blender-game blender-static blender-plugin"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="3D Creation/Animation/Publishing System"
@@ -24,10 +25,16 @@ DEPEND="virtual/x11
 	mozilla? ( net-www/mozilla )
 	truetype? ( >=freetype-2.0 )
 	fmod? ( media-libs/fmod )
-	>=openal-20020127
-	>=libsdl-1.2
-	>=libvorbis-1.0
-	>=openssl-0.9.6"
+	>=media-libs/openal-20020127
+	>=media-libs/libsdl-1.2
+	>=media-libs/libvorbis-1.0
+	>=dev-libs/openssl-0.9.6"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/configure-fix.patch
+}
+
 
 src_compile() {
 	local myconf=""
@@ -52,10 +59,10 @@ src_compile() {
 
 	# ./configure points at the wrong mozilla directories and will fail
 	# with this enabled. (A simple patch should take care of this)
-	#if [ -n "`use mozilla`" ]
-	#then
-	#	myconf="${myconf} --with-mozilla=/usr"
-	#fi
+	if [ -n "`use mozilla`" ]
+	then
+		myconf="${myconf} --with-mozilla=/usr"
+	fi
 
 	# TrueType support (For text objects)
 	if [ -n "`use truetype`" ]
@@ -64,22 +71,22 @@ src_compile() {
 	fi
 
 	# Build Staticly
-	if [ -n "`use blender-static`" ]
+	if [ -n "`use static`" ]
 	then
 		myconf="${myconf} --enable-blenderstatic"
 	fi
 
 	# Build the game engine (Fails in 2.28)
-	if [ -n "`use blender-game`" ]
-	then
-		myconf="${myconf} --enable-gameblender"
-	fi
+	#if [ -n "`use blender-game`" ]
+	#then
+	#	myconf="${myconf} --enable-gameblender"
+	#fi
 
-	# Build the plugin (Will probably fail, especially without mozilla)
-	if [ -n "`use blender-plugin`" ]
-	then
-		myconf="${myconf} --enable-blenderplugin"
-	fi
+	# Build the plugin (Will fail, requires gameblender)
+	#if [ -n "`use blender-plugin`" ]
+	#then
+	#	myconf="${myconf} --enable-blenderplugin"
+	#fi
 
 	econf ${myconf} || die
 	emake || die
