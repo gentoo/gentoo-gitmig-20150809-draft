@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/perdition
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/ChangeLog,v 1.1 2005/01/25 18:07:46 ferdy Exp $
+
+*perdition-1.15 (25 Jan 2005)
+
+  25 Jan 2005; Fernando J. Pereda <ferdy@gentoo.org> +perdition-1.15.ebuild:
+  New package, closes #18023. Ebuild based on one by Eric Johanson
+  <gentoo@vilos.com>.
+
