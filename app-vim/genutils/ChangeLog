@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/genutils
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/genutils/ChangeLog,v 1.3 2004/07/24 02:51:05 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genutils/ChangeLog,v 1.4 2004/08/20 16:51:14 ciaranm Exp $
+
+  20 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> genutils-1.13.ebuild:
+  Stable on x86
 
   24 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> genutils-1.13.ebuild:
   Stable on sparc, mips
