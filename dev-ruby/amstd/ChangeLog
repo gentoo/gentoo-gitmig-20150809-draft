@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amstd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.10 2004/04/10 21:09:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.11 2004/04/13 13:08:10 gmsoft Exp $
+
+  13 Apr 2004; Guy Martin <gmsoft@gentoo.org> amstd-2.0.0-r1.ebuild:
+  Marked stable on hppa.
 
   10 Apr 2004; David Holm <dholm@gentoo.org> amstd-2.0.0-r1.ebuild:
   Added to ~ppc.
