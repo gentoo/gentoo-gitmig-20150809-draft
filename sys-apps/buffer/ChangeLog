@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/buffer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/ChangeLog,v 1.5 2004/08/15 16:35:39 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/buffer/ChangeLog,v 1.6 2004/08/21 05:53:45 vapier Exp $
+
+*buffer-1.19-r2 (21 Aug 2004)
+
+  21 Aug 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/1.19-deb-gentoo.patch, +buffer-1.19-r2.ebuild:
+  Merge ugly sed crap into a patch along with useful things from debian and fix
+  lfs problems #60852.
 
   15 Aug 2004; Daniel Goller <morfic@gentoo.org> buffer-1.19-r1.ebuild:
   removed offending code to close bug 60395
