@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.3 2004/11/07 09:47:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.4 2004/11/28 11:13:49 blubb Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -31,6 +31,8 @@ src_unpack () {
 #   to remove the use of the '.' form in ppc64 assembler
 	use ppc64 && epatch ${FILESDIR}/ppc64-gmp-acinclude.patch
 
+#	fix problems for -O3 or higher; bug #66780
+	use amd64 && epatch ${FILESDIR}/amd64.patch
 	autoreconf
 }
 

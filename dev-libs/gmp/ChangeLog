@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.41 2004/11/07 09:47:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.42 2004/11/28 11:13:49 blubb Exp $
+
+  28 Nov 2004; Simon Stelling <blubb@gentoo.org> +files/amd64.patch,
+  gmp-4.1.4.ebuild:
+  added Patrick McLean's (chutzpah@videotron.ca) patch to fix -O3 and higher
+  issues; bug #66780
 
   07 Nov 2004; Joshua Kinard <kumba@gentoo.org> gmp-4.1.4.ebuild:
   Marked stable on mips.
