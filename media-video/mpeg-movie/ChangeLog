@@ -1,8 +1,13 @@
 # ChangeLog for media-video/mpeg-movie
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/ChangeLog,v 1.2 2002/03/27 11:06:25 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/ChangeLog,v 1.3 2003/01/10 07:26:59 seemant Exp $
 
 *mpeg-movie-1.6.0-r1 (27 Mar 2002)
+
+  09 Jan 2003; Seemant Kulleen <seemant@gentoo.org> mpeg-movie-1.6.0-r1.ebuild :
+  
+  Made some fixes for GCC-3 compilation.  Added #include <cstring> in three
+  of the header files to allow for compilation.
 
   27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> mpeg-movie-1.6.0-r1.ebuild :
 

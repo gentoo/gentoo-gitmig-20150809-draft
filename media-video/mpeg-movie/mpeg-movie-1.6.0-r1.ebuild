@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0-r1.ebuild,v 1.5 2002/10/04 05:56:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0-r1.ebuild,v 1.6 2003/01/10 07:26:59 seemant Exp $
 
 MY_P=${PN/-/_}
 S=${WORKDIR}/${MY_P}
@@ -64,24 +64,37 @@ src_unpack() {
 	sed -e "s:c_flags:./c_flags:g"	\
 		Makefile.orig > Makefile
   
+	# GCC-3.2.1 fix:
+	cd ${S}/audio_out
+	cp MPEGstream.h MPEGstream.h.orig
+	sed -e 's:\(#include "MPEGerror.h"\):\1\n#include <cstring>:' \
+		MPEGstream.h.orig > MPEGstream.h
+
+	cp MPEGring.h MPEGring.h.orig
+	sed -e 's:\(#include "SDL_mutex.h"\):\1\n#include <cstring>:' \
+		MPEGring.h.orig > MPEGring.h
   
+
+	cp mpeg_export.h mpeg_export.h.orig
+	sed -e 's:\(#include "quicktime.h"\):\1\n#include <cstring>:' \
+		mpeg_export.h.orig > mpeg_export.h
 }
 src_compile() {
 
-    emake || die
+	emake || make || die
 
 }
 
 src_install () {
 
-    into /usr
-    newbin audio_in/encode mpeg_audio_encode
-    newbin audio_out/plaympeg mpeg_audio_play
-    newbin mplex_in/mplex mpeg_mplex
-    newbin mplex_out/dmplex mpeg_dmplex
-    newbin video_in/mpeg_encode mpeg_video_encode
-    dobin video_out/mpeg_play
+	into /usr
+	newbin audio_in/encode mpeg_audio_encode
+	newbin audio_out/plaympeg mpeg_audio_play
+	newbin mplex_in/mplex mpeg_mplex
+	newbin mplex_out/dmplex mpeg_dmplex
+	newbin video_in/mpeg_encode mpeg_video_encode
+	dobin video_out/mpeg_play
 
-    dodoc docs/*.txt
+	dodoc docs/*.txt
 	dohtml -r ./
 }
