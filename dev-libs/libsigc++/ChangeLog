@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.35 2004/07/14 02:12:13 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.36 2004/10/05 12:19:14 weeve Exp $
+
+  05 Oct 2004; Jason Wever <weeve@gentoo.org> libsigc++-2.0.1.ebuild:
+  Added ~sparc keyword.
 
   13 Jul 2004; Travis Tilley <lv@gentoo.org> libsigc++-2.0.1.ebuild:
   stable on amd64
