@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/wmSpaceWeather-1.04.ebuild,v 1.8 2004/03/26 23:10:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/wmSpaceWeather-1.04.ebuild,v 1.9 2004/03/28 23:47:50 pyrania Exp $
 
 IUSE=""
 
@@ -16,6 +16,7 @@ DEPEND="dev-lang/perl
 	virtual/x11"
 
 src_compile() {
+	epatch ${FILESDIR}/getkp.patch
 	emake -C wmSpaceWeather clean || die "make clean failed"
 
 	COPTS=${CFLAGS} emake -C wmSpaceWeather \

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmSpaceWeather
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.4 2004/03/07 16:17:03 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.5 2004/03/28 23:47:50 pyrania Exp $
+
+  29 Mar 2004; Markus Nigbur <pyrania@gentoo.org> wmSpaceWeather-1.04.ebuild,
+  files/getkp.patch:
+  Kp index location on noaa changed. Closing bug #45803.
 
   07 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
   wmSpaceWeather-1.04.ebuild:
