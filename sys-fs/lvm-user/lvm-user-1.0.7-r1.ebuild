@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r1.ebuild,v 1.2 2004/01/13 00:11:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r1.ebuild,v 1.3 2004/02/24 18:13:20 seemant Exp $
 
 IUSE="static"
 
@@ -12,9 +12,11 @@ SRC_URI="ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${PV}.tar.gz"
 HOMEPAGE="http://www.sistina.com/products_lvm.htm"
 KEYWORDS="~x86 ~amd64 -ppc ~sparc ~hppa alpha"
 
-DEPEND=">=sys-apps/sed-4.0 virtual/linux-sources"
+DEPEND=">=sys-apps/sed-4.0
+	virtual/linux-sources"
+
 RDEPEND="${DEPEND}
-	!sys-apps/lvm2"
+	!sys-fs/lvm2"
 
 LICENSE="GPL-2 | LGPL-2"
 SLOT="0"
