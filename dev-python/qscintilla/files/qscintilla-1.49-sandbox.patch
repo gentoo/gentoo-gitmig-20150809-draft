@@ -1,0 +1,15 @@
+--- Makefile.orig	2003-01-21 16:37:13.000000000 +0100
++++ Makefile	2003-01-21 16:37:50.000000000 +0100
+@@ -244,11 +244,7 @@
+ 	-ln -s $(TARGET) $(TARGET0)
+ 	-ln -s $(TARGET) $(TARGET1)
+ 	-ln -s $(TARGET) $(TARGET2)
+-	-$(DEL_FILE) $(QTDIR)/lib/$(TARGET)
+-	-$(DEL_FILE) $(QTDIR)/lib/$(TARGET0)
+-	-$(DEL_FILE) $(QTDIR)/lib/$(TARGET1)
+-	-$(DEL_FILE) $(QTDIR)/lib/$(TARGET2)
+-	-$(MOVE) $(TARGET) $(TARGET0) $(TARGET1) $(TARGET2) $(QTDIR)/lib/
++	-$(COPY) $(TARGET) $(TARGET0) $(TARGET1) $(TARGET2) $(D)/$(QTDIR)/lib/
+ 
+ 
+ 
