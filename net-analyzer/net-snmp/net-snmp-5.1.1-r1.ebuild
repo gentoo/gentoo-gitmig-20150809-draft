@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1-r1.ebuild,v 1.1 2004/07/21 19:51:20 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1-r1.ebuild,v 1.2 2004/08/03 22:02:52 genone Exp $
 
 inherit eutils
 
@@ -24,8 +24,10 @@ DEPEND="virtual/libc
 		>=sys-devel/libperl-5.8.0
 		>=dev-perl/ExtUtils-MakeMaker-6.11-r1
 	)
-	x86? || amd64? ( lm_sensors? ( sys-apps/lm-sensors ) )
-	"
+	lm_sensors? (
+		x86?   ( sys-apps/lm-sensors )
+		amd64? ( sys-apps/lm-sensors )
+	)"
 RDEPEND="${DEPEND}
 	perl? ( X? ( dev-perl/perl-tk ) )
 	!virtual/snmp"
