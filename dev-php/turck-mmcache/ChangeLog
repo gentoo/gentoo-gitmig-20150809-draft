@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/turck-mmcache
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.7 2003/08/03 23:12:08 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.8 2003/08/13 16:13:56 stuart Exp $
+
+  13 Aug 2003; Stuart Herbert <stuart@gentoo.org> :
+  Updated the ebuild to version 2.3.22.  Added 'mmcache.shm_only = 0' config
+  setting.  Ebuild submitted by Klavs Klavsen <kl@vsen.dk> ;-)
 
 *turck-mmcache-2.3.21 (03 08 2003)
 
