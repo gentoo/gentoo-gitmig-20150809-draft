@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/ximian-connector
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ChangeLog,v 1.7 2003/02/11 14:28:30 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ChangeLog,v 1.8 2003/02/11 14:32:10 nall Exp $
 
 *ximian-connector-1.2.2_p1-r1 (11 Feb 2003)
+
+  11 Feb 2003; Jon Nall <nall@gentoo.org> files/digest-ximian-connector-1.2.2_p1-r1 :
+  fixed digest MD5 for x86
 
   11 Feb 2003; Jon Nall <nall@gentoo.org> ximian-connector-1.2.2_p1-r1.ebuild,
   files/digest-ximian-connector-1.2.2_p1-r1 :
