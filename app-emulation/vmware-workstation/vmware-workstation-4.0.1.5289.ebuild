@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.1.5289.ebuild,v 1.1 2003/07/30 14:30:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.1.5289.ebuild,v 1.2 2003/07/31 02:00:53 vapier Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware. The agreeing to a licence is part of the configure step
 # which the user must run manually.
 
 S=${WORKDIR}/vmware-distrib
-N26KernSupport=vmware-any-any-update37
+N26KernSupport=vmware-any-any-update38
 NP="VMware-workstation-4.0.1-5289"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
