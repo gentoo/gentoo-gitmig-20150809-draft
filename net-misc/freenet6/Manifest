@@ -1,19 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2cb92adf270a1d71f9dadfc6e1161a8 freenet6-1.0.0.ebuild 1303
 MD5 ecd0f552c7a6f61dd458cea3e4586a8c ChangeLog 1120
-MD5 21c38a77cb4ff675b8c7ff7f1223b458 freenet6-0.9.7.ebuild 1352
-MD5 7b3923fbb5cdc1bee32e08037ff62d08 files/freenet6-0.9.2.diff 4538
-MD5 b9d2127ddd9f73a468979e10bba5e06b files/digest-freenet6-0.9.7 63
+MD5 b2cb92adf270a1d71f9dadfc6e1161a8 freenet6-1.0.0.ebuild 1303
 MD5 47d9e3a8dbb68c4d7cbaf06669acbe0b files/digest-freenet6-1.0.0 63
-MD5 1dd245fdccb36878ec96ffe243dbc46d files/tspc.rc 432
-MD5 deef1b2bb4a22d01f36dbcddee29fbee files/tspc.conf 1532
 MD5 edc450e3ee1fd520d5e2936ca0f0c949 files/gentoo.sh 4568
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXeR4I7fK2cqeyXkRAnzLAJ4p8k91ISFrmyXUC0lRzFtOu7e8UgCfUQX1
-DJvOrYNmtTEzb+nr0I/pLsA=
-=DVZn
------END PGP SIGNATURE-----
+MD5 deef1b2bb4a22d01f36dbcddee29fbee files/tspc.conf 1532
+MD5 1dd245fdccb36878ec96ffe243dbc46d files/tspc.rc 432
