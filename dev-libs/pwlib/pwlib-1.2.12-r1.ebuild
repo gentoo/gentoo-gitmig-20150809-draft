@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.2.12.ebuild,v 1.1 2002/03/01 06:48:52 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.2.12-r1.ebuild,v 1.1 2002/03/01 22:31:41 verwilst Exp $
 
 S="${WORKDIR}/pwlib"
 SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/pwlib_1.2.12.tar.gz"
@@ -29,10 +29,22 @@ src_compile() {
 
 src_install() {
 
-	cd ${S}
+	cd ${S}/lib
 	mkdir -p ${D}/usr/lib/pwlib
-	mkdir -p ${D}/etc/env.d
-	cp * ${D}/usr/lib/pwlib -a
-	cp ${FILESDIR}/09pwlib ${D}/etc/env.d 
+	cp -a * ${D}/usr/lib/pwlib/
+	cd ${D}/usr/lib/pwlib/
+	ln -sf libpt_linux_x86_r.so.1.2.12 libpt.so
+	
+	cd ${S}/include
+	mkdir -p ${D}/usr/include/pwlib/ptlib
+	mkdir -p ${D}/usr/include/pwlib/ptclib
+	cp -a ptlib.h ${D}/usr/include/pwlib
+	cd ${S}/include/ptclib
+	cp -a *.h ${D}/usr/include/pwlib/ptclib
+	cd ${S}/include/ptlib
+        cp -a *.h ${D}/usr/include/pwlib/ptlib
+	cp -a *.inl ${D}/usr/include/pwlib/ptlib
+	cd ${S} 
+	cp -a version.h ${D}/usr/include/pwlib
 
 }
