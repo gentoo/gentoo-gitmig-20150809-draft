@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b905fe9e10f7bef87168afdc94a03b81 ChangeLog 1454
+MD5 7f24738d42877712ea5b724a9e35b91d ChangeLog 1610
 MD5 7752410a1ebeca3c620d48b075d1f2d5 DateTime-TimeZone-0.27.ebuild 603
 MD5 d1239c116d36b39395510b529ae74bb3 DateTime-TimeZone-0.28.ebuild 613
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 a9bf9af55b568943e041ef9df6e1f546 DateTime-TimeZone-0.30.ebuild 647
 MD5 20252c010eca6d34cf58b5a9cb303b3d files/digest-DateTime-TimeZone-0.27 74
 MD5 cfd98ca66f564d4a27722dfff593a55a files/digest-DateTime-TimeZone-0.28 74
+MD5 9d5c46c7ab8ec3783e66c030fdf7c541 files/digest-DateTime-TimeZone-0.30 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBWqLltG5z4I8BtQoRAvPjAJ9l9DoKrEOsK6mgj5YAsURWdmMUyQCfWJOp
-gW6Ev5QDzSO1mugSQC7Nad4=
-=Lxcg
+iD8DBQFBcdbitG5z4I8BtQoRAgNmAJ43i/vjO3TSjGHsQsyHBQiwmO2yCQCfU1sx
+8wfHVL+X7ZgF8wg4E1eaTAM=
+=9+Aa
 -----END PGP SIGNATURE-----
