@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.1.ebuild,v 1.5 2004/03/03 10:57:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.1.ebuild,v 1.6 2004/06/17 01:59:10 mr_bones_ Exp $
 
-inherit eutils
-inherit webapp-apache
+inherit eutils webapp-apache
 
 IUSE=""
 
