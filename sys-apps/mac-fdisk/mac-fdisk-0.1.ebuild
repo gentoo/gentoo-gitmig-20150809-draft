@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mac-fdisk/mac-fdisk-0.1.ebuild,v 1.11 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mac-fdisk/mac-fdisk-0.1.ebuild,v 1.12 2003/06/23 00:11:06 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DEBRV=8
@@ -10,7 +10,7 @@ SRC_URI="http://http.us.debian.org/debian/pool/main/m/mac-fdisk/${PN}_${PV}.orig
 HOMEPAGE="ftp://ftp.mklinux.apple.com/pub/Other_Tools/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 -sparc  -alpha"
+KEYWORDS="ppc -x86 -amd64 -sparc -alpha"
 DEPEND="virtual/glibc"
 
 src_unpack() {
