@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/giblib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.14 2004/07/31 01:35:55 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.15 2004/09/14 23:28:16 vapier Exp $
+
+*giblib-1.2.4 (14 Sep 2004)
+
+  14 Sep 2004; Mike Frysinger <vapier@gentoo.org> +giblib-1.2.4.ebuild:
+  Version bump #63913 by José Romildo Malaquias.
 
   31 Jul 2004; Tom Gall <tgall@gentoo.org> giblib-1.2.3.ebuild:
   stable on ppc64, bug #57034
