@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.3 2005/03/21 07:53:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.4 2005/03/21 07:59:59 eradicator Exp $
 
 inherit eutils flag-o-matic games
 
@@ -31,7 +31,6 @@ S="${WORKDIR}/${PN}_${PV//./_}"
 multilib_check() {
 	if use amd64; then
 		if has_multilib_profile; then
-			ewarn "Testing default."
 			ABI_ALLOW="x86"
 
 			# And until we get a real multilib portage...
