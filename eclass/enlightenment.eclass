@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.26 2004/10/21 19:59:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.27 2004/10/21 20:07:24 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -11,8 +11,15 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 
 ECVS_STATE="release"
 if [ "${PV/9999}" != "${PV}" ] ; then
-	ECVS_MODULE="${ECVS_MODULE:-${PN}}"
-	ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
+	if [ -z "${ECVS_MODULE}" ] ; then
+		ECVS_MODULE="${PN}"
+		if [ "${CATEGORY/libs}" != "${CATEGORY}" ] ; then
+			ECVS_MODULE="e17/libs/${PN}"
+		else
+			ECVS_MODULE="e17/apps/${PN}"
+		fi
+	fi
+	ECVS_SERVER="${ECVS_SERVER:-cvs.sourceforge.net:/cvsroot/enlightenment}"
 	ECVS_STATE="live"
 	inherit cvs
 elif [ "${PV/.200?????/}" != "${PV}" ] ; then
@@ -37,8 +44,9 @@ DEPEND="doc? ( app-doc/doxygen )
 RDEPEND="nls? ( sys-devel/gettext )"
 
 case ${ECVS_STATE} in
-	release)   S=${WORKDIR}/${P};;
-	snap|live) S=${WORKDIR}/${PN};;
+	release) S=${WORKDIR}/${P};;
+	snap)    S=${WORKDIR}/${PN};;
+	live)    S=${WORKDIR}/${ECVS_MODULE};;
 esac
 
 enlightenment_warning_msg() {
