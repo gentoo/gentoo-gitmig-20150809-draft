@@ -1,8 +1,11 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf-japanese/ChangeLog,v 1.1 2002/08/15 16:51:58 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf-japanese/ChangeLog,v 1.2 2002/09/02 03:09:07 jmorgan Exp $
 
 *xpdf-japanese-1.ebuild (16 Aug 2002)
+
+  02 Sep 2002; Jack Morgan <jmorgan@gentoo.org>  xpdf-japanese-1.ebuild,
+  Added sparc/sparc64 keywords :
 
   27 Jul 2002; Stuart Bouyer <stubear@gentoo.org>  xpdf-japanese-1.ebuild,
   ChangeLog, digest-xpdf-japanese-1:
