@@ -1,10 +1,10 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.23 2004/03/29 04:07:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.24 2004/03/29 04:16:28 agriffis Exp $
 
   28 Mar 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-0.8-r2.ebuild:
-  Workaround dosym inadequacy for /usr/bin/firefox link, fixes bug 46049
+  Add missing dodir before dosym for bug 46049
 
 *mozilla-firefox-0.8-r2 (28 Mar 2004)
 
