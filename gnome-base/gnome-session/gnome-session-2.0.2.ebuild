@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.1.ebuild,v 1.3 2002/07/15 13:31:35 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.2.ebuild,v 1.1 2002/07/15 13:31:35 stroke Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -8,7 +8,6 @@ RESTRICT="nostrip"
 # force debug information
 CFLAGS="${CFLAGS} -g"
 CXXFLAGS="${CXXFLAGS} -g"
-
 
 S=${WORKDIR}/${P}
 DESCRIPTION="the Gnome2 session manager"
