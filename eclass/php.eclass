@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.90 2003/11/07 23:12:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.91 2003/11/14 20:12:34 seemant Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
@@ -64,7 +64,7 @@ RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1.*
 # in some other way
 RDEPEND="
    >=sys-libs/cracklib-2.7-r7
-   sys-apps/bzip2
+   app-arch/bzip2
    X? ( virtual/x11 )
    crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
    curl? ( >=net-ftp/curl-7.10.2 )
@@ -358,7 +358,7 @@ php_src_compile() {
 	# These are some things that we don't really need use flags for, we just
 	# throw them in for functionality. Somebody could turn them off if their
 	# heart so desired
-	# DEPEND - sys-apps/bzip2
+	# DEPEND - app-arch/bzip2
 	myconf="${myconf} --with-bz2=/usr"
 	# DEPEND - sys-libs/cracklib
 	myconf="${myconf} --with-crack=/usr"
