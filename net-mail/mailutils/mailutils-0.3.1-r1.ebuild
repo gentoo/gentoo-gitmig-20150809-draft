@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.3.1-r1.ebuild,v 1.1 2004/06/30 17:52:11 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.3.1-r1.ebuild,v 1.2 2004/07/09 03:09:40 langthang Exp $
 
+inherit eutils
 DESCRIPTION="A useful collection of mail servers, clients, and filters."
 HOMEPAGE="http://www.gnu.org/software/mailutils/mailutils.html"
 SRC_URI="http://ftp.gnu.org/gnu/mailutils/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="nls pam mysql postgres gdbm"
 DEPEND="!mail-client/mailx
 	!mail-client/nmh
