@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/hppa-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.8 2003/12/06 17:04:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.9 2003/12/08 22:34:32 gmsoft Exp $
 
 *hppa-headers-2.4.23_p3 (5 Dec 2003)
+
+  08 Dec 2003; Guy Martin <gmsoft@gentoo.org> hppa-headers-2.4.23_p3.ebuild :
+  Marked stable on hppa.
 
   06 Dec 2003; Guy Martin <gmsoft@gentoo.org> hppa-headers-2.4.23_p3.ebuild :
   Fixed ETYPE="headers". 

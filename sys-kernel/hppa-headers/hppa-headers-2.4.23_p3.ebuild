@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/hppa-headers-2.4.23_p3.ebuild,v 1.3 2003/12/06 17:04:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/hppa-headers-2.4.23_p3.ebuild,v 1.4 2003/12/08 22:34:32 gmsoft Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="headers"
@@ -15,7 +15,7 @@ S=${WORKDIR}/linux-${KV}
 DESCRIPTION="Full sources for the Linux kernel with patch for hppa"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa${PATCH_LEVEL}.gz"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://parisc-linux.org"
-KEYWORDS="~hppa -*"
+KEYWORDS="hppa -*"
 SLOT="0"
 
 src_unpack() {
