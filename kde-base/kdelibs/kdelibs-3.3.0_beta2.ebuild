@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0_beta2.ebuild,v 1.3 2004/07/26 18:28:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0_beta2.ebuild,v 1.4 2004/08/16 13:58:52 vapier Exp $
 
 inherit kde eutils
 set-kdedir 3.3
@@ -21,7 +21,7 @@ IUSE="alsa cups ipv6 ssl doc ldap arts"
 # so we recreate the entire DEPEND from scratch.
 DEPEND=">=sys-devel/autoconf-2.58
 	>=sys-devel/automake-1.8
-	>=app-arch/bzip2
+	app-arch/bzip2
 	>=dev-libs/libxslt-1.1.4
 	>=dev-libs/libxml2-2.6.6
 	>=dev-libs/libpcre-4.2
