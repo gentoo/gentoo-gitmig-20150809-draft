@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_alpha2.ebuild,v 1.3 2003/11/14 20:07:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.1 2003/12/02 02:02:14 caleb Exp $
 inherit kde
 
-MY_PV=3.1.92
+MY_PV=3.1.94
 S=${WORKDIR}/${PN}-${MY_PV}
 
 IUSE="alsa cups ipv6 ssl"
@@ -16,30 +16,29 @@ SRC_URI="mirror://kde/unstable/${MY_PV}/src/${PN}-${MY_PV}.tar.bz2"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
-#RDEPEND="doc? ( ~app-doc/kdelibs-apidocs-$PV )"
 DEPEND="dev-lang/perl
-	>=media-libs/audiofile-0.1.9
-	>=app-arch/bzip2-1.0.1
-	>=dev-libs/libxslt-1.0.7
-	>=dev-libs/libpcre-3.5
-	>=dev-libs/libxml2-2.4.10
-	ssl? ( >=dev-libs/openssl-0.9.6 )
-	alsa? ( >=media-libs/alsa-lib-0.5.9 virtual/alsa )
-	cups? ( >=net-print/cups-1.1.14 )
-	>=media-libs/tiff-3.5.5
+	media-libs/audiofile
+	app-arch/bzip2
+	dev-libs/libxslt
+	dev-libs/libpcre
+	dev-libs/libxml2
+	ssl? ( dev-libs/openssl )
+	alsa? ( media-libs/alsa-lib virtual/alsa )
+	cups? ( net-print/cups )
+	media-libs/tiff
 	app-admin/fam-oss
 	app-text/ghostscript
 	media-libs/libart_lgpl
 	sys-devel/gettext
-	~kde-base/arts-1.2.0_alpha2"
+	~kde-base/arts-1.2.0_beta2"
 
 newdepend "/autotools"
 
 RDEPEND="$RDEPEND
 	app-text/sgml-common
 	cups? ( net-print/cups )
+	doc? ( app-doc/doxygen )
 	dev-lang/python"
-
 
 qtver-from-kdever ${PV}
 need-qt $selected_version
@@ -49,8 +48,12 @@ set-kdedir ${PV}
 
 src_unpack() {
 	kde_src_unpack
-	kde_sandbox_patch ${S}/kio/misc/kpac
-	use alpha && cd ${S} && epatch ${FILESDIR}/${P}-kjs-alphaev6-gcc3-workaround.patch
+	cd ${S} && make -f admin/Makefile.common && aclocal
+	cd ${S}/kio/misc/kpac
+	cp Makefile.am Makefile.am.orig
+	sed -e 's: $(bindir): $(DESTDIR)/$(bindir):g' Makefile.am.orig > Makefile.am
+	rm Makefile.am.orig
+#	use alpha && cd ${S} && epatch ${FILESDIR}/${P}-kjs-alphaev6-gcc3-workaround.patch
 }
 
 src_compile() {
@@ -66,14 +69,27 @@ src_compile() {
 	use x86 && myconf="$myconf --enable-fast-malloc=full"
 
 	kde_src_compile configure make
+
+	use doc && make apidox
 }
 
 src_install() {
 	kde_src_install
 	dohtml *.html
 
-	# kdelibs-apidocs is provided by kdelibs-apidocs ebuild, kdelibs ebuild
-	# shouldn't install anything into kdelibs-apidocs (bug #15102)
-	rm -r ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
+	if [ `use doc` ]; then
+		einfo "Copying API documentation..."
+		dodir ${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs
+		cp -r ${S}/apidocs/* ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
+	else
+		rm -r ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
+	fi
 }
 
+pkg_postinst() {
+	if [ `use doc` ]; then
+		rm $KDEDIR/share/doc/HTML/en/kdelibs-apidocs/common
+		ln -sf $KDEDIR/share/doc/HTML/en/common \
+			$KDEDIR/share/doc/HTML/en/kdelibs-apidocs/common
+	fi
+}
