@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.1.ebuild,v 1.6 2004/06/25 00:23:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.1.ebuild,v 1.7 2004/12/28 20:30:54 ribosome Exp $
 
 IUSE="esd motif guile X gtk ruby alsa"
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 KEYWORDS="x86 ~amd64 ppc"
 
 DEPEND="X? ( virtual/x11 )
-	dev-libs/gsl
+	sci-libs/gsl
 	media-libs/ladspa-sdk
 	media-libs/audiofile
 	esd? ( media-sound/esound )
