@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ScientificPython
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ScientificPython/ChangeLog,v 1.8 2003/09/02 22:29:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ScientificPython/ChangeLog,v 1.9 2003/12/17 00:00:05 weeve Exp $
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org> ScientificPython-2.2-r1.ebuild:
+  Changed sparc keyword to ~sparc since it's dependencies were broken and
+  probably had little to no testing.
 
   02 Sep 2003; Alastair Tse <liquidx@gentoo.org>
   ScientificPython-2.2-r1.ebuild, ScientificPython-2.4.3.ebuild:
