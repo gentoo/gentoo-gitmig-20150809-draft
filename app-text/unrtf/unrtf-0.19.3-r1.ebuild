@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.19.3-r1.ebuild,v 1.3 2005/01/08 15:53:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.19.3-r1.ebuild,v 1.4 2005/01/08 16:13:57 aliz Exp $
 
 inherit eutils
 
@@ -22,10 +22,6 @@ src_unpack() {
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" || die
-}
-
-src_clean() {
-	make clean
 }
 
 src_install() {
