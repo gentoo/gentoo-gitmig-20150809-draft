@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.5.2.ebuild,v 1.1 2003/01/31 03:08:36 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.5.2.ebuild,v 1.2 2003/01/31 20:32:48 foser Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -38,7 +38,7 @@ src_unpack() {
 	# <azarah@gentoo.org> (27 Dec 2002).
 	cd ${S}
 #	epatch ${FILESDIR}/${PN}-0.5.0-xsl-use-current.patch
-	epatch ${FILESDIR}/${PN}-0.5.1-no-rm-html.devhelp.patch
+#	epatch ${FILESDIR}/${PN}-0.5.1-no-rm-html.devhelp.patch
 }
 
 src_compile() {
