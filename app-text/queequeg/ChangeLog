@@ -1,6 +1,9 @@
 # ChangeLog for app-text/queequeg
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/ChangeLog,v 1.1 2004/10/17 10:27:37 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/ChangeLog,v 1.2 2004/11/23 11:40:13 hattya Exp $
+
+  23 Nov 2004; Akinori Hattori <hattya@gentoo.org> queequeg-0.91.ebuild:
+  stable on x86.
 
 *queequeg-0.91 (17 Oct 2004)
 
