@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.6.ebuild,v 1.1 2004/03/06 12:32:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.6.ebuild,v 1.2 2004/03/06 18:59:20 mr_bones_ Exp $
 inherit kde
 need-kde 3.1
 
@@ -36,7 +36,7 @@ pt ro ru sk sl ta sr sv tr xh xx zu nso ven en_GB pt_BR zh_CN zh_TW"
 # other packages too,  not in this case)
 LANGS_DOC="da de es et fr it pt ru sv pt_BR"
 
-# The package is unpacked as k3b-i18n-0.11.6, even though its name 
+# The package is unpacked as k3b-i18n-0.11.6, even though its name
 # is k3b.i18n-0.11.tar.bz2.
 I18N="${PN}-i18n-${PV%.*}"
 SI18N="${WORKDIR}/${PN}-i18n-${PV}"
@@ -67,10 +67,10 @@ src_compile() {
 		done
 		sed -i -e "s:^SUBDIRS = .*:${MAKE_PO}:" ${S}/po/Makefile.in
 
-		MAKE_DOC="SUBDIRS = " 
+		MAKE_DOC="SUBDIRS = "
 		for langdoc in ${LANGS_DOC}
 		do
-			use linguas_${langdoc} && MAKE_DOC="${MAKE_DOC} ${langdoc}" 
+			use linguas_${langdoc} && MAKE_DOC="${MAKE_DOC} ${langdoc}"
 		done
 		sed -i -e "s:^SUBDIRS = .*:${MAKE_DOC}:" ${S}/doc/Makefile.in
 
