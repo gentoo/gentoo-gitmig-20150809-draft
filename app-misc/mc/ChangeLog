@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.7 2003/02/12 05:04:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.8 2003/03/16 10:03:52 tuxus Exp $
 
 *mc-4.6.0 (05 Feb 2003)
+
+  16 Mar 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to KEYWORDS
 
   05 Feb 2003; Brad Cowan <bcowan@gentoo.org> mc-4.6.0.ebuild,    
   files/digest-mc-4.6.0:
