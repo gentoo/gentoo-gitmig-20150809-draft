@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.117 2004/09/04 23:37:25 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.118 2004/09/06 23:24:22 ciaranm Exp $
+
+  07 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  -files/fluxbox-0.9.10.amd64_fix.patch,
+  +files/0.9.10/fluxbox-0.9.10-amd64-font-fix.patch, fluxbox-0.9.10-r1.ebuild:
+  Move the patches around, since we're going to end up with lots of them...
 
   05 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> fluxbox-0.9.10-r1.ebuild,
   -fluxbox-0.9.10.ebuild:
