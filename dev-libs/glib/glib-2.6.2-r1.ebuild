@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.2-r1.ebuild,v 1.1 2005/02/11 13:07:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.2-r1.ebuild,v 1.2 2005/02/13 01:02:39 j4rg0n Exp $
 
-inherit libtool eutils
+inherit libtool eutils flag-o-matic
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -18,12 +18,19 @@ DEPEND=">=dev-util/pkgconfig-0.14
 	doc? ( >=dev-util/gtk-doc-1 )"
 RDEPEND="virtual/libc"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use ppc-macos && epatch ${FILESDIR}/${PN}-2-macos.patch
+}
+
 src_compile() {
 
 	epunt_cxx
 
 	if use ppc-macos; then
 		glibtoolize
+		append-ldflags "-L/usr/lib -lpthread"
 	fi
 
 	# enable static for PAM
