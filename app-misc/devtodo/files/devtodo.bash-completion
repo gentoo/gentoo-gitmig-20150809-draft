@@ -1,0 +1,124 @@
+# bash-completion script for devtodo
+# place this in /etc/bash_completion.d
+
+_devtodo() {
+	local cur prev
+	COMPREPLY=()
+	cur="${COMP_WORDS[COMP_CWORD]}"
+	prev="${COMP_WORDS[COMP_CWORD-1]}"
+	
+	if [[ "${cur}" == -* ]] || [[ ${COMP_CWORD} -eq 1 ]]; then
+			COMPREPLY=($(compgen -W "-v --verbose -a --add -g --graft \
+			-l --link -R --reparent -p --priority -e --edit --remove \
+			-d --done -D --not-done --global-database -G --global --database \
+			-T --TODO -A --all -f --filter --colour --force-colour --mono \
+			--help --version --title --date-format --format --use-format \
+			--sort --paranoid --database-loaders --backup -s --summary \
+			--timeout" -- "${cur}"))
+	fi
+	
+	case "${prev}" in
+		-p|--priority)
+			COMPREPLY=($(compgen -W "default veryhigh high medium low \
+			verylow" -- "${cur}"))
+			;;
+			
+		--database-loaders)
+			COMPREPLY=($(compgen -W "xml binary" -- "${cur}"))
+			;;
+			
+		-l|--link|--*database)
+			COMPREPLY=($(compgen -o filenames -A file -- "${cur}"))
+			;;
+	esac
+}
+complete -F _devtodo devtodo
+complete -F _devtodo todo
+
+_tda() {
+	local cur prev
+	COMPREPLY=()
+	cur="${COMP_WORDS[COMP_CWORD]}"
+	prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+	if [[ "${cur}" == -* ]] || [[ ${COMP_CWORD} -eq 1 ]]; then
+		COMPREPLY=($(compgen -W "-v --verbose -g --graft -p --priority \
+		-G --global --global-database --database --mono --help --version" \
+		-- "${cur}"))
+	fi
+	
+	case "${prev}" in
+		-p|--priority)
+			COMPREPLY=($(compgen -W "default veryhigh high medium low \
+			verylow" -- "${cur}"))
+			;;
+			
+		--*database)
+			COMPREPLY=($(compgen -o filenames -A file -- "${cur}"))
+			;;
+	esac
+}
+complete -F _tda tda
+
+_tde() {
+	local cur prev
+	COMPREPLY=()
+	cur="${COMP_WORDS[COMP_CWORD]}"
+	prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+	if [[ "${cur}" == -* ]] || [[ ${COMP_CWORD} -eq 1 ]]; then
+		COMPREPLY=($(compgen -W "-v --verbose -p --priority -G --global \
+		--global-database --database --mono --help --version --title -c \
+		--comment"-- "${cur}"))
+	fi
+	
+	case "${prev}" in
+		-p|--priority)
+			COMPREPLY=($(compgen -W "default veryhigh high medium low \
+			verylow" -- "${cur}"))
+			;;
+			
+		--*database)
+			COMPREPLY=($(compgen -o filenames -A file -- "${cur}"))
+			;;
+	esac	
+}
+complete -F _tde tde
+
+_tdr() {
+	local cur prev
+	COMPREPLY=()
+	cur="${COMP_WORDS[COMP_CWORD]}"
+	prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+	if [[ "${cur}" == -* ]] || [[ ${COMP_CWORD} -eq 1 ]]; then
+		COMPREPLY=($(compgen -W "-v --verbose --global-database -G --global \
+		--database --mono --help --version" -- "${cur}"))
+	fi
+	
+	case "${prev}" in
+		--*database)
+			COMPREPLY=($(compgen -o filenames -A file -- "${cur}"))
+			;;
+	esac			
+}
+complete -F _tdr tdr
+
+_tdd() {
+	local cur prev
+	COMPREPLY=()
+	cur="${COMP_WORDS[COMP_CWORD]}"
+	prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+	if [[ "${cur}" == -* ]] || [[ ${COMP_CWORD} -eq 1 ]]; then
+		COMPREPLY=($(compgen -W "-v --verbose --global-database -G --global \
+		--database --mono --help --version" -- "${cur}"))
+	fi
+	
+	case "${prev}" in
+		--*database)
+			COMPREPLY=($(compgen -o filenames -A file -- "${cur}"))
+			;;
+	esac				
+}
+complete -F _tdd tdd
