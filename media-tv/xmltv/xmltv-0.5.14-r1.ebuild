@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.14.ebuild,v 1.1 2003/07/09 00:08:10 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.14-r1.ebuild,v 1.1 2003/08/20 05:19:35 max Exp $
 
 inherit perl-module
 
-IUSE=""
 DESCRIPTION="Set of utilities to manage TV listings stored in the XMLTV format."
 HOMEPAGE="http://membled.com/work/apps/xmltv/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -91,7 +90,6 @@ DEPEND="${DEPEND} dev-perl/HTML-Tree"
 #	&& DEPEND="${DEPEND} dev-perl/perl-tk dev-perl/Tk-TableMatrix dev-perl/XML-Simple"
 
 make_config() {
-
 	if [ -z "${XMLTV_OPTS}" ] ; then
 		# No customization needed, build everything (default)
 		echo "yes"
@@ -103,59 +101,46 @@ make_config() {
 
 	# Enable Germany and Austria
 	[ "`has tv_grab_de ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable Brittain
 	[ "`has tv_grab_uk ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable Alternate Brittain
 	[ "`has tv_grab_uk_rt ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable Italy
 	[ "`has tv_grab_it ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable North America
 	[ "`has tv_grab_na ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable Sweden and Norway
 	[ "`has tv_grab_sn ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable New Zealand
 	[ "`has tv_grab_nz ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable Finland
 	[ "`has tv_grab_fi ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable Spain
 	[ "`has tv_grab_es ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable Netherlands
 	[ "`has tv_grab_nl ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable Alternate Netherlands
 	[ "`has tv_grab_nl_wolf ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable Hungary
 	[ "`has tv_grab_hu ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable Denmark
 	[ "`has tv_grab_nl ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable GUI checking.
 	[ "`has tv_check ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
-
 	# Enable CGI support
 	[ "`has tv_pick_cgi ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
+}
 
+src_unpack() {
+	unpack ${A} && cd "${S}"
+	epatch "${FILESDIR}/xmltv-${PV}-code_500.patch"
 }
 
 src_compile() {
-
 	make_config | perl-module_src_compile
-
 }
 
 src_install() {
-
 	perl-module_src_install
 
 	for i in `grep -rl "${D}" "${D}"` ; do
@@ -169,16 +154,13 @@ src_install() {
 		einfo "to where the ScriptAlias directive is configured."
 		einfo
 	fi
-
 }
 
 pkg_postinst() {
-
 	ewarn "If you are upgrading from < 0.5.10 and you need to use the"
 	ewarn "DE (Germany/Austria), UK or UK_RT (Britain), or IT (Italy)"
 	ewarn "grabbers, please make sure you have the appropriate value"
 	ewarn "specified in your XMLTV_OPTS setting because these grabbers"
 	ewarn "no longer build by default."
 	echo
-
 }
