@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.33 2003/07/14 18:41:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.34 2003/07/17 07:09:09 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -35,9 +35,6 @@ ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O2 -O3 -pipe"
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
 
-# Needed by kdebase on hppa
-[ "${ARCH}" = "hppa" ] && append-flags -fPIC
-
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
@@ -47,11 +44,14 @@ XCUR_VER="0.3.1"
 SISDRV_VER="180403-1"
 SAVDRV_VER="1.1.27t"
 MGADRV_VER="1_3_0beta"
-VIADRV_VER="0.1"
+#VIADRV_VER="0.1"
+SYNDRV_VER="0.11.3"
+SYNUPDATE_VER="p7"
 
 BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
 S="${WORKDIR}/xc"
+SYNDIR="${WORKDIR}/synaptics"
 SRC_PATH0="ftp://ftp.xfree.org/pub/XFree86/${BASE_PV}/source"
 SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
 HOMEPAGE="http://www.xfree.org"
@@ -62,7 +62,8 @@ X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
-	http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz"
+	http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz
+	http://tuxmobil.org/software/synaptics/synaptics-${SYNDRV_VER}.tar.gz"
 #	mirror://gentoo/XFree86-4.3.0-drivers-via-${VIADRV_VER}.tar.bz2"
 #	ftp://ftp.matrox.com/pub/mga/archive/linux/2001/beta_1_3_0/mga-${MGADRV_VER}.tgz"
 #	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
@@ -108,6 +109,8 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/XFree86-locale.alias.bz2
 	mirror://gentoo/XFree86-locale.dir.bz2
 	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
+	mirror://gentoo/XFree86-synaptics-fixup-${SYNDRV_VER}.diff
+	mirror://gentoo/XFree86-synaptics-update-${SYNDRV_VER}${SYNUPDATE_VER}.diff
 	truetype? ( ${MS_FONT_URLS} )"
 
 LICENSE="X11 MSttfEULA"
@@ -193,12 +196,18 @@ src_unpack() {
 		${S}/programs/Xserver/hw/xfree86/drivers/sis
 	cd ${S}
 	eend 0
-    
-	ebegin "Adding VIA driver"
+
+	ebegin "Adding Synaptics touchpad driver"
 	cd ${WORKDIR}
-#	unpack XFree86-${PV}-drivers-via-${VIADRV_VER}.tar.bz2
+	tar -zxf ${DISTDIR}/synaptics-${SYNDRV_VER}.tar.gz || die
 	cd ${S}
 	eend 0
+    
+#	ebegin "Adding VIA driver"
+#	cd ${WORKDIR}
+#	unpack XFree86-${PV}-drivers-via-${VIADRV_VER}.tar.bz2
+#	cd ${S}
+#	eend 0
 	
 #	ebegin "Updating Matrox HAL driver"
 #	unpack mga-${MGADRV_VER}.tgz
@@ -249,6 +258,12 @@ src_unpack() {
 	
 	unset EPATCH_EXCLUDE
 	
+	# Set up Synaptics Makefile
+	cd ${WORKDIR}
+	epatch ${DISTDIR}/XFree86-synaptics-update-${SYNDRV_VER}.diff
+	cd ${SYNDIR}
+	epatch ${DISTDIR}/XFree86-synaptics-fixup-${SYNDRV_VER}.diff
+
 	# Fix DRI related problems
 	cd ${S}/programs/Xserver/hw/xfree86/
 	epatch ${DISTDIR}/xfree86-dri-resume-v8.patch
@@ -518,6 +533,7 @@ src_compile() {
 	unset MAKE_OPTS
 
 	einfo "Building XFree86..."
+	cd ${S}
 	FAST=1 emake World || die
 
 	if use nls
@@ -526,6 +542,12 @@ src_compile() {
 		make || die
 		cd ${S}
 	fi
+
+	ebegin "Building Synaptics driver..."
+	cd ${SYNDIR}
+	make
+	eend 0
+
 }
 
 src_install() {
@@ -834,6 +856,14 @@ src_install() {
 	doins ${WORKDIR}/cursors/gentoo-blue/cursors/*
 	insinto /usr/share/cursors/xfree/gentoo-silver/cursors
 	doins ${WORKDIR}/cursors/gentoo-silver/cursors/*
+
+	# Install Synaptics touchpad driver and docs
+	insinto /usr/X11R6/lib/modules/input
+	doins ${SYNDIR}/synaptics_drv.o
+	insinto /usr/X11R6/bin
+	doins ${SYNDIR}/synclient
+	docinto synaptics
+	dodoc ${SYNDIR}/{COMPATIBILITY,FEATURES,FILES,INSTALL,INSTALL.DE,LICENSE,NEWS,PARAMETER,TODO,VERSION}
 }
 
 pkg_preinst() {
@@ -1104,7 +1134,11 @@ pkg_postinst() {
 	ewarn "New in this release: if you wish to set system-wide default"
 	ewarn "cursors, please set them in /usr/local/share/cursors/xfree"
 	ewarn "so that future emerges will not overwrite those settingse"
-
+	einfo
+	einfo "To use the Synaptics touchpad driver, check the installed"
+	einfo "documentation in /usr/share/doc/xfree, as well as"
+	einfo "http://tuxmobil.org/touchpad_driver.html and"
+	einfo "http://w1.894.telia.com/~u89404340/touchpad/."
 }
 
 pkg_postrm() {
