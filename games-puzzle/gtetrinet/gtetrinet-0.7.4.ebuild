@@ -1,16 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.4.ebuild,v 1.1 2003/09/10 06:36:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.4.ebuild,v 1.2 2003/09/14 02:59:15 vapier Exp $
 
 # games after gnome2 so games' functions will override gnome2's
 inherit gnome2 games
 
 DESCRIPTION="Tetrinet Clone for GNOME 2"
 HOMEPAGE="http://gtetrinet.sourceforge.net/"
+SRC_URI="${SRC_URI}
+	mirror://gentoo/gtetrinet-gentoo-theme-0.1.tbz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
 SLOT="0"
+KEYWORDS="x86"
 IUSE="nls ipv6"
 
 RDEPEND="dev-libs/libxml2
@@ -28,7 +30,10 @@ src_compile() {
 		-e "s:\$(datadir)/pixmaps:/usr/share/pixmaps:" \
 			{.,icons,src}/Makefile.in || \
 				die "sed Makefile.in failed"
-	egamesconf `use_enable ipv6` || die
+	egamesconf \
+		`use_enable ipv6` \
+		--sysconfdir=/etc \
+		|| die
 	emake || die "emake failed"
 }
 
@@ -42,6 +47,7 @@ src_install() {
 	mkdir bin && mv games/gtetrinet bin/
 	rm -rf games && cd ${D}/${GAMES_DATADIR} && mv applications locale ../
 	use nls || rm -rf ../locale
+	mv ${WORKDIR}/gentoo ${D}/${GAMES_DATADIR}/${PN}/themes/
 
 	prepgamesdirs
 }
