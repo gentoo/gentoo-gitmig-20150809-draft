@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.300 2004/04/08 20:27:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.301 2004/04/09 20:40:10 lu_zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -137,6 +137,7 @@ media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar forma
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
 media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled optimised version.
 media-gfx/optipng:ext-zlib - Link with the system zlib, rather than the bundled version optimised specifically for use with png.
+media-gfx/blender:fmod - Adds mod support to blender
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/libao:mmap - (experimental) Enable memory-mapped I/O 
