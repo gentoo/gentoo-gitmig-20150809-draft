@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.2880.ebuild,v 1.1 2002/04/07 05:42:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.2880.ebuild,v 1.2 2002/04/07 12:18:36 azarah Exp $
 
 NV_V=${PV/1.0./1.0-}
 NV_PACKAGE=NVIDIA_GLX-${NV_V}
@@ -72,6 +72,11 @@ pkg_preinst() {
 	if [ -d ${ROOT}/usr/lib/opengl/nvidia ]
 	then
 		rm -rf ${ROOT}/usr/lib/opengl/nvidia/*
+	fi
+	#make sure we nuke the old nvidia-glx's env.d file
+	if [ -e ${ROOT}/etc/env.d/09nvidia ]
+	then
+		rm -f ${ROOT}/etc/env.d/09nvidia
 	fi
 }
 
