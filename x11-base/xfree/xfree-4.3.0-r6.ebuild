@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.33 2004/05/12 13:31:56 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.34 2004/05/29 07:44:10 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -103,7 +103,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=dev-libs/expat-1.95.3
 	>=media-libs/freetype-2.1.3-r2
 	>=media-libs/fontconfig-2.1-r1
-	>=x11-base/opengl-update-1.4
+	>=x11-base/opengl-update-1.7
 	>=x11-misc/ttmkfdir-3.0.4
 	>=sys-apps/sed-4
 	>=sys-devel/patch-2.5.9
@@ -1252,7 +1252,13 @@ pkg_postinst() {
 		# Switch to the xfree implementation.
 		# Use new opengl-update that will not reset user selected
 		# OpenGL interface ...
-		echo; ${ROOT}/usr/sbin/opengl-update --use-old xfree
+		echo
+		if [ "`${ROOT}/usr/sbin/opengl-update --get-implementation`" = "xorg-x11" ]
+		then
+			${ROOT}/usr/sbin/opengl-update ${PN}
+		else
+			${ROOT}/usr/sbin/opengl-update --use-old ${PN}
+		fi
 	fi
 
 	for x in $(find ${ROOT}/usr/X11R6/lib/X11/locale/ -mindepth 1 -type d)
