@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/bibtex2html
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.1 2004/08/18 13:58:51 usata Exp $
+
+*bibtex2html-1.70 (18 Aug 2004)
+
+  18 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +bibtex2html-1.70.ebuild:
+  Initial import. Ebuild submitted by Thomas Buntrock <bunti@bunti-home.de>,
+  closing bug #58643.
+
