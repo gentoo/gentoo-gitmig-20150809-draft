@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2-r2.ebuild,v 1.2 2001/03/10 00:21:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.2-r3.ebuild,v 1.1 2001/03/18 02:53:41 drobbins Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -105,13 +105,15 @@ src_unpack() {
     cd ${WORKDIR}
     chown -R 0.0 linux
     chmod -R a+r-w+X,u+w linux
+
+	#get ready for compilation
+	cd ${S}
+    try make symlinks
+	try make include/linux/version.h
 }
 
 src_compile() {
-    
-    try make symlinks
-    
-    #LVM tools are included even in the linux-sources package
+       #LVM tools are included even in the linux-sources package
     cd ${S}/extras/LVM/${LVMV}
     
     # I had to hack this in so that LVM will look in the current linux
@@ -122,7 +124,7 @@ src_compile() {
 
     if [ "$PN" != "linux" ]
     then
-	return
+		return
     fi
 
     cd ${S}
@@ -242,15 +244,13 @@ pkg_postinst() {
 	    /usr/sbin/snddevices
 		#needs to get fixed for devfs
 		fi
-    fi
-	#create .config file only if one doesn't already exist
-	if [ "$PN" = "linux-sources" ]
-	then
+	else 
 		cd ${ROOT}usr/src/linux
 		if [ ! -e .config ]
 		then
 			cp .config.eg .config
 		fi
+		make clean
 	fi
 }
 
