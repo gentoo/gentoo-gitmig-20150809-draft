@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/aimsniff
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.15 2005/03/15 07:54:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.16 2005/03/18 17:25:41 ka0ttic Exp $
+
+  18 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> aimsniff-0.9-r1.ebuild:
+  aimsniff requires that perl be built with USE=gdbm, bug 85678.
 
   15 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   aimsniff-0.9-r1.ebuild:
