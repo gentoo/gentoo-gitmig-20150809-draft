@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.19-r1.ebuild,v 1.5 2003/10/02 15:28:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.19-r1.ebuild,v 1.6 2003/10/30 05:23:01 vapier Exp $
 
 IUSE_VIDEO_CARDS="ati128 cyber5k i810 matrox neomagic nsc nvidia radeon savage tdfx"
 
@@ -63,5 +63,5 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
-	dohtml -r docs/html
+	dohtml -r docs/html/*
 }
