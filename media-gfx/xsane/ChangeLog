@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.3 2002/07/08 17:03:00 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.4 2002/07/16 11:36:46 seemant Exp $
+
+*xsane-0.86-r1 (16 Jul 2002)
+
+  16 Jul 2002; Seemant Kulleen <seemant@gentoo.org> xsane-0.86-r1.ebuild
+  files/digest-xsane-0.86-r1 :
+
+  Added ppc to KEYWORDS, because it works, and USE dependent nls, jpeg,
+  tiff, png supports.
 
 *xsane-0.86 (11 June 2002)
   07 July 2002; Owen Stampflee <owen@gentoo.org> xsane-0.86.ebuild :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.5 2002/07/13 16:31:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.6 2002/07/16 11:36:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP"
@@ -8,6 +8,8 @@ SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.2/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
 
 SLOT="1.2"
+KEYWORDS="x86 ppc"
+LICENSE="GPL"
 
 DEPEND="nls? ( sys-devel/gettext )
 	sys-devel/autoconf
@@ -15,7 +17,9 @@ DEPEND="nls? ( sys-devel/gettext )
 	=x11-libs/gtk+-1.2*
 	>=media-libs/mpeg-lib-1.3.1
 	aalib? ( >=media-libs/aalib-1.2 )
-	perl? ( >=dev-perl/PDL-2.2.1 >=dev-perl/Parse-RecDescent-1.80 >=dev-perl/gtk-perl-0.7004 )
+	perl? ( >=dev-perl/PDL-2.2.1 
+		>=dev-perl/Parse-RecDescent-1.80 
+		>=dev-perl/gtk-perl-0.7004 )
 	python? ( >=dev-lang/python-2.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 

@@ -9,16 +9,28 @@ HOMEPAGE="http://www.xsane.org"
 
 DEPEND="media-gfx/sane-backends"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDs="x86 ppc"
+
 src_compile() {
 
-	./configure --prefix=/usr --mandir=/usr/man --host=${CHOST} || die
+	local myconf
+	use nls || myconf="${myconf} --disable-nls"
+	use jpeg || myconf="${myconf} --disable-jpeg"
+	use png || myconf="${myconf} --disable-png"
+	use tiff || myconf="${myconf} --disable-tiff"
+
+	econf \
+		--prefix=/usr \
+		${myconf} || die
 	make || die
 
 }
 
 src_install () {
 
-	make prefix=${D}/usr/ mandir=${D}/usr/man install || die
+	einstall || die
 	dodoc xsane.[A-Z]*
 	dohtml -r doc
 	

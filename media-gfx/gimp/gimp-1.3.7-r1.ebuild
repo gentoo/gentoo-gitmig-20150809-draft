@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.7-r1.ebuild,v 1.1 2002/06/02 18:14:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.7-r1.ebuild,v 1.2 2002/07/16 11:36:46 seemant Exp $
 
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
@@ -16,6 +16,8 @@ DESCRIPTION="Development series of Gimp"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.3/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
 SLOT="1.4"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
 #libglade
 RDEPEND=">=x11-libs/gtk+-2.0.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.6.ebuild,v 1.1 2002/06/29 14:38:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.6.ebuild,v 1.2 2002/07/16 11:36:46 seemant Exp $
 
 inherit perl-module
 
@@ -12,6 +12,7 @@ SRC_URI="http://imagemagick.sourceforge.net/http/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.imagemagick.org/"
 SLOT="0"
 LICENSE="as-is"
+KEYWORDS="x86 ppc"
 
 DEPEND="X? ( virtual/x11
 	>=app-text/dgs-0.5.9.1 )
