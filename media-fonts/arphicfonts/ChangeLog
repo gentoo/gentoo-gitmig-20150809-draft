@@ -1,8 +1,11 @@
 # ChangeLog for media-fonts/arphicfonts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.1 2003/06/02 13:45:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.2 2003/07/04 16:09:14 gmsoft Exp $
 
-*arphicfonts-0.1 (02 Jun 2003)
+*arphicfonts-0.1-r1 (02 Jun 2003)
+
+  04 Jul  2003; Guy Martin <gmsoft@gentoo.org> arphicfonts-0.1-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> arphicfonts-0.1-r1.ebuild,
   arphicfonts-0.1.ebuild, files/CN-fonts.scale, files/TW-fonts.scale:

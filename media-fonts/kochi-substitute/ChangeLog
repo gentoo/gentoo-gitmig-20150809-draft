@@ -1,8 +1,11 @@
 # ChangeLog for media-fonts/kochi-fonts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.2 2003/06/30 14:08:28 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.3 2003/07/04 16:04:52 gmsoft Exp $
 
 *kochi-substitute-20030628 (30 Jun 2003)
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> kochi-substitute-20030628.ebuild :
+  Added hppa to KEYWORDS.
+
 
   30 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> kochi-substitute-20030628.ebuild,
   files/digest-kochi-substitute-20030628, ChangeLog:

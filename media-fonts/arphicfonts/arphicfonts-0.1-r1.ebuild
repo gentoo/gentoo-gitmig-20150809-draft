@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.1 2003/06/02 13:45:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.2 2003/07/04 16:09:14 gmsoft Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Arphic Fonts"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
 
 SLOT="0"
 LICENSE="Arphic"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc hppa"
 
 DEPEND="virtual/x11
 	x11-misc/ttmkfdir"
