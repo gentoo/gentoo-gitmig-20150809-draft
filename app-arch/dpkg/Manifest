@@ -1,6 +1,7 @@
 MD5 7d3f1239eb85d8e4ae636107daea2971 ChangeLog 560
 MD5 2e681d63dbfe9a5468eea91b7a6408d3 dpkg-1.10.9.ebuild 1617
 MD5 2e23bd3a4bce07d496bbfa17032c70cb dpkg-1.10.10.ebuild 944
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 b6b7d00486039c2e10670937dc5266bb files/digest-dpkg-1.10.9 64
 MD5 982d82b477842d92e5184b3856a63d74 files/dpkg-1.10.10.patch 2112
 MD5 0c6bf832b2ed2a0c94a7879c3427c6a1 files/digest-dpkg-1.10.10 65
