@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.203 2004/09/06 20:42:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.204 2004/09/22 20:16:38 mr_bones_ Exp $
+
+  22 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  mplayer-1.0_pre5-r4.ebuild:
+  dev-libs/bio2jack -> media-libs/bio2jack
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   mplayer-1.0_pre4-r7.ebuild, mplayer-1.0_pre5-r2.ebuild,
