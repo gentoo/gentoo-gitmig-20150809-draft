@@ -1,0 +1,18 @@
+--- util/fluxbox-generate_menu.in.orig	2005-01-18 18:45:10.965174784 +0000
++++ util/fluxbox-generate_menu.in	2005-01-18 18:46:15.197410000 +0000
+@@ -1239,13 +1239,8 @@
+ append_submenu "${FBSETTINGSMENU}"
+     append "[config] (${CONFIGUREMENU})"
+ 
+-    append_menu "[submenu] (${SYSTEMSTYLES}) {${STYLEMENUTITLE}}"
+-        append "[stylesdir] (${PREFIX}/share/fluxbox/styles)"
+-        append "[stylesdir] (/usr/share/commonbox/styles/)"
+-    append_menu_end
+-
+-    append_menu "[submenu] (${USERSTYLES}) {${STYLEMENUTITLE}}"
+-        append "[stylesdir] (~/.fluxbox/styles)"
++    append_menu "[submenu] (Styles) {Select a Style}"
++        append "[include] (/usr/share/fluxbox/menu.d/styles/)"
+     append_menu_end
+ 
+     # Backgroundmenu
