@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-3.99.17.ebuild,v 1.3 2003/09/08 07:38:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-3.99.17.ebuild,v 1.4 2004/02/17 14:45:29 agriffis Exp $
 
 inherit distutils
 
@@ -22,7 +22,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo ""
-	einfo "You will need to configure offlineimap by creating ~/.offlineimap.rc"
+	einfo "You will need to configure offlineimap by creating ~/.offlineimaprc"
 	einfo "Sample configurations are in /usr/share/doc/${P}/"
 	einfo ""
 }
