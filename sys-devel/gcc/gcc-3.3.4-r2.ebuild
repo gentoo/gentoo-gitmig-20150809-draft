@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r2.ebuild,v 1.13 2005/01/11 13:22:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r2.ebuild,v 1.14 2005/01/15 01:23:07 vapier Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -399,7 +399,7 @@ src_unpack() {
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
 	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
 
-	epatch ${FILESDIR}/3.3.4/gcc-3.3.4-spec-env.patch
+	epatch ${FILESDIR}/gcc-spec-env.patch
 
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage

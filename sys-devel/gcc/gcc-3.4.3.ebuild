@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.17 2005/01/11 13:22:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.18 2005/01/15 01:23:07 vapier Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -56,9 +56,9 @@ ETYPE="gcc-compiler"
 HARDENED_GCC_WORKS="x86 sparc amd64"
 #HARDENED_PIE_WORKS="mips ppc"
 #HARDENED_SSP_WORKS=""
-SPLIT_SPECS="${SPLIT_SPECS:="true"}"
+SPLIT_SPECS=${SPLIT_SPECS:-true}
 
-inherit eutils flag-o-matic libtool gnuconfig toolchain
+inherit toolchain
 
 gcc_do_filter_flags() {
 	strip-flags

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.14 2005/01/11 13:22:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.15 2005/01/15 01:23:07 vapier Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened uclibc n32 n64 emul-linux-x86"
 
@@ -503,7 +503,7 @@ src_unpack() {
 
 	# misc patches that havent made it into a patch tarball yet
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
-	epatch ${FILESDIR}/3.4.1/gcc-3.4.1-spec-env.patch
+	epatch ${FILESDIR}/gcc-spec-env.patch
 
 	# MIPS is screwed screwed thing - but it's cool!
 	# I had to add ABI variable, because during bootstrap

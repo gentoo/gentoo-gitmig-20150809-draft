@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.9 2005/01/11 15:03:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.10 2005/01/15 01:23:07 vapier Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -67,7 +67,7 @@ SPLIT_SPECS="${SPLIT_SPECS:="true"}"
 #GENTOO_PATCH_EXCLUDE=""
 #PIEPATCH_EXCLUDE=""
 
-inherit eutils flag-o-matic libtool gnuconfig toolchain
+inherit toolchain
 
 src_unpack() {
 	gcc_src_unpack
@@ -85,12 +85,11 @@ src_unpack() {
 	# 3.3.5 to not compile on some configurations.
 	epatch ${FILESDIR}/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch
 
-	einfo "Applying CTARGET based patches: ${CTARGET}"
-	case "${CTARGET}" in
-		powerpc*-*)
+	case $(tc-arch ${CTARGET}) in
+		ppc)
 			epatch ${FILESDIR}/3.3.3/gcc333_pre20040408-stack-size.patch
 			;;
-		arm-*)
+		arm)
 			epatch ${FILESDIR}/3.3.3/gcc333-debian-arm-getoff.patch
 			epatch ${FILESDIR}/3.3.3/gcc333-debian-arm-ldm.patch
 			;;

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.15 2005/01/11 13:22:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.16 2005/01/15 01:23:07 vapier Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -65,12 +65,12 @@ PIE_GLIBC_UNSUPPORTED="hppa"
 
 # whether we should split out specs files for multiple {PIE,SSP}-by-default
 # and vanilla configurations.
-SPLIT_SPECS="${SPLIT_SPECS:="true"}"
+SPLIT_SPECS=${SPLIT_SPECS:-true}
 
 #GENTOO_PATCH_EXCLUDE=""
 #PIEPATCH_EXCLUDE=""
 
-inherit eutils flag-o-matic libtool gnuconfig toolchain
+inherit toolchain
 
 src_unpack() {
 	gcc_src_unpack
@@ -104,9 +104,8 @@ src_unpack() {
 	epatch ${FILESDIR}/3.4.3/gcc-3.4.3-cross-compile.patch
 
 	# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
-	einfo "Applying CTARGET based patches: ${CTARGET}"
-	case "${CTARGET}" in
-		mips*-*)
+	case $(tc-arch ${CTARGET}) in
+		mips)
 			# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
 			if use !multilib; then
 				use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
@@ -134,7 +133,7 @@ src_unpack() {
 				epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers.patch
 			fi
 			;;
-		x86_64-*)
+		amd64)
 			if use multilib; then
 				epatch ${FILESDIR}/3.4.1/gcc-3.4.1-glibc-is-native.patch
 				cd ${S}/libstdc++-v3
