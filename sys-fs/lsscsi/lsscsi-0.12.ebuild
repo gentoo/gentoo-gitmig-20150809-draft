@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/lsscsi-0.12.ebuild,v 1.1 2004/07/08 23:18:46 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/lsscsi-0.12.ebuild,v 1.2 2004/07/17 09:39:43 dholm Exp $
 
 DESCRIPTION="SCSI sysfs query tool"
 HOMEPAGE="http://www.torque.net/scsi/lsscsi.html"
 SRC_URI="http://www.torque.net/scsi/lsscsi-0.12.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 DEPEND=""
 
