@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ExtUtils-AutoInstall-0.59.ebuild,v 1.2 2004/06/25 00:26:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ExtUtils-AutoInstall-0.59.ebuild,v 1.3 2004/07/14 17:27:39 agriffis Exp $
 
 IUSE=""
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Allows module writers to specify a more sophisticated form of dependency information"
 SRC_URI="http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/author/AUTRIJUS/${P}/"
