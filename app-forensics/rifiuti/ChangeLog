@@ -1,0 +1,10 @@
+# ChangeLog for app-forensics/rifiuti
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rifiuti/ChangeLog,v 1.1 2004/12/12 20:59:53 dragonheart Exp $
+
+*rifiuti-20040505_p1 (13 Dec 2004)
+
+  13 Dec 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +rifiuti-20040505_p1.ebuild:
+  Initial commit as per bug #73300
+
