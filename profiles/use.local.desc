@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.136 2003/10/07 21:45:31 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.137 2003/10/11 20:30:35 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -42,6 +42,7 @@ dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/crystalspace:mng - Enables mng support in CrystalSpace
 dev-games/crystalspace:openal - Enables Open Audio Library support in CrystalSpace
+dev-lang/ruby:ruby18 - Use ruby-1.8 as default ruby
 dev-lips/bigloo-lib:ipcs - enable ipcs support
 dev-lips/bigloo-lib:expat - enable expat support
 dev-php/mod_php:gd-external - Use the external version of libgd rather than the bundled one
