@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.46.ebuild,v 1.1 2003/05/28 21:45:15 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.46.ebuild,v 1.2 2003/06/05 04:08:34 woodchip Exp $
 
 inherit eutils
 
@@ -30,7 +30,8 @@ src_unpack() {
 
 	#give it the stamp
 	perl -pi -e 's|" PLATFORM "|Gentoo/Linux|;' server/core.c
-	#fix perl with perl!
+	#fix perl with perl! and avoid utf-8 charset problems
+	export LC_CTYPE=C
 	find -type f | xargs perl -pi -e \
 		"s|/usr/local/bin/perl|/usr/bin/perl|g; \
 		s|/usr/local/bin/perl5|/usr/bin/perl|g; \
