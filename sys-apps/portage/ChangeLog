@@ -1,12 +1,6 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.23 2003/07/11 11:27:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.24 2003/07/25 22:26:29 vapier Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
-# http://cvs.gentoo.org/cgi-bin/viewcvs.cgi/gentoo-src/portage/ChangeLog?rev=HEAD&content-type=text/vnd.viewcvs-markup
-
-  11 Jul 2003; Jason Wever <weeve@gentoo.org>
-  files/portage-rescue-2.0.48-r1-sparc.tbz2,
-  files/portage-rescue-2.0.48-r1-sparc64.tbz2:
-  Added portage rescue files for sparc and sparc64 to fix bug #13301.
-
+# http://www.gentoo.org/cgi-bin/viewcvs.cgi/gentoo-src/portage/ChangeLog?rev=HEAD&content-type=text/vnd.viewcvs-markup
