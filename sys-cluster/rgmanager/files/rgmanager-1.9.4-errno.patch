@@ -1,0 +1,9 @@
+--- rgmanager-1.9.4/src/clulib/gettid.c.old	2005-03-07 15:09:58.726183320 +0100
++++ rgmanager-1.9.4/src/clulib/gettid.c	2005-03-07 15:10:02.326635968 +0100
+@@ -1,5 +1,6 @@
+ #include <sys/types.h>
+ #include <linux/unistd.h>
+ #include <gettid.h>
++#include <errno.h>
+ 
+ _syscall0(pid_t,gettid)
