@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.4.0_rc2.ebuild,v 1.1 2005/01/11 17:17:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.4.0_rc2.ebuild,v 1.2 2005/01/18 14:38:33 carlo Exp $
 
 inherit kde-functions
 
-MY_P="${P/_/-}-0-generic-src"
+MY_P="${P/_/-}-1-generic-src"
 S="${WORKDIR}/${P/_/-}"
 
 DESCRIPTION="A graphical CVS client."
