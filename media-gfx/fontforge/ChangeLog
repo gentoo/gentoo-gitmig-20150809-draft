@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.5 2004/07/13 06:48:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.6 2004/08/28 15:45:12 usata Exp $
+
+*fontforge-20040824 (29 Aug 2004)
+
+  29 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> fontforge-20040618.ebuild,
+  +fontforge-20040824.ebuild:
+  Version bumped. Marked previous version stable on x86 and ppc.
 
   12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   fontforge-20040618.ebuild:
