@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0_p20050119.ebuild,v 1.1 2005/01/31 23:05:41 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0_p20050119.ebuild,v 1.2 2005/03/12 11:26:45 wschlich Exp $
 
-inherit eutils
-
+inherit eutils flag-o-matic
 
 DESCRIPTION="Open Source Jabber Server"
 HOMEPAGE="http://www.jabber.org"
