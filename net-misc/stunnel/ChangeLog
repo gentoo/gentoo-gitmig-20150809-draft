@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.18 2003/07/28 22:50:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.19 2003/09/12 02:59:38 vapier Exp $
+
+*stunnel-3.26 (11 Sep 2003)
+
+  11 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump because of DoS signaling bug #26175.
+
+*stunnel-3.24-r1 (02 Jul 2003)
 
   22 Jul 2003; Christian Birchinger <joker@gentoo.org>
   stunnel-4.04-r1.ebuild, files/stunnel.rc6:
@@ -8,8 +15,6 @@
 
   11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> stunnel-4.04-r1.ebuild :
   Fixed path to patch. Closes #23702.
-
-*stunnel-3.24-r1 (02 Jul 2003)
 
   27 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> stunnel-3.24-r1.ebuild:
   Added alpha and ppc keywords.
