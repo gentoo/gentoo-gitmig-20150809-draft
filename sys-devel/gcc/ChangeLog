@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.373 2005/01/19 19:12:43 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.374 2005/01/25 12:55:23 tigger Exp $
+
+  25 Jan 2005; Rob Holland <tigger@gentoo.org> :
+  Don't break the description line by overriding it in the eclass.
 
   19 Jan 2005; Joshua Kinard <kumba@gentoo.org> gcc-3.4.3-r1.ebuild,
   gcc-3.4.3.20050110.ebuild:
