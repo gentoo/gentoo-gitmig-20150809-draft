@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/acl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.2 2002/03/05 02:51:59 woodchip Exp $
+
+*acl-20020124-r1 (4 March 2002)
+
+  4 March 2002; Donny Davies <woodchip@gentoo.org> acl-20020124-r1.ebuild :
+
+  Updated to perform the install-dev target by hand, so things like SAMBA
+  will compile with USE acl support.
 
 *acl-20020124 (1 Feb 2002)
 
