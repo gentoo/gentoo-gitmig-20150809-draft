@@ -1,8 +1,11 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.4 2003/02/12 06:12:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.5 2003/03/15 01:52:49 liquidx Exp $
 
-*lablgtk-1.2.5.ebuild (25 Oct 2002)
+*lablgtk-1.2.5 (25 Oct 2002)
+
+  15 Mar 2003; Alastair Tse <liquidx@gentoo.org> lablgtk-1.2.5.ebuild:
+  gdk-pixbuf added to deps. thanks to ska-fan. resolves #17531.
 
   28 Jan 2003; Jon Nall <nall@gentoo.org> lablgtk-1.2.5.ebuild :
   added ~ppc
