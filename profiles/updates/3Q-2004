@@ -49,3 +49,4 @@ move dev-util/poedit app-i18n/poedit
 slotmove <net-www/tomcat-4.1.30 0 4  
 slotmove <net-www/tomcat-5.0.27 0 5
 move dev-java/jython dev-java/jython-bin
+move dev-java/avalon-logkit dev-java/avalon-logkit-bin
