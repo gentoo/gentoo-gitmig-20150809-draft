@@ -1,6 +1,16 @@
-MD5 764ddaf4d141cb3fe0edb05d679d3904 gst-plugins-dvdread-0.8.8.ebuild 328
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b85234bbfe653ca0b4e76cc9d47ff398 ChangeLog 678
 MD5 4cf7ad5c693eef3d805d6eaa5843b9e7 gst-plugins-dvdread-0.8.7.ebuild 324
-MD5 a146dbee1519827f3c0d1be22689770c ChangeLog 569
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
+MD5 0fd3a7846612702428f3160f6826833f gst-plugins-dvdread-0.8.8.ebuild 340
 MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-dvdread-0.8.7 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-dvdread-0.8.8 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCPPb+0K3RJaeXx6cRAnHfAJ9fJZOwuQEuqyhWyx6foFO8cATi6gCeO8AS
+qRrfJRLgCNbWhvOKI6zZ5EI=
+=I7XP
+-----END PGP SIGNATURE-----
