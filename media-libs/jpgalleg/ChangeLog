@@ -1,4 +1,10 @@
 # ChangeLog for media-libs/jpgalleg
 
+*jpgalleg-1.1-r1 (22 Aug 2003)
+
+  22 Aug 2003; Michael Sterrett <msterret@gentoo.org> jpgalleg-1.1-r1.ebuild:
+  tidy; unpack, patch and sed in src_unpack; be more selective for examples; use
+  sed >= 4
+
 *jpgalleg-1.1 (27 Oct 2002)
   Thomas Raschbacher<lordvan@lordvan.com>: created ebuild
