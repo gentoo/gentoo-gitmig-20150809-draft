@@ -1,15 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.0.0.ebuild,v 1.1 2002/06/17 19:55:41 stroke Exp $
+
+inherit libtool
 # Author: Spider  <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-1.106.0.ebuild,v 1.1 2002/05/23 19:15:18 spider Exp $
-
-# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
 RESTRICT="nostrip"
 # force debug information
 CFLAGS="${CFLAGS} -g"
 CXXFLAGS="${CXXFLAGS} -g"
+
+
 
 
 S=${WORKDIR}/${P}
@@ -19,33 +21,33 @@ HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2"
 
-RDEPEND=">=dev-libs/glib-2.0.0
-	>=x11-libs/pango-1.0.0
-	>=dev-libs/atk-1.0.0
-	>=x11-libs/gtk+-2.0.0
+RDEPEND=">=dev-libs/glib-2.0.4
+	>=x11-libs/pango-1.0.3
+	>=dev-libs/atk-1.0.2
+	>=x11-libs/gtk+-2.0.5
 	>=app-text/scrollkeeper-0.3.4
 	=media-libs/freetype-2.0*
-	>=x11-libs/libzvt-1.112.0
-	>=gnome-base/libglade-1.99.10
-	>=gnome-base/gconf-1.1.10
-	>=gnome-base/libgnomeui-1.117.1
-	>=gnome-base/gnome-panel-1.5.22
-	>=gnome-base/gnome-vfs-1.9.10
-	>=gnome-base/ORBit2-2.3.106
-	>=gnome-base/libbonoboui-1.117.0
-	>=gnome-base/libgnomecanvas-1.112.1
-	>=gnome-base/bonobo-activation-0.9.9
-	>=gnome-extra/libgtkhtml-1.99.3
-	>=dev-libs/libxml2-2.4.17
-	>=sys-libs/ncurses-5.2-r3
-	>=gnome-base/libgtop-1.90.2-r1"
+	>=x11-libs/libzvt-1.99999.0
+	>=gnome-base/libglade-2.0.0
+	>=gnome-base/gconf-1.1.11
+	>=gnome-base/libgnomeui-2.0.1
+	>=gnome-base/gnome-panel-2.0.1
+	>=gnome-base/gnome-vfs-2.0.0
+	>=gnome-base/ORBit2-2.4.0
+	>=gnome-base/libbonoboui-2.0.0
+	>=gnome-base/libgnomecanvas-2.0.1
+	>=gnome-base/bonobo-activation-1.0.0-r1
+	>=gnome-extra/libgtkhtml-2.0.0
+	>=dev-libs/libxml2-2.4.22
+	>=sys-libs/ncurses-5.2-r5
+	>=gnome-base/libgtop-2.0.0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.17
 	>=dev-util/pkgconfig-0.12.0"
 	
 src_compile() {
-	libtoolize --copy --force
+	elibtoolize
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--sysconfdir=/etc \
