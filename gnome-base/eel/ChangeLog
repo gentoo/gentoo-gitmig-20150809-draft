@@ -1,7 +1,11 @@
 # ChangeLog for gnome-base/eel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.13 2002/07/25 12:04:37 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.14 2002/07/25 22:18:56 spider Exp $
 
+*eel-2.0.2 (25 Jul 2002)
+  25 Jul 2002; Spider <spider@gentoo.org> eel-2.0.2.ebuild :
+  Guess what? new version
+  
 *eel-2.0.1 (25 Jul 2002)
   25 Jul 2002; Spider <spider@gentoo.org> eel-2.0.1.ebuild: 
   versionbump.
