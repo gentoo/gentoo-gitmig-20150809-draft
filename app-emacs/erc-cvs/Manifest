@@ -1,4 +1,5 @@
-MD5 c579b908d814e170c07cadd2c2d1a1b1 ChangeLog 334
-MD5 baf48570ecf6a2b0535b813c5d81cde3 erc-cvs-4.1.ebuild 752
+MD5 82d331f0a533fcc862708a97a443a1a4 ChangeLog 422
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 1ea2d545989551492de0bb1644f90e3d erc-cvs-4.1.ebuild 849
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-erc-cvs-4.1 0
 MD5 525caef1ddd566109a224e44097d6e73 files/50erc-cvs-gentoo.el 101
