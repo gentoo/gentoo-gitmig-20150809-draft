@@ -1,5 +1,7 @@
 MD5 35b248c78675d935f99b3d2a1de906a6 ChangeLog 1099
 MD5 e9a1008a5dddc0aeb3bd99dc61a3229b abs-guide-2.1.ebuild 587
 MD5 7b4a1ffaee3a51762eb8decd321318d7 abs-guide-2.2.ebuild 627
+MD5 8ff6749cecf94a412a9cfaefcd832595 abs-guide-2.3.ebuild 631
 MD5 474613305b876d86cdcd3f0266e6be5b files/digest-abs-guide-2.1 66
 MD5 33e071f7b26b90574760b4db934e0b4f files/digest-abs-guide-2.2 66
+MD5 c81480cc08855ce41b51682289a0f1ac files/digest-abs-guide-2.3 66
