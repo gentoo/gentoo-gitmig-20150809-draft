@@ -1,13 +1,11 @@
-diff -urNa fs.orig/binfmt_aout.c fs/binfmt_aout.c
---- fs.orig/binfmt_aout.c	2004-12-04 18:13:19.000000000 +0300
-+++ fs/binfmt_aout.c	2004-12-04 18:43:46.804200744 +0300
-@@ -43,13 +43,18 @@
+diff -uraN fs.orig/binfmt_aout.c fs/binfmt_aout.c
+--- fs.orig/binfmt_aout.c	2004-12-06 13:40:22.886079000 +0300
++++ fs/binfmt_aout.c	2004-12-06 13:52:16.506592320 +0300
+@@ -43,13 +43,16 @@
  	NULL, THIS_MODULE, load_aout_binary, load_aout_library, aout_core_dump, PAGE_SIZE
  };
  
 -static void set_brk(unsigned long start, unsigned long end)
-+#define BAD_ADDR(x)	((unsigned long)(x) >= TASK_SIZE)
-+
 +static int set_brk(unsigned long start, unsigned long end)
  {
  	start = PAGE_ALIGN(start);
@@ -17,33 +15,35 @@ diff -urNa fs.orig/binfmt_aout.c fs/binfmt_aout.c
 -	do_brk(start, end - start);
 +	if (end > start) {
 +		unsigned long addr = do_brk(start, end - start);
-+		if (BAD_ADDR(addr))
++		if ((unsigned long) addr >= TASK_SIZE)
 +			return addr;
 +	}
 +	return 0;
  }
  
  /*
-@@ -452,9 +457,14 @@
+@@ -452,9 +455,16 @@
  
  #ifdef CONFIG_MOSIX
  	/* if DEPUTY, the REMOTE already did "set_brk" in aout_remote_init_mm */
 -	if(!(current->mosix.dflags & DDEPUTY))
 +	if(!(current->mosix.dflags & DDEPUTY)) {
- #endif /* CONFIG_MOSIX */
--	set_brk(current->mm->start_brk, current->mm->brk);
++#endif /* CONFIG_MOSIX */
 +		retval = set_brk(current->mm->start_brk, current->mm->brk);
 +		if (retval < 0) {
 +			send_sig(SIGKILL, current, 0);
 +			return retval;
 +		}
++#ifdef CONFIG_MOSIX
 +	}
+ #endif /* CONFIG_MOSIX */
+-	set_brk(current->mm->start_brk, current->mm->brk);
  
  #ifdef CONFIG_MOSIX
  	if(current->mosix.dflags & DDEPUTY)
-diff -urNa fs.orig/exec.c fs/exec.c
---- fs.orig/exec.c	2004-12-04 18:13:19.000000000 +0300
-+++ fs/exec.c	2004-12-04 18:41:51.679702328 +0300
+diff -uraN fs.orig/exec.c fs/exec.c
+--- fs.orig/exec.c	2004-12-06 13:40:22.912075000 +0300
++++ fs/exec.c	2004-12-06 13:50:08.776010320 +0300
 @@ -357,6 +357,7 @@
  
  	down_write(&current->mm->mmap_sem);

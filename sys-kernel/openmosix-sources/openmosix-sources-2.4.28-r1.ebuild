@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.28.ebuild,v 1.1 2004/12/04 16:41:12 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.28-r1.ebuild,v 1.1 2004/12/06 11:36:36 voxus Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
 inherit kernel eutils
 
 OKV="2.4.28"
-TIMESTAMP="20041204"
+TIMESTAMP="20041206"
 [ "${PR}" == "r0" ] && KV=${PV/_/-}-openmosix || KV=${PV/_/-}-openmosix-${PR}
 S=${WORKDIR}/linux-${KV}
 

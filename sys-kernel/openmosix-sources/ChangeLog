@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.74 2004/12/04 16:41:12 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.75 2004/12/06 11:36:36 voxus Exp $
+
+*openmosix-sources-2.4.28-r1 (06 Dec 2004)
+
+  06 Dec 2004; Konstantin Arkhipov <voxus@gentoo.org>:
+  files/openmosix-sources-binfmt_aout.patch,
+  -openmosix-sources-2.4.28.ebuild,
+  +openmosix-sources-2.4.28-r1.ebuild:
+  Updated aout patch and fixed compilation issue with binfmt_aout as module.
+  Closes bug #73503.
 
 *openmosix-sources-2.4.28 (04 Dec 2004)
 *openmosix-sources-2.4.24-r10 (04 Dec 2004)
