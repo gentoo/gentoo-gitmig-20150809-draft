@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 96e6032aebe7042f88086fff3010ef5d ChangeLog 1350
-MD5 86ac047f77c51f4100df4a1b6ec3db56 am-utils-6.0.9-r1.ebuild 898
+MD5 be2d4d506a42e24e8f1a52cc7f0ecbd9 am-utils-6.0.9-r1.ebuild 925
 MD5 a3dd8511b8874ce1b494dce2472c709c metadata.xml 159
+MD5 711232de603b2f30af85608b0ba43ca7 files/am-utils-gdbm.patch 1578
 MD5 04ee491d48ffa52a449c447af3c8fbce files/amd.conf 770
 MD5 f08163d2626b71a6c983fc1d0b9383ab files/amd.net 160
 MD5 b3377608b057b265eda754cea94bb69e files/amd.rc 544
-MD5 711232de603b2f30af85608b0ba43ca7 files/am-utils-gdbm.patch 1578
 MD5 74f5c331bf7692293e5eb8b1d69310de files/digest-am-utils-6.0.9-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBjAU7HTu7gpaalycRAukIAJ0Z34XrN8V3YoKrVXh3WLJJVhiN4gCdFW4b
+wyZ9DftCBdoJShiHJMdfMus=
+=ugO0
+-----END PGP SIGNATURE-----
