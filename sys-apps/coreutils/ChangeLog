@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.38 2003/09/26 18:52:43 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.39 2003/09/28 18:51:29 azarah Exp $
+
+*coreutils-5.0.91 (28 Sep 2003)
+
+  28 Sep 2003; Martin Schlemmer <azarah@gentoo.org> coreutils-5.0.91.ebuild:
+  Update version. I ported the ACL patches, except for the i18n one, as it gets
+  messy, and there are a lot of Makefile breakage, and also what might be
+  upstream fixes for the same thing. I thus rather think somebody that know a
+  bit more about locale and such that can test it should do this. Same thing for
+  the SELINUX patch - its a lot of small breakages and is tedious - I thought
+  getting this in so far should motivate somebody with more time than me :)
 
   26 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> coreutils-5.0-r4.ebuild:
   set ppc in keywords
