@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.113 2004/11/30 09:13:38 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.114 2004/12/11 10:28:49 kloeri Exp $
+
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> nautilus-2.8.0.ebuild:
+  Stable on alpha.
 
 *nautilus-2.8.2-r1 (30 Nov 2004)
 
