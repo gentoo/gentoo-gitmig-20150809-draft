@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gob
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.27 2004/08/08 15:46:09 foser Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.28 2005/01/31 04:16:50 joem Exp $
+
+*gob-2.0.11 (30 Jan 2005)
+
+  30 Jan 2005; Joe McCann <joem@gentoo.org> +gob-2.0.11.ebuild,
+  gob-2.0.9.ebuild:
+  New version, reported in bug 80124. Mark previous version x86 stable
 
 *gob-2.0.9 (08 Aug 2004)
 
