@@ -1,11 +1,13 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.66 2004/12/23 12:14:06 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.67 2004/12/23 12:44:26 karltk Exp $
 
 *blackdown-jdk-1.4.2.01-r1 (23 Dec 2004)
 
-  23 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org>  blackdown-jdk-1.4.2.01-r1.ebuild files/blackdown-jdk-1.4.2.01-r1 files/digest-blackdown-jdk-1.4.2.01-r1
-  # INSERT ENTRY HERE
+  23 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  blackdown-jdk-1.4.2.01-r1.ebuild files/blackdown-jdk-1.4.2.01-r1 
+  files/digest-blackdown-jdk-1.4.2.01-r1:
+  Experimental update that removes mozilla support if USE mozilla hasn't been specified.
 
   27 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
   -files/blackdown-jdk-1.4.2_rc1, -blackdown-jdk-1.4.2_rc1.ebuild:
