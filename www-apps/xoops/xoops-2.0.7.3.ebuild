@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.0.7.3.ebuild,v 1.2 2004/10/18 12:32:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.0.7.3.ebuild,v 1.3 2005/03/11 22:22:02 luckyduck Exp $
 
 inherit webapp
 
