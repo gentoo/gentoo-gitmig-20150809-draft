@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.16 2002/05/14 03:49:25 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.17 2002/05/21 06:42:59 drobbins Exp $
+
+  20 May 2002; Daniel Robbins <drobbins@gentoo.org> postfix-1.1.8.ebuild:
+  made "sasl" a USE var (disabled by default) since this seems most appropriate
+  and since cyrus-sasl appears to be broken if you merge it on a fresh system.
+  Postfix should work again.
 
 *postfix-1.1.8 (13 May 2002)
 

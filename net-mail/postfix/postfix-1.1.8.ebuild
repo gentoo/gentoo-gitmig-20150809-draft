@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.8.ebuild,v 1.1 2002/05/14 03:49:25 woodchip Exp $
+# /space/gentoo/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.8.ebuild,v 1.1 2002/05/14 03:49:25 woodchip Exp
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 PROVIDE="virtual/mta"
 DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
-	>=dev-libs/cyrus-sasl-1.5.27
+	sasl? ( >=dev-libs/cyrus-sasl-1.5.27 )
 	ldap? ( >=net-nds/openldap-1.2 )
 	mysql? ( >=dev-db/mysql-3.23.28 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )"
@@ -62,8 +62,13 @@ src_unpack() {
 	use pam && AUXLIBS="${AUXLIBS} -lpam"
 
 	# stuff we always want...
-	CCARGS="${CCARGS} -I/usr/include -DHAS_PCRE -DUSE_SASL_AUTH"
-	AUXLIBS="${AUXLIBS} -L/usr/lib -lpcre -lsasl -ldl -lcrypt"
+	CCARGS="${CCARGS} -I/usr/include -DHAS_PCRE"
+	AUXLIBS="${AUXLIBS} -L/usr/lib -lpcre -ldl -lcrypt"
+	if [ "`use sasl`" ]
+	then
+		AUXLIBS="${AUXLIBS} -lsasl"
+		CCARGS="${CCARGS} -DUSE_SASL_AUTH"
+	fi
 	DEBUG=""
 
 	cd ${S}
