@@ -1,10 +1,11 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.60 2004/08/22 16:01:43 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.61 2004/08/22 16:15:31 karltk Exp $
 
   22 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-3.0.0-r3.ebuild, eclipse-sdk-2.1.3-r5.ebuild:
-  Added dependency on app-arch/zip, fixing #60199.
+  Added dependency on app-arch/zip, fixing #60199. Patch by
+  Jose Gonzalez Gomez <jgonzalez@opentechnet.com>.
 
   22 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-3.0.0-r3.ebuild, eclipse-sdk-2.1.3-r5.ebuild:
