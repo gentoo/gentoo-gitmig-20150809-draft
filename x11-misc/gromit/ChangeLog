@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gromit
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gromit/ChangeLog,v 1.3 2004/12/16 09:04:17 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gromit/ChangeLog,v 1.4 2004/12/20 15:12:31 brix Exp $
+
+  20 Dec 2004; Henrik Brix Andersen <brix@gentoo.org> gromit-20041014.ebuild:
+  Stable on x86.
 
 *gromit-20041213 (16 Dec 2004)
 
