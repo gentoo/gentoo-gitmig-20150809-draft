@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r2.ebuild,v 1.2 2004/10/27 09:39:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r2.ebuild,v 1.3 2005/02/24 03:09:52 tester Exp $
 
 inherit eutils
 
@@ -31,9 +31,10 @@ src_compile() {
 	einfo
 	einfo "Please ignore any errors/warnings"
 	einfo
+	export WANT_AUTOCONF=2.5
+	aclocal
 	automake
 	libtoolize --force
-	aclocal
 	autoconf
 	./configure --with-jabberd=/usr/include/jabberd || die "./configure failed"
 	emake || die

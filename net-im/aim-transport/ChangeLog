@@ -1,6 +1,10 @@
 # ChangeLog for net-im/aim-transport
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/ChangeLog,v 1.19 2004/10/27 09:39:07 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/ChangeLog,v 1.20 2005/02/24 03:09:52 tester Exp $
+
+  23 Feb 2005; Olivier Crête <tester@gentoo.org>
+  aim-transport-20040131-r2.ebuild:
+  Adding WANT_AUTOCONF=2.5 and move aclocal before automake to fix bug #81615
 
   27 Oct 2004; Tom Martin <slarti@gentoo.org>
   aim-transport-20040131-r2.ebuild:
