@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.3 2004/05/12 12:30:06 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.4 2004/05/30 05:21:00 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,8 +15,12 @@ IUSE="build"
 
 DEPEND="virtual/glibc"
 
+kernel_supports_modules() {
+	grep '^CONFIG_MODULES=y$' /usr/src/linux/.config >& /dev/null
+}
+
 pkg_setup() {
-	use build || check_KV
+	use !build && kernel_supports_modules && check_KV
 }
 
 src_unpack() {
@@ -41,7 +45,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	filter-flags "-fPIC"
 
 	# First build static
@@ -75,7 +78,7 @@ src_compile() {
 	make OPTIMIZE="${CFLAGS} -I../gl" LDFLAGS='-L../sharedlib' \
 		demoprogs || die "Failed to build demoprogs!"
 
-	if ! use build
+	if use !build && kernel_supports_modules
 	then
 		cd ${S}/kernel/svgalib_helper
 		env -u ARCH \
@@ -96,7 +99,7 @@ src_install() {
 
 	make TOPDIR=${D} OPTIMIZE="${CFLAGS}" \
 		install || die "Failed to install svgalib!"
-	if ! use build
+	if use !build && kernel_supports_modules
 	then
 		cd ${S}/kernel/svgalib_helper
 		env -u ARCH \
