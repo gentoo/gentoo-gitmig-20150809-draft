@@ -7,7 +7,7 @@ SRC_URI="http://www.lepton.fr/tools/autocutsel/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc
 	virtual/x11"

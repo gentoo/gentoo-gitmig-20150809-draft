@@ -1,7 +1,10 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.8 2002/12/03 11:30:20 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.9 2002/12/09 04:41:54 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *xpad-1.7 (03 Dec 2002)
 
   03 Dec 2002; L. Boshell <leonardop@gentoo.org> : New version. Thanks to

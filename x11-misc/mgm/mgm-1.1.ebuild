@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1.ebuild,v 1.3 2002/08/14 23:44:15 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1.ebuild,v 1.4 2002/12/09 04:41:53 manson Exp $
 
 DESCRIPTION="ORNAMENTVM ROSACEVM INFERNVM PRATVLIS"
 HOMEPAGE="http://www.xiph.org/mgm/index.html"
 SRC_URI="http://www.xiph.org/mgm/${P}.tgz"
 S=${WORKDIR}/${PN}
 
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 SLOT="0"
 LICENSE="as-is"
 

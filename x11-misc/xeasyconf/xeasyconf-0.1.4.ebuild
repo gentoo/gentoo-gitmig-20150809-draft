@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xeasyconf/xeasyconf-0.1.4.ebuild,v 1.3 2002/11/28 18:36:18 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xeasyconf/xeasyconf-0.1.4.ebuild,v 1.4 2002/12/09 04:41:54 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xeasyconf is a PPC only tool to assist in xfree 4.x configs"
@@ -8,7 +8,7 @@ SRC_URI="http://gentoo.org/~gerk/xeasyconf/${P}.tar.gz"
 HOMEPAGE="http://gentoo.org/~gerk/xeasyconf/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc -x86 -sparc -sparc64 -alpha"
+KEYWORDS="ppc -x86 -sparc  -alpha"
 
 DEPEND="x11-base/xfree 
 	sys-apps/pciutils"

@@ -7,7 +7,7 @@ HOMEPAGE="http://xpad.sourceforge.net/"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~sparc64 ~ppc"
+KEYWORDS="~x86 ~sparc  ~ppc"
 
 DEPEND=">=x11-libs/gtk+-2.0.0"
 

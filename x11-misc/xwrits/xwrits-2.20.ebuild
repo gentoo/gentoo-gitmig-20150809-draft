@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/xwrits-2.20.ebuild,v 1.5 2002/10/17 16:07:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/xwrits-2.20.ebuild,v 1.6 2002/12/09 04:41:55 manson Exp $
 
 S=${WORKDIR}/${P}
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lcdf.org/xwrits/xwrits-2.20.tar.gz"
 HOMEPAGE="http://www.lcdf.org/xwrits/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="x11-base/xfree"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12-r1.ebuild,v 1.10 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12-r1.ebuild,v 1.11 2002/12/09 04:41:54 manson Exp $
 
 IUSE="gnome"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lysator.liu.se/~astrand/projects/xalf/${P}.tgz"
 HOMEPAGE="http://www.lysator.liu.se/~astrand/projects/xalf/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1

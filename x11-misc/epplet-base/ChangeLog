@@ -1,7 +1,10 @@
 # ChangeLog for x11-misc/epplet-base
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/epplet-base/ChangeLog,v 1.2 2002/11/06 06:27:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/epplet-base/ChangeLog,v 1.3 2002/12/09 04:41:51 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *epplet-base-0.5 ( 26 Apr 2002 )
 
   26 Apr 2002; Tod Neidt <tod@gentoo.org> epplet-base-0.5.ebuild :

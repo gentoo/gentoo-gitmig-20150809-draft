@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-1.0.ebuild,v 1.2 2002/10/28 07:21:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-1.0.ebuild,v 1.3 2002/12/09 04:41:53 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A utility to create a fonts.scale file from a set of TrueType fonts"
@@ -8,7 +8,7 @@ SRC_URI="http://www.joerg-pommnitz.de/TrueType/ttmkfdir.tar.gz"
 HOMEPAGE="http://www.joerg-pommnitz.de/TrueType/xfsft.html"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64 ppc"
+KEYWORDS="x86 sparc  ppc"
 
 DEPEND="<media-libs/freetype-2.0"
 

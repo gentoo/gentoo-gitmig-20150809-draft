@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/tkseti-3.06.ebuild,v 1.8 2002/10/04 06:43:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/tkseti-3.06.ebuild,v 1.9 2002/12/09 04:41:53 manson Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="TkSeti is a GUI to control the SETI@Home client for UNIX."
@@ -15,7 +15,7 @@ DEPEND="${RDEPEND}"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_compile() {
 	echo "Nothing to compile for ${P}."

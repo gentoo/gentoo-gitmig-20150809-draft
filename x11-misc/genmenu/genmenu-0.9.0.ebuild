@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/genmenu-0.9.0.ebuild,v 1.1 2002/10/27 07:39:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/genmenu-0.9.0.ebuild,v 1.2 2002/12/09 04:41:51 manson Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://projects.gtk.mine.nu/genmenu"
 LICENSE="GPL-2"
 DEPEND="sys-apps/bash"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc "
 
 src_unpack() {
 	unpack ${A}

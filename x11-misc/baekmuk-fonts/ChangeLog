@@ -1,7 +1,10 @@
 # ChangeLog for x11-misc/baekmuk-fonts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/baekmuk-fonts/ChangeLog,v 1.4 2002/10/21 14:47:31 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/baekmuk-fonts/ChangeLog,v 1.5 2002/12/09 04:41:49 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *baekmuk-fonts-2.0-r1 (11 Jul 2002)
 
   21 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> baekmuk-fonts-2.0-r1.ebuild :

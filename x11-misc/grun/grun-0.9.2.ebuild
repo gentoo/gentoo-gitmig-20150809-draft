@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.12 2002/11/18 06:49:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.13 2002/12/09 04:41:51 manson Exp $
 
 IUSE="nls"
 
@@ -18,7 +18,7 @@ SRC_URI="http://ftp.us.debian.org/debian/pool/main/g/grun/grun_0.9.2.orig.tar.gz
 HOMEPAGE="http://www.geocities.com/ResearchTriangle/Facility/1468/sg/grun.html"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 # The dependencies following the gentoo policy as suggested by gbevin
 DEPEND="=dev-libs/glib-1.2*

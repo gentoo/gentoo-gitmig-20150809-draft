@@ -1,7 +1,10 @@
 # ChangeLog for x11-misc/xwrits
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/ChangeLog,v 1.2 2002/05/11 06:59:29 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/ChangeLog,v 1.3 2002/12/09 04:41:55 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *xwrits-2.21 (11 May 2002)
 
   11 May 2002; Arcady Genkin <agenkin@thpoon.com> xwrits-2.21.ebuild :

@@ -1,6 +1,6 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7.ebuild,v 1.6 2002/08/14 23:44:15 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7.ebuild,v 1.7 2002/12/09 04:41:53 manson Exp $
 
 _P=Login.app-2.0.0-Alpha-7
 S=${WORKDIR}/${_P}
@@ -18,7 +18,7 @@ DEPEND=">=x11-libs/libPropList-0.10.1
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_compile() {
 	emake || die
