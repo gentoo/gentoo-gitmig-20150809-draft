@@ -2,5 +2,7 @@ MD5 d8e9780fb1db94f7e65247c28a346e08 kita-0.6.ebuild 660
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 180682ab3fae6e34aa7396092a6ff221 ChangeLog 529
 MD5 37f059028becbe576b23c3287ceb4388 kita-0.6.1.ebuild 850
+MD5 157f8edb76dd6e3c57d96211e9cd1030 kita-0.6.2.ebuild 850
 MD5 54a42d21a3546572d79e97891db4c042 files/digest-kita-0.6 60
 MD5 f2a0f7e84defbfe37a714804e39d1463 files/digest-kita-0.6.1 61
+MD5 a4488156760ca27d5dc6898de474da56 files/digest-kita-0.6.2 61
