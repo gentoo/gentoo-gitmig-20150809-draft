@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.54 2004/12/13 06:35:06 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.55 2005/01/13 04:57:35 vapier Exp $
 
 # Current Maintainer: Tal Peer <coredumb@gentoo.org>
 # Original Author:    Dan Armak <danarmak@gentoo.org>
@@ -75,7 +75,7 @@ INHERITED="$INHERITED $ECLASS"
 
 [ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="${DISTDIR}/cvs-src"
 
-# ECVS_NAME -- CVS path
+# ECVS_SERVER -- CVS path
 #
 # The format is "server:/dir", e.g. "anoncvs.kde.org:/home/kde".
 # Remove the other parts of the full CVSROOT, which might look like
