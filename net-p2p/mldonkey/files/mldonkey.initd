@@ -1,6 +1,6 @@
 #!/sbin/runscript
 
-opts="start stop restart slow fast"
+opts="start stop restart slow fast info"
 
 depend() {
 	need net
@@ -54,6 +54,10 @@ restart() {
 }
 
 slow() {
+	if ! service_started mldonkey
+	then
+		start_service mldonkey
+	fi
 	ebegin "Reducing bandwidth to ${LOW_DOWN}k/${LOW_UP}k"
 
 	BASE="http://"
@@ -71,6 +75,10 @@ slow() {
 }
 
 fast() {
+	if ! service_started mldonkey
+	then
+		start_service mldonkey
+	fi
 	ebegin "Increasing bandwidth to ${HIGH_DOWN}k/${HIGH_UP}k"
 
 	BASE="http://"
@@ -85,4 +93,28 @@ fast() {
 	wget --spider ${BASE}/submit?q=set+max_hard_upload_rate+${HIGH_UP} -q 
 
 	eend $?
+}
+
+
+info() {
+	if service_started mldonkey 
+	then
+		BASE="http://"
+		if [[ -n ${USERNAME} && -n ${PASSWORD} ]]
+		then
+			BASE=${BASE}${USERNAME}:${PASSWORD}@
+		fi
+
+		BASE=${BASE}${SERVER}:${PORT}
+		VALUE=$(/usr/bin/wget -O - ${BASE}/submit?q=vo 2> /dev/null| /bin/grep  -C1 max_hard_upload|/usr/bin/tail -n 1|/bin/cut -d\" -f2)
+		if [[ ${VALUE} -eq ${LOW_UP} ]]
+		then
+			INFO="mldonkey runs slow"
+		else
+			INFO="mldonkey runs fast"
+		fi
+	else
+		INFO="mldonkey is not running"
+	fi
+	einfo "$INFO"
 }

@@ -1,120 +1,15 @@
-#!/sbin/runscript
+#!/bin/sh
 
-opts="start stop restart slow fast info"
+. /etc/conf.d/mldonkey
 
-depend() {
-	need net
-}
-
-start() {
-	ebegin "Starting mldonkey"
-	if [ ! -d ${BASEDIR}/${SUBDIR} ]
-	then
-		einfo "Directory ${BASEDIR}/${SUBDIR} not existing, trying to create..."
-		su ${USER} -c "mkdir ${BASEDIR}/${SUBDIR}" 
-		if [ ! -d ${BASEDIR}/${SUBDIR} ]
-		then
-			eerror "Directory ${BASEDIR}/${SUBDIR} could not be created!"
-			return 1
-		fi
-		einfo "...ok!"
+if [ ! -d ${HOME}/.mldonkey ] ; then
+	echo "Creating subdirectory \".mldonkey\" in your home"
+	echo "to store config files and downloaded files..."
+	
+	if ! mkdir ${HOME}/.mldonkey ; then
+		echo "Creation of subdirectory failed! Exiting..."
+		exit 1
 	fi
-	cd ${BASEDIR}/${SUBDIR}/
-	env HOME=${BASEDIR} start-stop-daemon --quiet --start -c ${USER}  \
-		-x /usr/bin/mlnet &>${LOG} &
-	sleep 5
-	if ! pgrep -u ${USER} mlnet >/dev/null
-	then
-		eerror "MLDonkey could not be started! Check logfile: ${LOG}"
-	fi
-	renice ${NICE} -u ${USER} >/dev/null
-	eend $?
-}
+fi
 
-stop() {
-	BASE="http://"
-	if [[ -n ${USERNAME} && -n ${PASSWORD} ]]
-	then
-		BASE=${BASE}${USERNAME}:${PASSWORD}@
-	fi
-	BASE=${BASE}${SERVER}:${PORT}
-	ebegin "Stopping mldonkey - please wait"
-	wget --spider ${BASE}/submit?q=close_fds -q 
-	wget --spider ${BASE}/submit?q=save -q 
-	wget --spider ${BASE}/submit?q=kill -q 
-	sleep 10
-	start-stop-daemon --oknodo --stop -x /usr/bin/mlnet &>/dev/null
-	eend $?
-}
-
-restart() {
-	svc_stop
-	sleep 5
-	svc_start
-}
-
-slow() {
-	if ! service_started mldonkey
-	then
-		start_service mldonkey
-	fi
-	ebegin "Reducing bandwidth to ${LOW_DOWN}k/${LOW_UP}k"
-
-	BASE="http://"
-	if [[ -n ${USERNAME} && -n ${PASSWORD} ]]
-	then
-		BASE=${BASE}${USERNAME}:${PASSWORD}@
-	fi
-	BASE=${BASE}${SERVER}:${PORT}
-
-	wget --spider ${BASE}/submit?q=set+max_hard_download_rate+${LOW_DOWN} -q 
-
-	wget --spider ${BASE}/submit?q=set+max_hard_upload_rate+${LOW_UP} -q 
-
-	eend $?
-}
-
-fast() {
-	if ! service_started mldonkey
-	then
-		start_service mldonkey
-	fi
-	ebegin "Increasing bandwidth to ${HIGH_DOWN}k/${HIGH_UP}k"
-
-	BASE="http://"
-	if [[ -n ${USERNAME} && -n ${PASSWORD} ]]
-	then
-		BASE=${BASE}${USERNAME}:${PASSWORD}@
-	fi
-	BASE=${BASE}${SERVER}:${PORT}
-
-	wget --spider ${BASE}/submit?q=set+max_hard_download_rate+${HIGH_DOWN} -q 
-
-	wget --spider ${BASE}/submit?q=set+max_hard_upload_rate+${HIGH_UP} -q 
-
-	eend $?
-}
-
-
-info() {
-	if service_started mldonkey 
-	then
-		BASE="http://"
-		if [[ -n ${USERNAME} && -n ${PASSWORD} ]]
-		then
-			BASE=${BASE}${USERNAME}:${PASSWORD}@
-		fi
-
-		BASE=${BASE}${SERVER}:${PORT}
-		VALUE=$(/usr/bin/wget -O - ${BASE}/submit?q=vo 2> /dev/null| /bin/grep  -C1 max_hard_upload|/usr/bin/tail -n 1|/bin/cut -d\" -f2)
-		if [[ ${VALUE} -eq ${LOW_UP} ]]
-		then
-			INFO="mldonkey runs slow"
-		else
-			INFO="mldonkey runs fast"
-		fi
-	else
-		INFO="mldonkey is not running"
-	fi
-	einfo "$INFO"
-}
+cd ${HOME}/.mldonkey && exec /usr/bin/mlnet
