@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_rc2.ebuild,v 1.1 2003/08/12 13:16:06 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_rc2.ebuild,v 1.2 2003/08/17 11:56:35 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -55,9 +55,7 @@ MY_PV="${PV/_rc/rc}"
 INSTDIR="${LOC}/OpenOffice.org${PV}"
 S="${WORKDIR}/oo_${MY_PV}_src"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
-SRC_URI="http://ny1.mirror.openoffice.org/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
-	http://sf1.mirror.openoffice.org/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
-	http://niihau.student.utwente.nl/openoffice/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
+SRC_URI="mirror://openoffice/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z
 	mirror://sourceforge/freetype/freetype-${FT_VER}.tar.bz2"
 HOMEPAGE="http://www.openoffice.org/"
