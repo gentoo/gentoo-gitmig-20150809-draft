@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/sawfish
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/ChangeLog,v 1.1 2004/06/26 19:19:46 mkennedy Exp $
+
+*sawfish-1.31 (26 Jun 2004)
+
+  26 Jun 2004; <mkennedy@gentoo.org> +metadata.xml,
+  +files/50sawfish-gentoo.el, +sawfish-1.31.ebuild:
+  New port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
