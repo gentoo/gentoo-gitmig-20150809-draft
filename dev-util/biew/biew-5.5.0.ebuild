@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.5.0.ebuild,v 1.3 2004/03/17 16:35:28 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.5.0.ebuild,v 1.4 2004/04/13 10:02:54 spock Exp $
 
 IUSE="slang ncurses"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://biew.sourceforge.net/"
 SRC_URI="mirror://sourceforge/biew/${PN}-550.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
