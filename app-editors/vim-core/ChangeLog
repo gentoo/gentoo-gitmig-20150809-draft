@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.40 2003/09/19 21:04:55 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.41 2003/09/24 14:14:23 gmsoft Exp $
 
   19 Sep 2003; Christian Birchinger <joker@gentoo.org> vim-core-6.2-r3.ebuild:
   Added sparc stable keyword
@@ -13,6 +13,9 @@
   98
 
 *vim-core-6.2-r3 (11 Aug 2003)
+
+  24 Aug 2003; Guy Martin <gmsoft@gentoo.org> vim-core-6.2-r3.ebuild :
+  Marked stable on hppa.
 
   11 Aug 2003; Aron Griffis <agriffis@gentoo.org> vim-core-6.2-r3.ebuild:
   Update to 6.2.069 plus a runtime patch to fix bug 25868
