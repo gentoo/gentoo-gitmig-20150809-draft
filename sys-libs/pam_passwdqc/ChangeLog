@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/pam_passwdqc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_passwdqc/ChangeLog,v 1.1 2003/09/17 04:39:46 hhg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_passwdqc/ChangeLog,v 1.2 2003/11/18 20:24:25 hhg Exp $
+
+*pam_passwdqc-0.7.5 (18 Nov 2003)
+
+  18 Nov 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org>
+  pam_passwdqc-0.7.5.ebuild:
+  version bump to 0.7.5 and marked stable on x86
 
 *pam_passwdqc-0.7.4 (17 Sep 2003)
 
