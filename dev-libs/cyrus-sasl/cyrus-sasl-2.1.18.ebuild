@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.16 2004/07/02 10:03:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.17 2004/07/14 14:15:42 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -90,8 +90,7 @@ src_compile() {
 	use alpha && append-flags -D_REENTRANT -pthread
 
 	# Detect mips systems properly.
-	use mips && gnuconfig_update
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 
 	econf \
 		--with-saslauthd=/var/lib/sasl2 \
