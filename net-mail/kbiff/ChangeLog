@@ -1,6 +1,8 @@
 # ChangeLog for net-mail/kbiff
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/kbiff/ChangeLog,v 1.2 2002/03/28 17:33:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/kbiff/ChangeLog,v 1.3 2002/04/15 20:56:07 danarmak Exp $
+
+*kbiff-3.6.1 (15 Apr 2002) this and 3.5.5 (kde2): new upstream versions.
 
 *kbiff-3.6 (28 Mar 2002) new upstream version (kde3).
 
