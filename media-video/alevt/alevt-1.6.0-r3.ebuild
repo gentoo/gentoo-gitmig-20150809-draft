@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.0-r3.ebuild,v 1.5 2004/05/10 21:07:06 lv Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.0-r3.ebuild,v 1.6 2004/06/08 11:44:55 agriffis Exp $ 
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_install() {
 	doman alevt.1x alevt-date.1 alevt-cap.1
 	dodoc CHANGELOG COPYRIGHT README
 
-	if [ `use gnome` ] ; then
+	if use gnome ; then
 		insinto /usr/share/pixmaps
 		newins contrib/mini-alevt.xpm alevt.xpm
 		insinto /usr/share/applications
