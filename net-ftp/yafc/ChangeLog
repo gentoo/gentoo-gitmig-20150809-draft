@@ -1,0 +1,13 @@
+# ChangeLog for net-ftp/yafc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.1 2002/05/27 01:24:18 rphillips Exp $
+
+*yafc-0.7.2-r1 (26 May 2002)
+
+  26 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
