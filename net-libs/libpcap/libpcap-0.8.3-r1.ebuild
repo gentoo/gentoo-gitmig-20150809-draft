@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.17 2005/01/22 06:49:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.18 2005/01/29 00:37:20 dragonheart Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -14,7 +14,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="ipv6"
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	!virtual/libpcap"
+
+PROVIDE="virtual/libpcap"
 
 src_unpack() {
 	unpack ${A}

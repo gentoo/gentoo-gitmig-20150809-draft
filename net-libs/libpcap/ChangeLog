@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.33 2005/01/22 06:49:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.34 2005/01/29 00:37:20 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> libpcap-0.8.3-r1.ebuild:
+  new PROVIDE - virtual/libpcap
 
   22 Jan 2005; Daniel Black <dragonheart@gentoo.org> -libpcap-0.7.2-r1.ebuild,
   -libpcap-0.7.2.ebuild, -libpcap-0.8.1-r1.ebuild, -libpcap-0.8.1.ebuild,

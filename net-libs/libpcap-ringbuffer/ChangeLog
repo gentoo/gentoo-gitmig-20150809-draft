@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap-ringbuffer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/ChangeLog,v 1.1 2005/01/22 07:48:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/ChangeLog,v 1.2 2005/01/29 00:38:30 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  libpcap-ringbuffer-1.0.20041001.ebuild:
+  new PROVIDE - virtual/libpcap
 
 *libpcap-ringbuffer-1.0.20041001 (22 Jan 2005)
 
