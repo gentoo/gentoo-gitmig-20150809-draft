@@ -7,7 +7,7 @@ MD5 700847ed391acb0a68c257a9733633b5 gphoto2-2.1.2.ebuild 1654
 MD5 d7b12401338c955010ce8af19950f06b gphoto2-2.1.3.ebuild 1655
 MD5 80c08964317a7e9f0c9127c029256b29 gphoto2-2.1.4.ebuild 1662
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
-MD5 75b2ac1835413c93c4b1217a63715572 gphoto2-2.1.5.ebuild 1707
+MD5 9c66cac1169b00590ad7e0e916dbe8b2 gphoto2-2.1.5.ebuild 1707
 MD5 c3967212175ba0688697980155c735d2 files/digest-gphoto2-2.1.1-r1 66
 MD5 520a73692fdd0ba51a0291f4344a27eb files/digest-gphoto2-2.1.2 66
 MD5 491b384e9ac759ba8ad7aaa954bdbf51 files/digest-gphoto2-2.1.3 66
@@ -16,7 +16,7 @@ MD5 140f74b092e17be74411552ab8821e55 files/digest-gphoto2-2.1.5 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB5pZBRkyva5PS18kRAsOmAJ0XLv0QpC2AbXgPU/ETHmyq6zw9igCgrpmh
-fqu0VCEC286T7tx1n6ySz5A=
-=6HYo
+iD8DBQFB5pbWRkyva5PS18kRAjx0AKCuu/IXJivczEWo9hEWXL20rYkp8ACcDdsG
+OoDBf5p5o+YOCKPRebEzNFM=
+=glBK
 -----END PGP SIGNATURE-----
