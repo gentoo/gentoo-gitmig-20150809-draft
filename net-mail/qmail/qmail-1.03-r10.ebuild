@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.20 2003/07/27 10:32:12 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.21 2003/07/31 00:51:13 vapier Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-${PR}/smtp-auth-close3.patch
 
 	# TLS support and an EHLO patch
-	use ssl && bzcat ${FILESDIR}/${PV}-${PR}/tls.patch.bz2 | patch || die
+	use ssl && epatch ${FILESDIR}/${PV}-${PR}/tls.patch.bz2
 
 	# patch so an alternate queue processor can be used
 	# i.e. - qmail-scanner
