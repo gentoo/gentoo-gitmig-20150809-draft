@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.21 2004/06/07 23:59:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.22 2004/06/14 00:02:20 dragonheart Exp $
+
+  14 Jun 2004; Daniel Black <dragonheart@gentoo.org> opencdk-0.5.3.ebuild:
+  x86 keyworded to remove circular emerges on dependancy libgcrypt. Fixes bug
+  #53775. Thank to Leonid Podolny <leonid@aduva.com> for the bug report
 
   08 Jun 2004; Daniel Black <dragonheart@gentoo.org> opencdk-0.5.1.ebuild:
   Explicit depend on dev-libs/libgcrypt-1.1.12. Fails on version 1.94.
