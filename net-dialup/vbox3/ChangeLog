@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/vbox3
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/vbox3/ChangeLog,v 1.1 2004/11/21 18:23:25 mrness Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/vbox3/ChangeLog,v 1.2 2005/02/12 09:44:01 mrness Exp $
+
+  12 Feb 2005; Alin Nastac <mrness@gentoo.org> vbox3-0.1.9.ebuild:
+  Mark as stable on x86.
 
 *vbox3-0.1.9 (21 Nov 2004)
 
