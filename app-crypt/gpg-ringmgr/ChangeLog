@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gpg-ringmgr
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-ringmgr/ChangeLog,v 1.3 2004/04/06 03:27:49 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-ringmgr/ChangeLog,v 1.4 2004/06/06 23:24:06 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  gpg-ringmgr-1.12.ebuild:
+  QA - IUSE fix
 
   05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> gpg-ringmgr-1.12.ebuild:
   Marking stable on hppa

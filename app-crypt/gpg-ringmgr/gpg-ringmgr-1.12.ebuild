@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-ringmgr/gpg-ringmgr-1.12.ebuild,v 1.8 2004/04/06 03:27:49 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-ringmgr/gpg-ringmgr-1.12.ebuild,v 1.9 2004/06/06 23:24:06 dragonheart Exp $
 
 DESCRIPTION="GPG Keyring Manager to handle large GPG keyrings more easily"
 HOMEPAGE="http://www.ualberta.ca/~rbpark/gpg-ringmgr.html"
@@ -8,6 +8,7 @@ SRC_URI="http://www.ualberta.ca/~rbpark/projects/${PN}"
 
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86 ~ppc ~sparc alpha hppa"
 
 DEPEND="dev-lang/perl
