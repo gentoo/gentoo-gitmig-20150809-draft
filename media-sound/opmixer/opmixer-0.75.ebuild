@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.9 2003/04/04 13:21:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.10 2003/07/12 23:41:04 aliz Exp $
 
 MY_P=${P/opm/opM}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc ~sparc"
 
 
 DEPEND="=x11-libs/gtk+-1.2*
-	=x11-libs/gtkmm-1.2*"
+	=dev-cpp/gtkmm-1.2*"
 
 src_compile() {
 	econf || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.5.1.ebuild,v 1.2 2003/05/09 15:56:32 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.5.1.ebuild,v 1.3 2003/07/12 23:41:04 aliz Exp $
 
 DESCRIPTION="Graphical patch bay for the ALSA sequencer API."
 HOMEPAGE="http://pkl.net/~node/alsa-patch-bay.html"
@@ -15,7 +15,7 @@ IUSE=""
 # To use fltk instead, do $ USE="fltk" emerge alsa-patch-bay
 # Note: fltk is not an official USE flag, and the dependency on
 # it may go away in the future.
-DEPEND="!fltk? x11-libs/gtkmm
+DEPEND="!fltk? dev-cpp/gtkmm
         fltk? >=x11-libs/fltk-1.1.2
         >=media-sound/alsa-driver-0.9.0_rc1
         >=media-libs/alsa-lib-0.9.0_rc1

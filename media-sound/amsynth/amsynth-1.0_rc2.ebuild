@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0_rc2.ebuild,v 1.1 2003/07/02 11:58:14 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0_rc2.ebuild,v 1.2 2003/07/12 23:41:04 aliz Exp $
 
 MY_P=${P/_rc/-rc}
 MY_P=${MY_P/amsynth/amSynth}
@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 IUSE="oss alsa jack"
 
 # libsndfile support is actually optional, but IMHO this package should have it
-DEPEND="=x11-libs/gtkmm-1.2* \
+DEPEND="=dev-cpp/gtkmm-1.2* \
 	media-libs/libsndfile \
 	alsa? ( media-libs/alsa-lib \
 		media-sound/alsa-utils ) \

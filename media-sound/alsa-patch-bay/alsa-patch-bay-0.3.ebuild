@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.3.ebuild,v 1.3 2003/02/13 13:05:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.3.ebuild,v 1.4 2003/07/12 23:41:04 aliz Exp $
 
 DESCRIPTION="Graphical patch bay for the ALSA sequencer API."
 HOMEPAGE="http://pkl.net/~node/alsa-patch-bay.html"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND=">=x11-libs/gtkmm-2.0.2
+DEPEND=">=dev-cpp/gtkmm-2.0.2
 	>=media-sound/alsa-driver-0.9.0_rc1
 	>=media-libs/alsa-lib-0.9.0_rc1
 	>=media-sound/alsa-utils-0.9.0_rc1"
