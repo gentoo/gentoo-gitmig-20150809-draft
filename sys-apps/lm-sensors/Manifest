@@ -5,7 +5,7 @@ MD5 37443e54165d5bcdaa8550d52edafa98 metadata.xml 228
 MD5 0a8a5b7c595d62f66dedb4e0c81c81db lm-sensors-2.7.0.ebuild 2323
 MD5 047bab9156d7955ff3cd9b52974c771e lm-sensors-2.8.2.ebuild 4745
 MD5 846852ccef6091ef1bc98bf955e69cee lm-sensors-2.7.0-r1.ebuild 2668
-MD5 2251e32f807bf2f0478f575f39ac65fa lm-sensors-2.8.1.ebuild 3993
+MD5 929b2ddc5b1ca7604addbba83d4c0303 lm-sensors-2.8.1.ebuild 3884
 MD5 e7d4c59852cf30645216f50ef7a3377b files/digest-lm-sensors-2.8.1 68
 MD5 f07f401256b40cdec1c0518d28ee1aca files/digest-lm-sensors-2.7.0-r1 158
 MD5 72151bdd499b580ff965dd1a2e4216fb files/lm-sensors-2.8.1-sensors-detect-gentoo.diff 4973
