@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.3 2003/08/31 03:25:30 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.4 2003/08/31 03:27:32 scandium Exp $
 
 inherit flag-o-matic
 
@@ -45,7 +45,7 @@ src_install () {
 	make INSTALLARGS="--traditional" buildroot="${D}" install || die
 
 	if use doc; then
-		einfo "Installing 60MB of docs, this could take a while ..."
+		einfo "Installing 60MB of docs, this could some time ..."
 		dohtml -r ${S}/refdoc/traditional_manual ${S}/refdoc/modref
 	fi
 }
