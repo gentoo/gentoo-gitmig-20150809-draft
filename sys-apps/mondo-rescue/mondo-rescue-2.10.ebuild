@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-2.10.ebuild,v 1.3 2004/08/13 13:49:38 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-2.10.ebuild,v 1.4 2004/10/19 13:43:26 vapier Exp $
 
 inherit libtool
 
@@ -10,21 +10,21 @@ SRC_URI="http://www.microwerks.net/~hugo/download/MondoCD/TGZS/${PN/-rescue/}-${
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -*"
+KEYWORDS="-* ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
-		>=sys-libs/slang-1.4.1
-		>=dev-libs/newt-0.50"
+	>=sys-libs/slang-1.4.1
+	>=dev-libs/newt-0.50"
 RDEPEND="app-arch/afio
-		sys-apps/buffer
-		sys-devel/binutils
-		>=app-arch/bzip2-0.9
-		app-cdr/cdrtools
-		>=sys-apps/mindi-1.10
-		>=dev-libs/newt-0.50
-		>=sys-libs/slang-1.4.1
-		>=sys-boot/syslinux-1.52"
+	sys-apps/buffer
+	sys-devel/binutils
+	>=app-arch/bzip2-0.9
+	app-cdr/cdrtools
+	>=sys-apps/mindi-1.10
+	>=dev-libs/newt-0.50
+	>=sys-libs/slang-1.4.1
+	>=sys-boot/syslinux-1.52"
 
 S=${WORKDIR}/${PN/-rescue/}-${PV}
 
