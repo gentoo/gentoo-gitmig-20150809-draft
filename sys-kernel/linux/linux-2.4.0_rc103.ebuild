@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc103.ebuild,v 1.1 2001/01/02 16:30:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc103.ebuild,v 1.2 2001/01/02 17:59:47 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-prerelease-ac3
@@ -98,8 +98,8 @@ src_unpack() {
 	echo "Preparing for compilation..."
 	cd ${S}
 	#this is the configuration for the bootdisk/cd
-#	cp ${FILESDIR}/${PV}/${PF}.config .config
-#	cp ${FILESDIR}/${PV}/${PF}.autoconf include/linux/autoconf.h
+	cp ${FILESDIR}/${PV}/${PF}.config .config
+	cp ${FILESDIR}/${PV}/${PF}.autoconf include/linux/autoconf.h
 	try make include/linux/version.h
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
@@ -119,6 +119,7 @@ src_compile() {
 	( cd /usr/src; ln -s ${S} linux )
 	#symlink tweak in place
 	cd ${S}/fs/reiserfs/utils
+
     try make
     cd ${S}/lm_sensors-2.5.4
     try make
@@ -135,7 +136,19 @@ src_compile() {
 		cd ${S}/extras/NVIDIA_kernel-0.9-5
 		make NVdriver
 		cd ${S}/extras/alsa-driver-0.5.10
-		try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
+		try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes \
+			--with-cards=\   
+			  share,dummy,virmidi,interwave,interwave-stb,\
+                          gusmax,gusextreme,gusclassic,es1688, es18xx,\
+                          sb8,sb16,sbawe,emu10k1,opl3sa2,mozart,\
+                          sonicvibes,ens1370,ens1371,ad1816a,ad1848,\
+                          als100,als4000,azt2320,cs4231,cs4232,cs4236,\
+                          cs4281,cs461x,cs4281,es968,dt0197h,fm801,\
+                          es1938,es1968,opti92x-ad1848,opti92x-cs4231,\
+                          opti93x,serial,trident,sgalaxy,\
+                          hal2,cmi8330,mtpav,rme96,rme9652,ice1712,\
+                          intel8x0,via686a,cmipci,ymfpci,maestro3
+		# "wavefront" is buggy in 0.5.10
 		try make
 	fi
 	#untweak the symlink
@@ -183,6 +196,7 @@ src_install() {
 		cd ${S}
 		doins arch/i386/boot/bzImage
 		#grab modules
+		dodir /lib/modules/2.4.0-prerelease-ac1
 		try make INSTALL_MOD_PATH=${D} modules_install
 		#install ALSA modules
 		cd ${S}/extras/alsa-driver-0.5.10
