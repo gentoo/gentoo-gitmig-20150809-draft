@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r5.ebuild,v 1.2 2002/08/04 21:48:24 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r5.ebuild,v 1.3 2002/08/12 12:26:16 stroke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome ICQ Client"
-SRC_URI="mirror://sourceforge/gnomeicu/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gnomeicu/${P}.tar.bz2"
 HOMEPAGE="http://gnomeicu.sourceforge.net/"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2

@@ -1,25 +1,30 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r4.ebuild,v 1.1 2002/07/30 14:28:11 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.111.ebuild,v 1.1 2002/08/12 12:26:16 stroke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome ICQ Client"
-SRC_URI="mirror://sourceforge/gnomeicu/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gnomeicu/${P}.tar.bz2"
 HOMEPAGE="http://gnomeicu.sourceforge.net/"
-
-DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
-	>=sys-libs/gdbm-1.8.0
-	>=gnome-base/libglade-0.17*
-	>=media-libs/gdk-pixbuf-0.9.0	
-	>=net-libs/gnet-1.1.0
-	gnome? ( =gnome-base/gnome-panel-1.4* )
-	esd? ( >=media-sound/esound-0.2.23 )"
-
-RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86" 
+
+DEPEND=">=x11-libs/gtk+-2.0.5
+	>=dev-libs/libxml2-2.4.23
+	>=gnome-base/libgnome-2.0.0
+	>=gnome-base/libgnomeui-2.0.0
+	>=sys-libs/gdbm-1.8.0
+	>=gnome-base/libglade-2.0.0	
+	>=net-libs/gnet-1.1.3
+	gnome? ( >=gnome-base/gnome-panel-2.0.0 )
+	esd? ( >=media-sound/esound-0.2.28 )"
+
+	# socks5? ( something to support socks5 in portage is needed )
+
+RDEPEND="nls? ( sys-devel/gettext )"
+
 
 src_compile() {                           
 	local myconf
@@ -28,7 +33,10 @@ src_compile() {
 
 	use esd || myconf="${myconf} --disable-esd-test"
 	
-	use socks5 && myconf="${myconf} --enable-socks5"
+	# Disabling socks5 support. if socks5 is present
+	# in USE, gnomeicu buid will fail. Check ChangeLog
+	# for more info about this issue. stroke@gentoo.org 
+	# use socks5 && myconf="${myconf} --enable-socks5"
 	
 	use nls || ( \
 		myconf="${myconf} --disable-nls"
