@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.15 2004/09/18 19:47:15 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.16 2004/09/20 09:20:21 ka0ttic Exp $
+
+  20 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> files/tmpwatch.cron:
+  Fixed typo in cron script.
 
 *tmpwatch-2.9.1.1 (18 Sep 2004)
 
