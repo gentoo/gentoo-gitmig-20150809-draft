@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/jpilot-syncmal
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/ChangeLog,v 1.1 2004/07/05 16:59:30 agriffis Exp $
+
+*jpilot-syncmal-0.72.1 (05 Jul 2004)
+
+  05 Jul 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +jpilot-syncmal-0.72.1.ebuild:
+  Split jpilot-syncmal plugin from jpilot ebuild
+
