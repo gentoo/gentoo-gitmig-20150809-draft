@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3-r1.ebuild,v 1.3 2003/09/19 19:35:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3-r1.ebuild,v 1.4 2003/09/29 20:45:34 liquidx Exp $
 
 DESCRIPTION="bluetooth utilities"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -57,10 +57,11 @@ src_install() {
 		-e "s:security auto;:security user;:" \
 		-i ${D}/etc/bluetooth/hcid.conf
 
-	insinto /etc/init.d
-	newins ${FILESDIR}/bluetooth.rc bluetooth
-	insinto /etc/bluetooth
-	newins ${FILESDIR}/pin.sample pin
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/bluetooth.rc bluetooth
+	
+	exeinto /etc/bluetooth
+	newexe ${FILESDIR}/pin.sample pin
 	fperms 0700 /etc/bluetooth/pin
 }
 
