@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fileutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.17 2003/06/23 14:55:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.18 2003/06/23 18:26:55 mholzer Exp $
+
+  23 Jun 2003; Martin Holzer <mholzer@gentoo.org> fileutils-4.1.11-r1.ebuild:
+  Fixed SRC_URI. Closes #23333.
 
   23 Jun 2003; Brandon Low <lostlogic@gentoo.org> fileutils-4.1.11-r1.ebuild:
   Fix KEYWORDS
