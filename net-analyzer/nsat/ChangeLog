@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nsat
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.4 2003/10/28 13:36:37 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.5 2004/04/27 21:12:21 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> nsat-1.5.ebuild:
+  Add inherit eutils
 
   28 Oct 2003; Daniel Ahlberg <aliz@gentoo.org> nsat-1.5.ebuild :
   DEPEND fixes, sed fixes and sparc keyword from #31244.

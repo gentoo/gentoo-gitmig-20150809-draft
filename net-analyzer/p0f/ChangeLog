@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/p0f
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.10 2004/02/06 14:56:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.11 2004/04/27 21:15:12 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> p0f-2.0.3.ebuild:
+  Add inherit eutils
 
 *p0f-2.0.3 (06 Feb 2004)
 

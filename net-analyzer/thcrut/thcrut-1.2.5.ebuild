@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc., Copyright 2003 The Hackers Choice - http://www.thc.org
+# Copyright 1999-2004 Gentoo Technologies, Inc., Copyright 2003 The Hackers Choice - http://www.thc.org
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/thcrut-1.2.5.ebuild,v 1.2 2003/11/10 14:45:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/thcrut-1.2.5.ebuild,v 1.3 2004/04/27 21:24:07 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Network discovery and fingerprinting tool"
 HOMEPAGE="http://www.thc.org/thc-rut/"

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: 
 
+inherit eutils
+
 DESCRIPTION="Sarg (Squid Analysis Report Generator) is a tool that allows you to view where your users are going to on the Internet."
 HOMEPAGE="http://web.onda.com.br/orso/sarg.html"
 SRC_URI="http://web.onda.com.br/orso/${P}.tar.gz http://web.onda.com.br/orso/patches/sarg-1.4.1-index.sort.patch"

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/slurm-0.2.3.ebuild,v 1.2 2004/03/21 21:57:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/slurm-0.2.3.ebuild,v 1.3 2004/04/27 21:18:27 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Realtime network interface monitor based on FreeBSD's pppstatus"
 HOMEPAGE="http://www.raisdorf.net/slurm/"

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.2c.ebuild,v 1.6 2004/03/11 04:40:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.2c.ebuild,v 1.7 2004/04/27 21:13:26 agriffis Exp $
+
+inherit eutils
 
 IUSE="ssl readline tcpd ncurses"
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traffic-vis
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.4 2004/02/06 15:16:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.5 2004/04/27 21:25:30 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> traffic-vis-0.35.ebuild:
+  Add inherit eutils
 
   06 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> traffic-vis-0.35.ebuild,
   files/traffic-vis-0.35-libpcap-header-fix.patch:

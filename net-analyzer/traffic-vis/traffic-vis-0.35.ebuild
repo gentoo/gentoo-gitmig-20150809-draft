@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35.ebuild,v 1.4 2004/02/06 15:16:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35.ebuild,v 1.5 2004/04/27 21:25:30 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Generate traffic stats in html, ps, text and gif format"
 HOMEPAGE="http://www.mindrot.org/traffic-vis.html"

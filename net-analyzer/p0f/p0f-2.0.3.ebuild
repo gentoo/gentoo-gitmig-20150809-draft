@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.3.ebuild,v 1.1 2004/02/06 14:56:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.3.ebuild,v 1.2 2004/04/27 21:15:12 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="p0f performs passive OS detection based on SYN packets."
 # the p0f.tgz always resembles the latest version, trashing the digest md5sum then, discovered and fixed by gustavoz

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/thcrut
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.2 2004/03/19 09:44:52 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.3 2004/04/27 21:24:07 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> thcrut-1.2.5.ebuild:
+  Add inherit eutils
 
 *thcrut-1.2.5 (02 Oct 2003)
 

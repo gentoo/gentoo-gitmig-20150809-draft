@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/oinkmaster
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.1 2004/02/17 06:28:05 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.2 2004/04/27 21:14:20 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> oinkmaster-0.9.ebuild:
+  Add inherit eutils
 
 *oinkmaster-0.9 (17 Feb 2004)
 

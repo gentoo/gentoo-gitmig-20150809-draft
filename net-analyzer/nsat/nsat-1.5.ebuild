@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.7 2004/01/30 06:52:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.8 2004/04/27 21:12:21 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Network Security Analysis Tool, an application-level network security scanner"
 HOMEPAGE="http://nsat.sourceforge.net/"

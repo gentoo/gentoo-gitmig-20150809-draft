@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/portsentry
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.13 2003/10/23 14:10:24 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.14 2004/04/27 21:16:21 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> portsentry-1.2.ebuild:
+  Add inherit eutils
 
   16 Sep 2003; Martin Holzer <mholzer@gentoo.org> portsentry-1.2.ebuild:
   Added gcc patch. Closes #28663.
