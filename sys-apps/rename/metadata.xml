@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+    <email>port001@gentoo.org</email>
+    <name>Ian Leitch</name>
+</maintainer>
+<longdescription>
+    Rename is a command-line rename tool. It can substitute, lowcase, upcase large numbers of file names, or change their ownerships. This is a quick and powerful tool written in C with extended regular expression support for searching and substituting pattern strings in filenames.    
+</longdescription>
+</pkgmetadata>
+
