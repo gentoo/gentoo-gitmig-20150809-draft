@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.23 2003/03/01 03:38:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.24 2003/03/03 21:27:15 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -567,4 +567,15 @@ enewgroup() {
 	export SANDBOX_ON="0"
 	groupadd ${opts} ${egroup} || die "enewgroup failed"
 	export SANDBOX_ON="${oldsandbox}"
+}
+
+# Simple script to replace 'dos2unix' binaries
+# vapier@gentoo.org
+#
+# edos2unix(file, <more files>...)
+edos2unix() {
+	for f in $@ ; do
+		cp ${f} ${T}/
+		sed 's/\r$//' ${T}/${f}.old > ${f}
+	done
 }
