@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/libmal-0.31.ebuild,v 1.4 2003/07/16 16:59:04 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/libmal-0.31.ebuild,v 1.5 2003/08/30 10:15:39 liquidx Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ppc ~sparc"
 
 DEPEND="virtual/glibc \
-		>=dev-libs/pilot-link-0.11.7-r1"
+		>=app-pda/pilot-link-0.11.7-r1"
 
 src_compile() {
 	econf || die "./configure failed"
