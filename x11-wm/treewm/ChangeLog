@@ -1,9 +1,10 @@
 # ChangeLog for x11-wm/treewm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/treewm/ChangeLog,v 1.7 2003/09/10 15:23:15 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/treewm/ChangeLog,v 1.8 2003/09/12 06:05:23 lordvan Exp $
 
 *treewm-0.4.3 (10 Sep 2003)
-
+  12 Sep 2003; Thomas Raschbacher <lordvan@gentoo.org> treewm-0.4.3 - digest:
+  wrong digest
   10 Sep 2003; Brandon Hale <tseng@gentoo.org> treewm-0.4.3.ebuild:
   Version bump, thanks to Rudolf Polzer.
 
