@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.136 2004/08/23 21:39:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.137 2004/09/05 17:11:18 eradicator Exp $
+
+  05 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r5.ebuild, xmms-1.2.8-r4.ebuild:
+  Added inherit gnuconfig to close bug #62744.
 
   23 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -xmms-1.2.10-r1.ebuild:

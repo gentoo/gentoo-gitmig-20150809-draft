@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.18 2004/07/14 21:08:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.19 2004/09/05 17:11:18 eradicator Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk gtk2 alsa"
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gnuconfig
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 PATCHVER="0.2"
