@@ -1,4 +1,4 @@
-MD5 85d30f5e2707a53bd35b201a29371f05 files/digest-php-core-4.3.4 208
-MD5 103024c30f1f38d3747c912c7e2f8a87 php-core-4.3.4.ebuild 1940
-MD5 999ef3aa70ded5bb1174a47a3f53bbd1 ChangeLog 376
+MD5 1e52a65a59d4362ea87c163882c91400 ChangeLog 469
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
+MD5 022988ee943d11e59b0de37b8295b6a8 php-core-4.3.4.ebuild 1949
+MD5 85d30f5e2707a53bd35b201a29371f05 files/digest-php-core-4.3.4 208
