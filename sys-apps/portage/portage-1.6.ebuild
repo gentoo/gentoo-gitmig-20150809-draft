@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.6.ebuild,v 1.1 2001/08/26 04:45:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.6.ebuild,v 1.2 2001/08/26 04:50:20 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
@@ -69,7 +69,7 @@ pkg_postinst() {
 	if [ ! -e ${ROOT}/etc/make.profile ]
 	then
 		cd ${ROOT}/etc
-		ln -s ../usr/portage/profiles/default make.profile
+		ln -s ../usr/portage/profiles/default-1.0_rc6 make.profile
 	fi
 	local x
 	for x in portage xpak
