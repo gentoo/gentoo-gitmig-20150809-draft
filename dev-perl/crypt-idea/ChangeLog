@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/crypt-idea
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.1 2003/06/23 17:52:30 mcummings Exp $
+
+*crypt-idea-1.02 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org> crypt-idea-1.02.ebuild:
+  dep for net-ssh
+
