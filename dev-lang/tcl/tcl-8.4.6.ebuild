@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.2 2004/04/20 00:52:21 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.3 2004/04/20 09:44:21 port001 Exp $
 
 IUSE="threads"
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ppc64 ~ia64 ~s390"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha mips ~hppa ~amd64 ~ppc64 ~ia64 ~s390"
 RESTRICT="nomirror"
 
 DEPEND="virtual/glibc
