@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tunesbrowser/tunesbrowser-0.1.6.ebuild,v 1.6 2005/01/22 16:01:34 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tunesbrowser/tunesbrowser-0.1.6.ebuild,v 1.7 2005/03/02 20:35:08 chainsaw Exp $
 
 IUSE=""
 
@@ -18,7 +18,8 @@ KEYWORDS="amd64 ppc x86"
 DEPEND=">=media-libs/gstreamer-0.8
 	>=media-plugins/gst-plugins-mad-0.8
 	>=media-plugins/gst-plugins-oss-0.8
-	media-libs/libopendaap"
+	media-libs/libopendaap
+	>=gnome-base/libglade-2.0"
 
 src_unpack() {
 	unpack ${A}
