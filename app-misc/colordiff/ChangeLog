@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.31 2005/01/02 21:10:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.32 2005/03/29 13:42:20 ka0ttic Exp $
+
+*colordiff-1.0.5 (29 Mar 2005)
+
+  29 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +colordiff-1.0.5.ebuild:
+  Version bump.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
