@@ -68,7 +68,7 @@ dev-libs/libtomcrypt
 # <azarah@gentoo.org> (07 Jan 2003)
 # new alpha release.  do not use tmpfs by default for dep cache, and
 # move dep cache dir to /var/state/init.d.  also some raid updates.
-#>=sys-apps/baselayout-1.8.6.0
+>=sys-apps/baselayout-1.8.6.0
 
 # <jhhudso@gentoo.org> (24 Dec 2002)
 # Testing xemacs without sandbox disable, since --pdump has been added
