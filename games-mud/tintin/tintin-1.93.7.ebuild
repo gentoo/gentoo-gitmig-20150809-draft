@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.93.3.ebuild,v 1.3 2005/01/23 06:41:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.93.7.ebuild,v 1.1 2005/01/23 06:41:17 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.scandum.com/tintin/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -22,13 +22,9 @@ S="${WORKDIR}/tt/src"
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-	rm -f *.o tt++
-}
-
-src_compile() {
-	egamesconf || die
-	emake CFLAGS="$CFLAGS" || die "emake failed"
+	sed -i \
+		-e '/^CFLAGS/s/=/+=/' "${S}/Makefile.in" \
+		|| die "sed failed"
 }
 
 src_install () {
