@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/psh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.1 2002/02/01 21:53:09 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.2 2002/07/08 15:50:20 aliz Exp $
+
+*psh-0.009-r2 (8 Jul 2002)
+
+  8 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> psh-0.009-r2.ebuild files/digest-psh-0.009-r2:
+
+  Fixes bug #4669.
 
 *psh-0.009-r1 (1 Feb 2002)
 
