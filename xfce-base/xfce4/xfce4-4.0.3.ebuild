@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.0.3.ebuild,v 1.1 2004/01/09 05:26:43 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.0.3.ebuild,v 1.2 2004/01/09 05:56:08 bcowan Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -25,7 +25,7 @@ DEPEND="=xfce-base/xfce4-base-${PV}
 	>=xfce-extra/xfwm4-themes-${PV}
 	>=xfce-extra/xfce4-showdesktop-0.1.1
 	>=xfce-extra/xfce4-minicmd-0.1.1
-	>=xfce-extra/xfce4-netload-0.1.3"
+	>=xfce-extra/xfce4-netload-0.1.3
 	>=xfce-extra/xfcalendar-0.1.5"
 
 src_install() {
