@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.8 2005/01/02 11:56:08 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.9 2005/03/14 10:45:11 ka0ttic Exp $
 #
 # Simple eclass that provides an interface for installing
 # contributed (ie not included in bash-completion proper)
@@ -21,8 +21,12 @@ RDEPEND="${RDEPEND}
 
 # dobashcompletion <file> <new file>
 #	First arg, <file>, is required and is the location of the bash-completion
-# script to install.  Second arg, <new file>, is optional and specifies an
-# alternate filename to install as.
+# script to install.  If the variable BASH_COMPLETION_NAME is set in the
+# ebuild, dobashcompletion will install <file> as
+# /usr/share/bash-completion/$BASH_COMPLETION_NAME. If it is not set,
+# dobashcompletion will check if a second arg ($2) was passed, installing as
+# the specified name.  Failing both these checks, dobashcompletion will
+# install the file as /usr/share/bash-completion/${PN}.
 
 dobashcompletion() {
 	[[ -z "$1" ]] && die "usage: dobashcompletion <file> <new file>"
