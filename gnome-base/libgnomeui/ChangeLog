@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libgnomeui
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.44 2004/03/20 08:32:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.45 2004/03/22 11:55:52 foser Exp $
+
+*libgnomeui-2.6.0 (20 Mar 2004)
+
+  22 Mar 2004; foser <foser@gentoo.org> libgnomeui-2.6.0.ebuild :
+  Gnome 2.6 final
 
 *libgnomeui-2.5.92 (20 Mar 2004)
 

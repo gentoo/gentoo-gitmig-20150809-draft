@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.5.92.1.ebuild,v 1.1 2004/03/19 16:25:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.6.0.ebuild,v 1.1 2004/03/22 11:58:20 foser Exp $
 
 inherit gnome2
 
