@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips64-1.4/use.mask,v 1.10 2004/10/20 01:48:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips64-1.4/use.mask,v 1.11 2004/10/23 14:56:58 ciaranm Exp $
 
 # Ciaran McCreesh <ciaranm@gentoo.org>
 # not even slightly reliable, bug #65216
@@ -12,6 +12,10 @@ selinux
 # There is no java in this profile (if there is it must be available). Without
 # this repoman will fail on apps like sys-libs/db
 java
+
+# Ciaran McCreesh <ciaranm@gentoo.org>
+# No java, no netbeans
+netbeans
 
 # Aron Griffis <agriffis@gentoo.org>
 # acl doesn't build on mips atm.  Mask it so that vim quits
