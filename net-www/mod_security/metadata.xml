@@ -5,4 +5,7 @@
 <maintainer>
   <email>apache-devs@gentoo.org</email>
 </maintainer>
+<maintainer>
+  <email>beu@gentoo.org</email>
+</maintainer>
 </pkgmetadata>

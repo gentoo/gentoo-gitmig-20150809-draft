@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mod_security
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_security/ChangeLog,v 1.7 2005/01/09 00:17:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_security/ChangeLog,v 1.8 2005/03/01 01:50:39 beu Exp $
+
+*mod_security-1.8.7_rc2 (01 Mar 2005)
+
+  01 Mar 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml,
+  +mod_security-1.8.7_rc2.ebuild:
+  Version bump.  Fixes a few segfaults (Apache 2.x only), and a few other bugs.
 
 *mod_security-1.8.6 (09 Jan 2005)
 
