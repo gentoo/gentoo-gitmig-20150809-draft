@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndoc/ndoc-1.3.1.ebuild,v 1.4 2005/04/02 19:15:35 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndoc/ndoc-1.3.1-r1.ebuild,v 1.1 2005/04/03 07:35:39 urilith Exp $
 
 inherit mono
 
@@ -24,15 +24,16 @@ src_compile() {
 	nant -t:mono-1.0 || die
 }
 
-GAC_FILES="NDoc.Core.dll NDoc.Documenter.JavaDoc.dll NDoc.Documenter.Latex.dll NDoc.Documenter.LinearHtml.dll NDoc.Documenter.Msdn.dll NDoc.Documenter.Msdn2.dll NDoc.Documenter.Xml.dll NDoc.ExtendedUI.dll NDoc.VisualStudio.dll"
+DLL_FILES="NDoc.Core.dll NDoc.Documenter.JavaDoc.dll NDoc.Documenter.Latex.dll NDoc.Documenter.LinearHtml.dll NDoc.Documenter.Msdn.dll NDoc.Documenter.Msdn2.dll NDoc.Documenter.Xml.dll NDoc.ExtendedUI.dll NDoc.VisualStudio.dll"
 
 src_install() {
 	cd ${S}/bin/mono/1.0
 
-	# This installs all of the dll files under the specified gac package
+	# This installs all of the dll files with the exe file
 	# directory.
-	for dll in $GAC_FILES; do
-				gacutil -i $dll -package ndoc -root ${D}/usr/lib || die "Failed to install DLL into the Global Assembly Cache."
+	insinto /usr/share/ndoc
+	for dll in $DLL_FILES; do
+				doins $dll || die "Failed to install DLL."
 	done
 
 	DEBUG_VAR=""
@@ -49,5 +50,5 @@ src_install() {
 	doins NDocConsole.exe
 	dobin ndoc
 
-	use doc && dohtml -a gif,html,css,js -r ${S}/doc/sdk
+	use doc && dohtml -a gif,html,css,js -r ${S}/doc/sdk/
 }

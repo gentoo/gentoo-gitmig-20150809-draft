@@ -1,4 +1,4 @@
-MD5 2bc2bae75c6e9658f48f8ad62b1bfa57 ndoc-1.3.1.ebuild 1343
-MD5 dddb00fc536ba5211cc765722ae7ff0c ChangeLog 492
+MD5 a9554d7d428c1df87fd7d7ca0d7b1fc5 ChangeLog 673
+MD5 bfc14dd28bb0f41de04a2033315163d8 ndoc-1.3.1-r1.ebuild 1289
 MD5 443435c45ff66780ef8a6d478be74f1c metadata.xml 256
-MD5 366ef05b58498d63fc6125c49e269c24 files/digest-ndoc-1.3.1 67
+MD5 366ef05b58498d63fc6125c49e269c24 files/digest-ndoc-1.3.1-r1 67
