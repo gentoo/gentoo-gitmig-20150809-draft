@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.6 2003/01/12 18:01:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.7 2003/01/16 11:33:43 seemant Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -15,9 +15,9 @@ KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="virtual/glibc"
 
-CFLAGS="${CFLAGS/k6-2/k6}"
-CFLAGS="${CFLAGS/k6/i586}"
-CXXFLAGS="${CFLAGS}"
+replace-flags k6-3 i586
+replace-flags k6-2 i586
+replace-flags k6 i586
 
 src_unpack() {
 	unpack ${A}

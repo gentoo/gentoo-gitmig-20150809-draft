@@ -1,8 +1,13 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.6 2003/01/12 18:01:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.7 2003/01/16 11:33:43 seemant Exp $
 
 *jpeg-6b-r3 (15 Nov 2002)
+
+  16 Jan 2003; Seemant Kulleen <seemant@gentoo.org> jpeg-6b-r3.ebuild :
+
+  replace -march=k6-3 by -march=i586 as well. This time closes bug #13955 by
+  aholler@gentoo.de (Alexander Holler)
 
   12 Jan 2003; Seemant Kulleen <seemant@gentoo.org> jpeg-6b-r3.ebuild :
 
