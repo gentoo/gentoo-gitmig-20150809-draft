@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.116 2005/01/01 15:47:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.117 2005/01/21 09:07:16 usata Exp $
+
+  21 Jan 2005; Mamoru KOMACHI <usata@gentoo.org> ruby-1.8.2.ebuild:
+  Stable on alpha, ppc, ppc-macos and x86.
 
 *ruby-1.8.2 (02 Jan 2005)
 
