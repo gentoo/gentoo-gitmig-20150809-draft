@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.36.ebuild,v 1.1 2005/01/14 13:33:56 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.36.ebuild,v 1.2 2005/03/31 10:06:31 zypher Exp $
 
 inherit eutils flag-o-matic
 
@@ -68,7 +68,7 @@ src_compile() {
 
 	econf \
 		`use_enable nls` \
-		`use_enalbe altivec` \
+		`use_enable altivec` \
 		`use_with pic` \
 		${myconf} || die "configure failed"
 	make || die "make failed"
