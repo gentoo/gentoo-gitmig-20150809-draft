@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.12 2003/05/14 20:31:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.13 2003/05/14 20:37:17 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -29,7 +29,7 @@ S=${WORKDIR}/${MY_P}
 [ -z "$PROVIDE" ]	&& PROVIDE="virtual/php"
 
 
-IUSE="${IUSE} X berkdb cjk crypt curl cyrus firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype xml xml2 zlib "
+IUSE="${IUSE} X berkdb cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype xml xml2 zlib "
 #removed: gmp
 #causes breakage
 
@@ -41,7 +41,6 @@ DEPEND="${DEPEND}
     berkdb? ( >=sys-libs/db-3 )
     crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
     curl? ( >=net-ftp/curl-7.10.2 )
-	cyrus? ( net-mail/cyrus-imapd net-mail/cyrus-imap-admin dev-libs/cyrus-imap-dev ) 
     firebird? ( >=dev-db/firebird-1.0 )
     flash? ( media-libs/libswf >=media-libs/ming-0.2a )
     freetds? ( >=dev-db/freetds-0.53 )
@@ -71,6 +70,9 @@ DEPEND="${DEPEND}
 	!dev-libs/9libs
 	"
 #9libs causes a configure error
+
+#Waiting for somebody to want this:
+#cyrus? ( net-mail/cyrus-imapd net-mail/cyrus-imap-admin dev-libs/cyrus-imap-dev ) 
 
 #export this here so we can use it
 myconf="${myconf}"
@@ -220,7 +222,10 @@ php_src_compile() {
 	#use ldap && myconf="${myconf} --with-ldap"
 	#use pam && myconf="${myconf} --with-pam"
 	#use pic && myconf="${myconf} --with-pic"
-	myconf="${myconf} `use_with curl` `use_with imap` `use_with ldap` `use_with pam` `use_with pic` `use_with cyrus`"
+	myconf="${myconf} `use_with curl` `use_with imap` `use_with ldap` `use_with pam` `use_with pic`"
+
+	#Waiting for somebody to want Cyrus support :-)
+	#myconf="${myconf} `use_with cyrus`"
 
 	# dbx AT LEAST one of mysql/odbc/postgres/oci8
 	use mysql || use odbc || use postgres || use oci8 \
