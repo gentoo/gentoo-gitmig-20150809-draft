@@ -1,6 +1,7 @@
-MD5 f838d4deff27cc925bc2b648012efad8 ChangeLog 4177
+MD5 004adb7dd901ac69f48b44d06f3e10b7 ChangeLog 4447
 MD5 b4028d679fb343b3da499b781bbaf8a7 selinux-small-2003011510-r4.ebuild 4212
 MD5 f4ce0fcc9e169bd6ce46ae284a0683b5 selinux-small-2003040709-r2.ebuild 4389
+MD5 fe7329574b9f23170a33c331152bba06 selinux-small-2003040709-r3.ebuild 4397
 MD5 95245c95e7a1c329656d222c55fb769d files/rlpkg 1856
 MD5 e5ffaa323b22754b51eaa94f04bcf5dd files/digest-selinux-small-2003011510-r4 151
 MD5 8daee4f4fd3e4a74c4d5f2ddb6b086a5 files/run_init 1197
@@ -9,3 +10,4 @@ MD5 5b8ae6c77d50a559c31fb144faf6843e files/selinux-small-2003011510-bison.diff 5
 MD5 5b8ae6c77d50a559c31fb144faf6843e files/selinux-small-2003040709-bison.diff 553
 MD5 3809db44913b783d2b8bb31c8361aa92 files/selinux-small-2003040709-setfiles.diff 2623
 MD5 0986e11cde481cc9d4f8061654dedead files/digest-selinux-small-2003040709-r2 151
+MD5 0986e11cde481cc9d4f8061654dedead files/digest-selinux-small-2003040709-r3 151
