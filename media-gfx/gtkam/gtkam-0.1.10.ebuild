@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.10.ebuild,v 1.2 2003/06/07 01:38:07 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.10.ebuild,v 1.3 2003/06/10 22:38:35 liquidx Exp $
 
 IUSE="nls gnome jpeg"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=x11-libs/gtk+-2
 	>=media-libs/libgphoto2-2.1.1-r2
