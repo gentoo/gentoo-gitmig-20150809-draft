@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a430bb29e0f333be026d9ed2469322d kdewebdev-3.3.1.ebuild 420
-MD5 7af9c28a93a80a683d64942acca576fe kdewebdev-3.4.0_rc1.ebuild 449
-MD5 c6d86039931b3285a5d8d4971a3fd965 ChangeLog 4763
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 7af9c28a93a80a683d64942acca576fe kdewebdev-3.4.0_rc1.ebuild 449
 MD5 d8da4dc9bcb492f4f27562f6746840e7 kdewebdev-3.3.2.ebuild 429
+MD5 c6d86039931b3285a5d8d4971a3fd965 ChangeLog 4763
 MD5 db668bfea09ef850d822ac165519ef71 kdewebdev-3.4.0.ebuild 451
 MD5 8d4059d0d85c6510e4dbad66824901f4 files/digest-kdewebdev-3.4.0_rc1 73
-MD5 5e1d564c67981383f6c070b65c3a4475 files/digest-kdewebdev-3.3.1 69
 MD5 5c18da2078103b3b7c13439cc5980e13 files/digest-kdewebdev-3.3.2 69
 MD5 a6863fd743a5d77407c2de68efec9b90 files/digest-kdewebdev-3.4.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOv91UpKYMelfdYERAkWCAJ4kyKxxhNY0949f4NeQmk1wudVcvACbBE4h
-8sOuqx2SJk9+3+3y42GBlQU=
-=hXld
------END PGP SIGNATURE-----
