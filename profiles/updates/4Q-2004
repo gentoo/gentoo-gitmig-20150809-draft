@@ -92,3 +92,4 @@ move app-sci/embassy sci-biology/embassy
 move app-sci/emboss-kaptain sci-biology/emboss-kaptain
 move app-sci/epix media-gfx/epix
 move app-sci/kst media-gfx/kst
+move app-sci/labplot media-gfx/labplot
