@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/prelude-nagios
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/ChangeLog,v 1.3 2004/02/28 20:49:10 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/ChangeLog,v 1.4 2004/03/15 22:56:28 mboman Exp $
+
+*prelude-nagios-0.0.3 (16 Mar 2004)
+
+  16 Mar 2004; Michael Boman <mboman@gentoo.org> prelude-nagios-0.0.3.ebuild:
+  New upstream version.
 
   29 Feb 2004; Michael Boman <mboman@gentoo.org> metadata.xml:
   Moving the package to 'netmon' herd.
