@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.1 2004/01/31 12:27:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.2 2004/04/03 12:29:14 plasmaroo Exp $
 
 DESCRIPTION="A graphical file and directories comparator and merge tool."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -24,7 +24,9 @@ src_unpack()
 	unpack ${A}
 	if [ `use kde` ]; then
 		cd ${S}/src
-		epatch ${FILESDIR}/kdesupport.patch
+		cp ${FILESDIR}/kdesupport.patch .
+		sed -e "s:/usr/kde/3.1:`ls -d /usr/kde/* | tail -n 1`:g" -i kdesupport.patch
+		epatch kdesupport.patch
 	fi
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/xxdiff
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.13 2004/03/14 05:54:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.14 2004/04/03 12:29:14 plasmaroo Exp $
+
+  03 Apr 2004; <plasmaroo@gentoo.org> xxdiff-2.9.2-r1.ebuild,
+  xxdiff-3.0.2.ebuild:
+  Added a check to the ebuild to update the patch to use the latest available
+  KDE version instead of 3.1. Closes bug #40472.
 
   13 Mar 2004; Jason Wever <weeve@gentoo.org> xxdiff-2.9.2.ebuild:
   Stable on sparc.
