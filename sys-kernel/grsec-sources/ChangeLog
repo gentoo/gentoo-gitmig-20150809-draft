@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.18 2004/04/18 07:56:37 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.19 2004/04/19 02:13:08 solar Exp $
+
+  18 Apr 2004; <solar@gentoo.org> grsec-sources-2.4.26.2.0.ebuild:
+  upstream fixed an idt_table bug in PaX that effected i386/i586 users without
+  rolling a new patch, so we gentoo fetched new version and bz2 it to avoid
+  md5sum conflicts.. removed old ebuild as well
 
 *grsec-sources-2.4.26.2.0 (18 Apr 2004)
 

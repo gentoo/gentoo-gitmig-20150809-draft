@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.26.2.0.ebuild,v 1.1 2004/04/18 07:56:37 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.26.2.0-r1.ebuild,v 1.1 2004/04/19 02:13:08 solar Exp $
 
 # We control what versions of what we download based on the KEYWORDS we
 # are using for the various arches. Thus if we want grsec1 stable we run
@@ -24,7 +24,7 @@ PATCH_BASE="${PATCH_BASE/_/-}"
 EXTRAVERSION="-grsec-${PATCH_BASE}"
 KV="${OKV}${EXTRAVERSION}"
 
-PATCH_SRC_BASE="grsecurity-${PATCH_BASE}-${OKV}.patch"
+PATCH_SRC_BASE="grsecurity-${PATCH_BASE}-${OKV}.patch.bz2"
 
 # hppa takes a special patch and usually has play catch up between
 # versions of this package we.
@@ -40,13 +40,17 @@ fi
 
 DESCRIPTION="Vanilla sources of the linux kernel with the grsecurity ${PATCH_BASE} patch"
 
-DYSFUNCTIONAL_SRC_URI="hppa? ( $HPPA_SRC_URI ) \
-	!hppa? ( http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
-		http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.sign ) \
-	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
+#DYSFUNCTIONAL_SRC_URI="hppa? ( $HPPA_SRC_URI ) \
+#	!hppa? ( http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
+#		http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.sign ) \
+#	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 
-SRC_URI="http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
-	http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.sign  \
+# grr... gotta love it when upstream changes a patch without rolling a revision number.
+#SRC_URI="http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
+#	http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.sign  \
+#	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
+
+SRC_URI="mirror://gentoo/grsecurity-${PATCH_BASE}-${OKV}.patch.bz2 \
 	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 
 HOMEPAGE="http://www.kernel.org/ http://www.grsecurity.net"
@@ -70,7 +74,7 @@ src_unpack() {
 	ebegin "Patching the kernel with ${PATCH_SRC_BASE}"
 	case "${ARCH}" in
 		hppa)	zcat ${DISTDIR}/${PATCH_SRC_BASE} | patch -g0 -p1 --quiet ;;
-		*)	cat  ${DISTDIR}/${PATCH_SRC_BASE} | patch -g0 -p1 --quiet ;;
+		*)	bzcat  ${DISTDIR}/${PATCH_SRC_BASE} | patch -g0 -p1 --quiet ;;
 	esac
 	[ $? == 0 ] || die "failed patching with ${PATCH_SRC_BASE}"
 	eend 0
