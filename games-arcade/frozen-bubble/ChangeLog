@@ -1,11 +1,14 @@
 # ChangeLog for games-arcade/frozen-bubble
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.4 2004/01/10 06:17:31 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.5 2004/02/09 17:25:42 vapier Exp $
+
+*frozen-bubble-1.0.0-r3 (07 Oct 2003)
+
+  09 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Update bootstrap process for the server to fix #40905.
 
   10 Jan 2004; <augustus@gentoo.org> frozen-bubble-1.0.0-r3.ebuild:
   This game plays quite well on AMD64.  Added ~amd64.
-
-*frozen-bubble-1.0.0-r3 (07 Oct 2003)
 
   07 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
   Properly utilize games.eclass to fix #30599.
