@@ -1,0 +1,103 @@
+# ChangeLog for dev-cpp/gtkmm
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.1 2003/07/12 17:38:23 foser Exp $
+
+*gtkmm-2.2.3 (23 May 2003)
+
+  12 Jul 2003; foser <foser@gentoo.org> gtkmm-2.2.3.ebuild :
+  Moved gtkmm from x11-libs to dev-cpp
+  Added blocking dep for gcc-3.3.0 (#21637)
+
+  23 May 2003; foser <foser@gentoo.org> gtkmm-2.2.3.ebuild :
+  2.2.2 had some serious so installation problem, this release should fix that
+
+*gtkmm-2.2.2 (22 May 2003)
+
+  22 May 2003; foser <foser@gentoo.org> gtkmm-2.2.2.ebuild :
+  New version, use gnome2 eclass
+
+  07 Jan 2003; foser <foser@gentoo.org> gtkmm-2.0.2.ebuild :
+  Fixed deps to depend on gtk+-2.0
+
+*gtkmm-2.2.0 (06 Jan 2003)
+
+  07 Jan 2003; foser <foser@gentoo.org> gtkmm-2.2.0.ebuild :
+  Now use gnome.org eclass for SRC_URI
+
+  06 Jan 2003; foser <foser@gentoo.org> gtkmm-2.2.0.ebuild :
+  New version
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*gtkmm-2.0.2 (06 Dec 2002)
+
+  06 Dec 2002; foser <foser@gentoo.org> gtkmm-2.0.2.ebuild :
+  New version
+
+*gtkmm-2.0.1 (16 Nov 2002)
+  
+  16 Nov 2002; Spider <spider@gentoo.org> gtkmm-2.0.1.ebuild :
+  Even stabler version :)   changed the download URI to be 
+  mirror://sourceforge
+  made sure the $myconf was actually passed
+  
+*gtkmm-2.0.0 (1 Nov 2002)
+
+  01 Nov 2002; foser <foser@gentoo.org> gtkmm-2.0.0.ebuild :
+  New stable version
+
+*gtkmm-1.3.22 (13 Sep 2002)
+  13 Sep 2002; Spider <spider@gentoo.org> gtkmm-1.3.22.ebuild :
+  new version by Markus Bertheau <twanger@bluetwanger.de>
+      
+*gtkmm-1.3.18 (15 Jul 2002)
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added ppc to keywords
+
+  15 Jul 2002 ; Gabriele Giorgetti <stroke@gentoo.org> gtkmm-1.3.18.ebuild :
+  New version. 
+
+*gtkmm-1.3.15 (17 Jun 2002)
+  17 Jun 2002 ;Spider <spider@gentoo.org> gtkmm-1.3.15.ebuild :
+  New version. updated libsigc++ dep
+  
+gtkmm-1.2.9 (13 Jun 2002)
+  13 Jun 2002; Spider <spider@gentoo.org> gtkmm-1.2.9-r2.ebuild :
+  fixing up some dependencies before gnome2 release. I'm not maintaining this, just fixing bugs I've helped introduce :)
+  
+
+*gtkmm-1.2.9 (22 May 2002)
+
+  22 May 2002; Matthew Kennedy <mkennedy@gentoo.org>;
+  gtkmm-1.2.9-r1.ebuild, ChangeLog, files/digest-gtkmm-1.2.9,
+  files/gtkmm-1.2.9-gcc3.1-gentoo.patch :
+
+  Patch to support gcc3.1 (only required for 1.2.9 -- fixed upstream
+  in CVS)
+
+*gtkmm-1.3.14 (14 May 2002)
+  14 May 2002; Spider <spider@gentoo.org>; gtkmm-1.3.14.ebuild :
+  version update
+    
+
+*gtkmm-1.3.13 (1 May 2002)
+  1 May 2002; Spider <spider@gentoo.org>; gtkmm-1.3.13.ebuild :
+  version update
+
+*gtkmm-1.3.11 (18 Apr 2002)
+  18 Apr 2002; Spider <spider@gentoo.org>; gtkmm-1.3.11.ebuild
+  add the development branch
+    
+*gtkmm-1.2.9 (09 Apr 2002)
+  09 Apr 2002; Spider <spider@gentoo.org>; gtkmm-1.2.9.ebuild
+  update to latest version. 
+
+*gtkmm-1.2.8 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
