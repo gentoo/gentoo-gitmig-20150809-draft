@@ -1,6 +1,12 @@
 # ChangeLog for net-im/naim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.30 2003/10/02 18:15:34 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.31 2003/10/02 23:17:14 hillster Exp $
+
+*naim-0.11.6.1 (02 Oct 2003)
+
+  02 Oct 2003; Joel Hill <hillster@gentoo.org> naim-0.11.6.1.ebuild:
+  Version bump, general cleanup added current docs in tarball, and updated
+  homepage/sourceurl.
 
   02 Oct 2003; Brad House <brad_mssw@gentoo.org> naim-0.11.6.ebuild:
   add ~amd64 flag
