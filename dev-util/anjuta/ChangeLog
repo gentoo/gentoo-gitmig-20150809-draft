@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.21 2003/07/19 03:04:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.22 2003/09/25 22:28:17 zul Exp $
+
+  25 Sep 2003; Chuck Short <zul@gentoo.org> anjuta-1.0.2.ebuild:
+  Added sparc to keyword.
 
   19 Jul 2003; Alastair Tse <liquidx@gentoo.org> anjuta-1.1.1.ebuild:
   dev version should of never gone stable, even though its masked
