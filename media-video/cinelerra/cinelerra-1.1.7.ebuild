@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.7.ebuild,v 1.8 2004/02/14 00:59:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.7.ebuild,v 1.9 2004/05/03 20:39:13 lu_zero Exp $
 
 inherit gcc eutils flag-o-matic
 export WANT_GCC_3="yes"
@@ -22,6 +22,9 @@ DEPEND="virtual/x11
 	=sys-devel/gcc-3*
 	dev-lang/nasm"
 #	>=media-libs/a52dec-0.7.3"
+
+RDEPEND="virtual/glibc
+		virtual/x11"
 
 src_unpack() {
 	unpack ${A}
