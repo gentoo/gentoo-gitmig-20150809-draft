@@ -12,19 +12,22 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 
-        ./configure --with-libwrap              \
-                    --with-crypt                \
-                    --infodir=/usr/share/info   \
-                    --mandir=/usr/share/man     \
-                    --host=${CHOST} || die
+	local myconf
 
-        emake || die
+	use crypt && myconf="--with-crypt" || myconf="--without-crypt"
+
+	./configure 	--with-libwrap              \
+			${myconf}                   \
+			--infodir=/usr/share/info   \
+			--mandir=/usr/share/man     \
+			--host=${CHOST} || die
+
+	emake || die
 }
 
 
 src_install () {
 
-        make DESTDIR=${D} install || die
-        dodoc AUTHORS BUGS CHANGES COPYING FAQ INSTALL README TESTED TODO
-
+	make DESTDIR=${D} install || die
+	dodoc AUTHORS BUGS CHANGES COPYING FAQ INSTALL README TESTED TODO
 }
