@@ -29,3 +29,5 @@ apm
 # this repoman will fail on apps like sys-libs/db
 java
 
+# tcc is x86-only
+tcc

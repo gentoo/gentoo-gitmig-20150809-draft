@@ -36,3 +36,6 @@ java
 
 # firebird appears to be x86-only (the db, not the browser)
 firebird
+
+# tcc is x86-only
+tcc
