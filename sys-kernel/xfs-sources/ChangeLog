@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.3 2002/07/16 04:51:20 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.4 2002/09/03 19:26:45 lostlogic Exp $
+
+*xfs-sources-2.4.19 (03 Sep 2002)
+
+  03 Sep 2002; Brandon Low <lostlogic@gentoo.org> xfs-sources-2.4.19.ebuild:
+
+  New version, update to xfs-2002-08-13 from SGI, add EVMS support.
+
+*xfs-sources-2.4.18 (25 Apr 2002)
 
   15 Jul 2002; Mark Guertin <gerk@gentoo.org>
   Added arch keywords (-ppc -sparc -sparc64)
@@ -9,6 +17,4 @@
 
   Added sys-apps/xfsprogs to DEPEND. These aren't stictly needed but the user
   will very likely want them.
-
-*xfs-sources-2.4.18 (25 Apr 2002)
 
