@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.6.ebuild,v 1.11 2002/10/19 22:00:52 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.6.ebuild,v 1.12 2003/02/07 22:03:01 rphillips Exp $
 
 IUSE="qt"
 
@@ -21,6 +21,15 @@ src_unpack() {
 	cd ${S}
 	cp Makefile.in Makefile.orig
 	sed -e "s:touch :touch \${DESTDIR}/:" Makefile.orig > Makefile.in
+	cp configure.in configure.orig
+	sed -e "s:AC_CHECK_LIB *( *c *,:AC_CHECK_FUNC(:" configure.orig >configure.in
+	cd gODBCConfig
+		libtoolize
+		aclocal
+	cd ..
+	libtoolize
+	aclocal
+	autoreconf-2.13
 }
 
 src_compile() {
@@ -43,7 +52,9 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	mkdir -p ${D}/etc/unixODBC
+	make DESTDIR=${D} sysconfdir=${D}/etc/unixODBC install || die
+	rm -r ${D}/var
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README*
 	cp -a doc ${D}/usr/share/doc/${PF}/html

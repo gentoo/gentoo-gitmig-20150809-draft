@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.4 2002/10/19 22:00:52 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.5 2003/02/07 22:03:01 rphillips Exp $
 
 *unixODBC-2.2.2 (9 Jul 2002)
+
+  07 Feb 2003; Ryan Phillips <rphillips@gentoo.org> unixODBC-2.0.6.ebuild :
+  Fixes #13166
 
   19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> unixODBC-2.0.6.ebuild
   unixODBC-2.0.8.ebuild : 
