@@ -1,8 +1,14 @@
 # ChangeLog for sys-devel/bin86
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.4 2002/12/13 11:00:39 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.5 2002/12/30 00:09:48 azarah Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*bin86-0.16.10 (30 Dec 2002)
+
+  30 Dec 2002; Martin Schlemmer <azarah@gentoo.org> bin86-0.16.10.ebuild
+  Update version.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  Changed sparc ~sparc keywords
  
 *bin86-0.16.0 (16 Nov 2002)
 
