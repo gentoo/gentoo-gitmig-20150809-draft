@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (15 Apr 2003)
+# qt with custom CFLAGS - might be dangrous but you're welcome to test :-)
+=x11-libs/qt-3.1.2-r2
+
 # <danarmak@gentoo.org> (14 Apr 2003)
 # upstream found big bugs, will make another release soon
 =dev-util/kdevelop-3.0_alpha4
