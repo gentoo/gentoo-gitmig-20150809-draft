@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.1 2003/09/10 19:29:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.2 2003/09/14 09:16:51 msterret Exp $
 
 inherit games eutils gcc
 
@@ -36,7 +36,7 @@ src_compile() {
 		`use_enable stencil-buffer` \
 		--with-data-dir=${GAMES_DATADIR}/${PN} \
 		|| die
-	make || die "make failed"
+	emake || die "emake failed"
 }
 
 src_install() {
