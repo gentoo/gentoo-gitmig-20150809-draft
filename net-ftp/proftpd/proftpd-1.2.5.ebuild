@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.5.ebuild,v 1.1 2002/06/09 14:34:40 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.5.ebuild,v 1.2 2002/06/09 14:45:09 nitro Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An advanced and very configurable FTP server"
@@ -60,17 +60,16 @@ src_install() {
 		sysconfdir=${D}/etc/proftpd \
 		install || die
 
-	dobin contrib/genuser.pl
+	#dobin contrib/genuser.pl
 	dodir /home/ftp
 
 	dodoc contrib/README.mod_sql ${FILESDIR}/proftpd.conf \
 		COPYING CREDITS ChangeLog NEWS README* \
-		doc/{API,Changes*,license.txt,GetConf} \
-		doc/{ShowUndocumented,Undocumented.txt} \
+		doc/{API,license.txt,GetConf,ShowUndocumented} \
 		doc/development.notes
-	dohtml *.html
+	dohtml doc/*.html
 	docinto rfc
-	dodoc rfc/*.txt
+	dodoc doc/rfc/*.txt
 
 	cd ${D}/etc/proftpd
 	mv proftpd.conf proftpd.conf.distrib
