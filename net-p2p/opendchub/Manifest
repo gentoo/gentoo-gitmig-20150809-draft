@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 7804ef2e138991caadbcec9c3489bbb8 opendchub-0.7.14-r1.ebuild 1154
-MD5 024ba463247410fd07e124bad46b717e ChangeLog 977
+MD5 65c034c99957095dd5afa81168ec13ec ChangeLog 993
 MD5 8abcb326775f027b2e13f23344036e34 metadata.xml 224
 MD5 e4fcbf6d8443605a548547abee4903e5 files/opendchub_setup.sh 556
 MD5 75859d782548bffdb8575c89649978e3 files/opendchub-gentoo.patch 873
@@ -11,7 +11,7 @@ MD5 796b8b6feea2a657348eb4ee6b9d102e files/0.7.14-telnet.patch 540
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBKl0tcAgAdbxYsnERAsOgAJ4hWTNeO6qDhzTJjdY0WNEmlZz6BACgkWRs
-if8gHIkiptTF4P1jKIRisvE=
-=tBEW
+iD8DBQFBKl+YcAgAdbxYsnERAqmSAJ4sIG5v6efatIRpo81CE1CZc1hAWACfWMyg
+xVhW3i7rdwJY/QBZgJTb5S0=
+=iEkc
 -----END PGP SIGNATURE-----
