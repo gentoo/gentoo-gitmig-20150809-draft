@@ -1,4 +1,4 @@
-MD5 835f1b4d268021c0496bf5cbf111b363 files/digest-aldo-0.0.11 63
-MD5 fa6db023789478b781ab9ba6faf86382 ChangeLog 648
-MD5 3811c08c27a4e9d30d3b532a4bdecab6 aldo-0.0.11.ebuild 582
+MD5 efc60dcc9836bd48565fcc62eddb39c5 aldo-0.0.11.ebuild 579
+MD5 eb50342eaece9983aeaf9b06e6cac291 ChangeLog 645
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 835f1b4d268021c0496bf5cbf111b363 files/digest-aldo-0.0.11 63
