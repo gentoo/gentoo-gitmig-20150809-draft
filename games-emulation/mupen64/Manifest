@@ -1,26 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a782913e7973cc008cda557599b5d204 ChangeLog 1690
+MD5 1dfc35aec1e0f49db80dcca1b4ce8a40 ChangeLog 1935
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 6575b824fd5cbfb4833874d8261e8dfb mupen64-0.3.ebuild 2448
-MD5 a0f5822196b0b4c8742be71f8b3a97cd mupen64-0.4.ebuild 3674
+MD5 5e06fe06777a0a2f74b495665652e6f8 mupen64-0.4.ebuild 2623
 MD5 e2b006764c1bac03ac2667ad60a66101 files/0.3-gcc3.patch 3662
 MD5 a0d71f9477dc18606c7cf5dd61fa63da files/digest-mupen64-0.3 396
-MD5 184d6cdb2587cc6607c49a42f39335b1 files/mupen64 511
-MD5 8cb72fa87f95c2a79540ea5e4a15c0b9 files/mupen64-gtk2-makefile.patch 3144
-MD5 87053b50f759d8d4b65a2369fe42338a files/mupen64-rice-confdir.patch 1208
-MD5 691d458af594d569060b8722ace617a3 files/mupen64-confdir.patch 1710
-MD5 4705caa6824153f1297173bdf43854b0 files/mupen64-makefiles.patch 2888
+MD5 4fd55475c3cb8bec06cddcac05c0e735 files/mupen64 574
+MD5 f63e1260b9d35674f21fdcfff3be5c16 files/mupen64-SDL_ttf.patch 353
+MD5 72f9db08fce1cb715c16d28c11f1cf9a files/mupen64-confdir.patch 171
+MD5 e2b006764c1bac03ac2667ad60a66101 files/mupen64-gcc3.patch 3662
 MD5 04a919e368e803ceda85d809cc767b0a files/mupen64-gentoo-avi.patch 255
 MD5 623f09fd7f622d43901a028d7069ac04 files/mupen64-gentoo-sdl.patch 1558
-MD5 e2b006764c1bac03ac2667ad60a66101 files/mupen64-gcc3.patch 3662
-MD5 f63e1260b9d35674f21fdcfff3be5c16 files/mupen64-SDL_ttf.patch 353
-MD5 73956aa6279bf5b57a7d27619f4191d4 files/digest-mupen64-0.4 466
+MD5 8cb72fa87f95c2a79540ea5e4a15c0b9 files/mupen64-gtk2-makefile.patch 3144
+MD5 948cf998de2319579074b530861362aa files/mupen64-makefiles.patch 2040
+MD5 87053b50f759d8d4b65a2369fe42338a files/mupen64-rice-confdir.patch 1208
+MD5 638046a5841774d744611e9f38751bcc files/mupen64-noasm.patch 229
+MD5 b21462ab51b383d28ca9d83f6531c664 files/digest-mupen64-0.4 265
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB1kqEUpKYMelfdYERAtQ4AJ9/hpKf2zeSncrkTYqvYrhY9XbeFwCfYmhe
-TjsPO7UY+teprAnW2ttNal4=
-=nbvC
+iD8DBQFB3dUVUpKYMelfdYERAi0OAJ9Gtb6VIVgA3Ive+S61JsoJl6cX0gCfU3eI
+FwgUS3JNKfsZyp8iYCEQqxw=
+=Plb4
 -----END PGP SIGNATURE-----

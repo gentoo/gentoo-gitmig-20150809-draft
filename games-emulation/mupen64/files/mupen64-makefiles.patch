@@ -1,17 +1,3 @@
---- riceplugin/Makefile.orig	2004-07-15 21:38:45.195293640 +0000
-+++ riceplugin/Makefile	2004-07-15 21:40:31.719099560 +0000
-@@ -1,8 +1,8 @@
- CC = gcc
--#CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -g -mmmx -msse
--CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer -msse -mmmx
-+CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -g $(GCFLAGS)
-+#CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer -msse -mmmx
- CXX = g++
--CPPFLAGS = $(CFLAGS)
-+CPPFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -g  $(GCXXFLAGS)
- LD = g++
- LDFLAGS = -lGL -lGLU -L/usr/X11R6/lib -lSDL
- 
 --- emu64/Makefile.orig	2004-07-15 21:50:36.577147160 +0000
 +++ emu64/Makefile	2004-07-15 21:53:11.189642488 +0000
 @@ -3,14 +3,9 @@
@@ -26,9 +12,9 @@
 -#CFLAGS		=-DX86 -Wall -pipe -g
 -
 -CXXFLAGS	=$(CFLAGS)
-+COMFLAGS	=-DX86 -g
-+CFLAGS		=$(COMFLAGS) $(GCFLAGS)
-+CXXFLAGS	=$(COMFLAGS) $(GCXXFLAGS)
++COMFLAGS	=-DX86
++CFLAGS		=$(COMFLAGS)
++CXXFLAGS	=$(COMFLAGS)
  
  GL_PATH		=-I/usr/X11R6/include
  
@@ -41,7 +27,7 @@
 -#CC		=gcc -O3 -I/usr/X11R6/include -fPIC -fomit-frame-pointer -funroll-loops -ffast-math -mcpu=pentium -pipe
 -#CC		=gcc -O3 -mpentium -Wall -g -pg
 -CC 		=gcc -O3 -fomit-frame-pointer -funroll-loops -ffast-math -mcpu=athlon -Wall -DUSE_GTK `gtk-config --cflags` -I/usr/X11R6/include -pipe
-+CC		=gcc -g $(GCFLAGS)
++CC		=gcc
  
  OBJ		=main.o
  
@@ -52,10 +38,10 @@
 -CFLAGS = -DUSE_GTK `gtk-config --cflags` -O3 -mcpu=athlon \
 -         -ffast-math -funroll-loops -fomit-frame-pointer
 -#CFLAGS = -DUSE_GTK `gtk-config --cflags` -g -fPIC
-+CFLAGS = -DUSE_GTK `gtk-config --cflags` -g -fPIC $(GCFLAGS)
++CFLAGS = -DUSE_GTK `gtk-config --cflags` -fPIC
  CXX = g++
 -CXXFLAGS = $(CFLAGS)
-+CXXFLAGS = -DUSE_GTK `gtk-config --cflags` -g -fPIC $(GCXXFLAGS)
++CXXFLAGS = -DUSE_GTK `gtk-config --cflags` -fPIC
  LD = g++
  LDFLAGS =
  
@@ -64,7 +50,7 @@
 @@ -1,5 +1,5 @@
  CC = gcc
 -CFLAGS = -O3 -fomit-frame-pointer -funroll-loops -ffast-math -mcpu=athlon `gtk-config --cflags` -DUSE_GTK -Wall
-+CFLAGS = `gtk-config --cflags` -DUSE_GTK  $(GCFLAGS)
++CFLAGS = `gtk-config --cflags` -DUSE_GTK
  LD = gcc
  LDFLAGS = -shared -Wl,-Bsymbolic `gtk-config --libs` -lpthread
    
