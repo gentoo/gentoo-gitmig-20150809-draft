@@ -1,0 +1,11 @@
+--- pam_ssh.c.orig	2004-02-22 20:15:28.256672768 -0500
++++ pam_ssh.c	2004-02-22 20:15:40.279844968 -0500
+@@ -101,7 +101,7 @@
+ #endif
+ 
+ #define	MODULE_NAME		"pam_ssh"
+-#define	NEED_PASSPHRASE		"SSH passphrase: "
++#define	NEED_PASSPHRASE		"Password: "
+ #define DEF_KEYFILES		 "id_dsa,id_rsa,identity"
+ #define ENV_PID_SUFFIX		"_AGENT_PID"
+ #define ENV_SOCKET_SUFFIX	"_AUTH_SOCK"
