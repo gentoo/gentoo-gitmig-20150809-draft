@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.4-r1.ebuild,v 1.7 2004/06/28 03:52:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.4-r1.ebuild,v 1.8 2004/07/01 11:59:01 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/lcdproc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="doc ncurses svga"
+IUSE="doc ncurses samba svga"
 
 DEPEND=">=sys-apps/baselayout-1.6.4
 	>=sys-apps/sed-4

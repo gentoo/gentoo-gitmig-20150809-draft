@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.20 2004/06/24 22:21:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.21 2004/07/01 11:59:01 agriffis Exp $
+
+  01 Jul 2004; Aron Griffis <agriffis@gentoo.org> lcdproc-0.4.4-r1.ebuild:
+  sync IUSE (+samba)
 
   18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> lcdproc-0.4.5.ebuild:
   sync IUSE
