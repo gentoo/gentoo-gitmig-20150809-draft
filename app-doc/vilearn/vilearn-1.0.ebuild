@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/vilearn-1.0.ebuild,v 1.3 2004/06/24 21:51:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/vilearn-1.0.ebuild,v 1.4 2004/12/20 04:27:44 jhuebel Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://vilearn.org/"
 SRC_URI="http://vilearn.org/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 
 RDEPEND="|| (
