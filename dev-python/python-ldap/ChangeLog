@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.12 2003/09/02 23:56:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.13 2003/11/13 11:26:46 liquidx Exp $
+
+*python-ldap-2.0.0_pre15 (13 Nov 2003)
+
+  13 Nov 2003; Alastair Tse <liquidx@gentoo.org>
+  python-ldap-2.0.0_pre13.ebuild, python-ldap-2.0.0_pre15.ebuild:
+  version bump
+
+  12 Oct 2003; Alastair Tse <liquidx@gentoo.org>
+  python-ldap-2.0.0_pre13.ebuild:
+  fix sasl header (#25693), updated compile/optimise options, made compatible
+  with python-2.3
 
   03 Sep 2003; Alastair Tse <liquidx@gentoo.org>
   python-ldap-2.0.0_pre13.ebuild:
