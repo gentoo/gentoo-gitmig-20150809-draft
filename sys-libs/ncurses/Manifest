@@ -1,6 +1,6 @@
 MD5 ecaa9d031cdc7e68f6c73824598fbc7f ChangeLog 14513
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 2b33e5c69f68ff6735408e417c6c093d ncurses-5.4-r6.ebuild 5409
+MD5 a8ad64753c522d8f49a8f3715266b9f8 ncurses-5.4-r6.ebuild 5335
 MD5 9b518840fa3acf0dc47a06bcafa05b4f ncurses-5.4-r5.ebuild 6086
 MD5 1d92671261d5e5ddcb50f26da871bdf8 ncurses-8.1.ebuild 406
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r6 64

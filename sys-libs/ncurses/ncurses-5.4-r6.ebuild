@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r6.ebuild,v 1.1 2005/03/23 05:01:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r6.ebuild,v 1.2 2005/03/23 05:03:09 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="console display library"
 HOMEPAGE="http://www.gnu.org/software/ncurses/"
-SRC_URI="mirror://gnu/ncurses/${P}.tar.gz
-	ftp://invisible-island.net/ncurses/5.4/ncurses-5.4-20050319-patch.sh.bz2"
+SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="5"
