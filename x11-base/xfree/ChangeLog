@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.184 2003/09/16 08:50:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.185 2003/09/16 09:14:08 spyderous Exp $
+
+  16 Sep 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
+  2.1.12 was bad. Moving to 2.1.13.
 
   16 Sep 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
   New patchset 2.1.12. Patches from Mike Harris: 1214, 2002, 9128, 9131, 9132,
