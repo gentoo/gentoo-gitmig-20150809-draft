@@ -1,3 +1,4 @@
-MD5 e11a904891a79b1c8d8753e37092e8e6 ksensors-0.7.ebuild 512
-MD5 9c0ef53ac3e37d063b2839baddc11f16 ChangeLog 402
+MD5 0d8cca3d7741f987dab6547650152940 ksensors-0.7.ebuild 586
+MD5 1fb034bbc90bcf0b13029040d7fb818d ChangeLog 547
 MD5 9eaa99d3b27f88a95a3330eb49838a27 files/digest-ksensors-0.7 64
+MD5 5735dac5885bda1ec14e3015ad47f87a files/startupcrash.diff 618
