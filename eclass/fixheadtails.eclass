@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.5 2005/01/22 00:02:08 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.6 2005/02/10 00:08:08 vapier Exp $
 #
 # Author John Mylchreest <johnm@gentoo.org>
 
@@ -17,6 +17,7 @@ DEPEND="${DEPEND} >=sys-apps/sed-4"
 # to be used for specific files. ie: ht_fix_file "${FILESDIR}/mypatch.patch"
 
 do_sed_fix() {
+	einfo " - fixed $1"
 	sed -i \
 		-e 's/head \+-\([0-9]\)/head -n \1/g' \
 		-e 's/tail \+\([-+][0-9]\+\)c/tail -c \1/g' \
@@ -37,5 +38,7 @@ ht_fix_file() {
 ht_fix_all() {
 	local MATCHES
 	MATCHES="$(grep -l -i -R -e "head -[ 0-9]" -e "tail [+-][ 0-9]" * | sort -u)"
-	ht_fix_file ${MATCHES}
+	[[ -n ${MATCHES} ]] \
+		&& ht_fix_file ${MATCHES} \
+		|| einfo "No need for ht_fix_all anymore !"
 }
