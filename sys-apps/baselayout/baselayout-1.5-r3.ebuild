@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.4 2001/05/10 18:58:37 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.5 2001/05/12 11:27:02 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -65,6 +65,7 @@ src_install()
 	chmod go-rx ${D}/root
 	dodir /tmp
 	chmod 1777 ${D}/tmp
+        chmod +t ${D}/tmp
 	insopts -m0644
 	insinto /etc
 	for foo in services passwd shadow nsswitch.conf \
