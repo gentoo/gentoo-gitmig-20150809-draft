@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2.ebuild,v 1.2 2005/04/05 18:55:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2.ebuild,v 1.3 2005/04/06 07:10:17 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -56,7 +56,7 @@ src_compile() {
 	use arts || export ac_cv_path_ART_CONFIG=no
 	use alsa || export ac_cv_header_alsa_asoundlib_h=no
 	use sdl || export ac_cv_path_SDL_CONFIG=no
-	use oggvorbis || export ac_cv_lib_vorbis_vorbis_info_init=no
+	use vorbis || export ac_cv_lib_vorbis_vorbis_info_init=no
 	use xvid || export ac_cv_header_xvid_h=no
 	use xv || export ac_cv_header_X11_extensions_XShm_h=no
 	use truetype || export ac_cv_path_FREETYPE_CONFIG=no

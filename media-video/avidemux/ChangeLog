@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.66 2005/04/05 18:55:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.67 2005/04/06 07:10:17 lu_zero Exp $
+
+  06 Apr 2005; Luca Barbato <lu_zero@gentoo.org> avidemux-2.0.38_rc2.ebuild:
+  Minor fix
 
   05 Apr 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/2.0.38_rc2-fix-faad.patch, avidemux-2.0.38_rc2.ebuild:
