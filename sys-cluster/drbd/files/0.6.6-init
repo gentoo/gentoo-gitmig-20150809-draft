@@ -1,0 +1,19 @@
+#!/sbin/runscript
+
+depend() {
+        use net
+        after logger
+        before nfs
+}
+
+start() {
+        ebegin "Starting drbd"
+        /sbin/drbd start
+        eend $?
+}
+
+stop() {
+        ebegin "Stopping drbd"
+        /sbin/drbd stop
+        eend $?
+}

@@ -1,0 +1,24 @@
+# ChangeLog for sys-cluster/drdb
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.1 2003/09/02 15:46:16 tantive Exp $
+
+*drbd-0.6.6-r2.ebuild (02 Sep 2003)
+
+  02 Sep 2003; Jan Krueger <jk@microgalaxy.net>
+  gentoo-ish init script, a wrapper for the original drbd init script
+  better portage-ification of ebuild
+  tweaks to the drbd installation process for better gentoo integration
+  modular patches for enhanced patch reusability
+
+*drbd-0.6.6-r1.ebuild (01 Sep 2003)
+
+  01 Sep 2003; Jan Krueger <jk@microgalaxy.net>
+  proper handling of /var/lib/drbd
+  install some basic documentation
+
+*drbd-0.6.6.ebuild (31 Aug 2003)
+
+  31 Aug 2003; Jan Krueger <jk@microgalaxy.net>
+  initial Version
+  we depend on vanilla-sources
+  only minor tweaks to Makefiles of orininal source tree

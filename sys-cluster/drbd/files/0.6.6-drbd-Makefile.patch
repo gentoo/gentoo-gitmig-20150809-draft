@@ -1,0 +1,21 @@
+--- ../drbd-cvs/drbd/drbd/Makefile	2003-05-22 14:19:16.000000000 +0200
++++ drbd/Makefile	2003-08-31 02:30:19.000000000 +0200
+@@ -155,12 +155,12 @@
+ 	install -d $(PREFIX)lib/modules/$(KERNVER)/$(KSUBD)
+ 	install -m 644 drbd.o $(PREFIX)lib/modules/$(KERNVER)/$(KSUBD)
+ 	install -d $(PREFIX)var/lib/drbd
+-ifeq ($(shell uname -r),$(KERNVER))
+-	/sbin/depmod -a || depmod -e drbd.o 2>&1 >/dev/null || true
+-else
+-	[ -e $(LINUX)/System.map ] && \
+-	   /sbin/depmod -F $(LINUX)/System.map -e drbd.o 2>&1 >/dev/null || true
+-endif
++#ifeq ($(shell uname -r),$(KERNVER))
++#	/sbin/depmod -a || depmod -e drbd.o 2>&1 >/dev/null || true
++#else
++#	[ -e $(LINUX)/System.map ] && \
++#	   /sbin/depmod -F $(LINUX)/System.map -e drbd.o 2>&1 >/dev/null || true
++#endif
+ 
+ uninstall:
+ 	rm $(PREFIX)lib/modules/$(KERNVER)/$(KSUBD)/drbd.o
