@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/SOAP-Lite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.8 2004/10/29 15:29:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.9 2004/11/02 08:13:46 mcummings Exp $
+
+  02 Nov 2004; Michael Cummings <mcummings@gentoo.org>
+  SOAP-Lite-0.60a-r1.ebuild:
+  Still working on bug 69248. I missed the hardcoded call to tests at the bottom
+  of the original - removed; also removed the echo yes in favor of the internal
+  --noprompt argument. This builds cleanly and works fine on both sparc and x86
+  on this end.
 
 *SOAP-Lite-0.60a-r1 (29 Oct 2004)
 

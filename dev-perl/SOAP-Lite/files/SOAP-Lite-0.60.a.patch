@@ -6,7 +6,7 @@ diff -burN SOAP-Lite-0.60/Makefile.PL.old SOAP-Lite-0.60/Makefile.PL
    ["SSL Support for TCP Transport","SOAP::Transport::TCP",{"IO::Socket::SSL" => 0},0],
    ["Compression support for HTTP","SOAP::Transport::HTTP",{"Compress::Zlib" => 0},0],
 -  ["MIME interoperability w/ Axis","SOAP::Lite",{"MIME::Parser" => "6.106"},0],
-+  ["MIME interoperability w/ Axis","SOAP::Lite",{"MIME::Parser" => "5.415"},0],
++  ["MIME interoperability w/ Axis","SOAP::Lite",{"MIME::Parser" => "5.413"},0],
  );
  
  use Getopt::Long;
