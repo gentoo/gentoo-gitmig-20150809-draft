@@ -1,8 +1,12 @@
 # ChangeLog for net-nds/portmap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.10 2003/03/28 16:52:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.11 2003/05/05 15:26:40 mholzer Exp $
 
 *portmap-5b-r7 (31 Dec 2002)
+
+  05 May 2003; Martin Holzer <mholzer@gentoo.org> files/portmap.rc5,
+  files/portmap.rc6:
+  Portmap starts now before inetd and xinetd in runlevels. Closes #18189.
 
   28 Mar 2003; Guy Martin <gmsoft@gentoo.org> portmap-5b-r7.ebuild :
   Added hppa to KEYWORDS.
