@@ -1,4 +1,5 @@
-MD5 0aace9300c2552022aa031b7459799c5 ChangeLog 15081
+MD5 4b56fe81daab6ef2012b9a3aafd5888a ChangeLog 15240
+MD5 6e6ac9e92b77a5a9188bb50a4bb7766a development-sources-2.6.5_rc1.ebuild 1367
 MD5 b23303138c4b33e5712b26f169f96a0e metadata.xml 564
 MD5 288236e5bd0ceb582f47e1e8f9efda9c development-sources-2.6.4.ebuild 1371
 MD5 fc74c35290dc12a6f4d983aaa2117314 development-sources-2.6.1.ebuild 876
@@ -7,6 +8,7 @@ MD5 5987b104bacc3ef590982fa0288e3ac5 development-sources-2.6.2.ebuild 875
 MD5 8a55ce149ac3b8ece7356280bbd27f3c development-sources-2.6.4_rc1.ebuild 875
 MD5 48c03cc4b040e36b383d038fc5b15a59 development-sources-2.6.4_rc2.ebuild 1379
 MD5 2848759525b1e663560b02011e136a93 files/digest-development-sources-2.6.3 137
+MD5 c418bb11df08b286d7361576148cd367 files/digest-development-sources-2.6.5_rc1 205
 MD5 fd088ab5843c49159509406d74424be6 files/digest-development-sources-2.6.4_rc1 131
 MD5 20cc6e125294f0ea7095e1decb12ca9f files/digest-development-sources-2.6.4 137
 MD5 e1bd515be1e1499b9444d688a7b2dc6e files/digest-development-sources-2.6.2 66
