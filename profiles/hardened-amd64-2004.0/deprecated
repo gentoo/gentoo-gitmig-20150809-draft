@@ -1,0 +1,4 @@
+hardened/amd64
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/hardened/amd64 make.profile
