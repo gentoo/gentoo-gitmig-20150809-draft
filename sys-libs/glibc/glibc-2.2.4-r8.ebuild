@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r8.ebuild,v 1.1 2001/12/22 17:58:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r8.ebuild,v 1.2 2001/12/23 23:19:19 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -50,7 +50,7 @@ src_unpack() {
 	# http://www.mail-archive.com/bug-glibc@gnu.org/msg01820.html
 	cd ${S}/linuxthreads
 	cp spinlock.c spinlock.c.orig
-	sed -e 's/ : "0" (lock->__status)//g' spinlock.c.orig > spinlock.c
+	sed -e 's/"=m" (lock->__status) : "0" (lock->__status/"+m" (lock->__status/g' spinlock.c.orig > spinlock.c
 	#This patch addresses a nasty buffer overflow in glob(), remotely exploitable too. See:
 	#http://lwn.net/2001/1220/a/glibc-vulnerability.php3
 	cd ${S}
@@ -87,7 +87,6 @@ src_install() {
 	make PARALLELMFLAGS="${MAKEOPTS}" install_root=${D} install -C buildhere || die
 	if [ -z "`use build`" ]
 	then
-		dodir /etc/rc.d/init.d
 		make PARALLELMFLAGS="${MAKEOPTS}" install_root=${D} info -C buildhere || die
 		make PARALLELMFLAGS="${MAKEOPTS}" install_root=${D} localedata/install-locales -C buildhere || die
 		#install linuxthreads man pages
