@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.30 2003/03/21 11:23:06 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.31 2003/03/28 10:49:12 pvdabeel Exp $
 
 *file-roller-2.2.3 (21 Mar 2003)
 
@@ -9,10 +9,16 @@
 
 *file-roller-2.2.2 (10 Mar 2003)
 
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> file-roller-2.2.2.ebuild:
+  updated from ~ppc to ppc
+
   10 Mar 2003; foser <foser@gentoo.org> file-roller-2.2.2.ebuild :
   New version
 
 *file-roller-2.2.1 (30 Jan 2003)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> file-roller-é.2.1.ebuild:
+  updated from ~ppc to ppc
 
   01 Mar 2003; Jason Wever <weeve@gentoo.org> file-roller-2.2.1.ebuild:
   Added ~sparc to keywords.
