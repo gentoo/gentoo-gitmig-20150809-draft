@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.0.ebuild,v 1.1 2003/07/16 08:04:11 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.0.ebuild,v 1.2 2003/07/17 08:16:47 hanno Exp $
 
 DESCRIPTION="Desktop Publishing (DTP) and Layout program for Linux."
 HOMEPAGE="http://web2.altmuehlnet.de/fschmid/"
-SRC_URI="http://web2.altmuehlnet.de/fschmid/${P}.tar.gz"
+SRC_URI="http://scribus.planetmirror.com/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
