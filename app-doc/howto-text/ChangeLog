@@ -1,6 +1,15 @@
 # ChangeLog for app-doc/howto-text
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/ChangeLog,v 1.7 2003/02/12 03:37:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/ChangeLog,v 1.8 2003/08/27 09:24:45 msterret Exp $
+
+*howto-text-20030826 (27 Aug 2003)
+
+  27 Aug 2003; Michael Sterrett <msterret@gentoo.org>
+  howto-text-20030826.ebuild:
+  version bump.
+  
+  Note: As of 2003-07-24, the mini-HOWTOs are now merged into the full set of
+  HOWTOs
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
