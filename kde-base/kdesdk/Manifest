@@ -1,12 +1,15 @@
-MD5 60ad5d48fe246001b2f90511bf009ea9 ChangeLog 10031
-MD5 d05156b83ce91f997074889649bf2b5c kdesdk-3.1.5.ebuild 311
-MD5 06318d9022a383324dee5c0051e5590c kdesdk-3.2.0.ebuild 454
-MD5 d0727671a975eab8bf73250c811c3d15 kdesdk-3.2.2.ebuild 454
-MD5 71b4542bf43f9788dbb6770e598bc865 kdesdk-3.2.3.ebuild 497
-MD5 cbf03e4e58dba2051f5bda4f1991fab5 kdesdk-3.3.0.ebuild 542
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 66f0de0c2daa15b13c5108f05c10aece ChangeLog 10127
+MD5 2d149e3ee6eb8195393a805270f4bcbb kdesdk-3.1.5.ebuild 311
+MD5 40f7a41d91fc52d8abc236983f21ed0d kdesdk-3.2.0.ebuild 454
+MD5 020e2e7687dc4a4d475cefeecbd04b57 kdesdk-3.2.2.ebuild 454
+MD5 e43247f0e87359caf9485470ed9e02b3 kdesdk-3.2.3.ebuild 500
+MD5 076501ae4e0820013b804c9ee9881091 kdesdk-3.3.0.ebuild 544
+MD5 cd441d48d4cb460b311d1b642719c23c kdesdk-3.3.1.ebuild 508
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 954dc3fa43a82b0b2fb2c415b1c6fda6 kdesdk-3.3.1.ebuild 505
-MD5 d4eb0b9e3d6ababf6c651e868ee9161d kdesdk-3.3.2.ebuild 505
+MD5 78f5365b495d567a2fd54bd3d764505a kdesdk-3.3.2.ebuild 506
 MD5 006a1f456d150861b08ccc85d659b692 files/3.3.0-kbabel.diff 2194
 MD5 3ba6f5ee8c9aa306d74e6a92d87ae6ca files/digest-kdesdk-3.1.5 66
 MD5 4e2c9e5b8d949fae9acf93028cf9d346 files/digest-kdesdk-3.2.0 66
@@ -15,3 +18,10 @@ MD5 5d548fa64f7fd6d2883d96488a8615c2 files/digest-kdesdk-3.2.3 66
 MD5 6050534265e5c3716d79ae87f4fe04d7 files/digest-kdesdk-3.3.0 66
 MD5 ed5283330456993c3ae90fd9b5ec7d8b files/digest-kdesdk-3.3.1 66
 MD5 05b78a43919e346c710b79326bac8ad5 files/digest-kdesdk-3.3.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5XAFKRy60XGEcJIRAl0xAJ0VhCO3PBySkDbgpUTZfpSEghgrpQCdGMHb
+g64EqNIp0fcrpPU208+v5oY=
+=rq4q
+-----END PGP SIGNATURE-----
