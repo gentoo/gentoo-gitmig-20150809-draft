@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.5 2003/08/03 22:26:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.6 2003/08/03 23:10:11 stuart Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -46,7 +46,7 @@ php-ext-base_buildinilist () {
 		PHPSAPILIST="apache1 apache2 cli"
 	fi
 	
-	PHPINIFILELIST=""
+	PHPINIFILELIST=
 
 	for x in ${PHPSAPILIST} ; do
 		if [ -f /etc/php/${x}-php4/php.ini ]; then
@@ -54,7 +54,7 @@ php-ext-base_buildinilist () {
 		fi
 	done
 	
-	if [[ ${PHPINIFILELIST} = "" ]]; then
+	if [ "${PHPINIFILELIST}+" = "+" ] ; then
 		# backwards support for the old location
 
 		if [ -f /etc/php4/php.ini ] ; then
@@ -89,7 +89,7 @@ php-ext-base_addextension () {
 }
 	
 php-ext-base_setting_is_present () {
-	grep "^$1=$2" $3 > /dev/null 2>&1
+	grep "^$1=$2" /$3 > /dev/null 2>&1
 }
 
 php-ext-base_inifileinimage () {
