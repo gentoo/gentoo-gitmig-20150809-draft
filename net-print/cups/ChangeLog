@@ -1,6 +1,15 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.49 2003/09/19 18:02:18 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.50 2003/09/24 21:33:47 drobbins Exp $
+
+  24 Sep 2003; Daniel Robbins <drobbins@gentoo.org> cups-1.1.19-r1.ebuild:
+  removed 'usb' dependencies entirely, since cups does not directly depend
+  on hotplug, and is not necessarily needed for USB support (if USB is
+  compiled directly into the kernel.) Also, the 'usb' variable is 
+  designed to enable optional build-time functionality for USB support, not
+  auto-configure your system to detect USB (which emerging hotplug doesn't
+  do by itself anyway -- an rc-update add hotplug default is needed -- and
+  you need to enable USB in your kernel.) Also unmasked for ia64.  
 
   19 Sep 2003; Rajiv Aaron Manglani <rajiv@gentoo.org> cups-1.1.19-r1.ebuild:
   added 'usb' to IUSE.

@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.7 2003/09/19 18:02:18 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.8 2003/09/24 21:33:47 drobbins Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="ssl slp pam usb"
+IUSE="ssl slp pam"
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
@@ -19,15 +19,14 @@ DEPEND="virtual/glibc
 	slp? ( >=net-libs/openslp-1.0.4 )
 	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
-	>=media-libs/jpeg-6b
-	usb? ( >=sys-apps/hotplug-20020401-r1 )"
+	>=media-libs/jpeg-6b"
 RDEPEND="${DEPEND} !virtual/lpr"
 
 has_version net-print/foomatic && newdepend ">=net-print/foomatic-3.0.0"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64"
+KEYWORDS="ia64 x86 ppc sparc alpha hppa amd64"
 
 filter-flags -fomit-frame-pointer
 
@@ -131,4 +130,9 @@ pkg_postinst() {
 	einfo "to a non-postscript printer (after cups itself! even if it's"
 	einfo "already installed!)"
 	einfo
+
+	einfo "If you're using a USB printer, \"emerge hotplug; rc-update add"
+	einfo "hotplug default\" is something you should probably do. This"
+	einfo "will allow any USB kernel modules (if present) to be loaded"
+	einfo "automatically at boot."
 }
