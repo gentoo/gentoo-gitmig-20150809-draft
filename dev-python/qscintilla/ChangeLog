@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.7 2003/04/29 10:16:18 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.8 2003/05/09 05:09:41 lu_zero Exp $
+
+
+  09 May 2003; Luca Barbato <lu_zero@gentoo.org> qscintilla-1.52.ebuild :
+  Keyworded ~ppc 
 
 *qscintilla-1.52 (29 Apr 2003)
 
