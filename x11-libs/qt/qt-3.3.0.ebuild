@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.2 2004/02/09 16:01:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.3 2004/02/09 19:32:00 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -10,7 +10,8 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~x86"
+# removed ~alpha keyword as firebird db breaks in DEPEND
 IUSE="cups nas postgres opengl mysql odbc gif doc firebird zlib icc sqlite"
 
 DEPEND="virtual/x11 virtual/xft
