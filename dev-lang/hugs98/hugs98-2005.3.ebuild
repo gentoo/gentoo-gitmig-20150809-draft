@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2005.3.ebuild,v 1.1 2005/03/18 18:06:34 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2005.3.ebuild,v 1.2 2005/03/19 12:34:14 kosmikus Exp $
 
 inherit base flag-o-matic eutils versionator
 
@@ -69,6 +69,7 @@ src_compile() {
 
 	# cd ${S}/src/unix || die "source directory not found"
 	econf \
+		--build=${CHOST} \
 		--enable-ffi \
 		--enable-profiling \
 		${myconf} || die "econf failed"
