@@ -1,9 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 66b5b37566145ac3166a3c7e61c64f8e gaim-otr-1.0.3.ebuild 880
 MD5 ced19657ca6b59ce15f5539bdd087cfe ChangeLog 882
 MD5 772dce3497d3125e130d268b63273b24 metadata.xml 226
-MD5 e4cb8399da4f9d247a13b5bc3b03a7c7 gaim-otr-1.0.1.ebuild 799
-MD5 3ddd1980da86c5f72be8bef73f5cb4ec gaim-otr-1.0.2.ebuild 799
-MD5 a9f7ff865991108de60005f5633a1eb9 gaim-otr-1.0.3.ebuild 878
-MD5 f35f82a092a303af1e9780ec9fd495fa files/gaim-otr-1.0.3-fPIC.patch 364
-MD5 38c912f054ef1733b1c843f400063c08 files/digest-gaim-otr-1.0.1 65
-MD5 587b9bbdee97b77975a9217a9be6d2b7 files/digest-gaim-otr-1.0.2 65
 MD5 25b670ffc82acacbee5777a73c30c608 files/digest-gaim-otr-1.0.3 65
+MD5 f35f82a092a303af1e9780ec9fd495fa files/gaim-otr-1.0.3-fPIC.patch 364
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCCfD3I1lqEGTUzyQRAgq1AKDExEgB5eD7BoBbbQ+QqfVGPRUU2ACgodun
+ILy9B3gLOQwxltTIDRkvrHs=
+=M+Jx
+-----END PGP SIGNATURE-----
