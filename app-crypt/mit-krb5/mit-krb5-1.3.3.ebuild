@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.3.ebuild,v 1.1 2004/05/10 11:38:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.3.ebuild,v 1.2 2004/05/12 05:17:36 randy Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/1.3/${MY_P}.tar"
 RESTRICT="nomirror"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~ia64 ~amd64 ~mips"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~ia64 ~amd64 ~mips s390"
 IUSE="krb4 static"
 
 DEPEND="virtual/glibc
