@@ -1,6 +1,10 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.4 2004/09/04 17:08:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.5 2004/10/05 14:04:05 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  glabels-1.93.3.ebuild:
+  Masked glabels-1.93.3.ebuild stable for ppc
 
   04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> glabels-1.93.3.ebuild,
   glabels-2.0.1.ebuild:

@@ -1,6 +1,18 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.49 2004/09/19 15:46:07 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.50 2004/10/05 14:04:05 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gnucash-1.8.7.ebuild, gnucash-1.8.8.ebuild, gnucash-1.8.9.ebuild:
+  Masked gnucash-1.8.9.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gnucash-1.8.7.ebuild, gnucash-1.8.8.ebuild:
+  Masked gnucash-1.8.8.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gnucash-1.8.7.ebuild:
+  Masked gnucash-1.8.7.ebuild stable for ppc
 
   19 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> gnucash-1.8.9.ebuild:
   Marked ~amd64. Fixes BUG #39937.

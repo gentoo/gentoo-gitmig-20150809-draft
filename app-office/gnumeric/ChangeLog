@@ -1,6 +1,18 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.68 2004/08/15 09:30:54 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.69 2004/10/05 14:04:05 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gnumeric-1.0.13-r1.ebuild, gnumeric-1.2.12.ebuild, gnumeric-1.2.6.ebuild:
+  Masked gnumeric-1.2.6.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gnumeric-1.0.13-r1.ebuild, gnumeric-1.2.12.ebuild:
+  Masked gnumeric-1.2.12.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gnumeric-1.0.13-r1.ebuild:
+  Masked gnumeric-1.0.13-r1.ebuild stable for ppc
 
   15 Aug 2004; Mike Gardiner <obz@gentoo.org> gnumeric-1.2.12.ebuild,
   gnumeric-1.2.13.ebuild, gnumeric-1.2.2.ebuild, gnumeric-1.2.6.ebuild:
