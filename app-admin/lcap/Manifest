@@ -1,3 +1,6 @@
 MD5 cc722b2b3adad6f1d0c0836dd72ce3b7 lcap-0.0.6.ebuild 903
-MD5 30e840c1956a69a96f3eec588bc0929a ChangeLog 485
+MD5 0682d3ca2805bf18a40a44ef7ce21e80 ChangeLog 643
+MD5 bc8d49bf8884476af8e36258b5c07648 lcap-0.0.6-r1.ebuild 958
+MD5 b147ed00fa64b3b0be0b78cf2617ce98 files/digest-lcap-0.0.6-r1 66
 MD5 b147ed00fa64b3b0be0b78cf2617ce98 files/digest-lcap-0.0.6 66
+MD5 d25bdd18d8fd480b7324cf9164400651 files/lcap-0.0.6-r1.patch 385
