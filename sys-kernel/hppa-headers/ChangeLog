@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/palo
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.1 2003/04/03 20:07:00 gmsoft Exp $
+
+*hppa-headers-2.4.20_p32 (03 Apr 2003)
+
+	03 Apr 2003; Guy Martin <gmsoft@gentoo.org> hppa-headers-2.4.20_p32.ebuild :
+	Initial import. This ebuild replace the "hppa only" linux-headers-2.4.20.
+
