@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.15 2003/12/15 07:16:35 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.16 2003/12/16 22:55:08 avenj Exp $
+
+  16 Dec 2003; Jon Portnoy <avenj@gentoo.org> files/dnsmasq-init :
+  Added a 'provide dns' to depend(). Fixes bug 35966.
 
 *dnsmasq-1.18 (10 Nov 2003)
 
