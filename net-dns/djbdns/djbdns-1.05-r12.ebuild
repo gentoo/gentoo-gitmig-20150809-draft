@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r12.ebuild,v 1.7 2004/09/18 15:42:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r12.ebuild,v 1.8 2004/12/18 19:00:14 jhhudso Exp $
 
-IUSE="aliaschain cnamefix doc fwdzone ipv6 multipleip roundrobin semanticfix"
+IUSE="aliaschain cnamefix doc fwdzone ipv6 ipv6arpa multipleip roundrobin semanticfix static"
 
 inherit eutils
 
