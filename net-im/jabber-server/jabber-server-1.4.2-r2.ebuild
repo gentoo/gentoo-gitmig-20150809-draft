@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.16 2002/11/29 10:49:46 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.17 2002/11/29 11:59:49 verwilst Exp $
 
 IUSE="ssl"
 
@@ -36,9 +36,8 @@ src_unpack() {
 	unpack aim-transport-stable-20021112.tar.gz
 	unpack yahoo-t-2.1.1.tar.gz
 	unpack muconference-0.3.tar.gz
-	unpack jit-${JID_V}.tar.gz
-	mv jit-${JID_V} jit
-	patch -p0 < ${FILESDIR}/hash_map_gcc32.patch
+	unpack jit-${JIT_V}.tar.gz
+	mv jit-${JIT_V} jit
 	mv ${S}/aim-transport-stable-20021012 ${S}/aim-transport
 	cd ${S}/aim-transport
 	cp ${DISTDIR}/Install_AIM_3.5.1670.exe .
@@ -95,7 +94,7 @@ src_install() {
 	touch ${D}/var/spool/jabber/.keep
 	mkdir -p ${D}/var/run
 
-        cp ${S}/jit/jabberd ${D}/usr/lib/jabber/
+        cp ${S}/jit/jabberd/jabberd-icq ${D}/usr/sbin/
 	cp ${S}/jabberd/jabberd ${D}/usr/sbin/
 	cp ${S}/aim-transport/src/aimtrans.so ${D}/usr/lib/jabber/
 	cp ${S}/aim-transport/Install_AIM_3.5.1670.exe ${D}/usr/lib/jabber/
@@ -111,14 +110,22 @@ src_install() {
 	cd ${D}/etc/jabber
 	tar -xjf ${FILESDIR}/config-1.4.2-r1.tbz2
 
-
-
 }
 
 pkg_postinst() {
 
-	groupadd jabber
-	useradd jabber -s /bin/false -d /etc/jabber -g jabber -m	
+	local test_group=`grep ^jabber: /etc/group | cut -d: -f1`
+        if [ -z $test_group ]
+        then
+		groupadd jabber
+	fi
+
+	local test_user=`grep ^jabber: /etc/passwd | cut -d: -f1`
+	if [ -z $test_user ]
+	then 
+		useradd jabber -s /bin/false -d /var/spool/jabber -g jabber -m
+	fi
+	
 	chown jabber.jabber /etc/jabber 
 	chown jabber.jabber /usr/sbin/jabberd
 	chown jabber.jabber /var/log/jabber -R
@@ -145,9 +152,20 @@ pkg_postinst() {
 
 }
 
-pkg_postrm() {
 
-	userdel jabber
-	groupdel jabber
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
