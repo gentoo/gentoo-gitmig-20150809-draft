@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/gok-0.9.1.ebuild,v 1.7 2004/02/08 23:06:47 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/gok-0.9.1.ebuild,v 1.8 2004/02/10 06:21:40 darkspecter Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gok.ca/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc hppa alpha ia64 ~ppc ~amd64"
+KEYWORDS="x86 sparc hppa alpha ia64 ppc ~amd64"
 
 IUSE=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-2.4.1.ebuild,v 1.5 2004/01/29 03:23:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-2.4.1.ebuild,v 1.6 2004/02/10 06:27:12 darkspecter Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="FDL-1.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa ~amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ia64"
 
 DEPEND="virtual/glibc
 	>=app-text/scrollkeeper-0.3.11"
