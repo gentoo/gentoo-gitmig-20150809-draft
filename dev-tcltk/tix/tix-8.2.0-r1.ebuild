@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0-r1.ebuild,v 1.3 2004/04/14 17:38:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0-r1.ebuild,v 1.4 2004/05/23 00:31:34 fmccor Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tixlibrary/${MY_P}b1.tar.gz"
 IUSE=""
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 		>=sys-apps/sed-4
