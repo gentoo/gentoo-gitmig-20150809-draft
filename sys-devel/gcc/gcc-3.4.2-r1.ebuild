@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r1.ebuild,v 1.4 2004/09/14 17:53:27 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r1.ebuild,v 1.5 2004/09/14 17:55:46 lv Exp $
 
 IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -59,17 +59,7 @@ ETYPE="gcc-compiler"
 HARDENED_GCC_WORKS="x86 sparc amd64"
 SPLIT_SPECS="true"
 
-# Ok, this is a hairy one again, but lets assume that we
-# are not cross compiling, than we want SLOT to only contain
-# $PV, as people upgrading to new gcc layout will not have
-# their old gcc unmerged ...
-# GCC 3.4 introduces a new version of libstdc++
-if [ "${CHOST}" == "${CCHOST}" ]
-then
-	SLOT="${MY_PV}"
-else
-	SLOT="${CCHOST}-${MY_PV}"
-fi
+SLOT="3.4"
 
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
