@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021026.ebuild,v 1.7 2002/10/26 21:38:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021027.ebuild,v 1.1 2002/10/27 07:08:01 vapier Exp $
 
-IUSE="pic X mmx truetype opengl nls"
+IUSE="pic X mmx truetype opengl"
 
 ECVS_SERVER="cvs.enlightenment.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e17"
@@ -25,7 +25,6 @@ DEPEND="app-admin/fam-oss
 	dev-libs/libpcre
 	dev-lang/ferite
 	media-libs/imlib2"
-RDEPEND="nls? ( sys-devel/gettext )"
 
 pkg_setup() {
 	ewarn "A NOTE ABOUT THE COMPILE STAGE:"
@@ -40,9 +39,12 @@ pkg_setup() {
 	echo
 	einfo "Also, if you feel something isnt installed and it should"
 	einfo "be, then also send me an e-mail ;)"
+
+	dodir ${E_PREFIX}
+	[ -e ${E_PREFIX} ] || ln -sf ${D}/${E_PREFIX} ${E_PREFIX}
 }
 
-src_compile() {
+src_install() {
 	# anytime you see --> echo "all:"$'\n\t'"echo done">test/Makefile
 	# it means i disabled the test building ... i could do a sed on that
 	# Makefile to make it work, but its just a test app ... who cares ...
@@ -53,32 +55,19 @@ src_compile() {
 	baseconf="--prefix=${E_PREFIX} --with-gnu-ld --enable-shared"
 	use pic	&&	baseconf="${baseconf} --with-pic"
 
-	local cflags
-	local ldflags
-	local ldflags_src
-	local ldflags_lib
-	cflags="${CFLAGS} -I${S}/libs/e{bg,bits,core,db,style,tox,vas,wd}/src"
-	cflags="${cflags} -I${S}/apps/efsd/efsd"
-	ldflags_src="${LDFLAGS} -L${S}/libs/e{bg,bits,core,db,style,tox,vas,wd}/src"
-	ldflags_lib="${ldflags_src}/.libs"
-
 	# the stupid gettextize script prevents non-interactive mode, so we hax it
 	mkdir ${S}/hax
 	cp `which gettextize` ${S}/hax/ || die "could not copy gettextize"
 	cp ${S}/hax/gettextize ${S}/hax/gettextize.old
 	sed -e 's:read dummy < /dev/tty::' ${S}/hax/gettextize.old > ${S}/hax/gettextize
 
-	local path="${S}/hax"
-	for d in ebg ebits edb ecore evas etox ewd ; do
-		path="${S}/libs/${d}:${path}"
-	done
-	path="${S}/apps/efsd:${path}"
-	PATH="${path}:${PATH}"
+	# find our haxed script first, the -config scripts 2nd, everything else last
+	PATH="${S}/hax:${E_PREFIX}/bin:${PATH}"
+	CFLAGS="${CFLAGS} -I${E_PREFIX}/include -I${E_PREFIX}/include/ewd"
 
 	############
 	### libs ###
 	############
-	ldflags="${ldflags_src}"
 
 	### imlib2 ###
 	cd ${S}/libs/imlib2
@@ -88,17 +77,20 @@ src_compile() {
 	use truetype	&& addconf="${addconf} --with-ttf=/usr"
 	env USER=BS ./autogen.sh ${baseconf} ${addconf} || die "could not autogen imlib2"
 	make || die "could not make imlib2"
+	make install DESTDIR=${D} || die "could not install imlib2"
 
 	### edb ###
 	cd ${S}/libs/edb
 	./autogen.sh ${baseconf} || die "could not autogen edb"
 	make || die "could not make edb"
+	make install DESTDIR=${D} || die "could not install edb"
 
 	### imlib2_loaders ###
 	cd ${S}/libs/imlib2_loaders
 	use X		&& addconf="${addconf} --with-x"
 	./autogen.sh ${baseconf} ${addconf} || die "could not autogen imlib2_loaders"
 	make || die "could not make imlib2_loaders"
+	make install DESTDIR=${D} || die "could not install imlib_loaders"
 
 	### evas ###
 	cd ${S}/libs/evas
@@ -107,88 +99,95 @@ src_compile() {
 	use truetype	&& addconf="${addconf} --with-ttf=/usr"
 	use opengl	&& addconf="${addconf} --with-gl=/usr"
 	./autogen.sh ${baseconf} ${addconf} || die "could not autogen evas"
-	echo "all:"$'\n\t'"echo done">test/Makefile
+	cp ${FILESDIR}/dummy.Makefile test/Makefile
 	make || die "could not make evas"
+	make install DESTDIR=${D} || die "could not install evas"
 
 	### ewd ###
 	cd ${S}/libs/ewd
 	./autogen.sh ${baseconf} || die "could not autogen ewd"
 	make || die "could not make ewd"
+	make install DESTDIR=${D} || die "could not install ewd"
 
 	### ebits ###
 	cd ${S}/libs/ebits
-	ln -s ${S}/libs/evas/src/Evas.h
 	./autogen.sh ${baseconf} || die "could not autogen ebits"
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not make ebits"
+	make || die "could not make ebits"
+	make install DESTDIR=${D} || die "could not install ebits"
 
 	### ecore ###
 	cd ${S}/libs/ecore
 	addconf=
 	use X		&& addconf="${addconf} --with-x"
 	./autogen.sh ${baseconf} ${addconf} || die "could not autogen ecore"
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not make ecore"
+	make || die "could not make ecore"
+	make install DESTDIR=${D} || die "could not install ecore"
 
 	### estyle ###
 	cd ${S}/libs/estyle
 	./autogen.sh ${baseconf} || die "could not autogen estyle"
-	echo "all:"$'\n\t'"echo done">test/Makefile
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not make estyle"
+	cp ${FILESDIR}/dummy.Makefile test/Makefile
+	make || die "could not make estyle"
+	make install DESTDIR=${D} || die "could not install estyle"
 
 	### etox ###
 	cd ${S}/libs/etox
 	./autogen.sh ${baseconf} || die "could not autogen etox"
-	echo "all:"$'\n\t'"echo done">test/Makefile
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}"|| die "could not make etox"
+	cp ${FILESDIR}/dummy.Makefile test/Makefile
+	make || die "could not make etox"
+	make install DESTDIR=${D} || die "could not install etox"
 
 	### ebg ###
 	cd ${S}/libs/ebg
 	./autogen.sh ${baseconf} || die "could not autogen ebg"
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not make ebg"
+	make || die "could not make ebg"
+	make install DESTDIR=${D} || die "could not install ebg"
 
 	### ewl ###
 	cd ${S}/libs/ewl
 	env USER=BS ./autogen.sh ${baseconf} || die "could not autogen ewl"
-	echo "all:"$'\n\t'"echo done">test/Makefile
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags} -lestyle" || die "could not make ewl"
+	cp ${FILESDIR}/dummy.Makefile test/Makefile
+	make || die "could not make ewl"
+	make install DESTDIR=${D} || die "could not install ewl"
 
 	############
 	### apps ###
 	############
-	ldflags="${ldflags_libs}"
 
 	### etcher ###
 	cd ${S}/apps/etcher
-	addconf=
-	use nls		|| addconf="${addconf} --disable-nls --with-included-gettext"
+	addconf="--disable-nls --with-included-gettext"
 	./autogen.sh ${baseconf} ${addconf} || die "could not autogen etcher"
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" top_builddir=`pwd` || die "could not make etcher"
+	make CFLAGS="${CFLAGS} -levas" top_builddir=`pwd` || die "could not make etcher"
+	make install DESTDIR="${D}" top_builddir=`pwd` || die "could not install etcher"
 
 	### ebony ###
 	cd ${S}/apps/ebony
 	./autogen.sh ${baseconf} || die "could not autogen ebony"
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not make ebony"
+	make || die "could not make ebony"
+	make install DESTDIR="${D}" || die "could not install ebony"
 
 	### med ###
 	cd ${S}/apps/med
 	addconf=
 	use X           && addconf="${addconf} --with-x"
 	./autogen.sh ${baseconf} ${addconf} || die "could not autogen med"
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not build med"
+	make || die "could not build med"
+	make install DESTDIR="${D}" || die "could not install med"
 
 	### efsd ###
-	ldflags="${ldflags_src}"
 	cd ${S}/apps/efsd
 	./autogen.sh ${baseconf} || die "could not autogen efsd"
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not build efsd"
+	make || die "could not build efsd"
+	make install DESTDIR="${D}" || die "could not install efsd"
 
 	### ebindings ###
-	ldflags="${ldflags_lib}"
 	cd ${S}/apps/ebindings
 	./autogen.sh ${baseconf} || die "could not autogen ebindings"
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not build ebindings"
+	make || die "could not build ebindings"
+	make install DESTDIR="${D}" || die "could not install ebindings"
 
 	### e ###
-	ldflags="${ldflags_src} -L${S}/apps/efsd/efsd"
 	cd ${S}/apps/e
 	# hack it a little ;D
 	cp configure.ac configure.ac.old
@@ -200,76 +199,18 @@ src_compile() {
 	cp Makefile Makefile.old
 	sed -e 's:m4  po::' \
 		Makefile.old > Makefile
-	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not build e"
+	make || die "could not build e"
+	make install DESTDIR="${D}" || die "could not install e"
+
+	# remove improper stuff
+	cd ${D}
+ls -al
+	rm -rf `find -name CVS`
+	rm -rf '@aclocaldir@'
+ls -al
 }
 
-src_install() {
-	into ${E_PREFIX}
-	dodir ${E_PREFIX}/share
-	rm -rf `find -name CVS`
-
-	### e ###
-	cd ${S}/apps/e
-	dodir ${E_PREFIX}/share/enlightenment
-	dobin client/e_ipc_client src/.libs/enlightenment tools/.libs/*
-	mv data ${D}/${E_PREFIX}/share/enlightenment/
-
-	### ebindings ebony etcher med ###
-	cd ${S}/apps
-	dodir ${E_PREFIX}/share/ebony
-	dodir ${E_PREFIX}/share/etcher
-	for e in ebindings ebony etcher med ; do
-		dobin ${e}/src/${e}
-	done
-	mv ebony/pixmaps ${D}/${E_PREFIX}/share/ebony/
-	mv etcher/{examples,pixmaps} ${D}/${E_PREFIX}/share/etcher/
-
-	### efsd ###
-	cd ${S}/apps/efsd
-	dodir ${E_PREFIX}/share/efsd/
-	dobin efsd/.libs/efsd efsd-config tools/efsdsh
-	dolib.a efsd/.libs/*.a
-	dolib.so efsd/.libs/libefsd.so.0.0.0
-	dosym ${E_PREFIX}/lib/libefsd.so.0.0.0 ${E_PREFIX}/lib/libefsd.so.0
-	dosym ${E_PREFIX}/lib/libefsd.so.0.0.0 ${E_PREFIX}/lib/libefsd.so
-	mv tools/{magic.txt,filetypes.dtd,filetypes.xml} ${D}/${E_PREFIX}/share/efsd/
-
-	# prep the library dirs
-	cd ${S}/libs
-	rm -rf `find -name test`
-
-	# install the .a libraries
-	dolib.a e{bg,bits,core,db,style,tox,vas,wd,wl}/src/.libs/*.a \
-		ewl/plugins/fx/{fade_{in,out},glow}/.libs/*.a \
-		imlib2/{filters,libltdl,loaders,src}/.libs/*.a \
-		imlib2_loaders/{libltdl,src}/.libs/*.a
-
-	# install the .so libraries
-	dolib.so ewl/plugins/fx/{fade_{in,out},glow}/.libs/*.so \
-		imlib2/{filters,loaders}/.libs/*.so \
-		imlib2_loaders/src/.libs/*.so
-	for libdir in e{bg,bits,core,db,style,tox,vas,wd,wl} imlib2 ; do
-		cd ${S}/libs/${libdir}/src/.libs
-		local reallib=`ls *.so.?.?.?`
-		dolib.so ${reallib}
-		for symlib in *.so* ; do
-			[ "${reallib}" != "${symlib}" ] && \
-				dosym ${E_PREFIX}/lib/${reallib} ${E_PREFIX}/lib/${symlib}
-		done
-	done
-	cd ${S}/libs
-
-	# install the binaries/scripts
-	dobin `find -name '*-config'`
-	dobin ebg/tools/.libs/* \
-		edb/tools/edb_gtk_ed/.libs/* \
-		edb/tools/.libs/* \
-		ewl/tools/ewl_config/.libs/*
-
-	# make an env.d entry for our libraries/binaries
-	dodir /etc/env.d
-	echo "LDPATH=${E_PREFIX}/lib" > e.env.d
-	echo "PATH=${E_PREFIX}/bin" >> e.env.d
-	insinto /etc/env.d
-	newins e.env.d 50enlightenment
+pkg_preinst() {
+	# clean up symlink
+	[ -L ${E_PREFIX} ] && rm -f ${E_PREFIX}
 }

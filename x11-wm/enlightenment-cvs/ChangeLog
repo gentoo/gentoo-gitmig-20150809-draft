@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/enlightenment-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/ChangeLog,v 1.1 2002/10/26 09:10:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/ChangeLog,v 1.2 2002/10/27 07:08:01 vapier Exp $
+
+*enlightenment-cvs-20021027 (27 Oct 2002)
+
+  27 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  So it seems the last ebuild only worked on my computer ... how annoying ...
+  This one i tested on more boxes and worked on all of them ...
 
 *enlightenment-cvs-20021026 (26 Oct 2002)
 
