@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc3-r2.ebuild,v 1.2 2005/03/03 03:22:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc3-r2.ebuild,v 1.3 2005/03/04 03:19:42 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -28,7 +28,7 @@ MODULE_NAMES="ivtv(extra:${S}/driver)
 	tveeprom(extra:${S}/driver)
 	saa7127(extra:${S}/driver)"
 BUILD_TARGETS="all"
-#BUILD_PARAMS="KDIR=${KERNEL_DIR}"
+BUILD_PARAMS="KDIR=${KERNEL_DIR}"
 CONFIG_CHECK="I2C_ALGOBIT VIDEO_DEV"
 
 DEPEND="app-arch/unzip"
