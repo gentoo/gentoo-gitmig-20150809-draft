@@ -1,8 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.83 2005/02/19 07:11:31 mr_bones_ Exp $
-#
-# Author Bart Verwilst <verwilst@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.84 2005/03/18 03:48:14 vapier Exp $
 
 ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
@@ -68,25 +66,25 @@ inherit eutils toolchain-funcs multilib
 
 # C[XX]FLAGS that we allow in strip-flags
 setup-allowed-flags() {
-	if [ -z "${ALLOWED_FLAGS}" ] ; then
+	if [[ -z ${ALLOWED_FLAGS} ]] ; then
 		export ALLOWED_FLAGS="-pipe"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -O -O0 -O1 -O2 -mcpu -march -mtune"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fstack-protector -fno-stack-protector"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-pie -fno-unit-at-a-time"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -g -g0 -g1 -g2 -g3 -ggdb -ggdb0 -ggdb1 -ggdb2 -ggdb3"
-		case "${ARCH}" in
+		case $(tc-arch) in
 			mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mips32 -mips64 -mips16 -EL -EB -mabi" ;;
 			amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC -m64" ;;
 			x86)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -m32" ;;
 			alpha)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
 			ia64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
-			sparc)  ALLOWED_FLAGS="${ALLOWED_FLAGS} -m32 -m64" ;;
+			sparc)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -m32 -m64" ;;
 			ppc)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mabi" ;;
 		esac
 	fi
 	# allow a bunch of flags that negate features / control ABI
 	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-stack-protector -fno-stack-protector-all"
-	case "${ARCH}" in
+	case $(tc-arch) in
 		x86|amd64|ia64) ALLOWED_FLAGS="${ALLOWED_FLAGS} -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow" ;;
 	esac
 	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mregparm -mno-app-regs -mapp-regs -msoft-float -mflat -mno-faster-structs -mfaster-structs -mlittle-endian -mbig-endian -mlive-g0 -mcmodel -mno-stack-bias -mstack-bias"
@@ -226,7 +224,7 @@ strip-flags() {
 	local NEW_CXXFLAGS=""
 
 	# Allow unstable C[XX]FLAGS if we are using unstable profile ...
-	if has ~${ARCH} ${ACCEPT_KEYWORDS} ; then
+	if has ~$(tc-arch) ${ACCEPT_KEYWORDS} ; then
 		use debug && einfo "Enabling the use of some unstable flags"
 		ALLOWED_FLAGS="${ALLOWED_FLAGS} ${UNSTABLE_FLAGS}"
 	fi
@@ -421,9 +419,11 @@ filter-ldflags() {
 	# out part of a flag ... we want flag atoms ! :D
 	LDFLAGS=" ${LDFLAGS} "
 	for x in "$@" ; do
-		LDFLAGS="${LDFLAGS// ${x} / }"
+		LDFLAGS=${LDFLAGS// ${x} / }
 	done
-	LDFLAGS="${LDFLAGS:1:${#LDFLAGS}-2}"
+	[[ -z ${LDFLAGS// } ]] \
+		&& LDFLAGS="" \
+		|| LDFLAGS=${LDFLAGS:1:${#LDFLAGS}-2}
 	export LDFLAGS
 	return 0
 }
@@ -458,7 +458,7 @@ gcc2-flags() {
 	CXXFLAGS=${CXXFLAGS//athlon-[xm]p/i686}
 	CXXFLAGS=${CXXFLAGS//athlon/i686}
 
-	if [ "$ARCH" = alpha ]; then
+	if [[ $(tc-arch) == "alpha" ]] ; then
 		CHOST=${CHOST/#alphaev6[78]/alphaev6}
 		CFLAGS=${CFLAGS//ev6[78]/ev6}
 		CXXFLAGS=${CXXFLAGS//ev6[78]/ev6}
