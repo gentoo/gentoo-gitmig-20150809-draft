@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/DateManip
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.1 2002/04/22 20:51:23 agenkin Exp $
+
+*grepmail-4.70 (22 April 2002)
+
+  22 Apr 2002; Arcady Genkin <agenkin@thpoon.com>: grepmail-4.70.ebuild
+  
+  Initial version of the package.
