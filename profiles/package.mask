@@ -41,6 +41,26 @@ net-www/zope
 # for various legal reasons 
 >=net-misc/gift-0.9.7
 
+# committed to facilitate testing by several devs, mostly Verwilst and me.
+# testing should be over in 24h so don't unmask without good reason.
+>=kde-base/arts-1.0.0
+>=kde-base/kdelibs-3.0
+>=kde-base/kdebase-3.0
+>=kde-base/kde-3.0
+>=kde-base/kdeartwork-3.0
+>=kde-base/kdebindings-3.0
+>=kde-base/kdeedu-3.0
+>=kde-base/kdegames-3.0
+>=kde-base/kdegraphics-3.0
+>=kde-base/kdemultimedia-3.0
+>=kde-base/kdenetwork-3.0
+>=kde-base/kdepim-3.0
+>=kde-base/kdesdk-3.0
+>=kde-base/kdetoys-3.0
+>=kde-base/kdeutils-3.0
+>=kde-base/kdoc-3.0
+>=dev-util/kdevelop-2.1
+
 # Waiting for kde3 ebuilds. These ebuilds are ok themselves and if you're using
 # my kde3pre ebuilds, you can unmask and emerge these as well. - danarmak
 >=net-misc/qtella-0.4.1
