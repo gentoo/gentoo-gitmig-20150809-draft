@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.84 2005/01/16 09:28:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.85 2005/01/16 10:37:10 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -743,7 +743,7 @@ gcc_src_unpack() {
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
-	if [[ "$(tc-arch)" == "amd64" ]] \
+	if [[ $(tc-arch) == "amd64" ]] \
 	   && [[ -z ${SKIP_MULTILIB_HACK} ]] && use multilib
 	then
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
@@ -1089,7 +1089,7 @@ gcc_do_filter_flags() {
 }
 
 gcc_src_compile() {
-	if [ "$(tc-arch)" == "amd64" -a "${LD_PRELOAD}" == "/lib/libsandbox.so" ] && use multilib; then
+	if [[ $(tc-arch) == "amd64" ]] && [[ ${LD_PRELOAD} == "/lib/libsandbox.so" ]] && use multilib; then
 		eerror "Sandbox in your installed portage does not support compilation."
 		eerror "of a multilib gcc.  Please set FEATURE=-sandbox and try again."
 		eerror "After you have a multilib gcc, re-emerge portage to have a working sandbox."
@@ -1124,7 +1124,7 @@ gcc_src_compile() {
 
 	# Do not create multiple specs files for PIE+SSP if boundschecking is in
 	# USE, as we disable PIE+SSP when it is.
-	if [ "${ETYPE}" == "gcc-compiler" -a "${SPLIT_SPECS}" == "true" ]  && ! want_boundschecking ; then
+	if [[ ${ETYPE} == "gcc-compiler" ]] && [[ ${SPLIT_SPECS} == "true" ]] && ! want_boundschecking ; then
 		split_out_specs_files || die "failed to split out specs"
 	fi
 
@@ -1146,7 +1146,7 @@ gcc-library_src_install() {
 		LIBPATH="${LIBPATH}" \
 		${GCC_INSTALL_TARGET} || die
 
-	if [ "${GCC_LIB_COMPAT_ONLY}" == "true" ] ; then
+	if [[ ${GCC_LIB_COMPAT_ONLY} == "true" ]] ; then
 		rm -rf ${D}/${INCLUDEPATH}
 		rm -rf ${D}/${DATAPATH}
 		pushd ${D}/${LIBPATH}/
@@ -1163,7 +1163,7 @@ gcc-library_src_install() {
 		echo "LDPATH=\"${LIBPATH}/${GCC_LIB_USE_SUBDIR}/\"" >> ${D}/etc/env.d/99${PN}
 	fi
 
-	if [ "${GCC_VAR_TYPE}" == "non-versioned" ] ; then
+	if [[ ${GCC_VAR_TYPE} == "non-versioned" ]] ; then
 		# if we're not using versioned directories, we need to use versioned
 		# filenames.
 		add_version_to_shared
