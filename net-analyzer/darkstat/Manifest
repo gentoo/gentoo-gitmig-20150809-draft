@@ -1,12 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6d712e4ffb73b80483aeff7101ff9950 darkstat-2.5.ebuild 971
 MD5 22b9add6bee63e4f329f823d612d3fd6 darkstat-2.6-r1.ebuild 1075
 MD5 f95c4429615a9f4be3f0fa60e05599af darkstat-2.6.ebuild 1015
 MD5 87348de91019023adc329f3a3c7be48b ChangeLog 1405
 MD5 e9cd01f31fc31ef1849ad5b87358345a metadata.xml 218
-MD5 11a0d835bd33988a1e21544896d0374e files/digest-darkstat-2.5 64
 MD5 65647b954a76c7c35eef2f47dfdb5355 files/digest-darkstat-2.6 64
 MD5 65647b954a76c7c35eef2f47dfdb5355 files/digest-darkstat-2.6-r1 64
 MD5 44483f0b13561a54b68949145198339f files/darkstat-confd 214
@@ -15,7 +13,7 @@ MD5 178efb20612f2c23ec93b9f9a3ddb69c files/ipcheck.patch 3003
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBKeu9T+MN7JbqCpMRAnOWAJ40IQ5JNYd5HgcTWjXMJhGyXqYbogCfbx3q
-mXUGgOx4jjZNGwCiAxjKepQ=
-=SncL
+iD8DBQFBKewiT+MN7JbqCpMRAlbwAJ41nMrjbm2a0OBeKkjhEyxt3NVwPQCfXpvl
+YWvofqBesANDIV2fNJqXVc4=
+=j3Pb
 -----END PGP SIGNATURE-----
