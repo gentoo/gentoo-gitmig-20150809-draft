@@ -1,0 +1,13 @@
+# ChangeLog for net-mail/tpop3d
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.1 2003/01/19 10:36:36 raker Exp $
+
+*tpop3d-1.4.2 (19 Jan 2003)
+
+  19 Jan 2003; Nick Hadaway <raker@gentoo.org> tpop3d-1.4.2.ebuild,
+  files/digest-tpop3d-1.4.2 :
+  New ebuild as suggested on bug #4282 by Martin Klebermass.
+  Added tests for local variables to enable/disable features that are
+  generally not needed, insecure, or rude. :) (seriously!) Also
+  added a net-mail/drac ebuild for pop-before-smtp integration and
+  included a patch for the optional auth-flatfile support.
