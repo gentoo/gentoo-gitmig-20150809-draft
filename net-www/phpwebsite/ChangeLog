@@ -1,6 +1,11 @@
 # ChangeLog for net-www/phpwebsite
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/ChangeLog,v 1.3 2003/07/18 17:15:50 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/ChangeLog,v 1.4 2003/09/01 15:13:08 aliz Exp $
+
+*phpwebsite-0.9.3 (01 Sep 2003)
+
+  01 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> phpwebsite-0.9.3_p1.ebuild :
+  Security update.
 
   18 Jul 2003; Don Seiler <rizzo@gentoo.org>; phpwebsite-0.9.3.ebuild:
   Changing instructions for pre- and post-install scripts
