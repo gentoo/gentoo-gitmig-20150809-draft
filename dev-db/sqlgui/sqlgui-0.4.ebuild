@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/sqlgui-0.4.ebuild,v 1.10 2004/06/24 22:00:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/sqlgui-0.4.ebuild,v 1.11 2004/06/29 17:39:17 agriffis Exp $
 
 inherit kde eutils
 need-kde 3
@@ -13,6 +13,7 @@ SRC_URI="http://www.sqlgui.de/download/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=dev-db/mysql-3.23.38
 	>=dev-db/sqlguipart-${PV}"

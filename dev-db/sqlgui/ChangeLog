@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlgui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/ChangeLog,v 1.7 2004/06/24 22:00:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/ChangeLog,v 1.8 2004/06/29 17:39:17 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> sqlgui-0.4.ebuild:
+  sync IUSE (missing)
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> sqlgui-0.4.ebuild,
   sqlgui-0.5.ebuild:

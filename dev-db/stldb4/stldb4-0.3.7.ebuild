@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/stldb4/stldb4-0.3.7.ebuild,v 1.3 2004/06/24 22:01:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/stldb4/stldb4-0.3.7.ebuild,v 1.4 2004/06/29 17:46:09 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/witme/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND=">=dev-libs/ferrisloki-2.0.3
 	>=dev-libs/libferrisstreams-0.3.6
