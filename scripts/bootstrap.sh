@@ -2,6 +2,8 @@
 
 LIST=$1
 
+#We really need to upgrade baselayout now that it's possible:
+myBASELAYOUT=`grep "sys-apps/baselayout" $1`
 myPORTAGE=`grep "sys-apps/portage" $1`
 myGETTEXT=`grep "sys-devel/gettext" $1`
 myBINUTILS=`grep "sys-devel/binutils" $1`
@@ -9,11 +11,12 @@ myGCC=`grep "sys-devel/gcc" $1`
 myGLIBC=`grep "sys-libs/glibc" $1`
 myTEXINFO=`grep "sys-apps/texinfo" $1`
 
-echo "Using PORTAGE $myPORTAGE"
-echo "Using BINUTILS $myBINUTILS"
-echo "Using GCC $myGCC"
-echo "Using GETTEXT $myGETTEXT"
-echo "Using GLIBC $myGLIBC"
+echo "Using $myBASELAYOUT"
+echo "Using $myPORTAGE"
+echo "Using $myBINUTILS"
+echo "Using $myGCC"
+echo "Using $myGETTEXT"
+echo "Using $myGLIBC"
 
 cleanup() {
 	cp /etc/make.conf.build /etc/make.conf
@@ -42,7 +45,7 @@ export CONFIG_PROTECT=""
 #above allows portage to overwrite stuff
 cd /usr/portage
 emerge $myPORTAGE #separate, so that the next command uses the *new* emerge
-emerge $myBINUTILS $myGCC $myGETTEXT || cleanup 1
+emerge $myBASELAYOUT $myBINUTILS $myGCC $myGETTEXT || cleanup 1
 if [ "$use_unset" = "yes" ]
 then
 	unset USE

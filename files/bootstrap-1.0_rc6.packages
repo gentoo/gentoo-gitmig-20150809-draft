@@ -1,3 +1,4 @@
+>=sys-apps/baselayout-1.6.2
 >=sys-apps/portage-1.6.6
 =sys-libs/glibc-2.2.4-r1
 =sys-devel/binutils-2.11.90.0.7
