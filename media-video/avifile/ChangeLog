@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avifile
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.62 2003/12/28 15:26:26 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.63 2004/02/20 16:03:59 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org>
+  avifile-0.7.37.20030522-r2.ebuild, avifile-0.7.38.20030710.ebuild:
+  add alpha and ia64 keywords
 
   28 Dec 2003; Martin Holzer <mholzer@gentoo.org>
   avifile-0.7.38.20030710.ebuild:

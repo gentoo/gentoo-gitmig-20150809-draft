@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522-r2.ebuild,v 1.7 2003/10/21 15:51:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522-r2.ebuild,v 1.8 2004/02/20 16:03:59 agriffis Exp $
 
 MAJ_PV=${PV:0:3}
 MIN_PV=${PV:3:3}
@@ -15,7 +15,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0.7"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc alpha ia64"
 IUSE="static truetype xv sdl dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd debug"
 
 DEPEND=">=media-libs/jpeg-6b
