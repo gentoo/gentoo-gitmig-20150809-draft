@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.14 2004/06/25 01:47:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.15 2004/08/03 22:32:59 lanius Exp $
+
+  04 Aug 2004; Heinrich Wendel <lanius@gentoo.org> pyxdg-0.1.ebuild,
+  pyxdg-0.2.ebuild, pyxdg-0.3.ebuild, pyxdg-0.4.ebuild, pyxdg-0.5.ebuild,
+  pyxdg-0.6.ebuild:
+  remove old ebuilds; bump to 0.6; mark 0.5 x86
 
   18 Apr 2004; Heinrich Wendel <lanius@gentoo.org> pyxdg-0.5.ebuild:
   fix license, bug #48147
