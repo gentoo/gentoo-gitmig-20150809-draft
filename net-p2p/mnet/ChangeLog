@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/mnet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/ChangeLog,v 1.12 2004/02/11 21:29:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/ChangeLog,v 1.13 2004/04/27 01:07:23 squinky86 Exp $
+
+*mnet-0.6.2.383 (26 Apr 2004)
+
+  26 Apr 2004; Jon Hood <squinky86@gentoo.org> mnet-0.6.2.383.ebuild,
+  files/digest-mnet-0.6.2.383.ebuild, mnet-0.6.2.340.ebuild:
+  version bumped; closes #47658
+  mark 0.6.2.340 stable on x86 and remove old version
 
 *mnet-0.6.2.340 (11 Feb 2004)
 
