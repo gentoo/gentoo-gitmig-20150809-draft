@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.10.ebuild,v 1.4 2004/10/05 11:46:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.10.ebuild,v 1.5 2004/10/11 08:36:27 taviso Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${P}.tar.gz"
 
-LICENSE="GPL-2 | GPL-2 IDEA"
+LICENSE="GPL-2 idea? ( IDEA )"
 SLOT="0"
 KEYWORDS="~x86 ~mips ~alpha ~amd64 ~ppc"
 IUSE="X caps ldap nls smartcard static"
