@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.1.7.ebuild,v 1.3 2004/10/06 07:28:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.1.7.ebuild,v 1.4 2004/10/06 07:38:17 usata Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/~kzk/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 | BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=app-i18n/uim-0.4.3
