@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Mail-SpamAssassin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/ChangeLog,v 1.15 2003/01/03 00:11:08 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/ChangeLog,v 1.16 2003/02/02 12:30:26 aliz Exp $
+
+*Mail-SpamAssasin-2.44 (02 Feb 2003)
+
+  02 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
