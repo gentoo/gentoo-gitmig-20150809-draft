@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<maintainer>
+		<email>ribosome@gentoo.org</email>
+		<name>Olivier Fisette</name>
+	</maintainer>
 	<herd>sci</herd>
 	<longdescription>
 		The Vienna RNA Package consists of a C code library and several
@@ -8,8 +12,8 @@
 		structures. RNA secondary structure prediction through energy
 		minimization is the most used function in the package. We provide three
 		kinds of dynamic programming algorithms for structure prediction: the
-		minimum free energy algorithm of (Zuker and Stiegler 1981) which yields
-		a single optimal structure, the partition function algorithm of
+		minimum free energy algorithm of (Zuker and Stiegler 1981) which yields a
+		single optimal structure, the partition function algorithm of
 		(McCaskill 1990) which calculates base pair probabilities in the
 		thermodynamic ensemble, and the suboptimal folding algorithm of
 		(Wuchty et.al 1999) which generates all suboptimal structures within a
