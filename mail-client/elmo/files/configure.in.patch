@@ -1,0 +1,75 @@
+--- configure.in.orig	2004-09-26 13:18:47.215194296 +0930
++++ configure.in	2004-09-26 14:25:58.656947352 +0930
+@@ -50,34 +50,25 @@
+ dnl GnuPG support
+ dnl
+ 
+-GPGME4="notdefined"
+-have_gpgme=no
+-AC_CHECK_HEADER(gpgme.h, [
+-	AC_DEFINE(HAVE_GPGME_H, 1, [Has gpgme.h])
+-	GPGME4="no"
+-	])
+-	
+-AC_CHECK_HEADER(gpgme4/gpgme.h, [
+-	AC_DEFINE(HAVE_GPGME4_H, 1, [Has gpgme4/gpgme.h])
+-	GPGME4="yes"
+-	])
+-	
+-have_gpgme=no
+-if test "$GPGME4" == "no" ; then
+-	AM_PATH_GPGME([0.4.2], have_gpgme=yes, have_gpgme=no)
+-	if test "$have_gpgme" = yes; then
+-		AC_DEFINE(HAVE_GPGME, 1, [Use libgpgme.so])
+-		AC_DEFINE([GPG_SUPPORT], [1], [Define to 1 if gpgme library is present.])
+-	fi
+-else if test "$GPGME4" == "yes" ; then
+-	AC_CHECK_LIB(gpgme4, gpgme_check_version, [
+-		have_gpgme=yes
+-		GPGME_LIBS="-lgpgme4"
+-		AC_SUBST(GPGME_LIBS)
+-		AC_DEFINE(HAVE_GPGME4, 1, [Use libgpgme4.so])
+-		AC_DEFINE([GPG_SUPPORT], [1], [Define to 1 if gpgme library is present.])
+-		])
+-fi
++
++AC_ARG_WITH(gpgme,
++	AC_HELP_STRING([--without-gpgme],
++	[without GnuPG (GPGME library) support]),
++	[with_gpgme=${withval}],
++	[with_gpgme=yes])
++
++
++if test "$with_gpgme" = "yes"; then
++ AM_PATH_GPGME(0.4.3,
++	[LIBS="$LIBS $GPGME_LIBS"
++	CFLAGS="$CFLAGS $GPGME_CFLAGS"
++	with_gpgme=yes],
++	[AC_MSG_ERROR(Cannot find an up to date GPGME)
++	with_gpgme=no])
++ 
++ if test "$with_gpgme" = "yes"; then
++	AC_DEFINE([GPG_SUPPORT], [1], [Define to 1 if gpgme library is present.])
++ fi
+ fi
+ 
+ dnl
+@@ -209,8 +200,8 @@
+ 		       [additional debugging support])])
+ if test "x$enable_debug" = xyes; then
+   AC_DEFINE([DEBUG], [1], [turns on debugging facilities])
+-  CFLAGS="-gdwarf-2 -g3 -O0"
+-  CXXFLAGS="-gdwarf-2 -g3 -O0"
++  CFLAGS="$CFLAGS -gdwarf-2 -g3"
++  CXXFLAGS="$CXXFLAGS -gdwarf-2 -g3"
+ else
+   enable_debug=no
+ fi
+@@ -289,6 +280,6 @@
+ 
+ echo
+ echo " Debugging information: $enable_debug"
+-echo "           GPG support: $have_gpgme"
++echo "           GPG support: $with_gpgme"
+ echo "       OpenSSL support: $ac_use_openssl"
+ echo
