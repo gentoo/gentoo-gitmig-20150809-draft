@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.24 2004/08/14 22:04:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.25 2004/08/20 21:45:42 stuart Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -183,6 +183,11 @@ php5-sapi_check_awkward_uses () {
 		# enable gd last, so configure can pick up the previous settings
 		enable_extension_with 	"gd" 			"gd" 		0
 	fi
+
+	confutils_use_depend_any "jpeg" "gd" "gd-external"
+	confutils_use_depend_any "png"  "gd" "gd-external"
+	confutils_use_depend_any "tiff" "gd" "gd-external"
+	confutils_use_depend_any "xpm"  "gd" "gd-external"
 
 	if useq imap ; then
 		enable_extension_with 	"imap" 			"imap" 		1
