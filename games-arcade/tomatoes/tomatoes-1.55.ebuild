@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55.ebuild,v 1.5 2005/01/28 23:01:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55.ebuild,v 1.6 2005/02/10 20:10:04 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -27,6 +27,7 @@ pkg_setup() {
 		eerror "is built with USE=-mikmod"
 		die "Please emerge sdl-mixer with USE=mikmod"
 	fi
+	games_pkg_setup
 }
 
 src_unpack() {
