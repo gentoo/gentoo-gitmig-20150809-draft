@@ -1,0 +1,91 @@
+diff -uNr fortune-mod-1.99.1/datfiles/Makefile fortune-mod-1.99.1-new/datfiles/Makefile
+--- fortune-mod-1.99.1/datfiles/Makefile	Fri Mar  5 07:29:56 2004
++++ fortune-mod-1.99.1-new/datfiles/Makefile	Tue Feb  1 15:23:49 2005
+@@ -58,7 +58,7 @@
+ 	if [ $(WEB) = 1 ] ; then cd html && $(MAKE) install ; fi
+ 	for i in $(COOKIES) ; do \
+ 		install -m 0644 $$i $$i.dat $(COOKIEDIR) || exit $? ; \
+-		cp -d $$i.u8 $(COOKIEDIR) ; \
++		cp -R $$i.u8 $(COOKIEDIR) ; \
+ 		done
+ 
+ clean:
+diff -uNr fortune-mod-1.99.1/datfiles/off/Makefile fortune-mod-1.99.1-new/datfiles/off/Makefile
+--- fortune-mod-1.99.1/datfiles/off/Makefile	Fri Mar  5 07:29:56 2004
++++ fortune-mod-1.99.1-new/datfiles/off/Makefile	Tue Feb  1 15:24:28 2005
+@@ -38,7 +38,7 @@
+ 	install -m 0755 -d $(OCOOKIEDIR)
+ 	for i in $(OCOOKIES) ; \
+ 	    do install -m 0644 $$i $$i.dat $(OCOOKIEDIR) || exit $$? ; \
+-	    cp -d $$i.u8 $(OCOOKIEDIR) ; \
++	    cp -R $$i.u8 $(OCOOKIEDIR) ; \
+ 	done
+ 
+ clean:
+diff -uNr fortune-mod-1.99.1/fortune/fortune.c fortune-mod-1.99.1-new/fortune/fortune.c
+--- fortune-mod-1.99.1/fortune/fortune.c	Fri Mar  5 07:29:56 2004
++++ fortune-mod-1.99.1-new/fortune/fortune.c	Tue Feb  1 15:28:44 2005
+@@ -97,7 +97,7 @@
+ #endif /* killing warnings */
+ 
+ #define		PROGRAM_NAME		"fortune-mod"
+-#define		PROGRAM_VERSION		"9708"
++#define		PROGRAM_VERSION		"1.99.1"
+ 
+ #ifdef HAVE_STDBOOL_H
+ #include <stdbool.h>
+@@ -256,7 +256,7 @@
+ RECODE_OUTER outer;
+ 
+ int add_dir(register FILEDESC *);
+-
++const char *program_name;
+ char *program_version(void)
+ {
+     static char buf[BUFSIZ];
+@@ -1675,15 +1675,17 @@
+ {
+     char *ctype, *crequest;
+     getargs(ac, av);
+-
++	program_name = (char *const) av[0];
+     outer = recode_new_outer(true);
+     request = recode_new_request (outer);
+ 
+     setlocale(LC_ALL,"");
+     ctype = nl_langinfo(CODESET);
+-    if(strcmp(ctype,"ANSI_X3.4-1968") == 0)
+-        ctype="ISO-8859-1";
+-	
++    if (!ctype || !*ctype)
++    	ctype="C"; /* revert to C if no valid envvars! */
++    else
++    	if(strcmp(ctype,"ANSI_X3.4-1968") == 0)
++    		ctype="ISO-8859-1";
+     crequest = malloc(strlen(ctype) + 7 + 1);
+     sprintf(crequest, "UTF-8..%s", ctype);
+     recode_scan_request (request, crequest);
+Binary files fortune-mod-1.99.1/fortune/fortune.o and fortune-mod-1.99.1-new/fortune/fortune.o differ
+diff -uNr fortune-mod-1.99.1/util/rot.c fortune-mod-1.99.1-new/util/rot.c
+--- fortune-mod-1.99.1/util/rot.c	Fri Mar  5 07:29:57 2004
++++ fortune-mod-1.99.1-new/util/rot.c	Tue Feb  1 15:29:51 2005
+@@ -5,6 +5,7 @@
+ 
+ #include <stdio.h>
+ #include <ctype.h>
++#include <stdlib.h>
+ 
+ int main(void)
+ {
+diff -uNr fortune-mod-1.99.1/util/unstr.c fortune-mod-1.99.1-new/util/unstr.c
+--- fortune-mod-1.99.1/util/unstr.c	Fri Mar  5 07:29:57 2004
++++ fortune-mod-1.99.1-new/util/unstr.c	Tue Feb  1 15:30:41 2005
+@@ -96,7 +96,7 @@
+ #include	<ctype.h>
+ #include	<string.h>
+ #include	<unistd.h>
+-
++#include	<stdlib.h>
+ #ifndef MAXPATHLEN
+ #define	MAXPATHLEN	1024
+ #endif /* MAXPATHLEN */

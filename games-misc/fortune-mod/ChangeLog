@@ -1,6 +1,13 @@
 # ChangeLog for games-misc/fortune-mod
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.13 2004/12/29 00:09:40 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.14 2005/02/01 21:55:21 kito Exp $
+
+*fortune-mod-1.99.1-r1 (01 Feb 2005)
+
+  01 Feb 2005; Kito <kito@gentoo.org> +files/fortune-mod-1.99.1-gentoo.diff,
+  +fortune-mod-1.99.1-r1.ebuild:
+  added patch from Dave Vasilevsky and the Fink project. Fixes error when no
+  charset in envvars. Other minor bug fixes.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
