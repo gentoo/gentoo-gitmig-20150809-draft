@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsflinmodem/hsflinmodem-5.03.03.02101001.ebuild,v 1.2 2002/10/20 18:51:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsflinmodem/hsflinmodem-5.03.03.02101001.ebuild,v 1.3 2003/02/13 13:53:14 vapier Exp $
 
 MY_PV=5.03.03.L3mbsibeta02101001
 MY_P=${PN}-${MY_PV}

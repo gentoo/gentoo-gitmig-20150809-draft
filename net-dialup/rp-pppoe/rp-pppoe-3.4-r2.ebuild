@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.4-r2.ebuild,v 1.1 2002/10/27 19:31:30 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.4-r2.ebuild,v 1.2 2003/02/13 13:55:52 vapier Exp $
 
 S=${WORKDIR}/${P}/src
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"

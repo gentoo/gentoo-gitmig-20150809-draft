@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.48_beta1-r1.ebuild,v 1.8 2002/12/28 14:49:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.48_beta1-r1.ebuild,v 1.9 2003/02/13 13:54:59 vapier Exp $
 
 S=${WORKDIR}/pppoed-0.48b1/pppoed
 DESCRIPTION="PPP over Ethernet"
