@@ -1,0 +1,11 @@
+# ChangeLog for net-www/http-fetcher
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/http-fetcher/ChangeLog,v 1.1 2003/01/02 02:37:38 mkennedy Exp $
+
+*http-fetcher-1.0.1 (01 Jan 2003)
+
+  01 Jab 2003; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  http-fetcher-1.0.1.ebuild, files/digest-http-fetcher-1.0.1 :
+
+  Initial import. Dependency of net-www/fetch.
+
