@@ -1,11 +1,21 @@
-MD5 de1ecde255a68e974ede9390efe6c840 ChangeLog 2600
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 596cce9b977ab91664730ac4c083a6c8 tikiwiki-1.8.2-r1.ebuild 1979
 MD5 424cc8a9ae58816a392c5bc13f020a39 tikiwiki-1.8.2.ebuild 1636
 MD5 1fe637ca2bab59490d047c02bea5c28a tikiwiki-1.8.3.ebuild 1951
 MD5 c534d2c89ce526ac38599b52e054b5c8 tikiwiki-1.8.4.ebuild 1947
+MD5 8ce9b74d683b6d33d9d5b5646e725316 ChangeLog 2680
 MD5 02710bef8251c7989bb55efc5628bcc6 files/digest-tikiwiki-1.8.2 68
 MD5 02710bef8251c7989bb55efc5628bcc6 files/digest-tikiwiki-1.8.2-r1 68
 MD5 a0ee80f78f566fc992524890c3222b78 files/digest-tikiwiki-1.8.3 68
-MD5 d43326550a6aaa9078722f5fb371859a files/digest-tikiwiki-1.8.4 68
 MD5 1dc0330a9bc435b3eae532688c95c278 files/postinstall-en.txt 1288
+MD5 d43326550a6aaa9078722f5fb371859a files/digest-tikiwiki-1.8.4 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtaWI1lqEGTUzyQRAt3XAJsEcLY5Q65aqpOyKFnwVUNId6wCqQCdHgdi
+w0FW41VjPV2d23KpnFU2xAo=
+=qORS
+-----END PGP SIGNATURE-----

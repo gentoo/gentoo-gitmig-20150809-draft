@@ -1,9 +1,19 @@
-MD5 29b6be3075c479c0c83e717c28473a89 ChangeLog 2523
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
 MD5 445085f64756d21d4dff9caabdb12eb2 moinmoin-1.2.2.ebuild 1323
-MD5 6b985f02a6da2c47e44fcd29ebade830 moinmoin-1.2.3-r1.ebuild 1036
 MD5 9aa5b9b6f840bec83eaf15743fd18223 moinmoin-1.2.3.ebuild 1323
+MD5 6b985f02a6da2c47e44fcd29ebade830 moinmoin-1.2.3-r1.ebuild 1036
+MD5 ca346a996dde428941a72197de1889bd ChangeLog 2603
 MD5 9f892950e59827ee9c7a8a082a880bd2 files/digest-moinmoin-1.2.2 63
 MD5 83ae27d75112afb66a2d5d1319ba9874 files/digest-moinmoin-1.2.3 63
-MD5 83ae27d75112afb66a2d5d1319ba9874 files/digest-moinmoin-1.2.3-r1 63
 MD5 87c3c30ece7ca607f5cd419d0e2e9538 files/postinstall-en.txt 353
+MD5 83ae27d75112afb66a2d5d1319ba9874 files/digest-moinmoin-1.2.3-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtMKI1lqEGTUzyQRAqE9AKChsZVZckL3ET/QBI0tQeZYVZAg8gCfWbxD
+kKbcNVzOntANpf2ge2eGtkE=
+=ko3G
+-----END PGP SIGNATURE-----

@@ -1,7 +1,10 @@
-MD5 a67c855f2391346c1c860041f82b7b80 ChangeLog 3195
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7cf23db2efcec1146e4a2fa27eddd943 bugzilla-2.18.0_rc1.ebuild 1759
 MD5 5083259cf978fc9115440379ff27f1c8 bugzilla-2.18.0_rc2.ebuild 1936
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+MD5 a3e8ed3af14433dfaf4ab12ca43f668c ChangeLog 3275
 MD5 4a9b1a263f16b2a53b44bce45350b373 files/bugzilla.conf 148
 MD5 0be5a588dc7fdfc9e4898a855bd32361 files/bugzilla.cron.daily 115
 MD5 b38d67b03726b84833bd8c5f632e4020 files/bugzilla.cron.tab 54
@@ -14,3 +17,10 @@ MD5 32cb42777a779ac279c5384643970729 files/2.18.0_rc1/apache.htaccess 70
 MD5 2b4f3ae5bc1d383a4951a22cf65b28ae files/2.18.0_rc1/reconfig 3214
 MD5 32cb42777a779ac279c5384643970729 files/2.18.0_rc2/apache.htaccess 70
 MD5 2b4f3ae5bc1d383a4951a22cf65b28ae files/2.18.0_rc2/reconfig 3214
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOs7jI1lqEGTUzyQRAuHpAJ9Rp/lTusgYrB1cKLDoO6Kl8BRgvwCgwD0t
+SnvSR6PEUJdD9ckjZ0akD2g=
+=KcXZ
+-----END PGP SIGNATURE-----

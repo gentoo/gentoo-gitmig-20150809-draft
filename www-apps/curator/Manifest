@@ -1,3 +1,13 @@
-MD5 5e197623ba8ed6d58634eddba3e8a527 ChangeLog 697
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a7016b0ba1072e250d43f4b0b7430b45 curator-2.0.ebuild 646
+MD5 ed51ea9e9800d98f1420ccd9890f0cff ChangeLog 777
 MD5 c238a1f3d057b653febb27ec81e375ef files/digest-curator-2.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOs8MI1lqEGTUzyQRAtDxAJ97W6Uw4mWDEC0zGRnjLfszayBo4QCfdzK8
+8Fcx3ybHSJDsfvVLdb+LukA=
+=xnv7
+-----END PGP SIGNATURE-----

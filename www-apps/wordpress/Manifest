@@ -1,11 +1,21 @@
-MD5 db3a6d94a08416870dee718fb6f734a2 ChangeLog 2294
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3d182d43f7f0341a9a42f96694f04e72 metadata.xml 224
 MD5 11ed2b98b5625fc3366ef084526d663e wordpress-1.0.2.ebuild 1959
 MD5 1acdc936072c448db841db8067b1ff90 wordpress-1.2-r1.ebuild 1935
 MD5 0aaa512ade97b7734981cc159d205106 wordpress-1.2.ebuild 1932
+MD5 ee447e87172230a17563c0c3173e9798 ChangeLog 2374
 MD5 3310de51163cfb2a4b23c784003c123d files/digest-wordpress-1.0.2 74
 MD5 60c89171f6db7c359da81d9bd4a78853 files/digest-wordpress-1.2 72
 MD5 60c89171f6db7c359da81d9bd4a78853 files/digest-wordpress-1.2-r1 72
 MD5 8798d44320b59c755a81271d58bd3827 files/wordpress-1.0.2.gentoo.diff 7670
 MD5 bf77b16b46337e5eb66a5fb42c3b263d files/1.2/login-patch.diff 2062
 MD5 c2b531747ebb18f8bc7eed6261710c66 files/1.2/postinstall-en.txt 490
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtfMI1lqEGTUzyQRAsjIAJ9z8SuRtAn+o3d/Lgo8iZt30a5ZrwCgr6N5
+22ngGjy15ZQ25cbO8npRLYs=
+=49cc
+-----END PGP SIGNATURE-----

@@ -1,10 +1,20 @@
-MD5 4e722db9f816ab1d0ccda03ab2929df0 horde-passwd-2.2.ebuild 400
-MD5 360688236e62d88db091c604ba6f4435 ChangeLog 1174
-MD5 536fc68713fc6d618f6ac8c02145bddb metadata.xml 687
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 19d32c474dce3a7a5824e51df3215d97 horde-passwd-2.2.1.ebuild 688
-MD5 7bcd285ae78e88952238b0935d4387f7 files/digest-horde-passwd-2.2 62
+MD5 4e722db9f816ab1d0ccda03ab2929df0 horde-passwd-2.2.ebuild 400
+MD5 536fc68713fc6d618f6ac8c02145bddb metadata.xml 687
+MD5 e48d25f7de7082bbeac9440cbdc81af0 ChangeLog 1256
 MD5 57778ef05cbb06b1e142a98592d3f18c files/2.2.1-crypt-support.patch 3959
 MD5 41137756c734ffcc398b429aacb06634 files/2.2.1-example-backend-setup.patch 1047
 MD5 b47a9e2b4ef864a7b9a4937c7bd24ae6 files/2.2.1-main.php-typo.patch 840
 MD5 90a30b8eff0510043a20370d85462e3d files/2.2.1-no-clear-password.patch 496
+MD5 7bcd285ae78e88952238b0935d4387f7 files/digest-horde-passwd-2.2 62
 MD5 e73821bef4d5298d35f771b3d496b8b3 files/digest-horde-passwd-2.2.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtFgI1lqEGTUzyQRAr87AJ9jTTZSVbPGmpGDqaaJNodQZSG41QCgpfKE
+eJiUcIjkaLkUu/mEjlY+LoI=
+=iqzI
+-----END PGP SIGNATURE-----

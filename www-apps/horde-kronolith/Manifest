@@ -1,4 +1,14 @@
-MD5 6e59bd7eca1f9465f0d9ee4369cf74e0 ChangeLog 2109
-MD5 852eb8fe9390c47a540b8e248d128632 metadata.xml 1230
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 292cc5d0164d9b0fc3fa480da6bff989 horde-kronolith-1.1.2.ebuild 442
+MD5 852eb8fe9390c47a540b8e248d128632 metadata.xml 1230
+MD5 70117520176fdd3acfd60088b85397da ChangeLog 2191
 MD5 94d65c6caba3a424d6a58706db30f20f files/digest-horde-kronolith-1.1.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtDYI1lqEGTUzyQRAi3MAJ0d1oZBlSXW4a7+GRrhMYKAskziCQCgvaOn
+L2Yl+bG9qjTanwzSkSNx/5Q=
+=VaEj
+-----END PGP SIGNATURE-----

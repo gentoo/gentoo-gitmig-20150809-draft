@@ -1,5 +1,15 @@
-MD5 a6a49328909d54125460040a41073325 ChangeLog 3044
-MD5 18099a54598338d6cc2ad900f02417fd egroupware-1.0.00.004.ebuild 1265
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 e0047e98b51190ad962261fad73df6b9 files/digest-egroupware-1.0.00.004 78
+MD5 18099a54598338d6cc2ad900f02417fd egroupware-1.0.00.004.ebuild 1265
+MD5 2abecb4eda22235f76f56ec35c5e6fdd ChangeLog 3124
 MD5 5acfe8f4f634af8faac95b6411b410e5 files/postinstall-en.txt 397
+MD5 e0047e98b51190ad962261fad73df6b9 files/digest-egroupware-1.0.00.004 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOs+UI1lqEGTUzyQRAoteAJ0cP3ee9usLfAb9rFOxpJ1PuEgOtwCdF4De
+3u53LrsQ6N2cwduSfSDA41k=
+=nj8O
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 ce0a6dfb27e0c54df062ef86c55770c5 ChangeLog 905
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f51a1fdb3544353a7d00c4747c76f425 diaria-0.1.4.ebuild 822
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 ba22890d994b598ccce613ee76650937 ChangeLog 985
 MD5 8e9564c60f459c4ddbbdefe8616e77a3 files/digest-diaria-0.1.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOs80I1lqEGTUzyQRAgG8AJ4zaajoR9VFaP8joyneoIkV6gvX6ACdHEcS
+dQkRPhAQR7EfKGjrQe7RAUM=
+=HPGF
+-----END PGP SIGNATURE-----

@@ -1,5 +1,15 @@
-MD5 2e9b71f2141b1c0016893427bd561a92 ChangeLog 1086
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 27c88db82c6628855842c4b235b1d3cc browser-config-1.0.ebuild 656
 MD5 b5a8143aeb2858bbbb04163fc75f7812 browser-config-1.1.ebuild 1057
+MD5 7028202caf0d3276d6db1ff368e6eaba ChangeLog 1166
 MD5 14e7b15b23fe359fa1dded672c66e510 files/digest-browser-config-1.0 69
 MD5 5641217d4d94086694f1ae2e6e2a56a5 files/digest-browser-config-1.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOs62I1lqEGTUzyQRAqr7AJ0Ti8xwKV1XBXphvnqYpGFHy0+gMACfUjwc
+u3xCKOsNgESNRREJrjWehhE=
+=YzgJ
+-----END PGP SIGNATURE-----

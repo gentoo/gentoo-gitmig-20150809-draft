@@ -1,4 +1,14 @@
-MD5 a2a46f6bef00e6b461fc7118a4ddde24 ChangeLog 869
-MD5 01ab9567e584275bd867c6aac2d80dec metadata.xml 742
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0c59598066af4d80b93a6b44f121e774 horde-forwards-2.2.ebuild 425
+MD5 01ab9567e584275bd867c6aac2d80dec metadata.xml 742
+MD5 4dd4324db8f9759b905b8835e8fc0b40 ChangeLog 951
 MD5 907d5521c0362b3cdbab48406ca761fe files/digest-horde-forwards-2.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtCBI1lqEGTUzyQRAmMtAJ9heMxRmN1VTmQjq+Lel4ShxpKPoACfSjq1
+nIprnRO2otWiKuKqm+Fa0sQ=
+=V9X9
+-----END PGP SIGNATURE-----

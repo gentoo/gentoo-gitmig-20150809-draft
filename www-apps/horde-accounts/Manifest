@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aa137f8dab08f38374bea536bca8c77c horde-accounts-2.1.ebuild 423
-MD5 1910969b409259992d8373dac8dd22a2 ChangeLog 737
 MD5 251e5d111a87e795e7e2f528b45211a1 metadata.xml 715
+MD5 a3aad682a52eb8df46e511e316c9c4c7 ChangeLog 819
 MD5 bfa7a2b0dbc3620cbf7828acbd840d50 files/digest-horde-accounts-2.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtAqI1lqEGTUzyQRAkhpAJsG5slv4QCdt2bWSt4iqaz4dqBVWwCfTRn5
+52R73Ak5vurfT6YH+unH324=
+=83cU
+-----END PGP SIGNATURE-----

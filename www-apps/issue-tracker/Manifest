@@ -1,4 +1,14 @@
-MD5 35a65a340259b75981c6c51c54eb8758 ChangeLog 815
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aedbbdbf6f8a10ac835288ddf08d2251 issue-tracker-4.0.3.ebuild 3043
 MD5 80cbe8e469a257c0f7a48d256c2a0740 metadata.xml 849
+MD5 125d7ea8caf041c2728dcc2f35c901a4 ChangeLog 895
 MD5 ce0a8a8c6b5c5004b17d0c84d62e9473 files/digest-issue-tracker-4.0.3 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtJcI1lqEGTUzyQRAgFPAJ4v7lV3mPKyKXAyqJspLmbbfqYSHgCff9wN
+PKZl82i3YpJAyOUP8VyoZQQ=
+=nb7w
+-----END PGP SIGNATURE-----
