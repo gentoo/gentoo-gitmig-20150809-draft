@@ -3,6 +3,8 @@
 # Modified to match the gentoo setup
 # 03/27/2003 phoen][x <phoenix@gentoo.org>
 
+cd GAMES_PREFIX_OPT/nwn
+
 FaRequiredDirs=(ambient data music override miles nwm)
 aRequiredFiles=(chitin.key dialog.tlk nwmain patch.key)
 aLCDirs=(ambient data dmvault hak localvault music override portraits)
