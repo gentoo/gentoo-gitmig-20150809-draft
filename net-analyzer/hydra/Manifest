@@ -1,5 +1,6 @@
 MD5 64ccb55625431c6109cb6b91a7c2af91 hydra-4.0.ebuild 925
 MD5 6470b1ddaf386f1b8ce506abb9b30aff hydra-4.1.ebuild 800
-MD5 f0b0531ff7aa640075153e144dbfd3f0 ChangeLog 864
+MD5 a8ddefbff5ecb60b2bdd0b85d8322206 ChangeLog 939
+MD5 9aa8f98344bb5026af633d7a5d3923cd metadata.xml 227
 MD5 3f268b3dbfe53c124b61b04632652b3c files/digest-hydra-4.0 64
 MD5 bb569d03a75366ecec4924c020582d81 files/digest-hydra-4.1 65
