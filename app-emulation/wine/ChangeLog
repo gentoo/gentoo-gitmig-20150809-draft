@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.72 2004/06/30 03:21:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.73 2004/07/08 14:25:07 mholzer Exp $
+
+*wine-20040615 (08 Jul 2004)
+
+  08 Jul 2004; Martin Holzer <mholzer@gentoo.org> +wine-20040615.ebuild:
+  Version bumped. Closes 54085
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> wine-20040121.ebuild,
   wine-20040213.ebuild, wine-20040309.ebuild, wine-20040408-r1.ebuild,
