@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/stratego
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/ChangeLog,v 1.1 2002/04/12 13:56:04 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/ChangeLog,v 1.2 2002/10/20 10:39:39 karltk Exp $
+
+*stratego-0.8.1 (20 Oct 2002)
+
+  20 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> stratego-0.8.1.ebuild files/digest-stratego-0.8.1 :
+  New upstream version.
+
+*stratego-0.8 (20 Oct 2002)
+
+  20 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> stratego-0.8.ebuild files/digest-stratego-0.8 :
+  New upstream version.
 
 *stratego-0.7 (11 Apr 2002)
 
