@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hearnet
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.6 2004/06/25 00:05:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.7 2004/07/20 01:46:41 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> hearnet-0.0.2.ebuild:
+  -amd64
 
   13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> hearnet-0.0.2.ebuild:
   Getting rid of virtual/jack.
