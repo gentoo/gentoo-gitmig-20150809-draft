@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libredblack/libredblack-1.2.ebuild,v 1.4 2004/03/14 12:28:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libredblack/libredblack-1.2.ebuild,v 1.5 2004/04/25 19:07:34 squinky86 Exp $
 
 DESCRIPTION="RedBlack Balanced Tree Searching and Sorting Library"
 HOMEPAGE="http://libredblack.sourceforge.net/"
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc"
 #RESTRICT="nomirror"
 
 src_compile() {
-	econf --libexecdir=/usr/lib || "configure failure"
+	econf --libexecdir=/usr/lib || die "configure failure"
 	emake || die "compile failure"
 }
 
