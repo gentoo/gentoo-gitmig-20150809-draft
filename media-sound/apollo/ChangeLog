@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/apollo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/ChangeLog,v 1.10 2004/02/23 23:58:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/ChangeLog,v 1.11 2004/03/31 18:04:23 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> apollo-1.4.2.ebuild:
+  epatch instead of patch.
 
   23 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> apollo-1.4.1.ebuild,
   apollo-1.4.2.ebuild, metadata.xml:

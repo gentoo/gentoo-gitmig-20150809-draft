@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.2.ebuild,v 1.5 2004/02/23 23:58:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.2.ebuild,v 1.6 2004/03/31 18:04:23 eradicator Exp $
+
+inherit eutils
 
 IUSE="qt"
 
@@ -22,7 +24,7 @@ DEPEND="virtual/mpg123
 	qt?		( x11-libs/qt )"
 
 src_compile() {
-	patch < ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	myconf="--without-kde2 --with-mad=/usr/lib"
 	./configure.sh $myconf
 	make || die "Make failed"
