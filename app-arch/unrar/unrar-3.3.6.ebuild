@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.3.6.ebuild,v 1.3 2004/04/27 19:51:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.3.6.ebuild,v 1.4 2004/05/04 14:10:05 kloeri Exp $
 
 IUSE=""
 MY_PN=${PN}src
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.rarlab.com/rar_add.htm"
 
 SLOT="0"
 LICENSE="unRAR"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa amd64"
+KEYWORDS="x86 ~ppc sparc alpha ~hppa amd64"
 
 DEPEND=""
 
