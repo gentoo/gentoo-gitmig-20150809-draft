@@ -1,0 +1,265 @@
+diff -urN xf86config-knoppix-0.8.orig/XF86Config-4.in xf86config-knoppix-0.8/XF86Config-4.in
+--- xf86config-knoppix-0.8.orig/XF86Config-4.in	2003-07-25 12:14:56.000000000 -0400
++++ xf86config-knoppix-0.8/XF86Config-4.in	2004-07-23 23:08:30.978313104 -0400
+@@ -15,14 +15,13 @@
+ Section "Files"
+ 	RgbPath      "/usr/X11R6/lib/X11/rgb"
+ 	ModulePath   "/usr/X11R6/lib/modules"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/misc:unscaled"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/misc"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/75dpi:unscaled"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/75dpi"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/100dpi:unscaled"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/100dpi"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/Speedo"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/PEX"
++	FontPath     "/usr/share/fonts/misc:unscaled"
++	FontPath     "/usr/share/fonts/misc"
++	FontPath     "/usr/share/fonts/75dpi:unscaled"
++	FontPath     "/usr/share/fonts/75dpi"
++	FontPath     "/usr/share/fonts/100dpi:unscaled"
++	FontPath     "/usr/share/fonts/100dpi"
++	FontPath     "/usr/share/fonts/TTF"
+ # Additional fonts: Locale, Gimp, TTF...
+ 	FontPath     "/usr/X11R6/lib/X11/fonts/cyrillic"
+ #	FontPath     "/usr/X11R6/lib/X11/fonts/latin2/75dpi"
+@@ -35,8 +34,8 @@
+ 	FontPath     "/usr/share/fonts/truetype/openoffice"
+ 	FontPath     "/usr/share/fonts/truetype/ttf-bitstream-vera"
+ 	FontPath     "/usr/share/fonts/latex-ttf-fonts"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/defoma/CID"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/defoma/TrueType"
++	FontPath     "/usr/share/fonts/defoma/CID"
++	FontPath     "/usr/share/fonts/defoma/TrueType"
+ EndSection
+ 
+ Section "Module"
+diff -urN xf86config-knoppix-0.8.orig/mkxf86config.sh xf86config-knoppix-0.8/mkxf86config.sh
+--- xf86config-knoppix-0.8.orig/mkxf86config.sh	2004-02-20 07:59:28.000000000 -0500
++++ xf86config-knoppix-0.8/mkxf86config.sh	2004-07-23 23:10:13.494728240 -0400
+@@ -53,7 +53,7 @@
+ 
+ # Xserver, Xmodule, Xscreen, Xvrefresh, if specified by commandline
+ NEWXSERVER="$(getbootparam xserver 2>/dev/null)"
+-[ -z "$XSERVER" -a -z "$NEWXSERVER" ] && NEWXSERVER="XFree86"
++[ -z "$XSERVER" -a -z "$NEWXSERVER" ] && NEWXSERVER="X"
+ [ -n "$NEWXSERVER" ] && { XSERVER="$NEWXSERVER" ; echo "XSERVER='$XSERVER'" >> /etc/sysconfig/knoppix ; echo "XSERVER='$XSERVER'" >> /etc/sysconfig/xserver; }
+ NEWXMODULE="$(getbootparam xmodule 2>/dev/null)"
+ [ -z "$XMODULE" -a -z "$NEWXMODULE" ] && NEWXMODULE="vesa"
+@@ -83,7 +83,7 @@
+ # Don't change the default, which is plain PS/2
+ WHEEL=""
+ else
+-# Apparently, the mouse auto-protocol option works in XFree 4.3 now. Let's give it a try.
++# Apparently, the mouse auto-protocol option works in XFree86/X.Org now. Let's give it a try.
+ WHEEL='s|"PS/2"|"auto"\
+ Option          "ZAxisMapping"          "4 5"|g;'
+ fi
+@@ -95,7 +95,7 @@
+ # There seems to be no reliable autoprobe possible.
+ [ -f /etc/sysconfig/keyboard ] && . /etc/sysconfig/keyboard
+ 
+-# Create mouse link and insert a mouse default type into XF86Config
++# Create mouse link and insert a mouse default type into XF86Config/xorg.conf
+ # if not already done by hwsetup
+ [ -f /etc/sysconfig/mouse ] && . /etc/sysconfig/mouse
+ [ -e /dev/mouse ] || ln -sf /dev/ttyS0 /dev/mouse
+@@ -362,8 +362,10 @@
+     /etc/X11/XF86Config.in > /etc/X11/XF86Config
+ fi
+ 
+-if [ ! -f /etc/XF86Config-4 -a ! -f /etc/X11/XF86Config-4 ]; then 
+-rm -f /etc/XF86Config-4 /etc/X11/XF86Config-4 2>/dev/null
++if [ ! -f /etc/XF86Config-4 -a ! -f /etc/X11/XF86Config-4 \
++	-a ! -f /etc/xorg.conf -a ! -f /etc/X11/xorg.conf ]; then 
++rm -f /etc/XF86Config-4 /etc/X11/XF86Config-4 
++	/etc/xorg.conf /etc/X11/xorg.conf 2>/dev/null
+ 
+ # VMWare special handling
+ VMWARE=""
+@@ -396,10 +398,26 @@
+     -e 's|"XkbLayout" *"[^"]*"|"XkbLayout" "'"$XKEYBOARD"'"|g;'"$DEADKEYS" \
+     /etc/X11/XF86Config-4.in >/etc/X11/XF86Config-4
+ 
++sed -e 's|@@PROTOCOL@@|'"$PROTO"'|g;'"$NOEMU" \
++    -e '/@@MONITOR@@/r '"$MONITORTMP" \
++    -e 's|@@MONITOR@@||g' \
++    -e 's|@@NOPM@@|'"$NOPM"'|g' \
++    -e 's|@@XMODULE@@|'"$XMODULE"'|g;'"$VMWARE""$SERIALMOUSE""$USBMOUSE""$PSMOUSE""$SWCURSOR""$WHEEL" \
++    -e 's|@@MODES@@|'"$MODES"'|g;'"$DEPTH" \
++    -e 's|"XkbLayout" *"[^"]*"|"XkbLayout" "'"$XKEYBOARD"'"|g;'"$DEADKEYS" \
++    /etc/X11/xorg.conf.in >/etc/X11/xorg.conf
++
+ if [ -n "$DPMS" ]; then
+-sed -e 's|Identifier[	 ]*"Monitor0"|Identifier	"Monitor0"\
++    if [ -f /etc/X11/XF86Config-4 ]; then
++        sed -e 's|Identifier[	 ]*"Monitor0"|Identifier	"Monitor0"\
+ 	'"$DPMS"'|g' /etc/X11/XF86Config-4 >/etc/X11/XF86Config-4.new
+-mv -f /etc/X11/XF86Config-4.new /etc/X11/XF86Config-4
++        mv -f /etc/X11/XF86Config-4.new /etc/X11/XF86Config-4
++    fi
++    if [ -f /etc/X11/xorg.conf ]; then
++        sed -e 's|Identifier[    ]*"Monitor0"|Identifier        "Monitor0"\
++	'"$DPMS"'|g' /etc/X11/xorg.conf >/etc/X11/xorg.conf.new
++	mv -f /etc/X11/xorg.conf.new /etc/X11/xorg.conf
++    fi
+ fi
+ 
+ fi
+diff -urN xf86config-knoppix-0.8.orig/xorg.conf.in xf86config-knoppix-0.8/xorg.conf.in
+--- xf86config-knoppix-0.8.orig/xorg.conf.in	1969-12-31 19:00:00.000000000 -0500
++++ xf86config-knoppix-0.8/xorg.conf.in	2004-07-23 23:08:30.979312952 -0400
+@@ -0,0 +1,153 @@
++Section "ServerLayout"
++	Identifier     "X.Org Configured"
++	Screen      0  "Screen0" 0 0
++	InputDevice    "Keyboard0" "CoreKeyboard"
++	InputDevice    "PS/2 Mouse" "CorePointer"
++	InputDevice    "Serial Mouse" "CorePointer"
++        InputDevice    "USB Mouse" "CorePointer"
++EndSection
++
++Section "ServerFlags"
++	Option "AllowMouseOpenFail"  "true"
++	@@NOPM@@
++EndSection
++
++Section "Files"
++	RgbPath      "/usr/X11R6/lib/X11/rgb"
++	ModulePath   "/usr/X11R6/lib/modules"
++	FontPath     "/usr/share/fonts/misc:unscaled"
++	FontPath     "/usr/share/fonts/misc"
++	FontPath     "/usr/share/fonts/75dpi:unscaled"
++	FontPath     "/usr/share/fonts/75dpi"
++	FontPath     "/usr/share/fonts/100dpi:unscaled"
++	FontPath     "/usr/share/fonts/100dpi"
++	FontPath     "/usr/share/fonts/TTF"
++# Additional fonts: Locale, Gimp, TTF...
++	FontPath     "/usr/X11R6/lib/X11/fonts/cyrillic"
++#	FontPath     "/usr/X11R6/lib/X11/fonts/latin2/75dpi"
++#	FontPath     "/usr/X11R6/lib/X11/fonts/latin2/100dpi"
++# True type and type1 fonts are also handled via xftlib, see /etc/X11/XftConfig!
++	FontPath     "/usr/X11R6/lib/X11/fonts/Type1"
++	FontPath     "/usr/share/fonts/ttf/western"
++	FontPath     "/usr/share/fonts/ttf/decoratives"
++	FontPath     "/usr/share/fonts/truetype"
++	FontPath     "/usr/share/fonts/truetype/openoffice"
++	FontPath     "/usr/share/fonts/truetype/ttf-bitstream-vera"
++	FontPath     "/usr/share/fonts/latex-ttf-fonts"
++	FontPath     "/usr/share/fonts/defoma/CID"
++	FontPath     "/usr/share/fonts/defoma/TrueType"
++EndSection
++
++Section "Module"
++        Load  "ddc"  # ddc probing of monitor
++	Load  "GLcore"
++	Load  "dbe"
++	Load  "dri"
++	Load  "extmod"
++	Load  "glx"
++        Load  "bitmap" # bitmap-fonts
++	Load  "speedo"
++	Load  "type1"
++	Load  "freetype"
++	Load  "record"
++EndSection
++
++Section "InputDevice"
++	Identifier  "Keyboard0"
++	Driver      "keyboard"
++        Option      "CoreKeyboard"
++	Option "XkbRules" "xfree86"
++	Option "XkbModel" "pc105"
++	Option "XkbLayout" "de"
++	Option "XkbVariant" "nodeadkeys"
++EndSection
++
++Section "InputDevice"
++	Identifier  "Serial Mouse"
++	Driver      "mouse"
++	Option      "Protocol" "Microsoft"
++	Option      "Device" "/dev/ttyS0"
++	Option      "Emulate3Buttons" "true"
++	Option      "Emulate3Timeout" "70"
++	Option	    "SendCoreEvents"  "true"
++EndSection
++
++Section "InputDevice"
++	Identifier  "PS/2 Mouse"
++	Driver      "mouse"
++	Option      "Protocol" "PS/2"
++	Option      "Device" "/dev/psaux"
++	Option      "Emulate3Buttons" "true"
++	Option      "Emulate3Timeout" "70"
++	Option	    "SendCoreEvents"  "true"
++EndSection
++
++Section "InputDevice"
++        Identifier      "USB Mouse"
++        Driver          "mouse"
++        Option          "Device"                "/dev/input/mice"
++	Option		"SendCoreEvents"	"true"
++        Option          "Protocol"              "IMPS/2"
++        Option          "ZAxisMapping"          "4 5"
++        Option          "Buttons"               "5"
++EndSection
++
++# Auto-generated by KNOPPIX mkxf86config
++@@MONITOR@@
++
++Section "Device"
++	### Available Driver options are:-
++# sw_cursor is needed for some ati and radeon cards
++        #Option     "sw_cursor"
++        #Option     "hw_cursor"
++        #Option     "NoAccel"
++        #Option     "ShowCache"
++        #Option     "ShadowFB"
++        #Option     "UseFBDev"
++        #Option     "Rotate"
++	Identifier  "Card0"
++# The following line is auto-generated by KNOPPIX mkxf86config
++	Driver      "@@XMODULE@@"
++	VendorName  "All"
++	BoardName   "All"
++#	BusID       "PCI:1:0:0"
++EndSection
++
++Section "Screen"
++	Identifier "Screen0"
++	Device     "Card0"
++	Monitor    "Monitor0"
++	DefaultColorDepth 16
++	SubSection "Display"
++		Depth     1
++		@@MODES@@
++	EndSubSection
++	SubSection "Display"
++		Depth     4
++		@@MODES@@
++	EndSubSection
++	SubSection "Display"
++		Depth     8
++		@@MODES@@
++	EndSubSection
++	SubSection "Display"
++		Depth     15
++		@@MODES@@
++	EndSubSection
++	SubSection "Display"
++		Depth     16
++		@@MODES@@
++	EndSubSection
++	SubSection "Display"
++		Depth     24
++		@@MODES@@
++	EndSubSection
++	SubSection "Display"
++		Depth     32
++		@@MODES@@
++	EndSubSection
++EndSection
++
++Section "DRI"
++	Mode 0666
++EndSection
