@@ -4,7 +4,7 @@ MD5 108759076023142ce5e496cb44c50d2c ChangeLog 596
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 36af28823473d41a150d20fbceba3ba0 files/digest-snipsnap-0.4.2a 74
 MD5 5b47f6680b38ea95f097319cab50a00a files/digest-snipsnap-0.5.1a 74
-MD5 7fdac2079d1e416cef8f407e9547ba60 files/0.4.2a-snipsnap 575
-MD5 c81eff6d3dc5a65c9f91b2c51effd8bc files/0.5.1a-snipsnap 570
+MD5 01545f16e77b2a91a7822b1581be8368 files/0.4.2a-snipsnap 568
+MD5 8b72de829569f3697d7a5b9fd0eb910d files/0.5.1a-snipsnap 568
 MD5 0a1abd3a75a98c94389512eb4bd9a1ea files/0.4.2a-run.sh 1844
 MD5 ab4b8d9f503c24fb0b5f16479e373aca files/0.5.1a-run.sh 1763

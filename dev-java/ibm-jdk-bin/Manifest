@@ -7,7 +7,7 @@ MD5 80723f96006190eb23b6e099536ae22a ibm-jdk-bin-1.4.1-r1.ebuild 3110
 MD5 971e2c067f8f28bd0f7c882607650469 files/cpuinfo 12
 MD5 0373b1cdf596fac6b3a784ddcb95e6f1 files/digest-ibm-jdk-bin-1.4.1-r1 207
 MD5 b218ad416aab8e8299f77cb1f749e4aa files/digest-ibm-jdk-bin-1.4.1-r2 355
-MD5 3a45a81ea89857decdb406baf353462f files/ibm-jdk-bin-1.4.1 456
-MD5 1cc0c96da014ea35d6dbeca1d4e7aa5b files/ibm-jdk-bin-1.4.2 455
+MD5 2a5694754d47014cb37eae87a4758efb files/ibm-jdk-bin-1.4.1 451
+MD5 0e4ac0d7b8286f469f95e8083da42c17 files/ibm-jdk-bin-1.4.2 451
 MD5 0373b1cdf596fac6b3a784ddcb95e6f1 files/digest-ibm-jdk-bin-1.4.1 207
 MD5 33b6318d9400227145b67a071909f11f files/digest-ibm-jdk-bin-1.4.2 280

@@ -3,7 +3,7 @@ MD5 780baf90ca3724be5073bd362aebb1fe javacc-3.2-r1.ebuild 918
 MD5 37538268bbcd9974e489dbfbd97a1a52 ChangeLog 1191
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 34ffde7ed24a1315dbcba6b16557f644 files/jjdoc 127
-MD5 80b2c57ca20498f6cc1ff30d6c984383 files/javacc-3.2 292
+MD5 890206304fc74a131a30bb3f6140cfcb files/javacc-3.2 290
 MD5 6f5d6501b4f873ffbd9cbca5a847b897 files/javacc 128
 MD5 f4614a490a4f23987e131ce4f47a0ddf files/jjtree 128
 MD5 169889bcf3545fed8164d19166f6216d files/jjtree-3.2 388
