@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/giblib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.8 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.9 2003/10/19 14:11:51 lanius Exp $
+
+  19 Oct 2003; Heinrich Wendel <lanius@gentoo.org> giblib-1.2.1.ebuild,
+  giblib-1.2.2.ebuild:
+  bug #30864, version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
