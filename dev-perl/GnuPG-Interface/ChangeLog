@@ -1,0 +1,7 @@
+# ChangeLog for dev-perl/GnuPG-Interface
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.1 2003/12/16 23:13:37 rac Exp $
+
+  16 Dec 2003; <rac@gentoo.org> metadata.xml:
+  Initial import based on bug 16995
+
