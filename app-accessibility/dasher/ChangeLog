@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/dasher
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.3 2004/04/12 16:14:19 leonardop Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.4 2004/04/18 17:07:46 leonardop Exp $
+
+  18 Apr 2004; L. Boshell <leonardop@gentoo.org> dasher-3.2.4.ebuild:
+  Added scrollkeeper dependecy. Thanks to Daniel Rendall for his help on
+  bug #47824.
 
   12 Apr 2004; L. Boshell <leonardop@gentoo.org> dasher-3.2.4.ebuild:
   Marked stable on x86.

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.4.ebuild,v 1.2 2004/04/12 16:14:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.4.ebuild,v 1.3 2004/04/18 17:07:46 leonardop Exp $
 
 inherit gnome2
 
 DESCRIPTION="A text entry interface, driven by continuous pointing gestures"
 HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
 
-IUSE="accessibility gnome nls"
+IUSE="${IUSE} accessibility gnome nls"
 SLOT="0"
 KEYWORDS="x86"
 LICENSE="GPL-2"
@@ -29,7 +29,8 @@ RDEPEND="dev-libs/expat
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.18
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	app-text/scrollkeeper"
 
 G2CONF="${G2CONF} $(use_enable nls) $(use_enable gnome)"
 G2CONF="${G2CONF} $(use_enable accessibility a11y)"
