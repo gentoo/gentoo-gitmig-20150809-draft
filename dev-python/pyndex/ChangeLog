@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/pyndex
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyndex/ChangeLog,v 1.1 2004/02/17 15:21:16 lordvan Exp $
+
+*pyndex-0.3.2a (17 Feb 2004)
+  
+  17 Feb 2004; Thomas Raschbacher <lordvan@gentoo.org> pyndex-0.3.2a.ebuild:
+  initial import
