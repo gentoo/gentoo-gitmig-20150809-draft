@@ -1,27 +1,27 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.05.ebuild,v 1.4 2003/10/29 19:48:31 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.08.ebuild,v 1.1 2004/03/10 04:11:26 max Exp $
 
 DESCRIPTION="Device mapper ioctl library for use with LVM2 utilities."
-HOMEPAGE="http://www.sistina.com/products_lvm.htm"
-SRC_URI="ftp://ftp.sistina.com/pub/LVM2/${PN}/${PN}.${PV}.tgz"
+HOMEPAGE="http://sources.redhat.com/dm/"
+SRC_URI="ftp://sources.redhat.com/pub/dm/${PN}.${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~amd64 ~sparc"
 
 DEPEND="virtual/linux-sources"
 
 S="${WORKDIR}/${PN}.${PV}"
 
 pkg_setup() {
-	[ ! -e "/usr/src/linux/include/linux/dm-ioctl.h" ] && {
+	if [ ! -e "/usr/src/linux/include/linux/dm-ioctl.h" ] ; then
 		eerror
 		eerror "Your currently linked kernel (/usr/src/linux) hasn't"
 		eerror "been patched for device mapper support."
 		eerror
 		die "kernel not patched for device mapper support"
-	}
+	fi
 
 	return 0
 }
@@ -29,7 +29,7 @@ pkg_setup() {
 src_compile() {
 	econf
 
-	# parallel build doesn't work
+	# Parallel build doesn't work.
 	emake -j1 || die "compile problem"
 }
 

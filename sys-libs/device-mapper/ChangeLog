@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/device-mapper
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.9 2004/01/22 14:54:21 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.10 2004/03/10 04:11:26 max Exp $
+
+*device-mapper-1.00.08 (09 Mar 2004)
+
+  09 Mar 2004; Max Kalika <max@gentoo.org> device-mapper-1.00.05.ebuild,
+  device-mapper-1.00.07.ebuild, device-mapper-1.00.08.ebuild:
+  Update SRC_URI as per bug #43880. Update HOMEPAGE as well. Bump to 1.00.08.
 
   22 Jan 2004; Markus Nigbur <pyrania@gentoo.org>
   device-mapper-1.00.07.ebuild:
@@ -14,7 +20,7 @@
   mark stable on amd64
 
   08 Dec 2003; <max@gentoo.org> device-mapper-1.00.07.ebuild:
-  But to stable x86 and add ~amd64 as per bug 34779.
+  Bump to stable x86 and add ~amd64 as per bug 34779.
 
 *device-mapper-1.00.07 (02 Dec 2003)
 
