@@ -30,8 +30,8 @@ fi
 #Check for write access on /tmp and "$HOME"#
 #If not, abort startup              	   #
 ############################################
-testfile_tmp=`mktemp /tmp/.KDE.startkde.gentoo`
-testfile_home=`mktemp "$HOME"/.KDE.startkde.gentoo`
+testfile_tmp=`mktemp /tmp/KDE.startkde.XXXXXX`
+testfile_home=`mktemp "$HOME"/KDE.startkde.XXXXXX`
 
 if ! echo TEST_TEXT >$testfile_tmp 2>/dev/null ; then
     echo $"You don't have write permissions for /tmp"
