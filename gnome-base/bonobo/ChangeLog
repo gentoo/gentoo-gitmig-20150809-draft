@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/bonobo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/ChangeLog,v 1.13 2003/03/21 17:41:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/ChangeLog,v 1.14 2003/05/16 01:01:43 pylon Exp $
+
+  16 May 2003; Lars Weiler <pylon@gentoo.org> bonobo-1.0.22.ebuild:
+  Set ppc in KEYWORDS
 
   06 Feb 2003; Aron Griffis <agriffis@gentoo.org> bonobo-1.0.22.ebuild :
   Added ~alpha to KEYWORDS
