@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rrd/ruby-rrd-1.1.ebuild,v 1.1 2004/10/10 22:55:48 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rrd/ruby-rrd-1.1.ebuild,v 1.2 2005/01/04 15:32:47 citizen428 Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ DESCRIPTION="Simple RRDTool wrapper for Ruby"
 HOMEPAGE="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/"
 SRC_URI="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/pub/contrib/${P}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="Ruby"
 SLOT="0"
 
