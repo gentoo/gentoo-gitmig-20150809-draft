@@ -216,10 +216,6 @@ app-editors/kvim
 # Testing
 =media-sound/xmms-xosd-0.7.0-r1
 
-# <woodchip@gentoo.org> (04 Aug 2002)
-# add new package submission #1315
-dev-db/metakit
-
 # Michael Cummings <mcummings@gentoo.org> (04 Aug 2002)
 # Found hardcoded refs for i686 in ebuild - please test
 # Tested on 05 Aug 2002 on ppc by pvdabeel@gentoo.org
