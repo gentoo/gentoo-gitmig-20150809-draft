@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.103 2004/01/17 05:15:57 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.104 2004/02/26 19:58:11 gmsoft Exp $
+
+  26 Feb 2004; Guy Martin <gmsoft@gentoo.org> :
+  Keyworded ~hppa.
 
   16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> mplayer-1.0_pre3.ebuild:
   set ppc in keywords
