@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.45 2004/09/02 16:56:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.46 2004/10/13 03:32:12 spyderous Exp $
+
+  12 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-196.ebuild:
+  x86.
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xterm-179.ebuild,
   xterm-191.ebuild:
