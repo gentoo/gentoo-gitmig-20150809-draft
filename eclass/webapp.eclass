@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.12 2004/04/29 13:53:24 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.13 2004/04/30 08:25:38 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -20,7 +20,7 @@ ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
-DEPEND="$DEPEND >=net-www/webapp-config-1.5"
+DEPEND="$DEPEND >=net-www/webapp-config-1.6"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install
 
@@ -265,6 +265,8 @@ function webapp_src_preinst ()
 
 function webapp_pkg_postinst ()
 {
+	einfo "webapp_pkg_postinst() called"
+
 	# if 'vhosts' is not set in your USE flags, we install a copy of
 	# this application in /var/www/localhost/htdocs/${PN}/ for you
 
@@ -276,7 +278,7 @@ function webapp_pkg_postinst ()
 		. /etc/vhosts/webapp-config
 
 		local my_mode=-I
-		local my_dir="${VHOST_ROOT}/htdocs/${PN}"
+		local my_dir="/${PN}"
 
 		# are we installing afresh - or are we upgrading?
 		# find out by looking to see what (if anything) is installed
