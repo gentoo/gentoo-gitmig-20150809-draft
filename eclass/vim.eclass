@@ -1,11 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.12 2003/03/15 01:06:46 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.13 2003/03/16 03:15:06 seemant Exp $
 #
 # Author Ryan Phillips <rphillips@gentoo.org>
 # Modified by: Seemant Kulleen <seemant@gentoo.org>
 # Ripped from the vim ebuilds. src_compile and install
 # should be integrated in at some point
+
+ECLASS=vim
+EXPORT_FUNCTIONS src_unpack
 
 inherit eutils
 
@@ -80,7 +83,7 @@ epatch_prep() {
 }
 
 
-src_unpack() {
+vim_src_unpack() {
 	unpack ${A}
 	# Fixup a script to use awk instead of nawk
 	cd ${S}/runtime/tools
@@ -96,9 +99,34 @@ src_unpack() {
 
 	# Another set of patch's borrowed from src rpm to fix syntax error's etc.
 	cd ${S}
-	EPATCH_SUFFIX="" \
+	EPATCH_SUFFIX="gz" \
 		EPATCH_FORCE="yes" \
-		epatch ${WORKDIR}/gentoo/patches
+		epatch ${WORKDIR}/gentoo/patches-all/
+	
+	# Apply patches to the specific package (gvim, vim, vim-core)
+#	if [ "${PN}" = "gvim" ]
+#	then
+#		cd ${S}
+#		EPATCH_SUFFIX=-"gz" \
+#			EPATCH_FORCE="yes" \
+#			epatch ${WORKDIR}/gentoo/patches-gvim/
+#	fi
+#
+#	if [ "${PN}" = "vim-core" ]
+#	then
+#		cd ${S}
+#		EPATCH_SUFFIX="gz" \
+#			EPATCH_FORCE="yes" \
+#			epatch ${WORKDIR}/gentoo/patches-vim-core/
+#	fi
+#
+#	if [ "${PN}" = "vim" ]
+#	then
+#		cd ${S}
+#		EPATCH_SUFFIX="gz" \
+#			EPATCH_FORCE="yes" \
+#			epatch ${WORKDIR}/gentoo/patches-vim/
+#	fi
 }
 
 src_compile() {
