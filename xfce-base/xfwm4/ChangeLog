@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.41 2005/01/02 16:26:50 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.42 2005/01/03 01:03:56 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *xfwm4-4.1.99.3 (02 Jan 2005)
 
@@ -36,7 +39,7 @@
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xfwm4-4.0.6.ebuild:
   Masked xfwm4-4.0.6.ebuild stable for ppc
 
-  07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> xfwm4-4.0.6.ebuild:
+  07 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xfwm4-4.0.6.ebuild:
   Stable on alpha.
 
   06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> xfwm4-4.0.6.ebuild:
