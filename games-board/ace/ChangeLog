@@ -1,6 +1,9 @@
 # ChangeLog for games-board/ace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ChangeLog,v 1.6 2004/11/01 21:25:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ChangeLog,v 1.7 2004/11/14 12:20:49 hansmi Exp $
+
+  14 Nov 2004; Michael Hanselmann <hansmi@gentoo.org> ace-1.2-r1.ebuild:
+  Added to ~sparc.
 
   02 Nov 2004; Joseph Jezak <josejx@gentoo.org> ace-1.2-r1.ebuild:
   GCC 3.4 fix from Yuri Vasilevski, bug #67794.  Marked ~ppc.
