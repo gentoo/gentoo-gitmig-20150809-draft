@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r3.ebuild,v 1.6 2004/12/15 21:30:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r3.ebuild,v 1.7 2004/12/17 06:38:47 vapier Exp $
 
-inherit eutils flag-o-matic libtool gnuconfig
+inherit eutils flag-o-matic libtool
 
 DESCRIPTION="library for decoding ATSC A/52 streams used in DVD"
 HOMEPAGE="http://liba52.sourceforge.net/"
@@ -25,15 +25,13 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-build.patch
 	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
+	libtoolize --force --copy --automake || die "libtoolize"
+	autoheader || die "autoheader"
+	aclocal || die "aclocal"
+	automake -a -f -c || die "automake"
+	autoconf || die "autoconf"
 
-	libtoolize --force --copy --automake
-
-	autoheader
-	aclocal
-	automake -a -f -c
-	autoconf
-
-	gnuconfig_update
+	epunt_cxx
 }
 
 src_compile() {
@@ -41,7 +39,8 @@ src_compile() {
 
 	local myconf="--enable-shared"
 	use oss || myconf="${myconf} --disable-oss"
-	econf 	$(use_enable static) \
+	econf \
+		$(use_enable static) \
 		$(use_enable djbfft) \
 		${myconf} || die
 	emake || die "emake failed"
