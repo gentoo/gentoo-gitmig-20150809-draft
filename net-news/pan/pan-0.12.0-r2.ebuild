@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.12.0-r2.ebuild,v 1.1 2002/06/30 23:55:35 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.12.0-r2.ebuild,v 1.2 2002/07/07 03:06:29 azarah Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -31,7 +31,6 @@ src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
 
-	libtoolize --copy --force
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--sysconfdir=/etc \
