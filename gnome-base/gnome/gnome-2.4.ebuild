@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.ebuild,v 1.10 2003/11/15 02:54:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.ebuild,v 1.11 2003/12/07 16:33:06 spider Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -110,4 +110,9 @@ pkg_postinst () {
 	einfo "note that to change windowmanager to metacity do: "
 	einfo " export WINDOW_MANAGER=\"/usr/bin/metacity\""
 	einfo "of course this works for all other window managers as well"
+	echo ""
+	echo ""
+	einfo "if you want better behaviour from Nautilus, do "
+	einfo "'rc-update add fam default'  to enable the file alteration monitor"
+	echo ""
 }
