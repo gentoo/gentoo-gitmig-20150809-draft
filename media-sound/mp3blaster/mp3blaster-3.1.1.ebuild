@@ -1,22 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.1.ebuild,v 1.8 2002/12/15 11:58:45 bjb Exp $
-
-IUSE="nas oggvorbis mysql"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.1.ebuild,v 1.9 2003/01/05 18:44:15 vapier Exp $
 
 DESCRIPTION="Command line MP3 player."
 HOMEPAGE="http://www.stack.nl/~brama/mp3blaster/"
+SRC_URI="ftp://mud.stack.nl/pub/mp3blaster/${P}.tar.gz"
+
+SLOT="0"
+KEYWORDS="x86 ppc alpha"
+IUSE="nas oggvorbis mysql"
 LICENSE="GPL-2"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	nas? ( >=media-libs/nas-1.4.1 )
 	mysql? ( >=dev-db/mysql-3.23.36 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )"
-
-SLOT="0"
-KEYWORDS="x86 alpha"
-SRC_URI="ftp://mud.stack.nl/pub/mp3blaster/${P}.tar.gz"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	local myconf
@@ -45,7 +43,7 @@ src_compile() {
 	make CC="gcc ${CFLAGS}" CXX="c++ ${CXXFLAGS}" || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc ANNOUNCE AUTHORS COPYING CREDITS ChangeLog FAQ NEWS README TODO
 }
