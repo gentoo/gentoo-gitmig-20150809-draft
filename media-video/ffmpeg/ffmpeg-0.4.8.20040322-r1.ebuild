@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.20040322-r1.ebuild,v 1.7 2004/06/25 22:52:45 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.20040322-r1.ebuild,v 1.8 2004/06/28 06:15:03 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -37,9 +37,9 @@ src_unpack() {
 	cd ${S}
 	sed -i s:\#define\ HAVE_X11:\#define\ HAVE_LINUX: ffplay.c
 
-    #this will allow ffmpeg to be compiled with gcc-3.4.x fixing bug #49383
+	#this will allow ffmpeg to be compiled with gcc-3.4.x fixing bug #49383
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
-    then
+	then
 		einfo "Compiler used: gcc-3.4.x Applying patch conditionally."
 		epatch ${FILESDIR}/0.4.8-gcc3.4-magicF2W.patch
 	fi
