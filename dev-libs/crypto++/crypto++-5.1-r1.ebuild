@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.1-r1.ebuild,v 1.2 2004/03/29 13:46:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.1-r1.ebuild,v 1.3 2004/04/30 17:43:41 rphillips Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,8 @@ replace-flags -O3 -O2
 
 DESCRIPTION="Crypto++ is a C++ class library of cryptographic schemes"
 HOMEPAGE="http://cryptopp.com"
-SRC_URI="mirror://sourceforge/cryptopp/crypto${PV//.}.zip"
+SRC_URI="mirror://sourceforge/cryptopp/crypto${PV//.}.zip
+		 mirror://gentoo/distfiles/crypto++-gcc-3.4.diff.bz2"
 
 LICENSE="cryptopp"
 SLOT="0"
@@ -18,7 +19,17 @@ IUSE=""
 
 S=${WORKDIR}
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/crypto++-5.1-amd64.diff
+
+	unpack crypto++-gcc-3.4.diff.bz2
+	epatch crypto++-gcc-3.4.diff
+}
+
 src_compile() {
+
 	emake -f GNUmakefile CXXFLAGS="${CXXFLAGS}" || die
 	if ! ./cryptest.exe v
 	then
