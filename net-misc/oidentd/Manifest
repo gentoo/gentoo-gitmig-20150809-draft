@@ -4,6 +4,7 @@ MD5 f94d8f3c768c583ca3bf8aaaa5dd9f36 oidentd-2.0.4-r1.ebuild 1058
 MD5 a6b0a242eb8efc3acab21091089da50c oidentd-2.0.4.ebuild 921
 MD5 2f2b51711cac3a37234a038962ce9fec oidentd-2.0.6.ebuild 1056
 MD5 1b3e65819b02d89bb0fbfa816a511c0b oidentd-2.0.7.ebuild 1056
+MD5 1b3e65819b02d89bb0fbfa816a511c0b oidentd-2.0.7-r1.ebuild 1056
 MD5 46f7ca76169cc032ccedb960ff3ce804 files/digest-oidentd-2.0.3-r1 65
 MD5 550b78b88970ba0cb0c029087ca100b5 files/digest-oidentd-2.0.4 65
 MD5 550b78b88970ba0cb0c029087ca100b5 files/digest-oidentd-2.0.4-r1 65
@@ -18,3 +19,4 @@ MD5 85be7f47ed6684f2868b48e82dd8fa6b files/digest-oidentd-2.0.6 65
 MD5 0c88fdf66a5a16f12d49b0a6c5dd5743 files/digest-oidentd-2.0.7 65
 MD5 05a43d3987754f179f4e31bbe61ff315 files/oidentd-2.0.7-confd 67
 MD5 88e31a664bee946852264d509b043f3b files/oidentd-2.0.7-init 798
+MD5 0c88fdf66a5a16f12d49b0a6c5dd5743 files/digest-oidentd-2.0.7-r1 65
