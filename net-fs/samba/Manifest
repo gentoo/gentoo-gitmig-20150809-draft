@@ -33,5 +33,5 @@ MD5 ce5400ed75143be061711d2c1d51a081 files/system-auth-winbind 867
 MD5 990fe15ff8a0e79f39069fff6475536d files/samba-3.0.2a-smbprint.patch 1224
 MD5 a4597c467bc5322bfba790e526867ae0 files/samba-svc 982
 MD5 b6cdc1468e45f92f19873e0c6c5b6e94 files/samba.pam 332
-MD5 85dd3b63caca9eada060118fc1477192 files/digest-samba-3.0.2a-r1 66
+MD5 2097e35f6cc85e33c90abfc3cb92f301 files/digest-samba-3.0.2a-r1 134
 MD5 8289eda694b35875eec6df5cc3f50c86 files/samba-2.2.6-libresolv.patch 540
