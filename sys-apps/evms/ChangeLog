@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/evms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.9 2002/10/02 09:31:11 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.10 2002/10/12 22:09:05 woodchip Exp $
 
 *evms-1.2.0 (02 Oct 2002)
 
@@ -12,27 +12,23 @@
 
   27 Aug 2002; Donny Davies <woodchip@gentoo.org>: Removed the LVM clone tools.
 
-  07 Aug 2002; Daniel Robbins <drobbins@gentoo.org>: New release version of evms
-  1.1.0.
+  07 Aug 2002; Daniel Robbins <drobbins@gentoo.org>: New release version of evms 1.1.0.
 
 *evms-1.1.0_pre4 (31 Jul 2002)
 
-  31 Jul 2002; Daniel Robbins <drobbins@gentoo.org>: New version for evms 1.1.0
-  systems.
+  31 Jul 2002; Daniel Robbins <drobbins@gentoo.org>: New version for evms 1.1.0 systems.
 
 *evms-1.0.1 (08 May 2002)
 
   21 Jul 2002; Mark Guertin <gerk@gentoo.org>: updated keywords (-ppc)
 
-  14 Jul 2002; phoen][x <phoenix@gentoo.org> evms-1.0.1.ebuild : Added
-  KEYWORDS.
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> evms-1.0.1.ebuild : Added KEYWORDS.
 
   08 May 2002; Donny Davies <woodchip@gentoo.org>: Updated to 1.0.1.
 
 *evms-1.0.0-r1 (30 Apr 2002)
 
-  14 Jul 2002; phoen][x <phoenix@gentoo.org> evms-1.0.0-r1.ebuild :
-  Added KEYWORDS.
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> evms-1.0.0-r1.ebuild : Added KEYWORDS.
 
   30 Apr 2002; Donny Davies <woodchip@gentoo.org>: Moved the plugins to
   /lib/evms, where they belong.  Please unmerge the older version of this
