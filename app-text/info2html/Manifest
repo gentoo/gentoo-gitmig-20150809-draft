@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 190ff543b0123e5b7113ac544750e96d info2html-1.4.ebuild 951
-MD5 0a090725341201754a110df41a26fa18 ChangeLog 763
+MD5 38d1ecc8f31e31ecf80810c2d5e44c67 ChangeLog 764
+MD5 5668e5c0afbef92b9ab57903959e75bd info2html-1.4.ebuild 952
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 495fd408850958212ae70b35f3b8129b files/info2html-gentoo.patch 1767
 MD5 4b9f64ddf8e7ef3c725fc1f785c69456 files/digest-info2html-1.4 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBoKt9Z/iYVBmujdURAu/DAKC3BB2PaAZe9WPPxvF/i5q5UO/+AQCeI/xU
-gkQK79v7nyi5F4PMl5hmCcg=
-=T5jf
------END PGP SIGNATURE-----
+MD5 495fd408850958212ae70b35f3b8129b files/info2html-gentoo.patch 1767

@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ad7620963c7b37f8f81e42ab578e0151 remem-2.11.ebuild 729
-MD5 04aafaf5565e977dd505a10d927e42e4 ChangeLog 1096
+MD5 8347fdfbd80a37ea6482783d02cdae46 ChangeLog 1098
+MD5 7876303b41dc48ddf8e4bf1699b92c7c remem-2.11.ebuild 731
 MD5 12ebf1cd6eacee80f231baa39321e192 files/digest-remem-2.11 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBo4eKI1lqEGTUzyQRAiBXAJwIAUwOnoetLAEL4XFDDsiKfPHjGwCgwfh7
-CAM4dY3fSDocwZe5hRffkC8=
-=g+cX
------END PGP SIGNATURE-----

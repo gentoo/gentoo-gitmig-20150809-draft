@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 16196a300472c5ae89faf457c0af9441 ChangeLog 3244
+MD5 5147dc529907e745f8e12d32dee19dbc ChangeLog 3249
 MD5 e94683fd6e8552de7f9cc96d8c1110ec metadata.xml 432
-MD5 b2604282531e669844b1833d651ba15a xdvik-22.40y-r2.ebuild 1782
-MD5 2227c4a74a7f50528f483b2fc88d3164 xdvik-22.84.5.ebuild 3557
+MD5 48c49269d5aae05fac8a06d50aac6b27 xdvik-22.40y-r2.ebuild 1787
+MD5 2cc8b698cb55be32b2e032e0fe7f092c xdvik-22.84.5.ebuild 3562
 MD5 2957e3b202cbb3d7a5dc43a68ffd2ef0 files/digest-xdvik-22.84.5 144
 MD5 ef28316e4f45cb7762b5ec33efe38f61 files/digest-xdvik-22.40y-r2 139
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBnm0VVWNWqTUmv+0RAkWCAKCMHNEr9kS/zW8ACrfC9OryfcqOzgCfctiG
-cbRI+yX8BpoXOBEt4N89XeQ=
-=Q4vY
------END PGP SIGNATURE-----

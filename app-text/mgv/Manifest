@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a78792c5e5766cadc20fd1d79e9ad45 ChangeLog 1544
-MD5 7b6ac22a03986ac088272273c22a040f mgv-3.1.5-r1.ebuild 1022
-MD5 bd29c548fb3015af0e9bbb958e76eb4b mgv-3.1.5.ebuild 740
+MD5 93453355f9559321ad0c021c1a2b5eed ChangeLog 1546
+MD5 75c5ba7b382c8d675a75c0d23fd5b89e mgv-3.1.5-r1.ebuild 1024
+MD5 dc16a49b4ae5842db692d809656671b5 mgv-3.1.5.ebuild 742
 MD5 bd520677adbd1e3f716bd9074bc9cd83 files/digest-mgv-3.1.5 61
 MD5 bd520677adbd1e3f716bd9074bc9cd83 files/digest-mgv-3.1.5-r1 61
 MD5 cd17d72e2674842cecb8182a758620fc files/mgv-3.1.5-stderr.patch 376
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYGtWI1lqEGTUzyQRAltKAJ4rAyrrrYJmhlq5bvjprpYFRufv6QCfd14G
-GUoaWMdwbOpds+3YGqEtCa0=
-=UJds
------END PGP SIGNATURE-----

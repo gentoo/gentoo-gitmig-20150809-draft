@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77a0a0b7daf584bea95d58dda8da0297 ChangeLog 1215
-MD5 1372d774a6ce6765b40c71eeeb072943 ipcalc-0.37.ebuild 648
+MD5 5fa5f9490d8f8bef684399f9154b1e1f ChangeLog 1219
+MD5 ac37588a4900369f4f49e06ee37693e6 ipcalc-0.37.ebuild 652
 MD5 db6d4e6711e63467c59f936c53991bd2 files/digest-ipcalc-0.37 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBh5/oHTu7gpaalycRAkrRAKCJNK9ED1hSbhXVkgtfl0hlE6ed8QCg3Yq3
-WnXbYhfezdJFqJLtarGHiT8=
-=JiCF
------END PGP SIGNATURE-----

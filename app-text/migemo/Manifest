@@ -1,5 +1,5 @@
-MD5 26ad1b2b23511d7fb6233d5486919bc5 ChangeLog 1459
+MD5 675ad0914d57fbb55d8ea3b2933f0a1d ChangeLog 1463
 MD5 1d42b06bfb3e26653185a94eb94bae8a metadata.xml 266
-MD5 90c572132a73ace65435dfdab9f190bd migemo-0.40-r1.ebuild 913
+MD5 945b6e942e548e8db6199a3c553fe1ae migemo-0.40-r1.ebuild 917
 MD5 43439a958e467d8f249f2dabab88160c files/50migemo-gentoo.el 93
 MD5 b582c71d7b83fea37f8020ebba5f19ea files/digest-migemo-0.40-r1 64

@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d70bc598aee8379fcca56856e6e9e7fc glark-1.7.0.ebuild 667
-MD5 30d4f52b834d0261ecd83f3a30c9596f ChangeLog 2706
-MD5 8a93f0a469a8e0a79f4191d941d9594a glark-1.7.1.ebuild 672
-MD5 5c07f830eb6c95cba4170e9d78d2e1ce glark-1.7.2.ebuild 757
+MD5 af38dd6113abefcac8830e8389026afe ChangeLog 2709
+MD5 d648bf0b3cbbf9b68ca48956fac22ebb glark-1.7.1.ebuild 675
+MD5 624a6e4652495d10c5605a30ea4e06a1 glark-1.7.2.ebuild 760
+MD5 bf854935d15b7a1ace76e0972ba1122b glark-1.7.0.ebuild 671
 MD5 cc91d79e8dc6f0d1b9727eb83de5f98a metadata.xml 258
 MD5 45ca54fe2662478c83bf160831b2aea9 files/digest-glark-1.7.1 62
 MD5 67bdc0662f2ad93234cf0299b10fb028 files/digest-glark-1.7.2 62
 MD5 16965b8cb4e088ce14ac964bf473d124 files/digest-glark-1.7.0 62
 MD5 9b0139902e8fa81c7922c08cc4cff23f files/1.7.2/glark-completion 994
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB0F/dLLFUmVNQ7rkRAkwqAJsFQLnyDyT4hprORU6sou9a4EMqnwCfY/z8
-TcJ4dhOJIbu5By32yeG7vBI=
-=jgGF
------END PGP SIGNATURE-----

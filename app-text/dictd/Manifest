@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 90cc274ec9a71065a991695abaeba773 ChangeLog 3449
-MD5 1decf95d3640e888fcfc4fc4b048c628 dictd-1.8.0.ebuild 1536
-MD5 8d457fd5e3d23b393b569f8734ca5a0c dictd-1.9.11-r1.ebuild 1260
+MD5 18e3d5e3e5f4a1cde04d5ddf6256bc0f ChangeLog 3452
+MD5 626c1a9092eca419b4f9547d316f8bd1 dictd-1.8.0.ebuild 1538
+MD5 63967282e16d6b67fdd6321f6b8d1dd3 dictd-1.9.11-r1.ebuild 1262
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
-MD5 0b19e235219294f41be6495cda158c45 dictd-1.9.14.ebuild 1276
+MD5 091db2f419cf6fcb35bdc3bbfcee6212 dictd-1.9.14.ebuild 1279
 MD5 a97d38377255fef9ec22c3bf4c23fd6b files/dictd-1.8.0-gcc33-multiline-string-fix.patch 542
 MD5 7182349beb0e6f90f1d2c46cc8c5a3bc files/digest-dictd-1.8.0 63
 MD5 acfe9cbde6329db158f6a1b458be342c files/digest-dictd-1.9.11-r1 64
@@ -25,10 +22,3 @@ MD5 c24e1e0b63caf63ae90184318ca741e6 files/1.9.7/dictd 1760
 MD5 33b467f10a606af7fa36782d67b67616 files/1.9.7/dictd.conf 569
 MD5 2063896920a5b204d6d5f7090786db73 files/1.9.7/dictd.confd 135
 MD5 b8cabf913876e544d919c7f20ff8db9e files/1.9.7/site.info 235
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxuwvRkyva5PS18kRAqV4AKCr6O1ow3hrrKOSLp27++pgLT1PNQCcCx/Z
-8eKEGiCCW+KpWT5U481qJQA=
-=CT+0
------END PGP SIGNATURE-----

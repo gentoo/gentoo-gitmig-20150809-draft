@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bc931f424f8d0c8c756d2f8ab8244387 duconv-1.1.ebuild 749
-MD5 da49f529dd78ed4a97988c9dd0817f35 ChangeLog 1188
+MD5 a311cbb6f63424ecf36ccc7b7f30b2a1 ChangeLog 1192
+MD5 00ca3db15459972f7105fd41d4c6eae1 duconv-1.1.ebuild 752
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 615ebd7a86904f4d70933567e86b7b97 files/digest-duconv-1.1 53
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBd9DMEZCkKN40op4RArC9AKCvSwV22Tr3LGeoR/lidTJ/JoAaBwCggm1C
-fdwwjluZ5TkYTsT7qNXzcTc=
-=EqSf
------END PGP SIGNATURE-----

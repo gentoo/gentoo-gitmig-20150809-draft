@@ -1,5 +1,5 @@
-MD5 41ef0f0d35c254721adc2b8eb4f6c0ed ChangeLog 1199
-MD5 028cb83104cf6f0e6ef27df3c2ed4b8b dos2unix-3.1.ebuild 876
+MD5 23f2b18473fcbcc039e04d6b533783e8 ChangeLog 1202
+MD5 a60dc8479f8de55fecb5cd4a92a6b413 dos2unix-3.1.ebuild 877
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 2b2ff8664186c867d4f5909878ba670c files/digest-dos2unix-3.1 64
 MD5 8fa72bf59beecca125d2b02558fb9175 files/dos2unix-3.1-segfault.patch 2281
