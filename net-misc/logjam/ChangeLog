@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/logjam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.19 2004/06/12 17:59:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.20 2004/06/18 04:54:20 brad Exp $
+
+  18 Jun 2004; Brad Laue <brad@gentoo.org> logjam-4.4.0.ebuild:
+  Fix GNOME menu icon.
 
   12 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/logjam-4.4.0-gcc3.4.patch:
