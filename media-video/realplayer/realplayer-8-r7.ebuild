@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r7.ebuild,v 1.2 2004/01/16 10:48:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r7.ebuild,v 1.3 2004/02/28 22:12:52 liquidx Exp $
 
 inherit nsplugins
 
@@ -106,5 +106,8 @@ pkg_postinst() {
 	einfo "Finished installing RealPlayer8 into ${BASE}"
 	einfo "You can start the player by running 'realplay'"
 	einfo "You have to agree to the terms in ${BASE}/LICENSE or unmerge"
+	echo
+	einfo "If you are using arts, you should start realplayer using:"
+	einfo " artsdsp realplay"
 	echo
 }
