@@ -1,5 +1,6 @@
 You are almost done!
 
+  0. Setup the db.
 
   1. Restart Apache
 
