@@ -1,29 +1,23 @@
 # ChangeLog for net-www/mod_mp3
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/ChangeLog,v 1.5 2002/11/01 10:03:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/ChangeLog,v 1.6 2002/11/29 11:42:42 woodchip Exp $
 
 *mod_mp3-0.39 (01 Nov 2002)
 
-  01 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
-  Version bump.
+  01 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> : Version bump.
 
 *mod_mp3-0.35-r2 (27 Aug 2002)
 
-  27 Aug 2002; Achim Gottinger <achim@gentoo.org> mod_mp3-0.35-r1.ebuild :
-
-  Added mysql support
+  27 Aug 2002; Achim Gottinger <achim@gentoo.org> : Added mysql support.
 
 *mod_mp3-0.35-r1 (4 May 2002)
 
-  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> mod_mp3-0.35-r1.ebuild :
-  Added KEYWORDS.
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> : Added KEYWORDS.
   
-  4 May 2002; Donny Davies <woodchip@gentoo.org> :
-
-  Added LICENSE, SLOT, clarify the pkg_postinst message.
+  4 May 2002; Donny Davies <woodchip@gentoo.org> : Added LICENSE,
+  SLOT, clarify the pkg_postinst message.
 
 *mod_mp3-0.35 (9 Apr 2002)
 
   9 Apr 2002; Donny Davies <woodchip@gentoo.org> :
-
   New package to go along with the rewritten apache ebuild.

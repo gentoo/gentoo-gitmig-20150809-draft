@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/mod_dav-1.0.3-r1.ebuild,v 1.4 2002/10/04 06:19:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/mod_dav-1.0.3-r1.ebuild,v 1.5 2002/11/29 11:42:42 woodchip Exp $
 
 MY_V=${PV}-1.3.6
 
@@ -11,7 +11,7 @@ KEYWORDS="x86 sparc sparc64"
 S=${WORKDIR}/${PN}-${MY_V}
 SRC_URI="http://www.webdav.org/mod_dav/${PN}-${MY_V}.tar.gz"
 
-DEPEND="virtual/glibc >=net-www/apache-1.3.24"
+DEPEND="virtual/glibc =net-www/apache-1*"
 LICENSE="as-is"
 SLOT="0"
 

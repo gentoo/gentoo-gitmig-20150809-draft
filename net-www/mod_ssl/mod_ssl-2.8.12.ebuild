@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.12.ebuild,v 1.1 2002/10/27 00:10:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.12.ebuild,v 1.2 2002/11/29 11:42:42 woodchip Exp $
 
 MY_P=${P}-1.3.27
 
@@ -11,7 +11,7 @@ KEYWORDS="x86 ppc sparc sparc64"
 S=${WORKDIR}/${MY_P}
 SRC_URI="http://www.modssl.org/source/${MY_P}.tar.gz"
 
-DEPEND="virtual/glibc =net-www/apache-1.3.27* >=dev-libs/openssl-0.9.6c"
+DEPEND="=net-www/apache-1* >=dev-libs/openssl-0.9.6c"
 LICENSE="as-is"
 SLOT="0"
 
