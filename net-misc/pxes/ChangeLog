@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.15 2004/06/29 13:40:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.16 2004/08/16 17:34:26 wolf31o2 Exp $
+
+*pxes-0.9 (16 Aug 2004)
+
+  16 Aug 2004; Chris Gianelloni <wolf31o2@gentoo.org> +pxes-0.9.ebuild:
+  Added latest version.
 
   29 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.7.ebuild,
   pxes-0.8.ebuild:
