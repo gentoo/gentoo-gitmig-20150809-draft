@@ -1,0 +1,5 @@
+#define XDirectFBServer YES
+#define ProjectRoot /usr/X11R6
+#define NothingOutsideProjectRoot No
+#define EtcX11Directory /etc/X11
+#define FontconfigDir /usr/X11R6/lib/fonts
