@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.3 2004/09/18 21:57:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.4 2004/11/20 19:04:51 ka0ttic Exp $
+
+*sleuthkit-1.73 (20 Nov 2004)
+
+  20 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> +sleuthkit-1.73.ebuild:
+  Version bump for bug 71855; also, added toolchain-funcs support for CC.
 
   18 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
