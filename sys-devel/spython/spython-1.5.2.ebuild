@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-1.5.2.ebuild,v 1.1 2000/12/24 12:12:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-1.5.2.ebuild,v 1.2 2000/12/24 14:00:14 achim Exp $
 
 P=spython-1.5.2      
 A="py152.tgz python-fchksum-1.1.tar.gz"
@@ -29,8 +29,10 @@ src_compile() {
     cp Makefile.pre Makefile.orig
     sed -e "s:MODOBJS=:MODOBJS=fchksum.o md5_2.o:" \
     Makefile.orig > Makefile.pre
+
     echo "fchksum.o: \$(srcdir)/fchksum.c; \$(CC) \$(CFLAGS) -c \$(srcdir)/fchksum.c" >> Makefile.pre
     echo "md5_2.o: \$(srcdir)/md5_2.c; \$(CC) \$(CFLAGS) -c \$(srcdir)/md5_2.c" >> Makefile.pre
+    echo "fchksum\$(SO):  fchksum.o md5.o; \$(LDSHARED)  fchksum.o md5_2.o  -lz -o fchksum\$(SO)" >> Makefile.pre
     # Parallel make does not work
     cd ${S}
     try make 
@@ -64,11 +66,11 @@ src_install() {
     try make install prefix=${D}
     mv ${D}/bin/python ${D}/bin/spython
     mv ${D}/bin/python1.5 ${D}/bin/spython1.5
-    for i in lib-dynload lib-stdwin lib-tk test
-    do
-        rm -r ${D}/lib/python1.5/${i}
-    done
-    rm -r ${D}/include 
+   # for i in lib-dynload lib-stdwin lib-tk test
+   # do
+   #     rm -r ${D}/lib/python1.5/${i}
+   # done
+   # rm -r ${D}/include 
     rm -r ${D}/man
     dodoc README
 }

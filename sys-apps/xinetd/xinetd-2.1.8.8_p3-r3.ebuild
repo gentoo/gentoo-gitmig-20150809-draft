@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.1.8.8_p3-r3.ebuild,v 1.2 2000/12/24 05:26:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.1.8.8_p3-r3.ebuild,v 1.3 2000/12/24 14:00:14 achim Exp $
 
 P=xinetd-2.1.8.8p3
 A=${P}.tar.gz
@@ -32,7 +32,7 @@ src_install() {
 	dodir /etc/supervise
 	exeinto /var/supervise/xinetd
 	newexe ${FILESDIR}/xinetd-run run
-	ln -s /var/supervise/xinetd /etc/supervise/xinetd 
+	ln -s /var/supervise/xinetd ${D}/etc/supervise/xinetd 
 }
 
 

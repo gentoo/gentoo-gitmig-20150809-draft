@@ -5,6 +5,6 @@
 
 myhost=`cat /etc/hostname` 1>&2
 ebegin "Setting hostname to $myhost"
-/sbin/hostname ${myhost}
+/bin/hostname ${myhost}
 eend $?
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7.ebuild,v 1.4 2000/12/24 05:26:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7.ebuild,v 1.5 2000/12/24 14:00:14 achim Exp $
 
 A=dcron27.tgz
 S=${WORKDIR}/dcron
@@ -37,7 +37,7 @@ src_install() {
 	chmod +t ${D}/var/supervise/dcron
 	exeinto /var/supervise/dcron/log
 	newexe ${FILESDIR}/log-run run
-	dosym /var/supervise/cron /etc/supervise/cron 	
+	dosym /var/supervise/dcron /etc/supervise/dcron 	
 
 	#install rc script
 	exeinto /etc/rc.d/init.d

@@ -12,7 +12,7 @@
 opts="start stop restart"
 
 intstat() {
-	local ints=`/sbin/netstat -i | tail --lines +3 | cut -f1 -d" "`
+	local ints=`/bin/netstat -i | tail --lines +3 | cut -f1 -d" "`
 	for x in $ints
 	do
 		if [ "$1" = "$x" ]
