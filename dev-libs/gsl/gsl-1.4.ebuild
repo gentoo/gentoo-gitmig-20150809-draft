@@ -1,45 +1,34 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.4.ebuild,v 1.10 2004/07/02 04:42:32 eradicator Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.4.ebuild,v 1.11 2004/12/20 16:17:37 vapier Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="The GNU Scientific Library"
-SRC_URI="http://mirrors.rcn.net/pub/sourceware/gsl/${P}.tar.gz"
 HOMEPAGE="http://sources.redhat.com/gsl/"
+SRC_URI="http://mirrors.rcn.net/pub/sourceware/gsl/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64 alpha ppc"
+SLOT="0"
+KEYWORDS="alpha amd64 hppa ppc sparc x86"
+IUSE=""
 
 DEPEND="virtual/libc"
 
-replace-flags k6-3 i586
-replace-flags k6-2 i586
-replace-flags k6 i586
-filter-flags -ffast-math
-filter-mfpmath sse
-
-
 src_compile() {
-	#Avoid locking (can break parallel builds)
-	local myconf
-	myconf="--disable-libtool-lock"
+	replace-cpu-flags k6 k6-2 k6-3 i586
+	filter-flags -ffast-math
+	filter-mfpmath sse
 
-	econf ${myconf} || die
+	econf --disable-libtool-lock || die
 	emake || die
-
-	#Uncomment the 'make check ...' line if you want to run the test suite.
-	#Note that the check.log file will be several megabytes in size.
-	#make check > ${WORKDIR}/check.log 2>&1 || die
-
 }
 
-src_install () {
+src_test() {
+	make check || die
+}
 
+src_install() {
 	einstall || die
-	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL NEWS TODO THANKS
-
+	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS TODO THANKS
 }
