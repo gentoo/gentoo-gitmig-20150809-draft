@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-data
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/ChangeLog,v 1.4 2004/06/24 22:43:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/ChangeLog,v 1.5 2004/09/18 02:54:48 mr_bones_ Exp $
+
+  17 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  quake2-data-3.20.ebuild:
+  it's data.  no need to DEPEND on x11 (bug #63062)
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> quake2-data-3.20.ebuild:
   Fix use invocation
