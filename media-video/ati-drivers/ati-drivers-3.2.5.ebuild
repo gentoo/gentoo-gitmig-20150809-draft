@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5.ebuild,v 1.9 2003/10/05 03:34:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5.ebuild,v 1.10 2003/10/06 06:09:38 mr_bones_ Exp $
 
 IUSE="qt kde gnome"
 
@@ -52,7 +52,7 @@ src_unpack() {
 	einfo "applying fglrx-2.6-iminor.patch"
 	patch -p1 < ${FILESDIR}/fglrx-2.6-iminor.patch
 #	einfo "applying fglrx-2.6-tsk_euid.patch"
-#	patch < ${FILESDIR}/3.2.5-linux-2.6.0-test6-mm.patch 
+#	patch < ${FILESDIR}/3.2.5-linux-2.6.0-test6-mm.patch
 	fi
 }
 
@@ -65,7 +65,7 @@ src_compile() {
 	einfo "building the glx module"
 	cd ${WORKDIR}/lib/modules/fglrx/build_mod
 	if [ "`echo ${KV}|grep 2.6`" ] ; then
-		GENTOO_ARCH=${ARCH} 
+		GENTOO_ARCH=${ARCH}
 		unset ARCH
 	    addwrite "/usr/src/${FK}"
 	    cp 2.6.x/Makefile .
