@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.28 2003/02/24 01:05:02 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.29 2003/02/27 19:29:58 zwelch Exp $
+
+*distcc-1.2.1 (26 Feb 2003)
+
+  26 Feb 2003; Zach Welch <zwelch@gentoo.org> distcc-1.2.1.ebuild,
+  files/1.2.1/distcc-config, files/1.2.1/wrapper.patch:
+  New version, with fixes for installs under strange ROOTs
+  Moved user creation, directory fixups into distcc-config script
+  Fix typo in conf script; fixes bug 16432
 
 *distcc-1.2 (21 Feb 2003)
 
