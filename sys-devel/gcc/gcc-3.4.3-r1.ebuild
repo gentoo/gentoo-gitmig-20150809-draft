@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.9 2004/12/14 17:11:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.10 2004/12/22 01:44:28 eradicator Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -251,11 +251,32 @@ src_install() {
 	# and mips is just freaky in general ;p
 	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used o32
 	# and finally, the non-bitdepth-or-ABI-specific freaky path
+
 	if [ -d ${D}/${LIBPATH}/../lib ] ; then
-		mv ${D}/${LIBPATH}/../lib/* ${D}/${LIBPATH}/
-		rm -rf ${D}/${LIBPATH}/../lib
+		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ] &&
+		   [ "${CTARGET}" = "sparc64-unknown-linux-gnu" ]; then
+			if [ -d "${D}/${LIBPATH}/32" ]; then
+				mv ${D}/${LIBPATH}/../lib/* ${D}/${LIBPATH}/32
+				rm -rf ${D}/${LIBPATH}/../lib
+			else
+				mv ${D}/${LIBPATH}/../lib ${D}/${LIBPATH}/32
+			fi
+		else
+			mv ${D}/${LIBPATH}/../lib/* ${D}/${LIBPATH}/
+			rm -rf ${D}/${LIBPATH}/../lib
+		fi
 	fi
+
 	# we also dont want libs in /usr/lib*
+	if [ "${PROFILE_ARCH}" = "sparc64-multilib" ] &&
+	   [ "${CTARGET}" = "sparc64-unknown-linux-gnu" ]; then
+			[ ! -d "${D}/${LIBPATH}/32" ] && mkdir ${D}/${LIBPATH}/32
+			mv ${D}/${PREFIX}/lib/*.a ${D}/${PREFIX}/lib/*.la ${D}/${PREFIX}/lib/*so* \
+				${D}/${LIBPATH}/32
+	fi
+
+	# FIXME: You're forgetting the libs in ${PREFIX}/lib ...
+	# see the sparc64-multilib hack ^^
 	if [ -d ${D}/${PREFIX}/lib32 -a -d ${D}/${LIBPATH}/32 ] ; then
 		mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/32/
 		rm -rf ${D}/${PREFIX}/lib32/
@@ -263,6 +284,7 @@ src_install() {
 		mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/
 		rm -rf ${D}/${PREFIX}/lib32/
 	fi
+
 	if [ -d ${D}/${PREFIX}/lib64 -a -d ${D}/${LIBPATH}/64 ] ; then
 		mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/64/
 		rm -rf ${D}/${PREFIX}/lib64/
@@ -270,6 +292,7 @@ src_install() {
 		mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/
 		rm -rf ${D}/${PREFIX}/lib64/
 	fi
+
 	# and sometimes crap ends up here too :|
 	mv ${D}/${LIBPATH}/../*.a ${D}/${LIBPATH}/../*.la ${D}/${LIBPATH}/../*so* \
 		${D}/${LIBPATH}/

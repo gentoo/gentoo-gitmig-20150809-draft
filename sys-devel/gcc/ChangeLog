@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.361 2004/12/05 04:19:34 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.362 2004/12/22 01:44:28 eradicator Exp $
+
+  21 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gcc-3.4.3-r1.ebuild:
+  sparc64 multilib fixes... /lib is 32bit which confused the ebuild.
 
 *gcc-3.3.5-r1 (04 Dec 2004)
 
