@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.45 2004/10/20 03:45:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.46 2004/11/24 18:13:00 kito Exp $
+
+  24 Nov 2004; Kito <kito@gentoo.org> rdesktop-1.3.1-r1.ebuild:
+  added ~ppc-macos closes Bug 72320
 
   19 Oct 2004; Jason Wever <weeve@gentoo.org> rdesktop-1.3.1-r1.ebuild:
   Stable on sparc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.3.1-r1.ebuild,v 1.5 2004/10/20 03:45:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.3.1-r1.ebuild,v 1.6 2004/11/24 18:13:00 kito Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ia64 ppc64 amd64"
+KEYWORDS="x86 ppc sparc alpha ia64 ppc64 amd64 ~ppc-macos"
 IUSE="kde ssl debug"
 
 DEPEND="virtual/x11
