@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r3.ebuild,v 1.7 2002/12/11 16:00:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r3.ebuild,v 1.8 2002/12/12 00:03:09 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -17,6 +17,7 @@ DEPEND="sys-apps/groff berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) 
 RDEPEND="berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) gdbm? ( >=sys-libs/gdbm-1.8.0 )"
     
 src_compile() {
+	export LC_ALL=C
     local myconf
 	if [ "`use gdbm`" ]
 	then
@@ -116,6 +117,7 @@ EOF
 
 src_install () {
 	
+	export LC_ALL=C
 	cd ${S}
 	
 	insinto /usr/lib/perl5/${PV}/${CHOST%%-*}-linux/CORE/
