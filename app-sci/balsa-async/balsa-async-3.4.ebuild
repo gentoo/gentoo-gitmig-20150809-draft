@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/balsa-async/balsa-async-3.4.ebuild,v 1.1 2004/07/26 17:16:56 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/balsa-async/balsa-async-3.4.ebuild,v 1.2 2004/07/26 17:51:47 chrb Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ Name="balsa"
 My_PV="3.4"
 
 DESCRIPTION="The Balsa asynchronous synthesis system"
-HOMEPAGE="http://www.cs.man.ac.uk/amulet/projects/balsa/"
+HOMEPAGE="http://www.cs.man.ac.uk/apt/projects/tools/balsa/"
 SRC_URI="ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/${My_PV}/${Name}-${My_PV}.tar.gz
 	ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/${My_PV}/BalsaManual${My_PV}.pdf
 	ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/${My_PV}/${Name}-tech-example-${My_PV}.tar.gz
