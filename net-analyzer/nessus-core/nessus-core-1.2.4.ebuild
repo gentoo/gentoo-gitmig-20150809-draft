@@ -1,16 +1,17 @@
-# Copyright 2000-2002 Achim Gottinger
-# Distributed under the GPL by Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-1.2.4.ebuild,v 1.4 2002/09/23 16:45:06 vapier Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-1.2.4.ebuild,v 1.5 2002/09/30 13:09:29 raker Exp $
 
 S=${WORKDIR}/${PN}
+
 DESCRIPTION="A remote security scanner for Linux (nessus-core)"
 HOMEPAGE="http://www.nessus.org/"
-
 SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
 
 DEPEND="=net-analyzer/libnasl-1.2.4
 	X? ( x11-base/xfree )
 	gtk? ( =x11-libs/gtk+-1.2* )"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -33,7 +34,7 @@ src_install() {
 	make \
 		prefix=${D}/usr \
 		sysconfdir=${D}/etc \
-		localstatedir=${D}/var/state \
+		localstatedir=${D}/var/lib \
 		mandir=${D}/usr/share/man \
 		install || die "Install failed nessus-core"
 
