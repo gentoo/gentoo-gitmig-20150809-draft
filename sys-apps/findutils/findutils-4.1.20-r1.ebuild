@@ -1,28 +1,28 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.24 2004/07/01 08:11:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.25 2004/11/12 15:57:21 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
 SELINUX_PATCH="findutils-4.1.20-selinux.diff"
 
-DESCRIPTION="GNU utilities to find files"
-HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 # Note this doesn't point to gnu.org because alpha.gnu.org has quit
 # supplying the development versions.  If it comes back in the future
 # then we might want to redirect the link.  See bug 18729
+DESCRIPTION="GNU utilities to find files"
+HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa alpha amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls build afs selinux static"
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )
-	x86? ( afs? ( net-fs/openafs ) )
+	afs? ( net-fs/openafs )
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="virtual/libc"
 
