@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.0.ebuild,v 1.1 2004/08/02 02:39:44 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-2.0.ebuild,v 1.2 2004/08/03 11:43:50 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DEPEND="tcl tk"
 LICENSE="Princeton"
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 S=${WORKDIR}/WordNet-${PV}
 
 src_unpack() {
