@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18.ebuild,v 1.3 2004/02/23 08:46:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18.ebuild,v 1.4 2004/02/24 06:28:01 vapier Exp $
 
 inherit eutils
 
@@ -32,10 +32,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-linux2.6.patch
 
 	# Disable kernel module support while building stages #38403
-	if [ -z "`use build`" ]
-	then
-		sed -i 's:installmodule ::' Makefile
-	fi
+	#use build && 
+	sed -i 's:installmodule ::' Makefile
+	# for now we dont build the module at all #42522
 }
 
 src_compile() {
@@ -58,14 +57,15 @@ src_compile() {
 	make OPTIMIZE="${CFLAFS}" LDFLAGS='-L ../sharedlib' \
 		-C threeDKit lib3dkit.a || die "Failed to build threeDKit!"
 
-	if [ -z "`use build`" ]
-	then
-		unset ARCH
-		addwrite "/usr/src/${FK}"
-		cd ${S}/kernel/svgalib_helper
-		make -C /usr/src/linux SUBDIRS=`pwd` clean modules \
-			|| die "Failed to build kernel module!"
-		cd ${S}
+	if ! use build ; then
+		# for now we dont build the module at all #42522
+		if [ 0 -eq 1 ] ; then
+			cd ${S}/kernel/svgalib_helper
+			env -u ARCH \
+				make -C /usr/src/linux SUBDIRS=`pwd` clean modules \
+				|| die "Failed to build kernel module!"
+			cd ${S}
+		fi
 	fi
 
 	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L ../sharedlib' demoprogs \
