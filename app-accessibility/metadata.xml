@@ -6,12 +6,16 @@
 		accessibility (for example, screen readers).
 	</longdescription>
 	<longdescription lang="es">
-		La categoría app-accessibility contiene paquetes para ayudar con 
+		La categorÃ­a app-accessibility contiene paquetes para ayudar con 
 		accesibilidad (por ejemplo, lectores de pantallas).
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie app-accessibility enthält Programme für barrierefreies
+		Die Kategorie app-accessibility enthÃ¤lt Programme fÃ¼r barrierefreies
 		Arbeiten (Accessibility), wie beispielsweise Screenreader.
+	</longdescription>
+	<longdescription lang="nl">
+    	De app-accessibility category bevat applicaties die de
+		toegankelijkheid bevorderen, voorbeeld een schermlezer.
 	</longdescription>
 </catmetadata>
 
