@@ -1,16 +1,11 @@
 # ChangeLog for app-misc/evidence
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/ChangeLog,v 1.10 2003/07/19 19:51:46 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/ChangeLog,v 1.11 2003/10/18 09:42:46 vapier Exp $
 
-  19 Jul 2003; Nick Hadaway <raker@gentoo.org>:
-  Removed r1
+*evidence-0.9.6.20031018 (18 Oct 2003)
 
-*evidence-0.9.6.20030629_pre1-r1 (18 Jul 2003)
-
-  18 Jul 2003; Nick Hadaway <raker@gentoo.org> 
-  evidence-0.9.6.20030629-{,r1}.ebuild:
-  Fixed invalid USE variables and added support for 
-  media-libs/{libmad,libid3tag} instead of media-sound/mad
+  18 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Nothing better than an ebuild that works.
 
 *evidence-0.9.6.20030629_pre1 (30 Jun 2003)
 
