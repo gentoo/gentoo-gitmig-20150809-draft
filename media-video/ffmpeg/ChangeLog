@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.32 2004/03/30 18:51:55 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.33 2004/06/05 14:05:01 tester Exp $
+
+  05 Jun 2004; <tester@gentoo.org> ffmpeg-0.4.8.20040322.ebuild:
+  No longer available from SRC_URI, changed the keywords to -*
 
   30 Mar 2004; Sven Blumenstein <bazik@gentoo.org>
   ffmpeg-0.4.8.20040322.ebuild:
