@@ -1,12 +1,22 @@
-MD5 37b75295331d432714d53661d4b76cb8 ChangeLog 3356
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6cc8378baaccbc0215c7ac694ab1710b ChangeLog 3459
+MD5 5485baa1bc3f13cec95fb5c402b0fb1b gst-plugins-oss-0.8.5.ebuild 402
+MD5 0a69f756d47b048c598c6dd28544a681 gst-plugins-oss-0.8.3.ebuild 398
 MD5 2f8a277f693c64e9acbf6eed4f18ee07 gst-plugins-oss-0.6.4.ebuild 338
+MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 bc22283a3ea2a1ff1dff52ce347804f2 gst-plugins-oss-0.8.2.ebuild 397
 MD5 5249cedb709c4c6f4ac64f9786da4892 gst-plugins-oss-0.8.1.ebuild 391
-MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 0a69f756d47b048c598c6dd28544a681 gst-plugins-oss-0.8.3.ebuild 398
-MD5 18089c798fb2ff7c5170ef9b812f355f gst-plugins-oss-0.8.5.ebuild 405
-MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-oss-0.6.4 71
-MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-oss-0.8.3 71
 MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-oss-0.8.1 71
+MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-oss-0.6.4 71
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-oss-0.8.2 71
+MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-oss-0.8.3 71
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-oss-0.8.5 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBl+wQugEuf3OQ0akRAl5aAJ9yE2mom8WwVt/DYOboC4AIRnqlPACfWRDW
+nDYwRvtRs/OI4boiIRIIU1g=
+=cQOs
+-----END PGP SIGNATURE-----
