@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-image
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.8 2003/09/09 20:29:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.9 2003/09/15 08:57:57 msterret Exp $
+
+  15 Sep 2003; Michael Sterrett <msterret@gentoo.org> sdl-image-1.2.3.ebuild:
+  mark stable for x86
 
 *sdl-image-1.2.3 (09 Sep 2003)
 
