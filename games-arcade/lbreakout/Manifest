@@ -1,4 +1,4 @@
-MD5 a081495892b7b316d254bf2ee43bed6b files/digest-lbreakout-010315 68
-MD5 6e4cd615d6ed14c78657c526c55d88b3 lbreakout-010315.ebuild 752
-MD5 229035731ee6fdd87d412aeed7a76bc3 ChangeLog 930
+MD5 6697ca19a732e6dfb96ff65abb62106a ChangeLog 1020
+MD5 ff3b68b8b668e6c519158efa439fa604 lbreakout-010315.ebuild 758
 MD5 b244cf1c41a78cacb62296d573935c07 metadata.xml 245
+MD5 a081495892b7b316d254bf2ee43bed6b files/digest-lbreakout-010315 68
