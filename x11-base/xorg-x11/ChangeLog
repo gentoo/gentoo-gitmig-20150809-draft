@@ -1,6 +1,18 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.201 2004/11/05 01:24:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.202 2004/11/05 07:53:07 spyderous Exp $
+
+  04 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r2.ebuild:
+  Add 'minimal' USE flag. It turns off the build of most clients and all
+  fonts, as well as a number of drivers I guessed would be mostly unused by
+  people wanting this functionality (video drivers turned off only for x86).
+  It also stops installing the man pages and docs, as well as Xvfb and Xnest.
+  Finally, it doesn't install Gentoo custom cursors. On a minimal test build
+  with USE="-3dfx +3dnow -bitmap-fonts -cjk -debug -dlloader -dmx -doc
+  -font-server -hardened -insecure-drivers -ipv6 +minimal +mmx -nls -opengl
+  -pam -sdk +sse -static -truetype-fonts -type1-fonts -xprint -xv", the total
+  installation was 28M.
 
   04 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:

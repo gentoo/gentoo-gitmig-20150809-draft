@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.55 2004/11/05 01:24:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.56 2004/11/05 07:53:07 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -35,8 +35,8 @@ RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
 IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc font-server hardened
-	insecure-drivers ipv6 mmx nls opengl pam sdk sse static truetype-fonts
-	type1-fonts uclibc xprint xv"
+	insecure-drivers ipv6 minimal mmx nls opengl pam sdk sse static
+	truetype-fonts type1-fonts uclibc xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.6"
@@ -64,10 +64,10 @@ GENTOO_FILES="http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-files-
 	http://dev.gentoo.org/~cyfred/distfiles/${P}-files-${FILES_VER}.tar.bz2
 	mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2"
 
-SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
-	font-server? ( http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 )
-	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
-	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
+SRC_URI="!minimal? ( mirror://gentoo/eurofonts-X11.tar.bz2 )
+	!minimal? ( font-server? ( http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 ) )
+	!minimal? ( mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2 )
+	!minimal? ( nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 ) )
 	${GENTOO_FILES}
 	${X_DRIVERS}
 	${X_PATCHES}
@@ -199,21 +199,23 @@ src_unpack() {
 		unpack ${P}-patches-${PATCH_VER}.tar.bz2 > /dev/null
 	eend 0
 
-	# Unpack TaD's gentoo cursors
-	ebegin "Unpacking Gentoo cursors"
-		unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2 > /dev/null
-	eend 0
+	if ! use minimal; then
+		# Unpack TaD's gentoo cursors
+		ebegin "Unpacking Gentoo cursors"
+			unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2 > /dev/null
+		eend 0
 
-	# Unpack extra fonts stuff from Mandrake
-	ebegin "Unpacking fonts"
-		if use nls; then
-			unpack gemini-koi8-u.tar.bz2 > /dev/null
-		fi
-		unpack eurofonts-X11.tar.bz2 > /dev/null
-		if use font-server; then
-			unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
-		fi
-	eend 0
+		# Unpack extra fonts stuff from Mandrake
+		ebegin "Unpacking fonts"
+			if use nls; then
+				unpack gemini-koi8-u.tar.bz2 > /dev/null
+			fi
+			unpack eurofonts-X11.tar.bz2 > /dev/null
+			if use font-server; then
+				unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
+			fi
+		eend 0
+	fi
 
 	# Remove bum encoding
 	rm -f ${WORKDIR}/usr/share/fonts/encodings/urdunaqsh-0.enc
@@ -284,7 +286,9 @@ src_install() {
 	zap_host_def_cflags
 
 	# EURO support
-	add_euro_support
+	if ! use minimal; then
+		add_euro_support
+	fi
 
 	setup_standard_symlinks
 
@@ -293,8 +297,10 @@ src_install() {
 	fi
 
 	# Some critical directories
-	keepdir /var/lib/xdm
-	dosym ../../../var/lib/xdm /etc/X11/xdm/authdir
+	if ! use minimal; then
+		keepdir /var/lib/xdm
+		dosym ../../../var/lib/xdm /etc/X11/xdm/authdir
+	fi
 
 	# .la files for libtool support
 	insinto /usr/$(get_libdir)
@@ -304,16 +310,20 @@ src_install() {
 	dosym ../../usr/X11R6/bin/Xorg /etc/X11/X
 
 	# Fix perms
-	fperms 755 /usr/$(get_libdir)/xkb/geometry/sgi /usr/X11R6/bin/dga
+	if ! use minimal; then
+		fperms 755 /usr/$(get_libdir)/xkb/geometry/sgi /usr/X11R6/bin/dga
+	fi
 
 	compose_files_setup
 
-	if use font-server; then
-		encode_xfsft_files
-	fi
+	if ! use minimal; then
+		if use font-server; then
+			encode_xfsft_files
+		fi
 
-	if use nls; then
-		setup_koi8_fonts
+		if use nls; then
+			setup_koi8_fonts
+		fi
 	fi
 
 	etc_files_install
@@ -331,7 +341,9 @@ src_install() {
 
 	strip_execs
 
-	install_extra_cursors
+	if ! use minimal; then
+		install_extra_cursors
+	fi
 
 	# Remove xterm app-defaults, since we don't install xterm
 #	rm ${D}/etc/X11/app-defaults/{UXTerm,XTerm,XTerm-color}
@@ -353,6 +365,10 @@ src_install() {
 
 	setup_config_files
 
+	# Woohoo, another 772K
+	if use minimal; then
+		rm -rf ${D}/usr/share/doc
+	fi
 }
 
 pkg_preinst() {
@@ -399,7 +415,9 @@ pkg_postinst() {
 	if [ "${ROOT}" = "/" ]; then
 		umask 022
 
-		font_setup
+		if ! use minimal; then
+			font_setup
+		fi
 
 		if use opengl; then
 			switch_opengl_implem
@@ -833,6 +851,26 @@ host_def_setup() {
 
 		use_build ipv6 BuildIPv6
 
+		if use minimal; then
+			echo "#define BuildClients NO" >> ${HOSTCONF}
+			echo "#define BuildFonts NO" >> ${HOSTCONF}
+			echo "#define XnestServer NO" >> ${HOSTCONF}
+			echo "#define XVirtualFramebufferServer NO" >> ${HOSTCONF}
+			echo "#define XInputDrivers mouse keyboard" >> ${HOSTCONF}
+			# Don't want to add to defaults for other archs, set above
+			if use x86; then
+				# Removed nsc
+				echo "#define i386Drivers i810" >> ${HOSTCONF}
+				# If you want more drivers built with minimal, file a bug
+				# -Donnie Berkholz <spyderous@gentoo.org>
+				# Removed glint, tga, s3, s3virge, rendition, neomagic, i740,
+				# cirrus, tseng, trident, chips, apm, ark, cyrix, siliconmotion
+				echo "#define XF86CardDrivers mga nv sis tdfx savage vmware \
+					GlideDriver i386Drivers ati DevelDrivers via vesa vga \
+					dummy XF86OSCardDrivers XF86ExtraCardDrivers" >> ${HOSTCONF}
+			fi
+		fi
+
 		# Ajax is the man for getting this going for us
 		echo "#define ProPoliceSupport YES" >> ${HOSTCONF}
 
@@ -910,10 +948,12 @@ install_everything() {
 		make install.sdk DESTDIR=${D} || die "sdk install failed"
 	fi
 
-	einfo "Installing man pages..."
-	make install.man DESTDIR=${D} || die "man page install failed"
-	einfo "Compressing man pages..."
-	prepman /usr
+	if ! use minimal; then
+		einfo "Installing man pages..."
+		make install.man DESTDIR=${D} || die "man page install failed"
+		einfo "Compressing man pages..."
+		prepman /usr
+	fi
 
 	if use nls; then
 		cd ${S}/nls
@@ -933,7 +973,9 @@ backward_compat_setup() {
 		dosym ../../../share/fonts/${G_FONTDIR} /usr/$(get_libdir)/X11/fonts/${G_FONTDIR}
 	done
 
-	dosym ../share/man /usr/X11R6/man
+	if ! use minimal; then
+		dosym ../share/man /usr/X11R6/man
+	fi
 	# Have the top-level lib symlink made first, so real dirs don't get created
 	dosym ../lib /usr/X11R6/lib
 	dosym ../../../share/doc/${PF} /usr/X11R6/$(get_libdir)/X11/doc
@@ -1070,8 +1112,12 @@ etc_files_install() {
 	doins ${FILES_DIR}/10xorg
 	insinto /etc/X11/xinit
 	doins ${FILES_DIR}/xinitrc
-	exeinto /etc/X11/xdm
-	doexe ${FILES_DIR}/Xsession ${FILES_DIR}/Xsetup_0
+	if ! use minimal; then
+		exeinto /etc/X11/xdm
+		doexe ${FILES_DIR}/Xsession ${FILES_DIR}/Xsetup_0
+		exeinto /etc/init.d
+		newexe ${FILES_DIR}/xdm.start xdm
+	fi
 	if use font-server; then
 		insinto /etc/X11/fs
 		newins ${FILES_DIR}/xfs.config config
@@ -1082,8 +1128,6 @@ etc_files_install() {
 		# Need to fix console permissions first
 		newins ${FILES_DIR}/xserver.pamd xserver
 	fi
-	exeinto /etc/init.d
-	newexe ${FILES_DIR}/xdm.start xdm
 	if use font-server; then
 		newexe ${FILES_DIR}/xfs.start xfs
 		insinto /etc/conf.d
