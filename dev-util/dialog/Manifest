@@ -1,6 +1,15 @@
-MD5 00e84fe8b53974395abe5fe698e79e09 ChangeLog 6926
-MD5 8b270a69e421361e6df1c60e6ae15027 dialog-0.9_beta20031207.ebuild 906
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 893c90cde3124fc96c788b101bcb86bc ChangeLog 7234
+MD5 5e1e9cfd247fcbfc4519de66ad80abe6 dialog-1.0.20050206.ebuild 1032
 MD5 514830267b8932ec3361e14533de640d dialog-1.0.20040731.ebuild 1016
-MD5 1e7641e23dea50b29f0312d4abd93eb8 files/dialog-0.9_beta20031207-estonian-sed.patch 6788
-MD5 c2ad549d2de7b0e019f59bee6e282145 files/digest-dialog-0.9_beta20031207 77
+MD5 0fb57e331af29543a80113129d8d6585 files/digest-dialog-1.0.20050206 76
 MD5 feeb190a733e925f05a4bda9908b79e9 files/digest-dialog-1.0.20040731 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDJFnmdTrptrqvGERAj38AJ9b/p/rH9CZ2eucCH25X/EmUA/LjwCgjMU6
+QhOvzG9Xk7COtgncLzzH4Y0=
+=E1mS
+-----END PGP SIGNATURE-----

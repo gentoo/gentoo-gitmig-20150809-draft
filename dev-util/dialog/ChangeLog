@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.47 2005/01/22 15:02:48 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.48 2005/02/11 11:05:05 dragonheart Exp $
+
+*dialog-1.0.20050206 (11 Feb 2005)
+
+  11 Feb 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/dialog-0.9_beta20031207-estonian-sed.patch,
+  -dialog-0.9_beta20031207.ebuild, +dialog-1.0.20050206.ebuild:
+  Version bump and cleanout - bug #81490. Thanks Sylvain BERTRAND
+  <sylvain.bertrand@gmail.com>
 
   22 Jan 2005; <gongloo@gentoo.org> dialog-1.0.20040731.ebuild:
   Stable on ppc-macos.
