@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.0.4.ebuild,v 1.2 2004/06/24 22:28:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.0.4.ebuild,v 1.3 2004/08/14 15:45:30 usata Exp $
 
 DESCRIPTION="MaCoPiX (Mascot Constructive Pilot for X) is a desktop mascot application on UNIX / X Window system."
 HOMEPAGE="http://kurumi.sakura.ne.jp/~chimari/macopix/index-e.html"
@@ -20,7 +20,7 @@ SRC_URI="${SRC_URI} ${BASE_URI}/${PN}-mascot-marimite-ja-1.20.tar.gz"
 # programme itself is GPL-2, and mascots are free-noncomm
 LICENSE="GPL-2 free-noncomm"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 IUSE="gtk2 nls"
 
