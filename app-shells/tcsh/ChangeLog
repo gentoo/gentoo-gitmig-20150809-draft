@@ -1,6 +1,17 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.26 2004/09/25 06:14:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.27 2004/11/22 11:48:16 dragonheart Exp $
+
+*tcsh-6.13 (22 Nov 2004)
+
+  22 Nov 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  -files/csh.cshrc, -files/csh.login, -files/tcsh-6.10-tc.os.h-gentoo.diff,
+  -files/tcsh-6.11-tc.os.h-gentoo.diff, -files/tcsh-complete,
+  -tcsh-6.11.ebuild, -tcsh-6.12-r2.ebuild, tcsh-6.12-r3.ebuild,
+  +tcsh-6.13.ebuild:
+  6.12 no longer on SRC_URI. version bumped to 6.13. Verfied patches are
+  included. Bug #71968 by Michael Labhard <m.labhard@comcast.net> refers. Old
+  file cleanout too.
 
   25 Sep 2004; Joshua Kinard <kumba@gentoo.org> tcsh-6.12-r3.ebuild:
   Marked stable on mips.
