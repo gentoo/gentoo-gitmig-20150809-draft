@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.15 2003/03/04 20:46:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.16 2003/03/04 23:07:28 latexer Exp $
+
+  4 Mar 2003; Peter Johanson <latexer@gentoo.org> linux-wlan-ng-0.2.0.ebuild :
+  Absolute paths for cardmgr and cut. this should solve it once and forall.
 
 *linux-wlan-ng-0.2.0 (4 Mar 2003)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0.ebuild,v 1.1 2003/03/04 20:46:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0.ebuild,v 1.2 2003/03/04 23:07:28 latexer Exp $
 
 IUSE="apm build nocardbus pcmcia pnp trusted usb"
 
-PCMCIA_VERSION="`$(which cardmgr) -V 2>&1 | $(which cut) -f3 -d' '`"
+PCMCIA_VERSION="`/sbin/cardmgr -V 2>&1 | /usr/bin/cut -f3 -d' '`"
 PCMCIA_CS="pcmcia-cs-${PCMCIA_VERSION}"
 PCMCIA_DIR="${WORKDIR}/${PCMCIA_CS}"
 
