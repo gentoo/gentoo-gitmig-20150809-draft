@@ -1,10 +1,13 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.38 2003/10/31 15:48:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.39 2003/11/01 22:30:37 drobbins Exp $
 
+  01 Nov 2003; Daniel Robbins <drobbins@gentoo.org> xine-ui-0.9.22.ebuild:
+  Added fix to preserve CFLAGS set by user on x86, rather than force (somewhat
+  outdated/non-optimal) hard-coded CFLAGS.
+  
   31 Oct 2003; Martin Holzer <mholzer@gentoo.org> xine-ui-0.9.21.ebuild,
-  xine-ui-0.9.22.ebuild:
-  doesn't work without aalib.
+  xine-ui-0.9.22.ebuild: doesn't work without aalib.
 
   22 Oct 2003; Martin Holzer <mholzer@gentoo.org> xine-ui-0.9.13.ebuild,
   xine-ui-0.9.21.ebuild, xine-ui-0.9.22.ebuild:

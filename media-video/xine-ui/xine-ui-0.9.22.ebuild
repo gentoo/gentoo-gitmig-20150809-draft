@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.22.ebuild,v 1.6 2003/10/31 15:48:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.22.ebuild,v 1.7 2003/11/01 22:30:37 drobbins Exp $
 
 DESCRIPTION="Skinned front end for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -31,7 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	#patch -p1 < ${FILESDIR}/xine-ui-configure.patch || die "patch failed"
+	patch -p1 < ${FILESDIR}/preserve-CFLAGS.diff || die "patch failed"
 
 	use directfb || ( \
 		sed -i "s:dfb::" src/Makefile.in
