@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lexer/cl-lexer-1.ebuild,v 1.6 2004/06/24 23:45:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lexer/cl-lexer-1.ebuild,v 1.7 2004/07/14 15:54:21 agriffis Exp $
 
 inherit common-lisp eutils
 
@@ -21,8 +21,6 @@ DEPEND="dev-lisp/common-lisp-controller
 	dev-lisp/cl-regex"
 
 CLPACKAGE=lexer
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
