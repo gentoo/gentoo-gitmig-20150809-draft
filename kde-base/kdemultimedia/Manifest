@@ -2,8 +2,8 @@ MD5 c4e2811488f5b7057830a07c7372764e kdemultimedia-3.1.5.ebuild 2689
 MD5 f357275645a4a8346ee79dd77d66b222 kdemultimedia-3.2.3.ebuild 1544
 MD5 78a5d756b72f651a8038451801e9bee6 kdemultimedia-3.2.0.ebuild 2255
 MD5 cb93ab2aa47f5cfa2918e4d596a3569a kdemultimedia-3.2.2-r1.ebuild 1460
-MD5 bd8ecd6aa78a16d12303497386c7ea2a kdemultimedia-3.3.0.ebuild 1765
-MD5 4af5e9e054cccc6fd754236cafcced81 ChangeLog 18607
+MD5 c47df37fa2106de4a44b4c5ff655caf6 kdemultimedia-3.3.0.ebuild 1790
+MD5 ebc9ebe161796f2feac7907823a76df6 ChangeLog 18724
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 a39413062132d248ceae0b20ed262e79 files/flac-patch.diff 450
 MD5 373aaabfcb29c89281c6880b2a784c2a files/digest-kdemultimedia-3.2.2-r1 73
