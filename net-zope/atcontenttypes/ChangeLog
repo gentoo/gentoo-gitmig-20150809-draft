@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/atcontenttypes
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/atcontenttypes/ChangeLog,v 1.1 2005/03/26 02:11:34 radek Exp $
+
+*atcontenttypes-0.2.0 (26 Mar 2005)
+
+  26 Mar 2005; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
+  +atcontenttypes-0.2.0.ebuild:
+  initial release based on Kai Schlüter work (#85755).
+
