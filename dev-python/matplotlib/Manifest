@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c68def4f7fe72c5c921dcf0b20954c8d ChangeLog 359
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 d55461a29fc353ff2a9ba538a04cd6c7 matplotlib-0.64.ebuild 1012
+MD5 cd423139ef7e6085b17b6a145259e4c3 files/digest-matplotlib-0.64 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsvw/ugEuf3OQ0akRAiheAJoC4upoZhRT2bPNErTSOT2v0E5j+ACcC8Tx
+dq/rkKmNUFXgswuKFSwUMRY=
+=HsCg
+-----END PGP SIGNATURE-----

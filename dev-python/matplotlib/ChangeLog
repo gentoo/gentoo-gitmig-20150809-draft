@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/matplotlib
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.1 2004/12/05 12:16:30 kloeri Exp $
+
+  05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> :
+  Initial import, ebuild by Fernando A. Serboncini <fserb@terra.com.br> in bug
+  32895.
+
