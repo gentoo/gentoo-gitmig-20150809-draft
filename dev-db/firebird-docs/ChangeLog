@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/firebird-docs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird-docs/ChangeLog,v 1.5 2003/04/16 11:22:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird-docs/ChangeLog,v 1.6 2003/09/21 22:27:14 dholm Exp $
+
+  22 Sep 2003; David Holm <dholm@gentoo.org> firebird-docs-1.0.ebuild:
+  Added to ~ppc.
 
 *firebird-docs-1.0 (20 Mar 2002)
 
