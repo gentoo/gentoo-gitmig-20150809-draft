@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.5.2.ebuild,v 1.3 2004/01/19 04:52:32 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.5.2.ebuild,v 1.4 2004/06/03 01:51:47 agriffis Exp $
 
 inherit java-pkg eutils
 
@@ -24,7 +24,7 @@ src_compile() {
 	CLASSPATH=$CLASSPATH:`pwd`/bin/xercesImpl.jar:`pwd`/bin/bsf.jar:`pwd`/src\
 	ant jar ${myc} || die "build failed"
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		if [ `java-config --java-version 2>&1 | grep "1\.4\."  | wc -l` -lt 1 ]  ; then
 			ant javadocs || die "Build Javadocs Failed"
 		else
@@ -40,7 +40,7 @@ src_install () {
 	java-pkg_dojar build/*.jar
 	dohtml readme.html
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		dodir /usr/share/doc/${P}
 		dodoc TODO STATUS README LICENSE ISSUES
 		dohtml -r build/docs/*
@@ -48,7 +48,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		einfo "                                                          "
 		einfo " API Documentation is in /usr/share/doc/${PN}-${PV}.      "
 		einfo "                                                          "
