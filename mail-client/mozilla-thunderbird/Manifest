@@ -3,7 +3,7 @@ MD5 8df9c881865e6daae60a81ebf5c86515 mozilla-thunderbird-0.6-r1.ebuild 8171
 MD5 fe7e73947f7cb03aced08404acd6cac9 mozilla-thunderbird-0.6.ebuild 7894
 MD5 72cdf4b68ad1d964be5ba1a52b3a34f2 mozilla-thunderbird-0.5.ebuild 6288
 MD5 384de207a85049304ceb08370d1a05fb mozilla-thunderbird-0.5-r1.ebuild 6453
-MD5 9a0ce1364987f831ec0f15f048e39a38 ChangeLog 6634
+MD5 d3814591cd180541cbef0bbbb5fca992 ChangeLog 6798
 MD5 1adb062c6ed356e75ec53d1e35c9d350 files/MozillaThunderbird 302
 MD5 157a0b64fbfa81bff58ed90c9590ae79 files/digest-mozilla-thunderbird-0.5 205
 MD5 f981a963a4840e1880440f1f77ea54b2 files/digest-mozilla-thunderbird-0.5-r1 205
@@ -13,3 +13,5 @@ MD5 f0e9adeb0454377ce019e8969e644efb files/mozilla-thunderbird-amd64.patch 35052
 MD5 1adb062c6ed356e75ec53d1e35c9d350 files/thunderbird 302
 MD5 e30291e992d71bccac5937cca9696da0 files/enigmail/Makefile-enigmail 1560
 MD5 68a7617a6d3f0f37904cd6aaa90fe1ba files/enigmail/Makefile-ipc 1596
+MD5 bb431eebb28f85d1c07957846fd3e4d2 files/icon/mozillathunderbird.desktop 148
+MD5 04115f0e204444eac76a092a63c89027 files/icon/thunderbird-icon.png 6499

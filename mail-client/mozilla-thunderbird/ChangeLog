@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.6 2004/06/09 18:35:51 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.7 2004/06/10 06:03:59 brad Exp $
+
+  10 Jun 2004; Brad Laue <brad@gentoo.org>
+  +files/icon/mozillathunderbird.desktop, +files/icon/thunderbird-icon.png:
+  Return the icons to their rightful place.
 
   09 Jun 2004; Brad Laue <brad@gentoo.org> mozilla-thunderbird-0.5-r1.ebuild,
   mozilla-thunderbird-0.5.ebuild, mozilla-thunderbird-0.6-r1.ebuild,
