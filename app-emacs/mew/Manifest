@@ -3,19 +3,19 @@ Hash: SHA1
 
 MD5 b8a5a05dc587cbca65b831dedcd4488c metadata.xml 424
 MD5 a3f0650799251293f9376feba3f99ca1 mew-2.3-r1.ebuild 1032
+MD5 bd228cce795271b0dde445616b14f4bb mew-4.1.ebuild 902
 MD5 6a9f5d8ec3dae78e159642492ae114d8 mew-3.3.ebuild 1145
-MD5 0df45a7856b895da99a3e22055a3eb35 ChangeLog 4122
-MD5 5b121f13dd22f1bf0c4c6d47ce228b9f mew-4.1_rc3.ebuild 973
+MD5 19d55df454d4ac61c8b00bd2c9b90a2a ChangeLog 4254
+MD5 ca3e822175d1e6350784c4aa0e28e57e files/digest-mew-4.1 59
 MD5 28ccf63b3de3b67fca74f72ce382fec4 files/digest-mew-3.3 59
 MD5 ce3d967439ce0410358389f065b7f8dd files/mew-smtp-2.3-gentoo.patch 632
 MD5 b01c67ed2c3e6adf6f0895d1c0097b27 files/50mew-gentoo.el 187
 MD5 be2f43b958a3f2ddfffc249ff48c9332 files/digest-mew-2.3-r1 59
-MD5 3ce4d0353b80a209d446e12365b33728 files/digest-mew-4.1_rc3 62
 MD5 dde1c4f5ab658fe3d1ea86164db3cc11 files/3.x/50mew-gentoo.el 246
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (Darwin)
 
-iD8DBQFBbo/6VWNWqTUmv+0RAs2FAJ4uq+B3pfCq9bWwynUNH+huTq8X9QCguBEK
-vqg9Cd7voYVCpY6ivRXTqkI=
-=bFAH
+iD8DBQFBdSYhVWNWqTUmv+0RAvGeAJ9oNmAiqmV6shktkeY+ESaPn5TALACeL4MD
+tzlVlhsvbD7zUXxmb2EWilQ=
+=57Ub
 -----END PGP SIGNATURE-----

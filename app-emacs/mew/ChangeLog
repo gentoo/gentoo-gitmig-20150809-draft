@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.27 2004/10/14 14:40:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.28 2004/10/19 14:34:43 usata Exp $
+
+*mew-4.1 (19 Oct 2004)
+
+  19 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +mew-4.1.ebuild,
+  -mew-4.1_rc3.ebuild:
+  Version bumped.
 
 *mew-4.1_rc3 (14 Oct 2004)
 
