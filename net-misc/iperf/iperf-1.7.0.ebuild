@@ -1,16 +1,16 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/iperf-1.7.0.ebuild,v 1.2 2003/09/05 22:13:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/iperf-1.7.0.ebuild,v 1.3 2004/04/19 06:42:07 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Iperf is a tool to measure IP bandwidth using UDP or TCP. It allows for tuning various parameters, and reports bandwidth, delay jitter, and packet loss. It supports IPv6 and multicast."
-SRC_URI="http://dast.nlanr.net/Projects/Iperf/${P}-source.tar.gz"
+DESCRIPTION="tool to measure IP bandwidth using UDP or TCP"
 HOMEPAGE="http://dast.nlanr.net/Projects/Iperf"
-DEPEND="virtual/glibc"
+SRC_URI="http://dast.nlanr.net/Projects/Iperf/${P}-source.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+SLOT="0"
+KEYWORDS="x86"
+
+DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
@@ -25,7 +25,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make INSTALL_DIR=${D}/usr/bin install || die
 	dodoc INSTALL README VERSION
 }
