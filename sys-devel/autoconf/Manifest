@@ -3,7 +3,7 @@ MD5 2935e4080b2dd9029ead1cada80f9a00 autoconf-2.13-r2.ebuild 1007
 MD5 d6d9ed62863282087f8356a4462cf516 autoconf-2.53a.ebuild 2796
 MD5 e9ed1e0a8993a9abfce72764b21cce9b autoconf-2.54-r1.ebuild 3233
 MD5 7ae7b33d5cc7ef917b37860532c2b2df autoconf-2.54.ebuild 3231
-MD5 92a7d9c7a9e7ea49fd8e4f97405dbf2c autoconf-2.57-r1.ebuild 3231
+MD5 f8baf4743be82df808b9f0af136064f7 autoconf-2.57-r1.ebuild 3239
 MD5 fad4c16dcdb46d1e017ed55f5b902e11 autoconf-2.57.ebuild 3234
 MD5 28795f22763ef0683a8a1e72e8dd4646 files/ac-wrapper.pl 2133
 MD5 12f8fb67eaf50f87ed7825356503e8d7 files/autoconf-2.13-configure-gentoo.diff 958

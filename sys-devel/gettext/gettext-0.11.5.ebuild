@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.5.ebuild,v 1.8 2003/03/31 20:51:58 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.5.ebuild,v 1.9 2003/06/22 05:55:23 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa mips"
+KEYWORDS="amd64 x86 ppc sparc alpha hppa mips"
 
 src_unpack() {
 	unpack ${A}
