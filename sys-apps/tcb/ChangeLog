@@ -2,6 +2,13 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
 
+*tcb-0.9.8.7 (08 Jan 2004)
+
+  08 Jan 2004; Joshua Brindle <method@gentoo.org> tcb-0.9.7.4.ebuild,
+  tcb-0.9.7.4.ebuild, tcb-0.9.8.3.ebuild, tcb-0.9.8.3.ebuild,
+  tcb-0.9.8.7.ebuild:
+  This one should actually work, and is an upstream bump also
+
 *tcb-0.9.8.3 (18 Dec 2002)
 
   18 Dec 2002; Joachim Blaabjerg <styx@gentoo.org> tcb-0.9.8.3.ebuild :
