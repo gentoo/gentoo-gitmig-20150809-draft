@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-print
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.13 2002/12/13 10:56:53 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.14 2003/02/07 14:45:17 agriffis Exp $
+
+  06 Feb 2003; Aron Griffis <agriffis@gentoo.org> gnome-print-0.35-r3.ebuild :
+  Add alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
