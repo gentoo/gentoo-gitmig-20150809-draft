@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c153f2414074436b47c621fb9da54fff doom3-1.1.1282.ebuild 2524
-MD5 7c472e3d120507627e2f805325e2a9e2 ChangeLog 654
+MD5 503be1620ca8f880a5a9ec462ec0eb69 doom3-1.1.1282.ebuild 2698
+MD5 927f05371870bb7f3139bcc15a6fd025 ChangeLog 777
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 615c25dcc4ae6f839477113ecc33b0b8 files/digest-doom3-1.1.1282 74
 MD5 86cf7753a0c72772dcfd90b35765a3d1 files/doom3 382
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBY+3NHTu7gpaalycRAidHAJ0UvNq8fzBUydOcJmPyLlWOdLlb8gCfW2x4
-gfxEniOrUZ/fzo/V+sNxaZU=
-=68x7
------END PGP SIGNATURE-----
+MD5 615c25dcc4ae6f839477113ecc33b0b8 files/digest-doom3-1.1.1282 74
