@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/saru/saru-0.0.1.ebuild,v 1.3 2004/09/01 19:58:50 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/saru/saru-0.0.1.ebuild,v 1.4 2004/09/01 20:08:04 tantive Exp $
 
 inherit eutils
 
@@ -76,7 +76,7 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "upgrading module dependencies ... "
-	/sbin/depmod -a -F /lib/modules/${KV}/build/System.map
+	/sbin/depmod -a -F ${ROOT}/lib/modules/${KV}/build/System.map
 	einfo "... done"
 	einfo
 	einfo "Please remember to re-emerge saru when you upgrade your kernel!"
