@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.13 2003/04/28 01:19:01 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.14 2003/05/17 18:20:51 liquidx Exp $
+
+  17 May 2003; Alastair Tse <liquidx@gentoo.org> guile-1.5.4.ebuild:
+  masking 1.5.x
 
 *guile-1.6.4 (28 Apr 2003)
 
