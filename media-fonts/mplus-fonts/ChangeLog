@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/mplus-fonts
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/ChangeLog,v 1.6 2003/08/27 22:02:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/ChangeLog,v 1.7 2003/09/10 16:45:44 usata Exp $
+
+*mplus-fonts-2.0.6 (11 Sep 2003)
+
+  11 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> mplus-fonts-2.0.6.ebuild:
+  Version bumped.  Ebuild submitted by Hattya <hattya@inter7.jp> in
+  Bug #28360
 
 *mplus-fonts-2.0.5 (20 Aug 2003)
 
