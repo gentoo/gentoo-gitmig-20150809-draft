@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.98 2005/02/09 21:07:14 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.99 2005/02/11 01:17:36 eradicator Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -251,32 +251,38 @@ install_headers() {
 	dodir ${ddir}/linux
 	cp -ax ${S}/include/linux/* ${D}/${ddir}/linux
 	rm -rf ${D}/${ddir}/linux/modules
-	dodir ${ddir}/asm
 
-	if [[ $(tc-arch-kernel) == "sparc64" ]]; then
-		rm -Rf ${D}/${ddir}/asm
-		dodir ${ddir}/asm-sparc
-		dodir ${ddir}/asm-sparc64
-		cp -ax ${S}/include/asm-sparc/* ${D}/usr/include/asm-sparc
-		cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
-		#generate_sparc_asm ${D}/usr/include
-		create_ml_includes /usr/include/asm __sparc__:/usr/include/asm-sparc __sparc64__:/usr/include/asm-sparc64
-	elif [[ $(tc-arch-kernel) == "x86_64" ]]; then
-		rm -Rf ${D}/${ddir}/asm
-		dodir ${ddir}/asm-i386
-		dodir ${ddir}/asm-x86_64
-		cp -ax ${S}/include/asm-i386/* ${D}/usr/include/asm-i386
-		cp -ax ${S}/include/asm-x86_64/* ${D}/usr/include/asm-x86_64
-		#/bin/sh ${FILESDIR}/generate-asm-amd64 ${D}/usr/include
-		create_ml_includes /usr/include/asm __i386__:/usr/include/asm-i386 __x86_64__:/usr/include/asm-x86_64
-	else
-		cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
-	fi
+	# Handle multilib headers
+	case $(tc-arch-kernel) in
+		sparc64)
+			dodir ${ddir}/asm-sparc
+			cp -ax ${S}/include/asm-sparc/* ${D}/${ddir}/asm-sparc
+
+			dodir ${ddir}/asm-sparc64
+			cp -ax ${S}/include/asm-sparc64/* ${D}/${ddir}/asm-sparc64
+
+			create_ml_includes ${ddir}/asm __sparc__:${ddir}/asm-sparc __sparc64__:${ddir}/asm-sparc64
+			;;
+		x86_64)
+			dodir ${ddir}/asm-i386
+			cp -ax ${S}/include/asm-i386/* ${D}/${ddir}/asm-i386
+
+			dodir ${ddir}/asm-x86_64
+			cp -ax ${S}/include/asm-x86_64/* ${D}/${ddir}/asm-x86_64
+
+			create_ml_includes ${ddir}/asm __i386__:${ddir}/asm-i386 __x86_64__:${ddir}/asm-x86_64
+			;;
+		*)
+			dodir ${ddir}/asm
+			cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
+			;;
+	esac
 
 	if kernel_is 2 6; then
 		dodir ${ddir}/asm-generic
 		cp -ax ${S}/include/asm-generic/* ${D}/${ddir}/asm-generic
 	fi
+
 	cd ${OLDPWD}
 }
 
