@@ -1,5 +1,5 @@
 MD5 74aa9d487848ec2ed0a1f3178a2127dd ChangeLog 2491
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 2762d16733923d41cc76a5f0a3422d88 ncompress-4.2.4-r1.ebuild 1082
+MD5 6681ee7f01923a2fcbaa33f37437eebc ncompress-4.2.4-r1.ebuild 1085
 MD5 e6539b304d089dd57b63d364379500b7 files/ncompress-gcc34.patch 915
 MD5 3e1ac2326e9d786e9ab4af766c9e1313 files/digest-ncompress-4.2.4-r1 135
