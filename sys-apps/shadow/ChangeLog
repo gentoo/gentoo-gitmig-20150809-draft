@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.2 2002/02/21 03:21:26 chouser Exp $
+
+*shadow-20001016-r7 (20 Feb 2002)
+
+  20 Feb 2002; Chris Houser <chouser@gentoo.org> shadow-20001016-r7.ebuild
+  files/digest-shadow-20001016-r7 ChangeLog :
+
+  Changed man page installation.  More man pages are now included, and all
+  should be in English (instead of the occasional Polish page).  This closes
+  bug #594.
 
 *shadow-20001016-r6 (1 Feb 2002)
 
