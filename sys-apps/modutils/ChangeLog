@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.4 2002/06/24 02:58:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.5 2002/07/06 22:38:06 azarah Exp $
+
+*modutils-2.4.16-r2 (7 Jul 2002)
+
+  7 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Resolve bug #4619, by also installing insmod.static.
 
 *modutils-2.4.16-r2 (24 Jun 2002)
 
