@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.3 2002/03/18 13:53:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.4 2002/03/21 04:46:34 seemant Exp $
+
+*sh-utils-2.0.11-r4 (20 Mar 2002)
+
+  20 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sh-utils-2.0.11-r4.ebuild :
+
+  Found an updated patch for processor name in uname output from digiwano in
+  #fluxbox and LKML.  New patch in ${FILESDIR} combines this and the rant-patch.
+  Now this should compile cleanly with "-* build" as well as normally.
 
 *sh-utils-2.0.11-r3 (18 Mar 2002)
 

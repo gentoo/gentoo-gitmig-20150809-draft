@@ -1,5 +1,6 @@
---- sh-utils.texi	Mon Mar 18 04:50:39 2002
-+++ sh-utils.texi.new	Mon Mar 18 04:56:40 2002
+diff -ur ./doc/sh-utils.texi ./doc/sh-utils.texi.new
+--- ./doc/sh-utils.texi	Wed Oct 18 13:42:43 2000
++++ ./doc/sh-utils.texi.new	Wed Mar 20 20:15:13 2002
 @@ -47,7 +47,6 @@
  * seq: (sh-utils)seq invocation.                Print numeric sequences
  * sleep: (sh-utils)sleep invocation.            Delay for a specified time.
@@ -52,3 +53,63 @@
  @node Delaying
  @chapter Delaying
  
+diff -ur ./src/uname.c ./src/uname.c,new
+--- ./src/uname.c	Sat May  6 07:17:53 2000
++++ ./src/uname.c.new	Wed Mar 20 20:15:43 2002
+@@ -48,6 +48,7 @@
+ #define AUTHORS "David MacKenzie"
+ 
+ static void print_element PARAMS ((unsigned int mask, char *element));
++void __sysinfo_processor_type(char*);
+ 
+ /* Values that are bitwise or'd into `toprint'. */
+ /* Operating system name. */
+@@ -118,7 +119,7 @@
+ {
+   struct utsname name;
+   int c;
+-  char processor[256];
++  char processor[BUFSIZ];
+ 
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+@@ -183,12 +184,7 @@
+   if (uname (&name) == -1)
+     error (1, errno, _("cannot get system name"));
+ 
+-#if defined (HAVE_SYSINFO) && defined (SI_ARCHITECTURE)
+-  if (sysinfo (SI_ARCHITECTURE, processor, sizeof (processor)) == -1)
+-    error (1, errno, _("cannot get processor type"));
+-#else
+-  strcpy (processor, "unknown");
+-#endif
++  __sysinfo_processor_type(processor);
+ 
+   print_element (PRINT_SYSNAME, name.sysname);
+   print_element (PRINT_NODENAME, name.nodename);
+@@ -213,3 +209,25 @@
+       printf ("%s%c", element, toprint ? ' ' : '\n');
+     }
+ }
++
++
++/* Carlos E. Gorges
++return vendor_id from proc cpuinfo
++*/
++
++void
++__sysinfo_processor_type (char* proc_info) {
++	FILE *ffd;
++	char temp_string[BUFSIZ],final_string[BUFSIZ]="unknown";
++	
++	if ((ffd=fopen("/proc/cpuinfo", "r") )!=NULL) {
++		while ( fscanf(ffd, "%s :", temp_string) != EOF)
++			if (!(strcmp(temp_string, "vendor_id"))) {
++					fscanf(ffd, "%s", final_string);
++					break;
++			}
++		fclose(ffd);
++	}
++	strncpy(proc_info,final_string,BUFSIZ);
++}
++
