@@ -2,19 +2,15 @@
 Hash: SHA1
 
 MD5 bcccb5623fcb6e56f416c8a73c77c23d ChangeLog 3529
-MD5 f1123432928a6a3a093620eee5716610 lbreakout2-2.4.ebuild 1454
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 8357a11c5dd00a25ffe61ada3108a16e lbreakout2-2.5_beta6.ebuild 1550
 MD5 898d46a9918b0a7882a17b8366ab73eb lbreakout2-2.5.ebuild 1452
 MD5 d4c8b1c1f274c50288692d222dbd4f17 lbreakout2-2.5.1.ebuild 1395
-MD5 a63c6d317f064d9ea7f54217557b69d6 files/digest-lbreakout2-2.4 148
-MD5 e595bb052d31ca3e1a1b308c45a29aed files/digest-lbreakout2-2.5_beta6 154
 MD5 a37ba63c736aef5b355e2ab9a56ddc74 files/digest-lbreakout2-2.5 148
 MD5 5c27008a86788737173d26ff443fe1b3 files/digest-lbreakout2-2.5.1 150
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB9Y16roRuSHgZdywRAv4ZAJ4tS/P1o92zaj/DUHEW3ishyoJUGwCfUG4E
-F76cKse3lccFH/iaSFZ2KkQ=
-=Racb
+iD8DBQFB9Y8OroRuSHgZdywRAnWKAKCNHJbq8aSqqH/KE+xAmRszTzUuQACdEdZH
+nkjh6XMzToHPfZx/DWSp6l4=
+=h/HD
 -----END PGP SIGNATURE-----
