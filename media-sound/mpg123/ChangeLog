@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.16 2003/08/10 05:58:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.17 2003/09/18 12:17:48 todd Exp $
+
+  18 Sep 2003; Todd Sunderlin <todd@gentoo.org> mpg123-0.59s.ebuild:
+  Marked unstable for sparc
 
 *mpg123-0.59s (19 Jul 2003)
 
