@@ -1,0 +1,11 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.1 2003/11/09 22:48:09 karltk Exp $
+
+*pypanel-0.8 (09 Nov 2003) 
+
+  09 Nov 2003; Karl Trygve Kalleberg <karltk@gentoo.org> pypanel-0.8.ebuild:
+  Initial import.  Ebuild submitted by <jss2k2@chello.no>. Rewrote to use
+  distutils.
+ 
+  
