@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r3.ebuild,v 1.5 2004/11/08 23:55:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r3.ebuild,v 1.6 2005/01/02 23:56:46 ciaranm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 

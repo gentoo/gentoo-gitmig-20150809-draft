@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sed
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.59 2004/10/03 08:58:00 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.60 2005/01/02 23:50:06 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   03 Oct 2004; Mike Frysinger <vapier@gentoo.org> sed-4.0.9.ebuild,
   sed-4.1.2.ebuild:
@@ -45,7 +48,7 @@
   QA - fix use invocation. Run gnuconfig_update everywhere instead of just on
   mips. Mark 4.0.9 stable on x86 and ia64.
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> sed-4.0.9.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> sed-4.0.9.ebuild:
   Stable on alpha.
 
   08 Jun 2004; Stephen P. Becker <geoman@gentoo.org> sed-4.0.7.ebuild:

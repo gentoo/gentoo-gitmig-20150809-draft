@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.36 2004/09/27 00:04:08 blauwers Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.37 2005/01/02 23:40:57 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Sep 2004; Bart Lauwers <blauwers@gentoo.org> less-382-r2.ebuild:
   Fix lesspipe error
@@ -42,7 +45,7 @@
   (lesspipe enchancments + cannot see some files with spaces).  Thanks
   to Niels Teglsbo and Glen for the suggestions.
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> less-382.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> less-382.ebuild:
   Stable on alpha.
 
   05 Jun 2004; Travis Tilley <lv@gentoo.org> less-382.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.38 2004/10/19 14:54:28 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.39 2005/01/02 23:44:20 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Oct 2004; Mike Frysinger <vapier@gentoo.org> pciutils-2.1.11-r3.ebuild:
   Try to grab latest pci.ids file, but if that fails, use a cached version
@@ -41,7 +44,7 @@
   22 Jun 2004; <malc@gentoo.org> pciutils-2.1.11-r1.ebuild:
   Mark stable on amd64
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> pciutils-2.1.11-r1.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pciutils-2.1.11-r1.ebuild:
   Stable on alpha.
 
   09 May 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>

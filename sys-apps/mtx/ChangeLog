@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mtx
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtx/ChangeLog,v 1.16 2004/10/15 21:26:18 gmsoft Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtx/ChangeLog,v 1.17 2005/01/02 23:42:34 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   15 Oct 2004; Guy Martin <gmsoft@gentoo.org> mtx-1.2.18.ebuild:
   Stable on hppa.
@@ -18,7 +21,7 @@
   mtx-1.2.18.ebuild:
   glibc -> libc
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> mtx-1.2.18.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mtx-1.2.18.ebuild:
   Stable on alpha.
 
   26 Apr 2004; Jason Wever <weeve@gentoo.org> mtx-1.2.17.ebuild:

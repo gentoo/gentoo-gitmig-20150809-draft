@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/supervise-scripts
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/ChangeLog,v 1.15 2004/11/17 00:43:11 robbat2 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supervise-scripts/ChangeLog,v 1.16 2005/01/02 23:53:55 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Nov 2004; Robin H. Johnson <robbat2@gentoo.org>
   supervise-scripts-3.5.ebuild:
@@ -10,7 +13,7 @@
   supervise-scripts-3.5.ebuild:
   Masked supervise-scripts-3.5.ebuild stable for ppc
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   supervise-scripts-3.5.ebuild:
   Stable on alpha.
 
