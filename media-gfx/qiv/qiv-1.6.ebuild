@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.6.ebuild,v 1.1 2001/06/22 05:14:11 thread Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.6.ebuild,v 1.2 2001/06/22 05:57:21 thread Exp $
 
 #P=
 S=${WORKDIR}/${P}
@@ -16,14 +16,17 @@ DEPEND="virtual/glibc sys-devel/gcc
 
 src_compile() {
 
-    try perl /usr/portage/media-gfx/qiv/files/fix_prefix.pl ${S} ${WORKDIR}/../image
+    cat Makefile | sed s:/usr/local:/usr: > tmp
+    mv tmp Makefile
     try make
 
 }
 
 src_install () {
 
-    try make install
+    dodir /usr/bin
+    dodir /usr/man/man1
+    try make PREFIX=${D}usr install
 
 }
 
