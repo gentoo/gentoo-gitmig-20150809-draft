@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.12 2004/07/09 21:42:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.13 2004/09/09 11:31:45 tchiwam Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 amd64 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 amd64 ~ppc ~ppc64 ~sparc ~alpha"
 IUSE="doc"
 
 DEPEND="app-sci/blas-config

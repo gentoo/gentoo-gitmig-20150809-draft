@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas-atlas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.11 2004/07/03 18:31:38 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.12 2004/09/09 11:31:45 tchiwam Exp $
+
+  09 Sep 2004; Philippe Trottier <tchiwam@gentoo.org> blas-atlas-3.6.9.ebuild:
+  marked ~ppc64
 
   03 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> blas-atlas-3.6.0.ebuild:
   Marked ~alpha, kloeri tested.

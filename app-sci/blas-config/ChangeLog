@@ -1,8 +1,12 @@
 # ChangeLog for app-sci/blas-config
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.9 2004/08/24 17:08:57 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.10 2004/09/09 11:30:41 tchiwam Exp $
 
 *blas-config-1.0.1 (24 Aug 2004)
+
+  09 Sep 2004; Philippe Trottier <tchiwam@gentoo.org>
+  blas-config-1.0.1.ebuild:
+  Marked ~ppc64
 
   24 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
   +files/blas-config-1.0.1.bz2, +blas-config-1.0.1.ebuild:
