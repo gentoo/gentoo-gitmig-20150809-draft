@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r3.ebuild,v 1.1 2005/01/20 23:25:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r3.ebuild,v 1.2 2005/01/21 00:23:31 eradicator Exp $
 
 inherit eutils multilib
 
@@ -155,12 +155,15 @@ src_install-libs() {
 	dosym libnvidia-tls.so.${PV} ${NV_ROOT}/lib/libnvidia-tls.so
 	dosym libnvidia-tls.so.${PV} ${NV_ROOT}/lib/libnvidia-tls.so.1
 
-	local TLS_ROOT="/usr/$(get_libdir)/opengl/nvidia/tls"
+	local TLS_ROOT="/usr/${pkglibdir}/opengl/nvidia/tls"
 	dodir ${TLS_ROOT}
 	exeinto ${TLS_ROOT}
 	doexe usr/${pkglibdir}/tls/libnvidia-tls.so.${PV}
 	dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so
 	dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so.1
+
+	# Old opengl-updates don't always make this
+	keepdir /usr/${pkglibdir}/tls
 
 	# Not sure whether installing the .la file is neccessary;
 	# this is adopted from the `nvidia' ebuild
