@@ -1,7 +1,29 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.26 2004/05/02 16:23:21 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.27 2004/05/23 14:55:44 jhhudso Exp $
 
+*djbdns-1.05-12 (23 May 2004)
+
+  23 May 2004; Jared Hudson <jhhudso@gentoo.org> : Added 4 new use flags: doc
+  (adds dependency for djbdns-man), aliaschain (enables a patch to change the
+  CNAME handling behavior of tinydns and axfrdns), semanticfix (enables a
+  patch to increase the semantic handling of tinydns-data), and cnamefix
+  (enables a patch to change the way dnscache handles CNAME records). For more
+  information on the latter 3 patches please visit:
+  http://homepages.tesco.net./~J.deBoynePollard/FGA/djbdns-problems.html
+  In addition, if you include ipv6 support via the ipv6 use flag dnstrace
+  will be compiled without ipv6 support now, since it was broken with it
+  before. Also, a new setup script has been added, called djbdns-setup. This
+  script can be used instead of dnscache-setup and tinydns-setup. This script
+  was added by Kalin KOZHUHAROV <kalin@ThinRope.net> under bug #50795.
+  Also, tinydns-setup is patched if the fwdzone useflag/patch is added
+  because this patch changes the behavior of tinydns and the old tinydns-setup
+  did not work properly with it. Other fixes and patch suggestions come from
+  bug #19375, 20880, 34446, and 49578. Thanks goes to Nick Palmer
+  <nicholas@slackers.net>, Thilo Bangert <fizzelpark-lists@gmx.net>,
+  Hannes Just <Hannes.Just@fh-stralsund.de>, and Georgi Georgiev
+  <chutz@gg3.net>
+	
 *djbdns-1.05-r11 (02 May 2004)
 
   02 May 2004; Jared Hudson <jhhudso@gentoo.org> :
