@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <johnm@gentoo.org> (29 Oct 2003)
+# masking dev-sources-2.6.0-test9 until the next release goes out which will 
+# being development-sources back to vanilla only.
+# gentoo-dev-sources will replace the patched version of dev-sources
+=sys-kernel/development-sources-2.6.0_beta9
+
 # <george@gentoo.org> (27 Oct 2003)
 # masking work in progress (multiple blas related packages will have to be unmasked
 # sinchronously)
