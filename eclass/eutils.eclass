@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.53 2003/09/13 20:08:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.54 2003/09/17 16:53:46 avenj Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -403,7 +403,7 @@ get_number_of_jobs() {
 	export MAKEOPTS="`echo ${MAKEOPTS} | sed -e 's:-j *[0-9]*::g'`"
 
 	if [ "${ARCH}" = "amd64" -o "${ARCH}" = "x86" -o "${ARCH}" = "hppa" -o \
-		"${ARCH}" = "arm" -o "${ARCH}" = "mips" ]
+		"${ARCH}" = "arm" -o "${ARCH}" = "mips" -o "${ARCH}" = "ia64" ]
 	then
 		# these archs will always have "[Pp]rocessor"
 		jobs="$((`grep -c ^[Pp]rocessor /proc/cpuinfo` * 2))"
