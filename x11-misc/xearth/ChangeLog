@@ -1,0 +1,18 @@
+# ChangeLog for app-misc/xearth
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/ChangeLog,v 1.1 2003/11/18 04:18:50 port001 Exp $
+
+*xearth-1.1 (18 Nov 2003)
+
+  18 Nov 2003; Ian Leitch <port001@gentoo.org> xearth-1.1.ebuild:
+  Moved from app-misc  to x11-misc. metadata.xml created
+
+*xearth-1.1 (12 Aug 2002)
+
+  08 Mar 2003; Graham Forest <vladimir@gentoo.org> xearth-1.1.ebuild:
+  set ppc in keywords
+
+  12 Aug 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+
+  Initial ebuild in portage.  Thanks to Bret Towe for the ebuild.
+
