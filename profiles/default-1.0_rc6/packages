@@ -70,7 +70,7 @@
 *sys-apps/hdparm
 *sys-apps/iptables
 *sys-apps/less
-*>=sys-apps/lilo-22.1
+>=sys-apps/lilo-22.1
 *sys-apps/lsof
 *sys-apps/man
 *sys-apps/man-pages
@@ -119,7 +119,6 @@
 *sys-libs/readline  
 *sys-libs/slang
 *sys-libs/zlib
-*sys-apps/iproute2
 #not required, since glibc depends on linux-headers and they come with the build image
 *sys-kernel/linux-headers
 
