@@ -1,11 +1,21 @@
-MD5 a05ef4dbf092fa7e7fae7bf49442f17d lwp-1.12.ebuild 796
-MD5 04f0b34a97ae2fedca2e2290aab918d0 lwp-1.10.ebuild 705
-MD5 252756174df7a61e0de2e9d7d2206ef0 lwp-1.11.ebuild 795
-MD5 a44fa655947ec3ce514f267d076975e1 ChangeLog 2112
-MD5 1760dd151f06d781397dc40f2bb5db8c lwp-1.9.ebuild 834
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac61a0fe419b10b9bc4ff9399ee25169 ChangeLog 2201
 MD5 fdd307ea78fc900a01e57b8151f34d4e metadata.xml 224
-MD5 03ac15a8c125277e302e9cf95873de89 files/digest-lwp-1.12 60
+MD5 830a10a29420bd625be06b14a777bb29 lwp-1.12.ebuild 794
+MD5 252756174df7a61e0de2e9d7d2206ef0 lwp-1.11.ebuild 795
+MD5 04f0b34a97ae2fedca2e2290aab918d0 lwp-1.10.ebuild 705
+MD5 1760dd151f06d781397dc40f2bb5db8c lwp-1.9.ebuild 834
 MD5 642fb581dc4613a8c351d35ddfbfeaaf files/lwp-1.10-amd64.patch 1929
+MD5 34a83e1b814b348b742cc8eb36f13130 files/digest-lwp-1.9 59
 MD5 6351dda3b3e5484743b2295bf48f09ad files/digest-lwp-1.10 60
 MD5 5cf57b4af284d9d1052f4ca91f5422f2 files/digest-lwp-1.11 60
-MD5 34a83e1b814b348b742cc8eb36f13130 files/digest-lwp-1.9 59
+MD5 03ac15a8c125277e302e9cf95873de89 files/digest-lwp-1.12 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCPDJPugEuf3OQ0akRAj7SAJ0ZGigBMrLo6kBbQ88fVeGGcXPSDgCfcAOy
+Jc/mUwImXzqiHAWZoP7b1hc=
+=1FS+
+-----END PGP SIGNATURE-----

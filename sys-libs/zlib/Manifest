@@ -1,13 +1,23 @@
-MD5 c3078fa2fa07cc7c24b29656be9d1868 ChangeLog 6760
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 901088cf8b5d253775b16f4f0d1ba6e5 zlib-1.2.2.ebuild 1787
+MD5 cc0af3c60e393f456b219d8990c5bba9 ChangeLog 6851
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 fb79e073be414fea5dcb4342848f57f7 zlib-1.2.1-r3.ebuild 1881
-MD5 5e62d11dbb8033f57f9ec3a12c10e7ac zlib-1.2.2.ebuild 1788
+MD5 a337d1727a4f6f9ed8d29e43cde40e89 files/zlib-1.2.1-fPIC.patch 662
 MD5 3ccc7437df1921bba1a37d42a70e711f files/digest-zlib-1.2.2 63
 MD5 40634a4cbdcd9c795cfc34473c76038c files/zlib-1.2.2-mapfile.patch 2139
-MD5 9c2321cdb61e2d58b41a0d61a98d293b files/zlib-1.2.1-build-fPIC.patch 2252
-MD5 f84d68bd9a614ad5495a369cb258cf8d files/zlib-1.2.1-glibc.patch 395
-MD5 f59140383ca357e19d6d16d79ce78c97 files/zlib-1.2.1-mapfile.patch 2131
-MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1-r3 63
-MD5 9d3fdd73e1997aa5c823fc210f29919d files/zlib-1.2.1-configure.patch 3149
 MD5 9cdacd156a2ba9dff840c9ce7d8433db files/zlib-1.2.1-CAN-2004-0797.patch 786
-MD5 a337d1727a4f6f9ed8d29e43cde40e89 files/zlib-1.2.1-fPIC.patch 662
+MD5 f59140383ca357e19d6d16d79ce78c97 files/zlib-1.2.1-mapfile.patch 2131
+MD5 9d3fdd73e1997aa5c823fc210f29919d files/zlib-1.2.1-configure.patch 3149
+MD5 f84d68bd9a614ad5495a369cb258cf8d files/zlib-1.2.1-glibc.patch 395
+MD5 7de93a37ee67e3ef547846118f5290ff files/digest-zlib-1.2.1-r3 63
+MD5 9c2321cdb61e2d58b41a0d61a98d293b files/zlib-1.2.1-build-fPIC.patch 2252
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCPDHmugEuf3OQ0akRAhCPAKCCkhXrhLLbv1KRtokvkk02HX9IRACgluHR
+OV17gJgGfydPZZChPjFel30=
+=3PsU
+-----END PGP SIGNATURE-----
