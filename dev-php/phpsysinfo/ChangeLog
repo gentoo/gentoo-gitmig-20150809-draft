@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.19 2004/12/27 12:30:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.20 2004/12/28 12:30:17 corsair Exp $
+
+  28 Dec 2004; Markus Rothe <corsair@gentoo.org> phpsysinfo-2.3.ebuild:
+  Cleanup of ebuild
 
 *phpsysinfo-2.3 (27 Dec 2004)
 
