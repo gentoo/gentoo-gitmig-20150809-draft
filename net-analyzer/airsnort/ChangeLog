@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/airsnort
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/airsnort/ChangeLog,v 1.1 2002/06/29 00:08:21 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/airsnort/ChangeLog,v 1.2 2002/09/08 21:03:56 owen Exp $
 
 *airsnort-0.2.1a (29 Jun 2002)
+
+  8 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
 
   29 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
   initial release - submitted by Brian Rozmierski <brianr at warped-minds.com>
