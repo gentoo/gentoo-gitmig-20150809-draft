@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.110 2004/10/19 13:40:44 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.111 2004/10/19 13:43:03 pauldv Exp $
+
+  19 Oct 2004; <pauldv@gentoo.org> subversion-1.1.0.ebuild:
+  Fix missing quotes problem in combination with jikes. Thanks to 
+  snikkt@yahoo.com in bug #63464 for signalling this.
 
 *subversion-1.0.9 (19 Oct 2004)
 
