@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8af9fa13749251a512eafa1a73b71b27 scim-canna-0.0.0.ebuild 891
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 0b5087509640febbd2f8ee45c3cce095 ChangeLog 354
+MD5 6c57eb03763c7c7896e471e1c51fa015 files/digest-scim-canna-0.0.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCSkptVWNWqTUmv+0RAulmAJ41yInDoeioeGFyo/KesYRF8R3anACeJNHt
+RMe0oUnxH31zo21/XBN5NGE=
+=RRXD
+-----END PGP SIGNATURE-----
