@@ -1,8 +1,13 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.28 2002/12/17 16:29:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.29 2002/12/17 20:38:38 lostlogic Exp $
 
 * perl-5.8.0-r6 (17 Dec 2002)
+
+  17 Dec 2002; Brandon Low <lostlogic@gentoo.org> perl-5.8.0-r6.ebuild :
+  -arch this bad boy, it reb0rk what I unb0rk last night, stick with -r5
+  will probably skip -r6 for the moment and go to -r7 with some more 
+  fixage when we know what to refix more :)
 
   17 Dec 2002; Michael Cummings <mcummings@gentoo.org>
   perl-5.8.0-r6.ebuild:
