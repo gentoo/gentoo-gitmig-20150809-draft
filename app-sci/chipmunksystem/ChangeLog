@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/chipmunksystem
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chipmunksystem/ChangeLog,v 1.6 2004/07/01 19:38:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chipmunksystem/ChangeLog,v 1.7 2004/10/31 19:43:21 ribosome Exp $
+
+*chipmunksystem-20031105-r2 (31 Oct 2004)
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org>
+  -chipmunksystem-20031105-r1.ebuild, +chipmunksystem-20031105-r2.ebuild,
+  -chipmunksystem-20031105.ebuild:
+  Removed obsolete versions. Fixed gcc invocation (bug #68992).
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   chipmunksystem-20031105-r1.ebuild, chipmunksystem-20031105.ebuild:

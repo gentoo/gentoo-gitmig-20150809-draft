@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chipmunksystem/chipmunksystem-20031105.ebuild,v 1.3 2004/07/01 11:50:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chipmunksystem/chipmunksystem-20031105-r2.ebuild,v 1.1 2004/10/31 19:43:21 ribosome Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Chipmunk System - circuit schematic and simulation environment"
 
@@ -29,72 +31,73 @@ SLOT="0"
 
 #ARCH: I only tested on x86, it's the only platform I have access, but it's
 #      supposed to work on other platforms, see HOMEPAGE
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	virtual/x11"
 
 src_compile() {
 
 	local COMPILING_ERROR
 	COMPILING_ERROR="Compiling of ${P} FAILED"
 	cd ${WORKDIR}
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CHIPMUNKFLAGS.*:CHIPMUNKFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-e 's:^LIB .*:LIB = \$\(LIBDIR\)/libp2c.a:' \
 		-i psys/src/Makefile || die "sed failed in psys/src"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CHIPMUNKFLAGS.*:CHIPMUNKFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-i log/src/ana/Makefile || die "sed failed in log/src/ana"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CHIPMUNKFLAGS.*:CHIPMUNKFLAGS = -DBSD -Dlinux:' \
 		-e 's:^LIBX11.*:LIBX11 = -lX11 -L/usr/X11R6/lib:' \
-		-e "s:^LOGLIBDIR.*:LOGLIBDIR = /usr/share/${PF}/lib:" \
+		-e "s:^LOGLIBDIR.*:LOGLIBDIR = /usr/share/${P}/lib:" \
 		-e 's:^LIBDIR.*:LIBDIR = ../lib:' \
 		-e 's:^LIBP2C.*:LIBP2C = ../../lib/libp2c.a:' \
 		-i log/src/Makefile || die "sed failed in log/src"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CHIPMUNKFLAGS.*:CHIPMUNKFLAGS = -DBSD -Dlinux:' \
 		-e 's:^LIBX11.*:LIBX11 = -lX11 -L/usr/X11R6/lib:' \
 		-e 's:^LIBP2C.*:LIBP2C = ../lib/libp2c.a:' \
 		-i view/Makefile || die "sed failed in view"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CHIPMUNKFLAGS.*:CHIPMUNKFLAGS = -DBSD -Dlinux:' \
 		-e 's:^LIBX11.*:LIBX11 = -lX11 -L/usr/X11R6/lib:' \
 		-e 's:^LIBP2C.*:LIBP2C = ../../lib/libp2c.a:' \
 		-i until/V1.2/Makefile || die "sed failed in until/V1.2"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CHIPMUNKFLAGS.*:CHIPMUNKFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-e 's:^LIBX11.*:LIBX11 = -lX11 -L/usr/X11R6/lib:' \
 		-e 's:^LIBP2C.*:LIBP2C = ../lib/libp2c.a:' \
 		-i wol/Makefile || die "sed failed in wol"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CHIPMUNKFLAGS.*:CHIPMUNKFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-i wolcomp/Makefile || die "sed failed in wolcomp"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CHIPMUNKFLAGS.*:CHIPMUNKFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-i netcmp/Makefile || die "sed failed in netcmp"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CHIPMUNKFLAGS.*:CHIPMUNKFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-e 's:^LIBX11.*:LIBX11 = -lX11 -L/usr/X11R6/lib:' \
 		-i mosis/Makefile || die "sed failed in mosis"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CFLAGS.*:CFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-i util/boxify/Makefile || die "sed failed in util/boxify"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CFLAGS.*:CFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-i util/boxify/trapes/Makefile || die "sed failed in util/boxify/trapes"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CFLAGS.*:CFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-i util/cleancif/Makefile || die "sed failed in util/cleancif"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CFLAGS.*:CFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-i util/sctomat/Makefile || die "sed failed in util/sctomat"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CFLAGS.*:CFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-i util/spc-tools/sf/Makefile || die "sed failed in util/spc-tools/sf"
-	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = gcc ${CFLAGS}:" \
+	sed -e "s:^CHIPMUNKCC.*:CHIPMUNKCC = $(tc-getCC) ${CFLAGS}:" \
 		-e 's:^CFLAGS.*:CFLAGS = -DBSD -Dlinux -DF_OK=0:' \
 		-i util/spc-tools/ss/Makefile || die "sed failed in util/spc-tools/ss"
 
@@ -114,21 +117,21 @@ src_install () {
 	dolib lib/*
 	dolib wolcomp/wolcomp.a
 
-	dodir /usr/share/${PN}/lib
-	cp -a log/lib/* ${D}/usr/share/${PN}/lib
-	cp -a view/lib/* ${D}/usr/share/${PN}/lib
-	dodir /usr/share/${PN}/until/designrules
-	cp -a until/designrules/* ${D}/usr/share/${PN}/until/designrules
-	cp until/V1.2/*.ff ${D}/usr/share/${PN}/until
-	dodir /usr/share/${PN}/netcmp
-	cp netcmp/*.ntk ${D}/usr/share/${PN}/netcmp
-	dodir /usr/share/doc/${PF}/html
-	cp -a webdoc/* ${D}/usr/share/doc/${PF}/html
+	dodir /usr/share/${P}/lib
+	cp -a log/lib/* ${D}/usr/share/${P}/lib
+	cp -a view/lib/* ${D}/usr/share/${P}/lib
+	dodir /usr/share/${P}/until/designrules
+	cp -a until/designrules/* ${D}/usr/share/${P}/until/designrules
+	cp until/V1.2/*.ff ${D}/usr/share/${P}/until
+	dodir /usr/share/${P}/netcmp
+	cp netcmp/*.ntk ${D}/usr/share/${P}/netcmp
+	dodir /usr/share/doc/${P}/html
+	cp -a webdoc/* ${D}/usr/share/doc/${P}/html
 
 	#**** Example file taken out,
 	#     uncomment the line below if this is resolved
 	#     (refer to SRC_URI)
-	#cp -a example ${D}/usr/share/${PN}
+	#cp -a example ${D}/usr/share/${P}
 
 	dodoc log/src/LNOTES util/sctomat/doc/scope_to_mat.ps
 	newdoc log/src/COPYING COPYING.log
