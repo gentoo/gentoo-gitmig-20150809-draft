@@ -1,6 +1,11 @@
 # ChangeLog for net-www/squidguard
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squidguard/ChangeLog,v 1.4 2003/05/28 08:05:25 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squidguard/ChangeLog,v 1.5 2003/08/04 19:22:24 mholzer Exp $
+
+*squidguard-1.2.0-r1 (04 Aug 2003)
+
+  04 Aug 2003; Martin Holzer <mholzer@gentoo.org> squidguard-1.2.0-r1.ebuild:
+  Adding config option. Submitted by Maik Schreiber <blizzy@blizzy.de> in #25516.
 
   28 May 2003; Paul de Vrieze <pauldv@gentoo.org> squidguard-1.2.0.ebuild:
   Fix squidguard to properly recognize db4's versioned symbols.
