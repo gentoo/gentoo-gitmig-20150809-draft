@@ -9,3 +9,6 @@
 *sys-apps/freebsd-stat
 *sys-apps/sed
 *virtual/editor
+
+# we use curl for now
+-*net-misc/wget

@@ -1,0 +1,12 @@
+##
+# These packages overwrite collision-protected files
+##
+
+
+##
+# end collision-protect
+##
+
+
+#masked until the save problem is fixed.
+app-editors/nano

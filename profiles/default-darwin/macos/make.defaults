@@ -1,13 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-# System-wide defaults for the Portage system
-
-# The make.defaults file should never be changed
+# System-wide defaults for all ppc-macos profiles
 
 ARCH="ppc"
-ACCEPT_KEYWORDS="ppc-macos" 
-USE="ppc-macos"
+ACCEPT_KEYWORDS="ppc-macos"
 
-# ccache settings for avoiding /root
-CCACHE_DIR="/var/root/.ccache"
+CHOST=powerpc-apple-darwin
+PLATFORM=$CHOST
+
+FEATURES=""
+
+USE="ppc-macos"

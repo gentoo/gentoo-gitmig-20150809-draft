@@ -1,4 +1,4 @@
-# Copyright 2004 Gentoo Foundation.
+# Copyright 2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 
@@ -10,7 +10,7 @@ virtual/bootloader	sys-boot/bootx
 virtual/commonlisp	dev-lisp/sbcl
 virtual/cron		sys-apps/vixie-cron
 virtual/dhcpcd		net-misc/dhcpcd
-virtual/editor		app-editors/nano
+virtual/editor		app-editors/pico
 virtual/httpd-php	dev-php/mod_php
 virtual/inetd		sys-apps/xinetd
 virtual/kernel		sys-libs/libsystem

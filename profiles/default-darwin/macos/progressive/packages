@@ -1,0 +1,8 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: 
+
+### Gentoo for Mac OS X Progressive profile ###
+
+# Things we want emerge system to install for all Progressive profiles
+
