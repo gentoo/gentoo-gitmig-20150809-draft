@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.177 2005/02/27 06:20:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.178 2005/02/28 09:51:49 hansmi Exp $
+
+  28 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> mysql-4.1.8-r1.ebuild:
+  Added to ~ppc.
 
   26 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.22-r1.ebuild,
   mysql-4.0.22-r2.ebuild, mysql-4.0.22.ebuild, mysql-4.0.23-r1.ebuild,
