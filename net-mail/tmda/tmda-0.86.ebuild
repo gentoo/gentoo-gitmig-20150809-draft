@@ -1,23 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.65.ebuild,v 1.5 2003/09/29 21:32:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.86.ebuild,v 1.1 2003/10/02 20:20:49 agenkin Exp $
 
 DESCRIPTION="Python-based SPAM reduction system"
 HOMEPAGE="http://www.tmda.net/"
 LICENSE="GPL-2"
 
-DEPEND=">=dev-lang/python-2.1
+DEPEND=">=dev-lang/python-2.2
 	virtual/mta"
 
 SRC_URI="http://tmda.net/releases/${P}.tgz
 	http://tmda.net/releases/old/${P}.tgz"
 
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="~x86 ~sparc"
 
 S="${WORKDIR}/${P}"
 
-src_compile() {
+src_compile () {
 	./compileall || die
 }
 
@@ -41,13 +41,18 @@ src_install () {
 
 	# Documentation
 	dodoc COPYING ChangeLog README THANKS UPGRADE CRYPTO CODENAMES INSTALL
-	dodoc contrib/tmda.spec contrib/sample.tmdarc
 	dohtml -r htdocs/*.html
 
 	# Contributed binaries and stuff
-	cd contrib
-	exeinto /usr/lib/tmda/bin
-	doexe printcdb printdbm collectaddys def2html
-	insinto /usr/lib/tmda/lisp
-	doins tmda.el
+	cd ${S}/contrib
+
+	exeinto /usr/lib/tmda/contrib
+	doexe collectaddys def2html getuserinfo-vpopmail.sh printcdb printdbm \
+	      sendit.sh smtp-check-sender update-internaldomains vadduser-tmda \
+	      vmailmgr-vdir.sh vpopmail-vdir.sh wrapfd3.sh
+
+	insinto /usr/lib/tmda/contrib
+	doins ChangeLog sample.config tmda.el tmda.spec \
+	      tofmipd.init tofmipd.sysconfig vtmdarc
+
 }
