@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20031109-r1.ebuild,v 1.1 2004/01/26 08:20:27 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20031109-r1.ebuild,v 1.2 2004/03/19 00:09:11 weeve Exp $
 
 DESCRIPTION="(Prelude|Perl) IDS Web Interface"
 HOMEPAGE="http://www.prelude-ids.org"
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${PN}_v${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE="mysql postgres gd"
 DEPEND=""
 RDEPEND="
