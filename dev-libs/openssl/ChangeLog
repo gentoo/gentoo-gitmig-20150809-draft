@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.92 2004/09/01 07:00:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.93 2004/09/22 01:25:05 mr_bones_ Exp $
+
+  21 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  openssl-0.9.7d-r1.ebuild:
+  error check sed
 
   01 Sep 2004; Travis Tilley <lv@gentoo.org> openssl-0.9.7d-r1.ebuild:
   made openssl use $(get_libdir) to optionally install to lib64/lib32

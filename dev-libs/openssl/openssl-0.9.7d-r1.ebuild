@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r1.ebuild,v 1.10 2004/09/01 07:00:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r1.ebuild,v 1.11 2004/09/22 01:25:05 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -42,15 +42,18 @@ src_unpack() {
 		# Tells to compile a static version of openssl
 		sed -i -e \
 		's!^"linux-parisc"\(.*\)::BN\(.*\)::!"linux-parisc"\1:-ldl:BN\2::::::::::dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
-		Configure
+		Configure \
+		|| die "sed failed"
 		# Fix detection of parisc running 64 bit kernel
-		sed -i -e 's/parisc-\*-linux2/parisc\*-\*-linux2/' config
+		sed -i -e 's/parisc-\*-linux2/parisc\*-\*-linux2/' config \
+		|| die "sed failed"
 	fi
 	if [ "${ARCH}" = "arm" ]; then
 		# patch linker to add -ldl or things linking aginst libcrypto fail
 		sed -i -e \
 			's!^"linux-elf-arm"\(.*\)::BN\(.*\)!"linux-elf-arm"\1:-ldl:BN\2!' \
-			Configure
+			Configure \
+			|| die "sed failed"
 	fi
 
 	if [ "${ARCH}" = "alpha" -a "${CC}" != "ccc" ]; then
@@ -58,7 +61,8 @@ src_unpack() {
 	# a gcc compiled openssl, the configure will automatically detect 
 	# ccc and use it, so stop that if user hasnt asked for it.
 		sed -i -e \
-			's!CC=ccc!CC=gcc!' config
+			's!CC=ccc!CC=gcc!' config \
+			|| die "sed failed"
 	fi
 
 	case $( gcc-version ) in
@@ -88,16 +92,18 @@ src_unpack() {
 
 		fi
 
-		sed -i "${LINE}s/$CUR_CFLAGS/$NEW_CFLAGS/" Configure
+		sed -i "${LINE}s/$CUR_CFLAGS/$NEW_CFLAGS/" Configure \
+		|| die "sed failed"
 	done
 	IFS=$OLDIFS
 
 	if [ "$(get_libdir)" != "lib" ] ; then
 		# using a library directory other than lib requires some magic
-		sed -e 	"s+\(\$(INSTALL_PREFIX)\$(INSTALLTOP)\)/lib+\1/$(get_libdir)+g" \
-		-e	"s+libdir=\$\${exec_prefix}/lib+libdir=\$\${exec_prefix}/$(get_libdir)+g" \
-		Makefile.org > Makefile.new
-		mv Makefile.new Makefile.org
+		sed -i \
+			-e 	"s+\(\$(INSTALL_PREFIX)\$(INSTALLTOP)\)/lib+\1/$(get_libdir)+g" \
+			-e	"s+libdir=\$\${exec_prefix}/lib+libdir=\$\${exec_prefix}/$(get_libdir)+g" \
+		Makefile.org \
+		|| die "sed failed"
 		./config --test-sanity || die
 	fi
 
@@ -115,15 +121,18 @@ src_unpack() {
 			# patch linker to add -ldl or things linking aginst libcrypto fail
 			sed -i -e \
 				's!^"linux-elf-arm"\(.*\)::BN\(.*\)!"linux-elf-arm"\1:-ldl:BN\2!' \
-				Configure
+				Configure \
+				|| die "sed failed"
 		;;
 		hppa)
 			# Tells to compile a static version of openssl
 			sed -i -e \
 				's!^"linux-parisc"\(.*\)::BN\(.*\)::!"linux-parisc"\1:-ldl:BN\2::::::::::dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
-				Configure
+				Configure \
+				|| die "sed failed"
 			# Fix detection of parisc running 64 bit kernel
-			sed -i -e 's/parisc-\*-linux2/parisc\*-\*-linux2/' config
+			sed -i -e 's/parisc-\*-linux2/parisc\*-\*-linux2/' config \
+			|| die "sed failed"
 		esac
 
 		# replace CFLAGS
@@ -134,7 +143,8 @@ src_unpack() {
 	  		LINE=$( echo $a | awk -F: '{print $1}' )
 	  		CUR_CFLAGS=$( echo $a | awk -F: '{print $3}' )
 	  		NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s/-fomit-frame-pointer//" -e "s/-mcpu=[-a-z0-9]+//" -e "s/-m486//" ) $CFLAGS"
-	  		sed -i "${LINE}s/$CUR_CFLAGS/$NEW_CFLAGS/" Configure
+	  		sed -i "${LINE}s/$CUR_CFLAGS/$NEW_CFLAGS/" Configure \
+			|| die "sed failed"
 		done
 		IFS=$OLDIFS
 	}
@@ -257,7 +267,6 @@ src_install() {
 		dolib.so ${WORKDIR}/${OLD_096_P}/libcrypto.so.0.9.6||die "libcrypto.so.0.9.6 not found"
 		dolib.so ${WORKDIR}/${OLD_096_P}/libssl.so.0.9.6|| die "libssl.so.0.9.6 not found"
 	}
-
 	fperms a+x /usr/$(get_libdir)/pkgconfig #34088
 }
 
