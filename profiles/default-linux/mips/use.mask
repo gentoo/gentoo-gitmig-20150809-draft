@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.4 2004/09/30 23:16:50 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.5 2004/10/01 15:33:58 geoman Exp $
 
 # Stephen P. Becker <geoman@gentoo.org>
 # masked due to header issues
@@ -26,7 +26,6 @@ acl
 # Flags which aren't applicable to mips (Mostly copied from sparc)
 3dfx
 3dnow
-accessibility
 acpi
 afs
 altivec

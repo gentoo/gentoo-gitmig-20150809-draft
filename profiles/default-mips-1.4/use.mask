@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-1.4/use.mask,v 1.16 2004/09/30 23:16:50 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-1.4/use.mask,v 1.17 2004/10/01 15:33:58 geoman Exp $
 
 # Stephen P. Becker <geoman@gentoo.org>
 # masked because of headers issues
@@ -25,7 +25,6 @@ nptl
 3dfx
 3dnow
 acpi
-accessibility
 afs
 altivec
 apm
