@@ -1,11 +1,11 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.22 2004/03/26 07:46:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.23 2004/03/31 20:41:49 plasmaroo Exp $
 
   25 Mar 2004; Seemant Kulleen <seemant@gentoo.org> lm-sensors-2.7.0.ebuild,
   lm-sensors-2.8.0.ebuild, lm-sensors-2.8.2.ebuild, lm-sensors-2.8.3.ebuild,
   lm-sensors-2.8.4.ebuild, lm-sensors-2.8.5.ebuild:
-  fix syntax, thanks to Andy Kriger <andy.kriger@verizon.net> in bug #45759.
+  Fix syntax, thanks to Andy Kriger <andy.kriger@verizon.net> in bug #45759.
   Also remove crufty versions
 
 *lm-sensors-2.8.5 (06 Mar 2004)
