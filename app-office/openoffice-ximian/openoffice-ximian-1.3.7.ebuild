@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.7 2005/01/17 14:57:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.8 2005/01/17 20:43:25 suka Exp $
 
 # Notes:
 #
@@ -37,6 +37,7 @@ INSTDIR="/opt/Ximian-OpenOffice"
 PATCHDIR="${WORKDIR}/ooo-build-${PV}"
 S="${WORKDIR}/OOo_${OO_VER}_src"
 DESCRIPTION="Ximian-ized version of OpenOffice.org, a full office productivity suite."
+
 SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}-1_source.tar.gz
 	http://www.stlport.org/archive/STLport-4.6.2.tar.gz
 	http://ooo.ximian.com/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
@@ -56,7 +57,6 @@ RDEPEND="!app-office/openoffice-ximian-bin
 	virtual/x11
 	virtual/libc
 	virtual/lpr
-	!=sys-libs/glibc-2.3.1*
 	>=dev-lang/perl-5.0
 	gnome? ( >=x11-libs/gtk+-2.0
 		>=gnome-base/gnome-vfs-2.0
@@ -73,7 +73,7 @@ RDEPEND="!app-office/openoffice-ximian-bin
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
-	java? ( >=virtual/jdk-1.4.1 )
+	java? ( >=virtual/jre-1.4.1 )
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
 	>=sys-devel/gcc-3.2.1 )"
 
@@ -86,6 +86,7 @@ DEPEND="${RDEPEND}
 	zlib? ( sys-libs/zlib )
 	sys-libs/pam
 	!dev-util/dmake
+	java? ( >=virtual/jdk-1.4.1 )
 	!java? ( dev-libs/libxslt )"
 
 pkg_setup() {
@@ -103,10 +104,6 @@ pkg_setup() {
 		fi
 	fi
 
-	ewarn " This version should now also compile fine with gcc 3.4.x "
-	ewarn " If you encounter problems in relation to this, please report "
-	ewarn " them to http://bugs.gentoo.org "
-	ewarn ""
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
 	ewarn " been filtered out.  If you experience difficulty merging this  "
@@ -239,17 +236,21 @@ src_unpack() {
 	#Fix java problems in 1.3.7
 	epatch ${FILESDIR}/${OO_VER}/nojvmfwk-fix.patch
 
-	#Still needed: The STLport patch
 	cd ${S}
+
+	#Still needed: The STLport patch
 	cp ${DISTDIR}/STLport-4.6.2.tar.gz ${S}/stlport/download || die
 	epatch ${FILESDIR}/${OO_VER}/newstlportfix.patch
 
-	if use ppc; then
-		epatch ${FILESDIR}/${OO_VER}/STLport-vector.patch
-	fi
+	epatch ${FILESDIR}/${OO_VER}/gcc-instlib.patch
 
 	#Another java problem
 	epatch ${FILESDIR}/${OO_VER}/javafix.patch
+
+	# Workaround for bug #73940, may break debug use flag on ppc
+	if use ppc; then
+		epatch ${FILESDIR}/${OO_VER}/STLport-vector.patch
+	fi
 
 	#Add our own splash screen
 	epatch ${FILESDIR}/${OO_VER}/gentoo-splash.diff
@@ -328,7 +329,6 @@ src_compile() {
 
 	addpredict /bin
 	addpredict /root/.gconfd
-	local buildcmd=""
 
 	# dmake security patch
 	cd ${S}/dmake
@@ -361,10 +361,15 @@ src_compile() {
 	cd ${S}/config_office
 	rm -f config.cache || die
 	autoconf || die
+
+	if [ "LANGNAME" != "ENUS" ]; then
+		LANGNAME="${LANGNAME},ENUS"
+	fi
+
 	MYCONF="${MYCONF} --enable-libart \
 		--enable-libsn \
 		--enable-crashdump=no \
-		--with-lang=ENUS,${LANGNAME} \
+		--with-lang=${LANGNAME} \
 		--without-fonts \
 		--disable-rpath \
 		--enable-fontconfig \
@@ -517,9 +522,6 @@ src_install() {
 	find ${D}${INSTDIR}/ -type f -exec chmod a+r {} \;
 	chmod a+x ${D}${INSTDIR}/share/config/webcast/*.pl
 
-	# Fix symlinks
-	dosym program/setup ${INSTDIR}/setup
-
 	# Install user autoresponse file
 	insinto /etc/ximian-openoffice
 	sed -e "s|<pv>|${OO_VER}|g" ${T}/rsfile-local > ${T}/autoresponse-${OO_VER}.conf
@@ -532,7 +534,7 @@ src_install() {
 	doexe ${T}/xooffice
 
 	# Component symlinks
-	for app in calc draw html impress math writer setup; do
+	for app in calc draw impress math web writer setup; do
 		dosym xooffice /usr/bin/xoo${app}
 	done
 
@@ -590,5 +592,5 @@ pkg_postinst() {
 	einfo
 	einfo " Also, for individual components, you can use any of:"
 	einfo
-	einfo " xoocalc, xoodraw, xoohtml, xooimpress, xoomath or xoowriter"
+	einfo " xoocalc, xoodraw, xooimpress, xoomath, xooweb or xoowriter"
 }
