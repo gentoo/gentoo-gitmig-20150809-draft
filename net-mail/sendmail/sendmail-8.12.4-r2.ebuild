@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4-r1.ebuild,v 1.4 2002/06/25 08:43:04 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4-r2.ebuild,v 1.1 2002/06/27 16:29:56 g2boojum Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)."
 HOMEPAGE="http://www.sendmail.org"
@@ -38,6 +38,16 @@ RDEPEND="${DEPEND}
 SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 
 S=${WORKDIR}/${P}
+
+#adds ".keep" files so that dirs aren't auto-cleaned
+keepdir() {
+	dodir $*
+	local x
+	for x in $*
+	do
+		touch ${D}/${x}/.keep
+	done
+}
 
 pkg_setup() {
 	if ! grep -q ^smmsp: /etc/group
@@ -102,6 +112,7 @@ src_install () {
 	dodir /var/spool/{mqueue,clientmqueue} /etc/conf.d
 	fperms 770 /var/spool/clientmqueue
 	fperms 700 /var/spool/mqueue
+	keepdir /var/spool/{clientmqueue,mqueue}
 	for dir in libmilter libsmutil sendmail mailstats praliases smrsh makemap vacation
 	do
 		make DESTDIR=${D} MANROOT=/usr/share/man/man \
