@@ -1,3 +1,4 @@
-MD5 c95db3ce928a6dad0c91ceac94fcca09 ChangeLog 577
-MD5 b8d058dedfc73ce272ccde22ebbfc5d5 tdb-1.0.6.ebuild 497
+MD5 c320c7320b5c462e7c31755b31ce9452 ChangeLog 711
+MD5 a5da81d032cf3e3c0b1b55e1438ca331 tdb-1.0.6.ebuild 593
+MD5 3dbbde1145303ad43730f2bc1bb3b82b files/tdb-1.0.6-gcc3.patch 1656
 MD5 c44d9351a9daabd84de3ecc7876ef67c files/digest-tdb-1.0.6 61
