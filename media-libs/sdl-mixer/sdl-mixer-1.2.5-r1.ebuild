@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.15 2004/08/11 02:39:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.16 2004/08/11 23:24:48 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 
@@ -25,23 +25,21 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc3.patch
-	epatch ${FILESDIR}/${P}-amd64-mikmod.patch
+	epatch "${FILESDIR}/${PV}-gcc3.patch"
+	epatch "${FILESDIR}/${P}-amd64-mikmod.patch"
 	autoreconf -i || die
 	sed -i \
 		-e 's:/usr/local/lib/timidity:/usr/share/timidity:' \
 		timidity/config.h \
 		|| die "sed timidity/config.h failed"
+	gnuconfig_update
 }
 
 src_compile() {
-
-	use ppc64 && gnuconfig_update
-
 	econf \
-		`use_enable mikmod mod` \
-		`use_enable mpeg music-mp3` \
-		`use_enable oggvorbis music-ogg` \
+		$(use_enable mikmod mod) \
+		$(use_enable mpeg music-mp3) \
+		$(use_enable oggvorbis music-ogg) \
 		|| die
 	emake || die "emake failed"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.22 2004/08/11 02:39:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.23 2004/08/11 23:24:48 mr_bones_ Exp $
+
+  11 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  sdl-mixer-1.2.5-r1.ebuild:
+  gnuconfig_update in src_unpack(); tidy
 
   10 Aug 2004; Tom Gall <tgall@gentoo.org> sdl-mixer-1.2.5-r1.ebuild:
   stable on ppc64, bug #57992
