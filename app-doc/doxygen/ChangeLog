@@ -1,6 +1,23 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.10 2003/04/06 20:45:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.11 2003/04/26 15:11:57 wmertens Exp $
+
+*doxygen-1.3 (15 Apr 2003)
+
+  15 Apr 2003; Jyrki Muukkonen <jyrki@kruu.org> doxygen-1.3.ebuild:
+  - Version bump, ~x86 ~ppc and ~sparc keywords.
+  - Updated description
+  - Added IUSE="doc qt". With "doc" it builds the HTML and PDF versions of
+    the manual, and hence depends on app-text/tetex. HTML version needs latex
+    for generating some bitmap formulas and PDF version uses pdftex. Tested
+    with tetex-1.0.7-r12 and tetex-2.0.2
+  - Change \setlength{\footrulewidth} to \renewcommand{\footrulewidth} in
+    doxygen_manual.tex to make it work with tetex-2.x also. Looks like it
+    works with tetex-1.x too.
+  - Simplified the tmake.conf sed(1) hack and ./configure options.
+  - Also made the actual compiling use emake instead of make.
+  - And applied by wmertens@gentoo.org, who also added a sandbox violation
+    fix for the docs.
 
 *doxygen-1.2.18 (13 Oct 2002)
 
