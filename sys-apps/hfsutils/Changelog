@@ -1,8 +1,13 @@
 # ChangeLog for sys-apps/hfsutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: Changelog,v 1.1 2002/04/27 10:28:33 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsutils/Changelog,v 1.2 2002/06/22 00:38:31 gerk Exp $
 
 *hfsutils-3.2.6 (Sun Mar 17 23:27:28 CST 2002)
+
+June 21 2002 Gerk (gerk@gentoo.org)
+
+	Added ARCH checks
+
 
 Sun Mar 17 23:29:06 CST 2002; Kain <kain@kain.org> all:
 

@@ -13,6 +13,13 @@ LICENSE="0"
 
 MAKEOPTS='PREFIX=/usr MANDIR=/usr/share/man'
 
+pkg_setup() {
+	if [ ${ARCH} != "ppc" ] ; then
+		eerror "Sorry, this is a PPC only package."
+		die "Sorry, this as a PPC only pacakge."
+	fi
+}
+
 src_compile() {
 
 	if [ ${ARCH} = "x86" ] ; then
