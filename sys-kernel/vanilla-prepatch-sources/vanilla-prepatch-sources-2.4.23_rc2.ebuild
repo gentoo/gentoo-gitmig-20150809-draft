@@ -1,15 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.23_pre6.ebuild,v 1.1 2003/10/02 00:40:17 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.23_rc2.ebuild,v 1.1 2003/11/20 20:21:06 iggy Exp $
 
 IUSE="build"
 
-# OKV=original kernel version, KV=patched kernel version.  
-
 ETYPE="sources"
+inherit kernel
 
-inherit kernel || die
-
+# OKV=original kernel version, KV=patched kernel version.  
 OKV="2.4.22"
 KV="${PV/_/-}"
 S=${WORKDIR}/linux-${KV}
