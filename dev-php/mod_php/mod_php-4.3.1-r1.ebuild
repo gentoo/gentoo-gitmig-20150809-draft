@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.3 2003/02/24 21:53:03 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.4 2003/02/25 16:57:47 gmsoft Exp $
 
 inherit flag-o-matic 
 
@@ -12,7 +12,7 @@ DESCRIPTION="Apache module for PHP"
 SRC_URI="http://us3.php.net/distributions/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa"
 SLOT="0"
 PROVIDE="virtual/php"
 
