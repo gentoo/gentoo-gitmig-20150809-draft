@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.6 2004/06/25 01:54:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.7 2004/08/07 22:17:45 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> mysql-ruby-2.4.4a.ebuild,
+  mysql-ruby-2.4.5.ebuild:
+  Typo in DESCRIPTION: extention -> extension. Bug 59717.
 
   10 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> mysql-ruby-2.4.4a.ebuild,
   mysql-ruby-2.4.5.ebuild:

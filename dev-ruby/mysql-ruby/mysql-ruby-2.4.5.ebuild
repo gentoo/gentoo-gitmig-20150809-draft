@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.4.5.ebuild,v 1.4 2004/06/25 01:54:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.4.5.ebuild,v 1.5 2004/08/07 22:17:45 slarti Exp $
 
-DESCRIPTION="A Ruby extention library to use MySQL"
+DESCRIPTION="A Ruby extension library to use MySQL"
 HOMEPAGE="http://www.tmtm.org/en/mysql/ruby/"
 SRC_URI="http://www.tmtm.org/en/mysql/ruby/${P}.tar.gz"
 LICENSE="Ruby"
