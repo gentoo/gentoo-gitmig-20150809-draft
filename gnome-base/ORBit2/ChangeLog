@@ -1,7 +1,11 @@
 # ChangeLog for gnome-base/ORBit2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ChangeLog,v 1.17 2003/02/22 00:01:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ChangeLog,v 1.18 2003/03/16 16:17:59 spider Exp $
 
+*ORBit2-2.6.1 (16 mar 2003)
+
+  16 mar 2003; <spider@gentoo.org> ORBit2-2.6.1.ebuild:
+  Versionbump
 
 *ORBit2-2.6.0 (31 Jan 2003)
 
