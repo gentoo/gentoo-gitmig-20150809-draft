@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cweb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/ChangeLog,v 1.4 2002/12/13 10:56:49 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/ChangeLog,v 1.5 2002/12/30 02:12:13 satai Exp $
+
+*cweb-3.64 (29 Dec 2002)
+
+  29 Dec 2002; Matthew Turk <satai@gentoo.org> : version bump, closes 11834.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
