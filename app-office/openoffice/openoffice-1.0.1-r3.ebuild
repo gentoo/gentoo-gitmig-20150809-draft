@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r3.ebuild,v 1.8 2003/01/20 02:15:51 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r3.ebuild,v 1.9 2003/01/27 18:56:01 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -77,7 +77,8 @@ RDEPEND=">=sys-libs/glibc-2.1
 	>=sys-devel/gcc-3.2 )" # needed for sqrtl patch recently introduced
 
 DEPEND="${RDEPEND}
-	app-shells/tcsh"
+	app-shells/tcsh
+	!app-office/openoffice-bin"
 
 # fix a bug with tcsh and dircolors
 #

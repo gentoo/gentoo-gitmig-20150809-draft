@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r2.ebuild,v 1.6 2002/12/10 00:45:03 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r2.ebuild,v 1.7 2003/01/27 18:56:01 sethbc Exp $
 
 inherit virtualx
 
@@ -49,7 +49,8 @@ COMMONDEPEND=">=sys-libs/glibc-2.1
 	virtual/x11
 	app-arch/zip
 	app-arch/unzip
-	>=virtual/jdk-1.3.1"
+	>=virtual/jdk-1.3.1
+	!app-office/openoffice-bin"
 
 # All these are included with the source archive ...
 #       >=media-libs/nas-1.4.1
