@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.5.ebuild,v 1.4 2004/07/27 00:39:13 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.5.ebuild,v 1.5 2004/09/06 00:21:30 ciaranm Exp $
 
 inherit eutils
 DESCRIPTION="A useful collection of mail servers, clients, and filters."
@@ -32,7 +32,7 @@ pkg_setup() {
 		echo
 		ewarn "Waiting 30 seconds before continuing..."
 		ewarn "(Control-C to abort)..."
-		sleep 30
+		epause 30
 	fi
 }
 src_unpack() {
