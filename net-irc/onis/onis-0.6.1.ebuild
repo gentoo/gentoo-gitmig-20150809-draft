@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/onis-0.6.1.ebuild,v 1.2 2004/09/07 23:28:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/onis-0.6.1.ebuild,v 1.3 2004/12/08 14:39:07 swegener Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="dev-lang/perl"
-DEPEND=">=sys-apps/sed-4"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.57.ebuild,v 1.3 2004/10/04 22:30:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.57.ebuild,v 1.4 2004/12/08 14:37:57 swegener Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ IUSE=""
 
 RDEPEND="dev-lang/perl
 	dev-perl/Text-Iconv"
-DEPEND=">=sys-apps/sed-4"
+DEPEND="dev-lang/perl
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
