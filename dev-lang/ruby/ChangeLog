@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.54 2004/04/07 16:49:56 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.55 2004/04/10 06:41:55 usata Exp $
+
+*ruby-1.6.8-r7 (10 Apr 2004)
+*ruby-1.8.0-r6 (10 Apr 2004)
+*ruby-1.8.1-r3 (10 Apr 2004)
+
+  10 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-1.6.8-r3.ebuild,
+  ruby-1.6.8-r6.ebuild, ruby-1.6.8-r7.ebuild, ruby-1.8.0-r1.ebuild,
+  ruby-1.8.0-r5.ebuild, ruby-1.8.0-r6.ebuild, ruby-1.8.1-r1.ebuild,
+  ruby-1.8.1-r2.ebuild, ruby-1.8.1-r3.ebuild:
+  Updated oniguruma patch (UTF-16 support). Added PROVIDE="virtual/ruby",
+  see bug #46968
 
   07 Apr 2004; Brian Jackson <iggy@gentoo.org> ruby-1.8.1-r2.ebuild:
   added s390 keyword

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r6.ebuild,v 1.4 2004/04/10 06:41:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r7.ebuild,v 1.1 2004/04/10 06:41:55 usata Exp $
 
 IUSE="cjk"
 
-ONIGURUMA="onigd20031224"
+ONIGURUMA="onigd20040316"
 
 inherit flag-o-matic alternatives eutils
 filter-flags -fomit-frame-pointer
@@ -16,7 +16,7 @@ SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
 
 LICENSE="Ruby"
 SLOT="1.6"
-KEYWORDS="x86 alpha ~ppc ~sparc ~hppa ~amd64 -ia64 mips"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~hppa ~amd64 -ia64 ~mips"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0

@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r1.ebuild,v 1.2 2004/02/22 19:57:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r3.ebuild,v 1.1 2004/04/10 06:41:55 usata Exp $
 
 IUSE="socks5 tcltk cjk"
 
-ONIGURUMA="onigd20031224"
+ONIG_DATE="20040316"
+SNAP_DATE="20040410"
 
 inherit flag-o-matic alternatives eutils gnuconfig
 filter-flags -fomit-frame-pointer
@@ -12,11 +13,12 @@ filter-flags -fomit-frame-pointer
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
 SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
-	cjk? ( ftp://ftp.ruby-lang.org/pub/ruby/contrib/${ONIGURUMA}.tar.gz )"
+	mirror://gentoo/${P}-${SNAP_DATE}.diff.gz
+	cjk? ( ftp://ftp.ruby-lang.org/pub/ruby/contrib/onigd${ONIG_DATE}.tar.gz )"
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="~alpha ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~s390"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
@@ -28,11 +30,17 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	>=dev-ruby/ruby-config-0.2"
 RDEPEND="${DEPEND}
 	!=dev-lang/ruby-cvs-${SLOT}*"
+PROVIDE="virtual/ruby"
 
 S=${WORKDIR}/${P%_pre*}
 
 src_unpack() {
 	unpack ${A}
+
+	pushd ${S}
+	epatch ../${P}-${SNAP_DATE}.diff
+	popd
+
 	if [ -n "`use cjk`" ] ; then
 		pushd oniguruma
 		econf --with-rubydir=${S}

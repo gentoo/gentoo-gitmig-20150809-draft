@@ -1,6 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r1.ebuild,v 1.8 2004/04/10 06:41:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r6.ebuild,v 1.1 2004/04/10 06:41:55 usata Exp $
+
+IUSE="socks5 tcltk cjk"
+
+ONIGURUMA="onigd20040316"
 
 inherit flag-o-matic alternatives eutils gnuconfig
 filter-flags -fomit-frame-pointer
@@ -8,12 +12,12 @@ filter-flags -fomit-frame-pointer
 S=${WORKDIR}/${P%_pre*}
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
-SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz"
+SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
+	cjk? ( ftp://ftp.ruby-lang.org/pub/ruby/contrib/${ONIGURUMA}.tar.gz )"
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="alpha hppa ia64 mips sparc x86"
-IUSE="socks5 tcltk ruby16"
+KEYWORDS="~alpha ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
@@ -21,17 +25,23 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/ncurses-5.2
 	socks5? ( >=net-misc/dante-1.1.13 )
 	tcltk?  ( dev-lang/tk )
-	sys-apps/findutils"
+	sys-apps/findutils
+	>=dev-ruby/ruby-config-0.2"
 RDEPEND="${DEPEND}
 	!=dev-lang/ruby-cvs-${SLOT}*"
 PROVIDE="virtual/ruby"
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
+	if [ -n "`use cjk`" ] ; then
+		pushd oniguruma
+		econf --with-rubydir=${S}
+		make ${SLOT/./}
+		popd
+	fi
 
 	# Enable build on alpha EV67
-	if use alpha; then
+	if [ "${ARCH}" = "alpha" ] ; then
 		gnuconfig_update || die "gnuconfig_update failed"
 	fi
 }
@@ -51,7 +61,7 @@ src_compile() {
 		export CFLAGS
 	fi
 
-	econf --program-suffix=18 --enable-shared \
+	econf --program-suffix=${SLOT/./} --enable-shared \
 		`use_enable socks5 socks` \
 		|| die "econf failed"
 	emake || die "emake failed"
@@ -60,40 +70,30 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	dosym /usr/lib/libruby18.so.${PV} /usr/lib/libruby.so.${PV%.*}
-	dosym /usr/lib/libruby18.so.${PV} /usr/lib/libruby.so.${PV}
+	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV%.*}
+	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV}
 
 	dodoc COPYING* ChangeLog MANIFEST README* ToDo
 }
 
-ruby_alternatives() {
-	if [ -n "`use ruby16`" ] ; then
-		alternatives_makesym /usr/bin/ruby /usr/bin/ruby{16,18}
-		alternatives_makesym /usr/bin/irb /usr/bin/irb{16,18}
-		alternatives_makesym /usr/lib/libruby.so \
-			/usr/lib/libruby{16,18}.so
-		alternatives_makesym /usr/share/man/man1/ruby.1.gz \
-			/usr/share/man/man1/ruby{16,18}.1.gz
-	else
-		alternatives_makesym /usr/bin/ruby /usr/bin/ruby{18,16}
-		alternatives_makesym /usr/bin/irb /usr/bin/irb{18,16}
-		alternatives_makesym /usr/lib/libruby.so \
-			/usr/lib/libruby{18,16}.so
-		alternatives_makesym /usr/share/man/man1/ruby.1.gz \
-			/usr/share/man/man1/ruby{18,16}.1.gz
-	fi
-	alternatives_auto_makesym /usr/bin/erb /usr/bin/erb?*
-}
-
 pkg_postinst() {
-	ruby_alternatives
 	ewarn
 	ewarn "Warning: Vim won't work if you've just updated ruby from"
 	ewarn "1.6.8 to 1.8.0 due to the library version change."
 	ewarn "In that case, you will need to remerge vim."
 	ewarn
+
+	if [ ! -e "$(readlink /usr/bin/ruby)" ] ; then
+		/usr/sbin/ruby-config ruby${SLOT/./}
+	fi
+	einfo
+	einfo "You can change the default ruby interpreter by /usr/sbin/ruby-config"
+	einfo
 }
 
 pkg_postrm() {
-	ruby_alternatives
+
+	if [ ! -e "$(readlink /usr/bin/ruby)" ] ; then
+		/usr/sbin/ruby-config ruby${SLOT/./}
+	fi
 }
