@@ -5,7 +5,4 @@ MD5 42faa8a84fae547fe181da0ad7b67b04 files/lilo-22.6.1-devmapper_gentoo.patch 11
 MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.6.1-create-install-dirs.patch 970
 MD5 ab2657bc635313522eb791e30b1166ef files/lilo-22.6.1-correct-usage-info.patch 683
 MD5 fff6910b2180128e251d89f31221b683 files/digest-lilo-22.6.1 128
-MD5 42faa8a84fae547fe181da0ad7b67b04 files/lilo-22.6-devmapper_gentoo.patch 11826
-MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.6-create-install-dirs.patch 970
 MD5 5f2172291cc1252b30f5a60981a51ac4 files/lilo.conf 1722
-MD5 ab2657bc635313522eb791e30b1166ef files/lilo-22.6-correct-usage-info.patch 683
