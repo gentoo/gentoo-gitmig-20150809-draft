@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/arm-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/ChangeLog,v 1.1 2003/02/26 23:25:14 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/ChangeLog,v 1.2 2003/03/13 23:10:57 zwelch Exp $
 
 *arm-sources-2.4.19 (24 Feb 2003)
+
+  13 Mar 2003; Zach Welch <zwelch@gentoo.org> arm-sources-2.4.19.ebuild:
+  fix EXTRAVERSION problems
 
   24 Feb 2003; Zach Welch <zwelch@gentoo.org> arm-sources-2.4.19.ebuild files/digest-arm-sources-2.4.19 :
   New ebuild for ARM kernel, supports Netwinder only for now

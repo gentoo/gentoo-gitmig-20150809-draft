@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/arm-sources-2.4.19.ebuild,v 1.2 2003/02/28 13:18:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/arm-sources-2.4.19.ebuild,v 1.3 2003/03/13 23:10:57 zwelch Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE=""
@@ -14,7 +14,7 @@ inherit kernel
 # move to arm profile
 
 # this specifies the main ARM kernel patch level
-ARM_PATCH_SUFFIX="rmk5"
+ARM_PATCH_SUFFIX="-rmk5"
 
 ######
 # move to ${PORTDIR}/subarch.eclass
@@ -32,12 +32,12 @@ SUBARCH_KERNEL_HOMEPAGE="http://www.netwinder.org/"
 # set the kernel version now
 OKV=2.4.19
 EXTRAVERSION="${ARM_PATCH_SUFFIX}${SUBARCH_KERNEL_SUFFIX}"
-KV="${OKV}-${EXTRAVERSION}"
+KV="${OKV}${EXTRAVERSION}"
 
 S=${WORKDIR}/linux-${KV}
 
 # this is the main rmk ARM Kernel Patch
-ARM_KERNEL_PATCH="patch-${OKV}-${ARM_PATCH_SUFFIX}"
+ARM_KERNEL_PATCH="patch-${OKV}${ARM_PATCH_SUFFIX}"
 # this is the kernel patch for SUBARCH
 [ -n "${SUBARCH_KERNEL_SUFFIX}" ] && \
 	SUBARCH_KERNEL_PATCH="${ARM_KERNEL_PATCH}${SUBARCH_KERNEL_SUFFIX}" || \
