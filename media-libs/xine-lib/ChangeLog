@@ -1,7 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.21 2002/09/30 04:38:32 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.22 2002/11/02 06:32:40 agenkin Exp $
 
+*xine-lib-0.9.13-r2 (02 Nov 2002)
+
+  02 Nov 2002; Arcady Genkin <agenkin@gentoo.org> xine-0.9.13-r2.ebuild :
+  Fixed installation location of a few files that were previously
+  misplaced.
+	
 *xine-lib-0.9.13-r1 (09 Aug 2002)
 
   29 Sep 2002; Mark Guertin <gerk@gentoo.org> xine-0.9.13-r1.ebuild :
