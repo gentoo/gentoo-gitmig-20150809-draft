@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-2.0.ebuild,v 1.5 2003/10/19 21:49:11 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-2.0.ebuild,v 1.6 2003/10/20 21:46:37 zhen Exp $
 
 BUSYBOX="busybox-0.60.5"
 CLOOP="cloop_1.02-1"
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
-SRC_URI="http://emu.gentoo.org/~zhen/distfiles/genkernel-2.0.tar.bz2
+SRC_URI="http://emu.gentoo.org/~zhen/distfiles/${P}.tar.bz2
 		 http://dev.gentoo.org/~zhen/distfiles/${BUSYBOX}.tar.gz
 		 http://dev.gentoo.org/~zhen/distfiles/${CLOOP}.tar.gz"
 
