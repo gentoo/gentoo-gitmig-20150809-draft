@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a.ebuild,v 1.2 2004/02/08 22:15:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a.ebuild,v 1.3 2004/02/10 14:30:42 wolf31o2 Exp $
 
 inherit games
 
 MY_P="armyops200a-linux.bin"
 DESCRIPTION="America's Army: Operations - military simulations by the U.S. Army to provide civilians with insights on soldiering"
 HOMEPAGE="http://www.americasarmy.com/"
-SRC_URI="ftp://3dgamers.in-span.net/pub/3dgamers4/games/${PN}/${MY_P}
-	http://3dgamers.reliableservers.net/pub/3dgamers/games/${PN}/${MY_P}
-	http://3dgamers.gameservers.net/pub/3dgamers/games/${PN}/${MY_P}
-	http://3dgamers.planetmirror.com/pub/3dgamers/games/${PN}/${MY_P}"
+SRC_URI="ftp://3dgamers.in-span.net/pub/3dgamers4/games/${PN/-/}/${MY_P}
+	http://3dgamers.reliableservers.net/pub/3dgamers/games/${PN/-/}/${MY_P}
+	http://3dgamers.gameservers.net/pub/3dgamers/games/${PN/-/}/${MY_P}
+	http://3dgamers.planetmirror.com/pub/3dgamers/games/${PN/-/}/${MY_P}"
 
 LICENSE="Army-EULA"
 SLOT="0"
