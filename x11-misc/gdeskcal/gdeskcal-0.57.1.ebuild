@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/gdeskcal-0.57.1.ebuild,v 1.1 2004/07/18 07:07:17 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/gdeskcal-0.57.1.ebuild,v 1.2 2004/07/18 11:40:16 dholm Exp $
 
 DESCRIPTION="Cute little eye-candy calendar for the desktop"
 HOMEPAGE="http://www.pycage.de/software_gdeskcal.html"
@@ -15,7 +15,7 @@ S="${WORKDIR}/`echo $MY_P | tr _ .`"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
