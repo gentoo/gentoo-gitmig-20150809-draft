@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.1 2002/04/15 20:52:27 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.2 2002/04/24 17:21:24 bangert Exp $
 
 NV=1.5i2
 S=${WORKDIR}/${PN}-${NV}
@@ -11,6 +11,7 @@ SRC_URI="http://www.kernel.org/pub/linux/utils/man/man-${NV}.tar.gz"
 DEPEND="virtual/glibc"
 
 RDEPEND="virtual/glibc
+	sys-apps/cronbase
 	sys-apps/groff"
 
 src_unpack() {
@@ -60,6 +61,10 @@ src_install() {
 	cd ${S}
 	doins src/man.conf
 	dodoc COPYING LSM README* TODO
+	
+	exeinto /etc/cron.daily
+	doexe ${FILESDIR}/makewhatis.cron
+	
 }
 
 
