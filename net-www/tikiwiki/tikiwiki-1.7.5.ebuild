@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tikiwiki/tikiwiki-1.7.5.ebuild,v 1.2 2004/01/27 23:19:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tikiwiki/tikiwiki-1.7.5.ebuild,v 1.3 2004/03/02 16:59:31 mholzer Exp $ 
 
 inherit webapp-apache
 
@@ -17,9 +17,8 @@ RDEPEND="virtual/php
 	media-gfx/graphviz
 	dev-db/mysql"
 
-webapp-detect || NO_WEBSERVER=1
-
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	einfo "Installing for ${WEBAPP_SERVER}"
 }
@@ -31,6 +30,7 @@ src_unpack() {
 
 
 src_install() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-mkdirs
 
 	local DocumentRoot=${HTTPD_ROOT}
