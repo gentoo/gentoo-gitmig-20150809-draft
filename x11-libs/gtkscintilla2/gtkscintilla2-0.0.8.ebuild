@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.0.8.ebuild,v 1.4 2003/10/08 09:36:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.0.8.ebuild,v 1.5 2003/12/13 22:36:45 zul Exp $
 
 MY_P="GtkScintilla2-${PV}"
 DESCRIPTION="Gtk-2 wrappers for the Scintilla source editing components."
@@ -9,7 +9,7 @@ SRC_URI="http://gphpedit.org/releases/${MY_P}.tar.gz"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 LICENSE="GPL-2"
 
 RDEPEND=">=x11-libs/gtk+-2.0"
@@ -29,12 +29,12 @@ src_unpack() {
 	# and make use of our CFLAGS
 	cp Makefile Makefile.orig
 	sed -e "/VERSION/s/0.0.3/${PV}/" \
-		-e "/CFLAGS/s/-g/${CFLAGS}/" < Makefile.orig > Makefile
+		-e "/CFLAGS/s/-g/${CFLAGS} -fPIC/" < Makefile.orig > Makefile
 
 	# and again, in the scintilla part
 	cd ${S}/scintilla/gtk
 	cp makefile makefile.orig
-	sed -e "/CXXFLAGS/s/-Os/${CFLAGS}/" < makefile.orig > makefile
+	sed -e "/CXXFLAGS/s/-Os/${CFLAGS} -fPIC/" < makefile.orig > makefile
 
 }
 
