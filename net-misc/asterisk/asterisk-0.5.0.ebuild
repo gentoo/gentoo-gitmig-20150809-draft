@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.5.0.ebuild,v 1.3 2004/02/13 01:46:24 stkn Exp $
 
 IUSE="doc alsa mysql gtk mmx nopri nozaptel noiax"
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.7.2.ebuild,v 1.2 2004/02/13 01:46:24 stkn Exp $
 
 IUSE="doc alsa mysql gtk mmx nopri nozaptel noiax"
 
-inherit eutils webapp-apache
+inherit eutils webapp
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
@@ -26,15 +26,9 @@ DEPEND="virtual/glibc
 	!nozaptel? ( >=net-misc/zaptel-0.7
 		     >=net-libs/zapata-0.7 )"
 
-webapp-detect || NO_WEBSERVER=1
-
 pkg_setup() {
-	if [ -z $NO_WEBSERVER ]; then
-		webapp-pkg_setup "${NO_WEBSERVER}"
-		einfo "Voicemail webapp will be installed into: ${ROOT}${HTTPD_ROOT}"
-	else
-		ewarn "Voicemail webapp will _not_ be installed"
-	fi
+	webapp-pkg_setup
+	einfo "Voicemail webapp will be installed into: ${ROOT}${HTTPD_ROOT}"
 }
 
 src_unpack() {
