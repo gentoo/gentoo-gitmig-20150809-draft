@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.4 2005/02/25 11:09:56 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.5 2005/03/13 10:44:04 lu_zero Exp $
+
+  13 Mar 2005; Luca Barbato <lu_zero@gentoo.org> :
+  Fixed ChangeLog as requersted by reporter in bug #75532
 
 *metasploit-2.3-r1 (25 Feb 2005)
 
@@ -14,5 +17,5 @@
 *metasploit-2.3 (13 Feb 2005)
 
   13 Feb 2005; Daniel Black <dragonheart@gentoo.org> +metasploit-2.3.ebuild:
-  Initial ebuild as per bug #75532 thanks to Marco Morales <soulse@gmail.com>
+  Initial ebuild as per bug #75532 thanks to Stefano <raistlin@s0ftpj.org>
 
