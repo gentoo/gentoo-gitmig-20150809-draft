@@ -4,5 +4,9 @@
 	<longdescription lang="en">
 		The x11-terms category contains terminal emulators for X11 environments.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría x11-terms contiene emuladores de terminal para varios
+		ambientes X11.
+	</longdescription>
 </catmetadata>
 
