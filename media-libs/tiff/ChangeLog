@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.45 2005/01/03 13:08:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.46 2005/01/03 14:16:29 gustavoz Exp $
+
+  03 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> tiff-3.7.1-r1.ebuild:
+  Stable on sparc wrt #75213
 
   04 Jan 2005; Joseph Jezak <josejx@gentoo.org> tiff-3.7.1-r1.ebuild:
   Marked ppc stable for bug #75213.
