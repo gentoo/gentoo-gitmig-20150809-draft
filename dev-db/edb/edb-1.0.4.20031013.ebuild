@@ -1,23 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.4.20031013.ebuild,v 1.1 2003/10/14 02:58:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.4.20031013.ebuild,v 1.2 2003/10/22 07:54:25 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
 DESCRIPTION="Enlightment Data Base"
 HOMEPAGE="http://www.enlightenment.org/pages/edb.html"
 
-LICENSE="as-is"
-SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
 IUSE="${IUSE} ncurses gtk"
 
 DEPEND="${DEPEND}
 	gtk? ( =x11-libs/gtk+-1* )
 	ncurses? ( sys-libs/ncurses )"
 RDEPEND="virtual/glibc"
-
-S=${WORKDIR}/${PN}
 
 src_compile() {
 	cp autogen.sh{,.old}
