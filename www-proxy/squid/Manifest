@@ -1,33 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f7ae43418980339b26e3c0eaf2ea7ad7 ChangeLog 11099
+MD5 2fd4f56a598ab66d9f72e81ab2103e13 ChangeLog 11333
 MD5 d7dd06078d4f3a44b46709294cc7bc21 metadata.xml 249
 MD5 e4a8135ed447b72a7271fade6c06e9cc squid-2.4.7.ebuild 4000
 MD5 81a38c1c8b9bde45861c616a3d06621a squid-2.5.5-r3.ebuild 5383
-MD5 1fe0ecf84a257f5c0ed71db31f5b445c squid-2.5.6-r3.ebuild 5800
-MD5 e874ad6be2eac49679d071d0bd57dda6 squid-2.5.6-r2.ebuild 5773
+MD5 96e1e858c2ff6b3549c5c6c8077939e3 squid-2.5.6-r3.ebuild 5805
 MD5 5be246504d6395a1030de380ea289886 squid-2.5.7.ebuild 5802
-MD5 4995c4c8c3365f121620ea78d6ca8794 files/digest-squid-2.4.7 222
 MD5 45bf3c4b37515fe4da4ed6d39904132d files/digest-squid-2.5.5-r3 147
 MD5 c3cb57db464a884a63d0c53ceb38331b files/digest-squid-2.5.6-r3 156
-MD5 a8a6dbf036a288e569daa56bdf5ae774 files/digest-squid-2.5.7 154
-MD5 3f83edef485d5ba24d3819daee026aeb files/digest-squid-2.5.6-r2 156
 MD5 626914d5b07105602773bf8a1534a3ae files/squid-2.4.7-debian.diff 12078
 MD5 60b9ab4d53c4485a214baa7c8f9a2cc0 files/squid-2.4.7-gentoo.diff 1828
-MD5 0c7867dce4b8bef078a93bf717196b0e files/squid-2.5.3-gentoo.diff 11534
-MD5 a188814c2113dcd28c55672dbe58df8c files/squid-2.5.5-ntml-auth-fix.patch 2354
-MD5 26a4ab522a2469f805f746bcdbe0109c files/squid-2.5.6-ufs-no-valid-dir.patch 566
+MD5 6e5b0d474a4c7d4969bd706b2261a09a files/squid-2.5.7-gentoo.diff 17136
 MD5 6f30a7f5c48ec35a7044acb189c858c5 files/squid-r1.cron 133
 MD5 6e37fe3047234060fc63d5c16a4b7853 files/squid.confd 437
-MD5 1ee97d797645814f5ad77c98ad10eef2 files/squid.cron 41
 MD5 bea1d2ef8cb2f1590f89bf37f28b9268 files/squid.pam 505
 MD5 1b391c390c547ef3a249aee590e654d8 files/squid.rc6 1980
-MD5 469070d468395f998ae41ff8a788d2eb files/squid-2.5.7-gentoo.diff 11242
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBib0QHTu7gpaalycRAhLeAKCv+JS6lhvmGbRLPGtxtwwt1AIjQACfSXTR
-u+NFU66WVNdbBahYEGc7tFI=
-=/+Pt
------END PGP SIGNATURE-----
+MD5 a188814c2113dcd28c55672dbe58df8c files/squid-2.5.5-ntml-auth-fix.patch 2354
+MD5 26a4ab522a2469f805f746bcdbe0109c files/squid-2.5.6-ufs-no-valid-dir.patch 566
+MD5 4995c4c8c3365f121620ea78d6ca8794 files/digest-squid-2.4.7 222
+MD5 a8a6dbf036a288e569daa56bdf5ae774 files/digest-squid-2.5.7 154

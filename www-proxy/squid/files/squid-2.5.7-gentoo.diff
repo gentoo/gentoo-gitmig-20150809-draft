@@ -325,3 +325,136 @@ diff -uNr squid-2.5.STABLE7.orig/src/url.c squid-2.5.STABLE7/src/url.c
  DOC_END
  
  NAME: snmp_access
+--- squid-2.5.STABLE7/snmplib/snmp_api.c.orig	2004-12-04 12:44:06.173684192 +1100
++++ squid-2.5.STABLE7/snmplib/snmp_api.c	2004-12-04 12:44:24.644876144 +1100
+@@ -121,7 +121,7 @@
+ }
+ 
+ /*
+- * Parses the packet recieved on the input session, and places the data into
++ * Parses the packet received on the input session, and places the data into
+  * the input pdu.  length is the length of the input packet.  If any errors
+  * are encountered, NULL is returned.  If not, the community is.
+  */
+--- squid-2.5.STABLE7/src/auth/digest/auth_digest.c.orig	2004-12-04 12:44:39.407631864 +1100
++++ squid-2.5.STABLE7/src/auth/digest/auth_digest.c	2004-12-04 12:45:01.422285128 +1100
+@@ -1252,7 +1252,7 @@
+     nonce = authenticateDigestNonceFindNonce(digest_request->nonceb64);
+     if (!nonce) {
+ 	/* we couldn't find a matching nonce! */
+-	debug(29, 4) ("authenticateDigestDecode: Unexpected or invalid nonce recieved\n");
++	debug(29, 4) ("authenticateDigestDecode: Unexpected or invalid nonce received\n");
+ 	authDigestLogUsername(auth_user_request, username);
+ 
+ 	/* we don't need the scheme specific data anymore */
+@@ -1266,8 +1266,8 @@
+     /* check the qop is what we expected. Note that for compatability with 
+      * RFC 2069 we should support a missing qop. Tough. */
+     if (!digest_request->qop || strcmp(digest_request->qop, QOP_AUTH)) {
+-	/* we recieved a qop option we didn't send */
+-	debug(29, 4) ("authenticateDigestDecode: Invalid qop option recieved\n");
++	/* we received a qop option we didn't send */
++	debug(29, 4) ("authenticateDigestDecode: Invalid qop option received\n");
+ 	authDigestLogUsername(auth_user_request, username);
+ 
+ 	/* we don't need the scheme specific data anymore */
+--- squid-2.5.STABLE7/src/auth/ntlm/auth_ntlm.c.orig	2004-12-04 12:47:27.270112888 +1100
++++ squid-2.5.STABLE7/src/auth/ntlm/auth_ntlm.c	2004-12-04 12:47:41.014023496 +1100
+@@ -951,7 +951,7 @@
+     }
+     switch (ntlm_request->auth_state) {
+     case AUTHENTICATE_STATE_NONE:
+-	/* we've recieved a negotiate request. pass to a helper */
++	/* we've received a negotiate request. pass to a helper */
+ 	debug(29, 9) ("authenticateNTLMAuthenticateUser: auth state ntlm none. %s\n", proxy_auth);
+ 	ntlm_request->auth_state = AUTHENTICATE_STATE_NEGOTIATE;
+ 	ntlm_request->ntlmnegotiate = xstrdup(proxy_auth);
+@@ -970,7 +970,7 @@
+ 	return;
+ 	break;
+     case AUTHENTICATE_STATE_CHALLENGE:
+-	/* we should have recieved a NTLM challenge. pass it to the same 
++	/* we should have received a NTLM challenge. pass it to the same 
+ 	 * helper process */
+ 	debug(29, 9) ("authenticateNTLMAuthenticateUser: auth state challenge with header %s.\n", proxy_auth);
+ 	/* do a cache lookup here. If it matches it's a successful ntlm 
+--- squid-2.5.STABLE7/src/cf.data.pre.orig	2004-12-04 12:45:13.815401088 +1100
++++ squid-2.5.STABLE7/src/cf.data.pre	2004-12-04 12:45:35.480107552 +1100
+@@ -2100,7 +2100,7 @@
+ 	  # acls.
+ 
+ 	acl aclname rep_mime_type mime-type1 ...
+-	  # regex match against the mime type of the reply recieved by
++	  # regex match against the mime type of the reply received by
+ 	  # squid. Can be used to detect file download or some
+ 	  # types HTTP tunelling requests.
+ 	  # NOTE: This has no effect in http_access rules. It only has
+@@ -2396,7 +2396,7 @@
+ DOC_START
+         This option specifies the maximum size of a reply body in bytes.
+ 	It can be used to prevent users from downloading very large files,
+-	such as MP3's and movies. When the reply headers are recieved,
++	such as MP3's and movies. When the reply headers are received,
+ 	the reply_body_max_size lines are processed, and the first line with
+ 	a result of "allow" is used as the maximum body size for this reply.
+ 	This size is checked twice. First when we get the reply headers,
+@@ -2600,7 +2600,7 @@
+ DOC_START
+ 	If you are running Squid as an accelerator and have a single backend
+ 	server set this to on. This causes Squid to forward the request
+-	to this server, regardles of what any redirectors or Host headers
++	to this server, regardless of what any redirectors or Host headers
+ 	say.
+ 
+ 	Leave this at off if you have multiple backend servers, and use a
+--- squid-2.5.STABLE7/src/mib.txt.orig	2004-12-04 12:45:47.854226400 +1100
++++ squid-2.5.STABLE7/src/mib.txt	2004-12-04 12:46:06.349414704 +1100
+@@ -290,7 +290,7 @@
+                 MAX-ACCESS read-only
+                 STATUS current
+ 		DESCRIPTION
+-			" Number of HTTP KB's recieved "
++			" Number of HTTP KB's received "
+         ::= { cacheProtoAggregateStats 4 }
+ 
+         cacheHttpOutKb OBJECT-TYPE
+@@ -330,7 +330,7 @@
+                 MAX-ACCESS read-only
+                 STATUS current
+ 		DESCRIPTION
+-                        " Number of ICP KB's recieved "
++                        " Number of ICP KB's received "
+         ::= { cacheProtoAggregateStats 9 }
+ 
+         cacheServerRequests OBJECT-TYPE
+@@ -354,7 +354,7 @@
+                 MAX-ACCESS read-only
+                 STATUS current
+ 		DESCRIPTION
+-                        " KB's of traffic recieved from servers "
++                        " KB's of traffic received from servers "
+         ::= { cacheProtoAggregateStats 12 }
+ 
+         cacheServerOutKb OBJECT-TYPE
+--- squid-2.5.STABLE7/src/delay_pools.c.orig	2004-12-04 12:46:15.246062208 +1100
++++ squid-2.5.STABLE7/src/delay_pools.c	2004-12-04 12:46:25.598488400 +1100
+@@ -609,7 +609,7 @@
+ }
+ 
+ /*
+- * this records actual bytes recieved.  always recorded, even if the
++ * this records actual bytes received.  always recorded, even if the
+  * class is disabled - it's more efficient to just do it than to do all
+  * the checks.
+  */
+--- squid-2.5.STABLE7/configure.in.old	2004-12-04 12:55:24.366583200 +1100
++++ squid-2.5.STABLE7/configure.in	2004-12-04 12:56:32.863170136 +1100
+@@ -2027,7 +2027,7 @@
+ 	exit(0);
+ }
+ ],
+-SQUID_MAXFD=`cat conftestval`,
++SQUID_MAXFD=8192,
+ SQUID_MAXFD=256,
+ SQUID_MAXFD=256)
+ AC_MSG_RESULT($SQUID_MAXFD)

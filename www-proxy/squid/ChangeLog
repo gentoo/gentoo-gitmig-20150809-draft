@@ -1,6 +1,11 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.16 2004/10/18 04:55:11 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.17 2004/12/04 02:03:30 cyfred Exp $
+
+  04 Dec 2004; Andrew Bevitt <cyfred@gentoo.org>
+  -files/squid-2.5.3-gentoo.diff, files/squid-2.5.7-gentoo.diff,
+  -files/squid.cron, -squid-2.5.6-r2.ebuild, squid-2.5.6-r3.ebuild:
+  Fixing bug #68524 and removing a few old ebuilds.
 
   17 Oct 2004; Hardave Riar <hardave@gentoo.org> squid-2.5.6-r2.ebuild:
   Stable on mips, bug #61280.
