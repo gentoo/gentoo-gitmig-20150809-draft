@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.15 2004/07/20 13:08:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.16 2004/07/20 14:08:36 axxo Exp $
+
+  20 Jul 2004; Thomas Matthijs <axxo@gentoo.org> java-gnome-2.6.0.1.ebuild:
+  Fixed the zip path, thanks to Andrew Cowie <andrew@operationaldynamics.com> in
+  55345
 
   20 Jul 2004; Thomas Matthijs <axxo@gentoo.org> java-gnome-2.6.0.1.ebuild:
   Fix deps, 54882 & 54916

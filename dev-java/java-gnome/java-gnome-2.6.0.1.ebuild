@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.6.0.1.ebuild,v 1.5 2004/07/20 13:08:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.6.0.1.ebuild,v 1.6 2004/07/20 14:08:36 axxo Exp $
 
 inherit eutils
 
@@ -44,30 +44,30 @@ src_install() {
 	dodir /usr/share/java-gnome/lib
 	mv ${D}/usr/share/java-gnome/*.jar ${D}/usr/share/java-gnome/lib/
 
-	cd ${D}/atk/src/java
+	cd ${S}/atk/src/java
 	zip -r ${D}/usr/share/java-gnome/lib/gtk-${PV}.src.zip *
-	cd ${D}/gdk/src/java
+	cd ${S}/gdk/src/java
 	zip -r ${D}/usr/share/java-gnome/lib/gtk-${PV}.src.zip *
-	cd ${D}/gtk/src/java
+	cd ${S}/gtk/src/java
 	zip -r ${D}/usr/share/java-gnome/lib/gtk-${PV}.src.zip *
-	cd ${D}/glib/src/java
+	cd ${S}/glib/src/java
 	zip -r ${D}/usr/share/java-gnome/lib/gtk-${PV}.src.zip *
-	cd ${D}/pango/src/java
+	cd ${S}/pango/src/java
 	zip -r ${D}/usr/share/java-gnome/lib/gtk-${PV}.src.zip *
 
-	cd ${D}/gnome/src/java
+	cd ${S}/gnome/src/java
 	zip -r ${D}/usr/share/java-gnome/lib/gnome-${PV}.src.zip *
 
-	cd ${D}/gtkhtml/src/java
+	cd ${S}/gtkhtml/src/java
 	zip -r ${D}/usr/share/java-gnome/lib/gtkhtml-${PV}.src.zip *
 
-	cd ${D}/glade/src/java
+	cd ${S}/glade/src/java
 	zip -r ${D}/usr/share/java-gnome/lib/glade-${PV}.src.zip *
 
-	cd ${D}/gconf/src/java
+	cd ${S}/gconf/src/java
 	zip -r ${D}/usr/share/java-gnome/lib/gconf-${PV}.src.zip *
 
-	cd ${D}/vte/src/java
+	cd ${S}/vte/src/java
 	zip -r ${D}/usr/share/java-gnome/lib/gnomevte-${PV}.src.zip *
 
 	dosym /usr/share/java-gnome/lib/gnome${SLOT}-${PV}.jar /usr/share/java-gnome/lib/gnome${SLOT}.jar
