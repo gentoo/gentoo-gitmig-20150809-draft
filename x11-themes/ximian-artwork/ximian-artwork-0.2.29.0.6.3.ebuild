@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.3 2004/04/03 07:14:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.4 2004/04/09 20:24:04 tseng Exp $
 
 inherit rpm
 
@@ -48,9 +48,15 @@ src_install () {
 	rm -rf ${D}/usr/share/pixmaps/ximian
 	rm -f ${D}/usr/share/pixmaps/ximian-desktop-stripe.png
 
+	# Set up X11 implementation
+	X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
+	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+	X11_IMPLEM="${X11_IMPLEM##*\/}"
+	einfo "X11 implementation is ${X11_IMPLEM}."
+
 	# Moving cursors
-	dodir /usr/share/cursors/xfree/Industrial
-	mv ${D}/usr/share/icons/Industrial/cursors ${D}/usr/share/cursors/xfree/Industrial
+	dodir /usr/share/cursors/${X11_IMPLEM}/Industrial
+	mv ${D}/usr/share/icons/Industrial/cursors ${D}/usr/share/cursors/${X11_IMPLEM}/Industrial
 
 	# remove xmms skin if unneeded
 	[ -n "`use xmms`" ] || rm -rf ${D}/usr/share/xmms
