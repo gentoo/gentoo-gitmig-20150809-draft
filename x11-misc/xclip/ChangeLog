@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xclip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.4 2004/06/24 22:39:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.5 2004/08/04 20:06:18 lv Exp $
+
+  04 Aug 2004; Travis Tilley <lv@gentoo.org> xclip-0.08.ebuild:
+  added ~amd64 keyword
 
   01 Jun 2004; Brandon Hale <tseng@gentoo.org> xclip-0.05.ebuild,
   xclip-0.08.ebuild:
