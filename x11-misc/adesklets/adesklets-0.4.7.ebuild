@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.4.6.ebuild,v 1.2 2005/03/29 02:15:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.4.7.ebuild,v 1.1 2005/04/04 12:50:57 s4t4n Exp $
 
 DESCRIPTION="An interactive Imlib2 console for the X Window system"
 HOMEPAGE="http://adesklets.sf.net/"
