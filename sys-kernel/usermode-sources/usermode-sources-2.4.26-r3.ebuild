@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r3.ebuild,v 1.1 2004/07/09 17:29:11 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r3.ebuild,v 1.2 2004/07/15 05:28:03 agriffis Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -14,6 +14,7 @@ HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="${PV}-${PR}"
 KEYWORDS="~x86 -ppc"
+IUSE=""
 EXTRAVERSION="-uml1-${PR}"
 RESTRICT="nomirror"
 
