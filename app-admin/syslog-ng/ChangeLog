@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.24 2003/03/11 04:05:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.25 2003/03/11 13:37:04 agriffis Exp $
 
 *syslog-ng-1.6.0_rc1-r1 (10 Mar 2003)
+
+  11 Mar 2003; Aron Griffis <agriffis@gentoo.org> files/syslog-ng.conf.gentoo:
+  Minor update to default configuration; added stats(43200)
 
   10 Mar 2003; Aron Griffis <agriffis@gentoo.org>
   syslog-ng-1.6.0_rc1-r1.ebuild, files/syslog-ng.conf.gentoo,
@@ -30,22 +33,24 @@
   09 Feb 2003; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.5.26.ebuild:
   Version Bump
 
-  09 Feb 2003; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.4.16-r1.ebuild, syslog-ng-1.4.17.ebuild:
+  09 Feb 2003; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.4.16-r1.ebuild,
+  syslog-ng-1.4.17.ebuild:
   Removed message about syslog2ng script which is only found in 1.5.x
 
   21 Jan 2003; Aron Griffis <agriffis@gentoo.org> syslog-ng-1.4.16-r1.ebuild:
   Revision bump to pick up new initscript on the stable package.
 
-  21 Jan 2003; Aron Griffis <agriffis@gentoo.org> syslog-ng-1.5.24-r1.ebuild files/syslog-ng.rc6 :
+  21 Jan 2003; Aron Griffis <agriffis@gentoo.org> syslog-ng-1.5.24-r1.ebuild
+  files/syslog-ng.rc6 :
   Add a pause after stopping syslog-ng to allow it to stop, particularly in
   case it's restarting.  This is particularly important when using logrotate.
   Bumped the revision to get the new initscript installed.  Closes #14310
 
 *syslog-ng-1.5.24 (26 Dec 2002)
 
-  26 Dec 2002 Martin Holzer <mholzer@gentoo.org> syslog-ng-1.5.24.ebuild files/digest-syslog-ng-1.5.24 ChangeLog : 
+  26 Dec 2002 Martin Holzer <mholzer@gentoo.org> syslog-ng-1.5.24.ebuild
+  files/digest-syslog-ng-1.5.24 ChangeLog :
   Version Pumped. Closes #12714.
-
  
 *syslog-ng-1.4.17 (05 Nov 2002)
 
@@ -57,14 +62,13 @@
 *syslog-ng-1.4.16 (25 Oct 2002)
 
   04 Nov 2002; Seemant Kulleen <Seemant@gentoo.org> *.ebuild :
-
   Added sys-devel/flex to DEPENDS. Closes bug #10185 by lordvan@lordvan.com
   (Thomas Raschbacher)
 
   25 Oct 2002; Donny Davies <woodchip@gentoo.org> :
-  Arrgh.  This is the *stable version of syslog-ng, and according to our friends on
-  #9278, the only branch currently with working UDP/TCP support.  I've marked the
-  development versions with ~, and this one stable :/
+  Arrgh.  This is the *stable version of syslog-ng, and according to our
+  friends on #9278, the only branch currently with working UDP/TCP support.
+  I've marked the development versions with ~, and this one stable :/
 
 *syslog-ng-1.5.22 (23 Oct 2002)
 
@@ -74,28 +78,26 @@
 *syslog-ng-1.5.21 (12 Oct 2002)
 
   12 Oct 2002; Seemant Kulleen <seemant@gentoo.org> syslog-ng-1.5.21.ebuild :
-
   Works on sparcs
 
-  12 Oct 2002; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.5.21.ebuild, files/syslog-ng.conf.sample:
+  12 Oct 2002; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.5.21.ebuild,
+  files/syslog-ng.conf.sample:
   Version bump and older versions removed due to security issue.  "kernsrc"
   line in example configuration file fixed. (Bugs #7951 and #7996)
 
 *syslog-ng-1.5.19 (17 Aug 2002)
 
   14 Sep 2002; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.5.19.ebuild:
-
   Fixed bug introduced with previous fix (#7757)
 
   17 Aug 2002; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.5.19.ebuild:
-
   Updated ebuild contributed by mw@teamzone.de (Markus Wagner) plus
   -lwrap buglet fix
   
 *syslog-ng-1.5.17 (21 May 2002)
 
-  14 Aug 2002; Jack Morgan <jmorgan@gentoo.org> syslog-ng-1.5.17.ebuild
-  14 Aug 2002; Jack Morgan <jmorgan@gentoo.org> syslog-ng-1.4.15.ebuild
+  14 Aug 2002; Jack Morgan <jmorgan@gentoo.org> syslog-ng-1.4.15.ebuild,
+  syslog-ng-1.5.17.ebuild:
   Added sparc64 to KEYWORDS.
 
 *syslog-ng-1.5.17 (21 May 2002)
@@ -124,7 +126,6 @@
 *syslog-ng-1.4.12-r7 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

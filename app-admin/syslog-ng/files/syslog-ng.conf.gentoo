@@ -1,10 +1,19 @@
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo,v 1.1 2003/03/11 04:05:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo,v 1.2 2003/03/11 13:37:04 agriffis Exp $
 #
 # Syslog-ng default configuration file for Gentoo Linux
 # contributed by Michael Sterrett
 #
 
-options { long_hostnames(off); sync(0); };
+options { 
+	long_hostnames(off); 
+	sync(0); 
+
+	# The default action of syslog-ng 1.6.0 is to log a STATS line
+	# to the file every 10 minutes.  That's pretty ugly after a while.
+	# Change it to every 12 hours so you get a nice daily update of
+	# how many messages syslog-ng missed (0).
+	stats(43200); 
+};
 
 source src { unix-stream("/dev/log"); internal(); pipe("/proc/kmsg"); };
 
