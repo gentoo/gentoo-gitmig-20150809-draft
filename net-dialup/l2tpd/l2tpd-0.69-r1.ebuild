@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.69-r1.ebuild,v 1.2 2004/02/11 20:18:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.69-r1.ebuild,v 1.3 2004/04/27 21:38:37 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Layer 2 Tunnelling Protocol Daemon"
 HOMEPAGE="http://www.l2tpd.org/"

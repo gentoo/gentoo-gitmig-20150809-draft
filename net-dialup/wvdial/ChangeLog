@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.16 2004/03/19 11:30:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.17 2004/04/27 21:44:16 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> wvdial-1.54.0.ebuild:
+  Add inherit eutils
 
   19 Mar 2004; Heinrich Wendel <lanius@gentoo.org> wvdial-1.54.0.ebuild:
   fix ppp depend

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3-r1.ebuild,v 1.1 2004/04/03 13:20:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3-r1.ebuild,v 1.2 2004/04/27 21:33:48 agriffis Exp $
+
+inherit eutils
 
 IUSE="snmp mysql postgres ldap kerberos ssl pam"
 

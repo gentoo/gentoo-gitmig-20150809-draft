@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.5 2004/03/06 13:17:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.6 2004/04/27 21:43:31 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> slmodem-2.7.14.ebuild:
+  Add inherit eutils
 
   06 Mar 2004; Heinrich Wendel <lanius@gentoo.org> files/slmodem-2.7.modules:
   fix modules.d file (bug #40834)

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r1.ebuild,v 1.3 2004/04/13 23:05:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r1.ebuild,v 1.4 2004/04/27 21:44:56 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="unix dialout program"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/"

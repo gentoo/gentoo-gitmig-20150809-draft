@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.14 2004/02/17 21:59:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.15 2004/04/27 21:39:55 agriffis Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Fax and Voice modem programs."
