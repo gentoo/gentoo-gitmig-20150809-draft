@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0525c5c8d3fd65e0991b5bddac1b7c85 ChangeLog 416
+MD5 abfc59146132135843b91939e2285c37 ChangeLog 518
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 228bc5460bb87663f01a000bd295724b ruby-gd-0.7.4.ebuild 1099
+MD5 a484b17a6973314fb420b5c0525ce11d ruby-gd-0.7.4.ebuild 1107
 MD5 68c7b3e0c3a057b71588d7c820ec0985 files/digest-ruby-gd-0.7.4 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4vaZHTu7gpaalycRArnmAKCh2YnFLBtQlR+ISA0u7nW3nY44jgCdGwbx
-+qvh5f/lKLP+pYBWuUHN/Wk=
-=naoK
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 625936ec50eb061cba60f2447818748d ChangeLog 672
+MD5 f5179ae3090987c2b197734db27797e3 ChangeLog 784
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 667d785b5ea89b04a5d3903a9a32878a ruby-gdchart-0.0.9_beta.ebuild 828
+MD5 5a365b113fd026ecff19618dbba8987b ruby-gdchart-0.0.9_beta.ebuild 836
 MD5 820dabccf812f6ee48883b5a9e77ba16 files/digest-ruby-gdchart-0.0.9_beta 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4vZ+HTu7gpaalycRAhZNAJ444TXt6o4JRIGVeyr4hUhbO8mktwCg0bsi
-r7/EJ7M27MZCDn+2Qpv0/9I=
-=dD7j
------END PGP SIGNATURE-----
