@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.216 2004/04/26 17:49:45 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.217 2004/04/26 18:29:41 lv Exp $
+
+  26 Apr 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0.ebuild:
+  changed mips default arch settings so that march defaults to r4k and not
+  mips3. also removed default mtune setting. thanks for the heads up geoman
 
 *gcc-3.4.0 (26 Apr 2004)
 
