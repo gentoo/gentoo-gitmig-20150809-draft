@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-0.7.1.ebuild,v 1.7 2002/08/16 02:42:02 murphy Exp $
-
-
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-0.7.1.ebuild,v 1.8 2002/10/04 20:51:14 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="tool for convertion of MSWord doc and rtf files to something readable"
