@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.5 2003/09/05 23:40:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.6 2004/06/15 21:56:48 squinky86 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86"
 
-# -lbpft/*своя*/ -lpcap -lcurses -ltermcap -lfl
+# -lbpft -lpcap -lcurses -ltermcap -lfl
 DEPEND="net-libs/libpcap
 	sys-libs/ncurses
 	sys-devel/flex"
@@ -27,8 +27,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${PATCHDIR}/${PF}-gentoo.diff
 
-	mv Makefile Makefile.orig
-	sed "44s:-O2$:${CFLAGS}:" Makefile.orig >Makefile
+	sed -i "44s:-O2$:${CFLAGS}:; 52s:^INCLUDE.*:& -I../../tcpdump-richard-1.7/libpcap-0.0/bpf/:" Makefile
 }
 
 src_install () {
