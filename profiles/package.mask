@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <wolf31o2@gentoo.org> (14 Sep 2003)
+# masking enemy-territory until contact is made with id
+games-fps/enemy-territory
+
 # <caleb@gentoo.org> (10 Sep 2003)
 # new kde versions mask
 =kde-base/kdelibs-3.2.0_alpha1
