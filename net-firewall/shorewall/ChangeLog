@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.40 2004/07/01 12:04:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.41 2004/07/01 23:37:44 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  shorewall-1.4.10b.ebuild, shorewall-1.4.10c.ebuild,
+  shorewall-1.4.10f.ebuild, shorewall-1.4.5-r1.ebuild,
+  shorewall-2.0.3a.ebuild:
+  virtual/glibc -> virtual/libc
 
 *shorewall-2.0.3a (01 Jul 2004)
 
