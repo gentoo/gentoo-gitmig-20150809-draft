@@ -132,8 +132,6 @@
 *sys-apps/iproute2
 #not required, since glibc depends on linux-headers and they come with the build image
 *sys-kernel/linux-headers
-#lesser versions are not rc6 compatible
 >=sys-apps/xinetd-2.3.3-r1
-#lesser versions are not rc6 compatible
->=net-fs/samba-2.2.1a-r1
+>=net-fs/samba-2.2.1a-r6
 
