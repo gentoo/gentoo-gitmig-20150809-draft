@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r4.ebuild,v 1.3 2003/12/07 11:47:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r4.ebuild,v 1.4 2003/12/23 20:28:22 lanius Exp $
 
 IUSE="gpm nls samba ncurses X slang"
 
@@ -89,7 +89,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Add the following line to your ~/.bashrc to"
-	einfo "allow mc to chdir to it's latest working dir at exit"
+	einfo "allow mc to chdir to its latest working dir at exit"
 	einfo ""
 	einfo "# Midnight Commander chdir enhancement"
 	einfo "if [ -f /usr/share/mc/mc.gentoo ]; then"
