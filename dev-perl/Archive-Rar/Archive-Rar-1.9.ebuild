@@ -9,7 +9,8 @@ DESCRIPTION="Archive::Rar - Interface with the rar command"
 SRC_URI="http://www.cpan.org/modules/by-module/Archive/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Acrhive/${P}.readme"
 
-
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 ~ppc ~sparc ~sparc64 ~alpha"
+
+DEPEND="${DEPEND}"
