@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.4 2004/05/28 15:40:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.5 2004/06/19 12:59:29 dholm Exp $
 
 inherit kde java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/systray/${P}-kde3-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE="jikes"
 
 DEPEND="=kde-base/kdelibs-3*
