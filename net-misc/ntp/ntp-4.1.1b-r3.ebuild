@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r3.ebuild,v 1.2 2003/01/02 03:00:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r3.ebuild,v 1.3 2003/01/06 18:12:33 bjb Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${A} ; cd ${S}
 	epatch ${FILESDIR}/ntp-bk.diff
 	epatch ${FILESDIR}/linux-config-phone.patch
+	use alpha && epatch ${FILESDIR}/ntp-4.1.1b-syscall-libc.patch
 	aclocal -I . || die
 	automake || die
 	autoconf || die
