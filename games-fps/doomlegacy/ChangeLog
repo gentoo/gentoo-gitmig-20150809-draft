@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doomlegacy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/ChangeLog,v 1.3 2003/10/11 05:15:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/ChangeLog,v 1.4 2003/10/14 04:03:56 vapier Exp $
+
+*doomlegacy-1.41-r1 (13 Oct 2003)
+
+  13 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Fix typo in sed script and fix legacy.dat mirroring.
 
 *doomlegacy-1.41 (11 Oct 2003)
 
