@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.5.ebuild,v 1.1 2004/02/15 16:12:33 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.5.ebuild,v 1.2 2004/02/19 05:56:55 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -48,6 +48,7 @@ RDEPEND="virtual/x11
 
 DEPEND="${RDEPEND}
 	virtual/glibc
+	dev-util/pkgconfig
 	dev-lang/perl"
 
 # needed by src_compile() and src_install()
