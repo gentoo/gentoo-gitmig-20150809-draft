@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ -z "$1" ] 
+then 
+	z=${D}usr/lib
+else 
+	z=${D}$1/lib
+fi
+
+ldconfig -n -N ${z}
+
+
+

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+
+if [ -n "${DEBUG}" ]
+then
+	exit
+fi	
+echo "test:"
+z=`find ${D} -perm +444 -type f`
+
+for x in $z
+do
+   f=`file $x`
+   if [ "${f/*LSB executable*/1}" == "1"  ]
+   then
+	echo $x
+	strip ${x}
+   fi
+   if [ "${f/*LSB shared object*/1}" == "1" ]
+   then
+	echo $x
+	strip ${x}
+   fi
+done
+
+
+
+
+
+
+
+
+
+
+
+
