@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/libgringotts-1.1.2.ebuild,v 1.8 2004/06/28 20:01:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/libgringotts-1.1.2.ebuild,v 1.9 2004/10/05 11:44:00 pvdabeel Exp $
 
 DESCRIPTION="Needed by Gringotts"
 HOMEPAGE="http://devel.pluto.linux.it/projects/libGringotts/index.php"
@@ -8,7 +8,7 @@ SRC_URI="http://devel.pluto.linux.it/projects/libGringotts/current/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND=">=dev-libs/libmcrypt-2.4.21
