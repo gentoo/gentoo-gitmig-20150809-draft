@@ -9,6 +9,9 @@
  
 *t1lib-1.3.1 (1 May 2002)
 
+  28 Apr 2003; Martin Holzer <mholzer@gentoo.org> t1lib-1.3.1.ebuild:
+  Pointing SRC_URI to mirror://gentoo.
+
   20 Mar 2003; Guy Martin <gmsoft@gentoo.org> t1lib-1.3.1.ebuild :
   Added hppa to KEYWORDS.
 
