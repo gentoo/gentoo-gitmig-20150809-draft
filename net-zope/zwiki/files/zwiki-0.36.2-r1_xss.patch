@@ -1,0 +1,11 @@
+--- content/basic/standard_error_message.dtml.original        Fri Nov 26 09:17:22 2004
++++ content/basic/standard_error_message.dtml Fri Nov 26 09:17:55 2004
+@@ -29,7 +29,7 @@
+   <body>
+     <p>
+       I could not find any likely page matching 
+-      "<b><dtml-var "here.urlunquote(searchexpr)"></b>"
++      "<b><dtml-var "here.urlunquote(searchexpr)" html_quote></b>"
+     </p>
+     <p>
+       Click here to 
