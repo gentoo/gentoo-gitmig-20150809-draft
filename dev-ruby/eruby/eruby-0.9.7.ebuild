@@ -2,12 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintaner: Tools Team <tools@gentoo.org>
 # Author: Tuurlijk! <ebuilder@tuurlijk.eu.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-0.9.7.ebuild,v 1.2 2002/03/17 15:11:24 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-0.9.7.ebuild,v 1.3 2002/07/08 01:49:22 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="eRuby interprets a Ruby code embedded text file."
 SRC_URI="http://www.modruby.net/archive/eruby-${PV}.tar.gz"
 HOMEPAGE="http://www.modruby.net"
+LICENSE="GPL-2/LGPL-2.1"
+KEYWORDS="x86"
+SLOT="0"
 
 DEPEND="virtual/glibc
 	>=dev-lang/ruby-1.6.1"

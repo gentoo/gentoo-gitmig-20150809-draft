@@ -2,12 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Tuurlijk! <ebuilder@tuurlijk.eu.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.1 2002/03/10 23:01:11 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.2 2002/07/08 01:52:37 agriffis Exp $
 
 S=${WORKDIR}/mod_ruby-${PV}
 DESCRIPTION="A Ruby Module for Apache"
 SRC_URI="http://www.modruby.net/archive/mod_ruby-${PV}.tar.gz"
 HOMEPAGE="http://www.modruby.net"
+LICENSE="GPL-2/LGPL-2.1"
+KEYWORDS="x86"
+SLOT="0"
 
 DEPEND="virtual/glibc
 	>=net-www/apache-1.3
