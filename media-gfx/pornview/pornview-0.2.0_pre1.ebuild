@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.11 2004/09/06 00:06:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.12 2005/03/16 22:41:15 hansmi Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="media-libs/libpng
 	nls? ( sys-devel/gettext )"
 
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="x86 ppc amd64 ~sparc"
 SRC_URI="mirror://sourceforge/${PN}/${P/_/}.tar.gz"
 RESTRICT="nomirror"
 
