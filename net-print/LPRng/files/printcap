@@ -1,7 +1,7 @@
-# /etc/printcap: printer capability database. See printcap(5).
-# You can use the filter entries df, tf, cf, gf etc. for
-# your own filters. See the printcap(5) manual page for further 
-# details.
+# /etc/printcap: printer capability database.
+#
+# You can use the filter entries df, tf, cf, gf etc. for your
+# own filters. See the printcap(5) manpage for more details.
 
 lp|Generic dot-matrix printer entry
         :lp=/dev/lp1
