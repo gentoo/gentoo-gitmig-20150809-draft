@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Ben Lutgens <lamer@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.62.1-r2.ebuild,v 1.3 2002/04/13 00:47:14 seemant Exp
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0_alpha2-r1.ebuild,v 1.2 2002/04/27 23:34:21 bangert Exp $
 
 #Needed to change ${P} to match actual tarball version name.
 #It is an invalid ebuild name. Much simpler this way.

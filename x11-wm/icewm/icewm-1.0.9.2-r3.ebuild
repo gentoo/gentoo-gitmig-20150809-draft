@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.5.2.ebuild,v 1.4 2001/11/25 02:40:12 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.0.9.2-r3.ebuild,v 1.2 2002/04/27 23:34:21 bangert Exp $
 
 NV=1.0.9-2
 S=${WORKDIR}/icewm-1.0.9

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: George Shapovalov <georges@its.caltech.edu>
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/selectwm-0.3.ebuild,v 1.2 2002/04/27 23:34:21 bangert Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="window manager selector tool"
