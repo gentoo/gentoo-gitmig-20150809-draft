@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/emacs/emacs-20.7.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/emacs"
         RDEPEND=">=sys-libs/ncurses-4.0
          >=sys-libs/glibc-2.0
-         !app-editors/emacs-nogui
+         !app-editors/emacs-x11
          !app-editors/emacs-motif"
 
 DEPEND=">=sys-libs/ncurses-4.0
