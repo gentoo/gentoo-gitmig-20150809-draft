@@ -144,10 +144,6 @@ sys-apps/coreutils
 # package compiles fine then doesnt run ...
 app-games/xboing
 
-# <danarmak@gentoo.org> (25 Feb 2003)
-# badly broken here - masking until resolved
-=dev-util/ccache-2.1.1-r2
-
 # <azarah@gentoo.org> (24 Feb 2003)
 # This one is a fix that I did not think about
 # and could be a security hole.
