@@ -1,9 +1,19 @@
-MD5 53caf8a9bb600a2e32f5a9eaba20be43 ChangeLog 3189
-MD5 aa68098e11a7ddf0e04c3ec92fd338cb libgnomemm-2.0.0-r1.ebuild 733
-MD5 fe41b9112b508c93af46f446c9179db5 libgnomemm-2.0.1.ebuild 700
-MD5 9930d609eba7d348cda3a719a782341b libgnomemm-2.6.0.ebuild 663
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ca639a6192542038ffe702e3549787fb ChangeLog 3286
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 aa68098e11a7ddf0e04c3ec92fd338cb libgnomemm-2.0.0-r1.ebuild 733
+MD5 128a5341c8f828ec61cc78df52ee618c libgnomemm-2.0.1.ebuild 705
+MD5 9930d609eba7d348cda3a719a782341b libgnomemm-2.6.0.ebuild 663
 MD5 24c2db8638fe53dba09a9a20ca0844e9 files/digest-libgnomemm-2.0.0-r1 68
 MD5 18cc8e18bd644eca9920325ea0147cd7 files/digest-libgnomemm-2.0.1 69
-MD5 a4d6f8f16b66a52e759a36889b37a078 files/digest-libgnomemm-2.6.0 69
 MD5 2d32d65a8f8c930689fc0c23f769946e files/libgnomemm-2.0.0-pkgconfig.patch 1083
+MD5 a4d6f8f16b66a52e759a36889b37a078 files/digest-libgnomemm-2.6.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfBxhugEuf3OQ0akRAtcrAJ9QJepCBh90T6RwJA9vq8bKdiWniACggIuS
+AfA/a8n2jkHbWRtLpd5BdhE=
+=F5CI
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgnomemm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.21 2004/07/15 19:31:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.22 2004/10/24 19:18:58 kloeri Exp $
+
+  24 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  libgnomemm-2.0.1.ebuild:
+  ~alpha keyword.
 
   15 Jul 2004; Gustavo Zacarias <gustavoz@gentoo.org> libgnomemm-2.0.1.ebuild:
   Stable on sparc
