@@ -968,10 +968,6 @@ net-mail/spamassassin
 # maintainership.
 =dev-ruby/ruby-libglade-1.2
 
-# aliz@gentoo.org 09 Jul 2002
-# sys-apps/util-linux/util-linux-2.11r-r1 masked for testing
-=sys-apps/util-linux-2.11r-r1
-
 # raker@gentoo.org 10 Jul 2002
 # postfix-1.1.11-r3.ebuild provided by Alexander Holler (NMU) Please test!
 >=net-mail/postfix-1.1.11-r2
