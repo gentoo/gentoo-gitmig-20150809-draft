@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.22.2.ebuild,v 1.3 2003/06/18 19:21:18 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.26.0.ebuild,v 1.1 2003/07/24 20:39:48 pauldv Exp $
 
 inherit libtool
 
+DB_VERSION="4.0.14"
 DESCRIPTION="A compelling replacement for CVS"
-SRC_URI="http://www.sleepycat.com/update/snapshot/db-4.0.14.tar.gz
-	http://subversion.tigris.org/files/documents/15/4097/${P}.tar.gz"
+SRC_URI="berkdb? ( http://www.sleepycat.com/update/snapshot/db-${DB_VERSION}.tar.gz )
+	http://subversion.tigris.org/files/documents/15/5322/${PN}-${PV}.tar.gz"
 HOMEPAGE="http://subversion.tigris.org/"
 
 SLOT="0"
@@ -14,7 +15,20 @@ LICENSE="Apache-1.1"
 KEYWORDS="~x86 ~ppc"
 IUSE="ssl apache2 berkdb python"
 
-S_DB="${WORKDIR}/db-4.0.14/build_unix"
+S=${WORKDIR}/${PN}-${PV}
+
+if [ "${SVN_REPOS_LOC}x" = "x" ]; then
+	SVN_REPOS_LOC="/home/svn"
+fi
+
+#
+#
+# Note that to disable the server part of subversion you need to specify
+# USE="-berkdb" emerge subversion.
+#
+#
+
+S_DB="${WORKDIR}/db-${DB_VERSION}/build_unix"
 
 DEPEND="python? ( >=dev-lang/python-2.0 )
 	>=sys-apps/diffutils-2.7.7
@@ -45,16 +59,16 @@ pkg_setup() {
 	
 src_unpack() {
 	cd ${WORKDIR}
-	unpack ${P}.tar.gz
+	unpack ${PN}-${PV}.tar.gz
 	use berkdb && ( has_version =db-4* || (
-		unpack db-4.0.14.tar.gz
+		unpack db-${DB_VERSION}.tar.gz
 	) )
 	cd ${S}
+	elibtoolize ${S}
 }
 
 src_compile() {
 	local myconf
-	elibtoolize
 	use berkdb && ( has_version =db-4* || (
 		cd ${S_DB}
 		../dist/configure \
@@ -101,12 +115,21 @@ EOF
 	use python || myconf="${myconf} --without-python --without-swig"
 
 	echo "myconf=${myconf}"
-	LDFLAGS=${LDFLAGS} econf ${myconf} \
+	econf ${myconf} \
 		--with-neon=/usr \
 		--disable-experimental-libtool \
 		--disable-mod-activation ||die "configuration failed"
+
+
 	# build subversion, but do it in a way that is safe for paralel builds
-	( emake LT_LDFLAGS="-L${D}/usr/lib" external-all && emake LT_LDFLAGS="-L${D}/usr/lib" local-all ) || die "make of subversion failed"
+	# Also apparently the included apr does have a libtool that doesn't like
+	# -L flags. So not specifying it at all when not building apache modules
+	# and only specify it for internal parts otherwise
+	if use apache2; then
+		( emake external-all && emake LT_LDFLAGS="-L${D}/usr/lib" local-all ) || die "make of subversion failed"
+	else
+		( emake external-all && emake local-all ) || die "make of subversion failed"
+	fi
 
 	#building fails without the apache apr-util as includes are wrong.
 	#Also the python bindings do not work without db installed
@@ -148,23 +171,25 @@ src_install () {
 			mkdir -p ${D}/usr/lib/python2.2/site-packages
 			cp -r tools/cvs2svn/rcsparse ${D}/usr/lib/python2.2/site-packages
 			mv ${D}/usr/lib/svn-python/svn ${D}/usr/lib/python2.2/site-packages
+			mv ${D}/usr/lib/svn-python/libsvn ${D}/usr/lib/python2.2/site-packages
 			rmdir ${D}/usr/lib/svn-python
 		fi
 	fi
 
 	dodoc BUGS COMMITTERS COPYING HACKING IDEAS INSTALL PORTING README
+	dodoc CHANGES
 	dodoc tools/xslt/svnindex.css tools/xslt/svnindex.xsl
 
 	# install documentation
-	cd notes
-	for f in *.txt
+	docinto notes
+	for f in notes/*
 	do
-		dodoc ${f}
+		[ -f ${f} ] && dodoc ${f}
 	done
 	cd ${S}
 	echo "installing html book"
 	dohtml -r doc/book/book/book.html doc/book/book/styles.css doc/book/book/images
-	if use apache; then
+	if use apache2; then
 		mkdir -p ${D}/etc/apache2/conf/modules.d
 		cat <<EOF >${D}/etc/apache2/conf/modules.d/47_mod_dav_svn.conf
 <IfDefine SVN>
@@ -173,10 +198,10 @@ src_install () {
   </IfModule>
   <Location /svn/repos>
     DAV svn
-    SVNPath /home/svn/repos
+    SVNPath ${SVN_REPOS_LOC}/repos
     AuthType Basic
     AuthName "Subversion repository"
-    AuthUserFile /home/svn/conf/svnusers
+    AuthUserFile ${SVN_REPOS_LOC}/conf/svnusers
     Require valid-user
   </Location>
 </IfDefine>
@@ -186,16 +211,21 @@ EOF
 
 pkg_postinst() {
 	if use berkdb; then
-		if use apache; then
+		if use apache2; then
 			einfo "Subversion has multiple server types. To enable the http based version"
 			einfo "you must edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
 			einfo ""
 		fi
 		einfo "A repository needs to be created using the ebuild ${PN} config command"
-		if use apache; then
+		if has_version =sys-libs/db-4*; then
+			einfo "If you upgraded from an older version of berkely db and experience"
+			einfo "problems with your repository then run the following command:"
+			einfo "    su apache -c \"db4_recover -h /path/to/repos\""
+		fi
+		if use apache2; then
 			einfo "To allow web access a htpasswd file needs to be created using the"
 			einfo "following command:"
-			einfo "   htpasswd2 -m -c /home/svn/conf/svnusers USERNAME"
+			einfo "   htpasswd2 -m -c ${SVN_REPOS_LOC}/conf/svnusers USERNAME"
 		fi
 	else
 		einfo "Your subversion is client only as the server is only build when"
@@ -207,19 +237,19 @@ pkg_config() {
 	if [ ! -x /usr/bin/svnadmin ]; then
 		die "You seem to only have build the subversion client"
 	fi
-	einfo ">>> Initializing the database ..."
-	if [ -f /home/svn/repos ] ; then
+	einfo ">>> Initializing the database in ${SVN_REPOS_LOC}..."
+	if [ -f ${SVN_REPOS_LOC}/repos ] ; then
         echo "A subversion repository already exists and I will not overwrite it."
-		echo "Delete /home/svn/repos first if you're sure you want to have a clean version."
+		echo "Delete ${SVN_REPOS_LOC}/repos first if you're sure you want to have a clean version."
 	else
-		mkdir -p /home/svn
+		mkdir -p ${SVN_REPOS_LOC}
 		einfo ">>> Populating repository directory ..."
 		# create initial repository
-		/usr/bin/svnadmin create /home/svn/repos
+		/usr/bin/svnadmin create ${SVN_REPOS_LOC}/repos
 
 		einfo ">>> Setting repository permissions ..."
-		chown -Rf apache.apache /home/svn/repos
-		chmod -Rf 755 /home/svn/repos
+		chown -Rf apache.apache ${SVN_REPOS_LOC}/repos
+		chmod -Rf 755 ${SVN_REPOS_LOC}/repos
 	fi
 }
 
