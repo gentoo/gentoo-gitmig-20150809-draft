@@ -1,13 +1,14 @@
 # ChangeLog for x11-themes/sawfish-themes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/ChangeLog,v 1.1 2002/06/29 10:06:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/ChangeLog,v 1.2 2002/06/29 10:07:26 seemant Exp $
 
 *sawfish-themes-0.0.1-r3 (29 Jun 2002)
 
   29 Jun 2002; Seemant Kulleen <seemant@gentoo.org> sawfish-themes-0.0.1-r3
   files/digest-sawfish-themes-0.0.1-r3 ChangeLog :
 
-  Relocated from x11-wm.  New themes reflect freshmeat's site
+  Relocated from x11-wm.  New themes reflect freshmeat's site -- thanks to
+  gentoo@kapcoweb.com (Leonardo Boshell) in bug #1921
 
 *sawfish-themes-0.0.1-r1 (1 Feb 2002)
 
