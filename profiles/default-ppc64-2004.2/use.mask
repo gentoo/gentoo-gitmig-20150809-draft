@@ -9,6 +9,7 @@ avi
 emacs
 icc
 icc-pgo
+krb4
 mmx
 ruby
 svga
@@ -22,11 +23,6 @@ firebird
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
-
-# Paul de Vrieze <pauldv@gentoo.org>
-# There is no java in this profile (if there is it must be available). Without
-# this repoman will fail on apps like sys-libs/db
-java
 
 media-sound/alsa-driver
 uclibc
