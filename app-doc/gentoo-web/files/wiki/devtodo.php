@@ -26,7 +26,7 @@
 <?php
 		$result = mysql_query( "select * from todos where owner=$devid order by priority desc,date" );
 		while ( $todo = mysql_fetch_array($result) ) {
-			if ( $todo['priority'] == 0 ) continue;
+			if ( $todo['priority'] == 0 || $todo['public'] == 1 ) continue;
 			if ( $todo['priority'] == 1 ) {
 				$priority = 'low';
 			} elseif ( $todo['priority'] == 2 ) {
@@ -37,9 +37,9 @@
 			$fupcount = mysql_query( 'select fid from followups where tid='.$todo['tid'] );
 			$fupcount = mysql_num_rows( $fupcount );
 
-			$flagimgs = '';
-			if ( $todo['public'] == 1 )
-				$flagimgs = '<img src="images/public.gif" width=16 height=16 alt="public">';
+			#$flagimgs = '';
+			#if ( $todo['public'] == 1 )
+			#	$flagimgs = '<img src="images/public.gif" width=16 height=16 alt="public">';
 ?>
 <tr>
 	<td><img src="images/<?=$priority;?>.gif" alt="<?=$priority;?>"></td>
