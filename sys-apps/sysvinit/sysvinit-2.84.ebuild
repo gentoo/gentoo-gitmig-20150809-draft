@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.84.ebuild,v 1.4 2004/07/05 18:52:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.84.ebuild,v 1.5 2004/08/12 03:05:21 vapier Exp $
 
 inherit eutils
 
@@ -67,7 +67,7 @@ src_install() {
 
 	# Add serial console for arches that typically have it
 	case ${ARCH} in
-		sparc|mips|hppa|alpha|ia64)
+		sparc|mips|hppa|alpha|ia64|arm)
 			sed -i -e \
 				's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100\n\n&"' \
 				${D}/etc/inittab || die
