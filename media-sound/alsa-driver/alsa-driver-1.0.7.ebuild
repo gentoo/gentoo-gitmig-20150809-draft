@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.8 2004/11/21 07:02:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.9 2004/11/21 23:07:53 eradicator Exp $
 
 IUSE="oss doc"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="${KV}"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc -sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 
 RDEPEND="virtual/modutils
 	 ~media-sound/alsa-headers-${PV}"
@@ -66,6 +66,9 @@ src_unpack() {
 		# SUBDIRS -> M
 		epatch ${FILESDIR}/${PN}-1.0.6a-kbuild.patch
 	fi
+
+	# Fix ioctl32 support
+	epatch ${FILESDIR}/${P}-ioctl32.patch
 
 	# Fix order of configure operations so the kernel compiler isn't used
 	# for tests.
@@ -122,6 +125,9 @@ src_install() {
 	if use doc; then
 		docinto doc
 		dodoc doc/*
+
+		docinto DocBook
+		dodoc doc/DocBook/*
 
 		docinto Documentation
 		dodoc sound/Documentation/*

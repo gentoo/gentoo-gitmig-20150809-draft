@@ -1,0 +1,329 @@
+diff -Naur alsa-driver-1.0.7.orig/sound/core/ioctl32/hwdep32.c alsa-driver-1.0.7/sound/core/ioctl32/hwdep32.c
+--- alsa-driver-1.0.7.orig/sound/core/ioctl32/hwdep32.c	2004-10-18 07:55:51.000000000 -0700
++++ alsa-driver-1.0.7/sound/core/ioctl32/hwdep32.c	2004-11-21 15:03:41.306477719 -0800
+@@ -39,20 +39,26 @@
+ 	struct sndrv_hwdep_dsp_image data;
+ 	struct sndrv_hwdep_dsp_image32 data32;
+ 	mm_segment_t oldseg;
+-	int err;
++	int err = 0;
+ 
+-	if (copy_from_user(&data32, (void __user *)arg, sizeof(data32)))
++	if (copy_from_user(&data32, (void __user *)arg, sizeof(data32))) {
+ 		return -EFAULT;
++	}
+ 	memset(&data, 0, sizeof(data));
+ 	data.index = data32.index;
+ 	memcpy(data.name, data32.name, sizeof(data.name));
+-	data.image = compat_ptr(data32.image);
++	data.image = kmalloc(data32.length, GFP_KERNEL);
++	if (data.image == NULL) {
++		return -ENOMEM;
++	}
+ 	data.length = data32.length;
+ 	data.driver_data = data32.driver_data;
+ 	oldseg = get_fs();
+ 	set_fs(KERNEL_DS);
+ 	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)&data);
+ 	set_fs(oldseg);
++
++	kfree(data.image);
+ 	return err;
+ }
+ 
+diff -Naur alsa-driver-1.0.7.orig/sound/core/ioctl32/ioctl32.c alsa-driver-1.0.7/sound/core/ioctl32/ioctl32.c
+--- alsa-driver-1.0.7.orig/sound/core/ioctl32/ioctl32.c	2004-10-18 07:55:51.000000000 -0700
++++ alsa-driver-1.0.7/sound/core/ioctl32/ioctl32.c	2004-11-21 15:03:41.299478783 -0800
+@@ -93,45 +93,54 @@
+ 	unsigned char reserved[50];
+ } /* don't set packed attribute here */;
+ 
+-#define CVT_sndrv_ctl_elem_list()\
+-{\
+-	COPY(offset);\
+-	COPY(space);\
+-	COPY(used);\
+-	COPY(count);\
+-	CPTR(pids);\
+-}
+-
+ static inline int _snd_ioctl32_ctl_elem_list(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
+ {
+ 	struct sndrv_ctl_elem_list32 data32;
+ 	struct sndrv_ctl_elem_list data;
+ 	mm_segment_t oldseg;
+-	int err;
++	int err = 0;
+ 
+ 	if (copy_from_user(&data32, (void __user *)arg, sizeof(data32)))
+ 		return -EFAULT;
+ 	memset(&data, 0, sizeof(data));
++
++	/* Copy over W data */
+ 	data.offset = data32.offset;
+ 	data.space = data32.space;
+-	data.used = data32.used;
+-	data.count = data32.count;
+-	data.pids = compat_ptr(data32.pids);
++
++	data.pids = kmalloc(sizeof(*data.pids) * data.space, GFP_KERNEL);
++	if (data.pids == NULL) {
++		err = -ENOMEM;
++		goto __list_end;
++	}
++
++	/* ioctl call */
+ 	oldseg = get_fs();
+ 	set_fs(KERNEL_DS);
+ 	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)&data);
+ 	set_fs(oldseg);
++
+ 	if (err < 0)
+-		return err;
++		goto __list_end;
++
+ 	/* copy the result */
+-	data32.offset = data.offset;
+-	data32.space = data.space;
+ 	data32.used = data.used;
+ 	data32.count = data.count;
+-	//data.pids = data.pids;
++
++	if (data.used > 0 && 
++	    copy_to_user((void __user *)compat_ptr(data32.pids), data.pids, sizeof(*data.pids) * data.used)) {
++		err = -EFAULT;
++		goto __list_end;
++	}
++
+ 	if (copy_to_user((void __user *)arg, &data32, sizeof(data32)))
+-		return -EFAULT;
+-	return 0;
++		err = -EFAULT;
++
++__list_end:
++	if (data.pids) {
++		kfree(data.pids);
++	}
++	return err;
+ }
+ 
+ DEFINE_ALSA_IOCTL_ENTRY(ctl_elem_list, ctl_elem_list, SNDRV_CTL_IOCTL_ELEM_LIST);
+@@ -298,8 +307,21 @@
+ 	memset(data, 0, sizeof(*data));
+ 	data->id = data32->id;
+ 	data->indirect = data32->indirect;
+-	if (data->indirect) /* FIXME: this is not correct for long arrays */
++	if (data->indirect) { /* FIXME: this is not correct for long arrays */
++#if defined(__sparc__)
++		err = -EINVAL;
++		goto __end;
++
++	/* Is this the correct way to handle indirect? */
++		data->value.integer.value_ptr = kmalloc(sizeof(u32), GFP_KERNEL);
++		if (data->value.integer.value_ptr == NULL) {
++			err = -ENOMEM;
++			goto __end;
++		}
++#else
+ 		data->value.integer.value_ptr = compat_ptr(data32->value.integer.value_ptr);
++#endif
++	}
+ 	type = get_ctl_type(file, &data->id);
+ 	if (type < 0) {
+ 		err = type;
+@@ -370,10 +392,16 @@
+ 	if (copy_to_user((void __user *)arg, data32, sizeof(*data32)))
+ 		err = -EFAULT;
+       __end:
++#if defined(__sparc__)
++	if (data->indirect) {
++		kfree(data->value.integer.value_ptr);
++	}
++#endif
+       	if (data32)
+       		kfree(data32);
+ 	if (data)
+ 		kfree(data);
++
+ 	return err;
+ }
+ 
+diff -Naur alsa-driver-1.0.7.orig/sound/core/ioctl32/pcm32.c alsa-driver-1.0.7/sound/core/ioctl32/pcm32.c
+--- alsa-driver-1.0.7.orig/sound/core/ioctl32/pcm32.c	2004-10-18 07:55:51.000000000 -0700
++++ alsa-driver-1.0.7/sound/core/ioctl32/pcm32.c	2004-11-21 15:03:41.305477871 -0800
+@@ -169,6 +169,7 @@
+ 
+ DEFINE_ALSA_IOCTL(pcm_uframes_str);
+ DEFINE_ALSA_IOCTL(pcm_sframes_str);
++DEFINE_ALSA_IOCTL_BIG(pcm_hw_params);
+ DEFINE_ALSA_IOCTL(pcm_sw_params);
+ DEFINE_ALSA_IOCTL(pcm_channel_info);
+ DEFINE_ALSA_IOCTL(pcm_status);
+@@ -192,46 +193,6 @@
+ 		runtime->boundary *= 2;
+ }
+ 
+-static inline int _snd_ioctl32_pcm_hw_params(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
+-{
+-	struct sndrv_pcm_hw_params32 *data32;
+-	struct sndrv_pcm_hw_params *data;
+-	mm_segment_t oldseg;
+-	int err;
+-
+-	data32 = kmalloc(sizeof(*data32), GFP_KERNEL);
+-	data = kmalloc(sizeof(*data), GFP_KERNEL);
+-	if (data32 == NULL || data == NULL) {
+-		err = -ENOMEM;
+-		goto __end;
+-	}
+-	if (copy_from_user(data32, (void __user *)arg, sizeof(*data32))) {
+-		err = -EFAULT;
+-		goto __end;
+-	}
+-	memset(data, 0, sizeof(*data));
+-	convert_from_32(pcm_hw_params, data, data32);
+-	oldseg = get_fs();
+-	set_fs(KERNEL_DS);
+-	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)data);
+-	set_fs(oldseg);
+-	if (err < 0)
+-		goto __end;
+-	err = 0;
+-	convert_to_32(pcm_hw_params, data32, data);
+-	if (copy_to_user((void __user *)arg, data32, sizeof(*data32)))
+-		err = -EFAULT;
+-	else
+-		recalculate_boundary(file);
+-      __end:
+-      	if (data)
+-      		kfree(data);
+-      	if (data32)
+-      		kfree(data32);
+-	return err;
+-}
+-
+-
+ /*
+  */
+ struct sndrv_xferi32 {
+@@ -245,25 +206,54 @@
+ 	struct sndrv_xferi32 data32;
+ 	struct sndrv_xferi data;
+ 	mm_segment_t oldseg;
+-	int err;
++	int err = 0;
++	size_t size;
++
++	snd_pcm_substream_t *substream;
++	snd_pcm_runtime_t *runtime;
++
++	substream = ((snd_pcm_file_t *)file->private_data)->substream;
++	snd_assert(substream != NULL, return -ENXIO);
++	runtime = substream->runtime;
+ 
+ 	if (copy_from_user(&data32, (void __user *)arg, sizeof(data32)))
+ 		return -EFAULT;
+ 	memset(&data, 0, sizeof(data));
++
++	size = frames_to_bytes(runtime, data32.frames);
++	data.buf = kmalloc(size, GFP_KERNEL);
++	if (data.buf == NULL) {
++		return -ENOMEM;
++	}
++
++	if (copy_from_user(data.buf, (void __user *)compat_ptr(data32.buf), size)) {
++		err = -EFAULT;
++		goto __xferi_end;
++	}
+ 	data.result = data32.result;
+-	data.buf = compat_ptr(data32.buf);
+ 	data.frames = data32.frames;
++
+ 	oldseg = get_fs();
+ 	set_fs(KERNEL_DS);
+ 	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)&data);
+ 	set_fs(oldseg);
+ 	if (err < 0)
+-		return err;
++		goto __xferi_end;
++
+ 	/* copy the result */
+ 	data32.result = data.result;
++	data32.frames = data.frames;
++	if (copy_to_user((void __user *)compat_ptr(data32.buf), data.buf, size)) {
++		err = -EFAULT;
++		goto __xferi_end;
++	}
+ 	if (copy_to_user((void __user *)arg, &data32, sizeof(data32)))
+-		return -EFAULT;
+-	return 0;
++		err = -EFAULT;
++
++__xferi_end:
++	if(data.buf)
++		kfree(data.buf);
++	return err;
+ }
+ 
+ 
+@@ -287,12 +277,12 @@
+ 	struct sndrv_xfern32 data32;
+ 	struct sndrv_xfern32 __user *srcptr = (void __user *)arg;
+ 	void __user **bufs = NULL;
+-	int err = 0, ch, i;
++	int err = 0, ch, i, cp = 0;
+ 	u32 __user *bufptr;
+ 	mm_segment_t oldseg;
++	size_t size;
+ 
+ 	/* FIXME: need to check whether fop->ioctl is sane */
+-
+ 	pcm_file = file->private_data;
+ 	substream = pcm_file->substream;
+ 	snd_assert(substream != NULL && substream->runtime, return -ENXIO);
+@@ -319,11 +309,27 @@
+ 	bufs = kmalloc(sizeof(void *) * 128, GFP_KERNEL);
+ 	if (bufs == NULL)
+ 		return -ENOMEM;
++	size = frames_to_bytes(substream->runtime , data32.frames);
+ 	for (i = 0; i < ch; i++) {
+ 		u32 ptr;
+-		if (get_user(ptr, bufptr))
+-			return -EFAULT;
+-		bufs[ch] = compat_ptr(ptr);
++		if (get_user(ptr, bufptr)) {
++			err = -EFAULT;
++			goto __xfern_out;
++		}
++
++		bufs[i] = kmalloc(size, GFP_KERNEL);
++	        if (bufs[i] == NULL) {
++        	        err = -ENOMEM;
++			goto __xfern_out;
++	        }
++
++		cp++;
++
++		if (copy_from_user(bufs[i], (void __user *)compat_ptr(ptr), size)) {
++			err = -EFAULT;
++			goto __xfern_out;
++		}
++
+ 		bufptr++;
+ 	}
+ 	oldseg = get_fs();
+@@ -341,8 +347,13 @@
+ 		if (put_user(err, &srcptr->result))
+ 			err = -EFAULT;
+ 	}
++
++__xfern_out:
++	for (i = 0; i < cp; i++) {
++		kfree(bufs[i]);
++	}
+ 	kfree(bufs);
+-	return 0;
++	return err;
+ }
+ 
+ 

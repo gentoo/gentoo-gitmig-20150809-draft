@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.104 2004/11/19 23:29:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.105 2004/11/21 23:07:52 eradicator Exp $
+
+  21 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/alsa-driver-1.0.7-ioctl32.patch, alsa-driver-1.0.7.ebuild:
+  Added patch to ioctl32 support to get it to work on sparc... still needs
+  testing... See bug #55465.
 
   19 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-driver-1.0.7.ebuild:
