@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.6.ebuild,v 1.4 2004/07/26 17:50:21 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.6.ebuild,v 1.5 2004/08/12 09:22:54 griffon26 Exp $
 
 inherit eutils
 
@@ -22,20 +22,20 @@ DEPEND=">=sys-libs/lwp-1.11
 	>=sys-libs/db-3
 	>=sys-libs/ncurses-4
 	>=sys-libs/readline-3
-	>=sys-kernel/linux-headers-2.4
 	>=dev-lang/perl-5.8
 	kerberos? ( virtual/krb5 )
 	sys-apps/gawk
 	sys-devel/bison
-	sys-apps/grep"
+	sys-apps/grep
+	virtual/os-headers"
 
 #	>=sys-apps/sed-4
 #	net-fs/coda-kernel
 
 
-RDEPEND=">=sys-libs/lwp-1.10
-	>=net-libs/rpc2-1.20
-	>=sys-libs/rvm-1.8
+RDEPEND=">=sys-libs/lwp-1.11
+	>=net-libs/rpc2-1.22
+	>=sys-libs/rvm-1.9
 	>=sys-libs/db-3
 	>=sys-libs/ncurses-4
 	>=sys-libs/readline-3
