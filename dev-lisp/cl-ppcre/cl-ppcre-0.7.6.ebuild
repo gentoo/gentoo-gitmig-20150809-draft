@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/cl-ppcre-0.7.6.ebuild,v 1.1 2004/04/20 17:08:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/cl-ppcre-0.7.6.ebuild,v 1.2 2004/05/09 14:16:57 dholm Exp $
 
 inherit common-lisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://weitz.de/cl-ppcre/
 	http://www.cliki.net/cl-ppcre"
 SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz"
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
 SLOT="0"
