@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.2.ebuild,v 1.9 2003/09/06 08:10:38 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.2.ebuild,v 1.10 2004/01/30 11:31:38 vapier Exp $
 
 IUSE=""
 
@@ -304,8 +304,7 @@ src_install() {
 	dosym automake-1.4 /usr/share/automake
 
 	# This is the default macro directory that apps use ..
-	dodir /usr/share/aclocal
-	touch ${D}/usr/share/aclocal/.keep
+	keepdir /usr/share/aclocal
 }
 
 pkg_preinst() {
