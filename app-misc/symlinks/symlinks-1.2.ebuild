@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.2.ebuild,v 1.14 2004/10/05 13:34:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.2.ebuild,v 1.15 2004/10/13 20:11:41 taviso Exp $
 
 inherit flag-o-matic eutils
 
@@ -33,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin symlinks || die
+	dobin symlinks
 	doman symlinks.8
 	dodoc symlinks.lsm
 }
