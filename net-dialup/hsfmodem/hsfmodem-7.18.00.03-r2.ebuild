@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.03-r1.ebuild,v 1.2 2005/03/17 06:35:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.03-r2.ebuild,v 1.1 2005/03/17 11:30:07 mrness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="x86? ( http://www.linuxant.com/drivers/hsf/full/archive/${P}full/${P}fu
 	amd64? ( http://www.linuxant.com/drivers/hsf/full/archive/${P}x86_64full/${P}x86_64full.tar.gz )"
 
 LICENSE="Conexant"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* x86 ~amd64"
 IUSE=""
 SLOT="0"
 
@@ -43,6 +43,15 @@ src_compile() {
 src_install () {
 	cd ${MY_ARCH_S}
 	make PREFIX=${D}/usr/ ROOT=${D} install || die "make install failed"
+}
+
+pkg_preinst() {
+	local NVMDIR=/etc/${PN}/nvm
+	if [ -d "${NVMDIR}" ]; then
+		einfo "Cleaning ${NVMDIR}..."
+		rm -rf /etc/${NVMDIR}
+		eend
+	fi
 }
 
 pkg_postinst() {

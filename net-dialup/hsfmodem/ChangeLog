@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.8 2005/03/17 06:35:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.9 2005/03/17 11:30:07 mrness Exp $
+
+*hsfmodem-7.18.00.03-r2 (17 Mar 2005)
+
+  17 Mar 2005; Alin Nastac <mrness@gentoo.org> -hsfmodem-7.18.00.03-r1.ebuild,
+  +hsfmodem-7.18.00.03-r2.ebuild:
+  Fix potential problem by removing /etc/hsfmodem/nvm before packet installation.
+  Stable on x86.
 
 *hsfmodem-7.18.00.03-r1 (16 Mar 2005)
 
