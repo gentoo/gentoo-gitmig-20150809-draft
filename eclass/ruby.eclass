@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.30 2004/04/25 17:45:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.31 2004/04/26 01:00:34 squinky86 Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -127,7 +127,7 @@ ruby_einstall() {
 	else
 		siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitedir"]')
 		insinto ${siteruby}
-		doins *.rb || "doins failed"
+		doins *.rb || die "doins failed"
 	fi
 }
 
@@ -147,7 +147,7 @@ erubydoc() {
 	fi
 	if [ -d sample ] ; then
 		dodir /usr/share/doc/${PF}
-		cp -a sample ${D}/usr/share/doc/${PF} || "cp failed"
+		cp -a sample ${D}/usr/share/doc/${PF} || die "cp failed"
 	fi
 	for i in ChangeLog* [A-Z][A-Z]* ; do
 		[ -e $i ] && dodoc $i
