@@ -1,6 +1,9 @@
 # ChangeLog for games-util/hearse
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/ChangeLog,v 1.3 2004/03/01 20:46:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/ChangeLog,v 1.4 2004/03/24 04:49:58 mr_bones_ Exp $
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> hearse-1.4.ebuild:
+  don't rdepend on sed
 
   01 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> hearse-1.4.ebuild:
   fix DEPEND (bug #43402)
