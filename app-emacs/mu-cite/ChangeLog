@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/mu-cite
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mu-cite/ChangeLog,v 1.1 2004/10/22 10:51:23 usata Exp $
+
+*mu-cite-8.1_p20020225 (22 Oct 2004)
+
+  22 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/50mu-cite-gentoo.el, +mu-cite-8.1_p20020225.ebuild:
+  Initial import. Thanks to naoto at GentooJP Wiki (former BugTrack),
+  http://wiki.gentoo.gr.jp/.
+

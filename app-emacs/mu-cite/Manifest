@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7184f91369a6ca1c0ccdd28720a9e6cc mu-cite-8.1_p20020225.ebuild 699
+MD5 9422da1e47612bd16ad04cf1051ae081 metadata.xml 175
+MD5 47aa509f02a749255fc7c6ca91b89832 ChangeLog 469
+MD5 f2f5258d13c370e8719e4c0b21448ac2 files/digest-mu-cite-8.1_p20020225 71
+MD5 db080d74bc31821e05b6334f5812aa88 files/50mu-cite-gentoo.el 187
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (Darwin)
+
+iD8DBQFBeOY5VWNWqTUmv+0RAt3BAKCZaPLEKLhJ3B8kb0bXg703ee/OMQCcCR36
+NogHppjsaeZOI4+bsArCceA=
+=kO2U
+-----END PGP SIGNATURE-----
