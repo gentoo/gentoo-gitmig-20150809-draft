@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.5.ebuild,v 1.2 2004/03/29 10:42:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.5.ebuild,v 1.3 2004/03/29 11:00:27 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -71,8 +71,8 @@ src_unpack() {
 	fi
 
 	# bug fix for security problem - bug #39952
-	# integrated upstream now
-	#epatch ${FILESDIR}/mod_php-4.3.4-r3.diff
+	# second revision as the apache2 stuff was resolved upstream
+	epatch ${FILESDIR}/mod_php-4.3.5-apache1security.diff
 
 	# stop php from activing the apache config, as we will do that ourselves
 	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4; do
