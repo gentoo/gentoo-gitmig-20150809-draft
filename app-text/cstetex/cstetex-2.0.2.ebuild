@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/cstetex-2.0.2.ebuild,v 1.6 2004/06/24 22:30:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/cstetex-2.0.2.ebuild,v 1.7 2004/07/22 14:51:21 kugelfang Exp $
 
-inherit tetex eutils
+inherit tetex eutils flag-o-matic
 
 IUSE=""
 DESCRIPTION="a complete TeX distribution with Czech and Slovak support"
@@ -15,7 +15,7 @@ for FILE in ${CSTEX}; do
 	SRC_URI="${SRC_URI} ftp://math.feld.cvut.cz/pub/cstex/base/${FILE}"
 done
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 src_unpack() {
 	tetex_src_unpack
