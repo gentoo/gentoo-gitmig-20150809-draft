@@ -1,35 +1,25 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 09cc3b62bd9fd9a60e78dd3f6e149da3 ChangeLog 16491
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 16ebd67f27517fe4259d7740a62c6a53 util-linux-2.12i-r1.ebuild 3680
 MD5 6285cd723a19d84e43e70924fd12a7c8 util-linux-2.12p.ebuild 4421
-MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
-MD5 6aa1c240dd789327ea92e36309052950 files/no-symlink-resolve.patch 316
-MD5 a43d2b8c70c5f40a195721dc536abace files/util-linux-2.12-swapon-unistd.patch 289
-MD5 7d35ae646b52391076f7a329af8265bc files/util-linux-2.11z-agetty-domainname-option.patch 1810
+MD5 b47c69f9c6bd04f1e45909a9795a8b43 util-linux-2.12i-r1.ebuild 3677
+MD5 54d81dd16e0c02c28e5421069078ff93 ChangeLog 16590
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 0be8df03dae23c81a0e929e58a4114e0 files/util-linux-2.11z-01-nfsv4.dif 13442
-MD5 18371db840b08f5782e3f8f96c4efe8d files/util-linux-2.11z-pic.patch 3056
-MD5 d927611f34139a40f1fc9f4162c61f8a files/util-linux-2.12-kernel-2.6.patch 2964
-MD5 7ce604460c5607e6eb5d894b6c8b2064 files/util-linux-2.12-fat-LABEL-support.patch 11583
-MD5 4460875a6ebcf24a7ca5b41ed12f9fe5 files/util-linux-2.12-gcloop.patch 3806
-MD5 65f42fbf981464410f7d5d84a429e920 files/util-linux-no-kill.patch 642
-MD5 11fdaf3d68904b318fbffd7243e719b7 files/util-linux-2.12-amd64_rdev_installation.patch 737
-MD5 73c0cb6f9aa5fa84e701fc68d0478aac files/util-linux-2.12i-nfsv4.patch 12854
-MD5 8d4f1146f0699deb1e6872e1c81293e3 files/util-linux-2.12-selinux.diff.bz2 2558
-MD5 61beee95fb4696a6af11ffb84ddb055c files/util-linux-2.12i-ignore-managed.patch 506
-MD5 c9c2c92d7bba0652f22b638127c2107e files/util-linux-2.12i-pic.patch 2457
-MD5 d448f3b1b3ea21db4c2c4f303b48c1c8 files/digest-util-linux-2.12p 294
-MD5 a9bc06c292401d6f2d27e8e4ebf7e6ae files/util-linux-2.12i-fat-LABEL-support.patch 2304
 MD5 08a8f7d810ef0413ab5226883daf9d87 files/util-linux-2.12p-fat-LABEL-support.patch 11349
+MD5 a9bc06c292401d6f2d27e8e4ebf7e6ae files/util-linux-2.12i-fat-LABEL-support.patch 2304
+MD5 d448f3b1b3ea21db4c2c4f303b48c1c8 files/digest-util-linux-2.12p 294
+MD5 18371db840b08f5782e3f8f96c4efe8d files/util-linux-2.11z-pic.patch 3056
+MD5 4460875a6ebcf24a7ca5b41ed12f9fe5 files/util-linux-2.12-gcloop.patch 3806
+MD5 7ce604460c5607e6eb5d894b6c8b2064 files/util-linux-2.12-fat-LABEL-support.patch 11583
+MD5 61beee95fb4696a6af11ffb84ddb055c files/util-linux-2.12i-ignore-managed.patch 506
 MD5 9ef7b493525da4e138c4d033e973e835 files/util-linux-2.12p-swapon-check-symlinks.patch 913
 MD5 33ddd96078cf91030b80f73eb70f5371 files/util-linux-2.12i-swapon-check-symlinks.patch 875
+MD5 8d4f1146f0699deb1e6872e1c81293e3 files/util-linux-2.12-selinux.diff.bz2 2558
+MD5 d927611f34139a40f1fc9f4162c61f8a files/util-linux-2.12-kernel-2.6.patch 2964
+MD5 a43d2b8c70c5f40a195721dc536abace files/util-linux-2.12-swapon-unistd.patch 289
 MD5 cfa3960fd97ca16c85b0d1b87e6ba226 files/digest-util-linux-2.12i-r1 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB4wxgroRuSHgZdywRAkbSAJ9u8HgOLGGTCGTHsSEv9PXIk57KigCffcFo
-h+QSmsi0oagwv6RkVc59BVI=
-=bl3n
------END PGP SIGNATURE-----
+MD5 65f42fbf981464410f7d5d84a429e920 files/util-linux-no-kill.patch 642
+MD5 11fdaf3d68904b318fbffd7243e719b7 files/util-linux-2.12-amd64_rdev_installation.patch 737
+MD5 6aa1c240dd789327ea92e36309052950 files/no-symlink-resolve.patch 316
+MD5 7d35ae646b52391076f7a329af8265bc files/util-linux-2.11z-agetty-domainname-option.patch 1810
+MD5 73c0cb6f9aa5fa84e701fc68d0478aac files/util-linux-2.12i-nfsv4.patch 12854
+MD5 c9c2c92d7bba0652f22b638127c2107e files/util-linux-2.12i-pic.patch 2457
+MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
