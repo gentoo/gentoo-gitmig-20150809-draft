@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.1.9.ebuild,v 1.1 2004/04/07 03:45:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.1.9.ebuild,v 1.2 2004/04/07 12:15:57 dholm Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://home.gna.org/monkeybubble/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.0
