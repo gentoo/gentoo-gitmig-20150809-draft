@@ -1,0 +1,7 @@
+PATH=/bin:/usr/bin:/usr/local/bin
+ROOTPATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+LDPATH=/usr/local/lib:/usr/lib/gcc-lib/i686-pc-linux-gnu/2.95.2
+MANPATH=/usr/man
+INFODIR=/usr/info
+CVS_RSH=ssh
+PAGER=/usr/bin/most

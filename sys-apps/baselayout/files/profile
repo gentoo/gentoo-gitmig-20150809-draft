@@ -1,70 +1,14 @@
 eval `dircolors -b`
 alias d="ls --color"
 alias ll="ls --color -l"
+alias newenv="eval `/usr/sbin/env-update echo`"
 
-PATH=/bin:/usr/bin:/usr/X11R6/bin:/usr/local/bin
-MANPATH=/usr/man:/usr/X11R6/man
-INFODIR=/usr/info:/usr/X11R6/info
-
-# Set CLASSPATH for JAVA
-	
-if [ -d /opt/java/lib ] ; then
-  export JAVA_HOME=/opt/java
-  export CLASSPATH=/opt/java/src.jar:/opt/java/lib/tools.jar
-  PATH=$PATH:/opt/java/bin
-fi
-
-# Set Var for the Tomcat-Servlet Engine
-
-if [ -d /opt/jakarta/tomcat ] ; then
-  export TOMCAT_HOME=/opt/jakarta/tomcat
-fi
-
-# Set Var for QT
-
-if [ -d /usr/lib/qt ] ; then
-  export QTDIR="/usr/lib/qt"
-  PATH=$PATH:/usr/lib/qt/bin
-fi
-
-# Set Var for KDE
-
-if [ -d /opt/kde2 ] ; then
-  export KDEDIR="/opt/kde2"
-  PATH=$PATH:/opt/kde2/bin
-fi
-
-# Set Var for GNOME
-
-if [ -d /opt/gnome ] ; then
-  export GNOMEDIR="/opt/gnome"
-  PATH=$PATH:/opt/gnome/bin:/opt/gnome/sbin
-  MANPATH=$MANPATH:/opt/gnome/man
-  INFODIR=$INFODIR:/opt/gnome/info
-fi
-
-# Set Var for enlightenment
-
-if [ -d /usr/X11R6/enlightenment ] ; then
-  PATH=$PATH:/usr/X11R6/enlightenment/bin
-fi
-
-
+newenv
 
 if [ `/usr/bin/whoami` == 'root' ] ; then
 	export PS1='\[\033[01;32;40m\]\u@\h \[\033[01;34;40m\]\W > \[\033[00m\]'
-	export PATH=/sbin:/usr/sbin:$PATH
+	export PATH=${ROOTPATH}
 else
 	export PS1='\[\033[01;34;40m\]\W > \[\033[00m\]'
-	export PATH=$PATH
+	unset ROOTPATH
 fi
-
-export PAGER="/usr/bin/most"
-
-export MANPATH
-export INFODIR
-export INFOPATH
-
-export CVS_RSH=ssh
-
-

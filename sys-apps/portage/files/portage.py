@@ -56,6 +56,8 @@ import md5
 from stat import *
 import fchksum,types
 import sys
+import shlex
+
 # parsever:
 # This function accepts an 'inter-period chunk' such as
 # "3","4","3_beta5", or "2b" and returns an array of three
@@ -73,6 +75,117 @@ categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-e
 			"net-analyzer", "net-dialup", "net-fs", "net-ftp", "net-irc", "net-libs", "net-mail", "net-misc", "net-nds", 
 			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
 			"x11-terms", "x11-wm","virtual")
+
+#new configfile reading code using shlex
+class configfile:
+	def __init__(self,cfgfile):
+		self.keys={}
+		self.filename=cfgfile
+		f=open(cfgfile,'r')
+		lex=shlex.shlex(f)
+		lex.wordchars=string.digits+string.letters+"~!@#$%*_\:;?,./-+{}"     
+		lex.quotes="\"'"
+		while 1:
+			key=lex.get_token()
+			if (key==''):
+				#normal end of file
+				break;
+			equ=lex.get_token()
+			if (equ==''):
+				#unexpected end of file
+				#lex.error_leader(self.filename,lex.lineno)
+				print "!!! Unexpected end of config file: variable",key
+				return None
+			elif (equ!='='):
+				#invalid token
+				#lex.error_leader(self.filename,lex.lineno)
+				print "!!! Invalid token (not \"=\")",equ
+				return None
+			val=lex.get_token()
+			if (val==''):
+				#unexpected end of file
+				#lex.error_leader(self.filename,lex.lineno)
+				print "!!! Unexpected end of config file: variable",key
+				return None
+			self.keys[key]=val
+	def get_key(self,mykey):
+		if self.keys.has_key(mykey):
+			return self.keys[mykey]
+		else:
+			return ""
+	def has_key(self,mykey):
+		return self.keys.has_key(mykey)
+	def set_key(self,mykey,myval):
+		self.keys[mykey]=myval
+	def del_key(self,mykey):
+		if self.keys.has_key(mykey):
+			del self.keys[mykey]
+	def all_keys(self):
+		return self.keys.keys()
+		
+def var_expand(mystring,dictlist=[]):
+	"""
+	new variable expansion code.  Removes quotes, handles \n, etc, and
+	will soon use the dictlist to expand ${variable} references.
+	This code will be used by the configfile code, as well as others (parser)
+	This would be a good bunch of code to port to C.
+	"""
+	mystring=" "+mystring
+	#in single, double quotes
+	insing=0
+	indoub=0
+	pos=1
+	newstring=""
+	while (pos<len(mystring)):
+		if (mystring[pos]=="'") and (mystring[pos-1]!="\\"):
+			if (indoub):
+				newstring=newstring+"'"
+			else:
+				insing=not insing
+			pos=pos+1
+			continue
+		elif (mystring[pos]=='"') and (mystring[pos-1]!="\\"):
+			if (insing):
+				newstring=newstring+'"'
+			else:
+				indoub=not indoub
+			pos=pos+1
+			continue
+		if (not insing): 
+			#expansion time
+			if (mystring[pos]=="\\"):
+				#backslash expansion time
+				if (pos+1>=len(mystring)):
+					newstring=newstring+mystring[pos]
+					break
+				else:
+					a=mystring[pos+1]
+					pos=pos+2
+					if a=='a':
+						newstring=newstring+chr(007)
+					elif a=='b':
+						newstring=newstring+chr(010)
+					elif a=='e':
+						newstring=newstring+chr(033)
+					elif (a=='f') or (a=='n'):
+						newstring=newstring+chr(012)
+					elif a=='r':
+						newstring=newstring+chr(015)
+					elif a=='t':
+						newstring=newstring+chr(011)
+					elif a=='v':
+						newstring=newstring+chr(013)
+					else:
+						#remove backslash only, as bash does: this takes care of \\ and \' and \" as well
+						newstring=newstring+mystring[pos-1:pos]
+						continue
+			else:
+				newstring=newstring+mystring[pos]
+				pos=pos+1
+		else:
+			newstring=newstring+mystring[pos]
+			pos=pos+1
+	return newstring	
 
 def gen_archnames():
 	"generate archive names from URL list"
