@@ -23,7 +23,7 @@ MD5 7a40dbe0a3460fa95aa08d1a6df1af8a files/digest-kdebase-3.1.1-r1 68
 MD5 79fc6f0cd8a9dfcaf9acec89c1e53685 files/digest-kdebase-2.2.2-r4 135
 MD5 63e277899292d5e8e765367ab6f4234c files/digest-kdebase-2.2.2-r5 210
 MD5 7a40dbe0a3460fa95aa08d1a6df1af8a files/digest-kdebase-3.1.1 68
-MD5 0adc482a9a0abeccb1b9fd70435c3646 files/digest-kdebase-3.1.2 68
+MD5 531ef53bdb493518c0c165ad4a608cac files/digest-kdebase-3.1.2 68
 MD5 94f7c5a331319b84b9a54094c2e6641e files/digest-kdebase-3.1 66
 MD5 7db6d7353b1bfbb47d44e9df63be1410 files/3.1/kdmrc 17661
 MD5 a500709e4a41d613bd4a59bcc7d9a11c files/3.1/startkde-3.1-gentoo.diff 1848
@@ -31,9 +31,10 @@ MD5 2f1f31f38b93136baeb537500c8cfabc files/3.1/backgroundrc 342
 MD5 7db6d7353b1bfbb47d44e9df63be1410 files/3.1.1/kdmrc 17661
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.1.1/backgroundrc 342
 MD5 f12f03b607574596c17507007591b61b files/3.1.1/startkde-3.1.1-gentoo.diff 1879
-MD5 f12f03b607574596c17507007591b61b files/3.1.2/startkde-3.1.2-gentoo.diff 1879
+MD5 ce285a04f7eaf402c947046989a141f1 files/3.1.2/startkde-3.1.2-gentoo.diff 1878
 MD5 7db6d7353b1bfbb47d44e9df63be1410 files/3.1.2/kdmrc 17661
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.1.2/backgroundrc 342
+MD5 6747db0672c80e7cfd29bd9379a3b580 files/3.1.2/sftp.patch 309
 MD5 41d954f907dd2ba220ebca498e7f1735 files/3.0.4-r3/kdebase-3.0.4-konsole-qt31.diff 611
 MD5 5a8c948b28b4558217ee06a9ea0c0305 files/3.0.4-r3/startkde-3.0.4-r3-gentoo.diff 1605
 MD5 b0dd1d862909571ddd17ea58bf3925d4 files/3.0.4-r3/kdebase-3.0.4-nspluginviewer-qt31.diff.gz 13733

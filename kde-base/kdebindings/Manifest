@@ -10,7 +10,7 @@ MD5 7711559a608ae72aebb96f8b755fe555 files/digest-kdebindings-3.1 69
 MD5 9214bc981c8721fe53cefe1fd68dfa11 files/digest-kdebindings-2.2.2 71
 MD5 bd79d694689e0ff999dae51b33eeb8fd files/digest-kdebindings-3.0.4 71
 MD5 3752b01449392c37caa3f997b9f60f91 files/digest-kdebindings-3.1.1 71
-MD5 77966cf90c4491eb83e5eefefdb5b52c files/digest-kdebindings-3.1.2 71
+MD5 d1a84c5fa77f03a4ae669f1b02bbe7b6 files/digest-kdebindings-3.1.2 71
 MD5 012ca67e04392277a77f4e08fda483fe files/digest-kdebindings-3.0.5a 72
 MD5 823592dd45da38fd48dd11d40e5bbb91 files/digest-kdebindings-3.0.5b 220
 MD5 452eac66c774d6c287648f4f68d6aa36 files/kdebindings-3.0.5a-qt31.diff 76610
