@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/dlm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.8 2005/03/23 02:39:25 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.9 2005/03/23 14:39:02 xmerlin Exp $
+
+  23 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> files/dlm.rc:
+  added lock_dlm module unload in init
 
   23 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> dlm-1.0_pre21.ebuild:
   ebuild cleanup
