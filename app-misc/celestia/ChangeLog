@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/celestia
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/ChangeLog,v 1.1 2002/04/13 12:22:11 blocke Exp $
+
+*celestia-1.2.2 (13 Apr 2002)
+
+  13 Apr 2002; Bruce A. Locke <blocke@shivan.org> celestia-1.2.2.ebuild:
+
+  Celestia added to Gentoo
+
+
