@@ -1,4 +1,4 @@
-diff -ur rpm-4.2/Makefile.am rpm-4.2.new/Makefile.am
+diff -ru rpm-4.2/Makefile.am rpm-4.2.new/Makefile.am
 --- rpm-4.2/Makefile.am	2003-01-23 20:26:30.000000000 +0000
 +++ rpm-4.2.new/Makefile.am	2003-04-14 20:08:50.000000000 +0100
 @@ -14,7 +14,7 @@
@@ -27,9 +27,9 @@ diff -ur rpm-4.2/Makefile.am rpm-4.2.new/Makefile.am
  	@WITH_ZLIB_LIB@ \
  	@INTLLIBS@ \
  	@LIBMISC@
-diff -ur rpm-4.2/Makefile.in rpm-4.2.new/Makefile.in
+diff -ru rpm-4.2/Makefile.in rpm-4.2.new/Makefile.in
 --- rpm-4.2/Makefile.in	2003-02-24 22:11:41.000000000 +0000
-+++ rpm-4.2.new/Makefile.in	2003-04-14 22:27:30.000000000 +0100
++++ rpm-4.2.new/Makefile.in	2003-04-14 22:54:08.000000000 +0100
 @@ -219,7 +219,7 @@
  	rpm.magic rpmpopt-$(VERSION) rpmqv.c rpm.c
  
@@ -108,7 +108,7 @@ diff -ur rpm-4.2/Makefile.in rpm-4.2.new/Makefile.in
  SCRIPTS = $(bin_SCRIPTS) $(pkglib_SCRIPTS)
  
  
-diff -ur rpm-4.2/build/Makefile.am rpm-4.2.new/build/Makefile.am
+diff -ru rpm-4.2/build/Makefile.am rpm-4.2.new/build/Makefile.am
 --- rpm-4.2/build/Makefile.am	2003-01-01 17:46:54.000000000 +0000
 +++ rpm-4.2.new/build/Makefile.am	2003-04-14 22:26:03.000000000 +0100
 @@ -9,7 +9,6 @@
@@ -127,9 +127,9 @@ diff -ur rpm-4.2/build/Makefile.am rpm-4.2.new/build/Makefile.am
  	$(top_builddir)/lib/librpm.la \
  	$(top_builddir)/rpmdb/librpmdb.la \
  	$(top_builddir)/rpmio/librpmio.la \
-diff -ur rpm-4.2/build/Makefile.in rpm-4.2.new/build/Makefile.in
+diff -ru rpm-4.2/build/Makefile.in rpm-4.2.new/build/Makefile.in
 --- rpm-4.2/build/Makefile.in	2003-02-24 22:11:42.000000000 +0000
-+++ rpm-4.2.new/build/Makefile.in	2003-04-14 22:27:30.000000000 +0100
++++ rpm-4.2.new/build/Makefile.in	2003-04-14 22:54:08.000000000 +0100
 @@ -212,7 +212,6 @@
  	-I$(top_srcdir)/lib \
  	-I$(top_srcdir)/rpmdb \
@@ -146,9 +146,9 @@ diff -ur rpm-4.2/build/Makefile.in rpm-4.2.new/build/Makefile.in
  	$(top_builddir)/lib/librpm.la \
  	$(top_builddir)/rpmdb/librpmdb.la \
  	$(top_builddir)/rpmio/librpmio.la \
-diff -ur rpm-4.2/lib/Makefile.am rpm-4.2.new/lib/Makefile.am
+diff -ru rpm-4.2/lib/Makefile.am rpm-4.2.new/lib/Makefile.am
 --- rpm-4.2/lib/Makefile.am	2003-01-01 17:46:14.000000000 +0000
-+++ rpm-4.2.new/lib/Makefile.am	2003-04-14 20:08:50.000000000 +0100
++++ rpm-4.2.new/lib/Makefile.am	2003-04-14 22:53:35.000000000 +0100
 @@ -9,7 +9,6 @@
  	-I$(top_srcdir)/build \
  	-I$(top_srcdir)/rpmdb \
@@ -157,8 +157,12 @@ diff -ur rpm-4.2/lib/Makefile.am rpm-4.2.new/lib/Makefile.am
  	@INCPATH@
  
  EXTRA_DIST = getdate.y
-@@ -37,7 +36,7 @@
+@@ -35,9 +34,11 @@
+ 	signature.c stringbuf.c transaction.c \
+ 	verify.c
  librpm_la_LDFLAGS = -release @VERSION@ \
++	-L$(top_builddir)/rpmdb/.libs \
++	-L$(top_builddir)/rpmio/.libs \
  	$(top_builddir)/rpmdb/librpmdb.la \
  	$(top_builddir)/rpmio/librpmio.la \
 -	$(top_builddir)/popt/libpopt.la
@@ -166,9 +170,9 @@ diff -ur rpm-4.2/lib/Makefile.am rpm-4.2.new/lib/Makefile.am
  
  getdate.c: getdate.y
  	@echo expect 10 shift/reduce conflicts
-diff -ur rpm-4.2/lib/Makefile.in rpm-4.2.new/lib/Makefile.in
+diff -ru rpm-4.2/lib/Makefile.in rpm-4.2.new/lib/Makefile.in
 --- rpm-4.2/lib/Makefile.in	2003-02-24 22:11:45.000000000 +0000
-+++ rpm-4.2.new/lib/Makefile.in	2003-04-14 22:27:30.000000000 +0100
++++ rpm-4.2.new/lib/Makefile.in	2003-04-14 22:54:09.000000000 +0100
 @@ -212,7 +212,6 @@
  	-I$(top_srcdir)/build \
  	-I$(top_srcdir)/rpmdb \
@@ -177,8 +181,12 @@ diff -ur rpm-4.2/lib/Makefile.in rpm-4.2.new/lib/Makefile.in
  	@INCPATH@
  
  
-@@ -244,7 +243,7 @@
+@@ -242,9 +241,11 @@
+ 	verify.c
+ 
  librpm_la_LDFLAGS = -release @VERSION@ \
++	-L$(top_builddir)/rpmdb/.libs \
++	-L$(top_builddir)/rpmio/.libs \
  	$(top_builddir)/rpmdb/librpmdb.la \
  	$(top_builddir)/rpmio/librpmio.la \
 -	$(top_builddir)/popt/libpopt.la
@@ -186,7 +194,7 @@ diff -ur rpm-4.2/lib/Makefile.in rpm-4.2.new/lib/Makefile.in
  
  
  BUILT_SOURCES = getdate.c # rpmlib.lcd
-diff -ur rpm-4.2/python/Makefile.am rpm-4.2.new/python/Makefile.am
+diff -ru rpm-4.2/python/Makefile.am rpm-4.2.new/python/Makefile.am
 --- rpm-4.2/python/Makefile.am	2003-01-08 22:33:12.000000000 +0000
 +++ rpm-4.2.new/python/Makefile.am	2003-04-14 20:10:11.000000000 +0100
 @@ -18,7 +18,6 @@
@@ -206,9 +214,9 @@ diff -ur rpm-4.2/python/Makefile.am rpm-4.2.new/python/Makefile.am
  	@WITH_LIBELF_LIB@
  
  LDADD =
-diff -ur rpm-4.2/python/Makefile.in rpm-4.2.new/python/Makefile.in
+diff -ru rpm-4.2/python/Makefile.in rpm-4.2.new/python/Makefile.in
 --- rpm-4.2/python/Makefile.in	2003-02-24 22:11:45.000000000 +0000
-+++ rpm-4.2.new/python/Makefile.in	2003-04-14 22:27:31.000000000 +0100
++++ rpm-4.2.new/python/Makefile.in	2003-04-14 22:54:09.000000000 +0100
 @@ -221,7 +221,6 @@
  	-I$(top_srcdir)/rpmdb \
  	-I$(top_srcdir)/rpmio \
@@ -226,9 +234,9 @@ diff -ur rpm-4.2/python/Makefile.in rpm-4.2.new/python/Makefile.in
  	@WITH_LIBELF_LIB@
  
  
-diff -ur rpm-4.2/rpmdb/Makefile.am rpm-4.2.new/rpmdb/Makefile.am
+diff -ru rpm-4.2/rpmdb/Makefile.am rpm-4.2.new/rpmdb/Makefile.am
 --- rpm-4.2/rpmdb/Makefile.am	2002-12-21 16:20:12.000000000 +0000
-+++ rpm-4.2.new/rpmdb/Makefile.am	2003-04-14 20:08:50.000000000 +0100
++++ rpm-4.2.new/rpmdb/Makefile.am	2003-04-14 22:50:26.000000000 +0100
 @@ -9,7 +9,6 @@
  	-I$(top_srcdir)/lib \
  	-I$(top_srcdir)/rpmio \
@@ -237,18 +245,20 @@ diff -ur rpm-4.2/rpmdb/Makefile.am rpm-4.2.new/rpmdb/Makefile.am
  	@WITH_LIBELF_INCLUDE@ \
  	@INCPATH@
  
-@@ -47,7 +46,7 @@
+@@ -46,8 +45,9 @@
+ 	poptDB.c rpmhash.c rpmdb.c \
  	tagname.c tagtbl.c
  librpmdb_la_LDFLAGS = -release @VERSION@ \
++	-L$(top_builddir)/rpmio/.libs \
  	$(top_builddir)/rpmio/librpmio.la \
 -	$(top_builddir)/popt/libpopt.la \
 +	/usr/lib/libpopt.la \
  	@WITH_LIBELF_LIB@ \
  	@libdb3@
  librpmdb_la_LIBADD = $(DBLIBOBJS) $(DB3LOBJS)
-diff -ur rpm-4.2/rpmdb/Makefile.in rpm-4.2.new/rpmdb/Makefile.in
+diff -ru rpm-4.2/rpmdb/Makefile.in rpm-4.2.new/rpmdb/Makefile.in
 --- rpm-4.2/rpmdb/Makefile.in	2003-02-24 22:11:47.000000000 +0000
-+++ rpm-4.2.new/rpmdb/Makefile.in	2003-04-14 22:27:31.000000000 +0100
++++ rpm-4.2.new/rpmdb/Makefile.in	2003-04-14 22:54:10.000000000 +0100
 @@ -212,7 +212,6 @@
  	-I$(top_srcdir)/lib \
  	-I$(top_srcdir)/rpmio \
@@ -257,16 +267,18 @@ diff -ur rpm-4.2/rpmdb/Makefile.in rpm-4.2.new/rpmdb/Makefile.in
  	@WITH_LIBELF_INCLUDE@ \
  	@INCPATH@
  
-@@ -254,7 +253,7 @@
+@@ -253,8 +252,9 @@
+ 	tagname.c tagtbl.c
  
  librpmdb_la_LDFLAGS = -release @VERSION@ \
++	-L$(top_builddir)/rpmio/.libs \
  	$(top_builddir)/rpmio/librpmio.la \
 -	$(top_builddir)/popt/libpopt.la \
 +	/usr/lib/libpopt.la \
  	@WITH_LIBELF_LIB@ \
  	@libdb3@
  
-diff -ur rpm-4.2/rpmio/Makefile.am rpm-4.2.new/rpmio/Makefile.am
+diff -ru rpm-4.2/rpmio/Makefile.am rpm-4.2.new/rpmio/Makefile.am
 --- rpm-4.2/rpmio/Makefile.am	2002-12-24 15:47:25.000000000 +0000
 +++ rpm-4.2.new/rpmio/Makefile.am	2003-04-14 20:08:50.000000000 +0100
 @@ -10,7 +10,6 @@
@@ -320,9 +332,9 @@ diff -ur rpm-4.2/rpmio/Makefile.am rpm-4.2.new/rpmio/Makefile.am
  
  dumpasn1_SOURCES = dumpasn1.c
  
-diff -ur rpm-4.2/rpmio/Makefile.in rpm-4.2.new/rpmio/Makefile.in
+diff -ru rpm-4.2/rpmio/Makefile.in rpm-4.2.new/rpmio/Makefile.in
 --- rpm-4.2/rpmio/Makefile.in	2003-02-24 22:11:47.000000000 +0000
-+++ rpm-4.2.new/rpmio/Makefile.in	2003-04-14 22:27:31.000000000 +0100
++++ rpm-4.2.new/rpmio/Makefile.in	2003-04-14 22:54:10.000000000 +0100
 @@ -213,7 +213,6 @@
  
  INCLUDES = -I. \
