@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.2.ebuild,v 1.5 2003/05/05 20:20:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.3.ebuild,v 1.1 2003/05/05 20:20:43 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Collection of XMMS themes"
@@ -91,12 +91,17 @@ SRC_URI="${THEME_URI}/AbsoluteE_Xmms.zip
 	http://mrb.tagclan.com/files/Raj._I.O._Amp_in_2000.wsz
 	http://mrb.tagclan.com/files/bluemetal.wsz
 	http://mrb.tagclan.com/files/atlantis_-_meridian.wsz
-	http://mrb.tagclan.com/files/ace.wsz"
-
+	http://mrb.tagclan.com/files/ace.wsz
+	http://waledawg.com/v5/files/wale_sub_contact.wsz
+	http://waledawg.com/v5/files/wale_crobial_hypothesis.wsz
+	http://waledawg.com/v5/files/wale_media_monks.wsz
+	http://waledawg.com/v5/files/wale_atmosphere.wsz
+	http://waledawg.com/v5/files/wale_RLH.wsz
+	http://waledawg.com/v5/files/wale_poopshingles.wsz"
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="net-misc/wget"
 RDEPEND="media-sound/xmms
