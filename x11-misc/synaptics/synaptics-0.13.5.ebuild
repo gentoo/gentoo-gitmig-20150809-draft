@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.13.5.ebuild,v 1.1 2004/09/02 18:31:28 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.13.5.ebuild,v 1.2 2004/10/04 06:03:22 spyderous Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://w1.894.telia.com/~u89404340/touchpad/"
 SRC_URI="http://w1.894.telia.com/~u89404340/touchpad/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 RDEPEND="|| ( x11-base/xorg-x11 >=x11-base/xfree-4.3.0-r6 )"
 DEPEND=">=sys-apps/sed-4"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.27 2004/09/02 18:31:28 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.28 2004/10/04 06:03:22 spyderous Exp $
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  synaptics-0.13.5.ebuild:
+  x86.
 
 *synaptics-0.13.5 (02 Sep 2004)
 
