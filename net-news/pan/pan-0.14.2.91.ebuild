@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.14.2.91.ebuild,v 1.3 2004/07/15 18:19:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.14.2.91.ebuild,v 1.4 2004/12/05 02:18:13 swegener Exp $
 
 inherit libtool
 
@@ -30,7 +30,8 @@ export CONFIG_PROTECT_MASK="/etc/gconf"
 pkg_setup() {
 	# Likely that glibc might of been compiled with nls turned off.
 	# Warn people that Pan requires glibc to have nls support.
-	if ! use nls; then
+	if ! use nls
+	then
 		ewarn "Pan requires glibc to be merged with 'nls' in your USE flags."
 	fi
 }
@@ -39,7 +40,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	elibtoolize
+	elibtoolize || die "elibtoolize failed"
 }
 
 src_compile() {
@@ -49,6 +50,6 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die "Installation failed"
-	dodoc AUTHORS ChangeLog CREDITS NEWS README TODO
-	dohtml ANNOUNCE.html
+	dodoc AUTHORS ChangeLog CREDITS NEWS README TODO || die "dodoc failed"
+	dohtml ANNOUNCE.html docs/{pan-shortcuts,faq}.html || die "dodoc failed"
 }

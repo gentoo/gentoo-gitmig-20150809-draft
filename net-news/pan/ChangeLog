@@ -1,6 +1,11 @@
 # ChangeLog for net-news/pan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.44 2004/09/24 19:16:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.45 2004/12/05 02:18:13 swegener Exp $
+
+  05 Dec 2004; Sven Wegener <swegener@gentoo.org> -pan-0.13.0.ebuild,
+  pan-0.14.2.91.ebuild, pan-0.14.2.ebuild:
+  Removed old ebuild. Modified the ebuilds to install more documentation.
+  General cleanup.
 
   24 Sep 2004; Sven Wegener <swegener@gentoo.org> -pan-0.13.3.ebuild,
   -pan-0.13.4.ebuild, -pan-0.14.0.ebuild:
