@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-sources/pegasos-sources-2.4.26.ebuild,v 1.1 2004/05/07 12:20:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-sources/pegasos-sources-2.4.26.ebuild,v 1.2 2004/05/10 13:22:14 dholm Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -19,4 +19,3 @@ DESCRIPTION="Full sources including the Pegasos patchset for the ${KV_MAJOR}.${K
 SRC_URI="${KERNEL_URI} ${GPV_SRC}"
 
 DEPEND="${DEPEND}"
-PROVIDE="virtual/ppc-sources"
