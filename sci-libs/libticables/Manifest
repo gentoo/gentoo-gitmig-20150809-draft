@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 55979b459eae0df9e462a7dedaeaf7b8 libticables-3.8.6.ebuild 1133
-MD5 ad81c556b6379438c76ed2d3e8ecaa13 ChangeLog 1708
+MD5 5173d039e19196ac50d39fcd74f5cfc7 ChangeLog 1708
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 3ff798f8e75c90793abe96a6d0d58658 files/digest-libticables-3.8.6 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0fiTI1lqEGTUzyQRAmk3AKCU1xnBpSwx3aInIahgSCghw81DGACfTXG/
+yaE+v/hTWwRbyHeQatXpMBY=
+=RSBx
+-----END PGP SIGNATURE-----

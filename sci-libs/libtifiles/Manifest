@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bcd1b46dbab565a36b967f1f2d606219 libtifiles-0.6.1.ebuild 868
-MD5 1d462de923f2f5445fe48754a5e4e26a ChangeLog 1758
+MD5 4f830dacc0148ec20291d359dc1acbfe ChangeLog 1758
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 012a8393ad0ea7d7f9ae8168e41dda94 files/digest-libtifiles-0.6.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0fjfI1lqEGTUzyQRAq/GAKDOPGxGfovxa6KpPxJZfaKLbP986QCeMzlr
+U4ET8RLe/Qqw4VMPvQWEH8s=
+=YjlC
+-----END PGP SIGNATURE-----
