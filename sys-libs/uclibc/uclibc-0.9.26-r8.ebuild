@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.1 2005/01/12 00:50:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.2 2005/01/12 03:42:07 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -103,6 +103,8 @@ src_unpack() {
 		# math functions (sinf,cosf,tanf,atan2f,powf,fabsf,copysignf,scalbnf,rem_pio2f)
 		use build || epatch ${WORKDIR}/patch/math
 	fi
+
+	epatch ${FILESDIR}/${PVR}-cvs.patch #73583
 
 	########## CPU SELECTION ##########
 
