@@ -1,0 +1,4 @@
+MD5 a4eb10df47d73b933f7e9ee13f2ee8c4 checkpassword-0.90-r1.ebuild 730
+MD5 93bda30908dcf992ae4e871e8618d2fb ChangeLog 1093
+MD5 894ae022f7765b23ddfce23bc2f91c3e files/digest-checkpassword-0.90-r1 69
+MD5 760d73c8b3091ca1cae9a1ae5b6fab8f files/0.90-errno.patch 243
