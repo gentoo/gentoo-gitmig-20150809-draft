@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2921 2004/06/06 00:15:37 robbat2 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2922 2004/06/06 19:24:07 humpback Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -87,10 +87,6 @@ dev-util/ecletex
 # <wolf31o2@gentoo.org> (24 May 2004)
 # Doing this to keep users from breaking their systems
 >=app-misc/livecd-tools-1.0.3
-
-# <humpback@gentoo.org> (24 May 2004)
-# Beta release just here so people can test new features
-=net-im/psi-0.9.2_rc2
 
 # <ciaranm@gentoo.org> (21 May 2004)
 # vim beta release
