@@ -1,6 +1,17 @@
 # ChangeLog for net-www/mod_watch
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/ChangeLog,v 1.1 2003/06/22 19:19:53 woodchip Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/ChangeLog,v 1.2 2004/04/21 18:39:43 zul Exp $
+
+*mod_watch-4.03 (21 Apr 2004)
+
+  21 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  mod_watch-3.18.ebuild, mod_watch-4.03.ebuild:
+  Added metadata.xml, Updated header.
+
+*mod_watch-4.03 (21 Apr 2004)
+
+  21 Apr 2004; Chuck Short <zul@gentoo.org> mod_watch-4.03.ebuild:
+  Added apache2 version of mod_watch. Closes #43644.
 
 *mod_watch-3.18 (22 Jun 2003)
 
