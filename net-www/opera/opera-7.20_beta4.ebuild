@@ -1,17 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.11-r1.ebuild,v 1.1 2003/07/15 13:55:25 pvdabeel Exp $
-#
-# 1. static       # Statically linked libraries, default.
-# 2. shared-2.95  # Dynamically linked libaries, compiled with gcc 2.95.
-# 3. shared-3.2	  # Dynamically linked libraries, compiled with gcc 3.2.
-#
-# Note that the default variant should work for everybody, and is the
-# least likely to cause you any grief.	Only change the variant if you
-# know what you are doing.
-#
-# Note 2: The OPERA_VARIANT mechanism is currently not working (everybody gets
-# the default variant).
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.20_beta4.ebuild,v 1.1 2003/08/21 23:26:11 lanius Exp $
+
+# Here, like in the other .ebuilds, the static version is
+# forced for simplicity's sake
 
 DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
@@ -22,44 +14,26 @@ IUSE="gnome kde"
 DEPEND=">=sys-apps/sed-4"
 
 RDEPEND="virtual/x11
-	>=media-libs/fontconfig-2.1.94-r1"
+	>=media-libs/fontconfig-2.1.94-r1
+	=media-libs/libexif-0.5.9"  #for libexif.so.8
 
-KEYWORDS="-* ~ppc" #please test on x86
+KEYWORDS="-*" #please test! This is for x86 only!!
 SLOT="0"
+OPERAVER="7.20-20030821"
+OPERATYPE="1-static-qt"
 
-#we can't modify (R)DEPEND info inside an if statement; that breaks metadata caching.
-#So I'm hard-coding the static version to be enabled.
 
-OPERA_VARIANT="static"
+SRC_URI="http://snapshot.opera.com/unix/intel-linux/445-20030821-7.20-B4//${PN}-${OPERAVER}.${OPERATYPE}.i386.tar.bz2"
+S=${WORKDIR}/opera-${OPERAVER}.${OPERATYPE}.i386
 
-if [ "$OPERA_VARIANT" = "shared-3.2" ]; then
-	    RDEPEND="${RDEPEND} =x11-libs/qt-3*"
-	    OPERA_VERSION="4-shared-qt"
-	    URL_DIR="shared/gcc-3.2/"
-elif [ "$OPERA_VARIANT" = "shared-2.95" ]; then
-	    RDEPEND="${RDEPEND} =x11-libs/qt-3*"
-	    OPERA_VERSION="2-shared-qt"
-	    URL_DIR="shared/gcc-2.95/"
-else
-	    OPERA_VERSION="1-static-qt"
-	    URL_DIR="static/"
-fi
-
-NV=7.11-20030515.${OPERA_VERSION}
-
-OPERA_URI="http://ftp.sunet.se/pub/www/browsers/Opera/linux/711/final/en"
-
-SRC_URI="ppc? ( ${OPERA_URI}/ppc/${URL_DIR}/opera-${NV}.ppc.tar.gz )"
-SRC_URI="${SRC_URI} x86? ( ${OPERA_URI}/i386/${URL_DIR}/opera-${NV}.i386.tar.gz )"
-
-S=${WORKDIR}/opera-${NV}.i386
-
-if [ "`use ppc`" ]
-then
-	S=${WORKDIR}/opera-${NV}.ppc
-fi
 
 src_unpack() {
+	ewarn "This package is designed for an i386-based processor."
+	ewarn "Usage on another platform is at your own risk."
+	ewarn "If you want to abort this installation, press CTRL+C now"
+	ewarn "Pausing for 15 seconds..."
+	sleep 15s
+
 	unpack ${A}
 	cd ${S}
 	sed -i -e "s:/etc:${D}/etc:g" \
