@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.22-r2.ebuild,v 1.2 2003/11/05 02:29:13 trance Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.22-r2.ebuild,v 1.3 2003/11/10 20:22:50 trance Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ PROVIDE="virtual/linux-sources"
 LICENSE="GPL-2"
 SLOT="${KV}"
 DEPEND=">=sys-devel/binutils-2.11.90.0.31"
-RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make"
+RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl sys-apps//modutils sys-devel/make"
 
 src_unpack() {
 	unpack ${A}
