@@ -1,6 +1,20 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.77 2003/07/21 21:26:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.78 2003/07/31 02:55:27 caleb Exp $
+
+qt-3.2.0 (30 Jul 2003)
+
+  30 Jul 2003; Caleb Tennis <caleb@gentoo.org>:
+  Add qt-3.2.0, but it's staying masked for a little while longer.
+  Also, remove the two 3.2.0_beta ebuilds.
+
+  30 Jul 2003; Caleb Tennis <caleb@gentoo.org>:
+  Remove qt-3.1.2-r5 and revert its changes back into 3.1.2-r4 as it
+  was minor enough not to warrant a revision
+
+  Also, add in complextext rendering patch.  Closes bug #25038.
+
+  And, while I'm at it, bump -r4 to stable x86.
 
   21 Jul 2003; Martin Schlemmer <azarah@gentoo.org> qt-3.1.2-r3.ebuild,
   qt-3.1.2-r4.ebuild, qt-3.1.2-r5.ebuild,
