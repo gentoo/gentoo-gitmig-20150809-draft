@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.16.ebuild,v 1.3 2003/02/13 10:52:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.16.ebuild,v 1.4 2003/05/25 14:57:32 mholzer Exp $
 
 MY_P="${P/ucl/uCl}"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
-SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/libs/uclibc/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"

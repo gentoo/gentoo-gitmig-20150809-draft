@@ -1,0 +1,4 @@
+MD5 041d98fcfa3819550206084bb6f3955f ChangeLog 438
+MD5 737bc9d43cba3d18b0b4b18a8a8a64f3 uclibc-0.9.16.ebuild 1000
+MD5 d16f404e56abc9f0ab5c372b88a6905d files/Makefile-cp-order-fix.patch 897
+MD5 f461c6535ac36bc705eedb9b238a8989 files/digest-uclibc-0.9.16 67
