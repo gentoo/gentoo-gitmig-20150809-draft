@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/mythphone-0.16.ebuild,v 1.4 2005/02/11 15:45:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/mythphone-0.17.ebuild,v 1.1 2005/02/11 15:45:45 cardoe Exp $
 
 inherit myth eutils
 
 DESCRIPTION="Phone and video calls with SIP."
 HOMEPAGE="http://www.mythtv.org/"
 SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
-IUSE="debug nls"
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=sys-apps/sed-4
 	festival? ( app-accessibility/festival )
@@ -18,12 +18,6 @@ DEPEND=">=sys-apps/sed-4
 
 setup_pro() {
 	return 0
-}
-
-src_unpack() {
-	myth_src_unpack
-
-	epatch ${FILESDIR}/${P}-include.patch
 }
 
 src_compile() {
