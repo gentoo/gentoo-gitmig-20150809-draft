@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/migrationtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/ChangeLog,v 1.12 2005/01/07 12:25:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/ChangeLog,v 1.13 2005/01/12 13:11:04 gmsoft Exp $
+
+  12 Jan 2005; Guy Martin <gmsoft@gentoo.org> migrationtools-46.ebuild:
+  Stable on hppa.
 
   07 Jan 2005; Robin H. Johnson <robbat2@gentoo.org>
   migrationtools-46.ebuild:
