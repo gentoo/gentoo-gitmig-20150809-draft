@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/kdelibs-apidocs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.27 2003/11/29 17:25:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.28 2003/12/29 21:44:46 gmsoft Exp $
+
+  29 Dec 2003; Guy Martin <gmsoft@gentoo.org> kdelibs-apidocs-3.1.4.ebuild:
+  Marked stable on hppa.
 
   29 Nov 2003; Caleb Tennis <caleb@gentoo.org> kdelibs-apidocs-3.1-r1.ebuild,
   kdelibs-apidocs-3.1.1.ebuild, kdelibs-apidocs-3.1.1a.ebuild,
