@@ -5,7 +5,8 @@
   <Directory __APACHE_DOCUMENT_ROOT__/mysqltool>
     Options ExecCGI
     <Files *.cgi>
-      SetHandler perl-script
+###      SetHandler perl-script
+      SetHandler cgi-script
       <IfDefine PERL>
       PerlHandler MysqlTool
       </IfDefine>
