@@ -1,6 +1,11 @@
 # ChangeLog for net-www/horde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/ChangeLog,v 1.9 2003/05/12 18:49:05 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/ChangeLog,v 1.10 2003/09/01 13:57:16 aliz Exp $
+
+*horde-2.2.4_rc2 (01 Sep 2003)
+
+  01 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> horde-2.2.4_rc2.ebuild :
+  Security update.
 
 *horde-2.2.3 (12 May 2003)
   12 May 2003; Dean Bailey <alron@gentoo.org> horde-2.2.3 :
