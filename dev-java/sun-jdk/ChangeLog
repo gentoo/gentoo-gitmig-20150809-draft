@@ -1,10 +1,15 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.15 2002/08/08 13:10:52 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.16 2002/08/09 14:37:31 karltk Exp $
 
 *sun-jdk-1.4.1_beta (08 Aug 2002)
 
-  08 Aug 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
+  09 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> sun-jdk-1.4.1_beta.ebuild : 
+  Fixed version typos in the ebuild. Fixed omissions in this ChangeLog. Fixes
+  #6206.
+
+  08 Aug 2002; Maik Schreiber <blizzy@gentoo.org>  sun-jdk-1.4.1_beta.ebuild files/digest-sun-jdk-1.4.1.ebuild files/sun-jdk-1.4.1_beta : 
+  New upstream version.
 
 *sun-jdk-1.3.1.04 (29 Jun 2002)
 
