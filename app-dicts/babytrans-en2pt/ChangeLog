@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/babytrans-en2pt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/ChangeLog,v 1.4 2004/10/15 16:04:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/ChangeLog,v 1.5 2004/10/31 21:35:52 angusyoung Exp $
+
+  31 Oct 2004; Otavio Piske <angusyoung@gentoo.org>
+  babytrans-en2pt-0.2.ebuild:
+  Cleanups in ebuild
 
   15 Oct 2004; David Holm <dholm@gentoo.org> babytrans-en2pt-0.2.ebuild:
   Added to ~ppc.
