@@ -1,5 +1,5 @@
-MD5 2fcb1d59479150ecefb7fe557f2c1f6f tinycobol-0.61.ebuild 915
-MD5 828e6b3109e3565d0f667a0dcc2fda8f ChangeLog 1120
+MD5 393aaa0f62d492303abaeee9c124a451 tinycobol-0.61.ebuild 908
+MD5 bb7a64bebd7d3a18dfab2bfb60bb2046 ChangeLog 1211
 MD5 7512583151d773bb5eb84d11ed736fd5 metadata.xml 306
 MD5 4e034fd5e6c7b76b5b70b7f1096e443e files/digest-tinycobol-0.61 66
 MD5 f36f8eba3cc014c181ff74e98b99ef41 files/tinycobol-0.61.patch 1441

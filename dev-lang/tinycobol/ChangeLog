@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tinycobol
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.6 2003/11/12 08:57:15 phosphan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.7 2004/03/24 10:48:15 phosphan Exp $
+
+  24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> tinycobol-0.61.ebuild:
+  Adding IUSE
 
   12 Nov 2003; Patrick Kursawe <phosphan@gentoo.org> tinycobol-0.61.ebuild:
   libhtcobol.so symlink was not installed correctly and nobody noticed. Does

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.61.ebuild,v 1.3 2003/11/12 08:57:15 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.61.ebuild,v 1.4 2004/03/24 10:48:15 phosphan Exp $
 
 inherit eutils
 
@@ -10,10 +10,10 @@ SRC_URI="mirror://sourceforge/tiny-cobol/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc
-	>=dev-libs/glib-2.0
+DEPEND=">=dev-libs/glib-2.0
 	sys-libs/db"
 
 src_unpack() {
