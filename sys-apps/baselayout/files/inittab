@@ -45,7 +45,7 @@ c3:12345:respawn:/sbin/agetty 38400 tty3 linux
 c4:12345:respawn:/sbin/agetty 38400 tty4 linux
 c5:23:respawn:/sbin/agetty 38400 tty5 linux
 c6:23:respawn:/sbin/agetty 38400 tty6 linux
-SV:123456:respawn:env - PATH=/usr/local/bin:/usr/sbin:/usr/bin:/bin svscan /etc/supervise
+SV:123456:respawn:env - PATH=/usr/local/bin:/usr/sbin:/usr/bin:/bin svscan /etc/svc.d/control 
 # What to do at the "Three Finger Salute".
 ca:12345:ctrlaltdel:/sbin/shutdown -t1 -r now
 
