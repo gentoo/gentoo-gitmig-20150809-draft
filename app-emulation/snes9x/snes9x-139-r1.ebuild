@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139-r1.ebuild,v 1.14 2003/02/24 01:16:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139-r1.ebuild,v 1.15 2003/03/03 15:45:03 darkspecter Exp $
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://www.snes9x.com/"
@@ -40,6 +40,7 @@ src_compile() {
 	patch -p1 < ${FILESDIR}/snes9x-gcc3.diff
 	if [ `use ppc` ]; then
 		patch -p1 < ${FILESDIR}/snes9x-139-r1-Makefile-ppc.diff
+		patch -p1 < ${FILESDIR}/snes9x-139-r1-BE-sound-fix.diff
 	fi
 
 	#install our custom CXXFLAGS

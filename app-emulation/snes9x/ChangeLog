@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/snes9x
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/ChangeLog,v 1.10 2003/02/20 21:58:26 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/ChangeLog,v 1.11 2003/03/03 15:45:02 darkspecter Exp $
 
 *snes9x-139-r1 (20 Feb 2003)
+
+  03 Mar 2003; Bartosch Pixa <darkspecter@gentoo.org> snes9x-139-r1.ebuild:
+  BE sound fix
 
   20 Feb 2003; Bartosch Pixa <darkspecter@gentoo.org> snes9x-139-r1.ebuild :
   added a patch to enable fallback to c routines, RDEPEND and set ~ppc in keywords
