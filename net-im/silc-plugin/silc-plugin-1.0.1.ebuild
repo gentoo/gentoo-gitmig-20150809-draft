@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.5 2004/09/04 17:58:04 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.6 2004/09/04 23:15:40 dholm Exp $
 
 IRSSI_PV=0.8.9
 
@@ -12,7 +12,7 @@ SRC_URI="http://irssi.org/files/irssi-${IRSSI_PV}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE="debug pic"
 
 # All necessary dependencies are pulled in by irssi.
