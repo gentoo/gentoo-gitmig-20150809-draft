@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.6.20030629_pre1.ebuild,v 1.4 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.6.20030629_pre1.ebuild,v 1.5 2003/09/15 18:00:02 seemant Exp $
 
 inherit enlightenment eutils
 
@@ -28,7 +28,7 @@ DEPEND=">=dev-util/pkgconfig-0.5
 	virtual/glibc
 	sys-devel/gcc
 	app-admin/fam-oss
-	>=sys-apps/efsd-0.0.1.2003*
+	>=sys-fs/efsd-0.0.1.2003*
 	>=x11-libs/evas-1.0.0.2003*
 	>=dev-db/edb-1.0.3.2003*
 	>=dev-libs/eet-0.0.1.2003*
