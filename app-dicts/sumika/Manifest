@@ -1,6 +1,16 @@
-MD5 7076c77b31831712d55359b240559498 sumika-0.11.ebuild 787
-MD5 4e2f3cfe008c30b93c37c16780a752bc sumika-0.12.ebuild 787
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3a26d669cff4f199bfea46913b1c6ab4 ChangeLog 1999
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 013f9a2173b32cf4a936d049720cab3e sumika-0.11.ebuild 769
+MD5 0215b045d32bacd62c7c2888446bd946 sumika-0.12.ebuild 769
 MD5 ae973d240d283342f615428f818c0643 files/digest-sumika-0.11 63
 MD5 cc4ee60696600751450b9c82b517064d files/digest-sumika-0.12 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA30HhHTu7gpaalycRAmneAKCOdcqUkTTbtJj9fKB4DNtdAvFcxwCgqDQL
+DceHfMiWqaDZbPuGEX0qmxU=
+=JqIo
+-----END PGP SIGNATURE-----
