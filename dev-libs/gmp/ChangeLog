@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.24 2004/02/24 17:55:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.25 2004/02/26 06:02:50 kumba Exp $
+
+  26 Feb 2004; Joshua Kinard <kumba@gentoo.org> gmp-4.1.2.ebuild:
+  Added ~mips to KEYWORDS to satisfy repoman deps.
 
   24 Feb 2004; Seemant Kulleen <seemant@gentoo.org> gmp-3.1.1-r1.ebuild,
   gmp-4.1-r1.ebuild, gmp-4.1.2.ebuild:
