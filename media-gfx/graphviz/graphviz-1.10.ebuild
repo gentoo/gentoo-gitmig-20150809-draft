@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.10.ebuild,v 1.13 2004/06/03 23:22:28 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.10.ebuild,v 1.14 2004/06/05 21:20:33 geoman Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="open source graph drawing software"
 HOMEPAGE="http://www.research.att.com/sw/tools/graphviz/"
@@ -25,6 +27,8 @@ src_unpack() {
 }
 
 src_compile() {
+	#if arch is mips, need gnuconfig tweak to build
+	use mips && gnuconfig_update
 	local myconf
 	#if no tcltk, this will generate configure warnings, but will
 	#compile without tcltk support
