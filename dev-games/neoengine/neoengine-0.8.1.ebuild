@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.1.ebuild,v 1.4 2004/06/29 15:06:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.1.ebuild,v 1.5 2004/08/13 09:06:37 mr_bones_ Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/neoengine/${P}.tar.bz2"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="doc"
 
 DEPEND="virtual/opengl
@@ -20,25 +20,31 @@ DEPEND="virtual/opengl
 S="${WORKDIR}/${P}/neoengine"
 
 src_compile() {
-	econf || die "./configure failed"
-	emake || die "Compilation failed"
+	local i
+
+	econf \
+		--disable-dependency-tracking \
+		|| die
+	emake || die "emake failed"
 
 	if use doc; then
 		for i in "*.doxygen"; do
-			doxygen ${i};
+			doxygen ${i}
 		done
 	fi
 }
 
 src_install() {
+	local i
+
 	einstall || die "Installation failed"
 
 	dodoc AUTHORS ChangeLog INSTALL README TODO
 
 	if use doc; then
-		mkdir -p ${D}/usr/share/doc/${PF}
+		dodir /usr/share/doc/${PF}
 		for i in "*-api"; do
-			cp -r ${i} ${D}/usr/share/doc/${PF};
+			cp -r ${i} "${D}/usr/share/doc/${PF}"
 		done
 	fi
 }
