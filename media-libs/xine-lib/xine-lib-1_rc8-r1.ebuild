@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.1 2004/12/23 04:42:07 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.2 2004/12/23 06:33:30 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -119,7 +119,7 @@ src_compile() {
 	[ "${PROFILE_ARCH}" == "sparc" ] \
 		&& myconf="${myconf} --disable-vis"
 
-	use amd64 && myconf="${myconf} --with-xv-path=/usr/X11R6/$(get_libdir)"
+	myconf="${myconf} --with-xv-path=/usr/X11R6/$(get_libdir)"
 
 	# Fix compilation-errors on PowerPC #45393 & #55460 & #68251
 	if use ppc || use ppc64 ; then

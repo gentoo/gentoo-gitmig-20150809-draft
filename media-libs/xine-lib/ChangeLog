@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.160 2004/12/23 04:42:07 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.161 2004/12/23 06:33:30 chriswhite Exp $
+
+  23 Dec 2004; Chris White <chriswhite@gentoo.org> files/djb_demux_aiff.patch,
+  xine-lib-1_rc8-r1.ebuild:
+  Trying this.. again... Fixed the strange patch error and got this HAVE_XV
+  thing fixed (hopefully...).
 
 *xine-lib-1_rc8-r1 (23 Dec 2004)
 
