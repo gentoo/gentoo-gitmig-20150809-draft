@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2.ebuild,v 1.1 2003/04/07 22:42:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2.ebuild,v 1.2 2003/04/09 01:16:37 seemant Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of mplayer themes"
@@ -15,7 +15,7 @@ SRC_URI="${THEME_URI}/AlienMind-1.0.tar.bz2
 	${THEME_URI}/Cyrus-1.0.tar.bz2
 	${THEME_URI}/MidnightLove-1.5.tar.bz2
 	${THEME_URI}/Orange-1.0.tar.bz2
-	${THEME_URI}/QPlayer-1.0.tar.bz2
+	${THEME_URI}/QPlayer-1.0.2.tar.bz2
 	${THEME_URI}/WindowsMediaPlayer6-1.2.tar.bz2
 	${THEME_URI}/avifile-1.5.tar.bz2
 	${THEME_URI}/disappearer-1.0.tar.bz2
