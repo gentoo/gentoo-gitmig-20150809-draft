@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r1.ebuild,v 1.5 2003/08/05 16:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r1.ebuild,v 1.6 2003/09/06 22:27:51 msterret Exp $
 
 IUSE="readline tcltk berkdb bootstrap build doc"
 
@@ -41,7 +41,7 @@ inherit flag-o-matic eutils
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-db4.patch	
+	epatch ${FILESDIR}/${P}-db4.patch
 }
 
 src_compile() {
@@ -55,17 +55,17 @@ src_compile() {
 	t="${S}/Makefile.pre.in"
 	cp ${t} ${t}.orig || die
 	sed 's:install-platlib.*:& --install-scripts=$(BINDIR):' ${t}.orig > ${t}
-	
+
 	local myopts
 	#if we are creating a new build image, we remove the dependency on g++
 	if [ "`use build`" -a ! "`use bootstrap`" ]
 	then
 		myopts="--with-cxx=no"
 	fi
-	
+
 	# build python with threads support
 	myopts="${myopts} --with-threads"
-	
+
 	econf --with-fpectl \
 		--infodir='${prefix}'/share/info \
 		--mandir='${prefix}'/share/man \
@@ -76,10 +76,10 @@ src_compile() {
 src_install() {
 	dodir /usr
 	make install prefix=${D}/usr || die
-	
+
 	rm -f ${D}/usr/bin/python
 	dosym python${PYVER_MAJOR}.${PYVER_MINOR} /usr/bin/python${PYVER_MAJOR}
-	dosym python${PYVER_MAJOR} /usr/bin/python	
+	dosym python${PYVER_MAJOR} /usr/bin/python
 	dodoc README
 
 	# install our own custom python-config
@@ -90,7 +90,7 @@ src_install() {
 	# it probably shouldn't - use DistUtils, people!
 	insinto /usr/lib/python${PYVER}/config
 	doins ${S}/Makefile.pre.in
-	
+
 	# While we're working on the config stuff... Let's fix the OPT var
 	# so that it doesn't have any opts listed in it. Prevents the problem
 	# with compiling things with conflicting opts later.

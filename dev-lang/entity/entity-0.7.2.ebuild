@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.23 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.24 2003/09/06 22:27:51 msterret Exp $
 
 IUSE="sdl gnome ssl opengl python tcltk perl"
 
@@ -30,27 +30,27 @@ src_compile() {
 	use tcltk \
 		&& myconf="--enable-tcl=module --with-tcl=/usr/lib" \
 		|| myconf="--enable-tcl=no"
-	
+
 	use perl \
 		&& myconf="${myconf} --enable-perl=static" \
 		|| myconf="${myconf} --enable-perl=no"
-	
+
 	use python \
 		&& myconf="${myconf} --enable-python=static" \
 		|| myconf="${myconf} --enable-python=no"
-	
+
 	use ssl \
 		&& myconf="${myconf} --enable-openssl"
-	
+
 	use sdl \
 		&& myconf="${myconf} --enable-sdl"
-	
+
 	use gnome \
 		&& myconf="${myconf} --enable-gnome --enable-gdkimlib"
-	
+
 	use opengl \
 		&& myconf="${myconf} --enable-gtkgl"
-	
+
 	DEBIAN_ENTITY_MAGIC="voodoo" CFLAGS="$CFLAGS -I/usr/X11R6/include" \
 		econf \
 		--enable-exec-class=yes \
@@ -79,7 +79,7 @@ src_install () {
 	insinto /usr/share/entity/stembuilder/images
 	doins stembuilder/images/*.xpm
 
-	dodoc AUTHORS COPYING ChangeLog LICENSE NEWS README TODO 
+	dodoc AUTHORS COPYING ChangeLog LICENSE NEWS README TODO
 	docinto txt
 	dodoc docs/README* docs/*.txt docs/*.ascii
 	dohtml -r docs

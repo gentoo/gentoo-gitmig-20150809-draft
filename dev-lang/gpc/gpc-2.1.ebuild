@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.11 2003/02/13 10:25:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.12 2003/09/06 22:27:51 msterret Exp $
 
 DESCRIPTION="Gnu Pascal Compiler"
 SRC_URI="http://gnu-pascal.de/current/${P}.tar.gz
@@ -20,7 +20,7 @@ S="${WORKDIR}/gcc-2.95.3"
 src_unpack() {
 	unpack "${P}.tar.gz"
 	unpack "gcc-2.95.3.tar.gz"
-	
+
 	#the release is just a renamed 20020510 package
 	#thus need to reset ${P} at this point
 	P=gpc-20020510
@@ -38,7 +38,7 @@ src_unpack() {
 	#it does not seem to do any harm
 	patch lang.h < ${FILESDIR}/gpc-20020510_lang.h.patch
 
-	cd "${WORKDIR}/${P}"	
+	cd "${WORKDIR}/${P}"
 	mv p "${S}/gcc/"
 
 	cd "${S}"
@@ -87,7 +87,7 @@ src_install() {
 	#now lib
 	cd ${D}/usr/lib/
 	rm libiberty.a
-	
+
 	cd ${D}/usr/lib/gcc-lib/i686-pc-linux-gnu/
 	mv 2.95.3 2.95.3.orig
 	mkdir 2.95.3
@@ -95,7 +95,7 @@ src_install() {
 	mkdir 2.95.3/include
 	mv 2.95.3.orig/include/gpc-in-c.h 2.95.3/include/
 	rm -rf 2.95.3.orig
-	
+
 
 	# Install documentation.
 	#gpc wants to install some files and a lot of demos under /usr/doc

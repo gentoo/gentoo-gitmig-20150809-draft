@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.2.ebuild,v 1.9 2003/02/23 01:05:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.2.ebuild,v 1.10 2003/09/06 22:27:51 msterret Exp $
 
 IUSE="readline tcltk berkdb bootstrap"
 
@@ -52,14 +52,14 @@ src_compile() {
 	t="${S}/Makefile.pre.in"
 	cp ${t} ${t}.orig || die
 	sed 's:install-platlib.*:& --install-scripts=$(BINDIR):' ${t}.orig > ${t}
-	
+
 	local myopts
 	#if we are creating a new build image, we remove the dependency on g++
 	if [ "`use build`" -a ! "`use bootstrap`" ]
 	then
 		myopts="--with-cxx=no"
 	fi
-	
+
 	econf --with-fpectl \
 		--infodir='${prefix}'/share/info \
 		--mandir='${prefix}'/share/man \
@@ -83,7 +83,7 @@ src_install() {
 	# it probably shouldn't - use DistUtils, people!
 	insinto /usr/lib/python${PYVER}/config
 	doins ${S}/Makefile.pre.in
-	
+
 	# While we're working on the config stuff... Let's fix the OPT var
 	# so that it doesn't have any opts listed in it. Prevents the problem
 	# with compiling things with conflicting opts later.

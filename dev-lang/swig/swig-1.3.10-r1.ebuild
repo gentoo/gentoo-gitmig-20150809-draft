@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r1.ebuild,v 1.12 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r1.ebuild,v 1.13 2003/09/06 22:27:51 msterret Exp $
 
 IUSE="java guile python tcltk ruby perl"
 
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 	guile? ( >=dev-util/guile-1.4 )
 	tcltk? ( >=dev-lang/tk-8.3 )
 	perl? ( >=dev-lang/perl-5.6.1 )"
-	
+
 
 SLOT="0"
 LICENSE="as-is"
@@ -32,10 +32,10 @@ src_compile() {
 	use guile && myc="$myc --with-guile" || myc="$myc --without-guile"
 	use tcltk && myc="$myc --with-tcl" || myc="$myc --without-tcl"
 	use perl && myc="$myc --with-perl" || myc="$myc --without-perl"
-	
+
 	unset CXXFLAGS
 	unset CFLAGS
-	
+
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \

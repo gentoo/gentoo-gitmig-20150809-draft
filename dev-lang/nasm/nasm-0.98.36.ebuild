@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.36.ebuild,v 1.4 2003/09/05 13:22:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.36.ebuild,v 1.5 2003/09/06 22:27:51 msterret Exp $
 
 DESCRIPTION="groovy little assembler"
 HOMEPAGE="http://nasm.sourceforge.net/"
@@ -29,7 +29,7 @@ src_compile() {
 	else
 		make everything || die
 	fi
-	
+
 }
 
 src_install() {

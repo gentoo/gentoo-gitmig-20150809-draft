@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.4 2003/06/23 17:11:53 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.5 2003/09/06 22:27:51 msterret Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -56,7 +56,7 @@ src_unpack() {
 		eerror ""
 		die "no license key in \$CXX_LICENSE_KEY"
 	fi
-	
+
 	# :-NULL safeguards against bash bug.
 	einfo "Decrypting cxx distribution..."
         gpg --quiet \
@@ -66,7 +66,7 @@ src_unpack() {
                 --output ${cxx_rpm} \
                 --decrypt ${DISTDIR}/${cxx_rpm}.crypt \
                 <<< ${CXX_LICENSE_KEY:-NULL}
-        
+
 	ebegin "Unpacking cxx distribution..."
 	# This is the same as using rpm2targz then extracting 'cept that
 	# it's faster, less work, and less hard disk space.  rpmoffset is
@@ -122,7 +122,7 @@ src_compile() {
 	# is the wrong approach, but it will do for the first pass at this
 	# package
 	#
-	# update: No longer nescessary with >=libcpml-5.2.01-r2 
+	# update: No longer nescessary with >=libcpml-5.2.01-r2
 	#
 	#sed -i 's/^  version_high_enough /  true /' \
 	#	usr/lib/compaq/cxx-${cxx_release}/alpha-linux/bin/probe_linux.sh

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r11.ebuild,v 1.9 2003/08/22 13:01:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.6.1-r11.ebuild,v 1.10 2003/09/06 22:27:51 msterret Exp $
 
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${P}.tar.gz"
@@ -30,7 +30,7 @@ src_compile() {
     if [ "${ARCH}" = "alpha" ]; then
         CFLAGS="${CFLAGS} -fPIC"
         CXXFLAGS="${CXXFLAGS} -fPIC"
-    fi  
+    fi
 
     local myconf
     if [ "`use gdbm`" ]
@@ -52,7 +52,7 @@ src_compile() {
     fi
 
 	# put in built-in removal patch
-	patch -p1 < ${FILESDIR}/${PV}-builtin-fixup.diff || die 
+	patch -p1 < ${FILESDIR}/${PV}-builtin-fixup.diff || die
 	patch -p0 < ${FILESDIR}/${PV}-op-test-fix.diff || die
 
 	# configure for libperl.so
@@ -96,9 +96,9 @@ src_compile() {
 	cd ${S}
 
 	# put in built-in removal patch
-	patch -p1 < ${FILESDIR}/${PV}-builtin-fixup.diff || die 
+	patch -p1 < ${FILESDIR}/${PV}-builtin-fixup.diff || die
 	patch -p0 < ${FILESDIR}/${PV}-op-test-fix.diff || die
-	
+
 	# configure for libperl.a
 # this is gross -- from Christian Gafton, Red Hat
 	cat > config.over <<EOF
@@ -152,7 +152,7 @@ EOF
 	mv Makefile Makefile_orig
 	sed -e 's#^all: $(FIRSTMAKEFILE) #all: README #' \
 		Makefile_orig > Makefile
-    
+
     make || die
 
     # Parallel make fails
@@ -160,20 +160,20 @@ EOF
 	if [ `expr "$PARCH" ":" "sparc"` -gt 4 ]; then
 		echo "Skipping tests on this platform"
 	else
-	    make test 
+	    make test
 	fi
 }
 
 src_install() {
-#The following is to handle international users. Perl does nls post-install 
-    export LC_ALL=C 
+#The following is to handle international users. Perl does nls post-install
+    export LC_ALL=C
 
     export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 
 	insinto /usr/lib/perl5/${PV}/${PARCH}/CORE/
 	doins ${WORKDIR}/libperl.so
 	dosym /usr/lib/perl5/${PV}/${PARCH}/CORE/libperl.so /usr/lib/libperl.so
-	
+
 
 #    make -f Makefile \
 #		INSTALLMAN1DIR=${D}/usr/share/man/man1 \
@@ -206,7 +206,7 @@ src_install() {
     dodoc Changes* Artistic Copying README Todo* AUTHORS
     prepalldocs
 
-    
+
 	# HTML Documentation
 	dodir /usr/share/doc/${PF}/html
 	${D}/usr/bin/perl installhtml --recurse --htmldir=${D}/usr/share/doc/${PF}/html

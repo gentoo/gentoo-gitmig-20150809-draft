@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31.ebuild,v 1.1 2003/04/15 14:49:59 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31.ebuild,v 1.2 2003/09/06 22:27:51 msterret Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -52,7 +52,7 @@ src_unpack() {
 		eerror ""
 		die "no license key in \$CXX_LICENSE_KEY"
 	fi
-	
+
 	# :-NULL safeguards against bash bug.
 	einfo "Decrypting cxx distribution..."
 	gpg --quiet --passphrase-fd 0 --output ${cxx_rpm} \
@@ -115,7 +115,7 @@ src_compile() {
 	# is the wrong approach, but it will do for the first pass at this
 	# package
 	#
-	# update: No longer nescessary with >=libcpml-5.2.01-r2 
+	# update: No longer nescessary with >=libcpml-5.2.01-r2
 	#
 	#sed -i 's/^  version_high_enough /  true /' \
 	#	usr/lib/compaq/cxx-${cxx_release}/alpha-linux/bin/probe_linux.sh

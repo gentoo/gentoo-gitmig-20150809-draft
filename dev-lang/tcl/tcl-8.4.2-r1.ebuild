@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.2-r1.ebuild,v 1.2 2003/08/15 13:03:24 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.2-r1.ebuild,v 1.3 2003/09/06 22:27:51 msterret Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -31,9 +31,9 @@ src_compile() {
 				--prefix=/usr \
 				--mandir=/usr/share/man \
 				|| die
-	# threading is not recommended as it breaks some packages 
+	# threading is not recommended as it breaks some packages
 	#			--enable-threads \
-				
+
 	emake CFLAGS="${CFLAGS}" || die
 
 }
@@ -43,10 +43,10 @@ src_install() {
 	#short version number
 	local v1
 	v1=${PV%.*}
-	
+
 	cd ${S}/unix
 	S= make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install || die
-	
+
 	# fix the tclConfig.sh to eliminate refs to the build directory
 	sed -e "s,^TCL_BUILD_LIB_SPEC='-L${S}/unix,TCL_BUILD_LIB_SPEC='-L/usr/lib," \
 		-e "s,^TCL_SRC_DIR='${S}',TCL_SRC_DIR='/usr/lib/tcl${v1}/include'," \
@@ -55,7 +55,7 @@ src_install() {
 		-e "s,^TCL_LIB_FILE='libtcl8.4..TCL_DBGX..so',TCL_LIB_FILE=\"libtcl8.4\$\{TCL_DBGX\}.so\"," \
 		${D}/usr/lib/tclConfig.sh > ${D}/usr/lib/tclConfig.sh.new
 	mv ${D}/usr/lib/tclConfig.sh.new ${D}/usr/lib/tclConfig.sh
-	
+
 	# install private headers
 	dodir /usr/lib/tcl${v1}/include/unix
 	install -c -m0644 ${S}/unix/*.h ${D}/usr/lib/tcl${v1}/include/unix
@@ -63,14 +63,14 @@ src_install() {
 	install -c -m0644 ${S}/generic/*.h ${D}/usr/lib/tcl${v1}/include/generic
 	rm -f ${D}/usr/lib/tcl${v1}/include/generic/tcl.h
 	rm -f ${D}/usr/lib/tcl${v1}/include/generic/tclDecls.h
-	rm -f ${D}/usr/lib/tcl${v1}/include/generic/tclPlatDecls.h	
+	rm -f ${D}/usr/lib/tcl${v1}/include/generic/tclPlatDecls.h
 
 	# install symlink for libraries
 	dosym /usr/lib/libtcl${v1}.so /usr/lib/libtcl.so
 	dosym /usr/lib/libtclstub${v1}.a /usr/lib/libtclstub.a
-	
+
 	ln -sf tclsh${v1} ${D}/usr/bin/tclsh
-	
+
 	cd ${S}
 	dodoc README changes license.terms
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.12.ebuild,v 1.9 2003/08/05 16:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.12.ebuild,v 1.10 2003/09/06 22:27:51 msterret Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_install() {
 	cd ${S}
 	MACHINE=`script/harch`
 	cp ${FILESDIR}/hmakerc ${D}/usr/lib/hmake/${MACHINE}/
-	
+
 	#install docs and man pages manually
 	dodoc README INSTALL COPYRIGHT
 	doman man/*

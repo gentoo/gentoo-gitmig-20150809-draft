@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.2.ebuild,v 1.2 2003/08/05 16:26:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.2.ebuild,v 1.3 2003/09/06 22:27:51 msterret Exp $
 
 inherit eutils
 
@@ -39,10 +39,10 @@ src_install() {
 	#short version number
 	local v1
 	v1=${PV%.*}
-	
+
 	cd ${S}/unix
 	make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install || die
-	
+
 	# fix the tkConfig.sh to eliminate refs to the build directory
 	sed -i \
 		-e "s,^\(TK_BUILD_LIB_SPEC='-L\)${S}/unix,\1/usr/lib," \
@@ -50,7 +50,7 @@ src_install() {
 		-e "s,^\(TK_BUILD_STUB_LIB_SPEC='-L\)${S}/unix,\1/usr/lib," \
 		-e "s,^\(TK_BUILD_STUB_LIB_PATH='\)${S}/unix,\1/usr/lib," \
 		${D}/usr/lib/tkConfig.sh
-	
+
 	# install private headers
 	dodir /usr/lib/tk${v1}/include/unix
 	install -c -m0644 ${S}/unix/*.h ${D}/usr/lib/tk${v1}/include/unix
@@ -58,15 +58,15 @@ src_install() {
 	install -c -m0644 ${S}/generic/*.h ${D}/usr/lib/tk${v1}/include/generic
 	rm -f ${D}/usr/lib/tk${v1}/include/generic/tk.h
 	rm -f ${D}/usr/lib/tk${v1}/include/generic/tkDecls.h
-	rm -f ${D}/usr/lib/tk${v1}/include/generic/tkPlatDecls.h	
+	rm -f ${D}/usr/lib/tk${v1}/include/generic/tkPlatDecls.h
 
 	# install symlink for libraries
 	#dosym /usr/lib/libtk${v1}.a /usr/lib/libtk.a
 	dosym /usr/lib/libtk${v1}.so /usr/lib/libtk.so
 	dosym /usr/lib/libtkstub${v1}.a /usr/lib/libtkstub.a
-	
+
 	ln -sf wish${v1} ${D}/usr/bin/wish
-	
+
 	cd ${S}
 	dodoc README changes license.terms
 }

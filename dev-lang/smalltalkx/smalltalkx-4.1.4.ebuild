@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smalltalkx/smalltalkx-4.1.4.ebuild,v 1.5 2003/08/05 18:56:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smalltalkx/smalltalkx-4.1.4.ebuild,v 1.6 2003/09/06 22:27:51 msterret Exp $
 
 MY_PV=${PV//./}
 S=${WORKDIR}/stx
@@ -30,7 +30,7 @@ src_install() {
 	done
 
 	dodir /usr/bin
-	dosym /opt/smalltalk/${PV}/bin/smalltalk /usr/bin/smalltalk 
+	dosym /opt/smalltalk/${PV}/bin/smalltalk /usr/bin/smalltalk
 
 	# create a path entry in /etc/env.d
 	echo "PATH=/opt/smalltalk/${PV}/bin" >> ${WORKDIR}/50smalltalkx

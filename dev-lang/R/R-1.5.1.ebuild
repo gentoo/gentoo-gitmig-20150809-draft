@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.5.1.ebuild,v 1.9 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.5.1.ebuild,v 1.10 2003/09/06 22:27:51 msterret Exp $
 
 IUSE="atlas X tcltk gnome"
 
@@ -9,8 +9,8 @@ S=${WORKDIR}/${P}
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 
 SRC_URI="http://cran.r-project.org/src/base/${P}.tgz"
-	
-	#There are daily release patches, don't know how to utilize these 
+
+	#There are daily release patches, don't know how to utilize these
 	#"ftp://ftp.stat.math.ethz.ch/Software/${PN}/${PN}-release.diff.gz"
 
 HOMEPAGE="http://www.r-project.org/"
@@ -38,14 +38,14 @@ src_unpack() {
 src_compile() {
 
 	local myconf="--enable-R-profiling --enable-R-shlib --with-readline"
-	
+
 	#Eventually, we will want to take into account that a user may have
 	#an alternate or additional blas libraries,
-	#i.e. USE variable blas and and virtual/blas 
+	#i.e. USE variable blas and and virtual/blas
 	use atlas || myconf="${myconf} --without-blas" #default enabled
 
 	use X || myconf="${myconf} --without-x" #default enabled
-	
+
 	if use tcltk; then
 		#configure needs to find the files tclConfig.sh and tkConfig.sh
 		myconf="${myconf} --with-tcltk --with-tcl-config=/usr/lib --with-tk-config=/usr/lib"
@@ -54,7 +54,7 @@ src_compile() {
 	fi
 
 	use gnome && myconf="${myconf} --with-gnome" #default disabled
-	
+
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
@@ -67,7 +67,7 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
@@ -87,7 +87,7 @@ src_install () {
 	rm R
 	dosym ../lib/R/bin/R /usr/bin/R
 	cd ${S}
-	
+
 	dodoc AUTHORS BUGS COPYING* ChangeLog FAQ INSTALL *NEWS README \
 		RESOURCES THANKS VERSION Y2K
 

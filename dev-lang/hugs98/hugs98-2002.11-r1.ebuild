@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2002.11-r1.ebuild,v 1.1 2003/04/24 11:51:48 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2002.11-r1.ebuild,v 1.2 2003/09/06 22:27:51 msterret Exp $
 
 IUSE=""
 
@@ -40,7 +40,7 @@ src_install () {
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
-	
+
 	#somewhat clean-up installation of few docs
 	cd ${S}
 	dodoc Credits License Readme

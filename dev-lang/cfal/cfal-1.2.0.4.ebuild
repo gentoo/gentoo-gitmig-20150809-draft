@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfal/cfal-1.2.0.4.ebuild,v 1.1 2003/08/19 22:24:41 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfal/cfal-1.2.0.4.ebuild,v 1.2 2003/09/06 22:27:51 msterret Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.support.compaq.com/alpha-tools"
 
 # its okay to set a SRC_URI here, as the rpm is gpg encrypted
 # and user must agree to the license before getting access
-SRC_URI="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/crypt/cfal-1.2.0-4.alpha.rpm.crypt 
+SRC_URI="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/crypt/cfal-1.2.0-4.alpha.rpm.crypt
 	ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/cfalrtl-1.2.0-3.alpha.rpm"
 
 S=${WORKDIR}
@@ -40,7 +40,7 @@ src_unpack() {
 	# convert rpm into tar archive
 	local cfal_rpm="cfal-${cfal_release}.alpha.rpm"
 	local cfalrtl_rpm="cfalrtl-${cfalrtl_release}.alpha.rpm"
-	
+
 	if [ -z ${CFAL_LICENSE_KEY} ]; then
 		eerror ""
 		eerror "You have not set the environment variable"
@@ -62,7 +62,7 @@ src_unpack() {
 		--passphrase-fd 0 \
 		--output ${cfal_rpm} \
 		--decrypt ${DISTDIR}/${cfal_rpm}.crypt
-	
+
 	ebegin "Unpacking cfal distribution..."
 	# This is the same as using rpm2targz then extracting 'cept that
 	# it's faster, less work, and less hard disk space.  rpmoffset is
@@ -95,7 +95,7 @@ src_compile() {
 	mv ${S}/usr/doc/cfal-1.2.0/README ${S}/usr/doc/cfal-1.2.0/fort.man \
 		${S}/usr/doc/cfal-1.2.0/decfortran90.hlp ${S}
 	rm -rf ${S}/usr/doc
-	
+
 	# fix up lib paths - bug #15719, comment 6
 	einfo "Copying crtbegin/crtend from gcc..."
 	gcc_libs_path="`gcc-config --get-lib-path`"
@@ -110,12 +110,12 @@ src_compile() {
 src_install() {
 	# move files over
 	mv usr ${D} || die "cfal installation failed"
-	
+
 	dodoc README fort.man decfortran90.hlp
 
 	dodir /lib
 	dosym /usr/lib/compaq/cfal/fpp /lib/fpp
-	
+
 	prepalldocs
 	prepallman
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.6.002.ebuild,v 1.1 2003/04/12 03:44:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.6.002.ebuild,v 1.2 2003/09/06 22:27:51 msterret Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -39,7 +39,7 @@ src_unpack() {
 
 	if [ ! -f ${DISTDIR}/${ccc_rpm} ]; then
 		eerror ""
-		eerror "Please download ${ccc_rpm} from" 
+		eerror "Please download ${ccc_rpm} from"
 		eerror "${HOMEPAGE}, and place it in"
 		eerror "${DISTDIR}"
 		eerror ""

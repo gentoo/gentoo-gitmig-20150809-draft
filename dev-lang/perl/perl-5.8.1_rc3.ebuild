@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1_rc3.ebuild,v 1.3 2003/08/22 13:01:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1_rc3.ebuild,v 1.4 2003/09/06 22:27:51 msterret Exp $
 
-inherit eutils flag-o-matic 
+inherit eutils flag-o-matic
 
 # Perl has problems compiling with -Os in your flags
 replace-flags "-Os" "-O2"
@@ -115,7 +115,7 @@ src_compile() {
 
 	export LC_ALL="C"
 	local myconf=""
-	
+
 	if [ "`use threads`" ]
 	then
 		einfo "using threads"
@@ -159,8 +159,8 @@ src_compile() {
 	fi
 
 	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
-	
-	
+
+
 cat > config.over <<EOF
 installprefix=${D}/usr
 installarchlib=\`echo \$installarchlib | sed "s!\$prefix!\$installprefix!"\`
@@ -195,16 +195,16 @@ EOF
 		-Dcf_by='Gentoo' \
 		-Ud_csh \
 		${myconf} || die "Unable to configure"
-			
+
 	MAKEOPTS="${MAKEOPTS} -j1" emake || die "Unable to make"
-	
+
 	emake -i test CCDLFLAGS=
 }
 
 src_install() {
-	
+
 	export LC_ALL="C"
-	
+
 	# Need to do this, else apps do not link to dynamic version of
 	# the library ...
 	local coredir="/usr/lib/perl5/${PV}/${myarch}${mythreading}/CORE"
@@ -212,7 +212,7 @@ src_install() {
 	dosym ../../../../${LIBPERL} ${coredir}/${LIBPERL}
 	dosym ../../../../${LIBPERL} ${coredir}/libperl.so.${PERLSLOT}
 	dosym ../../../../${LIBPERL} ${coredir}/libperl.so
-		
+
 	# Fix for "stupid" modules and programs
 	dodir /usr/lib/perl5/site_perl/${PV}/${myarch}${mythreading}
 
@@ -255,18 +255,18 @@ EOF
 		--man3dir="${D}/usr/share/man/man3" --man3ext='3'
 
 	# This removes ${D} from Config.pm and .packlist
-	for i in `find ${D} -iname "Config.pm"` `find ${D} -iname ".packlist"`;do 
+	for i in `find ${D} -iname "Config.pm"` `find ${D} -iname ".packlist"`;do
 		einfo "Removing ${D} from ${i}..."
 		sed -e "s:${D}::" ${i} > ${i}.new &&\
 			mv ${i}.new ${i} || die "Sed failed"
 	done
-	
+
 	dodoc Changes* Artistic Copying README Todo* AUTHORS
 
 	if [ -n "`use doc`" ]
 	then
 		# HTML Documentation
-		# We expect errors, warnings, and such with the following. 
+		# We expect errors, warnings, and such with the following.
 
 		dodir /usr/share/doc/${PF}/html
 		./perl installhtml \
@@ -301,7 +301,7 @@ pkg_postinst() {
 		# Create libperl.so (we use the *soname* versioned lib here ..)
 		ln -snf libperl.so.${PERLSLOT} ${ROOT}usr/lib/libperl.so
 	fi
-		
+
 	if [ "${ROOT}" = "/" ]
 	then
 		ebegin "Converting C header files to the corresponding Perl format"

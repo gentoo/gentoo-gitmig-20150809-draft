@@ -1,5 +1,5 @@
 MD5 0f3f5efa09089b39c09eea1d4d7a125b ChangeLog 544
-MD5 c53bbaba9bcac50e70877300900630b7 squeak-3.2.5.ebuild 2960
-MD5 814cd5ddbbbeb941d7b024dd5228faca squeak-3.4.1.ebuild 3024
+MD5 f558da018cd99c1230db0c9fe96c8672 squeak-3.2.5.ebuild 2925
+MD5 c5ee64830a6abb8992d522b313a0ab02 squeak-3.4.1.ebuild 2988
 MD5 95975b038cad92087afe83055e6b2137 files/digest-squeak-3.2.5 69
 MD5 e15651f69bf3b5c02f40bcffceefb53c files/digest-squeak-3.4.1 69
