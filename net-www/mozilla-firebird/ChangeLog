@@ -1,6 +1,17 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.2 2003/06/03 06:51:48 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.3 2003/06/03 14:33:01 brad Exp $
+
+*mozilla-firebird 0.6-r2 (02 June 20032)
+
+  03 June 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-0.6-r2.ebuild :
+  - Remove bad dependency on dev-util/cvs
+
+*mozilla-firebird 0.6-r1 (02 June 20032)
+
+  03 June 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-0.6-r1.ebuild :
+  - Change not depends from !net-www/MozillaFirebird-bin to !net-www/mozilla-firebird-bin
+  - Add headers to the ebuilds, ChangeLog file
 
 *mozilla-firebird 0.6 (02 June 2003)
 
