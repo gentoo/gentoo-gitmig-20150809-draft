@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.0.065-r1.ebuild,v 1.3 2003/02/13 10:26:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.0.065-r1.ebuild,v 1.4 2003/03/18 21:18:16 avenj Exp $
 
 S=${WORKDIR}
 
@@ -85,8 +85,6 @@ pkg_postinst () {
 	einfo
 	einfo "You will need to place your license in /opt/intel/licenses/"
 	einfo
-	if [ -d /opt/intel/compiler?0 ]
-	then
 		ewarn
 		ewarn "Packages compiled with older versions of icc will need"
 		ewarn "to be recompiled. Until you do that, old packages will"
@@ -94,7 +92,6 @@ pkg_postinst () {
 		ewarn "to 'compiler60' and run 'ldconfig.' Note that this edit"
 		ewarn "won't persist and will require you to re-edit after each"
 		ewarn "package you re-install."
-	fi
 	ewarn "If 'icc' breaks, use 'iccbin' instead and report a bug."
 	ewarn "NOTE: Before compiling important applications that your system"
 	ewarn "depends on, read the warning above. This could potentially"

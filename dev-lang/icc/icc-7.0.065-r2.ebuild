@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.0.065-r2.ebuild,v 1.3 2003/03/18 01:45:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.0.065-r2.ebuild,v 1.4 2003/03/18 21:18:16 avenj Exp $
 
 S=${WORKDIR}
 
@@ -85,8 +85,6 @@ pkg_postinst () {
 	einfo
 	einfo "You will need to place your license in /opt/intel/licenses/"
 	einfo
-	if [ -d /opt/intel/compiler?0 ]
-	then
 		ewarn
 		ewarn "Packages compiled with older versions of icc will need"
 		ewarn "to be recompiled. Until you do that, old packages will"
@@ -99,7 +97,6 @@ pkg_postinst () {
 		ewarn "THIS COULD RENDER YOUR SYSTEM UNUSABLE."
 		ewarn "THIS IS A PROBLEM WITH INTEL'S SOFTWARE, _NOT_"
 		ewarn "WITH GENTOO."
-	fi
 	ewarn "If 'icc' breaks, use 'iccbin' instead and report a bug."
 	ewarn "Please use 'source /etc/profile' prior to merging any icc-enabled"
 	ewarn "ebuilds."
