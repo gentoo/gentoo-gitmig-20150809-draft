@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.14 2004/12/29 10:11:16 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.15 2005/01/06 13:58:15 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -252,7 +252,6 @@ linux-mod_pkg_setup() {
 	linux-info_pkg_setup;
 	check_kernel_built;
 	check_modules_supported;
-	check_extra_config;
 	set_kvobj;
 }
 
@@ -275,7 +274,8 @@ linux-mod_src_compile() {
 		
 		einfo "Preparing ${modulename} module"
 		cd ${sourcedir}
-		emake ${BUILD_PARAMS} ${BUILD_TARGETS:-clean module} || die Unable to make ${BUILD_PARAMS} ${BUILD_TARGETS:-clean module}.
+		emake ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS:-clean module} || \
+			die Unable to make ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS:-clean module}.
 	done
 	ARCH="${xarch}"
 }

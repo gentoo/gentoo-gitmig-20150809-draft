@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.15 2004/12/31 09:23:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.16 2005/01/06 13:58:15 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -57,6 +57,14 @@ EXPORT_FUNCTIONS pkg_setup
 # ---------------------------------------
 KERNEL_DIR="${KERNEL_DIR:-/usr/src/linux}"
 
+
+# Bug fixes
+
+# fix to bug #75034
+case ${ARCH} in
+    ppc)     	BUILD_FIXES="${BUILD_FIXES} TOUT=${T}/.tmp_gas_check";;
+    ppc64)      BUILD_FIXES="${BUILD_FIXES} TOUT=${T}/.tmp_gas_check";;
+esac
 
 # Pulled from eutils as it might be more useful only being here since
 # very few ebuilds which dont use this eclass will ever ever use these functions
@@ -116,7 +124,7 @@ qeerror() {
 getfilevar() {
 local	ERROR workingdir basefname basedname xarch
 	ERROR=0
-	
+
 	[ -z "${1}" ] && ERROR=1
 	[ ! -f "${2}" ] && ERROR=1
 
@@ -135,7 +143,7 @@ local	ERROR workingdir basefname basedname xarch
 		
 		cd ${basedname}
 		echo -e "include ${basefname}\ne:\n\t@echo \$(${1})" | \
-			make -f - e 2>/dev/null
+			make ${BUILD_FIXES} -f - e 2>/dev/null
 		cd ${workingdir}
 		 
 		ARCH=${xarch}
@@ -355,15 +363,15 @@ check_kernel_built() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
 	
-	if [ ! -f "${KV_OUT_DIR}/System.map" ]
+	if [ ! -f "${KV_OUT_DIR}/include/linux/version.h" ]
 	then
-		eerror "These sources have not yet been compiled."
-		eerror "We cannot build against an uncompiled tree."
+		eerror "These sources have not yet been prepared."
+		eerror "We cannot build against an unprepared tree."
 		eerror "To resolve this, please type the following:"
 		eerror
 		eerror "# cd ${KV_DIR}"
 		eerror "# make oldconfig"
-		eerror "# make bzImage modules modules_install"
+		eerror "# make modules_prepare"
 		eerror
 		eerror "Then please try merging this module again."
 		die "Kernel sources need compiling first"

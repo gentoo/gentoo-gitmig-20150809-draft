@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.68 2005/01/01 03:37:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.69 2005/01/06 13:58:15 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -63,9 +63,9 @@ kernel_is() {
 	# And lets add a sanity check
 	[ -z "${KV_FULL}" ] && return 1	
 
-	local RESULT operator value test
+	local RESULT operator test value
 	RESULT=0
-	
+
 	operator="="
 	if [ "${1}" == "lt" ]
 	then
@@ -77,7 +77,7 @@ kernel_is() {
 		shift
 	elif [ "${1}" == "le" ]
 	then
-		operator="-le"
+	operator="-le"
 		shift
 	elif [ "${1}" == "ge" ]
 	then
@@ -87,17 +87,21 @@ kernel_is() {
 
 	if [ -n "${1}" ]
 	then
-		[ ${KV_MAJOR} ${operator} ${1} ] || RESULT=1
+		value="${value}${1}"
+		test="${test}${KV_MAJOR}"
 	fi
 	if [ -n "${2}" ]
 	then
-		[ ${KV_MINOR} ${operator} ${2} -a ${RESULT} -eq 0 ] || RESULT=1
+		value="${value}${2}"
+		test="${test}${KV_MINOR}"
 	fi
 	if [ -n "${3}" ]
 	then
-		[ ${KV_PATCH} ${operator} ${3} -a ${RESULT} -eq 0 ] || RESULT=1
+		value="${value}${3}"
+		test="${test}${KV_PATCH}"
 	fi
-	return ${RESULT}
+
+	[ ${test} ${operator} ${value} ] && return 0 || return 1
 }
 
 
