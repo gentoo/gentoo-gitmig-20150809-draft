@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.18 2004/11/17 21:05:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.19 2004/12/24 09:33:45 vapier Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ inherit eutils
 # They were originally Red Hat and Debian's patches
 
 DESCRIPTION="Console display library used by most text viewer"
-HOMEPAGE="http://space.mit.edu/~davis/slang/"
+HOMEPAGE="http://www.s-lang.org/"
 SRC_URI="ftp://space.mit.edu/pub/davis/slang/v1.4/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 Artistic )"
