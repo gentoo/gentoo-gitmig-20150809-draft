@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.27 2003/11/18 16:33:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.28 2003/12/25 00:42:45 plasmaroo Exp $
+
+  25 Dec 2003; <plasmaroo@gentoo.org> strace-4.5.1.ebuild,
+  files/strace-4.5.1-2.6.patch:
+  Added a patch allowing strace to compile successfully on 2.6 kernels.
 
 *strace-4.5.1 (18 Nov 2003)
 
