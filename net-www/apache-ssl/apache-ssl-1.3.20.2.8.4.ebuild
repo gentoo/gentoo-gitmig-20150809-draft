@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.20.2.8.4.ebuild,v 1.1 2001/05/24 19:56:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.20.2.8.4.ebuild,v 1.2 2001/05/30 18:24:34 achim Exp $
 
 AV="1.3.20"
 MSV="2.8.4"
@@ -37,7 +37,7 @@ src_compile() {
 	--enable-shared=max --enable-suexec --suexec-caller=wwwrun \
 	--suexec-userdir=public_html --suexec-uidmin=96 \
 	--suexec-gidmin=96 --suexec-safepath="/bin:/usr/bin" \
-	--disable-rule=EXPAT
+	--disable-rule=EXPAT --with-perl=/usr/bin/perl
 #	--disable-module=auth_dbm"
     try make
     try make certificate TYPE=dummy
@@ -45,6 +45,7 @@ src_compile() {
 
 src_install() { 
     try make install-quiet root=${D}
+    dosed "s:/usr/local/bin/perl5:/usr/bin/perl:" /usr/local/httpd/htdocs/manual/search/manual-index.cgi
     cd ${D}/usr/sbin
     cp apachectl apachectl.orig
     sed -e "s:^PIDFILE.*:PIDFILE=/var/run/httpd.pid:" \

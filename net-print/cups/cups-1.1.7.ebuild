@@ -16,7 +16,6 @@ DEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.72 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	>=media-libs/libpng-1.0.9
-	>=media-libs/jpeg-6b
 	>=media-libs/tiff-3.5.5
 	!net-print/LPRng"
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r2.ebuild,v 1.2 2001/02/01 19:30:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r2.ebuild,v 1.3 2001/05/30 18:24:34 achim Exp $
 
 A="${P}.tar.gz"
 S=${WORKDIR}/${P}
@@ -10,15 +10,14 @@ SRC_URI="http://www.amavis.org/dist/${A}"
 
 HOMEPAGE="http://www.amavis.org"
 
-DEPEND=">=sys-apps/bash-2.04
-	>=sys-libs/glibc-2.1.3
+DEPEND="virtual/glibc
 	net-mail/maildrop
 	>=net-mail/tnef-0.13
 	>=net-mail/vlnx-407e
-	virtual/mta"
+	net-mail/qmail"
 
-src_compile() {                           
-  cd ${S}
+src_compile() {
+
   ./reconf
   try ./configure --host=${CHOST} --prefix=/usr \
 	--with-logdir=/var/log/scanmail \
@@ -27,8 +26,8 @@ src_compile() {
   try make
 }
 
-src_install() {                               
-  cd ${S}
+src_install() {
+
   try make prefix=${D}/usr install
   into /usr
   dodoc AUTHORS BUGS COPYING ChangeLog FAQ HINTS NEWS README* TODO

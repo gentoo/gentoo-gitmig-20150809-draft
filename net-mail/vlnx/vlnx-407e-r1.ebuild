@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-407e-r1.ebuild,v 1.3 2000/11/01 04:44:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-407e-r1.ebuild,v 1.4 2001/05/30 18:24:34 achim Exp $
 
 P=vlnx407e
 A="${P}.tar.Z dat-4098.tar"
@@ -12,7 +12,7 @@ SRC_URI="http://download.mcafee.com/products/evaluation/virusscan/english/unix/l
 	 http://download.nai.com/products/datfiles/4.x/nai/dat-4098.tar"
 
 DEPEND=""
-
+RDEPEND="sys-devel/ld.so"
 src_unpack() {
   cd ${WORKDIR}
   mkdir ${P}

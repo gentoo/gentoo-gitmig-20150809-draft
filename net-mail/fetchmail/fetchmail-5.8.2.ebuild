@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.8.2.ebuild,v 1.1 2001/05/10 02:16:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.8.2.ebuild,v 1.2 2001/05/30 18:24:34 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -23,6 +23,7 @@ src_compile() {
 	myconf="$myconf --disable-nls"
     fi
     try ./configure --prefix=/usr --host=${CHOST} \
+        --mandir=/usr/share/man \
 	--enable-RPA --enable-NTLN \
 	--enable-SDPS $myconf
     try make

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.3 2001/04/28 12:42:41 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.4 2001/05/30 18:24:34 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -10,11 +10,10 @@ DESCRIPTION="Tolls to convert docbook to man and info"
 SRC_URI="http://download.sourceforge.net/docbook2x/${A}"
 HOMEPAGE="http://docbook2x.sourceforge.net"
 
-DEPEND=">=dev-perl/XML-DOM-1.25
-	>=dev-perl/XML-Parser-2.30
-	>=dev-perl/XML-Writer-0.4
-	>=dev-perl/SGMLSpm-1.03
-	>=gnome-libs/libxslt-0.5.0"
+RDEPEND=">=dev-perl/XML-Writer-0.4
+        >=dev-perl/XML-XSLT-0.31
+	>=dev-perl/SGMLSpm-1.03"
+	#>=gnome-libs/libxslt-0.5.0"
 
 src_install () {
 

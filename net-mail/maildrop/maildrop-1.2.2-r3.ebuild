@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.2.2-r3.ebuild,v 1.2 2001/05/29 17:28:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.2.2-r3.ebuild,v 1.3 2001/05/30 18:24:34 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,11 +10,13 @@ SRC_URI="http://download.sourceforge.net/courier/${A}"
 HOMEPAGE="http://www.flounder.net/~mrsam/maildrop/index.html"
 
 DEPEND="virtual/glibc
+        >=sys-devel/gcc-2.95.3
         >=sys-libs/gdbm-1.8.0
         virtual/mta
         sys-devel/perl"
 
 RDEPEND="virtual/glibc
+        >=sys-devel/gcc-2.95.3
         >=sys-libs/gdbm-1.8.0
         virtual/mta"
 

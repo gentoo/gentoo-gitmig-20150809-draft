@@ -14,14 +14,9 @@ SRC_URI="http://download.sourceforge.net/${PN}/${A}
 HOMEPAGE="http://www.licq.org"
 
 DEPEND="virtual/glibc
-        ssl ( >=dev-libs/openssl-0.9.6 )"
+        ssl? ( >=dev-libs/openssl-0.9.6 )"
 
-src_unpack() {
-  unpack ${A}
-  cd ${S}
-}
-
-src_compile() {                           
+src_compile() {
   local myconf
   if [ -z "`use ssl`" ]
   then
@@ -35,7 +30,7 @@ src_compile() {
   try make
 }
 
-src_install() { 
+src_install() {
   try make prefix=${D}/usr install
   dodoc README.OPENSSL doc/*
 }

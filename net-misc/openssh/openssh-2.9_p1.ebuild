@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p1.ebuild,v 1.1 2001/05/06 16:19:49 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p1.ebuild,v 1.2 2001/05/30 18:24:34 achim Exp $
 
 P=openssh-2.9p1
 A=${P}.tar.gz
@@ -10,11 +10,15 @@ DESCRIPTION="Port of OpenBSD's free SSH release"
 SRC_URI="ftp://ftp.de.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/"${A}
 HOMEPAGE="http://www.openssh.com/"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/glibc sys-devel/perl sys-apps/groff
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	pam? ( >=sys-libs/pam-0.73 )
 	>=dev-libs/openssl-0.9.6"
-	
+
+DEPEND="virtual/glibc
+	pam? ( >=sys-libs/pam-0.73 )
+	>=dev-libs/openssl-0.9.6"
+
 src_compile() {
     local myconf
     if [ "`use tcpd`" ]

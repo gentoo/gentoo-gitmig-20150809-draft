@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r3.ebuild,v 1.3 2001/05/28 14:32:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r3.ebuild,v 1.4 2001/05/30 18:24:34 achim Exp $
 
 P=squid-2.3.STABLE4
 
@@ -41,10 +41,11 @@ src_unpack() {
 }
 
 src_compile() {                           
- cd ${S}
+
  LDFLAGS="$LDFLAGS -lresolv" try ./configure --host=${CHOST} \
 	--prefix=/usr --sysconfdir=/etc/squid \
 	--localstatedir=/var/state/squid \
+        --libexecdir=/usr/lib/squid \
 	--enable-useragent-log \
 	--enable-async-io --enable-icmp
  try make
@@ -62,18 +63,18 @@ src_compile() {
 }
 
 src_install() {                               
-  cd ${S}
-  rm -rf ${D}
-  dodir /usr/bin
+
+
+  dodir /usr/{bin,lib/squid}
   dodir /etc/squid
   dodir /var/squid
   chown squid.daemon ${D}/var/squid
   try make install prefix=${D}/usr sysconfdir=${D}/etc/squid \
-	localstatedir=${D}/var/state/squid 
+	localstatedir=${D}/var/state/squid libexecdir=${D}/usr/lib/squid
   into /usr
   cd auth_modules
   if [ "`use ldap`" ] ; then
-    dobin LDAP/squid_ldap_auth 
+    dobin LDAP/squid_ldap_auth
   fi
   dobin PAM/pam_auth SMB/smb_auth NCSA/ncsa_auth
   cd ../doc
@@ -96,7 +97,7 @@ src_install() {
 
 pkg_config() {
 
-    . ${ROOT}/etc/rc.d/config/functions 
+    . ${ROOT}/etc/rc.d/config/functions
 
   einfo "Generating symlinks..."
   ${ROOT}/usr/sbin/rc-update add squid

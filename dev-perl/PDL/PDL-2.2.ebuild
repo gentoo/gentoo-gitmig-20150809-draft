@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.2.ebuild,v 1.5 2001/04/24 01:22:41 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.2.ebuild,v 1.6 2001/05/30 18:24:34 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,8 +11,8 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-module/PDL/${P}.readme"
 
 DEPEND=">=sys-devel/perl-5
 	>=sys-libs/ncurses-5.2
-	>=dev-perl/ExtUtils-F77-1.13
-	opengl? ( virtual/opengl )"
+	>=dev-perl/ExtUtils-F77-1.13"
+	#opengl? ( virtual/opengl )"
 
 src_unpack() {
 

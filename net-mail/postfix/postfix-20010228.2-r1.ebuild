@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-20010228.2-r1.ebuild,v 1.1 2001/05/14 15:57:35 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-20010228.2-r1.ebuild,v 1.2 2001/05/30 18:24:34 achim Exp $
 
 P=${PN}-20010228-pl02
 A=${P}.tar.gz
@@ -10,15 +10,15 @@ DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${A}"
 HOMEPAGE="http://www.postfix.org/"
 
-DEPEND=">=net-mail/mailbase-0.00
+DEPEND="virtual/glibc
         >=dev-libs/libpcre-3.4
-        >=sys-libs/glibc-2.1.3"
+        >=sys-libs/db-3.2
+        mta-ldap? ( >=net-nds/openldap-1.2 )
+        mta-mysql? ( >=dev-db/mysql-3.23.28 )"
 
-RDEPEND="!virtual/mta"
+RDEPEND="!virtual/mta >=net-mail/mailbase-0.00 $DEPEND"
 
 TLS_DEP=">=dev-libs/openssl-0.9.6"
-LDAP_DEP=">=net-nds/openldap-1.2"
-MYSQL_DEP=">=dev-db/mysql-3.23.28"
 
 #TLS_URI=
 
@@ -26,16 +26,6 @@ MYSQL_DEP=">=dev-db/mysql-3.23.28"
 #    DEPEND="${DEPEND} ${TLS_DEP}"
 #    echo $DEPEND
 #fi
-
-if [ -n "`use mta-ldap`" ]; then
-    DEPEND="${DEPEND} ${LDAP_DEP}"
-    echo $DEPEND
-fi
-
-if [ -n "`use mta-mysql`" ]; then
-    DEPEND="${DEPEND} ${MYSQL_DEP}"
-    echo $DEPEND
-fi
 
 PROVIDE="virtual/mta"
 
