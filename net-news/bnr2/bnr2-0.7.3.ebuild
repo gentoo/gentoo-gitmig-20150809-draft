@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/bnr2-0.7.3.ebuild,v 1.1 2002/12/12 16:22:50 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/bnr2-0.7.3.ebuild,v 1.2 2003/01/02 16:53:52 mholzer Exp $
 
 IUSE=""
 
@@ -14,6 +14,7 @@ SRC_URI="http://www.bnr2.org/BNR2.gz
 
 HOMEPAGE="http://www.bnr2.org"
 DEPEND="virtual/glibc"
+RDEPEND="virtual/x11"
 SLOT="0"
 KEYWORDS="~x86"
 LICENSE="freedist"
