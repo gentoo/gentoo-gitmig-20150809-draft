@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/golem-0.0.5-r1.ebuild,v 1.7 2004/06/24 23:41:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/golem-0.0.5-r1.ebuild,v 1.8 2004/06/28 23:48:54 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc ~amd64 ppc"
 IUSE="nls xinerama esd"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	esd? ( media-sound/esound )"
 
