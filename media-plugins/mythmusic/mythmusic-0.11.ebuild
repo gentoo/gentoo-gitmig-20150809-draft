@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.11.ebuild,v 1.1 2003/08/18 18:04:37 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.11.ebuild,v 1.2 2003/09/10 19:07:38 max Exp $
 
 inherit flag-o-matic
 
@@ -20,8 +20,8 @@ DEPEND=">=media-sound/cdparanoia-3.9.8
 	>=media-libs/libcdaudio-0.99.6
 	>=media-libs/flac-1.1.0
 	>=sys-apps/sed-4
-	X? ( dev-libs/fftw )
-	opengl? ( virtual/opengl >=dev-libs/fftw-2 )
+	X? ( =dev-libs/fftw-2* )
+	opengl? ( virtual/opengl =dev-libs/fftw-2* )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
 	|| ( >=media-tv/mythtv-${PV} >=media-tv/mythfrontend-${PV} )"
 
