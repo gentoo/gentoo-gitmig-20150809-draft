@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/mozplugger-1.6.2.ebuild,v 1.1 2004/11/14 19:59:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/mozplugger-1.6.2.ebuild,v 1.2 2005/01/23 19:12:50 centic Exp $
 
 inherit nsplugins
 
