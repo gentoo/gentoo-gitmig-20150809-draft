@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20040408.ebuild,v 1.4 2004/07/12 00:08:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20040408.ebuild,v 1.5 2004/07/16 18:22:05 kloeri Exp $
 
 DESCRIPTION="redirector for squid that intercepts advertising, page counters and some web bugs"
 HOMEPAGE="http://adzapper.sourceforge.net/"
@@ -11,7 +11,7 @@ S="${WORKDIR}/adzap"
 SRC_URI="http://adzapper.sourceforge.net/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha"
+KEYWORDS="x86 ~ppc sparc alpha"
 IUSE=""
 
 DEPEND=""
