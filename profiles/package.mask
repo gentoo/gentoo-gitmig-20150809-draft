@@ -463,3 +463,8 @@ dev-lang/tcl-tk
 # Testing this from gnome2 source tree
 >=app-text/scrollkeeper-0.3.4-r4
 
+#seemant@gentoo.org 28 Mar 2002
+# sourceforge no longer has an ftp mirror for these themes
+# until we figure out how to use gtk.themes.org or gtk.classic.themes.org
+# frankly I am not sure that this ebuild is necessary
+=x11-libs/old-gtk-themes-1.0
