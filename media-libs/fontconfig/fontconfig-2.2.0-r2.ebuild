@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.3 2003/05/17 15:49:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.4 2003/05/17 16:03:23 foser Exp $
 
 inherit eutils
 
@@ -45,6 +45,7 @@ src_unpack() {
 src_compile() {
 	# FIXME : docs switch doesn't seem to work
 	econf `use_enable doc docs` \
+		--with-docdir=${D}/usr/share/doc/${PF} \
 		--x-includes=/usr/X11R6/include \
 		--x-libraries=/usr/X11R6/lib \
 		--with-default-fonts=/usr/X11R6/lib/X11/fonts/Type1 || die
