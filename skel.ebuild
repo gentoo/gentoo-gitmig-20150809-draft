@@ -37,7 +37,7 @@ LICENSE=""
 # Note that normal applications should use SLOT="0" if possible, since
 # there should only be exactly one version installed at a time.
 # DO NOT USE SLOT=""! This tells Portage to disable SLOTs for this package.
-SLOT="1"
+SLOT="0"
 
 # Using KEYWORDS, we can record masking information *inside* an ebuild
 # instead of relying on an external package.mask file. Right now, you
@@ -68,7 +68,7 @@ DEPEND=""
 # unpacked) inside ${WORKDIR}.  S will get a default setting of ${WORKDIR}/${P}
 # if you omit this line.
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 
 src_compile() {
 	# Most open-source packages use GNU autoconf for configuration.
