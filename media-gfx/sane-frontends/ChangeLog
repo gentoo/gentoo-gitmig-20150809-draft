@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-frontends
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.4 2002/07/08 17:05:25 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.5 2002/12/01 05:24:01 mkeadle Exp $
+
+*sane-frontends-1.0.9 (01 Dec 2002)
+
+  01 Dec 2002; Matt Keadle <mkeadle@gentoo.org> sane-frontends-1.0.9.ebuild
+  files/digest-sane-frontends-1.0.9
+
+  Version bump to latest release
 
 *sane-frontends-1.0.8 (22 Jun 2002)
   
