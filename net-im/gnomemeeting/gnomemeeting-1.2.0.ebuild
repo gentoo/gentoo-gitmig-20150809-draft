@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.2.0.ebuild,v 1.5 2005/01/14 17:11:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.2.0.ebuild,v 1.6 2005/03/13 10:46:01 stkn Exp $
 
 inherit gnome2 eutils
 
@@ -49,6 +49,10 @@ src_unpack() {
 	# Fix a hanging bug which shows up when registered to a GateKeeper
 	# see http://cvs.gnome.org/viewcvs/gnomemeeting/src/endpoint.cpp?only_with_tag=HEAD&r2=1.434&r1=1.433
 	epatch ${FILESDIR}/gnomemeeting-1.2.0-gk-hang-fix.patch
+
+	# Fix compilation problems with sdl support disabled
+	# (taken from gnomemeeting bugzilla, fixes #82811)
+	epatch ${FILESDIR}/${P}-nosdl.patch
 }
 
 src_compile() {

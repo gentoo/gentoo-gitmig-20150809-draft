@@ -1,0 +1,48 @@
+--- gnomemeeting-1.2.0/src/main_window.cpp	2005-02-16 15:09:24.000000000 -0100
++++ gnomemeeting-1.2.0.new/src/main_window.cpp	2004-11-20 14:54:23.000000000 -0100
+@@ -1127,12 +1127,12 @@ gm_mw_init_menu (GtkWidget *main_window)
+ 		     GTK_STOCK_ZOOM_100, '=',
+ 		     GTK_SIGNAL_FUNC (zoom_normal_changed_cb),
+ 		     (gpointer) VIDEO_DISPLAY_KEY "zoom_factor", FALSE),
++#ifdef HAS_SDL
+-
+       GTK_MENU_ENTRY("fullscreen", _("Fullscreen"), _("Switch to fullscreen"), 
+ 		     GTK_STOCK_ZOOM_IN, 'f', 
+ 		     GTK_SIGNAL_FUNC (fullscreen_changed_cb),
+ 		     (gpointer) main_window, FALSE),
++#endif
+-
+       GTK_MENU_NEW(_("_Tools")),
+       
+       GTK_MENU_ENTRY("address_book", _("Address _Book"),
+@@ -1631,12 +1631,12 @@ gm_mw_video_window_new (GtkWidget *main_
+ 		     GTK_STOCK_ZOOM_100, '=',
+ 		     GTK_SIGNAL_FUNC (zoom_normal_changed_cb),
+ 		     (gpointer) VIDEO_DISPLAY_KEY "local_zoom_factor", TRUE),
++#ifdef HAS_SDL
+-
+       GTK_MENU_ENTRY("fullscreen", _("Fullscreen"), _("Switch to fullscreen"), 
+ 		     GTK_STOCK_ZOOM_IN, 'f', 
+ 		     GTK_SIGNAL_FUNC (fullscreen_changed_cb),
+ 		     (gpointer) main_window, TRUE),
++#endif
+-
+       GTK_MENU_END
+   };
+   
+@@ -1654,12 +1654,12 @@ gm_mw_video_window_new (GtkWidget *main_
+ 		     GTK_STOCK_ZOOM_100, '=',
+ 		     GTK_SIGNAL_FUNC (zoom_normal_changed_cb),
+ 		     (gpointer) VIDEO_DISPLAY_KEY "remote_zoom_factor", TRUE),
++#ifdef HAS_SDL
+-
+       GTK_MENU_ENTRY("fullscreen", _("Fullscreen"), _("Switch to fullscreen"), 
+ 		     GTK_STOCK_ZOOM_IN, 'f', 
+ 		     GTK_SIGNAL_FUNC (fullscreen_changed_cb),
+ 		     (gpointer) main_window, TRUE),
++#endif
+-
+       GTK_MENU_END
+   };
+ 
+
