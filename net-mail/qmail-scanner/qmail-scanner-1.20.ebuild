@@ -1,12 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.20.ebuild,v 1.1 2004/01/29 05:26:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.20.ebuild,v 1.2 2004/02/04 23:36:23 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit fixheadtails gcc eutils
 
 DESCRIPTION="E-Mail virus scanner for qmail."
 HOMEPAGE="http://qmail-scanner.sourceforge.net/"
 SRC_URI="mirror://sourceforge/qmail-scanner/${P}.tgz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~sparc"
+
 DEPEND=">=dev-lang/perl-5.6.1-r1
 	>=dev-perl/Time-HiRes-01.20-r2
 	>=net-mail/tnef-1.1.1
@@ -15,12 +20,6 @@ DEPEND=">=dev-lang/perl-5.6.1-r1
 	>=net-mail/qmail-1.03-r8
 	>=app-arch/unzip-5.42-r1
 	virtual/antivirus"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
-
-inherit fixheadtails gcc
 
 pkg_setup() {
 	enewgroup qscand 210
@@ -118,7 +117,6 @@ src_install () {
 	docinto contrib
 	cd contrib
 	dodoc qs2mrtg.pl mrtg-qmail-scanner.cfg
-
 }
 
 pkg_postinst () {
