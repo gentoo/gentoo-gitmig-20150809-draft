@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.3 2002/04/28 13:41:31 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.4 2002/05/02 01:20:18 jnelson Exp $
+
+*ntp-4.1.1a (1 May 2002)
+  1 May 2002; Jon Nelson <jnelson@gentoo.org> ntp-4.1.72-r2.ebuild :
+  Create 4.1.1a ebuild and mask 4.1.72* versions, the 4.1.72* versions
+  are *alpha* releases for 4.2.0, and have trouble building on some
+  hosts.
+  
+  This should finally close 1882
 
 *ntp-4.1.72-r2 (28 Apr 2002)
   28 Apr 2002; Jon Nelson <jnelson@gentoo.org> ntp-4.1.72-r2.ebuild :
