@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.11 2005/03/09 19:07:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.12 2005/03/20 16:40:29 beu Exp $
 
 inherit eutils fixheadtails
 
@@ -31,7 +31,6 @@ DEPEND="dev-lang/perl
 		>=dev-libs/mm-1.1.3
 		>=sys-libs/gdbm-1.8
 		>=dev-libs/expat-1.95.2
-		>=sys-apps/sed-4
 		net-www/gentoo-webroot-default
 		app-misc/mime-types
 		selinux? ( sec-policy/selinux-apache )

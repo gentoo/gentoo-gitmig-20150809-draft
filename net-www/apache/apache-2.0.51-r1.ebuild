@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.51-r1.ebuild,v 1.13 2005/01/25 13:33:50 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.51-r1.ebuild,v 1.14 2005/03/20 16:40:29 beu Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -24,7 +24,6 @@ DEPEND="dev-util/yacc
 	sys-libs/zlib
 	dev-libs/expat
 	dev-libs/openssl
-	>=sys-apps/sed-4
 	>=sys-devel/autoconf-2.59-r4
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )

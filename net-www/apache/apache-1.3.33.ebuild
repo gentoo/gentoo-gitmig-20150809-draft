@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33.ebuild,v 1.11 2005/01/08 23:37:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33.ebuild,v 1.12 2005/03/20 16:40:29 beu Exp $
 
 # Gentoo ARCH teams
 #
@@ -29,11 +29,11 @@ SRC_URI="mirror://apache/httpd/apache_${PV}.tar.gz
 # The mod_ssl archive is only for providing the EAPI patch in here.
 # You should install the net-www/mod_ssl package for the actual DSO.
 
-DEPEND="dev-lang/perl <=sys-libs/db-4.1
+DEPEND="dev-lang/perl
+	<=sys-libs/db-4.1
 	>=dev-libs/mm-1.1.3
 	>=sys-libs/gdbm-1.8
 	>=dev-libs/expat-1.95.2
-	>=sys-apps/sed-4
 	=sys-libs/db-1*
 	selinux? ( sec-policy/selinux-apache )"
 
@@ -54,7 +54,8 @@ src_unpack() {
 	epatch ${WORKDIR}/apache-patches-${PVR} || die
 
 	#Obsolete 'head -1' and 'tail -1' calls.
-	ht_fix_file src/Configure src/helpers/getuid.sh
+	ht_fix_file src/Configure src/helpers/getuid.sh \
+		src/helpers/fmn.sh src/helpers/buildinfo.sh
 
 	# setup eapi...
 	myssl=${WORKDIR}/mod_ssl-${mod_ssl_ver}
