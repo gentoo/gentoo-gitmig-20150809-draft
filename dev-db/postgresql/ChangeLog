@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.158 2004/12/16 09:31:28 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.159 2004/12/20 00:04:15 kloeri Exp $
+
+  20 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  postgresql-7.4.6.ebuild:
+  Stable on alpha.
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> postgresql-7.4.6.ebuild:
   Stable on amd64.

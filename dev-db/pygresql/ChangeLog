@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pygresql
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.9 2004/12/18 15:39:22 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.10 2004/12/20 00:05:15 kloeri Exp $
+
+  20 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> pygresql-3.5.ebuild:
+  Stable on alpha.
 
   18 Dec 2004; Dylan Carlson <absinthe@gentoo.org> pygresql-3.5.ebuild:
   Stable on amd64.
