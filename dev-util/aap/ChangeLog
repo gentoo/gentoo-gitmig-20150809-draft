@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.16 2005/01/28 20:29:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.17 2005/02/07 08:52:18 kloeri Exp $
+
+  07 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> aap-1.072.ebuild:
+  Stable on alpha.
 
   28 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> -aap-1.000-r1.ebuild,
   -aap-1.000.ebuild, -aap-1.010.ebuild, aap-1.072.ebuild:
