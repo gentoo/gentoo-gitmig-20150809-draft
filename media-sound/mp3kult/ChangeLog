@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mp3kult
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/ChangeLog,v 1.3 2003/06/12 21:07:52 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/ChangeLog,v 1.4 2003/06/21 11:29:17 jje Exp $
+
+*mp3kult-0.7-r1 (21 Jun 2003)
+
+  21 Jun 2003; jje <jje@gentoo.org> mp3kult-0.7-r1.ebuild:
+  Updated to allow compiling with mysql-4. Fixes #22003
 
   12 Jun 2003; <msterret@gentoo.org> mp3kult-0.7.ebuild:
   add Header
