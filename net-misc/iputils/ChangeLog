@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/iputils
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.1 2002/07/16 18:01:45 g2boojum Exp $
+
+*iputils-020124 (16 Jul 2002)
+
+  16 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  new package
