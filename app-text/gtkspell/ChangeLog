@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.17 2003/07/06 12:48:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.18 2003/10/26 19:56:57 foser Exp $
+
+*gtkspell-2.0.4-r1 (26 Oct 2003)
+
+  26 Oct 2003; foser <foser@gentoo.org> gtkspell-2.0.4-r1.ebuild :
+  New version with patch to use enchant as backend
 
   02 Jul 2003; Alastair Tse <liquidx@gentoo.org> gtkspell-2.0.4.ebuild,
   files/gtkspell-2.0.4-docbookx.patch:
