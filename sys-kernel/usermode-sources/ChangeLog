@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.51 2004/11/20 15:54:02 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.52 2004/11/26 16:27:19 dsd Exp $
+
+  26 Nov 2004; Daniel Drake <dsd@gentoo.org>
+  usermode-sources-2.4.26-r9.ebuild, usermode-sources-2.6.8.1-r4.ebuild:
+  Convert to kernel-2. Clean up.
 
 *usermode-sources-2.4.26-r9 (20 Nov 2004)
 
