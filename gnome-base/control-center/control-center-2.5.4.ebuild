@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.5.4.ebuild,v 1.1 2004/03/20 15:27:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.5.4.ebuild,v 1.2 2004/03/28 23:14:01 foser Exp $
 
 # FIXME : double check all the acme stuff
-# FIXME : readd gstreamer support
 inherit gnome2 eutils
 
 DESCRIPTION="The gnome2 Desktop configuration tool"
@@ -12,7 +11,7 @@ LICENSE="GPL-2"
 
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
-IUSE="alsa"
+IUSE="alsa gstreamer"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -34,10 +33,10 @@ RDEPEND=">=x11-libs/gtk+-2.3
 	>=x11-wm/metacity-2.4.5
 	>=x11-libs/libxklavier-0.97
 	alsa? ( >=media-libs/alsa-lib-0.9 )
+	gstreamer? ( >=media-libs/gst-plugins-0.8 )
 	!gnome-extra/fontilus
 	!gnome-extra/themus
 	!gnome-extra/acme"
-#	gstreamer? ( >=media-libs/gst-plugins-0.7.6 )
 
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.11
@@ -50,8 +49,7 @@ G2CONF="${G2CONF} \
 	--disable-schemas-install\
 	--enable-vfs-methods \
 	$(use_enable alsa) \
-	--disable-gstreamer"
-#	$(use_enable gstreamer)"
+	$(use_enable gstreamer)"
 
 USE_DESTDIR="1"
 
@@ -68,7 +66,7 @@ src_unpack() {
 	# FIXME : this broke again
 #	epatch ${FILESDIR}/${PN}-2.2-icons_install.patch
 
-#	epatch ${FILESDIR}/${P}-fix_gst_0.8.patch
-#	WANT_AUTOCONF=2.5 autoconf || die
+	epatch ${FILESDIR}/${P}-fix_gst_0.8.patch
+	WANT_AUTOCONF=2.5 autoconf || die
 
 }
