@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.31 2005/01/02 22:19:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.32 2005/04/03 05:54:30 j4rg0n Exp $
+
+  03 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org>
+  +files/gv-3.5.8-setenv.diff, gv-3.5.8-r4.ebuild:
+  Testing ppc-macos. Bug #86072. Thanks to Benjamin Braatz for reporting
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
