@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a.ebuild,v 1.6 2004/03/13 23:45:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a.ebuild,v 1.7 2004/04/02 03:53:27 wolf31o2 Exp $
 
 inherit games
 
@@ -10,7 +10,8 @@ HOMEPAGE="http://www.americasarmy.com/"
 SRC_URI="ftp://3dgamers.in-span.net/pub/3dgamers4/games/${PN/-/}/${MY_P}
 	http://3dgamers.reliableservers.net/pub/3dgamers/games/${PN/-/}/${MY_P}
 	http://3dgamers.gameservers.net/pub/3dgamers/games/${PN/-/}/${MY_P}
-	http://3dgamers.planetmirror.com/pub/3dgamers/games/${PN/-/}/${MY_P}"
+	http://3dgamers.planetmirror.com/pub/3dgamers/games/${PN/-/}/${MY_P}
+	http://download.factoryunreal.com/mirror/UT2003CrashFix.zip"
 
 LICENSE="Army-EULA"
 SLOT="0"
@@ -21,7 +22,8 @@ RESTRICT="nostrip nomirror"
 # server scripts to include.
 IUSE="opengl dedicated"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	app-arch/unzip"
 RDEPEND="virtual/glibc
 	opengl? ( virtual/opengl )"
 
@@ -33,7 +35,9 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack_makeself
+	unpack_makeself ${DISTDIR}/${MY_P} || die "unpacking game"
+	unzip ${DISTDIR}/UT2003CrashFix.zip \
+		|| die "unpacking crash-fix"
 	tar -zxf setupstuff.tar.gz || die
 }
 
@@ -55,6 +59,18 @@ src_install() {
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/armyops
 	dosym ${dir}/armyops ${GAMES_BINDIR}/armyops
 
+	# Here we apply DrSiN's crash patch
+	cp ${S}/CrashFix/System/crashfix.u ${Ddir}/System
+	ed ${Ddir}/System/Default.ini >/dev/null 2>&1 <<EOT
+$
+?Engine.GameInfo?
+a
+AccessControlClass=crashfix.iaccesscontrolini
+.
+w
+q
+EOT
+
 	prepgamesdirs
 	make_desktop_entry armyops "America's Army" ArmyOps.xpm
 }
@@ -63,4 +79,11 @@ pkg_postinst() {
 	games_pkg_postinst
 	einfo "To play the game run:"
 	einfo " armyops"
+	echo
+	ewarn "If you are not installing for the first time and you plan on running"
+	ewarn "a server, you will probably need to edit your"
+	ewarn "~/.armyops200/System/UT2003.ini file and add a line that says"
+	ewarn "AccessControlClass=crashfix.iaccesscontrolini to your"
+	ewarn "[Engine.GameInfo] section to close a security issue."
+	echo
 }
