@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.106 2004/09/21 17:34:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.107 2004/09/29 15:16:42 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -572,7 +572,7 @@ egetent() {
 			;;
 		esac
 	else
-		getent $1 $2
+		getent "$1" "$2"
 	fi
 }
 
@@ -669,6 +669,8 @@ enewuser() {
 	if [ ! -z "${egroups}" ]
 	then
 		local oldifs="${IFS}"
+		local defgroup="" exgroups=""
+
 		export IFS=","
 		for g in ${egroups}
 		do
@@ -677,9 +679,20 @@ enewuser() {
 				eerror "You must add group ${g} to the system first"
 				die "${g} is not a valid GID"
 			fi
+			if [ -z "${defgroup}" ]
+			then
+				defgroup="${g}"
+			else
+				exgroups="${exgroups},${g}"
+			fi
 		done
 		export IFS="${oldifs}"
-		opts="${opts} -g ${egroups}"
+
+		opts="${opts} -g ${defgroup}"
+		if [ ! -z "${exgroups}" ]
+		then
+			opts="${opts} -G ${exgroups:1}"
+		fi
 	else
 		egroups="(none)"
 	fi
@@ -701,6 +714,8 @@ enewuser() {
 			### Add the user to the groups specified
 			for g in ${egroups}
 			do
+				# $egroups is , delimited, not space
+				ewarn "This is code is wrong; someone on the OS X team should fix it"
 				dscl . merge /groups/${g} users ${euser}
 			done
 		else
