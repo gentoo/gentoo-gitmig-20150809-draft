@@ -1,6 +1,10 @@
 # ChangeLog for net-www/w3mmee
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/ChangeLog,v 1.5 2004/03/02 03:27:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/ChangeLog,v 1.6 2004/03/23 04:48:18 weeve Exp $
+
+  22 Mar 2004; Jason Wever <weeve@gentoo.org> w3mmee-0.3.2_p24-r2.ebuild,
+  w3mmee-0.3.2_p24-r3.ebuild:
+  Marked 0.3.2_p24-r2 stable on sparc and added ~sparc keyword to 0.3.2_p24-r3.
 
   01 Mar 2004; Jason Wever <weeve@gentoo.org> w3mmee-0.3.2_p24-r2.ebuild:
   Reach out and ~sparc someone.
