@@ -162,7 +162,6 @@ x11-themes/gnome-icon-theme
 >=app-arch/file-roller-2.1
 >=media-gfx/eog-1.1
 >=net-libs/linc-0.7
->=x11-wm/metacity-2.4.2
 >=dev-libs/atk-1.1
 >=dev-libs/libxml2-2.4.26
 >=dev-libs/libxslt-1.0.22
