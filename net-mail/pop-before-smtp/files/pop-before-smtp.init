@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/files/pop-before-smtp.init,v 1.1 2004/02/05 12:37:20 aliz Exp $
+
+opts="reload"
+
+depend() {
+	need net
+	use logger dns ypbind
+	provide mta
+}
+
+start() {
+	ebegin "Starting pop-before-smtp"
+	start-stop-daemon --start --pidfile /var/run/pop-before-smtp.pid --startas /usr/sbin/pop-before-smtp -- --daemon=/var/run/pop-before-smtp.pid
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping postfix"
+	start-stop-daemon --stop --pidfile /var/run/pop-before-smtp.pid
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading postfix"
+	/usr/sbin/postfix reload &>/dev/null
+	eend $?
+}

@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/pop-before-smtp
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/ChangeLog,v 1.1 2004/02/05 12:37:19 aliz Exp $
+
+*pop-before-smtp-1.34 (05 Feb 2004)
+
+  05 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> pop-before-smtp-1.34.ebuild:
+  Initial import.
+
