@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/imgseek-0.8.4.ebuild,v 1.1 2005/02/22 21:05:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/imgseek-0.8.4.ebuild,v 1.2 2005/03/06 15:53:41 carlo Exp $
 
 inherit eutils
 
@@ -8,7 +8,8 @@ MY_P="imgSeek-${PV}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Photo collection manager with content-based search."
 HOMEPAGE="http://imgseek.sourceforge.net/"
-SRC_URI="mirror://sourceforge/imgseek/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/imgseek/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~carlo/patches/${MY_P}-sizetype.patch.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
@@ -21,7 +22,7 @@ DEPEND=">=dev-lang/python-2.2
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${MY_P}-sizetype.patch
+	epatch ${WORKDIR}/${MY_P}-sizetype.patch
 }
 
 src_compile() {
