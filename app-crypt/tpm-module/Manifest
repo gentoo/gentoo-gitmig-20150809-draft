@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 830a9ee4906df8f7a2155402d74d34b0 tpm-module-2.0.ebuild 622
+MD5 340fbfef19426331492d7063aad76a62 metadata.xml 317
+MD5 2f45ca1b9e03604d48173ec1099ab633 ChangeLog 433
+MD5 95e1fe65a5cd55c3dd7954669f46f8bd files/digest-tpm-module-2.0 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCAgf/mdTrptrqvGERAovNAJ9vJhIlXcuWFV9VR9pCZb03xV6ckgCeIUk7
+R+AkoMVI0nHeLJYWxlAO08c=
+=h0sH
+-----END PGP SIGNATURE-----

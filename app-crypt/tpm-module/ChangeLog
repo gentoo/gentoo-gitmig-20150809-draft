@@ -1,0 +1,11 @@
+# ChangeLog for app-crypt/tpm-module
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-module/ChangeLog,v 1.1 2005/02/03 11:16:08 dragonheart Exp $
+
+*tpm-module-2.0 (03 Feb 2005)
+
+  03 Feb 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +tpm-module-2.0.ebuild:
+  Added as per bug #35574. Thanks to Henrik Brix Andersen
+  <brix@NOHATEMAIL.gentoo.org>
+
