@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.201 2003/12/31 19:00:55 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.202 2004/01/03 22:57:39 stkn Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -168,6 +168,9 @@ net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a 
 net-mail/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
 net-mail/vpopmail:clearpasswd - Enables cleartext password storage in the vpasswd files
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
+net-misc/asterisk:nopri - Disable pri support
+net-misc/asterisk:nozaptel - Disable zaptel support
+net-misc/asterisk:noiax - Disable iax (Inter-Asterisk eXchange) support
 net-misc/gnugk:radius - Enables radius support
 net-misc/gnugk:accounting - Enables call logging (accounting)
 net-misc/ntp:parse-clocks - Add parse clock support
