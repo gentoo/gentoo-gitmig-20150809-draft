@@ -1,13 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Spider  <spider.gentoo@darkmere.wanfear.com>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.1-r2.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
-
-# ACONFVER=2.52f
-# AMAKEVER=1.5b
-# Source inherit.eclass and inherit AutoTools
-# . /usr/portage/eclass/inherit.eclass  || die
-# inherit autotools 
+# Author: Spider  <spider@gentoo.org>
+# Maintainer: Spider <spider@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.1-r3.ebuild,v 1.1 2002/05/09 23:04:17 spider Exp $
 
 SLOT="1"
 
@@ -16,21 +11,20 @@ DESCRIPTION="Text rendering and Layout library"
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.0/${P}.tar.bz2"
 HOMEPAGE="http://www.pango.org/"
 
-DEPEND=">=dev-libs/glib-2.0.1
-		virtual/x11
-		>=dev-util/pkgconfig-0.12.0
-		>=app-text/openjade-1.3-r2
-		>=app-text/docbook-sgml-dtd-4.1
-		>=app-text/sgml-common-0.6.1
-		>=app-text/docbook-sgml-1.0
-		>=media-libs/freetype-2.0.8
-		doc? ( >=dev-util/gtk-doc-0.9-r2 )"
+
+RDEPEND="virtual/x11
+	>=dev-libs/glib-2.0.1
+	>=media-libs/freetype-2.0.8"
+	
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.12.0
+	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
 
 
 src_compile() {
 	libtoolize --copy --force
 	local myconf
-	 use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
+	use doc && myconf="--enable-gtk-doc" || myconf="--disable-gtk-doc"
 	./configure --host=${CHOST} \
 		    --prefix=/usr \
 			--sysconfdir=/etc \
@@ -39,7 +33,7 @@ src_compile() {
 			${myconf} \
 		    --enable-debug || die
 # turn on debug again, glib dislikes not having it.
-	emake || die
+	emake || make || die "paralell make and serial make failed" 
 }
 
 src_install() {
