@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/xchat-xsys
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.5 2004/12/27 02:58:33 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.6 2005/01/16 13:05:01 chainsaw Exp $
+
+*xchat-xsys-1.9.1-r1 (16 Jan 2005)
+
+  16 Jan 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/1.9.1-bmp-support.patch, -xchat-xsys-1.0.6.ebuild,
+  -xchat-xsys-1.9.0.ebuild, +xchat-xsys-1.9.1-r1.ebuild,
+  xchat-xsys-1.9.1.ebuild:
+  Added BMP/XMMS support via infopipe. 1.9.1 stable on x86. Old ebuilds cleaned.
 
 *xchat-xsys-1.9.1 (26 Dec 2004)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-1.9.1.ebuild,v 1.3 2004/12/27 03:01:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-1.9.1.ebuild,v 1.4 2005/01/16 13:05:01 chainsaw Exp $
 
 IUSE=""
 
-inherit flag-o-matic eutils
+inherit eutils
 
 MY_P=${P/xchat-/}
 DESCRIPTION="Sysinfo plugin for X-Chat."
@@ -13,7 +13,7 @@ HOMEPAGE="http://mshoup.us/downloads/xsys/README-${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 S=${WORKDIR}/${MY_P}
 
 DEPEND=">=net-irc/xchat-2.4.0"
