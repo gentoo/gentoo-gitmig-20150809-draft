@@ -1,3 +1,5 @@
 MD5 e7bb96c2ef9c40da012038e9f8939b06 CDDB_get-2.10-r2.ebuild 467
 MD5 7d61f4bdfe164eb08968e15205598cab ChangeLog 1442
+MD5 2ca25113ac730f9577838250a8440d03 CDDB_get-2.2.ebuild 386
+MD5 6d44d5c90ee0ccc761289b0ae7c3083c files/digest-CDDB_get-2.2 63
 MD5 af86cf36238d7d49fcf69a1cff394ddb files/digest-CDDB_get-2.10-r2 64
