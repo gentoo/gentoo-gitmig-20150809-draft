@@ -77,7 +77,7 @@ pkg_postinst() {
 		einfo "The current ebuild does not install them for you."
 		einfo "You may want to do so, but you will have to do it"
 		einfo "manually. You are on your own for now."
-		einfo "See /user/share/doc/${P}/INSTALL.fonts"
+		einfo "See /usr/share/doc/${P}/INSTALL.fonts"
 		einfo ""
 		einfo "If you manually install the extra fonts and use the"
 		einfo "program xfig, you might want to recompile to take"
