@@ -1,21 +1,23 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r2.ebuild,v 1.5 2003/12/12 08:25:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r2.ebuild,v 1.6 2004/04/16 05:30:28 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="The VLSI design CAD tool"
-SRC_URI="http://vlsi.cornell.edu/magic/${P}.tar.gz"
 HOMEPAGE="http://vlsi.cornell.edu/magic/"
-KEYWORDS="x86"
+SRC_URI="http://vlsi.cornell.edu/magic/${P}.tar.gz"
+
 LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86"
+IUSE=""
+
 DEPEND="sys-apps/findutils
 	dev-lang/perl
 	>=app-shells/tcsh-6.10-r3
 	sys-libs/libtermcap-compat"
 RDEPEND="sys-libs/libtermcap-compat"
-SLOT="7"
-
-inherit eutils
 
 src_unpack() {
 	unpack ${A}
@@ -49,7 +51,7 @@ src_compile() {
 	egrep -q "^make.*Error" make.log && die "Error while compiling - please add ${S}/make.log to your error report."
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 
 	insinto /etc/env.d
