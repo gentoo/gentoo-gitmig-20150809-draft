@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-1.0.3.ebuild,v 1.3 2004/02/23 13:03:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-1.0.3.ebuild,v 1.4 2004/03/21 08:25:46 eradicator Exp $
 
 IUSE="dvd"
 
@@ -11,20 +11,21 @@ KEYWORDS="x86"
 HOMEPAGE="http://www.bunkus.org/videotools/ogmtools/"
 SRC_URI="http://www.bunkus.org/videotools/${PN}/${P}.tar.bz2"
 
-DEPEND="dvd? ( media-libs/libdvdread )
-		>=sys-devel/automake-1.6.0
-		media-sound/vorbis-tools"
+RDEPEND="dvd? ( media-libs/libdvdread )
+	 media-sound/vorbis-tools"
+
+DEPEND="${RDEPEND}
+	>=sys-devel/automake-1.6.0"
 
 
 src_compile() {
-	econf || die "econf failed"
+	econf `use_with dvd dvdread` || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	into /usr
-	dobin ogmmerge ogmdemux ogminfo ogmsplit ogmcat dvdxchap
-	into /usr/share
+	dobin ogmmerge ogmdemux ogminfo ogmsplit ogmcat
+	use dvd && dobin dvdxchap
 	dodoc INSTALL TODO README COPYING ChangeLog
 	doman dvdxchap.1  ogmcat.1  ogmdemux.1  ogminfo.1  ogmmerge.1  ogmsplit.1
 }
