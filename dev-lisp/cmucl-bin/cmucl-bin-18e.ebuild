@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/cmucl-bin-18e.ebuild,v 1.2 2003/06/07 20:13:58 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/cmucl-bin-18e.ebuild,v 1.3 2003/06/10 04:17:37 mkennedy Exp $
 
 DESCRIPTION="CMUCL Lisp. This conforms to the ANSI Common Lisp Standard"
 HOMEPAGE="http://www.cons.org/cmucl/"
@@ -9,10 +9,10 @@ DEPEND="dev-lisp/common-lisp-controller"
 IUSE=""
 SLOT="0"
 KEYWORDS="~x86"
-SRC_URI="ftp://ftp.cn.freebsd.org/pub/cmucl/release/${PV}/cmucl-${PV}-x86-linux.tar.bz2
-	ftp://ftp.cn.freebsd.org/pub/cmucl/release/${PV}/cmucl-${PV}-x86-linux.extra.tar.bz2
-	ftp://ftp.cn.freebsd.org/pub/cmucl/release/${PV}/cmucl-${PV}.source.tar.bz2
-	ftp://ftp.cn.freebsd.org/pub/cmucl/release/${PV}/cmucl-${PV}.documents.tar.bz2"
+SRC_URI="ftp://cmucl.cons.org/pub/lisp/cmucl/release/${PV}/cmucl-${PV}-x86-linux.tar.bz2
+	ftp://cmucl.cons.org/pub/lisp/cmucl/release/${PV}/cmucl-${PV}-x86-linux.extra.tar.bz2
+	ftp://cmucl.cons.org/pub/lisp/cmucl/release/${PV}/cmucl-${PV}.source.tar.bz2
+	ftp://cmucl.cons.org/pub/lisp/cmucl/release/${PV}/cmucl-${PV}.documents.tar.bz2"
 
 PROVIDE="virtual/commonlisp"
 
@@ -36,7 +36,7 @@ src_install() {
 
 	insinto /etc/common-lisp/cmucl
 	doins ${FILESDIR}/site-init.lisp
-	dosym /etc/common-lisp/cmucl/site-init.lisp /usr/lib/cmucl/lib/site-init.lisp
+	dosym /etc/common-lisp/cmucl/site-init.lisp /usr/lib/cmucl/site-init.lisp
 
 	doman man/man1/*.1
 	dodoc doc/cmucl/README doc/cmucl/release-*.txt

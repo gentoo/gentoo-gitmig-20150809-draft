@@ -22,7 +22,7 @@
         "/usr/share/common-lisp/source/cmucl/"      ; object dir
         ))
 
-(setf (ext:search-list "library:") '("/usr/lib/cmucl/"))
+(setf (ext:search-list "library:") '("/usr/lib/cmucl/" "/usr/lib/cmucl/lib/"))
 ;;; for safety...
 
 ;;; optional extentions to the lisp image: delete if you

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cmucl-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/ChangeLog,v 1.7 2003/06/07 20:13:58 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/ChangeLog,v 1.8 2003/06/10 04:17:37 mkennedy Exp $
+
+  09 Jun 2003; Matthew Kennedy <mkennedy@gentoo.org> cmucl-bin-18e.ebuild,
+  files/site-init.lisp:
+  site-init.lisp fix
 
   07 Jun 2003; Matthew Kennedy <mkennedy@gentoo.org> cmucl-bin-18e.ebuild:
   add virtual/commonlisp
