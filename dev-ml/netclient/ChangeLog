@@ -1,0 +1,9 @@
+# ChangeLog for dev-ml/netclient
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/netclient/ChangeLog,v 1.1 2005/03/08 23:39:57 mattam Exp $
+
+*netclient-0.3.1 (09 Mar 2005)
+
+  09 Mar 2005; Matthieu Sozeau <mattam@gentoo.org> +netclient-0.3.1.ebuild:
+  A network client library.
+
