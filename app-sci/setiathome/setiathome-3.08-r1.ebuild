@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r1.ebuild,v 1.3 2003/07/09 16:04:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r1.ebuild,v 1.4 2003/10/13 15:03:04 aliz Exp $
 
 IUSE="X"
 
@@ -16,7 +16,9 @@ I=/opt/setiathome
 # 3.08 has not yet been released for ppc, sparc or alpha.
 
 SRC_URI="x86? ( http://wcarchive.cdrom.com/pub/setiathome/setiathome-${PV}.i686-pc-linux-gnu.tar
-		ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.i686-pc-linux-gnu.tar )"
+		ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.i686-pc-linux-gnu.tar )
+	 amd64? ( http://wcarchive.cdrom.com/pub/setiathome/setiathome-${PV}.x86_64-pc-linux-gnu.tar
+		  ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.x86_64-pc-linux-gnu.tar )"
 #	 ppc? ( http://wcarchive.cdrom.com/pub/setiathome/setiathome-${PV}.powerpc-unknown-linux-gnu.tar
 #		ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.powerpc-unknown-linux-gnu.tar )
 #	 sparc? ( http://wcarchive.cdrom.com/pub/setiathome/setiathome-${PV}.sparc-unknown-linux-gnu.tar
@@ -31,7 +33,7 @@ RDEPEND="X? ( x11-base/xfree )"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha ~amd64 -ia64 -mips -hppa"
 
 src_unpack () {
 	cd ${WORKDIR}
