@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.35 2005/01/12 08:50:45 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.36 2005/01/14 04:48:29 st_lim Exp $
+
+*dspam-3.3.11 (14 Jan 2005)
+
+  14 Jan 2005; Lim Swee Tat <st_lim@gentoo.org> dspam-3.3.11.ebuild:
+  Removed the --enable-daemon line
 
   12 Jan 2005; Lim Swee Tat <st_lim@gentoo.org> :
   Version bump to 3.3.11. May need to support bnr and libdclassify and

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.3.11.ebuild,v 1.1 2005/01/12 08:50:45 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.3.11.ebuild,v 1.2 2005/01/14 04:48:29 st_lim Exp $
 
 inherit eutils
 
@@ -62,7 +62,7 @@ src_compile() {
 	local myconf
 
 	# these are the default settings
-	myconf="${myconf} --enable-daemon"
+	#myconf="${myconf} --enable-daemon"
 	#myconf="${myconf} --enable-nodalcore"
 	myconf="${myconf} --enable-homedir"
 	myconf="${myconf} --enable-long-username"
