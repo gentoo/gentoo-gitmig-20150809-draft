@@ -1,5 +1,5 @@
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 36ba3c7c544f7e915944e150b6abf3d7 ChangeLog 979
-MD5 dd9d2ccf4c23fadc118a8b8d6ade30ab libpano12-2.7.0.8.ebuild 742
+MD5 d2f7311b51c5b24ae5d00c2a0f4642a1 ChangeLog 1120
+MD5 0a3cdaab664659fdf6046781946ebc95 libpano12-2.7.0.8.ebuild 1040
 MD5 896b7fb7c5462f3b2b76e652ab8c6058 files/libpano12-2.7.0.8-dejava.patch 2164
 MD5 825822b85e6626200ea237c1276831ad files/digest-libpano12-2.7.0.8 70
