@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/IO-Socket-SSL
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.13 2004/01/10 01:20:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.14 2004/01/17 17:05:10 esammer Exp $
+
+*IO-Socket-SSL-0.95 (17 Jan 2004)
+
+  17 Jan 2004; Eric Sammer <esammer@gentoo.org> IO-Socket-SSL-0.92.ebuild,
+  IO-Socket-SSL-0.95.ebuild:
+  Bumping version to 0.95. Fixed copyright header dates. Closes bug 28813.
+  Removed hppa keyword for now because of bad deps.
 
   09 Jan 2004; <gustavoz@gentoo.org> IO-Socket-SSL-0.92-r1.ebuild:
   hppa keyword
