@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.63 2004/07/31 15:23:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.64 2004/07/31 20:56:57 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -38,7 +38,7 @@ if [ ${PN} != vim-core ]; then
 		IUSE="$IUSE vim-with-x minimal"
 		DEPEND="$DEPEND vim-with-x? ( virtual/x11 )"
 		RDEPEND="$RDEPEND vim-with-x? ( virtual/x11 )"
-	elif [ ${PN} = gvim ]; then
+	elif [ ${PN} = gvim ] ; then
 		IUSE="$IUSE gnome gtk gtk2 motif"
 	fi
 fi
@@ -218,7 +218,7 @@ src_compile() {
 			# don't test USE=X here... see bug #19115
 			# but need to provide a way to link against X... see bug #20093
 			myconf="${myconf} --enable-gui=no `use_with vim-with-x x`"
-		elif [ ${PN} = gvim ]; then
+		elif [ ${PN} = gvim ] ; then
 			myconf="${myconf} --with-vim-name=gvim --with-x"
 			if use gtk && use gtk2; then
 				myconf="${myconf} --enable-gui=gtk2 --enable-gtk2-check"
@@ -351,7 +351,7 @@ pkg_postinst() {
 	update_vim_helptags
 
 	einfo
-	if [ ${PN} = gvim ]; then
+	if [ ${PN} = gvim ] ; then
 		einfo "To enable UTF-8 viewing, set guifont and guifontwide: "
 		einfo ":set guifont=-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1"
 		einfo ":set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1"
@@ -361,10 +361,15 @@ pkg_postinst() {
 		einfo
 		einfo "Then, set read encoding to UTF-8:"
 		einfo ":set encoding=utf-8"
-	elif [ ${PN} = vim ]; then
+	elif [ ${PN} = vim ] ; then
 		einfo "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
 	fi
 	einfo
+
+	if [ ${PN} != "vim-core" ] ; then
+		einfo "To see what's new in this release, use :help version${VIM_VERSION/.*}.txt"
+		einfo
+	fi
 
 	# Warn about VIMRUNTIME
 	if [ -n "$VIMRUNTIME" -a "${VIMRUNTIME##*/vim}" != "${VIM_VERSION/.}" ]; then
