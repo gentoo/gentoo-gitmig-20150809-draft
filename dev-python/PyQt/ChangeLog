@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/PyQt
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.10 2003/02/12 06:31:02 vapier Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.11 2003/02/17 17:39:39 danarmak Exp $
+
+*PyQt-3.5-r1 (17 Feb 2003)
+
+  17 Feb 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Install the .sip files as well. They are placed in /usr/share/sip/qt. .sip
+  files are like headers for sip-based packages, such as PyQT and PyKDE. This
+  closes bug #10060.
 
 *PyQt-3.5 (14 December 2002) Bart Verwilst <verwilst@gentoo.org>
 
