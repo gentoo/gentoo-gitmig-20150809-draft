@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.3.ebuild,v 1.1 2002/07/26 03:49:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.3.ebuild,v 1.2 2002/07/29 16:01:56 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="VideoLAN Client - DVD/video player"
@@ -21,7 +21,8 @@ DEPEND="X? ( virtual/x11 )
 	ncurses? ( sys-libs/ncurses )
 	oggvorbis? ( media-libs/libvorbis )
 	alsa? ( >=media-libs/alsa-lib-0.9_rc2 )
-	>=media-sound/mad-0.14.2b"
+	>=media-sound/mad-0.14.2b
+	>=media-libs/a52dec-0.7.4"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
@@ -132,6 +133,7 @@ src_compile(){
 		--disable-a52 \
 		--enable-release \
 		--enable-mad \
+		--enable-a52 \
 		${myconf} || die
 
 	emake || die

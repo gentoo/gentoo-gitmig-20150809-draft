@@ -1,8 +1,16 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.8 2002/07/26 03:49:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.9 2002/07/29 16:01:56 raker Exp $
 
 *vlc-0.4.3 (25 Jul 2002)
+
+  29 Jul 2002; Nick Hadaway <raker@gentoo.org> :
+
+  Added support for a52dec by default as it is marked as enabled by
+  default in vlc's configure options and the a52dec author says we
+  should give it a try.  :)  I have it set to depend on
+  >=media-libs/a52dec-0.7.4 as previous versions were not thread
+  safe.
 
   25 Jul 2002; Seemant Kulleen <seemant@gentoo.org>  vlc-0.4.3.ebuild :
 
