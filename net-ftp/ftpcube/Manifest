@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f39a6cfe314a4dc355b5e585310e5a72 ChangeLog 3756
 MD5 647640bbea4756ee2409ef44a6fdb245 ftpcube-0.4.0.ebuild 1219
-MD5 5efff06c129a42702e18ac3c7eb8b409 ftpcube-0.4.1.ebuild 582
+MD5 75c53f229a274188cac1d7519715c55e ChangeLog 3861
 MD5 3f9294e8d9242e606f5768bb224f4c50 ftpcube-0.4.2.ebuild 598
 MD5 42b8adb70559597f28a0bbfe458d1e37 ftpcube-0.4.3-r1.ebuild 874
 MD5 91d594b53c715ca666c180497c7277be ftpcube-0.4.3.ebuild 750
+MD5 5efff06c129a42702e18ac3c7eb8b409 ftpcube-0.4.1.ebuild 582
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 7079a631b21e0062dd4165700c576faa files/digest-ftpcube-0.4.0 65
-MD5 ebef9679bd2ec43a5346896f94a63695 files/digest-ftpcube-0.4.1 64
-MD5 41e13b5796ec14b4fe4e0ccd5e673cbb files/digest-ftpcube-0.4.2 64
-MD5 89da900faac5676e15f13882dfb5693d files/digest-ftpcube-0.4.3 64
-MD5 89da900faac5676e15f13882dfb5693d files/digest-ftpcube-0.4.3-r1 64
-MD5 eb463bd12dd2c50034c479c3402840e1 files/ftpcube-0.4.1-gentoo.patch 908
-MD5 9313a79ec3125eb37447dbd470da91a3 files/ftpcube-0.4.2-gentoo.patch 671
 MD5 bb053817ff0a370e66b8f7ea8d45a65c files/ftpcube-0.4.3-gentoo.patch 671
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBv1gdz2gxt1z4IGYRAtiXAKCS9bT+4burG4o5yhbjqRj0090kXwCfX8mE
-eJMgE0UvvtNSxCsb92uWr+M=
-=q5lf
------END PGP SIGNATURE-----
+MD5 89da900faac5676e15f13882dfb5693d files/digest-ftpcube-0.4.3-r1 64
+MD5 41e13b5796ec14b4fe4e0ccd5e673cbb files/digest-ftpcube-0.4.2 64
+MD5 9313a79ec3125eb37447dbd470da91a3 files/ftpcube-0.4.2-gentoo.patch 671
+MD5 89da900faac5676e15f13882dfb5693d files/digest-ftpcube-0.4.3 64
+MD5 eb463bd12dd2c50034c479c3402840e1 files/ftpcube-0.4.1-gentoo.patch 908
+MD5 ebef9679bd2ec43a5346896f94a63695 files/digest-ftpcube-0.4.1 64
+MD5 7079a631b21e0062dd4165700c576faa files/digest-ftpcube-0.4.0 65
