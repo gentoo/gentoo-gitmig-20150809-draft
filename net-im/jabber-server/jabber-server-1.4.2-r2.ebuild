@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.19 2002/12/03 21:17:37 verwilst Exp $
-
-JIT_V="1.0.6"
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.20 2002/12/11 21:11:55 verwilst Exp $
 
 S="${WORKDIR}/jabber-${PV}"
 DESCRIPTION="Open Source Jabber Server & MUC,AIM,MSN,ICQ and Yahoo transports"
@@ -20,6 +18,7 @@ KEYWORDS="~x86"
 IUSE="ssl"
 
 DEPEND="=dev-libs/pth-1.4.0
+	>=dev-libs/glib-2
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 src_unpack() {
