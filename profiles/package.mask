@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3257 2004/10/17 16:04:52 chriswhite Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3258 2004/10/17 21:15:13 liquidx Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -854,7 +854,6 @@ media-libs/id3lib-docs
 
 # broken (achim)
 app-text/sgml2x
->=app-admin/modlogan-0.7.4
 
 # broken
 >=media-video/mpeg2-movie-1.5
