@@ -15,7 +15,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Graph/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="${DEPEND}
 	dev-perl/Heap"

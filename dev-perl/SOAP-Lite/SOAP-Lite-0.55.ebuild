@@ -15,7 +15,7 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-module/SOAP/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="${DEPEND}
 	dev-perl/XML-Parser
