@@ -1,4 +1,5 @@
-MD5 3a646120099cff6b1dd865c95ceafeaf ChangeLog 466
-MD5 0c1bc2220e3a4b26b8b99e8dd2b024b0 cglib-2.0.2.ebuild 1140
+MD5 8ab58648cee9233c3304f0159db75d4c cglib-2.0.2.ebuild 1369
+MD5 556d5aca601a76e47aabec733b3b35cd ChangeLog 579
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 b6f8a58fff30e586496183aa9f0af130 files/digest-cglib-2.0.2 64
+MD5 a7a4f8f597ccfc2d44762869fa7e983f files/cglib-2.0.2-asm-1.4.3.patch 721
