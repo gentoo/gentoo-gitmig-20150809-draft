@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.28 2003/12/08 14:30:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.29 2004/04/03 01:04:47 foser Exp $
+
+  03 Apr 2004; foser <foser@gentoo.org> totem-0.99.*.ebuild :
+  Fix gst deps to 0.6
 
 *totem-0.99.8-r2 (08 Dec 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gst-player/gst-player-0.6.0.ebuild,v 1.4 2003/10/06 12:08:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gst-player/gst-player-0.6.0.ebuild,v 1.5 2004/04/03 01:07:08 foser Exp $
 
 inherit gnome2
 
@@ -18,10 +18,10 @@ RDEPEND=">=x11-libs/gtk+-2.2
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-desktop-2.2
 	dev-libs/libxml2
-	>=media-libs/gstreamer-0.6.3
-	>=media-libs/gst-plugins-0.6.3
-	>=media-plugins/gst-plugins-xvideo-0.6.3
-	>=media-plugins/gst-plugins-colorspace-0.6.3"
+	=media-libs/gstreamer-0.6*
+	=media-libs/gst-plugins-0.6*
+	=media-plugins/gst-plugins-xvideo-0.6*
+	=media-plugins/gst-plugins-colorspace-0.6*"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21
