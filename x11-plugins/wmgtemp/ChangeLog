@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmgtemp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.4 2003/02/12 09:41:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.5 2003/11/16 22:50:49 pyrania Exp $
+
+*wmgtemp-0.7 (16 Nov 2003)
+
+  16 Nov 2003; Markus Nigbur <pyrania@gentoo.org> wmgtemp-0.7.ebuild:
+  Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
