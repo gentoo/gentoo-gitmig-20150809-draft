@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/fix_libtool_files.sh,v 1.2 2002/11/24 01:26:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/fix_libtool_files.sh,v 1.3 2002/11/24 02:13:16 azarah Exp $
 
 source /etc/profile
 source /etc/init.d/functions.sh
@@ -37,11 +37,11 @@ PORTDIR="`/usr/bin/python -c 'import portage; print portage.settings[\"PORTDIR\"
 
 AWKDIR="${PORTDIR}/sys-devel/gcc/files/awk"
 
-if [ ! -r ${AWKDIR}/getlibdirs.awk ]
+if [ ! -r ${AWKDIR}/fixlafiles.awk ]
 then
-	eerror "${0##*/}: ${AWKDIR}/getlibdirs.awk does not exist!"
+	eerror "${0##*/}: ${AWKDIR}/fixlafiles.awk does not exist!"
 	exit 1
 fi
 
-/bin/gawk -v OLDVER="$1" -f ${AWKDIR}/getlibdirs.awk
+/bin/gawk -v OLDVER="$1" -f ${AWKDIR}/fixlafiles.awk
 
