@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r8.ebuild,v 1.2 2004/04/19 05:47:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r8.ebuild,v 1.3 2004/05/03 22:28:28 vapier Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="nls build static"
 
 DEPEND="nls? ( sys-devel/gettext )
@@ -100,7 +100,7 @@ src_install() {
 
 	if ! use build
 	then
-		dodoc COPYING README README.ipv6 TODO
+		dodoc README README.ipv6 TODO
 	else
 		#only install /bin/hostname
 		rm -rf ${D}/usr
