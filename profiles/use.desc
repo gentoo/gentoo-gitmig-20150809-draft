@@ -64,7 +64,7 @@ libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
 libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric 
 mpeg - Adds libmpeg3 support to various packages.
 libwww - Adds libwww support (General purpose WEB API)
-mga - Adds Matrox MGA support to mplayer
+matrox - Adds Matrox MGA support to mplayer
 mhash - Adds mhash library support to php (library of hash algorithms)
 mikmod - 
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
@@ -109,7 +109,7 @@ spell - Adds dictionary support
 sse - fast floating point optimisation for Pentium class chips
 ssl - Adds support for Secure Socket Layer connections
 static - Causes things to be statically linked instead of dynamically.
-svga
+svga - Adds support for SVGAlib (graphics library)
 tcltk - Support for Tcl and/or Tk
 tcpd - Adds support for TCP wrappers
 tetex - Adds support for teTeX
