@@ -1,8 +1,11 @@
 # ChangeLog for x11-themes/windowmaker-themes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/ChangeLog,v 1.1 2003/06/07 00:22:39 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/ChangeLog,v 1.2 2003/06/28 19:03:41 vapier Exp $
 
 *windowmaker-themes-0.1 (07 Jun 2003)
+
+  28 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added local USE flag to filter out the pr0n #23635.
 
   07 Jun 2003; robh <robh@gentoo.org> windowmaker-themes-0.1.ebuild:
   Initial version. Thanks to Thomas Phipps and A.Sleep. Closes #11879
