@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.7-r1.ebuild,v 1.4 2003/02/13 15:33:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.7-r1.ebuild,v 1.5 2003/07/19 21:02:19 pvdabeel Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 HOMEPAGE="http://galeon.sourceforge.net"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc alpha"
+KEYWORDS="x86 ppc alpha"
 SLOT="0"
 
 RDEPEND="=net-www/mozilla-1.2*

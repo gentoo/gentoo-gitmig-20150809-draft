@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.4.ebuild,v 1.3 2003/07/13 21:44:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.4.ebuild,v 1.4 2003/07/19 21:02:19 pvdabeel Exp $
 
 inherit gnome.org gnome2 libtool
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://galeon.sourceforge.net"
 
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 SLOT="0"
 
 REQ_MOZ_VER="1.3"

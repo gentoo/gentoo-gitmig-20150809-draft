@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.5-r1.ebuild,v 1.2 2003/07/12 18:16:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.5-r1.ebuild,v 1.3 2003/07/19 21:02:19 pvdabeel Exp $
 
 inherit gnome2 libtool
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/galeon/${P}.tar.bz2"
 
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 SLOT="0"
 
 # supports both moz-1.3 and moz-1.4
