@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.1.ebuild,v 1.2 2003/09/07 00:08:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.1.ebuild,v 1.3 2003/10/10 16:55:00 mholzer Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
-IUSE="oss mmx alsa"
+IUSE="oss mmx alsa xv"
 
 DEPEND=">=media-libs/libdvdcss-1.2.2
 	media-libs/jpeg
@@ -29,6 +29,8 @@ src_compile() {
 	# very very easily -- blocke
 
 	local myconf="`use_enable mmx` `use_enable oss` `use_enable alsa`"
+
+	use xv && myconf="${myconf} --enable-xv" || myconf="${myconf} --disable-xv"
 
 	if [ "${ARCH}" = "ppc" ] ; then
 		# if this user doesn't want altivec, don't compile it in
