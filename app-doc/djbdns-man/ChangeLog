@@ -1,0 +1,9 @@
+# ChangeLog for app-doc/djbdns-man
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
+
+*djbdns-man-20020130 (26 Apr 2002)
+
+  26 Apr 2002; Thilo Bangert <bangert@gentoo.org> ChangeLog :
+
+  initial release ;-)
