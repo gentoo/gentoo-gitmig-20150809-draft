@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.10 2003/04/28 03:08:02 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.11 2003/05/09 17:05:18 latexer Exp $
+
+  09 May 2003; Peter Johanson <latexer@gentoo.org> wireless-tools-25-r1.ebuild:
+  Fixed libiw.so.25 installation. Bug #20714
 
 *wireless-tools-26_pre8 (25 Apr 2003)
 
