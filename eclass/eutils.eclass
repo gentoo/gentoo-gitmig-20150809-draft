@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.56 2003/09/22 21:08:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.57 2003/09/22 21:39:11 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -937,6 +937,9 @@ check_license() {
 
 	# here is where we check for the license...
 	# if we don't find one, we ask the user for it
+	if [ ! -d /usr/share/licenses ]; then
+		mkdir -p /usr/share/licenses
+	fi
 	if [ -f /usr/share/licenses/${LICENSE} ]; then
 		einfo "The license for this application has already been accepted."
 	else
