@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.1 2004/02/29 04:21:59 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.2 2004/03/06 23:44:20 latexer Exp $
+
+*ndiswrapper-0.3 (06 Mar 2004)
+
+  06 Mar 2004; Peter Johanson <latexer@gentoo.org> ndiswrapper-0.3.ebuild:
+  Adding version 0.3 for older kernels as 0.4 won't work with them.
 
 *ndiswrapper-0.4 (28 Feb 2004)
 
