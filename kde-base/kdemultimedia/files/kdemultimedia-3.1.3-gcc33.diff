@@ -1,0 +1,12 @@
+diff -urN noatun/modules/winskin/vis/visQueue.cpp noatun/modules/winskin/vis/visQueue.cpp
+--- noatun/modules/winskin/vis/visQueue.cpp	2001-11-30 22:13:12.000000000 -0300
++++ noatun/modules/winskin/vis/visQueue.cpp	2003-08-05 04:45:09.000000000 -0300
+@@ -17,7 +17,7 @@
+ VISQueue::VISQueue(int elements) {
+   this->elements=elements;
+   int i;
+-  visArrayQueue=new (std::vector<float>*[elements]);
++  visArrayQueue=new std::vector<float>* [elements];
+   for(i=0;i<elements;i++) {
+     visArrayQueue[i]=new std::vector<float>;
+   }
