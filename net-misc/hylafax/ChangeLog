@@ -1,10 +1,21 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.2 2002/04/24 05:13:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.3 2002/04/24 11:42:56 seemant Exp $
+
+*hylafax-4.1.2-r1 (24 Apr 2002)
+
+  24 Apr 2002; Seemant Kulleen <seemant@gentoo.org> hylafax-4.1.2-r1.ebuild
+  files/hylafax-4.1.2-r1-gentoo-diffs.tar.bz2 files/digest-hylafax-4.1.2-r1 :
+
+  Lee Howard <faxguy@deanox.com> from the hylafax-users mailing list informed
+  me that drobbins' patch to make the configure script work with sed-3.02.80
+  (as posted on hylafax's bugzilla by g2boojum) was a tad incomplete.  He 
+  graciously completed it et voila! successful emerge without having to compile
+  a static sed-3.02 :)  Many thanks to him.
 
 *hylafax-4.1.2 (23 Apr 2002)
 
-  22 Apr 2002; Seemant Kulleen <seemant@gentoo.org> hylafax-4.1.2.ebuild
+  23 Apr 2002; Seemant Kulleen <seemant@gentoo.org> hylafax-4.1.2.ebuild
   files/hylafax-4.1.2-gentoo-diffs.tar.bz2 files/digest-hylafax-4.1.2 :
 
   Updated to newest stable release.  This is a pain to build because it requires
