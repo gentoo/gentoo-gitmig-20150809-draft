@@ -1,6 +1,9 @@
 # ChangeLog for net-www/straw
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.19 2004/02/18 14:20:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.20 2004/03/02 23:24:26 pylon Exp $
+
+  03 Mar 2004; Lars Weiler <pylon@gentoo.org> :
+  Version bump and remove ADNS as a ppc-dependency; see bug #26895
 
 *straw-0.22 (18 Feb 2004)
 
