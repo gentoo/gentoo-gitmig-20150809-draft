@@ -2,11 +2,11 @@ MD5 dc8eb94f1f77030322c5f45ff182338f ChangeLog 6493
 MD5 ccd5a78b507c0444d9cef7fec354b717 libsdl-1.2.5-r1.ebuild 3153
 MD5 3dff73f49f2f4dfc0e82ce4faff11003 libsdl-1.2.5-r2.ebuild 3335
 MD5 f35556f206fff4392ff37553ef2fb2e4 libsdl-1.2.6-r3.ebuild 2896
-MD5 44031ea8e7f5eeb7cdf876e87847f9c1 libsdl-1.2.7.ebuild 2547
+MD5 49ad98163eb0ec86eb6d17ab296c12d8 libsdl-1.2.7.ebuild 2511
 MD5 ec07d8e05e12f4447f76d065ffa22475 files/digest-libsdl-1.2.5-r1 62
 MD5 ec07d8e05e12f4447f76d065ffa22475 files/digest-libsdl-1.2.5-r2 62
 MD5 0c2020ec3ce37ea0612064c52d1014b1 files/1.2.6-alsa-1.0.0.patch 557
-MD5 5f42847d56be2ead4597536c3f5654da files/digest-libsdl-1.2.7 62
+MD5 2e9d99f7ab858b5a64d124abea4565b9 files/digest-libsdl-1.2.7 62
 MD5 139a7f80f999ec4caafeac89523308a5 files/libsdl-1.2.5-xfree-4.3.patch 5422
 MD5 2468dd594bc1f3ad3b47bcf69ba5ded2 files/libsdl_gcc33_fix.diff 395
 MD5 b66ce90b8939cef871c1c9b065fc0658 files/digest-libsdl-1.2.6-r3 62
