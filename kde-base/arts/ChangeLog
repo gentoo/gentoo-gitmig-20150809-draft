@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.28 2003/01/30 19:40:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.29 2003/01/31 22:11:24 danarmak Exp $
+
+  01 Feb 2003; Dan Armak <danarmak@gentoo.org> arts-1.0.5a.ebuild  :
+
+  Fix bug #13453: filter out the -foptimize-sibling-calls optimization flag,
+  which causes a segfault in the compilation process.
 
   30 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
