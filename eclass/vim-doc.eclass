@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-doc.eclass,v 1.3 2003/07/30 21:42:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-doc.eclass,v 1.4 2003/07/31 00:20:55 agriffis Exp $
 #
 # This eclass is used by vim.eclass and vim-plugin.eclass to update
 # the documentation tags.  This is necessary since vim doesn't look in
@@ -37,8 +37,7 @@ update_vim_helptags() {
 		find $d/doc -name \*.txt -type l | while read s; do
 			[[ `readlink "$s"` = $vimfiles/* ]] && rm -f "$s"
 		done
-		if [[ -f "$d/doc/tags" && 
-				$(find "$d" | wc -l | awk '{print $1}') = 3 ]]; then
+		if [[ -f "$d/doc/tags" && $(find "$d" | wc -l | tr -d ' ') = 3 ]]; then
 			# /usr/share/vim/vim61
 			# /usr/share/vim/vim61/doc
 			# /usr/share/vim/vim61/doc/tags
