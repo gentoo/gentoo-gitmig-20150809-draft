@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.23 2004/10/19 07:53:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.24 2004/10/19 08:00:00 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -247,7 +247,7 @@ host_def_setup() {
 	HOSTCONF=config/cf/host.def
 
 	ebegin "Setting up ${HOSTCONF}"
-		cd ${S}; cp ${FILES_DIR}/site.def ${HOSTCONF} || die
+		cd ${S}; cp ${FILES_DIR}/site.def ${HOSTCONF} || die "host.def copy failed"
 		echo "#define XVendorString \"Gentoo Linux (The X.Org Foundation ${PV}, revision ${PR}-${PATCH_VER})\"" \
 			>> ${HOSTCONF}
 
@@ -686,16 +686,14 @@ src_compile() {
 	if use debug
 	then
 		chmod u+x ${S}/config/util/makeg.sh
-		FAST=1 ${S}/config/util/makeg.sh World WORLDOPTS="" || die
+		FAST=1 ${S}/config/util/makeg.sh World WORLDOPTS="" || die "debug make World failed"
 	else
-		FAST=1 emake World WORLDOPTS="" || die
+		FAST=1 emake World WORLDOPTS="" || die "make World failed"
 	fi
 
 	if use nls
 	then
-		cd ${S}/nls
-		make || die
-		cd ${S}
+		emake -C ${S}/nls || die "nls build failed"
 	fi
 
 }
@@ -968,26 +966,26 @@ src_install() {
 		make install DESTDIR=${D} || \
 		make CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
 			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \
-			install DESTDIR=${D} || die
+			install DESTDIR=${D} || die "install failed"
 	else
-		make install DESTDIR=${D} || die
+		make install DESTDIR=${D} || die "install failed"
 	fi
 
 	if use sdk
 	then
 		einfo "Installing X.org X11 SDK..."
-		make install.sdk DESTDIR=${D} || die
+		make install.sdk DESTDIR=${D} || die "sdk install failed"
 	fi
 
 	einfo "Installing man pages..."
-	make install.man DESTDIR=${D} || die
+	make install.man DESTDIR=${D} || die "man page install failed"
 	einfo "Compressing man pages..."
 	prepman /usr
 
 	if use nls
 	then
 		cd ${S}/nls
-		make DESTDIR=${D} install || die
+		make DESTDIR=${D} install || die "nls install failed"
 	fi
 
 	backward_compat_setup
