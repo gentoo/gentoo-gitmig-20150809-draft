@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29-r1.ebuild,v 1.4 2003/12/26 01:07:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29-r1.ebuild,v 1.5 2004/01/11 03:07:25 agriffis Exp $
 
 #IUSE="ipv6 pam"
 IUSE="pam"
@@ -10,7 +10,7 @@ mod_ssl_ver=2.8.16
 S=${WORKDIR}/${PN}_${PV}
 DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
-KEYWORDS="x86 ppc sparc alpha hppa arm amd64 ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa arm amd64 ppc64 ia64"
 SRC_URI="http://httpd.apache.org/dist/httpd/apache_${PV}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2
 	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}-${PV}.tar.gz"
