@@ -781,7 +781,7 @@ net-mail/courier
 # spider@gentoo.org 18 May 2002
 # Why did this get installed by profiles? its broken. 
 # should be updated to 4.2 
-sys-apps/texinfo
+<sys-apps/texinfo-4.2
 
 # mkennedy@gentoo.org 27 May 2002
 # -Wno-deprecated in CPPFLAGS to support gcc3.1 --masked until someone
