@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/crypto++
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.11 2004/12/07 06:11:28 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.12 2005/02/17 17:16:03 robbat2 Exp $
+
+  17 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> crypto++-5.2-r1.ebuild,
+  crypto++-5.2.1.ebuild:
+  Bug #69831: Ensure unzip is in DEPEND.
 
   07 Dec 2004; Daniel Black <dragonheart@gentoo.org> -crypto++-5.1-r1.ebuild,
   -crypto++-5.1.ebuild, crypto++-5.2-r1.ebuild, crypto++-5.2.1.ebuild,

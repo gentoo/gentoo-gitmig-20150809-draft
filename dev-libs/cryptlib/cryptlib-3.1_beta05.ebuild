@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.1_beta05.ebuild,v 1.6 2005/01/21 23:18:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.1_beta05.ebuild,v 1.7 2005/02/17 17:15:15 robbat2 Exp $
 
 S=${WORKDIR}
 MY_PV=${PV/./}; MY_PV=${MY_PV/_/}
@@ -16,7 +16,7 @@ SLOT="0"
 IUSE="static doc"
 
 DEPEND=">=sys-apps/sed-4
-	app-arch/zip"
+	app-arch/unzip"
 RDEPEND=""
 
 src_unpack() {
