@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.64.ebuild,v 1.7 2004/02/21 23:21:11 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.64.ebuild,v 1.8 2004/06/21 06:05:48 phosphan Exp $
 
 IUSE=""
 
 DESCRIPTION="A library to encapsulate CD-ROM reading and control."
-HOMEPAGE="http://xine.sf.net"
-SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
+HOMEPAGE="http://www.gnu.org/software/libcdio/"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 
