@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9e9163c367f4b7742a9cf1e453fe2809 bioperl-run-1.4.ebuild 1314
-MD5 fcabacd9f496160cc37eb27c7e4d0f02 bioperl-run-1.2.2.ebuild 1464
+MD5 b074c7943239d765f4b5f77a3506b4a4 bioperl-run-1.4.ebuild 1315
+MD5 c0bb25aa363d28171adb4be4004bb63d bioperl-run-1.2.2.ebuild 1465
 MD5 9bf8d3e766eab170ac4013b5c8851154 ChangeLog 1264
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
 MD5 47db6a1f839dd45f8c891b5f6ab2ff2a files/digest-bioperl-run-1.4 67
 MD5 21ad123058f1e670f289ee1a87de4e82 files/bioperl-run-Pise-test-patch.diff 722
 MD5 b23d441d6d3f1d4ed3dead4c3dc2799b files/digest-bioperl-run-1.2.2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy31QI1lqEGTUzyQRAoglAJ9NHeP6Ix44vhaGwTiEJozbHDBcOQCeLH8c
-q5N/v2XFlTj8Mtk5SJckqCI=
-=jglK
------END PGP SIGNATURE-----
