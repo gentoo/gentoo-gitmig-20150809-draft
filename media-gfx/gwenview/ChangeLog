@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gwenview
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.14 2004/03/22 10:42:10 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.15 2004/03/22 22:55:48 dholm Exp $
+
+  22 Mar 2004; David Holm <dholm@gentoo.org> gwenview-1.1.1.ebuild:
+  Added to ~ppc.
 
 *gwenview-1.1.1 (22 Mar 2004)
 
