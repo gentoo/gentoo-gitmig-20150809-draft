@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.2.0.ebuild,v 1.2 2004/09/02 23:20:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.2.0.ebuild,v 1.3 2004/09/03 10:23:07 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -28,7 +28,6 @@ src_unpack() {
 		einfo "Removing net/if.h from the includes in vg_unsafe.h"
 		sed -i -e "s:#include <net/if.h>::" \
 			coregrind/vg_unsafe.h ||die
-		less coregrind/vg_unsafe.h ||die
 	fi
 }
 src_compile() {
