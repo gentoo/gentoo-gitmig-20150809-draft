@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/paketto
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/ChangeLog,v 1.3 2003/02/12 07:49:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/ChangeLog,v 1.4 2003/03/20 14:37:48 agriffis Exp $
+
+*paketto-1.10-r1 (20 Mar 2003)
+
+  20 Mar 2003; Aron Griffis <agriffis@gentoo.org> paketto-1.0.ebuild,
+  paketto-1.10-r1.ebuild, paketto-1.10.ebuild:
+  Remove pic USE-flag and bump rev
 
 *paketto-1.10 (27 Jan 2003)
 

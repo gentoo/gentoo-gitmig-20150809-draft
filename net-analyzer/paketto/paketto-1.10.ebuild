@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10.ebuild,v 1.2 2003/02/13 13:49:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10.ebuild,v 1.3 2003/03/20 14:37:48 agriffis Exp $
 
 DESCRIPTION="Paketto Keiretsu - experimental TCP/IP tools - scanrand, minewt, lc, phentropy, paratrace"
 HOMEPAGE="http://www.doxpara.com/"
@@ -9,7 +9,7 @@ SRC_URI="http://www.doxpara.com/paketto/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="pic"
+IUSE=""
 
 #paketto comes with local copies of these ...
 #DEPEND="net-libs/libpcap
@@ -18,10 +18,7 @@ IUSE="pic"
 
 src_compile() {
 	# --with-libnet-bin=/usr --with-pcap-lib=/usr --with-pcap-inc=/usr --with-tm-inc=/usr"
-	econf \
-		--with-gnu-ld \
-		`use_with pic` \
-		|| die
+	econf --with-gnu-ld || die
 	emake || die
 }
 
