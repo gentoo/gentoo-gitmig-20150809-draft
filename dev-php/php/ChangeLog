@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.14 2002/09/13 05:39:01 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.15 2002/09/27 11:32:01 seemant Exp $
 
 *php-4.2.3 (10 Sep 2002)
 
@@ -13,6 +13,10 @@
   New version...
 
 *php-4.2.2-r1 (18 Aug 2002)
+
+  27 Sep 2002; Seemant Kulleen <seemant@gentoo.org> php-4.2.2-r1.ebuild :
+
+  --enable-readline -> --with-readline. Thanks to ska in #gentoo-dev
 
   03 Sep 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.2-r1.ebuild :
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.9 2002/09/03 20:36:35 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.10 2002/09/27 11:32:01 seemant Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -86,7 +86,7 @@ src_compile() {
 
 	local myconf
 
-	use readline && myconf="${myconf} --enable-readline"
+	use readline && myconf="${myconf} --with-readline"
 	use pam && myconf="${myconf} --with-pam"
 	use nls && myconf="${myconf} --with-gettext" || myconf="${myconf} --without-gettext"
 	use ssl && myconf="${myconf} --with-openssl"
