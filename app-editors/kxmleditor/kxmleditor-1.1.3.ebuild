@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/kxmleditor-1.1.3.ebuild,v 1.3 2004/10/05 12:19:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/kxmleditor-1.1.3.ebuild,v 1.4 2004/10/21 21:38:43 motaboy Exp $
 
 inherit kde
 
@@ -14,3 +14,8 @@ KEYWORDS="x86 ppc ~amd64 sparc"
 IUSE=""
 
 need-kde 3.1
+
+src_unpack() {
+	kde_src_unpack
+	! useq arts && epatch ${FILESDIR}/${P}-configure.patch
+}

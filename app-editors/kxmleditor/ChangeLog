@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/kxmleditor
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/ChangeLog,v 1.17 2004/10/05 12:19:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/ChangeLog,v 1.18 2004/10/21 21:38:43 motaboy Exp $
+
+  21 Oct 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/kxmleditor-1.1.3-configure.patch, kxmleditor-1.1.3.ebuild:
+  Added a patch to configure to honor the "arts" USE flag.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   kxmleditor-1.0.0.ebuild, kxmleditor-1.1.3.ebuild:
