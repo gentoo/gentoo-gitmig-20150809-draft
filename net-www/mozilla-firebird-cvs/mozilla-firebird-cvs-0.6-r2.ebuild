@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/mozilla-firebird-cvs-0.6-r2.ebuild,v 1.2 2003/07/20 03:43:32 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-cvs/mozilla-firebird-cvs-0.6-r2.ebuild,v 1.3 2003/08/01 04:42:31 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -34,7 +34,8 @@ RDEPEND="virtual/x11
    ( gtk2? >=x11-libs/gtk+-2.1.1 :
      =x11-libs/gtk+-1.2* )
    java?  ( virtual/jre )
-	!net-www/phoenix-bin"
+	!net-www/mozilla-firebird
+	!net-www/mozilla-firebird-bin"
 
 DEPEND="${RDEPEND}
    virtual/glibc
@@ -157,6 +158,24 @@ src_install() {
    src_mv_plugins /usr/lib/MozillaFirebird/plugins
 
    dobin ${FILESDIR}/MozillaFirebird
+
+	# Install icon and .desktop for menu entry
+	if [ "`use gnome`" ]
+	then
+		insinto /usr/share/pixmaps
+		doins ${S}/build/package/rpm/SOURCES/mozilla-icon.png
+
+		# Fix comment of menu entry
+		cd ${S}/build/package/rpm/SOURCES
+		cp mozilla.desktop mozillafirebird.desktop
+		perl -pi -e 's:Name=Mozilla:Name=Mozilla Firebird:' mozillafirebird.desktop
+		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Firebird Web Browser:' mozillafirebird.desktop
+		perl -pi -e 's:Exec=/usr/bin/mozilla:Exec=/usr/bin/MozillaFirebird:' mozillafirebird.desktop
+		cd ${S}
+		insinto /usr/share/gnome/apps/Internet
+		doins ${S}/build/package/rpm/SOURCES/mozillafirebird.desktop
+	fi
+
 }
 
 pkg_preinst() {
