@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-scripts/daemontools-scripts-1.0.0.ebuild,v 1.1 2005/03/03 18:05:46 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-scripts/daemontools-scripts-1.0.0.ebuild,v 1.2 2005/03/03 22:26:25 ciaranm Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc sparc amd64"
 IUSE="static selinux withsamplescripts"
 
 RDEPEND="selinux? ( sys-apps/policycoreutils )
-		sys-apps/daemontools"
+		sys-process/daemontools"
 DEPEND=""
 
 src_compile() {
