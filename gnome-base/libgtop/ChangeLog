@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.8 2002/12/13 10:56:53 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.9 2003/01/27 18:58:27 foser Exp $
+
+*libgtop-2.0.1 (27 Jan 2003)
+
+  27 Jan 2003; foser <foser@gentoo.org> libgtop-2.0.1.ebuild :
+  New version
 
   10 Dec 2002; foser <foser@gentoo.org> libgtop-1.0.13-r2.ebuild :
   Added patch by Stanislev brabec <sbrabec@suse.cz> to fix build break with latest guile (bug #11957)
