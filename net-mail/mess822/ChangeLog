@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mess822
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.1 2003/05/19 15:20:50 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.2 2003/06/09 21:55:49 msterret Exp $
+
+  09 Jun 2003; <msterret@gentoo.org> mess822-0.58.ebuild:
+  update SRC_URI; DEPEND on sed >=4; use emake (seems to work fine); change sed
+  hier.c slightly to work around repoman bug.
 
 *mess822-0.58 (19 May 2003)
 

@@ -1,16 +1,17 @@
 # Copyright 2003 Arcady Genkin <agenkin@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58.ebuild,v 1.1 2003/05/19 15:20:50 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58.ebuild,v 1.2 2003/06/09 21:55:49 msterret Exp $
 
 DESCRIPTION="Collection of utilities for parsing Internet mail messages."
-SRC_URI="http://cr.yp.to/mess822/${P}.tar.gz"
+SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/mess822.html"
 
 SLOT="0"
 KEYWORDS="x86"
 LICENSE="as-is"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+		>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -21,7 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make || die
+	emake || die
 }
 
 src_install() {
@@ -31,12 +32,12 @@ src_install() {
 	# Now that the commands are compiled, update the conf-home file to point
 	# to the installation image directory.
 	echo "${D}/usr/" > conf-home
-	sed -i "s:c(\"/etc\":c(\"${D}/etc\":" hier.c || die
-	
+	sed -i -e "s:\"/etc\":\"${D}/etc\":" hier.c || die "sed hier.c failed"
+
 	make setup
 
 	# Move the man pages into /usr/share/man
 	mv "${D}/usr/man" "${D}/usr/share/"
-	
+
 	dodoc BLURB CHANGES INSTALL README THANKS TODO VERSION
 }
