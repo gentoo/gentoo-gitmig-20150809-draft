@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r3.ebuild,v 1.1 2002/03/21 05:11:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r6.ebuild,v 1.1 2002/04/10 18:48:35 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A shared library tool for developers"
@@ -9,6 +9,8 @@ SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
 
 DEPEND="virtual/glibc"
+
+SLOT="0"
 
 src_unpack() {
 	unpack ${A}
@@ -46,6 +48,11 @@ src_install() {
 	      README THANKS TODO doc/PLATFORMS	
 
 	cd ${D}/usr/share/libtool
-	patch -p0 < ${FILESDIR}/${PV}/${P}-ltmain.sh-hack.patch || die
+	patch -p0 <${FILESDIR}/${PV}/${P}-ltmain.sh-hack.patch || die
+	# Do not create bogus entries in $dependency_libs or $libdir
+	# with ${D} or ${S} in them.
+	#
+	# Azarah - 07 April 2002
+	patch -p0 <${FILESDIR}/${PV}/${P}-portage.patch-v3 || die
 }
 

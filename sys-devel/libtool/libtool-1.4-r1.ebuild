@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4-r1.ebuild,v 1.2 2001/11/24 18:40:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4-r1.ebuild,v 1.3 2002/04/10 18:48:35 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,6 +10,8 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/libtool/${A}"
 HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
 
 DEPEND="virtual/glibc"
+
+SLOT="0"
 
 src_unpack() {
 	unpack ${A}
