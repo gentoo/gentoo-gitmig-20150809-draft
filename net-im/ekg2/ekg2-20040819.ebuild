@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20040819.ebuild,v 1.2 2004/08/22 21:05:25 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20040819.ebuild,v 1.3 2004/08/24 10:12:59 sekretarz Exp $
 
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="Text based Instant Messenger client that supports many protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://www.ekg2.org/"
 SRC_URI="http://dev.gentoo.org/~sekretarz/distfiles/${P}.tar.gz"
 LICENSE="GPL-2"
