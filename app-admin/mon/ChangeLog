@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/mon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.8 2003/02/12 02:25:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.9 2003/05/25 14:43:27 mholzer Exp $
+
+  25 May 2003; Martin Holzer <mholzer@gentoo.org> mon-0.38.20-r7.ebuild,
+  mon-0.99.2-r1.ebuild:
+  now uses mirror://kernel
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
