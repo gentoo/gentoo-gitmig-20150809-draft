@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.13 2005/03/02 23:24:31 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.14 2005/03/05 09:13:57 beu Exp $
+
+  05 Mar 2005; Elfyn McBratney <beu@gentoo.org> apr-util-0.9.5.ebuild,
+  apr-util-0.9.6.ebuild:
+  Depend on the 'best version' of apr here, too.
 
 *apr-util-0.9.6 (02 Mar 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.6.ebuild,v 1.1 2005/03/02 23:24:31 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.6.ebuild,v 1.2 2005/03/05 09:13:57 beu Exp $
 
 DESCRIPTION="Apache Portable Runtime Library"
 HOMEPAGE="http://apr.apache.org/"
@@ -12,7 +12,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="berkdb gdbm ldap"
 
 DEPEND="dev-libs/expat
-	=dev-libs/apr-0.9.6
+	~dev-libs/apr-0.9.6
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
 	ldap? ( =net-nds/openldap-2* )"
