@@ -145,10 +145,6 @@ app-editors/kvim
 # versions.. unmasking
 #=app-admin/gentoolkit-0.1.17-r1
 
-# <blocke@shivan.org> (8 Sep 2002)
-# Long waiting submitted ebuild added but masked due to freeze
-dev-util/ctmkit
-
 # <karltk@gentoo.org> (08 Sep 2002)
 # This fixes a few problems, but should not be unmasked 
 # before it's properly tested, probably not before 1.4
@@ -229,10 +225,6 @@ app-emulation/winex-cvs
 # havent moved it from net-misc/nt to net-misc/d4x until now,
 # but with new portage "update" feature ....
 net-misc/nt
-
-# <blocke@shivan.org> (31 Aug 2002)
-# Masked out due to the ebuild freeze
-x11-themes/redhat-artwork
 
 # <seemant@gentoo.org> (31 Aug 2002)
 # masked while readline upgrade issues are sorted with bash
