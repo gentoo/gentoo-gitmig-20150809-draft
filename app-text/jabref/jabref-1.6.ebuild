@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.6.ebuild,v 1.3 2005/01/28 14:52:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.6.ebuild,v 1.4 2005/01/28 14:57:42 luckyduck Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,8 @@ IUSE="jikes"
 
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.4.1
-	jikes? ( dev-java/jikes )"
+	jikes? ( dev-java/jikes )
+	dev-java/junit"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/antlr-2.7.3
 	=dev-java/jgoodies-looks-1.2*
