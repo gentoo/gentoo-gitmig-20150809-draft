@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.9 2004/03/08 20:11:07 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.10 2004/03/10 15:13:39 malverian Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~amd64 ppc alpha ia64 hppa"
+KEYWORDS="x86 sparc amd64 ppc alpha ia64 hppa"
 
 DEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
