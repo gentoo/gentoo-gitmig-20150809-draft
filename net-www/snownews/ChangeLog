@@ -1,6 +1,13 @@
 # ChangeLog for net-www/snownews
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/ChangeLog,v 1.10 2004/09/22 20:24:31 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/ChangeLog,v 1.11 2004/09/29 18:46:57 citizen428 Exp $
+
+*snownews-1.5.4 (29 Sep 2004)
+
+  29 Sep 2004; Michael Kohl <citizen428@gentoo.org> +snownews-1.5.4.ebuild,
+  -snownews-1.5.4_beta2.ebuild:
+  Version bump; this is obsoleting the beta which should have never been here,
+  so I'm removing it
 
 *snownews-1.5.4_beta2 (22 Sep 2004)
 
