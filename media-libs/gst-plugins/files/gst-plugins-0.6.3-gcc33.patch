@@ -1,0 +1,38 @@
+diff -ur gst-plugins-0.6.3/gst-libs/ext/ffmpeg/ffmpeg/ffserver.c gst-plugins-0.6.3.new/gst-libs/ext/ffmpeg/ffmpeg/ffserver.c
+--- gst-plugins-0.6.3/gst-libs/ext/ffmpeg/ffmpeg/ffserver.c	2002-12-11 03:16:51.000000000 +0000
++++ gst-plugins-0.6.3.new/gst-libs/ext/ffmpeg/ffmpeg/ffserver.c	2003-09-11 13:10:43.517428848 +0100
+@@ -20,6 +20,8 @@
+ #include "avformat.h"
+ 
+ #include <stdarg.h>
++#include <ctype.h>
++
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+@@ -33,12 +35,12 @@
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <netdb.h>
+-#include <ctype.h>
+ #include <signal.h>
+ #ifdef CONFIG_HAVE_DLFCN
+ #include <dlfcn.h>
+ #endif
+ 
++
+ #include "ffserver.h"
+ 
+ /* maximum number of simultaneous HTTP connections */
+diff -ur gst-plugins-0.6.3/gst-libs/ext/ffmpeg/ffmpeg/vhook/imlib2.c gst-plugins-0.6.3.new/gst-libs/ext/ffmpeg/ffmpeg/vhook/imlib2.c
+--- gst-plugins-0.6.3/gst-libs/ext/ffmpeg/ffmpeg/vhook/imlib2.c	2002-11-30 17:17:58.000000000 +0000
++++ gst-plugins-0.6.3.new/gst-libs/ext/ffmpeg/ffmpeg/vhook/imlib2.c	2003-09-11 13:12:33.854655040 +0100
+@@ -48,7 +48,7 @@
+ #include <stdarg.h>
+ #include <string.h>
+ #include <unistd.h>
+-#include <sys/time.h>
++#include <time.h>
+ #include <X11/Xlib.h>
+ #include <Imlib2.h>                                                             
+ 

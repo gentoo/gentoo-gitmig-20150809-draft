@@ -1,7 +1,11 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.39 2003/09/07 19:33:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.40 2003/09/11 21:40:41 liquidx Exp $
+
+  11 Sep 2003; Alastair Tse <liquidx@gentoo.org> gst-plugins-0.6.2-r1.ebuild,
+  gst-plugins-0.6.3.ebuild, files/gst-plugins-0.6.3-gcc33.patch:
+  adding gcc3.3 compile fixes
 
 *gst-plugins-0.6.3 (07 Sep 2003)
 

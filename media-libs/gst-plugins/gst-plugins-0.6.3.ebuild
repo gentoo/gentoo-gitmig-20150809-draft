@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.2 2003/09/11 01:17:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.3 2003/09/11 21:40:41 liquidx Exp $
 
 # IMPORTANT
 #
@@ -39,6 +39,9 @@ src_unpack() {
 	# ppc asm included in the resample plugin seems to be broken,
 	# using a slower but working version for now
 	epatch ${FILESDIR}/noppcasm.patch
+	
+	# fix compile issues with gcc-3.3.x
+	epatch ${FILESDIR}/${P}-gcc33.patch
 
 	# patch for changing types in >libmpeg-0.3.1
 	if grep -q mpeg2_picture ${ROOT}/usr/include/mpeg2dec/mpeg2.h; then

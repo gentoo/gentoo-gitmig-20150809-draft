@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2-r1.ebuild,v 1.3 2003/09/11 01:17:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2-r1.ebuild,v 1.4 2003/09/11 21:40:41 liquidx Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
@@ -62,6 +62,9 @@ src_unpack() {
 	# ppc asm included in the resample plugin seems to be broken,
 	# using a slower but working version for now
 	epatch ${FILESDIR}/noppcasm.patch
+
+	# patch for gcc-3.3.x
+	cd ${S};  patch -p1 < ${FILESDIR}/${PN}-0.6.3-gcc33.patch
 
 	# ffmpeg libs fix
 	use oggvorbis && epatch ${FILESDIR}/${PN}-${PV_MAJ_MIN}-ffmpeg_ldflags.patch
