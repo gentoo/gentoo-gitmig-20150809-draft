@@ -1,6 +1,11 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.80 2004/08/17 13:36:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.81 2004/08/26 09:34:23 lanius Exp $
+
+*opera-7.60_alpha1 (26 Aug 2004)
+
+  26 Aug 2004; Heinrich Wendel <lanius@gentoo.org> +opera-7.60_alpha1.ebuild:
+  version bump, bug #61695
 
   17 Aug 2004; Aron Griffis <agriffis@gentoo.org> opera-7.54.ebuild:
   Fix USE test in RDEPEND.  Should be !amd64? instead of plain !amd64
