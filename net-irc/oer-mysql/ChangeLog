@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/oer-mysql
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/ChangeLog,v 1.1 2003/12/28 23:06:52 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/ChangeLog,v 1.2 2004/03/15 12:02:16 zul Exp $
+
+  15 Mar 2004; Chuck Short <zul@gentoo.org> oer-mysql-1.0.42.ebuild:
+  Marked stable for x86
+  Updated headers
+  use MY_P for a custom name not PN.
 
 *oer-mysql-1.0.42 (28 Dec 2003)
 
