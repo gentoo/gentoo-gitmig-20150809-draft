@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r2.ebuild,v 1.3 2003/12/06 21:05:26 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r2.ebuild,v 1.4 2004/04/27 21:44:14 agriffis Exp $
 
-inherit gcc kernel-mod
+inherit gcc kernel-mod eutils
 
 NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA_nforce-${NV_V}"

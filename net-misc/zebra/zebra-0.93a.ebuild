@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93a.ebuild,v 1.5 2003/09/05 22:01:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93a.ebuild,v 1.6 2004/04/27 21:56:49 agriffis Exp $
 
 S=${WORKDIR}/${P}
 IUSE="pam snmp ipv6"

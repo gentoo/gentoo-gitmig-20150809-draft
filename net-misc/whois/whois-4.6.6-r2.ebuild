@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.6-r2.ebuild,v 1.7 2004/02/23 00:17:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.6-r2.ebuild,v 1.8 2004/04/27 21:55:22 agriffis Exp $
+
+inherit eutils
 
 IUSE="nls"
 MY_P=${P/-/_}

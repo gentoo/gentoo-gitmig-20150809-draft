@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/fakeidentd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.16 2004/04/13 11:59:45 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.17 2004/04/27 21:33:38 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> fakeidentd-2.0-r1.ebuild:
+  Add inherit eutils
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> fakeidentd-2.0-r1.ebuild:
   marked ~amd64

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17.ebuild,v 1.4 2004/04/16 20:35:51 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17.ebuild,v 1.5 2004/04/27 21:43:04 agriffis Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Netkit - ruptime/rwho/rwhod"

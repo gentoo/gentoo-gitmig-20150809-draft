@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/netkit-talk-0.17-r3.ebuild,v 1.3 2003/09/08 06:49:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/netkit-talk-0.17-r3.ebuild,v 1.4 2004/04/27 21:43:36 agriffis Exp $
+
+inherit eutils
 
 MY_P=netkit-ntalk-${PV}
 S=${WORKDIR}/netkit-ntalk-${PV}

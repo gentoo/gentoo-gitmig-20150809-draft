@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk-sccp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sccp/ChangeLog,v 1.1 2004/02/19 00:17:46 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sccp/ChangeLog,v 1.2 2004/04/27 21:20:41 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> asterisk-sccp-0.2.ebuild:
+  Add inherit eutils
 
 *asterisk-sccp-0.2 (19 Feb 2004)
 

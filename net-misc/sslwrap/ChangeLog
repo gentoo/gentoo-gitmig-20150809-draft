@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sslwrap
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.9 2003/11/30 05:41:15 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.10 2004/04/27 21:47:56 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> sslwrap-2.0.6.ebuild:
+  Add inherit eutils
 
 *sslwrap-2.0.6 (11 Jul 2002)
 

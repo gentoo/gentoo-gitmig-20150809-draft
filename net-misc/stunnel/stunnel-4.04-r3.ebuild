@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.04-r3.ebuild,v 1.2 2004/04/25 15:49:15 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.04-r3.ebuild,v 1.3 2004/04/27 21:48:37 agriffis Exp $
 
-inherit ssl-cert
+inherit ssl-cert eutils
 
 IUSE="static"
 S=${WORKDIR}/${P}

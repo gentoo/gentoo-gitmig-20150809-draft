@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.8.ebuild,v 1.4 2004/03/08 17:36:22 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.8.ebuild,v 1.5 2004/04/27 21:52:35 agriffis Exp $
+
+inherit eutils
 
 MY_PN="vlan"
 S=${WORKDIR}/${MY_PN}

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bcm4400
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.7 2003/12/23 13:46:25 genone Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.8 2004/04/27 21:21:47 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> bcm4400-1.0.1.ebuild:
+  Add inherit eutils
 
   23 Dec 2003; Marius Mauch <genone@gentoo.org> bcm4400-3.0.7.ebuild:
   added missing app-arch/unzip dependency, thanks to Arto Kuiri for

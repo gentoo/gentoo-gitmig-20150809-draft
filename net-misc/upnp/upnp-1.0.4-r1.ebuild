@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.0.4-r1.ebuild,v 1.4 2004/03/23 18:59:09 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.0.4-r1.ebuild,v 1.5 2004/04/27 21:51:19 agriffis Exp $
+
+inherit eutils
 
 S="${WORKDIR}/${PN}sdk-${PV}"
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.3 2004/03/13 01:43:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.4 2004/04/27 21:42:28 agriffis Exp $
+
+inherit eutils
 
 MY_P=${P/_}+IOS12
 DEB_PVER=3

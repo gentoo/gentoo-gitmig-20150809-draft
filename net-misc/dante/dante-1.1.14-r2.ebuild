@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.14-r2.ebuild,v 1.9 2004/04/15 23:20:48 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.14-r2.ebuild,v 1.10 2004/04/27 21:28:34 agriffis Exp $
 
-inherit gcc fixheadtails
+inherit gcc fixheadtails eutils
 
 DESCRIPTION="A free socks4,5 and msproxy implemetation"
 HOMEPAGE="http://www.inet.no/dante/"

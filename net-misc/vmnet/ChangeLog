@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vmnet
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/ChangeLog,v 1.2 2004/03/01 21:34:08 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/ChangeLog,v 1.3 2004/04/27 21:53:12 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> vmnet-0.4.ebuild:
+  Add inherit eutils
 
 *vmnet-0.4 (27 Jul 2003)
 

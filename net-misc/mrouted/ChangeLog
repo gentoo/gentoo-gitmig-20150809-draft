@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mrouted
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/ChangeLog,v 1.1 2003/11/17 21:37:18 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/ChangeLog,v 1.2 2004/04/27 21:42:28 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> mrouted-3.9_beta3.ebuild:
+  Add inherit eutils
 
 *mrouted-3.9_beta3 (17 Nov 2003)
 

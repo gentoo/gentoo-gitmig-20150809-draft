@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.11 2004/03/18 21:51:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.12 2004/04/27 21:54:34 agriffis Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 NPVER=20011209
 DESCRIPTION="Network utility to retrieve files from the WWW"

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r4.ebuild,v 1.2 2004/04/06 10:40:04 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r4.ebuild,v 1.3 2004/04/27 21:30:25 agriffis Exp $
 
 IUSE="selinux"
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 #This should be fairly consistant now, unless we have any _pre releases...
 MY_P="${P/_p/pl}"

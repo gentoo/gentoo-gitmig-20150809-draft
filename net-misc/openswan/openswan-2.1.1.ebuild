@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.1.ebuild,v 1.3 2004/04/21 16:25:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.1.ebuild,v 1.4 2004/04/27 21:45:34 agriffis Exp $
+
+inherit eutils
 
 MY_P=${P/_p/_kb}
 S=${WORKDIR}/${MY_P}

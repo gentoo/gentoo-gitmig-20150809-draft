@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/urlview
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.10 2004/04/16 20:06:29 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.11 2004/04/27 21:52:01 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> urlview-0.9.ebuild:
+  Add inherit eutils
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> urlview-0.9.ebuild:
   adding s390 keywords

@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/cipe-1.5.4.ebuild,v 1.1 2003/11/28 04:43:23 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/cipe-1.5.4.ebuild,v 1.2 2004/04/27 21:23:55 agriffis Exp $
+
+inherit eutils
 
 CIPE_TEXINFO="${PN}-1.5.1.texinfo"
 

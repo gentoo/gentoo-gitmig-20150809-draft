@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.8.3.ebuild,v 1.1 2003/12/27 16:25:28 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.8.3.ebuild,v 1.2 2004/04/27 21:39:37 agriffis Exp $
 
 DESCRIPTION="Howl is a cross-platform implementation of the Zeroconf networking standard. Zeroconf brings a new ease of use to IP networking."
 HOMEPAGE="http://www.porchdogsoft.com/products/howl/"

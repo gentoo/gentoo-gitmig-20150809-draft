@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cidr
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cidr/ChangeLog,v 1.7 2003/09/03 09:27:52 phosphan Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cidr/ChangeLog,v 1.8 2004/04/27 21:22:52 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> cidr-2.3.1-r1.ebuild:
+  Add inherit eutils
 
 *cidr-2.3.1-r1 (03 Sep 2003)
 

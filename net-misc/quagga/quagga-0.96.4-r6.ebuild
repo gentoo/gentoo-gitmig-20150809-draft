@@ -1,6 +1,8 @@
 # Copyright 2003-2004 DataCore GmbH.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.4-r6.ebuild,v 1.1 2004/03/29 12:29:03 amir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.4-r6.ebuild,v 1.2 2004/04/27 21:46:04 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"

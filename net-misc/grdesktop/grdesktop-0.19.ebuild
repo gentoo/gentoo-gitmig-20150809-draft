@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.19.ebuild,v 1.4 2003/09/05 22:01:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.19.ebuild,v 1.5 2004/04/27 21:38:29 agriffis Exp $
 
 DESCRIPTION="Gtk2 frontend for rdesktop"
 HOMEPAGE="http://www.nongnu.org/grdesktop"

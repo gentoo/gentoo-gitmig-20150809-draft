@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.38 2004/04/06 10:40:04 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.39 2004/04/27 21:30:25 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> dhcp-3.0_p2-r4.ebuild:
+  Add inherit eutils
 
   06 Apr 2004; Joshua Brindle <method@gentoo.org> dhcp-3.0_p2-r4.ebuild,
   dhcp-3.0_p2-r5.ebuild, dhcp-3.0_p2-r6.ebuild:

@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.85-r1.ebuild,v 1.4 2003/11/27 21:05:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.85-r1.ebuild,v 1.5 2004/04/27 21:31:28 agriffis Exp $
+
+inherit eutils
 
 MY_P=${P/dhcpv6/dhcp6}
 DESCRIPTION="Server and client for DHCPv6"
