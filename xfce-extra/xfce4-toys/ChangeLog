@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-toys
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-toys/ChangeLog,v 1.6 2003/09/25 21:20:43 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-toys/ChangeLog,v 1.7 2003/11/13 00:39:38 bcowan Exp $
+
+*xfce4-toys-4.0.1 (12 Nov 2003)
+
+  12 Nov 2003; Brad Cowan <bcowan@gentoo.org> xfce4-toys-4.0.1.ebuild:
+  bugfix release of xfce4.
 
 *xfce4-toys-4.0.0 (25 Sep 2003)
 
