@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.5 2003/09/06 22:25:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.6 2003/09/10 21:47:29 msterret Exp $
 
 DESCRIPTION="Load balancing multithreaded PostgreSQL connection pool.
 Also has a replication mode to keep in sync the load balanced backend
@@ -12,7 +12,10 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=postgresql-7.2.3-r1 >=ace-5.2.4-r1 >=openjade-1.3.1-r5 =docbook-dsssl-stylesheets-1.77"
+DEPEND=">=postgresql-7.2.3-r1
+	>=dev-libs/ace-5.2.4-r1
+	>=openjade-1.3.1-r5
+	=docbook-dsssl-stylesheets-1.77"
 RDEPEND="$DEPEND"
 
 S="${WORKDIR}/DBBalancer"

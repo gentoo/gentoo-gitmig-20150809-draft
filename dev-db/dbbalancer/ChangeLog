@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/dbbalancer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/ChangeLog,v 1.2 2003/02/12 05:47:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/ChangeLog,v 1.3 2003/09/10 21:47:29 msterret Exp $
+
+  10 Sep 2003; Michael Sterrett <msterret@gentoo.org> dbbalancer-0.4.4.ebuild:
+  DEPEND: >=ace-5.2.4-r1 -> >=dev-libs/ace-5.2.4-r1
 
 *dbbalancer-0.4.4 (31 Jan 2003)
 
