@@ -1,8 +1,13 @@
 # ChangeLog for dev-util/dejagnu
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.1 2003/06/29 20:46:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.2 2003/09/30 19:30:40 kumba Exp $
+
 
 *dejagnu-1.4.3 (29 Jun 2003)
+
+  30 Sep 2003; Joshua Kinard <kumba@gentoo.org> dejagnu-1.4.3.ebuild:
+  Added ~sparc & ~mips to KEYWORDS
+  Useful for running 'make check' on GNU tools (glibc/binutils)
 
   29 Jun 2003; Martin Schlemmer <azarah@gentoo.org> dejagnu-1.4.3.ebuild:
   Initial release.
