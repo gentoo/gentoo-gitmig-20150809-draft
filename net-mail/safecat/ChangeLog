@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/safecat
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/ChangeLog,v 1.1 2003/08/11 10:11:10 robbat2 Exp $
+
+*safecat-1.11 (11 Aug 2003)
+
+  11 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> safecat-1.11.ebuild,
+  files/safecat-1.11-gentoo.patch:
+  New ebuild submitted by Jens Kreiensiek <jens.kreiensiek@gmx.net>
+
