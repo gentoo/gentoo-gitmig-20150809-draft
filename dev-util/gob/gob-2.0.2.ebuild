@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.2.ebuild,v 1.3 2002/12/09 04:21:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.2.ebuild,v 1.4 2002/12/24 21:03:47 azarah Exp $
 
 MY_P=${PN}2-${PV}
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 
-RDEPEND="=dev-libs/glib-2.0*
+RDEPEND=">=dev-libs/glib-2.0*
 	dev-libs/popt"
 
 DEPEND="${RDEPEND}
