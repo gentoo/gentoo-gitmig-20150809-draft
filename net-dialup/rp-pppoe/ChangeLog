@@ -1,6 +1,6 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.11 2003/05/23 07:41:23 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.12 2003/07/13 11:36:51 aliz Exp $
 
 *rp-pppoe-3.5 (23 May 2003)
   
@@ -42,6 +42,11 @@
   21 Jun 2002; Ryan Phillips <rphillips@gentoo.org> rp-pppoe-3.4.ebuild :
   New version
   
+*rp-pppoe-3.3-r1 (13 Feb 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 *rp-pppoe-3.3 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :

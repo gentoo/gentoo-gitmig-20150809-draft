@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.1.3.ebuild,v 1.2 2003/02/13 13:55:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.1.3.ebuild,v 1.3 2003/07/13 11:36:51 aliz Exp $
 
 S=${WORKDIR}/pptpd-1.1.3
 DESCRIPTION="Linux Point-to-Point Tunnelling Protocol Server"
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc net-dialup/ppp"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_compile() {
 	econf || die	
