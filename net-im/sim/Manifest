@@ -2,8 +2,6 @@ MD5 00a6e8d046b30d8f9d43b282aa29ddfc sim-0.8.3.ebuild 1261
 MD5 5dec3a862b95df43914fdcc202823e3b sim-0.9.1.ebuild 1389
 MD5 ca1d9fd3c372e68eca904bbc9c12925c ChangeLog 3154
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
-MD5 0f0af3c4d6d9ba7bba0e22fa6a5278b9 files/sim-0.8.2-nostl.diff 863
 MD5 0f0af3c4d6d9ba7bba0e22fa6a5278b9 files/sim-0.8.3-nostl.diff 863
 MD5 ee5f989cba64648aa222ad7061f5e03c files/digest-sim-0.8.3 62
 MD5 26d0710594e0e74ccdb6f42d4b3f45bc files/digest-sim-0.9.1 62
-MD5 7b18143409d90ced279c2da6f90bf40d files/icqlogon-gentoo.patch 1464
