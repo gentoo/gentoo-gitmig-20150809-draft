@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01.ebuild,v 1.5 2004/07/02 04:44:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01.ebuild,v 1.6 2004/07/14 14:32:25 agriffis Exp $
 
 At="cpml_ev5-5.2.0-1.alpha.rpm"
 S=${WORKDIR}/usr
@@ -13,6 +13,7 @@ RDEPEND="$DEPEND"
 LICENSE="compaq-sdla"
 SLOT="5.2.01"
 KEYWORDS="-x86 -ppc -sparc alpha"
+IUSE=""
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
@@ -42,4 +43,3 @@ src_install () {
 	ln -s libcpml_ev5.so libcpml.so
 	ln -s libcpml_ev5.a libcpml.a
 }
-

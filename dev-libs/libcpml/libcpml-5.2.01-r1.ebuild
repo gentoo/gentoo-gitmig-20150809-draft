@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r1.ebuild,v 1.7 2004/07/02 04:44:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r1.ebuild,v 1.8 2004/07/14 14:32:25 agriffis Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
@@ -46,4 +46,3 @@ src_install () {
 	ln -s libcpml_${EV}.so libcpml.so
 	ln -s libcpml_${EV}.a libcpml.a
 }
-
