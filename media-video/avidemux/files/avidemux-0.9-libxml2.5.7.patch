@@ -1,0 +1,27 @@
+--- avidemux-0.9/avidemux/prefs.cpp	2003-02-26 19:56:20.000000000 +0000
++++ avidemux-0.9.new/avidemux/prefs.cpp	2003-07-19 14:21:24.000000000 +0000
+@@ -53,8 +53,11 @@
+ // </prefs_gen>
+ 
+ #ifdef USE_LIBXML2
++
++#ifndef LIBXML_THREAD_ENABLED
+ int xmlSaveNoEmptyTags  = 1;      /* save empty tags as <empty></empty> */
+ int xmlIndentTreeOutput = 1;      /* try to indent the tree dumps */
++#endif
+ 
+ void erase_blank_nodes(xmlNodePtr cur){
+   /* erase all blank-nodes recursive; they deny IndentTreeOutput !!! */
+@@ -126,7 +129,12 @@
+ #include "prefs.h"
+ 
+ preferences::preferences(){
++#ifdef LIBXML_THREAD_ENABLED
++   xmlSaveNoEmptyTags;
++   xmlIndentTreeOutput;
++#else
+ 	;
++#endif   
+ }
+ 
+ preferences::~preferences(){
