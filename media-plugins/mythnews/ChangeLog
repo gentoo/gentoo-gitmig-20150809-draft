@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythnews
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.11 2004/09/21 05:01:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.12 2004/12/05 01:02:51 iggy Exp $
+
+  04 Dec 2004; Brian Jackson <iggy@gentoo.org> mythnews-0.16.ebuild:
+  I can't find any of the other media-tv guys, and it's been fairly bug free,
+  so marking as x86
 
   21 Sep 2004; Doug Goldstein <cardoe@gentoo.org> mythnews-0.15.ebuild:
   stable x86

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.16.ebuild,v 1.1 2004/09/10 19:49:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.16.ebuild,v 1.2 2004/12/05 01:00:00 iggy Exp $
 
 inherit myth
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="transcode debug nls"
 
 DEPEND=">=sys-apps/sed-4

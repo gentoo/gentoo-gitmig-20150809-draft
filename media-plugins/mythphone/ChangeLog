@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythphone
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/ChangeLog,v 1.2 2004/09/18 11:39:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/ChangeLog,v 1.3 2004/12/05 01:03:57 iggy Exp $
+
+  04 Dec 2004; Brian Jackson <iggy@gentoo.org> mythphone-0.16.ebuild:
+  I can't find any of the other media-tv guys, and it's been fairly bug free,
+  so marking as x86
 
   18 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythphone-0.16.ebuild:
   Disable festival support becuse it's currently broken, bug #64503.
