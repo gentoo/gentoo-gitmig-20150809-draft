@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.7 2003/11/12 15:37:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.8 2003/11/12 15:43:10 aliz Exp $
 
 inherit flag-o-matic eutils python
 
@@ -44,7 +44,7 @@ src_unpack() {
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-disable_modules_and_ssl.patch
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path.patch
 	epatch ${FILESDIR}/${PN}-2.2.3-gentoo_py_dontcompile.patch
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-fPIC.patch
+	[ "${ARCH}" = "amd64" ] && EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_configure() {
