@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r1.ebuild,v 1.1 2003/09/18 23:56:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r1.ebuild,v 1.2 2003/10/22 20:38:08 seemant Exp $
 
 inherit perl-module
 
@@ -33,6 +33,7 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}
+	cp ${FILESDIR}/bastille-${PV}-firewall.init ./bastille-firewall
 }
 
 src_install() {
