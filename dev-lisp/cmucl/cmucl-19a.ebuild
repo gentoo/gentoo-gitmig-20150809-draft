@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19a.ebuild,v 1.1 2004/08/07 05:22:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19a.ebuild,v 1.2 2004/08/11 14:38:31 mkennedy Exp $
 
 inherit common-lisp-common eutils
 
-DEB_PV=1
+DEB_PV=2
 MY_PV=${PV}-release-20040728
 
 DESCRIPTION="CMU Common Lisp is an implementation of ANSI Common Lisp"
@@ -66,8 +66,7 @@ src_install() {
 	insinto /usr/lib/cmucl
 	doins ${FILESDIR}/${PV}/install-clc.lisp
 	exeinto /usr/lib/common-lisp/bin
-	cp own-work/cmucl-script.sh cmucl.sh
-	doexe cmucl.sh
+	doexe ${FILESDIR}/${PV}/cmucl.sh
 
 	insinto /etc/common-lisp/cmucl
 	sed "s,@PF@,${PF},g" <${FILESDIR}/${PV}/site-init.lisp.in >site-init.lisp

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-source/cmucl-source-19a.ebuild,v 1.1 2004/08/07 05:22:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-source/cmucl-source-19a.ebuild,v 1.2 2004/08/11 14:40:32 mkennedy Exp $
 
 inherit common-lisp eutils
 
-DEB_PV=1
+DEB_PV=2
 MY_PV=${PV}-release-20040728
 
 DESCRIPTION="Source code for CMUCL, with CLX, Gray Streams and Hemlock for CMUCL"
