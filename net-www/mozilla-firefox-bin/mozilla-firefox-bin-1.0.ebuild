@@ -1,24 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-1.0_pre.ebuild,v 1.3 2004/09/17 08:12:40 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-1.0.ebuild,v 1.1 2004/11/15 01:16:48 agriffis Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
 IUSE="gnome"
 
-MY_PN=${PN/-bin/}
-MY_PV=${PV/_pre/PR}
-S=${WORKDIR}/firefox
 DESCRIPTION="The Mozilla Firefox Web Browser"
-# Mirrors have it in one of the following places, depending on what
-# mirror you check and when you check it... :-(
-SRC_URI="
-	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/0.10/firefox-${MY_PV}-i686-linux-gtk2+xft.tar.gz
-	http://ftp.mozilla.org/pub/firefox/releases/0.10/firefox-${MY_PV}-i686-linux-gtk2+xft.tar.gz"
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/1.0/linux-i686/en-US/firefox-${PV}.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/firefox"
 RESTRICT="nostrip"
 
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* ~x86 ~amd64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -33,7 +26,9 @@ RDEPEND="virtual/x11
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
 	)
 	virtual/x11
-	>=net-www/mozilla-launcher-1.13"
+	>=net-www/mozilla-launcher-1.22"
+
+S=${WORKDIR}/firefox
 
 src_install() {
 	# Install firefox in /opt
