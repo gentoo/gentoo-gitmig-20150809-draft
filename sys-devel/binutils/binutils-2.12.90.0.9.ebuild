@@ -2,19 +2,24 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.4.ebuild,v 1.1 2002/04/15 23:30:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.9.ebuild,v 1.1 2002/06/10 19:43:01 azarah Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
+
+inherit libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
 SRC_URI="ftp://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2"
 
+SLOT="0"
+
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
 
-[ -z "`use build`" ] && [ -z "`use bootstrap`" ] && DEPEND="${DEPEND} sys-devel/perl"
+[ -z "`use build`" ] && [ -z "`use bootstrap`" ] && \
+	DEPEND="${DEPEND} sys-devel/perl"
 
 
 src_compile() {
@@ -26,7 +31,7 @@ src_compile() {
 
 	# DO NOT LIBTOOLIZE, AS BINUTILS COME WITH ITS OWN VERSION
 	# OF LIBTOOL!!!!!!!
-	libtoolize --copy --force
+	elibtoolize --portage
 
 	./configure --enable-shared \
 		--enable-64-bit-bfd \
