@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.8 2002/11/06 04:26:16 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.9 2002/11/16 17:01:39 lostlogic Exp $
+
+*procps-3.1.0 (16 Nov 2002)
+
+  16 Nov 2002; Brandon Low <lostlogic@gentoo.org> procps-3.1.0.ebuild :
+
+  Well this should be an interesting experiment.  I'm putting into
+  unstable the most recent procps from the sf.net procps project.  This
+  procps tree has some very nice new features, and SHOULD actually be
+  more stable than the 2.0.X tree we were using which was maintained by
+  Rik Van Riel.  The reason we waited until now for this move was that
+  some of the features of the gentoo-sources and development-sources
+  kernels weren't supported by this procps, HOPEFULLY the sf.net project
+  will continue from here on to keep up with support for the latest
+  kernel features AND remainthe more stable tree.  
+
+  Of course I also did my usual round of ebuild cleanups that goes 
+  with a major version bump.  Enjoy.
 
   05 Nov 2002; J Robert Ray <jrray@gentoo.org> procps-2.0.10-r1.ebuild :
   Combine both sed calls into one, avoiding attempt to overwrite 0444
@@ -12,7 +29,7 @@
   
   Added einfo about threads default behavior thanks to j2ee.
   
-  31 Oct 2002; Brandon Low <lostlogic@gentoo.org> procps-2.0.10.ebuild :
+  31 Oct 2002; Brandon Low <lostlogic@gentoo.org> procps-2.0.10-r1.ebuild :
 
   Fix /lib/libproc.so symlink.
 
