@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-IRC
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.8 2003/04/03 23:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.9 2003/06/16 14:00:38 mcummings Exp $
+
+*Net-IRC-0.73 (16 Jun 2003)
+
+  16 Jun 2003; Michael Cummings <mcummings@gentoo.org> Net-IRC-0.73.ebuild:
+  CPAN version bump; needs testing
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
