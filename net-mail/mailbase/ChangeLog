@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.5 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.6 2002/12/19 04:30:42 raker Exp $
+
+*mailbase-0.00-r5 (18 Dec 2002)
+
+  18 Dec 2002; Nick Hadaway <raker@gentoo.org> mailbase-0.00-r5.ebuild :
+  Changed /var/spool/mail permissions to 1777
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
