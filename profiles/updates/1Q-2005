@@ -51,3 +51,4 @@ slotmove sys-libs/libchipcard 0 1
 move net-misc/ksambaplugin kde-base/kdenetwork
 move media-gfx/kolourpaint kde-base/kdegraphics
 move x11-misc/kmousetool kde-base/kdeaccessibility
+move net-www/drupal www-apps/drupal
