@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.5-r1.ebuild,v 1.2 2004/10/12 14:06:10 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.5-r1.ebuild,v 1.3 2004/10/15 15:36:37 suka Exp $
 
 # Notes:
 #
@@ -26,7 +26,7 @@
 
 inherit flag-o-matic eutils gcc
 
-IUSE="gnome kde java"
+IUSE="gnome kde java curl"
 
 OO_VER=1.1.2
 PATCHLEVEL=OOO_1_1_2
@@ -49,7 +49,7 @@ HOMEPAGE="http://ooo.ximian.com"
 
 LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND="!app-office/openoffice-ximian-bin
 	virtual/x11
@@ -81,7 +81,7 @@ DEPEND="${RDEPEND}
 	app-shells/tcsh
 	dev-util/pkgconfig
 	dev-util/intltool
-	net-misc/curl
+	curl? ( net-misc/curl )
 	sys-libs/pam
 	sys-libs/zlib
 	!dev-util/dmake
@@ -318,6 +318,12 @@ src_compile() {
 		MYCONF="${MYCONF} --disable-java"
 	fi
 
+	#See if we use system-curl
+	if use curl
+	then
+		MYCONF="${MYCONF} --with-system-curl"
+	fi
+
 	# Do NOT compile with a external STLport, as gcc-2.95.3 users will
 	# get linker errors due to the ABI being different (STLport will be
 	# compiled with 2.95.3, while OO is compiled with 3.x). (Az)
@@ -334,7 +340,6 @@ src_compile() {
 		--enable-fontconfig \
 		--with-system-zlib \
 		--with-system-freetype \
-		--with-system-curl \
 		--with-system-xrender \
 		--disable-mozilla"
 
