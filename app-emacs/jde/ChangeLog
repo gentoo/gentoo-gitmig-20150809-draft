@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/jde
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.9 2004/09/11 10:23:45 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.10 2004/09/21 13:15:31 axxo Exp $
+
+  21 Sep 2004; Thomas Matthijs <axxo@gentoo.org> jde-2.3.3.ebuild:
+  x86
 
   11 Sep 2004; Tom Martin <slarti@gentoo.org> jde-2.3.4_beta5.ebuild:
   Marked ~amd64, resolves bug 59275. Thanks to Gabriel Ebner

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.3.3.ebuild,v 1.5 2004/06/24 22:16:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.3.3.ebuild,v 1.6 2004/09/21 13:15:31 axxo Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://jdee.sunsite.dk/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 
 DEPEND="virtual/emacs
 	>=virtual/jdk-1.2.2
