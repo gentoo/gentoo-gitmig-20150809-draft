@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.82 2005/02/07 17:50:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.83 2005/02/19 07:11:31 mr_bones_ Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -98,7 +98,7 @@ setup-allowed-flags() {
 }
 
 filter-flags() {
-	local x f fset 
+	local x f fset
 	declare -a new_CFLAGS new_CXXFLAGS
 
 	for x in "$@" ; do
@@ -146,7 +146,7 @@ append-flags() {
 }
 
 replace-flags() {
-	local f fset 
+	local f fset
 	declare -a new_CFLAGS new_CXXFLAGS
 
 	for fset in CFLAGS CXXFLAGS; do
@@ -333,7 +333,7 @@ has_pic() {
 }
 
 # indicate whether PIE is set
-has_pie() { 
+has_pie() {
 	[ "${CFLAGS/-fPIE}" != "${CFLAGS}" ] && return 0
 	[ "${CFLAGS/-fpie}" != "${CFLAGS}" ] && return 0
 	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIE__)" ] && return 0
@@ -341,7 +341,7 @@ has_pie() {
 	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__)" ] && return 0
 	return 1
 }
-	
+
 # indicate whether code for SSP is being generated
 has_ssp() {
 	# note; this matches both -fstack-protector and -fstack-protector-all
@@ -386,17 +386,17 @@ has_m32() {
 replace-sparc64-flags() {
 	local SPARC64_CPUS="ultrasparc v9"
 
- 	if [ "${CFLAGS/mtune}" != "${CFLAGS}" ]; then
+	if [ "${CFLAGS/mtune}" != "${CFLAGS}" ]; then
 		for x in ${SPARC64_CPUS}; do
 			CFLAGS="${CFLAGS/-mcpu=${x}/-mcpu=v8}"
 		done
- 	else
+	else
 	 	for x in ${SPARC64_CPUS}; do
 			CFLAGS="${CFLAGS/-mcpu=${x}/-mcpu=v8 -mtune=${x}}"
 		done
 	fi
-	
- 	if [ "${CXXFLAGS/mtune}" != "${CXXFLAGS}" ]; then
+
+	if [ "${CXXFLAGS/mtune}" != "${CXXFLAGS}" ]; then
 		for x in ${SPARC64_CPUS}; do
 			CXXFLAGS="${CXXFLAGS/-mcpu=${x}/-mcpu=v8}"
 		done
@@ -430,7 +430,7 @@ filter-ldflags() {
 
 fstack-flags() {
 	if has_ssp; then
-		[ -z "`is-flag -fno-stack-protector`" ] && 
+		[ -z "`is-flag -fno-stack-protector`" ] &&
 			export CFLAGS="${CFLAGS} `test_flag -fno-stack-protector`"
 	fi
 	return 0
