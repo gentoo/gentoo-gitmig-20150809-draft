@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r8.ebuild,v 1.1 2003/01/15 09:05:31 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r10.ebuild,v 1.1 2003/02/03 14:24:33 carpaski Exp $
 
 IUSE="build"
 
@@ -50,6 +50,18 @@ src_install() {
 	cd ${S}/cnf
 	insinto /etc
 	case "$ARCH" in
+		alpha )
+		newins make.globals.alpha make.globals
+		newins make.conf.alpha make.conf
+		;;
+		hppa )
+		newins make.globals.hppa make.globals
+		newins make.conf.hppa make.conf
+		;;
+		mips )
+		newins make.globals.mips make.globals
+		newins make.conf.mips make.conf
+		;;
 		ppc )
 		newins make.globals.ppc make.globals
 		newins make.conf.ppc make.conf
@@ -57,14 +69,6 @@ src_install() {
 		sparc )
 		newins make.globals.sparc make.globals
 		newins make.conf.sparc make.conf
-		;;
-		alpha )
-		newins make.globals.alpha make.globals
-		newins make.conf.alpha make.conf
-		;;
-		mips )
-		newins make.globals.mips make.globals
-		newins make.conf.mips make.conf
 		;;
 		* )
 		doins make.globals make.conf
