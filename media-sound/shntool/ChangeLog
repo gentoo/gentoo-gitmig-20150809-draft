@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/shntool
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shntool/ChangeLog,v 1.1 2003/04/12 08:25:42 jje Exp $
+
+*shntool-1.2.3 (12 Apr 2003)
+
+  12 Apr 2003; jje shntool-1.2.3.ebuild:
+  Initial Revision.
+  
+  Submitted by: CJ Kucera
+
