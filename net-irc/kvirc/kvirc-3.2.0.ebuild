@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.2 2005/03/07 21:36:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.3 2005/03/08 05:08:42 swegener Exp $
 
 inherit eutils kde-functions
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.kvirc.net/"
 SRC_URI="ftp://ftp.kvirc.net/pub/kvirc/${PV}/source/${P}.tar.bz2
 	ftp://ftp.kvirc.de/pub/kvirc/${PV}/source/${P}.tar.bz2
 	ftp://kvirc.firenze.linux.it/pub/kvirc/${PV}/source/${P}.tar.bz2
-	http://dev.gentoo.org/~swegener/distfiles/${P}-linking-fix.patch.bz2"
+	mirror://gentoo/${P}-linking-fix.patch.bz2"
 
 LICENSE="kvirc"
 SLOT="3"
