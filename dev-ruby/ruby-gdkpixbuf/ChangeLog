@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ChangeLog,v 1.2 2002/04/22 01:07:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ChangeLog,v 1.3 2002/07/07 01:38:21 agriffis Exp $
+
+*ruby-gdkpixbuf-0.29 (06 Jul 2002)
+
+	06 Jul 2002; Aron Griffis <agriffis@gentoo.org> ruby-gdkpixbuf-0.29.ebuild:
+
+	Updated to version 0.29.  Added SLOT and LICENSE.
 
 *ruby-gdkpixbuf-0.27 (21 Apr 2002)
 
