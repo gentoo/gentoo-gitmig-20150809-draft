@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.50 2004/06/23 19:34:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.51 2004/06/24 13:43:45 agriffis Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -174,7 +174,7 @@ pkg_setup() {
 	gcc-getCC
 
 	# See bug #35468, circular pam-X11 dep
-	if [ "`use pam`" -a "`best_version x11-base/${PN}`" ]
+	if use pam && [ "`best_version x11-base/${PN}`" ]
 	then
 		einfo "Enabling PAM features in ${PN}..."
 	else
@@ -329,7 +329,7 @@ fi
 		fi
 
 		# TDFX_RISKY - 16-bit, 1024x768 or higher on low-memory voodoo3's
-		if [ "`use 3dfx`" -a "${TDFX_RISKY}" = "yes" ]
+		if use 3dfx && [ "${TDFX_RISKY}" = "yes" ]
 		then
 			patch_exclude 5850
 		else
@@ -446,7 +446,7 @@ fi
 
 		# Remove circular dep between pam and X11, bug #35468
 		# If pam is in USE and we have X11, then we can enable PAM
-		if [ "`use pam`" -a "`best_version x11-base/xorg-x11`" ]
+		if use pam && [ "`best_version x11-base/xorg-x11`" ]
 		then
 			# If you want to have optional pam support, do it properly ...
 			echo "#define HasPam YES" >> config/cf/host.def
