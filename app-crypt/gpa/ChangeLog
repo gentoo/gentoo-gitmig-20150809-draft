@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.13 2004/01/24 14:34:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.14 2004/02/07 02:30:05 pylon Exp $
+
+  07 Feb 2004; Lars Weiler <pylon@gentoo.org> gpa-0.6.1.ebuild:
+  stable on ppc
 
   24 Jan 2004; Jason Wever <weeve@gentoo.org> gpa-0.6.1.ebuild:
   Marked stable on sparc.
