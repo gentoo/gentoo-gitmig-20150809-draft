@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/soldieroffortune
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.7 2004/08/07 21:08:59 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.8 2005/03/07 13:55:38 wolf31o2 Exp $
+
+  07 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  soldieroffortune-1.06a.ebuild:
+  Changed hardcoded /opt/soldieroffortune to dir variable and closing bug #84361.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> soldieroffortune-1.06a.ebuild:
   Typo in DESCRIPTION: mercinary -> mercenary. Bug 59717.
