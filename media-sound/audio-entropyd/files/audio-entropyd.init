@@ -1,0 +1,19 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/files/audio-entropyd.init,v 1.1 2004/03/31 09:58:00 method Exp $
+
+start() {
+
+	ebegin "audio-entropyd"
+	start-stop-daemon --start --quiet --exec /usr/bin/audio-entropyd --background 
+	eend $?
+
+}
+
+stop() {
+
+	ebegin "Stopping famd"
+	start-stop-daemon --stop --quiet --exec /usr/bin/audio-entropyd
+	eend $?
+}
