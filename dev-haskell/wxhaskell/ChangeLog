@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/wxhaskell
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.13 2005/02/26 14:48:04 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.14 2005/03/14 18:22:12 kosmikus Exp $
+
+  14 Mar 2005; Andres Loeh <kosmikus@gentoo.org> wxhaskell-0.7.ebuild,
+  wxhaskell-0.8-r1.ebuild, -wxhaskell-0.8.ebuild, wxhaskell-0.9.ebuild:
+  wxHaskell is not yet compatible with ghc-6.4.
 
 *wxhaskell-0.9 (26 Feb 2005)
 

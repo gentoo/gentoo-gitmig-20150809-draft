@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.ebuild,v 1.1 2005/02/26 14:48:05 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.9.ebuild,v 1.2 2005/03/14 18:22:12 kosmikus Exp $
 
 inherit flag-o-matic wxwidgets ghc-package
 
@@ -16,6 +16,7 @@ IUSE="doc gtk2"
 
 DEPEND="${DEPEND}
 	>=virtual/ghc-6.2
+	!>=virtual/ghc-6.4
 	>=x11-libs/wxGTK-2.4.2-r2
 	doc? ( >=dev-haskell/haddock-0.6-r2 )"
 

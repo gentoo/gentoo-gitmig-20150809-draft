@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.7.ebuild,v 1.7 2005/01/01 18:06:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.7.ebuild,v 1.8 2005/03/14 18:22:12 kosmikus Exp $
 
 DESCRIPTION="a portable and native GUI library for Haskell"
 HOMEPAGE="http://wxhaskell.sourceforge.net/"
@@ -14,6 +14,7 @@ IUSE="doc"
 
 DEPEND="${DEPEND}
 	>=virtual/ghc-6.2
+	!>=virtual/ghc-6.4
 	>=x11-libs/wxGTK-2.4.1
 	doc? ( >=dev-haskell/haddock-0.6-r2 )"
 
