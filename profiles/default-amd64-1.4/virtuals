@@ -7,7 +7,7 @@ virtual/python          dev-lang/python
 virtual/mta             net-mail/ssmtp
 virtual/alsa            sys-kernel/gentoo-dev-sources
 virtual/kernel          sys-kernel/linux-headers
-virtual/linux-sources   sys-kernel/vanilla-sources
+virtual/linux-sources   sys-kernel/gentoo-dev-sources
 virtual/glibc           sys-libs/glibc
 virtual/x11             x11-base/xfree
 virtual/opengl          x11-base/xfree
