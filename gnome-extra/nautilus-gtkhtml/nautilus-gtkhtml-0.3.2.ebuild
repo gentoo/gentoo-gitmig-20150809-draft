@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-gtkhtml/nautilus-gtkhtml-0.3.2.ebuild,v 1.9 2003/02/13 12:23:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-gtkhtml/nautilus-gtkhtml-0.3.2.ebuild,v 1.10 2003/06/10 13:04:11 liquidx Exp $
 
 inherit debug
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc "
 
 RDEPEND=">=gnome-base/nautilus-1.1.10
-	>=gnome-extra/libgtkhtml-1.99.7"
+	=gnome-extra/libgtkhtml-2*"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}"

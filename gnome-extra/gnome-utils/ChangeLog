@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.27 2003/05/27 16:34:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.28 2003/06/10 13:03:12 liquidx Exp $
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> gnome-utils-2.0.5.ebuild,
+  gnome-utils-2.0.6.ebuild:
+  fix libgtkhtml deps
 
 *gnome-utils-2.2.3 (27 May 2003)
 
