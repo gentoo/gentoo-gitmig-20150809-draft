@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.5.10.ebuild,v 1.6 2003/09/06 12:14:44 scandium Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.5.12.ebuild,v 1.1 2003/09/06 12:14:44 scandium Exp $
 
 DESCRIPTION="Portable .NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -10,21 +8,12 @@ SRC_URI="mirror://gnu/dotgnu-pnet/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 IUSE=""
 
 DEPEND=">=dev-util/treecc-0.2.6
 	!dev-dotnet/mono"
-
-src_unpack() {
-# Fix a pnetc compile problem
-
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/md5hash.patch
-	./auto_gen.sh || die
-}
 
 src_compile() {
 	econf || die
