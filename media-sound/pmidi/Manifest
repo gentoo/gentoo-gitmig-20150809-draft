@@ -1,6 +1,14 @@
-MD5 38da5d5e696082afd2ee7ae3e0cade8a ChangeLog 1187
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 31a45887006d9f6db078d08c881748b0 ChangeLog 1292
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 23847ba1284bee8ee6791a41d9f8a007 pmidi-1.5.5.ebuild 675
-MD5 46166c6cd6aa5140894c43caea0bf693 pmidi-1.6.0.ebuild 620
-MD5 ca5fa772ae076c2ba52f5133d298c7f7 files/digest-pmidi-1.5.5 63
+MD5 05db6b94d136582df237732ab46bd3b7 pmidi-1.6.0.ebuild 603
 MD5 d5b7172c02c055df398d6f40054a3491 files/digest-pmidi-1.6.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBow2pArHZZzCEUG0RAlYPAJ969y8eCniwzU2LKQEmp8Pv94KDqACfYzet
+AcRqe1gB4rUDZ42msjgfBVA=
+=ivqb
+-----END PGP SIGNATURE-----

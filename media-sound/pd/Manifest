@@ -3,15 +3,15 @@ Hash: SHA1
 
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 1f3698d623a110c0060f9f094043b7e9 pd-0.37.1.ebuild 1550
-MD5 be52e147084dce85a5bd3fb296c4e79c pd-0.37.4.ebuild 1462
-MD5 14b786ee899cd54c8ea3e148e0230648 ChangeLog 3315
+MD5 bd50b5dcdc1f8434cc92416093361d18 pd-0.37.4.ebuild 1470
+MD5 caae5f69875d3ce68bffb3aa97338b23 ChangeLog 3410
 MD5 326134cce004edb4ae2b38882c2480f7 files/digest-pd-0.37.4 66
 MD5 3067c169bd141dd0850e7fa88fa72929 files/digest-pd-0.37.1 66
 MD5 8ab2508812cab6433d3dbd1e07bb21de files/pd-0.37.1-exp.patch 1652
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBkyiqArHZZzCEUG0RAt8jAJoCVV4aRdiFRf5v+czMl+fFn8kJJQCfQPeZ
-K9YuhqAydYQj7adoXncPHk8=
-=TGMW
+iD8DBQFBow5JArHZZzCEUG0RAn6AAJ9D3bNk/g3CoJWtcloPzoaNh4D9DwCfbcvI
+H2ukSNkPPUo8EJkLQCpytr4=
+=F+u9
 -----END PGP SIGNATURE-----
