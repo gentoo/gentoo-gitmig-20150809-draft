@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.106 2005/03/02 18:54:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.107 2005/03/06 11:28:39 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -32,7 +32,7 @@
 #						  postinst and can be used to carry additional postinst
 #						  messages
 # K_EXTRAEWARN			- same as K_EXTRAEINFO except ewarn's instead of einfo's
-# K_SYMLINK			- if this is set, then forcably create symlink anyway
+# K_SYMLINK				- if this is set, then forcably create symlink anyway
 #
 # K_DEFCONFIG			- Allow specifying a different defconfig target.  If length zero,
 #					defaults to "defconfig".
@@ -171,12 +171,6 @@ universal_unpack() {
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2> /dev/null
 
-	if [[ -d ${S}/Documentation/DocBook ]]; then
-		cd ${S}/Documentation/DocBook
-		sed -ie "s:db2:docbook2:g" Makefile
-		cd ${OLDPWD}
-	fi
-
 	# fix a problem on ppc where TOUT writes to /usr/src/linux breaking sandbox
 	use ppc && \
 		sed -ie 's|TOUT	:= .tmp_gas_check|TOUT	:= $(T).tmp_gas_check|' \
@@ -194,6 +188,14 @@ unpack_set_extraversion() {
 unpack_fix_install_path() {
 	cd ${S}
 	sed	-i -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' Makefile
+}
+
+unpack_fix_docbook() {
+	if [[ -d ${S}/Documentation/DocBook ]]; then
+		cd ${S}/Documentation/DocBook
+		sed -ie "s:db2:docbook2:g" Makefile
+		cd ${OLDPWD}
+	fi
 }
 
 # Compile Functions
@@ -815,9 +817,8 @@ kernel-2_src_unpack() {
 	[[ -n ${UNIPATCH_LIST} ]] || [[ -n ${UNIPATCH_LIST_DEFAULT} ]] && \
 		unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST}"
 
-	[ -z "${K_NOSETEXTRAVERSION}" ] && \
-		unpack_set_extraversion
-
+	[[ -z ${K_NOSETEXTRAVERSION} ]] && unpack_set_extraversion
+	unpack_fix_docbook
 	unpack_fix_install_path
 
 	kernel_is 2 4 && unpack_2_4
