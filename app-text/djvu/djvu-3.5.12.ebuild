@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.12.ebuild,v 1.6 2004/04/06 02:58:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.12.ebuild,v 1.7 2004/05/02 10:37:10 kugelfang Exp $
 
 inherit nsplugins flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ~amd64"
 IUSE="xml qt"
 
 DEPEND=">=media-libs/jpeg-6b-r2
