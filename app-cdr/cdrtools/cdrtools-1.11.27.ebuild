@@ -1,20 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.23.ebuild,v 1.1 2002/05/21 09:26:42 agenkin Exp
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.27.ebuild,v 1.1 2002/07/22 17:46:03 agenkin Exp $
 
+S=${WORKDIR}/${PN}-1.11
 DESCRIPTION="cdrtools - A set of tools for CDR drives, including cdrecord"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
+SRC_URI="ftp://ftp.fokus.gmd.de:21/pub/unix/cdrecord/alpha/${PN}-1.11a27.tar.bz2"
 
 DEPEND="virtual/glibc"
-
 RDEPEND="${DEPEND}"
 
 LICENSE="GPL-2"
-
 SLOT="0"
-
-SRC_URI="ftp://ftp.fokus.gmd.de:21/pub/unix/cdrecord/alpha/${PN}-1.11a24.tar.bz2"
-S=${WORKDIR}/${PN}-1.11
 
 KEYWORDS="x86 ppc"
 
