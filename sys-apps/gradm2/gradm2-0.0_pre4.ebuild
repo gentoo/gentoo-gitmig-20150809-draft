@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/gradm2-0.0_pre4.ebuild,v 1.1 2003/06/11 21:05:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/gradm2-0.0_pre4.ebuild,v 1.2 2003/06/13 06:55:26 solar Exp $
 
 MY_PV=2.0-pre4
 
@@ -48,7 +48,6 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	
 	mkdir -p ${D}/etc/grsec2
 	doman gradm2.8
 	dodoc acl
@@ -69,11 +68,11 @@ src_install() {
 }
 
 pkg_setup() {
-	if [ -e /usr/src/linux/grsecuirty ]; then
-		[ ! -e /usr/src/linux/grsecuirty/gracl_learn.c ] && {
+	if [ -e /usr/src/linux/grsecurity ]; then
+		[ ! -e /usr/src/linux/grsecurity/gracl_learn.c ] && {
 			ewarn "gradm2 was designed to be used with grsecurity2 but it looks like your using grsecurity1"
 			ewarn "we hope you know what your doing"
-			einfo "(hint try emerge sys-apps/gradm) If you need support for grsecuirty 1.x"
+			einfo "(hint try emerge sys-apps/gradm) If you need support for grsecurity 1.x"
 			echo
 		}
 	else
@@ -83,7 +82,7 @@ pkg_setup() {
 
 pkg_postinst() {
 	[ ! -d /proc/sys/kernel/grsecurity ] && ewarn "This kernel does not seem to be a grsec enabled kernel (or we are in chroot install?)"
-	if [ ! -f /usr/src/linux/grsecuirty/gracl_learn.c ]; then
+	if [ ! -f /usr/src/linux/grsecurity/gracl_learn.c ]; then
 		ewarn "It does not seem that your are running a grsec2 enabled kernel"
 		einfo "(hint >=hardened-sources-2.4.20-r3) was the first kernel to include support"
 	else

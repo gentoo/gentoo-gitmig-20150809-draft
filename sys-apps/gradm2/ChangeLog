@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/gradm2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/ChangeLog,v 1.1 2003/06/11 21:05:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/ChangeLog,v 1.2 2003/06/13 06:55:26 solar Exp $
 
 *gradm2-0.0_pre4 (11 Jun 2003)
 
-  11 Jun 2003; Ned Ludd solar@linbsd.net gradm2-0.0_pre4.ebuild:
+  13 Jun 2003; Ned Ludd <solar@gentoo.org> gradm2-0.0_pre4.ebuild:
+  fixed typos in ebuild
+
+  11 Jun 2003; Ned Ludd <solar@gentoo.org> gradm2-0.0_pre4.ebuild:
   Initial import of gradm2 to gentoo
 
