@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.3 2002/08/27 01:06:19 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.4 2002/08/27 01:09:25 woodchip Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -211,7 +211,7 @@ pkg_postinst() {
 	einfo " \"ebuild /var/db/pkg/dev-php/${PF}/${PF}.ebuild config\""
 	einfo "2. Edit /etc/conf.d/apache and add \"-D PHP4\""
 	einfo
-	einfo "That will add the php mime types in your apache.conf file"
+	einfo "That will include the php mime types in your configuration"
 	einfo "automagically and setup Apache to load php when it starts."
 	einfo
 	einfo "Please remeber:"
