@@ -1,6 +1,6 @@
 MD5 b964486f21958acc1365df83fbc30315 cisco-vpnclient-3des-4.0.3b-r4.ebuild 2152
 MD5 b12076cb9836d071d71d240c851bb8d5 ChangeLog 3427
-MD5 42c7e98da88ca3885eccfb4870884682 cisco-vpnclient-3des-4.0.1a-r1.ebuild 1762
+MD5 6576404e9d70a78da3eda9760a3f5168 cisco-vpnclient-3des-4.0.1a-r1.ebuild 1770
 MD5 ceed2261b61bf3fd7ae45aed33117100 metadata.xml 460
 MD5 0181d77c1dd8b6929b7dd81fb2db45f1 files/atheros.patch 478
 MD5 968b0edd0fc5b128c1c78f03d0b49336 files/4.0.1a-linux26-gentoo.patch 686
