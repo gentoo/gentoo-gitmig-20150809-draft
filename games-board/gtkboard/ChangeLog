@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gtkboard
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/ChangeLog,v 1.3 2004/01/05 04:20:15 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/ChangeLog,v 1.4 2004/02/01 10:07:35 mr_bones_ Exp $
+
+  01 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  gtkboard-0.11_pre0.ebuild:
+  add sdl-mixer depend (bug 39984)
 
 *gtkboard-0.11_pre0 (04 Jan 2004)
 
