@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 76d12e7968ef82282acd6f013ee3f845 ChangeLog 8201
-MD5 6645905fc3f449f93565a4b8c947b4fb nfs-utils-1.0.6-r5.ebuild 2798
-MD5 4f4b6a8a798a0d3944bff7d29eca3734 nfs-utils-1.0.6-r4.ebuild 2675
+MD5 fe20c862425d6b79e9b2e1dbeaed6cee ChangeLog 8317
 MD5 9cee4adcef8a47ea4ee35090f7f89b0a metadata.xml 225
-MD5 b8368dca9c921631ed7019c5c08c3a11 files/nfsmount 1163
-MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r4 67
+MD5 038a2973748342f5bd4cfdaff04cfb1b nfs-utils-1.0.6-r5.ebuild 2782
+MD5 4f4b6a8a798a0d3944bff7d29eca3734 nfs-utils-1.0.6-r4.ebuild 2675
+MD5 28aff43d6059a5645973388f8e4b9d5f files/nfs 5297
 MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r5 67
 MD5 a02eed87e5d581e56feb0f6dfd18e6df files/exports 66
-MD5 3c693e012dcb68827b8f82cc98fa129b files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
 MD5 a23ae1dac684526aeaa679372648f9bf files/nfs.confd 616
-MD5 28aff43d6059a5645973388f8e4b9d5f files/nfs 5297
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBsyYyugEuf3OQ0akRArbzAKCWuqpfYEAlGkj7y+w18Vl9rNh5lACfW5fi
-IhobdsMPoZpu/WKDceeFluQ=
-=9N1M
------END PGP SIGNATURE-----
+MD5 b8368dca9c921631ed7019c5c08c3a11 files/nfsmount 1163
+MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r4 67
+MD5 3c693e012dcb68827b8f82cc98fa129b files/nfs-utils-0.3.3-rquotad-overflow.patch 1243

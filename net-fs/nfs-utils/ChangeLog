@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.53 2004/12/05 15:15:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.54 2004/12/05 18:25:07 weeve Exp $
+
+  05 Dec 2004; Jason Wever <weeve@gentoo.org> nfs-utils-1.0.6-r5.ebuild:
+  Stable on sparc wrt security bug #72113.
 
   05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   nfs-utils-1.0.6-r5.ebuild:
