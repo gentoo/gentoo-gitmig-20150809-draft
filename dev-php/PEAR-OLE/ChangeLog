@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-OLE
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/ChangeLog,v 1.6 2004/08/03 17:08:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/ChangeLog,v 1.7 2004/10/23 14:44:08 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> PEAR-OLE-0.5.ebuild:
+  Stable on sparc.
 
   03 Aug 2004; <agriffis@gentoo.org> PEAR-OLE-0.5.ebuild:
   add ia64 keywords #56295
