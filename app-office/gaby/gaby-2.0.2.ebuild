@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Craig Joly <joly@ee.ualberta.ca>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2.ebuild,v 1.1 2001/08/06 06:15:08 csjoly Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2.ebuild,v 1.2 2001/08/21 22:41:34 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small personal databases manager for Linux"
@@ -10,7 +10,7 @@ HOMEPAGE="http://gaby.sourceforge.net"
 
 DEPEND=">=x11-libs/gtk+-1.2.8
 		virtual/python
-		>=gnome-base/gdk-pixbuf-0.7.0
+		>=media-libs/gdk-pixbuf-0.7.0
 		gnome-base/libxml
 		dev-python/gnome-python
 		gnome-base/libglade
@@ -19,7 +19,7 @@ DEPEND=">=x11-libs/gtk+-1.2.8
 		nls? ( sys-devel/gettext )"
 
 # Image fields require ( >= (media-libs/imlib-1.9.3 ||
-#							gnome-base/gdk-pixbuf-0.7.0 ))
+#			media-libs/gdk-pixbuf-0.7.0 ))
 # Sound fields require ( >=media-sound/esound-0.2.8 )
 # form layout requires ( gnome-base/libglade )
 
