@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.2_pre0.ebuild,v 1.2 2004/12/11 07:30:45 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.2_pre0.ebuild,v 1.3 2004/12/11 09:29:13 obz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -82,20 +82,20 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libgnomeprintui-2.8.1
 
 	>=gnome-extra/gnome-utils-2.8.1
-	>=gnome-extra/gnome-games-2.8.1-r1
+	>=gnome-extra/gnome-games-2.8.2
 
-	>=gnome-base/libgtop-2.8.1
+	>=gnome-base/libgtop-2.8.2
 	>=gnome-extra/gnome-system-monitor-2.8.1
 
 	>=gnome-base/librsvg-2.8.1
 	>=x11-libs/libwnck-2.8.1
-	>=x11-wm/metacity-2.8.6-r1
+	>=x11-wm/metacity-2.8.8
 
 	>=x11-libs/startup-notification-0.7
 
-	>=gnome-extra/yelp-2.6.4
+	>=gnome-extra/yelp-2.6.5
 	>=x11-libs/vte-0.11.11-r2
-	>=gnome-extra/zenity-2.8.1
+	>=gnome-extra/zenity-2.8.2
 	>=net-analyzer/gnome-netstatus-2.8
 
 	cdr? ( >=gnome-extra/nautilus-cd-burner-2.8.5 )
@@ -109,7 +109,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gal-2.2.3
 	>=gnome-extra/libgtkhtml-3.2.3
 
-	>=net-misc/vino-2.8.0.1
+	>=net-misc/vino-2.8.1
 
 	>=app-admin/gnome-system-tools-1.0.2
 
@@ -119,7 +119,7 @@ RDEPEND="!gnome-base/gnome-core
 		>=gnome-extra/at-spi-1.6.1
 		>=app-accessibility/gnome-mag-0.11.11
 		>=app-accessibility/gok-0.11.16
-		>=app-accessibility/gnopernicus-0.9.17 )"
+		>=app-accessibility/gnopernicus-0.9.18 )"
 
 # freetts not stable yet
 #		>=app-accessibility/gnome-speech-0.3.5
