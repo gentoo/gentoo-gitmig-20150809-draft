@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/whois
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.23 2003/08/11 06:38:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.24 2003/08/11 20:15:46 solar Exp $
+
+*whois-4.6.6-r2 (11 Aug 2003)
+
+  11 Aug 2003; <solar@gentoo.org> whois-4.6.6-r1.ebuild,
+  whois-4.6.6-r2.ebuild, files/whois-4.6.6-gentoo-security-2.patch,
+  files/whois-4.6.6-gentoo-security.patch:
+  whois does not check the return values of malloc and realloc to ensure that
+  they succeeded which can lead to unexpted results including segfaults. So I
+  merged the last gentoo-security.patch with Matt Kraai's idea from debian bug
+  report - #135822 to form the gentoo-security-2.patch
 
 *whois-4.6.6-r1 (11 Aug 2003)
 
