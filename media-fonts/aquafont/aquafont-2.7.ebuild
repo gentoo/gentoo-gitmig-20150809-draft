@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/aquafont-2.7.ebuild,v 1.6 2004/06/24 22:26:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/aquafont-2.7.ebuild,v 1.7 2004/08/03 16:58:40 usata Exp $
 
 IUSE=""
 MY_P="${PN/font/}${PV/\./_}"
 
-DESCRIPTION="Very pretty truetype font"
+DESCRIPTION="Handwritten Japanese fixed-width TrueType font"
 HOMEPAGE="http://aquablue.milkcafe.to/"
 SRC_URI="http://aquablue.milkcafe.to/fnt/${MY_P}.lzh"
 
