@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.13 2005/01/15 14:52:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.14 2005/01/15 16:07:21 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -10,7 +10,7 @@
 inherit kde
 ECLASS=kde-meta
 INHERITED="$INHERITED $ECLASS"
-IUSE="$IUSE kdexdeltas" # usepackagedmakefiles 
+IUSE="$IUSE kdexdeltas" 
 
 # only broken-up ebuilds can use this eclass
 if [ -z "$KMNAME" ]; then
@@ -106,24 +106,8 @@ DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
 # END adapted from kde-dist.eclass
 
 # Add a blocking dep on the package we're derived from
-# This is ugly, but I don't know how to get at the category of an ebuild
-for x in $(deprange-list $SLOT.0_alpha1 $SLOT.10 $(get-parent-package $CATEGORY/$PN)); do
-	DEPEND="$DEPEND !$x"
-	RDEPEND="$RDEPEND !$x"
-done
-
-# Don't support prepackaged Makefiles with alpha/beta/rc version.
-# DISABLED - SEMIBROKEN --danarmak
-# case $myPV in
-# 	3.3.0 | 3.3.1 | 3.3.2)
-# 		# prepackaged makefiles for broken-up ebuilds. Ebuild can define KM_MAKEFILESREV to be >=1 to
-# 		# use a newer tarball without increasing the ebuild revision.
-# 		MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
-# 		SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
-# 		;;
-# 		
-# 	*) ;;
-# esac
+DEPEND="$DEPEND !=$(get-parent-package $CATEGORY/$PN)-$SLOT*"
+RDEPEND="$RDEPEND !=$(get-parent-package $CATEGORY/$PN)-$SLOT*"
 
 
 # TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
@@ -347,43 +331,20 @@ function kde-meta_src_unpack() {
 		if [ "$KMNAME" == "kdebase" ]; then
 			sed -i -e s:"bin_SCRIPTS = startkde"::g ${S}/Makefile.am.in
 		fi
-		
+
 		# for ebuilds with extended src_unpack
 		cd $S
-	
+
 	;;
 	makefiles)
 
-		# allow usage of precreated makefiles, and/or packaging of the makefiles we create.
-		# DISABLED - SEMIBROKEN --danarmak
-# 		if useq usepackagedmakefiles; then
-# 			echo ">>> Using pregenerated makefile templates"
-# 			cd $WORKDIR
-# 			tar -xjf $DISTDIR/$MAKEFILESTARBALL
-# 			cd $S
-# 			echo ">>> Creating configure script"
-# 			# If you can, clean this up
-# 			touch aclocal.m4
-# 			touch config.h.in
-# 			touch `find . -name Makefile.in -print`
-# 			make -f admin/Makefile.common configure || die "Failed to create configure script"
-# 		else
-			# Create Makefile.am files
-			create_fullpaths
-			change_makefiles $S "false"
-# 			if [ -n "$KM_PACKAGEMAKEFILES" ]; then
-# 				make -f admin/Makefile.common || die "Failed to create makefile templates"
-# 				cd $WORKDIR
-# 				# skipped:  $P/configure.in.in* $P/acinclude.m4 $P/aclocal.m4 $P/configure 
-# 				/bin/tar -cjpf $T/$MAKEFILESTARBALL $P/stamp-h.in $P/configure.in $P/configure.files \
-# 					`find $P -name Makefile\*` $P/config.h.in $P/subdirs
-# 				echo ">>> Saved generated makefile templates in $T/$MAKEFILESTARBALL"
-# 			fi
-# 		fi
+		# Create Makefile.am files
+		create_fullpaths
+		change_makefiles $S "false"
 	
 		# for ebuilds with extended src_unpack
 		cd $S
-	
+
 	;;
 	esac
 	done
