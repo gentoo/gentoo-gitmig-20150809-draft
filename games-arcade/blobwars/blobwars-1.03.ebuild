@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-0.99.ebuild,v 1.3 2005/01/21 07:17:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.03.ebuild,v 1.1 2005/03/12 22:48:29 mr_bones_ Exp $
 
 inherit games
 
 DESCRIPTION="Platform game about a blob and his quest to rescue MIAs from an alien invader"
 HOMEPAGE="http://www.parallelrealities.co.uk/blobWars.php"
 # download page has a lame PHP thing.
-SRC_URI="mirror://gentoo/${P}-1.tar.gz"
+SRC_URI="mirror://gentoo/${P}-2.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ppc ~amd64"
+KEYWORDS="~alpha ~amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2.5
@@ -41,9 +41,9 @@ src_install() {
 		install || die "make install failed"
 	# now make the docs Gentoo friendly.
 	dohtml "${D}/usr/share/doc/${PF}/"*
-	dodoc "${D}/usr/share/doc/${PF}/"{CHANGES,PORTING,README}
+	dodoc "${D}/usr/share/doc/${PF}/"{CHANGES,HACKING,PORTING,README}
 	rm -f "${D}/usr/share/doc/${PF}/"*.{png,gif,html} \
-		"${D}/usr/share/doc/${PF}/"{CHANGES,LICENSE,PORTING,README}
+		"${D}/usr/share/doc/${PF}/"{CHANGES,HACKING,LICENSE,PORTING,README}
 	prepgamesdirs
 }
 
@@ -51,7 +51,7 @@ pkg_postinst() {
 	games_pkg_postinst
 
 	echo
-	ewarn "${PN} ${PV} is not save-game compatible with previous versions."
+	ewarn "${PN} ${PV} may not be save-game compatible with previous versions."
 	einfo "Please remove the directory ~/.parallelrealities/blobwars before playing if it exists."
 	echo
 	einfo "If you have older save files and you wish to continue those games,"
