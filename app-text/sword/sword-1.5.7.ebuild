@@ -1,25 +1,28 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.5.99.ebuild,v 1.2 2004/03/12 09:18:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.7.ebuild,v 1.1 2004/04/06 02:45:23 squinky86 Exp $
 
 DESCRIPTION="library for bible reading software"
 HOMEPAGE="http://www.crosswire.org/sword/"
-SRC_URI="mirror://sourceforge/bibletime/${P}.tar.gz"
+SRC_URI="ftp://ftp.crosswire.org/pub/sword/source/v1.5/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
+IUSE="icu curl"
 DEPEND="virtual/glibc
-	sys-libs/zlib"
+	sys-libs/zlib
+	curl? ( >=net-misc/curl-7.9 )
+	icu? ( dev-libs/icu )"
 
 src_compile() {
-	econf
-	emake || die "parallel make failed"
+	econf --without-clucene --without-lucene `use_with icu` `use_with curl` || die "configure failed"
+	emake || die "compile failed failed"
 }
 
 src_install() {
-	einstall
+	einstall || die "install failed"
 
 	dodoc AUTHORS CODINGSTYLE INSTALL ChangeLog README
 	cp -R samples examples ${D}/usr/share/doc/${PF}
