@@ -211,3 +211,6 @@ gnome-apps/gnapster
 # Needs newer evo
 >=gnome-extra/gal-0.14
 
+# Waiting for working mozilla 0.9.5
+>=gnome-base/nautilus-1.0.5
+>=new-www/galeon-0.12.4
