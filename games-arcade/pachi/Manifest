@@ -1,5 +1,5 @@
 MD5 3f11aaf297b2fe67404a96cda13e9bfe metadata.xml 251
-MD5 e8cdf839668041daad4594dc946f5e74 ChangeLog 764
-MD5 267e6db7aff06038c2eaa1d74a3a76e5 pachi-1.0.ebuild 1062
+MD5 68f676307642454ad114e1ec289b6efd pachi-1.0.ebuild 1068
+MD5 bb269f77352f041bf8b86b83a73c6c7c ChangeLog 853
 MD5 176cc6f1d7a0b0d42d0318a9109a7a60 files/1.0-autotools.patch 1312
 MD5 dcf170bfb47657827c5dd31850391719 files/digest-pachi-1.0 63
