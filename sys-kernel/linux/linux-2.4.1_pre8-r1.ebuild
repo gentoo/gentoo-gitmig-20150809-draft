@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.1_pre8-r1.ebuild,v 1.1 2001/01/21 04:34:52 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.1_pre8-r1.ebuild,v 1.2 2001/01/22 05:16:24 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.1-pre8
@@ -94,8 +94,7 @@ src_compile() {
 
 src_install() {
 
-	cd ${S}/extras/LVM/0.9.1_beta2
-	try make install prefix=${D} MAN8DIR=${D}/usr/man/man8 LIBDIR=${D}/lib
+
 	#clean up object files and original executables to reduce size of linux-sources
 	try make clean
 	dodir /usr/lib
