@@ -1,8 +1,16 @@
 # ChangeLog for gnome-base/libgnomecanvas
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.21 2003/04/09 03:07:48 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.22 2003/07/01 20:27:13 gmsoft Exp $
+
+*libgnomecanvas-2.2.1 (05 May 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> libgnomecanvas-2.2.1.ebuild :
+  Added ~hppa to KEYWORDS.
 
 *libgnomecanvas-2.2.0.2 (28 Feb 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> libgnomecanvas-2.2.0.2.ebuild :
+  Added hppa to KEYWORDS.
 
   08 Apr 2003; Todd Sunderlin <todd@gentoo.org> libgnomecanvas-2.2.0.2.ebuild:
   Marked stable for sparc.
