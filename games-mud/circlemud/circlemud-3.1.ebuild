@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/circlemud-3.1.ebuild,v 1.4 2004/04/14 09:09:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/circlemud-3.1.ebuild,v 1.5 2004/05/04 00:23:57 mr_bones_ Exp $
 
 inherit games
 
@@ -11,31 +11,38 @@ SRC_URI="ftp://ftp.circlemud.org/pub/CircleMUD/${PV/.*}.x/circle-${PV}.tar.bz2"
 LICENSE="circlemud"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 
 DEPEND="virtual/glibc
 	dev-libs/openssl"
 
-S=${WORKDIR}/circle-${PV}
+S="${WORKDIR}/circle-${PV}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/src
 	touch .accepted
-	sed -i 's:^read.*::' licheck
+	sed -i \
+		-e 's:^read.*::' licheck || die
 
 	# make circlemud fit into Gentoo nicely
-	sed -i "s:\"lib\":\"${GAMES_DATADIR}/${PN}\":g" config.c || die
-	sed -i "s:\(LOGNAME = \)NULL:\1\"${GAMES_LOGDIR}/${PN}.log\":g" config.c || die
-	sed -i "s:etc/:${GAMES_SYSCONFDIR}/${PN}/:g" db.h || die
+	sed -i \
+		-e "s:\"lib\":\"${GAMES_DATADIR}/${PN}\":g" config.c || die
+	sed -i \
+		-e "s:\(LOGNAME = \)NULL:\1\"${GAMES_LOGDIR}/${PN}.log\":g" config.c \
+			|| die
+	sed -i \
+		-e "s:etc/:${GAMES_SYSCONFDIR}/${PN}/:g" db.h || die
 
 	# now lets rename binaries (too many are very generic)
-	sed -i "s:\.\./bin/autowiz:${PN}-autowiz:" limits.c || die
+	sed -i \
+		-e "s:\.\./bin/autowiz:${PN}-autowiz:" limits.c || die
 }
 
 src_compile() {
 	egamesconf || die
 	cd src
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
