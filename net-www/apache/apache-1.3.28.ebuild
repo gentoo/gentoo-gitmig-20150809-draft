@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.28.ebuild,v 1.2 2003/07/24 23:15:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.28.ebuild,v 1.3 2003/07/27 00:20:00 woodchip Exp $
 
 #IUSE="ipv6 pam"
 IUSE="pam"
@@ -10,7 +10,7 @@ mod_ssl_ver=2.8.15
 S=${WORKDIR}/${PN}_${PV}
 DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~arm"
+KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~arm"
 SRC_URI="http://httpd.apache.org/dist/httpd/apache_${PV}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2
 	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}-${PV}.tar.gz"
@@ -30,6 +30,12 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 	patch -p1 <${WORKDIR}/${P}-gentoo.diff || die
+
+	#Obsolete 'head -1' and 'tail -1' calls.
+	perl -pi -e 's|tail -1|tail -n 1|;' \
+		src/Configure src/helpers/getuid.sh
+	perl -pi -e 's|head -1|head -n 1|;' \
+		src/Configure src/helpers/buildinfo.sh src/helpers/fmn.sh
 
 	#Make apachectl read /etc/conf.d/apache
 	patch -p1 <${FILESDIR}/apache-1.3.27-apachectl.patch || die
