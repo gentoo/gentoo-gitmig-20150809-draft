@@ -1,5 +1,5 @@
-MD5 5c459c51469f320b93715fed5b2f9574 ChangeLog 2127
 MD5 55830788c3e20ebe7e92d6114c8b8ed9 gkrellm-mailwatch-0.7.2.ebuild 728
-MD5 0185a789b04c6c2342b9e7c60ceebebd gkrellm-mailwatch-2.4.2.ebuild 679
+MD5 4402fa60c95e427a8a2e357eb261c324 ChangeLog 2229
+MD5 27e99796956b656468a0a95679340ef1 gkrellm-mailwatch-2.4.2.ebuild 675
 MD5 2682942f3d6fdc5a9af73fdf2102ec9f files/digest-gkrellm-mailwatch-0.7.2 66
 MD5 336ae67c677d06e8c118ed8e7b70482a files/digest-gkrellm-mailwatch-2.4.2 74
