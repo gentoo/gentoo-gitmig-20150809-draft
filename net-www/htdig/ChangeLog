@@ -1,6 +1,9 @@
 # ChangeLog for net-www/htdig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/ChangeLog,v 1.15 2003/03/29 19:36:41 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/ChangeLog,v 1.16 2003/11/16 18:14:33 brad_mssw Exp $
+
+  16 Nov 2003; Brad House <brad_mssw@gentoo.org> htdig-3.1.6-r4.ebuild:
+  mark stable on amd64
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
