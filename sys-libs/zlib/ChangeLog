@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.31 2004/08/26 14:56:35 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.32 2004/08/26 18:47:01 gustavoz Exp $
+
+  26 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> zlib-1.2.1-r3.ebuild:
+  Stable on sparc wrt #61749
 
 *zlib-1.2.1-r3 (26 Aug 2004)
 
