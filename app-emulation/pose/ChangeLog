@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/pose
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/ChangeLog,v 1.8 2003/10/01 11:41:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/ChangeLog,v 1.9 2004/01/27 08:49:05 george Exp $
+
+*pose-3.5-r3 (26 Jan 2004)
+
+  26 Jan 2004; George Shapovalov <george@gentoo.org> pose-3.5-r3.ebuild, files/gcc-3.3_fix.diff.bz2 :
+  fixes for fltk and gcc-3.3 problems (#5219 mostly, see also ##26265 and 30210)
+  big thanks to Tom Collins <ltskinol@excite.com> for suggesting the fix.
 
 *pose-3.5-r2 (07 Aug 2003)
 
