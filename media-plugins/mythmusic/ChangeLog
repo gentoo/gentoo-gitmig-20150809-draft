@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.14 2004/02/03 14:14:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.15 2004/02/06 14:41:13 max Exp $
+
+  06 Feb 2004; Max Kalika <max@gentoo.org> mythmusic-0.14.ebuild:
+  Ditch the postinst() message and don't attempt to install non-existant db
+  files. Conditionally replace the pentium4 flags based on the gcc version.
 
 *mythmusic-0.14 (03 Feb 2004)
 
