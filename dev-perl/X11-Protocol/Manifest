@@ -1,3 +1,6 @@
 MD5 5347595bcbabda730c87e3d5f9412688 X11-Protocol-0.51.ebuild 557
+MD5 62fbbe56766588edba149bfded564b59 X11-Protocol-0.51-r1.ebuild 644
 MD5 50aac1893ed3333cb29ba3afcd209cad ChangeLog 450
+MD5 f24e90787470f41e63101e1a77d646b6 files/digest-X11-Protocol-0.51-r1 68
 MD5 f24e90787470f41e63101e1a77d646b6 files/digest-X11-Protocol-0.51 68
+MD5 f76aed1895831b1029b2bbaff495eee6 files/X11-Protocol-0.51.s2.patch 5688
