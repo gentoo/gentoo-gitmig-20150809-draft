@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.3.0.ebuild,v 1.2 2003/11/10 21:54:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.3.0.ebuild,v 1.3 2003/11/14 16:16:25 brad_mssw Exp $
 
 DESCRIPTION="A Remote Desktop Protocol Client"
 HOMEPAGE="http://rdesktop.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc amd64"
 IUSE="ssl debug"
 
 DEPEND="x11-base/xfree
