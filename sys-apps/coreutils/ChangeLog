@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.123 2005/03/15 07:51:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.124 2005/04/02 04:31:45 vapier Exp $
+
+*coreutils-5.2.1-r6 (02 Apr 2005)
+
+  02 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +coreutils-5.2.1-r6.ebuild:
+  Update i18n patch to the redhat version #87429 and include the tty utf8 fix
+  #77633.
 
 *coreutils-5.2.1-r5 (14 Mar 2005)
 
