@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.17 2004/07/26 03:49:58 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.18 2004/08/15 19:09:54 latexer Exp $
+
+*tor-0.0.7.3 (15 Aug 2004)
+
+  15 Aug 2004; Peter Johanson <latexer@gentoo.org> +tor-0.0.7.3.ebuild:
+  Bump. Only needed for servers.
 
   25 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org>
   Fixed Manifest.
