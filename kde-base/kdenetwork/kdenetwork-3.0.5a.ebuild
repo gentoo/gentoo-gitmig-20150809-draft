@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.0.5a.ebuild,v 1.2 2003/01/07 00:08:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.0.5a.ebuild,v 1.3 2003/01/11 11:49:46 hannes Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - network apps: kmail..."
@@ -10,7 +10,6 @@ newdepend "~kde-base/kdebase-${PV}"
 src_unpack() {
     unpack ${P}.tar.bz2
 	cd ${S}
-    patch -p1 < ${DISTDIR}/post-${PV}-${PN}-lanbrowsing.diff
     kde_sandbox_patch ${S}/kppp
 
 }
