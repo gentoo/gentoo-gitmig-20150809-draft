@@ -1,17 +1,13 @@
-Files libpst_0.4.1.orig/debug.o and libpst_0.4.1/debug.o differ
-Files libpst_0.4.1.orig/getidblock and libpst_0.4.1/getidblock differ
-Files libpst_0.4.1.orig/libpst.o and libpst_0.4.1/libpst.o differ
-Files libpst_0.4.1.orig/libstrfunc.o and libpst_0.4.1/libstrfunc.o differ
 diff -urN libpst_0.4.1.orig/Makefile libpst_0.4.1/Makefile
---- libpst_0.4.1.orig/Makefile	2004-12-04 04:39:40.815705272 -0500
-+++ libpst_0.4.1/Makefile	2004-12-04 04:45:40.340049264 -0500
+--- libpst_0.4.1.orig/Makefile	2004-12-14 23:22:39.649274808 -0500
++++ libpst_0.4.1/Makefile	2004-12-14 23:24:22.831588712 -0500
 @@ -1,27 +1,41 @@
 +CC = gcc
 +INSTALL = install
 +MYFLAGS = -Wall
 +PREFIX = /usr
 +BINDIR = $(PREFIX)/bin
-+INCLUDEDIR = $(PREFIX)/inclue
++INCLUDEDIR = $(PREFIX)/include
 +LIBDIR = $(PREFIX)/lib
 +
  all: readpst getidblock
@@ -53,10 +49,9 @@ diff -urN libpst_0.4.1.orig/Makefile libpst_0.4.1/Makefile
 +	$(INSTALL) readpst getidblock $(DESTDIR)/$(BINDIR)
 +	$(INSTALL) -m0644 libpst.h $(DESTDIR)/$(INCLUDEDIR)
 +	$(INSTALL) -m0644 libpst.o $(DESTDIR)/$(LIBDIR)
-Files libpst_0.4.1.orig/readpst and libpst_0.4.1/readpst differ
 diff -urN libpst_0.4.1.orig/readpst.c libpst_0.4.1/readpst.c
---- libpst_0.4.1.orig/readpst.c	2004-12-04 04:39:41.086664080 -0500
-+++ libpst_0.4.1/readpst.c	2004-12-04 04:39:40.755714392 -0500
+--- libpst_0.4.1.orig/readpst.c	2004-12-14 23:22:39.655273896 -0500
++++ libpst_0.4.1/readpst.c	2004-12-14 23:24:06.430082120 -0500
 @@ -718,6 +718,7 @@
    //return that value
    char *dir, *out_name, *index;
@@ -65,4 +60,3 @@ diff -urN libpst_0.4.1.orig/readpst.c libpst_0.4.1/readpst.c
    if (kmail_chdir != NULL && chdir(kmail_chdir)) {
      x = errno;
      DIE(("mk_kmail_dir: Cannot change to directory %s: %s\n", dir, strerror(x)));
-Files libpst_0.4.1.orig/timeconv.o and libpst_0.4.1/timeconv.o differ
