@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.129 2005/03/18 02:28:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.130 2005/03/18 03:01:04 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -126,7 +126,7 @@ if [[ ${ETYPE} == "gcc-library" ]] ; then
 	IUSE="nls build uclibc"
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
-	IUSE="static nls bootstrap build multislot multilib gcj gtk fortran nocxx objc hardened uclibc n32 n64 ip28"
+	IUSE="static nls bootstrap build multislot multilib gcj gtk fortran nocxx objc hardened uclibc n32 n64 ip28 altivec"
 	[[ -n ${HTB_VER} ]] && IUSE="${IUSE} boundschecking"
 	# Support upgrade paths here or people get pissed
 	if use multislot ; then
@@ -509,7 +509,7 @@ create_vanilla_specs_file() {
 
 create_hardened_specs_file() {
 	pushd ${WORKDIR}/build/gcc > /dev/null
-	if use !hardened ; then
+	if ! use hardened ; then
 		# if not using hardened, then we need to move xgcc out of the way
 		# and recompile it
 		cp Makefile Makefile.orig
@@ -1377,7 +1377,7 @@ gcc-compiler_src_install() {
 		if use hardened ; then
 			create_gcc_env_entry vanilla
 		fi
-		use !hardened && hardened_gcc_works && create_gcc_env_entry hardened
+		! use hardened && hardened_gcc_works && create_gcc_env_entry hardened
 		if hardened_gcc_works || hardened_gcc_works pie ; then
 			create_gcc_env_entry hardenednossp
 		fi
@@ -1946,7 +1946,7 @@ is_uclibc() {
 is_cxx() {
 	gcc-lang-supported 'c++' || return 1
 	use build && return 1
-	use ! nocxx
+	! use nocxx
 }
 
 is_f77() {
