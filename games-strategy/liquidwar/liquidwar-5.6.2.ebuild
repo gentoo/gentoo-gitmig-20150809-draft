@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.2.ebuild,v 1.1 2004/04/08 23:27:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.2.ebuild,v 1.2 2004/04/09 14:28:06 dholm Exp $
 
 inherit flag-o-matic games
 
@@ -8,7 +8,7 @@ DESCRIPTION="unique multiplayer wargame"
 HOMEPAGE="http://www.ufoot.org/liquidwar/"
 SRC_URI="http://liquidwar.sunsite.dk/archive/${P}.tar.gz"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="nls"
