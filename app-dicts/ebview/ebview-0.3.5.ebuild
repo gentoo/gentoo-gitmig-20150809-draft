@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ebview-0.3.5.ebuild,v 1.1 2004/03/04 18:52:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ebview-0.3.5.ebuild,v 1.2 2004/04/01 18:07:25 usata Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -10,7 +12,7 @@ SRC_URI="mirror://sourceforge/ebview/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.57"
@@ -23,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-eb4-gentoo.diff
+	epatch ${FILESDIR}/${PN}-gtk24.diff
 	rm -rf autom4te.cache
 
 	if has_version '>=sys-devel/gettext-0.12' ; then

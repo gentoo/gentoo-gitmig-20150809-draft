@@ -1,0 +1,26 @@
+diff -urN ebview-0.3.5/src/defs.h ebview-0.3.5_gtk240/src/defs.h
+--- ebview-0.3.5/src/defs.h	2004-02-15 22:59:41.000000000 +0900
++++ ebview-0.3.5_gtk240/src/defs.h	2004-04-02 02:04:04.868289632 +0900
+@@ -19,7 +19,9 @@
+ #define __DEFS_H__
+ 
+ /* Disable old GTK+ functions */
++#if (GTK_MAJOR_VERSION == 2) && (GTK_MINOR_VERSION < 3)
+ #define GTK_DISABLE_DEPRECATED 1
++#endif
+ 
+ #include "../config.h"
+ #include <sys/stat.h>
+diff -urN ebview-0.3.5/src/ebview.c ebview-0.3.5_gtk240/src/ebview.c
+--- ebview-0.3.5/src/ebview.c	2004-02-22 12:46:29.000000000 +0900
++++ ebview-0.3.5_gtk240/src/ebview.c	2004-04-02 02:03:39.758106960 +0900
+@@ -15,7 +15,9 @@
+  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ */
+ 
++#if (GTK_MAJOR_VERSION == 2) && (GTK_MINOR_VERSION < 3)
+ #define GTK_DISABLE_DEPRECATED 1
++#endif
+ 
+ #define _GLOBAL
+ #include <signal.h>
