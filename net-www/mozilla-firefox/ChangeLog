@@ -1,6 +1,14 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.66 2004/09/19 12:36:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.67 2004/09/28 21:40:55 agriffis Exp $
+
+*mozilla-firefox-1.0_pre-r1 (28 Sep 2004)
+
+  28 Sep 2004; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-firefox-1.0_pre-r1.ebuild:
+  Bump revision to carry out mozilla.eclass change: don't use typeaheadfind on
+  1.0PR #65623. Also depend on mozilla-launcher-1.20 which appropriately deletes
+  compreg.dat when firefox is updated
 
   19 Sep 2004; <kloeri@gentoo.org> mozilla-firefox-1.0_pre.ebuild:
   Stable on alpha, bug 63996.
