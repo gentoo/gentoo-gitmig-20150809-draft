@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-vorbis
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.24 2004/07/04 13:17:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.25 2004/07/19 04:10:44 leonardop Exp $
+
+  18 Jul 2004; L. Boshell <leonardop@gentoo.org>
+  gst-plugins-vorbis-0.8.2.ebuild, files/gst-plugins-vorbis-gcc2_fix.patch:
+  Patch to fix compilation under gcc-2.
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   gst-plugins-vorbis-0.8.1.ebuild:
