@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.3.ebuild,v 1.1 2003/06/03 10:48:39 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.3.ebuild,v 1.2 2003/06/05 01:26:46 robh Exp $
 
 MY_P="AudioCompress-${PV}"
 
-DESCRIPTION="AudioCompress is (essentially) a very gentle, 1-band dynamic range compressor intended to keep audio output at a consistent volume without introducing any audible artifacts"
+DESCRIPTION="AudioCompress is (essentially) a very gentle, 1-band dynamic range compressor intended to keep audio output at a consistent volume without introducing any audible artifacts."
 SRC_URI="http://trikuare.cx/code/${MY_P}.tar.gz"
 HOMEPAGE="http://trikuare.cx/code/AudioCompress.html"
 IUSE="xmms"
