@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b31a3375ad4a1e95ef9d8fa01ae5cd8a codeine-1.0_beta1.ebuild 748
-MD5 194354179c380c5dab0498d715fae079 metadata.xml 230
-MD5 72eaa5b3753bed8bd0715f4244a04dfa ChangeLog 465
+MD5 ed3c28a268cc4c21f093c60c8a2aeb40 ChangeLog 558
+MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 4b415d0e0a2bd3e13d00a5890479afae files/digest-codeine-1.0_beta1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrKDiI1lqEGTUzyQRApA5AKDYfmivOWLM3OhgNan7iWTGKNShgACgtw35
+5rRYmUVFIsMb4iwFCCAvmqs=
+=GG5Q
+-----END PGP SIGNATURE-----
