@@ -1,8 +1,19 @@
 # ChangeLog for app-portage/basc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.17 2005/01/09 01:49:03 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.18 2005/01/12 17:43:23 pvdabeel Exp $
+
+*basc-1.5.6 (12 Jan 2005) 
+
+  12 Jan 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>  basc-1.5.6.ebuild :
+  Made X an optional dependency. Fixed bug 77198 , 77245
+
 
 *basc-1.5.4 (09 Jan 2005)
+
+  12 Jan comment about the policy violation ciaranm is ranting about:
+  The ebuild was tested on at least 3 different mips machines, including my
+  own SGI Octane ip30. We assumed that per Gentoo policy that was enough
+  for a highly experimental architecture.
 
   09 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> basc-1.5.2.ebuild,
   basc-1.5.3.ebuild, basc-1.5.4.ebuild:
@@ -29,6 +40,7 @@
   31 Dec 2004; Ferris McCormick <fmccor@gentoo.org> basc-1.5.2.ebuild:
   Stable for sparc, Bug 76123.
 
+
 * basc-1.5.2 (31 Dec 2004) 
 
   31 Dec 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> + basc-1.5.2.ebuild:
@@ -36,6 +48,7 @@
 
   31 Dec 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> -basc-1.5.{0|1}.ebuild:
   Pruned older versions from portage
+
 
 * basc-1.5.1 (31 Dec 2004)
 
@@ -47,11 +60,13 @@
   30 Dec 2004; Daniel Drake <dsd@gentoo.org> metadata.xml:
   Add Alexander Mieland as project maintainer
 
+
 * basc-1.5.0 (28 Dec 2004) 
 
   28 Dec 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> basc-1.5.0.ebuild :
 
   Client version Python rewrite, improved error handling.
+
 
 * basc-1.4.0 (26 Dec 2004)
 
@@ -59,11 +74,13 @@
   
   New filesystem type detection and improved windowmanager detection.
 
+
 * basc-1.3.9 (23 Dec 2004)
 
   23 Dec 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> basc-1.3.9.ebuild :
   
   Small upstream bugfix, only triggered when user forced client to run as root.
+
 
 * basc-1.3.9 (22 Dec 2004)
 
