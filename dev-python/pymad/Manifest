@@ -1,4 +1,6 @@
-MD5 c3122603eeaeec95800e93e87330f996 ChangeLog 802
 MD5 4824b8ee4e9bb1b9b6cd47c6d174c17f pymad-0.4.1.ebuild 629
+MD5 408b46bece9ef2ec065cf20126edab83 pymad-0.5.1.ebuild 631
+MD5 ed1de3bf3489aa1c488f9d7956d3143b ChangeLog 923
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 bab00ec8c0fcaa25bfd3f43ab2a6f822 files/digest-pymad-0.4.1 62
+MD5 46fc0da4ef94a1fec49dd693a125a644 files/digest-pymad-0.5.1 62
