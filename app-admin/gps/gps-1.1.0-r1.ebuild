@@ -1,12 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/gps-1.1.0-r1.ebuild,v 1.1 2004/12/30 20:06:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/gps-1.1.0-r1.ebuild,v 1.2 2004/12/30 21:27:56 seemant Exp $
 
 inherit eutils
 
 DESCRIPTION="Graphical (GTK+1.2) Process Statistics"
 HOMEPAGE="http://gps.seul.org/"
-SRC_URI="ftp://ftp.seul.org/pub/gps/${P}.tar.gz"
+SRC_URI="ftp://ftp.seul.org/pub/gps/${P}.tar.gz
+	mirror:/gentoo/${P}-gentoo.bz2
+	http://dev.gentoo.org/~seemant/${P}-gentoo.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +19,7 @@ DEPEND="=x11-libs/gtk+-1.2*"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-gentoo.bz2
+	epatch ${WORKDIR}/${P}-gentoo
 }
 
 src_install() {
