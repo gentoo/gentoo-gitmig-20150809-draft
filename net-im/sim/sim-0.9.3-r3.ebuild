@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.3-r3.ebuild,v 1.2 2005/01/15 00:07:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.3-r3.ebuild,v 1.3 2005/01/29 18:53:24 greg_g Exp $
 
-inherit eutils
+inherit eutils kde-functions
 
 LICENSE="GPL-2"
 DESCRIPTION="An ICQ v8 Client. Supports File Transfer, Chat, Server-Side Contactlist, ..."
@@ -28,7 +28,8 @@ src_compile() {
 	export WANT_AUTOCONF=2.5
 	export WANT_AUTOMAKE=1.7
 
-	addwrite "${QTDIR}/etc/settings"
+	set-qtdir 3
+	set-kdedir 3
 
 	make -f admin/Makefile.common
 
