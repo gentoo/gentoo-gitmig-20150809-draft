@@ -1,9 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.1 2002/07/10 20:25:32 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.2 2002/07/13 14:58:42 drobbins Exp $
 
-use arts && 
-use arts && inherit kde-functions && set-kdedir
+inherit kde-functions 
 
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support, previously called FreeAmp"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz"
@@ -42,7 +41,7 @@ src_unpack() {
 }
 
 src_compile() {
-
+	set-kdedir
 	local myconf
 	use alsa || myconf="${myconf} --disable-alsa"
 	use esd  || myconf="${myconf} --disable-esd"
