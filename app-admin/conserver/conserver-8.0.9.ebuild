@@ -1,25 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.0.9.ebuild,v 1.4 2004/01/23 14:46:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.0.9.ebuild,v 1.5 2004/03/06 04:42:39 vapier Exp $
 
-DESCRIPTION="Conserver - Serial Console Manager"
+DESCRIPTION="Serial Console Manager"
 HOMEPAGE="http://www.conserver.com/"
 SRC_URI="ftp://ftp.conserver.com/conserver/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 sparc alpha ia64"
-
 IUSE="pam ssl tcpd"
-DEPEND="ssl?  ( >=dev-libs/openssl-0.9.6g )
-	pam?  ( sys-libs/pam )
+
+DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
+	pam? ( sys-libs/pam )
 	tcpd? ( sys-apps/tcp-wrappers )"
 
 src_compile() {
 	econf \
-		$(use_with ssl openssl) \
-		$(use_with pam) \
-		$(use_with tcpd libwrap) \
+		`use_with ssl openssl` \
+		`use_with pam` \
+		`use_with tcpd libwrap` \
 		--with-logfile=/var/log/conserver.log \
 		--with-pidfile=/var/run/conserver.pid \
 		--with-cffile=conserver/conserver.cf \
@@ -30,7 +30,7 @@ src_compile() {
 	emake || die "compile failed"
 }
 
-src_install () {
+src_install() {
 	einstall exampledir=${D}/usr/share/doc/${PF}/examples || die "problem with install"
 
 	## create data directory
