@@ -1,48 +1,67 @@
 #!/bin/bash
-# Gentoo Mirror Selection tool
+# Gentoo Mirror Selection Tool
 # Copyright 2003 Mark Guertin <gerk@gentoo.org>
 # Distributed under the GPL v2
 # Jan 30, 2003
 
-# for now it has a static list of mirrors, but will move to a more
-# dynamic setup once the lists are in place to pull from
+# Re-Written May 9, 2003
+# John Mylchreest <johnm@gentoo.org>
 
-if [ -z "${MIRROR_LIST}" ] ; then
-MIRROR_LIST='
-ftp://ftp.ibiblio.org/pub/linux/distributions/gentoo (USA)
-ftp://ftp.gtlib.cc.gatech.edu/pub/gentoo (USA)
-http://gentoo.oregonstate.edu (USA)
-ftp://ftp.oregonstate.edu/pub/gentoo (USA/ftp)
-http://mirrors.sunsite.dk/gentoo/ (Denmark)
-ftp://sunsite.dk/mirrors/gentoo/ (Denmark/ftp)
-http://gentoo.linux.no/ (Norway)
-ftp://gentoo.linux.no/pub/gentoo/ (Norway/ftp)
-http://ftp.tu-clausthal.de/pub/linux/gentoo/ (Germany)
-ftp://ftp.tu-clausthal.de/pub/linux/gentoo/ (Germany/ftp)
-http://ftp.gentoo.or.kr/ (South_Korea)
-http://gentoo.gnukorea.org/ (South_Korea)
-ftp://ftp.dale.ro/pub/mirrors/ftp.ibiblio.org/pub/Linux/distributions/gentoo/ (Romania/ftp)
-http://ftp.snt.utwente.nl/pub/os/linux/gentoo/ (Netherlands)
-ftp://ftp.snt.utwente.nl/pub/os/linux/gentoo/ (Netherlands/ftp) 
-ftp://ftp.rez-gif.supelec.fr/pub/Linux/distrib/gentoo/ (France/ftp)
-http://distro.ibiblio.org/gentoo (USA)
-'
-fi
+grab_list() {
+	if [ -z "${MIRROR_LIST}" ] ; then
+		# Grab mirrorlist into:
+		# URL>Description (Location)
+		# we will cut whichever neccessary later
 
-# if auto mode is set run netselect 
-if [ "${1}" = "-a" ] ; then	
-	echo "Fetching server list from web"
-	# nastiness, but it should work for now
-	MIRROR_LIST=$((echo -e "GET /main/en/mirrors.xml HTTP/0.9\r\n\r\n" 1>&3 & cat 0<&3) 3<> /dev/tcp/gentoo.org/80 | \
-	(read i; while [ "$(echo $i | tr -d '\r')" != "" ]; do read i; done; cat) | \
-	perl -nle'print $1 if /\s{5}<a href="((htt|ft)p[^"]+)/' | grep -v "MIRRORS")
+		MIRROR_LIST=$(wget -O - "http://www.gentoo.org/main/en/mirrors.xml" 2>/dev/null | \
+		(read i; while [ "$(echo $i | tr -d '\r')" != "" ]; do read i; done; cat) | \
+		awk '/<a href=\".*tp:.*\".*\(.*\)/ { print $0 }' | grep -v "MIRRORS" | \
+		sed 's:<a href="::' | sed 's:"::g' | sed 's:</a><br>::g' | sed 's:\t::g' )
+	fi
+}
 
-	for i in $MIRROR_LIST
-	do 
-		CHECKLIST="${CHECKLIST} `echo $i | grep -v "("`"
-	done
 
-	if [ "`echo ${2} | grep -e "^-s[01234567890]"`" ] ; then
+write_config() {
+	echo "Found: ${MIRRORS}"
+	echo "Updating /etc/make.conf..."
+
+	# If we dont have any mirrors, we should probably give up :)
+	if [ ! "`echo $MIRRORS`" ] ; then
+		echo "no mirrors selected, exiting"
+		exit 1
+	fi
+
+	# never seen this before - keeping it in because its obviously caused problems.
+	if [ "`echo $MIRRORS | grep \"Can't make\"`" ] ; then
+	        echo "Error, screen too small.  Please use at least 80x24 terminal"
+	        exit 1
+	fi
+
+	# adjust settings in make.conf, all in one command to avoid complaints of make.conf being moved
+	mv /etc/make.conf /etc/make.conf.old && cat /etc/make.conf.old | \
+	egrep -e "^[^#]*GENTOO_MIRRORS=[^ \t\n]" -v > /etc/make.conf && \
+	echo "GENTOO_MIRRORS=\"$MIRRORS\"" >> /etc/make.conf
+
+	# triple check, it make.conf doesn't exist and make.conf.old doesn, replace it and warn user that
+	# something didn't work
+
+	if [ ! -s /etc/make.conf ] ; then
+		echo "make.conf didn't get remade, something is wrong, reverting to old one"
+		mv /etc/make.conf.old /etc/make.conf
+	else
+		if [ "`grep GENTOO_MIRRORS /etc/make.conf`" ] ; then 
+			echo "Mirrors set successfully"
+			rm /etc/make.conf.old
+		else
+			echo "Failed updating make.conf"
+		fi
+	fi
+}
+
+
+if [ "${1}" = "-a" ] ; then
+	# Check we have <num>
+	if [ "`echo ${2} | grep -e "^-s[0-9]"`" ] ; then
 		SERVERS="${2}"
 	else
 		if [ "${2}" ] ; then
@@ -51,94 +70,52 @@ if [ "${1}" = "-a" ] ; then
 		fi
 	fi
 
-	#pick the mirror from list
-	echo "Running netselect on serverlist, this may take a moment"
+	# Ok now we grab the list
+	if [ "${3}" != "-o" ] ; then
+		echo "Downloading a list of mirrors..."
+	fi
+	grab_list
+
+	# Format list properly
+	# we want just URI's
+	CHECKLIST="`echo $MIRROR_LIST | sed 's:http\::\nhttp\::g' | sed 's:ftp\::\nftp\::g' | cut -f1 -d">"`"
+
+	# Pick the mirror from list
+	if [ "${3}" != "-o" ] ; then
+		echo "Running netselect on the serverlist, this may take a moment..."
+	fi
+
 	CHOSEN=`netselect $SERVERS ${CHECKLIST} | awk -F" " '{ print $2 }'`
 	for i in $CHOSEN
 	do
 		MIRRORS="${MIRRORS} $i"
 	done
 
-elif [ "${1}" = "-i" ] ; then
-	# not auto mode, we'll run dialog based selection tool
-	# change "mirror (loc)" to "mirror(loc)" for bash loop below
-	MIRROR_LOCS=`echo $MIRROR_LIST | sed -e "s/ (/(/g"`
-	# grab the current GENTOO_MIRRORS from /etc/make.conf and remove "'s
-	DEF_MIRROR_LOCS=`egrep -e "^[ \t]*GENTOO_MIRRORS=[^ \t\n]" /etc/make.conf | sed -e "s/.*GENTOO_MIRRORS=\"//" | sed -e "s/[\" ]/\n/g"`
-
-	MIRROR_LIST=""
-	for entry in `echo $MIRROR_LOCS`
-	do
-	    found="0"
-	    for defentry in  `echo $DEF_MIRROR_LOCS`
-	    do
-	        if [ `echo $entry | egrep $defentry` ]
-		then
-			found="1"
-		fi
-	    done
-
-	    # split entries back into "mirror (loc)"
-	    entry=`echo $entry | sed -e "s/(/ (/"`
-	    if [ "${found}" = "1" ]
-	    then
-	    	MIRROR_LIST="${MIRROR_LIST} $entry ON"
-	    else
-	    	MIRROR_LIST="${MIRROR_LIST} $entry OFF"
-	    fi
-	done
-
-	MIRRORS=`dialog --title "GENTOO MIRRORS LIST" \
-	  --checklist "Please select your desired mirror(s):" 20 80 12 \
-	$MIRROR_LIST 2>&1 | sed "s:\"::g"`
-
-else
-echo "mirrorselect usage (updated):"
-echo "-i : interactive mode, dialog based and static mirrorlist"
-echo "-a (-s<num>) : auto mode, will retrieve live mirror list from web,"
-echo "   run netselect and choose the server(s) with best response times."
-echo "   You can optionally add -s<num> where <num> = number of server choices "
-echo "   you want, i.e. mirrorselect -a -s3 will select top 3 netselect choices "
-echo "   and set them in make.conf.  Note: -s only works with -a option"
-echo
-
-exit
-
-fi
-
-
-if [ ! "`echo $MIRRORS`" ] ; then
-	echo "no mirrors selected, exiting"
-	exit 1
-fi
-
-# sanity check if screen is too small, thanks SpanKY
-
-if [ "`echo $MIRRORS | grep \"Can't make\"`" ] ; then
-        echo "Error, screen too small.  Please use at least 80x24 terminal"
-        exit 1
-fi
-
-echo "Selected: $MIRRORS"
-
-# adjust settings in make.conf, all in one command to avoid complaints of make.conf being moved
-mv /etc/make.conf /etc/make.conf.old && cat /etc/make.conf.old | egrep -e "^[^#]*GENTOO_MIRRORS=[^ \t\n]" -v > /etc/make.conf && \
-echo "GENTOO_MIRRORS=\"$MIRRORS\"" >> /etc/make.conf
-
-# triple check, it make.conf doesn't exist and make.conf.old doesn, replace it and warn user that
-# something didn't work
-
-if [ ! -s /etc/make.conf ] ; then
-	echo "make.conf didn't get remade, something is wrong, reverting to old one"
-	mv /etc/make.conf.old /etc/make.conf
-else
-	# all is well, rm the make.conf.old
-	if [ "`grep GENTOO_MIRRORS /etc/make.conf`" ] ; then 
-		echo "Mirrors set successfully"
-		rm /etc/make.conf.old
+	if [ "${3}" != "-o" ] ; then
+		write_config
 	else
-		echo "no mirrors set!"
+		echo "GENTOO_MIRRORS=\"${MIRRORS}\""
 	fi
 
-fi
+elif [ "${1}" = "-i" ] ; then
+	echo "Downloading a list of mirrors"
+	grab_list
 
+	# Format list properly
+	# we want Name (Loc)
+	CHECKLIST="`echo $MIRROR_LIST | sed 's:http\::\nhttp\::g' | sed 's:ftp\::\nftp\::g' | sed 's:>:(:g' | cut -f1,3 -d"(" | sed 's: ::g' | sed 's:(: (:g' | sed 's:):) OFF:g' | sed 's:/ftp)::g' | sort`"
+
+	MIRRORS=`dialog --title "GENTOO MIRRORS LIST" \
+		--checklist "Please select your desired mirror(s):" 20 80 14 \
+		$CHECKLIST 2>&1 | sed "s:\"::g"`
+
+	write_config
+else
+	echo "mirrorselect usage:"
+	echo "-------------------"
+	echo "   -a [-s<num>] [-o] : Automatically pick the top performing <num> servers."
+	echo "                       if -s was not specified, it returns the top 1."
+	echo "                       if -o is present it outputs only the GENTOO_MIRRORS line"
+	echo "   -i                : Interactive mode. This downloads a list of mirrors"
+	echo "                       and presents them in a checklist"
+fi
