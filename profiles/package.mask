@@ -250,11 +250,6 @@ app-games/xboing
 # no more present
 =net-www/amaya-7.0
 
-# <rendhalver@gentoo.org> (20 Feb 2003)
-# moving this one to app-xemacs/xemacs-ispell
-# cause it clashes with the real ispell ebuild
-app-xemacs/ispell
-
 # <mholzer@gentoo.org> (09 Feb 2003)
 >=media-video/mjpegtools-1.6.1
 
