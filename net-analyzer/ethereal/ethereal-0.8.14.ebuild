@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.8.14.ebuild,v 1.1 2000/11/26 12:52:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.8.14.ebuild,v 1.2 2000/12/19 01:12:38 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -24,8 +24,9 @@ src_compile() {
 
 src_install() {                               
   cd ${S}
-  try make prefix=${D}/usr/X11R6 sysconfdir=${D}/etc/ethereal install
-  prepman /usr/X11R6
+  dodir /usr/X11R6/lib/ethereal/lugins/${PV}
+  try make prefix=${D}/usr/X11R6 sysconfdir=${D}/etc/ethereal \
+	plugindir=${D}/usr/X11R6/lib/ethereal/plugins/${PV} install
   dodoc AUTHORS COPYING ChangeLog INSTALL.* NEWS README* TODO
 
 }
