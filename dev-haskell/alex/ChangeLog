@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.10 2005/03/23 14:08:15 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.11 2005/03/23 16:40:43 kosmikus Exp $
+
+*alex-2.0.1-r1 (23 Mar 2005)
+
+  23 Mar 2005; Andres Loeh <kosmikus@gentoo.org> +alex-2.0.1-r1.ebuild,
+  -alex-2.0.1.ebuild:
+  Fixed installation paths. Added ~amd64 keyword.
 
 *alex-2.0.1 (23 Mar 2005)
 

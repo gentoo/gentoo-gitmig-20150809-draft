@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.1.ebuild,v 1.1 2005/03/23 14:08:15 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.1-r1.ebuild,v 1.1 2005/03/23 16:40:43 kosmikus Exp $
 #
 # USE variable summary:
 #   doc	   - Build extra documenation from DocBook sources,
 #		in HTML format.
-#   tetex  - Build the above docs as PostScript as well.
+#   java   - Build the above docs as PostScript as well.
 
 
 inherit base eutils ghc-package
@@ -16,10 +16,10 @@ SRC_URI="http://www.haskell.org/alex/dist/${P}-src.tar.gz"
 HOMEPAGE="http://www.haskell.org/alex"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 LICENSE="as-is"
 
-DEPEND=">=virtual/ghc-6.2.2
+DEPEND=">=virtual/ghc-6.2
 	doc? (	~app-text/docbook-xml-dtd-4.2
 		app-text/docbook-xsl-stylesheets
 		>=dev-libs/libxslt-1.1.2
@@ -28,6 +28,7 @@ DEPEND=">=virtual/ghc-6.2.2
 RDEPEND=""
 
 src_compile() {
+	einfo "$(get_libdir)"
 	local mydoc
 	econf || die "econf failed"
 
@@ -57,19 +58,9 @@ src_install() {
 		datadir="${D}/usr/share/doc/${PF}" \
 		infodir="${D}/usr/share/info" \
 		mandir="${D}/usr/share/man" \
-		libdir0="${D}/usr/$(get-libdir)" \
+		libdir0="${D}/usr/$(get_libdir)" \
 		|| die "make ${insttarget} failed"
 
 	cd ${S}/haddock
-	dodoc CHANGES LICENSE README TODO
-
-	# if use doc; then
-	#	cd ${S}/alex/doc
-	#	dohtml -r alex/* || die
-	#	dosym alex.html /usr/share/doc/${PF}/html/index.html
-	#	if use tetex; then
-	#		docinto ps
-	#		dodoc alex.ps || die "dodoc failed"
-	#	fi
-	# fi
+	dodoc README
 }
