@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.21 2003/09/22 19:26:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.22 2003/09/22 20:47:21 usata Exp $
 
 *canna-3.6_p4 (23 Sep 2003)
 
@@ -12,7 +12,9 @@
   cannaserver and cannakill. Added prerm to stop canna before unmerge.
   (once you uninstall canna you can't stop cannaserver by /etc/init.d
   since it depends on cannakill) Changed SRC_URI to use
-  mirror://sourceforge.jp/
+  mirror://sourceforge.jp/ 
+  Installs DVI, PS and PDF if tetex USE flag is set. Stop cannaserver
+  before unmerge and restart it after remerge.
 
 *canna-3.6_p3-r2 (04 Jun 2003)
 

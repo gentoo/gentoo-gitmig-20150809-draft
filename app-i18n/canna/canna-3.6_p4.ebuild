@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.1 2003/09/22 19:26:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.2 2003/09/22 20:47:21 usata Exp $
 
 inherit cannadic eutils
+
+IUSE="tetex"
 
 MY_P="Canna36${PV#*_}"
 
@@ -16,7 +18,9 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/glibc
 	x11-base/xfree
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	tetex? ( app-text/ptex
+		app-text/dvipdfmx )"
 RDEPEND="virtual/glibc"
 
 S="${WORKDIR}/${MY_P}"
@@ -33,6 +37,15 @@ src_compile() {
 	make Makefiles || die
 	# make includes
 	make canna || die
+
+	if [ -n "`use tetex`" ] ; then
+		einfo "Compiling DVI, PS and PDF document"
+		cd doc/man/guide/tex
+		xmkmf || die
+		make JLATEXCMD=platex \
+			DVI2PSCMD="dvips -f" \
+			canna.dvi canna.ps canna.pdf || die
+	fi
 }
 
 src_install() {
@@ -47,6 +60,12 @@ src_install() {
 	done
 
 	dodoc CHANGES.jp ChangeLog INSTALL* README* WHATIS*
+	
+	if [ -n "`use tetex`" ] ; then
+		insinto /usr/share/doc/${PF}
+		doins doc/man/guide/tex/canna.{dvi,ps,pdf}
+	fi
+
 	exeinto /etc/init.d ; newexe ${FILESDIR}/canna.initd.new canna || die
 	insinto /etc/conf.d ; newins ${FILESDIR}/canna.confd canna || die
 	insinto /etc/       ; newins ${FILESDIR}/canna.hosts hosts.canna || die
@@ -72,8 +91,15 @@ pkg_prerm () {
 		einfo
 		/etc/init.d/canna stop
 	fi
-	if [ -e /var/lib/canna/dic/canna/dics.dir ] ; then
-		# no need to keep dics.dir if canna is not installed
-		rm -f /var/lib/canna/dic/canna/dics.dir
+}
+
+pkg_postrm () {
+
+	if [ -f /usr/sbin/cannaserver ] ; then
+		update-cannadic-dir
+		einfo
+		einfo "Restarting Canna"
+		einfo
+		/etc/init.d/canna start
 	fi
 }
