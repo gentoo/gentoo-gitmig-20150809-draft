@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.12 2004/09/12 19:31:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.13 2004/10/12 19:35:23 axxo Exp $
+
+  12 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jmeter-1.9.1.ebuild,
+  jmeter-2.0.1.ebuild:
+  Fixed jikes deps. disabled jikes in 2.0.1 as it doesn't compile, patches are
+  welcome on bugs.gentoo.org
 
 *jmeter-2.0.1-r1 (12 Sep 2004)
 
