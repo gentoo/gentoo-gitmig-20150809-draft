@@ -1,6 +1,9 @@
 # ChangeLog for games-board/scid
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.5 2004/01/05 05:05:37 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.6 2004/03/30 18:38:43 mr_bones_ Exp $
+
+  30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> scid-3.5.ebuild:
+  buggy makefiles bug #46110
 
 *scid-3.5 (04 Jan 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.5.ebuild,v 1.1 2004/01/05 05:05:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.5.ebuild,v 1.2 2004/03/30 18:38:43 mr_bones_ Exp $
 
 inherit games
 
@@ -32,7 +32,8 @@ src_compile() {
 		OPTIMIZE="${CXXFLAGS}" \
 		TCL_INCLUDE=""
 
-	emake || die "emake failed"
+	# buggy makefiles bug #46110
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
