@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nload
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.10 2004/03/21 12:58:30 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.11 2004/04/03 06:43:05 pylon Exp $
+
+  03 Apr 2004; Lars Weiler <pylon@gentoo.org> nload-0.6.0.ebuild:
+  stable on ppc
 
   21 Mar 2004; Michael Boman <mboman@gentoo.org> nload-0.4.0.ebuild,
   nload-0.5.0.ebuild, nload-0.6.0.ebuild:
