@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.5 2004/08/21 22:26:13 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.6 2004/08/22 16:01:43 karltk Exp $
 
 inherit eutils java-utils
 
@@ -30,7 +30,8 @@ DEPEND="${RDEPEND}
 	>=dev-java/ant-1.5.3
 	>=sys-apps/findutils-4.1.7
 	>=app-shells/tcsh-6.11
-	app-arch/unzip"
+	app-arch/unzip
+	app-arch/zip"
 
 pkg_setup() {
 	ewarn "This package is _highly_ experimental."
