@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/konqueror-akregator
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror-akregator/ChangeLog,v 1.1 2005/01/25 21:53:49 motaboy Exp $
+
+*konqueror-akregator-3.4.0_beta1 (25 Jan 2005)
+
+  25 Jan 2005; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +konqueror-akregator-3.4.0_beta1.ebuild:
+  New ebuild. Fixes bug #79344.
+
