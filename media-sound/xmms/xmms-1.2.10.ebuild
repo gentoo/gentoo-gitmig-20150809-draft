@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10.ebuild,v 1.1 2004/02/26 05:53:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10.ebuild,v 1.2 2004/02/26 23:57:35 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,7 +36,7 @@ RDEPEND="${DEPEND}
 #We want these things in DEPEND only
 DEPEND="${DEPEND}
 	nls? ( dev-util/intltool )
-	>=sys-devel/automake-1.7.9
+	>=sys-devel/automake-1.7.8
 	>=sys-devel/autoconf-2.58"
 
 PATCHDIR=${WORKDIR}/patches
@@ -96,8 +96,19 @@ src_unpack() {
 	export WANT_AUTOMAKE=1.7
 	for x in . libxmms ; do
 		cd ${S}/${x}
+
+		ebegin "Running aclocal in ${S}/${x}"
 		aclocal
-		automake --gnu --add-missing --include-deps || die
+		eend $?
+
+		ebegin "Running automake in ${S}/${x}"
+		automake --gnu --add-missing --include-deps
+		retval=$?
+		eend $retval
+
+		if [ $retval -ne 0 ]; then
+			exit 1;
+		fi
 	done
 }
 
