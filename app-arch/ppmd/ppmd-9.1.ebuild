@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ppmd-9.1.ebuild,v 1.1 2003/11/15 08:52:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ppmd-9.1.ebuild,v 1.2 2003/12/09 02:42:22 seemant Exp $
 
 inherit eutils
 
@@ -20,13 +20,18 @@ LICENSE="public-domain"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64"
 
 DEPEND="app-arch/gzip
-	sys-devel/patch"
+	sys-devel/patch
+	sys-devel/autoconf
+	sys-devel/automake"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${WORKDIR}/${MY_P}-${PATCHV}.diff
 	chmod +x ${S}/configure
+	head -n 3 Makefile.am > Makefile.am.new
+	mv Makefile.am.new Makefile.am
+	autoreconf --force || die
 }
 
 src_install() {
