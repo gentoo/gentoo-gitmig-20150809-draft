@@ -1,0 +1,11 @@
+# ChangeLog for app-vim/searchcomplete
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/searchcomplete/ChangeLog,v 1.1 2003/10/31 02:59:46 agriffis Exp $
+
+*searchcomplete-1.1 (30 Oct 2003)
+
+  30 Oct 2003; Aron Griffis <agriffis@gentoo.org> metadata.xml,
+  searchcomplete-1.1.ebuild:
+  Add searchcomplete plugin for bug 32280. Thanks to Ciaran McCreesh for the
+  ebuild
+
