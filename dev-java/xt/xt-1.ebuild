@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-r1.ebuild,v 1.2 2000/08/16 04:37:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-1.ebuild,v 1.1 2000/08/16 18:55:59 achim Exp $
 
 P=xt
 A=${P}.zip
