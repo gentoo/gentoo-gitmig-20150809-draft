@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.4 2001/07/03 17:34:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.5 2001/07/20 22:36:00 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -83,7 +83,15 @@ src_install() {
 	chmod o-rwx,g+rx ${D}/usr/sbin/wiki.pl
 	chown root.dbadmin ${D}/usr/sbin/wiki.pl
 }
-	
+
+pkg_preinst() {
+	if [ -d /usr/local/httpd/htdocs.bak ]
+	then
+		rm -rf /usr/local/httpd/htdocs.bak
+	fi
+	cp -ax /usr/local/httpd/htdocs /usr/local/httpd/htdocs.bak
+}
+
 pkg_postinst() {
 	source /home/drobbins/.wiki-auth
 	cd /usr/local/httpd/htdocs/wiki
