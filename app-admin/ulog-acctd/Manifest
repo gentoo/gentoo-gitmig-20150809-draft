@@ -1,0 +1,5 @@
+MD5 c2f6d7d218c8d15f3c0262366612b57d ulog-acctd-0.4.2.ebuild 1324
+MD5 c41bb8073a3e62762ccc3fb6d816bbe6 ChangeLog 453
+MD5 d05a99e0cbeadebc1bcc73a8b0e31ad0 metadata.xml 223
+MD5 2482235c9b2861a218595874d58bde76 files/digest-ulog-acctd-0.4.2 72
+MD5 cf07ec3e1da17f58e2a752d589393f03 files/ulog-acctd-0.4.2-gcc2.patch 546

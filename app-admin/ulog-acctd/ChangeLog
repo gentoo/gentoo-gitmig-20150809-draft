@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/ulog-acctd
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ChangeLog,v 1.1 2004/07/24 18:16:51 liquidx Exp $
+
+*ulog-acctd-0.4.2 (24 Jul 2004)
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/ulog-acctd-0.4.2-gcc2.patch, +ulog-acctd-0.4.2.ebuild:
+  intial package release. ebuild based on Thomas Eckert ebuild and patch from
+  bug #19204.
+

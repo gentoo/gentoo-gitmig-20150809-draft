@@ -1,0 +1,20 @@
+diff -ru ulog-acctd-0.4.1.orig/src/process.c ulog-acctd-0.4.1.new/src/process.c
+--- ulog-acctd-0.4.1.orig/src/process.c	2003-08-26 15:30:07.000000000 +0200
++++ ulog-acctd-0.4.1.new/src/process.c	2003-11-08 16:12:40.000000000 +0100
+@@ -627,6 +627,7 @@
+ 
+ void wait_children(void)
+ {
++  struct ipv4data *p;
+   int status;
+   pid_t pid;
+ 
+@@ -672,7 +673,6 @@
+ 		     pid);
+ 	    }
+ 	  /* Free memory that was used by output list items */
+-	  struct ipv4data *p;
+ 	  p = output_list;
+ 	  while(p)
+ 	    {
+Only in ulog-acctd-0.4.1.new/src: process.c~
