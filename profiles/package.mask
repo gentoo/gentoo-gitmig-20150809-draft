@@ -520,10 +520,6 @@ app-misc/ldapbrowser
 # Bumped to new version - masked for testing
 =app-emulation/bochs-1.4.1
 
-# <seemant@gentoo.org> (20 Jul 2002)
-# masked because GNU Readline 4.2 is not in 1.0 default inclusion
-=media-sound/cdcd-0.6.4
-
 # new ebuild.  probably x86-only as well.
 app-misc/mwavem
 
