@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canfep/canfep-1.0.ebuild,v 1.3 2004/06/24 21:43:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canfep/canfep-1.0.ebuild,v 1.4 2004/09/05 12:24:09 usata Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 
 	unpack ${P}.tar.gz
 	cd ${S}
-	epatch ${DISTDIR}/canfep_utf8.diff
+	use unicode && epatch ${DISTDIR}/canfep_utf8.diff
 }
 
 src_compile() {
