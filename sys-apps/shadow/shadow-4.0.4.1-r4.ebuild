@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r4.ebuild,v 1.3 2004/10/10 03:29:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r4.ebuild,v 1.4 2004/10/10 05:59:10 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -162,21 +162,10 @@ src_install() {
 	docinto txt
 	dodoc HOWTO LSM README.* *.txt
 
-	# Fix sparc serial console
-	if [ "${ARCH}" = "sparc" ]
-	then
-		# ttyS0 and its devfsd counterpart (Sparc serial port "A")
-		dosed 's:\(vc/1\)$:tts/0\n\1:' /etc/securetty
-		dosed 's:\(tty1\)$:ttyS0\n\1:' /etc/securetty
-	fi
-
-	# fix hppa serial console
+	# ttyB0 is the PDC software console
 	if [ "${ARCH}" = "hppa" ]
 	then
-		# ttyB0 is the PDC software console
-		dosed 's:\(vc/1\)$:tts/0\n\1:' /etc/securetty
-		dosed 's:\(tty1\)$:ttyS0\n\1:' /etc/securetty
-		dosed 's:\(tty1\)$:ttyB0\n\1:' /etc/securetty
+		echo "ttyB0" >> ${D}/etc/securetty
 	fi
 }
 
