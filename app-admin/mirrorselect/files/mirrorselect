@@ -14,7 +14,6 @@ grab_list() {
 		# we will cut whichever neccessary later
 
 		MIRROR_LIST=$(wget -O - "http://www.gentoo.org/main/en/mirrors.xml" 2>/dev/null | \
-		(read i; while [ "$(echo $i | tr -d '\r')" != "" ]; do read i; done; cat) | \
 		awk '/<a href=\".*tp:.*\".*\(.*\)/ { print $0 }' | grep -v "MIRRORS" | \
 		sed 's:<a href="::' | sed 's:"::g' | sed 's:</a><br>::g' | sed 's:\t::g' )
 	fi
