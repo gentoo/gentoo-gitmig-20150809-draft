@@ -4,11 +4,17 @@
 
 *kinput2-3.1_beta4-r2 (2 July 2002)
 
+  19 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added HOMEPAGE variable
+
   1 July 2002; Stuart Bouyer <stubear@gentoo.org> kinput2-3.1_beta4-r1.ebuild :
   Converted over to the new DEPEND="foo? bar : oni" operator. this makes for a
   much nicer looking ebuild. Now, If I can just clean up the src_unpack stage
 
 *kinput2-3.1_beta4-r1 (1 July 2002)
+
+  19 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added HOMEPAGE variable
 
   1 July 2002; Stuart Bouyer <stubear@gentoo.org> kinput2-3.1_beta4-r1.ebuild :
   Added support for Canna and FreeWnn with new useflages canna and freewnn

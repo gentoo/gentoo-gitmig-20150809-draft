@@ -12,6 +12,8 @@ DESCRIPTION="A Japanese input server which supports the XIM protocol"
 
 SRC_URI="ftp://ftp.sra.co.jp/pub/x11/kinput2/${A}"
 
+HOMEPAGE="http://www.nec.co.jp/canna/"
+
 LICENSE="as-is"
 
 DEPEND="virtual/glibc
