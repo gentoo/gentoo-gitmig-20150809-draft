@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17.ebuild,v 1.1 2005/03/25 13:53:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17.ebuild,v 1.2 2005/03/25 13:56:41 seemant Exp $
 
 inherit eutils
 
@@ -109,16 +109,6 @@ src_install (){
 	dosym links /usr/bin/links2
 }
 
-
-#pkg_preinst() {
-	# Check if the live filesystem has /usr/bin/links -> /usr/bin/links2
-	# From now on this will be reversed (and links2 will only symlink for
-	# the next couple of iterations, because this package is no longer SLOTted
-#	if [ "`${ROOT}/usr/bin/readlink ${ROOT}/usr/bin/links`" = link2 ]
-#	then
-#		rm ${ROOT}/usr/bin/links{,2}
-#	fi
-#}
 
 pkg_postinst() {
 
