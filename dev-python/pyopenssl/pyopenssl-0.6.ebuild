@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.6.ebuild,v 1.1 2004/08/18 17:31:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.6.ebuild,v 1.2 2004/08/20 00:28:21 kloeri Exp $
 
 inherit distutils
 
@@ -25,6 +25,8 @@ src_compile() {
 	distutils_src_compile
 	if use tetex ; then
 		addwrite /var/cache/fonts
+		addwrite /usr/share/texmf/fonts/pk
+
 		cd ${S}/doc
 		make html ps dvi
 	fi
