@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/hppa-headers-2.4.20_p32.ebuild,v 1.7 2004/06/24 22:57:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/hppa-headers-2.4.20_p32.ebuild,v 1.8 2004/07/15 03:50:45 agriffis Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE=""
@@ -12,7 +12,7 @@ inherit kernel
 # What's in this kernel?
 # INCLUDED:
 #   stock 2.4.20 kernel sources
-#   hppa patches 
+#   hppa patches
 
 DESCRIPTION="Full sources for the Linux kernel patched for hppa"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://parisc-linux.org/"

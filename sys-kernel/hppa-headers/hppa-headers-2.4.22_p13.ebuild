@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/hppa-headers-2.4.22_p13.ebuild,v 1.5 2004/06/24 22:57:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/hppa-headers-2.4.22_p13.ebuild,v 1.6 2004/07/15 03:50:45 agriffis Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="headers"
@@ -26,6 +26,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://ftp.paris
 `for i in \`seq 1 ${PATCH_COUNT}\`; do echo http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa\`echo ${PATCH_SET} | awk \"{ print \\\\\$$i }\"\`-pa\`echo ${PATCH_SET} | awk \"{ print \\\\\$$((i + 1)) }\"\`.gz; done`"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://parisc-linux.org"
 KEYWORDS="~hppa -*"
+IUSE=""
 SLOT="0"
 
 
@@ -58,4 +59,3 @@ src_compile() {
 	echo "Ignore any errors from the yes command above."
 	make archdep
 }
-

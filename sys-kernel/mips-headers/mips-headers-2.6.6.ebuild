@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.6.ebuild,v 1.3 2004/06/24 22:58:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.6.ebuild,v 1.4 2004/07/15 03:53:05 agriffis Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -26,6 +26,7 @@ LICENSE="GPL-2"
 SLOT="0"
 PROVIDE="virtual/os-headers"
 KEYWORDS="-*"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
@@ -106,4 +107,3 @@ pkg_postinst() {
 	einfo "Failure to do so will cause glibc to not make use of newer features present in the updated kernel"
 	einfo "headers."
 }
-
