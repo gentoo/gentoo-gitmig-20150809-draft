@@ -1,12 +1,19 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.153 2004/12/25 16:31:58 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.154 2004/12/25 22:09:25 eradicator Exp $
 
 *gentoo-dev-sources-2.6.9-r13 (25 Dec 2004)
 
   25 Dec 2004; Daniel Drake <dsd@gentoo.org>
   +gentoo-dev-sources-2.6.9-r13.ebuild:
   Add i810 DRM DoS fix
+
+*gentoo-dev-sources-2.6.10-r1 (25 Dec 2004)
+
+  25 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +gentoo-dev-sources-2.6.10-r1.ebuild:
+  Fixed user memory handling in snd-ioctl32. Catch some previously uncaught
+  copy_*_mem calls. Added sparc patches. Marked ~amd64.
 
   25 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gentoo-dev-sources-2.6.10.ebuild:
