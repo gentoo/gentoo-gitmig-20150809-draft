@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/lbreakout2
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.3 2003/11/04 21:39:33 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.4 2004/03/19 09:14:32 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> lbreakout2-2.4.ebuild,
+  lbreakout2-2.5_beta3.ebuild:
+  use all-levels snapshot archive instead of individual level files (should fix
+  bug #44447); use emake
 
   04 Nov 2003; Jason Wever <weeve@gentoo.org> lbreakout2-2.4.ebuild:
   Added ~sparc keyword.
