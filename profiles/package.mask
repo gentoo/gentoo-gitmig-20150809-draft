@@ -11,8 +11,8 @@
 # Galeon 1.2.0 depends on Mozilla 0.9.9
 >=net-www/galeon-1.1.0
 
-# Version Errors
-=sys-apps/pcmcia-cs-1.3.33
+# not tested enough yet
+>=sys-apps/pcmcia-cs-3.1.31-r4
 
 # Masing Azarah's new baselayout until several problems are confirmed fixed.
 # 4 Mar 2002, Daniel Robbins
@@ -100,7 +100,7 @@ sys-apps/sysvinit
 #(12/22/01 - drobbins)
 
 #untested/not approved stuff, please do not use
->=sys-apps/portage-1.8.9_pre1
+#>=sys-apps/portage-1.8.9_pre1
 >=sys-apps/portage-1.9_pre1
 
 #incomplete and very dangerous < Danarmak >
@@ -373,6 +373,7 @@ dev-lang/tcl-tk
 =media-sound/alsa-driver-0.9.0_beta10
 =media-sound/alsa-utils-0.9.0.1_beta10
 =media-libs/alsa-lib-0.9.0.1_beta10
+=media-sound/alsa-tools-0.9.0_beta10-r1
 
 #moving xmame to app-emulation with other emulators
 #old location is deprecated.  Additional game packages
