@@ -1,0 +1,8 @@
+# ChangeLog for net-p2p/gift-gnutella
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.1 2003/08/01 02:10:43 lostlogic Exp $
+
+*gift-gnutella-0.0.4 (31 Jul 2003)
+
+  31 Jul 2003; Brandon Low <lostlogic@gentoo.org> gift-openft-0.0.4.ebuild:
+  Initial import of the separated package.
