@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/tint-0.03a.ebuild,v 1.2 2004/10/18 12:19:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/tint-0.03a.ebuild,v 1.3 2004/11/11 12:45:21 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://oasis.frogfoot.net/code/tint/download/$PV/$MY_P.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.4-r1"
