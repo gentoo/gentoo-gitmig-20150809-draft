@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/esdl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/ChangeLog,v 1.5 2003/06/19 18:42:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/ChangeLog,v 1.6 2003/09/12 02:54:17 george Exp $
+
+*esdl-0.93.0909 (11 Sep 2003)
+
+  11 Sep 2003; George Shapovalov <george@gentoo.org> esdl-0.93.0909.ebuild :
+  new version
 
 *esdl-0.93.0526 (19 Jun 2003)
 
