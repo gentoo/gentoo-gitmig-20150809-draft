@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-3.9.8-r1.ebuild,v 1.3 2004/01/03 14:27:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-3.9.8-r1.ebuild,v 1.4 2004/03/07 19:16:45 plasmaroo Exp $
 
 DESCRIPTION="utilities to access MS-DOS disks from Unix without mounting them"
 SRC_URI="http://mtools.linux.lu/${P}.tar.gz"
