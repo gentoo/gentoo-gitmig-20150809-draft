@@ -20,8 +20,13 @@ HOMEPAGE="http://www.lyx.org/"
 # This lyx-base ebuild only depends on the absolutely necessary packages.
 # The acompanying lyx-utils ebuild depends on lyx-base and on everything
 # else that lyx can use.
-DEPEND="virtual/x11 x11-libs/xforms app-text/tetex 
-	>=sys-devel/perl-5"
+DEPEND="virtual/x11
+	x11-libs/xforms
+	app-text/tetex 
+	>=sys-devel/perl-5
+	sys-devel/gcc
+	sys-libs/glibc
+	sys-devel/ld.so"
 
 src_compile() {
 
