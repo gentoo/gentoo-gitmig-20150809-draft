@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.2.ebuild,v 1.1 2003/06/14 15:48:50 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.9.ebuild,v 1.1 2003/07/12 10:34:57 brad Exp $
 
 MDK_EXTRAVERSION="27mdk"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.mandrakelinux.com"
 SRC_URI="ftp://dl.xs4all.nl/pub/mirror/Mandrake-devel/cooker/SRPMS/galaxy-${PV}-${MDK_EXTRAVERSION}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 
 inherit eutils
 
