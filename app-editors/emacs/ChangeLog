@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.51 2005/02/08 14:16:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.52 2005/02/08 17:02:01 tester Exp $
+
+  08 Feb 2005; Olivier Crête <tester@gentoo.org> emacs-21.4.ebuild:
+  Stable on x86 wrt bug #79686
 
   08 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> emacs-21.4.ebuild:
   Stable on sparc wrt #79686
