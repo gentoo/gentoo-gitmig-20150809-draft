@@ -1,0 +1,40 @@
+--- gforth.el	2003-03-09 09:05:33.000000000 -0600
++++ gforth.el~	2003-04-02 04:34:42.000000000 -0600
+@@ -65,22 +65,24 @@
+   (or (< emacs-major-version major)
+       (and (= emacs-major-version major) (< emacs-minor-version minor))))
+ 
+-;; Code ripped from `subr.el' for compatability with Emacs versions
+-;; prior to 20.1
+-(eval-when-compile 
+-  (if (forth-emacs-older 20 1)
+-      (progn
+-	(defmacro when (cond &rest body)
+-	  "If COND yields non-nil, do BODY, else return nil."
+-	  (list 'if cond (cons 'progn body)))
+-	(defmacro unless (cond &rest body)
+-	  "If COND yields nil, do BODY, else return nil."
+-	  (cons 'if (cons cond (cons nil body)))))))
++;; ;; Code ripped from `subr.el' for compatability with Emacs versions
++;; ;; prior to 20.1
++;; (eval-when-compile 
++;;   (if (forth-emacs-older 20 1)
++;;       (progn
++;; 	(defmacro when (cond &rest body)
++;; 	  "If COND yields non-nil, do BODY, else return nil."
++;; 	  (list 'if cond (cons 'progn body)))
++;; 	(defmacro unless (cond &rest body)
++;; 	  "If COND yields nil, do BODY, else return nil."
++;; 	  (cons 'if (cons cond (cons nil body)))))))
+ 
+ ;; `no-error' argument of require not supported in Emacs versions
+ ;; prior to 20.4 :-(
+-(defun forth-require (feature)
+-  (condition-case err (require feature) (error nil)))
++
++(eval-when-compile
++  (defun forth-require (feature)
++    (condition-case err (require feature) (error nil))))
+ 
+ (require 'font-lock)
+ 
