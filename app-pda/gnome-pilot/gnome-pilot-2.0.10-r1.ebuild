@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10-r1.ebuild,v 1.12 2004/08/21 15:36:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10-r1.ebuild,v 1.13 2004/10/19 18:35:57 vapier Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Gnome Pilot apps"
 HOMEPAGE="http://www.gnome.org/projects/gnome-pilot/"
 
-IUSE=""
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64 ppc"
+SLOT="0"
+KEYWORDS="amd64 ia64 ppc sparc x86"
+IUSE=""
 
 RDEPEND=">=gnome-base/libgnome-2.0.0
 	>=gnome-base/libgnomeui-2.0.0

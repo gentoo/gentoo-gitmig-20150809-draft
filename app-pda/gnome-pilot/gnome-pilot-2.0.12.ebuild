@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.12.ebuild,v 1.3 2004/09/22 20:08:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.12.ebuild,v 1.4 2004/10/19 18:35:57 vapier Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Gnome Palm Pilot and Palm OS Device Syncing Library"
 HOMEPAGE="http://www.gnome.org/projects/gnome-pilot/"
 
-IUSE=""
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+SLOT="0"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+IUSE=""
 
 RDEPEND=">=gnome-base/libgnome-2.0.0
 	>=gnome-base/libgnomeui-2.0.0
