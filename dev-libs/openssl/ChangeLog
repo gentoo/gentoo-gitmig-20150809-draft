@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.14 2002/11/04 13:08:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.15 2002/11/25 17:06:46 raker Exp $
 
 *openssl-0.9.6g-r1 (04 Nov 2002)
+
+  25 Nov 2002; Nick Hadaway <raker@gentoo.org> openssl-0.9.6g-r1.ebuild :
+  Updated ebuild so the certs directory is created.
 
   04 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Changed openssldir to /etc as suggested by Corporate Gadfly <corporate_gadfly@hotmail.com> in #9315.

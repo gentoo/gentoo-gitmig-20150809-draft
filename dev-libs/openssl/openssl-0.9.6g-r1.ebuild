@@ -43,5 +43,11 @@ src_install() {
 	cd ${D}/usr/share/man/man3
 	mv rand.3 ssl-rand.3
 	ln -sf ssl-rand.3 openssl-rand.3
+
+	# create the certs directory.  Previous openssl builds
+	# would need to create /usr/lib/ssl/certs but this looks
+	# to be the more FHS compliant setup... -raker
+	dodir /etc/ssl/certs
+
 }
 
