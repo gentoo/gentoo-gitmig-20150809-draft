@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.3.13.ebuild,v 1.1 2002/05/01 14:35:57 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.3.14.ebuild,v 1.1 2002/05/15 01:39:13 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C++ interface for GTK+"
-SRC_URI="http://download.sourceforge.net/gtkmm/${P}.tar.gz"
+SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 SLOT="2"
