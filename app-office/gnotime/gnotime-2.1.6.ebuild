@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.1.6.ebuild,v 1.2 2003/08/27 09:03:24 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.1.6.ebuild,v 1.3 2003/09/06 22:21:01 msterret Exp $
 
 inherit gnome2
 
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/libgnome-2.0
 	dev-libs/libxml2
 	dev-util/guile
 	dev-libs/popt"
-	
+
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.91.ebuild,v 1.6 2003/07/02 11:45:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.91.ebuild,v 1.7 2003/09/06 22:21:01 msterret Exp $
 
 DESCRIPTION="Diagram Creation Program"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/${PV}/${P}.tar.gz"
@@ -23,7 +23,7 @@ DEPEND=">=x11-libs/gtk+-2.0.0
         		>=gnome-base/libgnomeui-2.0 )
 		python? ( >=dev-lang/python-2.0
 				>=dev-python/pygtk-1.99 )"
-		
+
 src_unpack() {
 	unpack ${A}
     # fix b0rked Makefile in Cisco directory
@@ -40,7 +40,7 @@ src_compile() {
 		|| myconf="--disable-gnome"
 
 	use python && myconf="${myconf} --with-python"
-    
+
 	econf ${myconf} || die
 	emake || die
 }
@@ -48,12 +48,12 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeLog README NEWS TODO KNOWN_BUGS
-    
+
     # fix .desktop link
     dodir /usr/share/applications
     mv ${D}/usr/share/gnome/apps/Applications/dia.desktop ${D}/usr/share/applications/dia.desktop
 	rmdir ${D}/usr/share/gnome/apps/Applications
     rmdir ${D}/usr/share/gnome/apps
 	echo "Categories=Application;GNOME;Office;" >> ${D}/usr/share/applications/dia.desktop
-    
+
 }

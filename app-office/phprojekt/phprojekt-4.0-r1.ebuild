@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/phprojekt/phprojekt-4.0-r1.ebuild,v 1.2 2003/07/02 11:45:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/phprojekt/phprojekt-4.0-r1.ebuild,v 1.3 2003/09/06 22:21:02 msterret Exp $
 
 # lid of download link
 MY_DOWNLOAD_ID=14
 
-use apache2 && HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache2/conf/apache2.conf | cut -d\  -f2`" 
-use apache2 && HTTPD_USER="`grep '^User' /etc/apache2/conf/commonapache2.conf | cut -d \  -f2`" 
+use apache2 && HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache2/conf/apache2.conf | cut -d\  -f2`"
+use apache2 && HTTPD_USER="`grep '^User' /etc/apache2/conf/commonapache2.conf | cut -d \  -f2`"
 use apache2 && HTTPD_GROUP="`grep '^Group' /etc/apache2/conf/commonapache2.conf | cut -d \  -f2`"
 
 use apache2 || HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
-use apache2 || HTTPD_USER="`grep '^User' /etc/apache/conf/commonapache.conf | cut -d \  -f2`" 
-use apache2 || HTTPD_GROUP="`grep '^Group' /etc/apache/conf/commonapache.conf | cut -d \  -f2`" 
-	
+use apache2 || HTTPD_USER="`grep '^User' /etc/apache/conf/commonapache.conf | cut -d \  -f2`"
+use apache2 || HTTPD_GROUP="`grep '^Group' /etc/apache/conf/commonapache.conf | cut -d \  -f2`"
+
 [ -z "${HTTPD_ROOT}" ] && HTTPD_ROOT="/home/httpd/htdocs"
 [ -z "${HTTPD_USER}" ] && HTTPD_USER="apache"
 [ -z "${HTTPD_GROUP}" ] && HTTPD_GROUP="apache"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90-r2.ebuild,v 1.7 2003/02/13 09:15:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90-r2.ebuild,v 1.8 2003/09/06 22:21:01 msterret Exp $
 
 DESCRIPTION="Diagram Creation Program"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
@@ -39,7 +39,7 @@ src_compile() {
 		|| myconf="${myconf} --enable-freetype"
 
 	use nls || myconf="${myconf} --disable-nls"
- 
+
 	# enable-gnome-print not recoomended
 
 	econf ${myconf}

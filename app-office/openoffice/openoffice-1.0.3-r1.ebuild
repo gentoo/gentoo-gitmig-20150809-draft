@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r1.ebuild,v 1.4 2003/09/04 02:29:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r1.ebuild,v 1.5 2003/09/06 22:21:02 msterret Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -188,7 +188,7 @@ pkg_setup() {
 		eerror "you could do the following:"
 		eerror
 		eerror " # export FORCE_JAVA=yes"
-		eerror 
+		eerror
 		die
 	fi
 
@@ -225,7 +225,7 @@ pkg_setup() {
 		ewarn "             falling back to default value !!!                  "
 		ewarn "****************************************************************"
 	fi
-	
+
 }
 
 oo_setup() {
@@ -310,7 +310,7 @@ src_unpack() {
 
 	# Debian patch to fix an xinteraction handler build error (Seth)
 	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-xinteraction-fix.patch
-	
+
 	# Get OO to build with freetype-2.1.3
 	einfo "Moving freetype-${FT_VER}.tar.bz2 in place ..."
 	cp ${DISTDIR}/freetype-${FT_VER}.tar.bz2 ${S}/freetype/download || die
@@ -320,7 +320,7 @@ src_unpack() {
 	# OK, copy the new patch in place, and fixup some other things ...
 	cp ${FILESDIR}/${PV}/freetype-${FT_VER}.patch ${S}/freetype || die
 	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-use-freetype-${FT_VER}.patch
-	
+
 	# Now for our optimization flags ...
 	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
 		${S}/solenv/inc/unxlngi3.mk
@@ -350,7 +350,7 @@ src_unpack() {
 		epatch $FILESDIR/${PV}/openoffice-1.0.3-sparc-gentoo.patch
 		epatch $FILESDIR/${PV}/openoffice-1.0.1-sparc.patch.bz2
 	fi
-	
+
 }
 
 get_EnvSet() {
@@ -388,7 +388,7 @@ src_compile() {
 		export CC="/usr/bin/ccache ${CC}"
 		export CXX="/usr/bin/ccache ${CXX}"
 	fi
-    
+
 	# Enable distcc for this build (Az)
 	if [ "${FEATURES/-distcc/}" = "${FEATURES}" -a \
 	     "${FEATURES/distcc/}" != "${FEATURES}" -a \
@@ -413,13 +413,13 @@ src_compile() {
 	./configure --enable-gcc3 \
 		--with-jdk-home=${JAVA_HOME} \
 		--with-x || die
-	
+
 	cd ${S}
 	get_EnvSet
 
 	# Set language
 	[ ${LENV} ] && echo "setenv ${LENV} \"true\"" >> ${S}/${LinuxEnvSet}
-	
+
 	# Do not include /usr/include in header search path, and
 	# same thing for internal gcc include dir, as gcc3 handles
 	# it correctly by default! (Az)
@@ -445,13 +445,13 @@ src_compile() {
 	else
 		buildcmd="${S}/solenv/bin/build.pl -all product=full"
 	fi
-		
+
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
 	then
 		# Set CCCOMP and CXXCOMP.  This is still needed for STLport
 		echo "setenv CCCOMP \"${CC}\"" >> ${S}/${LinuxEnvSet}
 		echo "setenv CXXCOMP \"${CXX}\"" >> ${S}/${LinuxEnvSet}
-	fi 
+	fi
 
 	if [ "$(gcc-major-version)" -eq 3 ]
 	then
@@ -520,7 +520,7 @@ src_install() {
 		${S}/instsetoo/unxlngs.pro/${LANGUAGE}/normal/README
 	fi
 
-	
+
 	# The install part should now be relatively OK compared to
 	# what it was.  Basically we use autoresponse files to install
 	# unattended, running under a Xvfb if needed.  Afterwards we
@@ -543,7 +543,7 @@ src_install() {
 		[JAVA]
 		JavaSupport=preinstalled_or_none
 	END_RS
-	
+
 	# Autoresponse file for user isntallation
 	cat > ${T}/rsfile-local <<-"END_RS"
 		[ENVIRONMENT]
@@ -593,7 +593,7 @@ src_install() {
 	insinto /etc/openoffice
 	sed -e "s|<pv>|${PV}|g" ${T}/rsfile-local > ${T}/autoresponse.conf
 	doins ${T}/autoresponse.conf
-	
+
 	# Install wrapper script
 	exeinto /usr/bin
 	sed -e "s|<pv>|${PV}|g" \
@@ -602,7 +602,7 @@ src_install() {
 	sed -e "s|/soffice|/spadmin|g" \
 		${T}/ooffice > ${T}/oopadmin
 	doexe ${T}/oopadmin
-	
+
 	# Component symlinks
 	dosym ooffice /usr/bin/oocalc
 	dosym ooffice /usr/bin/oodraw
@@ -618,7 +618,7 @@ src_install() {
 		# Install the files needed for the catagory
 		doins ${D}${INSTDIR}/share/gnome/net/.directory
 		doins ${D}${INSTDIR}/share/gnome/net/.order
-		
+
 		for x in ${D}${INSTDIR}/share/gnome/net/*.desktop
 		do
 			# We have to handle setup differently
@@ -632,10 +632,10 @@ src_install() {
 	if [ -n "`use kde`" ]
 	then
 		local kdeloc="${D}${INSTDIR}/share/kde/net/applnk/OpenOffice.org${PV}"
-	
+
 		# Portage do not work with the space ..
 		mv ${D}${INSTDIR}/share/kde/net/applnk/OpenOffice.org\ ${PV} ${kdeloc}
-		
+
 		insinto /usr/share/applnk/OpenOffice.org
 		# Install the files needed for the catagory
 		doins ${kdeloc}/.directory
@@ -643,7 +643,7 @@ src_install() {
 		dodir /usr/share
 		# Install the icons and mime info
 		cp -a ${D}${INSTDIR}/share/kde/net/mimelnk/share/* ${D}/usr/share
-		
+
 		for x in ${kdeloc}/*.desktop
 		do
 			# We have to handle setup differently
@@ -689,7 +689,7 @@ pkg_postinst() {
 	einfo
 	einfo " If the fonts appear garbled in the user interface refer to "
 	einfo " Bug 8539, or http://www.openoffice.org/FAQs/fontguide.html#8"
-	einfo 
+	einfo
 	einfo "******************************************************************"
-}   
+}
 

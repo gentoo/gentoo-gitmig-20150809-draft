@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.9.ebuild,v 1.2 2003/07/09 17:08:54 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.9.ebuild,v 1.3 2003/09/06 22:21:01 msterret Exp $
 
 
 inherit gnome2
@@ -26,5 +26,5 @@ RDEPEND=">=x11-libs/gtk+-2.0.5
 	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0" 
+	>=dev-util/pkgconfig-0.12.0"
 DOCS="AUTHORS COPYING ChangeL* INSTALL NEWS  README*"

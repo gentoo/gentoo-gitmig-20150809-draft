@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.1.ebuild,v 1.14 2003/08/01 20:29:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.1.ebuild,v 1.15 2003/09/06 22:21:01 msterret Exp $
 
 inherit flag-o-matic
 
@@ -18,7 +18,7 @@ IUSE="nls cups debug"
 # else that lyx can use.
 DEPEND="virtual/x11
 	=x11-libs/xforms-1*
-	app-text/tetex 
+	app-text/tetex
 	>=dev-lang/perl-5
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus"

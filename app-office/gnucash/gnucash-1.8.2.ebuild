@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2.ebuild,v 1.3 2003/07/09 16:37:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2.ebuild,v 1.4 2003/09/06 22:21:01 msterret Exp $
 
 # FIXME - ebuild needs a good look at
 
@@ -25,7 +25,7 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	<gnome-base/libglade-2
 	media-libs/gdk-pixbuf
 	>=dev-libs/g-wrap-1.3.4
-	<dev-util/guile-1.4.1	
+	<dev-util/guile-1.4.1
 	postgres? ( dev-db/postgresql )"
 
 DEPEND="${RDEPEND}

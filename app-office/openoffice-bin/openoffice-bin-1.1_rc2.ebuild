@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_rc2.ebuild,v 1.2 2003/08/04 15:52:50 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_rc2.ebuild,v 1.3 2003/09/06 22:21:02 msterret Exp $
 
 IUSE="kde gnome"
 
@@ -20,7 +20,7 @@ if [ `use ppc` ]; then
 	MY_P="OOo_${MY_PV}_LinuxPPC_installer"
 S="${WORKDIR}/${MY_P}"
 else
-	MY_P="OOo_${MY_PV}_LinuxIntel_install" 
+	MY_P="OOo_${MY_PV}_LinuxIntel_install"
 	S="${WORKDIR}/${MY_P}"
 fi;
 
@@ -57,9 +57,9 @@ src_install() {
 	addpredict "/share"
 	addpredict "/pspfontcache"
 	addpredict "/usr/bin/soffice"
-	
+
 	# Sandbox issues; bug 8063
-	addpredict "/dev/dri"	
+	addpredict "/dev/dri"
 
 	# Autoresponse file for main installation
 	cat > ${T}/rsfile-global <<-"END_RS"
@@ -74,7 +74,7 @@ src_install() {
 		[JAVA]
 		JavaSupport=preinstalled_or_none
 	END_RS
-	
+
 	# Autoresponse file for user isntallation
 	cat > ${T}/rsfile-local <<-"END_RS"
 		[ENVIRONMENT]
@@ -124,7 +124,7 @@ src_install() {
 	insinto /etc/openoffice
 	sed -e "s|<pv>|${PV//_rc2}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
 	doins ${T}/autoresponse-${PV}.conf
-	
+
 	# Install wrapper script
 	exeinto /usr/bin
 	sed -e "s|<pv>|${PV}|g" \
@@ -172,7 +172,7 @@ src_install() {
 		dodir /usr/share
 		# Install the icons and mime info
 		cp -r ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
-		
+
 		for x in ${kdeloc}/*.desktop
 		do
 			# We have to handle setup differently
@@ -211,7 +211,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	
+
 	einfo "******************************************************************"
 	einfo " To start OpenOffice.org, run:"
 	einfo

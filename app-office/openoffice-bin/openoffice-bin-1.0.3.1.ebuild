@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.3.1.ebuild,v 1.1 2003/06/08 12:03:44 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.3.1.ebuild,v 1.2 2003/09/06 22:21:02 msterret Exp $
 
 IUSE="kde gnome"
 
@@ -19,7 +19,7 @@ if [ `use ppc` ]; then
 	MY_P="OOo_${MY_PV}_LinuxPowerPC_installer"
 	S="${WORKDIR}/${MY_P}"
 else
-	MY_P="OOo_${MY_PV}_LinuxIntel_install" 
+	MY_P="OOo_${MY_PV}_LinuxIntel_install"
 	S="${WORKDIR}/install"
 fi;
 
@@ -47,9 +47,9 @@ src_install() {
 	# Sandbox issues; bug #8587
 	addpredict "/user"
 	addpredict "/share"
-	
+
 	# Sandbox issues; bug 8063
-	addpredict "/dev/dri"	
+	addpredict "/dev/dri"
 
 	# Autoresponse file for main installation
 	cat > ${T}/rsfile-global <<-"END_RS"
@@ -64,7 +64,7 @@ src_install() {
 		[JAVA]
 		JavaSupport=preinstalled_or_none
 	END_RS
-	
+
 	# Autoresponse file for user isntallation
 	cat > ${T}/rsfile-local <<-"END_RS"
 		[ENVIRONMENT]
@@ -119,7 +119,7 @@ src_install() {
 	insinto /etc/openoffice
 	sed -e "s|<pv>|${PV//.1/}|g" ${T}/rsfile-local > ${T}/autoresponse.conf
 	doins ${T}/autoresponse.conf
-	
+
 	# Install wrapper script
 	exeinto /usr/bin
 	sed -e "s|<pv>|${PV//.1/}|g" \
@@ -141,7 +141,7 @@ src_install() {
 		# Install the files needed for the catagory
 		doins ${D}${INSTDIR}/share/gnome/net/.directory
 		doins ${D}${INSTDIR}/share/gnome/net/.order
-		
+
 		for x in ${D}${INSTDIR}/share/gnome/net/*.desktop
 		do
 			# We have to handle setup differently
@@ -158,7 +158,7 @@ src_install() {
 
 		# Portage do not work with the space ..
 		mv ${D}${INSTDIR}/share/kde/net/applnk/OpenOffice.org\ ${PV//.1/} ${kdeloc}
-		
+
 		insinto /usr/share/applnk/OpenOffice.org
 		# Install the files needed for the catagory
 		doins ${kdeloc}/.directory
@@ -166,7 +166,7 @@ src_install() {
 		dodir /usr/share
 		# Install the icons and mime info
 		cp -a ${D}${INSTDIR}/share/kde/net/mimelnk/share/* ${D}/usr/share
-		
+
 		for x in ${kdeloc}/*.desktop
 		do
 			# We have to handle setup differently
@@ -205,7 +205,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	
+
         einfo "******************************************************************"
         einfo " To start OpenOffice.org, run:"
         einfo

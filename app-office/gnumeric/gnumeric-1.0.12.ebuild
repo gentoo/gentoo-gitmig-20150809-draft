@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.12.ebuild,v 1.9 2003/06/10 13:29:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.12.ebuild,v 1.10 2003/09/06 22:21:01 msterret Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -34,7 +34,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	libgda? ( <gnome-extra/libgda-0.10.0
 	          >=gnome-base/bonobo-1.0.17 )
 	evo?    ( >=net-mail/evolution-0.13 )"
-	 
+
 #will only work once everybody has decided that they should support
 #the latest versions of programs, or if we live in a perfect world,
 #and subsequent versions do not break compatibility.
@@ -103,12 +103,12 @@ src_compile() {
 
 	#the build process have to be able to connect to X
 	Xemake || Xmake || die
-}	
+}
 
 src_install() {
 	# keep scrollkeeper happy
 	dodir /var/lib/scrollkeeper
-	
+
   	make prefix=${D}/usr \
 		sysconfdir=${D}/etc \
 		scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper \

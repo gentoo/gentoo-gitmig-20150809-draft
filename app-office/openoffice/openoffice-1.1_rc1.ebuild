@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_rc1.ebuild,v 1.4 2003/08/17 18:03:39 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_rc1.ebuild,v 1.5 2003/09/06 22:21:02 msterret Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -135,7 +135,7 @@ pkg_setup() {
 		eerror "you could do the following:"
 		eerror
 		eerror " # export FORCE_JAVA=yes"
-		eerror 
+		eerror
 		die
 	fi
 
@@ -164,7 +164,7 @@ oo_setup() {
 			export GCC_PROFILE="$(/usr/sbin/gcc-config --get-current-profile)"
 
 			# Just recheck gcc version ...
-			if [ "$(gcc-version)" != "3.2" ] 
+			if [ "$(gcc-version)" != "3.2" ]
 			then
 				# See if we can get a gcc profile we know is proper ...
 				if /usr/sbin/gcc-config --get-bin-path ${CHOST}-3.2.1 &> /dev/null
@@ -258,8 +258,8 @@ src_compile() {
 		export CC="/usr/bin/ccache/ccache ${CC}"
 		export CXX="/usr/bin/ccache/ccache ${CXX}"
 	fi
-    
-	# Enable new ccache for this build 
+
+	# Enable new ccache for this build
 	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
 	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
 	     -x /usr/bin/ccache ]
@@ -269,7 +269,7 @@ src_compile() {
 		export CC="/usr/bin/ccache ${CC}"
 		export CXX="/usr/bin/ccache ${CXX}"
 	fi
-    
+
 	# Enable distcc for this build (Az)
 	if [ "${FEATURES/-distcc/}" = "${FEATURES}" -a \
 	     "${FEATURES/distcc/}" != "${FEATURES}" -a \
@@ -294,10 +294,10 @@ src_compile() {
 		--with-jdk-home=${JAVA_HOME} \
 		--with-lang=ALL\
 		--with-x || die
-	
+
 	cd ${S}
 	get_EnvSet
-	
+
 	# Do not include /usr/include in header search path, and
 	# same thing for internal gcc include dir, as gcc3 handles
 	# it correctly by default! (Az)
@@ -323,13 +323,13 @@ src_compile() {
 	else
 		buildcmd="${S}/solenv/bin/build.pl -all product=full"
 	fi
-		
+
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
 	then
 		# Set CCCOMP and CXXCOMP.  This is still needed for STLport
 		echo "setenv CCCOMP \"${CC}\"" >> ${S}/${LinuxEnvSet}
 		echo "setenv CXXCOMP \"${CXX}\"" >> ${S}/${LinuxEnvSet}
-	fi 
+	fi
 
 	if [ "$(gcc-major-version)" -eq 3 ]
 	then
@@ -379,7 +379,7 @@ src_install() {
 	addpredict "/share"
 	addpredict "/dev/dri"
 	addpredict "/usr/bin/soffice"
-	addpredict "/pspfontcache"	
+	addpredict "/pspfontcache"
 
 	# This allows us to change languages without editing the ebuild.
 	#
@@ -393,7 +393,7 @@ src_install() {
 	[ -z "${LANGUAGE}" ] && LANGUAGE=01
 
 	get_EnvSet
-	
+
 	# The install part should now be relatively OK compared to
 	# what it was.  Basically we use autoresponse files to install
 	# unattended, running under a Xvfb if needed.  Afterwards we
@@ -416,7 +416,7 @@ src_install() {
 		[JAVA]
 		JavaSupport=preinstalled_or_none
 	END_RS
-	
+
 	# Autoresponse file for user isntallation
 	cat > ${T}/rsfile-local <<-"END_RS"
 		[ENVIRONMENT]
@@ -466,7 +466,7 @@ src_install() {
 	insinto /etc/openoffice
 	sed -e "s|<pv>|${PV//_beta2}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
 	doins ${T}/autoresponse-${PV}.conf
-	
+
 	# Install wrapper script
 	exeinto /usr/bin
 	sed -e "s|<pv>|${PV}|g" \
@@ -489,7 +489,7 @@ src_install() {
 		# Install the files needed for the catagory
 		doins ${D}${INSTDIR}/share/gnome/net/.directory
 		doins ${D}${INSTDIR}/share/gnome/net/.order
-		
+
 		for x in ${D}${INSTDIR}/share/gnome/net/*.desktop
 		do
 			# We have to handle setup differently
@@ -503,7 +503,7 @@ src_install() {
 	if [ -n "`use kde`" ]
 	then
 		local kdeloc="${D}${INSTDIR}/share/kde/net/"
-	
+
 		insinto /usr/share/applnk/OpenOffice.org\ 1.1
 		# Install the files needed for the catagory
 		doins ${kdeloc}/.directory
@@ -511,7 +511,7 @@ src_install() {
 		dodir /usr/share
 		# Install the icons and mime info
 		cp -a ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
-		
+
 		for x in ${kdeloc}/*.desktop
 		do
 			# We have to handle setup differently
@@ -550,7 +550,7 @@ pkg_postinst() {
 	einfo
 	einfo " If the fonts appear garbled in the user interface refer to "
 	einfo " Bug 8539, or http://www.openoffice.org/FAQs/fontguide.html#8"
-	einfo 
+	einfo
 	einfo "******************************************************************"
-}   
+}
 

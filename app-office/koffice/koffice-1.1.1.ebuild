@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.18 2003/07/22 20:10:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.19 2003/09/06 22:21:01 msterret Exp $
 
 inherit kde-base
 
@@ -35,10 +35,10 @@ src_compile() {
     kde_src_compile myconf configure
     export LIBPYTHON="`python-config --libs`"
 
-    # the dir kchar/kdchart cannot be compiled with the 
+    # the dir kchar/kdchart cannot be compiled with the
 	# -fomit-frame-pointer flag present
     kde_remove_flag kchart/kdchart -fomit-frame-pointer
-	
+
     kde_src_compile make
-	
+
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnofin/gnofin-0.8.4.ebuild,v 1.9 2003/02/13 09:15:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnofin/gnofin-0.8.4.ebuild,v 1.10 2003/09/06 22:21:01 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a personal finance application for GNOME"
@@ -25,7 +25,7 @@ src_compile() {
 	emake || die
 }
 
-src_install() {                               
+src_install() {
 	make prefix=${D}/usr						\
 	     sysconfdir=${D}/etc					\
 	     localstatedir=${D}/var/lib install || die

@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13-r1.ebuild,v 1.3 2003/08/22 17:38:17 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13-r1.ebuild,v 1.4 2003/09/06 22:21:01 msterret Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -34,7 +34,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	          >=gnome-base/bonobo-1.0.17 )
 	evo?    ( <net-mail/evolution-1.3 )
 	guile?  ( >=dev-util/guile-1.6 )"
-	 
+
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.11"
@@ -96,7 +96,7 @@ src_compile() {
 
 	#the build process have to be able to connect to X
 	Xemake || Xmake || die
-}	
+}
 
 src_install() {
 	# keep scrollkeeper happy
@@ -109,7 +109,7 @@ src_install() {
 
 	# regenerate these outside sandbox
 	rm -rf ${D}/var/lib/scrollkeeper
-	
+
   	dodoc AUTHORS COPYING *ChangeLog HACKING NEWS README TODO
 }
 

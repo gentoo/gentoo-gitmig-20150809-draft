@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.5.ebuild,v 1.3 2003/08/24 03:02:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.5.ebuild,v 1.4 2003/09/06 22:21:01 msterret Exp $
 
 DESCRIPTION="A set of libraries and utilities for reading Microsoft Access database (MDB) files"
 HOMEPAGE="http://sourceforge.net/projects/mdbtools/"
@@ -34,7 +34,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc COPYING* NEWS README* TODO AUTHORS HACKING ChangeLog
-	
+
 	# add a compat symlink
 	dosym /usr/bin/gmdb2 /usr/bin/gmdb
 }

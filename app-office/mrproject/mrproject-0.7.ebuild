@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.7.ebuild,v 1.3 2003/07/09 17:08:54 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.7.ebuild,v 1.4 2003/09/06 22:21:01 msterret Exp $
 
 DESCRIPTION="Project manager for Gnome2"
 SRC_URI="ftp://ftp.codefactory.se/pub/software/mrproject/source/${P}.tar.gz"
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.0.5
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
-	doc? ( >=dev-util/gtk-doc-0.9-r2 )" 
+	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
 
 src_compile() {
 	local myconf
@@ -36,5 +36,5 @@ src_compile() {
 
 src_install() {
 	einstall
-	dodoc AUTHORS COPYING ChangeL* INSTALL NEWS  README* 
+	dodoc AUTHORS COPYING ChangeL* INSTALL NEWS  README*
 }

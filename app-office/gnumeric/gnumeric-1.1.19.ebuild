@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.19.ebuild,v 1.1 2003/06/08 19:31:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.19.ebuild,v 1.2 2003/09/06 22:21:01 msterret Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils debug
@@ -27,7 +27,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/libxml2-2.4.12
 	>=gnome-extra/libgsf-1.8.1
 	>=media-libs/libart_lgpl-2.3.11
-	python? ( >=dev-lang/python-2.0 
+	python? ( >=dev-lang/python-2.0
 		>=dev-python/pygtk-1.99.10 )
 	libgda? ( >=gnome-extra/libgda-0.10 )
 	bonobo? ( >=gnome-base/libbonobo-2

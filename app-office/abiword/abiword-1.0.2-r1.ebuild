@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.2-r1.ebuild,v 1.11 2003/06/10 13:26:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.2-r1.ebuild,v 1.12 2003/09/06 22:21:01 msterret Exp $
 
 IUSE="perl nls gnome build spell jpeg xml2"
 
@@ -40,7 +40,7 @@ src_unpack() {
 	use perl && ( \
 		fix_perl_env
 
-		# Fix perl stuff install outside sandbox, as well as a bug in 
+		# Fix perl stuff install outside sandbox, as well as a bug in
 		# Abiword's build system (Abiword.3pm did not install, and
 		# the '.packlist' was not generated properly) -- Azarah (25/02/2002).
 		cd ${S}/src/bindings/perl
@@ -87,7 +87,7 @@ src_compile() {
 
 	use perl \
 		&& myconf="${myconf} --enable-scripting"
-	
+
 	use spell \
 		&& myconf="${myconf} --with-pspell"
 
@@ -96,16 +96,16 @@ src_compile() {
 
 	use jpeg \
 		&& myconf="${myconf} --with-libjpeg"
-	
+
 	use nls \
 		&& myconf="${myconf} --enable-bidi"
 
 	./autogen.sh
-	
+
 	einfo "Ignore above ERROR as it does not cause build to fail."
 
 	CFLAGS="${CFLAGS} `gdk-pixbuf-config --cflags`"
-	
+
 	econf \
 		--enable-extra-optimization \
 		${myconf}
@@ -120,9 +120,9 @@ src_install() {
 	dodir /usr/{bin,lib}
 
 	einstall PERLDEST=${D}
-	
+
 	dosed "s:${D}::g" /usr/bin/AbiWord
-	
+
 	rm -f ${D}/usr/bin/abiword
 	dosym /usr/bin/AbiWord /usr/bin/abiword
 

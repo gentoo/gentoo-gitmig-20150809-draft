@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.0.19.ebuild,v 1.6 2003/07/02 11:45:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.0.19.ebuild,v 1.7 2003/09/06 22:21:02 msterret Exp $
 
 MY_P=${P/tex/TeX}-src
 S=${WORKDIR}/${MY_P}
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 	app-text/ghostscript"
 
 src_compile() {
-	
+
 	econf
 	sed -i "s:\(^CXXOPTIMIZE = \).*:\1${CXXFLAGS}:" src/common.makefile
 
@@ -34,11 +34,11 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die
-	
+
 	cd ${WORKDIR}
 	dodir /usr/share/texmf
 	cp -r fonts ${D}/usr/share/texmf/
-	
+
 	cd ${S}
 	dodoc COMPILE COPYING LICENSE
 }
