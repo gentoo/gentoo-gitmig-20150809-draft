@@ -1,6 +1,6 @@
 # ChangeLog for net-ftp/pure-ftpd
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.10 2003/02/09 22:09:17 raker Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.11 2003/02/12 07:59:06 vapier Exp $
 
 *pure-ftpd-1.0.14 (09 Feb 2003)
 
