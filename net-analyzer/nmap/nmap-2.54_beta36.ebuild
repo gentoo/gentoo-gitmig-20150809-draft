@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-2.54_beta36.ebuild,v 1.5 2002/08/14 12:12:28 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-2.54_beta36.ebuild,v 1.6 2002/10/04 05:59:13 vapier Exp $
 
 MY_P="${P/_beta/BETA}"
 S=${WORKDIR}/${MY_P}

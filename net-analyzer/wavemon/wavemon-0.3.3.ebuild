@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wavemon/wavemon-0.3.3.ebuild,v 1.5 2002/08/20 04:08:05 gerk Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wavemon/wavemon-0.3.3.ebuild,v 1.6 2002/10/04 06:00:10 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ncurses based monitor util for your wavelan cards"
