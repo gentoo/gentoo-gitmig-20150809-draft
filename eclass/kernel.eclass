@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.1 2002/09/22 00:51:07 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.2 2002/09/22 01:17:06 lostlogic Exp $
 ECLASS=kernel
-EXPORT_FUNCTIONS src_unpack
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
 
@@ -39,7 +39,7 @@ kernel_exclude() {
 	done
 }
 
-src_unpack() {
+kernel_src_unpack() {
 
 	kernel_exclude
 
@@ -66,7 +66,7 @@ src_unpack() {
 	make include/linux/version.h || die
 }
 
-src_compile() {
+kernel_src_compile() {
 	if [ "$ETYPE" = "headers" ]
 	then
 		yes "" | make oldconfig		
@@ -74,7 +74,7 @@ src_compile() {
 	fi
 }
 
-src_install() {
+kernel_src_install() {
 	if [ "$ETYPE" = "sources" ]
 	then
 		dodir /usr/src
@@ -92,7 +92,7 @@ src_install() {
 	fi
 }
 
-pkg_preinst() {
+kernel_pkg_preinst() {
 	if [ "$ETYPE" = "headers" ] 
 	then
 		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
@@ -101,7 +101,7 @@ pkg_preinst() {
 	fi
 }
 
-pkg_postinst() {
+kernel_pkg_postinst() {
 	[ "$ETYPE" = "headers" ] && return
 	if [ ! -e ${ROOT}usr/src/linux ]
 	then
