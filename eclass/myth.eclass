@@ -1,9 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.7 2005/02/21 01:44:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.8 2005/02/21 22:55:08 eradicator Exp $
 #
 # Author: Daniel Ahlberg <aliz@gentoo.org>
 #
+
+inherit multilib
 
 ECLASS=myth
 INHERITED="${INHERITED} ${ECLASS}"
@@ -37,12 +39,12 @@ myth_src_unpack() {
                         -i 'settings.pro' || die "enable debug failed"
 	fi
 
+	setup_pro
+
 	find ${S} -name '*.pro' -exec sed -i \
 		-e "s:\$\${PREFIX}/lib/:\$\${PREFIX}/$(get_libdir)/:g" \
 		-e "s:\$\${PREFIX}/lib$:\$\${PREFIX}/$(get_libdir):g" \
 		{} \;
-
-	setup_pro
 }
 
 myth_src_compile() {
