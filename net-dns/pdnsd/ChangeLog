@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/pdnsd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.10 2003/03/10 08:25:32 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.11 2004/02/02 16:59:39 dragonheart Exp $
+
+*pdnsd-1.1.9 (03 Feb 2004)
+
+  03 Feb 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  pdnsd-1.1.6-r7.ebuild, pdnsd-1.1.7a.ebuild, pdnsd-1.1.9.ebuild,
+  files/pdnsd.online:
+  Version bump to include many patches. Adds pdnsd-online init-script too.
+  Fixes bug #20450.
 
   09 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> files/pdnsd.rc6 : 
   Fixed typo in init file. Closes #16881.
