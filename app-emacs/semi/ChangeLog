@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/semi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.8 2003/12/20 02:53:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.9 2003/12/25 12:19:51 usata Exp $
+
+*semi-1.14.6 (25 Dec 2003)
+
+  25 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> semi-1.14.6.ebuild:
+  Version bumped
 
 *semi-1.14.6_pre20031218 (20 Dec 2003)
 
