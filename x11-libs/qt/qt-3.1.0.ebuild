@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0.ebuild,v 1.1 2002/11/14 19:36:04 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0.ebuild,v 1.2 2002/11/15 15:12:16 hannes Exp $
 
 IUSE="cups nas postgres opengl mysql odbc gif"
 
@@ -38,10 +38,14 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	# this patch fixes child windows being hidden randomly.
+	patch -p0 < ${FILESDIR}/${P}-minimized.diff
+
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
 	
-	cd ${S}/mkspecs/linux-g++
+	cd mkspecs/linux-g++
 	# use env's $CC, $CXX
 	if [ -n "$CXX" ]; then
 	    einfo 'Using environment definition of $CXX'
