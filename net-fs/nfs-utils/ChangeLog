@@ -1,8 +1,11 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.14 2003/03/30 21:37:56 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.15 2003/04/17 01:13:51 gmsoft Exp $
 
 *nfs-utils-1.0.3 (27 Mar 2003)
+
+  17 Apr 2003; Guy Martin <gmsoft@gentoo.org> nfs-utils-1.0.3.ebuild :
+  Added ~hppa to KEYWORDS.
 
   27 Mar 2003; Brandon Low <lostlogic@gentoo.org> nfs-utils-1.0.3.ebuild:
   Bump to latest released today
