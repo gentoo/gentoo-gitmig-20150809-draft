@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/oroborus
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.18 2004/07/03 12:50:36 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.19 2005/02/03 12:49:04 gustavoz Exp $
+
+  03 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> oroborus-2.0.13.ebuild:
+  To ~sparc
 
   03 Jul 2004; Tom Martin <slarti@gentoo.org> oroborus-2.0.13.ebuild:
   Added to ~amd64.
