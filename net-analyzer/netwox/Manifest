@@ -1,8 +1,20 @@
-MD5 eaf3233c80f3a61275b699bdd7be33e0 ChangeLog 1605
-MD5 595b8dd3c2b25d617085a633221eecf1 metadata.xml 257
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0408fd507666ebeb4ea8b0ad6af9aeb4 netwox-5.6.0.ebuild 894
+MD5 9d284b5b0e039f919fcd4cf95756d96c netwox-5.29.0.ebuild 1035
+MD5 0317adaaabdf96623546acf979c6164f ChangeLog 1740
+MD5 595b8dd3c2b25d617085a633221eecf1 metadata.xml 257
 MD5 daf33f6e8a40fbdd5d109306a67485a7 netwox-5.9.0.ebuild 900
 MD5 0cd91d1df2d474f3824d2b90f6b6f35c netwox-5.28.0.ebuild 1007
 MD5 0bb1f25dabdb18874328e880eef930a3 files/digest-netwox-5.6.0 65
 MD5 93834a182ad80699bc2f58f8f45958fc files/digest-netwox-5.9.0 65
 MD5 a035a340ad76b6fcae68f450b4c80076 files/digest-netwox-5.28.0 66
+MD5 ab0ad2d48129adf261fe4f6a7080be22 files/digest-netwox-5.29.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCSr3pEZCkKN40op4RAuIUAJ9ipSUpQ6vjKsOQVssfhubOR4QygwCdFUcC
+HD9t6QZO1+Ygebu7Apk8gSo=
+=8ciA
+-----END PGP SIGNATURE-----
