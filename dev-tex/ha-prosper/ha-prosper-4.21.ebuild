@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ha-prosper-4.21.ebuild,v 1.3 2004/10/15 16:07:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ha-prosper-4.21.ebuild,v 1.4 2005/04/06 04:04:19 usata Exp $
 
 inherit latex-package
 
@@ -10,10 +10,10 @@ HOMEPAGE="http://stuwww.uvt.nl/~hendri/Downloads/haprosper.html"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ppc"
 DEPEND="virtual/tetex
 	>=dev-tex/prosper-1.5
-	dev-tex/xkeyval"
+	|| ( dev-tex/xkeyval >=app-text/tetex-3 >=app-text/ptex-3.1.8 )"
 S=${WORKDIR}/${PN}
 IUSE=""
 
