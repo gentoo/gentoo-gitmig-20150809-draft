@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/raidutils
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.1 2005/01/10 21:59:01 xmerlin Exp $
+
+*raidutils-0.0.5 (10 Jan 2005)
+
+  10 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
+  +raidutils-0.0.5.ebuild, raidutils-0.0.5-i2octl-fixpath.patch:
+  added to portage, fixed i2octl path /dev/i2o/ctl -> /dev/i2octl
+

@@ -1,0 +1,4 @@
+MD5 6b2a95b826d212207a259717f1c7c6e2 metadata.xml 643
+MD5 4daf0a98b5b13944940e93bb8ce9e971 raidutils-0.0.5.ebuild 652
+MD5 4099a4c6960a610930541d55d9bb4e5d files/raidutils-0.0.5-i2octl-fixpath.patch 1597
+MD5 2e881a5176df7cf66a9c291521480d9b files/digest-raidutils-0.0.5 68

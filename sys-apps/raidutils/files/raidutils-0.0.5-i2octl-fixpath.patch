@@ -1,0 +1,36 @@
+--- raidutils-0.0.5/raideng/osd_unix.cpp.chris	2005-01-04 03:09:59.848442592 +0100
++++ raidutils-0.0.5/raideng/osd_unix.cpp	2005-01-04 03:10:41.000000000 +0100
+@@ -1232,7 +1232,7 @@
+ #elif defined (_DPT_SCO) || defined (SNI_MIPS) || defined(_DPT_SOLARIS) || defined(_DPT_BSDI) || defined(_DPT_FREE_BSD) || defined(_DPT_LINUX)
+ 
+ #if defined(_DPT_LINUX_I2O)
+-		     if(strcmp(HbaDevs[HbaNum].NodeName, "/dev/i2o/ctl"))
++		     if(strcmp(HbaDevs[HbaNum].NodeName, "/dev/i2octl"))
+                         i = ioctl(FileID,I2OUSRCMD,IoctlBuffer_P);
+ 		     else {
+                         struct i2o_cmd_passthru pt;
+@@ -2144,7 +2144,7 @@
+                        i = 0;
+                 }
+ #elif defined(_DPT_LINUX_I2O)
+-                if(strcmp(HbaDevs[Count].NodeName, "/dev/i2o/ctl"))
++                if(strcmp(HbaDevs[Count].NodeName, "/dev/i2octl"))
+                    i = osdSendIoctl(&HbaDevs[Count],DPT_CTRLINFO,DataBuff,&pkt);
+ 		else {
+ 		   /*
+@@ -3745,13 +3745,13 @@
+ #  if (defined(_DPT_LINUX_I2O))
+    memset(&pkt, 0, sizeof(EATA_CP));
+    HbaDevs[NumEntries].Flags = 0;
+-   strcpy(HbaDevs[NumEntries].NodeName, "/dev/i2o/ctl");
++   strcpy(HbaDevs[NumEntries].NodeName, "/dev/i2octl");
+    IoctlRtn = osdSendIoctl(&HbaDevs[NumEntries], I2OGETIOPS, (uCHAR *)&NumEntries, &pkt);
+    if(!IoctlRtn) {
+      for(i = 0; i < NumEntries; i ++) {
+        HbaDevs[i].Flags = NODE_FILE_VALID_HBA_B | NODE_FILE_I2O_HBA_B;
+        HbaDevs[i].IoAddress = UINTPTR_MAX;
+-       strcpy(HbaDevs[i].NodeName, "/dev/i2o/ctl");
++       strcpy(HbaDevs[i].NodeName, "/dev/i2octl");
+      }
+    }
+ #  endif
