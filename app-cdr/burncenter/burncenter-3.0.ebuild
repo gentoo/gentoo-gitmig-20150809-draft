@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.0.ebuild,v 1.8 2003/09/05 22:57:43 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/burncenter-3.0.ebuild,v 1.9 2004/02/24 05:32:08 eradicator Exp $
 
 DESCRIPTION="Easy-to-use text based interface to the UNIX CD burning tools"
 HOMEPAGE="http://alx14.free.fr/burncenter/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
 	>=app-cdr/cdrtools-1.11
-	>=media-sound/mpg123-0.59
+	virtual/mpg123
 	oggvorbis? (
 		>=media-sound/vorbis-tools-1.0_rc2
 		>=media-sound/oggtst-0.0 )"
