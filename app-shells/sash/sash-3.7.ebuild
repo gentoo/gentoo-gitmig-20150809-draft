@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.14 2004/10/04 23:38:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.15 2004/10/31 04:40:59 solar Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/sash-3.6-fix-includes.patch
+	epatch ${FILESDIR}/sash-3.7-builtin.patch
 	use readline && epatch ${FILESDIR}/sash-3.6-readline.patch
 
 	# this indicates broken header files but don't know what to do

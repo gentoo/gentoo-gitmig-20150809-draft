@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/sash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.31 2004/09/13 20:40:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.32 2004/10/31 04:40:59 solar Exp $
+
+  31 Oct 2004; <solar@gentoo.org> +files/sash-3.7-builtin.patch,
+  sash-3.7.ebuild:
+  sash command line will segv/core with -c Ax12000bytes
 
   13 Sep 2004; Guy Martin <gmsoft@gentoo.org> sash-3.7.ebuild:
   Stable on hppa.
