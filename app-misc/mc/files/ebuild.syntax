@@ -67,7 +67,8 @@ context default
     keyword whole prepallinfo yellow
     keyword whole prepallman yellow
 
-    keyword \= yellow
+    keyword = yellow
+    keyword : yellow
     keyword ${+} brightgreen
 
     keyword linestart abcdefghijklmnopqrstuvwxyz_\(\) brightmagenta
@@ -80,8 +81,7 @@ context default
 context linestart inherit \n magenta
     keyword whole inherit yellow
 
-
 context # \n red
 
 context " " green
-    keyword ${+} brightgreen
+    keyword wholeright ${+} brightgreen

@@ -14,7 +14,7 @@ MD5 23a5069637af088015fe5f0de8c42883 files/mc-4.6.0-can-2004-0226-0231-0232.patc
 MD5 835695dda387b59a2497658f3f5af1d5 files/mc.gentoo 322
 MD5 9f528fa7b6b4d2c202ce5f4e3a5173ba files/chdir-4.6.0.gentoo 159
 MD5 2a6c3ed30597eadaa19a6dbdd3ce168d files/mc-4.6.0-cpan-2003-1023.patch 475
-MD5 302542a79969c12c92fc646cf11fff9c files/ebuild.syntax 2558
+MD5 33aafc4a9c8134eb13d62fed6b81888e files/ebuild.syntax 2588
 MD5 042fefdf0b2c229a62b4e18200099389 files/digest-mc-4.6.0-r5 214
 MD5 042fefdf0b2c229a62b4e18200099389 files/digest-mc-4.6.0-r7 214
 MD5 d576baf06c64df107664f4724b7632a2 files/digest-mc-4.6.0-r9 139
