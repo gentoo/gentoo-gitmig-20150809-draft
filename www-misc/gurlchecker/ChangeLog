@@ -1,6 +1,17 @@
 # ChangeLog for www-misc/gurlchecker
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.4 2004/11/17 17:40:19 leonardop Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.5 2005/03/07 17:49:02 leonardop Exp $
+
+*gurlchecker-0.8.0 (07 Mar 2005)
+
+  07 Mar 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gurlchecker-0.8.0.ebuild:
+  New release. Included `gnutls' USE flag. Added intltool and gtk-doc
+  dependencies.
+
+  07 Mar 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gurlchecker-0.6.7-r1.ebuild:
+  Marked stable on x86.
 
   17 Nov 2004; Leonardo Boshell <leonardop@gentoo.org>
   gurlchecker-0.6.7-r1.ebuild, files/gurlchecker-0.6.7-loop_fix.patch:
