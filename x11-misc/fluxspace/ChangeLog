@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fluxspace
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/ChangeLog,v 1.6 2004/06/24 22:18:44 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/ChangeLog,v 1.7 2005/04/03 06:06:52 ka0ttic Exp $
+
+  03 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> fluxspace-0.0.3-r1.ebuild:
+  Update URL of online manual in pkg_postinst for bug 87722.
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> fluxspace-0.0.3-r1.ebuild,
   fluxspace-0.0.3.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/fluxspace-0.0.3-r1.ebuild,v 1.5 2004/06/24 22:18:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/fluxspace-0.0.3-r1.ebuild,v 1.6 2005/04/03 06:06:52 ka0ttic Exp $
 
 IUSE=""
 DESCRIPTION="Enhancements for workspace management within Fluxbox."
@@ -54,6 +54,6 @@ pkg_postinst() {
 	einfo "        session.screen0.rootCommand: fluxspace"
 	einfo " "
 	einfo " 4. Full documentation is available online at:"
-	einfo "    http://sfads.osdn.com/7.html?topic=fluxspace,python-foundry,56"
+	einfo "    http://sourceforge.net/docman/display_doc.php?docid=16037&group_id=76737"
 	einfo " "
 }

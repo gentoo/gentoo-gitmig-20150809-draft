@@ -1,6 +1,16 @@
-MD5 6e40594b5dfac4f12ceeda975c430e5a ChangeLog 1295
-MD5 65ffd1a80c0a0fc8c1c310a926e7e65d fluxspace-0.0.3-r1.ebuild 2005
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 194573e6eb3483a13346209b4a30622b fluxspace-0.0.3.ebuild 1653
+MD5 b09f661d7944c964d29feab04c6fc8cf fluxspace-0.0.3-r1.ebuild 2014
+MD5 5a126bc2034adc5ba9c6ba6ba6fa767f ChangeLog 1432
 MD5 38284a90537cf6233bcd9057bfb476bf metadata.xml 261
 MD5 1a573636684bad5b26021fd961a2f0a1 files/digest-fluxspace-0.0.3 68
 MD5 1a573636684bad5b26021fd961a2f0a1 files/digest-fluxspace-0.0.3-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCT4guEZCkKN40op4RAm1PAJ47QGmCKV8EoiODLEKPhzdKsPcLUQCfaH3V
+kUjomyYKOpf7xPlwz0Lc88U=
+=M2ka
+-----END PGP SIGNATURE-----
