@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.11.26_pre20040418.ebuild,v 1.1 2004/04/18 16:35:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.11.28_pre20040516.ebuild,v 1.1 2004/05/17 17:20:26 usata Exp $
 
 inherit elisp
 
-MY_P="wl-${PV/_pre/.}"
+MY_P="wl-${PV/_pre/-}"
 
 IUSE="ssl"
 
