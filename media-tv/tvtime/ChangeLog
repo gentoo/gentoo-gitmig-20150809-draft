@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.15 2004/06/25 00:34:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.16 2004/07/21 03:34:36 lv Exp $
+
+  20 Jul 2004; Travis Tilley <lv@gentoo.org> tvtime-0.9.12.ebuild:
+  stable on amd64
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> tvtime-0.9.10-r1.ebuild:
   Add inherit eutils
