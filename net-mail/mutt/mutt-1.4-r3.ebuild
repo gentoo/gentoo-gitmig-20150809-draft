@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4-r3.ebuild,v 1.10 2003/02/13 14:34:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4-r3.ebuild,v 1.11 2003/02/14 18:04:15 gmsoft Exp $
 
 IUSE="ssl nls slang cjk mbox"
 
@@ -19,7 +19,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~alpha"
+KEYWORDS="x86 ppc sparc ~alpha hppa"
 
 pkg_setup() {
 
