@@ -1,0 +1,24 @@
+# ChangeLog for dev-cpp/libxmlpp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.1 2003/06/19 00:41:50 liquidx Exp $
+
+*libxmlpp-0.24.0 (19 Jun 2003)
+
+  19 Jun 2003; Alastair Tse <liquidx@gentoo.org> libxmlpp-0.24.0.ebuild:
+  Moved package from dev-libs/libxml++ to dev-cpp/libxmlpp and version
+  bump
+
+  06 Jun 2003; Jason Wever <weeve@gentoo.org> libxml++-0.21.0.ebuild:
+  Added ~sparc to keywords.
+
+*libxml++-0.21.0 (02 Mar 2003)
+
+  03 Mar 2003; Graham Forest <vladimir@gentoo.org> libxml++-0.21.0.ebuild:
+  Added empty IUSE
+
+  03 Mar 2003; Graham Forest <vladimir@gentoo.org> libxml++-0.21.0.ebuild:
+  Adressed mirror and symlink issues as suggested by Max Kalika
+  <max@lsit.ucsp.edu>
+
+  02 Mar 2003; Graham Forest <vladimir@gentoo.org libxml++-0.21.0.ebuild:
+  Initial import. Ebuild submitted by Andre Lemos <tux@tuxslare.org>.
