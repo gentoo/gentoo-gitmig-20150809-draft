@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.3 2004/06/24 21:58:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.4 2004/10/04 18:19:49 bcowan Exp $
+
+*xfce4-session-4.1.90 (04 Oct 2004)
+
+  04 Oct 2004; Brad Cowan <bcowan@gentoo.org> +xfce4-session-4.1.90.ebuild:
+  Beta version of new 4.2 release. Contains too numerous improvements to list.
 
 *xfce4-session-0.1.1 (15 Jul 2003)
   12 Sep 2003; Brad Cowan <bcowan@gentoo.org> :
