@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.4 2004/03/24 15:32:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.5 2004/03/24 22:36:04 dholm Exp $
+
+  24 Mar 2004; David Holm <dholm@gentoo.org> scponly-3.11.ebuild:
+  Added to ~ppc.
 
 *scponly-3.11 (25 Mar 2004)
 
