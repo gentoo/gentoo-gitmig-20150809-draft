@@ -1,0 +1,182 @@
+# ChangeLog for net-www/kita
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.1 2004/09/08 13:40:12 usata Exp $
+
+*kita-0.160.0 (08 Sep 2004)
+
+  08 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +kita-0.150.0.ebuild, +kita-0.160.0.ebuild, +kita-0.170.0.ebuild:
+  Moved net-www/kita to www-client/kita.
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kita-0.160.0.ebuild, kita-0.170.0.ebuild:
+  Masked kita-0.170.0.ebuild stable for ppc
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kita-0.160.0.ebuild:
+  Masked kita-0.160.0.ebuild stable for ppc
+
+  01 Sep 2004; Tom Gall <tgall@gentoo.org> kita-0.160.0.ebuild:
+  stable on ppc64, bug #61780
+
+*kita-0.170.0 (30 Aug 2004)
+
+  30 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +kita-0.170.0.ebuild:
+  Version bumped.
+
+  26 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> -kita-0.140.0.ebuild,
+  kita-0.160.0.ebuild:
+  Marked as stable.
+
+*kita-0.160.0 (17 Jul 2004)
+
+  17 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> -kita-0.130.0.ebuild,
+  kita-0.150.0.ebuild, +kita-0.160.0.ebuild:
+  Version bumped. Marked 0.150.0 stable.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> kita-0.130.0.ebuild,
+  kita-0.140.0.ebuild, kita-0.150.0.ebuild:
+  virtual/glibc -> virtual/libc
+
+*kita-0.150.0 (13 Jun 2004)
+
+  13 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> -kita-0.120.0.ebuild,
+  kita-0.140.0.ebuild, -kita-0.140.0_p20040606.ebuild, +kita-0.150.0.ebuild:
+  Version bumped. Removed old ebuild and snapshot. Marked 0.140.0 stable.
+
+*kita-0.140.0_p20040606 (06 Jun 2004)
+
+  06 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.130.0.ebuild,
+  +kita-0.140.0_p20040606.ebuild:
+  Added snapshot. Marked 0.130.0 stable.
+
+*kita-0.140.0 (16 May 2004)
+
+  16 May 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.110.0.ebuild,
+  kita-0.120.0.ebuild, kita-0.140.0.ebuild:
+  Version bumped. Removed 0.110.0 and marked 0.120.0 stable on x86
+
+*kita-0.130.0 (08 May 2004)
+
+  08 May 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.103.0.ebuild,
+  kita-0.110.0.ebuild, kita-0.120.0.ebuild, kita-0.130.0.ebuild:
+  Version bumped. <=net-www/kita-0.120.0 fail to build with gcc-3.4
+
+*kita-0.120.0 (30 Apr 2004)
+
+  30 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.102.1.ebuild,
+  kita-0.110.0.ebuild, kita-0.120.0.ebuild:
+  Version bumped. Marked 0.110.0 stable. Removed old version.
+
+*kita-0.110.0 (11 Apr 2004)
+*kita-0.103.0 (11 Apr 2004)
+*kita-0.102.0 (11 Apr 2004)
+
+  11 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.10.0.0.ebuild,
+  kita-0.10.1.1.ebuild, kita-0.10.2.1.ebuild, kita-0.10.3.0.ebuild,
+  kita-0.102.1.ebuild, kita-0.103.0.ebuild, kita-0.110.0.ebuild:
+  Version bumped. Marked 0.103.0 stable. Changed versioning scheme
+  and removed old ebuilds.
+
+*kita-0.10.3.0 (25 Mar 2004)
+
+  25 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.10.3.0.ebuild:
+  Version bumped.
+
+*kita-0.10.2.1 (01 Mar 2004)
+
+  14 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.10.1.0.ebuild,
+  kita-0.10.1.1.ebuild, kita-0.10.2.1.ebuild:
+  Marked as stable.
+
+  01 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.10.2.1.ebuild,
+  kita-0.8.0.ebuild, kita-0.9.0.ebuild:
+  Version bumped. Cleaned old versions.
+
+*kita-0.10.1.1 (20 Feb 2004)
+
+  20 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.10.0.0.ebuild,
+  kita-0.10.1.0.ebuild, kita-0.10.1.1.ebuild:
+  Version bumped. Marked previous versions stable.
+
+*kita-0.10.1.0 (22 Jan 2004)
+
+  22 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.10.1.0.ebuild,
+  kita-0.7.2.ebuild, kita-0.9.0.ebuild:
+  Version bumped. Marked 0.9.0 stable
+
+*kita-0.10.0.0 (18 Jan 2004)
+
+  18 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.10.0.0.ebuild,
+  kita-0.8.0.ebuild:
+  Version bumped. Marked 0.8.0 stable.
+
+*kita-0.9.0 (07 Jan 2004)
+
+  07 Jan 2004; <usata@gentoo.org> kita-0.9.0.ebuild:
+  Version bumped
+
+*kita-0.8.0 (31 Dec 2003)
+
+  31 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.7.1.ebuild,
+  kita-0.7.2.ebuild, kita-0.8.0.ebuild:
+  Version bumped. Marked 0.7.x stable for x86
+
+*kita-0.7.2 (21 Dec 2003)
+
+  21 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.6.1-r1.ebuild,
+  kita-0.6.4-r1.ebuild, kita-0.6.4.1.ebuild, kita-0.7.2.ebuild,
+  files/kita-0.6.4-close-gentoo.diff, files/kita-boardview-gentoo.diff:
+  Version bumped. Removed old ebuilds. Marked 0.6.4.1 stable
+
+*kita-0.7.1 (18 Dec 2003)
+
+  18 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.7.1.ebuild:
+  Version bumped
+
+*kita-0.6.4.1 (05 Dec 2003)
+
+  09 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.6.4.1.ebuild:
+  Clarified DEPEND. (Avoid using kde-base/kde)
+
+  05 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.6.1-r1.ebuild,
+  kita-0.6.1.ebuild, kita-0.6.3.ebuild, kita-0.6.4-r1.ebuild,
+  kita-0.6.4.1.ebuild:
+  Added a patch to fix startup crash
+
+*kita-0.6.4 (03 Dec 2003)
+
+  03 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.6.4.ebuild,
+  files/kita-0.6.4-close-gentoo.diff:
+  Version bumped
+
+*kita-0.6.3 (30 Nov 2003)
+
+  04 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.6.3.ebuild:
+  Marked as stable
+
+  30 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.6.3.ebuild:
+  Version bumped
+
+*kita-0.6.2 (27 Nov 2003)
+
+  27 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.6.2.ebuild:
+  Version bumped
+
+*kita-0.6.1 (17 Oct 2003)
+
+  27 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.6.1.ebuild:
+  Marked as stable
+
+  17 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.6.1.ebuild:
+  Version bumped
+
+*kita-0.6 (20 Sep 2003)
+
+  17 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.6.ebuild:
+  Marked as stable
+
+  20 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> kita-0.6.ebuild,
+  metadata.xml:
+  Initial import
+
