@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.43 2004/02/11 21:05:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.44 2004/02/13 03:12:13 pylon Exp $
+
+  13 Feb 2004; Lars Weiler <pylon@gentoo.org> mutt-1.5.6.ebuild,
+  files/slang.patch:
+  Fast and dirty patch for those who use mutt with USE="slang".  See bug
+  #41312.  There should be an upstream patch soon.
 
   11 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.4.1-r1.ebuild,
   mutt-1.4.1.ebuild:
