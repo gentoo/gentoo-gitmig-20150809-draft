@@ -1,16 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.4 2004/06/07 06:58:14 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.5 2004/06/07 07:06:25 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
 inherit eutils flag-o-matic gcc
 
-filter-flags "-fomit-frame-pointer -malign-double"
-filter-ldflags "-pie"
-
 # make check will fail if sandbox is enabled
-use makecheck && export SANDBOX_DISABLED="1"
+export SANDBOX_DISABLED="1"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -356,6 +353,9 @@ src_unpack() {
 
 src_compile() {
 	setup_flags
+	filter-flags "-fomit-frame-pointer -malign-double"
+	filter-ldflags "-pie"
+
 
 	# These should not be set, else the
 	# zoneinfo do not always get installed ...
