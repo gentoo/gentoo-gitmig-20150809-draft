@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r2.ebuild,v 1.7 2004/06/17 11:13:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r2.ebuild,v 1.8 2004/06/24 23:13:31 eradicator Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ RDEPEND="virtual/glibc
 	selinux? ( sec-policy/selinux-squid )"
 DEPEND="${RDEPEND} dev-lang/perl"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ~ia64 s390"
+KEYWORDS="x86 ppc sparc alpha hppa ~ia64 s390 ~amd64"
 SLOT="0"
 
 src_unpack() {
@@ -83,6 +83,8 @@ src_compile() {
 	local myconf=""
 	use snmp && myconf="${myconf} --enable-snmp" || myconf="${myconf} --disable-snmp"
 	use ssl && myconf="${myconf} --enable-ssl" || myconf="${myconf} --disable-ssl"
+
+	use amd64 && myconf="${myconf} --disable-internal-dns "
 
 	if [ `use underscores` ]; then
 		ewarn "Enabling underscores in domain names will result in dns resolution"

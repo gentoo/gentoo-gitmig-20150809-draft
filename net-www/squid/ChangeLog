@@ -1,6 +1,10 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.50 2004/06/16 19:59:01 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.51 2004/06/24 23:13:31 eradicator Exp $
+
+  24 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  squid-2.5.5-r2.ebuild:
+  Marked ~amd64.  amd64 needs --disable-internal-dns to run properly.
 
   16 Jun 2004; Daniel Ostrowv<dostrow@gentoo.org> squid-2.5.5-r2.ebuild:
   Stable on ppc.
