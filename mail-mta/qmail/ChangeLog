@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.10 2004/10/26 22:23:11 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.11 2004/11/15 14:52:41 s4t4n Exp $
+
+  15 Nov 2004; Michele Noberasco <s4t4n@gentoo.org> qmail-1.03-r12.ebuild,
+  qmail-1.03-r13.ebuild, qmail-1.03-r14.ebuild, qmail-1.03-r15.ebuild:
+  Fix typo in einfo:
+  "but not mail was every delivered" --> "but not every mail was delivered"
 
   26 Oct 2004; Tom Martin <slarti@gentoo.org> qmail-1.03-r10.ebuild,
   qmail-1.03-r11.ebuild, qmail-1.03-r12.ebuild, qmail-1.03-r13.ebuild,

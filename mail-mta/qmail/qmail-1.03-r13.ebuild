@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r13.ebuild,v 1.6 2004/10/26 22:23:11 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r13.ebuild,v 1.7 2004/11/15 14:52:41 s4t4n Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -331,7 +331,7 @@ rootmailfixup() {
 	local TMPCMD="ln -sf /var/qmail/alias/.maildir/ ${ROOT}/root/.maildir"
 	if [ -d "${ROOT}/root/.maildir" ] && [ ! -L "${ROOT}/root/.maildir" ] ; then
 		einfo "Previously the qmail ebuilds created /root/.maildir/ but not"
-		einfo "mail was every delivered there. If the directory does not"
+		einfo "every mail was delivered there. If the directory does not"
 		einfo "contain any mail, please delete it and run:"
 		einfo "${TMPCMD}"
 	else
