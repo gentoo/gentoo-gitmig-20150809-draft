@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56-r1.ebuild,v 1.1 2004/03/17 03:40:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56-r1.ebuild,v 1.2 2004/03/17 04:04:01 eradicator Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Implements /dev/speech (any text written to /dev/speech will be spoken aloud)"
@@ -16,7 +16,7 @@ DEPEND="dev-lang/perl"
 
 RDEPEND="${DEPEND}
 	esd? ( media-sound/esound )
-	>=media-sound/festival-1.4.3-r1"
+	>=app-accessibility/festival-1.4.3-r1"
 
 src_compile() {
 	emake || die
