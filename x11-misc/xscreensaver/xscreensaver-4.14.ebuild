@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.14.ebuild,v 1.2 2003/11/20 14:18:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.14.ebuild,v 1.3 2003/11/22 14:02:05 liquidx Exp $
 
 IUSE="pam kerberos krb4 gtk gtk2 gnome opengl jpeg xinerama"
 
@@ -31,12 +31,11 @@ RDEPEND="virtual/x11
 					>=dev-libs/glib-2 ) )
 	gtk? ( gtk2? ( gnome? ( >=gnome-extra/yelp-2 ) ) )
 	gtk? ( !gtk2? ( =x11-libs/gtk+-1.2*
-					>=media-libs/gdk-pixbuf-0.18
 					=gnome-base/libglade-0.17* ) )
 	gtk? ( !gtk2? ( gnome? ( =gnome-base/control-center-1.4*
+							>=media-libs/gdk-pixbuf-0.18
 							>=gnome-base/gnome-libs-1.4 ) ) )
-	!gtk? ( virtual/motif
-		>=media-libs/gdk-pixbuf-0.18 )
+	!gtk? ( virtual/motif )
 	pam? ( sys-libs/pam )
 	kerberos? ( krb4? ( >=app-crypt/mit-krb5-1.2.5 ) )
 	jpeg? ( media-libs/jpeg )
@@ -75,7 +74,7 @@ src_compile() {
 
 	use gtk \
 		&& myconf="${myconf} --without-motif --with-gtk --with-xml" \
-		|| myconf="${myconf} --with-motif --without-gtk"
+		|| myconf="${myconf} --with-motif --without-gtk --without-gdk-pixbuf"
 
 	use xinerama \
 		&& myconf="${myconf} --with-xinerama-ext" \
