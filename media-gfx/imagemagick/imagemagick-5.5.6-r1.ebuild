@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.6-r1.ebuild,v 1.10 2003/10/22 14:02:01 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.6-r1.ebuild,v 1.11 2003/11/14 20:07:53 seemant Exp $
 
 inherit libtool flag-o-matic
 replace-flags k6-3 i586
@@ -28,7 +28,7 @@ KEYWORDS="x86 ppc sparc ~alpha ~mips hppa amd64"
 
 DEPEND=">=sys-apps/sed-4
 	media-libs/jbigkit
-	>=sys-apps/bzip2-1
+	>=app-arch/bzip2-1
 	sys-libs/zlib
 	X? ( virtual/x11
 		>=app-text/dgs-0.5.9.1 )
