@@ -1,6 +1,6 @@
 sys-apps/console-tools		sys-apps/kbd
 virtual/alsa			media-sound/alsa-driver
-virtual/antivirus		net-mail/clamav
+virtual/antivirus		app-antivirus/clamav
 virtual/aspell-dict		app-dicts/aspell-en
 virtual/bittorrent		net-p2p/bittorrent
 virtual/blackbox		x11-wm/blackbox
