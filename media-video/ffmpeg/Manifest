@@ -3,9 +3,13 @@ MD5 2d75291c4685dc1a93c5e91901df57c0 ffmpeg-0.4.5.ebuild 693
 MD5 e6b59f0960df4d0c10cfaa89aa6d48db ffmpeg-0.4.6-r1.ebuild 1561
 MD5 afaf74cb5011c84394bd0e9b0d5629a5 ffmpeg-0.4.6.ebuild 1523
 MD5 0e7fbbc527dae3974d754bc9330f28a3 ffmpeg-0.4.7_pre20030624.ebuild 2244
+MD5 16ac410d9be364cd5ee608aeb39d68e9 ffmpeg-0.4.7_pre20030719.ebuild 2206
+MD5 2ba40ba8042dcb6bd67fe7571f937ec8 ffmpeg-0.4.7.ebuild 2183
 MD5 57e0978ef4a4ff1662572740a8d94ed7 files/digest-ffmpeg-0.4.5 64
 MD5 566133b90b840d9da9452facbfef0d6e files/digest-ffmpeg-0.4.6 64
 MD5 566133b90b840d9da9452facbfef0d6e files/digest-ffmpeg-0.4.6-r1 64
 MD5 30ba42e8d259ef5fe8c439670f685c1f files/ffmpeg-0.4.6-Makefiles.diff 3429
-MD5 f139809ab74138dbf8f24bc4f89edbd8 files/digest-ffmpeg-0.4.7_pre20030624 74
 MD5 6f1d9c82b5e8c3b7c46b80bc3c1bb443 files/alpha-idct.patch 777
+MD5 f139809ab74138dbf8f24bc4f89edbd8 files/digest-ffmpeg-0.4.7_pre20030624 74
+MD5 5238c7d4c825a3f0ad1a407ed332f0e5 files/digest-ffmpeg-0.4.7_pre20030719 74
+MD5 7eca667f050b6c515830ff9be05bacc6 files/digest-ffmpeg-0.4.7 65
