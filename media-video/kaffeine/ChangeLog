@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.24 2004/11/23 22:46:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.25 2004/11/24 23:08:51 centic Exp $
+
+  25 Nov 2004; Dominik Stadler <centic@gentoo.org> kaffeine-0.5_rc2.ebuild:
+  Requires xine-lib-1_rc5 according to comment in Bug 66207
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kaffeine-0.4.3b-r1.ebuild,
   kaffeine-0.5_rc1-r1.ebuild:

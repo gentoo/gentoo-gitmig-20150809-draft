@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.5_rc2.ebuild,v 1.1 2004/11/08 20:57:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.5_rc2.ebuild,v 1.2 2004/11/24 23:08:51 centic Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
-DEPEND=">=media-libs/xine-lib-1_rc4
+DEPEND=">=media-libs/xine-lib-1_rc5
 	sys-devel/gettext"
 need-kde 3.2
 
