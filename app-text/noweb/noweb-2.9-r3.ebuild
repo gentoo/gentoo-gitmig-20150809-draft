@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r3.ebuild,v 1.5 2003/10/03 17:28:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r3.ebuild,v 1.6 2003/11/29 03:45:25 obz Exp $
 
 inherit eutils
 
@@ -20,12 +20,16 @@ DEPEND="sys-devel/gcc
 KEYWORDS="x86 ppc sparc alpha"
 
 src_unpack() {
+
 	unpack ${A} ; cd ${S}
 
 	epatch ${FILESDIR}/${P}-security.patch
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
-	find -type f | xargs touch
+	# make touch only touches the files required, not the whole
+	# tree as with find . -type f | xargs touch <obz@gentoo.org>
+	make touch
+
 }
 
 src_compile() {

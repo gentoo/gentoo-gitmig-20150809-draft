@@ -1,6 +1,12 @@
 # ChangeLog for app-text/noweb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.12 2003/10/03 17:28:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.13 2003/11/29 03:45:25 obz Exp $
+
+  29 Nov 2003; Mike Gardiner <obz@gentoo.org> metadata.xml,
+  noweb-2.9-r2.ebuild, noweb-2.9-r3.ebuild:
+  Let's try again on the timestamps fix. Changed the 'find all and touch' method
+  to the 'make touch' method, which should be more selective in the files it
+  touches
 
   04 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> noweb-2.9-r2.ebuild,
   noweb-2.9-r3.ebuild:
