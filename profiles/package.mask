@@ -572,3 +572,8 @@ dev-lang/tcl-tk
 #seemant@gentoo.org 1 Apr 2002
 =media-video/drip-0.81
 =sys-apps/util-linux-2.11l-r1
+
+# jhhudso@gentoo.org 3 Apr 2002
+# This is the new version of shadow, needs more beta testing
+>=sys-apps/shadow-4.0.3
+
