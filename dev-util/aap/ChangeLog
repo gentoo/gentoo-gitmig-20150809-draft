@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aap
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.5 2004/02/15 23:31:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.6 2004/04/24 16:23:01 kugelfang Exp $
+
+  24 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> aap-1.055.ebuild:
+  marked ~amd64.
 
 *aap-1.055 (15 Feb 2004)
 

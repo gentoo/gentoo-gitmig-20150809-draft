@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/aap-1.055.ebuild,v 1.1 2004/02/15 23:31:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/aap-1.055.ebuild,v 1.2 2004/04/24 16:23:01 kugelfang Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.a-a-p.org/"
 SRC_URI="mirror://sourceforge/a-a-p/${P}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~ia64 ~x86"
+KEYWORDS="~alpha ~ia64 ~x86 ~amd64"
 DEPEND="app-arch/unzip"
 RDEPEND=">=dev-lang/python-1.5"
 S=${WORKDIR}/${PN}
