@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.8 2004/09/09 22:19:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.9 2004/09/10 04:59:27 seemant Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -800,6 +800,7 @@ update_config_files() {
 	then
 		einfo "Preparing any installed configuration files for font move..."
 		FILES="/etc/X11/xorg.conf
+			/etc/X11/XF86Config-4
 			/etc/X11/XF86Config
 			/etc/X11/fs/config"
 		#	/etc/fonts/fonts.conf
@@ -813,7 +814,7 @@ update_config_files() {
 				sed "s,/usr/X11R6/$(get_libdir)/X11/fonts,/usr/share/fonts,g" \
 					${ROOT}${FILE} > ${IMAGE}${FILE}
 
-				if [ "${FILE}" = "/etc/X11/xorg.conf" -o "${FILE}" = "/etc/X11/XF86Config" ] ]
+				if [ "${FILE}" = "/etc/X11/xorg.conf" ] || [ "${FILE}" = "/etc/X11/XF86Config" ] || [ "${FILE}" = "/etc/X11/XF86Config-4" ]
 				then
 					# "keyboard" driver is deprecated and will be removed,
 					# switch to "kbd"
