@@ -81,6 +81,7 @@ leim - Adds input methods support to Emacs
 libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
 libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric 
 libwww - Adds libwww support (General purpose WEB API)
+lirc - Adds support for lirc (Linux's Infra-Red Remote Control)
 matrox - Adds Matrox MGA support to mplayer
 maildir - Adds support for maildir (~/.maildir) style mail spools
 mbox - Adds support for mbox (/var/spool/mail) style mail spools
