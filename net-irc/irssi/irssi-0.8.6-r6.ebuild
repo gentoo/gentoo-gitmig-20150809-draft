@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r6.ebuild,v 1.4 2004/07/07 22:42:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r6.ebuild,v 1.5 2004/07/15 00:31:40 agriffis Exp $
 
-IUSE="nls ipv6 perl ssl"
+IUSE="ipv6 nls perl socks5 ssl"
 
 inherit perl-module eutils
 
