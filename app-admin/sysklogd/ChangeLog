@@ -1,7 +1,13 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.14 2003/07/28 07:08:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.15 2003/09/01 20:10:45 azarah Exp $
 
+*sysklogd-1.4.1-r5 (01 Sep 2003)
+
+  01 Sep 2003; Martin Schlemmer <azarah@gentoo.org> sysklogd-1.4.1-r5.ebuild,
+  files/sysklogd-1.4.1-SO_BSDCOMPAT.patch:
+  Handle SO_BSDCOMPAT being depricated in 2.5+ kernels, thanks to Alex Riesen
+  <fork0@users.sf.net> for reporting.
 
 *sysklogd-1.4.1-r4 (11 May 2003)
 
