@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/mkl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/ChangeLog,v 1.6 2003/02/12 06:07:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/ChangeLog,v 1.7 2004/01/30 19:54:56 george Exp $
+
+*mkl-5.2 (30 Jan 2004)
+
+  30 Jan 2004; George Shapovalov <george@gentoo.org> mkl-5.2.ebuild, metadata.xml :
+  new version (#38830), few cleanups, added metadata
+  Thanks to Peter Bienstman <Peter.Bienstman@rug.ac.be> for an update.
+  The "new" license was different only in the version number in one place. I just modified 
+  the file under license to accomodate both 5.1 and 5.2
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
