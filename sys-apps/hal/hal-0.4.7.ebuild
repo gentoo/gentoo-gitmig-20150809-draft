@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.5-r2.ebuild,v 1.3 2005/02/06 17:21:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.7.ebuild,v 1.1 2005/02/06 17:21:27 foser Exp $
 
 inherit eutils python linux-info versionator flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ia64 ~ppc ~ppc64"
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~ppc64"
 IUSE="debug pcmcia doc"
 
 RDEPEND=">=dev-libs/glib-2.4
@@ -55,24 +55,17 @@ src_unpack() {
 	# remove pamconsole option
 	epatch ${FILESDIR}/${PN}-0.4.1-old_storage_policy.patch
 	# pick up the gentoo usermap
-	epatch ${FILESDIR}/${P}-gentoo_gphoto2_usermap.patch
-	# fix issues with certain misbehaving kernel drivers (#78564)
-	cd ${S}/hald/linux
-	epatch ${FILESDIR}/${P}-net_lockup.patch
-	cd ${S}/hald/linux/volume_id
-	epatch ${FILESDIR}/${P}-vat_ntfs_labels.patch
+	epatch ${FILESDIR}/${PN}-0.4.5-gentoo_gphoto2_usermap.patch
 
 }
 
 src_compile() {
 
-	# use sysfs stuff added in 2.6.10 kernel
-	append-flags -DSYSFS_CARRIER_ENABLE
-
 	# FIXME : docs
 	econf \
 		`use_enable debug verbose-mode` \
 		`use_enable pcmcia pcmcia-support` \
+		--enable-sysfs-carrier \
 		--enable-fstab-sync \
 		--enable-hotplug-map \
 		--disable-docbook-docs \
