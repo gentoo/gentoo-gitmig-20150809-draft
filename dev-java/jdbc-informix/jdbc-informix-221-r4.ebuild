@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/jdbc-informix-221-r4.ebuild,v 1.7 2005/04/03 19:51:56 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/jdbc-informix-221-r4.ebuild,v 1.8 2005/04/03 19:53:25 axxo Exp $
 
 inherit java-pkg
 
@@ -18,12 +18,10 @@ RESTRICT="nomirror"
 IUSE="doc"
 
 src_unpack() {
-	einfo "Unpacking archive ..."
-	tar xf ${DISTDIR}/${At}
+	tar xf ${DISTDIR}/${At} || die "failed to unpack"
 }
 
 src_compile() {
-	einfo "Running InstallShield to extract ..."
 	addpredict /root/vpd.properties
 	addpredict /var/lib/rpm/
 	`/usr/bin/java-config --java` -jar setup.jar -P  product.installLocation=. -silent
