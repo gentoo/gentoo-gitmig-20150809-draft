@@ -1,18 +1,28 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author Nick Hadaway <raker@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/ChangeLog,v 1.2 2002/07/05 06:04:50 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/ChangeLog,v 1.3 2002/07/19 06:19:00 raker Exp $
 
 *gnustep-make-1.3.4 (05 Jul 2002)
+
+  19 Jul 2002; Nick Hadaway <raker@gentoo.org> gentoo-make-1.3.4.ebuild:
+  
+  Changed mkdir -p to dodir.  SLOT and KEYWORDS added.
+
   05 Jul 2002; Nick Hadaway <raker@getntoo.org> gentoo-make-1.3.4.ebuild:
+  
   It seems as soon as you get a package done, a new version is out.
   added "makefile.make". Currently masked to keep in line with gnustep-base.
 
 *gnustep-make-1.3.3 (04 Jul 2002)
+  
   04 Jul 2002; Nick Hadaway <raker@getntoo.org> gentoo-make-1.3.3.ebuild:
+  
   Updated to the "unstable" tree.
 
 *gnustep-make-1.2.1 (03 Jul 2002)
+  
   03 Jul 2002; Nick Hadaway <raker@gentoo.org> gentoo-make-1.2.1.ebuild:
+  
   This is the first ebuild for this package.  The first core gnustep
   package.

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.3.4.ebuild,v 1.2 2002/07/11 06:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.3.4.ebuild,v 1.3 2002/07/19 06:19:00 raker Exp $
 
 DESCRIPTION="GNUstep makefile package (unstable)"
 HOMEPAGE="http://www.gnustep.org"
@@ -15,6 +15,8 @@ DEPEND="virtual/glibc
 	>=dev-libs/libxml2-2.4.22
 	>=x11-wm/WindowMaker-0.80.1"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
+KEYWORDS="x86"
+SLOT="0"
 
 src_compile() {
 	./configure \
@@ -23,51 +25,51 @@ src_compile() {
 }
 
 src_install () {
-	mkdir -p ${D}/usr/GNUstep/System \
-		${D}/usr/GNUstep/System/Makefiles \
-        	${D}/usr/GNUstep/System/Makefiles/ix86 \
-       		${D}/usr/GNUstep/System/Makefiles/ix86/linux-gnu \
-        	${D}/usr/GNUstep/System/Makefiles/Additional \
-        	${D}/usr/GNUstep/System/Makefiles/Master \
-        	${D}/usr/GNUstep/System/Makefiles/Instance \
-        	${D}/usr/GNUstep/System/Makefiles/Instance/Shared \
-        	${D}usr/GNUstep/System/Tools \
-        	${D}usr/GNUstep/System/share \
-        	${D}usr/GNUstep/System/Applications \
-        	${D}/usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu \
-        	${D}/usr/GNUstep/System/Libraries/Resources \
-        	${D}/usr/GNUstep/System/Libraries/Java \
-        	${D}/usr/GNUstep/System/Headers/ix86/linux-gnu \
-        	${D}/usr/GNUstep/System/Tools/ix86/linux-gnu/gnu-gnu-gnu \
-        	${D}/usr/GNUstep/System/Tools/Java \
-        	${D}/usr/GNUstep/System/Library/Bundles \
-        	${D}/usr/GNUstep/System/Library/Colors \
-        	${D}/usr/GNUstep/System/Library/Frameworks \
-        	${D}/usr/GNUstep/System/Library/PostScript \
-        	${D}/usr/GNUstep/System/Library/Services \
-        	${D}/usr/GNUstep/System/Documentation/Developer \
-        	${D}/usr/GNUstep/System/Documentation/User \
-		${D}/usr/GNUstep/System/Documentation/info \
-        	${D}/usr/GNUstep/System/Documentation/man \
-        	${D}/usr/GNUstep/System/Developer/Palettes \
-        	${D}/usr/GNUstep/Local/Applications \
-        	${D}/usr/GNUstep/Local/Libraries/ix86/linux-gnu/gnu-gnu-gnu \
-        	${D}/usr/GNUstep/Local/Libraries/Resources \
-        	${D}/usr/GNUstep/Local/Libraries/Java \
-        	${D}/usr/GNUstep/Local/Headers/ix86/linux-gnu \
-        	${D}/usr/GNUstep/Local/Tools/ix86/linux-gnu/gnu-gnu-gnu \
-        	${D}/usr/GNUstep/Local/Tools/Java \
-        	${D}/usr/GNUstep/Local/Library/Bundles \
-        	${D}/usr/GNUstep/Local/Library/Colors \
-        	${D}/usr/GNUstep/Local/Library/Frameworks \
-        	${D}/usr/GNUstep/Local/Library/PostScript \
-        	${D}/usr/GNUstep/Local/Library/Services \
-        	${D}/usr/GNUstep/Local/Documentation/Developer \
-        	${D}/usr/GNUstep/Local/Documentation/User \
-        	${D}/usr/GNUstep/Local/Developer/Palettes \
-        	${D}/usr/GNUstep/Local/Users \
-        	${D}/usr/GNUstep/Local/Users/Administrator \
-        	${D}/usr/GNUstep/Network
+	dodir   /usr/GNUstep/System \
+		/usr/GNUstep/System/Makefiles \
+        	/usr/GNUstep/System/Makefiles/ix86 \
+       		/usr/GNUstep/System/Makefiles/ix86/linux-gnu \
+        	/usr/GNUstep/System/Makefiles/Additional \
+        	/usr/GNUstep/System/Makefiles/Master \
+        	/usr/GNUstep/System/Makefiles/Instance \
+        	/usr/GNUstep/System/Makefiles/Instance/Shared \
+        	/usr/GNUstep/System/Tools \
+        	/usr/GNUstep/System/share \
+        	/usr/GNUstep/System/Applications \
+        	/usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu \
+        	/usr/GNUstep/System/Libraries/Resources \
+        	/usr/GNUstep/System/Libraries/Java \
+        	/usr/GNUstep/System/Headers/ix86/linux-gnu \
+        	/usr/GNUstep/System/Tools/ix86/linux-gnu/gnu-gnu-gnu \
+        	/usr/GNUstep/System/Tools/Java \
+        	/usr/GNUstep/System/Library/Bundles \
+        	/usr/GNUstep/System/Library/Colors \
+        	/usr/GNUstep/System/Library/Frameworks \
+        	/usr/GNUstep/System/Library/PostScript \
+        	/usr/GNUstep/System/Library/Services \
+        	/usr/GNUstep/System/Documentation/Developer \
+        	/usr/GNUstep/System/Documentation/User \
+		/usr/GNUstep/System/Documentation/info \
+        	/usr/GNUstep/System/Documentation/man \
+        	/usr/GNUstep/System/Developer/Palettes \
+        	/usr/GNUstep/Local/Applications \
+        	/usr/GNUstep/Local/Libraries/ix86/linux-gnu/gnu-gnu-gnu \
+        	/usr/GNUstep/Local/Libraries/Resources \
+        	/usr/GNUstep/Local/Libraries/Java \
+        	/usr/GNUstep/Local/Headers/ix86/linux-gnu \
+        	/usr/GNUstep/Local/Tools/ix86/linux-gnu/gnu-gnu-gnu \
+        	/usr/GNUstep/Local/Tools/Java \
+        	/usr/GNUstep/Local/Library/Bundles \
+        	/usr/GNUstep/Local/Library/Colors \
+        	/usr/GNUstep/Local/Library/Frameworks \
+        	/usr/GNUstep/Local/Library/PostScript \
+        	/usr/GNUstep/Local/Library/Services \
+        	/usr/GNUstep/Local/Documentation/Developer \
+        	/usr/GNUstep/Local/Documentation/User \
+        	/usr/GNUstep/Local/Developer/Palettes \
+        	/usr/GNUstep/Local/Users \
+        	/usr/GNUstep/Local/Users/Administrator \
+        	/usr/GNUstep/Network
 
 	insinto /usr/GNUstep/System/Makefiles/ix86/linux-gnu
 	insopts -m 755
