@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdd/ChangeLog,v 1.3 2005/01/08 10:49:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdd/ChangeLog,v 1.4 2005/03/23 01:42:15 swegener Exp $
+
+  23 Mar 2005; Sven Wegener <swegener@gentoo.org> sdd-1.52.ebuild:
+  Marked stable on x86.
 
   08 Jan 2005; Sven Wegener <swegener@gentoo.org> metadata.xml,
   sdd-1.52.ebuild:
