@@ -1,0 +1,18 @@
+#!/bin/bash
+. /sbin/functions.sh
+. /etc/emu10k1.conf
+
+case "${CARD_TYPE}" in
+	audigy)
+		audigy-script $@
+		;;
+	emu)
+		emu-script $@
+		;;
+	*)
+		eerror "You have not told me what kind of sound card you have."
+		eerror "Please edit /etc/emu10k1.conf and set the CARD_TYPE"
+		eerror "variable.  You will find it at the top of the file."
+		exit 1
+		;;
+esac

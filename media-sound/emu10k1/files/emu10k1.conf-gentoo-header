@@ -1,0 +1,8 @@
+# Set your card type on the next line so that loading the
+# kernel module works correctly.
+#
+# Accepted values are 'emu' and 'audigy'
+#  use 'audigy' if you have an audigy based sound card,
+#  otherwise use 'emu'
+CARD_TYPE="set_me"
+
