@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.15.3-r1.ebuild,v 1.1 2004/03/28 18:04:06 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.15.3-r1.ebuild,v 1.2 2004/03/28 21:30:49 dholm Exp $
 
 ZIP="astyle_${PV}.zip"
 S=${WORKDIR}
@@ -11,7 +11,7 @@ HOMEPAGE="http://astyle.sourceforge.net"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ~ppc"
 
 DEPEND=">=app-arch/unzip-5.42"
 
