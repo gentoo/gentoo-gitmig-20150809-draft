@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.31 2003/04/06 11:47:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.32 2003/04/28 23:40:05 liquidx Exp $
+
+  29 Apr 2003; Alastair Tse <liquidx@gentoo.org> gtkhtml-1.1.10.ebuild:
+  bumping to stable
 
   06 Apr 2003; Martin Schlemmer <azarah@gentoo.org> gtkhtml-1.1.10.ebuild:
   Fix borkage with "-nls" in USE.
