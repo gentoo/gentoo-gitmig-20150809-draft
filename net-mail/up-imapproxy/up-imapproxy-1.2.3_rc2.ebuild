@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.3_rc2.ebuild,v 1.1 2004/11/14 17:56:47 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.3_rc2.ebuild,v 1.2 2004/11/14 18:40:41 tester Exp $
 
 inherit versionator
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.imapproxy.org/downloads/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="kerberos ssl tcpd"
 
 DEPEND="virtual/libc

@@ -2,18 +2,18 @@
 Hash: SHA1
 
 MD5 69e7d7e0b6b51a6e17e3b40b05ea0df4 up-imapproxy-1.2.1.ebuild 1267
-MD5 53f29757399eb39a06a2b21761e5035b up-imapproxy-1.2.2.ebuild 1268
-MD5 bab29a57d0c8dfe2d00a8f6901c46cec ChangeLog 1088
+MD5 d8f34067e68db4d4a7ecf23a4e7fd6bf ChangeLog 1219
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 d23924192ae2c65f4c0df8b20ca4f197 up-imapproxy-1.2.3_rc2.ebuild 1282
-MD5 ee2fd39ec911915225c61fdec088ad97 files/digest-up-imapproxy-1.2.1 70
-MD5 8ee94f44751f64b541fc86fe406ac87f files/digest-up-imapproxy-1.2.2 70
+MD5 53f29757399eb39a06a2b21761e5035b up-imapproxy-1.2.2.ebuild 1268
+MD5 1ee3559b90c16ace954586bb132d6018 up-imapproxy-1.2.3_rc2.ebuild 1281
 MD5 335caa9f1889ac28acefe57e99d6496b files/imapproxy.rc6 505
 MD5 c985d47254e62579a2ec7335e1882a54 files/digest-up-imapproxy-1.2.3_rc2 73
+MD5 8ee94f44751f64b541fc86fe406ac87f files/digest-up-imapproxy-1.2.2 70
+MD5 ee2fd39ec911915225c61fdec088ad97 files/digest-up-imapproxy-1.2.1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBl5y6CHk4+ZoBpvsRAmK0AJ9d5WNYzLMmY+ELGKZ0LJttzIqNJACfQgvd
-y3rI5Gq4VlIH+Royr4++sNE=
-=o9tq
+iD8DBQFBl6a2wDHaUUJ0mYMRAsbaAJ9mY66A5BzxawBlQLWYKPnNOvrV/gCeLx+n
+XLySQDQRbLiz+9OQCoLoB/E=
+=jTKT
 -----END PGP SIGNATURE-----
