@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.7-r1.ebuild,v 1.11 2004/04/27 21:55:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.7-r1.ebuild,v 1.12 2004/05/10 16:50:19 randy Exp $
 
 DESCRIPTION="A highly configurable replacement for syslogd/klogd"
 HOMEPAGE="http://metalog.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/metalog/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE=""
 
 DEPEND=">=dev-libs/libpcre-3.4"
