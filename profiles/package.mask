@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <games@gentoo.org> (19 Jun 2003)
+# 4.1.x is incompat with 4.0.x
+=media-libs/allegro-4.1*
+
 # <liquidx@gentoo.org> (19 Jun 2003)
 # re-write and porting of all gtk-themes.
 # masking for testing
