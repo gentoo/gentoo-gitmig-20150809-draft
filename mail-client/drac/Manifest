@@ -1,8 +1,18 @@
-MD5 789c5469eaa201966c9e10725a48fc97 ChangeLog 1853
-MD5 1a4a7bda798faa2292daf671d600c008 drac-1.12-r1.ebuild 1953
-MD5 dceaa5ac446c90c9a01444ac7654ab74 drac-1.12.ebuild 1627
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b2dcf68d18dd3a5f7a8013655048dfd9 drac-1.12-r1.ebuild 1993
+MD5 e7016cebb3c52405c551cc41209a8806 drac-1.12.ebuild 1647
+MD5 7f63b5dfc385b255055ec5f30234c7b8 ChangeLog 2055
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 478bde42ed4cbed7f9a62e34be244e68 files/digest-drac-1.12 54
-MD5 478bde42ed4cbed7f9a62e34be244e68 files/digest-drac-1.12-r1 54
 MD5 cfc3ac36408fc92b1bde9a5a59c0f80e files/drac_rotate 2540
 MD5 f9a0690608ef1f022d1d23a7919d260a files/dracd.rc6 511
+MD5 478bde42ed4cbed7f9a62e34be244e68 files/digest-drac-1.12-r1 54
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfom8CHk4+ZoBpvsRAsc8AKCpDh2daZzChtmDKULTdLh+ToIjpACeL8D/
+E+1QaSayv3wYQmPxdqC4d/8=
+=WFai
+-----END PGP SIGNATURE-----
