@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.13 2003/02/12 08:05:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.14 2003/03/01 14:09:50 aliz Exp $
+
+*libfwbuilder-0.10.13 (01 Mar 2003)
+
+  01 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
 
   10 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Removed old files.
