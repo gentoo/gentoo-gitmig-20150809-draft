@@ -1,23 +1,32 @@
 #!/sbin/runscript
 
 depend() {
-	need net
+    need net
+}
+
+checkconfig() {
+    if [ ! -e /etc/smb/smb.conf ] ; then
+	eerror "You need an  /etc/smb/smb.conf file first"
+	eerror "There is a sample in /usr/share/doc/samba"
+	return 1
+    fi
 }
 
 start() {
-	ebegin "Starting SAMBA"
-	start-stop-daemon --start --quiet --exec /usr/sbin/nmbd
-	result=$?
-	start-stop-daemon --start --quiet --exec /usr/sbin/smbd
-	result=$(( $result + $? ))
-	eend $result
+    checkconfig || return 1
+    ebegin "Starting samba"
+    start-stop-daemon --start --quiet --exec /usr/sbin/nmbd
+    result=$?
+    start-stop-daemon --start --quiet --exec /usr/sbin/smbd
+    result=$(( $result + $? ))
+    eend $result
 }
 
 stop() {
-	ebegin "Stopping $SAMBA"
-	start-stop-daemon --stop --quiet --exec /usr/sbin/nmbd
-	result=$?
-	start-stop-daemon --stop --quiet --exec /usr/sbin/smbd
-	result=$(( $result + $? ))
-	eend $result
+    ebegin "Stopping samba"
+    start-stop-daemon --stop --quiet --exec /usr/sbin/nmbd
+    result=$?
+    start-stop-daemon --stop --quiet --exec /usr/sbin/smbd
+    result=$(( $result + $? ))
+    eend $result
 }
