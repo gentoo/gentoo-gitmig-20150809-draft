@@ -1,4 +1,6 @@
 MD5 dd2e88212992019ee650f1d16140bc18 ChangeLog 479
 MD5 11c46a470ea7a8b0e4fd0f4d57ce88e6 kmuddy-0.5.ebuild 425
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 11c46a470ea7a8b0e4fd0f4d57ce88e6 kmuddy-0.6.ebuild 425
 MD5 2f0a23c46b3a89aaa8fed56d4b5f5763 files/digest-kmuddy-0.5 62
+MD5 8ea8a81a7b2c651d422957094ff7bc89 files/digest-kmuddy-0.6 62
