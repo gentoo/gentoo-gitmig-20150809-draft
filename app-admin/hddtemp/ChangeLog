@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.21 2005/01/01 11:05:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.22 2005/03/19 17:01:18 weeve Exp $
+
+  19 Mar 2005; Jason Wever <weeve@gentoo.org> hddtemp-0.3_beta12.ebuild:
+  Changed -sparc keyword to ~sparc.
 
 *hddtemp-0.3_beta12 (25 Oct 2004)
 

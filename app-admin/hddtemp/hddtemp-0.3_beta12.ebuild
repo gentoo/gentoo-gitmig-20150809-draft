@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta12.ebuild,v 1.2 2005/01/01 11:05:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta12.ebuild,v 1.3 2005/03/19 17:01:18 weeve Exp $
 
 MY_P=${P/_beta/-beta}
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.guzu.net/linux/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc -sparc ~amd64"
+KEYWORDS="~x86 ppc ~sparc ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc
