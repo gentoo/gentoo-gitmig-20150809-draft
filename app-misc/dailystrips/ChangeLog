@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dailystrips
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.5 2002/12/17 19:16:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.6 2003/01/16 22:41:54 agriffis Exp $
+
+  16 Jan 2003; Aron Griffis <agriffis@gentoo.org> dailystrips-1.0.25.ebuild :
+  Add ~alpha to KEYWORDS
 
 *dailystrips-1.0.25 <13 Oct 2002>
   13 Oct 2002; Phil Bordelon <sunflare@gentoo.org> dailystrips-1.0.25.ebuild:
