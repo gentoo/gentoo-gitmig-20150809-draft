@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_rc1.ebuild,v 1.1 2004/01/19 03:59:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_rc1.ebuild,v 1.2 2004/01/19 15:46:19 caleb Exp $
 inherit kde
 
 need-autoconf 2.5
@@ -45,10 +45,6 @@ RDEPEND="$DEPEND
 src_unpack() {
 	kde_src_unpack
 	cd ${S} && make -f admin/Makefile.common && aclocal
-	cd ${S}/kio/misc/kpac
-	cp Makefile.am Makefile.am.orig
-	sed -e 's: $(bindir): $(DESTDIR)/$(bindir):g' Makefile.am.orig > Makefile.am
-	rm Makefile.am.orig
 #	use alpha && cd ${S} && epatch ${FILESDIR}/${P}-kjs-alphaev6-gcc3-workaround.patch
 }
 
