@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nforce-net
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/ChangeLog,v 1.10 2003/10/22 20:55:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/ChangeLog,v 1.11 2003/12/06 21:05:26 lanius Exp $
+
+  06 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
+  nforce-net-1.0.0261-r2.ebuild:
+  added check_KV, bug #34938
 
 *nforce-net-1.0.0261-r2 (22 Oct 2003)
 
