@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/discover
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/ChangeLog,v 1.10 2004/06/30 15:07:24 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/ChangeLog,v 1.11 2005/03/09 01:00:37 vapier Exp $
+
+*discover-2.0.7 (08 Mar 2005)
+
+  08 Mar 2005; Mike Frysinger <vapier@gentoo.org> +discover-2.0.7.ebuild:
+  Version bump #84321 by Jonas MG.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> discover-1.5-r1.ebuild:
   sync IUSE (missing)
