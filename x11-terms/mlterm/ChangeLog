@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.42 2005/03/05 13:27:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.43 2005/03/06 01:42:03 josejx Exp $
+
+  06 Mar 2005; Joseph Jezak <josejx@gentoo.org> mlterm-2.9.2.ebuild:
+  Marked ppc stable for bug #84174.
 
   05 Mar 2005; Markus Rothe <corsair@gentoo.org> mlterm-2.9.2.ebuild:
   Stable on ppc64; bug #84174
