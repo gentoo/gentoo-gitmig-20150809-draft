@@ -35,3 +35,4 @@ move net-news/slrn net-nntp/slrn
 move net-news/slrnconf net-nntp/slrnconf
 move net-news/suck net-nntp/suck
 move net-news/tin net-nntp/tin
+move net-news/ubh net-nntp/ubh
