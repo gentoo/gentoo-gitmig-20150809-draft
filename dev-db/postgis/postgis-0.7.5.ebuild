@@ -1,30 +1,33 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.3.ebuild,v 1.2 2003/02/13 10:04:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.5.ebuild,v 1.1 2003/07/12 23:18:05 aliz Exp $
 
 IUSE=""
 
 S="${WORKDIR}/${P}"
-MY_PGSQL="postgresql-7.2.3"
+MY_PGSQL="postgresql-7.3.3"
 
 DESCRIPTION="adds support for geographic objects to PostgreSQL"
 SRC_URI="http://postgis.refractions.net/${P}.tar.gz
-	ftp://ftp8.us.postgresql.org/pub/pgsql/source/v7.2.3/${MY_PGSQL}.tar.gz"
+	ftp://ftp8.us.postgresql.org/pub/pgsql/source/v7.3.3/${MY_PGSQL}.tar.gz"
 HOMEPAGE="http://postgis.refractions.net"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 SLOT="0"
 
-DEPEND="=postgresql-7.2.3-r1
-	dev-libs/proj"
+DEPEND="~postgresql-7.3.3
+	dev-libs/proj
+	>=sys-apps/sed-4*"
 
 src_unpack() {
 	unpack "${MY_PGSQL}.tar.gz"
 	cd ${MY_PGSQL}/contrib
 	unpack "${P}.tar.gz"
 	cd "${P}"
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
+	sed -i -e "s:USE_PROJ=0:USE_PROJ=1:g" \
+		-e "s:PROJ_DIR=/usr/local:PROJ_DIR=/usr:g" \
+		Makefile
 }
 
 src_compile() {
