@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.ebuild,v 1.2 2002/04/17 17:11:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.20020601.ebuild,v 1.1 2002/06/08 12:57:44 seemant Exp $
 
-S=${WORKDIR}/SDL-${PV}
+S=${WORKDIR}/SDL12
 DESCRIPTION="Simple Direct Media Layer"
-SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
+SRC_URI="http://www.libsdl.org/release/${P}.tar.bz2"
 HOMEPAGE="http://www.libsdl.org/"
 
 RDEPEND=">=media-libs/audiofile-0.1.9
@@ -14,14 +14,30 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 	ggi? ( >=media-libs/libggi-2.0_beta3 )
 	nas? ( media-libs/nas )
 	alsa? ( media-libs/alsa-lib )
-	arts? ( >=kde-base/kdelibs-2.0.1 )
+	arts? ( kde-base/arts )
 	svga? ( >=media-libs/svgalib-1.4.2 )
 	opengl? ( virtual/opengl )
-	directfb? ( >=dev-libs/DirectFB-0.9.7 )"
+	directfb? ( >=dev-libs/DirectFB-0.9.11 )"
 
 DEPEND="${RDEPEND}
 	dev-lang/nasm"
 
+LICENSE="LGPL"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}/src/video/directfb
+	cp SDL_DirectFB_events.c SDL_DirectFB_events.c.orig
+	sed -e "s:DIKI_CTRL:DIKI_CONTROL_L:" \
+		-e "s:DIKI_SHIFT:DIKI_SHIFT_L:" \
+		-e "s:DIKI_ALT:DIKI_ALT_L:" \
+		-e "s:DIKI_ALT_LGR:DIKI_ALT_R:" \
+		-e "s:DIKI_CAPSLOCK:DIKI_CAPS_LOCK:" \
+		-e "s:DIKI_NUMLOCK:DIKI_NUM_LOCK:" \
+		-e "s:DIKI_SCRLOCK:DIKI_SCROLL_LOCK:" \
+		SDL_DirectFB_events.c.orig > SDL_DirectFB_events.c
+}
 
 src_compile() {
 	local myconf
@@ -67,12 +83,14 @@ src_compile() {
 		|| myconf="${myconf} --disable-video-fbcon"
 
 	use opengl \
-		&& myconf="${myconf} --disable-video-opengl" \
-		|| myconf="${myconf} --enable-video-opengl"
+		&& myconf="${myconf} --enable-video-opengl" \
+		|| myconf="${myconf} --disable-video-opengl"
 
 	use directfb \
 		&& myconf="${myconf} --enable-video-directfb" \
 		|| myconf="${myconf} --disable-video-directfb"
+
+	./autogen.sh
 
 	./configure \
 		--host=${CHOST} \

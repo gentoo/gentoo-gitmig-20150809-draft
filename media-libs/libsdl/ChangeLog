@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.6 2002/04/23 02:20:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.7 2002/06/08 12:57:44 seemant Exp $
+
+*libsdl-1.2.4-20020601 (7 Jun 2002)
+
+  7 June 2002; Seemant Kulleen <seemant@gentoo.org>
+  libsdl-1.2.4-20020601.ebuild files/digest-libsdl-1.2.4-20020601 :
+
+  Version bump to CVS snapshot which compiles against DirectFB-0.9.11
 
 *libsdl-1.2.4-r1 (22 Apr 2002)
 
