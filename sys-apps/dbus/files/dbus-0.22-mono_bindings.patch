@@ -1,0 +1,197 @@
+Index: BusDriver.cs
+===================================================================
+RCS file: BusDriver.cs
+diff -N BusDriver.cs
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ BusDriver.cs	30 Aug 2004 16:17:20 -0000
+@@ -0,0 +1,39 @@
++namespace DBus
++{
++
++  using System;
++
++  public delegate void ServiceEventHandler (string serviceName);
++
++  [Interface ("org.freedesktop.DBus")]
++  public abstract class BusDriver
++  {
++    [Method]
++    public abstract string[] ListServices ();
++
++    [Method]
++    public abstract string GetServiceOwner (string serviceName);
++
++    [Method]
++    public abstract UInt32 GetConnectionUnixUser (string connectionName);
++
++
++    [Signal]
++    public virtual event ServiceEventHandler ServiceCreated;
++
++    [Signal]
++    public virtual event ServiceEventHandler ServiceDeleted;
++
++
++    static public BusDriver New (Connection connection)
++    {
++      Service service;
++      service = Service.Get (connection, "org.freedesktop.DBus");
++
++      BusDriver driver;
++      driver = (BusDriver) service.GetObject (typeof (BusDriver), "/org/freedesktop/DBus");
++      
++      return driver;
++    }
++  }
++}
+Index: Connection.cs
+===================================================================
+RCS file: /cvs/dbus/dbus/mono/Connection.cs,v
+retrieving revision 1.8
+diff -u -p -r1.8 Connection.cs
+--- Connection.cs	29 Aug 2004 18:14:30 -0000	1.8
++++ Connection.cs	30 Aug 2004 16:17:20 -0000
+@@ -76,6 +76,14 @@ namespace DBus 
+       return new Connection(rawConnection);
+     }
+ 
++    public string BaseService
++    {
++      get
++	{
++	  return Marshal.PtrToStringAnsi (dbus_bus_get_base_service (RawConnection));
++	}
++    }
++
+     public int Timeout
+     {
+       get
+@@ -182,5 +190,8 @@ namespace DBus 
+     
+     [DllImport ("dbus-1")]
+     private extern static void dbus_connection_disconnect (IntPtr ptr);
++
++    [DllImport ("dbus-1")]
++    private extern static IntPtr dbus_bus_get_base_service (IntPtr ptr);
+   }
+ }
+Index: Handler.cs
+===================================================================
+RCS file: /cvs/dbus/dbus/mono/Handler.cs,v
+retrieving revision 1.6
+diff -u -p -r1.6 Handler.cs
+--- Handler.cs	7 Jun 2004 11:40:20 -0000	1.6
++++ Handler.cs	30 Aug 2004 16:17:20 -0000
+@@ -177,11 +177,15 @@ namespace DBus
+       }
+       
+       MethodInfo method = interfaceProxy.GetMethod(methodCall.Key);
++      
++      Message.Push (methodCall);
+ 
+       // Now call the method. FIXME: Error handling
+       object [] args = methodCall.Arguments.GetParameters(method);
+       object retVal = method.Invoke(this.handledObject, args);
+ 
++      Message.Pop ();
++
+       // Create the reply and send it
+       MethodReturn methodReturn = new MethodReturn(methodCall);
+       methodReturn.Arguments.AppendResults(method, retVal, args);
+Index: Makefile.am
+===================================================================
+RCS file: /cvs/dbus/dbus/mono/Makefile.am,v
+retrieving revision 1.10
+diff -u -p -r1.10 Makefile.am
+--- Makefile.am	17 Aug 2004 17:08:32 -0000	1.10
++++ Makefile.am	30 Aug 2004 16:17:20 -0000
+@@ -9,6 +9,7 @@ ASSEMBLY_NAME=dbus-sharp
+ DBUS_SHARP_FILES= 		\
+ 	Arguments.cs		\
+ 	Bus.cs			\
++	BusDriver.cs		\
+ 	Connection.cs		\
+ 	Custom.cs		\
+ 	DBusException.cs	\
+Index: Message.cs
+===================================================================
+RCS file: /cvs/dbus/dbus/mono/Message.cs,v
+retrieving revision 1.9
+diff -u -p -r1.9 Message.cs
+--- Message.cs	29 Aug 2004 18:14:30 -0000	1.9
++++ Message.cs	30 Aug 2004 16:17:20 -0000
+@@ -8,6 +8,25 @@ namespace DBus 
+   
+   public class Message 
+   {
++    private static Stack stack = new Stack ();
++	  
++    static public Message Current {
++      get 
++	{
++	  return stack.Count > 0 ? (Message) stack.Peek () : null;
++	}
++    }
++
++    static internal void Push (Message message)
++    {
++      stack.Push (message);
++    }
++
++    static internal void Pop ()
++    {
++      stack.Pop ();
++    }
++	  
+     
+     /// <summary>
+     /// A pointer to the underlying Message structure
+@@ -294,6 +313,22 @@ namespace DBus 
+ 	}
+     }
+ 
++    public string Sender 
++    {
++      get
++	{
++	  return Marshal.PtrToStringAnsi(dbus_message_get_sender(RawMessage));
++	}
++    }
++
++    public string Destination
++    {
++      get
++	{
++	  return Marshal.PtrToStringAnsi(dbus_message_get_destination(RawMessage));
++	}
++    }
++	    
+     protected int Slot
+     {
+       get 
+@@ -373,5 +408,8 @@ namespace DBus 
+ 
+     [DllImport("dbus-1")]
+     private extern static IntPtr dbus_message_get_destination(IntPtr rawMessage);
++
++    [DllImport("dbus-1")]
++    private extern static IntPtr dbus_message_get_sender(IntPtr rawMessage);
+   }
+ }
+Index: Service.cs
+===================================================================
+RCS file: /cvs/dbus/dbus/mono/Service.cs,v
+retrieving revision 1.6
+diff -u -p -r1.6 Service.cs
+--- Service.cs	23 May 2004 21:33:14 -0000	1.6
++++ Service.cs	30 Aug 2004 16:17:20 -0000
+@@ -128,7 +128,9 @@ namespace DBus
+ 	// We're only interested in signals
+ 	Signal signal = (Signal) message;
+ 	if (SignalCalled != null) {
++	  Message.Push (message);
+ 	  SignalCalled(signal);
++	  Message.Pop ();
+ 	}
+       }
+       

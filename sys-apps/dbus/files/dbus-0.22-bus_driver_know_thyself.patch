@@ -1,0 +1,42 @@
+Index: driver.c
+===================================================================
+RCS file: /cvs/dbus/dbus/bus/driver.c,v
+retrieving revision 1.53
+diff -u -p -r1.53 driver.c
+--- driver.c	25 Aug 2004 08:03:12 -0000	1.53
++++ driver.c	26 Aug 2004 16:38:11 -0000
+@@ -511,6 +511,7 @@ bus_driver_handle_service_exists (DBusCo
+   DBusMessage *reply;
+   DBusString service_name;
+   BusService *service;
++  dbus_bool_t service_exists;
+   char *name;
+   dbus_bool_t retval;
+   BusRegistry *registry;
+@@ -525,9 +526,14 @@ bus_driver_handle_service_exists (DBusCo
+     return FALSE;
+ 
+   retval = FALSE;
+-  
+-  _dbus_string_init_const (&service_name, name);
+-  service = bus_registry_lookup (registry, &service_name);
++
++  if (strcmp (name, DBUS_SERVICE_ORG_FREEDESKTOP_DBUS) == 0) {
++    service_exists = TRUE;
++  } else {
++    _dbus_string_init_const (&service_name, name);
++    service = bus_registry_lookup (registry, &service_name);
++    service_exists = service != NULL;
++  }
+  
+   reply = dbus_message_new_method_return (message);
+   if (reply == NULL)
+@@ -537,7 +543,7 @@ bus_driver_handle_service_exists (DBusCo
+     }
+ 
+   if (!dbus_message_append_args (reply,
+-                                 DBUS_TYPE_BOOLEAN, service != NULL,
++                                 DBUS_TYPE_BOOLEAN, service_exists,
+                                  0))
+     {
+       BUS_SET_OOM (error);
