@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.13.ebuild,v 1.1 2004/10/27 15:05:03 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.13.ebuild,v 1.2 2004/10/27 15:25:55 zypher Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://vtel.rgv.net/~ahze/dist/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="X 3dnow avi altivec divx4linux encode mmx mpeg oggvorbis quicktime sdl sse theora"
 
 DEPEND=">=media-libs/a52dec-0.7.4
@@ -29,7 +29,7 @@ DEPEND=">=media-libs/a52dec-0.7.4
 	>=media-gfx/imagemagick-5.5.6.0
 	media-libs/netpbm
 	X? ( virtual/x11 )
-	avi? (	>=media-video/avifile-0.7.38 )
+	avi? (	>=media-video/avifile-0.7.41.20041001 )
 	divx4linux? ( x86? ( >=media-libs/divx4linux-20030428 ) )
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.93 )
