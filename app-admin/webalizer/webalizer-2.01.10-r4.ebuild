@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.12 2004/06/29 19:52:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.13 2004/06/30 17:08:01 vapier Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
@@ -16,7 +16,7 @@ IUSE="apache2"
 DEPEND="=sys-libs/db-1*
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2
-	>=media-libs/libgd-1.8.3"
+	>=media-libs/gd-1.8.3"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

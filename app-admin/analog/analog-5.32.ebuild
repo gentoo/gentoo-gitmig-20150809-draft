@@ -1,29 +1,28 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.12 2004/06/24 21:22:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.13 2004/06/30 17:06:25 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="The most popular logfile analyser in the world"
 HOMEPAGE="http://www.analog.cx/"
 SRC_URI="http://www.analog.cx/${P}.tar.gz"
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE=""
 
-SLOT="0"
-LICENSE="as-is"
-KEYWORDS="x86 ppc sparc amd64 alpha"
-
 RDEPEND=">=dev-libs/libpcre-3.4
-	>=media-libs/libgd-1.8.4-r2
+	>=media-libs/gd-1.8.4-r2
 	sys-libs/zlib
 	media-libs/jpeg
 	media-libs/libpng"
-
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 pkg_setup() {
-	local gd_use="$(</var/db/pkg/`best_version media-libs/libgd`/USE)"
+	local gd_use="$(</var/db/pkg/`best_version media-libs/gd`/USE)"
 	if [ ! "`has jpeg ${gd_use}`" ] ; then
 		eerror "libgd is missing jpeg support. Please add"
 		eerror "'jpeg' to your USE flags, and re-emerge libgd."

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r5.ebuild,v 1.7 2004/06/29 19:52:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r5.ebuild,v 1.8 2004/06/30 17:08:01 vapier Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ IUSE="apache2 geoip"
 DEPEND="=sys-libs/db-1*
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2
-	>=media-libs/libgd-1.8.3
+	>=media-libs/gd-1.8.3
 	geoip? ( dev-libs/geoip )"
 
 src_unpack() {
