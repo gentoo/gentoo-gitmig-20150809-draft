@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
 MD5 5ad1916582e8bf7b7d89f933e9605821 ChangeLog 1150
-MD5 78e93288dc37d2b356fc8763cf79561b monotone-0.16.ebuild 1245
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 dde934a3d504967d4678c4302ddd971e monotone-0.16.ebuild 1233
 MD5 f7dab86750bae0e4ff09e2139b790084 files/digest-monotone-0.16 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB2bgwmdTrptrqvGERAu2SAJ9PD7dpE6Luz8NueclvDxptXICuDgCglBQT
-tGnNy2GaQtiD8lEJ2FnnbSs=
-=fBrO
------END PGP SIGNATURE-----
