@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dmake
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.7 2004/06/25 02:29:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.8 2004/11/06 15:54:20 pyrania Exp $
+
+  06 Nov 2004; <pyrania@gentoo.org> dmake-4.1-r1.ebuild:
+  Hooray for epatch.
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> dmake-4.1-r1.ebuild:
   Don't assign default to S; header fix

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pccts
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.16 2004/09/29 19:51:10 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.17 2004/11/06 15:55:55 pyrania Exp $
+
+  06 Nov 2004; <pyrania@gentoo.org> pccts-1.33.32-r1.ebuild,
+  pccts-1.33.33.ebuild:
+  Hooray for epatch.
 
   29 Sep 2004; kito pccts-1.33.33.ebuild:
   added ~ppc-macos keyword

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/cutils-1.6-r1.ebuild,v 1.5 2004/07/21 19:59:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/cutils-1.6-r1.ebuild,v 1.6 2004/11/06 15:52:46 pyrania Exp $
 
 DESCRIPTION="C language utilities"
 HOMEPAGE="http://www.sigala.it/sandro/software.html#cutils"
@@ -15,7 +15,7 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack  ${A}
-	patch -p0 <${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-gentoo.diff || die "epatch failed."
 }
 
 src_compile() {
