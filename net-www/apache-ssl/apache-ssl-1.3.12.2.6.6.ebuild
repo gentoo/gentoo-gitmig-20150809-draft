@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.12.2.6.6.ebuild,v 1.3 2000/08/28 03:01:54 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.12.2.6.6.ebuild,v 1.4 2000/09/15 20:09:16 drobbins Exp $
 
 P=apache-ssl-1.3.12-2.6.6
 A="apache_1.3.12.tar.gz mod_ssl-2.6.6-1.3.12.tar.gz"
@@ -15,9 +15,9 @@ HOMEPAGE="http://www.apache.org http://www.modssl.org"
 src_compile() {                           
    export SSL_BASE=SYSTEM
    cd ${S}/../mod_ssl-2.6.6-1.3.12
-    ./configure --with-apache=${S} --with-ssl=SYSTEM
+    try ./configure --with-apache=${S} --with-ssl=SYSTEM
    cd ${S}
-   ./configure --prefix=/usr/local/httpd --bindir=/usr/bin \
+   try ./configure --prefix=/usr/local/httpd --bindir=/usr/bin \
 	--sbindir=/usr/sbin --datadir=/usr/local/httpd \
 	--sysconfdir=/etc/httpd --libexecdir=/usr/lib/apache \
 	--mandir=/usr/man --logfiledir=/var/log/apache --localstatedir=/var/lock \
@@ -26,12 +26,12 @@ src_compile() {
 	--enable-shared=max --enable-suexec --suexec-caller=wwwrun \
 	--suexec-userdir=public_html --suexec-uidmin=96 \
 	--suexec-gidmin=96 --suexec-safepath="/bin:/usr/bin"
-    make
+    try make
 }
 
 src_install() { 
     cd ${S}
-    make install-quiet root=${D}
+    try make install-quiet root=${D}
     prepman
 
     dodoc ABOUT_APACHE Announcement INSTALL* KEYS LICENSE* README* WARNING*

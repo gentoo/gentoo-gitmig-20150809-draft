@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.24.ebuild,v 1.1 2000/08/25 11:01:46 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.24.ebuild,v 1.2 2000/09/15 20:09:16 drobbins Exp $
 
 P=LPRng-3.6.24
 A=${P}.tgz
@@ -20,14 +20,14 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/lprng \
+  try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/lprng \
 	--enable-nls --with-catgets --with-included-gettext
-  make
+  try make
 }
 
 src_install() {                               
   cd ${S}
-  make INSTALL_PREFIX=${D} datadir=${D}/usr/share gnulocaledir=${D}/usr/share/locale install
+  try make INSTALL_PREFIX=${D} datadir=${D}/usr/share gnulocaledir=${D}/usr/share/locale install
 
   prepman
 

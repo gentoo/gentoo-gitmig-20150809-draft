@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r1.ebuild,v 1.1 2000/08/16 17:16:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r1.ebuild,v 1.2 2000/09/15 20:09:16 drobbins Exp $
 
 P=squid-2.3.STABLE4
 A=${P}-src.tar.gz
@@ -12,22 +12,22 @@ HOMEPAGE="http://www.squid-cache.org/"
 
 src_compile() {                           
  cd ${S}
- LDFLAGS="$LDFLAGS -lresolv" ./configure --host=${CHOST} \
+ LDFLAGS="$LDFLAGS -lresolv" try ./configure --host=${CHOST} \
 	--prefix=/usr --sysconfdir=/etc/squid \
 	--localstatedir=/var/squid
 	--enable-ipf-transparent --enable-useragent-log \
 	--enable-async-io --enable-icmp
- make
+ try make
  cd ${S}/auth_modules/LDAP
- make
+ try make
  cd ../PAM
- make
+ try make
  cd ../SMB
- make
+ try make
  cd ../LDAP
- make
+ try make
  cd ../NCSA
- make
+ try make
 
 }
 
@@ -38,7 +38,7 @@ src_install() {
   dodir /etc/squid
   dodir /var/squid
   chown squid.daemon ${D}/var/squid
-  make install prefix=${D}/usr sysconfdir=${D}/etc/squid \
+  try make install prefix=${D}/usr sysconfdir=${D}/etc/squid \
 	localstatedir=${D}/var/squid 
   into /usr
   cd auth_modules
