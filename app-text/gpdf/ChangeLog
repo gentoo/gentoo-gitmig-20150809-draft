@@ -1,6 +1,12 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.3 2003/06/18 21:05:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.4 2003/07/04 22:05:51 liquidx Exp $
+
+*gpdf-0.104 (04 Jul 2003)
+
+  04 Jul 2003; Alastair Tse <liquidx@gentoo.org> gpdf-0.104.ebuild:
+  updating in the interest of keeping this updated. it is still not working at
+  an alpha stage
 
   13 Jun 2003; Alastair Tse <liquidx@gentoo.org> gpdf-0.102.ebuild:
   fixed multiple RDEPEND defined, using append-flags without
