@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.2.8-r1.ebuild,v 1.5 2004/06/25 00:36:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.2.8-r1.ebuild,v 1.6 2004/07/14 21:23:36 agriffis Exp $
 
-IUSE="qt kde gnome"
+IUSE="qt"
 
 DESCRIPTION="Ati precompiled drivers extra applications"
 HOMEPAGE="http://www.ati.com"
