@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.3.ebuild,v 1.5 2001/08/05 19:08:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.3.ebuild,v 1.6 2001/08/05 21:39:59 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
@@ -80,7 +80,7 @@ pkg_postinst() {
 		if [ -e ${ROOT}/usr/lib/python2.0/${x}.py ]
 		then
 			rm ${ROOT}/usr/lib/python2.0/${x}.py
-			rm -f ${ROOT}/usr/lib/python2.0/${x}.pyc
+			rm ${ROOT}/usr/lib/python2.0/${x}.pyc
 		fi
 	done
 }
