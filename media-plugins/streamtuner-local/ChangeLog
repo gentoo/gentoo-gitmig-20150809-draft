@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/streamtuner-local
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.11 2004/09/22 20:23:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.12 2004/12/19 05:25:26 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  streamtuner-local-0.4.0.ebuild:
+  Stable amd64, sparc.
 
   22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   streamtuner-local-0.4.0.ebuild:
