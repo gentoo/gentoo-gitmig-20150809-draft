@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/moria
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/ChangeLog,v 1.1 2003/12/31 20:28:17 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/ChangeLog,v 1.2 2004/01/20 20:27:15 avenj Exp $
+
+  20 Jan 2004; Jon Portnoy <avenj@gentoo.org> moria-5.5.2.ebuild :
+  AMD64 keywords.
 
 *moria-5.5.2 (31 Dec 2003)
 
