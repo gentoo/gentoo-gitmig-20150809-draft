@@ -1,11 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.4-r1.ebuild,v 1.2 2002/10/04 05:57:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.4-r1.ebuild,v 1.3 2002/11/12 06:44:14 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Zapping is a TV- and VBI- viewer for the Gnome environment."
+DESCRIPTION="TV- and VBI- viewer for the Gnome environment"
 SRC_URI="http://telia.dl.sourceforge.net/${PN}/${P}.tar.bz2"
-HOMEPAGE="http://zapping.sourceforge.net"
+HOMEPAGE="http://zapping.sourceforge.net/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+IUSE="nls pam X"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	<gnome-base/libglade-0.99.0
@@ -16,14 +20,8 @@ DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=media-libs/gdk-pixbuf-0.8
 	>=media-libs/zvbi-0.2
 	>=media-libs/rte-0.4"
-RDEPEND=${DEPEND}
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86"
 
 src_compile() {
-	
 	local myconf
 
 	use nls || myconf="${myconf} --disable-nls"
@@ -32,22 +30,19 @@ src_compile() {
 		&& myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"
 
-	econf ${myconf} || die
+	econf ${myconf}
 
 	mv src/Makefile src/Makefile.orig
-	sed -e \
-		"s:\(INCLUDES = \$(COMMON_INCLUDES)\):\1 -I/usr/include/libglade-1.0 -I/usr/include/gdk-pixbuf-1.0:" \
+	sed -e "s:\(INCLUDES = \$(COMMON_INCLUDES)\):\1 -I/usr/include/libglade-1.0 -I/usr/include/gdk-pixbuf-1.0:" \
 		src/Makefile.orig > src/Makefile
-	
-	make || die
+	make || die "make failed"
 }
 
-src_install () {
+src_install() {
 	einstall \
 		PACKAGE_LIB_DIR=${D}/usr/lib/zapping \
 		PACKAGE_PIXMAPS_DIR=${D}/usr/share/pixmaps/zapping \
-		PLUGIN_DEFAULT_DIR=${D}/usr/lib/zapping/plugins \
-		|| die
+		PLUGIN_DEFAULT_DIR=${D}/usr/lib/zapping/plugins
 
 	rm ${D}/usr/bin/zapzilla
 	dosym /usr/bin/zapping /usr/bin/zapzilla
