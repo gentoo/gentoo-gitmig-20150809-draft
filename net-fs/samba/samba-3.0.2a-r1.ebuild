@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r1.ebuild,v 1.1 2004/04/21 16:58:17 dmwaters Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r1.ebuild,v 1.2 2004/04/22 15:05:50 weeve Exp $
 
 inherit eutils
 
@@ -64,6 +64,8 @@ src_unpack() {
 	# bug 45965; smbprint tmpfile vulnerability
 	# NOTE that this should be removed for Samba 3.0.3, as it will be included
 	# in that release.
+	# Additional Note: Make sure w're in ${S} before patching.
+	cd ${S}
 	epatch ${FILESDIR}/samba-3.0.2a-smbprint.patch
 
 	#Bug #36200; sys-kernel/linux-headers dependent
