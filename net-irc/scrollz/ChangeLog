@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/scrollz
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.13 2004/11/13 18:10:41 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.14 2005/01/01 08:09:37 swegener Exp $
+
+*scrollz-1.9.4-r1 (01 Jan 2005)
+
+  01 Jan 2005; Sven Wegener <swegener@gentoo.org> +scrollz-1.9.4-r1.ebuild,
+  -scrollz-1.9.4.ebuild:
+  Revision bump. The old 1.9.4 was a beta release, this -r1 is the real 1.9.4
+  release.
 
 *scrollz-1.9.4 (13 Nov 2004)
 
