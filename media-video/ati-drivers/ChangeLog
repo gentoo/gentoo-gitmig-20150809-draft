@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.39 2004/06/02 18:50:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.40 2004/06/03 17:01:53 lu_zero Exp $
+
+  03 Jun 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.9.0-r1.ebuild:
+  Reverted the memory allocation patch, added some instructions how to solve
+  that, thanks again Aric Cyr <acyr76@yahoo.ca> for the notice.
 
 *ati-drivers-3.9.0-r1 (02 Jun 2004)
 

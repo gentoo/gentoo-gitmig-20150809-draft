@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.9.0-r1.ebuild,v 1.1 2004/06/02 18:50:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.9.0-r1.ebuild,v 1.2 2004/06/03 17:01:53 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -50,7 +50,7 @@ src_unpack() {
 
 	cd ${WORKDIR}/lib/modules/fglrx/build_mod
 
-	epatch ${FILESDIR}/fglrx-3.9.0-allocation.patch
+	#epatch ${FILESDIR}/fglrx-3.9.0-allocation.patch
 
 	if [ "`echo ${KV}|grep 2.6`" ]
 	then
@@ -161,7 +161,12 @@ pkg_postinst() {
 	einfo "To switch to ATI OpenGL, run \"opengl-update ati\""
 	einfo "To change your XF86Config you can use the bundled \"fglrxconfig\""
 	echo
-
+	ewarn "***"
+	ewarn "If you are experiencing problems with memory allocation try to add"
+	ewarn "this line to in your X11 configuration file:"
+	ewarn "		Option \"KernelModuleParm\"  \"agplock=0\" "
+	ewarn "That should solve the hangups you could have with Neverwinter Nights"
+	ewarn "***"
 	# DRM module
 	update-modules
 }
