@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/watchpid
+# ChangeLog for sys-process/watchpid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/watchpid/ChangeLog,v 1.1 2005/03/03 16:20:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/watchpid/ChangeLog,v 1.2 2005/03/03 19:49:51 swegener Exp $
 
 *watchpid-0.1-r1 (03 Mar 2005)
 

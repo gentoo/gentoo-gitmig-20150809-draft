@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/schedtool
+# ChangeLog for sys-process/schedtool
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/ChangeLog,v 1.1 2005/03/03 16:13:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/ChangeLog,v 1.2 2005/03/03 19:48:44 swegener Exp $
 
 *schedtool-1.2.4 (03 Mar 2005)
 

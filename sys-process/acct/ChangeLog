@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/acct
+# ChangeLog for sys-process/acct
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.1 2005/03/03 15:21:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.2 2005/03/03 19:45:06 swegener Exp $
 
 *acct-6.3.5 (03 Mar 2005)
 

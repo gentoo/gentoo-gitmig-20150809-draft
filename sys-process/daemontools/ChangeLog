@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/daemontools
+# ChangeLog for sys-process/daemontools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.1 2005/03/03 18:11:26 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.2 2005/03/03 19:46:25 swegener Exp $
 
 *daemontools-0.76-r4 (03 Mar 2005)
 

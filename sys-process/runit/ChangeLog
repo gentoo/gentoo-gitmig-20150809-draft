@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/runit
+# ChangeLog for sys-process/runit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.1 2005/03/03 16:08:25 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.2 2005/03/03 19:48:28 swegener Exp $
 
 *runit-1.0.5 (03 Mar 2005)
 

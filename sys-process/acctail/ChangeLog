@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/acctail
+# ChangeLog for sys-process/acctail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acctail/ChangeLog,v 1.2 2005/03/03 19:37:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acctail/ChangeLog,v 1.3 2005/03/03 19:45:27 swegener Exp $
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> acctail-1.3.ebuild:
   sys-apps/acct -> sys-process/acct

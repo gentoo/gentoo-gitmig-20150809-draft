@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/time
+# ChangeLog for sys-process/time
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/time/ChangeLog,v 1.1 2005/03/03 15:35:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/time/ChangeLog,v 1.2 2005/03/03 19:49:34 swegener Exp $
 
 *time-1.7-r1 (03 Mar 2005)
 

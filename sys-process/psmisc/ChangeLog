@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/psmisc
+# ChangeLog for sys-process/psmisc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.1 2005/03/03 16:24:36 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.2 2005/03/03 19:48:12 swegener Exp $
 
 *psmisc-21.5 (03 Mar 2005)
 

@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/schedutils
+# ChangeLog for sys-process/schedutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/schedutils/ChangeLog,v 1.1 2005/03/03 16:17:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/schedutils/ChangeLog,v 1.2 2005/03/03 19:49:00 swegener Exp $
 
 *schedutils-1.3.5 (03 Mar 2005)
 

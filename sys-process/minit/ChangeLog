@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/minit
+# ChangeLog for sys-process/minit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.1 2005/03/03 16:02:26 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.2 2005/03/03 19:47:32 swegener Exp $
 
 *minit-0.9.1 (03 Mar 2005)
 
