@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/smssend
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smssend/ChangeLog,v 1.10 2004/06/25 00:12:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smssend/ChangeLog,v 1.11 2004/07/01 21:54:11 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> smssend-3.3.ebuild:
+  change virtual/glibc to virtual/libc
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> -smssend-3.1.ebuild,
   smssend-3.2.ebuild, smssend-3.3.ebuild:

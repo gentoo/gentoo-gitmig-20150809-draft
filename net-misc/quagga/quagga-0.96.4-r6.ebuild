@@ -1,6 +1,6 @@
 # Copyright 2003-2004 DataCore GmbH.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.4-r6.ebuild,v 1.2 2004/04/27 21:46:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.4-r6.ebuild,v 1.3 2004/07/01 21:47:52 squinky86 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ S="${WORKDIR}/${P}"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz"
 IUSE="ipv6 snmp pam"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/binutils
 	>=sys-libs/libcap-1.10-r3
 	!sys-apps/zebra

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5a.ebuild,v 1.7 2004/06/25 00:22:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5a.ebuild,v 1.8 2004/07/01 22:16:47 squinky86 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	 net-misc/openssh
 	 net-misc/lrzsz"

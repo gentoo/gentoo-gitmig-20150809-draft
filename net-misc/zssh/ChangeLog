@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.6 2004/06/25 00:22:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.7 2004/07/01 22:16:47 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> zssh-1.5a.ebuild:
+  change virtual/glibc to virtual/libc
 
   03 Mar 2004; Seemant Kulleen <seemant@gentoo.org> zssh-1.5a.ebuild:
   moved to stable x86, at the behest of: Petter <tt@linux.nu> in bug #43451, and

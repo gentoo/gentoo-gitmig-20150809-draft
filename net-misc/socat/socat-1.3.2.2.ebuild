@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.3.2.2.ebuild,v 1.3 2004/06/25 00:13:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.3.2.2.ebuild,v 1.4 2004/07/01 21:57:54 squinky86 Exp $
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/"
@@ -13,8 +13,8 @@ IUSE="ssl readline ipv6"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
-	virtual/glibc"
-RDEPEND="virtual/glibc"
+	virtual/libc"
+RDEPEND="virtual/libc"
 
 S=${WORKDIR}/socat-${PV:0:3}
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.29 2004/06/25 03:12:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.30 2004/07/01 22:00:33 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> stunnel-3.22-r2.ebuild,
+  stunnel-3.26.ebuild, stunnel-4.04-r1.ebuild, stunnel-4.04-r2.ebuild,
+  stunnel-4.04-r3.ebuild, stunnel-4.05.ebuild:
+  change virtual/glibc to virtual/libc
 
   18 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> stunnel-4.05.ebuild:
   Added to ~ppc

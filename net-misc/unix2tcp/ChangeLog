@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/unix2tcp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unix2tcp/ChangeLog,v 1.6 2004/06/25 00:17:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unix2tcp/ChangeLog,v 1.7 2004/07/01 22:07:40 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> unix2tcp-0.8.2.ebuild:
+  change virtual/glibc to virtual/libc
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> unix2tcp-0.7.2.ebuild,
   unix2tcp-0.8.2.ebuild:

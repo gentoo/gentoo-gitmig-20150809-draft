@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/partysip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/ChangeLog,v 1.3 2004/06/25 00:04:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/ChangeLog,v 1.4 2004/07/01 21:44:00 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> partysip-2.1.1.ebuild:
+  change virtual/glibc to virtual/libc
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> partysip-2.1.1.ebuild:
   Fix use invocation

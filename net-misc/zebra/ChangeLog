@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zebra
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.14 2004/06/25 00:22:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.15 2004/07/01 22:16:07 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> zebra-0.93a.ebuild,
+  zebra-0.93b-r1.ebuild, zebra-0.93b-r2.ebuild, zebra-0.93b.ebuild:
+  change virtual/glibc to virtual/libc
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> zebra-0.93a.ebuild,
   zebra-0.93b-r1.ebuild, zebra-0.93b-r2.ebuild, zebra-0.93b.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r2.ebuild,v 1.6 2004/06/25 00:22:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r2.ebuild,v 1.7 2004/07/01 22:16:07 squinky86 Exp $
 
 inherit eutils
 S=${WORKDIR}/${P}
@@ -17,12 +17,12 @@ KEYWORDS="~x86 ~sparc ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/binutils
 	pam? ( >=pam-0.75-r11 )
 	snmp? ( virtual/snmp )"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	sys-devel/binutils"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.19 2004/06/25 00:03:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.20 2004/07/01 21:41:25 squinky86 Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -24,7 +24,7 @@ IUSE="ipv6 static pam tcpd kerberos skey selinux X509 chroot ldap"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.73
 		>=sys-apps/shadow-4.0.2-r2 )
 	!mips? ( kerberos? ( virtual/krb5 ) )

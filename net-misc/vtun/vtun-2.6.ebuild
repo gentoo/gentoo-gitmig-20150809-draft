@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6.ebuild,v 1.5 2004/06/25 00:19:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6.ebuild,v 1.6 2004/07/01 22:09:48 squinky86 Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 
 # NOTE: you also need the tun/tap driver compiled into your kernel
 #		to do tun/tap tunneling
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3
 	>=dev-libs/lzo-1.07
 	sys-devel/bison

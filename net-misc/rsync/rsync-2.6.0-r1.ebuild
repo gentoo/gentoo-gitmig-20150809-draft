@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.0-r1.ebuild,v 1.4 2004/06/25 03:12:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.0-r1.ebuild,v 1.5 2004/07/01 21:50:14 squinky86 Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 ~ppc64 s390"
 IUSE="build static acl"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	!build? ( >=dev-libs/popt-1.5 )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4

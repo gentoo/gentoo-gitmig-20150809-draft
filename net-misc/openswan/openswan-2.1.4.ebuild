@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.4.ebuild,v 1.2 2004/06/25 00:03:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.4.ebuild,v 1.3 2004/07/01 21:41:55 squinky86 Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="-* x86 amd64 ~ppc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/linux-sources
 	>=dev-libs/gmp-3.1.1
 	net-misc/host

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.10.12-r1.ebuild,v 1.16 2004/06/25 00:11:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.10.12-r1.ebuild,v 1.17 2004/07/01 21:52:36 squinky86 Exp $
 
 DESCRIPTION="sitecopy is for easily maintaining remote web sites"
 SRC_URI="http://www.lyra.org/sitecopy/${P}.tar.gz"
@@ -11,7 +11,7 @@ SLOT="0"
 
 IUSE="ssl"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3
 	>=dev-libs/libxml-1.8.15
 	ssl? ( >=dev-libs/openssl-0.9.6 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.05.ebuild,v 1.4 2004/06/25 03:12:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.05.ebuild,v 1.5 2004/07/01 22:00:33 squinky86 Exp $
 
 inherit ssl-cert eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha arm ~amd64"
 IUSE="static"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6j"
 RDEPEND=">=dev-libs/openssl-0.9.6j"
 

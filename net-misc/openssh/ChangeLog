@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.90 2004/06/28 04:49:08 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.91 2004/07/01 21:41:25 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> openssh-3.7.1_p2-r1.ebuild,
+  openssh-3.7.1_p2-r2.ebuild, openssh-3.8.1_p1-r1.ebuild,
+  openssh-3.8.1_p1.ebuild, openssh-3.8_p1.ebuild:
+  change virtual/glibc to virtual/libc
 
   28 Jun 2004; Brandon Hale <tseng@gentoo.org> openssh-3.8.1_p1-r1.ebuild:
   Stable on x86.

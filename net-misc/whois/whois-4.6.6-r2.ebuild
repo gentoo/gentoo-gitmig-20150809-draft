@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.6-r2.ebuild,v 1.9 2004/06/25 00:20:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.6-r2.ebuild,v 1.10 2004/07/01 22:11:22 squinky86 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc sparc ~mips hppa ia64 alpha"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-lang/perl-5"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

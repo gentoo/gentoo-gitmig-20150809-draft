@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ytalk-3.1.1.ebuild,v 1.15 2004/06/25 00:21:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ytalk-3.1.1.ebuild,v 1.16 2004/07/01 22:13:12 squinky86 Exp $
 
 IUSE="X"
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 sparc ppc alpha"
 LICENSE="freedist"
 SLOT="0"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2
 	X? ( virtual/x11 )"
 

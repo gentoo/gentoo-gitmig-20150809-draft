@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.13.4-r1.ebuild,v 1.7 2004/06/25 00:11:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.13.4-r1.ebuild,v 1.8 2004/07/01 21:52:36 squinky86 Exp $
 
 IUSE="ssl xml xml2 gnome"
 
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3
 	xml? ( dev-libs/libxml )
 	dev-libs/libxml2

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/stone-2.2.ebuild,v 1.4 2004/06/25 00:13:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/stone-2.2.ebuild,v 1.5 2004/07/01 21:58:53 squinky86 Exp $
 
 DESCRIPTION="A simple TCP/IP packet repeater"
 HOMEPAGE="http://www.gcd.org/sengoku/stone/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="ssl"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
 S=${WORKDIR}/${P}

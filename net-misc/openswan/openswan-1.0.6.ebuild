@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-1.0.6.ebuild,v 1.1 2004/07/01 07:40:27 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-1.0.6.ebuild,v 1.2 2004/07/01 21:41:55 squinky86 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.openswan.org/"
 SRC_URI="http://www.openswan.org/code/${MY_P}.tar.gz
 	mirror://gentoo/${MY_P}.tar.gz"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/linux-sources
 	net-misc/host
 	sys-apps/iproute2

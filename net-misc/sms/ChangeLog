@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/sms
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/ChangeLog,v 1.6 2004/06/25 00:12:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/ChangeLog,v 1.7 2004/07/01 21:53:47 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> sms-1.9.2i.ebuild,
+  sms-1.9.2k.ebuild, sms-1.9.2l.ebuild:
+  change virtual/glibc to virtual/libc
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> sms-1.9.2i.ebuild,
   sms-1.9.2k.ebuild, sms-1.9.2l.ebuild:
