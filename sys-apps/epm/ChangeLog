@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/epm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/epm/ChangeLog,v 1.9 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/epm/ChangeLog,v 1.10 2003/04/24 02:27:53 agriffis Exp $
+
+*epm-0.8.1 (23 Apr 2003)
+
+  23 Apr 2003; Aron Griffis <agriffis@gentoo.org> epm-0.8.1.ebuild:
+  Minor version bump to pick up bug fix submitted by Neil McCalden in bug 19438
 
 *epm-0.8 (22 Oct 2002)
 
