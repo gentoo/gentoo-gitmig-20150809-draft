@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.10.3.ebuild,v 1.5 2004/08/08 00:59:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.10.3.ebuild,v 1.6 2004/08/19 02:42:19 agriffis Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE="doc ssl"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ~ppc ~alpha sparc hppa amd64 ~ia64 ~mips ~ppc64"
+KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ia64 ~mips ~ppc64"
 
 RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/popt-1.5
