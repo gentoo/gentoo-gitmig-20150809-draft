@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/cssc 
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/ChangeLog,v 1.1 2003/02/09 07:52:36 blocke Exp $
+
+*cssc-0.15_alpha0 (09 Feb 2003)
+
+  09 Feb 2003; Bruce A. Locke <blocke@shivan.org> cssc-0.15_alpha0.ebuild:
+  Initial version.  Ebuild originally submitted by:
+  Gilles G <gilles_gros@yahoo.com>
+
+
