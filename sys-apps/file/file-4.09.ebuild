@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.09.ebuild,v 1.2 2004/04/30 18:19:08 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.09.ebuild,v 1.3 2004/05/03 19:43:36 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils
+use python && inherit distutils
 
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
@@ -12,9 +13,10 @@ SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 s390"
-IUSE=""
+IUSE="python build"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	!build? ( python? ( virtual/python ) )"
 
 src_unpack() {
 	unpack ${A}
@@ -38,6 +40,8 @@ src_compile() {
 
 	# Buggy Makefiles.  This fixes bug 31356
 	emake -j1 || die "emake failed"
+
+	use python && cd python && distutils_src_compile
 }
 
 src_install() {
@@ -45,7 +49,16 @@ src_install() {
 
 	if ! use build ; then
 		dodoc ChangeLog MAINT README
+		use python && cd python && distutils_src_install
 	else
 		rm -rf ${D}/usr/share/man
 	fi
+}
+
+pkg_postinst() {
+	use python && distutils_pkg_postinst
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }
