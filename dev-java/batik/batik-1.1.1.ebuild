@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.1.1.ebuild,v 1.3 2003/07/11 21:41:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.1.1.ebuild,v 1.4 2003/09/06 22:26:46 msterret Exp $
 
 S=${WORKDIR}/xml-batik
 DESCRIPTION="Batik is a Java(tm) technology based toolkit for applications or applets that want to use images in the Scalable Vector Graphics (SVG) format for various purposes, such as viewing, generation or manipulation."
@@ -26,7 +26,7 @@ src_install () {
 
 	dojar ${P}/batik*.jar
 	dojar ${P}/lib/*.jar
-	
+
 	dodoc README LICENSE LICENSE.rhino
 	dohtml -r ${P}/docs/
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r9.ebuild,v 1.3 2003/05/24 06:35:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r9.ebuild,v 1.4 2003/09/06 22:26:46 msterret Exp $
 
 IUSE="doc"
 
@@ -51,7 +51,7 @@ src_install () {
 
 	dodir /opt/${P}/share/java
 	cp -R ${S}/{demo,src.jar} ${D}/opt/${P}/share
-	
+
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html
 
@@ -64,7 +64,7 @@ src_install () {
 		PLATFORM="sparc"
 	fi
 
-	inst_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/javaplugin_oji.so 
+	inst_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/javaplugin_oji.so
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
 
@@ -73,7 +73,7 @@ src_install () {
 		< ${D}/opt/${P}/jre/lib/font.properties.orig \
 		> ${D}/opt/${P}/jre/lib/font.properties
 	rm ${D}/opt/${P}/jre/lib/font.properties.orig
-	
+
 	# install env into /etc/env.d
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3-r4.ebuild,v 1.1 2003/05/26 11:05:17 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3-r4.ebuild,v 1.2 2003/09/06 22:26:46 msterret Exp $
 
 inherit java-pkg
 
@@ -31,7 +31,7 @@ src_compile() {
 			export DEP_APPEND="${DEP_APPEND} xalan"
 		fi
 	fi
-	
+
 	# Add Xerces in if we have it
 	if [ -f "/usr/share/xerces/lib/xercesImpl.jar" ] ; then
 		export CLASSPATH="${CLASSPATH}:/usr/share/xerces/lib/xercesImpl.jar:/usr/share/xerces/lib/xml-apis.jar"
@@ -43,7 +43,7 @@ src_compile() {
 		export CLASSPATH="${CLASSPATH}:/usr/share/oro/lib/oro.jar"
 		export DEP_APPEND="${DEP_APPEND} oro"
 	fi
-	
+
 	# Add beanutils if we have it
 	if [ -f "/usr/share/commons-beanutils/lib/commons-beanutils.jar" ] ; then
 		export CLASSPATH="${CLASSPATH}:/usr/share/commons-beanutils/lib/commons-beanutils.jar"
@@ -55,13 +55,13 @@ src_compile() {
 		export CLASSPATH="${CLASSPATH}:/usr/share/antlr/lib/antlr.jar"
 		export DEP_APPEND="${DEP_APPEND} antlr"
 	fi
-	
+
 	./build.sh -Ddist.dir=${D}/usr/share/ant || die
 }
 
 src_install() {
 	cp ${FILESDIR}/${PV}/ant ${S}/src/ant
-	
+
 	exeinto /usr/bin
 	doexe src/ant
 	for each in antRun runant.pl runant.py complete-ant-cmd.pl ; do
@@ -69,7 +69,7 @@ src_install() {
 	done
 
 	java-pkg_dojar build/lib/*.jar
-	
+
 	dodoc LICENSE LICENSE.* README WHATSNEW KEYS
 	use doc && dohtml welcome.html
 	use doc && dohtml -r docs/*

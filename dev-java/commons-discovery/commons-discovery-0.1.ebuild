@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.1.ebuild,v 1.2 2003/04/06 07:46:36 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.1.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
 
 inherit jakarta-commons
 
@@ -22,7 +22,7 @@ src_compile() {
 	echo "logger.jar=`java-config --classpath=commons-logging`" | sed s/\=.*:/\=/ >> build.properties
 	jakarta-commons_src_compile myconf make
 	use doc && jakarta-commons_src_compile makedoc
-	
+
 	# UGLY HACK
 	mv ${S}/target/conf/MANIFEST.MF ${S}/target/classes/
 	cd ${S}/target/classes

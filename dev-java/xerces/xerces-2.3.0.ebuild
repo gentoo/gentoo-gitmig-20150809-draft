@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0.ebuild,v 1.4 2003/08/05 16:08:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0.ebuild,v 1.5 2003/09/06 22:26:46 msterret Exp $
 
 S=${WORKDIR}/xerces-${PV//./_}
 DESCRIPTION="The next generation of high performance, fully compliant XML parsers in the Apache Xerces family"
@@ -26,7 +26,7 @@ src_compile() {
 
 src_install () {
 	dojar build/x*.jar
-	dodoc TODO STATUS README LICENSE ISSUES 
+	dodoc TODO STATUS README LICENSE ISSUES
 	dohtml Readme.html
 
 	dodir /usr/share/doc/${P}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.24 2003/09/06 12:13:12 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.25 2003/09/06 22:26:46 msterret Exp $
 
 inherit java
 
@@ -20,7 +20,7 @@ LICENSE="sun-bcla-java-vm"
 KEYWORDS="x86 ppc sparc"
 
 src_unpack () {
-	if (use ppc) || (use sparc) ; then 
+	if (use ppc) || (use sparc) ; then
 		tail -n +422 ${DISTDIR}/${A} | tar xjf -
 	else
 		unpack ${A}

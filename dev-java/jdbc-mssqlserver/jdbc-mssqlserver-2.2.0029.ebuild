@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/jdbc-mssqlserver-2.2.0029.ebuild,v 1.1 2003/05/14 18:08:53 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/jdbc-mssqlserver-2.2.0029.ebuild,v 1.2 2003/09/06 22:26:46 msterret Exp $
 
 inherit java-pkg
 
@@ -24,10 +24,10 @@ src_unpack() {
 
 src_compile() {
 	einfo "This is a binary-only ebuild."
-} 
+}
 
 src_install() {
-	dodoc read.me EULA.txt MSfixes.txt 
+	dodoc read.me EULA.txt MSfixes.txt
 	use doc && dohtml -r Help/*
 	use doc && dodoc \
 			books/books.pdf

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.1.ebuild,v 1.2 2003/08/24 03:00:42 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.1.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
 
 inherit java-pkg
 
@@ -25,8 +25,8 @@ FILE3=${P}-${DISTFILE3}
 src_unpack() {
 	# Build File List
 	FILELIST="${FILE1} ${FILE2}"
-	use doc > /dev/null && FILELIST="${FILELIST} ${FILE3}" 
-	
+	use doc > /dev/null && FILELIST="${FILELIST} ${FILE3}"
+
 	# Check for distributables
 	echo " "
 	for i in ${FILELIST} ; do
@@ -38,8 +38,8 @@ src_unpack() {
 		fi
 	done
 	echo " "
-	
-	
+
+
 	if [ "${MISSING_FILES}" == "true" ] ; then
 		einfo " "
 		einfo " Because of license terms and file name conventions, please:"
@@ -59,7 +59,7 @@ src_unpack() {
 		einfo " "
 		die "User must manually fetch/rename files"
 	fi
-	
+
 	# Move files back to their original filenames
 	mv ${S}/${FILE1} ${S}/${DISTFILE1}
 	mv ${S}/${FILE2} ${S}/${DISTFILE2}
@@ -68,7 +68,7 @@ src_unpack() {
 
 src_compile() {
 	einfo " This is a binary-only (bytecode) ebuild."
-} 
+}
 
 src_install() {
 	if [ -n "`use doc`" ] ; then

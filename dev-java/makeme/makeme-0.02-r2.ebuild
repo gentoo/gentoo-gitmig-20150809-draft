@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/makeme-0.02-r2.ebuild,v 1.2 2003/08/15 06:19:30 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/makeme-0.02-r2.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
 
 inherit java-pkg
 
@@ -22,7 +22,7 @@ src_unpack() {
 	cd ${S}
 	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
 }
-        
+
 src_compile() {
 	if [ -z "`use jikes`" ] ; then
 		cp Makefile Makefile.orig

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.5.0.ebuild,v 1.1 2003/08/24 03:19:40 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.5.0.ebuild,v 1.2 2003/09/06 22:26:46 msterret Exp $
 
 inherit java-pkg eutils
 
@@ -33,7 +33,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar build/x*.jar
-	dodoc TODO STATUS README LICENSE ISSUES 
+	dodoc TODO STATUS README LICENSE ISSUES
 	dohtml Readme.html
 
 	if [ -n "`use doc`" ] ; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r1.ebuild,v 1.3 2003/05/24 05:37:50 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r1.ebuild,v 1.4 2003/09/06 22:26:46 msterret Exp $
 
 At=j2sdkee-1_3_1-linux.tar.gz
 S=${WORKDIR}/j2sdkee1.3.1
@@ -25,12 +25,12 @@ src_unpack() {
 
 src_install () {
 	local dirs="bin lib conf config cloudscape lib images nativelib repository public_html logs help images"
-	
+
 	dodir /opt/${P}
 	for i in $dirs ; do
 		cp -a $i ${D}/opt/${P}/
 	done
-	
+
 	dodoc LICENSE README
 	if [ -n "`use doc`" ] ; then
 		dohtml -r doc/*

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r1.ebuild,v 1.15 2003/02/13 10:09:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r1.ebuild,v 1.16 2003/09/06 22:26:46 msterret Exp $
 
 IUSE="doc"
 
@@ -42,11 +42,11 @@ src_install () {
 	for i in demo src.jar ; do
 		cp -dpR $i ${D}/opt/${P}/share/
 	done
-	
+
 	dohtml -a html,htm,HTML -r docs
 	dodoc docs/COPYRIGHT
 
-	# Plugin is disabled as it crashes all the time	
+	# Plugin is disabled as it crashes all the time
 #	if [ "`use mozilla`" ] ; then
 #		dodir /usr/lib/mozilla/plugins
 #		dosym /opt/${P}/jre/bin/libjavaplugin_oji.so /usr/lib/mozilla/plugins/

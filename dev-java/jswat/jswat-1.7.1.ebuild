@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-1.7.1.ebuild,v 1.2 2003/05/24 18:07:29 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-1.7.1.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
 
 inherit java-pkg
 
@@ -22,10 +22,10 @@ src_compile() {
 src_install () {
 	# install jswat classes
 	java-pkg_dojar jswat.jar parser.jar
-	
+
 	# prepare and install jswat script
 	dobin ${FILESDIR}/jswat
-	
+
 	# install documents
 	dodoc AUTHORS.txt BUGS.txt HISTORY.txt LICENSE.txt TODO.txt
 	dohtml README.html

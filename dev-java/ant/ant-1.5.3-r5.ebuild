@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3-r5.ebuild,v 1.2 2003/08/11 16:14:11 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3-r5.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
 
 inherit java-pkg
 
@@ -22,8 +22,8 @@ src_unpack() {
 	# Patch build.sh to die with non-zero exit code in case of errors.
 	# This patch may be useful for all ant versions.
 	epatch ${FILESDIR}/build.sh-exit-fix.patch.gz
-	
-	# Incorporate changes from upcoming ant-1.6 into 1.5.3 to 
+
+	# Incorporate changes from upcoming ant-1.6 into 1.5.3 to
 	# enable building ant with java >=sun-jdk-1.4.2
 	epatch ${FILESDIR}/${PV}/1_6_backport-jdk142.patch.gz
 }
@@ -44,7 +44,7 @@ src_compile() {
 			export DEP_APPEND="${DEP_APPEND} xalan"
 		fi
 	fi
-	
+
 	# Add Xerces in if we have it
 	if [ -f "/usr/share/xerces/lib/xercesImpl.jar" ] ; then
 		export CLASSPATH="${CLASSPATH}:/usr/share/xerces/lib/xercesImpl.jar:/usr/share/xerces/lib/xml-apis.jar"
@@ -56,7 +56,7 @@ src_compile() {
 		export CLASSPATH="${CLASSPATH}:/usr/share/oro/lib/oro.jar"
 		export DEP_APPEND="${DEP_APPEND} oro"
 	fi
-	
+
 	# Add beanutils if we have it
 	if [ -f "/usr/share/commons-beanutils/lib/commons-beanutils.jar" ] ; then
 		export CLASSPATH="${CLASSPATH}:/usr/share/commons-beanutils/lib/commons-beanutils.jar"
@@ -68,13 +68,13 @@ src_compile() {
 		export CLASSPATH="${CLASSPATH}:/usr/share/antlr/lib/antlr.jar"
 		export DEP_APPEND="${DEP_APPEND} antlr"
 	fi
-	
+
 	./build.sh -Ddist.dir=${D}/usr/share/ant || die
 }
 
 src_install() {
 	cp ${FILESDIR}/${PV}/ant ${S}/src/ant
-	
+
 	exeinto /usr/bin
 	doexe src/ant
 	for each in antRun runant.pl runant.py complete-ant-cmd.pl ; do
@@ -82,7 +82,7 @@ src_install() {
 	done
 
 	java-pkg_dojar build/lib/*.jar
-	
+
 	dodoc LICENSE LICENSE.* README WHATSNEW KEYS
 	use doc && dohtml welcome.html
 	use doc && dohtml -r docs/*

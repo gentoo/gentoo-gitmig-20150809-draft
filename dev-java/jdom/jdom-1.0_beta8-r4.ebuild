@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta8-r4.ebuild,v 1.2 2003/07/11 21:41:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta8-r4.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
 
 inherit java-pkg
 
@@ -41,7 +41,7 @@ src_install() {
 		build/jdom.jar \
 		lib/crimson.jar \
 		lib/jaxp.jar
-	
+
 	dodoc CHANGES.txt COMMITTERS.txt LICENSE.txt README.txt TODO.txt
 	use doc && dohtml -r build/apidocs/*
 }

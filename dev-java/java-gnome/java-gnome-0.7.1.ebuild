@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.7.1.ebuild,v 1.13 2003/07/11 21:41:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.7.1.ebuild,v 1.14 2003/09/06 22:26:46 msterret Exp $
 
 IUSE="gnome"
 
@@ -20,7 +20,7 @@ KEYWORDS="x86 ~ppc ~sparc"
 
 src_compile() {
 	local myconf
-	
+
 	#JAVAC="`which jikes` -classpath $CLASSPATH:." \
 		./configure \
 		--host=${CHOST} \
@@ -39,7 +39,7 @@ src_compile() {
 	cp src/tools/Makefile src/tools/Makefile.orig
 	sed -e "s|CLASSPATH = .|CLASSPATH = ${myclasspath}\:.|" \
 		< src/tools/Makefile.orig > src/tools/Makefile
-	
+
 	cp test/Makefile test/Makefile.orig
 	sed -e "s|CLASSPATH = ../lib/gtk.jar\:../lib/gnome.jar|CLASSPATH = ${myclasspath}\:.\:../lib/gtk.jar\:../lib/gnome.jar|" \
 		< test/Makefile.orig > test/Makefile
@@ -51,9 +51,9 @@ src_compile() {
 
 src_install () {
 	make prefix=${D}/usr install || die
-	
+
 	mv ${D}/usr/doc ${D}/usr/share/
-	
+
 	rm ${D}/usr/share/java-gtk/gtk.jar
 	rm ${D}/usr/share/java-gtk/gnome.jar
 
@@ -63,8 +63,8 @@ src_install () {
 	dosym /usr/lib/libGNOMEJava.so.${PV} /usr/lib/libGNOMEJava.so
 
 	rm ${D}/usr/share/java-gnome/gtk*.jar
-		
+
 	echo "/usr/share/java-gnome/gnome-${PV}.jar:" \
 		> ${D}/usr/share/java-gnome/classpath.env
-		
+
 }

@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1.ebuild,v 1.6 2003/05/09 19:54:41 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1.ebuild,v 1.7 2003/09/06 22:26:46 msterret Exp $
 
 IUSE="doc"
 
-inherit java 
+inherit java
 
 At="jdk-1.3.1-1-linux-alpha.tgz"
 S=${WORKDIR}/jdk1.3.1
@@ -25,7 +25,7 @@ PROVIDE="virtual/jre-1.3.1
 LICENSE="compaq-sdla"
 SLOT="1.3"
 KEYWORDS="-x86 -ppc -sparc alpha"
-	
+
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
 		die "Please download ${At} from ${HOMEPAGE}"
@@ -33,14 +33,14 @@ src_unpack() {
 	tar zxf ${DISTDIR}/${At}
 	rpm2targz jdk-1.3.1-1-linux-alpha.rpm
 	tar zxf jdk-1.3.1-1-linux-alpha.tar.gz >& /dev/null
-	mv usr/java/jdk1.3.1 . 
+	mv usr/java/jdk1.3.1 .
 }
 
 src_install () {
 	local dirs="bin include include-old jre lib"
 	dodir /opt/${P}
-	
-	
+
+
 	for i in $dirs ; do
 		cp -a $i ${D}/opt/${P}/
 	done
@@ -56,8 +56,8 @@ src_install () {
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
 }
 
-pkg_postinst () {                                                               
+pkg_postinst () {
 	# Set as default VM if none exists
 	java_pkg_postinst
-}                                                                             
-                                                                            
+}
+

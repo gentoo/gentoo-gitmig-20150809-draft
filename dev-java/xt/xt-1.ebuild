@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-1.ebuild,v 1.11 2003/02/13 10:24:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-1.ebuild,v 1.12 2003/09/06 22:26:46 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Java Implementation of XSL-Transformations"
@@ -17,7 +17,7 @@ src_unpack() {
 	jar -xf ${DISTDIR}/${PN}.zip
 }
 
-src_install() {              
+src_install() {
 	dojar xt.jar sax.jar
 	dohtml xt.html
 	docinto demo

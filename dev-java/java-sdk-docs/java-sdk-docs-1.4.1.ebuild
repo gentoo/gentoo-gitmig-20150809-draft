@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.4.1.ebuild,v 1.9 2003/08/24 03:00:39 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.4.1.ebuild,v 1.10 2003/09/06 22:26:46 msterret Exp $
 
 At="j2sdk-1_4_1-doc.zip"
 S="${WORKDIR}/docs"
@@ -24,8 +24,8 @@ src_install(){
 	dohtml index.html
 
 	local dirs="api guide images relnotes tooldocs"
-	
+
 	for i in $dirs ; do
 		cp -a $i ${D}/usr/share/doc/${P}/html
-	done	
+	done
 }

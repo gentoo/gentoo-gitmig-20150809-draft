@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.3.ebuild,v 1.2 2003/04/06 08:34:42 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.3.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
 
 DESCRIPTION="A Java-based template engine that allows easy creation/rendering of documents that format and present data."
 HOMEPAGE="http://jakarta.apache.org/velocity/"
@@ -30,9 +30,9 @@ src_compile () {
 		cp /opt/sun-j2ee-1.3.1/lib/j2ee.jar ${S}/build/lib
 		ANT_OPTS=${myc} ant jar-J2EE || die "Java compile failed."
 	else
-		ANT_OPTS=${myc} ant jar || die "Java compile failed" 
+		ANT_OPTS=${myc} ant jar || die "Java compile failed"
 	fi
-	
+
 	if [ -n "`use doc`" ] ; then
 		ant javadocs || die "Document compile failed"
 	fi

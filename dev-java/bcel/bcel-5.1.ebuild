@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.2 2003/08/05 16:08:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
 
 inherit java-pkg eutils
 
@@ -23,7 +23,7 @@ src_compile() {
 	ANT_OPTS="${myc}"
 	CLASSPATH="${CLASSPATH}:`/usr/bin/java-config --classpath=regexp`"
 	epatch ${FILESDIR}/${P}-gentoo.diff
-	
+
 	use jikes && export ANT_OPTS="${ANT_OPTS} -Dbuild.compiler=jikes"
 	ant jar || die "Compile failed during jar target."
 	if [ -n "`use doc`" ] ; then
@@ -34,6 +34,6 @@ src_compile() {
 
 src_install() {
 	use doc && dohtml -r docs/
-	dodoc LICENSE.txt 
+	dodoc LICENSE.txt
 	java-pkg_dojar bin/bcel.jar
 }

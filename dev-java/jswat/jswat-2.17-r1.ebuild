@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.17-r1.ebuild,v 1.3 2003/05/24 18:07:29 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.17-r1.ebuild,v 1.4 2003/09/06 22:26:46 msterret Exp $
 
 inherit java-pkg
 
@@ -19,18 +19,18 @@ src_compile() {
 	antopts="-Dversion=${PV}"
 	use jikes && antopts="${antopts} -Dbuild.compiler=jikes"
 	ant ${antopts} dist || die "Compile failed"
-	
+
 	# Make sure junit tasks get built if we have junit
 	if [ -f "/usr/share/junit/lib/junit.jar" ] ; then
 		export CLASSPATH="/usr/share/junit/lib/junit.jar"
 		export DEP_APPEND="junit"
-		if [ `use junit` ] 
+		if [ `use junit` ]
 			then
 				einfo "Running JUnit tests, this may take awhile ..."
 				ant ${antopts} test || die "Junit test failed"
 		fi
 	fi
-	
+
 }
 
 src_install () {
@@ -39,10 +39,10 @@ src_install () {
 		build/dist/${P}/*.jar \
 		classes/ext/parser.jar \
 		classes/ext/jclasslib.jar
-	
+
 	# prepare and install jswat script
 	dobin ${FILESDIR}/jswat2
-	
+
 	# install documents
 	dodoc AUTHORS.txt BUGS.txt HISTORY.txt LICENSE.txt OLD_HISTORY.txt TODO.txt
 	dohtml README.html

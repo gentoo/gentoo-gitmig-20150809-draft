@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/infobus-1.2.ebuild,v 1.4 2003/08/24 03:00:38 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/infobus-1.2.ebuild,v 1.5 2003/09/06 22:26:46 msterret Exp $
 
 inherit java-pkg
 
@@ -22,7 +22,7 @@ src_unpack() {
 		echo  "!!! Missing ${DISTDIR}/${At}"
 		echo  " "
 		einfo " "
-		einfo " Due to license restrictions, we cannot fetch the" 
+		einfo " Due to license restrictions, we cannot fetch the"
 		einfo " distributables automagically."
 		einfo " "
 		einfo " 1. Visit ${HOMEPAGE}"
@@ -33,7 +33,7 @@ src_unpack() {
 		die "User must manually download distfile"
 	fi
 	unzip -qq ${DISTDIR}/${At}
-}	
+}
 
 src_compile() {
 	einfo " This is a binary-only ebuild."

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-2.1-r3.ebuild,v 1.5 2003/04/26 05:36:58 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-2.1-r3.ebuild,v 1.6 2003/09/06 22:26:46 msterret Exp $
 
 inherit jakarta-commons
 
@@ -19,7 +19,7 @@ KEYWORDS="x86 ppc sparc"
 IUSE="doc jikes junit"
 
 src_compile() {
-	jakarta-commons_src_compile myconf make 
+	jakarta-commons_src_compile myconf make
 	use doc && jakarta-commons_src_compile makedoc
 }
 

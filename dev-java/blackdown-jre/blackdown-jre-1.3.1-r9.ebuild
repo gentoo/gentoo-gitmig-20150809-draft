@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.4 2003/09/06 12:13:12 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.5 2003/09/06 22:26:46 msterret Exp $
 
 IUSE=""
 
@@ -24,7 +24,7 @@ LICENSE="sun-bcla-java-vm"
 KEYWORDS="ppc"
 
 src_unpack () {
-	if (use ppc) || (use sparc) || (use sparc64) ; then 
+	if (use ppc) || (use sparc) || (use sparc64) ; then
                 # this is built on gcc 3.2 so only update if gcc 3.x is present
                 [ -z "${CC}" ] && CC=gcc
                 if [ "`${CC} -dumpversion | cut -d. -f1,2`" = "2.95" ] ; then

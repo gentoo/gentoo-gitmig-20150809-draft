@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.ebuild,v 1.11 2003/02/13 10:09:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.ebuild,v 1.12 2003/09/06 22:26:46 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="JavaScript Interpreter written in Java"
@@ -15,11 +15,11 @@ src_unpack() {
 	jar -xf ${DISTDIR}/fesikit.zip
 }
 
-src_install() {                               
+src_install() {
 
 	dojar fesi.jar
 
 	into /usr
-	dodoc COPYRIGHT.TXT Readme.txt 
+	dodoc COPYRIGHT.TXT Readme.txt
 	dohtml -r doc/html/*
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit/jrockit-8.1.ebuild,v 1.3 2003/08/24 03:00:44 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit/jrockit-8.1.ebuild,v 1.4 2003/09/06 22:26:46 msterret Exp $
 
 IUSE=""
 
@@ -46,7 +46,7 @@ src_install () {
 		cp -dpR $i ${D}/opt/${P}/
 	done
 
-	newdoc README.TXT README 
+	newdoc README.TXT README
         newdoc "License Agreement.txt" LICENSE
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
