@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.233 2005/03/29 04:01:14 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.234 2005/04/01 09:14:17 swegener Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -32,8 +32,8 @@ berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
 bidi - Enables bidirectional language support
 bindist - Flag to enable or disable options for prebuilt (GRP)  packages (eg. due to licensing issues)
 birdstep - Adds support for the Birdstep Database Server
-bmp - (EXPERIMENTAL) Adds beep media player support.  Mainly used to support bmp plugins in xmms, but can also be used for generic beem media player support.
 bluetooth - Enable Bluetooth Support
+bmp - (EXPERIMENTAL) Adds beep media player support.  Mainly used to support bmp plugins in xmms, but can also be used for generic beem media player support.
 bonobo - Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
 bootstrap - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during original system bootstrapping
 boundschecking - add bounds checking patch by Haj Ten Brugge, this will DISABLE the hardened PIE+SSP patches
@@ -60,7 +60,6 @@ dbase - Adds support for dbase file format
 dbm - Adds support for generic DBM databases.
 dbmaker - Adds support for dbmaker database server
 dbx - Adds database abstraction layer
-gcj - Enable building with gcj
 debug - Tells configure and the makefiles to build for debugging. Effects vary across packages, but generally it will at least add -g to CFLAGS. Remember to set FEATURES=nostrip too
 dedicated - Adds support for dedicated game servers
 dga - Adds DGA Support (Xfree86) (DGA=Direct Graphic Access)
@@ -90,7 +89,6 @@ evo - Adds support for evolution in gnumeric and multisync
 examples - Install example source code
 exif - Adds support for reading EXIF headers from JPEG and TIFF images
 expat - Enable the use of dev-libs/expat
-fortran - Adds support for fortran (formally f77)
 fam - Enable FAM support
 fastcgi - Add support for the FastCGI interface
 fbcon - Adds framebuffer support for the console, via the kernel
@@ -103,12 +101,14 @@ flac - Adds support for the flac audio codec
 flash - Adds support for creating flash files using Ming
 flatfile - Adds dbm support for flat files
 foomaticdb - Adds support for the foomatic printing driver database
+fortran - Adds support for fortran (formally f77)
 freetds - Adds support for the TDS protocol to connect to MSSQL/Sybase databases
 freetype - Enable freetype font support (deprecated - use truetype)
 freewnn - Adds support for FreeWnn kana to kanji conversion engine
 frontbase - Adds support for the frontbase sql server
 ftp - Adds FTP support
 gb - Adds support for Gnome Basic to gnumeric
+gcj - Enable building with gcj
 gd - Adds support for media-libs/gd (to generate graphics on the fly)
 gd-external - Use the external version of gd rather than the bundled one (possibly dangerous)
 gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
@@ -274,9 +274,9 @@ sharedmem - Adds support for shared memory use
 shorten - Adds support for the shorten audio compressor
 simplexml - support for simplexml
 skey - Enable S/Key (Single use password) authentication support
-smartcard - Enables smartcard support
 slang - Adds support for the slang text display library (it's like ncurses, but different)
 slp - Adds Service Locator Protocol support to CUPS
+smartcard - Enables smartcard support
 sndfile - Adds support for libsndfile
 snmp - Adds support for the Simple Network Management Protocol if available
 soap - Adds support for SOAP
@@ -321,6 +321,7 @@ vcd - Video CD support
 vhosts - Adds support for installing web-based applications into a virtual-hosting environment
 videos - Tells portage to install optional video files (used in some games)
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.
+win32codecs - use win32codecs package for dll avi decoding support (wmv and what not)
 wavelan - Tells pcmcia-cs that you want to use the built-in wvlan drivers instead of the Orinoco drivers
 wddx - Adds support for WDDX
 wifi - Enable wireless network functions
@@ -357,5 +358,4 @@ ppc-macos - indicates that platform is Mac OS (Jaguar, Panther or Tiger)
 s390 - indicates that architecture is zSeries/s390
 sh - indicates that architecture is SuperH
 sparc - indicates that architecture is (32-bit) Sparc
-win32codecs - use win32codecs package for dll avi decoding support (wmv and what not)
 x86 - indicates that architecture is x86

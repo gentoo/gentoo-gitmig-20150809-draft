@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1057 2005/03/30 17:19:20 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1058 2005/04/01 09:17:28 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -128,8 +128,8 @@ dev-java/ant-tasks:javamail - Enable JavaMail Ant task
 dev-java/ant-tasks:noantlr - Disable ANTLR Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/ant-tasks:nobcel - Disable bcel Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/ant-tasks:nobeanutils - Disable beanutils Ant task -- Warning: Enabling this could break some of the Java packages!!
-dev-java/ant-tasks:nobsh - Disable bsh Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/ant-tasks:nobsf - Disable bsf Ant task -- Warning: Enabling this could break some of the Java packages!!
+dev-java/ant-tasks:nobsh - Disable bsh Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/ant-tasks:nocommonslogging - Disable commons-logging Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/ant-tasks:nocommonsnet - Disable commons-net Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/ant-tasks:nojdepend - Disable Jdepend Ant task -- Warning: Enabling this could break some of the Java packages!!
@@ -294,11 +294,11 @@ kde-base/akode:libsamplerate - Enable support for converting sample rates using 
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
 kde-base/kbugbuster:kcal - Add support for kcal (calendar) format
 kde-base/kcontrol:ieee1394 - Enable firewire support in Info Center
+kde-base/kcontrol:logitech-mouse - Enable Control Center module for configuring logitech mice
 kde-base/kdeartwork-kscreensaver:xscreensaver - Enable detection of xscreensavers
 kde-base/kdeartwork:xscreensaver - Enable detection of xscreensavers
 kde-base/kdebase:ieee1394 - Enable firewire support in Info Center
 kde-base/kdebase:logitech-mouse - Enable Control Center module for configuring logitech mice
-kde-base/kcontrol:logitech-mouse - Enable Control Center module for configuring logitech mice
 kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics-meta:povray - Enable povray dependency - needed for kpovmodeler
@@ -439,9 +439,9 @@ media-video/avifile:sblive - Enable the AC3 passthrough plugin for SBlive soundc
 media-video/avifile:vidix - Build the vidix drivers
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/chaplin:vcdimager - Enables optional support for GNU VCDimager
-media-video/dvdrip:rar - Enables rar compression of VOB fiels
-media-video/dvdrip:mplayer - Enables video playback by mplayer
 media-video/dvdrip:fping - Enables fping support for cluster rendering
+media-video/dvdrip:mplayer - Enables video playback by mplayer
+media-video/dvdrip:rar - Enables rar compression of VOB fiels
 media-video/emovix:codecs - Enables use of the win32 dll codecs for playback
 media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telephony)
 media-video/kino:ffmpeg - Enable ffmpeg support
@@ -597,8 +597,8 @@ net-mail/dovecot:nopop3d - Do not build pop3d support
 net-mail/dovecot:vpopmail - Add vpopmail support
 net-mail/gnubiff:password - Enable save passwords to connect mail servers in user space
 net-mail/hotwayd:smtp - Build SMTP proxy (hotsmtpd)
-net-mail/lbdb:finger - Enables finger support
 net-mail/lbdb:abook - Enables app-misc/abook support
+net-mail/lbdb:finger - Enables finger support
 net-mail/poppassd_ceti:cracklib - Support for cracklib strong password checking
 net-mail/qpopper:mailbox - Enables mail spool file is in home directory ~/Mailbox
 net-mail/qpopper:xinetd - If you want inetd version instead of standalone
@@ -739,8 +739,8 @@ sys-devel/gcc:nomultilib - Disables multilib support in gcc
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
-sys-fs/clvm:nolvmstatic - Allow users to build clvm dynamically
 sys-fs/clvm:nocman - Allow users to build clvm without cman support and with gulm support
+sys-fs/clvm:nolvmstatic - Allow users to build clvm dynamically
 sys-fs/lufs:disablekernelsupport - If you already have a patched lufs kernel, skip the module building part
 sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
 sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
@@ -823,9 +823,9 @@ www-client/w3m:async - Enables asynchronous fetch
 www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
+www-proxy/squid:customlog - Add support for custom log file formats
 www-proxy/squid:logrotate - Use logrotate for rotating logs
 www-proxy/squid:underscores - Enables support for domain names containing underscores
-www-proxy/squid:customlog - Add support for custom log file formats
 www-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
 www-servers/fnord:diet - Compile and link with dietlibc
 www-servers/lighttpd:xattr - if you want extended attributes enabled
@@ -877,7 +877,7 @@ x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
 x11-wm/icewm:silverxp - Apply ybuttons.cc.patch necessary for SilverXP theme
 x11-wm/metisse:freetype - Enable freetype font support
-x11-wm/openbox:startup-notification - Enable application startup notification
 x11-wm/openbox:pango - Enable pango support
+x11-wm/openbox:startup-notification - Enable application startup notification
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
 x11-wm/windowmaker:vdesktop - Enable NEWTWM style virtual desktop support.
