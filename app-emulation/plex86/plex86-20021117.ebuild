@@ -1,20 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/plex86/plex86-20021117.ebuild,v 1.7 2004/02/20 06:08:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/plex86/plex86-20021117.ebuild,v 1.8 2004/03/24 07:53:19 mr_bones_ Exp $
 
 DESCRIPTION="Plex86 is THE opensource free-software alternative for VMWare, VirtualPC, and other IA-32 on IA-32 \"Virtual PC products.\""
 HOMEPAGE="http://savannah.gnu.org/projects/plex86/"
-LICENSE="LGPL-2.1"
 SRC_URI="http://savannah.nongnu.org/download/plex86/${P}.tar.bz2"
+
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="X sdl"
+
 RDEPEND=">=sys-libs/ncurses-5.2-r7
-	X? ( >=x11-base/xfree-4.2.0 )
+	X? ( virtual/x11 )
 	sdl? ( >=media-libs/libsdl-1.2.4 )"
-DEPEND="${RDEPEND}"
-DEPEND=""
-S="${WORKDIR}/${P}"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_compile() {
 	MY_CONF="--with-Linux --enable-cdrom --enable-split-hd --enable-pci --enable-vbe --enable-sb16=linux --enable-instrumentation"
@@ -29,23 +30,24 @@ src_compile() {
 	MY_CONF="${MY_CONF} --with-gui=${MY_GUI}"
 
 	# fix typo (bug submitted)
-	mv user/plugins/bochs/iodev/eth_fbsd.cc user/plugins/bochs/iodev/eth_fbsd.cc_orig
-	sed s/'inclide'/'include'/ user/plugins/bochs/iodev/eth_fbsd.cc_orig > user/plugins/bochs/iodev/eth_fbsd.cc
+	sed -i \
+		-e s/'inclide'/'include'/ user/plugins/bochs/iodev/eth_fbsd.cc \
+			|| die "sed eth_fbsd.cc failed"
 
 	./configure \
-	--host=${CHOST} \
-	--prefix=/usr \
-	--infodir=/usr/share/info \
-	--mandir=/usr/share/man ${MY_CONF} || die "./configure failed"
+		--host=${CHOST} \
+		--prefix=/usr \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man ${MY_CONF} || die "./configure failed"
 
-	make || die
+	emake || die "emake failed"
 }
 
 src_install() {
 	#make DESTDIR=${D} install || die
 	# for now just this:
 	dodir /opt/${P}
-	cp -r * ${D}/opt/${P}
+	cp -r * ${D}/opt/${P} || die "cp failed"
 }
 
 pkg_postinst() {
