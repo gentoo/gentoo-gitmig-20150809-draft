@@ -1,4 +1,14 @@
-MD5 50eb9d719f2d3dc5dcffc1b7fa2ef3d3 kmyfirewall-0.9.6.2.ebuild 653
-MD5 7ec894b59f16cf10915b93ede6af2935 ChangeLog 4306
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b3104c2f5e5275924d8d921f853645ac kmyfirewall-0.9.6.2.ebuild 664
+MD5 c674f2224ee18242a68e1b157ae7a1e6 ChangeLog 4425
 MD5 85c361bad9cce731ed599dfc99ce38f4 metadata.xml 696
 MD5 a0940eb3f5939500bee4e738121dcb58 files/digest-kmyfirewall-0.9.6.2 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB4pZWZ/iYVBmujdURAhVKAKCFJ5jsAe5lzYrnd6xaG5LXS+qTtgCguIc2
+Zbs0yuR1ozNcVVnuCP+SGeg=
+=tg4m
+-----END PGP SIGNATURE-----
