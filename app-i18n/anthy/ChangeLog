@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.21 2004/07/04 09:25:40 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.22 2004/07/04 09:28:18 hattya Exp $
+
+  04 Jul 2004; Akinori Hattori <hattya@gentoo.org> -anthy-4300b.ebuild:
+  cleaned out old ebuild.
 
 *anthy-5500 (04 Jul 2004)
 
