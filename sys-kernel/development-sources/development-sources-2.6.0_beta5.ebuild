@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta5.ebuild,v 1.1 2003/09/08 22:13:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta5.ebuild,v 1.2 2003/09/09 08:47:24 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV/_beta/-test}
@@ -91,12 +91,12 @@ pkg_postinst() {
 	fi
 
 	echo
-    ewarn "Please note that ptyfs support has been removed from devfs"
-    ewarn "in the later 2.5.x kernels, and you have to compile it in now,"
-    ewarn "or else you will get errors when trying to open a pty."
-    ewarn "The option is File systems->Pseudo filesystems->/dev/pts"
-    ewarn "filesystem."
-    echo
+	ewarn "Please note that ptyfs support has been removed from devfs"
+	ewarn "in the later 2.5.x kernels, and you have to compile it in now,"
+	ewarn "or else you will get errors when trying to open a pty."
+	ewarn "The option is File systems->Pseudo filesystems->/dev/pts"
+	ewarn "filesystem."
+	echo
 	ewarn "Also, note that you must compile in support for"
 	ewarn "input devices (Input device support->Input devices),"
 	ewarn "the virtual terminal (Character Devices->Virtual terminal),"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_rc6.ebuild,v 1.4 2003/09/07 07:24:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_rc6.ebuild,v 1.5 2003/09/09 08:53:30 msterret Exp $
 
 IUSE="build"
 
@@ -34,7 +34,7 @@ src_unpack() {
 	mv Makefile Makefile.orig
 	sed -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
 	Makefile.orig >Makefile || die # test, remove me if Makefile ok
-        rm Makefile.orig
+	rm Makefile.orig
 
 	echo "KV=${KV}" >/tmp/KV
 }

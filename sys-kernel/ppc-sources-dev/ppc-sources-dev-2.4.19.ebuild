@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.19.ebuild,v 1.15 2003/09/07 07:26:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.19.ebuild,v 1.16 2003/09/09 08:48:45 msterret Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -30,8 +30,8 @@ KEYWORDS="ppc -x86 -sparc "
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
-        DEPEND=">=sys-devel/binutils-2.11.90.0.31"
-        RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make"
+	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
+	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make"
 fi
 
 
@@ -68,21 +68,21 @@ src_install() {
 }
 
 pkg_preinst() {
-        if [ "$ETYPE" = "headers" ]
-        then
-                [ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
-                [ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
-                true
-        fi
+	if [ "$ETYPE" = "headers" ]
+	then
+		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
+		[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
+		true
+	fi
 }
 
 pkg_postinst() {
-        [ "$ETYPE" = "headers" ] && return
-        if [ ! -e ${ROOT}usr/src/linux ]
-        then
-                rm -f ${ROOT}usr/src/linux
-                ln -sf linux-${KV} ${ROOT}/usr/src/linux
-        fi
+	[ "$ETYPE" = "headers" ] && return
+	if [ ! -e ${ROOT}usr/src/linux ]
+	then
+		rm -f ${ROOT}usr/src/linux
+		ln -sf linux-${KV} ${ROOT}/usr/src/linux
+	fi
 
 	einfo "* Warning * - This is an experimental kernel to test features"
 	einfo " before they make it to ppc-sources.  Stability cannaot be"

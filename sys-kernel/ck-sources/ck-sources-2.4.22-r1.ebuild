@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r1.ebuild,v 1.1 2003/09/02 09:08:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.22-r1.ebuild,v 1.2 2003/09/09 08:52:03 msterret Exp $
 
 IUSE="build"
 
@@ -31,13 +31,13 @@ BASE="`echo ${KV}|sed -e s:${EXTRAVERSION}::`"
 # If it's a last-stable+pre/rc+ac (marcelo), we need to handle it differently
 # ourkernel is the stable kernel we'll be working with (previous or current)
 if [ ${PRERC} ]; then
-        OURKERNEL="2.4.${OKVLASTPR}"
-        SRC_URI="mirror:/kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
+	OURKERNEL="2.4.${OKVLASTPR}"
+	SRC_URI="mirror:/kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
 		http://members.optusnet.com.au/ckolivas/kernel/patch-${KV}.bz2
-                mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
+		mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
 else
-        OURKERNEL="2.4.${OKVLAST}"
-        SRC_URI="mirror:/kernel//linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
+	OURKERNEL="2.4.${OKVLAST}"
+	SRC_URI="mirror:/kernel//linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
 		http://members.optusnet.com.au/ckolivas/kernel/patch-${KV}.bz2"
 fi
 
@@ -48,19 +48,19 @@ KEYWORDS="x86 -ppc"
 SLOT="${KV}"
 
 src_unpack() {
-        sleep 1
-        unpack linux-${OURKERNEL}.tar.bz2
-        mv linux-${OURKERNEL} linux-${KV} || die
+	sleep 1
+	unpack linux-${OURKERNEL}.tar.bz2
+	mv linux-${OURKERNEL} linux-${KV} || die
 
-        cd linux-${KV}
+	cd linux-${KV}
 
-        # if we need a pre/rc patch, then use it
-        if [ ${PRERC} ]; then
-                bzcat ${DISTDIR}/patch-${PV/_/-}.bz2|patch -p1 || die "-marcelo patch failed"
-        fi
+	# if we need a pre/rc patch, then use it
+	if [ ${PRERC} ]; then
+		bzcat ${DISTDIR}/patch-${PV/_/-}.bz2|patch -p1 || die "-marcelo patch failed"
+	fi
 
-        bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-aa patch failed"
+	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-aa patch failed"
 
-        kernel_universal_unpack
+	kernel_universal_unpack
 }
 

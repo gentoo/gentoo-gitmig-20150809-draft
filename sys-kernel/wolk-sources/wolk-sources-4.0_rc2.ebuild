@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_rc2.ebuild,v 1.3 2003/09/07 07:24:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_rc2.ebuild,v 1.4 2003/09/09 08:53:30 msterret Exp $
 
 IUSE="build"
 
@@ -22,16 +22,16 @@ SLOT="${KV}"
 HOMEPAGE="http://wolk.sourceforge.net http://www.kernel.org"
 
 src_unpack() {
-    unpack linux-${OKV}.tar.bz2
-    mv linux-${OKV} linux-${KV} || die
-    cd ${WORKDIR}/linux-${KV}
-    bzcat ${DISTDIR}/linux-${OKV}${EXTRAVERSION}.patch.bz2 | patch -p1
+	unpack linux-${OKV}.tar.bz2
+	mv linux-${OKV} linux-${KV} || die
+	cd ${WORKDIR}/linux-${KV}
+	bzcat ${DISTDIR}/linux-${OKV}${EXTRAVERSION}.patch.bz2 | patch -p1
 }
 src_install() {
-		 dodir /usr/src
-                echo ">>> Copying sources..."
-		dodoc ${FILESDIR}/patches.txt
-                mv ${WORKDIR}/linux* ${D}/usr/src
+	dodir /usr/src
+	echo ">>> Copying sources..."
+	dodoc ${FILESDIR}/patches.txt
+	mv ${WORKDIR}/linux* ${D}/usr/src
 }
 
 pkg_postinst() {
