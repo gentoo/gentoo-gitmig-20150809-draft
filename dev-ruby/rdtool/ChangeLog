@@ -1,17 +1,24 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.2 2002/07/08 02:55:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.3 2002/08/18 00:45:24 agriffis Exp $
+
+*rdtool-0.6.11 (17 Aug 2002)
+
+	17 Aug 2002; Aron Griffis <agriffis@gentoo.org> rdtool-0.6.11.ebuild:
+
+	Updated to version 0.6.11 which depends on newer racc as well.
 
 *rdtool-0.6.6 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+	1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+	
+	Added initial ChangeLog which should be updated whenever the package is
+	updated in any way. This changelog is targetted to users. This means that
+	the comments should well explained and written in clean English. The
+	details about writing correct changelogs are explained in the
+	skel.ChangeLog file which you can find in the root directory of the
+	portage repository.
 
-  07 Jul 2002; Aron Griffis <agriffis@gentoo.org> rdtool-0.6.6.ebuild:
+	07 Jul 2002; Aron Griffis <agriffis@gentoo.org> rdtool-0.6.6.ebuild:
 
-  Added LICENSE, KEYWORDS, SLOT.
+	Added LICENSE, KEYWORDS, SLOT.
