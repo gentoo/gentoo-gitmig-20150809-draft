@@ -9,7 +9,8 @@ DESCRIPTION="Matrox Marvel G200/G400/Rainbow Runner G-series V4L I and II driver
 HOMEPAGE="http://marvel.sourceforge.net"
 
 DEPEND="virtual/glibc
-	virtual/linux-sources"
+	virtual/linux-sources
+        >=sys-apps/portage-1.9.10"
 
 RDEPEND="virtual/linux-sources"
 
@@ -28,11 +29,12 @@ i2c-algo-ks.o:\
 }
 
 src_compile() {
+	check_KV
 	make mjpeg
 }
 
 src_install() {
-	local install_dir=/lib/modules/${KVERS}/kernel/drivers/mgavideo
+	local install_dir=/lib/modules/${KV}/kernel/drivers/mgavideo
 
 	dodir ${install_dir}
 	dodoc README CHANGELOG
@@ -52,7 +54,7 @@ src_install() {
 
 pkg_postinst() {
 	depmod -a
-	if [ ! -f /lib/modules/${KVERS}/kernel/drivers/i2c/i2c-core.o ] ; then
+	if [ ! -f /lib/modules/${KV}/kernel/drivers/i2c/i2c-core.o ] ; then
 		echo
 		echo '###############################################################'
 		echo '##  WARNING: i2c support must be compiled into your kernel   ##'

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre3-r1.ebuild,v 1.1 2002/05/05 20:01:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre3-r1.ebuild,v 1.2 2002/05/08 05:58:31 jnelson Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -32,7 +32,8 @@ RDEPEND=">=media-libs/divx4linux-20020418
 	          >=media-libs/libdv-0.9.5 )
 	opengl? ( virtual/opengl )
 	directfb? ( dev-libs/DirectFB )
-	oggvorbis? ( media-libs/libvorbis )"
+	oggvorbis? ( media-libs/libvorbis )
+	>=sys-apps/portage-1.9.10"
 
 DEPEND="${RDEPEND}
 	dev-lang/nasm
@@ -59,6 +60,10 @@ src_unpack() {
 
 src_compile() {
 
+	if use matrox; then
+	        check_KV
+	fi
+        
 	local myconf=""
 
 	# Some people have compile problems with the vidix stuff
@@ -225,8 +230,8 @@ src_install() {
 	doins ${S}/etc/codecs.conf
 
 	use matrox && ( \
-		dodir /lib/modules/${KVERS}/kernel/drivers/char
-		cp ${S}/drivers/mga_vid.o ${D}/lib/modules/${KVERS}/kernel/drivers/char
+		dodir /lib/modules/${KV}/kernel/drivers/char
+		cp ${S}/drivers/mga_vid.o ${D}/lib/modules/${KV}/kernel/drivers/char
 	)
 }
 
