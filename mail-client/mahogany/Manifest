@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 45ec15b1a41dafb5a4f74fa2cb5a8921 ChangeLog 432
-MD5 37b92726b23fb53c0945ae805d202e26 metadata.xml 462
 MD5 99fad3d9554a66e92bbcb4fbf70a347b mahogany-0.65.ebuild 1633
+MD5 4ef1bea4cb47f0377b982fc772ae4fcc ChangeLog 438
+MD5 37b92726b23fb53c0945ae805d202e26 metadata.xml 462
 MD5 ac95fcbfb3d628b354889fa06707cf8c files/digest-mahogany-0.65 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB4esXQlM6RnzZP+IRAucBAJ4lzRUOJERl7tcSm8Qojrfsl8fy3gCgowNZ
-nxkaurJtYnBHow5PTnbUcxA=
-=PODZ
+iD8DBQFB4rJ5I1lqEGTUzyQRAjb9AKCkb2OpHdU+nGOZ4lBXez3FxDMdyQCgka3S
+UsLz/vS1J3/x+PoWThsskHk=
+=SjEh
 -----END PGP SIGNATURE-----
