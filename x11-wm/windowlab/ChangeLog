@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/windowlab
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.6 2004/05/22 16:34:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.7 2004/06/23 18:21:32 usata Exp $
+
+*windowlab-1.24 (24 Jun 2004)
+
+  24 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  windowlab-1.23.ebuild, +windowlab-1.24.ebuild:
+  Version bumped. Marked 0.23 as stable.
 
 *windowlab-1.23 (23 May 2004)
 
