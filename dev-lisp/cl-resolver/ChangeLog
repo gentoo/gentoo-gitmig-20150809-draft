@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-resolver
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-resolver/ChangeLog,v 1.1 2004/11/23 19:58:26 mkennedy Exp $
+
+*cl-resolver-0.6 (23 Nov 2004)
+
+  23 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-resolver-0.6.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
