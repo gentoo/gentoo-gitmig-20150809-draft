@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/lam-mpi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/ChangeLog,v 1.8 2003/02/12 06:04:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/ChangeLog,v 1.9 2003/03/25 07:20:55 george Exp $
+
+*lam-mpi-6.5.7.ebuild (23 Mar 2003)
+
+  23 Mar 2003; George Shapovalov <george@gentoo.org> lam-mpi-6.5.9.ebuild, files/digest-lam-mpi-6.5.9 :
+  new version
 
   20 Jan 2003; Jon Nall <nall@gentoo.org> lam-mpi-6.5.7.ebuild :
   added ~ppc
@@ -10,20 +15,17 @@
 *lam-mpi-6.5.7.ebuild (08 Nov 2002)
 
   08 Nov 2002; George Shapovalov <george@gentoo.org> lam-mpi-6.5.7.ebuild, files/digest-lam-mpi-6.5.7 :
-
   new version
 
 *lam-mpi-6.5.6-r1.ebuild (21 Oct 2002)
 
   21 Oct 2002; George Shapovalov <george@gentoo.org> lam-mpi-6.5.6-r1.ebuild, files/digest-lam-mpi-6.5.6-r1 :
-
   upped the revision number, because Chad persuaded me, that the previous fix (by 18 Oct) was 
   important enugh to forse a rebuild.
 
 *lam-mpi-6.5.6.ebuild (29 Jul 2002)
 
   18 Oct 2002; George Shapovalov <george@gentoo.org> lam-mpi-6.5.6.ebuild :
-
   fix to make mpi++.h a local symlink (seems to happen with newver binutils?),
   see #9236 for detail.
   Thanks Chad Schmutzer for report.
