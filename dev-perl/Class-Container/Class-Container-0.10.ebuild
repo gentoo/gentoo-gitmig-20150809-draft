@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Container/Class-Container-0.10.ebuild,v 1.6 2004/07/14 16:50:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Container/Class-Container-0.10.ebuild,v 1.7 2004/09/03 17:13:27 pvdabeel Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/authors/id/M/MS/MSCHWERN/"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ~ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 IUSE=""
 
 DEPEND="${DEPEND}
