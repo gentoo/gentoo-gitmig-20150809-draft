@@ -113,7 +113,7 @@
 *>=sys-apps/baselayout-1.7.9-r1
 *>=sys-apps/portage-2.0.27
 *=sys-devel/binutils-2.13.90.0.4
-*=sys-devel/gcc-3.2
+*>=sys-devel/gcc-3.2
 *=sys-libs/glibc-2.2.5-r6
 *sys-apps/texinfo
 sys-kernel/ppc-sources
