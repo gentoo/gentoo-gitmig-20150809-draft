@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.10 2004/12/28 00:03:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.11 2004/12/28 16:04:05 vapier Exp $
 
 inherit gnuconfig flag-o-matic games
 
@@ -73,6 +73,7 @@ src_compile() {
 		fi
 		if use opengl ; then
 			myconf="${myconf} --with-board3d"
+			append-flags $(pkg-config ftgl --cflags)
 		fi
 	else
 		myconf="${myconf} --disable-gtktest --without-board3d"
