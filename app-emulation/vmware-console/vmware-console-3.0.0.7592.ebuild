@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-3.0.0.7592.ebuild,v 1.8 2005/01/01 14:19:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-3.0.0.7592.ebuild,v 1.9 2005/03/23 18:35:58 seemant Exp $
 
 MY_PN="VMware-console"
-MY_PV=`echo ${PV} | sed -e 's/\.\([0-9]\+\)$/-\1/'`
+MY_PV=${PV%.*}-${PV##*.}
 MY_P="${MY_PN}-${MY_PV}"
 FN="${MY_P}.tar.gz"
 S="${WORKDIR}/vmware-console-distrib"
