@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: First Last <your email>
-# $Header: /home/cvsroot/gentoo-x86/skel.build,v 1.14 2002/02/01 19:50:13 gbevin Exp $
+# $Header: /home/cvsroot/gentoo-x86/skel.ebuild,v 1.3 2002/02/04 15:46:51 gbevin Exp $
 
 # NOTE: The comments in this file are for instruction and
 # documentation.  They're not meant to appear with your final,
@@ -31,7 +31,7 @@ SRC_URI="ftp://foo.bar.com/${P}.tar.gz"
 HOMEPAGE="http://"
 
 # Build-time dependencies, such as
-#    ssl ? ( >=openssl-0.9.6b )
+#    ssl? ( >=openssl-0.9.6b )
 #    >=perl-5.6.1-r1
 # It is advisable to use the >= syntax show above, to reflect what you
 # had installed on your system when you tested the package.  Then
