@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.14.ebuild,v 1.5 2004/07/24 04:43:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.14.ebuild,v 1.6 2004/11/09 22:26:53 mr_bones_ Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnutls.org/"
 SRC_URI="ftp://ftp.gnutls.org/pub/gnutls/${P}.tar.bz2"
 
 IUSE="zlib doc crypt"
-LICENSE="LGPL-2.1 | GPL-2"
+LICENSE="|| ( LGPL-2.1 GPL-2 )"
 # GPL-2 for the gnutls-extras library and LGPL for the gnutls library.
 
 SLOT="0"
