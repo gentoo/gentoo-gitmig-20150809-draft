@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/oftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.6 2004/03/26 00:43:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.7 2004/03/26 03:02:50 eradicator Exp $
+
+  25 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  oftpd-0.3.6-r7.ebuild, oftpd-0.3.7.ebuild, files/conf.d.oftpd,
+  files/init.d.oftpd, files/oftpd.rc6:
+  Fixed up init/conf scripts.  bumping security fix to stable x86.
 
 *oftpd-0.3.7 (25 Mar 2004)
 
