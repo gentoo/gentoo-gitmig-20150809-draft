@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-appfinder
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/ChangeLog,v 1.8 2005/01/17 02:10:28 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/ChangeLog,v 1.9 2005/01/24 20:29:41 gmsoft Exp $
+
+  24 Jan 2005; Guy Martin <gmsoft@gentoo.org> xfce4-appfinder-4.2.0.ebuild:
+  Stable on hppa.
 
 *xfce4-appfinder-4.2.0 (16 Jan 2005)
 
