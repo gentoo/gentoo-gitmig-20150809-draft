@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnome-jabber/gnome-jabber-0.4.ebuild,v 1.3 2004/06/24 22:52:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnome-jabber/gnome-jabber-0.4.ebuild,v 1.4 2004/07/15 00:08:59 agriffis Exp $
 
 inherit gnome2
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Jabber Client"
 SRC_URI="mirror://sourceforge/gnome-jabber/${P}.tar.bz2"
 HOMEPAGE="http://gnome-jabber.sourceforge.net/"
@@ -12,6 +11,7 @@ HOMEPAGE="http://gnome-jabber.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
+IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.0.4
 	>=gnome-base/libgnomeui-2.0.0
