@@ -1,0 +1,36 @@
+diff -ur evolution-2.0.3/camel/providers/imap/camel-imap-store.c evolution-2.0.3-patched/camel/providers/imap/camel-imap-store.c
+--- evolution-2.0.3/camel/providers/imap/camel-imap-store.c	2004-12-06 15:46:51.000000000 +0800
++++ evolution-2.0.3-patched/camel/providers/imap/camel-imap-store.c	2004-12-30 00:26:50.274319864 +0800
+@@ -534,7 +534,7 @@
+ 		serv = g_alloca(16);
+ 		sprintf(serv, "%d", service->url->port);
+ 	} else {
+-		serv = "imap";
++		serv = "imap2";
+ 		port = IMAP_PORT;
+ 	}
+ 	
+diff -ur evolution-2.0.3/camel/providers/pop3/camel-pop3-store.c evolution-2.0.3-patched/camel/providers/pop3/camel-pop3-store.c
+--- evolution-2.0.3/camel/providers/pop3/camel-pop3-store.c	2004-12-06 15:46:51.000000000 +0800
++++ evolution-2.0.3-patched/camel/providers/pop3/camel-pop3-store.c	2004-12-30 00:28:05.128940232 +0800
+@@ -159,7 +159,7 @@
+ 		serv = g_alloca(16);
+ 		sprintf(serv, "%d", service->url->port);
+ 	} else {
+-		serv = "pop3";
++		serv = "pop-3";
+ 		port = "110";
+ 	}
+ 		
+diff -ur evolution-2.0.3/camel/providers/smtp/camel-smtp-transport.c evolution-2.0.3-patched/camel/providers/smtp/camel-smtp-transport.c
+--- evolution-2.0.3/camel/providers/smtp/camel-smtp-transport.c	2004-12-06 15:46:52.000000000 +0800
++++ evolution-2.0.3-patched/camel/providers/smtp/camel-smtp-transport.c	2004-12-30 00:27:21.094634464 +0800
+@@ -263,7 +263,7 @@
+ 			tcp_stream = camel_tcp_stream_ssl_new_raw (service->session, service->url->host, STARTTLS_FLAGS);
+ 		} else {
+ 			if (service->url->port == 0) {
+-				serv = "smtps";
++				serv = "ssmtp";
+ 				port = "465";
+ 			}
+ 			tcp_stream = camel_tcp_stream_ssl_new (service->session, service->url->host, SSL_PORT_FLAGS);
