@@ -5,3 +5,6 @@ nptl
 nis
 # aqua USE flag is only valid on Mac OS X
 aqua
+
+# this seems to pull in pre compiled glibc libs.
+divx4linux
