@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-0.10.2_beta7.ebuild,v 1.8 2004/06/24 23:34:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-0.10.2_beta7.ebuild,v 1.9 2005/02/03 20:32:09 jhhudso Exp $
 
 IUSE="nls"
 
