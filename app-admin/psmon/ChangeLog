@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/psmon
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.1 2003/10/30 13:19:10 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.2 2004/02/29 23:02:45 pyrania Exp $
+
+  01 Mar 2004; Markus Nigbur <pyrania@gentoo.org> psmon-1.0.4.ebuild:
+  Stable on x86.
 
 *psmon-1.0.4 (30 Oct 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/newsyslog
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.5 2003/10/24 09:24:41 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.6 2004/02/29 23:01:25 pyrania Exp $
+
+  01 Mar 2004; Markus Nigbur <pyrania@gentoo.org> newsyslog-1.1.ebuild:
+  Stable on x86.
 
 *newsyslog-1.1 (22 Oct 2003)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/lsat
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.5 2004/01/11 01:10:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.6 2004/02/29 22:54:08 pyrania Exp $
+
+  29 Feb 2004; Markus Nigbur <pyrania@gentoo.org> lsat-0.8.8.ebuild,
+  lsat-0.9.0.ebuild:
+  Stable on x86.
 
 *lsat-0.9.0 (11 Jan 2004)
 

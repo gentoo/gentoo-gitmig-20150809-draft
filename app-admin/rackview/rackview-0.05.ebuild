@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.05.ebuild,v 1.4 2004/01/06 11:59:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.05.ebuild,v 1.5 2004/02/29 23:05:58 pyrania Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="apache2 mysql"
 
 DEPEND="dev-lang/perl

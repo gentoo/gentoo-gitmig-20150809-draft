@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/verynice
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.2 2003/10/18 06:13:37 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.3 2004/02/29 23:07:28 pyrania Exp $
+
+  01 Mar 2004; Markus Nigbur <pyrania@gentoo.org> verynice-1.1.ebuild:
+  Stable on x86.
 
   17 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> verynice-1.1.ebuild:
   mark ~x86
