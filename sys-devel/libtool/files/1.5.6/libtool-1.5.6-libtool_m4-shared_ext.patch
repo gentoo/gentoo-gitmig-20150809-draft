@@ -1,0 +1,35 @@
+--- libtool-1.5.2/libtool.m4	2004-02-10 00:23:58.000000000 +0200
++++ libtool-1.5.2.shared_ext/libtool.m4	2004-02-10 23:32:08.364266152 +0200
+@@ -229,6 +229,7 @@
+ tagname=
+ AC_LIBTOOL_LANG_C_CONFIG
+ _LT_AC_TAGCONFIG
++_LT_AC_SHARED_EXT
+ ])# AC_LIBTOOL_SETUP
+ 
+ 
+@@ -1788,6 +1789,24 @@
+ fi
+ ])# _LT_AC_TAGCONFIG
+ 
++# _LT_AC_SHARED_EXT
++# ----------------
++AC_DEFUN([_LT_AC_SHARED_EXT],[
++  if test ! -f "${ofile}"; then
++    AC_MSG_WARN([output file `$ofile' does not exist])
++  fi
++  if test -z "`grep -e 'shared_ext.*shrext_cmds' $ofile`"; then
++    # Make sure $shared_ext gets set to $shrext_cmds
++    if sed -e 's/shared_ext/shrext_cmds/g' "$ofile" > "${ofile}T"; then
++      mv "${ofile}T" "$ofile"
++      chmod +x "$ofile"
++    else
++      rm -f "${ofile}T"
++      AC_MSG_ERROR([unable to update shared_ext.])
++    fi
++  fi
++])# _LT_AC_SHARED_EXT
++
+ 
+ # AC_LIBTOOL_DLOPEN
+ # -----------------

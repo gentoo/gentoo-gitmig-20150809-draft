@@ -1,20 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.10.ebuild,v 1.2 2004/11/06 06:18:57 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.10.ebuild,v 1.3 2004/11/09 21:23:12 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig libtool
 
-# NOTE:  We install libltdl of libtool-1.3x for compat reasons ...
-
-OLD_PV="1.3.5"
-OLD_S="${WORKDIR}/${PN}-${OLD_PV}"
 DESCRIPTION="A shared library tool for developers"
 HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
-	mirror://gnu/${PN}/${PN}-${OLD_PV}.tar.gz"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="1.5"
 # breaks building .so completely (emerge fam)
 KEYWORDS="-*"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
@@ -56,32 +51,11 @@ src_unpack() {
 
 	unpack ${A}
 
-	cd ${OLD_S}
-	echo
-	# Install updated missing script
-	portageq has_version / "sys-devel/automake" && {
-		rm -f missing
-		automake --add-missing
-	}
-
-	einfo "Patching ${OLD_S##*/} ..."
-	epatch ${FILESDIR}/1.4.3/${PN}-1.2f-cache.patch
-	epatch ${FILESDIR}/1.4.3/${PN}-1.3.5-nonneg.patch
-	epatch ${FILESDIR}/1.4.3/${PN}-1.3.5-mktemp.patch
-	epatch ${FILESDIR}/ltconfig-uclibc.patch
-
 	cd ${S}
-	echo
-	# Install updated missing script
-#	portageq has_version / "sys-devel/automake" && {
-#		rm -f missing
-#		automake --add-missing
-#	}
 
 	# Make sure non of the patches touch ltmain.sh, but rather ltmain.in
 	rm -f ltmain.sh*
 
-	einfo "Patching ${S##*/} ..."
 	# Redhat patches
 	epatch ${FILESDIR}/1.4.3/${PN}-1.4-nonneg.patch
 	# Fix the relink problem where the relinked libs do not get
@@ -122,7 +96,7 @@ src_unpack() {
 	# issue where $shared_ext is not set.  This results in libraries
 	# being built without '.so' extension, bug #40901
 	# <azarah@gentoo.org> - (11 Feb 2004)
-	epatch ${FILESDIR}/1.5.2/${PN}-1.5.2-libtool_m4-shared_ext.patch
+	epatch ${FILESDIR}/1.5.6/${PN}-1.5.6-libtool_m4-shared_ext.patch
 	# For older autoconf setups's that do not support libtool.m4,
 	# $max_cmd_len are never set, causing all tests against it to
 	# fail, resulting in 'integer expression expected' errors and
@@ -130,67 +104,28 @@ src_unpack() {
 	# <azarah@gentoo.org> - (11 Feb 2004)
 	epatch ${FILESDIR}/1.5.2/${PN}-1.5.2-ltmain_sh-max_cmd_len.patch
 
+	# Libtool's autoguessing at tag's sucks ... it get's confused 
+	# if the tag's CC says '<CHOST>-gcc' and the env CC says 'gcc'
+	# or vice versa ... newer automakes specify the tag so no
+	# guessing is needed #67692
+	epatch ${FILESDIR}/1.5.6/libtool-1.5-filter-host-tags.patch
+
 	einfo "Generate ltmain.sh ..."
 	gen_ltmain_sh || die "Failed to generate ltmain.sh!"
 
-	# Run gnuconfig_update for both old and new versions *after* patches so we
-	# don't screw them up
+	uclibctoolize
 	gnuconfig_update ${WORKDIR}
 }
 
 src_compile() {
 	lt_setup
-
-	#
-	# ************ libtool-1.3x ************
-	#
-
-	cd ${OLD_S}
-
-	einfo "Configuring ${OLD_S##*/} ..."
-	./configure --host=${CHOST} \
-			--prefix=/usr \
-			--infodir=/usr/share/info || die
-
-	einfo "Building ${OLD_S##*/} ..."
-	emake || die
-
-	#
-	# ************ libtool-1.5x ************
-	#
-
-	cd ${S}
-
-	einfo "Configuring ${S##*/} ..."
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info || die
-
-	einfo "Building ${S##*/} ..."
+	econf || die
 	emake || die
 }
 
 src_install() {
-	#
-	# ************ libtool-1.3x ************
-	#
-
-	einfo "Installing ${OLD_S##*/} ..."
-	cd ${OLD_S}/libltdl; make DESTDIR=${D} install || die
-
-	# Remove stuff we are not going to use ...
-	for x in libltdl.a  libltdl.la  libltdl.so
-	do
-		[ -f ${x} ] && rm -f ${D}/usr/lib/${x}
-	done
-	rm -rf ${D}/usr/include
-
-	#
-	# ************ libtool-1.5x ************
-	#
-
-	einfo "Installing ${S##*/} ..."
-	cd ${S}; make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
+	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO doc/PLATFORMS
 
 	if use uclibc ; then
 		for x in $(find ${D} -name config.guess -o -name config.sub) ; do
@@ -200,8 +135,5 @@ src_install() {
 		for x in config.guess config.sub ; do
 			rm -f ${x} ; ln -sfn ../${x} ${x}
 		done
-		cd ${S}
 	fi
-
-	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO doc/PLATFORMS
 }
