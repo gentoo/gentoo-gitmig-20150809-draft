@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.52.ebuild,v 1.1 2002/02/28 01:07:56 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.52-r1.ebuild,v 1.1 2002/02/28 03:07:29 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk AOL Instant Messenger client"
@@ -44,6 +44,10 @@ src_compile() {
 	# if gnome support is enabled, then build gaim_applet
 	gnomeopts="${gnomeopts} --with-gnome=${GNOME_PATH} --enable-panel"
 
+	# save appletless version and clean up
+	cp src/gaim ${S}/gaim
+	make distclean || die
+
 	./configure --host=${CHOST} --prefix=/usr ${gnomeopts} || die
     	emake || die
     fi
@@ -55,7 +59,7 @@ src_install () {
     try make DESTDIR=${D} install
 
     # if gnome enabled, make sure to install standalone version also
-    use gnome && dobin src/gaim
+    use gnome && dobin ${S}/gaim
 
     dodoc ChangeLog README README.plugins
 }
