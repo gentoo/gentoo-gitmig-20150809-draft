@@ -104,3 +104,4 @@ move sys-apps/amiga-fdisk sys-fs/amiga-fdisk
 move games-puzzle/marbles games-puzzle/lmarbles
 move app-text/gmanedit app-editors/gmanedit
 move dev-python/PyClimate dev-python/pyclimate
+move dev-python/SimpleParse dev-python/simpleparse
